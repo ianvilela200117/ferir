@@ -1,6 +1,5 @@
 {
  "ordem": [
-  "ENT15",
   "ENT15f",
   "OLH1",
   "OLH2",
@@ -399,60 +398,10 @@
   "SZ37",
   "HZ37",
   "WZ37",
-  "TZ37"
+  "TZ37",
+  "SG37"
  ],
  "selos": {
-  "ENT15": {
-   "id": "ENT15",
-   "dia": 415,
-   "hora": "23:34:43",
-   "titulo": "A ENTRADA EM LEVIS, ESCONDIDOS (noite do 415, tempestade e ventania): a ISOLDA conduz (Assassina 115, disfarce: +11) contra os olhos do culto e dos pagos, que ESPERAM o rei (+8) · +3 a tempestade e a noite · −2 cinco cavalos, um preso e um menino · +1 o Drassa conhece as portas",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 10,
-     "res": "VISTOS na porta: a recepção sabe que entraram e por onde; ela bate primeiro"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 18,
-     "res": "DENTRO sem alarme; ninguém sabe que estão na cidade"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 1000000,
-     "res": "dentro, e a Isolda acha um dos olhos da porta antes de ele ver: um preso que sabe onde é a espera"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 10,
-     "res": "VISTOS na porta: a recepção sabe que entraram e por onde; ela bate primeiro",
-     "txt": "[5] +5 = 10 → VISTOS na porta: a recepção sabe que entraram e por onde; ela bate primeiro"
-    }
-   ],
-   "hora_rolado": "23:34:43"
-  },
   "ENT15f": {
    "id": "ENT15f",
    "dia": 415,
@@ -19567,6 +19516,58 @@
     }
    ],
    "hora_rolado": "15:05:00"
+  },
+  "SG37": {
+   "id": "SG37",
+   "dia": 437,
+   "hora": "15:10:37",
+   "titulo": "O SEGREDO DA SALA 4 DE ZYTHIR (a porta; o eco de Tuir guia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma PASSAGEM que contorna a sala 5: pula o guarda e desce à 6"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a SALA DOS SELOS: a magia que prende Tuir, e o que ela pede para se desfazer"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um NICHO com as armas da guarda de Tuir (material de peça)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "uma PASSAGEM que contorna a sala 5: pula o guarda e desce à 6",
+     "txt": "[2] → uma PASSAGEM que contorna a sala 5: pula o guarda e desce à 6"
+    }
+   ],
+   "hora_rolado": "15:10:37"
   }
  }
 }

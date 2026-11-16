@@ -317,3 +317,5 @@ depois vira linha nova aqui.
 - (435 noite-436) A Brara recebeu a fundição velha inteira e rasgou em praça as dívidas do livro do Ardenghi. A Bigorna Livre registrada na Guilda de Levis (a Carea, magoada). ZYTHIR (Único): a senha era o nome do último rei, TUIR, cuja pedra ficou em branco. A sala 1: o guarda ZYZA (Épico, Podridão, da colmeia de uma rainha) morto pelo Eiagrir; o rei a 44/402 (o Gibão desfez o pior golpe); a Eliane de cama até o 443; o núcleo Épico de Podridão; um elmo de guarda real. Ireviel soube da BATALHA DE MARASAR (a revolta quebrada; ninguém de Ireviel caiu). O LOULA desceu a Ireviel; um dos Sem-Torre sumiu.
 
 - (436-437) O elmo de guarda real ao cabo GONDE. Os arados de Levis prontos (Comida +1 até o 480 em Levis e em Ireviel). O chefe dos Fiéis achado morto no rio. ZYTHIR caiu numa guerra contra a PRIMEIRA LIGA; o rei TUIR mandou selar-se vivo para esperar que o reino o chamasse; o eco dele deve um favor ao rei e avisa da RAINHA da colmeia (a sala 8).
+
+- (437) O eco de Tuir paga o favor: guia a casa (a armadilha sem risco, o guarda da sala 5 de surpresa). Na sala 4, uma passagem escondida contorna o guarda e desce ao tesouro.

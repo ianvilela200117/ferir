@@ -35,11 +35,12 @@
   {
    "n": 4,
    "dado": 14,
-   "o_que": "SEGREDO (porta, passagem ou inscrição)",
+   "o_que": "SEGREDO (porta, passagem ou inscrição) · 437: a PASSAGEM escondida que contorna a sala 5 e desce à 6 (SG37 [2])",
    "leva_a": [
-    5
+    5,
+    6
    ],
-   "vista": false
+   "vista": true
   },
   {
    "n": 5,

@@ -1076,3 +1076,8 @@ Na primeira sala havia um inseto do tamanho de um cavalo, que falava com voz de 
 O rei voltou com o dia claro lá fora e o mesmo escuro lá dentro. Na segunda sala, atrás de uma laje que soava oca, havia letras pequenas e gastas: Zythir caíra numa guerra contra a Primeira Liga, os mercadores velhos de Marasar, e o rei Tuir mandara fechar-se vivo com a guarda, para esperar. Na terceira sala não havia nada. Foi do nada que veio a voz, baixa, como se falasse de dentro da pedra: agradecia ao rei de Ireviel por dizer seu nome em voz alta depois de tanto tempo. E avisou que a rainha da colmeia estava lá embaixo, e que não o deixava sair.
 
 - **Parada:** manhã do 437, a terceira sala. Uma porta e um corredor; a rainha lá embaixo.
+
+### Zythir, a quarta sala, 437
+A voz de Tuir andou com eles pelo escuro, uma pedra à frente, dizendo onde pisar. Na quarta sala havia um sarcófago vazio, e atrás dele uma fenda que descia em degraus, longe do lugar onde dormia o segundo guarda.
+
+- **Parada:** manhã do 437, a quarta sala. A fenda ou o guarda.
