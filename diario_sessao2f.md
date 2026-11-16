@@ -1064,3 +1064,10 @@ De manhã, as carroças do pão desceram às ruas baixas com a guarda do rei ao 
 À tarde vieram duas coisas. A primeira, pelos mercadores da estrada: a Floresta que Anda deixara os Picos Brancos e descia para Farenta. A segunda, pela boca da Brara, cara a cara: a fundição velha de Levis-baixa tinha de ser toda de Levis. E os ferreiros sem registro da Bigorna Livre vieram contar que, cavando ferro debaixo das minas velhas, tinham achado uma porta de pedra com nomes de reis, e atrás dela um silêncio que nenhum deles quis atravessar.
 
 - **Parada:** noite do 435, Levis. A fera rumo a Farenta; a fundição; a porta dos reis.
+
+### Levis e Zythir, 435 e manhã do 436
+A Brara recebeu a fundição velha inteira e, antes de anoitecer, subiu à escadaria da praça com o livro do Ardenghi debaixo do braço e rasgou as dívidas pequenas uma a uma, para todos verem. A Carea escreveu os nomes dos ferreiros da Bigorna no registro da Guilda sem levantar os olhos.
+De manhã, a porta de pedra. O rei leu os nomes de reis um por um e viu que faltava um: a última pedra estava lisa. No canto, em letra miúda, estava o nome que faltava, Tuir, e uma frase: que ele espere aqui até que o reino o chame. O rei disse o nome, e a pedra cedeu para dentro. Atrás deles, na escada, a Tigra apareceu com pão e uma lanterna.
+Na primeira sala havia um inseto do tamanho de um cavalo, que falava com voz de homem e cheirava a carne velha. Escolheu o rei. O gibão de orloxa desfez o pior golpe, e mesmo assim o rei ficou de joelhos no pó. A Eliane caiu para trás, ensanguentada; o Eiagrir acabou com o bicho no contra-golpe. No peito dele havia um coração cinzento que ainda pulsava. Num nicho da parede, um elmo de guarda com o brasão de Tuir.
+
+- **Parada:** manhã do 436, Zythir, depois da primeira sala. O rei mal de pé; a Eliane carregada; oito salas adiante.

@@ -1,0 +1,79 @@
+LEI DAS AÇÕES: Zyza (nível 158) contra 4 · PV 2370/2370 · RD 10 · 5 ações · reação 2 · grupo: Ferir 3, Moreth 4, Eiagrir 3, Eliane 2
+INICIATIVA: Zyza 2d20+15 = 35 × o grupo 2d20+14 (média) = 37 → o grupo age primeiro
+--- RODADA 1 · Zyza 2370/2370
+  COVIL (a névoa podre da tumba) d6 [1]: respira
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 430; [[8], [6]]+34=48 vs 73 o alvo resiste: metade → 420 (1950)
+  Ferir: [[12], [15]]+34=61 vs 73 erra
+  Ferir: [[8], [5]]+34=47 vs 73 erra
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 560; [[17], [14]]+44=75 vs 73 pega em cheio → 550 (1400)
+  Moreth: [[11], [13]]+44=68 vs 73 erra
+  Moreth: [[14], [5]]+44=63 vs 73 erra
+  Moreth: [[1], [4]]+44=49 vs 73 erra
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 137; [[1], [9]]+36=46 vs 73 o alvo resiste: metade → 127 (1273)
+  Eiagrir: [[8], [12]]+36=56 vs 72 erra
+  Eiagrir: [[16], [19]]+36=71 ACERTA [3]×3+12+25=46 − RD 10 ×2 = 72 (1201)
+  Eliane: [[12], [1]]+24=37 vs 70 erra
+  Eliane: [[16], [11]]+24=51 vs 69 erra
+  PODER: a ferida infecciona (12 m)
+    Ferir: 11 (391)
+    Moreth: 8 (592)
+    ataque em Eliane: [[4], [16]]+49=69 vs 47 ACERTA [7]×5+0+31=66 − RD 8 = 58 (202) · VENENO (Vigor 25)
+    ataque em Eliane: [[19], [9]]+49=77 vs 47 ACERTA [6]×5+0+31=61 − RD 8 = 53 (149)
+    ataque em Eliane: [[15], [8]]+49=72 vs 46 ACERTA [7]×5+0+31=66 − RD 8 = 58 (91) · VENENO (Vigor 28)
+    ataque em Eliane: [[12], [3]]+49=64 vs 45 ACERTA [3]×5+0+31=46 − RD 8 = 38 (53)
+    Eliane RECUA ferido (d6 [3])
+--- RODADA 2 · Zyza 1201/2370
+  COVIL (a névoa podre da tumba) d6 [5]: um alvo
+    Ferir: resiste [19] vs 21 → 8 · ENVENENADO (G16) (383)
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 380; [[15], [14]]+34=63 vs 73 o alvo resiste: metade → 370 (831)
+  Ferir: [[14], [13]]+34=61 vs 73 erra
+  Ferir: [[16], [15]]+34=65 vs 73 erra
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 320; [[11], [13]]+44=68 vs 73 o alvo resiste: metade → 310 (521)
+  Moreth: [[6], [17]]+44=67 vs 73 erra
+  Moreth: [[14], [9]]+44=67 vs 73 erra
+  Moreth: [[17], [8]]+44=69 vs 73 erra
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 147; [[3], [3]]+36=42 vs 73 o alvo resiste: metade → 137 (384)
+  Eiagrir: [[6], [19]]+36=61 vs 72 erra
+  Eiagrir: [[16], [18]]+36=70 vs 71 erra
+  FÚRIA: +1 ação, o poder recarrega
+  PODER: a ferida infecciona (12 m)
+    Moreth: 14 (578)
+    Eiagrir: 3 (417)
+    ataque em Ferir: [[18], [3]]+49=70 vs 59 ACERTA [9]×5+0+31=76 − RD 10 = 66 (317) · VENENO (Vigor 20)
+    ataque em Ferir: [[5], [14]]+49=68 vs 59 ACERTA [5]×5+0+31=56 − RD 10 = 46 (271) · VENENO (Vigor 29)
+    ataque em Ferir: [[20, 20, 11], [19]]+49=119 vs 59 ACERTA CRÍTICO [9, 2, 2, 3]×5+0+31=111 − RD 5 = 106 (165) · VENENO (Vigor 28)
+    ataque em Ferir: [[19], [7]]+49=75 vs 58 ACERTA [1]×5+0+31=36 − RD 10 = 26 (139) · VENENO (Vigor 17)
+    ataque em Ferir: [[10], [15]]+49=74 vs 57 ACERTA [9]×5+0+31=76 − RD 10 = 66 (73) · VENENO (Vigor 28)
+--- RODADA 3 · Zyza 384/2370
+  veneno em Ferir: −8 (65)
+  COVIL (a névoa podre da tumba) d6 [1]: respira
+  Ferir lança CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO): 145; [[16], [7]]+34=57 vs 73 o alvo resiste: metade → 135 (249)
+  Ferir: [[16], [16]]+34=66 vs 73 erra
+  Ferir: [[17], [5]]+34=56 vs 73 erra
+  Moreth lança CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO): 160; [[9], [8]]+44=61 vs 73 o alvo resiste: metade → 150 (99)
+  Moreth: [[1], [16]]+44=61 vs 73 erra
+  Moreth: [[6], [9]]+44=59 vs 73 erra
+  Moreth: [[5], [4]]+44=53 vs 73 erra
+  Eiagrir: [[6], [6]]+36=48 vs 72 erra
+  Eiagrir: [[18], [15]]+36=69 vs 71 erra
+  Eiagrir: [[9], [3]]+36=48 vs 70 erra
+  PODER: a ferida infecciona (12 m)
+    Eiagrir: 15 (402)
+    ataque em Ferir: [[20, 2], [6]]+49=77 vs 59 ACERTA [8]×5+0+31=71 − RD 10 = 61 (4)
+    ataque em Ferir: [[14], [20, 11]]+49=94 vs 59 ACERTA CRÍTICO [2, 1, 5]×5+0+31=71 − RD 5 = 66 (-62)
+    Ferir CAI DESACORDADO
+    ataque em Eiagrir: [[7], [1]]+49=57 vs 56 ACERTA [7]×5+0+31=66 − RD 8 = 58 (344)
+    CONTRA-GOLPE de Eiagrir: [[18], [20, 2]] → 154 (-55)
+    ataque em Eiagrir: [[1], [8]]+49=58 vs 56 ACERTA [10]×5+0+31=81 − RD 8 = 73 (271)
+    ataque em Eiagrir: [[1], [6]]+49=56 vs 56 ACERTA [4]×5+0+31=51 − RD 8 = 43 (228) · VENENO (Vigor 19)
+  teste de morte de Ferir: [13] vs 12 (1 sucessos, 0 falhas)
+  Moreth tenta estancar Ferir (Medicina 20 vs 15): não
+  teste de morte de Ferir: [12] vs 12 (2 sucessos, 0 falhas)
+  Moreth tenta estancar Ferir (Medicina 17 vs 15): não
+  teste de morte de Ferir: [14] vs 12 (3 sucessos, 0 falhas)
+  Ferir fica ESTÁVEL
+  FERIMENTO de Ferir: d20 [16]+3 = 19 → GRAVE: não luta · MARCA: dor que volta no frio · 15 dias (até o Dia 450) · Zyza
+  FERIMENTO de Eliane: d20 [14]+0 = 14 → SÉRIO: de cama; não luta · 8 dias (até o Dia 443) · Zyza
+FIM: morto · rodadas 3 · mortos [] · PV -55/2370 · grupo {'Ferir': -62, 'Moreth': 578, 'Eiagrir': 228, 'Eliane': 53}
+⛔ G9: PARAR AQUI, DENTRO DA HORA. Mortos: nenhum · caídos: ['Ferir']
+   antes de o tempo andar, o jogador decide: ERGUER O CAÍDO (Luz 6º, o rei sabe: até 1 hora; 30 de Mana; 1 PV e −1 para sempre num atributo) · o SERVO ARMADO (a Receita Mestra do rei) · Medicina nos caídos · onde estão os corpos

@@ -1,16 +1,5 @@
 {
  "ordem": [
-  "GU12",
-  "413-laco-quem",
-  "413-laco",
-  "413-chamado",
-  "413-vinculos",
-  "GD13",
-  "AR14",
-  "AL14",
-  "DR14",
-  "DR15n",
-  "DR15",
   "LV1",
   "LV2",
   "LV3",
@@ -399,536 +388,20 @@
   "PD35",
   "PD35r",
   "CF35",
-  "FC35"
+  "FC35",
+  "BR36",
+  "CA36",
+  "EZ36",
+  "ZC36",
+  "ZP36",
+  "AL36",
+  "TZ36",
+  "PA36",
+  "MG36",
+  "QS36",
+  "MM36"
  ],
  "selos": {
-  "GU12": {
-   "id": "GU12",
-   "dia": 412,
-   "hora": "21:07:23",
-   "titulo": "OS MEMBROS DA CASA DA GUILDA no dia em que abre (G1: 2d6+6; o mestre é o Starkald)",
-   "dado": [
-    2,
-    6,
-    6
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 18,
-     "res": "membros"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3,
-      4
-     ],
-     "total": 13,
-     "res": "membros",
-     "txt": "[3, 4] +6 = 13 → membros"
-    }
-   ],
-   "hora_rolado": "21:07:23"
-  },
-  "413-laco-quem": {
-   "id": "413-laco-quem",
-   "dia": 413,
-   "hora": "21:07:28",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a BRARA",
-     "txt": "[5] → a BRARA"
-    }
-   ],
-   "hora_rolado": "21:07:28"
-  },
-  "413-laco": {
-   "id": "413-laco",
-   "dia": 413,
-   "hora": "21:07:28",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "MOMENTO",
-     "txt": "[5] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "21:07:28"
-  },
-  "413-chamado": {
-   "id": "413-chamado",
-   "dia": 413,
-   "hora": "21:07:28",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 5,
-     "res": "ninguém digno",
-     "txt": "[2] +3 = 5 → ninguém digno"
-    }
-   ],
-   "hora_rolado": "21:07:28"
-  },
-  "413-vinculos": {
-   "id": "413-vinculos",
-   "dia": 413,
-   "hora": "21:07:28",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "Krernos–Graur",
-     "txt": "#1 [4] → Krernos–Graur"
-    },
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "Nouliel–Herkald",
-     "txt": "#2 [1] → Nouliel–Herkald"
-    }
-   ],
-   "hora_rolado": "21:07:28"
-  },
-  "GD13": {
-   "id": "GD13",
-   "dia": 413,
-   "hora": "21:08:44",
-   "titulo": "O NÍVEL DO GUNDALD (NPC novo da surpresa do Hruthos; carroceiro de Levis)",
-   "dado": [
-    2,
-    20,
-    10
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 50,
-     "res": "nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2,
-      4
-     ],
-     "total": 16,
-     "res": "nível",
-     "txt": "[2, 4] +10 = 16 → nível"
-    }
-   ],
-   "hora_rolado": "21:08:44"
-  },
-  "AR14": {
-   "id": "AR14",
-   "dia": 413,
-   "hora": "21:08:44",
-   "titulo": "O ARDENGHI SABE (dia 414: o capitão e os 15 a cavalo chegam a Levis e contam: o Shyssis e 25 mortos, o rei sobe o rio com o Moreth, o Eiagrir, a Isolda e o Hruthos) · o Ardenghi é mercador e mestre de forja, não guerreiro; paga o culto do Xaathis (força 6) em Levis",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "FOGE de Levis para oeste, para Lumade, antes do rei chegar"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "SE ESCONDE em Levis-baixa, debaixo do culto do Xaathis"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ARMA uma recepção: o culto e os pagos esperam o rei dentro de Levis"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ARMA uma recepção: o culto e os pagos esperam o rei dentro de Levis",
-     "txt": "[5] → ARMA uma recepção: o culto e os pagos esperam o rei dentro de Levis"
-    }
-   ],
-   "hora_rolado": "21:08:44"
-  },
-  "AL14": {
-   "id": "AL14",
-   "dia": 414,
-   "hora": "21:09:04",
-   "titulo": "A ALMISION CHEGA A IREVIEL (414) e o rei NÃO ESTÁ: a palavra dele (2b) é que ela espere; a Intendente a recebe sob guarda; a MAMILTIA está na casa e não a aceita como prova",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "OFENDE-SE e vai embora: a troca cai; a Escola Única −1"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 14,
-     "res": "ESPERA, alojada sob guarda, contando os dias; o Veyula inquieto"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 19,
-     "res": "ESPERA e usa o tempo: pede para falar com a Mamiltia"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "OFENDE-SE e vai embora: a troca cai; a Escola Única −1",
-     "txt": "[5] → OFENDE-SE e vai embora: a troca cai; a Escola Única −1"
-    }
-   ],
-   "hora_rolado": "21:09:04"
-  },
-  "DR14": {
-   "id": "DR14",
-   "dia": 414,
-   "hora": "21:09:04",
-   "titulo": "O DRASSA (pessoa importante que viaja, sai de Levis na tempestade) CRUZA COM O REI na estrada do rio?",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cruza (15, a um dia de Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "não cruza"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "cruza (15, a um dia de Levis)",
-     "txt": "[2] → cruza (15, a um dia de Levis)"
-    }
-   ],
-   "hora_rolado": "21:09:04"
-  },
-  "DR15n": {
-   "id": "DR15n",
-   "dia": 415,
-   "hora": "21:09:26",
-   "titulo": "O NÍVEL DO DRASSA (o guarda-livros do Ardenghi em Levis; foge com o filho)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17,
-      18
-     ],
-     "total": 35,
-     "res": "nível",
-     "txt": "[17, 18] +0 = 35 → nível"
-    }
-   ],
-   "hora_rolado": "21:09:26"
-  },
-  "DR15": {
-   "id": "DR15",
-   "dia": 415,
-   "hora": "21:09:34",
-   "titulo": "O DRASSA E O REI NA ESTRADA (manhã do 415, a um dia de Levis, na chuva da tempestade): o guarda-livros do Ardenghi, a pé, com o filho e uma bolsa, dá de cara com cinco a cavalo, e reconhece o Moreth · quem fala: o MORETH (o mais temido do grupo) · +3 COVARDE · +2 o filho ao lado · +2 cinco armados · −1 LEAL (à casa que serviu)",
-   "dado": [
-    1,
-    20,
-    6
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 9,
-     "res": "MENTE: diz que o Ardenghi fugiu para oeste"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 16,
-     "res": "CONTA: o Ardenghi está em Levis, com o culto do Xaathis e os pagos, esperando o rei"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 22,
-     "res": "CONTA ONDE (a casa e o lugar do culto em Levis-baixa) e QUANTOS"
-    },
-    {
-     "tipo": "num",
-     "a": 23,
-     "b": 1000000,
-     "res": "tudo isso, e entrega o LIVRO DE CONTAS do Ardenghi (quem ele paga em Ireviel e em Lumade)"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 12,
-     "res": "CONTA: o Ardenghi está em Levis, com o culto do Xaathis e os pagos, esperando o rei",
-     "txt": "[6] +6 = 12 → CONTA: o Ardenghi está em Levis, com o culto do Xaathis e os pagos, esperando o rei"
-    }
-   ],
-   "hora_rolado": "21:09:34"
-  },
   "LV1": {
    "id": "LV1",
    "dia": 415,
@@ -19505,6 +18978,555 @@
     }
    ],
    "hora_rolado": "14:21:04"
+  },
+  "BR36": {
+   "id": "BR36",
+   "dia": 435,
+   "hora": "14:29:05",
+   "titulo": "A BRARA RECEBE A FUNDIÇÃO VELHA INTEIRA (2a; ela cobrava a partilha desde o 416; TEIMOSA, HONESTA, CORAJOSA; opinião −5; laço 3): E AS DÍVIDAS PEQUENAS DO LIVRO DO ARDENGHI?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "agradece seca e guarda as dívidas para cobrar depois (o culto segue pregando o fim delas)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "RASGA AS DÍVIDAS EM PRAÇA no mesmo dia (o Culto do Xaathis perde o que pregar em Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "rasga em praça e ajoelha diante do rei, a primeira vez desde o 335"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "RASGA AS DÍVIDAS EM PRAÇA no mesmo dia (o Culto do Xaathis perde o que pregar em Levis)",
+     "txt": "[4] → RASGA AS DÍVIDAS EM PRAÇA no mesmo dia (o Culto do Xaathis perde o que pregar em Levis)"
+    }
+   ],
+   "hora_rolado": "14:29:05"
+  },
+  "CA36": {
+   "id": "CA36",
+   "dia": 435,
+   "hora": "14:29:05",
+   "titulo": "A GUILDA DE LEVIS (a mestra CAREA) RECEBE A ORDEM DO REI: REGISTRAR OS DA BIGORNA LIVRE (a briga do 245)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "registra CALADA, com mágoa: a Carea perde voz na cidade e não esquece"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "registra; a briga do 245 acaba em praça"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "registra e pede ao rei a série das PICARETAS para a Guilda (paz feita com proveito)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "registra CALADA, com mágoa: a Carea perde voz na cidade e não esquece",
+     "txt": "[1] → registra CALADA, com mágoa: a Carea perde voz na cidade e não esquece"
+    }
+   ],
+   "hora_rolado": "14:29:05"
+  },
+  "EZ36": {
+   "id": "EZ36",
+   "dia": 435,
+   "hora": "14:29:05",
+   "titulo": "QUANDO A ELAEVA CHEGA ÀS TERRAS DE FARENTA (saiu dos Picos Brancos no 434; anda devagar; não atravessa água corrente larga)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "no dia 438 + o dado"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      1
+     ],
+     "total": 6,
+     "res": "no dia 438 + o dado",
+     "txt": "[5, 1] +0 = 6 → no dia 438 + o dado"
+    }
+   ],
+   "hora_rolado": "14:29:05"
+  },
+  "ZC36": {
+   "id": "ZC36",
+   "dia": 435,
+   "hora": "14:29:05",
+   "titulo": "DE QUE DEGRAU É ZYTHIR (um cemitério de reis caído em guerra; guarda um prisioneiro; nada mora lá)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "Épico"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "Único"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Lendário"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Mítico"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Único",
+     "txt": "[4] → Único"
+    }
+   ],
+   "hora_rolado": "14:29:05"
+  },
+  "ZP36": {
+   "id": "ZP36",
+   "dia": 435,
+   "hora": "14:30:03",
+   "titulo": "QUEM É O PRISIONEIRO DE ZYTHIR (o que o cemitério de reis guarda, na sala 9)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o ÚLTIMO REI de Zythir, preso VIVO pela magia da própria tumba (a pedra dele ficou em branco)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "QUEM MATOU OS REIS na guerra que derrubou o lugar (preso pelos mortos)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o ÚLTIMO REI de Zythir, preso VIVO pela magia da própria tumba (a pedra dele ficou em branco)",
+     "txt": "[1] → o ÚLTIMO REI de Zythir, preso VIVO pela magia da própria tumba (a pedra dele ficou em branco)"
+    }
+   ],
+   "hora_rolado": "14:30:03"
+  },
+  "AL36": {
+   "id": "AL36",
+   "dia": 435,
+   "hora": "14:30:03",
+   "titulo": "O ALIADO INESPERADO NA PORTA DE ZYTHIR (a surpresa boa do saber do rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o ferreiro mais velho da BIGORNA LIVRE: conhece os túneis (+2 no notar das armadilhas e no caminho)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a TIGRA, que seguiu a Eliane com pão e lanterna"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o OUVALD, o físico de Levis (Medicina para quem cair)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o ECO de um rei morto, que fala na pedra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a TIGRA, que seguiu a Eliane com pão e lanterna",
+     "txt": "[3] → a TIGRA, que seguiu a Eliane com pão e lanterna"
+    }
+   ],
+   "hora_rolado": "14:30:03"
+  },
+  "TZ36": {
+   "id": "TZ36",
+   "dia": 435,
+   "hora": "14:33:25",
+   "titulo": "O TESOURO DO COVIL DA SALA 1 DE ZYTHIR (G17; o Zyza, Épico, morto na toca dele; degrau 3)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "nada além do bicho"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "MOEDA dos que ele comeu: 3 × 1d6 × 100"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 16,
+     "res": "MATERIAL (gerador material, Raro)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "uma PEÇA ANTIGA de quem morreu ali (Rara; tem história)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "as três coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "uma PEÇA ANTIGA de quem morreu ali (Rara; tem história)",
+     "txt": "[18] → uma PEÇA ANTIGA de quem morreu ali (Rara; tem história)"
+    }
+   ],
+   "hora_rolado": "14:33:25"
+  },
+  "PA36": {
+   "id": "PA36",
+   "dia": 435,
+   "hora": "14:33:37",
+   "titulo": "A PEÇA ANTIGA DA SALA 1 DE ZYTHIR (G17, Rara; de um guarda morto do rei Tuir)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma ESPADA de guarda real (Rara; Sal: dano dobrado contra mortos e espíritos)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um ELMO de guarda real (Raro: +2 em Vontade contra medo)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um ANEL DE SELO com o brasão do rei TUIR (Raro: abre as portas de Zythir sem a senha, e as do rei dele, onde estiverem)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um ESCUDO de bronze velho (Raro: +2 na Defesa contra projéteis)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "um ELMO de guarda real (Raro: +2 em Vontade contra medo)",
+     "txt": "[3] → um ELMO de guarda real (Raro: +2 em Vontade contra medo)"
+    }
+   ],
+   "hora_rolado": "14:33:37"
+  },
+  "MG36": {
+   "id": "MG36",
+   "dia": 436,
+   "hora": "14:34:08",
+   "titulo": "QUE MONSTRO GRANDE DESCE A IREVIEL E O RIO (o mundo do 436, PERTO: 'monstro grande desce', e 'alguém some'; as torres de vigia ainda não estão prontas, 449; o posto dos pescadores fechou no 433)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a LIANNIEL, do cais afundado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o LOULA, das covas fora do portão"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a IRASA, das salinas velhas, sobe o rio"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador monstro)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o LOULA, das covas fora do portão",
+     "txt": "[3] → o LOULA, das covas fora do portão"
+    }
+   ],
+   "hora_rolado": "14:34:08"
+  },
+  "QS36": {
+   "id": "QS36",
+   "dia": 436,
+   "hora": "14:34:08",
+   "titulo": "QUEM SOME EM IREVIEL QUANDO O BICHO DESCE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "gente do CAIS (dois pescadores e um menino)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um dos SEM-TORRE (o casamento do 428)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a CANTORA DO TEMPLO (a voz que fazia a Eloune dormir)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "alguém da CASA (rola quem)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "um dos SEM-TORRE (o casamento do 428)",
+     "txt": "[3] → um dos SEM-TORRE (o casamento do 428)"
+    }
+   ],
+   "hora_rolado": "14:34:08"
+  },
+  "MM36": {
+   "id": "MM36",
+   "dia": 436,
+   "hora": "14:34:08",
+   "titulo": "QUEM MORRE EM MARASAR (o mundo do 436, ALEATÓRIO: morte de figura importante; o mercado reage)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o CHEFE DOS FIÉIS que fugiu (achado no rio)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o DRAEK, o emissário da Liga"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o DOGE VELHO, o Pelaone"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um dos presos de nome da Skotha (LASCA ou MIRO)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o CHEFE DOS FIÉIS que fugiu (achado no rio)",
+     "txt": "[1] → o CHEFE DOS FIÉIS que fugiu (achado no rio)"
+    }
+   ],
+   "hora_rolado": "14:34:08"
   }
  }
 }

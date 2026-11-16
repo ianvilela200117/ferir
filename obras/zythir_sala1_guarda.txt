@@ -1,0 +1,21 @@
+nome: Thuron
+categoria: Épico
+nível: 158
+corpo: inseto
+tamanho: cavalo
+essência: Podridao
+números: PV 2370 · Defesa 59 · RD 6 · ataque +49 · 2 ataque(s) por rodada · dano 1d10 × 5 · XP 1580 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · fala e mente
+  · veneno no golpe
+poder assinatura: a ferida infecciona (Vigor contra CD 16), em área de 12 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Vida: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol
+comportamento: colmeia: obedece a uma rainha
+habitat: tumba
+sinal (Lei 15): névoa da cor da Essência
+drops:
+  · couro ou escama ×6: «veyast» (Épico, Podridao), serve para armadura: RD 3 contra doença e veneno
+  · olho ×4: «orine» (Épico, Podridao + Mente), serve para armadura: RD 3 contra doença e veneno
+  · osso ou presa ×2: «zaira» (Épico, Podridao + Sombra), serve para arma: a ferida infecciona (Vigor contra CD 16)
+  · CORAÇÃO: núcleo Épico de Podridao, serve de NÚCLEO para Mítico
+————————————————————————————————————————

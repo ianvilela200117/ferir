@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1214674,
+ "xp": 1216254,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  402,
+  44,
   402
  ],
  "mana": [
@@ -437,6 +437,30 @@
    "log": [
     "Dia 434: +1 434: o CORAÇÃO DA ELOUNE (núcleo Épico de Água), PRESENTE do Teraseth pelo Croque do Rio (TE32p [6]); trazido pela barca dos do Croque"
    ]
+  },
+  "seor": {
+   "kg": 6.0,
+   "log": [
+    "Dia 435: +6 436: as escamas do Zyza (Épico, Podridão; armadura: RD 3 contra doença e veneno; o gerador dizia veyast: trocado)"
+   ]
+  },
+  "maor": {
+   "kg": 4.0,
+   "log": [
+    "Dia 435: +4 436: os olhos do Zyza (Épico, Podridão + Mente; armadura: RD 3 contra doença e veneno; o gerador dizia orine: trocado)"
+   ]
+  },
+  "laiel": {
+   "kg": 2.0,
+   "log": [
+    "Dia 435: +2 436: os ossos do Zyza (Épico, Podridão + Sombra; arma: a ferida infecciona, Vigor CD 16; o gerador dizia zaira: trocado)"
+   ]
+  },
+  "núcleo-épico-de-podridão": {
+   "kg": 1.0,
+   "log": [
+    "Dia 435: +1 436: o CORAÇÃO do Zyza (núcleo Épico de Podridão: serve para Mítica)"
+   ]
   }
  },
  "xp_log": [
@@ -479,7 +503,8 @@
   "Dia 427: SOBE ao 155",
   "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)",
   "Dia 428: +10000 428: a Couraça de Espinho do Moreth (MÍTICA; o teto do núcleo Único)",
-  "Dia 428: SOBE ao 156"
+  "Dia 428: SOBE ao 156",
+  "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

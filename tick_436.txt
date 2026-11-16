@@ -1,0 +1,40 @@
+[14:33:50] Dia 436 · Pressão 5/5 · evento local 1d20 [19] -> um NPC da casa tem um momento (laço ou atrito)
+  O TEMPO (7 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [2] fica · vento d6 [3])
+   o Porto de Marasar: calor forte, brisa (d6 [2] fica · vento d6 [3]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: chuva de verão, vento forte (d6 [2] fica · vento d6 [6]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: calor forte, calmo (d6 [1] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: normal [40/100]
+  avistamento de monstro 1d20 [18] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · ONDE: d19 [13] Zisrir
+  EVENTO DE MUNDO (PERTO) 1d20 [11] Monstro grande desce · encadeamento 1d20 [16] Alguém some · ONDE: d8 [1] Ireviel e o rio
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [4] Morte de figura importante · encadeamento 1d20 [11] Mercado reage · ONDE: d27 [4] Marasar (a Liga e o Doge)
+  Pressão zera
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  O MUNDO SE MOVE — Dia 436 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 436
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Skedda rouba de Altheltia, por causa de uma receita perdida
+    FAÍSCA: Leliel rouba de Draa, por causa de a Matriz
+    FAÍSCA: a mestra Carea salva Lasca e Miro (presos), por causa de dinheiro da Liga
+  ▶ AGENDA #441 (era do Dia 434): CHEGA a Levis: o rei, o Moreth, o Eiagrir, a Eliane e 10 da guarda (a barca da casa; caçar a Isyzis no caminho) (saiu de Ireviel no 429)
+  ▶ AGENDA #449: [OCULTO] (OCULTO) A CARTA DO TOLVANE DE LUMADE chega a Levis, ao rei: o Celocus não respondeu; mostrou uma carga de HADUN à venda
+  ▶ AGENDA #512: A NOTÍCIA DA BATALHA DE MARASAR chega a Ireviel (o Graur manda um barqueiro): a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu com uns 30; o Facio na cela da Skotha · chega ao rei em Levis pela barca do correio (~439)
+  ✉ NOTÍCIA QUE CHEGA HOJE: INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Ireviel e o rio · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Leliel (o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Souane (o Delta): um discípulo ou herdeiro dele aparece no mundo · COMO CHEGA: d20 [9] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, as SALINAS VELHAS ao sul): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [15] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Guilda dos Salineiros do Delta (o Delta): briga com os Devolvidos; vence a Guilda dos Salineiros do Delta · COMO CHEGA: d20 [8] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os do Cais de Baixo (o Porto de Marasar): briga com a Luz Partida; vence os do Cais de Baixo · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Yirane, a Que Come a Pedra (Épico, as Montanhas de Fogo): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Lumdun (Lendário, Mordun): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, a costa): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: Adurel (Zisrir (o vale)): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [10] FIEL

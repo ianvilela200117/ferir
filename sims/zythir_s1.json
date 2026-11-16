@@ -1,0 +1,166 @@
+{
+ "monstro": {
+  "nome": "Zyza",
+  "cat": "Épico",
+  "nivel": 158,
+  "pv": 2370,
+  "df": 59,
+  "rd": 6,
+  "at": 49,
+  "dado": "1d10",
+  "mult": 5,
+  "poder": {
+   "nome": "a ferida infecciona (12 m)",
+   "tipo": "area",
+   "cd": 16,
+   "dano": "4d6"
+  },
+  "veneno": {
+   "cd": 16,
+   "rodadas": 3,
+   "dado": "2d6"
+  },
+  "inteligente": true,
+  "moral": false,
+  "fraqueza": "Vida",
+  "covil": {
+   "nome": "a névoa podre da tumba",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": "ENVENENADO (G16)"
+  },
+  "nota": "gerador monstro (436; obras/zythir_sala1_guarda.txt; o nome do gerador, Thuron, é o do mago do Colégio: trocado por ZYZA): o guarda da sala 1 de Zythir; inseto do tamanho de um cavalo, PODRIDÃO; fala e mente; veneno no golpe; colmeia: obedece a uma rainha; fraco a VIDA (dano dobrado e corta a regeneração) e, a descobrir, à luz do sol; na tumba: o COVIL (G13); guarda: não foge (moral false)"
+ },
+ "grupo": [
+  {
+   "nome": "Ferir",
+   "nivel": 156,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 402,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": true,
+   "essencia": "Vento",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo)",
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
+     "dano": "24d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO"
+  },
+  {
+   "nome": "Moreth",
+   "nivel": 232,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "essencia": "Vida"
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 126,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica)",
+   "essencia": "Vida"
+  },
+  {
+   "nome": "Eliane",
+   "nivel": 96,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 260,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda)",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda."
+  }
+ ]
+}

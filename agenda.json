@@ -1,5 +1,5 @@
 {
- "prox_id": 513,
+ "prox_id": 516,
  "itens": [
   {
    "id": 1,
@@ -6192,7 +6192,7 @@
    "oculto": false,
    "para": true,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6297,7 +6297,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -7194,6 +7194,43 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 513,
+   "dia": 437,
+   "texto": "CLIMA ESTRANHO — o sul, onde a areia come a pedra",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 436",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 514,
+   "dia": 439,
+   "texto": "A BARCA DO CORREIO chega a Levis com as notícias de Ireviel: a BATALHA DE MARASAR (a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu; o Facio na cela da Skotha) · o LOULA desceu a Ireviel e um dos SEM-TORRE sumiu (436) · (se o rei já tiver saído de Levis, a barca o cruza no rio)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 515,
+   "dia": 437,
+   "texto": "(OCULTO) o relato do Graur chega a Ireviel: o CHEFE DOS FIÉIS que fugiu foi achado MORTO no rio (MM36 [1]); o mercado de Marasar reage (rolar)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
    "feito": false,
    "toca": true
   }
@@ -7797,6 +7834,14 @@
    "oculto": false,
    "aberto": 433,
    "tocado": 433,
+   "fechado": false
+  },
+  {
+   "id": 76,
+   "texto": "O LOULA desceu das covas de fora do portão a IREVIEL (436) e um dos SEM-TORRE sumiu (o casamento do 428). Sem posto de vigia (as torres ficam prontas no 449).",
+   "oculto": false,
+   "aberto": 436,
+   "tocado": 436,
    "fechado": false
   }
  ]

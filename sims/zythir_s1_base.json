@@ -1,0 +1,7 @@
+{"monstro": {"nome": "Zyza", "cat": "Épico", "nivel": 158, "pv": 2370, "df": 59, "rd": 6, "at": 49, "dado": "1d10", "mult": 5,
+  "poder": {"nome": "a ferida infecciona (12 m)", "tipo": "area", "cd": 16, "dano": "4d6"},
+  "veneno": {"cd": 16, "rodadas": 3, "dado": "2d6"},
+  "inteligente": true, "moral": false, "fraqueza": "Vida",
+  "covil": {"nome": "a névoa podre da tumba", "dano": "4d6", "cd": 21, "efeito": "ENVENENADO (G16)"},
+  "nota": "gerador monstro (436; obras/zythir_sala1_guarda.txt; o nome do gerador, Thuron, é o do mago do Colégio: trocado por ZYZA): o guarda da sala 1 de Zythir; inseto do tamanho de um cavalo, PODRIDÃO; fala e mente; veneno no golpe; colmeia: obedece a uma rainha; fraco a VIDA (dano dobrado e corta a regeneração) e, a descobrir, à luz do sol; na tumba: o COVIL (G13); guarda: não foge (moral false)"},
+ "grupo": []}

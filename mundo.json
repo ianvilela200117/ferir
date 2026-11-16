@@ -2935,6 +2935,17 @@
    "leitura": "golpe",
    "resumo": "MUDANÇA POLÍTICA: golpe — Kreade (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 436,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 437,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "CLIMA ESTRANHO — o sul, onde a areia come a pedra",
+   "toca": false
   }
  ]
 }

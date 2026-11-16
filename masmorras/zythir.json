@@ -1,0 +1,88 @@
+{
+ "nome": "Zythir",
+ "cat": "Único",
+ "guarda": "o PRISIONEIRO que o cemitério de reis guarda",
+ "gerada": 435,
+ "salas": [
+  {
+   "n": 1,
+   "dado": 6,
+   "o_que": "PERIGO: um bicho ou guarda Épico",
+   "leva_a": [
+    2
+   ],
+   "vista": true
+  },
+  {
+   "n": 2,
+   "dado": 14,
+   "o_que": "SEGREDO (porta, passagem ou inscrição)",
+   "leva_a": [
+    3
+   ],
+   "vista": false
+  },
+  {
+   "n": 3,
+   "dado": 18,
+   "o_que": "O QUE HABITA o lugar (encontro; pode ser conversa)",
+   "leva_a": [
+    4,
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 4,
+   "dado": 14,
+   "o_que": "SEGREDO (porta, passagem ou inscrição)",
+   "leva_a": [
+    5
+   ],
+   "vista": false
+  },
+  {
+   "n": 5,
+   "dado": 8,
+   "o_que": "PERIGO: um bicho ou guarda Épico",
+   "leva_a": [
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 6,
+   "dado": 15,
+   "o_que": "TESOURO (G17, degrau Único)",
+   "leva_a": [
+    7
+   ],
+   "vista": false
+  },
+  {
+   "n": 7,
+   "dado": 10,
+   "o_que": "ARMADILHA: notar CD 23; falha: 6d6 e uma condição (G16)",
+   "leva_a": [
+    8
+   ],
+   "vista": false
+  },
+  {
+   "n": 8,
+   "dado": 8,
+   "o_que": "PERIGO: um bicho ou guarda Épico",
+   "leva_a": [
+    9
+   ],
+   "vista": false
+  },
+  {
+   "n": 9,
+   "dado": null,
+   "o_que": "O CORAÇÃO: o PRISIONEIRO que o cemitério de reis guarda, com o guardião (Único)",
+   "leva_a": [],
+   "vista": false
+  }
+ ]
+}

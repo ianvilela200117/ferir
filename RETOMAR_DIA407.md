@@ -1,14 +1,14 @@
-# RETOMAR — noite do Dia 435, Levis (MOTOR 8: G1 a G22)
+# RETOMAR — manhã do Dia 436, Zythir, depois da sala 1 (MOTOR 8: G1 a G22)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: NOITE DO 435, Levis); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: MANHÃ DO 436, Zythir); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Noite do 435, LEVIS. Os ticks até o 435 JÁ RODARAM. Com o rei (402/402): o Moreth (a Couraça, sem encanto), o Eiagrir, a Eliane, 10 da guarda; o coração da Eloune (núcleo Épico de Água); a carta do Ceduion; a pena da Mamiltia; a barca da Liga tomada. Os 32 da Liga ao trabalho forçado em Levis (G6: 119). Levis: Comida 2, Ordem 1 (a Tigra). A ELAEVA rumo a FARENTA (a notícia fiel chegou hoje). A Brara quer a fundição velha inteira; a Bigorna Livre achou ZYTHIR (um cemitério de reis; um prisioneiro; uma senha). A BATALHA DE MARASAR rodou (BT35, oculta para a casa até o 436: a revolta QUEBRADA; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu com 30; o Facio na cela da Skotha).
+Manhã do 436, ZYTHIR (debaixo das minas velhas de Levis), depois da SALA 1 (masmorra.py ver Zythir; o mapa inteiro com 'tudo': 9 salas; a 2 é SEGREDO; a 3 é O QUE HABITA, e dela se vai à 4 ou direto à 6). O tick do 436 JÁ RODOU. O rei 44/402 (a correção do Gibão); a Eliane de cama até o 443 (SÉRIO); o Moreth 578, o Eiagrir 228; a Tigra (15) com a lanterna; os 10 da guarda na escada. O plano: Farenta no amanhecer do 437 (OCULTO: a ELAEVA chega às terras de Farenta no 444). Na casa: o núcleo Épico de ÁGUA (a Eloune) e o núcleo Épico de PODRIDÃO (o Zyza); o elmo de guarda real.
 - OCULTOS: a ALMISION acordou a Elaeva e deu o nome do Adurel (a palavra da Mamiltia chega no 440) · a Groa passou a medida da Fornalha (o cobrador identificado) · o Odrum sócio da Moeda Velha no que a frota perdida deu · o Krothos tem 1 cria · as surpresas do Rio Vermelho e das Mães da Porta (consequência antiga) na fila da G8-C.
 - A ORDEM DO REI contra a revolta de Marasar chega a Ireviel no meio-dia do 434: a força do Graur (as 20 lanças, a guarda que pode sair, a Guilda e 1d6+4 magos da Chama da Hoste: rolar os números) sai à tarde e chega a Marasar no 435 (batalha.py; os Fiéis do Doge Velho, força 6) · o Facio vai com eles, para ser entregue à Skotha · a LEGITIMIDADE caiu a 9 (o rei passou por cima do voto do conselho).
 - Ireviel sabe e o rei ainda não: a Eloune morta pelo Teraseth (o recado dele, com o coração DE PRESENTE, alcança a barca no 434: agenda #448, oculto) · a contra IDENTIFICOU o homem das guildas de Steunn (o cobrador da Groa; a Sira o vigia; OCULTO: a Groa passou a ele uma medida da Fornalha) · o Celocus pagou os 800.
@@ -181,10 +181,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (434 noite → 435): 1b trabalho forçado aos 32 · 2c o ouro em pão e físicos e a guarda com a Brara · 3b a Isyzis depois de Levis
 - LV34 sentença (legitimidade 10) · G6 119 · cofre −5.500 · Levis Comida 2 (+1 mod), Saúde +1 mod · OR35 [20] natural → a Tigra; Ordem 1 · BR35 [1] a partilha · BG35 [6] → Zythir · BT35 a batalha (oculta até o 436) · PD35 [3] · CF35 [6] · FC35 [2] · os recados (441, 438/440, 453).
 
+## RESPONDIDO (435 noite → 436): 1c direto a Farenta, a pena quando a fera chegar · 2a a fundição à Brara · 3a Zythir já e o registro à Bigorna
+- BR36 [4] · CA36 [1] · (OCULTO) EZ36 444 · ZC36 [4] Único · a senha (EXTRAORDINÁRIO) · (OCULTO) ZP36 [1] o prisioneiro é o rei Tuir · AL36 [3] a Tigra · LZ36 a sala 1 (o ERRO da ficha do rei corrigido: o Gibão) · TZ36 [18] · PA36 [3] o elmo · o tick do 436: MG36 [3] o Loula, QS36 [3] um Sem-Torre some, (OCULTO) MM36 [1].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A ELAEVA RUMO A FARENTA (Mítica 376, Espinho; fraca a FOGO e ao SAL; não atravessa água corrente larga; a caçada com a Mamiltia e a Lurentetta era para o ~480 nos Picos Brancos): a) o rei VOLTA JÁ a Ireviel (3 dias de barca) e prepara Farenta: o povo, a muralha, o sal · b) manda a ORDEM a Farenta (fechar as portas, juntar sal, um posto de vigia G11 na fera) e segue em Levis · c) vai DIRETO a Farenta para a caçada, e queima a pena da Mamiltia quando a fera chegar · d) outra.
-2. A BRARA quer a fundição velha de Levis-baixa inteira para Levis (a partilha do 416 foi meio a meio): a) dar · b) não: a partilha fica · c) meio-termo: a fundição fica com Levis; o ferro e o vaduar do armazém, com a coroa · d) outra.
-3. ZYTHIR, o cemitério de reis debaixo das minas velhas (um prisioneiro; uma senha): a) o rei entra já (G14: as salas) · b) a Bigorna Livre guarda a porta até a volta, e o rei lhes dá o registro na Guilda (o que pediam desde o 414) · c) outra.
+1. ZYTHIR DEPOIS DA SALA 1 (o rei 44/402; a Eliane de cama; faltam 8 salas; a colmeia obedece a uma rainha): a) SEGUIR JÁ para a sala 2 · b) SAIR, dormir uma noite (G4: +40) e voltar amanhã (o lugar se mexe: +2 nos perigos; Farenta atrasa um dia) · c) a Bigorna Livre GUARDA A PORTA e o rei vai a Farenta; Zythir depois da Elaeva · d) outra.
+2. O ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo): a) para um da guarda do rei · b) para a Tigra · c) guardar · d) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

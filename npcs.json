@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 96,
-  "xp": 5193,
+  "xp": 6773,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -118,7 +118,8 @@
    "+1400 433 (noite): a estalagem da estrada do sal: 4 guardas da Liga (nível 35) rendidos no meio da luta (CR35)",
    "Dia 433: 433 (noite): tomou a carroça do ouro da Liga na estalagem da estrada do sal com 8 da guarda (CR35: 40 × 23); os 4 guardas da Liga se renderam no meio da luta; EXAUSTÃO 1 (G16: a noite em marcha; sai com a primeira noite de descanso)",
    "+500 Tick 434: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)",
-   "Tick 434: SOBE a 96"
+   "Tick 434: SOBE a 96",
+   "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -1219,7 +1220,8 @@
    "Dia 423: 423: a barca do ferro trouxe o recado dela (MOMENTO): pede que o rei vá a Levis ver a fundição velha acesa (BR23 [3])",
    "Dia 426: 426: a carta chegou: faz as PICARETAS, mas manda dizer que a partilha foi injusta e não rasga nenhuma dívida antes de ver o rei (BR26 [1])",
    "+500 Tick 427: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))",
-   "+500 Tick 434: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))"
+   "+500 Tick 434: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))",
+   "Dia 435: 435: recebeu a FUNDIÇÃO VELHA de Levis-baixa INTEIRA (a metade da coroa); RASGOU EM PRAÇA as dívidas pequenas do livro do Ardenghi no mesmo dia (BR36 [4])"
   ],
   "classe": "Fundidora (FORJA, Incomum) · Forja Mestre · TEIMOSA, HONESTA, CORAJOSA",
   "ocupacao": "GOVERNADORA DE LEVIS (335)",
@@ -1233,6 +1235,12 @@
     "v": -5,
     "motivo": "416: a partilha dos bens do Ardenghi meio a meio; ela queria o armazém para Levis, sem ferro (BRm [1]); aceitou de cara fechada",
     "dia": 416,
+    "ate": null
+   },
+   {
+    "v": 15,
+    "motivo": "435: o rei deu a Levis a fundição velha inteira (a partilha do 416 refeita)",
+    "dia": 435,
     "ate": null
    }
   ]
@@ -2826,7 +2834,7 @@
  },
  "Moreth": {
   "nivel": 232,
-  "xp": 11415,
+  "xp": 12995,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -2924,7 +2932,8 @@
    "+500 Tick 427: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "Tick 427: SOBE a 232",
    "+6100 427: o Morek morto",
-   "Dia 428: 428 (noite): recebe a COURAÇA DE ESPINHO (MÍTICA; Sob Medida 4, o nome dele gravado; usa inteira): escamas de ssythis, forro de sasis, rebites de zeieth, o NÚCLEO ÚNICO DE ESPINHO do Morek no peito · leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · DEFEITOS: floresce e pesa; atrai tempestade · o encanto fica para a próxima noite livre na Fornalha"
+   "Dia 428: 428 (noite): recebe a COURAÇA DE ESPINHO (MÍTICA; Sob Medida 4, o nome dele gravado; usa inteira): escamas de ssythis, forro de sasis, rebites de zeieth, o NÚCLEO ÚNICO DE ESPINHO do Morek no peito · leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · DEFEITOS: floresce e pesa; atrai tempestade · o encanto fica para a próxima noite livre na Fornalha",
+   "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir"
   ],
   "tracos": [
    "LEAL",
@@ -3854,7 +3863,8 @@
    "+500 Tick 406: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
    "Tick 406: SOBE a 20",
    "+500 Tick 420: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
-   "+500 Tick 434: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)"
+   "+500 Tick 434: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
+   "Dia 435: 435: registrou os da BIGORNA LIVRE na Guilda de Levis por ordem do rei, CALADA, com mágoa: perde voz na cidade e não esquece (CA36 [1])"
   ],
   "ultima_subida": 406,
   "tracos": [
@@ -3867,7 +3877,15 @@
    "Ajustar Armadura (1 hora, 2)",
    "Lote de Guerra (Passiva)"
   ],
-  "fraqueza": "joia e coisa fina saem tortas (−2)."
+  "fraqueza": "joia e coisa fina saem tortas (−2).",
+  "opiniao": [
+   {
+    "v": -10,
+    "motivo": "435: o rei mandou registrar os da Bigorna Livre por cima da Guilda (CA36 [1])",
+    "dia": 435,
+    "ate": 525
+   }
+  ]
  },
  "Tessal": {
   "nivel": 25,
@@ -4167,7 +4185,7 @@
  },
  "Eiagrir": {
   "nivel": 126,
-  "xp": 6698,
+  "xp": 8278,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -4232,7 +4250,8 @@
    "+6100 427: o Morek morto",
    "Dia 427: 427: o crítico que pôs o Morek a 96; levou 186 da reação (87); não pegou a doença",
    "+500 Tick 434: PASSO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
-   "Tick 434: SOBE a 126"
+   "Tick 434: SOBE a 126",
+   "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir"
   ],
   "ultima_subida": 434,
   "tracos": [

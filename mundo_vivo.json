@@ -2182,8 +2182,8 @@
     2,
     6
    ],
-   "postura": 0,
-   "estado": "viva",
+   "postura": 1,
+   "estado": "cumpriu",
    "log": [
     "385: [1] RACHA: perde gente → força 3",
     "392: [11] AGE PELO OBJETIVO → 1/6",
@@ -2192,7 +2192,8 @@
     "413: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
     "420: [7] quieta",
     "427: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
-    "434: [4] quieta"
+    "434: [4] quieta",
+    "435: o REI lhes deu o REGISTRO na Guilda de Levis (o que pediam desde o 414); a Carea registrou calada (CA36 [1]); acharam ZYTHIR (BG35)"
    ]
   },
   {
@@ -2411,7 +2412,7 @@
    "o_que": "adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra caro · 343: tomou as harpias KRAEK · 350: o ARDENGHI paga o culto; dentes nas estacas do rio acima de Levis",
    "forca": 4,
    "relogio": [
-    4,
+    3,
     6
    ],
    "postura": -1,
@@ -3212,6 +3213,15 @@
    "essencia": "Elo",
    "onde": "as Fundas do Norte (o Clã Hegre)",
    "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «selol» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais ·  · 433: o conferidor achou RIUNN perto de GIUNN: trocado por Tinda"
+  },
+  {
+   "nome": "Zyza",
+   "dia": "436",
+   "cat": "Épico",
+   "nivel": "158",
+   "essencia": "Podridão",
+   "onde": "Zythir, a sala 1",
+   "nota": "gerador monstro (o nome Thuron trocado): o guarda da sala 1, da COLMEIA que obedece a uma rainha; MORTO no 436 pelo contra-golpe do Eiagrir"
   }
  ],
  "notas_ocultas": [
@@ -3754,10 +3764,11 @@
    ]
   },
   "Levis (a cidade)": {
-   "valor": 45,
+   "valor": 55,
    "log": [
     "433: partida (o Mestre, pelo que a casa viveu com eles)",
-    "433: +5 (433: o rei recusou em público o ouro da Liga no cais de uma aldeia de Levis (a surpresa boa do saber: alguém viu e conta))"
+    "433: +5 (433: o rei recusou em público o ouro da Liga no cais de uma aldeia de Levis (a surpresa boa do saber: alguém viu e conta))",
+    "435: +10 (435: a fundição velha inteira para Levis e as dívidas do Ardenghi rasgadas em praça)"
    ]
   },
   "o Porto de Marasar (a cidade)": {

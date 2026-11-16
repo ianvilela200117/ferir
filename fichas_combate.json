@@ -153,7 +153,7 @@
    "imune_empurrao": true,
    "nivel_ref": 155,
    "essencia": "Vento",
-   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo)",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho",
    "magias": [
     {
      "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
@@ -183,7 +183,9 @@
      "essencia": "Fogo"
     }
    ],
-   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO"
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO · GIBÃO DE ORLOXA DO REI (Mítico, inteiro desde o Sob Medida 4): 1x por cena +4 de Defesa · RD +3 contra fogo · RD 3 contra doença e veneno · 1x POR DIA DESFAZ UM GOLPE RECEBIDO · não é derrubado nem empurrado · esconde",
+   "desfaz": 1,
+   "desfaz_nome": "o Gibão de Orloxa do Rei"
   },
   "Graur": {
    "nome": "Graur",

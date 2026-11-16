@@ -235,6 +235,8 @@ def ataque(M,g,G,morreu,rnd,varre=False):
     df=g['df']+(OFF if DOIS else 0)+(g.get('aura_def',[0,0])[0] if g.get('aura_def') else 0)-min(CERCO[1],CERCO[0]*max(0,g['golpes']-g['ac']))
     if J['fum'] or (t<df and not crit): P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} erra'); return
     dd_=dados(M['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*M['mult'])+M.get('b',0)+M['nivel']//5; rd=g['rd']//2 if crit else g['rd']; liq=max(br-rd,0)
+    if g.get('desfaz',0)>0 and liq>0 and (crit or liq>=g['pvmax']*0.2):   # 436 (G9): a peça que 'desfaz um golpe por dia' (o Gibão do rei) desfaz o golpe grande
+        g['desfaz']-=1; P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {liq} → DESFEITO ({g.get("desfaz_nome","a peça")}, 1x por dia)'); return
     g['pv']-=liq; s=f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {dd_}×{M["mult"]}+{M.get("b",0)}+{M['nivel']//5}={br} − RD {rd} = {liq} ({g["pv"]})'
     if M.get('veneno') and g['pv']>0:
         vg=sum(ex())+g.get('vigor',10)
