@@ -1,17 +1,5 @@
 {
  "ordem": [
-  "FZq4",
-  "C404a",
-  "C404b",
-  "C404c",
-  "QW4",
-  "QWn",
-  "CZ4",
-  "YM4",
-  "EL4",
-  "RB5",
-  "406-laco-quem",
-  "406-laco",
   "406-chamado",
   "406-vinculos",
   "W1",
@@ -399,507 +387,21 @@
   "IZ30",
   "FA30",
   "LB30",
-  "LB30c"
+  "LB30c",
+  "LB31",
+  "VX31",
+  "GR31",
+  "HG31",
+  "LV31",
+  "BR32",
+  "TE32",
+  "TE32p",
+  "MR30",
+  "PM30",
+  "ST32",
+  "CL32"
  ],
  "selos": {
-  "FZq4": {
-   "id": "FZq4",
-   "dia": 403,
-   "hora": "19:21:33",
-   "titulo": "O FOCO DO ZESRETH (Épico, Vento, ×2), tomado no sino",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um cajado de freixo com anéis de prata"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um anel de vidro com uma bolha de ar dentro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "um apito de osso"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "um apito de osso",
-     "txt": "[6] → um apito de osso"
-    }
-   ],
-   "hora_rolado": "19:21:33"
-  },
-  "C404a": {
-   "id": "C404a",
-   "dia": 404,
-   "hora": "19:22:35",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: O QUTHEMNUS (mago de Elo, 229, fraco; solto do círculo de Fenmir no 378; recusou a reparação do rei, amaldiçoou a mão do Herkald, pôs fogo na Fornalha com o filho e começou um contrato falso com a marca da mão do rei; rendeu-se no círculo; o filho morreu no sino)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) MORTE em praça · placar A 3 · B 2 · C 1 · VOTO VENCIDO: Nouliel, Sira, Tolvane",
-     "txt": "VENCE A) MORTE em praça · placar A 3 · B 2 · C 1 · VOTO VENCIDO: Nouliel, Sira, Tolvane"
-    }
-   ]
-  },
-  "C404b": {
-   "id": "C404b",
-   "dia": 404,
-   "hora": "19:22:35",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: OS SEIS DA GUARDA DA TORRE ACESA (2 da Cinza, gente de Ireviel velha; 4 espadas pagas pelo Ardenghi)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) TRABALHO FORÇADO, cinco anos, com os 81 · placar A 4 · B 1 · C 1 · VOTO VENCIDO: Sira, Isolda",
-     "txt": "VENCE A) TRABALHO FORÇADO, cinco anos, com os 81 · placar A 4 · B 1 · C 1 · VOTO VENCIDO: Sira, Isolda"
-    }
-   ]
-  },
-  "C404c": {
-   "id": "C404c",
-   "dia": 404,
-   "hora": "19:22:35",
-   "titulo": "O CONSELHO VOTA: AS TORRES MORTAS DE IREVIEL VELHA (sem dono; os da Cinza moram à sombra delas; ali o mago acendia as torres)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) ENTREGAR às famílias da Cinza como lugar de memória dos mortos da Noite das Torres · placar A 2 · B 0 · C 4 · VOTO VENCIDO: Eliane, Sira",
-     "txt": "VENCE C) ENTREGAR às famílias da Cinza como lugar de memória dos mortos da Noite das Torres · placar A 2 · B 0 · C 4 · VOTO VENCIDO: Eliane, Sira"
-    }
-   ]
-  },
-  "QW4": {
-   "id": "QW4",
-   "dia": 404,
-   "hora": "19:22:53",
-   "titulo": "AS ÚLTIMAS PALAVRAS DO QUTHEMNUS NO ESTRADO (tarde do 404; a praça cheia; os da Cinza na frente)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "amaldiçoa a mão do rei, como amaldiçoou a do Herkald (só palavras, sem círculo: não pega)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "diz quem abriu o círculo de Fenmir na noite do 378 (dado QWn)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "morre calado, olhando as torres"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "morre calado, olhando as torres",
-     "txt": "[5] → morre calado, olhando as torres"
-    }
-   ],
-   "hora_rolado": "19:22:53"
-  },
-  "QWn": {
-   "id": "QWn",
-   "dia": 404,
-   "hora": "19:22:53",
-   "titulo": "(só vale se o QW4 der 3-4) QUEM ABRIU O CÍRCULO DE FENMIR (378)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o próprio filho, o Zesreth, com o ouro do Ardenghi"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um homem da Leliel, que queria o rio em fogo antes da lua nova"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a Almision, curiosa do que um mago das torres sabia"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um homem da Leliel, que queria o rio em fogo antes da lua nova",
-     "txt": "[4] → um homem da Leliel, que queria o rio em fogo antes da lua nova"
-    }
-   ],
-   "hora_rolado": "19:22:53"
-  },
-  "CZ4": {
-   "id": "CZ4",
-   "dia": 404,
-   "hora": "19:22:53",
-   "titulo": "OS DA CINZA DIANTE DA MORTE DO MAGO E DAS TORRES ENTREGUES A ELES COMO MEMÓRIA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "as torres não pagam o sangue: seguem hostis e crescem (força +1)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "racham: metade aceita as torres e chora os mortos; metade amaldiçoa o rei (sem mudança)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "aceitam as torres: o luto acalma (postura −1 → 0)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "as torres não pagam o sangue: seguem hostis e crescem (força +1)",
-     "txt": "[1] → as torres não pagam o sangue: seguem hostis e crescem (força +1)"
-    }
-   ],
-   "hora_rolado": "19:22:53"
-  },
-  "YM4": {
-   "id": "YM4",
-   "dia": 404,
-   "hora": "19:22:53",
-   "titulo": "O MONSTRO NOVO OU A MIGRAÇÃO NO DELTA E NAS SALINAS (notícia FIEL do 404)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a YIAVA, o bicho dos lodaçais, desce para as salinas"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "um monstro novo (gerador monstro)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a YIAVA, o bicho dos lodaçais, desce para as salinas",
-     "txt": "[3] → a YIAVA, o bicho dos lodaçais, desce para as salinas"
-    }
-   ],
-   "hora_rolado": "19:22:53"
-  },
-  "EL4": {
-   "id": "EL4",
-   "dia": 404,
-   "hora": "19:22:53",
-   "titulo": "O RUMOR EXATO DA ELAEVA (alguém a viu nos Picos Brancos e sobreviveu; FIEL)",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "uma fraqueza"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "onde ela dorme"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o que ela deixa cair"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o que ela deixa cair",
-     "txt": "[3] → o que ela deixa cair"
-    }
-   ],
-   "hora_rolado": "19:22:53"
-  },
-  "RB5": {
-   "id": "RB5",
-   "dia": 405,
-   "hora": "19:23:44",
-   "titulo": "O ROUBO PEQUENO NO CAIS (405) E A FAÍSCA DO DIA (a Mamiltia salva o Odrum, refugiado SÁBIO e ORGULHOSO, por causa de dinheiro da Liga)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "dois ladrões do cais tentam tomar do Odrum uma bolsa de moeda velha da Liga que ele guardava desde que fugiu; a Mamiltia, que passava, quebra o braço de um; o Odrum lhe deve a vida"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o mesmo, mas a Mamiltia chega tarde: levam a bolsa e o Odrum fica ferido"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA",
-     "txt": "[6] → SURPRESA"
-    }
-   ],
-   "hora_rolado": "19:23:44"
-  },
-  "406-laco-quem": {
-   "id": "406-laco-quem",
-   "dia": 406,
-   "hora": "19:24:08",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a ULURVE",
-     "txt": "[4] → a ULURVE"
-    }
-   ],
-   "hora_rolado": "19:24:08"
-  },
-  "406-laco": {
-   "id": "406-laco",
-   "dia": 406,
-   "hora": "19:24:08",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ATRITO",
-     "txt": "[1] → ATRITO"
-    }
-   ],
-   "hora_rolado": "19:24:08"
-  },
   "406-chamado": {
    "id": "406-chamado",
    "dia": 406,
@@ -19059,6 +18561,611 @@
     }
    ],
    "hora_rolado": "01:59:38"
+  },
+  "LB31": {
+   "id": "LB31",
+   "dia": 431,
+   "hora": "03:06:36",
+   "titulo": "O 2º DIA DE TEMPESTADE NO REMANSO (431: o barco não sai; as duas barcas seguem amarradas, uma de frente para a outra; 1c: o rei não aborda): O QUE O HOMEM DE CAPA DA LIGA FAZ",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "NADA: mantém a lanterna acesa de vigia e espera a tempestade passar"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "manda um ESQUIFE com um remador: pergunta de quem é a barca e oferece pagar a portagem do rio"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "RECONHECEU o rei (a lança, a guarda): de madrugada corta as amarras e sai na tempestade, rio acima (rola se a barca aguenta)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "NADA: mantém a lanterna acesa de vigia e espera a tempestade passar",
+     "txt": "[3] → NADA: mantém a lanterna acesa de vigia e espera a tempestade passar"
+    }
+   ],
+   "hora_rolado": "03:06:36"
+  },
+  "VX31": {
+   "id": "VX31",
+   "dia": 431,
+   "hora": "03:06:36",
+   "titulo": "A VIGIA DA VATHEXA (G11, a 1ª vez: o posto da Luz do Cais; a Lendária 262 marca território mais perto de gente, na costa; notícia FIEL)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: a aldeia recolhe os barcos e a gente; sem perda"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO: sem perda, e um RUMOR EXATO dela (fraqueza, toca ou drop)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "vista NO LUGAR, de dia, parada: a casa sabe onde ela dorme"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 4,
+     "res": "não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)",
+     "txt": "[2] +2 = 4 → não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)"
+    }
+   ],
+   "hora_rolado": "03:06:36"
+  },
+  "GR31": {
+   "id": "GR31",
+   "dia": 431,
+   "hora": "03:06:36",
+   "titulo": "A GROA E O HOMEM DAS GUILDAS DE STEUNN (ele cobra a medida ou o desenho da Fornalha; ela é COVARDE, deve a alguém perigoso, e nunca vende o ofício barato)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 13,
+     "res": "ELA ENROLA: pede uma semana (ele volta no tick do 434)"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 19,
+     "res": "ELA CONTA ao Herkald: a casa sabe do homem e do que ele quer"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "conta ao Herkald e entrega o homem: a Sira o prende esta noite"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)",
+     "txt": "[3] → ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)"
+    }
+   ],
+   "hora_rolado": "03:06:36"
+  },
+  "HG31": {
+   "id": "HG31",
+   "dia": 431,
+   "hora": "03:06:36",
+   "titulo": "A TRAIÇÃO DENTRO DO CLÃ HEGRE (evento de mundo ALEATÓRIO do 431, as Fundas do Norte; o eco chega à casa por um fio ativo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um chefe do Clã VENDE AO BORECCI (Steunn) o therk prometido ao rei (o tratado proposto 'cla', F4)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um parente tenta matar o chefe e FOGE PARA O SUL: vem pedir abrigo a Ireviel (chega em 2d6 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "os do Clã que queriam a mediação do rei com os Vradda (F5) são expulsos, e o Hulgunn perde quem o recebia"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "03:06:36"
+  },
+  "LV31": {
+   "id": "LV31",
+   "dia": 431,
+   "hora": "03:06:36",
+   "titulo": "QUEM LUCRA COM A FROTA PERDIDA DE LEVIS (evento de mundo PERTO do 431: caravana ou frota perdida, na tempestade; 'alguém lucra')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a LIGA: sem as barcas de Levis, o frete dela no rio sobe de novo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o CULTO DO XAATHIS: a carga some nas minas de baixo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BIGORNA LIVRE: compra o ferro perdido barato de quem o pescou"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "03:06:36"
+  },
+  "BR32": {
+   "id": "BR32",
+   "dia": 432,
+   "hora": "03:07:43",
+   "titulo": "QUANDO A BARCA RÁPIDA DA INTENDENTE ALCANÇA O REI (sai de Ireviel na manhã do 432, com o céu limpo e o rio normal, levando as notícias do 430 e do 431, o mensageiro da Skotha, o relato da Guilda e a pena da Mamiltia; o rei saiu do remanso ao amanhecer)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "na NOITE DO 432, no pouso da barca do rei"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "só ao MEIO-DIA DO 433"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "na NOITE DO 432, no pouso da barca do rei",
+     "txt": "[3] → na NOITE DO 432, no pouso da barca do rei"
+    }
+   ],
+   "hora_rolado": "03:07:43"
+  },
+  "TE32": {
+   "id": "TE32",
+   "dia": 432,
+   "hora": "03:07:43",
+   "titulo": "O TERASETH CAÇA A ELOUNE SOZINHO NOS LODAÇAIS (Lendário 432, com o Croque do Rio, Primordial, contra a Épica 136 no terreno dela: 4 crias, veneno, olhar que paralisa)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "ela ESCAPA de novo no lodaçal fundo; ele perde o rastro"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "ela o FERE (o olhar e o veneno) e ele recua; ela fica ferida e mais faminta"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 16,
+     "res": "ELE A MATA: o coração (núcleo Épico de Água) é dele; as crias fogem (1d4)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 19,
+     "res": "ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)",
+     "txt": "[19] → ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)"
+    }
+   ],
+   "hora_rolado": "03:07:43"
+  },
+  "TE32p": {
+   "id": "TE32p",
+   "dia": 432,
+   "hora": "03:07:57",
+   "titulo": "O PREÇO DO TERASETH PELO CORAÇÃO DA ELOUNE (núcleo Épico de Água)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OURO: 3d6 × 1.000"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "UMA PEÇA da forja do rei para ele: uma ARMADURA, Lendária ou melhor"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "UM FAVOR: as lanças do rei contra os que mataram os barqueiros dele na guerra do rio (a Liga no rio)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "NADA: é presente, pelo Croque do Rio"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "NADA: é presente, pelo Croque do Rio",
+     "txt": "[6] → NADA: é presente, pelo Croque do Rio"
+    }
+   ],
+   "hora_rolado": "03:07:57"
+  },
+  "MR30": {
+   "id": "MR30",
+   "dia": 432,
+   "hora": "03:08:23",
+   "titulo": "O QUE A GUILDA E OS DO CROQUE VIRAM DA REVOLTA DE MARASAR (430; os Fiéis do Doge Velho, força 6, contra a Skotha)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os Fiéis têm o QUARTEL VELHO e o PORTÃO DO RIO; a Skotha segura o palácio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a Skotha já os APERTOU no quartel velho: cerco dentro da cidade"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os Fiéis tomaram também a estrada do PORTO DE MARASAR (o porto do rei está cortado da cidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto",
+     "txt": "[4] → LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto"
+    }
+   ],
+   "hora_rolado": "03:08:23"
+  },
+  "PM30": {
+   "id": "PM30",
+   "dia": 432,
+   "hora": "03:08:23",
+   "titulo": "O PORTO DE MARASAR (do rei, ~3.000) NA REVOLTA: o que a Guilda viu ao passar",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "quieto, de portas fechadas; a guarda do porto nas muralhas"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "gente da cidade foge para o porto (refugiados)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais",
+     "txt": "[5] → os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais"
+    }
+   ],
+   "hora_rolado": "03:08:23"
+  },
+  "ST32": {
+   "id": "ST32",
+   "dia": 432,
+   "hora": "03:09:29",
+   "titulo": "A FACÇÃO NOVA DA SURPRESA ATRASADA DO STARKALD (G8-C, novidade [7]: nasce de um conflito antigo; ele é o mestre da Guilda dos Aventureiros, fraco até o 435)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "OS DA FORQUILHA: os parentes dos caçadores que o Morek matou (o Goir e o Starkald quase) querem a Guilda fechada até haver caçada sem morte"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais",
+     "txt": "[2] → OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais"
+    }
+   ],
+   "hora_rolado": "03:09:29"
+  },
+  "CL32": {
+   "id": "CL32",
+   "dia": 432,
+   "hora": "03:09:29",
+   "titulo": "A RESPOSTA DO CELOCUS AO TOLVANE EM LUMADE (a oferta do rei: perdoar os 2.500 e os 800 por porcentagem baixa; nada fecha sem o selo do rei; o conselho preferia depois da guerra)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ACEITA a porcentagem baixa (20%) e manda o selo dele: falta o do rei"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CONTRAPROPÕE: 30% e o anel de volta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "RECUSA: só depois da guerra, como disse"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "03:09:29"
   }
  }
 }

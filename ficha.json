@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  236,
+  316,
   402
  ],
  "mana": [
@@ -58,8 +58,8 @@
  ],
  "cofre": 13948,
  "livro": {
-  "renda_casa": 2900,
-  "despesa": 8100,
+  "renda_casa": 3960,
+  "despesa": 8280,
   "ultima_semana": 427,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },

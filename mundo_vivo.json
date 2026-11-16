@@ -282,7 +282,8 @@
     "356: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
     "nova obra: d12 [11] achar as três ferramentas dos reis",
     "399: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
-    "420: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
+    "420: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "431: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
    ],
    "obras_feitas": [
     "ressuscitar um morto amado"
@@ -454,7 +455,8 @@
     "399: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
     "420: [14] perde uma peça ou um aliado para alguém",
     "424 (TR24 [3], TR24b [6], TR24c [2]; notícia FIEL): perdeu um ALIADO, morto pela ELOUNE nos lodaçais",
-    "428: respondeu ao recado do 425 pelos DO CROQUE (a irmandade nova dos barqueiros dele): caça a ELOUNE SOZINHO; os do Croque vêm à caçada do rei no lugar dele (TF28 [2], TF28b [1]); (OCULTO) caça no 432 (TE28 [4])"
+    "428: respondeu ao recado do 425 pelos DO CROQUE (a irmandade nova dos barqueiros dele): caça a ELOUNE SOZINHO; os do Croque vêm à caçada do rei no lugar dele (TF28 [2], TF28b [1]); (OCULTO) caça no 432 (TE28 [4])",
+    "432 (OCULTO para o rei até a notícia): MATOU A ELOUNE nos lodaçais (TE32 [19]); manda o coração ao rei DE PRESENTE, pelo Croque (TE32p [6])"
    ],
    "prox": 441
   },
@@ -799,8 +801,8 @@
    "cat": "Épico",
    "nivel": 136,
    "regiao": "Ireviel e o rio (lodaçais)",
-   "estado": "ativo",
-   "nota": "203: 4 crias nos lodaçais de Ireviel · 276: brigou com a Lianniel no cais afundado; a Lianniel saiu ferida; o culto dela tem medo da máquina. · 312 (rumor exato): a FRAQUEZA dela é a VOZ DA CANTORA: quando a cantora canta, a Mãe-Lodo dorme · 423 (EL23a-c, ocultos para a casa até ela ser vista): do tamanho de um CAVALO (1d10 × 5); VENENO NO GOLPE; OLHAR PARALISANTE (Vontade CD 23); fraca a RAIO (a Essência oposta). 423 (EL23d [1]): a caçada do rei, do Moreth, do Eiagrir, da Isolda e da Eliane NÃO A ACHOU (o rastro some no lodaçal fundo); EL23e [2]: as crias andam com ela · 424: matou um ALIADO DO TERASETH nos lodaçais"
+   "estado": "MORTA (432)",
+   "nota": "203: 4 crias nos lodaçais de Ireviel · 276: brigou com a Lianniel no cais afundado; a Lianniel saiu ferida; o culto dela tem medo da máquina. · 312 (rumor exato): a FRAQUEZA dela é a VOZ DA CANTORA: quando a cantora canta, a Mãe-Lodo dorme · 423 (EL23a-c, ocultos para a casa até ela ser vista): do tamanho de um CAVALO (1d10 × 5); VENENO NO GOLPE; OLHAR PARALISANTE (Vontade CD 23); fraca a RAIO (a Essência oposta). 423 (EL23d [1]): a caçada do rei, do Moreth, do Eiagrir, da Isolda e da Eliane NÃO A ACHOU (o rastro some no lodaçal fundo); EL23e [2]: as crias andam com ela · 424: matou um ALIADO DO TERASETH nos lodaçais · 432 (TE32 [19]): MORTA nos lodaçais pelo TERASETH, sozinho; ele manda oferecer o CORAÇÃO (núcleo Épico de Água) ao rei, de PRESENTE (TE32p [6]), pelo Croque do Rio; as crias fogem; o posto da vigia (os pescadores) viu: Ireviel sabe no 432"
   },
   {
    "nome": "Stundald, a Raiz-de-Ferro",
@@ -1795,6 +1797,14 @@
    "desde": 406,
    "estado": "identificado",
    "pista": "406: pediu lugar na forja grande; HONESTO, sem arte de esconder (furt 4: nível 24, sem perícia de sombra)"
+  },
+  {
+   "nome": "o homem das guildas de Steunn (o cobrador da Groa)",
+   "furt": 6,
+   "alvo": "a Fornalha (medidas e desenhos, para o Borecci)",
+   "desde": 431,
+   "estado": "solto",
+   "pista": "431 (GR31 [3]): a GROA passou a ele UMA MEDIDA DA FORNALHA (a boca e a altura da câmara); o furt 6 é do Mestre (um cobrador, não um espião de ofício); o tick diário o rola contra a contra 35"
   }
  ],
  "gente": [
@@ -2596,6 +2606,22 @@
     6
    ],
    "postura": -1
+  },
+  {
+   "nome": "os Caçadores Livres",
+   "onde": "Ireviel e as matas do rio",
+   "desde": 432,
+   "o_que": "os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais",
+   "estado": "viva",
+   "log": [
+    "432: nasce da abertura da Guilda (412) (a surpresa atrasada do Starkald, G8-C; novidade [7]; ST32 [2])"
+   ],
+   "forca": 2,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 0
   }
  ],
  "lugares": [
@@ -2978,6 +3004,12 @@
    "quem": "os conselheiros da Liga (Pelagri, Aldoveri, Tiracci)",
    "segredo": "o que a Mãe Verde disse (o que acorda e faz dormir a Filha) (segredo [3] da lista)",
    "nota": "a rede entrou em Ireviel no 413 com o rei fora; a casa não sabe"
+  },
+  {
+   "dia": 431,
+   "quem": "as guildas de Steunn (o Borecci)",
+   "segredo": "uma medida da Fornalha que Não Apaga (a boca e a altura da câmara), pela Groa",
+   "nota": "a casa não sabe"
   }
  ],
  "cobica": [
@@ -3124,6 +3156,15 @@
    "onde": "a costa perto de Farenta",
    "corpo": "inseto do tamanho de um cavalo",
    "nota": "(OCULTO para a casa até ser visto) gerador monstro (430, FA30 [1]; o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108 · Defesa 18 · RD 1 · ataque +8 · 1 ataque · 1d10 × 1.5 · XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia), área 6 m, 1x a cada 3 rodadas; fraqueza FOME (dano dobrado, corta a regeneração) e um som (a descobrir); necrófago (segue batalhas e pestes); sinal: cheiro de enxofre; drops: erygal ×4 (Incomum, Elo: arma que corta laços) e thuvil ×4 (Incomum, Elo: +1 em Infusão e Encantamento)"
+  },
+  {
+   "nome": "Riunn",
+   "dia": "431",
+   "cat": "Incomum",
+   "nivel": "14",
+   "essencia": "Elo",
+   "onde": "as Fundas do Norte (o Clã Hegre)",
+   "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Riunn · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «selol» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais · "
   }
  ],
  "notas_ocultas": [
@@ -3270,6 +3311,15 @@
    "obra": "trazer de volta um morto amado",
    "metodo": "monstros",
    "nota": "VINGATIVO e HONESTO; nunca mais passar fome; fez um pacto; 2 peças Lendárias ou Míticas; para se for desmascarado em público (346, notícia no 349)"
+  },
+  {
+   "nome": "Zeazhis",
+   "nivel": 150,
+   "onde": "Yaelane",
+   "obra": "conquistar uma região",
+   "metodo": "lei",
+   "desde": 432,
+   "nota": "(OCULTO) gerador vilão (mundo do 432; o nome do gerador, Lumade, é o da cidade: trocado): AMBICIOSO e AVARENTO; desejo voltar para casa; ambição (4) tomar o lugar do chefe; medo a solidão; segredo: traiu um amigo uma vez; linha vermelha: nunca entrega um amigo à lei; ama alguém e faz por ela; 3 peças Lendárias ou Míticas; para se for desmascarado em público; relógio 0/8"
   }
  ],
  "lugares_novos": [
@@ -3294,6 +3344,14 @@
    "essencia": "Sombra",
    "oposta": "Luz",
    "nota": "A LIGA PERDIDA DE ERYSSA (as tábuas atrás da porta de bronze, 423). O gerador deu \"Zaiast\", que JÁ EXISTE (a madeira Única de Terra + Elo do cajado do Bren): renomeado SYSRETH (nomes.py livre). Dureza 8 · maleabilidade 6 · condutividade mágica 6 · na forja Matéria +1, Processo +1, infusão até o 6º · arma: no escuro +3 no ataque e o alvo não vê de onde vem · armadura: +3 Furtividade e Defesa no escuro · ferramenta: não brilha nem faz som · defeito: enfraquece ao sol · 600-1.000/kg. PEDE: ferro com escória de vaduar (5 kg de ferro e 0,1 kg de vaduar por kg; a casa NÃO LEU) · cinza ou sangue de bicho de SOMBRA (Raro ou acima; 1 porção por 2 kg; lido) · forjado NO ESCURO na forja velha de Eryssa, temperado no canal velho (lido)"
+  },
+  {
+   "nome": "hadun",
+   "dia": 432,
+   "cat": "Incomum",
+   "essencia": "Veneno",
+   "origem": "pedra (vidro de raio)",
+   "nota": "(OCULTO até a carta do Tolvane) o CELOCUS, em Lumade, não respondeu à oferta do rei: mostrou ao Tolvane uma carga de HADUN à venda (CL32 [6] → novidade [1]); dureza 5, maleabilidade 4, condutividade 4; infusão até o 4º círculo"
   }
  ]
 }

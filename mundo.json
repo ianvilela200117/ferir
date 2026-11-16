@@ -2856,6 +2856,28 @@
    "chegada": "[1] hoje",
    "resumo": "MONSTRO NOVO OU MIGRAÇÃO — Farenta",
    "toca": true
+  },
+  {
+   "dia": 431,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [17] os Picos Brancos",
+   "detalhe": "nome: Ithium\no que era: mercado\npor que caiu: monstro\no que guarda: um núcleo\no que habita: mortos\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": 432,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — os Picos Brancos (Ithium)",
+   "toca": false
+  },
+  {
+   "dia": 432,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Lumade\ndesejo: voltar para casa\nambição (relógio de 4): tomar o lugar do chefe\nmedo: a solidão\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: AMBICIOSO e AVARENTO\nnível: 150\nobra sinistra (relógio de 8): conquistar uma região\npor que é humano: ama alguém e faz por ela\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: lei\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 433,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — Yaelane (Lumade)",
+   "toca": true
   }
  ]
 }

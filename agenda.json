@@ -1,5 +1,5 @@
 {
- "prox_id": 445,
+ "prox_id": 450,
  "itens": [
   {
    "id": 1,
@@ -4849,7 +4849,7 @@
    "oculto": false,
    "para": true,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -4904,7 +4904,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5270,7 +5270,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5318,7 +5318,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6129,7 +6129,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6151,7 +6151,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6203,7 +6203,7 @@
    "oculto": false,
    "para": true,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6232,6 +6232,73 @@
     7,
     "INCOMPLETA: falta quem fez ou onde foi"
    ]
+  },
+  {
+   "id": 445,
+   "dia": 432,
+   "texto": "LUGAR NOVO DESCOBERTO — os Picos Brancos (Ithium)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 431",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 446,
+   "dia": 432,
+   "texto": "Eiandald (Yaelane): o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 431",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 447,
+   "dia": 433,
+   "texto": "UM VILÃO NOVO entra no mundo — Yaelane (Lumade)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 432",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 448,
+   "dia": 433,
+   "texto": "(OCULTO) A NOTÍCIA DA ELOUNE MORTA PELO TERASETH e o recado dele (o coração da Eloune, núcleo Épico de Água, DE PRESENTE ao rei) sobem o rio na barca dos do Croque: alcançam o rei no 434",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 449,
+   "dia": 436,
+   "texto": "(OCULTO) A CARTA DO TOLVANE DE LUMADE chega a Levis, ao rei: o Celocus não respondeu; mostrou uma carga de HADUN à venda",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

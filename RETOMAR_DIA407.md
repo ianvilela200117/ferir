@@ -1,18 +1,16 @@
-# RETOMAR — Dia 430, a lua nova, um remanso do rio a um dia de Ireviel (MOTOR 7.2 + G6 a G11)
+# RETOMAR — noite do Dia 432, o pouso da barca do rei, a caminho de Levis (MOTOR 7.2 + G6 a G11)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: DIA 430, o remanso); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o remanso do 430). O estado está em `estado_vivo.md` (bloco "DIA 430, A LUA NOVA, UM REMANSO").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: NOITE DO 432, o pouso); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o pouso do 432). O estado está em `estado_vivo.md` (bloco "NOITE DO 432, O POUSO").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Dia 430 (1 da Lua da Seca de 1013, LUA NOVA), um REMANSO do rio a um dia acima de Ireviel, na TEMPESTADE. Pressão 4/5. Os ticks 428, 429 e 430 JÁ RODARAM (tick_428/429/430.txt). A barca do rei (o rei, o Moreth com a COURAÇA DE ESPINHO, o Eiagrir, a Eliane e 10 da guarda) está amarrada; do outro lado da água, a BARCA DA LIGA (16 remadores, 8 guardas e um homem de capa; OCULTO: ouro e papéis da Liga, e a carta do Ceduion à Leliel). Levis no 435 (a tempestade e a cheia: +2 dias).
-- O que espera o rei e ainda não chegou a ele (Ireviel soube no 430; a barca rápida da Intendente sai no 431): a REVOLTA DE MARASAR (os Fiéis do Doge Velho, OCULTO até a notícia; chega EXAGERADA), o Ithvil quebrou ponte/estrada/mina em Levis, a Eloune atrai bichos (exagerada), os do Rio Vermelho venceram os Barqueiros do Livro, um bicho chegou a Farenta (incompleta; OCULTO: o SYESS), o Laennor (a toca: a escada de Quoium), o Thargos (o coração é núcleo Mítico de Água), a Lianniel no cais afundado, o Loula fora do portão (429).
-- A chegar a Ireviel no 431: a resposta da SKOTHA (agradece e PEDE O FACIO para julgar em Marasar); a Guilda e os do Croque de volta de Marasar (não chegaram ao Bruur: a revolta fechou o caminho); a PENA DA MAMILTIA (queimada, chama-a uma vez) com o mensageiro.
-- OCULTOS na agenda: 431 a Groa e o homem das guildas de Steunn (ele cobra uma medida ou um desenho da Fornalha) · 432 o Teraseth caça a Eloune sozinho · a Isyzis tem 1 cria (a notícia diz muitas).
-- PV do rei 236/402 (a noite do 428 sem cura: a forja; a do 429 na barca: +40). O Eiagrir sara da luta do Morek (~213/420 no 430, pela G4).
+Noite do 432 (3 da Lua da Seca de 1013), o pouso da barca do rei no rio, um dia e meio abaixo de Levis. Pressão 1/5. Os ticks até o 432 JÁ RODARAM. Na barca: o rei (PV 316/402), o Moreth (a Couraça de Espinho, sem encanto), o Eiagrir, a Eliane, 10 da guarda; a PENA DA MAMILTIA. Levis no 435; a ISYZIS (OCULTO: 1 cria) no rio acima de Levis, no caminho (rolar o rastro no 434).
+- OCULTOS que vêm: 433 a notícia de que o TERASETH MATOU A ELOUNE (432) e manda o coração (núcleo Épico de Água) ao rei DE PRESENTE: alcança a barca no 434 (agenda) · 436 a carta do Tolvane: o Celocus não respondeu e mostrou HADUN à venda · a GROA PASSOU uma medida da Fornalha ao homem das guildas de Steunn (infiltrado, furt 6; a contra já notou 'alguém estranho', 432) · o vilão novo ZEAZHIS (150) em Yaelane (notícia no 433) · a revolta de Marasar é dos FIÉIS DO DOGE VELHO (a casa já sabe) · o NPC antigo que volta mudado em Levis (LV31: tabela quando o rei chegar) · em Levis, a SOUANE pôs a Brara sob a proteção dela (429).
+- A barca da Liga (ouro, papéis e a carta do Ceduion à Leliel, OCULTO) foi rio acima, à frente do rei; o recado à Sira desceu na barca rápida.
 
 Antes (a noite do 428, Ireviel):
 - O dia 428: o conselho deu teto e trabalho ao FACIO; os BARQUEIROS avisados se armam; o recado à SKOTHA chega a Marasar no 429 (rolar a resposta; e no 430 chega a notícia da cidade que se rebela em Marasar: o recado entra numa cidade em revolta); a SIRA tirou pouco do preso da Liga; a ELAEVA ferida (fiel); o TERASETH caça a Eloune SOZINHO (OCULTO: no 432, agenda #436); os DO CROQUE vêm à caçada do rei; o GIUNN dos Jurados quer a Tilde; a disputa da BRECHA; os 20 voluntários da LUZ DO CAIS; o sapato e o olho dos OLHOS PINTADOS no muro da casa.
@@ -154,10 +152,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 429: tick (Loula: LO29 [2] um coveiro fora do portão) · MR29 (OCULTO) [1] a revolta de Marasar é dos FIÉIS DO DOGE VELHO · SK29 [3] a Skotha pede o Facio · SB29 [5] a SOUANE pôs a BRARA sob a proteção dela, em praça, em Levis (a casa sabe quando o rei chegar a Levis) · as partidas (o viagem.py leu 6 dias a pé: corrigido para a barca) · a série de Farenta (Dinheiro +1 até o 480).
 - 430: tick em estrada · EN30 [5] a barca da Liga · LB30 [5] · (OCULTO) LB30c [5] ouro e papéis · LI30 [1] · MM30 [4] a pena da Mamiltia · GB30 [7]+2 = 9 · LN30 [1] · TH30 [4] · (OCULTO) IZ30 [1] · (OCULTO) FA30 [1] o SYESS (gerador; o nome Veyssa trocado) · FAÍSCA: o Ceduion vende à Leliel (a carta, oculta, nos papéis da barca).
 
+## RESPONDIDO (430 → 432): 1c deixar a barca da Liga passar, recado à Sira · 2b SÉRIE DE MESTRE 2 · 3a manter os 8 postos · pergunta fora do jogo: as guildas do mundo (o Mestre propôs a G12; espera a aprovação)
+- SÉRIE DE MESTRE 2: renda_casa 3.960, despesa 8.280 (ficha.py fixo).
+- 431: LB31 [3] · VX31 [2]+2 = 4 (a vigia falhou) · (OCULTO) GR31 [3] a Groa passa a medida · HG31 [6] → novidade [2] monstro novo nas Fundas (RIUNN, Incomum 14) · LV31 [6] → novidade [9] um NPC antigo volta mudado (em Levis) · a pressão encheu (G8-A).
+- 432: BR32 [3] · (OCULTO) TE32 [19], TE32p [6] · MR30 [4] · PM30 [5] · ST32 [2] os Caçadores Livres · (OCULTO) CL32 [6] → novidade [1] o hadun · o vilão ZEAZHIS.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A BARCA DA LIGA NO REMANSO (16 remadores, 8 guardas e um homem de capa; na tempestade, do outro lado da água): a) atacar já, na tempestade (abordar) · b) segui-la de longe quando a tempestade passar e ver para onde vai · c) deixá-la passar e mandar recado à Sira · d) outra.
-2. O PONTO DE HABILIDADE DO 156: a) GOLPE DE MESTRE 1 (+1 na Técnica da forja; no grau 4 a Técnica soma duas vezes) · b) SÉRIE DE MESTRE 2 (a forja grande faz um lote de 5 no tempo de 3) · c) OBRA-PRIMA 1 (1x por mês, um 20 natural na forja dá +1 efeito declarado antes) · d) guardar ou outro.
-3. A VIGIA (G11) custa 400 por semana (8 postos; a despesa sobe a 8.100; o cofre está em 13.948): a) manter os 8 · b) só os de perto de gente (a Eloune, o Bruur, o Naiel e o Laennor: 200) · c) outra.
+1. A SKOTHA PEDE O FACIO para julgá-lo em Marasar (a cidade em revolta; o conselho deu a ele teto e trabalho no 428): a) entregar · b) recusar, pela palavra do conselho · c) levar de novo ao conselho · d) outra.
+2. MARASAR EM REVOLTA (os Fiéis do Doge Velho, força 6; a Skotha segura o palácio; motim do Cais de Baixo no Porto de Marasar, que é do rei): a) mandar as lanças da cidade ao PORTO DO REI (o Graur) · b) ajudar a SKOTHA na cidade · c) só vigiar (a Sira) · d) outra.
+3. A PROPOSTA G12, AS GUILDAS DO MUNDO (fora do jogo): a) aprovar como está · b) aprovar com mudanças (diga quais) · c) não.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

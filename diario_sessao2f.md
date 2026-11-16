@@ -1019,3 +1019,11 @@ Na bigorna o rei bateu as escamas do Morek sobre o pelo dele, rebitou com zeieth
 A barca saiu com o céu nublado. Na lua nova veio a tempestade, e o rio encheu outra vez. O barqueiro amarrou num remanso, a um dia de Ireviel. O rei deixou cair uma gota de sangue na palavra do foco. Do outro lado da água, abrigada da mesma chuva, estava uma barca da Liga: dezesseis remos, oito guardas e um homem de capa na popa.
 
 - **Parada:** dia 430, o remanso, na tempestade. A barca da Liga; o ponto do 156; Levis no 435.
+
+### O remanso, 431
+Choveu o dia inteiro. As duas barcas ficaram amarradas uma de frente para a outra, e do outro lado a lanterna do homem de capa não se apagou nenhuma vez. Ninguém atravessou a água.
+
+### O rio, 432
+O céu abriu de madrugada. A barca da Liga soltou primeiro e sumiu rio acima na curva dos salgueiros. A do rei passou à tarde pelas barcas de Levis viradas na tempestade, com o ventre para cima e sacos de grão presos nos galhos. À noite, no pouso, chegou a barca rápida da Nouliel com o mensageiro da Skotha, a pena cinzenta da Mamiltia enrolada em couro e a notícia de que Marasar brigava rua por rua.
+
+- **Parada:** noite do 432, o pouso. A Skotha pede o Facio; Marasar em revolta; Levis no 435.

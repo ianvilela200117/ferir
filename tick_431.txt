@@ -1,0 +1,44 @@
+[03:05:58] Dia 431 · Pressão 5/5 · encontro de estrada 1d20 [18] -> nada
+  O TEMPO (2 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: tempestade, VENTANIA (d6 [2] fica · vento d6 [3]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   o Porto de Marasar: chuva de verão, calmo (d6 [2] fica · vento d6 [2]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Levis: tempestade, VENTANIA (d6 [3] fica · vento d6 [2]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: calor forte, vento firme (d6 [2] fica · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: cheio (correnteza forte: subir o rio custa o dobro) [72/100]
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [3] Colapso econômico · encadeamento 1d20 [9] Boato errado · ONDE: d19 [5] Mordun (a Boca com Fome)
+  EVENTO DE MUNDO (PERTO) 1d20 [13] Caravana ou frota perdida · encadeamento 1d20 [15] Alguém lucra · ONDE: d8 [2] Levis e Levis-baixa
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [16] Traição dentro de uma facção · encadeamento 1d20 [18] O eco chega à casa (liga a um fio ativo) · ONDE: d27 [12] as Fundas do Norte (o Clã Hegre)
+  Pressão zera
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 447
+  FERIDO: Starkald (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA) até o Dia 435
+  FERIDO: Goir (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE) até o Dia 435
+  O MUNDO SE MOVE — Dia 431 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [17] os Picos Brancos
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    nome: Ithium
+    o que era: mercado
+    por que caiu: monstro
+    o que guarda: um núcleo
+    o que habita: mortos
+    custo de entrar: uma luta
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 431
+    um Lendário age (d20 [2]):
+    Eiandald (fé, Yaelane) d20 [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · notícia d20 [15] chega no dia 432
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Tano (carregador, primo da Caciccetta) foge de Thugek, por causa de dinheiro da Liga
+    FAÍSCA: Gorron (oferece a missão do Delta) rouba de Orast, por causa de um título
+    FAÍSCA: o podestà Tirello deve a vida a Qunemneth, o Médico Cinzento, por causa de uma receita perdida
+  ▶ AGENDA #345 (era do Dia 429): FARENTA: os anzóis, as chumbadas e as âncoras ficam prontos (ferreiros de Farenta, G7): Dinheiro de Farenta +1 (mod, até o 480)
+  ▶ AGENDA #375 (era do Dia 430): O MENSAGEIRO ALCANÇA A MAMILTIA na estrada de Steunn (MM25 [3]): o pedido de AJUDA contra o MOREK ferido; rolar a resposta
+  ▶ AGENDA #442 (era do Dia 430): CHEGA a Marasar: o Tegre, 6 caçadores da Guilda e os do Croque (olhar o Bruur que dorme, G11) (saiu de Ireviel no 429)
+  ▶ AGENDA #359: LEVIS, A FUNDIÇÃO VELHA (a Brara) acaba as FERRADURAS E OS EIXOS (G7, a série que saiu de Ireviel): Defesa de Ireviel +1 (mod, até o 480) quando voltarem (~433)
+  ▶ AGENDA #379: NO RIO, A CAMINHO DE LEVIS: o rei vê os restos de uma CARAVANA DE LEVIS virada pela correnteza; a LIGA subiu o frete do rio (PE26a [4], PE26b [2], PE26c [5])
+  ▶ AGENDA #438: [OCULTO] (OCULTO) A GROA E O HOMEM DAS GUILDAS DE STEUNN (GR28 [5], GR28b [4]: ele cobra UMA MEDIDA OU UM DESENHO DA FORNALHA): rolar se ela passa (COVARDE; deve a alguém perigoso; linha vermelha: nunca vende o ofício barato); se passar, entra nos infiltrados contra a contra-espionagem 35
+  ✉ notícia de longe que chega hoje: Quneus, o Caçador de Gigantes (Lendário, Mordun): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, a costa): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): um segredo dele vaza (boato ou espionagem) · COMO CHEGA: d20 [15] FIEL
