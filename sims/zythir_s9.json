@@ -9,26 +9,37 @@
   "at": 62,
   "dado": "3d10",
   "mult": 10,
+  "moral": false,
+  "essencia": "Elo",
+  "cria_ventre": true,
+  "prende": [
+   {
+    "nome": "o olhar que paralisa",
+    "cd": 28,
+    "teste": "vontade"
+   }
+  ],
   "acoes": 7,
   "poder": {
-   "nome": "o golpe que corta laços e encantos (15 m)",
+   "nome": "o golpe corta laços mágicos e encantamentos (Romper contra CD da magia)",
    "tipo": "area",
    "cd": 28,
-   "dano": "6d6"
+   "dano": "6d6",
+   "rompe_servo": true
   },
-  "grito": {
-   "cd": 28
-  },
-  "inteligente": true,
-  "moral": false,
   "fraqueza": "Fome",
+  "inteligente": true,
   "covil": {
    "nome": "a névoa podre da tumba",
-   "dano": "4d6",
-   "cd": 21,
+   "dano": "6d6",
+   "cd": 23,
    "efeito": "ENVENENADO (G16)"
   },
-  "nota": "gerador monstro (438; obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado por VDOGEK): o GUARDIÃO do coração de Zythir, Único 183, besta do tamanho de uma colina, ELO; olhar paralisante (roda como grito, CD 28); muitas cabeças (7 ações); o golpe corta laços e encantos (área 6d6; à mão: no Zyza, d6 1-2 a palavra se rompe); cria no ventre (1d6 crias ao morrer); caçador; fraco a FOME e, a descobrir, à CRIA; fase aos 50% (FZ38 [1]): troca de Essência; +2 da volta; o covil da tumba; não foge"
+  "fase": {
+   "tipo": 1,
+   "nome": "troca de Essência"
+  },
+  "nota": "bicho.py (obras/zythir_sala9_guardiao.txt): besta, colina, Elo; caçador: escolhe a presa e a segue por dias; fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: a cria · +2 no ataque e na Defesa (G14: a casa voltou)"
  },
  "grupo": [
   {
@@ -128,8 +139,7 @@
     }
    ],
    "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30, 438): maça: Quebra-Guarda, Tremor de Ferro, Bigorna; espada: Fio Duplo, Corte Corrido, Corte do Horizonte; aura: Pele de Pedra",
-   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
-   "pvmax_real": 600
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura"
   },
   {
    "nome": "Eiagrir",
@@ -140,7 +150,7 @@
    "b": 12,
    "df": 42,
    "rd": 8,
-   "pv": 299,
+   "pv": 420,
    "vigor": 13,
    "heroi": true,
    "magias": [
@@ -176,8 +186,7 @@
      "essencia": "Vida"
     }
    ],
-   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento",
-   "pvmax_real": 420
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento"
   },
   {
    "nome": "Zyza",
@@ -194,8 +203,7 @@
    "essencia": "Podridão",
    "nota": "SERVO ARMADO do rei (438; G23): o guarda de Zythir erguido pela Receita Mestra, com o núcleo Épico de Podridão no peito e a palavra do Osso que Cresce; nível 129 (3/4 de 158, +10% da Escola do Osso); PV 129 × 15 + 156 (o nível do rei); não recua (fica); perde a regeneração e a mentira; o veneno do golpe não roda do lado do grupo; a 0 PV desmonta (o rei sente: Atordoado 1 rodada; o núcleo fica no corpo)",
    "pecas": "o próprio corpo (inseto do tamanho de um cavalo, Podridão) · o núcleo Épico de Podridão no peito · a palavra gravada (Osso que Cresce)",
-   "magias": [],
-   "pvmax_real": 2091
+   "magias": []
   }
  ]
 }

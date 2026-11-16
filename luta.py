@@ -41,7 +41,7 @@ MOTOR 6 (Dia 379; as regras da luta são as mesmas):
                                           quem cai ou recua, e o veredito pela LEI DAS CAÇADAS (2% de morte). seed= repete a mesma régua.
   python3 luta.py ARQ regua=2000          o mesmo, e grava a régua no envelope como OCULTO (o Mestre não copia à mão).
   Arquivo com campo faltando avisa qual campo falta antes de rolar qualquer dado.
-ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20), covil? {nome,dano,cd,efeito}, grito? {cd} (437: o GRITO QUE DÁ MEDO, G16 AMEDRONTADO; no grupo: vontade_medo? N) e lendarias? N (G13, 433: o covil age no começo da rodada; Lendário 1, Mítico 2, Primordial 3 ações lendárias por padrão)},
+ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20), covil? {nome,dano,cd,efeito}, MOTOR 9 (438): regenera? N por rodada (a fraqueza corta) · prende? [{nome,cd,teste}] (olhar, teia: 1 alvo por rodada perde a vez) · fase? {tipo 1-6, fraqueza?, covil?} aos 50% · devolve? 0.25 · sangue_queima? 'NdL' · enxame? · casca? · duas_vidas? · come_magia? · faro_ferida? · dono_territorio? · cria_ventre? · agarra? · devora_metal? · essencia? (a do golpe dele) · no grupo: veneno_golpe? {dado,rodadas,cd}, servo?, segundo_coracao? N, rd_ess? {Essência: N}, voz_mando?, vontade?, forca? · na magia/Arte: area?, efeito? (quebra_guarda|derruba|sangra|dobra_se_caido), ignora_rd? 0.5, cd_efeito? · grito? {cd} (437: o GRITO QUE DÁ MEDO, G16 AMEDRONTADO; no grupo: vontade_medo? N) e lendarias? N (G13, 433: o covil age no começo da rodada; Lendário 1, Mítico 2, Primordial 3 ações lendárias por padrão)},
           "grupo":[{nome,nivel,at,dado,mult,b,df,rd,pv,essencia?,chega?,grita?,magia?,so20?,heroi?,vigor?,agi?,medicina?,imune_empurrao?}]}
 """
 import sys, json, secrets, random
@@ -90,6 +90,9 @@ def luta(F):
         g.setdefault('vivo',True); g.setdefault('fora',0); g['pvmax']=g.get('pvmax_real',g['pv']); g.setdefault('nivel',20)   # Dia 205: o máximo VERDADEIRO (luta retomada no meio)
         g['ac']=g.get('acoes',acoes(g['nivel']))
     nini=len(G); gente=M.get('gente',False)
+    if any(g.get('voz_mando') for g in G):   # MOTOR 9 (Dom Voz de Mando): os aliados de quem manda têm +1 no ataque
+        for g in G:
+            if not g.get('voz_mando'): g['at']=g['at']+1
     mult=min(1.5,1+0.10*(nini-1)) if M.get('folego_bando') else 1.0
     pvmax=int(M['pv']*mult); frac=M.get('pv_atual',M['pv'])/M['pv']; M['pvm']=pvmax; M['pva']=int(pvmax*frac)
     if not gente: M['rd']=max(M.get('rd',0),RDCAT.get(M.get('cat','Comum'),0))
@@ -126,23 +129,31 @@ def luta(F):
                     sv=sum(ex())+g['nivel']//10+g.get('vontade_medo',0)
                     if sv<cdg: g['medo']=True
                     P(f"    {g['nome']}: {sv} → "+('AMEDRONTADO (só feitiço de longe; −2 no ataque)' if g.get('medo') else 'firme'))
-        cv=M.get('covil')   # G13 (Dia 433): o COVIL age no começo da rodada (d6: 1-2 respira · 3-5 um alvo · 6 todos, metade)
-        if cv and M['pva']>0:
-            rc=d(6); V=vivos(G,rnd)
-            alvos=[] if rc<=2 or not V else ([V[d(len(V))-1]] if rc<=5 else V)
-            P(f"  COVIL ({cv.get('nome','o covil')}) d6 [{rc}]: "+('respira' if not alvos else ('um alvo' if rc<=5 else 'TODOS (metade)')))
-            for g in alvos:
-                sv=d(20)+g['nivel']//10; dm=sum(dados(cv.get('dano','4d6')))
-                if rc==6: dm//=2
-                liq=0 if sv>=cv.get('cd',20) and rc==6 else (dm//2 if sv>=cv.get('cd',20) else dm)
-                liq=max(liq-g['rd']//2,0); g['pv']-=liq
-                P(f"    {g['nome']}: resiste [{sv}] vs {cv.get('cd',20)} → {liq}"+(f" · {cv['efeito']}" if cv.get('efeito') and sv<cv.get('cd',20) else '')+f" ({g['pv']})")
-                if g['pv']<=0: cai(g,liq,morreu)
+        if M.get('_qg') and rnd>M['_qg']: M['df']+=2; M.pop('_qg')   # MOTOR 9: a Quebra-Guarda dura 1 rodada
+        if M.get('_sangra',0)>0 and M['pva']>0:
+            x=max(2,int(pvmax*0.02)); M['pva']-=x; M['_sangra']-=1; P(f"  {M['nome']} sangra: −{x} ({M['pva']})")
+        if M.get('_veneno',[0])[0]>0 and M['pva']>0:
+            x=sum(dados(M['_veneno'][1])); M['pva']-=x; M['_veneno'][0]-=1; P(f"  veneno em {M['nome']}: −{x} ({M['pva']})")
+        if M.get('regenera') and 0<M['pva']<pvmax and M.get('_fraco_r')!=rnd-1 and rnd>1:   # MOTOR 9: o traço 'regenera' existia no gerador e não rodava; a fraqueza corta
+            x=min(M['regenera'],pvmax-M['pva']); M['pva']+=x; P(f"  {M['nome']} regenera: +{x} ({M['pva']})")
+        for pr in M.get('prende',[]):   # MOTOR 9 (438): o OLHAR que paralisa e a TEIA que prende: um alvo por rodada; falhou, perde a vez (e segue sendo alvo)
+            V=vivos(G,rnd)
+            if M['pva']<=0 or not V or (F.get('surpresa') and rnd==1): break
+            g=alvo_de(M,V,ultimo); cdp=pr.get('cd',20)+(OFF if DOIS else 0)
+            sv=sum(ex())+g['nivel']//10+g.get('forca' if pr.get('teste')=='forca' else 'vontade',0)
+            if sv<cdp: g['preso_r']=1
+            P(f"  {pr.get('nome','o olhar').upper()} em {g['nome']}: {sv} vs {cdp} → "+('PRESO: perde a vez' if sv<cdp else 'resiste'))
+        for _ in range(2 if M.get('dono_territorio') else 1): covil_age(M,G,rnd,morreu)
         for g in G:
             if not g['vivo'] or g.get('chega',1)>rnd or M['pva']<=0 or (rnd==1 and primeiro_m): continue
             if g['fora']>0: g['fora']-=1; P(f'  {g["nome"]} volta'); continue
+            if g.get('preso_r'): g['preso_r']=0; P(f'  {g["nome"]} está PRESO: perde a vez'); continue
             for k in range(g['ac']):
                 if not g['vivo'] or M['pva']<=0: break
+                if k==0 and g.get('agarrado'):   # MOTOR 9: AGARRADO: a 1ª ação é tentar sair
+                    sv=sum(ex())+g['nivel']//10+g.get('forca',0); cda=10+M['nivel']//10+(OFF if DOIS else 0)
+                    if sv>=cda: g['agarrado']=False; g['df']+=2
+                    P(f'  {g["nome"]} tenta se soltar: {sv} vs {cda} → '+('SOLTO' if sv>=cda else 'segue agarrado')); continue
                 if k==0 and g.get('grita'):
                     M['calado']=True; P(f'  {g["nome"]} GRITA O NOME: "{M["nome"].upper()}!"'); continue
                 mg=None   # 426 (G9): a ficha pode ter VÁRIOS feitiços ('magias'); vale o primeiro que tem esta rodada
@@ -159,8 +170,21 @@ def luta(F):
                         elif Jm['crit']: dm=int(sum(dados(mg['dano'],crit=True))*mg.get('mult',1)); txt_m=f'{Jm["ch"]}+{mg.get("at",g["at"])}={tm} CRÍTICO (dados dobrados)'
                         elif tm>=dfm: dm=int(sum(dados(mg['dano']))*mg.get('mult',1)); txt_m=f'{Jm["ch"]}+{mg.get("at",g["at"])}={tm} vs {dfm} pega em cheio'
                         else: dm=int(sum(dados(mg['dano']))*mg.get('mult',1))//2; txt_m=f'{Jm["ch"]}+{mg.get("at",g["at"])}={tm} vs {dfm} o alvo resiste: metade'
-                        dd=max(dm-M['rd'],0)
-                    if fraco({'essencia': mg.get('essencia', g.get('essencia'))},M): dd*=2   # 407: a magia pode declarar a Essência dela ("" = nenhuma); sem declarar, vale a do lançador, como antes
+                        cheio=dm>0 and ('cheio' in txt_m or 'CRÍTICO' in txt_m)
+                        if cheio and mg.get('efeito')=='dobra_se_caido' and (M.get('calado') or M.get('_caido')==rnd): dm*=2; txt_m+=' · o alvo no chão: dobra'
+                        dd=max(dm-int(M['rd']*(1-mg.get('ignora_rd',0))),0)
+                        if cheio and mg.get('efeito'):   # MOTOR 9 (G30): o efeito da Arte só vale quando pega em cheio
+                            ef=mg['efeito']
+                            if ef=='quebra_guarda' and not M.get('_qg'): M['df']-=2; M['_qg']=rnd+1; txt_m+=' · QUEBRA-GUARDA (−2 de Defesa por 1 rodada)'
+                            elif ef=='sangra': M['_sangra']=3; txt_m+=' · SANGRANDO (3 rodadas)'
+                            elif ef=='derruba':
+                                svm=sum(ex())+M['nivel']//10; cde=mg.get('cd_efeito',25)+(OFF if DOIS else 0)
+                                if svm<cde: M['calado']=True; M['_caido']=rnd; txt_m+=f' · DERRUBADO ({svm} vs {cde}): perde 1 ação e o poder'
+                                else: txt_m+=f' · firma o pé ({svm} vs {cde})'
+                    if M.get('enxame'): dd=dd*2 if mg.get('area') else dd//2
+                    if fraco({'essencia': mg.get('essencia', g.get('essencia'))},M): dd*=2; M['_fraco_r']=rnd
+                    elif M.get('come_magia') and M.get('_comeu')!=rnd and dd>0:
+                        M['_comeu']=rnd; M['pva']=min(pvmax,M['pva']+dd); P(f'  {g["nome"]} lança: {dm}; {txt_m} → COME A MAGIA: +{dd} ({M["pva"]})'); continue   # 407: a magia pode declarar a Essência dela ("" = nenhuma); sem declarar, vale a do lançador, como antes
                     if M.get('reflete') and dd>0:   # 425: o traço "reflete magia com 18 a 20" existia nas fichas e não rodava (achado ao montar o Morek)
                         rf=d(20)
                         if rf>=18:
@@ -170,14 +194,27 @@ def luta(F):
                     M['pva']-=dd; ultimo=g; P(f'  {g["nome"]} lança{(" " + mg["nome"]) if mg.get("nome") else ""}: {dm}; {txt_m} → {dd} ({M["pva"]})'); continue
                 J=jog(); ch=J['ch']; t=J['t']+g['at']; crit=J['crit']
                 M['golpes']+=1; brecha=min(CERCO[1],CERCO[0]*max(0,M['golpes']-base_ac)); dfM=M['df']+(OFF if DOIS else 0)-brecha
-                if J['fum'] or (t<dfM and not crit) or (g.get('so20') and not crit): P(f'  {g["nome"]}: {ch}+{g["at"]}={t} vs {dfM} erra'); continue
+                if J['fum'] or (t<dfM and not crit) or (g.get('so20') and not crit):
+                    P(f'  {g["nome"]}: {ch}+{g["at"]}={t} vs {dfM} erra'+(' · DEVORA METAL: a arma perde 1 categoria' if J['fum'] and M.get('devora_metal') else '')); continue
                 dd_=dados(g['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*g['mult'])+g['b']+g['nivel']//5
                 rd=M['rd']//2 if crit else M['rd']; liq=max(br-rd,0)
-                if fraco(g,M): liq*=2
+                if fraco(g,M): liq*=2; M['_fraco_r']=rnd
+                if M.get('enxame'): liq//=2
                 M['pva']-=liq; ultimo=g
                 P(f'  {g["nome"]}: {ch}+{g["at"]}={t} ACERTA{" CRÍTICO" if crit else ""} {dd_}×{g["mult"]}+{g["b"]}+{g['nivel']//5}={br} − RD {rd}{" ×2" if fraco(g,M) else ""} = {liq} ({M["pva"]})')
+                if liq>0 and g.get('veneno_golpe') and M['pva']>0 and not M.get('_veneno',[0])[0]:   # MOTOR 9: o veneno do golpe de um aliado (o Zyza)
+                    vg=g['veneno_golpe']; svm=sum(ex())+M['nivel']//10
+                    if svm<vg.get('cd',16)+(OFF if DOIS else 0): M['_veneno']=[vg.get('rodadas',3),vg.get('dado','2d6')]; P(f'    o veneno de {g["nome"]} pega ({svm})')
+                if liq>0 and (M.get('devolve') or M.get('sangue_queima')):   # MOTOR 9: pele que devolve / sangue que queima
+                    x=int(liq*M.get('devolve',0))+(sum(dados(M['sangue_queima'])) if M.get('sangue_queima') else 0)
+                    if x>0:
+                        g['pv']-=x; P(f'    {g["nome"]} leva {x} de volta ({g["pv"]})')
+                        if g['pv']<=0: cai(g,x,morreu); break
                 if M['pva']>0 and reac>0 and (liq>=pvmax*0.10 or crit):
                     reac-=1; P('  REAÇÃO:'); ataque(M,g,G,morreu,rnd)
+        if M['pva']<=0 and M.get('duas_vidas') and not M.get('_viveu'):   # MOTOR 9: DUAS VIDAS
+            M['_viveu']=True; M['pva']=pvmax//4; M['fraqueza']=M['duas_vidas'] if isinstance(M['duas_vidas'],str) else None
+            P(f"  {M['nome']} CAI... e LEVANTA com {M['pva']} (duas vidas; outra Essência)")
         if M['pva']<=0: P(f'  {M["nome"]} CAI'); break
         nl=M.get('lendarias', 0 if gente else LENDCAT.get(M.get('cat','Comum'),0))   # G13: AÇÕES LENDÁRIAS: golpes fora da vez, em quem o feriu por último
         for _ in range(nl):
@@ -185,6 +222,16 @@ def luta(F):
             if not V: break
             P('  AÇÃO LENDÁRIA:'); ataque(M,ultimo if ultimo in V else V[d(len(V))-1],G,morreu,rnd)
         if not gente and not furia and M['pva']<pvmax*0.5: furia=True; recarga=True; P('  FÚRIA: +1 ação, o poder recarrega')
+        if M.get('casca') and not M.get('_rachou') and M['pva']<pvmax*0.5: M['_rachou']=True; M['rd']//=2; base_ac+=1; P(f"  A CASCA RACHA: RD {M['rd']} e +1 ação")
+        fs=M.get('fase')   # MOTOR 9 (G33): a SEGUNDA FASE dos chefes aos 50%
+        if fs and not M.get('_fase') and M['pva']<pvmax*0.5:
+            M['_fase']=True; tp=fs.get('tipo')
+            if tp in (1,5): M['fraqueza']=fs.get('fraqueza'); P(f"  SEGUNDA FASE: troca de Essência (a fraqueza agora: {M['fraqueza'] or 'nenhuma conhecida'})")
+            elif tp==2: base_ac+=1; P('  SEGUNDA FASE: chama crias (+1 ação)')
+            elif tp==3: M['covil']=fs.get('covil',M.get('covil')); P('  SEGUNDA FASE: o covil muda')
+            elif tp in (4,6):
+                P('  SEGUNDA FASE: '+('foge para outra sala do covil: a luta recomeça lá' if tp==4 else 'FALA: oferece um trato (Lei 15)'))
+                fim_caidos(G,morreu); return dict(res='fase',rnd=rnd,mortos=morreu,pv=M['pva'],pvm=pvmax,G=G)
         if M.get('moral',True) and not moral_feito and M['pva']<pvmax*0.25:
             moral_feito=True; m=d(6); P(f'  MORAL d6 [{m}] → '+('FOGE' if m<=3 else 'luta até cair'))
             if m<=3:
@@ -206,18 +253,35 @@ def luta(F):
             ataque(M,alvo_de(M,V,ultimo),G,morreu,rnd,varre=True)
         testes_morte(G,morreu)
         if not [g for g in G if g['vivo']]: P('  O GRUPO CAI'); fim_caidos(G,morreu); return dict(res='grupo caiu',rnd=rnd,mortos=morreu,pv=M['pva'],pvm=pvmax,G=G)
+    if M['pva']<=0 and M.get('cria_ventre'): P(f"  CRIA NO VENTRE: {d(6)} cria(s) saem do corpo (um degrau abaixo; uma pode ser levada viva: G25)")
     if M['pva']<=0 or not F.get('ate'): fim_caidos(G,morreu)   # Dia 205: rodada a rodada ('ate') não estanca de graça no fim
     return dict(res='morto' if M['pva']<=0 else 'empate',rnd=rnd,mortos=morreu,pv=M['pva'],pvm=pvmax,G=G)
+
+def covil_age(M,G,rnd,morreu):
+    cv=M.get('covil')   # G13 (Dia 433): o COVIL age no começo da rodada (d6: 1-2 respira · 3-5 um alvo · 6 todos, metade)
+    if cv and M['pva']>0:
+        rc=d(6); V=vivos(G,rnd)
+        alvos=[] if rc<=2 or not V else ([V[d(len(V))-1]] if rc<=5 else V)
+        P(f"  COVIL ({cv.get('nome','o covil')}) d6 [{rc}]: "+('respira' if not alvos else ('um alvo' if rc<=5 else 'TODOS (metade)')))
+        for g in alvos:
+            sv=d(20)+g['nivel']//10; dm=sum(dados(cv.get('dano','4d6')))
+            if rc==6: dm//=2
+            liq=0 if sv>=cv.get('cd',20) and rc==6 else (dm//2 if sv>=cv.get('cd',20) else dm)
+            liq=max(liq-g['rd']//2,0); g['pv']-=liq
+            P(f"    {g['nome']}: resiste [{sv}] vs {cv.get('cd',20)} → {liq}"+(f" · {cv['efeito']}" if cv.get('efeito') and sv<cv.get('cd',20) else '')+f" ({g['pv']})")
+            if g['pv']<=0: cai(g,liq,morreu)
 
 def vivos(G,rnd): return [g for g in G if g['vivo'] and g.get('chega',1)<=rnd and g['fora']==0]
 def alvo_de(M,V,ultimo):
     r=d(6)
-    if M.get('inteligente'): return min(V,key=lambda g:g['pv'])
+    if M.get('inteligente') or M.get('faro_ferida'): return min(V,key=lambda g:g['pv'])
     if r<=3 and ultimo in V: return ultimo
     if r==6: return min(V,key=lambda g:g['pvmax'])
     return V[d(len(V))-1]
 
 def cai(g,liq,morreu):
+    if g.get('segundo_coracao',0)>0:   # MOTOR 9 (Dom): 1x por dia, a 0 PV fica com 1 e segue
+        g['segundo_coracao']-=1; g['pv']=1; P(f'    {g["nome"]} cai... e fica de pé com 1 (SEGUNDO CORAÇÃO)'); return
     g['vivo']=False
     if liq>g['pvmax']/2: morreu.append(g['nome']); P(f'    {g["nome"]} MORRE (dano maciço)')
     else: g['caido']=True; g['falhas']=0; g['suc']=0; P(f'    {g["nome"]} CAI DESACORDADO')
@@ -245,16 +309,17 @@ def fim_caidos(G,morreu):
         testes_morte(G,morreu)
 
 def ataque(M,g,G,morreu,rnd,varre=False):
-    J=jog(); ch=J['ch']; t=J['t']+M['at']; crit=J['crit']; g['golpes']=g.get('golpes',0)+1
+    J=jog(); ch=J['ch']; t=J['t']+M['at']+(2 if M.get('faro_ferida') and g['pv']<g['pvmax']*0.5 else 0); crit=J['crit']; g['golpes']=g.get('golpes',0)+1
     df=g['df']+(OFF if DOIS else 0)+(g.get('aura_def',[0,0])[0] if g.get('aura_def') else 0)-min(CERCO[1],CERCO[0]*max(0,g['golpes']-g['ac']))
     if J['fum'] or (t<df and not crit): P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} erra'); return
-    dd_=dados(M['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*M['mult'])+M.get('b',0)+M['nivel']//5; rd=g['rd']//2 if crit else g['rd']; liq=max(br-rd,0)
+    dd_=dados(M['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*M['mult'])+M.get('b',0)+M['nivel']//5; rd=g['rd']//2 if crit else g['rd']; rd+=g.get('rd_ess',{}).get(M.get('essencia'),0); liq=max(br-rd,0)
     if g.get('desfaz',0)>0 and liq>0 and (crit or liq>=g['pvmax']*0.2):   # 436 (G9): a peça que 'desfaz um golpe por dia' (o Gibão do rei) desfaz o golpe grande
         g['desfaz']-=1; P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {liq} → DESFEITO ({g.get("desfaz_nome","a peça")}, 1x por dia)'); return
     g['pv']-=liq; s=f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {dd_}×{M["mult"]}+{M.get("b",0)}+{M['nivel']//5}={br} − RD {rd} = {liq} ({g["pv"]})'
     if M.get('veneno') and g['pv']>0:
         vg=sum(ex())+g.get('vigor',10)
         if vg<M['veneno']['cd']+(OFF if DOIS else 0): g['veneno']=M['veneno']['rodadas']; s+=f' · VENENO (Vigor {vg})'
+    if M.get('agarra') and g['pv']>0 and not g.get('agarrado'): g['agarrado']=True; g['df']-=2; s+=' · AGARRADO (−2 de Defesa)'
     P(s)
     if g['pv']<=0:
         cai(g,liq,morreu)
@@ -289,6 +354,9 @@ def area(M,G,rnd,morreu):
         else:
             dm=sum(dados(p['dano'])); a=sum(ex())+g.get('agi',6); dm=dm//2 if a>=p['cd']+(OFF if DOIS else 0) else dm; g['pv']-=dm
             P(f'    {g["nome"]}: {dm} ({g["pv"]})')
+            if p.get('rompe_servo') and g.get('servo') and g['pv']>0:   # MOTOR 9: o golpe que corta laços pode romper a palavra do servo
+                rr=d(6)
+                if rr<=2: g['vivo']=False; g['desfeito']=True; morreu.append(g['nome']); P(f'    A PALAVRA DE {g["nome"].upper()} SE ROMPE (d6 [{rr}]): desfeito'); continue
             if g['pv']<=0: cai(g,dm,morreu)
 
 def confere_arquivo(F, nome):
@@ -328,7 +396,7 @@ def simula(F, n, nome, grava_regua=False):
     SIM=False
     M=F['monstro']; L=[]
     L.append(f"RÉGUA de {n} lutas simuladas (sem valor de jogo; margem de ±{196*(0.25/n)**0.5:.0f} pontos) · {M['nome']} ({M.get('cat','gente')} {M['nivel']}) contra {len(F['grupo'])}")
-    ordem=[('morto',f"{M['nome']} MORRE"),('fugiu',f"{M['nome']} foge"),('grupo caiu','O GRUPO CAI'),('empate','sem desfecho no tempo')]
+    ordem=[('morto',f"{M['nome']} MORRE"),('fugiu',f"{M['nome']} foge"),('grupo caiu','O GRUPO CAI'),('fase','a luta PARA na segunda fase (foge de sala ou propõe trato)'),('empate','sem desfecho no tempo')]
     L.append('  desfecho: '+' · '.join(f'{rot} {pct(c[k],n)}' for k,rot in ordem if c[k]))
     L.append(f'  duração: mediana {quantil(rs,0.5)} rodadas (de {quantil(rs,0.1)} a {quantil(rs,0.9)} em 8 de cada 10 lutas)')
     if sobra: L.append(f'  quando o bicho NÃO morre, sai com {100*quantil(sobra,0.5):.0f}% do PV (entre {100*quantil(sobra,0.1):.0f}% e {100*quantil(sobra,0.9):.0f}%)')
