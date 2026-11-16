@@ -1037,3 +1037,9 @@ O dia nasceu limpo e o rio baixou. A barca seguiu com a margem a um tiro de pedr
 A barca do rei encostou no cais de três estacas, e a Eliane desceu primeiro, com os dez atrás. O rei mandou abrir os fardos em nome da lei do rio. O homem de capa veio sorrindo, as mãos à vista, e falou de portagem, de pressa e de mil e quinhentos em moeda de Marasar. Enquanto ele falava, a carroça de bois saiu por trás das casas, e os bois puxavam como quem puxa metal. Ela tomou a estrada do sul.
 
 - **Parada:** meio-dia do 433, o cais. O ouro na mão do capitão; a carroça na estrada do sal.
+
+### O cais da aldeia, tarde e noite do 433
+O rei não estendeu a mão para a bolsa. Perguntou de quem era a barca, o que levava e para onde, e o capitão, um tal Yais, contou metade: era da Liga, levava a paga da Liga a um homem do Delta, e a Liga pagava portagem desde a paz. Os olhos dele voltavam à popa. A Eliane foi até lá, bateu nas tábuas uma por uma e levantou a que soava oca. Embaixo havia uma arca com uma lista de nomes e de moedas: a paga da Liga aos Devolvidos, os salineiros que a Leliel soltou. E havia uma carta lacrada com o selo do Colégio de Telosus, endereçada à Leliel.
+Um velho da aldeia, encostado na cerca, viu o rei devolver a bolsa sem abri-la. À noite, os dois da guarda que seguiam a carroça voltaram: ela tinha parado numa estalagem da estrada do sal, e ninguém viera buscá-la.
+
+- **Parada:** noite do 433, o cais. O capitão, a arca, a carta lacrada; a carroça na estalagem.

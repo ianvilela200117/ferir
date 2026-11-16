@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "MVq7",
-  "VTc7",
-  "VTd7",
-  "VTe7",
   "VTf7",
   "JU7",
   "HIc7",
@@ -399,205 +395,13 @@
   "HC33",
   "RV33",
   "CR33",
-  "SU33"
+  "SU33",
+  "CA34",
+  "PP34",
+  "FC34",
+  "LP34"
  ],
  "selos": {
-  "MVq7": {
-   "id": "MVq7",
-   "dia": 407,
-   "hora": "14:22:11",
-   "titulo": "O PREÇO DO MIVOR para guardar o lado norte enquanto o leito estiver seco (por semana; ele cumpre enquanto for pago)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "MINÉRIO: uma carroça de ferro bruto por semana (cerca de 100 kg), largada na curva do leito"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "SAL: dois sacos por semana"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "GADO: duas reses por semana"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "O LEITO FECHADO: ninguém da cidade pisa o leito nem o vau do norte enquanto ele estiver lá"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "UM NOME: quer o nome de quem pisa como quem carrega ferro novo; nome dito é nome dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "SAL: dois sacos por semana",
-     "txt": "[3] → SAL: dois sacos por semana"
-    }
-   ],
-   "hora_rolado": "14:22:11"
-  },
-  "VTc7": {
-   "id": "VTc7",
-   "dia": 407,
-   "hora": "14:23:05",
-   "titulo": "AS CRIAS DO NINHO do Vorthen contra o cordão das 8 lanças (o precedente do Murrask)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "uma cria passa o cordão: 1d3 lanças feridas"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 20,
-     "res": "o cordão as espeta uma a uma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "uma cria passa o cordão: 1d3 lanças feridas",
-     "txt": "[4] → uma cria passa o cordão: 1d3 lanças feridas"
-    }
-   ],
-   "hora_rolado": "14:23:05"
-  },
-  "VTd7": {
-   "id": "VTd7",
-   "dia": 407,
-   "hora": "14:23:05",
-   "titulo": "OS DROPS DO VORTHEN: o VORTHIL (Épico, Gelo), em kg",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "2 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "4 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "6 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "4 kg",
-     "txt": "[4] → 4 kg"
-    }
-   ],
-   "hora_rolado": "14:23:05"
-  },
-  "VTe7": {
-   "id": "VTe7",
-   "dia": 407,
-   "hora": "14:23:05",
-   "titulo": "OS DROPS DO VORTHEN: as glândulas de VORGEL",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "uma"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "duas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "três"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "quatro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "duas",
-     "txt": "[2] → duas"
-    }
-   ],
-   "hora_rolado": "14:23:06"
-  },
   "VTf7": {
    "id": "VTf7",
    "dia": 407,
@@ -19372,6 +19176,196 @@
     }
    ],
    "hora_rolado": "12:20:01"
+  },
+  "CA34": {
+   "id": "CA34",
+   "dia": 433,
+   "hora": "12:37:32",
+   "titulo": "O QUE O CAPITÃO (YAIS; LEAL e CRUEL; quer enriquecer) DIZ QUANDO O REI RECUSA O OURO E PERGUNTA DE QUEM É A BARCA, O QUE LEVA E PARA ONDE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MENTE: a barca foi vendida a um mercador do Delta, a marca é velha; mostra uma CARTA DE PASSAGEM (falsa)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "CALA e pede para falar a sós com o rei: oferece um nome grande da Liga em troca de seguir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)",
+     "txt": "[2] → a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)"
+    }
+   ],
+   "hora_rolado": "12:37:32"
+  },
+  "PP34": {
+   "id": "PP34",
+   "dia": 433,
+   "hora": "12:37:32",
+   "titulo": "ONDE ESTÃO OS PAPÉIS DA LIGA (a carga oculta: ouro e papéis; a carta do Ceduion à Leliel)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "foram na CARROÇA, com o ouro"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "ficaram na ARCA do capitão, na barca, debaixo da tábua da popa"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ficaram na ARCA do capitão, na barca, debaixo da tábua da popa",
+     "txt": "[5] → ficaram na ARCA do capitão, na barca, debaixo da tábua da popa"
+    }
+   ],
+   "hora_rolado": "12:37:32"
+  },
+  "FC34": {
+   "id": "FC34",
+   "dia": 433,
+   "hora": "12:37:32",
+   "titulo": "OS DOIS DA GUARDA QUE SEGUEM A CARROÇA DE LONGE PELA ESTRADA DO SAL (sem tocar; até a noite)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "os carroceiros os VEEM e apertam o passo; perdem a carroça no escuro"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 11,
+     "res": "seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 18,
+     "res": "veem a carroça ENCONTRAR o comprador num vau da estrada do sal (rola quem)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 20,
+     "res": "e ouvem o nome de quem paga (uma pista nova)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda",
+     "txt": "[5] → seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda"
+    }
+   ],
+   "hora_rolado": "12:37:32"
+  },
+  "LP34": {
+   "id": "LP34",
+   "dia": 433,
+   "hora": "12:38:02",
+   "titulo": "A QUEM A LIGA PAGA NO DELTA (a lista nos papéis da arca do capitão; a carroça leva o ouro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um homem das CARAVANAS DE SHIZESS (o que compra gente para achar o núcleo Mítico do Delta)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os DO JUNCO (o Delta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)",
+     "txt": "[1] → os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)"
+    }
+   ],
+   "hora_rolado": "12:38:02"
   }
  }
 }

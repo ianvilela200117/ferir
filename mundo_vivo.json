@@ -2519,7 +2519,8 @@
     "406: [2] quieta",
     "413: [2] quieta",
     "420: [4] quieta",
-    "427: [14] BATE DE FRENTE com os da Moeda Velha: [9]+2 × [10]+2 → vence os da Moeda Velha (1/6); os D"
+    "427: [14] BATE DE FRENTE com os da Moeda Velha: [9]+2 × [10]+2 → vence os da Moeda Velha (1/6); os D",
+    "433: a casa SABE (os papéis da arca do capitão Yais): a LIGA os PAGA; o ouro sobe o rio e desce pela estrada do sal até eles (LP34 [1])"
    ]
   },
   {
@@ -3694,9 +3695,10 @@
    ]
   },
   "Levis (a cidade)": {
-   "valor": 40,
+   "valor": 45,
    "log": [
-    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+    "433: partida (o Mestre, pelo que a casa viveu com eles)",
+    "433: +5 (433: o rei recusou em público o ouro da Liga no cais de uma aldeia de Levis (a surpresa boa do saber: alguém viu e conta))"
    ]
   },
   "o Porto de Marasar (a cidade)": {

@@ -6908,6 +6908,14 @@
    "aberto": 430,
    "tocado": 430,
    "fechado": false
+  },
+  {
+   "id": 75,
+   "texto": "A BARCA DA LIGA NO CAIS DA ALDEIA (433): o capitão YAIS (Liga) confessou em parte; na arca da popa, a LISTA DA PAGA DA LIGA AOS DEVOLVIDOS (o Delta) e uma CARTA LACRADA do Colégio de Telosus à LELIEL; a carroça com o ouro parou numa estalagem da estrada do sal, vigiada por dois da guarda.",
+   "oculto": false,
+   "aberto": 433,
+   "tocado": 433,
+   "fechado": false
   }
  ]
 }

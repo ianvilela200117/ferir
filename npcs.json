@@ -5057,5 +5057,20 @@
    "AMBICIOSO"
   ],
   "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros"
+ },
+ "Yais": {
+  "nivel": 90,
+  "xp": 0,
+  "log": [
+   "Dia 433: entra no livro (nível 90)",
+   "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei"
+  ],
+  "classe": "Capitão da Liga (o rio; espada)",
+  "ocupacao": "a barca da Liga no cais da aldeia abaixo de Levis (433)",
+  "tracos": [
+   "LEAL",
+   "CRUEL"
+  ],
+  "voz": "sorri com a boca e conta com os olhos; fala de portagem, pressa e moeda; nunca põe a mão perto da espada na frente de quem pode mais"
  }
 }

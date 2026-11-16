@@ -1,14 +1,14 @@
-# RETOMAR — meio-dia do Dia 433, o cais de uma aldeia abaixo de Levis (MOTOR 8: G1 a G22)
+# RETOMAR — noite do Dia 433, o cais de uma aldeia abaixo de Levis (MOTOR 8: G1 a G22)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: MEIO-DIA DO 433, o cais da aldeia); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: NOITE DO 433, o cais da aldeia); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Meio-dia do 433, o CAIS DE UMA ALDEIA do rio, a meio dia de Levis. O tick do 433 JÁ RODOU; o próximo é o 434, SEMANAL (o primeiro com as GUILDAS, G12, e a VIGIA, G11, nos bichos; e com as regras do MOTOR 8, G13 a G22, valendo). A revista da barca da Liga: o CAPITÃO (OCULTO: nível 90, espada) ofereceu 1.500 para o rei seguir; a CARROÇA de bois saiu com os fardos de cima pela estrada do sal (OCULTO: a um comprador do Delta; ouro e papéis, e a carta do Ceduion à Leliel). Na barca ficaram 16 remadores, 8 guardas e os fardos de baixo. Com o rei: o Moreth (a Couraça), o Eiagrir, a Eliane, 10 da guarda; PV do rei 356/402; exaustão 0.
+Noite do 433, o CAIS DE UMA ALDEIA do rio, a meio dia de Levis. O tick do 434 (SEMANAL: as guildas, a vigia, o Motor 8) NÃO RODOU. A barca da Liga: o capitão YAIS (90; LEAL e CRUEL; OCULTO: deve a alguém perigoso) confessou em parte; a ARCA (com a Eliane): a lista da paga da Liga aos DEVOLVIDOS e a carta LACRADA do Colégio de Telosus à Leliel (OCULTO: o Ceduion vende à Liga dela o que o Colégio sabe da Elaeva, pelo perdão do norte). A barca não tem direito ao rio pela lei do rei. O capitão e a gente dele estão no cais, vigiados, sem ferros. A CARROÇA com o ouro parou numa estalagem da estrada do sal (OCULTO: vai a um comprador do Delta: os Devolvidos). O rei 356/402 (a noite do 433 ainda não contou na cura).
 - A ORDEM DO REI contra a revolta de Marasar chega a Ireviel no meio-dia do 434: a força do Graur (as 20 lanças, a guarda que pode sair, a Guilda e 1d6+4 magos da Chama da Hoste: rolar os números) sai à tarde e chega a Marasar no 435 (batalha.py; os Fiéis do Doge Velho, força 6) · o Facio vai com eles, para ser entregue à Skotha · a LEGITIMIDADE caiu a 9 (o rei passou por cima do voto do conselho).
 - Ireviel sabe e o rei ainda não: a Eloune morta pelo Teraseth (o recado dele, com o coração DE PRESENTE, alcança a barca no 434: agenda #448, oculto) · a contra IDENTIFICOU o homem das guildas de Steunn (o cobrador da Groa; a Sira o vigia; OCULTO: a Groa passou a ele uma medida da Fornalha) · o Celocus pagou os 800.
 - OCULTOS que vêm: 433 a notícia de que o TERASETH MATOU A ELOUNE (432) e manda o coração (núcleo Épico de Água) ao rei DE PRESENTE: alcança a barca no 434 (agenda) · 436 a carta do Tolvane: o Celocus não respondeu e mostrou HADUN à venda · a GROA PASSOU uma medida da Fornalha ao homem das guildas de Steunn (infiltrado, furt 6; a contra já notou 'alguém estranho', 432) · o vilão novo ZEAZHIS (150) em Yaelane (notícia no 433) · a revolta de Marasar é dos FIÉIS DO DOGE VELHO (a casa já sabe) · o NPC antigo que volta mudado em Levis (LV31: tabela quando o rei chegar) · em Levis, a SOUANE pôs a Brara sob a proteção dela (429).
@@ -168,8 +168,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G22; a cola do motor.
 - (OCULTO) HC33 [4] o capitão da Liga (90) · RV33 [4] fala e suborna · SU33 [3] 1.500 · (OCULTO) CR33 [6] a carroça vai a um comprador do Delta · G10 notar do rei: SUCESSO COM GANHO (a carroça; pesa como moeda; a estrada do sal).
 
+## RESPONDIDO (433, tarde): 1d perguntar e investigar; recusar o ouro; 'se ele tiver o direito, não mexo um dedo'
+- A lei (fato da ficha): o rio fechado à Liga (255, 260), a paz caída (339), a lei do 323 · CA34 [2] o capitão diz a verdade em parte · G10 gente do rei EXTRAORDINÁRIO (e a surpresa boa: Levis +5) · G10 notar da Eliane SUCESSO · (OCULTO) PP34 [5] a arca na popa · LP34 [1] os Devolvidos · FC34 [5] a carroça na estalagem.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CAPITÃO DA LIGA oferece 1.500 para o rei seguir; a CARROÇA sai pela estrada do sal com os fardos de cima: a) recusar e PRENDER o capitão e a barca, lutando se for preciso (combate rápido) · b) aceitar o ouro e seguir · c) recusar, revistar a barca e mandar a ELIANE e a guarda atrás da carroça · d) outra (pode juntar).
+1. O CAPITÃO YAIS E A BARCA DA LIGA (sem direito ao rio pela lei do rei; a paga da Liga aos Devolvidos; a carta à Leliel): a) PRENDER o capitão e tomar a barca e a carga pela lei (a gente dele junto) · b) tomar a arca e a carga e mandar o capitão e a gente embora a pé · c) soltar todos com um recado do rei à Leliel · d) outra.
+2. A CARROÇA DO OURO na estalagem da estrada do sal: a) tomá-la esta noite · b) deixá-la seguir e ver quem vem buscar · c) outra.
+3. A CARTA LACRADA do Colégio de Telosus à Leliel: a) o rei a abre e lê agora · b) guarda fechada para mostrar ao conselho (e ao Thuron, do Colégio de Ireviel) · c) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
