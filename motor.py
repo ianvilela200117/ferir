@@ -37,6 +37,9 @@ PAINEL E CRÔNICA       python3 painel.py (painel.html, só o que Ferir sabe) ·
 TESTE DO MOTOR         python3 teste_motor.py   (numa cópia; não mexe no save)
 FACÇÕES                python3 faccoes.py ver [tudo] · semear · postura "NOME" N · objetivo "NOME" "novo"
 GUILDAS DO MUNDO (G12) python3 guildas.py ver [tudo] · ranking · fama ID|casa +N "motivo" · forca|postura ID N · objetivo ID "novo"   (o tick semanal roda a semana)
+MASMORRA (G14)         python3 masmorra.py gera NOME CAT "o que guarda" · ver NOME [tudo] · entra NOME SALA
+REPUTAÇÃO (G21)        python3 reputacao.py ver · muda "QUEM" +N "motivo"
+COVIL E LENDÁRIAS (G13) na ficha do bicho: "covil": {nome,dano,cd,efeito} · "lendarias": N (o luta.py faz o resto)
 ANOTAR NO ENVELOPE     python3 selo.py nota "LEITURA: ..."
 TESTE DE PERÍCIA       python3 aberto.py 2d20+N cd=X [oposto=M] [nivel=N]
 FORJA E ENCANTO        python3 obra_valor.py obra|encantar|reforja|conserto|sim|fichas ...

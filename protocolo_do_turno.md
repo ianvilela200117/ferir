@@ -94,3 +94,42 @@ Ninguém precisa me lembrar disto:
 - **Elas disputam com a casa:** o bicho que uma guilda mata sai do mundo (e o núcleo é dela); o lugar que ela esvazia fica vazio. O chefe de cada uma é NPC de verdade: entra em cena com `tracos.py`/`npc.py` quando aparecer (a ficha nasce na primeira cena).
 - **RANKING DE FAMA** (`guildas.py ranking`), com a Guilda dos Aventureiros de Ireviel (a da casa): ela ganha fama com missão da cidade bem feita (+1), caçada de bicho Épico ou maior (+3), feito grande (+2) (`guildas.py fama casa +N "motivo"`).
 - **A notícia** de cada movimento segue a G8-B (pelo dado, com atraso, ou não chega sozinha); o que toca o reino (o rio de Ireviel, um bicho das terras do reino) chega mais fácil.
+
+## MOTOR 8 (Dia 433, pedido do jogador: "pode aplicar todos"): as ideias de D&D e dos RPGs online, G13 a G22
+O jogador aprovou as dez de uma vez; o Mestre as escreveu equilibradas. Valem daqui em diante; nada do que já foi rolado muda.
+
+### G13 — O COVIL E AS AÇÕES LENDÁRIAS (luta.py)
+- **AÇÕES LENDÁRIAS:** bicho Lendário faz 1 golpe a mais por rodada fora da vez dele, Mítico 2, Primordial 3, sempre em quem o feriu por último (o luta.py faz sozinho pela categoria; `"lendarias": N` na ficha muda o número; gente não tem).
+- **O COVIL:** bicho Épico ou maior lutando NA TOCA dele ganha `"covil": {"nome", "dano", "cd", "efeito"}` na ficha. No começo de cada rodada, d6: 1-2 o covil respira · 3-5 acerta um do grupo (resistência d20 + nível ÷ 10 contra a CD: falha, o dano inteiro e o efeito; sucesso, metade) · 6 acerta TODOS (metade do dado; quem resiste não leva nada). O dano do covil vai pelo degrau do bicho (Épico 4d6 · Único 6d6 · Lendário 8d6 · Mítico 12d6 · Primordial 20d6; CD 15 + degrau × 2). Fora da toca, sem covil.
+- Antes da luta, a G9 confere também o covil e as lendárias da ficha do bicho.
+
+### G14 — AS MASMORRAS POR SALAS (masmorra.py)
+- Lugar fechado (Ithium, Alnesar, Quoium, Iroule, Eryssa e os que vierem) vira um mapa de 5 a 9 salas, gerado no dado na primeira vez que a casa entra ou manda olhos: `masmorra.py gera NOME CAT "o que guarda"`. A última sala é O CORAÇÃO. A tabela das salas está no cabeçalho do script. A casa escolhe o caminho sala a sala; o mapa inteiro fica oculto (`masmorra.py ver NOME`; o Mestre vê tudo com "tudo").
+- Uma sala por cena curta; uma masmorra grande leva um dia. Sair e voltar deixa o lugar se mexer (o que habita sabe que alguém entrou: +2 nos perigos da volta).
+
+### G15 — O TEMPO LIVRE DA CASA (toda semana)
+- No tick semanal, até 3 NPCs da casa que não estejam em missão fazem UMA atividade (o jogador escolhe; sem escolha, o Mestre pega os parados pela ficha): **TREINAR** (uma perícia ou técnica: +1 de prática; 10 semanas = sobe um grau; custa 50) · **PESQUISAR** (uma pergunta ao Livro pelo saber.py com +2) · **TRABALHAR** (1d6 × 50 ao cofre) · **FESTEJAR** (opinião +5 de alguém; um boato do tick chega à casa; custa 1d6 × 20) · **CURAR-SE** (o ferido sara o dobro na semana). O dado vai pelo selo.py.
+
+### G16 — AS CONDIÇÕES (nome curto, efeito fixo; na ficha da luta e na cena)
+- **ENVENENADO:** −2 no ataque; o dano do veneno por rodada até tratar (Medicina CD 15) · **AGARRADO:** não se move; −2 na Defesa; sair: Força ou Agilidade contra a CD de quem agarra · **CAÍDO:** −4 na Defesa contra corpo a corpo; levantar gasta 1 ação · **AMEDRONTADO:** não avança contra o que teme; −2 no ataque; Vontade CD 15 a cada rodada para sair · **CEGO:** −8 no ataque; quem o ataca, +4 · **ATORDOADO:** perde a próxima rodada · **SURDO:** não ouve aviso nem ordem; magia de voz não o pega.
+- **EXAUSTÃO** (graus 1 a 5): −1 por grau em todo teste e no ataque; o 5º derruba. Ganha 1 grau: noite sem dormir; marcha forçada; calor forte de armadura (uma tarde); veneno grave. Perde 1 grau por noite de descanso (e o G4 não cura PV na noite em que tira exaustão do grau 3 para cima). Na ficha: `ficha.py set exaustao N "motivo"`; nos NPCs, uma nota.
+
+### G17 — O TESOURO DO COVIL (quando o bicho Épico ou maior morre na toca dele)
+- Além do núcleo e dos despojos, d20 pelo degrau do bicho: 1-6 nada além do bicho · 7-12 MOEDA dos que ele comeu: degrau × 1d6 × 100 · 13-16 MATERIAL (gerador.py material, um degrau abaixo) · 17-19 uma PEÇA ANTIGA de quem morreu ali (um degrau abaixo; tem história e às vezes dono vivo) · 20 as três coisas. Pelo selo.py; o que for de alguém, alguém vem buscar.
+
+### G18 — O BÔNUS DE CONJUNTO (a forja do rei)
+- Duas ou três peças forjadas ou AJUSTADAS pelo rei para o MESMO portador, com Sob Medida e pelo menos uma Essência em comum, podem ser marcadas como CONJUNTO (o rei declara antes da obra ou do ajuste; o ajuste de uma peça velha gasta uma noite na Fornalha).
+- **2 peças:** +1 efeito MENOR de conjunto (d6 pela Essência comum: +1 na Defesa · RD +2 contra a Essência oposta · +1 no ataque · 1x por cena rerrola um teste de resistência · +1d6 de dano da Essência · não pode ser desarmado). **3 peças:** e +1 efeito MAIOR (1x por cena um feitiço da Essência de 1º a 3º círculo sem Mana · ou dobra o efeito menor). O conjunto só vale com todas vestidas; o requisito de nível de cada peça segue valendo.
+
+### G19 — AS MISSÕES DE CLASSE (os heróis da casa)
+- NPC herói da casa que passa do nível 100, 150, 200 ou 250 pode abrir uma MISSÃO DE CLASSE (o jogador pede, ou o Mestre oferece quando o NPC chega lá): uma cadeia de 3 passos (gerador.py missao, um grau por passo), na ficção do ofício dele. Cumprida: a classe sobe uma raridade (Comum → Incomum → Rara → Épica → Única → Lendária) e ganha 1 habilidade nova da árvore dele (pelo Livro). Falhada: a cadeia fecha por uma lua. Uma missão de classe por vez na casa.
+
+### G20 — OS EVENTOS DE MUNDO COM PRAZO
+- Em toda LUA NOVA, d20: 1-14 nada grande · 15-19 um EVENTO GRANDE é anunciado (d6: 1 uma horda ou bando desce · 2 uma fera grande muda de terra · 3 a coberta afina numa região (magia selvagem, mortos que se mexem) · 4 um torneio ou feira das guildas · 5 um mercado de núcleos e relíquias · 6 uma praga ou fome), com PRAZO de 2d6 + 7 dias à vista de todos · 20 dois eventos.
+- Quem participa soma CONTRIBUIÇÃO (feitos na cena; as guildas da G12 rolam a delas, d20 + força × 2); no fim, a recompensa vai pelo ranking: 1º lugar fama +5 e o prêmio grande (núcleo, relíquia ou terra), 2º e 3º prêmio menor; quem não foi, nada. Se ninguém der conta, o evento cobra da terra.
+
+### G21 — A REPUTAÇÃO (reputacao.py)
+- Um número de −100 a +100 por cidade, por poder e por guilda (as faixas e o guia estão no script). Abre preço, missão e porta, ou fecha. A partida (433) saiu das relações do reino × 20, das posturas das guildas × 30 e, nas cidades e nos aliados, do que a casa viveu com eles (no envelope).
+
+### G22 — OS TÍTULOS COM EFEITO (habilidades.py titulo)
+- Todo FEITO GRANDE do rei (matar pela própria mão bicho Épico ou maior · obra Mítica ou acima · vitória em batalha que ele comandou · julgamento em praça · uma cidade salva) pode dar um TÍTULO (d6 pela ficção do feito: 1-4 nada além da glória · 5-6 um título). O título tem efeito pequeno e estreito (+1 ou +2 num teste ou contra um tipo de inimigo; uma porta que abre) e o mundo o conhece (fama da casa +1). Os títulos somam, mas cada um só vale no que nomeia.

@@ -1032,3 +1032,8 @@ O céu abriu de madrugada. A barca da Liga soltou primeiro e sumiu rio acima na 
 O dia nasceu limpo e o rio baixou. A barca seguiu com a margem a um tiro de pedra, passando campos de cevada e cercas de vime. Perto do meio-dia apareceu uma aldeia de casas de barro, com um cais de três estacas. Amarrada nele estava a barca da Liga: os remadores passavam fardos de mão em mão para uma carroça, e o homem de capa contava cada um.
 
 - **Parada:** meio-dia do 433. A barca da Liga no cais de uma aldeia do reino; Levis a meio dia.
+
+### O cais da aldeia, 433
+A barca do rei encostou no cais de três estacas, e a Eliane desceu primeiro, com os dez atrás. O rei mandou abrir os fardos em nome da lei do rio. O homem de capa veio sorrindo, as mãos à vista, e falou de portagem, de pressa e de mil e quinhentos em moeda de Marasar. Enquanto ele falava, a carroça de bois saiu por trás das casas, e os bois puxavam como quem puxa metal. Ela tomou a estrada do sul.
+
+- **Parada:** meio-dia do 433, o cais. O ouro na mão do capitão; a carroça na estrada do sal.

@@ -3637,5 +3637,139 @@
   "fama": 38,
   "chefe": "Starkald (87)",
   "nota": "a da casa: age pela G1 (não rola no turno da G12); entra no RANKING DE FAMA; ganha fama com missão, caçada e feito"
+ },
+ "reputacao": {
+  "a Doge Skotha (Marasar)": {
+   "valor": 60,
+   "log": [
+    "433: partida pela relação do reino (+3 × 20)"
+   ]
+  },
+  "o Clã Hegre": {
+   "valor": -40,
+   "log": [
+    "433: partida pela relação do reino (-2 × 20)"
+   ]
+  },
+  "Steunn": {
+   "valor": -20,
+   "log": [
+    "433: partida pela relação do reino (-1 × 20)"
+   ]
+  },
+  "os Do Junco (o Delta)": {
+   "valor": -40,
+   "log": [
+    "433: partida pela relação do reino (-2 × 20)"
+   ]
+  },
+  "a Escola Única (Almision)": {
+   "valor": 20,
+   "log": [
+    "433: partida pela relação do reino (+1 × 20)"
+   ]
+  },
+  "o Colégio": {
+   "valor": 80,
+   "log": [
+    "433: partida pela relação do reino (+4 × 20)"
+   ]
+  },
+  "a Leliel (o Norte; a Liga é dela)": {
+   "valor": -100,
+   "log": [
+    "433: partida pela relação do reino (-5 × 20)"
+   ]
+  },
+  "a Escola Única": {
+   "valor": -20,
+   "log": [
+    "433: partida pela relação do reino (-1 × 20)"
+   ]
+  },
+  "Ireviel (a cidade)": {
+   "valor": 60,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "Levis (a cidade)": {
+   "valor": 40,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "o Porto de Marasar (a cidade)": {
+   "valor": 20,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "Farenta (a cidade)": {
+   "valor": 10,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "a Lurentetta (o Delta)": {
+   "valor": 40,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "o Teraseth": {
+   "valor": 40,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "a Mamiltia": {
+   "valor": 60,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "o Celocus (Lumade)": {
+   "valor": 20,
+   "log": [
+    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+   ]
+  },
+  "o Círculo da Areia Cantante (guilda)": {
+   "valor": 0,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  },
+  "a Torre dos Sete Véus (guilda)": {
+   "valor": 0,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  },
+  "os Arpões do Sal Vermelho (guilda)": {
+   "valor": -30,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  },
+  "a Ordem da Tocha Branca (guilda)": {
+   "valor": 0,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  },
+  "a Companhia do Último Gancho (guilda)": {
+   "valor": 0,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  },
+  "as Mãos de Breu (guilda)": {
+   "valor": 0,
+   "log": [
+    "433: partida pela postura (× 30)"
+   ]
+  }
  }
 }

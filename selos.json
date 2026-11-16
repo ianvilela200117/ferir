@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "MVv7",
-  "PV7",
-  "PV7b",
-  "MVp7",
   "MVq7",
   "VTc7",
   "VTd7",
@@ -399,204 +395,13 @@
   "GU6x",
   "GU4h",
   "EN33",
-  "CE33"
+  "CE33",
+  "HC33",
+  "RV33",
+  "CR33",
+  "SU33"
  ],
  "selos": {
-  "MVv7": {
-   "id": "MVv7",
-   "dia": 407,
-   "hora": "13:50:53",
-   "titulo": "A FALA DO MIVOR é verdade ou mentira",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "MENTIRA inteira"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "MEIA VERDADE (o fato existe, o resto ele torce)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "VERDADE (lhe serve dizer)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "MEIA VERDADE (o fato existe, o resto ele torce)",
-     "txt": "[5] → MEIA VERDADE (o fato existe, o resto ele torce)"
-    }
-   ],
-   "hora_rolado": "13:50:53"
-  },
-  "PV7": {
-   "id": "PV7",
-   "dia": 407,
-   "hora": "13:51:05",
-   "titulo": "O REI NOTA QUE O BICHO AFUNDA ENQUANTO FALA? (Percepção 96: +9; o cascalho escorre devagar para debaixo do casco; o vento forte levanta poeira e atrapalha: CD 18)",
-   "dado": [
-    1,
-    20,
-    9
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 17,
-     "res": "NÃO nota: vê um bicho deitado que fala"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "NOTA: o cascalho escorre para debaixo do casco; ele está descendo"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "nota, e conta quanto falta: três falas dessas e o casco some"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 15,
-     "res": "NÃO nota: vê um bicho deitado que fala",
-     "txt": "[6] +9 = 15 → NÃO nota: vê um bicho deitado que fala"
-    }
-   ],
-   "hora_rolado": "13:51:05"
-  },
-  "PV7b": {
-   "id": "PV7b",
-   "dia": 407,
-   "hora": "13:51:14",
-   "titulo": "ALGUÉM DA COLUNA NOTA que o bicho afunda? (o rei não notou; o vento levanta poeira)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "ninguém"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o TUALD, que viu o bicho ontem: o casco está mais baixo do que estava"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o MORETH: vê o cascalho andar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "ninguém",
-     "txt": "[4] → ninguém"
-    }
-   ],
-   "hora_rolado": "13:51:14"
-  },
-  "MVp7": {
-   "id": "MVp7",
-   "dia": 407,
-   "hora": "14:21:58",
-   "titulo": "O QUE O MIVOR RESPONDE ao pacto do rei (fica com os dias secos, mas PROTEGE A CIDADE enquanto estiver no leito) · +2: ganha de graça o que fingia pedir e evita a lança nova · −2: é fera Épica; guardar homem não é da natureza dele; mente quando lhe serve",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "RECUSA e termina de afundar: some debaixo do leito sem dizer para onde"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 11,
-     "res": "diz SIM e MENTE: aceita em palavras; não vai erguer uma garra por ninguém"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 16,
-     "res": "ACEITA POR UM PREÇO (verdade): quer uma coisa por semana; cumpre enquanto for pago"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 19,
-     "res": "ACEITA DE VERDADE, do jeito dele: o leito é dele; o que andar por ele rumo à cidade, ele mata (só o lado norte)"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      15
-     ],
-     "total": 15,
-     "res": "ACEITA POR UM PREÇO (verdade): quer uma coisa por semana; cumpre enquanto for pago",
-     "txt": "[15] → ACEITA POR UM PREÇO (verdade): quer uma coisa por semana; cumpre enquanto for pago"
-    }
-   ],
-   "hora_rolado": "14:21:58"
-  },
   "MVq7": {
    "id": "MVq7",
    "dia": 407,
@@ -19389,6 +19194,184 @@
     }
    ],
    "hora_rolado": "11:43:12"
+  },
+  "HC33": {
+   "id": "HC33",
+   "dia": 433,
+   "hora": "12:19:48",
+   "titulo": "QUEM É O HOMEM DE CAPA DA BARCA DA LIGA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um FEITOR da Liga do rio (nível 45)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um CAPITÃO da Liga (nível 90, espada)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um homem da LELIEL, mago do norte (nível 130)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um CAPITÃO da Liga (nível 90, espada)",
+     "txt": "[4] → um CAPITÃO da Liga (nível 90, espada)"
+    }
+   ],
+   "hora_rolado": "12:19:48"
+  },
+  "RV33": {
+   "id": "RV33",
+   "dia": 433,
+   "hora": "12:19:48",
+   "titulo": "O QUE O HOMEM DE CAPA FAZ QUANDO O REI MANDA ABRIR OS FARDOS (a barca do rei no cais: o rei, o Moreth, o Eiagrir, a Eliane e 10 da guarda; ele tem 16 remadores e 8 guardas; a carga OCULTA: ouro e papéis)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "SUBMETE-SE: abre os fardos e paga a portagem"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "FOGE: corta as amarras e sobe o rio; a carroça foge por terra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "LUTA: os 8 guardas puxam lâmina e os remadores pegam os remos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima",
+     "txt": "[4] → FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima"
+    }
+   ],
+   "hora_rolado": "12:19:48"
+  },
+  "CR33": {
+   "id": "CR33",
+   "dia": 433,
+   "hora": "12:19:48",
+   "titulo": "PARA ONDE VAI A CARROÇA DOS FARDOS (por terra, a partir da aldeia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a LEVIS-BAIXA, ao CULTO DO XAATHIS (a Liga paga o culto)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "às MINAS DE BAIXO de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a um COMPRADOR do Delta, pela estrada do sal"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a um COMPRADOR do Delta, pela estrada do sal",
+     "txt": "[6] → a um COMPRADOR do Delta, pela estrada do sal"
+    }
+   ],
+   "hora_rolado": "12:19:48"
+  },
+  "SU33": {
+   "id": "SU33",
+   "dia": 433,
+   "hora": "12:20:01",
+   "titulo": "QUANTO O CAPITÃO DA LIGA OFERECE AO REI PARA SEGUIR VIAGEM (1d6 × 500)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 500 em moeda de Marasar"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado × 500 em moeda de Marasar",
+     "txt": "[3] → o dado × 500 em moeda de Marasar"
+    }
+   ],
+   "hora_rolado": "12:20:01"
   }
  }
 }

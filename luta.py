@@ -41,7 +41,7 @@ MOTOR 6 (Dia 379; as regras da luta são as mesmas):
                                           quem cai ou recua, e o veredito pela LEI DAS CAÇADAS (2% de morte). seed= repete a mesma régua.
   python3 luta.py ARQ regua=2000          o mesmo, e grava a régua no envelope como OCULTO (o Mestre não copia à mão).
   Arquivo com campo faltando avisa qual campo falta antes de rolar qualquer dado.
-ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20)},
+ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20), covil? {nome,dano,cd,efeito} e lendarias? N (G13, 433: o covil age no começo da rodada; Lendário 1, Mítico 2, Primordial 3 ações lendárias por padrão)},
           "grupo":[{nome,nivel,at,dado,mult,b,df,rd,pv,essencia?,chega?,grita?,magia?,so20?,heroi?,vigor?,agi?,medicina?,imune_empurrao?}]}
 """
 import sys, json, secrets, random
@@ -82,6 +82,8 @@ def fraco(g,M): return bool(g.get('essencia')) and g.get('essencia')==M.get('fra
 def acoes(nivel): return max(1,min(8,1+nivel//60))
 def reac_gente(nivel): return 3 if nivel>=360 else 2 if nivel>=240 else 1 if nivel>=120 else 0
 
+LENDCAT={'Lendário':1,'Lendario':1,'Mítico':2,'Mitico':2,'Primordial':3}   # G13 (Dia 433, pedido do jogador)
+
 def luta(F):
     M=dict(F['monstro']); G=[dict(g) for g in F['grupo']]
     for g in G:
@@ -111,6 +113,18 @@ def luta(F):
             if g['vivo'] and g.get('veneno',0)>0:
                 x=sum(dados(M['veneno']['dado'])); g['pv']-=x; g['veneno']-=1; P(f'  veneno em {g["nome"]}: −{x} ({g["pv"]})')
                 if g['pv']<=0: cai(g,0,morreu)
+        cv=M.get('covil')   # G13 (Dia 433): o COVIL age no começo da rodada (d6: 1-2 respira · 3-5 um alvo · 6 todos, metade)
+        if cv and M['pva']>0:
+            rc=d(6); V=vivos(G,rnd)
+            alvos=[] if rc<=2 or not V else ([V[d(len(V))-1]] if rc<=5 else V)
+            P(f"  COVIL ({cv.get('nome','o covil')}) d6 [{rc}]: "+('respira' if not alvos else ('um alvo' if rc<=5 else 'TODOS (metade)')))
+            for g in alvos:
+                sv=d(20)+g['nivel']//10; dm=sum(dados(cv.get('dano','4d6')))
+                if rc==6: dm//=2
+                liq=0 if sv>=cv.get('cd',20) and rc==6 else (dm//2 if sv>=cv.get('cd',20) else dm)
+                liq=max(liq-g['rd']//2,0); g['pv']-=liq
+                P(f"    {g['nome']}: resiste [{sv}] vs {cv.get('cd',20)} → {liq}"+(f" · {cv['efeito']}" if cv.get('efeito') and sv<cv.get('cd',20) else '')+f" ({g['pv']})")
+                if g['pv']<=0: cai(g,liq,morreu)
         for g in G:
             if not g['vivo'] or g.get('chega',1)>rnd or M['pva']<=0 or (rnd==1 and primeiro_m): continue
             if g['fora']>0: g['fora']-=1; P(f'  {g["nome"]} volta'); continue
@@ -151,6 +165,11 @@ def luta(F):
                 if M['pva']>0 and reac>0 and (liq>=pvmax*0.10 or crit):
                     reac-=1; P('  REAÇÃO:'); ataque(M,g,G,morreu,rnd)
         if M['pva']<=0: P(f'  {M["nome"]} CAI'); break
+        nl=M.get('lendarias', 0 if gente else LENDCAT.get(M.get('cat','Comum'),0))   # G13: AÇÕES LENDÁRIAS: golpes fora da vez, em quem o feriu por último
+        for _ in range(nl):
+            V=vivos(G,rnd)
+            if not V: break
+            P('  AÇÃO LENDÁRIA:'); ataque(M,ultimo if ultimo in V else V[d(len(V))-1],G,morreu,rnd)
         if not gente and not furia and M['pva']<pvmax*0.5: furia=True; recarga=True; P('  FÚRIA: +1 ação, o poder recarrega')
         if M.get('moral',True) and not moral_feito and M['pva']<pvmax*0.25:
             moral_feito=True; m=d(6); P(f'  MORAL d6 [{m}] → '+('FOGE' if m<=3 else 'luta até cair'))
