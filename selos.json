@@ -1,7 +1,5 @@
 {
  "ordem": [
-  "ARD1",
-  "RUI1",
   "SAC1",
   "CAS1",
   "CAS2",
@@ -399,89 +397,11 @@
   "TS37",
   "QZ37",
   "VZ37",
-  "TR37"
+  "TR37",
+  "CU37",
+  "SB37"
  ],
  "selos": {
-  "ARD1": {
-   "id": "ARD1",
-   "dia": 415,
-   "hora": "23:36:25",
-   "titulo": "O ARDENGHI (a fundição caiu)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "escapa pela boca das minas"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "encurralado e MORTO (a ordem do rei)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "encurralado e MORTO (a ordem do rei)",
-     "txt": "[5] → encurralado e MORTO (a ordem do rei)"
-    }
-   ],
-   "hora_rolado": "23:36:25"
-  },
-  "RUI1": {
-   "id": "RUI1",
-   "dia": 415,
-   "hora": "23:36:25",
-   "titulo": "O CAPITÃO RUIVO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "foge de novo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "morre"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "morre",
-     "txt": "[4] → morre"
-    }
-   ],
-   "hora_rolado": "23:36:25"
-  },
   "SAC1": {
    "id": "SAC1",
    "dia": 415,
@@ -19570,6 +19490,116 @@
     }
    ],
    "hora_rolado": "15:50:09"
+  },
+  "CU37": {
+   "id": "CU37",
+   "dia": 437,
+   "hora": "16:09:35",
+   "titulo": "O QUE HÁ NO MUNDO QUE TIRE UM FERIMENTO GRAVE POR MAGIA (OCULTO; a verdade antes do saber do rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um MILAGRE de fé: a Mão ao Fogo do Ferreiro Santo da Mamiltia, com preço (um juramento à fé)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um feitiço velho, CARNE NOVA (Vida 7º; componente: um núcleo de Vida), cuja página o Colégio de Ireviel guarda"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)",
+     "txt": "[1] → NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)"
+    }
+   ],
+   "hora_rolado": "16:09:35"
+  },
+  "SB37": {
+   "id": "SB37",
+   "dia": 437,
+   "hora": "16:09:54",
+   "titulo": "A SURPRESA BOA DO SABER (EXTRAORDINÁRIO): QUEM MUDA DE OPINIÃO SOBRE FERIR PARA MELHOR (+1 Memória; os que estão com ele em Zythir)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o Moreth"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Tigra"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o cabo Gonde"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o eco de Tuir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um dos 10 da guarda"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um dos 10 da guarda",
+     "txt": "[6] → um dos 10 da guarda"
+    }
+   ],
+   "hora_rolado": "16:09:54"
   }
  }
 }

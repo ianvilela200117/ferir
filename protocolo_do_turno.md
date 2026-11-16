@@ -135,3 +135,14 @@ O jogador aprovou as dez de uma vez; o Mestre as escreveu equilibradas. Valem da
 
 ### G22 — OS TÍTULOS COM EFEITO (habilidades.py titulo)
 - Todo FEITO GRANDE do rei (matar pela própria mão bicho Épico ou maior · obra Mítica ou acima · vitória em batalha que ele comandou · julgamento em praça · uma cidade salva) pode dar um TÍTULO (d6 pela ficção do feito: 1-4 nada além da glória · 5-6 um título). O título tem efeito pequeno e estreito (+1 ou +2 num teste ou contra um tipo de inimigo; uma porta que abre) e o mundo o conhece (fama da casa +1). Os títulos somam, mas cada um só vale no que nomeia.
+
+### G23 — O EXÉRCITO DE OSSO (proposta do Mestre, APROVADA pelo jogador no 437)
+- O que o Livro já dava: Servo de Osso (4º, 1 dia) · Toque do Ceifador (quem o Toque derruba a 0 levanta como servo) · a Receita do Servo Armado, a Mestra (o corpo; um núcleo no peito; a palavra gravada; o nome; o morto ACEITA pelo Falar com Morto; metade do nível em vida, 3/4 se aceita, inteiro com núcleo Mítico) · a Tenaz de Eiurvo e o Osso Gravado no preço · o Osso que Cresce · o Senhor dos Servos. Osso cobra sempre: 1d6 × círculo de PV por conjuração.
+- (a) O servo do TOQUE anda até a próxima aurora, com metade do nível, a não ser que a Receita do Servo Armado seja feita no corpo antes dela.
+- (b) MONSTRO como Servo Armado: pode. A "arma" do bicho é o corpo: o núcleo do peito é da categoria DELE (o próprio coração serve, e então não vai à forja). Metade do nível; o bicho que fala pode aceitar: 3/4. Guarda tamanho, Essência e poder; perde a regeneração e o que vinha da cabeça. O corpo serve enquanto está inteiro (num lugar frio, uma semana).
+- (c) O TETO de servos armados ao mesmo tempo: 1 a cada 50 níveis do rei, dobrado pelo Senhor dos Servos; os de 1 dia contam enquanto andam.
+- (d) O PREÇO por aurora (a palavra): 1d6 × 4; a Tenaz de Eiurvo e o Osso Gravado cortam pela metade cada um (os dois juntos: 1d6).
+- (e) O MUNDO: na primeira vez que uma cidade vê o exército andando, reputação −5 nela (G21).
+
+### G24 — AVISAR AS HABILIDADES (pedido do jogador, 437)
+- Sempre que o rei (ou a casa) puder usar uma habilidade, um feitiço, uma peça ou um talento que mude o que está para acontecer, o Mestre AVISA antes, com o custo, e espera a palavra do jogador quando a escolha for dele (a Visão do Tempo e a régua continuam só quando o jogador pede: o aviso diz que ela está livre). O aviso vai numa linha 🛠️ HABILIDADES À MÃO, antes das 🎯 PERGUNTAS.

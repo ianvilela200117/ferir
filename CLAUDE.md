@@ -5,7 +5,7 @@ Este arquivo é lido sozinho no começo de cada sessão. Ele aponta para as regr
 
 ## Ao abrir a sessão (antes de responder qualquer coisa do jogo)
 1. Leia `MESTRE.md` inteiro (as instruções do Mestre e as regras do jogador).
-2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G22** valem sempre.
+2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G24** valem sempre.
 3. Leia `RETOMAR_DIA407.md` (o nome é antigo; é o arquivo de retomada do ÚLTIMO turno): o que foi respondido, os ocultos guardados e as **PERGUNTAS ABERTAS**.
 4. Rode `python3 contexto.py` e leia o `BRIEFING.md`; leia o bloco do topo de "## Pendentes que Ferir conhece" no `estado_vivo.md`.
 5. Rode `python3 tick.py status` para saber o dia, a hora e a pressão.
@@ -28,7 +28,7 @@ A cola de todos os comandos: `python3 motor.py`.
 - **G10:** pergunta dentro do jogo → `saber.py` (a resposta tem o tamanho do saber de quem responde); pergunta de regra ou de código → resposta inteira, sem dado.
 
 ## O turno
-Formato fixo, em português: Leitura das suas respostas · ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO.
+Formato fixo, em português: Leitura das suas respostas · ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO.
 Depois de cada turno, atualizar: o bloco no topo dos Pendentes do `estado_vivo.md` (e a linha 0), o fim do `diario_sessao2f.md`, o fim do `canone.md`, o `RETOMAR_DIA407.md` (RESPONDIDO e PERGUNTAS ABERTAS), a nota de leitura no envelope (`selo.py nota`), e rodar `python3 contexto.py quieto` e `python3 painel.py quieto`.
 
 ## Guardar o jogo (o jogador pede: faça sempre)

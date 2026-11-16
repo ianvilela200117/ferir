@@ -1093,3 +1093,8 @@ Na noite anterior, em Levis, tinha chegado a carta do Tolvane: o Celocus não re
 O tesouro de Tuir era menor do que a fama de um rei: barras de um metal azul-escuro, empilhadas numa arca de pedra, que zumbiam baixinho como antes de uma chuva. Na sétima sala a voz disse "pare", "esquerda", "agora", e ninguém soube o que havia no chão. Na oitava esperava a rainha. Era do tamanho de uma casa e gritou com uma boca que não parecia caber nela, e ninguém recuou. A Lança do Sol do Moreth a queimou até o meio; ela procurou o rei, como o eco tinha dito, e na quarta vez o achou. O rei foi arrastado para trás com o ombro aberto e a perna dormente de veneno. A segunda Lança do Moreth terminou o trabalho. Lá de baixo, mais perto do que antes, a voz de Tuir disse só: "Ela está morta. Obrigado, rei de Ireviel."
 
 - **Parada:** fim da manhã do 437, a oitava sala. O rei não fica de pé sem ajuda e vai mancar; falta a última porta.
+
+### Zythir, a oitava sala, 437 (a pergunta pela cura)
+Deitado na pedra, com a perna dormente, o rei fez a conta de tudo o que sabia de magia, e a conta deu clara: nada no Livro fecha uma ferida que dura. A Cura Maior devolve o sangue e tira o veneno, o Sono Branco impede a ferida de piorar, e o resto é tempo e físico. Mas a Cura Maior é da Luz, a mesma escola da Lança do Sol, e o Colégio a ensina. Com o Foco de Osso, uma conjuração bastaria para encher o rei de novo. Um dos guardas, um rapaz que segurava a lanterna, ficou o tempo todo ao lado dele sem que ninguém mandasse.
+
+- **Parada:** fim da manhã do 437. O Zyza na primeira sala, frio; a última porta fechada.

@@ -1,4 +1,4 @@
-# RETOMAR — fim da manhã do Dia 437, Zythir, a sala 8 limpa (MOTOR 8: G1 a G22)
+# RETOMAR — fim da manhã do Dia 437, Zythir, a sala 8, o Zyza e a 9 esperando (MOTOR 8: G1 a G24)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Fim da manhã do 437, ZYTHIR, a sala 8. O jogador respondeu 1b (o Moreth e o Eiagrir abrem a 9) · 2d (a cura: CU37 [1] não há; o saber EXTRAORDINÁRIO: a pista da CURA MAIOR, Luz 4º, numa aula do Colégio) · 3a (G23 aprovada) · "posso levantar o Zyza" · a regra nova G24 (avisar as habilidades). Pela G24 o Mestre PAROU antes da 9 e do Zyza: o Zyza iria junto à 9; a Visão do Tempo está livre; o Falar com Morto custa 3d6 de PV com o rei a 23. AS TRÊS PERGUNTAS ABAIXO decidem a ordem. O Zyza, se aceitar (rolar: d6 declarado no envelope antes): Servo Armado 118 (PV 1770, Def 49, +39, 2 golpes 1d10×5, Podridão e o veneno); se recusar: 79 (PV 1185, Def 39, +29, 1 golpe); a palavra: 1d6 × 2 por aurora; o núcleo Épico de Podridão dele vai ao peito (sobra 1). A 9 (OCULTO): o rei TUIR vivo e o GUARDIÃO ÚNICO: gerar com o gerador (saída INTEIRA em arquivo), G9, luta.py uma vez.
+
+Antes (a sala 8 limpa):
 Fim da manhã do 437, ZYTHIR, a SALA 8 LIMPA: a 6 deu 6 kg de ZIIS; a 7 passou sem dado; a RAINHA ZATHA (Épica 113) morta pelo Moreth na 2ª rodada · O REI FERIDO GRAVE (feridos.json: não luta até o 458; MARCA: manca), 23/402; o Moreth 600, o Eiagrir 257/420 · à frente: a SALA 9, O CORAÇÃO (OCULTO: o rei TUIR vivo, preso pela magia da tumba, e o GUARDIÃO ÚNICO) · os corpos do Huir e da Zatha ficam na tumba · o recado ao Tolvane chega a Lumade no 441 (agenda #517: rolar a compra da amostra e de onde vem a carga) · a saída para Farenta estava marcada para o amanhecer do 438 (OCULTO: a Elaeva chega às terras de Farenta no 444) · PROPOSTA G23 (o exército de osso) esperando o jogador: NÃO está no protocolo.
 
 Antes (a sala 5):
@@ -172,7 +175,7 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 433: EN33 [4] · CE33 [1] · a contra identificou o cobrador · a auditoria (acima, no envelope).
 
 ## RESPONDIDO (433, meio-dia): 1a parar e revistar · 2 'pode aplicar todos' (o MOTOR 8)
-- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G22; a cola do motor.
+- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G24; a cola do motor.
 - (OCULTO) HC33 [4] o capitão da Liga (90) · RV33 [4] fala e suborna · SU33 [3] 1.500 · (OCULTO) CR33 [6] a carroça vai a um comprador do Delta · G10 notar do rei: SUCESSO COM GANHO (a carroça; pesa como moeda; a estrada do sal).
 
 ## RESPONDIDO (433, tarde): 1d perguntar e investigar; recusar o ouro; 'se ele tiver o direito, não mexo um dedo'
@@ -202,18 +205,16 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (437, a sala 5 limpa): 1b a 6 e seguir até a rainha · 2a o Tolvane compra uma amostra · fora do jogo: "pode fazer o que deve ser feito" (o contexto) e os servos
 - TS37 [15] material: ziis (Veyek trocado), QZ37 6 kg · LR37 a rainha Zatha morta na 2ª rodada; o rei RECUA; feridos [18] GRAVE até o 458 (manca); VZ37 veneno 24 → 23/402 · TR37 [4] nada · o recado ao Tolvane: Lumade no 441 (o viagem.py corrigido) · o grito que dá medo entrou no luta.py · a resposta dos servos: pelo Grimório e pelos talentos; a G23 proposta.
 
-## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. ZYTHIR, A SALA 9 (a última porta): a) não agora: sair com o rei ferido; Zythir espera (sair e voltar: +2 nos perigos, G14) · b) o Moreth e o Eiagrir abrem a 9 sem o rei · c) outra.
-2. O REI FERIDO (GRAVE até o 458; 23/402) e a ida a FARENTA (a Elaeva): a) seguir no 438 assim mesmo: o rei manda de longe, o Moreth e o Eiagrir lutam, a pena da Mamiltia na mão · b) o rei desce a Ireviel para sarar e manda o Moreth e o Eiagrir a Farenta · c) todos ficam em Levis até o rei sarar · d) procurar quem cure o rei por magia (pergunta pelo saber, G10).
-3. A G23, O EXÉRCITO DE OSSO (proposta do Mestre, só vale aprovada): a) aprovar como está · b) aprovar com mudanças (diga quais) · c) não.
+## RESPONDIDO (437, a sala 8): 1b · 2d · 3a · "posso levantar o Zyza" · a G24
+- CU37 [1] · o saber 73 vs 30 EXTRAORDINÁRIO (a Cura Maior pelo Colégio) · SB37 [6] um dos 10 da guarda · a G23 e a G24 no protocolo.
 
-## PROPOSTA G23 — O EXÉRCITO DE OSSO (437; ESPERA o jogador; não está no protocolo)
-- O que o Livro já dá (vale hoje): SERVO DE OSSO (4º: um esqueleto, soldado comum, 1 dia; 1d6 × 4 PV) · TOQUE DO CEIFADOR (6º: quem o Toque derruba a 0 levanta como servo; o Livro não dá prazo) · a RECEITA DO SERVO ARMADO, a Mestra (o corpo; um núcleo no peito, da categoria da arma; a palavra gravada: 1d6 × 4 PV por aurora; metade do nível em vida, 3/4 se o morto aceita, inteiro com núcleo Mítico) · a TENAZ DE EIURVO (1d6 × 2) e o OSSO GRAVADO (metade do PV) · o OSSO QUE CRESCE (o servo come o que mata; teto: o dobro do nível com que se ergueu) · SENHOR DOS SERVOS (agem na Iniciativa do rei; ordem a 1 km; o teto dobra; −1 de Mana máxima por servo além do 1º) · o rei NÃO sabe: Reanimar (5º), Laço de Servo (6º), Dragão de Ossos (8º), Domar (8º).
-- O que falta e o Mestre propõe: (a) o servo do Toque anda até a próxima aurora, com metade do nível, a não ser que a Receita do Servo Armado seja feita no corpo antes dela · (b) MONSTRO como Servo Armado: pode; a "arma" do bicho é o corpo: o núcleo do peito tem de ser da categoria DELE (o próprio coração serve, e então não vai à forja); metade do nível; o bicho que fala (o Zyza falava) pode aceitar: 3/4; guarda tamanho, Essência e poder; perde a regeneração e o que vinha da cabeça; o corpo serve enquanto está inteiro (na tumba fria, uma semana) · (c) o TETO de servos armados ao mesmo tempo: 1 a cada 50 níveis do rei (156 → 3), dobrado pelo Senhor dos Servos (6); os de 1 dia contam enquanto andam · (d) o PREÇO por aurora: a Tenaz e o Osso Gravado somam: 1d6 por servo · (e) o MUNDO: a primeira vez que uma cidade vê o exército andando, reputação −5 (G21) nela; os Que Voltaram dão medo.
-- Os corpos à mão: o ZYZA (158, falava: 3/4 = 118, se aceitar), a ZATHA (113 → 56), o HUIR (78 → 39); os núcleos deles estão com o rei (2 Épicos de Podridão, 1 Épico de Espinho).
+## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
+1. O ZYZA (G23): a) levantar AGORA (Falar com Morto: 3d6 de PV; o rei fica entre 5 e 20) e ele vai com o Moreth e o Eiagrir à 9 · b) levantar amanhã, depois da noite (+40 de PV antes); a 9 espera um dia · c) não levantar.
+2. A PALAVRA DO OSSO QUE CRESCE (no Foco de Osso; a gota da lua nova do 430 já está nela) vai no Zyza? a) sim: ele come o que mata e sobe até o dobro do nível com que se ergueu; o nome dele dito a cada lua nova · b) não: guardar para outro servo.
+3. A SALA 9: a) abrir assim que o Zyza estiver de pé (ou sem ele, se 1c) · b) o rei usa antes a VISÃO DO TEMPO (vê uma hora à frente do que acontece lá dentro) · c) o rei usa antes o FALAR COM MORTO na rainha (3 perguntas sobre o que ela guardava; mais 3d6 de PV).
 
 ## Regras do jogador em vigor
-- Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
+- Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
 - Dado só de script, com a tabela declarada no envelope ANTES de rolar.
 - Sem régua, a não ser pela VISÃO DO TEMPO (2 por dia; mostra 1 hora). Fora disso: "deixe eu me lascar e só pergunte".
 - Tom: medo, emoção, imprevisibilidade; conquistar por merecer. Objetivo: eliminar a Liga de vez (mortos, presos ou servindo) e levar alguns inimigos a ZERO.

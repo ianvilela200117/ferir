@@ -323,3 +323,5 @@ depois vira linha nova aqui.
 - (437) Pelo saber do eco de Tuir, a casa lutou com o guarda da sala 5 de Zythir: o HUIR (Épico 78, réptil de muitas cabeças, Espinho), morto dormindo na primeira troca pelo Moreth; ninguém ferido; o núcleo Épico de Espinho, nee e yeviel. A carta do Tolvane: o Celocus não respondeu ao acordo grande e pôs à venda em Lumade uma carga de HADUN (pena Única de Podridão).
 
 - (437) Zythir, o tesouro de Tuir: 6 kg de ZIIS (Épico, Raio + Tempo). A RAINHA da colmeia, a ZATHA (Épica 113, Podridão), morta pelo Moreth; ela feriu o rei: GRAVE até o 458, e o rei vai MANCAR para sempre. O recado ao Tolvane (comprar uma amostra do hadun) chega a Lumade no 441.
+
+- (437) Nenhuma magia sabida sara um ferimento que dura (o rei, extraordinário): a Cura Maior (Luz 4º) repõe o PV e tira o veneno; o Colégio a ensina. G23 (o exército de osso) aprovada; G24 (avisar as habilidades), pedido do jogador.
