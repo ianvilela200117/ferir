@@ -23,3 +23,8 @@ NOME SEM DECLARAÇÃO no último bloco do estado: QUEIMARAM
 # 403: as duas linhas são a ACUSAÇÃO do Borecci (que a aprendiz bateria o vaduar quente), não um fato da casa
 CÂNONE CONTRARIADO em envelope_sessao2n.md:291 — o certo: a casa bate o vaduar A FRIO
 CÂNONE CONTRARIADO em envelope_sessao2n.md:526 — o certo: a casa bate o vaduar A FRIO
+# 428 (auditoria): a linha 753 do diário cita o CONTRATO FALSO achado na mesa do Quthemnus ("o rei jura que a casa bateu o vaduar quente"), não um fato da casa
+CÂNONE CONTRARIADO em diario_sessao2f.md:753 — o certo: a casa bate o vaduar A FRIO
+# 428 (auditoria): Hassa e Kassa, Neane e Yeane são pessoas diferentes (nomes antigos; não trocar)
+NOMES PARECIDOS: ['Hassa'] × ['Kassa']
+NOMES PARECIDOS: ['Neane'] × ['Yeane']

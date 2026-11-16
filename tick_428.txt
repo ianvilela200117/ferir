@@ -1,0 +1,44 @@
+[01:15:30] Dia 428 · Pressão 2/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (29 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: limpo, calmo (d6 [6] muda, d20 [4] · vento d6 [2])
+   o Porto de Marasar: limpo, calmo (d6 [3] fica · vento d6 [1])
+   Levis: limpo, vento forte (d6 [4] muda, d20 [7] · vento d6 [6])
+   Farenta: tempestade, VENTANIA (d6 [2] fica · vento d6 [1]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: normal [64/100] · MUDOU: era cheio
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 447
+  FERIDO: Starkald (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA) até o Dia 435
+  FERIDO: Goir (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE) até o Dia 435
+  O MUNDO SE MOVE — Dia 428 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]
+    ONDE: d27 [4] Marasar (a Liga e o Doge)  ◆ TOCA A CASA
+    A NOTÍCIA: [4] em 1d6 [2] dias
+    → LEITURA DO DADO: uma cidade se rebela
+    ——
+  O MUNDO VIVO — Dia 428
+    um Lendário age (d20 [1]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado · notícia d20 [4] chega hoje
+    trama do dia: Seline (em Ireviel) → Higrunn (INVEJA) d20 [5] nada visível
+    FAÍSCA: Ithra desafia para duelo o Visconte Aldoveri, por causa de fome
+    FAÍSCA: Xaysress deve a vida a Altheltia, por causa de a coberta do mundo
+    FAÍSCA: Ithra oferece aliança a Lubassino (salineiro do Delta, AMBICIOSO e LEAL; quer formar uma companhia; sócio proposto do Krernos, 301), por causa de fome
+  AUDITORIA (XXIII.23, Dia 428): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 428 ===
+    ⚠ NOMES PARECIDOS: ['Hassa'] × ['Kassa']
+    ⚠ NOMES PARECIDOS: ['Neane'] × ['Yeane']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ CÂNONE CONTRARIADO em diario_sessao2f.md:753 — o certo: a casa bate o vaduar A FRIO
+    (4 avisos novos · 8 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #374: A RESPOSTA DO TERASETH (o recado do 425: caçar a ELOUNE juntos e AJUDA contra o MOREK ferido): rolar
+  ▶ AGENDA #418: FACÇÃO — os Jurados de Steunn (Steunn, em volta do Lumdun) pede audiência ao conselho. O que querem: os clãs de cima juram pelo herdeiro perdido dos Steunn
+  ▶ AGENDA #421: FACÇÃO — (culto) os Olhos Pintados (a estrada sul de Ireviel) ameaça ou sabota a casa (pequeno, mas visível). O que querem: rouba crianças; 305: uma pedra com olhos pintados e um sapato de criança na estrada sul (o culto avança)
+  ▶ AGENDA #423: FACÇÃO — os Filhos da Brecha (Marasar) pede audiência ao conselho. O que querem: veteranos da brecha; querem terra em Marasar
+  ▶ AGENDA #424: FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, os Picos Brancos): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [11] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [6] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Fundas do Norte): um culto ou bando passa a adorá-lo · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: CLIMA ESTRANHO — Haula (terra nova) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: a Guardiã da Tenaz (o sul, onde a areia come a pedra): a ambição dele avança fora da Obra (um passo no que ele quer para si) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: a Guardiã da Tenaz (o sul, onde a areia come a pedra): o MEDO dele aparece: foge, se esconde ou faz algo desesperado · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi

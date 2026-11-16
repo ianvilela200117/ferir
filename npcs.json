@@ -246,12 +246,13 @@
    "Dia 421: VOTO VENCIDO no conselho (O ESCREVENTE DA ALFÂNDEGA DO RIO (pago pelo Ardenghi, no liv): queria B) VIGIAR: ver quem passa a pagá-lo agora que o Arden",
    "Dia 421: VOTO VENCIDO no conselho (OS CINCO AGENTES PRESOS (413: o carregador do cais, do Arden): queria B) TRABALHO FORÇADO (cinco anos; entram na conta da G",
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria C) DIVIDIR: o Fabaino na alfândega; a galé com a Elia",
-   "+1000 Tick 427: MISSÃO/FEITO (mestre da bancada; o martinete)"
+   "+1000 Tick 427: MISSÃO/FEITO (mestre da bancada; o martinete)",
+   "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
   "ultima_subida": 392,
-  "votos_vencidos": 6,
+  "votos_vencidos": 7,
   "lealdade": 7,
   "tracos": [
    "TEIMOSO",
@@ -286,7 +287,7 @@
     "ate": 490
    }
   ],
-  "votos_seguidos": 1
+  "votos_seguidos": 2
  },
  "Graur": {
   "nivel": 75,
@@ -407,12 +408,13 @@
    "Dia 425: VOTO VENCIDO no conselho (O NOVO MESTRE DA GUILDA DOS AVENTUREIROS (o Starkald morreu;): queria B) o TEGRE (44, o caçador que puxou os vivos na forqu",
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria C) DIVIDIR: o Fabaino na alfândega; a galé com a Elia",
    "Dia 425: 425: voto vencido no mestre da Guilda (queria o Tegre)",
-   "+500 Tick 427: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))"
+   "+500 Tick 427: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
+   "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
-  "votos_vencidos": 14,
-  "lealdade": 7,
+  "votos_vencidos": 15,
+  "lealdade": 6,
   "tracos": [
    "DISCIPLINADO",
    "ORGULHOSO"
@@ -438,7 +440,7 @@
     "ate": null
    }
   ],
-  "votos_seguidos": 2,
+  "votos_seguidos": 0,
   "ultima_subida": 399
  },
  "Krernos": {
@@ -1067,7 +1069,7 @@
   ],
   "fraqueza": "a pé, perde a Carga; quebrar o voto tira o Juramento.",
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
-  "votos_seguidos": 1,
+  "votos_seguidos": 0,
   "lealdade": 5,
   "ultima_subida": 406
  },
@@ -1638,9 +1640,10 @@
    "Dia 421: VOTO VENCIDO no conselho (O DECRETO DOS BARCOS (a Intendente requisitou os barcos do c): queria C) REVOGAR e pedir desculpas aos barqueiros",
    "Dia 425: 425: não leu a letra antiga das tábuas de Eryssa (TH25 [5]): não é letra que ele conheça",
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria B) a MOUA (16, salineira e guia de canais do Delta)",
-   "Dia 425: 425 noite: o rei lhe deu os 8 Sem-Torre para pôr em serviço; lançou o FALAR COM MORTO na Isolda para o rei"
+   "Dia 425: 425 noite: o rei lhe deu os 8 Sem-Torre para pôr em serviço; lançou o FALAR COM MORTO na Isolda para o rei",
+   "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela"
   ],
-  "votos_vencidos": 9,
+  "votos_vencidos": 10,
   "tracos": [
    "ORGULHOSO",
    "CRUEL"
@@ -1653,7 +1656,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 1
+  "votos_seguidos": 2
  },
  "Ithra": {
   "nivel": 38,
@@ -4264,11 +4267,13 @@
   "nivel": 46,
   "xp": 0,
   "classe": "barqueiro do livro (traidor) · CURIOSO e RELIGIOSO · desejo: voltar para casa · ambição (4): fundar uma escola · medo: a solidão · segredo: é filho de quem não deveria · linha vermelha: nunca se ajoelha",
-  "ocupacao": "PRESO em Ireviel até a primavera (278): vendeu à Liga os nomes do livro do pedágio",
+  "ocupacao": "carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428)",
   "log": [
    "Dia 278: o chefe dos Descalços e um barqueiro o acusam; o Eiagrir o entrega ao conselho; prisão",
    "Dia 427: 427: VOLTOU A IREVIEL CAÍDO (pobre, ferido ou caçado; NV27 [3], NV27b [2]); ele sabe quem entregou os nomes do livro à Liga (o que o Eiagrir quer saber)",
-   "Dia 427: 427 (noite): POBRE (FC27a [1]): perdeu a barca e a casa; dorme no cais · ao rei (FC27b [5], verdade FC27c [12]): a LIGA passou os NOMES DO LIVRO à LELIEL; os Barqueiros do Livro estão marcados no norte · desejo: voltar para casa"
+   "Dia 427: 427 (noite): POBRE (FC27a [1]): perdeu a barca e a casa; dorme no cais · ao rei (FC27b [5], verdade FC27c [12]): a LIGA passou os NOMES DO LIVRO à LELIEL; os Barqueiros do Livro estão marcados no norte · desejo: voltar para casa",
+   "Dia 428: ocupação nova (antes: PRESO em Ireviel até a primavera (278): vendeu à Liga os nomes do livro do pedágio)",
+   "Dia 428: 428: o CONSELHO (CF28) deu TETO E TRABALHO NA CASA, à vista da guarda (3 a 3; a Intendente desempatou); votos vencidos: Graur, Herkald, Thuron"
   ],
   "tracos": [
    "CURIOSO",
@@ -5027,5 +5032,20 @@
   ],
   "classe": "Campeã da guarda da Lurentetta (o Delta)",
   "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)"
+ },
+ "Giunn": {
+  "nivel": 35,
+  "xp": 0,
+  "log": [
+   "Dia 428: entra no livro (nível 35)",
+   "Dia 428: 428: gerador npc: desejo mandar em alguém · ambição (4) conquistar terra · medo a morte de um filho · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca entrega um amigo à lei · dilema que vem: salvar um filho custa a vida de um estranho · veio com os Jurados à audiência do 428 e pediu para falar com a TILDE, não com o conselho (JS28 [6], novidade [3], JS28s [3])"
+  ],
+  "classe": "Jurado de Steunn (os clãs de cima)",
+  "ocupacao": "em Ireviel com os Jurados de Steunn; procura a TILDE (428)",
+  "tracos": [
+   "CURIOSO",
+   "AMBICIOSO"
+  ],
+  "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros"
  }
 }

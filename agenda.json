@@ -1,5 +1,5 @@
 {
- "prox_id": 432,
+ "prox_id": 438,
  "itens": [
   {
    "id": 1,
@@ -3981,7 +3981,7 @@
   },
   {
    "id": 281,
-   "dia": 434,
+   "dia": 433,
    "texto": "FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)",
    "tipo": "marco",
    "oculto": false,
@@ -5259,7 +5259,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5334,7 +5334,7 @@
   },
   {
    "id": 381,
-   "dia": 434,
+   "dia": 433,
    "texto": "LEVIS: a BRARA fez as picaretas mas COBRA a partilha e não rasga as dívidas antes de ver o rei (BR26 [1]); o rei chega",
    "tipo": "marco",
    "oculto": false,
@@ -5891,7 +5891,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5932,7 +5932,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5958,7 +5958,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5969,7 +5969,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6062,6 +6062,80 @@
    "id": 431,
    "dia": 487,
    "texto": "PRAZO DA LURENTETTA: a ARMA Lendária ou melhor da forja do rei (o preço da aliança contra a Elaeva, 427)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 432,
+   "dia": 430,
+   "texto": "GUERRA OU ESCARAMUÇA entre dois poderes: uma cidade se rebela — Marasar (a Liga e o Doge)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 428",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 433,
+   "dia": 428,
+   "texto": "a Guardiã da Tenaz (o sul, onde a areia come a pedra): o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 428",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 434,
+   "dia": 428,
+   "texto": "CHEGA a a Forquilha: o recado do rei aos Barqueiros do Livro (os nomes estão com a Leliel) (saiu de Ireviel no 428)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 435,
+   "dia": 429,
+   "texto": "CHEGA a Marasar: o recado do rei à Skotha, patrona dos Barqueiros do Livro (os nomes estão com a Leliel) (saiu de Ireviel no 428)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 436,
+   "dia": 432,
+   "texto": "O TERASETH CAÇA A ELOUNE SOZINHO (TF28b [1], TE28 [4]): rolar o desfecho (Lendário 432 contra a Épica 136 nos lodaçais); quem matar fica com o núcleo Épico de Água; a casa só sabe pelo canal (G8-B)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 437,
+   "dia": 429,
+   "texto": "A SKOTHA recebe o recado do rei (os nomes do livro com a Leliel): rolar a resposta (Marasar)",
    "tipo": "marco",
    "oculto": false,
    "para": false,
@@ -6177,10 +6251,10 @@
   },
   {
    "id": 14,
-   "texto": "427: a LURENTETTA (Mítica do Delta) entrou na caçada: aliança aceita pelo rei; 20 lanças da guarda e a campeã MIE (150); o preço: uma ARMA Lendária ou melhor até o 487",
+   "texto": "428: notícia FIEL: a ELAEVA foi FERIDA nos Picos Brancos (alguém a caçou e quase conseguiu; não se sabe quem); chegou pelo Yavor",
    "oculto": false,
    "aberto": 390,
-   "tocado": 427,
+   "tocado": 428,
    "fechado": false
   },
   {
@@ -6593,10 +6667,10 @@
   },
   {
    "id": 66,
-   "texto": "OS NOMES DO LIVRO ESTÃO COM A LELIEL (o Facio, noite do 427: a Liga os passou ao norte): os Barqueiros do Livro (patrona: a Skotha) e as famílias, os Filhos do Livro, estão marcados. O Facio, pobre, dorme no cais e quer voltar para casa.",
+   "texto": "428: o aviso do rei chegou à forquilha: os Barqueiros agradecem e se ARMAM (vigias rio acima); o recado à Skotha chega no 429 · a Sira ouviu o preso da Liga (o homem do Draek): só sabe que os nomes estão com a Leliel no norte · o FACIO ganhou teto e trabalho na casa (o conselho, CF28)",
    "oculto": false,
    "aberto": 427,
-   "tocado": 427,
+   "tocado": 428,
    "fechado": false
   },
   {
@@ -6605,6 +6679,46 @@
    "oculto": false,
    "aberto": 427,
    "tocado": 427,
+   "fechado": false
+  },
+  {
+   "id": 68,
+   "texto": "OS DO CROQUE (a irmandade dos barqueiros do Teraseth, amiga, 428): o Teraseth caça a ELOUNE SOZINHO; eles vêm à caçada do rei no lugar dele.",
+   "oculto": false,
+   "aberto": 428,
+   "tocado": 428,
+   "fechado": false
+  },
+  {
+   "id": 69,
+   "texto": "OS JURADOS DE STEUNN mandaram o GIUNN (35, curioso e ambicioso) à audiência do 428: ele pediu para falar com a TILDE, não com o conselho.",
+   "oculto": false,
+   "aberto": 428,
+   "tocado": 428,
+   "fechado": false
+  },
+  {
+   "id": 70,
+   "texto": "A AUDIÊNCIA DA BRECHA (428): os FILHOS DA BRECHA pedem terra no porto de Marasar; os DA BRECHA VELHA (os que defenderam a brecha pela Liga no 287; hostis) dizem que a terra era deles. Falta a palavra do reino.",
+   "oculto": false,
+   "aberto": 428,
+   "tocado": 428,
+   "fechado": false
+  },
+  {
+   "id": 71,
+   "texto": "A LUZ DO CAIS oferece 20 VOLUNTÁRIOS para a caçada (gente do porto, nível baixo; 428). Falta a resposta.",
+   "oculto": false,
+   "aberto": 428,
+   "tocado": 428,
+   "fechado": false
+  },
+  {
+   "id": 72,
+   "texto": "OS OLHOS PINTADOS deixaram um SAPATO DE CRIANÇA e um OLHO PINTADO no muro da casa, na rua do rio, debaixo da guarda dobrada (428).",
+   "oculto": false,
+   "aberto": 428,
+   "tocado": 428,
    "fechado": false
   }
  ]

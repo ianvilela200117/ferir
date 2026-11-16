@@ -134,7 +134,8 @@
    "agi": 8,
    "heroi": true,
    "nivel_ref": 95,
-   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: volta à mão · bebe o golpe · passo de vento · +1d6 DE FOGO por golpe) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia)"
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda)",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda."
   },
   "Ferir": {
    "nome": "Ferir",

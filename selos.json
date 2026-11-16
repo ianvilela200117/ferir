@@ -1,24 +1,5 @@
 {
  "ordem": [
-  "C402c",
-  "C402d",
-  "EVq2",
-  "EVt2",
-  "ISG2",
-  "VY2",
-  "VYq2",
-  "VYo2",
-  "FLv2",
-  "MOR2",
-  "HIRr2",
-  "TER2",
-  "LUM2",
-  "NAE2",
-  "TAq2",
-  "TAg2",
-  "TAs2",
-  "MMt2",
-  "ARP2",
   "TAl2",
   "TAf2",
   "TAa2",
@@ -399,908 +380,28 @@
   "YV27e",
   "CL27",
   "EL27",
-  "YV27f"
+  "YV27f",
+  "CF28",
+  "IR28",
+  "TR28",
+  "TR28b",
+  "JS28",
+  "FB28",
+  "LC28",
+  "OP28",
+  "FE28",
+  "BL28",
+  "SR28",
+  "SR28b",
+  "LC28n",
+  "TF28",
+  "TF28b",
+  "FB28s",
+  "JS28s",
+  "GI28",
+  "TE28"
  ],
  "selos": {
-  "C402c": {
-   "id": "C402c",
-   "dia": 402,
-   "hora": "18:39:53",
-   "titulo": "O CONSELHO VOTA: A GUILDA DE MINERAÇÃO DE LEVIS (ordem do rei: minério constante nas cidades): A FORMA (a Febre Cinza vem do vaduar aquecido: os de cima quebram a rocha com fogo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) SÓ AS MINAS DE BAIXO (o ferro); as de cima fechadas; sem vaduar · placar A 2 · B 1 · C 3 · VOTO VENCIDO: Isolda, Tolvane, Nouliel",
-     "txt": "VENCE C) SÓ AS MINAS DE BAIXO (o ferro); as de cima fechadas; sem vaduar · placar A 2 · B 1 · C 3 · VOTO VENCIDO: Isolda, Tolvane, Nouliel"
-    }
-   ]
-  },
-  "C402d": {
-   "id": "C402d",
-   "dia": 402,
-   "hora": "18:39:53",
-   "titulo": "O CONSELHO VOTA: QUEM COMANDA A GUILDA DOS AVENTUREIROS (ordem do rei: missões privadas e da cidade; a da cidade: comprar núcleos e buscar materiais para a forja)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) o STARKALD (86, herói da casa) · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Graur, Isolda, Tolvane",
-     "txt": "VENCE A) o STARKALD (86, herói da casa) · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Graur, Isolda, Tolvane"
-    }
-   ]
-  },
-  "EVq2": {
-   "id": "EVq2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O NPC DA CASA QUE TEM UM MOMENTO (evento local do 402): QUEM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a Nouliel"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a Tilde"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a Ulurve"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a Brara"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a Aeliae"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a Nouliel",
-     "txt": "[2] → a Nouliel"
-    }
-   ],
-   "hora_rolado": "18:42:31"
-  },
-  "EVt2": {
-   "id": "EVt2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O MOMENTO DO 402: QUE TIPO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "atrito"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "momento verdadeiro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "momento verdadeiro",
-     "txt": "[4] → momento verdadeiro"
-    }
-   ],
-   "hora_rolado": "18:42:31"
-  },
-  "ISG2": {
-   "id": "ISG2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O GESTO DA ISOLDA CONTRA A ALMISION (trama RESSENTIMENTO, [15]: aparece em cena hoje; a Almision mandou roubar o Gorjal dela no 329 e pagou em ouro, sem desculpas)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "pede ao rei para ficar à porta quando ele falar com o enviado"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "diz ao rei que desta vez a Almision tem de pagar com sangue, não com ouro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "vai antes do rei ao Veyula e o ameaça na rua (o Veyula chega sabendo: -2 no VY)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "vai antes do rei ao Veyula e o ameaça na rua (o Veyula chega sabendo: -2 no VY)",
-     "txt": "[5] → vai antes do rei ao Veyula e o ameaça na rua (o Veyula chega sabendo: -2 no VY)"
-    }
-   ],
-   "hora_rolado": "18:42:31"
-  },
-  "VY2": {
-   "id": "VY2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "(3c) O VEYULA, CONFRONTADO A SÓS PELO REI (HONESTO e GENEROSO; não mente; viu a casa guardar a Matriz e passou a respeitá-la; em Ireviel desde o 214 para ver a Matriz; os Descalços disseram o nome dele): +3 honesto e a sós, +1 o respeito antigo, -2 se o ISG2 der 5",
-   "dado": [
-    1,
-    20,
-    4
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "CALA: não mente e não fala; pede para deixar a cidade com honra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 12,
-     "res": "CONFIRMA: foi ordem da Almision, passada por ele; não pede perdão"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 18,
-     "res": "CONFIRMA e conta O PORQUÊ (VYq2)"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 1000000,
-     "res": "CONFIRMA, conta o porquê e OFERECE algo (VYo2)"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 16,
-     "res": "CONFIRMA e conta O PORQUÊ (VYq2)",
-     "txt": "[12] +4 = 16 → CONFIRMA e conta O PORQUÊ (VYq2)"
-    }
-   ],
-   "hora_rolado": "18:42:31"
-  },
-  "VYq2": {
-   "id": "VYq2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "(só vale se o VY2 der 13+) O QUE A ALMISION QUER COM A MATRIZ (LEAL e CURIOSA; quer virar Lendária; a obra dela: quebrar a Liga de Marasar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ESTUDAR: a Escola Única quer saber como a Matriz mostra o passado do metal"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "TIRAR DA CASA: um rei com a Matriz é um perigo para a Escola"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "usá-la para VIRAR LENDÁRIA (o desejo dela)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA",
-     "txt": "[6] → SURPRESA"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "VYo2": {
-   "id": "VYo2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "(só vale se o VY2 der 19+) O QUE O VEYULA OFERECE AO REI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o caminho da Almision: onde ela está e para onde vai (a estrada, com o corvo)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o que a Almision sabe sobre QUEM ACORDOU A ELAEVA (ela também aceitou a missão da Mamiltia)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ficar e servir a casa: está cansado de roubar para ela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o que a Almision sabe sobre QUEM ACORDOU A ELAEVA (ela também aceitou a missão da Mamiltia)",
-     "txt": "[4] → o que a Almision sabe sobre QUEM ACORDOU A ELAEVA (ela também aceitou a missão da Mamiltia)"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "FLv2": {
-   "id": "FLv2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "OS FILHOS DO LIVRO JURAM ALIANÇA (ordem do rei; a Nouliel escreve os termos): O QUE PEDEM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "voz, sem cadeira, quando o conselho tratar do rio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os arpões e croques pela casa e uma parte de cada presa tomada à Liga"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "nada além da guerra: os sessenta juram ao rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "voz, sem cadeira, quando o conselho tratar do rio",
-     "txt": "[1] → voz, sem cadeira, quando o conselho tratar do rio"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "MOR2": {
-   "id": "MOR2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O MORETH AO SABER DA CAPELA DA LUZ DO CAIS (a luz que matou o Naudren, venerada)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "recusa ser venerado: pede que a capela seja do Sol, não dele"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "aceita calado e acende a primeira vela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "aceita calado e acende a primeira vela",
-     "txt": "[4] → aceita calado e acende a primeira vela"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "HIRr2": {
-   "id": "HIRr2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O HIRKUNN RECUSA (HIr [1], rolado no 400): COM QUEM É A DÍVIDA DELE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "com a Doge Skotha"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "com os Fiéis do Doge Velho"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "com a Guilda dos Salineiros"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA",
-     "txt": "[6] → SURPRESA"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "TER2": {
-   "id": "TER2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "QUEM PASSA PARA O LADO DO TERASETH (notícia FIEL do 402)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os Afogados Vivos (o rio)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os Devolvidos, metade deles"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma fera do rio (a Lianniel)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os Afogados Vivos (o rio)",
-     "txt": "[1] → os Afogados Vivos (o rio)"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "LUM2": {
-   "id": "LUM2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "A FOME EM LUMADE (notícia EXAGERADA; o pacto de Lumade com o Celocus, 40%, espera o fim da guerra) TOCA A CASA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o Celocus pede grão ao rei, a crédito"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ninguém pede nada; o grão sobe 10 em Ireviel e em Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "gente de Lumade desce para Levis (Comida de Levis -1 por duas semanas)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o Celocus pede grão ao rei, a crédito",
-     "txt": "[2] → o Celocus pede grão ao rei, a crédito"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "NAE2": {
-   "id": "NAE2",
-   "dia": 402,
-   "hora": "18:42:31",
-   "titulo": "O QUE A NAERA (Lendária do ofício, 330) TOMOU NAS FUNDAS ANTES DE SUMIR (FIEL)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o martelo velho do Clã, da cadeira do Hrotgar"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um NÚCLEO que o Clã guardava (de um Épico das Fundas)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma das TRÊS FERRAMENTAS DOS REIS"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o martelo velho do Clã, da cadeira do Hrotgar",
-     "txt": "[2] → o martelo velho do Clã, da cadeira do Hrotgar"
-    }
-   ],
-   "hora_rolado": "18:42:32"
-  },
-  "TAq2": {
-   "id": "TAq2",
-   "dia": 402,
-   "hora": "18:44:04",
-   "titulo": "(OCULTO) O NÍVEL DO QUTHEMNUS (mago de ELO, como o filho disse ao círculo; vinte anos preso no círculo de Fenmir; solto no 378. Regra: 'fraco de vinte anos no círculo': luta com METADE do PV e sem feitiço acima do 6º círculo até fazer um ano solto, o 743)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "110 a 150"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 15,
-     "res": "151 a 190"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 19,
-     "res": "191 a 230"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "191 a 230",
-     "txt": "[18] → 191 a 230"
-    }
-   ],
-   "hora_rolado": "18:44:04"
-  },
-  "TAg2": {
-   "id": "TAg2",
-   "dia": 402,
-   "hora": "18:44:04",
-   "titulo": "(OCULTO) QUEM GUARDA AS TORRES MORTAS COM OS DOIS MAGOS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só fanáticos da Cinza: 1d6+2"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os fanáticos (1d6+2) e espadas pagas pelo Ardenghi: 2d6"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "isso e uma FERA PRESA AO CÍRCULO pelo pai (gerador monstro)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "os fanáticos (1d6+2) e espadas pagas pelo Ardenghi: 2d6",
-     "txt": "[3] → os fanáticos (1d6+2) e espadas pagas pelo Ardenghi: 2d6"
-    }
-   ],
-   "hora_rolado": "18:44:04"
-  },
-  "TAs2": {
-   "id": "TAs2",
-   "dia": 402,
-   "hora": "18:44:04",
-   "titulo": "(OCULTO) A TORRE ACESA SABE QUE A CASA VEM? (o voto foi a portas fechadas; os da Cinza têm parentes na cidade; a Isolda ameaçou um estrangeiro na rua hoje, por outro motivo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "não sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "desconfia: dobra a guarda"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "sabe: arma o círculo na entrada e espera"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "não sabe",
-     "txt": "[3] → não sabe"
-    }
-   ],
-   "hora_rolado": "18:44:04"
-  },
-  "MMt2": {
-   "id": "MMt2",
-   "dia": 402,
-   "hora": "18:44:04",
-   "titulo": "A MAMILTIA DIANTE DO ATAQUE À TORRE ACESA (o ZESRETH pôs fogo no telhado da casa onde ela dorme, e ela jurou queimar primeiro quem fizesse isso: +4)",
-   "dado": [
-    1,
-    20,
-    4
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "não sai: guarda o teto"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 12,
-     "res": "vai, mas só contra o Zesreth: as famílias e o pai ela não toca"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 1000000,
-     "res": "vai com o rei e queima as torres"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      20
-     ],
-     "total": 24,
-     "res": "SURPRESA",
-     "txt": "[20] +4 = 24 → SURPRESA (20 NATURAL)"
-    }
-   ],
-   "hora_rolado": "18:44:04"
-  },
-  "ARP2": {
-   "id": "ARP2",
-   "dia": 402,
-   "hora": "18:44:04",
-   "titulo": "OS ARPÕES E CROQUES DOS FILHOS DO LIVRO (60 peças Comuns; o Iorin e a Guilda de Ireviel; o ferro pago por eles a preço de custo, 720; o trabalho é presente da aliança)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "atraso: prontos no 407"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 17,
-     "res": "prontos no 405"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "prontos no 405, e um ferreiro faz um arpão Incomum para o chefe deles"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "prontos no 405",
-     "txt": "[6] → prontos no 405"
-    }
-   ],
-   "hora_rolado": "18:44:04"
-  },
   "TAl2": {
    "id": "TAl2",
    "dia": 402,
@@ -19037,6 +18138,875 @@
     }
    ],
    "hora_rolado": "00:46:38"
+  },
+  "CF28": {
+   "id": "CF28",
+   "dia": 427,
+   "hora": "01:15:15",
+   "titulo": "O CONSELHO VOTA: O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do livro no 278, cumpriu a prisão até a primavera; contou ao rei que os nomes foram à Leliel e quer voltar para casa): o que o reino faz com ele?",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE B) teto e trabalho na casa, à vista da guarda · placar A 0 · B 3 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Thuron",
+     "txt": "VENCE B) teto e trabalho na casa, à vista da guarda · placar A 0 · B 3 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Thuron"
+    }
+   ]
+  },
+  "IR28": {
+   "id": "IR28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "QUEM VIU A IRASA (avistamento do 428) E ONDE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os salineiros, nas salinas velhas (onde ela já foi vista)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "os barqueiros, no braço oeste do rio"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os vaqueiros da várzea nova, perto de Ireviel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "os salineiros, nas salinas velhas (onde ela já foi vista)",
+     "txt": "[3] → os salineiros, nas salinas velhas (onde ela já foi vista)"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "TR28": {
+   "id": "TR28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "A RESPOSTA DO TERASETH (Lendário 432; o recado do 425: caçar a ELOUNE juntos; o aliado dele morreu para ela no 424; o Morek já está morto)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "RECUSA: caça sozinho, como sempre"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 4,
+     "res": "ACEITA caçar a Eloune junto (rola quando)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "ACEITA e vem já: está perto, rio acima"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "TR28b": {
+   "id": "TR28b",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "QUANDO O TERASETH QUER CAÇAR A ELOUNE (só vale se o TR28 der 2-4)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "AMANHÃ, no amanhecer do 429 (o dia da saída a Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "na VOLTA do rei de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "na LUA NOVA, o 430 (a lama mais funda e a lua escura)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "na VOLTA do rei de Levis",
+     "txt": "[4] → na VOLTA do rei de Levis"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "JS28": {
+   "id": "JS28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "O QUE OS JURADOS DE STEUNN PEDEM NA AUDIÊNCIA (os clãs de cima; desde o 408 pedem a Tilde ou quem responda por ela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "A TILDE: que vá a Steunn ser julgada na feira, e as guildas abrem a estrada de pedra"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "QUEM RESPONDA POR ELA: o rei ou um da casa vai à feira de Steunn falar por ela"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "UMA TROCA: que o rei reconheça o juramento deles pelo herdeiro perdido dos Steunn, e param de pedir a menina"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "FB28": {
+   "id": "FB28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "O QUE OS FILHOS DA BRECHA PEDEM NA AUDIÊNCIA (veteranos da brecha de Marasar)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "TERRA no porto de Marasar (que é do reino) para os veteranos"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "TERRA e um posto na guarda do porto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "LC28": {
+   "id": "LC28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "O QUE OS DA LUZ DO CAIS OFERECEM (amigos; acendem velas para a luz que matou o Naudren, o Moreth)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OLHOS: +2 na espionagem da casa em Marasar por uma lua"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "UM AVISO do porto de Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)",
+     "txt": "[3] → MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "OP28": {
+   "id": "OP28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "O QUE OS OLHOS PINTADOS FAZEM (ameaça ou sabotagem pequena, mas visível; a guarda está dobrada na rua do rio e na enfermaria)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "uma pedra de olhos pintados na porta da enfermaria das crianças"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "tentam levar uma criança da enfermaria; as Mães da Porta gritam e a guarda chega (rola quem pegam)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada",
+     "txt": "[4] → um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "FE28": {
+   "id": "FE28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "DE QUEM É A FESTA OU O CASAMENTO NO BAIRRO (evento local do 428)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "dos SEM-TORRE: um casamento entre os que a casa acolheu"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "dos FILHOS DO LIVRO, as famílias dos barqueiros"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "da GUARDA: um lanceiro da cidade casa"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "dos SEM-TORRE: um casamento entre os que a casa acolheu",
+     "txt": "[1] → dos SEM-TORRE: um casamento entre os que a casa acolheu"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "BL28": {
+   "id": "BL28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "COMO OS BARQUEIROS DO LIVRO RECEBEM O AVISO DO REI (o recado chega à forquilha ao meio-dia do 428)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "agradecem e pedem ABRIGO para as famílias dentro dos muros de Ireviel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "agradecem e se ARMAM: mandam vigias rio acima"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "querem o FACIO (o aviso é dele, e ele ganhou teto na casa): pedem que o rei o entregue"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "agradecem e se ARMAM: mandam vigias rio acima",
+     "txt": "[3] → agradecem e se ARMAM: mandam vigias rio acima"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "SR28": {
+   "id": "SR28",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "A SIRA E O PRESO DA LIGA (o homem do Draek, preso no 420): o que a Leliel vai fazer com os nomes do livro (Sira +8)",
+   "dado": [
+    1,
+    20,
+    8
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 8,
+     "res": "NADA: ele não sabe ou não fala"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 14,
+     "res": "POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 20,
+     "res": "SABE para quê (rola o quê)"
+    },
+    {
+     "tipo": "num",
+     "a": 21,
+     "b": 27,
+     "res": "SABE para quê e QUEM no norte guarda a lista"
+    },
+    {
+     "tipo": "num",
+     "a": 28,
+     "b": 1000000,
+     "res": "tudo isso e uma pista nova"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 9,
+     "res": "POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe",
+     "txt": "[1] +8 = 9 → POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "SR28b": {
+   "id": "SR28b",
+   "dia": 428,
+   "hora": "01:17:30",
+   "titulo": "PARA QUE A LELIEL QUER OS NOMES DO LIVRO (só vale se o SR28 der 15+)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "COMPRAR: ouro aos barqueiros marcados para virarem olhos dela no rio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "COBRAR: os parentes deles no norte pagam ou somem (chantagem)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "CAÇAR: matadores descem o rio atrás deles"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "CAÇAR: matadores descem o rio atrás deles",
+     "txt": "[5] → CAÇAR: matadores descem o rio atrás deles"
+    }
+   ],
+   "hora_rolado": "01:17:30"
+  },
+  "LC28n": {
+   "id": "LC28n",
+   "dia": 428,
+   "hora": "01:17:39",
+   "titulo": "QUANTOS VOLUNTÁRIOS DA LUZ DO CAIS (1d6 × 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 5 voluntários"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o dado × 5 voluntários",
+     "txt": "[4] → o dado × 5 voluntários"
+    }
+   ],
+   "hora_rolado": "01:17:39"
+  },
+  "TF28": {
+   "id": "TF28",
+   "dia": 428,
+   "hora": "01:18:04",
+   "titulo": "A SURPRESA NA RESPOSTA DO TERASETH (gerador novidade [7]: uma facção nova nasce de um conflito antigo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "OS POUPADOS: os da Liga que o Teraseth deixou viver na guerra do rio viraram bando e caçam a gente dele: o recado do rei não chegou, e o mensageiro voltou ferido"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)",
+     "txt": "[2] → OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)"
+    }
+   ],
+   "hora_rolado": "01:18:04"
+  },
+  "TF28b": {
+   "id": "TF28b",
+   "dia": 428,
+   "hora": "01:18:04",
+   "titulo": "A RESPOSTA DO TERASETH QUE OS DO CROQUE TRAZEM (só vale se o TF28 der 1-3)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ele CAÇA COM O REI quando o rei voltar de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ele quer o CORAÇÃO da Eloune (o núcleo Épico de Água) como preço"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele",
+     "txt": "[1] → ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele"
+    }
+   ],
+   "hora_rolado": "01:18:04"
+  },
+  "FB28s": {
+   "id": "FB28s",
+   "dia": 428,
+   "hora": "01:18:04",
+   "titulo": "A SURPRESA NA AUDIÊNCIA DOS FILHOS DA BRECHA (gerador novidade [7]: uma facção nova nasce de um conflito antigo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "OS FILHOS RACHAM: os veteranos mais novos saem e viram companhia de aluguel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)",
+     "txt": "[2] → OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)"
+    }
+   ],
+   "hora_rolado": "01:18:05"
+  },
+  "JS28s": {
+   "id": "JS28s",
+   "dia": 428,
+   "hora": "01:18:04",
+   "titulo": "QUEM O NPC NOVO DOS JURADOS DE STEUNN (gerador novidade [3]: entra na vida de alguém próximo) PROCURA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a TILDE (a menina que os Jurados pedem)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "o HERKALD (o mestre do fogo dela)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o HIALD (o aprendiz de Steunn na forja grande)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a TILDE (a menina que os Jurados pedem)",
+     "txt": "[3] → a TILDE (a menina que os Jurados pedem)"
+    }
+   ],
+   "hora_rolado": "01:18:05"
+  },
+  "GI28": {
+   "id": "GI28",
+   "dia": 428,
+   "hora": "01:18:49",
+   "titulo": "QUE NÍVEL TEM O GIUNN (o jurado de Steunn que procura a Tilde; gerador npc)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 20"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 35"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 50"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 70"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nível 35",
+     "txt": "[4] → nível 35"
+    }
+   ],
+   "hora_rolado": "01:18:49"
+  },
+  "TE28": {
+   "id": "TE28",
+   "dia": 428,
+   "hora": "01:19:54",
+   "titulo": "EM QUANTOS DIAS O TERASETH CAÇA A ELOUNE SOZINHO (TF28b [1]; a contar do 428)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado em dias"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o dado em dias",
+     "txt": "[4] → o dado em dias"
+    }
+   ],
+   "hora_rolado": "01:19:54"
   }
  }
 }

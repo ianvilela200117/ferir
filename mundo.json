@@ -2821,6 +2821,18 @@
    "chegada": "[4] em 1d6 [6] dias",
    "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Lumron (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 428,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 430,
+   "chegada": "[4] em 1d6 [2] dias",
+   "leitura": "uma cidade se rebela",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: uma cidade se rebela — Marasar (a Liga e o Doge)",
+   "toca": true
   }
  ]
 }

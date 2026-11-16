@@ -1001,3 +1001,12 @@ O coração do Morek ficou na bigorna, verde por dentro. O rei o leu como lê um
 Na madrugada veio a trovoada seca, sem chuva. O barqueiro da casa subiu a rampa e disse que de manhã não saía barca.
 
 - **Parada:** madrugada do 428. O núcleo e a noite livre na Fornalha; o Facio; os barqueiros marcados; os Rendidos; Levis no 429.
+
+### Ireviel, o conselho, manhã do 428
+A trovoada passou sem chover, e o céu amanheceu limpo. Ainda assim a barca ficou no cais. O conselho votou o Facio em três a três, e a Nouliel desempatou: teto e trabalho na casa, à vista da guarda. O Graur, o Herkald e o Thuron perderam o voto. À tarde o Facio já carregava carvão no cais da Fornalha.
+Na mesma sala, os Filhos da Brecha pediram terra no porto de Marasar. Do fundo, os da Brecha Velha, que tinham defendido aquela brecha pela Liga, gritaram que a terra era deles. Os da Luz do Cais acenderam uma vela por cada voluntário que ofereciam à caçada: vinte. Os do Croque trouxeram a palavra do Teraseth: ele caça a Mãe-Lodo sozinho, e eles vêm no lugar dele. Dos Jurados de Steunn falou um moço, o Giunn, e o que pediu foi falar com a Tilde.
+
+### Ireviel, a rua do rio, entardecer do 428
+O recado voltou da forquilha: os barqueiros do livro agradecem e se armam. A Sira saiu da cela do homem do Draek com pouca coisa: os nomes estão no norte, e mais nada. Uma ave do Delta pousou no braço do Yavor com a notícia de que a Floresta foi ferida nos Picos Brancos, por mão que ninguém sabe. Enquanto os Sem-Torre casavam dois dos seus, com flauta e pão, a guarda achou no muro da casa um sapato de criança e um olho pintado.
+
+- **Parada:** noite do 428, a Fornalha. Para quem a armadura; os núcleos; a Brecha; o Giunn e a Tilde; os vinte da Luz do Cais; Levis no 429.
