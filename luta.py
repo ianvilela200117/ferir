@@ -78,7 +78,10 @@ def dados(s,crit=False,plus=0):
     return [d(f) for _ in range(n)]
 def P(*a):
     if not SIM: print(*a)
-def fraco(g,M): return bool(g.get('essencia')) and g.get('essencia')==M.get('fraqueza')   # Dia 205: sem Essência não dobra (erro achado)
+def _sa(s):   # MOTOR 9: 'Podridao' (o gerador) e 'Podridão' (as fichas) são a mesma Essência
+    import unicodedata
+    return ''.join(c for c in unicodedata.normalize('NFD',str(s or '')) if unicodedata.category(c)!='Mn').lower()
+def fraco(g,M): return bool(g.get('essencia')) and _sa(g.get('essencia'))==_sa(M.get('fraqueza'))   # Dia 205: sem Essência não dobra (erro achado)
 def acoes(nivel): return max(1,min(8,1+nivel//60))
 def reac_gente(nivel): return 3 if nivel>=360 else 2 if nivel>=240 else 1 if nivel>=120 else 0
 
@@ -312,7 +315,7 @@ def ataque(M,g,G,morreu,rnd,varre=False):
     J=jog(); ch=J['ch']; t=J['t']+M['at']+(2 if M.get('faro_ferida') and g['pv']<g['pvmax']*0.5 else 0); crit=J['crit']; g['golpes']=g.get('golpes',0)+1
     df=g['df']+(OFF if DOIS else 0)+(g.get('aura_def',[0,0])[0] if g.get('aura_def') else 0)-min(CERCO[1],CERCO[0]*max(0,g['golpes']-g['ac']))
     if J['fum'] or (t<df and not crit): P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} erra'); return
-    dd_=dados(M['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*M['mult'])+M.get('b',0)+M['nivel']//5; rd=g['rd']//2 if crit else g['rd']; rd+=g.get('rd_ess',{}).get(M.get('essencia'),0); liq=max(br-rd,0)
+    dd_=dados(M['dado'],crit=crit,plus=(J['extra'] if crit else 0)); br=int(sum(dd_)*M['mult'])+M.get('b',0)+M['nivel']//5; rd=g['rd']//2 if crit else g['rd']; rd+=sum(v for k,v in g.get('rd_ess',{}).items() if _sa(k)==_sa(M.get('essencia'))); liq=max(br-rd,0)
     if g.get('desfaz',0)>0 and liq>0 and (crit or liq>=g['pvmax']*0.2):   # 436 (G9): a peça que 'desfaz um golpe por dia' (o Gibão do rei) desfaz o golpe grande
         g['desfaz']-=1; P(f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {liq} → DESFEITO ({g.get("desfaz_nome","a peça")}, 1x por dia)'); return
     g['pv']-=liq; s=f'    ataque em {g["nome"]}: {ch}+{M["at"]}={t} vs {df} ACERTA{" CRÍTICO" if crit else ""} {dd_}×{M["mult"]}+{M.get("b",0)}+{M['nivel']//5}={br} − RD {rd} = {liq} ({g["pv"]})'

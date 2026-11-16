@@ -1581,7 +1581,10 @@
   "votos_seguidos": 1,
   "lealdade": 4,
   "ultima_subida": 427,
-  "estado": "viva (GRAVE até o 447, manca; o Morek, 425)"
+  "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
+  "dons": [
+   "Nome que Anda"
+  ]
  },
  "Thuron": {
   "nivel": 69,
@@ -2444,6 +2447,9 @@
   "estado": "morto",
   "tracos": [
    "ORGULHOSO"
+  ],
+  "dons": [
+   "Pele do Mundo (Essência: Fogo)"
   ]
  },
  "Malvezzi": {
@@ -2950,7 +2956,11 @@
    "Segundo Fôlego (Bônus, 1x/combate)"
   ],
   "fraqueza": "sem armadura média ou pesada, −2 de Defesa.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "dons": [
+   "Pele do Mundo (Essência: Podridão)",
+   "Mão do Mundo"
+  ]
  },
  "Draek": {
   "nivel": 72,
@@ -3544,6 +3554,11 @@
   "tracos": [
    "HONESTO",
    "CALCULISTA"
+  ],
+  "dons": [
+   "Segundo Coração",
+   "Sorte Velha",
+   "Sangue Grosso"
   ]
  },
  "Orvenne": {
@@ -4268,7 +4283,10 @@
    "Alcance Longo (Passiva)",
    "Firmar a Lança (Postura)"
   ],
-  "fraqueza": "colado no inimigo, −2 no ataque."
+  "fraqueza": "colado no inimigo, −2 no ataque.",
+  "dons": [
+   "Pele do Mundo (Essência: Fogo)"
+  ]
  },
  "Nialla": {
   "nivel": 32,
@@ -4893,7 +4911,10 @@
    "Imune (Passiva)",
    "Gota Certa (Ativa, 3)"
   ],
-  "fraqueza": "o cheiro o denuncia a cães e Percepção 70."
+  "fraqueza": "o cheiro o denuncia a cães e Percepção 70.",
+  "dons": [
+   "Nome que Anda"
+  ]
  },
  "Gurka": {
   "nivel": 26,
@@ -4930,7 +4951,11 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "dons": [
+   "Mão do Mundo",
+   "Pele do Mundo (Essência: Fogo)"
+  ]
  },
  "Hiald": {
   "nivel": 24,
@@ -5006,7 +5031,10 @@
    "Atraso (Ativa, 3)",
    "Arquivo (Passiva)"
   ],
-  "fraqueza": "sem um cargo, perde o Papel."
+  "fraqueza": "sem um cargo, perde o Papel.",
+  "dons": [
+   "Olho Aberto"
+  ]
  },
  "Gundald": {
   "nivel": 16,
@@ -5145,7 +5173,10 @@
    "Dia 427: entra no livro (nível 150)"
   ],
   "classe": "Campeã da guarda da Lurentetta (o Delta)",
-  "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)"
+  "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)",
+  "dons": [
+   "Fôlego Sem Fundo"
+  ]
  },
  "Giunn": {
   "nivel": 35,

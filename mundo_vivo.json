@@ -41,7 +41,12 @@
    "obras_feitas": [
     "tomar Marasar e se fazer Doge pela espada"
    ],
-   "prox": 439
+   "prox": 439,
+   "dons": [
+    "Fôlego Sem Fundo",
+    "Passo Certo",
+    "Sorte Velha"
+   ]
   },
   {
    "nome": "Qunemneth, o Médico Cinzento",
@@ -80,7 +85,12 @@
     "405: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
     "427: [13] oferece um acordo a um rival (paz, casamento, troca)"
    ],
-   "prox": 451
+   "prox": 451,
+   "dons": [
+    "Segundo Coração",
+    "Pele do Mundo (Essência: Espinho)",
+    "Nome que Anda"
+   ]
   },
   {
    "nome": "Almision",
@@ -127,7 +137,12 @@
    "obras_feitas": [
     "a Escola Única"
    ],
-   "prox": 438
+   "prox": 438,
+   "dons": [
+    "Memória de Rei",
+    "Nome que Anda",
+    "Fôlego Sem Fundo"
+   ]
   },
   {
    "nome": "Gorine",
@@ -166,7 +181,12 @@
     "407: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
     "427: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)"
    ],
-   "prox": 449
+   "prox": 449,
+   "dons": [
+    "Sorte Velha",
+    "Olho Aberto",
+    "Fôlego Sem Fundo"
+   ]
   },
   {
    "nome": "Ceduion, reitor do Colégio de Telosus",
@@ -208,7 +228,12 @@
     "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga",
     "438: [2] compra, toma ou destrói algo de valor ligado à Obra"
    ],
-   "prox": 455
+   "prox": 455,
+   "dons": [
+    "Memória de Rei",
+    "Sangue Grosso",
+    "Segundo Coração"
+   ]
   },
   {
    "nome": "a Guardiã da Tenaz",
@@ -247,7 +272,12 @@
     "427: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
     "428: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado"
    ],
-   "prox": 451
+   "prox": 451,
+   "dons": [
+    "Memória de Rei",
+    "Olho Aberto",
+    "Voz de Mando"
+   ]
   },
   {
    "nome": "Eiandald",
@@ -290,7 +320,12 @@
    "obras_feitas": [
     "ressuscitar um morto amado"
    ],
-   "prox": 435
+   "prox": 435,
+   "dons": [
+    "Nome que Anda",
+    "Mão que Doma",
+    "Mão que Doma"
+   ]
   },
   {
    "nome": "Leliel",
@@ -334,7 +369,12 @@
     "424: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
     "434: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)"
    ],
-   "prox": 450
+   "prox": 450,
+   "dons": [
+    "Segundo Coração",
+    "Sorte Velha",
+    "Sangue Grosso"
+   ]
   },
   {
    "nome": "Adurel",
@@ -370,7 +410,12 @@
     "434: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
     "435: [2] compra, toma ou destrói algo de valor ligado à Obra"
    ],
-   "prox": 464
+   "prox": 464,
+   "dons": [
+    "Sorte Velha",
+    "Fôlego Sem Fundo",
+    "Sangue Grosso"
+   ]
   },
   {
    "nome": "Altheltia",
@@ -418,7 +463,11 @@
    "obras_feitas": [
     "fundar uma ordem (a Ordem dos Juncos: ofício e cura)"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Memória de Rei",
+    "Pele do Mundo (Essência: Fogo)"
+   ]
   },
   {
    "nome": "Teraseth",
@@ -463,7 +512,12 @@
     "428: respondeu ao recado do 425 pelos DO CROQUE (a irmandade nova dos barqueiros dele): caça a ELOUNE SOZINHO; os do Croque vêm à caçada do rei no lugar dele (TF28 [2], TF28b [1]); (OCULTO) caça no 432 (TE28 [4])",
     "432 (OCULTO para o rei até a notícia): MATOU A ELOUNE nos lodaçais (TE32 [19]); manda o coração ao rei DE PRESENTE, pelo Croque (TE32p [6])"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Passo Certo",
+    "Mão do Mundo",
+    "Mão do Mundo"
+   ]
   },
   {
    "nome": "Naera",
@@ -497,7 +551,12 @@
     "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "420: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta"
    ],
-   "prox": 436
+   "prox": 436,
+   "dons": [
+    "Olho Aberto",
+    "Voz de Mando",
+    "Voz de Mando"
+   ]
   },
   {
    "nome": "Xaysress",
@@ -544,7 +603,11 @@
    "obras_feitas": [
     "abrir um caminho além do mapa"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Sorte Velha",
+    "Nome que Anda"
+   ]
   },
   {
    "nome": "Souane",
@@ -582,7 +645,11 @@
     "420: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
     "434: [16] um discípulo ou herdeiro dele aparece no mundo"
    ],
-   "prox": 448
+   "prox": 448,
+   "dons": [
+    "Mão do Mundo",
+    "Pele do Mundo (Essência: Sombra)"
+   ]
   },
   {
    "nome": "Garkunn",
@@ -620,7 +687,12 @@
     "420: [4] ataca ou sabota a obra do RIVAL lendário",
     "437: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)"
    ],
-   "prox": 437
+   "prox": 437,
+   "dons": [
+    "Mão do Mundo",
+    "Mão do Mundo",
+    "Olho Aberto"
+   ]
   },
   {
    "nome": "Celocus",
@@ -659,7 +731,12 @@
     "423 (a notícia FIEL do MEDO, a PRISÃO): CL23 [5]: QUEIMOU OS PRÓPRIOS LIVROS DE CONTA antes que um juiz os lesse (o incêndio de Lumade, notícia no 424, pode ser o mesmo fogo)",
     "424 (LM24 [4], FIEL): o INCÊNDIO DE LUMADE queimou o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou; a fome lá piora"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Pele do Mundo (Essência: Fogo)",
+    "Pele do Mundo (Essência: Podridão)",
+    "Fôlego Sem Fundo"
+   ]
   },
   {
    "nome": "Lurentetta",
@@ -695,7 +772,12 @@
     "427: o ENVIADO dela em Ireviel pede ao rei ALIANÇA CONTRA A ELAEVA (quem matou o povo dela; LU27 [3], LU27b [4])",
     "427 (noite): o rei ACEITOU a aliança contra a Elaeva antes de ouvir o preço; ela dá 20 lanças da guarda e a campeã MIE (150) à caçada (YV27a [1], YV27c [6]+2, YV27d [6]); o preço: uma ARMA Lendária ou melhor da forja do rei até o 487 (YV27b [1], YV27e [2]); o enviado é o YAVOR (80)"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Memória de Rei",
+    "Pele do Mundo (Essência: Sombra)",
+    "Voz de Mando"
+   ]
   },
   {
    "nome": "Borecci",
@@ -728,7 +810,12 @@
     "399: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
     "420: [8] sofre um revés (ferida, perda, traição de um próximo)"
    ],
-   "prox": 441
+   "prox": 441,
+   "dons": [
+    "Olho Aberto",
+    "Mão do Mundo",
+    "Olho Aberto"
+   ]
   },
   {
    "nome": "Mamiltia",
@@ -771,7 +858,12 @@
     "406 (noite): o rei lhe deu o NOME e o LUGAR (o Adurel, a passagem no vale de Zisrir; palavra da Almision, sem prova) e pediu que esperasse a prova da Almision (MN7 [8]+1 = 9): ACEITA o nome, NÃO aceita a Almision como prova, manda os olhos dela a Zisrir (voltam ~434) e FICA em Ireviel; pagou a metade da missão (3.000 XP e 1.500)",
     "434: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)"
    ],
-   "prox": 462
+   "prox": 462,
+   "dons": [
+    "Mão que Doma",
+    "Segundo Coração",
+    "Mão do Mundo"
+   ]
   },
   {
    "nome": "Higrunn",
@@ -800,7 +892,12 @@
     "392: [8] sofre um revés (ferida, perda, traição de um próximo)",
     "420: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
    ],
-   "prox": 448
+   "prox": 448,
+   "dons": [
+    "Fôlego Sem Fundo",
+    "Sorte Velha",
+    "Passo Certo"
+   ]
   }
  ],
  "monstros": [

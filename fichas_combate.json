@@ -23,7 +23,11 @@
      2
     ]
    },
-   "nivel_ref": 1149
+   "nivel_ref": 1149,
+   "magias": [],
+   "pecas": "",
+   "sem_arte": true,
+   "segundo_coracao": 1
   },
   "Moreth": {
    "nome": "Moreth",
@@ -57,73 +61,97 @@
      "mult": 5,
      "cd": 30,
      "rodada": [
-      7
+      3
      ],
      "essencia": "Fogo"
     },
     {
-     "nome": "CORTE DO HORIZONTE (Arte de espada, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
-     "dano": "13d6",
-     "mult": 5,
-     "cd": 30,
-     "rodada": [
-      3
-     ],
-     "essencia": ""
-    },
-    {
-     "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
-     "dano": "13d6",
-     "mult": 5,
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
      "cd": 30,
      "rodada": [
       4
      ],
-     "essencia": "Vida"
+     "efeito": "derruba",
+     "cd_efeito": 25,
+     "area": true
     },
     {
-     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
-     "dano": "9d6",
-     "mult": 5,
+     "nome": "CORTE DO HORIZONTE (Arte de espada, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
      "cd": 30,
      "rodada": [
       5
      ],
-     "essencia": "Vida"
+     "ignora_rd": 0.5
     },
     {
-     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
-     "dano": "9d6",
-     "mult": 5,
+     "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
      "cd": 30,
      "rodada": [
       6
      ],
-     "essencia": ""
+     "efeito": "dobra_se_caido"
+    },
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      7
+     ],
+     "area": true
     },
     {
      "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
      "dano": "5d6",
-     "mult": 5,
+     "mult": 5.0,
      "cd": 30,
      "rodada": [
       8
-     ],
-     "essencia": ""
+     ]
     },
     {
      "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
      "dano": "5d6",
-     "mult": 5,
+     "mult": 5.0,
      "cd": 30,
      "rodada": [
       9
      ],
-     "essencia": "Vida"
+     "efeito": "quebra_guarda"
     }
    ],
-   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30, 438): maça: Quebra-Guarda, Tremor de Ferro, Bigorna; espada: Fio Duplo, Corte Corrido, Corte do Horizonte; aura: Pele de Pedra",
-   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura"
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido, Corte Do Horizonte, Quebra-Guarda, Tremor De Ferro, Bigorna; auras: Pele de Pedra",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "artes": {
+    "maestria": "Lendário",
+    "teto": 6,
+    "artes": [
+     "Fio Duplo",
+     "Corte Corrido",
+     "Corte Do Horizonte",
+     "Quebra-Guarda",
+     "Tremor De Ferro",
+     "Bigorna"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 5.0
+   },
+   "arma": [
+    "espada",
+    "maça"
+   ],
+   "rd_ess": {
+    "Podridão": 5
+   }
   },
   "Eiagrir": {
    "nome": "Eiagrir",
@@ -158,7 +186,7 @@
      "rodada": [
       3
      ],
-     "essencia": "Vida"
+     "area": true
     },
     {
      "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
@@ -167,11 +195,27 @@
      "cd": 30,
      "rodada": [
       4
-     ],
-     "essencia": "Vida"
+     ]
     }
    ],
-   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento"
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra, Raiz de Pedra menor",
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra",
+     "Raiz de Pedra menor"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança",
+   "rd_ess": {
+    "Fogo": 5
+   }
   },
   "Isolda": {
    "nome": "Isolda",
@@ -197,9 +241,42 @@
       2
      ],
      "essencia": ""
+    },
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "area": true
+    },
+    {
+     "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      4
+     ]
     }
    ],
-   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde"
+   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido; auras: Pele de Pedra, Raiz de Pedra menor",
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Fio Duplo",
+     "Corte Corrido"
+    ],
+    "auras": [
+     "Pele de Pedra",
+     "Raiz de Pedra menor"
+    ],
+    "mult": 2.5
+   },
+   "arma": "espada"
   },
   "Eliane": {
    "nome": "Eliane",
@@ -215,8 +292,42 @@
    "agi": 8,
    "heroi": true,
    "nivel_ref": 95,
-   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda)",
-   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda."
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança"
   },
   "Ferir": {
    "nome": "Ferir",
@@ -280,7 +391,45 @@
    "heroi": true,
    "vigor": 12,
    "imune_empurrao": true,
-   "nivel_ref": 75
+   "nivel_ref": 75,
+   "magias": [
+    {
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "efeito": "derruba",
+     "cd_efeito": 25,
+     "area": true
+    },
+    {
+     "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      2
+     ],
+     "efeito": "quebra_guarda"
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Quebra-Guarda",
+     "Tremor De Ferro"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 1
+   },
+   "pecas": " · ARTES DE ARMA (G30): Quebra-Guarda, Tremor De Ferro; auras: Pele de Pedra",
+   "arma": "maça"
   },
   "Hruthos": {
    "nome": "Hruthos",
@@ -292,7 +441,42 @@
    "pv": 240,
    "dado": "1d10",
    "mult": 3.0,
-   "b": 9
+   "b": 9,
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 1
+   },
+   "pecas": " · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "arma": "lança"
   },
   "Tuald": {
    "nome": "Tuald",
@@ -304,7 +488,42 @@
    "pv": 170,
    "dado": "1d8",
    "mult": 2.0,
-   "b": 6
+   "b": 6,
+   "magias": [
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Fio Duplo",
+     "Corte Corrido"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 1
+   },
+   "pecas": " · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido; auras: Pele de Pedra",
+   "arma": "espada"
   },
   "Starkald": {
    "nome": "Starkald",
@@ -317,7 +536,42 @@
    "dado": "1d8",
    "mult": 3.0,
    "b": 9,
-   "pecas": "(nenhuma peça com feitiço registrada)"
+   "pecas": "(nenhuma peça com feitiço registrada) · ARTES DE ARMA (G30): Tiro Duplo, Flecha Que Prega; auras: Pele de Pedra",
+   "magias": [
+    {
+     "nome": "FLECHA QUE PREGA (Arte de arco, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "efeito": "derruba",
+     "cd_efeito": 25
+    },
+    {
+     "nome": "TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Tiro Duplo",
+     "Flecha Que Prega"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 1
+   },
+   "arma": "arco"
   },
   "Goir": {
    "nome": "Goir",
@@ -330,7 +584,28 @@
    "dado": "1d8",
    "mult": 2.0,
    "b": 5,
-   "pecas": "(nenhuma peça com feitiço registrada)"
+   "pecas": "(nenhuma peça com feitiço registrada) · ARTES DE ARMA (G30): Tiro Duplo; auras: nenhuma",
+   "magias": [
+    {
+     "nome": "TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Treinado",
+    "teto": 2,
+    "artes": [
+     "Tiro Duplo"
+    ],
+    "auras": [],
+    "mult": 1
+   },
+   "arma": "arco"
   },
   "Zyza": {
    "nome": "Zyza",
@@ -348,7 +623,13 @@
    "nivel_ref": 129,
    "nota": "SERVO ARMADO do rei (438; G23): o guarda de Zythir erguido pela Receita Mestra, com o núcleo Épico de Podridão no peito e a palavra do Osso que Cresce; nível 129 (3/4 de 158, +10% da Escola do Osso); PV 129 × 15 + 156 (o nível do rei); não recua (fica); perde a regeneração e a mentira; o veneno do golpe não roda do lado do grupo; a 0 PV desmonta (o rei sente: Atordoado 1 rodada; o núcleo fica no corpo)",
    "pecas": "o próprio corpo (inseto do tamanho de um cavalo, Podridão) · o núcleo Épico de Podridão no peito · a palavra gravada (Osso que Cresce)",
-   "magias": []
+   "magias": [],
+   "servo": true,
+   "veneno_golpe": {
+    "dado": "2d6",
+    "rodadas": 3,
+    "cd": 16
+   }
   }
  }
 }
