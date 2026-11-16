@@ -1,14 +1,16 @@
-# RETOMAR — noite do Dia 432, o pouso da barca do rei, a caminho de Levis (MOTOR 7.2 + G6 a G11)
+# RETOMAR — meio-dia do Dia 433, o rio a meio dia de Levis (MOTOR 7.2 + G6 a G12)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: NOITE DO 432, o pouso); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o pouso do 432). O estado está em `estado_vivo.md` (bloco "NOITE DO 432, O POUSO").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: MEIO-DIA DO 433); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Noite do 432 (3 da Lua da Seca de 1013), o pouso da barca do rei no rio, um dia e meio abaixo de Levis. Pressão 1/5. Os ticks até o 432 JÁ RODARAM. Na barca: o rei (PV 316/402), o Moreth (a Couraça de Espinho, sem encanto), o Eiagrir, a Eliane, 10 da guarda; a PENA DA MAMILTIA. Levis no 435; a ISYZIS (OCULTO: 1 cria) no rio acima de Levis, no caminho (rolar o rastro no 434).
+Meio-dia do 433 (4 da Lua da Seca de 1013), o rio a meio dia de Levis. Pressão 2/5. O tick do 433 (e a AUDITORIA do 433) JÁ RODOU. O próximo é o 434, SEMANAL: o primeiro com as GUILDAS (G12) e com a VIGIA (G11) rolando nos bichos. A barca do rei (o rei 356/402, o Moreth com a Couraça, o Eiagrir, a Eliane, 10 da guarda; a pena da Mamiltia) passa pelo cais de uma aldeia onde a BARCA DA LIGA descarrega fardos (OCULTO: ouro e papéis; a carta do Ceduion à Leliel).
+- A ORDEM DO REI contra a revolta de Marasar chega a Ireviel no meio-dia do 434: a força do Graur (as 20 lanças, a guarda que pode sair, a Guilda e 1d6+4 magos da Chama da Hoste: rolar os números) sai à tarde e chega a Marasar no 435 (batalha.py; os Fiéis do Doge Velho, força 6) · o Facio vai com eles, para ser entregue à Skotha · a LEGITIMIDADE caiu a 9 (o rei passou por cima do voto do conselho).
+- Ireviel sabe e o rei ainda não: a Eloune morta pelo Teraseth (o recado dele, com o coração DE PRESENTE, alcança a barca no 434: agenda #448, oculto) · a contra IDENTIFICOU o homem das guildas de Steunn (o cobrador da Groa; a Sira o vigia; OCULTO: a Groa passou a ele uma medida da Fornalha) · o Celocus pagou os 800.
 - OCULTOS que vêm: 433 a notícia de que o TERASETH MATOU A ELOUNE (432) e manda o coração (núcleo Épico de Água) ao rei DE PRESENTE: alcança a barca no 434 (agenda) · 436 a carta do Tolvane: o Celocus não respondeu e mostrou HADUN à venda · a GROA PASSOU uma medida da Fornalha ao homem das guildas de Steunn (infiltrado, furt 6; a contra já notou 'alguém estranho', 432) · o vilão novo ZEAZHIS (150) em Yaelane (notícia no 433) · a revolta de Marasar é dos FIÉIS DO DOGE VELHO (a casa já sabe) · o NPC antigo que volta mudado em Levis (LV31: tabela quando o rei chegar) · em Levis, a SOUANE pôs a Brara sob a proteção dela (429).
 - A barca da Liga (ouro, papéis e a carta do Ceduion à Leliel, OCULTO) foi rio acima, à frente do rei; o recado à Sira desceu na barca rápida.
 
@@ -157,10 +159,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 431: LB31 [3] · VX31 [2]+2 = 4 (a vigia falhou) · (OCULTO) GR31 [3] a Groa passa a medida · HG31 [6] → novidade [2] monstro novo nas Fundas (RIUNN, Incomum 14) · LV31 [6] → novidade [9] um NPC antigo volta mudado (em Levis) · a pressão encheu (G8-A).
 - 432: BR32 [3] · (OCULTO) TE32 [19], TE32p [6] · MR30 [4] · PM30 [5] · ST32 [2] os Caçadores Livres · (OCULTO) CL32 [6] → novidade [1] o hadun · o vilão ZEAZHIS.
 
+## RESPONDIDO (432 noite → 433): 1 'quero entregá-lo, ele não vale tanto assim' (a letra b dizia recusar: valeu a palavra: ENTREGAR) · 2b acabar com a revolta já, ao lado da Skotha · 3a a G12 aprovada · pergunta fora do jogo: D&D e o Satisfy
+- Legitimidade 10 → 9 · CH33 [6] a Chama da Hoste vai · FL33 [1] os Filhos do Livro não vão.
+- G12: GU1-GU6 (obras/g12_geracao.txt), GU1x-GU6x, (OCULTO) GU4h [6] não foi a Tocha Branca que feriu a Elaeva · GUIr [18] · guildas.py escrito e ligado ao tick semanal (depois das facções) · a regra no protocolo; CLAUDE.md e MESTRE.md: G1 a G12.
+- 433: EN33 [4] · CE33 [1] · a contra identificou o cobrador · a auditoria (acima, no envelope).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A SKOTHA PEDE O FACIO para julgá-lo em Marasar (a cidade em revolta; o conselho deu a ele teto e trabalho no 428): a) entregar · b) recusar, pela palavra do conselho · c) levar de novo ao conselho · d) outra.
-2. MARASAR EM REVOLTA (os Fiéis do Doge Velho, força 6; a Skotha segura o palácio; motim do Cais de Baixo no Porto de Marasar, que é do rei): a) mandar as lanças da cidade ao PORTO DO REI (o Graur) · b) ajudar a SKOTHA na cidade · c) só vigiar (a Sira) · d) outra.
-3. A PROPOSTA G12, AS GUILDAS DO MUNDO (fora do jogo): a) aprovar como está · b) aprovar com mudanças (diga quais) · c) não.
+1. A BARCA DA LIGA NO CAIS DE UMA ALDEIA DO RIO (do reino; descarregando fardos; 16 remadores, 8 guardas e o homem de capa): a) PARAR E REVISTAR: o rio é do rei (a portagem e a lei) · b) passar e seguir para Levis · c) deixar a Eliane e três da guarda seguindo os fardos em terra · d) outra.
+2. AS IDEIAS DE D&D E DE GOSTO DO SATISFY (fora do jogo; o Mestre listou na resposta): quais entram? (diga os números; cada uma vira regra equilibrada no protocolo).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

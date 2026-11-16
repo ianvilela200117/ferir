@@ -58,7 +58,7 @@ Só o que a CASA SABE (notícia, rumor exato, visto). O resto da ficha de cada b
 ## A VIGIA DO REINO (G11, desde o 428; 50 por semana por posto; a Intendente paga)
 | bicho | onde | o posto (quem vigia) | a caçada (quem, quando) |
 |---|---|---|---|
-| ELOUNE (Épica 136, Água) | os lodaçais de Ireviel | os pescadores do cais e a guarda da rua do rio (as torres a partir do 449) | o rei, DEPOIS DE LEVIS, se o Teraseth não a matar antes; a voz da cantora do templo a faz dormir |
+| ~~ELOUNE~~ (Épica 136, Água) | os lodaçais de Ireviel | (posto fechado no 433) | **MORTA no 432 pelo TERASETH**, sozinho; o posto dos pescadores viu; o coração (núcleo Épico de Água) é dele |
 | ISYZIS (Épico 95, Espinho, aquático) | o rio acima de Levis | — (o rei caça no caminho, 429-433) | o rei, o Moreth, o Eiagrir, a Eliane, a caminho de Levis |
 | BRUUR (Épico 152, Terra) | Marasar | a Guilda e os do Croque (vão olhar, 429) | depois de olhado; dorme; fraco a Vento (a lança do rei) e a sal |
 | ITHVIL (Mítico 276, Fogo) | Levis | a Guilda dos Mineiros (o Gurka) | acima da casa: só vigiar |

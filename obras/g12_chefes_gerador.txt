@@ -1,0 +1,54 @@
+nome: Kregal
+desejo: nunca mais passar fome
+ambição (relógio de 4): ganhar a guerra do seu povo
+medo: o próprio passado
+segredo: ama alguém proibido
+linha vermelha: nunca se ajoelha
+dilema que vai chegar: cumprir a palavra vai custar a casa dele
+traços: CRUEL e CURIOSO
+————————————————————————————————————————
+nome: Ithine
+desejo: uma casa própria
+ambição (relógio de 4): entrar numa facção que o recusou
+medo: perder a mão do ofício
+segredo: ama alguém proibido
+linha vermelha: nunca deixa um ferido para trás
+dilema que vai chegar: cumprir a palavra vai custar a casa dele
+traços: CRUEL e ORGULHOSO
+————————————————————————————————————————
+nome: Nesron
+desejo: sair da cidade
+ambição (relógio de 4): comprar a liberdade da família
+medo: a solidão
+segredo: roubou o que tem
+linha vermelha: nunca machuca uma criança
+dilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha
+traços: LEAL e RELIGIOSO
+————————————————————————————————————————
+nome: Selron
+desejo: uma casa própria
+ambição (relógio de 4): tomar o lugar do chefe
+medo: a humilhação pública
+segredo: roubou o que tem
+linha vermelha: nunca machuca uma criança
+dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+traços: LEAL e HONESTO
+————————————————————————————————————————
+nome: Braast
+desejo: curar alguém
+ambição (relógio de 4): virar Lendário
+medo: a solidão
+segredo: fez um pacto
+linha vermelha: nunca vende o ofício barato
+dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+traços: AMBICIOSO e CRUEL
+————————————————————————————————————————
+nome: Braek
+desejo: curar alguém
+ambição (relógio de 4): descobrir uma receita perdida
+medo: a solidão
+segredo: roubou o que tem
+linha vermelha: nunca entrega um amigo à lei
+dilema que vai chegar: cumprir a palavra vai custar a casa dele
+traços: CRUEL e COVARDE
+————————————————————————————————————————

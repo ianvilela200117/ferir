@@ -1,0 +1,87 @@
+DECLARADO (GU1s) [Dia 432, 03:29] G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU1t) [Dia 432, 03:29] G12, A GUILDA 1: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU1f) [Dia 432, 03:29] G12, A GUILDA 1: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU1c) [Dia 432, 03:29] G12, A GUILDA 1: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU1o) [Dia 432, 03:29] G12, A GUILDA 1: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU1p) [Dia 432, 03:29] G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU1m) [Dia 432, 03:29] G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GU2s) [Dia 432, 03:29] G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU2t) [Dia 432, 03:29] G12, A GUILDA 2: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU2f) [Dia 432, 03:29] G12, A GUILDA 2: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU2c) [Dia 432, 03:29] G12, A GUILDA 2: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU2o) [Dia 432, 03:29] G12, A GUILDA 2: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU2p) [Dia 432, 03:29] G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU2m) [Dia 432, 03:29] G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GU3s) [Dia 432, 03:29] G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU3t) [Dia 432, 03:29] G12, A GUILDA 3: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU3f) [Dia 432, 03:29] G12, A GUILDA 3: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU3c) [Dia 432, 03:29] G12, A GUILDA 3: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU3o) [Dia 432, 03:29] G12, A GUILDA 3: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU3p) [Dia 432, 03:29] G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU3m) [Dia 432, 03:29] G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GU4s) [Dia 432, 03:29] G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU4t) [Dia 432, 03:29] G12, A GUILDA 4: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU4f) [Dia 432, 03:29] G12, A GUILDA 4: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU4c) [Dia 432, 03:29] G12, A GUILDA 4: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU4o) [Dia 432, 03:29] G12, A GUILDA 4: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU4p) [Dia 432, 03:29] G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU4m) [Dia 432, 03:29] G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GU5s) [Dia 432, 03:29] G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU5t) [Dia 432, 03:29] G12, A GUILDA 5: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU5f) [Dia 432, 03:29] G12, A GUILDA 5: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU5c) [Dia 432, 03:29] G12, A GUILDA 5: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU5o) [Dia 432, 03:29] G12, A GUILDA 5: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU5p) [Dia 432, 03:29] G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU5m) [Dia 432, 03:29] G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GU6s) [Dia 432, 03:29] G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+DECLARADO (GU6t) [Dia 432, 03:29] G12, A GUILDA 6: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+DECLARADO (GU6f) [Dia 432, 03:29] G12, A GUILDA 6: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+DECLARADO (GU6c) [Dia 432, 03:29] G12, A GUILDA 6: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+DECLARADO (GU6o) [Dia 432, 03:29] G12, A GUILDA 6: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+DECLARADO (GU6p) [Dia 432, 03:29] G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+DECLARADO (GU6m) [Dia 432, 03:29] G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+DECLARADO (GUIr) [Dia 432, 03:29] G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87), d20: 1-20 20 + o dado
+— todas declaradas; agora os dados —
+ROLADO (GU1s) [03:29] G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino): [6] → Yaelane
+ROLADO (GU1t) [03:29] G12, A GUILDA 1: O OFÍCIO: [4] → MAGOS
+ROLADO (GU1f) [03:29] G12, A GUILDA 1: A FORÇA (1d4+2): [1] → força 3
+ROLADO (GU1c) [03:29] G12, A GUILDA 1: O NÍVEL DO CHEFE: [5] → 275
+ROLADO (GU1o) [03:29] G12, A GUILDA 1: O OBJETIVO (relógio de 8): [4] → tomar uma CIDADE
+ROLADO (GU1p) [03:29] G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+ROLADO (GU1m) [03:29] G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [1] → o dado × 15 a menos (o primeiro) · #2 [1] → o dado × 15 a menos (o primeiro)
+ROLADO (GU2s) [03:29] G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino): [6] → Yaelane
+ROLADO (GU2t) [03:29] G12, A GUILDA 2: O OFÍCIO: [4] → MAGOS
+ROLADO (GU2f) [03:29] G12, A GUILDA 2: A FORÇA (1d4+2): [4] → força 6
+ROLADO (GU2c) [03:29] G12, A GUILDA 2: O NÍVEL DO CHEFE: [1] → 175
+ROLADO (GU2o) [03:29] G12, A GUILDA 2: O OBJETIVO (relógio de 8): [6] → acabar com uma guilda RIVAL
+ROLADO (GU2p) [03:29] G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR: [5] → neutra
+ROLADO (GU2m) [03:29] G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [3] → o dado × 15 a menos (o primeiro) · #2 [5] → o dado × 15 a menos (o primeiro)
+ROLADO (GU3s) [03:29] G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino): [4] → Shizess
+ROLADO (GU3t) [03:29] G12, A GUILDA 3: O OFÍCIO: [1] → CAÇADORES DE MONSTROS
+ROLADO (GU3f) [03:29] G12, A GUILDA 3: A FORÇA (1d4+2): [2] → força 4
+ROLADO (GU3c) [03:29] G12, A GUILDA 3: O NÍVEL DO CHEFE: [2] → 200
+ROLADO (GU3o) [03:29] G12, A GUILDA 3: O OBJETIVO (relógio de 8): [2] → caçar um MÍTICO e ficar com o núcleo
+ROLADO (GU3p) [03:29] G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR: [1] → hostil
+ROLADO (GU3m) [03:29] G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [5] → o dado × 15 a menos (o primeiro) · #2 [5] → o dado × 15 a menos (o primeiro)
+ROLADO (GU4s) [03:29] G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino): [2] → Telosus
+ROLADO (GU4t) [03:29] G12, A GUILDA 4: O OFÍCIO: [6] → CRUZADOS DE UMA FÉ
+ROLADO (GU4f) [03:29] G12, A GUILDA 4: A FORÇA (1d4+2): [2] → força 4
+ROLADO (GU4c) [03:29] G12, A GUILDA 4: O NÍVEL DO CHEFE: [6] → 300
+ROLADO (GU4o) [03:29] G12, A GUILDA 4: O OBJETIVO (relógio de 8): [2] → caçar um MÍTICO e ficar com o núcleo
+ROLADO (GU4p) [03:29] G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+ROLADO (GU4m) [03:29] G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [4] → o dado × 15 a menos (o primeiro) · #2 [3] → o dado × 15 a menos (o primeiro)
+ROLADO (GU5s) [03:29] G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino): [8] → Qulosus
+ROLADO (GU5t) [03:29] G12, A GUILDA 5: O OFÍCIO: [1] → CAÇADORES DE MONSTROS
+ROLADO (GU5f) [03:29] G12, A GUILDA 5: A FORÇA (1d4+2): [1] → força 3
+ROLADO (GU5c) [03:29] G12, A GUILDA 5: O NÍVEL DO CHEFE: [5] → 275
+ROLADO (GU5o) [03:29] G12, A GUILDA 5: O OBJETIVO (relógio de 8): [8] → VINGAR uma derrota antiga
+ROLADO (GU5p) [03:29] G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+ROLADO (GU5m) [03:29] G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [6] → o dado × 15 a menos (o primeiro) · #2 [4] → o dado × 15 a menos (o primeiro)
+ROLADO (GU6s) [03:29] G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino): [8] → Qulosus
+ROLADO (GU6t) [03:29] G12, A GUILDA 6: O OFÍCIO: [5] → LADRÕES E ESPIÕES
+ROLADO (GU6f) [03:29] G12, A GUILDA 6: A FORÇA (1d4+2): [2] → força 4
+ROLADO (GU6c) [03:29] G12, A GUILDA 6: O NÍVEL DO CHEFE: [5] → 275
+ROLADO (GU6o) [03:29] G12, A GUILDA 6: O OBJETIVO (relógio de 8): [3] → dominar uma ROTA de comércio
+ROLADO (GU6p) [03:29] G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR: [2] → neutra
+ROLADO (GU6m) [03:29] G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [2] → o dado × 15 a menos (o primeiro) · #2 [2] → o dado × 15 a menos (o primeiro)
+ROLADO (GUIr) [03:29] G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87): [18] → 20 + o dado

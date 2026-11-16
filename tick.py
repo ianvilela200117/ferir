@@ -379,6 +379,13 @@ def um_dia(estrada, limite):
             R += [enxuga(l) if len(l) < 330 else l[:330] for l in perto_f] or ['   nenhuma se mexeu perto da casa.']
             if len(nf) - 1 - len(perto_f) > 0:
                 R.append(f'   (+{len(nf) - 1 - len(perto_f)} facções de longe; no tick_{dia}.txt)')
+        if nucleo.camada('guildas') and os.path.exists(P('guildas.py')):
+            # G12 (Dia 433, pedido do jogador): as seis guildas do mundo, com chefe, agem toda semana
+            C.append('   [15c] AS GUILDAS DO MUNDO (guildas.py semana, G12):')
+            ng, _, err = roda('guildas.py', 'semana', dia)
+            C += ['    ' + l for l in ng] or [f'      (falhou: {err})']
+            R.append('  AS GUILDAS DO MUNDO (G12):')
+            R += [l if len(l) < 330 else l[:330] for l in ng[1:]] or [f'   (falhou: {err})']
         if os.path.exists(P('tratados.json')):
             C.append('   [15b] OS TRATADOS (tratados.py semana):')
             ntr, _, err = roda('tratados.py', 'semana', dia)

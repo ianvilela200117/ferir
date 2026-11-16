@@ -179,3 +179,129 @@ TRAÇO: Giunn +AMBICIOSO (gerador npc (428)) → CURIOSO, AMBICIOSO
 - FACÇÃO [Dia 432] os Caçadores Livres: postura → neutra (vendem rastro a quem pagar (432))
 - [Dia 432, 03:10] LEITURA DO DIA 432 (tick_432.txt): céu limpo e rio NORMAL [62]: a barca do rei sai do remanso ao amanhecer (a da Liga sai antes, rio acima: 1c) · vê os restos da CARAVANA DE LEVIS (#379; a frota perdida do 431) · a BARCA RÁPIDA da Intendente sai de Ireviel de manhã e alcança o rei na NOITE DO 432 (BR32 [3]) com: a resposta da Skotha (pede o Facio), o relato da Guilda (MR30 [4] luta de rua em meia Marasar; a Skotha segura o palácio e o cais dela; PM30 [5] os do Cais de Baixo fazem motim pequeno no Porto do rei), a PENA DA MAMILTIA, e as notícias de Ireviel do 430 e do 431 · o recado do rei à Sira (1c: a barca da Liga) desce nessa barca · (OCULTO) TE32 [19] o TERASETH MATOU A ELOUNE; TE32p [6] o coração é PRESENTE ao rei (a notícia chega a ele no 434) · (OCULTO) CL32 [6] → novidade [1] o Celocus não respondeu; mostrou HADUN (gerador material) · o TOLVANE chegou a Lumade (#340) · ST32 [2] (a surpresa atrasada do STARKALD) nasce OS CAÇADORES LIVRES (força 2, neutros) · MUNDO: um VILÃO NOVO em Yaelane (gerador; o nome Lumade trocado por ZEAZHIS; notícia no 433) · a CONTRA-ESPIONAGEM notou alguém estranho perto da Fornalha (PISTA; o cobrador da Groa) · a fila de surpresas atrasadas (G8-C) cai para 12 · FAÍSCA usada: 'Braeth (o ancião do Clã) oferece aliança aos Jurados de Steunn, por causa de uma receita perdida' (o Giunn a menciona na carta que a barca rápida traz? não: fica como boato dos barqueiros de Levis no pouso)
 - [Dia 432, 03:10] PARADA: NOITE DO 432, o pouso da barca do rei, a caminho de Levis: a Skotha pede o Facio; Marasar em revolta; a proposta das guildas (G12) espera o jogador; Levis no 435.
+- [Dia 432, 03:28] RESPOSTAS DO JOGADOR (noite do 432, o pouso): 1b com as palavras 'quero entregá-lo, ele não vale tanto assim' (a letra b era RECUSAR; vale a PALAVRA do jogador: ENTREGAR o Facio à Skotha) · 2b 'acabar com toda a revolta imediatamente, matem todos se necessário' (ajudar a Skotha na cidade) · 3a APROVADA a G12 (as guildas do mundo), como proposta · PERGUNTA FORA DO JOGO: o que mais dá para tirar de D&D ou do Satisfy para o jogo (resposta inteira, sem dado). LEITURAS: (1) o conselho deu teto ao Facio (CF28); o rei passa por cima do voto: LEGITIMIDADE −1 (o guia do reino.py: 'passar por cima de um voto do conselho −1'); a ordem desce na barca rápida (sai do pouso no amanhecer do 433, rio abaixo; chega a Ireviel no meio-dia do 434); o Facio vai a Marasar com a força do reino · (2) o rei está a um dia e meio de Levis: a ordem desce na mesma barca; quem comanda é o GRAUR (Guarda do Reino; a Marechal está com o rei); a força: as 20 lanças da cidade, a guarda que pode sair (a muralha fica com o resto), a GUILDA (o Tegre, os caçadores e os 20 voluntários) e, se quiserem ir, as duas facções ALIADAS (a CHAMA DA HOSTE, os magos; os FILHOS DO LIVRO, que pediram guerra contra a Liga, e os Fiéis são pagos pela Liga): rolar · saem no 434 à tarde, chegam a Marasar no 435 (1 dia) · 'matem todos se necessário': a batalha (batalha.py) e, depois, quem se rende: a Skotha julga na cidade dela (é a Doge) · (3) a G12 entra no tick semanal do 434: as seis guildas geradas antes, com dado declarado
+- DECLARADO (CH33) [Dia 432, 03:28] A CHAMA DA HOSTE (aliada, força 5; os magos da hoste, o Bjarkunn) VAI A MARASAR com o Graur?, d6: 1-2 NÃO: a irmandade fica a guardar Ireviel com o rei e a Marechal fora · 3-6 VAI: 1d6+4 magos
+- DECLARADO (FL33) [Dia 432, 03:28] OS FILHOS DO LIVRO (aliados, força 3; as famílias dos barqueiros do livro; pediram guerra contra a Liga) VÃO A MARASAR?, d6: 1 NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas · 2-6 VÃO: 2d6×5 homens de remo e arpão
+- ROLADO (CH33) [03:28] A CHAMA DA HOSTE (aliada, força 5; os magos da hoste, o Bjarkunn) VAI A MARASAR com o Graur?: [6] → VAI: 1d6+4 magos
+- ROLADO (FL33) [03:28] OS FILHOS DO LIVRO (aliados, força 3; as famílias dos barqueiros do livro; pediram guerra contra a Liga) VÃO A MARASAR?: [1] → NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas
+- DECLARADO (GU1s) [Dia 432, 03:29] G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU1t) [Dia 432, 03:29] G12, A GUILDA 1: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU1f) [Dia 432, 03:29] G12, A GUILDA 1: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU1c) [Dia 432, 03:29] G12, A GUILDA 1: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU1o) [Dia 432, 03:29] G12, A GUILDA 1: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU1p) [Dia 432, 03:29] G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU1m) [Dia 432, 03:29] G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GU2s) [Dia 432, 03:29] G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU2t) [Dia 432, 03:29] G12, A GUILDA 2: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU2f) [Dia 432, 03:29] G12, A GUILDA 2: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU2c) [Dia 432, 03:29] G12, A GUILDA 2: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU2o) [Dia 432, 03:29] G12, A GUILDA 2: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU2p) [Dia 432, 03:29] G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU2m) [Dia 432, 03:29] G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GU3s) [Dia 432, 03:29] G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU3t) [Dia 432, 03:29] G12, A GUILDA 3: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU3f) [Dia 432, 03:29] G12, A GUILDA 3: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU3c) [Dia 432, 03:29] G12, A GUILDA 3: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU3o) [Dia 432, 03:29] G12, A GUILDA 3: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU3p) [Dia 432, 03:29] G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU3m) [Dia 432, 03:29] G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GU4s) [Dia 432, 03:29] G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU4t) [Dia 432, 03:29] G12, A GUILDA 4: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU4f) [Dia 432, 03:29] G12, A GUILDA 4: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU4c) [Dia 432, 03:29] G12, A GUILDA 4: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU4o) [Dia 432, 03:29] G12, A GUILDA 4: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU4p) [Dia 432, 03:29] G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU4m) [Dia 432, 03:29] G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GU5s) [Dia 432, 03:29] G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU5t) [Dia 432, 03:29] G12, A GUILDA 5: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU5f) [Dia 432, 03:29] G12, A GUILDA 5: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU5c) [Dia 432, 03:29] G12, A GUILDA 5: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU5o) [Dia 432, 03:29] G12, A GUILDA 5: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU5p) [Dia 432, 03:29] G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU5m) [Dia 432, 03:29] G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GU6s) [Dia 432, 03:29] G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino), d10: 1 Steunn · 2 Telosus · 3 Kremir · 4 Shizess · 5 o Norte (Eiest) · 6 Yaelane · 7 Lumade · 8 Qulosus · 9 Gogrunn · 10 Kasra
+- DECLARADO (GU6t) [Dia 432, 03:29] G12, A GUILDA 6: O OFÍCIO, d6: 1 CAÇADORES DE MONSTROS · 2 MERCENÁRIOS · 3 MERCADORES E ARTÍFICES · 4 MAGOS · 5 LADRÕES E ESPIÕES · 6 CRUZADOS DE UMA FÉ
+- DECLARADO (GU6f) [Dia 432, 03:29] G12, A GUILDA 6: A FORÇA (1d4+2), d4: 1 força 3 · 2 força 4 · 3 força 5 · 4 força 6
+- DECLARADO (GU6c) [Dia 432, 03:29] G12, A GUILDA 6: O NÍVEL DO CHEFE, d6: 1 175 · 2 200 · 3 225 · 4 250 · 5 275 · 6 300
+- DECLARADO (GU6o) [Dia 432, 03:29] G12, A GUILDA 6: O OBJETIVO (relógio de 8), d8: 1 ser a PRIMEIRA GUILDA do mundo (fama) · 2 caçar um MÍTICO e ficar com o núcleo · 3 dominar uma ROTA de comércio · 4 tomar uma CIDADE · 5 achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido) · 6 acabar com uma guilda RIVAL · 7 fundar uma ESCOLA ou ordem · 8 VINGAR uma derrota antiga
+- DECLARADO (GU6p) [Dia 432, 03:29] G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR, d6: 1 hostil · 2-5 neutra · 6 amiga
+- DECLARADO (GU6m) [Dia 432, 03:29] G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15), d6 × 2: 1-6 o dado × 15 a menos (o primeiro)
+- DECLARADO (GUIr) [Dia 432, 03:29] G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87), d20: 1-20 20 + o dado
+- ROLADO (GU1s) [03:29] G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino): [6] → Yaelane
+- ROLADO (GU1t) [03:29] G12, A GUILDA 1: O OFÍCIO: [4] → MAGOS
+- ROLADO (GU1f) [03:29] G12, A GUILDA 1: A FORÇA (1d4+2): [1] → força 3
+- ROLADO (GU1c) [03:29] G12, A GUILDA 1: O NÍVEL DO CHEFE: [5] → 275
+- ROLADO (GU1o) [03:29] G12, A GUILDA 1: O OBJETIVO (relógio de 8): [4] → tomar uma CIDADE
+- ROLADO (GU1p) [03:29] G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+- ROLADO (GU1m) [03:29] G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [1] → o dado × 15 a menos (o primeiro) · #2 [1] → o dado × 15 a menos (o primeiro)
+- ROLADO (GU2s) [03:29] G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino): [6] → Yaelane
+- ROLADO (GU2t) [03:29] G12, A GUILDA 2: O OFÍCIO: [4] → MAGOS
+- ROLADO (GU2f) [03:29] G12, A GUILDA 2: A FORÇA (1d4+2): [4] → força 6
+- ROLADO (GU2c) [03:29] G12, A GUILDA 2: O NÍVEL DO CHEFE: [1] → 175
+- ROLADO (GU2o) [03:29] G12, A GUILDA 2: O OBJETIVO (relógio de 8): [6] → acabar com uma guilda RIVAL
+- ROLADO (GU2p) [03:29] G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR: [5] → neutra
+- ROLADO (GU2m) [03:29] G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [3] → o dado × 15 a menos (o primeiro) · #2 [5] → o dado × 15 a menos (o primeiro)
+- ROLADO (GU3s) [03:29] G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino): [4] → Shizess
+- ROLADO (GU3t) [03:29] G12, A GUILDA 3: O OFÍCIO: [1] → CAÇADORES DE MONSTROS
+- ROLADO (GU3f) [03:29] G12, A GUILDA 3: A FORÇA (1d4+2): [2] → força 4
+- ROLADO (GU3c) [03:29] G12, A GUILDA 3: O NÍVEL DO CHEFE: [2] → 200
+- ROLADO (GU3o) [03:29] G12, A GUILDA 3: O OBJETIVO (relógio de 8): [2] → caçar um MÍTICO e ficar com o núcleo
+- ROLADO (GU3p) [03:29] G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR: [1] → hostil
+- ROLADO (GU3m) [03:29] G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [5] → o dado × 15 a menos (o primeiro) · #2 [5] → o dado × 15 a menos (o primeiro)
+- ROLADO (GU4s) [03:29] G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino): [2] → Telosus
+- ROLADO (GU4t) [03:29] G12, A GUILDA 4: O OFÍCIO: [6] → CRUZADOS DE UMA FÉ
+- ROLADO (GU4f) [03:29] G12, A GUILDA 4: A FORÇA (1d4+2): [2] → força 4
+- ROLADO (GU4c) [03:29] G12, A GUILDA 4: O NÍVEL DO CHEFE: [6] → 300
+- ROLADO (GU4o) [03:29] G12, A GUILDA 4: O OBJETIVO (relógio de 8): [2] → caçar um MÍTICO e ficar com o núcleo
+- ROLADO (GU4p) [03:29] G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+- ROLADO (GU4m) [03:29] G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [4] → o dado × 15 a menos (o primeiro) · #2 [3] → o dado × 15 a menos (o primeiro)
+- ROLADO (GU5s) [03:29] G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino): [8] → Qulosus
+- ROLADO (GU5t) [03:29] G12, A GUILDA 5: O OFÍCIO: [1] → CAÇADORES DE MONSTROS
+- ROLADO (GU5f) [03:29] G12, A GUILDA 5: A FORÇA (1d4+2): [1] → força 3
+- ROLADO (GU5c) [03:29] G12, A GUILDA 5: O NÍVEL DO CHEFE: [5] → 275
+- ROLADO (GU5o) [03:29] G12, A GUILDA 5: O OBJETIVO (relógio de 8): [8] → VINGAR uma derrota antiga
+- ROLADO (GU5p) [03:29] G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR: [4] → neutra
+- ROLADO (GU5m) [03:29] G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [6] → o dado × 15 a menos (o primeiro) · #2 [4] → o dado × 15 a menos (o primeiro)
+- ROLADO (GU6s) [03:29] G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino): [8] → Qulosus
+- ROLADO (GU6t) [03:29] G12, A GUILDA 6: O OFÍCIO: [5] → LADRÕES E ESPIÕES
+- ROLADO (GU6f) [03:29] G12, A GUILDA 6: A FORÇA (1d4+2): [2] → força 4
+- ROLADO (GU6c) [03:29] G12, A GUILDA 6: O NÍVEL DO CHEFE: [5] → 275
+- ROLADO (GU6o) [03:29] G12, A GUILDA 6: O OBJETIVO (relógio de 8): [3] → dominar uma ROTA de comércio
+- ROLADO (GU6p) [03:29] G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR: [2] → neutra
+- ROLADO (GU6m) [03:29] G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15): #1 [2] → o dado × 15 a menos (o primeiro) · #2 [2] → o dado × 15 a menos (o primeiro)
+- ROLADO (GUIr) [03:29] G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87): [18] → 20 + o dado
+- DECLARADO (GU1fa) [Dia 432, 11:39] G12, A GUILDA 1: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- DECLARADO (GU2fa) [Dia 432, 11:39] G12, A GUILDA 2: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- DECLARADO (GU3fa) [Dia 432, 11:39] G12, A GUILDA 3: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- DECLARADO (GU4fa) [Dia 432, 11:39] G12, A GUILDA 4: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- DECLARADO (GU5fa) [Dia 432, 11:39] G12, A GUILDA 5: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- DECLARADO (GU6fa) [Dia 432, 11:39] G12, A GUILDA 6: A FAMA DE PARTIDA (força × 10 + o dado), d20: 1-20 força × 10 + o dado
+- ROLADO (GU1fa) [11:39] G12, A GUILDA 1: A FAMA DE PARTIDA (força × 10 + o dado): [19] → força × 10 + o dado
+- ROLADO (GU2fa) [11:39] G12, A GUILDA 2: A FAMA DE PARTIDA (força × 10 + o dado): [3] → força × 10 + o dado
+- ROLADO (GU3fa) [11:39] G12, A GUILDA 3: A FAMA DE PARTIDA (força × 10 + o dado): [3] → força × 10 + o dado
+- ROLADO (GU4fa) [11:39] G12, A GUILDA 4: A FAMA DE PARTIDA (força × 10 + o dado): [3] → força × 10 + o dado
+- ROLADO (GU5fa) [11:39] G12, A GUILDA 5: A FAMA DE PARTIDA (força × 10 + o dado): [17] → força × 10 + o dado
+- ROLADO (GU6fa) [11:39] G12, A GUILDA 6: A FAMA DE PARTIDA (força × 10 + o dado): [6] → força × 10 + o dado
+- DECLARADO (GU1x) [Dia 432, 11:40] G12: QUE CIDADE O CÍRCULO DA AREIA CANTANTE (magos de Yaelane) QUER TOMAR, d6: 1-2 YAELANE mesmo (o governo do Clã Eloulane) · 3-4 KREMIR · 5 SHIZESS · 6 LUMADE
+- DECLARADO (GU2x) [Dia 432, 11:40] G12: A GUILDA RIVAL QUE A TORRE DOS SETE VÉUS (magos de Yaelane) QUER ACABAR, d6: 1-4 o CÍRCULO DA AREIA CANTANTE (a outra de Yaelane) · 5 as MÃOS DE BREU · 6 a ORDEM DA TOCHA BRANCA
+- DECLARADO (GU3x) [Dia 432, 11:40] G12: QUE MÍTICO OS ARPÕES DO SAL VERMELHO (caçadores de Shizess) QUEREM, d6: 1-2 o ITHVIL (Levis, Fogo) · 3-4 o THARGOS (as Fundas, Água) · 5-6 a ELAEVA (os Picos Brancos, Espinho)
+- DECLARADO (GU4x) [Dia 432, 11:40] G12: QUE MÍTICO A ORDEM DA TOCHA BRANCA (cruzados de Telosus) QUER, d6: 1-4 a ELAEVA (matou o povo de Telosus) · 5 o KREDUN (as Fundas) · 6 o THARGOS
+- DECLARADO (GU5x) [Dia 432, 11:40] G12: A DERROTA ANTIGA QUE A COMPANHIA DO ÚLTIMO GANCHO (caçadores de Qulosus) QUER VINGAR, d6: 1-2 contra a ORDEM DA TOCHA BRANCA · 3-4 contra o MANEUS, o Afogado do Vento (o bicho que os quebrou) · 5-6 contra as MÃOS DE BREU (a outra de Qulosus)
+- DECLARADO (GU6x) [Dia 432, 11:40] G12: QUE ROTA AS MÃOS DE BREU (ladrões de Qulosus) QUEREM DOMINAR, d6: 1-3 a ESTRADA DO SAL (Shizess a Yaelane) · 4-5 o MAR de Qulosus · 6 o RIO DE IREVIEL
+- DECLARADO (GU4h) [Dia 432, 11:40] (OCULTO) G12: FOI A ORDEM DA TOCHA BRANCA QUEM FERIU A ELAEVA NO 428? (a notícia fiel do 428: 'alguém a caçou e quase conseguiu'), d6: 1-3 SIM · 4-6 NÃO: foi outra mão
+- ROLADO (GU1x) [11:40] G12: QUE CIDADE O CÍRCULO DA AREIA CANTANTE (magos de Yaelane) QUER TOMAR: [6] → LUMADE
+- ROLADO (GU2x) [11:40] G12: A GUILDA RIVAL QUE A TORRE DOS SETE VÉUS (magos de Yaelane) QUER ACABAR: [6] → a ORDEM DA TOCHA BRANCA
+- ROLADO (GU3x) [11:40] G12: QUE MÍTICO OS ARPÕES DO SAL VERMELHO (caçadores de Shizess) QUEREM: [3] → o THARGOS (as Fundas, Água)
+- ROLADO (GU4x) [11:40] G12: QUE MÍTICO A ORDEM DA TOCHA BRANCA (cruzados de Telosus) QUER: [5] → o KREDUN (as Fundas)
+- ROLADO (GU5x) [11:40] G12: A DERROTA ANTIGA QUE A COMPANHIA DO ÚLTIMO GANCHO (caçadores de Qulosus) QUER VINGAR: [2] → contra a ORDEM DA TOCHA BRANCA
+- ROLADO (GU6x) [11:40] G12: QUE ROTA AS MÃOS DE BREU (ladrões de Qulosus) QUEREM DOMINAR: [6] → o RIO DE IREVIEL
+- ROLADO (GU4h) [11:40] (OCULTO) G12: FOI A ORDEM DA TOCHA BRANCA QUEM FERIU A ELAEVA NO 428? (a notícia fiel do 428: 'alguém a caçou e quase conseguiu'): [6] → NÃO: foi outra mão
+- [Dia 432, 11:42] LEITURA (G12 entra no mundo, 433): as seis guildas geradas pelo dado (obras/g12_geracao.txt; GU1-GU6, GU1x-GU6x, GU4h oculto; chefes do gerador npc em obras/g12_chefes_gerador.txt, na ordem; nomes pelo nomes.py livre, trocados os que ficavam perto do cânone: Savane (Souane), Mee (Mie), Zyssis (Shyssis), Zazeth (Zazess), Yalane (Yaelane), Ruunn (Riunn), Rurk (Rirk), Laane (Laennor)) · o Círculo da Areia Cantante (Yaelane, magos, força 3, Meor 275: tomar LUMADE) · a Torre dos Sete Véus (Yaelane, magos, força 6, Mave 175: acabar com a ORDEM DA TOCHA BRANCA) · os Arpões do Sal Vermelho (Shizess, caçadores, força 4, Xaesrir 200, HOSTIS: o THARGOS) · a Ordem da Tocha Branca (Telosus, cruzados, força 4, Hundunn 300: o KREDUN; (OCULTO) não foi ela que feriu a Elaeva, GU4h [6]) · a Companhia do Último Gancho (Qulosus, caçadores, força 3, Taunn 275: vingar-se da ORDEM DA TOCHA BRANCA) · as Mãos de Breu (Qulosus, ladrões, força 4, Zazess 275: dominar o RIO DE IREVIEL) · a Guilda dos Aventureiros de Ireviel no ranking com fama 38 (GUIr [18]) · ITHIUM entrou nos lugares novos (o mundo do 431) · guildas.py escrito; o tick semanal o roda depois das facções; testado numa cópia do save (sem valor de jogo)
+- DECLARADO (EN33) [Dia 433, 11:43] O ENCONTRO NO RIO (433, tick em estrada [7]; o rio abaixo de Levis, a meio dia da cidade), d6: 1-2 barqueiros de Levis descendo, com as notícias da cidade · 3-4 a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos · 5 um bicho na água: um dorso de espinhos do tamanho de um potro (a cria da Isyzis?) · 6 SURPRESA (gerador novidade)
+- DECLARADO (CE33) [Dia 433, 11:43] O CELOCUS PAGA OS 800 DO CRÉDITO DE GRÃO (o voto C403a; vence hoje; ele não respondeu ao Tolvane sobre o acordo grande), d6: 1-4 PAGA: o ouro chega a Ireviel pela estrada de Lumade · 5-6 ATRASA: manda dizer que paga quando o acordo fechar
+- ROLADO (EN33) [11:43] O ENCONTRO NO RIO (433, tick em estrada [7]; o rio abaixo de Levis, a meio dia da cidade): [4] → a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos
+- ROLADO (CE33) [11:43] O CELOCUS PAGA OS 800 DO CRÉDITO DE GRÃO (o voto C403a; vence hoje; ele não respondeu ao Tolvane sobre o acordo grande): [1] → PAGA: o ouro chega a Ireviel pela estrada de Lumade
+- COFRE [Dia 433]: 13.948 + 800 (433: o CELOCUS pagou os 800 do crédito de grão (C403a; CE33 [1])) → **14.748**
+- LIVRO FIXO [Dia 433]: despesa 8.280 → 8.230 (433: a Intendente fecha o posto de vigia da ELOUNE (morta no 432; o posto viu): 7 postos)
+- [Dia 433, 11:43] LEITURA DO 433 (tick_433.txt; o rei no rio, a meio dia de Levis; AUDITORIA do 433): EN33 [4] a BARCA DA LIGA amarrada no cais de uma aldeia do rio, descarregando fardos (o rei passa ao meio-dia) · CE33 [1] o CELOCUS PAGOU os 800 (cofre 14.748) · a série das FERRADURAS E EIXOS voltou: Defesa de Ireviel +1 (mod, até o 480) · a CONTRA-ESPIONAGEM (41 × 22) IDENTIFICOU o homem das guildas de Steunn (o cobrador da Groa): a Sira o vigia (a notícia vai ao rei pela próxima barca) · a Intendente fechou o posto da ELOUNE (morta no 432, o posto viu; a despesa 8.230) · OFERTA PÚBLICA em Steunn (missão F encadeada: forjar uma encomenda difícil; um título; (OCULTO) a recompensa não existe mais): notícia no 435 · notícias: os Olhos Pintados de Farenta dão um passo (exagerada); um vilão novo em Yaelane (incompleta); a Mãe Branca migra (fiel) · AUDITORIA: a obra do 428 tem soma e dados anotados; o XP do rei confere (1.214.674, a Couraça 10.000); os forçados seguem 87 (G6); o conferidor: Riunn × Giunn (o monstro das Fundas virou TINDA); a linha 95 do 2o marcada como vista · FAÍSCA usada: 'o podestà Tirello deve a vida à Petorza (alquimista da Casa dos Estudiosos), por causa de uma receita perdida' (fica para Ireviel; sem canal ao rei) — e a usada à mesa: nenhuma nova; a imagem do bloco é a barca da Liga · ESQUECI e AJUSTEI (regra do protocolo, a cada auditoria): esqueci que o tick não grava o tick_N.txt com a saída num arquivo (ajustado: rodar com '| cat'); ajustei o sinal de 'toca a casa' do guildas.py (só o que mexe no reino) · PARADA: MEIO-DIA DO 433, o rio a meio dia de Levis: a barca da Liga descarregando no cais de uma aldeia; o rei passa.
+- [Dia 433, 11:44] PARADA: MEIO-DIA DO 433, o rio a meio dia de Levis: a barca da Liga descarregando fardos no cais de uma aldeia do reino; a ordem contra a revolta chega a Ireviel no 434; o tick semanal do 434 (com as guildas) não rodou.

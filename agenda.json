@@ -1,5 +1,5 @@
 {
- "prox_id": 450,
+ "prox_id": 451,
  "itens": [
   {
    "id": 1,
@@ -2789,7 +2789,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -3981,7 +3981,7 @@
   },
   {
    "id": 281,
-   "dia": 433,
+   "dia": 435,
    "texto": "FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)",
    "tipo": "marco",
    "oculto": false,
@@ -5078,7 +5078,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5334,7 +5334,7 @@
   },
   {
    "id": 381,
-   "dia": 433,
+   "dia": 435,
    "texto": "LEVIS: a BRARA fez as picaretas mas COBRA a partilha e não rasga as dívidas antes de ver o rei (BR26 [1]); o rei chega",
    "tipo": "marco",
    "oculto": false,
@@ -6299,6 +6299,21 @@
    "origem": "mestre",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 450,
+   "dia": 435,
+   "texto": "OFERTA PÚBLICA: alguém paga por um serviço — Steunn",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 433",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
   }
  ],
  "fios": [

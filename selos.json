@@ -1,65 +1,5 @@
 {
  "ordem": [
-  "406-chamado",
-  "406-vinculos",
-  "W1",
-  "W2",
-  "W3",
-  "W4",
-  "W5",
-  "W6",
-  "W7a",
-  "W7a2",
-  "W7b",
-  "W7b2",
-  "W8",
-  "W9a",
-  "W9b",
-  "W10",
-  "W11",
-  "W11p",
-  "W17",
-  "W20",
-  "W22",
-  "W22d",
-  "W8l",
-  "W9g",
-  "CH1n",
-  "CH1f",
-  "CH1a",
-  "CH2n",
-  "CH2f",
-  "CH2a",
-  "CH1l",
-  "CH1c",
-  "CH2r",
-  "CH2l",
-  "BRl",
-  "CH2x",
-  "CH2c",
-  "HIo",
-  "GRm",
-  "IT6",
-  "IT6m",
-  "KR6",
-  "MN7",
-  "MD7",
-  "TU7",
-  "NL7",
-  "NLp7",
-  "GR7",
-  "SC7",
-  "CH7",
-  "HI7",
-  "HIs7",
-  "HM7",
-  "HH7",
-  "FQ7",
-  "FH7",
-  "JH7",
-  "GV7",
-  "MV7",
-  "MVf7",
   "MVv7",
   "PV7",
   "PV7b",
@@ -399,3110 +339,69 @@
   "MR30",
   "PM30",
   "ST32",
-  "CL32"
+  "CL32",
+  "CH33",
+  "FL33",
+  "GU1s",
+  "GU1t",
+  "GU1f",
+  "GU1c",
+  "GU1o",
+  "GU1p",
+  "GU1m",
+  "GU2s",
+  "GU2t",
+  "GU2f",
+  "GU2c",
+  "GU2o",
+  "GU2p",
+  "GU2m",
+  "GU3s",
+  "GU3t",
+  "GU3f",
+  "GU3c",
+  "GU3o",
+  "GU3p",
+  "GU3m",
+  "GU4s",
+  "GU4t",
+  "GU4f",
+  "GU4c",
+  "GU4o",
+  "GU4p",
+  "GU4m",
+  "GU5s",
+  "GU5t",
+  "GU5f",
+  "GU5c",
+  "GU5o",
+  "GU5p",
+  "GU5m",
+  "GU6s",
+  "GU6t",
+  "GU6f",
+  "GU6c",
+  "GU6o",
+  "GU6p",
+  "GU6m",
+  "GUIr",
+  "GU1fa",
+  "GU2fa",
+  "GU3fa",
+  "GU4fa",
+  "GU5fa",
+  "GU6fa",
+  "GU1x",
+  "GU2x",
+  "GU3x",
+  "GU4x",
+  "GU5x",
+  "GU6x",
+  "GU4h",
+  "EN33",
+  "CE33"
  ],
  "selos": {
-  "406-chamado": {
-   "id": "406-chamado",
-   "dia": 406,
-   "hora": "19:24:08",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 19,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 17,
-     "res": "chega 1",
-     "txt": "[17] → chega 1"
-    }
-   ],
-   "hora_rolado": "19:24:09"
-  },
-  "406-vinculos": {
-   "id": "406-vinculos",
-   "dia": 406,
-   "hora": "19:24:08",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "Krernos–Graur",
-     "txt": "#1 [4] → Krernos–Graur"
-    },
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "Tilde–Iorin",
-     "txt": "#2 [2] → Tilde–Iorin"
-    }
-   ],
-   "hora_rolado": "19:24:09"
-  },
-  "W1": {
-   "id": "W1",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "A TRAMA DO BORECCI CONTRA A TILDE EXPLODE (ÓDIO, 4/4; o espião dele morreu em Ireviel por sentença; ele desafiou o rei a mandar uma peça à feira de Steunn)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "manda OUTRO matador atrás da menina (chega em 1d6 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "leva à feira de Steunn, diante das guildas, a acusação de que a aprendiz do rei bate o vaduar quente, com uma testemunha comprada"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "oferece ouro aos da Cinza para entregar a menina"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA",
-     "txt": "[6] → SURPRESA"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W2": {
-   "id": "W2",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "A COBIÇA DA SEMANA: QUAL PEÇA",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "os AROS DA ELIANE"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o PILÃO DE VARADE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o PILÃO DE VARADE",
-     "txt": "[2] → o PILÃO DE VARADE"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W3": {
-   "id": "W3",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "A COBIÇA: QUEM AGE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a Liga velha"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "os Descalços"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o Ardenghi"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a Lumine"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o GARKUNN, se forem os aros; um refugiado, se for o Pilão"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um ladrão"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a Lumine",
-     "txt": "[4] → a Lumine"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W4": {
-   "id": "W4",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "A COBIÇA: COMO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "oferta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "roubo (W5)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "roubo (W5)",
-     "txt": "[3] → roubo (W5)"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W5": {
-   "id": "W5",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "(só vale se o W4 der roubo) O ROUBO",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 14,
-     "res": "pegos"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 19,
-     "res": "fogem sem a peça"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "levam"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "pegos",
-     "txt": "[2] → pegos"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W6": {
-   "id": "W6",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "OS FIÉIS DO DOGE VELHO AMEAÇAM OU SABOTAM A CASA (pequeno, mas visível)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um barco da casa queimado no cais do rei, no Porto"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um aviso pregado na porta da capela da Luz do Cais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "os mercadores do rei apedrejados em Marasar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um aviso pregado na porta da capela da Luz do Cais",
-     "txt": "[4] → um aviso pregado na porta da capela da Luz do Cais"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W7a": {
-   "id": "W7a",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "INTERROGATÓRIO: o agente da LIGA (o Doge) pego pela contra-espionagem (a Sira +8)",
-   "dado": [
-    1,
-    20,
-    8
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 9,
-     "res": "não fala"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 28,
-     "res": "fala (W7a2)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      9
-     ],
-     "total": 17,
-     "res": "fala (W7a2)",
-     "txt": "[9] +8 = 17 → fala (W7a2)"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W7a2": {
-   "id": "W7a2",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "o agente da Liga: o que diz",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "quem mandou e por onde"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "onde está a célula: ela cai"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o que querem"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "onde está a célula: ela cai",
-     "txt": "[2] → onde está a célula: ela cai"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W7b": {
-   "id": "W7b",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "INTERROGATÓRIO: o agente dos DESCALÇOS (com o Ardenghi) pego pela contra-espionagem (a Sira +8)",
-   "dado": [
-    1,
-    20,
-    8
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 9,
-     "res": "não fala"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 28,
-     "res": "fala (W7b2)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 25,
-     "res": "fala (W7b2)",
-     "txt": "[17] +8 = 25 → fala (W7b2)"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W7b2": {
-   "id": "W7b2",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "o agente dos Descalços: o que diz",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "quem mandou e por onde"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "onde está a célula: ela cai"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o que querem"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o que querem",
-     "txt": "[3] → o que querem"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W8": {
-   "id": "W8",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "O SEGREDO QUE A CÉLULA DO DELTA ACHOU (plano de facção, Lendário ou vilão da região)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o SOUANE: o plano de dar de comer a todo o Delta (comprar o sal e o grão de todos) está a dois passos e passa por comprar a Guilda dos Salineiros"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o VARUUN: onde no Delta ele acha que está o núcleo Mítico"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a YIAVA: quem a controla"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o VARUUN: onde no Delta ele acha que está o núcleo Mítico",
-     "txt": "[3] → o VARUUN: onde no Delta ele acha que está o núcleo Mítico"
-    }
-   ],
-   "hora_rolado": "19:26:06"
-  },
-  "W9a": {
-   "id": "W9a",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "FARENTA: O ACHADO DEBAIXO DA CIDADE (evento do reino)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ouro velho (d6×200 à caixa da cidade)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um material (gerador)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "uma ruína debaixo da cidade (gerador lugar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ouro velho (d6×200 à caixa da cidade)",
-     "txt": "[1] → ouro velho (d6×200 à caixa da cidade)"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W9b": {
-   "id": "W9b",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "LEVIS: O FURTO OU ROUBO GRANDE (o problema que derrubou a Saúde a 1)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a carga do remédio do Ouvald roubada (o sinal do dente: o Xaathis)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o cofre da governadora Brara arrombado (1d6×100)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a carga do remédio do Ouvald roubada (o sinal do dente: o Xaathis)",
-     "txt": "[1] → a carga do remédio do Ouvald roubada (o sinal do dente: o Xaathis)"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W10": {
-   "id": "W10",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "QUEM PASSA PARA O LADO DA MAMILTIA (notícia do 407)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os três marcados e mais 1d6 dos forçados pedem a marca"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os da Mão Queimada de Telosus mandam gente a Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os Kraek, as harpias do Skugek (que devolveu a filha do Pelagri)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os da Mão Queimada de Telosus mandam gente a Ireviel",
-     "txt": "[4] → os da Mão Queimada de Telosus mandam gente a Ireviel"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W11": {
-   "id": "W11",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "O LENDÁRIO QUE APARECE EM PÚBLICO (evento de mundo [17])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a ALMISION, à vista de todos, a caminho de Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o ADUREL, em Zisrir"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a NAERA, com o martelo do Clã"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o CELOCUS, em Lumade, na fome"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o MANEUS, o Afogado do Vento"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a NAERA, com o martelo do Clã",
-     "txt": "[3] → a NAERA, com o martelo do Clã"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W11p": {
-   "id": "W11p",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "O PREÇO QUE SOBE COM ISSO (encadeamento [5])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o grão"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o carvão"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o sal"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o ferro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "velas e óleo"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o remédio"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o remédio",
-     "txt": "[6] → o remédio"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W17": {
-   "id": "W17",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "O PROBLEMA DO TOLVANE (coração; lealdade 4/10, três votos perdidos seguidos)",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ciúme"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "uma recusa"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "saudade"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ciúme",
-     "txt": "[1] → ciúme"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W20": {
-   "id": "W20",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "(G5) O ESTOQUE DA CIDADE: O QUE APARECE À VENDA NA SEMANA (orçamento 400)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "Comum, 2d6 kg (12 por kg)"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "Incomum, 1d4 kg (50 por kg)"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 19,
-     "res": "Raro, 1 kg (200 por kg)"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "Épico, 0,5 kg (800 por kg: o rei decide) ou um rumor de núcleo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "Raro, 1 kg (200 por kg)",
-     "txt": "[19] → Raro, 1 kg (200 por kg)"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W22": {
-   "id": "W22",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "O CORVO DA ALMISION: O QUE ELA SABE DE QUEM ACORDOU A ELAEVA (ela aceitou a troca)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o nome e o lugar: o ADUREL abriu uma passagem no vale de Zisrir, e a Elaeva acordou na mesma noite"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "isso e uma testemunha viva (um dos Sem-Torre de Quoine viu a passagem abrir)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "isso e uma pedra rúnica arrancada da obra dele, como prova"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o nome e o lugar: o ADUREL abriu uma passagem no vale de Zisrir, e a Elaeva acordou na mesma noite",
-     "txt": "[1] → o nome e o lugar: o ADUREL abriu uma passagem no vale de Zisrir, e a Elaeva acordou na mesma noite"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W22d": {
-   "id": "W22d",
-   "dia": 406,
-   "hora": "19:26:06",
-   "titulo": "EM QUANTOS DIAS A ALMISION CHEGA A IREVIEL PARA A HORA NA MATRIZ",
-   "dado": [
-    1,
-    6,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 8,
-     "res": "o total de dias a contar do 406"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 8,
-     "res": "o total de dias a contar do 406",
-     "txt": "[6] +2 = 8 → o total de dias a contar do 406"
-    }
-   ],
-   "hora_rolado": "19:26:07"
-  },
-  "W8l": {
-   "id": "W8l",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "ONDE O VARUUN ACHA QUE ESTÁ O NÚCLEO MÍTICO DO DELTA (o segredo da célula)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "debaixo de QUOIUM, a cidade afundada"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "nas Salinas Velhas, debaixo do redemoinho do Laennor"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "nos lodaçais onde anda a Yiava"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "na mina de sal velha da Guilda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nas Salinas Velhas, debaixo do redemoinho do Laennor",
-     "txt": "[2] → nas Salinas Velhas, debaixo do redemoinho do Laennor"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "W9g": {
-   "id": "W9g",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "O OURO VELHO DEBAIXO DE FARENTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 200 moedas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado × 200 moedas",
-     "txt": "[4] → o dado × 200 moedas"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH1n": {
-   "id": "CH1n",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "O CHAMADO: O PRIMEIRO QUE CHEGA, NÍVEL",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "20 a 40"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "41 a 70"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 18,
-     "res": "71 a 100"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 19,
-     "res": "101 a 130"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      16
-     ],
-     "total": 16,
-     "res": "71 a 100",
-     "txt": "[16] → 71 a 100"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH1f": {
-   "id": "CH1f",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "O PRIMEIRO, FAMÍLIA DE CLASSE",
-   "dado": [
-    1,
-    11,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "AÇO"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "CHAMA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "VÉU"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "SOMBRA"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "FORJA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SELO"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "RAIZ"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "OURO"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "VOZ"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "OSSO"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 11,
-     "res": "FORTUNA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      9
-     ],
-     "total": 9,
-     "res": "VOZ",
-     "txt": "[9] → VOZ"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH1a": {
-   "id": "CH1a",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "(OCULTO) O PRIMEIRO É AGENTE DE ALGUÉM?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "é agente"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 20,
-     "res": "não"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "não",
-     "txt": "[19] → não"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH2n": {
-   "id": "CH2n",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "O CHAMADO: O SEGUNDO QUE CHEGA, NÍVEL",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "20 a 40"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "41 a 70"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 18,
-     "res": "71 a 100"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 19,
-     "res": "101 a 130"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      20
-     ],
-     "total": 20,
-     "res": "SURPRESA",
-     "txt": "[20] → SURPRESA (20 NATURAL)"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH2f": {
-   "id": "CH2f",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "O SEGUNDO, FAMÍLIA DE CLASSE",
-   "dado": [
-    1,
-    11,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "AÇO"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "CHAMA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "VÉU"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "SOMBRA"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "FORJA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SELO"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "RAIZ"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "OURO"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "VOZ"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "OSSO"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 11,
-     "res": "FORTUNA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "OURO",
-     "txt": "[8] → OURO"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH2a": {
-   "id": "CH2a",
-   "dia": 406,
-   "hora": "19:26:49",
-   "titulo": "(OCULTO) O SEGUNDO É AGENTE DE ALGUÉM?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "é agente"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 20,
-     "res": "não"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      15
-     ],
-     "total": 15,
-     "res": "não",
-     "txt": "[15] → não"
-    }
-   ],
-   "hora_rolado": "19:26:49"
-  },
-  "CH1l": {
-   "id": "CH1l",
-   "dia": 406,
-   "hora": "19:28:04",
-   "titulo": "O PRIMEIRO DO CHAMADO: O NÍVEL EXATO",
-   "dado": [
-    1,
-    30,
-    70
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 71,
-     "b": 100,
-     "res": "o total é o nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      13
-     ],
-     "total": 83,
-     "res": "o total é o nível",
-     "txt": "[13] +70 = 83 → o total é o nível"
-    }
-   ],
-   "hora_rolado": "19:28:04"
-  },
-  "CH1c": {
-   "id": "CH1c",
-   "dia": 406,
-   "hora": "19:28:04",
-   "titulo": "O PRIMEIRO DO CHAMADO: A CLASSE (VOZ; nível 71-100: até Épico)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Menestrel"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Arauto"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Bardo"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Diplomata"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Orador"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Inspetor"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Juiz Errante"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Porta-Estandarte"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "Diplomata",
-     "txt": "[4] → Diplomata"
-    }
-   ],
-   "hora_rolado": "19:28:04"
-  },
-  "CH2r": {
-   "id": "CH2r",
-   "dia": 406,
-   "hora": "19:28:04",
-   "titulo": "O SEGUNDO DO CHAMADO (a SURPRESA [11]: 'uma consequência antiga chega', de algo que a casa fez há mais de 30 dias): DE ONDE VEM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "de FARENTA, a cidade que o rei tomou e devolveu no 356"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "da LIGA de Marasar, das casas que caíram (um dos que perderam tudo e não culpam o rei)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "de TELOSUS, do povo que a Elaeva matou (a Mamiltia os vingou)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "do GORJAL: alguém da guilda velha da Isolda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "da LIGA de Marasar, das casas que caíram (um dos que perderam tudo e não culpam o rei)",
-     "txt": "[4] → da LIGA de Marasar, das casas que caíram (um dos que perderam tudo e não culpam o rei)"
-    }
-   ],
-   "hora_rolado": "19:28:05"
-  },
-  "CH2l": {
-   "id": "CH2l",
-   "dia": 406,
-   "hora": "19:28:04",
-   "titulo": "O SEGUNDO DO CHAMADO: O NÍVEL (rerrolado sem a faixa da surpresa)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "20 a 40"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "41 a 70"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 18,
-     "res": "71 a 100"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 20,
-     "res": "101 a 130"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      16
-     ],
-     "total": 16,
-     "res": "71 a 100",
-     "txt": "[16] → 71 a 100"
-    }
-   ],
-   "hora_rolado": "19:28:05"
-  },
-  "BRl": {
-   "id": "BRl",
-   "dia": 406,
-   "hora": "19:28:04",
-   "titulo": "O NÍVEL DO HOMEM QUE O BORECCI MANDA À VIDA DA TILDE (HONESTO e VINGATIVO; nunca machuca uma criança)",
-   "dado": [
-    2,
-    10,
-    10
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 30,
-     "res": "o total é o nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      9
-     ],
-     "total": 24,
-     "res": "o total é o nível",
-     "txt": "[5, 9] +10 = 24 → o total é o nível"
-    }
-   ],
-   "hora_rolado": "19:28:05"
-  },
-  "CH2x": {
-   "id": "CH2x",
-   "dia": 406,
-   "hora": "19:28:30",
-   "titulo": "O SEGUNDO DO CHAMADO: O NÍVEL EXATO",
-   "dado": [
-    1,
-    30,
-    70
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 71,
-     "b": 100,
-     "res": "o total é o nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      30
-     ],
-     "total": 100,
-     "res": "o total é o nível",
-     "txt": "[30] +70 = 100 → o total é o nível"
-    }
-   ],
-   "hora_rolado": "19:28:30"
-  },
-  "CH2c": {
-   "id": "CH2c",
-   "dia": 406,
-   "hora": "19:28:30",
-   "titulo": "O SEGUNDO DO CHAMADO: A CLASSE (OURO; nível 71-100: até Épico)",
-   "dado": [
-    1,
-    9,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Mercador"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Mascate"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Burocrata"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Leiloeiro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Coletor"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Agiota"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Banqueiro"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Mestre de Caravana"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Contrabandista de Rotas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Burocrata",
-     "txt": "[3] → Burocrata"
-    }
-   ],
-   "hora_rolado": "19:28:30"
-  },
-  "HIo": {
-   "id": "HIo",
-   "dia": 406,
-   "hora": "19:29:20",
-   "titulo": "(OCULTO) A ORDEM QUE O BORECCI DEU AO HIALD (que nunca machuca uma criança)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "achar a prova de que a menina bate o vaduar quente"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "levar a menina a Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "matar a menina (contra a linha vermelha dele: o dilema chega)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "levar a menina a Steunn",
-     "txt": "[4] → levar a menina a Steunn"
-    }
-   ],
-   "hora_rolado": "19:29:20"
-  },
-  "GRm": {
-   "id": "GRm",
-   "dia": 406,
-   "hora": "19:29:20",
-   "titulo": "O VELHO MESTRE DE ARMAS DO GRAUR VOLTA MUDADO (a surpresa da semana do Graur; ele escreveu ao mestre no 215)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "subiu: é capitão de uma companhia"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caiu: veio pobre e doente pedir abrigo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "casou com uma viúva da Liga"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "perdeu o filho na guerra do rio"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "caiu: veio pobre e doente pedir abrigo",
-     "txt": "[2] → caiu: veio pobre e doente pedir abrigo"
-    }
-   ],
-   "hora_rolado": "19:29:20"
-  },
-  "IT6": {
-   "id": "IT6",
-   "dia": 406,
-   "hora": "19:37:35",
-   "titulo": "O ITHVIL (Mítico, Levis) ATACA (notícia certa do 406): O QUÊ",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma aldeia de mineiros acima de Levis (Ordem de Levis -1 mod por uma semana)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma caravana de minério na estrada de Levis (Comércio de Levis -1 mod por uma semana)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "uma caravana de fora, longe da cidade (sem efeito em Levis)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "uma caravana de fora, longe da cidade (sem efeito em Levis)",
-     "txt": "[5] → uma caravana de fora, longe da cidade (sem efeito em Levis)"
-    }
-   ],
-   "hora_rolado": "19:37:35"
-  },
-  "IT6m": {
-   "id": "IT6m",
-   "dia": 406,
-   "hora": "19:37:35",
-   "titulo": "O ITHVIL: O PREÇO EM GENTE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "poucos mortos; a carga ou o paiol se perde"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "mortos e a carga perdida"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "quase ninguém volta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "mortos e a carga perdida",
-     "txt": "[4] → mortos e a carga perdida"
-    }
-   ],
-   "hora_rolado": "19:37:35"
-  },
-  "KR6": {
-   "id": "KR6",
-   "dia": 406,
-   "hora": "19:37:35",
-   "titulo": "O KREKOS (Raro, Shizess) COME ALGO QUE O MUDA: QUANTOS NÍVEIS SOBE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado é o que sobe"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado é o que sobe",
-     "txt": "[4] → o dado é o que sobe"
-    }
-   ],
-   "hora_rolado": "19:37:35"
-  },
-  "MN7": {
-   "id": "MN7",
-   "dia": 406,
-   "hora": "20:45:43",
-   "titulo": "A MAMILTIA OUVE O NOME (noite do 406; o rei conta: o ADUREL abriu uma passagem no vale de Zisrir e a Elaeva acordou na mesma noite; palavra da Almision, sem testemunha e sem prova; e PEDE que ela espere a prova que a Almision traz no 414) · +3: foi ELA quem pediu a prova antes de matar um Lendário (a janela da missão, 396) · -2: o nome é o do rival dela, vem de outra rival dele, e ela é CRUEL com quem matou Telosus",
-   "dado": [
-    1,
-    20,
-    1
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "NÃO ESPERA: parte ao amanhecer para Zisrir com a maça (17 dias); a peça da Higrunn fica sem portadora e a caçada da Elaeva no ar; paga a missão inteira na porta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 9,
-     "res": "aceita o nome, mas NÃO aceita a Almision como prova: manda gente dela a Zisrir olhar a passagem (volta em uma lua) e fica; paga a METADE agora (3.000 XP e 1.500), o resto quando os olhos dela voltarem"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 16,
-     "res": "ESPERA até o 414 e quer estar NA SALA quando a Almision falar; a missão fica aberta até lá, sem multa do prazo"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 1000000,
-     "res": "ESPERA, e dá a missão por CUMPRIDA esta noite (o nome e o lugar eram o pedido): paga inteira; o segundo elo abre"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 9,
-     "res": "aceita o nome, mas NÃO aceita a Almision como prova: manda gente dela a Zisrir olhar a passagem (volta em uma lua) e fica; paga a METADE agora (3.000 XP e 1.500), o resto quando os olhos dela voltarem",
-     "txt": "[8] +1 = 9 → aceita o nome, mas NÃO aceita a Almision como prova: manda gente dela a Zisrir olhar a passagem (volta em uma lua) e fica; paga a METADE agora (3.000 XP e 1.500), o resto quando os olhos dela voltarem"
-    }
-   ],
-   "hora_rolado": "20:45:43"
-  },
-  "MD7": {
-   "id": "MD7",
-   "dia": 406,
-   "hora": "20:45:58",
-   "titulo": "A MARECHAL REPARTE A CASA (noite do 406): a caçada do MIVOR com o rei, a escolta dos SALINEIROS às Salinas Velhas (B; lá estão o Laennor e, desde o 404, a Yiava) e o aviso da CHAMA DA HOSTE a Farenta (D); a Eliane é LEAL, ORGULHOSA e JUSTA; o rio está seco (a galé não sobe nem desce)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "O PESO TODO NO BICHO: com o rei vão ela, o Moreth, o Eiagrir, o Tuald de guia e 8 lanças; a escolta vai com a Isolda, o Hruthos e 6 lanças de selkos; o aviso com o Draron e um capuz"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "A MARECHAL NÃO SAI COM O REI FORA: ela fica com a cidade; com o rei vão o Moreth, o Eiagrir, o Graur, o Tuald de guia e 8 lanças; a escolta com o Hruthos, o Starkald e 6 lanças de selkos; o aviso com o Draron e um capuz"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "A LANÇA CERTA NO LUGAR CERTO: ela mesma leva a escolta (a Lança do Bren dobra no Laennor) com 6 lanças de selkos; com o rei vão o Moreth, o Eiagrir, o Hruthos, o Tuald de guia e 8 lanças; o aviso com o Draron e um capuz"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "A LANÇA CERTA NO LUGAR CERTO: ela mesma leva a escolta (a Lança do Bren dobra no Laennor) com 6 lanças de selkos; com o rei vão o Moreth, o Eiagrir, o Hruthos, o Tuald de guia e 8 lanças; o aviso com o Draron e um capuz",
-     "txt": "[6] → A LANÇA CERTA NO LUGAR CERTO: ela mesma leva a escolta (a Lança do Bren dobra no Laennor) com 6 lanças de selkos; com o rei vão o Moreth, o Eiagrir, o Hruthos, o Tuald de guia e 8 lanças; o aviso com o Draron e um capuz"
-    }
-   ],
-   "hora_rolado": "20:45:58"
-  },
-  "TU7": {
-   "id": "TU7",
-   "dia": 406,
-   "hora": "20:51:51",
-   "titulo": "O QUE MAIS O TUALD VIU DO MIVOR (o rei, antes de se armar, pergunta de novo a quem viu o bicho; só o que os olhos e os ouvidos dele pegaram)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "nada além do tamanho, do casco de pedra e do lugar"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um rastro: o bicho virou a cabeça para onde ele pisou, com o vento contra e sem vê-lo"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "dois rastros: isso, e um som baixo que parecia voz"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "um rastro: o bicho virou a cabeça para onde ele pisou, com o vento contra e sem vê-lo",
-     "txt": "[5] → um rastro: o bicho virou a cabeça para onde ele pisou, com o vento contra e sem vê-lo"
-    }
-   ],
-   "hora_rolado": "20:51:51"
-  },
-  "NL7": {
-   "id": "NL7",
-   "dia": 406,
-   "hora": "22:57:34",
-   "titulo": "O QUE A NOULIEL RESPONDE (a sós, na sala das medidas, o livro fechado; o rei pergunta o que ela achou de ele ir em pessoa ao Mivor; ela é HONESTA, AVARENTA e DILIGENTE; par do rei)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "CONTRA, em números e só em números: o rei é a peça mais cara da casa atrás de um núcleo que a Guilda traria em uma lua; diz e reabre o livro (fica o frio entre os dois)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "CONTRA, e no fim larga o número: tem medo de enterrá-lo, e diz (um momento verdadeiro)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "NEM A FAVOR NEM CONTRA O BICHO: o que a incomoda é a cidade na mão do Graur com o rei e a Marechal fora; pede uma coisa para ficar tranquila"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "A FAVOR: a casa precisa do núcleo e do rei visto matando bicho; só não quer o Tuald lá"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "NEM A FAVOR NEM CONTRA O BICHO: o que a incomoda é a cidade na mão do Graur com o rei e a Marechal fora; pede uma coisa para ficar tranquila",
-     "txt": "[5] → NEM A FAVOR NEM CONTRA O BICHO: o que a incomoda é a cidade na mão do Graur com o rei e a Marechal fora; pede uma coisa para ficar tranquila"
-    }
-   ],
-   "hora_rolado": "22:57:34"
-  },
-  "NLp7": {
-   "id": "NLp7",
-   "dia": 406,
-   "hora": "22:57:59",
-   "titulo": "A COISA QUE A NOULIEL PEDE para ficar tranquila com a cidade na mão do Graur (o rei e a Marechal fora; ela governa pela regra)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "UMA LINHA ESCRITA e selada pelo rei: enquanto ele e a Marechal estiverem fora, portão, poterna e a guarda da Fornalha só mudam com a palavra DELA (o Graur guarda, ela manda): cabe na regra que o rei já confirmou"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "que a ISOLDA durma na Fornalha com a Tilde e o Herkald, como na lua nova, e que o Graur fique nos muros: ela pode mandar como governadora; pede a bênção do rei"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "que o MORETH fique dentro dos muros: muda a caçada; a palavra é do rei"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "que o rei peça à MAMILTIA que não saia da Fornalha até ele voltar: a palavra é da Mamiltia"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "UMA LINHA ESCRITA e selada pelo rei: enquanto ele e a Marechal estiverem fora, portão, poterna e a guarda da Fornalha só mudam com a palavra DELA (o Graur guarda, ela manda): cabe na regra que o rei já confirmou",
-     "txt": "[1] → UMA LINHA ESCRITA e selada pelo rei: enquanto ele e a Marechal estiverem fora, portão, poterna e a guarda da Fornalha só mudam com a palavra DELA (o Graur guarda, ela manda): cabe na regra que o rei já confirmou"
-    }
-   ],
-   "hora_rolado": "22:57:59"
-  },
-  "GR7": {
-   "id": "GR7",
-   "dia": 406,
-   "hora": "03:11:03",
-   "titulo": "O GRAUR LÊ A LINHA SELADA (madrugada do 407: com o rei e a Marechal fora, portão, poterna e a guarda da Fornalha só mudam com a palavra da Intendente; ele guarda, ela manda); o Graur é ORGULHOSO, formal e ferido; jurou de novo no 401",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "aceita calado e ferido: uma ordem escrita diz à cidade inteira que não confiam nele (opinião −5)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "aceita e cita a ordem: guarda os muros como está escrito"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "agradece: papel selado é escudo; se algo der errado, a mão não foi a dele (opinião +5)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "aceita calado e ferido: uma ordem escrita diz à cidade inteira que não confiam nele (opinião −5)",
-     "txt": "[1] → aceita calado e ferido: uma ordem escrita diz à cidade inteira que não confiam nele (opinião −5)"
-    }
-   ],
-   "hora_rolado": "03:11:03"
-  },
-  "SC7": {
-   "id": "SC7",
-   "dia": 406,
-   "hora": "03:11:20",
-   "titulo": "A COMPLICAÇÃO ESCONDIDA da missão dos SALINEIROS (escolta do mestre-salineiro às Salinas Velhas, B; a Eliane e 6 lanças saem no amanhecer do 407)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "quem pediu mente sobre algo"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "outra facção quer o contrário"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o prazo é menor do que parece"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o alvo tem um motivo bom"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um rival também aceitou"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a recompensa não existe mais"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "tem um monstro no caminho"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "um aliado vai ser posto em risco"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a recompensa não existe mais",
-     "txt": "[6] → a recompensa não existe mais"
-    }
-   ],
-   "hora_rolado": "03:11:20"
-  },
-  "CH7": {
-   "id": "CH7",
-   "dia": 406,
-   "hora": "03:11:20",
-   "titulo": "A COMPLICAÇÃO ESCONDIDA da missão da CHAMA DA HOSTE (o aviso a Farenta contra os Olhos Pintados, D; o Draron e um capuz saem no amanhecer do 407)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "quem pediu mente sobre algo"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "outra facção quer o contrário"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o prazo é menor do que parece"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o alvo tem um motivo bom"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um rival também aceitou"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a recompensa não existe mais"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "tem um monstro no caminho"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "um aliado vai ser posto em risco"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "quem pediu mente sobre algo",
-     "txt": "[1] → quem pediu mente sobre algo"
-    }
-   ],
-   "hora_rolado": "03:11:20"
-  },
-  "HI7": {
-   "id": "HI7",
-   "dia": 407,
-   "hora": "03:11:56",
-   "titulo": "A HORA em que a contra-espionagem da casa fecha o nome do HIALD (o tick do 407: IDENTIFICADO)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "antes do amanhecer: a Sira alcança o rei no portão, antes de ele sair"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "de manhã, com o rei já fora dos muros"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "à tarde"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "antes do amanhecer: a Sira alcança o rei no portão, antes de ele sair",
-     "txt": "[1] → antes do amanhecer: a Sira alcança o rei no portão, antes de ele sair"
-    }
-   ],
-   "hora_rolado": "03:11:56"
-  },
-  "HIs7": {
-   "id": "HIs7",
-   "dia": 407,
-   "hora": "03:12:12",
-   "titulo": "O QUE A SIRA SABE DO HIALD quando alcança o rei no portão (a contra fechou o nome dele antes do amanhecer do 407)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só de quem ele é: escreve ao BORECCI, o mesmo que quer a Tilde morta; para quê, ela não sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "de quem é e por quem veio: está na forja grande por causa da MENINA; a ordem exata, não"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "tudo: a ordem do Borecci é LEVAR A MENINA VIVA A STEUNN"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "de quem é e por quem veio: está na forja grande por causa da MENINA; a ordem exata, não",
-     "txt": "[4] → de quem é e por quem veio: está na forja grande por causa da MENINA; a ordem exata, não"
-    }
-   ],
-   "hora_rolado": "03:12:12"
-  },
-  "HM7": {
-   "id": "HM7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "O QUE O HIALD FAZ NO 407 (solto e vigiado pelos olhos da Sira; o rei, a Marechal, o Moreth e o Eiagrir fora; a ordem dele é levar a menina viva a Steunn; HONESTO; nunca machuca criança; a Tilde na Fornalha, sob o teto da Mamiltia)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "trabalha e espera: pergunta pela menina e mais nada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "vai à porta da Fornalha pedir para vê-la; os olhos da Sira veem"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "escreve a terceira carta ao Borecci"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "tenta hoje levar a menina"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "trabalha e espera: pergunta pela menina e mais nada",
-     "txt": "[2] → trabalha e espera: pergunta pela menina e mais nada"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "HH7": {
-   "id": "HH7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "A HORA do gesto do Hiald",
-   "dado": [
-    1,
-    12,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a primeira hora depois do amanhecer"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "de manhã"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 8,
-     "res": "do meio-dia à tarde"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 12,
-     "res": "ao escurecer ou de noite"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 12,
-     "res": "ao escurecer ou de noite",
-     "txt": "[12] → ao escurecer ou de noite"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "FQ7": {
-   "id": "FQ7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "OS FIÉIS DO DOGE VELHO no 407 (ameaça ou sabotagem pequena, mas visível; a base deles é Marasar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "em Marasar: ameaça pintada na porta do armazém da casa"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "em Marasar: sabotagem pequena (corda cortada, fardo queimado) num bem da casa"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "em IREVIEL: um recado pregado no portão"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "falham: a guarda da Doge pega o homem com a tinta na mão"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "em Marasar: sabotagem pequena (corda cortada, fardo queimado) num bem da casa",
-     "txt": "[4] → em Marasar: sabotagem pequena (corda cortada, fardo queimado) num bem da casa"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "FH7": {
-   "id": "FH7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "A HORA dos Fiéis",
-   "dado": [
-    1,
-    12,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a primeira hora depois do amanhecer"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "de manhã"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 8,
-     "res": "do meio-dia à tarde"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 12,
-     "res": "ao escurecer ou de noite"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      11
-     ],
-     "total": 11,
-     "res": "ao escurecer ou de noite",
-     "txt": "[11] → ao escurecer ou de noite"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "JH7": {
-   "id": "JH7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "A HORA em que os JURADOS DE STEUNN batem à porta do conselho",
-   "dado": [
-    1,
-    12,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a primeira hora depois do amanhecer"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "de manhã"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 8,
-     "res": "do meio-dia à tarde"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 12,
-     "res": "ao escurecer ou de noite"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "de manhã",
-     "txt": "[4] → de manhã"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "GV7": {
-   "id": "GV7",
-   "dia": 407,
-   "hora": "13:50:27",
-   "titulo": "O QUE O GRAUR FAZ NA PRIMEIRA HORA com a linha selada na luva (ferido, formal)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "cumpre à letra: não mexe em posto nenhum sem a palavra dela, nem no que seria de bom senso"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "guarda como sempre"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "pede à Intendente, diante da guarda formada, que confirme posto por posto"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "cumpre à letra: não mexe em posto nenhum sem a palavra dela, nem no que seria de bom senso",
-     "txt": "[1] → cumpre à letra: não mexe em posto nenhum sem a palavra dela, nem no que seria de bom senso"
-    }
-   ],
-   "hora_rolado": "13:50:27"
-  },
-  "MV7": {
-   "id": "MV7",
-   "dia": 407,
-   "hora": "13:50:45",
-   "titulo": "COMO O MIVOR RECEBE A CAÇADA no leito seco (manhã do 407; ele sente o passo de longe e nunca é surpreendido; FALA E MENTE; a coluna: o rei, o Moreth, o Eiagrir, o Hruthos, o Tuald de guia, 8 lanças com ganchos e arpões)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATACA PRIMEIRO, de baixo do cascalho, quando a coluna pisa o leito"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "espera à vista, deitado, e FALA primeiro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "finge de pedra, deixa chegar à distância de lança, e só então fala"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "espera à vista, deitado, e FALA primeiro",
-     "txt": "[3] → espera à vista, deitado, e FALA primeiro"
-    }
-   ],
-   "hora_rolado": "13:50:45"
-  },
-  "MVf7": {
-   "id": "MVf7",
-   "dia": 407,
-   "hora": "13:50:53",
-   "titulo": "O QUE O MIVOR QUER COM A FALA (ele mente quando lhe serve)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "GANHAR TEMPO: diz que está de passagem e que vai embora com a chuva; por baixo, afunda devagar"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "COMPRAR A PASSAGEM: oferece uma coisa que a terra sabe (o que há enterrado perto) em troca de ficar"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "RACHAR O GRUPO: diz em voz alta o que ouviu um deles fazer com os pés (onde andou, a que horas)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ASSUSTAR: diz que não está sozinho debaixo do leito"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "GANHAR TEMPO: diz que está de passagem e que vai embora com a chuva; por baixo, afunda devagar",
-     "txt": "[1] → GANHAR TEMPO: diz que está de passagem e que vai embora com a chuva; por baixo, afunda devagar"
-    }
-   ],
-   "hora_rolado": "13:50:53"
-  },
   "MVv7": {
    "id": "MVv7",
    "dia": 407,
@@ -19166,6 +16065,3330 @@
     }
    ],
    "hora_rolado": "03:09:29"
+  },
+  "CH33": {
+   "id": "CH33",
+   "dia": 432,
+   "hora": "03:28:59",
+   "titulo": "A CHAMA DA HOSTE (aliada, força 5; os magos da hoste, o Bjarkunn) VAI A MARASAR com o Graur?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "NÃO: a irmandade fica a guardar Ireviel com o rei e a Marechal fora"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "VAI: 1d6+4 magos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "VAI: 1d6+4 magos",
+     "txt": "[6] → VAI: 1d6+4 magos"
+    }
+   ],
+   "hora_rolado": "03:28:59"
+  },
+  "FL33": {
+   "id": "FL33",
+   "dia": 432,
+   "hora": "03:28:59",
+   "titulo": "OS FILHOS DO LIVRO (aliados, força 3; as famílias dos barqueiros do livro; pediram guerra contra a Liga) VÃO A MARASAR?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "VÃO: 2d6×5 homens de remo e arpão"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas",
+     "txt": "[1] → NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas"
+    }
+   ],
+   "hora_rolado": "03:28:59"
+  },
+  "GU1s": {
+   "id": "GU1s",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "Yaelane",
+     "txt": "[6] → Yaelane"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1t": {
+   "id": "GU1t",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "MAGOS",
+     "txt": "[4] → MAGOS"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1f": {
+   "id": "GU1f",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "força 3",
+     "txt": "[1] → força 3"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1c": {
+   "id": "GU1c",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "275",
+     "txt": "[5] → 275"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1o": {
+   "id": "GU1o",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "tomar uma CIDADE",
+     "txt": "[4] → tomar uma CIDADE"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1p": {
+   "id": "GU1p",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "neutra",
+     "txt": "[4] → neutra"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU1m": {
+   "id": "GU1m",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [1] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [1] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2s": {
+   "id": "GU2s",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "Yaelane",
+     "txt": "[6] → Yaelane"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2t": {
+   "id": "GU2t",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "MAGOS",
+     "txt": "[4] → MAGOS"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2f": {
+   "id": "GU2f",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "força 6",
+     "txt": "[4] → força 6"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2c": {
+   "id": "GU2c",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "175",
+     "txt": "[1] → 175"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2o": {
+   "id": "GU2o",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "acabar com uma guilda RIVAL",
+     "txt": "[6] → acabar com uma guilda RIVAL"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2p": {
+   "id": "GU2p",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "neutra",
+     "txt": "[5] → neutra"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU2m": {
+   "id": "GU2m",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [3] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [5] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3s": {
+   "id": "GU3s",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Shizess",
+     "txt": "[4] → Shizess"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3t": {
+   "id": "GU3t",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "CAÇADORES DE MONSTROS",
+     "txt": "[1] → CAÇADORES DE MONSTROS"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3f": {
+   "id": "GU3f",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "força 4",
+     "txt": "[2] → força 4"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3c": {
+   "id": "GU3c",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "200",
+     "txt": "[2] → 200"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3o": {
+   "id": "GU3o",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo",
+     "txt": "[2] → caçar um MÍTICO e ficar com o núcleo"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3p": {
+   "id": "GU3p",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "hostil",
+     "txt": "[1] → hostil"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU3m": {
+   "id": "GU3m",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [5] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [5] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4s": {
+   "id": "GU4s",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "Telosus",
+     "txt": "[2] → Telosus"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4t": {
+   "id": "GU4t",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 4: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "CRUZADOS DE UMA FÉ",
+     "txt": "[6] → CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4f": {
+   "id": "GU4f",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 4: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "força 4",
+     "txt": "[2] → força 4"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4c": {
+   "id": "GU4c",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 4: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "300",
+     "txt": "[6] → 300"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4o": {
+   "id": "GU4o",
+   "dia": 432,
+   "hora": "03:29:44",
+   "titulo": "G12, A GUILDA 4: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo",
+     "txt": "[2] → caçar um MÍTICO e ficar com o núcleo"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4p": {
+   "id": "GU4p",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "neutra",
+     "txt": "[4] → neutra"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU4m": {
+   "id": "GU4m",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [4] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [3] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU5s": {
+   "id": "GU5s",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      8
+     ],
+     "total": 8,
+     "res": "Qulosus",
+     "txt": "[8] → Qulosus"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU5t": {
+   "id": "GU5t",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "CAÇADORES DE MONSTROS",
+     "txt": "[1] → CAÇADORES DE MONSTROS"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU5f": {
+   "id": "GU5f",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "força 3",
+     "txt": "[1] → força 3"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU5c": {
+   "id": "GU5c",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "275",
+     "txt": "[5] → 275"
+    }
+   ],
+   "hora_rolado": "03:29:45"
+  },
+  "GU5o": {
+   "id": "GU5o",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      8
+     ],
+     "total": 8,
+     "res": "VINGAR uma derrota antiga",
+     "txt": "[8] → VINGAR uma derrota antiga"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU5p": {
+   "id": "GU5p",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "neutra",
+     "txt": "[4] → neutra"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU5m": {
+   "id": "GU5m",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [6] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [4] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6s": {
+   "id": "GU6s",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino)",
+   "dado": [
+    1,
+    10,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Steunn"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Kremir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Shizess"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Norte (Eiest)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Yaelane"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Gogrunn"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Kasra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      8
+     ],
+     "total": 8,
+     "res": "Qulosus",
+     "txt": "[8] → Qulosus"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6t": {
+   "id": "GU6t",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: O OFÍCIO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "CAÇADORES DE MONSTROS"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MERCENÁRIOS"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "MERCADORES E ARTÍFICES"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "MAGOS"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "LADRÕES E ESPIÕES"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CRUZADOS DE UMA FÉ"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "LADRÕES E ESPIÕES",
+     "txt": "[5] → LADRÕES E ESPIÕES"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6f": {
+   "id": "GU6f",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: A FORÇA (1d4+2)",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "força 3"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "força 4"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "força 5"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "força 6"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "força 4",
+     "txt": "[2] → força 4"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6c": {
+   "id": "GU6c",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: O NÍVEL DO CHEFE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "175"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "225"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "250"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "275"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "300"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "275",
+     "txt": "[5] → 275"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6o": {
+   "id": "GU6o",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: O OBJETIVO (relógio de 8)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "caçar um MÍTICO e ficar com o núcleo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "dominar uma ROTA de comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tomar uma CIDADE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com uma guilda RIVAL"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fundar uma ESCOLA ou ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "VINGAR uma derrota antiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "dominar uma ROTA de comércio",
+     "txt": "[3] → dominar uma ROTA de comércio"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6p": {
+   "id": "GU6p",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "hostil"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "neutra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "amiga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "neutra",
+     "txt": "[2] → neutra"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU6m": {
+   "id": "GU6m",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#1 [2] → o dado × 15 a menos (o primeiro)"
+    },
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o dado × 15 a menos (o primeiro)",
+     "txt": "#2 [2] → o dado × 15 a menos (o primeiro)"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GUIr": {
+   "id": "GUIr",
+   "dia": 432,
+   "hora": "03:29:45",
+   "titulo": "G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "20 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "20 + o dado",
+     "txt": "[18] → 20 + o dado"
+    }
+   ],
+   "hora_rolado": "03:29:46"
+  },
+  "GU1fa": {
+   "id": "GU1fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 1: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 19,
+     "res": "força × 10 + o dado",
+     "txt": "[19] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU2fa": {
+   "id": "GU2fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 2: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "força × 10 + o dado",
+     "txt": "[3] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU3fa": {
+   "id": "GU3fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 3: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "força × 10 + o dado",
+     "txt": "[3] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU4fa": {
+   "id": "GU4fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 4: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "força × 10 + o dado",
+     "txt": "[3] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU5fa": {
+   "id": "GU5fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 5: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "força × 10 + o dado",
+     "txt": "[17] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU6fa": {
+   "id": "GU6fa",
+   "dia": 432,
+   "hora": "11:39:25",
+   "titulo": "G12, A GUILDA 6: A FAMA DE PARTIDA (força × 10 + o dado)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "força × 10 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "força × 10 + o dado",
+     "txt": "[6] → força × 10 + o dado"
+    }
+   ],
+   "hora_rolado": "11:39:25"
+  },
+  "GU1x": {
+   "id": "GU1x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: QUE CIDADE O CÍRCULO DA AREIA CANTANTE (magos de Yaelane) QUER TOMAR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "YAELANE mesmo (o governo do Clã Eloulane)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "KREMIR"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "SHIZESS"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "LUMADE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "LUMADE",
+     "txt": "[6] → LUMADE"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU2x": {
+   "id": "GU2x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: A GUILDA RIVAL QUE A TORRE DOS SETE VÉUS (magos de Yaelane) QUER ACABAR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "o CÍRCULO DA AREIA CANTANTE (a outra de Yaelane)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "as MÃOS DE BREU"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a ORDEM DA TOCHA BRANCA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a ORDEM DA TOCHA BRANCA",
+     "txt": "[6] → a ORDEM DA TOCHA BRANCA"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU3x": {
+   "id": "GU3x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: QUE MÍTICO OS ARPÕES DO SAL VERMELHO (caçadores de Shizess) QUEREM",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o ITHVIL (Levis, Fogo)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o THARGOS (as Fundas, Água)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a ELAEVA (os Picos Brancos, Espinho)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o THARGOS (as Fundas, Água)",
+     "txt": "[3] → o THARGOS (as Fundas, Água)"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU4x": {
+   "id": "GU4x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: QUE MÍTICO A ORDEM DA TOCHA BRANCA (cruzados de Telosus) QUER",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "a ELAEVA (matou o povo de Telosus)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o KREDUN (as Fundas)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o THARGOS"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o KREDUN (as Fundas)",
+     "txt": "[5] → o KREDUN (as Fundas)"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU5x": {
+   "id": "GU5x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: A DERROTA ANTIGA QUE A COMPANHIA DO ÚLTIMO GANCHO (caçadores de Qulosus) QUER VINGAR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "contra a ORDEM DA TOCHA BRANCA"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "contra o MANEUS, o Afogado do Vento (o bicho que os quebrou)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "contra as MÃOS DE BREU (a outra de Qulosus)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "contra a ORDEM DA TOCHA BRANCA",
+     "txt": "[2] → contra a ORDEM DA TOCHA BRANCA"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU6x": {
+   "id": "GU6x",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: QUE ROTA AS MÃOS DE BREU (ladrões de Qulosus) QUEREM DOMINAR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a ESTRADA DO SAL (Shizess a Yaelane)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "o MAR de Qulosus"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o RIO DE IREVIEL"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o RIO DE IREVIEL",
+     "txt": "[6] → o RIO DE IREVIEL"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "GU4h": {
+   "id": "GU4h",
+   "dia": 432,
+   "hora": "11:40:19",
+   "titulo": "G12: FOI A ORDEM DA TOCHA BRANCA QUEM FERIU A ELAEVA NO 428? (a notícia fiel do 428: 'alguém a caçou e quase conseguiu')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "SIM"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "NÃO: foi outra mão"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "NÃO: foi outra mão",
+     "txt": "[6] → NÃO: foi outra mão"
+    }
+   ],
+   "hora_rolado": "11:40:19"
+  },
+  "EN33": {
+   "id": "EN33",
+   "dia": 433,
+   "hora": "11:43:12",
+   "titulo": "O ENCONTRO NO RIO (433, tick em estrada [7]; o rio abaixo de Levis, a meio dia da cidade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "barqueiros de Levis descendo, com as notícias da cidade"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um bicho na água: um dorso de espinhos do tamanho de um potro (a cria da Isyzis?)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos",
+     "txt": "[4] → a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos"
+    }
+   ],
+   "hora_rolado": "11:43:12"
+  },
+  "CE33": {
+   "id": "CE33",
+   "dia": 433,
+   "hora": "11:43:12",
+   "titulo": "O CELOCUS PAGA OS 800 DO CRÉDITO DE GRÃO (o voto C403a; vence hoje; ele não respondeu ao Tolvane sobre o acordo grande)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "PAGA: o ouro chega a Ireviel pela estrada de Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ATRASA: manda dizer que paga quando o acordo fechar"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "PAGA: o ouro chega a Ireviel pela estrada de Lumade",
+     "txt": "[1] → PAGA: o ouro chega a Ireviel pela estrada de Lumade"
+    }
+   ],
+   "hora_rolado": "11:43:12"
   }
  }
 }

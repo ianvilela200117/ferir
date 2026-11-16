@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  316,
+  356,
   402
  ],
  "mana": [
@@ -56,10 +56,10 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 13948,
+ "cofre": 14748,
  "livro": {
   "renda_casa": 3960,
-  "despesa": 8280,
+  "despesa": 8230,
   "ultima_semana": 427,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
@@ -273,6 +273,12 @@
    "valor": -2800,
    "motivo": "428: obra do reino: a muralha do rio e as torres de vigia (3.500 × 4/5, G6)",
    "saldo": 13948
+  },
+  {
+   "dia": 433,
+   "valor": 800,
+   "motivo": "433: o CELOCUS pagou os 800 do crédito de grão (C403a; CE33 [1])",
+   "saldo": 14748
   }
  ],
  "materiais": {

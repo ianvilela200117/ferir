@@ -28,3 +28,5 @@ CÂNONE CONTRARIADO em diario_sessao2f.md:753 — o certo: a casa bate o vaduar 
 # 428 (auditoria): Hassa e Kassa, Neane e Yeane são pessoas diferentes (nomes antigos; não trocar)
 NOMES PARECIDOS: ['Hassa'] × ['Kassa']
 NOMES PARECIDOS: ['Neane'] × ['Yeane']
+# 433 (auditoria): a linha 95 do envelope 2o é a tabela do Giunn citando a ACUSAÇÃO do Borecci (o vaduar quente da Tilde), não um fato da casa
+CÂNONE CONTRARIADO em envelope_sessao2o.md:95 — o certo: a casa bate o vaduar A FRIO

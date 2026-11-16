@@ -1,0 +1,50 @@
+[11:42:50] Dia 433 · Pressão 2/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  O TEMPO (4 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [4] muda, d20 [6] · vento d6 [4])
+   o Porto de Marasar: calor forte, calmo (d6 [3] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: limpo, vento forte (d6 [1] fica · vento d6 [6])
+   Farenta: calor forte, calmo (d6 [2] fica · vento d6 [2]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: normal [53/100]
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 447
+  FERIDO: Starkald (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA) até o Dia 435
+  FERIDO: Goir (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE) até o Dia 435
+  O MUNDO SE MOVE — Dia 433 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [20] Steunn  ◆ TOCA A CASA
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    [MISSÃO]: Selast (o Mestre dá o nome pela ficção)
+    dificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Encadeada (1 de 1d4+1)
+    objetivo: forjar ou entregar uma encomenda difícil
+    complicação escondida (Envelope): a recompensa não existe mais
+    prazo: 6 dias
+    recompensa: 50 XP · 10 de ouro · um título
+    penalidade se falhar: perde um item ou o adiantamento em dobro
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 433
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [6] nada visível
+    CONTRA-ESPIONAGEM (oculto) vs o homem das guildas de Steunn (o cobrador da Groa): contra [1, 5]+35 = 41 × [10, 6]+6 = 22 → IDENTIFICADO
+    FAÍSCA: o Doge Pelaone desafia para duelo Braeth (o ancião do Clã), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Ulair descobre o segredo de Draron (da casa), por causa de uma terra além do mapa
+    FAÍSCA: o podestà Tirello deve a vida a Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de uma receita perdida
+  AUDITORIA (XXIII.23, Dia 433): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 433 ===
+    ⚠ NOMES PARECIDOS: ['Giunn'] × ['Riunn']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2o.md:95 — o certo: a casa bate o vaduar A FRIO
+    (3 avisos novos · 11 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #359 (era do Dia 431): LEVIS, A FUNDIÇÃO VELHA (a Brara) acaba as FERRADURAS E OS EIXOS (G7, a série que saiu de Ireviel): Defesa de Ireviel +1 (mod, até o 480) quando voltarem (~433)
+  ▶ AGENDA #198: O CELOCUS paga os 800 do crédito de grão (voto C403a, 403)
+  ▶ AGENDA #281: FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #381: LEVIS: a BRARA fez as picaretas mas COBRA a partilha e não rasga as dívidas antes de ver o rei (BR26 [1]); o rei chega
+  ▶ AGENDA #448: [OCULTO] (OCULTO) A NOTÍCIA DA ELOUNE MORTA PELO TERASETH e o recado dele (o coração da Eloune, núcleo Épico de Água, DE PRESENTE ao rei) sobem o rio na barca dos do Croque: alcançam o rei no 434
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto dos Olhos Pintados (Farenta (3 cidades)): dá um passo no que quer · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM VILÃO NOVO entra no mundo — Yaelane (Lumade) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: OFERTA PÚBLICA: alguém paga por um serviço — Lumron (terra nova) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: a Mãe Branca (Primordial, os Picos Brancos): migra 1 região (rola para onde) · COMO CHEGA: d20 [19] FIEL

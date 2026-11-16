@@ -1027,3 +1027,8 @@ Choveu o dia inteiro. As duas barcas ficaram amarradas uma de frente para a outr
 O céu abriu de madrugada. A barca da Liga soltou primeiro e sumiu rio acima na curva dos salgueiros. A do rei passou à tarde pelas barcas de Levis viradas na tempestade, com o ventre para cima e sacos de grão presos nos galhos. À noite, no pouso, chegou a barca rápida da Nouliel com o mensageiro da Skotha, a pena cinzenta da Mamiltia enrolada em couro e a notícia de que Marasar brigava rua por rua.
 
 - **Parada:** noite do 432, o pouso. A Skotha pede o Facio; Marasar em revolta; Levis no 435.
+
+### O rio, abaixo de Levis, 433
+O dia nasceu limpo e o rio baixou. A barca seguiu com a margem a um tiro de pedra, passando campos de cevada e cercas de vime. Perto do meio-dia apareceu uma aldeia de casas de barro, com um cais de três estacas. Amarrada nele estava a barca da Liga: os remadores passavam fardos de mão em mão para uma carroça, e o homem de capa contava cada um.
+
+- **Parada:** meio-dia do 433. A barca da Liga no cais de uma aldeia do reino; Levis a meio dia.

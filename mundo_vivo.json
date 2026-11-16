@@ -1803,8 +1803,8 @@
    "furt": 6,
    "alvo": "a Fornalha (medidas e desenhos, para o Borecci)",
    "desde": 431,
-   "estado": "solto",
-   "pista": "431 (GR31 [3]): a GROA passou a ele UMA MEDIDA DA FORNALHA (a boca e a altura da câmara); o furt 6 é do Mestre (um cobrador, não um espião de ofício); o tick diário o rola contra a contra 35"
+   "estado": "identificado",
+   "pista": "431 (GR31 [3]): a GROA passou a ele UMA MEDIDA DA FORNALHA (a boca e a altura da câmara); o furt 6 é do Mestre (um cobrador, não um espião de ofício); o tick diário o rola contra a contra 35 · 433: a CONTRA o IDENTIFICOU (41 × 22): a Sira sabe quem é e onde dorme; vigiado; ainda não preso (a palavra do rei)"
   }
  ],
  "gente": [
@@ -3158,13 +3158,13 @@
    "nota": "(OCULTO para a casa até ser visto) gerador monstro (430, FA30 [1]; o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108 · Defesa 18 · RD 1 · ataque +8 · 1 ataque · 1d10 × 1.5 · XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia), área 6 m, 1x a cada 3 rodadas; fraqueza FOME (dano dobrado, corta a regeneração) e um som (a descobrir); necrófago (segue batalhas e pestes); sinal: cheiro de enxofre; drops: erygal ×4 (Incomum, Elo: arma que corta laços) e thuvil ×4 (Incomum, Elo: +1 em Infusão e Encantamento)"
   },
   {
-   "nome": "Riunn",
+   "nome": "Tinda",
    "dia": "431",
    "cat": "Incomum",
    "nivel": "14",
    "essencia": "Elo",
    "onde": "as Fundas do Norte (o Clã Hegre)",
-   "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Riunn · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «selol» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais · "
+   "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «selol» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais ·  · 433: o conferidor achou RIUNN perto de GIUNN: trocado por Tinda"
   }
  ],
  "notas_ocultas": [
@@ -3333,6 +3333,16 @@
    "onde": "debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420",
    "notas": "a SURPRESA da Nouliel (413 [5]); os pedreiros do dique acharam a escada no 422",
    "nota": "['422 noite (SR22 [10], vê e volta): a SIRA desceu: moram lá 28 do CULTO DO XAATHIS, a ala do cais (SR22q 18); nesta noite juntavam ARMAS e BARRIS DE PIChE na forja velha do mercado (SR22c [3]); ela copiou as letras da porta de bronze (a senha ela não ouviu)'] · 423 TARDE: O REI TOMOU O MERCADO (BE23): 15 mortos, 7 presos, o SACERDOTE (67, Sangue) morto pelo Eiagrir; 6 fugiram pelo canal velho; a porta de bronze NÃO abriu (ninguém deu a senha, IN23 [8]); ficaram 3 barris de piche e as lanças · oculto: o alvo do piche era QUEIMAR A FORNALHA numa noite de série (AV23 [4]) · 423 NOITE: o rei ARROMBOU a porta de bronze LIMPA (PB23 [18]); atrás: pó, a mesa de pedra e as TÁBUAS DA RECEITA do SYSRETH (PB23c [1] Épica; PB23o [3]); o rei leu o processo e o ingrediente de Sombra (PB23r [11], PB23i [2]); falta ler o FERRO COM ESCÓRIA DE VADUAR"
+  },
+  {
+   "nome": "Ithium",
+   "o_que_era": "um mercado",
+   "por_que_caiu": "monstro",
+   "guarda": "um NÚCLEO",
+   "habita": "mortos",
+   "entrar": "uma luta",
+   "onde": "os Picos Brancos",
+   "notas": "o mundo do 431 (lugar novo; notícia no 432, exagerada)"
   }
  ],
  "materiais_novos": [
@@ -3353,5 +3363,279 @@
    "origem": "pedra (vidro de raio)",
    "nota": "(OCULTO até a carta do Tolvane) o CELOCUS, em Lumade, não respondeu à oferta do rei: mostrou ao Tolvane uma carga de HADUN à venda (CL32 [6] → novidade [1]); dureza 5, maleabilidade 4, condutividade 4; infusão até o 4º círculo"
   }
- ]
+ ],
+ "guildas": [
+  {
+   "id": "circulo",
+   "nome": "o Círculo da Areia Cantante",
+   "sede": "Yaelane",
+   "oficio": "magos",
+   "forca": 3,
+   "fama": 49,
+   "postura": 0,
+   "objetivo": "tomar LUMADE (a cidade do Celocus)",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Meor",
+    "nivel": 275,
+    "classe": "Arquimago de Areia (magos)",
+    "tracos": "CRUEL e CURIOSO",
+    "desejo": "nunca mais passar fome",
+    "ambicao": "ganhar a guerra do seu povo",
+    "medo": "o próprio passado",
+    "segredo": "(OCULTO) ama alguém proibido",
+    "linha_vermelha": "nunca se ajoelha"
+   },
+   "membros": [
+    {
+     "nome": "Liis",
+     "nivel": 260,
+     "classe": "maga"
+    },
+    {
+     "nome": "Nisis",
+     "nivel": 260,
+     "classe": "mago"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 3000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  },
+  {
+   "id": "torre",
+   "nome": "a Torre dos Sete Véus",
+   "sede": "Yaelane",
+   "oficio": "magos",
+   "forca": 6,
+   "fama": 63,
+   "postura": 0,
+   "objetivo": "acabar com a ORDEM DA TOCHA BRANCA",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Mave",
+    "nivel": 175,
+    "classe": "Mestre dos Véus (magos)",
+    "tracos": "CRUEL e ORGULHOSO",
+    "desejo": "uma casa própria",
+    "ambicao": "entrar numa facção que o recusou",
+    "medo": "perder a mão do ofício",
+    "segredo": "(OCULTO) ama alguém proibido",
+    "linha_vermelha": "nunca deixa um ferido para trás"
+   },
+   "membros": [
+    {
+     "nome": "Yeror",
+     "nivel": 130,
+     "classe": "mago"
+    },
+    {
+     "nome": "Siir",
+     "nivel": 100,
+     "classe": "maga"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 6000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  },
+  {
+   "id": "arpoes",
+   "nome": "os Arpões do Sal Vermelho",
+   "sede": "Shizess",
+   "oficio": "caçadores de monstros",
+   "forca": 4,
+   "fama": 43,
+   "postura": -1,
+   "objetivo": "caçar o THARGOS (Mítico, as Fundas) e ficar com o núcleo",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Xaesrir",
+    "nivel": 200,
+    "classe": "Caçador-Mor (caçadores)",
+    "tracos": "LEAL e RELIGIOSO",
+    "desejo": "sair da cidade",
+    "ambicao": "comprar a liberdade da família",
+    "medo": "a solidão",
+    "segredo": "(OCULTO) roubou o que tem",
+    "linha_vermelha": "nunca machuca uma criança"
+   },
+   "membros": [
+    {
+     "nome": "Sizhir",
+     "nivel": 125,
+     "classe": "arpoador"
+    },
+    {
+     "nome": "Sior",
+     "nivel": 125,
+     "classe": "rastreadora"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 4000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  },
+  {
+   "id": "tocha",
+   "nome": "a Ordem da Tocha Branca",
+   "sede": "Telosus",
+   "oficio": "cruzados de uma fé",
+   "forca": 4,
+   "fama": 43,
+   "postura": 0,
+   "objetivo": "caçar o KREDUN, a Filha da Mãe Branca (Mítico, as Fundas) e ficar com o núcleo",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Hundunn",
+    "nivel": 300,
+    "classe": "Grão-Mestre da Tocha (cruzados)",
+    "tracos": "LEAL e HONESTO",
+    "desejo": "uma casa própria",
+    "ambicao": "tomar o lugar do sumo-sacerdote da fé",
+    "medo": "a humilhação pública",
+    "segredo": "(OCULTO) roubou o que tem",
+    "linha_vermelha": "nunca machuca uma criança"
+   },
+   "membros": [
+    {
+     "nome": "Tair",
+     "nivel": 240,
+     "classe": "cruzado"
+    },
+    {
+     "nome": "Goald",
+     "nivel": 255,
+     "classe": "cruzada"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 4000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  },
+  {
+   "id": "gancho",
+   "nome": "a Companhia do Último Gancho",
+   "sede": "Qulosus",
+   "oficio": "caçadores de monstros",
+   "forca": 3,
+   "fama": 47,
+   "postura": 0,
+   "objetivo": "VINGAR-SE da ORDEM DA TOCHA BRANCA (a derrota antiga)",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Taunn",
+    "nivel": 275,
+    "classe": "Capitão-Caçador (caçadores)",
+    "tracos": "AMBICIOSO e CRUEL",
+    "desejo": "curar alguém",
+    "ambicao": "virar Lendário",
+    "medo": "a solidão",
+    "segredo": "(OCULTO) fez um pacto",
+    "linha_vermelha": "nunca vende o ofício barato"
+   },
+   "membros": [
+    {
+     "nome": "Ria",
+     "nivel": 185,
+     "classe": "caçadora"
+    },
+    {
+     "nome": "Tundald",
+     "nivel": 215,
+     "classe": "caçador"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 3000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  },
+  {
+   "id": "breu",
+   "nome": "as Mãos de Breu",
+   "sede": "Qulosus",
+   "oficio": "ladrões e espiões",
+   "forca": 4,
+   "fama": 46,
+   "postura": 0,
+   "objetivo": "dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem)",
+   "relogio": [
+    0,
+    8
+   ],
+   "chefe": {
+    "nome": "Zazess",
+    "nivel": 275,
+    "classe": "Mão-Mestra (ladrões)",
+    "tracos": "CRUEL e COVARDE",
+    "desejo": "curar alguém",
+    "ambicao": "descobrir uma receita perdida",
+    "medo": "a solidão",
+    "segredo": "(OCULTO) roubou o que tem",
+    "linha_vermelha": "nunca entrega um amigo à lei"
+   },
+   "membros": [
+    {
+     "nome": "Isair",
+     "nivel": 245,
+     "classe": "ladra"
+    },
+    {
+     "nome": "Lavis",
+     "nivel": 245,
+     "classe": "espião"
+    }
+   ],
+   "estado": "viva",
+   "cofre": 4000,
+   "nucleos": [],
+   "desde": 433,
+   "log": [
+    "433: entra no mundo (G12, pedido do jogador; dados GU1-GU6 no envelope)"
+   ]
+  }
+ ],
+ "guilda_da_casa": {
+  "nome": "a Guilda dos Aventureiros de Ireviel",
+  "sede": "Ireviel",
+  "forca": 2,
+  "fama": 38,
+  "chefe": "Starkald (87)",
+  "nota": "a da casa: age pela G1 (não rola no turno da G12); entra no RANKING DE FAMA; ganha fama com missão, caçada e feito"
+ }
 }

@@ -4,7 +4,7 @@
   "rei": "FERIR, o Forjador (coroado no 293)",
   "dia": 427,
   "prestigio": 6,
-  "legitimidade": 10,
+  "legitimidade": 9,
   "conselho_real": {
    "Tesoureira": "Nouliel",
    "Marechal": "Eliane",
@@ -152,6 +152,10 @@
      [
       1,
       "420: o leito de pedra do Mivor pronto: ele guarda o lado norte enquanto morar e receber o sal"
+     ],
+     [
+      1,
+      "433: as FERRADURAS E OS EIXOS da fundição velha de Levis (G7) voltaram; até o 480"
      ]
     ],
     "Saude": [

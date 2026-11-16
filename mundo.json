@@ -2878,6 +2878,17 @@
    "chegada": "[2] em 1d3 [1] dias",
    "resumo": "UM VILÃO NOVO entra no mundo — Yaelane (Lumade)",
    "toca": true
+  },
+  {
+   "dia": 433,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "[MISSÃO]: Selast (o Mestre dá o nome pela ficção)\ndificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Encadeada (1 de 1d4+1)\nobjetivo: forjar ou entregar uma encomenda difícil\ncomplicação escondida (Envelope): a recompensa não existe mais\nprazo: 6 dias\nrecompensa: 50 XP · 10 de ouro · um título\npenalidade se falhar: perde um item ou o adiantamento em dobro\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 435,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Steunn",
+   "toca": true
   }
  ]
 }
