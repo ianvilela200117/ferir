@@ -1105,3 +1105,10 @@ Na primeira sala o guarda morto ainda estava onde caíra, frio como a pedra. O r
 Diante da última porta o rei fechou os olhos e olhou uma hora adiante. Viu a porta abrir. Viu uma coisa do tamanho de uma colina desenrolar cabeças no escuro, e um olho que parava os homens onde estavam. Viu o Eiagrir cair primeiro. Viu a mesma hora muitas vezes, e em nenhuma alguém passava da soleira. Abriu os olhos e não deixou ninguém tocar na porta.
 
 - **Parada:** manhã do 438, a porta fechada. O Zyza de pé atrás do rei.
+
+## Dia 438 (fora do jogo): MOTOR 9.1, as seis correções
+
+O jogo parou diante da porta da sala 9 e não andou. O jogador mandou fazer as seis melhorias da pergunta 4, e o Mestre as fez: a luta passou a rodar sozinha os traços dos bichos, o olho que prende, as fases, as crias e os efeitos das Artes; o Livro ganhou os materiais e os bichos que a casa conheceu depois do 356; os éditos, as crias e as canções ganharam scripts; os heróis da casa despertaram (o Moreth, o Eiagrir, a Isolda, o Fabaino) e receberam as Artes da arma deles; os NPCs ganharam classe do Livro e o que querem e temem; e entraram três regras novas, pedidas pelo jogador: os ofícios de coleta com grau (G35), as festas do calendário (G36) e o atlas das masmorras (G37).
+
+- **Parada:** a mesma: manhã do 438, a porta da sala 9 fechada, o Zyza de pé atrás do rei. As perguntas 1 a 3 esperam.
+

@@ -1,0 +1,52 @@
+  Higrunn (1153) [OCULTO]: o 100: [2] Mão do Mundo · o 200: [6] Pele do Mundo (contra Sal) · o 300: [9] Nome que Anda
+  Mamiltia (1149) [OCULTO]: o 100: [12] Memória de Rei · o 200: [9] Nome que Anda · o 300: [9] Nome que Anda (2º GRAU: o número dobra, o preço também)
+  Lurentetta (774) [OCULTO]: o 100: [3] Olho Aberto · o 200: [1] Segundo Coração · o 300: [6] Pele do Mundo (contra Gelo)
+  Celocus (714) [OCULTO]: o 100: [11] Passo Certo · o 200: [4] Sangue Grosso · o 300: [7] Fôlego Sem Fundo
+  Borecci (615) [OCULTO]: o 100: [1] Segundo Coração · o 200: [2] Mão do Mundo · o 300: [9] Nome que Anda
+  Almision (440) [OCULTO]: o 100: [11] Passo Certo · o 200: [10] Mão que Doma · o 300: [11] Passo Certo (2º GRAU: o número dobra, o preço também)
+  Teraseth (432) [OCULTO]: o 100: [12] Memória de Rei · o 200: [9] Nome que Anda · o 300: [4] Sangue Grosso
+  Eiandald (420) [OCULTO]: o 100: [11] Passo Certo · o 200: [7] Fôlego Sem Fundo · o 300: [1] Segundo Coração
+  a Guardiã da Tenaz (416) [OCULTO]: o 100: [11] Passo Certo · o 200: [9] Nome que Anda · o 300: [10] Mão que Doma
+  Adurel (378) [OCULTO]: o 100: [7] Fôlego Sem Fundo · o 200: [9] Nome que Anda · o 300: [1] Segundo Coração
+  Skotha Graskur (370) [OCULTO]: o 100: [6] Pele do Mundo (contra Peso) · o 200: [3] Olho Aberto · o 300: [8] Sorte Velha
+  Tervane (360) [OCULTO]: o 100: [4] Sangue Grosso · o 200: [9] Nome que Anda · o 300: [5] Voz de Mando
+  Leliel (351) [OCULTO]: o 100: [5] Voz de Mando · o 200: [2] Mão do Mundo · o 300: [2] Mão do Mundo (2º GRAU: o número dobra, o preço também)
+  Garkunn (343) [OCULTO]: o 100: [2] Mão do Mundo · o 200: [4] Sangue Grosso · o 300: [7] Fôlego Sem Fundo
+  Orron (340) [OCULTO]: o 100: [10] Mão que Doma · o 200: [3] Olho Aberto · o 300: [4] Sangue Grosso
+  Qunemneth (330) [OCULTO]: o 100: [6] Pele do Mundo (contra Vida) · o 200: [10] Mão que Doma · o 300: [7] Fôlego Sem Fundo
+  Gorine (330) [OCULTO]: o 100: [3] Olho Aberto · o 200: [4] Sangue Grosso · o 300: [7] Fôlego Sem Fundo
+  Naera (330) [OCULTO]: o 100: [4] Sangue Grosso · o 200: [11] Passo Certo · o 300: [8] Sorte Velha
+  Ceduion (310) [OCULTO]: o 100: [12] Memória de Rei · o 200: [7] Fôlego Sem Fundo · o 300: [2] Mão do Mundo
+  Hundunn (300) [OCULTO]: o 100: [3] Olho Aberto · o 200: [7] Fôlego Sem Fundo · o 300: [1] Segundo Coração
+  Varuun (290) [OCULTO]: o 100: [10] Mão que Doma · o 200: [1] Segundo Coração
+  Xaysress (284) [OCULTO]: o 100: [2] Mão do Mundo · o 200: [7] Fôlego Sem Fundo
+  Souane (282) [OCULTO]: o 100: [3] Olho Aberto · o 200: [3] Olho Aberto (2º GRAU: o número dobra, o preço também)
+  Meor (275) [OCULTO]: o 100: [11] Passo Certo · o 200: [5] Voz de Mando
+  Taunn (275) [OCULTO]: o 100: [5] Voz de Mando · o 200: [7] Fôlego Sem Fundo
+  Zazess (275) [OCULTO]: o 100: [2] Mão do Mundo · o 200: [7] Fôlego Sem Fundo
+  Altheltia (268) [OCULTO]: o 100: [11] Passo Certo · o 200: [2] Mão do Mundo
+  Liis (260) [OCULTO]: o 100: [2] Mão do Mundo · o 200: [2] Mão do Mundo (2º GRAU: o número dobra, o preço também)
+  Nisis (260) [OCULTO]: o 100: [9] Nome que Anda · o 200: [9] Nome que Anda (2º GRAU: o número dobra, o preço também)
+  Ossan (260) [OCULTO]: o 100: [3] Olho Aberto · o 200: [12] Memória de Rei
+  Goald (255) [OCULTO]: o 100: [4] Sangue Grosso · o 200: [2] Mão do Mundo
+  Isair (245) [OCULTO]: o 100: [4] Sangue Grosso · o 200: [10] Mão que Doma
+  Lavis (245) [OCULTO]: o 100: [12] Memória de Rei · o 200: [8] Sorte Velha
+  Tair (240) [OCULTO]: o 100: [5] Voz de Mando · o 200: [7] Fôlego Sem Fundo
+  Moreth (232): o 100: [7] Fôlego Sem Fundo · o 200: [3] Olho Aberto
+  Quthemnus (229) [OCULTO]: o 100: [1] Segundo Coração · o 200: [11] Passo Certo
+  Tundald (215) [OCULTO]: o 100: [11] Passo Certo · o 200: [5] Voz de Mando
+  Xaesrir (200) [OCULTO]: o 100: [10] Mão que Doma · o 200: [5] Voz de Mando
+  Mave (175) [OCULTO]: o 100: [4] Sangue Grosso
+  Tuir (160) [OCULTO]: o 100: [12] Memória de Rei
+  Mie (150) [OCULTO]: o 100: [7] Fôlego Sem Fundo
+  Zeazhis (150) [OCULTO]: o 100: [11] Passo Certo
+  Yeror (130) [OCULTO]: o 100: [11] Passo Certo
+  Eiagrir (126): o 100: [10] Mão que Doma
+  Sizhir (125) [OCULTO]: o 100: [11] Passo Certo
+  Sior (125) [OCULTO]: o 100: [1] Segundo Coração
+  Isolda (117): o 100: [1] Segundo Coração
+  Zitha (115) [OCULTO]: o 100: [7] Fôlego Sem Fundo
+  Fabaino (100): o 100: [7] Fôlego Sem Fundo
+  Siir (100) [OCULTO]: o 100: [3] Olho Aberto
+  Vrothos (100) [OCULTO]: o 100: [12] Memória de Rei
+  Bjestir (100) [OCULTO]: o 100: [6] Pele do Mundo (contra Fogo)

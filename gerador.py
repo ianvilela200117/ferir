@@ -162,6 +162,26 @@ def monstro(cat=None, essencia=None, habitat=None):
         'drops': drops,
         **({'NOMEADO (Livro Nove 8.4)': 'nível +20% (já somado), um traço a mais (já rolado), despojo DOBRADO, XP em dobro; título com efeito a quem o matar primeiro'} if nomeado else {}),
     }
+
+
+# MOTOR 9.1 (438): a FICHA DE LUTA pronta para o luta.py (não rola nada: só arruma o que o gerador já deu). O Mestre confere pela G9 antes de usar.
+ACENTO = {'Agua': 'Água', 'Podridao': 'Podridão', 'Silencio': 'Silêncio', 'Forca': 'Força'}
+DEG_LUTA = {'Comum': 0, 'Incomum': 1, 'Raro': 2, 'Epico': 3, 'Unico': 4, 'Lendario': 5, 'Mitico': 6, 'Primordial': 7}
+COVIL_DANO = {'Epico': '4d6', 'Unico': '6d6', 'Lendario': '8d6', 'Mitico': '12d6', 'Primordial': '20d6'}
+def ficha_luta(m):
+    """o bloco "monstro" do arquivo de luta (sims/X.json), com os traços por extenso: o luta.py roda os que conhece e avisa os que ficam à mão"""
+    import json, re
+    cat = next(c for c in CATS if NOME_CAT[c] == m['categoria']); nv = m['nível']; e = m['essência']; b, dd = MAG[cat]
+    n = re.match(r'(\d+)d(\d+)', dd) if cat != 'Comum' else None
+    F = {'nome': m['nome'], 'cat': m['categoria'], 'nivel': nv, 'pv': nv * PVMULT[cat], 'df': 10 + nv // 4 + BONUS[cat], 'rd': RD[cat], 'at': nv // 4 + BONUS[cat],
+         'dado': DADO[m['tamanho']], 'mult': MULT[cat], 'essencia': ACENTO.get(e, e), 'fraqueza': ACENTO.get(ESS[e][4], ESS[e][4]), 'tracos': list(m['traços'])}
+    if n: F['poder'] = {'nome': m['poder assinatura'].split(',')[0], 'tipo': 'area', 'cd': 10 + 2 * b, 'dano': f'{int(n.group(1)) * 2}d{n.group(2)}'}
+    if m['comportamento'].startswith('inteligente'): F['inteligente'] = True
+    if m['comportamento'].startswith('guardião'): F['moral'] = False
+    linhas = ['ficha de luta (colar em "monstro" no arquivo de sims/; conferir pela G9; o luta.py roda os traços que conhece): ' + json.dumps(F, ensure_ascii=False)]
+    if cat in COVIL_DANO:
+        linhas.append('  se lutar NA TOCA (G13), somar: ' + json.dumps({'covil': {'nome': 'o covil dele', 'dano': COVIL_DANO[cat], 'cd': 15 + DEG_LUTA[cat] * 2, 'efeito': 'uma condição da G16'}}, ensure_ascii=False))
+    return linhas
  
 # ---------- NPC vivo ----------
 DESEJO = ['uma casa própria', 'um título', 'vingar um morto', 'pagar uma dívida antiga', 'ser reconhecido no ofício', 'proteger um filho',
@@ -276,7 +296,9 @@ def main():
         arg = None; n = int(pos[0]) if pos else 1
     for _ in range(n):
         if tipo == 'material': show(material(arg, kv.get('essencia'), kv.get('origem')))
-        elif tipo == 'monstro': show(monstro(arg, kv.get('essencia'), kv.get('habitat')))
+        elif tipo == 'monstro':
+            mo = monstro(arg, kv.get('essencia'), kv.get('habitat')); show(mo)
+            for l in ficha_luta(mo): print(l)
         elif tipo == 'missao': show(missao(arg))
         elif tipo == 'npc': show(npc())
         elif tipo == 'culto': show(culto())

@@ -55,3 +55,13 @@
 - As Artes de arma dos heróis da casa (o Moreth, o Eiagrir, a Eliane, a Isolda, o Graur) ainda não foram escolhidas: entram na ficha de combate, declaradas no envelope, antes da próxima luta de cada um.
 - Os Despertares dos NPCs do mundo rolam quando eles entrarem em cena.
 - O Livro em HTML (`livro_do_mundo.html`) foi refeito com a aba nova.
+
+## MOTOR 9.1 (Dia 438): o que faltava, feito (a pergunta 4 do jogador: "todas essas correções do 4")
+- **(a)** o `luta.py` roda sozinho os traços novos e os velhos que mexem na luta, o OLHAR, a 2ª FASE, a Resistência Lendária, as CRIAS, os EFEITOS das Artes (com Encadear e Remate) e os DONS; o `gerador.py` imprime a ficha de luta; o `combate.py` avisa a Arte sem a chave. Testado em cópia: as lutas antigas dão a mesma régua que davam.
+- **(b)** os capítulos 6 e 7 do Livro com os materiais e os bichos que entraram depois do 356 (o que a casa sabe); o oculto em `compendio/segredos_do_mestre.md`; erros de registro acertados (o Neane "vivo", o hadun com duas fichas, a Eloune na tabela de avistamento, o orloxa e o luskar dados como Míticos, dois nomes de drop que batiam no cânone).
+- **(c)** `edito.py` (G27), `cria.py` (G25) e `cancao.py` (G28), ligados ao tick semanal; a Fama do rei anotada (5).
+- **(d)** `despertar.py` e `artes.py`: os Dons de 52 pessoas e as Artes de dez da casa e quinze grandes do mundo (os de fora, ocultos).
+- **(e)** a classe do Livro, os traços, o desejo, a ambição, o medo, o segredo e a linha vermelha de todos os NPCs vivos (`classe.py liga|gera`, `npc.py vida`).
+- **(f)** G35 os ofícios de coleta com grau (`coleta.py`), G36 as festas do calendário (`festas.py`, no tick diário), G37 o atlas das masmorras (`masmorra.py atlas|degrau`), no Livro Nove 14 a 16.
+- **Erro achado no caminho:** o leitor de classes do `classe.py` lia só a 1ª raridade de cada família; consertado (o sorteio do Holgir, que caiu numa Lendária, foi corrigido pelo dado só nele).
+

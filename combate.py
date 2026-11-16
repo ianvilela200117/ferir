@@ -6,6 +6,8 @@ Uso:
   python3 combate.py monta SAIDA.json base=ARQ.json NOME...  cria sims/SAIDA.json: o monstro vem do arquivo base, o grupo vem daqui
   python3 combate.py poe NOME campo=valor ...                acerta a ficha (at, df, rd, pv, dado, mult, b) e marca o nível de hoje
   python3 combate.py nova NOME nivel at df rd pv dado mult b
+MOTOR 9.1 (438): a conferência mostra as ARTES DE ARMA de cada um (a chave "arte" no feitiço da ficha faz o luta.py rodar o efeito) e o base=
+pode trazer "tracos" no monstro (o texto do gerador): o luta.py roda os traços, a 2ª fase e o olhar sozinho.
 O nível vem de ficha.json (Ferir) e de npcs.json (os outros). O PV de Ferir vem da ficha viva. Ferido (feridos.py) é avisado; ferimento
 LEVE entra com −2 no ataque e na defesa; SÉRIO para cima não entra.
 """
@@ -56,6 +58,16 @@ def main():
             # 426 (G9): a CONFERÊNCIA que faltou na forquilha: o que a ficha tem e o que os livros dizem que a pessoa carrega
             mgs = g.get('magias') or ([g['magia']] if g.get('magia') else [])
             CONF.append(f"  {k} (nível {nv or g.get('nivel')}): ficha com {len(mgs)} feitiço(s): " + ('; '.join(m.get('nome', m.get('dano','?')) for m in mgs) or 'NENHUM') + f" · peças na ficha: {g.get('pecas','⚠ NÃO ANOTADAS')}")
+            # MOTOR 9.1 (438): as ARTES DE ARMA com efeito (a chave "arte" faz o luta.py rodar o efeito; sem ela só sai o dano)
+            try:
+                from luta import ARTES, chave_arte
+                com = [m['arte'] for m in mgs if m.get('arte')]
+                sem = [m.get('nome', '?')[:30] for m in mgs if not m.get('arte') and any(chave_arte(m.get('nome', '')).startswith(a_) for a_ in ARTES)]
+                if com: CONF.append('      Artes de arma com efeito no script: ' + ', '.join(com) + ''.join(f" (encadeia {m['encadeia']['arte'] if isinstance(m['encadeia'], dict) else '+'.join(x['arte'] for x in m['encadeia'])})" for m in mgs if m.get('encadeia')))
+                if sem: CONF.append('      ⚠ Arte SEM a chave "arte" (só o dano roda; python3 luta.py artes): ' + '; '.join(sem))
+                ruins = [m['arte'] for m in mgs if m.get('arte') and chave_arte(m['arte']) not in ARTES]
+                if ruins: CONF.append('      ⚠ Arte desconhecida: ' + ', '.join(ruins))
+            except ImportError: pass
             for lv in _livros_sobre(k): CONF.append('      livro: ' + lv)
             if k in fer:
                 if fer[k]['grau'] == 'LEVE': g['at'] -= 2; g['df'] -= 2; print(f'⚠ {k} luta ferido (LEVE): −2 no ataque e na defesa.')

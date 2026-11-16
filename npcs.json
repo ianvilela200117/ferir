@@ -119,7 +119,12 @@
    "Dia 433: 433 (noite): tomou a carroça do ouro da Liga na estalagem da estrada do sal com 8 da guarda (CR35: 40 × 23); os 4 guardas da Liga se renderam no meio da luta; EXAUSTÃO 1 (G16: a noite em marcha; sai com a primeira noite de descanso)",
    "+500 Tick 434: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)",
    "Tick 434: SOBE a 96",
-   "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir"
+   "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -139,7 +144,12 @@
   "voz": "frases curtas, de quartel; diz o custo antes do plano; chama o rei de 'senhor' só em público",
   "lealdade": 5,
   "votos_seguidos": 0,
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "nunca mais passar fome",
+  "ambicao": "conquistar terra",
+  "medo": "a morte de um filho",
+  "segredo": "tem uma doença escondida (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Herkald": {
   "nivel": 86,
@@ -255,7 +265,12 @@
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
    "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
    "+500 Tick 434: PASSO (mestre da bancada; o martinete)",
-   "Tick 434: SOBE a 86"
+   "Tick 434: SOBE a 86",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
@@ -295,7 +310,12 @@
     "ate": 490
    }
   ],
-  "votos_seguidos": 0
+  "votos_seguidos": 0,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a pobreza",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Graur": {
   "nivel": 75,
@@ -419,7 +439,13 @@
    "+500 Tick 427: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
    "+500 Tick 434: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
-   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
+   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)",
+   "Dia 438: classe do Livro: Ferreiro de Guerra (FORJA, Raro) · leitura do Mestre: Forjador de Guerra",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
@@ -451,7 +477,19 @@
    }
   ],
   "votos_seguidos": 0,
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "classe_livro": "Ferreiro de Guerra",
+  "assinaturas": [
+   "Forja de Campanha (Passiva)",
+   "Conserto Rápido (10 minutos, 3)",
+   "Arma da Hoste (Passiva)"
+  ],
+  "fraqueza": "obras finas e joias, −2.",
+  "desejo": "uma casa própria",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "ser esquecido",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Krernos": {
   "nivel": 50,
@@ -520,14 +558,32 @@
    "+500 Tick 413: SURPRESA (gerador) (Comida e Comércio; o sal do Delta)",
    "+500 Tick 427: PASSO (Comida e Comércio; o sal do Delta)",
    "Tick 427: SOBE a 50",
-   "+1000 Tick 434: MISSÃO/FEITO (Comida e Comércio; o sal do Delta)"
+   "+1000 Tick 434: MISSÃO/FEITO (Comida e Comércio; o sal do Delta)",
+   "Dia 438: classe do Livro: Mercenário (AÇO, Comum) · leitura do Mestre: bandido-chefe de AÇO com Ladinagem",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Bandido-chefe (AÇO, Comum) · Ladinagem · AVARENTO?",
   "ocupacao": "Comida e Comércio; o sal do Delta",
   "tracos": [
    "AVARENTO"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "classe_livro": "Mercenário",
+  "assinaturas": [
+   "Golpe Sujo (Ativa, 2)",
+   "Preço Certo (Passiva)",
+   "Sem Bandeira (Passiva)"
+  ],
+  "fraqueza": "sem paga, −2 em tudo no combate.",
+  "desejo": "deixar uma obra",
+  "ambicao": "formar uma companhia",
+  "medo": "a magia",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Tamel": {
   "nivel": 40,
@@ -607,7 +663,12 @@
    "+1000 Tick 413: MISSÃO/FEITO (a ponte do Clã; o Braseiro)",
    "Tick 413: SOBE a 43",
    "+500 Tick 420: PASSO (a ponte do Clã; o Braseiro)",
-   "+500 Tick 427: SURPRESA (gerador) (a ponte do Clã; o Braseiro)"
+   "+500 Tick 427: SURPRESA (gerador) (a ponte do Clã; o Braseiro)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Ferreiro (FORJA, Comum) · Forja Treinado · AMBICIOSO, CURIOSO, LEAL",
   "ocupacao": "a ponte do Clã; o Braseiro",
@@ -623,7 +684,12 @@
    "Golpe Certo (1x por obra)"
   ],
   "fraqueza": "sem martelo e bigorna, nada funciona.",
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "mandar em alguém",
+  "ambicao": "conquistar terra",
+  "medo": "ser esquecido",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Nouliel": {
   "nivel": 33,
@@ -706,7 +772,13 @@
    "Dia 425: 425 noite: guarda o corpo da ISOLDA no sal da adega fria (o enterro do 426 vira vigília: o rei quer trazê-la de volta); desempatou as águas para o Fabaino (MA25)",
    "+500 Tick 427: PASSO (o livro; os pilares; a caixa-forte)",
    "Dia 428: VOTO VENCIDO no conselho (A TERRA DO PORTO DE MARASAR (do reino desde o 287): os FILHO): queria C) dividir: o porto mede e cada lado fica com metade",
-   "+500 Tick 434: PASSO (o livro; os pilares; a caixa-forte)"
+   "+500 Tick 434: PASSO (o livro; os pilares; a caixa-forte)",
+   "Dia 438: classe do Livro: Burocrata (OURO, Incomum) · leitura do Mestre: Intendente do livro e dos pilares",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Intendente (OURO, Comum) · HONESTA, AVARENTA, DILIGENTE",
   "ocupacao": "o livro; os pilares; a caixa-forte",
@@ -727,7 +799,19 @@
    }
   ],
   "lealdade": 5,
-  "votos_seguidos": 1
+  "votos_seguidos": 1,
+  "classe_livro": "Burocrata",
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel.",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a pobreza",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Skedda": {
   "nivel": 53,
@@ -822,7 +906,13 @@
    "+1000 Tick 420: MISSÃO/FEITO (o pedágio do sal; os 10 Selos)",
    "Tick 420: SOBE a 52",
    "Tick 427: SOBE a 53",
-   "+500 Tick 434: SURPRESA (gerador) (o pedágio do sal; os 10 Selos)"
+   "+500 Tick 434: SURPRESA (gerador) (o pedágio do sal; os 10 Selos)",
+   "Dia 438: classe do Livro: Runomante (CHAMA, Raro) · leitura do Mestre: Runista (Magia, runas)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Runista (MAGIA, Comum) · Magia Treinado (runas) · AVARENTA, COVARDE, GREGÁRIA",
   "ocupacao": "o pedágio do sal; os 10 Selos",
@@ -830,7 +920,19 @@
   "tracos": [
    "AVARENTO",
    "COVARDE"
-  ]
+  ],
+  "classe_livro": "Runomante",
+  "assinaturas": [
+   "Runa Guardada (Ativa, 1 hora)",
+   "Runa de Alarme (Passiva)",
+   "Mão Precisa (Passiva)"
+  ],
+  "fraqueza": "runa raspada ou apagada não volta.",
+  "desejo": "deixar uma obra",
+  "ambicao": "conquistar terra",
+  "medo": "a prisão",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Iorin": {
   "nivel": 62,
@@ -958,7 +1060,12 @@
    "+500 Tick 427: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
    "Tick 427: SOBE a 61",
    "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
-   "Tick 434: SOBE a 62"
+   "Tick 434: SOBE a 62",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · Forja Iniciante→Treinado · ORGULHOSO, DILIGENTE, DESCONFIADO",
   "ocupacao": "ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa",
@@ -974,7 +1081,12 @@
    "Reparo de Campo (1 hora, 2 Foco)",
    "Golpe Certo (1x por obra)"
   ],
-  "fraqueza": "sem martelo e bigorna, nada funciona."
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "vingar um morto",
+  "ambicao": "formar uma companhia",
+  "medo": "a magia",
+  "segredo": "tem uma doença escondida (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Sira": {
   "nivel": 32,
@@ -1068,7 +1180,12 @@
    "Dia 423: 422 noite: desceu a ERYSSA sem ser vista (SR22 [10]): 28 do Xaathis, armas e piche; copiou as letras da porta",
    "Dia 424: 424: testemunhou contra os 7 de Eryssa em praça e COMOVEU a praça ([20])",
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria B) a MOUA (16, salineira e guia de canais do Delta)",
-   "+500 Tick 427: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)"
+   "+500 Tick 427: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Cavaleira (AÇO, Comum)",
   "ocupacao": "LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275",
@@ -1087,7 +1204,12 @@
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
   "votos_seguidos": 0,
   "lealdade": 5,
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "desejo": "aprender um segredo",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "o próprio passado",
+  "segredo": "é filho de quem não deveria (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Bren": {
   "nivel": 20,
@@ -1152,7 +1274,12 @@
    "+500 Tick 420: PASSO (a forja grande)",
    "+500 Tick 427: PASSO (a forja grande)",
    "Tick 427: SOBE a 25",
-   "+1000 Tick 434: MISSÃO/FEITO (a forja grande)"
+   "+1000 Tick 434: MISSÃO/FEITO (a forja grande)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · NERVOSO, LEAL, TEIMOSO",
   "ocupacao": "a forja grande",
@@ -1167,7 +1294,12 @@
    "Golpe Certo (1x por obra)"
   ],
   "fraqueza": "sem martelo e bigorna, nada funciona.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "enriquecer",
+  "ambicao": "fundar uma escola",
+  "medo": "o fogo",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Brara": {
   "nivel": 62,
@@ -1221,7 +1353,13 @@
    "Dia 426: 426: a carta chegou: faz as PICARETAS, mas manda dizer que a partilha foi injusta e não rasga nenhuma dívida antes de ver o rei (BR26 [1])",
    "+500 Tick 427: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))",
    "+500 Tick 434: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))",
-   "Dia 435: 435: recebeu a FUNDIÇÃO VELHA de Levis-baixa INTEIRA (a metade da coroa); RASGOU EM PRAÇA as dívidas pequenas do livro do Ardenghi no mesmo dia (BR36 [4])"
+   "Dia 435: 435: recebeu a FUNDIÇÃO VELHA de Levis-baixa INTEIRA (a metade da coroa); RASGOU EM PRAÇA as dívidas pequenas do livro do Ardenghi no mesmo dia (BR36 [4])",
+   "Dia 438: classe do Livro: Ferreiro (FORJA, Comum) · leitura do Mestre: Fundidora (Forja Mestre)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Fundidora (FORJA, Incomum) · Forja Mestre · TEIMOSA, HONESTA, CORAJOSA",
   "ocupacao": "GOVERNADORA DE LEVIS (335)",
@@ -1243,7 +1381,19 @@
     "dia": 435,
     "ate": null
    }
-  ]
+  ],
+  "classe_livro": "Ferreiro",
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "um título",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "ser esquecido",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Ouvald": {
   "nivel": 44,
@@ -1290,7 +1440,12 @@
    "+1000 Tick 399: MISSÃO/FEITO (no PORTO DE MARASAR com o remédio (295))",
    "Tick 399: SOBE a 44",
    "Dia 405: 405: chegou a Levis com o remédio (Saúde de Levis +1 enquanto ele estiver lá)",
-   "+500 Tick 434: PASSO (no PORTO DE MARASAR com o remédio (295))"
+   "+500 Tick 434: PASSO (no PORTO DE MARASAR com o remédio (295))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Alquimista (FORJA, Incomum) · METÓDICO, CALADO",
   "ocupacao": "no PORTO DE MARASAR com o remédio (295)",
@@ -1305,7 +1460,12 @@
    "AVARENTO",
    "CORAJOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "deixar uma obra",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "voltar a ser escravo",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Nelior": {
   "nivel": 34,
@@ -1349,7 +1509,12 @@
    "+500 Tick 406: PASSO (o lazareto e a enfermaria das crianças)",
    "+500 Tick 413: PASSO (o lazareto e a enfermaria das crianças)",
    "+1000 Tick 420: MISSÃO/FEITO (o lazareto e a enfermaria das crianças)",
-   "+500 Tick 434: PASSO (o lazareto e a enfermaria das crianças)"
+   "+500 Tick 434: PASSO (o lazareto e a enfermaria das crianças)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Curandeiro (FÉ/VÉU, Comum)",
   "ocupacao": "o lazareto e a enfermaria das crianças",
@@ -1364,7 +1529,12 @@
    "HONESTO",
    "DILIGENTE"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "uma casa própria",
+  "ambicao": "formar uma companhia",
+  "medo": "a solidão",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Tirello": {
   "nivel": 48,
@@ -1415,14 +1585,32 @@
    "+500 Tick 399: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
    "+500 Tick 406: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
    "+1000 Tick 420: MISSÃO/FEITO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
-   "+500 Tick 434: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))"
+   "+500 Tick 434: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
+   "Dia 438: classe do Livro: Diplomata (VOZ, Incomum) · leitura do Mestre: Podestà (VOZ e OURO)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Podestà (VOZ/OURO, Incomum) · DEVOTO, PRÁTICO, MEDROSO",
   "ocupacao": "a praça, as festas e os casamentos (o conselho governa, escrito no 204)",
   "tracos": [
    "CURIOSO",
    "AVARENTO"
-  ]
+  ],
+  "classe_livro": "Diplomata",
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "uma casa própria",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "a humilhação pública",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Thugek": {
   "nivel": 39,
@@ -1463,7 +1651,12 @@
    "+500 Tick 406: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))",
    "+500 Tick 420: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))",
    "+500 Tick 427: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))",
-   "+1000 Tick 434: MISSÃO/FEITO (ENTREGUE à justiça de Levis pelo conselho (304))"
+   "+1000 Tick 434: MISSÃO/FEITO (ENTREGUE à justiça de Levis pelo conselho (304))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Soldado Hegre (AÇO, Comum) · LEAL, HONESTO, PACIENTE",
   "ocupacao": "ENTREGUE à justiça de Levis pelo conselho (304)",
@@ -1479,7 +1672,12 @@
    "Ordem Unida (Passiva)",
    "Marcha Forçada (Passiva)"
   ],
-  "fraqueza": "sozinho, perde a Ordem Unida e a Parede."
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "mandar em alguém",
+  "ambicao": "formar uma companhia",
+  "medo": "voltar a ser escravo",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Isolda": {
   "nivel": 117,
@@ -1565,7 +1763,12 @@
    "Dia 426: 425 (a luta refeita): lançou o Toque do gorjal (195); caiu na 3ª rodada e ficou ESTÁVEL; GRAVE até o 447, MARCA: manca · 425 noite: o rei foi à cama dela pedir desculpas; ela o perdoou e disse que lutaria de novo ao lado dele (IS25a [15], a reação dela vale de pé)",
    "+1220 425 (refeita): o Morek fugiu ferido",
    "+1000 Tick 427: MISSÃO/FEITO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
-   "Tick 427: SOBE a 117"
+   "Tick 427: SOBE a 117",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "FRIO"
@@ -1581,7 +1784,13 @@
   "votos_seguidos": 1,
   "lealdade": 4,
   "ultima_subida": 427,
-  "estado": "viva (GRAVE até o 447, manca; o Morek, 425)"
+  "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
+  "despertar": "Segundo Coração",
+  "desejo": "aprender um segredo",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "ser esquecido",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Thuron": {
   "nivel": 69,
@@ -1671,7 +1880,12 @@
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria B) a MOUA (16, salineira e guia de canais do Delta)",
    "Dia 425: 425 noite: o rei lhe deu os 8 Sem-Torre para pôr em serviço; lançou o FALAR COM MORTO na Isolda para o rei",
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
-   "+1000 Tick 434: MISSÃO/FEITO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)"
+   "+1000 Tick 434: MISSÃO/FEITO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "votos_vencidos": 10,
   "tracos": [
@@ -1686,7 +1900,12 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 0
+  "votos_seguidos": 0,
+  "desejo": "aprender um segredo",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "a solidão",
+  "segredo": "roubou o que tem (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Ithra": {
   "nivel": 38,
@@ -1739,13 +1958,31 @@
    "+500 Tick 406: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
    "+1000 Tick 413: MISSÃO/FEITO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
    "Tick 413: SOBE a 38",
-   "+500 Tick 434: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)"
+   "+500 Tick 434: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
+   "Dia 438: classe do Livro: Mago (CHAMA, Incomum) · leitura do Mestre: Maga de Elo",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AMBICIOSO",
    "COVARDE"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Mago",
+  "assinaturas": [
+   "Grimório (Passiva)",
+   "Contramágica (Reação, círculo × 5)",
+   "Foco Duplo (Passiva)"
+  ],
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "casar acima da sua classe",
+  "medo": "o próprio passado",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Dovan": {
   "nivel": 24,
@@ -1782,7 +2019,12 @@
    "+500 Tick 301: PASSO (SARGENTO da guarda e da milícia (o conselho, Dia 205) até a Eliane voltar)",
    "+500 Tick 308: SURPRESA (gerador) (SARGENTO da guarda e da milícia (o conselho, Dia 205) até a Eliane voltar)",
    "Dia 308: a trama com o Tirello explodiu: feriu alguém do Tirello e foi PRESO; na cela troca o lugar da NECRÓPOLE DE ALNESAR por clemência",
-   "Dia 309: o conselho RECUSOU a troca: ele será julgado pela lei"
+   "Dia 309: o conselho RECUSOU a troca: ele será julgado pela lei",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe_livro": "Soldado",
   "assinaturas": [
@@ -1794,7 +2036,12 @@
   "tracos": [
    "LEAL",
    "AMBICIOSO"
-  ]
+  ],
+  "desejo": "proteger um filho",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "o próprio passado",
+  "segredo": "é filho de quem não deveria (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Venne": {
   "nivel": 20,
@@ -1862,7 +2109,12 @@
    "+500 Tick 420: SURPRESA (gerador) (a guarda da Eliane)",
    "+1000 Tick 427: MISSÃO/FEITO (a guarda da Eliane)",
    "Tick 427: SOBE a 27",
-   "+500 Tick 434: PASSO (a guarda da Eliane)"
+   "+500 Tick 434: PASSO (a guarda da Eliane)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe_livro": "Cavaleiro",
   "assinaturas": [
@@ -1875,7 +2127,12 @@
    "CORAJOSO",
    "TEIMOSO"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "sair da cidade",
+  "ambicao": "fundar uma escola",
+  "medo": "perder a mão do ofício",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Odrum": {
   "nivel": 20,
@@ -1932,13 +2189,31 @@
    "Tick 406: SOBE a 20",
    "+500 Tick 413: PASSO (refugiado em Ireviel (Dia 202))",
    "+500 Tick 434: PASSO (refugiado em Ireviel (Dia 202))",
-   "Dia 434: 431-434 (LV31 → novidade [9], LV31n [5], LV31m [3], LV31c [2]): LUCROU com o ferro e o grão da frota perdida de Levis e juntou-se aos da MOEDA VELHA como sócios no que o rio deu (a casa não sabe ainda)"
+   "Dia 434: 431-434 (LV31 → novidade [9], LV31n [5], LV31m [3], LV31c [2]): LUCROU com o ferro e o grão da frota perdida de Levis e juntou-se aos da MOEDA VELHA como sócios no que o rio deu (a casa não sabe ainda)",
+   "Dia 438: classe do Livro: Camponês (RAIZ, Comum) · leitura do Mestre: mineiro (trabalhador da terra)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "SABIO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "classe_livro": "Camponês",
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão.",
+  "desejo": "um título",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "o fogo",
+  "segredo": "roubou o que tem (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Kasgal": {
   "nivel": 25,
@@ -1947,7 +2222,12 @@
   "ocupacao": "preso pela contra-espionagem (Dia 203)",
   "log": [
    "Dia 203: pego pela contra-espionagem tentando entrar na casa para o Ardenghi",
-   "Dia 204: o Krernos o interroga; ele não fala e jura vingança; o sargento do podestà vem exigir o preso para a justiça da cidade"
+   "Dia 204: o Krernos o interroga; ele não fala e jura vingança; o sargento do podestà vem exigir o preso para a justiça da cidade",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AMBICIOSO",
@@ -1959,7 +2239,12 @@
    "Ouvir Atrás (Passiva)",
    "Rede (Passiva)"
   ],
-  "fraqueza": "ser desmascarado queima o rosto naquela corte."
+  "fraqueza": "ser desmascarado queima o rosto naquela corte.",
+  "desejo": "mandar em alguém",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a velhice",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Tilde": {
   "nivel": 54,
@@ -2074,7 +2359,13 @@
    "Tick 427: SOBE a 52 (de 50: fila de XP)",
    "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
    "Dia 428: 428 (noite): o GIUNN, dos Jurados de Steunn, a convidou a ir a Steunn por vontade própria; ela perguntou por que as guildas a querem; depois ajudou na Couraça de Espinho do Moreth",
-   "Tick 434: SOBE a 54 (de 52: fila de XP)"
+   "Tick 434: SOBE a 54 (de 52: fila de XP)",
+   "Dia 438: classe do Livro: Ferreiro (FORJA, Comum) · leitura do Mestre: aprendiz da forja ao lado do rei",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 434,
   "tracos": [
@@ -2089,7 +2380,19 @@
     "dia": 400,
     "ate": 490
    }
-  ]
+  ],
+  "classe_livro": "Ferreiro",
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "mandar em alguém",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a pobreza",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Hraga": {
   "nivel": 20,
@@ -2151,13 +2454,31 @@
    "Tick 413: SOBE a 27",
    "+500 Tick 420: PASSO (os capuzes do Graur)",
    "+500 Tick 427: SURPRESA (gerador) (os capuzes do Graur)",
-   "+500 Tick 434: PASSO (os capuzes do Graur)"
+   "+500 Tick 434: PASSO (os capuzes do Graur)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 413,
   "tracos": [
    "VINGATIVO",
    "DISCIPLINADO"
-  ]
+  ],
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "curar alguém",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "o fogo",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "capuz 3": {
   "nivel": 27,
@@ -2204,13 +2525,31 @@
    "+500 Tick 399: PASSO (os capuzes do Graur)",
    "+1000 Tick 427: MISSÃO/FEITO (os capuzes do Graur)",
    "Tick 427: SOBE a 27",
-   "+500 Tick 434: SURPRESA (gerador) (os capuzes do Graur)"
+   "+500 Tick 434: SURPRESA (gerador) (os capuzes do Graur)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "DESCONFIADO",
    "PACIENTE"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "sair da cidade",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "voltar a ser escravo",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "capuz 4": {
   "nivel": 27,
@@ -2254,13 +2593,31 @@
    "+500 Tick 413: SURPRESA (gerador) (os capuzes do Graur)",
    "Tick 413: SOBE a 27",
    "+500 Tick 420: PASSO (os capuzes do Graur)",
-   "+500 Tick 427: PASSO (os capuzes do Graur)"
+   "+500 Tick 427: PASSO (os capuzes do Graur)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "JUSTO",
    "CALCULISTA"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "proteger um filho",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "perder a mão do ofício",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Kreium": {
   "nivel": 44,
@@ -2303,13 +2660,30 @@
    "+1000 Tick 420: MISSÃO/FEITO (devolvido ao Clã (208), na barca para Levis)",
    "Tick 420: SOBE a 44",
    "+1000 Tick 427: MISSÃO/FEITO (devolvido ao Clã (208), na barca para Levis)",
-   "+500 Tick 434: PASSO (devolvido ao Clã (208), na barca para Levis)"
+   "+500 Tick 434: PASSO (devolvido ao Clã (208), na barca para Levis)",
+   "Dia 438: classe do Livro: Batedor (SOMBRA, Comum) · leitura do Mestre: chefe de batedores do Clã",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "CURIOSO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Batedor",
+  "assinaturas": [
+   "Olho Longe (Passiva)",
+   "Rastro (Passiva)",
+   "Recuo (Reação, 1)"
+  ],
+  "fraqueza": "corpo a corpo, −1 de Defesa.",
+  "medo": "do fogo",
+  "desejo": "um título",
+  "ambicao": "conquistar terra",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Seline": {
   "nivel": 24,
@@ -2351,7 +2725,12 @@
    "Tick 420: SOBE a 24",
    "Dia 421: 421: o carregador do cais (agente do Ardenghi) contou à Sira que levava a ela o que via; o pombo do 410 saiu da banca dela",
    "Dia 421: 421: por ordem do rei (2b), VIGIADA pelos olhos da Sira; o carregador preso serve de isca",
-   "+500 Tick 434: PASSO (banca na feira de Ireviel (crédito da casa, 209))"
+   "+500 Tick 434: PASSO (banca na feira de Ireviel (crédito da casa, 209))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 420,
   "tracos": [
@@ -2364,7 +2743,12 @@
    "Livro-Caixa (Passiva)",
    "Freguês (Passiva)"
   ],
-  "fraqueza": "toda cidade sabe que ele tem ouro."
+  "fraqueza": "toda cidade sabe que ele tem ouro.",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "ser esquecido",
+  "segredo": "ama alguém proibido (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Tano": {
   "nivel": 17,
@@ -2390,11 +2774,29 @@
    "+500 Tick 259: PASSO (FUGIU de Ireviel (noite do 209))",
    "+500 Tick 259: semana",
    "Tick 259: SOBE a 17",
-   "Dia 303: falou ao rei: OITO da casa estão vivos na TORRE DO SAL da Guilda, em Levis (barqueiros do livro e gente da hoste)"
+   "Dia 303: falou ao rei: OITO da casa estão vivos na TORRE DO SAL da Guilda, em Levis (barqueiros do livro e gente da hoste)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: carregador de AÇO",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "DESCONFIADO"
-  ]
+  ],
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "uma casa própria",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "ser esquecido",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Lasca": {
   "nivel": 25,
@@ -2404,12 +2806,30 @@
   "log": [
    "Dia 208: pego vivo no barco do cais velho, onde o Pelaccino se escondia",
    "Dia 209: o Graur os interroga (ganho): contam quem paga (os conselheiros, pela Messa Tiracci), as saídas do depósito de lã e que o Pelaccino quer a Isolda",
-   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)"
+   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)",
+   "Dia 438: classe do Livro: Ladino (SOMBRA, Comum) · leitura do Mestre: faca da rede de Farenta",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "HONESTO",
    "PREGUICOSO"
-  ]
+  ],
+  "classe_livro": "Ladino",
+  "assinaturas": [
+   "Ataque Furtivo (Passiva)",
+   "Sumir (Bônus, 2)",
+   "Gazua (Passiva)"
+  ],
+  "fraqueza": "em luz plena, perde o Sumir.",
+  "desejo": "casar com quem ama",
+  "ambicao": "fundar uma escola",
+  "medo": "a magia",
+  "segredo": "roubou o que tem (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Miro": {
   "nivel": 25,
@@ -2419,12 +2839,30 @@
   "log": [
    "Dia 208: pego vivo no barco do cais velho; feriu a Brua antes de cair",
    "Dia 209: o Graur os interroga (ganho): contam quem paga (os conselheiros, pela Messa Tiracci), as saídas do depósito de lã e que o Pelaccino quer a Isolda",
-   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)"
+   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)",
+   "Dia 438: classe do Livro: Ladino (SOMBRA, Comum) · leitura do Mestre: faca da rede de Farenta",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "LEAL",
    "CURIOSO"
-  ]
+  ],
+  "classe_livro": "Ladino",
+  "assinaturas": [
+   "Ataque Furtivo (Passiva)",
+   "Sumir (Bônus, 2)",
+   "Gazua (Passiva)"
+  ],
+  "fraqueza": "em luz plena, perde o Sumir.",
+  "desejo": "mandar em alguém",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a prisão",
+  "segredo": "roubou o que tem (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Pelaccino": {
   "nivel": 110,
@@ -2507,7 +2945,12 @@
   "log": [
    "Dia 209: o depósito dele abrigou o Pelaccino",
    "Noite do 209: preso na casa de pouso dele pelo Graur e os capuzes",
-   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)"
+   "Tick 210: a semana dele DESFEITA (erro do semana_npc.py: lia 'PRESO' em maiúscula; corrigido)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe_livro": "Mercador",
   "assinaturas": [
@@ -2519,7 +2962,12 @@
   "tracos": [
    "VINGATIVO",
    "AVARENTO"
-  ]
+  ],
+  "desejo": "nunca mais passar fome",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a morte de um filho",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Dolassi": {
   "nivel": 24,
@@ -2571,13 +3019,31 @@
    "+500 Tick 413: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
    "+500 Tick 427: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
    "+1000 Tick 434: MISSÃO/FEITO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
-   "Tick 434: SOBE a 24"
+   "Tick 434: SOBE a 24",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: remador de AÇO",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "LEAL",
    "DESCONFIADO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "casar com quem ama",
+  "ambicao": "fundar uma escola",
+  "medo": "a prisão",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Draron": {
   "nivel": 57,
@@ -2631,7 +3097,12 @@
    "+500 Tick 420: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
    "+500 Tick 427: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
    "+500 Tick 434: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
-   "Tick 434: SOBE a 57"
+   "Tick 434: SOBE a 57",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "GENEROSO",
@@ -2644,7 +3115,12 @@
    "Segundo Fôlego (Bônus, 1x/combate)"
   ],
   "fraqueza": "sem armadura média ou pesada, −2 de Defesa.",
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "um título",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "voltar a ser escravo",
+  "segredo": "tem uma doença escondida (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Kreine": {
   "nivel": 91,
@@ -2705,13 +3181,31 @@
    "+500 Tick 420: PASSO (EXILADO (324): condenado pela morte do capitão da galé do 218)",
    "Tick 420: SOBE a 91",
    "+500 Tick 427: SURPRESA (gerador) (EXILADO (324): condenado pela morte do capitão da galé do 218)",
-   "+1000 Tick 434: MISSÃO/FEITO (EXILADO (324): condenado pela morte do capitão da galé do 218)"
+   "+1000 Tick 434: MISSÃO/FEITO (EXILADO (324): condenado pela morte do capitão da galé do 218)",
+   "Dia 438: classe do Livro: Guerreiro (AÇO, Comum) · leitura do Mestre: desertor da Liga, de AÇO",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "HONESTO",
    "CRUEL"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Guerreiro",
+  "assinaturas": [
+   "Golpe Peso (Ativa, 2)",
+   "Postura de Ferro (Postura)",
+   "Segundo Fôlego (Bônus, 1x/combate)"
+  ],
+  "fraqueza": "sem armadura média ou pesada, −2 de Defesa.",
+  "desejo": "um título",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a humilhação pública",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Braeth": {
   "nivel": 52,
@@ -2754,12 +3248,29 @@
    "+500 Tick 413: PASSO (enviado do Hrotgar a Ireviel (Dia 210))",
    "+1000 Tick 420: MISSÃO/FEITO (enviado do Hrotgar a Ireviel (Dia 210))",
    "+500 Tick 427: PASSO (enviado do Hrotgar a Ireviel (Dia 210))",
-   "+500 Tick 434: PASSO (enviado do Hrotgar a Ireviel (Dia 210))"
+   "+500 Tick 434: PASSO (enviado do Hrotgar a Ireviel (Dia 210))",
+   "Dia 438: classe do Livro: Orador (VOZ, Raro) · leitura do Mestre: ancião do Clã (VOZ)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "ORGULHOSO",
    "AVARENTO"
-  ]
+  ],
+  "classe_livro": "Orador",
+  "assinaturas": [
+   "Discurso de Praça (1 hora, 6)",
+   "Voz que Pesa (Passiva)",
+   "Tribuna (Passiva)"
+  ],
+  "fraqueza": "um discurso que falha vira piada (−1 de Fama).",
+  "medo": "do fogo",
+  "desejo": "um título",
+  "ambicao": "casar acima da sua classe",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Mormir": {
   "nivel": 17,
@@ -2817,7 +3328,12 @@
    "Dia 425: 425 noite: o rei aceitou os 8: pão e teto, servem à casa (o Thuron dá o serviço)",
    "+500 Tick 427: PASSO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))",
    "+500 Tick 434: PASSO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))",
-   "Tick 434: SOBE a 17"
+   "Tick 434: SOBE a 17",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "CRUEL",
@@ -2830,7 +3346,12 @@
    "Foco Duplo (Passiva)"
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "nunca mais passar fome",
+  "ambicao": "virar Lendário",
+  "medo": "a velhice",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Moreth": {
   "nivel": 232,
@@ -2935,7 +3456,12 @@
    "Dia 428: 428 (noite): recebe a COURAÇA DE ESPINHO (MÍTICA; Sob Medida 4, o nome dele gravado; usa inteira): escamas de ssythis, forro de sasis, rebites de zeieth, o NÚCLEO ÚNICO DE ESPINHO do Morek no peito · leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · DEFEITOS: floresce e pesa; atrai tempestade · o encanto fica para a próxima noite livre na Fornalha",
    "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir",
    "+780 437: o Huir, a sala 5 de Zythir",
-   "+1130 437: a rainha Zatha, a sala 8 de Zythir"
+   "+1130 437: a rainha Zatha, a sala 8 de Zythir",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "LEAL",
@@ -2950,7 +3476,13 @@
    "Segundo Fôlego (Bônus, 1x/combate)"
   ],
   "fraqueza": "sem armadura média ou pesada, −2 de Defesa.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "despertar": "Fôlego Sem Fundo · Olho Aberto",
+  "desejo": "voltar para casa",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "ser esquecido",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Draek": {
   "nivel": 72,
@@ -2988,13 +3520,31 @@
    "+1000 Tick 413: MISSÃO/FEITO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
    "+500 Tick 420: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
    "+1000 Tick 427: MISSÃO/FEITO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
-   "+500 Tick 434: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)"
+   "+500 Tick 434: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
+   "Dia 438: classe do Livro: Diplomata (VOZ, Incomum) · leitura do Mestre: emissário da Liga (VOZ)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AMBICIOSO",
    "LEAL"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "classe_livro": "Diplomata",
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "vingar um morto",
+  "ambicao": "casar acima da sua classe",
+  "medo": "o fogo",
+  "segredo": "roubou o que tem (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Kassa": {
   "nivel": 72,
@@ -3050,7 +3600,12 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "uma casa própria",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "ser esquecido",
+  "segredo": "ama alguém proibido",
+  "linha_vermelha": "nunca trai a família"
  },
  "Veyula": {
   "nivel": 77,
@@ -3091,13 +3646,26 @@
    "+500 Tick 420: SURPRESA (gerador) (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
    "+500 Tick 427: SURPRESA (gerador) (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
    "+500 Tick 434: PASSO (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
-   "Tick 434: SOBE a 77"
+   "Tick 434: SOBE a 77",
+   "Dia 438: classe do Livro: Diplomata (VOZ, Incomum) · leitura do Mestre: enviado da Almision"
   ],
   "tracos": [
    "HONESTO",
    "GENEROSO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "classe_livro": "Diplomata",
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "vingar um morto",
+  "ambicao": "formar uma companhia",
+  "medo": "a morte de um filho",
+  "segredo": "deve a alguém perigoso",
+  "linha_vermelha": "nunca trai a família"
  },
  "Selron": {
   "nivel": 40,
@@ -3138,12 +3706,25 @@
    "+500 Tick 413: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
    "+500 Tick 420: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
    "+500 Tick 427: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
-   "+1000 Tick 434: MISSÃO/FEITO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))"
+   "+1000 Tick 434: MISSÃO/FEITO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
+   "Dia 438: classe do Livro: Batedor (SOMBRA, Comum) · leitura do Mestre: chefe de batedores da Liga"
   ],
   "tracos": [
    "HONESTO",
    "TEIMOSO"
-  ]
+  ],
+  "classe_livro": "Batedor",
+  "assinaturas": [
+   "Olho Longe (Passiva)",
+   "Rastro (Passiva)",
+   "Recuo (Reação, 1)"
+  ],
+  "fraqueza": "corpo a corpo, −1 de Defesa.",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "conquistar terra",
+  "medo": "a pobreza",
+  "segredo": "roubou o que tem",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Goreth": {
   "nivel": 40,
@@ -3186,13 +3767,26 @@
    "Tick 406: SOBE a 40",
    "+500 Tick 413: PASSO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
    "+1000 Tick 420: MISSÃO/FEITO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
-   "+1000 Tick 427: MISSÃO/FEITO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)"
+   "+1000 Tick 427: MISSÃO/FEITO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: velho companheiro de armas do Kreine na Liga"
   ],
   "tracos": [
    "AMBICIOSO",
    "COVARDE"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "enriquecer",
+  "ambicao": "descobrir uma RECEITA PERDIDA",
+  "medo": "a morte de um filho",
+  "segredo": "já matou e ninguém sabe",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Ulnar": {
   "nivel": 19,
@@ -3247,13 +3841,29 @@
    "+500 Tick 413: SURPRESA (gerador) (o Malvezzi encomenda para ele uma espada (Dia 217))",
    "+1000 Tick 420: MISSÃO/FEITO (o Malvezzi encomenda para ele uma espada (Dia 217))",
    "Tick 420: SOBE a 19",
-   "+500 Tick 427: PASSO (o Malvezzi encomenda para ele uma espada (Dia 217))"
+   "+500 Tick 427: PASSO (o Malvezzi encomenda para ele uma espada (Dia 217))",
+   "Dia 438: classe do Livro: Notário de Contratos (SELO, Incomum) · pelo dado (família SELO)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "DISCIPLINADO",
    "SABIO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Notário de Contratos",
+  "assinaturas": [
+   "Contrato que Cobra (1 hora, 4)",
+   "Ler Contrato (Passiva)",
+   "Fé Pública (Passiva)"
+  ],
+  "fraqueza": "um contrato dele quebrado sem punição tira a Fé Pública.",
+  "desejo": "uma casa própria",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a humilhação pública",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Gorron": {
   "nivel": 18,
@@ -3306,13 +3916,31 @@
    "+500 Tick 399: PASSO (casou no Clã, com gente do Hrotgar (Dia 218))",
    "+500 Tick 406: PASSO (casou no Clã, com gente do Hrotgar (Dia 218))",
    "+500 Tick 420: PASSO (casou no Clã, com gente do Hrotgar (Dia 218))",
-   "Tick 420: SOBE a 18"
+   "Tick 420: SOBE a 18",
+   "Dia 438: classe do Livro: Exorcista (VÉU, Raro) · pelo dado (família VÉU)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 420,
   "tracos": [
    "CORAJOSO",
    "SABIO"
-  ]
+  ],
+  "classe_livro": "Exorcista",
+  "assinaturas": [
+   "Arrancar (Ativa, 6)",
+   "Nome Verdadeiro (Passiva)",
+   "Círculo de Sal (1 minuto)"
+  ],
+  "fraqueza": "cada exorcismo deixa uma marca (−1 em Carisma por 10).",
+  "desejo": "vingar um morto",
+  "ambicao": "virar Lendário",
+  "medo": "a morte de um filho",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Selula": {
   "nivel": 16,
@@ -3357,13 +3985,30 @@
    "+1000 Tick 406: MISSÃO/FEITO (no lazareto de Ireviel, ferido (Dia 221))",
    "+500 Tick 413: PASSO (no lazareto de Ireviel, ferido (Dia 221))",
    "Tick 413: SOBE a 16",
-   "+500 Tick 420: PASSO (no lazareto de Ireviel, ferido (Dia 221))"
+   "+500 Tick 420: PASSO (no lazareto de Ireviel, ferido (Dia 221))",
+   "Dia 438: classe do Livro: Geomante (CHAMA, Incomum) · pelo dado (família CHAMA)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "IMPULSIVO",
    "DISCIPLINADO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Geomante",
+  "assinaturas": [
+   "Pedra Fiel (Passiva)",
+   "Pés no Chão (Passiva)",
+   "Sentir Túnel (Passiva)"
+  ],
+  "fraqueza": "no ar, no mar ou numa torre alta, Pedra custa o dobro.",
+  "desejo": "deixar uma obra",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a velhice",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Orast": {
   "nivel": 1,
@@ -3373,12 +4018,30 @@
   "log": [
    "Dia 224: escondido na galé, entre os remadores livres; gente do Clã o procura no pátio do carvão (226) e não acha",
    "Tick 231: SOBE a 1",
-   "Dia 254: sai da galé para STEUNN (cidade livre que não deixa o Clã entrar), com 2 capuzes; chegada ~262"
+   "Dia 254: sai da galé para STEUNN (cidade livre que não deixa o Clã entrar), com 2 capuzes; chegada ~262",
+   "Dia 438: classe do Livro: Batedor (SOMBRA, Comum) · pelo dado (família SOMBRA)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "PACIENTE",
    "CORAJOSO"
-  ]
+  ],
+  "classe_livro": "Batedor",
+  "assinaturas": [
+   "Olho Longe (Passiva)",
+   "Rastro (Passiva)",
+   "Recuo (Reação, 1)"
+  ],
+  "fraqueza": "corpo a corpo, −1 de Defesa.",
+  "desejo": "aprender um segredo",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a magia",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Pelagri": {
   "nivel": 1,
@@ -3392,12 +4055,30 @@
    "Dia 294: julgado em praça; CONFESSA e entrega a rede da Liga; culpado; a sentença é do rei",
    "Dia 299: a Lumine (Gorine) mandou uma fita branca na tigela dele; ele a entregou à Sira e pediu guarda",
    "334: o julgamento público do conselho duro da Liga em Ireviel",
-   "335: o conselho duro da Liga enforcado na praça; ele assistiu da cela"
+   "335: o conselho duro da Liga enforcado na praça; ele assistiu da cela",
+   "Dia 438: classe do Livro: Agiota (OURO, Raro) · pelo dado (família OURO)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "CINICO",
    "MISERICORDIOSO"
-  ]
+  ],
+  "classe_livro": "Agiota",
+  "assinaturas": [
+   "Empréstimo (Ativa)",
+   "Garantia (Passiva)",
+   "Rede de Dívida (Passiva)"
+  ],
+  "fraqueza": "metade da cidade quer vê-lo morto.",
+  "desejo": "curar alguém",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a magia",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Ruddo": {
   "nivel": 1,
@@ -3408,15 +4089,33 @@
    "Dia 228: conta onde o PELAGRI guarda os papéis da Chave; o conselho decide que ele FICA, protegido",
    "Tick 231: SOBE a 1",
    "Dia 238: a notícia de que a mãe dele morreu em Marasar",
-   "Dia 252: reconhece o HASK (o homem das cartas do Pelagri); oferece servir a casa contra os conselheiros"
+   "Dia 252: reconhece o HASK (o homem das cartas do Pelagri); oferece servir a casa contra os conselheiros",
+   "Dia 438: classe do Livro: Guardião da Fé (VÉU, Épico) · pelo dado (família VÉU)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "SABIO",
    "ORGULHOSO"
-  ]
+  ],
+  "classe_livro": "Guardião da Fé",
+  "assinaturas": [
+   "Muralha Santa (Postura)",
+   "Templo Vivo (Passiva)",
+   "Martírio Recusado (Reação, 1x/dia)"
+  ],
+  "fraqueza": "deixar o templo cair o quebra (perde a classe até reerguê-lo).",
+  "desejo": "proteger um filho",
+  "ambicao": "fundar uma escola",
+  "medo": "voltar a ser escravo",
+  "segredo": "é filho de quem não deveria (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Ceduion": {
-  "nivel": 1,
+  "nivel": 310,
   "xp": 0,
   "classe": "",
   "ocupacao": "",
@@ -3427,12 +4126,29 @@
    "CORREÇÃO (238): o livro velho NÃO diz que a febre é obra do Médico Cinzento; é um TRATADO dele, e o segredo é que a FEBRE CINZA É O PÓ DO VADUAR AQUECIDO",
    "Dia 252: o Colégio leu a ELAEVA (extraordinário): ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; chega ao Delta em ~2 semanas; acordou pela obra de um LENDÁRIO NOVO de Zisrir; achou ORNE",
    "Dia 299: o ESBOÇO do Servo Armado (extraordinário) o convenceu: Ferir pensa como um mestre do Colégio (+1 Memória, para melhor)",
-   "Dia 306: cumpriu a promessa antiga ao mago que virou o Naudren: deu a Ferir o NOME dele, VAMIA"
+   "Dia 306: cumpriu a promessa antiga ao mago que virou o Naudren: deu a Ferir o NOME dele, VAMIA",
+   "Dia 438: classe do Livro: Arquimago (CHAMA, Lendário) · leitura do Mestre: Lendário de magia, reitor do Colégio de Telosus",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)",
+   "Dia 438: nível 1 → 310 (o nível que o mundo_vivo.json já dava ao reitor (Lendário de magia); a ficha do livro dos NPCs estava com 1, de quando entrou sem ficha (306))"
   ],
   "tracos": [
    "HUMILDE",
    "CINICO"
-  ]
+  ],
+  "classe_livro": "Arquimago",
+  "assinaturas": [
+   "Círculo Acima (Passiva)",
+   "Dois Feitiços (Passiva)",
+   "Mestre das Escolas (Passiva)"
+  ],
+  "fraqueza": "o Colégio, a Escola Única e a Vigília vigiam cada passo dele.",
+  "desejo": "um título",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a pobreza",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)",
+  "lendario": true
  },
  "Thuast": {
   "nivel": 76,
@@ -3479,7 +4195,10 @@
    "+500 Tick 406: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)",
    "+500 Tick 420: SURPRESA (gerador) (em Ireviel (231): fala pela Skotha; pede a galé)",
    "+500 Tick 427: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)",
-   "+500 Tick 434: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)"
+   "+500 Tick 434: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe_livro": "Capitão",
   "assinaturas": [
@@ -3492,7 +4211,12 @@
    "TEIMOSO",
    "CORAJOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a pobreza",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Eryula": {
   "nivel": 1,
@@ -3502,7 +4226,11 @@
   "log": [
    "Dia 233: mercador pela rota de Kremir; quer comprar até 5 armas da Série Épica",
    "Dia 234: compra 5 armas da Série Épica por 8.000",
-   "Tick 238: SOBE a 1"
+   "Tick 238: SOBE a 1",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe_livro": "Mercador",
   "assinaturas": [
@@ -3514,7 +4242,12 @@
   "tracos": [
    "CINICO",
    "ORGULHOSO"
-  ]
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "ser esquecido",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "a cantora do templo": {
   "nivel": 19,
@@ -3524,12 +4257,30 @@
   "log": [
    "Dia 234: muda de opinião sobre Ferir para melhor (o Moreth impediu o rito no templo)",
    "Tick 238: SOBE a 1",
-   "Dia 258: GESTO GRANDE: canta à noite na cisterna velha pela Vassira; o MURRASK sobe da água; ela foge do templo, assustada"
+   "Dia 258: GESTO GRANDE: canta à noite na cisterna velha pela Vassira; o MURRASK sobe da água; ela foge do templo, assustada",
+   "Dia 438: classe do Livro: Bardo (VOZ, Incomum) · leitura do Mestre: cantora do templo (Engano +6)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AMBICIOSO",
    "FRIO"
-  ]
+  ],
+  "classe_livro": "Bardo",
+  "assinaturas": [
+   "Inspirar (Bônus, 3)",
+   "Zombar (Ativa, 2)",
+   "Saber de Taverna (Passiva)"
+  ],
+  "fraqueza": "fala demais (−2 para guardar segredo).",
+  "desejo": "enriquecer",
+  "ambicao": "fundar uma escola",
+  "medo": "a solidão",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Leliel": {
   "nivel": 351,
@@ -3538,13 +4289,29 @@
   "ocupacao": "",
   "log": [
    "Dia 238: PEDE o Gorjal da Isolda (e depois vai exigir)",
-   "Dia 239-240: ri do duelo do Draron · o conselho de Ireviel recusa vender o Gorjal; ela manda dizer que VAI VOLTAR A PEDIR"
+   "Dia 239-240: ri do duelo do Draron · o conselho de Ireviel recusa vender o Gorjal; ela manda dizer que VAI VOLTAR A PEDIR",
+   "Dia 438: classe do Livro: Rei sem Coroa (VOZ, Lendário) · leitura do Mestre: Lendária de influência que quer a coroa do Norte",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "lendario": true,
   "tracos": [
    "HONESTO",
    "CALCULISTA"
-  ]
+  ],
+  "despertar": "Voz de Mando · Mão do Mundo (2º grau)",
+  "classe_livro": "Rei sem Coroa",
+  "assinaturas": [
+   "Seguidores (Passiva)",
+   "A Palavra É Lei (1x/mês)",
+   "Coroa do Povo (Passiva)"
+  ],
+  "fraqueza": "todo rei quer vê-lo morto ou do lado dele.",
+  "desejo": "curar alguém",
+  "ambicao": "casar acima da sua classe",
+  "medo": "ser esquecido",
+  "segredo": "trabalha para outra facção (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Orvenne": {
   "nivel": 0,
@@ -3568,12 +4335,25 @@
    "+500 Tick 357: PASSO (passou por Levis no 241)",
    "+500 Tick 364: PASSO (passou por Levis no 241)",
    "+1000 Tick 371: MISSÃO/FEITO (passou por Levis no 241)",
-   "+500 Tick 378: PASSO (passou por Levis no 241)"
+   "+500 Tick 378: PASSO (passou por Levis no 241)",
+   "Dia 438: classe do Livro: Diplomata (VOZ, Incomum) · leitura do Mestre: embaixador de terra distante"
   ],
   "tracos": [
    "GENEROSO",
    "COVARDE"
-  ]
+  ],
+  "classe_livro": "Diplomata",
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "curar alguém",
+  "ambicao": "fundar uma escola",
+  "medo": "a prisão",
+  "segredo": "ama alguém proibido",
+  "linha_vermelha": "nunca trabalha para a facção X"
  },
  "Erymir": {
   "nivel": 56,
@@ -3628,7 +4408,12 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "casar acima da sua classe",
+  "medo": "voltar a ser escravo",
+  "segredo": "sabe de um crime de alguém importante",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Selvil": {
   "nivel": 19,
@@ -3670,13 +4455,26 @@
    "Tick 406: SOBE a 19",
    "+500 Tick 413: PASSO (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
    "+500 Tick 420: PASSO (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
-   "+500 Tick 427: SURPRESA (gerador) (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)"
+   "+500 Tick 427: SURPRESA (gerador) (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: voluntário salineiro da hoste"
   ],
   "ultima_subida": 406,
   "tracos": [
    "COVARDE",
    "VINGATIVO"
-  ]
+  ],
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "enriquecer",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a solidão",
+  "segredo": "tem uma doença escondida",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Orol": {
   "nivel": 39,
@@ -3707,13 +4505,26 @@
    "Tick 413: SOBE a 39",
    "+1000 Tick 420: MISSÃO/FEITO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
    "+1000 Tick 427: MISSÃO/FEITO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
-   "+500 Tick 434: PASSO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)"
+   "+500 Tick 434: PASSO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
+   "Dia 438: classe do Livro: Ferreiro (FORJA, Comum) · leitura do Mestre: ferreiro refugiado de Levis"
   ],
   "tracos": [
    "AMBICIOSO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Ferreiro",
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "ser perdoado",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "perder a mão do ofício",
+  "segredo": "roubou o que tem",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Brissa": {
   "nivel": 69,
@@ -3722,12 +4533,25 @@
   "ocupacao": "PRESA em Ireviel (253) com 6 caçadores; veio atrás do Gorjal da Isolda",
   "log": [
    "Dia 253: cai na armadilha do Graur; presa sem luta; fala, e oferece um lugar (QUOGAL) pela liberdade",
-   "Dia 254: o conselho aceita QUOGAL; ela jura e é solta (os 6 caçadores ficam como garantia)"
+   "Dia 254: o conselho aceita QUOGAL; ela jura e é solta (os 6 caçadores ficam como garantia)",
+   "Dia 438: classe do Livro: Caçador de Recompensas (SOMBRA, Raro) · leitura do Mestre: caçadora da Leliel"
   ],
   "tracos": [
    "CURIOSO",
    "COVARDE"
-  ]
+  ],
+  "classe_livro": "Caçador de Recompensas",
+  "assinaturas": [
+   "Marca (Bônus, 2)",
+   "Laço (Ativa, 2)",
+   "Cartaz (Passiva)"
+  ],
+  "fraqueza": "toda presa tem amigos.",
+  "desejo": "aprender um segredo",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a humilhação pública",
+  "segredo": "fez um pacto",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Hask": {
   "nivel": 39,
@@ -3735,12 +4559,25 @@
   "classe": "PESQUISADOR (história e ruínas) · COVARDE e ORGULHOSO · desejo: enriquecer · ambição (4): entrar numa facção que o recusou · medo: voltar a ser escravo · segredo: já matou e ninguém sabe · linha vermelha: nunca trai a família",
   "ocupacao": "AGENTE DOS CONSELHEIROS (levava as cartas do Pelagri); PRESO (252)",
   "log": [
-   "Dia 252: chega à Casa dos Estudiosos; o registro e a contra o desmascaram (112 × 41); o Ruddo o reconhece"
+   "Dia 252: chega à Casa dos Estudiosos; o registro e a contra o desmascaram (112 × 41); o Ruddo o reconhece",
+   "Dia 438: classe do Livro: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisador de história e ruínas"
   ],
   "tracos": [
    "COVARDE",
    "ORGULHOSO"
-  ]
+  ],
+  "classe_livro": "Caçador de Achados",
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar).",
+  "desejo": "enriquecer",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "voltar a ser escravo",
+  "segredo": "já matou e ninguém sabe",
+  "linha_vermelha": "nunca trai a família"
  },
  "Sorvane": {
   "nivel": 46,
@@ -3769,13 +4606,26 @@
    "+500 Tick 406: PASSO (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))",
    "+500 Tick 413: PASSO (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))",
    "+500 Tick 420: PASSO (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))",
-   "+500 Tick 427: PASSO (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))"
+   "+500 Tick 427: PASSO (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))",
+   "Dia 438: classe do Livro: Orador Sagrado (VÉU, Raro) · pelo dado (família VÉU)"
   ],
   "ultima_subida": 392,
   "tracos": [
    "AMBICIOSO",
    "CRUEL"
-  ]
+  ],
+  "classe_livro": "Orador Sagrado",
+  "assinaturas": [
+   "Palavra Santa (Ativa, 4)",
+   "Converter (1 semana)",
+   "Coro (Passiva)"
+  ],
+  "fraqueza": "sem voz, nada funciona.",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "virar Lendária",
+  "medo": "a prisão",
+  "segredo": "ama alguém proibido",
+  "linha_vermelha": "nunca trai a família"
  },
  "Tolvane": {
   "nivel": 23,
@@ -3820,7 +4670,8 @@
    "+500 Tick 420: PASSO (VOZ DO POVO no conselho real (eleito no 296))",
    "Dia 421: VOTO VENCIDO no conselho (SONDAGEM (sem valor de lei; o rei pediu o conselho antes de ): queria A) IR JÁ: o rei leva a MATRIZ a Lumade e faz a oferta",
    "Dia 421: VOTO VENCIDO no conselho (O DECRETO DOS BARCOS (a Intendente requisitou os barcos do c): queria B) MANTER e PAGAR os barcos (300)",
-   "Dia 421: 421: enviado do rei ao CELOCUS em Lumade (sai no 422 com o Hruthos e 6 lanças): perdoar tudo pela porcentagem mais baixa; nada fecha sem o selo do rei"
+   "Dia 421: 421: enviado do rei ao CELOCUS em Lumade (sai no 422 com o Hruthos e 6 lanças): perdoar tudo pela porcentagem mais baixa; nada fecha sem o selo do rei",
+   "Dia 438: classe do Livro: Camponês (RAIZ, Comum) · leitura do Mestre: salineiro velho"
   ],
   "tracos": [
    "GENEROSO",
@@ -3829,7 +4680,19 @@
   "votos_vencidos": 13,
   "lealdade": 4,
   "votos_seguidos": 1,
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "classe_livro": "Camponês",
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão.",
+  "desejo": "deixar uma obra",
+  "ambicao": "virar Lendário",
+  "medo": "voltar a ser escravo",
+  "segredo": "sabe de um crime de alguém importante",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Carea": {
   "nivel": 20,
@@ -3866,7 +4729,12 @@
    "Tick 406: SOBE a 20",
    "+500 Tick 420: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
    "+500 Tick 434: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
-   "Dia 435: 435: registrou os da BIGORNA LIVRE na Guilda de Levis por ordem do rei, CALADA, com mágoa: perde voz na cidade e não esquece (CA36 [1])"
+   "Dia 435: 435: registrou os da BIGORNA LIVRE na Guilda de Levis por ordem do rei, CALADA, com mágoa: perde voz na cidade e não esquece (CA36 [1])",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 406,
   "tracos": [
@@ -3887,7 +4755,12 @@
     "dia": 435,
     "ate": 525
    }
-  ]
+  ],
+  "desejo": "ser perdoado",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a solidão",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Tessal": {
   "nivel": 25,
@@ -3925,13 +4798,26 @@
    "+500 Tick 420: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)",
    "Tick 420: SOBE a 25",
    "Dia 426: 426: com a Lile, ACHOU nos papéis o lugar da NECRÓPOLE DE ALNESAR (TS26 [19]); conta ao rei quando ele voltar",
-   "Dia 427: 427: diz ao rei: ALNESAR fica nas COLINAS A LESTE DE IREVIEL, a 2 dias; numa metade, um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um segredo de facção (entrar pede uma chave)"
+   "Dia 427: 427: diz ao rei: ALNESAR fica nas COLINAS A LESTE DE IREVIEL, a 2 dias; numa metade, um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um segredo de facção (entrar pede uma chave)",
+   "Dia 438: classe do Livro: Alquimista (FORJA, Incomum) · leitura do Mestre: pesquisadora de alquimia e remédios"
   ],
   "tracos": [
    "LEAL",
    "RELIGIOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Alquimista",
+  "assinaturas": [
+   "Destilar (1 hora, 2)",
+   "Ácido (Ativa, 2)",
+   "Remédio (Passiva)"
+  ],
+  "fraqueza": "1 natural explode (1d6 nele).",
+  "desejo": "um título",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a humilhação pública",
+  "segredo": "roubou o que tem",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Tedulteth": {
   "nivel": 28,
@@ -3961,13 +4847,26 @@
    "+1000 Tick 406: MISSÃO/FEITO (Casa dos Estudiosos (266): bolsa de 40 por semana)",
    "Tick 406: SOBE a 28",
    "+500 Tick 413: PASSO (Casa dos Estudiosos (266): bolsa de 40 por semana)",
-   "+500 Tick 427: SURPRESA (gerador) (Casa dos Estudiosos (266): bolsa de 40 por semana)"
+   "+500 Tick 427: SURPRESA (gerador) (Casa dos Estudiosos (266): bolsa de 40 por semana)",
+   "Dia 438: classe do Livro: Alquimista (FORJA, Incomum) · leitura do Mestre: pesquisador de alquimia e remédios"
   ],
   "tracos": [
    "CURIOSO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "classe_livro": "Alquimista",
+  "assinaturas": [
+   "Destilar (1 hora, 2)",
+   "Ácido (Ativa, 2)",
+   "Remédio (Passiva)"
+  ],
+  "fraqueza": "1 natural explode (1d6 nele).",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "o fogo",
+  "segredo": "roubou o que tem",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Groa": {
   "nivel": 62,
@@ -4038,13 +4937,26 @@
    "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
    "Dia 428: 428 (noite): um homem das GUILDAS DE STEUNN (o lado do Borecci) a procurou no portão da Fornalha antes da obra; ela empalideceu e falou baixo com ele; (OCULTO) ele cobra a promessa antiga: UMA MEDIDA OU UM DESENHO DA FORNALHA (GR28 [5], GR28b [4]); ajudou na Couraça mesmo assim",
    "Dia 431: 431 (OCULTO, GR31 [3]): PASSOU ao homem das guildas de Steunn uma MEDIDA DA FORNALHA; a casa não sabe",
-   "+500 Tick 434: SURPRESA (gerador) (ajudante na Fornalha (272; 20 por semana))"
+   "+500 Tick 434: SURPRESA (gerador) (ajudante na Fornalha (272; 20 por semana))",
+   "Dia 438: classe do Livro: Ferreiro (FORJA, Comum) · leitura do Mestre: ferreira refugiada de Steunn"
   ],
   "ultima_subida": 427,
   "tracos": [
    "COVARDE",
    "RELIGIOSO"
-  ]
+  ],
+  "classe_livro": "Ferreiro",
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "voltar para casa",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a morte de um filho",
+  "segredo": "deve a alguém perigoso",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Bjarkunn": {
   "nivel": 72,
@@ -4098,7 +5010,12 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "sair da cidade",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "voltar a ser escravo",
+  "segredo": "deve a alguém perigoso",
+  "linha_vermelha": "NUNCA TRABALHA PARA A COMPANHIA DA SKOTHA"
  },
  "Lucissi": {
   "nivel": 15,
@@ -4135,13 +5052,31 @@
    "Tick 420: SOBE a 14",
    "+1000 Tick 427: MISSÃO/FEITO (em Ireviel, sustentada pelo Moreth (264))",
    "+500 Tick 434: PASSO (em Ireviel, sustentada pelo Moreth (264))",
-   "Tick 434: SOBE a 15"
+   "Tick 434: SOBE a 15",
+   "Dia 438: classe do Livro: Camponês (RAIZ, Comum) · leitura do Mestre: mãe do Ronio, gente do povo",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 434,
   "tracos": [
    "CINICO",
    "TEIMOSO"
-  ]
+  ],
+  "classe_livro": "Camponês",
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão.",
+  "desejo": "proteger um filho",
+  "ambicao": "fundar uma escola",
+  "medo": "ser esquecido",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Tavrel": {
   "nivel": 24,
@@ -4170,7 +5105,12 @@
    "+500 Tick 413: PASSO (passou por Ireviel no 260)",
    "+500 Tick 420: PASSO (passou por Ireviel no 260)",
    "+500 Tick 427: PASSO (passou por Ireviel no 260)",
-   "Tick 427: SOBE a 24"
+   "Tick 427: SOBE a 24",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "GENEROSO",
@@ -4183,7 +5123,12 @@
    "Freguês (Passiva)"
   ],
   "fraqueza": "toda cidade sabe que ele tem ouro.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "um título",
+  "ambicao": "virar Lendário",
+  "medo": "o fogo",
+  "segredo": "tem uma doença escondida (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Eiagrir": {
   "nivel": 126,
@@ -4268,7 +5213,13 @@
    "Alcance Longo (Passiva)",
    "Firmar a Lança (Postura)"
   ],
-  "fraqueza": "colado no inimigo, −2 no ataque."
+  "fraqueza": "colado no inimigo, −2 no ataque.",
+  "despertar": "Mão que Doma",
+  "desejo": "vingar um morto",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "perder a mão do ofício",
+  "segredo": "tem uma doença escondida",
+  "linha_vermelha": "NUNCA TRABALHA PARA A LIGA"
  },
  "Nialla": {
   "nivel": 32,
@@ -4297,13 +5248,26 @@
    "+500 Tick 413: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
    "Tick 413: SOBE a 32",
    "+1000 Tick 420: MISSÃO/FEITO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
-   "+500 Tick 434: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)"
+   "+500 Tick 434: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
+   "Dia 438: classe do Livro: Herbalista (RAIZ, Incomum) · leitura do Mestre: pesquisadora de plantas e terras"
   ],
   "tracos": [
    "AMBICIOSO",
    "CRUEL"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Herbalista",
+  "assinaturas": [
+   "Remédio de Mato (1 hora, 2)",
+   "Achar Erva (Passiva)",
+   "Chá (Passiva)"
+  ],
+  "fraqueza": "no inverno, perde o Achar Erva.",
+  "desejo": "aprender um segredo",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "o próprio passado",
+  "segredo": "deve a alguém perigoso",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Baldino": {
   "nivel": 31,
@@ -4311,12 +5275,25 @@
   "classe": "carcereiro das celas do porto de Marasar · AMBICIOSO e LEAL · desejo: curar alguém · ambição (4): virar Lendário · medo: perder a mão do ofício · segredo: é filho de quem não deveria · linha vermelha: nunca trai a família",
   "ocupacao": "guarda a SIRA (presa no 272)",
   "log": [
-   "Dia 273: manda recado: a Sira está viva; por ouro ou cura, fala mais"
+   "Dia 273: manda recado: a Sira está viva; por ouro ou cura, fala mais",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · leitura do Mestre: carcereiro"
   ],
   "tracos": [
    "AMBICIOSO",
    "LEAL"
-  ]
+  ],
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "curar alguém",
+  "ambicao": "virar Lendário",
+  "medo": "perder a mão do ofício",
+  "segredo": "é filho de quem não deveria",
+  "linha_vermelha": "nunca trai a família"
  },
  "Oisse": {
   "nivel": 33,
@@ -4343,13 +5320,31 @@
    "+500 Tick 399: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
    "+500 Tick 420: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
    "Tick 420: SOBE a 33",
-   "+500 Tick 427: PASSO (em Ireviel desde o 275: a enfermaria da casa)"
+   "+500 Tick 427: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
+   "Dia 438: classe do Livro: Curandeiro (VÉU, Comum) · leitura do Mestre: irmã curandeira, com a sua ordem",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AMBICIOSO",
    "AVARENTO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Curandeiro",
+  "assinaturas": [
+   "Mão Quente (2 Mana)",
+   "Erva Certa (Passiva)",
+   "Vigília (Passiva)"
+  ],
+  "fraqueza": "sangue e grito o abalam (−1 em combate).",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "conquistar terra",
+  "medo": "a solidão",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Facio": {
   "nivel": 46,
@@ -4364,12 +5359,25 @@
    "Dia 428: 428: o CONSELHO (CF28) deu TETO E TRABALHO NA CASA, à vista da guarda (3 a 3; a Intendente desempatou); votos vencidos: Graur, Herkald, Thuron",
    "+1000 Tick 434: MISSÃO/FEITO (carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))",
    "Dia 435: 435: entregue à SKOTHA em Marasar (a palavra do rei, por cima do conselho); ela o manda à cela e julga depois da revolta (FC35 [2])",
-   "Dia 435: ocupação nova (antes: carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))"
+   "Dia 435: ocupação nova (antes: carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))",
+   "Dia 438: classe do Livro: Mascate (OURO, Comum) · leitura do Mestre: barqueiro que leva carga no rio"
   ],
   "tracos": [
    "CURIOSO",
    "RELIGIOSO"
-  ]
+  ],
+  "classe_livro": "Mascate",
+  "assinaturas": [
+   "Lábia (Ativa, 2)",
+   "Mochila Funda (Passiva)",
+   "Estrada (Passiva)"
+  ],
+  "fraqueza": "não tem casa: nenhuma cidade o defende.",
+  "desejo": "voltar para casa",
+  "ambicao": "fundar uma escola",
+  "medo": "a solidão",
+  "segredo": "é filho de quem não deveria",
+  "linha_vermelha": "nunca se ajoelha"
  },
  "Hruthos": {
   "nivel": 91,
@@ -4428,7 +5436,12 @@
    "Firmar a Lança (Postura)"
   ],
   "fraqueza": "colado no inimigo, −2 no ataque.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "vingar um morto",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "perder a mão do ofício",
+  "segredo": "TRABALHA PARA OUTRA FACÇÃO (oculto: a Lumine)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Donione": {
   "nivel": 24,
@@ -4458,13 +5471,30 @@
    "+1000 Tick 399: MISSÃO/FEITO (ao lado do Tirello desde o 280)",
    "Tick 399: SOBE a 24",
    "+500 Tick 413: PASSO (ao lado do Tirello desde o 280)",
-   "+500 Tick 427: SURPRESA (gerador) (ao lado do Tirello desde o 280)"
+   "+500 Tick 427: SURPRESA (gerador) (ao lado do Tirello desde o 280)",
+   "Dia 438: classe do Livro: Notário de Contratos (SELO, Incomum) · leitura do Mestre: notário do podestà",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "tracos": [
    "AVARENTO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "classe_livro": "Notário de Contratos",
+  "assinaturas": [
+   "Contrato que Cobra (1 hora, 4)",
+   "Ler Contrato (Passiva)",
+   "Fé Pública (Passiva)"
+  ],
+  "fraqueza": "um contrato dele quebrado sem punição tira a Fé Pública.",
+  "segredo": "TRABALHA PARA OUTRA FACÇÃO (oculto: a Lumine)",
+  "desejo": "ser perdoado",
+  "ambicao": "fundar uma escola",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Starkald": {
   "nivel": 87,
@@ -4548,7 +5578,12 @@
    "+500 Tick 413: PASSO (chegou pelo chamado (315))",
    "+500 Tick 420: SURPRESA (gerador) (chegou pelo chamado (315))",
    "+500 Tick 427: SURPRESA (gerador) (chegou pelo chamado (315))",
-   "+500 Tick 434: PASSO (chegou pelo chamado (315))"
+   "+500 Tick 434: PASSO (chegou pelo chamado (315))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "ultima_subida": 392,
   "tracos": [
@@ -4561,7 +5596,12 @@
    "Cova Certa (Passiva)",
    "Pá e Lanterna (Passiva)"
   ],
-  "fraqueza": "o povo evita a casa dele."
+  "fraqueza": "o povo evita a casa dele.",
+  "desejo": "proteger um filho",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "ser esquecido",
+  "segredo": "é filho de quem não deveria (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Girendino": {
   "nivel": null,
@@ -4589,7 +5629,8 @@
   "classe": "copista do arquivo · VINGATIVO e AMBICIOSO",
   "ocupacao": "ajuda a Tessal a procurar Alnesar nos papéis (336)",
   "log": [
-   "336: entra na vida da Tessal"
+   "336: entra na vida da Tessal",
+   "Dia 438: classe do Livro: Burocrata (OURO, Incomum) · leitura do Mestre: copista do arquivo"
   ],
   "desejo": "proteger um filho",
   "ambicao": "ganhar a guerra do seu povo",
@@ -4599,7 +5640,14 @@
   "tracos": [
    "VINGATIVO",
    "AMBICIOSO"
-  ]
+  ],
+  "classe_livro": "Burocrata",
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Ssashir": {
   "nivel": 35,
@@ -4614,7 +5662,8 @@
    "+1000 Tick 406: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
    "+1000 Tick 420: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
    "Tick 420: SOBE a 35",
-   "+1000 Tick 427: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)"
+   "+1000 Tick 427: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
+   "Dia 438: classe do Livro: Artífice (FORJA, Incomum) · leitura do Mestre: pesquisador de metais e forja"
   ],
   "desejo": "voltar para casa",
   "ambicao": "casar acima da sua classe",
@@ -4625,7 +5674,14 @@
    "HONESTO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Artífice",
+  "assinaturas": [
+   "Mecanismo (Passiva)",
+   "Desmontar (1 minuto, 2)",
+   "Peça Móvel (Passiva)"
+  ],
+  "fraqueza": "sem ferramentas finas, −4."
  },
  "Moua": {
   "nivel": 17,
@@ -4644,7 +5700,8 @@
    "Tick 420: SOBE a 16",
    "+1000 Tick 427: MISSÃO/FEITO (guia da barca da Sira no Delta (338))",
    "+500 Tick 434: PASSO (guia da barca da Sira no Delta (338))",
-   "Tick 434: SOBE a 17"
+   "Tick 434: SOBE a 17",
+   "Dia 438: classe do Livro: Batedor (SOMBRA, Comum) · leitura do Mestre: salineira e guia de canais"
   ],
   "desejo": "uma casa própria",
   "ambicao": "derrubar quem humilhou a família",
@@ -4655,7 +5712,14 @@
    "AVARENTO",
    "RELIGIOSO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "classe_livro": "Batedor",
+  "assinaturas": [
+   "Olho Longe (Passiva)",
+   "Rastro (Passiva)",
+   "Recuo (Reação, 1)"
+  ],
+  "fraqueza": "corpo a corpo, −1 de Defesa."
  },
  "Tuald": {
   "nivel": 60,
@@ -4673,7 +5737,8 @@
    "+1000 Tick 413: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
    "+1000 Tick 420: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
    "+500 Tick 427: SURPRESA (gerador) (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
-   "+500 Tick 434: PASSO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)"
+   "+500 Tick 434: PASSO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
+   "Dia 438: classe do Livro: Bárbaro (AÇO, Comum) · pelo dado (família AÇO)"
   ],
   "desejo": "mandar em alguém",
   "ambicao": "entrar numa facção que o recusou",
@@ -4683,7 +5748,14 @@
   "tracos": [
    "TEIMOSO",
    "RELIGIOSO"
-  ]
+  ],
+  "classe_livro": "Bárbaro",
+  "assinaturas": [
+   "Fúria (Bônus, 3)",
+   "Pele Dura (Passiva)",
+   "Grito de Guerra (Ativa, 2)"
+  ],
+  "fraqueza": "depois da Fúria, fica Exausto 1 rodada."
  },
  "Pebanda": {
   "nivel": 30,
@@ -4699,7 +5771,8 @@
    "Tick 413: SOBE a 30",
    "+500 Tick 420: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
    "+500 Tick 427: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
-   "+500 Tick 434: SURPRESA (gerador) (Casa dos Estudiosos (343): bolsa de 40 por semana)"
+   "+500 Tick 434: SURPRESA (gerador) (Casa dos Estudiosos (343): bolsa de 40 por semana)",
+   "Dia 438: classe do Livro: Herbalista (RAIZ, Incomum) · leitura do Mestre: pesquisador de plantas e terras"
   ],
   "desejo": "curar alguém",
   "ambicao": "formar uma companhia",
@@ -4710,7 +5783,14 @@
    "AMBICIOSO",
    "VINGATIVO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Herbalista",
+  "assinaturas": [
+   "Remédio de Mato (1 hora, 2)",
+   "Achar Erva (Passiva)",
+   "Chá (Passiva)"
+  ],
+  "fraqueza": "no inverno, perde o Achar Erva."
  },
  "Gerva": {
   "nivel": 32,
@@ -4722,7 +5802,8 @@
    "+500 Tick 385: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
    "+500 Tick 406: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
    "+500 Tick 420: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
-   "+500 Tick 427: SURPRESA (gerador) (Casa dos Estudiosos (343): bolsa de 40 por semana)"
+   "+500 Tick 427: SURPRESA (gerador) (Casa dos Estudiosos (343): bolsa de 40 por semana)",
+   "Dia 438: classe do Livro: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisadora de história e ruínas"
   ],
   "desejo": "ser reconhecida no ofício",
   "ambicao": "conquistar terra",
@@ -4732,7 +5813,14 @@
   "tracos": [
    "LEAL",
    "COVARDE"
-  ]
+  ],
+  "classe_livro": "Caçador de Achados",
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar)."
  },
  "Holgir": {
   "nivel": 66,
@@ -4745,7 +5833,9 @@
    "+500 Tick 392: PASSO (chegou pelo chamado (350))",
    "+500 Tick 413: SURPRESA (gerador) (chegou pelo chamado (350))",
    "+500 Tick 427: PASSO (chegou pelo chamado (350))",
-   "+500 Tick 434: PASSO (chegou pelo chamado (350))"
+   "+500 Tick 434: PASSO (chegou pelo chamado (350))",
+   "Dia 438: classe do Livro: Espadachim Lendário (AÇO, Comum) · pelo dado (família AÇO)",
+   "Dia 438: classe do Livro: Capitão (AÇO, Raro) · pelo dado (família AÇO)"
   ],
   "desejo": "vingar um morto",
   "ambicao": "virar Lendário",
@@ -4755,7 +5845,14 @@
   "tracos": [
    "AVARENTO",
    "HONESTO"
-  ]
+  ],
+  "classe_livro": "Capitão",
+  "assinaturas": [
+   "Ordem de Ataque (Ativa, 3)",
+   "Formação (Postura)",
+   "Ler o Campo (Passiva)"
+  ],
+  "fraqueza": "se cair, a tropa testa moral."
  },
  "Gicilla": {
   "nivel": null,
@@ -4763,7 +5860,8 @@
   "classe": "(a gerar) · GENEROSA e AVARENTA",
   "ocupacao": "entra na vida do Mormir (350)",
   "log": [
-   "350: entra na vida do Mormir"
+   "350: entra na vida do Mormir",
+   "Dia 438: classe do Livro: Trapaceiro (FORTUNA, Incomum) · pelo dado (família FORTUNA)"
   ],
   "desejo": "enriquecer",
   "ambicao": "virar Lendária",
@@ -4773,7 +5871,14 @@
   "tracos": [
    "GENEROSO",
    "AVARENTO"
-  ]
+  ],
+  "classe_livro": "Trapaceiro",
+  "assinaturas": [
+   "Truque (Ativa, 1 Fortuna)",
+   "Cara de Pau (Passiva)",
+   "Fuga Sortuda (Reação, 1 Fortuna)"
+  ],
+  "fraqueza": "toda mentira descoberta dobra a Mágoa."
  },
  "Skarkek": {
   "nivel": 78,
@@ -4786,7 +5891,12 @@
    "Dia 401: sentença do conselho (3-1-2): CELA e TRABALHO FORÇADO, cinco anos, com os do Ardenghi",
    "+500 Tick 406: PASSO (chegou pelo chamado (392); pede lugar na casa)",
    "+1000 Tick 420: MISSÃO/FEITO (chegou pelo chamado (392); pede lugar na casa)",
-   "+500 Tick 434: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)"
+   "+500 Tick 434: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Mão Abençoada (FORTUNA, Raro) · RELIGIOSO, CRUEL",
   "ocupacao": "chegou pelo chamado (392); pede lugar na casa",
@@ -4800,7 +5910,12 @@
    "Benção Torta (Passiva)",
    "Moeda da Casa (Passiva)"
   ],
-  "fraqueza": "a sorte que dá, tira dele (−1 de Fortuna por benção)."
+  "fraqueza": "a sorte que dá, tira dele (−1 de Fortuna por benção).",
+  "desejo": "enriquecer",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a humilhação pública",
+  "segredo": "ama alguém proibido (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Ulounn": {
   "nivel": 62,
@@ -4818,7 +5933,12 @@
    "Dia 426: 426: adia a caçada da Eloune (a Guilda acabou de enterrar o mestre; não caça Épica sem o rei)",
    "Dia 426: ocupação nova (antes: MESTRE DA GUILDA DOS AVENTUREIROS de Ireviel (425, a Guilda o pediu e o conselho votou GM25))",
    "+500 Tick 427: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)",
-   "+1000 Tick 434: MISSÃO/FEITO (chegou pelo chamado (392); pede lugar na casa)"
+   "+1000 Tick 434: MISSÃO/FEITO (chegou pelo chamado (392); pede lugar na casa)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Batedor de Mata (RAIZ, Incomum) · RELIGIOSO, TEIMOSO",
   "ocupacao": "chegou pelo chamado (392); pede lugar na casa",
@@ -4832,7 +5952,12 @@
    "Sumir na Folha (Bônus, 2)",
    "Caminho (Passiva)"
   ],
-  "fraqueza": "na cidade, perde tudo."
+  "fraqueza": "na cidade, perde tudo.",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "voltar a ser escravo",
+  "segredo": "trabalha para outra facção (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Dotocci": {
   "nivel": 30,
@@ -4843,14 +5968,32 @@
    "+500 Tick 399: PASSO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
    "+500 Tick 406: SURPRESA (gerador) (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
    "+500 Tick 413: PASSO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
-   "+1000 Tick 434: MISSÃO/FEITO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))"
+   "+1000 Tick 434: MISSÃO/FEITO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
+   "Dia 438: classe do Livro: Arauto (VOZ, Comum) · leitura do Mestre: estivador-chefe que fala pelos do cais (VOZ)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Estivador-chefe (VOZ, Comum) · GENEROSO, HONESTO",
   "ocupacao": "o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa)",
   "tracos": [
    "GENEROSO",
    "HONESTO"
-  ]
+  ],
+  "classe_livro": "Arauto",
+  "assinaturas": [
+   "Anúncio (Ativa, 2)",
+   "Etiqueta (Passiva)",
+   "Imunidade de Enviado (Passiva)"
+  ],
+  "fraqueza": "fala pelo senhor dele; não tem palavra própria.",
+  "desejo": "curar alguém",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "o fogo",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Hirkunn": {
   "nivel": 93,
@@ -4861,7 +6004,12 @@
    "+500 Tick 413: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
    "+500 Tick 420: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
    "+500 Tick 427: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
-   "+500 Tick 434: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)"
+   "+500 Tick 434: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Selador (SELO, Incomum) · HONESTO, GENEROSO",
   "ocupacao": "o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa",
@@ -4875,7 +6023,12 @@
    "Sentir Vínculo (Passiva)",
    "Selar (1 minuto, 3)"
   ],
-  "fraqueza": "contra quem não tem vínculo, nada funciona."
+  "fraqueza": "contra quem não tem vínculo, nada funciona.",
+  "desejo": "ser perdoado",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "o fogo",
+  "segredo": "trabalha para outra facção (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Zitha": {
   "nivel": 115,
@@ -4883,7 +6036,12 @@
   "log": [
    "Dia 401: entra no livro (nível 115)",
    "+1000 Tick 420: MISSÃO/FEITO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
-   "+500 Tick 434: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)"
+   "+500 Tick 434: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Veneneiro (SOMBRA, Raro) · matador da Leliel",
   "ocupacao": "FUGIU de Ireviel (401) depois de errar o copo do rei",
@@ -4893,7 +6051,17 @@
    "Imune (Passiva)",
    "Gota Certa (Ativa, 3)"
   ],
-  "fraqueza": "o cheiro o denuncia a cães e Percepção 70."
+  "fraqueza": "o cheiro o denuncia a cães e Percepção 70.",
+  "despertar": "Fôlego Sem Fundo",
+  "tracos": [
+   "COVARDE",
+   "CURIOSO"
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "formar uma companhia",
+  "medo": "o fogo",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Gurka": {
   "nivel": 26,
@@ -4903,14 +6071,32 @@
    "+500 Tick 406: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
    "+500 Tick 413: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
    "+500 Tick 427: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
-   "+1000 Tick 434: MISSÃO/FEITO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))"
+   "+1000 Tick 434: MISSÃO/FEITO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
+   "Dia 438: classe do Livro: Construtor (FORJA, Raro) · leitura do Mestre: mestre-mineiro (as galerias e os poços)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Mestre-mineiro (FORJA/AÇO, Comum) · ORGULHOSO e TEIMOSO",
   "ocupacao": "MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada)",
   "tracos": [
    "ORGULHOSO",
    "TEIMOSO"
-  ]
+  ],
+  "classe_livro": "Construtor",
+  "assinaturas": [
+   "Planta (1 dia)",
+   "Muralha Boa (Passiva)",
+   "Engenho de Cerco (Passiva)"
+  ],
+  "fraqueza": "obra grande precisa de gente (sem 20 ajudantes, nada).",
+  "desejo": "mandar em alguém",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a humilhação pública",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Quthemnus": {
   "nivel": 229,
@@ -4920,7 +6106,12 @@
    "+500 Tick 406: PASSO (MORTO em praça por sentença do conselho (404))",
    "+500 Tick 413: SURPRESA (gerador) (MORTO em praça por sentença do conselho (404))",
    "+1000 Tick 420: MISSÃO/FEITO (MORTO em praça por sentença do conselho (404))",
-   "+500 Tick 434: PASSO (MORTO em praça por sentença do conselho (404))"
+   "+500 Tick 434: PASSO (MORTO em praça por sentença do conselho (404))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Mago das torres (ELO, Lendário de magia, fraco)",
   "ocupacao": "MORTO em praça por sentença do conselho (404)",
@@ -4930,7 +6121,17 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "despertar": "Segundo Coração · Passo Certo",
+  "tracos": [
+   "GANANCIOSO",
+   "LEAL"
+  ],
+  "desejo": "mandar em alguém",
+  "ambicao": "virar Lendário",
+  "medo": "a prisão",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Hiald": {
   "nivel": 24,
@@ -4942,7 +6143,12 @@
    "Dia 407: 407: por ordem do rei fica SOLTO E VIGIADO pelos olhos da Sira; a Tilde longe dele. (OCULTO) HM7 [2], HH7 [12]: hoje só trabalha e, ao escurecer, pergunta pela menina",
    "Dia 408: 407 (noite): CONTOU TUDO ao rei (HIc7 18): levar a Tilde viva a Steunn, à feira; não machuca criança. À espera da palavra do rei.",
    "Dia 408: 408: por ordem do rei FICA na forja grande, vigiado (2a)",
-   "+500 Tick 413: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)"
+   "+500 Tick 413: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Aprendiz de ferreiro de Steunn (FORJA, Comum) · HONESTO e VINGATIVO",
   "ocupacao": "pede lugar na forja grande (406); faz amizade com a Tilde",
@@ -4956,7 +6162,12 @@
    "Reparo de Campo (1 hora, 2 Foco)",
    "Golpe Certo (1x por obra)"
   ],
-  "fraqueza": "sem martelo e bigorna, nada funciona."
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "proteger um filho",
+  "ambicao": "fundar uma escola",
+  "medo": "a morte de um filho",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Rindald": {
   "nivel": 83,
@@ -4965,7 +6176,12 @@
    "Dia 406: entra no livro (nível 83)",
    "Dia 406: 406: quer vingar um morto; ambição: derrubar quem humilhou a família; medo: a magia; nunca trai a família; [OCULTO] sabe de um crime de alguém importante; não é agente (CH1a [19])",
    "+500 Tick 420: PASSO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
-   "+1000 Tick 434: MISSÃO/FEITO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))"
+   "+1000 Tick 434: MISSÃO/FEITO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Diplomata (VOZ, Incomum) · RELIGIOSO e VINGATIVO",
   "ocupacao": "chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3)",
@@ -4979,7 +6195,12 @@
    "Ler a Intenção (Passiva)",
    "Trégua (Ativa, 5)"
   ],
-  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "ser perdoado",
+  "ambicao": "casar acima da sua classe",
+  "medo": "o fogo",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Fabaino": {
   "nivel": 100,
@@ -4992,7 +6213,12 @@
    "Dia 422: 422: trouxe à mesa a missão dos Barqueiros do Livro do Leve: caçar o MOREK na forquilha (3.000, prazo 429)",
    "Dia 425: ocupação nova (antes: chegou pelo chamado (406): escrivão das casas da Liga que caíram; não culpa o rei; pede lugar e uma peça da forja (G3))",
    "Dia 426: ocupação nova (antes: MESTRE DAS ÁGUAS (425, pelo conselho MA25): a alfândega do rio e a galé; cadeira no conselho)",
-   "+500 Tick 427: PASSO (chegou pelo chamado (406): escrivão das casas da Liga que caíram; não culpa o rei; pede lugar e uma peça da forja (G3))"
+   "+500 Tick 427: PASSO (chegou pelo chamado (406): escrivão das casas da Liga que caíram; não culpa o rei; pede lugar e uma peça da forja (G3))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Burocrata (OURO, Incomum) · ORGULHOSO e HONESTO",
   "ocupacao": "chegou pelo chamado (406): escrivão das casas da Liga que caíram; não culpa o rei; pede lugar e uma peça da forja (G3)",
@@ -5006,7 +6232,13 @@
    "Atraso (Ativa, 3)",
    "Arquivo (Passiva)"
   ],
-  "fraqueza": "sem um cargo, perde o Papel."
+  "fraqueza": "sem um cargo, perde o Papel.",
+  "despertar": "Fôlego Sem Fundo",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a morte de um filho",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Gundald": {
   "nivel": 16,
@@ -5016,10 +6248,32 @@
    "Dia 415: 415: guardou os cavalos do rei, o Drassa e o menino no galpão de carroças, pelo Hruthos",
    "+500 Tick 420: PASSO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
    "+500 Tick 427: PASSO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
-   "+500 Tick 434: SURPRESA (gerador) (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))"
+   "+500 Tick 434: SURPRESA (gerador) (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
+   "Dia 438: classe do Livro: Mascate (OURO, Comum) · leitura do Mestre: carroceiro",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Comum (carroceiro)",
-  "ocupacao": "carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança)"
+  "ocupacao": "carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança)",
+  "classe_livro": "Mascate",
+  "assinaturas": [
+   "Lábia (Ativa, 2)",
+   "Mochila Funda (Passiva)",
+   "Estrada (Passiva)"
+  ],
+  "fraqueza": "não tem casa: nenhuma cidade o defende.",
+  "tracos": [
+   "RELIGIOSO",
+   "DISCIPLINADO"
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "ser esquecido",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Drassa": {
   "nivel": 35,
@@ -5032,10 +6286,32 @@
    "Dia 421: 421: chegou a Ireviel com o filho; guarda-livros da casa, com a Nouliel",
    "Dia 423: 423: testemunhou contra o Nivis em praça e COMOVEU a praça ([16])",
    "+500 Tick 427: PASSO (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))",
-   "+500 Tick 434: SURPRESA (gerador) (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))"
+   "+500 Tick 434: SURPRESA (gerador) (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))",
+   "Dia 438: classe do Livro: Burocrata (OURO, Incomum) · leitura do Mestre: guarda-livros",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Comum (guarda-livros)",
-  "ocupacao": "GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou)"
+  "ocupacao": "GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou)",
+  "classe_livro": "Burocrata",
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel.",
+  "tracos": [
+   "SABIO",
+   "PREGUICOSO"
+  ],
+  "desejo": "deixar uma obra",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a prisão",
+  "segredo": "ama alguém proibido (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Yeane": {
   "nivel": 51,
@@ -5044,10 +6320,31 @@
    "Dia 421: entra no livro (nível 38)",
    "Dia 421: nível 38 → 51 (ficha gerada)",
    "Dia 422: 422: o templo de baixo reclama da fumaça das forjas (evento local; VZ22 [5])",
-   "Dia 426: 426: o rei pediu a RESSURREIÇÃO da Isolda e do Starkald; leva ao GORINE (resposta no 429); o PREÇO da Lumine: o PILÃO DE VARADE; contou do NESIUM, Lendário de Luz no lago gelado de Steunn (o núcleo)"
+   "Dia 426: 426: o rei pediu a RESSURREIÇÃO da Isolda e do Starkald; leva ao GORINE (resposta no 429); o PREÇO da Lumine: o PILÃO DE VARADE; contou do NESIUM, Lendário de Luz no lago gelado de Steunn (o núcleo)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Sacerdote (Lumine)",
-  "ocupacao": "agente da LUMINE em Ireviel: manda o homem preso no 420 atrás do PILÃO DE VARADE (o nome entregue à Sira no interrogatório do 421); solto, não sabe que foi nomeado"
+  "ocupacao": "agente da LUMINE em Ireviel: manda o homem preso no 420 atrás do PILÃO DE VARADE (o nome entregue à Sira no interrogatório do 421); solto, não sabe que foi nomeado",
+  "tracos": [
+   "VAIDOSO",
+   "CRUEL"
+  ],
+  "desejo": "nunca mais passar fome",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a velhice",
+  "segredo": "é filho de quem não deveria (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança",
+  "classe_livro": "Sacerdote",
+  "assinaturas": [
+   "Rito (1 hora)",
+   "Sermão (Ativa, 3)",
+   "Dízimo (Passiva)"
+  ],
+  "fraqueza": "deve obediência ao templo."
  },
  "Hassa": {
   "nivel": 44,
@@ -5056,10 +6353,27 @@
    "Dia 421: entra no livro (nível 44)",
    "Dia 422: 422: a Intendente o põe na VÁRZEA NOVA (agrimensor e lavrador: as valas e a primeira plantação); o desejo dele é deixar uma obra",
    "+500 Tick 427: SURPRESA (gerador) (chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)",
-   "+500 Tick 434: PASSO (chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)"
+   "+500 Tick 434: PASSO (chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)",
+   "Dia 438: classe do Livro: Camponês (RAIZ, Comum) · leitura do Mestre: agrimensor e lavrador"
   ],
   "classe": "Agrimensor e lavrador",
-  "ocupacao": "chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua"
+  "ocupacao": "chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua",
+  "classe_livro": "Camponês",
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão.",
+  "tracos": [
+   "PACIENTE",
+   "CURIOSO"
+  ],
+  "desejo": "deixar uma obra",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "ser esquecido",
+  "segredo": "deve a alguém perigoso",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Goir": {
   "nivel": 46,
@@ -5078,7 +6392,18 @@
   ],
   "classe": "Caçador",
   "ocupacao": "chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua",
-  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)"
+  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)",
+  "tracos": [
+   "ORGULHOSO",
+   "AVARENTO"
+  ],
+  "classe_livro": "Caçador",
+  "assinaturas": [
+   "Rastro Vivo (Passiva)",
+   "Armadilha (10 minutos, 2)",
+   "Tiro de Caça (Ativa, 2)"
+  ],
+  "fraqueza": "contra gente armada de armadura, −1."
  },
  "Nivis": {
   "nivel": 14,
@@ -5086,10 +6411,32 @@
   "log": [
    "Dia 423: entra no livro (nível 14)",
    "Dia 423: 423: julgado em praça (ES23): NEGA tudo; a mulher dele se desmentiu; BALANÇA +6 → a praça espera CONDENAÇÃO; a sentença é do rei",
-   "Dia 423: 423: CULPADO em praça: trabalho forçado no dique até o 442 (forçados 88)"
+   "Dia 423: 423: CULPADO em praça: trabalho forçado no dique até o 442 (forçados 88)",
+   "Dia 438: classe do Livro: Burocrata (OURO, Incomum) · leitura do Mestre: escrevente da alfândega",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "escrevente (gente comum)",
-  "ocupacao": "escrevente da alfândega do rio, preso no 421; pago pelo Ardenghi (o livro)"
+  "ocupacao": "escrevente da alfândega do rio, preso no 421; pago pelo Ardenghi (o livro)",
+  "classe_livro": "Burocrata",
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel.",
+  "tracos": [
+   "GENEROSO",
+   "LEAL"
+  ],
+  "desejo": "curar alguém",
+  "ambicao": "fundar uma escola",
+  "medo": "a pobreza",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca trabalha para a facção X (o Mestre declara qual quando a linha for posta à prova)"
  },
  "Tegre": {
   "nivel": 44,
@@ -5097,10 +6444,31 @@
   "log": [
    "Dia 425: entra no livro (nível 44)",
    "+500 Tick 427: PASSO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
-   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
+   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Caçador (AÇO, Comum)",
-  "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)"
+  "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)",
+  "tracos": [
+   "DISCIPLINADO",
+   "HUMILDE"
+  ],
+  "desejo": "enriquecer",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a pobreza",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "classe_livro": "Caçador",
+  "assinaturas": [
+   "Rastro Vivo (Passiva)",
+   "Armadilha (10 minutos, 2)",
+   "Tiro de Caça (Ativa, 2)"
+  ],
+  "fraqueza": "contra gente armada de armadura, −1."
  },
  "Bjorvunn": {
   "nivel": 46,
@@ -5109,10 +6477,32 @@
    "Dia 426: entra no livro (nível 46)",
    "Dia 426: 426 noite: contou ao rei do ULMIR, bicho ÚNICO de Raio nas salinas do Delta: o coração é núcleo Único de Raio (BJ26)",
    "+500 Tick 427: PASSO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
-   "+1000 Tick 434: MISSÃO/FEITO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)"
+   "+1000 Tick 434: MISSÃO/FEITO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
+   "Dia 438: classe do Livro: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisador de monstros e núcleos",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Pesquisador (monstros e núcleos)",
-  "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele"
+  "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele",
+  "classe_livro": "Caçador de Achados",
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar).",
+  "tracos": [
+   "JUSTO",
+   "GANANCIOSO"
+  ],
+  "desejo": "curar alguém",
+  "ambicao": "fundar uma escola",
+  "medo": "a prisão",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Yavor": {
   "nivel": 80,
@@ -5120,7 +6510,12 @@
   "log": [
    "Dia 427: entra no livro (nível 80)",
    "Dia 427: 427: gerador npc: desejo nunca mais passar fome · ambição (4) comprar a liberdade da família · medo a morte de um filho · (OCULTO) segredo: tem uma doença escondida · linha vermelha: nunca deixa um ferido para trás · dilema que vem: a verdade sobre o segredo dele destruiria quem confia nele · o nome do gerador (Mornar) foi trocado por YAVOR (nomes.py)",
-   "+500 Tick 434: PASSO (em Ireviel: fala pela Lurentetta na aliança contra a Elaeva (427))"
+   "+500 Tick 434: PASSO (em Ireviel: fala pela Lurentetta na aliança contra a Elaeva (427))",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Diplomata do Delta (enviado da Lurentetta)",
   "ocupacao": "em Ireviel: fala pela Lurentetta na aliança contra a Elaeva (427)",
@@ -5136,16 +6531,51 @@
     "dia": 427,
     "ate": 487
    }
-  ]
+  ],
+  "desejo": "deixar uma obra",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "ser esquecido",
+  "segredo": "não sabe ler (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança",
+  "classe_livro": "Diplomata",
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
  },
  "Mie": {
   "nivel": 150,
   "xp": 0,
   "log": [
-   "Dia 427: entra no livro (nível 150)"
+   "Dia 427: entra no livro (nível 150)",
+   "Dia 438: classe do Livro: Campeão (AÇO, Comum) · leitura do Mestre: campeã da guarda da Lurentetta",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Campeã da guarda da Lurentetta (o Delta)",
-  "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)"
+  "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)",
+  "despertar": "Fôlego Sem Fundo",
+  "classe_livro": "Campeão",
+  "assinaturas": [
+   "Golpe de Campeão (Ativa, 4)",
+   "Resistência (Passiva)",
+   "Desafio Público (Ativa, 3)"
+  ],
+  "fraqueza": "recusar um desafio público custa Fama.",
+  "tracos": [
+   "CALCULISTA",
+   "DISCIPLINADO"
+  ],
+  "desejo": "ser perdoado",
+  "ambicao": "formar uma companhia",
+  "medo": "a prisão",
+  "segredo": "deve a alguém perigoso (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Giunn": {
   "nivel": 35,
@@ -5153,7 +6583,13 @@
   "log": [
    "Dia 428: entra no livro (nível 35)",
    "Dia 428: 428: gerador npc: desejo mandar em alguém · ambição (4) conquistar terra · medo a morte de um filho · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca entrega um amigo à lei · dilema que vem: salvar um filho custa a vida de um estranho · veio com os Jurados à audiência do 428 e pediu para falar com a TILDE, não com o conselho (JS28 [6], novidade [3], JS28s [3])",
-   "Dia 428: 428 (noite): falou com a TILDE à vista do Herkald (4a): CONVIDOU-A a ir a Steunn por vontade própria (os clãs de cima a guardam e a estrada abre) (GI28b [4]); ela perguntou POR QUE as guildas a querem (TI28 [3])"
+   "Dia 428: 428 (noite): falou com a TILDE à vista do Herkald (4a): CONVIDOU-A a ir a Steunn por vontade própria (os clãs de cima a guardam e a estrada abre) (GI28b [4]); ela perguntou POR QUE as guildas a querem (TI28 [3])",
+   "Dia 438: classe do Livro: Juiz Errante (VOZ, Raro) · leitura do Mestre: jurado de Steunn",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Jurado de Steunn (os clãs de cima)",
   "ocupacao": "em Ireviel com os Jurados de Steunn; procura a TILDE (428)",
@@ -5161,7 +6597,19 @@
    "CURIOSO",
    "AMBICIOSO"
   ],
-  "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros"
+  "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros",
+  "classe_livro": "Juiz Errante",
+  "assinaturas": [
+   "Sentença (1 hora, 5)",
+   "Ver o Culpado (Passiva)",
+   "Lei da Estrada (Passiva)"
+  ],
+  "fraqueza": "não pode julgar em causa própria.",
+  "desejo": "curar alguém",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a humilhação pública",
+  "segredo": "fez um pacto (OCULTO)",
+  "linha_vermelha": "nunca deixa um ferido para trás"
  },
  "Yais": {
   "nivel": 90,
@@ -5170,7 +6618,12 @@
    "Dia 433: entra no livro (nível 90)",
    "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei",
    "Dia 433: 433 (noite): PRESO pela lei do rio com a gente dele (rendeu-se: AR35 [1]); à pergunta do rei 'por que se arriscar?' respondeu O DINHEIRO: a Liga paga o TRIPLO a quem passa o rio fechado (PG35 [4]: verdade, e não é tudo)",
-   "Dia 434: 434 (noite): CONDENADO em praça de Levis (LV34; a balança +10): TRABALHO FORÇADO, cinco anos, com os 31; serve em Levis sob a Brara"
+   "Dia 434: 434 (noite): CONDENADO em praça de Levis (LV34; a balança +10): TRABALHO FORÇADO, cinco anos, com os 31; serve em Levis sob a Brara",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Capitão da Liga (o rio; espada)",
   "ocupacao": "a barca da Liga no cais da aldeia abaixo de Levis (433)",
@@ -5178,56 +6631,179 @@
    "LEAL",
    "CRUEL"
   ],
-  "voz": "sorri com a boca e conta com os olhos; fala de portagem, pressa e moeda; nunca põe a mão perto da espada na frente de quem pode mais"
+  "voz": "sorri com a boca e conta com os olhos; fala de portagem, pressa e moeda; nunca põe a mão perto da espada na frente de quem pode mais",
+  "desejo": "uma casa própria",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "voltar a ser escravo",
+  "segredo": "sabe de um crime de alguém importante (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "classe_livro": "Capitão",
+  "assinaturas": [
+   "Ordem de Ataque (Ativa, 3)",
+   "Formação (Postura)",
+   "Ler o Campo (Passiva)"
+  ],
+  "fraqueza": "se cair, a tropa testa moral."
  },
  "Yesiel": {
   "nivel": 31,
   "xp": 0,
   "log": [
    "Dia 434: entra no livro (nível 31)",
-   "Dia 434: 434: gerador npc: AMBICIOSO e CRUEL · desejo curar alguém · ambição entrar numa facção que o recusou · medo a solidão · (OCULTO) segredo: fez um pacto · linha vermelha: nunca trabalha para a facção X (a definir na ficção)"
+   "Dia 434: 434: gerador npc: AMBICIOSO e CRUEL · desejo curar alguém · ambição entrar numa facção que o recusou · medo a solidão · (OCULTO) segredo: fez um pacto · linha vermelha: nunca trabalha para a facção X (a definir na ficção)",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · pelo dado (família AÇO)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "tracos": [
+   "DESCONFIADO",
+   "JUSTO"
+  ],
+  "desejo": "curar alguém",
+  "ambicao": "virar Lendário",
+  "medo": "a morte de um filho",
+  "segredo": "trabalha para outra facção (OCULTO)",
+  "linha_vermelha": "nunca machuca uma criança"
  },
  "Helgunn": {
   "nivel": 46,
   "xp": 0,
   "log": [
    "Dia 434: entra no livro (nível 46)",
-   "Dia 434: 434: gerador npc: TEIMOSO e CURIOSO · desejo casar com quem ama · ambição ganhar a guerra do seu povo · medo a humilhação pública · (OCULTO) segredo: ama alguém proibido · linha vermelha: nunca machuca uma criança"
+   "Dia 434: 434: gerador npc: TEIMOSO e CURIOSO · desejo casar com quem ama · ambição ganhar a guerra do seu povo · medo a humilhação pública · (OCULTO) segredo: ama alguém proibido · linha vermelha: nunca machuca uma criança",
+   "Dia 438: classe do Livro: Soldado (AÇO, Comum) · pelo dado (família AÇO)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
+  "classe_livro": "Soldado",
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "tracos": [
+   "COVARDE",
+   "FRIO"
+  ],
+  "desejo": "enriquecer",
+  "ambicao": "formar uma companhia",
+  "medo": "a morte de um filho",
+  "segredo": "traiu um amigo uma vez (OCULTO)",
+  "linha_vermelha": "nunca entrega um amigo à lei"
  },
  "Tigra": {
   "nivel": 15,
   "xp": 0,
   "log": [
    "Dia 435: entra no livro (nível 15)",
-   "Dia 435: 435: gerador npc: ORGULHOSA e GENEROSA · desejo nunca mais passar fome · ambição (4) abrir o próprio negócio · medo a solidão · (OCULTO) segredo: é filha de quem não deveria · linha vermelha: nunca entrega um amigo à lei · a SURPRESA do 20 natural na ordem do pão (OR35 → novidade [3], OR35w [4], OR35n [2])"
+   "Dia 435: 435: gerador npc: ORGULHOSA e GENEROSA · desejo nunca mais passar fome · ambição (4) abrir o próprio negócio · medo a solidão · (OCULTO) segredo: é filha de quem não deveria · linha vermelha: nunca entrega um amigo à lei · a SURPRESA do 20 natural na ordem do pão (OR35 → novidade [3], OR35w [4], OR35n [2])",
+   "Dia 438: classe do Livro: Cozinheiro (FORJA, Comum) · leitura do Mestre: padeira",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "padeira das ruas baixas de Levis",
-  "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE"
+  "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE",
+  "classe_livro": "Cozinheiro",
+  "assinaturas": [
+   "Panela Boa (Passiva)",
+   "Ração Longa (Passiva)",
+   "Banquete (1 dia, 4)"
+  ],
+  "fraqueza": "a cozinha é dele; longe dela, nada funciona.",
+  "tracos": [
+   "CURIOSO",
+   "IMPULSIVO"
+  ],
+  "desejo": "vingar um morto",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a solidão",
+  "segredo": "tem uma doença escondida (OCULTO)",
+  "linha_vermelha": "nunca vende o ofício barato"
  },
  "Gonde": {
   "nivel": 30,
   "xp": 0,
   "log": [
    "Dia 436: entra no livro (nível 30)",
-   "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)"
+   "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)",
+   "Dia 438: classe do Livro: Lanceiro (AÇO, Comum) · leitura do Mestre: cabo da guarda do rei, de lança",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "Cabo da guarda do rei (lança)",
-  "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir"
+  "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir",
+  "classe_livro": "Lanceiro",
+  "assinaturas": [
+   "Ponta Primeiro (Reação, 1)",
+   "Alcance Longo (Passiva)",
+   "Firmar a Lança (Postura)"
+  ],
+  "fraqueza": "colado no inimigo, −2 no ataque.",
+  "tracos": [
+   "ORGULHOSO",
+   "PACIENTE"
+  ],
+  "desejo": "nunca mais passar fome",
+  "ambicao": "virar Lendário",
+  "medo": "a morte de um filho",
+  "segredo": "tem um filho em outra cidade (OCULTO)",
+  "linha_vermelha": "nunca trai a família"
  },
  "Tuir": {
   "nivel": 160,
   "xp": 0,
   "log": [
-   "Dia 437: entra no livro (nível 160)"
+   "Dia 437: entra no livro (nível 160)",
+   "Dia 438: classe do Livro: Arauto (VOZ, Comum) · pelo dado (família VOZ)",
+   "Dia 438: desejo pelo dado (438)",
+   "Dia 438: ambicao pelo dado (438)",
+   "Dia 438: medo pelo dado (438)",
+   "Dia 438: segredo pelo dado (438)",
+   "Dia 438: linha vermelha pelo dado (438)"
   ],
   "classe": "rei antigo (o eco)",
-  "ocupacao": "o eco do rei TUIR em Zythir: fala na sala 3; (OCULTO) preso vivo pela magia da tumba na sala 9"
+  "ocupacao": "o eco do rei TUIR em Zythir: fala na sala 3; (OCULTO) preso vivo pela magia da tumba na sala 9",
+  "despertar": "Memória de Rei",
+  "classe_livro": "Arauto",
+  "assinaturas": [
+   "Anúncio (Ativa, 2)",
+   "Etiqueta (Passiva)",
+   "Imunidade de Enviado (Passiva)"
+  ],
+  "fraqueza": "fala pelo senhor dele; não tem palavra própria.",
+  "tracos": [
+   "SABIO",
+   "CORAJOSO"
+  ],
+  "desejo": "uma casa própria",
+  "ambicao": "formar uma companhia",
+  "medo": "voltar a ser escravo",
+  "segredo": "já matou e ninguém sabe (OCULTO)",
+  "linha_vermelha": "nunca volta atrás numa palavra dada"
  },
  "Zyza": {
   "nivel": 129,
@@ -5236,6 +6812,10 @@
    "Dia 438: entra no livro (nível 129)"
   ],
   "classe": "servo armado do rei (Osso que Cresce)",
-  "ocupacao": "o guarda da sala 1 de Zythir, erguido no 438 pela Receita Mestra: aceitou com um PREÇO, a FOME (carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua); 3/4 de 158 = 118, +10% da Escola do Osso = 129; teto do Osso que Cresce: 258; a palavra cobra do rei 1d6 × 2 de PV a cada aurora; o nome e a gota de sangue a cada lua nova (460)"
+  "ocupacao": "o guarda da sala 1 de Zythir, erguido no 438 pela Receita Mestra: aceitou com um PREÇO, a FOME (carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua); 3/4 de 158 = 118, +10% da Escola do Osso = 129; teto do Osso que Cresce: 258; a palavra cobra do rei 1d6 × 2 de PV a cada aurora; o nome e a gota de sangue a cada lua nova (460)",
+  "tracos": [
+   "AMBICIOSO",
+   "COVARDE"
+  ]
  }
 }

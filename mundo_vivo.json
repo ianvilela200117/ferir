@@ -3158,7 +3158,7 @@
    "comportamento": "migrante: segue estações e rebanhos",
    "sinal": "silêncio dos pássaros",
    "drops": "couro/escama: DRAEK (Raro, Sombra; armadura: +2 Furtividade e Defesa no escuro) · glândula: ERYRA (Raro, Sombra; ofício e poção: a peça não brilha nem faz som) · é BICHO DE SOMBRA: a cinza ou o sangue serve à receita do SYSRETH",
-   "estado": "vivo",
+   "estado": "MORTO (noite do 424; o rei, o Moreth e o Eiagrir, na 1ª rodada)",
    "notas": "o gerador deu \"Varula\" (bate em Varogh): renomeado NEANE (nomes.py liquida livre)"
   },
   {
@@ -3175,7 +3175,7 @@
    "fraqueza": "SOMBRA (dano dobrado, corta a regeneração) · e uma a descobrir: a cria",
    "comportamento": "necrófago: segue batalhas e pestes",
    "sinal": "silêncio dos pássaros",
-   "drops": "garra ZETHESS (Lendário, Luz; arma: cega 1 rodada com 18-20) · escama SAZHESS (Lendário, Luz; armadura: revela invisíveis a 80 m) · presa NIRIEL (Lendário, Luz; arma: cega) · pelo ORRON (Lendário, Luz + Gelo; armadura: revela invisíveis) · CORAÇÃO: NÚCLEO LENDÁRIO DE LUZ (Mítico e Primordial; e serve à RESSURREIÇÃO)",
+   "drops": "garra ZETHESS (Lendário, Luz; arma: cega 1 rodada com 18-20) · escama SAZHESS (Lendário, Luz; armadura: revela invisíveis a 80 m) · presa NIRIEL (Lendário, Luz; arma: cega) · pelo YENNOR (Lendário, Luz + Gelo; armadura: revela invisíveis) · CORAÇÃO: NÚCLEO LENDÁRIO DE LUZ (Mítico e Primordial; e serve à RESSURREIÇÃO)",
    "estado": "vivo",
    "notas": "o bicho de Luz que o Yeane conhece (YE26 [18]; BL26 [6] Lendário). Nomes dos drops trocados (ithula, gorron e fentor batiam em Ithvil/Ithra, Gorron/Gorra e Fenron): zethess, sazhess, niriel. O gerador rodou antes um Raro de Luz (Oreth) por engano: descartado (Raro não dá núcleo). · [426, a luta refeita: o rei NÃO foi ao Yeane pedir Ressurreição; a CASA NÃO SABE do Nesium. O bicho existe em Steunn.]"
   },
@@ -3214,7 +3214,7 @@
    "nivel": "14",
    "essencia": "Elo",
    "onde": "as Fundas do Norte (o Clã Hegre)",
-   "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «selol» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais ·  · 433: o conferidor achou RIUNN perto de GIUNN: trocado por Tinda"
+   "nota": "(OCULTO; longe) gerador monstro (431, HG31 [6] → novidade [2]): avistado nas Fundas do Norte no meio da traição do Clã Hegre; o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda · nome: Nesron · categoria: Incomum · nível: 14 · corpo: inseto · tamanho: homem · essência: Elo · números: PV 84 · Defesa 17 · RD 1 · ataque +7 · 1 ataque(s) por rodada · dano 1d8 × 1.5 · XP 140 (×5 chefe, ×10 Lendário ou acima) · traços: ·   · muda de forma · poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 6 m, uma vez a cada 3 rodadas · fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: fogo comum · comportamento: migrante: segue estações e rebanhos · habitat: montanha · sinal (Lei 15): poços secos · drops: ·   · olho ×4: «lior» (Incomum, Elo), serve para armadura: sente aliados com Laço 3 ou mais ·  · 433: o conferidor achou RIUNN perto de GIUNN: trocado por Tinda"
   },
   {
    "nome": "Zyza",
@@ -3223,7 +3223,8 @@
    "nivel": "158",
    "essencia": "Podridão",
    "onde": "Zythir, a sala 1",
-   "nota": "gerador monstro (o nome Thuron trocado): o guarda da sala 1, da COLMEIA que obedece a uma rainha; MORTO no 436 pelo contra-golpe do Eiagrir"
+   "nota": "gerador monstro (o nome Thuron trocado): o guarda da sala 1, da COLMEIA que obedece a uma rainha; MORTO no 436 pelo contra-golpe do Eiagrir · 438: ERGUIDO como SERVO ARMADO do rei (nível 129; servos.json; fichas_combate.json)",
+   "estado": "servo armado do rei (438)"
   },
   {
    "nome": "Huir",
@@ -3455,10 +3456,10 @@
   {
    "nome": "hadun",
    "dia": 432,
-   "cat": "Incomum",
-   "essencia": "Veneno",
-   "origem": "pedra (vidro de raio)",
-   "nota": "(OCULTO até a carta do Tolvane) o CELOCUS, em Lumade, não respondeu à oferta do rei: mostrou ao Tolvane uma carga de HADUN à venda (CL32 [6] → novidade [1]); dureza 5, maleabilidade 4, condutividade 4; infusão até o 4º círculo"
+   "cat": "Único",
+   "essencia": "Podridão",
+   "origem": "pena (o drop do HUSGARN, servo do Skorval)",
+   "nota": "(OCULTO até a carta do Tolvane) o CELOCUS, em Lumade, não respondeu à oferta do rei: mostrou ao Tolvane uma carga de HADUN à venda (CL32 [6] → novidade [1]); dureza 5, maleabilidade 4, condutividade 4; infusão até o 4º círculo · 438 (MOTOR 9.1, correção de registro): a ficha certa é a dita à mesa no 437: PENA ÚNICA DE PODRIDÃO, o drop «hadun» do Husgarn escrito no 270 (RD 5 contra doença e veneno). A ficha do gerador do 432 (Incomum, Veneno, vidro de raio) não vale."
   }
  ],
  "guildas": [

@@ -1,0 +1,71 @@
+Graur: Ferreiro de Guerra (FORJA, Raro) · leitura do Mestre: Forjador de Guerra
+Krernos: Mercenário (AÇO, Comum) · leitura do Mestre: bandido-chefe de AÇO com Ladinagem
+Nouliel: Burocrata (OURO, Incomum) · leitura do Mestre: Intendente do livro e dos pilares
+Skedda: Runomante (CHAMA, Raro) · leitura do Mestre: Runista (Magia, runas)
+Brara: Ferreiro (FORJA, Comum) · leitura do Mestre: Fundidora (Forja Mestre)
+Tirello: Diplomata (VOZ, Incomum) · leitura do Mestre: Podestà (VOZ e OURO)
+Ithra: Mago (CHAMA, Incomum) · leitura do Mestre: Maga de Elo
+Odrum: Camponês (RAIZ, Comum) · leitura do Mestre: mineiro (trabalhador da terra)
+Tilde: Ferreiro (FORJA, Comum) · leitura do Mestre: aprendiz da forja ao lado do rei
+Brua: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur
+capuz 3: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur
+capuz 4: Soldado (AÇO, Comum) · leitura do Mestre: capuz do Graur
+Kreium: Batedor (SOMBRA, Comum) · leitura do Mestre: chefe de batedores do Clã
+Tano: Soldado (AÇO, Comum) · leitura do Mestre: carregador de AÇO
+Lasca: Ladino (SOMBRA, Comum) · leitura do Mestre: faca da rede de Farenta
+Miro: Ladino (SOMBRA, Comum) · leitura do Mestre: faca da rede de Farenta
+Dolassi: Soldado (AÇO, Comum) · leitura do Mestre: remador de AÇO
+Kreine: Guerreiro (AÇO, Comum) · leitura do Mestre: desertor da Liga, de AÇO
+Braeth: Orador (VOZ, Raro) · leitura do Mestre: ancião do Clã (VOZ)
+Draek: Diplomata (VOZ, Incomum) · leitura do Mestre: emissário da Liga (VOZ)
+Veyula: Diplomata (VOZ, Incomum) · leitura do Mestre: enviado da Almision
+Selron: Batedor (SOMBRA, Comum) · leitura do Mestre: chefe de batedores da Liga
+Goreth: Soldado (AÇO, Comum) · leitura do Mestre: velho companheiro de armas do Kreine na Liga
+a cantora do templo: Bardo (VOZ, Incomum) · leitura do Mestre: cantora do templo (Engano +6)
+Leliel: Rei sem Coroa (VOZ, Lendário) · leitura do Mestre: Lendária de influência que quer a coroa do Norte
+Ceduion: Arquimago (CHAMA, Lendário) · leitura do Mestre: Lendário de magia, reitor do Colégio de Telosus
+Orvenne: Diplomata (VOZ, Incomum) · leitura do Mestre: embaixador de terra distante
+Selvil: Soldado (AÇO, Comum) · leitura do Mestre: voluntário salineiro da hoste
+Orol: Ferreiro (FORJA, Comum) · leitura do Mestre: ferreiro refugiado de Levis
+Brissa: Caçador de Recompensas (SOMBRA, Raro) · leitura do Mestre: caçadora da Leliel
+Hask: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisador de história e ruínas
+Gerva: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisadora de história e ruínas
+Bjorvunn: Caçador de Achados (FORTUNA, Incomum) · leitura do Mestre: pesquisador de monstros e núcleos
+Tessal: Alquimista (FORJA, Incomum) · leitura do Mestre: pesquisadora de alquimia e remédios
+Tedulteth: Alquimista (FORJA, Incomum) · leitura do Mestre: pesquisador de alquimia e remédios
+Nialla: Herbalista (RAIZ, Incomum) · leitura do Mestre: pesquisadora de plantas e terras
+Pebanda: Herbalista (RAIZ, Incomum) · leitura do Mestre: pesquisador de plantas e terras
+Ssashir: Artífice (FORJA, Incomum) · leitura do Mestre: pesquisador de metais e forja
+Lile: Burocrata (OURO, Incomum) · leitura do Mestre: copista do arquivo
+Tolvane: Camponês (RAIZ, Comum) · leitura do Mestre: salineiro velho
+Groa: Ferreiro (FORJA, Comum) · leitura do Mestre: ferreira refugiada de Steunn
+Lucissi: Camponês (RAIZ, Comum) · leitura do Mestre: mãe do Ronio, gente do povo
+Baldino: Soldado (AÇO, Comum) · leitura do Mestre: carcereiro
+Oisse: Curandeiro (VÉU, Comum) · leitura do Mestre: irmã curandeira, com a sua ordem
+Facio: Mascate (OURO, Comum) · leitura do Mestre: barqueiro que leva carga no rio
+Donione: Notário de Contratos (SELO, Incomum) · leitura do Mestre: notário do podestà
+Moua: Batedor (SOMBRA, Comum) · leitura do Mestre: salineira e guia de canais
+Dotocci: Arauto (VOZ, Comum) · leitura do Mestre: estivador-chefe que fala pelos do cais (VOZ)
+Gurka: Construtor (FORJA, Raro) · leitura do Mestre: mestre-mineiro (as galerias e os poços)
+Gundald: Mascate (OURO, Comum) · leitura do Mestre: carroceiro
+Drassa: Burocrata (OURO, Incomum) · leitura do Mestre: guarda-livros
+Hassa: Camponês (RAIZ, Comum) · leitura do Mestre: agrimensor e lavrador
+Nivis: Burocrata (OURO, Incomum) · leitura do Mestre: escrevente da alfândega
+Mie: Campeão (AÇO, Comum) · leitura do Mestre: campeã da guarda da Lurentetta
+Giunn: Juiz Errante (VOZ, Raro) · leitura do Mestre: jurado de Steunn
+Tigra: Cozinheiro (FORJA, Comum) · leitura do Mestre: padeira
+Gonde: Lanceiro (AÇO, Comum) · leitura do Mestre: cabo da guarda do rei, de lança
+Tuald: Bárbaro (AÇO, Comum) · pelo dado (família AÇO)
+Holgir: Espadachim Lendário (AÇO, Comum) · pelo dado (família AÇO)
+Yesiel: Soldado (AÇO, Comum) · pelo dado (família AÇO)
+Helgunn: Soldado (AÇO, Comum) · pelo dado (família AÇO)
+Pelagri: Agiota (OURO, Raro) · pelo dado (família OURO)
+Tuir: Arauto (VOZ, Comum) · pelo dado (família VOZ)
+Ulnar: Notário de Contratos (SELO, Incomum) · pelo dado (família SELO)
+Gorron: Exorcista (VÉU, Raro) · pelo dado (família VÉU)
+Selula: Geomante (CHAMA, Incomum) · pelo dado (família CHAMA)
+Orast: Batedor (SOMBRA, Comum) · pelo dado (família SOMBRA)
+Ruddo: Guardião da Fé (VÉU, Épico) · pelo dado (família VÉU)
+Sorvane: Orador Sagrado (VÉU, Raro) · pelo dado (família VÉU)
+Gicilla: Trapaceiro (FORTUNA, Incomum) · pelo dado (família FORTUNA)
+Holgir: Capitão (AÇO, Raro) · pelo dado (família AÇO)

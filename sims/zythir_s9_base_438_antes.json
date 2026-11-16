@@ -1,0 +1,34 @@
+{
+ "monstro": {
+  "nome": "Vdogek",
+  "cat": "Único",
+  "nivel": 183,
+  "pv": 3660,
+  "df": 72,
+  "rd": 12,
+  "at": 62,
+  "dado": "3d10",
+  "mult": 10,
+  "acoes": 7,
+  "poder": {
+   "nome": "o golpe que corta laços e encantos (15 m)",
+   "tipo": "area",
+   "cd": 28,
+   "dano": "6d6"
+  },
+  "grito": {
+   "cd": 28
+  },
+  "inteligente": true,
+  "moral": false,
+  "fraqueza": "Fome",
+  "covil": {
+   "nome": "a névoa podre da tumba",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": "ENVENENADO (G16)"
+  },
+  "nota": "gerador monstro (438; obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado por VDOGEK): o GUARDIÃO do coração de Zythir, Único 183, besta do tamanho de uma colina, ELO; olhar paralisante (roda como grito, CD 28); muitas cabeças (7 ações); o golpe corta laços e encantos (área 6d6; à mão: no Zyza, d6 1-2 a palavra se rompe); cria no ventre (1d6 crias ao morrer); caçador; fraco a FOME e, a descobrir, à CRIA; fase aos 50% (FZ38 [1]): troca de Essência; +2 da volta; o covil da tumba; não foge"
+ },
+ "grupo": []
+}

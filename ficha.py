@@ -54,7 +54,7 @@ def ver(F):
     a = F['atributos']
     print(f"FERIR · nível {F['nivel']} · XP {br(F['xp'])} / {br(limiar(F['nivel']))} (faltam {br(limiar(F['nivel']) - F['xp'])})")
     print(f"  Int {a['Inteligência']} · Afinidade {a['Afinidade']} · PV {F['pv'][0]}/{F['pv'][1]} · Mana {F['mana'][0]}/{F['mana'][1]} · "
-          f"Foco {F['foco']} · {acoes(F['nivel'])} ações · Fortuna {F['fortuna'][0]}/{F['fortuna'][1]} · Revés {F['reves'][0]}/{F['reves'][1]}")
+          f"Foco {F['foco']} · {acoes(F['nivel'])} ações · Fortuna {F['fortuna'][0]}/{F['fortuna'][1]} · Revés {F['reves'][0]}/{F['reves'][1]}" + (f" · Fama {F['fama']}/7" if 'fama' in F else ''))
     print('  ' + ' · '.join(f'{k} {v}' for k, v in a.items() if k not in ('Inteligência', 'Afinidade')))
     print(f"  COFRE {br(F['cofre'])} · semana fixa: +{br(F['livro']['renda_casa'])} da casa − {br(F['livro']['despesa'])} de despesa (+ as cidades)")
     if F.get('materiais'):

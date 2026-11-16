@@ -9,15 +9,11 @@
   "at": 62,
   "dado": "3d10",
   "mult": 10,
-  "acoes": 7,
   "poder": {
    "nome": "o golpe que corta laços e encantos (15 m)",
    "tipo": "area",
    "cd": 28,
    "dano": "6d6"
-  },
-  "grito": {
-   "cd": 28
   },
   "inteligente": true,
   "moral": false,
@@ -28,7 +24,16 @@
    "cd": 21,
    "efeito": "ENVENENADO (G16)"
   },
-  "nota": "gerador monstro (438; obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado por VDOGEK): o GUARDIÃO do coração de Zythir, Único 183, besta do tamanho de uma colina, ELO; olhar paralisante (roda como grito, CD 28); muitas cabeças (7 ações); o golpe corta laços e encantos (área 6d6; à mão: no Zyza, d6 1-2 a palavra se rompe); cria no ventre (1d6 crias ao morrer); caçador; fraco a FOME e, a descobrir, à CRIA; fase aos 50% (FZ38 [1]): troca de Essência; +2 da volta; o covil da tumba; não foge"
+  "nota": "gerador monstro (438; obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado por VDOGEK): o GUARDIÃO do coração de Zythir, Único 183, besta do tamanho de uma colina, ELO; olhar paralisante (roda como grito, CD 28); muitas cabeças (7 ações); o golpe corta laços e encantos (área 6d6; à mão: no Zyza, d6 1-2 a palavra se rompe); cria no ventre (1d6 crias ao morrer); caçador; fraco a FOME e, a descobrir, à CRIA; fase aos 50% (FZ38 [1]): troca de Essência; +2 da volta; o covil da tumba; não foge · 438 (MOTOR 9.1, antes de qualquer luta; nada rolado): o luta.py novo roda os traços sozinho: o OLHAR paralisa de verdade (CD 28; perde a vez e −4 na Defesa; antes rodava como o 'grito'), as MUITAS CABEÇAS dão a 7ª ação, a CRIA NO VENTRE solta 1d6 crias ao morrer (Épicas, nível 45; a última, sozinha e ferida, fica viva), e a 2ª FASE usa o FZ38 [1] já rolado (troca de Essência). Fica à mão: o golpe que corta laço, no ZYZA, d6 1-2 rompe a palavra.",
+  "tracos": [
+   "olhar paralisante (Vontade contra CD 10 + nível ÷ 10)",
+   "muitas cabeças ou membros (+1 ataque por rodada)",
+   "cria no ventre (ao morrer solta 1d6 crias; uma pode ser levada viva)"
+  ],
+  "essencia": "Elo",
+  "fase": {
+   "rolado": 1
+  }
  },
  "grupo": []
 }

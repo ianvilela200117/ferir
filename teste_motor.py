@@ -9,7 +9,8 @@ CMDS = [['tick.py', 'status'], ['ficha.py', 'ver'], ['agenda.py', 'ver'], ['agen
         ['mercado.py', 'ver'], ['combate.py', 'ver'], ['feridos.py', 'ver'], ['cerco.py', 'lista'], ['npc.py', 'lista', '3'], ['reino.py', 'estado'], ['obra_valor.py', 'fichas'],
         ['viagem.py', 'lista'], ['motor.py'], ['rotina.py', 'ver'], ['nomes.py', 'arcaica', '2', 'livre'], ['selo.py', 'dr', 'TESTE1', 'teste', 'd20', '1-10: a | 11-20: b'],
         ['conselho.py', 'TESTE2', 'teste', 'A: sim', 'B: não'], ['luta.py', 'sims/caca_6_lobo-cinzento.json', 'sim=30'], ['aberto.py', '2d20+10', 'cd=20'],
-        ['contexto.py', 'quieto'], ['conferidor.py', '999'], ['julgamento.py', 'ver'], ['tratados.py', 'ver'], ['onde.py', 'ver'], ['batalha.py', 'modelo', 'sim=50'], ['painel.py', 'quieto'], ['cronica.py', 'quieto']]
+        ['contexto.py', 'quieto'], ['conferidor.py', '999'], ['julgamento.py', 'ver'], ['tratados.py', 'ver'], ['onde.py', 'ver'], ['batalha.py', 'modelo', 'sim=50'], ['painel.py', 'quieto'], ['cronica.py', 'quieto'],
+        ['edito.py', 'ver'], ['cria.py', 'ver'], ['cancao.py', 'ver'], ['despertar.py', 'devidos'], ['artes.py', 'ver'], ['coleta.py', 'ver'], ['festas.py', 'proximas'], ['masmorra.py', 'atlas'], ['luta.py', 'tracos'], ['luta.py', 'sims/zythir_s9.json', 'sim=30'], ['classe.py', 'faltam'], ['habilidades.py', 'mao']]
 LENTO = [['tick.py', 'bloco', '8', 'resumo'], ['contexto.py', 'quieto']]
 
 def main():

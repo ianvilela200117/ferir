@@ -1,0 +1,1143 @@
+{
+ "Ferir": {
+  "nivel": 156,
+  "doms": [
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   }
+  ],
+  "oculto": false
+ },
+ "Higrunn": {
+  "nivel": 1153,
+  "doms": [
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   },
+   {
+    "dom": "Pele do Mundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "RD +5 contra uma Essência escolhida",
+    "preco": "o dano da Essência oposta soma +1 dado contra ele",
+    "essencia": "Sal"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Mamiltia": {
+  "nivel": 1149,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 2,
+    "marco": 200,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo",
+    "marco2": 300,
+    "marcos": [
+     200,
+     300
+    ]
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 2,
+    "marco": 300,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Lurentetta": {
+  "nivel": 774,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   },
+   {
+    "dom": "Pele do Mundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "RD +5 contra uma Essência escolhida",
+    "preco": "o dano da Essência oposta soma +1 dado contra ele",
+    "essencia": "Gelo",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Celocus": {
+  "nivel": 714,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Borecci": {
+  "nivel": 615,
+  "doms": [
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Almision": {
+  "nivel": 440,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 2,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)",
+    "marco2": 300,
+    "marcos": [
+     100,
+     300
+    ]
+   },
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   },
+   {
+    "dom": "Passo Certo",
+    "grau": 2,
+    "marco": 300,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Teraseth": {
+  "nivel": 432,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo"
+   },
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Eiandald": {
+  "nivel": 420,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   },
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "a Guardiã da Tenaz": {
+  "nivel": 416,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo"
+   },
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Adurel": {
+  "nivel": 378,
+  "doms": [
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo"
+   },
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Skotha Graskur": {
+  "nivel": 370,
+  "doms": [
+   {
+    "dom": "Pele do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "RD +5 contra uma Essência escolhida",
+    "preco": "o dano da Essência oposta soma +1 dado contra ele",
+    "essencia": "Peso"
+   },
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Sorte Velha",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Fortuna máxima +1",
+    "preco": "o Limiar de Revés cai 1",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Tervane": {
+  "nivel": 360,
+  "doms": [
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo"
+   },
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Leliel": {
+  "nivel": 351,
+  "doms": [
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 2,
+    "marco": 200,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer",
+    "marco2": 300,
+    "marcos": [
+     200,
+     300
+    ]
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 2,
+    "marco": 300,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Garkunn": {
+  "nivel": 343,
+  "doms": [
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   },
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Orron": {
+  "nivel": 340,
+  "doms": [
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   },
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Qunemneth": {
+  "nivel": 330,
+  "doms": [
+   {
+    "dom": "Pele do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "RD +5 contra uma Essência escolhida",
+    "preco": "o dano da Essência oposta soma +1 dado contra ele",
+    "essencia": "Vida"
+   },
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Gorine": {
+  "nivel": 330,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Naera": {
+  "nivel": 330,
+  "doms": [
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Sorte Velha",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "Fortuna máxima +1",
+    "preco": "o Limiar de Revés cai 1",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Ceduion": {
+  "nivel": 310,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Hundunn": {
+  "nivel": 300,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   },
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 300,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir",
+    "nome_proprio": "a dar na primeira cena (Livro Nove 4: no 300 o Dom ganha nome)"
+   }
+  ],
+  "oculto": true
+ },
+ "Varuun": {
+  "nivel": 290,
+  "doms": [
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   },
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   }
+  ],
+  "oculto": true
+ },
+ "Xaysress": {
+  "nivel": 284,
+  "doms": [
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Souane": {
+  "nivel": 282,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 2,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite",
+    "marco2": 200,
+    "marcos": [
+     100,
+     200
+    ]
+   },
+   {
+    "dom": "Olho Aberto",
+    "grau": 2,
+    "marco": 200,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Meor": {
+  "nivel": 275,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   }
+  ],
+  "oculto": true
+ },
+ "Taunn": {
+  "nivel": 275,
+  "doms": [
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Zazess": {
+  "nivel": 275,
+  "doms": [
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Altheltia": {
+  "nivel": 268,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   }
+  ],
+  "oculto": true
+ },
+ "Liis": {
+  "nivel": 260,
+  "doms": [
+   {
+    "dom": "Mão do Mundo",
+    "grau": 2,
+    "marco": 100,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer",
+    "marco2": 200,
+    "marcos": [
+     100,
+     200
+    ]
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 2,
+    "marco": 200,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Nisis": {
+  "nivel": 260,
+  "doms": [
+   {
+    "dom": "Nome que Anda",
+    "grau": 2,
+    "marco": 100,
+    "efeito": "a reputação começa em +10 em todo lugar novo",
+    "preco": "os inimigos também ouviram: um rival a mais no mundo",
+    "marco2": 200,
+    "marcos": [
+     100,
+     200
+    ]
+   },
+   {
+    "dom": "Nome que Anda",
+    "grau": 2,
+    "marco": 200,
+    "repete": true
+   }
+  ],
+  "oculto": true
+ },
+ "Ossan": {
+  "nivel": 260,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   },
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   }
+  ],
+  "oculto": true
+ },
+ "Goald": {
+  "nivel": 255,
+  "doms": [
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Mão do Mundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+2 em toda obra de ofício",
+    "preco": "a marca é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer"
+   }
+  ],
+  "oculto": true
+ },
+ "Isair": {
+  "nivel": 245,
+  "doms": [
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   },
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   }
+  ],
+  "oculto": true
+ },
+ "Lavis": {
+  "nivel": 245,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   },
+   {
+    "dom": "Sorte Velha",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Fortuna máxima +1",
+    "preco": "o Limiar de Revés cai 1"
+   }
+  ],
+  "oculto": true
+ },
+ "Tair": {
+  "nivel": 240,
+  "doms": [
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   },
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Moreth": {
+  "nivel": 232,
+  "doms": [
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   },
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   }
+  ],
+  "oculto": false
+ },
+ "Quthemnus": {
+  "nivel": 229,
+  "doms": [
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   },
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   }
+  ],
+  "oculto": true
+ },
+ "Tundald": {
+  "nivel": 215,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   },
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   }
+  ],
+  "oculto": true
+ },
+ "Xaesrir": {
+  "nivel": 200,
+  "doms": [
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   },
+   {
+    "dom": "Voz de Mando",
+    "grau": 1,
+    "marco": 200,
+    "efeito": "aliados a 30 m têm +1 no ataque e +2 na moral",
+    "preco": "se ele cai, a tropa testa moral com −4"
+   }
+  ],
+  "oculto": true
+ },
+ "Mave": {
+  "nivel": 175,
+  "doms": [
+   {
+    "dom": "Sangue Grosso",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Sangue e Osso cobram a metade do PV",
+    "preco": "cura de Luz rende a metade nele"
+   }
+  ],
+  "oculto": true
+ },
+ "Tuir": {
+  "nivel": 160,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   }
+  ],
+  "oculto": true
+ },
+ "Mie": {
+  "nivel": 150,
+  "doms": [
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Zeazhis": {
+  "nivel": 150,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   }
+  ],
+  "oculto": true
+ },
+ "Yeror": {
+  "nivel": 130,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   }
+  ],
+  "oculto": true
+ },
+ "Eiagrir": {
+  "nivel": 126,
+  "doms": [
+   {
+    "dom": "Mão que Doma",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "+1 no teto de servos e de crias; os laços com eles duram o dobro",
+    "preco": "sente a morte de cada um deles (Atordoado 1 rodada quando um cai)"
+   }
+  ],
+  "oculto": false
+ },
+ "Sizhir": {
+  "nivel": 125,
+  "doms": [
+   {
+    "dom": "Passo Certo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "nunca é surpreendido; +2 na Iniciativa",
+    "preco": "dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)"
+   }
+  ],
+  "oculto": true
+ },
+ "Sior": {
+  "nivel": 125,
+  "doms": [
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   }
+  ],
+  "oculto": true
+ },
+ "Isolda": {
+  "nivel": 117,
+  "doms": [
+   {
+    "dom": "Segundo Coração",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "1x por dia, ao cair a 0 PV fica com 1 e age na vez dele",
+    "preco": "depois da cena fica Exausto até dormir"
+   }
+  ],
+  "oculto": false
+ },
+ "Zitha": {
+  "nivel": 115,
+  "doms": [
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": true
+ },
+ "Fabaino": {
+  "nivel": 100,
+  "doms": [
+   {
+    "dom": "Fôlego Sem Fundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "Estamina e Mana máximas +25%",
+    "preco": "come por dois: sem ração dobrada, perde o Dom naquele dia"
+   }
+  ],
+  "oculto": false
+ },
+ "Siir": {
+  "nivel": 100,
+  "doms": [
+   {
+    "dom": "Olho Aberto",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "vê magia ativa e sente mentira grossa sem teste",
+    "preco": "não descansa direito: recupera um quarto a menos de PV por noite"
+   }
+  ],
+  "oculto": true
+ },
+ "Vrothos": {
+  "nivel": 100,
+  "doms": [
+   {
+    "dom": "Memória de Rei",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "um talento a mais, agora",
+    "preco": "o próximo talento por nível atrasa 10 níveis"
+   }
+  ],
+  "oculto": true
+ },
+ "Bjestir": {
+  "nivel": 100,
+  "doms": [
+   {
+    "dom": "Pele do Mundo",
+    "grau": 1,
+    "marco": 100,
+    "efeito": "RD +5 contra uma Essência escolhida",
+    "preco": "o dano da Essência oposta soma +1 dado contra ele",
+    "essencia": "Fogo"
+   }
+  ],
+  "oculto": true
+ }
+}

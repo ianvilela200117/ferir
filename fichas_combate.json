@@ -69,7 +69,8 @@
      "rodada": [
       3
      ],
-     "essencia": ""
+     "essencia": "",
+     "arte": "corte_do_horizonte"
     },
     {
      "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
@@ -79,7 +80,8 @@
      "rodada": [
       4
      ],
-     "essencia": "Vida"
+     "essencia": "Vida",
+     "arte": "bigorna"
     },
     {
      "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
@@ -89,7 +91,8 @@
      "rodada": [
       5
      ],
-     "essencia": "Vida"
+     "essencia": "Vida",
+     "arte": "tremor_de_ferro"
     },
     {
      "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
@@ -99,7 +102,8 @@
      "rodada": [
       6
      ],
-     "essencia": ""
+     "essencia": "",
+     "arte": "corte_corrido"
     },
     {
      "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
@@ -109,7 +113,8 @@
      "rodada": [
       8
      ],
-     "essencia": ""
+     "essencia": "",
+     "arte": "fio_duplo"
     },
     {
      "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
@@ -119,11 +124,16 @@
      "rodada": [
       9
      ],
-     "essencia": "Vida"
+     "essencia": "Vida",
+     "arte": "quebra_guarda"
     }
    ],
    "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30, 438): maça: Quebra-Guarda, Tremor de Ferro, Bigorna; espada: Fio Duplo, Corte Corrido, Corte do Horizonte; aura: Pele de Pedra",
-   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura"
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "doms": [
+    "Fôlego Sem Fundo",
+    "Olho Aberto"
+   ]
   },
   "Eiagrir": {
    "nome": "Eiagrir",
@@ -158,7 +168,8 @@
      "rodada": [
       3
      ],
-     "essencia": "Vida"
+     "essencia": "Vida",
+     "arte": "chuva_de_pontas"
     },
     {
      "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
@@ -168,10 +179,14 @@
      "rodada": [
       4
      ],
-     "essencia": "Vida"
+     "essencia": "Vida",
+     "arte": "ponta_que_espera"
     }
    ],
-   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento"
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento",
+   "doms": [
+    "Mão que Doma"
+   ]
   },
   "Isolda": {
    "nome": "Isolda",
@@ -197,9 +212,34 @@
       2
      ],
      "essencia": ""
+    },
+    {
+     "nome": "FLECHA QUE PREGA (Arte de arco, 4º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "flecha_que_prega",
+     "dano": "9d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      3
+     ]
+    },
+    {
+     "nome": "TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "tiro_duplo",
+     "dano": "5d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      4
+     ]
     }
    ],
-   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde"
+   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde · ARTES DE ARMA (G30, 438): Arco e besta: Tiro Duplo, Flecha que Prega; auras: Passo de Vento, Pele de Pedra",
+   "doms": [
+    "Segundo Coração"
+   ]
   },
   "Eliane": {
    "nome": "Eliane",
@@ -215,8 +255,32 @@
    "agi": 8,
    "heroi": true,
    "nivel_ref": 95,
-   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda)",
-   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda."
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30, 438): Lança: Ponta que Espera, Chuva de Pontas; auras: Nó de Chamada",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "arte": "chuva_de_pontas",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "essencia": "Terra",
+     "rodada": [
+      1
+     ]
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "arte": "ponta_que_espera",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "essencia": "Terra",
+     "rodada": [
+      1
+     ]
+    }
+   ]
   },
   "Ferir": {
    "nome": "Ferir",
@@ -265,7 +329,10 @@
    ],
    "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO · GIBÃO DE ORLOXA DO REI (Mítico, inteiro desde o Sob Medida 4): 1x por cena +4 de Defesa · RD +3 contra fogo · RD 3 contra doença e veneno · 1x POR DIA DESFAZ UM GOLPE RECEBIDO · não é derrubado nem empurrado · esconde",
    "desfaz": 1,
-   "desfaz_nome": "o Gibão de Orloxa do Rei"
+   "desfaz_nome": "o Gibão de Orloxa do Rei",
+   "doms": [
+    "Mão que Doma"
+   ]
   },
   "Graur": {
    "nome": "Graur",
@@ -280,7 +347,32 @@
    "heroi": true,
    "vigor": 12,
    "imune_empurrao": true,
-   "nivel_ref": 75
+   "nivel_ref": 75,
+   "magias": [
+    {
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "tremor_de_ferro",
+     "dano": "9d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      1
+     ]
+    },
+    {
+     "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "quebra_guarda",
+     "dano": "5d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "pecas": "ARTES DE ARMA (G30, 438): Maça e martelo: Quebra-guarda, Tremor de Ferro; auras: Luz no Escudo"
   },
   "Hruthos": {
    "nome": "Hruthos",
@@ -292,7 +384,32 @@
    "pv": 240,
    "dado": "1d10",
    "mult": 3.0,
-   "b": 9
+   "b": 9,
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "arte": "chuva_de_pontas",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "essencia": "Fogo",
+     "rodada": [
+      1
+     ]
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "arte": "ponta_que_espera",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "essencia": "Fogo",
+     "rodada": [
+      1
+     ]
+    }
+   ],
+   "pecas": "ARTES DE ARMA (G30, 438): Lança: Ponta que Espera, Chuva de Pontas; auras: Sangue Quente"
   },
   "Tuald": {
    "nome": "Tuald",
@@ -304,7 +421,32 @@
    "pv": 170,
    "dado": "1d8",
    "mult": 2.0,
-   "b": 6
+   "b": 6,
+   "magias": [
+    {
+     "nome": "GUARDA DE DOIS (Arte de escudo, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "arte": "guarda_de_dois",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      1
+     ]
+    },
+    {
+     "nome": "EMPURRAR A PAREDE (Arte de escudo, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "arte": "empurrar_a_parede",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      1
+     ]
+    }
+   ],
+   "pecas": "ARTES DE ARMA (G30, 438): Escudo: Empurrar a Parede, Guarda de Dois; auras: Passo de Vento"
   },
   "Starkald": {
    "nome": "Starkald",
@@ -317,7 +459,31 @@
    "dado": "1d8",
    "mult": 3.0,
    "b": 9,
-   "pecas": "(nenhuma peça com feitiço registrada)"
+   "pecas": "(nenhuma peça com feitiço registrada) · ARTES DE ARMA (G30, 438): Arco e besta: Tiro Duplo, Flecha que Prega; auras: Calma",
+   "magias": [
+    {
+     "nome": "FLECHA QUE PREGA (Arte de arco, 4º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "flecha_que_prega",
+     "dano": "9d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      1
+     ]
+    },
+    {
+     "nome": "TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1.5; 1x por cena)",
+     "arte": "tiro_duplo",
+     "dano": "5d6",
+     "mult": 1.5,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      2
+     ]
+    }
+   ]
   },
   "Goir": {
    "nome": "Goir",
@@ -330,7 +496,20 @@
    "dado": "1d8",
    "mult": 2.0,
    "b": 5,
-   "pecas": "(nenhuma peça com feitiço registrada)"
+   "pecas": "(nenhuma peça com feitiço registrada) · ARTES DE ARMA (G30, 438): Arco e besta: Tiro Duplo",
+   "magias": [
+    {
+     "nome": "TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "arte": "tiro_duplo",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "essencia": "",
+     "rodada": [
+      1
+     ]
+    }
+   ]
   },
   "Zyza": {
    "nome": "Zyza",

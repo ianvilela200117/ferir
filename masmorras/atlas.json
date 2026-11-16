@@ -1,0 +1,32 @@
+{
+ "degrau": {
+  "Zythir": "Único"
+ },
+ "estado": {
+  "Zythir": "a casa limpou as salas 1 a 8 (436-437); a porta da 9, O CORAÇÃO, ficou fechada (438)",
+  "Eryssa": "o rei tomou o mercado (423) e abriu a porta de bronze: as tábuas da receita do SYSRETH (438)",
+  "a Necrópole de Alnesar": "a Tessal achou o lugar: nas colinas a leste de Ireviel, a 2 dias (426) (438)",
+  "Iroule": "a senha estava nos papéis do Quthemnus, no círculo da torre do meio (404); a casa ainda não desceu (438)",
+  "Quoium": "o LAENNOR mora sobre a escada afundada (430) (438)"
+ },
+ "extras": [
+  {
+   "nome": "Fenmir",
+   "onde": "a oficina velha de Ireviel (Ireviel velha)",
+   "o_que": "oficina de mestre caída; guarda o círculo de cinza; mora o HUGR (Raro 69), que só ataca quem pisa na cinza; o círculo foi fechado por fora com chave de runa",
+   "noticia": "391"
+  },
+  {
+   "nome": "Brassa",
+   "onde": "o Delta (meio dia de barca)",
+   "o_que": "a torre que solta o ar podre no rio (a febre do brejo desce dali); guarda o que não se sabe; o Krothos dormia nela antes de ir a Levis; dentro, Vigor CD 15 por hora",
+   "noticia": "258"
+  },
+  {
+   "nome": "Fenssa",
+   "onde": "perto da costa",
+   "o_que": "torre de mago caída; cheia de mortos; entrar pede a chave (um salineiro do culto do Maneus a levava; o Moreth o pegou antes do rito)",
+   "noticia": "~239"
+  }
+ ]
+}

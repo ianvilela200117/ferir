@@ -282,6 +282,9 @@ def um_dia(estrada, limite):
     R.append(cab.replace(f'Dia {dia} ·', f"Dia {dia} ({cal['txt']}){clima_res} ·", 1))
     if cal['nota']:
         R.append('  ☾ ' + cal['nota'])
+    if os.path.exists(P('festas.py')):   # MOTOR 9.1 (438, G36): as FESTAS DO CALENDÁRIO, no dia delas
+        _nfe, _, _ = roda('festas.py', 'dia', dia)
+        C += _nfe; R += [l for l in _nfe if 'FESTA' in l or 'À MÃO' in l]
     R += ['  ☁ ' + x for x in extremos]
     if t['pressao'] >= L:
         # G8-A (Dia 423, pedido do jogador): a PRESSÃO cheia rola TRÊS eventos de mundo: 1 LONGE, 1 PERTO, 1 ALEATÓRIO
@@ -391,6 +394,13 @@ def um_dia(estrada, limite):
             C += ['    ' + l for l in ng] or [f'      (falhou: {err})']
             R.append('  AS GUILDAS DO MUNDO (G12):')
             R += [l if len(l) < 330 else l[:330] for l in ng[1:]] or [f'   (falhou: {err})']
+        # MOTOR 9.1 (438, pedido do jogador): os ÉDITOS (G27) e as CRIAS (G25) andam sozinhos na semana
+        for _scr, _rot in (('edito.py', '[15d] O CÓDIGO DE IREVIEL (edito.py semana, G27):'), ('cria.py', '[15e] AS CRIAS E MONTARIAS (cria.py semana, G25):')):
+            if os.path.exists(P(_scr)):
+                C.append('   ' + _rot)
+                _n, _, err = roda(_scr, 'semana', dia)
+                C += ['    ' + l for l in _n] or [f'      (falhou: {err})']
+                R += ['  ' + l for l in _n if l.strip().startswith(('ÉDITO', '★', '⚠', 'À MÃO', 'CRIA'))]
         if os.path.exists(P('tratados.json')):
             C.append('   [15b] OS TRATADOS (tratados.py semana):')
             ntr, _, err = roda('tratados.py', 'semana', dia)

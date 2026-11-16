@@ -765,8 +765,8 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <ul>
 <li>O <strong>Dia 1</strong> foi o 27 da Lua das Barcas de <strong>1012 d.S.</strong></li>
 <li>O inverno de 1013 foi do Dia 190 ao Dia 279.</li>
-<li><strong>Hoje, Dia 356, é o 17 da Lua das Barcas de 1013 d.S.</strong>: fim do degelo. O verão (Lua do Sal) começa no <strong>Dia 370</strong>.</li>
-<li>A <strong>lua nova</strong> (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400 e assim por diante.</li>
+<li>O Dia 356 foi o 17 da Lua das Barcas de 1013 d.S. A Lua do Sal começou no Dia 370, a da Forja no 400, a <strong>da Seca no 430</strong>. <strong>O Dia 437 é o 8 da Lua da Seca de 1013 d.S.</strong> (o dia de hoje: <code>python3 tick.py status</code>). A Colheita (Lua do Grão) começa no <strong>Dia 460</strong>; os Jogos das Cidades, na Lua do Vinho (<strong>Dia 490</strong>).</li>
+<li>A <strong>lua nova</strong> (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400, 430, 460 e assim por diante.</li>
 </ul>
 <hr />
 <h2 id="7-a-moeda">7. A moeda</h2>
@@ -5721,14 +5721,14 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td><strong>vaduar</strong></td>
 <td>Raro</td>
 <td>(come magia)</td>
-<td>o veio-mãe de Yaelane; as minas de Levis e do Clã</td>
-<td>o metal cinza, que apaga runa e magia fraca. Aquecido, solta o pó da Febre Cinza. Dentro dos muros, só se trabalha a frio</td>
+<td>o veio-mãe de Yaelane; as minas de Levis (só as de baixo desde o 402) e do Clã</td>
+<td>o metal cinza, que apaga runa e magia fraca. Aquecido, solta o pó da Febre Cinza. Dentro dos muros, só se trabalha a frio. A casa tem 0,5 kg (uma barra do armazém do Ardenghi, 416)</td>
 </tr>
 <tr>
 <td><strong>cinza saciado</strong></td>
 <td>receita</td>
 <td>Fome, saciada</td>
-<td>a receita de Ferir (a Liga também já a tem)</td>
+<td>a receita de Ferir (a Liga também já a tem; anda vendida no Delta desde o 363)</td>
 <td>vaduar com material de Vida: devora uma magia de fora sem apagar a de dentro</td>
 </tr>
 <tr>
@@ -5736,21 +5736,21 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Épico</td>
 <td>Vento</td>
 <td>—</td>
-<td>leve e não para no ar; a peça volta à mão</td>
+<td>leve e não para no ar; a peça volta à mão. A casa tem 6,6 kg</td>
 </tr>
 <tr>
 <td><strong>veyine</strong></td>
 <td>Raro</td>
 <td>Elo</td>
 <td>metal caído do céu (o Braeth)</td>
-<td>corta laço mágico; condutor de encantamento</td>
+<td>corta laço mágico; condutor de encantamento. Acabou (os últimos 50 g no Berço de Selo, 407)</td>
 </tr>
 <tr>
 <td><strong>hamir</strong></td>
-<td>—</td>
-<td>—</td>
-<td>—</td>
-<td>condutor; +8 em Infusão e Encantamento como ferramenta (o buril). Acabou</td>
+<td>Lendário</td>
+<td>Elo + Vento</td>
+<td>mármore de fundo de lago; presente do Colégio (~1 kg, 230)</td>
+<td>condutor (dureza 11, condutividade 11); +8 em Infusão e Encantamento como ferramenta (o buril). Acabou</td>
 </tr>
 <tr>
 <td><strong>varade</strong></td>
@@ -5762,16 +5762,16 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <tr>
 <td><strong>arvel</strong></td>
 <td>Mítico</td>
-<td>—</td>
-<td>Gogrunn (comprado pelo Ulurve)</td>
+<td>Fogo</td>
+<td>orvalho de campo de batalha, achado em Gogrunn (comprado pelo Ulurve)</td>
 <td>+3 em toda obra de forja como ferramenta (o fole)</td>
 </tr>
 <tr>
 <td><strong>orloxa</strong></td>
-<td>Mítico</td>
-<td>Podridão</td>
-<td>—</td>
-<td>RD contra doença e veneno; desfaz um golpe por dia. Acabou</td>
+<td>Épico</td>
+<td>Podridão + Tempo</td>
+<td>casca de árvore morta-viva; os 5 kg vieram do corpo do Naudren (308)</td>
+<td>RD 3 contra doença e veneno; desfaz um golpe por dia. Acabou (virou o GIBÃO DE ORLOXA do rei, que é Mítico; corrigido no 438: o Livro dava o material como Mítico)</td>
 </tr>
 <tr>
 <td><strong>veydun</strong></td>
@@ -5785,27 +5785,27 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Mítico</td>
 <td>Podridão</td>
 <td>as Montanhas de Fogo (onde o Ithvil se coça)</td>
-<td>+12 em Matéria como ferramenta; RD 12 contra doença e veneno</td>
+<td>+12 em Matéria como ferramenta; RD 12 contra doença e veneno. Acabou (o Foco de Osso, 325)</td>
 </tr>
 <tr>
 <td><strong>zeieth</strong></td>
 <td>Mítico</td>
 <td>Espinho</td>
 <td>a estrela do 328, no Delta</td>
-<td>só se trabalha a frio. A casa tem ~2,4 kg</td>
+<td>só se trabalha a frio. A casa tem 0,6 kg (438; o resto foi nos anéis, no Fumigador, nos condutores e na Couraça de Espinho)</td>
 </tr>
 <tr>
 <td><strong>quomir</strong></td>
 <td>Épico</td>
 <td>Água + Vida</td>
-<td>—</td>
+<td>a escama da Isessir (322)</td>
 <td>couro e escama. A casa tem ~4 kg</td>
 </tr>
 <tr>
 <td><strong>therk</strong></td>
 <td>Único</td>
 <td>Água</td>
-<td>um veio nas Fundas do Norte</td>
+<td>um veio nas Fundas do Norte; o Clã prometeu 2 kg por mês pela ajuda contra o Thargos (360)</td>
 <td>condutividade 10; a arma ignora 5 de Defesa</td>
 </tr>
 <tr>
@@ -5819,8 +5819,8 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td><strong>tiald</strong></td>
 <td>Lendário</td>
 <td>Espinho</td>
-<td>um geodo (só boato)</td>
-<td>condutividade 10</td>
+<td>um geodo</td>
+<td>condutividade 10. A casa tem 0,2 kg (tomado do Skarkek, agente do Ardenghi, 400; na mão da Sira)</td>
 </tr>
 <tr>
 <td><strong>sivane</strong></td>
@@ -5854,8 +5854,8 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td><strong>shasha</strong></td>
 <td>Raro</td>
 <td>Silêncio</td>
-<td>o veio debaixo do porto de Marasar</td>
-<td>condutividade 8</td>
+<td>o veio debaixo do porto de Marasar; o tratado da Doge Skotha dá 1 kg por semana (406)</td>
+<td>condutividade 8. A casa tem 4 kg</td>
 </tr>
 <tr>
 <td><strong>koreth</strong></td>
@@ -5883,14 +5883,14 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Incomum</td>
 <td>Terra</td>
 <td>—</td>
-<td>a arma derruba; dano dobrado contra o Laennor</td>
+<td>a arma derruba; dano dobrado contra o Laennor. Acabou: ficaram as cinco lanças de selkos da guarda</td>
 </tr>
 <tr>
 <td><strong>vorthil</strong></td>
 <td>Épico</td>
 <td>Gelo</td>
-<td>drop do Vorthen</td>
-<td>tempera sem empenar; +3 em Técnica</td>
+<td>drop do Vorthen (407)</td>
+<td>tempera sem empenar; +3 em Técnica. A casa tem 2 kg</td>
 </tr>
 <tr>
 <td><strong>murrim</strong></td>
@@ -5901,31 +5901,31 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 </tr>
 <tr>
 <td><strong>ascra</strong></td>
-<td>—</td>
-<td>—</td>
+<td>Épico</td>
+<td>Som</td>
 <td>as asas do Murrask</td>
-<td>voo curto na armadura</td>
+<td>na arma o golpe grita e atordoa 1 rodada (Vontade CD 16, 1x por cena); na armadura, voo curto, 1 cena por dia</td>
 </tr>
 <tr>
 <td><strong>brumane</strong></td>
-<td>—</td>
-<td>—</td>
-<td>comprada em 276</td>
-<td>—</td>
+<td>Épico</td>
+<td>Terra + Sombra</td>
+<td>névoa colhida na costa, onde o Bruur passou (200 g comprados do Odrum, 276)</td>
+<td>a arma derruba (Vigor CD 16); a armadura dá RD +3 e +3 em Furtividade e Defesa no escuro</td>
 </tr>
 <tr>
 <td><strong>luskar</strong></td>
-<td>Mítico</td>
+<td>Raro</td>
 <td>Sombra</td>
-<td>—</td>
-<td>—</td>
+<td>couro de monstro</td>
+<td>no escuro +2 no ataque; +2 em Furtividade e Defesa no escuro (o GIBÃO DE LUSKAR do Bjarkunn é que é Mítico; corrigido no 438)</td>
 </tr>
 <tr>
 <td><strong>sseir</strong></td>
 <td>Épico</td>
 <td>Peso</td>
-<td>—</td>
-<td>—</td>
+<td>casca de árvore morta-viva (esteve à venda, 338-342)</td>
+<td>dano +6 e −1 no ataque; a armadura não é derrubada nem empurrada; +3 em Matéria; afunda e quebra pontes</td>
 </tr>
 <tr>
 <td><strong>asisha</strong></td>
@@ -5954,6 +5954,346 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Força</td>
 <td>—</td>
 <td>o gargalo da chaminé da Fornalha</td>
+</tr>
+</tbody>
+</table>
+<p>| <strong>ormieth</strong> | Épico | Mente | âmbar-velho com inseto, do Norte fundo (1 kg comprado por 800 em Ireviel, 366) | +3 contra medo e encanto. A casa tem 0,8 kg |
+| <strong>zezha</strong> | Raro | Sal | cristal das Salinas Velhas (o estoque da cidade, G5, 406) | dano dobrado contra mortos. A casa tem 1 kg |</p>
+<h3 id="os-que-entraram-depois-do-livro-fechado-356-a-438">Os que entraram depois do Livro fechado (356 a 438)</h3>
+<p>Revisto no Dia 438 (MOTOR 9.1). Vieram de drop de monstro, do tesouro de Zythir, da receita de Eryssa e do que o rei comprou ou tomou. Os números de hoje moram no <code>ficha.json</code> (<code>python3 ficha.py ver</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Categoria</th>
+<th>Essência</th>
+<th>De onde</th>
+<th>O que se sabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>ziza</strong></td>
+<td>Raro</td>
+<td>Vento</td>
+<td>a barra que o ladrão dos Descalços trazia quando foi pego na Fornalha (394)</td>
+<td>foi com o eiurvo na reforja da Lança de Guerra (Vento com Vento: um degrau acima). A casa tem 0,8 kg</td>
+</tr>
+<tr>
+<td><strong>vorgel</strong></td>
+<td>Épico</td>
+<td>Gelo + Sorte</td>
+<td>as glândulas do Vorthen (407)</td>
+<td>tempera sem empenar; +3 em Técnica. A casa tem 2 glândulas</td>
+</tr>
+<tr>
+<td><strong>draek</strong></td>
+<td>Raro</td>
+<td>Sombra</td>
+<td>o couro do Neane (424)</td>
+<td>na armadura, +2 em Furtividade e Defesa no escuro. A casa tem 5 kg</td>
+</tr>
+<tr>
+<td><strong>eryra</strong></td>
+<td>Raro</td>
+<td>Sombra</td>
+<td>a glândula do Neane (424)</td>
+<td>no ofício, a peça não brilha nem faz som. A casa tem 1 porção</td>
+</tr>
+<tr>
+<td><strong>sangue de Sombra</strong></td>
+<td>ingrediente</td>
+<td>Sombra</td>
+<td>o sangue do Neane (424)</td>
+<td>guardado para o sysreth: 1 porção faz 2 kg da liga</td>
+</tr>
+<tr>
+<td><strong>ssythis</strong></td>
+<td>Único</td>
+<td>Espinho</td>
+<td>a escama do Morek (427)</td>
+<td>na armadura, quem agarra o portador sangra 10. Os 3 kg foram na Couraça de Espinho do Moreth (428)</td>
+</tr>
+<tr>
+<td><strong>laliel</strong></td>
+<td>Único</td>
+<td>Espinho</td>
+<td>o olho do Morek (427)</td>
+<td>na armadura, quem agarra o portador sangra 10. A casa tem 6 kg</td>
+</tr>
+<tr>
+<td><strong>heald</strong></td>
+<td>Único</td>
+<td>Espinho</td>
+<td>a presa do Morek (427)</td>
+<td>na arma, o golpe prende como raiz (Força CD 20). A casa tem 3 kg</td>
+</tr>
+<tr>
+<td><strong>sasis</strong></td>
+<td>Único</td>
+<td>Espinho + Raio</td>
+<td>o pelo do Morek (427)</td>
+<td>na armadura, quem agarra o portador sangra 10. Os 3 kg foram no forro da Couraça de Espinho (428)</td>
+</tr>
+<tr>
+<td><strong>seor</strong></td>
+<td>Épico</td>
+<td>Podridão</td>
+<td>as escamas do Zyza (Zythir, sala 1, 436)</td>
+<td>na armadura, RD 3 contra doença e veneno. A casa tem 6 kg</td>
+</tr>
+<tr>
+<td><strong>maor</strong></td>
+<td>Épico</td>
+<td>Podridão + Mente</td>
+<td>os olhos do Zyza (436)</td>
+<td>na armadura, RD 3 contra doença e veneno. A casa tem 4 kg</td>
+</tr>
+<tr>
+<td><strong>laiel</strong></td>
+<td>Épico</td>
+<td>Podridão + Sombra</td>
+<td>os ossos do Zyza (436)</td>
+<td>na arma, a ferida infecciona (Vigor CD 16). A casa tem 2 kg</td>
+</tr>
+<tr>
+<td><strong>nee</strong></td>
+<td>Épico</td>
+<td>Espinho + Vento</td>
+<td>as penas do Huir (Zythir, sala 5, 437)</td>
+<td>na armadura, quem agarra o portador sangra 6. A casa tem 30</td>
+</tr>
+<tr>
+<td><strong>yeviel</strong></td>
+<td>Épico</td>
+<td>Espinho</td>
+<td>o sangue do Huir (437)</td>
+<td>no ofício, a peça cresce e se conserta 1 de durabilidade por dia. A casa tem 60</td>
+</tr>
+<tr>
+<td><strong>ziis</strong></td>
+<td>Épico</td>
+<td>Raio + Tempo</td>
+<td>o tesouro de Tuir, sala 6 de Zythir: barras de um metal azul-escuro que zumbe antes da chuva (escória de uma forja antiga)</td>
+<td>na arma, +2d6 de raio que salta a um segundo alvo; na armadura, quem golpeia leva 6 e (Tempo) 1x por dia desfaz um golpe; na ferramenta, +3 em Processo; atrai tempestade; dureza 9, maleabilidade 4, condutividade 6 (infusão até o 6º). A casa tem 6 kg</td>
+</tr>
+<tr>
+<td><strong>neiel</strong></td>
+<td>Épico</td>
+<td>Podridão</td>
+<td>a glândula da rainha Zatha (Zythir, sala 8, 437)</td>
+<td>no ofício, dissolve impurezas: +3 em Matéria. A casa tem 20</td>
+</tr>
+<tr>
+<td><strong>leor</strong></td>
+<td>Épico</td>
+<td>Podridão</td>
+<td>o olho da Zatha (437)</td>
+<td>na armadura, RD 3 contra doença e veneno. A casa tem 10</td>
+</tr>
+<tr>
+<td><strong>gusta</strong></td>
+<td>Épico</td>
+<td>Podridão + Silêncio</td>
+<td>a asa da Zatha (437)</td>
+<td>na armadura, RD 3 contra doença e veneno. A casa tem 20</td>
+</tr>
+<tr>
+<td><strong>sysreth</strong></td>
+<td>Épico</td>
+<td>Sombra</td>
+<td>a LIGA PERDIDA de Eryssa (a receita nas tábuas atrás da porta de bronze, 423)</td>
+<td>dureza 8, maleabilidade 6, condutividade 6 (infusão até o 6º); na arma, no escuro +3 no ataque e o alvo não vê de onde vem; na armadura, +3 em Furtividade e Defesa no escuro; na ferramenta, não brilha nem faz som; fraco ao sol. A receita lida: cinza ou sangue de bicho de Sombra, Raro ou acima, 1 porção por 2 kg; forjado no escuro na forja velha de Eryssa e temperado no canal velho (há uma parte que a casa ainda não leu)</td>
+</tr>
+<tr>
+<td><strong>hadun</strong></td>
+<td>Único</td>
+<td>Podridão</td>
+<td>pena; uma carga dele à venda em Lumade, com o Celocus (432)</td>
+<td>o rei mandou o Tolvane comprar uma amostra e descobrir de onde vem</td>
+</tr>
+<tr>
+<td><strong>shezhis</strong></td>
+<td>Mítico</td>
+<td>Luz</td>
+<td>a raiz que cresce onde o Ithvil dorme (reserva grande; rumor exato, 336)</td>
+<td>dureza 9, condutividade 7; na arma, cega com 18-20; na armadura, revela invisíveis a 120 m; na ferramenta, +12 em Técnica; denuncia o portador no escuro</td>
+</tr>
+</tbody>
+</table>
+<h3 id="os-antigos-que-o-livro-nao-tinha-listado">Os antigos que o Livro não tinha listado</h3>
+<p>Estavam no save antes do 356 e ficaram fora da lista. Entram agora.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>Categoria</th>
+<th>Essência</th>
+<th>De onde</th>
+<th>O que se sabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>junvel</strong></td>
+<td>Raro</td>
+<td>Vida</td>
+<td>o junco vivo do Delta (os Do Junco)</td>
+<td>dureza 6, condutividade 6; na arma, cada golpe que fere cura 4; na armadura, cura 1d6 por hora. Está na Lança do Rio Limpo</td>
+</tr>
+<tr>
+<td><strong>vestrin</strong></td>
+<td>Raro</td>
+<td>Fogo</td>
+<td>metal caído do céu; o Moreth o trouxe da Mata de Elais</td>
+<td>na arma, +1d6 de fogo; na armadura, RD 2 contra fogo e frio. Está na Lança de Vestrin do Hruthos</td>
+</tr>
+<tr>
+<td><strong>lumdun</strong> (o osso, não o monstro)</td>
+<td>Incomum</td>
+<td>Vento</td>
+<td>o osso do Tistir (190)</td>
+<td>na arma, alcance +1 m e o golpe empurra 1 m. É a haste da Lança de Guerra</td>
+</tr>
+<tr>
+<td><strong>zaiast</strong></td>
+<td>Único</td>
+<td>Terra + Elo</td>
+<td>madeira de árvore antiga (o cajado que virou a Lança do Bren, 207)</td>
+<td>o golpe derruba; corta encantamentos; pesa o dobro; dano dobrado contra o Laennor</td>
+</tr>
+<tr>
+<td><strong>casca-tempo</strong></td>
+<td>Épico</td>
+<td>Tempo</td>
+<td>casca de árvore morta-viva da Mata de Elais; à venda em Levis (259)</td>
+<td>condutividade 7; na arma, 1x por luta um ataque a mais</td>
+</tr>
+<tr>
+<td><strong>cemixar</strong></td>
+<td>Único</td>
+<td>—</td>
+<td>uma resina nas Fundas do Norte (boato do Bjarkunn, 273)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>gandune</strong></td>
+<td>Mítico</td>
+<td>Terra</td>
+<td>pepita de rio; boato em Levis (a Brara, 294)</td>
+<td>condutividade 8; na arma, o golpe derruba (Vigor CD 34)</td>
+</tr>
+<tr>
+<td><strong>youvor</strong></td>
+<td>Incomum</td>
+<td>Mente</td>
+<td>névoa colhida; amostra mandada do Clã pelo Gorron (308)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>kruek</strong></td>
+<td>Raro</td>
+<td>Metal</td>
+<td>névoa colhida; à venda (322)</td>
+<td>condutividade 8; na arma, quebra arma igual ou menor com 20</td>
+</tr>
+<tr>
+<td><strong>alrarveth</strong></td>
+<td>Raro</td>
+<td>Tempo</td>
+<td>névoa colhida nas Fundas do Norte (336)</td>
+<td>na arma, 1x por luta um ataque a mais; na armadura, 1x por dia desfaz um golpe; na ferramenta, a peça fica pronta 20% mais rápido; envelhece o portador</td>
+</tr>
+<tr>
+<td><strong>rugra</strong></td>
+<td>Raro</td>
+<td>Sal</td>
+<td>à venda no Porto de Marasar, reserva grande (336)</td>
+<td>na arma, dano dobrado contra mortos e espíritos; na armadura, nada morto atravessa; a peça nunca enferruja; seca a pele</td>
+</tr>
+<tr>
+<td><strong>isiis</strong></td>
+<td>Incomum</td>
+<td>Sorte</td>
+<td>glândula de monstro; numa carta do Colégio (336)</td>
+<td>o 19 também é crítico; +1 de Revés por semana</td>
+</tr>
+<tr>
+<td><strong>miava</strong></td>
+<td>Incomum</td>
+<td>Sombra</td>
+<td>vidro de raio; boato (336)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>hogre</strong></td>
+<td>Mítico</td>
+<td>Sal</td>
+<td>osso de monstro; só boato (350)</td>
+<td>condutividade 11 (até o 9º círculo); fere mortos com dano dobrado; nada morto atravessa o portador</td>
+</tr>
+<tr>
+<td><strong>liris</strong></td>
+<td>Incomum</td>
+<td>Luz</td>
+<td>à venda (350)</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>quool</strong></td>
+<td>Incomum</td>
+<td>Silêncio</td>
+<td>comprado em Farenta (antes do 159)</td>
+<td>na ferramenta, o turno da oficina rende 1 hora a mais; o portador ouve mal. A casa tem 2 kg</td>
+</tr>
+<tr>
+<td><strong>mortor</strong></td>
+<td>Lendário</td>
+<td>Fogo + Sombra</td>
+<td>casca de árvore morta-viva; comprado do mercador Gireo (152)</td>
+<td>na arma, +5d6 de fogo e no escuro +8 no ataque; na armadura, RD 8 contra fogo e frio. Foi a armadura Lendária da Skotha</td>
+</tr>
+<tr>
+<td><strong>eryade</strong></td>
+<td>Incomum</td>
+<td>Vida</td>
+<td>as pepitas verdes das corredeiras abaixo do Vau dos Juncos (boato, 140)</td>
+<td>na arma, cura 2 por golpe que fere; na armadura, cura 1d4 por hora</td>
+</tr>
+<tr>
+<td><strong>quoula</strong> e <strong>erydun</strong></td>
+<td>Incomum</td>
+<td>Terra</td>
+<td>o olho e o pelo do Rirk</td>
+<td>RD +1 na armadura, cada um. Estão na Brigantina de Rirk</td>
+</tr>
+<tr>
+<td><strong>morleth</strong></td>
+<td>Épico</td>
+<td>Luz</td>
+<td>a pele de lama acesa do Morkos (84)</td>
+<td>na armadura, revela e ofusca (a Gilaccetta reclamou os drops)</td>
+</tr>
+<tr>
+<td><strong>kretor</strong> e <strong>veyron</strong></td>
+<td>Épico</td>
+<td>Água (a do bicho)</td>
+<td>o olho e o pelo da Isessir (322)</td>
+<td>o efeito ainda não foi lido. A casa tem 4 olhos e 8 de pelo</td>
+</tr>
+<tr>
+<td><strong>pedra-de-forno</strong></td>
+<td>Raro</td>
+<td>—</td>
+<td>o basalto de sal do Delta, comprado da Gilaccetta (101)</td>
+<td>forro de fornalha e de braseiro (a Fornalha que Não Apaga). A casa tem 10 kg</td>
+</tr>
+<tr>
+<td><strong>aço de cadinho</strong></td>
+<td>—</td>
+<td>—</td>
+<td>a receita do Herkald (a Ponta Fura-Muralha, 112)</td>
+<td>a casa tem ~1,7 kg</td>
 </tr>
 </tbody>
 </table>
@@ -6004,13 +6344,6 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Sorte</td>
 <td>chifre de cabra dos Picos</td>
 <td>o 19 também é crítico</td>
-</tr>
-<tr>
-<td><strong>zezha</strong></td>
-<td>Raro</td>
-<td>Sal</td>
-<td>cristal das Salinas Velhas</td>
-<td>dano dobrado contra mortos</td>
 </tr>
 <tr>
 <td><strong>hoald</strong></td>
@@ -6076,13 +6409,6 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>corta laço mágico</td>
 </tr>
 <tr>
-<td><strong>ormieth</strong></td>
-<td>Épico</td>
-<td>Mente</td>
-<td>âmbar-velho com inseto, do Norte fundo</td>
-<td>+3 contra medo e encanto</td>
-</tr>
-<tr>
 <td><strong>rurkir</strong></td>
 <td>Épico</td>
 <td>Peso</td>
@@ -6107,7 +6433,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td><strong>tastald</strong></td>
 <td>Único</td>
 <td>Gelo</td>
-<td>gelo que não derrete, das cavernas dos Picos Brancos</td>
+<td>gelo que não derrete, das cavernas dos Picos Brancos; esteve à venda em Marasar pelos Fiéis do Doge Velho (397-400)</td>
 <td>o alvo perde 5 de Defesa 1 rodada</td>
 </tr>
 <tr>
@@ -6121,14 +6447,14 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td><strong>eieald</strong></td>
 <td>Único</td>
 <td>Espinho</td>
-<td>espinheiro dos fortes de Kasra, que cresce em osso</td>
+<td>espinheiro dos fortes de Kasra, que cresce em osso; os espinhos que a Elaeva deixa cair valem eieald (404)</td>
 <td>prende como raiz (Força 20)</td>
 </tr>
 <tr>
 <td><strong>sevor</strong></td>
 <td>Lendário</td>
 <td>Sorte</td>
-<td>o ouro-de-sorte dos khans (Zaitor), só em túmulo</td>
+<td>o ouro-de-sorte dos khans (Zaitor), só em túmulo; um lote saqueado esteve à venda em Marasar (402)</td>
 <td>o 18 também é crítico; +8 num teste por dia</td>
 </tr>
 <tr>
@@ -6187,7 +6513,8 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li>O <strong>coração de um monstro Épico ou maior</strong> é um núcleo da categoria e da Essência dele.</li>
 <li>Um núcleo Mítico dá o <strong>PODER DE CIDADE</strong>.</li>
 <li><strong>Mítico pede núcleo</strong> (ou relíquia, ou um ano de vida de quem forja). <strong>Primordial pede núcleo Lendário ou Mítico.</strong></li>
-<li>Os núcleos da casa estão no estado vivo. Os núcleos que o mundo tem são os monstros do bestiário.</li>
+<li><strong>Os núcleos da casa no Dia 438:</strong> um Épico de Água (o coração da Eloune, presente do Teraseth, 434) · um Épico de Podridão (da Zatha) · um Épico de Espinho (do Huir). O do Zyza está no peito dele (o Servo Armado). Usados: o Único de Espinho do Morek (a Couraça de Espinho do Moreth, 428) e o Épico de Gelo do Vorthen (o Berço de Selo, 407). Os números de hoje: <code>ficha.json</code>.</li>
+<li>Os núcleos que o mundo tem são os monstros do bestiário.</li>
 </ul></div></section><section class="aba" id="aba-bestiario" hidden><div class="texto"><h1 id="bestiario">BESTIÁRIO</h1>
 <p>Esta é a lista fechada dos bichos de Ortheia. O Mestre não inventa monstro fora dela. Uma cria nova nasce de monstro que já existe (ninhada); um monstro grande novo acorda quando a coberta afina, e entra na lista no dia em que acorda.</p>
 <h2 id="1-os-numeros-motor-xiv8">1. Os números (Motor XIV.8)</h2>
@@ -6270,7 +6597,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li><strong>Luta justa:</strong> a régua sai do <code>luta.py</code>. Pela lei das Caçadas do Reino, nenhum dos nossos vai com mais de 2% de risco de morte sem o rei.</li>
 </ul>
 <h2 id="2-os-grandes-monstros-do-mundo">2. Os grandes monstros do mundo</h2>
-<p>São os que a casa conhece por nome. Os níveis são os que o Colégio, os batedores ou as notícias deram.</p>
+<p>São os que a casa conhece por nome. Os níveis são os que o Colégio, os batedores ou as notícias deram. <strong>Revisto no Dia 438 (MOTOR 9.1):</strong> o que a casa soube depois do Livro fechado (356) entrou aqui; o que a casa não sabe fica com o Mestre.</p>
 <table>
 <thead>
 <tr>
@@ -6289,23 +6616,39 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>~480</td>
 <td>Gelo</td>
 <td>dorme sob os Picos Brancos</td>
-<td>um dos seis nomes das lendas. Dorme fundo</td>
+<td>um dos seis nomes das lendas. Dorme fundo. No 432 chegou a notícia de que <strong>a Mãe Branca migra</strong></td>
+</tr>
+<tr>
+<td><strong>o Ssish</strong>, o Colosso da Colmeia</td>
+<td>Primordial</td>
+<td>—</td>
+<td>—</td>
+<td>as Fundas do Norte</td>
+<td>entrou no mundo no Dia 360: inseto do tamanho de uma colina; saiu de Steunn voando para as Fundas. <strong>Dorme fundo desde o 423.</strong> O Starkald o olhou de longe (363)</td>
 </tr>
 <tr>
 <td><strong>a Elaeva</strong>, a Floresta que Anda</td>
 <td>Mítico</td>
-<td>370</td>
+<td>376</td>
 <td>Espinho</td>
-<td>desceu de Zisrir</td>
-<td>fraca a fogo; não atravessa água corrente larga. Matou o povo de Telosus</td>
+<td>os Picos Brancos; no 434-435 desceu <strong>rumo a Farenta</strong></td>
+<td>fraca a fogo e ao <strong>SAL</strong>, que seca a raiz (dano dobrado e corta a regeneração: a carta do Ceduion à Leliel, lida pelo rei no 433); não atravessa água corrente larga. Matou o povo de Telosus e o das salinas. Acordada pela obra do Adurel. Saiu ferida do cerco de Farenta (382-387) e foi ferida de novo no 428. Deixa cair espinhos que valem eieald; o coração é <strong>núcleo Mítico de Espinho</strong></td>
+</tr>
+<tr>
+<td><strong>o Skorval</strong></td>
+<td>Mítico</td>
+<td>353</td>
+<td>Elo</td>
+<td>visto sobre o Delta (226); pousa na ruína do Delta</td>
+<td>morto-vivo do tamanho de uma torre; voa. Carrega no peito um <strong>núcleo Lendário de Podridão</strong></td>
 </tr>
 <tr>
 <td><strong>o Thargos</strong></td>
 <td>Mítico</td>
 <td>329</td>
-<td>—</td>
-<td>Mordun e as montanhas</td>
-<td>voa e paralisa com o olhar. O Ceduion quer domá-lo</td>
+<td>Água</td>
+<td>as Fundas do Norte (desde o 357)</td>
+<td>besta do tamanho de uma montanha; voa, some na paisagem e paralisa com o olhar. O coração é <strong>núcleo Mítico de Água</strong> (rumor exato, 430). Os Arpões do Sal Vermelho o caçam. O Ceduion quer domá-lo</td>
 </tr>
 <tr>
 <td><strong>o Kredun</strong>, a Filha da Mãe Branca</td>
@@ -6313,47 +6656,47 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>306</td>
 <td>Gelo</td>
 <td>as Fundas do Norte</td>
-<td>toma terra do Clã. Acorda com barulho, sangue ou magia</td>
+<td>toma terra do Clã. Acorda com barulho, sangue ou magia. A Ordem da Tocha Branca o caça</td>
 </tr>
 <tr>
 <td><strong>o Ithvil</strong></td>
 <td>Mítico</td>
-<td>272</td>
-<td>Podridão</td>
-<td>as Montanhas de Fogo</td>
-<td>dorme fundo e se coça; a bjurka vem dele</td>
+<td>276</td>
+<td>Fogo</td>
+<td>as Montanhas de Fogo; desceu às <strong>terras altas de Levis</strong> (423)</td>
+<td>dorme fundo e se coça (a bjurka de Podridão cresce onde ele se coça). O coração é <strong>núcleo Mítico de Fogo</strong> e onde ele dorme cresce o <strong>shezhis</strong> (rumor exato, 336). No 423 comeu um rebanho inteiro e subiu de nível; no 430 quebrou ponte, estrada ou mina. Vigiado pela Guilda dos Mineiros</td>
 </tr>
 <tr>
 <td><strong>o Krothos</strong></td>
 <td>Lendário</td>
 <td>295</td>
-<td>—</td>
-<td>Brassa (rumor)</td>
-<td>dormiria na torre que solta o ar podre</td>
+<td>Sombra</td>
+<td>Levis (desde o 357)</td>
+<td>constructo do tamanho de uma torre, de muitos membros; dormia na torre que solta o ar podre. <strong>Acordou no 423</strong> e quebrou o aterro da estrada do rio acima de Levis</td>
 </tr>
 <tr>
 <td><strong>o Maneus</strong>, o Afogado do Vento</td>
 <td>Lendário</td>
 <td>286</td>
 <td>Vento</td>
-<td>Kremir e Steunn</td>
-<td>tem culto; apareceu de dia</td>
+<td>Kremir, Steunn e Telosus; visto perto de Ireviel (391)</td>
+<td>tem culto; apareceu de dia. Ferido por um caçador (406); no 438 chegou de novo a notícia de que está ferido</td>
 </tr>
 <tr>
 <td><strong>o Vathexa</strong></td>
 <td>Lendário</td>
 <td>262</td>
 <td>Tempo</td>
-<td>ronda Ulirv, em Steunn</td>
-<td>—</td>
+<td>a costa (antes rondava Ulirv, em Steunn)</td>
+<td>gigante do tamanho de uma torre; segue batalhas e pestes. Fraco a SORTE e a fogo comum. Sinal: gente que some à noite. Tem posto de vigia (a Luz do Cais)</td>
 </tr>
 <tr>
 <td><strong>o Varogh</strong></td>
 <td>Lendário</td>
 <td>247</td>
 <td>—</td>
-<td>a Mata de Elais</td>
-<td>—</td>
+<td>Steunn</td>
+<td>caça perto de Steunn (notícia do 438)</td>
 </tr>
 <tr>
 <td><strong>o Quneus</strong>, o Caçador de Gigantes</td>
@@ -6361,39 +6704,63 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>219</td>
 <td>—</td>
 <td>Mordun</td>
-<td>—</td>
+<td>no 425 deixou cair um drop à venda em Mordun</td>
 </tr>
 <tr>
 <td><strong>o Lumdun</strong></td>
 <td>Lendário</td>
 <td>211</td>
 <td>—</td>
-<td>Mordun</td>
+<td>Steunn (o morto de gelo do tamanho de uma colina)</td>
 <td>—</td>
+</tr>
+<tr>
+<td><strong>o Vdogek</strong>, o guardião do coração de Zythir</td>
+<td>Único</td>
+<td>—</td>
+<td>Elo</td>
+<td>Zythir, a sala 9 (debaixo das minas velhas de Levis)</td>
+<td>besta do tamanho de uma colina, de muitas cabeças; o olho prende e o golpe corta laço e encanto. A Visão do Tempo do rei (438) o mostrou derrubando o Moreth, o Eiagrir e o Zyza; a porta ficou fechada</td>
+</tr>
+<tr>
+<td><strong>o Ulmir</strong></td>
+<td>Único</td>
+<td>178</td>
+<td>Raio</td>
+<td>as salinas do Delta</td>
+<td>aquático do tamanho de uma torre; nada e escava; devolve magia; sara rápido; fraco a ÁGUA. O coração é <strong>núcleo Único de Raio</strong>. O Bjorvunn o conhece (426)</td>
+</tr>
+<tr>
+<td><strong>a Yiava</strong></td>
+<td>Único</td>
+<td>171</td>
+<td>Silêncio</td>
+<td>os lodaçais do Delta; desde o 404, as Salinas Velhas</td>
+<td>inseto do tamanho de uma colina; devolve magia; o golpe não faz som; fraca a SOM. A Eliane a viu (397-399)</td>
 </tr>
 <tr>
 <td><strong>o Husgarn</strong></td>
 <td>Único</td>
-<td>134</td>
-<td>—</td>
-<td>a costa de Farenta</td>
-<td>ferido pelo Moreth (270); ataca pescadores</td>
+<td>135</td>
+<td>Podridão</td>
+<td>os Picos Brancos (antes, a costa de Farenta)</td>
+<td>ferido pelo Moreth (270); ataca pescadores. Gigante do tamanho de uma casa; voa e muda de forma</td>
 </tr>
 <tr>
 <td><strong>o Kervos</strong></td>
 <td>Único</td>
 <td>116</td>
-<td>Metal (come metal)</td>
-<td>a estrada de Levis</td>
-<td>a Maça de Hamir, sem metal, foi feita para ele</td>
+<td>Som</td>
+<td>o brejo do oeste</td>
+<td>inseto do tamanho de uma colina; <strong>devora metal</strong> (perigo para as peças do rei); devolve magia; fraco a SILÊNCIO. A Maça de Hamir, sem metal, foi feita para ele. No 434 a Companhia do Último Gancho perdeu uma caçadora nele</td>
 </tr>
 <tr>
 <td><strong>o Bruur</strong></td>
 <td>Épico</td>
 <td>152</td>
-<td>—</td>
-<td>a costa</td>
-<td>dorme</td>
+<td>Terra</td>
+<td>Marasar (dorme nos alagados)</td>
+<td>aberração do tamanho de um cavalo; o olhar paralisa; o golpe derruba; fraco a VENTO e a sal; o coração é <strong>núcleo Épico de Terra</strong>. Apareceu de dia no 434 (a vigia avisou)</td>
 </tr>
 <tr>
 <td><strong>o Stundald</strong>, a Raiz-de-Ferro</td>
@@ -6402,14 +6769,6 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Terra</td>
 <td>Gogrunn e Kremir</td>
 <td>o varade vem dele</td>
-</tr>
-<tr>
-<td><strong>a Eloune</strong>, a Mãe-Lodo</td>
-<td>Épico</td>
-<td>136</td>
-<td>Água</td>
-<td>a foz velha, abaixo do Delta</td>
-<td>dorme no lodo; feriu a Lianniel</td>
 </tr>
 <tr>
 <td><strong>a Yirane</strong>, a Que Come a Pedra</td>
@@ -6424,77 +6783,243 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>Épico</td>
 <td>122</td>
 <td>Tempo</td>
-<td>perto de Shizess</td>
-<td>a coisa da água que faz a hora pular</td>
+<td>o brejo do oeste (antes, perto de Shizess)</td>
+<td>a coisa da água que faz a hora pular. Caça gado e gente perto do brejo (notícia fiel, 425)</td>
+</tr>
+<tr>
+<td><strong>o Mivor</strong></td>
+<td>Épico</td>
+<td>96</td>
+<td>Terra</td>
+<td>o LEITO DE PEDRA ao norte de Ireviel (desde o 420)</td>
+<td>réptil do tamanho de uma casa; fala e mente; nunca é surpreendido; o golpe derruba; fraco a VENTO. <strong>ALIADO por pacto (407):</strong> guarda o lado norte por dois sacos de sal por semana; Defesa de Ireviel +1 enquanto morar e receber o sal</td>
 </tr>
 <tr>
 <td><strong>o Isyzis</strong></td>
 <td>Épico</td>
-<td>94</td>
-<td>—</td>
+<td>95</td>
+<td>Espinho</td>
 <td>o rio acima de Levis</td>
-<td>—</td>
-</tr>
-<tr>
-<td><strong>o Vorthen</strong></td>
-<td>Épico</td>
-<td>77</td>
-<td>Gelo</td>
-<td>um ninho na estrada sul de Ireviel</td>
-<td>olhar que paralisa; invoca crias; fraco a fogo. Drops: vorthil e núcleo de Gelo</td>
+<td>aquático do tamanho de um cavalo. Brigou com outro bicho grande acima de Levis (406-408)</td>
 </tr>
 <tr>
 <td><strong>o Laennor</strong>, o Redemoinho</td>
 <td>Raro</td>
-<td>69</td>
+<td>70</td>
 <td>Vento</td>
 <td>as Salinas Velhas</td>
-<td>o selkos corta a regeneração dele</td>
+<td>o selkos corta a regeneração dele; sara 10 por dia. <strong>Mora sobre a escada afundada de Quoium</strong> (rumor exato, 430)</td>
+</tr>
+<tr>
+<td><strong>o Hugr</strong></td>
+<td>Raro</td>
+<td>69</td>
+<td>Vida</td>
+<td>Fenmir (a oficina velha de Ireviel)</td>
+<td>gigante do tamanho de um cavalo; guarda o círculo de cinza e só ataca quem pisa nela. O círculo foi fechado por fora com chave de runa (394)</td>
 </tr>
 <tr>
 <td><strong>o Gegrald</strong></td>
 <td>Raro</td>
 <td>68</td>
-<td>—</td>
+<td>Sombra</td>
 <td>o deserto de sal</td>
+<td>gigante do tamanho de uma torre que guarda um lugar; fraco a Luz e a um som (carta do 354)</td>
+</tr>
+<tr>
+<td><strong>o Naiel</strong></td>
+<td>Raro</td>
+<td>67</td>
+<td>Força</td>
+<td>a costa perto do Porto de Marasar, onde o céu sangrou (406)</td>
+<td>gigante do tamanho de uma torre; segue batalhas e pestes; veneno no golpe. Tem posto de vigia (a Luz do Cais)</td>
+</tr>
+<tr>
+<td><strong>o Loula</strong></td>
+<td>Raro</td>
+<td>65</td>
 <td>—</td>
+<td>as covas da Febre de Levis-baixa; no 436 desceu a Ireviel</td>
+<td>gigante necrófago; a fumaça de incenso o acalma (Dia 31). Visto por um coveiro fora do portão de Ireviel (429); um dos Sem-Torre sumiu quando ele desceu (436)</td>
 </tr>
 <tr>
 <td><strong>o Krekos</strong></td>
 <td>Raro</td>
-<td>48</td>
-<td>—</td>
+<td>55</td>
+<td>Vida</td>
 <td>Shizess</td>
-<td>—</td>
+<td>cura a cada golpe; comeu algo que o mudou (406: +4 níveis)</td>
 </tr>
 <tr>
 <td><strong>a Asesra</strong></td>
 <td>Raro</td>
 <td>40</td>
-<td>—</td>
+<td>Veneno</td>
 <td>Kremir</td>
-<td>—</td>
+<td>inseto do tamanho de uma casa; escava; envenena em área; fraca a VIDA e a ferro frio (o Hruthos viu, 301)</td>
 </tr>
 <tr>
 <td><strong>o Brakos</strong></td>
 <td>Raro</td>
-<td>34</td>
-<td>—</td>
+<td>35</td>
+<td>Vida</td>
 <td>o Delta</td>
-<td>—</td>
+<td>elemental do tamanho de um cavalo; camuflado; cada golpe que fere cura 4 em área; fraco a Podridão e a água corrente. Alguém já o caça (428)</td>
 </tr>
 <tr>
-<td><strong>o Asith</strong></td>
-<td>Incomum</td>
-<td>29</td>
+<td><strong>a Lianniel</strong></td>
 <td>—</td>
-<td>Zisrir</td>
 <td>—</td>
+<td>—</td>
+<td>o cais afundado de Ireviel</td>
+<td>a água borbulha e cheira a enxofre quando ela aparece; brigou com a Eloune (276) e saiu ferida. Vista no 430</td>
+</tr>
+<tr>
+<td><strong>a Irasa</strong></td>
+<td>—</td>
+<td>—</td>
+<td>—</td>
+<td>as Salinas Velhas ao sul de Ireviel</td>
+<td>vista pelos salineiros (428)</td>
+</tr>
+<tr>
+<td><strong>o Bramir</strong></td>
+<td>Épico</td>
+<td>148</td>
+<td>Água</td>
+<td>perto de Marasar (243; mais perto no 261)</td>
+<td>aberração do tamanho de uma casa; migrante; devora metal. Sem notícia desde o 266</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Primordial desperto:</strong> um entrou no mundo no Dia 360 (a notícia chega no 362).</p>
-<p><strong>Mortos pela casa ou longe dela:</strong> o Naudren (Épico 155, 286-?), o Murrask (Épico 85, 272), a Isessir (Épica 95, 321), o Zyeth (Incomum 23, 345), o Hagal (Lendário 154), o Vorthen (Épico 77, 407: o núcleo de Gelo está na casa).</p>
+<p><strong>Crias e ninhadas que a casa conhece:</strong> os <strong>brotos da Elaeva</strong> (Raro 30-45, Espinho; ficam no mato perto da mãe; um foi visto perto de Farenta no 365) · as quatro crias da Eloune (fugiram quando ela morreu, 432) · as crias do ninho do Vorthen (407; uma passou o cordão). Uma cria levada viva e criada segue a G25 (<code>cria.py</code>).</p>
+<p><strong>Os servos de osso da casa</strong> (G23): o <strong>Zyza</strong> (o guarda da sala 1 de Zythir, Épico 158 em vida, morto no 436) foi erguido no 438 como <strong>Servo Armado do rei</strong>, nível 129 (<code>servos.json</code>).</p>
+<p><strong>Mortos pela casa ou longe dela:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Monstro</th>
+<th>Categoria e nível</th>
+<th>Essência</th>
+<th>Quando e como</th>
+<th>O que deixou</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>o Rirk (dois)</td>
+<td>Incomum 24</td>
+<td>Terra</td>
+<td>Dias 54 e 130, nas pedreiras ao norte de Levis</td>
+<td>quoula e erydun (na Brigantina de Rirk)</td>
+</tr>
+<tr>
+<td>o Morkos, o sol de lama</td>
+<td>Épico 88</td>
+<td>Luz</td>
+<td>Dia 84, na boca do Delta</td>
+<td>o núcleo Épico de Luz (na Espada do Moreth) e o morleth</td>
+</tr>
+<tr>
+<td>o Tistir</td>
+<td>Incomum 17</td>
+<td>Vento</td>
+<td>Dia 190, nas corredeiras abaixo do Vau dos Juncos (Ferir deu o golpe final)</td>
+<td>krenar e lumdun (a haste da Lança de Guerra)</td>
+</tr>
+<tr>
+<td>o Murrask</td>
+<td>Épico 85</td>
+<td>Som</td>
+<td>Dia 272, nos campos de Marasar</td>
+<td>murrim e ascra</td>
+</tr>
+<tr>
+<td>o Naudren (Vamia)</td>
+<td>Épico 155</td>
+<td>Podridão</td>
+<td>madrugada do 308, no braço de Marasar</td>
+<td>5 kg de orloxa</td>
+</tr>
+<tr>
+<td>o Hagal</td>
+<td>Lendário 154</td>
+<td>Raio</td>
+<td>311, destruído na Mata de Elais (longe da casa)</td>
+<td>—</td>
+</tr>
+<tr>
+<td>a Isessir</td>
+<td>Épica 95</td>
+<td>Água</td>
+<td>321-322, na estrada sul de Ireviel</td>
+<td>quomir, kretor, veyron</td>
+</tr>
+<tr>
+<td>o Zyeth</td>
+<td>Incomum 23</td>
+<td>Raio</td>
+<td>345, em Levis (a primeira caçada)</td>
+<td>couro e glândula de zyeth</td>
+</tr>
+<tr>
+<td>o Vorthen</td>
+<td>Épico 77</td>
+<td>Gelo</td>
+<td>407, a caçada do bosque da estrada sul (o rei, o Moreth, o Eiagrir, o Hruthos)</td>
+<td>vorthil 4 kg, vorgel 2 glândulas, o núcleo Épico de Gelo</td>
+</tr>
+<tr>
+<td>o Neane</td>
+<td>Raro 62</td>
+<td>Sombra</td>
+<td>noite do 424, no rio, na 1ª rodada (o rei, o Moreth, o Eiagrir)</td>
+<td>draek 5 kg, eryra 1, sangue de Sombra 1 porção</td>
+</tr>
+<tr>
+<td>o Morek</td>
+<td>Único 122</td>
+<td>Espinho</td>
+<td>427, na água rasa da forquilha (a 2ª caçada; a fuga falhou feio)</td>
+<td>ssythis 3, laliel 6, heald 3, sasis 3 kg; o núcleo Único de Espinho</td>
+</tr>
+<tr>
+<td>a Eloune, a Mãe-Lodo</td>
+<td>Épica 136</td>
+<td>Água</td>
+<td>432, nos lodaçais de Ireviel, pela mão do Teraseth, sozinho</td>
+<td>o coração (núcleo Épico de Água), dado de presente ao rei (434)</td>
+</tr>
+<tr>
+<td>o Asith</td>
+<td>Incomum 29</td>
+<td>Vento</td>
+<td>434, em Zisrir, pela guilda as Mãos de Breu</td>
+<td>—</td>
+</tr>
+<tr>
+<td>o Zyza</td>
+<td>Épico 158</td>
+<td>Podridão</td>
+<td>436, Zythir, sala 1 (o contra-golpe do Eiagrir); erguido servo no 438</td>
+<td>seor 6, maor 4, laiel 2 kg; o núcleo dele está no peito dele</td>
+</tr>
+<tr>
+<td>o Huir</td>
+<td>Épico 78</td>
+<td>Espinho</td>
+<td>437, Zythir, sala 5, na 1ª rodada, pego de surpresa pelo Moreth</td>
+<td>nee 30, yeviel 60; o núcleo Épico de Espinho</td>
+</tr>
+<tr>
+<td>a Zatha, a rainha da colmeia de Zythir</td>
+<td>Épica 113</td>
+<td>Podridão</td>
+<td>437, Zythir, sala 8, pela 2ª Lança do Sol do Moreth</td>
+<td>neiel 20, leor 10, gusta 20; o núcleo Épico de Podridão</td>
+</tr>
+</tbody>
+</table>
 <h2 id="3-as-feras-de-cada-regiao">3. As feras de cada região</h2>
 <p>São os bichos comuns de cada terra: o que se acha na estrada, na caça e nas Caçadas do Reino. Os números saem da tabela da seção 1.</p>
 <table>
@@ -6906,7 +7431,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>~70</td>
 <td>Marasar</td>
 <td>Draa (22)</td>
-<td>servem à Doge</td>
+<td>servem à Doge; no 336 seguiam o Garkunn; no 390 um deles (o Hrenos) vendeu à Liga a hora da ronda da Companhia</td>
 </tr>
 <tr>
 <td><strong>Grukos</strong> (ogros)</td>
@@ -6927,7 +7452,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>~60 em Gogrunn, mais no brejo</td>
 <td>Gogrunn e o brejo</td>
 <td>Grerkur (36)</td>
-<td>trocam peles e minério por ferro</td>
+<td>trocam peles e minério por ferro; no 365 propuseram ao rei aliança contra o Clã (o conselho recusou e ofereceu mediação)</td>
 </tr>
 <tr>
 <td><strong>Kraek</strong> (harpias)</td>
@@ -6937,7 +7462,9 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>eram da Mão Queimada; o Culto do Xaathis as tomou (343)</td>
 </tr>
 </tbody>
-</table></div></section><section class="aba" id="aba-nove" hidden><div class="texto"><h1 id="livro-nove-o-que-faltava">LIVRO NOVE: O QUE FALTAVA</h1>
+</table>
+<h2 id="5-o-que-a-casa-ainda-vai-descobrir">5. O que a casa ainda vai descobrir</h2>
+<p>Os monstros que o mundo tem e a casa ainda não viu (os gerados no dado, os servos de alguém, as fichas inteiras com os drops) estão nas notas do Mestre (<code>mundo_vivo.json</code> e <code>compendio/segredos_do_mestre.md</code>). Entram neste capítulo no dia em que a casa os vê, ouve deles por canal (G8-B) ou os mata.</p></div></section><section class="aba" id="aba-nove" hidden><div class="texto"><h1 id="livro-nove-o-que-faltava">LIVRO NOVE: O QUE FALTAVA</h1>
 <p><strong>MOTOR 9 (Dia 437, pedido do jogador).</strong> O Livro foi relido inteiro. Este capítulo fecha os furos: o que os jogos de mesa de masmorra e os romances do ferreiro lendário têm e Ortheia ainda não tinha. As inspirações deram a forma; os nomes, os números e os preços são de Ortheia.</p>
 <ul>
 <li><strong>A lista fechada</strong> do grimório e dos talentos passa a incluir este capítulo. O Mestre continua sem inventar fora do Livro.</li>
@@ -8239,7 +8766,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <hr />
 <h2 id="10-leis">10. LEIS</h2>
 <h3 id="101-as-leis-do-jogo-indice-do-que-ja-valia">10.1 As leis do jogo (índice do que já valia)</h3>
-<p>As dezesseis Leis do Motor não mudam. As leis da casa, pela ordem em que nasceram: a Lei do Valor (201) · a Lei da Fera (202) · a Lei das Ações (203) · o Cerco (205) · os Dois Dados (207) · a Lei das Caçadas (339: nenhuma caçada com mais de 2% de morte para um dos nossos, pela régua, quando a régua for pedida) · sem régua na mesa (362) · G1 a G24 (protocolo) · e este Livro Nove (G25 a G34).</p>
+<p>As dezesseis Leis do Motor não mudam. As leis da casa, pela ordem em que nasceram: a Lei do Valor (201) · a Lei da Fera (202) · a Lei das Ações (203) · o Cerco (205) · os Dois Dados (207) · a Lei das Caçadas (339: nenhuma caçada com mais de 2% de morte para um dos nossos, pela régua, quando a régua for pedida) · sem régua na mesa (362) · G1 a G24 (protocolo) · e este Livro Nove (G25 a G37).</p>
 <h3 id="102-o-codigo-de-ireviel-os-editos-do-rei">10.2 O Código de Ireviel (os éditos do rei)</h3>
 <p>Um reino se governa por lei escrita. O rei propõe um <strong>édito</strong>, o conselho vota (<code>conselho.py</code>; tudo passa pela Intendente) e ele vale a partir do tick semanal seguinte.</p>
 <ul>
@@ -8425,7 +8952,377 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li><strong>o Duelo</strong> (Luta), <strong>a Forja</strong> (uma obra em três dias, à vista), <strong>as Barcas</strong> (corrida no rio) e <strong>o Canto</strong>.</li>
 <li>Vencer uma prova: um título com efeito, reputação +10 na cidade dos Jogos e +5 nas outras. Vencer a Forja põe o nome do ferreiro na boca dos Lendários (Lei 6: encomendas e cobiça).</li>
 <li>Os Jogos juntam gente que não se junta: guildas, enviados e inimigos na mesma praça, com trégua de sete dias.</li>
-</ul></div></section></main>
+</ul>
+<hr />
+<h2 id="14-os-oficios-de-coleta-g35">14. OS OFÍCIOS DE COLETA (G35)</h2>
+<p><strong>MOTOR 9.1 (Dia 438, pedido do jogador).</strong> O Motor (XI.7) já mandava: coleta é teste contra a CD do lugar, e todo veio, mata ou cardume tem <strong>reserva finita</strong>, rolada antes de começar. Faltava o grau de cada ofício e o que ele abre.</p>
+<h3 id="141-os-cinco-oficios">14.1 Os cinco ofícios</h3>
+<table>
+<thead>
+<tr>
+<th>Ofício</th>
+<th>O que tira</th>
+<th>Atributo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Minerar</strong></td>
+<td>minério, pedra, cristal</td>
+<td>Força</td>
+</tr>
+<tr>
+<td><strong>Ervar</strong></td>
+<td>erva, resina, raiz, fungo</td>
+<td>Sabedoria</td>
+</tr>
+<tr>
+<td><strong>Esfolar</strong></td>
+<td>o despojo do bicho morto (couro, osso, glândula)</td>
+<td>Percepção</td>
+</tr>
+<tr>
+<td><strong>Pescar</strong></td>
+<td>peixe, pérola, coral e o sal das salinas</td>
+<td>Percepção</td>
+</tr>
+<tr>
+<td><strong>Lenhar</strong></td>
+<td>madeira e casca</td>
+<td>Força</td>
+</tr>
+</tbody>
+</table>
+<h3 id="142-o-grau">14.2 O grau</h3>
+<p>O grau de cada ofício é uma maestria (Motor V.3): <strong>Leigo +0 · Iniciante +2 · Treinado +4 · Mestre +6 · Lendário +8</strong>. Ele também diz <strong>o que a mão alcança</strong>: Leigo e Iniciante até Incomum · Treinado até Raro · Mestre até Épico · Lendário até Único. Acima de Único só há núcleo e caçada.</p>
+<p>Sobe pela prática (V.3): Iniciante, 3 dias · Treinado, 7 dias e um teste CD 20 · Mestre, 14 dias, CD 25 e um feito na área · Lendário, 30 dias, CD 35, uma Prova e um mestre ou uma fonte. <strong>Cada dia de coleta de verdade conta um dia.</strong></p>
+<h3 id="143-o-dia-de-coleta">14.3 O dia de coleta</h3>
+<ul>
+<li><strong>2d20 + atributo ÷ 10 + o grau + a ferramenta</strong> (Comum +1 ... Mítica +6) contra a CD da categoria <strong>+10</strong> (os dois dados): Comum 15 · Incomum 20 · Raro 25 · Épico 30 · Único 35.</li>
+<li><strong>Pela margem:</strong> falha feia (10 ou mais abaixo): <strong>acidente</strong> (d6: 1-3 ferido, 1d6 × (degrau + 1) de PV · 4-6 o barulho atrai um bicho da região) · falha: nada · sucesso: <strong>1 unidade</strong> · ganho: 2 · extraordinário: 3 e um <strong>achado</strong> (0,1 kg um degrau acima, se o lugar tiver).</li>
+<li><strong>A unidade:</strong> Comum 5 kg · Incomum 2 kg · Raro 1 kg · Épico 0,5 kg · Único 0,1 kg. Sai da reserva.</li>
+<li><strong>A reserva</strong> (rolada antes): pequena d6 unidades · média 2d6 · grande 4d6. Acabou, acabou.</li>
+</ul>
+<h3 id="144-esfolar-o-bicho-grande">14.4 Esfolar o bicho grande</h3>
+<p>Depois de cada bicho Raro ou acima morto, o melhor esfolador da casa rola contra a CD da categoria do bicho: falha feia, <strong>um tipo de despojo se estraga</strong> (perde a metade) · falha ou sucesso, o despojo como saiu · ganho, <strong>+1 unidade de um tipo</strong> · extraordinário, <strong>+1 unidade de cada tipo</strong>.</p>
+<ul>
+<li><strong>Preço (Lei 2):</strong> um dia por teste; a ferramenta (a forja do rei a faz); o acidente; e a reserva acaba.</li>
+<li><strong>No tempo livre (G15):</strong> COLETAR passa a ser uma atividade da semana, para quem tem grau.</li>
+<li><strong>Script:</strong> <code>coleta.py</code> (reserva, vai, esfola, grau). Os graus de partida (438) saíram do que as fichas já diziam: o Gurka, Mestre em minerar; os salineiros e as herbalistas, Treinados; o rei, Iniciante nos cinco (a Coleta +2 que o <code>saber.py</code> usa).</li>
+</ul>
+<hr />
+<h2 id="15-as-festas-do-calendario-g36">15. AS FESTAS DO CALENDÁRIO (G36)</h2>
+<p><strong>MOTOR 9.1 (Dia 438, pedido do jogador).</strong> Uma festa por lua, das fés e das terras deste Livro. Toda festa tem efeito e <strong>preço</strong> (Lei 2). O tick a aplica no dia dela (<code>festas.py</code>): os modificadores vencem sozinhos em 7 dias; o que é da casa pagar sai do livro (o que tem dado, pelo selo); o resto fica à mão do Mestre.</p>
+<table>
+<thead>
+<tr>
+<th>Dia</th>
+<th>Festa</th>
+<th>De quem</th>
+<th>Efeito</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 da Lua do Gelo</td>
+<td><strong>a Noite das Brasas</strong></td>
+<td>a Mão Queimada (Telosus e Ireviel)</td>
+<td>as forjas ficam acesas a noite inteira: Ordem +1 em Ireviel por 7 dias; a obra de forja do rei nesta noite tem +2</td>
+<td>o carvão da noite: 100</td>
+</tr>
+<tr>
+<td>15 da Lua do Lobo</td>
+<td><strong>a Caça do Lobo</strong></td>
+<td>o Céu Aberto e as aldeias do Vale do Leve</td>
+<td>a missão da cidade da Guilda (G1) desta semana tem +2</td>
+<td>com 1 natural na missão, um bicho Raro desce perto de Ireviel</td>
+</tr>
+<tr>
+<td>1 da Lua da Cinza</td>
+<td><strong>o Dia da Cinza</strong></td>
+<td>a Vigília, em memória da Febre</td>
+<td>Saúde +1 no Porto de Marasar e em Levis por 7 dias</td>
+<td>a forja grande não acende neste dia</td>
+</tr>
+<tr>
+<td>15 da Lua do Degelo</td>
+<td><strong>a Cheia do Rio</strong></td>
+<td>o Templo do Rio (Levis e o rio)</td>
+<td>as barcas voltam: Comércio +1 em Levis e em Ireviel por 7 dias</td>
+<td>a oferenda aos mortos da água: 1d6 × 20</td>
+</tr>
+<tr>
+<td>1 da Lua da Semente</td>
+<td><strong>o Plantio</strong></td>
+<td>o Sono Verde e todo o campo</td>
+<td>Comida +1 em toda cidade por 7 dias</td>
+<td>não se corta árvore viva: o carvão da semana custa +50</td>
+</tr>
+<tr>
+<td>10 da Lua das Barcas</td>
+<td><strong>a Bênção das Barcas</strong></td>
+<td>os Filhos do Livro e as Velas</td>
+<td>Comércio +1 no Porto de Marasar e em Farenta por 7 dias</td>
+<td>a moeda das Velas a cada barqueiro: 50</td>
+</tr>
+<tr>
+<td>1 da Lua do Sal</td>
+<td><strong>a Feira do Sal</strong></td>
+<td>o Delta e as salinas</td>
+<td>Dinheiro +1 em Ireviel por 7 dias; o estoque da cidade (G5) desta semana rola com +2</td>
+<td>a portagem do Delta dobra na semana: 100</td>
+</tr>
+<tr>
+<td>1 da Lua da Forja</td>
+<td><strong>o Concurso dos Mestres</strong></td>
+<td>Steunn (os mestres do bronze)</td>
+<td>o rei pode mandar uma obra: Poder de Ofício contra os mestres, melhor de três; vencendo, reputação +10 com Steunn e fama da casa +1</td>
+<td>a obra enviada fica em Steunn, vença ou não</td>
+</tr>
+<tr>
+<td>15 da Lua da Seca</td>
+<td><strong>o Jejum da Areia</strong></td>
+<td>a Chama sob a Areia (Yaelane)</td>
+<td>sete dias sem vaduar de Yaelane: as caravanas param</td>
+<td>o vaduar da semana só vem de Levis e do Clã, mais caro</td>
+</tr>
+<tr>
+<td>1 da Lua do Grão</td>
+<td><strong>a Colheita</strong></td>
+<td>todo o reino</td>
+<td>Comida +1 em toda cidade por 7 dias</td>
+<td>os braços vão ao campo: as obras do reino em andamento ficam 3 dias mais longas</td>
+</tr>
+<tr>
+<td>1 da Lua do Vinho</td>
+<td><strong>os Jogos das Cidades</strong></td>
+<td>uma cidade grande (seção 13)</td>
+<td>sete dias de trégua; quatro provas</td>
+<td>os inimigos também vêm à praça</td>
+</tr>
+<tr>
+<td>1 da Lua das Velas</td>
+<td><strong>a Noite das Velas</strong></td>
+<td>as Velas e o Templo do Rio</td>
+<td>uma vela por morto do ano: Ordem +1 em toda cidade por 7 dias</td>
+<td>velas e esmolas: 1d6 × 20</td>
+</tr>
+</tbody>
+</table>
+<p>Os <strong>Dias Mudos</strong> seguem como o calendário manda (sem forja grande, sem magia de 4º círculo para cima, sem casamento). A lua nova segue sendo a do nome do servo.</p>
+<hr />
+<h2 id="16-o-atlas-das-masmorras-g37">16. O ATLAS DAS MASMORRAS (G37)</h2>
+<p><strong>MOTOR 9.1 (Dia 438, pedido do jogador).</strong> Os lugares caídos que a casa conhece, de notícia, de carta ou de pé. Cada um vira um mapa de salas (G14) na primeira vez que a casa entra ou manda olhos; o <strong>degrau</strong> do lugar sai no dado nessa hora (o precedente de Zythir, ZC36): o que guarda <strong>núcleo, prisioneiro ou peça antiga</strong>, d6 1-2 Épico · 3-4 Único · 5 Lendário · 6 Mítico; o que guarda <strong>material, receita ou segredo</strong>, d6 1-2 Raro · 3-4 Épico · 5 Único · 6 Lendário. O atlas vivo é <code>masmorra.py atlas</code> (o estado de cada um: <code>masmorra.py estado</code>).</p>
+<table>
+<thead>
+<tr>
+<th>Lugar</th>
+<th>Onde</th>
+<th>O que se sabe</th>
+<th>Degrau</th>
+<th>Estado (438)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Selol</strong></td>
+<td>a Mata de Elais</td>
+<td>torre de mago caída por dívida; guarda uma peça antiga; nada mora lá; entrar custa um sacrifício</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Quoium</strong></td>
+<td>embaixo das salinas velhas ao sul</td>
+<td>cidade afundada por traição; uma peça antiga; bandidos; entrar custa uma luta</td>
+<td>no dado, na 1ª entrada</td>
+<td>o LAENNOR mora sobre a escada afundada (430) (438)</td>
+</tr>
+<tr>
+<td><strong>Kreula</strong></td>
+<td>Marasar</td>
+<td>templo caído por dívida; guarda uma receita; nada mora lá; entrar custa uma luta</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Itheth</strong></td>
+<td>Steunn (leitura: o cemitério dos reis Steunn, pelo Herkald)</td>
+<td>cemitério de reis caído por terremoto; guarda material Raro a Lendário; nada mora lá, e é isso que assusta; entrar custa uma luta</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Kasra</strong></td>
+<td>—</td>
+<td>TERRA ALÉM DO MAPA: forte caído por traição; guarda uma peça antiga; habitado por mortos; um teste de Vigor por hora</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Orade</strong></td>
+<td>—</td>
+<td>forte nas colinas de Kremir, caído por um monstro; guarda uma peça antiga; tomado pelo CULTO DO MANEUS; entrar custa um sacrifício (o Graur conhece)</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Orne</strong></td>
+<td>Zisrir (o vale)</td>
+<td>um MERCADO caído por um monstro; guarda material Raro a Lendário; não habita nada; entrar pede uma SENHA (um refugiado de Zisrir a sabe)</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Quogal</strong></td>
+<td>no caminho de Farenta a Ireviel (a Brissa passou)</td>
+<td>uma MINA caída por um monstro; guarda UMA PEÇA ANTIGA; mora lá um EREMITA; entrar pede uma CHAVE</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Ulek</strong></td>
+<td>o sul, onde a areia come a pedra</td>
+<td>templo caído por terremoto; guarda um NÚCLEO; um culto mora lá; entrar custa uma luta</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>a Necrópole de Alnesar</strong></td>
+<td>a saber (o Dovan dá o lugar em troca de clemência; a Tessal tem a outra metade nos papéis)</td>
+<td>cemitério de reis caído por dívida: numa metade um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um SEGREDO DE FACÇÃO (entrar pede uma chave)</td>
+<td>no dado, na 1ª entrada</td>
+<td>a Tessal achou o lugar: nas colinas a leste de Ireviel, a 2 dias (426) (438)</td>
+</tr>
+<tr>
+<td><strong>Haol</strong></td>
+<td>a baía de Marasar</td>
+<td>cidade afundada por maldição; guarda uma RECEITA; um culto; entrar custa um sacrifício</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Qulosus</strong></td>
+<td>TERRA ALÉM DO MAPA (aberta no 308)</td>
+<td>mina caída por dívida; guarda UM PRISIONEIRO; um culto; entrar custa um preço a alguém</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Ulirv</strong></td>
+<td>Steunn (ruína aberta no 310)</td>
+<td>oficina de MESTRE MORTO caída por monstro; guarda UM PRISIONEIRO; mortos moram lá; entrar custa um sacrifício</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Serrarva</strong></td>
+<td>TERRA ALÉM DO MAPA (315)</td>
+<td>oficina de mestre morto; guarda uma PEÇA ANTIGA; nada mora lá; entrar pede uma chave; feira grande (321)</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Xaiza</strong></td>
+<td>a costa (Ireviel–Marasar)</td>
+<td>mercado caído por dívida; guarda uma receita; nada mora lá, e é isso que assusta; entrar pede uma senha</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Asyzha</strong></td>
+<td>Lumade (o Celocus o achou)</td>
+<td>mercado caído por terremoto; guarda um prisioneiro; mora um eremita; entrar pede uma chave; o Celocus paga a quem tiver a chave</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Eiirke</strong></td>
+<td>Shizess</td>
+<td>oficina de mestre morto caída por traição; guarda um NÚCLEO; um eremita; um teste de Vigor por hora</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Ralgir</strong></td>
+<td>Kasra (terra além do mapa)</td>
+<td>forte caído por dívida; guarda um SEGREDO DE FACÇÃO; habitado por mortos; entrar custa um sacrifício</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Sinniel</strong></td>
+<td>as colinas de Lumgal (a caminho de Lumade), pelo Draron</td>
+<td>templo caído por praga; guarda um prisioneiro; habitado por um monstro (a gerar); um teste de Vigor por hora</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Saelane</strong></td>
+<td>as Fundas do Norte</td>
+<td>oficina de mestre morto caída por terremoto; guarda uma PEÇA ANTIGA; habitada por um culto; senha</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Nilane</strong></td>
+<td>(pelo Thuast; a região a dizer quando pesar)</td>
+<td>oficina caída por traição; guarda um segredo de facção; bandidos; um preço a alguém</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Iroule</strong></td>
+<td>debaixo do capim queimado entre a fundição e Ireviel velha (a laje com aro de ferro e runas, achada no fogo do 400)</td>
+<td>oficina de mestre morto, caída em guerra; pede uma SENHA; · 404: a SENHA estava nos papéis do Quthemnus, no círculo da torre do meio</td>
+<td>no dado, na 1ª entrada</td>
+<td>a senha estava nos papéis do Quthemnus, no círculo da torre do meio (404); a casa ainda não desceu (438)</td>
+</tr>
+<tr>
+<td><strong>Eryssa</strong></td>
+<td>debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420</td>
+<td>era um mercado; caiu por maldição; guarda uma receita; mora um culto; entrar: uma chave</td>
+<td>no dado, na 1ª entrada</td>
+<td>o rei tomou o mercado (423) e abriu a porta de bronze: as tábuas da receita do SYSRETH (438)</td>
+</tr>
+<tr>
+<td><strong>Ithium</strong></td>
+<td>os Picos Brancos</td>
+<td>era um mercado; caiu por monstro; guarda um NÚCLEO; mora mortos; entrar: uma luta</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Zythir</strong></td>
+<td>debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro)</td>
+<td>era um cemitério de reis; caiu por guerra; guarda um prisioneiro; mora nada, e é isso que assusta; entrar: uma senha</td>
+<td>Único</td>
+<td>a casa limpou as salas 1 a 8 (436-437); a porta da 9, O CORAÇÃO, ficou fechada (438); mapa de salas aberto</td>
+</tr>
+<tr>
+<td><strong>Fenmir</strong></td>
+<td>a oficina velha de Ireviel (Ireviel velha)</td>
+<td>oficina de mestre caída; guarda o círculo de cinza; mora o HUGR (Raro 69), que só ataca quem pisa na cinza; o círculo foi fechado por fora com chave de runa</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Brassa</strong></td>
+<td>o Delta (meio dia de barca)</td>
+<td>a torre que solta o ar podre no rio (a febre do brejo desce dali); guarda o que não se sabe; o Krothos dormia nela antes de ir a Levis; dentro, Vigor CD 15 por hora</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Fenssa</strong></td>
+<td>perto da costa</td>
+<td>torre de mago caída; cheia de mortos; entrar pede a chave (um salineiro do culto do Maneus a levava; o Moreth o pegou antes do rito)</td>
+<td>no dado, na 1ª entrada</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div></section></main>
 <script>
 const DATA={"REG": [["Reino de Ireviel", "casa", 588, 585, 48, 128, ["O rei Ferir e o conselho real. Capital Ireviel (~14.000).", "Levis (Brara), o Porto de Marasar, a Forquilha e Farenta (tomada no 356)."]], ["Marasar", "skotha", 665, 738, 34, 22, ["A Doge Skotha Graskur (Lendária). Aliada +5.", "O cais é de Ireviel."]], ["O Delta e o Brejo", "delta", 480, 730, 70, 32, ["Ninguém manda sozinho: os Do Junco, a Guilda do Sal, a Altheltia, a Lurentetta.", "No brejo: Ninnane e Dragal (canção de coveiro)."]], ["As Montanhas Hegre", "cla", 560, 295, 100, 48, ["O Clã Hegre (o Hrotgar). Gogrunn, as Fundas, Vrogur, Ululge, Braron.", "O Kredun toma terra do Clã. Relação +1."]], ["Steunn", "livre", 705, 330, 42, 34, ["Cidade livre de pedra, os mestres do bronze. O Borecci (Mítico).", "Relação +2."]], ["Kremir e Zisrir", "neutro", 350, 380, 80, 58, ["Clãs das colinas e o vale de ruínas. O Maneus; o Adurel; os Sem-Torre."]], ["Telosus e o Oeste", "fe", 265, 535, 72, 52, ["O Colégio (Ceduion) e a fé da Mamiltia (Primordial).", "Zieth (a Vigília), Zaivil, Kasron."]], ["O Deserto de Sal", "neutro", 830, 545, 105, 72, ["Yaelane (Clã Eloulane, o veio-mãe), Shizess (as caravanas), Mordun, Brathen.", "O Thargos (Mítico), o Fenron."]], ["As Montanhas de Fogo", "perigo", 945, 420, 40, 90, ["Pedra preta e vapor. Uma só passagem: o Passo da Cinza.", "O Ithvil (Mítico) dorme fundo."]], ["O Sul da Areia", "neutro", 905, 745, 85, 40, ["As tribos da areia. Syzh, o oásis; Ulek, o templo caído.", "A Guardiã da Tenaz (Lendária)."]], ["O Norte", "liga", 620, 160, 140, 60, ["A coroa da Leliel (Lendária), fugida de Farenta. Corte em Eiest.", "EM GUERRA com o reino."]], ["Kasra, a Marca dos Fortes", "kasra", 150, 230, 95, 75, ["Os fortes do reino de cavaleiros caído há 200 anos. Os mortos de guarda.", "A Ordem do Sino, em Dreska."]], ["Zaitor, as Estepes", "zaitor", 905, 160, 120, 70, ["Os khanatos dos cavaleiros e o Khan. Stind, o acampamento; Geunn, a travessia.", "Vendem cavalos ao Norte."]], ["Qulosus, a Costa do Cobre", "qulosus", 140, 665, 85, 60, ["A República dos Bancos (doze banqueiros). Roreetta e Ginirza.", "Cobre e estanho; a dívida é lei."]], ["Quramnar, o Reino do Leste", "quramnar", 1070, 480, 70, 140, ["O Trono de Quramnar, a rainha e as Nove Casas. Iriavis (~60.000), Boninda, Serrarva.", "O culto da Agulha (o Tecelão)."]], ["Ulra, as Ilhas do Sul", "ulra", 720, 862, 95, 30, ["As Capitanias e o Conselho das Velas. Ragra, o porto franco; Naane; Yaniel."]]], "CID": [["Ireviel", 590, 690, 3, "casa"], ["a Forquilha", 586, 662, 1, "casa"], ["Levis", 575, 470, 2, "casa"], ["Farenta", 760, 712, 2, "casa"], ["Marasar", 662, 740, 2, "skotha"], ["Salinas Velhas", 505, 748, 1, "delta"], ["Ninnane", 462, 705, 1, "delta"], ["Dragal?", 440, 725, 1, "perigo"], ["Brassa", 548, 720, 1, "perigo"], ["Hassa", 612, 784, 1, "perigo"], ["Haol", 690, 768, 1, "perigo"], ["Costa Quebrada", 430, 770, 1, "perigo"], ["Lumgal", 515, 470, 1, "neutro"], ["Lumade", 465, 482, 1, "neutro"], ["Mata de Elais", 520, 585, 1, "neutro"], ["Ulnar", 580, 430, 1, "neutro"], ["Gogrunn", 535, 320, 2, "cla"], ["as Fundas", 605, 300, 2, "cla"], ["Vrogur", 585, 262, 1, "cla"], ["Braron", 650, 300, 1, "perigo"], ["Steunn", 705, 330, 2, "livre"], ["Kremir", 385, 420, 2, "neutro"], ["Zisrir", 315, 335, 1, "neutro"], ["Telosus", 250, 520, 2, "fe"], ["Zieth", 300, 565, 1, "fe"], ["Zaivil", 360, 560, 1, "perigo"], ["Kasron?", 430, 590, 1, "perigo"], ["Shizess", 770, 520, 2, "neutro"], ["Yaelane", 865, 585, 2, "neutro"], ["Mordun", 830, 470, 1, "perigo"], ["Brathen", 735, 600, 1, "perigo"], ["Syzh", 905, 760, 1, "neutro"], ["Ulek", 965, 725, 1, "perigo"], ["Eiest", 620, 160, 2, "liga"], ["Dreska", 140, 230, 2, "kasra"], ["Ralgir", 205, 300, 1, "perigo"], ["Stind", 905, 140, 2, "zaitor"], ["Geunn", 820, 195, 1, "zaitor"], ["Roreetta", 115, 690, 2, "qulosus"], ["Ginirza", 185, 620, 1, "qulosus"], ["Iriavis", 1060, 470, 3, "quramnar"], ["Boninda", 1100, 570, 2, "quramnar"], ["Serrarva", 1010, 375, 1, "quramnar"], ["Ragra", 720, 855, 2, "ulra"], ["Naane", 640, 872, 1, "ulra"], ["Yaniel", 800, 878, 1, "ulra"]], "GRANDES": [["MAMILTIA", "Primordial", 265, 500, "fe"], ["CELOCUS", "Mítico", 470, 500, "neutro"], ["LURENTETTA", "Mítica", 490, 760, "delta"], ["BORECCI", "Mítico", 725, 345, "livre"], ["Skotha", "Lendária", 680, 725, "skotha"], ["Teraseth", "Lendário", 600, 640, "casa"], ["Leliel", "Lendária", 650, 170, "liga"], ["Altheltia", "Lendária", 475, 745, "delta"], ["Adurel", "Lendário", 330, 320, "neutro"], ["Ceduion", "Lendário", 235, 540, "fe"], ["Eiandald", "Lendário", 880, 595, "neutro"], ["Garkunn", "Lendário", 845, 460, "perigo"], ["Guardiã da Tenaz", "Lendária", 930, 770, "neutro"], ["Qunemneth", "Lendário", 648, 752, "skotha"], ["Almision", "Lendária", 420, 640, "neutro"]], "FERAS": [["Mãe Branca (Primordial, dorme)", 600, 235], ["Kredun (Mítico)", 640, 280], ["Elaeva (Mítico)", 390, 470], ["Thargos (Mítico)", 815, 455], ["Ithvil (Mítico)", 955, 400], ["Maneus", 370, 400], ["Vathexa", 725, 315], ["Varogh", 540, 600], ["Kervos", 570, 520], ["Eloune", 555, 760], ["Husgarn", 800, 740], ["Laennor", 505, 765]], "C": {"casa": "#b3412e", "skotha": "#c9772b", "liga": "#7a4e9c", "cla": "#3f7a4a", "livre": "#2e6f8f", "delta": "#4f8a7b", "fe": "#a8861c", "neutro": "#8a7a5e", "perigo": "#2b2b2b", "kasra": "#56616e", "zaitor": "#8c5a2b", "qulosus": "#b8683a", "quramnar": "#8e2f5e", "ulra": "#2f8a8a"}, "N": {"casa": "Reino de Ireviel", "skotha": "A Doge Skotha", "liga": "A Leliel (em guerra)", "cla": "O Clã Hegre", "livre": "Cidade livre", "delta": "O Delta", "fe": "Telosus e a fé", "neutro": "Sem dono / neutro", "perigo": "Perigo ou ruína", "kasra": "Kasra", "zaitor": "Zaitor", "qulosus": "Qulosus", "quramnar": "Quramnar", "ulra": "Ulra"}};
 const NS='http://www.w3.org/2000/svg';

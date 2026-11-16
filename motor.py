@@ -40,7 +40,16 @@ GUILDAS DO MUNDO (G12) python3 guildas.py ver [tudo] · ranking · fama ID|casa 
 MASMORRA (G14)         python3 masmorra.py gera NOME CAT "o que guarda" · ver NOME [tudo] · entra NOME SALA
 REPUTAÇÃO (G21)        python3 reputacao.py ver · muda "QUEM" +N "motivo"
 HABILIDADES À MÃO (G24) python3 habilidades.py mao   (a linha 🛠️ do turno) · usa "Nome" · carga "Nome" -1|cheio
-LIVRO NOVE (MOTOR 9)   compendio/08_livro_nove.md: G25 crias · G26 Despertar · G27 éditos · G28 canções · G29 bênçãos · G30 Artes de arma · G31 magia · G32 itens · G33 monstros (grito: "grito": {cd}) · G34 masmorra
+LIVRO NOVE (MOTOR 9)   compendio/08_livro_nove.md: G25 crias · G26 Despertar · G27 éditos · G28 canções · G29 bênçãos · G30 Artes de arma · G31 magia · G32 itens · G33 monstros ("tracos": [...] no monstro; o luta.py roda sozinho) · G34 masmorra
+ÉDITOS (G27)           python3 edito.py ver · catalogo · propoe CHAVE · aprova CHAVE [por_cima] · recusa · revoga   (o tick semanal põe em vigor)
+CRIAS (G25)            python3 cria.py ver · nova NOME "PAI" CAT NIVEL ESSENCIA [laco=..] · laco · xp · ficha · mostra · solta   (o tick semanal faz crescer)
+CANÇÕES (G28)          python3 cancao.py ver · canta "FEITO" tipo=.. cantor=..|contratado oferece=A,B · atributo NOME
+DESPERTAR (G26)        python3 despertar.py ver · devidos · rola todos|casa|NOME · dom NOME "Dom" · nome NOME "nome"
+ARTES DE ARMA (G30)    python3 artes.py ver · da NOME arma=lanca|?.. [cat=..] [oculto] · ficha NOME   (python3 luta.py artes|tracos: as listas)
+FICHAS DOS NPCs        python3 classe.py liga NOME "Classe" · gera NOME [FAMÍLIA] · npc.py vida NOME|todos
+COLETA (G35)           python3 coleta.py ver · reserva "LUGAR" MAT CAT [tamanho=..] · vai NOME OFICIO "LUGAR" [dias=N] [para=casa] · esfola · grau
+FESTAS (G36)           python3 festas.py ver · proximas [N]   (o tick diário aplica no dia)
+ATLAS (G37)            python3 masmorra.py atlas · degrau NOME · estado NOME "texto" · extra ...
 COVIL E LENDÁRIAS (G13) na ficha do bicho: "covil": {nome,dano,cd,efeito} · "lendarias": N (o luta.py faz o resto)
 ANOTAR NO ENVELOPE     python3 selo.py nota "LEITURA: ..."
 TESTE DE PERÍCIA       python3 aberto.py 2d20+N cd=X [oposto=M] [nivel=N]

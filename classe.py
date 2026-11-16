@@ -10,6 +10,10 @@ Uso:
   python3 classe.py npc NOME             o que a classe do NPC faz
   python3 classe.py migra                grava assinaturas e fraqueza em npcs.json para quem tem classe do Livro
   python3 classe.py faltam               NPCs cuja classe não está no Livro (gerar ou corrigir)
+MOTOR 9.1 (438, pedido do jogador: "as fichas dos NPCs fora do Livro"):
+  python3 classe.py liga NOME "Classe do Livro" ["motivo"]   o texto da ficha é sinônimo de uma classe do Livro (leitura do Mestre, anotada)
+  python3 classe.py gera NOME [FAMÍLIA]                      sem classe escrita: o dado escolhe (a família no d11 se não vier; a classe no dN
+                                                             da família, sem as Lendárias, que pedem Trilha 20); pelo selo, OCULTO
 """
 import re, sys
 from nucleo import carrega, grava, ler, sem_acento
@@ -21,7 +25,7 @@ def livro():
     for ln in ler('compendio/04_classes.md').split('\n'):
         m = re.match(r'^###? Classes d[aeo]s? (.+)$', ln.strip())
         if m: fam = m.group(1).strip(); cur = None; continue
-        m = re.match(r'^\*\*([^*]+):\*\*\s*$', ln.strip())
+        m = re.match(r'^\*\*(Comum|Incomum|Raro|Épico|Único|Lendário):?\*\*', ln.strip())   # 438: o leitor só pegava "**Comum:**" e marcava tudo como a 1ª raridade
         if m: rar = m.group(1).strip(); cur = None; continue
         m = re.match(r'^- \*\*([^*]+)\*\*\s*$', ln)
         if m and fam:
@@ -37,6 +41,7 @@ def livro():
 
 
 def classe_do_npc(v, L):
+    if v.get('classe_livro') and sem_acento(v['classe_livro']).lower() in L: return L[sem_acento(v['classe_livro']).lower()]   # 438: a ligação gravada vale
     txt = sem_acento(str(v.get('classe', ''))).lower()
     cab = re.split(r'[(·,]', txt)[0].strip()
     if cab in L: return L[cab]
@@ -81,6 +86,31 @@ def main():
         if a[0] == 'migra': grava('npcs.json', N)
         print(f'{a[0]}: {ok} de {len(N)} NPCs com classe do Livro · fora do Livro: {len(falta)}')
         if a[0] == 'faltam' or falta: print('  ' + ' · '.join(falta[:60]))
+    elif a[0] in ('liga', 'gera') and len(a) > 1:
+        from nucleo import anota, dia_atual
+        alvo = sem_acento(a[1]).lower(); k = next((k for k in N if sem_acento(k).lower() == alvo), None) or sys.exit('NPC não achado')
+        if a[0] == 'liga':
+            c = L.get(sem_acento(a[2]).lower()) if len(a) > 2 else None
+            if not c: sys.exit('classe fora do Livro (classe.py livro)')
+            mot = a[3] if len(a) > 3 else 'o texto da ficha é sinônimo dela'
+        else:
+            import selo
+            fams = []
+            for x in L.values():
+                if x['familia'] not in fams: fams.append(x['familia'])
+            fam = a[2] if len(a) > 2 else None
+            Z = selo.load()
+            if not fam:
+                sid = selo.declara(Z, '-', f'A FAMÍLIA DA CLASSE DE {k} (sem classe escrita)', f'd{len(fams)}', ' | '.join(f'{i + 1}: {f}' for i, f in enumerate(fams)), selo.opcoes(['oculto']), quieto=True)
+                fam = fams[selo.rola(Z, sid, quieto=True)['rolagens'][-1]['total'] - 1]
+            fam = next((f for f in fams if sem_acento(f).lower().startswith(sem_acento(fam).lower()[:4])), None) or sys.exit(f'família que não conheço: {fam} ({", ".join(fams)})')
+            pool = [x for x in L.values() if x['familia'] == fam and x['raridade'] != 'Lendário']
+            sid = selo.declara(Z, '-', f'A CLASSE DE {k} NA FAMÍLIA {fam} (sem as Lendárias)', f'd{len(pool)}', ' | '.join(f'{i + 1}: {x["nome"]}' for i, x in enumerate(pool)), selo.opcoes(['oculto']), quieto=True)
+            c = pool[selo.rola(Z, sid, quieto=True)['rolagens'][-1]['total'] - 1]; mot = f'pelo dado (família {fam})'
+        v = N[k]; v['classe_livro'] = c['nome']; v['assinaturas'] = [s_.split(':')[0].strip() for s_ in c['assinaturas']]; v['fraqueza'] = c['fraqueza']
+        v.setdefault('log', []).append(f"Dia {dia_atual()}: classe do Livro: {c['nome']} ({c['familia']}, {c['raridade']}) · {mot}")
+        grava('npcs.json', N); anota(f"- CLASSE (438, MOTOR 9.1) {k}: {c['nome']} ({c['familia']}, {c['raridade']}) · {mot}")
+        print(f"{k}: {c['nome']} ({c['familia']}, {c['raridade']}) · {mot}")
     else: print(__doc__)
 
 

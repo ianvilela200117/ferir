@@ -17,6 +17,8 @@ Uso:
   python3 npc.py lealdade NOME +N|-N "motivo"  a LEALDADE à casa, de 0 a 10 (começa em 6 na primeira vez). 3 ou menos: em risco de partir ou trair
   python3 npc.py lealdades                   quem tem lealdade marcada, do mais frio ao mais firme
   python3 npc.py arquiva [manter=8]          passa as notas velhas de cada NPC para npcs_arquivo.json (nada se apaga)
+  python3 npc.py vida NOME [NOME...]|todos  MOTOR 9.1 (438): o que falta de DESEJO, AMBIÇÃO, MEDO, SEGREDO e LINHA VERMELHA: primeiro tira do texto
+                                           da ficha (e dos Lendários do mundo_vivo); o que ainda faltar sai no dado (as listas do gerador.py; selo, OCULTO)
 O nome pode vir sem acento, em minúscula ou pela metade.
 """
 import sys
@@ -41,7 +43,7 @@ def ficha(n, v, notas=10, tudo=False):
         lg = lugar_de(n)
         if lg != 'Ireviel': print(f'  ⚠ ONDE: {lg} (não está em Ireviel)')
     except ImportError: pass
-    print(f"  classe: {v.get('classe') or '—'}")
+    print(f"  classe: {v.get('classe') or '—'}" + (f" · CLASSE DO LIVRO: {v['classe_livro']}" + (f" ({' · '.join(v['assinaturas'])}; fraqueza: {v.get('fraqueza', '')})" if v.get('assinaturas') else '') if v.get('classe_livro') and v['classe_livro'].lower() not in str(v.get('classe', '')).lower() else ''))
     print(f"  ocupação: {v.get('ocupacao') or '—'}")
     if v.get('lealdade') is not None:
         print(f"  lealdade à casa: {v['lealdade']}/10" + (' ⚠ EM RISCO' if v['lealdade'] <= 3 else '') + (f" · votos vencidos no conselho: {v['votos_vencidos']}" if v.get('votos_vencidos') else ''))
@@ -139,8 +141,47 @@ def main():
         grava(VELHO, velho)
         grava(ARQ, db)
         print(f'{movidas} notas velhas foram para {VELHO}; cada NPC ficou com as últimas {manter}. Nada foi apagado.')
+    elif c == 'vida' and len(a) > 1:
+        vida(db, a[1:], dia)
     else:
         print(__doc__)
+
+
+CAMPOS = [('desejo', 'DESEJO'), ('ambicao', 'AMBICAO'), ('medo', 'MEDO'), ('segredo', 'SEGREDO'), ('linha_vermelha', 'LINHA')]
+
+
+def vida(db, nomes, dia):
+    """MOTOR 9.1: desejo, ambição, medo, segredo e linha vermelha para quem não tem (do texto da ficha; senão, do dado)"""
+    import re
+    import gerador, selo
+    from nucleo import anota, sem_acento
+    lend = {sem_acento(l['nome'].split(',')[0]): l for l in carrega('mundo_vivo.json', {}).get('lendarios', [])}
+    alvo = [k for k, v in db.items() if 'MORT' not in str(v.get('estado', '')).upper() and 'servo armado' not in str(v.get('classe', ''))] if nomes == ['todos'] else [acha(db, n) for n in nomes]
+    tirou, falta = [], {c: [] for c, _ in CAMPOS}
+    rx = {'desejo': r'desejo:?\s+([^·;]+)', 'ambicao': r'ambi[cç][aã]o(?:\s*\(4\))?:?\s+([^·;]+)', 'medo': r'medo:?\s+([^·;]+)', 'segredo': r'segredo:?\s+([^·;]+)', 'linha_vermelha': r'linha vermelha:?\s+([^·;]+)'}
+    for k in alvo:
+        v = db[k]; txt = f"{v.get('classe', '')} · {v.get('ocupacao', '')}"; L = lend.get(sem_acento(k))
+        for c, _ in CAMPOS:
+            if v.get(c): continue
+            if L and L.get(c): v[c] = L[c]; tirou.append(f'{k}.{c} (mundo_vivo)'); continue
+            m = re.search(rx[c], txt, re.I)
+            if m and len(m.group(1).strip()) > 3: v[c] = m.group(1).strip().rstrip('.'); tirou.append(f'{k}.{c} (texto)'); continue
+            falta[c].append(k)
+    grava(ARQ, db)
+    if tirou: anota(f"- VIDA DOS NPCs (438, MOTOR 9.1): tirado do que já estava escrito: {', '.join(tirou)}")
+    Z = selo.load(); feitos = 0
+    for c, lista in CAMPOS:
+        nm = falta[c]
+        if not nm: continue
+        L_ = getattr(gerador, lista)
+        sid = selo.declara(Z, '-', f'{c.upper().replace("_", " ")} DOS NPCs QUE NÃO TÊM (gerador.py, 1d{len(L_)} cada)', f'd{len(L_)}', ' | '.join(f'{i + 1}: {x}' for i, x in enumerate(L_)), selo.opcoes(['oculto', f'x={len(nm)}', 'nomes=' + ','.join(nm)]), quieto=True)
+        db = carrega(ARQ)
+        for k, r in zip(nm, selo.rola(Z, sid, quieto=True)['rolagens']):
+            val = L_[r['total'] - 1]
+            if c == 'linha_vermelha' and 'facção X' in val: val = val.replace('facção X', 'facção X (o Mestre declara qual quando a linha for posta à prova)')
+            db[k][c] = val + (' (OCULTO)' if c == 'segredo' else ''); db[k].setdefault('log', []).append(f'Dia {dia}: {c.replace("_", " ")} pelo dado (438)'); feitos += 1
+        grava(ARQ, db)
+    print(f'vida: {len(tirou)} campos tirados do que já estava escrito · {feitos} rolados (selo, oculto) · ' + ' · '.join(f'{c}: {len(falta[c])}' for c, _ in CAMPOS))
 
 
 if __name__ == '__main__':

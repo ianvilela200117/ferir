@@ -1,0 +1,70 @@
+{
+ "nota": "G35: os graus de coleta e as reservas abertas (coleta.py).",
+ "graus": {
+  "Gurka": {
+   "minerar": {
+    "grau": "Mestre",
+    "dias": 14
+   }
+  },
+  "Odrum": {
+   "minerar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Moua": {
+   "pescar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Tolvane": {
+   "pescar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Nialla": {
+   "ervar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Pebanda": {
+   "ervar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Goir": {
+   "esfolar": {
+    "grau": "Treinado",
+    "dias": 7
+   }
+  },
+  "Ferir": {
+   "minerar": {
+    "grau": "Iniciante",
+    "dias": 3
+   },
+   "ervar": {
+    "grau": "Iniciante",
+    "dias": 3
+   },
+   "esfolar": {
+    "grau": "Iniciante",
+    "dias": 3
+   },
+   "pescar": {
+    "grau": "Iniciante",
+    "dias": 3
+   },
+   "lenhar": {
+    "grau": "Iniciante",
+    "dias": 3
+   }
+  }
+ },
+ "reservas": {}
+}

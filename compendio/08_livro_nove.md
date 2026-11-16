@@ -445,7 +445,7 @@ Dormir numa masmorra só em sala limpa e fechada: a noite cura a metade, e o rel
 ## 10. LEIS
 
 ### 10.1 As leis do jogo (índice do que já valia)
-As dezesseis Leis do Motor não mudam. As leis da casa, pela ordem em que nasceram: a Lei do Valor (201) · a Lei da Fera (202) · a Lei das Ações (203) · o Cerco (205) · os Dois Dados (207) · a Lei das Caçadas (339: nenhuma caçada com mais de 2% de morte para um dos nossos, pela régua, quando a régua for pedida) · sem régua na mesa (362) · G1 a G24 (protocolo) · e este Livro Nove (G25 a G34).
+As dezesseis Leis do Motor não mudam. As leis da casa, pela ordem em que nasceram: a Lei do Valor (201) · a Lei da Fera (202) · a Lei das Ações (203) · o Cerco (205) · os Dois Dados (207) · a Lei das Caçadas (339: nenhuma caçada com mais de 2% de morte para um dos nossos, pela régua, quando a régua for pedida) · sem régua na mesa (362) · G1 a G24 (protocolo) · e este Livro Nove (G25 a G37).
 
 ### 10.2 O Código de Ireviel (os éditos do rei)
 Um reino se governa por lei escrita. O rei propõe um **édito**, o conselho vota (`conselho.py`; tudo passa pela Intendente) e ele vale a partir do tick semanal seguinte.
@@ -517,3 +517,96 @@ Uma vez por ano, na **Lua do Vinho**, uma cidade grande chama os Jogos (o dado d
 - **o Duelo** (Luta), **a Forja** (uma obra em três dias, à vista), **as Barcas** (corrida no rio) e **o Canto**.
 - Vencer uma prova: um título com efeito, reputação +10 na cidade dos Jogos e +5 nas outras. Vencer a Forja põe o nome do ferreiro na boca dos Lendários (Lei 6: encomendas e cobiça).
 - Os Jogos juntam gente que não se junta: guildas, enviados e inimigos na mesma praça, com trégua de sete dias.
+
+---
+
+## 14. OS OFÍCIOS DE COLETA (G35)
+
+**MOTOR 9.1 (Dia 438, pedido do jogador).** O Motor (XI.7) já mandava: coleta é teste contra a CD do lugar, e todo veio, mata ou cardume tem **reserva finita**, rolada antes de começar. Faltava o grau de cada ofício e o que ele abre.
+
+### 14.1 Os cinco ofícios
+| Ofício | O que tira | Atributo |
+| --- | --- | --- |
+| **Minerar** | minério, pedra, cristal | Força |
+| **Ervar** | erva, resina, raiz, fungo | Sabedoria |
+| **Esfolar** | o despojo do bicho morto (couro, osso, glândula) | Percepção |
+| **Pescar** | peixe, pérola, coral e o sal das salinas | Percepção |
+| **Lenhar** | madeira e casca | Força |
+
+### 14.2 O grau
+O grau de cada ofício é uma maestria (Motor V.3): **Leigo +0 · Iniciante +2 · Treinado +4 · Mestre +6 · Lendário +8**. Ele também diz **o que a mão alcança**: Leigo e Iniciante até Incomum · Treinado até Raro · Mestre até Épico · Lendário até Único. Acima de Único só há núcleo e caçada.
+
+Sobe pela prática (V.3): Iniciante, 3 dias · Treinado, 7 dias e um teste CD 20 · Mestre, 14 dias, CD 25 e um feito na área · Lendário, 30 dias, CD 35, uma Prova e um mestre ou uma fonte. **Cada dia de coleta de verdade conta um dia.**
+
+### 14.3 O dia de coleta
+- **2d20 + atributo ÷ 10 + o grau + a ferramenta** (Comum +1 ... Mítica +6) contra a CD da categoria **+10** (os dois dados): Comum 15 · Incomum 20 · Raro 25 · Épico 30 · Único 35.
+- **Pela margem:** falha feia (10 ou mais abaixo): **acidente** (d6: 1-3 ferido, 1d6 × (degrau + 1) de PV · 4-6 o barulho atrai um bicho da região) · falha: nada · sucesso: **1 unidade** · ganho: 2 · extraordinário: 3 e um **achado** (0,1 kg um degrau acima, se o lugar tiver).
+- **A unidade:** Comum 5 kg · Incomum 2 kg · Raro 1 kg · Épico 0,5 kg · Único 0,1 kg. Sai da reserva.
+- **A reserva** (rolada antes): pequena d6 unidades · média 2d6 · grande 4d6. Acabou, acabou.
+
+### 14.4 Esfolar o bicho grande
+Depois de cada bicho Raro ou acima morto, o melhor esfolador da casa rola contra a CD da categoria do bicho: falha feia, **um tipo de despojo se estraga** (perde a metade) · falha ou sucesso, o despojo como saiu · ganho, **+1 unidade de um tipo** · extraordinário, **+1 unidade de cada tipo**.
+
+- **Preço (Lei 2):** um dia por teste; a ferramenta (a forja do rei a faz); o acidente; e a reserva acaba.
+- **No tempo livre (G15):** COLETAR passa a ser uma atividade da semana, para quem tem grau.
+- **Script:** `coleta.py` (reserva, vai, esfola, grau). Os graus de partida (438) saíram do que as fichas já diziam: o Gurka, Mestre em minerar; os salineiros e as herbalistas, Treinados; o rei, Iniciante nos cinco (a Coleta +2 que o `saber.py` usa).
+
+---
+
+## 15. AS FESTAS DO CALENDÁRIO (G36)
+
+**MOTOR 9.1 (Dia 438, pedido do jogador).** Uma festa por lua, das fés e das terras deste Livro. Toda festa tem efeito e **preço** (Lei 2). O tick a aplica no dia dela (`festas.py`): os modificadores vencem sozinhos em 7 dias; o que é da casa pagar sai do livro (o que tem dado, pelo selo); o resto fica à mão do Mestre.
+
+| Dia | Festa | De quem | Efeito | Preço |
+| --- | --- | --- | --- | --- |
+| 1 da Lua do Gelo | **a Noite das Brasas** | a Mão Queimada (Telosus e Ireviel) | as forjas ficam acesas a noite inteira: Ordem +1 em Ireviel por 7 dias; a obra de forja do rei nesta noite tem +2 | o carvão da noite: 100 |
+| 15 da Lua do Lobo | **a Caça do Lobo** | o Céu Aberto e as aldeias do Vale do Leve | a missão da cidade da Guilda (G1) desta semana tem +2 | com 1 natural na missão, um bicho Raro desce perto de Ireviel |
+| 1 da Lua da Cinza | **o Dia da Cinza** | a Vigília, em memória da Febre | Saúde +1 no Porto de Marasar e em Levis por 7 dias | a forja grande não acende neste dia |
+| 15 da Lua do Degelo | **a Cheia do Rio** | o Templo do Rio (Levis e o rio) | as barcas voltam: Comércio +1 em Levis e em Ireviel por 7 dias | a oferenda aos mortos da água: 1d6 × 20 |
+| 1 da Lua da Semente | **o Plantio** | o Sono Verde e todo o campo | Comida +1 em toda cidade por 7 dias | não se corta árvore viva: o carvão da semana custa +50 |
+| 10 da Lua das Barcas | **a Bênção das Barcas** | os Filhos do Livro e as Velas | Comércio +1 no Porto de Marasar e em Farenta por 7 dias | a moeda das Velas a cada barqueiro: 50 |
+| 1 da Lua do Sal | **a Feira do Sal** | o Delta e as salinas | Dinheiro +1 em Ireviel por 7 dias; o estoque da cidade (G5) desta semana rola com +2 | a portagem do Delta dobra na semana: 100 |
+| 1 da Lua da Forja | **o Concurso dos Mestres** | Steunn (os mestres do bronze) | o rei pode mandar uma obra: Poder de Ofício contra os mestres, melhor de três; vencendo, reputação +10 com Steunn e fama da casa +1 | a obra enviada fica em Steunn, vença ou não |
+| 15 da Lua da Seca | **o Jejum da Areia** | a Chama sob a Areia (Yaelane) | sete dias sem vaduar de Yaelane: as caravanas param | o vaduar da semana só vem de Levis e do Clã, mais caro |
+| 1 da Lua do Grão | **a Colheita** | todo o reino | Comida +1 em toda cidade por 7 dias | os braços vão ao campo: as obras do reino em andamento ficam 3 dias mais longas |
+| 1 da Lua do Vinho | **os Jogos das Cidades** | uma cidade grande (seção 13) | sete dias de trégua; quatro provas | os inimigos também vêm à praça |
+| 1 da Lua das Velas | **a Noite das Velas** | as Velas e o Templo do Rio | uma vela por morto do ano: Ordem +1 em toda cidade por 7 dias | velas e esmolas: 1d6 × 20 |
+
+Os **Dias Mudos** seguem como o calendário manda (sem forja grande, sem magia de 4º círculo para cima, sem casamento). A lua nova segue sendo a do nome do servo.
+
+---
+
+## 16. O ATLAS DAS MASMORRAS (G37)
+
+**MOTOR 9.1 (Dia 438, pedido do jogador).** Os lugares caídos que a casa conhece, de notícia, de carta ou de pé. Cada um vira um mapa de salas (G14) na primeira vez que a casa entra ou manda olhos; o **degrau** do lugar sai no dado nessa hora (o precedente de Zythir, ZC36): o que guarda **núcleo, prisioneiro ou peça antiga**, d6 1-2 Épico · 3-4 Único · 5 Lendário · 6 Mítico; o que guarda **material, receita ou segredo**, d6 1-2 Raro · 3-4 Épico · 5 Único · 6 Lendário. O atlas vivo é `masmorra.py atlas` (o estado de cada um: `masmorra.py estado`).
+
+| Lugar | Onde | O que se sabe | Degrau | Estado (438) |
+| --- | --- | --- | --- | --- |
+| **Selol** | a Mata de Elais | torre de mago caída por dívida; guarda uma peça antiga; nada mora lá; entrar custa um sacrifício | no dado, na 1ª entrada | — |
+| **Quoium** | embaixo das salinas velhas ao sul | cidade afundada por traição; uma peça antiga; bandidos; entrar custa uma luta | no dado, na 1ª entrada | o LAENNOR mora sobre a escada afundada (430) (438) |
+| **Kreula** | Marasar | templo caído por dívida; guarda uma receita; nada mora lá; entrar custa uma luta | no dado, na 1ª entrada | — |
+| **Itheth** | Steunn (leitura: o cemitério dos reis Steunn, pelo Herkald) | cemitério de reis caído por terremoto; guarda material Raro a Lendário; nada mora lá, e é isso que assusta; entrar custa uma luta | no dado, na 1ª entrada | — |
+| **Kasra** | — | TERRA ALÉM DO MAPA: forte caído por traição; guarda uma peça antiga; habitado por mortos; um teste de Vigor por hora | no dado, na 1ª entrada | — |
+| **Orade** | — | forte nas colinas de Kremir, caído por um monstro; guarda uma peça antiga; tomado pelo CULTO DO MANEUS; entrar custa um sacrifício (o Graur conhece) | no dado, na 1ª entrada | — |
+| **Orne** | Zisrir (o vale) | um MERCADO caído por um monstro; guarda material Raro a Lendário; não habita nada; entrar pede uma SENHA (um refugiado de Zisrir a sabe) | no dado, na 1ª entrada | — |
+| **Quogal** | no caminho de Farenta a Ireviel (a Brissa passou) | uma MINA caída por um monstro; guarda UMA PEÇA ANTIGA; mora lá um EREMITA; entrar pede uma CHAVE | no dado, na 1ª entrada | — |
+| **Ulek** | o sul, onde a areia come a pedra | templo caído por terremoto; guarda um NÚCLEO; um culto mora lá; entrar custa uma luta | no dado, na 1ª entrada | — |
+| **a Necrópole de Alnesar** | a saber (o Dovan dá o lugar em troca de clemência; a Tessal tem a outra metade nos papéis) | cemitério de reis caído por dívida: numa metade um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um SEGREDO DE FACÇÃO (entrar pede uma chave) | no dado, na 1ª entrada | a Tessal achou o lugar: nas colinas a leste de Ireviel, a 2 dias (426) (438) |
+| **Haol** | a baía de Marasar | cidade afundada por maldição; guarda uma RECEITA; um culto; entrar custa um sacrifício | no dado, na 1ª entrada | — |
+| **Qulosus** | TERRA ALÉM DO MAPA (aberta no 308) | mina caída por dívida; guarda UM PRISIONEIRO; um culto; entrar custa um preço a alguém | no dado, na 1ª entrada | — |
+| **Ulirv** | Steunn (ruína aberta no 310) | oficina de MESTRE MORTO caída por monstro; guarda UM PRISIONEIRO; mortos moram lá; entrar custa um sacrifício | no dado, na 1ª entrada | — |
+| **Serrarva** | TERRA ALÉM DO MAPA (315) | oficina de mestre morto; guarda uma PEÇA ANTIGA; nada mora lá; entrar pede uma chave; feira grande (321) | no dado, na 1ª entrada | — |
+| **Xaiza** | a costa (Ireviel–Marasar) | mercado caído por dívida; guarda uma receita; nada mora lá, e é isso que assusta; entrar pede uma senha | no dado, na 1ª entrada | — |
+| **Asyzha** | Lumade (o Celocus o achou) | mercado caído por terremoto; guarda um prisioneiro; mora um eremita; entrar pede uma chave; o Celocus paga a quem tiver a chave | no dado, na 1ª entrada | — |
+| **Eiirke** | Shizess | oficina de mestre morto caída por traição; guarda um NÚCLEO; um eremita; um teste de Vigor por hora | no dado, na 1ª entrada | — |
+| **Ralgir** | Kasra (terra além do mapa) | forte caído por dívida; guarda um SEGREDO DE FACÇÃO; habitado por mortos; entrar custa um sacrifício | no dado, na 1ª entrada | — |
+| **Sinniel** | as colinas de Lumgal (a caminho de Lumade), pelo Draron | templo caído por praga; guarda um prisioneiro; habitado por um monstro (a gerar); um teste de Vigor por hora | no dado, na 1ª entrada | — |
+| **Saelane** | as Fundas do Norte | oficina de mestre morto caída por terremoto; guarda uma PEÇA ANTIGA; habitada por um culto; senha | no dado, na 1ª entrada | — |
+| **Nilane** | (pelo Thuast; a região a dizer quando pesar) | oficina caída por traição; guarda um segredo de facção; bandidos; um preço a alguém | no dado, na 1ª entrada | — |
+| **Iroule** | debaixo do capim queimado entre a fundição e Ireviel velha (a laje com aro de ferro e runas, achada no fogo do 400) | oficina de mestre morto, caída em guerra; pede uma SENHA; · 404: a SENHA estava nos papéis do Quthemnus, no círculo da torre do meio | no dado, na 1ª entrada | a senha estava nos papéis do Quthemnus, no círculo da torre do meio (404); a casa ainda não desceu (438) |
+| **Eryssa** | debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420 | era um mercado; caiu por maldição; guarda uma receita; mora um culto; entrar: uma chave | no dado, na 1ª entrada | o rei tomou o mercado (423) e abriu a porta de bronze: as tábuas da receita do SYSRETH (438) |
+| **Ithium** | os Picos Brancos | era um mercado; caiu por monstro; guarda um NÚCLEO; mora mortos; entrar: uma luta | no dado, na 1ª entrada | — |
+| **Zythir** | debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro) | era um cemitério de reis; caiu por guerra; guarda um prisioneiro; mora nada, e é isso que assusta; entrar: uma senha | Único | a casa limpou as salas 1 a 8 (436-437); a porta da 9, O CORAÇÃO, ficou fechada (438); mapa de salas aberto |
+| **Fenmir** | a oficina velha de Ireviel (Ireviel velha) | oficina de mestre caída; guarda o círculo de cinza; mora o HUGR (Raro 69), que só ataca quem pisa na cinza; o círculo foi fechado por fora com chave de runa | no dado, na 1ª entrada | — |
+| **Brassa** | o Delta (meio dia de barca) | a torre que solta o ar podre no rio (a febre do brejo desce dali); guarda o que não se sabe; o Krothos dormia nela antes de ir a Levis; dentro, Vigor CD 15 por hora | no dado, na 1ª entrada | — |
+| **Fenssa** | perto da costa | torre de mago caída; cheia de mortos; entrar pede a chave (um salineiro do culto do Maneus a levava; o Moreth o pegou antes do rito) | no dado, na 1ª entrada | — |

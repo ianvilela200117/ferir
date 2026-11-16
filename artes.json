@@ -1,0 +1,824 @@
+{
+ "Moreth": {
+  "nivel": 232,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "maca",
+   "espada"
+  ],
+  "artes": [
+   "quebra_guarda",
+   "tremor_de_ferro",
+   "bigorna",
+   "fio_duplo",
+   "corte_corrido",
+   "corte_do_horizonte"
+  ],
+  "arma_de": {
+   "quebra_guarda": "maca",
+   "tremor_de_ferro": "maca",
+   "bigorna": "maca",
+   "fio_duplo": "espada",
+   "corte_corrido": "espada",
+   "corte_do_horizonte": "espada"
+  },
+  "auras": [
+   "Pele de Pedra"
+  ],
+  "mult": 5,
+  "mult_de": "metade do foco Mítico",
+  "essencia": "",
+  "peca": "a MAÇA DO RIO LIMPO e a ESPADA DO MORETH",
+  "oculto": false,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Eiagrir": {
+  "nivel": 126,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 4,
+  "circulo": 4,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca"
+  },
+  "auras": [
+   "Raiz de Pedra menor",
+   "Passo de Vento"
+  ],
+  "mult": 2.5,
+  "mult_de": "metade do foco Lendário (a Lança do Rio Limpo rende Lendário)",
+  "essencia": "Vida",
+  "peca": "a LANÇA DO RIO LIMPO",
+  "oculto": false,
+  "dia": 438
+ },
+ "Eliane": {
+  "nivel": 96,
+  "maestria": "Mestre",
+  "maestria_de": "escrita na ficha",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca"
+  },
+  "auras": [
+   "Nó de Chamada"
+  ],
+  "mult": 2.5,
+  "mult_de": "metade do foco Lendário",
+  "essencia": "Terra",
+  "peca": "a LANÇA DO BREN",
+  "oculto": false,
+  "dia": 438
+ },
+ "Hruthos": {
+  "nivel": 91,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca"
+  },
+  "auras": [
+   "Sangue Quente"
+  ],
+  "mult": 2.5,
+  "mult_de": "metade do foco Lendário",
+  "essencia": "Fogo",
+  "peca": "a LANÇA DE VESTRIN (Mítica, usada como Lendária)",
+  "oculto": false,
+  "dia": 438
+ },
+ "Graur": {
+  "nivel": 75,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "maca"
+  ],
+  "artes": [
+   "quebra_guarda",
+   "tremor_de_ferro"
+  ],
+  "arma_de": {
+   "quebra_guarda": "maca",
+   "tremor_de_ferro": "maca"
+  },
+  "auras": [
+   "Luz no Escudo"
+  ],
+  "mult": 1.5,
+  "mult_de": "metade do foco Único",
+  "essencia": "",
+  "peca": "a BENGALA DE REI",
+  "oculto": false,
+  "dia": 438
+ },
+ "Isolda": {
+  "nivel": 117,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 4,
+  "circulo": 4,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo",
+   "flecha_que_prega"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco",
+   "flecha_que_prega": "arco"
+  },
+  "auras": [
+   "Passo de Vento",
+   "Pele de Pedra"
+  ],
+  "mult": 1.5,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Starkald": {
+  "nivel": 87,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo",
+   "flecha_que_prega"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco",
+   "flecha_que_prega": "arco"
+  },
+  "auras": [
+   "Calma"
+  ],
+  "mult": 1.5,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Goir": {
+  "nivel": 46,
+  "maestria": "Treinado",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 1,
+  "circulo": 2,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco"
+  },
+  "auras": [],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Tuald": {
+  "nivel": 60,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "escudo"
+  ],
+  "artes": [
+   "empurrar_a_parede",
+   "guarda_de_dois"
+  ],
+  "arma_de": {
+   "empurrar_a_parede": "escudo",
+   "guarda_de_dois": "escudo"
+  },
+  "auras": [
+   "Passo de Vento"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Draron": {
+  "nivel": 57,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 3,
+  "circulo": 4,
+  "armas": [
+   "machado"
+  ],
+  "artes": [
+   "rachar",
+   "roda_de_lamina"
+  ],
+  "arma_de": {
+   "rachar": "machado",
+   "roda_de_lamina": "machado"
+  },
+  "auras": [
+   "Nó de Chamada"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Sira": {
+  "nivel": 32,
+  "maestria": "Treinado",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 1,
+  "circulo": 2,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca"
+  },
+  "auras": [],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Gonde": {
+  "nivel": 30,
+  "maestria": "Treinado",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 1,
+  "circulo": 2,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca"
+  },
+  "auras": [],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": false,
+  "dia": 438
+ },
+ "Teraseth": {
+  "nivel": 432,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 11,
+  "circulo": 6,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas",
+   "lanca_que_nao_dobra"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca",
+   "lanca_que_nao_dobra": "lanca"
+  },
+  "auras": [
+   "Pele de Pedra",
+   "Raiz de Pedra menor",
+   "Mão de Pedra",
+   "Luz no Escudo",
+   "Passo de Vento",
+   "Sangue Quente",
+   "Calma",
+   "Fôlego de Ferro"
+  ],
+  "mult": 10.0,
+  "mult_de": "metade do foco Primordial",
+  "essencia": "",
+  "peca": "o CROQUE DO RIO",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Skotha Graskur": {
+  "nivel": 370,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 10,
+  "circulo": 6,
+  "armas": [
+   "espada"
+  ],
+  "artes": [
+   "fio_duplo",
+   "corte_corrido",
+   "corte_do_horizonte"
+  ],
+  "arma_de": {
+   "fio_duplo": "espada",
+   "corte_corrido": "espada",
+   "corte_do_horizonte": "espada"
+  },
+  "auras": [
+   "Luz no Escudo",
+   "Nó de Chamada",
+   "Sangue Quente",
+   "Passo de Vento",
+   "Fôlego de Ferro",
+   "Raiz de Pedra menor",
+   "Mão de Pedra"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Garkunn": {
+  "nivel": 343,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 9,
+  "circulo": 6,
+  "armas": [
+   "maca"
+  ],
+  "artes": [
+   "quebra_guarda",
+   "tremor_de_ferro",
+   "bigorna"
+  ],
+  "arma_de": {
+   "quebra_guarda": "maca",
+   "tremor_de_ferro": "maca",
+   "bigorna": "maca"
+  },
+  "auras": [
+   "Nó de Chamada",
+   "Pele de Pedra",
+   "Mão de Pedra",
+   "Raiz de Pedra menor",
+   "Passo de Vento",
+   "Sangue Quente"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Mie": {
+  "nivel": 150,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 6,
+  "circulo": 6,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo",
+   "flecha_que_prega",
+   "flecha_que_nao_cai"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco",
+   "flecha_que_prega": "arco",
+   "flecha_que_nao_cai": "arco"
+  },
+  "auras": [
+   "Calma",
+   "Luz no Escudo",
+   "Pele de Pedra"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Hundunn": {
+  "nivel": 300,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 9,
+  "circulo": 6,
+  "armas": [
+   "espada"
+  ],
+  "artes": [
+   "fio_duplo",
+   "corte_corrido",
+   "corte_do_horizonte"
+  ],
+  "arma_de": {
+   "fio_duplo": "espada",
+   "corte_corrido": "espada",
+   "corte_do_horizonte": "espada"
+  },
+  "auras": [
+   "Sangue Quente",
+   "Instante",
+   "Calma",
+   "Passo de Vento",
+   "Pele de Pedra",
+   "Nó de Chamada"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Tair": {
+  "nivel": 240,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "maca"
+  ],
+  "artes": [
+   "quebra_guarda",
+   "tremor_de_ferro",
+   "bigorna"
+  ],
+  "arma_de": {
+   "quebra_guarda": "maca",
+   "tremor_de_ferro": "maca",
+   "bigorna": "maca"
+  },
+  "auras": [
+   "Fôlego de Ferro",
+   "Luz no Escudo",
+   "Mão de Pedra",
+   "Instante"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Goald": {
+  "nivel": 255,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 8,
+  "circulo": 6,
+  "armas": [
+   "machado"
+  ],
+  "artes": [
+   "rachar",
+   "roda_de_lamina",
+   "derrubar_o_tronco"
+  ],
+  "arma_de": {
+   "rachar": "machado",
+   "roda_de_lamina": "machado",
+   "derrubar_o_tronco": "machado"
+  },
+  "auras": [
+   "Passo de Vento",
+   "Mão de Pedra",
+   "Nó de Chamada",
+   "Raiz de Pedra menor",
+   "Sangue Quente"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Taunn": {
+  "nivel": 275,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 8,
+  "circulo": 6,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas",
+   "lanca_que_nao_dobra"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca",
+   "lanca_que_nao_dobra": "lanca"
+  },
+  "auras": [
+   "Fôlego de Ferro",
+   "Sangue Quente",
+   "Calma",
+   "Raiz de Pedra menor",
+   "Passo de Vento"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Zazess": {
+  "nivel": 275,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 8,
+  "circulo": 6,
+  "armas": [
+   "punho"
+  ],
+  "artes": [
+   "mao_aberta",
+   "passo_que_some",
+   "golpe_no_sopro"
+  ],
+  "arma_de": {
+   "mao_aberta": "punho",
+   "passo_que_some": "punho",
+   "golpe_no_sopro": "punho"
+  },
+  "auras": [
+   "Instante",
+   "Passo de Vento",
+   "Sangue Quente",
+   "Fôlego de Ferro",
+   "Mão de Pedra"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Isair": {
+  "nivel": 245,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "espada"
+  ],
+  "artes": [
+   "fio_duplo",
+   "corte_corrido",
+   "corte_do_horizonte"
+  ],
+  "arma_de": {
+   "fio_duplo": "espada",
+   "corte_corrido": "espada",
+   "corte_do_horizonte": "espada"
+  },
+  "auras": [
+   "Pele de Pedra",
+   "Raiz de Pedra menor",
+   "Instante",
+   "Fôlego de Ferro"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Lavis": {
+  "nivel": 245,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "espada"
+  ],
+  "artes": [
+   "fio_duplo",
+   "corte_corrido",
+   "corte_do_horizonte"
+  ],
+  "arma_de": {
+   "fio_duplo": "espada",
+   "corte_corrido": "espada",
+   "corte_do_horizonte": "espada"
+  },
+  "auras": [
+   "Nó de Chamada",
+   "Luz no Escudo",
+   "Sangue Quente",
+   "Raiz de Pedra menor"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Xaesrir": {
+  "nivel": 200,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas",
+   "lanca_que_nao_dobra"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca",
+   "lanca_que_nao_dobra": "lanca"
+  },
+  "auras": [
+   "Pele de Pedra",
+   "Sangue Quente",
+   "Raiz de Pedra menor",
+   "Passo de Vento"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ },
+ "Sizhir": {
+  "nivel": 125,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 4,
+  "circulo": 4,
+  "armas": [
+   "lanca"
+  ],
+  "artes": [
+   "ponta_que_espera",
+   "chuva_de_pontas"
+  ],
+  "arma_de": {
+   "ponta_que_espera": "lanca",
+   "chuva_de_pontas": "lanca"
+  },
+  "auras": [
+   "Calma",
+   "Luz no Escudo"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438
+ },
+ "Sior": {
+  "nivel": 125,
+  "maestria": "Mestre",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 4,
+  "circulo": 4,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo",
+   "flecha_que_prega"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco",
+   "flecha_que_prega": "arco"
+  },
+  "auras": [
+   "Luz no Escudo",
+   "Fôlego de Ferro"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438
+ },
+ "Tundald": {
+  "nivel": 215,
+  "maestria": "Lendário",
+  "maestria_de": "pela faixa de nível (precedente do 438)",
+  "n": 7,
+  "circulo": 6,
+  "armas": [
+   "arco"
+  ],
+  "artes": [
+   "tiro_duplo",
+   "flecha_que_prega",
+   "flecha_que_nao_cai"
+  ],
+  "arma_de": {
+   "tiro_duplo": "arco",
+   "flecha_que_prega": "arco",
+   "flecha_que_nao_cai": "arco"
+  },
+  "auras": [
+   "Luz no Escudo",
+   "Mão de Pedra",
+   "Instante",
+   "Calma"
+  ],
+  "mult": 1,
+  "mult_de": "metade do multiplicador da ficha (a categoria da arma não está escrita)",
+  "essencia": "",
+  "peca": "",
+  "oculto": true,
+  "dia": 438,
+  "remate": "a nomear na primeira cena (Livro Nove 3.4: encadeia três, 1x por dia)"
+ }
+}

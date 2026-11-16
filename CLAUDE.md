@@ -5,11 +5,11 @@ Este arquivo é lido sozinho no começo de cada sessão. Ele aponta para as regr
 
 ## Ao abrir a sessão (antes de responder qualquer coisa do jogo)
 1. Leia `MESTRE.md` inteiro (as instruções do Mestre e as regras do jogador).
-2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G34** valem sempre.
+2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G37** valem sempre.
 3. Leia `RETOMAR_DIA407.md` (o nome é antigo; é o arquivo de retomada do ÚLTIMO turno): o que foi respondido, os ocultos guardados e as **PERGUNTAS ABERTAS**.
 4. Rode `python3 contexto.py` e leia o `BRIEFING.md`; leia o bloco do topo de "## Pendentes que Ferir conhece" no `estado_vivo.md`.
 5. Rode `python3 tick.py status` para saber o dia, a hora e a pressão.
-6. As regras novas do MOTOR 9 estão no `compendio/08_livro_nove.md` (o Livro Nove); a linha 🛠️ do turno sai de `python3 habilidades.py mao`.
+6. As regras novas do MOTOR 9 e 9.1 estão no `compendio/08_livro_nove.md` (o Livro Nove; G25 a G37); a linha 🛠️ do turno sai de `python3 habilidades.py mao`.
 A cola de todos os comandos: `python3 motor.py`.
 
 ## O jogador
@@ -18,7 +18,7 @@ A cola de todos os comandos: `python3 motor.py`.
 - Mudança que ele pede entra equilibrada, a critério do Mestre, e vira regra escrita no `protocolo_do_turno.md`.
 
 ## O que nunca muda
-- **Todo dado sai de script** (`selo.py dr`, `aberto.py`, `luta.py`, `batalha.py`, `conselho.py`, `obra_valor.py`, `saber.py`). Declarar ANTES, rolar UMA VEZ. **Nunca rolar de novo.** Se o Mestre errou, diz ao jogador e corrige pelo dado só o que faltou, ou anula com a palavra dele (precedente: a forquilha, 426).
+- **Todo dado sai de script** (`selo.py dr`, `aberto.py`, `luta.py`, `batalha.py`, `conselho.py`, `obra_valor.py`, `saber.py`; e os do MOTOR 9.1: `coleta.py`, `cancao.py`, `despertar.py`, `artes.py`, `classe.py gera`, `npc.py vida`, `cria.py`, `festas.py`, `masmorra.py degrau`). Declarar ANTES, rolar UMA VEZ. **Nunca rolar de novo.** Se o Mestre errou, diz ao jogador e corrige pelo dado só o que faltou, ou anula com a palavra dele (precedente: a forquilha, 426).
 - Rolagem que o personagem não pode saber: à mesa só "rolagem oculta"; a verdade fica no envelope.
 - O Visão do Tempo e a régua de luta só quando o jogador pedir.
 - Fortuna: o Mestre gasta sozinho só em teste que importa.
