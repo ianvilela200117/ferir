@@ -46,6 +46,19 @@
     "Fôlego Sem Fundo",
     "Passo Certo",
     "Sorte Velha"
+   ],
+   "arma": "maça",
+   "artes": [
+    "Quebra-Guarda",
+    "Tremor De Ferro",
+    "Bigorna",
+    "Pele de Pedra",
+    "Raiz de Pedra menor",
+    "Passo de Vento",
+    "Instante",
+    "Fôlego de Ferro",
+    "Calma",
+    "Mão de Pedra"
    ]
   },
   {
@@ -517,6 +530,20 @@
     "Passo Certo",
     "Mão do Mundo",
     "Mão do Mundo"
+   ],
+   "arma": "espada",
+   "artes": [
+    "Fio Duplo",
+    "Corte Corrido",
+    "Corte Do Horizonte",
+    "Pele de Pedra",
+    "Raiz de Pedra menor",
+    "Passo de Vento",
+    "Instante",
+    "Fôlego de Ferro",
+    "Calma",
+    "Mão de Pedra",
+    "Sangue Quente"
    ]
   },
   {

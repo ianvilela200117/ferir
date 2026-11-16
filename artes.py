@@ -10,6 +10,7 @@ de foco da categoria que a arma RENDE, uma por rodada, 1x por cena, com o efeito
 Uso:
   python3 artes.py ver [NOME]            as Artes de quem tem ficha de combate
   python3 artes.py aplica [NOME]         escolhe e grava nas fichas (menos o rei: as dele o jogador escolhe); anota no envelope
+  python3 artes.py grandes               a arma (no dado, OCULTO) e as Artes dos grandes do mundo que vivem de combate
   python3 artes.py lista ARMA NIVEL [mult=N]   as entradas prontas para um inimigo ou NPC sem ficha (espada lança maça machado arco punho)
 """
 import json, re, sys
@@ -111,6 +112,17 @@ def main():
         grava(ARQ, F)
         if linhas: anota('- ARTES DE ARMA (G30; artes.py): ' + ' | '.join(linhas))
         return
+    if a[0] == 'grandes':   # os grandes do mundo que vivem de combate: a arma no dado (uma vez, OCULTO); as Artes saem de 'artes.py lista' quando um entrar em luta
+        from nucleo import d
+        M = carrega('mundo_vivo.json'); fams = ['espada', 'lança', 'maça', 'machado', 'arco']; linhas = []
+        for g in M.get('lendarios', []):
+            if g.get('frente') == 'combate' and not g.get('arma'):
+                r = d(5); g['arma'] = fams[r - 1]; mst, teto, lista, auras = escolhe(g.get('nivel') or 300, [g['arma']])
+                g['artes'] = [x[1][0].title() for x in lista] + auras
+                linhas.append(f"{g['nome']} ({g.get('nivel')}): d5 [{r}] {g['arma']}: {', '.join(g['artes'])}")
+        grava('mundo_vivo.json', M)
+        if linhas: anota('- (OCULTO) AS ARMAS E AS ARTES DOS GRANDES DE COMBATE (G30; artes.py grandes): ' + ' | '.join(linhas))
+        print(f'{len(linhas)} grande(s) de combate com arma e Artes (OCULTO, no envelope)'); return
     sys.exit(__doc__)
 
 

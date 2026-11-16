@@ -295,11 +295,16 @@ def um_dia(estrada, limite):
         C.append('  Pressão zera')
         t['pressao'] = 0
     C.append('  Fortuna volta ao máximo')
-    _sv = carrega('servos.json', {'servos': []}).get('servos', [])   # MOTOR 9 (438, G23): a palavra dos servos armados cobra sangue a cada aurora
-    for _s in [x for x in _sv if x.get('de_pe')]:
-        C.append(f"  ☠ SERVO ARMADO {_s['nome']} (nível {_s.get('nivel', '?')}): a PALAVRA cobra do rei {_s.get('palavra', '1d6 × 2')} de PV nesta aurora (rolar no selo.py e lançar em ficha.py pv)"
-                 + (f" · {_s['preco']}" + (' ⚠ O PRAZO PASSOU' if _s.get('prazo') and dia > _s['prazo'] else '') if _s.get('preco') else '')
-                 + (f" · lua nova no {_s['lua_nova']}: o nome e a gota de sangue" if _s.get('lua_nova') else ''))
+    _sv = carrega('servos.json', {'servos': []})   # MOTOR 9 (438, G23): a palavra dos servos armados cobra sangue a cada aurora; o tick ROLA e LANÇA sozinho
+    for _s in [x for x in _sv.get('servos', []) if x.get('de_pe')]:
+        _x = d(6) * _s.get('palavra_mult', 2); _pv = carrega('ficha.json').get('pv', [0, 0])[0]
+        if _pv - _x < 1:
+            C.append(f"  ☠ SERVO ARMADO {_s['nome']}: a PALAVRA pede {_x} de PV (d6 × {_s.get('palavra_mult', 2)}) e o rei tem {_pv}: SEM O SANGUE, o servo NÃO ANDA hoje (Lei 2)")
+        else:
+            _l, _, _e = roda('ficha.py', 'pv', f'-{_x}', f"{dia}: a palavra do servo {_s['nome']} (a aurora)")
+            C.append(f"  ☠ SERVO ARMADO {_s['nome']} (nível {_s.get('nivel', '?')}): a PALAVRA cobra {_x} de PV do rei nesta aurora (d6 × {_s.get('palavra_mult', 2)}) → " + (_l[-1].strip() if _l else str(_e)))
+        if _s.get('preco'): C.append(f"     {_s['preco']}" + (' ⚠ O PRAZO PASSOU' if _s.get('prazo') and dia > _s['prazo'] else ''))
+        if _s.get('lua_nova') and dia >= _s['lua_nova'] - 2: C.append(f"     lua nova no {_s['lua_nova']}: o nome dele e a gota de sangue")
     F = carrega('ficha.json')
     if F:
         F['fortuna'][0] = F['fortuna'][1]
@@ -391,6 +396,10 @@ def um_dia(estrada, limite):
             C += ['    ' + l for l in ng] or [f'      (falhou: {err})']
             R.append('  AS GUILDAS DO MUNDO (G12):')
             R += [l if len(l) < 330 else l[:330] for l in ng[1:]] or [f'   (falhou: {err})']
+        if os.path.exists(P('crias.json')):   # MOTOR 9 (G25): a carne das crias e quem ficou adulta
+            C.append('   [15d] AS CRIAS (cria.py semana, G25):')
+            ncr, _, err = roda('cria.py', 'semana', dia)
+            C += ['    ' + l for l in ncr] or [f'      (falhou: {err})']
         if os.path.exists(P('tratados.json')):
             C.append('   [15b] OS TRATADOS (tratados.py semana):')
             ntr, _, err = roda('tratados.py', 'semana', dia)
