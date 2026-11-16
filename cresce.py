@@ -33,8 +33,8 @@ def acha(nome):
 a=sys.argv[1:]
 if not a or a[0]=='ver':
     lim=int(a[1]) if len(a)>1 and a[1].isdigit() else None
-    for n,v in sorted(db.items(), key=lambda x:-x[1]['nivel'])[:lim]:
-        print(f"{n:10s} nível {v['nivel']:3d} · XP {v['xp']:6d}/{100*v['nivel']:6d}" + (" (Lendário: 1/mês)" if v.get('lendario') else '') + (' · MORTO' if 'MORTO' in v.get('estado','') else ''))
+    for n,v in sorted(db.items(), key=lambda x:-(x[1].get('nivel') or 0))[:lim]:
+        print(f"{n:10s} nível {(v.get('nivel') or 0):3d} · XP {v.get('xp',0):6d}/{100*(v.get('nivel') or 0):6d}" + (" (Lendário: 1/mês)" if v.get('lendario') else '') + (' · MORTO' if 'MORTO' in v.get('estado','') else ''))
 elif a[0]=='xp':
     if len(a)<3: sys.exit('uso: cresce.py xp NOME QTD "motivo"')
     nomes=[acha(x.strip()) for x in a[1].split(',') if x.strip()]; q=int(a[2]); m=a[3] if len(a)>3 else ''

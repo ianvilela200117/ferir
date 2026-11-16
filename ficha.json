@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
- "nivel": 155,
- "xp": 1204674,
+ "nivel": 156,
+ "xp": 1214674,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 184,
+  "Inteligência": 185,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 170
+  "Afinidade": 171
  },
  "pv": [
-  194,
-  400
+  236,
+  402
  ],
  "mana": [
-  163,
-  163
+  164,
+  164
  ],
  "foco": 37,
  "fortuna": [
@@ -32,7 +32,7 @@
   3
  ],
  "reves": [
-  3,
+  4,
   6
  ],
  "ganho_por_nivel": {
@@ -56,10 +56,10 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 16748,
+ "cofre": 13948,
  "livro": {
   "renda_casa": 2900,
-  "despesa": 7700,
+  "despesa": 8100,
   "ultima_semana": 427,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
@@ -267,17 +267,24 @@
    "valor": 3000,
    "motivo": "427: a recompensa dos BARQUEIROS DO LIVRO (a missão A FORQUILHA LIMPA: o Morek morto)",
    "saldo": 16748
+  },
+  {
+   "dia": 428,
+   "valor": -2800,
+   "motivo": "428: obra do reino: a muralha do rio e as torres de vigia (3.500 × 4/5, G6)",
+   "saldo": 13948
   }
  ],
  "materiais": {
   "zeieth": {
-   "kg": 1.1,
+   "kg": 0.6,
    "log": [
     "Dia 373: sobra ~1,6 kg depois do anel do Celocus (partida do MOTOR 6)",
     "Dia 401: -0.2 a alma do Fumigador da Higrunn (401)",
     "Dia 402: -0.1 condutor do encanto Multidão Mansa (402)",
     "Dia 408: -0.1 408 (noite): condutor do Toque do Ceifador no Foco de Osso",
-    "Dia 409: -0.1 409 (noite): condutor do Toque do Ceifador no Gorjal da Isolda"
+    "Dia 409: -0.1 409 (noite): condutor do Toque do Ceifador no Gorjal da Isolda",
+    "Dia 428: -0.5 428: a Couraça de Espinho do Moreth (os rebites e o fio em volta do núcleo)"
    ]
   },
   "ormieth": {
@@ -335,11 +342,12 @@
    ]
   },
   "ferro": {
-   "kg": 313.0,
+   "kg": 305.0,
    "log": [
     "Dia 409: +18 409: o quinto da forja do minério da Casa dos Mineiros (90 kg)",
     "Dia 422: -5 422 (noite): as lâminas das caixas de físico",
-    "Dia 423: +300 423: a barca do ferro de Levis (os 300 kg da coroa, do armazém do Ardenghi)"
+    "Dia 423: +300 423: a barca do ferro de Levis (os 300 kg da coroa, do armazém do Ardenghi)",
+    "Dia 428: -8 428: a Couraça de Espinho do Moreth"
    ]
   },
   "vaduar": {
@@ -367,9 +375,10 @@
    ]
   },
   "ssythis": {
-   "kg": 3.0,
+   "kg": 0.0,
    "log": [
-    "Dia 427: +3 427: a escama do Morek (Único, Espinho)"
+    "Dia 427: +3 427: a escama do Morek (Único, Espinho)",
+    "Dia 428: -3 428: a Couraça de Espinho do Moreth"
    ]
   },
   "laliel": {
@@ -385,15 +394,17 @@
    ]
   },
   "sasis": {
-   "kg": 3.0,
+   "kg": 0.0,
    "log": [
-    "Dia 427: +3 427: o pelo do Morek (Único, Espinho + Raio)"
+    "Dia 427: +3 427: o pelo do Morek (Único, Espinho + Raio)",
+    "Dia 428: -3 428: a Couraça de Espinho do Moreth (o forro)"
    ]
   },
   "núcleo-único-de-espinho": {
-   "kg": 1.0,
+   "kg": 0.0,
    "log": [
-    "Dia 427: +1 427: o CORAÇÃO DO MOREK (núcleo Único de Espinho; serve de núcleo para Mítico)"
+    "Dia 427: +1 427: o CORAÇÃO DO MOREK (núcleo Único de Espinho; serve de núcleo para Mítico)",
+    "Dia 428: -1 428: no peito da Couraça de Espinho do Moreth"
    ]
   }
  },
@@ -435,7 +446,9 @@
   "Dia 426: +1220 425 (a luta REFEITA no 426): o MOREK fugiu ferido (467/2440); lutou: nível × 10",
   "Dia 427: +6100 427: o MOREK morto na forquilha (Único 122; chefe: × 5)",
   "Dia 427: SOBE ao 155",
-  "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)"
+  "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)",
+  "Dia 428: +10000 428: a Couraça de Espinho do Moreth (MÍTICA; o teto do núcleo Único)",
+  "Dia 428: SOBE ao 156"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

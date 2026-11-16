@@ -1010,3 +1010,12 @@ Na mesma sala, os Filhos da Brecha pediram terra no porto de Marasar. Do fundo, 
 O recado voltou da forquilha: os barqueiros do livro agradecem e se armam. A Sira saiu da cela do homem do Draek com pouca coisa: os nomes estão no norte, e mais nada. Uma ave do Delta pousou no braço do Yavor com a notícia de que a Floresta foi ferida nos Picos Brancos, por mão que ninguém sabe. Enquanto os Sem-Torre casavam dois dos seus, com flauta e pão, a guarda achou no muro da casa um sapato de criança e um olho pintado.
 
 - **Parada:** noite do 428, a Fornalha. Para quem a armadura; os núcleos; a Brecha; o Giunn e a Tilde; os vinte da Luz do Cais; Levis no 429.
+
+### A Fornalha, noite do 428
+O conselho deu a terra do porto aos Filhos da Brecha, cinco a um; só a Nouliel quis dividir. Na porta da forja, à vista do Herkald, o Giunn chamou a Tilde para ir a Steunn por vontade própria, e ela perguntou por que as guildas a queriam. Antes da obra, um homem de Steunn procurou a Groa no portão, e ela voltou para o fole sem cor no rosto.
+Na bigorna o rei bateu as escamas do Morek sobre o pelo dele, rebitou com zeieth a frio e assentou o coração verde no peito. O Moreth ficou ao lado a noite inteira, e o nome dele entrou no metal. Um dado caiu em 1, e a mão do rei não tremeu. A couraça saiu Mítica, leve como gibão, e não rangia quando ele a vestiu.
+
+### O rio, 429 e 430
+A barca saiu com o céu nublado. Na lua nova veio a tempestade, e o rio encheu outra vez. O barqueiro amarrou num remanso, a um dia de Ireviel. O rei deixou cair uma gota de sangue na palavra do foco. Do outro lado da água, abrigada da mesma chuva, estava uma barca da Liga: dezesseis remos, oito guardas e um homem de capa na popa.
+
+- **Parada:** dia 430, o remanso, na tempestade. A barca da Liga; o ponto do 156; Levis no 435.

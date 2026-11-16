@@ -1,0 +1,36 @@
+[01:56:03] Dia 429 · Pressão 3/5 · evento local 1d20 [5] -> nada
+  O TEMPO (30 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: nublado, brisa (d6 [4] muda, d20 [13] · vento d6 [4])
+   o Porto de Marasar: limpo, calmo (d6 [2] fica · vento d6 [1])
+   Levis: limpo, vento firme (d6 [5] muda, d20 [3] · vento d6 [5])
+   Farenta: neblina, brisa (d6 [4] muda, d20 [18] · vento d6 [4]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   O RIO: normal [57/100]
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 447
+  FERIDO: Starkald (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA) até o Dia 435
+  FERIDO: Goir (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE) até o Dia 435
+  O MUNDO SE MOVE — Dia 429 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]
+    ONDE: d27 [14] o brejo do oeste (a Torre Afogada)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    → LEITURA DO DADO: monstros contra homens
+    ——
+  O MUNDO VIVO — Dia 429
+    um Lendário age (d20 [7]):
+    Xaysress (ofício, Kremir) d20 [7] um segredo dele vaza (boato ou espionagem) · notícia d20 [6] chega no dia 431
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Draa quer casar com Lasca e Miro (presos), por causa de uma terra além do mapa
+    FAÍSCA: Orast deve a vida a Grerkur, por causa de uma peça Lendária roubada
+    FAÍSCA: ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322) ama em segredo Tilde, por causa de uma peça Lendária roubada
+  ▶ AGENDA #345: FARENTA: os anzóis, as chumbadas e as âncoras ficam prontos (ferreiros de Farenta, G7): Dinheiro de Farenta +1 (mod, até o 480)
+  ▶ AGENDA #430: O REI SAI PARA LEVIS (adiado do 427: o Morek): a Brara e a fundição; a BIGORNA LIVRE (o Xaathis acabou de vencê-la em Levis: força 1); no caminho os restos da caravana virada e o frete da Liga; o rio cheio: subir custa o dobro
+  ▶ AGENDA #435: CHEGA a Marasar: o recado do rei à Skotha, patrona dos Barqueiros do Livro (os nomes estão com a Leliel) (saiu de Ireviel no 428)
+  ▶ AGENDA #437: A SKOTHA recebe o recado do rei (os nomes do livro com a Leliel): rolar a resposta (Marasar)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ceduion, reitor do Colégio de Telosus (Telosus): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): ataca ou sabota a obra do RIVAL lendário · COMO CHEGA: d20 [9] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Kervos (Único, o brejo do oeste): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Luz Partida (Marasar e Ireviel): briga com os da Cinza; vence a Luz Partida · COMO CHEGA: d20 [11] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)): alguém grande passou a pagar ou proteger · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: FENÔMENO MÁGICO: a coberta afina: magia selvagem — Kasra (terra nova) · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: Fenron (Épico, o brejo do oeste): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi

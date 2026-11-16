@@ -2833,6 +2833,29 @@
    "leitura": "uma cidade se rebela",
    "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: uma cidade se rebela — Marasar (a Liga e o Doge)",
    "toca": true
+  },
+  {
+   "dia": 429,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 430,
+   "chegada": "[3] em 1d3 [1] dias",
+   "leitura": "monstros contra homens",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: monstros contra homens — o brejo do oeste (a Torre Afogada)",
+   "toca": false
+  },
+  {
+   "dia": 430,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 430,
+   "chegada": "[1] hoje",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — Farenta",
+   "toca": true
   }
  ]
 }

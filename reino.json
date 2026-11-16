@@ -182,6 +182,12 @@
      "custo": 2000,
      "pronta": 451,
      "efeito": "Comida +1 de vez em Ireviel; a sobra de grão vai a Marasar (Comida de Marasar +1 enquanto a várzea der)"
+    },
+    {
+     "nome": "a muralha do rio e as torres de vigia (o reparo da muralha velha da rua do rio e da poterna do cais; duas torres com sino: o cais afundado e a várzea nova)",
+     "custo": 2800,
+     "pronta": 449,
+     "efeito": "Defesa +1 de vez em Ireviel; as torres dão o aviso da G11 (bicho no rio e na várzea)"
     }
    ],
    "log": [
@@ -457,7 +463,12 @@
       "a BOTICA VELHA fechou com um vizinho uma terra que era de Farenta; um homem do Tirello morto lá (426; até o 440)"
      ]
     ],
-    "Dinheiro": [],
+    "Dinheiro": [
+     [
+      1,
+      "a série dos anzóis, chumbadas e âncoras (G7, 429; até o 480)"
+     ]
+    ],
     "Comércio": [
      [
       1,

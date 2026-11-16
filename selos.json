@@ -1,25 +1,5 @@
 {
  "ordem": [
-  "TAl2",
-  "TAf2",
-  "TAa2",
-  "MNl2",
-  "MNf2",
-  "RB3",
-  "SL3",
-  "INV3",
-  "MLq3",
-  "MLw3",
-  "MLp4",
-  "AL4",
-  "ALd4",
-  "MPt4",
-  "C403a",
-  "QF4",
-  "FAM4",
-  "CQb4",
-  "BOL4",
-  "CTq4",
   "FZq4",
   "C404a",
   "C404b",
@@ -399,878 +379,29 @@
   "FB28s",
   "JS28s",
   "GI28",
-  "TE28"
+  "TE28",
+  "BR28",
+  "GI28b",
+  "TI28",
+  "LC28v",
+  "GR28",
+  "GR28b",
+  "MR29",
+  "SK29",
+  "SB29",
+  "LO29",
+  "EN30",
+  "LI30",
+  "MM30",
+  "GB30",
+  "LN30",
+  "TH30",
+  "IZ30",
+  "FA30",
+  "LB30",
+  "LB30c"
  ],
  "selos": {
-  "TAl2": {
-   "id": "TAl2",
-   "dia": 402,
-   "hora": "18:44:16",
-   "titulo": "(OCULTO) O NÍVEL EXATO DO QUTHEMNUS",
-   "dado": [
-    1,
-    40,
-    190
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 191,
-     "b": 1000000,
-     "res": "o total é o nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      39
-     ],
-     "total": 229,
-     "res": "o total é o nível",
-     "txt": "[39] +190 = 229 → o total é o nível"
-    }
-   ],
-   "hora_rolado": "18:44:16"
-  },
-  "TAf2": {
-   "id": "TAf2",
-   "dia": 402,
-   "hora": "18:44:16",
-   "titulo": "(OCULTO) QUANTOS FANÁTICOS DA CINZA DORMEM NAS TORRES",
-   "dado": [
-    1,
-    6,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 1000000,
-     "res": "o total"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 4,
-     "res": "o total",
-     "txt": "[2] +2 = 4 → o total"
-    }
-   ],
-   "hora_rolado": "18:44:16"
-  },
-  "TAa2": {
-   "id": "TAa2",
-   "dia": 402,
-   "hora": "18:44:16",
-   "titulo": "(OCULTO) QUANTAS ESPADAS PAGAS PELO ARDENGHI",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 1000000,
-     "res": "o total"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      1
-     ],
-     "total": 6,
-     "res": "o total",
-     "txt": "[5, 1] +0 = 6 → o total"
-    }
-   ],
-   "hora_rolado": "18:44:16"
-  },
-  "MNl2": {
-   "id": "MNl2",
-   "dia": 402,
-   "hora": "18:46:40",
-   "titulo": "O NÍVEL DO MESTRE DOS MINEIROS DE LEVIS (escolhido pela Brara entre os da Mina Fechada)",
-   "dado": [
-    2,
-    10,
-    10
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 1000000,
-     "res": "o total é o nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8,
-      8
-     ],
-     "total": 26,
-     "res": "o total é o nível",
-     "txt": "[8, 8] +10 = 26 → o total é o nível"
-    }
-   ],
-   "hora_rolado": "18:46:40"
-  },
-  "MNf2": {
-   "id": "MNf2",
-   "dia": 402,
-   "hora": "18:46:58",
-   "titulo": "(OCULTO) QUEM PAGA O GURKA, MESTRE DOS MINEIROS DE LEVIS (segredo do gerador: trabalha para outra facção)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a Guilda de Levis (a mestra Carea)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o Culto do Xaathis"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o Clã Hegre"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a Liga velha"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Ardenghi"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os Jurados de Steunn"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a Guilda de Levis (a mestra Carea)",
-     "txt": "[1] → a Guilda de Levis (a mestra Carea)"
-    }
-   ],
-   "hora_rolado": "18:46:58"
-  },
-  "RB3": {
-   "id": "RB3",
-   "dia": 403,
-   "hora": "18:47:31",
-   "titulo": "O ROUBO PEQUENO NO CAIS (evento local do 403; o rio seco, barcas encalhadas)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "some uma carga de ferro dos arpões dos Filhos do Livro: atraso de um dia"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um menino dos Descalços rouba uma bolsa no mercado do peixe: o trato novo é testado"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "some um molde da Fornalha"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "some um molde da Fornalha",
-     "txt": "[6] → some um molde da Fornalha"
-    }
-   ],
-   "hora_rolado": "18:47:31"
-  },
-  "SL3": {
-   "id": "SL3",
-   "dia": 403,
-   "hora": "18:47:31",
-   "titulo": "O GESTO DA SELINE NA TRAIÇÃO PENDENTE DO RUDDO (trama [19], aparece em cena hoje)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "pede à casa proteção contra o Ruddo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "paga uma dívida do Ruddo para comprá-lo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "é vista com um homem do Ruddo no cais (a Sira anota)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "pede à casa proteção contra o Ruddo",
-     "txt": "[1] → pede à casa proteção contra o Ruddo"
-    }
-   ],
-   "hora_rolado": "18:47:31"
-  },
-  "INV3": {
-   "id": "INV3",
-   "dia": 403,
-   "hora": "18:47:31",
-   "titulo": "A TÉCNICA NOVA EM IREVIEL E NO RIO (notícia FIEL: pode ser comprada ou roubada)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um calafate do Livro faz um piche que aguenta fogo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um ferreiro da Guilda de Ireviel tempera ferro em óleo de peixe e o ferro sai mais duro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma boticária destila um remédio fraco para a Febre Cinza"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "uma boticária destila um remédio fraco para a Febre Cinza",
-     "txt": "[5] → uma boticária destila um remédio fraco para a Febre Cinza"
-    }
-   ],
-   "hora_rolado": "18:47:31"
-  },
-  "MLq3": {
-   "id": "MLq3",
-   "dia": 403,
-   "hora": "18:47:51",
-   "titulo": "QUE MOLDE SUMIU DA FORNALHA (o roubo do 403; a Fornalha guardada desde o 400, mas o telhado de cima queimou e está aberto)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o molde da MÃO DE ESPINHO (a mão direita do rei, em cera dura, para a obra da Mamiltia, 346)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o molde de ponta das LANÇAS DE VEYDUN"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o molde do SELO DO REINO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "um molde comum de croque, dos arpões do Livro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o molde da MÃO DE ESPINHO (a mão direita do rei, em cera dura, para a obra da Mamiltia, 346)",
-     "txt": "[1] → o molde da MÃO DE ESPINHO (a mão direita do rei, em cera dura, para a obra da Mamiltia, 346)"
-    }
-   ],
-   "hora_rolado": "18:47:51"
-  },
-  "MLw3": {
-   "id": "MLw3",
-   "dia": 403,
-   "hora": "18:47:51",
-   "titulo": "(OCULTO) QUEM LEVOU O MOLDE (pelo telhado aberto)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os da Cinza, para a Torre Acesa (o pai é mago de Elo: uma forma da mão serve de laço)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "um homem da Almision"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "os Descalços da estrada (o Ardenghi)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um ladrão comum, para vender"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os da Cinza, para a Torre Acesa (o pai é mago de Elo: uma forma da mão serve de laço)",
-     "txt": "[1] → os da Cinza, para a Torre Acesa (o pai é mago de Elo: uma forma da mão serve de laço)"
-    }
-   ],
-   "hora_rolado": "18:47:51"
-  },
-  "MLp4": {
-   "id": "MLp4",
-   "dia": 403,
-   "hora": "19:18:33",
-   "titulo": "(OCULTO) O QUE O PAI FAZIA COM O MOLDE DA MÃO DO REI NA NOITE DO 403 (os da Cinza o levaram às torres)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "começou uma CORRENTE MESTRE (Elo 5º): um contrato com a marca da mão do rei; falta uma noite inteira para fechar; o molde está no círculo dele"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a forma vai para Steunn: um homem do Ardenghi vem buscá-la ao amanhecer, para o Borecci bater peças falsas com a marca do rei; está num saco na base"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "começou uma CORRENTE MESTRE (Elo 5º): um contrato com a marca da mão do rei; falta uma noite inteira para fechar; o molde está no círculo dele",
-     "txt": "[1] → começou uma CORRENTE MESTRE (Elo 5º): um contrato com a marca da mão do rei; falta uma noite inteira para fechar; o molde está no círculo dele"
-    }
-   ],
-   "hora_rolado": "19:18:33"
-  },
-  "AL4": {
-   "id": "AL4",
-   "dia": 403,
-   "hora": "19:18:33",
-   "titulo": "A ALMISION RESPONDE PELO CORVO DO VEYULA (a troca: uma hora da Matriz, sob guarda, pelo que ela sabe de quem acordou a Elaeva; +5: entregar o nome é jogar uma Primordial em cima do ADUREL, o rival dela; LEAL e CURIOSA)",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "recusa: o saber é dela, como a missão"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 14,
-     "res": "aceita: manda pelo corvo o que sabe (AK4) e vem fazer a hora em pessoa (em 1d6+2 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 1000000,
-     "res": "aceita, manda o que sabe COM PROVA e vem em 1d4 dias"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 8,
-     "res": "aceita: manda pelo corvo o que sabe (AK4) e vem fazer a hora em pessoa (em 1d6+2 dias)",
-     "txt": "[3] +5 = 8 → aceita: manda pelo corvo o que sabe (AK4) e vem fazer a hora em pessoa (em 1d6+2 dias)"
-    }
-   ],
-   "hora_rolado": "19:18:33"
-  },
-  "ALd4": {
-   "id": "ALd4",
-   "dia": 403,
-   "hora": "19:18:33",
-   "titulo": "EM QUANTOS DIAS O CORVO VOLTA COM A RESPOSTA DA ALMISION (sai na tarde do 403)",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1000000,
-     "res": "o total de dias"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o total de dias",
-     "txt": "[3] → o total de dias"
-    }
-   ],
-   "hora_rolado": "19:18:33"
-  },
-  "MPt4": {
-   "id": "MPt4",
-   "dia": 403,
-   "hora": "19:18:33",
-   "titulo": "QUANDO A MAMILTIA PARTE PARA STEUNN COM O FUMIGADOR (a peça está pronta; ela vai às torres com o rei; sabe que o rei comprou para ela o nome de quem acordou a Elaeva)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "na manhã seguinte ao golpe"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "espera a resposta da Almision, até o 409"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "espera a resposta da Almision, até o 409",
-     "txt": "[6] → espera a resposta da Almision, até o 409"
-    }
-   ],
-   "hora_rolado": "19:18:33"
-  },
-  "C403a": {
-   "id": "C403a",
-   "dia": 403,
-   "hora": "19:18:42",
-   "titulo": "O CONSELHO VOTA: O GRÃO DO CELOCUS (fome em Lumade; o pacto de Lumade espera o fim da guerra): O REI QUER DAR CRÉDITO; o conselho vota a FORMA",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) CRÉDITO PEQUENO: 800 em grão, sem mexer na Comida das cidades; pago em 30 dias · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Eliane, Isolda, Graur, Tolvane",
-     "txt": "VENCE A) CRÉDITO PEQUENO: 800 em grão, sem mexer na Comida das cidades; pago em 30 dias · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Eliane, Isolda, Graur, Tolvane"
-    }
-   ]
-  },
-  "QF4": {
-   "id": "QF4",
-   "dia": 403,
-   "hora": "19:20:58",
-   "titulo": "(T4) O QUTHEMNUS NO CÍRCULO DA TORRE DO MEIO, QUANDO A BASE CAI (fraco; mago de ELO, sem feitiço que fira; o filho MORREU no sino: o −2 declarado já está nas faixas: d6−2 de 2 ou menos = 1-4 · 3-4 = 5-6 · 5+ fica sem faixa)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "luta e morre no círculo (antes, a Corrente Viva prende 1d6 dos heróis por 3 rodadas)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "rende-se: PRESO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "rende-se: PRESO",
-     "txt": "[5] → rende-se: PRESO"
-    }
-   ],
-   "hora_rolado": "19:20:58"
-  },
-  "FAM4": {
-   "id": "FAM4",
-   "dia": 403,
-   "hora": "19:20:58",
-   "titulo": "(T5) AS FAMÍLIAS DA CINZA COM O BARULHO DA BASE (nove rodadas de luta; a chegada foi calada: +0)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "ficam trancadas"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "homens saem com varas e tochas; os croques os empurram de volta, sem morte"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "no escuro, um homem da Cinza morre num croque (legitimidade −1; os da Cinza +1 de força)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "homens saem com varas e tochas; os croques os empurram de volta, sem morte",
-     "txt": "[5] → homens saem com varas e tochas; os croques os empurram de volta, sem morte"
-    }
-   ],
-   "hora_rolado": "19:20:58"
-  },
-  "CQb4": {
-   "id": "CQb4",
-   "dia": 403,
-   "hora": "19:20:58",
-   "titulo": "OS SEIS QUE CAÍRAM NA BASE (2 da Cinza e 4 espadas do Ardenghi): QUANTOS MORTOS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "2 mortos e 4 feridos presos"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "3 mortos e 3 feridos presos"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "4 mortos e 2 feridos presos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "4 mortos e 2 feridos presos",
-     "txt": "[5] → 4 mortos e 2 feridos presos"
-    }
-   ],
-   "hora_rolado": "19:20:58"
-  },
-  "BOL4": {
-   "id": "BOL4",
-   "dia": 403,
-   "hora": "19:20:58",
-   "titulo": "A MOEDA DO ARDENGHI NA BASE (a paga das seis espadas)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 100 moedas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o dado × 100 moedas",
-     "txt": "[2] → o dado × 100 moedas"
-    }
-   ],
-   "hora_rolado": "19:20:58"
-  },
-  "CTq4": {
-   "id": "CTq4",
-   "dia": 403,
-   "hora": "19:21:33",
-   "titulo": "O QUE DIZ O CONTRATO COMEÇADO NO CÍRCULO DO PAI (a Corrente Mestre com a marca da mão do rei; faltava uma noite para fechar: NÃO TEM FORÇA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o rei de Ireviel entrega a mão direita do Herkald à Torre Acesa; quebrar custa a mão direita do rei"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o rei de Ireviel jura que a casa bateu o vaduar quente na Noite das Torres e paga as famílias; quebrar custa a forja"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o rei de Ireviel entrega a Matriz ao Ardenghi"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o rei de Ireviel jura que a casa bateu o vaduar quente na Noite das Torres e paga as famílias; quebrar custa a forja",
-     "txt": "[4] → o rei de Ireviel jura que a casa bateu o vaduar quente na Noite das Torres e paga as famílias; quebrar custa a forja"
-    }
-   ],
-   "hora_rolado": "19:21:33"
-  },
   "FZq4": {
    "id": "FZq4",
    "dia": 403,
@@ -19007,6 +18138,927 @@
     }
    ],
    "hora_rolado": "01:19:54"
+  },
+  "BR28": {
+   "id": "BR28",
+   "dia": 428,
+   "hora": "01:52:05",
+   "titulo": "O CONSELHO VOTA: A TERRA DO PORTO DE MARASAR (do reino desde o 287): os FILHOS DA BRECHA (veteranos que tomaram a brecha pela casa) pedem terra; os DA BRECHA VELHA (os que defenderam a brecha pela Liga e perderam) dizem que a terra era deles. O rei mandou ao conselho (3c).",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE A) a terra aos Filhos da Brecha · placar A 5 · B 0 · C 1 · VOTO VENCIDO: Nouliel",
+     "txt": "VENCE A) a terra aos Filhos da Brecha · placar A 5 · B 0 · C 1 · VOTO VENCIDO: Nouliel"
+    }
+   ]
+  },
+  "GI28b": {
+   "id": "GI28b",
+   "dia": 428,
+   "hora": "01:52:24",
+   "titulo": "O QUE O GIUNN DIZ À TILDE (4a: à vista do Herkald; CURIOSO e AMBICIOSO; os Jurados sofrem a estrada de pedra fechada desde o 408)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "PERGUNTA: quer saber dela mesma se bateu o vaduar quente, e promete falar por ela na feira de Steunn se ela disser a verdade"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "AVISO: as guildas de Steunn mandaram mais gente a Ireviel além do Hiald"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre",
+     "txt": "[4] → CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre"
+    }
+   ],
+   "hora_rolado": "01:52:24"
+  },
+  "TI28": {
+   "id": "TI28",
+   "dia": 428,
+   "hora": "01:52:24",
+   "titulo": "COMO A TILDE RESPONDE AO GIUNN (PREGUIÇOSA e GENEROSA; opinião do rei +10; o Herkald ao lado)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "não responde: segura a manga do Herkald e pergunta ao rei depois"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "responde de criança séria: pergunta POR QUE as guildas a querem"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "gosta dele: quer ouvir mais da montanha (pede para ele voltar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "responde de criança séria: pergunta POR QUE as guildas a querem",
+     "txt": "[3] → responde de criança séria: pergunta POR QUE as guildas a querem"
+    }
+   ],
+   "hora_rolado": "01:52:24"
+  },
+  "LC28v": {
+   "id": "LC28v",
+   "dia": 428,
+   "hora": "01:52:48",
+   "titulo": "DE QUE NÍVEL SÃO OS 20 VOLUNTÁRIOS DA LUZ DO CAIS (gente do porto; 5a: vão à Guilda)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "nível 5 a 10"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "nível 10 a 20"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 20 a 30"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nível 10 a 20",
+     "txt": "[4] → nível 10 a 20"
+    }
+   ],
+   "hora_rolado": "01:52:48"
+  },
+  "GR28": {
+   "id": "GR28",
+   "dia": 428,
+   "hora": "01:54:32",
+   "titulo": "QUEM COBRA A PROMESSA ANTIGA DA GROA (a surpresa atrasada dela, G8-C; gerador novidade [10]; a ferreira refugiada de Steunn)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um homem que veio com os JURADOS DE STEUNN (gente dos clãs de cima)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um homem das GUILDAS DE STEUNN (o lado do Borecci)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "um homem das GUILDAS DE STEUNN (o lado do Borecci)",
+     "txt": "[5] → um homem das GUILDAS DE STEUNN (o lado do Borecci)"
+    }
+   ],
+   "hora_rolado": "01:54:32"
+  },
+  "GR28b": {
+   "id": "GR28b",
+   "dia": 428,
+   "hora": "01:54:32",
+   "titulo": "O QUE ELE COBRA DA GROA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OURO (2d6 × 50)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "UM SERVIÇO: um desenho ou uma medida da Fornalha"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "que ela VOLTE A STEUNN com ele"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "UM SERVIÇO: um desenho ou uma medida da Fornalha",
+     "txt": "[4] → UM SERVIÇO: um desenho ou uma medida da Fornalha"
+    }
+   ],
+   "hora_rolado": "01:54:32"
+  },
+  "MR29": {
+   "id": "MR29",
+   "dia": 429,
+   "hora": "01:56:41",
+   "titulo": "QUEM SE REBELA EM MARASAR (o mundo do 428: d20 [1] guerra, 1d6 [4] uma cidade se rebela; a notícia chega à casa no 430)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os do CAIS DE BAIXO (inimigos; a greve vira motim no porto)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "os SEM-CORONA (oficiais que não aceitam a Skotha)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os DA BRECHA VELHA (perderam a terra no conselho do 428)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta",
+     "txt": "[1] → os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta"
+    }
+   ],
+   "hora_rolado": "01:56:41"
+  },
+  "SK29": {
+   "id": "SK29",
+   "dia": 429,
+   "hora": "01:56:41",
+   "titulo": "A RESPOSTA DA SKOTHA AO RECADO DO REI (os nomes do livro com a Leliel; ela é a patrona dos Barqueiros do Livro; relação +3)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "AGRADECE e põe as barcas dela de guarda na foz do braço leste (os Barqueiros do lado de Marasar ficam cobertos)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "diz que JÁ SABIA (a espionagem dela) e oferece aliança contra a Leliel"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar",
+     "txt": "[3] → AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar"
+    }
+   ],
+   "hora_rolado": "01:56:41"
+  },
+  "SB29": {
+   "id": "SB29",
+   "dia": 429,
+   "hora": "01:56:41",
+   "titulo": "O GESTO GRANDE DA SOUANE PARA A BRARA EM LEVIS (a trama DESEJO SECRETO, d20 [20]; a Souane: Lendária do Delta, quer dar de comer a todo o Delta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um PRESENTE grande: barcas de sal e de grão para a fundição velha de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "vem EM PESSOA a Levis e pede à Brara uma peça da fundição"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "declara em praça que a Brara está sob a PROTEÇÃO dela"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "declara em praça que a Brara está sob a PROTEÇÃO dela",
+     "txt": "[5] → declara em praça que a Brara está sob a PROTEÇÃO dela"
+    }
+   ],
+   "hora_rolado": "01:56:41"
+  },
+  "LO29": {
+   "id": "LO29",
+   "dia": 429,
+   "hora": "01:56:41",
+   "titulo": "QUEM VIU O LOULA (avistamento do 429)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um coveiro, à noite, fora do portão de Ireviel"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "um vaqueiro, na beira da várzea nova"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "um coveiro, à noite, fora do portão de Ireviel",
+     "txt": "[2] → um coveiro, à noite, fora do portão de Ireviel"
+    }
+   ],
+   "hora_rolado": "01:56:41"
+  },
+  "EN30": {
+   "id": "EN30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "O ENCONTRO NO RIO (tick 430 em estrada [7]; a TEMPESTADE prende a barca do rei num remanso, um dia acima de Ireviel)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "barqueiros de Levis abrigados no mesmo remanso, com notícia de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os restos da CARAVANA DE LEVIS virada pela correnteza (a #379, mais cedo), e um sobrevivente"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "uma barca da LIGA subindo com frete, abrigada do outro lado do remanso"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "uma barca da LIGA subindo com frete, abrigada do outro lado do remanso",
+     "txt": "[5] → uma barca da LIGA subindo com frete, abrigada do outro lado do remanso"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "LI30": {
+   "id": "LI30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "ONDE A LIANNIEL FOI VISTA (avistamento do 430)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "borbulhou de novo no cais afundado de Ireviel (os pescadores)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "da barca do rei, na tempestade: um dorso na água do remanso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "borbulhou de novo no cais afundado de Ireviel (os pescadores)",
+     "txt": "[1] → borbulhou de novo no cais afundado de Ireviel (os pescadores)"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "MM30": {
+   "id": "MM30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "A RESPOSTA DA MAMILTIA (o mensageiro do 425 a alcança na estrada de Steunn: o pedido de ajuda contra o Morek, que já morreu)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "manda dizer que segue a Steunn e volta para a caçada da Elaeva, como prometido"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "manda gente da MÃO QUEIMADA a Ireviel para a caçada"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver",
+     "txt": "[4] → manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "GB30": {
+   "id": "GB30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "A GUILDA (o Tegre, 6 caçadores) E OS DO CROQUE CHEGAM A MARASAR PARA OLHAR O BRUUR (+2: os do Croque conhecem a água; a cidade está em REVOLTA, os Fiéis do Doge Velho)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "os FIÉIS os pegam no caminho: luta pequena (rola feridos)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 9,
+     "res": "a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 17,
+     "res": "chegam ao BRUUR pelos alagados: dorme onde se dizia (o LUGAR EXATO) e veem a revolta"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 22,
+     "res": "e um RUMOR EXATO (o drop ou a fraqueza)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 9,
+     "res": "a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta",
+     "txt": "[7] +2 = 9 → a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "LN30": {
+   "id": "LN30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "O RUMOR EXATO DO LAENNOR (notícia fiel do 430: alguém o viu e sobreviveu)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "O DROP: o que o corpo dele dá (gerador material Raro)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada",
+     "txt": "[1] → A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "TH30": {
+   "id": "TH30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "O RUMOR EXATO DO THARGOS (notícia fiel do 430, as Fundas do Norte)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a FRAQUEZA: o raio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o DROP: o coração é núcleo MÍTICO de Água"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o COSTUME: voa, some na paisagem, e o olhar paralisa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o DROP: o coração é núcleo MÍTICO de Água",
+     "txt": "[4] → o DROP: o coração é núcleo MÍTICO de Água"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "IZ30": {
+   "id": "IZ30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "QUANTAS CRIAS A ISYZIS TEM DE VERDADE (a notícia do 430 chega EXAGERADA)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado em crias"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado em crias",
+     "txt": "[1] → o dado em crias"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "FA30": {
+   "id": "FA30",
+   "dia": 430,
+   "hora": "01:59:10",
+   "titulo": "O MONSTRO QUE CHEGOU A FARENTA (a notícia do 430 chega INCOMPLETA: falta qual e onde)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um BICHO NOVO (gerador monstro)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "o NAIEL desce a costa até Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a VATHEXA marca território perto de Farenta"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "um BICHO NOVO (gerador monstro)",
+     "txt": "[1] → um BICHO NOVO (gerador monstro)"
+    }
+   ],
+   "hora_rolado": "01:59:10"
+  },
+  "LB30": {
+   "id": "LB30",
+   "dia": 430,
+   "hora": "01:59:38",
+   "titulo": "A BARCA DA LIGA NO REMANSO (EN30 [5]): QUANTOS SE VEEM A BORDO, na tempestade, do outro lado da água",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "8 remadores e 4 guardas"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "12 remadores e 8 guardas"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "16 remadores, 8 guardas e um homem de capa que manda"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "16 remadores, 8 guardas e um homem de capa que manda",
+     "txt": "[5] → 16 remadores, 8 guardas e um homem de capa que manda"
+    }
+   ],
+   "hora_rolado": "01:59:38"
+  },
+  "LB30c": {
+   "id": "LB30c",
+   "dia": 430,
+   "hora": "01:59:38",
+   "titulo": "O QUE A BARCA DA LIGA LEVA RIO ACIMA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "sal e grão (o frete caro da Liga)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ARMAS (lanças e bestas em fardos)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "OURO e PAPÉIS da Liga"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "GENTE (presos amarrados no porão)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "OURO e PAPÉIS da Liga",
+     "txt": "[5] → OURO e PAPÉIS da Liga"
+    }
+   ],
+   "hora_rolado": "01:59:38"
   }
  }
 }

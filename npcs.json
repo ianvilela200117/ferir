@@ -138,7 +138,7 @@
  },
  "Herkald": {
   "nivel": 85,
-  "xp": 8465,
+  "xp": 10965,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: mestre da casa",
@@ -247,7 +247,8 @@
    "Dia 421: VOTO VENCIDO no conselho (OS CINCO AGENTES PRESOS (413: o carregador do cais, do Arden): queria B) TRABALHO FORÇADO (cinco anos; entram na conta da G",
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria C) DIVIDIR: o Fabaino na alfândega; a galé com a Elia",
    "+1000 Tick 427: MISSÃO/FEITO (mestre da bancada; o martinete)",
-   "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela"
+   "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
+   "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
@@ -287,7 +288,7 @@
     "ate": 490
    }
   ],
-  "votos_seguidos": 2
+  "votos_seguidos": 0
  },
  "Graur": {
   "nivel": 75,
@@ -693,12 +694,13 @@
    "Dia 421: VOTO VENCIDO no conselho (OS CINCO AGENTES PRESOS (413: o carregador do cais, do Arden): queria B) TRABALHO FORÇADO (cinco anos; entram na conta da G",
    "Dia 422: 422: os pedreiros do dique acharam, debaixo do bairro afogado, uma escada de pedra para um MERCADO VELHO (ERYSSA; a surpresa dela do 413); avisou o rei",
    "Dia 425: 425 noite: guarda o corpo da ISOLDA no sal da adega fria (o enterro do 426 vira vigília: o rei quer trazê-la de volta); desempatou as águas para o Fabaino (MA25)",
-   "+500 Tick 427: PASSO (o livro; os pilares; a caixa-forte)"
+   "+500 Tick 427: PASSO (o livro; os pilares; a caixa-forte)",
+   "Dia 428: VOTO VENCIDO no conselho (A TERRA DO PORTO DE MARASAR (do reino desde o 287): os FILHO): queria C) dividir: o porto mede e cada lado fica com metade"
   ],
   "classe": "Intendente (OURO, Comum) · HONESTA, AVARENTA, DILIGENTE",
   "ocupacao": "o livro; os pilares; a caixa-forte",
   "ultima_subida": 413,
-  "votos_vencidos": 13,
+  "votos_vencidos": 14,
   "tracos": [
    "HONESTO",
    "AVARENTO",
@@ -714,7 +716,7 @@
    }
   ],
   "lealdade": 5,
-  "votos_seguidos": 0
+  "votos_seguidos": 1
  },
  "Skedda": {
   "nivel": 53,
@@ -820,7 +822,7 @@
  },
  "Iorin": {
   "nivel": 61,
-  "xp": 4798,
+  "xp": 7298,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 155: chefe das bases",
@@ -942,7 +944,8 @@
    "+625 423 (noite): ajudaram no arado fundo",
    "+1875 425: o arado fundo Mítico",
    "+500 Tick 427: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
-   "Tick 427: SOBE a 61"
+   "Tick 427: SOBE a 61",
+   "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · Forja Iniciante→Treinado · ORGULHOSO, DILIGENTE, DESCONFIADO",
   "ocupacao": "ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa",
@@ -1656,7 +1659,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 2
+  "votos_seguidos": 0
  },
  "Ithra": {
   "nivel": 38,
@@ -1929,7 +1932,7 @@
  },
  "Tilde": {
   "nivel": 52,
-  "xp": 34743,
+  "xp": 37243,
   "classe": "a menina da casa (Ferir a ama como filha) · pratica a forja escondida",
   "ocupacao": "ajudante de Ferir na forja (sempre ao lado dele)",
   "log": [
@@ -2037,7 +2040,9 @@
    "+625 423 (noite): ajudaram no arado fundo",
    "+1875 425: o arado fundo Mítico",
    "+500 Tick 427: PASSO (ajudante de Ferir na forja (sempre ao lado dele))",
-   "Tick 427: SOBE a 52 (de 50: fila de XP)"
+   "Tick 427: SOBE a 52 (de 50: fila de XP)",
+   "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
+   "Dia 428: 428 (noite): o GIUNN, dos Jurados de Steunn, a convidou a ir a Steunn por vontade própria; ela perguntou por que as guildas a querem; depois ajudou na Couraça de Espinho do Moreth"
   ],
   "ultima_subida": 427,
   "tracos": [
@@ -2880,7 +2885,8 @@
    "+1220 425 (refeita): o Morek fugiu ferido",
    "+500 Tick 427: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "Tick 427: SOBE a 232",
-   "+6100 427: o Morek morto"
+   "+6100 427: o Morek morto",
+   "Dia 428: 428 (noite): recebe a COURAÇA DE ESPINHO (MÍTICA; Sob Medida 4, o nome dele gravado; usa inteira): escamas de ssythis, forro de sasis, rebites de zeieth, o NÚCLEO ÚNICO DE ESPINHO do Morek no peito · leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · DEFEITOS: floresce e pesa; atrai tempestade · o encanto fica para a próxima noite livre na Fornalha"
   ],
   "tracos": [
    "LEAL",
@@ -3897,7 +3903,7 @@
  },
  "Groa": {
   "nivel": 62,
-  "xp": 3125,
+  "xp": 5625,
   "classe": "ferreira refugiada de STEUNN · COVARDE e RELIGIOSA · desejo: voltar para casa · ambição (4): casar acima da sua classe · medo: a morte de um filho · segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato",
   "ocupacao": "ajudante na Fornalha (272; 20 por semana)",
   "log": [
@@ -3960,7 +3966,9 @@
    "+625 423 (noite): ajudaram no arado fundo",
    "+1875 425: o arado fundo Mítico",
    "+500 Tick 427: SURPRESA (gerador) (ajudante na Fornalha (272; 20 por semana))",
-   "Tick 427: SOBE a 62"
+   "Tick 427: SOBE a 62",
+   "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
+   "Dia 428: 428 (noite): um homem das GUILDAS DE STEUNN (o lado do Borecci) a procurou no portão da Fornalha antes da obra; ela empalideceu e falou baixo com ele; (OCULTO) ele cobra a promessa antiga: UMA MEDIDA OU UM DESENHO DA FORNALHA (GR28 [5], GR28b [4]); ajudou na Couraça mesmo assim"
   ],
   "ultima_subida": 427,
   "tracos": [
@@ -5038,7 +5046,8 @@
   "xp": 0,
   "log": [
    "Dia 428: entra no livro (nível 35)",
-   "Dia 428: 428: gerador npc: desejo mandar em alguém · ambição (4) conquistar terra · medo a morte de um filho · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca entrega um amigo à lei · dilema que vem: salvar um filho custa a vida de um estranho · veio com os Jurados à audiência do 428 e pediu para falar com a TILDE, não com o conselho (JS28 [6], novidade [3], JS28s [3])"
+   "Dia 428: 428: gerador npc: desejo mandar em alguém · ambição (4) conquistar terra · medo a morte de um filho · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca entrega um amigo à lei · dilema que vem: salvar um filho custa a vida de um estranho · veio com os Jurados à audiência do 428 e pediu para falar com a TILDE, não com o conselho (JS28 [6], novidade [3], JS28s [3])",
+   "Dia 428: 428 (noite): falou com a TILDE à vista do Herkald (4a): CONVIDOU-A a ir a Steunn por vontade própria (os clãs de cima a guardam e a estrada abre) (GI28b [4]); ela perguntou POR QUE as guildas a querem (TI28 [3])"
   ],
   "classe": "Jurado de Steunn (os clãs de cima)",
   "ocupacao": "em Ireviel com os Jurados de Steunn; procura a TILDE (428)",

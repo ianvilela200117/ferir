@@ -1,14 +1,20 @@
-# RETOMAR — noite do Dia 428, Ireviel (MOTOR 7.2 + G6)
+# RETOMAR — Dia 430, a lua nova, um remanso do rio a um dia de Ireviel (MOTOR 7.2 + G6 a G11)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: NOITE DO 428); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o entardecer do 428). O estado está em `estado_vivo.md` (bloco "NOITE DO 428, IREVIEL").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: DIA 430, o remanso); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o remanso do 430). O estado está em `estado_vivo.md` (bloco "DIA 430, A LUA NOVA, UM REMANSO").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Noite do 428 (29 da Lua da Forja de 1013), Ireviel, a Fornalha. Pressão 2/5. O tick do 428 e a auditoria do 428 JÁ RODARAM (tick_428.txt). O núcleo de Espinho e o zeieth estão na bigorna: a ARMADURA Mítica espera o nome do dono (a obra rola com o obra_valor.py, com o dono ao lado para o Sob Medida 4; o núcleo como no precedente do 278, matx; o dado decide se sai Mítica; depois o encanto, com a Visão do Tempo antes).
+Dia 430 (1 da Lua da Seca de 1013, LUA NOVA), um REMANSO do rio a um dia acima de Ireviel, na TEMPESTADE. Pressão 4/5. Os ticks 428, 429 e 430 JÁ RODARAM (tick_428/429/430.txt). A barca do rei (o rei, o Moreth com a COURAÇA DE ESPINHO, o Eiagrir, a Eliane e 10 da guarda) está amarrada; do outro lado da água, a BARCA DA LIGA (16 remadores, 8 guardas e um homem de capa; OCULTO: ouro e papéis da Liga, e a carta do Ceduion à Leliel). Levis no 435 (a tempestade e a cheia: +2 dias).
+- O que espera o rei e ainda não chegou a ele (Ireviel soube no 430; a barca rápida da Intendente sai no 431): a REVOLTA DE MARASAR (os Fiéis do Doge Velho, OCULTO até a notícia; chega EXAGERADA), o Ithvil quebrou ponte/estrada/mina em Levis, a Eloune atrai bichos (exagerada), os do Rio Vermelho venceram os Barqueiros do Livro, um bicho chegou a Farenta (incompleta; OCULTO: o SYESS), o Laennor (a toca: a escada de Quoium), o Thargos (o coração é núcleo Mítico de Água), a Lianniel no cais afundado, o Loula fora do portão (429).
+- A chegar a Ireviel no 431: a resposta da SKOTHA (agradece e PEDE O FACIO para julgar em Marasar); a Guilda e os do Croque de volta de Marasar (não chegaram ao Bruur: a revolta fechou o caminho); a PENA DA MAMILTIA (queimada, chama-a uma vez) com o mensageiro.
+- OCULTOS na agenda: 431 a Groa e o homem das guildas de Steunn (ele cobra uma medida ou um desenho da Fornalha) · 432 o Teraseth caça a Eloune sozinho · a Isyzis tem 1 cria (a notícia diz muitas).
+- PV do rei 236/402 (a noite do 428 sem cura: a forja; a do 429 na barca: +40). O Eiagrir sara da luta do Morek (~213/420 no 430, pela G4).
+
+Antes (a noite do 428, Ireviel):
 - O dia 428: o conselho deu teto e trabalho ao FACIO; os BARQUEIROS avisados se armam; o recado à SKOTHA chega a Marasar no 429 (rolar a resposta; e no 430 chega a notícia da cidade que se rebela em Marasar: o recado entra numa cidade em revolta); a SIRA tirou pouco do preso da Liga; a ELAEVA ferida (fiel); o TERASETH caça a Eloune SOZINHO (OCULTO: no 432, agenda #436); os DO CROQUE vêm à caçada do rei; o GIUNN dos Jurados quer a Tilde; a disputa da BRECHA; os 20 voluntários da LUZ DO CAIS; o sapato e o olho dos OLHOS PINTADOS no muro da casa.
 - O rio voltou a NORMAL: a barca a Levis sai no amanhecer do 429 e chega no 433 (rodar `viagem.py vai ... Levis saida=429 leva=...` na saída; a ISYZIS está no rio acima de Levis, no caminho).
 - A noite do 427 (antes): a ALIANÇA com a LURENTETTA (Mítica 774) aceita; o FACIO contou que os nomes do livro foram à LELIEL; o rei leu o núcleo de Espinho; nasceram os RENDIDOS DE MARASAR.
@@ -140,12 +146,18 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - CF28 o conselho: B (teto e trabalho; 3 a 3; a Intendente) · tick 428: Ireviel limpo depois da trovoada; o rio NORMAL; MUNDO [1] uma cidade se rebela em MARASAR (notícia no 430) · IR28 [3] · TR28 [6] → novidade [7] → TF28 [2] os DO CROQUE, TF28b [1] (o TR28b não vale) · JS28 [6] → novidade [3] → JS28s [3] o GIUNN (GI28 [4]: 35) · FB28 [6] → novidade [7] → FB28s [2] os DA BRECHA VELHA · LC28 [3], LC28n [4] = 20 · OP28 [4] · FE28 [1] · BL28 [3] · SR28 [1]+8 = 9 (o SR28b não vale) · (OCULTO) TE28 [4]: o Teraseth caça a Eloune no 432.
 - Auditoria do 428: o conferidor sem aviso novo de cânone (a linha 753 do diário é o contrato falso do Quthemnus; Hassa/Kassa e Neane/Yeane são gente diferente: marcados em conferidor_visto.txt) · os forçados seguem 87 (G6 vale) · o tick não grava tick_N.txt quando a saída vai para arquivo: o tick_428.txt foi copiado da saída inteira.
 
+## RESPONDIDO (428 noite → 430): verificar o nível do NPC · aumentar as defesas · 1a a armadura ao Moreth · 2a,c a Isyzis e o Bruur · depois de Levis, a Eloune · planos para os monstros · 3c · 4a · 5a
+- FORA DO JOGO: o Graur subiu certo (70→75; um por tick); a ficha de combate dele acertada (combate.py poe); o `cresce.py ver` quebrava com as 3 fichas sem nível (Girendino, Lile, Gicilla): corrigido para mostrar 0.
+- DEFESA: obra do reino 'a muralha do rio e as torres de vigia' (2.800 com a G6; pronta no 449; Defesa +1 de vez) · REGRA G11 escrita no protocolo (8 postos; despesa 8.100) · o plano no campanha_cacada.md.
+- BR28 o conselho: A, a terra aos Filhos da Brecha (5 a 1) · GI28b [4] o convite do Giunn · TI28 [3] a Tilde pergunta por quê · LC28v [4] os voluntários nível 10 a 20, na Guilda · GR28 [5] (a surpresa atrasada da GROA, novidade [10]) o homem das guildas de Steunn · (OCULTO) GR28b [4] uma medida ou um desenho da Fornalha (agenda 431).
+- OB428 (obras/couraca_espinho_moreth_428.txt): soma 114 · [9]+[1] → Mão que Não Treme, Alma Ouvida, Fortuna → 142 · TETO do núcleo Único: MÍTICA +1 efeito · XP 10.000 → FERIR 156 · ajudantes 2.500 (Tilde, Iorin, Herkald, Groa) · Fortuna 2/3, Revés 4/6.
+- 429: tick (Loula: LO29 [2] um coveiro fora do portão) · MR29 (OCULTO) [1] a revolta de Marasar é dos FIÉIS DO DOGE VELHO · SK29 [3] a Skotha pede o Facio · SB29 [5] a SOUANE pôs a BRARA sob a proteção dela, em praça, em Levis (a casa sabe quando o rei chegar a Levis) · as partidas (o viagem.py leu 6 dias a pé: corrigido para a barca) · a série de Farenta (Dinheiro +1 até o 480).
+- 430: tick em estrada · EN30 [5] a barca da Liga · LB30 [5] · (OCULTO) LB30c [5] ouro e papéis · LI30 [1] · MM30 [4] a pena da Mamiltia · GB30 [7]+2 = 9 · LN30 [1] · TH30 [4] · (OCULTO) IZ30 [1] · (OCULTO) FA30 [1] o SYESS (gerador; o nome Veyssa trocado) · FAÍSCA: o Ceduion vende à Leliel (a carta, oculta, nos papéis da barca).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A ARMADURA MÍTICA DE ESPINHO (com o zeieth; a forja é esta noite; o dado decide se sai Mítica): para quem? a) o MORETH (232; sem armadura registrada; usa inteira) · b) o próprio REI · c) o EIAGRIR ou a ELIANE (usariam como Lendária até o 140) · d) outro (diga quem).
-2. OS NÚCLEOS (o plano de caçada): a) a ISYZIS (Épica 95, Espinho, aquática), no rio acima de Levis, no caminho · b) adiar Levis e caçar a ELOUNE antes do Teraseth · c) a Guilda e os do Croque vão olhar o BRUUR, que dorme em Marasar (Épico de Terra, fraco a Vento) · d) outra (pode juntar).
-3. A AUDIÊNCIA DA BRECHA (terra no porto de Marasar): a) aos Filhos da Brecha · b) aos da Brecha Velha · c) conselho · d) outra.
-4. O GIUNN QUER FALAR COM A TILDE: a) que fale, à vista do Herkald · b) mandá-lo embora · c) a Sira o vigia · d) outra.
-5. OS 20 VOLUNTÁRIOS DA LUZ DO CAIS: a) aceitar, para a Guilda · b) aceitar, para a caçada do rei · c) agradecer e recusar · d) outra.
+1. A BARCA DA LIGA NO REMANSO (16 remadores, 8 guardas e um homem de capa; na tempestade, do outro lado da água): a) atacar já, na tempestade (abordar) · b) segui-la de longe quando a tempestade passar e ver para onde vai · c) deixá-la passar e mandar recado à Sira · d) outra.
+2. O PONTO DE HABILIDADE DO 156: a) GOLPE DE MESTRE 1 (+1 na Técnica da forja; no grau 4 a Técnica soma duas vezes) · b) SÉRIE DE MESTRE 2 (a forja grande faz um lote de 5 no tempo de 3) · c) OBRA-PRIMA 1 (1x por mês, um 20 natural na forja dá +1 efeito declarado antes) · d) guardar ou outro.
+3. A VIGIA (G11) custa 400 por semana (8 postos; a despesa sobe a 8.100; o cofre está em 13.948): a) manter os 8 · b) só os de perto de gente (a Eloune, o Bruur, o Naiel e o Laennor: 200) · c) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

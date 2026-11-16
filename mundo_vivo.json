@@ -531,7 +531,8 @@
     "399: [20] SURPRESA: gerador de novidade ligado a ele",
     "413: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
     "415: [19] manda caçar alguém (um nome, uma peça, um monstro)",
-    "427: [17] desafia alguém em público (duelo, debate, prova)"
+    "427: [17] desafia alguém em público (duelo, debate, prova)",
+    "429: [7] um segredo dele vaza (boato ou espionagem)"
    ],
    "obras_feitas": [
     "abrir um caminho além do mapa"
@@ -1047,6 +1048,14 @@
    "regiao": "Fundas do Norte",
    "estado": "ativo",
    "nota": "360: entra no mundo (pedido do jogador). Inseto do tamanho de uma colina, SOM; PV 139.800, Def 176, RD 100, at +166, 3d10×500; voa, devora metal, grito de medo, camuflagem, couraça, olhar paralisante; poder: o grito do metal (Vontade CD 50, 24 m, a cada 3 rodadas); fraqueza SILÊNCIO e luz do sol; COLMEIA: obedece a uma rainha (OCULTO: a Higrunn); sinal: cheiro de enxofre; drops gistald, zysris, siess, núcleo Primordial de Som. Saiu de Steunn andando; chega às Fundas ~367; a notícia chega no 362."
+  },
+  {
+   "nome": "Syess",
+   "cat": "Incomum",
+   "nivel": 18,
+   "regiao": "Farenta (a costa)",
+   "estado": "ativo",
+   "nota": "(OCULTO para a casa até ser visto) gerador monstro (430, FA30 [1]; o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108 · Defesa 18 · RD 1 · ataque +8 · 1 ataque · 1d10 × 1.5 · XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia), área 6 m, 1x a cada 3 rodadas; fraqueza FOME (dano dobrado, corta a regeneração) e um som (a descobrir); necrófago (segue batalhas e pestes); sinal: cheiro de enxofre; drops: erygal ×4 (Incomum, Elo: arma que corta laços) e thuvil ×4 (Incomum, Elo: +1 em Infusão e Encantamento)"
   }
  ],
  "povos": [
@@ -2234,7 +2243,8 @@
     "406: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "413: [1] RACHA: perde gente → força 2",
     "420: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
-    "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
+    "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "428 (noite): o CONSELHO deu a eles a terra do porto de Marasar (BR28: A, 5 a 1; vencida a Nouliel)"
    ]
   },
   {
@@ -2577,7 +2587,8 @@
    "o_que": "os que defenderam a brecha de Marasar pela Liga no 287 e perderam; a terra que os Filhos da Brecha pedem era deles; querem-na de volta",
    "estado": "viva",
    "log": [
-    "428: nasce da brecha de Marasar (287), na audiência dos Filhos da Brecha (gerador novidade [7]; FB28s [2])"
+    "428: nasce da brecha de Marasar (287), na audiência dos Filhos da Brecha (gerador novidade [7]; FB28s [2])",
+    "428 (noite): PERDERAM no conselho a terra do porto de Marasar para os Filhos da Brecha (BR28: A, 5 a 1)"
    ],
    "forca": 4,
    "relogio": [
@@ -3103,6 +3114,16 @@
    "drops": "escama SEZESS (Único, Raio + Sal; armadura: quem golpeia o portador leva 10) · glândula MEVOR (Único, Raio; ofício e poção: +5 em Processo, forja rápida) · presa ROGRA (Único, Raio; arma: +3d6 de raio que salta) · pelo SAOR (Único, Raio + Veneno; armadura: quem golpeia leva 10) · CORAÇÃO: NÚCLEO ÚNICO DE RAIO (serve de núcleo para Mítico)",
    "estado": "vivo",
    "notas": "o bicho que o BJORVUNN conhece (BJ26 [16], BJ26c [5]). Nomes dos drops trocados (gorine, erymir, gorek e lumade batiam no Gorine, no Erymir, em Gor- e em Lumade): sezess, mevor, rogra, saor."
+  },
+  {
+   "nome": "Syess",
+   "dia": "430",
+   "cat": "Incomum",
+   "nivel": "18",
+   "essencia": "Elo",
+   "onde": "a costa perto de Farenta",
+   "corpo": "inseto do tamanho de um cavalo",
+   "nota": "(OCULTO para a casa até ser visto) gerador monstro (430, FA30 [1]; o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108 · Defesa 18 · RD 1 · ataque +8 · 1 ataque · 1d10 × 1.5 · XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia), área 6 m, 1x a cada 3 rodadas; fraqueza FOME (dano dobrado, corta a regeneração) e um som (a descobrir); necrófago (segue batalhas e pestes); sinal: cheiro de enxofre; drops: erygal ×4 (Incomum, Elo: arma que corta laços) e thuvil ×4 (Incomum, Elo: +1 em Infusão e Encantamento)"
   }
  ],
  "notas_ocultas": [

@@ -62,7 +62,8 @@
      "essencia": "Fogo"
     }
    ],
-   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo)"
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura"
   },
   "Eiagrir": {
    "nome": "Eiagrir",
@@ -186,7 +187,7 @@
   },
   "Graur": {
    "nome": "Graur",
-   "nivel": 70,
+   "nivel": 75,
    "at": 24,
    "dado": "1d8",
    "mult": 2.5,
@@ -197,7 +198,7 @@
    "heroi": true,
    "vigor": 12,
    "imune_empurrao": true,
-   "nivel_ref": 70
+   "nivel_ref": 75
   },
   "Hruthos": {
    "nome": "Hruthos",

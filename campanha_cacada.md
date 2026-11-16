@@ -54,3 +54,18 @@ Só o que a CASA SABE (notícia, rumor exato, visto). O resto da ficha de cada b
 - 424 noite: o NEANE (Raro 62, Sombra), a complicação no rio: morto na 1ª rodada pelo rei, o Moreth e o Eiagrir. Despojos: 5 kg de draek, 1 de eryra, 1 porção de sangue de Sombra (o sysreth).
 - 425 amanhecer (a luta ANULADA no 426 por erro de ficha do Mestre; refeita): o MOREK FUGIU a 467/2440. O Starkald e o Goir morreram e o rei os ERGUEU dentro da hora; a Isolda grave.
 - LIÇÃO DO MESTRE (erro dito ao jogador): um Único não estava no 'dá para caçar já' para este grupo. A Defesa dele (69 com o +14) só cede a quem rola alto; a couraça come o fogo pequeno.
+
+## A VIGIA DO REINO (G11, desde o 428; 50 por semana por posto; a Intendente paga)
+| bicho | onde | o posto (quem vigia) | a caçada (quem, quando) |
+|---|---|---|---|
+| ELOUNE (Épica 136, Água) | os lodaçais de Ireviel | os pescadores do cais e a guarda da rua do rio (as torres a partir do 449) | o rei, DEPOIS DE LEVIS, se o Teraseth não a matar antes; a voz da cantora do templo a faz dormir |
+| ISYZIS (Épico 95, Espinho, aquático) | o rio acima de Levis | — (o rei caça no caminho, 429-433) | o rei, o Moreth, o Eiagrir, a Eliane, a caminho de Levis |
+| BRUUR (Épico 152, Terra) | Marasar | a Guilda e os do Croque (vão olhar, 429) | depois de olhado; dorme; fraco a Vento (a lança do rei) e a sal |
+| ITHVIL (Mítico 276, Fogo) | Levis | a Guilda dos Mineiros (o Gurka) | acima da casa: só vigiar |
+| KROTHOS (Lendário 295, Sombra) | Levis | a Guilda dos Mineiros | acima da casa: só vigiar |
+| LAENNOR (Raro 70) | as salinas velhas | a Guilda dos Salineiros do Delta | missão da Guilda: as lanças de selkos (dano dobrado, cortam a regeneração) |
+| BRAKOS (Raro 35, Vida) | o Delta | a célula do Delta | missão da Guilda (alguém já o caça, 428) |
+| NAIEL (Raro 67, veneno) | a costa do Porto de Marasar | a Luz do Cais | missão da Guilda |
+| VATHEXA (Lendária 262, Tempo) | a costa | a Luz do Cais | acima da casa: só vigiar |
+- 8 postos = 400 por semana (a despesa fixa passa de 7.700 a 8.100). O MIVOR é aliado: não é alvo nem tem posto.
+- A Guilda ganhou 20 voluntários da Luz do Cais (nível 10 a 20) no 428.

@@ -1,0 +1,43 @@
+[01:57:35] Dia 430 · Pressão 4/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  O TEMPO (1 da Lua da Seca de 1013 d.S., Sol) · LUA NOVA (a do nome do servo)
+   Ireviel: tempestade, VENTANIA (d6 [4] muda, d20 [20] · vento d6 [5]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   o Porto de Marasar: chuva de verão, vento firme (d6 [4] muda, d20 [16] · vento d6 [5]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Levis: tempestade, VENTANIA (d6 [5] muda, d20 [19] · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: calor forte, vento firme (d6 [6] muda, d20 [9] · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: cheio (correnteza forte: subir o rio custa o dobro) [65/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 447
+  FERIDO: Starkald (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA) até o Dia 435
+  FERIDO: Goir (FRACO: voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE) até o Dia 435
+  O MUNDO SE MOVE — Dia 430 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d27 [5] Farenta  ◆ TOCA A CASA
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 430
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Skotha Graskur → Lasca e Miro (presos) (RESSENTIMENTO) d20 [11] nada visível
+    FAÍSCA: Ardenghi salva Messer Rovai, por causa de a Fornalha que Não Apaga
+    FAÍSCA: Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301) ama em segredo Orast, por causa de um título
+    FAÍSCA: Souane acusa em público Qunemneth, o Médico Cinzento, por causa de sal
+  ▶ AGENDA #345 (era do Dia 429): FARENTA: os anzóis, as chumbadas e as âncoras ficam prontos (ferreiros de Farenta, G7): Dinheiro de Farenta +1 (mod, até o 480)
+  ▶ AGENDA #375: O MENSAGEIRO ALCANÇA A MAMILTIA na estrada de Steunn (MM25 [3]): o pedido de AJUDA contra o MOREK ferido; rolar a resposta
+  ▶ AGENDA #442: CHEGA a Marasar: o Tegre, 6 caçadores da Guilda e os do Croque (olhar o Bruur que dorme, G11) (saiu de Ireviel no 429)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Gorine (escondido (patrono da Lumine)): faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Eloune, a Mãe-Lodo (Épico, Ireviel e o rio): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [16] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, as SALINAS VELHAS ao sul): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [16] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Thargos (Mítico, as Fundas do Norte): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [20] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Varogh (Lendário, Steunn): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Isyzis (Épico, o rio acima de Levis): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os do Rio Vermelho (Ireviel e o rio): briga com os Barqueiros do Livro; vence os Barqueiros do Livro · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: GUERRA OU ESCARAMUÇA entre dois poderes: uma cidade se rebela — Marasar (a Liga e o Doge) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: MONSTRO NOVO OU MIGRAÇÃO — Farenta · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: LUGAR NOVO DESCOBERTO — Gogrunn (as minas) (Veyol) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Yirane, a Que Come a Pedra (Épico, as Montanhas de Fogo): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: Maneus, o Afogado do Vento (Lendário, o sul da areia): migra 1 região (rola para onde) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Asesra (Raro, Kremir): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: os Grukos (ogros) (a Mata de Elais): um Lendário, culto ou facção os contrata ou escraviza · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): assalta uma estrada ou aldeia (roubo, mortos) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: GUERRA OU ESCARAMUÇA entre dois poderes: monstros contra homens — o brejo do oeste (a Torre Afogada) · COMO CHEGA: d20 [18] FIEL

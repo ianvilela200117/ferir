@@ -80,3 +80,10 @@ Ninguém precisa me lembrar disto:
 - **O ERUDITO do rei** (talento do 120): 1 vez por sessão vira uma falha num fato verdadeiro que ele plausivelmente saberia.
 - **Pergunta FORA DO JOGO** (regras, código, scripts, como o jogo funciona, "você está rolando a pressão?"): resposta inteira e direta, sem dado.
 - O que o Mestre já procurou nos livros e é FATO DA FICHA (o que o rei tem, o que ele aprendeu) não se rola: o rei sabe o que está escrito que ele sabe (a G9).
+
+### G11 — A VIGIA DO REINO (pedido do jogador, Dia 428: "temos que traçar planos para os monstros no nosso reino, não quero eles atacando livre"; o jogador foi avisado)
+- **O PLANO:** todo monstro Épico ou maior nas terras do reino, e todo Raro que ameace gente, tem uma linha no `campanha_cacada.md`: quem VIGIA, quem CAÇA e em que ordem. A caçada planejada segue a G9.
+- **O POSTO DE VIGIA:** gente de olho no bicho (a Guilda, os do Croque, a Luz do Cais, os salineiros, os mineiros, os barqueiros, as torres). Custa **50 por semana por posto** (a Intendente paga, no livro). No máximo **1 posto por bicho**. As torres de vigia de Ireviel (obra, pronta no 449) valem um posto de graça no rio e na várzea de Ireviel.
+- **QUANDO O BICHO VIGIADO SE MEXE contra o reino** (o tick traz: caça perto do habitat, gado ou gente some, assalta estrada, destrói ponte ou mina, atrai monstros menores, cria, marca território, aparece de dia), o Mestre rola a vigia: `selo.py dr ID "a vigia de BICHO" d20+2 "1-7: não viu a tempo: o dano vem inteiro | 8-14: AVISO A TEMPO: gente abrigada e gado recolhido, o dano cai pela METADE | 15-21: o aviso e o LUGAR EXATO: o dano cai pela metade e a casa ganha um RUMOR EXATO (fraqueza, toca ou drop) | 22+: o bicho é PEGO NO LUGAR: abre caçada já, com SURPRESA na primeira rodada | 20n: SURPRESA (gerador novidade)"`.
+- **O canal (G8-B):** a notícia do bicho vigiado chega no mesmo dia, pelo posto. Bicho SEM posto age livre, como antes (o dado do tick inteiro, a notícia pelo caminho de sempre).
+- **Equilíbrio:** a vigia não mata nem afasta o bicho; ela tira a surpresa dele e dá à casa a hora e o lugar. Matar é a caçada.

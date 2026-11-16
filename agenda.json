@@ -1,5 +1,5 @@
 {
- "prox_id": 438,
+ "prox_id": 445,
  "itens": [
   {
    "id": 1,
@@ -6055,7 +6055,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6118,7 +6118,7 @@
    "oculto": false,
    "para": false,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6140,8 +6140,98 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 438,
+   "dia": 431,
+   "texto": "(OCULTO) A GROA E O HOMEM DAS GUILDAS DE STEUNN (GR28 [5], GR28b [4]: ele cobra UMA MEDIDA OU UM DESENHO DA FORNALHA): rolar se ela passa (COVARDE; deve a alguém perigoso; linha vermelha: nunca vende o ofício barato); se passar, entra nos infiltrados contra a contra-espionagem 35",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 439,
+   "dia": 430,
+   "texto": "GUERRA OU ESCARAMUÇA entre dois poderes: monstros contra homens — o brejo do oeste (a Torre Afogada)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 429",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 440,
+   "dia": 431,
+   "texto": "Xaysress (Kremir): um segredo dele vaza (boato ou espionagem)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 429",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 441,
+   "dia": 435,
+   "texto": "CHEGA a Levis: o rei, o Moreth, o Eiagrir, a Eliane e 10 da guarda (a barca da casa; caçar a Isyzis no caminho) (saiu de Ireviel no 429)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 442,
+   "dia": 430,
+   "texto": "CHEGA a Marasar: o Tegre, 6 caçadores da Guilda e os do Croque (olhar o Bruur que dorme, G11) (saiu de Ireviel no 429)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 443,
+   "dia": 437,
+   "texto": "A CAÇADA DA ELOUNE DEPOIS DE LEVIS (o jogador, 428: 'se a gente conseguir'): o rei volta de Levis (3 dias rio abaixo) e caça a Mãe-Lodo nos lodaçais com a cantora do templo (a voz a faz dormir) e os do Croque, se o Teraseth não a tiver matado; a data certa sai da volta",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true,
+   "aprox": true
+  },
+  {
+   "id": 444,
+   "dia": 430,
+   "texto": "MONSTRO NOVO OU MIGRAÇÃO — Farenta",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 430",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
   }
  ],
  "fios": [
@@ -6675,10 +6765,10 @@
   },
   {
    "id": 67,
-   "texto": "O NÚCLEO ÚNICO DE ESPINHO (o Morek, 427) na Fornalha: leva uma peça a MÍTICA sem ano de vida. O rei leu o que ele quer ser (427): não na arma de fogo (Espinho é oposto a Fogo; a Elaeva é de Espinho); rende numa ARMADURA ou numa FERRAMENTA; com o ZEIETH da casa, a Essência sobe um degrau.",
+   "texto": "428 (noite): a COURAÇA DE ESPINHO DO MORETH, MÍTICA (o teto do núcleo Único; o dado passou da CD Primordial: +1 efeito); o encanto fica para a próxima noite livre na Fornalha",
    "oculto": false,
    "aberto": 427,
-   "tocado": 427,
+   "tocado": 430,
    "fechado": false
   },
   {
@@ -6691,26 +6781,26 @@
   },
   {
    "id": 69,
-   "texto": "OS JURADOS DE STEUNN mandaram o GIUNN (35, curioso e ambicioso) à audiência do 428: ele pediu para falar com a TILDE, não com o conselho.",
+   "texto": "428 (noite): o Giunn falou com a Tilde à vista do Herkald: CONVIDOU-A a ir a Steunn por vontade própria (os clãs a guardam, a estrada abre); ela perguntou por que as guildas a querem",
    "oculto": false,
    "aberto": 428,
-   "tocado": 428,
+   "tocado": 430,
    "fechado": false
   },
   {
    "id": 70,
-   "texto": "A AUDIÊNCIA DA BRECHA (428): os FILHOS DA BRECHA pedem terra no porto de Marasar; os DA BRECHA VELHA (os que defenderam a brecha pela Liga no 287; hostis) dizem que a terra era deles. Falta a palavra do reino.",
+   "texto": "428 (noite): o conselho deu a terra aos FILHOS DA BRECHA (5 a 1; vencida a Nouliel); os da Brecha Velha perderam",
    "oculto": false,
    "aberto": 428,
-   "tocado": 428,
+   "tocado": 430,
    "fechado": false
   },
   {
    "id": 71,
-   "texto": "A LUZ DO CAIS oferece 20 VOLUNTÁRIOS para a caçada (gente do porto, nível baixo; 428). Falta a resposta.",
+   "texto": "428 (noite): ACEITOS: os 20 voluntários (nível 10 a 20) vão à Guilda",
    "oculto": false,
    "aberto": 428,
-   "tocado": 428,
+   "tocado": 430,
    "fechado": false
   },
   {
@@ -6719,6 +6809,22 @@
    "oculto": false,
    "aberto": 428,
    "tocado": 428,
+   "fechado": false
+  },
+  {
+   "id": 73,
+   "texto": "A BARCA DA LIGA NO REMANSO (430, a um dia acima de Ireviel, na tempestade): 16 remadores, 8 guardas e um homem de capa que manda; sobe o rio com frete.",
+   "oculto": false,
+   "aberto": 430,
+   "tocado": 430,
+   "fechado": false
+  },
+  {
+   "id": 74,
+   "texto": "O LOULA visto por um coveiro, à noite, fora do portão de Ireviel (429).",
+   "oculto": false,
+   "aberto": 430,
+   "tocado": 430,
    "fechado": false
   }
  ]
