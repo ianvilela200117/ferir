@@ -1050,3 +1050,10 @@ Na estalagem da estrada do sal, quatro guardas da Liga esperavam a carroça. Pux
 No cais, à luz de uma lanterna, o rei leu a carta cifrada do Colégio de Telosus. O reitor oferecia à Leliel, em troca do perdão do norte, o que o Colégio sabia da Floresta que Anda: o sal seca a raiz dela. E contava que quem a ferira nos Picos Brancos tinham sido os olhos da Mamiltia.
 
 - **Parada:** amanhecer do 434. Trinta e dois presos; o ouro e a barca do reino; o sal; Levis a meio dia.
+
+### A estrada do rio e Levis, 434
+Pela manhã a barca dos do Croque alcançou a do rei. O barqueiro de braço tatuado entregou um embrulho de couro molhado, e dentro estava o coração da Mãe-Lodo, ainda azul por dentro. O Teraseth a matara sozinho nos lodaçais, dois dias antes, e mandava dizer que era presente, pelo Croque do Rio.
+Mais acima, gente de Levis descia a estrada com trouxas nas costas: em Levis o pão estava caro, havia doença numa rua, e as ruas baixas gritavam contra a Brara.
+Ao entardecer, na praça, o rei sentou para julgar os da Liga. A Eliane mostrou a arca, a lista e o ouro; o velho da aldeia contou da bolsa oferecida; a carta lacrada passou de mão em mão sem que ninguém a abrisse. O capitão falou da paz de 336. Um dos remadores jurou que tinham sido alugados sem saber da carga e, na mesma frase, contou quantas vezes tinham subido o rio fechado. A praça riu dele e depois ficou quieta, esperando o rei.
+
+- **Parada:** noite do 434, a praça de Levis. A sentença; o pão e a doença; a Isyzis rio acima.

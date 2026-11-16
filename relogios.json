@@ -3,7 +3,7 @@
  "relogios": [
   {
    "nome": "a Leliel → forquilha",
-   "valor": 1,
+   "valor": 2,
    "max": 4,
    "oculto": false,
    "estado": "vivo",
@@ -31,7 +31,8 @@
     "413: [4] -3 = 1 nada (2/4)",
     "420: [3] -3 = 0 nada (2/4)",
     "427: [16] -3 = 13 nada (2/4)",
-    "433: -1 à mão (433: a surpresa boa da leitura da carta (o rei leu, extraordinário): a carta do Colégio de Telosus não chega à Leliel; o plano dela atrasa) → 1/4"
+    "433: -1 à mão (433: a surpresa boa da leitura da carta (o rei leu, extraordinário): a carta do Colégio de Telosus não chega à Leliel; o plano dela atrasa) → 1/4",
+    "434: [18] -3 = 15 anda 1 → 2/4"
    ]
   },
   {

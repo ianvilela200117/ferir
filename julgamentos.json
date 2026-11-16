@@ -130,6 +130,72 @@
     }
    ],
    "sentenca": "CULPADO: MORTE, ao amanhecer do 425, no pátio da guarda, pela palavra do rei"
+  },
+  "LV34": {
+   "id": "LV34",
+   "caso": "a barca da Liga no rio fechado: a paga da Liga aos Devolvidos e a carta à Leliel",
+   "acusador": "a coroa (o rei, pela lei do rio)",
+   "reu": "o capitão Yais (Liga, 90), 12 guardas, 16 remadores e 3 carroceiros",
+   "lei": "o rio fechado às barcas da Liga (255, 260); a paz com a Liga caída (339); a lei do 323: quem manda espião a Ireviel é inimigo declarado",
+   "dia": 434,
+   "estado": "aberto",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: a barca com a marca da Liga no rio fechado, subindo com frete"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: a arca da popa: a lista da paga da Liga aos Devolvidos, semana a semana"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "PROVA: a carroça com 5.500 em moeda de Marasar escondidos sob fardos de sal e grão"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "PROVA: o ouro oferecido ao rei para seguir (1.500), diante da aldeia"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "PROVA: a carta lacrada do Colégio de Telosus à Leliel, inimiga do reino (mostrada fechada; o que ela diz fica com o rei)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: a paz de 336, que deixava a barca da Liga passar com portagem (o capitão diz que pagava)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 2,
+     "txt": "PROVA: os 16 remadores e os 3 carroceiros são homens de aluguel do rio e da estrada, não da Liga"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "TESTEMUNHA a ELIANE, a Marechal (achou a arca debaixo da tábua da popa e tomou a carroça): d20 [11]+2 = 13 → fala firme"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "TESTEMUNHA o velho da aldeia (viu o capitão oferecer o ouro ao rei): d20 [10]+0 = 10 → fala firme"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "TESTEMUNHA o capitão YAIS (fala pela paz de 336 e pelos remadores): d20 [14]+0 = 14 → fala firme"
+    },
+    {
+     "lado": "defesa",
+     "peso": 0,
+     "txt": "TESTEMUNHA um REMADOR (diz que foram alugados no cais de Marasar, sem saber da carga): d20 [4]-2 = 2 → SE DESMENTE diante de todos"
+    }
+   ]
   }
  }
 }

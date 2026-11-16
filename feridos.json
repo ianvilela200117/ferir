@@ -5,8 +5,9 @@
    "grau": "GRAVE",
    "efeito": "não luta · MARCA: manca",
    "desde": 426,
-   "ate": 447,
-   "causa": "Morek"
+   "ate": 441,
+   "causa": "Morek",
+   "nota": "434 (G15, CURAR-SE): sara o dobro na semana: de 447 para 441"
   },
   {
    "nome": "Starkald",

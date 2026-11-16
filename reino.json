@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 427,
+  "dia": 434,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -32,7 +32,7 @@
    "o Clã Hegre": -2,
    "Steunn": -1,
    "os Do Junco (o Delta)": -2,
-   "a Escola Única (Almision)": 1,
+   "a Escola Única (Almision)": 2,
    "o Colégio": 4,
    "a Leliel (o Norte; a Liga é dela)": -5,
    "a Escola Única": -1
@@ -72,9 +72,10 @@
    "420: semana do reino; renda de fora do livro +2500",
    "423: legitimidade 8 → 9 (julgamento ES23: o Nivis culpado, trabalho forçado no dique)",
    "424: legitimidade 9 → 10 (julgamento EP24: os 7 de Eryssa à morte (a praça esperava))",
-   "427: semana do reino; renda de fora do livro +2050"
+   "427: semana do reino; renda de fora do livro +2050",
+   "434: semana do reino; renda de fora do livro +2600"
   ],
-  "ultima_semana": 427
+  "ultima_semana": 434
  },
  "cidades": [
   {
@@ -85,9 +86,9 @@
     "Comida": 3,
     "Comércio": 4,
     "Dinheiro": 4,
-    "Saúde": 3,
-    "Ordem": 3,
-    "Defesa": 1
+    "Saúde": 4,
+    "Ordem": 4,
+    "Defesa": 2
    },
    "mods": {
     "Comida": [
@@ -104,6 +105,10 @@
      [
       -1,
       "a festa da coroação já passou (era só da semana do 301)"
+     ],
+     [
+      -1,
+      "clima: 2 dias de tempestade (barco parado) (até o 440)"
      ]
     ],
     "Dinheiro": [
@@ -214,7 +219,8 @@
     "406: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 3 · Defesa 4 · evento [12]",
     "413: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [9]",
     "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 4 · Defesa 2 · evento [1]",
-    "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]"
+    "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]",
+    "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]"
    ],
    "obras_feitas": [
     {
@@ -236,12 +242,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 2,
+    "Comida": 3,
     "Comércio": 1,
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -256,10 +262,6 @@
      [
       1,
       "423: as duas barcas de grão de Ireviel, até o 436"
-     ],
-     [
-      -1,
-      "clima: 5 dias de tempestade (até o 433)"
      ]
     ],
     "Comércio": [
@@ -270,10 +272,6 @@
      [
       -1,
       "315: a ROTA DA COSTA fechada (os bichos que a Isessir junta), enquanto fechada"
-     ],
-     [
-      -1,
-      "clima: 5 dias de tempestade (barco parado) (até o 433)"
      ],
      [
       -1,
@@ -301,7 +299,7 @@
      ],
      [
       -1,
-      "pão caro: grão a 174 (até o 433)"
+      "pão caro: grão a 174 (até o 440)"
      ]
     ],
     "Defesa": [
@@ -338,7 +336,8 @@
     "406: Comida 3 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [20]",
     "413: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
     "420: Comida 1 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
-    "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]"
+    "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
+    "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]"
    ]
   },
   {
@@ -346,11 +345,11 @@
    "tipo": "cidade (tomada da Liga no 332; anexada pelo conselho)",
    "gente": 9000,
    "pilares": {
-    "Comida": 2,
-    "Comércio": 3,
+    "Comida": 1,
+    "Comércio": 4,
     "Dinheiro": 4,
-    "Saúde": 2,
-    "Ordem": 1,
+    "Saúde": 3,
+    "Ordem": 0,
     "Defesa": 4
    },
    "mods": {
@@ -430,7 +429,8 @@
     "406: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 1 · Ordem 2 · Defesa 3 · evento [14]",
     "413: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 1 · Ordem 2 · Defesa 3 · evento [7]",
     "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 2 · Defesa 4 · evento [17]",
-    "427: Comida 2 · Comércio 3 · Dinheiro 4 · Saúde 2 · Ordem 1 · Defesa 4 · evento [10]"
+    "427: Comida 2 · Comércio 3 · Dinheiro 4 · Saúde 2 · Ordem 1 · Defesa 4 · evento [10]",
+    "434: Comida 1 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 0 · Defesa 4 · evento [4]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -457,7 +457,7 @@
     "Comércio": 4,
     "Dinheiro": 3,
     "Saúde": 3,
-    "Ordem": 4,
+    "Ordem": 3,
     "Defesa": 4
    },
    "mods": {
@@ -486,7 +486,7 @@
     "Comida": [
      [
       -1,
-      "clima: 4 dias de tempestade (até o 433)"
+      "clima: 6 dias de calor forte, tempestade (até o 440)"
      ]
     ],
     "Saúde": [],
@@ -513,7 +513,8 @@
     "pilar Dinheiro → 2 (408: a alfândega e a casa de câmbio do porto ficaram prontas)",
     "413: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [20]",
     "420: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
-    "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]"
+    "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]",
+    "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

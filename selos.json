@@ -1,23 +1,5 @@
 {
  "ordem": [
-  "EB4",
-  "SB8",
-  "JE8",
-  "MI9",
-  "EL9",
-  "ENf9",
-  "EB5",
-  "EN10",
-  "BT10",
-  "EB6",
-  "SCr",
-  "SCp",
-  "CHr",
-  "CHm",
-  "RT11",
-  "EB7",
-  "EB8",
-  "EB9",
   "EB10",
   "EB11",
   "CRa",
@@ -399,877 +381,27 @@
   "LC35",
   "QB35",
   "FE35",
-  "QF35"
+  "QF35",
+  "434-laco-quem",
+  "434-laco",
+  "434-chamado",
+  "434-vinculos",
+  "EN34",
+  "VLA34",
+  "VBR34",
+  "VKR34",
+  "KRc34",
+  "ED34",
+  "MO34",
+  "CH34",
+  "MO34b",
+  "CH34n",
+  "MT34",
+  "LV31n",
+  "LV31m",
+  "LV31c"
  ],
  "selos": {
-  "EB4": {
-   "id": "EB4",
-   "dia": 408,
-   "hora": "15:17:23",
-   "titulo": "COMO A EMBOSCADA SABE QUANDO O REI SAI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um olho no PORTÃO DO NORTE (um carregador do cais) e pombo"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "alguém DE DENTRO da casa manda recado"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os dois"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "um olho no PORTÃO DO NORTE (um carregador do cais) e pombo",
-     "txt": "[3] → um olho no PORTÃO DO NORTE (um carregador do cais) e pombo"
-    }
-   ],
-   "hora_rolado": "15:17:23"
-  },
-  "SB8": {
-   "id": "SB8",
-   "dia": 408,
-   "hora": "15:17:33",
-   "titulo": "A SIRA ACHA A EMBOSCADA (dia 409; o rei mandou achar e matar; ela tem o agente que falou no 406 e a contra da casa, que fechou o Hiald no 407) · +8 a rede dela · −2 os Descalços têm rede forte (18) · −1 um dia só",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 10,
-     "res": "só a direção: a estrada do rio, para cima; não quantos nem onde"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "O LUGAR e mais ou menos QUANTOS"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 24,
-     "res": "o lugar, quantos, QUEM MANDA e onde está o ARDENGHI"
-    },
-    {
-     "tipo": "num",
-     "a": 25,
-     "b": 1000000,
-     "res": "tudo isso e COMO eles sabem quando o rei sai (e quem é)"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 9,
-     "res": "só a direção: a estrada do rio, para cima; não quantos nem onde",
-     "txt": "[4] +5 = 9 → só a direção: a estrada do rio, para cima; não quantos nem onde"
-    }
-   ],
-   "hora_rolado": "15:17:33"
-  },
-  "JE8": {
-   "id": "JE8",
-   "dia": 408,
-   "hora": "15:17:33",
-   "titulo": "OS JURADOS DE STEUNN SÃO ENROLADOS (dia 409; a palavra do rei: não agora, e a menina não vai; quem fala é o TOLVANE, Voz do Povo, o melhor da casa nisso; a Nouliel, honesta, fica calada) · +2 vieram pedir, não exigir · −2 os fornos param em duas semanas · −1 a resposta esconde um não",
-   "dado": [
-    1,
-    20,
-    -1
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 0,
-     "b": 5,
-     "res": "PERCEBEM: saem frios; Steunn −1; os Jurados se voltam para as guildas e o Borecci"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 12,
-     "res": "ACEITAM ESPERAR, mas só duas semanas (até o 423); depois voltam com o que tiver"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "ESPERAM, e pedem para vender minério pela CASA DOS MINEIROS de Levis enquanto isso (uma rota para o ferro dos clãs)"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "ESPERAM e dão uma coisa: o NOME de quem nas guildas empurrou a lei"
-    },
-    {
-     "tipo": "nat",
-     "a": 19,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 3,
-     "res": "PERCEBEM: saem frios; Steunn −1; os Jurados se voltam para as guildas e o Borecci",
-     "txt": "[4] -1 = 3 → PERCEBEM: saem frios; Steunn −1; os Jurados se voltam para as guildas e o Borecci"
-    }
-   ],
-   "hora_rolado": "15:17:33"
-  },
-  "MI9": {
-   "id": "MI9",
-   "dia": 409,
-   "hora": "15:17:51",
-   "titulo": "O MINÉRIO DA PRIMEIRA SEMANA da Casa dos Mineiros (G2: 2d6×10 kg de ferro; um quinto à forja)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "× 10 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4,
-      5
-     ],
-     "total": 9,
-     "res": "× 10 kg",
-     "txt": "[4, 5] +0 = 9 → × 10 kg"
-    }
-   ],
-   "hora_rolado": "15:17:52"
-  },
-  "EL9": {
-   "id": "EL9",
-   "dia": 409,
-   "hora": "15:17:52",
-   "titulo": "A ELOUNE, a Mãe-Lodo (Épica 136, Água; dorme no lodo da foz velha), muda de comportamento (notícia FIEL)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "MAIS MANSA: afunda no lodo e dorme"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "MAIS FAMINTA: sobe o rio baixo atrás de barcas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "MAIS FAMINTA: sobe o rio baixo atrás de barcas",
-     "txt": "[4] → MAIS FAMINTA: sobe o rio baixo atrás de barcas"
-    }
-   ],
-   "hora_rolado": "15:17:52"
-  },
-  "ENf9": {
-   "id": "ENf9",
-   "dia": 409,
-   "hora": "15:18:01",
-   "titulo": "O FEITIÇO que entra no GORJAL DA ISOLDA (Primordial; noite do 409, sobre o Berço; entre os de 6º círculo que o rei sabe; ela é FRIA, nível 114, e usa a peça como Lendária)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "TOQUE DO CEIFADOR"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "PRENDER A ALMA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "ERGUER O CAÍDO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MULTIDÃO MANSA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "TOQUE DO CEIFADOR",
-     "txt": "[1] → TOQUE DO CEIFADOR"
-    }
-   ],
-   "hora_rolado": "15:18:01"
-  },
-  "EB5": {
-   "id": "EB5",
-   "dia": 409,
-   "hora": "15:18:45",
-   "titulo": "O POMBO CHEGA AOS VAUS DE CIMA (manhã do 410: o olho do portão viu o rei sair para o norte com quatro, a cavalo, SEM CARROÇA, sem a Matriz) · o Shyssis quer a MATRIZ; o capitão do Ardenghi quer a CABEÇA DO REI (o preço do 289)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ARMAM PARA O REI assim mesmo: o preço da cabeça vale a emboscada"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "SEGURAM e mandam batedores ver se a Matriz vem escondida"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "RECUAM para Levis: sem a Matriz, a armadilha não serve"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "VIRAM PARA IREVIEL: com os fortes fora, a Matriz está mais perto em casa (chegam em um dia e meio)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "SEGURAM e mandam batedores ver se a Matriz vem escondida",
-     "txt": "[3] → SEGURAM e mandam batedores ver se a Matriz vem escondida"
-    }
-   ],
-   "hora_rolado": "15:18:45"
-  },
-  "EN10": {
-   "id": "EN10",
-   "dia": 410,
-   "hora": "15:19:07",
-   "titulo": "O ENCONTRO NA ESTRADA DO RIO (dia 410, o rei e os quatro a cavalo, rio acima; a tabela do Motor)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "bandidos"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "soldados sem soldo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "viajantes"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "refugiados"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "caçador de recompensa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "monstro do bioma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "bandidos",
-     "txt": "[1] → bandidos"
-    }
-   ],
-   "hora_rolado": "15:19:07"
-  },
-  "BT10": {
-   "id": "BT10",
-   "dia": 410,
-   "hora": "15:19:21",
-   "titulo": "QUEM VÊ QUEM PRIMEIRO (tarde do 410, a estrada do rio): os BANDIDOS do encontro são os BATEDORES do Shyssis, mandados ver se a Matriz vem escondida (EB5) · o grupo: a Percepção do rei (+9) e o faro do Eiagrir contra a furtividade dos descalços (+6): diferença +3 · o grupo vem a cavalo, sem esconder-se: −1",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 8,
-     "res": "os batedores veem o grupo e somem sem ser vistos: a emboscada sabe que a Matriz não vem"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "os dois lados se veem; os batedores fogem a pé pela ribanceira; o grupo vê PARA ONDE correm"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o grupo PEGA os batedores: dois vivos"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 22,
-     "res": "pega os dois, e um deles quer falar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 5,
-     "res": "os batedores veem o grupo e somem sem ser vistos: a emboscada sabe que a Matriz não vem",
-     "txt": "[3] +2 = 5 → os batedores veem o grupo e somem sem ser vistos: a emboscada sabe que a Matriz não vem"
-    }
-   ],
-   "hora_rolado": "15:19:21"
-  },
-  "EB6": {
-   "id": "EB6",
-   "dia": 410,
-   "hora": "15:19:32",
-   "titulo": "O QUE A EMBOSCADA FAZ, sabendo que o rei sobe o rio com QUATRO, a cavalo, SEM A MATRIZ (noite do 410) · o Shyssis quer a Matriz; o capitão do Ardenghi quer a cabeça do rei; são 50 · −1: os quatro são o Moreth, o Eiagrir, a Isolda e o Hruthos, e os descalços sabem quem são",
-   "dado": [
-    1,
-    6,
-    -1
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 0,
-     "b": 1,
-     "res": "ARMAM PARA O REI: o preço da cabeça vale a emboscada; esperam nos vaus"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "RECUAM para Levis, para o Ardenghi: sem a Matriz a armadilha não serve"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "RACHAM: o capitão e os pagos ficam nos vaus pelo rei; o Shyssis e os descalços descem pela outra margem para Ireviel, atrás da Matriz com os fortes fora"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 2,
-     "res": "RECUAM para Levis, para o Ardenghi: sem a Matriz a armadilha não serve",
-     "txt": "[3] -1 = 2 → RECUAM para Levis, para o Ardenghi: sem a Matriz a armadilha não serve"
-    }
-   ],
-   "hora_rolado": "15:19:32"
-  },
-  "SCr": {
-   "id": "SCr",
-   "dia": 411,
-   "hora": "15:20:01",
-   "titulo": "A ESCOLTA DOS SALINEIROS (a Eliane, nível 94, a Lança do Bren e 6 lanças; as Salinas Velhas: o Laennor, a Yiava desde o 404, os bandidos que tomaram as salinas) · +3 a Marechal e a lança que dobra no Laennor",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 7,
-     "res": "a YIAVA SOBE: 1d3 lanças caem, o salineiro ferido; a missão falha"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 15,
-     "res": "entregue depois de uma briga com os bandidos das salinas; uma lança ferida leve"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 1000000,
-     "res": "entregue limpo"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 11,
-     "res": "entregue depois de uma briga com os bandidos das salinas; uma lança ferida leve",
-     "txt": "[8] +3 = 11 → entregue depois de uma briga com os bandidos das salinas; uma lança ferida leve"
-    }
-   ],
-   "hora_rolado": "15:20:01"
-  },
-  "SCp": {
-   "id": "SCp",
-   "dia": 411,
-   "hora": "15:20:01",
-   "titulo": "A RECOMPENSA QUE NÃO EXISTE MAIS (SC7 [6]): por quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a GUILDA DOS SALINEIROS rachou (os 60 soltos pela Leliel) e a metade que prometeu os mil não tem os mil"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o mestre-salineiro não manda mais: a guilda o tirou enquanto ele viajava"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "as salinas mudaram de dono: quem paga agora são os bandidos"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a GUILDA DOS SALINEIROS rachou (os 60 soltos pela Leliel) e a metade que prometeu os mil não tem os mil",
-     "txt": "[3] → a GUILDA DOS SALINEIROS rachou (os 60 soltos pela Leliel) e a metade que prometeu os mil não tem os mil"
-    }
-   ],
-   "hora_rolado": "15:20:01"
-  },
-  "CHr": {
-   "id": "CHr",
-   "dia": 411,
-   "hora": "15:20:01",
-   "titulo": "O AVISO DA CHAMA DA HOSTE A FARENTA (o Draron e um capuz, 2 dias de costa; o Tirello governa Farenta)",
-   "dado": [
-    1,
-    20,
-    4
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 9,
-     "res": "o aviso chega tarde ou a quem não devia"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 1000000,
-     "res": "o aviso chega ao Tirello"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 16,
-     "res": "o aviso chega ao Tirello",
-     "txt": "[12] +4 = 16 → o aviso chega ao Tirello"
-    }
-   ],
-   "hora_rolado": "15:20:01"
-  },
-  "CHm": {
-   "id": "CHm",
-   "dia": 411,
-   "hora": "15:20:01",
-   "titulo": "O QUE A CHAMA DA HOSTE MENTE (CH7 [1])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o aviso é ISCA: querem que os Olhos Pintados se mexam em Farenta para pegá-los eles mesmos"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o aviso aponta a casa ERRADA: os Olhos Pintados já estão dentro da guarda de Farenta, e a Chama protege alguém"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a Chama é ligada aos Olhos Pintados: o aviso é um SINAL para eles"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o aviso é ISCA: querem que os Olhos Pintados se mexam em Farenta para pegá-los eles mesmos",
-     "txt": "[1] → o aviso é ISCA: querem que os Olhos Pintados se mexam em Farenta para pegá-los eles mesmos"
-    }
-   ],
-   "hora_rolado": "15:20:01"
-  },
-  "RT11": {
-   "id": "RT11",
-   "dia": 411,
-   "hora": "15:20:09",
-   "titulo": "O ACAMPAMENTO VAZIO NOS VAUS DE CIMA (meio-dia do 411): o que o grupo lê nos rastros · o melhor do grupo: o EIAGRIR (faro de caçador) e a Percepção do rei (+9) · a neblina não chegou aqui; o chão é cascalho de rio (rastro ruim)",
-   "dado": [
-    1,
-    20,
-    7
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 12,
-     "res": "um acampamento grande desfeito há MEIO DIA; muita gente; foram RIO ACIMA"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 19,
-     "res": "isso e QUANTOS (uns cinquenta) e que eram DOIS bandos (descalços a pé e soldados pagos, com cavalos)"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 26,
-     "res": "isso e O QUE ESQUECERAM: uma moeda com o selo P.A. e um bilhete de pombo: 'sem a pedra. Levis.'"
-    },
-    {
-     "tipo": "num",
-     "a": 27,
-     "b": 27,
-     "res": "tudo, e um homem deixado para trás, ferido, que fala"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 25,
-     "res": "isso e O QUE ESQUECERAM: uma moeda com o selo P.A. e um bilhete de pombo: 'sem a pedra. Levis.'",
-     "txt": "[18] +7 = 25 → isso e O QUE ESQUECERAM: uma moeda com o selo P.A. e um bilhete de pombo: 'sem a pedra. Levis.'"
-    }
-   ],
-   "hora_rolado": "15:20:09"
-  },
-  "EB7": {
-   "id": "EB7",
-   "dia": 411,
-   "hora": "21:05:50",
-   "titulo": "OS SOLDADOS A CAVALO DO CAPITÃO DO ARDENGHI (os 50 da emboscada recuando para Levis)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "FORAM NA FRENTE para Levis: os descalços ficam sozinhos, a pé"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "SEGUEM JUNTO, no passo dos descalços"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "SEGUEM JUNTO, no passo dos descalços",
-     "txt": "[5] → SEGUEM JUNTO, no passo dos descalços"
-    }
-   ],
-   "hora_rolado": "21:05:50"
-  },
-  "EB8": {
-   "id": "EB8",
-   "dia": 411,
-   "hora": "21:05:50",
-   "titulo": "QUANTOS DOS 50 SÃO DESCALÇOS A PÉ",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "25"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "30"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "35"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "35",
-     "txt": "[5] → 35"
-    }
-   ],
-   "hora_rolado": "21:05:50"
-  },
-  "EB9": {
-   "id": "EB9",
-   "dia": 411,
-   "hora": "21:05:50",
-   "titulo": "COMO O GRUPO DO REI OS ALCANÇA (manhã do 412, a estrada do rio, dia e meio acima dos vaus; eles sabem que o rei sobe o rio com quatro)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ELES VIRAM A POEIRA e armaram num aperto da estrada: batem primeiro (flechas e lâminas com a Gota de Amêndoa)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "alcançados na estrada, em marcha: luta de frente"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "alcançados no acampamento da madrugada, dormindo: o grupo bate primeiro"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "alcançados na estrada, em marcha: luta de frente",
-     "txt": "[3] → alcançados na estrada, em marcha: luta de frente"
-    }
-   ],
-   "hora_rolado": "21:05:50"
-  },
   "EB10": {
    "id": "EB10",
    "dia": 411,
@@ -19331,6 +18463,968 @@
     }
    ],
    "hora_rolado": "12:47:57"
+  },
+  "434-laco-quem": {
+   "id": "434-laco-quem",
+   "dia": 434,
+   "hora": "13:54:35",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a AELIAE",
+     "txt": "[6] → a AELIAE"
+    }
+   ],
+   "hora_rolado": "13:54:35"
+  },
+  "434-laco": {
+   "id": "434-laco",
+   "dia": 434,
+   "hora": "13:54:35",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "MOMENTO",
+     "txt": "[4] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "13:54:35"
+  },
+  "434-chamado": {
+   "id": "434-chamado",
+   "dia": 434,
+   "hora": "13:54:35",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 22,
+     "res": "chegam 2",
+     "txt": "[19] +3 = 22 → chegam 2"
+    }
+   ],
+   "hora_rolado": "13:54:35"
+  },
+  "434-vinculos": {
+   "id": "434-vinculos",
+   "dia": 434,
+   "hora": "13:54:35",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Krernos–Graur",
+     "txt": "#1 [4] → Krernos–Graur"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Moreth–Eiagrir",
+     "txt": "#2 [3] → Moreth–Eiagrir"
+    }
+   ],
+   "hora_rolado": "13:54:35"
+  },
+  "EN34": {
+   "id": "EN34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "O ENCONTRO NA ESTRADA DO RIO (434, a meio dia de Levis, com a barca da Liga tomada a reboque e os 32 presos)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "gente de LEVIS fugindo da cidade (a briga, a doença)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a barca dos DO CROQUE alcança a do rei (o recado do Teraseth)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "uma patrulha da BRARA vem ver quem traz tanta gente presa"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "gente de LEVIS fugindo da cidade (a briga, a doença)",
+     "txt": "[2] → gente de LEVIS fugindo da cidade (a briga, a doença)"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "VLA34": {
+   "id": "VLA34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "A VIGIA DO LAENNOR (G11; o posto dos salineiros; ele APARECE DE DIA nas salinas velhas, à vista de muitos)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viram a tempo: pânico nas salinas, um salineiro some"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: a gente sai da beira; sem perda"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO, e um RUMOR EXATO"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "pego NO LUGAR, parado: a casa sabe onde ele gira e quando"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      11
+     ],
+     "total": 13,
+     "res": "AVISO A TEMPO: a gente sai da beira; sem perda",
+     "txt": "[11] +2 = 13 → AVISO A TEMPO: a gente sai da beira; sem perda"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "VBR34": {
+   "id": "VBR34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "A VIGIA DO BRUUR (G11; o posto da Guilda e dos do Croque; ele APARECE DE DIA em Marasar, à vista de muitos, no meio da revolta)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viram a tempo: pânico; gente pisoteada na fuga"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: a gente se abriga; sem perda"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO, e um RUMOR EXATO"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "pego NO LUGAR, de dia, parado: a casa sabe onde ele dorme"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      12
+     ],
+     "total": 14,
+     "res": "AVISO A TEMPO: a gente se abriga; sem perda",
+     "txt": "[12] +2 = 14 → AVISO A TEMPO: a gente se abriga; sem perda"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "VKR34": {
+   "id": "VKR34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "A VIGIA DO KROTHOS (G11; o posto dos mineiros de Levis; ele CRIA: aparecem crias perto do habitat)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viram a tempo: as crias saem pelas minas de baixo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: os mineiros fecham as galerias; sem perda"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO das crias, e um RUMOR EXATO"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "as crias PEGAS NO LUGAR: a Guilda dos Mineiros as encurrala"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      9
+     ],
+     "total": 11,
+     "res": "AVISO A TEMPO: os mineiros fecham as galerias; sem perda",
+     "txt": "[9] +2 = 11 → AVISO A TEMPO: os mineiros fecham as galerias; sem perda"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "KRc34": {
+   "id": "KRc34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "QUANTAS CRIAS O KROTHOS FEZ (a notícia chega EXAGERADA)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado em crias"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado em crias",
+     "txt": "[1] → o dado em crias"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "ED34": {
+   "id": "ED34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "O SEGREDO QUE A CÉLULA DO DELTA ACHOU (espionagem 40 × 28: plano de facção, Lendário ou vilão da região)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a OBRA DA SOUANE: ela compra o sal e o grão do Delta inteiro"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a ALTHELTIA (a Lendária do ofício no Delta): o que ela quer"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "os DO JUNCO: o que tramam contra a casa"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a LURENTETTA: a doença que ela esconde"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor",
+     "txt": "[4] → o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "MO34": {
+   "id": "MO34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "OS OLHOS DA MAMILTIA VOLTAM DE ZISRIR (a missão: QUEM ACORDOU A ELAEVA; o rei deu o nome, o ADUREL; o Celocus desabou a boca da passagem no 416; no caminho eles feriram a Elaeva no 428)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a PROVA: o Adurel abriu a passagem e acordou a fera (a Mamiltia paga o resto: 3.000 XP, 1.500 e a coisa oculta; e vai atrás do Adurel)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "a passagem DESABADA: a prova pela metade (ela paga metade do resto)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a prova aponta OUTRO, não o Adurel (rola quem)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a prova aponta OUTRO, não o Adurel (rola quem)",
+     "txt": "[6] → a prova aponta OUTRO, não o Adurel (rola quem)"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "CH34": {
+   "id": "CH34",
+   "dia": 434,
+   "hora": "13:56:10",
+   "titulo": "QUEM CHEGA À CASA PELO CHAMADO (434: chegam 2; G3: cada um pede uma peça da forja, Rara ou melhor, no lugar de soldo, dentro de uma lua): O NÍVEL DE CADA UM",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 30 a 50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 50 a 80"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 80 a 110"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 110 a 140"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nível 30 a 50",
+     "txt": "#1 [2] → nível 30 a 50"
+    },
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nível 30 a 50",
+     "txt": "#2 [2] → nível 30 a 50"
+    }
+   ],
+   "hora_rolado": "13:56:10"
+  },
+  "MO34b": {
+   "id": "MO34b",
+   "dia": 434,
+   "hora": "13:56:29",
+   "titulo": "(OCULTO) A QUEM A PROVA DOS OLHOS DA MAMILTIA APONTA: QUEM ACORDOU A ELAEVA SOBRE TELOSUS (não o Adurel)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o CELOCUS (desabou a boca da passagem no 416 para apagar o rastro)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o CEDUION (o Colégio de Telosus sabe demais da fera)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)",
+     "txt": "[2] → a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)"
+    }
+   ],
+   "hora_rolado": "13:56:29"
+  },
+  "CH34n": {
+   "id": "CH34n",
+   "dia": 434,
+   "hora": "13:56:52",
+   "titulo": "O NÍVEL EXATO DOS DOIS DO CHAMADO (30 a 50: 30 + d20)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "30 + o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "30 + o dado",
+     "txt": "#1 [1] → 30 + o dado"
+    },
+    {
+     "dados": [
+      16
+     ],
+     "total": 16,
+     "res": "30 + o dado",
+     "txt": "#2 [16] → 30 + o dado"
+    }
+   ],
+   "hora_rolado": "13:56:52"
+  },
+  "MT34": {
+   "id": "MT34",
+   "dia": 434,
+   "hora": "13:57:44",
+   "titulo": "DE QUE É A BRIGA EM LEVIS (o reino do 434: Ordem 1 → 0, 'briga ou motim'; Comida 1 e surto de doença; gente fugindo pela estrada do rio)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o CULTO DO XAATHIS agita as minas de baixo (o fim das dívidas; a Liga paga o culto)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BIGORNA LIVRE contra a Guilda (a briga do 245, que espera audiência desde o 414)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)",
+     "txt": "[1] → o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)"
+    }
+   ],
+   "hora_rolado": "13:57:44"
+  },
+  "LV31n": {
+   "id": "LV31n",
+   "dia": 434,
+   "hora": "13:57:44",
+   "titulo": "QUEM LUCROU COM A FROTA PERDIDA DE LEVIS (o mundo do 431, LV31 [6] → novidade [9]: um NPC antigo volta mudado)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o THUGEK (entregue à justiça de Levis no 304)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a CAREA (a mestra da Guilda de Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o GUNDALD (que guardava o Drassa no 415)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o OUVALD (o físico)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o ODRUM (fala pelos da Mina Fechada)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o GURKA (o mestre da Guilda dos Mineiros)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o ODRUM (fala pelos da Mina Fechada)",
+     "txt": "[5] → o ODRUM (fala pelos da Mina Fechada)"
+    }
+   ],
+   "hora_rolado": "13:57:44"
+  },
+  "LV31m": {
+   "id": "LV31m",
+   "dia": 434,
+   "hora": "13:57:44",
+   "titulo": "COMO ELE VOLTA MUDADO",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "SUBIU: rico, com o ferro e o grão que a correnteza deu"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "CAIU: pobre ou caçado (os que perderam tudo o culpam)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "CASOU ou se juntou a alguém (rola com quem depois)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "PERDEU ALGUÉM no rio e vem por causa disso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "CASOU ou se juntou a alguém (rola com quem depois)",
+     "txt": "[3] → CASOU ou se juntou a alguém (rola com quem depois)"
+    }
+   ],
+   "hora_rolado": "13:57:44"
+  },
+  "LV31c": {
+   "id": "LV31c",
+   "dia": 434,
+   "hora": "13:57:59",
+   "titulo": "COM QUEM O ODRUM SE JUNTOU (ele lucrou com o ferro e o grão da frota perdida de Levis)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "com os da MOEDA VELHA, que viram sócios dele no que o rio deu"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CASOU com a viúva de um barqueiro afogado na frota"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "com o CULTO DO XAATHIS (o fim das dívidas)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "com uma guilda do mundo: as MÃOS DE BREU, que querem o rio"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "com os da MOEDA VELHA, que viram sócios dele no que o rio deu",
+     "txt": "[2] → com os da MOEDA VELHA, que viram sócios dele no que o rio deu"
+    }
+   ],
+   "hora_rolado": "13:57:59"
   }
  }
 }

@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 20248,
+ "cofre": 18578,
  "livro": {
   "renda_casa": 3960,
   "despesa": 8230,
-  "ultima_semana": 427,
+  "ultima_semana": 434,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -285,6 +285,12 @@
    "valor": 5500,
    "motivo": "433: CONFISCO pela lei do rio (a barca da Liga sem direito ao rio): a paga da Liga aos Devolvidos, 11 × 500 em moeda de Marasar, tomada na estalagem da estrada do sal (o ouro vai com o rei até a Intendente)",
    "saldo": 20248
+  },
+  {
+   "dia": 434,
+   "valor": -1670,
+   "motivo": "semana: casa 3960 + cidades 2600 − despesa 8230",
+   "saldo": 18578
   }
  ],
  "materiais": {
@@ -320,11 +326,12 @@
    ]
   },
   "shasha": {
-   "kg": 3.0,
+   "kg": 4.0,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
-    "Dia 420: +1 420: o quilo da Doge (tratado)"
+    "Dia 420: +1 420: o quilo da Doge (tratado)",
+    "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)"
    ]
   },
   "zezha": {
@@ -417,6 +424,12 @@
    "log": [
     "Dia 427: +1 427: o CORAÇÃO DO MOREK (núcleo Único de Espinho; serve de núcleo para Mítico)",
     "Dia 428: -1 428: no peito da Couraça de Espinho do Moreth"
+   ]
+  },
+  "núcleo-épico-de-água": {
+   "kg": 1.0,
+   "log": [
+    "Dia 434: +1 434: o CORAÇÃO DA ELOUNE (núcleo Épico de Água), PRESENTE do Teraseth pelo Croque do Rio (TE32p [6]); trazido pela barca dos do Croque"
    ]
   }
  },
