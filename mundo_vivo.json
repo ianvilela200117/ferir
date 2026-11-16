@@ -204,7 +204,8 @@
     "371: [5] viaja: aparece num lugar onde não era esperado",
     "399: [5] viaja: aparece num lugar onde não era esperado",
     "425: [2] compra, toma ou destrói algo de valor ligado à Obra",
-    "427: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
+    "427: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga"
    ],
    "prox": 455
   },
@@ -839,7 +840,7 @@
    "nivel": 376,
    "regiao": "os Picos Brancos",
    "estado": "ativo",
-   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252)",
+   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4])",
    "pv_atual": 28793,
    "nota_383": "ferida pelo cerco de Farenta (382-387): 28.793 de 37.600; foi para os Picos Brancos"
   },
@@ -3240,7 +3241,8 @@
   "334: o veredito do conselho de Ireviel: MORTE para o conselho duro da Liga (espera o rei).",
   "335: o ERYMIR é olho da MAMILTIA (a Almision não sabe).",
   "335: os restos da Liga (Farenta e o norte) pedem os corpos e a paz com portagem.",
-  "336: PAZ com a Liga (portagem). O Erymir exposto: olho da Mamiltia (agora a casa sabe)."
+  "336: PAZ com a Liga (portagem). O Erymir exposto: olho da Mamiltia (agora a casa sabe).",
+  "433: a carta do Ceduion NÃO chegou à Leliel; se houver cópia, não se sabe (o Mestre rola se a Liga mandou outra quando a notícia da barca tomada chegar ao norte)"
  ],
  "viloes": [
   {

@@ -1,17 +1,5 @@
 {
  "ordem": [
-  "VTf7",
-  "JU7",
-  "HIc7",
-  "OBm7",
-  "MVa7",
-  "FIs7",
-  "JUq7",
-  "MN408",
-  "ENf8",
-  "EB1",
-  "EB2",
-  "EB3",
   "EB4",
   "SB8",
   "JE8",
@@ -399,579 +387,21 @@
   "CA34",
   "PP34",
   "FC34",
-  "LP34"
+  "LP34",
+  "AR35",
+  "PG35",
+  "CT35",
+  "OU35",
+  "LT35",
+  "AR35b",
+  "CR35",
+  "CR35l",
+  "LC35",
+  "QB35",
+  "FE35",
+  "QF35"
  ],
  "selos": {
-  "VTf7": {
-   "id": "VTf7",
-   "dia": 407,
-   "hora": "14:23:14",
-   "titulo": "QUANTAS LANÇAS A CRIA FERE (e como: mordida de gelo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "UMA, ferida leve (volta em 3 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "DUAS, feridas leves (3 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "TRÊS, feridas leves"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "UMA, ferida GRAVE (a mão congelada: 2 semanas e Medicina)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "UMA, ferida leve (volta em 3 dias)",
-     "txt": "[1] → UMA, ferida leve (volta em 3 dias)"
-    }
-   ],
-   "hora_rolado": "14:23:14"
-  },
-  "JU7": {
-   "id": "JU7",
-   "dia": 407,
-   "hora": "14:23:33",
-   "titulo": "O QUE A INTENDENTE FEZ COM OS JURADOS DE STEUNN (bateram de manhã, o rei fora; ela governa; HONESTA, AVARENTA, DILIGENTE)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "marcou a audiência para o 408, com o rei à mesa; estão alojados na estalagem do cais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ouviu ela mesma, sem prometer nada, e anotou o pedido"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "mandou esperar fora dos muros até o rei voltar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "marcou a audiência para o 408, com o rei à mesa; estão alojados na estalagem do cais",
-     "txt": "[4] → marcou a audiência para o 408, com o rei à mesa; estão alojados na estalagem do cais"
-    }
-   ],
-   "hora_rolado": "14:23:33"
-  },
-  "HIc7": {
-   "id": "HIc7",
-   "dia": 407,
-   "hora": "14:45:40",
-   "titulo": "O REI FALA COM O HIALD (noite do 407, na forja grande, a sós; o rei diz o que sabe: que ele é do Borecci e veio pela menina) · +4: HONESTO, não sabe mentir · +2: o rei já sabe de quem ele é · −2: VINGATIVO; deve ao Borecci",
-   "dado": [
-    1,
-    20,
-    4
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 8,
-     "res": "CALA: 'não minto ao senhor; então não falo'"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "CONTA A ORDEM: levar a menina VIVA a Steunn; o porquê ele não diz"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "CONTA TUDO: a ordem, o que o Borecci quer com ela, e que não ergueria a mão contra uma criança"
-    },
-    {
-     "tipo": "num",
-     "a": 21,
-     "b": 1000000,
-     "res": "conta tudo e PEDE PARA FICAR: prefere a forja do rei à paga do Borecci"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      14
-     ],
-     "total": 18,
-     "res": "CONTA TUDO: a ordem, o que o Borecci quer com ela, e que não ergueria a mão contra uma criança",
-     "txt": "[14] +4 = 18 → CONTA TUDO: a ordem, o que o Borecci quer com ela, e que não ergueria a mão contra uma criança"
-    }
-   ],
-   "hora_rolado": "14:45:40"
-  },
-  "OBm7": {
-   "id": "OBm7",
-   "dia": 407,
-   "hora": "14:46:27",
-   "titulo": "A MAGIA DO BERÇO DE SELO, de novo: a Alma de Brasa é FOGO e a peça tem coração de GELO (Essências opostas): não cabe; rerrola no mesmo grimório (os 182 feitiços até o 6º círculo, na ordem do feiticos.py)",
-   "dado": [
-    1,
-    182,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 182,
-     "res": "o feitiço desse número na lista"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      94
-     ],
-     "total": 94,
-     "res": "o feitiço desse número na lista",
-     "txt": "[94] → o feitiço desse número na lista"
-    }
-   ],
-   "hora_rolado": "14:46:27"
-  },
-  "MVa7": {
-   "id": "MVa7",
-   "dia": 408,
-   "hora": "14:47:46",
-   "titulo": "O MIVOR E A OFERTA DE ALIANÇA (amanhecer do 408, a curva do leito; o rei em pessoa entrega os dois sacos de sal e pergunta se ele quer CONTINUAR com a cidade: alimentado e bem cuidado) · +2: pagou no prazo e em pessoa · +2: comida e cuidado sem pedir mais nada · −3: fera Épica; o leito seco acaba com a chuva; 'sempre' não é palavra dela",
-   "dado": [
-    1,
-    20,
-    1
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "RECUSA o depois: guarda enquanto o leito estiver seco e o sal vier; com a chuva, desce"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 13,
-     "res": "NEM SIM NEM NÃO: fica enquanto o sal vier, e diz o que lhe falta para ficar depois da chuva: um LUGAR de pedra seco e fundo"
-    },
-    {
-     "tipo": "num",
-     "a": 14,
-     "b": 18,
-     "res": "ACEITA ficar depois da chuva se a cidade lhe der esse LEITO de pedra e o sal; guarda o que pisa em volta dele"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 1000000,
-     "res": "ACEITA, e paga de volta: diz uma coisa VERDADEIRA que sente debaixo da cidade"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      15
-     ],
-     "total": 16,
-     "res": "ACEITA ficar depois da chuva se a cidade lhe der esse LEITO de pedra e o sal; guarda o que pisa em volta dele",
-     "txt": "[15] +1 = 16 → ACEITA ficar depois da chuva se a cidade lhe der esse LEITO de pedra e o sal; guarda o que pisa em volta dele"
-    }
-   ],
-   "hora_rolado": "14:47:46"
-  },
-  "FIs7": {
-   "id": "FIs7",
-   "dia": 408,
-   "hora": "14:47:46",
-   "titulo": "O QUE OS FIÉIS DO DOGE VELHO FIZERAM EM MARASAR na noite do 407 (sabotagem pequena, visível; a notícia chega no 408)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "cortaram a amarra da barca da casa no cais; achada à deriva de manhã, sem perda"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "fogo num fardo do armazém da casa: perde-se o quilo de shasha da semana"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "pintaram o rosto do Doge velho na porta do armazém e quebraram o braço do vigia"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "furaram os barris de óleo do cais da casa: 100 de prejuízo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "fogo num fardo do armazém da casa: perde-se o quilo de shasha da semana",
-     "txt": "[4] → fogo num fardo do armazém da casa: perde-se o quilo de shasha da semana"
-    }
-   ],
-   "hora_rolado": "14:47:46"
-  },
-  "JUq7": {
-   "id": "JUq7",
-   "dia": 408,
-   "hora": "14:47:46",
-   "titulo": "O QUE OS JURADOS DE STEUNN PEDEM ao rei e ao conselho (os clãs de cima juram pelo herdeiro perdido dos Steunn; já pediram vingança pelo velho morto pelo Clã)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ARMAS: uma série da forja do rei para os clãs de cima, paga em minério e juramento"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "RECONHECIMENTO: que o rei de Ireviel reconheça em público o herdeiro perdido, que eles dizem ter achado"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "VINGANÇA: que o rei rompa com o Clã Hegre e entregue quem matou o velho"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ABRIGO: que Ireviel esconda o herdeiro dentro dos muros"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "14:47:47"
-  },
-  "MN408": {
-   "id": "MN408",
-   "dia": 408,
-   "hora": "15:04:28",
-   "titulo": "O CONSELHO VOTA: SONDAGEM (sem valor de lei): o conselho acha POSSÍVEL Ireviel ficar com as minas dos clãs de cima de Steunn?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) NÃO AGORA: longe demais, com a Leliel, o Ardenghi e o Salvio em aberto · placar A 3 · B 1 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Sira, Herkald, Thuron, Graur",
-     "txt": "VENCE C) NÃO AGORA: longe demais, com a Leliel, o Ardenghi e o Salvio em aberto · placar A 3 · B 1 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Sira, Herkald, Thuron, Graur"
-    }
-   ]
-  },
-  "ENf8": {
-   "id": "ENf8",
-   "dia": 408,
-   "hora": "15:04:36",
-   "titulo": "O FEITIÇO que entra no FOCO DE OSSO (noite do 408, sobre o Berço de Selo; entre os de 6º círculo que o rei sabe; o que não couber no foco rerrola)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "TOQUE DO CEIFADOR (Osso 6º: 24d6; quem cai levanta como servo)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "PRENDER A ALMA (Osso 6º)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "ERGUER O CAÍDO (Luz 6º: devolve à vida quem morreu há até 1 hora)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MULTIDÃO MANSA (Mente 6º: acalma uma multidão de até mil)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "TOQUE DO CEIFADOR (Osso 6º: 24d6; quem cai levanta como servo)",
-     "txt": "[1] → TOQUE DO CEIFADOR (Osso 6º: 24d6; quem cai levanta como servo)"
-    }
-   ],
-   "hora_rolado": "15:04:36"
-  },
-  "EB1": {
-   "id": "EB1",
-   "dia": 408,
-   "hora": "15:17:23",
-   "titulo": "ONDE A EMBOSCADA DOS DESCALÇOS ESPERA na estrada de Lumade (esperam o rei sair com a Matriz)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "nos VAUS DE CIMA, a um dia e meio de Ireviel, onde a estrada do rio aperta entre o leito seco e a ribanceira"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "no VAU DE LEVIS, onde a estrada larga o rio, a 5 dias"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "além de Levis, nas COLINAS antes de Lumgal, a 8 dias"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nos VAUS DE CIMA, a um dia e meio de Ireviel, onde a estrada do rio aperta entre o leito seco e a ribanceira",
-     "txt": "[2] → nos VAUS DE CIMA, a um dia e meio de Ireviel, onde a estrada do rio aperta entre o leito seco e a ribanceira"
-    }
-   ],
-   "hora_rolado": "15:17:23"
-  },
-  "EB2": {
-   "id": "EB2",
-   "dia": 408,
-   "hora": "15:17:23",
-   "titulo": "QUANTOS SÃO E QUEM MANDA na emboscada",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "30 (descalços e pagos), com o SHYSSIS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "50, o Shyssis e um capitão pago do Ardenghi"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "70, com um MAGO pago pelo Ardenghi"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "50, o Shyssis e um capitão pago do Ardenghi",
-     "txt": "[4] → 50, o Shyssis e um capitão pago do Ardenghi"
-    }
-   ],
-   "hora_rolado": "15:17:23"
-  },
-  "EB3": {
-   "id": "EB3",
-   "dia": 408,
-   "hora": "15:17:23",
-   "titulo": "ONDE ESTÁ O PRÓPRIO ARDENGHI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "COM A EMBOSCADA, para ver a Matriz com os próprios olhos"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "em LEVIS (o dinheiro dele paga o culto do Xaathis ali)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "em LUMADE"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "em LEVIS (o dinheiro dele paga o culto do Xaathis ali)",
-     "txt": "[4] → em LEVIS (o dinheiro dele paga o culto do Xaathis ali)"
-    }
-   ],
-   "hora_rolado": "15:17:23"
-  },
   "EB4": {
    "id": "EB4",
    "dia": 408,
@@ -19366,6 +18796,541 @@
     }
    ],
    "hora_rolado": "12:38:02"
+  },
+  "AR35": {
+   "id": "AR35",
+   "dia": 433,
+   "hora": "12:47:05",
+   "titulo": "QUANDO O REI MANDA PRENDER (a guarda do rei com o Moreth, o Eiagrir e a Eliane no cais; o capitão Yais, 90, LEAL e CRUEL; 8 guardas e 16 remadores da Liga)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "RENDEM-SE: o capitão manda baixar as armas"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "os 8 GUARDAS da Liga resistem; o capitão e os remadores não"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o capitão tenta FUGIR pela água, de noite"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "RENDEM-SE: o capitão manda baixar as armas",
+     "txt": "[1] → RENDEM-SE: o capitão manda baixar as armas"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "PG35": {
+   "id": "PG35",
+   "dia": 433,
+   "hora": "12:47:05",
+   "titulo": "O QUE O CAPITÃO YAIS RESPONDE A 'VOCÊ SABE QUE NÃO PODE PASSAR COM CARGA DA LIGA: POR QUE SE ARRISCAR?' (LEAL à Liga; quer enriquecer; OCULTO: deve a alguém perigoso)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "A DÍVIDA, a verdade: deve a alguém perigoso, e a corrida do rio fechado paga a dívida (rola a quem)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "CALA: é da Liga e não fala da Liga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)",
+     "txt": "[4] → O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "CT35": {
+   "id": "CT35",
+   "dia": 433,
+   "hora": "12:47:05",
+   "titulo": "O QUE A ELIANE ACHA NA ESTALAGEM DA ESTRADA DO SAL (de noite; ela, os dois que sabem o caminho e mais 6)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "só os 3 CARROCEIROS, bêbados, e os fardos no galpão"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "os carroceiros e 4 GUARDAS da Liga que esperavam a carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os DEVOLVIDOS chegaram antes para buscar o ouro (rola quantos)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "os carroceiros e 4 GUARDAS da Liga que esperavam a carroça",
+     "txt": "[4] → os carroceiros e 4 GUARDAS da Liga que esperavam a carroça"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "OU35": {
+   "id": "OU35",
+   "dia": 433,
+   "hora": "12:47:05",
+   "titulo": "QUANTO OURO HÁ NOS FARDOS DA CARROÇA (a paga da Liga aos Devolvidos)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "o dado × 500 em moeda de Marasar"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      6
+     ],
+     "total": 11,
+     "res": "o dado × 500 em moeda de Marasar",
+     "txt": "[5, 6] +0 = 11 → o dado × 500 em moeda de Marasar"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "LT35": {
+   "id": "LT35",
+   "dia": 433,
+   "hora": "12:47:05",
+   "titulo": "A CARTA DO COLÉGIO DE TELOSUS À LELIEL: COMO VEM ESCRITA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "em LETRA CLARA, a mão de um escrivão do Colégio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "em CIFRA do Colégio (o rei rola o saber de magia para ler)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "em CIFRA do Colégio (o rei rola o saber de magia para ler)",
+     "txt": "[5] → em CIFRA do Colégio (o rei rola o saber de magia para ler)"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "AR35b": {
+   "id": "AR35b",
+   "dia": 433,
+   "hora": "12:47:26",
+   "titulo": "OS 4 GUARDAS DA LIGA NA ESTALAGEM, QUANDO A ELIANE ENTRA DE NOITE COM 8 DA GUARDA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "RENDEM-SE ao ver a Marechal e a Lança do Bren"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "LUTAM (o combate rápido abaixo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "LUTAM (o combate rápido abaixo)",
+     "txt": "[5] → LUTAM (o combate rápido abaixo)"
+    }
+   ],
+   "hora_rolado": "12:47:26"
+  },
+  "CR35": {
+   "id": "CR35",
+   "dia": 433,
+   "hora": "12:47:26",
+   "titulo": "COMBATE RÁPIDO NA ESTALAGEM (só vale se o AR35b der 3-6; o precedente CR12): a ELIANE d20 + 24 (o ataque dela) + 4 (os 8 da guarda) + 2 (a noite: a Cota de Mestre no escuro) contra os 4 GUARDAS DA LIGA d20 + 14 + 3; pela MARGEM",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado da Eliane (o da Liga sai abaixo, LIGA)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 10,
+     "res": "o dado da Eliane (o da Liga sai abaixo, LIGA)",
+     "txt": "[10] → o dado da Eliane (o da Liga sai abaixo, LIGA)"
+    }
+   ],
+   "hora_rolado": "12:47:26"
+  },
+  "CR35l": {
+   "id": "CR35l",
+   "dia": 433,
+   "hora": "12:47:26",
+   "titulo": "COMBATE RÁPIDO NA ESTALAGEM: o dado dos 4 guardas da Liga (só vale com o CR35)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado da Liga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o dado da Liga",
+     "txt": "[6] → o dado da Liga"
+    }
+   ],
+   "hora_rolado": "12:47:26"
+  },
+  "LC35": {
+   "id": "LC35",
+   "dia": 433,
+   "hora": "12:47:26",
+   "titulo": "O QUE A CARTA CIFRADA DO CEDUION (o reitor do Colégio de Telosus) OFERECE À LELIEL, EM TROCA DO PERDÃO DO NORTE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o LUGAR onde a Elaeva dorme nos Picos Brancos e quando ela acorda"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma FRAQUEZA escondida da Elaeva, além do fogo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o modo de DESVIAR a fera: o que ela segue quando anda"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "tudo isso"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "uma FRAQUEZA escondida da Elaeva, além do fogo",
+     "txt": "[3] → uma FRAQUEZA escondida da Elaeva, além do fogo"
+    }
+   ],
+   "hora_rolado": "12:47:26"
+  },
+  "QB35": {
+   "id": "QB35",
+   "dia": 433,
+   "hora": "12:47:57",
+   "titulo": "COMO OS 4 GUARDAS DA LIGA QUEBRAM NA ESTALAGEM (CR35: 40 × 23, margem 17: DESTROÇADOS)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os QUATRO caem no pátio"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "DOIS caem e DOIS fogem a cavalo pela estrada do sal (a notícia corre aos Devolvidos)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "rendem-se no meio da luta, os quatro"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "rendem-se no meio da luta, os quatro",
+     "txt": "[6] → rendem-se no meio da luta, os quatro"
+    }
+   ],
+   "hora_rolado": "12:47:57"
+  },
+  "FE35": {
+   "id": "FE35",
+   "dia": 433,
+   "hora": "12:47:57",
+   "titulo": "A FRAQUEZA ESCONDIDA DA ELAEVA QUE A CARTA DO CEDUION OFERECE À LELIEL (além do fogo; LC35 [3])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o SAL: seca a raiz dela (dano dobrado e corta a regeneração)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a FOME (a Essência que devora): dano dobrado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "um SOM: o sino de bronze velho a faz parar uma rodada"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o SEU NOME dito em voz alta, na língua antiga, a faz recuar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a LUA NOVA: na noite sem lua ela dorme onde estiver"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o MACHADO: lâmina de ferro frio batida a frio corta a casca dela como carne"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o SAL: seca a raiz dela (dano dobrado e corta a regeneração)",
+     "txt": "[1] → o SAL: seca a raiz dela (dano dobrado e corta a regeneração)"
+    }
+   ],
+   "hora_rolado": "12:47:57"
+  },
+  "QF35": {
+   "id": "QF35",
+   "dia": 433,
+   "hora": "12:47:57",
+   "titulo": "A PISTA NOVA DA CARTA (o EXTRAORDINÁRIO do rei): QUEM FERIU A ELAEVA NO 428, segundo o Colégio",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "gente da LELIEL (o norte tentou dobrá-la e quase morreu)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os OLHOS DA MAMILTIA, a caminho de Zisrir"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o próprio COLÉGIO DE TELOSUS (o Ceduion quis o núcleo)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "gente da LURENTETTA (o Delta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "os OLHOS DA MAMILTIA, a caminho de Zisrir",
+     "txt": "[4] → os OLHOS DA MAMILTIA, a caminho de Zisrir"
+    }
+   ],
+   "hora_rolado": "12:47:57"
   }
  }
 }

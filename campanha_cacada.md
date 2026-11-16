@@ -69,3 +69,4 @@ Só o que a CASA SABE (notícia, rumor exato, visto). O resto da ficha de cada b
 | VATHEXA (Lendária 262, Tempo) | a costa | a Luz do Cais | acima da casa: só vigiar |
 - 8 postos = 400 por semana (a despesa fixa passa de 7.700 a 8.100). O MIVOR é aliado: não é alvo nem tem posto.
 - A Guilda ganhou 20 voluntários da Luz do Cais (nível 10 a 20) no 428.
+- (433) A ELAEVA: a carta cifrada do Ceduion à Leliel (tomada na barca da Liga) diz a FRAQUEZA ESCONDIDA dela, além do fogo: o SAL seca a raiz (dano dobrado e corta a regeneração). Quem a feriu no 428 foram os olhos da Mamiltia (voltam ~434).

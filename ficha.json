@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  356,
+  396,
   402
  ],
  "mana": [
@@ -56,7 +56,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 14748,
+ "cofre": 20248,
  "livro": {
   "renda_casa": 3960,
   "despesa": 8230,
@@ -279,6 +279,12 @@
    "valor": 800,
    "motivo": "433: o CELOCUS pagou os 800 do crédito de grão (C403a; CE33 [1])",
    "saldo": 14748
+  },
+  {
+   "dia": 433,
+   "valor": 5500,
+   "motivo": "433: CONFISCO pela lei do rio (a barca da Liga sem direito ao rio): a paga da Liga aos Devolvidos, 11 × 500 em moeda de Marasar, tomada na estalagem da estrada do sal (o ouro vai com o rei até a Intendente)",
+   "saldo": 20248
   }
  ],
  "materiais": {

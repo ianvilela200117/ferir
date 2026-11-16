@@ -1043,3 +1043,10 @@ O rei não estendeu a mão para a bolsa. Perguntou de quem era a barca, o que le
 Um velho da aldeia, encostado na cerca, viu o rei devolver a bolsa sem abri-la. À noite, os dois da guarda que seguiam a carroça voltaram: ela tinha parado numa estalagem da estrada do sal, e ninguém viera buscá-la.
 
 - **Parada:** noite do 433, o cais. O capitão, a arca, a carta lacrada; a carroça na estalagem.
+
+### O cais e a estalagem, noite do 433
+O capitão olhou para a Lança do Bren e para a maça do Moreth, e mandou a gente baixar as armas. À pergunta do rei, disse que a Liga paga o triplo a quem passa o rio fechado. Não disse o resto.
+Na estalagem da estrada do sal, quatro guardas da Liga esperavam a carroça. Puxaram espada quando a Eliane entrou de lança baixa, e a largaram no meio do pátio. Nos fardos havia moeda de Marasar, cinco mil e quinhentos.
+No cais, à luz de uma lanterna, o rei leu a carta cifrada do Colégio de Telosus. O reitor oferecia à Leliel, em troca do perdão do norte, o que o Colégio sabia da Floresta que Anda: o sal seca a raiz dela. E contava que quem a ferira nos Picos Brancos tinham sido os olhos da Mamiltia.
+
+- **Parada:** amanhecer do 434. Trinta e dois presos; o ouro e a barca do reino; o sal; Levis a meio dia.

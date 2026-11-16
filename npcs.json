@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 95,
-  "xp": 12793,
+  "xp": 14193,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -114,7 +114,9 @@
    "Dia 426: 426: ao ouvir 'núcleo', contou ao rei que DEVE A VIDA ao BJORVUNN (pesquisador de monstros e núcleos, o homem da Lumine pego no 308), por causa de sal (a faísca do 426)",
    "+500 Tick 427: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)",
    "+6100 427: o Morek morto",
-   "Dia 427: 427: na 2ª caçada do Morek, a LANÇA DO BREN voltou à mão com o sangue dele na fuga (FG27); +6.100 XP"
+   "Dia 427: 427: na 2ª caçada do Morek, a LANÇA DO BREN voltou à mão com o sangue dele na fuga (FG27); +6.100 XP",
+   "+1400 433 (noite): a estalagem da estrada do sal: 4 guardas da Liga (nível 35) rendidos no meio da luta (CR35)",
+   "Dia 433: 433 (noite): tomou a carroça do ouro da Liga na estalagem da estrada do sal com 8 da guarda (CR35: 40 × 23); os 4 guardas da Liga se renderam no meio da luta; EXAUSTÃO 1 (G16: a noite em marcha; sai com a primeira noite de descanso)"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -5063,7 +5065,8 @@
   "xp": 0,
   "log": [
    "Dia 433: entra no livro (nível 90)",
-   "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei"
+   "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei",
+   "Dia 433: 433 (noite): PRESO pela lei do rio com a gente dele (rendeu-se: AR35 [1]); à pergunta do rei 'por que se arriscar?' respondeu O DINHEIRO: a Liga paga o TRIPLO a quem passa o rio fechado (PG35 [4]: verdade, e não é tudo)"
   ],
   "classe": "Capitão da Liga (o rio; espada)",
   "ocupacao": "a barca da Liga no cais da aldeia abaixo de Levis (433)",
