@@ -2946,6 +2946,17 @@
    "chegada": "[5] em 1d6 [1] dias",
    "resumo": "CLIMA ESTRANHO — o sul, onde a areia come a pedra",
    "toca": false
+  },
+  {
+   "dia": 437,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "nome: Ithek\no que era: mina\npor que caiu: guerra\no que guarda: um núcleo\no que habita: um culto\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "UMA RUÍNA SE ABRE — Mordun (a Boca com Fome) (Ithek)",
+   "toca": false
   }
  ]
 }

@@ -1,5 +1,5 @@
 {
- "prox_id": 516,
+ "prox_id": 517,
  "itens": [
   {
    "id": 1,
@@ -5089,7 +5089,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6214,7 +6214,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true,
    "aprox": true
   },
@@ -7231,8 +7231,23 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
+  },
+  {
+   "id": 516,
+   "dia": 443,
+   "texto": "Garkunn (Mordun): funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 437",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
   }
  ],
  "fios": [

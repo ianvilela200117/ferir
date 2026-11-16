@@ -1071,3 +1071,8 @@ De manhã, a porta de pedra. O rei leu os nomes de reis um por um e viu que falt
 Na primeira sala havia um inseto do tamanho de um cavalo, que falava com voz de homem e cheirava a carne velha. Escolheu o rei. O gibão de orloxa desfez o pior golpe, e mesmo assim o rei ficou de joelhos no pó. A Eliane caiu para trás, ensanguentada; o Eiagrir acabou com o bicho no contra-golpe. No peito dele havia um coração cinzento que ainda pulsava. Num nicho da parede, um elmo de guarda com o brasão de Tuir.
 
 - **Parada:** manhã do 436, Zythir, depois da primeira sala. O rei mal de pé; a Eliane carregada; oito salas adiante.
+
+### Zythir, manhã do 437
+O rei voltou com o dia claro lá fora e o mesmo escuro lá dentro. Na segunda sala, atrás de uma laje que soava oca, havia letras pequenas e gastas: Zythir caíra numa guerra contra a Primeira Liga, os mercadores velhos de Marasar, e o rei Tuir mandara fechar-se vivo com a guarda, para esperar. Na terceira sala não havia nada. Foi do nada que veio a voz, baixa, como se falasse de dentro da pedra: agradecia ao rei de Ireviel por dizer seu nome em voz alta depois de tanto tempo. E avisou que a rainha da colmeia estava lá embaixo, e que não o deixava sair.
+
+- **Parada:** manhã do 437, a terceira sala. Uma porta e um corredor; a rainha lá embaixo.

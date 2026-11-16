@@ -1,14 +1,14 @@
-# RETOMAR — manhã do Dia 436, Zythir, depois da sala 1 (MOTOR 8: G1 a G22)
+# RETOMAR — manhã do Dia 437, Zythir, a sala 3 (MOTOR 8: G1 a G22)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: MANHÃ DO 436, Zythir); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (PARADA: MANHÃ DO 437, Zythir, a sala 3); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é o meio-dia do 433). O estado está em `estado_vivo.md` (bloco "MEIO-DIA DO 433").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Manhã do 436, ZYTHIR (debaixo das minas velhas de Levis), depois da SALA 1 (masmorra.py ver Zythir; o mapa inteiro com 'tudo': 9 salas; a 2 é SEGREDO; a 3 é O QUE HABITA, e dela se vai à 4 ou direto à 6). O tick do 436 JÁ RODOU. O rei 44/402 (a correção do Gibão); a Eliane de cama até o 443 (SÉRIO); o Moreth 578, o Eiagrir 228; a Tigra (15) com a lanterna; os 10 da guarda na escada. O plano: Farenta no amanhecer do 437 (OCULTO: a ELAEVA chega às terras de Farenta no 444). Na casa: o núcleo Épico de ÁGUA (a Eloune) e o núcleo Épico de PODRIDÃO (o Zyza); o elmo de guarda real.
+Manhã do 437, ZYTHIR, a SALA 3 (masmorra.py ver Zythir tudo: a 4 é SEGREDO, a 5 PERIGO Épico, a 6 TESOURO Único, a 7 ARMADILHA (notar CD 23; 6d6 e uma condição), a 8 PERIGO Épico (a RAINHA da colmeia, pelo eco de Tuir), a 9 o CORAÇÃO: o prisioneiro (OCULTO: o próprio TUIR, vivo) com o guardião Único; +2 nos perigos da volta). O tick do 437 JÁ RODOU. O rei 84/402 (a ficha de combate agora tem o Gibão e o 'desfaz'); o Moreth 578, o Eiagrir 228 (sem noite completa de cura: conferir na G9); a Tigra (15), o cabo Gonde (30, o elmo) e os 10. A Eliane de cama em Levis até o 443. A saída a Farenta no 438 (OCULTO: a ELAEVA chega às terras de Farenta no 444). O eco de Tuir DEVE UM FAVOR ao rei.
 - OCULTOS: a ALMISION acordou a Elaeva e deu o nome do Adurel (a palavra da Mamiltia chega no 440) · a Groa passou a medida da Fornalha (o cobrador identificado) · o Odrum sócio da Moeda Velha no que a frota perdida deu · o Krothos tem 1 cria · as surpresas do Rio Vermelho e das Mães da Porta (consequência antiga) na fila da G8-C.
 - A ORDEM DO REI contra a revolta de Marasar chega a Ireviel no meio-dia do 434: a força do Graur (as 20 lanças, a guarda que pode sair, a Guilda e 1d6+4 magos da Chama da Hoste: rolar os números) sai à tarde e chega a Marasar no 435 (batalha.py; os Fiéis do Doge Velho, força 6) · o Facio vai com eles, para ser entregue à Skotha · a LEGITIMIDADE caiu a 9 (o rei passou por cima do voto do conselho).
 - Ireviel sabe e o rei ainda não: a Eloune morta pelo Teraseth (o recado dele, com o coração DE PRESENTE, alcança a barca no 434: agenda #448, oculto) · a contra IDENTIFICOU o homem das guildas de Steunn (o cobrador da Groa; a Sira o vigia; OCULTO: a Groa passou a ele uma medida da Fornalha) · o Celocus pagou os 800.
@@ -184,9 +184,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (435 noite → 436): 1c direto a Farenta, a pena quando a fera chegar · 2a a fundição à Brara · 3a Zythir já e o registro à Bigorna
 - BR36 [4] · CA36 [1] · (OCULTO) EZ36 444 · ZC36 [4] Único · a senha (EXTRAORDINÁRIO) · (OCULTO) ZP36 [1] o prisioneiro é o rei Tuir · AL36 [3] a Tigra · LZ36 a sala 1 (o ERRO da ficha do rei corrigido: o Gibão) · TZ36 [18] · PA36 [3] o elmo · o tick do 436: MG36 [3] o Loula, QS36 [3] um Sem-Torre some, (OCULTO) MM36 [1].
 
+## RESPONDIDO (436 → 437): 1b sair, dormir e voltar · 2a o elmo a um da guarda · a pergunta fora do jogo: a janela de contexto
+- CB36 [2] o cabo GONDE (30) · o tick do 437 · o notar EXTRAORDINÁRIO (o favor do eco) · SZ37 [2] · WZ37 [3] a Primeira Liga · HZ37 [1]+2 · TZ37 [5] a rainha.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. ZYTHIR DEPOIS DA SALA 1 (o rei 44/402; a Eliane de cama; faltam 8 salas; a colmeia obedece a uma rainha): a) SEGUIR JÁ para a sala 2 · b) SAIR, dormir uma noite (G4: +40) e voltar amanhã (o lugar se mexe: +2 nos perigos; Farenta atrasa um dia) · c) a Bigorna Livre GUARDA A PORTA e o rei vai a Farenta; Zythir depois da Elaeva · d) outra.
-2. O ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo): a) para um da guarda do rei · b) para a Tigra · c) guardar · d) outra.
+1. ZYTHIR, A SALA 3 (dois caminhos): a) a PORTA da sala 4 (e dali a 5 e a 6) · b) o CORREDOR direto à sala 6 · c) parar aqui e ir a Farenta; Zythir depois · d) outra.
+2. O FAVOR DO ECO DE TUIR: a) pedir já o caminho seguro até o coração · b) guardar o favor para depois · c) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

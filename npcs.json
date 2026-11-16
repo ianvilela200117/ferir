@@ -5205,5 +5205,15 @@
   ],
   "classe": "padeira das ruas baixas de Levis",
   "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE"
+ },
+ "Gonde": {
+  "nivel": 30,
+  "xp": 0,
+  "log": [
+   "Dia 436: entra no livro (nível 30)",
+   "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)"
+  ],
+  "classe": "Cabo da guarda do rei (lança)",
+  "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir"
  }
 }

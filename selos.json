@@ -1,10 +1,5 @@
 {
  "ordem": [
-  "LV1",
-  "LV2",
-  "LV3",
-  "LV4",
-  "LV5",
   "ENT15",
   "ENT15f",
   "OLH1",
@@ -399,223 +394,14 @@
   "PA36",
   "MG36",
   "QS36",
-  "MM36"
+  "MM36",
+  "CB36",
+  "SZ37",
+  "HZ37",
+  "WZ37",
+  "TZ37"
  ],
  "selos": {
-  "LV1": {
-   "id": "LV1",
-   "dia": 415,
-   "hora": "21:09:48",
-   "titulo": "ONDE A RECEPÇÃO DO ARDENGHI ESPERA O REI EM LEVIS (o culto do Xaathis e os pagos)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "na PORTA DO RIO, onde a estrada entra"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "em LEVIS-BAIXA, nas ruas do culto, entre o cais e as minas"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "DENTRO DA CASA DA GOVERNADORA: alguém da casa da Brara os deixou entrar"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "em LEVIS-BAIXA, nas ruas do culto, entre o cais e as minas",
-     "txt": "[3] → em LEVIS-BAIXA, nas ruas do culto, entre o cais e as minas"
-    }
-   ],
-   "hora_rolado": "21:09:48"
-  },
-  "LV2": {
-   "id": "LV2",
-   "dia": 415,
-   "hora": "21:09:48",
-   "titulo": "QUANTOS DO CULTO DO XAATHIS (força 6)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "40 e um sacerdote-mago"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "60 e dois magos"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "80 e a VOZ do culto (mago forte)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "40 e um sacerdote-mago",
-     "txt": "[1] → 40 e um sacerdote-mago"
-    }
-   ],
-   "hora_rolado": "21:09:48"
-  },
-  "LV3": {
-   "id": "LV3",
-   "dia": 415,
-   "hora": "21:09:48",
-   "titulo": "O NÍVEL DO ARDENGHI (mestre de forja e mercador; peças de marca P.A.)",
-   "dado": [
-    2,
-    20,
-    40
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 42,
-     "b": 80,
-     "res": "nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18,
-      5
-     ],
-     "total": 63,
-     "res": "nível",
-     "txt": "[18, 5] +40 = 63 → nível"
-    }
-   ],
-   "hora_rolado": "21:09:48"
-  },
-  "LV4": {
-   "id": "LV4",
-   "dia": 415,
-   "hora": "23:34:43",
-   "titulo": "O NÍVEL DO SACERDOTE-MAGO do Xaathis que espera com o Ardenghi (não é o líder do culto, que é 120)",
-   "dado": [
-    2,
-    20,
-    50
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 52,
-     "b": 90,
-     "res": "nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18,
-      4
-     ],
-     "total": 72,
-     "res": "nível",
-     "txt": "[18, 4] +50 = 72 → nível"
-    }
-   ],
-   "hora_rolado": "23:34:43"
-  },
-  "LV5": {
-   "id": "LV5",
-   "dia": 415,
-   "hora": "23:34:43",
-   "titulo": "A MAGIA DO SACERDOTE-MAGO (o rito do culto é veneno)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "SANGUE (maldição que apodrece a ferida)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "VENENO em névoa (área)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "OSSO (ergue os caídos do próprio lado)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "MENTE (medo)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "SANGUE (maldição que apodrece a ferida)",
-     "txt": "[2] → SANGUE (maldição que apodrece a ferida)"
-    }
-   ],
-   "hora_rolado": "23:34:43"
-  },
   "ENT15": {
    "id": "ENT15",
    "dia": 415,
@@ -19527,6 +19313,260 @@
     }
    ],
    "hora_rolado": "14:34:08"
+  },
+  "CB36": {
+   "id": "CB36",
+   "dia": 436,
+   "hora": "15:04:22",
+   "titulo": "O NÍVEL DO CABO DA GUARDA DO REI (Ti; comanda os 10 com a Eliane de cama)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 30"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 40"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "nível 50"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nível 30",
+     "txt": "[2] → nível 30"
+    }
+   ],
+   "hora_rolado": "15:04:22"
+  },
+  "SZ37": {
+   "id": "SZ37",
+   "dia": 437,
+   "hora": "15:04:42",
+   "titulo": "O SEGREDO DA SALA 2 DE ZYTHIR (só a casa vê se o NOTAR do rei deu sucesso)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma INSCRIÇÃO: a história da guerra que derrubou Zythir e por que Tuir ficou"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma PASSAGEM escondida: um atalho da sala 2 direto à 6 (o tesouro), pulando a 3, a 4 e a 5"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "uma PORTA de fuga dos reis, selada, que dá numa mina de baixo de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "uma INSCRIÇÃO: a história da guerra que derrubou Zythir e por que Tuir ficou",
+     "txt": "[2] → uma INSCRIÇÃO: a história da guerra que derrubou Zythir e por que Tuir ficou"
+    }
+   ],
+   "hora_rolado": "15:04:43"
+  },
+  "HZ37": {
+   "id": "HZ37",
+   "dia": 437,
+   "hora": "15:04:42",
+   "titulo": "O QUE HABITA ZYTHIR, NA SALA 3 ('nada mora lá, e é isso que assusta'; o lugar se mexeu desde ontem: +2 nos perigos)",
+   "dado": [
+    1,
+    6,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a COLMEIA dormente nas paredes: acorda com luz forte"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma VOZ sem corpo, o eco do rei TUIR, que fala da pedra (conversa)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "os MORTOS DOS REIS, deitados, que não se levantam e só olham (Vontade CD 20 contra o medo; o elmo +2 no cabo)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 8,
+     "res": "a RAINHA DA COLMEIA desceu da sala 8 para ver quem matou o guarda (encontro; ela fala e mente)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 3,
+     "res": "uma VOZ sem corpo, o eco do rei TUIR, que fala da pedra (conversa)",
+     "txt": "[1] +2 = 3 → uma VOZ sem corpo, o eco do rei TUIR, que fala da pedra (conversa)"
+    }
+   ],
+   "hora_rolado": "15:04:43"
+  },
+  "WZ37": {
+   "id": "WZ37",
+   "dia": 437,
+   "hora": "15:05:00",
+   "titulo": "A INSCRIÇÃO DA SALA 2 (o notar EXTRAORDINÁRIO do rei: tudo e uma pista): CONTRA QUEM FOI A GUERRA QUE DERRUBOU ZYTHIR",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os reis de STEUNN (a guerra das minas)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a PRIMEIRA LIGA, os mercadores antigos de Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o ITHVIL, o Mítico de Fogo que dorme debaixo de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a PRIMEIRA LIGA, os mercadores antigos de Marasar",
+     "txt": "[3] → a PRIMEIRA LIGA, os mercadores antigos de Marasar"
+    }
+   ],
+   "hora_rolado": "15:05:00"
+  },
+  "TZ37": {
+   "id": "TZ37",
+   "dia": 437,
+   "hora": "15:05:00",
+   "titulo": "O QUE O ECO DO REI TUIR PEDE AO REI DE IREVIEL NA SALA 3 (ele 'espera até que o reino o chame'; deve ao rei um FAVOR: a surpresa boa do notar, porque o rei disse o nome dele em voz alta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "que o rei O CHAME: que desça até o coração (sala 9) e o liberte da tumba"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "que o rei PROVE que é rei (a prova pelo dado, na sala 4)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "avisa da RAINHA da colmeia, que guarda a sala 8 e não o deixa sair"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "avisa da RAINHA da colmeia, que guarda a sala 8 e não o deixa sair",
+     "txt": "[5] → avisa da RAINHA da colmeia, que guarda a sala 8 e não o deixa sair"
+    }
+   ],
+   "hora_rolado": "15:05:00"
   }
  }
 }
