@@ -1,14 +1,17 @@
-# RETOMAR — noite do Dia 427, Ireviel (MOTOR 7.2 + G6)
+# RETOMAR — madrugada do Dia 428, Ireviel (MOTOR 7.2 + G6)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA ainda está no fim do `envelope_sessao2n.md` (LEITURA DA NOITE DO 426 À NOITE DO 427). O diário é `diario_sessao2f.md` (o fim dele é a noite do 427). O estado está em `estado_vivo.md` (bloco "NOITE DO 427, IREVIEL").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA está no fim do 2o (LEITURA DA NOITE DO 427 À MADRUGADA DO 428); a do 426 → 427 está no fim do `envelope_sessao2n.md`. O diário é `diario_sessao2f.md` (o fim dele é a madrugada do 428). O estado está em `estado_vivo.md` (bloco "MADRUGADA DO 428, IREVIEL").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Noite do 427 (28 da Lua da Forja de 1013), Ireviel, o cais. Pressão 1/5. Levis fica para o 428 (o rio cheio: subir custa o dobro).
+Madrugada do 428 (29 da Lua da Forja de 1013), Ireviel, a Fornalha, trovoada seca. Pressão 1/5. O tick do 428 (e a auditoria do 428) AINDA NÃO RODOU.
+- A noite do 427: a ALIANÇA com a LURENTETTA (Mítica 774) aceita; o FACIO contou que os nomes do livro foram à LELIEL; o rei leu o núcleo de Espinho; nasceram os RENDIDOS DE MARASAR (querem os aros da Eliane). TEMPESTADE no amanhecer do 428 (CL27 [3]): a barca não sai; a saída a Levis vai ao amanhecer do 429 (rodar o `viagem.py` na saída, com leva=); a noite do 428 está livre na Fornalha.
+
+Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - O MOREK MORTO (amanhecer do 427, na água rasa da forquilha): numa rodada o Toque do rei e as Lanças do Sol do Moreth e do Eiagrir o puseram de 955 a 96; ele fugiu, a fuga falhou feio, e a LANÇA DO BREN voltou à mão da Eliane com o sangue dele. Ninguém caiu; o Eiagrir levou 186 (87 de PV).
 - DESPOJOS: o NÚCLEO ÚNICO DE ESPINHO (serve para peça Mítica) · ssythis 3 kg · laliel 6 kg · heald 3 kg · sasis 3 kg. A MISSÃO dos Barqueiros do Livro pagou 3.000 e a informação: o patrono deles é a SKOTHA.
 - O BJORVUNN (noite do 426) contou do ULMIR: Único 178, de Raio, nas salinas do Delta, fraco a Água; o coração é um NÚCLEO ÚNICO DE RAIO. A TESSAL e a LILE acharam ALNESAR: nas colinas a leste de Ireviel, a 2 dias; numa metade há um núcleo e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um segredo de facção (entrar pede uma chave).
@@ -122,11 +125,19 @@ Noite do 427 (28 da Lua da Forja de 1013), Ireviel, o cais. Pressão 1/5. Levis 
 - TICK 427 SEMANAL (tick_427.txt): local SURPRESA → NV27 [3] o FACIO, NV27b [2] caído · EV27 [4] a Eloune no lodaçal do cais afundado · LU27 [3] LU27b [4] a Lurentetta: aliança contra a Elaeva · facções (G8-D rodou: a Guarda do Pedágio NÃO DORME, força 2) · o Xaathis vence a Bigorna Livre (FIEL) · LIVRO −2.750 · ATRASO DE SURPRESAS DE NPC DO TICK (16, regra C: soltar uma ou mais por cena): Eliane, Ulurve, Brara, Brua, Kreine, Veyula, Selvil, Tedulteth, Groa, Donione, Starkald, Vrethur, Tuald, Gerva, Ulounn, Hassa (gerador novidade cada, quando entrarem em cena).
 - FD27 [14] a água rasa (+2 Defesa) · LM27 (sims/morek_427_saida.txt): 955 → 96 numa rodada; moral [1] foge · FG27 (aberto.py oposto): 24 contra 61, FALHA FEIA: O MOREK MORRE · DR27 3/6/3/3 kg · DZ27E 27 (o Eiagrir não pega) · XP 6.100 a quatro; 6.000 da missão ao rei → NÍVEL 155 · COFRE +3.000.
 
+## RESPONDIDO (427 noite): 1a aceitar a aliança antes de ouvir o preço · 2 'avaliar o que seria mais proveitoso a nós' · 3a Levis primeiro, Alnesar na volta · 4a o rei ouve o Facio
+- ERRO DO MESTRE corrigido à mesa: a Lurentetta é MÍTICA (774), não Lendária. A obra dela e o LU27b juntos: a Elaeva matou o povo das salinas, a Liga deixou morrer.
+- YV27a [1] LANÇAS · YV27c [6]+2 (a surpresa boa do saber do rei) = 20 lanças · YV27d [6] a guarda dela (80 a 110) e a campeã MIE (150) · YV27b [1] o preço: uma peça Lendária ou melhor · YV27e [2] uma ARMA, até o 487 · YV27f [5] o YAVOR nível 80 · tratado `lurentetta` vigente.
+- FC27a [1] o Facio POBRE · FC27b [5] a Liga passou os nomes do livro à LELIEL · (OCULTO) FC27c [12] ele disse a verdade.
+- G10 (pergunta 2): o REI forja EXTRAORDINÁRIO (57 vs 30): tudo e a pista do zeieth · a NOULIEL dinheiro FALHA FEIA (rolagem oculta à mesa: ela acha que o núcleo vale uns 5.000; a verdade, 3d6×3.000, está no envelope) · a ELIANE guerra FALHA. A escolha do núcleo segue com o jogador (pergunta 1 abaixo).
+- CL27 [3] (a surpresa ruim do saber da Nouliel): TEMPESTADE no amanhecer do 428; a barca não sai (+1 dia) · EL27 [1] (a surpresa atrasada da Eliane, G8-C): nasce OS RENDIDOS DE MARASAR (força 4, hostis). A fila de surpresas atrasadas do tick cai para 15: Ulurve, Brara, Brua, Kreine, Veyula, Selvil, Tedulteth, Groa, Donione, Starkald, Vrethur, Tuald, Gerva, Ulounn, Hassa.
+- Faísca usada: o Mormir (Sem-Torre) e a Seline (só a imagem: ele junto da banca fechada dela, com um papel queimado; a traição pela receita perdida segue no envelope).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O ENVIADO DA LURENTETTA (Lendária 774 do Delta) pede ALIANÇA CONTRA A ELAEVA: a) aceitar · b) ouvir o preço e o plano antes · c) recusar · d) outra.
-2. O NÚCLEO ÚNICO DE ESPINHO: a) forjar já uma peça Mítica (qual) · b) guardar para a campanha · c) outra.
-3. ALNESAR (2 dias a leste; um núcleo; entrar custa uma luta) e LEVIS (428): a) Levis primeiro, Alnesar na volta · b) Alnesar primeiro · c) a Guilda olha Alnesar enquanto o rei vai a Levis · d) outra.
-4. O FACIO (voltou caído; sabe quem entregou os nomes do livro à Liga): a) o rei o ouve · b) o Eiagrir fala com ele · c) prender · d) outra.
+1. O NÚCLEO ÚNICO DE ESPINHO (a tempestade deixa a noite do 428 livre na Fornalha): a) forjar uma ARMADURA Mítica de Espinho com o zeieth (diga para quem) · b) forjar uma FERRAMENTA Mítica de Espinho (diga qual) · c) guardar até a volta de Levis e de Alnesar · d) outra.
+2. O FACIO (pobre; dorme no cais; quer voltar para casa): a) deixar que volte, com a palavra do rei · b) teto e trabalho na casa · c) de volta à cela · d) outra.
+3. OS BARQUEIROS DO LIVRO MARCADOS NO NORTE: a) avisar já os Barqueiros e a Skotha, a patrona deles · b) a Sira descobre primeiro o que a Leliel vai fazer com os nomes · c) trazer as famílias (os Filhos do Livro) para dentro dos muros · d) outra.
+4. O HOMEM DOS RENDIDOS (saiu do cais com o não da Eliane): a) deixar que vá · b) a Sira o segue até a companhia · c) prender · d) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

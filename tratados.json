@@ -65,6 +65,26 @@
     }
    ],
    "log": []
+  },
+  "lurentetta": {
+   "id": "lurentetta",
+   "com": "a Lurentetta (Mítica do Delta; o Yavor fala por ela)",
+   "texto": "ALIANÇA CONTRA A ELAEVA: o rei aceitou antes de ouvir o preço (noite do 427). Ela manda 20 lanças da guarda e a campeã MIE (150) à caçada; o rei lhe faz uma ARMA Lendária ou melhor.",
+   "estado": "vigente",
+   "desde": 427,
+   "clausulas": [
+    {
+     "quem": "nos",
+     "o_que": "uma ARMA da forja do rei, Lendária ou melhor, para a Lurentetta",
+     "ate": 487
+    },
+    {
+     "quem": "eles",
+     "o_que": "20 lanças da guarda dela (nível 80 a 110) e a campeã MIE (150) na caçada da Elaeva",
+     "ate": 480
+    }
+   ],
+   "log": []
   }
  }
 }

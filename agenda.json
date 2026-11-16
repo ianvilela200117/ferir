@@ -1,5 +1,5 @@
 {
- "prox_id": 431,
+ "prox_id": 432,
  "itens": [
   {
    "id": 1,
@@ -3981,7 +3981,7 @@
   },
   {
    "id": 281,
-   "dia": 428,
+   "dia": 434,
    "texto": "FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)",
    "tipo": "marco",
    "oculto": false,
@@ -5248,7 +5248,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5312,7 +5312,7 @@
   },
   {
    "id": 379,
-   "dia": 427,
+   "dia": 431,
    "texto": "NO RIO, A CAMINHO DE LEVIS: o rei vê os restos de uma CARAVANA DE LEVIS virada pela correnteza; a LIGA subiu o frete do rio (PE26a [4], PE26b [2], PE26c [5])",
    "tipo": "marco",
    "oculto": false,
@@ -5334,7 +5334,7 @@
   },
   {
    "id": 381,
-   "dia": 427,
+   "dia": 434,
    "texto": "LEVIS: a BRARA fez as picaretas mas COBRA a partilha e não rasga as dívidas antes de ver o rei (BR26 [1]); o rei chega",
    "tipo": "marco",
    "oculto": false,
@@ -6049,8 +6049,19 @@
   },
   {
    "id": 430,
-   "dia": 428,
+   "dia": 429,
    "texto": "O REI SAI PARA LEVIS (adiado do 427: o Morek): a Brara e a fundição; a BIGORNA LIVRE (o Xaathis acabou de vencê-la em Levis: força 1); no caminho os restos da caravana virada e o frete da Liga; o rio cheio: subir custa o dobro",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 431,
+   "dia": 487,
+   "texto": "PRAZO DA LURENTETTA: a ARMA Lendária ou melhor da forja do rei (o preço da aliança contra a Elaeva, 427)",
    "tipo": "marco",
    "oculto": false,
    "para": false,
@@ -6110,10 +6121,10 @@
   },
   {
    "id": 7,
-   "texto": "O GARKUNN ameaçou a Eliane pelos aros dela. No 392, em Marasar, os THOG olharam a luta inteira de cima dos telhados sem se mexer, e ela os viu. Um mercenário rendido ofereceu comprar os aros.",
+   "texto": "427: os mercenários rendidos em Marasar (392) viraram companhia: os RENDIDOS DE MARASAR (força 4, hostis) querem os AROS da Eliane; um deles a procurou no cais de Ireviel na noite do 427",
    "oculto": false,
    "aberto": 379,
-   "tocado": 393,
+   "tocado": 427,
    "fechado": false
   },
   {
@@ -6166,10 +6177,10 @@
   },
   {
    "id": 14,
-   "texto": "A PROMESSA À MAMILTIA: caçar a ELAEVA juntos antes da primeira neve nos Picos Brancos (por volta do Dia 480). A fera foi para lá com 28.793 de 37.600. A Mamiltia está em Ireviel por alguns dias.",
+   "texto": "427: a LURENTETTA (Mítica do Delta) entrou na caçada: aliança aceita pelo rei; 20 lanças da guarda e a campeã MIE (150); o preço: uma ARMA Lendária ou melhor até o 487",
    "oculto": false,
    "aberto": 390,
-   "tocado": 390,
+   "tocado": 427,
    "fechado": false
   },
   {
@@ -6521,8 +6532,8 @@
    "texto": "O MOREK (Único 122, Espinho; do tamanho de uma torre; fraco a fogo; reflete magia; caçador) na FORQUILHA, a meio dia; a missão dos Barqueiros do Livro paga 3.000 até o 429.",
    "oculto": false,
    "aberto": 422,
-   "tocado": 422,
-   "fechado": false
+   "tocado": 427,
+   "fechado": true
   },
   {
    "id": 59,
@@ -6569,8 +6580,8 @@
    "texto": "O MOREK FERIDO (467/2440), 425 (a luta refeita no 426): FUGIU rio abaixo para o fundo da forquilha, para sarar; matou o Starkald e o Goir (o rei os ergueu) e derrubou a Isolda. A missão vence no 429.",
    "oculto": false,
    "aberto": 425,
-   "tocado": 425,
-   "fechado": false
+   "tocado": 427,
+   "fechado": true
   },
   {
    "id": 65,
@@ -6578,6 +6589,22 @@
    "oculto": false,
    "aberto": 425,
    "tocado": 425,
+   "fechado": false
+  },
+  {
+   "id": 66,
+   "texto": "OS NOMES DO LIVRO ESTÃO COM A LELIEL (o Facio, noite do 427: a Liga os passou ao norte): os Barqueiros do Livro (patrona: a Skotha) e as famílias, os Filhos do Livro, estão marcados. O Facio, pobre, dorme no cais e quer voltar para casa.",
+   "oculto": false,
+   "aberto": 427,
+   "tocado": 427,
+   "fechado": false
+  },
+  {
+   "id": 67,
+   "texto": "O NÚCLEO ÚNICO DE ESPINHO (o Morek, 427) na Fornalha: leva uma peça a MÍTICA sem ano de vida. O rei leu o que ele quer ser (427): não na arma de fogo (Espinho é oposto a Fogo; a Elaeva é de Espinho); rende numa ARMADURA ou numa FERRAMENTA; com o ZEIETH da casa, a Essência sobe um degrau.",
+   "oculto": false,
+   "aberto": 427,
+   "tocado": 427,
    "fechado": false
   }
  ]

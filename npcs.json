@@ -4267,7 +4267,8 @@
   "ocupacao": "PRESO em Ireviel até a primavera (278): vendeu à Liga os nomes do livro do pedágio",
   "log": [
    "Dia 278: o chefe dos Descalços e um barqueiro o acusam; o Eiagrir o entrega ao conselho; prisão",
-   "Dia 427: 427: VOLTOU A IREVIEL CAÍDO (pobre, ferido ou caçado; NV27 [3], NV27b [2]); ele sabe quem entregou os nomes do livro à Liga (o que o Eiagrir quer saber)"
+   "Dia 427: 427: VOLTOU A IREVIEL CAÍDO (pobre, ferido ou caçado; NV27 [3], NV27b [2]); ele sabe quem entregou os nomes do livro à Liga (o que o Eiagrir quer saber)",
+   "Dia 427: 427 (noite): POBRE (FC27a [1]): perdeu a barca e a casa; dorme no cais · ao rei (FC27b [5], verdade FC27c [12]): a LIGA passou os NOMES DO LIVRO à LELIEL; os Barqueiros do Livro estão marcados no norte · desejo: voltar para casa"
   ],
   "tracos": [
    "CURIOSO",
@@ -4994,5 +4995,37 @@
   ],
   "classe": "Pesquisador (monstros e núcleos)",
   "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele"
+ },
+ "Yavor": {
+  "nivel": 80,
+  "xp": 0,
+  "log": [
+   "Dia 427: entra no livro (nível 80)",
+   "Dia 427: 427: gerador npc: desejo nunca mais passar fome · ambição (4) comprar a liberdade da família · medo a morte de um filho · (OCULTO) segredo: tem uma doença escondida · linha vermelha: nunca deixa um ferido para trás · dilema que vem: a verdade sobre o segredo dele destruiria quem confia nele · o nome do gerador (Mornar) foi trocado por YAVOR (nomes.py)"
+  ],
+  "classe": "Diplomata do Delta (enviado da Lurentetta)",
+  "ocupacao": "em Ireviel: fala pela Lurentetta na aliança contra a Elaeva (427)",
+  "tracos": [
+   "TEIMOSO",
+   "ORGULHOSO"
+  ],
+  "voz": "fala devagar, com sal na voz; conta os mortos do povo dela pelo nome; não se senta antes do rei e não baixa os olhos",
+  "opiniao": [
+   {
+    "v": 10,
+    "motivo": "o rei aceitou a aliança antes de ouvir o preço (427)",
+    "dia": 427,
+    "ate": 487
+   }
+  ]
+ },
+ "Mie": {
+  "nivel": 150,
+  "xp": 0,
+  "log": [
+   "Dia 427: entra no livro (nível 150)"
+  ],
+  "classe": "Campeã da guarda da Lurentetta (o Delta)",
+  "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)"
  }
 }

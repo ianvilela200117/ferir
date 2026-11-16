@@ -990,3 +990,14 @@ Abriram o peito dele na margem. O coração ainda estava quente e verde por dent
 A barca subiu o rio cheio devagar e chegou com a lua. No cais esperavam o enviado da Lurentetta, um homem do Delta de roupa de sal, e o Facio, mais magro do que nunca, encostado num poste. A Tessal mandou dizer que tinha achado Alnesar.
 
 - **Parada:** noite do 427. O enviado; o núcleo; Alnesar; o Facio; Levis amanhã.
+
+### Ireviel, o cais, noite do 427
+O Yavor esperou de pé até o rei pisar na tábua do cais. Falou dos mortos das salinas um por um, pelo nome, e só depois falou da Elaeva. O rei disse sim antes de ele chegar ao preço. O homem do Delta ficou um tempo calado, e então disse o resto: vinte lanças da guarda da senhora dele e a Mie, a campeã, quando a caçada tiver dia; e uma arma da forja do rei, das grandes, antes da segunda lua.
+O Facio não se ajoelhou. Sem barca e sem casa, dormia no cais desde que saiu da cela. Contou que os nomes do livro não pararam na Liga: subiram ao norte, com a gente da Leliel. Os barqueiros que estão no livro estão marcados lá. Pediu para voltar para casa.
+Um homem com a marca dos mercenários de Marasar esperou a Eliane na ponta da rampa. A companhia agora tinha nome, os Rendidos, e a oferta pelos aros dobrou. Ela disse não e passou.
+
+### A Fornalha, madrugada do 428
+O coração do Morek ficou na bigorna, verde por dentro. O rei o leu como lê um metal: o núcleo não quer cortar, quer segurar e se fechar sozinho. Brigaria com o fogo. Responderia ao zeieth. A Nouliel fez a conta do cofre duas vezes e disse que um núcleo daqueles valia uns cinco mil. A Eliane disse que ninguém ali tinha visto a fera.
+Na madrugada veio a trovoada seca, sem chuva. O barqueiro da casa subiu a rampa e disse que de manhã não saía barca.
+
+- **Parada:** madrugada do 428. O núcleo e a noite livre na Fornalha; o Facio; os barqueiros marcados; os Rendidos; Levis no 429.

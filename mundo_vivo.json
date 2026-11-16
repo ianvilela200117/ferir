@@ -680,7 +680,8 @@
     "399: [8] sofre um revés (ferida, perda, traição de um próximo)",
     "420: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
     "424 (LU24 [2]): o ENVIADO dela vem a IREVIEL; chega no 427",
-    "427: o ENVIADO dela em Ireviel pede ao rei ALIANÇA CONTRA A ELAEVA (quem matou o povo dela; LU27 [3], LU27b [4])"
+    "427: o ENVIADO dela em Ireviel pede ao rei ALIANÇA CONTRA A ELAEVA (quem matou o povo dela; LU27 [3], LU27b [4])",
+    "427 (noite): o rei ACEITOU a aliança contra a Elaeva antes de ouvir o preço; ela dá 20 lanças da guarda e a campeã MIE (150) à caçada (YV27a [1], YV27c [6]+2, YV27d [6]); o preço: uma ARMA Lendária ou melhor da forja do rei até o 487 (YV27b [1], YV27e [2]); o enviado é o YAVOR (80)"
    ],
    "prox": 441
   },
@@ -2534,6 +2535,22 @@
     "420: [4] quieta",
     "427: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 3"
    ]
+  },
+  {
+   "nome": "os Rendidos de Marasar",
+   "onde": "o Porto de Marasar e o cais de Ireviel",
+   "desde": 427,
+   "o_que": "os mercenários que se renderam em Marasar no 392 (um deles quis comprar os aros da Eliane); viraram companhia sem dono e querem os AROS DA ELIANE (o fio F7: o Garkunn ameaçou por eles)",
+   "estado": "viva",
+   "log": [
+    "427: nasce da rendição de Marasar (392) e da oferta pelos aros (a surpresa atrasada da Eliane, G8-C; gerador novidade [7]; EL27 [1])"
+   ],
+   "forca": 4,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1
   }
  ],
  "lugares": [

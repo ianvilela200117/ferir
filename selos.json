@@ -1,16 +1,5 @@
 {
  "ordem": [
-  "C401b",
-  "C401c",
-  "C401d",
-  "C401e",
-  "C401f",
-  "C401g",
-  "DN5",
-  "MW5",
-  "BX5",
-  "C402a",
-  "C402b",
   "C402c",
   "C402d",
   "EVq2",
@@ -399,339 +388,20 @@
   "NV27b",
   "EV27",
   "LU27",
-  "LU27b"
+  "LU27b",
+  "YV27a",
+  "YV27b",
+  "FC27a",
+  "FC27b",
+  "FC27c",
+  "YV27c",
+  "YV27d",
+  "YV27e",
+  "CL27",
+  "EL27",
+  "YV27f"
  ],
  "selos": {
-  "C401b": {
-   "id": "C401b",
-   "dia": 401,
-   "hora": "15:02:44",
-   "titulo": "O CONSELHO VOTA: OS DESCALÇOS DO CAIS: pedem perdão geral e a Carta de Passagem; dão os nomes de quem mandou roubar a Matriz",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) ACEITAR o trato inteiro · placar A 4 · B 2 · C 0 · VOTO VENCIDO: Nouliel, Eliane",
-     "txt": "VENCE A) ACEITAR o trato inteiro · placar A 4 · B 2 · C 0 · VOTO VENCIDO: Nouliel, Eliane"
-    }
-   ]
-  },
-  "C401c": {
-   "id": "C401c",
-   "dia": 401,
-   "hora": "15:02:45",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: O MALVEZZI (sargento vendido desde o 209; guiou os 90 pela poterna)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) MORTE em praça · placar A 3 · B 2 · C 0 · VOTO VENCIDO: Nouliel, Isolda",
-     "txt": "VENCE A) MORTE em praça · placar A 3 · B 2 · C 0 · VOTO VENCIDO: Nouliel, Isolda"
-    }
-   ]
-  },
-  "C401d": {
-   "id": "C401d",
-   "dia": 401,
-   "hora": "15:02:45",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: OS 81 HOMENS DO ARDENGHI (menos os da marca) e os 2 saqueadores",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) TRABALHO FORÇADO nas obras do reino (Farenta e Levis), cinco anos · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Tolvane, Sira, Isolda",
-     "txt": "VENCE A) TRABALHO FORÇADO nas obras do reino (Farenta e Levis), cinco anos · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Tolvane, Sira, Isolda"
-    }
-   ]
-  },
-  "C401e": {
-   "id": "C401e",
-   "dia": 401,
-   "hora": "15:03:10",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: OS 7 DA LIGA DE MARASAR (as casas que caíram no 392), o DOCINDONE (chefe da Guarda do Pedágio, paga pelo Ardenghi) e os dez dele",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE B) PRISÃO de todos e bens confiscados; resgate a quem pagar · placar A 2 · B 4 · C 0 · VOTO VENCIDO: Graur, Tolvane",
-     "txt": "VENCE B) PRISÃO de todos e bens confiscados; resgate a quem pagar · placar A 2 · B 4 · C 0 · VOTO VENCIDO: Graur, Tolvane"
-    }
-   ]
-  },
-  "C401f": {
-   "id": "C401f",
-   "dia": 401,
-   "hora": "15:03:10",
-   "titulo": "O CONSELHO VOTA: JULGAMENTO: O LADRÃO DA MATRIZ (dos Descalços) e o ESPIÃO DE STEUNN (do Borecci, que quer a Tilde morta)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE B) MORTE dos dois · placar A 0 · B 5 · C 1 · VOTO VENCIDO: Isolda",
-     "txt": "VENCE B) MORTE dos dois · placar A 0 · B 5 · C 1 · VOTO VENCIDO: Isolda"
-    }
-   ]
-  },
-  "C401g": {
-   "id": "C401g",
-   "dia": 401,
-   "hora": "15:03:11",
-   "titulo": "O CONSELHO VOTA: O REI QUER LEVAR INIMIGOS A ZERO: QUAL PRIMEIRO? (conselho só recomenda; a ordem é do rei)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) o SALVIO, em Qulosus, a 12 dias de mar, com 100 homens e 14.000 de ouro · placar A 1 · B 1 · C 4 · VOTO VENCIDO: Eliane, Nouliel",
-     "txt": "VENCE C) o SALVIO, em Qulosus, a 12 dias de mar, com 100 homens e 14.000 de ouro · placar A 1 · B 1 · C 4 · VOTO VENCIDO: Eliane, Nouliel"
-    }
-   ]
-  },
-  "DN5": {
-   "id": "DN5",
-   "dia": 401,
-   "hora": "15:03:11",
-   "titulo": "OS NOMES QUE OS DESCALÇOS DO CAIS DÃO: QUEM MANDOU ROUBAR A MATRIZ (noite do 394)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o ARDENGHI pagou; quem mandou o ladrão foi o chefe dos Descalços da estrada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ALMISION, pelo enviado dela em Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o BORECCI, pelo homem de Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o GARKUNN"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a ALMISION, pelo enviado dela em Ireviel",
-     "txt": "[4] → a ALMISION, pelo enviado dela em Ireviel"
-    }
-   ],
-   "hora_rolado": "15:03:11"
-  },
-  "MW5": {
-   "id": "MW5",
-   "dia": 401,
-   "hora": "15:03:11",
-   "titulo": "O MALVEZZI AO OUVIR A SENTENÇA DE MORTE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "oferece o que sabe para viver: onde o Ardenghi espera, e quantos"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "grita a dívida do Graur para a praça, que já sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "cala até o fim"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "grita a dívida do Graur para a praça, que já sabe",
-     "txt": "[4] → grita a dívida do Graur para a praça, que já sabe"
-    }
-   ],
-   "hora_rolado": "15:03:11"
-  },
-  "BX5": {
-   "id": "BX5",
-   "dia": 401,
-   "hora": "15:03:42",
-   "titulo": "O BORECCI AO SABER QUE O HOMEM DELE FOI MORTO EM IREVIEL POR SENTENÇA DO CONSELHO (ele acabou de desafiar o rei em público)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "Steunn esfria com o reino (relação −1): o morto tinha selo de escrivão da cidade"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "o Borecci nega que fosse dele; nada muda por fora"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "Steunn esfria com o reino (relação −1): o morto tinha selo de escrivão da cidade",
-     "txt": "[1] → Steunn esfria com o reino (relação −1): o morto tinha selo de escrivão da cidade"
-    }
-   ],
-   "hora_rolado": "15:03:42"
-  },
-  "C402a": {
-   "id": "C402a",
-   "dia": 402,
-   "hora": "18:39:53",
-   "titulo": "O CONSELHO VOTA: O REI PERGUNTA: QUAL INIMIGO ESTÁ MAIS FÁCIL DE EXTERMINAR AGORA? (o critério é a FACILIDADE; o Salvio, a 12 dias de mar, e a Almision, a Leliel e o Borecci, longe e grandes, ficam fora por consenso)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) a TORRE ACESA, nas torres mortas de Ireviel velha: dois magos, o Zesreth ferido; os da Cinza são famílias, não soldados · placar A 4 · B 0 · C 2 · VOTO VENCIDO: Nouliel, Tolvane",
-     "txt": "VENCE A) a TORRE ACESA, nas torres mortas de Ireviel velha: dois magos, o Zesreth ferido; os da Cinza são famílias, não soldados · placar A 4 · B 0 · C 2 · VOTO VENCIDO: Nouliel, Tolvane"
-    }
-   ]
-  },
-  "C402b": {
-   "id": "C402b",
-   "dia": 402,
-   "hora": "18:39:53",
-   "titulo": "O CONSELHO VOTA: A LUZ DO CAIS (o porto de Marasar): acendem velas para a luz que matou o Naudren (o Moreth) e pedem audiência",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) RECEBER e DAR LUGAR: uma capela no cais do rei, no Porto · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Eliane, Isolda",
-     "txt": "VENCE A) RECEBER e DAR LUGAR: uma capela no cais do rei, no Porto · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Eliane, Isolda"
-    }
-   ]
-  },
   "C402c": {
    "id": "C402c",
    "dia": 402,
@@ -18814,6 +18484,559 @@
     }
    ],
    "hora_rolado": "14:54:37"
+  },
+  "YV27a": {
+   "id": "YV27a",
+   "dia": 427,
+   "hora": "00:43:57",
+   "titulo": "O QUE A LURENTETTA DÁ NA ALIANÇA CONTRA A ELAEVA (o Yavor fala por ela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "SAL E PRATA: paga à casa por semana enquanto a aliança durar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "O SEGREDO DA ELAEVA: um rumor exato do que ela sabe da fera (fraqueza, lugar ou como a feriu)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ELA MESMA vem à caçada, ao lado do rei e da Mamiltia"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)",
+     "txt": "[1] → LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)"
+    }
+   ],
+   "hora_rolado": "00:43:57"
+  },
+  "YV27b": {
+   "id": "YV27b",
+   "dia": 427,
+   "hora": "00:43:57",
+   "titulo": "O PREÇO DA LURENTETTA (o rei aceitou antes de ouvir)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "A LIGA DO DELTA: o rei entrega a ela o que sobrar da Liga no Delta (presos e devedores da Leliel) e não cobra nada deles"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "PASSAGEM: as barcas dela sobem e descem o rio do reino sem portagem enquanto a aliança durar (passa pela Intendente)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "O CORAÇÃO DA FERA: o núcleo Mítico de Espinho da Elaeva fica com ela"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas",
+     "txt": "[1] → UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas"
+    }
+   ],
+   "hora_rolado": "00:43:57"
+  },
+  "FC27a": {
+   "id": "FC27a",
+   "dia": 427,
+   "hora": "00:43:57",
+   "titulo": "COMO O FACIO CAIU (NV27b [2])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "POBRE: perdeu a barca e a casa; dorme no cais"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "FERIDO: uma faca no lado, mal costurada"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "CAÇADO: alguém o quer morto (rola quem)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "POBRE: perdeu a barca e a casa; dorme no cais",
+     "txt": "[1] → POBRE: perdeu a barca e a casa; dorme no cais"
+    }
+   ],
+   "hora_rolado": "00:43:57"
+  },
+  "FC27b": {
+   "id": "FC27b",
+   "dia": 427,
+   "hora": "00:43:57",
+   "titulo": "O QUE O FACIO SABE DOS NOMES DO LIVRO (o que ele conta ao rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele mesmo vendeu, e só ele: vem confessar de novo e pedir para voltar para casa"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a lista não foi só dele: um SEGUNDO em Ireviel copiou o livro para a Liga (rola quem)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte",
+     "txt": "[5] → o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte"
+    }
+   ],
+   "hora_rolado": "00:43:57"
+  },
+  "FC27c": {
+   "id": "FC27c",
+   "dia": 427,
+   "hora": "00:43:57",
+   "titulo": "O FACIO DIZ A VERDADE?",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "MENTE (quer pão e abrigo e diz o que o rei quer ouvir)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 20,
+     "res": "diz a verdade"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      12
+     ],
+     "total": 12,
+     "res": "diz a verdade",
+     "txt": "[12] → diz a verdade"
+    }
+   ],
+   "hora_rolado": "00:43:57"
+  },
+  "YV27c": {
+   "id": "YV27c",
+   "dia": 427,
+   "hora": "00:44:57",
+   "titulo": "QUANTAS LANÇAS A LURENTETTA MANDA À CAÇADA DA ELAEVA (+2: a surpresa boa do saber do rei)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "10 lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "20 lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "30 lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 21,
+     "res": "50 lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "50 lanças e um barco de guerra do Delta"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 8,
+     "res": "20 lanças",
+     "txt": "[6] +2 = 8 → 20 lanças"
+    }
+   ],
+   "hora_rolado": "00:44:57"
+  },
+  "YV27d": {
+   "id": "YV27d",
+   "dia": 427,
+   "hora": "00:44:57",
+   "titulo": "DE QUE NÍVEL SÃO AS LANÇAS DA LURENTETTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "salineiros armados (nível 20 a 40)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "caçadores do Delta (nível 40 a 70)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a guarda dela (nível 80 a 110)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a guarda dela e um campeão (nível 150)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a guarda dela e um campeão (nível 150)",
+     "txt": "[6] → a guarda dela e um campeão (nível 150)"
+    }
+   ],
+   "hora_rolado": "00:44:57"
+  },
+  "YV27e": {
+   "id": "YV27e",
+   "dia": 427,
+   "hora": "00:44:57",
+   "titulo": "QUE PEÇA A LURENTETTA QUER DA FORJA DO REI (o preço, até o Dia 487)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma ARMA"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma ARMADURA"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "uma FERRAMENTA do ofício dela"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um FOCO de magia"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "uma ARMA",
+     "txt": "[2] → uma ARMA"
+    }
+   ],
+   "hora_rolado": "00:44:57"
+  },
+  "CL27": {
+   "id": "CL27",
+   "dia": 427,
+   "hora": "00:44:57",
+   "titulo": "COMO O CLIMA PIORA (a surpresa ruim do saber da Nouliel), noite do 427 em Ireviel",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o vento vira e traz fogo no capim seco da margem norte (alguém tem de apagar esta noite)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o calor não quebra: noite abafada, ninguém dorme direito (a cura da noite do 427, G4, vale a metade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)",
+     "txt": "[3] → trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)"
+    }
+   ],
+   "hora_rolado": "00:44:57"
+  },
+  "EL27": {
+   "id": "EL27",
+   "dia": 427,
+   "hora": "00:46:16",
+   "titulo": "A FACÇÃO NOVA QUE NASCE DE UM CONFLITO ANTIGO (a surpresa atrasada da ELIANE, G8-C; gerador novidade [7])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "os da MILÍCIA que ela reprovou no treino: viram irmandade e pedem voz na guarda"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)",
+     "txt": "[1] → os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)"
+    }
+   ],
+   "hora_rolado": "00:46:16"
+  },
+  "YV27f": {
+   "id": "YV27f",
+   "dia": 427,
+   "hora": "00:46:38",
+   "titulo": "QUE NÍVEL TEM O YAVOR, o enviado da Lurentetta (diplomata do Delta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 40"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 60"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 80"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 100"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "nível 80",
+     "txt": "[5] → nível 80"
+    }
+   ],
+   "hora_rolado": "00:46:38"
   }
  }
 }
