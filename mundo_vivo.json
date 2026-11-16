@@ -3223,6 +3223,15 @@
    "essencia": "Podridão",
    "onde": "Zythir, a sala 1",
    "nota": "gerador monstro (o nome Thuron trocado): o guarda da sala 1, da COLMEIA que obedece a uma rainha; MORTO no 436 pelo contra-golpe do Eiagrir"
+  },
+  {
+   "nome": "Huir",
+   "dia": "437",
+   "cat": "Épico",
+   "nivel": "78",
+   "essencia": "Espinho",
+   "onde": "Zythir, a sala 5",
+   "nota": "MORTO (437, pelo Moreth, na 1ª rodada, pego de surpresa) · gerador monstro (437; obras/zythir_sala5_guarda.txt e _resto.txt; o nome do gerador, Thuula, trocado): réptil do tamanho de uma torre, ESPINHO; muitas cabeças; devora metal; o golpe prende como raiz (CD 16, 12 m); fraco a FOGO e ao próprio nome; migrante (veio à tumba numa estação); sinal: árvores marcadas; drops nee ×30, yeviel ×60, núcleo Épico de Espinho; o tesouro do covil: nada (TC37 [2])"
   }
  ],
  "notas_ocultas": [

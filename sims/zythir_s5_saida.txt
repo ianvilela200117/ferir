@@ -1,0 +1,12 @@
+LEI DAS AÇÕES: Huir (nível 78) contra 3 · PV 1170/1170 · RD 10 · 5 ações · reação 2 · grupo: Ferir 3, Moreth 4, Eiagrir 3
+--- RODADA 1 · Huir 1170/1170
+  COVIL (a névoa podre da tumba) d6 [1]: respira
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 420; [[7], [9]]+34=50 vs 55 o alvo resiste: metade → 410 (760)
+  Ferir: [[2], [7]]+34=43 vs 55 erra
+  Ferir: [[14], [9]]+34=57 ACERTA [10]×3+10+31=71 − RD 10 = 61 (699)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 530; [[6], [8]]+44=58 vs 55 pega em cheio → 520 (179)
+  Moreth: [[16], [17]]+44=77 ACERTA [4]×3+15+46=73 − RD 10 = 63 (116)
+  Moreth: [[19], [10]]+44=73 ACERTA [10]×3+15+46=91 − RD 10 = 81 (35)
+  Moreth: [[7], [7]]+44=58 ACERTA [9]×3+15+46=88 − RD 10 = 78 (-43)
+  Huir CAI
+FIM: morto · rodadas 1 · mortos [] · PV -43/1170 · grupo {'Ferir': 84, 'Moreth': 600, 'Eiagrir': 270}

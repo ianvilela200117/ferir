@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 437, Zythir, a sala 4 (MOTOR 8: G1 a G22)
+# RETOMAR — manhã do Dia 437, Zythir, a sala 5 limpa (MOTOR 8: G1 a G22)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 437, ZYTHIR, a SALA 5 LIMPA: o guarda HUIR (Épico 78, Espinho; o nome do gerador, Thuula, trocado) morto na 1ª rodada pelo Moreth, pego de SURPRESA (o favor do eco); ninguém ferido; o rei 84/402; despojos nee 30, yeviel 60, núcleo Épico de Espinho; TC37 [2] o covil sem tesouro · à frente: a SALA 6 (TESOURO Único, G17: rolar pelo selo ao entrar), a 7 (ARMADILHA: passa sem dado, o favor do eco), a 8 (a RAINHA da colmeia, PERIGO Épico), a 9 (O CORAÇÃO: OCULTO, o rei TUIR vivo, e o guardião Único) · o eco de Tuir está no livro (npc.py, nível 160) · A CARTA DO TOLVANE dada à mesa no 437 (o Mestre a esqueceu no turno do 436): o Celocus não respondeu; mostrou HADUN à venda (OCULTO: pena do HUSGARN, servo do Skorval) · a saída para Farenta no amanhecer do 438 (Farenta ~443; OCULTO: a Elaeva chega às terras de Farenta no 444) · ERRO DO MESTRE corrigido no 437: a saída do gerador cortada (head -12); o resto (drops, comportamento, sinal) rolado uma vez pelo código do gerador (obras/zythir_sala5_guarda_resto.txt).
+
+Antes (a sala 4):
 Manhã do 437, ZYTHIR, a SALA 4 (a PASSAGEM escondida da 4 desce direto à 6; o FAVOR do eco gasto: a armadilha da 7 passa sem dado e o guarda da 5 é pego de SURPRESA, ele não age na 1ª rodada; masmorra.py ver Zythir tudo: a 4 é SEGREDO, a 5 PERIGO Épico, a 6 TESOURO Único, a 7 ARMADILHA (notar CD 23; 6d6 e uma condição), a 8 PERIGO Épico (a RAINHA da colmeia, pelo eco de Tuir), a 9 o CORAÇÃO: o prisioneiro (OCULTO: o próprio TUIR, vivo) com o guardião Único; +2 nos perigos da volta). O tick do 437 JÁ RODOU. O rei 84/402 (a ficha de combate agora tem o Gibão e o 'desfaz'); o Moreth 578, o Eiagrir 228 (sem noite completa de cura: conferir na G9); a Tigra (15), o cabo Gonde (30, o elmo) e os 10. A Eliane de cama em Levis até o 443. A saída a Farenta no 438 (OCULTO: a ELAEVA chega às terras de Farenta no 444). O eco de Tuir DEVE UM FAVOR ao rei.
 - OCULTOS: a ALMISION acordou a Elaeva e deu o nome do Adurel (a palavra da Mamiltia chega no 440) · a Groa passou a medida da Fornalha (o cobrador identificado) · o Odrum sócio da Moeda Velha no que a frota perdida deu · o Krothos tem 1 cria · as surpresas do Rio Vermelho e das Mães da Porta (consequência antiga) na fila da G8-C.
 - A ORDEM DO REI contra a revolta de Marasar chega a Ireviel no meio-dia do 434: a força do Graur (as 20 lanças, a guarda que pode sair, a Guilda e 1d6+4 magos da Chama da Hoste: rolar os números) sai à tarde e chega a Marasar no 435 (batalha.py; os Fiéis do Doge Velho, força 6) · o Facio vai com eles, para ser entregue à Skotha · a LEGITIMIDADE caiu a 9 (o rei passou por cima do voto do conselho).
@@ -190,8 +193,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (437, a sala 3): 1a a porta da sala 4 · 2a o favor do eco (o caminho seguro)
 - SG37 [2] a passagem que contorna a sala 5.
 
+## RESPONDIDO (437, a sala 4): 1b com condição: 'pergunte se conseguimos vencer fácil; se não, vamos ao tesouro'
+- TU37 [4] o eco é nível 160 · a régua OCULTA (sims/zythir_s5_regua.txt): o Huir morre em 100%, ninguém morre, o rei cai em 2% · o saber do eco (guerra média): 44 vs 25, GANHO: 'é fácil' e 'o golpe procura o mais fraco: o rei' · LH37 a luta: o Huir cai na 1ª rodada · TC37 [2] nada no covil.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. ZYTHIR, A SALA 4: a) a PASSAGEM escondida, direto à sala 6 (o tesouro), sem lutar com o guarda · b) a SALA 5: lutar com o guarda Épico (pego de SURPRESA pelo favor do eco; o coração dele é núcleo) e depois seguir à 6 · c) outra.
+1. ZYTHIR, A SALA 6 (o TESOURO): a) entrar, pegar o tesouro e sair hoje (Farenta no amanhecer do 438, como está) · b) entrar e seguir hoje: a 7 (o eco guia) e a RAINHA na 8 (com o rei a 84/402; se alguém sair ferido, a saída para Farenta atrasa) · c) outra.
+2. A CARTA DO TOLVANE (o Celocus calado e a carga de HADUN à venda em Lumade): a) o Tolvane compra uma amostra e descobre de onde vem a carga · b) o Tolvane pergunta ao Celocus, sem comprar · c) deixar quieto por ora.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

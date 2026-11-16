@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1216254,
+ "xp": 1217034,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -461,6 +461,24 @@
    "log": [
     "Dia 435: +1 436: o CORAÇÃO do Zyza (núcleo Épico de Podridão: serve para Mítica)"
    ]
+  },
+  "nee": {
+   "kg": 30.0,
+   "log": [
+    "Dia 437: +30 437: o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6"
+   ]
+  },
+  "yeviel": {
+   "kg": 60.0,
+   "log": [
+    "Dia 437: +60 437: o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia"
+   ]
+  },
+  "núcleo-épico-de-espinho": {
+   "kg": 1.0,
+   "log": [
+    "Dia 437: +1 437: o coração do Huir (serve de NÚCLEO para Mítico)"
+   ]
   }
  },
  "xp_log": [
@@ -504,7 +522,8 @@
   "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)",
   "Dia 428: +10000 428: a Couraça de Espinho do Moreth (MÍTICA; o teto do núcleo Único)",
   "Dia 428: SOBE ao 156",
-  "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)"
+  "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)",
+  "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

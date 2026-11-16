@@ -1,0 +1,8 @@
+(o resto do Huir, rolado no 437 pela correção do Mestre)
+comportamento: migrante: segue estações e rebanhos
+habitat: tumba
+sinal (Lei 15): árvores marcadas
+drops:
+  · pena ou pelo ×30: «mornar» (Épico, Espinho + Vento), serve para armadura: quem agarra o portador sangra 6
+  · sangue ou ícor ×60: «mordun» (Épico, Espinho), serve para ofício e poção: cresce: a peça se conserta 1 de durabilidade por dia
+  · CORAÇÃO: núcleo Épico de Espinho, serve de NÚCLEO para Mítico

@@ -1,0 +1,7 @@
+RÉGUA de 2000 lutas simuladas (sem valor de jogo; margem de ±2 pontos) · Huir (Épico 78) contra 3
+  desfecho: Huir MORRE 100%
+  duração: mediana 1 rodadas (de 1 a 1 em 8 de cada 10 lutas)
+  MORRE: ninguém, em nenhuma simulação
+  cai ou recua ferido: Ferir 2%
+  LEI DAS CAÇADAS (339, limite de 2% de morte para qualquer um dos nossos): o pior risco é 0.0% → DENTRO da lei
+  (régua gravada no envelope como OCULTO; não mostrar ao jogador sem a Visão do Tempo)

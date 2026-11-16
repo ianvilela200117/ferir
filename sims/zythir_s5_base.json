@@ -1,0 +1,31 @@
+{
+ "monstro": {
+  "nome": "Huir",
+  "cat": "Épico",
+  "nivel": 78,
+  "pv": 1170,
+  "df": 41,
+  "rd": 6,
+  "at": 31,
+  "dado": "2d10",
+  "mult": 5,
+  "acoes": 5,
+  "poder": {
+   "nome": "o golpe que prende como raiz (12 m)",
+   "tipo": "area_empurra",
+   "cd": 16
+  },
+  "moral": false,
+  "fraqueza": "Fogo",
+  "inteligente": false,
+  "covil": {
+   "nome": "a névoa podre da tumba",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": "ENVENENADO (G16)"
+  },
+  "nota": "gerador monstro (437; obras/zythir_sala5_guarda.txt; o nome do gerador, THUULA, bate no Thuron: trocado por HUIR, nomes.py montanhesa livre, o 1º; aspera não tinha nome livre): o guarda da sala 5 de Zythir; réptil do tamanho de uma torre, ESPINHO; muitas cabeças (+1 ataque: as ações da lei 4 + 1 = 5); devora metal (com 1 natural de quem o fere, a arma perde 1 categoria; o luta.py não rola isto: o Mestre lê os 1 na saída); o poder: o golpe prende como raiz (Força contra CD 16, 12 m; a cadência é a da lei do luta.py: Épico toda rodada); fraco a FOGO (dano dobrado e corta a regeneração) e, a descobrir, ao próprio nome; +2 no ataque e na Defesa (G14: a casa voltou à masmorra depois da noite); o COVIL da tumba (G13); SURPRESA (o favor do eco de Tuir: não age na 1ª rodada); guarda: não foge (moral false)"
+ },
+ "surpresa": true,
+ "grupo": []
+}

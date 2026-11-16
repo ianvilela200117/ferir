@@ -1,7 +1,5 @@
 {
  "ordem": [
-  "ENT15f",
-  "OLH1",
   "OLH2",
   "SUR15",
   "MAL1",
@@ -399,100 +397,11 @@
   "HZ37",
   "WZ37",
   "TZ37",
-  "SG37"
+  "SG37",
+  "TU37",
+  "TC37"
  ],
  "selos": {
-  "ENT15f": {
-   "id": "ENT15f",
-   "dia": 415,
-   "hora": "23:35:00",
-   "titulo": "FORTUNA DO REI (regra de mesa: o Mestre usa sozinho no objetivo da cena e no risco de morte; política: rerrola o dado que deu 7 ou menos): a ENTRADA EM LEVIS de novo, mesma tabela e mesmo bônus (+5); o dado novo fica, melhor ou pior",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 10,
-     "res": "VISTOS na porta: a recepção sabe que entraram e por onde; ela bate primeiro"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 18,
-     "res": "DENTRO sem alarme"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 1000000,
-     "res": "dentro, e um dos olhos da porta preso, que sabe onde é a espera"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 23,
-     "res": "dentro, e um dos olhos da porta preso, que sabe onde é a espera",
-     "txt": "[18] +5 = 23 → dentro, e um dos olhos da porta preso, que sabe onde é a espera"
-    }
-   ],
-   "hora_rolado": "23:35:00"
-  },
-  "OLH1": {
-   "id": "OLH1",
-   "dia": 415,
-   "hora": "23:35:12",
-   "titulo": "QUEM É O OLHO DA PORTA que a Isolda pegou",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um dos PAGOS do capitão ruivo (fala por medo ou por moeda)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "um do CULTO, de dente arrancado (fanático: o fim do mundo não o assusta)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um do CULTO, de dente arrancado (fanático: o fim do mundo não o assusta)",
-     "txt": "[4] → um do CULTO, de dente arrancado (fanático: o fim do mundo não o assusta)"
-    }
-   ],
-   "hora_rolado": "23:35:12"
-  },
   "OLH2": {
    "id": "OLH2",
    "dia": 415,
@@ -19568,6 +19477,110 @@
     }
    ],
    "hora_rolado": "15:10:37"
+  },
+  "TU37": {
+   "id": "TU37",
+   "dia": 437,
+   "hora": "15:27:26",
+   "titulo": "O NÍVEL DO ECO DO REI TUIR (o saber dele; um rei antigo preso vivo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "120"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "160"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "200"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "160",
+     "txt": "[4] → 160"
+    }
+   ],
+   "hora_rolado": "15:27:26"
+  },
+  "TC37": {
+   "id": "TC37",
+   "dia": 437,
+   "hora": "15:33:06",
+   "titulo": "O TESOURO DO COVIL DA SALA 5 DE ZYTHIR (G17; o Huir, Épico, morto na toca dele; degrau 3)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "nada além do bicho"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "MOEDA dos que ele comeu, 3 × 1d6 × 100"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 16,
+     "res": "MATERIAL (gerador material, Raro)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "uma PEÇA ANTIGA de quem morreu ali (Rara; tem história)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "as três coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nada além do bicho",
+     "txt": "[2] → nada além do bicho"
+    }
+   ],
+   "hora_rolado": "15:33:06"
   }
  }
 }

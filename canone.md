@@ -319,3 +319,5 @@ depois vira linha nova aqui.
 - (436-437) O elmo de guarda real ao cabo GONDE. Os arados de Levis prontos (Comida +1 até o 480 em Levis e em Ireviel). O chefe dos Fiéis achado morto no rio. ZYTHIR caiu numa guerra contra a PRIMEIRA LIGA; o rei TUIR mandou selar-se vivo para esperar que o reino o chamasse; o eco dele deve um favor ao rei e avisa da RAINHA da colmeia (a sala 8).
 
 - (437) O eco de Tuir paga o favor: guia a casa (a armadilha sem risco, o guarda da sala 5 de surpresa). Na sala 4, uma passagem escondida contorna o guarda e desce ao tesouro.
+
+- (437) Pelo saber do eco de Tuir, a casa lutou com o guarda da sala 5 de Zythir: o HUIR (Épico 78, réptil de muitas cabeças, Espinho), morto dormindo na primeira troca pelo Moreth; ninguém ferido; o núcleo Épico de Espinho, nee e yeviel. A carta do Tolvane: o Celocus não respondeu ao acordo grande e pôs à venda em Lumade uma carga de HADUN (pena Única de Podridão).

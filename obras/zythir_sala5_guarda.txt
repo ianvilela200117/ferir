@@ -1,0 +1,12 @@
+nome: Thuula
+categoria: Épico
+nível: 78
+corpo: réptil
+tamanho: torre
+essência: Espinho
+números: PV 1170 · Defesa 39 · RD 6 · ataque +29 · 1 ataque(s) por rodada · dano 2d10 × 5 · XP 780 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · muitas cabeças ou membros (+1 ataque por rodada)
+  · devora metal (com 1 natural de quem o fere, a arma perde 1 categoria)
+poder assinatura: o golpe prende como raiz (Força contra CD 16), em área de 12 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Fogo: dano dobrado e corta a regeneração · e mais uma, a descobrir: o próprio nome

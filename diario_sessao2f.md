@@ -1081,3 +1081,10 @@ O rei voltou com o dia claro lá fora e o mesmo escuro lá dentro. Na segunda sa
 A voz de Tuir andou com eles pelo escuro, uma pedra à frente, dizendo onde pisar. Na quarta sala havia um sarcófago vazio, e atrás dele uma fenda que descia em degraus, longe do lugar onde dormia o segundo guarda.
 
 - **Parada:** manhã do 437, a quarta sala. A fenda ou o guarda.
+
+### Zythir, a quinta sala, 437
+O rei perguntou à pedra se dava para vencer o guarda. A voz de Tuir demorou, como quem conta cabeças. "Dá. Ele dorme enrolado e acorda devagar." E depois, mais baixo: "Mas o golpe dele procura o mais fraco. Aqui, o mais fraco és tu." A sala era um poço redondo, e no fundo dormia um réptil do tamanho de uma torre, com mais cabeças do que se conseguia contar à luz da lanterna da Tigra. O Toque do rei o encontrou dormindo; a Lança do Sol do Moreth entrou pelo peito como um dia de verão; o Moreth desceu atrás dela com a maça. O bicho levantou duas cabeças e não chegou a levantar a terceira. No peito havia um coração verde-escuro, duro como raiz. No resto do poço, só os ossos dele.
+
+Na noite anterior, em Levis, tinha chegado a carta do Tolvane: o Celocus não respondeu ao acordo grande. Em vez disso, homens dele mostraram em Lumade uma carga de pena de hadun, Única, de Podridão, à venda.
+
+- **Parada:** manhã do 437, a quinta sala limpa. À frente, o tesouro.
