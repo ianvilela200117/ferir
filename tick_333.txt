@@ -1,0 +1,31 @@
+[14:39:25] Dia 333 · Pressão 2/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 333 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [1] hoje
+    nome: Orra
+    desejo: mandar em alguém
+    ambição (relógio de 4): conquistar terra
+    medo: a solidão
+    segredo: tem uma doença escondida
+    linha vermelha: nunca trai a família
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: GENEROSO e LEAL
+    nível: 180
+    obra sinistra (relógio de 8): acabar com uma raça ou fé
+    por que é humano: quer que o pai finalmente o veja
+    equipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: lei
+    o que o faria parar: perder quem ama
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 333
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Tamel (morto) → a casa da fundição (MEDO) d20 [6] nada visível
+    FAÍSCA: Eliane sonha com Seline, por causa de um núcleo de monstro
+    FAÍSCA: Orast pede ajuda a Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de fome
+    FAÍSCA: Krernos acusa em público Lasca e Miro (presos), por causa de uma terra além do mapa
+  AUDITORIA (XXIII.23, Dia 333): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

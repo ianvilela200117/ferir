@@ -1,0 +1,68 @@
+{
+ "terreno": "rio",
+ "nota": "400, a Visão do Tempo ao escurecer: SE o rei mandar sair agora. Os 90 do Ardenghi (qualidade 3, moral 3; o Malvezzi comanda: 5) no juncal além do braço leste; quem ataca atravessa o vau com água pela coxa (eles 'defendem' o rio) e, sem lua e no junco, a Marechal perde 2 de comando (9 → 7). A Mamiltia não sai dos muros da fundição (MMf). Régua, sem valor de jogo.",
+ "lados": {
+  "A": {
+   "nome": "a saída do rei",
+   "comando": 7,
+   "unidades": [
+    {
+     "nome": "as 32 lanças de Ireviel",
+     "homens": 32,
+     "qualidade": 4,
+     "moral": 4,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 15 da Companhia",
+     "homens": 15,
+     "qualidade": 4,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eliane",
+     "nivel": 95
+    },
+    {
+     "nome": "Moreth",
+     "nivel": 230
+    },
+    {
+     "nome": "Eiagrir",
+     "nivel": 123
+    },
+    {
+     "nome": "Hruthos",
+     "nivel": 88
+    },
+    {
+     "nome": "Starkald",
+     "nivel": 86
+    },
+    {
+     "nome": "Ferir",
+     "nivel": 143
+    }
+   ]
+  },
+  "B": {
+   "nome": "os 90 do Ardenghi no juncal",
+   "comando": 5,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "os homens do Ardenghi",
+     "homens": 90,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ },
+ "nome": "a saída ao juncal ao escurecer, COM o rei (Visão, 400)"
+}

@@ -1,0 +1,516 @@
+{
+ "reino": {
+  "nome": "Reino de Ireviel",
+  "rei": "FERIR, o Forjador (coroado no 293)",
+  "dia": 427,
+  "prestigio": 6,
+  "legitimidade": 10,
+  "conselho_real": {
+   "Tesoureira": "Nouliel",
+   "Marechal": "Eliane",
+   "Guarda do Reino": "Graur",
+   "Mestra dos Segredos": "Sira",
+   "Mestre das Águas": "Isolda (Mestra das Águas e capitã da galé, 329)",
+   "Mestre da Forja": "Herkald",
+   "O Colégio": "Thuron",
+   "Voz do Povo (eleita)": "Tolvane",
+   "Intendente": "Nouliel (também Tesoureira)"
+  },
+  "leis": [
+   "a Lei do Vaduar (a frio, dentro dos muros)",
+   "o Fundo dos Ofícios (P1)",
+   "a Casa dos Estudiosos (P2)",
+   "a Porta do Minério (P3)",
+   "O REI GOVERNA COM O CONSELHO (295; o reino não é autocracia; a Voz do Povo é eleita)",
+   "TUDO PASSA PELA INTENDENTE (a Nouliel, 322)",
+   "QUEM MANDA ESPIÃO A IREVIEL É INIMIGO DECLARADO E CAÇADO, sem exceção (323)",
+   "EXCEÇÃO (336): quem manda olhos por FÉ, e não por guerra, fica VIGIADO, não caçado",
+   "AS CAÇADAS DO REINO (339): toda semana a Marechal escolhe UM bicho a até 3 dias, pela régua; heróis na frente, a hoste aprende, os despojos à forja; se a régua der mais de 2% de morte a qualquer um dos nossos, não vai sem o rei"
+  ],
+  "relacoes": {
+   "a Doge Skotha (Marasar)": 3,
+   "o Clã Hegre": -2,
+   "Steunn": -1,
+   "os Do Junco (o Delta)": -2,
+   "a Escola Única (Almision)": 1,
+   "o Colégio": 4,
+   "a Leliel (o Norte; a Liga é dela)": -5,
+   "a Escola Única": -1
+  },
+  "log": [
+   "290: o reino nasce no papel: Ireviel e o Porto de Marasar",
+   "294: semana do reino; renda de fora do livro +450",
+   "293: FERIR COROADO REI DE IREVIEL; o conselho real (a confirmar pelo jogador)",
+   "295-296: a lei do conselho; o Thuron pelo Colégio; o Tolvane eleito Voz do Povo; o motim do porto acalmado",
+   "301: semana do reino; renda de fora do livro +600",
+   "308: semana do reino; renda de fora do livro +600",
+   "315: semana do reino; renda de fora do livro +700",
+   "322: semana do reino; renda de fora do livro +650",
+   "329: semana do reino; renda de fora do livro +800",
+   "332: LEVIS anexada ao Reino de Ireviel (o conselho confirmou); o governo espera o rei",
+   "336: PAZ com a Liga (Farenta e o norte); portagem das barcas da Liga no rio de Ireviel (+300 por semana)",
+   "336: CORREÇÃO (regra 14): a Mestra das Águas é a ISOLDA desde o 329 (o cânone tinha; o conselho_real seguia \"vago\")",
+   "336: semana do reino; renda de fora do livro +1000",
+   "343: semana do reino; renda de fora do livro +1000",
+   "339: o CONSELHO rompe a PAZ com a Liga (o agente do Girendino); aprova as CAÇADAS DO REINO (só com régua sem morte acima de 2%); manda a Oisse, 20 da hoste e grão a Levis; aprova a viagem do rei a LUMADE depois da Mamiltia",
+   "343: a semana do reino; renda das cidades +1.000; Do Junco −5; Colégio +3",
+   "346: a LELIEL toma as terras da Liga (Farenta e o norte)",
+   "347: o rei responde na praça ao panfleto do Ardenghi (extraordinário): legitimidade 9; o conselho manda a Nouliel e a Sira negociar com a Altheltia e aceita o Tuald como aprendiz",
+   "350: semana do reino; renda de fora do livro +1150",
+   "353: o pacote de Levis (−7.200; cinco mods; obra do portão e da muralha, 367) · 356: FARENTA TOMADA pela coalizão com a Mamiltia; a Leliel fugiu para o norte; o cofre de Farenta +8.000",
+   "357: semana do reino; renda de fora do livro +2100",
+   "364: semana do reino; renda de fora do livro +2150",
+   "371: semana do reino; renda de fora do livro +2300",
+   "378: semana do reino; renda de fora do livro +2350",
+   "384: legitimidade 9 → 8 (o rei chamou o Moreth por cima do voto do conselho (Z16))",
+   "385: semana do reino; renda de fora do livro +2350",
+   "387: prestigio 4 → 5 (Farenta livre: o rei expulsou a Floresta que Anda)",
+   "392: semana do reino; renda de fora do livro +2300",
+   "399: semana do reino; renda de fora do livro +2300",
+   "406: semana do reino; renda de fora do livro +2400",
+   "413: semana do reino; renda de fora do livro +2350",
+   "420: semana do reino; renda de fora do livro +2500",
+   "423: legitimidade 8 → 9 (julgamento ES23: o Nivis culpado, trabalho forçado no dique)",
+   "424: legitimidade 9 → 10 (julgamento EP24: os 7 de Eryssa à morte (a praça esperava))",
+   "427: semana do reino; renda de fora do livro +2050"
+  ],
+  "ultima_semana": 427
+ },
+ "cidades": [
+  {
+   "nome": "Ireviel",
+   "tipo": "capital",
+   "gente": 14000,
+   "pilares": {
+    "Comida": 3,
+    "Comércio": 4,
+    "Dinheiro": 4,
+    "Saúde": 3,
+    "Ordem": 3,
+    "Defesa": 1
+   },
+   "mods": {
+    "Comida": [
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ]
+    ],
+    "Comércio": [
+     [
+      3,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      -1,
+      "a festa da coroação já passou (era só da semana do 301)"
+     ]
+    ],
+    "Dinheiro": [
+     [
+      2,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      -1,
+      "420: a ENCHENTE no bairro dos refugiados; duas semanas"
+     ]
+    ],
+    "Saúde": [
+     [
+      3,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      -1,
+      "o Ouvald no porto de Marasar (295)"
+     ]
+    ],
+    "Ordem": [
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      1,
+      "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "420: a ENCHENTE no bairro dos refugiados (11 mortos); duas semanas"
+     ],
+     [
+      1,
+      "a RONDA: 10 lanças novas em Ireviel-baixa (423, enquanto a ronda durar)"
+     ]
+    ],
+    "Defesa": [
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      1,
+      "420: o leito de pedra do Mivor pronto: ele guarda o lado norte enquanto morar e receber o sal"
+     ]
+    ],
+    "Saude": [
+     [
+      1,
+      "AS CAIXAS DE FÍSICO montadas (as lâminas do rei; até o 480)"
+     ]
+    ]
+   },
+   "renda": {
+    "no_livro": true
+   },
+   "obras": [
+    {
+     "nome": "o bairro novo no alto da margem norte e o dique do bairro velho",
+     "custo": 4000,
+     "pronta": 442,
+     "efeito": "Saúde +1 e Ordem +1 de vez; o bairro velho não alaga mais (a comporta: uma noite do rei)"
+    },
+    {
+     "nome": "a Casa de Cura (o hospital), junto da enfermaria da rua do rio",
+     "custo": 3000,
+     "pronta": 449,
+     "efeito": "Saúde +1 de vez em Ireviel; feridos graves da casa curam em metade do tempo"
+    },
+    {
+     "nome": "a várzea nova: fazendas, valas e a primeira plantação na terra que a enchente adubou",
+     "custo": 2000,
+     "pronta": 451,
+     "efeito": "Comida +1 de vez em Ireviel; a sobra de grão vai a Marasar (Comida de Marasar +1 enquanto a várzea der)"
+    }
+   ],
+   "log": [
+    "294: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [16]",
+    "301: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [1]",
+    "308: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [17]",
+    "315: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [7]",
+    "322: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [6]",
+    "329: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [19]",
+    "336: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
+    "343: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [7]",
+    "350: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [5]",
+    "357: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]",
+    "364: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [20]",
+    "371: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [8]",
+    "378: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [1]",
+    "385: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [16]",
+    "392: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [16]",
+    "399: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [6]",
+    "406: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 3 · Defesa 4 · evento [12]",
+    "413: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [9]",
+    "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 4 · Defesa 2 · evento [1]",
+    "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]"
+   ],
+   "obras_feitas": [
+    {
+     "nome": "a Casa da Guilda dos Aventureiros",
+     "custo": 1200,
+     "pronta": 412,
+     "efeito": "abre a GUILDA DOS AVENTUREIROS (mestre: o Starkald): missões privadas e da cidade (núcleos e materiais para a forja); regra G1"
+    },
+    {
+     "nome": "o leito de pedra do Mivor, no corte da margem alta ao norte",
+     "custo": 1500,
+     "pronta": 420,
+     "efeito": "o Mivor fica depois da chuva e guarda o lado norte; Defesa +1 (mod) enquanto morar e receber o sal"
+    }
+   ]
+  },
+  {
+   "nome": "o Porto de Marasar",
+   "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
+   "gente": 3000,
+   "pilares": {
+    "Comida": 2,
+    "Comércio": 1,
+    "Dinheiro": 4,
+    "Saúde": 4,
+    "Ordem": 4,
+    "Defesa": 4
+   },
+   "mods": {
+    "Comida": [
+     [
+      1,
+      "a comida de Ireviel (295)"
+     ],
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      1,
+      "423: as duas barcas de grão de Ireviel, até o 436"
+     ],
+     [
+      -1,
+      "clima: 5 dias de tempestade (até o 433)"
+     ]
+    ],
+    "Comércio": [
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ],
+     [
+      -1,
+      "315: a ROTA DA COSTA fechada (os bichos que a Isessir junta), enquanto fechada"
+     ],
+     [
+      -1,
+      "clima: 5 dias de tempestade (barco parado) (até o 433)"
+     ]
+    ],
+    "Saúde": [
+     [
+      1,
+      "o Ouvald (295)"
+     ],
+     [
+      -1,
+      "o Ouvald foi para Levis (397, voto do conselho)"
+     ]
+    ],
+    "Ordem": [
+     [
+      1,
+      "a hoste no porto (295)"
+     ],
+     [
+      1,
+      "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "pão caro: grão a 174 (até o 433)"
+     ]
+    ],
+    "Defesa": [
+     [
+      1,
+      "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
+     ]
+    ]
+   },
+   "renda": {
+    "base": 300,
+    "custo": 250
+   },
+   "obras": [],
+   "log": [
+    "294: Comida 1 · Comércio 2 · Dinheiro 1 · Saúde 1 · Ordem 0 · Defesa 3 · evento [4]",
+    "pilar Ordem → 1 (o motim acalmado pela hoste e a comida (295))",
+    "301: Comida 0 · Comércio 3 · Dinheiro 1 · Saúde 2 · Ordem 2 · Defesa 3 · evento [17]",
+    "308: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 2 · Ordem 2 · Defesa 4 · evento [3]",
+    "315: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 2 · Ordem 2 · Defesa 4 · evento [19]",
+    "322: Comida 3 · Comércio 2 · Dinheiro 3 · Saúde 1 · Ordem 2 · Defesa 4 · evento [2]",
+    "329: Comida 4 · Comércio 3 · Dinheiro 3 · Saúde 2 · Ordem 3 · Defesa 4 · evento [5]",
+    "336: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 4 · evento [4]",
+    "343: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 1 · Defesa 4 · evento [3]",
+    "350: Comida 4 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]",
+    "357: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]",
+    "364: Comida 4 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 3 · evento [4]",
+    "371: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [1]",
+    "378: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [6]",
+    "385: Comida 3 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [5]",
+    "392: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [4]",
+    "399: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
+    "pilar Comércio → 2 (a greve do Cais de Baixo quebrada (GR [14], 399))",
+    "406: Comida 3 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [20]",
+    "413: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
+    "420: Comida 1 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
+    "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]"
+   ]
+  },
+  {
+   "nome": "Levis",
+   "tipo": "cidade (tomada da Liga no 332; anexada pelo conselho)",
+   "gente": 9000,
+   "pilares": {
+    "Comida": 2,
+    "Comércio": 3,
+    "Dinheiro": 4,
+    "Saúde": 2,
+    "Ordem": 1,
+    "Defesa": 4
+   },
+   "mods": {
+    "Ordem": [
+     [
+      1,
+      "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "416: a ala do cais do Xaathis leu os doze na muralha como guerra ao culto inteiro (LV16 3); duas semanas"
+     ],
+     [
+      1,
+      "a RONDA: 10 lanças em Levis-baixa (427, enquanto a ronda durar)"
+     ]
+    ],
+    "Comida": [
+     [
+      -1,
+      "o colapso da Liga"
+     ]
+    ],
+    "Comércio": [
+     [
+      1,
+      "o rio aberto até o mar (332)"
+     ],
+     [
+      1,
+      "409: a Casa dos Mineiros (G2)"
+     ]
+    ],
+    "Saúde": [
+     [
+      1,
+      "o Ouvald e o remédio chegaram (405; voto C397c)"
+     ]
+    ],
+    "Defesa": [],
+    "Dinheiro": [
+     [
+      -1,
+      "o comércio sente: algo enorme acordou perto de Levis e quebrou um caminho (423; até o 437)"
+     ],
+     [
+      -1,
+      "a LIGA sobe o frete do rio para Levis depois que a correnteza virou uma caravana de Levis (426; até o 440)"
+     ]
+    ],
+    "Saude": [
+     [
+      1,
+      "G2: duas semanas depois de fechadas as minas de cima (423)"
+     ]
+    ]
+   },
+   "renda": {
+    "base": 400,
+    "custo": 350
+   },
+   "obras": [],
+   "log": [
+    "332: tomada pela coalizão; anexada; a casa manda comida (−400 por semana enquanto a Comida estiver abaixo de 2)",
+    "335: a Brara governadora",
+    "336: Comida 2 · Comércio 2 · Dinheiro 0 · Saúde 2 · Ordem 0 · Defesa 1 · evento [17]",
+    "343: Comida 2 · Comércio 2 · Dinheiro 0 · Saúde 2 · Ordem 1 · Defesa 1 · evento [12]",
+    "350: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 2 · Ordem 0 · Defesa 0 · evento [5]",
+    "357: Comida 3 · Comércio 4 · Dinheiro 0 · Saúde 1 · Ordem 0 · Defesa 1 · evento [17]",
+    "364: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 1 · Ordem 1 · Defesa 2 · evento [14]",
+    "371: Comida 4 · Comércio 4 · Dinheiro 1 · Saúde 2 · Ordem 2 · Defesa 2 · evento [16]",
+    "378: Comida 4 · Comércio 3 · Dinheiro 2 · Saúde 2 · Ordem 3 · Defesa 2 · evento [7]",
+    "371: OBRA PRONTA o portão e a muralha → Defesa +1 de vez",
+    "385: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 2 · Ordem 3 · Defesa 4 · evento [11]",
+    "392: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 1 · Ordem 2 · Defesa 4 · evento [1]",
+    "399: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 2 · Defesa 4 · evento [14]",
+    "406: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 1 · Ordem 2 · Defesa 3 · evento [14]",
+    "413: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 1 · Ordem 2 · Defesa 3 · evento [7]",
+    "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 2 · Defesa 4 · evento [17]",
+    "427: Comida 2 · Comércio 3 · Dinheiro 4 · Saúde 2 · Ordem 1 · Defesa 4 · evento [10]"
+   ],
+   "governo": "a BRARA, governadora (335; o Teraseth recusou)",
+   "obras_feitas": [
+    {
+     "nome": "o portão e a muralha",
+     "custo": 2500,
+     "pronta": 367,
+     "efeito": "Defesa +1 de vez"
+    },
+    {
+     "nome": "a Casa dos Mineiros",
+     "custo": 800,
+     "pronta": 409,
+     "efeito": "abre a GUILDA DOS MINEIROS (forma C: só as minas de baixo, o ferro): 2d6×10 kg de ferro por semana; regra G2"
+    }
+   ]
+  },
+  {
+   "nome": "Farenta",
+   "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
+   "gente": 10000,
+   "pilares": {
+    "Comida": 4,
+    "Comércio": 4,
+    "Dinheiro": 3,
+    "Saúde": 3,
+    "Ordem": 4,
+    "Defesa": 4
+   },
+   "mods": {
+    "Ordem": [
+     [
+      1,
+      "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "a BOTICA VELHA fechou com um vizinho uma terra que era de Farenta; um homem do Tirello morto lá (426; até o 440)"
+     ]
+    ],
+    "Dinheiro": [],
+    "Comércio": [
+     [
+      1,
+      "o porto aberto ao reino (357)"
+     ]
+    ],
+    "Comida": [
+     [
+      -1,
+      "clima: 4 dias de tempestade (até o 433)"
+     ]
+    ],
+    "Saúde": [],
+    "Defesa": []
+   },
+   "renda": {
+    "base": 350,
+    "custo": 300
+   },
+   "obras": [],
+   "log": [
+    "356: tomada pela coalizão (nenhum bairro queimado); 357: anexada pelo conselho [12]+2; gente 10.000 [4]; pilares rolados [1][4][1][1][4][1] − 1",
+    "357: Comida 1 · Comércio 4 · Dinheiro 0 · Saúde 0 · Ordem 3 · Defesa 0 · evento [2]",
+    "360: o pacote do rei −7.200 (como Levis)",
+    "361: a ordem de esvaziar (a Elaeva chega no 382): sai em ondas até o 381, por mar e pela estrada; −2.500",
+    "364: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 0 · Ordem 3 · Defesa 0 · evento [3]",
+    "371: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 1 · Ordem 3 · Defesa 1 · evento [6]",
+    "378: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 2 · Ordem 4 · Defesa 2 · evento [4]",
+    "385: Comida 4 · Comércio 4 · Dinheiro 1 · Saúde 1 · Ordem 4 · Defesa 3 · evento [7]",
+    "392: Comida 4 · Comércio 4 · Dinheiro 1 · Saúde 1 · Ordem 4 · Defesa 3 · evento [6]",
+    "399: Comida 4 · Comércio 4 · Dinheiro 0 · Saúde 1 · Ordem 3 · Defesa 4 · evento [16]",
+    "406: Comida 4 · Comércio 4 · Dinheiro 1 · Saúde 2 · Ordem 3 · Defesa 4 · evento [17]",
+    "pilar Saúde → 3 (408: o lazareto novo e os poços limpos ficaram prontos)",
+    "pilar Dinheiro → 2 (408: a alfândega e a casa de câmbio do porto ficaram prontas)",
+    "413: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [20]",
+    "420: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
+    "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]"
+   ],
+   "governo": "o TIRELLO (o conselho, 357)",
+   "obras_feitas": [
+    {
+     "nome": "o lazareto novo e os poços limpos",
+     "custo": 2500,
+     "pronta": 408,
+     "efeito": "Saúde +1 de vez (o Mestre sobe o pilar quando ficar pronta)"
+    },
+    {
+     "nome": "a alfândega e a casa de câmbio do porto",
+     "custo": 2500,
+     "pronta": 408,
+     "efeito": "Dinheiro +1 de vez (o Mestre sobe o pilar quando ficar pronta)"
+    }
+   ]
+  }
+ ]
+}

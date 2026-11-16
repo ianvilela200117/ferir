@@ -1,0 +1,15 @@
+[01:30:08] Dia 376 · Pressão 5/5 · evento local 1d20 [3] -> nada
+  avistamento de monstro 1d20 [16] -> nenhum
+  EVENTO DE MUNDO 1d20 [20] SURPRESA (gerador novidade) · encadeamento 1d20 [5] Preço · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 376 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]
+    ONDE: d27 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 376
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [10] nada visível
+    FAÍSCA: Aeliae inveja a cantora do templo, por causa de um feitiço proibido
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus rouba de Qunemneth, o Médico Cinzento, por causa de uma dívida antiga
+    FAÍSCA: Braeth (o ancião do Clã) inveja Leliel, por causa de fome

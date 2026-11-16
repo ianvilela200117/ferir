@@ -1,0 +1,187 @@
+{
+ "monstro": {
+  "nome": "Morek",
+  "cat": "Único",
+  "nivel": 122,
+  "pv": 2440,
+  "pv_atual": 2414,
+  "df": 55,
+  "rd": 12,
+  "at": 45,
+  "dado": "2d10",
+  "mult": 10,
+  "poder": {
+   "nome": "o golpe que prende como raiz (15 m)",
+   "tipo": "area_empurra",
+   "cd": 20
+  },
+  "moral": true,
+  "fraqueza": "Fogo",
+  "reflete": true
+ },
+ "grupo": [
+  {
+   "nome": "Ferir",
+   "nivel": 154,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 398,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": false,
+   "essencia": "Vento",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo)",
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
+     "dano": "24d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO"
+  },
+  {
+   "nome": "Moreth",
+   "nivel": 231,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo)"
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 124,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica)"
+  },
+  {
+   "nome": "Isolda",
+   "nivel": 116,
+   "at": 34,
+   "dado": "1d8",
+   "mult": 3,
+   "b": 10,
+   "df": 40,
+   "rd": 6,
+   "pv": 300,
+   "vigor": 14,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o gorjal Primordial, rende Lendário ×5; 2x por cena)",
+     "dano": "24d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    }
+   ],
+   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde"
+  },
+  {
+   "nome": "Starkald",
+   "nivel": 87,
+   "at": 24,
+   "df": 32,
+   "rd": 4,
+   "pv": 230,
+   "dado": "1d8",
+   "mult": 3.0,
+   "b": 9,
+   "pecas": "(nenhuma peça com feitiço registrada)"
+  },
+  {
+   "nome": "Goir",
+   "nivel": 46,
+   "at": 16,
+   "df": 24,
+   "rd": 3,
+   "pv": 130,
+   "dado": "1d8",
+   "mult": 2.0,
+   "b": 5,
+   "pecas": "(nenhuma peça com feitiço registrada)"
+  }
+ ],
+ "nota": "REAL, REFEITA NO 426 (a LM25 anulada: fichas erradas). Mesmo amanhecer do 425: SU25 [5] o Morek acordado; TR25 a vala: 2414/2440. Fichas conferidas pela G9: o Toque do gorjal da Isolda; a Chuva de Brasas do rei (fogo, 7 por dia) e a da Espada do Moreth; os feitiços desde a 1ª rodada. A raiz prende o rei (prende, não empurra). Não modelado: a doença (rola depois), a Fortuna do rei."
+}

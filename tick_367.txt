@@ -1,0 +1,14 @@
+[22:25:03] Dia 367 · Pressão 1/5 · evento local 1d20 [9] -> um estrangeiro pergunta pela fundição
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 367 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d27 [23] Zaitor (terra nova)
+    A NOTÍCIA: [5] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 367
+    Lendários: d20 [13] quietos hoje
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → os Jurados de Steunn (RESSENTIMENTO) d20 [8] nada visível
+    FAÍSCA: Eiundunn deve a vida a Messa Tiracci, por causa de dinheiro da Liga
+    FAÍSCA: Braeth (o ancião do Clã) vai trair Nouse, por causa de um feitiço proibido
+    FAÍSCA: Skotha Graskur rouba de Teraseth, por causa de uma criança

@@ -1,0 +1,14 @@
+[12:33:31] Dia 359 · Pressão 3/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 359 (dia)
+    d20 [14] FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)
+    ONDE: d27 [23] Zaitor (terra nova)
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 359
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Hrotgar → Orast (PAIXÃO PROIBIDA) d20 [3] nada visível
+    FAÍSCA: Nouse salva Xaysress, por causa de uma receita perdida
+    FAÍSCA: Seline foge de Xaysress, por causa de um núcleo de monstro
+    FAÍSCA: Garkunn salva Grerkur, por causa de uma peça Lendária roubada

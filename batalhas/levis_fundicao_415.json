@@ -1,0 +1,73 @@
+{
+ "nome": "A FUNDIÇÃO VELHA DO ARDENGHI, LEVIS-BAIXA (noite do 415, tempestade)",
+ "terreno": "rua",
+ "nota": "REAL. ENT15f 23 (Fortuna), OLH2 13, SUR15 [2]: sem surpresa; a espera defende a fundição e as ruas do culto. A unidade 'o rei e os quatro' existe só porque o script pede uma unidade por lado: se ela perder um homem, um dos cinco cai (d5 quem; feridos.py).",
+ "lados": {
+  "A": {
+   "nome": "o rei e os quatro",
+   "comando": 6,
+   "unidades": [
+    {
+     "nome": "o rei e os quatro",
+     "homens": 5,
+     "qualidade": 6,
+     "moral": 6,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Ferir",
+     "nivel": 152
+    },
+    {
+     "nome": "Moreth",
+     "nivel": 231
+    },
+    {
+     "nome": "Eiagrir",
+     "nivel": 123
+    },
+    {
+     "nome": "Isolda",
+     "nivel": 115
+    },
+    {
+     "nome": "Hruthos",
+     "nivel": 89
+    }
+   ]
+  },
+  "B": {
+   "nome": "a espera do Ardenghi",
+   "comando": 5,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "os 40 do dente (o culto)",
+     "homens": 40,
+     "qualidade": 2,
+     "moral": 5,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 15 pagos do ruivo",
+     "homens": 15,
+     "qualidade": 3,
+     "moral": 2,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "o capitão ruivo",
+     "nivel": 62
+    },
+    {
+     "nome": "o sacerdote do Xaathis",
+     "nivel": 72
+    }
+   ]
+  }
+ }
+}

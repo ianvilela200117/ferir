@@ -1,0 +1,16 @@
+[11:05:58] Dia 306 · Pressão 5/5 · encontro de estrada 1d20 [11] -> nada
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d6 [3] Irasa
+  EVENTO DE MUNDO 1d20 [3] Colapso econômico · encadeamento 1d20 [10] Herói local · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 306 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [4]
+    ONDE: d25 [22] Kasra (terra nova)
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 306
+    um Lendário age (d20 [3]):
+    Eiandald (fé, Yaelane) d20 [3] recruta: gente, uma facção ou um monstro passa para o lado dele · notícia d20 [16] chega no dia 308
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [13] nada visível
+    FAÍSCA: Nouse desafia para duelo Qunemneth, o Médico Cinzento, por causa de um núcleo de monstro
+    FAÍSCA: Kasgal foge de Isolda, por causa de um núcleo de monstro
+    FAÍSCA: a Guardiã da Tenaz deve a vida a a cantora do templo, por causa de um feitiço proibido

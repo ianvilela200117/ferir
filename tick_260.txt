@@ -1,0 +1,21 @@
+[23:10:58] Dia 260 · Pressão 4/5 · encontro de estrada 1d20 [4] -> encontro na estrada
+  avistamento de monstro 1d20 [16] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 260 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d23 [20] Steunn
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    nome: Gorvil
+    o que era: forte
+    por que caiu: dívida
+    o que guarda: um núcleo
+    o que habita: bandidos
+    custo de entrar: uma senha
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 260
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Ithra quer casar com o Doge Pelaone, por causa de vaduar
+    FAÍSCA: Skedda encomenda uma peça para Graur, por causa de sal
+    FAÍSCA: Skotha Graskur salva Ithra, por causa de um título

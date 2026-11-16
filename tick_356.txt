@@ -1,0 +1,16 @@
+[10:41:10] Dia 356 · Pressão 5/5 · encontro de estrada 1d20 [6] -> encontro na estrada
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO 1d20 [9] Casamento ou aliança de casas · encadeamento 1d20 [11] Mercado reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 356 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 356
+    um Lendário age (d20 [7]):
+    Eiandald (fé, Yaelane) d20 [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado · notícia d20 [3] chega hoje
+    trama do dia: Hrotgar → Orast (PAIXÃO PROIBIDA) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Xaysress pede ajuda a Brara, por causa de a Matriz
+    FAÍSCA: Brara quer casar com Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308), por causa de vaduar
+    FAÍSCA: Brara ama em segredo Hrotgar, por causa de a coberta do mundo

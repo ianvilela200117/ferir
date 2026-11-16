@@ -1,0 +1,16 @@
+[00:46:31] Dia 281 · Pressão 5/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [11] -> nenhum
+  EVENTO DE MUNDO 1d20 [3] Colapso econômico · encadeamento 1d20 [12] Fé reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 281 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d24 [19] Yaelane
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 281
+    um Lendário age (d20 [3]):
+    Almision (magia, a estrada (com o corvo)) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [3] nada visível
+    FAÍSCA: Almision encomenda uma peça para Ithra, por causa de uma criança
+    FAÍSCA: Messa Tiracci desafia para duelo Skedda, por causa de um mapa
+    FAÍSCA: Nouse descobre o segredo de Ceduion, reitor do Colégio de Telosus, por causa de uma receita perdida

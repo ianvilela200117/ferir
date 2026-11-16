@@ -1,0 +1,16 @@
+[09:24:55] Dia 298 · Pressão 2/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 298 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [2]
+    ONDE: d25 [16] as Montanhas de Fogo
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 298
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [7] nada visível
+    FAÍSCA: Messa Tiracci inveja Pelaccino (preso), por causa de o perdão
+    FAÍSCA: Teraseth chantageia Kreine (da casa), por causa de um feitiço proibido
+    FAÍSCA: Dovan oferece aliança a Tamel (morto), por causa de um mapa
+  AUDITORIA (XXIII.23, Dia 298): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

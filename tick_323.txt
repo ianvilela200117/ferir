@@ -1,0 +1,26 @@
+[14:15:13] Dia 323 · Pressão 2/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 323 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [25] Ulra (terra nova)
+    A NOTÍCIA: [5] em 1d6 [3] dias
+    nome: Culto da Draol
+    adora: um monstro Mítico adormecido
+    promete: vida eterna
+    sinal: dente arrancado
+    células: 4 cidades
+    líder: nível 90, classe Rara a Lendária
+    rito: queima de livros
+    plano (relógio de 6): matar um herdeiro
+    fraqueza: dependem de um material
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 323
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [12] nada visível
+    FAÍSCA: Xaysress encomenda uma peça para Venne (morto), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Ulurve chantageia Almision, por causa de fome
+    FAÍSCA: a Guardiã da Tenaz descobre o segredo de Tano (carregador, primo da Caciccetta), por causa de um título
+  AUDITORIA (XXIII.23, Dia 323): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

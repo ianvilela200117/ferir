@@ -1,0 +1,87 @@
+LEI DAS AÇÕES: Morek (nível 122) contra 6 · PV 2414/2440 · RD 15 · 5 ações · reação 2 · grupo: Ferir 3, Moreth 4, Eiagrir 3, Isolda 2, Starkald 2, Goir 1
+INICIATIVA: Morek 2d20+12 = 32 × o grupo 2d20+12 (média) = 30 → Morek AGE PRIMEIRO
+--- RODADA 1 · Morek 2414/2440
+  PODER: o golpe que prende como raiz (15 m)
+    Moreth: segura (54)
+    Eiagrir: segura (35)
+    Isolda: segura (36)
+    Starkald: segura (60)
+    ataque em Starkald: [[16], [9]]+45=70 vs 46 ACERTA [1, 10]×10+0+24=134 − RD 4 = 130 (100)
+    ataque em Goir: [[5], [9]]+45=59 vs 38 ACERTA [4, 4]×10+0+24=104 − RD 3 = 101 (29)
+    ataque em Eiagrir: [[13], [4]]+45=62 vs 56 ACERTA [5, 7]×10+0+24=144 − RD 8 = 136 (284)
+    ataque em Ferir: [[7], [3]]+45=55 vs 59 erra
+--- RODADA 2 · Morek 2414/2440
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 475; [[18], [15]]+34=67 vs 69 o alvo resiste: metade → 460 (1954)
+  Ferir: [[9], [7]]+34=50 vs 69 erra
+  Ferir: [[19], [8]]+34=61 vs 69 erra
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 250; [[4], [6]]+44=54 vs 69 o alvo resiste: metade → 235 (1719)
+  Moreth: [[16], [15]]+44=75 ACERTA [4]×3+15+46=73 − RD 15 = 58 (1661)
+  Moreth: [[9], [8]]+44=61 vs 69 erra
+  Moreth: [[13], [15]]+44=72 ACERTA [5]×3+15+46=76 − RD 15 = 61 (1600)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 100; [[3], [15]]+36=54 vs 69 o alvo resiste: metade → 85 (1515)
+  Eiagrir: [[5], [3]]+36=44 vs 68 erra
+  Eiagrir: [[12], [20, 14]]+36=82 ACERTA CRÍTICO [4, 3, 7]×3+12+24=78 − RD 7 = 71 (1444)
+  REAÇÃO:
+    ataque em Eiagrir: [[8], [3]]+45=56 vs 56 ACERTA [1, 2]×10+0+24=54 − RD 8 = 46 (238)
+  Isolda lança TOQUE DO CEIFADOR (o gorjal Primordial, rende Lendário ×5; 2x por cena): 210; [[4], [5]]+34=43 vs 69 o alvo resiste: metade → 195 (1249)
+  Isolda: [[11], [14]]+34=59 vs 66 erra
+  Starkald: [[9], [13]]+24=46 vs 65 erra
+  Starkald: [[10], [17]]+24=51 vs 64 erra
+  Goir: [[4], [2]]+16=22 vs 63 erra
+  PODER: o golpe que prende como raiz (15 m)
+    Ferir: Agilidade 16 vs 20 → CAI (−6, 392)
+    Moreth: segura (43)
+    Goir: Agilidade 25 vs 20 → CAI (−9, 20)
+    ataque em Starkald: [[7], [2]]+45=54 vs 46 ACERTA [9, 8]×10+0+24=194 − RD 4 = 190 (-90)
+    Starkald MORRE (dano maciço)
+    ataque em Isolda: [[3], [3]]+45=51 vs 54 erra
+    ataque em Isolda: [[9], [20, 13]]+45=87 vs 54 ACERTA [2, 8]×10+0+24=124 − RD 6 = 118 (182)
+    ataque em Isolda: [[14], [18]]+45=77 vs 53 ACERTA [6, 8]×10+0+24=164 − RD 6 = 158 (24)
+--- RODADA 3 · Morek 1249/2440
+  Ferir volta
+  Moreth lança CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO): 135; [[13], [9]]+44=66 vs 69 o alvo resiste: metade → 240 (1009)
+  Moreth: [[17], [11]]+44=72 ACERTA [10]×3+15+46=91 − RD 15 = 76 (933)
+  Moreth: [[2], [16]]+44=62 vs 69 erra
+  Moreth: [[12], [18]]+44=74 ACERTA [6]×3+15+46=79 − RD 15 = 64 (869)
+  Eiagrir: [[11], [16]]+36=63 vs 69 erra
+  Eiagrir: [[3], [11]]+36=50 vs 69 erra
+  Eiagrir: [[3], [2]]+36=41 vs 68 erra
+  Isolda: [[18], [20, 2]]+34=74 ACERTA CRÍTICO [1, 4, 3]×3+10+23=57 − RD 7 = 50 (819)
+  REAÇÃO:
+    ataque em Isolda: [[15], [18]]+45=78 vs 54 ACERTA [1, 10]×10+0+24=134 − RD 6 = 128 (-104)
+    Isolda CAI DESACORDADO
+  Goir volta
+  FÚRIA: +1 ação, o poder recarrega
+  PODER: o golpe que prende como raiz (15 m)
+    Moreth: segura (34)
+    Eiagrir: Agilidade 25 vs 20 → CAI (−7, 231)
+    ataque em Ferir: [[2], [19]]+45=66 vs 59 ACERTA [5, 10]×10+0+24=174 − RD 10 = 164 (228)
+    ataque em Goir: [[10], [12]]+45=67 vs 38 ACERTA [3, 5]×10+0+24=104 − RD 3 = 101 (-81)
+    Goir MORRE (dano maciço)
+    GOLPE QUE VARRE: segue no próximo
+    ataque em Moreth: [[1], [5]]+45=51 vs 64 erra
+    ataque em Ferir: [[10], [3]]+45=58 vs 59 erra
+    ataque em Ferir: [[16], [7]]+45=68 vs 59 ACERTA [8, 2]×10+0+24=124 − RD 10 = 114 (114)
+    ataque em Moreth: [[10], [11]]+45=66 vs 64 ACERTA [4, 5]×10+0+24=114 − RD 8 = 106 (494)
+  teste de morte de Isolda: [16] vs 12 (1 sucessos, 0 falhas)
+--- RODADA 4 · Morek 819/2440
+  Ferir lança CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO): 165; [[5], [18]]+34=57 vs 69 o alvo resiste: metade → 300 (519)
+  Ferir: [[2], [18]]+34=54 vs 69 erra
+  Ferir: [[3], [6]]+34=43 vs 69 erra
+  Moreth: [[15], [16]]+44=75 ACERTA [2]×3+15+46=67 − RD 15 = 52 (467)
+  Moreth: [[14], [3]]+44=61 vs 69 erra
+  Moreth: [[4], [6]]+44=54 vs 69 erra
+  Moreth: [[7], [15]]+44=66 vs 68 erra
+  Eiagrir volta
+  MORAL d6 [2] → FOGE
+  Ferir tenta estancar Isolda (Medicina 12 vs 15): não
+  teste de morte de Isolda: [2] vs 12 (1 sucessos, 1 falhas)
+  Ferir tenta estancar Isolda (Medicina 19 vs 15): não
+  teste de morte de Isolda: [19] vs 12 (2 sucessos, 1 falhas)
+  Ferir tenta estancar Isolda (Medicina 3 vs 15): não
+  teste de morte de Isolda: [15] vs 12 (3 sucessos, 1 falhas)
+  Isolda fica ESTÁVEL
+  FERIMENTO de Isolda: d20 [14]+3 = 17 → GRAVE: não luta · MARCA: manca · 21 dias (até o Dia 447) · Morek
+FIM: fugiu · rodadas 4 · mortos ['Starkald', 'Goir'] · PV 467/2440 · grupo {'Ferir': 114, 'Moreth': 494, 'Eiagrir': 231, 'Isolda': -104, 'Starkald': -90, 'Goir': -81}
+⛔ G9: PARAR AQUI, DENTRO DA HORA. Mortos: ['Starkald', 'Goir'] · caídos: ['Isolda', 'Starkald', 'Goir']
+   antes de o tempo andar, o jogador decide: ERGUER O CAÍDO (Luz 6º, o rei sabe: até 1 hora; 30 de Mana; 1 PV e −1 para sempre num atributo) · o SERVO ARMADO (a Receita Mestra do rei) · Medicina nos caídos · onde estão os corpos

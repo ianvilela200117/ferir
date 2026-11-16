@@ -1,0 +1,41 @@
+[18:39:05] Dia 402 · Pressão 1/5 · evento local 1d20 [19] -> um NPC da casa tem um momento (laço ou atrito)
+  O TEMPO (3 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: calor forte, calmo (d6 [2] fica · vento d6 [2]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: neblina, brisa (d6 [5] muda, d20 [18] · vento d6 [3]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: limpo, calmo (d6 [4] muda, d20 [6] · vento d6 [2])
+   Farenta: neblina, vento firme (d6 [5] muda, d20 [18] · vento d6 [5]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [8/100]
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 402 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [2]
+    ONDE: d27 [3] Lumade  ◆ TOCA A CASA
+    A NOTÍCIA: [1] hoje
+    → LEITURA DO DADO: fome
+    ——
+  O MUNDO VIVO — Dia 402
+    um Lendário age (d20 [1]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [13] chega no dia 405
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308) vai trair Thuron, por causa de uma criança
+    FAÍSCA: Higrunn inveja Qunemneth, o Médico Cinzento, por causa de dinheiro da Liga
+    FAÍSCA: Altheltia oferece aliança a Gorine, por causa de um feitiço proibido
+  ▶ AGENDA #7 (era do Dia 400): LUA NOVA DA FORJA: o prazo que a carta do Aldoveri deu ao Lulacco para sair de Ireviel (um ATAQUE a Ireviel, segundo a carta).
+  ▶ AGENDA #178 (era do Dia 400): FACÇÃO — os da Luz do Cais (o porto de Marasar) pede audiência ao conselho. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #180 (era do Dia 400): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #186 (era do Dia 401): CHEGA a Marasar: o recado do rei ao HIRKUNN, o Selador (lugar na casa) (saiu de Ireviel no 400)
+  ▶ AGENDA #119: [OCULTO] NOTÍCIA (chega por Levis): o CLÃ HEGRE RACHOU: a cadeira do Hrotgar disputada por uma vingança antiga; ninguém venceu (EV391 [5], EV391b [10]). Pesa no tratado do therk, na mediação dos Vradda e no Hulgunn.
+  ▶ AGENDA #187: A GROA sai da cama (o veneno do Zitha)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Gorine (escondido (patrono da Lumine)): o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Eiandald (Yaelane): procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Teraseth (Ireviel e o rio): recruta: gente, uma facção ou um monstro passa para o lado dele · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Lurentetta (o Delta): sofre um revés (ferida, perda, traição de um próximo) · COMO CHEGA: d20 [17] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [10] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Thargos (Mítico, as Fundas do Norte): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM LENDÁRIO AGE: desaparece — as Fundas do Norte (o Clã Hegre) · COMO CHEGA: d20 [11] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: PESTE OU DESASTRE: fome — Lumade · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Adurel (Zisrir (o vale)): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Naera (as Fundas do Norte): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: Maneus, o Afogado do Vento (Lendário, o sul da areia): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: os Grukos (ogros) (a Mata de Elais): são caçados por uma companhia (perdem 1d6×5) · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: os Afogados Vivos (o rio): dá um passo no que quer · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi

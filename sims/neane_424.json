@@ -1,0 +1,103 @@
+{
+ "monstro": {
+  "nome": "Neane",
+  "cat": "Raro",
+  "nivel": 62,
+  "pv": 496,
+  "df": 31,
+  "rd": 3,
+  "at": 23,
+  "dado": "2d10",
+  "mult": 2.5,
+  "acoes": 1,
+  "moral": true,
+  "fraqueza": "Luz"
+ },
+ "grupo": [
+  {
+   "nome": "Ferir",
+   "nivel": 154,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 398,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": true,
+   "magia": {
+    "dano": "24d6",
+    "mult": 10,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ],
+    "essencia": "Luz"
+   },
+   "essencia": "Vento",
+   "nota": "424: a LANÇA DO SOL é LUZ: dobra contra o Neane (fraco a Luz)"
+  },
+  {
+   "nome": "Moreth",
+   "nivel": 231,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magia": {
+    "dano": "16d6",
+    "mult": 10,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 124,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magia": {
+    "dano": "16d6",
+    "mult": 5,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "nome": "Isolda",
+   "nivel": 116,
+   "at": 34,
+   "dado": "1d8",
+   "mult": 3,
+   "b": 10,
+   "df": 40,
+   "rd": 6,
+   "pv": 300,
+   "vigor": 14,
+   "heroi": true
+  }
+ ],
+ "nota": "REAL (CP24, noite do 424, o rio): o Neane ataca a barca no escuro (+2 no ataque pela noite, já posto); a regeneração (31 por rodada, cortada pela Luz) não é modelada; a Lança do Sol dobra."
+}

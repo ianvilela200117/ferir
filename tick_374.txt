@@ -1,0 +1,15 @@
+[01:30:08] Dia 374 · Pressão 3/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 374 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    1d12 [11] uma consequência antiga chega (de algo feito há mais de 30 dias)
+    ——
+  O MUNDO VIVO — Dia 374
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Teraseth → Maevis (morto) (DÍVIDA) d20 [3] nada visível
+    FAÍSCA: Draa salva Eiandald, por causa de um mapa
+    FAÍSCA: Hrotgar procura o Doge Pelaone, por causa de a coberta do mundo
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) salva Moreth, por causa de o perdão

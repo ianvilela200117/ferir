@@ -1,0 +1,27 @@
+[11:41:45] Dia 233 · Pressão 2/5 · encontro de estrada 1d20 [1] -> encontro na estrada
+  avistamento de monstro 1d20 [18] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 233 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d23 [22] Kasra (terra nova)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Culto do Kasade
+    adora: um rei antigo
+    promete: poder sobre os mortos
+    sinal: moeda furada
+    células: 3 cidades
+    líder: nível 250, classe Rara a Lendária
+    rito: jejum
+    plano (relógio de 6): matar um herdeiro
+    fraqueza: a fé é mentira e o líder sabe
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 233
+    um Lendário age (d20 [2]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · notícia d20 [6] chega no dia 235
+    trama do dia: Krernos → Graur (RIVALIDADE) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: Dovan esconde um filho de Draa, por causa de a Matriz
+    FAÍSCA: a Guardiã da Tenaz quer matar a mestra Carea, por causa de fome
+    FAÍSCA: Ruddo salva Thuron, por causa de vaduar
+  AUDITORIA (XXIII.23, Dia 233): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

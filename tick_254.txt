@@ -1,0 +1,14 @@
+[22:23:06] Dia 254 · Pressão 3/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [18] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 254 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]
+    ONDE: d23 [21] Zisrir
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 254
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Skedda vende algo a Isolda, por causa de uma receita perdida
+    FAÍSCA: Almision rouba de Tilde, por causa de uma receita perdida
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) quer matar Thuron, por causa de fome

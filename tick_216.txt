@@ -1,0 +1,16 @@
+[22:33:12] Dia 216 · Pressão 5/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [14] -> nenhum
+  EVENTO DE MUNDO 1d20 [18] A coberta afina (algo do Silêncio) · encadeamento 1d20 [14] Um monstro aproveita · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 216 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d21 [4] Marasar (a Liga e o Doge)
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 216
+    um Lendário age (d20 [5]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · notícia d20 [2] chega hoje
+    trama do dia: Ferir → a Liga (os conselheiros) (VINGANÇA JURADA) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) descobre o segredo de Nouliel, por causa de uma profecia
+    FAÍSCA: Asazh vai trair Sira, por causa de vingança
+    FAÍSCA: Thugek esconde um filho de Iorin, por causa de vingança

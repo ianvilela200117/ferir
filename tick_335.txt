@@ -1,0 +1,14 @@
+[14:45:50] Dia 335 · Pressão 4/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 335 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [4] Marasar (a Liga e o Doge)
+    A NOTÍCIA: [4] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 335
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [9] nada visível
+    FAÍSCA: Tano (carregador, primo da Caciccetta) vai trair Naera, por causa de uma receita perdida
+    FAÍSCA: a Guardiã da Tenaz foge de Seline, por causa de uma criança
+    FAÍSCA: Altheltia esconde um filho de Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322), por causa de uma receita perdida

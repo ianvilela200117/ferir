@@ -1,0 +1,14 @@
+[12:10:17] Dia 235 · Pressão 4/5 · encontro de estrada 1d20 [3] -> encontro na estrada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 235 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d23 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [5] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 235
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [12] nada visível
+    FAÍSCA: Gorron (oferece a missão do Delta) rouba de Almision, por causa de vingança
+    FAÍSCA: Gorra foge de Hrotgar, por causa de um núcleo de monstro
+    FAÍSCA: Hrarna vai trair Ferir, por causa de um título

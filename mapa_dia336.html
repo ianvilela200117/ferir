@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem manda onde — o mapa do rei, Dia 336</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papel:#efe4cc; --tinta:#3b2f22; --tinta2:#6b5a45; --rio:#5b86a6; --mar:#9fbccd;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#2a241c;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
+  .wrap{max-width:1240px;margin:0 auto;padding:18px}
+  h1{font-family:"Cormorant Garamond",serif;color:#f3e7cc;font-size:30px;margin:4px 0 2px}
+  .sub{color:#cbbd9f;font-size:14px;margin-bottom:10px;line-height:1.45}
+  .botoes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+  .botoes button{font:600 13px Inter,sans-serif;border:1px solid #6b5a45;background:#3a3126;color:#efe4cc;padding:7px 12px;border-radius:99px;cursor:pointer}
+  .botoes button.on{background:#efe4cc;color:#3b2f22;border-color:#efe4cc}
+  .botoes .sep{width:1px;background:#6b5a45;margin:0 4px}
+  .grid{display:grid;grid-template-columns:1fr 370px;gap:14px;align-items:start}
+  @media (max-width:920px){.grid{grid-template-columns:1fr}}
+  .mapa{background:var(--papel);border-radius:10px;box-shadow:0 0 0 6px #4a3d2c inset,0 6px 24px #0008;overflow:hidden}
+  svg{display:block;width:100%;height:auto}
+  .lugar{cursor:pointer}
+  .lugar text{font-family:"Cormorant Garamond",serif;font-weight:700;fill:var(--tinta);font-size:17px;paint-order:stroke;stroke:var(--papel);stroke-width:4px}
+  .lugar.peq text{font-size:14px}
+  .lugar:hover circle,.lugar.sel circle{stroke:#000;stroke-width:3}
+  .reg{font-family:"Cormorant Garamond",serif;font-style:italic;fill:var(--tinta2);font-size:20px;opacity:.75}
+  .rot{font-family:Inter,sans-serif;font-size:11.5px;font-weight:600;paint-order:stroke;stroke:var(--papel);stroke-width:3.5px}
+  .terr{font-family:"Cormorant Garamond",serif;font-weight:700;font-size:15px;letter-spacing:2px;paint-order:stroke;stroke:var(--papel);stroke-width:4px}
+  .camada{transition:opacity .2s}
+  .camada.off{opacity:0;pointer-events:none}
+  .grande{cursor:pointer}
+  .grande text{font-family:Inter,sans-serif;font-size:11px;font-weight:600;paint-order:stroke;stroke:var(--papel);stroke-width:3.5px}
+  .painel{background:var(--papel);border-radius:10px;padding:16px 18px;box-shadow:0 6px 24px #0008}
+  .painel h2{font-family:"Cormorant Garamond",serif;margin:0 0 6px;font-size:26px}
+  .painel h3{font-family:"Cormorant Garamond",serif;margin:14px 0 4px;font-size:19px}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;color:#fff;margin:0 4px 8px 0}
+  .painel ul{padding-left:18px;margin:6px 0}
+  .painel li{margin:4px 0;font-size:14px;line-height:1.4}
+  .painel p{font-size:14px;line-height:1.45;margin:6px 0}
+  table.qm{width:100%;border-collapse:collapse;font-size:13px;margin-top:6px}
+  table.qm td{border-top:1px solid #d6c7a4;padding:5px 4px;vertical-align:top;line-height:1.35}
+  table.qm td:first-child{font-weight:600;white-space:nowrap}
+  .leg{margin-top:12px;border-top:1px solid #c9b993;padding-top:10px;font-size:13px}
+  .leg div{display:flex;align-items:center;gap:8px;margin:4px 0}
+  .dot{width:13px;height:13px;border-radius:50%;display:inline-block;border:1px solid #0005;flex:none}
+  .ln{width:26px;height:0;border-top:3px solid;display:inline-block;flex:none}
+  .nota{color:var(--tinta2);font-size:12px;margin-top:10px;line-height:1.4}
+  a.volta{font-size:13px;color:#7a4e9c;cursor:pointer;text-decoration:underline;margin-right:10px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Quem manda onde</h1>
+  <div class="sub">O mapa do rei, feito no Dia 336, atualizado no 356 · juntado pelo Krernos com os papéis da Sira (ela desce o rio), pelo Thuron e pelos barqueiros do Teraseth. Só o que chegou a Ireviel. Toque num lugar ou num dos grandes para ler o que se sabe; ligue e desligue as camadas. Distâncias aproximadas.</div>
+  <div class="botoes">
+    <button class="on" data-c="terr">Quem manda</button>
+    <button class="on" data-c="grandes">Os grandes</button>
+    <button data-c="perigo">Perigos que andam</button>
+    <button class="on" data-c="casa">A casa na estrada</button>
+    <span class="sep"></span>
+    <button data-p="liga">Onde a Liga manda</button>
+    <button data-p="todos">Quem manda, em lista</button>
+    <button data-p="grandes">Os grandes, em lista</button>
+  </div>
+  <div class="grid">
+    <div class="mapa">
+      <svg viewBox="0 0 1000 720" role="img" aria-label="Mapa do mundo conhecido, com quem governa cada lugar">
+        <defs>
+          <pattern id="sal" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c9b27e"/></pattern>
+          <pattern id="brejo" width="14" height="8" patternUnits="userSpaceOnUse"><path d="M0 6 q3.5 -4 7 0 t7 0" stroke="#7a8f6a" fill="none" stroke-width="1"/></pattern>
+          <marker id="setaL" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7a4e9c"/></marker>
+          <marker id="setaC" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3412e"/></marker>
+          <marker id="setaG" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#a8861c"/></marker>
+          <marker id="setaN" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b07a1e"/></marker>
+        </defs>
+        <!-- mar -->
+        <path d="M0 640 Q200 610 360 650 Q520 690 640 670 Q780 650 1000 680 L1000 720 L0 720 Z" fill="var(--mar)"/>
+        <!-- montanhas do norte -->
+        <g fill="none" stroke="#8a7458" stroke-width="2" opacity=".8">
+          <path d="M300 70 l20 -28 l20 28 M340 70 l22 -32 l22 32 M390 72 l24 -36 l24 36 M445 70 l22 -30 l22 30 M500 72 l25 -38 l25 38 M560 70 l20 -28 l20 28 M610 74 l24 -34 l24 34"/>
+        </g>
+        <g fill="none" stroke="#a5523a" stroke-width="2" opacity=".85"><path d="M850 230 l18 -26 l18 26 M886 232 l20 -30 l20 30 M925 230 l16 -22 l16 22"/></g>
+        <path d="M700 330 Q820 300 960 340 L980 600 Q860 620 760 580 Q700 470 700 330Z" fill="url(#sal)" opacity=".9"/>
+        <path d="M250 560 Q330 540 400 575 Q420 630 360 645 Q280 640 245 610Z" fill="url(#brejo)"/>
+        <g fill="#7a8f6a" opacity=".45"><circle cx="400" cy="440" r="7"/><circle cx="415" cy="430" r="6"/><circle cx="430" cy="445" r="7"/><circle cx="410" cy="455" r="6"/><circle cx="440" cy="432" r="5"/></g>
+
+        <!-- CAMADA: QUEM MANDA (territórios) -->
+        <g id="c-terr" class="camada">
+          <!-- Reino de Ireviel: o rio de Levis ao mar -->
+          <path d="M468 282 L548 282 C556 360 562 450 560 515 L600 585 L648 630 L640 668 L592 645 L548 606 C524 612 500 604 486 592 C470 520 458 420 468 282 Z" fill="#b3412e" fill-opacity=".13" stroke="#b3412e" stroke-width="1.6" stroke-dasharray="6 4"/>
+          <text class="terr" x="585" y="300" fill="#b3412e" transform="rotate(80 585 300)">REINO DE IREVIEL</text>
+          <!-- a Doge Skotha -->
+          <circle cx="652" cy="656" r="40" fill="#c9772b" fill-opacity=".22" stroke="#c9772b" stroke-width="1.6"/>
+          <text class="terr" x="605" y="712" fill="#a65e1d">A DOGE SKOTHA</text>
+          <!-- a Liga -->
+          <ellipse cx="805" cy="624" rx="78" ry="44" fill="#7a4e9c" fill-opacity=".2" stroke="#7a4e9c" stroke-width="1.8"/>
+          <text class="terr" x="760" y="582" fill="#7a4e9c">A LIGA</text>
+          <path d="M792 580 C780 470 720 300 600 140" fill="none" stroke="#7a4e9c" stroke-width="2.2" stroke-dasharray="7 5" marker-end="url(#setaL)"/>
+          <text class="rot" x="700" y="300" fill="#7a4e9c">o norte: a Leliel compra lealdades</text>
+          <!-- o Clã Hegre -->
+          <path d="M300 38 L640 38 L640 98 L600 132 L560 176 L470 182 L360 172 L300 122 Z" fill="#3f7a4a" fill-opacity=".13" stroke="#3f7a4a" stroke-width="1.4" stroke-dasharray="4 4"/>
+          <text class="terr" x="330" y="196" fill="#3f7a4a">O CLÃ HEGRE</text>
+          <!-- Steunn -->
+          <circle cx="665" cy="152" r="32" fill="#2e6f8f" fill-opacity=".2" stroke="#2e6f8f" stroke-width="1.5"/>
+          <text class="terr" x="700" y="128" fill="#2e6f8f">STEUNN, LIVRE</text>
+          <!-- o Delta -->
+          <path d="M378 618 Q440 598 502 622 L506 704 L378 708 Z" fill="#4f8a7b" fill-opacity=".2" stroke="#4f8a7b" stroke-width="1.5" stroke-dasharray="5 3"/>
+          <text class="terr" x="384" y="614" fill="#3e7366">O DELTA</text>
+          <!-- Telosus -->
+          <circle cx="70" cy="340" r="36" fill="#c2a23a" fill-opacity=".25" stroke="#a8861c" stroke-width="1.5"/>
+          <text class="terr" x="22" y="395" fill="#8d7015">A FÉ DA MAMILTIA</text>
+          <!-- Lumade -->
+          <circle cx="290" cy="325" r="22" fill="#8a7a5e" fill-opacity=".14" stroke="#8a7a5e" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <!-- Zisrir -->
+          <circle cx="142" cy="118" r="42" fill="#8a7a5e" fill-opacity=".12" stroke="#8a7a5e" stroke-width="1.2" stroke-dasharray="3 3"/>
+          <!-- Kremir -->
+          <circle cx="250" cy="176" r="30" fill="#8a7a5e" fill-opacity=".12" stroke="#8a7a5e" stroke-width="1.2" stroke-dasharray="3 3"/>
+        </g>
+
+        <!-- o rio Leve e a estrada do sal (acima dos territórios) -->
+        <path d="M505 60 C495 160 520 230 500 300 C485 380 530 450 515 520 C505 580 480 610 470 650" fill="none" stroke="var(--rio)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M515 520 C560 560 600 600 640 655" fill="none" stroke="var(--rio)" stroke-width="3"/>
+        <path d="M500 300 C600 330 700 380 880 470" fill="none" stroke="#9c8152" stroke-width="2" stroke-dasharray="6 6"/>
+        <text class="reg" x="300" y="30">as Montanhas Hegre</text>
+        <text class="reg" x="760" y="560">o Deserto de Sal</text>
+        <text class="reg" x="258" y="628">o brejo</text>
+        <text class="reg" x="70" y="705">o mar</text>
+        <text class="reg" x="600" y="395" transform="rotate(14 600 395)" style="font-size:14px">estrada do sal</text>
+        <text class="reg" x="527" y="200" transform="rotate(82 527 200)" style="font-size:14px">o rio Leve</text>
+
+        <!-- CAMADA: PERIGOS -->
+        <g id="c-perigo" class="camada off">
+          <g fill="#2b2b2b" opacity=".8">
+            <circle cx="120" cy="140" r="7"/><circle cx="560" cy="80" r="7"/><circle cx="820" cy="372" r="7"/>
+            <circle cx="900" cy="275" r="7"/><circle cx="270" cy="198" r="6"/><circle cx="712" cy="190" r="6"/>
+            <circle cx="548" cy="410" r="6"/><circle cx="545" cy="590" r="6"/><circle cx="600" cy="336" r="6"/>
+            <circle cx="740" cy="410" r="6"/><circle cx="485" cy="282" r="5"/>
+            <circle cx="905" cy="676" r="6"/>
+          </g>
+          <g class="rot" fill="#2b2b2b">
+            <text x="60" y="160">a ELAEVA (Mítico)</text>
+            <text x="572" y="84">o KREDUN (Mítico)</text>
+            <text x="832" y="376">o THARGOS (Mítico)</text>
+            <text x="912" y="292">o ITHVIL</text>
+            <text x="200" y="215">o MANEUS</text>
+            <text x="724" y="206">o VATHEXA</text>
+            <text x="560" y="414">o KERVOS (come metal)</text>
+            <text x="556" y="602">a ELOUNE (Mãe-Lodo)</text>
+            <text x="612" y="340">o LAENNOR</text>
+            <text x="752" y="425">o FENRON</text>
+            <text x="400" y="278">a Que Come a Pedra</text>
+            <text x="893" y="694" text-anchor="end">o HUSGARN (costa)</text>
+          </g>
+        </g>
+
+        <!-- CAMADA: A CASA NA ESTRADA -->
+        <g id="c-casa" class="camada">
+          <path d="M516 578 C500 605 480 625 466 640" fill="none" stroke="#b3412e" stroke-width="2.6" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#setaC)"/>
+          <text class="rot" x="318" y="578" fill="#b3412e"><tspan x="318" dy="0">a Sira e o Starkald</tspan><tspan x="318" dy="14">→ a estrela (~338)</tspan></text>
+          <path d="M100 330 C220 360 330 420 420 500 C470 540 500 556 512 562" fill="none" stroke="#a8861c" stroke-width="2.6" stroke-dasharray="8 5" marker-end="url(#setaG)"/>
+          <text class="rot" x="160" y="372" fill="#8d7015">a MAMILTIA vem a Ireviel (chega 346)</text>
+          <path d="M780 610 C720 600 600 560 545 532" fill="none" stroke="#7a4e9c" stroke-width="2" stroke-dasharray="3 4" marker-end="url(#setaL)"/>
+          <text class="rot" x="612" y="552" fill="#7a4e9c">barcas da Liga pagam na forquilha</text>
+          <circle cx="460" cy="652" r="9" fill="none" stroke="#b07a1e" stroke-width="2.5"/>
+          <path d="M460 638 l3 9 l9 0 l-7 5 l3 9 l-8 -6 l-8 6 l3 -9 l-7 -5 l9 0z" fill="#b07a1e" transform="translate(0 2)"/>
+        </g>
+
+        <g id="lugares"></g>
+        <g id="c-grandes" class="camada"></g>
+      </svg>
+    </div>
+    <div class="painel" id="painel"></div>
+  </div>
+</div>
+<script>
+const C={casa:'#b3412e',skotha:'#c9772b',liga:'#7a4e9c',cla:'#3f7a4a',livre:'#2e6f8f',delta:'#4f8a7b',fe:'#a8861c',neutro:'#8a7a5e',perigo:'#2b2b2b',novo:'#b07a1e'};
+const NOMES={casa:'Reino de Ireviel',skotha:'A Doge Skotha',liga:'A Liga',cla:'O Clã Hegre',livre:'Cidade livre',delta:'O Delta',fe:'A fé da Mamiltia',neutro:'Neutro ou sem dono',perigo:'Perigo',novo:'Terra além do mapa'};
+const L=[
+ {n:'Ireviel',x:525,y:568,t:'casa',r:12,tags:['Capital do reino','~14.000'],i:[
+  'Governo: o REI FERIR com o conselho real (lei do 295). A Nouliel é Intendente: tudo passa por ela.',
+  'Pilares: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4. Cofre 51.994.',
+  'A Fornalha que Não Apaga, a Matriz, a forja grande, o Colégio (casa-filha de Telosus).',
+  'Contra-espionagem 35, o teto. O Erymir, olho da Mamiltia, fica vigiado.',
+  'No 346 chega a MAMILTIA, convidada do rei.']},
+ {n:'a Forquilha',x:515,y:520,t:'casa',r:6,peq:1,tags:['Logo acima de Ireviel','O nó do rio'],i:[
+  'O Leve se divide: o braço oeste vai ao Delta, o leste a Marasar. Quem tem a forquilha tem o rio.',
+  'Desde a paz do 336 as barcas da Liga passam PAGANDO PORTAGEM: +300 por semana.',
+  'A galé (a ISOLDA, Mestra das Águas), as balistas e as correntes.']},
+ {n:'Levis',x:505,y:300,t:'casa',r:11,tags:['Do reino desde o 332','~9.000'],i:[
+  'Tomada da Liga na madrugada do 332 por Ireviel, a Skotha e o Teraseth; anexada pelo conselho.',
+  'Governadora: a BRARA (335). O Teraseth recusou: nunca serve bandeira.',
+  'Pilares: Comida 1 · Comércio 1 · Dinheiro 0 · Saúde 2 · Ordem 1 · Defesa 1. A casa manda comida toda semana.',
+  'A Guilda de Levis (a mestra Carea), a Torre do Sal, a Bigorna Livre.',
+  'Boato: o GARKUNN (Lendário) anda por lá e paga pelo cais.']},
+ {n:'Porto de Marasar',x:630,y:648,t:'casa',r:6,peq:1,tags:['Do reino desde o 287','~3.000'],i:[
+  'O cais e os bairros do rio são de Ireviel desde a rendição de Marasar.',
+  'Pilares: Comida 4 · Comércio 3 · Dinheiro 3 · Saúde 2 · Ordem 3 · Defesa 4.',
+  'O resto da cidade é da Doge Skotha.']},
+ {n:'Marasar',x:665,y:665,t:'skotha',r:10,tags:['A Doge Skotha','Aliada +5'],i:[
+  'Capital velha da Liga, rendida no 287. A DOGE é a SKOTHA GRASKUR (Lendária, a Companhia); ela reconhece Ireviel como reino.',
+  'Recebeu os Fiéis do Doge Velho e os cabeças da Mão Molhada (335).',
+  'Os orcs Thog servem a ela. O Doge Pelaone foi exilado.',
+  'Na baía, HAOL: uma cidade afundada (boato).']},
+ {n:'Farenta',x:812,y:628,t:'casa',r:10,tags:['TOMADA no 356','O destino: o rei decide'],i:[
+  '356: a coalizão de Ireviel (a Skotha, o Teraseth, a hoste, a máquina) e a MAMILTIA tomaram Farenta. A tropa quebrou; nenhum bairro queimou; ninguém da casa caiu.',
+  'A LELIEL FUGIU para o norte com as duas peças e os conselheiros que sobraram. O Girendino foi ao fogo da Mamiltia.',
+  '346: a LELIEL (Lendária 351) atendeu o chamado da Liga e TOMOU as terras dela: Farenta e as casas do norte são da coroa dela.',
+  'A paz com a Liga caiu no 339 (o agente do Girendino, pego no dia da paz).',
+  'Os conselheiros que sobraram da Liga, as casas de comércio e o dinheiro deles. Os corpos do conselho duro voltaram para cá.',
+  'O Culto dos Olhos Pintados (rouba crianças) e a Botica Velha.',
+  'A Sira não tem célula aqui hoje.']},
+ {n:'o Delta',x:440,y:672,t:'delta',r:9,tags:['Ninguém manda sozinho','Do Junco −2'],i:[
+  'Os DO JUNCO: curandeiras dos juncos e salineiros armados. Relação com Ireviel: −5 (os cinco juncos mortos na cratera, 338).',
+  'A ALTHELTIA (Lendária): funda a Ordem dos Juncos; procura uma receita perdida; depois da cratera, quer NEGOCIAR uma parte da estrela.',
+  'A LURENTETTA (Mítica) anda pelo Delta (os papéis da Sira e o Colégio, 336).',
+  'A Guilda dos Salineiros quer vender só a Ireviel.',
+  'A ESTRELA caiu aqui: 10 kg de ZEIETH, metal Mítico. A casa a trouxe a Ireviel no 342.']},
+ {n:'Brassa',x:478,y:628,t:'perigo',r:5,peq:1,tags:['Delta'],i:['Torre caída no Delta. A febre do brejo vem de lá; ninguém vai.']},
+ {n:'Salinas Velhas',x:372,y:694,t:'neutro',r:5,peq:1,tags:['Sal'],i:['Onde a casa tomou a galé da Liga (218). O Laennor ronda.']},
+ {n:'Gogrunn',x:445,y:150,t:'cla',r:9,tags:['Cidade-mina do Clã'],i:['A Raiz-de-Ferro nas minas.','Acharam arvel aqui (253).']},
+ {n:'as Fundas do Norte',x:540,y:110,t:'cla',r:9,tags:['O Clã Hegre','+1'],i:[
+  'O HROTGAR manda no Clã. A ponte do Clã; as desculpas públicas de Ireviel (309).',
+  'O KREDUN, a Filha da Mãe Branca (Mítico), toma terra do Clã.',
+  'Um veio de THERK (Único) nas Fundas, pelo Braeth.',
+  'É para cá que a Leliel olha quando compra lealdades no norte.']},
+ {n:'Steunn',x:665,y:152,t:'livre',r:9,tags:['Cidade livre de pedra','+2'],i:[
+  'Os ferreiros de bronze; não deixa o Clã entrar.',
+  'O BORECCI (Mítico) anda por Steunn (os papéis da Sira e o Colégio, 336).',
+  'Comprou 2 Épicas (322); a embaixada do Hestunn quer peças. Os Jurados de Steunn.',
+  'O Orast foi acolhido aqui. De lá veio o Vrethur.']},
+ {n:'Ulirv',x:712,y:180,t:'perigo',r:5,peq:1,tags:['Ruína em Steunn'],i:['Oficina de mestre morto, com um prisioneiro. O VATHEXA (Lendário 262, Tempo) ronda.']},
+ {n:'Telosus',x:70,y:340,t:'fe',r:10,tags:['15 dias a oeste','Cidade-torre'],i:[
+  'A MAMILTIA (Primordial) fundou um templo aqui (328). A fé dela: o ferreiro santo dá a mão ao fogo; quem recusa é mão maldita.',
+  'Os da Mão Queimada: as harpias Kraek e os sobreviventes do povo que a Elaeva matou.',
+  'O Colégio velho (falido); o Ceduion é o reitor.',
+  'A obra da Mamiltia: vingar o povo de Telosus. O rumor diz que quem acordou a Elaeva foi o Adurel.']},
+ {n:'Lumade',x:290,y:325,t:'neutro',r:7,peq:1,tags:['A oeste, além de Lumgal'],i:['O CELOCUS (Mítico) anda por Lumade (os papéis da Sira e o Colégio, 336). Mais nada se sabe.']},
+ {n:'Lumgal',x:385,y:305,t:'neutro',r:6,peq:1,tags:['2 dias a oeste de Levis'],i:['O cemitério dos reis.']},
+ {n:'Zisrir',x:142,y:118,t:'neutro',r:8,tags:['Vale de ruínas'],i:['O ADUREL (Lendário de ofício) faz uma obra ali.','A Elaeva acordou no vale. Magia selvagem: a coberta afina.']},
+ {n:'Quoine',x:205,y:88,t:'neutro',r:5,peq:1,tags:['Zisrir'],i:['A torre caída dos Sem-Torre, magos que o Colégio mandou embora. O Mormir os junta.']},
+ {n:'Kremir',x:250,y:176,t:'neutro',r:8,tags:['Clãs das colinas'],i:['O MANEUS (Lendário) apareceu de dia; Orade é do Culto do Maneus.','Refugiados vieram a Ireviel.']},
+ {n:'Mata de Elais',x:420,y:450,t:'neutro',r:7,peq:1,tags:['Mata'],i:['Os ogros Grukos, que trocam peles por ferro.']},
+ {n:'Fenssa',x:615,y:520,t:'perigo',r:5,peq:1,tags:['A um dia de Ireviel'],i:['Torre de mago caída, com mortos; material Raro a Lendário. A casa tem a chave.']},
+ {n:'Quogal',x:705,y:592,t:'perigo',r:5,peq:1,tags:['Mina caída'],i:['No caminho de Farenta a Ireviel; uma peça antiga e um eremita. Pede uma chave.']},
+ {n:'Shizess',x:760,y:400,t:'neutro',r:8,tags:['Cidade das caravanas'],i:['O FENRON, a coisa da água que faz a hora pular.','O vilão VARUUN quer forjar uma arma Mítica proibida.']},
+ {n:'Mordun',x:830,y:355,t:'perigo',r:7,peq:1,tags:['Mina caída'],i:['O THARGOS (Mítico 329, voa, olhar que paralisa). O Ceduion quer domá-lo.']},
+ {n:'Montanhas de Fogo',x:890,y:255,t:'perigo',r:8,tags:['Fogo'],i:['O ITHVIL (Mítico) dorme fundo e se coça. Foi daqui a bjurka.']},
+ {n:'o sul da areia',x:945,y:592,t:'neutro',r:7,peq:1,tags:['Onde a areia come a pedra'],i:['A Guardiã da Tenaz (Lendária).','Os vilões TERVANE e ORRON.']},
+ {n:'Kasra',x:60,y:62,t:'novo',r:6,peq:1,tags:['Além do mapa'],i:['A Oficina de Vossal se abriu lá.']},
+ {n:'Qulosus',x:40,y:560,t:'novo',r:6,peq:1,tags:['Além do mapa'],i:['Uma terra além do mapa, em notícia (308).']},
+ {n:'Zaitor',x:940,y:85,t:'novo',r:6,peq:1,tags:['Além do mapa'],i:['Um vilão entrou no mundo por lá.']},
+];
+const G=[
+ {n:'MAMILTIA',x:96,y:322,tier:'Primordial',onde:'Telosus',t:'fe',i:'A única Primordial do mundo. Fé; obra: vingar o povo de Telosus. Quer Ferir na fé dela e o Martelo de Mestre dele. Convidada: chega a Ireviel no 346.'},
+ {n:'CELOCUS',x:308,y:312,tier:'Mítico',onde:'Lumade',t:'neutro',i:'Mítico. Anda por Lumade. A obra dele, a casa não sabe.'},
+ {n:'LURENTETTA',x:458,y:690,tier:'Mítica',onde:'o Delta',t:'delta',i:'Mítica. Anda pelo Delta, onde caiu a estrela. A obra dela, a casa não sabe.'},
+ {n:'BORECCI',x:684,y:168,tier:'Mítico',onde:'Steunn',t:'livre',i:'Mítico. Anda por Steunn. A obra dele, a casa não sabe.'},
+ {n:'Skotha',x:672,y:640,tier:'Lendária',onde:'Marasar',t:'skotha',i:'Doge de Marasar, chefe da Companhia. Aliada (+5). Quer fundar uma ordem.'},
+ {n:'Leliel',x:610,y:178,tier:'Lendária',onde:'o norte (fugida)',t:'liga',i:'Perdeu Farenta no 356 e fugiu para o norte com as duas peças e os conselheiros que sobraram. Em guerra com Ireviel.'},
+ {n:'Teraseth',x:540,y:470,tier:'Lendário',onde:'o rio',t:'casa',i:'Dono dos barqueiros (432). Aliado do rio, não serve bandeira; deve ao rei. O Croque do Rio é dele.'},
+ {n:'Altheltia',x:388,y:660,tier:'Lendária',onde:'o Delta',t:'delta',i:'Funda a Ordem dos Juncos (ofício e cura). Quer um porto no rio.'},
+ {n:'Adurel',x:160,y:140,tier:'Lendário',onde:'Zisrir',t:'neutro',i:'Lendário de ofício. Faz uma obra em Zisrir. O rumor: acordou a Elaeva. Rival da Mamiltia.'},
+ {n:'Garkunn',x:470,y:318,tier:'Lendário (boato)',onde:'Levis',t:'neutro',i:'Boato: anda em Levis e paga pelo cais; seria filho do Mormir.'},
+ {n:'Ceduion',x:52,y:300,tier:'Lendário',onde:'Telosus',t:'neutro',i:'Reitor do Colégio de Telosus. Quer domar o Thargos.'},
+];
+const NS='http://www.w3.org/2000/svg';
+let sel=null;
+function legenda(){
+  return `<div class="leg"><b>Legenda</b>
+  <div><span class="dot" style="background:${C.casa}"></span>Reino de Ireviel</div>
+  <div><span class="dot" style="background:${C.skotha}"></span>a Doge Skotha (aliada)</div>
+  <div><span class="dot" style="background:${C.liga}"></span>a Liga, agora da Leliel (em guerra)</div>
+  <div><span class="dot" style="background:${C.cla}"></span>o Clã Hegre</div>
+  <div><span class="dot" style="background:${C.livre}"></span>cidade livre (Steunn)</div>
+  <div><span class="dot" style="background:${C.delta}"></span>o Delta (dividido)</div>
+  <div><span class="dot" style="background:${C.fe}"></span>a fé da Mamiltia</div>
+  <div><span class="dot" style="background:${C.neutro}"></span>neutro ou sem dono</div>
+  <div><span class="dot" style="background:${C.perigo}"></span>perigo (monstro, mortos, ruína)</div>
+  <div><span class="dot" style="background:${C.novo}"></span>terra além do mapa</div>
+  <div><span class="ln" style="border-color:#7a4e9c;border-top-style:dashed"></span>a Liga e o que ela alcança</div>
+  <div><span class="ln" style="border-color:#b3412e;border-top-style:dotted"></span>gente da casa na estrada</div>
+  <div><span class="ln" style="border-color:#a8861c;border-top-style:dashed"></span>a Mamiltia a caminho</div>
+  <div class="nota">Estrelas: os grandes (maiores para Míticos e a Primordial). Estrela laranja no Delta: onde caiu a zeieth. Linha azul: o rio Leve.</div></div>`;
+}
+function limpaSel(){ if(sel){sel.classList.remove('sel');sel=null;} }
+const P={};
+P.liga=`<h2>Onde a Liga manda</h2>
+<span class="tag" style="background:${C.liga}">em guerra desde o 339</span><span class="tag" style="background:#8a7a5e">Farenta tomada no 356</span>
+<p><b>Desde o 356 a Liga não tem cidade nenhuma.</b> A Leliel, que tinha tomado a Liga no 346, perdeu Farenta para Ireviel e fugiu para o norte com os conselheiros. O que segue abaixo é o que a Liga tinha no 336.</p>
+<h3>O que sobrou</h3>
+<ul>
+<li><b>Farenta:</b> os conselheiros que restaram e o dinheiro deles moram lá, debaixo da LELIEL, que é a senhora da cidade.</li>
+<li><b>O norte:</b> casas e entrepostos de comércio, não cidades. A Leliel compra lealdades entre os clãs de lá. A Sira não tem olhos no norte.</li>
+<li><b>As barcas:</b> passam pelo rio de Ireviel pagando portagem.</li>
+<li><b>A receita do Cinza Saciado</b> (roubada em 322) e as pedras que apagam magia.</li>
+</ul>
+<h3>O que perdeu</h3>
+<ul>
+<li><b>O rio:</b> a forquilha fechou em 254; hoje a passagem é paga a Ireviel.</li>
+<li><b>Marasar</b> (287): a cidade à Doge Skotha, o porto a Ireviel.</li>
+<li><b>Levis</b> (332): ao Reino de Ireviel, governada pela Brara.</li>
+<li><b>O conselho duro:</b> enforcado na praça de Ireviel (335).</li>
+</ul>
+<div class="nota">A vingança de Ferir contra os conselheiros que sobraram é decisão sua; a paz do conselho não a apaga, mas quebrar a paz é assunto do conselho.</div>`;
+P.todos=`<h2>Quem manda, em lista</h2>
+<table class="qm">
+<tr><td>Ireviel</td><td>o rei Ferir e o conselho</td></tr>
+<tr><td>Levis</td><td>a Brara, governadora do reino</td></tr>
+<tr><td>Porto de Marasar</td><td>Ireviel</td></tr>
+<tr><td>Marasar</td><td>a Doge Skotha (aliada +5)</td></tr>
+<tr><td>Farenta</td><td>tomada por Ireviel e a coalizão (356); o destino vai ao rei</td></tr>
+<tr><td>o norte</td><td>a Leliel, fugida, com os conselheiros</td></tr>
+<tr><td>Fundas e Gogrunn</td><td>o Clã Hegre, do Hrotgar (+1)</td></tr>
+<tr><td>Steunn</td><td>cidade livre (+2); o Borecci por perto</td></tr>
+<tr><td>o Delta</td><td>ninguém sozinho: os Do Junco (−2, paz no 350), a Altheltia, a Lurentetta</td></tr>
+<tr><td>Telosus</td><td>o templo da Mamiltia; o Colégio velho</td></tr>
+<tr><td>Zisrir</td><td>ruínas; o Adurel; os Sem-Torre</td></tr>
+<tr><td>Kremir</td><td>clãs das colinas; o Maneus ronda</td></tr>
+<tr><td>Lumade</td><td>o Celocus anda por lá</td></tr>
+<tr><td>Shizess</td><td>caravanas, sem senhor conhecido</td></tr>
+<tr><td>o sul da areia</td><td>a Guardiã da Tenaz</td></tr>
+</table>`;
+P.grandes=`<h2>Os grandes</h2>
+<p>O mundo guarda até 15 Lendários, 3 Míticos e 1 Primordial. Estes são os que a casa sabe onde estão.</p>
+<table class="qm">${G.map(g=>`<tr><td>${g.n}</td><td>${g.tier} · ${g.onde}</td></tr>`).join('')}
+<tr><td>Almision</td><td>Lendária · anda; a Escola Única (−1)</td></tr>
+<tr><td>Médico Cinzento</td><td>Lendário · prega o fim das minas</td></tr>
+</table>
+<div class="nota">Os papéis da Sira e o Colégio deram a região dos três Míticos nesta manhã. As obras deles seguem desconhecidas.</div>`;
+function mostraP(k){ limpaSel(); document.getElementById('painel').innerHTML=P[k]+legenda(); }
+function voltaLinks(){ return `<p><a class="volta" data-v="liga">onde a Liga manda</a><a class="volta" data-v="todos">quem manda, em lista</a></p>`; }
+function ligaVolta(){ document.querySelectorAll('#painel a.volta').forEach(a=>a.addEventListener('click',()=>mostraP(a.dataset.v))); }
+function mostra(p,el){
+  limpaSel(); sel=el; el.classList.add('sel');
+  document.getElementById('painel').innerHTML=
+    `<h2>${p.n}</h2><span class="tag" style="background:${C[p.t]}">${NOMES[p.t]}</span>`+
+    p.tags.map(t=>`<span class="tag" style="background:#8a7a5e">${t}</span>`).join('')+
+    `<ul>${p.i.map(x=>`<li>${x}</li>`).join('')}</ul>`+voltaLinks()+legenda();
+  ligaVolta();
+}
+function mostraG(g){
+  limpaSel();
+  document.getElementById('painel').innerHTML=`<h2>${g.n.charAt(0)+g.n.slice(1).toLowerCase()}</h2><span class="tag" style="background:${C[g.t]}">${g.tier}</span><span class="tag" style="background:#8a7a5e">${g.onde}</span><p>${g.i}</p>`+voltaLinks()+legenda();
+  ligaVolta();
+}
+const gl=document.getElementById('lugares');
+L.forEach(p=>{
+  const a=document.createElementNS(NS,'g'); a.setAttribute('class','lugar'+(p.peq?' peq':''));
+  const c=document.createElementNS(NS,'circle'); c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',p.r);
+  c.setAttribute('fill',C[p.t]); c.setAttribute('stroke','#fff9'); c.setAttribute('stroke-width','2');
+  const t=document.createElementNS(NS,'text'); t.setAttribute('x',p.x+p.r+4); t.setAttribute('y',p.y+5); t.textContent=p.n;
+  if(p.x>820 || ['a Forquilha','Porto de Marasar','Brassa','Salinas Velhas'].includes(p.n)){t.setAttribute('x',p.x-p.r-4); t.setAttribute('text-anchor','end');}
+  a.appendChild(c); a.appendChild(t);
+  a.addEventListener('click',()=>mostra(p,a));
+  gl.appendChild(a);
+});
+function estrela(cx,cy,R){const r=R*0.45;let d='';for(let k=0;k<10;k++){const ang=-Math.PI/2+k*Math.PI/5;const rr=k%2?r:R;d+=(k?'L':'M')+(cx+rr*Math.cos(ang)).toFixed(1)+' '+(cy+rr*Math.sin(ang)).toFixed(1);}return d+'Z';}
+const gg=document.getElementById('c-grandes');
+G.forEach(g=>{
+  const big=['Primordial','Mítico','Mítica'].includes(g.tier); const R=g.tier==='Primordial'?13:big?10:7;
+  const a=document.createElementNS(NS,'g'); a.setAttribute('class','grande');
+  const s=document.createElementNS(NS,'path'); s.setAttribute('d',estrela(g.x,g.y,R)); s.setAttribute('fill',C[g.t]); s.setAttribute('stroke','#fff'); s.setAttribute('stroke-width','1.2');
+  const t=document.createElementNS(NS,'text'); t.setAttribute('x',g.x+R+3); t.setAttribute('y',g.y+4); t.setAttribute('fill','#3b2f22'); t.textContent=g.n;
+  a.appendChild(s); a.appendChild(t); a.addEventListener('click',()=>mostraG(g)); gg.appendChild(a);
+});
+document.querySelectorAll('.botoes button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    if(b.dataset.p){mostraP(b.dataset.p);return;}
+    b.classList.toggle('on');
+    document.getElementById('c-'+b.dataset.c).classList.toggle('off',!b.classList.contains('on'));
+  });
+});
+mostraP('liga');
+</script>
+</body>
+</html>

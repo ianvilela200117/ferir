@@ -1,0 +1,34 @@
+[19:23:14] Dia 387 · Pressão 1/5 · evento local 1d20 [4] -> nada
+  O TEMPO (18 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: nublado, vento firme (d6 [6] muda, d20 [13] · vento d6 [5])
+   o Porto de Marasar: limpo, calmo (d6 [1] fica · vento d6 [2])
+   Levis: limpo, brisa (d6 [2] fica · vento d6 [3])
+   Farenta: nublado, vento forte (d6 [3] fica · vento d6 [6])
+   O RIO: baixo [24/100]
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 387 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]
+    ONDE: d27 [20] Steunn  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    → LEITURA DO DADO: dois clãs
+    ——
+  O MUNDO VIVO — Dia 387
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Pelaccino (preso) → Graur (RIVALIDADE) d20 [8] nada visível
+    FAÍSCA: Borecci esconde um filho de Ardenghi, por causa de dinheiro da Liga
+    FAÍSCA: Souane rouba de Isolda, por causa de fome
+    FAÍSCA: Gorra quer casar com ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322), por causa de a Fornalha que Não Apaga
+  ▶ AGENDA #16 (era do Dia 385): CHEGA a Ireviel: a palavra do rei (julga na volta; ninguém toca no mago nem no Herkald; a Nouliel decide a cadeira; a Sira aperta o cobrador) (saiu de Farenta no 383)
+  ▶ AGENDA #18 (era do Dia 386): CHEGA a Farenta: o MORETH (chamado pelo rei) (saiu de Ireviel no 384)
+  ▶ AGENDA #55 (era do Dia 386): FACÇÃO — os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)) ameaça ou sabota a casa (pequeno, mas visível). O que querem: nasceram da guerra velha Liga × Skotha: querem o Doge velho de volta; a LIGA paga com ouro e espadas que a MÃO MOLHADA passa pelo cais (a contra da casa achou n
+  ▶ AGENDA #62: CHEGA a Farenta: a barca com a resposta de Ireviel (a Nouliel, a Sira, a semana) (saiu de Ireviel no 385)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Garkunn (Mordun): oferece um acordo a um rival (paz, casamento, troca) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, Farenta): migra 1 região (rola para onde) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krekos (Raro, Shizess): briga com outro monstro grande (um sai ferido) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [14] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Kervos (Único, Levis): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Varogh (Lendário, Steunn): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Vathexa (Lendário, ronda ULIRV, em Steunn): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [15] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Fundas do Norte): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: Bruur (Épico, a costa): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi

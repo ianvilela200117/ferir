@@ -1,0 +1,24 @@
+[13:57:08] Dia 241 · Pressão 5/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [15] -> nenhum
+  EVENTO DE MUNDO 1d20 [15] Terremoto, enchente ou incêndio · encadeamento 1d20 [4] Refugiado · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 241 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d23 [2] Levis e Levis-baixa
+    A NOTÍCIA: [1] hoje
+    nome: Ithvil
+    desejo: curar alguém
+    ambição (relógio de 4): fundar uma escola
+    medo: a prisão
+    segredo: ama alguém proibido
+    linha vermelha: nunca trabalha para a facção X
+    dilema que vai chegar: cumprir a palavra vai custar a casa dele
+    traços: GENEROSO e COVARDE
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 241
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [11] nada visível
+    FAÍSCA: Nouse salva Iorin, por causa de sal
+    FAÍSCA: Kasgal descobre o segredo de Almision, por causa de um núcleo de monstro
+    FAÍSCA: Draa inveja Lasca e Miro (presos), por causa de um mapa

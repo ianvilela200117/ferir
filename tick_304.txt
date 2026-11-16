@@ -1,0 +1,24 @@
+[11:05:58] Dia 304 · Pressão 3/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 304 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d25 [7] Kremir
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Fenine
+    desejo: sair da cidade
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a humilhação pública
+    segredo: fez um pacto
+    linha vermelha: nunca trabalha para a facção X
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: RELIGIOSO e AVARENTO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 304
+    um Lendário age (d20 [2]):
+    Garkunn (ameaça, Mordun) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [7] chega no dia 306
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [3] nada visível
+    FAÍSCA: Venne (morto) desafia para duelo Lasca e Miro (presos), por causa de fome
+    FAÍSCA: o podestà Tirello foge de Naera, por causa de dinheiro da Liga
+    FAÍSCA: o conselheiro Pelagri desafia para duelo Sira, por causa de uma dívida antiga

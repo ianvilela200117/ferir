@@ -1,0 +1,14 @@
+[13:46:56] Dia 239 · Pressão 3/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 239 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d23 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 239
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Pelaccino (preso) deve a vida a Kreine (da casa), por causa de uma peça Lendária roubada
+    FAÍSCA: Seline inveja Sesreth, por causa de um mapa
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) rouba de Eiandald, por causa de sal

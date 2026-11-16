@@ -1,0 +1,15 @@
+[17:47:12] Dia 362 · Pressão 1/5 · evento local 1d20 [19] -> um NPC da casa tem um momento (laço ou atrito)
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 362 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]
+    ONDE: d27 [8] Telosus (o Colégio)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 362
+    um Lendário age (d20 [5]):
+    Leliel (influência, o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)) d20 [20] SURPRESA: gerador de novidade ligado a ele · notícia d20 [17] chega no dia 364
+    trama do dia: Hrotgar → Orast (PAIXÃO PROIBIDA) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: a cantora do templo procura Lasca e Miro (presos), por causa de uma profecia
+    FAÍSCA: Messer Rovai ama em segredo Leliel, por causa de um núcleo de monstro
+    FAÍSCA: Graur descobre o segredo de Brara, por causa de uma receita perdida

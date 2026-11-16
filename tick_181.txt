@@ -1,0 +1,4 @@
+[14:53:19] Dia 181 · Pressão 5/5 · encontro de estrada 1d6 [5] -> nada
+  avistamento de monstro 1d6 [3] -> nenhum
+  EVENTO DE MUNDO 1d6 [1] Guerra · encadeamento 1d6 [1] Escalada · Pressão zera
+  Fortuna volta ao máximo

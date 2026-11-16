@@ -1,0 +1,1 @@
+{"monstro": {"nome": "Mivor", "cat": "Épico", "nivel": 96, "pv": 1440, "df": 44, "rd": 6, "at": 34, "dado": "1d12", "mult": 5, "poder": {"nome": "o golpe que derruba (área 12 m)", "tipo": "area_empurra", "cd": 16}, "moral": true, "fraqueza": "Vento", "inteligente": true}, "grupo": [{"nome": "x", "at": 1, "dado": "1d6", "mult": 1, "b": 0, "df": 1, "rd": 0, "pv": 1}]}

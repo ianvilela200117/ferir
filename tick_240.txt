@@ -1,0 +1,14 @@
+[13:46:56] Dia 240 · Pressão 4/5 · encontro de estrada 1d20 [3] -> encontro na estrada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 240 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]
+    ONDE: d23 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 240
+    Lendários: d20 [20] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [6] nada visível
+    FAÍSCA: Tano (carregador, primo da Caciccetta) descobre o segredo de Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Kreium (preso) deve a vida a Sira, por causa de vingança
+    FAÍSCA: Messa Tiracci foge de Krernos, por causa de vaduar

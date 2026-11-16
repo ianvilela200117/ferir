@@ -1,0 +1,14 @@
+[21:02:05] Dia 214 · Pressão 3/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 214 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]
+    ONDE: d21 [16] as Montanhas de Fogo
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 214
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Hrotgar → Ferir (RESSENTIMENTO) d20 [2] nada visível
+    FAÍSCA: Leliel quer matar Odrum, por causa de um feitiço proibido
+    FAÍSCA: Iorin deve a vida a Asazh, por causa de vaduar
+    FAÍSCA: Ruddo vai trair Skotha Graskur, por causa de um mapa

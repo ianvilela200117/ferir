@@ -1,0 +1,16 @@
+[16:10:19] Dia 338 · Pressão 2/5 · encontro de estrada 1d20 [9] -> nada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 338 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]
+    ONDE: d27 [24] Haula (terra nova)
+    A NOTÍCIA: [5] em 1d6 [4] dias
+    ——
+  O MUNDO VIVO — Dia 338
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [4] nada visível
+    FAÍSCA: Kreium (preso) procura Ithra, por causa de um núcleo de monstro
+    FAÍSCA: os Jurados de Steunn ama em segredo Bren (morto), por causa de um mapa
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) salva Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de um título
+  AUDITORIA (XXIII.23, Dia 338): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

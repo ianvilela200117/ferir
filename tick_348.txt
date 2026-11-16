@@ -1,0 +1,26 @@
+[10:23:24] Dia 348 · Pressão 2/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [20] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 348 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [8] Telosus (o Colégio)
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    nome: Varade
+    desejo: nunca mais passar fome
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: a velhice
+    segredo: roubou o que tem
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: AVARENTO e ORGULHOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 348
+    um Lendário age (d20 [2]):
+    Naera (ofício, as Fundas do Norte) d20 [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz) · 1d20 [15] · notícia d20 [12] chega no dia 351
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Pelaccino (preso) vai trair Teraseth, por causa de vingança
+    FAÍSCA: Bren (morto) deve a vida a Skotha Graskur, por causa de uma terra além do mapa
+    FAÍSCA: Xaysress ama em segredo a casa da fundição, por causa de a Fornalha que Não Apaga
+  AUDITORIA (XXIII.23, Dia 348): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

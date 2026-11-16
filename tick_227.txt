@@ -1,0 +1,24 @@
+[08:55:34] Dia 227 · Pressão 1/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 227 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d23 [8] Telosus (o Colégio)
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    nome: Gorium
+    desejo: casar com quem ama
+    ambição (relógio de 4): comprar a liberdade da família
+    medo: a magia
+    segredo: traiu um amigo uma vez
+    linha vermelha: nunca trabalha para a facção X
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: RELIGIOSO e TEIMOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 227
+    um Lendário age (d20 [1]):
+    Leliel (influência, Farenta) d20 [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · notícia d20 [12] chega no dia 231
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [2] nada visível
+    FAÍSCA: a Guardiã da Tenaz procura Qunemneth, o Médico Cinzento, por causa de dinheiro da Liga
+    FAÍSCA: Oslo acusa em público Tilde, por causa de uma receita perdida
+    FAÍSCA: Qunemneth, o Médico Cinzento foge de o podestà Tirello, por causa de vingança

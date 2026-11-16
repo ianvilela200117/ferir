@@ -1,0 +1,16 @@
+[12:10:17] Dia 236 · Pressão 5/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  EVENTO DE MUNDO 1d20 [12] Cisma religioso ou milagre · encadeamento 1d20 [6] Silêncio · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 236 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [5]
+    ONDE: d23 [10] o Delta e as salinas
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 236
+    um Lendário age (d20 [4]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [3] recruta: gente, uma facção ou um monstro passa para o lado dele · notícia d20 [8] chega no dia 238
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [2] nada visível
+    FAÍSCA: Tilde vende algo a Ardenghi, por causa de uma terra além do mapa
+    FAÍSCA: Bren (morto) deve a vida a Thugek, por causa de a Fornalha que Não Apaga
+    FAÍSCA: o Visconte Aldoveri quer casar com Ithra, por causa de uma receita perdida

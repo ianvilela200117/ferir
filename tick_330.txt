@@ -1,0 +1,24 @@
+[14:31:20] Dia 330 · Pressão 4/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 330 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    nome: Culto do Draula
+    adora: o fim do mundo
+    promete: vida eterna
+    sinal: fita de cor
+    células: 5 cidades
+    líder: nível 140, classe Rara a Lendária
+    rito: sangue
+    plano (relógio de 6): abrir um selo
+    fraqueza: o patrono cobra caro
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 330
+    Lendários: d20 [9] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Oslo salva Almision, por causa de um título
+    FAÍSCA: Draa oferece aliança a Skugek, por causa de fome
+    FAÍSCA: Skotha Graskur chantageia Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de uma criança

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mapa do que Ferir sabe — Dia 257</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --papel:#efe4cc; --papel2:#e4d5b5; --tinta:#3b2f22; --tinta2:#6b5a45; --rio:#5b86a6; --mar:#9fbccd;
+    --casa:#b3412e; --liga:#7a4e9c; --cla:#3f7a4a; --neutro:#8a7a5e; --perigo:#2b2b2b; --novo:#b07a1e; --livre:#2e6f8f;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#2a241c;color:var(--tinta);font-family:Inter,system-ui,sans-serif}
+  .wrap{max-width:1220px;margin:0 auto;padding:18px}
+  h1{font-family:"Cormorant Garamond",serif;color:#f3e7cc;font-size:30px;margin:4px 0 2px}
+  .sub{color:#cbbd9f;font-size:14px;margin-bottom:10px;line-height:1.45}
+  .botoes{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 12px}
+  .botoes button{font:600 13px Inter,sans-serif;border:1px solid #6b5a45;background:#3a3126;color:#efe4cc;padding:7px 12px;border-radius:99px;cursor:pointer}
+  .botoes button.on{background:#efe4cc;color:#3b2f22;border-color:#efe4cc}
+  .grid{display:grid;grid-template-columns:1fr 350px;gap:14px}
+  @media (max-width:900px){.grid{grid-template-columns:1fr}}
+  .mapa{background:var(--papel);border-radius:10px;box-shadow:0 0 0 6px #4a3d2c inset, 0 6px 24px #0008;overflow:hidden}
+  svg{display:block;width:100%;height:auto}
+  .lugar{cursor:pointer}
+  .lugar text{font-family:"Cormorant Garamond",serif;font-weight:700;fill:var(--tinta);font-size:17px;paint-order:stroke;stroke:var(--papel);stroke-width:4px}
+  .lugar.peq text{font-size:14px}
+  .lugar:hover circle,.lugar.sel circle{stroke:#000;stroke-width:3}
+  .reg{font-family:"Cormorant Garamond",serif;font-style:italic;fill:var(--tinta2);font-size:20px;opacity:.75}
+  .rot{font-family:Inter,sans-serif;font-size:11.5px;font-weight:600;paint-order:stroke;stroke:var(--papel);stroke-width:3.5px}
+  .camada{transition:opacity .2s}
+  .camada.off{opacity:0;pointer-events:none}
+  .painel{background:var(--papel);border-radius:10px;padding:16px 18px;box-shadow:0 6px 24px #0008;max-height:none}
+  .painel h2{font-family:"Cormorant Garamond",serif;margin:0 0 6px;font-size:26px}
+  .painel h3{font-family:"Cormorant Garamond",serif;margin:12px 0 4px;font-size:19px}
+  .tag{display:inline-block;font-size:11px;padding:2px 8px;border-radius:99px;color:#fff;margin:0 4px 8px 0}
+  .painel ul{padding-left:18px;margin:6px 0}
+  .painel li{margin:4px 0;font-size:14px;line-height:1.4}
+  .fase{border-left:4px solid #b3412e;padding:4px 0 4px 10px;margin:8px 0;font-size:14px;line-height:1.4}
+  .fase.feita{border-color:#3f7a4a}.fase.prox{border-color:#b07a1e}.fase.depois{border-color:#8a7a5e}
+  .leg{margin-top:12px;border-top:1px solid #c9b993;padding-top:10px;font-size:13px}
+  .leg div{display:flex;align-items:center;gap:8px;margin:4px 0}
+  .dot{width:13px;height:13px;border-radius:50%;display:inline-block;border:1px solid #0005;flex:none}
+  .ln{width:26px;height:0;border-top:3px solid;display:inline-block;flex:none}
+  .nota{color:var(--tinta2);font-size:12px;margin-top:10px;line-height:1.4}
+  a.volta{font-size:13px;color:#7a4e9c;cursor:pointer;text-decoration:underline}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>O que Ferir sabe do mundo</h1>
+  <div class="sub">Dia 257, inverno · só o que chegou à casa por estrada, rio, carta ou espião. Toque num lugar para ver o que se sabe dele. Ligue e desligue as camadas para planejar. Distâncias aproximadas.</div>
+  <div class="botoes">
+    <button class="on" data-c="plano">O Plano do Leve</button>
+    <button class="on" data-c="perigo">Perigos que andam</button>
+    <button class="on" data-c="casa">Gente da casa na estrada</button>
+    <button data-c="painel-plano" id="bt-plano">Ver o plano</button>
+  </div>
+  <div class="grid">
+    <div class="mapa">
+      <svg viewBox="0 0 1000 720" id="svg" role="img" aria-label="Mapa do mundo conhecido, com o plano do rio">
+        <defs>
+          <pattern id="sal" width="10" height="10" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#c9b27e"/></pattern>
+          <pattern id="brejo" width="14" height="8" patternUnits="userSpaceOnUse"><path d="M0 6 q3.5 -4 7 0 t7 0" stroke="#7a8f6a" fill="none" stroke-width="1"/></pattern>
+          <marker id="seta" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b07a1e"/></marker>
+          <marker id="setaL" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#7a4e9c"/></marker>
+          <marker id="setaP" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#2b2b2b"/></marker>
+          <marker id="setaC" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto"><path d="M0 0 L10 5 L0 10 z" fill="#b3412e"/></marker>
+        </defs>
+        <!-- mar -->
+        <path d="M0 640 Q200 610 360 650 Q520 690 640 670 Q780 650 1000 680 L1000 720 L0 720 Z" fill="var(--mar)"/>
+        <!-- montanhas do norte -->
+        <g fill="none" stroke="#8a7458" stroke-width="2" opacity=".8">
+          <path d="M300 70 l20 -28 l20 28 M340 70 l22 -32 l22 32 M390 72 l24 -36 l24 36 M445 70 l22 -30 l22 30 M500 72 l25 -38 l25 38 M560 70 l20 -28 l20 28 M610 74 l24 -34 l24 34"/>
+        </g>
+        <!-- montanhas de fogo -->
+        <g fill="none" stroke="#a5523a" stroke-width="2" opacity=".85"><path d="M850 230 l18 -26 l18 26 M886 232 l20 -30 l20 30 M925 230 l16 -22 l16 22"/></g>
+        <!-- deserto de sal -->
+        <path d="M700 330 Q820 300 960 340 L980 600 Q860 620 760 580 Q700 470 700 330Z" fill="url(#sal)" opacity=".9"/>
+        <!-- brejo -->
+        <path d="M250 560 Q330 540 400 575 Q420 630 360 645 Q280 640 245 610Z" fill="url(#brejo)"/>
+        <!-- mata de elais -->
+        <g fill="#7a8f6a" opacity=".45"><circle cx="400" cy="440" r="7"/><circle cx="415" cy="430" r="6"/><circle cx="430" cy="445" r="7"/><circle cx="410" cy="455" r="6"/><circle cx="440" cy="432" r="5"/></g>
+        <!-- rio Leve -->
+        <path d="M505 60 C495 160 520 230 500 300 C485 380 530 450 515 520 C505 580 480 610 470 650" fill="none" stroke="var(--rio)" stroke-width="5" stroke-linecap="round"/>
+        <path d="M515 520 C560 560 600 600 640 655" fill="none" stroke="var(--rio)" stroke-width="3"/>
+        <!-- estrada do sal -->
+        <path d="M500 300 C600 330 700 380 880 470" fill="none" stroke="#9c8152" stroke-width="2" stroke-dasharray="6 6"/>
+        <text class="reg" x="300" y="30">as Montanhas Hegre</text>
+        <text class="reg" x="760" y="560">o Deserto de Sal</text>
+        <text class="reg" x="255" y="600">o brejo</text>
+        <text class="reg" x="520" y="705">o mar</text>
+        <text class="reg" x="600" y="395" transform="rotate(14 600 395)" style="font-size:14px">estrada do sal</text>
+        <text class="reg" x="530" y="210" transform="rotate(82 530 210)" style="font-size:14px">o rio Leve</text>
+        <!-- terras além do mapa -->
+        <line x1="70" y1="60" x2="20" y2="25" stroke="#b07a1e" stroke-width="2" marker-end="url(#seta)"/>
+        <line x1="930" y1="80" x2="980" y2="40" stroke="#b07a1e" stroke-width="2" marker-end="url(#seta)"/>
+
+        <!-- CAMADA: O PLANO DO LEVE -->
+        <g id="c-plano" class="camada">
+          <!-- tráfego da Liga cortado -->
+          <path d="M498 330 C488 400 525 450 517 500" fill="none" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#setaL)"/>
+          <text class="rot" x="452" y="400" fill="#7a4e9c">Levis → Marasar</text>
+          <path d="M630 640 C600 610 570 580 540 545" fill="none" stroke="#7a4e9c" stroke-width="3" stroke-dasharray="7 5" marker-end="url(#setaL)"/>
+          <!-- a forquilha fechada -->
+          <circle cx="515" cy="520" r="17" fill="none" stroke="#b3412e" stroke-width="3"/>
+          <path d="M505 510 l20 20 M525 510 l-20 20" stroke="#b3412e" stroke-width="4" stroke-linecap="round"/>
+          <!-- a corrente (pronta no 264) -->
+          <path d="M488 512 L545 506" stroke="#3b2f22" stroke-width="2.5" stroke-dasharray="3 3"/>
+          <!-- balistas nas margens -->
+          <rect x="481" y="503" width="8" height="8" fill="#b3412e" stroke="#fff" stroke-width="1"/>
+          <rect x="543" y="499" width="8" height="8" fill="#b3412e" stroke="#fff" stroke-width="1"/>
+          <!-- a galé -->
+          <path d="M528 532 l26 0 l-5 7 l-16 0 z" fill="#b3412e" stroke="#fff" stroke-width="1"/>
+          <text class="rot" x="560" y="540" fill="#b3412e">a galé + 2 barcos da Skotha</text>
+          <text class="rot" x="556" y="500" fill="#b3412e">A FORQUILHA: fechada à Liga (254)</text>
+          <!-- o cerco de Marasar -->
+          <circle cx="650" cy="655" r="34" fill="none" stroke="#2b2b2b" stroke-width="2.5" stroke-dasharray="5 4"/>
+          <text class="rot" x="690" y="640" fill="#2b2b2b">cerco: a Skotha + os Thog</text>
+          <text class="rot" x="690" y="654" fill="#2b2b2b">revolta no porto (256)</text>
+        </g>
+
+        <!-- CAMADA: PERIGOS QUE ANDAM -->
+        <g id="c-perigo" class="camada">
+          <!-- Elaeva: de Zisrir ao Delta, pelo oeste -->
+          <path d="M140 140 C200 240 300 330 395 430 C360 500 300 560 330 610 C370 640 410 650 432 652" fill="none" stroke="#2b2b2b" stroke-width="2.5" stroke-dasharray="2 6" stroke-linecap="round" marker-end="url(#setaP)"/>
+          <text class="rot" x="190" y="300" fill="#2b2b2b">a ELAEVA desce (chega ~266)</text>
+          <!-- Naudren atrás da galé -->
+          <circle cx="498" cy="548" r="7" fill="#2b2b2b" opacity=".75"/>
+          <text class="rot" x="410" y="560" fill="#2b2b2b">o NAUDREN</text>
+          <!-- Kervos na estrada de Levis -->
+          <circle cx="548" cy="410" r="8" fill="#2b2b2b" opacity=".75"/>
+          <text class="rot" x="560" y="414" fill="#2b2b2b">o KERVOS (come metal)</text>
+          <!-- Skorval no Delta -->
+          <circle cx="425" cy="635" r="7" fill="#2b2b2b" opacity=".75"/>
+        </g>
+
+        <!-- CAMADA: GENTE DA CASA NA ESTRADA -->
+        <g id="c-casa" class="camada">
+          <path d="M530 548 C560 420 620 260 655 165" fill="none" stroke="#b3412e" stroke-width="2.5" stroke-dasharray="1 6" stroke-linecap="round" marker-end="url(#setaC)"/>
+          <text class="rot" x="600" y="300" fill="#b3412e">o Orast → Steunn (~262)</text>
+          <path d="M520 548 C500 420 480 260 450 162" fill="none" stroke="#b3412e" stroke-width="2" stroke-dasharray="1 6" stroke-linecap="round"/>
+          <text class="rot" x="378" y="250" fill="#b3412e">o Odrum: assaltado</text>
+          <path d="M366 238 l10 10 M376 238 l-10 10" stroke="#b3412e" stroke-width="2.5"/>
+        </g>
+
+        <g id="lugares"></g>
+      </svg>
+    </div>
+    <div class="painel" id="painel"></div>
+  </div>
+</div>
+<script>
+const C={casa:'#b3412e',liga:'#7a4e9c',cla:'#3f7a4a',neutro:'#8a7a5e',perigo:'#2b2b2b',novo:'#b07a1e',livre:'#2e6f8f'};
+const L=[
+ {n:'Ireviel',x:525,y:568,t:'casa',r:11,tags:['A sua cidade','O governo é a casa'],i:[
+  'A Fornalha que Não Apaga, a Matriz, a forja grande e o Colégio (veio inteiro de Telosus).',
+  'Pilares: Comida 4/4 · Comércio 4/4 · Dinheiro 3/4 · Saúde 1/4 (febre do brejo, vinda do Delta; quarentena no armazém do cais).',
+  'Políticas: Fundo dos Ofícios (3 negócios novos), Casa dos Estudiosos, Porta do Minério (vaduar só a frio), Segurança.',
+  'Contra-espionagem 30 (o teto). Presos: 6 caçadores da Leliel, o Hask (conselheiros), agentes da Liga, da Lumine, dos conselheiros e do Ardenghi.',
+  'A hoste: ~110 com a Eliane, 12 Épicas. Venda: 2 Épicas por semana.',
+  'Cofre: 6.255. Na cidade: um emissário da Liga, com uma oferta de portagem.']},
+ {n:'a Forquilha',x:515,y:520,t:'casa',r:6,peq:1,tags:['Logo acima de Ireviel','Ponto de controle'],i:[
+  'Ali o Leve se divide: o braço de oeste vai ao Delta, o de leste a Marasar. Quem desce de Levis a Marasar passa à vista de Ireviel.',
+  'O DECRETO DO LEVE (254): barca da Liga não passa; as outras passam com a Carta de Passagem.',
+  'A galé (o Kreine, 2 balistas) e 2 barcos da Skotha (18 da Companhia) guardam. Uma barca da Liga já foi tomada (255).',
+  '2 balistas nas margens: prontas no 259. A CORRENTE DO LEVE: pronta no 264.',
+  'O NAUDREN (espírito Épico de podridão, fala e mente) segue a galé.']},
+ {n:'Fenssa',x:615,y:520,t:'perigo',r:7,peq:1,tags:['A um dia de Ireviel','Torre caída'],i:[
+  'Torre de mago caída, habitada por mortos; material Raro a Lendário.','Dorme ali o HAGAL (Mítico 292): o Colégio não achou a fraqueza.','A casa tem a chave.']},
+ {n:'Quogal',x:700,y:592,t:'perigo',r:6,peq:1,tags:['A Brissa deu (254)'],i:['Mina caída por um monstro, no caminho de Farenta a Ireviel.','Guarda uma peça antiga; mora lá um eremita.','Entrar pede uma chave.']},
+ {n:'Marasar',x:650,y:655,t:'liga',r:10,tags:['Capital da Liga','Sob cerco'],i:[
+  'A Skotha e os orcs Thog apertam por terra; o rio de cima está fechado por Ireviel.',
+  'REVOLTA no porto (256): a comida sobe lá por 2 semanas.',
+  'O Pelagri: o livro do pedágio secreto foi lido na praça de Ireviel; os conselheiros perdem apoio.',
+  'Lá estão a Sira (chefe da espionagem), o Draron e a Brua.',
+  'A Liga quer a galé de volta e oferece pagar portagem pelo rio (257).']},
+ {n:'Farenta',x:800,y:625,t:'livre',r:8,tags:['Porto livre','A Leliel'],i:['A cidade da LELIEL (Lendária 351). A Skotha a atacou (244).','A Leliel mandou caçadores atrás do Gorjal da Isolda: presos (253).','O CULTO DOS OLHOS PINTADOS cresce lá (rouba crianças).']},
+ {n:'o Delta e as salinas',x:440,y:655,t:'perigo',r:9,tags:['Perigo'],i:[
+  'O SKORVAL (Mítico 353) pousa na ruína do Delta e leva no peito um núcleo Lendário de Podridão.',
+  'A febre do brejo: os refugiados trazem para Ireviel.',
+  'Bandidos viraram exército no Delta e nas salinas. O Delta agradeceu o aviso da floresta e vigia.',
+  'Os Barqueiros de Sal recusaram a carta de Ireviel (medo da Liga).']},
+ {n:'Brassa',x:470,y:622,t:'perigo',r:5,peq:1,tags:['Delta'],i:['Torre caída no Delta. Uma curandeira disse (106) que a febre do brejo vem de lá; ninguém vai.']},
+ {n:'Salinas Velhas',x:395,y:690,t:'perigo',r:6,peq:1,tags:['Laennor'],i:['O LAENNOR, o Redemoinho, foi visto de novo (256).','Onde a casa tomou a galé da Liga (218).']},
+ {n:'Torre Afogada',x:300,y:600,t:'perigo',r:6,peq:1,tags:['brejo do oeste'],i:['O ERYNAR e o LUMDUN rondam o brejo. Uma lei nova lá (252).']},
+ {n:'Mata de Elais',x:420,y:450,t:'neutro',r:7,peq:1,tags:['Mata'],i:['Os ogros Grukos em guerra.','A ELAEVA deve passar por ela a caminho do Delta.']},
+ {n:'Levis',x:505,y:300,t:'liga',r:10,tags:['Cidade-ponte da Liga'],i:['Terremoto (241); refugiados vieram a Ireviel.','A Guilda (a mestra Carea) declarou os ferreiros de Ireviel sem registro.','A irmã Oisse (casa de doentes) recebeu 5 doses do remédio.','A Brara, amiga da casa, foi avisada do fechamento do rio.','Na estrada: o KERVOS (Único 111, devora metal, reflete magia).']},
+ {n:'Lumgal',x:385,y:305,t:'neutro',r:7,peq:1,tags:['2 dias a oeste de Levis'],i:['O cemitério dos reis. Ferir abriu o túmulo do Rei-Ferreiro.']},
+ {n:'Telosus',x:70,y:340,t:'neutro',r:8,tags:['15 dias a oeste','Cidade-torre'],i:['De onde veio o Colégio. Um discípulo do Ceduion deve aparecer no mundo.']},
+ {n:'Gogrunn',x:445,y:150,t:'cla',r:9,tags:['Cidade-mina do Clã'],i:['Acharam ARVEL: metal MÍTICO de fogo (aceita feitiço até o 8º círculo), ~500 g, a 3.000 por 100 g.','O Odrum foi assaltado no caminho e voltou sem comprar.','A Stundald cresceu.']},
+ {n:'as Fundas do Norte',x:540,y:110,t:'cla',r:9,tags:['O Clã Hegre'],i:['O HROTGAR descobriu que o Orast estava na galé e exigiu a entrega; a casa responde que ele não está em Ireviel.','O KREDUN (Mítico) marca território mais perto de gente.','O Clã PERDEU terra para o Kredun; nas aldeias perdidas rezam à Mãe Branca, por medo (254).','Uma embaixada de terra distante (o Hevar) quer aliança com o Clã (254).']},
+ {n:'os Picos Brancos',x:590,y:45,t:'perigo',r:6,peq:1,tags:['Gelo'],i:['Uma rota de comércio abriu lá (249).']},
+ {n:'Steunn',x:660,y:150,t:'livre',r:8,tags:['Cidade livre de pedra'],i:['Não deixa o Clã entrar. Para lá vai o Orast (~262).','Os Jurados de Steunn.']},
+ {n:'Kremir',x:250,y:175,t:'neutro',r:9,tags:['Clãs das colinas'],i:['Os preços desabaram (246). O MANEUS apareceu de dia, à vista de todos (255).']},
+ {n:'Zisrir',x:130,y:120,t:'perigo',r:8,tags:['Vale de ruínas'],i:['A ELAEVA, a Floresta que Anda (Mítico), acordou e desce rumo ao Delta: espinho, o fogo a fere, não atravessa rio largo.','Quem a acordou foi a obra de um Lendário novo do vale.','Magia selvagem: a coberta afina (254).']},
+ {n:'Orne',x:180,y:170,t:'perigo',r:6,peq:1,tags:['O Colégio achou'],i:['Mercado caído no vale de Zisrir; guarda material Raro a Lendário; não mora nada lá.','Pede uma senha: um refugiado de Zisrir a sabe.']},
+ {n:'Shizess',x:760,y:400,t:'neutro',r:8,tags:['Cidade das caravanas'],i:['Um vilão novo, o VARUUN, quer forjar uma arma Mítica proibida (notícia do 257).']},
+ {n:'Mordun',x:830,y:355,t:'perigo',r:7,peq:1,tags:['Mina caída'],i:['O THARGOS (Mítico 329, voa, olhar que paralisa) apareceu lá.','Um casamento político (246).']},
+ {n:'as Montanhas de Fogo',x:890,y:255,t:'perigo',r:8,tags:['Fogo'],i:['O ITHVIL (Mítico) dorme fundo.']},
+ {n:'o sul da areia',x:880,y:620,t:'neutro',r:7,peq:1,tags:['onde a areia come a pedra'],i:['A Guardiã da Tenaz fez um gesto público grande (251).','Um vilão novo, o TERVANE, quer viver para sempre (veneno).']},
+ {n:'Kasra',x:60,y:62,t:'novo',r:7,peq:1,tags:['Terra além do mapa'],i:['A Oficina de Vossal se abriu lá (249).']},
+ {n:'Zaitor',x:925,y:85,t:'novo',r:7,peq:1,tags:['Terra além do mapa'],i:['Um vilão novo entrou no mundo por lá (228).']},
+];
+const PLANO=`<h2>O Plano do Leve</h2>
+<span class="tag" style="background:${C.casa}">controle do rio</span><span class="tag" style="background:${C.liga}">sufocar a Liga</span>
+<div class="fase feita"><b>Fase 1 · fechar a forquilha</b> (254, em curso)<br>Decreto do Leve · a galé e 2 barcos da Skotha na forquilha · 1 barca da Liga tomada · 2 balistas no 259 · a corrente no 264 · o Krernos com os olhos do rio.</div>
+<div class="fase prox"><b>Fase 2 · apertar</b> (decidir agora)<br>Resposta ao emissário: aceitar a portagem (ouro e reconhecimento de fato) ou recusar e seguir sufocando. Levis fica sem o mar; Marasar, sem o metal de Levis e com a revolta no porto.</div>
+<div class="fase depois"><b>Fase 3 · ser reconhecido</b><br>A Liga trata com Ireviel como poder do rio; os conselheiros; a promessa da Skotha (reino quando Marasar cair).</div>
+<h3>Forças da casa</h3>
+<ul><li>Hoste ~110 (a Eliane), 12 Épicas.</li><li>A galé: o Kreine, 2 balistas, os remadores.</li><li>18 da Companhia em 2 barcos.</li><li>O Moreth, a Isolda, a Eliane, o Kreine.</li></ul>
+<h3>Riscos</h3>
+<ul><li>Uma frota da Liga rio acima (a régua antes da luta).</li><li>Piratas de Farenta; o Clã, irritado pelo Orast.</li><li>O Naudren atrás da galé; a febre do brejo; a Elaeva a oeste.</li></ul>
+<div class="nota">Os Barqueiros de Sal recusaram; os Barqueiros do Livro (os que pagavam o pedágio secreto) pedem a carta de Ireviel.</div>`;
+const g=document.getElementById('lugares');
+const NS='http://www.w3.org/2000/svg';
+let sel=null;
+function legenda(){
+  return `<div class="leg"><b>Legenda</b>
+  <div><span class="dot" style="background:${C.casa}"></span>a sua casa (Ireviel)</div>
+  <div><span class="dot" style="background:${C.liga}"></span>a Liga</div>
+  <div><span class="dot" style="background:${C.cla}"></span>o Clã Hegre</div>
+  <div><span class="dot" style="background:${C.livre}"></span>cidade livre</div>
+  <div><span class="dot" style="background:${C.neutro}"></span>neutro</div>
+  <div><span class="dot" style="background:${C.perigo}"></span>perigo (monstro, mortos, culto, guerra)</div>
+  <div><span class="dot" style="background:${C.novo}"></span>terra nova, além do mapa</div>
+  <div><span class="ln" style="border-color:#7a4e9c;border-top-style:dashed"></span>tráfego da Liga, cortado na forquilha</div>
+  <div><span class="ln" style="border-color:#2b2b2b;border-top-style:dotted"></span>caminho de um perigo</div>
+  <div><span class="ln" style="border-color:#b3412e;border-top-style:dotted"></span>gente da casa na estrada</div>
+  <div class="nota">Linha azul: o rio Leve. Tracejado claro: a estrada do sal. Quadrados vermelhos: balistas. Tracejado preto na forquilha: a corrente (pronta no 264).</div></div>`;
+}
+function mostraPlano(){
+  if(sel){sel.classList.remove('sel');sel=null;}
+  document.getElementById('painel').innerHTML=PLANO+legenda();
+}
+function mostra(p,el){
+  if(sel) sel.classList.remove('sel'); sel=el; el.classList.add('sel');
+  const cores={casa:'A sua casa',liga:'A Liga',cla:'O Clã Hegre',livre:'Cidade livre',neutro:'Neutro',perigo:'Perigo',novo:'Terra nova'};
+  document.getElementById('painel').innerHTML=
+    `<h2>${p.n}</h2>`+
+    `<span class="tag" style="background:${C[p.t]}">${cores[p.t]}</span>`+
+    p.tags.map(t=>`<span class="tag" style="background:#8a7a5e">${t}</span>`).join('')+
+    `<ul>${p.i.map(x=>`<li>${x}</li>`).join('')}</ul>`+
+    `<a class="volta" id="volta">voltar ao plano do rio</a>`+legenda();
+  document.getElementById('volta').addEventListener('click',mostraPlano);
+}
+L.forEach(p=>{
+  const a=document.createElementNS(NS,'g'); a.setAttribute('class','lugar'+(p.peq?' peq':''));
+  const c=document.createElementNS(NS,'circle'); c.setAttribute('cx',p.x); c.setAttribute('cy',p.y); c.setAttribute('r',p.r);
+  c.setAttribute('fill',C[p.t]); c.setAttribute('stroke','#fff8'); c.setAttribute('stroke-width','2');
+  const t=document.createElementNS(NS,'text'); t.setAttribute('x',p.x+p.r+4); t.setAttribute('y',p.y+5); t.textContent=p.n;
+  if(p.x>820 || p.n==='a Forquilha'){t.setAttribute('x',p.x-p.r-4); t.setAttribute('text-anchor','end');}
+  a.appendChild(c); a.appendChild(t);
+  a.addEventListener('click',()=>mostra(p,a));
+  g.appendChild(a);
+});
+document.querySelectorAll('.botoes button').forEach(b=>{
+  b.addEventListener('click',()=>{
+    const c=b.dataset.c;
+    if(c==='painel-plano'){mostraPlano();return;}
+    b.classList.toggle('on');
+    document.getElementById('c-'+c).classList.toggle('off',!b.classList.contains('on'));
+  });
+});
+mostraPlano();
+</script>
+</body>
+</html>

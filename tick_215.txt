@@ -1,0 +1,15 @@
+[22:19:40] Dia 215 · Pressão 4/5 · encontro de estrada 1d20 [6] -> encontro na estrada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 215 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d21 [2] Levis e Levis-baixa
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)
+    ——
+  O MUNDO VIVO — Dia 215
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [6] nada visível
+    FAÍSCA: a mestra Carea quer casar com Mormir (o eremita de Quoine, os Sem-Torre), por causa de um feitiço proibido
+    FAÍSCA: Draa chantageia o Visconte Aldoveri, por causa de uma peça Lendária roubada
+    FAÍSCA: o Doge Pelaone vai trair Draron (da casa), por causa de sal

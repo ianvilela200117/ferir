@@ -1,0 +1,31 @@
+[21:50:36] Dia 253 · Pressão 2/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 253 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d23 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Kasnar
+    desejo: voltar para casa
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: o próprio passado
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca trabalha para a facção X
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: GENEROSO e HONESTO
+    nível: 360
+    obra sinistra (relógio de 8): virar imortal
+    por que é humano: tem medo de morrer
+    equipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: veneno
+    o que o faria parar: ser desmascarado em público
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 253
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Moreth → Bren (morto) (ÓDIO) d20 [5] nada visível
+    FAÍSCA: Sira oferece aliança a Lasca e Miro (presos), por causa de uma dívida antiga
+    FAÍSCA: Isolda encomenda uma peça para Eliane, por causa de um herdeiro dos Steunn
+    FAÍSCA: Adurel chantageia Gorine, por causa de a Fornalha que Não Apaga
+  AUDITORIA (XXIII.23, Dia 253): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

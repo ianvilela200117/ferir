@@ -1,0 +1,14 @@
+[14:19:41] Dia 247 · Pressão 1/5 · encontro de estrada 1d20 [16] -> nada
+  avistamento de monstro 1d20 [8] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 247 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d23 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 247
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [12] nada visível
+    FAÍSCA: Tilde vai trair Brara, por causa de sal
+    FAÍSCA: Gorra pede ajuda a a casa da fundição, por causa de um mapa
+    FAÍSCA: o Visconte Aldoveri encomenda uma peça para Qunemneth, o Médico Cinzento, por causa de a coberta do mundo

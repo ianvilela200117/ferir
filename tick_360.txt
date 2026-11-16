@@ -1,0 +1,14 @@
+[12:33:31] Dia 360 · Pressão 4/5 · encontro de estrada 1d20 [7] -> encontro na estrada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 360 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]
+    ONDE: d27 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 360
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [1] nada visível
+    FAÍSCA: Skedda descobre o segredo de Aeliae, por causa de uma terra além do mapa
+    FAÍSCA: Borecci encomenda uma peça para Ithra, por causa de um herdeiro dos Steunn
+    FAÍSCA: Dovan vai trair Sira, por causa de sal

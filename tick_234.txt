@@ -1,0 +1,23 @@
+[12:10:17] Dia 234 · Pressão 3/5 · encontro de estrada 1d20 [4] -> encontro na estrada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 234 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d23 [20] Steunn
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    nome: Ithdun
+    desejo: casar com quem ama
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: voltar a ser escravo
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: CRUEL e RELIGIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 234
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Skotha Graskur salva os Jurados de Steunn, por causa de uma criança
+    FAÍSCA: Dovan vende algo a Sira, por causa de vingança
+    FAÍSCA: Eliane oferece aliança a Draa, por causa de uma criança

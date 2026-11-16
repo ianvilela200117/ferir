@@ -1,0 +1,15 @@
+[11:45:19] Dia 309 · Pressão 3/5 · encontro de estrada 1d20 [13] -> nada
+  avistamento de monstro 1d20 [20] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 309 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d26 [7] Kremir
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 309
+    um Lendário age (d20 [4]):
+    Teraseth (combate, Ireviel e o rio) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [7] chega no dia 311
+    trama do dia: Mormir (o eremita de Quoine, os Sem-Torre) → Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) (RIVALIDADE) d20 [8] nada visível
+    FAÍSCA: o conselheiro Pelagri salva Skedda, por causa de um mapa
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus sonha com Sira, por causa de uma criança
+    FAÍSCA: Adurel inveja Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de a Fornalha que Não Apaga

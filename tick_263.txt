@@ -1,0 +1,17 @@
+[23:10:58] Dia 263 · Pressão 2/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 263 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]
+    ONDE: d23 [22] Kasra (terra nova)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 263
+    um Lendário age (d20 [3]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [19] manda caçar alguém (um nome, uma peça, um monstro) · notícia d20 [17] chega no dia 265
+    trama do dia: Moreth → Bren (morto) (ÓDIO) d20 [4] nada visível
+    FAÍSCA: Ulair inveja o podestà Tirello, por causa de uma criança
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) salva Maevis (morto), por causa de dinheiro da Liga
+    FAÍSCA: Pelaccino (preso) oferece aliança a Ruddo, por causa de dinheiro da Liga
+  AUDITORIA (XXIII.23, Dia 263): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

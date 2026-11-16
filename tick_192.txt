@@ -1,0 +1,3 @@
+[16:30:44] Dia 192 · Pressão 1/5 · encontro de estrada 1d6 [4] -> nada
+  avistamento de monstro 1d6 [4] -> nenhum
+  Fortuna volta ao máximo

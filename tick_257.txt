@@ -1,0 +1,24 @@
+[22:23:06] Dia 257 · Pressão 1/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 257 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d23 [5] Farenta
+    A NOTÍCIA: [1] hoje
+    nome: Culto do Zaivil
+    adora: um rei antigo
+    promete: riqueza
+    sinal: olhos pintados
+    células: 3 cidades
+    líder: nível 180, classe Rara a Lendária
+    rito: roubo de crianças
+    plano (relógio de 6): matar um herdeiro
+    fraqueza: o patrono cobra caro
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 257
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Oslo → Mormir (o eremita de Quoine, os Sem-Torre) (DÍVIDA) d20 [6] nada visível
+    FAÍSCA: Messa Tiracci deve a vida a Ceduion, reitor do Colégio de Telosus, por causa de vaduar
+    FAÍSCA: Odrum chantageia Maevis (morto), por causa de uma terra além do mapa
+    FAÍSCA: Pelaccino (preso) encomenda uma peça para Tamel (morto), por causa de vaduar

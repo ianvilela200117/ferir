@@ -1,0 +1,15 @@
+[11:45:19] Dia 311 · Pressão 5/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [19] -> nenhum
+  EVENTO DE MUNDO 1d20 [20] SURPRESA (gerador novidade) · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 311 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [1]
+    ONDE: d26 [13] a Mata de Elais
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 311
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [1] nada visível
+    FAÍSCA: o Doge Pelaone oferece aliança a Isolda, por causa de um herdeiro dos Steunn
+    FAÍSCA: Qunemneth, o Médico Cinzento deve a vida a Ceduion, reitor do Colégio de Telosus, por causa de o perdão
+    FAÍSCA: Teraseth deve a vida a Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301), por causa de dinheiro da Liga

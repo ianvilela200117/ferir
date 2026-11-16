@@ -1,0 +1,15 @@
+[22:25:03] Dia 366 · Pressão 5/5 · evento local 1d20 [18] -> um pedinte com algo valioso para vender
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [2] Lianniel
+  EVENTO DE MUNDO 1d20 [9] Casamento ou aliança de casas · encadeamento 1d20 [17] Pedido de ajuda a Ireviel · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 366 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 366
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → os Jurados de Steunn (RESSENTIMENTO) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Krernos descobre o segredo de Gorron (oferece a missão do Delta), por causa de vaduar
+    FAÍSCA: Venne (morto) salva Mormir (o eremita de Quoine, os Sem-Torre), por causa de uma profecia
+    FAÍSCA: Maevis (morto) sonha com Tilde, por causa de uma peça Lendária roubada

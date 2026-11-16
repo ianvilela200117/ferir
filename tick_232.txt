@@ -1,0 +1,14 @@
+[11:41:45] Dia 232 · Pressão 1/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 232 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]
+    ONDE: d23 [21] Zisrir
+    A NOTÍCIA: [5] em 1d6 [3] dias
+    ——
+  O MUNDO VIVO — Dia 232
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Krernos → Graur (RIVALIDADE) d20 [11] nada visível
+    FAÍSCA: Almision deve a vida a Iorin, por causa de vaduar
+    FAÍSCA: Odrum salva Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de um núcleo de monstro
+    FAÍSCA: Krernos acusa em público Venne (morto), por causa de um mapa

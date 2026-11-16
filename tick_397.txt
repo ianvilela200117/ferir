@@ -1,0 +1,34 @@
+[22:15:40] Dia 397 · Pressão 1/5 · evento local 1d20 [15] -> um animal estranho nos lodaçais
+  O TEMPO (28 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: calor forte, vento firme (d6 [6] muda, d20 [11] · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: calor forte, calmo (d6 [1] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: calor forte, vento forte (d6 [4] muda, d20 [10] · vento d6 [6]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: limpo, vento forte (d6 [1] fica · vento d6 [6])
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [14/100] · MUDOU: era baixo
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 397 (dia)
+    d20 [2] NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)
+    ONDE: d27 [18] a costa (Ireviel–Marasar)  ◆ TOCA A CASA
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    nome: Kasssa
+    desejo: uma casa própria
+    ambição (relógio de 4): virar Lendário
+    medo: ser esquecido
+    segredo: trabalha para outra facção
+    linha vermelha: nunca volta atrás numa palavra dada
+    dilema que vai chegar: cumprir a palavra vai custar a casa dele
+    traços: AMBICIOSO e CRUEL
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 397
+    um Lendário age (d20 [6]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta · notícia d20 [11] chega no dia 399
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [4] nada visível
+    FAÍSCA: Messer Rovai sonha com a cantora do templo, por causa de um feitiço proibido
+    FAÍSCA: Krernos ama em segredo Eiandald, por causa de um título
+    FAÍSCA: Ruddo acusa em público Altheltia, por causa de dinheiro da Liga
+  ▶ AGENDA #126: [OCULTO] NOTÍCIA de Marasar: os da LUZ DO CAIS proclamam MILAGRE a luz do Moreth que matou o Naudren e rompem com a Luz Partida (EV396).
+  ✉ NOTÍCIA QUE CHEGA HOJE: Leliel (o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)): manda caçar alguém (um nome, uma peça, um monstro) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Bigorna Livre (Levis): dá um passo no que quer · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Luz Partida (Marasar e Ireviel): briga com a Liga em guerra; vence a Luz Partida · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)

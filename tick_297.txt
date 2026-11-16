@@ -1,0 +1,14 @@
+[09:24:55] Dia 297 · Pressão 1/5 · encontro de estrada 1d20 [9] -> nada
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 297 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d25 [14] o brejo do oeste (a Torre Afogada)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 297
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Qunemneth, o Médico Cinzento → Thugek (VINGANÇA JURADA) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Kreine (da casa) quer casar com Thugek, por causa de um herdeiro dos Steunn
+    FAÍSCA: Eiandald quer casar com Ulair, por causa de o perdão
+    FAÍSCA: Krernos rouba de Kreine (da casa), por causa de a Matriz

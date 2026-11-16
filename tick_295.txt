@@ -1,0 +1,15 @@
+[09:24:55] Dia 295 · Pressão 4/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 295 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]
+    ONDE: d25 [13] a Mata de Elais
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 295
+    um Lendário age (d20 [6]):
+    Xaysress (ofício, Kremir) d20 [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta · notícia d20 [5] chega no dia 297
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [9] nada visível
+    FAÍSCA: Gorron (oferece a missão do Delta) vende algo a Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de uma terra além do mapa
+    FAÍSCA: o conselheiro Pelagri pede ajuda a Altheltia, por causa de sal
+    FAÍSCA: Tano (carregador, primo da Caciccetta) acusa em público Eiandald, por causa de uma profecia

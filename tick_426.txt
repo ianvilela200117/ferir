@@ -1,0 +1,46 @@
+[14:20:51] Dia 426 · Pressão 5/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (27 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: calor forte, calmo (d6 [1] fica · vento d6 [2]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: tempestade, VENTANIA (d6 [3] fica · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Levis: nublado, brisa (d6 [4] muda, d20 [13] · vento d6 [4])
+   Farenta: tempestade, VENTANIA (d6 [3] fica · vento d6 [3]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: cheio (correnteza forte: subir o rio custa o dobro) [67/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [5] Descoberta · encadeamento 1d20 [10] Herói local · ONDE: d19 [11] Yaelane
+  EVENTO DE MUNDO (PERTO) 1d20 [13] Caravana ou frota perdida · encadeamento 1d20 [13] A Liga reage · ONDE: d8 [2] Levis e Levis-baixa
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [1] Escalada · ONDE: d27 [5] Farenta
+  Pressão zera
+  Fortuna volta ao máximo
+  FERIDO: Ferir (LEVE: luta com −2 no ataque e na defesa) até o Dia 427
+  FERIDO: Moreth (PARA SEMPRE: não luta até o 455; PARA SEMPRE: O FÔLEGO (−1 ação por rodada; MR25a [9] a cura não segurou; MR25b [1])) até o Dia 455
+  FERIDO: Eiagrir (GRAVE: não luta · MARCA: medo do que o feriu) até o Dia 442
+  O MUNDO SE MOVE — Dia 426 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    nome: Ulade
+    desejo: ser perdoado
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: o fogo
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca deixa um ferido para trás
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: AVARENTO e COVARDE
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 426
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Skotha Graskur → Lasca e Miro (presos) (RESSENTIMENTO) d20 [11] nada visível
+    FAÍSCA: Draron (da casa) rouba de Brogos, por causa de vaduar
+    FAÍSCA: o podestà Tirello chantageia ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322), por causa de uma criança
+    FAÍSCA: Eliane deve a vida a Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308), por causa de sal
+  ▶ AGENDA #281 (era do Dia 414): FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #332 (era do Dia 421): FACÇÃO — os Sem-Torre (Quoine, a torre caída em Zisrir) pede audiência ao conselho. O que querem: magos que o Colégio de Telosus falido mandou embora sem paga; o MORMIR (o eremita de Quoine) os junta e quer voltar ao Colégio; o filho do Draron é aprendiz del
+  ▶ AGENDA #347: CHEGA A LEVIS a carta do rei à BRARA: as PICARETAS na fundição velha (Levis paga metade) e RASGAR EM PRAÇA as dívidas pequenas do livro do Ardenghi: rolar a resposta dela (opinião −5 desde a partilha) e o efeito no culto do Xaathis
+  ▶ AGENDA #363: A GUILDA, depois do Morek, vai atrás da ELOUNE (3c)
+  ▶ AGENDA #371: A BARCA DOS CAÇADORES chega à forquilha ao amanhecer atrás do CORPO DO STARKALD (3a): rolar o que acham (o Morek ferido, os bichos, o calor)
+  ▶ AGENDA #372: VIGÍLIA DA ISOLDA (o corpo no sal da adega fria; sem enterro enquanto o rei procura a RESSURREIÇÃO)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Borecci (Steunn): sofre um revés (ferida, perda, traição de um próximo) · COMO CHEGA: d20 [19] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, os Picos Brancos): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): alguém grande passou a pagar ou proteger · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: Naera (as Fundas do Norte): um gesto público grande (discurso, decreto, desafio) que todo mundo comenta · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi

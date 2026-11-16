@@ -1,0 +1,17 @@
+[23:50:48] Dia 268 · Pressão 2/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 268 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d23 [17] os Picos Brancos
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    1d12 [5] um lugar novo é descoberto (gerar lugar)
+    ——
+  O MUNDO VIVO — Dia 268
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Messer Rovai → o podestà Tirello (MEDO) d20 [11] nada visível
+    FAÍSCA: Krernos descobre o segredo de Eiandald, por causa de uma terra além do mapa
+    FAÍSCA: Kreine (da casa) pede ajuda a Skugek, por causa de sal
+    FAÍSCA: Braeth (o ancião do Clã) ama em segredo Dovan, por causa de vingança
+  AUDITORIA (XXIII.23, Dia 268): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

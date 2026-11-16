@@ -1,0 +1,16 @@
+[13:57:08] Dia 243 · Pressão 2/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [18] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 243 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d23 [4] Marasar (a Liga e o Doge)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 243
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) pede ajuda a Eliane, por causa de fome
+    FAÍSCA: Ithra descobre o segredo de Kasgal, por causa de uma profecia
+    FAÍSCA: Ithra salva Messer Rovai, por causa de a Matriz
+  AUDITORIA (XXIII.23, Dia 243): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

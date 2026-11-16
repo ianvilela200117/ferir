@@ -1,0 +1,16 @@
+[20:47:46] Dia 213 · Pressão 2/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 213 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]
+    ONDE: d21 [20] Steunn
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 213
+    Lendários: d20 [15] quietos hoje
+    trama do dia: Iorin → Ulurve (INVEJA) d20 [2] nada visível
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) encomenda uma peça para Ferir, por causa de um herdeiro dos Steunn
+    FAÍSCA: Eiundunn ama em segredo Ulurve, por causa de dinheiro da Liga
+    FAÍSCA: a Guardiã da Tenaz ama em segredo Kreium (preso), por causa de um núcleo de monstro
+  AUDITORIA (XXIII.23, Dia 213): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

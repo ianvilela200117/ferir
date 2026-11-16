@@ -1,0 +1,21 @@
+[22:23:06] Dia 255 · Pressão 4/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 255 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d23 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Erykos
+    o que era: cemitério de reis
+    por que caiu: guerra
+    o que guarda: material Raro a Lendário
+    o que habita: bandidos
+    custo de entrar: uma chave
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 255
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Messer Rovai → o podestà Tirello (MEDO) d20 [2] nada visível
+    FAÍSCA: Asazh descobre o segredo de Ferir, por causa de vingança
+    FAÍSCA: Adurel encomenda uma peça para Bren (morto), por causa de a coberta do mundo
+    FAÍSCA: Skedda vende algo a Qunemneth, o Médico Cinzento, por causa de vaduar

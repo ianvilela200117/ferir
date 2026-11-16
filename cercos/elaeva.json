@@ -1,0 +1,115 @@
+{
+ "pv": 28793,
+ "pvm": 37600,
+ "a_bordo": [
+  "Mamiltia",
+  "Eiagrir",
+  "Ferir",
+  "Moreth"
+ ],
+ "dias": [
+  {
+   "dia": 382,
+   "antes": 37600,
+   "depois": 35680,
+   "dano": {
+    "Mamiltia": 1180,
+    "Eiagrir": 585,
+    "Ferir": 155
+   }
+  },
+  {
+   "dia": 383,
+   "antes": 35680,
+   "depois": 34420,
+   "dano": {
+    "Mamiltia": 880,
+    "Eiagrir": 177,
+    "Ferir": 203
+   }
+  },
+  {
+   "dia": 384,
+   "antes": 34420,
+   "depois": 34420,
+   "dano": {}
+  },
+  {
+   "dia": 385,
+   "antes": 34420,
+   "depois": 32430,
+   "dano": {
+    "Mamiltia": 1660,
+    "Eiagrir": 207,
+    "Ferir": 123
+   }
+  },
+  {
+   "dia": 386,
+   "antes": 32430,
+   "depois": 30871,
+   "dano": {
+    "Mamiltia": 740,
+    "Eiagrir": 160,
+    "Ferir": 134,
+    "Moreth": 525
+   }
+  },
+  {
+   "dia": 387,
+   "antes": 30871,
+   "depois": 28793,
+   "dano": {
+    "Mamiltia": 1180,
+    "Eiagrir": 177,
+    "Ferir": 146,
+    "Moreth": 575
+   }
+  }
+ ],
+ "fim": "foi embora no 387: MIGROU para os Picos Brancos (ação semanal do mundo_vivo, d20 [3], no tick do 385), com 77% do PV",
+ "feridos": {},
+ "alvo": {
+  "nome": "a Elaeva",
+  "df": 148,
+  "rd": 50
+ },
+ "atiradores": {
+  "Mamiltia": [
+   2,
+   8,
+   20,
+   134
+  ],
+  "Eiagrir": [
+   2,
+   16,
+   5,
+   36
+  ],
+  "Ferir": [
+   7,
+   8,
+   5,
+   34
+  ],
+  "Moreth": [
+   2,
+   16,
+   10,
+   44
+  ]
+ },
+ "agi": {
+  "Ferir": 7,
+  "Eiagrir": 6,
+  "Mamiltia": 12,
+  "Isolda": 6,
+  "Moreth": 8
+ },
+ "lugar": "Farenta",
+ "capitao": [
+  "a Isolda",
+  21
+ ]
+}

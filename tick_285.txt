@@ -1,0 +1,22 @@
+[00:46:31] Dia 285 · Pressão 4/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 285 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d24 [24] Haula (terra nova)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Haine
+    o que era: mina
+    por que caiu: guerra
+    o que guarda: um prisioneiro
+    o que habita: mortos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 285
+    um Lendário age (d20 [1]):
+    Almision (magia, a estrada (com o corvo)) d20 [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · notícia d20 [14] chega no dia 286
+    trama do dia: Graur → Asazh (LEALDADE CEGA) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Bren (morto) oferece aliança a Seline (em Ireviel), por causa de a Matriz
+    FAÍSCA: Gorine vai trair Thuron, por causa de a Matriz
+    FAÍSCA: Draron (da casa) foge de o Doge Pelaone, por causa de um núcleo de monstro

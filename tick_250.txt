@@ -1,0 +1,14 @@
+[21:45:38] Dia 250 · Pressão 4/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [16] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 250 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d23 [6] Gogrunn (as minas)
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 250
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Oslo → Mormir (o eremita de Quoine, os Sem-Torre) (DÍVIDA) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Brara pede ajuda a Pelaccino (preso), por causa de um mapa
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus vende algo a Mormir (o eremita de Quoine, os Sem-Torre), por causa de dinheiro da Liga
+    FAÍSCA: Lasca e Miro (presos) vai trair o podestà Tirello, por causa de um herdeiro dos Steunn

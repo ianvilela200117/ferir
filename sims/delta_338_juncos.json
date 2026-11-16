@@ -1,0 +1,9 @@
+{"monstro": {"nome": "os 5 juncos da Altheltia (bando)", "cat": "Comum", "nivel": 20, "gente": true, "acoes": 5, "pv": 250, "df": 18, "rd": 2, "at": 10, "dado": "1d8", "mult": 1.5, "b": 4, "moral": true, "fuga": 10},
+ "grupo": [
+  {"nome": "Starkald", "nivel": 86, "at": 22, "dado": "1d8", "mult": 2.5, "b": 9, "df": 30, "rd": 4, "pv": 220, "vigor": 12, "agi": 12, "heroi": true},
+  {"nome": "Sira", "nivel": 29, "at": 12, "dado": "1d8", "mult": 2.5, "b": 5, "df": 22, "rd": 3, "pv": 90, "vigor": 9, "agi": 9},
+  {"nome": "capuz 3", "nivel": 24, "at": 11, "dado": "1d8", "mult": 2.5, "b": 5, "df": 20, "rd": 3, "pv": 70, "vigor": 9},
+  {"nome": "capuz 4", "nivel": 25, "at": 11, "dado": "1d8", "mult": 2.5, "b": 5, "df": 20, "rd": 3, "pv": 70, "vigor": 9},
+  {"nome": "Brua", "nivel": 25, "at": 11, "dado": "1d8", "mult": 2.5, "b": 5, "df": 20, "rd": 3, "pv": 70, "vigor": 9},
+  {"nome": "capuz 5", "nivel": 21, "at": 10, "dado": "1d8", "mult": 2.5, "b": 4, "df": 19, "rd": 3, "pv": 60, "vigor": 9}
+ ]}

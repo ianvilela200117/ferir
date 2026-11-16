@@ -1,0 +1,25 @@
+[00:44:30] Dia 278 · Pressão 2/5 · encontro de estrada 1d20 [12] -> nada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 278 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d24 [13] a Mata de Elais
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    nome: Ulula
+    desejo: nunca mais passar fome
+    ambição (relógio de 4): descobrir uma receita perdida
+    medo: a morte de um filho
+    segredo: já matou e ninguém sabe
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: salvar um filho custa a vida de um estranho
+    traços: CURIOSO e ORGULHOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 278
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) encomenda uma peça para Messer Rovai, por causa de dinheiro da Liga
+    FAÍSCA: Kasgal pede ajuda a Dovan, por causa de um mapa
+    FAÍSCA: Draron (da casa) descobre o segredo de Skugek, por causa de uma criança
+  AUDITORIA (XXIII.23, Dia 278): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

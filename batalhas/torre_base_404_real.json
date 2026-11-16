@@ -1,0 +1,72 @@
+{
+ "nome": "A BASE DAS TORRES MORTAS (madrugada do 404)",
+ "terreno": "rua",
+ "nota": "REAL. T3 do envelope 2n. A chegada foi EXTRAORDINÁRIA: a base pega bêbada (surpresa +5 na 1ª rodada). O Zesreth já morreu no sino.",
+ "lados": {
+  "A": {
+   "nome": "a casa (a Marechal)",
+   "comando": 9,
+   "surpresa": 5,
+   "unidades": [
+    {
+     "nome": "as 24 lanças",
+     "homens": 24,
+     "qualidade": 4,
+     "moral": 4,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 15 da Companhia",
+     "homens": 15,
+     "qualidade": 4,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eliane",
+     "nivel": 95
+    },
+    {
+     "nome": "Graur",
+     "nivel": 75
+    },
+    {
+     "nome": "Hruthos",
+     "nivel": 88
+    },
+    {
+     "nome": "Starkald",
+     "nivel": 86
+    },
+    {
+     "nome": "Eiagrir",
+     "nivel": 123
+    }
+   ]
+  },
+  "B": {
+   "nome": "a guarda da Torre Acesa",
+   "comando": 3,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "os 4 da Cinza",
+     "homens": 4,
+     "qualidade": 2,
+     "moral": 5,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "as 6 espadas do Ardenghi",
+     "homens": 6,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ }
+}

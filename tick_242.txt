@@ -1,0 +1,15 @@
+[13:57:08] Dia 242 · Pressão 1/5 · encontro de estrada 1d20 [1] -> encontro na estrada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 242 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]
+    ONDE: d23 [5] Farenta
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 242
+    um Lendário age (d20 [5]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Hrotgar → Orast (DESEJO SECRETO) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: a irmã Oisse procura o Doge Pelaone, por causa de uma peça Lendária roubada
+    FAÍSCA: Ulair salva Eiundunn, por causa de vaduar
+    FAÍSCA: Dovan sonha com Ithra, por causa de um herdeiro dos Steunn

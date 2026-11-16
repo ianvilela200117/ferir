@@ -1,0 +1,2826 @@
+{
+ "regioes_novas": [
+  "Kasra (terra nova)",
+  "Zaitor (terra nova)",
+  "Haula (terra nova)",
+  "Ulra (terra nova)",
+  "Lumron (terra nova)",
+  "Kreade (terra nova)"
+ ],
+ "eventos": [
+  {
+   "dia": 201,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d21 [21] Zisrir",
+   "detalhe": "nome: Quoine\no que era: torre de mago\npor que caiu: terremoto\no que guarda: uma receita\no que habita: um eremita\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 204,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 202,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d21 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 202,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 203,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d21 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 206,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 203,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d21 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Seline\ndesejo: deixar uma obra\nambição (relógio de 4): abrir o próprio negócio\nmedo: a solidão\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca trai a família\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AVARENTO e CURIOSO\n————————————————————————————————————————",
+   "noticia_chega": 207,
+   "chegada": "[5] em 1d6 [4] dias"
+  },
+  {
+   "dia": 203,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d21 [13] a Mata de Elais",
+   "detalhe": "nome: Selol\no que era: torre de mago\npor que caiu: dívida\no que guarda: uma peça antiga\no que habita: nada, e é isso que assusta\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 206,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 204,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [1]",
+   "onde": "d21 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 207,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 205,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d21 [13] a Mata de Elais",
+   "detalhe": "nome: Moreth\ndesejo: uma casa própria\nambição (relógio de 4): conquistar terra\nmedo: a pobreza\nsegredo: não sabe ler\nlinha vermelha: nunca trai a família\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: LEAL e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 205,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 206,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d21 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 208,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 206,
+   "d20": 4,
+   "o_que": "MORTE DE FIGURA IMPORTANTE · encadeamento [13] A LIGA REAGE",
+   "onde": "o sul (a Companhia da Skotha)",
+   "detalhe": "quem [15]: um CAPITÃO da Companhia da Skotha · como e a reação da Liga: listas declaradas, rolam no 207",
+   "noticia_chega": 207,
+   "chegada": "[5] em 1d3 [1] dias"
+  },
+  {
+   "dia": 207,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d21 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "nome: Kreula\no que era: templo\npor que caiu: dívida\no que guarda: uma receita\no que habita: nada, e é isso que assusta\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": 208,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 208,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d21 [10] o Delta e as salinas",
+   "detalhe": "[MISSÃO]: Gorron (o Mestre dá o nome pela ficção)\ndificuldade: B  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Facção\nobjetivo: caçar uma criatura\ncomplicação escondida (Envelope): quem pediu mente sobre algo\nprazo: 6 dias\nrecompensa: 2500 XP · 1000 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: Reputação −1 a −2 com quem pediu\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 210,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 209,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d21 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 211,
+   "chegada": "[5] em 1d6 [2] dias"
+  },
+  {
+   "dia": 210,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d21 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 211,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 210,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]",
+   "onde": "d21 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 211,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 210,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d21 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 212,
+   "chegada": "[4] em 1d6 [2] dias"
+  },
+  {
+   "dia": 211,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]",
+   "onde": "d21 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 212,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 212,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d21 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Varron\no que era: templo\npor que caiu: guerra\no que guarda: uma peça antiga\no que habita: um eremita\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 213,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 213,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]",
+   "onde": "d21 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": 219,
+   "chegada": "[5] em 1d6 [6] dias"
+  },
+  {
+   "dia": 214,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]",
+   "onde": "d21 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 214,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 215,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d21 [2] Levis e Levis-baixa",
+   "detalhe": "1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 216,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d21 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 218,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 217,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]",
+   "onde": "d21 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 218,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 217,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d21 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 222,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 217,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d21 [19] Yaelane",
+   "detalhe": "1d12 [2] um monstro novo é avistado (gerar monstro)",
+   "noticia_chega": 217,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 218,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d22 [22] Kasra (terra nova)",
+   "detalhe": "1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)",
+   "noticia_chega": 219,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 219,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]",
+   "onde": "d22 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 220,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 220,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d22 [2] Levis e Levis-baixa",
+   "detalhe": "",
+   "noticia_chega": 226,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 221,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d22 [15] o sul, onde a areia come a pedra",
+   "detalhe": "[MISSÃO]: Gorvil (o Mestre dá o nome pela ficção)\ndificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Facção\nobjetivo: descobrir quem fez algo\ncomplicação escondida (Envelope): a recompensa não existe mais\nprazo: 1 dias\nrecompensa: 50 XP · 10 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: quem pediu morre ou se perde\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 222,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d22 [20] Steunn",
+   "detalhe": "nome: Drassa\ndesejo: deixar uma obra\nambição (relógio de 4): entrar numa facção que o recusou\nmedo: a solidão\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: LEAL e AVARENTO\n————————————————————————————————————————",
+   "noticia_chega": 222,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 223,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d22 [8] Telosus (o Colégio)",
+   "detalhe": "nome: Erygal\ndesejo: enriquecer\nambição (relógio de 4): abrir o próprio negócio\nmedo: a pobreza\nsegredo: fez um pacto\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: RELIGIOSO e AMBICIOSO\n————————————————————————————————————————",
+   "noticia_chega": 224,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 224,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [3]",
+   "onde": "d22 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 226,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 224,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d22 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 225,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 224,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d22 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 224,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 225,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 226,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d23 [10] o Delta e as salinas",
+   "detalhe": "nome: Gorgal\no que era: oficina de mestre morto\npor que caiu: praga\no que guarda: uma receita\no que habita: um eremita\ncusto de entrar: um teste de Vigor por hora\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 227,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [8] Telosus (o Colégio)",
+   "detalhe": "nome: Gorium\ndesejo: casar com quem ama\nambição (relógio de 4): comprar a liberdade da família\nmedo: a magia\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: RELIGIOSO e TEIMOSO\n————————————————————————————————————————",
+   "noticia_chega": 228,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 228,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Varade\ndesejo: voltar para casa\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a morte de um filho\nsegredo: trabalha para outra facção\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: CRUEL e ORGULHOSO\nnível: 260\nobra sinistra (relógio de 8): vingar o povo dele\npor que é humano: foi traído pelo reino\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: chantagem\no que o faria parar: receber o que quer de outro jeito\n————————————————————————————————————————",
+   "noticia_chega": 228,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 229,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [2]",
+   "onde": "d23 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 235,
+   "chegada": "[5] em 1d6 [6] dias"
+  },
+  {
+   "dia": 230,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Nesdun\ndesejo: aprender um segredo\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a humilhação pública\nsegredo: tem um filho em outra cidade\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: VINGATIVO e CRUEL\n————————————————————————————————————————",
+   "noticia_chega": 234,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 231,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "nome: Orula\ndesejo: deixar uma obra\nambição (relógio de 4): comprar a liberdade da família\nmedo: a solidão\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: LEAL e ORGULHOSO\nnível: 220\nobra sinistra (relógio de 8): quebrar um pacto antigo\npor que é humano: ama alguém e faz por ela\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: exército\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 236,
+   "chegada": "[4] em 1d6 [5] dias"
+  },
+  {
+   "dia": 231,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "nome: Morast\ndesejo: mandar em alguém\nambição (relógio de 4): casar acima da sua classe\nmedo: o fogo\nsegredo: tem um filho em outra cidade\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: GENEROSO e CRUEL\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 231,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d23 [2] Levis e Levis-baixa",
+   "detalhe": "nome: Gorra\no que era: torre de mago\npor que caiu: praga\no que guarda: uma receita\no que habita: bandidos\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": 232,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 232,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]",
+   "onde": "d23 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 235,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 233,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d23 [22] Kasra (terra nova)",
+   "detalhe": "nome: Culto do Kasade\nadora: um rei antigo\npromete: poder sobre os mortos\nsinal: moeda furada\ncélulas: 3 cidades\nlíder: nível 250, classe Rara a Lendária\nrito: jejum\nplano (relógio de 6): matar um herdeiro\nfraqueza: a fé é mentira e o líder sabe\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 234,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d23 [20] Steunn",
+   "detalhe": "nome: Ithdun\ndesejo: casar com quem ama\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: voltar a ser escravo\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: CRUEL e RELIGIOSO\n————————————————————————————————————————",
+   "noticia_chega": 235,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 235,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 240,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 236,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [5]",
+   "onde": "d23 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 237,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 237,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [5]",
+   "onde": "d23 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 240,
+   "chegada": "[4] em 1d6 [3] dias"
+  },
+  {
+   "dia": 238,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d23 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Kaseth\ndesejo: ser perdoado\nambição (relógio de 4): descobrir uma receita perdida\nmedo: a velhice\nsegredo: fez um pacto\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: GENEROSO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 239,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 238,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d23 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 243,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 238,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d23 [13] a Mata de Elais",
+   "detalhe": "nome: Zairon\no que era: oficina de mestre morto\npor que caiu: guerra\no que guarda: uma peça antiga\no que habita: nada, e é isso que assusta\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 239,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 239,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d23 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 240,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 240,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 240,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 241,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [2] Levis e Levis-baixa",
+   "detalhe": "nome: Ithvil\ndesejo: curar alguém\nambição (relógio de 4): fundar uma escola\nmedo: a prisão\nsegredo: ama alguém proibido\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: GENEROSO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 241,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 242,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]",
+   "onde": "d23 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 244,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 243,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d23 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 243,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 244,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]",
+   "onde": "d23 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 246,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 245,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [2]",
+   "onde": "d23 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 245,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d23 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 251,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 245,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d23 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 246,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d23 [22] Kasra (terra nova)",
+   "detalhe": "nome: Kasssa\no que era: oficina de mestre morto\npor que caiu: traição\no que guarda: um núcleo\no que habita: um culto\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 249,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 247,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d23 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 253,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 248,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d23 [17] os Picos Brancos",
+   "detalhe": "",
+   "noticia_chega": 249,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 249,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d23 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 250,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d23 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 253,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 251,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Lumium\ndesejo: ser perdoado\nambição (relógio de 4): casar acima da sua classe\nmedo: a velhice\nsegredo: fez um pacto\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: VINGATIVO e HONESTO\n————————————————————————————————————————",
+   "noticia_chega": 254,
+   "chegada": "[4] em 1d6 [3] dias"
+  },
+  {
+   "dia": 252,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Kasvil\ndesejo: nunca mais passar fome\nambição (relógio de 4): conquistar terra\nmedo: a solidão\nsegredo: fez um pacto\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: RELIGIOSO e GENEROSO\nnível: 290\nobra sinistra (relógio de 8): forjar uma arma Mítica proibida\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: chantagem\no que o faria parar: receber o que quer de outro jeito\n————————————————————————————————————————",
+   "noticia_chega": 257,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 252,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d23 [2] Levis e Levis-baixa",
+   "detalhe": "",
+   "noticia_chega": 253,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 252,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d23 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 252,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 253,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Kasnar\ndesejo: voltar para casa\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: o próprio passado\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: GENEROSO e HONESTO\nnível: 360\nobra sinistra (relógio de 8): virar imortal\npor que é humano: tem medo de morrer\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: veneno\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 254,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 254,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d23 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 254,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 255,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d23 [11] Mordun (a Boca com Fome)",
+   "detalhe": "nome: Erykos\no que era: cemitério de reis\npor que caiu: guerra\no que guarda: material Raro a Lendário\no que habita: bandidos\ncusto de entrar: uma chave\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 256,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d23 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Gorgal\no que era: oficina de mestre morto\npor que caiu: maldição\no que guarda: material Raro a Lendário\no que habita: bandidos\ncusto de entrar: um teste de Vigor por hora\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 257,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d23 [5] Farenta",
+   "detalhe": "nome: Culto do Zaivil\nadora: um rei antigo\npromete: riqueza\nsinal: olhos pintados\ncélulas: 3 cidades\nlíder: nível 180, classe Rara a Lendária\nrito: roubo de crianças\nplano (relógio de 6): matar um herdeiro\nfraqueza: o patrono cobra caro\n————————————————————————————————————————",
+   "noticia_chega": 257,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 258,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Fenkos\ndesejo: ser perdoado\nambição (relógio de 4): abrir o próprio negócio\nmedo: voltar a ser escravo\nsegredo: fez um pacto\nlinha vermelha: nunca trai a família\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: LEAL e CRUEL\nnível: 260\nobra sinistra (relógio de 8): vingar o povo dele\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: fé\no que o faria parar: perder quem ama\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 259,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [5]",
+   "onde": "d23 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 260,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 259,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]",
+   "onde": "d23 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 262,
+   "chegada": "[4] em 1d6 [3] dias"
+  },
+  {
+   "dia": 259,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d23 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Selek\ndesejo: deixar uma obra\nambição (relógio de 4): abrir o próprio negócio\nmedo: a humilhação pública\nsegredo: já matou e ninguém sabe\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: LEAL e CRUEL\n————————————————————————————————————————",
+   "noticia_chega": 260,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 260,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d23 [20] Steunn",
+   "detalhe": "nome: Gorvil\no que era: forte\npor que caiu: dívida\no que guarda: um núcleo\no que habita: bandidos\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": 263,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 261,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [22] Kasra (terra nova)",
+   "detalhe": "nome: Nesula\ndesejo: mandar em alguém\nambição (relógio de 4): entrar numa facção que o recusou\nmedo: a velhice\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca deixa um ferido para trás\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: AVARENTO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 264,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 262,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d23 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Ithula\ndesejo: deixar uma obra\nambição (relógio de 4): tomar o lugar do chefe\nmedo: a prisão\nsegredo: roubou o que tem\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: VINGATIVO e LEAL\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 263,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]",
+   "onde": "d23 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 263,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 264,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d23 [7] Kremir",
+   "detalhe": "[MISSÃO]: Kreine (o Mestre dá o nome pela ficção)\ndificuldade: D  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Mundo\nobjetivo: levar uma mensagem que outros querem\ncomplicação escondida (Envelope): um aliado vai ser posto em risco\nprazo: 5 dias\nrecompensa: 400 XP · 100 de ouro · um Favor com nome\npenalidade se falhar: a região piora um passo\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 270,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 265,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]",
+   "onde": "d23 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 270,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 266,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d23 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 269,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 266,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d23 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 266,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 266,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d23 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 267,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]",
+   "onde": "d23 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 267,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 268,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d23 [17] os Picos Brancos",
+   "detalhe": "1d12 [5] um lugar novo é descoberto (gerar lugar)",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 269,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]",
+   "onde": "d23 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 270,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d23 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 271,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d23 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 274,
+   "chegada": "[4] em 1d6 [3] dias"
+  },
+  {
+   "dia": 272,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "nome: Zaiine\ndesejo: proteger um filho\nambição (relógio de 4): virar Lendário\nmedo: ser esquecido\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: LEAL e CURIOSO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 273,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d23 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Orssa\ndesejo: um título\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: ser esquecido\nsegredo: já matou e ninguém sabe\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: CRUEL e HONESTO\nnível: 220\nobra sinistra (relógio de 8): acabar com uma raça ou fé\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: chantagem\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 276,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 273,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d23 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Varra\ndesejo: deixar uma obra\nambição (relógio de 4): fundar uma escola\nmedo: o fogo\nsegredo: tem uma doença escondida\nlinha vermelha: nunca trai a família\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: TEIMOSO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 273,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d23 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 273,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 274,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d24 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 276,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 275,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d24 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 278,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 276,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [2]",
+   "onde": "d24 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 282,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 277,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d24 [3] Lumade",
+   "detalhe": "[MISSÃO]: Varvil (o Mestre dá o nome pela ficção)\ndificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Normal\nobjetivo: levar uma mensagem que outros querem\ncomplicação escondida (Envelope): outra facção quer o contrário\nprazo: 7 dias\nrecompensa: 6000 XP · 3000 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: Reputação −1 a −2 com quem pediu\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 278,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d24 [13] a Mata de Elais",
+   "detalhe": "nome: Ulula\ndesejo: nunca mais passar fome\nambição (relógio de 4): descobrir uma receita perdida\nmedo: a morte de um filho\nsegredo: já matou e ninguém sabe\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: CURIOSO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": 280,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 279,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d24 [24] Haula (terra nova)",
+   "detalhe": "nome: Gorek\no que era: mina\npor que caiu: dívida\no que guarda: um núcleo\no que habita: bandidos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 280,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d24 [17] os Picos Brancos",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 280,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d24 [9] Shizess (as caravanas)",
+   "detalhe": "[MISSÃO]: Zaimir (o Mestre dá o nome pela ficção)\ndificuldade: B  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Mundo\nobjetivo: pagar ou cobrar uma dívida\ncomplicação escondida (Envelope): o prazo é menor do que parece\nprazo: 7 dias\nrecompensa: 2500 XP · 1000 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: perde um item ou o adiantamento em dobro\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 285,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 280,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d24 [17] os Picos Brancos",
+   "detalhe": "1d12 [1] um material novo aparece à venda ou em boato (gerar material)",
+   "noticia_chega": 282,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 281,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d24 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 284,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 282,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d24 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 283,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d24 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 284,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d24 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 290,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 285,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d24 [24] Haula (terra nova)",
+   "detalhe": "nome: Haine\no que era: mina\npor que caiu: guerra\no que guarda: um prisioneiro\no que habita: mortos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 286,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [1]",
+   "onde": "d24 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 287,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 287,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d24 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 287,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d24 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Nesgal\no que era: cidade afundada\npor que caiu: guerra\no que guarda: uma receita\no que habita: um culto\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 287,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d24 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Kreium\ndesejo: curar alguém\nambição (relógio de 4): casar acima da sua classe\nmedo: a morte de um filho\nsegredo: fez um pacto\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: HONESTO e CRUEL\n————————————————————————————————————————",
+   "noticia_chega": 290,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 288,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d24 [10] o Delta e as salinas",
+   "detalhe": "[MISSÃO]: Lumek (o Mestre dá o nome pela ficção)\ndificuldade: B  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Emergência (prazo em horas)\nobjetivo: achar um material raro\ncomplicação escondida (Envelope): o prazo é menor do que parece\nprazo: 9 dias\nrecompensa: 2500 XP · 1000 de ouro · informação do Envelope\npenalidade se falhar: Reputação −1 a −2 com quem pediu\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 289,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]",
+   "onde": "d24 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 289,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 290,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d24 [17] os Picos Brancos",
+   "detalhe": "nome: Orvil\no que era: torre de mago\npor que caiu: terremoto\no que guarda: material Raro a Lendário\no que habita: mortos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 292,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 291,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d24 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 292,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]",
+   "onde": "d24 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 294,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 293,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d24 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 293,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 294,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d24 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "nome: Nesmir\no que era: torre de mago\npor que caiu: dívida\no que guarda: material Raro a Lendário\no que habita: monstro (gerar)\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": 294,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 294,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d24 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Kastor\ndesejo: deixar uma obra\nambição (relógio de 4): conquistar terra\nmedo: voltar a ser escravo\nsegredo: trabalha para outra facção\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: GENEROSO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": 300,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 294,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d24 [13] a Mata de Elais",
+   "detalhe": "1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)",
+   "noticia_chega": 297,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 295,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]",
+   "onde": "d25 [13] a Mata de Elais",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 296,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [2]",
+   "onde": "d25 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 298,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 297,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d25 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 298,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 298,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [2]",
+   "onde": "d25 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 301,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 299,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d25 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 300,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 300,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d25 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 301,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 301,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d25 [2] Levis e Levis-baixa",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 301,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d25 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "1d12 [7] uma facção nova nasce de um conflito antigo",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 301,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d25 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 302,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]",
+   "onde": "d25 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 302,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 303,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d25 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 304,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 304,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d25 [7] Kremir",
+   "detalhe": "nome: Fenine\ndesejo: sair da cidade\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a humilhação pública\nsegredo: fez um pacto\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: RELIGIOSO e AVARENTO\n————————————————————————————————————————",
+   "noticia_chega": 305,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 305,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d25 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Ulek\no que era: templo\npor que caiu: terremoto\no que guarda: um núcleo\no que habita: um culto\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": 307,
+   "chegada": "[5] em 1d6 [2] dias"
+  },
+  {
+   "dia": 306,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [4]",
+   "onde": "d25 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 308,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 307,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d25 [13] a Mata de Elais",
+   "detalhe": "nome: Thugal\ndesejo: vingar um morto\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a humilhação pública\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AMBICIOSO e CURIOSO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 308,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d25 [21] Zisrir",
+   "detalhe": "1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)",
+   "noticia_chega": 311,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 308,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d25 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 310,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 308,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d25 [24] Haula (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 311,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 309,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d26 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 311,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 310,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d26 [20] Steunn",
+   "detalhe": "nome: Gornar\no que era: oficina de mestre morto\npor que caiu: monstro\no que guarda: um prisioneiro\no que habita: mortos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 310,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 311,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [1]",
+   "onde": "d26 [13] a Mata de Elais",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 312,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d26 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 315,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 313,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]",
+   "onde": "d26 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 316,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 314,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]",
+   "onde": "d26 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 320,
+   "chegada": "[4] em 1d6 [6] dias"
+  },
+  {
+   "dia": 315,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]",
+   "onde": "d26 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 315,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 315,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d26 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Orron\ndesejo: mandar em alguém\nambição (relógio de 4): abrir o próprio negócio\nmedo: a magia\nsegredo: tem uma doença escondida\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: HONESTO e VINGATIVO\nnível: 340\nobra sinistra (relógio de 8): acabar com uma raça ou fé\npor que é humano: acredita salvar mais gente do que mata\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: lei\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 317,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 315,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]",
+   "onde": "d26 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 316,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 316,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 317,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 317,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [24] Haula (terra nova)",
+   "detalhe": "nome: Orula\ndesejo: um título\nambição (relógio de 4): tomar o lugar do chefe\nmedo: a pobreza\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: GENEROSO e AVARENTO\nnível: 280\nobra sinistra (relógio de 8): forjar uma arma Mítica proibida\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: exército\no que o faria parar: perder quem ama\n————————————————————————————————————————",
+   "noticia_chega": 319,
+   "chegada": "[3] em 1d3 [2] dias"
+  },
+  {
+   "dia": 318,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "nome: Lumkos\ndesejo: ser perdoado\nambição (relógio de 4): conquistar terra\nmedo: a morte de um filho\nsegredo: é filho de quem não deveria\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: CRUEL e VINGATIVO\nnível: 100\nobra sinistra (relógio de 8): forjar uma arma Mítica proibida\npor que é humano: tem medo de morrer\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: fé\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 318,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 319,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Haine\ndesejo: aprender um segredo\nambição (relógio de 4): casar acima da sua classe\nmedo: a pobreza\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: COVARDE e VINGATIVO\n————————————————————————————————————————",
+   "noticia_chega": 320,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 320,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Draek\ndesejo: sair da cidade\nambição (relógio de 4): comprar a liberdade da família\nmedo: voltar a ser escravo\nsegredo: tem uma doença escondida\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: LEAL e AVARENTO\n————————————————————————————————————————",
+   "noticia_chega": 321,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 321,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 321,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 322,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 323,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 322,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 322,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 322,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": 325,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 323,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "nome: Culto da Draol\nadora: um monstro Mítico adormecido\npromete: vida eterna\nsinal: dente arrancado\ncélulas: 4 cidades\nlíder: nível 90, classe Rara a Lendária\nrito: queima de livros\nplano (relógio de 6): matar um herdeiro\nfraqueza: dependem de um material\n————————————————————————————————————————",
+   "noticia_chega": 326,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 324,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 325,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 330,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 326,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": 331,
+   "chegada": "[4] em 1d6 [5] dias"
+  },
+  {
+   "dia": 327,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Veyula\ndesejo: um título\nambição (relógio de 4): conquistar terra\nmedo: perder a mão do ofício\nsegredo: não sabe ler\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AVARENTO e RELIGIOSO\n————————————————————————————————————————",
+   "noticia_chega": 328,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 328,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [1]",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 333,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 329,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [2]",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 329,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 329,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "[MISSÃO]: Seleth (o Mestre dá o nome pela ficção)\ndificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Normal\nobjetivo: convencer alguém poderoso\ncomplicação escondida (Envelope): quem pediu mente sobre algo\nprazo: 7 dias\nrecompensa: 6000 XP · 3000 de ouro · 1 ponto de Trilha\npenalidade se falhar: uma facção ganha um segmento\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 332,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 329,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 335,
+   "chegada": "[5] em 1d6 [6] dias"
+  },
+  {
+   "dia": 330,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Culto do Draula\nadora: o fim do mundo\npromete: vida eterna\nsinal: fita de cor\ncélulas: 5 cidades\nlíder: nível 140, classe Rara a Lendária\nrito: sangue\nplano (relógio de 6): abrir um selo\nfraqueza: o patrono cobra caro\n————————————————————————————————————————",
+   "noticia_chega": 333,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 331,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "1d12 [10] uma promessa antiga cobra (de quem prometeu ou a quem)",
+   "noticia_chega": 331,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 332,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 335,
+   "chegada": "[5] em 1d6 [3] dias"
+  },
+  {
+   "dia": 333,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Orra\ndesejo: mandar em alguém\nambição (relógio de 4): conquistar terra\nmedo: a solidão\nsegredo: tem uma doença escondida\nlinha vermelha: nunca trai a família\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: GENEROSO e LEAL\nnível: 180\nobra sinistra (relógio de 8): acabar com uma raça ou fé\npor que é humano: quer que o pai finalmente o veja\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: lei\no que o faria parar: perder quem ama\n————————————————————————————————————————",
+   "noticia_chega": 333,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 334,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "nome: Thuol\ndesejo: mandar em alguém\nambição (relógio de 4): fundar uma escola\nmedo: a humilhação pública\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca deixa um ferido para trás\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: GENEROSO e HONESTO\nnível: 320\nobra sinistra (relógio de 8): trazer de volta um morto amado\npor que é humano: foi traído pelo reino\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: exército\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 338,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 335,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 336,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 336,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Kreron\no que era: mercado\npor que caiu: dívida\no que guarda: uma receita\no que habita: nada, e é isso que assusta\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": 336,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 336,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 336,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 336,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Veyula\no que era: mina\npor que caiu: maldição\no que guarda: material Raro a Lendário\no que habita: nada, e é isso que assusta\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 337,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Nesnar\no que era: oficina de mestre morto\npor que caiu: traição\no que guarda: um núcleo\no que habita: um eremita\ncusto de entrar: um teste de Vigor por hora\n————————————————————————————————————————",
+   "noticia_chega": 338,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 338,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]",
+   "onde": "d27 [24] Haula (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 342,
+   "chegada": "[5] em 1d6 [4] dias"
+  },
+  {
+   "dia": 339,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Ulium\ndesejo: casar com quem ama\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a pobreza\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: VINGATIVO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 342,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 340,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 343,
+   "chegada": "[4] em 1d6 [3] dias"
+  },
+  {
+   "dia": 341,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [5]",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 341,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 342,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [1]",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": 342,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 343,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [2] Levis e Levis-baixa",
+   "detalhe": "nome: Culto do Eryade\nadora: o fim do mundo\npromete: o fim das dívidas\nsinal: dente arrancado\ncélulas: 4 cidades\nlíder: nível 120, classe Rara a Lendária\nrito: veneno\nplano (relógio de 6): abrir um selo\nfraqueza: o patrono cobra caro\n————————————————————————————————————————",
+   "noticia_chega": 344,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 343,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 343,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 343,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [1]",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 345,
+   "chegada": "[4] em 1d6 [2] dias"
+  },
+  {
+   "dia": 344,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "[MISSÃO]: Morvil (o Mestre dá o nome pela ficção)\ndificuldade: B  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Lendária\nobjetivo: defender um lugar por um tempo\ncomplicação escondida (Envelope): o alvo tem um motivo bom\nprazo: 7 dias\nrecompensa: 2500 XP · 1000 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: uma facção ganha um segmento\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 345,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "nome: Gormir\no que era: forte\npor que caiu: dívida\no que guarda: um segredo de facção\no que habita: mortos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 345,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 346,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Gorol\ndesejo: nunca mais passar fome\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: perder a mão do ofício\nsegredo: fez um pacto\nlinha vermelha: nunca trai a família\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: VINGATIVO e HONESTO\nnível: 100\nobra sinistra (relógio de 8): trazer de volta um morto amado\npor que é humano: ama alguém e faz por ela\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: monstros\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 349,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 347,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 348,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "nome: Varade\ndesejo: nunca mais passar fome\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: a velhice\nsegredo: roubou o que tem\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: AVARENTO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": 354,
+   "chegada": "[5] em 1d6 [6] dias"
+  },
+  {
+   "dia": 349,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 353,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 350,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "nome: Thura\ndesejo: curar alguém\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: o fogo\nsegredo: já matou e ninguém sabe\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: HONESTO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 350,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 351,
+   "chegada": "[4] em 1d6 [1] dias"
+  },
+  {
+   "dia": 350,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 353,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 351,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [4]",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 352,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Thuine\no que era: oficina de mestre morto\npor que caiu: terremoto\no que guarda: uma peça antiga\no que habita: um culto\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": 352,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 353,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "nome: Lumula\ndesejo: voltar para casa\nambição (relógio de 4): entrar numa facção que o recusou\nmedo: voltar a ser escravo\nsegredo: roubou o que tem\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: LEAL e RELIGIOSO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 354,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "nome: Zainar\ndesejo: uma casa própria\nambição (relógio de 4): abrir o próprio negócio\nmedo: a magia\nsegredo: ama alguém proibido\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: AMBICIOSO e TEIMOSO\n————————————————————————————————————————",
+   "noticia_chega": 358,
+   "chegada": "[5] em 1d6 [4] dias"
+  },
+  {
+   "dia": 355,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Kaskos\no que era: templo\npor que caiu: monstro\no que guarda: uma receita\no que habita: um culto\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 359,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 356,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 357,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 357,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Brator\no que era: oficina de mestre morto\npor que caiu: dívida\no que guarda: uma peça antiga\no que habita: mortos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 359,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 357,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "nome: Gorvil\ndesejo: mandar em alguém\nambição (relógio de 4): abrir o próprio negócio\nmedo: ser esquecido\nsegredo: traiu um amigo uma vez\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: AVARENTO e AMBICIOSO\n————————————————————————————————————————",
+   "noticia_chega": 358,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 357,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 361,
+   "chegada": "[5] em 1d6 [4] dias"
+  },
+  {
+   "dia": 358,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Lumeth\ndesejo: enriquecer\nambição (relógio de 4): comprar a liberdade da família\nmedo: a humilhação pública\nsegredo: roubou o que tem\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: GENEROSO e RELIGIOSO\n————————————————————————————————————————",
+   "noticia_chega": 360,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 359,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 365,
+   "chegada": "[5] em 1d6 [6] dias"
+  },
+  {
+   "dia": 360,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 363,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 361,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 364,
+   "chegada": "[3] em 1d3 [3] dias"
+  },
+  {
+   "dia": 362,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 362,
+   "chegada": "[1] hoje"
+  },
+  {
+   "dia": 363,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": 366,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 364,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [2]",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 365,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 364,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "1d12 [2] um monstro novo é avistado (gerar monstro)",
+   "noticia_chega": 369,
+   "chegada": "[4] em 1d6 [5] dias"
+  },
+  {
+   "dia": 364,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "nome: Nesium\ndesejo: casar com quem ama\nambição (relógio de 4): tomar o lugar do chefe\nmedo: o fogo\nsegredo: tem uma doença escondida\nlinha vermelha: nunca trai a família\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: ORGULHOSO e RELIGIOSO\n————————————————————————————————————————",
+   "noticia_chega": 366,
+   "chegada": "[5] em 1d6 [2] dias"
+  },
+  {
+   "dia": 365,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "",
+   "noticia_chega": 367,
+   "chegada": "[5] em 1d6 [2] dias"
+  },
+  {
+   "dia": 366,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 368,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 367,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 372,
+   "chegada": "[5] em 1d6 [5] dias"
+  },
+  {
+   "dia": 368,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "nome: Seline\ndesejo: ser perdoado\nambição (relógio de 4): casar acima da sua classe\nmedo: a humilhação pública\nsegredo: é filho de quem não deveria\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: GENEROSO e AMBICIOSO\nnível: 210\nobra sinistra (relógio de 8): vingar o povo dele\npor que é humano: ama alguém e faz por ela\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: veneno\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 369,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 369,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Haade\ndesejo: sair da cidade\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: a velhice\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: CURIOSO e VINGATIVO\n————————————————————————————————————————",
+   "noticia_chega": 370,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 370,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 371,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 371,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 374,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 371,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [2] Levis e Levis-baixa",
+   "detalhe": "1d12 [12] um preço ou uma lei muda e alguém sofre com isso",
+   "noticia_chega": 372,
+   "chegada": "[5] em 1d6 [1] dias"
+  },
+  {
+   "dia": 371,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Draast\ndesejo: deixar uma obra\nambição (relógio de 4): casar acima da sua classe\nmedo: a pobreza\nsegredo: tem uma doença escondida\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: HONESTO e TEIMOSO\nnível: 300\nobra sinistra (relógio de 8): virar imortal\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: fé\no que o faria parar: receber o que quer de outro jeito\n————————————————————————————————————————",
+   "noticia_chega": 375,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 372,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "nome: Culto da Haast\nadora: a praga\npromete: o fim das dívidas\nsinal: moeda furada\ncélulas: 5 cidades\nlíder: nível 70, classe Rara a Lendária\nrito: roubo de crianças\nplano (relógio de 6): espalhar uma praga\nfraqueza: o patrono cobra caro\n————————————————————————————————————————",
+   "noticia_chega": 373,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 373,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 374,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "1d12 [11] uma consequência antiga chega (de algo feito há mais de 30 dias)",
+   "noticia_chega": 375,
+   "chegada": "[2] em 1d3 [1] dias"
+  },
+  {
+   "dia": 375,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Kasium\ndesejo: ser reconhecido no ofício\nambição (relógio de 4): casar acima da sua classe\nmedo: o fogo\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: GENEROSO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 376,
+   "chegada": "[3] em 1d3 [1] dias"
+  },
+  {
+   "dia": 376,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]",
+   "onde": "d27 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 378,
+   "chegada": "[2] em 1d3 [2] dias"
+  },
+  {
+   "dia": 377,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 382,
+   "chegada": "[4] em 1d6 [5] dias"
+  },
+  {
+   "dia": 378,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 381,
+   "chegada": "[2] em 1d3 [3] dias"
+  },
+  {
+   "dia": 378,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "nome: Ithmir\ndesejo: ser perdoado\nambição (relógio de 4): comprar a liberdade da família\nmedo: a prisão\nsegredo: roubou o que tem\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: COVARDE e AVARENTO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)"
+  },
+  {
+   "dia": 378,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 382,
+   "chegada": "[4] em 1d6 [4] dias"
+  },
+  {
+   "dia": 379,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [13] a Mata de Elais",
+   "detalhe": "[MISSÃO]: Braine (o Mestre dá o nome pela ficção)\ndificuldade: C  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Mundo\nobjetivo: descobrir quem fez algo\ncomplicação escondida (Envelope): outra facção quer o contrário\nprazo: 5 dias\nrecompensa: 1000 XP · 300 de ouro · +1 de Reputação com uma facção\npenalidade se falhar: uma facção ganha um segmento\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 381,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — a Mata de Elais",
+   "toca": false
+  },
+  {
+   "dia": 380,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 382,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "CLIMA ESTRANHO — Gogrunn (as minas)",
+   "toca": false
+  },
+  {
+   "dia": 381,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Hamir\no que era: mina\npor que caiu: dívida\no que guarda: um segredo de facção\no que habita: mortos\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": 383,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — Steunn (Hamir)",
+   "toca": true
+  },
+  {
+   "dia": 382,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [10] o Delta e as salinas",
+   "detalhe": "nome: Zaidun\no que era: cidade afundada\npor que caiu: dívida\no que guarda: uma receita\no que habita: um eremita\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": 384,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — o Delta e as salinas (Zaidun)",
+   "toca": true
+  },
+  {
+   "dia": 383,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 385,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "CLIMA ESTRANHO — o Delta e as salinas",
+   "toca": true
+  },
+  {
+   "dia": 384,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "nome: Ordun\ndesejo: nunca mais passar fome\nambição (relógio de 4): comprar a liberdade da família\nmedo: a humilhação pública\nsegredo: tem uma doença escondida\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: HONESTO e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 388,
+   "chegada": "[5] em 1d6 [4] dias",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Gogrunn (as minas) (Ordun)",
+   "toca": false
+  },
+  {
+   "dia": 385,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Culto da Eryron\nadora: um monstro Mítico adormecido\npromete: poder sobre os mortos\nsinal: fita de cor\ncélulas: 3 cidades\nlíder: nível 180, classe Rara a Lendária\nrito: veneno\nplano (relógio de 6): tomar uma cidade por dentro\nfraqueza: dependem de um material\n————————————————————————————————————————",
+   "noticia_chega": 386,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — as Fundas do Norte (o Clã Hegre) (Culto da Eryron)",
+   "toca": true
+  },
+  {
+   "dia": 385,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 391,
+   "chegada": "[5] em 1d6 [6] dias",
+   "resumo": "CLIMA ESTRANHO — Farenta",
+   "toca": true
+  },
+  {
+   "dia": 385,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [24] Haula (terra nova)",
+   "detalhe": "1d12 [5] um lugar novo é descoberto (gerar lugar)",
+   "noticia_chega": 385,
+   "chegada": "[1] hoje",
+   "resumo": "SURPRESA: o gerador de novidade — Haula (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 386,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "nome: Selula\ndesejo: sair da cidade\nambição (relógio de 4): descobrir uma receita perdida\nmedo: o fogo\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: ORGULHOSO e VINGATIVO\n————————————————————————————————————————",
+   "noticia_chega": 386,
+   "chegada": "[1] hoje",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — Lumron (terra nova) (Selula)",
+   "toca": false
+  },
+  {
+   "dia": 387,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "leitura": "dois clãs",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: dois clãs — Steunn",
+   "toca": true
+  },
+  {
+   "dia": 388,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 394,
+   "chegada": "[5] em 1d6 [6] dias",
+   "leitura": "magia selvagem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Ulra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 389,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 391,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Lumade",
+   "toca": true
+  },
+  {
+   "dia": 390,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Eryeth\ndesejo: casar com quem ama\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: ser esquecido\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: LEAL e HONESTO\n————————————————————————————————————————",
+   "noticia_chega": 396,
+   "chegada": "[5] em 1d6 [6] dias",
+   "resumo": "NASCE UMA FACÇÃO nova — Shizess (as caravanas) (Eryeth)",
+   "toca": false
+  },
+  {
+   "dia": 391,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 391,
+   "chegada": "[1] hoje",
+   "resumo": "CLIMA ESTRANHO — Mordun (a Boca com Fome)",
+   "toca": false
+  },
+  {
+   "dia": 392,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Culto da Morast\nadora: um monstro Mítico adormecido\npromete: poder sobre os mortos\nsinal: fita de cor\ncélulas: 5 cidades\nlíder: nível 130, classe Rara a Lendária\nrito: veneno\nplano (relógio de 6): matar um herdeiro\nfraqueza: um membro quer sair\n————————————————————————————————————————",
+   "noticia_chega": 392,
+   "chegada": "[1] hoje",
+   "resumo": "UM CULTO CRESCE ou nasce — Zaitor (terra nova) (Culto da Morast)",
+   "toca": false
+  },
+  {
+   "dia": 392,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "nome: Kreium\ndesejo: proteger um filho\nambição (relógio de 4): virar Lendário\nmedo: a humilhação pública\nsegredo: tem um filho em outra cidade\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: GENEROSO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Ireviel e o rio (Kreium)",
+   "toca": true
+  },
+  {
+   "dia": 392,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Varula\ndesejo: curar alguém\nambição (relógio de 4): virar Lendário\nmedo: o fogo\nsegredo: fez um pacto\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: COVARDE e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 392,
+   "chegada": "[1] hoje",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — Lumade (Varula)",
+   "toca": true
+  },
+  {
+   "dia": 393,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Culto do Erynar\nadora: um Lendário morto\npromete: riqueza\nsinal: cheiro de incenso\ncélulas: 4 cidades\nlíder: nível 170, classe Rara a Lendária\nrito: roubo de crianças\nplano (relógio de 6): envenenar uma feira\nfraqueza: o patrono cobra caro\n————————————————————————————————————————",
+   "noticia_chega": 394,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — Yaelane (Culto do Erynar)",
+   "toca": false
+  },
+  {
+   "dia": 394,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "1d12 [5] um lugar novo é descoberto (gerar lugar)",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "SURPRESA: o gerador de novidade — Farenta",
+   "toca": true
+  },
+  {
+   "dia": 395,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 401,
+   "chegada": "[4] em 1d6 [6] dias",
+   "leitura": "abre",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Marasar (a Liga e o Doge)",
+   "toca": true
+  },
+  {
+   "dia": 396,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "nome: Braine\no que era: mercado\npor que caiu: maldição\no que guarda: uma receita\no que habita: bandidos\ncusto de entrar: uma chave\n————————————————————————————————————————",
+   "noticia_chega": 400,
+   "chegada": "[5] em 1d6 [4] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — Telosus (o Colégio) (Braine)",
+   "toca": true
+  },
+  {
+   "dia": 397,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Kasssa\ndesejo: uma casa própria\nambição (relógio de 4): virar Lendário\nmedo: ser esquecido\nsegredo: trabalha para outra facção\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: AMBICIOSO e CRUEL\n————————————————————————————————————————",
+   "noticia_chega": 398,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "NASCE UMA FACÇÃO nova — a costa (Ireviel–Marasar) (Kasssa)",
+   "toca": true
+  },
+  {
+   "dia": 398,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 403,
+   "chegada": "[4] em 1d6 [5] dias",
+   "leitura": "ataca",
+   "resumo": "UM LENDÁRIO AGE: ataca — Lumron (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 399,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "nome: Gorssa\no que era: mina\npor que caiu: monstro\no que guarda: material Raro a Lendário\no que habita: um culto\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": 401,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — Shizess (as caravanas) (Gorssa)",
+   "toca": false
+  },
+  {
+   "dia": 399,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [10] o Delta e as salinas",
+   "detalhe": "",
+   "noticia_chega": 404,
+   "chegada": "[5] em 1d6 [5] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — o Delta e as salinas",
+   "toca": true
+  },
+  {
+   "dia": 399,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 403,
+   "chegada": "[5] em 1d6 [4] dias",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Ireviel e o rio",
+   "toca": true
+  },
+  {
+   "dia": 400,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "[MISSÃO]: Draast (o Mestre dá o nome pela ficção)\ndificuldade: E  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Classe\nobjetivo: descobrir quem fez algo\ncomplicação escondida (Envelope): tem um monstro no caminho\nprazo: 4 dias\nrecompensa: 150 XP · 30 de ouro · 1 ponto de Trilha\npenalidade se falhar: quem pediu morre ou se perde\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 403,
+   "chegada": "[4] em 1d6 [3] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Ulra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 401,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 402,
+   "chegada": "[2] em 1d3 [1] dias",
+   "leitura": "desaparece",
+   "resumo": "UM LENDÁRIO AGE: desaparece — as Fundas do Norte (o Clã Hegre)",
+   "toca": true
+  },
+  {
+   "dia": 402,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [2]",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 402,
+   "chegada": "[1] hoje",
+   "leitura": "fome",
+   "resumo": "PESTE OU DESASTRE: fome — Lumade",
+   "toca": true
+  },
+  {
+   "dia": 403,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 404,
+   "chegada": "[2] em 1d3 [1] dias",
+   "leitura": "dois clãs",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: dois clãs — Kremir",
+   "toca": false
+  },
+  {
+   "dia": 404,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 406,
+   "chegada": "[3] em 1d3 [2] dias",
+   "leitura": "abre",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Zaitor (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 405,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 407,
+   "chegada": "[4] em 1d6 [2] dias",
+   "leitura": "fecha",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: fecha — a costa (Ireviel–Marasar)",
+   "toca": true
+  },
+  {
+   "dia": 406,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 406,
+   "chegada": "[1] hoje",
+   "leitura": "os mortos se mexem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: os mortos se mexem — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 406,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 408,
+   "chegada": "[4] em 1d6 [2] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Zaitor (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 406,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 406,
+   "chegada": "[1] hoje",
+   "leitura": "o céu sangra",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: o céu sangra — a costa (Ireviel–Marasar)",
+   "toca": true
+  },
+  {
+   "dia": 407,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 408,
+   "chegada": "[4] em 1d6 [1] dias",
+   "leitura": "lei nova",
+   "resumo": "MUDANÇA POLÍTICA: lei nova — Yaelane",
+   "toca": false
+  },
+  {
+   "dia": 408,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Veytor\ndesejo: pagar uma dívida antiga\nambição (relógio de 4): casar acima da sua classe\nmedo: a velhice\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: AVARENTO e GENEROSO\nnível: 150\nobra sinistra (relógio de 8): conquistar uma região\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: exército\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 410,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — as Fundas do Norte (o Clã Hegre) (Veytor)",
+   "toca": true
+  },
+  {
+   "dia": 409,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 410,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 410,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "[MISSÃO]: Orgal (o Mestre dá o nome pela ficção)\ndificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Encadeada (1 de 1d4+1)\nobjetivo: libertar alguém preso\ncomplicação escondida (Envelope): o alvo tem um motivo bom\nprazo: 1 dias\nrecompensa: 50 XP · 10 de ouro · um título\npenalidade se falhar: uma facção ganha um segmento\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 412,
+   "chegada": "[5] em 1d6 [2] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Zisrir",
+   "toca": false
+  },
+  {
+   "dia": 411,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [2] Levis e Levis-baixa",
+   "detalhe": "",
+   "noticia_chega": 412,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "FESTIVAL, TORNEIO OU FEIRA GRANDE — Levis e Levis-baixa",
+   "toca": true
+  },
+  {
+   "dia": 412,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "nome: Varast\ndesejo: proteger um filho\nambição (relógio de 4): formar uma companhia\nmedo: a velhice\nsegredo: é filho de quem não deveria\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: CURIOSO e LEAL\n————————————————————————————————————————",
+   "noticia_chega": 412,
+   "chegada": "[1] hoje",
+   "resumo": "NASCE UMA FACÇÃO nova — Ireviel e o rio (Varast)",
+   "toca": true
+  },
+  {
+   "dia": 413,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Marasar (a Liga e o Doge)",
+   "toca": true
+  },
+  {
+   "dia": 413,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [17] os Picos Brancos",
+   "detalhe": "",
+   "noticia_chega": 416,
+   "chegada": "[3] em 1d3 [3] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — os Picos Brancos",
+   "toca": false
+  },
+  {
+   "dia": 413,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 419,
+   "chegada": "[4] em 1d6 [6] dias",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Mordun (a Boca com Fome)",
+   "toca": false
+  },
+  {
+   "dia": 414,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [2] Levis e Levis-baixa",
+   "detalhe": "nome: Drassa\ndesejo: sair da cidade\nambição (relógio de 4): entrar numa facção que o recusou\nmedo: a morte de um filho\nsegredo: roubou o que tem\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: COVARDE e LEAL\n————————————————————————————————————————",
+   "noticia_chega": 417,
+   "chegada": "[2] em 1d3 [3] dias",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — Levis e Levis-baixa (Drassa)",
+   "toca": true
+  },
+  {
+   "dia": 415,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "1d12 [7] uma facção nova nasce de um conflito antigo",
+   "noticia_chega": 416,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "SURPRESA: o gerador de novidade — Yaelane",
+   "toca": false
+  },
+  {
+   "dia": 416,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 422,
+   "chegada": "[4] em 1d6 [6] dias",
+   "leitura": "fecha",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: fecha — o brejo do oeste (a Torre Afogada)",
+   "toca": false
+  },
+  {
+   "dia": 417,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 419,
+   "chegada": "[5] em 1d6 [2] dias",
+   "leitura": "enchente",
+   "resumo": "PESTE OU DESASTRE: enchente — o brejo do oeste (a Torre Afogada)",
+   "toca": false
+  },
+  {
+   "dia": 418,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "",
+   "noticia_chega": 418,
+   "chegada": "[1] hoje",
+   "resumo": "CLIMA ESTRANHO — Kremir",
+   "toca": false
+  },
+  {
+   "dia": 419,
+   "d20": 2,
+   "o_que": "NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "nome: Seleth\ndesejo: voltar para casa\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a morte de um filho\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: AVARENTO e VINGATIVO\n————————————————————————————————————————",
+   "noticia_chega": 420,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "NASCE UMA FACÇÃO nova — Farenta (Seleth)",
+   "toca": true
+  },
+  {
+   "dia": 420,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 420,
+   "chegada": "[1] hoje",
+   "leitura": "o céu sangra",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: o céu sangra — as Montanhas de Fogo",
+   "toca": false
+  },
+  {
+   "dia": 420,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [17] os Picos Brancos",
+   "detalhe": "nome: Veyium\ndesejo: ser reconhecido no ofício\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: o próprio passado\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: CRUEL e TEIMOSO\nnível: 350\nobra sinistra (relógio de 8): quebrar um pacto antigo\npor que é humano: quer que o pai finalmente o veja\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: fé\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 421,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — os Picos Brancos (Veyium)",
+   "toca": false
+  },
+  {
+   "dia": 420,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 420,
+   "chegada": "[1] hoje",
+   "leitura": "fecha",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: fecha — a costa (Ireviel–Marasar)",
+   "toca": true
+  },
+  {
+   "dia": 421,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [5]",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "leitura": "bandidos viram exército",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: bandidos viram exército — Yaelane",
+   "toca": false
+  },
+  {
+   "dia": 422,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 425,
+   "chegada": "[4] em 1d6 [3] dias",
+   "resumo": "FESTIVAL, TORNEIO OU FEIRA GRANDE — as Montanhas de Fogo",
+   "toca": false
+  },
+  {
+   "dia": 423,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [4]",
+   "onde": "d19 [7] a Mata de Elais (longe)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "leitura": "incêndio",
+   "resumo": "PESTE OU DESASTRE: incêndio — a Mata de Elais",
+   "toca": false
+  },
+  {
+   "dia": 423,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [4]",
+   "onde": "d8 [5] Lumade (perto)",
+   "detalhe": "",
+   "noticia_chega": 424,
+   "chegada": "[5] em 1d6 [1] dias",
+   "leitura": "incêndio",
+   "resumo": "PESTE OU DESASTRE: incêndio — Lumade",
+   "toca": true
+  },
+  {
+   "dia": 423,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [7] Kremir (aleatória)",
+   "detalhe": "",
+   "noticia_chega": 423,
+   "chegada": "[1] hoje",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Kremir",
+   "toca": false
+  },
+  {
+   "dia": 424,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [17] os Picos Brancos",
+   "detalhe": "",
+   "noticia_chega": 424,
+   "chegada": "[1] hoje",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — os Picos Brancos",
+   "toca": false
+  },
+  {
+   "dia": 425,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "nome: Veyol\no que era: torre de mago\npor que caiu: traição\no que guarda: uma peça antiga\no que habita: bandidos\ncusto de entrar: um sacrifício\n————————————————————————————————————————",
+   "noticia_chega": 430,
+   "chegada": "[4] em 1d6 [5] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — Gogrunn (as minas) (Veyol)",
+   "toca": false
+  },
+  {
+   "dia": 426,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Ulade\ndesejo: ser perdoado\nambição (relógio de 4): ganhar a guerra do seu povo\nmedo: o fogo\nsegredo: sabe de um crime de alguém importante\nlinha vermelha: nunca deixa um ferido para trás\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AVARENTO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 432,
+   "chegada": "[4] em 1d6 [6] dias",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — Yaelane (Ulade)",
+   "toca": false
+  },
+  {
+   "dia": 427,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 429,
+   "chegada": "[2] em 1d3 [2] dias",
+   "leitura": "magia selvagem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Kasra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 427,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [24] Haula (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 428,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "CLIMA ESTRANHO — Haula (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 427,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "[MISSÃO]: Braula (o Mestre dá o nome pela ficção)\ndificuldade: D  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Normal\nobjetivo: descobrir quem fez algo\ncomplicação escondida (Envelope): outra facção quer o contrário\nprazo: 3 dias\nrecompensa: 400 XP · 100 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: a região piora um passo\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 433,
+   "chegada": "[4] em 1d6 [6] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Lumron (terra nova)",
+   "toca": false
+  }
+ ]
+}

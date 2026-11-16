@@ -1,0 +1,17 @@
+[01:30:07] Dia 373 · Pressão 2/5 · evento local 1d20 [2] -> nada
+  avistamento de monstro 1d20 [8] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 373 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]
+    ONDE: d27 [21] Zisrir
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 373
+    um Lendário age (d20 [5]):
+    Garkunn (ameaça, Mordun) d20 [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz) · 1d20 [18] · notícia d20 [8] chega no dia 375
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [11] nada visível
+    FAÍSCA: Tamel (morto) vai trair Dovan, por causa de uma peça Lendária roubada
+    FAÍSCA: Mamiltia procura o conselheiro Pelagri, por causa de a coberta do mundo
+    FAÍSCA: Grerkur quer matar Leliel, por causa de a Matriz
+  AUDITORIA (XXIII.23, Dia 373): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

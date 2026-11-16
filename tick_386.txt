@@ -1,0 +1,46 @@
+[19:23:14] Dia 386 · Pressão 5/5 · evento local 1d20 [11] -> uma criança doente na enfermaria piora ou sara
+  O TEMPO (17 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: chuva de verão, brisa (d6 [4] muda, d20 [16] · vento d6 [3]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   o Porto de Marasar: limpo, calmo (d6 [1] fica · vento d6 [1])
+   Levis: limpo, brisa (d6 [6] muda, d20 [2] · vento d6 [4])
+   Farenta: nublado, brisa (d6 [6] muda, d20 [15] · vento d6 [3])
+   O RIO: baixo [27/100]
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [3] Irasa
+  EVENTO DE MUNDO 1d20 [1] Guerra · encadeamento 1d20 [14] Um monstro aproveita · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 386 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [26] Lumron (terra nova)
+    A NOTÍCIA: [1] hoje
+    nome: Selula
+    desejo: sair da cidade
+    ambição (relógio de 4): descobrir uma receita perdida
+    medo: o fogo
+    segredo: deve a alguém perigoso
+    linha vermelha: nunca volta atrás numa palavra dada
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: ORGULHOSO e VINGATIVO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 386
+    um Lendário age (d20 [4]):
+    Xaysress (ofício, Kremir) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [2] chega hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [2] nada visível
+    FAÍSCA: Almision encomenda uma peça para Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308), por causa de um feitiço proibido
+    FAÍSCA: Iorin acusa em público Qunemneth, o Médico Cinzento, por causa de uma criança
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus procura Lasca e Miro (presos), por causa de a Matriz
+  ▶ AGENDA #16 (era do Dia 385): CHEGA a Ireviel: a palavra do rei (julga na volta; ninguém toca no mago nem no Herkald; a Nouliel decide a cadeira; a Sira aperta o cobrador) (saiu de Farenta no 383)
+  ▶ AGENDA #18: CHEGA a Farenta: o MORETH (chamado pelo rei) (saiu de Ireviel no 384)
+  ▶ AGENDA #55: FACÇÃO — os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)) ameaça ou sabota a casa (pequeno, mas visível). O que querem: nasceram da guerra velha Liga × Skotha: querem o Doge velho de volta; a LIGA paga com ouro e espadas que a MÃO MOLHADA passa pelo cais (a contra da casa achou n
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM CULTO CRESCE ou nasce — as Fundas do Norte (o Clã Hegre) (Culto da Eryron) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Eloune, a Mãe-Lodo (Épico, Ireviel e o rio): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Maneus, o Afogado do Vento (Lendário, Steunn): migra 1 região (rola para onde) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): atacam outro povo-monstro (guerra de bandos) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Stundald, a Raiz-de-Ferro (Épico, Kremir): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Yirane, a Que Come a Pedra (Épico, as Montanhas de Fogo): um culto ou bando passa a adorá-lo · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: a Mãe Branca (Primordial, os Picos Brancos): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: Asith (Incomum, Zisrir): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): SURPRESA: gerador de novidade ligado a eles · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: UMA PESSOA IMPORTANTE VIAJA — Lumron (terra nova) (Selula) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): ataca ou sabota a obra do RIVAL lendário · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)

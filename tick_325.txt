@@ -1,0 +1,15 @@
+[14:15:13] Dia 325 · Pressão 4/5 · encontro de estrada 1d20 [3] -> encontro na estrada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 325 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]
+    ONDE: d27 [16] as Montanhas de Fogo
+    A NOTÍCIA: [5] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 325
+    um Lendário age (d20 [4]):
+    Souane (influência, o Delta) d20 [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20) · 1d20 [5] · notícia d20 [11] chega no dia 331
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Venne (morto) acusa em público Isolda, por causa de vaduar
+    FAÍSCA: Messa Tiracci acusa em público Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308), por causa de o perdão
+    FAÍSCA: Krernos deve a vida a Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de fome

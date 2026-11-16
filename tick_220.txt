@@ -1,0 +1,15 @@
+[01:34:10] Dia 220 · Pressão 4/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 220 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d22 [2] Levis e Levis-baixa
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 220
+    um Lendário age (d20 [6]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · notícia d20 [10] chega no dia 221
+    trama do dia: Graur → Asazh (LEALDADE CEGA) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: o podestà Tirello encomenda uma peça para Skotha Graskur, por causa de um núcleo de monstro
+    FAÍSCA: Nouse pede ajuda a Krernos, por causa de uma receita perdida
+    FAÍSCA: Hrarna vende algo a Iorin, por causa de vaduar

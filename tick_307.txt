@@ -1,0 +1,24 @@
+[11:05:58] Dia 307 · Pressão 1/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 307 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d25 [13] a Mata de Elais
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Thugal
+    desejo: vingar um morto
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a humilhação pública
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: AMBICIOSO e CURIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 307
+    um Lendário age (d20 [1]):
+    Gorine (fé, escondido (patrono da Lumine)) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [2] nada visível
+    FAÍSCA: a cantora do templo rouba de Naera, por causa de a Matriz
+    FAÍSCA: Moreth vai trair Naera, por causa de um herdeiro dos Steunn
+    FAÍSCA: os Jurados de Steunn chantageia Draa, por causa de fome

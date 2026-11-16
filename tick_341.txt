@@ -1,0 +1,16 @@
+[16:10:19] Dia 341 · Pressão 5/5 · encontro de estrada 1d20 [18] -> nada
+  avistamento de monstro 1d20 [18] -> nenhum
+  EVENTO DE MUNDO 1d20 [11] Monstro grande desce · encadeamento 1d20 [12] Fé reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 341 (dia)
+    d20 [7] ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [5]
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 341
+    um Lendário age (d20 [6]):
+    Borecci (ofício, Steunn) d20 [8] sofre um revés (ferida, perda, traição de um próximo) · notícia d20 [2] chega hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [11] nada visível
+    FAÍSCA: Lurentetta foge de a Guardiã da Tenaz, por causa de a Matriz
+    FAÍSCA: Odrum desafia para duelo Brogos, por causa de uma dívida antiga
+    FAÍSCA: Tamel (morto) desafia para duelo Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de vingança

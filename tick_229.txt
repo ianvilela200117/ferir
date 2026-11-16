@@ -1,0 +1,15 @@
+[09:32:35] Dia 229 · Pressão 3/5 · encontro de estrada 1d20 [13] -> nada
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 229 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [2]
+    ONDE: d23 [21] Zisrir
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 229
+    um Lendário age (d20 [2]):
+    Leliel (influência, Farenta) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [16] chega no dia 230
+    trama do dia: a cantora do templo → a casa da fundição (RESSENTIMENTO) d20 [10] nada visível
+    FAÍSCA: Thuron rouba de Sesreth, por causa de um núcleo de monstro
+    FAÍSCA: Moreth esconde um filho de Sesreth, por causa de sal
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) oferece aliança a Tamel (morto), por causa de a coberta do mundo

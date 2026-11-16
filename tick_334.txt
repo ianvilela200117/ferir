@@ -1,0 +1,30 @@
+[14:39:25] Dia 334 · Pressão 3/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 334 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [6] Gogrunn (as minas)
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    nome: Thuol
+    desejo: mandar em alguém
+    ambição (relógio de 4): fundar uma escola
+    medo: a humilhação pública
+    segredo: traiu um amigo uma vez
+    linha vermelha: nunca deixa um ferido para trás
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: GENEROSO e HONESTO
+    nível: 320
+    obra sinistra (relógio de 8): trazer de volta um morto amado
+    por que é humano: foi traído pelo reino
+    equipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: exército
+    o que o faria parar: nada
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 334
+    um Lendário age (d20 [6]):
+    Teraseth (combate, Ireviel e o rio) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [10] chega no dia 337
+    trama do dia: Hrotgar → Orast (PAIXÃO PROIBIDA) d20 [2] nada visível
+    FAÍSCA: Venne (morto) desafia para duelo Eliane, por causa de fome
+    FAÍSCA: a cantora do templo rouba de Eiundunn, por causa de vaduar
+    FAÍSCA: Iorin inveja Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308), por causa de uma receita perdida

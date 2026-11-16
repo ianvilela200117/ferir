@@ -1,0 +1,22 @@
+[14:19:41] Dia 246 · Pressão 5/5 · encontro de estrada 1d20 [11] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  EVENTO DE MUNDO 1d20 [3] Colapso econômico · encadeamento 1d20 [5] Preço · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 246 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d23 [22] Kasra (terra nova)
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    nome: Kasssa
+    o que era: oficina de mestre morto
+    por que caiu: traição
+    o que guarda: um núcleo
+    o que habita: um culto
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 246
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [6] nada visível
+    FAÍSCA: Skotha Graskur ama em segredo Eiandald, por causa de um mapa
+    FAÍSCA: Kreium (preso) ama em segredo Hrotgar, por causa de um feitiço proibido
+    FAÍSCA: o podestà Tirello deve a vida a Thuron, por causa de vingança

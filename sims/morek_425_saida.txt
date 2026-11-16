@@ -1,0 +1,97 @@
+LEI DAS AÇÕES: Morek (nível 122) contra 6 · PV 2414/2440 · RD 15 · 5 ações · reação 2 · grupo: Ferir 3, Moreth 4, Eiagrir 3, Isolda 2, Starkald 2, Goir 1
+INICIATIVA: Morek 2d20+12 = 32 × o grupo 2d20+12 (média) = 40 → o grupo age primeiro
+--- RODADA 1 · Morek 2414/2440
+  Ferir: [[12], [1]]+34=47 vs 69 erra
+  Ferir: [[8], [3]]+34=45 vs 69 erra
+  Ferir: [[9], [17]]+34=60 vs 69 erra
+  Moreth: [[4], [18]]+44=66 vs 69 erra
+  Moreth: [[6], [5]]+44=55 vs 69 erra
+  Moreth: [[8], [2]]+44=54 vs 68 erra
+  Moreth: [[4], [19]]+44=67 ACERTA [6]×3+15+46=79 − RD 15 = 64 (2350)
+  Eiagrir: [[11], [18]]+36=65 vs 66 erra
+  Eiagrir: [[14], [13]]+36=63 vs 65 erra
+  Eiagrir: [[5], [2]]+36=43 vs 64 erra
+  Isolda: [[14], [12]]+34=60 vs 63 erra
+  Isolda: [[16], [1]]+34=51 vs 62 erra
+  Starkald: [[5], [11]]+24=40 vs 62 erra
+  Starkald: [[11], [8]]+24=43 vs 62 erra
+  Goir: [[17], [13]]+16=46 vs 62 erra
+  PODER: o golpe que prende como raiz (15 m)
+    Ferir: Agilidade 24 vs 20 → CAI (−5, 393)
+    Eiagrir: Agilidade 27 vs 20 → CAI (−6, 414)
+    Starkald: Agilidade 22 vs 20 → CAI (−9, 221)
+    ataque em Isolda: [[3], [11]]+45=59 vs 54 ACERTA [10, 5]×10+0+24=174 − RD 6 = 168 (132)
+    ataque em Goir: [[20, 14], [2]]+45=81 vs 38 ACERTA [1, 4]×10+0+24=74 − RD 3 = 71 (59)
+    ataque em Moreth: [[14], [7]]+45=66 vs 64 ACERTA [9, 7]×10+0+24=184 − RD 8 = 176 (424)
+    ataque em Moreth: [[9], [4]]+45=58 vs 64 erra
+--- RODADA 2 · Morek 2350/2440
+  Ferir volta
+  Moreth lança: 700; [[20, 7], [4]]+44=75 vs 69 pega em cheio → 685 (1665)
+  Moreth: [[16], [3]]+44=63 vs 69 erra
+  Moreth: [[20, 1], [7]]+44=72 ACERTA [5]×3+15+46=76 − RD 15 = 61 (1604)
+  Moreth: [[6], [6]]+44=56 vs 69 erra
+  Eiagrir volta
+  Isolda: [[20, 7], [13]]+34=74 ACERTA CRÍTICO [3, 8, 2]×3+10+23=72 − RD 7 = 65 (1539)
+  REAÇÃO:
+    ataque em Isolda: [[15], [9]]+45=69 vs 54 ACERTA [10, 6]×10+0+24=184 − RD 6 = 178 (-46)
+    Isolda MORRE (dano maciço)
+  Starkald volta
+  Goir: [[2], [15]]+16=33 vs 69 erra
+  PODER: o golpe que prende como raiz (15 m)
+    Moreth: segura (35)
+    Starkald: Agilidade 32 vs 20 → CAI (−7, 214)
+    ataque em Eiagrir: [[13], [2]]+45=60 vs 56 ACERTA [4, 7]×10+0+24=134 − RD 8 = 126 (288)
+    ataque em Ferir: [[16], [11]]+45=72 vs 59 ACERTA [3, 3]×10+0+24=84 − RD 10 = 74 (319)
+    ataque em Goir: [[12], [7]]+45=64 vs 38 ACERTA [4, 4]×10+0+24=104 − RD 3 = 101 (-42)
+    Goir MORRE (dano maciço)
+    GOLPE QUE VARRE: segue no próximo
+    ataque em Eiagrir: [[1], [17]]+45=63 vs 56 ACERTA [7, 4]×10+0+24=134 − RD 8 = 126 (162)
+    ataque em Ferir: [[13], [15]]+45=73 vs 59 ACERTA [7, 7]×10+0+24=164 − RD 10 = 154 (165)
+--- RODADA 3 · Morek 1539/2440
+  Ferir lança: 455; [[7], [18]]+34=59 vs 69 o alvo resiste: metade → 440 (1099)
+  Ferir: [[17], [1]]+34=52 vs 69 erra
+  Ferir: [[16], [13]]+34=63 vs 69 erra
+  Moreth lança: 290; [[17], [1]]+44=62 vs 69 o alvo resiste: metade → REFLETIDA (d20 [19]): 275 voltam em Moreth (149)
+  Moreth: [[4], [1]]+44=49 vs 69 erra
+  Moreth: [[14], [8]]+44=66 vs 69 erra
+  Moreth: [[1], [10]]+44=55 vs 69 erra
+  Eiagrir lança: 137; [[10], [3]]+36=49 vs 69 o alvo resiste: metade → 122 (977)
+  Eiagrir: [[15], [7]]+36=58 vs 68 erra
+  Eiagrir: [[10], [1]]+36=47 vs 67 erra
+  Starkald volta
+  FÚRIA: +1 ação, o poder recarrega
+  PODER: o golpe que prende como raiz (15 m)
+    ataque em Eiagrir: [[19], [6]]+45=70 vs 56 ACERTA [6, 5]×10+0+24=134 − RD 8 = 126 (36)
+    ataque em Eiagrir: [[8], [14]]+45=67 vs 56 ACERTA [2, 6]×10+0+24=104 − RD 8 = 96 (-60)
+    Eiagrir CAI DESACORDADO
+    ataque em Starkald: [[4], [5]]+45=54 vs 46 ACERTA [10, 8]×10+0+24=204 − RD 4 = 200 (14)
+    ataque em Starkald: [[13], [12]]+45=70 vs 46 ACERTA [3, 9]×10+0+24=144 − RD 4 = 140 (-126)
+    Starkald MORRE (dano maciço)
+    ataque em Moreth: [[11], [5]]+45=61 vs 64 erra
+  teste de morte de Eiagrir: [14] vs 12 (1 sucessos, 0 falhas)
+--- RODADA 4 · Morek 977/2440
+  Ferir: [[15], [14]]+34=63 vs 69 erra
+  Ferir: [[2], [12]]+34=48 vs 69 erra
+  Ferir: [[17], [10]]+34=61 vs 69 erra
+  Moreth: [[20, 2], [2]]+44=68 vs 69 erra
+  Moreth: [[17], [9]]+44=70 ACERTA [8]×3+15+46=85 − RD 15 = 70 (907)
+  Moreth: [[13], [20, 16]]+44=93 ACERTA CRÍTICO [1, 7, 5]×3+15+46=100 − RD 7 = 93 (814)
+  REAÇÃO:
+    ataque em Moreth: [[12], [3]]+45=60 vs 64 erra
+  Moreth: [[5], [9]]+44=58 vs 67 erra
+  PODER: o golpe que prende como raiz (15 m)
+    ataque em Ferir: [[17], [17]]+45=79 vs 59 ACERTA [5, 9]×10+0+24=164 − RD 10 = 154 (11)
+    Ferir RECUA ferido (d6 [3])
+    ataque em Moreth: [[10], [17]]+45=72 vs 64 ACERTA [10, 9]×10+0+24=214 − RD 8 = 206 (-57)
+    Moreth CAI DESACORDADO
+  teste de morte de Moreth: [16] vs 12 (1 sucessos, 0 falhas)
+  teste de morte de Eiagrir: [16] vs 12 (2 sucessos, 0 falhas)
+  O GRUPO CAI
+  Ferir tenta estancar Moreth (Medicina 4 vs 15): não
+  Ferir estanca Eiagrir (Medicina 34 vs 15): ESTÁVEL
+  teste de morte de Moreth: [17] vs 12 (2 sucessos, 0 falhas)
+  Ferir estanca Moreth (Medicina 29 vs 15): ESTÁVEL
+  FERIMENTO de Ferir: d20 [7]+0 = 7 → LEVE: luta com −2 no ataque e na defesa · 2 dias (até o Dia 427) · Morek
+  FERIMENTO de Moreth: d20 [19]+3 = 22 → PARA SEMPRE: não luta; perde algo de vez (decidir com o jogador) · 30 dias (até o Dia 455) · Morek
+  FERIMENTO de Eiagrir: d20 [15]+3 = 18 → GRAVE: não luta · MARCA: medo do que o feriu · 17 dias (até o Dia 442) · Morek
+FIM: grupo caiu · rodadas 4 · mortos ['Isolda', 'Goir', 'Starkald'] · PV 814/2440 · grupo {'Ferir': 11, 'Moreth': -57, 'Eiagrir': -60, 'Isolda': -46, 'Starkald': -126, 'Goir': -42}

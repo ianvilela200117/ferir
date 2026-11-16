@@ -1,0 +1,15 @@
+[01:01:46] Dia 289 · Pressão 3/5 · encontro de estrada 1d20 [11] -> nada
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 289 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]
+    ONDE: d24 [3] Lumade
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 289
+    um Lendário age (d20 [3]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz) · 1d20 [9] · notícia d20 [12] chega no dia 292
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Gorine deve a vida a Thugek, por causa de a Fornalha que Não Apaga
+    FAÍSCA: Seline foge de a irmã Oisse, por causa de um herdeiro dos Steunn
+    FAÍSCA: Nouse quer casar com a mestra Carea, por causa de sal

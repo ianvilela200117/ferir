@@ -1,0 +1,21 @@
+[16:37:50] Dia 345 · Pressão 4/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 345 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [22] Kasra (terra nova)
+    A NOTÍCIA: [1] hoje
+    nome: Gormir
+    o que era: forte
+    por que caiu: dívida
+    o que guarda: um segredo de facção
+    o que habita: mortos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 345
+    Lendários: d20 [18] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [4] nada visível
+    FAÍSCA: Lasca e Miro (presos) salva Borecci, por causa de sal
+    FAÍSCA: Messa Tiracci rouba de a mestra Carea, por causa de uma profecia
+    FAÍSCA: o conselheiro Pelagri quer matar Kreine (da casa), por causa de o perdão

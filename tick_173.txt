@@ -1,0 +1,4 @@
+[01:05:48] Dia 173 · Pressão 2/5 · evento local 1d6 [3] -> nada
+  avistamento de monstro 1d6 [4] -> nenhum
+  Fortuna volta ao máximo
+  AUDITORIA (XXIII.23, Dia 173): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás

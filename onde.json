@@ -1,0 +1,28 @@
+{
+ "Oisse": {
+  "lugar": "Farenta",
+  "desde": 390,
+  "motivo": "o pacote da volta (387)"
+ },
+ "Ouvald": {
+  "lugar": "Levis",
+  "chega": 405,
+  "desde": 397,
+  "motivo": ""
+ },
+ "Mamiltia": {
+  "lugar": "a estrada de Steunn (com o Fumigador)",
+  "desde": 421,
+  "motivo": "417: saiu de Ireviel com o Fumigador para a Higrunn (MM17 [1])"
+ },
+ "Tolvane": {
+  "lugar": "a estrada de Lumade (enviado ao Celocus)",
+  "desde": 421,
+  "motivo": "422-432"
+ },
+ "Hruthos": {
+  "lugar": "a estrada de Lumade (enviado ao Celocus)",
+  "desde": 421,
+  "motivo": "422-432"
+ }
+}

@@ -1,0 +1,23 @@
+[09:32:35] Dia 230 · Pressão 4/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 230 (dia)
+    d20 [2] NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)
+    ONDE: d23 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    nome: Nesdun
+    desejo: aprender um segredo
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a humilhação pública
+    segredo: tem um filho em outra cidade
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: VINGATIVO e CRUEL
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 230
+    Lendários: d20 [20] quietos hoje
+    trama do dia: Ferir → a Liga (os conselheiros) (VINGANÇA JURADA) d20 [4] nada visível
+    FAÍSCA: Kreium (preso) pede ajuda a Draron (da casa), por causa de uma terra além do mapa
+    FAÍSCA: Kasgal descobre o segredo de Braeth (o ancião do Clã), por causa de um mapa
+    FAÍSCA: Skotha Graskur desafia para duelo Eiundunn, por causa de uma receita perdida

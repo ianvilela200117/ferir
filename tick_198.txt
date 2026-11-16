@@ -1,0 +1,4 @@
+[22:52:06] Dia 198 · Pressão 2/5 · evento local 1d6 [4] -> nada
+  avistamento de monstro 1d6 [1] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  AUDITORIA (XXIII.23, Dia 198): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás

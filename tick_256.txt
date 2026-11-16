@@ -1,0 +1,23 @@
+[22:23:06] Dia 256 · Pressão 5/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  EVENTO DE MUNDO 1d20 [7] Revolta ou greve · encadeamento 1d20 [5] Preço · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 256 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d23 [18] a costa (Ireviel–Marasar)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Gorgal
+    o que era: oficina de mestre morto
+    por que caiu: maldição
+    o que guarda: material Raro a Lendário
+    o que habita: bandidos
+    custo de entrar: um teste de Vigor por hora
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 256
+    um Lendário age (d20 [2]):
+    Adurel (ofício, Zisrir (o vale)) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [12] nada visível
+    FAÍSCA: a irmã Oisse deve a vida a Sira, por causa de a Matriz
+    FAÍSCA: Oslo deve a vida a Tano (carregador, primo da Caciccetta), por causa de uma dívida antiga
+    FAÍSCA: Sesreth quer matar Skotha Graskur, por causa de uma profecia

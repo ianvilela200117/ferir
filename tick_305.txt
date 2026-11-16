@@ -1,0 +1,22 @@
+[11:05:58] Dia 305 · Pressão 4/5 · encontro de estrada 1d20 [6] -> encontro na estrada
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 305 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d25 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [5] em 1d6 [2] dias
+    nome: Ulek
+    o que era: templo
+    por que caiu: terremoto
+    o que guarda: um núcleo
+    o que habita: um culto
+    custo de entrar: uma luta
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 305
+    um Lendário age (d20 [1]):
+    Garkunn (ameaça, Mordun) d20 [7] um segredo dele vaza (boato ou espionagem) · notícia d20 [9] chega no dia 306
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [13] nada visível
+    FAÍSCA: o Visconte Aldoveri pede ajuda a Brara, por causa de dinheiro da Liga
+    FAÍSCA: Naera vai trair a cantora do templo, por causa de uma profecia
+    FAÍSCA: Gorine sonha com Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de uma peça Lendária roubada

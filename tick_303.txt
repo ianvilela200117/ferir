@@ -1,0 +1,17 @@
+[11:05:58] Dia 303 · Pressão 2/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 303 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]
+    ONDE: d25 [18] a costa (Ireviel–Marasar)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 303
+    um Lendário age (d20 [1]):
+    Mamiltia (fé, Telosus) d20 [19] manda caçar alguém (um nome, uma peça, um monstro) · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [3] nada visível
+    FAÍSCA: Brogos desafia para duelo Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de um feitiço proibido
+    FAÍSCA: o Doge Pelaone pede ajuda a Souane, por causa de fome
+    FAÍSCA: Tilde vende algo a Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de dinheiro da Liga
+  AUDITORIA (XXIII.23, Dia 303): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

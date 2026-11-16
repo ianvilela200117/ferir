@@ -1,0 +1,35 @@
+{
+ "nota": "As tabelas FIXAS da semana (as 'de sempre' do envelope). O tick semanal declara e rola todas pelo selo. Tiradas das últimas declarações do envelope 2m (S10-S12, W11, X12-X13, Y13). O Mestre edita aqui quando a ficção mudar a lista (um laço novo, um vínculo rompido).",
+ "itens": [
+  {
+   "nome": "laco-quem",
+   "titulo": "LAÇO da semana: quem",
+   "dado": "d6",
+   "tabela": "1: o HERKALD | 2: a NOULIEL | 3: a TILDE | 4: a ULURVE | 5: a BRARA | 6: a AELIAE",
+   "ativo": true
+  },
+  {
+   "nome": "laco",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": "d6",
+   "tabela": "1-2: ATRITO | 3-6: MOMENTO",
+   "ativo": true
+  },
+  {
+   "nome": "chamado",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": "d20+3",
+   "tabela": "1-12: ninguém digno | 13-17: chega 1 | 18-23: chegam 2 | 20n: SURPRESA",
+   "ativo": true,
+   "nota": "402 (G3): o chamado anunciado nas quatro cidades: +3; quem entra pede uma peça da forja (Raro+) no lugar de soldo"
+  },
+  {
+   "nome": "vinculos",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": "d6",
+   "x": 2,
+   "tabela": "1: Nouliel–Herkald | 2: Tilde–Iorin | 3: Moreth–Eiagrir | 4: Krernos–Graur | 5: Thuron–Erymir | 6: Brara–Thugek",
+   "ativo": true
+  }
+ ]
+}

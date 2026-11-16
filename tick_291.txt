@@ -1,0 +1,15 @@
+[09:00:03] Dia 291 · Pressão 5/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  EVENTO DE MUNDO 1d20 [4] Morte de figura importante · encadeamento 1d20 [7] Vingança · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 291 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]
+    ONDE: d24 [3] Lumade
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 291
+    Lendários: d20 [20] quietos hoje
+    trama do dia: Moreth → Bren (morto) (ÓDIO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Gorron (oferece a missão do Delta) esconde um filho de Maevis (morto), por causa de uma dívida antiga
+    FAÍSCA: Xaysress sonha com Orast, por causa de o perdão
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) pede ajuda a Tamel (morto), por causa de uma peça Lendária roubada

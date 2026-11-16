@@ -1,0 +1,15 @@
+[13:48:38] Dia 321 · Pressão 5/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [5] Loula
+  EVENTO DE MUNDO 1d20 [11] Monstro grande desce · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 321 (dia)
+    d20 [14] FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)
+    ONDE: d27 [27] Kreade (terra nova)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 321
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [1] nada visível
+    FAÍSCA: Messer Rovai ama em segredo Seline (em Ireviel), por causa de um título
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus chantageia Kreine (da casa), por causa de vingança
+    FAÍSCA: Moreth sonha com o Visconte Aldoveri, por causa de a Matriz

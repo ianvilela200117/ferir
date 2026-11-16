@@ -1,0 +1,35 @@
+[00:16:03] Dia 396 · Pressão 5/5 · evento local 1d20 [15] -> um animal estranho nos lodaçais
+  O TEMPO (27 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [2] fica · vento d6 [3])
+   o Porto de Marasar: calor forte, calmo (d6 [2] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: calor forte, calmo (d6 [2] fica · vento d6 [2]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: limpo, vento forte (d6 [2] fica · vento d6 [6])
+   O RIO: baixo [20/100]
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [5] Loula
+  EVENTO DE MUNDO 1d20 [12] Cisma religioso ou milagre · encadeamento 1d20 [20] SURPRESA (gerador novidade) · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 396 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [8] Telosus (o Colégio)  ◆ TOCA A CASA
+    A NOTÍCIA: [5] em 1d6 [4] dias
+    nome: Braine
+    o que era: mercado
+    por que caiu: maldição
+    o que guarda: uma receita
+    o que habita: bandidos
+    custo de entrar: uma chave
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 396
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Draa vai trair Orast, por causa de um herdeiro dos Steunn
+    FAÍSCA: Ulair oferece aliança a Seline (em Ireviel), por causa de sal
+    FAÍSCA: Gorron (oferece a missão do Delta) ama em segredo Eliane, por causa de uma receita perdida
+  ▶ AGENDA #75: O JULGAMENTO DE FENMIR em praça aberta, o rei como juiz (o conselho marcou: depois da volta do Tolvane, com a Voz do Povo presente; se ele atrasar, o julgamento espera por ele).
+  ▶ AGENDA #114: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Thargos (Mítico, as Fundas do Norte): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Vradda (homens-lagarto) (Gogrunn): mandam um emissário a uma cidade (paz, troca, ameaça) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os do Rio Vermelho (Ireviel e o rio): dá um passo no que quer · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: NASCE UMA FACÇÃO nova — Shizess (as caravanas) (Eryeth) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Asith (Incomum, Zisrir): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [20] FIEL

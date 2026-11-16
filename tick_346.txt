@@ -1,0 +1,30 @@
+[16:37:50] Dia 346 · Pressão 5/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  EVENTO DE MUNDO 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [2] Reação · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 346 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    nome: Gorol
+    desejo: nunca mais passar fome
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: perder a mão do ofício
+    segredo: fez um pacto
+    linha vermelha: nunca trai a família
+    dilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha
+    traços: VINGATIVO e HONESTO
+    nível: 100
+    obra sinistra (relógio de 8): trazer de volta um morto amado
+    por que é humano: ama alguém e faz por ela
+    equipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: monstros
+    o que o faria parar: ser desmascarado em público
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 346
+    Lendários: d20 [12] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [9] nada visível
+    FAÍSCA: Borecci acusa em público Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301), por causa de fome
+    FAÍSCA: Ithra acusa em público Xaysress, por causa de a Matriz
+    FAÍSCA: Nouse vai trair Thugek, por causa de vingança

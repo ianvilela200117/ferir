@@ -1,0 +1,15 @@
+[11:45:19] Dia 314 · Pressão 3/5 · encontro de estrada 1d20 [4] -> encontro na estrada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 314 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]
+    ONDE: d26 [4] Marasar (a Liga e o Doge)
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    ——
+  O MUNDO VIVO — Dia 314
+    um Lendário age (d20 [3]):
+    Xaysress (ofício, Kremir) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [14] chega no dia 316
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [2] nada visível
+    FAÍSCA: Ulurve deve a vida a Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de um título
+    FAÍSCA: Almision sonha com Kreine (da casa), por causa de uma terra além do mapa
+    FAÍSCA: Draa vende algo a Lurentetta, por causa de uma terra além do mapa

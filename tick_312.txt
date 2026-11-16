@@ -1,0 +1,14 @@
+[11:45:19] Dia 312 · Pressão 1/5 · encontro de estrada 1d20 [6] -> encontro na estrada
+  avistamento de monstro 1d20 [12] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 312 (dia)
+    d20 [14] FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)
+    ONDE: d26 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 312
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [13] nada visível
+    FAÍSCA: Krernos acusa em público Tilde, por causa de um título
+    FAÍSCA: o Visconte Aldoveri desafia para duelo Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de sal
+    FAÍSCA: Skotha Graskur sonha com Bruno Malvezzi (sargento do podestà, da rede de Farenta), por causa de um título

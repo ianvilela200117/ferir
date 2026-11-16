@@ -1,0 +1,15 @@
+[23:50:48] Dia 269 · Pressão 3/5 · encontro de estrada 1d20 [5] -> encontro na estrada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 269 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]
+    ONDE: d23 [20] Steunn
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 269
+    um Lendário age (d20 [3]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [7] um segredo dele vaza (boato ou espionagem) · notícia d20 [15] chega no dia 275
+    trama do dia: Messer Rovai → o podestà Tirello (MEDO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Lasca e Miro (presos) descobre o segredo de Eiandald, por causa de uma dívida antiga
+    FAÍSCA: o Visconte Aldoveri esconde um filho de Venne (morto), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Oslo chantageia o conselheiro Pelagri, por causa de um núcleo de monstro

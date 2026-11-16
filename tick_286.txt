@@ -1,0 +1,15 @@
+[00:46:31] Dia 286 · Pressão 5/5 · encontro de estrada 1d20 [16] -> nada
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO 1d20 [11] Monstro grande desce · encadeamento 1d20 [6] Silêncio · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 286 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [1]
+    ONDE: d24 [10] o Delta e as salinas
+    A NOTÍCIA: [4] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 286
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Braeth (o ancião do Clã) → Iorin (TRAIÇÃO PENDENTE) d20 [3] nada visível
+    FAÍSCA: Ithra procura Kreium (preso), por causa de uma criança
+    FAÍSCA: Hrotgar esconde um filho de Tamel (morto), por causa de uma dívida antiga
+    FAÍSCA: Moreth oferece aliança a a cantora do templo, por causa de o perdão

@@ -1,0 +1,14 @@
+[00:30:11] Dia 275 · Pressão 4/5 · encontro de estrada 1d20 [16] -> nada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 275 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d24 [5] Farenta
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 275
+    Lendários: d20 [13] quietos hoje
+    trama do dia: Messer Rovai → o podestà Tirello (MEDO) d20 [9] nada visível
+    FAÍSCA: Kasgal foge de a cantora do templo, por causa de uma dívida antiga
+    FAÍSCA: os Jurados de Steunn descobre o segredo de Tamel (morto), por causa de uma receita perdida
+    FAÍSCA: Lasca e Miro (presos) quer casar com a irmã Oisse, por causa de uma receita perdida

@@ -1,0 +1,3 @@
+[16:46:18] Dia 195 · Pressão 4/5 · evento local 1d6 [5] -> nada
+  avistamento de monstro 1d6 [4] -> nenhum
+  Fortuna volta ao máximo

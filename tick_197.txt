@@ -1,0 +1,3 @@
+[22:18:41] Dia 197 · Pressão 1/5 · evento local 1d6 [4] -> nada
+  avistamento de monstro 1d6 [5] -> nenhum
+  Fortuna volta ao máximo

@@ -1,0 +1,26 @@
+{
+ "nome": "as casas da Liga em Marasar (madrugada do 392)",
+ "terreno": "muralha",
+ "nota": "M0 [6] 200 da Companhia · L1 [3] as 20 lanças da casa com a Eliane · MA1 [4] 80 da guarda das casas · MA1b [5] 50 mercenários do ouro do norte · MA2 [16] os Fiéis do Doge Velho não saem · MA3 [5] sabiam o dia: casas barricadas como muralha, o Salvio e o ouro fora na véspera · MA4 [5] os Thog olham dos telhados. Comando 9 e 6 e as qualidades: os do modelo do motor (lanças e Companhia veteranas, 4; guarda das casas 3; mercenários 4 com moral 2).",
+ "lados": {
+  "A": {
+   "nome": "as lanças do rei e a Companhia",
+   "comando": 9,
+   "unidades": [
+    {"nome": "as 20 lanças de Ireviel", "homens": 20, "qualidade": 4, "moral": 4, "tipo": "infantaria"},
+    {"nome": "a Companhia da Doge", "homens": 200, "qualidade": 4, "moral": 3, "tipo": "infantaria"}
+   ],
+   "herois": [{"nome": "Eliane", "nivel": 94}]
+  },
+  "B": {
+   "nome": "as casas da Liga",
+   "comando": 6,
+   "defende": true,
+   "unidades": [
+    {"nome": "a guarda das casas", "homens": 80, "qualidade": 3, "moral": 3, "tipo": "infantaria"},
+    {"nome": "os mercenários do norte", "homens": 50, "qualidade": 4, "moral": 2, "tipo": "infantaria"}
+   ],
+   "herois": []
+  }
+ }
+}

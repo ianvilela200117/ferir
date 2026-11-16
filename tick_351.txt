@@ -1,0 +1,15 @@
+[10:23:25] Dia 351 · Pressão 5/5 · encontro de estrada 1d20 [12] -> nada
+  avistamento de monstro 1d20 [11] -> nenhum
+  EVENTO DE MUNDO 1d20 [20] SURPRESA (gerador novidade) · encadeamento 1d20 [12] Fé reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 351 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [4]
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 351
+    Lendários: d20 [16] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: Moreth acusa em público Krernos, por causa de um núcleo de monstro
+    FAÍSCA: Borecci chantageia Lurentetta, por causa de sal
+    FAÍSCA: Braeth (o ancião do Clã) esconde um filho de o conselheiro Pelagri, por causa de uma profecia

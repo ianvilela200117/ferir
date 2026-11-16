@@ -1,0 +1,24 @@
+[16:10:19] Dia 339 · Pressão 3/5 · encontro de estrada 1d20 [8] -> nada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 339 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [3] Lumade
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    nome: Ulium
+    desejo: casar com quem ama
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a pobreza
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha
+    traços: VINGATIVO e COVARDE
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 339
+    um Lendário age (d20 [2]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [3] chega hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [11] nada visível
+    FAÍSCA: Isolda chantageia Venne (morto), por causa de sal
+    FAÍSCA: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) vai trair Teraseth, por causa de um título
+    FAÍSCA: Sira sonha com Eiundunn, por causa de a coberta do mundo

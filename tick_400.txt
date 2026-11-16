@@ -1,0 +1,42 @@
+[22:23:51] Dia 400 · Pressão 4/5 · evento local 1d20 [18] -> um pedinte com algo valioso para vender
+  O TEMPO (1 da Lua da Forja de 1013 d.S., Sol) · LUA NOVA (a do nome do servo)
+   Ireviel: calor forte, vento forte (d6 [3] fica · vento d6 [6]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: nublado, vento forte (d6 [6] muda, d20 [14] · vento d6 [6])
+   Levis: limpo, vento firme (d6 [3] fica · vento d6 [5])
+   Farenta: tempestade, VENTANIA (d6 [4] muda, d20 [19] · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: baixo [15/100] · MUDOU: era SECO
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 400 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [25] Ulra (terra nova)
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    [MISSÃO]: Draast (o Mestre dá o nome pela ficção)
+    dificuldade: E  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: De Classe
+    objetivo: descobrir quem fez algo
+    complicação escondida (Envelope): tem um monstro no caminho
+    prazo: 4 dias
+    recompensa: 150 XP · 30 de ouro · 1 ponto de Trilha
+    penalidade se falhar: quem pediu morre ou se perde
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 400
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Pelaccino (preso) → Graur (RIVALIDADE) d20 [6] nada visível
+    FAÍSCA: Seline acusa em público a casa da fundição, por causa de uma dívida antiga
+    FAÍSCA: Iorin ama em segredo Thuron, por causa de uma peça Lendária roubada
+    FAÍSCA: Lasca e Miro (presos) deve a vida a Ulurve, por causa de um mapa
+  ▶ AGENDA #126 (era do Dia 397): [OCULTO] NOTÍCIA de Marasar: os da LUZ DO CAIS proclamam MILAGRE a luz do Moreth que matou o Naudren e rompem com a Luz Partida (EV396).
+  ▶ AGENDA #129 (era do Dia 399): CHEGA a Ireviel: as 20 lanças de Farenta, chamadas pela Voz no Vento do rei (voto C397a) (saiu de Farenta no 397)
+  ▶ AGENDA #7: LUA NOVA DA FORJA: o prazo que a carta do Aldoveri deu ao Lulacco para sair de Ireviel (um ATAQUE a Ireviel, segundo a carta).
+  ▶ AGENDA #132: CHEGA a Ireviel: os 15 da Companhia da Doge (300 por semana, uma estação; o recado foi pela Voz no Vento do rei) (saiu de Marasar no 397)
+  ▶ AGENDA #178: FACÇÃO — os da Luz do Cais (o porto de Marasar) pede audiência ao conselho. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #180: FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #183: FACÇÃO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)) ameaça ou sabota a casa (pequeno, mas visível). O que querem: adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ✉ NOTÍCIA QUE CHEGA HOJE: LUGAR NOVO DESCOBERTO — Telosus (o Colégio) (Braine) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krothos (Lendário, Levis): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): guerra contra outro povo ou bicho · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Fenron (Épico, o brejo do oeste): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [17] FIEL
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [17] FIEL

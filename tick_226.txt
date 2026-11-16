@@ -1,0 +1,22 @@
+[08:55:34] Dia 226 · Pressão 5/5 · encontro de estrada 1d20 [11] -> nada
+  avistamento de monstro 1d20 [18] -> nenhum
+  EVENTO DE MUNDO 1d20 [20] SURPRESA (gerador novidade) · encadeamento 1d20 [13] A Liga reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 226 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d23 [10] o Delta e as salinas
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Gorgal
+    o que era: oficina de mestre morto
+    por que caiu: praga
+    o que guarda: uma receita
+    o que habita: um eremita
+    custo de entrar: um teste de Vigor por hora
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 226
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Hrotgar → Orast (DESEJO SECRETO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Krernos vai trair Brara, por causa de a Matriz
+    FAÍSCA: Orast desafia para duelo Krernos, por causa de fome
+    FAÍSCA: Hrotgar descobre o segredo de Messa Tiracci, por causa de um título

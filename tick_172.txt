@@ -1,0 +1,3 @@
+[00:42:37] Dia 172 · Pressão 1/5 · evento local 1d6 [6] -> nada
+  avistamento de monstro 1d6 [4] -> nenhum
+  Fortuna volta ao máximo

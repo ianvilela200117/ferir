@@ -1,0 +1,40 @@
+[18:46:58] Dia 403 · Pressão 2/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  O TEMPO (4 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: calor forte, calmo (d6 [2] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: neblina, brisa (d6 [3] fica · vento d6 [4]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: limpo, calmo (d6 [4] muda, d20 [4] · vento d6 [2])
+   Farenta: limpo, calmo (d6 [4] muda, d20 [3] · vento d6 [2])
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [6/100]
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 403 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [3]
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    → LEITURA DO DADO: dois clãs
+    ——
+  O MUNDO VIVO — Dia 403
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Naera deve a vida a Messa Tiracci, por causa de uma criança
+    FAÍSCA: Brara procura Naera, por causa de vaduar
+    FAÍSCA: Ithra encomenda uma peça para Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de uma receita perdida
+  AUDITORIA (XXIII.23, Dia 403): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 403 ===
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 33.230, envelope diz 31.094.
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:291 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:526 — o certo: a casa bate o vaduar A FRIO
+    (4 avisos novos · 8 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #7 (era do Dia 400): LUA NOVA DA FORJA: o prazo que a carta do Aldoveri deu ao Lulacco para sair de Ireviel (um ATAQUE a Ireviel, segundo a carta).
+  ▶ AGENDA #178 (era do Dia 400): FACÇÃO — os da Luz do Cais (o porto de Marasar) pede audiência ao conselho. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #180 (era do Dia 400): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #186 (era do Dia 401): CHEGA a Marasar: o recado do rei ao HIRKUNN, o Selador (lugar na casa) (saiu de Ireviel no 400)
+  ▶ AGENDA #119 (era do Dia 402): [OCULTO] NOTÍCIA (chega por Levis): o CLÃ HEGRE RACHOU: a cadeira do Hrotgar disputada por uma vingança antiga; ninguém venceu (EV391 [5], EV391b [10]). Pesa no tratado do therk, na mediação dos Vradda e no Hulgunn.
+  ▶ AGENDA #187 (era do Dia 402): A GROA sai da cama (o veneno do Zitha)
+  ✉ NOTÍCIA QUE CHEGA HOJE: INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Ireviel e o rio · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Garkunn (Mordun): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Thog (orcs) (Marasar): guerra contra outro povo ou bicho · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: UM LENDÁRIO AGE: ataca — Lumron (terra nova) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: OFERTA PÚBLICA: alguém paga por um serviço — Ulra (terra nova) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi

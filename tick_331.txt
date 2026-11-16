@@ -1,0 +1,17 @@
+[14:31:20] Dia 331 · Pressão 5/5 · encontro de estrada 1d20 [4] -> encontro na estrada
+  avistamento de monstro 1d20 [20] -> nenhum
+  EVENTO DE MUNDO 1d20 [2] Praga · encadeamento 1d20 [4] Refugiado · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 331 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d27 [21] Zisrir
+    A NOTÍCIA: [1] hoje
+    1d12 [10] uma promessa antiga cobra (de quem prometeu ou a quem)
+    ——
+  O MUNDO VIVO — Dia 331
+    um Lendário age (d20 [2]):
+    Gorine (fé, escondido (patrono da Lumine)) d20 [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · notícia d20 [14] chega no dia 336
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [4] nada visível
+    FAÍSCA: Venne (morto) esconde um filho de Lubassino (salineiro do Delta, AMBICIOSO e LEAL; quer formar uma companhia; sócio proposto do Krernos, 301), por causa de fome
+    FAÍSCA: o Doge Pelaone encomenda uma peça para Maevis (morto), por causa de sal
+    FAÍSCA: Tamel (morto) sonha com Draron (da casa), por causa de uma peça Lendária roubada

@@ -1,0 +1,15 @@
+[08:55:34] Dia 225 · Pressão 4/5 · encontro de estrada 1d20 [8] -> nada
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 225 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]
+    ONDE: d23 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 225
+    um Lendário age (d20 [2]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [3] chega hoje
+    trama do dia: Krernos → Graur (RIVALIDADE) d20 [3] nada visível
+    FAÍSCA: Moreth chantageia Odrum, por causa de um título
+    FAÍSCA: Gorron (oferece a missão do Delta) esconde um filho de Eiandald, por causa de uma peça Lendária roubada
+    FAÍSCA: Messa Tiracci procura Oslo, por causa de vingança

@@ -1,0 +1,15 @@
+[23:27:33] Dia 265 · Pressão 4/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 265 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]
+    ONDE: d23 [19] Yaelane
+    A NOTÍCIA: [5] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 265
+    um Lendário age (d20 [3]):
+    Gorine (fé, escondido (patrono da Lumine)) d20 [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20) · 1d20 [18] · notícia d20 [2] chega hoje
+    trama do dia: Moreth → Bren (morto) (ÓDIO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Lasca e Miro (presos) foge de Isolda, por causa de sal
+    FAÍSCA: Iorin quer casar com Seline (em Ireviel), por causa de vingança
+    FAÍSCA: a Guardiã da Tenaz ama em segredo Messer Rovai, por causa de um feitiço proibido

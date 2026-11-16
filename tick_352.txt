@@ -1,0 +1,22 @@
+[10:24:16] Dia 352 · Pressão 1/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [20] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 352 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [1] hoje
+    nome: Thuine
+    o que era: oficina de mestre morto
+    por que caiu: terremoto
+    o que guarda: uma peça antiga
+    o que habita: um culto
+    custo de entrar: uma senha
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 352
+    um Lendário age (d20 [3]):
+    Altheltia (ofício, o Delta) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [10] chega no dia 355
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [6] nada visível
+    FAÍSCA: Ithra foge de Lurentetta, por causa de um núcleo de monstro
+    FAÍSCA: Eiundunn pede ajuda a Lurentetta, por causa de uma receita perdida
+    FAÍSCA: o conselheiro Pelagri rouba de Ulurve, por causa de uma profecia

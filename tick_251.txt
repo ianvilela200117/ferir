@@ -1,0 +1,25 @@
+[21:45:38] Dia 251 · Pressão 5/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [5] Loula
+  EVENTO DE MUNDO 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [12] Fé reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 251 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d23 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    nome: Lumium
+    desejo: ser perdoado
+    ambição (relógio de 4): casar acima da sua classe
+    medo: a velhice
+    segredo: fez um pacto
+    linha vermelha: nunca machuca uma criança
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: VINGATIVO e HONESTO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 251
+    um Lendário age (d20 [7]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [13] chega no dia 256
+    trama do dia: Iorin → Ulurve (INVEJA) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Eliane vai trair Bren (morto), por causa de fome
+    FAÍSCA: Herkald quer casar com Aeliae, por causa de a coberta do mundo
+    FAÍSCA: Graur chantageia a mestra Carea, por causa de dinheiro da Liga

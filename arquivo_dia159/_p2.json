@@ -1,0 +1,82 @@
+{
+ "regras_da_casa": [
+  "Dia 4: campanha convertida para a v5.0 a pedido do jogador.",
+  "Preferência v5 I.3: o Mestre usa a Fortuna sozinho quando ela pode salvar um teste (um uso por teste) e mostra o Revés.",
+  "Dia 4: \"morte permanente, se tiver herdeiro continua com herdeiros\".",
+  "Dia 10 (pedido do jogador): magia é COMUM no mundo (v5). Toda cena de cidade ou de conflito mostra gente que usa magia de verdade (runistas, bruxas, clérigos, magos de aluguel), e o vaduar como o metal que a apaga. O Mestre admitiu que vinha deixando a magia só no fundo.",
+  "Dia 20: o jogador quer aprender magia (usar e encantar). Magia: 12 escolas (Chama, Gelo, Pedra, Vento, Luz, Sombra, Sangue, Osso, Vazio, Elo, Tempo, Mente); Sangue e Osso cobram sempre; maldições existem. Mostrar mais magos ofensivos, de sangue e maldições em cena.",
+  "Dia 22 (pedido do jogador): relacionamentos de Ferir com NPCs que pesem de verdade (alguém de quem ele goste muito, cuja perda doa), CONSTRUÍDOS pela ficção, nunca impostos. O Mestre acompanha o Laço (0-5) dos próximos, dá 1 momento ou 1 atrito por semana (Módulo 9) e de vez em quando pergunta o que Ferir sente.",
+  "Dia 26 (aprovado pelo jogador): na Obra sempre se rola (1 e 20 naturais importam).",
+  "Dia 26 (aprovado): contra NPC importante a dificuldade sobe pela resistência dele; em TODO teste social a resistência do NPC vem dos atributos dele (Vontade, Intuição), do contexto (Disposição, Memória, situação), dos traços e da personalidade (Parte XII: teste oposto, trocas pela distância do pedido, Alavancas). O Mestre admitiu que vinha simplificando para uma CD fixa.",
+  "Dia 29 (pedido do jogador): todo NPC tem CLASSE, e a classe pesa no que ele faz em cena e na simulação.",
+  "Dia 29 (pedido do jogador): as mudanças e sugestões do jogador entram no Motor de Mundo (documento) de forma EQUILIBRADA, a critério do Mestre: são sugestões, não ordens absolutas.",
+  "Dia 29: o motor passou para a v5.1 (SATISFY_v5.1_Motor_de_Mundo.docx, Parte XXIII).",
+  "Dia 30 (pedido do jogador): sistema de personalidade, Tensão, Opinião, relações nomeadas, sentimentos e intrigas no estilo Crusader Kings 3 (Motor v5.1, XXIII.12), para o personagem e os NPCs.",
+  "Dia 43 (pedido do jogador): na OBRA-PRIMA (dois 20 com quatro sucessos), os DADOS decidem: 1d6, de 1 a 3 a peça sobe uma categoria (até o teto real de maestria, material e oficina, não o alvo escolhido); de 4 a 6, vira efeitos extras. O jogador não escolhe.",
+  "Dia 46 (pedido do jogador): o anel de Cinza Saciado é usado TODO DIA (não apodrece).",
+  "Dia 47 (decisão do Mestre, a levar ao motor): Encantamento com 3 sucessos (uma abaixo) não derruba o item: o ENCANTAMENTO sai mais fraco (uso por dia em vez de por cena, ou −2d6, ou raio menor). Com 2 sucessos, duas vezes mais fraco. Com 0-1, o condutor se perde.",
+  "Dia 49 (pedido do jogador, equilibrado pelo Mestre): o EVENTO DE MUNDO sai com Pressão 7 (não 10), para o mundo andar mais rápido (Motor v5.1, XXIII.15).",
+  "Dia 49 (aprovado pelo jogador): FORTUNA AUTOMÁTICA só no que importa: Obra, teste social importante, risco de morte e o objetivo da cena; nos golpes comuns o Mestre guarda (XXIII.16).",
+  "Dia 49 (aprovado): FICHAS DE COMBATE dos NPCs importantes guardadas no estado (XXIII.17).",
+  "Dia 49 (aprovado): COMBATE RÁPIDO para lutas pequenas (um teste por lado e por rodada); rodada a rodada só para chefe e risco de morte (XXIII.18).",
+  "Dia 49 (aprovado): MAPA VISUAL que se revela (só o que o Ferir conhece), como página publicada (XXIII.19).",
+  "Dia 49 (aprovado pelo jogador): CRÔNICA do Ferir e QUADRO DE AMBIÇÕES, junto com o mapa, numa página publicada que o Mestre atualiza.",
+  "Dia 51 (pedido do jogador): ao subir de nível, os pontos de atributo ALTERNAM entre o ferreiro mágico e a magia: Inteligência e Afinidade (a Afinidade leva o Processo do Encantamento e as escolas de Elo e Sangue).",
+  "Dia 52 (pedido do jogador): o Livro de Ferir (página publicada) só é atualizado QUANDO O JOGADOR PEDIR.",
+  "Dia 68 (observação do jogador): VARIEDADE DE MAGIA: o mundo tem 12 escolas; o Mestre passa a mostrar e oferecer magias de todas (Gelo, Pedra, Vento, Luz, Sombra, Sangue, Osso, Vazio, Elo, Tempo, Mente, além de Chama) em NPCs, receitas, monstros e lugares; o fogo deixa de ser o padrão.",
+  "Dia 75 (pedido do jogador): CLASSES ÚNICAS E LENDÁRIAS SÓ POR PEÇA OCULTA achada no mundo, como em Satisfy; o Mestre não propõe Provas para elas (Motor v5.1, XXIII.20).",
+  "Dia 75 (pedido do jogador): O MESTRE NÃO FACILITA: sem recompensa fora das regras, sem compensação, NPCs pelo que são, soluções nascem do mundo; o jogador conquista sozinho (XXIII.21).",
+  "Dia 75 (decisão do jogador): o Forjador de Alma e os 9 pontos de compensação FICAM (o que já aconteceu fica; a regra nova vale daqui em diante).",
+  "Dia 85 (pergunta do jogador): os NPCs CRESCEM: a cada Tick semanal, os Relevantes ganham XP pelo que fizeram (no máximo 1 nível por semana; Lendários, 1 por mês), avançam a prática de maestria de quem treina, andam um passo na ambição e mudam de vida; o REGISTRO mostra uma linha \"o mundo cresce\" (Motor v5.1, XXIII.22).",
+  "Dia 85 (pedido do jogador): o EVENTO DE MUNDO sai com Pressão 5.",
+  "Dia 89: a Fortuna NÃO foi gasta nos 3 encantamentos (4 sucessos cada, não precisou).",
+  "Dia 90 (erro do Mestre, regra 14): a Fortuna volta ao máximo TODO DIA (tick.py); no Dia 89 ela estava 3/3, não 2/3.",
+  "Dia 91 (pedido do jogador): em TODA negociação, quem fala é o MELHOR do grupo para aquele alvo (maior bônus, contando Memória/Opinião com o alvo); o Mestre mostra a conta.",
+  "Dia 92 (erro do Mestre, regra 14): os avistamentos [4] dos Dias 90 e 91 eram o RIRK (tabela: 1 Yirane, 2 Loula, 3 Stundald, 4 Rirk, 5 Tistir, 6 Laennor), não a Stundald; corrigido. O [3] do Dia 92 é a Stundald.",
+  "Dia 128 (pedido do jogador): A CADA 5 DIAS DE JOGO, o Mestre faz uma AUDITORIA contra o motor: relógios de facção, vilão e culto; ambições; comida e soldo; material; cobiça; pendentes do Envelope; prática; Revés e Fortuna; o que ficou para trás. Mostra no REGISTRO o que achou e o que corrigiu. Próxima: Dia 133.",
+  "Dia 131 (pedido do jogador): NÃO MOSTRAR o resultado de dados que o jogador não pode saber (eventos longe, agendas, segredos, rolagens que o personagem não vê). Na ROLAGEM aparece só \"rolagem oculta\"; o resultado fica no Envelope.",
+  "XXIII.24 (Dia 153): Reerguer uma cidade: 4 pilares 0/4 (Comida, Comércio, Dinheiro, Saúde); no Tick semanal 1d6 por pilar +1 responsável +1 gasto pago −1 por crise; 5+ avança, 1 recua com problema; Comércio +150/semana por passo numa cidade de ~5.000 (4/4 = +600); Dinheiro 4/4 = a cidade paga a guarda."
+ ],
+ "missoes": [],
+ "livro_da_casa": null,
+ "cobica": {
+  "pontos": 0
+ },
+ "par_e_familia": {
+  "lacos": {
+   "Herkald": "5 (Dia 28: a obra que dura, forjada juntos)",
+   "Tilde": "4 (Dia 30-31: trouxe a tenaz na noite da Lumine; \"como família\")",
+   "Nouliel": "5 (Dia 119: à cabeceira do Herkald, dormiu no ombro dele; três momentos seguidos) · Dia 121: costurou forro de lã na capa dele e pôs pão com mel no bolso",
+   "Brara": "2 (ensinou a Têmpera Fria; recusou voltar à mestra)",
+   "Ulurve": "3 (Dia 31: largou o tio e o clã e veio)"
+  },
+  "par": "nenhum (nada forçado)",
+  "familia": "em Ireviel (fundição da Gilaccetta): o mestre Herkald, a Nouliel, a Tilde, a Ireis e os 3 filhos · em Levis: Ferir, o Ulurve, a Skedda"
+ },
+ "fios": {
+  "1": "Marco 2: contrato com a Gilaccetta selado; o Clã quer cem lâminas (~Dia 44); a Eliane encomenda 30 pontas Raras",
+  "2": "Siasiel morreu de Febre; guerra de sucessão no deserto; vaduar Muito Escasso; lei da Liga: declarar o metal cinza até o Dia 17",
+  "3": "Hinde fica em Levis; o Aelaee larga o metal cinza",
+  "4": "A Matriz: a Liga inspeciona o cofre da Guilda AMANHÃ (boato da taverna)",
+  "5": "Ulurve: Ferir prometeu o segredo do terceiro calor se ele trouxer o mestre a Levis",
+  "6": "Clã Hegre vai ter lâmina de cinza em ~10 dias; Irmandade: a rua do depósito afundou (a Liga culpa o Rirk; ainda não achou o túnel)",
+  "7": "a cabra Mancha está com o Rue em Ululge",
+  "8": "A Lumine: o Irianiel no santuário das covas da Febre, rito na lua nova (Dia 37); NÊMESIS de Ferir"
+ },
+ "encomendas": [
+  {
+   "de": "Guilda (guarnição)",
+   "o_que": "até 6 pontas de lança Incomuns por semana",
+   "pagamento": "30 cada; 1/3 para Nouliel",
+   "estado": "semanal, enquanto a guarnição pagar",
+   "estoque_pronto": "semana Dia 15-21: 3 de 6 entregues (Dia 17)"
+  }
+ ],
+ "livro_semanal_ferir_dia7": "entrada: 90 (6 pontas, 3ª entrega... 2º lote 90) − 30 Nouliel = 60 · saída: carvão 30, comida 5 · saldo 105",
+ "livro_de_ferir": {
+  "url": "https://claude.ai/artifact/GskMvTRyX8tMeJD5dPKt2F",
+  "arquivo": "/tmp/claude-0/-home-claude/fdf2cca6-d66e-5d54-8e3f-e05d3e499ab2/scratchpad/livro/livro-de-ferir.html",
+  "atualizado": "Dia 49"
+ },
+ "contrato_liga": null
+}

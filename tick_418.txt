@@ -1,0 +1,38 @@
+[00:16:53] Dia 418 · Pressão 2/5 · encontro de estrada 1d20 [18] -> nada
+  O TEMPO (19 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: limpo, vento firme (d6 [4] muda, d20 [8] · vento d6 [5])
+   o Porto de Marasar: neblina, vento firme (d6 [5] muda, d20 [18] · vento d6 [5]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: tempestade, VENTANIA (d6 [1] fica · vento d6 [4]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: tempestade, VENTANIA (d6 [3] fica · vento d6 [5]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: normal [55/100]
+  avistamento de monstro 1d20 [20] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 418 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 418
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Seline (em Ireviel) → Higrunn (INVEJA) d20 [4] nada visível
+    FAÍSCA: Adurel desafia para duelo Xaysress, por causa de a coberta do mundo
+    FAÍSCA: Mamiltia pede ajuda a Seline, por causa de a coberta do mundo
+    FAÍSCA: Almision quer casar com Seline (em Ireviel), por causa de um título
+  AUDITORIA (XXIII.23, Dia 418): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 418 ===
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ CÂNONE CONTRARIADO em diario_sessao2f.md:753 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:665 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:667 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:669 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:703 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:774 — o certo: a casa bate o vaduar A FRIO
+    (7 avisos novos · 10 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #281 (era do Dia 414): FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #241 (era do Dia 417): ÚLTIMO DIA para a MAMILTIA sair de Ireviel com o FUMIGADOR e chegar a Steunn (12 dias) até o 429
+  ✉ NOTÍCIA QUE CHEGA HOJE: Leliel (o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)): a ambição dele avança fora da Obra (um passo no que ele quer para si) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, os Picos Brancos): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Fundas do Norte): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): manda caçar alguém (um nome, uma peça, um monstro) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: CLIMA ESTRANHO — Kremir · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi

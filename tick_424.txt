@@ -1,0 +1,31 @@
+[11:10:35] Dia 424 · Pressão 3/5 · evento local 1d20 [3] -> nada
+  O TEMPO (25 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: limpo, calmo (d6 [1] fica · vento d6 [2])
+   o Porto de Marasar: tempestade, VENTANIA (d6 [3] fica · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Levis: limpo, brisa (d6 [5] muda, d20 [5] · vento d6 [4])
+   Farenta: limpo, calmo (d6 [1] fica · vento d6 [1])
+   O RIO: normal [58/100]
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  FERIDO: Eliane (LEVE: luta com −2 no ataque e na defesa) até o Dia 425
+  O MUNDO SE MOVE — Dia 424 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d27 [17] os Picos Brancos
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 424
+    um Lendário age (d20 [4]):
+    Leliel (influência, o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)) d20 [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · notícia d20 [14] chega no dia 427
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Thugek quer matar Eliane, por causa de uma dívida antiga
+    FAÍSCA: Skugek vende algo a a Guardiã da Tenaz, por causa de dinheiro da Liga
+    FAÍSCA: o podestà Tirello esconde um filho de Gorra, por causa de a Fornalha que Não Apaga
+  ▶ AGENDA #281 (era do Dia 414): FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #332 (era do Dia 421): FACÇÃO — os Sem-Torre (Quoine, a torre caída em Zisrir) pede audiência ao conselho. O que querem: magos que o Colégio de Telosus falido mandou embora sem paga; o MORMIR (o eremita de Quoine) os junta e quer voltar ao Colégio; o filho do Draron é aprendiz del
+  ▶ AGENDA #358: UMA BARCA LEVA A LEVIS o ferro e as FERRADURAS COMEÇADAS (4b: as séries saem da Fornalha); chega no 426 com a carta da Brara
+  ✉ NOTÍCIA QUE CHEGA HOJE: Teraseth (Ireviel e o rio): perde uma peça ou um aliado para alguém · COMO CHEGA: d20 [15] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Lurentetta (o Delta): manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20) · COMO CHEGA: d20 [4] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Higrunn (Steunn): o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Stundald, a Raiz-de-Ferro (Épico, Telosus): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: PESTE OU DESASTRE: incêndio — Lumade · COMO CHEGA: d20 [14] FIEL
+  ✉ notícia de longe que chega hoje: INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — os Picos Brancos · COMO CHEGA: d20 [19] FIEL

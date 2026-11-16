@@ -1,0 +1,3 @@
+[16:23:46] Dia 190 · Pressão 4/5 · encontro de estrada 1d6 [4] -> nada
+  avistamento de monstro 1d6 [6] -> nenhum
+  Fortuna volta ao máximo

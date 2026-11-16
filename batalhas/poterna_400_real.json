@@ -1,0 +1,75 @@
+{
+ "nome": "A RATOEIRA DO CAIS (meia-noite do 400)",
+ "terreno": "rua",
+ "nota": "REAL. 1a: a poterna do Graur aberta, o laço fechado em volta. MD [4]: o Eiagrir, o Starkald e 8 lanças foram para o portão da costa. Surpresa +3 só na 1ª rodada.",
+ "lados": {
+  "A": {
+   "nome": "a casa (a Marechal)",
+   "comando": 9,
+   "surpresa": 3,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "as 16 lanças",
+     "homens": 16,
+     "qualidade": 4,
+     "moral": 4,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 15 da Companhia",
+     "homens": 15,
+     "qualidade": 4,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 60 croques dos Filhos do Livro",
+     "homens": 60,
+     "qualidade": 2,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os três capuzes do Graur",
+     "homens": 3,
+     "qualidade": 5,
+     "moral": 4,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eliane",
+     "nivel": 95
+    },
+    {
+     "nome": "Moreth",
+     "nivel": 230
+    },
+    {
+     "nome": "Hruthos",
+     "nivel": 88
+    },
+    {
+     "nome": "Graur",
+     "nivel": 75
+    }
+   ]
+  },
+  "B": {
+   "nome": "os 90 do Ardenghi (o Malvezzi)",
+   "comando": 5,
+   "unidades": [
+    {
+     "nome": "os homens do Ardenghi",
+     "homens": 90,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ }
+}

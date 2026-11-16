@@ -1,0 +1,457 @@
+{
+ "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
+ "nome": "Ferir",
+ "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
+ "nivel": 155,
+ "xp": 1204674,
+ "atributos": {
+  "Força": 40,
+  "Agilidade": 70,
+  "Vigor": 45,
+  "Inteligência": 184,
+  "Sabedoria": 40,
+  "Percepção": 96,
+  "Carisma": 40,
+  "Astúcia": 40,
+  "Empatia": 40,
+  "Vontade": 40,
+  "Sorte": 95,
+  "Afinidade": 170
+ },
+ "pv": [
+  194,
+  400
+ ],
+ "mana": [
+  163,
+  163
+ ],
+ "foco": 37,
+ "fortuna": [
+  3,
+  3
+ ],
+ "reves": [
+  3,
+  6
+ ],
+ "ganho_por_nivel": {
+  "Inteligência": 1,
+  "Afinidade": 1,
+  "pv": 2,
+  "mana": 1
+ },
+ "sob_medida_desconto": 40,
+ "marcos_de_nivel": [
+  {
+   "nivel": 150,
+   "texto": "as ferramentas MÍTICAS de Ferir (Tenaz de Eiurvo, Buril de Hamir, Fole de Arvel) e o Martelo de Zeieth passam a render como Míticos (requisito 180 − 30 do Sob Medida). O obra_valor.py já recalcula sozinho: conferir com `obra_valor.py fichas`."
+  },
+  {
+   "nivel": 200,
+   "texto": "o PONTO DO 135, guardado, pode ir ao grau 5 (pede nível 200)."
+  },
+  {
+   "nivel": 230,
+   "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
+  }
+ ],
+ "cofre": 16748,
+ "livro": {
+  "renda_casa": 2900,
+  "despesa": 7700,
+  "ultima_semana": 427,
+  "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
+ },
+ "livro_log": [
+  {
+   "dia": 378,
+   "valor": -796,
+   "motivo": "semana do 378 (saldo de partida do MOTOR 6: 41.214 → 39.172 com as semanas do 371 e do 378)",
+   "saldo": 39172
+  },
+  {
+   "dia": 385,
+   "valor": -796,
+   "motivo": "semana: casa 2900 + cidades 2350 − despesa 6046",
+   "saldo": 38376
+  },
+  {
+   "dia": 387,
+   "valor": -1500,
+   "motivo": "as barcas da volta: buscar a gente de Farenta em Ireviel e no Porto (387)",
+   "saldo": 36876
+  },
+  {
+   "dia": 387,
+   "valor": -1200,
+   "motivo": "o pacote da volta a Farenta: a Oisse e dois físicos, cal, remédio, lenha e água limpa (387)",
+   "saldo": 35676
+  },
+  {
+   "dia": 387,
+   "valor": -600,
+   "motivo": "os 20 guardas ficam em Farenta mais três semanas (387)",
+   "saldo": 35076
+  },
+  {
+   "dia": 387,
+   "valor": -5000,
+   "motivo": "duas obras em Farenta: o lazareto e os poços; a alfândega e a casa de câmbio (387)",
+   "saldo": 30076
+  },
+  {
+   "dia": 392,
+   "valor": -846,
+   "motivo": "semana: casa 2900 + cidades 2300 − despesa 6046",
+   "saldo": 29230
+  },
+  {
+   "dia": 394,
+   "valor": 4000,
+   "motivo": "a metade do rei nos bens das casas da Liga em Marasar (a Eliane, 394)",
+   "saldo": 33230
+  },
+  {
+   "dia": 397,
+   "valor": -800,
+   "motivo": "o Ouvald e o remédio a Levis (voto C397c, 397)",
+   "saldo": 32430
+  },
+  {
+   "dia": 399,
+   "valor": -1336,
+   "motivo": "semana: casa 2900 + cidades 2300 − despesa 6536",
+   "saldo": 31094
+  },
+  {
+   "dia": 401,
+   "valor": -900,
+   "motivo": "a dívida do Graur ao Malvezzi, paga em praça à caixa das pensões da hoste (401)",
+   "saldo": 30194
+  },
+  {
+   "dia": 402,
+   "valor": -3000,
+   "motivo": "402: a Casa da Guilda dos Aventureiros (1.200) + a Casa dos Mineiros de Levis (800) + armas e treino das 20 lanças novas (1.000)",
+   "saldo": 27194
+  },
+  {
+   "dia": 403,
+   "valor": -800,
+   "motivo": "403: o crédito de grão ao Celocus (fome em Lumade; voto C403a; pago em 30 dias)",
+   "saldo": 26394
+  },
+  {
+   "dia": 403,
+   "valor": 200,
+   "motivo": "404: a moeda do Ardenghi tomada na base das torres",
+   "saldo": 26594
+  },
+  {
+   "dia": 406,
+   "valor": -1516,
+   "motivo": "semana: casa 2900 + cidades 2400 − despesa 6816",
+   "saldo": 25078
+  },
+  {
+   "dia": 406,
+   "valor": 600,
+   "motivo": "406: o ouro velho achado debaixo de Farenta (800) menos o estoque da cidade (200)",
+   "saldo": 25678
+  },
+  {
+   "dia": 406,
+   "valor": 1500,
+   "motivo": "406 (noite): a metade do ouro da missão da Mamiltia (MN7)",
+   "saldo": 27178
+  },
+  {
+   "dia": 408,
+   "valor": -1200,
+   "motivo": "408: o leito de pedra do Mivor (obra do reino; 1.500 a quatro quintos, G6)",
+   "saldo": 25978
+  },
+  {
+   "dia": 413,
+   "valor": -2090,
+   "motivo": "semana: casa 2900 + cidades 2350 − despesa 7340",
+   "saldo": 23888
+  },
+  {
+   "dia": 415,
+   "valor": 4000,
+   "motivo": "415 (noite): a moeda da casa do Ardenghi em Levis",
+   "saldo": 27888
+  },
+  {
+   "dia": 415,
+   "valor": 700,
+   "motivo": "416: a bolsa do Drassa (moeda tirada do cofre do Ardenghi), posta na mesa do rei",
+   "saldo": 28588
+  },
+  {
+   "dia": 420,
+   "valor": -1940,
+   "motivo": "semana: casa 2900 + cidades 2500 − despesa 7340",
+   "saldo": 26648
+  },
+  {
+   "dia": 421,
+   "valor": 100,
+   "motivo": "421: a Chama da Hoste paga o aviso levado a Farenta (missão D; o Draron)",
+   "saldo": 26748
+  },
+  {
+   "dia": 421,
+   "valor": -3200,
+   "motivo": "422: o BAIRRO NOVO NO ALTO E O DIQUE (obra do reino; 4.000 a quatro quintos, G6)",
+   "saldo": 23548
+  },
+  {
+   "dia": 421,
+   "valor": -2400,
+   "motivo": "422: a CASA DE CURA de Ireviel (obra do reino; 3.000 a quatro quintos, G6)",
+   "saldo": 21148
+  },
+  {
+   "dia": 421,
+   "valor": -1600,
+   "motivo": "422: a VÁRZEA NOVA (fazendas e plantação na várzea que a enchente deixou; obra do reino; 2.000 a quatro quintos, G6)",
+   "saldo": 19548
+  },
+  {
+   "dia": 421,
+   "valor": -800,
+   "motivo": "422: a forja grande: ferraduras e eixos (semana 422-428) e arados (429-435), G7",
+   "saldo": 18748
+  },
+  {
+   "dia": 421,
+   "valor": -450,
+   "motivo": "422: anzóis, chumbadas e âncoras para Farenta (ferreiros de Farenta pagos; 300 + 150 de mão de fora)",
+   "saldo": 18298
+  },
+  {
+   "dia": 421,
+   "valor": -300,
+   "motivo": "422: a metade da coroa nas picaretas da fundição velha de Levis (a outra metade é de Levis)",
+   "saldo": 17998
+  },
+  {
+   "dia": 421,
+   "valor": -500,
+   "motivo": "422: as caixas de físico (12; madeira, frascos, linha; as lâminas são do rei)",
+   "saldo": 17498
+  },
+  {
+   "dia": 421,
+   "valor": -800,
+   "motivo": "422: duas barcas de grão para Marasar (frete dos barqueiros; grão a 76)",
+   "saldo": 16698
+  },
+  {
+   "dia": 423,
+   "valor": -200,
+   "motivo": "423: 2 barris de piche e 30 flechas incendiárias para a Guilda (a armadilha de fogo do Morek; GD23b)",
+   "saldo": 16498
+  },
+  {
+   "dia": 427,
+   "valor": -2750,
+   "motivo": "semana: casa 2900 + cidades 2050 − despesa 7700",
+   "saldo": 13748
+  },
+  {
+   "dia": 427,
+   "valor": 3000,
+   "motivo": "427: a recompensa dos BARQUEIROS DO LIVRO (a missão A FORQUILHA LIMPA: o Morek morto)",
+   "saldo": 16748
+  }
+ ],
+ "materiais": {
+  "zeieth": {
+   "kg": 1.1,
+   "log": [
+    "Dia 373: sobra ~1,6 kg depois do anel do Celocus (partida do MOTOR 6)",
+    "Dia 401: -0.2 a alma do Fumigador da Higrunn (401)",
+    "Dia 402: -0.1 condutor do encanto Multidão Mansa (402)",
+    "Dia 408: -0.1 408 (noite): condutor do Toque do Ceifador no Foco de Osso",
+    "Dia 409: -0.1 409 (noite): condutor do Toque do Ceifador no Gorjal da Isolda"
+   ]
+  },
+  "ormieth": {
+   "kg": 0.8,
+   "log": [
+    "Dia 372: um fio no aro do anel; sobra ~0,9 kg (partida do MOTOR 6)",
+    "Dia 401: -0.1 o bico do Fumigador da Higrunn (401)"
+   ]
+  },
+  "ziza": {
+   "kg": 0.8,
+   "log": [
+    "Dia 395: +1 a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento)",
+    "Dia 406: -0.2 406 (noite): na reforja da Lança de Guerra"
+   ]
+  },
+  "tiald": {
+   "kg": 0.2,
+   "log": [
+    "Dia 400: +0.2 tomado do Skarkek, agente do Ardenghi (400); Lendário, Espinho; na mão da Sira"
+   ]
+  },
+  "shasha": {
+   "kg": 3.0,
+   "log": [
+    "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
+    "Dia 413: +1 413: o quilo da Doge (tratado)",
+    "Dia 420: +1 420: o quilo da Doge (tratado)"
+   ]
+  },
+  "zezha": {
+   "kg": 1.0,
+   "log": [
+    "Dia 406: +1 406: o estoque da cidade (G5): 1 kg Raro, 200 (o gerador deu um Raro de Luz que não está no Livro: vale o mais próximo, o zezha, cristal)"
+   ]
+  },
+  "eiurvo": {
+   "kg": 6.6,
+   "log": [
+    "Dia 406: +6.6 406 (noite): o eiurvo entra na conta (~7 kg no estado vivo) menos 0,4 kg na reforja da Lança de Guerra"
+   ]
+  },
+  "vorthil": {
+   "kg": 2.0,
+   "log": [
+    "Dia 407: +0 x",
+    "Dia 407: +4 407: do Vorthen (VTd7)",
+    "Dia 407: -2 407 (noite): o Berço de Selo"
+   ]
+  },
+  "vorgel": {
+   "kg": 2.0,
+   "log": [
+    "Dia 407: +2 407: glândulas do Vorthen (unidades, não kg)"
+   ]
+  },
+  "ferro": {
+   "kg": 313.0,
+   "log": [
+    "Dia 409: +18 409: o quinto da forja do minério da Casa dos Mineiros (90 kg)",
+    "Dia 422: -5 422 (noite): as lâminas das caixas de físico",
+    "Dia 423: +300 423: a barca do ferro de Levis (os 300 kg da coroa, do armazém do Ardenghi)"
+   ]
+  },
+  "vaduar": {
+   "kg": 0.5,
+   "log": [
+    "Dia 416: +0.5 416: uma das duas barras de vaduar do armazém do Ardenghi (a partilha; a outra fica em Levis)"
+   ]
+  },
+  "draek": {
+   "kg": 5.0,
+   "log": [
+    "Dia 424: +5 424: o couro do Neane (Raro, Sombra)"
+   ]
+  },
+  "eryra": {
+   "kg": 1.0,
+   "log": [
+    "Dia 424: +1 424: a glândula do Neane (1 porção; Raro, Sombra)"
+   ]
+  },
+  "sangue-de-sombra": {
+   "kg": 1.0,
+   "log": [
+    "Dia 424: +1 424: o sangue do Neane, guardado para o SYSRETH (1 porção = 2 kg da liga)"
+   ]
+  },
+  "ssythis": {
+   "kg": 3.0,
+   "log": [
+    "Dia 427: +3 427: a escama do Morek (Único, Espinho)"
+   ]
+  },
+  "laliel": {
+   "kg": 6.0,
+   "log": [
+    "Dia 427: +6 427: o olho do Morek (Único, Espinho)"
+   ]
+  },
+  "heald": {
+   "kg": 3.0,
+   "log": [
+    "Dia 427: +3 427: a presa do Morek (Único, Espinho; arma: o golpe prende como raiz)"
+   ]
+  },
+  "sasis": {
+   "kg": 3.0,
+   "log": [
+    "Dia 427: +3 427: o pelo do Morek (Único, Espinho + Raio)"
+   ]
+  },
+  "núcleo-único-de-espinho": {
+   "kg": 1.0,
+   "log": [
+    "Dia 427: +1 427: o CORAÇÃO DO MOREK (núcleo Único de Espinho; serve de núcleo para Mítico)"
+   ]
+  }
+ },
+ "xp_log": [
+  "Dia 373: NÍVEL 143 com o anel do Celocus (partida do MOTOR 6)",
+  "Dia 387: +1000 a Elaeva expulsa de Farenta (feito grande)",
+  "Dia 396: +500 feito: o julgamento de Fenmir em praça aberta (396)",
+  "Dia 400: +1500 400: FEITO (os três golpes da lua nova quebrados numa noite) 1.000 + PASSO (feriu o Zesreth; o fogo contido) 500",
+  "Dia 401: +2500 401: o Fumigador de Colmeia da Higrunn (Lendário)",
+  "Dia 402: +2500 402: encanto MULTIDÃO MANSA inteiro no Fumigador da Higrunn (Lendário)",
+  "Dia 403: +1000 404: FEITO: a Torre Acesa a zero (o golpe na madrugada)",
+  "Dia 406: +3000 406 (noite): a MAMILTIA paga a METADE da missão (o nome e o lugar de quem acordou a Elaeva; MN7 [8]+1)",
+  "Dia 406: +2200 406 (noite): reforja da LANÇA DE GUERRA, Épica → LENDÁRIA (RF7; total 126)",
+  "Dia 406: SOBE ao 144",
+  "Dia 407: +7500 407: a Lança de Guerra fica MÍTICA (um ano de vida): a diferença Lendária → Mítica",
+  "Dia 407: +770 407: o VORTHEN morto (Épico 77; nível × 10)",
+  "Dia 407: +10000 407 (noite): o BERÇO DE SELO, MÍTICO (OB407; total 128)",
+  "Dia 407: SOBE ao 145",
+  "Dia 408: +50000 408 (noite): encanto TOQUE DO CEIFADOR no Foco de Osso (Primordial), INTEIRO (ENC8; 177 contra 140)",
+  "Dia 408: SOBE ao 146",
+  "Dia 408: SOBE ao 147",
+  "Dia 408: SOBE ao 148",
+  "Dia 409: +50000 409 (noite): encanto TOQUE DO CEIFADOR no GORJAL DA ISOLDA (Primordial), INTEIRO (ENC9; 206 contra 140)",
+  "Dia 409: SOBE ao 149",
+  "Dia 409: SOBE ao 150",
+  "Dia 409: SOBE ao 151",
+  "Dia 409: SOBE ao 152",
+  "Dia 412: +7250 412: a coluna da emboscada destroçada na estrada do rio (25 descalços e o Shyssis mortos)",
+  "Dia 415: +16300 415 (noite): a espera do Ardenghi destroçada em Levis-baixa; o ARDENGHI, o capitão ruivo e o sacerdote do Xaathis mortos",
+  "Dia 415: SOBE ao 153",
+  "Dia 422: +2500 422 (noite): as LÂMINAS DAS CAIXAS DE FÍSICO (o jogo-mestre LENDÁRIO; OB422)",
+  "Dia 423: +6650 423: ERYSSA tomada (a ala do cais do Xaathis quebrada; o sacerdote de Sangue morto)",
+  "Dia 423: SOBE ao 154",
+  "Dia 423: +2500 423 (noite): o ARADO FUNDO (alcançou Mítica; sem núcleo: Lendária; OB423)",
+  "Dia 424: +620 424 (noite): o NEANE (Raro 62, Sombra) derrubado no rio",
+  "Dia 425: +1220 425: a luta contra o MOREK na forquilha (o bicho vivo, 814/2440; lutou: nível × 10)",
+  "Dia 425: +7500 425 (noite): o ARADO FUNDO vira MÍTICO (o rei pagou um ano de vida)",
+  "Dia 426: +-1220 ANULADO (426): o XP da luta LM25 do Morek (refeita)",
+  "Dia 426: +1220 425 (a luta REFEITA no 426): o MOREK fugiu ferido (467/2440); lutou: nível × 10",
+  "Dia 427: +6100 427: o MOREK morto na forquilha (Único 122; chefe: × 5)",
+  "Dia 427: SOBE ao 155",
+  "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)"
+ ],
+ "avisos": [
+  "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
+ ],
+ "recursos": {
+  "Visão do Tempo": {
+   "tem": 2,
+   "max": 2,
+   "renova": "dia"
+  },
+  "Chuva de Brasas (Ferir, pelo foco)": {
+   "tem": 7,
+   "max": 7,
+   "renova": "dia"
+  }
+ },
+ "anos_de_vida_pagos": 2,
+ "talento_150": "CASA FIRME (+1 de Ordem em toda cidade do reino; preço: −1 de Comércio na primeira lua depois de anexar uma cidade)"
+}

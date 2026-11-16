@@ -1,0 +1,31 @@
+[22:25:03] Dia 368 · Pressão 2/5 · evento local 1d20 [4] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 368 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [1] Ireviel e o rio
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Seline
+    desejo: ser perdoado
+    ambição (relógio de 4): casar acima da sua classe
+    medo: a humilhação pública
+    segredo: é filho de quem não deveria
+    linha vermelha: nunca se ajoelha
+    dilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha
+    traços: GENEROSO e AMBICIOSO
+    nível: 210
+    obra sinistra (relógio de 8): vingar o povo dele
+    por que é humano: ama alguém e faz por ela
+    equipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: veneno
+    o que o faria parar: nada
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 368
+    Lendários: d20 [19] quietos hoje
+    trama do dia: Teraseth → Maevis (morto) (DÍVIDA) d20 [2] nada visível
+    FAÍSCA: Thugek esconde um filho de Qunemneth, o Médico Cinzento, por causa de uma criança
+    FAÍSCA: Iorin quer matar Gorron (oferece a missão do Delta), por causa de dinheiro da Liga
+    FAÍSCA: Tano (carregador, primo da Caciccetta) sonha com o Doge Pelaone, por causa de a coberta do mundo
+  AUDITORIA (XXIII.23, Dia 368): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

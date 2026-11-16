@@ -1,0 +1,34 @@
+[20:50:57] Dia 388 · Pressão 2/5 · evento local 1d20 [2] -> nada
+  O TEMPO (19 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: nublado, calmo (d6 [1] fica · vento d6 [1])
+   o Porto de Marasar: limpo, calmo (d6 [6] muda, d20 [3] · vento d6 [1])
+   Levis: limpo, vento firme (d6 [1] fica · vento d6 [5])
+   Farenta: nublado, calmo (d6 [3] fica · vento d6 [1])
+   O RIO: baixo [21/100]
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 388 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]
+    ONDE: d27 [25] Ulra (terra nova)
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    → LEITURA DO DADO: magia selvagem
+    ——
+  O MUNDO VIVO — Dia 388
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [5] nada visível
+    FAÍSCA: Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308) encomenda uma peça para Higrunn, por causa de uma criança
+    FAÍSCA: Orast ama em segredo Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322), por causa de uma criança
+    FAÍSCA: Skotha Graskur salva ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322), por causa de uma terra além do mapa
+  AUDITORIA (XXIII.23, Dia 388): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 388 ===
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 39.172, envelope diz 38.376.
+    (2 avisos novos · 8 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #65: OS FIÉIS DO DOGE VELHO (Marasar; a Liga paga) ameaçaram ou sabotaram a casa no Porto no 386: pequeno, mas visível. O Mestre mostra o que foi quando o rei passar por lá ou a notícia chegar.
+  ✉ NOTÍCIA QUE CHEGA HOJE: Isyzis (Épico, o rio acima de Levis): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Thog (orcs) (Marasar): um deles vira herói ou traidor (rumor com nome) · COMO CHEGA: d20 [20] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto dos Olhos Pintados (Farenta (3 cidades)): briga com a Guarda do Pedágio; vence o Culto dos Olhos Pintados · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Guarda do Pedágio (Farenta): dá um passo no que quer · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: EMBAIXADA OU VISITA de terra distante — Gogrunn (as minas) (Ordun) · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): briga com outro monstro grande (um sai ferido) · COMO CHEGA: d20 [12] FIEL

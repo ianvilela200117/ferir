@@ -1,0 +1,25 @@
+[00:44:30] Dia 277 · Pressão 1/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [18] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 277 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d24 [3] Lumade
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    [MISSÃO]: Varvil (o Mestre dá o nome pela ficção)
+    dificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Normal
+    objetivo: levar uma mensagem que outros querem
+    complicação escondida (Envelope): outra facção quer o contrário
+    prazo: 7 dias
+    recompensa: 6000 XP · 3000 de ouro · ??? (revelada ao concluir)
+    penalidade se falhar: Reputação −1 a −2 com quem pediu
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 277
+    um Lendário age (d20 [2]):
+    Leliel (influência, Farenta) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [16] chega no dia 281
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [7] nada visível
+    FAÍSCA: Gorron (oferece a missão do Delta) vende algo a Kreium (preso), por causa de uma terra além do mapa
+    FAÍSCA: Draa descobre o segredo de Aeliae, por causa de fome
+    FAÍSCA: Kreine (da casa) inveja Odrum, por causa de uma profecia

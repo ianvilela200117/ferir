@@ -1,0 +1,41 @@
+[21:08:49] Dia 414 · Pressão 3/5 · encontro de estrada 1d20 [15] -> nada
+  O TEMPO (15 da Lua da Forja de 1013 d.S., Sol) · lua cheia
+   Ireviel: limpo, calmo (d6 [6] muda, d20 [2] · vento d6 [1])
+   o Porto de Marasar: tempestade, VENTANIA (d6 [6] muda, d20 [19] · vento d6 [3]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Levis: tempestade, VENTANIA (d6 [1] fica · vento d6 [2]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: limpo, calmo (d6 [3] fica · vento d6 [2])
+   O RIO: baixo [28/100]
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 414 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [2] Levis e Levis-baixa  ◆ TOCA A CASA
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    nome: Drassa
+    desejo: sair da cidade
+    ambição (relógio de 4): entrar numa facção que o recusou
+    medo: a morte de um filho
+    segredo: roubou o que tem
+    linha vermelha: nunca machuca uma criança
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: COVARDE e LEAL
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 414
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [5] nada visível
+    FAÍSCA: o Visconte Aldoveri vende algo a Ruddo, por causa de uma dívida antiga
+    FAÍSCA: Ulair foge de Lurentetta, por causa de uma dívida antiga
+    FAÍSCA: Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308) quer matar Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de um herdeiro dos Steunn
+  ▶ AGENDA #239 (era do Dia 411): VENCEM as duas missões oferecidas no 406: a dos SALINEIROS (escoltar o mestre-salineiro às Salinas Velhas) e a da CHAMA DA HOSTE (levar a Farenta o aviso contra os Olhos Pintados)
+  ▶ AGENDA #238: A ALMISION CHEGA A IREVIEL para a hora na Matriz, sob guarda (a troca: o nome de quem acordou a Elaeva já veio pelo corvo no 406)
+  ▶ AGENDA #281: FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krekos (Raro, Shizess): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Mina Fechada (Levis): briga com a Bigorna Livre; vence os da Mina Fechada · COMO CHEGA: d20 [14] FIEL
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): recruta: gente, uma facção ou um monstro passa para o lado dele · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Maneus, o Afogado do Vento (Lendário, o sul da areia): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: a Mãe Branca (Primordial, os Picos Brancos): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): acham um líder de fora (um humano, um monstro grande) · COMO CHEGA: d20 [17] FIEL
+  ✉ notícia de longe que chega hoje: os Sem-Torre (Quoine, a torre caída em Zisrir): RACHA: perde gente → força 1 · COMO CHEGA: d20 [18] FIEL
+  ■ PARADA: agenda #238: A ALMISION CHEGA A IREVIEL para a hora na Matriz, sob guarda (a troca: o nome de quem acordou a Elaeva já veio

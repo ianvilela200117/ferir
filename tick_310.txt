@@ -1,0 +1,22 @@
+[11:45:19] Dia 310 · Pressão 4/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 310 (dia)
+    d20 [10] UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)
+    ONDE: d26 [20] Steunn
+    A NOTÍCIA: [1] hoje
+    nome: Gornar
+    o que era: oficina de mestre morto
+    por que caiu: monstro
+    o que guarda: um prisioneiro
+    o que habita: mortos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 310
+    um Lendário age (d20 [3]):
+    Xaysress (ofício, Kremir) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [19] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [13] nada visível
+    FAÍSCA: Hrotgar deve a vida a Ulair, por causa de uma receita perdida
+    FAÍSCA: os Jurados de Steunn ama em segredo Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308), por causa de uma dívida antiga
+    FAÍSCA: Tilde vende algo a Thugek, por causa de vingança

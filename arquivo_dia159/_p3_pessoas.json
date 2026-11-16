@@ -1,0 +1,653 @@
+{
+ "Herkald": {
+  "camada": "Importante (mestre, Laço 4)",
+  "nivel": 70,
+  "classe": "Armeiro (FORJA, Incomum)",
+  "atributos": "For 90, Agi 65, Vig 70, Per 100, Int 66, Von 80, resto 40-45",
+  "pericias": "Forja Mestre +6, Luta Iniciante",
+  "PO": 45,
+  "PV": "280 (perna machucada)",
+  "estado": "Dia 85: recebeu o SOPRO SACIADO (Épico, forjado por Ferir na Matriz; [6]+35 [3]+32 [2]+34 [5]+22): a Febre PAROU; o pó sai com a tosse; recupera em 1d6 semanas · Dia 89: a recuperação rolou 1d6 [5] semanas: de pé e forte por volta do Dia 120; até lá, trabalho leve. · Dia 102: escreveu carta ao filho de Stirvunn, em Ulnar, apresentando Ferir · Dia 105: de pé sem bengala pela primeira vez · Dia 118: pegou a FEBRE DO BREJO (com o Sopro +2: Vigor +16 vs 15 a cada 2 dias; Dia 119 passou) · Dia 125: SAROU da febre do brejo",
+  "desejo": "deixar uma obra que dure",
+  "ambicao": "proteger o segredo do vaduar do clã (1/4)",
+  "medo": "morrer sem passar o ofício",
+  "segredo": "Febre Cinza; foi pago pelo chefe para estudar o vaduar",
+  "linha_vermelha": "nunca entrega o ofício a quem vai usá-lo para matar em massa",
+  "dilema": "ensinar o vaduar ao clã em troca da cura e da vida, ou morrer calado",
+  "tracos": ["TEIMOSO", "LEAL", "PACIENTE"],
+  "opiniao_obra": "uma FERRAMENTA, um martelo de mestre: \"bigorna fica no lugar; martelo vai com quem aprende, e tu vais longe\"; sugere derreter o martelo da Gilaccetta (ferro Incomum) para a cabeça e usar aço da forja boa; peça Épica quando a bigorna nova chegar",
+  "receitas": "Ponta \"Fura-Muralha\" Épica (precisa de aço de cadinho, Incomum; uma por dia de forja)",
+  "tensao": 4,
+  "memoria": "Laço 5 (Dia 61: de cama, lúcido; deu a Ferir a bênção de mestre (\"o ofício passou, eu posso ir em paz quando for a hora\") e contou de Ulnar e do coração de fogo do mestre Stirvunn) · Dia 63: perguntado, disse \"dá a ela. Eu já passei o ofício; ela ainda tem o que ensinar ao mundo, e a você\"",
+  "itens": "SOPRO SACIADO (ÉPICO, Dia 85, flor de Draula do Ulurve, sangue dele no nó de Elo da Skedda): (1) puxa o pó da Febre (cura em 1d6 semanas); (2) cura 1d6 PV por hora"
+ },
+ "Ulurve Hegre": {
+  "camada": "Importante (RIVAL, Aliado: Memória +3)",
+  "nivel": 38,
+  "classe": "Ferreiro (FORJA, Comum), Trilha FORJA 4",
+  "atributos": "For 75, Agi 65, Vig 55, Per 85, Int 78, Sorte 50, resto 40-45",
+  "pericias": "Forja Treinado +4 (+2 dias de prática), Luta Iniciante",
+  "PO": 26,
+  "desejo": "ser o primeiro a forjar vaduar",
+  "ambicao": "CUMPRIDA (Dia 152): mestre-ferreiro livre",
+  "medo": "ser só o sobrinho; agora também a Febre",
+  "segredo": "tem plaquinhas de vaduar escondidas e as pontas dos dedos cinza",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "dilema": "a ambição exige trair alguém que ele gosta (o tio ou Ferir)",
+  "tracos": ["AMBICIOSO", "CURIOSO", "LEAL (começando a virar)"],
+  "promessas": "não dizer ao tio para onde Ferir foi; mandar recado se o tio fizer o mestre sofrer",
+  "xp_semana": 1000,
+  "estado": "Dia 152: fica com Ferir e vira a ponte com o Clã (perdoado pelo tio); vai ver a mãe em Gogrunn com salvo-conduto; ambição de ser mestre-ferreiro livre CUMPRIDA",
+  "memoria": "+8 (Dia 77: Ferir perguntou o conselho dele e disse \"não se arrisque; se precisar, parto agora\") · Dia 101: +1 (\"se você se entregar, eu vou atrás de você\") · Dia 147: \"se você ficar com esta casa, eu fico com você; mas quero uma bigorna minha aqui dentro\" · Dia 150: +3 (a bigorna da mestra)",
+  "tensao": 1,
+  "registro": "Dia 32: a Carea NÃO registrou (precisa do conselho da Guilda no Dia 35: \"um fugitivo reclamado por um clã não é assunto meu sozinha\")",
+  "ficha": "PV 71/150 · Def 20 · ataque +17 · LANÇA DE VENTO \"SISRETH\" Rara 1d8×2,5+7, alcance +2 m, empurra 2 m, Flor de Brasa fraca 1x/dia (já usada no Dia 49) · Vigor +11",
+  "crescimento": "ambição: mestre-ferreiro LIVRE 1/4 (Dia 85: livre do tio, com o Rue salvo); treina Forja para Mestre com o Herkald quando ele melhorar"
+ },
+ "Hinde": {
+  "camada": "Relevante (Memória +1)",
+  "nivel": 14,
+  "classe": "Mineira (RAIZ, Comum)",
+  "atributos": "Vig 70, For 65, Per 50, Emp 50",
+  "pericias": "Coleta Treinado",
+  "estado": "Dia 15: Ferir explicou que a Febre é o pó, não passa de gente para gente; ela FICA em Levis; Aelaee larga a descarga do metal cinza; DILEMA resolvido (traço COVARDE → CORAJOSA?)",
+  "desejo": "uma vida longe das minas para o Go",
+  "ambicao": "ter casa com o irmão em Levis (4/4: CONCLUÍDA Dia 21; o Aelaee largou o cais, a tosse parou de piorar)",
+  "medo": "a Febre",
+  "linha_vermelha": "nunca deixa o filho para trás",
+  "dilema": "o irmão talvez esteja doente",
+  "tracos": ["LEAL", "COVARDE"],
+  "xp_semana": 500,
+  "memoria": "+2"
+ },
+ "Go": {
+  "camada": "Figurante (filho de Hinde)",
+  "nota": "perdeu a cabra Mancha em Ululge"
+ },
+ "Eialgald Hegre": {
+  "camada": "Relevante (Memória +2)",
+  "nivel": 50,
+  "classe": "Guarda-Costas (AÇO, Incomum)",
+  "PC": 36,
+  "estado": "Dia 119: acusou Ferir de matar 7 Hegre sob a trégua; em Levis, Ferir é PROCURADO pelo Clã",
+  "tracos": ["LEAL", "ORGULHOSO", "TEIMOSO"],
+  "memoria": "−6 NÊMESIS (três derrotas para Ferir)",
+  "ficha": "PV 170 · Def 26 · RD 3 · ataque +20 · espada Rara 1d10×2,5+6 · a cavalo · Vigor +12",
+  "crescimento": "agenda: vingança contra o Ulurve e Ferir; o chefe o mandou de volta à gruta de gelo como castigo"
+ },
+ "Rue": {
+  "camada": "Figurante",
+  "nivel": 20,
+  "nota": "guarda velho de perna de ferro, Ululge"
+ },
+ "Ulie": {
+  "camada": "Figurante",
+  "nivel": 15,
+  "nota": "mineiro de Ululge; tossiu no veio (Envelope)"
+ },
+ "Eiundunn Hegre": {
+  "camada": "Importante (chefe do Clã Hegre)",
+  "nivel": 140,
+  "classe": "Capitão (AÇO, Raro)",
+  "PC": 95,
+  "PI": 70,
+  "ficha": "PV ~600 · Def 36 · RD 6 · ataque +34 · machado de duas mãos Épico · Vigor +20 (ferido de raspão Dia 49)"
+ },
+ "Ireis": {
+  "camada": "Relevante (Memória +2)",
+  "nivel": 8,
+  "nota": "refugiada de Levis, a caminho de Gogrunn · Dia 34 (refugiada da guerra, [1]): chegou à porta de Ferir com a família, sem nada; o sogro Leviel morreu de Febre na estrada · Dia 37: vende no mercado as sobras da forja de Ferir (1/10 para ela) [5]: vendeu bem · Dia 40: foi na barca com os filhos",
+  "memoria": "+2"
+ },
+ "Lulaino": {
+  "camada": "Relevante",
+  "nivel": 56,
+  "classe": "Burocrata (OURO, Incomum)",
+  "PI": 35,
+  "tracos": ["AVARENTO", "COVARDE"],
+  "nota": "administrador da Liga em Levis",
+  "estado": "Dia 42 [1]: PRESO pela Eliane por vender metal cinza aos Hegre em tempo de guerra; na cela, ameaça contar ao Conselho que Ferir tirou da Guilda \"um ferro de rei\" (a Matriz) para casa",
+  "memoria": "−2 (humilhado diante do fiscal)"
+ },
+ "Carea": {
+  "camada": "Relevante",
+  "nivel": 110,
+  "classe": "Armeira (FORJA, Incomum)",
+  "PO": 60,
+  "tracos": ["HONESTA", "ORGULHOSA", "DILIGENTE"],
+  "nota": "mestra da Guilda dos Ferreiros de Levis · Dia 19: guardou no cofre da Guilda o fardo selado de Ferir (sem abrir)",
+  "memoria": "+6 (Dia 54: Ferir entregou os olhos do Rirk; a Thuula concluída)",
+  "oferece": "compra peça com efeito à parte, pela Guilda, a 45 a ponta",
+  "ambicao": "fazer da Guilda de Levis a primeira a trabalhar o metal cinza (1/4)",
+  "tensao": 0,
+  "crescimento": "ambição: a Guilda de Levis a primeira no cinza 2/4 (o nome de Ferir)"
+ },
+ "Aelaee": {
+  "camada": "Relevante",
+  "nivel": 12,
+  "nota": "irmão de Hinde, estivador do cais, cortiço perto da ponte; recebeu Hinde e Go · Dia 29: malhador de Ferir de manhã (3 de ouro por dia)"
+ },
+ "Nouliel": {
+  "camada": "Relevante",
+  "nivel": 26,
+  "nota": "viúva do ferreiro Doran-? (morto de Febre há 3 semanas), forja parada no beco do rio: oficina COMUM, aluga por trabalho/ouro · Dia 4: acordo — Ferir usa a forja e dorme no quarto dos fundos; ela fica com 1/3 do que a forja render; carvão da casa incluso nesta semana (6 sacas) · carvão: Ferir comprou 6 sacas (Dia 6), gastou 3 nas picaretas, sobram 3 · recebeu 30 do 2º lote (Dia 6) · recebeu 30 do 3º lote (Dia 8); Ferir comprou 6 sacas (Dia 8) · Dia 13 noite: o FOLE da forja (do Doran) rasgou no Revés; forja parada até trocar o couro (~30 de ouro e meio dia) · Dia 16: Ferir trocou o couro do fole (30); a forja voltou a funcionar · recebeu 30 do lote do Dia 17 · a Tilde dorme na casa dela por enquanto · Dia 19: recebeu 40 das facas do mercado · Dia 20: recebeu 45 das machadinhas · Dia 21: o ferreiro Selol ofereceu 400 de ouro pela forja; ela está balançada (AVARENTA) · Dia 21: VENDEU A FORJA A FERIR pelo mesmo preço do Selol (400: 325 já, 75 até o Dia 35); recusou o Selol; continua morando na casa; a parte de 1/3 acabou",
+  "tracos": ["HONESTA", "AVARENTA", "DILIGENTE"],
+  "memoria": "+4 ALIADA (Dia 16: o fole novo, costurado com a fivela velha do Doran) · Dia 61: reencontro na fundição; gastou 60 de ouro nas ervas; Ferir pagou de volta · Dia 98: sopa na forja à meia-noite: \"um dia eu queria te ver sentado\". Opinião +1 · Dia 112: no enterro: \"você vai subir o rio para aquele fogo; então volta. Eu não sei esperar duas vezes.\" Opinião +1 · Dia 119: dormiu com a cabeça no ombro de Ferir à cabeceira do Herkald · Dia 154 atrito: Ferir gastou (aço, fundição a todo vapor) sem passar por ela; \"escrevi no livro, com o seu nome\"",
+  "tensao": 0,
+  "estado": "Dia 153: INTENDENTE de Ireviel (a chave do cofre da cidade), com o Krernos ao lado; abre o livro de contas e o LIVRO DE NOMES dos refugiados contratados · Dia 155: Ferir combinou que todo gasto passa pelo livro antes; ela voltou ao normal",
+  "classe": "Intendente (OURO, Comum)"
+ },
+ "Thugek": {
+  "camada": "Relevante",
+  "nivel": 35,
+  "classe": "Soldado (AÇO, Comum)",
+  "atributos": "For 75, Agi 60, Vig 70, Von 55",
+  "pericias": "Luta Treinado, Intimidação Iniciante",
+  "itens": "espada Incomum, cota Incomum",
+  "PC": 42,
+  "desejo": "voltar para casa com a missão cumprida",
+  "ambicao": "virar sargento do chefe (1/4: rebaixado Dia 21)",
+  "medo": "voltar de mãos vazias",
+  "segredo": "tem uma filha em Levis-baixa que não vê há 5 anos",
+  "linha_vermelha": "nunca derrama sangue numa cidade da Liga sem ordem escrita",
+  "dilema": "o chefe pode mandar levar o aprendiz à força",
+  "tracos": ["LEAL", "HONESTO", "PACIENTE"],
+  "estado": "Dia 21 [1]: o chefe o rebaixou por deixar o mestre em Levis (ambição volta a 1/4); está preso a serviço de muralha em Gogrunn · Dia 33: o recado dele chegou de manhã pelo carroceiro: quantos são e qual é a ordem",
+  "memoria": "+2 (Dia 13: Ferir cumpriu, entregou o caderno; 20 natural)",
+  "xp_semana": 500,
+  "tensao": 0
+ },
+ "Capitã Eliane": {
+  "camada": "Relevante",
+  "nivel": 91,
+  "classe": "Capitão (AÇO, Raro)",
+  "PC": 58,
+  "nota": "comanda 200 lanças da guarnição de Levis, pagas pelo banco Facintone",
+  "desejo": "segurar Levis contra o Clã Hegre",
+  "ambicao": "ser nomeada comandante da fronteira (2/4: Dia 21, o banco a recomendou ao Conselho)",
+  "medo": "um motim por soldo",
+  "linha_vermelha": "nunca abre o portão para doentes sem ordem do Conselho",
+  "tracos": ["LEAL", "ORGULHOSA", "JUSTA"],
+  "quer": "armas melhores e notícias do Clã",
+  "oferece": "proteção dentro dos muros; um registrado da Guilda não sai preso pelo Clã",
+  "disposicao": "interessada (ouviu da ponta fura-cota)",
+  "memoria": "+2 (Dia 6: Ferir contou que o chefe Hegre quer lâminas de metal cinza para tomar Levis); deve um FAVOR a Ferir · Dia 8: aceitou adiar o serviço; o Favor continua · Dia 12: confirmou a proteção; contou da ordem escrita do Thugek; sugeriu registrar o mestre na Guilda (abre ao amanhecer) para a proteção valer para ele também · Dia 14: motim por soldo no quartel; cedeu 2 soldados à paisana perto do templo sem gastar o Favor; entra no templo com um sinal · Dia 15: entrou no templo com o sinal; achou as 3 crianças, o altar e a moldura; prendeu 2 acólitos · Dia 19: pôs 2 soldados de guarda no orfanato da Liga · Dia 21 [5]: ouviu do plano Hegre (cem lâminas, ~Dia 44; Ferir não disse a fonte); levou ao Conselho; ofereceu CONTRATO DA GUARNIÇÃO: 30 pontas Raras até o Dia 40, a 60 cada (banco Facintone paga); o serviço \"Olhos na Passagem\" fica mais urgente · Dia 25 [4]: teve de mandar 60 homens às minas (os Graskur saíram); a muralha está fina; o Conselho não paga mais gente; pergunta se a Irmandade guardaria as minas em troca de remédios · Dia 27: o Conselho [3] aceitou a Irmandade como guarda das minas por 2 semanas; a dispersão foi suspensa; ela sabe que foi pedido de Ferir · Dia 31 (20 natural): dá um sargento e 6 soldados para um ataque DE DIA ao santuário, antes do Dia 37 · Dia 33: expulsou os Hegre da cidade; incidente oficial com o Clã · Dia 34 [6]: recebeu a Fura-Muralha de vento; pagou 1.200 da guarnição; \"com isto o portão Kasast não cai\" · Dia 36: recebeu o acólito e o relatório; pagou 200 [3]; Reputação de Ferir com a Liga +1 · Dia 37: mostrou o Kasast; os batedores contam ~700 Hegre e um ferreiro novo na coluna (o Selol); Ferir forja em casa, dentro dos muros · Dia 40: 1º assalto: a Fura-Muralha [4] segurou a brecha da torre leste · Dia 42: recebeu a COTA DE MESTRE DE EIURVO (Épica); ouviu a verdade da Matriz e ficou fria [2]: \"devia ter me dito antes\"; Opinião −1 (momento), APAGADO no Dia 43 · Dia 43: Ferir pediu desculpa e prometeu mantê-la informada; ela aceitou ([17]+8=25 × [3]+11=14) · Dia 44: recusou dar metal cinza do depósito ([4]+8=12 × [20]+10=30): chegou carta do Doge: \"a peça de rei de que fala o Lulaino deve ser entregue à Liga depois do cerco\"; ela contou a Ferir, como prometido · Dia 47: respondeu ao arauto do alto da muralha: \"Ferir é registrado da Guilda de Levis. Registrado da Guilda não sai preso pelo Clã. Nem ele, nem bigorna nenhuma.\" (cumpriu a proteção do Dia 6) · Dia 48: ouviu o defeito das lâminas Hegre · Dia 49: julgou o Selol na corte de guerra; deu a Ferir o golpe ([15]+8=23 × [4]+10=14); pagou a missão: 10.000 de ouro do cofre da guarnição com o selo do Conselho; Reputação +1 com a Liga · Dia 50: deu a Ferir uma lasca de casca de febre da requisição para a espada da Skotha (Ferir [11]+8=19 × [17]+8 → Desviar [4]+8=12) · Dia 52: recusou soltar as ervas da requisição (Ferir [6]+8=14 → Rerrolar [3] → 14 × [7]+10=17): \"é ordem do Doge com selo; eu escrevo a ele hoje\" · Dia 52 noite: recusou vender as ervas da requisição a Ferir ([8]+10=18 × [16]+10 → Desviar [8]+10=18; empate fica com ela): \"nem com o seu ouro; o selo é do Doge\" · Dia 54: o Doge NEGOU soltar as ervas da requisição ([6]) · Dia 56: Ferir contou que ia para Ireviel, com a Matriz, e dos homens do Gilao ([10]+8=18 × [2]+6=8): ela segurou os dois homens no posto do cais \"para perguntas sobre a carga no depósito\" e olhou para o outro lado quando o Nouse saiu do templo · Dia 71: recebeu pelo Sussurro o aviso de Ferir e mandou o cavaleiro mais rápido da guarnição a Ululge · Dia 80: mandou dois soldados escoltarem o Ulurve, o Nouse e a família do Rue na barca de Levis a Ireviel ([3])",
+  "oferta": "Dia 8: 150 de ouro (banco Facintone) para ir à passagem de Gogrunn como ferreiro ambulante, contar as forjas do Clã e ver se trabalham metal cinza (+100 se inutilizar a forja grande). ~5 dias. Resposta até o Dia 9 à noite.",
+  "tensao": 0,
+  "itens": "Fura-Muralha de vento (Épica) e Cota de Mestre de eiurvo (Épica, placa de Cinza Saciado)",
+  "ficha": "PV 260 · Def 30 · RD 4 · ataque +26 · Fura-Muralha Épica · Cota de mestre Épica (placa de Cinza Saciado) · Vigor +16",
+  "crescimento": "ambição comandante da fronteira 3/4 (os Dez Dias e Levis sem soldo segurada)",
+  "estado": "Dia 145: recrutou 21 soldados sem soldo (9 por semana cada); agora comanda 39 (18 armados com lanças encantadas, 21 com armas velhas)"
+ },
+ "Nouse": {
+  "camada": "Relevante",
+  "nivel": 42,
+  "classe": "Capataz (AÇO, Comum)",
+  "nota": "líder da Irmandade Cinza, fora do portão · Dia 7: juntou mais 40 mineiros das minas de cima (fugindo do Loula); quer ferramentas",
+  "tracos": ["LEAL", "VINGATIVO", "IRASCÍVEL"],
+  "quer": "o segredo do pó; mais ferramentas (pás, escoras, cunhas)",
+  "oferece": "mineiros que conhecem as galerias velhas e as trilhas de contrabando até a fronteira Hegre",
+  "xp_semana": 500,
+  "memoria": "+5 (Dias 53-54: guia e companheiro de luta; o Rirk, o corredor)",
+  "disposicao": "amistosa, desconfiada da Liga",
+  "estado": "Dia 63: partiu rio acima com 500 de ouro de Ferir para achar DRAULA nos campos altos (o Ulurve reconheceu a flor: \"nos prados acima de Ululge, no começo do verão\"); volta em ~2-3 semanas",
+  "tensao": 0,
+  "ficha": "PV 92/130 · Def 18 · ataque +14 · picareta de guerra 1d10+6 · Vigor +12",
+  "crescimento": "ambição nova: um lugar para os mineiros da Guarda Cinza longe do Conselho de Levis (0/4)"
+ },
+ "Tilde": {
+  "camada": "Figurante",
+  "nota": "menina de uns 7 anos, filha do estivador Arnal, morto de Febre (enterrado Dia 6, beco do rio); um sacristão do templo do rio se ofereceu para levá-la (Envelope: célula da Lumine) · Dia 6 à noite: SUMIU. O templo diz que foi \"mandada ao orfanato de Marasar\". Ninguém a viu sair pelo portão. · Dia 8: Ferir achou a fita azul dela na grade atrás do altar; de baixo vinha uma criança cantarolando. Está VIVA sob o templo. · Dia 14: Ferir viu pela grade: a cripta tem a Tilde e mais 2 crianças dormindo na palha (o incenso faz dormir), 2 acólitos, um altar com moldura vazia; entrada por um alçapão atrás do armário da sacristia · Dia 15 noite: RESGATADA por Ferir com mais 2 crianças (soldados da Eliane); acordou no colo dele · Dia 24: GUARDA DIVIDIDA entre Ferir e a Nouliel (a Eliane registrou no livro do orfanato da Liga) · Dia 31: Laço 4 (ela trouxe a tenaz e salvou o mestre) · Dia 39-40 [5]: foi com a Nouliel, depois que Ferir prometeu ir buscá-la",
+  "tracos": ["TÍMIDA", "CURIOSA", "LEAL"],
+  "estado": "Dia 159: 3ª aula de forja (prática 3/7); viu a fornalha acender"
+ },
+ "Gorra": {
+  "camada": "Relevante",
+  "nivel": 38,
+  "nota": "mercenário da Companhia Graskur; vende a espada do mestre Herkald; tem vaduar na bota",
+  "quer": "um ferreiro que trabalhe o metal cinza para a Companhia",
+  "oferece": "ouro grande, a espada do mestre, mercenários por contrato",
+  "nome_revelado": "Dia 7",
+  "desejo": "aprender um segredo",
+  "ambicao": "virar Lendário (1/4: mandou recado à Companhia sobre o ferreiro e a futura lâmina)",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca trai a família",
+  "dilema": "a facção que o paga quer algo que fere a linha vermelha",
+  "tracos": ["DEVOTO", "CURIOSO", "LEAL"],
+  "missao": "escolta a Brara junto com Ferir (Ferir sabe que é o mercenário que vende a espada do mestre)",
+  "estado": "Dia 93: voltou ao sul, ofendido com a recusa da missão; \"mande dizer pelo carroceiro de sal quando as armas estiverem prontas; a Companhia manda buscar\"",
+  "memoria": "+5 (Dia 52: a promessa da primeira lâmina cumprida diante da mãe)",
+  "fe": "reza ao Deus das Estradas, pelos que ele mesmo matou",
+  "origem": "nasceu no acampamento da Companhia; a mãe é \"uma capitã\" (não diz o nome)",
+  "oferta": "a Companhia paga 300 por lâmina de metal cinza que não rache, quando Ferir souber",
+  "itens": "espada do mestre Herkald (Incomum), cota Incomum (consertada por Ferir)",
+  "tensao": 0
+ },
+ "Brara": {
+  "camada": "Relevante",
+  "nivel": 60,
+  "classe": "Fundidora (FORJA, Incomum)",
+  "atributos": "Per 85, Int 80, Von 70, Vig 50 (cega do olho esquerdo, 60 e poucos anos)",
+  "pericias": "Forja Mestre +6, Saber Treinado +4, Negócio Iniciante +2",
+  "PO": 40,
+  "tracos": ["TEIMOSA", "HONESTA", "CORAJOSA"],
+  "desejo": "ver de novo a peça do Rei-Ferreiro antes de morrer",
+  "ambicao": "tirar a Matriz de Lumgal (4/4: CONCLUÍDA)",
+  "medo": "que a Gilaccetta chegue antes",
+  "segredo": "foi aprendiz da Gilaccetta e fugiu com metade de um mapa (Envelope)",
+  "linha_vermelha": "nunca vende uma receita a um exército",
+  "nota": "bateu na porta da forja da Nouliel no Dia 7, cedo; ouviu falar do ferreiro que escuta o metal · Dia 8: Ferir pediu tempo; ela parte no Dia 9 ao amanhecer, com ou sem ele · Dia 8 noite: Ferir aceitou; ela disse a verdade sobre os riscos; o portão de Lumgal \"aceita obra\" (lenda) · Dia 12: missão concluída; pagou 70; vai ensinar a Têmpera Fria na prática; pede que Ferir GUARDE a Matriz (a Gilaccetta conhece o rosto dela) · Dia 15: terminou de ensinar a Têmpera Fria · Dia 43: leu com Ferir a face de baixo da Matriz, na cripta; ajudou a achar a Receita Mestra",
+  "memoria": "+1 (Dia 10: mostrou o meio mapa só a Ferir, de costas para o Gorra) · Dia 91 (laço, atrito): carta de Levis: \"Você deixou ela copiar o rei. Eu fugi dela trinta anos por causa disso.\" Opinião −2, Tensão +1 · Dia 105: carta: pede desculpa e oferece descer para ajudar na fornalha (chega ~Dia 111) · Dia 121: Ferir foi conversar; ela não contou o segredo do meio mapa ([6]+10=16 vs [19]+16=35) e recusou guarda (\"não preciso de babá\") · Dia 134: contou o meio mapa e o deu a Ferir; chorou ao ver a outra metade nos cadernos da mestra (\"ela tinha a outra metade esse tempo todo\") · Dias 138-143: ergueu a fornalha nova com Ferir e ensinou o segredo da fornalha de rei",
+  "xp_semana": 1000,
+  "estado": "Dia 147: caiu do andaime da fornalha; punho quebrado (2 semanas)",
+  "segredo_revelado": "Dia 20: fugiu há 20 anos depois da NOITE DAS TORRES: lâminas de cinza (quentes) da Gilaccetta, vendidas à companhia que precedeu a Graskur, mataram centenas de magos na tomada de uma cidade de torres (Ireviel velha); levou metade do mapa para a Matriz nunca ser achada por ela",
+  "opiniao": "ensinar sem condição = dez mil lâminas; não ensinar = ela morre; \"a escolha é tua, mas não me peças para voltar\"",
+  "tensao": 0
+ },
+ "Aeliaor": {
+  "camada": "Relevante",
+  "nivel": 22,
+  "classe": "Mineiro (RAIZ, Comum)",
+  "atributos": "Vig 70, Per 65, Sab 60, For 60",
+  "pericias": "Coleta Treinado, Sobrevivência Treinado, Saber (lendas das colinas) Iniciante",
+  "tracos": ["SUPERSTICIOSO", "LEAL"],
+  "nota": "velho mineiro da Irmandade; quebrou pedra nas pedreiras perto de Lumgal quando menino; guia de Ferir por acordo com Nouse · Dia 12: voltou para a Irmandade, fora do portão",
+  "tosse": "não (ainda)"
+ },
+ "Irianiel": {
+  "camada": "morto",
+  "nivel": 60,
+  "classe": "Sacerdote (FÉ, Incomum)",
+  "nota": "sacristão do templo do rio; líder da célula da Lumine em Levis-baixa (Ferir não sabe da Lumine)",
+  "tracos": ["DEVOTO", "PACIENTE", "CRUEL"],
+  "quer": "uma moldura-gaiola de ferro para um vitral que chega pelo rio, pronta até o Dia 14",
+  "memoria": "−4 INIMIGO",
+  "estado": "MORTO (Dia 36, santuário das covas): Ferir o matou de joelhos, com dois golpes do Martelo de Mestre; o Loula comeu o corpo"
+ },
+ "Skedda": {
+  "camada": "Relevante",
+  "nivel": 20,
+  "classe": "Runista (MAGIA, Comum)",
+  "atributos": "Int 70, Afi 75, Per 55, Agi 50",
+  "pericias": "Magia (runas) Treinado +4, Furtividade Iniciante, Saber Iniciante",
+  "PC": "~24 com magia",
+  "magias": "Olho de Vigia (uma runa que voa e vê), Faca Acesa (runa de fogo na lâmina, +1d6), Selo de Alarme",
+  "tracos": ["AVARENTA", "COVARDE", "GREGÁRIA"],
+  "nota": "coveira de Lumgal; risca as runas de alarme do acampamento; bêbada no Dia 10 · Dia 30: as runas dela falharam; ela vai saber de manhã (culpa)",
+  "estado": "Dia 63: riscou Selo de Alarme na porta da Tilde ([12]+22=34); dorme no quarto das crianças",
+  "memoria": "+5 (Dia 67: ensinou o Fio de Elo como receita a Ferir, por 200: \"tudo tem preço, até amizade, ferreiro\")",
+  "tensao": 1,
+  "itens": "ARGOLA DE ELO (foco Incomum de eiurvo, Dia 41, encantada com Alma de Brasa em OBRA-PRIMA): +4 nos feitiços dela; o Fio de Elo QUEIMA quem prende (+1d6 de fogo por rodada) e pode prender DOIS alvos; a Faca Acesa dá +1d6 a mais; 1x por dia, quem a ferir leva 1d8 de fogo",
+  "ficha": "PV 70 · Def 16 · Magia +22 (Int 14 + Treinado 4 + argola 4) · Fio de Elo ardente: prende 2 alvos, 1d6 fogo/rodada (Vontade CD 22 para soltar) · Faca Acesa +2d6 · Vigor +8",
+  "crescimento": "vende runas de alarme aos operários da fundição (AVARENTA): +300 de ouro no mês; quer uma argola nova, Rara"
+ },
+ "Krernos": {
+  "camada": "Relevante",
+  "nivel": 46,
+  "classe": "Bandido-chefe (AÇO, Comum)",
+  "nota": "chefe dos coveiros de Lumgal; espada com runa de Faca Acesa (da Skedda); foi vender bronze de túmulo no Vau do Sal, ao sul",
+  "PC": "~35",
+  "estado": "Dia 153: ao lado da Nouliel no cofre da cidade; responsável por Comida e Comércio; vai negociar o grão com o Ossiro Benvai"
+ },
+ "Graur": {
+  "camada": "Relevante",
+  "nivel": 70,
+  "classe": "Forjador de Guerra (FORJA/AÇO, Incomum)",
+  "nota": "tenente da Gilaccetta; martelo com runa de fogo; lidera 4 capuzes de couro (nível ~30); ficaram vigiando Lumgal e viram as estrelas no céu",
+  "PC": "~42",
+  "tracos": ["DISCIPLINADO", "ORGULHOSO"],
+  "ordem": "trazer a Brara e o meio mapa vivos à mestra",
+  "estado": "Dia 140: a ferida abriu de novo; de cama 1 semana",
+  "memoria": "+1 (Dia 65: lutou ao lado de Ferir com a espada \"Faísca\"; derrubou a Vassira junto; perdeu um dos seus capuzes) · Dia 133: \"a mestra escolheu você. Os capuzes são seus.\"",
+  "itens": "espada \"Faísca\" (Rara, de Ferir), emprestada para a caça"
+ },
+ "Irisiel": {
+  "camada": "Relevante",
+  "nivel": 50,
+  "classe": "Clérigo (VÉU, Incomum)",
+  "nota": "médico da Vigília de Zieth (pano cinza no pulso), cuida de mineiros doentes na trilha; Prece de Alívio; a prece falhou perto de Ferir",
+  "tracos": ["COMPASSIVO", "FANÁTICO"],
+  "memoria": "+1 (Ferir se afastou para ele curar)"
+ },
+ "Liliel": {
+  "camada": "Relevante",
+  "nivel": 45,
+  "classe": "Alquimista-bruxa (VÉU/FORJA? não: CHAMA, Incomum)",
+  "nota": "boticária do cais; lê a doença numa tigela d'água encantada (a água ficou cinza); vende o leite de cardo com sal de prata (40); só trabalha com Ferir do lado de fora",
+  "tracos": ["CURIOSA", "AVARENTA"],
+  "sabe": "quem sabe mais da Febre é o Médico Cinzento"
+ },
+ "Ilia": {
+  "camada": "Relevante",
+  "nivel": 8,
+  "classe": "Lavadeira (Comum)",
+  "nota": "filha do Thugek; lavadeira no cais; tem um filho chamado Thugek; lava os lençóis do templo do rio: \"lençóis pequenos, de criança, sujos de cera, toda semana\" · Dia 30 (Intuição 20 natural): os lençóis do templo agora vão para a casa da viúva OSSANA, no cais; ontem ela viu o sacristão lá e ouviu: \"amanhã à noite, a menina do ferreiro\"",
+  "memoria": "+3",
+  "tensao": 0
+ },
+ "Gilaccetta": {
+  "camada": "Importante (Lendária)",
+  "nivel": 340,
+  "classe": "Forjadora de Alma (FORJA, Lendária)",
+  "PO": 180,
+  "tracos": ["AVARENTA", "CURIOSA", "ORGULHOSA"],
+  "leitura_de_Ferir": "Dia 20, Intuição 39: está MORRENDO da Febre lenta (o cinza das mãos já passa do pulso; esconde um tremor); tem medo; respeita a Brara mais do que diz",
+  "oferta": "(ver Envelope)",
+  "estado": "MORTA (noite do Dia 130 para 131): envenenada (vinho de gengibre); a Ferir só soube ao chegar, no Dia 133 · Dia 134: foi para o fogo dela (a fornalha de salamandra), como manda o costume da casa",
+  "memoria": "+9 (Dia 71: recebeu de Ferir a Bengala de Rei, diante de toda a fundição; \"o meu aluno me fez uma bengala de rei. Agora eu posso morrer em pé, e não vou\") · Dia 75: pôs o inquiridor da Liga para fora do foral da fundição: \"esta casa tem foral desde a Noite das Torres; a Liga entra quando eu chamar\"; a Ferir: \"você me deve mais uma, menino; e o Doge agora me deve uma guerra\" · Dia 76 (promessa antiga cobra): a marca do contrato mágico do Dia 21 queimou nas palmas dos dois; ela pagou a Ferir os 750 que faltavam do contrato · Dia 84: desceu ao cais com a Bengala de Rei e MATOU o sol de lama (Morkos) com 20 golpes; o Sono do Ferro apagou a luz dele; levou um golpe (−70); reclama o CORAÇÃO do bicho (núcleo Épico de Luz): \"quem matou fica com o coração\" · Dia 84, noite: recusou dar o coração do Morkos (Ferir [4]+10=14 × [12]+16=28 e [12]+10=22 × [17]+16=33; impossível pela Fortuna): \"coração de bicho que eu matei não se dá; se VENDE: dez mil\"; recusou aliança formal (Ferir [1]+10 → Rerrolar [3]+10=13 × [17]+12=29): \"aliança é coisa de igual; você ainda é meu aluno\"; aceitou a licença de Ferir para forjar a bigorna-cópia (a 2ª peça devida) · Dia 87: +1 (Ferir cumpriu a palavra da bigorna e ficou a olhar sem pedir nada): \"agora você viu como se rouba de um rei. Não conta pra ninguém que aprendeu comigo.\" · Dia 91: ALIANÇA (Negócio de Ferir [19]+10=29 vs [12]+10=22): \"a fundição e o meu aluno contra quem vier roubar\"; preço (1d6 [3]): METADE do material de guerra que a Skotha mandar a Ferir. Os papéis ([6]): ela segura o decreto pela garganta: mandou dizer aos três conselheiros que, se a Liga tocar no foral, os papéis saem. · Dia 106: soube pelos capuzes da resposta de Ferir ao Rovai: +1 (\"esse menino eu criei direito\")",
+  "tensao": 0,
+  "quer": "forjar UMA peça na Matriz, com Ferir olhando (preço dos passes da quarentena); e a cura da Febre",
+  "itens": "SOPRO SACIADO (ÉPICO, Dia 63, forjado por Ferir na Matriz com ela segurando a tenaz e respirando sobre a dobra; [6]+35 [20]+32 [16]+34 [17]+22): amuleto de cinza saciado com núcleo de Draula e nó de Elo com o sangue dela. (1) puxa o pó da Febre: a doença PARA hoje e recua em 1d6 semanas; (2) cura 1d6 PV por hora (Draula); (3) do 20: \"Fome Mansa\": o cinza das mãos dela vai voltando para o amuleto (as mãos clareiam). · BENGALA DE REI (ÚNICA, Dias 70-71, forjada por Ferir sobre a Matriz com 400 g do cinza dela, núcleo de Braeth, nó de Elo da Skedda e fio de eiurvo; [9]+34 [9]+32 [10]+34 [17]+22): maça-bengala, 1d10 ×10 + Força, +15. (1) Boca do Rei: 3x por dia devora a magia que a maça tocar; (2) Bengala Viva (Vida): cada golpe que fere cura quem empunha em 6; (3) Corrente de Elo (Elo, 2º): 1x por cena prende até 2 alvos a 9 m. Encantamento: SONO DO FERRO FRACO (3 sucessos): 1x POR DIA, no toque, apaga uma magia ou um encantamento por 1 cena.",
+  "crescimento": "curando-se (Sopro); ambição nova: a \"Matriz menor\" da fundição dela (a bigorna-cópia) 1/4"
+ },
+ "Selol": {
+  "camada": "Relevante",
+  "nivel": 75,
+  "classe": "Armeiro (FORJA, Incomum)",
+  "nota": "ferreiro da Guilda de Levis, rival da Carea; quer COMPRAR a forja da Nouliel (agora famosa por causa de Ferir) e ofereceu 400 de ouro à viúva",
+  "desejo": "proteger um filho",
+  "ambicao": "tomar o lugar da Carea como mestre da Guilda (1/4)",
+  "medo": "o próprio passado",
+  "segredo": "REVELADO a Ferir (Dia 49, interrogatório [14]+10=24 × [11]+12=23): tem um filho, Iorin, aprendiz na fundição da Gilaccetta em Ireviel; armou o Clã para pagar a dívida do filho com o banco Facintone. Contou ao chefe que a bigorna está \"com o ferreiro Ferir\" (não sabe da cripta). Último pedido: \"não deixa o banco pegar o menino\".",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "dilema": "salvar um filho custa a vida de um estranho",
+  "tracos": ["CURIOSO", "AMBICIOSO", "VINGATIVO"],
+  "PO": "~40",
+  "estado": "MORTO (Dia 49, pôr do sol): condenado pela corte de guerra da guarnição ([1]: forca) por traição, incêndio e a morte de dois soldados; executado por FERIR no pátio do Kasast, a pedido dele, com licença da Eliane.",
+  "memoria": "morto",
+  "relacao": "NÊMESIS em formação",
+  "ficha": "PV 25/210 · Def 22 · ataque +15 · martelo de guerra Raro 1d10×2,5+6 · Agilidade +10 · Vigor +12 · DESARMADO, preso"
+ },
+ "Acólito preso": {
+  "camada": "Relevante",
+  "nivel": 20,
+  "classe": "Acólito (FÉ, Comum)",
+  "tracos": ["DEVOTO", "COVARDE", "LEAL"],
+  "estado": "Dia 31: confessou a Ferir e à Eliane (Intimidação, 2 de 3 trocas) o refúgio e a data do rito"
+ },
+ "Acólito das covas": {
+  "camada": "Relevante",
+  "nivel": 12,
+  "classe": "Acólito (FÉ, Comum)",
+  "tracos": ["COVARDE", "DEVOTO", "GREGÁRIO"],
+  "estado": "Dia 36: largou a faca de pedra, jogou-se aos pés de Ferir e pediu para ir junto; levado preso à Eliane"
+ },
+ "Nim": {
+  "camada": "Relevante",
+  "nivel": 1,
+  "classe": "criança de rua (Comum)",
+  "tracos": ["TÍMIDO", "DESCONFIADO", "CORAJOSO"],
+  "nota": "uns 6 anos; perdido no incêndio do mercado (Dia 34); salvo do altar da Lumine por Ferir (Dia 36); viu Ferir matar o sacerdote e tem MEDO dele · Dia 36: ficou com o sargento Tamel, que o levou para casa (a mulher dele cuida) [4]"
+ },
+ "Sargento Tamel": {
+  "camada": "Relevante",
+  "nivel": 40,
+  "classe": "Soldado veterano (AÇO, Incomum)",
+  "tracos": ["LEAL", "CALMO", "JUSTO"],
+  "nota": "sargento da Eliane; foi ao santuário com Ferir; ficou com o menino Nim; usa uma lança de vento",
+  "ficha": "PV 140 · Def 22 · RD 3 · ataque +16 · lança de vento Rara · Vigor +12"
+ },
+ "Laor (arauto Hegre)": {
+  "camada": "Figurante",
+  "nivel": 30,
+  "classe": "Arauto (VOZ, Comum)",
+  "tracos": ["FALADOR"],
+  "memoria": "Dia 44: Ferir o leu ([13]+21=34 × [1]+13=14): o acampamento morre de febre; o chefe NÃO vai embora; quer a bigorna \"para as cem lâminas da primavera\"; deixou escapar"
+ },
+ "Conselheiro Gilao": {
+  "camada": "Relevante",
+  "nivel": 30,
+  "classe": "Mercador (OURO, Comum)",
+  "tracos": ["AVARENTO", "MEDROSO", "GREGÁRIO"],
+  "desejo": "que o cerco acabe antes que a praga chegue ao mercado",
+  "memoria": "−1 (Dia 44: Ferir o venceu no Conselho, [18]+8=26 × [2]+15=17)"
+ },
+ "Irmã Oisse": {
+  "camada": "Relevante",
+  "nivel": 47,
+  "classe": "Clériga (FÉ, Incomum; Luz)",
+  "tracos": ["GENEROSA", "TEIMOSA", "DEVOTA"],
+  "nota": "cura a febre de cerco no templo do rio; o povo a chama de santa; ganha poder com a Praga",
+  "memoria": "+6 (Dia 53: recebeu de Ferir 80 doses de ervas da Companhia para o bairro dos refugiados) · Dia 56: viu Ferir sair da cripta com um caixote pesado (o 1 natural do custo); não perguntou: \"o que estava embaixo do altar é seu, ferreiro\"",
+  "estado": "Dia 49: guarda o prisioneiro Hegre rendido e os dois caídos (0 PV, vivos?) no templo",
+  "ficha": "PV 110 · Def 15 · Magia (Luz) +20 · Clarão (cega 1 rodada, vs RM) · Cura Menor/Cura (2º-3º) · Vigor +9",
+  "crescimento": "ambição: lavar o templo do rio da Lumine e abrir uma casa de doentes 1/4"
+ },
+ "Cania (boticária)": {
+  "camada": "Figurante",
+  "nivel": 20,
+  "classe": "Boticária (ALQUIMIA, Comum)",
+  "tracos": ["PRÁTICA"],
+  "memoria": "Dia 45: vendeu a Ferir uma lasca de Braeth (casca de febre) por 20 de ouro: \"é para os doentes, ferreiro\" · Dia 46 (evento local [1]): a fila da febre acusou a Cania de guardar casca de febre para os ricos; a irmã Oisse acalmou o povo com luz"
+ },
+ "Sisreth": {
+  "camada": "Relevante",
+  "nivel": 55,
+  "classe": "Mago de Chama (MAGIA, Incomum), de aluguel da guarnição",
+  "tracos": ["TEIMOSO", "AVARENTO", "ORGULHOSO"],
+  "desejo": "deixar uma obra",
+  "ambicao": "derrubar quem humilhou a família (0/4)",
+  "medo": "a humilhação pública",
+  "segredo": "ama alguém proibido",
+  "linha_vermelha": "nunca trai a família",
+  "magias": "Flor de Brasa (3º), Dardo Arcano (2º), Faísca (1º)",
+  "memoria": "+3 (Dia 55: deu aula de Flor de Brasa; diagnóstico: \"o seu fogo não tem casa: você lança sem foco de Chama; um foco de material de Fogo soma a categoria dele\")",
+  "ficha": "PV 120 · Def 17 · Magia (Chama) +24 · Flor de Brasa 6d6 área, Dardo Arcano 4d6 · Vigor +9"
+ },
+ "Gaald (Guarda Cinza)": {
+  "camada": "Relevante",
+  "nivel": 19,
+  "classe": "Aprendiz de ferreiro (FORJA, Comum) · ex-mineiro, Guarda Cinza",
+  "tracos": ["NERVOSO", "LEAL", "TEIMOSO"],
+  "memoria": "+6 (Dia 52: primeira lição: fole, fogo e o som do ferro)",
+  "ficha": "PV 27/30 · Def 14 · ataque +6 · picareta 1d8+4 · convalescente",
+  "desejo": "aprender a forja com Ferir (largar a picareta)",
+  "estado": "Dia 62: SAIU do lazareto com o passe do podestà (a Gilaccetta); alojado na fundição",
+  "crescimento": "Forja INICIANTE (Dia 85, as lições de Ferir); quer ser ferreiro de verdade"
+ },
+ "Iorin (filho do Selol)": {
+  "camada": "Relevante",
+  "nivel": 19,
+  "classe": "Aprendiz de ferreiro (FORJA, Comum)",
+  "nota": "em Ireviel; Dia 50: Ferir PAGOU a dívida dele com o banco Facintone (2.500, carta de crédito pelo agente do banco na guarnição) e escreveu ao mestre Herkald para tomá-lo sob a proteção da casa; ainda não sabe quem matou o pai",
+  "tracos": ["ORGULHOSO", "DILIGENTE", "DESCONFIADO"],
+  "memoria": "+5 (Dia 62: Ferir contou TODA a verdade: a condenação, o golpe, os motivos, o último pedido cumprido; [4]+1=5: ele chorou e aceitou: \"meu pai teria feito o mesmo; ele pediu que você me protegesse, e você protegeu\") · Dia 91: Opinião +3 (\"aprendiz do homem que contou a verdade sobre o meu pai\")",
+  "ficha": "PV 50 · Def 13 · ataque +6 · martelo 1d8+4",
+  "segredo": "sabe que Ferir matou o pai (contado por ele)",
+  "crescimento": "Forja Iniciante, praticando para Treinado na fundição (5/7)",
+  "estado": "Dia 91 (agenda [5]): forjou sozinho a primeira peça Incomum (uma faca) na fundição; pede para ser aprendiz de Ferir de verdade · Dia 91: ACEITO como APRENDIZ de Ferir; trabalha na equipe da forja (Dia 92: as 4 espadas da Skotha) · Dia 98: queimou a mão na forja (−2 por 1 semana) · Dia 110: o amigo Lumtor assassinado · Dia 112: soube que o Lumtor espiava; aceitou, mas quer vingar o amigo · Dia 154: ciúme da bigorna do Ulurve (vínculo Ulurve↔Iorin −2) · Dia 155: CHEFE DAS BASES DA FACA ACESA (com a Skedda); aceitou sério"
+ },
+ "Skotha Graskur": {
+  "camada": "Lendária",
+  "nivel": 370,
+  "classe": "Senhora da Guerra (AÇO, Lendária)",
+  "PC": 190,
+  "tracos": ["ORGULHOSA", "JUSTA", "IMPLACÁVEL"],
+  "memoria": "+3 (Dia 53: Ferir gastou o Favor da Companhia em ervas para os refugiados: 80 doses de campanha; ela riu: \"o favor de uma Senhora da Guerra, gasto em doente. Você é estranho, ferreiro.\") · Dia 69 (Sussurro): \"Não posso sair: o Doge me acusa da morte da banqueira e a Yasis me cerca no oásis de baixo. Faça outra. Quando a guerra acabar, eu passo por Ireviel e você põe o fogo na minha.\" · Dia 80: Ferir mandou carta SECRETA pela galé de sal da Gilaccetta (100 de ouro ao capitão; não vazou [5]): \"se a Liga não quer ser minha amiga e quer tomar o que é meu, procuro outros amigos; O INIMIGO DO MEU INIMIGO É MAIS QUE UM AMIGO\"; resposta ~Dia 86-89 · Dia 88 RESPOSTA (1d6 [4], aliança secreta com preço): aceita em segredo; preço: (1) a lâmina dela com fogo quando passar por Ireviel; (2) DEZ armas de magia Raras para a Companhia, 600 cada, ANTES das do Doge; em troca: se a Liga puser a mão no que é de Ferir, a Companhia não move uma lança pela Liga, e ela manda do sul o que achar de material de guerra. Aviso: \"não me escreva de novo pela galé do sal; o capitão conta moeda alto demais\". · Dia 89: Ferir aceitou e pediu prazo até o Dia 130 para armas de 4º círculo (Negócio [17]+10=27, Fortuna [19]+10=29 vs [17]+18=35: NÃO); a resposta chega ~Dia 96: as dez ANTES das do Doge, como ela disse. · Dia 93: o Gorra levou a recusa da missão ([2], ofendido): Memória −1 (+2). Dia 97, carta: \"Não. As dez antes das do Doge, e agora mais que nunca.\" · Dia 98: carta de Ferir (Fortuna [19]+10=29 vs 28): explica a recusa, promete uma peça LENDÁRIA, pede proteção e lealdade: ACEITO quando as espadas chegarem · Dia 111: recebeu as 10 (a carroça do sargento Grothos); PROTEÇÃO E LEALDADE seladas com o anel dela; Memória +3; \"a peça lendária, até o fim da guerra\"",
+  "estado": "Dia 119: recebeu a carta de paga e USOU: a guerra com a Liga vai parar em ~2 semanas (≈ Dia 133) com um acordo",
+  "ficha": "PV ~1.400 · Def 60 · RD 10 · ataque +62 (3 ataques) · espada \"Promessa\" Única 1d8×10+Força"
+ },
+ "Ouvald": {
+  "camada": "Relevante",
+  "nivel": 40,
+  "classe": "Alquimista (FORJA, Incomum)",
+  "tracos": ["METÓDICO", "CALADO"],
+  "nota": "alquimista da fundição da Gilaccetta; Dia 61: mandado ao lazareto com ervas e fumaça de enxofre para o Gaald e os doentes da ilha"
+ },
+ "Ilianne (vidreiro)": {
+  "camada": "Figurante",
+  "nivel": 25,
+  "classe": "Artífice vidreiro (FORJA, Comum)",
+  "tracos": ["MEDROSO", "AVARENTO"],
+  "memoria": "Dia 64: pego na vidraria pelo Graur e por Ferir; falou ([2]+10=12 × [2]+8=10): a Vassira, 8 acólitos, as duas entradas da cisterna (a sacristia do templo e o bueiro do cais), a menina Nima numa jaula, o rito na lua nova (meia-noite do Dia 66), e que queriam \"a menina acesa\" (a Tilde) · Dia 66: falou de novo ([12]+10=22 × [4]+6=10): a célula de MARASAR se reúne na casa de banhos da Rua das Lamparinas, perto do cais dos Descalços; o vidro-asisha vinha pelo mercador de sal OUVIO, de Marasar",
+  "estado": "preso na fundição"
+ },
+ "Vassira (Lumine de Ireviel)": {
+  "camada": "Relevante",
+  "nivel": 70,
+  "classe": "Clériga de Luz caída (LUZ/FÉ, Rara)",
+  "tracos": ["FANÁTICA", "PACIENTE", "VAIDOSA"],
+  "estado": "MORTA (Dia 66, madrugada): não falou no interrogatório ([2]+10 → Rerrolar [18]+10=28 × [9]+20=29); entregue à Gilaccetta, que a condenou; executada por Ferir na cisterna",
+  "ficha": "PV 0/230 (viva, ferida grave) · Def 24 · Magia (Luz) +24 sem o vidro",
+  "memoria": "−6 (Ferir quebrou o rito de Levis e agora o dela)"
+ },
+ "Nima": {
+  "camada": "Figurante",
+  "nivel": 1,
+  "nota": "menina do cais de Ireviel, ~6 anos, filha de uma lavadeira; tirada da jaula da Lumine por Ferir (Dia 65) · Dia 65, noite: levada à mãe pelo Iorin"
+ },
+ "Mulher-de-junco (curandeira do Delta)": {
+  "camada": "Figurante",
+  "nivel": 35,
+  "classe": "Curandeira de junco (VÉU/OSSO, Incomum)",
+  "tracos": ["DESCONFIADA", "TEIMOSA"],
+  "memoria": "−1 (Dia 69: recusou ensinar a Ferir: \"ferreiro de cinza não aprende reza de junco\"; Ferir [9]+8=17 × [20]+8 → Desviar [19]+8=27)"
+ },
+ "Messer Rovai": {
+  "camada": "Relevante",
+  "nivel": 60,
+  "classe": "Inquiridor da Liga (VOZ/OURO, Rara)",
+  "tracos": ["ASTUTO", "LEGALISTA", "AMBICIOSO"],
+  "memoria": "−3 (Dia 75: o ferreiro disse diante dele que a peça de rei não sai, e a Gilaccetta o pôs para fora do foral)",
+  "estado": "Dia 91 (agenda [4]): recebeu o DECRETO DO FERRO DE REI (aprovado pelo Conselho) e soube da bigorna-cópia ([1]); apresentou o mandado no portão do foral ao entardecer (\"inventário das duas peças de rei\"); a Gilaccetta não abriu; ele pôs guardas no portão e no cais e pediu soldados ao Doge · Dia 97: os 6 guardas foram chamados a Marasar depois do Vau de Ossar; ficaram ele, o Brisso e 2 guardas; trouxe ao portão a oferta do Doge · Dia 98: recusou levar ao Doge \"a Matriz reconhecida como de Ferir\"; manteve 1.000 por arma e o papel com selo; aceita entrega no prazo (Dia 120); pegou 20 guardas da cidade com o podestà · Dia 105: soube da revogação do decreto e de que a Gilaccetta tem os papéis do Morra; oferece a Ferir: a Matriz reconhecida como dele, por escrito e com o selo do Conselho, em troca dos papéis · Dia 106: Ferir riu na cara dele: \"se um dia o sol correr ao contrário no céu, talvez nesse dia eu traia um aliado\"; humilhado, Memória −2 · Dia 133: recuou no portão diante do testamento, das lanças e da ameaça da Skotha (o Brisso confirmou que era verdade); vai contestar o testamento no Conselho · Dia 152: saiu de barca para Marasar com o Brisso, vivo, para contar ao Doge",
+  "ficha": "PV 160 · Def 22 · ataque +14 · florete Raro · 6 guardas (modelo soldado da Liga) · mago Brisso (Mente, nível 50: Sono, Leitura de mentira, Sussurro; PV 90)",
+  "crescimento": "ambição: subir a Conselheiro da Liga 1/4 (o contrato assinado)"
+ },
+ "Brisso (mago de Mente)": {
+  "camada": "Figurante",
+  "nivel": 50,
+  "classe": "Mago de Mente (MAGIA, Incomum)",
+  "tracos": ["CALADO", "FRIO"],
+  "memoria": "Dia 75: leu que Ferir disse a verdade ([5]+16=21): a peça está aqui"
+ },
+ "Stuald (mascate de Steunn)": {
+  "camada": "Figurante",
+  "nivel": 12,
+  "classe": "Mascate (OURO, Comum)",
+  "tracos": ["FALADOR", "HONESTO"],
+  "estado": "Dia 86-90 no mercado de Ireviel; vende a pedra de raio por 300"
+ },
+ "Luciino (mordomo do Morra)": {
+  "camada": "Relevante",
+  "nivel": 40,
+  "classe": "Escrivão (OURO, Incomum)",
+  "tracos": ["MEDROSO", "GANANCIOSO"],
+  "estado": "Dia 86: fugiu de Marasar com os papéis do Morra; rumo a Farenta (Envelope)"
+ },
+ "Zeisris (maga de aluguel)": {
+  "camada": "Figurante",
+  "nivel": 70,
+  "classe": "Maga de Chama (MAGIA, Incomum)",
+  "tracos": ["AVARENTA", "PREGUIÇOSA"],
+  "estado": "Farenta, mercado negro"
+ },
+ "Zeiess (mercador de metais)": {
+  "camada": "Figurante",
+  "nivel": 30,
+  "classe": "Mercador (OURO, Comum)",
+  "tracos": ["DESCONFIADO", "HONESTO"],
+  "estado": "Farenta, mercado negro; 2 kg de Haula, 6 kg de vaduar"
+ },
+ "Lumtor (foleiro)": {
+  "camada": "Relevante",
+  "nivel": 9,
+  "classe": "Foleiro (AÇO, Comum)",
+  "tracos": ["CURIOSO", "RELIGIOSO"],
+  "desejo": "voltar para casa no Delta",
+  "estado": "MORTO (noite do Dia 109), pelo Kasdun, no quarto de uma viúva do cais"
+ },
+ "Kasdun": {
+  "camada": "Relevante",
+  "nivel": 120,
+  "classe": "Assassino (SOMBRA/AÇO, Raro)",
+  "tracos": ["TEIMOSO", "GENEROSO"],
+  "estado": "MORTO (Dia 114, 4h), por Ferir, rápido e limpo, depois de falar",
+  "fala": "\"Me mata ou me solta. Escravo eu não volto.\""
+ },
+ "Vrothur (bandido de Ulium)": {
+  "camada": "Figurante",
+  "nivel": 35,
+  "classe": "Bandido-chefe (AÇO, Comum)",
+  "tracos": ["GANANCIOSO", "PRÁTICO"],
+  "estado": "Dia 128: FUGIU pelas pedras da garganta de Ulnar; sabe de Ferir e da escolta"
+ },
+ "Ruddo (filho de Stirvunn)": {
+  "camada": "Relevante",
+  "nivel": 30,
+  "classe": "Ferreiro (FORJA, Comum)",
+  "tracos": ["LOUCO (fala com o pai morto)", "TEIMOSO", "LEAL"],
+  "estado": "Dia 128: viu o Martelo de Mestre (\"o martelo que voltou\"), aceitou a Prova de Ferir e deu o fogo do pai; FICA em Ulnar",
+  "memoria": "+4 (Dia 128: \"o pai aceitou a tua mão\")"
+ },
+ "Dovan (soldado da Eliane)": {
+  "camada": "Figurante",
+  "nivel": 20,
+  "classe": "Soldado (AÇO, Comum)",
+  "tracos": ["CALMO", "CANTOR"],
+  "estado": "carrega o braseiro com o Coração de Stirvunn; sabe a canção da forja"
+ },
+ "Hrotgar (capitão Hegre)": {
+  "camada": "Relevante",
+  "nivel": 50,
+  "classe": "Capitão (AÇO, Incomum)",
+  "tracos": ["DISCIPLINADO", "DESCONFIADO"],
+  "estado": "Dia 152: saiu de Ireviel com os 30, em paz, para Levis"
+ },
+ "Nesra (aprendiz do Ouvald)": {
+  "camada": "Relevante",
+  "nivel": 12,
+  "classe": "Aprendiz de alquimista (FORJA, Comum)",
+  "tracos": ["ORGULHOSO", "COVARDE"],
+  "estado": "Dia 147: entrou na fundição como aprendiz do Ouvald; a mãe tem febre do brejo"
+ },
+ "Almision": {
+  "camada": "Lendária",
+  "nivel": 440,
+  "classe": "Guardiã do Pacto (MAGIA, Lendária)",
+  "tracos": ["VELHA", "CANSADA", "IMPLACÁVEL com o pacto", "CURIOSA"],
+  "estado": "Dia 150: partiu ao amanhecer, a pé, com o corvo; poupou a Matriz (o selo fica; só Cinza Saciado; a cópia apagada e jurada); deixou carta ao Colégio de Telosus",
+  "memoria": "+3 (Dia 149: \"um ferreiro de beco me mostrou um terceiro caminho com um aro de braço\")"
+ },
+ "Podestà Tirello": {
+  "camada": "Relevante",
+  "nivel": 45,
+  "classe": "Podestà (VOZ/OURO, Incomum)",
+  "tracos": ["DEVOTO", "PRÁTICO", "MEDROSO"],
+  "estado": "Dia 152: revogou o \"foral vago\"; Ireviel sob a proteção da casa da fundição; podestà de nome · Dia 153: anunciou na praça o plano da casa ([20]+15=35 × Doroteo 29): a cidade aceita"
+ },
+ "Ossiro Benvai": {
+  "camada": "Relevante",
+  "nivel": 38,
+  "classe": "Mercador de grão (OURO, Incomum)",
+  "tracos": ["AVARENTO", "PRÁTICO", "PALAVRA DE PEDRA"],
+  "estado": "Dia 153: acordo fechado pelo Krernos com o feitor Ludo: 2.000 de grão, taxa zero de cais por 6 MESES; entrega ~Dia 160"
+ },
+ "Doroteo Vansi": {
+  "camada": "Relevante",
+  "nivel": 30,
+  "classe": "Cônsul dos mercadores (OURO, Comum)",
+  "tracos": ["DESCONFIADO", "ORGULHOSO"],
+  "estado": "Dia 153: tomou 300 do fundo a 10%; reabre a loja"
+ },
+ "Aeliae": {
+  "camada": "Relevante",
+  "nivel": 42,
+  "classe": "Druida do Sono Verde (VIDA/TERRA, Incomum)",
+  "tracos": ["GENTIL", "CALMA"],
+  "estado": "Dia 156: Ferir ACEITOU: ela espera e viaja com a expedição de Lumade até a cratera; enquanto isso ajuda o Ouvald no lazareto"
+ },
+ "Orast": {
+  "camada": "Relevante",
+  "nivel": 24,
+  "classe": "Oficial ferreiro (FORJA, Comum)",
+  "tracos": ["COVARDE", "AMBICIOSO"],
+  "estado": "Dia 156: chegou de Marasar pedindo trabalho; carta de despedida do mestre Pazzo Ardenghi; testado pelo Ulurve e aceito em experiência; sem quem responda por ele"
+ },
+ "Messer Donio": {
+  "camada": "Relevante",
+  "nivel": 42,
+  "classe": "Emissário da Liga (VOZ, Incomum)",
+  "tracos": ["LEGALISTA", "CANSADO"],
+  "estado": "Dia 159: em Ireviel com 4 guardas e a ordem do Doge: 20 soldados para a Guarda do Sal ou 1.500 de ouro, até o Dia 170"
+ }
+}

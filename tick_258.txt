@@ -1,0 +1,32 @@
+[22:51:19] Dia 258 · Pressão 2/5 · encontro de estrada 1d20 [13] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 258 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d23 [18] a costa (Ireviel–Marasar)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Fenkos
+    desejo: ser perdoado
+    ambição (relógio de 4): abrir o próprio negócio
+    medo: voltar a ser escravo
+    segredo: fez um pacto
+    linha vermelha: nunca trai a família
+    dilema que vai chegar: cumprir a palavra vai custar a casa dele
+    traços: LEAL e CRUEL
+    nível: 260
+    obra sinistra (relógio de 8): vingar o povo dele
+    por que é humano: perdeu tudo para quem hoje é herói
+    equipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: fé
+    o que o faria parar: perder quem ama
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 258
+    um Lendário age (d20 [1]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [8] sofre um revés (ferida, perda, traição de um próximo) · notícia d20 [9] chega no dia 260
+    trama do dia: a cantora do templo → a casa da fundição (RESSENTIMENTO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: os Jurados de Steunn sonha com Graur, por causa de a Matriz
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) rouba de Herkald, por causa de um mapa
+    FAÍSCA: Kasgal acusa em público Qunemneth, o Médico Cinzento, por causa de uma criança
+  AUDITORIA (XXIII.23, Dia 258): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

@@ -1,0 +1,63 @@
+{
+ "nota": "RELÓGIOS com o TOTAL guardado (MOTOR 6). Os dois de partida foram RECONSTRUÍDOS das rolagens do envelope 2m, que nunca escreveu o total: o Mestre confere e ajusta com relogio.py anda.",
+ "relogios": [
+  {
+   "nome": "a Leliel → forquilha",
+   "valor": 2,
+   "max": 4,
+   "oculto": false,
+   "estado": "vivo",
+   "ao_encher": "a força da Liga (da Leliel) desce contra a FORQUILHA do rio: o rio fechado vira guerra aberta",
+   "regra": {
+    "dado": "d20",
+    "mod": -3,
+    "sobe": [
+     [
+      15,
+      99,
+      1
+     ]
+    ]
+   },
+   "conferir": "valor reconstruído do envelope 2m: +1 (linha 1252) e +1 no 378 (linha 1454); antes disso só 'nada' ou PARADO pela paz. Se o Mestre souber de outra subida: relogio.py anda.",
+   "log": [
+    "259: criado 0/4 (a Liga recusou a portagem)",
+    "~346: PARADO pela paz; depois VOLTA A ANDAR (a paz caiu), d20 −3",
+    "envelope l.1252: [19] −3 = 16 → +1",
+    "378: [19] −3 = 16 → SOBE 1 → 2/4 (reconstrução)",
+    "385: [10] -3 = 7 nada (2/4)",
+    "392: [4] -3 = 1 nada (2/4)",
+    "399: [13] -3 = 10 nada (2/4)",
+    "406: [1] -3 = -2 nada (2/4)",
+    "413: [4] -3 = 1 nada (2/4)",
+    "420: [3] -3 = 0 nada (2/4)",
+    "427: [16] -3 = 13 nada (2/4)"
+   ]
+  },
+  {
+   "nome": "os Descalços → Matriz",
+   "valor": 4,
+   "max": 4,
+   "oculto": true,
+   "estado": "fechado",
+   "ao_encher": "os Descalços (com o Ardenghi) dão o golpe pela MATRIZ: a emboscada na estrada de Lumade, quando o rei sair",
+   "regra": {
+    "dado": "d20",
+    "mod": 0,
+    "sobe": [
+     [
+      15,
+      99,
+      1
+     ]
+    ]
+   },
+   "log": [
+    "259: criado 0/4 (querem roubar a Matriz eles mesmos)",
+    "envelope 2m: seis subidas somadas sem total escrito",
+    "379: marcado CHEIO na passagem para o MOTOR 6 (reconstrução)",
+    "413: fechado (412: a emboscada da estrada de Lumade FALHOU: o rei saiu sem a Matriz, a emboscada recuou dos vaus de cima (411) e a coluna foi destroçada na estrada do rio (412); o SHYSSIS e 25 descalços mortos; o capitão do Ardenghi e 15 a cavalo fugiram para Levis, uns 10 descalços sumiram no leito)"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,23 @@
+[00:07:26] Dia 272 · Pressão 1/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 272 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d23 [14] o brejo do oeste (a Torre Afogada)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Zaiine
+    desejo: proteger um filho
+    ambição (relógio de 4): virar Lendário
+    medo: ser esquecido
+    segredo: sabe de um crime de alguém importante
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: LEAL e CURIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 272
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Braeth (o ancião do Clã) → Iorin (TRAIÇÃO PENDENTE) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: o podestà Tirello encomenda uma peça para Ardenghi, por causa de uma criança
+    FAÍSCA: Adurel chantageia a cantora do templo, por causa de sal
+    FAÍSCA: o conselheiro Pelagri esconde um filho de Moreth, por causa de vingança

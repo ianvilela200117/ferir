@@ -1,0 +1,21 @@
+[09:00:03] Dia 290 · Pressão 4/5 · encontro de estrada 1d20 [1] -> encontro na estrada
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 290 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d24 [17] os Picos Brancos
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    nome: Orvil
+    o que era: torre de mago
+    por que caiu: terremoto
+    o que guarda: material Raro a Lendário
+    o que habita: mortos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 290
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Braeth (o ancião do Clã) → Iorin (TRAIÇÃO PENDENTE) d20 [3] nada visível
+    FAÍSCA: Graur deve a vida a a cantora do templo, por causa de a Matriz
+    FAÍSCA: Brogos procura Braeth (o ancião do Clã), por causa de uma profecia
+    FAÍSCA: Tilde esconde um filho de Thuron, por causa de um feitiço proibido

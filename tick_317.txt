@@ -1,0 +1,30 @@
+[13:48:37] Dia 317 · Pressão 1/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 317 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [24] Haula (terra nova)
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    nome: Orula
+    desejo: um título
+    ambição (relógio de 4): tomar o lugar do chefe
+    medo: a pobreza
+    segredo: deve a alguém perigoso
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: salvar um filho custa a vida de um estranho
+    traços: GENEROSO e AVARENTO
+    nível: 280
+    obra sinistra (relógio de 8): forjar uma arma Mítica proibida
+    por que é humano: perdeu tudo para quem hoje é herói
+    equipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: exército
+    o que o faria parar: perder quem ama
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 317
+    um Lendário age (d20 [4]):
+    Adurel (ofício, Zisrir (o vale)) d20 [8] sofre um revés (ferida, perda, traição de um próximo) · notícia d20 [9] chega no dia 318
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Mamiltia sonha com Skugek, por causa de um mapa
+    FAÍSCA: Brara vende algo a Aeliae, por causa de a coberta do mundo
+    FAÍSCA: Nouse quer casar com Naera, por causa de vingança

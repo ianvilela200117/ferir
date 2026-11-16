@@ -1,0 +1,14 @@
+[09:57:31] Dia 300 · Pressão 4/5 · encontro de estrada 1d20 [6] -> encontro na estrada
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 300 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]
+    ONDE: d25 [21] Zisrir
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 300
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Tamel (morto) → Graur (ÓDIO) d20 [11] nada visível
+    FAÍSCA: Lasca e Miro (presos) quer casar com Draa, por causa de uma terra além do mapa
+    FAÍSCA: Kreium (preso) inveja Messa Tiracci, por causa de vaduar
+    FAÍSCA: Tano (carregador, primo da Caciccetta) vai trair Qunemneth, o Médico Cinzento, por causa de um herdeiro dos Steunn

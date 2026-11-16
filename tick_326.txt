@@ -1,0 +1,15 @@
+[14:15:13] Dia 326 · Pressão 5/5 · encontro de estrada 1d20 [18] -> nada
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  EVENTO DE MUNDO 1d20 [8] Golpe ou sucessão · encadeamento 1d20 [13] A Liga reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 326 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [4] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 326
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Orast → Pelaccino (preso) (VINGANÇA JURADA) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Nouliel vende algo a Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308), por causa de uma peça Lendária roubada
+    FAÍSCA: Herkald foge de Ardenghi, por causa de vingança
+    FAÍSCA: Draron (da casa) oferece aliança a Adurel, por causa de um feitiço proibido

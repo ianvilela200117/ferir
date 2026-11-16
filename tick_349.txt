@@ -1,0 +1,14 @@
+[10:23:24] Dia 349 · Pressão 3/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 349 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [3]
+    ONDE: d27 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    ——
+  O MUNDO VIVO — Dia 349
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Tamel (morto) → Grerkur (AMOR) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Skugek esconde um filho de Maevis (morto), por causa de um herdeiro dos Steunn
+    FAÍSCA: Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308) acusa em público Thugek, por causa de uma criança
+    FAÍSCA: Tilde pede ajuda a Brara, por causa de um mapa

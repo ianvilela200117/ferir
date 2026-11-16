@@ -1,0 +1,14 @@
+[10:23:24] Dia 347 · Pressão 1/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 347 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [10] o Delta e as salinas
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 347
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Mormir (o eremita de Quoine, os Sem-Torre) → Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) (RIVALIDADE) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Draa quer casar com Naera, por causa de uma peça Lendária roubada
+    FAÍSCA: Moreth procura Kreium (preso), por causa de um herdeiro dos Steunn
+    FAÍSCA: Leliel foge de Herkald, por causa de um núcleo de monstro

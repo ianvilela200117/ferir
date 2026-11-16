@@ -1,0 +1,16 @@
+[00:07:26] Dia 271 · Pressão 5/5 · encontro de estrada 1d20 [1] -> encontro na estrada
+  avistamento de monstro 1d20 [17] -> nenhum
+  EVENTO DE MUNDO 1d20 [1] Guerra · encadeamento 1d20 [4] Refugiado · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 271 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d23 [10] o Delta e as salinas
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    ——
+  O MUNDO VIVO — Dia 271
+    um Lendário age (d20 [3]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [4] chega hoje
+    trama do dia: Moreth → Bren (morto) (ÓDIO) d20 [3] nada visível
+    FAÍSCA: Ithra deve a vida a Nouse, por causa de um título
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) foge de a casa da fundição, por causa de o perdão
+    FAÍSCA: Brogos quer casar com a Guardiã da Tenaz, por causa de uma dívida antiga

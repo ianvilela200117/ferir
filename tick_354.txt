@@ -1,0 +1,23 @@
+[10:41:10] Dia 354 · Pressão 3/5 · encontro de estrada 1d20 [18] -> nada
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 354 (dia)
+    d20 [2] NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)
+    ONDE: d27 [4] Marasar (a Liga e o Doge)
+    A NOTÍCIA: [5] em 1d6 [4] dias
+    nome: Zainar
+    desejo: uma casa própria
+    ambição (relógio de 4): abrir o próprio negócio
+    medo: a magia
+    segredo: ama alguém proibido
+    linha vermelha: nunca volta atrás numa palavra dada
+    dilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha
+    traços: AMBICIOSO e TEIMOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 354
+    Lendários: d20 [15] quietos hoje
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Aeliae salva Draron (da casa), por causa de o perdão
+    FAÍSCA: Grerkur sonha com Garkunn, por causa de fome
+    FAÍSCA: Draron (da casa) encomenda uma peça para Tano (carregador, primo da Caciccetta), por causa de a Matriz

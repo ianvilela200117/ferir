@@ -1,0 +1,16 @@
+[14:15:13] Dia 328 · Pressão 2/5 · encontro de estrada 1d20 [15] -> nada
+  avistamento de monstro 1d20 [17] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 328 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [1]
+    ONDE: d27 [1] Ireviel e o rio
+    A NOTÍCIA: [5] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 328
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [3] nada visível
+    FAÍSCA: Lasca e Miro (presos) vai trair Aeliae, por causa de a Matriz
+    FAÍSCA: Dovan oferece aliança a Lurentetta, por causa de uma profecia
+    FAÍSCA: Hrotgar ama em segredo Maevis (morto), por causa de uma terra além do mapa
+  AUDITORIA (XXIII.23, Dia 328): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

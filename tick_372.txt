@@ -1,0 +1,24 @@
+[01:30:07] Dia 372 · Pressão 1/5 · evento local 1d20 [17] -> falta algo no mercado (preço sobe)
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 372 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [26] Lumron (terra nova)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Culto da Haast
+    adora: a praga
+    promete: o fim das dívidas
+    sinal: moeda furada
+    células: 5 cidades
+    líder: nível 70, classe Rara a Lendária
+    rito: roubo de crianças
+    plano (relógio de 6): espalhar uma praga
+    fraqueza: o patrono cobra caro
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 372
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Pelaccino (preso) → Graur (RIVALIDADE) d20 [9] nada visível
+    FAÍSCA: Maevis (morto) salva Tano (carregador, primo da Caciccetta), por causa de uma profecia
+    FAÍSCA: Ithra deve a vida a Kasgal, por causa de uma peça Lendária roubada
+    FAÍSCA: Draa procura Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322), por causa de vaduar

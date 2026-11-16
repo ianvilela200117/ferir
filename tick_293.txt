@@ -1,0 +1,16 @@
+[09:00:04] Dia 293 · Pressão 2/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 293 (dia)
+    d20 [14] FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)
+    ONDE: d24 [5] Farenta
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 293
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Dovan → o podestà Tirello (RESSENTIMENTO) d20 [1] nada visível
+    FAÍSCA: Lurentetta desafia para duelo Krernos, por causa de fome
+    FAÍSCA: Adurel ama em segredo Nouliel, por causa de um mapa
+    FAÍSCA: Moreth encomenda uma peça para Maevis (morto), por causa de a Fornalha que Não Apaga
+  AUDITORIA (XXIII.23, Dia 293): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

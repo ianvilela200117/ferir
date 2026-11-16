@@ -1,0 +1,27 @@
+[23:34:19] Dia 391 · Pressão 5/5 · evento local 1d20 [12] -> um barqueiro traz boato do rio
+  O TEMPO (22 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: chuva de verão, brisa (d6 [4] muda, d20 [16] · vento d6 [3]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   o Porto de Marasar: limpo, calmo (d6 [6] muda, d20 [3] · vento d6 [2])
+   Levis: tempestade, VENTANIA (d6 [2] fica · vento d6 [2]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: nublado, brisa (d6 [2] fica · vento d6 [3])
+   O RIO: baixo [33/100]
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  EVENTO DE MUNDO 1d20 [8] Golpe ou sucessão · encadeamento 1d20 [7] Vingança · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 391 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 391
+    Lendários: d20 [13] quietos hoje
+    trama do dia: Eiundunn → Kasgal (TRAIÇÃO PENDENTE) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) quer matar Iorin, por causa de a coberta do mundo
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) esconde um filho de Borecci, por causa de fome
+    FAÍSCA: Oslo acusa em público Draa, por causa de fome
+  ▶ AGENDA #76: CHEGA a Marasar: a ELIANE e as 20 lanças da casa (as lanças para a Doge) (saiu de Ireviel no 390)
+  ✉ NOTÍCIA QUE CHEGA HOJE: CLIMA ESTRANHO — Farenta · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Do Junco (o Delta e as salinas): briga com a Guilda dos Salineiros do Delta; vence a Guilda dos Salineiros do Delta · COMO CHEGA: d20 [18] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: DESCOBERTA DE MATERIAL — Lumade · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: Lumdun (Lendário, Mordun): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: CLIMA ESTRANHO — Mordun (a Boca com Fome) · COMO CHEGA: d20 [14] FIEL

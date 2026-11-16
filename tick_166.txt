@@ -1,0 +1,4 @@
+[19:24:18] Dia 166 · Pressão 5/5 · evento local 1d6 [2] -> acontece algo
+  avistamento de monstro 1d6 [6] -> nenhum
+  EVENTO DE MUNDO 1d6 [3] Colapso econômico · encadeamento 1d6 [2] Reação · Pressão zera
+  Fortuna volta ao máximo

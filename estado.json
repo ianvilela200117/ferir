@@ -1,0 +1,36 @@
+{
+ "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
+ "tempo": {
+  "dia": 427,
+  "hora": "noite",
+  "local": "a fundição de Ireviel",
+  "clima": "limpo, brisa",
+  "pressao": 1,
+  "primeiro_tick_semanal": 434,
+  "limiar_pressao": 5,
+  "proxima_auditoria": 428
+ },
+ "bestiario": {
+  "avistamento": [
+   "Eloune, a Mãe-Lodo",
+   "Lianniel",
+   "Irasa",
+   "Maneus, o Afogado do Vento",
+   "Loula",
+   "Laennor, o Redemoinho"
+  ]
+ },
+ "cobica": {
+  "pontos": 0,
+  "pecas_conhecidas": [
+   "a Matriz",
+   "a Fornalha que Não Apaga",
+   "aros da Eliane",
+   "aros do Graur",
+   "o Gorjal da Isolda (Primordial)",
+   "a Espada do Moreth (Mítica)",
+   "a Lança de Veydun (Mítica)",
+   "o Pilão de Varade (Mítico)"
+  ]
+ }
+}

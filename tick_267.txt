@@ -1,0 +1,14 @@
+[23:50:48] Dia 267 · Pressão 1/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 267 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]
+    ONDE: d23 [23] Zaitor (terra nova)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 267
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Graur → Asazh (LEALDADE CEGA) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Draa desafia para duelo Herkald, por causa de uma receita perdida
+    FAÍSCA: Venne (morto) procura Ulair, por causa de uma profecia
+    FAÍSCA: Skedda rouba de Ithra, por causa de a Matriz

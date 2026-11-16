@@ -1,0 +1,25 @@
+# avisos do conferidor já vistos, anotados no envelope e resolvidos (um começo de aviso por linha)
+# Dia 248: os ticks antes do patch do 224 e o 230 rolaram a trama de Ferir (sem efeito em cena; patch do 224 e do 248)
+TRAMA DO JOGADOR rolada em tick_210.txt
+TRAMA DO JOGADOR rolada em tick_216.txt
+TRAMA DO JOGADOR rolada em tick_217.txt
+TRAMA DO JOGADOR rolada em tick_224.txt
+TRAMA DO JOGADOR rolada em tick_230.txt
+TRAMA DO JOGADOR rolada em tick_248.txt
+# Dia 248: os pilares não rolaram de 217 a 245; leitura: retomam no 252, sem rolar para trás (anotado no envelope)
+PILARES: o tick semanal 217
+PILARES: o tick semanal 224
+PILARES: o tick semanal 231
+PILARES: o tick semanal 238
+PILARES: o tick semanal 245
+# nomes já em jogo há tempo (um lugar e um mago; Goreth e Moreth): ficam, com cuidado
+NOMES PARECIDOS: ['Goreth'] × ['Moreth']
+NOMES PARECIDOS: ['Kasra'] × ['Kassa']
+# 266: falso aviso: "a Carea) muda a regra: o ferreiro de Ireviel" (ela segue em Levis)
+CÂNONE CONTRARIADO em envelope_sessao2m.md:522 — o certo: a Carea mora em LEVIS
+CÂNONE CONTRARIADO em envelope_sessao2m.md:529 — o certo: a Carea mora em LEVIS
+# 286: verbo em maiúsculas, não é nome
+NOME SEM DECLARAÇÃO no último bloco do estado: QUEIMARAM
+# 403: as duas linhas são a ACUSAÇÃO do Borecci (que a aprendiz bateria o vaduar quente), não um fato da casa
+CÂNONE CONTRARIADO em envelope_sessao2n.md:291 — o certo: a casa bate o vaduar A FRIO
+CÂNONE CONTRARIADO em envelope_sessao2n.md:526 — o certo: a casa bate o vaduar A FRIO

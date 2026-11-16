@@ -1,0 +1,15 @@
+[16:10:19] Dia 340 · Pressão 4/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 340 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d27 [25] Ulra (terra nova)
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    ——
+  O MUNDO VIVO — Dia 340
+    um Lendário age (d20 [2]):
+    Eiandald (fé, Yaelane) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [9] chega no dia 341
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [2] nada visível
+    FAÍSCA: Garkunn encomenda uma peça para a Guardiã da Tenaz, por causa de uma dívida antiga
+    FAÍSCA: Gorine vai trair o conselheiro Pelagri, por causa de uma receita perdida
+    FAÍSCA: Skotha Graskur encomenda uma peça para Gorron (oferece a missão do Delta), por causa de a Fornalha que Não Apaga

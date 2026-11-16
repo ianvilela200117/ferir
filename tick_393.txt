@@ -1,0 +1,41 @@
+[23:41:21] Dia 393 · Pressão 2/5 · evento local 1d20 [17] -> falta algo no mercado (preço sobe)
+  O TEMPO (24 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: calor forte, vento forte (d6 [6] muda, d20 [12] · vento d6 [6]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: calor forte, brisa (d6 [4] muda, d20 [12] · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: chuva de verão, brisa (d6 [6] muda, d20 [16] · vento d6 [3]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: limpo, vento forte (d6 [4] muda, d20 [1] · vento d6 [6])
+   O RIO: normal [37/100]
+  avistamento de monstro 1d20 [16] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 393 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Culto do Erynar
+    adora: um Lendário morto
+    promete: riqueza
+    sinal: cheiro de incenso
+    células: 4 cidades
+    líder: nível 170, classe Rara a Lendária
+    rito: roubo de crianças
+    plano (relógio de 6): envenenar uma feira
+    fraqueza: o patrono cobra caro
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 393
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [2] nada visível
+    FAÍSCA: o Doge Pelaone deve a vida a Nouse, por causa de o perdão
+    FAÍSCA: Skugek encomenda uma peça para Iorin, por causa de um título
+    FAÍSCA: Brogos quer casar com a mestra Carea, por causa de uma profecia
+  AUDITORIA (XXIII.23, Dia 393): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 393 ===
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 30.076, envelope diz 29.230.
+    (2 avisos novos · 8 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #110: FACÇÃO — (culto) os Olhos Pintados (a estrada sul de Ireviel) ameaça ou sabota a casa (pequeno, mas visível). O que querem: rouba crianças; 305: uma pedra com olhos pintados e um sapato de criança na estrada sul (o culto avança)
+  ▶ AGENDA #114: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: Kredun, a Filha da Mãe Branca (Mítico, as Fundas do Norte): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): assalta uma estrada ou aldeia (roubo, mortos) · COMO CHEGA: d20 [15] FIEL

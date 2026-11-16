@@ -1,0 +1,208 @@
+[10:23:24] Dia 350 · Pressão 4/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [1] Eloune, a Mãe-Lodo
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 350 (semana)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Thura
+    desejo: curar alguém
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: o fogo
+    segredo: já matou e ninguém sabe
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: salvar um filho custa a vida de um estranho
+    traços: HONESTO e ORGULHOSO
+    ————————————————————————————————————————
+    ——
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]
+    ONDE: d27 [23] Zaitor (terra nova)
+    A NOTÍCIA: [4] em 1d6 [1] dias
+    ——
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d27 [6] Gogrunn (as minas)
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    ——
+    TERRA ALÉM DO MAPA 1d6 [3] → nada
+  O MUNDO VIVO — semana (Dia 350)
+   OS LENDÁRIOS:
+    Skotha Graskur 8/8 (próximo passo no dia 306)
+    Qunemneth, o Médico Cinzento 0/8 (próximo passo no dia 367)
+    Almision 8/8 (próximo passo no dia 305)
+    Gorine 4/8 (próximo passo no dia 365)
+    Ceduion, reitor do Colégio de Telosus 0/8 (próximo passo no dia 371)
+    a Guardiã da Tenaz 0/8 (próximo passo no dia 367)
+    Eiandald 8/8 (próximo passo no dia 344)
+    Leliel relógio 3/8 (unificar os clãs do norte sob uma coroa)
+    Leliel (influência, Farenta) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [17] chega no dia 354
+    Adurel 1/8 (próximo passo no dia 359)
+    Altheltia relógio 5/8 (fundar uma ordem (a Ordem dos Juncos: ofício e cura))
+    Altheltia (ofício, o Delta) d20 [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · notícia d20 [3] chega hoje
+    Teraseth 3/8 (próximo passo no dia 357)
+    Naera 3/8 (próximo passo no dia 352)
+    Xaysress relógio 5/8 (abrir um caminho além do mapa)
+    Xaysress (ofício, Kremir) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [2] chega hoje
+    Souane relógio 4/8 (dar de comer a todo o Delta (comprar o sal e o grão de todos) [a obra saiu SURPRESA; LEITURA pelo desejo dele])
+    Souane (influência, o Delta) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [4] chega hoje
+    Garkunn 3/8 (próximo passo no dia 353)
+    Celocus 3/12 (próximo passo no dia 357)
+    Lurentetta 3/12 (próximo passo no dia 357)
+    Borecci 3/12 (próximo passo no dia 357)
+    Mamiltia relógio 3/12 (vingar um povo)
+    Mamiltia (fé, Telosus) d20 [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · notícia d20 [10] chega no dia 353
+   MONSTROS GRANDES (Épico para cima):
+    Eloune, a Mãe-Lodo (Épico 136, Ireviel e o rio (lodaçais)) d20 [16] persegue uma caravana ou barca por dias · notícia d20 [9] chega no dia 352
+    Stundald, a Raiz-de-Ferro (Épico 142, Kremir) d20 [1] dorme / quieto · notícia d20 [1] chega hoje
+    Yirane, a Que Come a Pedra (Épico 136, Levis (minas de cima)) d20 [3] migra 1 região (rola para onde) · notícia d20 [16] chega no dia 352
+       migra para: Shizess
+    Maneus, o Afogado do Vento (Lendário 286, Steunn) d20 [10] dorme fundo (some por 1d4 semanas) · notícia d20 [7] chega no dia 353
+    Quneus, o Caçador de Gigantes (Lendário 219, Mordun) d20 [10] dorme fundo (some por 1d4 semanas) · notícia d20 [5] chega no dia 353
+    Elaeva, a Floresta que Anda (Mítico 370, Zisrir) d20 [5] cria: aparecem crias (1d6) perto do habitat · notícia d20 [17] chega no dia 356
+    Ithvil (Mítico 272, Levis) d20 [5] cria: aparecem crias (1d6) perto do habitat · notícia d20 [6] chega no dia 351
+    Kredun, a Filha da Mãe Branca (Mítico 306, as Fundas do Norte) d20 [14] fica ferido (alguém o caçou e quase conseguiu) · notícia d20 [9] chega no dia 352
+    a Mãe Branca (Primordial, dormindo, os Picos Brancos) d20 [13] dorme
+    Fenron (Épico 122, Shizess) d20 [16] persegue uma caravana ou barca por dias · notícia d20 [16] chega no dia 355
+    Lumdun (Lendário 211, Mordun) d20 [10] dorme fundo (some por 1d4 semanas) · notícia d20 [6] chega no dia 353
+    Laennor, o Redemoinho (Raro 69, as SALINAS VELHAS ao sul (56/480 no 203 · 86/480 no 206, VISTO pelos salineiros; sara 10 por dia; fraquezas: Terra e o próprio nome); embaixo das salinas, QUOIUM, a cidade afundada) d20 [1] dorme / quieto · notícia d20 [3] chega hoje
+    Krekos (Raro 48, Shizess) d20 [4] ataca uma aldeia ou caravana (notícia certa) · notícia d20 [1] chega hoje
+    Brakos (Raro 34, o Delta) d20 [20] SURPRESA: gerador de novidade ligado a ele · notícia d20 [18] não chega sozinha (só a espionagem ou quem for atrás)
+    Kervos (Único 116, Levis (a estrada)) d20 [17] destrói uma ponte, estrada ou mina (o comércio sente) · notícia d20 [12] chega no dia 356
+    Thargos (Mítico 329, Mordun) d20 [3] migra 1 região (rola para onde) · notícia d20 [11] chega no dia 354
+       migra para: Steunn
+    Varogh (Lendário 247, a Mata de Elais) d20 [9] alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · notícia d20 [5] chega no dia 352
+    Asith (Incomum 29, Zisrir) d20 [18] atrai monstros menores ao redor (o lugar fica perigoso) · notícia d20 [7] chega no dia 353
+    Husgarn (Único 134, Farenta) d20 [2] caça perto do habitat (gado ou gente some) · notícia d20 [6] chega no dia 353
+    Bruur (Épico 152, a costa) d20 [19] aparece de dia, à vista de muitos (pânico e notícia certa) · notícia d20 [3] chega hoje
+    Krothos (Lendário 295, Brassa (a torre que solta o ar podre): o agente da Lumine diz que a TORRE ANDA) d20 [19] aparece de dia, à vista de muitos (pânico e notícia certa) · notícia d20 [9] chega no dia 351
+    Asesra (Raro 40, Kremir) d20 [17] destrói uma ponte, estrada ou mina (o comércio sente) · notícia d20 [7] chega no dia 353
+    Vathexa (Lendário 262, ronda ULIRV, em Steunn (o Erymir ouviu)) d20 [2] caça perto do habitat (gado ou gente some) · notícia d20 [8] chega no dia 352
+    Isyzis (Épico 94, o rio acima de Levis) d20 [20] SURPRESA: gerador de novidade ligado a ele · notícia d20 [1] chega hoje
+   POVOS-MONSTRO (bandos):
+    Thog (orcs) (orcs, 70, Marasar; chefe Draa nível 22) d20 [8] um Lendário, culto ou facção os contrata ou escraviza · plano 6/6 · notícia d20 [13] chega no dia 353
+    Grukos (ogros) (ogros, 140, a Mata de Elais; chefe Brogos nível 14) d20 [14] são caçados por uma companhia (perdem 1d6×5) · plano 6/6 · notícia d20 [18] não chega sozinha (só a espionagem ou quem for atrás)
+    Vrurn (trolls) (trolls, 160, Yaelane; chefe Ulair nível 31) d20 [2] assalta uma estrada ou aldeia (roubo, mortos) · plano 6/6 · notícia d20 [12] chega no dia 351
+    Vradda (homens-lagarto) (homens-lagarto, 60, Gogrunn; chefe Grerkur nível 36) d20 [6] o chefe é desafiado (1d6: 1-3 cai, novo chefe) · plano 5/6 · notícia d20 [8] chega no dia 351
+       [5] o chefe aguenta
+    Kraek (harpias) (harpias, 100, Telosus; chefe Skugek nível 14) d20 [9] descem para perto das cidades (fome, frio, medo de algo maior) · plano 6/6 · notícia d20 [7] chega no dia 351
+   TRAMAS (amor, ódio, ressentimento):
+    Ferir → a Liga (os conselheiros): VINGANÇA JURADA (a trama é do JOGADOR: não rola)
+    Ruddo → Seline (em Ireviel): TRAIÇÃO PENDENTE (uma terra ou casa) d20 [8] segue · 2/4
+    Mormir (o eremita de Quoine, os Sem-Torre) → Messer Baldo Cerrini (mercador de lã de Farenta; o depósito): RIVALIDADE (uma fé diferente) d20 [4] segue · 2/4
+    Tamel (morto) → a casa da fundição: MEDO (um amor recusado) d20 [17] ESQUENTA · 4/4 → EXPLODE: vira cena ou evento esta semana (o Mestre mostra)
+    o conselheiro Pelagri → Skugek: DESEJO SECRETO (um filho ou uma filha) d20 [6] segue · 2/4
+    Hrotgar → Orast: PAIXÃO PROIBIDA (um segredo descoberto) d20 [11] segue · 3/4
+    Isolda → Almision: RESSENTIMENTO (um cargo ou título) d20 [6] segue · 2/4
+    Tamel (morto) → Grerkur: AMOR (uma terra ou casa) d20 [3] esfria · 0/4 → apagou
+    TRAMA NOVA: Borecci → Tilde: ÓDIO (uma promessa quebrada), 2/4
+   ESPIONAGEM DA CASA:
+    CD de Marasar = 40: base +20 · tamanho (capital) +10 · ordem (guarda forte) +8 · riqueza (rica) +4 · rede inimiga (a Liga) +4 · a Skotha e os orcs nas portas (cerco) -6
+    CD de Farenta = 37: base +20 · tamanho (cidade) +5 · ordem (guarda) +5 · riqueza (rica) +4 · rede inimiga (os conselheiros) +3
+    CD de Levis = 31: base +20 · tamanho (cidade) +5 · ordem (guarda) +5 · riqueza (média) +2 · rede inimiga (o Clã do Hrotgar) +3 · o Krekos nos poços (monstro perto) -2 · amigo da casa: a Brara -2
+    CD de o Delta = 18: base +20 · tamanho (vila) +2 · ordem (fraca) +2 · riqueza (pobre) +0 · a febre do brejo -4 · amigo da casa: o contato das salinas -2
+    Marasar: célula caída
+    Farenta: célula caída
+    Levis: célula caída
+    o Delta (força 2): [16, 12] + 8 + 4 = 40 vs 28 → UM SEGREDO (plano de facção, Lendário ou vilão da região)
+    REDES INIMIGAS tentando entrar em Ireviel:
+     a Liga (o Doge): [13, 10]+16 = 39 × contra [1, 7]+35 = 43 → barrada
+     os Descalços: [11, 13]+14 = 38 × contra [7, 6]+35 = 48 → PEGA: um agente deles cai na mão da contra-espionagem
+     a Lumine: [4, 12]+12 = 28 × contra [18, 18]+35 = 71 → PEGA: um agente deles cai na mão da contra-espionagem
+     os conselheiros (Pelagri, Aldoveri, Tiracci): [18, 20, 3]+15 = 56 × contra [1, 20, 15]+35 = 71 → PEGA: um agente deles cai na mão da contra-espionagem
+     o Ardenghi: [9, 6]+10 = 25 × contra [12, 18]+35 = 65 → PEGA: um agente deles cai na mão da contra-espionagem
+     o Clã do Hrotgar: [19, 13]+12 = 44 × contra [2, 5]+35 = 42 → ENTRA e descobre algo da casa (d6 da lista de segredos) · segredo [3]
+   FAÍSCAS DO MESTRE (usar pelo menos 1):
+    FAÍSCA: Borecci ama em segredo Odrum, por causa de um mapa
+    FAÍSCA: Bren (morto) inveja Thugek, por causa de fome
+    FAÍSCA: Eiundunn deve a vida a Messer Rovai, por causa de a Fornalha que Não Apaga
+    FAÍSCA: Souane quer casar com Sira, por causa de um feitiço proibido
+    FAÍSCA: o podestà Tirello desafia para duelo Skedda, por causa de uma dívida antiga
+  TICK SEMANAL (Dia 350) — checklist completo:
+   · vínculos 1d20 [16, 8] (1-9 desce, 10-11 fica, 12-20 sobe; 1 e 20 rompem ou selam) · cobiça 1d20 [20, 14, 9, 18, 19, 4, 17, 3] (1-3 alguém age pela peça; 1 é alguém grande)
+   [ 1] RELÓGIOS: facções, Lendários, ambições de NPC e cultos (acima)
+   [ 2] AGENDAS E AMBIÇÕES: até 6 NPCs relevantes dão um passo (primeiro os dos fios ativos); um DILEMA chega a quem tem ambição em 3/4
+   [ 3] XP E NÍVEL DOS NPCs: somar o que cada um fez na semana (XVI.4) no cresce.py (lutas: nível × 10; ajudante 1/4; missões); a CLASSE de cada um pesa no que fez
+   [ 4] ECONOMIA DA CASA: lançar renda, despesa, soldos, comida e material no livro (Módulo 12); saldo novo do cofre
+   [ 5] COMIDA: porções da semana = pessoas × 7; falta de comida aplica a Fome (XIX)
+   [ 6] MATERIAL: estoque de cada material depois do que a forja gastou (XI.5)
+   [ 7] MERCADOS: o que foi vendido pesa na saturação; o que sobrou de estoque regional
+   [ 8] VÍNCULOS: 2 vínculos entre NPCs se movem (Módulo 1)
+   [ 9] LAÇOS ÍNTIMOS: o par e a família (Módulo 9): 1 momento ou 1 atrito da semana; e PERGUNTAR ao jogador o que Ferir sente
+   [10] COBIÇA: cada peça Mítica ou Lendária conhecida rola (Módulo 10)
+   [11] FIOS: cada fio ativo avança um passo
+   [12] NOVIDADE E MEMÓRIA: algo novo entra (gerador.py novidade) e algo antigo volta (XXI.6)
+   [13a] A SEMANA DOS NPCs (regra da casa, Dia 200: ocupação, missões, ouro e XP):
+      Eliane: d10 [6]+1 → PASSO · +500 XP · (comanda a guarda e a milícia; treina a milícia; caça)
+      Herkald: d10 [10]+1 → SURPRESA (gerador) · +500 XP · (mestre da bancada; o martinete)
+      Graur: d10 [10]+1 → SURPRESA (gerador) · +500 XP · (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))
+      Krernos: d10 [8] → MISSÃO/FEITO · +1000 XP · ouro 240 · (Comida e Comércio; o sal do Delta)
+      Ulurve: d10 [5] → PASSO · +500 XP · (a ponte do Clã; o Braseiro)
+      Nouliel: d10 [8] → MISSÃO/FEITO · +1000 XP · ouro 775 · (o livro; os pilares; a caixa-forte)
+      Skedda: d10 [7] → PASSO · +500 XP · (o pedágio do sal; os 10 Selos)
+      Iorin: d10 [2] → rotina · (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)
+      Sira: d10 [5] → PASSO · +500 XP · (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)
+      Gaald: d10 [7] → PASSO · +500 XP · (a forja grande)
+      Brara: d10 [8]+1 → MISSÃO/FEITO · +1000 XP · ouro 1830 · (GOVERNADORA DE LEVIS (335))
+      Ouvald: d10 [2] → rotina · (no PORTO DE MARASAR com o remédio (295))
+      Nelior: d10 [10] → SURPRESA (gerador) · +500 XP · (o lazareto e a enfermaria das crianças)
+      Tirello: d10 [6] → PASSO · +500 XP · (a praça, as festas e os casamentos (o conselho governa, escrito no 204))
+      Thugek: d10 [9] → MISSÃO/FEITO · +1000 XP · ouro 950 · (ENTREGUE à justiça de Levis pelo conselho (304))
+      Isolda: d10 [1]+1 → PROBLEMA · (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))
+      Thuron: d10 [8]+1 → MISSÃO/FEITO · +1000 XP · ouro 2040 · (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)
+      Ithra: d10 [1] → PROBLEMA · (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)
+      Oslo: d10 [9] → MISSÃO/FEITO · +1000 XP · ouro 250 · (a guarda da Eliane)
+      Odrum: d10 [4] → PASSO · +500 XP · (refugiado em Ireviel (Dia 202))
+      Tilde: d10 [1] → PROBLEMA · (ajudante de Ferir na forja (sempre ao lado dele))
+      Brua: d10 [3] → rotina · (os capuzes do Graur)
+      capuz 3: d10 [5] → PASSO · +500 XP · (os capuzes do Graur)
+      capuz 4: d10 [5] → PASSO · +500 XP · (os capuzes do Graur)
+      Kreium: d10 [3] → rotina · (devolvido ao Clã (208), na barca para Levis)
+      Seline: d10 [7] → PASSO · +500 XP · (banca na feira de Ireviel (crédito da casa, 209))
+      Malvezzi: d10 [7] → PASSO · +500 XP · (sargento do podestà Tirello; vendido aos conselheiros (a casa sabe desde o 209))
+      Dolassi: d10 [6] → PASSO · +500 XP · (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))
+      Draron: d10 [7]+1 → MISSÃO/FEITO · +1000 XP · ouro 1100 · (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)
+      Kreine: d10 [10]+1 → SURPRESA (gerador) · +500 XP · (EXILADO (324): condenado pela morte do capitão da galé do 218)
+      Braeth: d10 [2]+1 → rotina · (enviado do Hrotgar a Ireviel (Dia 210))
+      Mormir: d10 [10] → SURPRESA (gerador) · +500 XP · (o eremita de QUOINE (Zisrir); chefe dos SEM-TORRE, magos mandados embora pelo Colégio de Telosus falido)
+      Moreth: d10 [8]+1 → MISSÃO/FEITO · +1000 XP · ouro 5750 · (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)
+      Draek: d10 [1]+1 → PROBLEMA · (emissário da Liga em Ireviel (Dia 211); volta a Marasar)
+      Kassa: d10 [5]+1 → PASSO · +500 XP · (vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219))
+      Veyula: d10 [2]+1 → rotina · (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)
+      Selron: d10 [10] → SURPRESA (gerador) · +500 XP · (espia a estrada de Ireviel; olhava A FORJA (Dia 215))
+      Goreth: d10 [8] → MISSÃO/FEITO · +1000 XP · ouro 950 · (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)
+      Ulnar: d10 [10] → SURPRESA (gerador) · +500 XP · (o Malvezzi encomenda para ele uma espada (Dia 217))
+      Gorron: d10 [3] → rotina · (casou no Clã, com gente do Hrotgar (Dia 218))
+      Selula: d10 [1] → PROBLEMA · (no lazareto de Ireviel, ferido (Dia 221))
+      Thuast: d10 [9]+1 → SURPRESA (gerador) · +500 XP · (em Ireviel (231): fala pela Skotha; pede a galé)
+      Orvenne: d10 [5] → PASSO · +500 XP · (passou por Levis no 241)
+      Erymir: d10 [8]+1 → MISSÃO/FEITO · +1000 XP · ouro 275 · (em Ireviel desde o Dia 244: quer ver o FEITO de Ferir (Magia Mestre))
+      Selvil: d10 [9] → MISSÃO/FEITO · +1000 XP · ouro 375 · (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)
+      Orol: d10 [1] → PROBLEMA · (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)
+      Sorvane: d10 [2] → rotina · (pede à TILDE escolta até LEVIS (missão S, 8 dias, desde o 252))
+      Tolvane: d10 [2] → rotina · (VOZ DO POVO no conselho real (eleito no 296))
+      Carea: d10 [3] → rotina · (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)
+      Tessal: d10 [4] → PASSO · +500 XP · (Casa dos Estudiosos (259): bolsa de 40 por semana)
+      Tedulteth: d10 [9] → MISSÃO/FEITO · +1000 XP · ouro 375 · (Casa dos Estudiosos (266): bolsa de 40 por semana)
+      Groa: d10 [5]+1 → PASSO · +500 XP · (ajudante na Fornalha (272; 20 por semana))
+      Bjarkunn: d10 [10]+1 → SURPRESA (gerador) · +500 XP · (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))
+      Lucissi: d10 [3] → rotina · (em Ireviel, sustentada pelo Moreth (264))
+      Tavrel: d10 [3] → rotina · (passou por Ireviel no 260)
+      Eiagrir: d10 [6]+1 → PASSO · +500 XP · (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))
+      Nialla: d10 [7] → PASSO · +500 XP · (Casa dos Estudiosos (273); voz dos DO JUNCO)
+      Oisse: d10 [9] → MISSÃO/FEITO · +1000 XP · ouro 960 · (em Ireviel desde o 275: a enfermaria da casa)
+      Hruthos: d10 [5]+1 → PASSO · +500 XP · (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)
+      Donione: d10 [6] → PASSO · +500 XP · (ao lado do Tirello desde o 280)
+      Starkald: d10 [3]+1 → PASSO · +500 XP · (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)
+      Vrethur: d10 [7]+1 → MISSÃO/FEITO · +1000 XP · ouro 1625 · (chegou pelo chamado (315))
+   [13] O MUNDO CRESCE (obrigatório, regra da casa do Dia 199): lançar no cresce.py o XP da semana de cada NPC ANTES; agora o livro sobe quem tem XP:
+      Ulurve: SOBE a 42 (sobra 400/4200)
+      Skedda: SOBE a 37 (sobra 30630/3700)
+      Iorin: SOBE a 43 (sobra 46073/4300)
+      Tirello: SOBE a 48 (sobra 200/4800)
+      Odrum: SOBE a 18 (sobra 200/1800)
+      Tilde: SOBE a 28 (sobra 77618/2800)
+      Malvezzi: SOBE a 34 (sobra 400/3400)
+      Mormir: SOBE a 14 (sobra 400/1400)
+      Goreth: SOBE a 39 (sobra 400/3900)
+      Selvil: SOBE a 16 (sobra 600/1600)
+      Groa: SOBE a 51 (sobra 12925/5100)
+      Nialla: SOBE a 31 (sobra 100/3100)

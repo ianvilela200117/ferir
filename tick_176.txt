@@ -1,0 +1,4 @@
+[10:06:11] Dia 176 · Pressão 5/5 · encontro de estrada 1d6 [6] -> nada
+  avistamento de monstro 1d6 [4] -> nenhum
+  EVENTO DE MUNDO 1d6 [5] Descoberta · encadeamento 1d6 [1] Escalada · Pressão zera
+  Fortuna volta ao máximo

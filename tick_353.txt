@@ -1,0 +1,25 @@
+[10:41:10] Dia 353 · Pressão 2/5 · encontro de estrada 1d20 [20] -> nada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 353 (dia)
+    d20 [2] NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)
+    ONDE: d27 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Lumula
+    desejo: voltar para casa
+    ambição (relógio de 4): entrar numa facção que o recusou
+    medo: voltar a ser escravo
+    segredo: roubou o que tem
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: LEAL e RELIGIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 353
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Mormir (o eremita de Quoine, os Sem-Torre) → Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) (RIVALIDADE) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: Gorron (oferece a missão do Delta) desafia para duelo Skugek, por causa de uma terra além do mapa
+    FAÍSCA: Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301) oferece aliança a Grerkur, por causa de vingança
+    FAÍSCA: Messer Rovai descobre o segredo de Borecci, por causa de uma terra além do mapa
+  AUDITORIA (XXIII.23, Dia 353): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

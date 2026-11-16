@@ -1,0 +1,14 @@
+[00:46:31] Dia 282 · Pressão 1/5 · encontro de estrada 1d20 [8] -> encontro na estrada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 282 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]
+    ONDE: d24 [6] Gogrunn (as minas)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 282
+    Lendários: d20 [16] quietos hoje
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Hrotgar quer casar com a irmã Oisse, por causa de a coberta do mundo
+    FAÍSCA: Maevis (morto) esconde um filho de Aeliae, por causa de um mapa
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus vai trair Messa Tiracci, por causa de vaduar

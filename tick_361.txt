@@ -1,0 +1,15 @@
+[17:47:12] Dia 361 · Pressão 5/5 · evento local 1d20 [9] -> um estrangeiro pergunta pela fundição
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO 1d20 [12] Cisma religioso ou milagre · encadeamento 1d20 [13] A Liga reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 361 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]
+    ONDE: d27 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 361
+    Lendários: d20 [11] quietos hoje
+    trama do dia: Teraseth → Maevis (morto) (DÍVIDA) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Souane oferece aliança a Ruddo, por causa de a coberta do mundo
+    FAÍSCA: Souane procura Ceduion, reitor do Colégio de Telosus, por causa de um herdeiro dos Steunn
+    FAÍSCA: Dovan vai trair Skugek, por causa de a coberta do mundo

@@ -1,0 +1,25 @@
+[01:34:10] Dia 221 · Pressão 5/5 · encontro de estrada 1d20 [3] -> encontro na estrada
+  avistamento de monstro 1d20 [20] -> nenhum
+  EVENTO DE MUNDO 1d20 [4] Morte de figura importante · encadeamento 1d20 [15] Alguém lucra · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 221 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d22 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    [MISSÃO]: Gorvil (o Mestre dá o nome pela ficção)
+    dificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: De Facção
+    objetivo: descobrir quem fez algo
+    complicação escondida (Envelope): a recompensa não existe mais
+    prazo: 1 dias
+    recompensa: 50 XP · 10 de ouro · ??? (revelada ao concluir)
+    penalidade se falhar: quem pediu morre ou se perde
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 221
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Iorin → Ulurve (INVEJA) d20 [4] nada visível
+    FAÍSCA: Orast esconde um filho de Kreium (preso), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Thugek desafia para duelo Kreium (preso), por causa de a Matriz
+    FAÍSCA: Isolda ama em segredo Maevis (morto), por causa de uma terra além do mapa

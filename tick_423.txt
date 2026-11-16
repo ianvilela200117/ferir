@@ -1,0 +1,60 @@
+[08:56:37] Dia 423 · Pressão 2/5 · evento local 1d20 [14] -> um vizinho reclama do barulho ou da fumaça
+  O TEMPO (24 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [1] fica · vento d6 [3])
+   o Porto de Marasar: tempestade, VENTANIA (d6 [2] fica · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Levis: limpo, calmo (d6 [1] fica · vento d6 [1])
+   Farenta: limpo, vento forte (d6 [3] fica · vento d6 [6])
+   O RIO: normal [58/100]
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 423 (dia; G8-A: 1 longe, 1 perto, 1 aleatória)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [4]
+    ONDE: d19 [7] a Mata de Elais (longe)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    → LEITURA DO DADO: incêndio
+    ——
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [4]
+    ONDE: d8 [5] Lumade (perto)  ◆ TOCA A CASA
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    → LEITURA DO DADO: incêndio
+    ——
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d27 [7] Kremir (aleatória)
+    A NOTÍCIA: [1] hoje
+    ——
+  O MUNDO VIVO — Dia 423
+    um Lendário age (d20 [6]):
+    Altheltia (ofício, o Delta) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [1] chega hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [11] nada visível
+    FAÍSCA: Gorron (oferece a missão do Delta) quer matar Herkald, por causa de uma dívida antiga
+    FAÍSCA: Sira inveja Brara, por causa de uma peça Lendária roubada
+    FAÍSCA: Isolda quer matar Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de uma dívida antiga
+  AUDITORIA (XXIII.23, Dia 423): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 423 ===
+    ⚠ NOMES PARECIDOS: ['Hassa'] × ['Kassa']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 23.888, envelope diz 26.648.
+    ⚠ CÂNONE CONTRARIADO em diario_sessao2f.md:753 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:665 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:667 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:669 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:703 — o certo: a casa bate o vaduar A FRIO
+    ⚠ CÂNONE CONTRARIADO em envelope_sessao2n.md:774 — o certo: a casa bate o vaduar A FRIO
+    (9 avisos novos · 10 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #281 (era do Dia 414): FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #332 (era do Dia 421): FACÇÃO — os Sem-Torre (Quoine, a torre caída em Zisrir) pede audiência ao conselho. O que querem: magos que o Colégio de Telosus falido mandou embora sem paga; o MORMIR (o eremita de Quoine) os junta e quer voltar ao Colégio; o filho do Draron é aprendiz del
+  ▶ AGENDA #195: AS 20 LANÇAS NOVAS ficam prontas (recrutamento a, 402)
+  ▶ AGENDA #196: LEVIS: Saúde +1 (mod), duas semanas depois de fechadas as minas de cima (regra G2)
+  ▶ AGENDA #339: A BARCA DO FERRO DE LEVIS chega (os 300 kg da coroa, do armazém do Ardenghi), com um recado da BRARA (o laço da semana do 420: MOMENTO)
+  ▶ AGENDA #341: JULGAMENTO EM PRAÇA do ESCREVENTE DA ALFÂNDEGA DO RIO (pago pelo Ardenghi; preso no 421 por voto do conselho ES421)
+  ▶ AGENDA #346: AS 20 LANÇAS NOVAS: a RONDA: 10 em Ireviel-baixa (Ordem de Ireviel +1, mod, enquanto a ronda durar) e 10 sobem a Levis-baixa (chegam no 427: Ordem de Levis +1, mod); despesa +280 por semana
+  ✉ NOTÍCIA QUE CHEGA HOJE: Celocus (Lumade): o MEDO dele aparece: foge, se esconde ou faz algo desesperado · COMO CHEGA: d20 [15] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [2] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Varogh (Lendário, Steunn): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krothos (Lendário, Levis): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Fundas do Norte): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · COMO CHEGA: d20 [16] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [17] FIEL (a célula da casa confirma)
+  ✉ notícia de longe que chega hoje: INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Kremir · COMO CHEGA: d20 [19] FIEL

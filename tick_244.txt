@@ -1,0 +1,15 @@
+[13:57:08] Dia 244 · Pressão 3/5 · encontro de estrada 1d20 [3] -> encontro na estrada
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 244 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]
+    ONDE: d23 [11] Mordun (a Boca com Fome)
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 244
+    um Lendário age (d20 [1]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [8] sofre um revés (ferida, perda, traição de um próximo) · notícia d20 [8] chega no dia 247
+    trama do dia: Krernos → Graur (RIVALIDADE) d20 [11] nada visível
+    FAÍSCA: Qunemneth, o Médico Cinzento descobre o segredo de Gorra, por causa de a Fornalha que Não Apaga
+    FAÍSCA: o podestà Tirello esconde um filho de Seline, por causa de dinheiro da Liga
+    FAÍSCA: Gorron (oferece a missão do Delta) esconde um filho de Nouse, por causa de um núcleo de monstro

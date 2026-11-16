@@ -1,0 +1,17 @@
+[01:13:10] Dia 218 · Pressão 2/5 · encontro de estrada 1d20 [19] -> nada
+  avistamento de monstro 1d20 [6] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 218 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d22 [22] Kasra (terra nova)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)
+    ——
+  O MUNDO VIVO — Dia 218
+    Lendários: d20 [20] quietos hoje
+    trama do dia: o conselheiro Pelagri → Ruddo (RESSENTIMENTO) d20 [7] nada visível
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) acusa em público Ardenghi, por causa de vingança
+    FAÍSCA: Venne (morto) desafia para duelo Tamel (morto), por causa de um título
+    FAÍSCA: o Doge Pelaone descobre o segredo de Eiandald, por causa de o perdão
+  AUDITORIA (XXIII.23, Dia 218): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

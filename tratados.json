@@ -1,0 +1,70 @@
+{
+ "tratados": {
+  "doge": {
+   "id": "doge",
+   "com": "a Doge Skotha (Marasar)",
+   "texto": "As LANÇAS do rei contra as casas da Liga em Marasar. Em troca: metade dos bens das casas, os presos da Liga entregues ao rei e 1 kg de shasha por semana durante uma estação.",
+   "estado": "vigente",
+   "desde": 387,
+   "clausulas": [
+    {
+     "quem": "nos",
+     "o_que": "mandar as lanças contra as casas da Liga em Marasar",
+     "ate": 395,
+     "feito": true
+    },
+    {
+     "quem": "eles",
+     "o_que": "1 kg de shasha",
+     "a_cada": 7,
+     "proxima": 428
+    },
+    {
+     "quem": "eles",
+     "o_que": "metade dos bens das casas da Liga e os presos entregues ao rei",
+     "ate": 400,
+     "feito": true
+    }
+   ],
+   "log": [
+    "393: vigente ()",
+    "400: nós cumprimos a cláusula 1",
+    "406: eles, cláusula 2: [19]+4 cumprem",
+    "406: eles, cláusula 3: [19]+4 cumprem",
+    "413: eles, cláusula 2: [6]+3 cumprem",
+    "420: eles, cláusula 2: [5]+3 cumprem",
+    "427: eles, cláusula 2: [5]+3 cumprem"
+   ]
+  },
+  "lumade": {
+   "id": "lumade",
+   "com": "o Celocus (Lumade)",
+   "texto": "O PACTO DE LUMADE: o Celocus fica com 40% e já recebeu o anel. Só depois da guerra.",
+   "estado": "proposto",
+   "desde": 387,
+   "clausulas": [],
+   "log": []
+  },
+  "cla": {
+   "id": "cla",
+   "com": "o Clã Hegre",
+   "texto": "O Clã dá 2 kg de therk por mês pela ajuda do rei contra o THARGOS (a ajuda fica para depois da Elaeva).",
+   "estado": "proposto",
+   "desde": 387,
+   "clausulas": [
+    {
+     "quem": "nos",
+     "o_que": "ajudar o Clã contra o Thargos",
+     "ate": 420
+    },
+    {
+     "quem": "eles",
+     "o_que": "2 kg de therk",
+     "a_cada": 30,
+     "proxima": 417
+    }
+   ],
+   "log": []
+  }
+ }
+}

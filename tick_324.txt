@@ -1,0 +1,14 @@
+[14:15:13] Dia 324 · Pressão 3/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 324 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [3]
+    ONDE: d27 [16] as Montanhas de Fogo
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 324
+    Lendários: d20 [13] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) inveja a mestra Carea, por causa de uma terra além do mapa
+    FAÍSCA: Venne (morto) foge de Sira, por causa de um herdeiro dos Steunn
+    FAÍSCA: o Visconte Aldoveri vai trair Skugek, por causa de vingança

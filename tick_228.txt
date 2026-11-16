@@ -1,0 +1,31 @@
+[09:32:35] Dia 228 · Pressão 2/5 · encontro de estrada 1d20 [11] -> nada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 228 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d23 [23] Zaitor (terra nova)
+    A NOTÍCIA: [1] hoje
+    nome: Varade
+    desejo: voltar para casa
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a morte de um filho
+    segredo: trabalha para outra facção
+    linha vermelha: nunca se ajoelha
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: CRUEL e ORGULHOSO
+    nível: 260
+    obra sinistra (relógio de 8): vingar o povo dele
+    por que é humano: foi traído pelo reino
+    equipamento: 3 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: chantagem
+    o que o faria parar: receber o que quer de outro jeito
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 228
+    Lendários: d20 [11] quietos hoje
+    trama do dia: Hrotgar → Orast (DESEJO SECRETO) d20 [6] nada visível
+    FAÍSCA: Pelaccino (preso) vende algo a Tilde, por causa de vingança
+    FAÍSCA: Krernos esconde um filho de Braeth (o ancião do Clã), por causa de um mapa
+    FAÍSCA: Ardenghi oferece aliança a o conselheiro Pelagri, por causa de a Fornalha que Não Apaga
+  AUDITORIA (XXIII.23, Dia 228): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

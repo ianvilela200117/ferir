@@ -1,0 +1,14 @@
+[09:00:04] Dia 292 · Pressão 1/5 · encontro de estrada 1d20 [9] -> nada
+  avistamento de monstro 1d20 [16] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 292 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [6]
+    ONDE: d24 [6] Gogrunn (as minas)
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    ——
+  O MUNDO VIVO — Dia 292
+    Lendários: d20 [10] quietos hoje
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [11] nada visível
+    FAÍSCA: Hrotgar desafia para duelo Mamiltia, por causa de uma terra além do mapa
+    FAÍSCA: Qunemneth, o Médico Cinzento inveja Seline (em Ireviel), por causa de a coberta do mundo
+    FAÍSCA: Almision oferece aliança a Gorra, por causa de a coberta do mundo

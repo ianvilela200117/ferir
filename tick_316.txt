@@ -1,0 +1,16 @@
+[13:48:37] Dia 316 · Pressão 5/5 · encontro de estrada 1d20 [12] -> nada
+  avistamento de monstro 1d20 [10] -> nenhum
+  EVENTO DE MUNDO 1d20 [14] Invenção ou receita nova circula · encadeamento 1d20 [16] Alguém some · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 316 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [5]
+    ONDE: d27 [1] Ireviel e o rio
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 316
+    um Lendário age (d20 [7]):
+    Lurentetta (ofício, o Delta) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [7] chega no dia 319
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [5] nada visível
+    FAÍSCA: Krernos esconde um filho de Lubassino (salineiro do Delta, AMBICIOSO e LEAL; quer formar uma companhia; sócio proposto do Krernos, 301), por causa de um mapa
+    FAÍSCA: Garkunn esconde um filho de Gorron (oferece a missão do Delta), por causa de fome
+    FAÍSCA: Skotha Graskur quer casar com o conselheiro Pelagri, por causa de uma dívida antiga

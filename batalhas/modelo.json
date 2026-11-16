@@ -1,0 +1,55 @@
+{
+ "nome": "modelo: copie e troque",
+ "terreno": "campo",
+ "nota": "terreno: campo, muralha, rio, rua, navio. \"defende\": true dá o bônus do terreno a esse lado.",
+ "lados": {
+  "A": {
+   "nome": "a hoste do rei",
+   "comando": 9,
+   "unidades": [
+    {
+     "nome": "os lanceiros de Ireviel",
+     "homens": 300,
+     "qualidade": 3,
+     "moral": 4,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os arqueiros do Graur",
+     "homens": 80,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "arqueiros"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eliane",
+     "nivel": 94
+    }
+   ]
+  },
+  "B": {
+   "nome": "as casas da Liga",
+   "comando": 6,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "a guarda das casas",
+     "homens": 250,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os mercenários do norte",
+     "homens": 120,
+     "qualidade": 4,
+     "moral": 2,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "nome": "ERYSSA, O MERCADO AFOGADO (tarde do 423, debaixo do dique)",
+ "terreno": "rua",
+ "nota": "REAL. SUR23 [2]: o culto OUVIU a descida; PX23 [4]: linha de lanças atrás das bancas (defende: rua estreita); MAL23 [5] a maldição na ELIANE, MAL23b [2] FALHOU: ela fora e ferida leve; MOR23 [1] a guarda segura. A guarda é a unidade; se ela perder gente, conta-se a guarda; os heróis caem só pela regra do herói ferido.",
+ "lados": {
+  "A": {
+   "nome": "o rei, os três e a guarda",
+   "comando": 6,
+   "unidades": [
+    {
+     "nome": "20 da guarda de Ireviel",
+     "homens": 20,
+     "qualidade": 3,
+     "moral": 4,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Ferir",
+     "nivel": 153
+    },
+    {
+     "nome": "Moreth",
+     "nivel": 231
+    },
+    {
+     "nome": "Eiagrir",
+     "nivel": 124
+    },
+    {
+     "nome": "Isolda",
+     "nivel": 116
+    },
+    {
+     "nome": "Eliane",
+     "nivel": 95,
+     "fora": true
+    }
+   ]
+  },
+  "B": {
+   "nome": "a ala do cais do Xaathis",
+   "comando": 4,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "os 28 de Eryssa",
+     "homens": 28,
+     "qualidade": 2,
+     "moral": 5,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "o sacerdote do Xaathis (Sangue)",
+     "nivel": 67
+    }
+   ]
+  }
+ }
+}

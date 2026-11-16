@@ -1,0 +1,31 @@
+[13:48:37] Dia 318 · Pressão 2/5 · encontro de estrada 1d20 [1] -> encontro na estrada
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 318 (dia)
+    d20 [12] UM VILÃO NOVO entra no mundo
+    ONDE: d27 [1] Ireviel e o rio
+    A NOTÍCIA: [1] hoje
+    nome: Lumkos
+    desejo: ser perdoado
+    ambição (relógio de 4): conquistar terra
+    medo: a morte de um filho
+    segredo: é filho de quem não deveria
+    linha vermelha: nunca vende o ofício barato
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: CRUEL e VINGATIVO
+    nível: 100
+    obra sinistra (relógio de 8): forjar uma arma Mítica proibida
+    por que é humano: tem medo de morrer
+    equipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)
+    método: fé
+    o que o faria parar: ser desmascarado em público
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 318
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Mormir (o eremita de Quoine, os Sem-Torre) → Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) (RIVALIDADE) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Thuron vai trair Almision, por causa de uma criança
+    FAÍSCA: Messa Tiracci pede ajuda a Ithra, por causa de um herdeiro dos Steunn
+    FAÍSCA: Celocus quer casar com Nouliel, por causa de o perdão
+  AUDITORIA (XXIII.23, Dia 318): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

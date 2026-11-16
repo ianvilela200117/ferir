@@ -1,0 +1,4 @@
+[16:30:23] Dia 191 · Pressão 5/5 · encontro de estrada 1d6 [3] -> acontece algo
+  avistamento de monstro 1d6 [3] -> nenhum
+  EVENTO DE MUNDO 1d6 [6] Evento mágico · encadeamento 1d6 [3] Oportunidade · Pressão zera
+  Fortuna volta ao máximo

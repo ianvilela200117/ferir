@@ -1,0 +1,33 @@
+{
+ "pv": 34420,
+ "pvm": 37600,
+ "a_bordo": [
+  "Mamiltia",
+  "Eiagrir",
+  "Ferir"
+ ],
+ "dias": [
+  {
+   "dia": 382,
+   "antes": 37600,
+   "depois": 35680,
+   "dano": {
+    "Mamiltia": 1180,
+    "Eiagrir": 585,
+    "Ferir": 155
+   }
+  },
+  {
+   "dia": 383,
+   "antes": 35680,
+   "depois": 34420,
+   "dano": {
+    "Mamiltia": 880,
+    "Eiagrir": 177,
+    "Ferir": 203
+   }
+  }
+ ],
+ "fim": null,
+ "feridos": {}
+}

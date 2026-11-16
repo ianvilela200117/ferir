@@ -1,0 +1,23 @@
+[22:25:03] Dia 369 · Pressão 3/5 · evento local 1d20 [1] -> nada
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 369 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    nome: Haade
+    desejo: sair da cidade
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: a velhice
+    segredo: deve a alguém perigoso
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: CURIOSO e VINGATIVO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 369
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Teraseth → Maevis (morto) (DÍVIDA) d20 [9] nada visível
+    FAÍSCA: Iorin oferece aliança a Gorra, por causa de vingança
+    FAÍSCA: Souane esconde um filho de Borecci, por causa de um herdeiro dos Steunn
+    FAÍSCA: Ulurve pede ajuda a Lurentetta, por causa de um título

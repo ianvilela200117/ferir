@@ -1,0 +1,86 @@
+{
+ "nome": "(a) a RATOEIRA no cais, com o rei",
+ "terreno": "rua",
+ "nota": "400, a 2ª Visão do rei (meia-noite): régua, sem valor de jogo; regras M5 do envelope.",
+ "lados": {
+  "A": {
+   "nome": "a casa",
+   "comando": 12,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "as 24 lanças",
+     "homens": 24,
+     "qualidade": 4,
+     "moral": 4,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 15 da Companhia",
+     "homens": 15,
+     "qualidade": 4,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os 60 croques dos Filhos do Livro",
+     "homens": 60,
+     "qualidade": 2,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "os três capuzes do Graur",
+     "homens": 3,
+     "qualidade": 5,
+     "moral": 4,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eliane",
+     "nivel": 95
+    },
+    {
+     "nome": "Moreth",
+     "nivel": 230
+    },
+    {
+     "nome": "Eiagrir",
+     "nivel": 123
+    },
+    {
+     "nome": "Hruthos",
+     "nivel": 88
+    },
+    {
+     "nome": "Starkald",
+     "nivel": 86
+    },
+    {
+     "nome": "Graur",
+     "nivel": 75
+    },
+    {
+     "nome": "Ferir",
+     "nivel": 143
+    }
+   ]
+  },
+  "B": {
+   "nome": "os 90 do Ardenghi (o Malvezzi)",
+   "comando": 5,
+   "unidades": [
+    {
+     "nome": "os homens do Ardenghi",
+     "homens": 90,
+     "qualidade": 3,
+     "moral": 3,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ }
+}

@@ -1,0 +1,52 @@
+{
+ "nome": "O PORTÃO DA COSTA (1h do 401): os saqueadores do Gugre testam o muro",
+ "terreno": "muralha",
+ "nota": "REAL. SAD4 = 4: o Salvio segura os cem e manda os 20 saqueadores (qualidade 2, moral 2). MD [4]: o Eiagrir, o Starkald e 8 lanças com a milícia.",
+ "lados": {
+  "A": {
+   "nome": "o portão da costa (o Eiagrir)",
+   "comando": 6,
+   "defende": true,
+   "unidades": [
+    {
+     "nome": "a milícia de Ireviel",
+     "homens": 40,
+     "qualidade": 2,
+     "moral": 3,
+     "tipo": "infantaria"
+    },
+    {
+     "nome": "as 8 lanças",
+     "homens": 8,
+     "qualidade": 4,
+     "moral": 4,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": [
+    {
+     "nome": "Eiagrir",
+     "nivel": 123
+    },
+    {
+     "nome": "Starkald",
+     "nivel": 86
+    }
+   ]
+  },
+  "B": {
+   "nome": "os saqueadores do Gugre",
+   "comando": 4,
+   "unidades": [
+    {
+     "nome": "os saqueadores de naufrágio",
+     "homens": 20,
+     "qualidade": 2,
+     "moral": 2,
+     "tipo": "infantaria"
+    }
+   ],
+   "herois": []
+  }
+ }
+}

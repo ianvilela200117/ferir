@@ -1,0 +1,32 @@
+[19:23:17] Dia 405 · Pressão 4/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  O TEMPO (6 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [1] fica · vento d6 [4])
+   o Porto de Marasar: nublado, brisa (d6 [3] fica · vento d6 [4])
+   Levis: limpo, calmo (d6 [1] fica · vento d6 [2])
+   Farenta: calor forte, vento firme (d6 [1] fica · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [2/100]
+  avistamento de monstro 1d20 [10] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 405 (dia)
+    d20 [7] ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [4]
+    ONDE: d27 [18] a costa (Ireviel–Marasar)  ◆ TOCA A CASA
+    A NOTÍCIA: [4] em 1d6 [2] dias
+    → LEITURA DO DADO: fecha
+    ——
+  O MUNDO VIVO — Dia 405
+    um Lendário age (d20 [5]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20) · 1d20 [17] · notícia d20 [19] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [1] nada visível
+    FAÍSCA: Ithra oferece aliança a o conselheiro Pelagri, por causa de uma terra além do mapa
+    FAÍSCA: Mamiltia salva Odrum, por causa de dinheiro da Liga
+    FAÍSCA: o podestà Tirello descobre o segredo de Eliane, por causa de a Matriz
+  ▶ AGENDA #7 (era do Dia 400): LUA NOVA DA FORJA: o prazo que a carta do Aldoveri deu ao Lulacco para sair de Ireviel (um ATAQUE a Ireviel, segundo a carta).
+  ▶ AGENDA #178 (era do Dia 400): FACÇÃO — os da Luz do Cais (o porto de Marasar) pede audiência ao conselho. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #180 (era do Dia 400): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #186 (era do Dia 401): CHEGA a Marasar: o recado do rei ao HIRKUNN, o Selador (lugar na casa) (saiu de Ireviel no 400)
+  ▶ AGENDA #119 (era do Dia 402): [OCULTO] NOTÍCIA (chega por Levis): o CLÃ HEGRE RACHOU: a cadeira do Hrotgar disputada por uma vingança antiga; ninguém venceu (EV391 [5], EV391b [10]). Pesa no tratado do therk, na mediação dos Vradda e no Hulgunn.
+  ▶ AGENDA #187 (era do Dia 402): A GROA sai da cama (o veneno do Zitha)
+  ▶ AGENDA #131: CHEGA a Levis: o OUVALD com o remédio (voto C397c) (saiu de Marasar no 397)
+  ▶ AGENDA #188: O THURON sai da cama (o veneno do Zitha)
+  ✉ notícia de longe que chega hoje: Kredun, a Filha da Mãe Branca (Mítico, as Fundas do Norte): briga com outro monstro grande (um sai ferido) · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: a Guardiã da Tenaz (o sul, onde a areia come a pedra): viaja: aparece num lugar onde não era esperado · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi

@@ -1,0 +1,15 @@
+[22:25:03] Dia 370 · Pressão 4/5 · evento local 1d20 [8] -> briga na feira
+  avistamento de monstro 1d20 [11] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 370 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [6] Gogrunn (as minas)
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 370
+    um Lendário age (d20 [6]):
+    Celocus (influência, Lumade) d20 [5] viaja: aparece num lugar onde não era esperado · notícia d20 [1] chega hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Bren (morto) chantageia Venne (morto), por causa de uma dívida antiga
+    FAÍSCA: Tilde vai trair Braeth (o ancião do Clã), por causa de vingança
+    FAÍSCA: Almision quer matar Aeliae, por causa de um núcleo de monstro

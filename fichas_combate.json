@@ -1,0 +1,252 @@
+{
+ "nota": "FICHAS DE COMBATE (MOTOR 6.3): uma lista só. combate.py monta o arquivo de luta com o nível de hoje e avisa quando a ficha ficou velha. nivel_ref = o nível em que a ficha foi escrita.",
+ "fichas": {
+  "Mamiltia": {
+   "nome": "Mamiltia",
+   "nivel": 1149,
+   "at": 134,
+   "dado": "1d10",
+   "mult": 4,
+   "b": 38,
+   "df": 143,
+   "rd": 8,
+   "pv": 2990,
+   "vigor": 20,
+   "agi": 10,
+   "heroi": true,
+   "magia": {
+    "dano": "8d6",
+    "mult": 20,
+    "cd": 30,
+    "rodada": [
+     1,
+     2
+    ]
+   },
+   "nivel_ref": 1149
+  },
+  "Moreth": {
+   "nome": "Moreth",
+   "nivel": 229,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "nivel_ref": 229,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo)"
+  },
+  "Eiagrir": {
+   "nome": "Eiagrir",
+   "nivel": 121,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "nivel_ref": 124,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica)"
+  },
+  "Isolda": {
+   "nome": "Isolda",
+   "nivel": 116,
+   "at": 34,
+   "dado": "1d8",
+   "mult": 3,
+   "b": 10,
+   "df": 40,
+   "rd": 6,
+   "pv": 300,
+   "vigor": 14,
+   "heroi": true,
+   "nivel_ref": 116,
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o gorjal Primordial, rende Lendário ×5; 2x por cena)",
+     "dano": "24d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    }
+   ],
+   "pecas": "GORJAL PRIMORDIAL (210): Toque do Ceifador 2x por cena (409) · Visão do Tempo do gorjal · RD +3 contra fogo · esconde"
+  },
+  "Eliane": {
+   "nome": "Eliane",
+   "nivel": 94,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 260,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "nivel_ref": 95,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: volta à mão · bebe o golpe · passo de vento · +1d6 DE FOGO por golpe) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia)"
+  },
+  "Ferir": {
+   "nome": "Ferir",
+   "nivel": 152,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 400,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": true,
+   "nivel_ref": 155,
+   "essencia": "Vento",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo)",
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
+     "dano": "24d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO"
+  },
+  "Graur": {
+   "nome": "Graur",
+   "nivel": 70,
+   "at": 24,
+   "dado": "1d8",
+   "mult": 2.5,
+   "b": 8,
+   "df": 32,
+   "rd": 6,
+   "pv": 280,
+   "heroi": true,
+   "vigor": 12,
+   "imune_empurrao": true,
+   "nivel_ref": 70
+  },
+  "Hruthos": {
+   "nome": "Hruthos",
+   "nivel": 88,
+   "nivel_ref": 88,
+   "at": 24,
+   "df": 31,
+   "rd": 6,
+   "pv": 240,
+   "dado": "1d10",
+   "mult": 3.0,
+   "b": 9
+  },
+  "Tuald": {
+   "nome": "Tuald",
+   "nivel": 60,
+   "nivel_ref": 60,
+   "at": 16,
+   "df": 26,
+   "rd": 4,
+   "pv": 170,
+   "dado": "1d8",
+   "mult": 2.0,
+   "b": 6
+  },
+  "Starkald": {
+   "nome": "Starkald",
+   "nivel": 87,
+   "nivel_ref": 87,
+   "at": 24,
+   "df": 32,
+   "rd": 4,
+   "pv": 230,
+   "dado": "1d8",
+   "mult": 3.0,
+   "b": 9,
+   "pecas": "(nenhuma peça com feitiço registrada)"
+  },
+  "Goir": {
+   "nome": "Goir",
+   "nivel": 46,
+   "nivel_ref": 46,
+   "at": 16,
+   "df": 24,
+   "rd": 3,
+   "pv": 130,
+   "dado": "1d8",
+   "mult": 2.0,
+   "b": 5,
+   "pecas": "(nenhuma peça com feitiço registrada)"
+  }
+ }
+}

@@ -1,0 +1,3 @@
+[16:36:23] Dia 194 · Pressão 3/5 · encontro de estrada 1d6 [1] -> acontece algo
+  avistamento de monstro 1d6 [4] -> nenhum
+  Fortuna volta ao máximo

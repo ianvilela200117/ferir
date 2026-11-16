@@ -1,0 +1,23 @@
+[23:10:58] Dia 262 · Pressão 1/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [2] Lianniel
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 262 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d23 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Ithula
+    desejo: deixar uma obra
+    ambição (relógio de 4): tomar o lugar do chefe
+    medo: a prisão
+    segredo: roubou o que tem
+    linha vermelha: nunca entrega um amigo à lei
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: VINGATIVO e LEAL
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 262
+    Lendários: d20 [11] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) pede ajuda a Messer Rovai, por causa de sal
+    FAÍSCA: Messa Tiracci chantageia Iorin, por causa de uma profecia
+    FAÍSCA: Gorra encomenda uma peça para Bren (morto), por causa de uma peça Lendária roubada

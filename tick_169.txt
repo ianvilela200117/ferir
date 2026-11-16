@@ -1,0 +1,3 @@
+[00:00:00] Dia 169 · Pressão 3/5 · evento local 1d6 [3] -> nada
+  avistamento de monstro 1d6 [3] -> nenhum
+  Fortuna volta ao máximo

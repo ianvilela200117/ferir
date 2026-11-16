@@ -1,0 +1,199 @@
+{
+ "habilidades": {
+  "Olho de Forja": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Reparo de Campo": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Golpe Certo": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Forja de Campanha": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Ouvido do Metal e Ouvido Largo": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Fole Firme": {
+   "tipo": "Passiva",
+   "efeito": "2",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Alma no Aço": {
+   "tipo": "Passiva",
+   "efeito": "2",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Forja Acesa": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "ALMA OUVIDA": {
+   "tipo": "Passiva",
+   "efeito": "(efeito no estado_vivo e no Livro)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "Mão que Escuta": {
+   "tipo": "Passiva",
+   "efeito": "3",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "MÃO QUE NÃO TREME 3": {
+   "tipo": "Passiva",
+   "efeito": "Técnica, 211: +3 em toda obra; 1x por dia um 1 natural vira 2",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "SOB MEDIDA GRAU 3": {
+   "tipo": "Passiva",
+   "efeito": "Oficina; Dia 208 grau 1, Dia 210 graus 2 e 3: peça feita, reforjada, consertada ou AJUSTADA por Ferir com o portador ao lado e o nome dele gravado: para ELE o requisito de nível cai 30; o grau 4 pede nível 100; o desconto segue o grau de Ferir, sem refazer a peça",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+  },
+  "A Obra diz": {
+   "tipo": "Passiva",
+   "efeito": "antes de começar, sabe o que o material quer ser; +1 nessa obra",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada: conferir"
+  },
+  "Peça que lembra": {
+   "tipo": "Ativa",
+   "efeito": "peça Épica+ dele sabe o dono; 1x por dia, a direção dele",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada: conferir",
+   "cargas": {
+    "atual": 1,
+    "max": 1
+   }
+  },
+  "Visão do Tempo": {
+   "tipo": "Magia",
+   "efeito": "aula do 266; mostra o que vem antes de agir",
+   "grau": 1,
+   "usos": 2,
+   "desde": 396,
+   "origem": "semeada: conferir",
+   "cargas": {
+    "atual": 0,
+    "max": 2
+   }
+  },
+  "Chuva de Brasas": {
+   "tipo": "Magia",
+   "efeito": "pelo foco",
+   "grau": 1,
+   "usos": 0,
+   "desde": 396,
+   "origem": "semeada: conferir",
+   "cargas": {
+    "atual": 7,
+    "max": 7
+   }
+  }
+ },
+ "titulos": [
+  {
+   "nome": "Quem Bate Frio",
+   "efeito": "(efeito por definir com o jogador)",
+   "como": "do estado_vivo",
+   "dia": 396
+  }
+ ],
+ "talentos": [
+  {
+   "nome": "Achador",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "Olho do Material",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "Mão de Mestre",
+   "efeito": "Forja Técnica, MATÉRIA e PROCESSO, 308; Encantamento Processo, Técnica e Matéria"
+  },
+  {
+   "nome": "RODA DA FORTUNA",
+   "efeito": "talento do 100, 309: na Tabela de Revés, dois d6 e escolhe"
+  },
+  {
+   "nome": "Trabalho em Série",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "Moeda no Ar",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "Nasceu Virado",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "Oficina Própria",
+   "efeito": "(ver o Livro, 05_talentos)"
+  },
+  {
+   "nome": "ASSINATURA",
+   "efeito": "210: obra Épica+ dá +1 Fama por mês; a peça com a marca é rastreável até Ferir"
+  }
+ ],
+ "pericias": {
+  "Forja": "LENDÁRIO +8",
+  "Encantamento": "MESTRE +6",
+  "Magia": "MESTRE +6 (245: o FEITO reconhecido pelo ERYMIR, mago da Alm",
+  "Luta": "Treinado +4 (prática 10/14 para Mestre; seria a 3ª vaga)",
+  "Negócio": "Iniciante +2 (3/7)",
+  "Intuição": "+2",
+  "Coleta": "+2"
+ }
+}

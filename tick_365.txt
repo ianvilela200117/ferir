@@ -1,0 +1,14 @@
+[19:27:57] Dia 365 · Pressão 4/5 · evento local 1d20 [7] -> nada
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 365 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d27 [8] Telosus (o Colégio)
+    A NOTÍCIA: [5] em 1d6 [2] dias
+    ——
+  O MUNDO VIVO — Dia 365
+    Lendários: d20 [14] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Aeliae rouba de Oslo, por causa de vingança
+    FAÍSCA: Tilde encomenda uma peça para Gorra, por causa de vingança
+    FAÍSCA: Tano (carregador, primo da Caciccetta) vende algo a Mamiltia, por causa de uma peça Lendária roubada

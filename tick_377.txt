@@ -1,0 +1,15 @@
+[01:30:08] Dia 377 · Pressão 1/5 · evento local 1d20 [12] -> um barqueiro traz boato do rio
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 377 (dia)
+    d20 [9] INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado
+    ONDE: d27 [27] Kreade (terra nova)
+    A NOTÍCIA: [4] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 377
+    um Lendário age (d20 [5]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · notícia d20 [5] chega no dia 379
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → os Jurados de Steunn (RESSENTIMENTO) d20 [7] nada visível
+    FAÍSCA: Eiundunn sonha com Grerkur, por causa de uma peça Lendária roubada
+    FAÍSCA: Eiandald sonha com Celocus, por causa de vingança
+    FAÍSCA: Eiandald descobre o segredo de a Guardiã da Tenaz, por causa de dinheiro da Liga

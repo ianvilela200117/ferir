@@ -1,0 +1,14 @@
+[14:31:20] Dia 332 · Pressão 1/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 332 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]
+    ONDE: d27 [21] Zisrir
+    A NOTÍCIA: [5] em 1d6 [3] dias
+    ——
+  O MUNDO VIVO — Dia 332
+    Lendários: d20 [8] quietos hoje
+    trama do dia: o conselheiro Pelagri → Skugek (DESEJO SECRETO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308) inveja Eiandald, por causa de vingança
+    FAÍSCA: Celocus quer casar com Gorron (oferece a missão do Delta), por causa de vingança
+    FAÍSCA: o podestà Tirello chantageia Altheltia, por causa de um mapa

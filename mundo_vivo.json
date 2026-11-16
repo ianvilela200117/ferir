@@ -1,0 +1,3227 @@
+{
+ "lendarios": [
+  {
+   "nome": "Skotha Graskur",
+   "frente": "combate",
+   "regiao": "o sul (a Companhia)",
+   "nivel": 370,
+   "regua": 190,
+   "obra": "fechar a coberta do mundo de novo",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 19,
+   "rival": "a Guardiã da Tenaz",
+   "desejo": "enriquecer",
+   "medo": "ser esquecido",
+   "ambicao": "conquistar terra",
+   "tracos": "RELIGIOSO e AMBICIOSO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": " · 287: OBRA COMPLETA pela ficção: DOGE DE MARASAR (a rendição e a divisão com Ireviel). Começa outra obra no 290 (rola).",
+   "log": [
+    "203: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "216: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "224: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "233: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "236: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "245: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "266: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "287: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "323: vem ela mesma com a Companhia contra Levis, ao lado de Ireviel (e do Teraseth, rival dela)",
+    "330-332: lutou com a Companhia ao lado de Ireviel e do Teraseth; Levis tomada; a Companhia perdeu 50 mortos e 26 feridos",
+    "339: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "377: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "nova obra: d12 [7] fechar a coberta do mundo de novo",
+    "399: [5] viaja: aparece num lugar onde não era esperado",
+    "404: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "420: [4] ataca ou sabota a obra do RIVAL lendário"
+   ],
+   "obras_feitas": [
+    "tomar Marasar e se fazer Doge pela espada"
+   ],
+   "prox": 439
+  },
+  {
+   "nome": "Qunemneth, o Médico Cinzento",
+   "frente": "ameaça",
+   "regiao": "Marasar (a Vigília)",
+   "nivel": 330,
+   "regua": 160,
+   "obra": "fechar todas as minas de vaduar",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 24,
+   "rival": "Ceduion, reitor do Colégio de Telosus",
+   "desejo": "proteger um filho",
+   "medo": "o próprio passado",
+   "ambicao": "comprar a liberdade da família",
+   "tracos": "GENEROSO e AMBICIOSO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "203: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1 no d6)",
+    "220: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "223: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "225: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "231: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "242: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "259: [4] ataca ou sabota a obra do RIVAL lendário",
+    "287: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "315: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "343: [7] um segredo dele vaza (boato ou espionagem)",
+    "371: [20] SURPRESA: gerador de novidade ligado a ele",
+    "397: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "399: [7] um segredo dele vaza (boato ou espionagem)",
+    "405: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "427: [13] oferece um acordo a um rival (paz, casamento, troca)"
+   ],
+   "prox": 451
+  },
+  {
+   "nome": "Almision",
+   "frente": "magia",
+   "regiao": "a estrada (com o corvo)",
+   "nivel": 440,
+   "regua": 215,
+   "obra": "quebrar a Liga de Marasar",
+   "relogio": [
+    2,
+    8
+   ],
+   "ritmo": 18,
+   "rival": "Skotha Graskur",
+   "desejo": "um título",
+   "medo": "o fogo",
+   "ambicao": "virar Lendário",
+   "tracos": "LEAL e CURIOSO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "203: [12] SURPRESA: gerador de novidade ligado a ele",
+    "211: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "211: [6] manda um ENVIADO a Ireviel (a Escola Única toca a casa): chega no 214",
+    "224: [5] viaja: aparece num lugar onde não era esperado",
+    "245: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "266: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "281: [4] ataca ou sabota a obra do RIVAL lendário",
+    "285: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "287: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "300: recebeu o CAJADO DA ESCOLA ÚNICA (Mítico, de Ferir; pago 10.000 adiantado); ENCANTADA: a Escola Única reconhece o reino de Ireviel",
+    "299: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "301: recruta o MALVEZZI (sargento vendido do Tirello)",
+    "314-320: queimou em Marasar a capela da Lumine (com o Malvezzi)",
+    "327: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "329: mandou roubar o GORJAL da Isolda (pego); pela lei de Ireviel, INIMIGA DECLARADA",
+    "332-335: Ireviel cobra reparação; (OCULTO até o 335) ela paga 10.000 e entrega o olho dela em Ireviel: o ERYMIR",
+    "335: pagou 10.000 a Ireviel e entregou o Erymir; sem desculpas (relação −1)",
+    "nova obra: d12 [4] quebrar a Liga de Marasar",
+    "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "420: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
+   ],
+   "obras_feitas": [
+    "a Escola Única"
+   ],
+   "prox": 438
+  },
+  {
+   "nome": "Gorine",
+   "frente": "fé",
+   "regiao": "escondido (patrono da Lumine)",
+   "nivel": 330,
+   "regua": 170,
+   "obra": "quebrar o que resta do pacto do Silêncio",
+   "relogio": [
+    3,
+    8
+   ],
+   "ritmo": 22,
+   "rival": "Ceduion, reitor do Colégio de Telosus",
+   "desejo": "nunca mais passar fome",
+   "medo": "a magia (que ele usa)",
+   "ambicao": "comprar a liberdade da família",
+   "tracos": "CURIOSO e VINGATIVO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "203: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "231: [14] perde uma peça ou um aliado para alguém",
+    "259: [14] perde uma peça ou um aliado para alguém",
+    "265: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "287: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "302: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "307: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "315: [5] viaja: aparece num lugar onde não era esperado",
+    "331: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "343: [20] SURPRESA: gerador de novidade ligado a ele",
+    "344: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "371: [20] SURPRESA: gerador de novidade ligado a ele",
+    "399: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "407: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "427: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)"
+   ],
+   "prox": 449
+  },
+  {
+   "nome": "Ceduion, reitor do Colégio de Telosus",
+   "frente": "magia",
+   "regiao": "Telosus",
+   "nivel": 310,
+   "regua": 175,
+   "obra": "domar um monstro Mítico",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 28,
+   "rival": "a Guardiã da Tenaz",
+   "desejo": "um título",
+   "medo": "a pobreza",
+   "ambicao": "derrubar quem humilhou a família",
+   "tracos": "VINGATIVO e COVARDE",
+   "pecas": 3,
+   "estado": "vivo",
+   "nota": "204: vazou: o Colégio de Telosus está FALIDO · 210: a casa pede o COLÉGIO INTEIRO em Ireviel (estrutura, defesa, voz no conselho, pesquisa; Ferir fala do aro que engole magia); o Thuron leva e defende; resposta no 216",
+   "log": [
+    "203: [7] um segredo dele vaza (boato ou espionagem)",
+    "222: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "231: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "251: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "259: [14] perde uma peça ou um aliado para alguém",
+    "269: [7] um segredo dele vaza (boato ou espionagem)",
+    "271: [5] viaja: aparece num lugar onde não era esperado",
+    "287: [4] ataca ou sabota a obra do RIVAL lendário",
+    "289: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "315: [7] um segredo dele vaza (boato ou espionagem)",
+    "318: o segredo vaza: quer domar o THARGOS",
+    "343: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "371: [5] viaja: aparece num lugar onde não era esperado",
+    "399: [5] viaja: aparece num lugar onde não era esperado",
+    "425: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "427: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
+   ],
+   "prox": 455
+  },
+  {
+   "nome": "a Guardiã da Tenaz",
+   "frente": "ofício",
+   "regiao": "o sul, onde a areia come a pedra",
+   "nivel": 416,
+   "regua": 155,
+   "obra": "acabar com a magia",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 24,
+   "rival": "Qunemneth, o Médico Cinzento",
+   "desejo": "aprender um segredo",
+   "medo": "a prisão",
+   "ambicao": "casar acima da sua classe",
+   "tracos": "VINGATIVO e CRUEL",
+   "pecas": 1,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "203: [5] viaja: aparece num lugar onde não era esperado",
+    "231: [14] perde uma peça ou um aliado para alguém",
+    "244: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "248: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "258: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "259: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "263: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "287: [14] perde uma peça ou um aliado para alguém",
+    "315: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "343: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "371: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "399: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "402: [5] viaja: aparece num lugar onde não era esperado",
+    "427: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)"
+   ],
+   "prox": 451
+  },
+  {
+   "nome": "Eiandald",
+   "frente": "fé",
+   "regiao": "Yaelane",
+   "nivel": 420,
+   "regua": 209,
+   "obra": "achar as três ferramentas dos reis",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 15,
+   "rival": "Gorine",
+   "desejo": "curar alguém",
+   "medo": "a morte de um filho",
+   "ambicao": "derrubar quem humilhou a família",
+   "tracos": "TEIMOSO e AMBICIOSO",
+   "pecas": 1,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "203: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "219: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "224: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "237: [7] um segredo dele vaza (boato ou espionagem)",
+    "245: [5] viaja: aparece num lugar onde não era esperado",
+    "266: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "287: [7] um segredo dele vaza (boato ou espionagem)",
+    "306: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "308: [17] desafia alguém em público (duelo, debate, prova)",
+    "329: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "340: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "356: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "nova obra: d12 [11] achar as três ferramentas dos reis",
+    "399: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "420: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
+   ],
+   "obras_feitas": [
+    "ressuscitar um morto amado"
+   ],
+   "prox": 435
+  },
+  {
+   "nome": "Leliel",
+   "frente": "influência",
+   "regiao": "o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)",
+   "nivel": 351,
+   "regua": 146,
+   "obra": "unificar os clãs do norte sob uma coroa",
+   "relogio": [
+    6,
+    8
+   ],
+   "ritmo": 16,
+   "rival": "Almision",
+   "desejo": "curar alguém",
+   "medo": "ser esquecido",
+   "ambicao": "casar acima da sua classe",
+   "tracos": "AVARENTO e CRUEL",
+   "pecas": 2,
+   "estado": "vivo",
+   "nota": "",
+   "log": [
+    "202: [10] procura um ferreiro, um mago ou um objeto (1 no d6: procura Ferir ou a Matriz)",
+    "203: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1 no d6)",
+    "224: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "227: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "229: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "245: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "266: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "277: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "287: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "308: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "329: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "346: atendeu o chamado da Liga e TOMOU as terras dela: Farenta e as casas do norte passam à coroa da Leliel; a guerra contra Ireviel agora é dela",
+    "350: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "356: FARENTA TOMADA pela coalizão de Ireviel com a MAMILTIA; a Leliel FOGE PARA O NORTE com as duas peças e os conselheiros que sobraram",
+    "362: [20] SURPRESA: gerador de novidade ligado a ele",
+    "371: [14] perde uma peça ou um aliado para alguém",
+    "392: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "413: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "424: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)"
+   ],
+   "prox": 429
+  },
+  {
+   "nome": "Adurel",
+   "frente": "ofício",
+   "regiao": "Zisrir (o vale)",
+   "nivel": 378,
+   "regua": 208,
+   "obra": "abrir uma passagem",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 30,
+   "rival": "Almision",
+   "desejo": "aprender um segredo",
+   "medo": "a prisão",
+   "ambicao": "entrar numa facção que o recusou",
+   "tracos": "ORGULHOSO e GENEROSO",
+   "pecas": 1,
+   "estado": "vivo",
+   "nota": "apareceu no 229 (gerado só no 249); a obra dele ACORDOU a Elaeva; segredo: sabe de um crime de alguém importante; linha vermelha: nunca deixa um ferido para trás",
+   "log": [
+    "229: aparece em Zisrir",
+    "249: gerado (o nome do gerador era Kasula, trocado)",
+    "256: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "259: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "294: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "317: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "329: [20] SURPRESA: gerador de novidade ligado a ele",
+    "364: [5] viaja: aparece num lugar onde não era esperado",
+    "399: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "416: a boca da passagem dele em Zisrir DESABADA por gente paga pelo CELOCUS (a notícia chega a Levis no 416)"
+   ],
+   "prox": 429
+  },
+  {
+   "nome": "Altheltia",
+   "tier": "LENDÁRIO",
+   "frente": "ofício",
+   "regiao": "o Delta",
+   "nivel": 268,
+   "regua": 139,
+   "obra": "achar as três ferramentas dos reis",
+   "relogio": [
+    0,
+    8
+   ],
+   "ritmo": 14,
+   "rival": "Ceduion, reitor do Colégio de Telosus",
+   "desejo": "casar com quem ama",
+   "medo": "ser esquecido",
+   "ambicao": "descobrir uma receita perdida",
+   "tracos": "ORGULHOSA e HONESTA",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). ama alguém proibido; nunca vende o ofício barato",
+   "log": [
+    "294: [17] desafia alguém em público (duelo, debate, prova)",
+    "296: [14] perde uma peça ou um aliado para alguém",
+    "308: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "322: [7] um segredo dele vaza (boato ou espionagem)",
+    "324: o segredo: ofereceu à Guilda de Levis comprar o cais do sal",
+    "336: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "350: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "352: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "350: ACORDO com Ireviel (a Nouliel): ~1 kg de zeieth pela ajuda na receita; paz no Delta",
+    "363: [4] ataca ou sabota a obra do RIVAL lendário",
+    "364: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "378: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "392: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "nova obra: d12 [11] achar as três ferramentas dos reis",
+    "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "413: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "422: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "423: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "423 (AL23 [6], FIEL pela célula): DESTRUIU A OBRA DE UM RIVAL que também procurava as três ferramentas dos reis",
+    "427: [4] ataca ou sabota a obra do RIVAL lendário"
+   ],
+   "obras_feitas": [
+    "fundar uma ordem (a Ordem dos Juncos: ofício e cura)"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Teraseth",
+   "tier": "LENDÁRIO",
+   "frente": "combate",
+   "regiao": "Ireviel e o rio",
+   "nivel": 432,
+   "regua": 221,
+   "obra": "vingar um povo (os barqueiros mortos pela guerra do rio)",
+   "relogio": [
+    7,
+    8
+   ],
+   "ritmo": 21,
+   "rival": "Skotha Graskur",
+   "desejo": "ser reconhecido no ofício",
+   "medo": "o próprio passado",
+   "ambicao": "descobrir uma receita perdida",
+   "tracos": "AMBICIOSO e COVARDE",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). tem um filho em outra cidade; nunca trabalha para uma facção (a rolar)",
+   "log": [
+    "294: [14] perde uma peça ou um aliado para alguém",
+    "309: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "309-311: TOMOU O PEDÁGIO VELHO dos conselheiros e desfez a GUARDA DO PEDÁGIO (vingança pelos barqueiros)",
+    "315: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "316-317: vem a Ireviel procurar Ferir: quer uma ARMA para vingar os barqueiros",
+    "322: no conselho de Ireviel: recusou entrar para a casa (nunca trabalha para uma facção); encomenda uma ARMA por 7.000",
+    "323: recebeu o CROQUE DO RIO (PRIMORDIAL; o poder de cidade: a onda do rio); pagou 7.000; ACEITA LUTAR JUNTO contra a Liga e traz os barqueiros dele armados (aliado do rio, não da bandeira)",
+    "330-332: a ONDA do Croque quebrou a corrente de Levis; lutou ao lado da Skotha (a missão cumprida); a Liga GRITOU da muralha que ele afundou as barcas; METADE DOS BARQUEIROS DELE O LARGOU depois da vitória",
+    "334: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "332: o rei o defendeu na praça de Levis: os barqueiros VOLTARAM; ele DEVE AO REI; à noite contou a Ferir a verdade (capitão da Liga, afundou as barcas; a vingança é penitência)",
+    "335: recusou governar Levis (a linha vermelha); segue aliado do rio",
+    "336: [5] viaja: aparece num lugar onde não era esperado",
+    "357: [14] perde uma peça ou um aliado para alguém",
+    "378: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "380: [17] desafia alguém em público (duelo, debate, prova)",
+    "399: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "420: [14] perde uma peça ou um aliado para alguém",
+    "424 (TR24 [3], TR24b [6], TR24c [2]; notícia FIEL): perdeu um ALIADO, morto pela ELOUNE nos lodaçais"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Naera",
+   "tier": "LENDÁRIO",
+   "frente": "ofício",
+   "regiao": "as Fundas do Norte",
+   "nivel": 330,
+   "regua": 170,
+   "obra": "vingar um povo (as aldeias do Kredun)",
+   "relogio": [
+    5,
+    8
+   ],
+   "ritmo": 16,
+   "rival": "a Guardiã da Tenaz",
+   "desejo": "proteger um filho",
+   "medo": "a solidão",
+   "ambicao": "ganhar a guerra do seu povo",
+   "tracos": "CURIOSA e AVARENTA",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). tem um filho em outra cidade; nunca deixa um ferido para trás",
+   "log": [
+    "294: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "315: [4] ataca ou sabota a obra do RIVAL lendário",
+    "319: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "336: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "348: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "357: [14] perde uma peça ou um aliado para alguém",
+    "378: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "420: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta"
+   ],
+   "prox": 436
+  },
+  {
+   "nome": "Xaysress",
+   "tier": "LENDÁRIO",
+   "frente": "ofício",
+   "regiao": "Kremir",
+   "nivel": 284,
+   "regua": 147,
+   "obra": "fechar a coberta do mundo de novo",
+   "relogio": [
+    2,
+    8
+   ],
+   "ritmo": 14,
+   "rival": "Ceduion, reitor do Colégio de Telosus",
+   "desejo": "casar com quem ama",
+   "medo": "o fogo",
+   "ambicao": "fundar uma escola",
+   "tracos": "COVARDE e RELIGIOSO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). traiu um amigo uma vez; nunca entrega um amigo à lei",
+   "log": [
+    "294: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "295: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "308: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "310: [5] viaja: aparece num lugar onde não era esperado",
+    "314: [4] ataca ou sabota a obra do RIVAL lendário",
+    "322: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "336: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "350: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "364: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "378: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "386: [4] ataca ou sabota a obra do RIVAL lendário",
+    "389: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "392: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "nova obra: d12 [7] fechar a coberta do mundo de novo",
+    "399: [20] SURPRESA: gerador de novidade ligado a ele",
+    "413: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "415: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "427: [17] desafia alguém em público (duelo, debate, prova)"
+   ],
+   "obras_feitas": [
+    "abrir um caminho além do mapa"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Souane",
+   "tier": "LENDÁRIO",
+   "frente": "influência",
+   "regiao": "o Delta",
+   "nivel": 282,
+   "regua": 146,
+   "obra": "dar de comer a todo o Delta (comprar o sal e o grão de todos) [a obra saiu SURPRESA; LEITURA pelo desejo dele]",
+   "relogio": [
+    7,
+    8
+   ],
+   "ritmo": 14,
+   "rival": "Adurel",
+   "desejo": "nunca mais passar fome",
+   "medo": "a velhice",
+   "ambicao": "descobrir uma receita perdida",
+   "tracos": "GENEROSO e CURIOSO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). deve a alguém perigoso; nunca volta atrás numa palavra dada",
+   "log": [
+    "294: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "308: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "322: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "325: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "336: [14] perde uma peça ou um aliado para alguém",
+    "350: [5] viaja: aparece num lugar onde não era esperado",
+    "358: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "364: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "378: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "392: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "406: [20] SURPRESA: gerador de novidade ligado a ele",
+    "420: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)"
+   ],
+   "prox": 434
+  },
+  {
+   "nome": "Garkunn",
+   "tier": "LENDÁRIO",
+   "frente": "ameaça",
+   "regiao": "Mordun",
+   "nivel": 343,
+   "regua": 176,
+   "obra": "acabar com uma fé ou uma raça",
+   "relogio": [
+    7,
+    8
+   ],
+   "ritmo": 17,
+   "rival": "Leliel",
+   "desejo": "mandar em alguém",
+   "medo": "o fogo",
+   "ambicao": "fundar uma escola",
+   "tracos": "CRUEL e VINGATIVO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). é filho de quem não deveria; nunca se ajoelha (290: renomeado de \"Druek\", perto de Draek, pelo conferidor)",
+   "log": [
+    "294: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "304: [5] viaja: aparece num lugar onde não era esperado",
+    "305: [7] um segredo dele vaza (boato ou espionagem)",
+    "306: visto em LEVIS; o segredo vaza: é FILHO DO MORMIR (o eremita dos Sem-Torre)",
+    "315: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "336: [17] desafia alguém em público (duelo, debate, prova)",
+    "357: [7] um segredo dele vaza (boato ou espionagem)",
+    "373: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "378: [4] ataca ou sabota a obra do RIVAL lendário",
+    "383: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "399: [20] SURPRESA: gerador de novidade ligado a ele",
+    "420: [4] ataca ou sabota a obra do RIVAL lendário"
+   ],
+   "prox": 437
+  },
+  {
+   "nome": "Celocus",
+   "tier": "MÍTICO",
+   "frente": "influência",
+   "regiao": "Lumade",
+   "nivel": 714,
+   "regua": 362,
+   "obra": "enriquecer acima de todos",
+   "relogio": [
+    7,
+    12
+   ],
+   "ritmo": 21,
+   "rival": "Adurel",
+   "desejo": "proteger um filho",
+   "medo": "a prisão",
+   "ambicao": "entrar numa facção que o recusou",
+   "tracos": "ORGULHOSO e HONESTO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). tem um filho em outra cidade; nunca trabalha para uma facção (a rolar) · 336: a casa sabe a REGIÃO (o mapa do rei, a Sira [18]); a obra segue oculta",
+   "log": [
+    "294: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "315: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "336: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "357: [5] viaja: aparece num lugar onde não era esperado",
+    "370: [5] viaja: aparece num lugar onde não era esperado",
+    "378: [14] perde uma peça ou um aliado para alguém",
+    "398: [7] um segredo dele vaza (boato ou espionagem)",
+    "399: [17] desafia alguém em público (duelo, debate, prova)",
+    "416: [4] ataca ou sabota a obra do RIVAL lendário",
+    "416: [4] sabotou a obra do rival: PAGOU GENTE para desabar a boca da passagem do ADUREL no vale de Zisrir (CE16 [2]; notícia FIEL em Levis no 416)",
+    "420: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "421: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "423 (a notícia FIEL do MEDO, a PRISÃO): CL23 [5]: QUEIMOU OS PRÓPRIOS LIVROS DE CONTA antes que um juiz os lesse (o incêndio de Lumade, notícia no 424, pode ser o mesmo fogo)",
+    "424 (LM24 [4], FIEL): o INCÊNDIO DE LUMADE queimou o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou; a fome lá piora"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Lurentetta",
+   "tier": "MÍTICO",
+   "frente": "ofício",
+   "regiao": "o Delta",
+   "nivel": 774,
+   "regua": 392,
+   "obra": "vingar um povo",
+   "relogio": [
+    7,
+    12
+   ],
+   "ritmo": 21,
+   "rival": "Eiandald",
+   "desejo": "deixar uma obra",
+   "medo": "a solidão",
+   "ambicao": "ganhar a guerra do seu povo",
+   "tracos": "LEAL e TEIMOSA",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). tem uma doença escondida; nunca se ajoelha · 336: a casa sabe a REGIÃO (o mapa do rei, a Sira [18]); a obra segue oculta · 350: a casa SABE A OBRA dela pela rede do Delta: vingar o povo das salinas que a Liga deixou morrer (caça o que sobrou da Liga, agora da Leliel)",
+   "log": [
+    "294: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "315: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "316: [4] ataca ou sabota a obra do RIVAL lendário",
+    "336: [14] perde uma peça ou um aliado para alguém",
+    "357: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "378: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "399: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "420: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+    "424 (LU24 [2]): o ENVIADO dela vem a IREVIEL; chega no 427",
+    "427: o ENVIADO dela em Ireviel pede ao rei ALIANÇA CONTRA A ELAEVA (quem matou o povo dela; LU27 [3], LU27b [4])"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Borecci",
+   "tier": "MÍTICO",
+   "frente": "ofício",
+   "regiao": "Steunn",
+   "nivel": 615,
+   "regua": 312,
+   "obra": "unificar uma terra",
+   "relogio": [
+    7,
+    12
+   ],
+   "ritmo": 21,
+   "rival": "Ceduion, reitor do Colégio de Telosus",
+   "desejo": "uma casa própria",
+   "medo": "a velhice",
+   "ambicao": "comprar a liberdade da família",
+   "tracos": "HONESTO e VINGATIVO",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). sabe de um crime de alguém importante; nunca entrega um amigo à lei · 336: a casa sabe a REGIÃO (o mapa do rei, a Sira [18]); a obra segue oculta",
+   "log": [
+    "294: [4] ataca ou sabota a obra do RIVAL lendário",
+    "315: [5] viaja: aparece num lugar onde não era esperado",
+    "336: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "341: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "357: [17] desafia alguém em público (duelo, debate, prova)",
+    "378: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "399: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "420: [8] sofre um revés (ferida, perda, traição de um próximo)"
+   ],
+   "prox": 441
+  },
+  {
+   "nome": "Mamiltia",
+   "tier": "PRIMORDIAL",
+   "frente": "fé",
+   "regiao": "Telosus",
+   "nivel": 1149,
+   "regua": 579,
+   "obra": "vingar um povo",
+   "relogio": [
+    5,
+    12
+   ],
+   "ritmo": 28,
+   "rival": "Adurel",
+   "desejo": "ser perdoada",
+   "medo": "a humilhação pública",
+   "ambicao": "tomar o lugar do chefe",
+   "tracos": "CRUEL e GENEROSA",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). não sabe ler; nunca deixa um ferido para trás",
+   "log": [
+    "294: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "299-300: a SIRA sabe o que ela quer: FERIR NA FÉ DELA (um ferreiro santo); o Colégio: ela quer vingar o povo de TELOSUS que morreu quando a ELAEVA andou (o rumor: quem acordou a Elaeva foi o ADUREL, rival dela); não sabe ler",
+    "301: Ferir mandou dizer pelos barqueiros de Telosus que OUVE; ela responde no tempo dela · a facção dos DA MÃO QUEIMADA nasce em Telosus na fé dela",
+    "303: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "322: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "322-327: funda um TEMPLO em Telosus",
+    "335: (OCULTO) o ERYMIR, aprendiz da Fornalha, é olho dela",
+    "336: o Krernos expôs o Erymir como olho dela em Ireviel; ela queria o Martelo de Mestre de Ferir",
+    "336: o rei de Ireviel a CONVIDA; ela vem no tempo dela: chega no 346",
+    "342: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+    "346: em Ireviel; ACEITA a MÃO DE ESPINHO (relíquia de zeieth do molde da mão de Ferir) no lugar da mão ao fogo; aceita que Ferir melhore as armas da fé no lugar do Martelo de Mestre; a oferta da receita da mão que volta pelo Pilão segue aberta",
+    "350: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "352-356: aceita entrar na guerra pelo preço da cabeça do Girendino; recebe de Ferir a MAÇA DA MÃO QUEIMADA (Primordial) e a MÃO DE ESPINHO (Primordial); quebra a tropa de Farenta sem queimar a cidade; o Girendino vai ao fogo dela",
+    "375: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "378: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "406: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "406 (noite): o rei lhe deu o NOME e o LUGAR (o Adurel, a passagem no vale de Zisrir; palavra da Almision, sem prova) e pediu que esperasse a prova da Almision (MN7 [8]+1 = 9): ACEITA o nome, NÃO aceita a Almision como prova, manda os olhos dela a Zisrir (voltam ~434) e FICA em Ireviel; pagou a metade da missão (3.000 XP e 1.500)"
+   ],
+   "prox": 434
+  },
+  {
+   "nome": "Higrunn",
+   "tier": "PRIMORDIAL",
+   "frente": "influência",
+   "regiao": "Steunn",
+   "nivel": 1153,
+   "obra": "proteger um filho",
+   "relogio": [
+    3,
+    12
+   ],
+   "ritmo": 28,
+   "rival": "Mamiltia",
+   "desejo": "proteger um filho",
+   "medo": "a morte de um filho",
+   "ambicao": "abrir o próprio negócio",
+   "tracos": "AMBICIOSA e VINGATIVA",
+   "pecas": null,
+   "estado": "vivo",
+   "nota": "360: entra no mundo (pedido do jogador: 3 Primordiais). OCULTO: fez um pacto; a colmeia do SSISH é o pacto dela (o 'filho'). Linha vermelha: nunca machuca uma criança. Rival da Mamiltia. A notícia chega no 365.",
+   "log": [
+    "360: gerada (Q2): 1.153, influência, Steunn, rival da Mamiltia",
+    "364: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
+    "381: [5] viaja: aparece num lugar onde não era esperado",
+    "392: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "420: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
+   ],
+   "prox": 448
+  }
+ ],
+ "monstros": [
+  {
+   "nome": "Eloune, a Mãe-Lodo",
+   "cat": "Épico",
+   "nivel": 136,
+   "regiao": "Ireviel e o rio (lodaçais)",
+   "estado": "ativo",
+   "nota": "203: 4 crias nos lodaçais de Ireviel · 276: brigou com a Lianniel no cais afundado; a Lianniel saiu ferida; o culto dela tem medo da máquina. · 312 (rumor exato): a FRAQUEZA dela é a VOZ DA CANTORA: quando a cantora canta, a Mãe-Lodo dorme · 423 (EL23a-c, ocultos para a casa até ela ser vista): do tamanho de um CAVALO (1d10 × 5); VENENO NO GOLPE; OLHAR PARALISANTE (Vontade CD 23); fraca a RAIO (a Essência oposta). 423 (EL23d [1]): a caçada do rei, do Moreth, do Eiagrir, da Isolda e da Eliane NÃO A ACHOU (o rastro some no lodaçal fundo); EL23e [2]: as crias andam com ela · 424: matou um ALIADO DO TERASETH nos lodaçais"
+  },
+  {
+   "nome": "Stundald, a Raiz-de-Ferro",
+   "cat": "Épico",
+   "nivel": 142,
+   "regiao": "Telosus",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Yirane, a Que Come a Pedra",
+   "cat": "Épico",
+   "nivel": 136,
+   "regiao": "as Montanhas de Fogo",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Maneus, o Afogado do Vento",
+   "cat": "Lendário",
+   "nivel": 286,
+   "regiao": "Telosus",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Quneus, o Caçador de Gigantes",
+   "cat": "Lendário",
+   "nivel": 219,
+   "regiao": "Mordun",
+   "estado": "ativo",
+   "nota": " · 300: comeu algo que o mudou: +6 níveis (213)"
+  },
+  {
+   "nome": "Elaeva, a Floresta que Anda",
+   "cat": "Mítico",
+   "nivel": 376,
+   "regiao": "os Picos Brancos",
+   "estado": "ativo",
+   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252)",
+   "pv_atual": 28793,
+   "nota_383": "ferida pelo cerco de Farenta (382-387): 28.793 de 37.600; foi para os Picos Brancos"
+  },
+  {
+   "nome": "Ithvil",
+   "cat": "Mítico",
+   "nivel": "276",
+   "regiao": "Levis",
+   "estado": "ativo",
+   "nota": "336 (rumor exato): o coração é NÚCLEO MÍTICO DE FOGO; onde ele dorme cresce SHEZHIS, raiz Mítica de Luz (reserva grande) · 423 (notícia FIEL): comeu UM REBANHO INTEIRO das terras altas de Levis e subiu 2 níveis (IT23 [2], IT23b [2]): agora 276",
+   "nivel_base": 272
+  },
+  {
+   "nome": "Kredun, a Filha da Mãe Branca",
+   "cat": "Mítico",
+   "nivel": 306,
+   "regiao": "as Fundas do Norte",
+   "estado": "ativo"
+  },
+  {
+   "nome": "a Mãe Branca",
+   "cat": "Primordial",
+   "nivel": 480,
+   "regiao": "Steunn",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Fenron",
+   "cat": "Épico",
+   "nivel": 122,
+   "regiao": "o brejo do oeste",
+   "estado": "ativo",
+   "senhor": "Qunemneth, o Médico Cinzento"
+  },
+  {
+   "nome": "Lumdun",
+   "cat": "Lendário",
+   "nivel": 211,
+   "regiao": "Mordun",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Laennor, o Redemoinho",
+   "cat": "Raro",
+   "nivel": 70,
+   "regiao": "as SALINAS VELHAS ao sul (56/480 no 203 · 86/480 no 206, VISTO pelos salineiros; sara 10 por dia; fraquezas: Terra e o próprio nome); embaixo das salinas, QUOIUM, a cidade afundada",
+   "estado": "ativo"
+  },
+  {
+   "nome": "Krekos",
+   "cat": "Raro",
+   "nivel": 55,
+   "regiao": "Shizess",
+   "estado": "ativo",
+   "nota": "Vida; cura a cada golpe; fraco a Podridão e à cria",
+   "nivel_base": 48,
+   "log": [
+    "406: comeu algo que o mudou: +4 níveis (KR6 [4])"
+   ]
+  },
+  {
+   "nome": "Brakos",
+   "cat": "Raro",
+   "nivel": 35,
+   "regiao": "o Delta",
+   "estado": "ativo",
+   "nota": "elemental de Vida, tamanho de cavalo; camuflado; cada golpe que fere cura 4 em área; fraco a Podridão e água corrente; desce às aldeias no inverno; sinal: árvores marcadas (notícia 211)",
+   "nivel_base": 34
+  },
+  {
+   "nome": "Naudren",
+   "cat": "Épico",
+   "nivel": 155,
+   "regiao": "o braço de Marasar, junto da GALÉ (286)",
+   "estado": "morto",
+   "nota": "espírito do tamanho de uma torre, PODRIDÃO (fraqueza VIDA), regenera, fala e mente; visto pelo Kreine no 252 · 286: desce sobre a galé em Marasar no fim do assalto. Simulado (sem valor de jogo; a ficha pela escala do gerador, Épico 151): os sete heróis CAEM 100%. · 301-302: caça no braço (duas barcas de pesca somem; fome no porto) · madrugada 302→303: SOBE AO CAIS de Marasar (o Moreth e 10 da hoste) · 303: o Moreth o deixou a 775/2325 (duas Lanças do Sol); apodreceu os armazéns do cais · sara 1d20×10 por dia: 1.335 no 307 · o NOME do mago: VAMIA (o Ceduion, 306) · MORTO na madrugada do 308 (o assalto da casa: o Moreth, o Eiagrir, a Eliane, o Graur, o trebuchete; o Graur gritou VAMIA; a pedra-núcleo deu o último golpe). Drops: o CORAÇÃO (núcleo Épico de Podridão) e 5 kg de ORLOXA.",
+   "pv_atual": 0
+  },
+  {
+   "nome": "Kervos",
+   "cat": "Único",
+   "nivel": 116,
+   "regiao": "o brejo do oeste",
+   "estado": "ativo",
+   "nota": "inseto do tamanho de uma colina, SOM (fraqueza SILÊNCIO), devora metal, reflete magia 18-20, escava; grito do metal (Vontade CD 20, 15 m, a cada 3 rodadas); notícia no 253"
+  },
+  {
+   "nome": "Thargos",
+   "cat": "Mítico",
+   "nivel": 329,
+   "regiao": "as Fundas do Norte",
+   "estado": "ativo",
+   "nota": "besta do tamanho de uma montanha, ÁGUA (fraqueza RAIO), couraça, voa, camuflagem, olhar paralisante; notícia no 253 (gerado só no 254)"
+  },
+  {
+   "nome": "Murrask",
+   "cat": "Épico",
+   "nivel": 85,
+   "regiao": "MORTO no 272 (os campos de Marasar)",
+   "estado": "morto",
+   "nota": "morto-vivo voador do tamanho de um cavalo, SOM; invoca crias; grito do metal (CD 16); fraquezas SILÊNCIO e luz do sol (esta a descobrir); necrófago: segue batalhas e pestes; subiu da cisterna velha com o canto da cantora (258) · 263: o conselho aceitou a caça (missão da Skotha); régua simulada; caça na noite do 263, à espera do jogador. · 263: FUGIU a 74/1275 PV e desceu o braço de Marasar; a missão da Skotha falhou (ela pagou metade). · 268: o Krernos o achou nos campos de Marasar, sarando 2d6×10 por dia comendo mortos (404 no 268, 554 no 270). · 272: MORTO pela casa (o Moreth, a Eliane, o Thuron, Ferir e o Graur; o Peso do Nada o prendeu; o Graur deu o último golpe). Drops: 4 ascra, 6 murrim, núcleo Épico de Som. (O tick 273 o rolou vivo, +2 níveis: ERRO, descartado.)"
+  },
+  {
+   "nome": "Varogh",
+   "cat": "Lendário",
+   "nivel": 247,
+   "regiao": "Steunn",
+   "estado": "ativo",
+   "nota": "constructo do tamanho de uma colina, FOME; PV 6075, Defesa 90, RD 25, +80, 3 ataques, 3d10×25; couraça, camuflagem, fala e mente, grito de medo; assinatura: rouba 16 PV por golpe em área de 18 m a cada 3 rodadas; fraquezas VIDA e ferro frio (a descobrir); migrante; sinal: poços secos; drops drator (garra), havrel (couro: devora uma magia por dia), ossune (osso), gorium (sangue: +8 Matéria), coração núcleo Lendário de Fome. Avistado no 262 (o Ardenghi paga caçadores em Marasar para ir atrás dele). O gerador deu 'Kasron' (Kas-), drops goreth e morol: renomeados.",
+   "log": [
+    "423: a notícia chegou FALSA (VR23 [3]: dizem que ele FOI EMBORA de Steunn; a verdade: marca território mais perto de gente)"
+   ]
+  },
+  {
+   "nome": "Zyeth",
+   "cat": "Incomum",
+   "nivel": 23,
+   "regiao": "Levis",
+   "estado": "morto",
+   "nota": "aquático, cavalo, RAIO, inteligente; fraquezas água e sal (a descobrir); 266 · 345: MORTO pela casa em Levis (a primeira caçada); 6 kg de couro e glândula"
+  },
+  {
+   "nome": "Asith",
+   "cat": "Incomum",
+   "nivel": 29,
+   "regiao": "Zisrir",
+   "estado": "ativo",
+   "nota": "planta, homem, VENTO, regenera, territorial; fraquezas terra e luz do sol (a descobrir); 266"
+  },
+  {
+   "nome": "Husgarn",
+   "cat": "Único",
+   "nivel": 135,
+   "regiao": "os Picos Brancos",
+   "estado": "ativo, ferido pelo Moreth (270)",
+   "nota": "gigante de PODRIDÃO do tamanho de uma casa, voa, muda de forma, regenera 67/rodada; PV 2680, Def 58, RD 12, +48, 2 ataques, 1d12×10; a ferida infecciona (Vigor CD 20, 15 m); fraquezas VIDA e 'a cria'; SERVO do SKORVAL (oculto); drops husvine, grenal, hadun, mevra, núcleo Único de Podridão",
+   "nivel_base": 134
+  },
+  {
+   "nome": "Bruur",
+   "cat": "Épico",
+   "nivel": 152,
+   "regiao": "Marasar",
+   "estado": "dorme",
+   "nota": "aberração de TERRA, cavalo; olhar paralisante; reflete magia 18-20; o golpe derruba; fraquezas VENTO e sal; dorminhoco; drops terrel, brulim, núcleo Épico de Terra"
+  },
+  {
+   "nome": "Isessir",
+   "cat": "Épico",
+   "nivel": 95,
+   "regiao": "a ESTRADA SUL DE IREVIEL (desceu no 321, faminta)",
+   "estado": "morto",
+   "nota": "besta de ÁGUA do tamanho de um cavalo; MUDA DE FORMA; sentido sísmico (nunca é surpreendida); o golpe atravessa escudos (ignora 3 de Defesa, área 12 m, 1x a cada 3 rodadas); territorial; fraquezas RAIO e (a descobrir) um som; PV 1425 · Def 43 · RD 6 · +33 · 1d10×5; drops QUOMIR (Épico, Água + VIDA, couro/escama ×6), kretor (olho ×4), veyron (pelo ×8), CORAÇÃO: núcleo Épico de Água (serve de NÚCLEO para Mítico). OCULTO: o ROBANTINO, campeão da muralha de Marasar, tinha PACTO com ela (299). · 302: FERIDA por pescadores de arpão da costa · 315: mais faminta · 321: DESCE PERTO DE IREVIEL, na estrada sul (gado morto) · a 2ª fraqueza é SOM · MORTA na manhã do 322 pela casa (o Moreth, o Eiagrir, a Eliane, o Graur); drops: 6 kg de QUOMIR, 4 kretor, 8 veyron, o CORAÇÃO (núcleo Épico de Água)"
+  },
+  {
+   "nome": "Krothos",
+   "cat": "Lendário",
+   "nivel": 295,
+   "regiao": "Levis",
+   "estado": "ACORDADO (423)",
+   "nota": "constructo do TAMANHO DE UMA TORRE, SOMBRA; muitas cabeças ou membros; invoca crias; fala e mente; carrega doença; PV 7375 · Def 103 · RD 25 · +93 · 3 ataques · 2d10×25; resto da ficha a descobrir (301, interrogatório da Lumine) · 423 (KR23 [3], a verdade): ACORDOU e quebrou o ATERRO DA ESTRADA DO RIO acima de Levis; a notícia chegou INCOMPLETA (KR23b [2]: sabe-se que algo enorme acordou e quebrou, não onde nem o quê)"
+  },
+  {
+   "nome": "Hagal",
+   "cat": "Lendário",
+   "nivel": 154,
+   "regiao": "a Mata de Elais",
+   "estado": "morto",
+   "nota": "morto-vivo do tamanho de uma colina, RAIO; grito de medo; sopro em cone de 9 m; muitas cabeças; camuflagem; PV 3850 · Def 68 · RD 25 · +58 · 2 ataques · 3d10×25 (a Veyula viu, 301) · 311: destruído na Mata de Elais (ninguém sabe ainda)"
+  },
+  {
+   "nome": "Asesra",
+   "cat": "Raro",
+   "nivel": 40,
+   "regiao": "Kremir",
+   "estado": "ativo",
+   "nota": "inseto do tamanho de uma casa, VENENO; escava; caçador; envenena em área (1x/3 rodadas); fraquezas VIDA e ferro frio; PV 320 · Def 26 · RD 3 · +16 · 1d12×2,5 (o Hruthos viu, 301)"
+  },
+  {
+   "nome": "Vathexa",
+   "cat": "Lendário",
+   "nivel": 262,
+   "regiao": "a costa",
+   "estado": "ativo",
+   "nota": "gigante do tamanho de uma torre, TEMPO; necrófago (segue batalhas e pestes); invoca crias; fala e mente; PV 6550 · Def 95 · RD 25 · +85 · 3 ataques · 2d10×25; fraquezas SORTE e fogo comum; sinal: gente que some à noite; drops SELEK (Lendário, armadura que desfaz um golpe por dia) e o CORAÇÃO: núcleo LENDÁRIO de Tempo (serve de núcleo para Mítico e Primordial) (322)"
+  },
+  {
+   "nome": "Isyzis",
+   "cat": "Épico",
+   "nivel": 95,
+   "regiao": "o rio acima de Levis",
+   "estado": "ativo",
+   "nota": "aquático, do tamanho de um cavalo, ESPINHO (o interrogado do Ardenghi, 329)",
+   "nivel_base": 94
+  },
+  {
+   "nome": "Gegrald",
+   "cat": "Raro",
+   "nivel": 68,
+   "regiao": "o deserto de sal",
+   "estado": "vivo",
+   "nota": "354: gigante de sombra do tamanho de uma torre; guardião; PV 544; fraqueza Luz e um som; sinal: os pássaros calam"
+  },
+  {
+   "nome": "Ssish, o Colosso da Colmeia",
+   "cat": "Primordial",
+   "nivel": 466,
+   "regiao": "Fundas do Norte",
+   "estado": "ativo",
+   "nota": "360: entra no mundo (pedido do jogador). Inseto do tamanho de uma colina, SOM; PV 139.800, Def 176, RD 100, at +166, 3d10×500; voa, devora metal, grito de medo, camuflagem, couraça, olhar paralisante; poder: o grito do metal (Vontade CD 50, 24 m, a cada 3 rodadas); fraqueza SILÊNCIO e luz do sol; COLMEIA: obedece a uma rainha (OCULTO: a Higrunn); sinal: cheiro de enxofre; drops gistald, zysris, siess, núcleo Primordial de Som. Saiu de Steunn andando; chega às Fundas ~367; a notícia chega no 362."
+  }
+ ],
+ "povos": [
+  {
+   "nome": "Thog (orcs)",
+   "povo": "orcs",
+   "regiao": "Marasar",
+   "numero": 70,
+   "chefe": "Draa",
+   "chefe_nivel": 22,
+   "classe_chefe": "chefe-guerreiro (AÇO)",
+   "desejo": "deixar uma obra",
+   "relacao": "SAQUEIA quem passa",
+   "plano": "unir as tribos sob um só chefe",
+   "relogio": [
+    1,
+    6
+   ],
+   "habitat": "montanhas e passos",
+   "senhor": "Skotha Graskur (203: recrutados para a marcha sobre Marasar)",
+   "planos_feitos": [
+    "tomar um forte ou mina"
+   ],
+   "log": [
+    "nova plano: d10 [5] unir as tribos sob um só chefe"
+   ]
+  },
+  {
+   "nome": "Grukos (ogros)",
+   "povo": "ogros",
+   "regiao": "a Mata de Elais",
+   "numero": 140,
+   "chefe": "Brogos",
+   "chefe_nivel": 14,
+   "classe_chefe": "chefe-guerreiro (AÇO)",
+   "desejo": "sair da cidade",
+   "relacao": "COMERCIA (troca peles e minério por ferro)",
+   "plano": "fugir do frio que desce das Fundas",
+   "relogio": [
+    1,
+    6
+   ],
+   "habitat": "florestas e colinas",
+   "planos_feitos": [
+    "achar um novo covil longe de algo que os caça"
+   ],
+   "log": [
+    "nova plano: d10 [7] fugir do frio que desce das Fundas"
+   ]
+  },
+  {
+   "nome": "Vrurn (trolls)",
+   "povo": "trolls",
+   "regiao": "Yaelane",
+   "numero": 160,
+   "chefe": "Ulair",
+   "chefe_nivel": 31,
+   "classe_chefe": "sacerdote de um deus morto (FÉ)",
+   "desejo": "sair da cidade",
+   "relacao": "VASSALO de alguém (rolar quem)",
+   "plano": "acordar algo que dorme sob o covil",
+   "relogio": [
+    1,
+    6
+   ],
+   "habitat": "pontes e gargantas",
+   "senhor": "a Guardiã da Tenaz",
+   "planos_feitos": [
+    "achar um novo covil longe de algo que os caça"
+   ],
+   "log": [
+    "nova plano: d10 [8] acordar algo que dorme sob o covil"
+   ]
+  },
+  {
+   "nome": "Vradda (homens-lagarto)",
+   "povo": "homens-lagarto",
+   "regiao": "Gogrunn",
+   "numero": 60,
+   "chefe": "Grerkur",
+   "chefe_nivel": 36,
+   "classe_chefe": "chefe-guerreiro (AÇO)",
+   "desejo": "enriquecer",
+   "relacao": "COMERCIA (troca peles e minério por ferro)",
+   "plano": "acordar algo que dorme sob o covil",
+   "relogio": [
+    5,
+    6
+   ],
+   "habitat": "brejos e Delta",
+   "nota": "203: descem para perto das cidades de Gogrunn (fome, frio, medo de algo maior)"
+  },
+  {
+   "nome": "Kraek (harpias)",
+   "povo": "harpias",
+   "regiao": "Telosus",
+   "numero": 150,
+   "chefe": "Skugek",
+   "chefe_nivel": 14,
+   "classe_chefe": "sacerdote de um deus morto (FÉ)",
+   "desejo": "curar alguém",
+   "relacao": "SAQUEIA quem passa",
+   "plano": "vingar um chefe morto por humanos",
+   "relogio": [
+    2,
+    6
+   ],
+   "habitat": "penhascos da costa",
+   "senhor": "o Culto do Xaathis (343)",
+   "planos_feitos": [
+    "achar um novo covil longe de algo que os caça"
+   ],
+   "log": [
+    "nova plano: d10 [3] vingar um chefe morto por humanos"
+   ]
+  }
+ ],
+ "tramas": [
+  {
+   "a": "Iorin",
+   "b": "Ulurve",
+   "tipo": "INVEJA",
+   "causa": "uma peça (a bigorna da mestra)",
+   "int": 0,
+   "desde": 201,
+   "estado": "apagou"
+  },
+  {
+   "a": "Krernos",
+   "b": "Graur",
+   "tipo": "RIVALIDADE",
+   "causa": "os dois homens da mestra",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Skotha Graskur",
+   "b": "o Doge Pelaone",
+   "tipo": "ÓDIO",
+   "causa": "a acusação da morte da banqueira",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu",
+   "nota": "207: o capitão da Companhia foi EMBOSCADO em Marasar e a Companhia culpa o Doge; a Liga mandou ouro e emissário para acalmar a Skotha"
+  },
+  {
+   "a": "Tamel",
+   "b": "Eliane",
+   "tipo": "LEALDADE CEGA",
+   "causa": "anos de muralha",
+   "int": 0,
+   "desde": 201,
+   "estado": "acabou (205: o Tamel morreu no sótão)"
+  },
+  {
+   "a": "a cantora do templo",
+   "b": "a casa da fundição",
+   "tipo": "RESSENTIMENTO",
+   "causa": "a morte da Vassira",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Isolda",
+   "b": "os conselheiros da Liga",
+   "tipo": "TRAIÇÃO PENDENTE",
+   "causa": "o testemunho que ela assinou",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu",
+   "nota": "209: confirmado pelos facas de Farenta: os conselheiros (a Messa Tiracci) pagam o Pelaccino para matá-la · 209: o Pelaccino confirma: a Tiracci paga 6.000 pela Isolda; a Liga vai acusar Ireviel de abrigá-la · noite do 209: Ferir propõe ao conselho usá-la contra a Liga; empate 3×3, não passa"
+  },
+  {
+   "a": "Ithra",
+   "b": "os conselheiros da Liga",
+   "tipo": "MEDO",
+   "causa": "o Kasdun que ela vendeu",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu",
+   "nota": "205: foi embora de Ireviel"
+  },
+  {
+   "a": "Thuron",
+   "b": "Ferir",
+   "tipo": "INVEJA",
+   "causa": "a Matriz",
+   "int": 0,
+   "desde": 201,
+   "estado": "apagou"
+  },
+  {
+   "a": "Hrotgar",
+   "b": "Ferir",
+   "tipo": "RESSENTIMENTO",
+   "causa": "o Clã humilhado e a febre cinza",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu",
+   "nota": "207: o Hrotgar baixa lei no pedágio de Levis (quem negocia com Ireviel paga o dobro) e prepara fechar o rio se a casa não entregar o Odrum · 210: o ancião BRAETH aceita em nome do Clã a NÃO AGRESSÃO e o PEDÁGIO VELHO; o pacto de DEFESA vai ao Hrotgar (~217)"
+  },
+  {
+   "a": "Ardenghi",
+   "b": "Ferir",
+   "tipo": "INVEJA",
+   "causa": "as peças de marca vendendo mais que as dele",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu (210: se junta à acusação da Liga, 'Ferir arma assassinos'; chega a Ireviel no 211)"
+  },
+  {
+   "a": "Nouliel",
+   "b": "Ferir",
+   "tipo": "DESEJO SECRETO",
+   "causa": "anos de casa juntos",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "o conselheiro Pelagri",
+   "b": "Ruddo",
+   "tipo": "RESSENTIMENTO",
+   "causa": "um amor recusado",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Thugek",
+   "b": "o Visconte Aldoveri",
+   "tipo": "RESSENTIMENTO",
+   "causa": "ouro devido",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Herkald",
+   "b": "Gorra",
+   "tipo": "DÍVIDA",
+   "causa": "uma promessa quebrada",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Hrotgar",
+   "b": "Orast",
+   "tipo": "DESEJO SECRETO",
+   "causa": "um herdeiro dos Steunn (faísca do Dia 201) · 254: o Orast saiu de Ireviel para Steunn; a casa responde \"não está em Ireviel\"",
+   "int": 4,
+   "desde": 201,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Dovan",
+   "b": "o podestà Tirello",
+   "tipo": "RESSENTIMENTO",
+   "causa": "o perdão ao homem do incenso e o Maevis morto",
+   "int": 4,
+   "desde": 202,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Eliane",
+   "b": "Laennor, o Redemoinho",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "o Maevis, o Bren e o Venne",
+   "int": 4,
+   "desde": 202,
+   "estado": "explodiu (203: nos enterros, Ferir e a casa juram vingança; a caçada vira guerra da casa)"
+  },
+  {
+   "a": "Oslo",
+   "b": "a mestra Carea",
+   "tipo": "RIVALIDADE",
+   "causa": "ouro devido",
+   "int": 4,
+   "desde": 203,
+   "estado": "explodiu"
+  },
+  {
+   "a": "a casa da fundição",
+   "b": "Pelaccino",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "o Hraga e o Tamel (o juramento do 203)",
+   "int": 2,
+   "desde": 205,
+   "estado": "cumprida (209: preso vivo)",
+   "nota": "208: ele foge da casa pela segunda vez (o barco do cais velho)"
+  },
+  {
+   "a": "Thuron",
+   "b": "a casa da fundição",
+   "tipo": "LEALDADE CEGA",
+   "causa": "o Colégio em Ireviel é a volta dele",
+   "int": 0,
+   "desde": 205,
+   "estado": "apagou"
+  },
+  {
+   "a": "Ferir",
+   "b": "a Liga (os conselheiros)",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "o Pelaccino mandado pela Tiracci; o Tamel e o Hraga ('a Isolda foi a flecha; eu quero o arqueiro')",
+   "int": 3,
+   "desde": 209,
+   "estado": "viva",
+   "nota": "a trama de FERIR é do JOGADOR: o tick não a esfria nem a apaga (correção do 224)"
+  },
+  {
+   "a": "Ardenghi",
+   "b": "Ferir",
+   "tipo": "ÓDIO",
+   "causa": "humilhado na praça de Ireviel (211)",
+   "int": 4,
+   "desde": 211,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Graur",
+   "b": "Asazh",
+   "tipo": "LEALDADE CEGA",
+   "causa": "um filho ou uma filha",
+   "int": 4,
+   "desde": 217,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Tamel (morto)",
+   "b": "Graur",
+   "tipo": "ÓDIO",
+   "causa": "ouro devido",
+   "int": 4,
+   "desde": 224,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Moreth",
+   "b": "Bren (morto)",
+   "tipo": "ÓDIO",
+   "causa": "uma morte antiga",
+   "int": 4,
+   "desde": 231,
+   "estado": "fechada",
+   "nota": " · 295: FECHADA (o Moreth assentou a placa do Ronio; as duas placas)"
+  },
+  {
+   "a": "Oslo",
+   "b": "Mormir (o eremita de Quoine, os Sem-Torre)",
+   "tipo": "DÍVIDA",
+   "causa": "uma terra ou casa",
+   "int": 4,
+   "desde": 238,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Messer Rovai",
+   "b": "o podestà Tirello",
+   "tipo": "MEDO",
+   "causa": "uma peça (arma, joia, bigorna)",
+   "int": 4,
+   "desde": 245,
+   "estado": "explodiu"
+  },
+  {
+   "a": "a Guardiã da Tenaz",
+   "b": "Ulair",
+   "tipo": "INVEJA",
+   "causa": "um amor recusado",
+   "int": 4,
+   "desde": 252,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Braeth (o ancião do Clã)",
+   "b": "Iorin",
+   "tipo": "TRAIÇÃO PENDENTE",
+   "causa": "uma morte antiga",
+   "int": 4,
+   "desde": 266,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Qunemneth, o Médico Cinzento",
+   "b": "Thugek",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "um cargo ou título",
+   "int": 3,
+   "desde": 273,
+   "estado": "o Thugek entregue a Levis pelo conselho de Ireviel (304)"
+  },
+  {
+   "a": "o conselheiro Pelagri",
+   "b": "Gorine",
+   "tipo": "RIVALIDADE",
+   "causa": "uma promessa quebrada",
+   "int": 0,
+   "desde": 280,
+   "estado": "apagou"
+  },
+  {
+   "a": "Eiundunn",
+   "b": "Iorin",
+   "tipo": "LEALDADE CEGA",
+   "causa": "um cargo ou título",
+   "int": 4,
+   "desde": 287,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Orast",
+   "b": "Pelaccino (preso)",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "um cargo ou título",
+   "int": 4,
+   "desde": 294,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Ruddo",
+   "b": "Seline (em Ireviel)",
+   "tipo": "TRAIÇÃO PENDENTE",
+   "causa": "uma terra ou casa",
+   "int": 3,
+   "desde": 301,
+   "estado": "viva"
+  },
+  {
+   "a": "Mormir (o eremita de Quoine, os Sem-Torre)",
+   "b": "Messer Baldo Cerrini (mercador de lã de Farenta; o depósito)",
+   "tipo": "RIVALIDADE",
+   "causa": "uma fé diferente",
+   "int": 4,
+   "desde": 308,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Tamel (morto)",
+   "b": "a casa da fundição",
+   "tipo": "MEDO",
+   "causa": "um amor recusado",
+   "int": 4,
+   "desde": 315,
+   "estado": "explodiu"
+  },
+  {
+   "a": "o conselheiro Pelagri",
+   "b": "Skugek",
+   "tipo": "DESEJO SECRETO",
+   "causa": "um filho ou uma filha",
+   "int": 4,
+   "desde": 322,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Hrotgar",
+   "b": "Orast",
+   "tipo": "PAIXÃO PROIBIDA",
+   "causa": "um segredo descoberto",
+   "int": 4,
+   "desde": 329,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Isolda",
+   "b": "Almision",
+   "tipo": "RESSENTIMENTO",
+   "causa": "um cargo ou título",
+   "int": 2,
+   "desde": 336,
+   "estado": "viva"
+  },
+  {
+   "a": "Tamel (morto)",
+   "b": "Grerkur",
+   "tipo": "AMOR",
+   "causa": "uma terra ou casa",
+   "int": 0,
+   "desde": 343,
+   "estado": "apagou"
+  },
+  {
+   "a": "Borecci",
+   "b": "Tilde",
+   "tipo": "ÓDIO",
+   "causa": "uma promessa quebrada",
+   "int": 4,
+   "desde": 350,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Teraseth",
+   "b": "Maevis (morto)",
+   "tipo": "DÍVIDA",
+   "causa": "uma humilhação pública",
+   "int": 4,
+   "desde": 357,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322)",
+   "b": "os Jurados de Steunn",
+   "tipo": "RESSENTIMENTO",
+   "causa": "uma terra ou casa",
+   "int": 4,
+   "desde": 364,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Pelaccino (preso)",
+   "b": "Graur",
+   "tipo": "RIVALIDADE",
+   "causa": "uma promessa quebrada",
+   "int": 4,
+   "desde": 371,
+   "estado": "fechada (erro de dado)",
+   "nota": " · 421: FECHADA: o Pelaccino MORREU NA CELA no 344 (cânone); a trama seguia rodando por erro; o 'explode' do 413 não vale"
+  },
+  {
+   "a": "Eiundunn",
+   "b": "Kasgal",
+   "tipo": "TRAIÇÃO PENDENTE",
+   "causa": "um amor recusado",
+   "int": 2,
+   "desde": 378,
+   "estado": "viva"
+  },
+  {
+   "a": "Graur",
+   "b": "Bruno Malvezzi (sargento do podestà, da rede de Farenta)",
+   "tipo": "MEDO",
+   "causa": "ouro devido",
+   "int": 4,
+   "desde": 385,
+   "estado": "explodiu"
+  },
+  {
+   "a": "Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322)",
+   "b": "Gorra",
+   "tipo": "DÍVIDA",
+   "causa": "uma peça (arma, joia, bigorna)",
+   "int": 3,
+   "desde": 392,
+   "estado": "viva"
+  },
+  {
+   "a": "Skotha Graskur",
+   "b": "Lasca e Miro (presos)",
+   "tipo": "RESSENTIMENTO",
+   "causa": "um cargo ou título",
+   "int": 1,
+   "desde": 399,
+   "estado": "viva"
+  },
+  {
+   "a": "o Doge Pelaone",
+   "b": "Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308)",
+   "tipo": "MEDO",
+   "causa": "uma humilhação pública",
+   "int": 3,
+   "desde": 406,
+   "estado": "viva"
+  },
+  {
+   "a": "Seline (em Ireviel)",
+   "b": "Higrunn",
+   "tipo": "INVEJA",
+   "causa": "um amor recusado",
+   "int": 2,
+   "desde": 413,
+   "estado": "viva"
+  },
+  {
+   "a": "a cantora do templo",
+   "b": "a mestra Carea",
+   "tipo": "PAIXÃO PROIBIDA",
+   "causa": "um segredo descoberto",
+   "int": 2,
+   "desde": 420,
+   "estado": "viva"
+  },
+  {
+   "a": "Souane",
+   "b": "Brara",
+   "tipo": "DESEJO SECRETO",
+   "causa": "uma morte antiga",
+   "int": 2,
+   "desde": 427,
+   "estado": "viva"
+  }
+ ],
+ "espionagem": {
+  "chefe": "Sira",
+  "chefe_bonus": 8,
+  "contra": "Graur + Krernos (desde o 228) + Skedda (Selos) + olhos nos salineiros + runas do Colégio (233) + P4 (252) + o OLHO DO LEVE (Mítico, 257: +5, teto 35)",
+  "contra_bonus": 35,
+  "contra_max": 35,
+  "custo_semana": 340,
+  "celulas": {
+   "Marasar": {
+    "forca": 0,
+    "cd": 40,
+    "estado": {
+     "tamanho": "capital",
+     "ordem": "guarda forte",
+     "riqueza": "rica",
+     "rede": [
+      "a Liga",
+      16
+     ],
+     "problemas": [
+      [
+       "a Skotha e os orcs nas portas (cerco)",
+       6
+      ]
+     ],
+     "amigos": []
+    }
+   },
+   "Farenta": {
+    "forca": 0,
+    "cd": 37,
+    "estado": {
+     "tamanho": "cidade",
+     "ordem": "guarda",
+     "riqueza": "rica",
+     "rede": [
+      "os conselheiros",
+      15
+     ],
+     "problemas": [],
+     "amigos": []
+    }
+   },
+   "Levis": {
+    "forca": 0,
+    "cd": 31,
+    "estado": {
+     "tamanho": "cidade",
+     "ordem": "guarda",
+     "riqueza": "média",
+     "rede": [
+      "o Clã do Hrotgar",
+      12
+     ],
+     "problemas": [
+      [
+       "o Krekos nos poços (monstro perto)",
+       2
+      ]
+     ],
+     "amigos": [
+      [
+       "a Brara",
+       2
+      ]
+     ]
+    }
+   },
+   "o Delta": {
+    "forca": 3,
+    "cd": 18,
+    "estado": {
+     "tamanho": "vila",
+     "ordem": "fraca",
+     "riqueza": "pobre",
+     "rede": null,
+     "problemas": [
+      [
+       "a febre do brejo",
+       4
+      ]
+     ],
+     "amigos": [
+      [
+       "o contato das salinas",
+       2
+      ]
+     ]
+    }
+   }
+  },
+  "nota_rede_farenta": "209: na rede em Ireviel: o Tano (FUGIU na noite do 209), o Cerrini (PRESO na noite do 209), o sargento Malvezzi (VIGIADO: o Krernos e a Skedda passam mentira por ele)",
+  "nota_delta_210": "210: a célula do Delta achou: a GALÉ DA LIGA chega às salinas do contato no DIA 218",
+  "nota_210": "210: Marasar e Farenta FALHA FEIA: um agente de cada pego; as duas células caem a 0; quem pegou sabe que a casa espiona",
+  "nota_211": "211: o aviso do Krernos chegou a tempo às salinas do contato; a galé (218): 40 soldados, capitão 80, um mago, 2 balistas, ~60 remadores"
+ },
+ "redes_inimigas": [
+  {
+   "nome": "a Liga (o Doge)",
+   "forca": 22,
+   "volta": 434
+  },
+  {
+   "nome": "os Descalços",
+   "forca": 20,
+   "volta": 434
+  },
+  {
+   "nome": "a Lumine",
+   "forca": 18,
+   "volta": 434
+  },
+  {
+   "nome": "os conselheiros (Pelagri, Aldoveri, Tiracci)",
+   "forca": 19,
+   "volta": 413
+  },
+  {
+   "nome": "o Ardenghi",
+   "forca": 18,
+   "volta": 441
+  },
+  {
+   "nome": "o Clã do Hrotgar",
+   "forca": 18,
+   "volta": 434
+  }
+ ],
+ "infiltrados": [
+  {
+   "nome": "Pelaccino (Lâmina de Aluguel 110)",
+   "furt": 28,
+   "alvo": "a Isolda",
+   "desde": 200,
+   "estado": "identificado",
+   "pista": "203: altura média, capa cinza de carregador de carvão de Farenta, queimadura no dorso da mão esquerda; some no pátio do carvão · 204: a ITHRA dá o nome, o rosto e o lugar (o sótão da estalagem do cais, em cima do Thuron); a Tilde: manca da perna direita · 204 (noite): a casa o pega no sótão; ele mata o Hraga e o Tamel e foge ferido pela janela (89/300) · 205: a vigia perde o rastro de sangue nos telhados; o submundo do Krernos não acha nada · 207: a vigia da Skedda segue o TANO (primo da Caciccetta) do lazareto até a casa dele e VÊ o homem pela janela, a perna enfaixada; o submundo do Krernos pergunta alto demais e ele MUDA à noite: os capuzes o seguem até um BARCO amarrado no cais velho, perto dos lodaçais (quem o abriga ali: não sabem) · 208: a casa chega ao barco e ele sente antes: foge pela PORTA DE SOMBRA passando pelo Graur na prancha; ficam dois facas de Farenta (LASCA e MIRO, presos vivos); o Selo da Skedda mostra onde ele sai e os capuzes o seguem até um DEPÓSITO DE LÃ de um mercador de Farenta no bairro do rio · 209: Lasca e Miro contam (ganho): quem paga são os conselheiros pela mão da MESSA TIRACCI; o depósito é de MESSER BALDO CERRINI; saídas: duas portas, um alçapão para o rio e o telhado ligado ao vizinho; ele quer sarar e TERMINAR O SERVIÇO (a Isolda) · 209: PRESO VIVO no depósito de lã (a Isolda fecha a sombra; o Graur o derruba na primeira rodada); fala sob tortura: a Tiracci, o próximo passo da Liga, o sargento do podestà"
+  },
+  {
+   "nome": "Hiald (Aprendiz de ferreiro de Steunn 24)",
+   "furt": 4,
+   "alvo": "a Tilde",
+   "desde": 406,
+   "estado": "identificado",
+   "pista": "406: pediu lugar na forja grande; HONESTO, sem arte de esconder (furt 4: nível 24, sem perícia de sombra)"
+  }
+ ],
+ "gente": [
+  "Eliane",
+  "Herkald",
+  "Graur",
+  "Krernos",
+  "Tamel (morto)",
+  "Ulurve",
+  "Nouliel",
+  "Skedda",
+  "Iorin",
+  "Sira",
+  "Tilde",
+  "Thuron",
+  "Ithra",
+  "Isolda",
+  "o podestà Tirello",
+  "Hrotgar",
+  "Thugek",
+  "Eiundunn",
+  "o Doge Pelaone",
+  "Ardenghi",
+  "o conselheiro Pelagri",
+  "o Visconte Aldoveri",
+  "Messa Tiracci",
+  "a cantora do templo",
+  "Brara",
+  "Aeliae",
+  "Ruddo",
+  "a mestra Carea",
+  "a irmã Oisse",
+  "Nouse",
+  "Orast",
+  "Messer Rovai",
+  "Gorra",
+  "Odrum",
+  "Dovan",
+  "Maevis (morto)",
+  "Oslo",
+  "Bren (morto)",
+  "Venne (morto)",
+  "Kasgal",
+  "Seline",
+  "os Jurados de Steunn",
+  "Kreium (preso)",
+  "Moreth",
+  "Seline (em Ireviel)",
+  "Tano (carregador, primo da Caciccetta)",
+  "Lasca e Miro (presos)",
+  "Gorron (oferece a missão do Delta)",
+  "Messer Baldo Cerrini (mercador de lã de Farenta; o depósito)",
+  "Pelaccino (preso)",
+  "Bruno Malvezzi (sargento do podestà, da rede de Farenta)",
+  "Draron (da casa)",
+  "Kreine (da casa)",
+  "Mormir (o eremita de Quoine, os Sem-Torre)",
+  "Braeth (o ancião do Clã)",
+  "Lubassino (salineiro do Delta, AMBICIOSO e LEAL; quer formar uma companhia; sócio proposto do Krernos, 301)",
+  "Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301)",
+  "Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308)",
+  "Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308)",
+  "Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308)",
+  "ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322)",
+  "Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322)"
+ ],
+ "faccoes": [
+  {
+   "nome": "os Jurados de Steunn",
+   "onde": "Steunn, em volta do Lumdun",
+   "desde": 203,
+   "o_que": "os clãs de cima juram pelo herdeiro perdido dos Steunn",
+   "forca": 4,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 4",
+    "392: [6] quieta",
+    "399: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "406: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "413: [3] quieta",
+    "420: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
+   ]
+  },
+  {
+   "nome": "os Sem-Torre",
+   "onde": "Quoine, a torre caída em Zisrir",
+   "desde": 210,
+   "o_que": "magos que o Colégio de Telosus falido mandou embora sem paga; o MORMIR (o eremita de Quoine) os junta e quer voltar ao Colégio; o filho do Draron é aprendiz dele, preso por dívida",
+   "forca": 1,
+   "relogio": [
+    2,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [12] AGE PELO OBJETIVO → 1/6",
+    "392: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "399: [5] quieta",
+    "406: [13] BATE DE FRENTE com os Sem-Torre de Quoine: [5]+2 × [3]+2 → vence os Sem-Torre (2/6); os Se",
+    "413: [1] RACHA: perde gente → força 1",
+    "420: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "427: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 2/6"
+   ]
+  },
+  {
+   "nome": "a Liga em guerra",
+   "onde": "Marasar",
+   "desde": 211,
+   "o_que": "evento de mundo: GUERRA, monstros contra homens em Marasar (notícia 212); a Liga reage: fecha Ireviel ao comércio (o emissário Draek, 211)",
+   "forca": 1,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 0,
+   "estado": "desfeita",
+   "log": [
+    "385: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "392: [5] quieta"
+   ]
+  },
+  {
+   "nome": "o Culto dos Olhos Pintados",
+   "onde": "Farenta (3 cidades)",
+   "desde": 257,
+   "o_que": "adora um rei antigo; promete riqueza; rito: roubo de crianças; plano: matar um herdeiro; líder nível 180",
+   "forca": 3,
+   "relogio": [
+    2,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "385: [13] BATE DE FRENTE com a Guarda do Pedágio: [18]+3 × [9]+2 → vence o Culto dos Olhos Pintados ",
+    "392: [6] quieta",
+    "399: [8] quieta",
+    "406: [4] quieta",
+    "413: [4] quieta",
+    "420: [2] quieta",
+    "427: [12] AGE PELO OBJETIVO → 2/6"
+   ]
+  },
+  {
+   "nome": "os Barqueiros do Livro",
+   "onde": "o Leve (a forquilha de Ireviel)",
+   "desde": 255,
+   "o_que": "barqueiros da Liga que pagavam o pedágio secreto aos conselheiros; pedem a Carta de Passagem de Ireviel",
+   "forca": 3,
+   "relogio": [
+    2,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "392: [13] BATE DE FRENTE com os da Chama da Hoste: [11]+4 × [18]+4 → vence os da Chama da Hoste (1/6",
+    "399: [5] quieta",
+    "406: [13] BATE DE FRENTE com os da Muralha Velha: [8]+3 × [11]+2 → vence os da Muralha Velha (1/6); ",
+    "413: [12] AGE PELO OBJETIVO → 1/6",
+    "420: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 3",
+    "427: [4] quieta"
+   ]
+  },
+  {
+   "nome": "os Sem-Torre de Quoine",
+   "onde": "o vale de Quoine (Zisrir)",
+   "desde": 259,
+   "o_que": "parte dos Sem-Torre, contra a casa e o Colégio, pela cobrança do Oslo",
+   "forca": 0,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -2,
+   "estado": "desfeita",
+   "log": [
+    "385: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "392: [2] quieta",
+    "399: [4] quieta",
+    "406: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [14] BATE DE FRENTE com os Sem-Torre: [7]+1 × [16]+1 → vence os Sem-Torre (3/6); os Sem-Torre d"
+   ]
+  },
+  {
+   "nome": "a Guilda dos Salineiros do Delta",
+   "onde": "o Delta",
+   "desde": 259,
+   "o_que": "salineiros que saem do exército de bandidos e querem vender só a Ireviel",
+   "forca": 3,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 1,
+   "estado": "viva",
+   "log": [
+    "385: [2] quieta",
+    "392: [14] BATE DE FRENTE com os Do Junco: [19]+5 × [5]+1 → vence a Guilda dos Salineiros do Delta (2",
+    "399: [1] RACHA: perde gente → força 4",
+    "406: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "413: [1] RACHA: perde gente → força 3",
+    "420: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
+    "427: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê"
+   ]
+  },
+  {
+   "nome": "os Do Junco",
+   "onde": "o Delta e as salinas",
+   "desde": 273,
+   "o_que": "curandeiras dos juncos e salineiros armados contra os bandidos; a Nialla fala por eles em Ireviel",
+   "forca": 0,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1,
+   "estado": "desfeita",
+   "log": [
+    "385: [14] BATE DE FRENTE com a Guilda dos Salineiros do Delta: [11]+2 × [20]+5 → vence a Guilda dos "
+   ]
+  },
+  {
+   "nome": "os Sem-Coroa",
+   "onde": "a Companhia, em Marasar",
+   "desde": 294,
+   "o_que": "oficiais que não aceitam a Skotha como Doge",
+   "forca": 3,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [8] quieta",
+    "392: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "399: [14] BATE DE FRENTE com os Filhos da Brecha: [15]+3 × [1]+4 → vence os Sem-Coroa (1/6); os Filh",
+    "406: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 4",
+    "406: o patrono (escolha do Mestre, pelo fio mais perto): o SALVIO, o conselheiro foragido da Liga (o ouro que saiu de Marasar com ele)",
+    "413: [8] quieta",
+    "420: [1] RACHA: perde gente → força 3",
+    "427: [2] quieta"
+   ]
+  },
+  {
+   "nome": "os Fiéis do Doge Velho",
+   "onde": "Marasar (a guarnição velha da Liga que se rendeu)",
+   "desde": 300,
+   "o_que": "nasceram da guerra velha Liga × Skotha: querem o Doge velho de volta; a LIGA paga com ouro e espadas que a MÃO MOLHADA passa pelo cais (a contra da casa achou no 300)",
+   "forca": 6,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": -2,
+   "estado": "viva",
+   "log": [
+    "385: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
+    "392: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "399: [9] junta gente ou recurso → força 5",
+    "406: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
+    "413: [11] AGE PELO OBJETIVO → 1/6",
+    "420: [9] junta gente ou recurso → força 6",
+    "427: [9] junta gente ou recurso → força 6"
+   ]
+  },
+  {
+   "nome": "os da Mão Queimada",
+   "onde": "Telosus",
+   "desde": 301,
+   "o_que": "as harpias Kraek e os que sobraram do povo que a Elaeva matou, na fé da MAMILTIA",
+   "forca": 4,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [10] junta gente ou recurso → força 3",
+    "392: [8] quieta",
+    "399: [5] quieta",
+    "406: [4] quieta",
+    "413: [6] quieta",
+    "420: [13] não acha rival na terra: age pelo objetivo → 1/6",
+    "427: [10] junta gente ou recurso → força 4"
+   ]
+  },
+  {
+   "nome": "a Guarda do Pedágio",
+   "onde": "Farenta",
+   "desde": 301,
+   "o_que": "os cobradores do pedágio velho dos conselheiros, sem ganho desde o livro lido em praça (245); juram queimar os Barqueiros do Livro · 311: DESFEITA pelo Teraseth",
+   "forca": 2,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": -2,
+   "estado": "viva",
+   "log": [
+    "385: [11] AGE PELO OBJETIVO → 1/6",
+    "392: [7] quieta",
+    "399: [8] quieta",
+    "406: [3] quieta",
+    "413: [5] quieta",
+    "420: [10] junta gente ou recurso → força 1",
+    "427: [6] NÃO DORME (G8-D) 1d6 [2]: junta gente → força 2"
+   ]
+  },
+  {
+   "nome": "(culto) os Olhos Pintados",
+   "onde": "a estrada sul de Ireviel",
+   "desde": 298,
+   "o_que": "rouba crianças; 305: uma pedra com olhos pintados e um sapato de criança na estrada sul (o culto avança)",
+   "forca": 2,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "385: [1] RACHA: perde gente → força 1",
+    "392: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
+    "399: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "406: [2] quieta",
+    "413: [10] junta gente ou recurso → força 2",
+    "420: [4] quieta",
+    "427: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)"
+   ]
+  },
+  {
+   "nome": "a Bigorna Livre",
+   "onde": "Levis",
+   "desde": 308,
+   "o_que": "ferreiros de Levis sem registro na Guilda (da briga do 245)",
+   "forca": 1,
+   "relogio": [
+    2,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [1] RACHA: perde gente → força 3",
+    "392: [11] AGE PELO OBJETIVO → 1/6",
+    "399: [12] AGE PELO OBJETIVO → 2/6",
+    "406: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "413: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "420: [7] quieta",
+    "427: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)"
+   ]
+  },
+  {
+   "nome": "a Luz Partida",
+   "onde": "Marasar e Ireviel",
+   "desde": 308,
+   "o_que": "a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)",
+   "forca": 3,
+   "relogio": [
+    5,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [8] quieta",
+    "392: [14] BATE DE FRENTE com a Liga em guerra: [13]+3 × [1]+2 → vence a Luz Partida (1/6); a Liga em",
+    "399: [12] AGE PELO OBJETIVO → 2/6",
+    "406: [13] BATE DE FRENTE com os da Luz do Cais: [2]+3 × [19]+2 → vence os da Luz do Cais (1/6); a Lu",
+    "413: [6] quieta",
+    "420: [9] junta gente ou recurso → força 3",
+    "427: [14] BATE DE FRENTE com os da Cinza: [14]+3 × [11]+5 → vence a Luz Partida (5/6); os da Cinza c"
+   ]
+  },
+  {
+   "nome": "a Botica Velha",
+   "onde": "Farenta",
+   "desde": 308,
+   "o_que": "boticários que perderam a venda quando o remédio da casa correu o rio",
+   "forca": 6,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [4] quieta",
+    "392: [10] junta gente ou recurso → força 6",
+    "399: [6] quieta",
+    "406: [11] AGE PELO OBJETIVO → 1/6",
+    "413: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "420: [11] AGE PELO OBJETIVO → 1/6",
+    "427: [6] quieta"
+   ]
+  },
+  {
+   "nome": "os da Muralha Velha",
+   "onde": "Ireviel",
+   "desde": 315,
+   "o_que": "os velhos da muralha, amigos do Tamel; querem voz na guarda",
+   "forca": 2,
+   "relogio": [
+    2,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [1] RACHA: perde gente → força 2",
+    "392: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "399: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "406: [6] quieta",
+    "413: [12] AGE PELO OBJETIVO → 2/6",
+    "420: [8] quieta",
+    "427: [7] quieta"
+   ]
+  },
+  {
+   "nome": "os Filhos da Brecha",
+   "onde": "Marasar",
+   "desde": 315,
+   "o_que": "veteranos da brecha; querem terra em Marasar",
+   "forca": 2,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [4] quieta",
+    "392: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "399: [2] quieta",
+    "406: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [1] RACHA: perde gente → força 2",
+    "420: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
+   ]
+  },
+  {
+   "nome": "os da Luz do Cais",
+   "onde": "o porto de Marasar",
+   "desde": 322,
+   "o_que": "acendem velas para a luz que matou o Naudren (o Moreth)",
+   "forca": 3,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 1,
+   "estado": "viva",
+   "log": [
+    "385: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "392: [3] quieta",
+    "399: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "406: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "420: [10] junta gente ou recurso → força 3",
+    "427: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa"
+   ]
+  },
+  {
+   "nome": "os Afogados Vivos",
+   "onde": "o rio",
+   "desde": 322,
+   "o_que": "sobreviventes da guerra do rio atrás de quem afundou as barcas (OCULTO: foi o Teraseth) · 332: calaram depois que o rei defendeu o Teraseth",
+   "forca": 1,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "392: [8] quieta",
+    "399: [11] AGE PELO OBJETIVO → 1/6",
+    "406: [14] BATE DE FRENTE com os do Rio Vermelho: [19]+2 × [6]+3 → vence os Afogados Vivos (1/6); os ",
+    "413: [4] quieta",
+    "420: [1] RACHA: perde gente → força 1",
+    "427: [5] quieta"
+   ],
+   "objetivo": "402: passaram para o lado do Teraseth (notícia FIEL)"
+  },
+  {
+   "nome": "os Filhos do Livro",
+   "onde": "Ireviel",
+   "desde": 329,
+   "o_que": "famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga",
+   "forca": 3,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 2,
+   "estado": "viva",
+   "log": [
+    "385: [7] quieta",
+    "392: [12] AGE PELO OBJETIVO → 1/6",
+    "399: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa",
+    "406: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [10] junta gente ou recurso → força 4",
+    "420: [14] BATE DE FRENTE com a Luz Partida: [11]+4 × [13]+3 → vence a Luz Partida (4/6); os Filhos d",
+    "427: [4] quieta"
+   ]
+  },
+  {
+   "nome": "os Descalços do Cais",
+   "onde": "o Porto de Marasar (de Ireviel)",
+   "desde": 336,
+   "o_que": "a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)",
+   "forca": 1,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "392: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "399: [11] AGE PELO OBJETIVO → 1/6",
+    "406: [14] BATE DE FRENTE com os Filhos da Brecha: [8]+2 × [16]+3 → vence os Filhos da Brecha (1/6); ",
+    "413: [3] quieta",
+    "420: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "427: [5] quieta"
+   ]
+  },
+  {
+   "nome": "os da Mina Fechada",
+   "onde": "Levis",
+   "desde": 336,
+   "o_que": "mineiros de Levis que querem fechar as minas de cima (a febre cinza e a Que Come a Pedra); o Odrum fala por eles",
+   "forca": 5,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 1,
+   "estado": "viva",
+   "log": [
+    "385: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "392: [10] junta gente ou recurso → força 3",
+    "399: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "406: [9] junta gente ou recurso → força 4",
+    "413: [14] BATE DE FRENTE com a Bigorna Livre: [10]+4 × [9]+3 → vence os da Mina Fechada (1/6); a Big",
+    "420: [9] junta gente ou recurso → força 5",
+    "427: [7] quieta"
+   ]
+  },
+  {
+   "nome": "o Culto do Xaathis",
+   "onde": "Levis e Levis-baixa (4 cidades)",
+   "desde": 343,
+   "o_que": "adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra caro · 343: tomou as harpias KRAEK · 350: o ARDENGHI paga o culto; dentes nas estacas do rio acima de Levis",
+   "forca": 4,
+   "relogio": [
+    3,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "392: [5] quieta",
+    "399: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
+    "406: [6] quieta",
+    "413: [10] junta gente ou recurso → força 6",
+    "415: perdeu 28 homens, um sacerdote (72) e o PAGADOR (o Ardenghi, morto pelo rei na fundição velha de Levis-baixa): força 6 → 5; uns 12 sumiram nas minas; o líder (120) não estava lá",
+    "416: os 12 da ala do Ardenghi pegos nas minas de baixo de Levis, sem luta, e mortos na muralha por sentença do rei; a ala do cais lê como guerra ao culto inteiro (Ordem de Levis −1 por duas semanas); o LÍDER (120, da ala do Ardenghi) saiu de Levis ANTES da fundição pela estrada do oeste, a caminho de Lumgal (OCULTO)",
+    "420: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 6",
+    "422 noite: a Sira os viu em ERYSSA (28, a ala do cais) juntando armas e piche",
+    "423: a ALA DO CAIS quebrada em Eryssa (força 5 → 4); 6 fugiram pelo canal velho para o rio",
+    "427: [13] BATE DE FRENTE com a Bigorna Livre: [20]+4 × [11]+2 → vence o Culto do Xaathis (3/6); a Bi"
+   ]
+  },
+  {
+   "nome": "os do Rio Vermelho",
+   "onde": "Ireviel e o rio",
+   "desde": 343,
+   "o_que": "parentes dos barqueiros que a Liga matou; querem Farenta queimada",
+   "forca": 2,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "385: [1] RACHA: perde gente → força 3",
+    "392: [11] AGE PELO OBJETIVO → 1/6",
+    "399: [2] quieta",
+    "406: [3] quieta",
+    "413: [7] quieta",
+    "420: [9] junta gente ou recurso → força 3",
+    "427: [14] BATE DE FRENTE com os Barqueiros do Livro: [9]+3 × [12]+3 → vence os Barqueiros do Livro ("
+   ]
+  },
+  {
+   "nome": "os do Cais de Baixo",
+   "onde": "o Porto de Marasar",
+   "desde": 351,
+   "o_que": "estivadores em greve contra a casa",
+   "forca": 4,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": -2,
+   "estado": "viva",
+   "log": [
+    "385: [3] quieta",
+    "392: [14] BATE DE FRENTE com os Filhos da Brecha: [20]+4 × [14]+5 → vence os do Cais de Baixo (1/6);",
+    "399: [6] quieta",
+    "406: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [13] BATE DE FRENTE com os da Luz do Cais: [3]+4 × [17]+2 → vence os da Luz do Cais (1/6); os d",
+    "420: [10] junta gente ou recurso → força 4",
+    "427: [12] AGE PELO OBJETIVO → 1/6"
+   ]
+  },
+  {
+   "nome": "as Mães da Porta",
+   "onde": "Ireviel",
+   "desde": 350,
+   "o_que": "as mães da enfermaria das crianças contra os Olhos Pintados",
+   "forca": 4,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 1,
+   "estado": "viva",
+   "log": [
+    "385: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "392: [9] junta gente ou recurso → força 3",
+    "399: [10] junta gente ou recurso → força 4",
+    "406: [12] AGE PELO OBJETIVO → 1/6",
+    "413: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "420: [6] quieta",
+    "427: [6] quieta"
+   ]
+  },
+  {
+   "nome": "os da Chama da Hoste",
+   "onde": "Ireviel",
+   "desde": 350,
+   "o_que": "os magos da hoste viram irmandade (o Bjarkunn)",
+   "forca": 5,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": 2,
+   "estado": "viva",
+   "log": [
+    "385: [1] RACHA: perde gente → força 4",
+    "392: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "399: [6] quieta",
+    "406: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "413: [9] junta gente ou recurso → força 5",
+    "420: [4] quieta",
+    "427: [6] quieta"
+   ]
+  },
+  {
+   "nome": "os da Cinza",
+   "onde": "Ireviel velha",
+   "desde": 399,
+   "o_que": "famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald",
+   "forca": 4,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "399: nasce da sentença dividida de Fenmir (a surpresa da semana da Tilde, [7])",
+    "400: HK [1]: usam a mudança do rei ('desdisse a própria sentença'): força 2 → 3",
+    "406: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "413: [10] junta gente ou recurso → força 5",
+    "420: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
+    "427: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6"
+   ]
+  },
+  {
+   "nome": "os Devolvidos",
+   "onde": "o Delta e Ireviel",
+   "desde": 401,
+   "o_que": "os 60 salineiros que a Leliel soltou (395): racharam a Guilda dos Salineiros; falam em paz com o norte e devem a liberdade a ela",
+   "forca": 1,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "401: nasce do rumor que correu na fuga do Veneneiro (surpresa dele, [7]) e do racha da Guilda (tick 401, FIEL)",
+    "406: [2] quieta",
+    "413: [2] quieta",
+    "420: [4] quieta",
+    "427: [14] BATE DE FRENTE com os da Moeda Velha: [9]+2 × [10]+2 → vence os da Moeda Velha (1/6); os D"
+   ]
+  },
+  {
+   "nome": "a Torre Acesa",
+   "onde": "as torres mortas de Ireviel velha",
+   "desde": 378,
+   "o_que": "o mago das torres solto do círculo de Fenmir (o Quthemnus) e o filho (o Zesreth), pagos pelo Ardenghi; queriam o Herkald e a Tilde",
+   "forca": 0,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -2,
+   "estado": "DESTRUÍDA (404): o Zesreth morto no sino pelo Moreth; o Quthemnus preso; a guarda morta ou presa",
+   "log": [
+    "404: o golpe na madrugada (chegada extraordinária): a casa a zero sem baixa"
+   ]
+  },
+  {
+   "nome": "os da Moeda Velha",
+   "onde": "Ireviel (o cais e o bairro dos refugiados)",
+   "desde": 405,
+   "o_que": "refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fala por eles",
+   "forca": 3,
+   "relogio": [
+    1,
+    6
+   ],
+   "postura": 0,
+   "estado": "viva",
+   "log": [
+    "405: nasce da tentativa de roubo da bolsa de moeda velha da Liga do Odrum, no cais, que a Mamiltia desfez (a faísca do dia e a surpresa [7])",
+    "406: [13] BATE DE FRENTE com a Luz Partida: [4]+2 × [5]+2 → vence a Luz Partida (3/6); os da Moeda V",
+    "413: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 2",
+    "420: [4] quieta",
+    "427: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 3"
+   ]
+  }
+ ],
+ "lugares": [
+  {
+   "nome": "Selol",
+   "onde": "a Mata de Elais",
+   "o_que": "torre de mago caída por dívida; guarda uma peça antiga; nada mora lá; entrar custa um sacrifício",
+   "noticia": 206
+  },
+  {
+   "nome": "Quoium",
+   "onde": "embaixo das salinas velhas ao sul",
+   "o_que": "cidade afundada por traição; uma peça antiga; bandidos; entrar custa uma luta",
+   "noticia": 209
+  },
+  {
+   "nome": "Kreula",
+   "onde": "Marasar",
+   "o_que": "templo caído por dívida; guarda uma receita; nada mora lá; entrar custa uma luta",
+   "noticia": 208
+  },
+  {
+   "nome": "o cais velho (draade)",
+   "onde": "Ireviel",
+   "o_que": "barqueiros do Delta vendem DRAADE (Raro, madeira de árvore antiga, Podridão: RD 2 contra doença e veneno na armadura; a ferida infecciona na arma; cheiro de morte; 150-250/kg)",
+   "noticia": 209
+  },
+  {
+   "nome": "Itheth",
+   "onde": "Steunn (leitura: o cemitério dos reis Steunn, pelo Herkald)",
+   "o_que": "cemitério de reis caído por terremoto; guarda material Raro a Lendário; nada mora lá, e é isso que assusta; entrar custa uma luta",
+   "noticia": 210
+  },
+  {
+   "nome": "o leilão do vardun",
+   "onde": "Farenta",
+   "o_que": "boato (o papel no bolso do agente dos conselheiros): a Tiracci comprou em leilão um lote de VARDUN (Lendário, Tempo + Água; na arma 1 ataque a mais por luta; na armadura desfaz 1 golpe por dia; envelhece o portador 1 dia por uso; 10.000+/kg)",
+   "noticia": 210
+  },
+  {
+   "nome": "o veyine do Braeth",
+   "onde": "Ireviel (o ancião do Clã)",
+   "o_que": "1 kg de VEYINE (Raro, metal caído do céu, Elo: arma corta laços mágicos e encantamentos; armadura sente aliados com Laço 3+; ferramenta +2 em Infusão e Encantamento; perder a peça dói) a 250 o quilo (oculto: roubado do Clã) · COMPRADO por Ferir (210): 1 kg; ~50 g foram para o anel do Draron",
+   "noticia": 210
+  },
+  {
+   "nome": "o koreth de Kremir",
+   "onde": "Kremir",
+   "o_que": "material novo (notícia 211): KORETH, Incomum, escória de uma forja antiga, Peso; arma +2 dano −1 ataque; armadura: não pode ser derrubado nem empurrado; ferramenta +1 Matéria; afunda na água, quebra pontes",
+   "noticia": 211
+  },
+  {
+   "nome": "Kasra",
+   "dia": 217,
+   "o_que": "TERRA ALÉM DO MAPA: forte caído por traição; guarda uma peça antiga; habitado por mortos; um teste de Vigor por hora"
+  },
+  {
+   "nome": "Orade",
+   "dia": 217,
+   "o_que": "forte nas colinas de Kremir, caído por um monstro; guarda uma peça antiga; tomado pelo CULTO DO MANEUS; entrar custa um sacrifício (o Graur conhece)"
+  },
+  {
+   "nome": "Orne",
+   "onde": "Zisrir (o vale)",
+   "o_que": "um MERCADO caído por um monstro; guarda material Raro a Lendário; não habita nada; entrar pede uma SENHA (um refugiado de Zisrir a sabe)",
+   "noticia": "o Colégio, 252"
+  },
+  {
+   "nome": "Quogal",
+   "onde": "no caminho de Farenta a Ireviel (a Brissa passou)",
+   "o_que": "uma MINA caída por um monstro; guarda UMA PEÇA ANTIGA; mora lá um EREMITA; entrar pede uma CHAVE",
+   "noticia": "a Brissa, 253"
+  },
+  {
+   "nome": "o veio de THERK",
+   "onde": "as Fundas do Norte (terra do Clã), pelo que o Braeth diz",
+   "o_que": "THERK: ÚNICO, ferro de pântano, Água, condutividade 10, infusão até o 9º; arma ignora 5 de Defesa; 2.500-4.000/kg; reserva grande",
+   "noticia": "o Braeth ao Iorin, 301"
+  },
+  {
+   "nome": "o veio de SHASHA",
+   "onde": "debaixo do porto de Marasar (o armazém do motim)",
+   "o_que": "SHASHA: RARO, pepita de rio, Silêncio, condutividade 8, infusão até o 8º; reserva grande",
+   "noticia": "o achado do porto, 301"
+  },
+  {
+   "nome": "Ulek",
+   "onde": "o sul, onde a areia come a pedra",
+   "o_que": "templo caído por terremoto; guarda um NÚCLEO; um culto mora lá; entrar custa uma luta",
+   "noticia": "307"
+  },
+  {
+   "nome": "a Necrópole de Alnesar",
+   "onde": "a saber (o Dovan dá o lugar em troca de clemência; a Tessal tem a outra metade nos papéis)",
+   "o_que": "cemitério de reis caído por dívida: numa metade um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um SEGREDO DE FACÇÃO (entrar pede uma chave)",
+   "noticia": "308"
+  },
+  {
+   "nome": "Haol",
+   "onde": "a baía de Marasar",
+   "o_que": "cidade afundada por maldição; guarda uma RECEITA; um culto; entrar custa um sacrifício",
+   "noticia": "o Thuast, 308"
+  },
+  {
+   "nome": "Qulosus",
+   "onde": "TERRA ALÉM DO MAPA (aberta no 308)",
+   "o_que": "mina caída por dívida; guarda UM PRISIONEIRO; um culto; entrar custa um preço a alguém",
+   "noticia": "308"
+  },
+  {
+   "nome": "o TIALD",
+   "onde": "a saber (boato ao Draron)",
+   "o_que": "LENDÁRIO, cristal de geodo, Espinho, condutividade 10, infusão até o 9º",
+   "noticia": "308"
+  },
+  {
+   "nome": "Ulirv",
+   "onde": "Steunn (ruína aberta no 310)",
+   "o_que": "oficina de MESTRE MORTO caída por monstro; guarda UM PRISIONEIRO; mortos moram lá; entrar custa um sacrifício",
+   "noticia": "310"
+  },
+  {
+   "nome": "a BJURKA do Ithvil",
+   "onde": "as Montanhas de Fogo",
+   "o_que": "MÍTICO, Podridão, condutividade 9; ferramenta: +12 em Matéria; armadura RD 12 contra doença e veneno; um caçador diz ter achado lascas onde o Ithvil se coça; sem mercado",
+   "noticia": "311"
+  },
+  {
+   "nome": "a Torre do Sal",
+   "onde": "o cais da Guilda, Levis-baixa",
+   "o_que": "OITO da casa presos (dois doentes); 20 guardas (~30) e um mago da Liga (~60); entrada pela RAMPA DO SAL, de madrugada",
+   "noticia": "a Sira, 314"
+  },
+  {
+   "nome": "Serrarva",
+   "onde": "TERRA ALÉM DO MAPA (315)",
+   "o_que": "oficina de mestre morto; guarda uma PEÇA ANTIGA; nada mora lá; entrar pede uma chave; feira grande (321)",
+   "noticia": "315"
+  },
+  {
+   "nome": "a SIVANE",
+   "onde": "o brejo (um doente do Nelior sabe onde)",
+   "o_que": "MÍTICO, raiz de pântano, Luz + Peso, condutividade 8; ferramenta +12 em Técnica e +12 em Matéria",
+   "noticia": "315"
+  },
+  {
+   "nome": "a YILA",
+   "onde": "campos de batalha (o Tedulteth)",
+   "o_que": "ÉPICO, Vida, condutividade 9; armadura cura 2d6 por hora",
+   "noticia": "315"
+  },
+  {
+   "nome": "o ZEIETH (metal caído do céu)",
+   "onde": "para lá dos lodaçais? (o boato do Kreine, no exílio; a estrela do 328)",
+   "o_que": "MÍTICO, metal caído do céu, Espinho",
+   "noticia": "329"
+  },
+  {
+   "nome": "a ESTRELA DO 328",
+   "onde": "o DELTA (a notícia do 333)",
+   "o_que": "10 kg de ZEIETH (MÍTICO, metal caído do céu, Espinho); ninguém mais sabe ainda",
+   "noticia": "333"
+  },
+  {
+   "nome": "Xaiza",
+   "onde": "a costa (Ireviel–Marasar)",
+   "o_que": "mercado caído por dívida; guarda uma receita; nada mora lá, e é isso que assusta; entrar pede uma senha",
+   "noticia": 336
+  },
+  {
+   "nome": "Asyzha",
+   "onde": "Lumade (o Celocus o achou)",
+   "o_que": "mercado caído por terremoto; guarda um prisioneiro; mora um eremita; entrar pede uma chave; o Celocus paga a quem tiver a chave",
+   "noticia": 336
+  },
+  {
+   "nome": "Siaror",
+   "onde": "Yaelane",
+   "o_que": "mina caída por maldição; material Raro a Lendário; nada mora lá; senha (OCULTO: a notícia não chega sozinha)",
+   "noticia": "não chega"
+  },
+  {
+   "nome": "Eiirke",
+   "onde": "Shizess",
+   "o_que": "oficina de mestre morto caída por traição; guarda um NÚCLEO; um eremita; um teste de Vigor por hora",
+   "noticia": 338
+  },
+  {
+   "nome": "Ralgir",
+   "onde": "Kasra (terra além do mapa)",
+   "o_que": "forte caído por dívida; guarda um SEGREDO DE FACÇÃO; habitado por mortos; entrar custa um sacrifício",
+   "noticia": 345
+  },
+  {
+   "nome": "Sinniel",
+   "onde": "as colinas de Lumgal (a caminho de Lumade), pelo Draron",
+   "o_que": "templo caído por praga; guarda um prisioneiro; habitado por um monstro (a gerar); um teste de Vigor por hora",
+   "noticia": 343
+  },
+  {
+   "nome": "Saelane",
+   "onde": "as Fundas do Norte",
+   "o_que": "oficina de mestre morto caída por terremoto; guarda uma PEÇA ANTIGA; habitada por um culto; senha",
+   "noticia": 352
+  },
+  {
+   "nome": "Nilane",
+   "onde": "(pelo Thuast; a região a dizer quando pesar)",
+   "o_que": "oficina caída por traição; guarda um segredo de facção; bandidos; um preço a alguém",
+   "noticia": 350
+  },
+  {
+   "nome": "Iroule",
+   "onde": "debaixo do capim queimado entre a fundição e Ireviel velha (a laje com aro de ferro e runas, achada no fogo do 400)",
+   "o_que": "oficina de mestre morto, caída em guerra; pede uma SENHA; (OCULTO) guarda um prisioneiro e é habitada por mortos · 404: a SENHA estava nos papéis do Quthemnus, no círculo da torre do meio",
+   "noticia": 400
+  }
+ ],
+ "viajantes": [
+  {
+   "nome": "Seline",
+   "de": "as Fundas do Norte (o Clã Hegre)",
+   "tracos": "AVARENTA, CURIOSA",
+   "segredo": "sabe de um crime de alguém importante",
+   "noticia": 207,
+   "estado": "CHEGOU a Ireviel no 207, arruinada pela lei nova do Hrotgar no pedágio de Levis"
+  }
+ ],
+ "presos": [
+  {
+   "nome": "Kasgal",
+   "de": "o Ardenghi",
+   "desde": 203,
+   "tracos": "AMBICIOSO, ORGULHOSO",
+   "nota": "pego pela contra-espionagem; quer pagar uma dívida antiga; medo de voltar a ser escravo; um filho em outra cidade"
+  },
+  {
+   "nome": "Kreium e 3 batedores Hegre",
+   "de": "o Hrotgar (o Clã)",
+   "desde": 205,
+   "tracos": "CURIOSO, ORGULHOSO",
+   "nota": "pegos vivos na emboscada do cais; vinham atrás do Odrum (200 de ouro, ordem de boca); medo do fogo; uma doença escondida; INTERROGADO no 206 pelo Graur (sucesso): o Hrotgar cava até a câmara de Braron para MATAR o herdeiro; quer o Odrum porque sabe o buraco da comida (a doença e o plano do Clã contra Ireviel ele não contou); 207: 2º interrogatório (ganho): o Hrotgar vai fechar o rio se a casa não entregar o Odrum; o Kreium tem a FEBRE CINZA (cedo, PEGA). OCULTO: pegaram o batedor 1 (sinais no 210), o batedor 3 (212) e o GRAUR (211); o curso do Kreium rola no tick 210; 208: DEVOLVIDOS: a barca da casa sai à tarde para Levis (o Thugek recebe ~211). OCULTO: o Kreium foge numa margem na noite do 209, doente; o exame do Nelior falhou feio ('ninguém mais tem': errado) · 210 (OCULTO): o curso dele [12] devagar",
+   "estado": "devolvidos (208)"
+  },
+  {
+   "nome": "Lasca e Miro",
+   "de": "a rede de Farenta (a viúva Caciccetta)",
+   "desde": 208,
+   "tracos": "irmãos, facas",
+   "nota": "pegos vivos no barco do cais velho onde o Pelaccino se escondia"
+  },
+  {
+   "nome": "Baldo Cerrini",
+   "de": "a rede de Farenta",
+   "desde": 209,
+   "tracos": "mercador de lã",
+   "nota": "preso na casa de pouso dele; o depósito de lã fechado com Selo"
+  },
+  {
+   "nome": "agente dos Descalços",
+   "de": "os Descalços",
+   "desde": 210,
+   "tracos": "?",
+   "nota": "pego pela contra-espionagem na semana 210 (o Graur, a Skedda, os capuzes)"
+  },
+  {
+   "nome": "agente da Lumine",
+   "de": "a Lumine",
+   "desde": 210,
+   "tracos": "?",
+   "nota": "pego pela contra-espionagem na semana 210 (o Graur, a Skedda, os capuzes)"
+  },
+  {
+   "nome": "agente dos conselheiros",
+   "de": "os conselheiros (a Tiracci)",
+   "desde": 210,
+   "tracos": "?",
+   "nota": "pego pela contra-espionagem na semana 210 (o Graur, a Skedda, os capuzes)"
+  },
+  {
+   "nome": "agente do Ardenghi",
+   "de": "o Ardenghi",
+   "desde": 210,
+   "tracos": "?",
+   "nota": "pego pela contra-espionagem na semana 210 (o Graur, a Skedda, os capuzes)"
+  },
+  {
+   "nome": "Hask",
+   "de": "os conselheiros",
+   "desde": 252,
+   "tracos": "COVARDE e ORGULHOSO",
+   "nota": "o pesquisador falso"
+  },
+  {
+   "nome": "agentes da Liga, da Lumine, dos conselheiros e do Ardenghi",
+   "de": "vários",
+   "desde": 252,
+   "tracos": "",
+   "nota": "o do Clã voltou de graça (precedente do 249)"
+  },
+  {
+   "nome": "6 caçadores da Leliel",
+   "de": "a Leliel",
+   "desde": 253,
+   "tracos": "",
+   "nota": "garantia do juramento da Brissa (solta no 254)"
+  },
+  {
+   "nome": "Quthemnus",
+   "de": "a Torre Acesa",
+   "desde": 404,
+   "tracos": "mago de ELO, 229 (fraco: metade do PV e até o 6º círculo até o 743)",
+   "nota": "rendeu-se no círculo da torre do meio quando a base caiu; o filho, o Zesreth, morto no sino pelo Moreth"
+  },
+  {
+   "nome": "6 guardas da Torre Acesa",
+   "de": "a Torre Acesa (2 da Cinza, 4 espadas do Ardenghi)",
+   "desde": 404,
+   "tracos": "",
+   "nota": "2 feridos; 4 pegos pelo cordão dos Filhos do Livro"
+  },
+  {
+   "nome": "2 ladrões da Lumine",
+   "de": "a Lumine",
+   "desde": 406,
+   "tracos": "",
+   "nota": "pegos tentando roubar o PILÃO DE VARADE da enfermaria da casa (a cobiça da semana)"
+  }
+ ],
+ "segredos_da_casa": [
+  "a MATRIZ (o segredo da forja)",
+  "onde a Isolda dorme (o Gorjal)",
+  "o que a Mãe Verde disse (o que acorda e faz dormir a Filha)",
+  "a esquadra (chefe e células)",
+  "a receita do remédio da febre do brejo",
+  "o TREBUCHETE DO LEVE (vaduar) — a Liga e os conselheiros já sabem que existe",
+  "a RECEITA MESTRA DO SERVO ARMADO e a pesquisa do OSSO QUE CRESCE",
+  "o OSSO QUE CRESCE e o FOCO DE OSSO"
+ ],
+ "vazou": [
+  {
+   "dia": 203,
+   "quem": "os Descalços",
+   "o_que": "o que a Mãe Verde disse (o que acorda e o que faz dormir a Filha)"
+  },
+  {
+   "dia": 210,
+   "quem": "a Liga (o Doge)",
+   "o_que": "a carta do Aldoveri no cofre (OCULTO: pelo Malvezzi; a casa não sabe)"
+  },
+  {
+   "dia": 217,
+   "quem": "a Liga",
+   "o_que": "que a receita do Cinza Saciado existe e para que serve (por um salineiro comprado)"
+  },
+  {
+   "dia": 252,
+   "quem": "os Descalços",
+   "o_que": "a receita do Cinza Saciado"
+  },
+  {
+   "dia": 252,
+   "quem": "o Clã (o Hrotgar)",
+   "o_que": "o ORAST está na galé (pela carta do Braeth)"
+  },
+  {
+   "dia": 259,
+   "quem": "os Descalços",
+   "o_que": "a MATRIZ (o segredo da forja)"
+  },
+  "266: o ARDENGHI sabe da MATRIZ",
+  "266: os CONSELHEIROS sabem o que a Mãe Verde disse (o que acorda e faz dormir o Kredun)",
+  "315: os DESCALÇOS levaram a RECEITA DO REMÉDIO DA FEBRE; vendem barato em Marasar",
+  "322: a LIGA levou a RECEITA DO CINZA SACIADO e já faz pedras",
+  "343: o CLÃ (o Hrotgar) sabe ONDE A ISOLDA DORME (o Gorjal)",
+  "350: o CLÃ (o Hrotgar) entrou de novo: o que a Mãe Verde disse (o que acorda e faz dormir o Kredun)",
+  "356: Farenta caiu; as pedras de Cinza Saciado de lá foram TOMADAS pela casa",
+  {
+   "dia": 413,
+   "quem": "os conselheiros da Liga (Pelagri, Aldoveri, Tiracci)",
+   "segredo": "o que a Mãe Verde disse (o que acorda e faz dormir a Filha) (segredo [3] da lista)",
+   "nota": "a rede entrou em Ireviel no 413 com o rei fora; a casa não sabe"
+  }
+ ],
+ "cobica": [
+  {
+   "dia": 203,
+   "peca": "a Matriz",
+   "quem": "a Lumine"
+  },
+  {
+   "dia": 203,
+   "peca": "os aros da Eliane",
+   "quem": "o Thuron (e o Ceduion)",
+   "nota": "204: o Thuron oferece Mão do Morto e Servo de Osso pelo segredo"
+  },
+  {
+   "dia": 210,
+   "peca": "o Gorjal da Isolda (PRIMORDIAL)",
+   "quem": "ninguém ainda (ele se esconde como roupa comum de quem não tem Olho do Material)"
+  }
+ ],
+ "monstros_novos": [
+  {
+   "nome": "Vorthen",
+   "dia": 215,
+   "cat": "Épico",
+   "nivel": 77,
+   "essencia": "Gelo",
+   "onde": "um NINHO DE CRIAS num bosque à beira da estrada do sul de Ireviel",
+   "notas": "PV 1155 · Def 39 · RD 6 · atq +29 · 1d10×5 · olhar paralisante (Vontade CD 17) · golpe congela (−3 Def, área 12 m, 1x/3 rodadas) · invoca crias · fraco a FOGO e (a descobrir) água corrente · GUARDIÃO · drops vorthil, vorgel, coração Épico de Gelo · MORTO NO 407 pelo rei, o Moreth, o Eiagrir e o Hruthos (2 rodadas); drops: 4 kg de vorthil, 2 glândulas de vorgel, o NÚCLEO ÉPICO DE GELO",
+   "estado": "morto"
+  },
+  {
+   "nome": "Zassis",
+   "dia": 403,
+   "cat": "Épico",
+   "nivel": 88,
+   "essencia": "Vento",
+   "onde": "Mordun, perto do Garkunn (notícia EXAGERADA do 403); habitat de vulcão",
+   "notas": "ave do tamanho de um cavalo · PV 1320 · Def 42 · RD 6 · atq +32 · 1 ataque · 1d10×5 · couraça · DEVORA METAL (com 1 natural de quem o fere, a arma perde 1 categoria) · alcance +3 m; o golpe empurra 3 m em área de 12 m, 1x a cada 3 rodadas · fraco a TERRA (dano dobrado, corta a regeneração) e (a descobrir) ferro frio · SERVO: alguém o controla (o gerador deu 'Zaira': Zai- bate em Zaiast e Zaitor)"
+  },
+  {
+   "nome": "Yiava",
+   "dia": 399,
+   "cat": "Único",
+   "nivel": 171,
+   "essencia": "Silêncio",
+   "onde": "os lodaçais do Delta (a Eliane viu, 397-399)",
+   "notas": "inseto do tamanho de uma colina · PV 3420 · Def 67 · RD 12 · atq +57 · 2 ataques · 3d10×10 · reflete magia com 18-20 · fala e mente · o golpe não faz som (+5 contra quem não viu; área 15 m, 1x a cada 3 rodadas) · fraco a SOM (dano dobrado) e (a descobrir) água corrente · SERVO (OCULTO: o culto da Eloune) · cheiro de enxofre (o gerador deu 'Lumssa': Lum- bate)"
+  },
+  {
+   "nome": "Mivor",
+   "dia": 406,
+   "cat": "Épico",
+   "nivel": 96,
+   "essencia": "Terra",
+   "onde": "o leito seco do rio, ao norte de Ireviel (o Tuald viu)",
+   "notas": "réptil do tamanho de uma casa · PV 1440 · Def 44 · RD 6 · atq +34 · 1 ataque · 1d12×5 · FALA E MENTE · SENTIDO SÍSMICO (nunca é surpreendido) · o golpe derruba (Vigor CD 16, área 12 m, 1x a cada 3 rodadas) · fraco a VENTO (dano dobrado, corta a regeneração) e (a descobrir) fogo comum · Épico: o CORAÇÃO É UM NÚCLEO ÉPICO DE TERRA (o gerador deu 'Feneth': Fen- bate em Fenmir) · 407: FALOU com o rei no leito seco; PACTO oferecido: fica com os dias secos e GUARDA o lado norte por DOIS SACOS DE SAL por semana (MVp7 15, verdade: cumpre enquanto for pago); a primeira paga até o amanhecer do 408; (oculto) ele estava afundando para ganhar tempo e parou quando ouviu a oferta"
+  },
+  {
+   "nome": "Naiel",
+   "dia": 406,
+   "cat": "Raro",
+   "nivel": 67,
+   "essencia": "Força",
+   "onde": "a costa perto do Porto de Marasar, onde o céu sangrou (o evento do Porto, 406)",
+   "notas": "gigante do tamanho de uma torre · PV 536 · Def 32 · RD 3 · atq +22 · 1 ataque · 2d10×2,5 · VENENO NO GOLPE · +10 em Força ao empunhar (área 9 m, 1x a cada 3 rodadas) · NECRÓFAGO: segue batalhas e pestes · fraco a FOME e (a descobrir) o próprio nome (o gerador deu 'Nesine': Nes- bate)"
+  },
+  {
+   "nome": "Morek",
+   "cat": "Único",
+   "nivel": 122,
+   "essencia": "Espinho",
+   "onde": "a FORQUILHA do rio (o Leve), a meio dia de Ireviel",
+   "corpo": "aquático, do tamanho de uma torre",
+   "numeros": "PV 2440 · Defesa 55 · RD 12 · ataque +45 · 2 ataques por rodada · dano 2d10 × 10 · XP 1220 (×5 chefe)",
+   "tracos": "carrega doença · voa · reflete magia com 18 a 20",
+   "poder": "o golpe prende como raiz (Força contra CD 20), área de 15 m, 1x a cada 3 rodadas",
+   "fraqueza": "FOGO (dano dobrado e corta a regeneração) · e uma a descobrir: ÁGUA CORRENTE",
+   "comportamento": "caçador: escolhe a presa e a segue por dias",
+   "sinal": "tremores",
+   "estado": "MORTO no 427 (a forquilha)",
+   "notas": "413: visto pelo STARKALD na forquilha (surpresa do 413 [2]; MK1 [1]); a casa soube no 421-422. O núcleo seria ÚNICO, de Espinho. 422: as barcas de grão passaram (MK2 [3], oculto) · [ANULADO no 426: a luta LM25 rodou com fichas erradas] 425 (LM25): o rei, o Moreth, o Eiagrir, a Isolda, o Starkald e o Goir o atacaram no amanhecer com a vala de fogo (26 de dano antes da luta); em 4 rodadas O GRUPO CAIU: MORRERAM a ISOLDA, o STARKALD e o GOIR; o Moreth (para sempre) e o Eiagrir (grave) caíram; o rei recuou com 11 PV; ele levou o corpo do GOIR para a água (PF25 [1], PF25c [3]); o do Starkald ficou na margem; a doença dele pegou o rei (curada). A casa VIU: a raiz que prende (15 m), a magia que volta (18-20), a fúria quando sangra. · 425 (LM26, a luta REFEITA com as fichas certas): o rei, o Moreth, o Eiagrir, a Isolda, o Starkald e o Goir; em 4 rodadas ele caiu a 467 e FUGIU (moral d6 [2]); matou o Starkald e o Goir (o rei os ergueu dentro da hora); derrubou a Isolda (grave). A casa VIU: a raiz que prende a 15 m, a fúria quando sangra, o fogo dobra nele. · 427 (LM27, FG27): o rei, o Moreth, o Eiagrir e a Eliane o acharam na água rasa sarando (955); o Toque, as Lanças do Sol e um crítico do Eiagrir o puseram a 96; fugiu e a fuga falhou feio: MORTO. Despojos: SSYTHIS (escama) 3 kg · LALIEL (olho) 6 kg · HEALD (presa; arma: prende como raiz) 3 kg · SASIS (pelo, Espinho + Raio) 3 kg · o CORAÇÃO: NÚCLEO ÚNICO DE ESPINHO (nomes do gerador trocados: draade, erydun, gorast e ithron batiam no cânone)."
+  },
+  {
+   "nome": "Neane",
+   "dia": "424",
+   "cat": "Raro",
+   "nivel": "62",
+   "essencia": "Sombra",
+   "onde": "o rio abaixo de Ireviel, no caminho da forquilha (a complicação da missão A FORQUILHA LIMPA, CP24 [1])",
+   "corpo": "elemental do tamanho de uma torre",
+   "numeros": "PV 496 · Defesa 31 · RD 3 · ataque +21 · 1 ataque · 2d10 × 2,5 · XP 620 (×5 chefe)",
+   "tracos": "regenera (31 PV por rodada, menos contra Luz)",
+   "poder": "no escuro: +2 no ataque e o alvo não vê de onde vem, área 9 m, 1x a cada 3 rodadas",
+   "fraqueza": "LUZ (dano dobrado, corta a regeneração) · e uma a descobrir: LUZ DO SOL",
+   "comportamento": "migrante: segue estações e rebanhos",
+   "sinal": "silêncio dos pássaros",
+   "drops": "couro/escama: DRAEK (Raro, Sombra; armadura: +2 Furtividade e Defesa no escuro) · glândula: ERYRA (Raro, Sombra; ofício e poção: a peça não brilha nem faz som) · é BICHO DE SOMBRA: a cinza ou o sangue serve à receita do SYSRETH",
+   "estado": "vivo",
+   "notas": "o gerador deu \"Varula\" (bate em Varogh): renomeado NEANE (nomes.py liquida livre)"
+  },
+  {
+   "nome": "Nesium",
+   "dia": "426",
+   "cat": "Lendário",
+   "nivel": "244",
+   "essencia": "Luz",
+   "onde": "STEUNN: o lago gelado perto de Itheth, o cemitério dos reis (o Yeane sabe; BL26w [5])",
+   "corpo": "gigante do tamanho de uma casa",
+   "numeros": "PV 6100 · Defesa 91 · RD 25 · ataque +81 · 3 ataques · 1d12 × 25 · XP 2440 (×10 Lendário)",
+   "tracos": "reflete magia 18-20 · regenera (122 por rodada, menos contra Sombra) · grito que causa medo (Vontade) · invoca crias (1d6 por luta)",
+   "poder": "cega por 1 rodada com 18 a 20, área 18 m, 1x a cada 3 rodadas",
+   "fraqueza": "SOMBRA (dano dobrado, corta a regeneração) · e uma a descobrir: a cria",
+   "comportamento": "necrófago: segue batalhas e pestes",
+   "sinal": "silêncio dos pássaros",
+   "drops": "garra ZETHESS (Lendário, Luz; arma: cega 1 rodada com 18-20) · escama SAZHESS (Lendário, Luz; armadura: revela invisíveis a 80 m) · presa NIRIEL (Lendário, Luz; arma: cega) · pelo ORRON (Lendário, Luz + Gelo; armadura: revela invisíveis) · CORAÇÃO: NÚCLEO LENDÁRIO DE LUZ (Mítico e Primordial; e serve à RESSURREIÇÃO)",
+   "estado": "vivo",
+   "notas": "o bicho de Luz que o Yeane conhece (YE26 [18]; BL26 [6] Lendário). Nomes dos drops trocados (ithula, gorron e fentor batiam em Ithvil/Ithra, Gorron/Gorra e Fenron): zethess, sazhess, niriel. O gerador rodou antes um Raro de Luz (Oreth) por engano: descartado (Raro não dá núcleo). · [426, a luta refeita: o rei NÃO foi ao Yeane pedir Ressurreição; a CASA NÃO SABE do Nesium. O bicho existe em Steunn.]"
+  },
+  {
+   "nome": "Ulmir",
+   "dia": "426",
+   "cat": "Único",
+   "nivel": "178",
+   "essencia": "Raio",
+   "onde": "as SALINAS DO DELTA (o Bjorvunn sabe; BJ26w [6])",
+   "corpo": "aquático do tamanho de uma torre",
+   "numeros": "PV 3560 · Defesa 69 · RD 12 · ataque +59 · 2 ataques · 2d10 × 10 · XP 1780 (×5 chefe)",
+   "tracos": "escava ou nada · reflete magia 18-20 · regenera (89 por rodada, menos contra Água)",
+   "poder": "+3d6 de raio que salta para um segundo alvo, área 15 m, 1x a cada 3 rodadas",
+   "fraqueza": "ÁGUA (dano dobrado, corta a regeneração) · e uma a descobrir: fogo comum",
+   "comportamento": "caçador: escolhe a presa e a segue por dias",
+   "sinal": "tremores",
+   "drops": "escama SEZESS (Único, Raio + Sal; armadura: quem golpeia o portador leva 10) · glândula MEVOR (Único, Raio; ofício e poção: +5 em Processo, forja rápida) · presa ROGRA (Único, Raio; arma: +3d6 de raio que salta) · pelo SAOR (Único, Raio + Veneno; armadura: quem golpeia leva 10) · CORAÇÃO: NÚCLEO ÚNICO DE RAIO (serve de núcleo para Mítico)",
+   "estado": "vivo",
+   "notas": "o bicho que o BJORVUNN conhece (BJ26 [16], BJ26c [5]). Nomes dos drops trocados (gorine, erymir, gorek e lumade batiam no Gorine, no Erymir, em Gor- e em Lumade): sezess, mevor, rogra, saor."
+  }
+ ],
+ "notas_ocultas": [
+  "Dia 215: LEVIS — um MATERIAL NOVO à venda ou em boato, com o sinal de um CULTO (a notícia não chega sozinha) · o herdeiro dos Steunn que o Malvezzi quer armar é o TRAIDOR exposto no 219 · resposta do Malvezzi no 217 · resposta do mestre do Graur no 226 · o Kassa chega no 219",
+  "Dia 217: a LIGA sabe que o CINZA SACIADO EXISTE e para que serve (vazou por um SALINEIRO novo, comprado); a Lumine e o Ardenghi sabem da carta do Aldoveri no cofre · a ELOUNE dorme no lodo da FOZ VELHA, abaixo do Delta (a casa sabe pela célula do Delta) · o culto do MANEUS riscou o sinal na forja grande · Kreium: curso [10] devagar · a resposta do mestre do Graur no 226 · o Kassa chega no 219",
+  "Dia 218: a carta do Braeth (a que compromete o Thuron) chega ao Ceduion no 224 · o salineiro comprado está preso · Kasra: um culto mostra o sinal (notícia no 219) · o Maneus foi avistado em Kremir · o Pelaccino quer trair o Kreine pela Fornalha",
+  "Dia 219-223: o VISCONTE ALDOVERI MORREU (221); lucram os JURADOS DE STEUNN (facção nova, 222) · o Malvezzi serve também à LUMINE · o Kassa espera em Ireviel · o Hrotgar pôs recompensa pelo 'herdeiro dos Steunn' (o Orast) · notícias a chegar: a guerra da Liga em Shizess (220), o Médico Cinzento (221, 225), o Ceduion (223), a embaixada de Telosus (224), a invenção de Levis (226)",
+  "Dia 224-227: SKORVAL (Mítico 353, morto-vivo voador de Elo, carrega doença) visto sobre o DELTA onde uma ruína se abriu (226); notícia a Ireviel no 228 · a célula do DELTA da esquadra caiu (os conselheiros sabem a esquadra) · VARADE (Mítico, resina de Vida) à venda em Gogrunn (drop do Stundald) · a LIGA manda emissário (paz contra a carta e a galé) · o CULTO DO MANEUS está dentro de Ireviel (3 sinais) e procura ferreiros · facção nova: os REMADORES LIVRES (o Goreth) · o Ceduion pergunta a Ferir pelo Thuron (carta no 228) · a embaixada de Telosus (228)",
+  "Dia 228-230: o emissário da Liga aceitou na hora tirar o bloqueio do rio de Ireviel; o resto (fim do bloqueio inteiro e os conselheiros entregues) vai a Marasar · a mentira do canal falso pegou em parte · um LENDÁRIO NOVO em ZISRIR (notícia no 235) · um VILÃO NOVO em ZAITOR · o Maneus avistado · a resposta da SKOTHA rola no 231",
+  "Dia 234-237: (CORRIGIDO no 238) a febre cinza é o PÓ DO VADUAR AQUECIDO, segundo um tratado do Médico Cinzento; o culto do Maneus se reunia em FENSSA (torre de mago caída, mortos, material Raro a Lendário; a chave está com a casa); BANDIDOS VIRAM EXÉRCITO no Delta e nas salinas; a Skotha recruta; uma pessoa importante viaja de Steunn",
+  "Dia 238: a contra-espionagem (27) pegou agentes dos Descalços, dos conselheiros, do Ardenghi e do Clã; só a Liga (o Doge) entrou e sabe da esquadra · a LELIEL quer o Gorjal · uma facção nova na costa (239); um monstro novo em Kremir (243); uma ruína na Mata de Elais (239)",
+  "249: o Lendário novo de Zisrir (229) nunca tinha sido gerado: ADUREL, Lendário de OFÍCIO 378, obra: abrir uma passagem; rival: a Almision. O Colégio sabe (252) que a obra dele acordou a Elaeva; não sabe o nome dele ainda.",
+  "252-253: o material ARVEL (Mítico, Fogo, orvalho de campo de batalha) foi achado em Gogrunn; o VARUUN procura um núcleo Mítico; a cantora do templo é da LUMINE e prepara a paga pela Vassira; a fraqueza do Naudren é VIDA (a casa não sabe ainda).",
+  "254-257: a SORVANE passou sozinha pelo Kervos e chegou a Levis (oculto: notícia se alguém perguntar); o NAUDREN segue a GALÉ, não o Orast; Gorgal/VESSOR (ruína na costa) e ERYKOS (lugar em Mordun) não chegaram à casa.",
+  "259: os DESCALÇOS sabem da MATRIZ (atlas: se a ALMISION souber, vem buscá-la). Tentaram comprar os aros da Eliane. O NAUDREN deixou um drop no rio (não chegou). O OSSAN (vilão da costa) não chegou à casa.",
+  "263: RELÓGIO Liga → forquilha 0/4 (a Liga recusou a portagem com condições; o Doge assinou uma ameaça).",
+  "263: RELÓGIO Descalços → Matriz 0/4 (querem ROUBAR a Matriz eles mesmos; só UM agente sabe; o Ardenghi os ajuda desde o 260).",
+  "262: o Thugek ama em segredo a Brara (faísca); foi ela quem o escondeu em Levis até a barca.",
+  "266: a LIGA prepara uma FROTA de Marasar para quando o cerco afrouxar (o agente contou).",
+  "266: o PRAZO REAL da encomenda da Brara é 5 dias (271), não 9.",
+  "266: o descalço que sabe da Matriz é SHYSSIS, em Marasar (o agente preso contou o nome).",
+  "266: a ALMISION oferece o RECONHECIMENTO DA ESCOLA ÚNICA a Ferir em troca do GORJAL (pelo Erymir).",
+  "267: SHYSSIS já contou ao CHEFE DA CÉLULA dos Descalços (2 sabem).",
+  "270: o HUSGARN é servo do SKORVAL.",
+  "269: TERREMOTO em STEUNN (o Orast está lá; refugiados chegaram a Ireviel).",
+  "273: o IRMÃO do Eiagrir JÁ MORREU na cela de Marasar (a recompensa da missão não existe mais).",
+  "273: a VEDRASSE (vilã 220, a costa; acabar com uma raça ou fé; chantagem): notícia no 276.",
+  "273: RELÓGIO Descalços → Matriz 1/4.",
+  "271: a SKOTHA foi TRAÍDA pelos THOG (a Companhia os caça).",
+  "274: relógio Descalços → Matriz volta a 0/4 (o extraordinário da fuga). O CHEFE DA CÉLULA dos Descalços em Ireviel foi reconhecido pela Oisse no lazareto (275) e preso pelo Graur.",
+  "274: quem entregou os nomes do livro à Liga foi UM DOS BARQUEIROS DO LIVRO.",
+  "274: a FROTA da Liga: 9 barcas de guerra no porto de Marasar.",
+  "280: o HRUTHOS (guerreiro do chamado) e o DONIONE (notário do Tirello) trabalham para a LUMINE.",
+  "280: a LUMINE cobra a promessa antiga: o CORAÇÃO DO MORKOS (está na Espada do Moreth).",
+  "286: a ALMISION travou uma batalha contra a SKOTHA (notícia no 286).",
+  "286: a frota da Liga: 4 barcas de 9 sobraram (5 queimadas no 282).",
+  "286: o ROBANTINO (campeão da muralha) MORTO; o pacto dele: não se sabe com quê.",
+  "287: MARASAR SE RENDEU. A SKOTHA é DOGE (a obra dela se cumpre); o porto e o rio são de Ireviel; a carta vale: Ireviel REINO.",
+  "287: a ALMISION completou a ESCOLA ÚNICA; oferece de novo o lugar a Ferir; e faz oferta grande pelo PILÃO DE VARADE.",
+  "286: a GALÉ está ABANDONADA na margem do braço de Marasar, com o NAUDREN em cima.",
+  "289: o ARDENGHI pôs PREÇO NA CABEÇA DE FERIR (carta pública).",
+  "287: o NAUDREN foi um MAGO DO COLÉGIO de Telosus, expulso na falência; pacto com a podridão do rio; segue a galé porque era da Liga (o segredo do Ceduion).",
+  "294: a MAMILTIA (Primordial) procura FERIR ou a MATRIZ (notícia no 297); um forasteiro de manto cinza perguntou por ele no cais.",
+  "294: os OLHOS PINTADOS mandaram alguém ver a Fornalha.",
+  "294: relógio Descalços → Matriz 1/4.",
+  "294: o GANDUNE (Mítico, Terra) em boato em Levis (a Brara).",
+  "298: a missão do cais (defender 6 dias do Naudren): quem pediu mente: a carga é contrabando da MÃO MOLHADA.",
+  "297: a MAMILTIA (Primordial) procura Ferir ou a Matriz: a notícia chegou a Ireviel (lenda).",
+  "299: o pacto do ROBANTINO era com a ISESSIR (Épica 95, costa; muda de forma). Ninguém sabe; aparece na cova.",
+  "300: a ALMISION ficou ENCANTADA com o Cajado da Escola Única (Mítico): a Escola Única reconhece o reino de Ireviel. O ERYMIR, que levou o cajado, vai sonhar com a forja.",
+  "301: a DONIONE foi levada pela LUMINE (traição: passava recados a outro).",
+  "301: o BRAETH mente sobre o Iorin para cobrir uma culpa dele mesmo (a morte antiga).",
+  "301: Descalços → Matriz +1 (querem vendê-la a quem paga mais).",
+  "301: o FERREIRO SANTO da Mamiltia DÁ A MÃO AO FOGO (a mão vira relíquia); quem recusa vira MÃO MALDITA na fé (os barqueiros de Telosus não levam nem trazem nada dele). A casa SABE (o Colégio).",
+  "301: a missão das salinas: o salineiro preso entregou à Liga os que fugiram (os bandidos têm motivo).",
+  "301: a ALMISION recrutou o MALVEZZI.",
+  "303: a MAMILTIA manda caçar a GENTE DO ADUREL em Zisrir.",
+  "303: os OITO da casa na TORRE DO SAL (Levis): o Tano contou ao rei (agora a casa sabe).",
+  "308: o NAUDREN morto; o porto de Marasar livre do bicho; a GALÉ podre volta à casa (conserto grande).",
+  "308: Descalços → Matriz +1 (mesmo com os cabeças da Mão Molhada presos).",
+  "308: a LIGA quer trocar os OITO da Torre do Sal pela forquilha aberta; o ARDENGHI tem a lista dos Barqueiros do Livro (da Guarda do Pedágio).",
+  "311: o HAGAL foi destruído na Mata de Elais (não chega sozinha).",
+  "314: um Lendário ATACA em Marasar (notícia no 320; quem e o quê: rolar no 320).",
+  "322: o TERASETH era CAPITÃO DA LIGA na guerra do rio e afundou ele mesmo as barcas; a vingança é penitência.",
+  "322: o KREINE matou o capitão da galé tomada no 218.",
+  "322: o HAAST trabalha para outra facção.",
+  "323: LEVIS por dentro: guarnição MÉDIA (600 ~30, 2 magos ~70) · muralhas velhas · ALGUMAS pedras de Cinza Saciado (anulam a magia de um herói por luta) · o Garkunn fica de fora · o povo de Levis-baixa fica em casa.",
+  "326: em Levis, um conselheiro da Guilda mais duro toma o conselho da Liga; a Liga FECHA O RIO com uma corrente.",
+  "328: UMA ESTRELA CAI sobre Ireviel e o rio (onde: notícia no 333).",
+  "332: LEVIS TOMADA pela coalizão (Ireviel, a Skotha, o Teraseth). O conselho duro da Liga preso; um mago preso, outro fugido para a cidade alta e depois para o norte.",
+  "332: o passado do Teraseth (capitão da Liga que afundou as barcas) foi GRITADO da muralha; metade dos barqueiros o largou.",
+  "334: o veredito do conselho de Ireviel: MORTE para o conselho duro da Liga (espera o rei).",
+  "335: o ERYMIR é olho da MAMILTIA (a Almision não sabe).",
+  "335: os restos da Liga (Farenta e o norte) pedem os corpos e a paz com portagem.",
+  "336: PAZ com a Liga (portagem). O Erymir exposto: olho da Mamiltia (agora a casa sabe)."
+ ],
+ "viloes": [
+  {
+   "nome": "Varuun",
+   "nivel": 290,
+   "onde": "Shizess (as caravanas)",
+   "obra": "forjar uma arma Mítica proibida",
+   "metodo": "chantagem",
+   "tracos": "RELIGIOSO e GENEROSO",
+   "plano": "procura um NÚCLEO MÍTICO (o segredo do Delta, 252)",
+   "noticia": 257
+  },
+  {
+   "nome": "Tervane",
+   "nivel": 360,
+   "onde": "o sul, onde a areia come a pedra",
+   "obra": "virar imortal",
+   "metodo": "veneno",
+   "para_se": "for desmascarado em público",
+   "tracos": "GENEROSO e HONESTO",
+   "noticia": 254
+  },
+  {
+   "nome": "Ossan",
+   "nivel": 260,
+   "onde": "a costa (Ireviel–Marasar)",
+   "obra": "vingar o povo dele",
+   "metodo": "fé",
+   "tracos": "LEAL e CRUEL",
+   "para_se": "perder quem ama",
+   "noticia": "não chega sozinha"
+  },
+  {
+   "nome": "Vrothos",
+   "nivel": 100,
+   "regiao": "Ireviel e o rio",
+   "obra": "forjar uma arma Mítica proibida",
+   "metodo": "fé",
+   "nota": "CRUEL e VINGATIVO; quer ser perdoado; quer conquistar terra; teme a morte de um filho; é filho de quem não deveria; 1 peça Lendária ou Mítica; para se for desmascarado em público (318)"
+  },
+  {
+   "nome": "Orron",
+   "nivel": 340,
+   "regiao": "o sul",
+   "obra": "acabar com uma raça ou fé",
+   "metodo": "lei",
+   "nota": "HONESTO e VINGATIVO; doença escondida (315)"
+  },
+  {
+   "nome": "Grekos",
+   "nivel": "?",
+   "regiao": "Steunn",
+   "obra": "?",
+   "metodo": "?",
+   "nota": "quer mandar em alguém e conquistar terra; teme a solidão; doença escondida (333)"
+  },
+  {
+   "nome": "Eiounn",
+   "nivel": "?",
+   "regiao": "Gogrunn",
+   "obra": "?",
+   "metodo": "?",
+   "nota": "quer mandar em alguém e fundar uma escola; traiu um amigo (334)"
+  },
+  {
+   "nome": "Bjestir",
+   "nivel": 100,
+   "regiao": "Yaelane",
+   "obra": "trazer de volta um morto amado",
+   "metodo": "monstros",
+   "nota": "VINGATIVO e HONESTO; nunca mais passar fome; fez um pacto; 2 peças Lendárias ou Míticas; para se for desmascarado em público (346, notícia no 349)"
+  }
+ ],
+ "lugares_novos": [
+  {
+   "nome": "Eryssa",
+   "o_que_era": "um mercado",
+   "por_que_caiu": "maldição",
+   "guarda": "uma receita (OCULTO: uma LIGA DE METAL que ninguém mais sabe bater)",
+   "habita": "um culto (OCULTO: o XAATHIS, a ALA DO CAIS; o dente na poterna veio daqui)",
+   "entrar": "uma chave (OCULTO: um NOME dito na porta, uma senha)",
+   "onde": "debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420",
+   "notas": "a SURPRESA da Nouliel (413 [5]); os pedreiros do dique acharam a escada no 422",
+   "nota": "['422 noite (SR22 [10], vê e volta): a SIRA desceu: moram lá 28 do CULTO DO XAATHIS, a ala do cais (SR22q 18); nesta noite juntavam ARMAS e BARRIS DE PIChE na forja velha do mercado (SR22c [3]); ela copiou as letras da porta de bronze (a senha ela não ouviu)'] · 423 TARDE: O REI TOMOU O MERCADO (BE23): 15 mortos, 7 presos, o SACERDOTE (67, Sangue) morto pelo Eiagrir; 6 fugiram pelo canal velho; a porta de bronze NÃO abriu (ninguém deu a senha, IN23 [8]); ficaram 3 barris de piche e as lanças · oculto: o alvo do piche era QUEIMAR A FORNALHA numa noite de série (AV23 [4]) · 423 NOITE: o rei ARROMBOU a porta de bronze LIMPA (PB23 [18]); atrás: pó, a mesa de pedra e as TÁBUAS DA RECEITA do SYSRETH (PB23c [1] Épica; PB23o [3]); o rei leu o processo e o ingrediente de Sombra (PB23r [11], PB23i [2]); falta ler o FERRO COM ESCÓRIA DE VADUAR"
+  }
+ ],
+ "materiais_novos": [
+  {
+   "nome": "Sysreth",
+   "dia": "423",
+   "cat": "Épico",
+   "origem": "metal (uma liga perdida; escória de uma forja antiga)",
+   "essencia": "Sombra",
+   "oposta": "Luz",
+   "nota": "A LIGA PERDIDA DE ERYSSA (as tábuas atrás da porta de bronze, 423). O gerador deu \"Zaiast\", que JÁ EXISTE (a madeira Única de Terra + Elo do cajado do Bren): renomeado SYSRETH (nomes.py livre). Dureza 8 · maleabilidade 6 · condutividade mágica 6 · na forja Matéria +1, Processo +1, infusão até o 6º · arma: no escuro +3 no ataque e o alvo não vê de onde vem · armadura: +3 Furtividade e Defesa no escuro · ferramenta: não brilha nem faz som · defeito: enfraquece ao sol · 600-1.000/kg. PEDE: ferro com escória de vaduar (5 kg de ferro e 0,1 kg de vaduar por kg; a casa NÃO LEU) · cinza ou sangue de bicho de SOMBRA (Raro ou acima; 1 porção por 2 kg; lido) · forjado NO ESCURO na forja velha de Eryssa, temperado no canal velho (lido)"
+  }
+ ]
+}

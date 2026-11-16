@@ -1,0 +1,26 @@
+[12:33:30] Dia 358 · Pressão 2/5 · encontro de estrada 1d20 [9] -> nada
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 358 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    nome: Lumeth
+    desejo: enriquecer
+    ambição (relógio de 4): comprar a liberdade da família
+    medo: a humilhação pública
+    segredo: roubou o que tem
+    linha vermelha: nunca se ajoelha
+    dilema que vai chegar: cumprir a palavra vai custar a casa dele
+    traços: GENEROSO e RELIGIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 358
+    um Lendário age (d20 [6]):
+    Souane (influência, o Delta) d20 [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · notícia d20 [20] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [9] nada visível
+    FAÍSCA: Altheltia quer matar Iorin, por causa de a Matriz
+    FAÍSCA: o Doge Pelaone vai trair Bren (morto), por causa de a Matriz
+    FAÍSCA: Tilde acusa em público Gorron (oferece a missão do Delta), por causa de um título
+  AUDITORIA (XXIII.23, Dia 358): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

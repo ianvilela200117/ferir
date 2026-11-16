@@ -1,0 +1,15 @@
+[09:57:31] Dia 299 · Pressão 3/5 · encontro de estrada 1d20 [8] -> nada
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 299 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]
+    ONDE: d25 [12] as Fundas do Norte (o Clã Hegre)
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 299
+    um Lendário age (d20 [2]):
+    Almision (magia, a estrada (com o corvo)) d20 [3] recruta: gente, uma facção ou um monstro passa para o lado dele · notícia d20 [5] chega no dia 301
+    trama do dia: o conselheiro Pelagri → Gorine (RIVALIDADE) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Ulurve salva Messer Baldo Cerrini (mercador de lã de Farenta; o depósito), por causa de uma profecia
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) oferece aliança a Almision, por causa de uma dívida antiga
+    FAÍSCA: Lasca e Miro (presos) acusa em público Mamiltia, por causa de um feitiço proibido

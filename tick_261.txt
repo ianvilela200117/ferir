@@ -1,0 +1,24 @@
+[23:10:58] Dia 261 · Pressão 5/5 · encontro de estrada 1d20 [17] -> nada
+  avistamento de monstro 1d20 [12] -> nenhum
+  EVENTO DE MUNDO 1d20 [11] Monstro grande desce · encadeamento 1d20 [11] Mercado reage · Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 261 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d23 [22] Kasra (terra nova)
+    A NOTÍCIA: [5] em 1d6 [3] dias
+    nome: Nesula
+    desejo: mandar em alguém
+    ambição (relógio de 4): entrar numa facção que o recusou
+    medo: a velhice
+    segredo: traiu um amigo uma vez
+    linha vermelha: nunca deixa um ferido para trás
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: AVARENTO e COVARDE
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 261
+    Lendários: d20 [13] quietos hoje
+    trama do dia: a Guardiã da Tenaz → Ulair (INVEJA) d20 [12] nada visível
+    FAÍSCA: Iorin oferece aliança a Dovan, por causa de um título
+    FAÍSCA: Maevis (morto) deve a vida a Ardenghi, por causa de um título
+    FAÍSCA: Draa acusa em público Seline (em Ireviel), por causa de o perdão

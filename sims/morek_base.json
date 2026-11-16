@@ -1,0 +1,1 @@
+{"monstro": {"nome": "Morek", "cat": "Único", "nivel": 122, "pv": 2440, "pv_atual": 2414, "df": 55, "rd": 12, "at": 45, "dado": "2d10", "mult": 10, "poder": {"nome": "o golpe que prende como raiz (15 m)", "tipo": "area_empurra", "cd": 20}, "moral": true, "fraqueza": "Fogo", "reflete": true}}

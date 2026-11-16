@@ -1,0 +1,33 @@
+[20:50:57] Dia 390 · Pressão 4/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (21 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: nublado, brisa (d6 [3] fica · vento d6 [3])
+   o Porto de Marasar: nublado, calmo (d6 [6] muda, d20 [13] · vento d6 [1])
+   Levis: tempestade, VENTANIA (d6 [5] muda, d20 [19] · vento d6 [1]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Farenta: nublado, vento firme (d6 [1] fica · vento d6 [5])
+   O RIO: baixo [27/100]
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 390 (dia)
+    d20 [2] NASCE UMA FACÇÃO nova (companhia, guilda, ordem, bando)
+    ONDE: d27 [9] Shizess (as caravanas)
+    A NOTÍCIA: [5] em 1d6 [6] dias
+    nome: Eryeth
+    desejo: casar com quem ama
+    ambição (relógio de 4): ganhar a guerra do seu povo
+    medo: ser esquecido
+    segredo: deve a alguém perigoso
+    linha vermelha: nunca se ajoelha
+    dilema que vai chegar: a ambição dele exige trair alguém que ele ama
+    traços: LEAL e HONESTO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 390
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Graur → Bruno Malvezzi (sargento do podestà, da rede de Farenta) (MEDO) d20 [3] nada visível
+    FAÍSCA: Seline (em Ireviel) quer matar a irmã Oisse, por causa de um título
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) pede ajuda a Lurentetta, por causa de um núcleo de monstro
+    FAÍSCA: o Visconte Aldoveri vai trair a cantora do templo, por causa de um herdeiro dos Steunn
+  ▶ AGENDA #65 (era do Dia 388): OS FIÉIS DO DOGE VELHO (Marasar; a Liga paga) ameaçaram ou sabotaram a casa no Porto no 386: pequeno, mas visível. O Mestre mostra o que foi quando o rei passar por lá ou a notícia chegar.
+  ▶ AGENDA #68: CHEGA a Ireviel: A GALÉ DO REI volta de Farenta (Ferir, a Mamiltia, o Eiagrir, o Moreth; a Isolda no leme) (saiu de Farenta no 388)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Jurados de Steunn (Steunn, em volta do Lumdun): alguém grande passou a pagar ou proteger · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Quneus, o Caçador de Gigantes (Lendário, Mordun): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [16] FIEL

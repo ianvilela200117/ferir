@@ -1,0 +1,135 @@
+{
+ "casos": {
+  "fenmir": {
+   "id": "fenmir",
+   "caso": "O QUTHEMNUS, mago das torres, acusa o HERKALD de o fechar vivo no círculo de Fenmir na Noite das Torres (vinte anos) e a TILDE de o ter visto lá e calado. Pede a mão direita dos dois e a verdade dita em praça. O conselho (390, 4 a 2) decidiu: em praça aberta, o rei como juiz.",
+   "acusador": "Quthemnus",
+   "reu": "Herkald,Tilde",
+   "lei": "a Lei do Vaduar",
+   "dia": 390,
+   "estado": "julgado",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: o próprio Herkald contou ao rei (371) que ajudou a fechar o círculo com o homem vivo dentro"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "PROVA: a Tilde contou ao rei (371) que viu o homem vivo no círculo, anos depois, e calou"
+    },
+    {
+     "lado": "defesa",
+     "peso": 2,
+     "txt": "PROVA: o Herkald era moço e obedecia à velha mestra, a Gilaccetta, que mandava na forja e guardava Fenmir"
+    },
+    {
+     "lado": "defesa",
+     "peso": 2,
+     "txt": "PROVA: a Tilde era menina quando viu; o Herkald, mestre dela, a fez jurar silêncio"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: a Torre Acesa, que sustenta o acusador, recebe moeda do Ardenghi, inimigo do reino (o Krernos, 395)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: o Zesreth, filho do acusador, raspou o círculo por fora durante semanas, antes de o pai pedir a lei do rei"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "TESTEMUNHA Tilde: d20 [13]-2 = 11 → fala firme"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "TESTEMUNHA Quthemnus: d20 [15]-2 = 13 → fala firme"
+    },
+    {
+     "lado": "defesa",
+     "peso": 0,
+     "txt": "TESTEMUNHA Cethear: d20 [2]+0 = 2 → SE DESMENTE diante de todos"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "PROVA: o Herkald confessou em praça, seco, sem pedir clemência: a praça endureceu (HC [4])"
+    }
+   ],
+   "sentenca": "INOCENTE: o Herkald e a Tilde absolvidos em praça; o rei toma para si a dívida da Gilaccetta e oferece reparação ao mago; a Tilde deixa de ser aprendiz do Herkald: o rei a educa"
+  },
+  "ES23": {
+   "id": "ES23",
+   "caso": "O ESCREVENTE DA ALFÂNDEGA DO RIO, pago pelo Ardenghi (preso no 421 por voto do conselho ES421)",
+   "acusador": "Isolda (Mestra das Águas)",
+   "reu": "Nivis",
+   "lei": "a lei do rio: o fiscal que vende o selo da alfândega",
+   "dia": 423,
+   "estado": "julgado",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: o LIVRO DE CONTAS do Ardenghi: o Nivis recebia por barca que passava sem selo (o Drassa o escreveu)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: o Nivis NEGA: o livro é do Drassa, que era homem do Ardenghi e se salvou entregando-o (ES23d [1])"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "TESTEMUNHA Drassa: d20 [16]+0 = 16 → COMOVE a praça"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "TESTEMUNHA um barqueiro do cais (viu barcas do Ardenghi passarem sem selo): d20 [14]+0 = 14 → fala firme"
+    },
+    {
+     "lado": "defesa",
+     "peso": 0,
+     "txt": "TESTEMUNHA a mulher do Nivis: d20 [6]-2 = 4 → SE DESMENTE diante de todos"
+    }
+   ],
+   "sentenca": "CULPADO: trabalho forçado no dique, com os forçados, até a obra acabar (442)"
+  },
+  "EP24": {
+   "id": "EP24",
+   "caso": "OS 7 DE ERYSSA, presos armados da ala do cais do Culto do Xaathis (424, tarde, a praça)",
+   "acusador": "a Coroa, pela Eliane (capitã da guarda)",
+   "reu": "os 7 de Eryssa",
+   "lei": "a lei da cidade: gente armada em segredo debaixo da obra do rei; ergueu arma contra a guarda",
+   "dia": 424,
+   "estado": "julgado",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: PEGOS ARMADOS em Eryssa, erguendo lança contra a guarda do rei (a guarda inteira viu)"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "PROVA: os 3 BARRIS DE PIChE e as lanças empilhados na forja velha, debaixo do dique"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "TESTEMUNHA Sira: d20 [20]+2 = 22 → COMOVE a praça"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "TESTEMUNHA um soldado da guarda que desceu: d20 [11]+0 = 11 → fala firme"
+    }
+   ],
+   "sentenca": "CULPADO: MORTE, ao amanhecer do 425, no pátio da guarda, pela palavra do rei"
+  }
+ }
+}

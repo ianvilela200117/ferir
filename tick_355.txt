@@ -1,0 +1,21 @@
+[10:41:10] Dia 355 · Pressão 4/5 · encontro de estrada 1d20 [10] -> nada
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 355 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [9] Shizess (as caravanas)
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    nome: Kaskos
+    o que era: templo
+    por que caiu: monstro
+    o que guarda: uma receita
+    o que habita: um culto
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 355
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [6] nada visível
+    FAÍSCA: Eliane sonha com Graur, por causa de fome
+    FAÍSCA: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) sonha com a mestra Carea, por causa de a coberta do mundo
+    FAÍSCA: Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301) deve a vida a Skugek, por causa de uma criança

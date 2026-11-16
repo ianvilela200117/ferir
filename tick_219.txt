@@ -1,0 +1,15 @@
+[01:34:10] Dia 219 · Pressão 3/5 · encontro de estrada 1d20 [14] -> nada
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 219 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [2]
+    ONDE: d22 [9] Shizess (as caravanas)
+    A NOTÍCIA: [2] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 219
+    um Lendário age (d20 [4]):
+    Eiandald (fé, Yaelane) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [18] não chega sozinha (só a espionagem ou quem for atrás)
+    trama do dia: Thugek → o Visconte Aldoveri (RESSENTIMENTO) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Draron (da casa) deve a vida a Aeliae, por causa de sal
+    FAÍSCA: Maevis (morto) inveja Venne (morto), por causa de dinheiro da Liga
+    FAÍSCA: Seline (em Ireviel) pede ajuda a Skotha Graskur, por causa de sal

@@ -1,0 +1,26 @@
+[01:34:11] Dia 223 · Pressão 2/5 · encontro de estrada 1d20 [16] -> nada
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 223 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d22 [8] Telosus (o Colégio)
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    nome: Erygal
+    desejo: enriquecer
+    ambição (relógio de 4): abrir o próprio negócio
+    medo: a pobreza
+    segredo: fez um pacto
+    linha vermelha: nunca trabalha para a facção X
+    dilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele
+    traços: RELIGIOSO e AMBICIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 223
+    um Lendário age (d20 [1]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [3] recruta: gente, uma facção ou um monstro passa para o lado dele · notícia d20 [13] chega no dia 225
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [6] nada visível
+    FAÍSCA: Nouse desafia para duelo Ceduion, reitor do Colégio de Telosus, por causa de uma terra além do mapa
+    FAÍSCA: Sira rouba de Ulurve, por causa de um título
+    FAÍSCA: Seline (em Ireviel) desafia para duelo Krernos, por causa de a coberta do mundo
+  AUDITORIA (XXIII.23, Dia 223): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

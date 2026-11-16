@@ -1,0 +1,1 @@
+{"monstro": {"nome": "Vorthen", "cat": "Épico", "nivel": 77, "pv": 1155, "df": 39, "rd": 6, "at": 29, "dado": "1d10", "mult": 5, "acoes": 5, "poder": {"nome": "o golpe que congela (e as crias)", "tipo": "area", "dano": "3d6", "cd": 17}, "moral": true, "fraqueza": "Fogo"}, "grupo": [{"nome": "x", "at": 1, "dado": "1d6", "mult": 1, "b": 0, "df": 1, "rd": 0, "pv": 1}]}

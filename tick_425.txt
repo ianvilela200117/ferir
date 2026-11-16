@@ -1,0 +1,36 @@
+[12:03:28] Dia 425 · Pressão 4/5 · evento local 1d20 [8] -> briga na feira
+  O TEMPO (26 da Lua da Forja de 1013 d.S., Sol)
+   Ireviel: calor forte, calmo (d6 [4] muda, d20 [10] · vento d6 [2]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: tempestade, VENTANIA (d6 [2] fica · vento d6 [6]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   Levis: limpo, brisa (d6 [3] fica · vento d6 [4])
+   Farenta: tempestade, VENTANIA (d6 [6] muda, d20 [19] · vento d6 [4]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: normal [63/100]
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  ALTA: Eliane está de pé de novo (LEVE, ferido desde o 423)
+  O MUNDO SE MOVE — Dia 425 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [6] Gogrunn (as minas)
+    A NOTÍCIA: [4] em 1d6 [5] dias
+    nome: Veyol
+    o que era: torre de mago
+    por que caiu: traição
+    o que guarda: uma peça antiga
+    o que habita: bandidos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 425
+    um Lendário age (d20 [7]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [13] chega no dia 429
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [9] nada visível
+    FAÍSCA: Eiundunn esconde um filho de Ardenghi, por causa de fome
+    FAÍSCA: Herkald sonha com Gorra, por causa de sal
+    FAÍSCA: Ulurve chantageia Aeliae, por causa de uma receita perdida
+  ▶ AGENDA #281 (era do Dia 414): FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #332 (era do Dia 421): FACÇÃO — os Sem-Torre (Quoine, a torre caída em Zisrir) pede audiência ao conselho. O que querem: magos que o Colégio de Telosus falido mandou embora sem paga; o MORMIR (o eremita de Quoine) os junta e quer voltar ao Colégio; o filho do Draron é aprendiz del
+  ▶ AGENDA #348: AS CAIXAS DE FÍSICO montadas (as lâminas do rei, noite do 422): 6 em Ireviel (Saúde +1, mod, até o 480); 6 sobem a Levis (Saúde de Levis +1 quando chegarem, ~429)
+  ▶ AGENDA #355: A GUILDA ATACA O MOREK na forquilha: a ARMADILHA DE FOGO (vala de piche na margem; o Starkald, o Goir e 6 caçadores; GD23/GD23b): rolar a luta (luta.py) no amanhecer; a complicação da missão (um monstro no caminho) entra antes
+  ✉ notícia de longe que chega hoje: Quneus, o Caçador de Gigantes (Lendário, Mordun): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: Fenron (Épico, o brejo do oeste): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: FESTIVAL, TORNEIO OU FEIRA GRANDE — as Montanhas de Fogo · COMO CHEGA: d20 [17] FIEL

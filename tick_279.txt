@@ -1,0 +1,21 @@
+[00:44:30] Dia 279 · Pressão 3/5 · encontro de estrada 1d20 [12] -> nada
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 279 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d24 [24] Haula (terra nova)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Gorek
+    o que era: mina
+    por que caiu: dívida
+    o que guarda: um núcleo
+    o que habita: bandidos
+    custo de entrar: um sacrifício
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 279
+    Lendários: d20 [15] quietos hoje
+    trama do dia: Ardenghi → Ferir (ÓDIO) d20 [6] nada visível
+    FAÍSCA: Brara deve a vida a Ulair, por causa de um herdeiro dos Steunn
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) vende algo a Messa Tiracci, por causa de um feitiço proibido
+    FAÍSCA: Odrum oferece aliança a Messa Tiracci, por causa de um feitiço proibido

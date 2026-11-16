@@ -1,0 +1,14 @@
+[23:50:48] Dia 270 · Pressão 4/5 · encontro de estrada 1d20 [2] -> encontro na estrada
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [5] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 270 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]
+    ONDE: d23 [8] Telosus (o Colégio)
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 270
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Braeth (o ancião do Clã) → Iorin (TRAIÇÃO PENDENTE) d20 [7] nada visível
+    FAÍSCA: o Doge Pelaone chantageia Eiundunn, por causa de a coberta do mundo
+    FAÍSCA: Lasca e Miro (presos) quer casar com Draa, por causa de vaduar
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) procura o Visconte Aldoveri, por causa de um título

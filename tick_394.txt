@@ -1,0 +1,34 @@
+[00:01:00] Dia 394 · Pressão 3/5 · evento local 1d20 [13] -> uma encomenda nova chega à forja
+  O TEMPO (25 da Lua do Sal de 1013 d.S., Sol)
+   Ireviel: limpo, vento forte (d6 [4] muda, d20 [5] · vento d6 [6])
+   o Porto de Marasar: calor forte, brisa (d6 [2] fica · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: calor forte, brisa (d6 [6] muda, d20 [9] · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: neblina, vento firme (d6 [4] muda, d20 [18] · vento d6 [5]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   O RIO: baixo [31/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [8] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 394 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d27 [5] Farenta  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    1d12 [5] um lugar novo é descoberto (gerar lugar)
+    ——
+  O MUNDO VIVO — Dia 394
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Borecci → Tilde (ÓDIO) d20 [11] nada visível
+    FAÍSCA: a irmã Oisse encomenda uma peça para Ruddo, por causa de um feitiço proibido
+    FAÍSCA: Ruddo acusa em público o conselheiro Pelagri, por causa de a Fornalha que Não Apaga
+    FAÍSCA: Ulurve pede ajuda a ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322), por causa de um título
+  ▶ AGENDA #114: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ▶ AGENDA #117: [OCULTO] NOITE DO 394: um ladrão contratado pelos DESCALÇOS tenta a MATRIZ na Fornalha (cobiça [3], CM [18], CMq [1]). Resolver: aberto.py 2d20+35 oposto=16 nivel=74 nivel_op=46 (sucesso: pego; com ganho: a casa sabe quem mandou).
+  ▶ AGENDA #118: A ELIANE volta de Marasar (sai no 393): 12 lanças de pé, 7 presos de nome da Liga para o julgamento do rei e a METADE DO REI nos bens das casas (4.000 em carga e créditos: lançar no cofre). Os 6 feridos graves e os 2 mortos vieram na barca do 393.
+  ▶ AGENDA #122: [OCULTO] A ISOLDA recebe uma OFERTA pelo Gorjal (cobiça [3], CG [3]); pelo que ela é, recusa. Dizer ao rei quem ofereceu (rolar quem).
+  ▶ AGENDA #123: [OCULTO] NOTÍCIA de Farenta (2 dias de costa): a gente VOLTOU BEM no 392; a Oisse e os físicos receberam na praia (FR [12]).
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): oferece um acordo a um rival (paz, casamento, troca) · COMO CHEGA: d20 [5] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, as SALINAS VELHAS ao sul): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): o chefe é desafiado (1d6: 1-3 cai, novo chefe) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os do Cais de Baixo (o Porto de Marasar): briga com os Filhos da Brecha; vence os do Cais de Baixo · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: FENÔMENO MÁGICO: a coberta afina: magia selvagem — Ulra (terra nova) · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: Yirane, a Que Come a Pedra (Épico, as Montanhas de Fogo): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: UM CULTO CRESCE ou nasce — Yaelane (Culto do Erynar) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi

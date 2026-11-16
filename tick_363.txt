@@ -1,0 +1,17 @@
+[19:27:56] Dia 363 · Pressão 2/5 · evento local 1d20 [3] -> nada
+  avistamento de monstro 1d20 [18] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 363 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]
+    ONDE: d27 [20] Steunn
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    ——
+  O MUNDO VIVO — Dia 363
+    um Lendário age (d20 [6]):
+    Altheltia (ofício, o Delta) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [11] chega no dia 366
+    trama do dia: Teraseth → Maevis (morto) (DÍVIDA) d20 [2] nada visível
+    FAÍSCA: Skedda oferece aliança a Qunemneth, o Médico Cinzento, por causa de uma dívida antiga
+    FAÍSCA: Brogos quer casar com Draron (da casa), por causa de a coberta do mundo
+    FAÍSCA: Venne (morto) acusa em público Messer Rovai, por causa de sal
+  AUDITORIA (XXIII.23, Dia 363): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)

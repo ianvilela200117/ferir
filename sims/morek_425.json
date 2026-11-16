@@ -1,0 +1,131 @@
+{
+ "monstro": {
+  "nome": "Morek",
+  "cat": "Único",
+  "nivel": 122,
+  "pv": 2440,
+  "pv_atual": 2414,
+  "df": 55,
+  "rd": 12,
+  "at": 45,
+  "dado": "2d10",
+  "mult": 10,
+  "poder": {
+   "nome": "o golpe que prende como raiz (15 m)",
+   "tipo": "area_empurra",
+   "cd": 20
+  },
+  "moral": true,
+  "fraqueza": "Fogo",
+  "reflete": true
+ },
+ "grupo": [
+  {
+   "nome": "Ferir",
+   "nivel": 154,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 398,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": false,
+   "magia": {
+    "dano": "24d6",
+    "mult": 10,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ],
+    "essencia": ""
+   },
+   "essencia": "Vento",
+   "nota": "408: arma = a LANÇA DE GUERRA MÍTICA (Vento); magia = TOQUE DO CEIFADOR 24d6 preso no FOCO DE OSSO (rende Mítico: x10), 2 vezes por cena sem Mana; quem cai levanta como servo; a Lança do Sol 16d6 x10 segue na mão dele · 425: a RAIZ prende, não empurra: o \"não se mexe\" não vale aqui"
+  },
+  {
+   "nome": "Moreth",
+   "nivel": 231,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magia": {
+    "dano": "16d6",
+    "mult": 10,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 124,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magia": {
+    "dano": "16d6",
+    "mult": 5,
+    "cd": 30,
+    "rodada": [
+     2,
+     3
+    ]
+   }
+  },
+  {
+   "nome": "Isolda",
+   "nivel": 116,
+   "at": 34,
+   "dado": "1d8",
+   "mult": 3,
+   "b": 10,
+   "df": 40,
+   "rd": 6,
+   "pv": 300,
+   "vigor": 14,
+   "heroi": true
+  },
+  {
+   "nome": "Starkald",
+   "nivel": 87,
+   "at": 24,
+   "df": 32,
+   "rd": 4,
+   "pv": 230,
+   "dado": "1d8",
+   "mult": 3.0,
+   "b": 9
+  },
+  {
+   "nome": "Goir",
+   "nivel": 46,
+   "at": 16,
+   "df": 24,
+   "rd": 3,
+   "pv": 130,
+   "dado": "1d8",
+   "mult": 2.0,
+   "b": 5
+  }
+ ],
+ "nota": "REAL (amanhecer do 425, a forquilha). SU25 [5]: o Morek ACORDOU (sem surpresa). TR25a: a vala 34 → metade 17 → ×2 = 34 − 12 = 22 · TR25b: flechas [6,8,4,3,3,1] → ×2 − 12 cada = 4 · total 26: PV 2414/2440. Os 6 caçadores ficam nas barcas. Não modelado: a doença (rola depois em quem levou golpe), o voo (entra na fuga pela moral). Reflexo de magia 18-20 modelado (425)."
+}
