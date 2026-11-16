@@ -33,10 +33,25 @@ def livro():
         m = re.match(r'^\s+- \*Fraqueza:\*\s*(.*)$', ln)
         if m: cur['fraqueza'] = m.group(1).strip(); continue
         if ln.startswith('## ') or ln.startswith('---'): cur = None
+    cur = None   # MOTOR 9 (438): as 11 classes do Livro Nove (compendio/08_livro_nove.md): '- **Nome** (FAMÍLIA, Raridade)'
+    try: nove = ler('compendio/08_livro_nove.md').split('\n')
+    except Exception: nove = []
+    for ln in nove:
+        m = re.match(r'^- \*\*([^*]+)\*\* \(([A-ZÇÉÁÚÓ]+), ([^)]+)\)\s*$', ln)
+        if m:
+            cur = {'nome': m.group(1).strip(), 'familia': m.group(2), 'raridade': m.group(3), 'assinaturas': [], 'fraqueza': ''}
+            L[sem_acento(cur['nome']).lower()] = cur; continue
+        if cur is None: continue
+        m = re.match(r'^\s+- \*\*([^*]+)\*\*\s*(\([^)]*\))?:?\s*(.*)$', ln)
+        if m: cur['assinaturas'].append(f'{m.group(1).strip()} {m.group(2) or ""}: {m.group(3).strip()}'.replace('  ', ' ')); continue
+        m = re.match(r'^\s+- \*Fraqueza:\*\s*(.*)$', ln)
+        if m: cur['fraqueza'] = m.group(1).strip(); continue
+        if ln.startswith('#') or ln.startswith('---'): cur = None
     return L
 
 
 def classe_do_npc(v, L):
+    if v.get('classe_livro') and sem_acento(str(v['classe_livro'])).lower() in L: return L[sem_acento(str(v['classe_livro'])).lower()]   # 438: a classe do Livro dita na ficha vale
     txt = sem_acento(str(v.get('classe', ''))).lower()
     cab = re.split(r'[(·,]', txt)[0].strip()
     if cab in L: return L[cab]

@@ -139,7 +139,17 @@
   "voz": "frases curtas, de quartel; diz o custo antes do plano; chama o rei de 'senhor' só em público",
   "lealdade": 5,
   "votos_seguidos": 0,
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "deixar uma obra",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Herkald": {
   "nivel": 86,
@@ -295,7 +305,17 @@
     "ate": 490
    }
   ],
-  "votos_seguidos": 0
+  "votos_seguidos": 0,
+  "desejo": "deixar uma obra",
+  "ambicao": "fundar uma escola",
+  "medo": "a magia",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Graur": {
   "nivel": 75,
@@ -451,7 +471,25 @@
    }
   ],
   "votos_seguidos": 0,
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "voltar para casa",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Ferreiro de Guerra",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Forja de Campanha (Passiva)",
+   "Conserto Rápido (10 minutos, 3)",
+   "Arma da Hoste (Passiva)"
+  ],
+  "fraqueza": "obras finas e joias, −2."
  },
  "Krernos": {
   "nivel": 50,
@@ -527,7 +565,25 @@
   "tracos": [
    "AVARENTO"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "ser perdoado",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Duelista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Desafio (Bônus, 2)",
+   "Riposta (Reação, 2)",
+   "Ler a Guarda (Passiva)"
+  ],
+  "fraqueza": "contra grupo, −1 de Defesa por inimigo a mais."
  },
  "Tamel": {
   "nivel": 40,
@@ -556,7 +612,17 @@
    "Ordem Unida (Passiva)",
    "Marcha Forçada (Passiva)"
   ],
-  "fraqueza": "sozinho, perde a Ordem Unida e a Parede."
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "curar alguém",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Ulurve": {
   "nivel": 43,
@@ -623,7 +689,17 @@
    "Golpe Certo (1x por obra)"
   ],
   "fraqueza": "sem martelo e bigorna, nada funciona.",
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "enriquecer",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Nouliel": {
   "nivel": 33,
@@ -727,7 +803,25 @@
    }
   ],
   "lealdade": 5,
-  "votos_seguidos": 1
+  "votos_seguidos": 1,
+  "desejo": "nunca mais passar fome",
+  "ambicao": "fundar uma escola",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Skedda": {
   "nivel": 53,
@@ -830,7 +924,25 @@
   "tracos": [
    "AVARENTO",
    "COVARDE"
-  ]
+  ],
+  "desejo": "proteger um filho",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Runomante",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Runa Guardada (Ativa, 1 hora)",
+   "Runa de Alarme (Passiva)",
+   "Mão Precisa (Passiva)"
+  ],
+  "fraqueza": "runa raspada ou apagada não volta."
  },
  "Iorin": {
   "nivel": 62,
@@ -974,7 +1086,17 @@
    "Reparo de Campo (1 hora, 2 Foco)",
    "Golpe Certo (1x por obra)"
   ],
-  "fraqueza": "sem martelo e bigorna, nada funciona."
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "um título",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Sira": {
   "nivel": 32,
@@ -1087,7 +1209,17 @@
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
   "votos_seguidos": 0,
   "lealdade": 5,
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "desejo": "uma casa própria",
+  "ambicao": "formar uma companhia",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Bren": {
   "nivel": 20,
@@ -1113,6 +1245,16 @@
   "tracos": [
    "PACIENTE",
    "CALCULISTA"
+  ],
+  "desejo": "mandar em alguém",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Gaald": {
@@ -1167,7 +1309,17 @@
    "Golpe Certo (1x por obra)"
   ],
   "fraqueza": "sem martelo e bigorna, nada funciona.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Brara": {
   "nivel": 62,
@@ -1243,7 +1395,25 @@
     "dia": 435,
     "ate": null
    }
-  ]
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "casar acima da sua classe",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Ferreiro de Guerra",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Forja de Campanha (Passiva)",
+   "Conserto Rápido (10 minutos, 3)",
+   "Arma da Hoste (Passiva)"
+  ],
+  "fraqueza": "obras finas e joias, −2."
  },
  "Ouvald": {
   "nivel": 44,
@@ -1305,7 +1475,17 @@
    "AVARENTO",
    "CORAJOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "vingar um morto",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a magia",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Nelior": {
   "nivel": 34,
@@ -1364,7 +1544,17 @@
    "HONESTO",
    "DILIGENTE"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "casar com quem ama",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Tirello": {
   "nivel": 48,
@@ -1422,7 +1612,25 @@
   "tracos": [
    "CURIOSO",
    "AVARENTO"
-  ]
+  ],
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a pobreza",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Diplomata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
  },
  "Thugek": {
   "nivel": 39,
@@ -1479,7 +1687,17 @@
    "Ordem Unida (Passiva)",
    "Marcha Forçada (Passiva)"
   ],
-  "fraqueza": "sozinho, perde a Ordem Unida e a Parede."
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede.",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "conquistar terra",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Isolda": {
   "nivel": 117,
@@ -1584,6 +1802,16 @@
   "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
   "dons": [
    "Nome que Anda"
+  ],
+  "desejo": "enriquecer",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Thuron": {
@@ -1689,7 +1917,17 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 0
+  "votos_seguidos": 0,
+  "desejo": "proteger um filho",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a magia",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Ithra": {
   "nivel": 38,
@@ -1748,7 +1986,24 @@
    "AMBICIOSO",
    "COVARDE"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "linha_vermelha": "nunca machuca uma criança",
+  "desejo": "proteger um filho",
+  "ambicao": "virar Lendário",
+  "medo": "a solidão",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ],
+  "classe_livro": "Selador",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Romper Elo (5, toque)",
+   "Sentir Vínculo (Passiva)",
+   "Selar (1 minuto, 3)"
+  ],
+  "fraqueza": "contra quem não tem vínculo, nada funciona."
  },
  "Dovan": {
   "nivel": 24,
@@ -1797,6 +2052,16 @@
   "tracos": [
    "LEAL",
    "AMBICIOSO"
+  ],
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "fundar uma escola",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Venne": {
@@ -1818,6 +2083,16 @@
   "tracos": [
    "CALCULISTA",
    "AMBICIOSO"
+  ],
+  "desejo": "uma casa própria",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Oslo": {
@@ -1878,7 +2153,17 @@
    "CORAJOSO",
    "TEIMOSO"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "um título",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Odrum": {
   "nivel": 20,
@@ -1941,7 +2226,25 @@
    "SABIO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "desejo": "aprender um segredo",
+  "ambicao": "conquistar terra",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Artífice",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mecanismo (Passiva)",
+   "Desmontar (1 minuto, 2)",
+   "Peça Móvel (Passiva)"
+  ],
+  "fraqueza": "sem ferramentas finas, −4."
  },
  "Kasgal": {
   "nivel": 25,
@@ -1962,7 +2265,16 @@
    "Ouvir Atrás (Passiva)",
    "Rede (Passiva)"
   ],
-  "fraqueza": "ser desmascarado queima o rosto naquela corte."
+  "fraqueza": "ser desmascarado queima o rosto naquela corte.",
+  "linha_vermelha": "nunca volta atrás numa palavra",
+  "desejo": "aprender um segredo",
+  "ambicao": "fundar uma escola",
+  "medo": "ser esquecido",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ]
  },
  "Tilde": {
   "nivel": 54,
@@ -2092,7 +2404,25 @@
     "dia": 400,
     "ate": 490
    }
-  ]
+  ],
+  "desejo": "proteger um filho",
+  "ambicao": "formar uma companhia",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Ferreiro",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona."
  },
  "Hraga": {
   "nivel": 20,
@@ -2106,7 +2436,25 @@
   "tracos": [
    "CURIOSO",
    "GENEROSO"
-  ]
+  ],
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Brua": {
   "nivel": 27,
@@ -2160,7 +2508,25 @@
   "tracos": [
    "VINGATIVO",
    "DISCIPLINADO"
-  ]
+  ],
+  "desejo": "proteger um filho",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "capuz 3": {
   "nivel": 27,
@@ -2213,7 +2579,25 @@
    "DESCONFIADO",
    "PACIENTE"
   ],
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "capuz 4": {
   "nivel": 27,
@@ -2263,7 +2647,25 @@
    "JUSTO",
    "CALCULISTA"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "deixar uma obra",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Kreium": {
   "nivel": 44,
@@ -2312,7 +2714,24 @@
    "CURIOSO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "medo": "fogo",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "descobrir uma receita perdida",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Batedor de Mata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Pele de Casca (Postura, 2 Mana)",
+   "Sumir na Folha (Bônus, 2)",
+   "Caminho (Passiva)"
+  ],
+  "fraqueza": "na cidade, perde tudo."
  },
  "Seline": {
   "nivel": 24,
@@ -2367,7 +2786,16 @@
    "Livro-Caixa (Passiva)",
    "Freguês (Passiva)"
   ],
-  "fraqueza": "toda cidade sabe que ele tem ouro."
+  "fraqueza": "toda cidade sabe que ele tem ouro.",
+  "linha_vermelha": "nunca trai a família",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "o fogo",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ]
  },
  "Tano": {
   "nivel": 17,
@@ -2397,7 +2825,25 @@
   ],
   "tracos": [
    "DESCONFIADO"
-  ]
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Soldado",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Parede de Escudos (Postura)",
+   "Ordem Unida (Passiva)",
+   "Marcha Forçada (Passiva)"
+  ],
+  "fraqueza": "sozinho, perde a Ordem Unida e a Parede."
  },
  "Lasca": {
   "nivel": 25,
@@ -2412,7 +2858,25 @@
   "tracos": [
    "HONESTO",
    "PREGUICOSO"
-  ]
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Larápio",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão Leve (Ativa, 1)",
+   "Fuga (Bônus, 2)",
+   "Fiança (Passiva)"
+  ],
+  "fraqueza": "tem fama (Procurado 1 em uma jurisdição)."
  },
  "Miro": {
   "nivel": 25,
@@ -2427,7 +2891,25 @@
   "tracos": [
    "LEAL",
    "CURIOSO"
-  ]
+  ],
+  "desejo": "um título",
+  "ambicao": "conquistar terra",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Larápio",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão Leve (Ativa, 1)",
+   "Fuga (Bônus, 2)",
+   "Fiança (Passiva)"
+  ],
+  "fraqueza": "tem fama (Procurado 1 em uma jurisdição)."
  },
  "Pelaccino": {
   "nivel": 110,
@@ -2450,7 +2932,25 @@
   ],
   "dons": [
    "Pele do Mundo (Essência: Fogo)"
-  ]
+  ],
+  "desejo": "aprender um segredo",
+  "ambicao": "virar Lendário",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Mestre das Sombras",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Andar na Sombra (Bônus, 3)",
+   "Escuridão (Ativa, 4)",
+   "Sombra Viva (Ativa, 5)"
+  ],
+  "fraqueza": "luz mágica do 4º o fere (2d6 por rodada)."
  },
  "Malvezzi": {
   "nivel": 35,
@@ -2503,7 +3003,25 @@
    "PACIENTE",
    "DILIGENTE"
   ],
-  "estado": "MORTO (401)"
+  "estado": "MORTO (401)",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Cerrini": {
   "nivel": 8,
@@ -2525,6 +3043,16 @@
   "tracos": [
    "VINGATIVO",
    "AVARENTO"
+  ],
+  "desejo": "deixar uma obra",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Dolassi": {
@@ -2583,7 +3111,25 @@
    "LEAL",
    "DESCONFIADO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "curar alguém",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Draron": {
   "nivel": 57,
@@ -2650,7 +3196,16 @@
    "Segundo Fôlego (Bônus, 1x/combate)"
   ],
   "fraqueza": "sem armadura média ou pesada, −2 de Defesa.",
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "linha_vermelha": "nunca volta atrás numa palavra",
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "voltar a ser escravo",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ]
  },
  "Kreine": {
   "nivel": 91,
@@ -2717,7 +3272,24 @@
    "HONESTO",
    "CRUEL"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "linha_vermelha": "nunca volta atrás numa palavra",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "o próprio passado",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ],
+  "classe_livro": "Duelista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Desafio (Bônus, 2)",
+   "Riposta (Reação, 2)",
+   "Ler a Guarda (Passiva)"
+  ],
+  "fraqueza": "contra grupo, −1 de Defesa por inimigo a mais."
  },
  "Braeth": {
   "nivel": 52,
@@ -2765,7 +3337,23 @@
   "tracos": [
    "ORGULHOSO",
    "AVARENTO"
-  ]
+  ],
+  "medo": "fogo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "desejo": "deixar uma obra",
+  "ambicao": "formar uma companhia",
+  "gerado_438": [
+   "desejo",
+   "ambicao"
+  ],
+  "classe_livro": "Orador",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Discurso de Praça (1 hora, 6)",
+   "Voz que Pesa (Passiva)",
+   "Tribuna (Passiva)"
+  ],
+  "fraqueza": "um discurso que falha vira piada (−1 de Fama)."
  },
  "Mormir": {
   "nivel": 17,
@@ -2836,7 +3424,16 @@
    "Foco Duplo (Passiva)"
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "linha_vermelha": "nunca machuca uma criança",
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "perder a mão do ofício",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ]
  },
  "Moreth": {
   "nivel": 232,
@@ -2960,6 +3557,15 @@
   "dons": [
    "Pele do Mundo (Essência: Podridão)",
    "Mão do Mundo"
+  ],
+  "linha_vermelha": "nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
+  "desejo": "curar alguém",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "perder a mão do ofício",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
   ]
  },
  "Draek": {
@@ -3004,7 +3610,24 @@
    "AMBICIOSO",
    "LEAL"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "linha_vermelha": "nunca vende o ofício barato",
+  "desejo": "ser perdoado",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a pobreza",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ],
+  "classe_livro": "Orador",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Discurso de Praça (1 hora, 6)",
+   "Voz que Pesa (Passiva)",
+   "Tribuna (Passiva)"
+  ],
+  "fraqueza": "um discurso que falha vira piada (−1 de Fama)."
  },
  "Kassa": {
   "nivel": 72,
@@ -3060,7 +3683,14 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "uma casa própria",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "linha_vermelha"
+  ]
  },
  "Veyula": {
   "nivel": 77,
@@ -3107,7 +3737,22 @@
    "HONESTO",
    "GENEROSO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "desejo": "vingar um morto",
+  "ambicao": "formar uma companhia",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Orador",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Discurso de Praça (1 hora, 6)",
+   "Voz que Pesa (Passiva)",
+   "Tribuna (Passiva)"
+  ],
+  "fraqueza": "um discurso que falha vira piada (−1 de Fama)."
  },
  "Selron": {
   "nivel": 40,
@@ -3153,7 +3798,22 @@
   "tracos": [
    "HONESTO",
    "TEIMOSO"
-  ]
+  ],
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "conquistar terra",
+  "medo": "a pobreza",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Batedor de Mata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Pele de Casca (Postura, 2 Mana)",
+   "Sumir na Folha (Bônus, 2)",
+   "Caminho (Passiva)"
+  ],
+  "fraqueza": "na cidade, perde tudo."
  },
  "Goreth": {
   "nivel": 40,
@@ -3202,7 +3862,22 @@
    "AMBICIOSO",
    "COVARDE"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "desejo": "enriquecer",
+  "ambicao": "descobrir uma RECEITA PERDIDA",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Espadachim",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Estocada (Ativa, 2)",
+   "Aparar (Reação, 1)",
+   "Dança da Lâmina (Passiva)"
+  ],
+  "fraqueza": "com armadura pesada, perde a Dança."
  },
  "Ulnar": {
   "nivel": 19,
@@ -3263,7 +3938,23 @@
    "DISCIPLINADO",
    "SABIO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "desejo": "uma casa própria",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Arauto",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Anúncio (Ativa, 2)",
+   "Etiqueta (Passiva)",
+   "Imunidade de Enviado (Passiva)"
+  ],
+  "fraqueza": "fala pelo senhor dele; não tem palavra própria."
  },
  "Gorron": {
   "nivel": 18,
@@ -3322,7 +4013,25 @@
   "tracos": [
    "CORAJOSO",
    "SABIO"
-  ]
+  ],
+  "desejo": "proteger um filho",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Carpinteiro",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Olho de Madeira (Passiva)",
+   "Erguer (Passiva)",
+   "Escora (1 hora, 2)"
+  ],
+  "fraqueza": "fogo arruína a obra (dano dobrado)."
  },
  "Selula": {
   "nivel": 16,
@@ -3373,7 +4082,24 @@
    "IMPULSIVO",
    "DISCIPLINADO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "deixar uma obra",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a magia",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Camponês",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão."
  },
  "Orast": {
   "nivel": 1,
@@ -3388,6 +4114,16 @@
   "tracos": [
    "PACIENTE",
    "CORAJOSO"
+  ],
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "virar Lendário",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Pelagri": {
@@ -3407,7 +4143,25 @@
   "tracos": [
    "CINICO",
    "MISERICORDIOSO"
-  ]
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "descobrir uma receita perdida",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Ladino",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Ataque Furtivo (Passiva)",
+   "Sumir (Bônus, 2)",
+   "Gazua (Passiva)"
+  ],
+  "fraqueza": "em luz plena, perde o Sumir."
  },
  "Ruddo": {
   "nivel": 1,
@@ -3442,7 +4196,15 @@
   "tracos": [
    "HUMILDE",
    "CINICO"
-  ]
+  ],
+  "classe_livro": "Arquimago",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Círculo Acima (Passiva)",
+   "Dois Feitiços (Passiva)",
+   "Mestre das Escolas (Passiva)"
+  ],
+  "fraqueza": "o Colégio, a Escola Única e a Vigília vigiam cada passo dele."
  },
  "Thuast": {
   "nivel": 76,
@@ -3502,7 +4264,15 @@
    "TEIMOSO",
    "CORAJOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Eryula": {
   "nivel": 1,
@@ -3524,6 +4294,15 @@
   "tracos": [
    "CINICO",
    "ORGULHOSO"
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "a cantora do templo": {
@@ -3539,7 +4318,25 @@
   "tracos": [
    "AMBICIOSO",
    "FRIO"
-  ]
+  ],
+  "desejo": "deixar uma obra",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Noviço",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Prece de Alívio (3 Mana)",
+   "Bênção (1 Mana)",
+   "Vela Acesa (Passiva)"
+  ],
+  "fraqueza": "fora da fé, −2 em Persuasão."
  },
  "Leliel": {
   "nivel": 351,
@@ -3559,7 +4356,25 @@
    "Segundo Coração",
    "Sorte Velha",
    "Sangue Grosso"
-  ]
+  ],
+  "desejo": "vingar um morto",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Rei sem Coroa",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Seguidores (Passiva)",
+   "A Palavra É Lei (1x/mês)",
+   "Coroa do Povo (Passiva)"
+  ],
+  "fraqueza": "todo rei quer vê-lo morto ou do lado dele."
  },
  "Orvenne": {
   "nivel": 0,
@@ -3588,7 +4403,22 @@
   "tracos": [
    "GENEROSO",
    "COVARDE"
-  ]
+  ],
+  "desejo": "curar alguém",
+  "ambicao": "fundar uma escola",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Arauto",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Anúncio (Ativa, 2)",
+   "Etiqueta (Passiva)",
+   "Imunidade de Enviado (Passiva)"
+  ],
+  "fraqueza": "fala pelo senhor dele; não tem palavra própria."
  },
  "Erymir": {
   "nivel": 56,
@@ -3643,7 +4473,14 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "nunca mais passar fome",
+  "ambicao": "casar acima da sua classe",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "linha_vermelha"
+  ]
  },
  "Selvil": {
   "nivel": 19,
@@ -3691,7 +4528,22 @@
   "tracos": [
    "COVARDE",
    "VINGATIVO"
-  ]
+  ],
+  "desejo": "enriquecer",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Mascate",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Lábia (Ativa, 2)",
+   "Mochila Funda (Passiva)",
+   "Estrada (Passiva)"
+  ],
+  "fraqueza": "não tem casa: nenhuma cidade o defende."
  },
  "Orol": {
   "nivel": 39,
@@ -3728,7 +4580,22 @@
    "AMBICIOSO",
    "ORGULHOSO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "ser perdoado",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Armeiro",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Fio Assentado (Passiva)",
+   "Ajustar Armadura (1 hora, 2)",
+   "Lote de Guerra (Passiva)"
+  ],
+  "fraqueza": "joia e coisa fina saem tortas (−2)."
  },
  "Brissa": {
   "nivel": 69,
@@ -3742,7 +4609,22 @@
   "tracos": [
    "CURIOSO",
    "COVARDE"
-  ]
+  ],
+  "desejo": "aprender um segredo",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Batedor de Mata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Pele de Casca (Postura, 2 Mana)",
+   "Sumir na Folha (Bônus, 2)",
+   "Caminho (Passiva)"
+  ],
+  "fraqueza": "na cidade, perde tudo."
  },
  "Hask": {
   "nivel": 39,
@@ -3755,7 +4637,22 @@
   "tracos": [
    "COVARDE",
    "ORGULHOSO"
-  ]
+  ],
+  "desejo": "enriquecer",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Caçador de Achados",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar)."
  },
  "Sorvane": {
   "nivel": 46,
@@ -3790,7 +4687,22 @@
   "tracos": [
    "AMBICIOSO",
    "CRUEL"
-  ]
+  ],
+  "desejo": "nunca mais passar fome",
+  "ambicao": "virar Lendária",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Andarilho",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Estrada Amiga (Passiva)",
+   "Caminho Feliz (1 Fortuna)",
+   "Sem Raiz (Passiva)"
+  ],
+  "fraqueza": "não pode ficar mais de uma lua no mesmo lugar sem −1 em tudo."
  },
  "Tolvane": {
   "nivel": 23,
@@ -3844,7 +4756,22 @@
   "votos_vencidos": 13,
   "lealdade": 4,
   "votos_seguidos": 1,
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "deixar uma obra",
+  "ambicao": "virar Lendário",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Diplomata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
  },
  "Carea": {
   "nivel": 20,
@@ -3902,6 +4829,16 @@
     "dia": 435,
     "ate": 525
    }
+  ],
+  "desejo": "um título",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Tessal": {
@@ -3946,7 +4883,22 @@
    "LEAL",
    "RELIGIOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "desejo": "um título",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Alquimista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Destilar (1 hora, 2)",
+   "Ácido (Ativa, 2)",
+   "Remédio (Passiva)"
+  ],
+  "fraqueza": "1 natural explode (1d6 nele)."
  },
  "Tedulteth": {
   "nivel": 28,
@@ -3982,7 +4934,22 @@
    "CURIOSO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 406
+  "ultima_subida": 406,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Alquimista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Destilar (1 hora, 2)",
+   "Ácido (Ativa, 2)",
+   "Remédio (Passiva)"
+  ],
+  "fraqueza": "1 natural explode (1d6 nele)."
  },
  "Groa": {
   "nivel": 62,
@@ -4059,7 +5026,22 @@
   "tracos": [
    "COVARDE",
    "RELIGIOSO"
-  ]
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Ferreiro de Guerra",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Forja de Campanha (Passiva)",
+   "Conserto Rápido (10 minutos, 3)",
+   "Arma da Hoste (Passiva)"
+  ],
+  "fraqueza": "obras finas e joias, −2."
  },
  "Bjarkunn": {
   "nivel": 72,
@@ -4113,7 +5095,14 @@
    "Contramágica (Reação, círculo × 5)",
    "Foco Duplo (Passiva)"
   ],
-  "fraqueza": "sem o grimório, só lembra 3 feitiços."
+  "fraqueza": "sem o grimório, só lembra 3 feitiços.",
+  "desejo": "sair da cidade",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "linha_vermelha"
+  ]
  },
  "Lucissi": {
   "nivel": 15,
@@ -4156,7 +5145,25 @@
   "tracos": [
    "CINICO",
    "TEIMOSO"
-  ]
+  ],
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "formar uma companhia",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Camponês",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão."
  },
  "Tavrel": {
   "nivel": 24,
@@ -4198,7 +5205,17 @@
    "Freguês (Passiva)"
   ],
   "fraqueza": "toda cidade sabe que ele tem ouro.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "conquistar terra",
+  "medo": "a magia",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Eiagrir": {
   "nivel": 126,
@@ -4286,6 +5303,13 @@
   "fraqueza": "colado no inimigo, −2 no ataque.",
   "dons": [
    "Pele do Mundo (Essência: Fogo)"
+  ],
+  "desejo": "vingar um morto",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "linha_vermelha"
   ]
  },
  "Nialla": {
@@ -4321,7 +5345,22 @@
    "AMBICIOSO",
    "CRUEL"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "desejo": "aprender um segredo",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Herbalista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Remédio de Mato (1 hora, 2)",
+   "Achar Erva (Passiva)",
+   "Chá (Passiva)"
+  ],
+  "fraqueza": "no inverno, perde o Achar Erva."
  },
  "Baldino": {
   "nivel": 31,
@@ -4334,7 +5373,22 @@
   "tracos": [
    "AMBICIOSO",
    "LEAL"
-  ]
+  ],
+  "desejo": "curar alguém",
+  "ambicao": "virar Lendário",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Oisse": {
   "nivel": 33,
@@ -4367,7 +5421,25 @@
    "AMBICIOSO",
    "AVARENTO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "desejo": "proteger um filho",
+  "ambicao": "formar uma companhia",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Clérigo",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Expulsar Mortos (Ativa, 4)",
+   "Cura Menor (4 Mana)",
+   "Égide (Bônus, 2)"
+  ],
+  "fraqueza": "não pode usar arma de corte sem perder a Égide."
  },
  "Facio": {
   "nivel": 46,
@@ -4387,7 +5459,22 @@
   "tracos": [
    "CURIOSO",
    "RELIGIOSO"
-  ]
+  ],
+  "desejo": "voltar para casa",
+  "ambicao": "fundar uma escola",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "linha_vermelha"
+  ],
+  "classe_livro": "Mascate",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Lábia (Ativa, 2)",
+   "Mochila Funda (Passiva)",
+   "Estrada (Passiva)"
+  ],
+  "fraqueza": "não tem casa: nenhuma cidade o defende."
  },
  "Hruthos": {
   "nivel": 91,
@@ -4446,7 +5533,14 @@
    "Firmar a Lança (Postura)"
   ],
   "fraqueza": "colado no inimigo, −2 no ataque.",
-  "ultima_subida": 427
+  "ultima_subida": 427,
+  "desejo": "vingar um morto",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "linha_vermelha"
+  ]
  },
  "Donione": {
   "nivel": 24,
@@ -4482,7 +5576,25 @@
    "AVARENTO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 399
+  "ultima_subida": 399,
+  "desejo": "voltar para casa",
+  "ambicao": "formar uma companhia",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Starkald": {
   "nivel": 87,
@@ -4542,7 +5654,14 @@
   ],
   "fraqueza": "corpo a corpo, −1 de Defesa.",
   "ultima_subida": 406,
-  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)"
+  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)",
+  "desejo": "voltar para casa",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "linha_vermelha"
+  ]
  },
  "Vrethur": {
   "nivel": 66,
@@ -4579,7 +5698,16 @@
    "Cova Certa (Passiva)",
    "Pá e Lanterna (Passiva)"
   ],
-  "fraqueza": "o povo evita a casa dele."
+  "fraqueza": "o povo evita a casa dele.",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "desejo": "proteger um filho",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "a morte de um filho",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo"
+  ]
  },
  "Girendino": {
   "nivel": null,
@@ -4599,7 +5727,15 @@
   "tracos": [
    "CRUEL",
    "LEAL"
-  ]
+  ],
+  "classe_livro": "Arauto",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Anúncio (Ativa, 2)",
+   "Etiqueta (Passiva)",
+   "Imunidade de Enviado (Passiva)"
+  ],
+  "fraqueza": "fala pelo senhor dele; não tem palavra própria."
  },
  "Lile": {
   "nivel": null,
@@ -4617,7 +5753,15 @@
   "tracos": [
    "VINGATIVO",
    "AMBICIOSO"
-  ]
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Ssashir": {
   "nivel": 35,
@@ -4643,7 +5787,15 @@
    "HONESTO",
    "AMBICIOSO"
   ],
-  "ultima_subida": 420
+  "ultima_subida": 420,
+  "classe_livro": "Artífice",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mecanismo (Passiva)",
+   "Desmontar (1 minuto, 2)",
+   "Peça Móvel (Passiva)"
+  ],
+  "fraqueza": "sem ferramentas finas, −4."
  },
  "Moua": {
   "nivel": 17,
@@ -4673,7 +5825,15 @@
    "AVARENTO",
    "RELIGIOSO"
   ],
-  "ultima_subida": 434
+  "ultima_subida": 434,
+  "classe_livro": "Mascate",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Lábia (Ativa, 2)",
+   "Mochila Funda (Passiva)",
+   "Estrada (Passiva)"
+  ],
+  "fraqueza": "não tem casa: nenhuma cidade o defende."
  },
  "Tuald": {
   "nivel": 60,
@@ -4701,7 +5861,15 @@
   "tracos": [
    "TEIMOSO",
    "RELIGIOSO"
-  ]
+  ],
+  "classe_livro": "Ferreiro",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Olho de Forja (Passiva)",
+   "Reparo de Campo (1 hora, 2 Foco)",
+   "Golpe Certo (1x por obra)"
+  ],
+  "fraqueza": "sem martelo e bigorna, nada funciona."
  },
  "Pebanda": {
   "nivel": 30,
@@ -4728,7 +5896,15 @@
    "AMBICIOSO",
    "VINGATIVO"
   ],
-  "ultima_subida": 413
+  "ultima_subida": 413,
+  "classe_livro": "Herbalista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Remédio de Mato (1 hora, 2)",
+   "Achar Erva (Passiva)",
+   "Chá (Passiva)"
+  ],
+  "fraqueza": "no inverno, perde o Achar Erva."
  },
  "Gerva": {
   "nivel": 32,
@@ -4750,7 +5926,15 @@
   "tracos": [
    "LEAL",
    "COVARDE"
-  ]
+  ],
+  "classe_livro": "Caçador de Achados",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar)."
  },
  "Holgir": {
   "nivel": 66,
@@ -4773,7 +5957,15 @@
   "tracos": [
    "AVARENTO",
    "HONESTO"
-  ]
+  ],
+  "classe_livro": "Duelista",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Desafio (Bônus, 2)",
+   "Riposta (Reação, 2)",
+   "Ler a Guarda (Passiva)"
+  ],
+  "fraqueza": "contra grupo, −1 de Defesa por inimigo a mais."
  },
  "Gicilla": {
   "nivel": null,
@@ -4791,7 +5983,15 @@
   "tracos": [
    "GENEROSO",
    "AVARENTO"
-  ]
+  ],
+  "classe_livro": "Andarilho",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Estrada Amiga (Passiva)",
+   "Caminho Feliz (1 Fortuna)",
+   "Sem Raiz (Passiva)"
+  ],
+  "fraqueza": "não pode ficar mais de uma lua no mesmo lugar sem −1 em tudo."
  },
  "Skarkek": {
   "nivel": 78,
@@ -4818,7 +6018,17 @@
    "Benção Torta (Passiva)",
    "Moeda da Casa (Passiva)"
   ],
-  "fraqueza": "a sorte que dá, tira dele (−1 de Fortuna por benção)."
+  "fraqueza": "a sorte que dá, tira dele (−1 de Fortuna por benção).",
+  "desejo": "um título",
+  "ambicao": "formar uma companhia",
+  "medo": "a pobreza",
+  "linha_vermelha": "nunca machuca uma criança",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Ulounn": {
   "nivel": 62,
@@ -4850,7 +6060,17 @@
    "Sumir na Folha (Bônus, 2)",
    "Caminho (Passiva)"
   ],
-  "fraqueza": "na cidade, perde tudo."
+  "fraqueza": "na cidade, perde tudo.",
+  "desejo": "uma casa própria",
+  "ambicao": "formar uma companhia",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Dotocci": {
   "nivel": 30,
@@ -4868,7 +6088,25 @@
   "tracos": [
    "GENEROSO",
    "HONESTO"
-  ]
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Diplomata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
  },
  "Hirkunn": {
   "nivel": 93,
@@ -4893,7 +6131,17 @@
    "Sentir Vínculo (Passiva)",
    "Selar (1 minuto, 3)"
   ],
-  "fraqueza": "contra quem não tem vínculo, nada funciona."
+  "fraqueza": "contra quem não tem vínculo, nada funciona.",
+  "desejo": "sair da cidade",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Zitha": {
   "nivel": 115,
@@ -4914,6 +6162,16 @@
   "fraqueza": "o cheiro o denuncia a cães e Percepção 70.",
   "dons": [
    "Nome que Anda"
+  ],
+  "desejo": "uma casa própria",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a morte de um filho",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Gurka": {
@@ -4931,7 +6189,25 @@
   "tracos": [
    "ORGULHOSO",
    "TEIMOSO"
-  ]
+  ],
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Artífice",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mecanismo (Passiva)",
+   "Desmontar (1 minuto, 2)",
+   "Peça Móvel (Passiva)"
+  ],
+  "fraqueza": "sem ferramentas finas, −4."
  },
  "Quthemnus": {
   "nivel": 229,
@@ -4955,6 +6231,16 @@
   "dons": [
    "Mão do Mundo",
    "Pele do Mundo (Essência: Fogo)"
+  ],
+  "desejo": "pagar uma dívida antiga",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Hiald": {
@@ -4981,7 +6267,17 @@
    "Reparo de Campo (1 hora, 2 Foco)",
    "Golpe Certo (1x por obra)"
   ],
-  "fraqueza": "sem martelo e bigorna, nada funciona."
+  "fraqueza": "sem martelo e bigorna, nada funciona.",
+  "desejo": "enriquecer",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Rindald": {
   "nivel": 83,
@@ -5004,7 +6300,17 @@
    "Ler a Intenção (Passiva)",
    "Trégua (Ativa, 5)"
   ],
-  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua.",
+  "desejo": "enriquecer",
+  "ambicao": "virar Lendário",
+  "medo": "a velhice",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ]
  },
  "Fabaino": {
   "nivel": 100,
@@ -5034,6 +6340,16 @@
   "fraqueza": "sem um cargo, perde o Papel.",
   "dons": [
    "Olho Aberto"
+  ],
+  "desejo": "ser reconhecido no ofício",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
   ]
  },
  "Gundald": {
@@ -5047,7 +6363,25 @@
    "+500 Tick 434: SURPRESA (gerador) (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))"
   ],
   "classe": "Comum (carroceiro)",
-  "ocupacao": "carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança)"
+  "ocupacao": "carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança)",
+  "desejo": "um título",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Camponês",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão."
  },
  "Drassa": {
   "nivel": 35,
@@ -5063,7 +6397,25 @@
    "+500 Tick 434: SURPRESA (gerador) (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))"
   ],
   "classe": "Comum (guarda-livros)",
-  "ocupacao": "GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou)"
+  "ocupacao": "GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou)",
+  "desejo": "voltar para casa",
+  "ambicao": "entrar numa facção que o recusou",
+  "medo": "voltar a ser escravo",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Yeane": {
   "nivel": 51,
@@ -5075,7 +6427,25 @@
    "Dia 426: 426: o rei pediu a RESSURREIÇÃO da Isolda e do Starkald; leva ao GORINE (resposta no 429); o PREÇO da Lumine: o PILÃO DE VARADE; contou do NESIUM, Lendário de Luz no lago gelado de Steunn (o núcleo)"
   ],
   "classe": "Sacerdote (Lumine)",
-  "ocupacao": "agente da LUMINE em Ireviel: manda o homem preso no 420 atrás do PILÃO DE VARADE (o nome entregue à Sira no interrogatório do 421); solto, não sabe que foi nomeado"
+  "ocupacao": "agente da LUMINE em Ireviel: manda o homem preso no 420 atrás do PILÃO DE VARADE (o nome entregue à Sira no interrogatório do 421); solto, não sabe que foi nomeado",
+  "desejo": "aprender um segredo",
+  "ambicao": "conquistar terra",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca trai a família",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Orador Sagrado",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Palavra Santa (Ativa, 4)",
+   "Converter (1 semana)",
+   "Coro (Passiva)"
+  ],
+  "fraqueza": "sem voz, nada funciona."
  },
  "Hassa": {
   "nivel": 44,
@@ -5087,7 +6457,25 @@
    "+500 Tick 434: PASSO (chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)"
   ],
   "classe": "Agrimensor e lavrador",
-  "ocupacao": "chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua"
+  "ocupacao": "chegou pelo chamado no 420; DESEJO deixar uma obra; AMBIÇÃO entrar numa facção que o recusou; MEDO ser esquecido; SEGREDO deve a alguém perigoso; LINHA VERMELHA nunca volta atrás numa palavra dada; DILEMA cumprir a palavra vai custar a casa dele; CURIOSO e COVARDE; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua",
+  "desejo": "sair da cidade",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Goir": {
   "nivel": 46,
@@ -5106,7 +6494,25 @@
   ],
   "classe": "Caçador",
   "ocupacao": "chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua",
-  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)"
+  "estado": "vivo (morto pelo Morek no 425 e ERGUIDO pelo rei dentro da hora: 1 PV; −1 para sempre)",
+  "desejo": "deixar uma obra",
+  "ambicao": "formar uma companhia",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Batedor de Mata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Pele de Casca (Postura, 2 Mana)",
+   "Sumir na Folha (Bônus, 2)",
+   "Caminho (Passiva)"
+  ],
+  "fraqueza": "na cidade, perde tudo."
  },
  "Nivis": {
   "nivel": 14,
@@ -5117,7 +6523,25 @@
    "Dia 423: 423: CULPADO em praça: trabalho forçado no dique até o 442 (forçados 88)"
   ],
   "classe": "escrevente (gente comum)",
-  "ocupacao": "escrevente da alfândega do rio, preso no 421; pago pelo Ardenghi (o livro)"
+  "ocupacao": "escrevente da alfândega do rio, preso no 421; pago pelo Ardenghi (o livro)",
+  "desejo": "voltar para casa",
+  "ambicao": "virar Lendário",
+  "medo": "o próprio passado",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Burocrata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Papel Certo (1 hora, 2)",
+   "Atraso (Ativa, 3)",
+   "Arquivo (Passiva)"
+  ],
+  "fraqueza": "sem um cargo, perde o Papel."
  },
  "Tegre": {
   "nivel": 44,
@@ -5128,7 +6552,25 @@
    "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
   ],
   "classe": "Caçador (AÇO, Comum)",
-  "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)"
+  "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)",
+  "desejo": "curar alguém",
+  "ambicao": "formar uma companhia",
+  "medo": "perder a mão do ofício",
+  "linha_vermelha": "nunca vende o ofício barato",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Batedor de Mata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Pele de Casca (Postura, 2 Mana)",
+   "Sumir na Folha (Bônus, 2)",
+   "Caminho (Passiva)"
+  ],
+  "fraqueza": "na cidade, perde tudo."
  },
  "Bjorvunn": {
   "nivel": 46,
@@ -5140,7 +6582,25 @@
    "+1000 Tick 434: MISSÃO/FEITO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)"
   ],
   "classe": "Pesquisador (monstros e núcleos)",
-  "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele"
+  "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele",
+  "desejo": "mandar em alguém",
+  "ambicao": "ganhar a guerra do seu povo",
+  "medo": "ser esquecido",
+  "linha_vermelha": "nunca trabalha para a facção X",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Caçador de Achados",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Faro de Tesouro (Passiva)",
+   "Achado do Dia (1x/dia)",
+   "Mapa Torto (Passiva)"
+  ],
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar)."
  },
  "Yavor": {
   "nivel": 80,
@@ -5164,7 +6624,25 @@
     "dia": 427,
     "ate": 487
    }
-  ]
+  ],
+  "desejo": "sair da cidade",
+  "ambicao": "formar uma companhia",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Orador",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Discurso de Praça (1 hora, 6)",
+   "Voz que Pesa (Passiva)",
+   "Tribuna (Passiva)"
+  ],
+  "fraqueza": "um discurso que falha vira piada (−1 de Fama)."
  },
  "Mie": {
   "nivel": 150,
@@ -5176,7 +6654,25 @@
   "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)",
   "dons": [
    "Fôlego Sem Fundo"
-  ]
+  ],
+  "desejo": "vingar um morto",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Campeão",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Golpe de Campeão (Ativa, 4)",
+   "Resistência (Passiva)",
+   "Desafio Público (Ativa, 3)"
+  ],
+  "fraqueza": "recusar um desafio público custa Fama."
  },
  "Giunn": {
   "nivel": 35,
@@ -5192,7 +6688,25 @@
    "CURIOSO",
    "AMBICIOSO"
   ],
-  "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros"
+  "voz": "fala da montanha como de casa de família; pergunta mais do que responde; ri fácil e olha as mãos dos outros",
+  "desejo": "enriquecer",
+  "ambicao": "derrubar quem humilhou a família",
+  "medo": "a pobreza",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Diplomata",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mesa (1 hora, 4)",
+   "Ler a Intenção (Passiva)",
+   "Trégua (Ativa, 5)"
+  ],
+  "fraqueza": "uma trégua que ele fez e foi quebrada tira a Mesa por uma lua."
  },
  "Yais": {
   "nivel": 90,
@@ -5209,7 +6723,25 @@
    "LEAL",
    "CRUEL"
   ],
-  "voz": "sorri com a boca e conta com os olhos; fala de portagem, pressa e moeda; nunca põe a mão perto da espada na frente de quem pode mais"
+  "voz": "sorri com a boca e conta com os olhos; fala de portagem, pressa e moeda; nunca põe a mão perto da espada na frente de quem pode mais",
+  "desejo": "um título",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "a magia",
+  "linha_vermelha": "nunca se ajoelha",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Capitão",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Ordem de Ataque (Ativa, 3)",
+   "Formação (Postura)",
+   "Ler o Campo (Passiva)"
+  ],
+  "fraqueza": "se cair, a tropa testa moral."
  },
  "Yesiel": {
   "nivel": 31,
@@ -5219,7 +6751,25 @@
    "Dia 434: 434: gerador npc: AMBICIOSO e CRUEL · desejo curar alguém · ambição entrar numa facção que o recusou · medo a solidão · (OCULTO) segredo: fez um pacto · linha vermelha: nunca trabalha para a facção X (a definir na ficção)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
+  "desejo": "uma casa própria",
+  "ambicao": "abrir o próprio negócio",
+  "medo": "a prisão",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Helgunn": {
   "nivel": 46,
@@ -5229,7 +6779,25 @@
    "Dia 434: 434: gerador npc: TEIMOSO e CURIOSO · desejo casar com quem ama · ambição ganhar a guerra do seu povo · medo a humilhação pública · (OCULTO) segredo: ama alguém proibido · linha vermelha: nunca machuca uma criança"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
+  "desejo": "sair da cidade",
+  "ambicao": "fundar uma escola",
+  "medo": "o fogo",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Tigra": {
   "nivel": 15,
@@ -5239,7 +6807,25 @@
    "Dia 435: 435: gerador npc: ORGULHOSA e GENEROSA · desejo nunca mais passar fome · ambição (4) abrir o próprio negócio · medo a solidão · (OCULTO) segredo: é filha de quem não deveria · linha vermelha: nunca entrega um amigo à lei · a SURPRESA do 20 natural na ordem do pão (OR35 → novidade [3], OR35w [4], OR35n [2])"
   ],
   "classe": "padeira das ruas baixas de Levis",
-  "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE"
+  "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE",
+  "desejo": "enriquecer",
+  "ambicao": "casar acima da sua classe",
+  "medo": "a humilhação pública",
+  "linha_vermelha": "nunca deixa um ferido para trás",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Camponês",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Mão na Terra (Passiva)",
+   "Aguentar (Passiva)",
+   "Ferramenta é Arma (Passiva)"
+  ],
+  "fraqueza": "fora do campo, −1 em Persuasão."
  },
  "Gonde": {
   "nivel": 30,
@@ -5249,7 +6835,25 @@
    "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)"
   ],
   "classe": "Cabo da guarda do rei (lança)",
-  "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir"
+  "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir",
+  "desejo": "um título",
+  "ambicao": "tomar o lugar do chefe",
+  "medo": "a solidão",
+  "linha_vermelha": "nunca entrega um amigo à lei",
+  "gerado_438": [
+   "desejo",
+   "ambicao",
+   "medo",
+   "linha_vermelha"
+  ],
+  "classe_livro": "Guarda-Costas",
+  "classe_mapeada_438": true,
+  "assinaturas": [
+   "Tomar o Golpe (Reação, 2)",
+   "Olho no Protegido (Passiva)",
+   "Muralha (Postura)"
+  ],
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
  },
  "Tuir": {
   "nivel": 160,
