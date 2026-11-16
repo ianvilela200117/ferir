@@ -2923,6 +2923,18 @@
    "chegada": "[5] em 1d6 [2] dias",
    "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Ireviel e o rio",
    "toca": true
+  },
+  {
+   "dia": 435,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 437,
+   "chegada": "[3] em 1d3 [2] dias",
+   "leitura": "golpe",
+   "resumo": "MUDANÇA POLÍTICA: golpe — Kreade (terra nova)",
+   "toca": false
   }
  ]
 }

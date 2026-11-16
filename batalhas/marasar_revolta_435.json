@@ -1,0 +1,16 @@
+{"nome": "A REVOLTA DE MARASAR (435): a coroa e a Doge contra os Fiéis do Doge Velho", "terreno": "rua",
+ "nota": "REAL. A ordem do rei (2b, 432): acabar com a revolta ao lado da Skotha, 'matem se for preciso'. Números do dado: MB35g [3]: 15 da guarda · MB35m [1]: 5 magos · MB35s [6]: 160 da Companhia · MB35f [3]: 300 Fiéis · MB35c [1]: o chefe deles, 70. Os Fiéis seguram o quartel velho e o portão do rio (defendem, rua ×1,5). A Skotha (Lendária 370, frente de combate) luta na cidade dela e comanda.",
+ "lados": {
+  "A": {"nome": "a coroa de Ireviel e a Doge Skotha", "comando": 12,
+   "unidades": [
+    {"nome": "as 20 lanças da cidade de Ireviel", "homens": 20, "qualidade": 3, "moral": 4, "tipo": "infantaria"},
+    {"nome": "a guarda de Ireviel", "homens": 15, "qualidade": 3, "moral": 4, "tipo": "infantaria"},
+    {"nome": "o Tegre e os 6 caçadores da Guilda", "homens": 7, "qualidade": 3, "moral": 3, "tipo": "arqueiros"},
+    {"nome": "os 20 voluntários da Luz do Cais", "homens": 20, "qualidade": 2, "moral": 3, "tipo": "infantaria"},
+    {"nome": "os 5 magos da Chama da Hoste", "homens": 5, "qualidade": 3, "moral": 4, "tipo": "magos"},
+    {"nome": "a Companhia da Skotha (a guarda do palácio)", "homens": 160, "qualidade": 4, "moral": 4, "tipo": "infantaria"}],
+   "herois": [{"nome": "Skotha", "nivel": 370}, {"nome": "Graur", "nivel": 75}, {"nome": "Bjarkunn", "nivel": 72}, {"nome": "Tegre", "nivel": 44}]},
+  "B": {"nome": "os Fiéis do Doge Velho", "comando": 6, "defende": true,
+   "unidades": [{"nome": "os Fiéis (a guarnição velha da Liga)", "homens": 300, "qualidade": 3, "moral": 4, "tipo": "infantaria"}],
+   "herois": [{"nome": "o chefe dos Fiéis", "nivel": 70}]}
+ }}

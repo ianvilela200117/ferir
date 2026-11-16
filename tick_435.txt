@@ -1,0 +1,43 @@
+[14:18:24] Dia 435 · Pressão 4/5 · evento local 1d20 [5] -> nada
+  O TEMPO (6 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, calmo (d6 [2] fica · vento d6 [2])
+   o Porto de Marasar: calor forte, calmo (d6 [4] muda, d20 [12] · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Levis: chuva de verão, vento forte (d6 [1] fica · vento d6 [6]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: calor forte, calmo (d6 [5] muda, d20 [11] · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: normal [44/100]
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  ALTA: Starkald está de pé de novo (FRACO, ferido desde o 425)
+  ALTA: Goir está de pé de novo (FRACO, ferido desde o 425)
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  O MUNDO SE MOVE — Dia 435 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [2]
+    ONDE: d27 [27] Kreade (terra nova)
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    → LEITURA DO DADO: golpe
+    ——
+  O MUNDO VIVO — Dia 435
+    um Lendário age (d20 [1]):
+    Adurel (ofício, Zisrir (o vale)) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [9] chega no dia 436
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [6] nada visível
+    FAÍSCA: Grerkur esconde um filho de Petorza (alquimista, nível 18, HONESTA e AVARENTA; quer formar uma companhia; doença escondida; Casa dos Estudiosos, 308), por causa de dinheiro da Liga
+    FAÍSCA: Mamiltia sonha com o Visconte Aldoveri, por causa de uma profecia
+    FAÍSCA: Dovan oferece aliança a Gorine, por causa de a Matriz
+  ▶ AGENDA #381 (era do Dia 434): LEVIS: a BRARA fez as picaretas mas COBRA a partilha e não rasga as dívidas antes de ver o rei (BR26 [1]); o rei chega
+  ▶ AGENDA #441 (era do Dia 434): CHEGA a Levis: o rei, o Moreth, o Eiagrir, a Eliane e 10 da guarda (a barca da casa; caçar a Isyzis no caminho) (saiu de Ireviel no 429)
+  ▶ AGENDA #281: FACÇÃO — a Bigorna Livre (Levis) pede audiência ao conselho. O que querem: ferreiros de Levis sem registro na Guilda (da briga do 245)
+  ▶ AGENDA #492: FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #493: FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)
+  ▶ AGENDA #494: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ▶ AGENDA #505: A FORÇA DO GRAUR CHEGA A MARASAR (saiu de Ireviel na tarde do 434 com a ordem do rei: acabar com a revolta ao lado da Skotha, 'matem se for preciso'): as 20 lanças da cidade, a guarda que pode sair, a Guilda (o Tegre, os caçadores e os 20 voluntários) e 1d6+4 magos da Chama da Hoste (rolar); o Facio vai para ser entregue à Skotha · a BATALHA pelo batalha.py contra os Fiéis do Doge Velho (força 5 depois do 434)
+  ✉ NOTÍCIA QUE CHEGA HOJE: OFERTA PÚBLICA: alguém paga por um serviço — Steunn · COMO CHEGA: d20 [16] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Mamiltia (Telosus): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, os Picos Brancos): migra 1 região (rola para onde) · COMO CHEGA: d20 [20] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Mãe Branca (Primordial, Steunn): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): briga com outro monstro grande (um sai ferido) · COMO CHEGA: d20 [15] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Kervos (Único, o brejo do oeste): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Fundas do Norte): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Vradda (homens-lagarto) (Gogrunn): racham em dois bandos (um sai com outro chefe) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Adurel (Zisrir (o vale)): o MEDO dele aparece: foge, se esconde ou faz algo desesperado · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Fenron (Épico, o brejo do oeste): migra 1 região (rola para onde) · COMO CHEGA: d20 [17] FIEL
+  ✉ notícia de longe que chega hoje: Asith (Incomum, Zisrir): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)

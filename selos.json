@@ -1,19 +1,5 @@
 {
  "ordem": [
-  "EB10",
-  "EB11",
-  "CRa",
-  "CRb",
-  "CRc",
-  "CRd",
-  "CRe",
-  "CRf",
-  "CRg_Ferir",
-  "CRg_Moreth",
-  "CRg_Eiagrir",
-  "CRg_Isolda",
-  "CRg_Hruthos",
-  "CRh",
   "GU12",
   "413-laco-quem",
   "413-laco",
@@ -399,547 +385,23 @@
   "MT34",
   "LV31n",
   "LV31m",
-  "LV31c"
+  "LV31c",
+  "OR35",
+  "BR35",
+  "BG35",
+  "MB35g",
+  "MB35m",
+  "MB35s",
+  "MB35f",
+  "MB35c",
+  "OR35w",
+  "OR35n",
+  "PD35",
+  "PD35r",
+  "CF35",
+  "FC35"
  ],
  "selos": {
-  "EB10": {
-   "id": "EB10",
-   "dia": 411,
-   "hora": "21:05:50",
-   "titulo": "O NÍVEL DO SHYSSIS (o descalço que sabe da Matriz; ladrão de Marasar; manda os descalços)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "nível 30 + o dado"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2,
-      13
-     ],
-     "total": 15,
-     "res": "nível 30 + o dado",
-     "txt": "[2, 13] +0 = 15 → nível 30 + o dado"
-    }
-   ],
-   "hora_rolado": "21:05:50"
-  },
-  "EB11": {
-   "id": "EB11",
-   "dia": 411,
-   "hora": "21:06:12",
-   "titulo": "O NÍVEL DO CAPITÃO PAGO DO ARDENGHI (comanda os 15 soldados a cavalo)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "nível 40 + o dado"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12,
-      10
-     ],
-     "total": 22,
-     "res": "nível 40 + o dado",
-     "txt": "[12, 10] +0 = 22 → nível 40 + o dado"
-    }
-   ],
-   "hora_rolado": "21:06:12"
-  },
-  "CRa": {
-   "id": "CRa",
-   "dia": 412,
-   "hora": "21:06:26",
-   "titulo": "COMBATE RÁPIDO, RODADA 1: o GRUPO DO REI",
-   "dado": [
-    1,
-    20,
-    52
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 200,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 56,
-     "res": "o total",
-     "txt": "[4] +52 = 56 → o total"
-    }
-   ],
-   "hora_rolado": "21:06:26"
-  },
-  "CRb": {
-   "id": "CRb",
-   "dia": 412,
-   "hora": "21:06:27",
-   "titulo": "COMBATE RÁPIDO, RODADA 1: A COLUNA DO ARDENGHI",
-   "dado": [
-    1,
-    20,
-    30
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 200,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 49,
-     "res": "o total",
-     "txt": "[19] +30 = 49 → o total"
-    }
-   ],
-   "hora_rolado": "21:06:27"
-  },
-  "CRc": {
-   "id": "CRc",
-   "dia": 412,
-   "hora": "21:06:34",
-   "titulo": "COMBATE RÁPIDO, RODADA 2: o GRUPO DO REI",
-   "dado": [
-    1,
-    20,
-    52
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 200,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 69,
-     "res": "o total",
-     "txt": "[17] +52 = 69 → o total"
-    }
-   ],
-   "hora_rolado": "21:06:35"
-  },
-  "CRd": {
-   "id": "CRd",
-   "dia": 412,
-   "hora": "21:06:35",
-   "titulo": "COMBATE RÁPIDO, RODADA 2: A COLUNA (25 de pé; o teto de +10 segue)",
-   "dado": [
-    1,
-    20,
-    30
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 200,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 31,
-     "res": "o total",
-     "txt": "[1] +30 = 31 → o total"
-    }
-   ],
-   "hora_rolado": "21:06:35"
-  },
-  "CRe": {
-   "id": "CRe",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "COMO A COLUNA QUEBRA (rodada 2, margem 38)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os 15 a cavalo e o capitão fogem rio acima e uns 10 descalços somem no leito"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os de cavalo fogem com o capitão; os descalços caem"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ninguém escapa"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os 15 a cavalo e o capitão fogem rio acima e uns 10 descalços somem no leito",
-     "txt": "[1] → os 15 a cavalo e o capitão fogem rio acima e uns 10 descalços somem no leito"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRf": {
-   "id": "CRf",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "O SHYSSIS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "escapa pelo leito"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "cai"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "cai",
-     "txt": "[4] → cai"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRg_Ferir": {
-   "id": "CRg_Ferir",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "A GOTA DE AMÊNDOA: Ferir (no 1, um arranhão de lâmina envenenada)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "arranhado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "limpo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      11
-     ],
-     "total": 11,
-     "res": "limpo",
-     "txt": "[11] → limpo"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRg_Moreth": {
-   "id": "CRg_Moreth",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "A GOTA DE AMÊNDOA: Moreth (no 1, um arranhão de lâmina envenenada)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "arranhado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "limpo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "limpo",
-     "txt": "[18] → limpo"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRg_Eiagrir": {
-   "id": "CRg_Eiagrir",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "A GOTA DE AMÊNDOA: Eiagrir (no 1, um arranhão de lâmina envenenada)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "arranhado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "limpo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "limpo",
-     "txt": "[18] → limpo"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRg_Isolda": {
-   "id": "CRg_Isolda",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "A GOTA DE AMÊNDOA: Isolda (no 1, um arranhão de lâmina envenenada)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "arranhado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "limpo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      11
-     ],
-     "total": 11,
-     "res": "limpo",
-     "txt": "[11] → limpo"
-    }
-   ],
-   "hora_rolado": "21:06:42"
-  },
-  "CRg_Hruthos": {
-   "id": "CRg_Hruthos",
-   "dia": 412,
-   "hora": "21:06:42",
-   "titulo": "A GOTA DE AMÊNDOA: Hruthos (no 1, um arranhão de lâmina envenenada)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "arranhado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "limpo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 12,
-     "res": "limpo",
-     "txt": "[12] → limpo"
-    }
-   ],
-   "hora_rolado": "21:06:43"
-  },
-  "CRh": {
-   "id": "CRh",
-   "dia": 412,
-   "hora": "21:06:57",
-   "titulo": "O SHYSSIS CAÍDO (1d6 do caído)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "morto"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ferido grave"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ferido leve"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "morto",
-     "txt": "[2] → morto"
-    }
-   ],
-   "hora_rolado": "21:06:57"
-  },
   "GU12": {
    "id": "GU12",
    "dia": 412,
@@ -19425,6 +18887,624 @@
     }
    ],
    "hora_rolado": "13:57:59"
+  },
+  "OR35": {
+   "id": "OR35",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "A ORDEM EM LEVIS, MANHÃ DO 435 (2c: o pão do confisco nas ruas baixas e os físicos; a guarda do rei com a da Brara; o julgamento justo na praça ontem; a Brara malquista): d20 +3 (o pão) +2 (a justiça em praça) −2 (contra a Brara)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "a briga PIORA: uma carroça de pão é tomada e há feridos"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 14,
+     "res": "ACALMA: as ruas baixas recebem o pão; a Ordem de Levis sobe a 1"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "ACALMA e a cidade aplaude o rei: Ordem a 1 e Levis +10 na reputação"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "e a Brara volta a ser ouvida: Ordem a 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 23,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[20] +3 = 23 → SURPRESA (gerador novidade) (20 NATURAL)"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "BR35": {
+   "id": "BR35",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "O QUE A BRARA COBRA DO REI CARA A CARA (BR26: a partilha dos bens do Ardenghi foi injusta, meio a meio no 416; ela não rasga as dívidas pequenas do livro do Ardenghi antes de ver o rei; opinião −5; laço 3; TEIMOSA, HONESTA, CORAJOSA)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "que o REI rasgue ele mesmo as dívidas em praça (ela não quer o ódio dos credores)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "as duas"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio",
+     "txt": "[1] → a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "BG35": {
+   "id": "BG35",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "O QUE A BIGORNA LIVRE PEDE AO REI NA AUDIÊNCIA (ferreiros de Levis sem registro na Guilda, da briga do 245; o Xaathis os venceu, força 1; esperam desde o 414)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "REGISTRO na Guilda de Levis (a Carea) e a SÉRIE DAS PICARETAS da fundição velha"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "PROTEÇÃO contra o Culto do Xaathis, que os venceu nas ruas"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "MB35g": {
+   "id": "MB35g",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "MARASAR, A FORÇA DO GRAUR: QUANTOS DA GUARDA DE IREVIEL PUDERAM SAIR (a muralha fica com o resto)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "o dado × 5"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2,
+      1
+     ],
+     "total": 3,
+     "res": "o dado × 5",
+     "txt": "[2, 1] +0 = 3 → o dado × 5"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "MB35m": {
+   "id": "MB35m",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "MARASAR: OS MAGOS DA CHAMA DA HOSTE (1d6+4)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado + 4"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado + 4",
+     "txt": "[1] → o dado + 4"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "MB35s": {
+   "id": "MB35s",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "MARASAR: A GUARDA DA SKOTHA NO PALÁCIO (a Companhia que ficou com ela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 20 + 40"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o dado × 20 + 40",
+     "txt": "[6] → o dado × 20 + 40"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "MB35f": {
+   "id": "MB35f",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "MARASAR: QUANTOS FIÉIS DO DOGE VELHO NAS RUAS (força 5; a guarnição velha da Liga; ouro e espadas da Liga)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 50 + 150"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado × 50 + 150",
+     "txt": "[3] → o dado × 50 + 150"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "MB35c": {
+   "id": "MB35c",
+   "dia": 435,
+   "hora": "14:19:01",
+   "titulo": "MARASAR: O NÍVEL DO CHEFE DOS FIÉIS (o comando deles)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado × 10 + 60"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o dado × 10 + 60",
+     "txt": "[1] → o dado × 10 + 60"
+    }
+   ],
+   "hora_rolado": "14:19:01"
+  },
+  "OR35w": {
+   "id": "OR35w",
+   "dia": 435,
+   "hora": "14:19:43",
+   "titulo": "EM QUE VIDA ENTRA O NPC NOVO DAS RUAS BAIXAS DE LEVIS (a surpresa do 20 natural na ordem do pão)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a da BRARA (a governadora)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "a da ELIANE (a Marechal, que guarda as carroças)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a do MORETH"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a da ELIANE (a Marechal, que guarda as carroças)",
+     "txt": "[4] → a da ELIANE (a Marechal, que guarda as carroças)"
+    }
+   ],
+   "hora_rolado": "14:19:43"
+  },
+  "OR35n": {
+   "id": "OR35n",
+   "dia": 435,
+   "hora": "14:19:44",
+   "titulo": "O NÍVEL DO NPC NOVO DAS RUAS BAIXAS",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "nível 15"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "nível 30"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 50"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nível 15",
+     "txt": "[2] → nível 15"
+    }
+   ],
+   "hora_rolado": "14:19:44"
+  },
+  "PD35": {
+   "id": "PD35",
+   "dia": 435,
+   "hora": "14:21:03",
+   "titulo": "QUEM SÃO OS 8 QUE CAÍRAM DO LADO DA COROA EM MARASAR (BT35: 8 de 227)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os 8 da COMPANHIA da Skotha (que ia na frente)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "6 da Companhia e 2 das LANÇAS DE IREVIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "5 da Companhia, 2 das lanças de Ireviel e 1 dos VOLUNTÁRIOS da Luz do Cais"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "os 8 da COMPANHIA da Skotha (que ia na frente)",
+     "txt": "[3] → os 8 da COMPANHIA da Skotha (que ia na frente)"
+    }
+   ],
+   "hora_rolado": "14:21:03"
+  },
+  "PD35r": {
+   "id": "PD35r",
+   "dia": 435,
+   "hora": "14:21:03",
+   "titulo": "OS DE IREVIEL QUE CAÍRAM (só vale se o PD35 der 4-6), um d6 por caído",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "MORTO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ferido GRAVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ferido leve"
+    }
+   ],
+   "oculto": false,
+   "x": 3,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "MORTO",
+     "txt": "#1 [1] → MORTO"
+    },
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ferido leve",
+     "txt": "#2 [5] → ferido leve"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ferido GRAVE",
+     "txt": "#3 [3] → ferido GRAVE"
+    }
+   ],
+   "hora_rolado": "14:21:04"
+  },
+  "CF35": {
+   "id": "CF35",
+   "dia": 435,
+   "hora": "14:21:03",
+   "titulo": "O CHEFE DOS FIÉIS DO DOGE VELHO (nível 70) QUANDO A GUARNIÇÃO QUEBRA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "MORRE na rua, na frente do quartel velho"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "PRESO: vai à justiça da Skotha"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "FOGE pelo portão do rio, com uns 30"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "FOGE pelo portão do rio, com uns 30",
+     "txt": "[6] → FOGE pelo portão do rio, com uns 30"
+    }
+   ],
+   "hora_rolado": "14:21:04"
+  },
+  "FC35": {
+   "id": "FC35",
+   "dia": 435,
+   "hora": "14:21:03",
+   "titulo": "A SKOTHA RECEBE O FACIO (a entrega que o rei mandou; ela o pediu para julgá-lo em Marasar)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "manda-o à cela e julga depois da revolta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "agradece ao rei e o entrega aos BARQUEIROS DO LIVRO, para que eles decidam"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "julga-o na hora, em praça, diante dos barqueiros (rola a pena depois)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "manda-o à cela e julga depois da revolta",
+     "txt": "[2] → manda-o à cela e julga depois da revolta"
+    }
+   ],
+   "hora_rolado": "14:21:04"
   }
  }
 }

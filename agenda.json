@@ -1,5 +1,5 @@
 {
- "prox_id": 506,
+ "prox_id": 513,
  "itens": [
   {
    "id": 1,
@@ -3987,7 +3987,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -5340,7 +5340,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6932,7 +6932,7 @@
   },
   {
    "id": 492,
-   "dia": 435,
+   "dia": 440,
    "texto": "FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)",
    "tipo": "marco",
    "oculto": false,
@@ -6943,7 +6943,7 @@
   },
   {
    "id": 493,
-   "dia": 435,
+   "dia": 440,
    "texto": "FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)",
    "tipo": "marco",
    "oculto": false,
@@ -6954,7 +6954,7 @@
   },
   {
    "id": 494,
-   "dia": 435,
+   "dia": 440,
    "texto": "FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)",
    "tipo": "marco",
    "oculto": false,
@@ -7108,6 +7108,91 @@
    "tipo": "marco",
    "oculto": false,
    "para": true,
+   "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 506,
+   "dia": 437,
+   "texto": "MUDANÇA POLÍTICA: golpe — Kreade (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 435",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 507,
+   "dia": 436,
+   "texto": "Adurel (Zisrir (o vale)): compra, toma ou destrói algo de valor ligado à Obra",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 435",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 508,
+   "dia": 441,
+   "texto": "CHEGA a Steunn: o recado do rei à MAMILTIA (o SAL contra a Elaeva; e que a fera desce a Farenta) (saiu de Levis no 435)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 509,
+   "dia": 438,
+   "texto": "CHEGA a Ireviel: o recado do rei à LURENTETTA, pelo YAVOR em Ireviel (o SAL contra a Elaeva) (saiu de Levis no 435)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 510,
+   "dia": 453,
+   "texto": "CHEGA a Telosus: a cobrança do rei ao CEDUION, no Colégio de Telosus (a carta à Leliel está com o rei) (saiu de Levis no 435)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 511,
+   "dia": 440,
+   "texto": "O YAVOR leva ao Delta o recado do SAL à Lurentetta (sai de Ireviel no 438; 1 a 2 dias): rolar a resposta dela (as salinas)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 512,
+   "dia": 436,
+   "texto": "A NOTÍCIA DA BATALHA DE MARASAR chega a Ireviel (o Graur manda um barqueiro): a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu com uns 30; o Facio na cela da Skotha · chega ao rei em Levis pela barca do correio (~439)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
    "origem": "mestre",
    "feito": false,
    "toca": true

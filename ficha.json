@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  396,
+  402,
   402
  ],
  "mana": [
@@ -56,7 +56,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 18578,
+ "cofre": 13078,
  "livro": {
   "renda_casa": 3960,
   "despesa": 8230,
@@ -291,6 +291,12 @@
    "valor": -1670,
    "motivo": "semana: casa 3960 + cidades 2600 − despesa 8230",
    "saldo": 18578
+  },
+  {
+   "dia": 434,
+   "valor": -5500,
+   "motivo": "434: o OURO DO CONFISCO em pão e físicos para Levis (a briga do pão e da doença; a ordem do rei, a Brara reparte)",
+   "saldo": 13078
   }
  ],
  "materiais": {

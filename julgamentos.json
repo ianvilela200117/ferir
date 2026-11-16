@@ -138,7 +138,7 @@
    "reu": "o capitão Yais (Liga, 90), 12 guardas, 16 remadores e 3 carroceiros",
    "lei": "o rio fechado às barcas da Liga (255, 260); a paz com a Liga caída (339); a lei do 323: quem manda espião a Ireviel é inimigo declarado",
    "dia": 434,
-   "estado": "aberto",
+   "estado": "julgado",
    "itens": [
     {
      "lado": "acusacao",
@@ -195,7 +195,8 @@
      "peso": 0,
      "txt": "TESTEMUNHA um REMADOR (diz que foram alugados no cais de Marasar, sem saber da carga): d20 [4]-2 = 2 → SE DESMENTE diante de todos"
     }
-   ]
+   ],
+   "sentenca": "CULPADO: TRABALHO FORÇADO, cinco anos a contar do 434, os 32 (o capitão Yais, 12 guardas, 16 remadores, 3 carroceiros): servem em Levis, sob a Brara, no caminho da mina que o Ithvil quebrou e na muralha"
   }
  }
 }

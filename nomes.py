@@ -33,7 +33,10 @@ def _usados():
     for f in ['npcs.json', 'mundo_vivo.json', 'canone.md', 'estado_vivo.md', 'mundo.json', 'reino.json', 'agenda.json'] + [os.path.basename(x) for x in glob.glob(os.path.join(aqui, 'envelope_sessao*.md'))] + ['compendio/' + os.path.basename(x) for x in glob.glob(os.path.join(aqui, 'compendio', '*.md'))]:
         try: txt += open(os.path.join(aqui, f), encoding='utf-8').read()
         except OSError: pass
-    return {w[:3].lower() for w in re.findall(r"\b[A-ZÁÉÍÓÚ][A-Za-záéíóúãõâêôç]{3,}\b", txt)}
+    nomes = {w[:3].lower() for w in re.findall(r"\b[A-ZÁÉÍÓÚ][A-Za-záéíóúãõâêôç]{3,}\b", txt)}
+    # 435: os materiais do Livro ficam em minúscula, em negrito ("**yiis**", "**zaess**"): também entram
+    nomes |= {w[:3].lower() for w in re.findall(r"\*\*([a-záéíóúãõâêôç]{3,})\*\*", txt)}
+    return nomes
 
 if __name__ == '__main__' and 'livre' in sys.argv:
     som = sys.argv[1]; q = next((int(x) for x in sys.argv[2:] if x.isdigit()), 6); us = _usados(); out = []; t = 0

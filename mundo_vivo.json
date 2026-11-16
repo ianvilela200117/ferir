@@ -366,7 +366,8 @@
     "364: [5] viaja: aparece num lugar onde não era esperado",
     "399: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
     "416: a boca da passagem dele em Zisrir DESABADA por gente paga pelo CELOCUS (a notícia chega a Levis no 416)",
-    "434: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado"
+    "434: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "435: [2] compra, toma ou destrói algo de valor ligado à Obra"
    ],
    "prox": 464
   },
@@ -2084,7 +2085,7 @@
    "onde": "Marasar (a guarnição velha da Liga que se rendeu)",
    "desde": 300,
    "o_que": "nasceram da guerra velha Liga × Skotha: querem o Doge velho de volta; a LIGA paga com ouro e espadas que a MÃO MOLHADA passa pelo cais (a contra da casa achou no 300)",
-   "forca": 5,
+   "forca": 1,
    "relogio": [
     1,
     6
@@ -3390,6 +3391,16 @@
    "entrar": "uma luta",
    "onde": "os Picos Brancos",
    "notas": "o mundo do 431 (lugar novo; notícia no 432, exagerada)"
+  },
+  {
+   "nome": "Zythir",
+   "o_que_era": "um cemitério de reis",
+   "por_que_caiu": "guerra",
+   "guarda": "um prisioneiro",
+   "habita": "nada, e é isso que assusta",
+   "entrar": "uma senha",
+   "onde": "debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro)",
+   "notas": "gerador lugar (435; BG35 [6] → novidade [5]); o nome do gerador (Quomir) é o de um material da casa: trocado por Yiis, que também é material do Livro (o yiis): trocado de novo por Zaess · e Zaess também é material (o zaess): trocado por ZYTHIR (conferido à mão contra o compendio, o cânone, o estado, os NPCs e o mundo: as três primeiras letras não aparecem)"
   }
  ],
  "materiais_novos": [
@@ -3688,9 +3699,10 @@
  },
  "reputacao": {
   "a Doge Skotha (Marasar)": {
-   "valor": 60,
+   "valor": 70,
    "log": [
-    "433: partida pela relação do reino (+3 × 20)"
+    "433: partida pela relação do reino (+3 × 20)",
+    "435: +10 (435: a força do rei quebrou a revolta dos Fiéis ao lado dela)"
    ]
   },
   "o Clã Hegre": {

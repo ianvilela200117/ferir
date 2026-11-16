@@ -1057,3 +1057,10 @@ Mais acima, gente de Levis descia a estrada com trouxas nas costas: em Levis o p
 Ao entardecer, na praça, o rei sentou para julgar os da Liga. A Eliane mostrou a arca, a lista e o ouro; o velho da aldeia contou da bolsa oferecida; a carta lacrada passou de mão em mão sem que ninguém a abrisse. O capitão falou da paz de 336. Um dos remadores jurou que tinham sido alugados sem saber da carga e, na mesma frase, contou quantas vezes tinham subido o rio fechado. A praça riu dele e depois ficou quieta, esperando o rei.
 
 - **Parada:** noite do 434, a praça de Levis. A sentença; o pão e a doença; a Isyzis rio acima.
+
+### Levis, noite do 434 e dia 435
+O rei deu a sentença na praça, ainda com a luz de tocha: trabalho forçado, cinco anos, para os trinta e dois, no caminho da mina e na muralha de Levis. A praça esperava aquilo e gostou de ouvir.
+De manhã, as carroças do pão desceram às ruas baixas com a guarda do rei ao lado. Quem pôs as filas em ordem foi uma padeira de braços grossos, a Tigra, que subiu num barril e gritou nome por nome. A Eliane ficou ao lado dela até a última carroça.
+À tarde vieram duas coisas. A primeira, pelos mercadores da estrada: a Floresta que Anda deixara os Picos Brancos e descia para Farenta. A segunda, pela boca da Brara, cara a cara: a fundição velha de Levis-baixa tinha de ser toda de Levis. E os ferreiros sem registro da Bigorna Livre vieram contar que, cavando ferro debaixo das minas velhas, tinham achado uma porta de pedra com nomes de reis, e atrás dela um silêncio que nenhum deles quis atravessar.
+
+- **Parada:** noite do 435, Levis. A fera rumo a Farenta; a fundição; a porta dos reis.

@@ -298,7 +298,7 @@
  },
  "Graur": {
   "nivel": 75,
-  "xp": 3463,
+  "xp": 3963,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 161: a Isolda",
@@ -417,7 +417,8 @@
    "Dia 425: 425: voto vencido no mestre da Guilda (queria o Tegre)",
    "+500 Tick 427: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
-   "+500 Tick 434: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))"
+   "+500 Tick 434: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
+   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
@@ -4027,7 +4028,7 @@
  },
  "Bjarkunn": {
   "nivel": 72,
-  "xp": 6030,
+  "xp": 6530,
   "classe": "MAGO DE GUERRA · RELIGIOSO e VINGATIVO · desejo: sair da cidade · ambição (4): tomar o lugar do chefe · medo: voltar a ser escravo · segredo: deve a alguém perigoso · linha vermelha: NUNCA TRABALHA PARA A COMPANHIA DA SKOTHA",
   "ocupacao": "da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único)",
   "log": [
@@ -4064,7 +4065,8 @@
    "+1000 Tick 413: MISSÃO/FEITO (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))",
    "+500 Tick 420: SURPRESA (gerador) (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))",
    "+1000 Tick 427: MISSÃO/FEITO (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))",
-   "+500 Tick 434: PASSO (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))"
+   "+500 Tick 434: PASSO (da casa (271): o GIBÃO DE LUSKAR (Mítico; ele usa como Único))",
+   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
   ],
   "tracos": [
    "RELIGIOSO",
@@ -4330,14 +4332,16 @@
   "nivel": 46,
   "xp": 1000,
   "classe": "barqueiro do livro (traidor) · CURIOSO e RELIGIOSO · desejo: voltar para casa · ambição (4): fundar uma escola · medo: a solidão · segredo: é filho de quem não deveria · linha vermelha: nunca se ajoelha",
-  "ocupacao": "carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428)",
+  "ocupacao": "PRESO na cela da Skotha, em Marasar (435), à espera do julgamento dela",
   "log": [
    "Dia 278: o chefe dos Descalços e um barqueiro o acusam; o Eiagrir o entrega ao conselho; prisão",
    "Dia 427: 427: VOLTOU A IREVIEL CAÍDO (pobre, ferido ou caçado; NV27 [3], NV27b [2]); ele sabe quem entregou os nomes do livro à Liga (o que o Eiagrir quer saber)",
    "Dia 427: 427 (noite): POBRE (FC27a [1]): perdeu a barca e a casa; dorme no cais · ao rei (FC27b [5], verdade FC27c [12]): a LIGA passou os NOMES DO LIVRO à LELIEL; os Barqueiros do Livro estão marcados no norte · desejo: voltar para casa",
    "Dia 428: ocupação nova (antes: PRESO em Ireviel até a primavera (278): vendeu à Liga os nomes do livro do pedágio)",
    "Dia 428: 428: o CONSELHO (CF28) deu TETO E TRABALHO NA CASA, à vista da guarda (3 a 3; a Intendente desempatou); votos vencidos: Graur, Herkald, Thuron",
-   "+1000 Tick 434: MISSÃO/FEITO (carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))"
+   "+1000 Tick 434: MISSÃO/FEITO (carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))",
+   "Dia 435: 435: entregue à SKOTHA em Marasar (a palavra do rei, por cima do conselho); ela o manda à cela e julga depois da revolta (FC35 [2])",
+   "Dia 435: ocupação nova (antes: carrega carvão e a barca de carga no cais da Fornalha, à vista da guarda (o conselho, CF28: B, 428))"
   ],
   "tracos": [
    "CURIOSO",
@@ -5066,10 +5070,11 @@
  },
  "Tegre": {
   "nivel": 44,
-  "xp": 500,
+  "xp": 1000,
   "log": [
    "Dia 425: entra no livro (nível 44)",
-   "+500 Tick 427: PASSO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))"
+   "+500 Tick 427: PASSO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
+   "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)"
   ],
   "classe": "Caçador (AÇO, Comum)",
   "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)"
@@ -5141,7 +5146,8 @@
   "log": [
    "Dia 433: entra no livro (nível 90)",
    "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei",
-   "Dia 433: 433 (noite): PRESO pela lei do rio com a gente dele (rendeu-se: AR35 [1]); à pergunta do rei 'por que se arriscar?' respondeu O DINHEIRO: a Liga paga o TRIPLO a quem passa o rio fechado (PG35 [4]: verdade, e não é tudo)"
+   "Dia 433: 433 (noite): PRESO pela lei do rio com a gente dele (rendeu-se: AR35 [1]); à pergunta do rei 'por que se arriscar?' respondeu O DINHEIRO: a Liga paga o TRIPLO a quem passa o rio fechado (PG35 [4]: verdade, e não é tudo)",
+   "Dia 434: 434 (noite): CONDENADO em praça de Levis (LV34; a balança +10): TRABALHO FORÇADO, cinco anos, com os 31; serve em Levis sob a Brara"
   ],
   "classe": "Capitão da Liga (o rio; espada)",
   "ocupacao": "a barca da Liga no cais da aldeia abaixo de Levis (433)",
@@ -5170,5 +5176,15 @@
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua"
+ },
+ "Tigra": {
+  "nivel": 15,
+  "xp": 0,
+  "log": [
+   "Dia 435: entra no livro (nível 15)",
+   "Dia 435: 435: gerador npc: ORGULHOSA e GENEROSA · desejo nunca mais passar fome · ambição (4) abrir o próprio negócio · medo a solidão · (OCULTO) segredo: é filha de quem não deveria · linha vermelha: nunca entrega um amigo à lei · a SURPRESA do 20 natural na ordem do pão (OR35 → novidade [3], OR35w [4], OR35n [2])"
+  ],
+  "classe": "padeira das ruas baixas de Levis",
+  "ocupacao": "Levis: levou o pão do confisco às filas das ruas baixas e as fez aceitar (435); entra na vida da ELIANE"
  }
 }

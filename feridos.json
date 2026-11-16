@@ -8,22 +8,6 @@
    "ate": 441,
    "causa": "Morek",
    "nota": "434 (G15, CURAR-SE): sara o dobro na semana: de 447 para 441"
-  },
-  {
-   "nome": "Starkald",
-   "grau": "FRACO",
-   "efeito": "voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em FORÇA",
-   "desde": 425,
-   "ate": 435,
-   "causa": "morto pelo Morek na forquilha e erguido pelo rei dentro da hora (EC26a [19], EC26c [1]); a febre do espinho curada (DZ26 4+12, FC26 [17])"
-  },
-  {
-   "nome": "Goir",
-   "grau": "FRACO",
-   "efeito": "voltou com 1 PV (Erguer o Caído): não luta até sarar; −1 para sempre em VONTADE",
-   "desde": 425,
-   "ate": 435,
-   "causa": "morto pelo Morek na forquilha e erguido pelo rei dentro da hora (EC26b [14], EC26d [10])"
   }
  ]
 }
