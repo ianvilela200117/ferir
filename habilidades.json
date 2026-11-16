@@ -118,27 +118,191 @@
   },
   "Visão do Tempo": {
    "tipo": "Magia",
-   "efeito": "aula do 266; mostra o que vem antes de agir",
+   "efeito": "Tempo 4º: vê uma hora à frente · 20 de Mana · só quando o jogador pede (a régua)",
    "grau": 1,
    "usos": 2,
-   "desde": 396,
-   "origem": "semeada: conferir",
+   "desde": 437,
    "cargas": {
-    "atual": 0,
+    "atual": 2,
     "max": 2
-   }
+   },
+   "origem": "aula do 266"
   },
   "Chuva de Brasas": {
    "tipo": "Magia",
-   "efeito": "pelo foco",
+   "efeito": "Chama 4º, pelo foco (Mítico ×10; ÁREA: ×5): 8d6 de fogo em 9 m, o chão queima 2 rodadas · 7 por dia",
    "grau": 1,
    "usos": 0,
-   "desde": 396,
-   "origem": "semeada: conferir",
+   "desde": 437,
    "cargas": {
     "atual": 7,
     "max": 7
-   }
+   },
+   "origem": "o foco"
+  },
+  "Toque do Ceifador": {
+   "tipo": "Magia",
+   "efeito": "Osso 6º, pelo FOCO DE OSSO (rende Mítico ×10): 24d6 num alvo; quem o Toque derruba levanta como servo até a aurora (G23) · 2x por cena pelo Foco, sem Mana e sem sangue (a peça já pagou)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "cargas": {
+    "atual": 2,
+    "max": 2
+   },
+   "origem": "aula do 378; o Foco de Osso"
+  },
+  "Falar com Morto": {
+   "tipo": "Magia",
+   "efeito": "Osso 3º: três perguntas a um morto (a Receita Mestra pede que o morto ACEITE) · 15 de Mana e 3d6 de PV",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "o rei sabe"
+  },
+  "Servo de Osso": {
+   "tipo": "Magia",
+   "efeito": "Osso 4º: ergue um esqueleto (soldado comum) por 1 dia · 20 de Mana e 4d6 de PV; desgaste a cada 10",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 301"
+  },
+  "Prender a Alma": {
+   "tipo": "Magia",
+   "efeito": "Osso 6º: a alma de quem morreu há até 1 hora fica presa num osso ou pedra (serve à Arma Viva, Livro Nove 7.2) · 30 de Mana e 6d6 de PV",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 371"
+  },
+  "Erguer o Caído": {
+   "tipo": "Magia",
+   "efeito": "Luz 6º: devolve à vida quem morreu há até 1 hora, com 1 PV e −1 permanente num atributo · 30 de Mana (60 sem foco de Luz)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 357"
+  },
+  "Lança do Sol": {
+   "tipo": "Magia",
+   "efeito": "Luz 4º: 16d6 de luz, dobrado contra mortos e sombra · 20 de Mana (40 sem foco de Luz)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 245"
+  },
+  "Apagar": {
+   "tipo": "Magia",
+   "efeito": "Vazio 5º: apaga um feitiço de até 6º ou um encantamento por 1 dia · 25 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 364"
+  },
+  "Peso do Nada": {
+   "tipo": "Magia",
+   "efeito": "Vazio 3º: um alvo sem peso ou com peso dobrado por 3 rodadas · 15 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 252"
+  },
+  "Raiz de Pedra": {
+   "tipo": "Magia",
+   "efeito": "Pedra 3º: o alvo não pode ser derrubado, empurrado nem arrastado por 1 cena · 15 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 259"
+  },
+  "Voz no Vento": {
+   "tipo": "Magia",
+   "efeito": "Vento 2º: a voz chega a 1 km, ou ouve uma conversa longe · 10 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 231"
+  },
+  "Dardo Arcano": {
+   "tipo": "Magia",
+   "efeito": "Chama 2º: 4d6, ignora armadura leve · 10 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 238"
+  },
+  "Pressa": {
+   "tipo": "Magia",
+   "efeito": "Tempo 2º: uma ação a mais nesta rodada · 10 de Mana · 1x por cena",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "cargas": {
+    "atual": 1,
+    "max": 1
+   },
+   "origem": "aula do 280"
+  },
+  "Elo de Juramento": {
+   "tipo": "Magia",
+   "efeito": "Elo 4º: dois juram e o mundo cobra a quebra · 20 de Mana",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "aula do 273"
+  },
+  "Calma (o Martelo que Ensina)": {
+   "tipo": "Magia",
+   "efeito": "Mente 2º pela peça: tira medo e raiva de até 4 aliados · 1x por cena",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "cargas": {
+    "atual": 1,
+    "max": 1
+   },
+   "origem": "o Martelo que Ensina"
+  },
+  "Comando (as Luvas do Encantador)": {
+   "tipo": "Magia",
+   "efeito": "Mente 4º pela peça: o alvo obedece uma ordem de uma palavra (Vontade CD 25) · 1x por cena",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "cargas": {
+    "atual": 1,
+    "max": 1
+   },
+   "origem": "as Luvas do Encantador"
+  },
+  "Gibão de Orloxa": {
+   "tipo": "Reação",
+   "efeito": "desfaz UM golpe recebido (o crítico, ou o que tira 20% do PV) · 1x por dia",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "cargas": {
+    "atual": 1,
+    "max": 1
+   },
+   "origem": "o Gibão de Orloxa (Mítico)"
+  },
+  "Receita Mestra do Servo Armado": {
+   "tipo": "Ativa",
+   "efeito": "ergue um morto que ACEITA como servo que dura (G23): o corpo, um núcleo no peito, a palavra gravada, o nome; 3/4 do nível em vida · a palavra cobra 1d6 × 2 de PV por aurora (1d6 com a Tenaz de Eiurvo)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "309-310"
+  },
+  "Osso que Cresce": {
+   "tipo": "Ativa",
+   "efeito": "a palavra no Foco de Osso: um servo da Receita Mestra come o que mata e sobe até o dobro do nível com que se ergueu · a gota de sangue e o nome dele a cada lua nova",
+   "grau": 1,
+   "usos": 0,
+   "desde": 437,
+   "origem": "315-322"
   }
  },
  "titulos": [
@@ -185,6 +349,10 @@
   {
    "nome": "ASSINATURA",
    "efeito": "210: obra Épica+ dá +1 Fama por mês; a peça com a marca é rastreável até Ferir"
+  },
+  {
+   "nome": "Erudito",
+   "efeito": "1x por sessão, um fato verdadeiro do mundo que o rei plausivelmente saberia"
   }
  ],
  "pericias": {

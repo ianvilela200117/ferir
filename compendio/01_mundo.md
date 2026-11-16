@@ -376,8 +376,8 @@ As raças jogáveis seguem o Motor (XV.1). Os números do Motor ficam iguais; aq
 **A campanha no calendário:**
 - O **Dia 1** foi o 27 da Lua das Barcas de **1012 d.S.**
 - O inverno de 1013 foi do Dia 190 ao Dia 279.
-- **Hoje, Dia 356, é o 17 da Lua das Barcas de 1013 d.S.**: fim do degelo. O verão (Lua do Sal) começa no **Dia 370**.
-- A **lua nova** (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400 e assim por diante.
+- O Dia 356 foi o 17 da Lua das Barcas de 1013 d.S. A Lua do Sal começou no Dia 370, a da Forja no 400, a **da Seca no 430**. **O Dia 437 é o 8 da Lua da Seca de 1013 d.S.** (o dia de hoje: `python3 tick.py status`). A Colheita (Lua do Grão) começa no **Dia 460**; os Jogos das Cidades, na Lua do Vinho (**Dia 490**).
+- A **lua nova** (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400, 430, 460 e assim por diante.
 
 ---
 

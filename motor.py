@@ -39,6 +39,8 @@ FACÇÕES                python3 faccoes.py ver [tudo] · semear · postura "NOM
 GUILDAS DO MUNDO (G12) python3 guildas.py ver [tudo] · ranking · fama ID|casa +N "motivo" · forca|postura ID N · objetivo ID "novo"   (o tick semanal roda a semana)
 MASMORRA (G14)         python3 masmorra.py gera NOME CAT "o que guarda" · ver NOME [tudo] · entra NOME SALA
 REPUTAÇÃO (G21)        python3 reputacao.py ver · muda "QUEM" +N "motivo"
+HABILIDADES À MÃO (G24) python3 habilidades.py mao   (a linha 🛠️ do turno) · usa "Nome" · carga "Nome" -1|cheio
+LIVRO NOVE (MOTOR 9)   compendio/08_livro_nove.md: G25 crias · G26 Despertar · G27 éditos · G28 canções · G29 bênçãos · G30 Artes de arma · G31 magia · G32 itens · G33 monstros (grito: "grito": {cd}) · G34 masmorra
 COVIL E LENDÁRIAS (G13) na ficha do bicho: "covil": {nome,dano,cd,efeito} · "lendarias": N (o luta.py faz o resto)
 ANOTAR NO ENVELOPE     python3 selo.py nota "LEITURA: ..."
 TESTE DE PERÍCIA       python3 aberto.py 2d20+N cd=X [oposto=M] [nivel=N]

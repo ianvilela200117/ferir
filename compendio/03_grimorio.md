@@ -1,6 +1,6 @@
 # GRIMÓRIO COMPLETO
 
-Treze escolas, do 1º ao 9º círculo, 247 feitiços. **A lista é fechada.** O Mestre não inventa feitiço fora dela. Um feitiço novo só nasce de **Receita Mestra** ou de **pacto**, e entra nesta lista quando nasce. Esta regra da casa (Dia 356) substitui a linha do Motor que dizia "6º a 9º: o Mestre revela em jogo".
+Treze escolas, do 1º ao 9º círculo, 247 feitiços aqui e mais 39 no **Livro Nove** (286 ao todo; os truques, o ritual, a concentração, o pergaminho, o choque de feitiços e o feitiço composto também estão lá). **A lista é fechada.** O Mestre não inventa feitiço fora dela. Um feitiço novo só nasce de **Receita Mestra** ou de **pacto**, e entra nesta lista quando nasce. Esta regra da casa (Dia 356) substitui a linha do Motor que dizia "6º a 9º: o Mestre revela em jogo".
 
 ## Como a magia funciona (Motor X.8 e casa)
 
@@ -12,7 +12,8 @@ Treze escolas, do 1º ao 9º círculo, 247 feitiços. **A lista é fechada.** O 
 | 9º | Magia Lendário, nível 300 e Receita Mestra ou pacto | 100 e **um preço** | 100d6 | o nome de uma cidade |
 
 - **Teste:** d20 + bônus do atributo + maestria de Magia + bônus do foco. Contra um alvo, rola contra a Resistência Mental dele (10 + bônus de Vontade + nível ÷ 10). Em área, rola contra CD 15 + círculo × 5.
-- **MAGIA MAIS FORTE (casa, Dia 200):** o dano e a cura são multiplicados pelo **foco** de quem lança: Comum ×1 · Incomum ×1,25 · Raro ×1,5 · Épico ×2 · Único ×3 · Lendário ×5 · Mítico ×10 · Primordial ×20 (casa, Dia 356). Em área, vale metade do multiplicador (no mínimo ×1). Um feitiço preso numa peça usa a categoria da peça como foco.
+  - **Em luta (casa, Dia 379: magia disputada):** o feitiço de dano rola como um golpe, 2d20 + ataque contra a Defesa + 14 do alvo. Pega em cheio: dano inteiro. O alvo resiste: metade. Um 20 que morde dobra os dados. Dois 1: o feitiço se desfaz. É assim que o `luta.py` roda.
+- **MAGIA MAIS FORTE (casa, Dia 200):** o dano e a cura são multiplicados pelo **foco** de quem lança: Comum ×1 · Incomum ×1,25 · Raro ×1,5 · Épico ×2 · Único ×3 · Lendário ×5 · Mítico ×10 · Primordial ×20 (casa, Dia 356). Em área, vale metade do multiplicador (no mínimo ×1): **todo feitiço marcado "(área)" entra na ficha de combate com a metade, mesmo contra um alvo só** (conferido no Dia 437: a Chuva de Brasas estava inteira nas fichas e foi acertada). Um feitiço preso numa peça usa a categoria da peça como foco.
 - **Saber um feitiço** é poder lançá-lo (Magia) e poder imbuí-lo (Encantamento): o feitiço conhecido conta como receita de encantamento.
 - **Aprender:** uma aula por semana com quem sabe (o Colégio, um mestre ou um grimório). Do 7º círculo para cima só se aprende com um Lendário, com uma Receita Mestra ou com um grimório antigo.
 - **Sem foco material** (veja a tabela das escolas), o custo de Mana dobra.

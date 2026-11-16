@@ -110,7 +110,16 @@ TRACOS = ['couraça (RD +categoria × 3)', 'regenera (cura nível ÷ 2 PV por ro
           'olhar paralisante (Vontade contra CD 10 + nível ÷ 10)', 'muitas cabeças ou membros (+1 ataque por rodada)', 'camuflagem (desvantagem para achá-lo)',
           'grito que causa medo (Vontade ou Amedrontado)', 'sopro em cone de 9 m (Essência)', 'escava ou nada', 'sentido sísmico (nunca é surpreendido)',
           'imune a armas duas categorias abaixo da categoria dele', 'carrega doença', 'invoca crias (1d6 por luta)', 'reflete magia com 18 a 20',
-          'devora metal (com 1 natural de quem o fere, a arma perde 1 categoria)', 'muda de forma', 'fala e mente']
+          'devora metal (com 1 natural de quem o fere, a arma perde 1 categoria)', 'muda de forma', 'fala e mente',
+          # MOTOR 9 (437, Livro Nove 8.1): dezesseis traços novos
+          'pele que devolve (quem o fere corpo a corpo leva um quarto do dano)', 'enxame (golpe de um alvo só: metade; área: o dobro)',
+          'agarra e arrasta (quem ele acerta fica Agarrado e é levado 6 m por rodada)', 'cospe teia ou visgo (1x por rodada prende um alvo a 18 m)',
+          'sangue que queima (golpe cortante nele espirra 1d6 × degrau em quem está ao lado)', 'casca que racha (abaixo da metade do PV: RD à metade e +1 ação)',
+          'duas vidas (ao cair, levanta 1x com um quarto do PV e outra Essência)', 'sombra própria (no escuro age duas vezes; sob luz forte perde 1 ação)',
+          'rouba o fôlego (cada golpe tira 2 de Estamina ou Mana)', 'cria no ventre (ao morrer solta 1d6 crias; uma pode ser levada viva)',
+          'ouve o nome (quem diz o nome dele vira o alvo; o nome verdadeiro o cala 1 rodada)', 'come magia (o 1º feitiço de cada rodada o cura, salvo o da fraqueza)',
+          'faro de ferida (escolhe quem tem menos PV; +2 contra feridos)', 'dono de território (no covil dele, o covil age duas vezes por rodada)',
+          'velho demais (imune a medo e a surpresa; sabe uma língua de gente)', 'carrega um tesouro (o tesouro do covil rola duas vezes)']
 NIVEL = {'Comum': (1, 10), 'Incomum': (10, 30), 'Raro': (30, 70), 'Epico': (70, 160), 'Unico': (110, 200),
          'Lendario': (150, 300), 'Mitico': (250, 400), 'Primordial': (350, 500)}
 PVMULT = {'Comum': 5, 'Incomum': 6, 'Raro': 8, 'Epico': 15, 'Unico': 20, 'Lendario': 25, 'Mitico': 100, 'Primordial': 300}
@@ -126,6 +135,8 @@ DADO = {'homem': '1d8', 'cavalo': '1d10', 'casa': '1d12', 'torre': '2d10', 'coli
 def monstro(cat=None, essencia=None, habitat=None):
     cat = cat or esc(CATS[1:7]); i = CATS.index(cat)
     lo, hi = NIVEL[cat]; nv = lo + secrets.randbelow(hi - lo + 1)
+    nomeado = i >= 2 and d(20) == 20   # MOTOR 9 (437, Livro Nove 8.4): um em vinte bichos Raros ou acima é NOMEADO
+    if nomeado: nv = int(nv * 1.2)
     e = essencia or esc(list(ESS))
     tam = esc(TAMANHO[i // 2: i // 2 + 3])
     b, dd = MAG[cat]
@@ -142,13 +153,14 @@ def monstro(cat=None, essencia=None, habitat=None):
         'nome': nome(), 'categoria': NOME_CAT[cat], 'nível': nv, 'corpo': esc(CORPO), 'tamanho': tam, 'essência': e,
         'números': f'PV {nv * PVMULT[cat]} · Defesa {10 + nv // 4 + BONUS[cat]} · RD {RD[cat]} · ataque +{ataque} · '
                    f'{1 + nv // 100} ataque(s) por rodada · dano {DADO[tam]} × {MULT[cat]:g} · XP {nv * 10} (×5 chefe, ×10 Lendário ou acima)',
-        'traços': esc_n(TRACOS, NTRACOS[cat]),
+        'traços': esc_n(TRACOS, NTRACOS[cat] + (1 if nomeado else 0)),
         'poder assinatura': f'{efeito(e, cat, "ofensa")}, em área de {3 * (i + 1)} m, uma vez a cada 3 rodadas',
         'fraqueza': f'a Essência {ESS[e][4]}: dano dobrado e corta a regeneração · e mais uma, a descobrir: {esc(["fogo comum", "luz do sol", "um som", "sal", "o próprio nome", "ferro frio", "água corrente", "a cria"])}',
         'comportamento': esc(COMPORT), 'habitat': habitat or esc(HABITAT),
         'sinal (Lei 15)': esc(['rastro de gado morto', 'cheiro de enxofre', 'silêncio dos pássaros', 'árvores marcadas', 'poços secos',
                                'gente que some à noite', 'tremores', 'névoa da cor da Essência']),
         'drops': drops,
+        **({'NOMEADO (Livro Nove 8.4)': 'nível +20% (já somado), um traço a mais (já rolado), despojo DOBRADO, XP em dobro; título com efeito a quem o matar primeiro'} if nomeado else {}),
     }
  
 # ---------- NPC vivo ----------

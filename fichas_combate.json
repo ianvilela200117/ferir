@@ -52,9 +52,9 @@
      "essencia": "Luz"
     },
     {
-     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10; 1x por cena; FOGO)",
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10, em ÁREA vale metade: ×5; 1x por cena; FOGO)",
      "dano": "8d6",
-     "mult": 10,
+     "mult": 5,
      "cd": 30,
      "rodada": [
       3
@@ -167,9 +167,9 @@
      "essencia": ""
     },
     {
-     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco ×10; 7 por dia; FOGO)",
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco Mítico ×10, em ÁREA vale metade: ×5; 7 por dia; FOGO)",
      "dano": "8d6",
-     "mult": 10,
+     "mult": 5,
      "cd": 30,
      "rodada": [
       3,

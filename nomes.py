@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """Gera nomes por sonoridade. Uso: python3 nomes.py SONORIDADE [quantidade] [livre]
+MOTOR 9 (437): as sonoridades aspera, arcaica e mercante estavam ESGOTADAS (nenhum prefixo livre); ganharam começos novos.
 MOTOR 6.2: com "livre", só saem nomes cujas 3 primeiras letras não batem com nenhum nome do cânone, do estado, dos NPCs, do mundo nem do Livro (compendio/).
 Antes eram dois passos (nomes.py e depois prefixo.py), e o prefixo.py não olhava o Livro."""
 import sys, secrets
 S = {
- 'aspera':     (['Kr', 'Dr', 'Gr', 'Th', 'Br', 'Sk', 'Vr', 'Hr'], ['a', 'o', 'u', 'e'], ['g', 'k', 'rn', 'th', 'dd', 'sk', 'rk', 'n'], ['', 'a', 'ur', 'ek', 'os']),
+ 'aspera':     (['Kr', 'Dr', 'Gr', 'Th', 'Br', 'Sk', 'Vr', 'Hr', 'Gn', 'Zr', 'Kv', 'Dv', 'Bz', 'Vd', 'Rh', 'Tk'], ['a', 'o', 'u', 'e'], ['g', 'k', 'rn', 'th', 'dd', 'sk', 'rk', 'n'], ['', 'a', 'ur', 'ek', 'os']),
  'liquida':    (['L', 'M', 'N', 'Ir', 'El', 'Y', 'Ael', 'S'], ['ia', 'e', 'i', 'ae', 'ou', 'a'], ['l', 'n', 'r', 'v', 'll', 'nn', 's'], ['a', 'iel', 'is', 'ane', 'or', 'e']),
- 'arcaica':    (['Va', 'Or', 'Ce', 'Al', 'Ma', 'Te', 'Qu', 'Ser'], ['ra', 'lo', 'mi', 'the', 'du', 'ne'], ['s', 'x', 'mn', 'rv', 'lt', 'c'], ['us', 'ia', 'ion', 'ar', 'eth', 'a']),
- 'mercante':   (['Pe', 'Bo', 'Fa', 'Lu', 'Ca', 'Ro', 'Gi', 'Do'], ['re', 'ni', 'la', 'to', 'ci', 'ba'], ['nt', 'll', 'cc', 'rz', 'nd', 'ss'], ['o', 'i', 'a', 'ino', 'etta', 'one']),
+ 'arcaica':    (['Va', 'Or', 'Ce', 'Al', 'Ma', 'Te', 'Qu', 'Ser', 'Yo', 'Ez', 'Ux', 'Ny', 'Io', 'Ae'], ['ra', 'lo', 'mi', 'the', 'du', 'ne'], ['s', 'x', 'mn', 'rv', 'lt', 'c'], ['us', 'ia', 'ion', 'ar', 'eth', 'a']),
+ 'mercante':   (['Pe', 'Bo', 'Fa', 'Lu', 'Ca', 'Ro', 'Gi', 'Do', 'Zu', 'Je', 'Nu', 'Zo', 'Du', 'Bi'], ['re', 'ni', 'la', 'to', 'ci', 'ba'], ['nt', 'll', 'cc', 'rz', 'nd', 'ss'], ['o', 'i', 'a', 'ino', 'etta', 'one']),
  'sibilante':  (['S', 'Z', 'Ss', 'Xa', 'Is', 'Sh', 'Ze', 'As'], ['a', 'i', 'e', 'y'], ['sh', 'z', 'ss', 'th', 'sr', 'zh'], ['', 'a', 'ir', 'ess', 'eth', 'is']),
  'montanhesa': (['H', 'Bj', 'Ul', 'St', 'Ei', 'G', 'R', 'T'], ['a', 'o', 'i', 'u', 'e'], ['rv', 'nd', 'lg', 'st', 'rk', 'gr'], ['', 'a', 'ir', 'ald', 'unn', 'e']),
 }

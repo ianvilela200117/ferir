@@ -325,3 +325,5 @@ depois vira linha nova aqui.
 - (437) Zythir, o tesouro de Tuir: 6 kg de ZIIS (Épico, Raio + Tempo). A RAINHA da colmeia, a ZATHA (Épica 113, Podridão), morta pelo Moreth; ela feriu o rei: GRAVE até o 458, e o rei vai MANCAR para sempre. O recado ao Tolvane (comprar uma amostra do hadun) chega a Lumade no 441.
 
 - (437) Nenhuma magia sabida sara um ferimento que dura (o rei, extraordinário): a Cura Maior (Luz 4º) repõe o PV e tira o veneno; o Colégio a ensina. G23 (o exército de osso) aprovada; G24 (avisar as habilidades), pedido do jogador.
+
+- (437, fora do jogo) MOTOR 9: a revisão completa e o LIVRO NOVE (compendio/08_livro_nove.md; G25 a G34). A Chuva de Brasas vale ×5 (área). O rei tem um Despertar em aberto.

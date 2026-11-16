@@ -4,7 +4,8 @@ import markdown, json, re, html, os
 D = os.path.dirname(os.path.abspath(__file__))
 ABAS = [('mapa','Mapa',None),('mundo','O Mundo','01_mundo.md'),('classes','Classes','04_classes.md'),
         ('grimorio','Grimório','03_grimorio.md'),('talentos','Talentos','05_talentos.md'),
-        ('materiais','Essências e Materiais','06_essencias_materiais.md'),('bestiario','Bestiário','07_bestiario.md')]
+        ('materiais','Essências e Materiais','06_essencias_materiais.md'),('bestiario','Bestiário','07_bestiario.md'),
+        ('nove','Livro Nove','08_livro_nove.md')]
 md = markdown.Markdown(extensions=['tables','toc','sane_lists'])
 corpo = {}
 def prep(t):

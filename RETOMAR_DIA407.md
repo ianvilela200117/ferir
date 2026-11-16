@@ -1,4 +1,4 @@
-# RETOMAR — fim da manhã do Dia 437, Zythir, a sala 8, o Zyza e a 9 esperando (MOTOR 8: G1 a G24)
+# RETOMAR — fim da manhã do Dia 437, Zythir, a sala 8, o Zyza e a 9 esperando (MOTOR 8: G1 a G34)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,8 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+MOTOR 9 (437, fora do jogo): o jogador pediu a REVISÃO COMPLETA; feita: `REVISAO_MOTOR9.md` (os erros achados) e `compendio/08_livro_nove.md` (o Livro Nove: G25 a G34 no protocolo). O que muda já: a Chuva de Brasas em ×5 (área); o DESPERTAR do rei em aberto (pergunta 4); o RELÓGIO DA MASMORRA vale ao entrar na sala 9 (d6: com 1, um perigo vem; Zythir não tem mais perigo não visto além do guardião da 9: se der 1, o guardião vem até a porta e não há surpresa); as Artes de arma do Moreth e do Eiagrir têm de ser escolhidas e declaradas no envelope ANTES da luta da 9 (G30: o Moreth, nível 232, Luta Lendário: técnicas até o 6º; o Eiagrir, 126: até o 4º) e as do guardião também, se ele usar arma (Lei 7); a linha 🛠️ sai de `python3 habilidades.py mao`. O jogo NÃO andou: as perguntas 1 a 3 continuam abertas.
+
 Fim da manhã do 437, ZYTHIR, a sala 8. O jogador respondeu 1b (o Moreth e o Eiagrir abrem a 9) · 2d (a cura: CU37 [1] não há; o saber EXTRAORDINÁRIO: a pista da CURA MAIOR, Luz 4º, numa aula do Colégio) · 3a (G23 aprovada) · "posso levantar o Zyza" · a regra nova G24 (avisar as habilidades). Pela G24 o Mestre PAROU antes da 9 e do Zyza: o Zyza iria junto à 9; a Visão do Tempo está livre; o Falar com Morto custa 3d6 de PV com o rei a 23. AS TRÊS PERGUNTAS ABAIXO decidem a ordem. O Zyza, se aceitar (rolar: d6 declarado no envelope antes): Servo Armado 118 (PV 1770, Def 49, +39, 2 golpes 1d10×5, Podridão e o veneno); se recusar: 79 (PV 1185, Def 39, +29, 1 golpe); a palavra: 1d6 × 2 por aurora; o núcleo Épico de Podridão dele vai ao peito (sobra 1). A 9 (OCULTO): o rei TUIR vivo e o GUARDIÃO ÚNICO: gerar com o gerador (saída INTEIRA em arquivo), G9, luta.py uma vez.
 
 Antes (a sala 8 limpa):
@@ -175,7 +177,7 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 433: EN33 [4] · CE33 [1] · a contra identificou o cobrador · a auditoria (acima, no envelope).
 
 ## RESPONDIDO (433, meio-dia): 1a parar e revistar · 2 'pode aplicar todos' (o MOTOR 8)
-- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G24; a cola do motor.
+- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G34; a cola do motor.
 - (OCULTO) HC33 [4] o capitão da Liga (90) · RV33 [4] fala e suborna · SU33 [3] 1.500 · (OCULTO) CR33 [6] a carroça vai a um comprador do Delta · G10 notar do rei: SUCESSO COM GANHO (a carroça; pesa como moeda; a estrada do sal).
 
 ## RESPONDIDO (433, tarde): 1d perguntar e investigar; recusar o ouro; 'se ele tiver o direito, não mexo um dedo'
@@ -212,6 +214,7 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 1. O ZYZA (G23): a) levantar AGORA (Falar com Morto: 3d6 de PV; o rei fica entre 5 e 20) e ele vai com o Moreth e o Eiagrir à 9 · b) levantar amanhã, depois da noite (+40 de PV antes); a 9 espera um dia · c) não levantar.
 2. A PALAVRA DO OSSO QUE CRESCE (no Foco de Osso; a gota da lua nova do 430 já está nela) vai no Zyza? a) sim: ele come o que mata e sobe até o dobro do nível com que se ergueu; o nome dele dito a cada lua nova · b) não: guardar para outro servo.
 3. A SALA 9: a) abrir assim que o Zyza estiver de pé (ou sem ele, se 1c) · b) o rei usa antes a VISÃO DO TEMPO (vê uma hora à frente do que acontece lá dentro) · c) o rei usa antes o FALAR COM MORTO na rainha (3 perguntas sobre o que ela guardava; mais 3d6 de PV).
+4. O DESPERTAR DO REI (Livro Nove 4; ele passou do 100): um Dom, com o preço dele: a) Segundo Coração · b) Mão do Mundo · c) Olho Aberto · d) Sangue Grosso (Sangue e Osso cobram a metade; cura de Luz rende a metade) · e) Voz de Mando · f) Pele do Mundo · g) Fôlego Sem Fundo · h) Sorte Velha · i) Nome que Anda · j) Mão que Doma (+1 no teto de servos e de crias) · k) Passo Certo · l) Memória de Rei.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

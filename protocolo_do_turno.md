@@ -146,3 +146,42 @@ O jogador aprovou as dez de uma vez; o Mestre as escreveu equilibradas. Valem da
 
 ### G24 — AVISAR AS HABILIDADES (pedido do jogador, 437)
 - Sempre que o rei (ou a casa) puder usar uma habilidade, um feitiço, uma peça ou um talento que mude o que está para acontecer, o Mestre AVISA antes, com o custo, e espera a palavra do jogador quando a escolha for dele (a Visão do Tempo e a régua continuam só quando o jogador pede: o aviso diz que ela está livre). O aviso vai numa linha 🛠️ HABILIDADES À MÃO, antes das 🎯 PERGUNTAS.
+
+## MOTOR 9 (Dia 437, pedido do jogador: "revisão completa... magias, leis, habilidades, talentos, como um jogo completo"): o LIVRO NOVE, G25 a G34
+O texto inteiro está em `compendio/08_livro_nove.md` (a aba "Livro Nove" do Livro). A revisão que o gerou: `REVISAO_MOTOR9.md`. Aqui, só o que o Mestre tem de lembrar a cada turno.
+
+### G25 — CRIAS E MONTARIAS (Livro Nove 8.5)
+- Cria vem de ninho, de "cria no ventre", de compra. Cresce em uma lua por degrau; come degrau × 20 por semana; sem laço, d6 1-3 foge ou ataca. Adulta: metade do nível do pai; sobe com XP. Teto: uma por 100 níveis do dono.
+
+### G26 — O DESPERTAR (Livro Nove 4)
+- Nos níveis 100, 200 e 300, um Dom (com preço). Quem já passou escolhe agora; NPC recebe no d12 quando entra em cena (declarado no envelope).
+
+### G27 — O CÓDIGO DE IREVIEL (Livro Nove 10.2)
+- Édito: o rei propõe, o conselho vota (`conselho.py`), vale no tick semanal seguinte. Teto: 2 + Legitimidade ÷ 3. Passar por cima do voto: Legitimidade −1. O efeito entra pelo `reino.py mod` e pelo livro da semana; o preço também.
+
+### G28 — CANÇÕES DE FEITO (Livro Nove 11)
+- Feito grande + um cantor: d20 + Fama. 16+: corre o mundo (+1 de Fama e +1 permanente num atributo, entre dois oferecidos) e anda 1 no relógio de um rival. Uma por lua.
+
+### G29 — AS BÊNÇÃOS DAS FÉS (Livro Nove 12)
+- Uma bênção por pessoa, pelo voto da fé. Quebrar o voto tira a bênção e custa 10 de reputação com a fé.
+
+### G30 — AURA ALTA, ARTES DE ARMA E ENCADEAR (Livro Nove 3)
+- Luta Mestre e nível 50: técnicas até o 4º círculo; Luta Lendário e nível 150: até o 6º; +1 técnica a cada 50 níveis. A Arte que fere: dano da arma + 2d6 × círculo, com METADE do multiplicador da arma. Vale para os heróis da casa e para os inimigos (Lei 7). As técnicas de cada um são escolhidas pela arma e declaradas no envelope antes da primeira luta em que entram; vão para a ficha de combate (G9).
+
+### G31 — A MAGIA QUE FALTAVA (Livro Nove 1 e 2)
+- Truques (1 de Mana) · concentração (um feitiço de cena por vez) · ritual (utilidade e cura em 1 hora: metade da Mana) · pergaminho · escolas opostas e o Choque · feitiço de assinatura · feitiço composto · 39 feitiços novos (a lista fechada tem 286).
+- **Feitiço de ÁREA entra na ficha com METADE do multiplicador do foco, sempre** (erro achado na revisão: a Chuva de Brasas estava inteira).
+- Feitiço de Sangue ou de Osso PRESO EM PEÇA não cobra sangue de quem a usa (a peça pagou na obra): era assim que se jogava; agora está escrito.
+
+### G32 — ITENS (Livro Nove 7)
+- Peça que Cresce · Arma Viva (d20 na obra Mítica com núcleo de criatura que falava: 19-20) · Efeito Selado · Desmanchar · Fundir · a lista fechada de consumíveis (poções, óleos, frascos).
+
+### G33 — MONSTROS (Livro Nove 8)
+- Dezesseis traços novos no gerador · Resistência Lendária (1, 2, 3 por dia) · a segunda FASE dos chefes Únicos ou acima aos 50% (d6) · NOMEADOS (o gerador avisa: 1 em 20).
+- Traço que o `luta.py` não roda: o Mestre escreve no envelope, ANTES da luta, como vai aplicá-lo, e lê a saída inteira (G9).
+
+### G34 — MASMORRA (Livro Nove 9)
+- A armadilha tem tipo (d12) · a sala de segredo pode ter enigma (d8) · O RELÓGIO: da quarta sala em diante, d6 ao entrar; com 1, um perigo de sala não vista vem até a casa · dormir lá dentro cura a metade e rola o relógio duas vezes.
+
+### A linha 🛠️ HABILIDADES À MÃO (G24)
+- A fonte é `python3 habilidades.py mao` (a ficha de habilidades do rei foi refeita no 437: feitiços, peças com carga, receitas). Depois de cada uso: `habilidades.py usa "Nome"` e `habilidades.py carga "Nome" -1`. As cargas de cena e de dia são recarregadas pelo Mestre ao virar a cena e o dia.

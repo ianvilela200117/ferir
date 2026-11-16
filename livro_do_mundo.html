@@ -35,7 +35,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 </style></head><body>
 <header><h1>Livro do Mundo · Ortheia</h1><p class="sub">O mundo e as regras fechados (Dia 356). O Mestre consulta este livro e não inventa fora dele.</p>
 <div class="busca"><input id="q" type="search" placeholder="Buscar (feitiço, classe, lugar, material, fera...)" aria-label="Buscar"><button id="limpa" type="button">limpar</button></div>
-<nav><button data-a="mapa">Mapa<span class="n"></span></button><button data-a="mundo">O Mundo<span class="n"></span></button><button data-a="classes">Classes<span class="n"></span></button><button data-a="grimorio">Grimório<span class="n"></span></button><button data-a="talentos">Talentos<span class="n"></span></button><button data-a="materiais">Essências e Materiais<span class="n"></span></button><button data-a="bestiario">Bestiário<span class="n"></span></button></nav></header>
+<nav><button data-a="mapa">Mapa<span class="n"></span></button><button data-a="mundo">O Mundo<span class="n"></span></button><button data-a="classes">Classes<span class="n"></span></button><button data-a="grimorio">Grimório<span class="n"></span></button><button data-a="talentos">Talentos<span class="n"></span></button><button data-a="materiais">Essências e Materiais<span class="n"></span></button><button data-a="bestiario">Bestiário<span class="n"></span></button><button data-a="nove">Livro Nove<span class="n"></span></button></nav></header>
 <main><section class="aba" id="aba-mapa" hidden>
 <div class="mapwrap">
  <div class="mapbox">
@@ -3156,7 +3156,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 </tr>
 </tbody>
 </table></div></section><section class="aba" id="aba-grimorio" hidden><div class="texto"><h1 id="grimorio-completo">GRIMÓRIO COMPLETO</h1>
-<p>Treze escolas, do 1º ao 9º círculo, 247 feitiços. <strong>A lista é fechada.</strong> O Mestre não inventa feitiço fora dela. Um feitiço novo só nasce de <strong>Receita Mestra</strong> ou de <strong>pacto</strong>, e entra nesta lista quando nasce. Esta regra da casa (Dia 356) substitui a linha do Motor que dizia "6º a 9º: o Mestre revela em jogo".</p>
+<p>Treze escolas, do 1º ao 9º círculo, 247 feitiços aqui e mais 39 no <strong>Livro Nove</strong> (286 ao todo; os truques, o ritual, a concentração, o pergaminho, o choque de feitiços e o feitiço composto também estão lá). <strong>A lista é fechada.</strong> O Mestre não inventa feitiço fora dela. Um feitiço novo só nasce de <strong>Receita Mestra</strong> ou de <strong>pacto</strong>, e entra nesta lista quando nasce. Esta regra da casa (Dia 356) substitui a linha do Motor que dizia "6º a 9º: o Mestre revela em jogo".</p>
 <h2 id="como-a-magia-funciona-motor-x8-e-casa">Como a magia funciona (Motor X.8 e casa)</h2>
 <table>
 <thead>
@@ -3200,8 +3200,11 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 </tbody>
 </table>
 <ul>
-<li><strong>Teste:</strong> d20 + bônus do atributo + maestria de Magia + bônus do foco. Contra um alvo, rola contra a Resistência Mental dele (10 + bônus de Vontade + nível ÷ 10). Em área, rola contra CD 15 + círculo × 5.</li>
-<li><strong>MAGIA MAIS FORTE (casa, Dia 200):</strong> o dano e a cura são multiplicados pelo <strong>foco</strong> de quem lança: Comum ×1 · Incomum ×1,25 · Raro ×1,5 · Épico ×2 · Único ×3 · Lendário ×5 · Mítico ×10 · Primordial ×20 (casa, Dia 356). Em área, vale metade do multiplicador (no mínimo ×1). Um feitiço preso numa peça usa a categoria da peça como foco.</li>
+<li><strong>Teste:</strong> d20 + bônus do atributo + maestria de Magia + bônus do foco. Contra um alvo, rola contra a Resistência Mental dele (10 + bônus de Vontade + nível ÷ 10). Em área, rola contra CD 15 + círculo × 5.<ul>
+<li><strong>Em luta (casa, Dia 379: magia disputada):</strong> o feitiço de dano rola como um golpe, 2d20 + ataque contra a Defesa + 14 do alvo. Pega em cheio: dano inteiro. O alvo resiste: metade. Um 20 que morde dobra os dados. Dois 1: o feitiço se desfaz. É assim que o <code>luta.py</code> roda.</li>
+</ul>
+</li>
+<li><strong>MAGIA MAIS FORTE (casa, Dia 200):</strong> o dano e a cura são multiplicados pelo <strong>foco</strong> de quem lança: Comum ×1 · Incomum ×1,25 · Raro ×1,5 · Épico ×2 · Único ×3 · Lendário ×5 · Mítico ×10 · Primordial ×20 (casa, Dia 356). Em área, vale metade do multiplicador (no mínimo ×1): <strong>todo feitiço marcado "(área)" entra na ficha de combate com a metade, mesmo contra um alvo só</strong> (conferido no Dia 437: a Chuva de Brasas estava inteira nas fichas e foi acertada). Um feitiço preso numa peça usa a categoria da peça como foco.</li>
 <li><strong>Saber um feitiço</strong> é poder lançá-lo (Magia) e poder imbuí-lo (Encantamento): o feitiço conhecido conta como receita de encantamento.</li>
 <li><strong>Aprender:</strong> uma aula por semana com quem sabe (o Colégio, um mestre ou um grimório). Do 7º círculo para cima só se aprende com um Lendário, com uma Receita Mestra ou com um grimório antigo.</li>
 <li><strong>Sem foco material</strong> (veja a tabela das escolas), o custo de Mana dobra.</li>
@@ -4951,7 +4954,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li>Luz no Escudo (Luz 1º): cega 1 rodada quem bate no escudo com 19-20</li>
 <li>Nó de Chamada (Elo 1º): a arma volta à mão</li>
 </ul></div></section><section class="aba" id="aba-talentos" hidden><div class="texto"><h1 id="talentos">TALENTOS</h1>
-<p>Esta é a lista fechada: os talentos do Motor (VI) mais os da casa. Cada talento tem um requisito e um preço (Lei 2).</p>
+<p>Esta é a lista fechada: os talentos do Motor (VI), os da casa e os 32 do <strong>Livro Nove</strong> (Motor 9, Dia 437). Cada talento tem um requisito e um preço (Lei 2).</p>
 <p><strong>Quando se ganha talento:</strong></p>
 <ul>
 <li>1 na criação (o humano ganha 2);</li>
@@ -6491,7 +6494,7 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 </tbody>
 </table>
 <p><strong>Primordial desperto:</strong> um entrou no mundo no Dia 360 (a notícia chega no 362).</p>
-<p><strong>Mortos pela casa ou longe dela:</strong> o Naudren (Épico 155, 286-?), o Murrask (Épico 85, 272), a Isessir (Épica 95, 321), o Zyeth (Incomum 23, 345), o Hagal (Lendário 154).</p>
+<p><strong>Mortos pela casa ou longe dela:</strong> o Naudren (Épico 155, 286-?), o Murrask (Épico 85, 272), a Isessir (Épica 95, 321), o Zyeth (Incomum 23, 345), o Hagal (Lendário 154), o Vorthen (Épico 77, 407: o núcleo de Gelo está na casa).</p>
 <h2 id="3-as-feras-de-cada-regiao">3. As feras de cada região</h2>
 <p>São os bichos comuns de cada terra: o que se acha na estrada, na caça e nas Caçadas do Reino. Os números saem da tabela da seção 1.</p>
 <table>
@@ -6934,7 +6937,1495 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>eram da Mão Queimada; o Culto do Xaathis as tomou (343)</td>
 </tr>
 </tbody>
-</table></div></section></main>
+</table></div></section><section class="aba" id="aba-nove" hidden><div class="texto"><h1 id="livro-nove-o-que-faltava">LIVRO NOVE: O QUE FALTAVA</h1>
+<p><strong>MOTOR 9 (Dia 437, pedido do jogador).</strong> O Livro foi relido inteiro. Este capítulo fecha os furos: o que os jogos de mesa de masmorra e os romances do ferreiro lendário têm e Ortheia ainda não tinha. As inspirações deram a forma; os nomes, os números e os preços são de Ortheia.</p>
+<ul>
+<li><strong>A lista fechada</strong> do grimório e dos talentos passa a incluir este capítulo. O Mestre continua sem inventar fora do Livro.</li>
+<li><strong>A Lei 2 vale aqui inteira:</strong> toda vantagem nova traz o preço escrito ao lado.</li>
+<li><strong>A Lei 7 também:</strong> tudo o que a casa pode fazer com este capítulo, o mundo pode. Os NPCs e os inimigos usam as mesmas regras.</li>
+</ul>
+<hr />
+<h2 id="1-magia-as-regras-que-faltavam">1. MAGIA: as regras que faltavam</h2>
+<h3 id="11-truques-circulo-0">1.1 Truques (círculo 0)</h3>
+<p>Quem sabe pelo menos um feitiço de uma escola sabe o truque dela. Custa <strong>1 de Mana</strong>, não fere mais que 1d6, não usa o multiplicador do foco e não vai em peça.</p>
+<table>
+<thead>
+<tr>
+<th>Escola</th>
+<th>Truque</th>
+<th>O que faz</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chama</td>
+<td><strong>Acender</strong></td>
+<td>acende vela, cachimbo, fogueira pronta; aquece uma caneca</td>
+</tr>
+<tr>
+<td>Gelo</td>
+<td><strong>Geada de Copo</strong></td>
+<td>gela uma bebida, conserva um peixe até a noite</td>
+</tr>
+<tr>
+<td>Pedra</td>
+<td><strong>Peso de Mão</strong></td>
+<td>uma pedra pequena fica presa onde foi posta por 1 hora (calço, marca)</td>
+</tr>
+<tr>
+<td>Vento</td>
+<td><strong>Sopro</strong></td>
+<td>apaga uma chama a 6 m, vira uma página, leva um cheiro</td>
+</tr>
+<tr>
+<td>Luz</td>
+<td><strong>Candeia</strong></td>
+<td>uma luz de vela na ponta do dedo por 10 minutos</td>
+</tr>
+<tr>
+<td>Raiz</td>
+<td><strong>Folha Certa</strong></td>
+<td>sabe se uma planta à mão é comida, remédio ou veneno</td>
+</tr>
+<tr>
+<td>Sombra</td>
+<td><strong>Apagar Vela</strong></td>
+<td>uma luz pequena a 6 m se apaga sem vento</td>
+</tr>
+<tr>
+<td>Sangue</td>
+<td><strong>Pulso</strong></td>
+<td>sente o coração de quem toca: medo, febre, sono fingido</td>
+</tr>
+<tr>
+<td>Osso</td>
+<td><strong>Estalo</strong></td>
+<td>um osso à vista estala e aponta para o resto do corpo dele</td>
+</tr>
+<tr>
+<td>Vazio</td>
+<td><strong>Abafar</strong></td>
+<td>um objeto à mão não faz som por 1 minuto (chave, moeda, fivela)</td>
+</tr>
+<tr>
+<td>Elo</td>
+<td><strong>Nó Cego</strong></td>
+<td>um nó que só quem o deu desata</td>
+</tr>
+<tr>
+<td>Tempo</td>
+<td><strong>Batida</strong></td>
+<td>conta o tempo sem errar por 1 hora (marcha, forja, cozimento)</td>
+</tr>
+<tr>
+<td>Mente</td>
+<td><strong>Lembrete</strong></td>
+<td>guarda uma frase ou um rosto sem esquecer por 1 dia</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-concentracao">1.2 Concentração</h3>
+<ul>
+<li>Um conjurador segura <strong>um feitiço de cena por vez</strong> (os que dizem "por 1 cena" e seguem agindo: muros, domos, formas, voos, domínios, correntes). Lançar outro derruba o primeiro.</li>
+<li>Feitiço de <strong>1 dia ou mais</strong> e feitiço <strong>preso em peça</strong> não pedem concentração.</li>
+<li>Quem se concentra e leva dano testa <strong>Vontade contra CD 15</strong> (CD 20 se o golpe tirou mais de um quarto do PV). Falhou, o feitiço cai.</li>
+</ul>
+<h3 id="13-ritual">1.3 Ritual</h3>
+<ul>
+<li>Feitiço de <strong>utilidade ou cura</strong> lançado sem pressa (1 hora, com o foco material e um círculo riscado no chão) custa <strong>metade da Mana</strong>.</li>
+<li>Sangue e Osso cobram o PV inteiro do mesmo jeito. Não se faz ritual em combate nem em marcha.</li>
+</ul>
+<h3 id="14-pergaminho">1.4 Pergaminho</h3>
+<ul>
+<li>Quem sabe um feitiço de até <strong>6º círculo</strong> pode escrevê-lo para um uso: <strong>1 dia por círculo</strong>, tinta de condutor no valor de <strong>círculo × 20</strong> de ouro (do 4º para cima, tinta de material Raro). Teste de Encantamento contra CD 10 + círculo × 3; falha perde a tinta.</li>
+<li><strong>Ler:</strong> Magia Treinado lê até o 3º; Mestre, até o 6º. Quem não tem Magia lê 1º e 2º com Inteligência CD 20. Falha na leitura: retrochoque do círculo, e o pergaminho se perde.</li>
+<li>O pergaminho lança <strong>sem Mana e sem saber o feitiço</strong>, com o foco da <strong>folha</strong>: Comum ×1 (pele de um bicho Raro ou acima dá a categoria do bicho, até Épico ×2).</li>
+<li>Preço de mercado: <strong>círculo² × 50</strong>. O Colégio vende até o 3º; o resto se encomenda.</li>
+</ul>
+<h3 id="15-escolas-opostas-e-o-choque-de-feiticos">1.5 Escolas opostas e o choque de feitiços</h3>
+<p>O talento Escola Funda falava em "escola oposta" e o Livro não dizia qual. Agora diz:</p>
+<table>
+<thead>
+<tr>
+<th>Escola</th>
+<th>Oposta</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chama</td>
+<td>Gelo</td>
+</tr>
+<tr>
+<td>Pedra</td>
+<td>Vento</td>
+</tr>
+<tr>
+<td>Luz</td>
+<td>Sombra</td>
+</tr>
+<tr>
+<td>Raiz</td>
+<td>Osso</td>
+</tr>
+<tr>
+<td>Sangue</td>
+<td>Tempo</td>
+</tr>
+<tr>
+<td>Elo</td>
+<td>Vazio</td>
+</tr>
+<tr>
+<td>Mente</td>
+<td>nenhuma (com Escola Funda em Mente, todas as outras custam +1)</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Choque (Reação):</strong> quem vê um feitiço ser lançado e sabe um feitiço da escola <strong>oposta</strong>, de círculo igual ou maior, gasta a Reação e a Mana desse círculo. Teste de Magia contra o de quem lançou: vencendo, o feitiço sai pela <strong>metade</strong> (dano, duração ou alcance). O talento Contrafeitiço continua sendo o único jeito de anular inteiro.</li>
+</ul>
+<h3 id="16-feitico-de-assinatura">1.6 Feitiço de assinatura</h3>
+<ul>
+<li>Um conjurador com Magia Mestre fixa <strong>um</strong> feitiço que sabe como a sua assinatura (uma semana de estudo): custa <strong>5 de Mana a menos</strong> (mínimo 5) e soma <strong>+1 dado</strong>.</li>
+<li><strong>Preço:</strong> quem já o viu lançar reconhece a mão (o feitiço é rastreável até ele), e todo Choque ou Contrafeitiço contra a assinatura tem +2.</li>
+<li>Magia Lendário: duas assinaturas.</li>
+</ul>
+<h3 id="17-feitico-composto-a-lei-12-na-magia">1.7 Feitiço composto (a Lei 12 na magia)</h3>
+<p>Dois conjuradores que agem na mesma Iniciativa (ou um só, com Pressa) lançam juntos dois feitiços de escolas que ressoam. Cada um paga <strong>+5 de Mana</strong>; teste de Magia do mais fraco contra CD 15 + a soma dos círculos. Sucesso: soma os dados dos dois e vale o efeito composto. Falha: os dois gastam tudo e nada sai.</p>
+<table>
+<thead>
+<tr>
+<th>Par</th>
+<th>Efeito composto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chama + Vento</td>
+<td><strong>Fogo Corrido:</strong> a área dobra e o fogo anda 6 m por rodada por 2 rodadas</td>
+</tr>
+<tr>
+<td>Gelo + Vento</td>
+<td><strong>Granizo:</strong> quem está na área fica Lento e não enxerga a mais de 3 m</td>
+</tr>
+<tr>
+<td>Chama + Pedra</td>
+<td><strong>Magma:</strong> o chão vira lama de fogo por 1 cena (4d6 por rodada a quem fica)</td>
+</tr>
+<tr>
+<td>Luz + Chama</td>
+<td><strong>Meio-Dia:</strong> dano de luz; mortos-vivos e sombras não resistem pela metade</td>
+</tr>
+<tr>
+<td>Sombra + Mente</td>
+<td><strong>Pavor:</strong> quem falha em Vontade foge e não volta à cena</td>
+</tr>
+<tr>
+<td>Osso + Sangue</td>
+<td><strong>Colheita:</strong> metade do dano volta aos dois conjuradores como cura</td>
+</tr>
+<tr>
+<td>Elo + Tempo</td>
+<td><strong>Nó de Hora:</strong> o alvo preso também perde a Reação e a Ação Bônus</td>
+</tr>
+<tr>
+<td>Raiz + Pedra</td>
+<td><strong>Mata de Pedra:</strong> raízes de pedra: a prisão não se rompe por Força, só por magia ou ferramenta</td>
+</tr>
+<tr>
+<td>Vazio + qualquer</td>
+<td><strong>Buraco:</strong> o feitiço ignora defesa mágica de círculo menor que o do Vazio</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Opostas não se compõem.</strong> Tentar é Ruptura: cada um leva 2d8 × o círculo do próprio feitiço. O conjurador sabe que vai doer antes de tentar.</p>
+<hr />
+<h2 id="2-feiticos-novos-39-tres-por-escola">2. FEITIÇOS NOVOS (39; três por escola)</h2>
+<p>Entram na lista fechada. Aprendem-se como os outros. Com eles o grimório tem <strong>286 feitiços</strong>.</p>
+<table>
+<thead>
+<tr>
+<th>Escola</th>
+<th>Círculo</th>
+<th>Feitiço</th>
+<th>Efeito</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chama</td>
+<td>2º</td>
+<td><strong>Escudo de Cinza</strong></td>
+<td>Reação: uma nuvem de cinza quente; o ataque que vinha tem −4, e se era de gelo perde metade do dano</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Chama</td>
+<td>3º</td>
+<td><strong>Marca de Brasa</strong></td>
+<td>o alvo fica marcado em brasa por 1 cena: +2 em todo ataque contra ele, e ele não se esconde (Vontade CD 25)</td>
+<td>ataque</td>
+</tr>
+<tr>
+<td>Chama</td>
+<td>6º</td>
+<td><strong>Fênix de Forja</strong></td>
+<td>uma peça quebrada (durabilidade 0, não destruída) renasce na brasa com a durabilidade cheia; 1x por peça</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Gelo</td>
+<td>1º</td>
+<td><strong>Passo no Gelo</strong></td>
+<td>anda sobre água parada, lama e gelo fino sem afundar nem cair, por 1 cena</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Gelo</td>
+<td>3º</td>
+<td><strong>Espelho de Gelo</strong></td>
+<td>Reação: um feitiço de alvo único de até 3º círculo bate no espelho; d20 11+ volta para quem lançou</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Gelo</td>
+<td>5º</td>
+<td><strong>Coração Calmo</strong></td>
+<td>um aliado fica 1 cena imune a medo e fúria e para de sangrar; −2 na Iniciativa dele</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Pedra</td>
+<td>1º</td>
+<td><strong>Assentar</strong></td>
+<td>uma coisa fica firme por 1 hora: a porta emperra, a escada não escorrega, a carroça não tomba</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Pedra</td>
+<td>3º</td>
+<td><strong>Estilhaço</strong></td>
+<td>cone de 6 m de lascas: 6d6 (área) e Sangrando 1 rodada</td>
+<td>ataque</td>
+</tr>
+<tr>
+<td>Pedra</td>
+<td>5º</td>
+<td><strong>Bigorna do Mundo</strong></td>
+<td>uma bigorna de pedra viva sobe do chão: por 1 dia a oficina improvisada conta como Boa</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Vento</td>
+<td>1º</td>
+<td><strong>Queda Leve</strong></td>
+<td>Reação: quem cai de até 30 m pousa sem dano</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Vento</td>
+<td>3º</td>
+<td><strong>Fôlego Emprestado</strong></td>
+<td>um aliado ganha uma Reação a mais nesta rodada e age antes na próxima</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Vento</td>
+<td>6º</td>
+<td><strong>Olho do Furacão</strong></td>
+<td>um domo de calma de 6 m por 1 cena: de fora não entra vento, projétil nem som</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Luz</td>
+<td>1º</td>
+<td><strong>Vigília</strong></td>
+<td>um caído a 0 PV para de morrer (estável)</td>
+<td>cura</td>
+</tr>
+<tr>
+<td>Luz</td>
+<td>3º</td>
+<td><strong>Voto de Luz</strong></td>
+<td>por 1 cena, o próximo golpe que derrubaria o aliado o deixa com 1 PV (1x)</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Luz</td>
+<td>5º</td>
+<td><strong>Mão do Físico</strong></td>
+<td>lançado na hora em que alguém cai ou recua ferido: conta como Medicina por perto (−3 no dado do ferimento que dura). Não fecha ferida velha</td>
+<td>cura</td>
+</tr>
+<tr>
+<td>Raiz</td>
+<td>1º</td>
+<td><strong>Faro</strong></td>
+<td>segue o rastro de um bicho ou de uma pessoa de até um dia, por 1 hora</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Raiz</td>
+<td>3º</td>
+<td><strong>Vinha que Puxa</strong></td>
+<td>uma vinha arrasta um alvo 9 m ou arranca o que ele segura (Força CD 25)</td>
+<td>ataque</td>
+</tr>
+<tr>
+<td>Raiz</td>
+<td>4º</td>
+<td><strong>Chamar a Matilha</strong></td>
+<td>1d6 feras Comuns da região vêm e lutam por 1 cena</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Sombra</td>
+<td>1º</td>
+<td><strong>Dedo Leve</strong></td>
+<td>a sombra da mão pega um objeto pequeno a 9 m (+4 em Roubo)</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Sombra</td>
+<td>3º</td>
+<td><strong>Véu de Rosto</strong></td>
+<td>o rosto e a voz de outro por 1 hora (Percepção CD 25 para notar)</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Sombra</td>
+<td>6º</td>
+<td><strong>Sombra Guardada</strong></td>
+<td>a sombra de um aliado leva por ele um golpe mortal no dia; depois some por uma semana (ele não usa magia de Sombra nem se esconde bem)</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Sangue</td>
+<td>1º</td>
+<td><strong>Coágulo</strong></td>
+<td>para o próprio Sangrando e devolve 1d6 PV (não cobra PV)</td>
+<td>cura</td>
+</tr>
+<tr>
+<td>Sangue</td>
+<td>3º</td>
+<td><strong>Dívida de Sangue</strong></td>
+<td>por 1 cena, metade do dano que UM alvo marcado causar ao conjurador volta para ele</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Sangue</td>
+<td>6º</td>
+<td><strong>Pagar o Preço</strong></td>
+<td>por 1 dia, o conjurador paga em PV a conta de Sangue e de Osso de outro conjurador a até 9 m</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Osso</td>
+<td>1º</td>
+<td><strong>Osso de Ofício</strong></td>
+<td>um osso vira ferramenta simples por 1 dia (agulha, cunha, chave grossa)</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Osso</td>
+<td>3º</td>
+<td><strong>Costurar Osso</strong></td>
+<td>um servo danificado recupera 6d6; ou um osso quebrado de vivo solda (tira Ferido)</td>
+<td>cura</td>
+</tr>
+<tr>
+<td>Osso</td>
+<td>5º</td>
+<td><strong>Vigília de Osso</strong></td>
+<td>um servo de 1 dia (Servo de Osso, Reanimar, o do Toque) fica de pé mais 7 dias; um por vez</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Vazio</td>
+<td>1º</td>
+<td><strong>Fresta</strong></td>
+<td>abre por 1 minuto um buraco do tamanho de um punho numa parede fina (olhar, passar um bilhete)</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Vazio</td>
+<td>3º</td>
+<td><strong>Fenda de Passo</strong></td>
+<td>Ação Bônus: o conjurador sai de onde está e aparece a até 9 m, onde enxerga</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Vazio</td>
+<td>6º</td>
+<td><strong>Devolver</strong></td>
+<td>Reação: um feitiço de alvo único de até 5º círculo volta para quem lançou (teste de Magia contra o dele)</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Elo</td>
+<td>1º</td>
+<td><strong>Fio de Prumo</strong></td>
+<td>sabe a direção de um lugar onde deixou um nó, a até 100 km, por um mês</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Elo</td>
+<td>3º</td>
+<td><strong>Elo de Montaria</strong></td>
+<td>cavaleiro e montaria (ou cria) agem juntos por 1 dia: mesma Iniciativa, +2 em Montaria</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Elo</td>
+<td>5º</td>
+<td><strong>Troca</strong></td>
+<td>o conjurador troca de lugar com um aliado ligado a até 60 m</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Tempo</td>
+<td>1º</td>
+<td><strong>Eco</strong></td>
+<td>ouve de novo os últimos 10 segundos de som de um lugar</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Tempo</td>
+<td>3º</td>
+<td><strong>Passo Adiantado</strong></td>
+<td>Reação: +6 de Defesa contra um golpe, ou sai 3 m antes de ele chegar</td>
+<td>defesa</td>
+</tr>
+<tr>
+<td>Tempo</td>
+<td>6º</td>
+<td><strong>Obra Apressada</strong></td>
+<td>uma obra de ofício anda 3 dias em 1. Preço: a peça nasce cansada (−1 de durabilidade máxima por categoria)</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Mente</td>
+<td>1º</td>
+<td><strong>Voz Baixa</strong></td>
+<td>um sussurro que só um ouvido a 30 m escuta</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Mente</td>
+<td>3º</td>
+<td><strong>Ordem Muda</strong></td>
+<td>até 6 aliados a 60 m ouvem as ordens em silêncio por 1 cena: +2 na Iniciativa do grupo</td>
+<td>utilidade</td>
+</tr>
+<tr>
+<td>Mente</td>
+<td>4º</td>
+<td><strong>Véu de Pensamento</strong></td>
+<td>por 1 dia o alvo não pode ser lido nem sentido mentindo (Detectar Mentira, Ler a Superfície, Verdade até 5º)</td>
+<td>defesa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-aura-alta-e-artes-de-arma">3. AURA ALTA E ARTES DE ARMA</h2>
+<p>Faltava poder de verdade para o guerreiro de nível alto: a Aura parava no 2º círculo.</p>
+<h3 id="31-quantas-tecnicas">3.1 Quantas técnicas</h3>
+<ul>
+<li><strong>Luta Treinado:</strong> 1 técnica, até o 2º círculo.</li>
+<li><strong>Luta Mestre e nível 50:</strong> 2 técnicas, até o <strong>4º</strong>.</li>
+<li><strong>Luta Lendário e nível 150:</strong> 3 técnicas, até o <strong>6º</strong>.</li>
+<li><strong>+1 técnica a cada 50 níveis.</strong></li>
+<li>Custo: Estamina igual a <strong>círculo × 2</strong> (as de 1º e 2º continuam custando o círculo). Cada técnica vale <strong>1x por cena</strong>.</li>
+</ul>
+<h3 id="32-dano-das-artes">3.2 Dano das Artes</h3>
+<p>Uma Arte que fere causa <strong>o dano da arma + 2d6 × círculo</strong>, e o multiplicador da categoria da arma vale <strong>pela metade</strong> (mínimo ×1), como feitiço em área. Na ficha de combate entra como um feitiço da peça (o <code>luta.py</code> já roda assim).</p>
+<h3 id="33-as-artes-cada-arma-tem-tres-degraus">3.3 As Artes (cada arma tem três degraus)</h3>
+<table>
+<thead>
+<tr>
+<th>Arma</th>
+<th>2º círculo</th>
+<th>4º círculo</th>
+<th>6º círculo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Espada</strong></td>
+<td><strong>Fio Duplo:</strong> dois golpes no mesmo alvo, o segundo com −2</td>
+<td><strong>Corte Corrido:</strong> um golpe pega todos numa linha de 6 m</td>
+<td><strong>Corte do Horizonte:</strong> o golpe chega a 30 m e ignora metade da RD</td>
+</tr>
+<tr>
+<td><strong>Lança</strong></td>
+<td><strong>Ponta que Espera:</strong> Reação contra quem entra no alcance; se acerta, ele para</td>
+<td><strong>Chuva de Pontas:</strong> três golpes em três alvos a 3 m</td>
+<td><strong>Lança que Não Dobra:</strong> ignora RD e escudo; contra portão e muro, dano de cerco</td>
+</tr>
+<tr>
+<td><strong>Maça e martelo</strong></td>
+<td><strong>Quebra-Guarda:</strong> o alvo perde o escudo e −2 de Defesa por 1 rodada</td>
+<td><strong>Tremor de Ferro:</strong> todos a 3 m testam Força CD 25 ou caem</td>
+<td><strong>Bigorna:</strong> contra alvo caído ou preso, os dados dobram, e a armadura dele perde 1d6 de durabilidade</td>
+</tr>
+<tr>
+<td><strong>Machado</strong></td>
+<td><strong>Rachar:</strong> ignora 3 de RD e deixa Sangrando</td>
+<td><strong>Roda de Lâmina:</strong> ataca todos os que estão ao lado</td>
+<td><strong>Derrubar o Tronco:</strong> contra alvo maior que o guerreiro: ele perde 1 ataque por rodada até o fim da cena</td>
+</tr>
+<tr>
+<td><strong>Arco e besta</strong></td>
+<td><strong>Tiro Duplo:</strong> duas flechas, a segunda com −2</td>
+<td><strong>Flecha que Prega:</strong> o alvo fica Preso (Força CD 25)</td>
+<td><strong>Flecha que Não Cai:</strong> alcance de 1 km, ignora cobertura, crítico com 17-20</td>
+</tr>
+<tr>
+<td><strong>Escudo</strong></td>
+<td><strong>Empurrar a Parede:</strong> empurra 3 m e derruba (Força CD 20)</td>
+<td><strong>Guarda de Dois:</strong> Reação: anula um golpe num aliado ao lado</td>
+<td><strong>Muralha de Um Homem:</strong> por 3 rodadas ninguém passa por ele nem golpeia corpo a corpo quem está atrás</td>
+</tr>
+<tr>
+<td><strong>Punho e corpo</strong></td>
+<td><strong>Mão Aberta:</strong> desarma ou derruba (Agilidade CD 20)</td>
+<td><strong>Passo que Some:</strong> atravessa 9 m sem provocar ataque e golpeia pelas costas (+2)</td>
+<td><strong>Golpe no Sopro:</strong> o alvo fica Atordoado 1 rodada (Vigor CD 35; Lendário ou acima resiste com metade da CD)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="34-encadear-a-lei-12-no-aco">3.4 Encadear (a Lei 12 no aço)</h3>
+<ul>
+<li>Na mesma rodada, o guerreiro liga <strong>duas</strong> técnicas (duas Artes da mesma arma, ou uma Arte e uma Aura). Custo: a soma das duas <strong>+2</strong>. Teste de Luta contra CD 15 + a soma dos círculos.</li>
+<li><strong>Sucesso:</strong> valem os dois efeitos e a segunda rola os dados dobrados. <strong>Falha:</strong> perde a Estamina e a Ação.</li>
+<li><strong>O Remate:</strong> quem tem Luta Lendário encadeia <strong>três</strong>, 1x por dia. O guerreiro dá nome ao Remate dele; ele entra na ficha como habilidade própria e sobe de grau pelo uso.</li>
+</ul>
+<hr />
+<h2 id="4-o-despertar">4. O DESPERTAR</h2>
+<p>Nos níveis <strong>100, 200 e 300</strong> o personagem desperta: escolhe <strong>um Dom</strong> e não troca mais. No 200 pode tomar outro Dom ou o <strong>segundo grau</strong> do mesmo (o número dobra; o preço também). No 300 o Dom ganha nome próprio e entra nas canções.</p>
+<table>
+<thead>
+<tr>
+<th>Dom</th>
+<th>O que dá</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Segundo Coração</strong></td>
+<td>1x por dia, ao cair a 0 PV fica com 1 e age na vez dele</td>
+<td>depois da cena fica Exausto até dormir</td>
+</tr>
+<tr>
+<td><strong>Mão do Mundo</strong></td>
+<td>+2 em toda obra de ofício</td>
+<td>a marca dele é cobiçada: +1 na Cobiça de toda peça Épica ou acima que fizer</td>
+</tr>
+<tr>
+<td><strong>Olho Aberto</strong></td>
+<td>vê magia ativa e sente mentira grossa sem teste</td>
+<td>não descansa direito: recupera um quarto a menos de PV por noite</td>
+</tr>
+<tr>
+<td><strong>Sangue Grosso</strong></td>
+<td>Sangue e Osso cobram a metade do PV</td>
+<td>cura de Luz rende a metade nele</td>
+</tr>
+<tr>
+<td><strong>Voz de Mando</strong></td>
+<td>aliados a 30 m têm +1 no ataque e +2 na moral</td>
+<td>se ele cai, a tropa testa moral com −4</td>
+</tr>
+<tr>
+<td><strong>Pele do Mundo</strong></td>
+<td>RD +5 contra uma Essência escolhida</td>
+<td>o dano da Essência oposta soma +1 dado contra ele</td>
+</tr>
+<tr>
+<td><strong>Fôlego Sem Fundo</strong></td>
+<td>Estamina e Mana máximas +25%</td>
+<td>come por dois: sem ração dobrada, perde o Dom naquele dia</td>
+</tr>
+<tr>
+<td><strong>Sorte Velha</strong></td>
+<td>Fortuna máxima +1</td>
+<td>o Limiar de Revés cai 1</td>
+</tr>
+<tr>
+<td><strong>Nome que Anda</strong></td>
+<td>a reputação começa em +10 em todo lugar novo</td>
+<td>os inimigos também ouviram: um rival a mais no mundo</td>
+</tr>
+<tr>
+<td><strong>Mão que Doma</strong></td>
+<td>+1 no teto de servos e de crias; os laços com eles duram o dobro</td>
+<td>sente a morte de cada um deles (Atordoado 1 rodada quando um cai)</td>
+</tr>
+<tr>
+<td><strong>Passo Certo</strong></td>
+<td>nunca é surpreendido; +2 na Iniciativa</td>
+<td>dorme leve: qualquer barulho o acorda (não recupera Estamina inteira em acampamento)</td>
+</tr>
+<tr>
+<td><strong>Memória de Rei</strong></td>
+<td>um talento a mais, agora</td>
+<td>o próximo talento por nível atrasa 10 níveis</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Quem já passou do 100</strong> antes do Motor 9 escolhe agora (o rei, nível 156, tem um Despertar em aberto). Os NPCs da casa e do mundo que passaram recebem o deles no dado (d12) quando entrarem em cena.</li>
+</ul>
+<hr />
+<h2 id="5-talentos-novos-32">5. TALENTOS NOVOS (32)</h2>
+<p>Entram na lista fechada, nos mesmos níveis de sempre.</p>
+<h3 id="combate">Combate</h3>
+<table>
+<thead>
+<tr>
+<th>Talento</th>
+<th>Requisito</th>
+<th>Efeito e preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sentinela</td>
+<td>Luta Treinado</td>
+<td>quem sai do seu alcance provoca um golpe, e se ele acerta o alvo para onde está. Preço: você não persegue (−2 m de movimento em combate)</td>
+</tr>
+<tr>
+<td>Guarda de Escudo</td>
+<td>escudo e Vigor 60</td>
+<td>Reação: metade do dano de um feitiço ou sopro em área. Preço: −1 no ataque na rodada seguinte</td>
+</tr>
+<tr>
+<td>Mirar no Vão</td>
+<td>Luta ou Tiro Mestre</td>
+<td>aceite −4 no ataque: se acertar, ignora metade da RD. Declarar antes de rolar</td>
+</tr>
+<tr>
+<td>Braço Pesado</td>
+<td>Força 70 e arma de duas mãos</td>
+<td>aceite −4 no ataque: +1 dado de dano. Preço: errando, perde a Reação</td>
+</tr>
+<tr>
+<td>Lutador de Corredor</td>
+<td>Luta Treinado</td>
+<td>em lugar apertado (porta, túnel, escada) +2 de Defesa. Preço: em campo aberto, −1</td>
+</tr>
+<tr>
+<td>Mata-Fera</td>
+<td>ter matado 5 bichos do mesmo corpo</td>
+<td>escolha um corpo (réptil, inseto, morto-vivo...): +2 contra ele, e sabe a fraqueza de Essência ao ver. Preço: contra gente, −1 no primeiro golpe da luta</td>
+</tr>
+<tr>
+<td>Pés Leves</td>
+<td>Agilidade 70</td>
+<td>levantar e sair do alcance não gastam Movimento nem provocam golpe 1x por rodada. Preço: com armadura pesada não vale</td>
+</tr>
+<tr>
+<td>Costas com Costas</td>
+<td>Luta Treinado</td>
+<td>lutando colado a um aliado, nenhum dos dois sofre o Cerco (golpes a mais não tiram Defesa). Preço: se um cai, o outro perde a Reação</td>
+</tr>
+</tbody>
+</table>
+<h3 id="magia">Magia</h3>
+<table>
+<thead>
+<tr>
+<th>Talento</th>
+<th>Requisito</th>
+<th>Efeito e preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mão Firme</td>
+<td>Vontade 70</td>
+<td>+5 no teste de Concentração. Preço: −2 na Iniciativa enquanto se concentra</td>
+</tr>
+<tr>
+<td>Ritualista</td>
+<td>Magia Treinado</td>
+<td>faz Ritual em 10 minutos; aprende 2 feitiços de utilidade que só lança como ritual</td>
+</tr>
+<tr>
+<td>Escriba</td>
+<td>Encantamento Treinado</td>
+<td>escreve Pergaminho na metade do tempo e até o 7º círculo (com o componente). Preço: cada pergaminho leva a letra dele</td>
+</tr>
+<tr>
+<td>Duas Escolas</td>
+<td>Magia Mestre</td>
+<td>1x por dia lança sozinho um Feitiço Composto. Preço: depois fica sem Reação até o fim da cena</td>
+</tr>
+<tr>
+<td>Sangue por Mana</td>
+<td>Vigor 70</td>
+<td>troca 2 PV por 1 de Mana, até o círculo do feitiço × 2 por conjuração. Preço: esse PV não volta por magia, só por descanso</td>
+</tr>
+<tr>
+<td>Mestre do Choque</td>
+<td>Magia Mestre</td>
+<td>o Choque dele vale contra qualquer escola, não só a oposta. Preço: a Mana gasta dobra</td>
+</tr>
+</tbody>
+</table>
+<h3 id="oficio">Ofício</h3>
+<table>
+<thead>
+<tr>
+<th>Talento</th>
+<th>Requisito</th>
+<th>Efeito e preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Braço de Fornalha</td>
+<td>Forja Mestre</td>
+<td>Ação Bônus, 1x por cena: +2 no ataque e no dano com arma que ele mesmo forjou, por 3 rodadas. Preço: −2 na próxima obra do mesmo dia</td>
+</tr>
+<tr>
+<td>Ira da Bigorna</td>
+<td>Forja Mestre</td>
+<td>quando uma peça feita por ele quebra ou é destruída à vista: +1 dado de dano até o fim da cena. Preço: não recua nessa cena (não foge, não se rende)</td>
+</tr>
+<tr>
+<td>Obra sem Pressa</td>
+<td>Vontade 70</td>
+<td>aceite o dobro do tempo numa obra: +3 nela. Preço: se for interrompido antes do fim, perde o material</td>
+</tr>
+<tr>
+<td>Olho de Avaliador</td>
+<td>Percepção ou Inteligência 80</td>
+<td>avaliando uma peça alheia por 1 hora: sabe a categoria, os efeitos, o defeito e a mão que fez; 1x por lua tira dela um <strong>Fragmento</strong> de receita (Lei 13). Preço: o dono percebe que foi lido se tiver Empatia 70</td>
+</tr>
+<tr>
+<td>Desmanchar</td>
+<td>Treinado num ofício</td>
+<td>desmonta uma peça: volta metade do material; em peça Épica ou acima, d6 5-6 volta também o condutor. A peça se perde</td>
+</tr>
+<tr>
+<td>Fundir</td>
+<td>Forja Mestre</td>
+<td>funde duas peças do mesmo tipo: a melhor fica e herda <strong>um</strong> efeito da outra (teste de obra contra a CD da melhor). Falha: a pior se perde. 1 natural: as duas</td>
+</tr>
+<tr>
+<td>Mão que Faz Crescer</td>
+<td>Forja Lendário ou classe Forjador de Alma</td>
+<td>1x por estação forja uma <strong>Peça que Cresce</strong> (seção 7)</td>
+</tr>
+<tr>
+<td>Ferreiro de Tropa</td>
+<td>Série de Mestre 1</td>
+<td>uma Série inteira sai Sob Medida 1 para a companhia que a recebe (requisito de nível −10 para todos)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="influencia-e-governo">Influência e governo</h3>
+<table>
+<thead>
+<tr>
+<th>Talento</th>
+<th>Requisito</th>
+<th>Efeito e preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Legislador</td>
+<td>ser senhor de cidade</td>
+<td>um Édito a mais no teto (seção 10). Preço: revogar um édito custa o dobro de Legitimidade</td>
+</tr>
+<tr>
+<td>Mão Aberta</td>
+<td>Carisma 70</td>
+<td>obra pública e esmola dão +5 de reputação a mais na cidade. Preço: recusar pedido público custa −5</td>
+</tr>
+<tr>
+<td>Rei de Estrada</td>
+<td>ser senhor de reino</td>
+<td>a cidade onde o rei dorme ganha +1 de Ordem naquela semana. Preço: mais de uma lua fora, a capital perde 1 de Ordem</td>
+</tr>
+<tr>
+<td>Juiz</td>
+<td>Saber ou Empatia 70</td>
+<td>+2 em julgamento; sentença justa dá +1 de Legitimidade (1x por lua). Preço: perdoar por favor custa 2</td>
+</tr>
+<tr>
+<td>Patrono</td>
+<td>ter pago obra ou bolsa a uma guilda</td>
+<td>a reputação com toda guilda de ofício começa em +10. Preço: elas esperam ajuda (um pedido por estação)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="mundo">Mundo</h3>
+<table>
+<thead>
+<tr>
+<th>Talento</th>
+<th>Requisito</th>
+<th>Efeito e preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Batedor de Tumba</td>
+<td>Percepção 70</td>
+<td>nota sem teste armadilha de CD até 20; +2 contra as outras e para desarmar</td>
+</tr>
+<tr>
+<td>Criador de Feras</td>
+<td>Sobrevivência Treinado</td>
+<td>+2 em tudo com crias e montarias; a cria cresce um quarto mais rápido</td>
+</tr>
+<tr>
+<td>Cavaleiro de Fera</td>
+<td>Montaria Mestre</td>
+<td>monta fera Rara ou acima sem −4. Preço: cavalo comum o estranha (−2)</td>
+</tr>
+<tr>
+<td>Físico de Guerra</td>
+<td>Medicina Mestre</td>
+<td>a Medicina dele vale em dobro no dado do ferimento que dura (−6), e os dias de cama caem um quarto</td>
+</tr>
+<tr>
+<td>Memória de Mapa</td>
+<td>Inteligência 70</td>
+<td>nunca se perde em lugar onde já entrou; sair de uma masmorra conhecida não rende o +2 dos perigos da volta</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-classes-novas-onze-uma-por-familia">6. CLASSES NOVAS (onze, uma por família)</h2>
+<p>Mesmo formato do capítulo Classes. Abrem pela Trilha e pela Prova.</p>
+<ul>
+<li><strong>Monge de Ferro</strong> (AÇO, Raro)<ul>
+<li><strong>Punho Fechado</strong> (Passiva): sem arma, o punho conta como arma da categoria da <strong>armadura</strong> que ele veste, até Épico.</li>
+<li><strong>Passo que Some</strong> (Ativa, 3): a Arte de Punho do 4º círculo, sem contar no número de técnicas.</li>
+<li><strong>Corpo Calado</strong> (Passiva): +4 contra veneno, medo e doença.</li>
+<li><em>Fraqueza:</em> com arma na mão, perde tudo.</li>
+<li><em>Prova:</em> vencer armado alguém do mesmo nível, sem arma, diante de testemunhas.</li>
+</ul>
+</li>
+<li><strong>Invocador</strong> (CHAMA, Épico)<ul>
+<li><strong>Chamar pelo Nome</strong> (Ativa, 6): uma criatura de escola que ele já ergueu uma vez (Alma de Fornalha, Golem, Árvore que Anda) vem sem o componente, por 1 cena.</li>
+<li><strong>Dois de Pé</strong> (Passiva): mantém duas criaturas chamadas ao mesmo tempo.</li>
+<li><strong>Voz do Dono</strong> (Passiva): as criaturas dele agem na Iniciativa dele.</li>
+<li><em>Fraqueza:</em> se ele cai, as criaturas ficam soltas e atacam o mais próximo.</li>
+<li><em>Prova:</em> manter uma criatura chamada de pé por uma lua inteira.</li>
+</ul>
+</li>
+<li><strong>Físico de Campanha</strong> (VÉU, Raro)<ul>
+<li><strong>Mãos que Fecham</strong> (1 hora, 4): um ferimento que dura, tratado no mesmo dia, dura a <strong>metade</strong> dos dias; tratado depois, um quarto a menos. Não tira a marca.</li>
+<li><strong>Estancar</strong> (Bônus, 1): para o Sangrando e estabiliza um caído.</li>
+<li><strong>Olho de Febre</strong> (Passiva): sabe a doença e o veneno sem teste.</li>
+<li><em>Fraqueza:</em> jurou não negar cura: recusar um ferido custa a classe até a penitência.</li>
+<li><em>Prova:</em> atravessar uma batalha ou uma peste sem perder um ferido que chegou vivo.</li>
+</ul>
+</li>
+<li><strong>Batedor de Tumba</strong> (SOMBRA, Raro)<ul>
+<li><strong>Passo de Ladrão de Cova</strong> (Passiva): a primeira armadilha de cada masmorra não dispara nele.</li>
+<li><strong>Ler a Pedra</strong> (10 minutos, 2): sabe o tipo da sala seguinte (perigo, armadilha, tesouro, vazio) sem entrar.</li>
+<li><strong>Mão na Fenda</strong> (Ativa, 2): abre fechadura, selo simples ou porta escondida com vantagem.</li>
+<li><em>Fraqueza:</em> os mortos lembram: em cripta, o que habita o lugar o procura primeiro.</li>
+<li><em>Prova:</em> sair vivo, sozinho, de uma masmorra Rara ou acima com o que ela guardava.</li>
+</ul>
+</li>
+<li><strong>Mestre Alquimista</strong> (FORJA, Épico)<ul>
+<li><strong>Destilar Fino</strong> (1 dia, 4): poções até Épicas; duas doses por obra.</li>
+<li><strong>Frasco Certo</strong> (Passiva): a poção dele não estraga e pode ser jogada a 9 m.</li>
+<li><strong>Provar e Saber</strong> (Passiva): prova uma poção alheia e leva o Fragmento da receita.</li>
+<li><em>Fraqueza:</em> vive entre vapores: −2 em Vigor contra doença de pulmão e veneno de ar.</li>
+<li><em>Prova:</em> um remédio ou veneno que resolva o que a magia não resolveu.</li>
+</ul>
+</li>
+<li><strong>Cavaleiro de Elo</strong> (SELO, Épico)<ul>
+<li><strong>Laço de Sela</strong> (Passiva): ele e a montaria (cavalo ou cria) dividem PV e sentem um ao outro a qualquer distância.</li>
+<li><strong>Chamar</strong> (Ativa, 3): a montaria vem a ele de até 10 km, por onde puder.</li>
+<li><strong>Dois Corpos</strong> (Passiva): montado, soma metade da Força e da Agilidade da montaria.</li>
+<li><em>Fraqueza:</em> se a montaria morre, ele fica Amaldiçoado por uma lua.</li>
+<li><em>Prova:</em> domar pelo laço, sem ferro, uma fera Rara ou acima.</li>
+</ul>
+</li>
+<li><strong>Senhor de Feras</strong> (RAIZ, Épico)<ul>
+<li><strong>Ninhada</strong> (Passiva): o teto de crias dele é o dobro.</li>
+<li><strong>Língua da Fera</strong> (Passiva): fala com as crias dele como com gente; elas obedecem ordem de uma frase.</li>
+<li><strong>Caçar Junto</strong> (Ativa, 3): ele e uma cria atacam o mesmo alvo: os dois com vantagem.</li>
+<li><em>Fraqueza:</em> dentro de muralha, as feras ficam inquietas (−2 para ele e para elas em cidade).</li>
+<li><em>Prova:</em> criar até adulta uma cria de monstro Épico.</li>
+</ul>
+</li>
+<li><strong>Intendente de Guerra</strong> (OURO, Raro)<ul>
+<li><strong>Linha de Pão</strong> (Passiva): a tropa que ele abastece marcha um dia a mais e custa um quinto a menos.</li>
+<li><strong>Preço de Cerco</strong> (Passiva): em cidade cercada ou em campanha, os preços não sobem para a casa.</li>
+<li><strong>Achar no Livro</strong> (1 dia): encontra no reino o que falta (carroça, barca, grão, ferro) pela metade do tempo.</li>
+<li><em>Fraqueza:</em> sem livro e sem escrivão, nada funciona.</li>
+<li><em>Prova:</em> abastecer uma campanha inteira sem um dia de fome.</li>
+</ul>
+</li>
+<li><strong>Cantor de Feitos</strong> (VOZ, Épico)<ul>
+<li><strong>Compor</strong> (1 semana): transforma um feito em Canção (seção 11) com +5 no dado.</li>
+<li><strong>Refrão</strong> (Ativa, 3): aliados que ouvem ganham +1 no ataque e +2 contra medo por 1 cena.</li>
+<li><strong>A Verdade Canta Melhor</strong> (Passiva): canção sobre feito verdadeiro corre o dobro; a mentirosa volta contra ele.</li>
+<li><em>Fraqueza:</em> não pode calar um feito que viu, mesmo ruim para quem o paga.</li>
+<li><em>Prova:</em> uma canção dele cantada em três reinos.</li>
+</ul>
+</li>
+<li><strong>Armeiro dos Mortos</strong> (OSSO, Épico)<ul>
+<li><strong>Sob Medida para o Osso</strong> (Passiva): peça que ele forja ou ajusta para um servo vale como Sob Medida, e o servo usa peça uma categoria acima do que o nível dele deixaria.</li>
+<li><strong>Palavra Funda</strong> (Passiva): a palavra gravada custa 1d6 a menos de PV por aurora (mínimo 1).</li>
+<li><strong>Guarda da Cova</strong> (Ativa, 5): os servos a 30 m tomam a postura que ele mandar e ganham +2 de Defesa por 1 cena.</li>
+<li><em>Fraqueza:</em> a fé e o povo sabem o que ele é: −5 de reputação onde um servo armado dele for visto.</li>
+<li><em>Prova:</em> armar com as próprias mãos três servos que vençam uma luta sem ele.</li>
+</ul>
+</li>
+<li><strong>Rabdomante</strong> (FORTUNA, Raro)<ul>
+<li><strong>Vara que Treme</strong> (1 dia, 3): numa região, sabe a direção do veio, da água ou do <strong>núcleo</strong> mais próximo (d6: 1 engano).</li>
+<li><strong>Achar o que Falta</strong> (Passiva): 1x por semana, o material que falta para uma obra aparece à venda em algum lugar do reino (preço cheio).</li>
+<li><strong>Sorte de Garimpo</strong> (Passiva): um despojo a mais em cada bicho Raro ou acima.</li>
+<li><em>Fraqueza:</em> a vara cobra: cada achado grande soma 1 no Revés.</li>
+<li><em>Prova:</em> achar um veio ou um núcleo que ninguém sabia que existia.</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="7-itens-o-que-faltava">7. ITENS: o que faltava</h2>
+<h3 id="71-peca-que-cresce">7.1 Peça que Cresce</h3>
+<ul>
+<li>Só nasce pelo talento <strong>Mão que Faz Crescer</strong>, com o portador ao lado e o nome dele gravado. Nasce <strong>uma categoria abaixo</strong> do que a obra daria.</li>
+<li>A peça guarda os <strong>feitos</strong> do portador: cada chefe Épico ou acima morto com ela, cada guerra vencida, cada marco de 50 níveis dele conta 1. Com <strong>3 feitos</strong> sobe uma categoria (até o teto que a obra original permitia, mais uma); a cada subida ganha 1 efeito rolado pela Essência.</li>
+<li><strong>Preço:</strong> só serve ao dono. Em outra mão, vale duas categorias abaixo. Se o dono morre, ela para de crescer.</li>
+</ul>
+<h3 id="72-arma-viva">7.2 Arma Viva</h3>
+<ul>
+<li>Uma peça <strong>Mítica ou acima</strong> com um núcleo de criatura que falava, ou com uma alma presa (Prender a Alma), pode acordar: d20 na obra, <strong>19-20 acorda</strong> (com alma presa, 15-20).</li>
+<li>A arma viva tem <strong>nome, vontade e um desejo</strong> (gerador). Ajuda: 1x por cena dá vantagem num golpe ou avisa de um perigo. Atrapalha: se o dono age contra o desejo dela, Vontade CD 25 ou ela se recusa naquela cena.</li>
+<li>Ela cresce como Peça que Cresce e lembra de tudo o que viu (pode ser interrogada).</li>
+</ul>
+<h3 id="73-efeito-selado">7.3 Efeito Selado</h3>
+<ul>
+<li>Peça Épica ou acima achada em tesouro, ou feita com material que "quer ser outra coisa", pode trazer <strong>um efeito selado</strong>: existe, mas dorme. O Olho de Avaliador ou um extraordinário no saber dizem a <strong>condição</strong> (um feito, um lugar, um sangue). Cumprida, o efeito acorda de vez.</li>
+</ul>
+<h3 id="74-desmanchar-e-fundir">7.4 Desmanchar e Fundir</h3>
+<p>Pelos talentos do mesmo nome (seção 5). Sem o talento, desmanchar devolve um quarto do material e nunca o condutor.</p>
+<h3 id="75-consumiveis-lista-fechada">7.5 Consumíveis (lista fechada)</h3>
+<table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Categoria</th>
+<th>O que faz</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Poção de Sangue</strong></td>
+<td>Comum</td>
+<td>cura 2d6</td>
+<td>15</td>
+</tr>
+<tr>
+<td><strong>Poção de Sangue Forte</strong></td>
+<td>Raro</td>
+<td>cura 8d6</td>
+<td>150</td>
+</tr>
+<tr>
+<td><strong>Poção de Sangue Vivo</strong></td>
+<td>Épico</td>
+<td>cura 20d6 e tira Sangrando e Envenenado</td>
+<td>800</td>
+</tr>
+<tr>
+<td><strong>Poção de Mana</strong></td>
+<td>Incomum</td>
+<td>devolve 20 de Mana</td>
+<td>60</td>
+</tr>
+<tr>
+<td><strong>Poção de Mana Funda</strong></td>
+<td>Épico</td>
+<td>devolve 80 de Mana</td>
+<td>700</td>
+</tr>
+<tr>
+<td><strong>Fôlego de Ferro</strong></td>
+<td>Incomum</td>
+<td>devolve a Estamina inteira; depois da cena, Exausto 1 hora</td>
+<td>50</td>
+</tr>
+<tr>
+<td><strong>Contraveneno</strong></td>
+<td>Incomum</td>
+<td>tira veneno até Raro; +4 contra o próximo</td>
+<td>40</td>
+</tr>
+<tr>
+<td><strong>Caldo de Cova</strong></td>
+<td>Raro</td>
+<td>quem bebe não sente medo por 1 dia; não sente dor também (não sabe o PV que tem)</td>
+<td>120</td>
+</tr>
+<tr>
+<td><strong>Olho de Gato</strong></td>
+<td>Incomum</td>
+<td>vê no escuro por 1 dia</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>Pele de Lontra</strong></td>
+<td>Incomum</td>
+<td>respira debaixo d'água por 1 hora</td>
+<td>40</td>
+</tr>
+<tr>
+<td><strong>Óleo de Fio</strong></td>
+<td>Incomum</td>
+<td>a arma ignora 2 de RD por 1 cena</td>
+<td>30</td>
+</tr>
+<tr>
+<td><strong>Óleo de Essência</strong></td>
+<td>Raro</td>
+<td>a arma causa dano de uma Essência por 1 cena (acha a fraqueza)</td>
+<td>150</td>
+</tr>
+<tr>
+<td><strong>Óleo de Sal</strong></td>
+<td>Incomum</td>
+<td>a arma fere espírito e sombra como se fosse mágica, por 1 cena</td>
+<td>45</td>
+</tr>
+<tr>
+<td><strong>Verniz de Guarda</strong></td>
+<td>Raro</td>
+<td>a armadura ganha RD +3 contra uma Essência por 1 dia</td>
+<td>120</td>
+</tr>
+<tr>
+<td><strong>Frasco de Fogo</strong></td>
+<td>Incomum</td>
+<td>jogado a 9 m: 3d6 em 3 m (área), queima 1 rodada</td>
+<td>35</td>
+</tr>
+<tr>
+<td><strong>Frasco de Fumo</strong></td>
+<td>Comum</td>
+<td>6 m de fumaça por 3 rodadas</td>
+<td>10</td>
+</tr>
+<tr>
+<td><strong>Frasco de Trovão</strong></td>
+<td>Raro</td>
+<td>6 m: Atordoado 1 rodada (Vigor CD 25)</td>
+<td>130</td>
+</tr>
+<tr>
+<td><strong>Veneno de Sono</strong></td>
+<td>Raro</td>
+<td>na lâmina ou na taça: dorme 1 hora (Vigor CD 25)</td>
+<td>200 (proibido nas cidades)</td>
+</tr>
+<tr>
+<td><strong>Pão de Marcha</strong></td>
+<td>Comum</td>
+<td>um dia de marcha sem contar fome; dura um mês</td>
+<td>3</td>
+</tr>
+<tr>
+<td><strong>Mesa de Véspera</strong></td>
+<td>Raro (Mestre-Cuca)</td>
+<td>refeição antes da luta: +1d6 PV máximos e +1 contra medo até a noite, para até 10</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>Vela de Vigília</strong></td>
+<td>Incomum (templo)</td>
+<td>enquanto arde (8 horas), morto-vivo Comum ou Incomum não entra no cômodo</td>
+<td>25</td>
+</tr>
+<tr>
+<td><strong>Sal de Cova</strong></td>
+<td>Comum</td>
+<td>um círculo de sal: o morto dentro dele não levanta por magia de 4º círculo para baixo</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<p>Quem faz: Alquimista até Incomum; Mestre Alquimista até Épico; a obra segue a Lei do Valor. O mercado de cada cidade tem o que o estoque dela deixar.</p>
+<hr />
+<h2 id="8-monstros-o-que-faltava">8. MONSTROS: o que faltava</h2>
+<h3 id="81-tracos-novos-entram-no-gerador">8.1 Traços novos (entram no gerador)</h3>
+<table>
+<thead>
+<tr>
+<th>Traço</th>
+<th>Regra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>pele que devolve</strong></td>
+<td>quem o fere corpo a corpo leva um quarto do dano</td>
+</tr>
+<tr>
+<td><strong>enxame</strong></td>
+<td>golpe de um alvo só causa metade; área causa o dobro</td>
+</tr>
+<tr>
+<td><strong>agarra e arrasta</strong></td>
+<td>quem ele acerta fica Agarrado e é levado 6 m por rodada</td>
+</tr>
+<tr>
+<td><strong>cospe teia ou visgo</strong></td>
+<td>1x por rodada prende um alvo a 18 m (Força CD 10 + nível ÷ 10)</td>
+</tr>
+<tr>
+<td><strong>sangue que queima</strong></td>
+<td>cada golpe cortante nele espirra: 1d6 × degrau em quem está ao lado</td>
+</tr>
+<tr>
+<td><strong>casca que racha</strong></td>
+<td>abaixo da metade do PV perde a couraça (RD à metade) e ganha +1 ação</td>
+</tr>
+<tr>
+<td><strong>duas vidas</strong></td>
+<td>ao cair, levanta 1x com um quarto do PV e outra Essência</td>
+</tr>
+<tr>
+<td><strong>sombra própria</strong></td>
+<td>no escuro age duas vezes; sob luz forte perde 1 ação</td>
+</tr>
+<tr>
+<td><strong>rouba o fôlego</strong></td>
+<td>cada golpe dele tira 2 de Estamina ou Mana</td>
+</tr>
+<tr>
+<td><strong>cria no ventre</strong></td>
+<td>ao morrer solta 1d6 crias (um degrau abaixo); uma delas pode ser levada viva</td>
+</tr>
+<tr>
+<td><strong>ouve o nome</strong></td>
+<td>quem diz o nome dele em voz alta vira o alvo; dizer o nome verdadeiro o cala 1 rodada</td>
+</tr>
+<tr>
+<td><strong>come magia</strong></td>
+<td>o primeiro feitiço de cada rodada contra ele cura em vez de ferir (salvo o da fraqueza)</td>
+</tr>
+<tr>
+<td><strong>faro de ferida</strong></td>
+<td>escolhe sempre quem tem menos PV; +2 contra feridos</td>
+</tr>
+<tr>
+<td><strong>dono de território</strong></td>
+<td>no covil dele, o covil age duas vezes por rodada</td>
+</tr>
+<tr>
+<td><strong>velho demais</strong></td>
+<td>já viu de tudo: imune a medo e a surpresa; sabe uma língua de gente</td>
+</tr>
+<tr>
+<td><strong>carrega um tesouro</strong></td>
+<td>o tesouro do covil rola duas vezes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="82-resistencia-lendaria">8.2 Resistência Lendária</h3>
+<p>Lendário 1, Mítico 2, Primordial 3 vezes por dia: o bicho ou a pessoa <strong>transforma em sucesso uma resistência que falhou</strong> (prisão, medo, domínio, sono, o levantar do Toque do Ceifador, o Domar). Não vale contra dano.</p>
+<h3 id="83-fases">8.3 Fases</h3>
+<p>Todo chefe <strong>Único ou acima</strong> tem uma segunda fase aos <strong>50% do PV</strong>: a Fúria que já existia (+1 ação, o poder recarrega) e mais <strong>uma mudança rolada</strong> (d6): 1 troca de Essência · 2 chama crias · 3 o covil muda (outro efeito) · 4 foge para outra sala do covil e a luta recomeça lá · 5 perde a fraqueza conhecida e ganha outra · 6 fala: oferece um trato (Lei 15).</p>
+<h3 id="84-nomeados">8.4 Nomeados</h3>
+<p>De cada vinte bichos <strong>Raros ou acima</strong> que o gerador faz, um é <strong>nomeado</strong> (d20 = 20): +20% de nível, um traço a mais, despojo dobrado, XP em dobro. Quem mata um nomeado <strong>primeiro</strong> ganha um título com efeito (G22) e a notícia corre.</p>
+<h3 id="85-crias-e-montarias-regra-g25">8.5 Crias e montarias (regra G25)</h3>
+<ul>
+<li><strong>De onde vêm:</strong> do traço "cria no ventre", do ninho num covil (o tesouro do covil 20, ou a fraqueza "a cria"), de compra rara, do feitiço Chamar a Matilha (só Comuns).</li>
+<li><strong>Criar:</strong> uma cria leva <strong>uma lua por degrau</strong> do bicho para ficar adulta (Comum 1 ... Épico 4, Único 5). Come por semana <strong>degrau × 20</strong> de ouro em carne. Sem laço, foge ou ataca ao crescer (d6 1-3).</li>
+<li><strong>O laço:</strong> o feitiço Elo de Montaria renovado, o Laço de Servo, o Domar, ou as classes Domador, Senhor de Feras e Cavaleiro de Elo. Com laço, a cria obedece.</li>
+<li><strong>O que ela é:</strong> adulta, tem <strong>metade do nível do bicho que a pôs</strong> e sobe com XP como um NPC da casa, até o nível do pai. Guarda corpo, Essência, um traço e o poder.</li>
+<li><strong>Montaria:</strong> uma cria do tamanho de cavalo ou maior carrega o dono. Voando ou nadando, a viagem cai à metade. Em luta entra como aliado.</li>
+<li><strong>Teto:</strong> uma cria por 100 níveis do dono (mínimo 1); o Dom Mão que Doma e a Ninhada somam.</li>
+<li><strong>O mundo:</strong> fera em cidade assusta: −2 de Ordem naquela semana se andar solta; presa e mostrada, vira orgulho da cidade (+5 de reputação, uma vez).</li>
+</ul>
+<hr />
+<h2 id="9-masmorra-o-que-faltava">9. MASMORRA: o que faltava</h2>
+<h3 id="91-a-armadilha-tem-tipo-d12-ao-entrar-na-sala-de-armadilha">9.1 A armadilha tem tipo (d12, ao entrar na sala de armadilha)</h3>
+<table>
+<thead>
+<tr>
+<th>d12</th>
+<th>Armadilha</th>
+<th>Além do dano do degrau</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>fosso com estacas</td>
+<td>Caído; sair leva 1 rodada</td>
+</tr>
+<tr>
+<td>2</td>
+<td>dardos na parede</td>
+<td>Envenenado</td>
+</tr>
+<tr>
+<td>3</td>
+<td>laje que desce</td>
+<td>a sala se fecha: Força CD 20 + degrau × 3 para abrir, ou 1 hora</td>
+</tr>
+<tr>
+<td>4</td>
+<td>gás de sono</td>
+<td>dorme 1 hora (Vigor); os perigos da sala seguinte vêm</td>
+</tr>
+<tr>
+<td>5</td>
+<td>fogo de runa</td>
+<td>Queimando; apaga com Desfazer</td>
+</tr>
+<tr>
+<td>6</td>
+<td>lâmina de pêndulo</td>
+<td>Sangrando</td>
+</tr>
+<tr>
+<td>7</td>
+<td>teto que cai</td>
+<td>Preso até ser cavado (10 minutos)</td>
+</tr>
+<tr>
+<td>8</td>
+<td>água que sobe</td>
+<td>3 rodadas para sair ou começa a afogar</td>
+</tr>
+<tr>
+<td>9</td>
+<td>espelho que prende</td>
+<td>o primeiro que olha fica Enfeitiçado 1 cena (Vontade)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>chão falso para outra sala</td>
+<td>cai na sala seguinte, sozinho</td>
+</tr>
+<tr>
+<td>11</td>
+<td>alarme</td>
+<td>sem dano: +2 em todos os perigos do lugar até sair</td>
+</tr>
+<tr>
+<td>12</td>
+<td>maldição do dono</td>
+<td>Amaldiçoado até sair do lugar (ou Purificar)</td>
+</tr>
+</tbody>
+</table>
+<p>Desarmar: Roubo ou a classe certa contra a mesma CD de notar. Falha por 5 ou mais dispara.</p>
+<h3 id="92-enigma-em-sala-de-segredo-d8">9.2 Enigma (em sala de SEGREDO, d8)</h3>
+<p>1 inscrição em língua velha (Saber) · 2 porta de peso (o que se põe na balança) · 3 ordem de alavancas (Inteligência; 3 tentativas) · 4 um nome a dizer (o lugar dá a pista) · 5 estátua que pede oferenda (o que o dono amava) · 6 espelho que mostra a sala como era (Percepção) · 7 porta que só abre a um sangue ou a uma fé · 8 guardião que faz uma pergunta e não mente.</p>
+<h3 id="93-o-relogio-da-masmorra">9.3 O relógio da masmorra</h3>
+<p>Da <strong>quarta sala</strong> em diante, ao entrar em cada sala role d6: com <strong>1</strong>, o lugar acordou: um perigo de uma sala ainda não vista vem até a casa (sem surpresa para nenhum lado). Barulho grande (luta de 3 rodadas ou mais, feitiço de 5º para cima) soma 1 à chance na sala seguinte.</p>
+<h3 id="94-descansar-la-dentro">9.4 Descansar lá dentro</h3>
+<p>Dormir numa masmorra só em sala limpa e fechada: a noite cura a metade, e o relógio rola duas vezes.</p>
+<hr />
+<h2 id="10-leis">10. LEIS</h2>
+<h3 id="101-as-leis-do-jogo-indice-do-que-ja-valia">10.1 As leis do jogo (índice do que já valia)</h3>
+<p>As dezesseis Leis do Motor não mudam. As leis da casa, pela ordem em que nasceram: a Lei do Valor (201) · a Lei da Fera (202) · a Lei das Ações (203) · o Cerco (205) · os Dois Dados (207) · a Lei das Caçadas (339: nenhuma caçada com mais de 2% de morte para um dos nossos, pela régua, quando a régua for pedida) · sem régua na mesa (362) · G1 a G24 (protocolo) · e este Livro Nove (G25 a G34).</p>
+<h3 id="102-o-codigo-de-ireviel-os-editos-do-rei">10.2 O Código de Ireviel (os éditos do rei)</h3>
+<p>Um reino se governa por lei escrita. O rei propõe um <strong>édito</strong>, o conselho vota (<code>conselho.py</code>; tudo passa pela Intendente) e ele vale a partir do tick semanal seguinte.</p>
+<ul>
+<li><strong>Teto:</strong> éditos em vigor ao mesmo tempo = <strong>2 + Legitimidade ÷ 3</strong> (arredonda para baixo).</li>
+<li><strong>Passar por cima do voto</strong> do conselho: o édito vale, e a Legitimidade cai 1.</li>
+<li><strong>Revogar</strong> antes de uma lua custa 1 de Legitimidade; depois, nada.</li>
+<li>Um édito vale no <strong>reino inteiro</strong>, salvo os que dizem "numa cidade".</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Édito</th>
+<th>O que dá</th>
+<th>Preço</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>da Feira Franca</strong> (numa cidade)</td>
+<td>Comércio +1 nela; mercadores de fora chegam (uma novidade de mercado por lua)</td>
+<td>a portagem dessa cidade cai à metade</td>
+</tr>
+<tr>
+<td><strong>do Grão Guardado</strong></td>
+<td>celeiros do reino: Comida +1 em toda cidade no inverno e em cerco</td>
+<td>100 por semana</td>
+</tr>
+<tr>
+<td><strong>da Ronda</strong></td>
+<td>Ordem +1 em toda cidade</td>
+<td>140 por semana por cidade</td>
+</tr>
+<tr>
+<td><strong>do Ofício Livre</strong></td>
+<td>qualquer um abre oficina sem pedir à guilda: um pedido a mais por semana no Fundo dos Ofícios</td>
+<td>reputação −10 com as guildas de ofício</td>
+</tr>
+<tr>
+<td><strong>da Caça Paga</strong></td>
+<td>o reino paga por parte de monstro: as guildas caçam os bichos do reino com +2 no dado delas, e o rei tem a primeira compra de todo núcleo</td>
+<td>200 por semana em prêmios</td>
+</tr>
+<tr>
+<td><strong>do Osso</strong></td>
+<td>os servos do rei andam dentro da lei: a perda de reputação da G23 não acontece no reino</td>
+<td>reputação −10 com a Mão Queimada e com o Templo do Rio; a Vigília manda um observador</td>
+</tr>
+<tr>
+<td><strong>da Mão Livre</strong></td>
+<td>acaba o trabalho forçado: Legitimidade +1 e reputação +10 em toda cidade</td>
+<td>perde o desconto das obras (G6); os forçados soltos escolhem ficar ou ir (dado)</td>
+</tr>
+<tr>
+<td><strong>do Sal</strong></td>
+<td>o sal é do rei: Dinheiro +1 na capital</td>
+<td>o contrabando sobe (um evento de contrabando por lua); reputação −10 no Delta</td>
+</tr>
+<tr>
+<td><strong>do Chamado</strong></td>
+<td>20 lanças novas por lua, sem pedir peça</td>
+<td>Ordem −1 e Comida −1 enquanto valer</td>
+</tr>
+<tr>
+<td><strong>do Colégio</strong></td>
+<td>toda criança com dom vai ao Colégio: um aprendiz de mago por estação entra na casa</td>
+<td>150 por semana; as famílias que perdem braços reclamam (reputação −5 no campo)</td>
+</tr>
+<tr>
+<td><strong>da Moeda</strong></td>
+<td>Ireviel cunha moeda: prestígio +1, e o Dinheiro da capital não recua por evento de fora</td>
+<td>a oficina de cunho (obra de 2.000) e um mestre; moeda falsa vira crime de traição</td>
+</tr>
+<tr>
+<td><strong>do Físico</strong></td>
+<td>casas de cura: Saúde +1 em toda cidade; os feridos da casa tratados nelas têm −3 no dado do ferimento</td>
+<td>120 por semana por cidade</td>
+</tr>
+<tr>
+<td><strong>da Estrada</strong></td>
+<td>patrulha e marco: viagem da casa dentro do reino um quarto mais rápida; menos assalto</td>
+<td>100 por semana; pedágio que os mercadores pagam de cara feia (Comércio não avança por dado nessa lua)</td>
+</tr>
+<tr>
+<td><strong>da Fé do Reino</strong></td>
+<td>uma fé vira a do reino: a bênção dela (seção 12) vale para a casa sem o voto pessoal</td>
+<td>reputação −10 com todas as outras fés</td>
+</tr>
+<tr>
+<td><strong>da Carta às Guildas</strong></td>
+<td>toda guilda no reino se registra: reputação +5 com as registradas e o rei sabe a força de cada uma</td>
+<td>as que recusam viram hostis; aventureiro sem registro é preso</td>
+</tr>
+<tr>
+<td><strong>do Juízo</strong></td>
+<td>um tribunal fixo julga sem o rei: Legitimidade +1 por estação sem execução sumária</td>
+<td>o rei não perdoa nem condena sozinho enquanto valer</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="11-cancoes-de-feito">11. CANÇÕES DE FEITO</h2>
+<p>Um feito grande só vira poder quando o mundo o canta.</p>
+<ul>
+<li><strong>O que conta:</strong> matar um Lendário ou acima; vencer uma guerra; forjar uma peça Primordial; limpar primeiro uma masmorra Única ou acima; salvar ou perder uma cidade.</li>
+<li><strong>Quem canta:</strong> um bardo da casa (classe VOZ) ou um contratado (500). O Cantor de Feitos soma +5.</li>
+<li><strong>O dado (d20 + Fama):</strong><ul>
+<li>até 5: a canção não pega.</li>
+<li>6 a 15: pega na região: reputação +5 nas cidades dela.</li>
+<li>16 a 19: <strong>corre o mundo:</strong> +1 de Fama e <strong>+1 permanente num atributo</strong> ligado ao feito (o jogador escolhe entre dois que o Mestre oferece).</li>
+<li>20 ou mais: tudo isso e um <strong>título com efeito</strong> (G22).</li>
+</ul>
+</li>
+<li><strong>Limite:</strong> uma canção por lua. <strong>Preço (Lei 6):</strong> cada canção que corre o mundo anda 1 no relógio de um rival ou de um inimigo, que também a ouviu.</li>
+</ul>
+<hr />
+<h2 id="12-as-bencaos-das-fes">12. AS BÊNÇÃOS DAS FÉS</h2>
+<p>Cada fé pública dá uma bênção a quem faz o <strong>voto</strong> dela. Uma bênção por pessoa. Quebrar o voto tira a bênção e custa 10 de reputação com a fé.</p>
+<table>
+<thead>
+<tr>
+<th>Fé</th>
+<th>O voto</th>
+<th>A bênção</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A Vigília</strong></td>
+<td>não acordar o que dorme: nunca abrir cova, mina funda ou selo antigo sem o rito</td>
+<td>+4 contra doença; os doentes da Febre não o contagiam</td>
+</tr>
+<tr>
+<td><strong>A Mão Queimada</strong></td>
+<td>dar a mão ao fogo (dano de fogo e a cicatriz) e forjar uma peça por estação para a fé</td>
+<td>+2 no Processo; a forja não o queima</td>
+</tr>
+<tr>
+<td><strong>A Escola Única</strong></td>
+<td>guardar um segredo de magia e não ensiná-lo fora da Escola</td>
+<td>um feitiço a mais por aula; o Colégio abre a biblioteca</td>
+</tr>
+<tr>
+<td><strong>O Sono Verde</strong></td>
+<td>não derrubar árvore viva nem queimar mata</td>
+<td>a mata não o perde nem o fere: bicho Comum não o ataca primeiro</td>
+</tr>
+<tr>
+<td><strong>O Templo do Rio</strong></td>
+<td>dar à água os mortos do rio</td>
+<td>não se afoga; +2 em barca; os mortos da água não o atacam primeiro</td>
+</tr>
+<tr>
+<td><strong>A Chama sob a Areia</strong></td>
+<td>nunca vender vaduar</td>
+<td>+2 contra fogo e calor; acha água no deserto</td>
+</tr>
+<tr>
+<td><strong>A Agulha</strong></td>
+<td>cumprir todo contrato até a letra</td>
+<td>1x por lua, um juramento feito a ele não pode ser quebrado sem que ele saiba</td>
+</tr>
+<tr>
+<td><strong>O Céu Aberto</strong></td>
+<td>dar um cavalo ao céu por ano</td>
+<td>lê o tempo de amanhã sem errar; +2 contra frio</td>
+</tr>
+<tr>
+<td><strong>O Sino</strong></td>
+<td>todo morto que erguer tem nome e volta à cova quando o serviço acabar</td>
+<td>os servos dele não se viram contra ele; Osso cobra 1d6 a menos</td>
+</tr>
+<tr>
+<td><strong>As Velas</strong></td>
+<td>pagar ao mar antes de zarpar (uma moeda por cabeça)</td>
+<td>a primeira tempestade de cada viagem passa ao largo</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="13-os-jogos-das-cidades">13. OS JOGOS DAS CIDADES</h2>
+<p>Uma vez por ano, na <strong>Lua do Vinho</strong>, uma cidade grande chama os Jogos (o dado do evento de mundo, ou o rei que os paga: 2.000). Quatro provas, cada uma um teste aberto contra os melhores do mundo que vieram:</p>
+<ul>
+<li><strong>o Duelo</strong> (Luta), <strong>a Forja</strong> (uma obra em três dias, à vista), <strong>as Barcas</strong> (corrida no rio) e <strong>o Canto</strong>.</li>
+<li>Vencer uma prova: um título com efeito, reputação +10 na cidade dos Jogos e +5 nas outras. Vencer a Forja põe o nome do ferreiro na boca dos Lendários (Lei 6: encomendas e cobiça).</li>
+<li>Os Jogos juntam gente que não se junta: guildas, enviados e inimigos na mesma praça, com trégua de sete dias.</li>
+</ul></div></section></main>
 <script>
 const DATA={"REG": [["Reino de Ireviel", "casa", 588, 585, 48, 128, ["O rei Ferir e o conselho real. Capital Ireviel (~14.000).", "Levis (Brara), o Porto de Marasar, a Forquilha e Farenta (tomada no 356)."]], ["Marasar", "skotha", 665, 738, 34, 22, ["A Doge Skotha Graskur (Lendária). Aliada +5.", "O cais é de Ireviel."]], ["O Delta e o Brejo", "delta", 480, 730, 70, 32, ["Ninguém manda sozinho: os Do Junco, a Guilda do Sal, a Altheltia, a Lurentetta.", "No brejo: Ninnane e Dragal (canção de coveiro)."]], ["As Montanhas Hegre", "cla", 560, 295, 100, 48, ["O Clã Hegre (o Hrotgar). Gogrunn, as Fundas, Vrogur, Ululge, Braron.", "O Kredun toma terra do Clã. Relação +1."]], ["Steunn", "livre", 705, 330, 42, 34, ["Cidade livre de pedra, os mestres do bronze. O Borecci (Mítico).", "Relação +2."]], ["Kremir e Zisrir", "neutro", 350, 380, 80, 58, ["Clãs das colinas e o vale de ruínas. O Maneus; o Adurel; os Sem-Torre."]], ["Telosus e o Oeste", "fe", 265, 535, 72, 52, ["O Colégio (Ceduion) e a fé da Mamiltia (Primordial).", "Zieth (a Vigília), Zaivil, Kasron."]], ["O Deserto de Sal", "neutro", 830, 545, 105, 72, ["Yaelane (Clã Eloulane, o veio-mãe), Shizess (as caravanas), Mordun, Brathen.", "O Thargos (Mítico), o Fenron."]], ["As Montanhas de Fogo", "perigo", 945, 420, 40, 90, ["Pedra preta e vapor. Uma só passagem: o Passo da Cinza.", "O Ithvil (Mítico) dorme fundo."]], ["O Sul da Areia", "neutro", 905, 745, 85, 40, ["As tribos da areia. Syzh, o oásis; Ulek, o templo caído.", "A Guardiã da Tenaz (Lendária)."]], ["O Norte", "liga", 620, 160, 140, 60, ["A coroa da Leliel (Lendária), fugida de Farenta. Corte em Eiest.", "EM GUERRA com o reino."]], ["Kasra, a Marca dos Fortes", "kasra", 150, 230, 95, 75, ["Os fortes do reino de cavaleiros caído há 200 anos. Os mortos de guarda.", "A Ordem do Sino, em Dreska."]], ["Zaitor, as Estepes", "zaitor", 905, 160, 120, 70, ["Os khanatos dos cavaleiros e o Khan. Stind, o acampamento; Geunn, a travessia.", "Vendem cavalos ao Norte."]], ["Qulosus, a Costa do Cobre", "qulosus", 140, 665, 85, 60, ["A República dos Bancos (doze banqueiros). Roreetta e Ginirza.", "Cobre e estanho; a dívida é lei."]], ["Quramnar, o Reino do Leste", "quramnar", 1070, 480, 70, 140, ["O Trono de Quramnar, a rainha e as Nove Casas. Iriavis (~60.000), Boninda, Serrarva.", "O culto da Agulha (o Tecelão)."]], ["Ulra, as Ilhas do Sul", "ulra", 720, 862, 95, 30, ["As Capitanias e o Conselho das Velas. Ragra, o porto franco; Naane; Yaniel."]]], "CID": [["Ireviel", 590, 690, 3, "casa"], ["a Forquilha", 586, 662, 1, "casa"], ["Levis", 575, 470, 2, "casa"], ["Farenta", 760, 712, 2, "casa"], ["Marasar", 662, 740, 2, "skotha"], ["Salinas Velhas", 505, 748, 1, "delta"], ["Ninnane", 462, 705, 1, "delta"], ["Dragal?", 440, 725, 1, "perigo"], ["Brassa", 548, 720, 1, "perigo"], ["Hassa", 612, 784, 1, "perigo"], ["Haol", 690, 768, 1, "perigo"], ["Costa Quebrada", 430, 770, 1, "perigo"], ["Lumgal", 515, 470, 1, "neutro"], ["Lumade", 465, 482, 1, "neutro"], ["Mata de Elais", 520, 585, 1, "neutro"], ["Ulnar", 580, 430, 1, "neutro"], ["Gogrunn", 535, 320, 2, "cla"], ["as Fundas", 605, 300, 2, "cla"], ["Vrogur", 585, 262, 1, "cla"], ["Braron", 650, 300, 1, "perigo"], ["Steunn", 705, 330, 2, "livre"], ["Kremir", 385, 420, 2, "neutro"], ["Zisrir", 315, 335, 1, "neutro"], ["Telosus", 250, 520, 2, "fe"], ["Zieth", 300, 565, 1, "fe"], ["Zaivil", 360, 560, 1, "perigo"], ["Kasron?", 430, 590, 1, "perigo"], ["Shizess", 770, 520, 2, "neutro"], ["Yaelane", 865, 585, 2, "neutro"], ["Mordun", 830, 470, 1, "perigo"], ["Brathen", 735, 600, 1, "perigo"], ["Syzh", 905, 760, 1, "neutro"], ["Ulek", 965, 725, 1, "perigo"], ["Eiest", 620, 160, 2, "liga"], ["Dreska", 140, 230, 2, "kasra"], ["Ralgir", 205, 300, 1, "perigo"], ["Stind", 905, 140, 2, "zaitor"], ["Geunn", 820, 195, 1, "zaitor"], ["Roreetta", 115, 690, 2, "qulosus"], ["Ginirza", 185, 620, 1, "qulosus"], ["Iriavis", 1060, 470, 3, "quramnar"], ["Boninda", 1100, 570, 2, "quramnar"], ["Serrarva", 1010, 375, 1, "quramnar"], ["Ragra", 720, 855, 2, "ulra"], ["Naane", 640, 872, 1, "ulra"], ["Yaniel", 800, 878, 1, "ulra"]], "GRANDES": [["MAMILTIA", "Primordial", 265, 500, "fe"], ["CELOCUS", "Mítico", 470, 500, "neutro"], ["LURENTETTA", "Mítica", 490, 760, "delta"], ["BORECCI", "Mítico", 725, 345, "livre"], ["Skotha", "Lendária", 680, 725, "skotha"], ["Teraseth", "Lendário", 600, 640, "casa"], ["Leliel", "Lendária", 650, 170, "liga"], ["Altheltia", "Lendária", 475, 745, "delta"], ["Adurel", "Lendário", 330, 320, "neutro"], ["Ceduion", "Lendário", 235, 540, "fe"], ["Eiandald", "Lendário", 880, 595, "neutro"], ["Garkunn", "Lendário", 845, 460, "perigo"], ["Guardiã da Tenaz", "Lendária", 930, 770, "neutro"], ["Qunemneth", "Lendário", 648, 752, "skotha"], ["Almision", "Lendária", 420, 640, "neutro"]], "FERAS": [["Mãe Branca (Primordial, dorme)", 600, 235], ["Kredun (Mítico)", 640, 280], ["Elaeva (Mítico)", 390, 470], ["Thargos (Mítico)", 815, 455], ["Ithvil (Mítico)", 955, 400], ["Maneus", 370, 400], ["Vathexa", 725, 315], ["Varogh", 540, 600], ["Kervos", 570, 520], ["Eloune", 555, 760], ["Husgarn", 800, 740], ["Laennor", 505, 765]], "C": {"casa": "#b3412e", "skotha": "#c9772b", "liga": "#7a4e9c", "cla": "#3f7a4a", "livre": "#2e6f8f", "delta": "#4f8a7b", "fe": "#a8861c", "neutro": "#8a7a5e", "perigo": "#2b2b2b", "kasra": "#56616e", "zaitor": "#8c5a2b", "qulosus": "#b8683a", "quramnar": "#8e2f5e", "ulra": "#2f8a8a"}, "N": {"casa": "Reino de Ireviel", "skotha": "A Doge Skotha", "liga": "A Leliel (em guerra)", "cla": "O Clã Hegre", "livre": "Cidade livre", "delta": "O Delta", "fe": "Telosus e a fé", "neutro": "Sem dono / neutro", "perigo": "Perigo ou ruína", "kasra": "Kasra", "zaitor": "Zaitor", "qulosus": "Qulosus", "quramnar": "Quramnar", "ulra": "Ulra"}};
 const NS='http://www.w3.org/2000/svg';

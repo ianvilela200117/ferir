@@ -7,6 +7,7 @@ Cada habilidade tem GRAU e sobe PELO USO, como no Satisfy: usar em cena conta; c
 
 Uso:
   python3 habilidades.py ver
+  python3 habilidades.py mao                     G24: o que o rei pode usar AGORA (carga e custo): a linha 🛠️ do turno
   python3 habilidades.py add "Nome" Ativa|Passiva|Reação|Postura|Magia "efeito" [grau=N] [usos=N] [cargas=N] [origem="classe/talento/peça"]
   python3 habilidades.py usa "Nome" [N]          conta N usos (padrão 1); avisa e anota quando sobe de grau
   python3 habilidades.py carga "Nome" -1|+1|cheio
@@ -50,6 +51,17 @@ def main():
         if S.get('pericias'): print('PERÍCIAS: ' + ' · '.join(f'{k} {v}' for k, v in S['pericias'].items()))
         if S['titulos']: print('TÍTULOS'); [print(f'  {t["nome"]}: {t["efeito"]} · {t["como"]} (Dia {t["dia"]})') for t in S['titulos']]
         if S['talentos']: print('TALENTOS'); [print(f'  {t["nome"]}: {t["efeito"]}') for t in S['talentos']]
+        return
+    if a[0] == 'mao':   # MOTOR 9 (437, G24): o que o rei pode usar AGORA, com a carga e o custo (a fonte da linha 🛠️ HABILIDADES À MÃO)
+        F = carrega('ficha.json', {})
+        pv, mana, fo, rv = F.get('pv', [0, 0]), F.get('mana', [0, 0]), F.get('fortuna', [0, 0]), F.get('reves', [0, 0])
+        print(f'HABILIDADES À MÃO (G24) · PV {pv[0]}/{pv[1]} · Mana {mana[0]}/{mana[1]} · Fortuna {fo[0]}/{fo[1]} · Revés {rv[0]}/{rv[1]}')
+        for tipo in ('Magia', 'Ativa', 'Reação', 'Postura'):
+            for k, h in sorted(H.items()):
+                if h['tipo'] != tipo: continue
+                cg = h.get('cargas'); sem = cg and cg['atual'] <= 0
+                print(f"  {'✗' if sem else '•'} [{tipo}] {k}" + (f" ({cg['atual']}/{cg['max']})" if cg else '') + f" · {h['efeito']}")
+        if S['talentos']: print('  TALENTOS que se usam: ' + ' · '.join(t_['nome'] for t_ in S['talentos'] if any(x in t_['efeito'] for x in ('1x', 'por dia', 'por sessão', 'por cena', 'por mês', 'por obra'))))
         return
     c = a[0]
     if c == 'add' and len(a) >= 4:

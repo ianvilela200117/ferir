@@ -1,6 +1,6 @@
 # TALENTOS
 
-Esta é a lista fechada: os talentos do Motor (VI) mais os da casa. Cada talento tem um requisito e um preço (Lei 2).
+Esta é a lista fechada: os talentos do Motor (VI), os da casa e os 32 do **Livro Nove** (Motor 9, Dia 437). Cada talento tem um requisito e um preço (Lei 2).
 
 **Quando se ganha talento:**
 - 1 na criação (o humano ganha 2);
