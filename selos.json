@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "SAC1",
-  "CAS1",
-  "CAS2",
-  "LIV1",
   "LIV2",
   "XC1",
   "XC2",
@@ -399,176 +395,13 @@
   "VZ37",
   "TR37",
   "CU37",
-  "SB37"
+  "SB37",
+  "SZ38",
+  "ZA38",
+  "PZ38",
+  "FZ38"
  ],
  "selos": {
-  "SAC1": {
-   "id": "SAC1",
-   "dia": 415,
-   "hora": "23:36:25",
-   "titulo": "O SACERDOTE DO XAATHIS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "some nas minas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "morre"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "morre",
-     "txt": "[5] → morre"
-    }
-   ],
-   "hora_rolado": "23:36:25"
-  },
-  "CAS1": {
-   "id": "CAS1",
-   "dia": 415,
-   "hora": "23:36:25",
-   "titulo": "A CASA DO ARDENGHI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só moeda"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "moeda e o LIVRO DE CONTAS (quem ele paga em Ireviel e em Lumade)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "moeda, o livro e uma PEÇA de marca P.A."
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "moeda e o LIVRO DE CONTAS (quem ele paga em Ireviel e em Lumade)",
-     "txt": "[3] → moeda e o LIVRO DE CONTAS (quem ele paga em Ireviel e em Lumade)"
-    }
-   ],
-   "hora_rolado": "23:36:25"
-  },
-  "CAS2": {
-   "id": "CAS2",
-   "dia": 415,
-   "hora": "23:36:25",
-   "titulo": "A MOEDA NA CASA DO ARDENGHI",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "× 500"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3,
-      5
-     ],
-     "total": 8,
-     "res": "× 500",
-     "txt": "[3, 5] +0 = 8 → × 500"
-    }
-   ],
-   "hora_rolado": "23:36:25"
-  },
-  "LIV1": {
-   "id": "LIV1",
-   "dia": 415,
-   "hora": "23:36:44",
-   "titulo": "O LIVRO DE CONTAS DO ARDENGHI: quem ele pagava EM IREVIEL (além do carregador do cais, o olho do portão)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "só gente pequena: o carregador do cais e um escrevente da alfândega do rio"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um nome na GUARDA dos muros"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um nome dentro da CASA de um conselheiro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "só gente pequena: o carregador do cais e um escrevente da alfândega do rio",
-     "txt": "[2] → só gente pequena: o carregador do cais e um escrevente da alfândega do rio"
-    }
-   ],
-   "hora_rolado": "23:36:44"
-  },
   "LIV2": {
    "id": "LIV2",
    "dia": 415,
@@ -19600,6 +19433,204 @@
     }
    ],
    "hora_rolado": "16:09:54"
+  },
+  "SZ38": {
+   "id": "SZ38",
+   "dia": 438,
+   "hora": "17:26:53",
+   "titulo": "O SANGUE DO FALAR COM MORTO (Osso 3º cobra 3d6 de PV do rei, que está com 63)",
+   "dado": [
+    3,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 18,
+     "res": "tantos PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1,
+      2,
+      6
+     ],
+     "total": 9,
+     "res": "tantos PV",
+     "txt": "[1, 2, 6] +0 = 9 → tantos PV"
+    }
+   ],
+   "hora_rolado": "17:26:53"
+  },
+  "ZA38": {
+   "id": "ZA38",
+   "dia": 438,
+   "hora": "17:26:53",
+   "titulo": "O ZYZA ACEITA SERVIR O REI? (Falar com Morto, 438)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "RECUSA"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ACEITA COM UM PREÇO"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ACEITA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ACEITA COM UM PREÇO",
+     "txt": "[3] → ACEITA COM UM PREÇO"
+    }
+   ],
+   "hora_rolado": "17:26:53"
+  },
+  "PZ38": {
+   "id": "PZ38",
+   "dia": 438,
+   "hora": "17:27:09",
+   "titulo": "O PREÇO DO ZYZA PARA SERVIR (ele aceita com um preço)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o NOME: quer o nome dele dito pelo rei a cada AURORA; na aurora sem o nome, não obedece naquele dia"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a RAINHA: o corpo da rainha levado à sala 1 e selado na tumba; e ele nunca luta contra cria da colmeia"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a VERDADE: o rei responde três perguntas dele sem mentir, a primeira agora"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer",
+     "txt": "[1] → a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer"
+    }
+   ],
+   "hora_rolado": "17:27:09"
+  },
+  "FZ38": {
+   "id": "FZ38",
+   "dia": 438,
+   "hora": "17:28:39",
+   "titulo": "A SEGUNDA FASE DO GUARDIÃO VDOGEK AOS 50% (G33; OCULTO até a Visão ou a luta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "troca de Essência"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "chama crias"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o covil muda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "foge para outra sala e a luta recomeça lá"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "perde a fraqueza conhecida e ganha outra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "fala: oferece um trato (Lei 15)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "troca de Essência",
+     "txt": "[1] → troca de Essência"
+    }
+   ],
+   "hora_rolado": "17:28:39"
   }
  }
 }

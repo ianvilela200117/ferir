@@ -1,0 +1,18 @@
+{
+ "nota": "os servos armados do rei (G23). de_pe: anda e cobra a palavra a cada aurora. O tick diário lembra.",
+ "teto": 7,
+ "servos": [
+  {
+   "nome": "Zyza",
+   "nivel": 129,
+   "teto_nivel": 258,
+   "de_pe": true,
+   "desde": 438,
+   "palavra": "1d6 × 2",
+   "preco": "a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)",
+   "prazo": 468,
+   "lua_nova": 460,
+   "osso_que_cresce": true
+  }
+ ]
+}

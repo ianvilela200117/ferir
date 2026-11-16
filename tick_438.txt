@@ -1,0 +1,34 @@
+[17:26:18] Dia 438 · Pressão 2/5 · evento local 1d20 [17] -> falta algo no mercado (preço sobe)
+  O TEMPO (9 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [5] muda, d20 [1] · vento d6 [4])
+   o Porto de Marasar: limpo, calmo (d6 [6] muda, d20 [4] · vento d6 [1])
+   Levis: chuva de verão, calmo (d6 [1] fica · vento d6 [2]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: calor forte, brisa (d6 [3] fica · vento d6 [3]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   O RIO: normal [35/100]
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d6 [6] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 438 (dia)
+    d20 [17] CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)
+    ONDE: d27 [20] Steunn  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 438
+    um Lendário age (d20 [3]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [2] compra, toma ou destrói algo de valor ligado à Obra · notícia d20 [7] chega no dia 439
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Ruddo chantageia Isolda, por causa de um herdeiro dos Steunn
+    FAÍSCA: a irmã Oisse procura o Visconte Aldoveri, por causa de dinheiro da Liga
+    FAÍSCA: Skugek vai trair Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322), por causa de um título
+  AUDITORIA (XXIII.23, Dia 438): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 438 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 16.698, envelope diz 18.578.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #509: CHEGA a Ireviel: o recado do rei à LURENTETTA, pelo YAVOR em Ireviel (o SAL contra a Elaeva) (saiu de Levis no 435)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Maneus, o Afogado do Vento (Lendário, Telosus): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Varogh (Lendário, Steunn): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [15] FIEL

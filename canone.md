@@ -327,3 +327,5 @@ depois vira linha nova aqui.
 - (437) Nenhuma magia sabida sara um ferimento que dura (o rei, extraordinário): a Cura Maior (Luz 4º) repõe o PV e tira o veneno; o Colégio a ensina. G23 (o exército de osso) aprovada; G24 (avisar as habilidades), pedido do jogador.
 
 - (437, fora do jogo) MOTOR 9: a revisão completa e o LIVRO NOVE (compendio/08_livro_nove.md; G25 a G34). A Chuva de Brasas vale ×5 (área). O rei tem um Despertar em aberto.
+
+- (438) O ZYZA erguido como SERVO ARMADO do rei (nível 129; a palavra do Osso que Cresce; o preço dele: a FOME, carne de bicho Raro ou acima uma vez por lua). O Despertar do rei: MÃO QUE DOMA (teto de servos 7). A Visão do Tempo diante da sala 9 de Zythir: o guardião VDOGEK (Único, besta do tamanho de uma colina, Elo) derruba o Moreth, o Eiagrir e o Zyza em todas as vezes; a porta ficou fechada.

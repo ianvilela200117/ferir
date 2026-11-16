@@ -205,7 +205,8 @@
     "399: [5] viaja: aparece num lugar onde não era esperado",
     "425: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "427: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
-    "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga"
+    "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga",
+    "438: [2] compra, toma ou destrói algo de valor ligado à Obra"
    ],
    "prox": 455
   },
@@ -3241,6 +3242,15 @@
    "essencia": "Podridão",
    "onde": "Zythir, a sala 8",
    "nota": "MORTA (437, pela 2ª Lança do Sol do Moreth, na 2ª rodada) · gerador monstro (obras/zythir_sala8_rainha.txt; o nome Selula trocado; o corpo aquático do gerador virou INSETO pelo cânone): a RAINHA da colmeia de Zythir, do tamanho de uma casa; grito que dá medo (ninguém tremeu); imune a armas 2 categorias abaixo; faminta; fraca a VIDA e, a descobrir, a um som; feriu o rei (GRAVE até o 458, MARCA: manca); drops neiel ×20, leor ×10, gusta ×20, núcleo Épico de Podridão; o covil: nada (TR37 [4])"
+  },
+  {
+   "nome": "Vdogek",
+   "dia": "438",
+   "cat": "Único",
+   "nivel": "183",
+   "essencia": "Elo",
+   "onde": "Zythir, a sala 9 (o coração)",
+   "nota": "VIVO; visto só pela Visão do Tempo do rei (438): o GUARDIÃO do coração de Zythir; gerador (obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado); besta do tamanho de uma colina; olhar paralisante; muitas cabeças; o golpe corta laços e encantos; cria no ventre; caçador; fraco a FOME e (a descobrir) à CRIA; fase aos 50% (OCULTO, FZ38 [1]): troca de Essência; drops nanniel, yomicia, uxloeth, núcleo Único de Elo"
   }
  ],
  "notas_ocultas": [

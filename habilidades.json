@@ -120,10 +120,10 @@
    "tipo": "Magia",
    "efeito": "Tempo 4º: vê uma hora à frente · 20 de Mana · só quando o jogador pede (a régua)",
    "grau": 1,
-   "usos": 2,
+   "usos": 3,
    "desde": 437,
    "cargas": {
-    "atual": 2,
+    "atual": 1,
     "max": 2
    },
    "origem": "aula do 266"
@@ -156,7 +156,7 @@
    "tipo": "Magia",
    "efeito": "Osso 3º: três perguntas a um morto (a Receita Mestra pede que o morto ACEITE) · 15 de Mana e 3d6 de PV",
    "grau": 1,
-   "usos": 0,
+   "usos": 1,
    "desde": 437,
    "origem": "o rei sabe"
   },
@@ -353,6 +353,10 @@
   {
    "nome": "Erudito",
    "efeito": "1x por sessão, um fato verdadeiro do mundo que o rei plausivelmente saberia"
+  },
+  {
+   "nome": "DESPERTAR (100): Mão que Doma",
+   "efeito": "+1 no teto de servos (7) e de crias (2); os laços com eles duram o dobro · preço: sente a morte de cada um (Atordoado 1 rodada quando um cai)"
   }
  ],
  "pericias": {

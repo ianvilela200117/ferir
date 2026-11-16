@@ -1,5 +1,5 @@
 {
- "prox_id": 518,
+ "prox_id": 519,
  "itens": [
   {
    "id": 1,
@@ -7259,6 +7259,21 @@
    "origem": "viagem.py",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 518,
+   "dia": 439,
+   "texto": "Ceduion, reitor do Colégio de Telosus (Telosus): compra, toma ou destrói algo de valor ligado à Obra",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 438",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
   }
  ],
  "fios": [

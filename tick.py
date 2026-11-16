@@ -295,6 +295,11 @@ def um_dia(estrada, limite):
         C.append('  Pressão zera')
         t['pressao'] = 0
     C.append('  Fortuna volta ao máximo')
+    _sv = carrega('servos.json', {'servos': []}).get('servos', [])   # MOTOR 9 (438, G23): a palavra dos servos armados cobra sangue a cada aurora
+    for _s in [x for x in _sv if x.get('de_pe')]:
+        C.append(f"  ☠ SERVO ARMADO {_s['nome']} (nível {_s.get('nivel', '?')}): a PALAVRA cobra do rei {_s.get('palavra', '1d6 × 2')} de PV nesta aurora (rolar no selo.py e lançar em ficha.py pv)"
+                 + (f" · {_s['preco']}" + (' ⚠ O PRAZO PASSOU' if _s.get('prazo') and dia > _s['prazo'] else '') if _s.get('preco') else '')
+                 + (f" · lua nova no {_s['lua_nova']}: o nome e a gota de sangue" if _s.get('lua_nova') else ''))
     F = carrega('ficha.json')
     if F:
         F['fortuna'][0] = F['fortuna'][1]

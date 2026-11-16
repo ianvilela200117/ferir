@@ -1,0 +1,22 @@
+nome: Ithvil
+categoria: Único
+nível: 183
+corpo: besta
+tamanho: colina
+essência: Elo
+números: PV 3660 · Defesa 70 · RD 12 · ataque +60 · 2 ataque(s) por rodada · dano 3d10 × 10 · XP 1830 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · cria no ventre (ao morrer solta 1d6 crias; uma pode ser levada viva)
+  · olhar paralisante (Vontade contra CD 10 + nível ÷ 10)
+  · muitas cabeças ou membros (+1 ataque por rodada)
+poder assinatura: o golpe corta laços mágicos e encantamentos (Romper contra CD da magia), em área de 15 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Fome: dano dobrado e corta a regeneração · e mais uma, a descobrir: a cria
+comportamento: caçador: escolhe a presa e a segue por dias
+habitat: tumba
+sinal (Lei 15): silêncio dos pássaros
+drops:
+  · couro ou escama ×50: «zaiium» (Único, Elo), serve para armadura: sente aliados com Laço 3 ou mais
+  · olho ×150: «gorol» (Único, Elo), serve para armadura: sente aliados com Laço 3 ou mais
+  · pena ou pelo ×200: «lumkos» (Único, Elo), serve para armadura: sente aliados com Laço 3 ou mais
+  · CORAÇÃO: núcleo Único de Elo, serve de NÚCLEO para Mítico
+————————————————————————————————————————

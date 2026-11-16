@@ -1,0 +1,201 @@
+{
+ "monstro": {
+  "nome": "Vdogek",
+  "cat": "Único",
+  "nivel": 183,
+  "pv": 3660,
+  "df": 72,
+  "rd": 12,
+  "at": 62,
+  "dado": "3d10",
+  "mult": 10,
+  "acoes": 7,
+  "poder": {
+   "nome": "o golpe que corta laços e encantos (15 m)",
+   "tipo": "area",
+   "cd": 28,
+   "dano": "6d6"
+  },
+  "grito": {
+   "cd": 28
+  },
+  "inteligente": true,
+  "moral": false,
+  "fraqueza": "Fome",
+  "covil": {
+   "nome": "a névoa podre da tumba",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": "ENVENENADO (G16)"
+  },
+  "nota": "gerador monstro (438; obras/zythir_sala9_guardiao.txt; o nome Ithvil trocado por VDOGEK): o GUARDIÃO do coração de Zythir, Único 183, besta do tamanho de uma colina, ELO; olhar paralisante (roda como grito, CD 28); muitas cabeças (7 ações); o golpe corta laços e encantos (área 6d6; à mão: no Zyza, d6 1-2 a palavra se rompe); cria no ventre (1d6 crias ao morrer); caçador; fraco a FOME e, a descobrir, à CRIA; fase aos 50% (FZ38 [1]): troca de Essência; +2 da volta; o covil da tumba; não foge"
+ },
+ "grupo": [
+  {
+   "nome": "Moreth",
+   "nivel": 232,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10, em ÁREA vale metade: ×5; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      7
+     ],
+     "essencia": "Fogo"
+    },
+    {
+     "nome": "CORTE DO HORIZONTE (Arte de espada, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      4
+     ],
+     "essencia": "Vida"
+    },
+    {
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      5
+     ],
+     "essencia": "Vida"
+    },
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      6
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      8
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      9
+     ],
+     "essencia": "Vida"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30, 438): maça: Quebra-Guarda, Tremor de Ferro, Bigorna; espada: Fio Duplo, Corte Corrido, Corte do Horizonte; aura: Pele de Pedra",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "pvmax_real": 600
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 126,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 299,
+   "vigor": 13,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Vida"
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      4
+     ],
+     "essencia": "Vida"
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30, 438): lança: Ponta que Espera, Chuva de Pontas; auras: Raiz de Pedra menor, Passo de Vento",
+   "pvmax_real": 420
+  },
+  {
+   "nome": "Zyza",
+   "nivel": 129,
+   "at": 42,
+   "dado": "1d10",
+   "mult": 5,
+   "b": 0,
+   "df": 52,
+   "rd": 6,
+   "pv": 2091,
+   "vigor": 20,
+   "fica": true,
+   "essencia": "Podridão",
+   "nota": "SERVO ARMADO do rei (438; G23): o guarda de Zythir erguido pela Receita Mestra, com o núcleo Épico de Podridão no peito e a palavra do Osso que Cresce; nível 129 (3/4 de 158, +10% da Escola do Osso); PV 129 × 15 + 156 (o nível do rei); não recua (fica); perde a regeneração e a mentira; o veneno do golpe não roda do lado do grupo; a 0 PV desmonta (o rei sente: Atordoado 1 rodada; o núcleo fica no corpo)",
+   "pecas": "o próprio corpo (inseto do tamanho de um cavalo, Podridão) · o núcleo Épico de Podridão no peito · a palavra gravada (Osso que Cresce)",
+   "magias": [],
+   "pvmax_real": 2091
+  }
+ ]
+}

@@ -1098,3 +1098,10 @@ O tesouro de Tuir era menor do que a fama de um rei: barras de um metal azul-esc
 Deitado na pedra, com a perna dormente, o rei fez a conta de tudo o que sabia de magia, e a conta deu clara: nada no Livro fecha uma ferida que dura. A Cura Maior devolve o sangue e tira o veneno, o Sono Branco impede a ferida de piorar, e o resto é tempo e físico. Mas a Cura Maior é da Luz, a mesma escola da Lança do Sol, e o Colégio a ensina. Com o Foco de Osso, uma conjuração bastaria para encher o rei de novo. Um dos guardas, um rapaz que segurava a lanterna, ficou o tempo todo ao lado dele sem que ninguém mandasse.
 
 - **Parada:** fim da manhã do 437. O Zyza na primeira sala, frio; a última porta fechada.
+
+### Zythir, a primeira e a última sala, 438
+Na primeira sala o guarda morto ainda estava onde caíra, frio como a pedra. O rei abriu a palma com a faca e falou com ele. A voz que respondeu não tinha mais a manha de antes: perguntou pela rainha, ouviu que estava morta, e ficou calada um tempo. Depois disse que servia, se lhe dessem de comer. O rei pôs o coração cinzento de volta no peito dele e gravou a palavra. O bicho se levantou devagar, como quem acorda com fome.
+
+Diante da última porta o rei fechou os olhos e olhou uma hora adiante. Viu a porta abrir. Viu uma coisa do tamanho de uma colina desenrolar cabeças no escuro, e um olho que parava os homens onde estavam. Viu o Eiagrir cair primeiro. Viu a mesma hora muitas vezes, e em nenhuma alguém passava da soleira. Abriu os olhos e não deixou ninguém tocar na porta.
+
+- **Parada:** manhã do 438, a porta fechada. O Zyza de pé atrás do rei.

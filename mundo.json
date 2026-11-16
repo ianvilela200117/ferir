@@ -2957,6 +2957,17 @@
    "chegada": "[6] não chega sozinha (só se alguém for atrás)",
    "resumo": "UMA RUÍNA SE ABRE — Mordun (a Boca com Fome) (Ithek)",
    "toca": false
+  },
+  {
+   "dia": 438,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "CLIMA ESTRANHO — Steunn",
+   "toca": true
   }
  ]
 }
