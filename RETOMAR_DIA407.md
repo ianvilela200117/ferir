@@ -1,19 +1,19 @@
 # RETOMAR — noite do Dia 427, Ireviel (MOTOR 7.2 + G6)
 
 ## Primeiro
-1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2, com G1 a G5, está no fim dele).
+1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
 2. Ler o ESTILO_NARRATIVO.md antes de narrar.
 3. `python3 tracos.py cena Nome` antes de pôr fala em NPC. A inclinação de voto sai de `tracos.py inclina`, não da cabeça.
-4. O envelope atual é `envelope_sessao2n.md`: a última nota (LEITURA 406 noite → 407 amanhecer) tem a PARADA. O diário é `diario_sessao2f.md` (o fim dele é a semana do 406). O estado está em `estado_vivo.md` (bloco "NOITE DO 426, IREVIEL").
+4. O envelope atual é `envelope_sessao2o.md` (aberto no 427, 15:05, porque o 2n passou de 400 KB; é nele que o `selo.py` escreve agora). A última PARADA ainda está no fim do `envelope_sessao2n.md` (LEITURA DA NOITE DO 426 À NOITE DO 427). O diário é `diario_sessao2f.md` (o fim dele é a noite do 427). O estado está em `estado_vivo.md` (bloco "NOITE DO 427, IREVIEL").
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
-Noite do 406 (7 da Lua da Forja de 1013), Ireviel.
-- A TORRE ACESA foi a zero na madrugada do 404: o Moreth matou o Zesreth dormindo no sino; a base caiu sem baixa da casa; o Quthemnus se rendeu e foi MORTO em praça no 404 (morreu calado). Os 6 da guarda foram ao trabalho forçado; as torres foram dadas às famílias da Cinza, que cresceram (força 4, hostis).
-- Achados do golpe: a SENHA DE IROULE (nos papéis do velho, na letra do pai do rei), o MOLDE da mão do rei (de volta), um contrato falso pela metade (sem força), o APITO DE OSSO do Zesreth (foco Épico, Vento, ×2).
-- A semana do 406: chegaram o RINDALD (Diplomata 83) e o FABAINO (Burocrata 100, ex-escrivão da Liga); cada um pede uma peça Rara ou melhor dentro de uma lua (G3). O HIALD (de Steunn) pediu lugar na forja grande. A célula da Liga caiu. Os DESCALÇOS querem a MATRIZ (emboscada na estrada de Lumade quando o rei sair). O MIVOR (Épico 96, Terra, núcleo Épico) está no leito seco ao norte de Ireviel.
-- O CORVO DA ALMISION chegou na noite do 406: o ADUREL abriu uma passagem no vale de ZISRIR e a ELAEVA acordou na mesma noite (sem testemunha, sem prova). A Almision chega no 414 para a hora na Matriz, sob guarda.
-- Cofre 25.678. Ferir nível 143, XP 1.024.564 (faltam 5.136 para o 144).
+Noite do 427 (28 da Lua da Forja de 1013), Ireviel, o cais. Pressão 1/5. Levis fica para o 428 (o rio cheio: subir custa o dobro).
+- O MOREK MORTO (amanhecer do 427, na água rasa da forquilha): numa rodada o Toque do rei e as Lanças do Sol do Moreth e do Eiagrir o puseram de 955 a 96; ele fugiu, a fuga falhou feio, e a LANÇA DO BREN voltou à mão da Eliane com o sangue dele. Ninguém caiu; o Eiagrir levou 186 (87 de PV).
+- DESPOJOS: o NÚCLEO ÚNICO DE ESPINHO (serve para peça Mítica) · ssythis 3 kg · laliel 6 kg · heald 3 kg · sasis 3 kg. A MISSÃO dos Barqueiros do Livro pagou 3.000 e a informação: o patrono deles é a SKOTHA.
+- O BJORVUNN (noite do 426) contou do ULMIR: Único 178, de Raio, nas salinas do Delta, fraco a Água; o coração é um NÚCLEO ÚNICO DE RAIO. A TESSAL e a LILE acharam ALNESAR: nas colinas a leste de Ireviel, a 2 dias; numa metade há um núcleo e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um segredo de facção (entrar pede uma chave).
+- O tick semanal do 427: no cais esperam o ENVIADO DA LURENTETTA (aliança contra a Elaeva, que matou o povo dela) e o FACIO, caído. Os pescadores viram a ELOUNE no lodaçal perto do cais afundado. Em Levis, o Culto do Xaathis venceu a BIGORNA LIVRE (força 1).
+- Ferir nível 155, XP 1.204.674 (faltam 4.426 para o 156), PV 194/400. Cofre 16.748 (livro da semana −2.750; +3.000 da missão). Próximo tick semanal no 434.
 
 ## O QUE JÁ FOI RESPONDIDO E ROLADO (noite do 406 → amanhecer do 407)
 - **1b (MN7 9):** a MAMILTIA aceitou o NOME (o Adurel, Zisrir), NÃO aceita a Almision como prova, manda os olhos dela a Zisrir (~434), fica e pagou a METADE (3.000 XP e 1.500). O Fumigador sai com ela até o 417.
