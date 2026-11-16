@@ -1088,3 +1088,8 @@ O rei perguntou à pedra se dava para vencer o guarda. A voz de Tuir demorou, co
 Na noite anterior, em Levis, tinha chegado a carta do Tolvane: o Celocus não respondeu ao acordo grande. Em vez disso, homens dele mostraram em Lumade uma carga de pena de hadun, Única, de Podridão, à venda.
 
 - **Parada:** manhã do 437, a quinta sala limpa. À frente, o tesouro.
+
+### Zythir, da sexta à oitava sala, 437
+O tesouro de Tuir era menor do que a fama de um rei: barras de um metal azul-escuro, empilhadas numa arca de pedra, que zumbiam baixinho como antes de uma chuva. Na sétima sala a voz disse "pare", "esquerda", "agora", e ninguém soube o que havia no chão. Na oitava esperava a rainha. Era do tamanho de uma casa e gritou com uma boca que não parecia caber nela, e ninguém recuou. A Lança do Sol do Moreth a queimou até o meio; ela procurou o rei, como o eco tinha dito, e na quarta vez o achou. O rei foi arrastado para trás com o ombro aberto e a perna dormente de veneno. A segunda Lança do Moreth terminou o trabalho. Lá de baixo, mais perto do que antes, a voz de Tuir disse só: "Ela está morta. Obrigado, rei de Ireviel."
+
+- **Parada:** fim da manhã do 437, a oitava sala. O rei não fica de pé sem ajuda e vai mancar; falta a última porta.

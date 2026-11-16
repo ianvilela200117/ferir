@@ -1,5 +1,5 @@
 {
- "prox_id": 517,
+ "prox_id": 518,
  "itens": [
   {
    "id": 1,
@@ -7248,6 +7248,17 @@
     1,
     "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
    ]
+  },
+  {
+   "id": 517,
+   "dia": 441,
+   "texto": "CHEGA a Lumade: o recado do rei ao Tolvane (2a: comprar uma amostra do hadun do Celocus e descobrir de onde vem a carga) (saiu de Levis no 437)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 437, Zythir, a sala 5 limpa (MOTOR 8: G1 a G22)
+# RETOMAR — fim da manhã do Dia 437, Zythir, a sala 8 limpa (MOTOR 8: G1 a G22)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Fim da manhã do 437, ZYTHIR, a SALA 8 LIMPA: a 6 deu 6 kg de ZIIS; a 7 passou sem dado; a RAINHA ZATHA (Épica 113) morta pelo Moreth na 2ª rodada · O REI FERIDO GRAVE (feridos.json: não luta até o 458; MARCA: manca), 23/402; o Moreth 600, o Eiagrir 257/420 · à frente: a SALA 9, O CORAÇÃO (OCULTO: o rei TUIR vivo, preso pela magia da tumba, e o GUARDIÃO ÚNICO) · os corpos do Huir e da Zatha ficam na tumba · o recado ao Tolvane chega a Lumade no 441 (agenda #517: rolar a compra da amostra e de onde vem a carga) · a saída para Farenta estava marcada para o amanhecer do 438 (OCULTO: a Elaeva chega às terras de Farenta no 444) · PROPOSTA G23 (o exército de osso) esperando o jogador: NÃO está no protocolo.
+
+Antes (a sala 5):
 Manhã do 437, ZYTHIR, a SALA 5 LIMPA: o guarda HUIR (Épico 78, Espinho; o nome do gerador, Thuula, trocado) morto na 1ª rodada pelo Moreth, pego de SURPRESA (o favor do eco); ninguém ferido; o rei 84/402; despojos nee 30, yeviel 60, núcleo Épico de Espinho; TC37 [2] o covil sem tesouro · à frente: a SALA 6 (TESOURO Único, G17: rolar pelo selo ao entrar), a 7 (ARMADILHA: passa sem dado, o favor do eco), a 8 (a RAINHA da colmeia, PERIGO Épico), a 9 (O CORAÇÃO: OCULTO, o rei TUIR vivo, e o guardião Único) · o eco de Tuir está no livro (npc.py, nível 160) · A CARTA DO TOLVANE dada à mesa no 437 (o Mestre a esqueceu no turno do 436): o Celocus não respondeu; mostrou HADUN à venda (OCULTO: pena do HUSGARN, servo do Skorval) · a saída para Farenta no amanhecer do 438 (Farenta ~443; OCULTO: a Elaeva chega às terras de Farenta no 444) · ERRO DO MESTRE corrigido no 437: a saída do gerador cortada (head -12); o resto (drops, comportamento, sinal) rolado uma vez pelo código do gerador (obras/zythir_sala5_guarda_resto.txt).
 
 Antes (a sala 4):
@@ -196,9 +199,18 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (437, a sala 4): 1b com condição: 'pergunte se conseguimos vencer fácil; se não, vamos ao tesouro'
 - TU37 [4] o eco é nível 160 · a régua OCULTA (sims/zythir_s5_regua.txt): o Huir morre em 100%, ninguém morre, o rei cai em 2% · o saber do eco (guerra média): 44 vs 25, GANHO: 'é fácil' e 'o golpe procura o mais fraco: o rei' · LH37 a luta: o Huir cai na 1ª rodada · TC37 [2] nada no covil.
 
+## RESPONDIDO (437, a sala 5 limpa): 1b a 6 e seguir até a rainha · 2a o Tolvane compra uma amostra · fora do jogo: "pode fazer o que deve ser feito" (o contexto) e os servos
+- TS37 [15] material: ziis (Veyek trocado), QZ37 6 kg · LR37 a rainha Zatha morta na 2ª rodada; o rei RECUA; feridos [18] GRAVE até o 458 (manca); VZ37 veneno 24 → 23/402 · TR37 [4] nada · o recado ao Tolvane: Lumade no 441 (o viagem.py corrigido) · o grito que dá medo entrou no luta.py · a resposta dos servos: pelo Grimório e pelos talentos; a G23 proposta.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. ZYTHIR, A SALA 6 (o TESOURO): a) entrar, pegar o tesouro e sair hoje (Farenta no amanhecer do 438, como está) · b) entrar e seguir hoje: a 7 (o eco guia) e a RAINHA na 8 (com o rei a 84/402; se alguém sair ferido, a saída para Farenta atrasa) · c) outra.
-2. A CARTA DO TOLVANE (o Celocus calado e a carga de HADUN à venda em Lumade): a) o Tolvane compra uma amostra e descobre de onde vem a carga · b) o Tolvane pergunta ao Celocus, sem comprar · c) deixar quieto por ora.
+1. ZYTHIR, A SALA 9 (a última porta): a) não agora: sair com o rei ferido; Zythir espera (sair e voltar: +2 nos perigos, G14) · b) o Moreth e o Eiagrir abrem a 9 sem o rei · c) outra.
+2. O REI FERIDO (GRAVE até o 458; 23/402) e a ida a FARENTA (a Elaeva): a) seguir no 438 assim mesmo: o rei manda de longe, o Moreth e o Eiagrir lutam, a pena da Mamiltia na mão · b) o rei desce a Ireviel para sarar e manda o Moreth e o Eiagrir a Farenta · c) todos ficam em Levis até o rei sarar · d) procurar quem cure o rei por magia (pergunta pelo saber, G10).
+3. A G23, O EXÉRCITO DE OSSO (proposta do Mestre, só vale aprovada): a) aprovar como está · b) aprovar com mudanças (diga quais) · c) não.
+
+## PROPOSTA G23 — O EXÉRCITO DE OSSO (437; ESPERA o jogador; não está no protocolo)
+- O que o Livro já dá (vale hoje): SERVO DE OSSO (4º: um esqueleto, soldado comum, 1 dia; 1d6 × 4 PV) · TOQUE DO CEIFADOR (6º: quem o Toque derruba a 0 levanta como servo; o Livro não dá prazo) · a RECEITA DO SERVO ARMADO, a Mestra (o corpo; um núcleo no peito, da categoria da arma; a palavra gravada: 1d6 × 4 PV por aurora; metade do nível em vida, 3/4 se o morto aceita, inteiro com núcleo Mítico) · a TENAZ DE EIURVO (1d6 × 2) e o OSSO GRAVADO (metade do PV) · o OSSO QUE CRESCE (o servo come o que mata; teto: o dobro do nível com que se ergueu) · SENHOR DOS SERVOS (agem na Iniciativa do rei; ordem a 1 km; o teto dobra; −1 de Mana máxima por servo além do 1º) · o rei NÃO sabe: Reanimar (5º), Laço de Servo (6º), Dragão de Ossos (8º), Domar (8º).
+- O que falta e o Mestre propõe: (a) o servo do Toque anda até a próxima aurora, com metade do nível, a não ser que a Receita do Servo Armado seja feita no corpo antes dela · (b) MONSTRO como Servo Armado: pode; a "arma" do bicho é o corpo: o núcleo do peito tem de ser da categoria DELE (o próprio coração serve, e então não vai à forja); metade do nível; o bicho que fala (o Zyza falava) pode aceitar: 3/4; guarda tamanho, Essência e poder; perde a regeneração e o que vinha da cabeça; o corpo serve enquanto está inteiro (na tumba fria, uma semana) · (c) o TETO de servos armados ao mesmo tempo: 1 a cada 50 níveis do rei (156 → 3), dobrado pelo Senhor dos Servos (6); os de 1 dia contam enquanto andam · (d) o PREÇO por aurora: a Tenaz e o Osso Gravado somam: 1d6 por servo · (e) o MUNDO: a primeira vez que uma cidade vê o exército andando, reputação −5 (G21) nela; os Que Voltaram dão medo.
+- Os corpos à mão: o ZYZA (158, falava: 3/4 = 118, se aceitar), a ZATHA (113 → 56), o HUIR (78 → 39); os núcleos deles estão com o rei (2 Épicos de Podridão, 1 Épico de Espinho).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -16,6 +16,14 @@
    "desde": 435,
    "ate": 443,
    "causa": "Zyza"
+  },
+  {
+   "nome": "Ferir",
+   "grau": "GRAVE",
+   "efeito": "não luta · MARCA: manca",
+   "desde": 437,
+   "ate": 458,
+   "causa": "Zatha"
   }
  ]
 }

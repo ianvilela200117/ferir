@@ -321,3 +321,5 @@ depois vira linha nova aqui.
 - (437) O eco de Tuir paga o favor: guia a casa (a armadilha sem risco, o guarda da sala 5 de surpresa). Na sala 4, uma passagem escondida contorna o guarda e desce ao tesouro.
 
 - (437) Pelo saber do eco de Tuir, a casa lutou com o guarda da sala 5 de Zythir: o HUIR (Épico 78, réptil de muitas cabeças, Espinho), morto dormindo na primeira troca pelo Moreth; ninguém ferido; o núcleo Épico de Espinho, nee e yeviel. A carta do Tolvane: o Celocus não respondeu ao acordo grande e pôs à venda em Lumade uma carga de HADUN (pena Única de Podridão).
+
+- (437) Zythir, o tesouro de Tuir: 6 kg de ZIIS (Épico, Raio + Tempo). A RAINHA da colmeia, a ZATHA (Épica 113, Podridão), morta pelo Moreth; ela feriu o rei: GRAVE até o 458, e o rei vai MANCAR para sempre. O recado ao Tolvane (comprar uma amostra do hadun) chega a Lumade no 441.

@@ -3232,6 +3232,15 @@
    "essencia": "Espinho",
    "onde": "Zythir, a sala 5",
    "nota": "MORTO (437, pelo Moreth, na 1ª rodada, pego de surpresa) · gerador monstro (437; obras/zythir_sala5_guarda.txt e _resto.txt; o nome do gerador, Thuula, trocado): réptil do tamanho de uma torre, ESPINHO; muitas cabeças; devora metal; o golpe prende como raiz (CD 16, 12 m); fraco a FOGO e ao próprio nome; migrante (veio à tumba numa estação); sinal: árvores marcadas; drops nee ×30, yeviel ×60, núcleo Épico de Espinho; o tesouro do covil: nada (TC37 [2])"
+  },
+  {
+   "nome": "Zatha",
+   "dia": "437",
+   "cat": "Épico",
+   "nivel": "113",
+   "essencia": "Podridão",
+   "onde": "Zythir, a sala 8",
+   "nota": "MORTA (437, pela 2ª Lança do Sol do Moreth, na 2ª rodada) · gerador monstro (obras/zythir_sala8_rainha.txt; o nome Selula trocado; o corpo aquático do gerador virou INSETO pelo cânone): a RAINHA da colmeia de Zythir, do tamanho de uma casa; grito que dá medo (ninguém tremeu); imune a armas 2 categorias abaixo; faminta; fraca a VIDA e, a descobrir, a um som; feriu o rei (GRAVE até o 458, MARCA: manca); drops neiel ×20, leor ×10, gusta ×20, núcleo Épico de Podridão; o covil: nada (TR37 [4])"
   }
  ],
  "notas_ocultas": [

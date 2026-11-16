@@ -1,0 +1,16 @@
+nome: Veyek
+categoria: Épico
+origem: metal (escória de uma forja antiga)
+essência: Raio + Tempo
+oposta: Agua
+propriedades: dureza 9 · maleabilidade 4 · condutividade mágica 6
+na forja: Matéria +2 · Processo +0 · aceita infusão até o 6º círculo
+efeitos:
+  na arma: +2d6 de raio, que salta para um segundo alvo
+  na armadura: quem golpeia o portador leva 6
+  na ferramenta: +3 em Processo (forja rápida)
+  secundário (Tempo, só defesa): uma vez por dia, desfaz um golpe recebido
+defeito: atrai tempestade
+preço: 600-1.000/kg
+ocorrência: reserva grande (rolar ao achar o veio ou o ninho)
+————————————————————————————————————————

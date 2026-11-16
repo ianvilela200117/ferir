@@ -1,0 +1,21 @@
+nome: Selula
+categoria: Épico
+nível: 113
+corpo: aquático
+tamanho: casa
+essência: Podridao
+números: PV 1695 · Defesa 48 · RD 6 · ataque +38 · 2 ataque(s) por rodada · dano 1d12 × 5 · XP 1130 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · grito que causa medo (Vontade ou Amedrontado)
+  · imune a armas duas categorias abaixo da categoria dele
+poder assinatura: a ferida infecciona (Vigor contra CD 16), em área de 12 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Vida: dano dobrado e corta a regeneração · e mais uma, a descobrir: um som
+comportamento: faminto: desce às aldeias no inverno
+habitat: tumba
+sinal (Lei 15): silêncio dos pássaros
+drops:
+  · glândula ×20: «fendun» (Épico, Podridao), serve para ofício e poção: dissolve impurezas: +3 em Matéria
+  · olho ×10: «veykos» (Épico, Podridao), serve para armadura: RD 3 contra doença e veneno
+  · pena ou pelo ×20: «veyine» (Épico, Podridao + Silencio), serve para armadura: RD 3 contra doença e veneno
+  · CORAÇÃO: núcleo Épico de Podridao, serve de NÚCLEO para Mítico
+————————————————————————————————————————

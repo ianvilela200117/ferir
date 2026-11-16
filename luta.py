@@ -41,7 +41,7 @@ MOTOR 6 (Dia 379; as regras da luta são as mesmas):
                                           quem cai ou recua, e o veredito pela LEI DAS CAÇADAS (2% de morte). seed= repete a mesma régua.
   python3 luta.py ARQ regua=2000          o mesmo, e grava a régua no envelope como OCULTO (o Mestre não copia à mão).
   Arquivo com campo faltando avisa qual campo falta antes de rolar qualquer dado.
-ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20), covil? {nome,dano,cd,efeito} e lendarias? N (G13, 433: o covil age no começo da rodada; Lendário 1, Mítico 2, Primordial 3 ações lendárias por padrão)},
+ARQUIVO: {"monstro":{nome,cat,nivel,pv,pv_atual?,df,rd,at,dado,mult,b?,poder?,veneno?,fraqueza?,inteligente?,moral?,gente?,furia_bando?,folego_bando?,reflete? (425: magia volta no 18-20), covil? {nome,dano,cd,efeito}, grito? {cd} (437: o GRITO QUE DÁ MEDO, G16 AMEDRONTADO; no grupo: vontade_medo? N) e lendarias? N (G13, 433: o covil age no começo da rodada; Lendário 1, Mítico 2, Primordial 3 ações lendárias por padrão)},
           "grupo":[{nome,nivel,at,dado,mult,b,df,rd,pv,essencia?,chega?,grita?,magia?,so20?,heroi?,vigor?,agi?,medicina?,imune_empurrao?}]}
 """
 import sys, json, secrets, random
@@ -113,6 +113,19 @@ def luta(F):
             if g['vivo'] and g.get('veneno',0)>0:
                 x=sum(dados(M['veneno']['dado'])); g['pv']-=x; g['veneno']-=1; P(f'  veneno em {g["nome"]}: −{x} ({g["pv"]})')
                 if g['pv']<=0: cai(g,0,morreu)
+        gr=M.get('grito')   # 437: o GRITO QUE DÁ MEDO (traço do gerador; G16 AMEDRONTADO: não avança contra o que teme, −2 no ataque; Vontade a cada rodada para sair)
+        if gr and M['pva']>0:
+            cdg=gr.get('cd',15)+(OFF if DOIS else 0)
+            for g in vivos(G,rnd):
+                if g.get('medo'):
+                    sv=sum(ex())+g['nivel']//10+g.get('vontade_medo',0)
+                    if sv>=cdg: g['medo']=False; P(f"  {g['nome']} sacode o medo (Vontade {sv} vs {cdg})")
+            if not M.get('_gritou') and not (F.get('surpresa') and rnd==1):
+                M['_gritou']=True; P(f"  GRITO de {M['nome']}: Vontade contra {cdg}")
+                for g in vivos(G,rnd):
+                    sv=sum(ex())+g['nivel']//10+g.get('vontade_medo',0)
+                    if sv<cdg: g['medo']=True
+                    P(f"    {g['nome']}: {sv} → "+('AMEDRONTADO (só feitiço de longe; −2 no ataque)' if g.get('medo') else 'firme'))
         cv=M.get('covil')   # G13 (Dia 433): o COVIL age no começo da rodada (d6: 1-2 respira · 3-5 um alvo · 6 todos, metade)
         if cv and M['pva']>0:
             rc=d(6); V=vivos(G,rnd)
@@ -136,11 +149,12 @@ def luta(F):
                 for _m in (g.get('magias') or ([g['magia']] if g.get('magia') else [])):
                     _rr=_m.get('rodada'); _rr=_rr if isinstance(_rr,list) else [_rr]
                     if rnd in _rr: mg=_m; break
+                if g.get('medo') and not (k==0 and mg): continue   # 437: AMEDRONTADO não avança contra o que teme (o feitiço de longe vale)
                 if k==0 and mg and rnd in (mg.get('rodada') if isinstance(mg.get('rodada'),list) else [mg.get('rodada')]):   # Dia 299: 'rodada' pode ser lista (a Maça lança 2x por cena; antes contava 1: erro achado)
                     if MAGIA=='velha':
                         dm=int(sum(dados(mg['dano']))*mg.get('mult',1)); sv=sum(ex())+M['at']; dd=max((dm//2 if sv>=mg['cd']+(OFF if DOIS else 0) else dm)-M['rd'],0); txt_m=f'resiste {sv} vs {mg["cd"]}'
                     else:   # MAGIA DISPUTADA (Dia 379): o lançador joga 2d20 + ataque contra a Defesa + 14 do alvo, como um golpe
-                        Jm=jog(); tm=Jm['t']+mg.get('at',g['at']); dfm=M['df']+(OFF if DOIS else 0)
+                        Jm=jog(); tm=Jm['t']+mg.get('at',g['at'])-(2 if g.get('medo') else 0); dfm=M['df']+(OFF if DOIS else 0)
                         if Jm['fum']: dm=0; txt_m=f'{Jm["ch"]} DOIS 1: o feitiço se desfaz'
                         elif Jm['crit']: dm=int(sum(dados(mg['dano'],crit=True))*mg.get('mult',1)); txt_m=f'{Jm["ch"]}+{mg.get("at",g["at"])}={tm} CRÍTICO (dados dobrados)'
                         elif tm>=dfm: dm=int(sum(dados(mg['dano']))*mg.get('mult',1)); txt_m=f'{Jm["ch"]}+{mg.get("at",g["at"])}={tm} vs {dfm} pega em cheio'

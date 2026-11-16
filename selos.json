@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "OLH2",
-  "SUR15",
-  "MAL1",
-  "MAL2",
   "ARD1",
   "RUI1",
   "SAC1",
@@ -399,204 +395,13 @@
   "TZ37",
   "SG37",
   "TU37",
-  "TC37"
+  "TC37",
+  "TS37",
+  "QZ37",
+  "VZ37",
+  "TR37"
  ],
  "selos": {
-  "OLH2": {
-   "id": "OLH2",
-   "dia": 415,
-   "hora": "23:35:19",
-   "titulo": "O HOMEM DO DENTE FALA? (um galpão de carroças na chuva; quem pergunta é a ISOLDA: FRIA, Assassina 115, venenos: +11; ele é fanático do Xaathis e o fim do mundo não o assusta: −6; o MORETH de pé atrás dela: +2; o tempo curto, antes que deem falta dele: −2)",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 11,
-     "res": "NÃO FALA: ri, e morde a própria língua; o grupo só sabe que é em Levis-baixa (o Drassa conhece as ruas do culto)"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 18,
-     "res": "FALA O LUGAR: a casa de fundição velha do Ardenghi em Levis-baixa, entre o cais e a boca das minas; quantos, não"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 24,
-     "res": "o lugar, QUANTOS (40 do culto, os 15 do ruivo), o SACERDOTE e onde o Ardenghi dorme"
-    },
-    {
-     "tipo": "num",
-     "a": 25,
-     "b": 25,
-     "res": "tudo isso e a SENHA da porta"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 13,
-     "res": "FALA O LUGAR: a casa de fundição velha do Ardenghi em Levis-baixa, entre o cais e a boca das minas; quantos, não",
-     "txt": "[8] +5 = 13 → FALA O LUGAR: a casa de fundição velha do Ardenghi em Levis-baixa, entre o cais e a boca das minas; quantos, não"
-    }
-   ],
-   "hora_rolado": "23:35:19"
-  },
-  "SUR15": {
-   "id": "SUR15",
-   "dia": 415,
-   "hora": "23:35:53",
-   "titulo": "A ESPERA NA FUNDIÇÃO VELHA DEU FALTA DO OLHO DA PORTA? (o grupo vai direto, a pé, pela chuva, guiado pelo Drassa)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "DERAM FALTA: estão de pé e armados, sem saber de onde vem (sem surpresa)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "NÃO: olham a porta do rio e a estrada; o grupo chega pelas costas (surpresa +5 na 1ª rodada, o precedente do 404)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "DERAM FALTA: estão de pé e armados, sem saber de onde vem (sem surpresa)",
-     "txt": "[2] → DERAM FALTA: estão de pé e armados, sem saber de onde vem (sem surpresa)"
-    }
-   ],
-   "hora_rolado": "23:35:53"
-  },
-  "MAL1": {
-   "id": "MAL1",
-   "dia": 415,
-   "hora": "23:36:10",
-   "titulo": "A MALDIÇÃO DE SANGUE: em quem",
-   "dado": [
-    1,
-    5,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Ferir"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Moreth"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Isolda"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Hruthos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "Moreth",
-     "txt": "[2] → Moreth"
-    }
-   ],
-   "hora_rolado": "23:36:10"
-  },
-  "MAL2": {
-   "id": "MAL2",
-   "dia": 415,
-   "hora": "23:36:15",
-   "titulo": "O MORETH RESISTE À MALDIÇÃO DE SANGUE (d20 + 23 contra CD 17; o 1 natural falha)",
-   "dado": [
-    1,
-    20,
-    23
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 24,
-     "b": 24,
-     "res": "(1 natural) FALHA: amaldiçoado"
-    },
-    {
-     "tipo": "num",
-     "a": 25,
-     "b": 1000000,
-     "res": "resiste"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 29,
-     "res": "resiste",
-     "txt": "[6] +23 = 29 → resiste"
-    }
-   ],
-   "hora_rolado": "23:36:15"
-  },
   "ARD1": {
    "id": "ARD1",
    "dia": 415,
@@ -19581,6 +19386,190 @@
     }
    ],
    "hora_rolado": "15:33:06"
+  },
+  "TS37": {
+   "id": "TS37",
+   "dia": 437,
+   "hora": "15:47:04",
+   "titulo": "A SALA 6 DE ZYTHIR, O TESOURO (G14/G17 pelo degrau do lugar: ÚNICO, 4; sala de tesouro: o 1-6 vira moeda)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "MOEDA do tesouro de Tuir, 4 × 1d6 × 100"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 16,
+     "res": "MATERIAL (gerador material, Épico)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "uma PEÇA ANTIGA do tesouro de Tuir (Épica; tem história, e o dono pode estar vivo: o próprio Tuir)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "as três coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      15
+     ],
+     "total": 15,
+     "res": "MATERIAL (gerador material, Épico)",
+     "txt": "[15] → MATERIAL (gerador material, Épico)"
+    }
+   ],
+   "hora_rolado": "15:47:04"
+  },
+  "QZ37": {
+   "id": "QZ37",
+   "dia": 437,
+   "hora": "15:47:20",
+   "titulo": "QUANTO ZIIS HÁ NO TESOURO DA SALA 6 (barras guardadas, não um veio; Épico, Raio + Tempo, 600-1.000/kg)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "tantos kg"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1,
+      5
+     ],
+     "total": 6,
+     "res": "tantos kg",
+     "txt": "[1, 5] +0 = 6 → tantos kg"
+    }
+   ],
+   "hora_rolado": "15:47:20"
+  },
+  "VZ37": {
+   "id": "VZ37",
+   "dia": 437,
+   "hora": "15:50:09",
+   "titulo": "O VENENO DA RAINHA NO REI DEPOIS DA LUTA (ENVENENADO, G16: 2d6 por rodada, as 3 rodadas, ninguém com Medicina no grupo; ele recuou na 1ª rodada antes de o veneno correr)",
+   "dado": [
+    6,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 36,
+     "res": "tantos PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      4,
+      2,
+      5,
+      2,
+      6
+     ],
+     "total": 24,
+     "res": "tantos PV",
+     "txt": "[5, 4, 2, 5, 2, 6] +0 = 24 → tantos PV"
+    }
+   ],
+   "hora_rolado": "15:50:09"
+  },
+  "TR37": {
+   "id": "TR37",
+   "dia": 437,
+   "hora": "15:50:09",
+   "titulo": "O TESOURO DO COVIL DA SALA 8 DE ZYTHIR (G17; a rainha ZATHA, Épica, morta na toca dela; degrau 3)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "nada além do bicho"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "MOEDA dos que ela comeu, 3 × 1d6 × 100"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 16,
+     "res": "MATERIAL (gerador material, Raro)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "uma PEÇA ANTIGA de quem morreu ali (Rara; tem história)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "as três coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nada além do bicho",
+     "txt": "[4] → nada além do bicho"
+    }
+   ],
+   "hora_rolado": "15:50:09"
   }
  }
 }

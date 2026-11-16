@@ -106,6 +106,8 @@ O jogador aprovou as dez de uma vez; o Mestre as escreveu equilibradas. Valem da
 ### G14 — AS MASMORRAS POR SALAS (masmorra.py)
 - Lugar fechado (Ithium, Alnesar, Quoium, Iroule, Eryssa e os que vierem) vira um mapa de 5 a 9 salas, gerado no dado na primeira vez que a casa entra ou manda olhos: `masmorra.py gera NOME CAT "o que guarda"`. A última sala é O CORAÇÃO. A tabela das salas está no cabeçalho do script. A casa escolhe o caminho sala a sala; o mapa inteiro fica oculto (`masmorra.py ver NOME`; o Mestre vê tudo com "tudo").
 - Uma sala por cena curta; uma masmorra grande leva um dia. Sair e voltar deixa o lugar se mexer (o que habita sabe que alguém entrou: +2 nos perigos da volta).
+- Sala de TESOURO (leitura do Mestre, 437): a G17 pelo degrau do LUGAR; como não há bicho, o 1-6 ("nada além do bicho") vira MOEDA.
+- O GRITO QUE DÁ MEDO (traço do gerador; 437): roda no luta.py ("grito": {cd}): na 1ª rodada em que o bicho age, cada um rola Vontade (2d20 + nível ÷ 10 + peças contra medo, "vontade_medo") contra a CD + 14; falha: AMEDRONTADO (G16: só o feitiço de longe, −2 no ataque; rola de novo a cada rodada para sair).
 
 ### G15 — O TEMPO LIVRE DA CASA (toda semana)
 - No tick semanal, até 3 NPCs da casa que não estejam em missão fazem UMA atividade (o jogador escolhe; sem escolha, o Mestre pega os parados pela ficha): **TREINAR** (uma perícia ou técnica: +1 de prática; 10 semanas = sobe um grau; custa 50) · **PESQUISAR** (uma pergunta ao Livro pelo saber.py com +2) · **TRABALHAR** (1d6 × 50 ao cofre) · **FESTEJAR** (opinião +5 de alguém; um boato do tick chega à casa; custa 1d6 × 20) · **CURAR-SE** (o ferido sara o dobro na semana). O dado vai pelo selo.py.

@@ -2834,7 +2834,7 @@
  },
  "Moreth": {
   "nivel": 232,
-  "xp": 13775,
+  "xp": 14905,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -2934,7 +2934,8 @@
    "+6100 427: o Morek morto",
    "Dia 428: 428 (noite): recebe a COURAÇA DE ESPINHO (MÍTICA; Sob Medida 4, o nome dele gravado; usa inteira): escamas de ssythis, forro de sasis, rebites de zeieth, o NÚCLEO ÚNICO DE ESPINHO do Morek no peito · leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · DEFEITOS: floresce e pesa; atrai tempestade · o encanto fica para a próxima noite livre na Fornalha",
    "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir",
-   "+780 437: o Huir, a sala 5 de Zythir"
+   "+780 437: o Huir, a sala 5 de Zythir",
+   "+1130 437: a rainha Zatha, a sala 8 de Zythir"
   ],
   "tracos": [
    "LEAL",
@@ -4186,7 +4187,7 @@
  },
  "Eiagrir": {
   "nivel": 126,
-  "xp": 9058,
+  "xp": 10188,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -4253,7 +4254,8 @@
    "+500 Tick 434: PASSO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
    "Tick 434: SOBE a 126",
    "+1580 436: o Zyza (Épico 158), a sala 1 de Zythir",
-   "+780 437: o Huir, a sala 5 de Zythir"
+   "+780 437: o Huir, a sala 5 de Zythir",
+   "+1130 437: a rainha Zatha, a sala 8 de Zythir"
   ],
   "ultima_subida": 434,
   "tracos": [

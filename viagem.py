@@ -61,6 +61,9 @@ def main():
         trechos = [x for x in (origem, destino) if x != 'Ireviel']
         dias = sum(T[x]['dias'] for x in trechos)
         como = ' + '.join(f"{x} {T[x]['tempo']}" for x in trechos)
+        for a_, b_ in ((origem, destino), (destino, origem)):   # 437: o Livro diz 'Levis + 4 dias a oeste': o trecho direto vale, sem passar por Ireviel (erro achado: Levis → Lumade dava 16)
+            mm = re.search(re.escape(a_) + r'\s*\+\s*(\d+)\s*dias?', T[b_].get('via', '')) if a_ != 'Ireviel' else None
+            if mm: dias, como = int(mm.group(1)), f"{b_}: {T[b_]['via']} (o trecho direto do Livro)"; break
     extra = []
     C = carrega('clima.json', {})
     ceu = next((v['ceu'] for k, v in C.get('hoje', {}).items() if k.split()[-1].lower() in origem.lower()), None)

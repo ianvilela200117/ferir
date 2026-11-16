@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1217034,
+ "xp": 1218164,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -19,7 +19,7 @@
   "Afinidade": 171
  },
  "pv": [
-  84,
+  23,
   402
  ],
  "mana": [
@@ -457,9 +457,10 @@
    ]
   },
   "núcleo-épico-de-podridão": {
-   "kg": 1.0,
+   "kg": 2.0,
    "log": [
-    "Dia 435: +1 436: o CORAÇÃO do Zyza (núcleo Épico de Podridão: serve para Mítica)"
+    "Dia 435: +1 436: o CORAÇÃO do Zyza (núcleo Épico de Podridão: serve para Mítica)",
+    "Dia 437: +1 437: o coração da rainha Zatha"
    ]
   },
   "nee": {
@@ -478,6 +479,30 @@
    "kg": 1.0,
    "log": [
     "Dia 437: +1 437: o coração do Huir (serve de NÚCLEO para Mítico)"
+   ]
+  },
+  "ziis": {
+   "kg": 6.0,
+   "log": [
+    "Dia 437: +6 437: o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg)"
+   ]
+  },
+  "neiel": {
+   "kg": 20.0,
+   "log": [
+    "Dia 437: +20 437: a rainha Zatha: glândula Épica de Podridão, ofício e poção: dissolve impurezas, +3 em Matéria"
+   ]
+  },
+  "leor": {
+   "kg": 10.0,
+   "log": [
+    "Dia 437: +10 437: a rainha Zatha: olho Épico de Podridão, armadura: RD 3 contra doença e veneno"
+   ]
+  },
+  "gusta": {
+   "kg": 20.0,
+   "log": [
+    "Dia 437: +20 437: a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno"
    ]
   }
  },
@@ -523,7 +548,8 @@
   "Dia 428: +10000 428: a Couraça de Espinho do Moreth (MÍTICA; o teto do núcleo Único)",
   "Dia 428: SOBE ao 156",
   "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)",
-  "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)"
+  "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)",
+  "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

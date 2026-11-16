@@ -1,0 +1,38 @@
+{
+ "monstro": {
+  "nome": "Zatha",
+  "cat": "Épico",
+  "nivel": 113,
+  "pv": 1695,
+  "df": 50,
+  "rd": 6,
+  "at": 40,
+  "dado": "1d12",
+  "mult": 5,
+  "poder": {
+   "nome": "a ferida infecciona (12 m)",
+   "tipo": "area",
+   "cd": 16,
+   "dano": "4d6"
+  },
+  "veneno": {
+   "cd": 16,
+   "rodadas": 3,
+   "dado": "2d6"
+  },
+  "grito": {
+   "cd": 15
+  },
+  "inteligente": true,
+  "moral": false,
+  "fraqueza": "Vida",
+  "covil": {
+   "nome": "a névoa podre da tumba",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": "ENVENENADO (G16)"
+  },
+  "nota": "gerador monstro (437; obras/zythir_sala8_rainha.txt; o nome Selula trocado por ZATHA; o corpo aquático do gerador vira INSETO pelo cânone): a RAINHA da colmeia de Zythir, a que não deixa o eco de Tuir sair; Podridão; do tamanho de uma casa; grito que dá medo; imune a armas 2 categorias abaixo; faminta; fraca a VIDA e, a descobrir, a um som; +2 da volta (G14); o covil da tumba (G13); não foge"
+ },
+ "grupo": []
+}

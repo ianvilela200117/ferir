@@ -1,0 +1,36 @@
+LEI DAS AÇÕES: Zatha (nível 113) contra 3 · PV 1695/1695 · RD 10 · 4 ações · reação 2 · grupo: Ferir 3, Moreth 4, Eiagrir 3
+INICIATIVA: Zatha 2d20+11 = 34 × o grupo 2d20+16 (média) = 38 → o grupo age primeiro
+--- RODADA 1 · Zatha 1695/1695
+  GRITO de Zatha: Vontade contra 29
+    Ferir: 48 → firme
+    Moreth: 53 → firme
+    Eiagrir: 33 → firme
+  COVIL (a névoa podre da tumba) d6 [6]: TODOS (metade)
+    Ferir: resiste [31] vs 21 → 0 (84)
+    Moreth: resiste [42] vs 21 → 0 (600)
+    Eiagrir: resiste [22] vs 21 → 0 (270)
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 400; [[3], [20, 4]]+34=61 vs 64 o alvo resiste: metade → 390 (1305)
+  Ferir: [[4], [2]]+34=40 vs 64 erra
+  Ferir: [[5], [4]]+34=43 vs 64 erra
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 630; [[15], [16]]+44=75 vs 64 pega em cheio → 620 (685)
+  Moreth: [[6], [4]]+44=54 vs 64 erra
+  Moreth: [[13], [1]]+44=58 vs 64 erra
+  Moreth: [[11], [13]]+44=68 ACERTA [1]×3+15+46=64 − RD 10 = 54 (631)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 152; [[8], [9]]+36=53 vs 64 o alvo resiste: metade → 142 (489)
+  Eiagrir: [[8], [18]]+36=62 ACERTA [9]×3+12+25=64 − RD 10 = 54 (435)
+  Eiagrir: [[11], [4]]+36=51 vs 61 erra
+  FÚRIA: +1 ação, o poder recarrega
+  PODER: a ferida infecciona (12 m)
+    Eiagrir: 8 (262)
+    ataque em Ferir: [[3], [5]]+40=48 vs 59 erra
+    ataque em Ferir: [[4], [2]]+40=46 vs 59 erra
+    ataque em Ferir: [[16], [2]]+40=58 vs 59 erra
+    ataque em Ferir: [[18], [12]]+40=70 vs 58 ACERTA [5]×5+0+22=47 − RD 10 = 37 (47) · VENENO (Vigor 24)
+    Ferir RECUA ferido (d6 [2])
+--- RODADA 2 · Zatha 435/1695
+  COVIL (a névoa podre da tumba) d6 [4]: um alvo
+    Eiagrir: resiste [23] vs 21 → 5 (257)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 600; [[14], [10]]+44=68 vs 64 pega em cheio → 590 (-155)
+  Zatha CAI
+  FERIMENTO de Ferir: d20 [18]+0 = 18 → GRAVE: não luta · MARCA: manca · 21 dias (até o Dia 458) · Zatha
+FIM: morto · rodadas 2 · mortos [] · PV -155/1695 · grupo {'Ferir': 47, 'Moreth': 600, 'Eiagrir': 257}
