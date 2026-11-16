@@ -147,3 +147,32 @@ Eles estão nas regiões do atlas. A casa os conhece por boato, por compra ou in
 - Um núcleo Mítico dá o **PODER DE CIDADE**.
 - **Mítico pede núcleo** (ou relíquia, ou um ano de vida de quem forja). **Primordial pede núcleo Lendário ou Mítico.**
 - Os núcleos da casa estão no estado vivo. Os núcleos que o mundo tem são os monstros do bestiário.
+
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+### Achados da casa que o Livro não trazia
+
+Saem do `ficha.json` a cada vez que o `livro_sync.py` roda. São drops de bichos e achados de tesouro.
+
+| Material | A casa tem | O que se sabe |
+| --- | --- | --- |
+| **draek** | ~5 | o couro do Neane (Raro, Sombra) |
+| **eryra** | ~1 | a glândula do Neane (1 porção; Raro, Sombra) |
+| **gusta** | ~20 | a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno |
+| **heald** | ~3 | a presa do Morek (Único, Espinho; arma: o golpe prende como raiz) |
+| **laiel** | ~2 | os ossos do Zyza (Épico, Podridão + Sombra; arma: a ferida infecciona, Vigor CD 16 |
+| **laliel** | ~6 | o olho do Morek (Único, Espinho) |
+| **leor** | ~10 | a rainha Zatha: olho Épico de Podridão, armadura: RD 3 contra doença e veneno |
+| **maor** | ~4 | os olhos do Zyza (Épico, Podridão + Mente; armadura: RD 3 contra doença e veneno |
+| **nee** | ~30 | o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6 |
+| **neiel** | ~20 | a rainha Zatha: glândula Épica de Podridão, ofício e poção: dissolve impurezas, +3 em Matéria |
+| **sangue-de-sombra** | ~1 | o sangue do Neane, guardado para o SYSRETH (1 porção = 2 kg da liga) |
+| **sasis** | ~0 | o pelo do Morek (Único, Espinho + Raio) |
+| **seor** | ~6 | as escamas do Zyza (Épico, Podridão; armadura: RD 3 contra doença e veneno |
+| **ssythis** | ~0 | a escama do Morek (Único, Espinho) |
+| **vorgel** | ~2 | glândulas do Vorthen (unidades, não kg) |
+| **yeviel** | ~60 | o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia |
+| **ziis** | ~6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
+| **ziza** | ~0.8 | a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento) |
+
+**Núcleos na mão do rei:** núcleo-épico-de-espinho ×1 · núcleo-épico-de-podridão ×1 · núcleo-épico-de-água ×1.
+<!-- SYNC:FIM -->

@@ -765,8 +765,8 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <ul>
 <li>O <strong>Dia 1</strong> foi o 27 da Lua das Barcas de <strong>1012 d.S.</strong></li>
 <li>O inverno de 1013 foi do Dia 190 ao Dia 279.</li>
-<li><strong>Hoje, Dia 356, é o 17 da Lua das Barcas de 1013 d.S.</strong>: fim do degelo. O verão (Lua do Sal) começa no <strong>Dia 370</strong>.</li>
-<li>A <strong>lua nova</strong> (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400 e assim por diante.</li>
+<li>O Dia 356 foi o 17 da Lua das Barcas de 1013 d.S. A Lua do Sal começou no Dia 370, a da Forja no 400, a <strong>da Seca no 430</strong>. <strong>O Dia 437 é o 8 da Lua da Seca de 1013 d.S.</strong> (o dia de hoje: <code>python3 tick.py status</code>). A Colheita (Lua do Grão) começa no <strong>Dia 460</strong>; os Jogos das Cidades, na Lua do Vinho (<strong>Dia 490</strong>).</li>
+<li>A <strong>lua nova</strong> (a do nome do servo) cai no dia 1 de cada lua: os Dias 340, 370, 400, 430, 460 e assim por diante.</li>
 </ul>
 <hr />
 <h2 id="7-a-moeda">7. A moeda</h2>
@@ -6188,7 +6188,113 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li>Um núcleo Mítico dá o <strong>PODER DE CIDADE</strong>.</li>
 <li><strong>Mítico pede núcleo</strong> (ou relíquia, ou um ano de vida de quem forja). <strong>Primordial pede núcleo Lendário ou Mítico.</strong></li>
 <li>Os núcleos da casa estão no estado vivo. Os núcleos que o mundo tem são os monstros do bestiário.</li>
-</ul></div></section><section class="aba" id="aba-bestiario" hidden><div class="texto"><h1 id="bestiario">BESTIÁRIO</h1>
+</ul>
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+<h3 id="achados-da-casa-que-o-livro-nao-trazia">Achados da casa que o Livro não trazia</h3>
+<p>Saem do <code>ficha.json</code> a cada vez que o <code>livro_sync.py</code> roda. São drops de bichos e achados de tesouro.</p>
+<table>
+<thead>
+<tr>
+<th>Material</th>
+<th>A casa tem</th>
+<th>O que se sabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>draek</strong></td>
+<td>~5</td>
+<td>o couro do Neane (Raro, Sombra)</td>
+</tr>
+<tr>
+<td><strong>eryra</strong></td>
+<td>~1</td>
+<td>a glândula do Neane (1 porção; Raro, Sombra)</td>
+</tr>
+<tr>
+<td><strong>gusta</strong></td>
+<td>~20</td>
+<td>a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno</td>
+</tr>
+<tr>
+<td><strong>heald</strong></td>
+<td>~3</td>
+<td>a presa do Morek (Único, Espinho; arma: o golpe prende como raiz)</td>
+</tr>
+<tr>
+<td><strong>laiel</strong></td>
+<td>~2</td>
+<td>os ossos do Zyza (Épico, Podridão + Sombra; arma: a ferida infecciona, Vigor CD 16</td>
+</tr>
+<tr>
+<td><strong>laliel</strong></td>
+<td>~6</td>
+<td>o olho do Morek (Único, Espinho)</td>
+</tr>
+<tr>
+<td><strong>leor</strong></td>
+<td>~10</td>
+<td>a rainha Zatha: olho Épico de Podridão, armadura: RD 3 contra doença e veneno</td>
+</tr>
+<tr>
+<td><strong>maor</strong></td>
+<td>~4</td>
+<td>os olhos do Zyza (Épico, Podridão + Mente; armadura: RD 3 contra doença e veneno</td>
+</tr>
+<tr>
+<td><strong>nee</strong></td>
+<td>~30</td>
+<td>o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6</td>
+</tr>
+<tr>
+<td><strong>neiel</strong></td>
+<td>~20</td>
+<td>a rainha Zatha: glândula Épica de Podridão, ofício e poção: dissolve impurezas, +3 em Matéria</td>
+</tr>
+<tr>
+<td><strong>sangue-de-sombra</strong></td>
+<td>~1</td>
+<td>o sangue do Neane, guardado para o SYSRETH (1 porção = 2 kg da liga)</td>
+</tr>
+<tr>
+<td><strong>sasis</strong></td>
+<td>~0</td>
+<td>o pelo do Morek (Único, Espinho + Raio)</td>
+</tr>
+<tr>
+<td><strong>seor</strong></td>
+<td>~6</td>
+<td>as escamas do Zyza (Épico, Podridão; armadura: RD 3 contra doença e veneno</td>
+</tr>
+<tr>
+<td><strong>ssythis</strong></td>
+<td>~0</td>
+<td>a escama do Morek (Único, Espinho)</td>
+</tr>
+<tr>
+<td><strong>vorgel</strong></td>
+<td>~2</td>
+<td>glândulas do Vorthen (unidades, não kg)</td>
+</tr>
+<tr>
+<td><strong>yeviel</strong></td>
+<td>~60</td>
+<td>o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia</td>
+</tr>
+<tr>
+<td><strong>ziis</strong></td>
+<td>~6</td>
+<td>o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg)</td>
+</tr>
+<tr>
+<td><strong>ziza</strong></td>
+<td>~0.8</td>
+<td>a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Núcleos na mão do rei:</strong> núcleo-épico-de-espinho ×1 · núcleo-épico-de-podridão ×1 · núcleo-épico-de-água ×1.</p>
+<!-- SYNC:FIM --></div></section><section class="aba" id="aba-bestiario" hidden><div class="texto"><h1 id="bestiario">BESTIÁRIO</h1>
 <p>Esta é a lista fechada dos bichos de Ortheia. O Mestre não inventa monstro fora dela. Uma cria nova nasce de monstro que já existe (ninhada); um monstro grande novo acorda quando a coberta afina, e entra na lista no dia em que acorda.</p>
 <h2 id="1-os-numeros-motor-xiv8">1. Os números (Motor XIV.8)</h2>
 <table>
@@ -6937,7 +7043,162 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <td>eram da Mão Queimada; o Culto do Xaathis as tomou (343)</td>
 </tr>
 </tbody>
-</table></div></section><section class="aba" id="aba-nove" hidden><div class="texto"><h1 id="livro-nove-o-que-faltava">LIVRO NOVE: O QUE FALTAVA</h1>
+</table>
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+<h2 id="5-bichos-que-a-casa-enfrentou-ou-viu">5. Bichos que a casa enfrentou ou viu</h2>
+<p>Saem do jogo (<code>mundo_vivo.json</code>) a cada vez que o <code>livro_sync.py</code> roda. Só o que a casa sabe.</p>
+<table>
+<thead>
+<tr>
+<th>Bicho</th>
+<th>Categoria</th>
+<th>Nível</th>
+<th>Essência</th>
+<th>Onde</th>
+<th>Estado</th>
+<th>O que a casa sabe</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Vorthen</strong></td>
+<td>Épico</td>
+<td>77</td>
+<td>Gelo</td>
+<td>um NINHO DE CRIAS num bosque à beira da estrada do sul de Ireviel</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Zassis</strong></td>
+<td>Épico</td>
+<td>88</td>
+<td>Vento</td>
+<td>Mordun, perto do Garkunn (notícia EXAGERADA do 403); habitat de vulcão</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Yiava</strong></td>
+<td>Único</td>
+<td>171</td>
+<td>Silêncio</td>
+<td>os lodaçais do Delta (a Eliane viu, 397-399)</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Mivor</strong></td>
+<td>Épico</td>
+<td>96</td>
+<td>Terra</td>
+<td>o leito seco do rio, ao norte de Ireviel (o Tuald viu)</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Naiel</strong></td>
+<td>Raro</td>
+<td>67</td>
+<td>Força</td>
+<td>a costa perto do Porto de Marasar, onde o céu sangrou (o evento do Porto, 406)</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Morek</strong></td>
+<td>Único</td>
+<td>122</td>
+<td>Espinho</td>
+<td>a FORQUILHA do rio (o Leve), a meio dia de Ireviel</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Neane</strong></td>
+<td>Raro</td>
+<td>62</td>
+<td>Sombra</td>
+<td>o rio abaixo de Ireviel, no caminho da forquilha (a complicação da missão A FORQUILHA LIMPA, CP24 [1])</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Nesium</strong></td>
+<td>Lendário</td>
+<td>244</td>
+<td>Luz</td>
+<td>STEUNN: o lago gelado perto de Itheth, o cemitério dos reis (o Yeane sabe; BL26w [5])</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Ulmir</strong></td>
+<td>Único</td>
+<td>178</td>
+<td>Raio</td>
+<td>as SALINAS DO DELTA (o Bjorvunn sabe; BJ26w [6])</td>
+<td>vivo</td>
+<td>—</td>
+</tr>
+<tr>
+<td><strong>Syess</strong></td>
+<td>Incomum</td>
+<td>18</td>
+<td>Elo</td>
+<td>a costa perto de Farenta</td>
+<td>vivo</td>
+<td>o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108; Defesa 18; RD 1; ataque +8; 1 ataque; 1d10 × 1.5; XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia),</td>
+</tr>
+<tr>
+<td><strong>Tinda</strong></td>
+<td>Incomum</td>
+<td>14</td>
+<td>Elo</td>
+<td>as Fundas do Norte (o Clã Hegre)</td>
+<td>vivo</td>
+<td>o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda; nome: Nesron; categoria: Incomum; nível: 14; corpo: inseto; tamanho: homem; essência: Elo; números: PV 84; Defesa 17; RD 1; ataque +7; 1 ataque(s) por rodada; dano 1d8 × 1.5; XP 140 (×5 chefe,</td>
+</tr>
+<tr>
+<td><strong>Zyza</strong></td>
+<td>Épico</td>
+<td>158</td>
+<td>Podridão</td>
+<td>Zythir, a sala 1</td>
+<td>vivo</td>
+<td>MORTO no 436 pelo contra-golpe do Eiagrir</td>
+</tr>
+<tr>
+<td><strong>Huir</strong></td>
+<td>Épico</td>
+<td>78</td>
+<td>Espinho</td>
+<td>Zythir, a sala 5</td>
+<td>morto</td>
+<td>MORTO (437, pelo Moreth, na 1ª rodada, pego de surpresa); muitas cabeças; devora metal; o golpe prende como raiz (CD 16, 12 m); fraco a FOGO e ao próprio nome; migrante (veio à tumba numa estação); sinal: árvores marcadas; drops nee ×30, yeviel ×60, núcleo Épi</td>
+</tr>
+<tr>
+<td><strong>Zatha</strong></td>
+<td>Épico</td>
+<td>113</td>
+<td>Podridão</td>
+<td>Zythir, a sala 8</td>
+<td>morto</td>
+<td>MORTA (437, pela 2ª Lança do Sol do Moreth, na 2ª rodada); o corpo aquático do gerador virou INSETO pelo cânone): a RAINHA da colmeia de Zythir, do tamanho de uma casa; grito que dá medo (ninguém tremeu); imune a armas 2 categorias abaixo; faminta; feriu o rei</td>
+</tr>
+<tr>
+<td><strong>Vdogek</strong></td>
+<td>Único</td>
+<td>183</td>
+<td>Elo</td>
+<td>Zythir, a sala 9 (o coração)</td>
+<td>vivo</td>
+<td>VIVO; visto só pela Visão do Tempo do rei (438): o GUARDIÃO do coração de Zythir; besta do tamanho de uma colina; olhar paralisante; muitas cabeças; o golpe corta laços e encantos</td>
+</tr>
+</tbody>
+</table>
+<p>Os traços novos, as fases dos chefes, os nomeados e as crias estão no <strong>Livro Nove</strong>, seção 8.</p>
+<!-- SYNC:FIM --></div></section><section class="aba" id="aba-nove" hidden><div class="texto"><h1 id="livro-nove-o-que-faltava">LIVRO NOVE: O QUE FALTAVA</h1>
 <p><strong>MOTOR 9 (Dia 437, pedido do jogador).</strong> O Livro foi relido inteiro. Este capítulo fecha os furos: o que os jogos de mesa de masmorra e os romances do ferreiro lendário têm e Ortheia ainda não tinha. As inspirações deram a forma; os nomes, os números e os preços são de Ortheia.</p>
 <ul>
 <li><strong>A lista fechada</strong> do grimório e dos talentos passa a incluir este capítulo. O Mestre continua sem inventar fora do Livro.</li>

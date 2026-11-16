@@ -132,3 +132,29 @@ São povos, não feras: têm chefe, desejo e plano.
 | **Vrurn** (trolls) | ~160 | perto de Yaelane | Ulair (31), sacerdote de um deus morto | vassalos de alguém (a saber) |
 | **Vradda** (homens-lagarto) | ~60 em Gogrunn, mais no brejo | Gogrunn e o brejo | Grerkur (36) | trocam peles e minério por ferro |
 | **Kraek** (harpias) | ~100 | Telosus | Skugek (14) | eram da Mão Queimada; o Culto do Xaathis as tomou (343) |
+
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+## 5. Bichos que a casa enfrentou ou viu
+
+Saem do jogo (`mundo_vivo.json`) a cada vez que o `livro_sync.py` roda. Só o que a casa sabe.
+
+| Bicho | Categoria | Nível | Essência | Onde | Estado | O que a casa sabe |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Vorthen** | Épico | 77 | Gelo | um NINHO DE CRIAS num bosque à beira da estrada do sul de Ireviel | vivo | — |
+| **Zassis** | Épico | 88 | Vento | Mordun, perto do Garkunn (notícia EXAGERADA do 403); habitat de vulcão | vivo | — |
+| **Yiava** | Único | 171 | Silêncio | os lodaçais do Delta (a Eliane viu, 397-399) | vivo | — |
+| **Mivor** | Épico | 96 | Terra | o leito seco do rio, ao norte de Ireviel (o Tuald viu) | vivo | — |
+| **Naiel** | Raro | 67 | Força | a costa perto do Porto de Marasar, onde o céu sangrou (o evento do Porto, 406) | vivo | — |
+| **Morek** | Único | 122 | Espinho | a FORQUILHA do rio (o Leve), a meio dia de Ireviel | vivo | — |
+| **Neane** | Raro | 62 | Sombra | o rio abaixo de Ireviel, no caminho da forquilha (a complicação da missão A FORQUILHA LIMPA, CP24 [1]) | vivo | — |
+| **Nesium** | Lendário | 244 | Luz | STEUNN: o lago gelado perto de Itheth, o cemitério dos reis (o Yeane sabe; BL26w [5]) | vivo | — |
+| **Ulmir** | Único | 178 | Raio | as SALINAS DO DELTA (o Bjorvunn sabe; BJ26w [6]) | vivo | — |
+| **Syess** | Incomum | 18 | Elo | a costa perto de Farenta | vivo | o nome do gerador, Veyssa, batia no cânone (Vey-) e virou SYESS): inseto do tamanho de um cavalo, ELO; PV 108; Defesa 18; RD 1; ataque +8; 1 ataque; 1d10 × 1.5; XP 180; veneno no golpe; o golpe corta laços mágicos e encantamentos (Romper contra a CD da magia), |
+| **Tinda** | Incomum | 14 | Elo | as Fundas do Norte (o Clã Hegre) | vivo | o nome do gerador (Nesron) batia no cânone (Nesium) e virou Tinda; nome: Nesron; categoria: Incomum; nível: 14; corpo: inseto; tamanho: homem; essência: Elo; números: PV 84; Defesa 17; RD 1; ataque +7; 1 ataque(s) por rodada; dano 1d8 × 1.5; XP 140 (×5 chefe,  |
+| **Zyza** | Épico | 158 | Podridão | Zythir, a sala 1 | vivo | MORTO no 436 pelo contra-golpe do Eiagrir |
+| **Huir** | Épico | 78 | Espinho | Zythir, a sala 5 | morto | MORTO (437, pelo Moreth, na 1ª rodada, pego de surpresa); muitas cabeças; devora metal; o golpe prende como raiz (CD 16, 12 m); fraco a FOGO e ao próprio nome; migrante (veio à tumba numa estação); sinal: árvores marcadas; drops nee ×30, yeviel ×60, núcleo Épi |
+| **Zatha** | Épico | 113 | Podridão | Zythir, a sala 8 | morto | MORTA (437, pela 2ª Lança do Sol do Moreth, na 2ª rodada); o corpo aquático do gerador virou INSETO pelo cânone): a RAINHA da colmeia de Zythir, do tamanho de uma casa; grito que dá medo (ninguém tremeu); imune a armas 2 categorias abaixo; faminta; feriu o rei |
+| **Vdogek** | Único | 183 | Elo | Zythir, a sala 9 (o coração) | vivo | VIVO; visto só pela Visão do Tempo do rei (438): o GUARDIÃO do coração de Zythir; besta do tamanho de uma colina; olhar paralisante; muitas cabeças; o golpe corta laços e encantos |
+
+Os traços novos, as fases dos chefes, os nomeados e as crias estão no **Livro Nove**, seção 8.
+<!-- SYNC:FIM -->
