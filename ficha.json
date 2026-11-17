@@ -421,13 +421,14 @@
    ]
   },
   "ferro": {
-   "kg": 236.2,
+   "kg": 223.4,
    "log": [
     "Dia 409: +18 409: o quinto da forja do minério da Casa dos Mineiros (90 kg)",
     "Dia 422: -5 422 (noite): as lâminas das caixas de físico",
     "Dia 423: +300 423: a barca do ferro de Levis (os 300 kg da coroa, do armazém do Ardenghi)",
     "Dia 428: -8 428: a Couraça de Espinho do Moreth",
-    "Dia 455: -68.8 455: o lote de venda (12,8) e a Série da Hoste (5 × 11,2)"
+    "Dia 455: -68.8 455: o lote de venda (12,8) e a Série da Hoste (5 × 11,2)",
+    "Dia 457: -12.8 457: separado para a L1 e a L2 (11,2 e 1,6)"
    ]
   },
   "vaduar": {
@@ -528,10 +529,11 @@
    ]
   },
   "yeviel": {
-   "kg": 56.8,
+   "kg": 54.0,
    "log": [
     "Dia 437: +60 437: o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia",
-    "Dia 455: -3.2 455: o lote de venda (2,8 kg na armadura e 0,4 na espada)"
+    "Dia 455: -3.2 455: o lote de venda (2,8 kg na armadura e 0,4 na espada)",
+    "Dia 457: -2.8 457: separado para a L1 (a armadura Lendária do Teraseth, 458-460)"
    ]
   },
   "núcleo-épico-de-espinho": {
@@ -541,9 +543,10 @@
    ]
   },
   "ziis": {
-   "kg": 6.0,
+   "kg": 5.6,
    "log": [
-    "Dia 437: +6 437: o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg)"
+    "Dia 437: +6 437: o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg)",
+    "Dia 457: -0.4 457: separado para a L2 (a espada Lendária do Colégio, 460-462)"
    ]
   },
   "neiel": {
