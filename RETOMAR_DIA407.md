@@ -1,4 +1,4 @@
-# RETOMAR — entardecer do Dia 448, FARENTA: a Mamiltia sai sozinha contra a Elaeva (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 448, FARENTA: A MAMILTIA MORREU; a primeira hora (G9) (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 448, FARENTA, DENTRO DA PRIMEIRA HORA (G9). A MAMILTIA MORREU (LM48; sims/elaeva448_M_saida.txt): o corpo no mato, ao pé da Elaeva (o espinheiro alcança 18 m). A ELAEVA: 17.955 de 37.600 (48%), em FÚRIA, na SEGUNDA FASE (troca de Essência: a fraqueza nova VIDA, FE46b [5], OCULTA; o SAL segue, é a raiz; no cerco a Mamiltia passaria a × 10, mas ela morreu); no cerco, abaixo de 50%: a cada dia d6 1-2 ela vai embora. O rei: 392/402, Mana 124/164, a Visão 0 de 2 (volta na aurora), GRAVE até o 458. O SAL: OITO carroças (uma foi nas mãos da Mamiltia) = 2 dias de tiro com sal. O FOGO DOS CAMPOS (FC48 [3]: corre para o mato) ficou para a noite, depois da hora. O cerco sem a Mamiltia: a bordo o Moreth e o Eiagrir (tirar a Mamiltia do cercos/elaeva445.json com cerco.py elaeva445 sai Mamiltia). O ZYZA: a barda de ziis (obra_valor.py, o Martelo que Ensina vai com o rei; a Tenaz ficou na Fornalha), a PRESSA e a RAIZ DE PEDRA no corpo (o Osso Gravado +3), o núcleo Mítico quando houver (o da Elaeva, se ela morrer) e comer o que matar. O preso ao podestà (2b). Cofre 8.168. As consequências do mundo pela morte da Mamiltia (a Mão Queimada, Telosus, a Almision) rolam depois da hora, pela decisão do jogador.
+
+Antes (o entardecer do 448):
 Entardecer do 448, FARENTA (o tick semanal do 448 rodado). A MAMILTIA SAIU SOZINHA (MP48 [1]) depois que o espinheiro matou 50 num bairro (EC48 [6], MO48). A luta, se ela for sozinha: sims/elaeva446_A.json (montado; a ficha da Elaeva com a fase: FE46 [1] troca de Essência, a fraqueza nova VIDA FE46b [5], ambas ocultas), a Visão de 445: ela morre em 71%; o rei sabe ERGUER O CAÍDO (até 1 hora; 30 de Mana; Mana 164/164). Com o Moreth, o Eiagrir e o Zyza: sims/elaeva447_B.json (a Visão de 447: todos caem; o Moreth e o Eiagrir morrem em 100%) · o fogo sem a ventania hoje (o −4 do 447 não vale: tirar). A MIE (150; sem ficha de combate: fazer pela artes.py e pelo nível se entrar) e as 20 lanças nas muralhas; o SAL: UM dia de tiro (SQ48 [1]). O cerco: a fera longe da costa quatro dias seguidos. O OLHO PINTADO preso (o outro fugiu). A febre segue; uma irmã da Oisse doente. Farenta: Comércio −1 (o incêndio), Ordem −1 (a criança, até o 451) e −1 (os mortos, até o 455), Defesa e Comida −1 −1. Cofre 8.768. (OCULTO) YEOR chega no 451; a missão dos Arpões; o clima estranho na costa. LEVIS: a missão do Ithvil falha no 449. A Guilda: a ordem chegou a Ireviel no 448.
 
 Antes (447):
@@ -258,10 +261,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (447 → 448): 1c a busca e a fala · 2c nada · "o que eu posso melhorar no Zyza?" (pergunta de regra: respondida pelos livros)
 - BG47 falha · o tick do 448 · D48 [1] · MH48 [5] · SQ48 [1] · OS48 [1] · BG48 GANHO · PR48 sucesso · CE48 [1] · EC48 [6] · MO48 50 · MP48 [1].
 
+## RESPONDIDO (448): 1d o plano com a Visão e todos os recursos · 2b · 3 tudo no Zyza
+- as duas Visões (A: todos caem; B: o cerco com sal tira ~3.350 por dia) · SM48 [2] ela sai sozinha · SF48 [6] · FC48 [3] · LM48: a Mamiltia leva a fera a 48% e MORRE.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A MAMILTIA SAI SOZINHA (o espinheiro matou 50; a ordem c do 445 foi antes da Visão do 447): a) deixar ir; o rei fica na porta pronto para ERGUER O CAÍDO · b) a palavra do rei de novo (outro teste; com 50 mortos no bairro a alavanca pesa menos) · c) mandar o Moreth, o Eiagrir e o Zyza com ela (a Visão do 447) · d) a VISÃO DO TEMPO antes (2 de 2 hoje): esta saída dela, sem a ventania.
-2. O OLHO PINTADO PRESO: a) o rei interroga (as Luvas: COMANDO, 1x por cena) · b) entrega ao podestà, à lei de Farenta · c) as duas coisas.
-3. O ZYZA: o que fazer primeiro (a lista na resposta): a) forjar uma barda de ZIIS para ele (desfaz um golpe por dia) · b) encantar o corpo dele com PRESSA ou RAIZ DE PEDRA (o Osso Gravado +3) · c) pôr um núcleo MÍTICO no peito quando houver (o nível inteiro) · d) só deixá-lo comer o que matar.
+1. A MAMILTIA, DENTRO DA HORA (G9): a) ERGUER O CAÍDO: alguém busca o corpo no mato ao pé da fera (quem: o Zyza, a Mie, o cabo Gonde com a carroça) e o rei a ergue na porta (30 de Mana; volta com 1 PV e −1 para sempre num atributo) · b) o SERVO ARMADO: o Falar com Morto e a Receita Mestra (se ela aceitar: 3/4 do nível; o preço dela no dado; e o mundo da fé dela vê) · c) deixá-la ir.
+2. A ELAEVA A 48%, EM FÚRIA: a) o cerco com sal no amanhecer (o fogo dos campos esta noite) · b) atirar já de noite, das muralhas, com o que há (o Moreth e o Eiagrir: a Lança do Sol) · c) esperar.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

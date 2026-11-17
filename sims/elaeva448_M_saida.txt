@@ -1,0 +1,79 @@
+LEI DAS AÇÕES: Elaeva (nível 376) contra 1 · PV 28793/37600 · RD 50 · 11 ações · reação 4 · grupo: Mamiltia 8
+INICIATIVA: Elaeva 2d20+37 = 59 × o grupo 2d20+114 (média) = 137 → o grupo age primeiro
+--- RODADA 1 · Elaeva 28793/37600
+  Mamiltia lança: 680; [[7], [16]]+134=157 vs 148 pega em cheio → 1260 (27533)
+  Mamiltia: [[4], [15]]+134=153 ACERTA [10]×4+38+229=307 − RD 50 ×2 = 514 (27019)
+  Mamiltia: [[10], [3]]+134=147 vs 148 erra
+  Mamiltia: [[4], [17]]+134=155 ACERTA [2]×4+38+229=275 − RD 50 ×2 = 450 (26569)
+  Mamiltia: [[6], [3]]+134=143 vs 148 erra
+  Mamiltia: [[16], [1]]+134=151 ACERTA [5]×4+38+229=287 − RD 50 ×2 = 474 (26095)
+  Mamiltia: [[6], [10]]+134=150 ACERTA [2]×4+38+229=275 − RD 50 ×2 = 450 (25645)
+  Mamiltia: [[18], [20, 9]]+134=181 ACERTA CRÍTICO [8, 1, 1]×4+38+229=307 − RD 25 ×2 = 564 (25081)
+  REAÇÃO:
+    ataque em Mamiltia: [[6], [20, 3]]+124=153 vs 157 erra
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[17], [8]]+124=149 vs 157 erra
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[4], [19]]+124=147 vs 157 erra
+  PODER: o espinheiro (Agilidade CD 30, 18 m)
+    ataque em Mamiltia: [[14], [7]]+124=145 vs 157 erra
+    ataque em Mamiltia: [[19], [9]]+124=152 vs 157 erra
+    ataque em Mamiltia: [[7], [10]]+124=141 vs 157 erra
+    ataque em Mamiltia: [[5], [6]]+124=135 vs 157 erra
+    ataque em Mamiltia: [[8], [2]]+124=134 vs 157 erra
+    ataque em Mamiltia: [[20, 17], [8]]+124=169 vs 156 ACERTA [1, 6, 1]×100+0+75=875 − RD 8 = 867 (2123)
+    ataque em Mamiltia: [[17], [15]]+124=156 vs 155 ACERTA [3, 8, 9]×100+0+75=2075 − RD 8 = 2067 (56)
+    CONTRA-GOLPE de Mamiltia: [[20, 7], [17]] → 540 (24541)
+    ataque em Mamiltia: [[16], [20, 19]]+124=179 vs 154 ACERTA CRÍTICO [2, 4, 1, 3, 8, 5, 10]×100+0+75=3375 − RD 4 = 3371 (-3315)
+    Mamiltia cai... e fica de pé com 1 (SEGUNDO CORAÇÃO)
+    ataque em Mamiltia: [[6], [5]]+124=135 vs 153 erra
+    ataque em Mamiltia: [[5], [3]]+124=132 vs 152 erra
+--- RODADA 2 · Elaeva 24541/37600
+  Mamiltia lança: 680; [[9], [15]]+134=158 vs 148 pega em cheio → 1260 (23281)
+  Mamiltia: [[20, 9], [1]]+134=164 ACERTA [9]×4+38+229=303 − RD 50 ×2 = 506 (22775)
+  Mamiltia: [[6], [11]]+134=151 ACERTA [4]×4+38+229=283 − RD 50 ×2 = 466 (22309)
+  Mamiltia: [[9], [20, 12]]+134=175 ACERTA [6]×4+38+229=291 − RD 50 ×2 = 482 (21827)
+  Mamiltia: [[12], [6]]+134=152 ACERTA [10]×4+38+229=307 − RD 50 ×2 = 514 (21313)
+  Mamiltia: [[17], [10]]+134=161 ACERTA [9]×4+38+229=303 − RD 50 ×2 = 506 (20807)
+  Mamiltia: [[13], [2]]+134=149 ACERTA [7]×4+38+229=295 − RD 50 ×2 = 490 (20317)
+  Mamiltia: [[4], [7]]+134=145 vs 148 erra
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[13], [5]]+124=142 vs 157 erra
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[8], [11]]+124=143 vs 157 erra
+  PODER: o espinheiro (Agilidade CD 30, 18 m)
+    ataque em Mamiltia: [[5], [9]]+124=138 vs 157 erra
+    ataque em Mamiltia: [[16], [11]]+124=151 vs 157 erra
+    ataque em Mamiltia: [[4], [18]]+124=146 vs 157 erra
+    ataque em Mamiltia: [[10], [2]]+124=136 vs 157 erra
+    ataque em Mamiltia: [[15], [14]]+124=153 vs 157 erra
+    ataque em Mamiltia: [[12], [8]]+124=144 vs 157 erra
+    ataque em Mamiltia: [[1], [15]]+124=140 vs 156 erra
+    ataque em Mamiltia: [[11], [11]]+124=146 vs 155 erra
+    ataque em Mamiltia: [[15], [14]]+124=153 vs 154 erra
+    ataque em Mamiltia: [[18], [2]]+124=144 vs 153 erra
+--- RODADA 3 · Elaeva 20317/37600
+  Mamiltia: [[6], [5]]+134=145 vs 148 erra
+  Mamiltia: [[2], [20, 11]]+134=167 ACERTA [6]×4+38+229=291 − RD 50 ×2 = 482 (19835)
+  Mamiltia: [[3], [7]]+134=144 vs 148 erra
+  Mamiltia: [[17], [11]]+134=162 ACERTA [1]×4+38+229=271 − RD 50 ×2 = 442 (19393)
+  Mamiltia: [[6], [9]]+134=149 ACERTA [4]×4+38+229=283 − RD 50 ×2 = 466 (18927)
+  Mamiltia: [[6], [16]]+134=156 ACERTA [10]×4+38+229=307 − RD 50 ×2 = 514 (18413)
+  Mamiltia: [[5], [4]]+134=143 vs 148 erra
+  Mamiltia: [[15], [15]]+134=164 ACERTA [3]×4+38+229=279 − RD 50 ×2 = 458 (17955)
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[18], [5]]+124=147 vs 157 erra
+  AÇÃO LENDÁRIA:
+    ataque em Mamiltia: [[17], [19]]+124=160 vs 157 ACERTA [7, 2, 1]×100+0+75=1075 − RD 8 = 1067 (-1066)
+    Mamiltia CAI DESACORDADO
+  FÚRIA: +1 ação, o poder recarrega
+  SEGUNDA FASE: troca de Essência (a fraqueza agora: Sal)
+  PODER: o espinheiro (Agilidade CD 30, 18 m)
+  teste de morte de Mamiltia: [9] vs 12 (0 sucessos, 1 falhas)
+  O GRUPO CAI
+  teste de morte de Mamiltia: [10] vs 12 (0 sucessos, 2 falhas)
+  teste de morte de Mamiltia: [2] vs 12 (0 sucessos, 3 falhas)
+  Mamiltia MORRE
+FIM: grupo caiu · rodadas 3 · mortos ['Mamiltia'] · PV 17955/37600 · grupo {'Mamiltia': -1066}
+⛔ G9: PARAR AQUI, DENTRO DA HORA. Mortos: ['Mamiltia'] · caídos: ['Mamiltia']
+   antes de o tempo andar, o jogador decide: ERGUER O CAÍDO (Luz 6º, o rei sabe: até 1 hora; 30 de Mana; 1 PV e −1 para sempre num atributo) · o SERVO ARMADO (a Receita Mestra do rei) · Medicina nos caídos · onde estão os corpos

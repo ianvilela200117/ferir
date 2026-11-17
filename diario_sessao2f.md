@@ -1170,3 +1170,14 @@ Na praça, o rei falou ao lado do podestà, de pé e mancando, com a menina no c
 Contaram cinquenta. A Mamiltia não esperou o fim da contagem. Desceu da torre, abriu a porta pequena com a mão enfaixada e saiu sozinha para o mato.
 
 - **Parada:** entardecer do 448. A Mamiltia saindo pela porta; o espinheiro no bairro; o rei na torre.
+
+### Farenta, a noite do 448
+O rei viu a hora seguinte duas vezes. Na primeira, todos saíam com ela e ninguém voltava. Na segunda, a barca atirava sal e fogo de longe e a fera sangrava seiva negra sem alcançar ninguém. Contou as duas à Mamiltia, na porta pequena, com a mão dela já no ferrolho.
+
+Ela ouviu até o fim. Depois pediu o sal. O rei mandou abrir uma carroça, e ela enterrou as mãos enfaixadas no sal até os pulsos e saiu.
+
+Da torre se viu tudo: o fogo dela abrindo o mato em clareiras, as raízes se fechando de novo, a casca da floresta rachando onde o sal tocava. Um golpe a jogou de costas e ela se levantou. Outro não veio, e outro, e outro: a fera errava, e a Mamiltia batia com as mãos salgadas, e a floresta gemia como um navio. Na terceira vez que a fera a alcançou, ela não se levantou.
+
+A floresta ficou parada um instante. A casca dela escureceu, como madeira molhada. Depois se moveu de novo, mais depressa.
+
+- **Parada:** a primeira hora da noite do 448. A Mamiltia morta no mato, ao pé da fera. O rei na porta, com o Erguer o Caído na boca.

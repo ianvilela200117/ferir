@@ -1,8 +1,5 @@
 {
  "ordem": [
-  "AGn2",
-  "AGn5",
-  "TV22",
   "YE21",
   "BQ22",
   "ER1",
@@ -399,135 +396,12 @@
   "OS48",
   "EC48",
   "MP48",
-  "MO48"
+  "MO48",
+  "SM48",
+  "SF48",
+  "FC48"
  ],
  "selos": {
-  "AGn2": {
-   "id": "AGn2",
-   "dia": 421,
-   "hora": "00:49:19",
-   "titulo": "QUEM MANDA O AGENTE DA LUMINE DE PERTO (o nome que ele dá)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o BJORVUNN (o agente da Lumine pego no 308)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "um nome novo (gerar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "um nome novo (gerar)",
-     "txt": "[5] → um nome novo (gerar)"
-    }
-   ],
-   "hora_rolado": "00:49:19"
-  },
-  "AGn5": {
-   "id": "AGn5",
-   "dia": 421,
-   "hora": "00:49:19",
-   "titulo": "A QUEM O CARREGADOR DO CAIS LEVAVA O QUE VIA, em Ireviel (o patrão está morto; o pombo saía de onde)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o ESCREVENTE DA ALFÂNDEGA (o mesmo do livro)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "a SELINE, a banca do portão (por onde o Ardenghi entrou no 266)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a SELINE, a banca do portão (por onde o Ardenghi entrou no 266)",
-     "txt": "[6] → a SELINE, a banca do portão (por onde o Ardenghi entrou no 266)"
-    }
-   ],
-   "hora_rolado": "00:49:19"
-  },
-  "TV22": {
-   "id": "TV22",
-   "dia": 421,
-   "hora": "00:49:37",
-   "titulo": "A ESCOLTA DO TOLVANE A LUMADE (a Marechal escolhe; 10 dias por Levis e Lumgal; a casa está curta depois da enchente)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o DRARON e 4 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o HRUTHOS e 6 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o OSLO e 6 lanças, e o DRASSA vai junto (sabe as contas do Celocus)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o HRUTHOS e 6 lanças",
-     "txt": "[4] → o HRUTHOS e 6 lanças"
-    }
-   ],
-   "hora_rolado": "00:49:37"
-  },
   "YE21": {
    "id": "YE21",
    "dia": 421,
@@ -19637,6 +19511,132 @@
     }
    ],
    "hora_rolado": "16:37:52"
+  },
+  "SM48": {
+   "id": "SM48",
+   "dia": 448,
+   "hora": "19:03:35",
+   "titulo": "A MAMILTIA ACEITA O CERCO DEPOIS DA VISÃO NOVA (todos morrem na luta direta; 50 mortos no bairro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "sai sozinha mesmo assim"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "aceita o cerco"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "sai sozinha mesmo assim",
+     "txt": "[2] → sai sozinha mesmo assim"
+    }
+   ],
+   "hora_rolado": "19:03:35"
+  },
+  "SF48": {
+   "id": "SF48",
+   "dia": 448,
+   "hora": "19:03:36",
+   "titulo": "QUANTO SAL HÁ NO MERCADO DE FARENTA (a febre e o incêndio)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "três carroças"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "seis carroças"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "seis carroças",
+     "txt": "[6] → seis carroças"
+    }
+   ],
+   "hora_rolado": "19:03:36"
+  },
+  "FC48": {
+   "id": "FC48",
+   "dia": 448,
+   "hora": "19:03:36",
+   "titulo": "O FOGO NOS CAMPOS ATRÁS DA ELAEVA, À NOITE, COM VENTO FORTE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o vento vira o fogo contra a cidade: um bairro queima"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "o fogo corre para o mato"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o fogo corre para o mato",
+     "txt": "[3] → o fogo corre para o mato"
+    }
+   ],
+   "hora_rolado": "19:03:36"
   }
  }
 }

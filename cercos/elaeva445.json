@@ -1,5 +1,5 @@
 {
- "pv": 28793,
+ "pv": 17955,
  "pvm": 37600,
  "a_bordo": [
   "Moreth",
@@ -43,7 +43,7 @@
   "Mamiltia": [
    2,
    8,
-   20,
+   10,
    134
   ],
   "Eiagrir": [
@@ -79,6 +79,10 @@
     10,
     134
    ]
-  }
- }
+  },
+  "feita": true
+ },
+ "notas": [
+  "448: a MAMILTIA sozinha, com sal nas mãos (LM48, sims/elaeva448_M_saida.txt): 28.793 → 17.955 em 3 rodadas; a SEGUNDA FASE entrou (troca de Essência; a fraqueza nova VIDA, oculta; o sal segue); FÚRIA"
+ ]
 }
