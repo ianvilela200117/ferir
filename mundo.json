@@ -3070,6 +3070,17 @@
    "chegada": "[5] em 1d6 [2] dias",
    "resumo": "UMA RUÍNA SE ABRE — as Fundas do Norte (o Clã Hegre) (Mordun)",
    "toca": true
+  },
+  {
+   "dia": 446,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Culto do Lumra\nadora: um rei antigo\npromete: vingança\nsinal: moeda furada\ncélulas: 5 cidades\nlíder: nível 140, classe Rara a Lendária\nrito: sangue\nplano (relógio de 6): abrir um selo\nfraqueza: a fé é mentira e o líder sabe\n————————————————————————————————————————",
+   "noticia_chega": 450,
+   "chegada": "[4] em 1d6 [4] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — Zaitor (terra nova) (Culto do Lumra)",
+   "toca": false
   }
  ]
 }

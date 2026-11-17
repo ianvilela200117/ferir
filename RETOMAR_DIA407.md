@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 445, FARENTA: a Mamiltia quer sair sozinha contra a Elaeva (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 446, FARENTA: a tempestade; o sal chega no 447 (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 446, FARENTA (o tick do 446 rodado). O CERCO (cercos/elaeva445.json): a Elaeva 28.793 de 37.600 (77%); a bordo a Mamiltia, o Moreth e o Eiagrir; o capitão o piloto de Farenta +15; cerco.py NOME dia DIA [sal] (o sal dobra o dano; a FASE aos 50% está no json: o fogo da Mamiltia cai a × 10; a fraqueza nova VIDA, oculta). A MIE e o SAL chegam no 447 (agenda #579); quanto sal (dias de tiro com sal): rolar ao chegar (d3, declarado). A luta direta, se o jogador mandar: sims/elaeva446_base.json (a ficha pronta, com a fase); a Visão de 445: sozinha a Mamiltia morre em 71%. (OCULTO) no 447 aparece em FARENTA um GOLPE OU SUCESSÃO (agenda): rolar quem e o quê. (OCULTO) a coberta afina em Ireviel e no rio (boato errado a chegar). A Guilda: a ordem chega a Ireviel no 448 (agenda); a Guilda a Levis no 452. LEVIS: a missão falha no 449 (#587). O rei 392/402, Mana 124/164 (a Visão foi gasta na noite do 445; o 446 tem 2 de 2), GRAVE até o 458.
+
+Antes (445):
 Noite do 445, FARENTA, o cais (o tick do 445 rodado). A PENA QUEIMADA (PM45 [2]): a MAMILTIA chegou na mesma noite; MC45 [6]: ela quer sair SOZINHA à muralha AGORA. A luta, se houver: luta.py Mamiltia (fichas_combate: 1149, PV 2990; Segundo Coração 1 pelo Despertar, oculto) contra a ELAEVA: montar pela ficha de 382 (sims/elaeva_382_A_so_mamiltia.json) com o nível 376 (Defesa 134, ataque 124, 3d10 × 100, espinheiro 40d6 CD 30, fraca a FOGO; o SAL não chegou), pv_atual 28.793; ações pela lei (11) e 2 lendárias (Mítica); G33: a FASE aos 50% (rolar ao montar: d6 declarado); moral: foge abaixo de 25%; de noite; a régua de 382: sozinha, a Mamiltia morre em 85%. G9 antes; se ela cair, PARAR dentro da hora (o rei sabe ERGUER O CAÍDO: 30 de Mana; ele não luta, mas o feitiço de cura não é luta). O CERCO (cercos/elaeva445.json): a bordo o Moreth, o Eiagrir e a Mamiltia; o dia 446 rola com cerco.py dia 446. A MIE e o SAL chegam no 446; a OISSE no 448. Farenta: Defesa e Comida −1 até o 448; a febre até o 455. LEVIS: ED45 [1] a missão falha no 449 (agenda #587). O rei 386/402, Mana 144/164, a Visão 2/2. O rio SECO.
 
 Antes (444):
@@ -240,9 +243,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (444 → 445): 1a a pena · 2a o fogo dos barcos · 3a a Oisse · "alguém faça a missão de Levis antes do 449" (não chega a tempo; a Eliane decide pela lei)
 - o tick do 445 · CE45 [1] ninguém atira · EC45 [5] · PM45 [2] · MC45 [6] · LV45 a régua oculta 95% · ED45 [1].
 
+## RESPONDIDO (445 → 446): 1d,b (e c se não desse) · 2b e "mandem a guilda ajudar"
+- FE46 [1] e FE46b [5] (ocultos) · a Visão: 71% · SM46 [5] ela espera · o tick do 446 · CE46 sem tiros (tempestade) · MS46 [4] · EC46 [3] · RG46 [2] · GS46 [1] (oculto).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A MAMILTIA quer sair SOZINHA à muralha agora (em 382 a Visão mostrou: sozinha, ela morre quase sempre): a) deixar ir · b) tentar segurá-la até a aurora e o fogo dos barcos (a palavra do rei contra a vontade dela: teste social; ela está fria com ele desde o 441) · c) mandar o Moreth, o Eiagrir e o Zyza à muralha com ela (o rei não luta) · d) a Visão do Tempo antes (uma hora à frente).
-2. A LEI DAS CAÇADAS (339) segurou a Eliane: a) deixar como está · b) mudar daqui em diante: quando a conta proíbe os nossos, a Marechal pode pôr o contrato para gente de fora (vale para as próximas; esta já não chega a tempo).
+1. AMANHÃ (447), com a Mie e o SAL: a) o sal nos tiros dos barcos: o cerco com a Mamiltia, o Moreth e o Eiagrir (o dano dobra nos dias de sal) · b) a luta direta na praia: a Mamiltia, o Moreth, o Eiagrir, o Zyza e a Mie, com o sal nas armas (a Visão antes, se quiser) · c) esperar o sal chegar e decidir com ele na mão.
+2. AS 20 LANÇAS DA LURENTETTA (nível 80 a 110) que vêm com a Mie: a) nas muralhas de Farenta (a cidade rachada) · b) nos barcos, com o sal · c) com os heróis, se houver luta direta.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

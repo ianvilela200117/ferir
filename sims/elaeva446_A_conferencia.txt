@@ -1,0 +1,6 @@
+CONFERÊNCIA DAS FICHAS (G9, 426): confira cada peça e cada feitiço com os livros antes de lutar
+  Mamiltia (nível 1149): ficha com 1 feitiço(s): 8d6 · peças na ficha: 
+      livro: a MAMILTIA (Primordial, Telosus) ·
+      livro: **A CARTA** vinha na cifra do Colégio de Telosus; o rei a leu inteira: o **CEDUION** (o reitor do Colégio de Telosus, Lendário) oferece à **LELIEL**, em troca do **PERDÃO
+      livro: **FICA:** os Sem-Torre na casa, o arado fundo Mítico (o 2º ano de vida), o Neane e o sangue de Sombra, os recados à Mamiltia e ao Teraseth (agora: ajuda para acabar com o
+⛔ G9: nada foi montado. Acerte as fichas (combate.py poe ou o json) e rode de novo com conferido=1.

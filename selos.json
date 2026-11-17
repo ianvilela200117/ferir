@@ -1,12 +1,5 @@
 {
  "ordem": [
-  "420-chamado",
-  "420-vinculos",
-  "EN20",
-  "DS20a",
-  "DS20b",
-  "DS20c",
-  "DS20d",
   "DS20e",
   "CZ20",
   "NL20",
@@ -399,392 +392,16 @@
   "EC45",
   "PM45",
   "MC45",
-  "ED45"
+  "ED45",
+  "FE46",
+  "FE46b",
+  "SM46",
+  "MS46",
+  "EC46",
+  "RG46",
+  "GS46"
  ],
  "selos": {
-  "420-chamado": {
-   "id": "420-chamado",
-   "dia": 420,
-   "hora": "00:17:29",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 20,
-     "res": "chegam 2",
-     "txt": "[17] +3 = 20 → chegam 2"
-    }
-   ],
-   "hora_rolado": "00:17:29"
-  },
-  "420-vinculos": {
-   "id": "420-vinculos",
-   "dia": 420,
-   "hora": "00:17:29",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "Tilde–Iorin",
-     "txt": "#1 [2] → Tilde–Iorin"
-    },
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "Nouliel–Herkald",
-     "txt": "#2 [1] → Nouliel–Herkald"
-    }
-   ],
-   "hora_rolado": "00:17:29"
-  },
-  "EN20": {
-   "id": "EN20",
-   "dia": 420,
-   "hora": "00:18:16",
-   "titulo": "O ENCONTRO NA ESTRADA DO RIO (420, a meio dia de Ireviel)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "bandidos"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "soldados sem soldo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "viajantes"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "refugiados"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "caçador de recompensa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "monstro do bioma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "refugiados",
-     "txt": "[4] → refugiados"
-    }
-   ],
-   "hora_rolado": "00:18:16"
-  },
-  "DS20a": {
-   "id": "DS20a",
-   "dia": 420,
-   "hora": "00:18:16",
-   "titulo": "O DESASTRE EM IREVIEL (o evento da semana, 420; calor forte e capim seco desde o 416, vento forte no 417)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "INCÊNDIO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "ENCHENTE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "DESABAMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "ENCHENTE",
-     "txt": "[4] → ENCHENTE"
-    }
-   ],
-   "hora_rolado": "00:18:16"
-  },
-  "DS20b": {
-   "id": "DS20b",
-   "dia": 420,
-   "hora": "00:18:16",
-   "titulo": "ONDE FOI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a FORNALHA"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a FORJA GRANDE"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o CAIS"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o BAIRRO DOS REFUGIADOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "IREVIEL VELHA (as torres e as famílias da Cinza)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a MURALHA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o BAIRRO DOS REFUGIADOS",
-     "txt": "[4] → o BAIRRO DOS REFUGIADOS"
-    }
-   ],
-   "hora_rolado": "00:18:16"
-  },
-  "DS20c": {
-   "id": "DS20c",
-   "dia": 420,
-   "hora": "00:18:17",
-   "titulo": "O TAMANHO DO DESASTRE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "PEQUENO: um prédio, sem mortos"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "MÉDIO: uma rua; 1d6 mortos; Saúde ou Ordem −1 (mod, uma semana)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "GRANDE: um bairro; 2d6 mortos; Ordem −1 e Dinheiro −1 (mod, duas semanas)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "GRANDE: um bairro; 2d6 mortos; Ordem −1 e Dinheiro −1 (mod, duas semanas)",
-     "txt": "[6] → GRANDE: um bairro; 2d6 mortos; Ordem −1 e Dinheiro −1 (mod, duas semanas)"
-    }
-   ],
-   "hora_rolado": "00:18:17"
-  },
-  "DS20d": {
-   "id": "DS20d",
-   "dia": 420,
-   "hora": "00:18:17",
-   "titulo": "É OBRA DOS DA CINZA? (eles PROCURAM A CASA esta semana: ameaça ou sabotagem pequena, mas visível)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NÃO: o desastre é do mundo; os da Cinza deixam outra coisa, pequena"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "SIM: foram eles"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "NÃO: o desastre é do mundo; os da Cinza deixam outra coisa, pequena",
-     "txt": "[3] → NÃO: o desastre é do mundo; os da Cinza deixam outra coisa, pequena"
-    }
-   ],
-   "hora_rolado": "00:18:17"
-  },
   "DS20e": {
    "id": "DS20e",
    "dia": 420,
@@ -19555,6 +19172,346 @@
     }
    ],
    "hora_rolado": "12:48:05"
+  },
+  "FE46": {
+   "id": "FE46",
+   "dia": 445,
+   "hora": "13:01:04",
+   "titulo": "A SEGUNDA FASE DA ELAEVA AOS 50% (G33; OCULTA)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "troca de Essência"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "chama crias"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o covil muda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "recua ao mato e a luta recomeça noutro lugar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "perde a fraqueza conhecida e ganha outra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "fala: oferece um trato"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "troca de Essência",
+     "txt": "[1] → troca de Essência"
+    }
+   ],
+   "hora_rolado": "13:01:04"
+  },
+  "FE46b": {
+   "id": "FE46b",
+   "dia": 445,
+   "hora": "13:01:15",
+   "titulo": "A FRAQUEZA NOVA DA ELAEVA DEPOIS DA TROCA DE ESSÊNCIA (OCULTA; o fogo deixa de dobrar)",
+   "dado": [
+    1,
+    8,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Gelo"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Raio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Luz"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Água"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Vida"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Som"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Sal (a de sempre: só ela fica)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Fogo (a troca não muda a fraqueza)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Vida",
+     "txt": "[5] → Vida"
+    }
+   ],
+   "hora_rolado": "13:01:15"
+  },
+  "SM46": {
+   "id": "SM46",
+   "dia": 445,
+   "hora": "13:01:34",
+   "titulo": "A MAMILTIA ACREDITA NO QUE O REI VIU? (o pedido de esperar a aurora; a alavanca é a prova da Visão; a última palavra dele a ela estava errada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "NÃO acredita e sai"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "ACREDITA e espera a aurora e o fogo dos barcos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ACREDITA e espera a aurora e o fogo dos barcos",
+     "txt": "[5] → ACREDITA e espera a aurora e o fogo dos barcos"
+    }
+   ],
+   "hora_rolado": "13:01:34"
+  },
+  "MS46": {
+   "id": "MS46",
+   "dia": 446,
+   "hora": "13:03:03",
+   "titulo": "A MAMILTIA COM A TEMPESTADE DA AURORA DO 446",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "sai sozinha agora"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "espera a tempestade passar"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "espera a tempestade passar",
+     "txt": "[4] → espera a tempestade passar"
+    }
+   ],
+   "hora_rolado": "13:03:03"
+  },
+  "EC46": {
+   "id": "EC46",
+   "dia": 446,
+   "hora": "13:03:03",
+   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 446",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "cerca e não toca"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "as raízes racham mais a muralha: Defesa −1 a mais e Comida −1 a mais"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o ESPINHEIRO passa por cima da muralha num bairro: 2d6 × 5 mortos e Ordem −1"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "cerca e não toca",
+     "txt": "[3] → cerca e não toca"
+    }
+   ],
+   "hora_rolado": "13:03:03"
+  },
+  "RG46": {
+   "id": "RG46",
+   "dia": 446,
+   "hora": "13:03:04",
+   "titulo": "O RECADO À GUILDA PELA ESTRADA DA COSTA NA TEMPESTADE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "atrasa um dia (Ireviel no 449)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "chega a Ireviel no 448"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "chega a Ireviel no 448",
+     "txt": "[2] → chega a Ireviel no 448"
+    }
+   ],
+   "hora_rolado": "13:03:04"
+  },
+  "GS46": {
+   "id": "GS46",
+   "dia": 446,
+   "hora": "13:03:04",
+   "titulo": "(OCULTO) EM QUANTOS DIAS O GOLPE OU A SUCESSÃO DE FARENTA APARECE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantos dias"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "tantos dias",
+     "txt": "[1] → tantos dias"
+    }
+   ],
+   "hora_rolado": "13:03:04"
   }
  }
 }

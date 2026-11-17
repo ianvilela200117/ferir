@@ -1,0 +1,50 @@
+[13:02:29] Dia 446 · Pressão 5/5 · evento local 1d20 [13] -> uma encomenda nova chega à forja
+  O TEMPO (17 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: chuva de verão, vento forte (d6 [6] muda, d20 [16] · vento d6 [6]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   o Porto de Marasar: limpo, calmo (d6 [2] fica · vento d6 [2])
+   Levis: calor forte, vento firme (d6 [3] fica · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: tempestade, VENTANIA (d6 [6] muda, d20 [20] · vento d6 [5]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: baixo [20/100] · MUDOU: era SECO
+  avistamento de monstro 1d20 [18] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [11] Monstro grande desce · encadeamento 1d20 [11] Mercado reage · ONDE: d19 [8] o sul, onde a areia come a pedra
+  EVENTO DE MUNDO (PERTO) 1d20 [18] A coberta afina (algo do Silêncio) · encadeamento 1d20 [9] Boato errado · ONDE: d8 [1] Ireviel e o rio
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [8] Golpe ou sucessão · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · ONDE: d27 [5] Farenta
+  Pressão zera
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 10 de PV do rei nesta aurora (d6 × 2) → pv: 392/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 446 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [23] Zaitor (terra nova)
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    nome: Culto do Lumra
+    adora: um rei antigo
+    promete: vingança
+    sinal: moeda furada
+    células: 5 cidades
+    líder: nível 140, classe Rara a Lendária
+    rito: sangue
+    plano (relógio de 6): abrir um selo
+    fraqueza: a fé é mentira e o líder sabe
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 446
+    Lendários: d20 [11] quietos hoje
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [2] nada visível
+    FAÍSCA: Qunemneth, o Médico Cinzento acusa em público Adurel, por causa de um feitiço proibido
+    FAÍSCA: Draa rouba de Higrunn, por causa de uma terra além do mapa
+    FAÍSCA: Draa rouba de Gorron (oferece a missão do Delta), por causa de uma receita perdida
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #361 (era do Dia 443): LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ▶ AGENDA #519 (era do Dia 444): CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [saiu de Ireviel no 442, pela costa: 2 dias]
+  ▶ AGENDA #577 (era do Dia 445): A CAÇADA DA MISSÃO DO ITHVIL: o recado chega à ELIANE em Levis (de pé desde o 443): a Marechal aplica a LEI DAS CAÇADAS (339) com o que há em Levis (ela, as 10 lanças da ronda, a Guilda de Levis, a Bigorna Livre se quiser): a régua OCULTA contra a criatura (sims/ithvil_cria_base.json); acima de 2% de morte, não vai sem o rei (e o rei não luta até o 458); o prazo da missão é o 449
+  ▶ AGENDA #578 (era do Dia 445): CHEGA a Levis: o recado do rei à ELIANE, em Levis: o reino ACEITA a missão do Ithvil (10.000, até o 449); a Marechal monta a caçada pela Lei das Caçadas (339) (saiu de Ireviel no 441) [de barca rápida: 4 dias rio acima; o rio baixo não atrasa a barca leve]
+  ▶ AGENDA #579: CHEGA a Farenta: a MIE (150) e as 20 lanças da Lurentetta, com o SAL (MI41 [2]: o Delta a Ireviel em 2 dias, e 2 pela costa)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Skotha Graskur (o sul (a Companhia)): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Celocus (Lumade): desafia alguém em público (duelo, debate, prova) · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Stundald, a Raiz-de-Ferro (Épico, Telosus): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto dos Olhos Pintados (Farenta (3 cidades)): briga com a Guarda do Pedágio; vence a Guarda do Pedágio · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: PESTE OU DESASTRE: febre — Farenta · COMO CHEGA: d20 [18] FIEL

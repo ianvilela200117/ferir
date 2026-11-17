@@ -1,5 +1,5 @@
 {
- "prox_id": 589,
+ "prox_id": 592,
  "itens": [
   {
    "id": 1,
@@ -8149,8 +8149,8 @@
   },
   {
    "id": 579,
-   "dia": 446,
-   "texto": "CHEGA a Farenta: a MIE (150) e as 20 lanças da Lurentetta, com o SAL (MI41 [2]: o Delta a Ireviel em 2 dias, e 2 pela costa)",
+   "dia": 447,
+   "texto": "CHEGA a Farenta: a MIE (150) e as 20 lanças da Lurentetta, com o SAL (MI41 [2]: o Delta a Ireviel em 2 dias, e 2 pela costa) [a tempestade do 446: a barca dela abrigou na costa: chega no 447]",
    "tipo": "marco",
    "oculto": false,
    "para": false,
@@ -8270,6 +8270,43 @@
    "id": 588,
    "dia": 448,
    "texto": "CHEGA a Farenta pela costa: a OISSE e as irmãs da ordem dela (a febre), na barca rápida que saiu no 445",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 589,
+   "dia": 450,
+   "texto": "UM CULTO CRESCE ou nasce — Zaitor (terra nova) (Culto do Lumra)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 446",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 590,
+   "dia": 447,
+   "texto": "(OCULTO) FARENTA: o GOLPE OU A SUCESSÃO aparece (G8, a pressão do 446; GS46 [1]): rolar quem e o quê (o podestà Tirello, a Guarda do Pedágio, a Botica Velha, a gente do Tirello morto, os Olhos Pintados)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 591,
+   "dia": 448,
+   "texto": "CHEGA a Ireviel, pela estrada da costa: a ordem do rei à GUILDA DOS AVENTUREIROS (o Starkald): ir a Levis caçar a criatura da missão do Ithvil pelo contrato do reino (a lei nova das caçadas, 446): a Guilda decide por conta e risco dela; de barca chega a Levis no 452",
    "tipo": "marco",
    "oculto": false,
    "para": false,

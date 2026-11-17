@@ -12,6 +12,12 @@
    "antes": 28793,
    "depois": 28793,
    "dano": {}
+  },
+  {
+   "dia": 446,
+   "antes": 28793,
+   "depois": 28793,
+   "dano": {}
   }
  ],
  "fim": null,
@@ -50,5 +56,17 @@
  "capitao": [
   "o piloto de Farenta",
   15
- ]
+ ],
+ "fase": {
+  "nome": "troca de Essência (FE46 [1]; a fraqueza nova: VIDA, FE46b [5])",
+  "efeito_cerco": "o FOGO deixa de dobrar: a Mamiltia passa de × 20 a × 10; a fraqueza nova é VIDA (as armas de Vida do Moreth e do Eiagrir dobram no corpo a corpo; no cerco ninguém atira Vida); o SAL segue valendo (é a raiz dela, não a Essência)",
+  "atiradores": {
+   "Mamiltia": [
+    2,
+    8,
+    10,
+    134
+   ]
+  }
+ }
 }

@@ -1143,3 +1143,12 @@ O rei estava na torre da porta. Tirou a pena do pano, segurou-a na chama de uma 
 Ela não perguntou nada. Disse ao rei que ia sozinha, agora, antes que a fera dormisse.
 
 - **Parada:** noite do 445, o cais de Farenta. A Mamiltia de pé no fogo; a floresta junto à muralha.
+
+### Farenta, a noite do 445 e o dia 446
+Antes que a Mamiltia descesse da muralha, o rei pediu um momento e fechou os olhos. Viu a hora seguinte muitas vezes: ela no meio do mato, o fogo dela abrindo clareiras que se fechavam de novo, e as raízes subindo pelas pernas dela até a cintura. Em quase todas as vezes ela não voltava. Abriu os olhos e contou o que tinha visto, sem enfeitar.
+
+A Mamiltia ouviu calada, olhando para a mão enfaixada. "Da última vez a tua palavra me mandou ao lado errado", disse. Depois desceu a escada da torre, mas não saiu pela porta. Sentou-se no cais, de frente para o mar, e esperou a aurora.
+
+A aurora veio negra. O vento virou as barcas nos cabos e arrancou telhas do bairro do porto. Na praia, a floresta desceu até a água, mais perto do que nunca, e ninguém pôde sair para atirar. A Mamiltia olhou a tempestade e disse que fogo e ventania não se misturam.
+
+- **Parada:** noite do 446. A tempestade, a fera na praia, a Mamiltia no cais. O sal chega amanhã.

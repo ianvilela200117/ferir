@@ -1,0 +1,59 @@
+{
+ "monstro": {
+  "nome": "Elaeva",
+  "cat": "Mítico",
+  "nivel": 376,
+  "pv": 37600,
+  "df": 134,
+  "rd": 50,
+  "at": 124,
+  "dado": "3d10",
+  "mult": 100,
+  "b": 0,
+  "poder": {
+   "nome": "o espinheiro (Agilidade CD 30, 18 m)",
+   "tipo": "area",
+   "dano": "40d6",
+   "cd": 30
+  },
+  "fraqueza": "Fogo",
+  "moral": true,
+  "pv_atual": 28793,
+  "essencia": "Espinho",
+  "nota": "a Elaeva, a Floresta que Anda (Mítica 376; ficha de 382 com o nível de hoje, 446): fraca a FOGO e ao SAL (o luta.py lê uma; o sal não chegou); não atravessa água corrente larga; fase aos 50% (FE46 [1]): troca de Essência",
+  "fase": {
+   "tipo": 1,
+   "nome": "troca de Essência",
+   "fraqueza": "Vida"
+  }
+ },
+ "grupo": [
+  {
+   "nome": "Mamiltia",
+   "nivel": 1149,
+   "at": 134,
+   "dado": "1d10",
+   "mult": 4,
+   "b": 38,
+   "df": 143,
+   "rd": 8,
+   "pv": 2990,
+   "vigor": 20,
+   "agi": 10,
+   "heroi": true,
+   "magia": {
+    "dano": "8d6",
+    "mult": 20,
+    "cd": 30,
+    "rodada": [
+     1,
+     2
+    ]
+   },
+   "magias": [],
+   "pecas": "",
+   "sem_arte": true,
+   "segundo_coracao": 1
+  }
+ ]
+}
