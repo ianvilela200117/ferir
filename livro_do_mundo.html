@@ -8686,7 +8686,222 @@ main{padding:16px;max-width:1180px;margin:0 auto}
 <li><strong>o Duelo</strong> (Luta), <strong>a Forja</strong> (uma obra em três dias, à vista), <strong>as Barcas</strong> (corrida no rio) e <strong>o Canto</strong>.</li>
 <li>Vencer uma prova: um título com efeito, reputação +10 na cidade dos Jogos e +5 nas outras. Vencer a Forja põe o nome do ferreiro na boca dos Lendários (Lei 6: encomendas e cobiça).</li>
 <li>Os Jogos juntam gente que não se junta: guildas, enviados e inimigos na mesma praça, com trégua de sete dias.</li>
-</ul></div></section></main>
+</ul>
+<hr />
+<h2 id="14-oficios-de-coleta-regra-g35-coletapy">14. OFÍCIOS DE COLETA (regra G35; <code>coleta.py</code>)</h2>
+<p>Colher também é ofício, e a mão melhora com o uso.</p>
+<ul>
+<li><strong>Os cinco:</strong> mineração · ervas · pesca · esfola (tirar o despojo de um bicho morto) · lenha e madeira.</li>
+<li><strong>Graus pelo uso</strong> (como as habilidades): 1 Iniciante · 2 Aprendiz (10 usos) · 3 Adepto (30) · 4 Perito (80) · 5 Mestre (200) · 6 Grão-Mestre (500).</li>
+<li><strong>Um dia de coleta:</strong> d20 + grau × 2 + a ferramenta.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Total</th>
+<th>O que rende</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>até 5</td>
+<td>nada</td>
+</tr>
+<tr>
+<td>6 a 12</td>
+<td>1d6 kg do material Comum do lugar</td>
+</tr>
+<tr>
+<td>13 a 17</td>
+<td>1d6 kg do <strong>material do lugar</strong></td>
+</tr>
+<tr>
+<td>18 a 22</td>
+<td>o dobro</td>
+</tr>
+<tr>
+<td>23 ou mais</td>
+<td>o dobro e um <strong>achado</strong>: 1 kg de um degrau acima, ou o lugar rende +2 por uma lua</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>O grau limita a mão:</strong> graus 1 e 2 colhem até Incomum · 3, Raro · 4, Épico · 5, Único · 6, qualquer coisa.</li>
+<li><strong>1 natural é acidente:</strong> um ferido leve, ou o bicho do lugar aparece.</li>
+<li><strong>Esfola:</strong> quem esfola soma 10% de despojo por grau acima do 1. No grau 5, o núcleo não se perde num 1 natural de quem abre o bicho.</li>
+<li><strong>Equipe:</strong> gente da casa colhendo num lugar toda semana (os mineiros de Levis, os caçadores, os salineiros). Custa <strong>50 por semana</strong>, rola uma vez por semana no tick, e o grau é o da equipe.</li>
+</ul>
+<hr />
+<h2 id="15-as-festas-do-calendario-regra-g36-festaspy">15. AS FESTAS DO CALENDÁRIO (regra G36; <code>festas.py</code>)</h2>
+<p>Cada lua tem a sua festa. Na semana dela vale o <strong>efeito de base</strong>. O rei que <strong>paga</strong> a festa garante o efeito bom e leva o ganho escrito.</p>
+<table>
+<thead>
+<tr>
+<th>Quando</th>
+<th>Festa</th>
+<th>Efeito de base</th>
+<th>Se o rei paga</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15 da Lua do Gelo</td>
+<td><strong>a Noite do Fogo Guardado</strong></td>
+<td>Ordem +1 na semana em toda cidade</td>
+<td>50: reputação +2 na capital</td>
+</tr>
+<tr>
+<td>10 da Lua do Lobo</td>
+<td><strong>a Caçada do Lobo</strong></td>
+<td>guildas e caçadas com +2 no dado da semana; o avistamento de monstro rola duas vezes</td>
+<td>100: reputação +2 com a Guilda dos Aventureiros</td>
+</tr>
+<tr>
+<td>20 da Lua da Cinza</td>
+<td><strong>o Dia das Cinzas</strong></td>
+<td>Falar com Morto cobra metade do sangue; servo de osso à vista ofende (−5 a mais)</td>
+<td>50: reputação +2 com o templo da cidade</td>
+</tr>
+<tr>
+<td>5 da Lua do Degelo</td>
+<td><strong>a Abertura do Rio</strong></td>
+<td>Comércio +1 na semana nas cidades do rio; barca um quarto mais rápida</td>
+<td>100: reputação +2 com os barqueiros</td>
+</tr>
+<tr>
+<td>12 da Lua da Semente</td>
+<td><strong>a Bênção da Semente</strong></td>
+<td>o dado da Comida rola com +1; casamento do dia dá Laço +1</td>
+<td>100: a Comida não recua por evento nesta lua</td>
+</tr>
+<tr>
+<td>27 da Lua das Barcas</td>
+<td><strong>o Dia do Primeiro Martelo</strong></td>
+<td>a casa de Ferir faz anos: obra de forja feita em praça tem +2</td>
+<td>200: reputação +5 na capital, uma vez por ano</td>
+</tr>
+<tr>
+<td>1 da Lua do Sal</td>
+<td><strong>a Feira do Sal</strong></td>
+<td>uma novidade de mercado em cada cidade do rio; material 10% mais barato na semana</td>
+<td>150: a renda da semana +10%</td>
+</tr>
+<tr>
+<td>8 da Lua da Forja</td>
+<td><strong>a Noite das Forjas</strong></td>
+<td>+1 em toda obra de forja na semana; d20, com 1 um bairro pega fogo</td>
+<td>100: o incêndio não acontece</td>
+</tr>
+<tr>
+<td>15 da Lua da Seca</td>
+<td><strong>a Procissão da Água</strong></td>
+<td>o dado da Saúde rola com +1</td>
+<td>50: reputação +2 com a fé da cidade onde o rei andar</td>
+</tr>
+<tr>
+<td>10 da Lua do Grão</td>
+<td><strong>a Colheita</strong></td>
+<td>Comida +1 na semana em toda cidade</td>
+<td>200: a renda da semana +10% e reputação +2 em toda cidade</td>
+</tr>
+<tr>
+<td>1 da Lua do Vinho</td>
+<td><strong>a Vindima e os Jogos</strong></td>
+<td>sete dias de trégua; o chamado de recrutas rola com +3</td>
+<td>2.000: o rei chama os Jogos das Cidades (seção 13)</td>
+</tr>
+<tr>
+<td>30 da Lua das Velas</td>
+<td><strong>a Noite das Velas</strong></td>
+<td>morto-vivo Comum não anda; juramento da noite vale em dobro</td>
+<td>50: os servos do rei não assustam ninguém nesta noite</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Os Dias Mudos</strong> continuam como eram (sem forja grande, sem magia de 4º círculo para cima, sem casamento). Quem quebra o silêncio: reputação −5 na cidade e Revés +1.</p>
+<p>O tick diário avisa da festa de hoje e das dos próximos sete dias.</p>
+<hr />
+<h2 id="16-o-atlas-de-masmorras-regra-g37-atlaspy">16. O ATLAS DE MASMORRAS (regra G37; <code>atlas.py</code>)</h2>
+<p>O mundo tem lugares fechados que esperam. O atlas guarda todos; a casa só vê os que <strong>conhece</strong>.</p>
+<ul>
+<li><strong>Como um lugar entra no atlas da casa:</strong> entrando nele; por carta ou papel velho; ou por <strong>boato</strong>. Toda semana, d20: com <strong>18 ou mais</strong>, o nome de um lugar novo chega a uma cidade do reino, com a região e o que se diz que guarda. O degrau só se sabe indo lá.</li>
+<li><strong>O mapa de salas</strong> (regra G14) só nasce quando a casa entra ou manda olhos.</li>
+<li><strong>As guildas também procuram</strong> (regra G12): um lugar com núcleo que uma guilda limpa primeiro deixa de ter o núcleo.</li>
+<li><strong>Primeiro a limpar:</strong> quem limpa primeiro uma masmorra Única ou acima tem um feito para canção (seção 11).</li>
+</ul>
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+<h3 id="161-os-lugares-que-a-casa-conhece">16.1 Os lugares que a casa conhece</h3>
+<p>Saem do <code>atlas.json</code> a cada vez que o <code>livro_sync.py</code> roda. O que a casa não sabe aparece como "?".</p>
+<table>
+<thead>
+<tr>
+<th>Lugar</th>
+<th>Onde</th>
+<th>Degrau</th>
+<th>O que era</th>
+<th>O que guarda</th>
+<th>O que habita</th>
+<th>Para entrar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Eryssa</strong></td>
+<td>debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420</td>
+<td>?</td>
+<td>um mercado</td>
+<td>uma receita</td>
+<td>um culto</td>
+<td>uma chave</td>
+</tr>
+<tr>
+<td><strong>Ithium</strong></td>
+<td>os Picos Brancos</td>
+<td>?</td>
+<td>um mercado</td>
+<td>um NÚCLEO</td>
+<td>mortos</td>
+<td>uma luta</td>
+</tr>
+<tr>
+<td><strong>Zythir</strong></td>
+<td>debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro)</td>
+<td>Único</td>
+<td>um cemitério de reis</td>
+<td>um prisioneiro</td>
+<td>nada, e é isso que assusta</td>
+<td>uma senha</td>
+</tr>
+<tr>
+<td><strong>Alnesar</strong></td>
+<td>as colinas a leste de Ireviel, a 2 dias</td>
+<td>?</td>
+<td>?</td>
+<td>numa metade, um NÚCLEO e nada mora lá; na outra, bandidos guardam um segredo de facção</td>
+<td>bandidos numa metade</td>
+<td>uma luta de um lado; uma chave do outro</td>
+</tr>
+<tr>
+<td><strong>Quoium</strong></td>
+<td>a escada afundada onde mora o Laennor</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>o Laennor, o Redemoinho, mora por cima</td>
+<td>passar pelo Laennor</td>
+</tr>
+<tr>
+<td><strong>Iroule</strong></td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>?</td>
+<td>uma senha: estava nos papéis do velho, na letra do pai do rei</td>
+</tr>
+</tbody>
+</table>
+<!-- SYNC:FIM --></div></section></main>
 <script>
 const DATA={"REG": [["Reino de Ireviel", "casa", 588, 585, 48, 128, ["O rei Ferir e o conselho real. Capital Ireviel (~14.000).", "Levis (Brara), o Porto de Marasar, a Forquilha e Farenta (tomada no 356)."]], ["Marasar", "skotha", 665, 738, 34, 22, ["A Doge Skotha Graskur (Lendária). Aliada +5.", "O cais é de Ireviel."]], ["O Delta e o Brejo", "delta", 480, 730, 70, 32, ["Ninguém manda sozinho: os Do Junco, a Guilda do Sal, a Altheltia, a Lurentetta.", "No brejo: Ninnane e Dragal (canção de coveiro)."]], ["As Montanhas Hegre", "cla", 560, 295, 100, 48, ["O Clã Hegre (o Hrotgar). Gogrunn, as Fundas, Vrogur, Ululge, Braron.", "O Kredun toma terra do Clã. Relação +1."]], ["Steunn", "livre", 705, 330, 42, 34, ["Cidade livre de pedra, os mestres do bronze. O Borecci (Mítico).", "Relação +2."]], ["Kremir e Zisrir", "neutro", 350, 380, 80, 58, ["Clãs das colinas e o vale de ruínas. O Maneus; o Adurel; os Sem-Torre."]], ["Telosus e o Oeste", "fe", 265, 535, 72, 52, ["O Colégio (Ceduion) e a fé da Mamiltia (Primordial).", "Zieth (a Vigília), Zaivil, Kasron."]], ["O Deserto de Sal", "neutro", 830, 545, 105, 72, ["Yaelane (Clã Eloulane, o veio-mãe), Shizess (as caravanas), Mordun, Brathen.", "O Thargos (Mítico), o Fenron."]], ["As Montanhas de Fogo", "perigo", 945, 420, 40, 90, ["Pedra preta e vapor. Uma só passagem: o Passo da Cinza.", "O Ithvil (Mítico) dorme fundo."]], ["O Sul da Areia", "neutro", 905, 745, 85, 40, ["As tribos da areia. Syzh, o oásis; Ulek, o templo caído.", "A Guardiã da Tenaz (Lendária)."]], ["O Norte", "liga", 620, 160, 140, 60, ["A coroa da Leliel (Lendária), fugida de Farenta. Corte em Eiest.", "EM GUERRA com o reino."]], ["Kasra, a Marca dos Fortes", "kasra", 150, 230, 95, 75, ["Os fortes do reino de cavaleiros caído há 200 anos. Os mortos de guarda.", "A Ordem do Sino, em Dreska."]], ["Zaitor, as Estepes", "zaitor", 905, 160, 120, 70, ["Os khanatos dos cavaleiros e o Khan. Stind, o acampamento; Geunn, a travessia.", "Vendem cavalos ao Norte."]], ["Qulosus, a Costa do Cobre", "qulosus", 140, 665, 85, 60, ["A República dos Bancos (doze banqueiros). Roreetta e Ginirza.", "Cobre e estanho; a dívida é lei."]], ["Quramnar, o Reino do Leste", "quramnar", 1070, 480, 70, 140, ["O Trono de Quramnar, a rainha e as Nove Casas. Iriavis (~60.000), Boninda, Serrarva.", "O culto da Agulha (o Tecelão)."]], ["Ulra, as Ilhas do Sul", "ulra", 720, 862, 95, 30, ["As Capitanias e o Conselho das Velas. Ragra, o porto franco; Naane; Yaniel."]]], "CID": [["Ireviel", 590, 690, 3, "casa"], ["a Forquilha", 586, 662, 1, "casa"], ["Levis", 575, 470, 2, "casa"], ["Farenta", 760, 712, 2, "casa"], ["Marasar", 662, 740, 2, "skotha"], ["Salinas Velhas", 505, 748, 1, "delta"], ["Ninnane", 462, 705, 1, "delta"], ["Dragal?", 440, 725, 1, "perigo"], ["Brassa", 548, 720, 1, "perigo"], ["Hassa", 612, 784, 1, "perigo"], ["Haol", 690, 768, 1, "perigo"], ["Costa Quebrada", 430, 770, 1, "perigo"], ["Lumgal", 515, 470, 1, "neutro"], ["Lumade", 465, 482, 1, "neutro"], ["Mata de Elais", 520, 585, 1, "neutro"], ["Ulnar", 580, 430, 1, "neutro"], ["Gogrunn", 535, 320, 2, "cla"], ["as Fundas", 605, 300, 2, "cla"], ["Vrogur", 585, 262, 1, "cla"], ["Braron", 650, 300, 1, "perigo"], ["Steunn", 705, 330, 2, "livre"], ["Kremir", 385, 420, 2, "neutro"], ["Zisrir", 315, 335, 1, "neutro"], ["Telosus", 250, 520, 2, "fe"], ["Zieth", 300, 565, 1, "fe"], ["Zaivil", 360, 560, 1, "perigo"], ["Kasron?", 430, 590, 1, "perigo"], ["Shizess", 770, 520, 2, "neutro"], ["Yaelane", 865, 585, 2, "neutro"], ["Mordun", 830, 470, 1, "perigo"], ["Brathen", 735, 600, 1, "perigo"], ["Syzh", 905, 760, 1, "neutro"], ["Ulek", 965, 725, 1, "perigo"], ["Eiest", 620, 160, 2, "liga"], ["Dreska", 140, 230, 2, "kasra"], ["Ralgir", 205, 300, 1, "perigo"], ["Stind", 905, 140, 2, "zaitor"], ["Geunn", 820, 195, 1, "zaitor"], ["Roreetta", 115, 690, 2, "qulosus"], ["Ginirza", 185, 620, 1, "qulosus"], ["Iriavis", 1060, 470, 3, "quramnar"], ["Boninda", 1100, 570, 2, "quramnar"], ["Serrarva", 1010, 375, 1, "quramnar"], ["Ragra", 720, 855, 2, "ulra"], ["Naane", 640, 872, 1, "ulra"], ["Yaniel", 800, 878, 1, "ulra"]], "GRANDES": [["MAMILTIA", "Primordial", 265, 500, "fe"], ["CELOCUS", "Mítico", 470, 500, "neutro"], ["LURENTETTA", "Mítica", 490, 760, "delta"], ["BORECCI", "Mítico", 725, 345, "livre"], ["Skotha", "Lendária", 680, 725, "skotha"], ["Teraseth", "Lendário", 600, 640, "casa"], ["Leliel", "Lendária", 650, 170, "liga"], ["Altheltia", "Lendária", 475, 745, "delta"], ["Adurel", "Lendário", 330, 320, "neutro"], ["Ceduion", "Lendário", 235, 540, "fe"], ["Eiandald", "Lendário", 880, 595, "neutro"], ["Garkunn", "Lendário", 845, 460, "perigo"], ["Guardiã da Tenaz", "Lendária", 930, 770, "neutro"], ["Qunemneth", "Lendário", 648, 752, "skotha"], ["Almision", "Lendária", 420, 640, "neutro"]], "FERAS": [["Mãe Branca (Primordial, dorme)", 600, 235], ["Kredun (Mítico)", 640, 280], ["Elaeva (Mítico)", 390, 470], ["Thargos (Mítico)", 815, 455], ["Ithvil (Mítico)", 955, 400], ["Maneus", 370, 400], ["Vathexa", 725, 315], ["Varogh", 540, 600], ["Kervos", 570, 520], ["Eloune", 555, 760], ["Husgarn", 800, 740], ["Laennor", 505, 765]], "C": {"casa": "#b3412e", "skotha": "#c9772b", "liga": "#7a4e9c", "cla": "#3f7a4a", "livre": "#2e6f8f", "delta": "#4f8a7b", "fe": "#a8861c", "neutro": "#8a7a5e", "perigo": "#2b2b2b", "kasra": "#56616e", "zaitor": "#8c5a2b", "qulosus": "#b8683a", "quramnar": "#8e2f5e", "ulra": "#2f8a8a"}, "N": {"casa": "Reino de Ireviel", "skotha": "A Doge Skotha", "liga": "A Leliel (em guerra)", "cla": "O Clã Hegre", "livre": "Cidade livre", "delta": "O Delta", "fe": "Telosus e a fé", "neutro": "Sem dono / neutro", "perigo": "Perigo ou ruína", "kasra": "Kasra", "zaitor": "Zaitor", "qulosus": "Qulosus", "quramnar": "Quramnar", "ulra": "Ulra"}};
 const NS='http://www.w3.org/2000/svg';

@@ -1,0 +1,173 @@
+{
+ "nota": "o atlas de masmorras (G37). conhecida: a casa sabe que existe.",
+ "lugares": [
+  {
+   "nome": "Eryssa",
+   "onde": "debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420",
+   "era": "um mercado",
+   "caiu": "maldição",
+   "guarda": "uma receita",
+   "habita": "um culto",
+   "entrar": "uma chave",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "lugar do mundo vivo (mundo_vivo.json)"
+  },
+  {
+   "nome": "Ithium",
+   "onde": "os Picos Brancos",
+   "era": "um mercado",
+   "caiu": "monstro",
+   "guarda": "um NÚCLEO",
+   "habita": "mortos",
+   "entrar": "uma luta",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "lugar do mundo vivo (mundo_vivo.json)"
+  },
+  {
+   "nome": "Zythir",
+   "onde": "debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro)",
+   "era": "um cemitério de reis",
+   "caiu": "guerra",
+   "guarda": "um prisioneiro",
+   "habita": "nada, e é isso que assusta",
+   "entrar": "uma senha",
+   "degrau": "Único",
+   "conhecida": true,
+   "como": "lugar do mundo vivo (mundo_vivo.json)"
+  },
+  {
+   "nome": "Alnesar",
+   "onde": "as colinas a leste de Ireviel, a 2 dias",
+   "era": "?",
+   "caiu": "?",
+   "guarda": "numa metade, um NÚCLEO e nada mora lá; na outra, bandidos guardam um segredo de facção",
+   "habita": "bandidos numa metade",
+   "entrar": "uma luta de um lado; uma chave do outro",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "a Tessal e a Lile acharam nos papéis (427)"
+  },
+  {
+   "nome": "Quoium",
+   "onde": "a escada afundada onde mora o Laennor",
+   "era": "?",
+   "caiu": "?",
+   "guarda": "?",
+   "habita": "o Laennor, o Redemoinho, mora por cima",
+   "entrar": "passar pelo Laennor",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "cânone"
+  },
+  {
+   "nome": "Iroule",
+   "onde": "?",
+   "era": "?",
+   "caiu": "?",
+   "guarda": "?",
+   "habita": "?",
+   "entrar": "uma senha: estava nos papéis do velho, na letra do pai do rei",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "cânone"
+  },
+  {
+   "nome": "Zreek",
+   "onde": "as Montanhas de Fogo",
+   "era": "torre de mago",
+   "caiu": "guerra",
+   "guarda": "uma peça antiga",
+   "habita": "bandidos",
+   "entrar": "uma senha",
+   "degrau": "Lendário",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Lee",
+   "onde": "Telosus e o Oeste",
+   "era": "cidade afundada",
+   "caiu": "traição",
+   "guarda": "um prisioneiro",
+   "habita": "bandidos",
+   "entrar": "um preço a alguém",
+   "degrau": "Lendário",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Yena",
+   "onde": "Telosus e o Oeste",
+   "era": "cidade afundada",
+   "caiu": "traição",
+   "guarda": "material Raro a Lendário",
+   "habita": "um eremita",
+   "entrar": "um preço a alguém",
+   "degrau": "Épico",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Hua",
+   "onde": "o Norte",
+   "era": "mercado",
+   "caiu": "praga",
+   "guarda": "uma peça antiga",
+   "habita": "um culto",
+   "entrar": "uma luta",
+   "degrau": "Único",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Zy",
+   "onde": "o Sul da Areia",
+   "era": "cemitério de reis",
+   "caiu": "monstro",
+   "guarda": "material Raro a Lendário",
+   "habita": "monstro (gerar)",
+   "entrar": "um teste de Vigor por hora",
+   "degrau": "Único",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Yonecia",
+   "onde": "Telosus e o Oeste",
+   "era": "cidade afundada",
+   "caiu": "guerra",
+   "guarda": "um segredo de facção",
+   "habita": "um culto",
+   "entrar": "um preço a alguém",
+   "degrau": "Raro",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Yennis",
+   "onde": "os Picos Brancos",
+   "era": "mina",
+   "caiu": "traição",
+   "guarda": "um segredo de facção",
+   "habita": "bandidos",
+   "entrar": "um sacrifício",
+   "degrau": "Épico",
+   "conhecida": false,
+   "como": ""
+  },
+  {
+   "nome": "Nydurva",
+   "onde": "o Sul da Areia",
+   "era": "templo",
+   "caiu": "monstro",
+   "guarda": "um segredo de facção",
+   "habita": "um culto",
+   "entrar": "um teste de Vigor por hora",
+   "degrau": "Único",
+   "conhecida": false,
+   "como": ""
+  }
+ ]
+}

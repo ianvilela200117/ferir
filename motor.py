@@ -40,6 +40,11 @@ GUILDAS DO MUNDO (G12) python3 guildas.py ver [tudo] · ranking · fama ID|casa 
 MASMORRA (G14)         python3 masmorra.py gera NOME CAT "o que guarda" · ver NOME [tudo] · entra NOME SALA
 REPUTAÇÃO (G21)        python3 reputacao.py ver · muda "QUEM" +N "motivo"
 HABILIDADES À MÃO (G24) python3 habilidades.py mao   (a linha 🛠️ do turno) · usa "Nome" · carga "Nome" -1|cheio
+A FICHA DO BICHO       python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]   (depois combate.py monta ... conferido=1)
+ARTES E DESPERTAR      python3 artes.py ver|aplica|lista ARMA NIVEL|grandes · python3 despertar.py ver [tudo]|rola
+ÉDITOS · CRIAS · CANÇÕES   python3 edito.py ver|decreta|revoga · python3 cria.py ver|nova|laco|morre · python3 cancao.py ver|compoe
+COLETA · FESTAS · ATLAS    python3 coleta.py ver|rola|esfola|equipe · python3 festas.py ver|hoje · python3 atlas.py ver [tudo]|nova|conhece
+O LIVRO E OS NPCs      python3 livro_sync.py · python3 classe_mapa.py [ver] e python3 classe.py migra
 LIVRO NOVE (MOTOR 9)   compendio/08_livro_nove.md: G25 crias · G26 Despertar · G27 éditos · G28 canções · G29 bênçãos · G30 Artes de arma · G31 magia · G32 itens · G33 monstros (grito: "grito": {cd}) · G34 masmorra
 COVIL E LENDÁRIAS (G13) na ficha do bicho: "covil": {nome,dano,cd,efeito} · "lendarias": N (o luta.py faz o resto)
 ANOTAR NO ENVELOPE     python3 selo.py nota "LEITURA: ..."

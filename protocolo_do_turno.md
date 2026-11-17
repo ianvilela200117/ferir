@@ -185,3 +185,26 @@ O texto inteiro está em `compendio/08_livro_nove.md` (a aba "Livro Nove" do Liv
 
 ### A linha 🛠️ HABILIDADES À MÃO (G24)
 - A fonte é `python3 habilidades.py mao` (a ficha de habilidades do rei foi refeita no 437: feitiços, peças com carga, receitas). Depois de cada uso: `habilidades.py usa "Nome"` e `habilidades.py carga "Nome" -1`. As cargas de cena e de dia são recarregadas pelo Mestre ao virar a cena e o dia.
+
+## MOTOR 9b (Dia 438, pedido do jogador: "antes de continuar o save, fazer todas as correções do 4"): G35 a G37 e os scripts do Livro Nove
+
+### G35 — OS OFÍCIOS DE COLETA (Livro Nove 14; `coleta.py`)
+- Coleta com grau pelo uso; equipes de 50 por semana que o tick semanal rola sozinho; a esfola soma 10% de despojo por grau.
+
+### G36 — AS FESTAS DO CALENDÁRIO (Livro Nove 15; `festas.py`)
+- O tick diário avisa da festa de hoje e das dos próximos 7 dias. O efeito de base vale sempre; o ganho só se o rei paga (o Mestre pergunta ao jogador quando a festa está a até 7 dias).
+
+### G37 — O ATLAS DE MASMORRAS (Livro Nove 16; `atlas.py`)
+- O tick semanal rola o boato (d20, 18+). `atlas.py ver tudo` é só do Mestre. Lugar novo que o mundo gera entra no atlas (`atlas.py nova`).
+
+### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
+- **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
+- **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.
+- **ARTES DE ARMA (G30):** `python3 artes.py aplica` (todas as fichas de combate; o rei escolhe as dele) · `artes.py lista ARMA NIVEL` para um inimigo ou NPC sem ficha · `artes.py grandes` (os grandes de combate do mundo; oculto).
+- **DESPERTAR (G26):** `python3 despertar.py rola` (uma vez por marco; os de fora ficam ocultos no envelope) · `despertar.py ver [tudo]`.
+- **ÉDITOS (G27):** `python3 edito.py ver | decreta "NOME" [cidade=] [porcima] | revoga "NOME"` (o voto do conselho continua no `conselho.py`).
+- **CRIAS (G25):** `python3 cria.py ver | nova ... | laco ... | morre ...`; o tick semanal cobra a carne e diz quem ficou adulta.
+- **CANÇÕES (G28):** `python3 cancao.py compoe "O FEITO" [cantor=] [mestre] [contratado]` (d20 + o prestígio do reino).
+- **SERVOS (G23):** `servos.json`; o tick diário ROLA e LANÇA a palavra de cada servo de pé (d6 × 2 de PV do rei) e lembra o preço e a lua nova.
+- **O LIVRO ACOMPANHA O JOGO:** `python3 livro_sync.py` quando entrar bicho, material ou lugar novo (capítulos 6, 7 e o atlas do Livro Nove; refaz o HTML).
+- **NPCs:** `python3 classe_mapa.py` (classe do Livro para quem não tem) e depois `python3 classe.py migra`.

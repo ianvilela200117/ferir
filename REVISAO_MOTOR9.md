@@ -55,3 +55,15 @@
 - As Artes de arma dos heróis da casa (o Moreth, o Eiagrir, a Eliane, a Isolda, o Graur) ainda não foram escolhidas: entram na ficha de combate, declaradas no envelope, antes da próxima luta de cada um.
 - Os Despertares dos NPCs do mundo rolam quando eles entrarem em cena.
 - O Livro em HTML (`livro_do_mundo.html`) foi refeito com a aba nova.
+
+## MOTOR 9b (Dia 438): as seis correções que o jogador mandou fazer antes de seguir
+| Item | O que era | O que ficou |
+| --- | --- | --- |
+| a) a luta | traços novos, fases e o olhar aplicados à mão ou por aproximação | o `luta.py` roda sozinho: regeneração, olhar e teia, fases aos 50%, onze traços, os efeitos das Artes, o veneno de aliado, a palavra do servo, o Segundo Coração. O `bicho.py` monta a ficha do bicho direto da saída do gerador (acabou o erro de montar à mão: o covil do guardião da sala 9 estava com o dano de Épico) |
+| b) o Livro | materiais e bichos novos só nos registros do jogo | o `livro_sync.py` escreve nos capítulos 6 e 7 (18 materiais, 15 bichos) e no atlas, só com o que a casa sabe |
+| c) scripts | éditos, crias, canções e a palavra do servo dependiam de lembrar | `edito.py`, `cria.py`, `cancao.py`; o tick rola e lança sozinho o sangue da palavra a cada aurora |
+| d) heróis e grandes | só o Moreth e o Eiagrir tinham Artes; ninguém tinha Dom | `artes.py`: Artes para as dez fichas de combate; `despertar.py`: o Dom de todo NPC de nível 100 ou mais (28; os de fora, ocultos) |
+| e) fichas | 80 NPCs com classe fora do Livro | `classe_mapa.py`: 117 de 121 com classe do Livro, assinaturas e fraqueza; desejo, medo e linha vermelha onde faltavam |
+| f) conteúdo | não havia | ofícios de coleta com grau (`coleta.py`), doze festas com efeito (`festas.py`; o tick avisa), atlas de masmorras com boato semanal (`atlas.py`: 6 conhecidas, 8 ocultas) |
+
+Regras novas: G35 a G37. O teste do motor cobre 43 comandos.

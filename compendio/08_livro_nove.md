@@ -482,7 +482,7 @@ Um feito grande só vira poder quando o mundo o canta.
 
 - **O que conta:** matar um Lendário ou acima; vencer uma guerra; forjar uma peça Primordial; limpar primeiro uma masmorra Única ou acima; salvar ou perder uma cidade.
 - **Quem canta:** um bardo da casa (classe VOZ) ou um contratado (500). O Cantor de Feitos soma +5.
-- **O dado (d20 + Fama):**
+- **O dado (d20 + o prestígio do reino, que é a Fama do rei; `cancao.py`):**
   - até 5: a canção não pega.
   - 6 a 15: pega na região: reputação +5 nas cidades dela.
   - 16 a 19: **corre o mundo:** +1 de Fama e **+1 permanente num atributo** ligado ao feito (o jogador escolhe entre dois que o Mestre oferece).
@@ -517,3 +517,77 @@ Uma vez por ano, na **Lua do Vinho**, uma cidade grande chama os Jogos (o dado d
 - **o Duelo** (Luta), **a Forja** (uma obra em três dias, à vista), **as Barcas** (corrida no rio) e **o Canto**.
 - Vencer uma prova: um título com efeito, reputação +10 na cidade dos Jogos e +5 nas outras. Vencer a Forja põe o nome do ferreiro na boca dos Lendários (Lei 6: encomendas e cobiça).
 - Os Jogos juntam gente que não se junta: guildas, enviados e inimigos na mesma praça, com trégua de sete dias.
+
+---
+
+## 14. OFÍCIOS DE COLETA (regra G35; `coleta.py`)
+
+Colher também é ofício, e a mão melhora com o uso.
+
+- **Os cinco:** mineração · ervas · pesca · esfola (tirar o despojo de um bicho morto) · lenha e madeira.
+- **Graus pelo uso** (como as habilidades): 1 Iniciante · 2 Aprendiz (10 usos) · 3 Adepto (30) · 4 Perito (80) · 5 Mestre (200) · 6 Grão-Mestre (500).
+- **Um dia de coleta:** d20 + grau × 2 + a ferramenta.
+
+| Total | O que rende |
+| --- | --- |
+| até 5 | nada |
+| 6 a 12 | 1d6 kg do material Comum do lugar |
+| 13 a 17 | 1d6 kg do **material do lugar** |
+| 18 a 22 | o dobro |
+| 23 ou mais | o dobro e um **achado**: 1 kg de um degrau acima, ou o lugar rende +2 por uma lua |
+
+- **O grau limita a mão:** graus 1 e 2 colhem até Incomum · 3, Raro · 4, Épico · 5, Único · 6, qualquer coisa.
+- **1 natural é acidente:** um ferido leve, ou o bicho do lugar aparece.
+- **Esfola:** quem esfola soma 10% de despojo por grau acima do 1. No grau 5, o núcleo não se perde num 1 natural de quem abre o bicho.
+- **Equipe:** gente da casa colhendo num lugar toda semana (os mineiros de Levis, os caçadores, os salineiros). Custa **50 por semana**, rola uma vez por semana no tick, e o grau é o da equipe.
+
+---
+
+## 15. AS FESTAS DO CALENDÁRIO (regra G36; `festas.py`)
+
+Cada lua tem a sua festa. Na semana dela vale o **efeito de base**. O rei que **paga** a festa garante o efeito bom e leva o ganho escrito.
+
+| Quando | Festa | Efeito de base | Se o rei paga |
+| --- | --- | --- | --- |
+| 15 da Lua do Gelo | **a Noite do Fogo Guardado** | Ordem +1 na semana em toda cidade | 50: reputação +2 na capital |
+| 10 da Lua do Lobo | **a Caçada do Lobo** | guildas e caçadas com +2 no dado da semana; o avistamento de monstro rola duas vezes | 100: reputação +2 com a Guilda dos Aventureiros |
+| 20 da Lua da Cinza | **o Dia das Cinzas** | Falar com Morto cobra metade do sangue; servo de osso à vista ofende (−5 a mais) | 50: reputação +2 com o templo da cidade |
+| 5 da Lua do Degelo | **a Abertura do Rio** | Comércio +1 na semana nas cidades do rio; barca um quarto mais rápida | 100: reputação +2 com os barqueiros |
+| 12 da Lua da Semente | **a Bênção da Semente** | o dado da Comida rola com +1; casamento do dia dá Laço +1 | 100: a Comida não recua por evento nesta lua |
+| 27 da Lua das Barcas | **o Dia do Primeiro Martelo** | a casa de Ferir faz anos: obra de forja feita em praça tem +2 | 200: reputação +5 na capital, uma vez por ano |
+| 1 da Lua do Sal | **a Feira do Sal** | uma novidade de mercado em cada cidade do rio; material 10% mais barato na semana | 150: a renda da semana +10% |
+| 8 da Lua da Forja | **a Noite das Forjas** | +1 em toda obra de forja na semana; d20, com 1 um bairro pega fogo | 100: o incêndio não acontece |
+| 15 da Lua da Seca | **a Procissão da Água** | o dado da Saúde rola com +1 | 50: reputação +2 com a fé da cidade onde o rei andar |
+| 10 da Lua do Grão | **a Colheita** | Comida +1 na semana em toda cidade | 200: a renda da semana +10% e reputação +2 em toda cidade |
+| 1 da Lua do Vinho | **a Vindima e os Jogos** | sete dias de trégua; o chamado de recrutas rola com +3 | 2.000: o rei chama os Jogos das Cidades (seção 13) |
+| 30 da Lua das Velas | **a Noite das Velas** | morto-vivo Comum não anda; juramento da noite vale em dobro | 50: os servos do rei não assustam ninguém nesta noite |
+
+**Os Dias Mudos** continuam como eram (sem forja grande, sem magia de 4º círculo para cima, sem casamento). Quem quebra o silêncio: reputação −5 na cidade e Revés +1.
+
+O tick diário avisa da festa de hoje e das dos próximos sete dias.
+
+---
+
+## 16. O ATLAS DE MASMORRAS (regra G37; `atlas.py`)
+
+O mundo tem lugares fechados que esperam. O atlas guarda todos; a casa só vê os que **conhece**.
+
+- **Como um lugar entra no atlas da casa:** entrando nele; por carta ou papel velho; ou por **boato**. Toda semana, d20: com **18 ou mais**, o nome de um lugar novo chega a uma cidade do reino, com a região e o que se diz que guarda. O degrau só se sabe indo lá.
+- **O mapa de salas** (regra G14) só nasce quando a casa entra ou manda olhos.
+- **As guildas também procuram** (regra G12): um lugar com núcleo que uma guilda limpa primeiro deixa de ter o núcleo.
+- **Primeiro a limpar:** quem limpa primeiro uma masmorra Única ou acima tem um feito para canção (seção 11).
+
+<!-- SYNC:INICIO (livro_sync.py; não editar à mão) -->
+### 16.1 Os lugares que a casa conhece
+
+Saem do `atlas.json` a cada vez que o `livro_sync.py` roda. O que a casa não sabe aparece como "?".
+
+| Lugar | Onde | Degrau | O que era | O que guarda | O que habita | Para entrar |
+| --- | --- | --- | --- | --- | --- | --- |
+| **Eryssa** | debaixo do bairro dos refugiados de Ireviel, aberto pela enchente do 420 | ? | um mercado | uma receita | um culto | uma chave |
+| **Ithium** | os Picos Brancos | ? | um mercado | um NÚCLEO | mortos | uma luta |
+| **Zythir** | debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro) | Único | um cemitério de reis | um prisioneiro | nada, e é isso que assusta | uma senha |
+| **Alnesar** | as colinas a leste de Ireviel, a 2 dias | ? | ? | numa metade, um NÚCLEO e nada mora lá; na outra, bandidos guardam um segredo de facção | bandidos numa metade | uma luta de um lado; uma chave do outro |
+| **Quoium** | a escada afundada onde mora o Laennor | ? | ? | ? | o Laennor, o Redemoinho, mora por cima | passar pelo Laennor |
+| **Iroule** | ? | ? | ? | ? | ? | uma senha: estava nos papéis do velho, na letra do pai do rei |
+<!-- SYNC:FIM -->

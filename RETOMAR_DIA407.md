@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 438, Zythir, diante da porta fechada da sala 9 (MOTOR 9: G1 a G34)
+# RETOMAR — manhã do Dia 438, Zythir, diante da porta fechada da sala 9 (MOTOR 9: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -180,7 +180,7 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 433: EN33 [4] · CE33 [1] · a contra identificou o cobrador · a auditoria (acima, no envelope).
 
 ## RESPONDIDO (433, meio-dia): 1a parar e revistar · 2 'pode aplicar todos' (o MOTOR 8)
-- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G34; a cola do motor.
+- MOTOR 8: G13 a G22 no protocolo; luta.py (covil e lendárias, testado em cópia), masmorra.py, reputacao.py (partida no envelope), a exaustão na ficha; CLAUDE.md e MESTRE.md: G1 a G37; a cola do motor.
 - (OCULTO) HC33 [4] o capitão da Liga (90) · RV33 [4] fala e suborna · SU33 [3] 1.500 · (OCULTO) CR33 [6] a carroça vai a um comprador do Delta · G10 notar do rei: SUCESSO COM GANHO (a carroça; pesa como moeda; a estrada do sal).
 
 ## RESPONDIDO (433, tarde): 1d perguntar e investigar; recusar o ouro; 'se ele tiver o direito, não mexo um dedo'

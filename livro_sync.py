@@ -48,7 +48,13 @@ def main():
           '| Bicho | Categoria | Nível | Essência | Onde | Estado | O que a casa sabe |\n| --- | --- | --- | --- | --- | --- | --- |\n' + '\n'.join(lb) + '\n\n'
           'Os traços novos, as fases dos chefes, os nomeados e as crias estão no **Livro Nove**, seção 8.\n')
     troca(arq7, b7)
-    print(f'Livro sincronizado: {len(lin)} material(is) novo(s) no capítulo 6; {len(lb)} bicho(s) no capítulo 7.')
+    A = carrega('atlas.json', {'lugares': []}); la = []
+    for x in A['lugares']:
+        if x.get('conhecida'): la.append(f"| **{x['nome']}** | {x['onde']} | {x['degrau']} | {x['era']} | {x['guarda']} | {x['habita']} | {x['entrar']} |")
+    if la:
+        troca(P('compendio', '08_livro_nove.md'), '### 16.1 Os lugares que a casa conhece\n\nSaem do `atlas.json` a cada vez que o `livro_sync.py` roda. O que a casa não sabe aparece como "?".\n\n'
+              '| Lugar | Onde | Degrau | O que era | O que guarda | O que habita | Para entrar |\n| --- | --- | --- | --- | --- | --- | --- |\n' + '\n'.join(la) + '\n')
+    print(f'Livro sincronizado: {len(lin)} material(is) novo(s) no capítulo 6; {len(lb)} bicho(s) no capítulo 7; {len(la)} lugar(es) no atlas.')
     try:
         import markdown  # noqa
         r = subprocess.run([sys.executable, 'build_livro.py'], cwd=P('compendio'), capture_output=True, text=True)

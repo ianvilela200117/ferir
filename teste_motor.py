@@ -5,7 +5,8 @@ NÃO mexe no save de verdade. Uso: python3 teste_motor.py [rapido]   (rapido: se
 """
 import os, sys, json, glob, shutil, subprocess, tempfile
 AQUI = os.path.dirname(os.path.abspath(__file__))
-CMDS = [['tick.py', 'status'], ['ficha.py', 'ver'], ['agenda.py', 'ver'], ['agenda.py', 'fios'], ['relogio.py', 'ver'], ['faccoes.py', 'ver'], ['clima.py', 'ver'],
+CMDS = [['habilidades.py', 'mao'], ['artes.py', 'ver'], ['despertar.py', 'ver'], ['edito.py', 'ver'], ['cria.py', 'ver'], ['cancao.py', 'ver'], ['coleta.py', 'ver'], ['festas.py', 'ver'], ['atlas.py', 'ver'], ['classe_mapa.py', 'ver'], ['bicho.py', 'obras/zythir_sala9_guardiao.txt', 'sims/_teste_bicho.json', 'fase=nao'],
+        ['tick.py', 'status'], ['ficha.py', 'ver'], ['agenda.py', 'ver'], ['agenda.py', 'fios'], ['relogio.py', 'ver'], ['faccoes.py', 'ver'], ['clima.py', 'ver'],
         ['mercado.py', 'ver'], ['combate.py', 'ver'], ['feridos.py', 'ver'], ['cerco.py', 'lista'], ['npc.py', 'lista', '3'], ['reino.py', 'estado'], ['obra_valor.py', 'fichas'],
         ['viagem.py', 'lista'], ['motor.py'], ['rotina.py', 'ver'], ['nomes.py', 'arcaica', '2', 'livre'], ['selo.py', 'dr', 'TESTE1', 'teste', 'd20', '1-10: a | 11-20: b'],
         ['conselho.py', 'TESTE2', 'teste', 'A: sim', 'B: não'], ['luta.py', 'sims/caca_6_lobo-cinzento.json', 'sim=30'], ['aberto.py', '2d20+10', 'cd=20'],

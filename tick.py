@@ -305,6 +305,9 @@ def um_dia(estrada, limite):
             C.append(f"  ☠ SERVO ARMADO {_s['nome']} (nível {_s.get('nivel', '?')}): a PALAVRA cobra {_x} de PV do rei nesta aurora (d6 × {_s.get('palavra_mult', 2)}) → " + (_l[-1].strip() if _l else str(_e)))
         if _s.get('preco'): C.append(f"     {_s['preco']}" + (' ⚠ O PRAZO PASSOU' if _s.get('prazo') and dia > _s['prazo'] else ''))
         if _s.get('lua_nova') and dia >= _s['lua_nova'] - 2: C.append(f"     lua nova no {_s['lua_nova']}: o nome dele e a gota de sangue")
+    if os.path.exists(P('festas.py')):   # MOTOR 9 (G36): a festa de hoje e as da semana
+        _fl, _, _fe = roda('festas.py', 'hoje', dia)
+        C += [l for l in _fl if l.strip()]
     F = carrega('ficha.json')
     if F:
         F['fortuna'][0] = F['fortuna'][1]
@@ -396,6 +399,14 @@ def um_dia(estrada, limite):
             C += ['    ' + l for l in ng] or [f'      (falhou: {err})']
             R.append('  AS GUILDAS DO MUNDO (G12):')
             R += [l if len(l) < 330 else l[:330] for l in ng[1:]] or [f'   (falhou: {err})']
+        if os.path.exists(P('oficios.json')):   # MOTOR 9 (G35): as equipes de coleta
+            C.append('   [15e] A COLETA (coleta.py semana, G35):')
+            nco, _, err = roda('coleta.py', 'semana', dia)
+            C += ['    ' + l for l in nco] or [f'      (falhou: {err})']
+        if os.path.exists(P('atlas.json')):   # MOTOR 9 (G37): o boato de masmorra
+            C.append('   [15f] O ATLAS (atlas.py semana, G37):')
+            nat, _, err = roda('atlas.py', 'semana', dia)
+            C += ['    ' + l for l in nat] or [f'      (falhou: {err})']
         if os.path.exists(P('crias.json')):   # MOTOR 9 (G25): a carne das crias e quem ficou adulta
             C.append('   [15d] AS CRIAS (cria.py semana, G25):')
             ncr, _, err = roda('cria.py', 'semana', dia)
