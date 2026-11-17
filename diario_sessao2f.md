@@ -1125,3 +1125,10 @@ O conselho voltou a dividir-se ao meio, agora sobre a ronda. A Nouliel desempato
 No templo da Mão Queimada, diante de uma dúzia de ferreiros de mãos marcadas, o rei disse que o nome que dera à Mamiltia estava errado, e que esperaria a palavra dela. Um velho com a mão inteira de cicatriz assentiu devagar.
 
 - **Parada:** noite do 441. A barca para Farenta sai ao amanhecer.
+
+### Pela costa, de Ireviel a Farenta, 442 a 444
+A barca saiu com o vento forte de Ireviel e entrou no rastro de uma tempestade que já tinha passado: troncos boiando, uma vela rasgada numa praia, gaivotas demais. O Zyza ficava na proa, sem dormir, e toda aurora o rei estendia a mão aberta para ele e voltava mais branco para dentro.
+
+Farenta apareceu na lua cheia. Os portões estavam abertos e entupidos de carroças: as fazendas de cima desciam com tudo o que tinham. Um homem com um porco no colo disse aos guardas da barca que o mato andava nos morros desde a manhã, contra o vento. No bairro baixo havia portas marcadas com giz, e o cheiro de febre que ninguém esquece. Na praça, a procissão da água passava com as velas acesas, sem o rei.
+
+- **Parada:** tarde do 444, o cais de Farenta. A floresta a um dia. A pena na mão do rei.

@@ -3024,6 +3024,41 @@
    "leitura": "um portal",
    "resumo": "FENÔMENO MÁGICO: a coberta afina: um portal — Lumron (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 442,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 446,
+   "chegada": "[4] em 1d6 [4] dias",
+   "leitura": "febre",
+   "resumo": "PESTE OU DESASTRE: febre — Farenta",
+   "toca": true
+  },
+  {
+   "dia": 443,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 444,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — Yaelane",
+   "toca": false
+  },
+  {
+   "dia": 444,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 445,
+   "chegada": "[5] em 1d6 [1] dias",
+   "leitura": "um traidor exposto",
+   "resumo": "MUDANÇA POLÍTICA: um traidor exposto — Yaelane",
+   "toca": false
   }
  ]
 }

@@ -1,0 +1,39 @@
+[12:32:53] Dia 442 · Pressão 1/5 · evento local 1d20 [17] -> falta algo no mercado (preço sobe)
+  O TEMPO (13 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: calor forte, vento forte (d6 [4] muda, d20 [11] · vento d6 [6]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: neblina, calmo (d6 [6] muda, d20 [18] · vento d6 [1]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: limpo, vento forte (d6 [3] fica · vento d6 [6])
+   Farenta: tempestade, VENTANIA (d6 [4] muda, d20 [20] · vento d6 [4]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: baixo [26/100]
+  avistamento de monstro 1d20 [16] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 12 de PV do rei nesta aurora (d6 × 2) → pv: 390/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  ◈ festa em 2 dia(s) (Dia 444): a Procissão da Água · se o rei paga (50): o rei anda na procissão: reputação +2 com a fé da cidade em que ele estiver
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 442 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]
+    ONDE: d27 [5] Farenta  ◆ TOCA A CASA
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    → LEITURA DO DADO: febre
+    ——
+  O MUNDO VIVO — Dia 442
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [15] um gesto dela aparece em cena hoje
+    FAÍSCA: Xaysress ama em segredo Hrotgar, por causa de uma receita perdida
+    FAÍSCA: Draron (da casa) ama em segredo Skotha Graskur, por causa de uma criança
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) encomenda uma peça para Tano (carregador, primo da Caciccetta), por causa de a coberta do mundo
+  ▶ AGENDA #492 (era do Dia 440): FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #493 (era do Dia 440): FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)
+  ▶ AGENDA #494 (era do Dia 440): FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ▶ AGENDA #508 (era do Dia 441): CHEGA a Steunn: o recado do rei à MAMILTIA (o SAL contra a Elaeva; e que a fera desce a Farenta) (saiu de Levis no 435)
+  ▶ AGENDA #517 (era do Dia 441): CHEGA a Lumade: o recado do rei ao Tolvane (2a: comprar uma amostra do hadun do Celocus e descobrir de onde vem a carga) (saiu de Levis no 437)
+  ▶ AGENDA #499: GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565: FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571: FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [12] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, as SALINAS VELHAS ao sul): migra 1 região (rola para onde) · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Vradda (homens-lagarto) (Gogrunn): mandam um emissário a uma cidade (paz, troca, ameaça) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Guarda do Pedágio (Farenta): dá um passo no que quer · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: as Mãos de Breu (Qulosus): dá um passo: dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem) · COMO CHEGA: d20 [15] FIEL

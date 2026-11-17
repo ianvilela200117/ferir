@@ -25,7 +25,8 @@
    "TUDO PASSA PELA INTENDENTE (a Nouliel, 322)",
    "QUEM MANDA ESPIÃO A IREVIEL É INIMIGO DECLARADO E CAÇADO, sem exceção (323)",
    "EXCEÇÃO (336): quem manda olhos por FÉ, e não por guerra, fica VIGIADO, não caçado",
-   "AS CAÇADAS DO REINO (339): toda semana a Marechal escolhe UM bicho a até 3 dias, pela régua; heróis na frente, a hoste aprende, os despojos à forja; se a régua der mais de 2% de morte a qualquer um dos nossos, não vai sem o rei"
+   "AS CAÇADAS DO REINO (339): toda semana a Marechal escolhe UM bicho a até 3 dias, pela régua; heróis na frente, a hoste aprende, os despojos à forja; se a régua der mais de 2% de morte a qualquer um dos nossos, não vai sem o rei",
+   "A LEI DO PORTO (441): portagem menor para toda barca que traz carga DA casa ou PARA a casa; quem levar carga da LIGA perde TODA isenção (pedido dos Afogados Vivos, pelos barqueiros do Teraseth)"
   ],
   "relacoes": {
    "a Doge Skotha (Marasar)": 3,
@@ -163,6 +164,10 @@
      [
       1,
       "433: as FERRADURAS E OS EIXOS da fundição velha de Levis (G7) voltaram; até o 480"
+     ],
+     [
+      1,
+      "a guarda da casa na rua, pelo Graur (441; até o 448)"
      ]
     ],
     "Saude": [
@@ -467,6 +472,10 @@
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "a febre: a gente foge do bairro baixo (FB44; até o 455)"
      ]
     ],
     "Dinheiro": [
@@ -482,7 +491,12 @@
      ]
     ],
     "Comida": [],
-    "Saúde": [],
+    "Saúde": [
+     [
+      -1,
+      "a febre do 442, forte (FB44; até o 455)"
+     ]
+    ],
     "Defesa": []
    },
    "renda": {

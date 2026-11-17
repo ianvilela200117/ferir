@@ -1,0 +1,51 @@
+[12:33:49] Dia 443 · Pressão 2/5 · evento local 1d20 [18] -> um pedinte com algo valioso para vender
+  O TEMPO (14 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: calor forte, brisa (d6 [3] fica · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: neblina, vento forte (d6 [1] fica · vento d6 [6]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: calor forte, vento firme (d6 [4] muda, d20 [12] · vento d6 [5]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: nublado, brisa (d6 [5] muda, d20 [15] · vento d6 [4])
+   O RIO: baixo [21/100]
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 4 de PV do rei nesta aurora (d6 × 2) → pv: 398/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  ◈ festa em 1 dia(s) (Dia 444): a Procissão da Água · se o rei paga (50): o rei anda na procissão: reputação +2 com a fé da cidade em que ele estiver
+  ALTA: Eliane está de pé de novo (SÉRIO, ferido desde o 435)
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 443 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    ——
+  O MUNDO VIVO — Dia 443
+    Lendários: d20 [11] quietos hoje
+    trama do dia: Ulair → Gorine (RIVALIDADE) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: a mestra Carea oferece aliança a Ruddo, por causa de a coberta do mundo
+    FAÍSCA: Qunemneth, o Médico Cinzento descobre o segredo de a casa da fundição, por causa de o perdão
+    FAÍSCA: Qunemneth, o Médico Cinzento pede ajuda a Teraseth, por causa de vingança
+  AUDITORIA (XXIII.23, Dia 443): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 443 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 16.698, envelope diz 11.008.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #361: LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Garkunn (Mordun): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: LUGAR NOVO DESCOBERTO — Steunn (Veyvil) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Mãe Branca (Primordial, Steunn): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krekos (Raro, Shizess): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): dá um passo no que quer · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: as Mães da Porta (Ireviel): alguém grande passou a pagar ou proteger · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Chama da Hoste (Ireviel): RACHA: perde gente → força 4 · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Cinza (Ireviel velha): dá um passo no que quer · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)): RACHA: perde gente → força 2 · COMO CHEGA: d20 [14] FIEL
+  ✉ notícia de longe que chega hoje: FENÔMENO MÁGICO: a coberta afina: um portal — Lumron (terra nova) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Kredun, a Filha da Mãe Branca (Mítico, as Fundas do Norte): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Lumdun (Lendário, Mordun): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: os Grukos (ogros) (a Mata de Elais): descem para perto das cidades (fome, frio, medo de algo maior) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): pedem armas ou abrigo a uma cidade humana (oportunidade ou perigo) · COMO CHEGA: d20 [10] FIEL

@@ -1,0 +1,43 @@
+[12:33:56] Dia 444 · Pressão 3/5 · evento local 1d20 [11] -> uma criança doente na enfermaria piora ou sara
+  O TEMPO (15 da Lua da Seca de 1013 d.S., Sol) · lua cheia
+   Ireviel: limpo, calmo (d6 [4] muda, d20 [2] · vento d6 [2])
+   o Porto de Marasar: neblina, brisa (d6 [2] fica · vento d6 [4]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: calor forte, calmo (d6 [1] fica · vento d6 [1]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   Farenta: nublado, brisa (d6 [3] fica · vento d6 [3])
+   O RIO: baixo [17/100]
+  avistamento de monstro 1d20 [12] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 4 de PV do rei nesta aurora (d6 × 2) → pv: 398/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  ◈ FESTA HOJE: A PROCISSÃO DA ÁGUA · as fés saem às ruas: o dado da Saúde da semana rola com +1 · se o rei paga (50): o rei anda na procissão: reputação +2 com a fé da cidade em que ele estiver
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 444 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    → LEITURA DO DADO: um traidor exposto
+    ——
+  O MUNDO VIVO — Dia 444
+    um Lendário age (d20 [3]):
+    Ceduion, reitor do Colégio de Telosus (magia, Telosus) d20 [4] ataca ou sabota a obra do RIVAL lendário · notícia d20 [9] chega no dia 445
+    trama do dia: a cantora do templo → a mestra Carea (PAIXÃO PROIBIDA) d20 [3] nada visível
+    FAÍSCA: Moreth oferece aliança a Kreine (da casa), por causa de uma dívida antiga
+    FAÍSCA: Skedda quer matar Skotha Graskur, por causa de uma receita perdida
+    FAÍSCA: Higrunn vende algo a Orast, por causa de uma terra além do mapa
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #361 (era do Dia 443): LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ▶ AGENDA #519: CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [saiu de Ireviel no 442, pela costa: 2 dias]
+  ✉ NOTÍCIA QUE CHEGA HOJE: Lurentetta (o Delta): manda caçar alguém (um nome, uma peça, um monstro) · COMO CHEGA: d20 [15] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Borecci (Steunn): um gesto público grande (discurso, decreto, desafio) que todo mundo comenta · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [12] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Kervos (Único, o brejo do oeste): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [19] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Syess (Incomum, Farenta): migra 1 região (rola para onde) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Thog (orcs) (Marasar): atacam outro povo-monstro (guerra de bandos) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Eiandald (Yaelane): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: Naera (as Fundas do Norte): funda ou compra algo (uma casa, uma ordem, uma cidade pequena) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Quneus, o Caçador de Gigantes (Lendário, Mordun): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: Asesra (Raro, Kremir): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: o Círculo da Areia Cantante (Yaelane): matou Kervos e levou o núcleo · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: MONSTRO NOVO OU MIGRAÇÃO — Yaelane · COMO CHEGA: d20 [12] FIEL

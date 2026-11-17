@@ -1,5 +1,5 @@
 {
- "prox_id": 579,
+ "prox_id": 586,
  "itens": [
   {
    "id": 1,
@@ -6938,7 +6938,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6949,7 +6949,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -6960,7 +6960,7 @@
    "oculto": false,
    "para": false,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -7150,7 +7150,7 @@
    "oculto": false,
    "para": false,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -7257,7 +7257,7 @@
    "oculto": false,
    "para": false,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -7277,8 +7277,8 @@
   },
   {
    "id": 519,
-   "dia": 443,
-   "texto": "CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [de barca: 3 dias rio abaixo até Ireviel (441) e 2 pela costa: chega no 443; o viagem.py somou a pé]",
+   "dia": 444,
+   "texto": "CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [saiu de Ireviel no 442, pela costa: 2 dias]",
    "tipo": "marco",
    "oculto": false,
    "para": false,
@@ -8146,6 +8146,99 @@
    "origem": "viagem.py",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 579,
+   "dia": 446,
+   "texto": "CHEGA a Farenta: a MIE (150) e as 20 lanças da Lurentetta, com o SAL (MI41 [2]: o Delta a Ireviel em 2 dias, e 2 pela costa)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 580,
+   "dia": 449,
+   "texto": "(FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 581,
+   "dia": 446,
+   "texto": "PESTE OU DESASTRE: febre — Farenta",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 442",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 582,
+   "dia": 449,
+   "texto": "CHEGA a Ireviel: a CARTA DO TOLVANE de Lumade: comprou uma pena de hadun (300); ACREDITA (errado) que o SKORVAL vende as penas ao Celocus (OCULTO: é uma partida de caça do Celocus colhendo o Husgarn dormindo, e o Skorval não sabe); de Ireviel a Farenta, mais 2 dias",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 583,
+   "dia": 444,
+   "texto": "MONSTRO NOVO OU MIGRAÇÃO — Yaelane",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 443",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 584,
+   "dia": 445,
+   "texto": "MUDANÇA POLÍTICA: um traidor exposto — Yaelane",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 444",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    14,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 585,
+   "dia": 445,
+   "texto": "Ceduion, reitor do Colégio de Telosus (Telosus): ataca ou sabota a obra do RIVAL lendário",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 444",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
   }
  ],
  "fios": [

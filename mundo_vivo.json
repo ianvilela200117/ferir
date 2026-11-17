@@ -241,7 +241,8 @@
     "425: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "427: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
     "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga",
-    "438: [2] compra, toma ou destrói algo de valor ligado à Obra"
+    "438: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "444: [4] ataca ou sabota a obra do RIVAL lendário"
    ],
    "prox": 455,
    "dons": [
@@ -4000,9 +4001,10 @@
    ]
   },
   "Farenta (a cidade)": {
-   "valor": 10,
+   "valor": 5,
    "log": [
-    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+    "433: partida (o Mestre, pelo que a casa viveu com eles)",
+    "444: -5 (444: o cais viu o servo de osso do rei na barca (G23))"
    ]
   },
   "a Lurentetta (o Delta)": {

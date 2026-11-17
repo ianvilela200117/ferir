@@ -1,13 +1,5 @@
 {
  "ordem": [
-  "LV16",
-  "CE16",
-  "MK16",
-  "BRm",
-  "EN17",
-  "EN19",
-  "MM17",
-  "CR17",
   "RF19",
   "RF19n",
   "420-laco-quem",
@@ -400,425 +392,16 @@
   "AU41a",
   "AU41b",
   "AU41c",
-  "RO41"
+  "RO41",
+  "AF41",
+  "MI41",
+  "HT42",
+  "MR42",
+  "SG42",
+  "EL44",
+  "FB44"
  ],
  "selos": {
-  "LV16": {
-   "id": "LV16",
-   "dia": 415,
-   "hora": "23:53:15",
-   "titulo": "O QUE LEVIS FAZ AO VER OS DOZE NA MURALHA (tarde do 416, sentença do rei; a ala do cais do culto, que crê no fim das dívidas, mora nas mesmas ruas; o rei comprou as dívidas de Levis no 353) · +1 a lembrança do 353",
-   "dado": [
-    1,
-    6,
-    1
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "A ALA DO CAIS LÊ COMO GUERRA ao culto inteiro: Ordem de Levis −1 (mod, duas semanas)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "SILÊNCIO: a cidade olha e volta ao trabalho"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 7,
-     "res": "MEDO E ALÍVIO: mais devedores largam o culto (o Xaathis perde força)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 3,
-     "res": "A ALA DO CAIS LÊ COMO GUERRA ao culto inteiro: Ordem de Levis −1 (mod, duas semanas)",
-     "txt": "[2] +1 = 3 → A ALA DO CAIS LÊ COMO GUERRA ao culto inteiro: Ordem de Levis −1 (mod, duas semanas)"
-    }
-   ],
-   "hora_rolado": "23:53:15"
-  },
-  "CE16": {
-   "id": "CE16",
-   "dia": 416,
-   "hora": "23:53:46",
-   "titulo": "O QUE O CELOCUS FEZ CONTRA A OBRA DO ADUREL (o rival; a obra do Adurel é ABRIR UMA PASSAGEM em Zisrir; notícia FIEL que chega hoje a Levis pela estrada do oeste)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "PAGOU GENTE para desabar a boca da passagem no vale de Zisrir"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "FECHOU AS CARAVANAS de Lumade a Zisrir: nem grão nem ferramenta para a obra do Adurel"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ACUSOU O ADUREL EM PRAÇA, em Lumade, de ter acordado a Elaeva, e pôs preço na passagem"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "PAGOU GENTE para desabar a boca da passagem no vale de Zisrir",
-     "txt": "[2] → PAGOU GENTE para desabar a boca da passagem no vale de Zisrir"
-    }
-   ],
-   "hora_rolado": "23:53:46"
-  },
-  "MK16": {
-   "id": "MK16",
-   "dia": 416,
-   "hora": "23:53:46",
-   "titulo": "O QUE FALTA NO MERCADO DE LEVIS (evento local; a tempestade fecha o rio há quatro dias)",
-   "dado": [
-    1,
-    5,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "grão"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "sal"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "ferro"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "carvão"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "peixe"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "ferro",
-     "txt": "[3] → ferro"
-    }
-   ],
-   "hora_rolado": "23:53:46"
-  },
-  "BRm": {
-   "id": "BRm",
-   "dia": 416,
-   "hora": "00:16:39",
-   "titulo": "A BRARA E A PARTILHA (a fundição velha e metade do ferro para Levis; o armazém e a outra metade para a coroa; ela é TEIMOSA e HONESTA; Levis está sem ferro)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "DISCUTE: Levis está sem ferro e o armazém é de Levis; aceita no fim, de cara fechada"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ACEITA e já põe os mineiros a carregar"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "AGRADECE em público: a fundição velha vira a forja da cidade (opinião +5)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "DISCUTE: Levis está sem ferro e o armazém é de Levis; aceita no fim, de cara fechada",
-     "txt": "[1] → DISCUTE: Levis está sem ferro e o armazém é de Levis; aceita no fim, de cara fechada"
-    }
-   ],
-   "hora_rolado": "00:16:39"
-  },
-  "EN17": {
-   "id": "EN17",
-   "dia": 419,
-   "hora": "00:17:10",
-   "titulo": "O ENCONTRO NA ESTRADA DO RIO (417, o grupo do rei descendo para Ireviel; a tabela do Motor)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "bandidos"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "soldados sem soldo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "viajantes"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "refugiados"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "caçador de recompensa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "monstro do bioma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "caçador de recompensa",
-     "txt": "[5] → caçador de recompensa"
-    }
-   ],
-   "hora_rolado": "00:17:10"
-  },
-  "EN19": {
-   "id": "EN19",
-   "dia": 419,
-   "hora": "00:17:10",
-   "titulo": "O ENCONTRO NA ESTRADA DO RIO (419, a um dia e meio de Ireviel)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "bandidos"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "soldados sem soldo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "viajantes"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "refugiados"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "caçador de recompensa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "monstro do bioma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "refugiados",
-     "txt": "[4] → refugiados"
-    }
-   ],
-   "hora_rolado": "00:17:10"
-  },
-  "MM17": {
-   "id": "MM17",
-   "dia": 419,
-   "hora": "00:17:10",
-   "titulo": "A MAMILTIA E O FUMIGADOR (417, o último dia para sair e chegar a Steunn até o 429): ela disse FAÇA e que levaria a peça ela mesma (≤403); no 406 disse que FICA até os olhos dela voltarem de Zisrir (~434); a gente de Telosus chegou a ela no 407",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "VAI: a palavra dada primeiro vale; parte no 417 com o Fumigador e dois dos seus; o Adurel espera os olhos"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "MANDA A PEÇA: dois dos seus de Telosus levam o Fumigador a Steunn; ela fica"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "FICA E A PEÇA FICA: o Adurel pesa mais; a Higrunn espera em vão"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "VAI: a palavra dada primeiro vale; parte no 417 com o Fumigador e dois dos seus; o Adurel espera os olhos",
-     "txt": "[1] → VAI: a palavra dada primeiro vale; parte no 417 com o Fumigador e dois dos seus; o Adurel espera os olhos"
-    }
-   ],
-   "hora_rolado": "00:17:10"
-  },
-  "CR17": {
-   "id": "CR17",
-   "dia": 419,
-   "hora": "00:17:19",
-   "titulo": "O CAÇADOR DE RECOMPENSA na estrada do rio (417): atrás de quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a CABEÇA DO REI (o preço do 289): vê os cinco, mede, e passa ao largo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o DRASSA: alguém em Levis pôs preço no guarda-livros que fugiu com o cofre e o livro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "outra pessoa: um fugido de Ireviel (a rolar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a CABEÇA DO REI (o preço do 289): vê os cinco, mede, e passa ao largo",
-     "txt": "[2] → a CABEÇA DO REI (o preço do 289): vê os cinco, mede, e passa ao largo"
-    }
-   ],
-   "hora_rolado": "00:17:19"
-  },
   "RF19": {
    "id": "RF19",
    "dia": 419,
@@ -19675,6 +19258,310 @@
      "txt": "VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron"
     }
    ]
+  },
+  "AF41": {
+   "id": "AF41",
+   "dia": 441,
+   "hora": "12:32:27",
+   "titulo": "COMO OS AFOGADOS VIVOS RECEBEM A MEIA RESPOSTA (a portagem só para a carga da casa)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "FRIOS: o Teraseth ouve que o rei regateou (reputação −5)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ACEITAM"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "GRATOS: contam que barca da Liga desce o rio esta semana"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ACEITAM",
+     "txt": "[4] → ACEITAM"
+    }
+   ],
+   "hora_rolado": "12:32:27"
+  },
+  "MI41": {
+   "id": "MI41",
+   "dia": 441,
+   "hora": "12:32:27",
+   "titulo": "A MIE E AS 20 LANÇAS DA LURENTETTA: do Delta a Ireviel (saem no 442)",
+   "dado": [
+    1,
+    2,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "tantos dias (e mais 2 pela costa até Farenta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "tantos dias (e mais 2 pela costa até Farenta)",
+     "txt": "[2] → tantos dias (e mais 2 pela costa até Farenta)"
+    }
+   ],
+   "hora_rolado": "12:32:27"
+  },
+  "HT42": {
+   "id": "HT42",
+   "dia": 442,
+   "hora": "12:33:23",
+   "titulo": "DE ONDE VEM O HADUN DO CELOCUS (OCULTO)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a partida de caça do Celocus colhe as penas do HUSGARN dormindo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o SKORVAL VENDE as penas ao Celocus"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "hadun FALSO, pena tingida"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a partida de caça do Celocus colhe as penas do HUSGARN dormindo",
+     "txt": "[1] → a partida de caça do Celocus colhe as penas do HUSGARN dormindo"
+    }
+   ],
+   "hora_rolado": "12:33:23"
+  },
+  "MR42": {
+   "id": "MR42",
+   "dia": 442,
+   "hora": "12:33:23",
+   "titulo": "A MAMILTIA E O RECADO DO SAL (chegou a Steunn no 441)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "espera a pena"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "manda os olhos dela a Farenta (448)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "espera a pena",
+     "txt": "[3] → espera a pena"
+    }
+   ],
+   "hora_rolado": "12:33:23"
+  },
+  "SG42": {
+   "id": "SG42",
+   "dia": 442,
+   "hora": "12:33:39",
+   "titulo": "O SEGREDO PEQUENO DO REI QUE ESCAPA EM LUMADE (pela boca do Tolvane)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o rei LEU a carta cifrada do Colégio à Leliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o rei paga com sangue a palavra de um servo morto"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o rei está FERIDO e não luta até o 458"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o rei LEU a carta cifrada do Colégio à Leliel",
+     "txt": "[2] → o rei LEU a carta cifrada do Colégio à Leliel"
+    }
+   ],
+   "hora_rolado": "12:33:39"
+  },
+  "EL44": {
+   "id": "EL44",
+   "dia": 444,
+   "hora": "12:34:23",
+   "titulo": "ONDE ESTÁ A ELAEVA quando o rei chega a Farenta",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a um dia e meio, nos morros do noroeste"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "a um dia: as fazendas de cima fogem para dentro dos muros"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "já à vista das muralhas, ao pôr do sol"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "a um dia: as fazendas de cima fogem para dentro dos muros",
+     "txt": "[5] → a um dia: as fazendas de cima fogem para dentro dos muros"
+    }
+   ],
+   "hora_rolado": "12:34:23"
+  },
+  "FB44": {
+   "id": "FB44",
+   "dia": 444,
+   "hora": "12:34:23",
+   "titulo": "A FEBRE EM FARENTA (a peste do 442)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "branda: Saúde −1 até o 451"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "forte: Saúde −1 até o 455 e Ordem −1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a FEBRE CINZA de volta: Saúde −2 até tratar"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "forte: Saúde −1 até o 455 e Ordem −1",
+     "txt": "[3] → forte: Saúde −1 até o 455 e Ordem −1"
+    }
+   ],
+   "hora_rolado": "12:34:23"
   }
  }
 }
