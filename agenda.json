@@ -1,5 +1,5 @@
 {
- "prox_id": 577,
+ "prox_id": 579,
  "itens": [
   {
    "id": 1,
@@ -8122,6 +8122,28 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 577,
+   "dia": 445,
+   "texto": "A CAÇADA DA MISSÃO DO ITHVIL: o recado chega à ELIANE em Levis (de pé desde o 443): a Marechal aplica a LEI DAS CAÇADAS (339) com o que há em Levis (ela, as 10 lanças da ronda, a Guilda de Levis, a Bigorna Livre se quiser): a régua OCULTA contra a criatura (sims/ithvil_cria_base.json); acima de 2% de morte, não vai sem o rei (e o rei não luta até o 458); o prazo da missão é o 449",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 578,
+   "dia": 445,
+   "texto": "CHEGA a Levis: o recado do rei à ELIANE, em Levis: o reino ACEITA a missão do Ithvil (10.000, até o 449); a Marechal monta a caçada pela Lei das Caçadas (339) (saiu de Ireviel no 441) [de barca rápida: 4 dias rio acima; o rio baixo não atrasa a barca leve]",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
    "feito": false,
    "toca": true
   }

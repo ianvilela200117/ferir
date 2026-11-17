@@ -1,0 +1,34 @@
+{
+ "monstro": {
+  "nome": "Tkurnek",
+  "cat": "Único",
+  "nivel": 200,
+  "pv": 4000,
+  "df": 75,
+  "rd": 12,
+  "at": 65,
+  "dado": "1d12",
+  "mult": 10,
+  "moral": false,
+  "essencia": "Fogo",
+  "regenera": 100,
+  "acoes": 6,
+  "poder": {
+   "nome": "o golpe queima: +3d6 de fogo",
+   "tipo": "area",
+   "cd": 30,
+   "dano": "6d6"
+  },
+  "fraqueza": "Gelo",
+  "fase": {
+   "tipo": 1,
+   "nome": "troca de Essência"
+  },
+  "nota": "bicho.py (obras/missao_ithvil_cria.txt): gigante, casa, Fogo; territorial: ataca quem entra; fraqueza: a Essência Gelo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol",
+  "nao_roda": [
+   "sombra própria (no escuro age duas vezes; sob luz forte perde 1 ação)",
+   "escava ou nada"
+  ]
+ },
+ "grupo": []
+}

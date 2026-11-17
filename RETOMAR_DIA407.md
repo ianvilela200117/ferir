@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 441, Ireviel, o cais, de passagem para Farenta (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 441, Ireviel; a barca para Farenta no amanhecer do 442 (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 441, IREVIEL. O rei 402/402 (a CURA MAIOR aprendida e lançada: CM41 630), GRAVE até o 458 (não luta), Mana 144/164, a Visão 2/2. A barca sai para FARENTA no amanhecer do 442 e chega no 444 (se o jogador mantiver; a agenda #519 diz 443: acertar para 444 na saída); (OCULTO) a ELAEVA chega às terras de Farenta no 444. O ZYZA na barca, fora dos muros (o conselho recusou o Édito do Osso). RO41: o Édito da Ronda RECUSADO no desempate da Intendente (Ireviel Defesa 1/4). AS AUDIÊNCIAS esperam a palavra do rei (AU41a [1], AU41b [2], AU41c [1]). A MISSÃO DO ITHVIL ACEITA: o recado chega à Eliane em Levis no 445 (agenda #578); a caçada no 445 (#577): a Lei das Caçadas com a régua OCULTA contra a TKURNEK (OCULTO: a cria do Ithvil, Único 200, Fogo; sims/ithvil_cria_base.json; com o grupo de Levis: Eliane 96, as 10 lanças da ronda, a Guilda de Levis); acima de 2% de morte, não vai sem o rei, e a missão falha no 449 (a região piora um passo). A PROMESSA à Mamiltia (5a): não agir contra a Almision até ela dizer (quebrar: −15). A INTENÇÃO do rei: entrar na sala 9 de Zythir quando voltar a Levis (G24: avisar a Visão do 438 e a régua refeita do 441: queda certa sem o rei; a fraqueza FOME).
+
+Antes (manhã do 441):
 Manhã do 441, IREVIEL, o cais (o tick semanal do 441 já rodou: tick_441.txt). O rei 112/402 (GRAVE até o 458), Mana 164, a Visão 2/2; com ele o Moreth (600), o Eiagrir (299/420), o ZYZA (servo 129; NA BARCA, fora dos muros: o conselho RECUSOU o Édito do Osso, ED41, 3 a 3, a Intendente desempatou), o cabo Gonde e os 10. A viagem a Farenta (agenda #519): saindo hoje chega no 443; (OCULTO) a ELAEVA chega às terras de Farenta no 444; a Lurentetta manda o sal e 20 lanças com a Mie (LS41 [5]); a pena da Mamiltia na mão do rei. ZYTHIR: a sala 9 fechada; GV38 [6] nada desarma o guardião; o eco disse a fraqueza FOME. A MAMILTIA (MW41 [3], MA41 [3]): fria; quer o erro do nome dito diante dos dela; pede que o rei NÃO aja contra a ALMISION ainda. A MISSÃO DO ITHVIL (agenda #576; obras/missao_ithvil_441.txt): 10.000, até o 449; (OCULTO) o Ithvil DORME (a notícia de que anda é falsa) e "o alvo tem um motivo bom": ao aceitar, o Mestre declara quem é a criatura (tabela no envelope antes). IREVIEL: Defesa 1/4 com PROBLEMA briga ou motim (a briga no cais); (OCULTO até o 442) as MÃOS DE BREU agem para dominar o rio de Ireviel (1/8). (OCULTO) a notícia do Ceduion é falsa (dizem que roubaram o Colégio; foi ele que tomou algo ligado à Obra); um portal em Lumron (notícia em 2 dias); lugar novo em Steunn (443) e em Kremir (não chega). As guildas: o Círculo matou o Kervos e ficou com o núcleo (notícia 444); a Torre dos Sete Véus manda enviado (448). ESPERAM o rei: as audiências #492-494. A PALAVRA DO ZYZA: o tick rola e lança sozinho a cada aurora; a noite cura +40 (G4: o Mestre lança). MOTOR 9b FEITO (REVISAO_MOTOR9.md no fim; o protocolo no fim diz os scripts novos).
 
 Antes (Zythir, 438):
@@ -222,12 +225,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (438 → 441): 1a o eco · 2a seguir a Farenta · 3a,c o Zyza à vista e o Édito do Osso · 4 "o que cada uma dá?" · 5 "quero ler" (o Livro entregue)
 - GV38 [6] · o saber do eco 39 vs 25 GANHO · os ticks 439, 440, 441 · MW41 [3] · MA41 [3] · LS41 [5] · a missão do Ithvil · ED41: recusado no desempate.
 
+## RESPONDIDO (441): 1a · 2b e "por que eu tenho que ir a Farenta?" (respondido pelos livros) · 3c · 4c e "quando formos lá vou entrar na sala 9" · 5a
+- CM41 630 · AU41a [1] · AU41b [2] · AU41c [1] · RO41 recusado no desempate · IT41 [2] (oculto) · a Mamiltia +5.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O ÉDITO DO OSSO, recusado no desempate: a) aceitar o voto: o Zyza fica na barca e fora dos muros de toda cidade · b) passar por cima do conselho: o édito vale (edito.py decreta "do Osso" porcima), Legitimidade −1 e três cadeiras contrariadas.
-2. HOJE em Ireviel: a) seguir já para Farenta, como mandou (chega no 443) · b) ficar o dia: a AULA do Colégio (a CURA MAIOR: o rei se enche de PV) e as três audiências; sair no 442, Farenta no 444.
-3. A BRIGA no cais e a Defesa em 1/4: a) o Graur põe a guarda da casa na rua por uma semana · b) o rei deixa o cabo Gonde e os 10 dele em Ireviel · c) o Édito da Ronda ao conselho (140 por semana por cidade: Ordem +1) · d) nada por ora.
-4. A MISSÃO DO ITHVIL (10.000, até o 449): a) recusar: o rei vai a Farenta · b) mandar a Marechal e a Guilda avaliarem (a Lei das Caçadas) · c) aceitar em nome do reino e mandar quem está em Levis (a Eliane levanta no 443).
-5. A MAMILTIA pede duas coisas: a) dizer diante dos dela que o nome estava errado, e esperar · b) dizer, mas não prometer esperar · c) não dizer.
+1. FARENTA, sabendo o porquê: a) seguir no amanhecer do 442 (Farenta no 444), com o Moreth, o Eiagrir, o Zyza e a pena · b) não ir: mandar o Moreth, o Eiagrir e o Zyza a juntar-se à Mie; o rei fica (a pena chama a Mamiltia onde o REI estiver, não em Farenta) · c) ir a Levis em vez disso (a missão do Ithvil e a sala 9) e deixar Farenta à Mie e aos outros.
+2. A LUZ DO CAIS (20 voluntários; o Moreth uma vez no cais deles): a) aceitar e prometer a visita · b) aceitar os voluntários sem prometer · c) recusar.
+3. OS AFOGADOS VIVOS (portagem menor para os barqueiros do Teraseth): a) aceitar (a renda da portagem cai: o Mestre lança −50 por semana) · b) recusar · c) aceitar só para quem levar carga da casa.
+4. OS DESCALÇOS DO CAIS (trabalho na estiva): a) dar · b) recusar.
+5. A RONDA, recusada no desempate: a) aceitar o voto · b) passar por cima (edito.py decreta "da Ronda" porcima: Legitimidade −1) · c) só em Ireviel: o Graur põe a guarda da casa na rua por uma semana, sem édito.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

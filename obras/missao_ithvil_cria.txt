@@ -1,0 +1,23 @@
+nome: Brator
+categoria: Único
+nível: 200
+corpo: gigante
+tamanho: casa
+essência: Fogo
+números: PV 4000 · Defesa 75 · RD 12 · ataque +65 · 3 ataque(s) por rodada · dano 1d12 × 10 · XP 2000 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · sombra própria (no escuro age duas vezes; sob luz forte perde 1 ação)
+  · regenera (cura nível ÷ 2 PV por rodada, menos contra a Essência oposta)
+  · escava ou nada
+poder assinatura: o golpe queima: +3d6 de fogo, em área de 15 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Gelo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol
+comportamento: territorial: ataca quem entra
+habitat: as terras altas de Levis
+sinal (Lei 15): tremores
+drops:
+  · chifre ou garra ×20: «ithmir» (Único, Fogo + Vento), serve para arma: o golpe queima: +3d6 de fogo
+  · olho ×15: «ormir» (Único, Fogo), serve para armadura: RD 5 contra fogo e frio
+  · osso ou presa ×5: «braade» (Único, Fogo + Peso), serve para arma: o golpe queima: +3d6 de fogo
+  · pena ou pelo ×20: «quossa» (Único, Fogo), serve para armadura: RD 5 contra fogo e frio
+  · CORAÇÃO: núcleo Único de Fogo, serve de NÚCLEO para Mítico
+————————————————————————————————————————

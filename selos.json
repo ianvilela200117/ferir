@@ -1,11 +1,5 @@
 {
  "ordem": [
-  "DRb",
-  "DRm",
-  "DRo",
-  "MN16",
-  "MN16b",
-  "BRx",
   "LV16",
   "CE16",
   "MK16",
@@ -400,308 +394,15 @@
   "MW41",
   "MA41",
   "LS41",
-  "ED41"
+  "ED41",
+  "IT41",
+  "CM41",
+  "AU41a",
+  "AU41b",
+  "AU41c",
+  "RO41"
  ],
  "selos": {
-  "DRb": {
-   "id": "DRb",
-   "dia": 415,
-   "hora": "23:52:03",
-   "titulo": "O ARMAZÉM DO ARDENGHI NO CAIS DE LEVIS: o que tem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "300 kg de ferro e carvão para um mês"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "600 kg de ferro, carvão e 2 barras de metal bom (Raro, a rolar)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "1 t de ferro, carvão e uma peça P.A. Épica guardada"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "600 kg de ferro, carvão e 2 barras de metal bom (Raro, a rolar)",
-     "txt": "[4] → 600 kg de ferro, carvão e 2 barras de metal bom (Raro, a rolar)"
-    }
-   ],
-   "hora_rolado": "23:52:03"
-  },
-  "DRm": {
-   "id": "DRm",
-   "dia": 415,
-   "hora": "23:52:17",
-   "titulo": "AS DUAS BARRAS DE METAL BOM do armazém (meio quilo cada; o que um mestre de forja de Levis guardaria)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "VADUAR (Raro, come magia; as minas de Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "HOALD (Raro, Metal)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "STONDE (Raro, Terra)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "SHASHA (Raro, Silêncio)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "VEYINE (Raro, Elo)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "VADUAR (Raro, come magia; as minas de Levis)",
-     "txt": "[2] → VADUAR (Raro, come magia; as minas de Levis)"
-    }
-   ],
-   "hora_rolado": "23:52:17"
-  },
-  "DRo": {
-   "id": "DRo",
-   "dia": 415,
-   "hora": "23:52:18",
-   "titulo": "A BOLSA DO DRASSA (moeda tirada do cofre do Ardenghi)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "× 100"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      1
-     ],
-     "total": 7,
-     "res": "× 100",
-     "txt": "[6, 1] +0 = 7 → × 100"
-    }
-   ],
-   "hora_rolado": "23:52:18"
-  },
-  "MN16": {
-   "id": "MN16",
-   "dia": 415,
-   "hora": "23:52:33",
-   "titulo": "ACHAR OS 12 NAS MINAS DE BAIXO (manhã do 416): a BRARA e o GURKA conhecem cada mineiro da Casa nova (+4), o faro do EIAGRIR (+3), a ISOLDA lê disfarce (+2) · −2 escondidos entre turnos de cara suja, em galerias que os de fora não conhecem",
-   "dado": [
-    1,
-    20,
-    7
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 11,
-     "res": "ACHAM PARTE: 1d6 dos 12 pegos; o resto escapa pelas galerias para as minas de cima"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 18,
-     "res": "ACHAM OS 12 numa galeria: encurralados, lutam (1d6: 1-2 agarram um mineiro como refém)"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 26,
-     "res": "os 12 pegos antes de saberem, sem luta, um a um nos turnos"
-    },
-    {
-     "tipo": "num",
-     "a": 27,
-     "b": 27,
-     "res": "isso, e um deles quer falar"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 25,
-     "res": "os 12 pegos antes de saberem, sem luta, um a um nos turnos",
-     "txt": "[18] +7 = 25 → os 12 pegos antes de saberem, sem luta, um a um nos turnos"
-    }
-   ],
-   "hora_rolado": "23:52:33"
-  },
-  "MN16b": {
-   "id": "MN16b",
-   "dia": 415,
-   "hora": "23:52:48",
-   "titulo": "UM DOS 12 FALA DO LÍDER? (a ISOLDA pergunta: +5; doze presos, sempre há um mais fraco: +2; fanáticos do fim do mundo: −4)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 8,
-     "res": "NENHUM FALA: morrem calados"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 15,
-     "res": "UM FALA: o líder saiu de Levis pela estrada do oeste ANTES da fundição; para onde, não sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 22,
-     "res": "UM FALA: o líder (o NOME), a caminho de LUMGAL, com quantos, e o que quer lá"
-    },
-    {
-     "tipo": "num",
-     "a": 23,
-     "b": 23,
-     "res": "isso, e por que ele saiu antes: sabia que a fundição ia cair"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 5,
-     "res": "NENHUM FALA: morrem calados",
-     "txt": "[2] +3 = 5 → NENHUM FALA: morrem calados"
-    }
-   ],
-   "hora_rolado": "23:52:48"
-  },
-  "BRx": {
-   "id": "BRx",
-   "dia": 415,
-   "hora": "23:52:48",
-   "titulo": "A BRARA E A ORDEM DO REI DE MATAR OS 12 (na cidade dela; ela é governadora, HONESTA, TEIMOSA, CORAJOSA; pediu três vezes gente para limpar a rua)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "EXIGE SENTENÇA: na cidade dela, ninguém morre sem ser julgado; ela julga em praça, hoje, e a sentença é a mesma"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ACEITA, e pede que seja na muralha, em público, como sentença do rei: que Levis veja"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "faz ela mesma"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ACEITA, e pede que seja na muralha, em público, como sentença do rei: que Levis veja",
-     "txt": "[5] → ACEITA, e pede que seja na muralha, em público, como sentença do rei: que Levis veja"
-    }
-   ],
-   "hora_rolado": "23:52:48"
-  },
   "LV16": {
    "id": "LV16",
    "dia": 415,
@@ -19715,6 +19416,263 @@
      "total": 0,
      "res": "VENCE B) recusar (os servos ficam fora dos muros) · placar A 3 · B 3 · C 0 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Thuron",
      "txt": "VENCE B) recusar (os servos ficam fora dos muros) · placar A 3 · B 3 · C 0 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Thuron"
+    }
+   ]
+  },
+  "IT41": {
+   "id": "IT41",
+   "dia": 441,
+   "hora": "12:10:40",
+   "titulo": "A CRIATURA DA MISSÃO DO ITHVIL (OCULTO)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma CRIA do Ithvil, com fome"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma fera ferida que FOGE do Varogh"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma MÃE DE VEIO das minas velhas de Levis (a Bigorna Livre cava no ninho dela)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "uma CRIA do Ithvil, com fome",
+     "txt": "[2] → uma CRIA do Ithvil, com fome"
+    }
+   ],
+   "hora_rolado": "12:10:40"
+  },
+  "CM41": {
+   "id": "CM41",
+   "dia": 441,
+   "hora": "12:10:40",
+   "titulo": "A CURA MAIOR DO REI EM SI MESMO (Luz 4º, 16d6 × 10 pelo foco)",
+   "dado": [
+    16,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 96,
+     "res": "× 10 de PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      5,
+      5,
+      1,
+      3,
+      4,
+      6,
+      6,
+      3,
+      4,
+      6,
+      3,
+      1,
+      1,
+      4,
+      6
+     ],
+     "total": 63,
+     "res": "× 10 de PV",
+     "txt": "[5, 5, 5, 1, 3, 4, 6, 6, 3, 4, 6, 3, 1, 1, 4, 6] +0 = 63 → × 10 de PV"
+    }
+   ],
+   "hora_rolado": "12:10:40"
+  },
+  "AU41a": {
+   "id": "AU41a",
+   "dia": 441,
+   "hora": "12:11:10",
+   "titulo": "A AUDIÊNCIA DA LUZ DO CAIS (o porto de Marasar; acendem velas para a luz do Moreth que matou o Naudren): o que oferecem e pedem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os olhos deles no porto de Marasar (+2 na contra-espionagem lá), e pedem uma capela no cais"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "aliança formal: lutam pela casa no porto, e pedem uma peça da forja com luz"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez",
+     "txt": "[1] → mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez"
+    }
+   ],
+   "hora_rolado": "12:11:10"
+  },
+  "AU41b": {
+   "id": "AU41b",
+   "dia": 441,
+   "hora": "12:11:10",
+   "titulo": "A AUDIÊNCIA DOS AFOGADOS VIVOS (o rio; agora do lado do Teraseth): o que querem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a portagem do rio menor para os barqueiros do Teraseth"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um recado do Teraseth: ele se oferece para a caçada da Elaeva, com os barqueiros, por um preço"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o perdão de um dos deles, preso em Ireviel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a portagem do rio menor para os barqueiros do Teraseth",
+     "txt": "[2] → a portagem do rio menor para os barqueiros do Teraseth"
+    }
+   ],
+   "hora_rolado": "12:11:10"
+  },
+  "AU41c": {
+   "id": "AU41c",
+   "dia": 441,
+   "hora": "12:11:10",
+   "titulo": "A AUDIÊNCIA DOS DESCALÇOS DO CAIS (a metade que vive no porto de Ireviel e não quer mais briga): o que querem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "trabalho na estiva da casa para os deles"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "entregam quem começou a briga do cais desta semana, se o rei não punir a metade deles"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "que o rei solte um dos deles da cela do 336"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "trabalho na estiva da casa para os deles",
+     "txt": "[1] → trabalho na estiva da casa para os deles"
+    }
+   ],
+   "hora_rolado": "12:11:10"
+  },
+  "RO41": {
+   "id": "RO41",
+   "dia": 441,
+   "hora": "12:11:28",
+   "titulo": "O CONSELHO VOTA: O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Defesa de Ireviel em 1/4): a ronda paga em toda cidade do reino",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron",
+     "txt": "VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron"
     }
    ]
   }

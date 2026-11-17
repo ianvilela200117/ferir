@@ -1114,3 +1114,14 @@ Saíram. Em Levis, as mulheres do cais puxaram as crianças para dentro quando o
 Em Ireviel o conselho se reuniu na casa do cais, porque a Intendente não quis o servo dentro dos muros nem para a conversa. Três disseram sim e três disseram não. A Nouliel, que tinha dito não, fechou o livro e disse não outra vez. O Zyza ficou na barca, de pé na proa, olhando a cidade.
 
 - **Parada:** manhã do 441, o cais de Ireviel. A barca pronta para Farenta; uma cidade inteira querendo falar com o rei antes.
+
+### Ireviel, 441
+De manhã o rei subiu a escada do Colégio de muleta. O mestre da Luz abriu a janela que dava para o leste, pôs uma vela na mão dele e ensinou a palavra três vezes. Na quarta, a vela acendeu sozinha. O rei a apontou para o próprio peito e sentiu o calor descer pelas costelas como água quente num balde. Saiu da sala de pé, sem a muleta, e mancando do mesmo jeito.
+
+À tarde recebeu quem esperava. Os da Luz do Cais trouxeram vinte rapazes e um pedido: que o homem da luz fosse ao cais deles uma vez. Os Afogados falaram pelo Teraseth e pediram o rio mais barato. Os Descalços pediram trabalho, só isso, e ficaram de chapéu na mão.
+
+O conselho voltou a dividir-se ao meio, agora sobre a ronda. A Nouliel desempatou outra vez contra o rei, e ninguém na mesa olhou para ele.
+
+No templo da Mão Queimada, diante de uma dúzia de ferreiros de mãos marcadas, o rei disse que o nome que dera à Mamiltia estava errado, e que esperaria a palavra dela. Um velho com a mão inteira de cicatriz assentiu devagar.
+
+- **Parada:** noite do 441. A barca para Farenta sai ao amanhecer.

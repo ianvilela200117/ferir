@@ -306,7 +306,7 @@
     "ate": 490
    }
   ],
-  "votos_seguidos": 1,
+  "votos_seguidos": 0,
   "desejo": "deixar uma obra",
   "ambicao": "fundar uma escola",
   "medo": "a magia",
@@ -441,11 +441,12 @@
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
    "+500 Tick 434: PASSO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
    "+500 435: a revolta de Marasar quebrada (conflito sério, XVI.4)",
-   "+500 Tick 441: SURPRESA (gerador) (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))"
+   "+500 Tick 441: SURPRESA (gerador) (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
+   "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
-  "votos_vencidos": 15,
+  "votos_vencidos": 16,
   "lealdade": 6,
   "tracos": [
    "DISCIPLINADO",
@@ -472,7 +473,7 @@
     "ate": null
    }
   ],
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "ultima_subida": 399,
   "desejo": "voltar para casa",
   "ambicao": "entrar numa facção que o recusou",
@@ -1198,11 +1199,12 @@
    "Dia 425: VOTO VENCIDO no conselho (QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do ): queria B) a MOUA (16, salineira e guia de canais do Delta)",
    "+500 Tick 427: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
    "+1000 Tick 441: MISSÃO/FEITO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
-   "Tick 441: SOBE a 33"
+   "Tick 441: SOBE a 33",
+   "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p"
   ],
   "classe": "Cavaleira (AÇO, Comum)",
   "ocupacao": "LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275",
-  "votos_vencidos": 11,
+  "votos_vencidos": 12,
   "tracos": [
    "FRIO",
    "HONESTO"
@@ -1215,7 +1217,7 @@
   ],
   "fraqueza": "a pé, perde a Carga; quebrar o voto tira o Juramento.",
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "lealdade": 5,
   "ultima_subida": 441,
   "desejo": "uma casa própria",
@@ -1812,7 +1814,7 @@
   ],
   "fraqueza": "a guilda dele cobra uma morte por ano.",
   "votos_vencidos": 14,
-  "votos_seguidos": 2,
+  "votos_seguidos": 0,
   "lealdade": 4,
   "ultima_subida": 427,
   "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
@@ -1920,9 +1922,10 @@
    "Dia 427: VOTO VENCIDO no conselho (O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do liv): queria C) de volta à cela",
    "+1000 Tick 434: MISSÃO/FEITO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
    "+1000 Tick 441: MISSÃO/FEITO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
-   "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem par): queria A) aprovar o Édito do Osso (os servos do rei andam à "
+   "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem par): queria A) aprovar o Édito do Osso (os servos do rei andam à ",
+   "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p"
   ],
-  "votos_vencidos": 11,
+  "votos_vencidos": 12,
   "tracos": [
    "ORGULHOSO",
    "CRUEL"
@@ -1935,7 +1938,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 1,
+  "votos_seguidos": 2,
   "desejo": "proteger um filho",
   "ambicao": "comprar a liberdade da família",
   "medo": "a magia",

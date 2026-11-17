@@ -303,6 +303,14 @@
    "usos": 0,
    "desde": 437,
    "origem": "315-322"
+  },
+  "Cura Maior": {
+   "tipo": "Magia",
+   "efeito": "Luz 4º: cura 16d6 (× o foco) e tira Sangrando, Atordoado e Envenenado · 20 de Mana (40 sem vela ou vidro)",
+   "grau": 1,
+   "usos": 1,
+   "desde": 441,
+   "origem": "aula do Colégio, 441"
   }
  },
  "titulos": [

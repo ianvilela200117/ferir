@@ -1,0 +1,8 @@
+DECLARADO (RO41) [Dia 441, 12:11] O CONSELHO VOTA: O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Defesa de Ireviel em 1/4): a ronda paga em toda cidade do reino · A) aprovar (Ordem +1 em toda cidade; 140 por semana por cidade: 560) · B) recusar · cada cadeira: d20 por opção + inclinação, fica com a maior; maioria vence; empate: a Intendente · votam: Nouliel, Graur, Sira, Isolda, Herkald, Thuron · fora: Eliane, Tolvane · sem inclinações
+  Nouliel (Tesoureira e Intendente): A[10] B[20] → B
+  Graur (Guarda do Reino): A[19] B[7] → A
+  Sira (Mestra dos Segredos): A[14] B[11] → A
+  Isolda (Mestre das Águas): A[8] B[15] → B
+  Herkald (Mestre da Forja): A[6] B[19] → B
+  Thuron (O Colégio): A[19] B[16] → A
+  VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron

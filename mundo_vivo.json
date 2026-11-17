@@ -3425,6 +3425,15 @@
    "essencia": "Elo",
    "onde": "Zythir, a sala 9 (o coração)",
    "nota": "VIVO; visto só pela Visão do Tempo do rei (438): o GUARDIÃO do coração de Zythir; besta do tamanho de uma colina; olhar paralisante; muitas cabeças; o golpe corta laços e encantos; (OCULTO) cria no ventre; (OCULTO) caçador; (OCULTO) fraco a FOME e à CRIA; (OCULTO) fase aos 50% (FZ38 [1]): troca de Essência; (OCULTO) drops nanniel, yomicia, uxloeth, núcleo Único de Elo; a ficha de luta: sims/zythir_s9_base.json (bicho.py)"
+  },
+  {
+   "nome": "Tkurnek",
+   "dia": "441",
+   "cat": "Único",
+   "nivel": "200",
+   "essencia": "Fogo",
+   "onde": "as terras altas de Levis",
+   "nota": "(OCULTO) a criatura da missão do Ithvil: a CRIA dele, com fome, expulsa do ninho enquanto o pai dorme; ninguém da casa a viu; em Levis dizem que é o próprio Ithvil; gigante do tamanho de uma casa; sombra própria; regenera; escava; o golpe queima; fraca a Gelo e à luz do sol; morta, o Ithvil acorda e sabe quem foi; ficha: sims/ithvil_cria_base.json (bicho.py)"
   }
  ],
  "notas_ocultas": [
@@ -4010,9 +4019,10 @@
    ]
   },
   "a Mamiltia": {
-   "valor": 60,
+   "valor": 65,
    "log": [
-    "433: partida (o Mestre, pelo que a casa viveu com eles)"
+    "433: partida (o Mestre, pelo que a casa viveu com eles)",
+    "441: +5 (441: o rei disse diante dos da Mão Queimada de Ireviel que o nome que deu (o Adurel) estava errado, e prometeu esperar)"
    ]
   },
   "o Celocus (Lumade)": {
