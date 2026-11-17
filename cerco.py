@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """cerco.py — CERCO DE LONGE contra uma fera ou uma muralha, jogado de verdade (MOTOR 6.3). Uma cena por dia. Dados verdadeiros.
 Cada cerco é um arquivo em cercos/NOME.json com a ficha do alvo, os atiradores e quem está a bordo. Nasceu do cerco da Elaeva (Dia 382).
-Uso: python3 cerco.py NOME dia DIA [sal] | visao [N] | entra QUEM | sai QUEM | ver     (446: 'sal' = os tiros do dia com o SAL da fraqueza escondida: o dano dobra; 'fase' no json: a segunda fase aos 50%)        ·        python3 cerco.py lista
+Uso: python3 cerco.py NOME dia DIA [sal] | visao [N] [sal] | entra QUEM | sai QUEM | ver     (446: 'sal' = os tiros do dia com o SAL da fraqueza escondida: o dano dobra; 'fase' no json: a segunda fase aos 50%)        ·        python3 cerco.py lista
 Cerco novo: copie cercos/elaeva.json, troque "alvo" (nome, pv, pvm, df = Defesa + 14, rd), "atiradores" (nome: [tiros por dia, dados d6, multiplicador, ataque]),
 "a_bordo", "lugar" (a cidade cujo tempo vale), "capitao" ([nome, bônus]) e zere "dias" e "fim". As regras de cada dia são as mesmas:
 As regras são as da régua (sims/elaeva_barcos.py, Dia 361), com a MAGIA DISPUTADA do Dia 379, declaradas aqui ANTES do primeiro dado:
@@ -112,7 +112,7 @@ def main():
     if a[0] == 'visao':
         SIM = True; n = int(a[1]) if len(a) > 1 else 3000; tot = []; longe = 0; garra = 0; feridos = 0; some = 0
         for _ in range(n):
-            T = json.loads(json.dumps(S)); L, dn = um_dia(T, tempo)
+            T = json.loads(json.dumps(S)); T['sal_hoje'] = 'sal' in a; L, dn = um_dia(T, tempo)
             tot.append(S['pv'] - T['pv']); longe += any('longe da costa' in l for l in L); garra += any('GARRA' in l for l in L); feridos += any('FALHA' in l for l in L); some += T['fim'] == 'foi embora'
         tot.sort()
         print(f"A VISÃO DO TEMPO (uma hora à frente, {n} futuros; tempo: {tempo[0]}, {tempo[1]}): vai embora hoje em {100 * some / n:.0f}% · fica longe em {100 * longe / n:.0f}% · quando vem, perde de {tot[int(.45 * n)]} a {tot[int(.95 * n)]} PV (o mais comum: {tot[int(.7 * n)]}) de {S['pv']} · a âncora garra em {100 * garra / n:.0f}% e o perigo alcança o convés em {100 * feridos / n:.1f}%"); return

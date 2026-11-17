@@ -339,3 +339,5 @@ depois vira linha nova aqui.
 - (445) O rio secou. A Elaeva chegou à muralha de Farenta ao pôr do sol (as raízes racharam a muralha de fora); a barca não atirou (ela andou longe da água). O rei queimou a pena: a MAMILTIA veio na mesma noite, numa coluna de fogo no cais, e quer sair sozinha contra a fera. Em Levis, a Eliane cumpriu a Lei das Caçadas e não caçou a criatura da missão do Ithvil (falha no 449).
 
 - (445-446) A Visão do Tempo do rei mostrou a Mamiltia morrendo sozinha contra a Elaeva; ela acreditou e esperou. A tempestade do 446 parou os barcos com a fera na praia. A Lei das Caçadas mudou: quando a conta proíbe os nossos, a Marechal pode contratar gente de fora. A Guilda dos Aventureiros foi chamada a caçar a criatura da missão do Ithvil (chega a Levis no 452).
+
+- (447) Tempestade de novo em Farenta; nenhum óleo de essência na cidade. A Visão do rei mostrou a luta direta contra a Elaeva: todos caem, o Moreth e o Eiagrir morrem; o cerco com sal é o caminho. Os OLHOS PINTADOS levaram uma criança do bairro da febre, e o povo culpa o podestà Tirello.

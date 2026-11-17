@@ -19,11 +19,11 @@
   "Afinidade": 171
  },
  "pv": [
-  392,
+  390,
   402
  ],
  "mana": [
-  124,
+  104,
   164
  ],
  "foco": 37,
@@ -569,7 +569,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 2,
+   "tem": 1,
    "max": 2,
    "renova": "dia"
   },

@@ -1,10 +1,5 @@
 {
  "ordem": [
-  "DS20e",
-  "CZ20",
-  "NL20",
-  "LM421",
-  "ES421",
   "AG421",
   "BC421",
   "AGq1",
@@ -399,184 +394,14 @@
   "MS46",
   "EC46",
   "RG46",
-  "GS46"
+  "GS46",
+  "OL46",
+  "MA47",
+  "QG47",
+  "MP47",
+  "EC47"
  ],
  "selos": {
-  "DS20e": {
-   "id": "DS20e",
-   "dia": 420,
-   "hora": "00:18:31",
-   "titulo": "OS MORTOS DA ENCHENTE no bairro dos refugiados",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      5
-     ],
-     "total": 11,
-     "res": "mortos",
-     "txt": "[6, 5] +0 = 11 → mortos"
-    }
-   ],
-   "hora_rolado": "00:18:31"
-  },
-  "CZ20": {
-   "id": "CZ20",
-   "dia": 420,
-   "hora": "00:18:31",
-   "titulo": "O QUE OS DA CINZA DEIXAM (pequeno, mas visível; Ireviel velha; hostis)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "pintam na porta da Fornalha 'O REI NECROMANTE' (o panfleto velho do Ardenghi)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "queimam a carroça de carvão da Fornalha no caminho"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "roubam as ferramentas da forja grande na noite da enchente"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "pintam na porta da Fornalha 'O REI NECROMANTE' (o panfleto velho do Ardenghi)",
-     "txt": "[1] → pintam na porta da Fornalha 'O REI NECROMANTE' (o panfleto velho do Ardenghi)"
-    }
-   ],
-   "hora_rolado": "00:18:31"
-  },
-  "NL20": {
-   "id": "NL20",
-   "dia": 420,
-   "hora": "00:18:31",
-   "titulo": "O PROBLEMA DA NOULIEL (420: encrenca com a guarda ou com a lei; ela governa pela linha selada)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "COM O GRAUR: na enchente ele cumpriu a linha à letra e não mexeu num posto sem a palavra dela, e a palavra demorou"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "COM A GUARDA: um guarda bateu num refugiado na fila do grão, e ela o mandou prender"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "COM A LEI: um decreto dela na enchente (requisitar barcos) é contestado pelos barqueiros"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "COM A LEI: um decreto dela na enchente (requisitar barcos) é contestado pelos barqueiros",
-     "txt": "[6] → COM A LEI: um decreto dela na enchente (requisitar barcos) é contestado pelos barqueiros"
-    }
-   ],
-   "hora_rolado": "00:18:31"
-  },
-  "LM421": {
-   "id": "LM421",
-   "dia": 421,
-   "hora": "00:19:18",
-   "titulo": "O CONSELHO VOTA: SONDAGEM (sem valor de lei; o rei pediu o conselho antes de decidir): LUMADE e a oferta do rei ao CELOCUS (perdoar tudo: os 2.500 do livro do Ardenghi e os 800 do crédito do 403, em troca de baixar os 40%)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) COMO ESTÁ NO PACTO: depois da guerra · placar A 2 · B 2 · C 4 · VOTO VENCIDO: Thuron, Tolvane, Eliane, Isolda",
-     "txt": "VENCE C) COMO ESTÁ NO PACTO: depois da guerra · placar A 2 · B 2 · C 4 · VOTO VENCIDO: Thuron, Tolvane, Eliane, Isolda"
-    }
-   ]
-  },
-  "ES421": {
-   "id": "ES421",
-   "dia": 421,
-   "hora": "00:48:35",
-   "titulo": "O CONSELHO VOTA: O ESCREVENTE DA ALFÂNDEGA DO RIO (pago pelo Ardenghi, no livro de contas)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) PRENDER e julgar em praça · placar A 3 · B 3 · C 2 (EMPATE em 3 votos e a Intendente votou em outra: ela desempata no dado entre A, B) · VOTO VENCIDO: Graur, Isolda, Herkald, Nouliel, Thuron",
-     "txt": "VENCE A) PRENDER e julgar em praça · placar A 3 · B 3 · C 2 (EMPATE em 3 votos e a Intendente votou em outra: ela desempata no dado entre A, B) · VOTO VENCIDO: Graur, Isolda, Herkald, Nouliel, Thuron"
-    }
-   ]
-  },
   "AG421": {
    "id": "AG421",
    "dia": 421,
@@ -19512,6 +19337,242 @@
     }
    ],
    "hora_rolado": "13:03:04"
+  },
+  "OL46": {
+   "id": "OL46",
+   "dia": 446,
+   "hora": "16:23:01",
+   "titulo": "O ÓLEO DE ESSÊNCIA (FOGO) EM FARENTA, de noite",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "nenhum frasco"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "1d6 frascos na Botica Velha, 150 cada"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "uma Mestre Alquimista de Farenta faz 2d6 por dia, 150 cada"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nenhum frasco",
+     "txt": "[3] → nenhum frasco"
+    }
+   ],
+   "hora_rolado": "16:23:02"
+  },
+  "MA47": {
+   "id": "MA47",
+   "dia": 447,
+   "hora": "16:23:44",
+   "titulo": "A MIE NA TEMPESTADE DO 447",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a barca espera o tempo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "marcha pela estrada da costa: chega ao fim do 447 com o sal"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a barca espera o tempo",
+     "txt": "[3] → a barca espera o tempo"
+    }
+   ],
+   "hora_rolado": "16:23:44"
+  },
+  "QG47": {
+   "id": "QG47",
+   "dia": 447,
+   "hora": "16:23:44",
+   "titulo": "(OCULTO) O GOLPE OU A SUCESSÃO EM FARENTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o podestà Tirello morre"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a Guarda do Pedágio toma a porta do sul"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Botica Velha compra o conselho"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a gente do morto de 427 se levanta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "os Olhos Pintados levam uma criança e o povo culpa o podestà"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "alguém quer entregar a cidade à Elaeva"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "os Olhos Pintados levam uma criança e o povo culpa o podestà",
+     "txt": "[5] → os Olhos Pintados levam uma criança e o povo culpa o podestà"
+    }
+   ],
+   "hora_rolado": "16:23:44"
+  },
+  "MP47": {
+   "id": "MP47",
+   "dia": 447,
+   "hora": "16:23:44",
+   "titulo": "A PACIÊNCIA DA MAMILTIA NO SEGUNDO DIA DE TEMPESTADE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "sai sozinha à praia"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "espera"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "espera",
+     "txt": "[2] → espera"
+    }
+   ],
+   "hora_rolado": "16:23:44"
+  },
+  "EC47": {
+   "id": "EC47",
+   "dia": 447,
+   "hora": "16:23:44",
+   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 447",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "cerca e não toca"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais",
+     "txt": "[4] → as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
+    }
+   ],
+   "hora_rolado": "16:23:44"
   }
  }
 }

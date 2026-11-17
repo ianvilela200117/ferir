@@ -3081,6 +3081,17 @@
    "chegada": "[4] em 1d6 [4] dias",
    "resumo": "UM CULTO CRESCE ou nasce — Zaitor (terra nova) (Culto do Lumra)",
    "toca": false
+  },
+  {
+   "dia": 447,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 450,
+   "chegada": "[3] em 1d3 [3] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — Ulra (terra nova)",
+   "toca": false
   }
  ]
 }

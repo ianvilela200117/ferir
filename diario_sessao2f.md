@@ -1152,3 +1152,10 @@ A Mamiltia ouviu calada, olhando para a mão enfaixada. "Da última vez a tua pa
 A aurora veio negra. O vento virou as barcas nos cabos e arrancou telhas do bairro do porto. Na praia, a floresta desceu até a água, mais perto do que nunca, e ninguém pôde sair para atirar. A Mamiltia olhou a tempestade e disse que fogo e ventania não se misturam.
 
 - **Parada:** noite do 446. A tempestade, a fera na praia, a Mamiltia no cais. O sal chega amanhã.
+
+### Farenta, 447
+A tempestade voltou antes do meio-dia, mais forte. O rei fechou os olhos outra vez na torre e se viu descer à praia com os dele e com a Mamiltia. Viu as raízes saírem da areia molhada, o vento entortar o fogo dela para trás, o Eiagrir cair primeiro e o Moreth logo depois, em todas as vezes. Abriu os olhos e disse ao Moreth que ninguém sairia da muralha.
+
+À tarde um grito correu o bairro baixo: uma menina de uma casa marcada de giz tinha sumido da cama, e na parede, ao lado da porta, havia dois olhos pintados com cinza. Uma mulher apontou a casa do podestà e disse que ele fechara o bairro com a febre e esquecera os que estavam dentro. Ninguém a mandou calar.
+
+- **Parada:** noite do 447. A tempestade, a fera longe da costa, a Mie abrigada, uma criança levada.

@@ -1,5 +1,5 @@
 {
- "prox_id": 592,
+ "prox_id": 593,
  "itens": [
   {
    "id": 1,
@@ -8313,6 +8313,21 @@
    "origem": "mestre",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 592,
+   "dia": 450,
+   "texto": "MONSTRO NOVO OU MIGRAÇÃO — Ulra (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 447",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
   }
  ],
  "fios": [
