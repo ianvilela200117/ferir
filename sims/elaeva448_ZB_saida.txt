@@ -1,0 +1,14 @@
+LEI DAS AÇÕES: Elaeva (nível 376) contra 1 · PV 17955/37600 · RD 50 · 11 ações · reação 4 · grupo: Zyza 3
+INICIATIVA: Elaeva 2d20+37 = 67 × o grupo 2d20+12 (média) = 40 → Elaeva AGE PRIMEIRO
+--- RODADA 1 · Elaeva 17955/37600
+  AÇÃO LENDÁRIA:
+    ataque em Zyza: [[11], [11]]+124=146 vs 66 ACERTA [7, 4, 1]×100+0+75=1275 − RD 6 = 1269 (822)
+  AÇÃO LENDÁRIA:
+    ataque em Zyza: [[3], [7]]+124=134 vs 66 ACERTA [9, 7, 3]×100+0+75=1975 − RD 6 = 1969 (-1147)
+    Zyza MORRE (dano maciço)
+  FÚRIA: +1 ação, o poder recarrega
+  PODER: o espinheiro (Agilidade CD 30, 18 m)
+  O GRUPO CAI
+FIM: grupo caiu · rodadas 1 · mortos ['Zyza'] · PV 17955/37600 · grupo {'Zyza': -1147}
+⛔ G9: PARAR AQUI, DENTRO DA HORA. Mortos: ['Zyza'] · caídos: ['Zyza']
+   antes de o tempo andar, o jogador decide: ERGUER O CAÍDO (Luz 6º, o rei sabe: até 1 hora; 30 de Mana; 1 PV e −1 para sempre num atributo) · o SERVO ARMADO (a Receita Mestra do rei) · Medicina nos caídos · onde estão os corpos

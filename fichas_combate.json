@@ -629,7 +629,8 @@
     "dado": "2d6",
     "rodadas": 3,
     "cd": 16
-   }
+   },
+   "estado": "desfeito (448)"
   },
   "Mie": {
    "nome": "Mie",

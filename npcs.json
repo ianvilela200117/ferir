@@ -7046,6 +7046,7 @@
   ],
   "classe": "servo armado do rei (Osso que Cresce)",
   "ocupacao": "o guarda da sala 1 de Zythir, erguido no 438 pela Receita Mestra: aceitou com um PREÇO, a FOME (carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua); 3/4 de 158 = 118, +10% da Escola do Osso = 129; teto do Osso que Cresce: 258; a palavra cobra do rei 1d6 × 2 de PV a cada aurora; o nome e a gota de sangue a cada lua nova (460)",
-  "servo": true
+  "servo": true,
+  "estado": "MORTO (desfeito, 448)"
  }
 }

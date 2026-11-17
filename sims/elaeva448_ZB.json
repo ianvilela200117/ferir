@@ -1,0 +1,55 @@
+{
+ "monstro": {
+  "nome": "Elaeva",
+  "cat": "Mítico",
+  "nivel": 376,
+  "pv": 37600,
+  "df": 134,
+  "rd": 50,
+  "at": 124,
+  "dado": "3d10",
+  "mult": 100,
+  "b": 0,
+  "poder": {
+   "nome": "o espinheiro (Agilidade CD 30, 18 m)",
+   "tipo": "area",
+   "dano": "40d6",
+   "cd": 30
+  },
+  "fraqueza": "Vida",
+  "moral": true,
+  "pv_atual": 17955,
+  "essencia": "Espinho",
+  "nota": "a Elaeva, a Floresta que Anda (Mítica 376; ficha de 382 com o nível de hoje, 446): fraca a FOGO e ao SAL (o luta.py lê uma; o sal não chegou); não atravessa água corrente larga; fase aos 50% (FE46 [1]): troca de Essência · 448: a 48%, já na segunda fase (a fraqueza Vida); em fúria (abaixo de 50%: o luta.py dá a fúria sozinho)"
+ },
+ "grupo": [
+  {
+   "nome": "Zyza",
+   "nivel": 129,
+   "at": 42,
+   "dado": "1d10",
+   "mult": 5,
+   "b": 0,
+   "df": 52,
+   "rd": 6,
+   "pv": 2091,
+   "vigor": 20,
+   "fica": true,
+   "essencia": "Podridão",
+   "nivel_ref": 129,
+   "nota": "SERVO ARMADO do rei (438; G23): o guarda de Zythir erguido pela Receita Mestra, com o núcleo Épico de Podridão no peito e a palavra do Osso que Cresce; nível 129 (3/4 de 158, +10% da Escola do Osso); PV 129 × 15 + 156 (o nível do rei); não recua (fica); perde a regeneração e a mentira; o veneno do golpe não roda do lado do grupo; a 0 PV desmonta (o rei sente: Atordoado 1 rodada; o núcleo fica no corpo)",
+   "pecas": "o próprio corpo (inseto do tamanho de um cavalo, Podridão) · o núcleo Épico de Podridão no peito · a palavra gravada (Osso que Cresce)",
+   "magias": [],
+   "servo": true,
+   "veneno_golpe": {
+    "dado": "2d6",
+    "rodadas": 3,
+    "cd": 16
+   },
+   "pvmax_real": 2091,
+   "medo": true
+  }
+ ],
+ "ate": 2,
+ "iniciativa": true
+}

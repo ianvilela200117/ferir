@@ -1181,3 +1181,7 @@ Da torre se viu tudo: o fogo dela abrindo o mato em clareiras, as raízes se fec
 A floresta ficou parada um instante. A casca dela escureceu, como madeira molhada. Depois se moveu de novo, mais depressa.
 
 - **Parada:** a primeira hora da noite do 448. A Mamiltia morta no mato, ao pé da fera. O rei na porta, com o Erguer o Caído na boca.
+
+O Zyza saiu pela porta pequena sem esperar ordem duas vezes, rente ao chão, como quando era guarda de uma rainha. Não chegou à metade do caminho. Uma raiz desceu do escuro e outra veio de lado, e o que tinha sido o Zyza se espalhou em pedaços de casca e osso. Na porta, o rei sentiu aquilo no peito como um prego e se agarrou ao batente.
+
+O corpo da Mamiltia continuava lá, entre as raízes, com as mãos brancas de sal.

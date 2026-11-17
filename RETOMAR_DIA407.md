@@ -8,6 +8,8 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+AINDA A PRIMEIRA HORA DA NOITE DO 448 (G9). ZB48: o ZYZA foi DESFEITO buscando o corpo (servos.json de_pe False; npcs MORTO). O corpo da Mamiltia ao pé da Elaeva; sem corpo, nem o Erguer o Caído nem a Receita Mestra. O que resta ao rei: PRENDER A ALMA (Osso 6º, 30 de Mana e 6d6 de PV; alcance 30 m à vista pela leitura do Mestre; DC48: d6 1-3 o corpo está a menos de 30 m da torre, 4-6 além), para depois a Ressurreição (Luz 7º, que o rei não sabe) ou a Arma Viva (Livro Nove 7.2). O rei atordoado um instante (a Mão que Doma). Mana 124/164, PV 392/402. O "4b" do jogador não casou com pergunta aberta: perguntado de novo.
+
 Noite do 448, FARENTA, DENTRO DA PRIMEIRA HORA (G9). A MAMILTIA MORREU (LM48; sims/elaeva448_M_saida.txt): o corpo no mato, ao pé da Elaeva (o espinheiro alcança 18 m). A ELAEVA: 17.955 de 37.600 (48%), em FÚRIA, na SEGUNDA FASE (troca de Essência: a fraqueza nova VIDA, FE46b [5], OCULTA; o SAL segue, é a raiz; no cerco a Mamiltia passaria a × 10, mas ela morreu); no cerco, abaixo de 50%: a cada dia d6 1-2 ela vai embora. O rei: 392/402, Mana 124/164, a Visão 0 de 2 (volta na aurora), GRAVE até o 458. O SAL: OITO carroças (uma foi nas mãos da Mamiltia) = 2 dias de tiro com sal. O FOGO DOS CAMPOS (FC48 [3]: corre para o mato) ficou para a noite, depois da hora. O cerco sem a Mamiltia: a bordo o Moreth e o Eiagrir (tirar a Mamiltia do cercos/elaeva445.json com cerco.py elaeva445 sai Mamiltia). O ZYZA: a barda de ziis (obra_valor.py, o Martelo que Ensina vai com o rei; a Tenaz ficou na Fornalha), a PRESSA e a RAIZ DE PEDRA no corpo (o Osso Gravado +3), o núcleo Mítico quando houver (o da Elaeva, se ela morrer) e comer o que matar. O preso ao podestà (2b). Cofre 8.168. As consequências do mundo pela morte da Mamiltia (a Mão Queimada, Telosus, a Almision) rolam depois da hora, pela decisão do jogador.
 
 Antes (o entardecer do 448):
@@ -264,9 +266,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (448): 1d o plano com a Visão e todos os recursos · 2b · 3 tudo no Zyza
 - as duas Visões (A: todos caem; B: o cerco com sal tira ~3.350 por dia) · SM48 [2] ela sai sozinha · SF48 [6] · FC48 [3] · LM48: a Mamiltia leva a fera a 48% e MORRE.
 
+## RESPONDIDO (448, a primeira hora): 1 "tentar o A com o Zyza; senão, o B" · "4b" (sem pergunta 4: perguntado de novo)
+- ZB48: o Zyza desfeito por duas ações lendárias.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A MAMILTIA, DENTRO DA HORA (G9): a) ERGUER O CAÍDO: alguém busca o corpo no mato ao pé da fera (quem: o Zyza, a Mie, o cabo Gonde com a carroça) e o rei a ergue na porta (30 de Mana; volta com 1 PV e −1 para sempre num atributo) · b) o SERVO ARMADO: o Falar com Morto e a Receita Mestra (se ela aceitar: 3/4 do nível; o preço dela no dado; e o mundo da fé dela vê) · c) deixá-la ir.
-2. A ELAEVA A 48%, EM FÚRIA: a) o cerco com sal no amanhecer (o fogo dos campos esta noite) · b) atirar já de noite, das muralhas, com o que há (o Moreth e o Eiagrir: a Lança do Sol) · c) esperar.
+1. A ALMA DA MAMILTIA, ainda dentro da hora: a) PRENDER A ALMA da torre (o dado diz se o corpo está ao alcance: 30 de Mana e 6d6 de PV; guarda a alma numa pedra ou num osso) · b) mandar mais alguém buscar o corpo (a Mie, o Moreth ou o Eiagrir: a fera desfez o Zyza com dois golpes; eles têm menos PV) · c) deixá-la ir.
+2. O "4b" que você escreveu (não há pergunta 4): a) era a 2b: atirar já, de noite, das muralhas, com a Lança do Sol do Moreth e do Eiagrir (eles ficam ao alcance: as Visões dão morte) · b) era outra coisa (diga qual) · c) o cerco com sal na aurora e o fogo nos campos esta noite (a 2a).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

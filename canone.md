@@ -345,3 +345,5 @@ depois vira linha nova aqui.
 - (448) O cabo Gonde achou a menina levada pelos Olhos Pintados e prendeu um deles; o rei falou em praça com o podestà. O mercado de Farenta pegou fogo. A Mie chegou com vinte lanças e um dia de sal. O espinheiro da Elaeva passou a muralha: 50 mortos. A Mamiltia saiu sozinha contra a fera.
 
 - (448) A MAMILTIA (Primordial) saiu sozinha contra a Elaeva, com sal nas mãos, e a levou de 77% a 48% em três trocas; caiu numa ação lendária e MORREU no mato, ao pé da fera. A Elaeva entrou em fúria e mudou (a segunda fase). O rei tem até uma hora para o Erguer o Caído.
+
+- (448) O ZYZA, servo armado do rei, foi desfeito pela Elaeva ao tentar buscar o corpo da Mamiltia (o núcleo Épico de Podridão ficou no mato).

@@ -6,13 +6,14 @@
    "nome": "Zyza",
    "nivel": 129,
    "teto_nivel": 258,
-   "de_pe": true,
+   "de_pe": false,
    "desde": 438,
    "palavra": "1d6 × 2",
    "preco": "a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)",
    "prazo": 468,
    "lua_nova": 460,
-   "osso_que_cresce": true
+   "osso_que_cresce": true,
+   "fim": "448: desfeito por duas ações lendárias da Elaeva, buscando o corpo da Mamiltia (sims/elaeva448_ZB_saida.txt); o núcleo Épico de Podridão ficou no corpo dele, no mato"
   }
  ]
 }
