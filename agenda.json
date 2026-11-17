@@ -1,5 +1,5 @@
 {
- "prox_id": 712,
+ "prox_id": 722,
  "itens": [
   {
    "id": 1,
@@ -9119,7 +9119,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9197,7 +9197,7 @@
    "oculto": false,
    "para": false,
    "origem": "mundo.py, tick 455",
-   "feito": false,
+   "feito": true,
    "toca": true,
    "boato": [
     14,
@@ -10019,6 +10019,124 @@
    "id": 711,
    "dia": 458,
    "texto": "LEVIS, pela carta da BRARA (rio abaixo): (1) os mineiros abriram uma PORTA VELHA nas minas fundas, mais funda que Zythir: IOTHEMNA (atlas.py conhece Iothemna 'a carta da Brara'): era a oficina de um mestre morto; caiu por maldição; guarda UM NÚCLEO; moram mortos; entrar pede um sacrifício · (2) o CULTO DO XAATHIS pôs fogo de noite na fundição velha (XA55 [5]): a série de picaretas atrasa uma semana (#361 no 462)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 712,
+   "dia": 456,
+   "texto": "SURPRESA: o gerador de novidade — Yaelane",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 456",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 713,
+   "dia": 459,
+   "texto": "NOTÍCIA pelo THURON (o Colégio): caiu uma ESTRELA perto de Telosus (TL56 [4]); metal novo à venda (gerar o material no dia: gerador.py material)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 714,
+   "dia": 466,
+   "texto": "(OCULTO) CHEGA a Ireviel o mensageiro de LUMADE (LM56 [1]): o CÍRCULO DA AREIA CANTANTE tomou as aldeias do vale de cima de Lumade; o CELOCUS pede ajuda ao rei pelo pacto do 371 · e a canção de Gogrunn (GG56 [4]: a terra tremeu nas minas; a magia sumiu um dia; uma menina tirou dez de dentro)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 715,
+   "dia": 460,
+   "texto": "(OCULTO) A ELIANE desce o rio de Levis a Ireviel (459-462) pelo trecho do ISYZIS, que deu CRIAS (a notícia FIEL do 456): declarar no dia o encontro da barca dela (quantas crias, d6; se a barca é vista)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 716,
+   "dia": 460,
+   "texto": "L1 PRONTA: a armadura de escamas Lendária de yeviel; o TERASETH paga 36.000 e dá as barcas do Croque para a caçada do Delta (CL56 [2]); 2.500 XP ao rei, 625 à Tilde, ao Iorin e ao Ulurve",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 717,
+   "dia": 462,
+   "texto": "L2 PRONTA: a espada Lendária de ziis; o COLÉGIO paga 24.000 e deve um favor ao rei (CL56 [6]); 2.500 XP ao rei, 625 à Tilde, ao Iorin e ao Ulurve",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 718,
+   "dia": 458,
+   "texto": "a carta do YEOR (a isca da Sira) chega ao DULASSETTA em Farenta; (OCULTO, DB56 [3]) ele acredita e manda à Leliel pelo correio do norte (6 dias: a Leliel lê no 464)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 719,
+   "dia": 464,
+   "texto": "(OCULTO) a LELIEL lê a carta do Dulassetta (a isca: o rei no Delta com tudo, Farenta sem guarda, o cofre vazio); a obra dela é RETOMAR FARENTA (LO55): declarar no dia o que ela faz e quando chega",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 720,
+   "dia": 457,
+   "texto": "MUDANÇA POLÍTICA: casamento — o sul, onde a areia come a pedra",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 457",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 721,
+   "dia": 458,
+   "texto": "AMANHECER: a MORTE EM PRAÇA dos três espiões (PA57 B: o da Liga, o da Lumine, o dos conselheiros); depois, rolar a reação das três redes (a Lumine perdeu o que contava as crianças)",
    "tipo": "marco",
    "oculto": false,
    "para": false,

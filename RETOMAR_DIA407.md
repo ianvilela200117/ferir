@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 455, IREVIEL: a Fornalha, o homem no portão (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 457, IREVIEL: a Casa de Cura, a febre da menina; a execução no amanhecer (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 457, IREVIEL, A CASA DE CURA (os ticks do 456 e do 457 rodados). O rei DE PÉ (manca), 402/402, Mana 164/164, a Visão 2/2; o ERUDITO desta sessão GASTO (Lumade: o túmulo das rainhas, Rilge, e o Martelo do Rei em Dragal; a classe que o Martelo dá NÃO foi à mesa). O ULURVE sócio (um décimo da forja da venda). O SEETH (OCULTO: pago pela ALMISION, SP56 [6]) fez uma Épica de ferro comum; o Braeth falou com ele (BR57). O RUDDO e o BINIO ao trabalho forçado (RD57; PJ57 A). Os TRÊS ESPIÕES: MORTE EM PRAÇA no amanhecer do 458 (PA57 B); a Sira 4/10 e o Graur 5/10 de lealdade. As LENDÁRIAS: L1 armadura ao TERASETH no 460 (36.000 + as barcas do Croque); L2 espada ao COLÉGIO no 462 (24.000 + um favor). A Série da Hoste sai no 458 (4 aos recrutas). A ISCA: chega ao Dulassetta no 458; (OCULTO) ele acredita (DB56); a Leliel lê no 464 (#; a obra dela é RETOMAR FARENTA). A ISOLDA voltou: a torre velha do marco de pedra na estrada sul de Farenta. ZOLALLETTA (Lumade) pede o túmulo das rainhas já, com o rei e a Matriz; (OCULTO) o Círculo da Areia Cantante tomou o vale de cima de Lumade no 456 (o mensageiro do Celocus chega no 466). A febre da menina voltou (CR57). O RIO SECO. A ELIANE chega no 462 (o trecho do Isyzis, que deu crias: rolar no 460). (OCULTO) o fogo da Guarda do Pedágio no Leve no 459 (#707); o SSISH nas Fundas (462); IOTHEMNA pela carta da Brara no 458. Cofre 10.873.
+
+Antes (455):
 Noite do 455, IREVIEL, A FORNALHA (o tick SEMANAL do 455 rodado; tick_455.txt). O rei 402/402, Mana 164/164, a Visão 2/2; o ferimento acaba no 456. A FORJA À VENDA começou: o lote Épico de yeviel (VE55: a armadura 4.800 a um mercador de Marasar, a espada 2.000 à Guilda); a regra: um dia de Fornalha por semana, duas Épicas (XI.3), preço do Motor (arma 1.600, armadura 4.800; o 6 paga 25% acima); a mão do rei faz UMA ÚNICA POR DIA (pergunta 1). O CONSELHO (PC55): só a muralha de Farenta (pronta no 465); os éditos esperam (pergunta 2). A SÉRIE DA HOSTE na Fornalha (456-458): 5 armaduras Épicas de nee e gusta (agenda #709). Sem alquimista (OV55 [3]). Chegaram o KVEUR (45) e o HURKE (62) (peça até o 485); o YESIEL e o HELGUNN até o 464. O SEETH (75, forja; OCULTO: trabalha para outra facção) está no portão da Fornalha; o Ulurve diz que é o ferreiro que lhe tirou os braseiros. Três agentes presos (Liga, Lumine, conselheiros). O Teraseth acusou o Ruddo (o título falso da casa da Seline). A Leliel é RAINHA DO NORTE (OCULTO: a obra nova é RETOMAR FARENTA, LO55 [1]; o conselho de Farenta se junta contra o Tirello, GO55 [1], aparece no 456, notícia no 458). (OCULTO) a Guarda do Pedágio manda queimar as barcas dos Barqueiros no Leve (459, #707). (OCULTO) o SSISH nas Fundas (462, #708). (OCULTO) os Descalços sabem da esquadra. (OCULTO) IOTHEMNA, a oficina de um mestre morto debaixo de Levis, com um núcleo (a carta da Brara no 458, #711). A ISOLDA volta no 457 (#647; o ressentimento dela contra a Almision EXPLODIU no tick: pesa no que ela traz). A ELIANE chega no 462 (#704). A ELAEVA (OCULTO) no Delta no 465; o rumor dos salineiros: uns dez dias. Cofre 10.873.
 
 Antes (454):
@@ -293,14 +296,16 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (454 → 455): 1 "forjar para levantar capital: armaduras e armas épicas, uns 3 mil por semana" · 2d · 3d · 4b · 5c
 - a correção da forja (antes do dado: o preço e o material do Motor; a série na Fornalha; a produção em Épica) · o lote [15,5] e a série [5,15] (sem 20 nem 1) · EA55 · VE55 [4,6] · CV55 (oculto) · PC55 C · OV55 [3] · AL55 [6] · XA55 [5] · LA55 [5] · LO55 [1] (oculto) · SS55 [1] (oculto) · CH55 [1,3] · TA55 [1] · TN55 [4] · NV55 · GO55 [1] (oculto; o #590 atrasado) · GP55 [5] (oculto; o faccoes.py corrigido).
 
+## RESPONDIDO (455 → 457): o ERUDITO ("o que tem em Lumade que pode me ajudar a ser um ferreiro melhor?") · 1 "duas Lendárias ou Míticas, vender a um aliado ou amigo" · 2a · 3b · 4c,b · 5a,b · 6a,b "quero o Ulurve de volta, meu grande amigo" · 7b
+- o Erudito sem dado (a resposta verdadeira) · UL55 [3]+1 · SP56 [6] (oculto) · SM56 26 · SE56 Épica · NS56 [1] · QS56 [6] Binio · YO56 [4] · DB56 [3] (oculto) · AGa56 18 · AGb56 14 · AGc56 28 · L1 126 e L2 138 (Lendárias pelo teto do núcleo) · CL56 [2,6] · LM56 [1] · TL56 [4] · GG56 [4] (ocultos) · IS57 [2] · EM57 [4] · CR57 [1] · AV57 [3] · BR57 [5] · RD57 +4 · PJ57 A · PA57 B.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A FORJA DA SEMANA QUE VEM (o lote de venda do 462): a) seguir com DUAS ÉPICAS por semana · b) UMA ÚNICA por semana no lugar delas (arma 6.000 ou armadura 18.000; comprador raro; a notícia corre) · c) as duas (dois dias de Fornalha).
-2. OS TRÊS ÉDITOS que o conselho segurou: a) esperar e votar de novo no 462, com a venda no livro · b) passar por cima (Legitimidade 10 → 9) e decretar os três · c) passar por cima só no FÍSICO.
-3. O QUE O DULASSETTA DEVE "DESCOBRIR" (a Sira deixa à vista dele, pelo Yeor): a) a verdade que não custa: o rei vai ao Delta com tudo · b) uma isca: Farenta sem guarda e o cofre vazio · c) uma cunha: a casa sabe que o Donione serve à Lumine · d) outra.
-4. O RUDDO, O TÍTULO E A SELINE (o Teraseth pergunta se o rei julga): a) o rei julga em praça amanhã · b) ao conselho · c) a Nouliel confere o livro e o selo antes, e o rei julga depois.
-5. OS TRÊS PRESOS (da Liga, da Lumine, dos conselheiros): a) a Sira interroga os três · b) ao conselho, para julgamento · c) soltar o dos conselheiros com uma mentira e seguir o rastro.
-6. O ULURVE E O HOMEM NO PORTÃO (o laço da semana): a) chamar o Ulurve para a forja da venda, como sócio · b) receber o ferreiro de fora, longe da Fornalha, e medir a mão dele · c) o Gonde fecha o portão · e, se quiser, o que o rei sente pelo Ulurve.
-7. AS PEÇAS DO CHAMADO (o Yesiel e o Helgunn até o 464; o Kveur e o Hurke até o 485): a) um lote Raro na Fornalha (4 num dia) · b) quatro das cinco armaduras da Hoste a eles · c) esperar.
+1. LUMADE (a Zolalletta, pelo Celocus: abrir já o túmulo das rainhas, com o rei e a Matriz): a) depois do Delta (a Elaeva primeiro) · b) já, antes do Delta (10 dias de ida) · c) a Matriz vai com uma coluna forte, sem o rei · d) não agora.
+2. O HAAST (o homem dos conselheiros em Ireviel): a) prender já · b) vigiar e ler o que ele manda · c) usá-lo, como o Dulassetta.
+3. O SEETH (Épica de ferro comum; falou em segredo com o Braeth): a) um posto na forja grande, vigiado · b) a Sira segue os dois · c) mandar embora · d) a e b.
+4. FARENTA (a isca chega amanhã: "Farenta sem guarda"): quem segura a cidade enquanto a casa vai ao Delta? a) o Graur com a guarda da casa e parte da Hoste · b) a Isolda e a galé no porto · c) só a guarda de Farenta e um sino de aviso · d) outra.
+5. A MENINA DA CASA DE CURA (a febre voltou): a) o rei sobe agora e lança o Purificar (15 de Mana) · b) os físicos da casa.
+6. A EXECUÇÃO NO AMANHECER (o conselho votou a morte dos três): a) como o conselho decidiu · b) o rei passa por cima e troca por trabalho forçado (Legitimidade −1) · c) poupar só o da Liga e mandá-lo de volta ao Draek com a mesma isca.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

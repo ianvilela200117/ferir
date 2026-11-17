@@ -1,0 +1,15 @@
+OBRA "a lâmina de prova do Seeth (456, forja grande)" (arma)
+    +26  MÃO (dada)
+     +0  MATERIAL comum
+     +2  FERRAMENTA martelo (raro)
+     +2  FERRAMENTA bigorna (raro)
+     +3  OFICINA grande
+    ---- SOMA DOS VALORES: 33
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [13] + [19] → TOTAL 65
+  dados de saída: [13] + [19] = 65
+  QUASE: ficou a 3 da CD Única → +1 efeito (a peça quis subir)
+  RESULTADO: a lâmina de prova do Seeth (456, forja grande) — ÉPICA · XP 300
+    efeito novo 1: o portador não pode ser surpreendido enquanto a segura
+    efeito novo 2: +2 no ataque contra quem já feriu o portador nesta luta
+    efeito novo 3: sangra: o ferido perde 1d6 por rodada até ser tratado

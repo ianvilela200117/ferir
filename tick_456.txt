@@ -1,0 +1,43 @@
+[23:08:18] Dia 456 · Pressão 5/5 · evento local 1d20 [1] -> nada
+  O TEMPO (27 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: nublado, vento firme (d6 [5] muda, d20 [15] · vento d6 [5])
+   o Porto de Marasar: nublado, calmo (d6 [6] muda, d20 [13] · vento d6 [1])
+   Levis: limpo, vento forte (d6 [6] muda, d20 [4] · vento d6 [6])
+   Farenta: limpo, vento firme (d6 [4] muda, d20 [1] · vento d6 [5])
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [13/100] · MUDOU: era baixo
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d6 [4] Maneus, o Afogado do Vento
+  EVENTO DE MUNDO (LONGE) 1d20 [6] Evento mágico · encadeamento 1d20 [6] Silêncio · ONDE: d19 [3] Telosus (o Colégio)
+  EVENTO DE MUNDO (PERTO) 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [17] Pedido de ajuda a Ireviel · ONDE: d8 [5] Lumade
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [18] A coberta afina (algo do Silêncio) · encadeamento 1d20 [10] Herói local · ONDE: d27 [6] Gogrunn (as minas)
+  Pressão zera
+  Fortuna volta ao máximo
+  ALTA: Ferir está de pé de novo (GRAVE, ferido desde o 437)
+  O MUNDO SE MOVE — Dia 456 (dia)
+    d20 [20] SURPRESA: o gerador de novidade
+    ONDE: d27 [19] Yaelane
+    A NOTÍCIA: [1] hoje
+    1d12 [3] um NPC novo, com ambição, entra na vida de alguém próximo (gerar npc)
+    ——
+  O MUNDO VIVO — Dia 456
+    Lendários: d20 [8] quietos hoje
+    trama do dia: Almision → Braeth (o ancião do Clã) (DÍVIDA) d20 [13] nada visível
+    FAÍSCA: Gorron (oferece a missão do Delta) oferece aliança a o Visconte Aldoveri, por causa de vaduar
+    FAÍSCA: Braeth (o ancião do Clã) esconde um filho de Kasgal, por causa de um herdeiro dos Steunn
+    FAÍSCA: Xaysress quer casar com Graur, por causa de fome
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701: FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #705: [OCULTO] (OCULTO) FARENTA: o CONSELHO do podestà se junta contra o TIRELLO (GO55 [1]; o Dulassetta entre eles; a mão da Leliel, cuja obra nova é RETOMAR FARENTA): pedem um podestà novo, por voto forçado; a notícia chega a Ireviel no 458
+  ✉ NOTÍCIA QUE CHEGA HOJE: Altheltia (o Delta): a ambição dele avança fora da Obra (um passo no que ele quer para si) · COMO CHEGA: d20 [13] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krekos (Raro, Shizess): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Isyzis (Épico, o rio acima de Levis): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Thog (orcs) (Marasar): pedem armas ou abrigo a uma cidade humana (oportunidade ou perigo) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Botica Velha (Farenta): briga com a Guarda do Pedágio; vence a Guarda do Pedágio · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Mina Fechada (Levis): briga com o Culto do Xaathis; vence o Culto do Xaathis · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, a costa): migra 1 região (rola para onde) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: SURPRESA: o gerador de novidade — Yaelane · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi

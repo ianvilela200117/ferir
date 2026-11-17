@@ -1,24 +1,5 @@
 {
  "ordem": [
-  "MOR23",
-  "FE23",
-  "BE23v",
-  "BE23s",
-  "BE23f",
-  "BE23n",
-  "AV23",
-  "IN23",
-  "ES23q",
-  "PB23",
-  "PB23c",
-  "PB23o",
-  "PB23r",
-  "PB23i",
-  "TR24",
-  "TR24b",
-  "LU24",
-  "LM24",
-  "PB24",
   "TR24c",
   "LU24d",
   "PR24",
@@ -399,848 +380,30 @@
   "TN55",
   "NV55",
   "GO55",
-  "GP55"
+  "GP55",
+  "UL55",
+  "SP56",
+  "SM56",
+  "NS56",
+  "YO56",
+  "DB56",
+  "QS56",
+  "AGa56",
+  "AGb56",
+  "AGc56",
+  "CL56",
+  "LM56",
+  "TL56",
+  "GG56",
+  "IS57",
+  "EM57",
+  "CR57",
+  "AV57",
+  "BR57",
+  "PJ57",
+  "PA57"
  ],
  "selos": {
-  "MOR23": {
-   "id": "MOR23",
-   "dia": 423,
-   "hora": "09:13:58",
-   "titulo": "A ELIANE CAI ANTES DA LUTA (a fraqueza dela: se cair, a tropa testa moral): os 20 da guarda, d6 contra moral 4",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "SEGURAM a linha"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "QUEBRAM: sobem a escada; o rei fica com os três"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "SEGURAM a linha",
-     "txt": "[1] → SEGURAM a linha"
-    }
-   ],
-   "hora_rolado": "09:13:58"
-  },
-  "FE23": {
-   "id": "FE23",
-   "dia": 423,
-   "hora": "09:14:16",
-   "titulo": "A ELIANE, FERIDA LEVE pela maldição de sangue: quantos dias (1d3 + 1)",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o dado mais um"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado mais um",
-     "txt": "[1] → o dado mais um"
-    }
-   ],
-   "hora_rolado": "09:14:16"
-  },
-  "BE23v": {
-   "id": "BE23v",
-   "dia": 423,
-   "hora": "09:14:46",
-   "titulo": "OS 22 QUE CAÍRAM EM ERYSSA (fanáticos do fim do mundo): quantos vivem para ser presos",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "POUCOS: 1d4 vivos (os outros morrem ou se matam com a faca do culto)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ALGUNS: 2d4 vivos"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "MUITOS: 11 vivos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "ALGUNS: 2d4 vivos",
-     "txt": "[4] → ALGUNS: 2d4 vivos"
-    }
-   ],
-   "hora_rolado": "09:14:46"
-  },
-  "BE23s": {
-   "id": "BE23s",
-   "dia": 423,
-   "hora": "09:14:46",
-   "titulo": "O SACERDOTE DO XAATHIS quando a ala quebra",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "MORRE lutando (a lança do Eiagrir)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "PRESO VIVO (a Isolda o derruba)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "FOGE com os seis"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "MORRE lutando (a lança do Eiagrir)",
-     "txt": "[1] → MORRE lutando (a lança do Eiagrir)"
-    }
-   ],
-   "hora_rolado": "09:14:46"
-  },
-  "BE23f": {
-   "id": "BE23f",
-   "dia": 423,
-   "hora": "09:14:46",
-   "titulo": "POR ONDE OS SEIS FOGEM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "pelo CANAL VELHO, numa barca de fundo chato, para o rio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "pela PORTA DE BRONZE: um deles grita a SENHA; a porta abre e fecha atrás deles (rola o BE23o: o rei ouve a palavra?)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "pelo CANAL VELHO, numa barca de fundo chato, para o rio",
-     "txt": "[3] → pelo CANAL VELHO, numa barca de fundo chato, para o rio"
-    }
-   ],
-   "hora_rolado": "09:14:46"
-  },
-  "BE23n": {
-   "id": "BE23n",
-   "dia": 423,
-   "hora": "09:14:52",
-   "titulo": "QUANTOS VIVOS (2d4)",
-   "dado": [
-    2,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 8,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3,
-      4
-     ],
-     "total": 7,
-     "res": "o total",
-     "txt": "[3, 4] +0 = 7 → o total"
-    }
-   ],
-   "hora_rolado": "09:14:52"
-  },
-  "AV23": {
-   "id": "AV23",
-   "dia": 423,
-   "hora": "09:14:52",
-   "titulo": "O ALVO DO PIChE (o que a ala do cais preparava; a verdade)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "QUEIMAR O DIQUE E OS ANDAIMES do bairro novo (a obra do rei)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "QUEIMAR A FORNALHA numa noite de série"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "LEVAR O PIChE A LEVIS para a festa do 'fim das dívidas' do culto"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "QUEIMAR A FORNALHA numa noite de série",
-     "txt": "[4] → QUEIMAR A FORNALHA numa noite de série"
-    }
-   ],
-   "hora_rolado": "09:14:52"
-  },
-  "IN23": {
-   "id": "IN23",
-   "dia": 423,
-   "hora": "09:15:01",
-   "titulo": "OS 7 PRESOS DE ERYSSA NA NOITE DO 423 (a Isolda pergunta; fanáticos do fim do mundo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "NENHUM FALA: rezam e cospem"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 15,
-     "res": "UM FALA: O ALVO DO PIChE"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 19,
-     "res": "UM FALA O ALVO E A SENHA DA PORTA"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "FALAM TUDO: o alvo, a senha e por onde chega a ordem do chefe"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "NENHUM FALA: rezam e cospem",
-     "txt": "[8] → NENHUM FALA: rezam e cospem"
-    }
-   ],
-   "hora_rolado": "09:15:01"
-  },
-  "ES23q": {
-   "id": "ES23q",
-   "dia": 423,
-   "hora": "09:16:07",
-   "titulo": "QUANTOS BARRIS DE PIChE NA FORJA VELHA DE ERYSSA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado mais dois"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado mais dois",
-     "txt": "[1] → o dado mais dois"
-    }
-   ],
-   "hora_rolado": "09:16:07"
-  },
-  "PB23": {
-   "id": "PB23",
-   "dia": 423,
-   "hora": "11:09:52",
-   "titulo": "ARROMBAR A PORTA DE BRONZE DE ERYSSA (noite do 423; um selo de SENHA; o rei com o martelo de zeieth, o Moreth com cunhas; a mão do ferreiro sabe onde o bronze cede)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NÃO CEDE: o selo DEVOLVE O GOLPE (o rei leva 4d10) e a porta fica; outra tentativa só por outro caminho"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 11,
-     "res": "CEDE, mas O SELO QUEIMA AO QUEBRAR: metade do que está atrás se perde (rola o que sobra)"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 20,
-     "res": "CEDE LIMPA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "CEDE LIMPA",
-     "txt": "[18] → CEDE LIMPA"
-    }
-   ],
-   "hora_rolado": "11:09:52"
-  },
-  "PB23c": {
-   "id": "PB23c",
-   "dia": 423,
-   "hora": "11:10:00",
-   "titulo": "A LIGA PERDIDA DE ERYSSA (a receita atrás da porta): de que categoria",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "ÉPICA"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ÚNICA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LENDÁRIA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ÉPICA",
-     "txt": "[1] → ÉPICA"
-    }
-   ],
-   "hora_rolado": "11:10:00"
-  },
-  "PB23o": {
-   "id": "PB23o",
-   "dia": 423,
-   "hora": "11:10:00",
-   "titulo": "O QUE MAIS HÁ ATRÁS DA PORTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "NADA MAIS: pó, a mesa de pedra e as tábuas da receita"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "O QUE O CULTO GUARDAVA: prata (1d6 × 200) e uma LISTA de quem dá dinheiro ao culto em Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "A CAUSA DO AFOGAMENTO: o que amaldiçoou o mercado ainda está lá (rola o que)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "NADA MAIS: pó, a mesa de pedra e as tábuas da receita",
-     "txt": "[3] → NADA MAIS: pó, a mesa de pedra e as tábuas da receita"
-    }
-   ],
-   "hora_rolado": "11:10:00"
-  },
-  "PB23r": {
-   "id": "PB23r",
-   "dia": 423,
-   "hora": "11:10:22",
-   "titulo": "O REI LÊ AS TÁBUAS DA RECEITA (noite do 423; desenho de forja e letra antiga de Eryssa; o ferreiro lê o desenho)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "SÓ O DESENHO: o PROCESSO (no escuro, na forja velha, temperada no canal); os ingredientes ficam por ler (o Thuron ou outro sábio)"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 16,
-     "res": "o PROCESSO e UM dos ingredientes (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 20,
-     "res": "LÊ TUDO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      11
-     ],
-     "total": 11,
-     "res": "o PROCESSO e UM dos ingredientes (rola qual)",
-     "txt": "[11] → o PROCESSO e UM dos ingredientes (rola qual)"
-    }
-   ],
-   "hora_rolado": "11:10:22"
-  },
-  "PB23i": {
-   "id": "PB23i",
-   "dia": 423,
-   "hora": "11:10:27",
-   "titulo": "QUAL INGREDIENTE O REI LÊ",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o FERRO COM ESCÓRIA DE VADUAR (5 kg de ferro e 0,1 kg de vaduar por kg)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a CINZA OU O SANGUE DE UM BICHO DE SOMBRA (1 porção por 2 kg)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a CINZA OU O SANGUE DE UM BICHO DE SOMBRA (1 porção por 2 kg)",
-     "txt": "[2] → a CINZA OU O SANGUE DE UM BICHO DE SOMBRA (1 porção por 2 kg)"
-    }
-   ],
-   "hora_rolado": "11:10:27"
-  },
-  "TR24": {
-   "id": "TR24",
-   "dia": 424,
-   "hora": "11:11:08",
-   "titulo": "O TERASETH (Lendário 432, Ireviel e o rio; obra: vingar os barqueiros mortos pela guerra do rio) PERDE (notícia FIEL)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "UMA PEÇA, roubada de noite"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "UM ALIADO (rola para quem)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "UM ALIADO (rola para quem)",
-     "txt": "[3] → UM ALIADO (rola para quem)"
-    }
-   ],
-   "hora_rolado": "11:11:08"
-  },
-  "TR24b": {
-   "id": "TR24b",
-   "dia": 424,
-   "hora": "11:11:08",
-   "titulo": "PARA QUEM O TERASETH PERDE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a LIGA de Marasar"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "os BARQUEIROS DO LIVRO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o CULTO DO XAATHIS"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a CASA DO REI (alguém dele procura Ireviel)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o CELOCUS"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um BICHO (o aliado morreu caçando)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "um BICHO (o aliado morreu caçando)",
-     "txt": "[6] → um BICHO (o aliado morreu caçando)"
-    }
-   ],
-   "hora_rolado": "11:11:08"
-  },
-  "LU24": {
-   "id": "LU24",
-   "dia": 424,
-   "hora": "11:11:08",
-   "titulo": "O ENVIADO DA LURENTETTA (Lendária 774, o Delta) vem a Ireviel? (a obra dela é vingar um povo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "VEM A IREVIEL (chega em 1d6 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 20,
-     "res": "vai a outro lugar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "VEM A IREVIEL (chega em 1d6 dias)",
-     "txt": "[2] → VEM A IREVIEL (chega em 1d6 dias)"
-    }
-   ],
-   "hora_rolado": "11:11:08"
-  },
-  "LM24": {
-   "id": "LM24",
-   "dia": 424,
-   "hora": "11:11:08",
-   "titulo": "O INCÊNDIO DE LUMADE (notícia FIEL hoje; o Celocus queimou os livros no 423)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só a CASA DE CONTAS do Celocus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou (a fome lá piora)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "MEIA CIDADE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou (a fome lá piora)",
-     "txt": "[4] → o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou (a fome lá piora)"
-    }
-   ],
-   "hora_rolado": "11:11:08"
-  },
-  "PB24": {
-   "id": "PB24",
-   "dia": 424,
-   "hora": "11:11:08",
-   "titulo": "A INVENÇÃO DOS PICOS BRANCOS (notícia FIEL, longe): de que ofício",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "OFICINA"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MAGIA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "GUERRA"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "PLANTIO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "MAGIA",
-     "txt": "[2] → MAGIA"
-    }
-   ],
-   "hora_rolado": "11:11:08"
-  },
   "TR24c": {
    "id": "TR24c",
    "dia": 424,
@@ -19667,6 +18830,939 @@
     }
    ],
    "hora_rolado": "20:59:43"
+  },
+  "UL55": {
+   "id": "UL55",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "O ULURVE E A OFERTA DO REI (6a: sócio da forja da venda, um décimo do que ela vender; o rei quer o amigo de volta) · d6 +1 (a oferta casa com o desejo dele, enriquecer, e com o medo, a solidão)",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "RECUSA: quer o próprio negócio, com o nome dele, não à sombra do rei (o laço fica)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ACEITA: sócio da forja da venda, volta à bancada da Fornalha"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 7,
+     "res": "ACEITA e o MOMENTO É VERDADEIRO: o laço sobe a 5, a opinião dele +10"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 4,
+     "res": "ACEITA: sócio da forja da venda, volta à bancada da Fornalha",
+     "txt": "[3] +1 = 4 → ACEITA: sócio da forja da venda, volta à bancada da Fornalha"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "SP56": {
+   "id": "SP56",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "QUEM PAGA O SEETH (o segredo do gerador: trabalha para outra facção)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a LIGA da Leliel (o Norte)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "os CONSELHEIROS (Pelagri, Aldoveri, Tiracci)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a LUMINE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "os DESCALÇOS (querem a Matriz)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o CLÃ do Hrotgar"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a ALMISION (a Escola Única: queria uma hora da Matriz)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a ALMISION (a Escola Única: queria uma hora da Matriz)",
+     "txt": "[6] → a ALMISION (a Escola Única: queria uma hora da Matriz)"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "SM56": {
+   "id": "SM56",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "O OLHO DO REI NA LÂMINA DE PROVA DO SEETH (6b: na forja grande, longe da Fornalha; Olho do Material e A Obra Diz) · d20 + 19 (Percepção 96)",
+   "dado": [
+    1,
+    20,
+    19
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 29,
+     "res": "a mão é boa e treinada, sem marca de escola que o rei conheça"
+    },
+    {
+     "tipo": "num",
+     "a": 30,
+     "b": 36,
+     "res": "o rei RECONHECE A ESCOLA: as marcas de uma forja de fora dizem de onde ele aprendeu (a terra da facção que o paga)"
+    },
+    {
+     "tipo": "num",
+     "a": 37,
+     "b": 1000000,
+     "res": "a escola e um GESTO que não é de ferreiro (ele mede a forja como quem conta portas)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 26,
+     "res": "a mão é boa e treinada, sem marca de escola que o rei conheça",
+     "txt": "[7] +19 = 26 → a mão é boa e treinada, sem marca de escola que o rei conheça"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "NS56": {
+   "id": "NS56",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "A NOULIEL CONFERE O LIVRO E O SELO DO PAPEL DO RUDDO (4c; Papel Certo e Arquivo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o selo é VERDADEIRO: alguém do cartório da casa o pôs (a traição é maior: um oficial vendeu o selo; o nome no livro)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "o selo é FALSO, bem feito, copiado de um papel velho; o livro mostra a Seline pagando a casa"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o selo é falso e o livro mostra mais: o Ruddo recebeu dinheiro de alguém para isso (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o selo é VERDADEIRO: alguém do cartório da casa o pôs (a traição é maior: um oficial vendeu o selo; o nome no livro)",
+     "txt": "[1] → o selo é VERDADEIRO: alguém do cartório da casa o pôs (a traição é maior: um oficial vendeu o selo; o nome no livro)"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "YO56": {
+   "id": "YO56",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "O YEOR ACEITA LEVAR A ISCA AO CUNHADO (3b: a Sira escreve que o rei vai ao Delta com tudo, Farenta sem guarda e o cofre vazio; o Yeor deve a filha ao rei, e o Dulassetta é marido da irmã dele)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "RECUSA (é família); a Sira manda a carta 'perdida' pelo correio de Farenta (−2 na crença)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "ACEITA e escreve ao cunhado com a mão dele"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ACEITA e escreve ao cunhado com a mão dele",
+     "txt": "[4] → ACEITA e escreve ao cunhado com a mão dele"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "DB56": {
+   "id": "DB56",
+   "dia": 455,
+   "hora": "23:06:25",
+   "titulo": "O DULASSETTA ENGOLE A ISCA? (a carta chega a Farenta no 458)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "DESCONFIA: manda à Leliel, mas escreve que pode ser isca"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "ACREDITA e manda à Leliel como verdade"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ACREDITA e manda à Leliel como verdade",
+     "txt": "[3] → ACREDITA e manda à Leliel como verdade"
+    }
+   ],
+   "hora_rolado": "23:06:25"
+  },
+  "QS56": {
+   "id": "QS56",
+   "dia": 455,
+   "hora": "23:07:07",
+   "titulo": "QUEM NO CARTÓRIO DA CASA VENDEU O SELO AO RUDDO (NS56 [1]: o nome está no livro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o DRASSA, o guarda-livros da casa, ao lado da Nouliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o FABAINO, o escrivão das casas da Liga que caíram, na casa desde o 406"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um escrivão menor do cartório (nome novo, nomes.py)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um escrivão menor do cartório (nome novo, nomes.py)",
+     "txt": "[6] → um escrivão menor do cartório (nome novo, nomes.py)"
+    }
+   ],
+   "hora_rolado": "23:07:07"
+  },
+  "AGa56": {
+   "id": "AGa56",
+   "dia": 455,
+   "hora": "23:07:07",
+   "titulo": "A SIRA INTERROGA o agente da LIGA (treinado, do Doge) (+6 a Sira; −1 pelo que ele é)",
+   "dado": [
+    1,
+    20,
+    5
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA ÚTIL"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "o QUE VEIO FAZER"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      13
+     ],
+     "total": 18,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
+     "txt": "[13] +5 = 18 → o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "hora_rolado": "23:07:07"
+  },
+  "AGb56": {
+   "id": "AGb56",
+   "dia": 455,
+   "hora": "23:07:07",
+   "titulo": "A SIRA INTERROGA o agente da LUMINE (fé que não fala) (+6 a Sira; −2 pelo que ele é)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA ÚTIL"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "o QUE VEIO FAZER"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 14,
+     "res": "o QUE VEIO FAZER",
+     "txt": "[10] +4 = 14 → o QUE VEIO FAZER"
+    }
+   ],
+   "hora_rolado": "23:07:07"
+  },
+  "AGc56": {
+   "id": "AGc56",
+   "dia": 455,
+   "hora": "23:07:07",
+   "titulo": "A SIRA INTERROGA o agente dos CONSELHEIROS (pego com o molde de cera dos aros do Graur na mão) (+6 a Sira; +2 o molde)",
+   "dado": [
+    1,
+    20,
+    8
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA ÚTIL"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "o QUE VEIO FAZER"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 28,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
+     "txt": "[20] +8 = 28 → o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "hora_rolado": "23:07:07"
+  },
+  "CL56": {
+   "id": "CL56",
+   "dia": 455,
+   "hora": "23:07:07",
+   "titulo": "QUEM COMPRA AS DUAS LENDÁRIAS (a tabela da nota das 23:07)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "nenhum amigo tem esse ouro agora (a peça fica; o leilão é em Marasar)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o TERASETH: metade em ouro, metade nas barcas do Croque para o Delta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a DOGE SKOTHA: o preço inteiro, metade na entrega e metade no 476"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a LURENTETTA: metade em ouro, metade em sal e lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o COLÉGIO: o preço inteiro e um favor ao rei"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [
+    "armadura",
+    "espada"
+   ],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o TERASETH: metade em ouro, metade nas barcas do Croque para o Delta",
+     "txt": "armadura [2] → o TERASETH: metade em ouro, metade nas barcas do Croque para o Delta"
+    },
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o COLÉGIO: o preço inteiro e um favor ao rei",
+     "txt": "espada [6] → o COLÉGIO: o preço inteiro e um favor ao rei"
+    }
+   ],
+   "hora_rolado": "23:07:07"
+  },
+  "LM56": {
+   "id": "LM56",
+   "dia": 456,
+   "hora": "23:09:07",
+   "titulo": "(G8, PERTO) LUMADE: A FRONTEIRA MUDA (terra tomada ou perdida) e o encadeamento PEDE AJUDA A IREVIEL; a notícia vem por mensageiro, 10 dias (no 466), ou pelo Tolvane, que está lá",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o CÍRCULO DA AREIA CANTANTE (magos de Yaelane; o objetivo deles é tomar LUMADE) toma as aldeias do vale de cima de Lumade; o Celocus pede ajuda ao rei pelo pacto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a FOME: três aldeias de Lumade se dão a um senhor de fora pelo pão; o Celocus pede grão e lanças"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "os MORTOS do cemitério das rainhas saem (o guardião morto-vivo acordou) e tomam a estrada de Lumgal; o Celocus pede o rei e a Matriz"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o CÍRCULO DA AREIA CANTANTE (magos de Yaelane; o objetivo deles é tomar LUMADE) toma as aldeias do vale de cima de Lumade; o Celocus pede ajuda ao rei pelo pacto",
+     "txt": "[1] → o CÍRCULO DA AREIA CANTANTE (magos de Yaelane; o objetivo deles é tomar LUMADE) toma as aldeias do vale de cima de Lumade; o Celocus pede ajuda ao rei pelo pacto"
+    }
+   ],
+   "hora_rolado": "23:09:07"
+  },
+  "TL56": {
+   "id": "TL56",
+   "dia": 456,
+   "hora": "23:09:07",
+   "titulo": "(G8, LONGE) TELOSUS, O COLÉGIO: EVENTO MÁGICO ligado ao SILÊNCIO (a notícia chega pelo Thuron no 459)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "MAGIA SELVAGEM no Colégio: um feitiço grande sai errado e um mestre fica ferido"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma ESTRELA CAI perto de Telosus (metal novo à venda)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "os MORTOS se mexem nos cemitérios de Telosus por três noites"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "uma ESTRELA CAI perto de Telosus (metal novo à venda)",
+     "txt": "[4] → uma ESTRELA CAI perto de Telosus (metal novo à venda)"
+    }
+   ],
+   "hora_rolado": "23:09:07"
+  },
+  "GG56": {
+   "id": "GG56",
+   "dia": 456,
+   "hora": "23:09:07",
+   "titulo": "(G8, ALEATÓRIO) GOGRUNN, AS MINAS: A COBERTA AFINA e um HERÓI LOCAL (a notícia chega pelo caminho de Levis no 466, FIEL)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "uma galeria funda abre num veio de vaduar que zumbe; um mineiro segura a boca com o próprio corpo (ele vira canção)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "a terra treme nas minas e a magia some por um dia em Gogrunn; uma menina tira dez de dentro (ela vira canção)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a terra treme nas minas e a magia some por um dia em Gogrunn; uma menina tira dez de dentro (ela vira canção)",
+     "txt": "[4] → a terra treme nas minas e a magia some por um dia em Gogrunn; uma menina tira dez de dentro (ela vira canção)"
+    }
+   ],
+   "hora_rolado": "23:09:07"
+  },
+  "IS57": {
+   "id": "IS57",
+   "dia": 457,
+   "hora": "23:10:32",
+   "titulo": "O QUE A ISOLDA TRAZ DA ESTRADA SUL (o rastro do corvo da Almision; a regra do rei: ao primeiro risco, volta; o ressentimento dela contra a Almision EXPLODIU no tick do 455)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ELA FOI ALÉM DO RISCO: seguiu o corvo e o MATOU; volta FERIDA (4 dias) com o corpo dele; a Almision vai saber"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "VOLTA AO PRIMEIRO RISCO, inteira: o rastro acaba numa TORRE VELHA à beira da estrada sul, onde alguém espera o corvo (o lugar, sem o rosto)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "VOLTA INTEIRA COM O ROSTO: de longe, quem recebe o corvo na torre: uma MULHER de capa cinza que fala a língua velha (a voz dos olhos da Mamiltia)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o rosto e uma PENA do corvo caída na torre (o rei pode ler nela de onde ele vem)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "VOLTA AO PRIMEIRO RISCO, inteira: o rastro acaba numa TORRE VELHA à beira da estrada sul, onde alguém espera o corvo (o lugar, sem o rosto)",
+     "txt": "[2] → VOLTA AO PRIMEIRO RISCO, inteira: o rastro acaba numa TORRE VELHA à beira da estrada sul, onde alguém espera o corvo (o lugar, sem o rosto)"
+    }
+   ],
+   "hora_rolado": "23:10:32"
+  },
+  "EM57": {
+   "id": "EM57",
+   "dia": 457,
+   "hora": "23:10:32",
+   "titulo": "O QUE QUER A EMBAIXADA DE LUMADE (ZOLALLETTA; o gerador deu KREULA; GENEROSA e CRUEL; saiu de Lumade há dez dias e não sabe do 456)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "COMPRAR: grão para a fome de Lumade, pago em HADUN (penas Únicas de Podridão)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ALIAR-SE: em nome do Celocus, abrir AGORA o túmulo das rainhas (o pacto do 371) e pede o rei e a Matriz"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ESPIAR, com uma oferta de fachada (comprar uma peça da forja)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ALIAR-SE: em nome do Celocus, abrir AGORA o túmulo das rainhas (o pacto do 371) e pede o rei e a Matriz",
+     "txt": "[4] → ALIAR-SE: em nome do Celocus, abrir AGORA o túmulo das rainhas (o pacto do 371) e pede o rei e a Matriz"
+    }
+   ],
+   "hora_rolado": "23:10:32"
+  },
+  "CR57": {
+   "id": "CR57",
+   "dia": 457,
+   "hora": "23:10:32",
+   "titulo": "A CRIANÇA DOENTE NA CASA DE CURA (o evento local do 457: piora ou sara)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "PIORA: a febre volta de noite (o Purificar do rei a tira, se ele quiser: 15 de Mana)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "SARA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "PIORA: a febre volta de noite (o Purificar do rei a tira, se ele quiser: 15 de Mana)",
+     "txt": "[1] → PIORA: a febre volta de noite (o Purificar do rei a tira, se ele quiser: 15 de Mana)"
+    }
+   ],
+   "hora_rolado": "23:10:32"
+  },
+  "AV57": {
+   "id": "AV57",
+   "dia": 457,
+   "hora": "23:10:32",
+   "titulo": "QUEM VIU A IRASA (o avistamento do 457) E ONDE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os salineiros, nas salinas velhas (a célula do Delta conta)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "os barqueiros: ela SOBE O RIO SECO, vista num vau a meio caminho de Ireviel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "os salineiros, nas salinas velhas (a célula do Delta conta)",
+     "txt": "[3] → os salineiros, nas salinas velhas (a célula do Delta conta)"
+    }
+   ],
+   "hora_rolado": "23:10:32"
+  },
+  "BR57": {
+   "id": "BR57",
+   "dia": 457,
+   "hora": "23:10:32",
+   "titulo": "O GESTO DA ALMISION QUE APARECE HOJE EM IREVIEL (a trama Almision → Braeth, DÍVIDA: um segredo descoberto)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um CORVO GRANDE pousa na janela do Braeth, na Casa dos Estudiosos; ele tira um papel da pata e o queima (a gente da Sira vê)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o Braeth vai ao portão da forja grande e fala baixo com o SEETH (o Gonde vê)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o Braeth vai ao portão da forja grande e fala baixo com o SEETH (o Gonde vê)",
+     "txt": "[5] → o Braeth vai ao portão da forja grande e fala baixo com o SEETH (o Gonde vê)"
+    }
+   ],
+   "hora_rolado": "23:10:32"
+  },
+  "PJ57": {
+   "id": "PJ57",
+   "dia": 457,
+   "hora": "23:11:07",
+   "titulo": "O CONSELHO VOTA: A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a balança: +4, a praça espera condenação)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE A) o papel rasgado, a casa à Seline e o trapiche ao Croque; o Ruddo e o Binio ao trabalho forçado, dois anos · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Isolda, Graur, Sira",
+     "txt": "VENCE A) o papel rasgado, a casa à Seline e o trapiche ao Croque; o Ruddo e o Binio ao trabalho forçado, dois anos · placar A 3 · B 1 · C 2 · VOTO VENCIDO: Isolda, Graur, Sira"
+    }
+   ]
+  },
+  "PA57": {
+   "id": "PA57",
+   "dia": 457,
+   "hora": "23:11:15",
+   "titulo": "O CONSELHO VOTA: OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, mandado pelo Draek; o da Lumine, que contava as crianças; o dos conselheiros, com o molde dos aros do Graur, mandado pelo Haast): a pena",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE B) morte em praça (espiões em tempo de guerra) · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Thuron, Sira, Herkald",
+     "txt": "VENCE B) morte em praça (espiões em tempo de guerra) · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Thuron, Sira, Herkald"
+    }
+   ]
   }
  }
 }

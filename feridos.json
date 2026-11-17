@@ -1,12 +1,3 @@
 {
- "feridos": [
-  {
-   "nome": "Ferir",
-   "grau": "GRAVE",
-   "efeito": "não luta · MARCA: manca · a Casa de Cura de Ireviel (pronta no 449: os feridos graves da casa curam em metade do tempo): do 454, os 4 dias viram 2",
-   "desde": 437,
-   "ate": 456,
-   "causa": "Zatha"
-  }
- ]
+ "feridos": []
 }

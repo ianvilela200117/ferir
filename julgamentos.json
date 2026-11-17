@@ -197,6 +197,53 @@
     }
    ],
    "sentenca": "CULPADO: TRABALHO FORÇADO, cinco anos a contar do 434, os 32 (o capitão Yais, 12 guardas, 16 remadores, 3 carroceiros): servem em Levis, sob a Brara, no caminho da mina que o Ithvil quebrou e na muralha"
+  },
+  "RD57": {
+   "id": "RD57",
+   "caso": "O TÍTULO FALSO DA CASA DA SELINE: o RUDDO apareceu com um papel com o SELO VERDADEIRO do cartório da casa, que lhe dá a casa da Seline e o trapiche das barcas do Croque; o selo foi vendido pelo BINIO, escrivão menor (a Nouliel achou o nome no livro). O Teraseth acusou em praça (455).",
+   "acusador": "Seline (e o Teraseth)",
+   "reu": "Ruddo,Binio",
+   "lei": "a lei do selo da casa: o selo vendido e o papel de mentira",
+   "dia": 457,
+   "estado": "julgado",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: o LIVRO DO CARTÓRIO: o nome do Binio na noite em que o selo foi posto, sem ordem da Intendente (NS56, QS56)"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 2,
+     "txt": "PROVA: o LIVRO DA INTENDENTE: a Seline pagou a casa com a banca, em parcelas, desde o crédito do rei (209)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: o selo é VERDADEIRO: o papel, na letra, vale (o Ruddo)"
+    },
+    {
+     "lado": "defesa",
+     "peso": 1,
+     "txt": "PROVA: o Ruddo serviu à casa contra os conselheiros (228: os papéis da Chave; 252: reconheceu o Hask)"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 0,
+     "txt": "TESTEMUNHA Seline: d20 [3]+0 = 3 → SE DESMENTE diante de todos"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "TESTEMUNHA Teraseth: d20 [13]+0 = 13 → fala firme"
+    },
+    {
+     "lado": "defesa",
+     "peso": 0,
+     "txt": "TESTEMUNHA Ruddo: d20 [1]-2 = -1 → SE DESMENTE diante de todos"
+    }
+   ],
+   "sentenca": "CULPADO: o papel rasgado em praça; a casa à Seline e o trapiche ao Croque; o RUDDO e o BINIO ao trabalho forçado, dois anos (o conselho, PJ57 A, 3 a 2 a 1)"
   }
  }
 }

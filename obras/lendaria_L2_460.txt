@@ -1,0 +1,34 @@
+OBRA "L2: a espada Lendária de ziis (460-462, para o Colégio)" (arma)
+    +12  MÃO · Maestria Forja Lendário
+    +10  MÃO · Inteligência 185 ÷ 10 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 156 ÷ 10
+     +6  MÃO · Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)
+     +1  MÃO · Olho do Material
+     +1  MÃO · Fole Firme 2
+     +1  MÃO · Alma no Aço 2
+     +3  MÃO · Mão que Não Treme 3
+     +7  MATERIAL epico
+    +10  FERRAMENTA O MARTELO DE ZEIETH (Primordial, 352; rende Lendário até o 150, Mítico até o 230, com o nome dele) (mitico)
+     +2  FERRAMENTA · martelo de zeieth: fala, soa diferente na falha (+2 na Matéria)
+     +7  FERRAMENTA A MATRIZ (lendario)
+     +5  FERRAMENTA TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150) (mitico, metade)
+     +5  FERRAMENTA · FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)
+     +3  FERRAMENTA · fole: o arvel como ferramenta (+3 em toda obra de forja)
+     +2  FERRAMENTA · fole: segura o calor certo (+2 no Processo)
+     +6  OFICINA Fornalha que Não Apaga
+     +6  AJUDANTES (máx. +6)
+    ---- SOMA DOS VALORES: 106
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [13] + [19] → TOTAL 138
+  dados de saída: [13] + [19] = 138
+  RESULTADO: L2: a espada Lendária de ziis (460-462, para o Colégio) — PRIMORDIAL · XP 50000
+  → lançar: python3 ficha.py xp 50000 "L2: a espada Lendária de ziis (460-462, para o Colégio) (Primordial)"   (ajudantes: 1/4 cada, no cresce.py)
+    efeito novo 1: o som da lâmina dá medo: quem a ouve pela primeira vez faz Vontade CD 15 ou recua
+    efeito novo 2: a arma bebe o golpe: cura o portador em 1d6 quando fere
+    efeito novo 3: o fio não cega nem lasca (durabilidade dobrada)
+    efeito novo 4: pesa quase nada: +2 na Iniciativa
+    efeito novo 5: não pode ser tirada da mão (desarmar falha)
+    efeito novo 6: volta à mão de quem a lança (até 9 m)
+    efeito novo 7: sangra: o ferido perde 1d6 por rodada até ser tratado
+    efeito de magia (d182 do grimório): Muralha de Fogo (Chama 4º): um muro de 12 m × 3 m arde por 1 cena; quem atravessa leva 8d6 (área) — 1x por cena, sem saber magia (se não couber na peça, rerrolar)

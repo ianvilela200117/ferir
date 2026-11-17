@@ -1,0 +1,8 @@
+DECLARADO (PA57) [Dia 457, 23:11] O CONSELHO VOTA: OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, mandado pelo Draek; o da Lumine, que contava as crianças; o dos conselheiros, com o molde dos aros do Graur, mandado pelo Haast): a pena · A) trabalho forçado, cinco anos (somam à G6) · B) morte em praça (espiões em tempo de guerra) · C) cela e ferro até a guerra acabar (moeda de troca) · cada cadeira: d20 por opção + inclinação, fica com a maior; maioria vence; empate: a Intendente · votam: Nouliel, Graur, Sira, Isolda, Herkald, Thuron · fora: Eliane, Tolvane · inclinações: Nouliel A+1,B+1,C+1; Graur A+2,B+1; Sira A+1,B+1,C+1; Herkald B-2,C+2; Thuron A+1,B+1; Isolda C+1
+  Nouliel (Tesoureira e Intendente): A[9]+1 B[15]+1 C[10]+1 → B
+  Graur (Guarda do Reino): A[19]+2 B[3]+1 C[5] → A
+  Sira (Mestra dos Segredos): A[6]+1 B[4]+1 C[9]+1 → C
+  Isolda (Mestre das Águas): A[5] B[14] C[9]+1 → B
+  Herkald (Mestre da Forja): A[12] B[19]-2 C[18]+2 → C
+  Thuron (O Colégio): A[19]+1 B[6]+1 C[9] → A
+  VENCE B) morte em praça (espiões em tempo de guerra) · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Thuron, Sira, Herkald

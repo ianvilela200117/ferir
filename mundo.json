@@ -3226,6 +3226,29 @@
    "leitura": "fecha",
    "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: fecha — a Mata de Elais",
    "toca": false
+  },
+  {
+   "dia": 456,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "1d12 [3] um NPC novo, com ambição, entra na vida de alguém próximo (gerar npc)",
+   "noticia_chega": 456,
+   "chegada": "[1] hoje",
+   "resumo": "SURPRESA: o gerador de novidade — Yaelane",
+   "toca": false
+  },
+  {
+   "dia": 457,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]",
+   "onde": "d27 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": 457,
+   "chegada": "[1] hoje",
+   "leitura": "casamento",
+   "resumo": "MUDANÇA POLÍTICA: casamento — o sul, onde a areia come a pedra",
+   "toca": false
   }
  ]
 }

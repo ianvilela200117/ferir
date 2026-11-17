@@ -1,0 +1,41 @@
+[23:09:41] Dia 457 · Pressão 1/5 · evento local 1d20 [11] -> uma criança doente na enfermaria piora ou sara
+  O TEMPO (28 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, calmo (d6 [6] muda, d20 [5] · vento d6 [2])
+   o Porto de Marasar: nublado, calmo (d6 [3] fica · vento d6 [1])
+   Levis: limpo, calmo (d6 [3] fica · vento d6 [1])
+   Farenta: limpo, vento forte (d6 [2] fica · vento d6 [6])
+   O RIO: SECO (barca grande encalha; vau a pé em vários pontos) [11/100]
+  avistamento de monstro 1d20 [1] -> alguém vê um · tabela 1d6 [3] Irasa
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 457 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [3]
+    ONDE: d27 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [1] hoje
+    → LEITURA DO DADO: casamento
+    ——
+  O MUNDO VIVO — Dia 457
+    Lendários: d20 [12] quietos hoje
+    trama do dia: Almision → Braeth (o ancião do Clã) (DÍVIDA) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Mormir (o eremita de Quoine, os Sem-Torre) foge de Dvaur, por causa de um núcleo de monstro
+    FAÍSCA: Eliane ama em segredo Celocus, por causa de uma dívida antiga
+    FAÍSCA: Lurentetta ama em segredo o Visconte Aldoveri, por causa de uma criança
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #705 (era do Dia 456): [OCULTO] (OCULTO) FARENTA: o CONSELHO do podestà se junta contra o TIRELLO (GO55 [1]; o Dulassetta entre eles; a mão da Leliel, cuja obra nova é RETOMAR FARENTA): pedem um podestà novo, por voto forçado; a notícia chega a Ireviel no 458
+  ▶ AGENDA #647: VOLTA a ISOLDA da estrada sul de Farenta (o rastro do corvo da Almision; IH52 [2]): rolar o que ela traz, com a regra do rei (ao primeiro risco, volta): d6 declarado no dia; e ela traz notícia dos Olhos Pintados (a mesma estrada)
+  ✉ NOTÍCIA QUE CHEGA HOJE: EMBAIXADA OU VISITA de terra distante — Lumade (Kreula) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Gorine (escondido (patrono da Lumine)): um gesto público grande (discurso, decreto, desafio) que todo mundo comenta · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ceduion, reitor do Colégio de Telosus (Telosus): recruta: gente, uma facção ou um monstro passa para o lado dele · COMO CHEGA: d20 [11] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Stundald, a Raiz-de-Ferro (Épico, Telosus): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto dos Olhos Pintados (Farenta (3 cidades)): RACHA: perde gente → força 1 · COMO CHEGA: d20 [15] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Luz Partida (Marasar e Ireviel): conseguiu o que queria · COMO CHEGA: d20 [20] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Muralha Velha (Ireviel): dá um passo no que quer · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: DESCOBERTA DE MATERIAL — Mordun (a Boca com Fome) · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: Lumdun (Lendário, Mordun): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [14] FIEL
+  ✉ notícia de longe que chega hoje: MUDANÇA POLÍTICA: casamento — o sul, onde a areia come a pedra · COMO CHEGA: d20 [17] FIEL

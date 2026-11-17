@@ -1313,3 +1313,66 @@ O Ulurve escutou também. Largou a escama na pilha.
 "É ele."
 
 - **Parada:** noite do 455, a Fornalha. Alguém no portão pede para ver a forja; o Ulurve o reconhece.
+
+## Do 455 ao 457: o sócio, a lâmina de prova, o selo verdadeiro e a torre do corvo
+
+### O portão da Fornalha, noite do 455
+O homem do portão tinha as mãos limpas demais para ferreiro e as unhas de ferreiro. Chamava-se Seeth. Pediu para ver a Fornalha como quem pede água, e quando o rei disse "amanhã, na forja grande", não insistiu. Fez uma vênia curta e foi embora pela rua do rio, sem olhar para trás, e a neblina o apagou a trinta passos.
+
+O Ulurve esperou o portão fechar.
+
+"Fica", disse o rei. "Um décimo de tudo o que a Fornalha vender. Teu nome no livro, do lado do meu."
+
+O Ulurve olhou para a bigorna um tempo, como se ela tivesse feito a oferta. Depois tirou o avental do gancho, aquele de couro gasto na barriga que ele deixara ali havia meses, e o amarrou nas costas com um nó só.
+
+"Um décimo", repetiu. "A Nouliel vai chorar."
+
+Não sorriu. Mas ficou até a brasa baixar.
+
+### A forja grande, manhã do 456
+O Seeth trabalhou o ferro comum da casa como se ele custasse caro. Não falou. O martelo dele batia curto e baixo, sempre no mesmo lugar do braço, e o Herkald, encostado na coluna, foi parando de fingir que não olhava.
+
+A lâmina saiu do óleo assobiando. O Herkald a pegou primeiro, passou o polegar no fio e devolveu sem dizer nada, o que nele era muito.
+
+O rei girou a peça contra a janela. Épica, de ferro de carroça. O metal tinha a vontade de quem o bateu: guardava a mão, avisava antes. Mas não tinha marca de escola nenhuma, nem a das forjas da costa, nem a do Clã, nem a de Levis. Era como uma carta sem letra.
+
+"E a Fornalha?", perguntou o Seeth, enxugando as mãos.
+
+"A Fornalha é minha."
+
+Ele fez a mesma vênia curta da noite.
+
+### O cartório, tarde do 456
+A Nouliel achou o nome com o dedo, no livro do selo, numa linha sem ordem dela. Leu duas vezes. Fechou o livro devagar, como quem fecha a porta de um quarto onde alguém morreu.
+
+"O selo é meu", disse. "O papel do Ruddo é verdadeiro. Quem o pôs foi o Binio."
+
+O Binio era o escrivão que trazia pão para os outros às sextas. Quando a guarda entrou, ele estava passando cera num lacre e não largou o bastão.
+
+### A sala do conselho, 457
+O Teraseth não se sentou. Ficou de pé atrás da Seline, o Croque encostado na parede.
+
+A Seline errou as contas da própria casa diante de todos, trocou um ano por outro e chorou de raiva. O Ruddo disse que o selo era bom, e depois disse que não sabia de selo nenhum, e a sala inteira ouviu as duas coisas. O livro da Intendente falou mais alto que os dois.
+
+Trabalho forçado, dois anos, para o Ruddo e para o Binio. O papel foi rasgado na mesa. O Teraseth pegou os pedaços do trapiche e guardou no gibão.
+
+Depois vieram os três da cela. Aí a sala ficou mais fria. O Graur queria a pedreira; a Sira, a cela, para trocar; o Herkald, a cela. A Isolda, que tinha chegado da estrada sul com pó até os joelhos, disse "morte" sem levantar os olhos da mesa. Dois, dois e dois. A Nouliel olhou a página das contas e não achou nela ninguém que valesse o pão de cinco anos.
+
+"Amanhã cedo", disse.
+
+A Sira cruzou os braços e não falou mais naquela sessão.
+
+Foi só no fim que a Isolda contou o que tinha ido contar, baixo, para o rei:
+
+"O corvo desce a estrada sul até uma torre velha, num marco de pedra. Alguém espera por ele lá, toda vez. Eu vi a janela acesa. Era risco. Voltei."
+
+Na porta, esperando desde o meio-dia, estava uma mulher de Lumade, de capa vermelha desbotada e anéis em todos os dedos. Zolalletta. Fez a reverência de quem já fez muitas.
+
+"O Celocus manda dizer que a porta das rainhas não espera mais", disse. "Ele quer abri-la agora. Com o rei. E com a bigorna."
+
+### A Casa de Cura, noite do 457
+O Gonde veio dizer, sem ser chamado: o velho Braeth, o do Clã, tinha ido ao portão da forja grande ao entardecer e falado baixo com o Seeth. Pouco. As mãos de um nos ombros do outro, como se conhecem há tempo.
+
+No andar de cima, numa das camas novas, a menina que dormia melhor desde a véspera acordou queimando de febre. Uma das Mães da Porta segurava a mão dela e olhava para a escada, onde se ouvia o passo manco do rei.
+
+- **Parada:** noite do 457, a Casa de Cura. A febre da menina voltou; amanhã cedo a execução dos três espiões.

@@ -270,12 +270,13 @@
    "Tick 434: SOBE a 86",
    "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem par): queria A) aprovar o Édito do Osso (os servos do rei andam à ",
    "+500 Tick 448: SURPRESA (gerador) (mestre da bancada; o martinete)",
-   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria A) aprovar tudo (os três éditos: +680 por semana; a o"
+   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria A) aprovar tudo (os três éditos: +680 por semana; a o",
+   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria C) cela e ferro até a guerra acabar (moeda de troca)"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
   "ultima_subida": 434,
-  "votos_vencidos": 9,
+  "votos_vencidos": 10,
   "lealdade": 7,
   "tracos": [
    "TEIMOSO",
@@ -448,12 +449,14 @@
    "+500 Tick 441: SURPRESA (gerador) (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
    "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p",
    "+1000 Tick 448: MISSÃO/FEITO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
-   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria A) aprovar tudo (os três éditos: +680 por semana; a o"
+   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria A) aprovar tudo (os três éditos: +680 por semana; a o",
+   "Dia 457: VOTO VENCIDO no conselho (A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a ba): queria C) o papel rasgado e o EXÍLIO dos dois",
+   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria A) trabalho forçado, cinco anos (somam à G6)"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
-  "votos_vencidos": 17,
-  "lealdade": 6,
+  "votos_vencidos": 19,
+  "lealdade": 5,
   "tracos": [
    "DISCIPLINADO",
    "ORGULHOSO"
@@ -479,7 +482,7 @@
     "ate": null
    }
   ],
-  "votos_seguidos": 2,
+  "votos_seguidos": 1,
   "ultima_subida": 399,
   "desejo": "voltar para casa",
   "ambicao": "entrar numa facção que o recusou",
@@ -688,7 +691,8 @@
    "+500 Tick 427: SURPRESA (gerador) (a ponte do Clã; o Braseiro)",
    "+500 Tick 441: PASSO (a ponte do Clã; o Braseiro)",
    "+1000 Tick 448: MISSÃO/FEITO (a ponte do Clã; o Braseiro)",
-   "Dia 455: 455: (o laço da semana: MOMENTO) perdeu os braseiros do Clã para um ferreiro de fora, que fez por metade; à noite na Fornalha reconhece a voz no portão: 'é ele'"
+   "Dia 455: 455: (o laço da semana: MOMENTO) perdeu os braseiros do Clã para um ferreiro de fora, que fez por metade; à noite na Fornalha reconhece a voz no portão: 'é ele'",
+   "Dia 455: 455 (noite): aceitou ser SÓCIO da forja da venda (um décimo do que ela vender; UL55 [3]+1); volta à bancada da Fornalha"
   ],
   "classe": "Ferreiro (FORJA, Comum) · Forja Treinado · AMBICIOSO, CURIOSO, LEAL",
   "ocupacao": "a ponte do Clã; o Braseiro",
@@ -1217,11 +1221,13 @@
    "Tick 441: SOBE a 33",
    "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p",
    "+500 Tick 448: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
-   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria B) só o que não pesa toda semana: a Feira Franca em L"
+   "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria B) só o que não pesa toda semana: a Feira Franca em L",
+   "Dia 457: VOTO VENCIDO no conselho (A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a ba): queria C) o papel rasgado e o EXÍLIO dos dois",
+   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria C) cela e ferro até a guerra acabar (moeda de troca)"
   ],
   "classe": "Cavaleira (AÇO, Comum)",
   "ocupacao": "LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275",
-  "votos_vencidos": 13,
+  "votos_vencidos": 15,
   "tracos": [
    "FRIO",
    "HONESTO"
@@ -1234,8 +1240,8 @@
   ],
   "fraqueza": "a pé, perde a Carga; quebrar o voto tira o Juramento.",
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
-  "votos_seguidos": 2,
-  "lealdade": 5,
+  "votos_seguidos": 1,
+  "lealdade": 4,
   "ultima_subida": 441,
   "desejo": "uma casa própria",
   "ambicao": "formar uma companhia",
@@ -1833,7 +1839,9 @@
    "Tick 427: SOBE a 117",
    "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem par): queria A) aprovar o Édito do Osso (os servos do rei andam à ",
    "+500 Tick 448: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
-   "+500 Tick 455: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))"
+   "+500 Tick 455: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
+   "Dia 457: VOTO VENCIDO no conselho (A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a ba): queria B) o papel rasgado; o Binio expulso do cartório e aço",
+   "Dia 457: 457: voltou da estrada sul ao primeiro risco, inteira: o rastro do corvo acaba numa torre velha à beira da estrada sul de Farenta, onde alguém espera o corvo"
   ],
   "tracos": [
    "FRIO"
@@ -1845,7 +1853,7 @@
    "Sem Rastro (Passiva)"
   ],
   "fraqueza": "a guilda dele cobra uma morte por ano.",
-  "votos_vencidos": 14,
+  "votos_vencidos": 15,
   "votos_seguidos": 0,
   "lealdade": 4,
   "ultima_subida": 427,
@@ -1958,9 +1966,10 @@
    "Dia 441: VOTO VENCIDO no conselho (O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Def): queria A) aprovar (Ordem +1 em toda cidade; 140 por semana p",
    "+500 Tick 448: SURPRESA (gerador) (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
    "+1000 Tick 455: MISSÃO/FEITO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
-   "Tick 455: SOBE a 70"
+   "Tick 455: SOBE a 70",
+   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria A) trabalho forçado, cinco anos (somam à G6)"
   ],
-  "votos_vencidos": 12,
+  "votos_vencidos": 13,
   "tracos": [
    "ORGULHOSO",
    "CRUEL"
@@ -1973,7 +1982,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 5,
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "desejo": "proteger um filho",
   "ambicao": "comprar a liberdade da família",
   "medo": "a magia",
@@ -4308,7 +4317,8 @@
    "Tick 231: SOBE a 1",
    "Dia 238: a notícia de que a mãe dele morreu em Marasar",
    "Dia 252: reconhece o HASK (o homem das cartas do Pelagri); oferece servir a casa contra os conselheiros",
-   "Dia 455: 455: a trama contra a SELINE EXPLODIU: um papel com selo dá a ele a casa dela e o trapiche das barcas do Croque; o TERASETH o acusou em praça (a faísca do tick); 'o selo é bom'"
+   "Dia 455: 455: a trama contra a SELINE EXPLODIU: um papel com selo dá a ele a casa dela e o trapiche das barcas do Croque; o TERASETH o acusou em praça (a faísca do tick); 'o selo é bom'",
+   "Dia 457: 457: CULPADO (RD57): o papel rasgado; trabalho forçado, dois anos"
   ],
   "tracos": [
    "SABIO",
@@ -7154,7 +7164,8 @@
   "xp": 1000,
   "log": [
    "Dia 451: entra no livro (nível 50)",
-   "+1000 Tick 455: MISSÃO/FEITO (chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha)"
+   "+1000 Tick 455: MISSÃO/FEITO (chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha)",
+   "Dia 455: 456: aceitou escrever ao cunhado, o Dulassetta, a carta da Sira (a isca: o rei vai ao Delta com tudo; Farenta sem guarda; o cofre vazio)"
   ],
   "classe": "viajante (a gerar a classe em cena)",
   "ocupacao": "chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha"
@@ -7205,9 +7216,41 @@
   "log": [
    "Dia 455: entra no livro (nível 75)",
    "Dia 455: 455: gerador npc (o nome do gerador, ITHKOS, bate no Ithvil e no Ithra: trocado por nomes.py sibilante livre): CRUEL e COVARDE · desejo um título · ambição formar uma companhia · medo a humilhação pública · (OCULTO) segredo: TRABALHA PARA OUTRA FACÇÃO · linha vermelha: nunca entrega um amigo à lei · dilema: salvar um filho custa a vida de um estranho",
-   "Dia 455: 455: no portão da Fornalha, de noite, pede para ver a forja; o Gonde diz que não; o Ulurve diz que é o ferreiro que levou os braseiros do Clã"
+   "Dia 455: 455: no portão da Fornalha, de noite, pede para ver a forja; o Gonde diz que não; o Ulurve diz que é o ferreiro que levou os braseiros do Clã",
+   "Dia 455: 456: a lâmina de prova na forja grande, de ferro comum: ÉPICA (65; quase Única); o olho do rei não acha marca de escola (SM56 26); (OCULTO, SP56 [6]) é pago pela ALMISION"
   ],
   "classe": "FORJA (um ferreiro de mão rara; a classe do Livro em cena)",
   "ocupacao": "em Ireviel desde o 455: o TALENTO que apareceu (EVENTO [18]); pede para ver a Fornalha"
+ },
+ "Binio": {
+  "nivel": 12,
+  "xp": 0,
+  "log": [
+   "Dia 455: entra no livro (nível 12)",
+   "Dia 455: 456: (QS56 [6]) o nome dele está no livro do cartório: VENDEU O SELO da casa ao Ruddo para o papel da casa da Seline (a Nouliel achou, NS56 [1]); preso pela guarda; vai ao conselho com o Ruddo",
+   "Dia 457: 457: CULPADO (RD57): trabalho forçado, dois anos"
+  ],
+  "classe": "Escrivão (OURO, Comum)",
+  "ocupacao": "escrivão menor do cartório da casa em Ireviel"
+ },
+ "Haast": {
+  "nivel": 40,
+  "xp": 0,
+  "log": [
+   "Dia 455: entra no livro (nível 40)",
+   "Dia 455: 456: o agente dos conselheiros pego junto da casa do Graur deu o nome dele à Sira (AGc56 [20]+8): o HAAST, fornecedor do Odrum, é quem manda de perto (o segredo da trama do 322: trabalha para os conselheiros)"
+  ],
+  "classe": "Mercador (OURO, Comum) · CURIOSO e ORGULHOSO",
+  "ocupacao": "fornecedor do Odrum em Ireviel (322); (revelado no 456) o homem dos CONSELHEIROS em Ireviel"
+ },
+ "Zolalletta": {
+  "nivel": 38,
+  "xp": 0,
+  "log": [
+   "Dia 457: entra no livro (nível 38)",
+   "Dia 457: 457: gerador do 455 (o nome dava KREULA, que bate no Kreine e no Kredun: trocado por nomes.py mercante livre): desejo proteger um filho · ambição derrubar quem humilhou a família · medo a pobreza · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca volta atrás numa palavra dada"
+  ],
+  "classe": "Diplomata (VOZ) · GENEROSA e CRUEL",
+  "ocupacao": "embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz"
  }
 }
