@@ -1,5 +1,5 @@
 {
- "prox_id": 586,
+ "prox_id": 589,
  "itens": [
   {
    "id": 1,
@@ -8239,6 +8239,43 @@
     1,
     "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
    ]
+  },
+  {
+   "id": 586,
+   "dia": 447,
+   "texto": "UMA RUÍNA SE ABRE — as Fundas do Norte (o Clã Hegre) (Mordun)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 445",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 587,
+   "dia": 449,
+   "texto": "A MISSÃO DO ITHVIL FALHA se ninguém a fizer até hoje (ED45 [1]: a Eliane cumpriu a Lei das Caçadas e espera o rei): a região de Levis piora um passo (um pilar de Levis recua, à escolha do dado) e Levis perde reputação (−1 a −2 pela missão, × 5 na escala da G21); (OCULTO) a TKURNEK segue com fome nas terras altas",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 588,
+   "dia": 448,
+   "texto": "CHEGA a Farenta pela costa: a OISSE e as irmãs da ordem dela (a febre), na barca rápida que saiu no 445",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

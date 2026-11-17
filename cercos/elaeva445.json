@@ -1,0 +1,54 @@
+{
+ "pv": 28793,
+ "pvm": 37600,
+ "a_bordo": [
+  "Moreth",
+  "Eiagrir",
+  "Mamiltia"
+ ],
+ "dias": [
+  {
+   "dia": 445,
+   "antes": 28793,
+   "depois": 28793,
+   "dano": {}
+  }
+ ],
+ "fim": null,
+ "feridos": {},
+ "alvo": {
+  "nome": "a Elaeva",
+  "df": 148,
+  "rd": 50
+ },
+ "atiradores": {
+  "Mamiltia": [
+   2,
+   8,
+   20,
+   134
+  ],
+  "Eiagrir": [
+   2,
+   16,
+   5,
+   36
+  ],
+  "Moreth": [
+   2,
+   16,
+   10,
+   44
+  ]
+ },
+ "agi": {
+  "Eiagrir": 6,
+  "Mamiltia": 12,
+  "Moreth": 8
+ },
+ "lugar": "Farenta",
+ "capitao": [
+  "o piloto de Farenta",
+  15
+ ]
+}

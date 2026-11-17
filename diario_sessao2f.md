@@ -1132,3 +1132,14 @@ A barca saiu com o vento forte de Ireviel e entrou no rastro de uma tempestade q
 Farenta apareceu na lua cheia. Os portões estavam abertos e entupidos de carroças: as fazendas de cima desciam com tudo o que tinham. Um homem com um porco no colo disse aos guardas da barca que o mato andava nos morros desde a manhã, contra o vento. No bairro baixo havia portas marcadas com giz, e o cheiro de febre que ninguém esquece. Na praça, a procissão da água passava com as velas acesas, sem o rei.
 
 - **Parada:** tarde do 444, o cais de Farenta. A floresta a um dia. A pena na mão do rei.
+
+### Farenta, 445
+O rio secou de manhã; em Farenta só se soube porque os barqueiros do cais pararam de falar dele. A barca saiu com o Moreth e o Eiagrir e o melhor piloto da costa, e voltou à tarde sem um tiro: a floresta andou o dia inteiro pelo lado de dentro, longe da água, como se lembrasse.
+
+Ao pôr do sol ela chegou. Não houve estrondo. As raízes entraram pela base da muralha de fora como água entra num pano, e a pedra rachou de baixo para cima. O mato subiu nas fazendas vazias e as cobriu.
+
+O rei estava na torre da porta. Tirou a pena do pano, segurou-a na chama de uma tocha e a viu arder azul. Antes que a cinza caísse no chão, o céu do cais ficou vermelho, e uma coluna de fogo desceu entre as barcas sem queimar nenhuma. Dela saiu a Mamiltia, a mão enfaixada, os olhos parados no mato que se mexia além da muralha.
+
+Ela não perguntou nada. Disse ao rei que ia sozinha, agora, antes que a fera dormisse.
+
+- **Parada:** noite do 445, o cais de Farenta. A Mamiltia de pé no fogo; a floresta junto à muralha.

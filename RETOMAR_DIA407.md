@@ -1,4 +1,4 @@
-# RETOMAR — tarde do Dia 444, FARENTA: a Elaeva a um dia (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 445, FARENTA: a Mamiltia quer sair sozinha contra a Elaeva (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 445, FARENTA, o cais (o tick do 445 rodado). A PENA QUEIMADA (PM45 [2]): a MAMILTIA chegou na mesma noite; MC45 [6]: ela quer sair SOZINHA à muralha AGORA. A luta, se houver: luta.py Mamiltia (fichas_combate: 1149, PV 2990; Segundo Coração 1 pelo Despertar, oculto) contra a ELAEVA: montar pela ficha de 382 (sims/elaeva_382_A_so_mamiltia.json) com o nível 376 (Defesa 134, ataque 124, 3d10 × 100, espinheiro 40d6 CD 30, fraca a FOGO; o SAL não chegou), pv_atual 28.793; ações pela lei (11) e 2 lendárias (Mítica); G33: a FASE aos 50% (rolar ao montar: d6 declarado); moral: foge abaixo de 25%; de noite; a régua de 382: sozinha, a Mamiltia morre em 85%. G9 antes; se ela cair, PARAR dentro da hora (o rei sabe ERGUER O CAÍDO: 30 de Mana; ele não luta, mas o feitiço de cura não é luta). O CERCO (cercos/elaeva445.json): a bordo o Moreth, o Eiagrir e a Mamiltia; o dia 446 rola com cerco.py dia 446. A MIE e o SAL chegam no 446; a OISSE no 448. Farenta: Defesa e Comida −1 até o 448; a febre até o 455. LEVIS: ED45 [1] a missão falha no 449 (agenda #587). O rei 386/402, Mana 144/164, a Visão 2/2. O rio SECO.
+
+Antes (444):
 Tarde do 444, FARENTA (os ticks do 442, 443 e 444 rodados). O rei 398/402 (GRAVE até o 458: não luta, nem feitiço de combate), Mana 144/164 (a Cura Maior 20), a Visão 2/2, A PENA DA MAMILTIA na mão (queimada, a chama UMA vez onde o rei estiver; MR42 [3]: ela espera a pena). Com ele: o Moreth 600, o Eiagrir 299/420 (a noite cura: lançar), o ZYZA (servo 129, na barca), o cabo Gonde e os 10. A ELAEVA (Mítica 376, Espinho; PV 28.793 de 37.600; fraca a FOGO e ao SAL; não atravessa água corrente larga) A UM DIA (EL44 [5]): chega às muralhas no 445. A MIE, as 20 lanças e o SAL chegam no 446 (agenda #579). Farenta: Defesa 4/4; a FEBRE forte (FB44 [3]: Saúde −1, Ordem −1 até o 455; a notícia ainda não saiu da cidade). A batalha: batalha.py para a cidade ou luta.py para os heróis contra a fera; G9 antes; a Mamiltia (ficha de combate pronta, sem Arte); a Elaeva: montar a ficha (bicho.py não serve: ela não tem saída do gerador; montar à mão pelo registro de mundo_vivo, Mítica 376: ações pela lei, covil não, ela não está na toca; a regeneração dela; o sal e o fogo como fraqueza dupla: o luta.py só lê UMA fraqueza: declarar antes como aplica a segunda). LEVIS, 445: o recado da missão do Ithvil chega à Eliane (#577, #578): a Lei das Caçadas contra a TKURNEK (oculto). (OCULTO) SG42 [2]: escapou em Lumade que o rei leu a carta cifrada do Colégio à Leliel. (OCULTO) HT42 [1]: o hadun é colhido do Husgarn dormindo pelos caçadores do Celocus; o Skorval não sabe; o Tolvane acredita, errado, que o Skorval vende (a carta dele no 449). ERRO DA G36: a festa do 444 não foi perguntada a tempo.
 
 Antes (Ireviel, 441):
@@ -234,10 +237,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (441 → 444): 1a Farenta · 2a a Luz do Cais com a visita · 3c a portagem só para a carga da casa; a da Liga perde tudo · 4a a estiva · 5c o Graur na rua, e a Ronda de novo quando a Eliane voltar
 - AF41 [4] aceitam · MI41 [2] a Mie no 446 · HT42 [1] e a falha feia do Tolvane · SG42 [2] (oculto) · MR42 [3] · os ticks 442-444 · FB44 [3] · EL44 [5].
 
+## RESPONDIDO (444 → 445): 1a a pena · 2a o fogo dos barcos · 3a a Oisse · "alguém faça a missão de Levis antes do 449" (não chega a tempo; a Eliane decide pela lei)
+- o tick do 445 · CE45 [1] ninguém atira · EC45 [5] · PM45 [2] · MC45 [6] · LV45 a régua oculta 95% · ED45 [1].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A PENA DA MAMILTIA (chama-a uma vez, onde o rei estiver): a) queimar AMANHÃ, quando a Elaeva chegar às muralhas (sem o sal: a Mie chega no 446) · b) segurar a cidade um dia e queimar no 446, com a Mie e o sal · c) queimar agora, antes de ela chegar.
-2. A DEFESA DE FARENTA até a pena: a) o fogo dos barcos de novo, como em 387 (o que a cidade tiver de barcos e piche) · b) todos dentro dos muros; ninguém sai; esperar · c) o Moreth, o Eiagrir e o Zyza saem ao encontro dela (o rei não luta).
-3. A FEBRE: a) mandar buscar a Oisse e as irmãs em Ireviel (2 dias pela costa) · b) chamar a Vigília (cuida da febre; quer fechar as minas) · c) só fechar o bairro baixo.
+1. A MAMILTIA quer sair SOZINHA à muralha agora (em 382 a Visão mostrou: sozinha, ela morre quase sempre): a) deixar ir · b) tentar segurá-la até a aurora e o fogo dos barcos (a palavra do rei contra a vontade dela: teste social; ela está fria com ele desde o 441) · c) mandar o Moreth, o Eiagrir e o Zyza à muralha com ela (o rei não luta) · d) a Visão do Tempo antes (uma hora à frente).
+2. A LEI DAS CAÇADAS (339) segurou a Eliane: a) deixar como está · b) mudar daqui em diante: quando a conta proíbe os nossos, a Marechal pode pôr o contrato para gente de fora (vale para as próximas; esta já não chega a tempo).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "RF19",
-  "RF19n",
-  "420-laco-quem",
-  "420-laco",
   "420-chamado",
   "420-vinculos",
   "EN20",
@@ -399,188 +395,13 @@
   "MR42",
   "SG42",
   "EL44",
-  "FB44"
+  "FB44",
+  "EC45",
+  "PM45",
+  "MC45",
+  "ED45"
  ],
  "selos": {
-  "RF19": {
-   "id": "RF19",
-   "dia": 419,
-   "hora": "00:17:19",
-   "titulo": "OS REFUGIADOS na estrada (419): de onde",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "do BREJO DO OESTE (a enchente da Torre Afogada, 417), a caminho de Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "de Levis-baixa: famílias da ala do cais do culto, com medo depois da muralha"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "de Levis-baixa: famílias da ala do cais do culto, com medo depois da muralha",
-     "txt": "[5] → de Levis-baixa: famílias da ala do cais do culto, com medo depois da muralha"
-    }
-   ],
-   "hora_rolado": "00:17:19"
-  },
-  "RF19n": {
-   "id": "RF19n",
-   "dia": 419,
-   "hora": "00:17:28",
-   "titulo": "QUANTOS SÃO OS REFUGIADOS de Levis-baixa (a ala do cais do culto)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "× 5 pessoas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4,
-      3
-     ],
-     "total": 7,
-     "res": "× 5 pessoas",
-     "txt": "[4, 3] +0 = 7 → × 5 pessoas"
-    }
-   ],
-   "hora_rolado": "00:17:28"
-  },
-  "420-laco-quem": {
-   "id": "420-laco-quem",
-   "dia": 420,
-   "hora": "00:17:29",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a BRARA",
-     "txt": "[5] → a BRARA"
-    }
-   ],
-   "hora_rolado": "00:17:29"
-  },
-  "420-laco": {
-   "id": "420-laco",
-   "dia": 420,
-   "hora": "00:17:29",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "MOMENTO",
-     "txt": "[6] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "00:17:29"
-  },
   "420-chamado": {
    "id": "420-chamado",
    "dia": 420,
@@ -19562,6 +19383,178 @@
     }
    ],
    "hora_rolado": "12:34:23"
+  },
+  "EC45": {
+   "id": "EC45",
+   "dia": 445,
+   "hora": "12:47:05",
+   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 445 (às muralhas ao pôr do sol)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "cerca e não toca"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "as raízes racham a muralha de fora: Defesa −1 e Comida −1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o ESPINHEIRO passa por cima da muralha num bairro: 2d6 × 5 mortos e Ordem −1"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "as raízes racham a muralha de fora: Defesa −1 e Comida −1",
+     "txt": "[5] → as raízes racham a muralha de fora: Defesa −1 e Comida −1"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "PM45": {
+   "id": "PM45",
+   "dia": 445,
+   "hora": "12:47:05",
+   "titulo": "A PENA QUEIMADA AO PÔR DO SOL DO 445: QUANDO VEM A MAMILTIA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "na mesma noite, uma coluna de fogo no cais"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "na aurora do 446"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "na mesma noite, uma coluna de fogo no cais",
+     "txt": "[2] → na mesma noite, uma coluna de fogo no cais"
+    }
+   ],
+   "hora_rolado": "12:47:05"
+  },
+  "MC45": {
+   "id": "MC45",
+   "dia": 445,
+   "hora": "12:47:28",
+   "titulo": "O QUE A MAMILTIA FAZ AO CHEGAR A FARENTA (noite do 445)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "entra no fogo do cerco"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "entra no cerco e quer o sal e o fogo juntos"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "sai sozinha à muralha nesta noite"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "sai sozinha à muralha nesta noite",
+     "txt": "[6] → sai sozinha à muralha nesta noite"
+    }
+   ],
+   "hora_rolado": "12:47:28"
+  },
+  "ED45": {
+   "id": "ED45",
+   "dia": 445,
+   "hora": "12:48:05",
+   "titulo": "A DECISÃO DA ELIANE EM LEVIS (a régua da Lei das Caçadas deu 95% de morte às lanças: não vai sem o rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "cumpre a lei e espera o rei: a missão falha no 449"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "a lei protege os nossos, não os de fora: põe o contrato de 10.000 na praça de Levis"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "cumpre a lei e espera o rei: a missão falha no 449",
+     "txt": "[1] → cumpre a lei e espera o rei: a missão falha no 449"
+    }
+   ],
+   "hora_rolado": "12:48:05"
   }
  }
 }

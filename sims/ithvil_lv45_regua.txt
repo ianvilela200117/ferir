@@ -1,0 +1,8 @@
+RÉGUA de 2000 lutas simuladas (sem valor de jogo; margem de ±2 pontos) · Tkurnek (Único 200) contra 11
+  desfecho: O GRUPO CAI 100%
+  duração: mediana 2 rodadas (de 2 a 2 em 8 de cada 10 lutas)
+  quando o bicho NÃO morre, sai com 100% do PV (entre 99% e 100%)
+  MORRE: lança da ronda 7 95% · lança da ronda 8 95% · lança da ronda 3 95% · lança da ronda 9 95% · lança da ronda 4 94% · lança da ronda 6 94% · lança da ronda 1 94% · lança da ronda 2 94% · lança da ronda 10 94% · lança da ronda 5 94% · Eliane 45%
+  cai ou recua ferido: Eliane 100% · lança da ronda 1 100% · lança da ronda 2 100% · lança da ronda 3 100% · lança da ronda 4 100% · lança da ronda 5 100% · lança da ronda 6 100% · lança da ronda 7 100% · lança da ronda 8 100% · lança da ronda 9 100% · lança da ronda 10 100%
+  LEI DAS CAÇADAS (339, limite de 2% de morte para qualquer um dos nossos): o pior risco é 95.5% → ACIMA: não vai sem o rei
+  (régua gravada no envelope como OCULTO; não mostrar ao jogador sem a Visão do Tempo)

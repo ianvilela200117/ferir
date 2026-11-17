@@ -490,14 +490,24 @@
       "o porto aberto ao reino (357)"
      ]
     ],
-    "Comida": [],
+    "Comida": [
+     [
+      -1,
+      "as fazendas de fora tomadas pelo mato da Elaeva (EC45; até o 448)"
+     ]
+    ],
     "Saúde": [
      [
       -1,
       "a febre do 442, forte (FB44; até o 455)"
      ]
     ],
-    "Defesa": []
+    "Defesa": [
+     [
+      -1,
+      "as raízes da Elaeva racham a muralha de fora (EC45; até o 448)"
+     ]
+    ]
    },
    "renda": {
     "base": 350,

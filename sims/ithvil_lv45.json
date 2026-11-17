@@ -1,0 +1,197 @@
+{
+ "monstro": {
+  "nome": "Tkurnek",
+  "cat": "Único",
+  "nivel": 200,
+  "pv": 4000,
+  "df": 75,
+  "rd": 12,
+  "at": 65,
+  "dado": "1d12",
+  "mult": 10,
+  "moral": false,
+  "essencia": "Fogo",
+  "regenera": 100,
+  "acoes": 6,
+  "poder": {
+   "nome": "o golpe queima: +3d6 de fogo",
+   "tipo": "area",
+   "cd": 30,
+   "dano": "6d6"
+  },
+  "fraqueza": "Gelo",
+  "fase": {
+   "tipo": 1,
+   "nome": "troca de Essência"
+  },
+  "nota": "bicho.py (obras/missao_ithvil_cria.txt): gigante, casa, Fogo; territorial: ataca quem entra; fraqueza: a Essência Gelo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol",
+  "nao_roda": [
+   "sombra própria (no escuro age duas vezes; sob luz forte perde 1 ação)",
+   "escava ou nada"
+  ]
+ },
+ "grupo": [
+  {
+   "nome": "Eliane",
+   "nivel": 94,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 260,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "nivel_ref": 95,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança",
+   "pvmax_real": 260
+  },
+  {
+   "nome": "lança da ronda 1",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 2",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 3",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 4",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 5",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 6",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 7",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 8",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 9",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  },
+  {
+   "nome": "lança da ronda 10",
+   "nivel": 20,
+   "at": 8,
+   "dado": "1d8",
+   "mult": 1,
+   "b": 2,
+   "df": 18,
+   "rd": 2,
+   "pv": 60
+  }
+ ]
+}

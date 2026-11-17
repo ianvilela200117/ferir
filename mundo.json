@@ -3059,6 +3059,17 @@
    "leitura": "um traidor exposto",
    "resumo": "MUDANÇA POLÍTICA: um traidor exposto — Yaelane",
    "toca": false
+  },
+  {
+   "dia": 445,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Mordun\no que era: cidade afundada\npor que caiu: terremoto\no que guarda: um segredo de facção\no que habita: um culto\ncusto de entrar: uma chave\n————————————————————————————————————————",
+   "noticia_chega": 447,
+   "chegada": "[5] em 1d6 [2] dias",
+   "resumo": "UMA RUÍNA SE ABRE — as Fundas do Norte (o Clã Hegre) (Mordun)",
+   "toca": true
   }
  ]
 }
