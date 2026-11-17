@@ -965,3 +965,4 @@ OPINIÃO: Carea -10 (435: o rei mandou registrar os da Bigorna Livre por cima da
 - MATERIAL [Dia 457]: yeviel -2.8 kg (457: separado para a L1 (a armadura Lendária do Teraseth, 458-460)) → ~54 kg
 - MATERIAL [Dia 457]: ziis -0.4 kg (457: separado para a L2 (a espada Lendária do Colégio, 460-462)) → ~5.6 kg
 - MATERIAL [Dia 457]: ferro -12.8 kg (457: separado para a L1 e a L2 (11,2 e 1,6)) → ~223.4 kg
+- [Dia 457, 23:14] NOTA DO MESTRE (457): a parte do ULURVE (sócio, um décimo da forja da venda, UL55) vale para as duas Lendárias: 3.600 no 460 e 2.400 no 462 (a casa fica com 32.400 e 21.600); o material das duas já saiu do livro (yeviel 2,8 · ziis 0,4 · ferro 12,8)
