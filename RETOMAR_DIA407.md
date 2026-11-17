@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 447, FARENTA: tempestade; o cerco com sal espera o tempo (MOTOR 9b: G1 a G37)
+# RETOMAR — entardecer do Dia 448, FARENTA: a Mamiltia sai sozinha contra a Elaeva (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 448, FARENTA (o tick semanal do 448 rodado). A MAMILTIA SAIU SOZINHA (MP48 [1]) depois que o espinheiro matou 50 num bairro (EC48 [6], MO48). A luta, se ela for sozinha: sims/elaeva446_A.json (montado; a ficha da Elaeva com a fase: FE46 [1] troca de Essência, a fraqueza nova VIDA FE46b [5], ambas ocultas), a Visão de 445: ela morre em 71%; o rei sabe ERGUER O CAÍDO (até 1 hora; 30 de Mana; Mana 164/164). Com o Moreth, o Eiagrir e o Zyza: sims/elaeva447_B.json (a Visão de 447: todos caem; o Moreth e o Eiagrir morrem em 100%) · o fogo sem a ventania hoje (o −4 do 447 não vale: tirar). A MIE (150; sem ficha de combate: fazer pela artes.py e pelo nível se entrar) e as 20 lanças nas muralhas; o SAL: UM dia de tiro (SQ48 [1]). O cerco: a fera longe da costa quatro dias seguidos. O OLHO PINTADO preso (o outro fugiu). A febre segue; uma irmã da Oisse doente. Farenta: Comércio −1 (o incêndio), Ordem −1 (a criança, até o 451) e −1 (os mortos, até o 455), Defesa e Comida −1 −1. Cofre 8.768. (OCULTO) YEOR chega no 451; a missão dos Arpões; o clima estranho na costa. LEVIS: a missão do Ithvil falha no 449. A Guilda: a ordem chegou a Ireviel no 448.
+
+Antes (447):
 Noite do 447, FARENTA (o tick do 447 rodado). O CERCO (cercos/elaeva445.json; cerco.py elaeva445 dia DIA [sal]; a Visão do cerco: cerco.py elaeva445 visao N [sal]): a Elaeva 28.793/37.600 (77%), ninguém atirou em 445-447 (longe, tempestade, tempestade). A MIE e o SAL: chegam no PRIMEIRO dia sem tempestade em Farenta (MA47 [3]); ao chegar, rolar quanto sal (d3 dias de tiro, declarado). A ordem do jogador é a (o cerco com sal); a luta direta (b) foi vista pela Visão: todos caem, o Moreth e o Eiagrir morrem em 100% (sims/elaeva447_B_visao.txt). A Mamiltia espera (MS46, MP47): a cada dia de tempestade, a paciência dela rola (1 em 6 sai sozinha). OS OLHOS PINTADOS levaram uma criança (QG47 [5]): o povo culpa o podestà (Ordem −1). O ÓLEO DE ESSÊNCIA: nenhum em Farenta (OL46 [3]). O rei 390/402 (a noite cura), Mana 104/164, a Visão 1 de 2 hoje; o Eiagrir 420. Farenta: Defesa e Comida com dois −1 (até o 448 e o 451), a febre (até o 455), a Ordem com dois −1.
 
 Antes (446):
@@ -252,9 +255,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (446 → 447): 1a e "usar a Visão: qual é melhor, a ou b?" · 2a e "tentar encantar as armas com fogo; o Zyza também"
 - OL46 [3] · o tick do 447 · a tempestade · CE47 [2] · MA47 [3] · QG47 [5] · MP47 [2] · EC47 [4] · a Visão de b: morte certa.
 
+## RESPONDIDO (447 → 448): 1c a busca e a fala · 2c nada · "o que eu posso melhorar no Zyza?" (pergunta de regra: respondida pelos livros)
+- BG47 falha · o tick do 448 · D48 [1] · MH48 [5] · SQ48 [1] · OS48 [1] · BG48 GANHO · PR48 sucesso · CE48 [1] · EC48 [6] · MO48 50 · MP48 [1].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A CRIANÇA LEVADA pelos Olhos Pintados: a) o cabo Gonde e os 10 da guarda procuram (pista, rastro, a estrada sul) · b) o rei fala em praça ao lado do podestà (acalmar o povo; o rei não manda em Farenta: o podestà manda) · c) as duas coisas · d) deixar ao podestà.
-2. O ENCANTAMENTO DE FOGO (a leitura do Mestre: uma noite por peça; a Alma de Brasa dá só +1d6 de fogo 1x por cena; a Chuva de Brasas numa peça dá um tiro de área 1x por cena; nenhum dos dois faz a arma inteira ferir com fogo; os tiros do cerco são feitiços): a) encantar assim mesmo o Zyza com a Chuva de Brasas esta noite (um condutor do que o rei tem; rolar obra_valor.py) · b) não encantar; mandar procurar ÓLEO DE ESSÊNCIA no reino (Ireviel e o Delta) · c) nada por ora.
+1. A MAMILTIA SAI SOZINHA (o espinheiro matou 50; a ordem c do 445 foi antes da Visão do 447): a) deixar ir; o rei fica na porta pronto para ERGUER O CAÍDO · b) a palavra do rei de novo (outro teste; com 50 mortos no bairro a alavanca pesa menos) · c) mandar o Moreth, o Eiagrir e o Zyza com ela (a Visão do 447) · d) a VISÃO DO TEMPO antes (2 de 2 hoje): esta saída dela, sem a ventania.
+2. O OLHO PINTADO PRESO: a) o rei interroga (as Luvas: COMANDO, 1x por cena) · b) entrega ao podestà, à lei de Farenta · c) as duas coisas.
+3. O ZYZA: o que fazer primeiro (a lista na resposta): a) forjar uma barda de ZIIS para ele (desfaz um golpe por dia) · b) encantar o corpo dele com PRESSA ou RAIZ DE PEDRA (o Osso Gravado +3) · c) pôr um núcleo MÍTICO no peito quando houver (o nível inteiro) · d) só deixá-lo comer o que matar.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -1,14 +1,14 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 447,
+  "dia": 448,
   "hora": "amanhecer",
   "local": "a fundição de Ireviel",
   "clima": "limpo, brisa",
-  "pressao": 1,
-  "primeiro_tick_semanal": 448,
+  "pressao": 2,
+  "primeiro_tick_semanal": 455,
   "limiar_pressao": 5,
-  "proxima_auditoria": 448
+  "proxima_auditoria": 453
  },
  "bestiario": {
   "avistamento": [

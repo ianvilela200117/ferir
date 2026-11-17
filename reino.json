@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 441,
+  "dia": 448,
   "prestigio": 6,
   "legitimidade": 10,
   "conselho_real": {
@@ -33,10 +33,10 @@
    "o Clã Hegre": -2,
    "Steunn": 0,
    "os Do Junco (o Delta)": -3,
-   "a Escola Única (Almision)": 2,
+   "a Escola Única (Almision)": 3,
    "o Colégio": 4,
    "a Leliel (o Norte; a Liga é dela)": -4,
-   "a Escola Única": 0
+   "a Escola Única": 1
   },
   "log": [
    "290: o reino nasce no papel: Ireviel e o Porto de Marasar",
@@ -76,9 +76,10 @@
    "427: semana do reino; renda de fora do livro +2050",
    "434: semana do reino; renda de fora do livro +2600",
    "434: legitimidade 9 → 10 (julgamento LV34 (Levis, 434): a sentença que a praça esperava)",
-   "441: semana do reino; renda de fora do livro +2200"
+   "441: semana do reino; renda de fora do livro +2200",
+   "448: semana do reino; renda de fora do livro +2350"
   ],
-  "ultima_semana": 441
+  "ultima_semana": 448
  },
  "cidades": [
   {
@@ -89,9 +90,9 @@
     "Comida": 4,
     "Comércio": 4,
     "Dinheiro": 4,
-    "Saúde": 3,
+    "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 1
+    "Defesa": 2
    },
    "mods": {
     "Comida": [
@@ -182,12 +183,6 @@
    },
    "obras": [
     {
-     "nome": "o bairro novo no alto da margem norte e o dique do bairro velho",
-     "custo": 4000,
-     "pronta": 442,
-     "efeito": "Saúde +1 e Ordem +1 de vez; o bairro velho não alaga mais (a comporta: uma noite do rei)"
-    },
-    {
      "nome": "a Casa de Cura (o hospital), junto da enfermaria da rua do rio",
      "custo": 3000,
      "pronta": 449,
@@ -228,7 +223,8 @@
     "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 4 · Defesa 2 · evento [1]",
     "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]",
     "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
-    "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 1 · evento [9]"
+    "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 1 · evento [9]",
+    "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]"
    ],
    "obras_feitas": [
     {
@@ -242,6 +238,12 @@
      "custo": 1500,
      "pronta": 420,
      "efeito": "o Mivor fica depois da chuva e guarda o lado norte; Defesa +1 (mod) enquanto morar e receber o sal"
+    },
+    {
+     "nome": "o bairro novo no alto da margem norte e o dique do bairro velho",
+     "custo": 4000,
+     "pronta": 442,
+     "efeito": "Saúde +1 e Ordem +1 de vez; o bairro velho não alaga mais (a comporta: uma noite do rei)"
     }
    ]
   },
@@ -253,9 +255,9 @@
     "Comida": 4,
     "Comércio": 1,
     "Dinheiro": 4,
-    "Saúde": 4,
+    "Saúde": 3,
     "Ordem": 4,
-    "Defesa": 2
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -334,7 +336,8 @@
     "420: Comida 1 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
     "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
     "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]",
-    "441: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]"
+    "441: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
+    "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]"
    ]
   },
   {
@@ -343,10 +346,10 @@
    "gente": 9000,
    "pilares": {
     "Comida": 3,
-    "Comércio": 3,
-    "Dinheiro": 4,
+    "Comércio": 4,
+    "Dinheiro": 3,
     "Saúde": 4,
-    "Ordem": 1,
+    "Ordem": 2,
     "Defesa": 4
    },
    "mods": {
@@ -376,10 +379,6 @@
      [
       1,
       "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
-     ],
-     [
-      1,
-      "clima: semana boa para o campo, 5 dias de chuva mansa (até o 447)"
      ]
     ],
     "Comércio": [
@@ -437,7 +436,8 @@
     "434: Comida 1 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 0 · Defesa 4 · evento [4]",
     "434: Comida +1 de vez (o pão do confisco do rei, 5.500)",
     "pilar Ordem → 1 (435: o pão do confisco nas ruas baixas; a TIGRA faz as filas aceitarem (OR35 [20] natural: surpresa))",
-    "441: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 1 · Defesa 4 · evento [14]"
+    "441: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 1 · Defesa 4 · evento [14]",
+    "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -462,7 +462,7 @@
    "pilares": {
     "Comida": 3,
     "Comércio": 3,
-    "Dinheiro": 2,
+    "Dinheiro": 3,
     "Saúde": 4,
     "Ordem": 4,
     "Defesa": 4
@@ -479,7 +479,11 @@
      ],
      [
       -1,
-      "os Olhos Pintados levaram uma criança do bairro da febre e o povo culpa o podestà (QG47; até o 455)"
+      "o povo ainda culpa o podestà pela criança, mas o rei falou em praça (QG47, PR48; até o 451)"
+     ],
+     [
+      -1,
+      "o espinheiro da Elaeva passou a muralha e matou gente num bairro (EC48; até o 455)"
      ]
     ],
     "Dinheiro": [
@@ -492,6 +496,10 @@
      [
       1,
       "o porto aberto ao reino (357)"
+     ],
+     [
+      -1,
+      "o incêndio no mercado (D48; até o 455)"
      ]
     ],
     "Comida": [
@@ -502,6 +510,10 @@
      [
       -1,
       "o mato da Elaeva come mais fazendas (EC47; até o 451)"
+     ],
+     [
+      -1,
+      "clima: 3 dias de tempestade (até o 454)"
      ]
     ],
     "Saúde": [
@@ -544,7 +556,8 @@
     "420: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
     "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]",
     "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]",
-    "441: Comida 3 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [16]"
+    "441: Comida 3 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [16]",
+    "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

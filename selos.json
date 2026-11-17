@@ -1,17 +1,5 @@
 {
  "ordem": [
-  "AG421",
-  "BC421",
-  "AGq1",
-  "AGq2",
-  "AGq3",
-  "AGq4",
-  "AGi1",
-  "AGi2",
-  "AGi3",
-  "AGi4",
-  "AGi5",
-  "AGn1",
   "AGn2",
   "AGn5",
   "TV22",
@@ -399,511 +387,21 @@
   "MA47",
   "QG47",
   "MP47",
-  "EC47"
+  "EC47",
+  "CR47",
+  "448-laco-quem",
+  "448-laco",
+  "448-chamado",
+  "448-vinculos",
+  "D48",
+  "MH48",
+  "SQ48",
+  "OS48",
+  "EC48",
+  "MP48",
+  "MO48"
  ],
  "selos": {
-  "AG421": {
-   "id": "AG421",
-   "dia": 421,
-   "hora": "00:48:35",
-   "titulo": "O CONSELHO VOTA: OS CINCO AGENTES PRESOS (413: o carregador do cais, do Ardenghi · 420: um da Liga, um dos Descalços, um da Lumine, um do Clã do Hrotgar)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE C) USAR: interrogar e depois trocar ou devolver (o do Clã ao Hrotgar, como recado) · placar A 1 · B 3 · C 4 · VOTO VENCIDO: Graur, Nouliel, Isolda, Herkald",
-     "txt": "VENCE C) USAR: interrogar e depois trocar ou devolver (o do Clã ao Hrotgar, como recado) · placar A 1 · B 3 · C 4 · VOTO VENCIDO: Graur, Nouliel, Isolda, Herkald"
-    }
-   ]
-  },
-  "BC421": {
-   "id": "BC421",
-   "dia": 421,
-   "hora": "00:48:35",
-   "titulo": "O CONSELHO VOTA: O DECRETO DOS BARCOS (a Intendente requisitou os barcos do cais na enchente do 420; os barqueiros contestam)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) MANTER: era a lei da emergência, e a Intendente tinha a palavra · placar A 3 · B 2 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Eliane, Tolvane, Sira, Isolda, Thuron",
-     "txt": "VENCE A) MANTER: era a lei da emergência, e a Intendente tinha a palavra · placar A 3 · B 2 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Eliane, Tolvane, Sira, Isolda, Thuron"
-    }
-   ]
-  },
-  "AGq1": {
-   "id": "AGq1",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "O QUE O AGENTE DA LIGA VEIO FAZER (a rede da Leliel; o relógio da forquilha está em 2/4)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "olhar a MATRIZ"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "CONTAR as lanças, a galé e a corrente da FORQUILHA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "achar quem na casa aceita ouro"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "CONTAR as lanças, a galé e a corrente da FORQUILHA",
-     "txt": "[3] → CONTAR as lanças, a galé e a corrente da FORQUILHA"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGq2": {
-   "id": "AGq2",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "O QUE O AGENTE DA LUMINE VEIO FAZER",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o PILÃO DE VARADE (tentaram roubá-lo no 363 e no 406)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a receita do remédio da febre do brejo"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a MATRIZ"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o PILÃO DE VARADE (tentaram roubá-lo no 363 e no 406)",
-     "txt": "[3] → o PILÃO DE VARADE (tentaram roubá-lo no 363 e no 406)"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGq3": {
-   "id": "AGq3",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "O QUE O AGENTE DO CLÃ DO HROTGAR VEIO FAZER (o Clã é parente de Steunn pelo casamento do 365; espera a ajuda do rei contra o THARGOS)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a TILDE: as guildas de Steunn querem saber onde ela dorme"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "se o rei vai CUMPRIR a ajuda contra o Thargos (o therk) ou se esqueceu"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o que o rei disse aos VRADDA (o Hulgunn vem a caminho)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "se o rei vai CUMPRIR a ajuda contra o Thargos (o therk) ou se esqueceu",
-     "txt": "[4] → se o rei vai CUMPRIR a ajuda contra o Thargos (o therk) ou se esqueceu"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGq4": {
-   "id": "AGq4",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "O QUE O AGENTE DOS DESCALÇOS VEIO FAZER (depois da emboscada desfeita)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a MATRIZ, ainda"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "saber quem matou o Shyssis e quantos voltaram"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "levar recado a alguém de dentro da casa"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "saber quem matou o Shyssis e quantos voltaram",
-     "txt": "[4] → saber quem matou o Shyssis e quantos voltaram"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGi1": {
-   "id": "AGi1",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "A SIRA INTERROGA o agente da LIGA (pago, orgulhoso do ofício) (+6 a Sira; 0 pelo que ele é)",
-   "dado": [
-    1,
-    20,
-    6
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "NADA ÚTIL"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o QUE VEIO FAZER"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      20
-     ],
-     "total": 26,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
-     "txt": "[20] +6 = 26 → o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGi2": {
-   "id": "AGi2",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "A SIRA INTERROGA o agente da LUMINE (de fé) (+6 a Sira; -2 pelo que ele é)",
-   "dado": [
-    1,
-    20,
-    4
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "NADA ÚTIL"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o QUE VEIO FAZER"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 22,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
-     "txt": "[18] +4 = 22 → o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGi3": {
-   "id": "AGi3",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "A SIRA INTERROGA o agente do CLÃ (montanhês, orgulhoso) (+6 a Sira; -1 pelo que ele é)",
-   "dado": [
-    1,
-    20,
-    5
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "NADA ÚTIL"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o QUE VEIO FAZER"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10
-     ],
-     "total": 15,
-     "res": "o QUE VEIO FAZER",
-     "txt": "[10] +5 = 15 → o QUE VEIO FAZER"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGi4": {
-   "id": "AGi4",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "A SIRA INTERROGA o agente dos DESCALÇOS (com medo, sem patrão) (+6 a Sira; +2 pelo que ele é)",
-   "dado": [
-    1,
-    20,
-    8
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "NADA ÚTIL"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o QUE VEIO FAZER"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 12,
-     "res": "o QUE VEIO FAZER",
-     "txt": "[4] +8 = 12 → o QUE VEIO FAZER"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGi5": {
-   "id": "AGi5",
-   "dia": 421,
-   "hora": "00:49:04",
-   "titulo": "A SIRA INTERROGA o CARREGADOR DO CAIS (gente pequena do Ardenghi; o patrão morto) (+6 a Sira; +3 pelo que ele é)",
-   "dado": [
-    1,
-    20,
-    9
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "NADA ÚTIL"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o QUE VEIO FAZER"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 1000000,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      20
-     ],
-     "total": 29,
-     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
-     "txt": "[20] +9 = 29 → o que veio fazer e QUEM O MANDA de perto (um nome)"
-    }
-   ],
-   "hora_rolado": "00:49:04"
-  },
-  "AGn1": {
-   "id": "AGn1",
-   "dia": 421,
-   "hora": "00:49:19",
-   "titulo": "QUEM MANDA O AGENTE DA LIGA DE PERTO, em Ireviel (o nome que ele dá)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o DRAEK, o emissário da Liga em Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "um nome novo (gerar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o DRAEK, o emissário da Liga em Ireviel",
-     "txt": "[3] → o DRAEK, o emissário da Liga em Ireviel"
-    }
-   ],
-   "hora_rolado": "00:49:19"
-  },
   "AGn2": {
    "id": "AGn2",
    "dia": 421,
@@ -19573,6 +19071,572 @@
     }
    ],
    "hora_rolado": "16:23:44"
+  },
+  "CR47": {
+   "id": "CR47",
+   "dia": 447,
+   "hora": "16:35:55",
+   "titulo": "(OCULTO) ONDE ESTÁ A CRIANÇA LEVADA PELOS OLHOS PINTADOS",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ainda na cidade, num porão perto da porta do sul"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "na estrada sul, a meio dia"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "vendida a alguém de dentro de Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "foi com eles por vontade (a promessa de cura)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ainda na cidade, num porão perto da porta do sul",
+     "txt": "[1] → ainda na cidade, num porão perto da porta do sul"
+    }
+   ],
+   "hora_rolado": "16:35:55"
+  },
+  "448-laco-quem": {
+   "id": "448-laco-quem",
+   "dia": 448,
+   "hora": "16:36:08",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o HERKALD",
+     "txt": "[1] → o HERKALD"
+    }
+   ],
+   "hora_rolado": "16:36:08"
+  },
+  "448-laco": {
+   "id": "448-laco",
+   "dia": 448,
+   "hora": "16:36:08",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "MOMENTO",
+     "txt": "[5] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "16:36:08"
+  },
+  "448-chamado": {
+   "id": "448-chamado",
+   "dia": 448,
+   "hora": "16:36:08",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      14
+     ],
+     "total": 17,
+     "res": "chega 1",
+     "txt": "[14] +3 = 17 → chega 1"
+    }
+   ],
+   "hora_rolado": "16:36:08"
+  },
+  "448-vinculos": {
+   "id": "448-vinculos",
+   "dia": 448,
+   "hora": "16:36:08",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Moreth–Eiagrir",
+     "txt": "#1 [3] → Moreth–Eiagrir"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Moreth–Eiagrir",
+     "txt": "#2 [3] → Moreth–Eiagrir"
+    }
+   ],
+   "hora_rolado": "16:36:08"
+  },
+  "D48": {
+   "id": "D48",
+   "dia": 448,
+   "hora": "16:36:52",
+   "titulo": "O DESASTRE DA SEMANA EM FARENTA",
+   "dado": [
+    1,
+    3,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "incêndio no mercado"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "enchente no bairro do porto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "desabamento de um trecho da muralha rachada"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "incêndio no mercado",
+     "txt": "[1] → incêndio no mercado"
+    }
+   ],
+   "hora_rolado": "16:36:52"
+  },
+  "MH48": {
+   "id": "MH48",
+   "dia": 448,
+   "hora": "16:36:52",
+   "titulo": "A MIE CHEGA A FARENTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "de manhã: o sal vai a bordo hoje"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "à tarde: o sal só a partir do 449"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "à tarde: o sal só a partir do 449",
+     "txt": "[5] → à tarde: o sal só a partir do 449"
+    }
+   ],
+   "hora_rolado": "16:36:52"
+  },
+  "SQ48": {
+   "id": "SQ48",
+   "dia": 448,
+   "hora": "16:36:52",
+   "titulo": "QUANTO SAL A LURENTETTA MANDOU",
+   "dado": [
+    1,
+    3,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "tantos dias de tiro com sal"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "tantos dias de tiro com sal",
+     "txt": "[1] → tantos dias de tiro com sal"
+    }
+   ],
+   "hora_rolado": "16:36:52"
+  },
+  "OS48": {
+   "id": "OS48",
+   "dia": 448,
+   "hora": "16:36:52",
+   "titulo": "A OISSE E AS IRMÃS NA FEBRE DE FARENTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a febre é maior que elas"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "a febre quebra no 451"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "quebra no 450 e o povo abençoa o rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a febre é maior que elas",
+     "txt": "[1] → a febre é maior que elas"
+    }
+   ],
+   "hora_rolado": "16:36:52"
+  },
+  "EC48": {
+   "id": "EC48",
+   "dia": 448,
+   "hora": "16:37:17",
+   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 448",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "cerca e não toca"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1",
+     "txt": "[6] → o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
+    }
+   ],
+   "hora_rolado": "16:37:17"
+  },
+  "MP48": {
+   "id": "MP48",
+   "dia": 448,
+   "hora": "16:37:17",
+   "titulo": "A PACIÊNCIA DA MAMILTIA NO QUARTO DIA SEM UM TIRO (a fera longe da água)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "sai sozinha à fera"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "espera"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "sai sozinha à fera",
+     "txt": "[1] → sai sozinha à fera"
+    }
+   ],
+   "hora_rolado": "16:37:17"
+  },
+  "MO48": {
+   "id": "MO48",
+   "dia": 448,
+   "hora": "16:37:52",
+   "titulo": "OS MORTOS DO ESPINHEIRO NO BAIRRO DE FARENTA (448, ao entardecer)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "× 5 mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6,
+      4
+     ],
+     "total": 10,
+     "res": "× 5 mortos",
+     "txt": "[6, 4] +0 = 10 → × 5 mortos"
+    }
+   ],
+   "hora_rolado": "16:37:52"
   }
  }
 }

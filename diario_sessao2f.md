@@ -1159,3 +1159,14 @@ A tempestade voltou antes do meio-dia, mais forte. O rei fechou os olhos outra v
 À tarde um grito correu o bairro baixo: uma menina de uma casa marcada de giz tinha sumido da cama, e na parede, ao lado da porta, havia dois olhos pintados com cinza. Uma mulher apontou a casa do podestà e disse que ele fechara o bairro com a febre e esquecera os que estavam dentro. Ninguém a mandou calar.
 
 - **Parada:** noite do 447. A tempestade, a fera longe da costa, a Mie abrigada, uma criança levada.
+
+### Farenta, 448
+O céu abriu de madrugada. O Gonde, que não tinha dormido, voltou à porta do sul com quatro homens e uma lanterna fechada, e ouviu uma criança tossir debaixo de um assoalho. Arrombaram a tampa. A menina estava enrolada num pano, com dois olhos pintados na testa; um dos homens pulou pela janela do porão, o outro caiu com a perna presa na escada e foi amarrado ali mesmo.
+
+Na praça, o rei falou ao lado do podestà, de pé e mancando, com a menina no colo de uma vizinha atrás dele. Não prometeu nada que não tinha. Disse que a guarda achara a criança e que o homem preso seria julgado pela lei de Farenta. O povo ficou quieto e depois foi para casa.
+
+À tarde o mercado pegou fogo, de uma brasa da tempestade. À tarde também chegou a Mie, alta, de capa salgada, com vinte lanças e três carroças de sal: era tudo o que a Lurentetta tinha mandado. E ao entardecer, enquanto a floresta seguia longe da água, uma raiz grossa como um mastro passou por cima da muralha de fora e desceu num bairro de casas baixas.
+
+Contaram cinquenta. A Mamiltia não esperou o fim da contagem. Desceu da torre, abriu a porta pequena com a mão enfaixada e saiu sozinha para o mato.
+
+- **Parada:** entardecer do 448. A Mamiltia saindo pela porta; o espinheiro no bairro; o rei na torre.

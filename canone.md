@@ -341,3 +341,5 @@ depois vira linha nova aqui.
 - (445-446) A Visão do Tempo do rei mostrou a Mamiltia morrendo sozinha contra a Elaeva; ela acreditou e esperou. A tempestade do 446 parou os barcos com a fera na praia. A Lei das Caçadas mudou: quando a conta proíbe os nossos, a Marechal pode contratar gente de fora. A Guilda dos Aventureiros foi chamada a caçar a criatura da missão do Ithvil (chega a Levis no 452).
 
 - (447) Tempestade de novo em Farenta; nenhum óleo de essência na cidade. A Visão do rei mostrou a luta direta contra a Elaeva: todos caem, o Moreth e o Eiagrir morrem; o cerco com sal é o caminho. Os OLHOS PINTADOS levaram uma criança do bairro da febre, e o povo culpa o podestà Tirello.
+
+- (448) O cabo Gonde achou a menina levada pelos Olhos Pintados e prendeu um deles; o rei falou em praça com o podestà. O mercado de Farenta pegou fogo. A Mie chegou com vinte lanças e um dia de sal. O espinheiro da Elaeva passou a muralha: 50 mortos. A Mamiltia saiu sozinha contra a fera.

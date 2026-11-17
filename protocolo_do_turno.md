@@ -171,6 +171,7 @@ O texto inteiro está em `compendio/08_livro_nove.md` (a aba "Livro Nove" do Liv
 ### G31 — A MAGIA QUE FALTAVA (Livro Nove 1 e 2)
 - Truques (1 de Mana) · concentração (um feitiço de cena por vez) · ritual (utilidade e cura em 1 hora: metade da Mana) · pergaminho · escolas opostas e o Choque · feitiço de assinatura · feitiço composto · 39 feitiços novos (a lista fechada tem 286).
 - **Feitiço de ÁREA entra na ficha com METADE do multiplicador do foco, sempre** (erro achado na revisão: a Chuva de Brasas estava inteira).
+- A MANA volta inteira com uma noite de sono (a linha do Livro para os recursos: Estamina e Foco; 448: o Mestre não lançava). Lançar na aurora: `ficha.py mana cheio`.
 - Feitiço de Sangue ou de Osso PRESO EM PEÇA não cobra sangue de quem a usa (a peça pagou na obra): era assim que se jogava; agora está escrito.
 
 ### G32 — ITENS (Livro Nove 7)

@@ -19,11 +19,11 @@
   "Afinidade": 171
  },
  "pv": [
-  390,
+  392,
   402
  ],
  "mana": [
-  104,
+  164,
   164
  ],
  "foco": 37,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 10708,
+ "cofre": 8768,
  "livro": {
   "renda_casa": 3940,
   "despesa": 8230,
-  "ultima_semana": 441,
+  "ultima_semana": 448,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -309,6 +309,12 @@
    "valor": -300,
    "motivo": "441: a amostra de hadun comprada pelo Tolvane em Lumade (uma pena)",
    "saldo": 10708
+  },
+  {
+   "dia": 448,
+   "valor": -1940,
+   "motivo": "semana: casa 3940 + cidades 2350 − despesa 8230",
+   "saldo": 8768
   }
  ],
  "materiais": {
@@ -569,7 +575,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 1,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },
