@@ -1243,3 +1243,73 @@ A menina de Yeor estava na cama do canto, com a boca seca e os olhos meio aberto
 Yeor não se ajoelhou. Ficou de pé, com o chapéu torcido nas mãos, olhando a filha e não o rei. "Há um homem no conselho do podestà", disse, baixo. "Dulassetta. Manda cartas ao norte, à Leliel. Eu vi uma sair pelo correio." Engoliu em seco. "É casado com a minha irmã."
 
 - **Parada:** noite do 454, a sala do conselho. A Nouliel abriu o livro na página das contas.
+
+## O 455: a forja à venda, o conselho e a feira na neblina
+
+### A Fornalha, manhã do 455
+A neblina entrava pela boca da Fornalha e morria no calor a dois passos do fole. Lá fora não se via o rio; ouvia-se um sopro grosso batendo nos pilares do cais.
+
+A Tilde despejou o yeviel no cadinho com as duas mãos, devagar, como quem rega. O sangue do Huir ainda cheirava a mato depois de vinte dias no vidro: verde, amargo, folha esmagada. No ferro quente ele não escorreu. Subiu pelas bordas da barra e ficou ali, agarrado, como raiz que achou terra.
+
+"Ele quer crescer", disse o Iorin, sem tirar o olho da cor.
+
+O rei sentia no pulso o que o Iorin via. O Martelo de Zeieth respondia mais grave que de costume, e a escama dobrava sozinha debaixo do golpe, pedindo mais uma volta, mais uma camada. A mão sabia ir mais longe. A perna esquerda, ainda presa pela ferida da Zatha, sabia que não.
+
+Ele parou o martelo no ar e assentou a escama onde estava.
+
+A Tilde segurou a manga dele. "Por que não deixa ela subir?"
+
+"Porque hoje ela é para vender."
+
+"E se quem comprar for ruim?"
+
+Ninguém respondeu. O Iorin mergulhou a espada na salmoura, e o chiado encheu a Fornalha inteira.
+
+### A sala do conselho, tarde do 455
+A Nouliel não ergueu os olhos do livro. "Oito mil duzentos e trinta por semana de saída. Três mil novecentos e quarenta de entrada, mais as cidades. Faltam mil novecentos e noventa." Virou a página. "O Físico, mais quatrocentos e oitenta. O Grão, cem. A Feira, cem."
+
+"Em Farenta tossiam sangue faz uma semana", disse o Graur.
+
+"E a muralha de lá está no chão", disse a Sira. "A muralha e a Feira de Levis. O resto espera a forja."
+
+O Thuron votou pela muralha só, com a mão no aro de osso. O Herkald disse "tudo" e não disse mais nada.
+
+Dois, dois e um. A Nouliel fechou o livro em cima do dedo.
+
+"Muralha. Quando a venda da Fornalha estiver aqui", bateu na capa, "e não na boca de ninguém, eu voto de novo."
+
+À tarde vieram os compradores. O Starkald tirou a espada da bainha no pátio, e o som da lâmina fez empinar o cavalo de um carroceiro na rua. Pagou dois mil pela Guilda sem pechinchar. A armadura de escamas foi a um mercador de Marasar de capa de lã boa, que contou quatro mil e oitocentos em moeda da Doge em cima da mesa da Intendente e perguntou se a peça trazia nome.
+
+"Traz a marca do rei na gola", disse a Nouliel, escrevendo.
+
+### A feira, entardecer do 455
+A briga começou como começam as brigas da feira: um homem grande demais para a rua parado em frente a uma banca. O Teraseth não levantou a voz. O Croque do Rio atravessado nas costas falava por ele.
+
+"Este papel diz que a casa da Seline é tua", disse ao Ruddo, e segurou a folha contra a lanterna. "E diz que o trapiche do lado também. O trapiche onde as minhas barcas amarram desde antes de tu saberes ler."
+
+A Seline tinha as duas mãos em cima dos sacos de pimenta, como se alguém fosse levá-los. "Eu paguei aquela casa. Com o que a banca deu desde que o rei me deu crédito. Está no livro da Intendente."
+
+O Ruddo estava pálido e não recuou um passo. "O selo é bom. Quem quiser, que olhe o selo."
+
+Cheirava a peixe frito e a cera quente. A neblina fechava a rua a trinta passos, e quem chegava aparecia de repente, já perto, já parte da roda.
+
+O Teraseth olhou para o rei por cima das cabeças. "O rei julga, ou julgo eu?"
+
+Na volta, pela Ireviel velha, havia fuligem fresca numa parede: uma mão aberta, cortada no pulso, e embaixo um nome. HERKALD.
+
+### A Fornalha, noite do 455
+O Ulurve chegou com a neblina nas sobrancelhas e não se sentou. Andou em volta da bigorna olhando as ferramentas, como fazia sempre, sem tocar em nenhuma.
+
+"Perdi os braseiros do Clã", disse. "Um ferreiro de fora fez por metade. Mão boa. Nunca tinha visto aquele homem antes de ontem."
+
+Pegou uma escama de nee da pilha da Hoste e virou-a contra o fogo. A pena do Huir eriçou-se no metal, como pelo de gato.
+
+"Tu vendeste duas peças hoje e pagaste a semana do reino." Riu sem graça. "Eu levei três anos para juntar o que tu fizeste numa manhã."
+
+Lá fora, no portão, a voz do Gonde: alguém pedia para ver a Fornalha, e o Gonde dizia que não. A outra voz era educada, paciente, e não ia embora.
+
+O Ulurve escutou também. Largou a escama na pilha.
+
+"É ele."
+
+- **Parada:** noite do 455, a Fornalha. Alguém no portão pede para ver a forja; o Ulurve o reconhece.

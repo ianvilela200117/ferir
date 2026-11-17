@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 448,
+  "dia": 455,
   "prestigio": 6,
   "legitimidade": 10,
   "conselho_real": {
@@ -29,13 +29,13 @@
    "A LEI DO PORTO (441): portagem menor para toda barca que traz carga DA casa ou PARA a casa; quem levar carga da LIGA perde TODA isenção (pedido dos Afogados Vivos, pelos barqueiros do Teraseth)"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": 3,
+   "a Doge Skotha (Marasar)": 2,
    "o Clã Hegre": -2,
    "Steunn": 0,
-   "os Do Junco (o Delta)": -3,
-   "a Escola Única (Almision)": 3,
+   "os Do Junco (o Delta)": -2,
+   "a Escola Única (Almision)": 2,
    "o Colégio": 4,
-   "a Leliel (o Norte; a Liga é dela)": -4,
+   "a Leliel (o Norte; a Liga é dela)": -5,
    "a Escola Única": 1
   },
   "log": [
@@ -77,9 +77,10 @@
    "434: semana do reino; renda de fora do livro +2600",
    "434: legitimidade 9 → 10 (julgamento LV34 (Levis, 434): a sentença que a praça esperava)",
    "441: semana do reino; renda de fora do livro +2200",
-   "448: semana do reino; renda de fora do livro +2350"
+   "448: semana do reino; renda de fora do livro +2350",
+   "455: semana do reino; renda de fora do livro +2300"
   ],
-  "ultima_semana": 448
+  "ultima_semana": 455
  },
  "cidades": [
   {
@@ -89,10 +90,10 @@
    "pilares": {
     "Comida": 4,
     "Comércio": 4,
-    "Dinheiro": 4,
+    "Dinheiro": 3,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 2
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -107,6 +108,10 @@
      [
       -1,
       "o inverno que não acaba na costa: a pesca parou (CL51; até o 458)"
+     ],
+     [
+      1,
+      "a várzea nova (pronta no 451; de vez)"
      ]
     ],
     "Comércio": [
@@ -137,6 +142,10 @@
      [
       -1,
       "o Ouvald no porto de Marasar (295)"
+     ],
+     [
+      1,
+      "a Casa de Cura (pronta no 449; de vez)"
      ]
     ],
     "Ordem": [
@@ -172,7 +181,7 @@
      ],
      [
       1,
-      "a guarda da casa na rua, pelo Graur (441; até o 448)"
+      "a muralha do rio e as torres de vigia (pronta no 449; de vez)"
      ]
     ],
     "Saude": [
@@ -185,26 +194,7 @@
    "renda": {
     "no_livro": true
    },
-   "obras": [
-    {
-     "nome": "a Casa de Cura (o hospital), junto da enfermaria da rua do rio",
-     "custo": 3000,
-     "pronta": 449,
-     "efeito": "Saúde +1 de vez em Ireviel; feridos graves da casa curam em metade do tempo"
-    },
-    {
-     "nome": "a várzea nova: fazendas, valas e a primeira plantação na terra que a enchente adubou",
-     "custo": 2000,
-     "pronta": 451,
-     "efeito": "Comida +1 de vez em Ireviel; a sobra de grão vai a Marasar (Comida de Marasar +1 enquanto a várzea der)"
-    },
-    {
-     "nome": "a muralha do rio e as torres de vigia (o reparo da muralha velha da rua do rio e da poterna do cais; duas torres com sino: o cais afundado e a várzea nova)",
-     "custo": 2800,
-     "pronta": 449,
-     "efeito": "Defesa +1 de vez em Ireviel; as torres dão o aviso da G11 (bicho no rio e na várzea)"
-    }
-   ],
+   "obras": [],
    "log": [
     "294: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [16]",
     "301: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [1]",
@@ -228,7 +218,8 @@
     "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]",
     "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 1 · evento [9]",
-    "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]"
+    "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
+    "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]"
    ],
    "obras_feitas": [
     {
@@ -248,6 +239,24 @@
      "custo": 4000,
      "pronta": 442,
      "efeito": "Saúde +1 e Ordem +1 de vez; o bairro velho não alaga mais (a comporta: uma noite do rei)"
+    },
+    {
+     "nome": "a Casa de Cura (o hospital), junto da enfermaria da rua do rio",
+     "custo": 3000,
+     "pronta": 449,
+     "efeito": "Saúde +1 de vez em Ireviel; feridos graves da casa curam em metade do tempo"
+    },
+    {
+     "nome": "a várzea nova: fazendas, valas e a primeira plantação na terra que a enchente adubou",
+     "custo": 2000,
+     "pronta": 451,
+     "efeito": "Comida +1 de vez em Ireviel; a sobra de grão vai a Marasar (Comida de Marasar +1 enquanto a várzea der)"
+    },
+    {
+     "nome": "a muralha do rio e as torres de vigia (o reparo da muralha velha da rua do rio e da poterna do cais; duas torres com sino: o cais afundado e a várzea nova)",
+     "custo": 2800,
+     "pronta": 449,
+     "efeito": "Defesa +1 de vez em Ireviel; as torres dão o aviso da G11 (bicho no rio e na várzea)"
     }
    ]
   },
@@ -257,9 +266,9 @@
    "gente": 3000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 1,
+    "Comércio": 2,
     "Dinheiro": 4,
-    "Saúde": 3,
+    "Saúde": 4,
     "Ordem": 4,
     "Defesa": 3
    },
@@ -276,6 +285,10 @@
      [
       -1,
       "o inverno que não acaba na costa: a pesca parou (CL51; até o 458)"
+     ],
+     [
+      1,
+      "a sobra de grão da várzea nova de Ireviel (451; de vez)"
      ]
     ],
     "Comércio": [
@@ -345,7 +358,8 @@
     "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
     "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]",
     "441: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
-    "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]"
+    "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]",
+    "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]"
    ]
   },
   {
@@ -382,11 +396,11 @@
      ],
      [
       1,
-      "o pão do confisco do rei (434; até o 449)"
+      "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
      ],
      [
       1,
-      "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
+      "clima: semana boa para o campo, 4 dias de chuva mansa (até o 461)"
      ]
     ],
     "Comércio": [
@@ -403,10 +417,6 @@
      [
       1,
       "o Ouvald e o remédio chegaram (405; voto C397c)"
-     ],
-     [
-      1,
-      "os físicos pagos pelo confisco (o Ouvald; 434; até o 449)"
      ]
     ],
     "Defesa": [],
@@ -446,7 +456,8 @@
     "pilar Ordem → 1 (435: o pão do confisco nas ruas baixas; a TIGRA faz as filas aceitarem (OR35 [20] natural: surpresa))",
     "441: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 1 · Defesa 4 · evento [14]",
     "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]",
-    "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))"
+    "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))",
+    "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -469,12 +480,12 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 2,
     "Comércio": 3,
-    "Dinheiro": 3,
+    "Dinheiro": 2,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Ordem": [
@@ -485,10 +496,6 @@
      [
       -1,
       "a febre: a gente foge do bairro baixo (FB44; até o 455)"
-     ],
-     [
-      -1,
-      "o povo ainda culpa o podestà pela criança, mas o rei falou em praça (QG47, PR48; até o 451)"
      ],
      [
       -1,
@@ -511,20 +518,7 @@
       "o incêndio no mercado (D48; até o 455)"
      ]
     ],
-    "Comida": [
-     [
-      -1,
-      "as fazendas de fora tomadas pelo mato da Elaeva (EC45; até o 448)"
-     ],
-     [
-      -1,
-      "o mato da Elaeva come mais fazendas (EC47; até o 451)"
-     ],
-     [
-      -1,
-      "clima: 3 dias de tempestade (até o 454)"
-     ]
-    ],
+    "Comida": [],
     "Saúde": [
      [
       -1,
@@ -535,22 +529,20 @@
       "o incêndio no bairro da febre (D51; até o 458)"
      ]
     ],
-    "Defesa": [
-     [
-      -1,
-      "as raízes da Elaeva racham a muralha de fora (EC45; até o 448)"
-     ],
-     [
-      -1,
-      "as raízes da Elaeva racham mais a muralha (EC47; até o 451)"
-     ]
-    ]
+    "Defesa": []
    },
    "renda": {
     "base": 350,
     "custo": 300
    },
-   "obras": [],
+   "obras": [
+    {
+     "nome": "o reparo da muralha de fora (as raízes da Elaeva racharam e um trecho caiu)",
+     "custo": 2500,
+     "pronta": 465,
+     "efeito": "Defesa +1 de vez em Farenta"
+    }
+   ],
    "log": [
     "356: tomada pela coalizão (nenhum bairro queimado); 357: anexada pelo conselho [12]+2; gente 10.000 [4]; pilares rolados [1][4][1][1][4][1] − 1",
     "357: Comida 1 · Comércio 4 · Dinheiro 0 · Saúde 0 · Ordem 3 · Defesa 0 · evento [2]",
@@ -570,7 +562,8 @@
     "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]",
     "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]",
     "441: Comida 3 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [16]",
-    "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]"
+    "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]",
+    "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

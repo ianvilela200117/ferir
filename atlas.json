@@ -192,6 +192,30 @@
    "degrau": "?",
    "conhecida": false,
    "como": "o mundo do 441 (TOCA A CASA; a notícia chega no 443)"
+  },
+  {
+   "nome": "Iothemna",
+   "onde": "debaixo das minas fundas de Levis (uma porta velha achada pelos mineiros da Brara, mais funda que Zythir)",
+   "era": "oficina de mestre morto",
+   "caiu": "maldição",
+   "guarda": "um núcleo",
+   "habita": "mortos",
+   "entrar": "um sacrifício",
+   "degrau": "?",
+   "conhecida": false,
+   "como": "455: o achado de Levis (EVENTO [17], AL55 [6]): os mineiros da Brara abriram uma porta velha nas minas fundas; o gerador deu ZAIEK, que bate no Zaiast: trocado por nomes.py arcaica livre (Iothemna) · a casa sabe no 458, pela carta da Brara (rio abaixo)"
+  },
+  {
+   "nome": "Meane",
+   "onde": "as matas do rio de Ireviel (os Caçadores Livres acharam, seguindo rastro de bicho)",
+   "era": "templo",
+   "caiu": "praga",
+   "guarda": "material Raro a Lendário",
+   "habita": "mortos",
+   "entrar": "um preço a alguém",
+   "degrau": "?",
+   "conhecida": false,
+   "como": "455: a SURPRESA dos Caçadores Livres (faccoes [20]; novidade [5]: um lugar novo; gerador lugar deu NESADE, que bate no cânone: trocado por nomes.py liquida livre); eles VENDEM o caminho a quem pagar mais (a agenda #571: pedem audiência)"
   }
  ]
 }

@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1218164,
+ "xp": 1218464,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -23,7 +23,7 @@
   402
  ],
  "mana": [
-  149,
+  164,
   164
  ],
  "foco": 37,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 8168,
+ "cofre": 10873,
  "livro": {
   "renda_casa": 3940,
   "despesa": 8230,
-  "ultima_semana": 448,
+  "ultima_semana": 455,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -321,6 +321,36 @@
    "valor": -600,
    "motivo": "448: todo o sal do mercado de Farenta (seis carroças, 100 cada)",
    "saldo": 8168
+  },
+  {
+   "dia": 455,
+   "valor": -1990,
+   "motivo": "semana: casa 3940 + cidades 2300 − despesa 8230",
+   "saldo": 6178
+  },
+  {
+   "dia": 455,
+   "valor": 4800,
+   "motivo": "455: a armadura de escamas de yeviel (Épica, o lote de venda) vendida no mercado de Ireviel (VE55 [4]: o preço do Motor)",
+   "saldo": 10978
+  },
+  {
+   "dia": 455,
+   "valor": 2000,
+   "motivo": "455: a espada de yeviel (Épica, o lote de venda) vendida à Guilda de Ireviel 25% acima (VE55 [6])",
+   "saldo": 12978
+  },
+  {
+   "dia": 455,
+   "valor": -105,
+   "motivo": "455: carvão da Fornalha: 3 sacas por peça Épica (o lote de venda e a Série da Hoste: 7 peças)",
+   "saldo": 12873
+  },
+  {
+   "dia": 455,
+   "valor": -2000,
+   "motivo": "455: a obra do reparo da muralha de fora de Farenta (2.500; G6: quatro quintos)",
+   "saldo": 10873
   }
  ],
  "materiais": {
@@ -391,12 +421,13 @@
    ]
   },
   "ferro": {
-   "kg": 305.0,
+   "kg": 236.2,
    "log": [
     "Dia 409: +18 409: o quinto da forja do minério da Casa dos Mineiros (90 kg)",
     "Dia 422: -5 422 (noite): as lâminas das caixas de físico",
     "Dia 423: +300 423: a barca do ferro de Levis (os 300 kg da coroa, do armazém do Ardenghi)",
-    "Dia 428: -8 428: a Couraça de Espinho do Moreth"
+    "Dia 428: -8 428: a Couraça de Espinho do Moreth",
+    "Dia 455: -68.8 455: o lote de venda (12,8) e a Série da Hoste (5 × 11,2)"
    ]
   },
   "vaduar": {
@@ -490,15 +521,17 @@
    ]
   },
   "nee": {
-   "kg": 30.0,
+   "kg": 16.0,
    "log": [
-    "Dia 437: +30 437: o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6"
+    "Dia 437: +30 437: o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6",
+    "Dia 455: -14 455: a Série da Hoste (5 × 2,8 kg)"
    ]
   },
   "yeviel": {
-   "kg": 60.0,
+   "kg": 56.8,
    "log": [
-    "Dia 437: +60 437: o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia"
+    "Dia 437: +60 437: o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia",
+    "Dia 455: -3.2 455: o lote de venda (2,8 kg na armadura e 0,4 na espada)"
    ]
   },
   "núcleo-épico-de-espinho": {
@@ -526,9 +559,10 @@
    ]
   },
   "gusta": {
-   "kg": 20.0,
+   "kg": 6.0,
    "log": [
-    "Dia 437: +20 437: a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno"
+    "Dia 437: +20 437: a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno",
+    "Dia 455: -14 455: a Série da Hoste (5 × 2,8 kg)"
    ]
   }
  },
@@ -575,7 +609,8 @@
   "Dia 428: SOBE ao 156",
   "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)",
   "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)",
-  "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)"
+  "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)",
+  "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

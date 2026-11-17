@@ -1,0 +1,7 @@
+DECLARADO (PC55) [Dia 455, 20:46] O CONSELHO VOTA: O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga com a forja: duas Épicas à venda por semana): a Feira Franca em Levis, o Édito do Físico, o Grão Guardado e o reparo da muralha de fora de Farenta · A) aprovar tudo (os três éditos: +680 por semana; a obra de Farenta) · B) só o que não pesa toda semana: a Feira Franca em Levis e a muralha de Farenta; o Físico e o Grão esperam a renda da forja aparecer no livro · C) só a muralha de Farenta · cada cadeira: d20 por opção + inclinação, fica com a maior; maioria vence; empate: a Intendente · votam: Nouliel, Graur, Sira, Herkald, Thuron · fora: Eliane, Tolvane, Isolda · sem inclinações
+  Nouliel (Tesoureira e Intendente): A[15] B[2] C[16] → C
+  Graur (Guarda do Reino): A[12] B[9] C[1] → A
+  Sira (Mestra dos Segredos): A[4] B[19] C[9] → B
+  Herkald (Mestre da Forja): A[7] B[1] C[4] → A
+  Thuron (O Colégio): A[10] B[7] C[20] → C
+  VENCE C) só a muralha de Farenta · placar A 2 · B 1 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Sira

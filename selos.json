@@ -1,25 +1,5 @@
 {
  "ordem": [
-  "AL23",
-  "VR23",
-  "VZ23",
-  "SS23",
-  "EL23a",
-  "EL23b",
-  "EL23c",
-  "EL23d",
-  "EL23e",
-  "GD23",
-  "GD23b",
-  "BR23",
-  "ES23d",
-  "NV23",
-  "LD23",
-  "SUR23",
-  "LD23n",
-  "PX23",
-  "MAL23",
-  "MAL23b",
   "MOR23",
   "FE23",
   "BE23v",
@@ -399,1073 +379,29 @@
   "CD53",
   "RT54",
   "YS54",
-  "YC54"
+  "YC54",
+  "455-laco-quem",
+  "455-laco",
+  "455-chamado",
+  "455-vinculos",
+  "PC55",
+  "EA55",
+  "VE55",
+  "CV55",
+  "OV55",
+  "AL55",
+  "XA55",
+  "LA55",
+  "LO55",
+  "SS55",
+  "CH55",
+  "TA55",
+  "TN55",
+  "NV55",
+  "GO55",
+  "GP55"
  ],
  "selos": {
-  "AL23": {
-   "id": "AL23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "A ALTHELTIA (Lendária 268, o Delta; obra: achar AS TRÊS FERRAMENTAS DOS REIS): o que ela pegou (FIEL, a célula confirma)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "COMPRA uma pista: um mapa velho do Delta com o lugar de uma das ferramentas"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "TOMA à força uma das TRÊS FERRAMENTAS (a primeira; quem a guardava morreu)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "DESTRÓI a obra de um rival que procurava o mesmo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "DESTRÓI a obra de um rival que procurava o mesmo",
-     "txt": "[6] → DESTRÓI a obra de um rival que procurava o mesmo"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "VR23": {
-   "id": "VR23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O VAROGH (Lendário, Steunn): como a notícia chega TROCADA",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "OUTRO LUGAR: dizem que o sinal dele apareceu perto de Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "OUTRO CULPADO: dizem que foi o Clã Hegre que marcou as pedras"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "O CONTRÁRIO: dizem que ele foi embora de Steunn"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "O CONTRÁRIO: dizem que ele foi embora de Steunn",
-     "txt": "[3] → O CONTRÁRIO: dizem que ele foi embora de Steunn"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "VZ23": {
-   "id": "VZ23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "QUEM RECLAMA HOJE DA FUMAÇA (segunda vez em dois dias)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o TEMPLO DE BAIXO de novo, agora com abaixo-assinado dos fiéis"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "os TECELÕES da rua da forja (o pano sai cinza)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o YEANE em pessoa, na porta da Fornalha"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os TECELÕES da rua da forja (o pano sai cinza)",
-     "txt": "[4] → os TECELÕES da rua da forja (o pano sai cinza)"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "SS23": {
-   "id": "SS23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O SSISH (Primordial, Fundas do Norte) dorme fundo: por quantas semanas",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "some o dado em semanas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "some o dado em semanas",
-     "txt": "[4] → some o dado em semanas"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "EL23a": {
-   "id": "EL23a",
-   "dia": 423,
-   "hora": "08:58:23",
-   "titulo": "A ELOUNE, A MÃE-LODO (Épica 136, Água): o TAMANHO (o gerador: Épico vai de cavalo a torre)",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "do tamanho de um CAVALO (1d10)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "do tamanho de uma CASA (1d12)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "do tamanho de uma TORRE (2d10)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "do tamanho de um CAVALO (1d10)",
-     "txt": "[1] → do tamanho de um CAVALO (1d10)"
-    }
-   ],
-   "hora_rolado": "08:58:23"
-  },
-  "EL23b": {
-   "id": "EL23b",
-   "dia": 423,
-   "hora": "08:58:23",
-   "titulo": "A ELOUNE: o 1º TRAÇO (Épico tem 2; d18 da lista do gerador)",
-   "dado": [
-    1,
-    18,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "couraça (RD +6)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "regenera (68 PV por rodada)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "voa"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "veneno no golpe"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "olhar paralisante"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "muitos membros (+1 ataque)"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "camuflagem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "grito que causa medo"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "sopro em cone de 9 m (Água)"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "escava ou nada"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 11,
-     "res": "sentido sísmico (nunca é surpreendida)"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 12,
-     "res": "imune a armas duas categorias abaixo"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 13,
-     "res": "carrega doença"
-    },
-    {
-     "tipo": "num",
-     "a": 14,
-     "b": 14,
-     "res": "invoca crias (1d6 por luta)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 15,
-     "res": "reflete magia com 18 a 20"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 16,
-     "res": "devora metal"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 17,
-     "res": "muda de forma"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 18,
-     "res": "fala e mente"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "veneno no golpe",
-     "txt": "[4] → veneno no golpe"
-    }
-   ],
-   "hora_rolado": "08:58:23"
-  },
-  "EL23c": {
-   "id": "EL23c",
-   "dia": 423,
-   "hora": "08:58:23",
-   "titulo": "A ELOUNE: o 2º TRAÇO (se repetir o 1º, vale o número seguinte da lista)",
-   "dado": [
-    1,
-    18,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "couraça (RD +6)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "regenera (68 PV por rodada)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "voa"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "veneno no golpe"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "olhar paralisante"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "muitos membros (+1 ataque)"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "camuflagem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "grito que causa medo"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "sopro em cone de 9 m (Água)"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "escava ou nada"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 11,
-     "res": "sentido sísmico (nunca é surpreendida)"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 12,
-     "res": "imune a armas duas categorias abaixo"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 13,
-     "res": "carrega doença"
-    },
-    {
-     "tipo": "num",
-     "a": 14,
-     "b": 14,
-     "res": "invoca crias (1d6 por luta)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 15,
-     "res": "reflete magia com 18 a 20"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 16,
-     "res": "devora metal"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 17,
-     "res": "muda de forma"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 18,
-     "res": "fala e mente"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "veneno no golpe",
-     "txt": "[4] → veneno no golpe"
-    }
-   ],
-   "hora_rolado": "08:58:23"
-  },
-  "EL23d": {
-   "id": "EL23d",
-   "dia": 423,
-   "hora": "08:58:23",
-   "titulo": "ACHAR A ELOUNE AO PRIMEIRO CLARÃO (a Eliane lê o rastro do gado; o vaqueiro mostra a vala)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NÃO A ACHAM: o rastro some no lodaçal fundo; voltam sem luta e o gado segue em risco"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 14,
-     "res": "ACHAM no LODAÇAL, na beira da água: luta no lodo (o terreno é dela: +2 na Defesa dela)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "PEGAM-NA FORA D'ÁGUA, na várzea, comendo o resto do gado: SURPRESA (ela não age na 1ª rodada)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "NÃO A ACHAM: o rastro some no lodaçal fundo; voltam sem luta e o gado segue em risco",
-     "txt": "[1] → NÃO A ACHAM: o rastro some no lodaçal fundo; voltam sem luta e o gado segue em risco"
-    }
-   ],
-   "hora_rolado": "08:58:23"
-  },
-  "EL23e": {
-   "id": "EL23e",
-   "dia": 423,
-   "hora": "08:58:23",
-   "titulo": "AS CRIAS (4 no lodaçal desde o 203)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "as crias vêm com ela"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "as crias ficam no ninho"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "as crias vêm com ela",
-     "txt": "[2] → as crias vêm com ela"
-    }
-   ],
-   "hora_rolado": "08:58:23"
-  },
-  "GD23": {
-   "id": "GD23",
-   "dia": 423,
-   "hora": "08:58:54",
-   "titulo": "A GUILDA SAI PARA A FORQUILHA (amanhecer do 423): quantos caçadores vão com o Starkald e o Goir",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "quatro"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "seis"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "oito"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "seis",
-     "txt": "[4] → seis"
-    }
-   ],
-   "hora_rolado": "08:58:54"
-  },
-  "GD23b": {
-   "id": "GD23b",
-   "dia": 423,
-   "hora": "08:58:54",
-   "titulo": "O PLANO DO STARKALD (CRUEL e AMBICIOSO; viu o Morek recuar do fogo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATAQUE DIRETO no amanhecer do 424, com flechas de fogo que a Guilda já tem"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ARMADILHA DE FOGO: uma vala de piche na margem; pede à casa 2 barris de piche e 30 flechas incendiárias (200); ataca no 425"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ISCA VIVA: quer levar 4 FORÇADOS amarrados na margem para atrair o bicho até o fogo; pede licença ao rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "ARMADILHA DE FOGO: uma vala de piche na margem; pede à casa 2 barris de piche e 30 flechas incendiárias (200); ataca no 425",
-     "txt": "[4] → ARMADILHA DE FOGO: uma vala de piche na margem; pede à casa 2 barris de piche e 30 flechas incendiárias (200); ataca no 425"
-    }
-   ],
-   "hora_rolado": "08:58:54"
-  },
-  "BR23": {
-   "id": "BR23",
-   "dia": 423,
-   "hora": "08:59:31",
-   "titulo": "O RECADO DA BRARA NA BARCA DO FERRO (laço 3, MOMENTO; contrariada com a partilha; a carta das picaretas só chega a ela no 426)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "COBRA: diz que a barra de vaduar da coroa era de Levis e a quer de volta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "PEDE: que o rei vá a Levis ver a fundição velha acesa; ela quer mostrar o que fez"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "UM GESTO: manda junto um martelo que ela forjou para o rei, com uma frase só"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "PEDE: que o rei vá a Levis ver a fundição velha acesa; ela quer mostrar o que fez",
-     "txt": "[3] → PEDE: que o rei vá a Levis ver a fundição velha acesa; ela quer mostrar o que fez"
-    }
-   ],
-   "hora_rolado": "08:59:31"
-  },
-  "ES23d": {
-   "id": "ES23d",
-   "dia": 423,
-   "hora": "08:59:31",
-   "titulo": "O QUE O ESCREVENTE DIZ EM PRAÇA (a defesa dele)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "NEGA TUDO: diz que o livro é mentira do Drassa para se salvar"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "diz que o Ardenghi AMEAÇAVA A FAMÍLIA dele (prova fraca, peso 1)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "OFERECE NOMES: quem mais na alfândega recebia, e quem paga agora (pede clemência)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "NEGA TUDO: diz que o livro é mentira do Drassa para se salvar",
-     "txt": "[1] → NEGA TUDO: diz que o livro é mentira do Drassa para se salvar"
-    }
-   ],
-   "hora_rolado": "08:59:31"
-  },
-  "NV23": {
-   "id": "NV23",
-   "dia": 423,
-   "hora": "09:01:02",
-   "titulo": "O NÍVEL DO NIVIS (escrevente da alfândega; gente comum)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "dez mais o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "dez mais o dado",
-     "txt": "[4] → dez mais o dado"
-    }
-   ],
-   "hora_rolado": "09:01:02"
-  },
-  "LD23": {
-   "id": "LD23",
-   "dia": 423,
-   "hora": "09:13:22",
-   "titulo": "QUEM COMANDA A ALA DO CAIS EM ERYSSA (o chefe do culto viaja: não está)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um MESTRE DE CULTO (guerreiro; nível 2d10 + 20)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um SACERDOTE DO XAATHIS (nível 50 + d20; magia de SANGUE)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "DOIS SACERDOTES (os dois níveis 40 + d20)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um SACERDOTE DO XAATHIS (nível 50 + d20; magia de SANGUE)",
-     "txt": "[4] → um SACERDOTE DO XAATHIS (nível 50 + d20; magia de SANGUE)"
-    }
-   ],
-   "hora_rolado": "09:13:22"
-  },
-  "SUR23": {
-   "id": "SUR23",
-   "dia": 423,
-   "hora": "09:13:22",
-   "titulo": "A DESCIDA (tarde do 423): o rei, os quatro e 20 da guarda descem a escada do dique; o culto ouve?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "OUVEM: o culto se prepara (rola o PX23: o piche)"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 16,
-     "res": "dão de cara: sem surpresa"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 20,
-     "res": "SURPRESA: pegos nas bancas (o lado do rei +4 na 1ª rodada)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "OUVEM: o culto se prepara (rola o PX23: o piche)",
-     "txt": "[2] → OUVEM: o culto se prepara (rola o PX23: o piche)"
-    }
-   ],
-   "hora_rolado": "09:13:22"
-  },
-  "LD23n": {
-   "id": "LD23n",
-   "dia": 423,
-   "hora": "09:13:28",
-   "titulo": "O NÍVEL DO SACERDOTE DE ERYSSA (50 + d20)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "cinquenta mais o dado"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 17,
-     "res": "cinquenta mais o dado",
-     "txt": "[17] → cinquenta mais o dado"
-    }
-   ],
-   "hora_rolado": "09:13:28"
-  },
-  "PX23": {
-   "id": "PX23",
-   "dia": 423,
-   "hora": "09:13:28",
-   "titulo": "O CULTO OUVIU: O QUE FAZ COM O PIChE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "ACENDE OS BARRIS na boca da escada: fogo e fumaça no mercado fechado (rola o PX23b)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "arma uma linha de lanças atrás das bancas (defende melhor: a rua estreita conta)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "PARTE FOGE pelo canal velho com os barris, antes da luta (rola quantos)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "arma uma linha de lanças atrás das bancas (defende melhor: a rua estreita conta)",
-     "txt": "[4] → arma uma linha de lanças atrás das bancas (defende melhor: a rua estreita conta)"
-    }
-   ],
-   "hora_rolado": "09:13:28"
-  },
-  "MAL23": {
-   "id": "MAL23",
-   "dia": 423,
-   "hora": "09:13:39",
-   "titulo": "A MALDIÇÃO DE SANGUE DO SACERDOTE DE ERYSSA (antes da luta): em quem",
-   "dado": [
-    1,
-    5,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Ferir"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Moreth"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Isolda"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Eliane"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "Eliane",
-     "txt": "[5] → Eliane"
-    }
-   ],
-   "hora_rolado": "09:13:39"
-  },
-  "MAL23b": {
-   "id": "MAL23b",
-   "dia": 423,
-   "hora": "09:13:47",
-   "titulo": "A ELIANE RESISTE À MALDIÇÃO DE SANGUE (d20 + 9 contra CD 16; o 1 natural falha)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "FALHA: o sangue ferve; ela sai da luta (fora) e fica FERIDA LEVE"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 20,
-     "res": "RESISTE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "FALHA: o sangue ferve; ela sai da luta (fora) e fica FERIDA LEVE",
-     "txt": "[2] → FALHA: o sangue ferve; ela sai da luta (fora) e fica FERIDA LEVE"
-    }
-   ],
-   "hora_rolado": "09:13:47"
-  },
   "MOR23": {
    "id": "MOR23",
    "dia": 423,
@@ -19597,6 +18533,1140 @@
     }
    ],
    "hora_rolado": "20:35:43"
+  },
+  "455-laco-quem": {
+   "id": "455-laco-quem",
+   "dia": 455,
+   "hora": "20:46:17",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a ULURVE",
+     "txt": "[4] → a ULURVE"
+    }
+   ],
+   "hora_rolado": "20:46:17"
+  },
+  "455-laco": {
+   "id": "455-laco",
+   "dia": 455,
+   "hora": "20:46:17",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "MOMENTO",
+     "txt": "[3] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "20:46:17"
+  },
+  "455-chamado": {
+   "id": "455-chamado",
+   "dia": 455,
+   "hora": "20:46:17",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      16
+     ],
+     "total": 19,
+     "res": "chegam 2",
+     "txt": "[16] +3 = 19 → chegam 2"
+    }
+   ],
+   "hora_rolado": "20:46:17"
+  },
+  "455-vinculos": {
+   "id": "455-vinculos",
+   "dia": 455,
+   "hora": "20:46:17",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Krernos–Graur",
+     "txt": "#1 [4] → Krernos–Graur"
+    },
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Thuron–Erymir",
+     "txt": "#2 [5] → Thuron–Erymir"
+    }
+   ],
+   "hora_rolado": "20:46:17"
+  },
+  "PC55": {
+   "id": "PC55",
+   "dia": 455,
+   "hora": "20:46:38",
+   "titulo": "O CONSELHO VOTA: O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga com a forja: duas Épicas à venda por semana): a Feira Franca em Levis, o Édito do Físico, o Grão Guardado e o reparo da muralha de fora de Farenta",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE C) só a muralha de Farenta · placar A 2 · B 1 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Sira",
+     "txt": "VENCE C) só a muralha de Farenta · placar A 2 · B 1 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Sira"
+    }
+   ]
+  },
+  "EA55": {
+   "id": "EA55",
+   "dia": 455,
+   "hora": "20:56:20",
+   "titulo": "OS DOIS EFEITOS DE ARMA DA ESPADA DE YEVIEL (o pool de arma do obra_aberta; repetido: o seguinte da lista)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o fio não cega nem lasca"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "fere o que não tem corpo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "volta à mão de quem a lança (9 m)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "1x por cena o golpe derruba"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "sangra 1d6 por rodada"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "+2 contra quem já feriu o portador"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "avisa inimigo escondido a 9 m"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "atravessa escudo"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "1x por dia um golpe que erraria acerta"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "corta magia de 1º círculo"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "não sai da mão"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "empurra 2 m"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "pesa quase nada: +2 na Iniciativa"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "+1d6 de fogo no 1º golpe"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "dano dobrado contra uma Essência (1d12)"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "brilha fraco quando quer"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "o portador não pode ser surpreendido"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "crítico com 19 ou 20"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "bebe o golpe: cura 1d6"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "o som da lâmina dá medo"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "o portador não pode ser surpreendido",
+     "txt": "#1 [17] → o portador não pode ser surpreendido"
+    },
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "o som da lâmina dá medo",
+     "txt": "#2 [20] → o som da lâmina dá medo"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "VE55": {
+   "id": "VE55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "A VENDA NO MERCADO DE IREVIEL (o lote de yeviel), d6 por peça: preço do Motor",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "sem comprador nesta semana (fica para a próxima)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "vende ao preço (armadura 4.800 · espada 1.600)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "vende 25% acima, a uma guilda ou senhor de fora (armadura 6.000 · espada 2.000)"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [
+    "armadura",
+    "espada"
+   ],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "vende ao preço (armadura 4.800 · espada 1.600)",
+     "txt": "armadura [4] → vende ao preço (armadura 4.800 · espada 1.600)"
+    },
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "vende 25% acima, a uma guilda ou senhor de fora (armadura 6.000 · espada 2.000)",
+     "txt": "espada [6] → vende 25% acima, a uma guilda ou senhor de fora (armadura 6.000 · espada 2.000)"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "CV55": {
+   "id": "CV55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "QUEM COMPRA (só vale para a peça vendida), d6 por peça",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "gente do reino (a Guilda de Ireviel, um caçador, um capitão)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "gente de fora (um mercador de Marasar, um senhor da costa)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um intermediário de um INIMIGO da casa: a peça vai para a mão de quem a casa caça"
+    }
+   ],
+   "oculto": true,
+   "x": 2,
+   "nomes": [
+    "armadura",
+    "espada"
+   ],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "gente de fora (um mercador de Marasar, um senhor da costa)",
+     "txt": "armadura [4] → gente de fora (um mercador de Marasar, um senhor da costa)"
+    },
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "gente do reino (a Guilda de Ireviel, um caçador, um capitão)",
+     "txt": "espada [1] → gente do reino (a Guilda de Ireviel, um caçador, um capitão)"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "OV55": {
+   "id": "OV55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "O MESTRE ALQUIMISTA (o Óleo de Essência de VIDA para o Delta; a Sira e o Thuron procuram)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "nenhum no reino"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um no DELTA, entre os salineiros: 2d6 frascos a 150, prontos quando a casa chegar"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um em IREVIEL, na Casa dos Estudiosos (2d6 frascos a 150, prontos no 460)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nenhum no reino",
+     "txt": "[3] → nenhum no reino"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "AL55": {
+   "id": "AL55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "O ACHADO DE LEVIS (EVENTO [17] do reino: ouro, material ou ruína debaixo da cidade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OURO: 2d6 × 50 numa parede velha (a Brara manda a metade à casa)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MATERIAL (gerador.py material, nas galerias velhas das minas)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma RUÍNA debaixo da cidade: uma porta velha nas minas fundas (boato de masmorra no atlas)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "uma RUÍNA debaixo da cidade: uma porta velha nas minas fundas (boato de masmorra no atlas)",
+     "txt": "[6] → uma RUÍNA debaixo da cidade: uma porta velha nas minas fundas (boato de masmorra no atlas)"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "XA55": {
+   "id": "XA55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "O CULTO DO XAATHIS PROCURA A CASA EM LEVIS (ameaça ou sabota: pequeno, mas visível)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "AMEAÇA: um aviso com o olho do culto pregado na porta da Casa dos Mineiros; nada quebra; a Brara pede reforço"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "SABOTA: fogo de noite na fundição velha: a série de picaretas atrasa uma semana"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "SABOTA: fogo de noite na fundição velha: a série de picaretas atrasa uma semana",
+     "txt": "[5] → SABOTA: fogo de noite na fundição velha: a série de picaretas atrasa uma semana"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "LA55": {
+   "id": "LA55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "O ACORDO QUE A LELIEL OFERECE À RIVAL DELA, A ALMISION (notícia FIEL; a ambição dela: casar acima da sua classe)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "PAZ: a briga velha das duas acaba"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CASAMENTO: a coroa nova do Norte pede uma aliança de sangue à Escola Única"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "TROCA: uma das duas peças da Leliel por algo da Almision"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "TROCA: uma das duas peças da Leliel por algo da Almision",
+     "txt": "[5] → TROCA: uma das duas peças da Leliel por algo da Almision"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "LO55": {
+   "id": "LO55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "A OBRA NOVA DA LELIEL (a coroa do Norte está feita), d6",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "RETOMAR FARENTA (a guerra contra Ireviel volta)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CASAR ACIMA DA SUA CLASSE (a coroa nova quer um trono velho)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "CURAR ALGUÉM (o desejo dela)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "DERRUBAR A CASA DE IREVIEL"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "RETOMAR FARENTA (a guerra contra Ireviel volta)",
+     "txt": "[1] → RETOMAR FARENTA (a guerra contra Ireviel volta)"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "SS55": {
+   "id": "SS55",
+   "dia": 455,
+   "hora": "20:56:45",
+   "titulo": "O SSISH, O COLOSSO DA COLMEIA (Primordial 466), migrou de Marasar para IREVIEL E O RIO: onde assenta e quando a casa vê (a notícia chegou INCOMPLETA: a casa só sabe que saiu de Marasar)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "LONGE: nas Fundas, rio acima (sinal: cheiro de enxofre no rio; notícia no 462)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nas MATAS DO RIO, a dois dias de Ireviel (sinal: gado e barcas somem; notícia no 459)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "PERTO: a várzea e o rio abaixo de Ireviel (as torres o veem no 457: a vigia da G11)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "LONGE: nas Fundas, rio acima (sinal: cheiro de enxofre no rio; notícia no 462)",
+     "txt": "[1] → LONGE: nas Fundas, rio acima (sinal: cheiro de enxofre no rio; notícia no 462)"
+    }
+   ],
+   "hora_rolado": "20:56:45"
+  },
+  "CH55": {
+   "id": "CH55",
+   "dia": 455,
+   "hora": "20:57:34",
+   "titulo": "QUEM CHEGA À CASA PELO CHAMADO (455: chegam 2; G3: cada um pede uma peça da forja, Rara ou melhor, no lugar de soldo, dentro de uma lua): O NÍVEL DE CADA UM (a tabela do 434)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 30 a 50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 50 a 80"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 80 a 110"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 110 a 140"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [
+    "Kveur",
+    "Hurke"
+   ],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "nível 30 a 50",
+     "txt": "Kveur [1] → nível 30 a 50"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nível 50 a 80",
+     "txt": "Hurke [3] → nível 50 a 80"
+    }
+   ],
+   "hora_rolado": "20:57:34"
+  },
+  "TA55": {
+   "id": "TA55",
+   "dia": 455,
+   "hora": "20:57:34",
+   "titulo": "O TALENTO QUE APARECE EM IREVIEL (EVENTO [18] do reino): o QUE ele sabe fazer",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "FORJA (um ferreiro de mão rara)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "MAGIA (um conjurador sem escola)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "ARMAS (um guerreiro sem senhor)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "CURA (um FÍSICO DE CAMPANHA: encurta ferimento)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "NEGÓCIO (um mercador de olho bom)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SEGREDO (um espião ou um ladrão de mão leve)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "FORJA (um ferreiro de mão rara)",
+     "txt": "[1] → FORJA (um ferreiro de mão rara)"
+    }
+   ],
+   "hora_rolado": "20:57:34"
+  },
+  "TN55": {
+   "id": "TN55",
+   "dia": 455,
+   "hora": "20:57:34",
+   "titulo": "O NÍVEL DO TALENTO (a tabela do chamado)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 30 a 50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 50 a 80"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 80 a 110"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 110 a 140"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nível 50 a 80",
+     "txt": "[4] → nível 50 a 80"
+    }
+   ],
+   "hora_rolado": "20:57:34"
+  },
+  "NV55": {
+   "id": "NV55",
+   "dia": 455,
+   "hora": "20:57:42",
+   "titulo": "O NÍVEL EXATO (o número soma ao piso da faixa: Kveur 30, Hurke 50, o talento 50; a faixa de 50 a 80 soma 1,5 × o dado, para baixo)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado soma ao piso"
+    }
+   ],
+   "oculto": false,
+   "x": 3,
+   "nomes": [
+    "Kveur",
+    "Hurke",
+    "talento"
+   ],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      15
+     ],
+     "total": 15,
+     "res": "o dado soma ao piso",
+     "txt": "Kveur [15] → o dado soma ao piso"
+    },
+    {
+     "dados": [
+      8
+     ],
+     "total": 8,
+     "res": "o dado soma ao piso",
+     "txt": "Hurke [8] → o dado soma ao piso"
+    },
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "o dado soma ao piso",
+     "txt": "talento [17] → o dado soma ao piso"
+    }
+   ],
+   "hora_rolado": "20:57:42"
+  },
+  "GO55": {
+   "id": "GO55",
+   "dia": 455,
+   "hora": "20:59:43",
+   "titulo": "O GOLPE OU A SUCESSÃO DE FARENTA (agenda #590: devia aparecer no 447 e o Mestre deixou passar; rola agora, aparece no 456, a notícia chega a Ireviel no 458 pela costa): QUEM e O QUÊ",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os do CONSELHO do podestà se juntam contra o Tirello (o Dulassetta entre eles): pedem um podestà novo, sem armas, por voto forçado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a GUARDA DO PEDÁGIO toma a porta do sul e cobra o pedágio velho (Comércio de Farenta −1 até a casa agir)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a BOTICA VELHA compra o conselho: um dos seus vira a mão direita do Tirello (e a febre vira negócio)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a família de um podestà antigo reclama o posto com papel velho (sucessão)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o próprio TIRELLO dá o golpe: fecha o conselho e governa sozinho (diz que é pela guerra)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os do CONSELHO do podestà se juntam contra o Tirello (o Dulassetta entre eles): pedem um podestà novo, sem armas, por voto forçado",
+     "txt": "[1] → os do CONSELHO do podestà se juntam contra o Tirello (o Dulassetta entre eles): pedem um podestà novo, sem armas, por voto forçado"
+    }
+   ],
+   "hora_rolado": "20:59:43"
+  },
+  "GP55": {
+   "id": "GP55",
+   "dia": 455,
+   "hora": "20:59:43",
+   "titulo": "A GUARDA DO PEDÁGIO CUMPRE O OBJETIVO (6/6: queimar os Barqueiros do Livro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "queima as duas barcas dos Barqueiros que fazem a costa, no porto de Farenta; ninguém morre; os Barqueiros perdem a rota da costa até o 480"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "manda gente ao LEVE, na forquilha de Ireviel: o fogo vem no 459 (no dia: a contra-espionagem 35 contra a força 3 da Guarda)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o fogo no LEVE no 459, com mortos (2d6 barqueiros), se a contra-espionagem não pegar"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "manda gente ao LEVE, na forquilha de Ireviel: o fogo vem no 459 (no dia: a contra-espionagem 35 contra a força 3 da Guarda)",
+     "txt": "[5] → manda gente ao LEVE, na forquilha de Ireviel: o fogo vem no 459 (no dia: a contra-espionagem 35 contra a força 3 da Guarda)"
+    }
+   ],
+   "hora_rolado": "20:59:43"
   }
  }
 }

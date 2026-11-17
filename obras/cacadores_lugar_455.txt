@@ -1,0 +1,7 @@
+nome: Nesade
+o que era: templo
+por que caiu: praga
+o que guarda: material Raro a Lendário
+o que habita: mortos
+custo de entrar: um preço a alguém
+————————————————————————————————————————

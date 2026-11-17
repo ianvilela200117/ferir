@@ -134,6 +134,12 @@ def semana(M, dia):
                 res = (f"BATE DE FRENTE com {o['nome']}: [{a}]+{ff} × [{b}]+{fo}"
                        f" → vence {ganha['nome']} ({ganha['relogio'][0]}/6); {perde['nome']} cai a força {perde['forca']}" + (' e SE DESFAZ' if perde['forca'] <= 0 else ''))
                 nt = f"briga com {o['nome']}; vence {ganha['nome']}"
+                # Dia 455: quem GANHA defendendo (o outro lado da briga) também pode chegar a 6/6; antes só a facção
+                # do turno era conferida e o objetivo da outra passava calado (a Guarda do Pedágio no 455)
+                if ganha is o and o['relogio'][0] >= 6 and o.get('estado', 'viva') == 'viva':
+                    o['estado'] = 'cumpriu'
+                    res += f" → {o['nome']}: OBJETIVO CUMPRIDO (a terra dela muda; o Mestre mostra)"
+                    agenda_add(dia, f"FACÇÃO CUMPRIU O OBJETIVO — {o['nome']} ({o.get('onde', '?')}): {o.get('objetivo') or o.get('o_que', '')[:160]}", tipo='marco', origem='faccoes.py', toca=True)
         elif r <= 16:
             f['relogio'][0] = max(0, f['relogio'][0] - 1)
             res = f"PERDE TERRENO (a guarda, a lei ou um rival aperta) → {f['relogio'][0]}/6"
