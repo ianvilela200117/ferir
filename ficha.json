@@ -19,11 +19,11 @@
   "Afinidade": 171
  },
  "pv": [
-  54,
+  112,
   402
  ],
  "mana": [
-  129,
+  164,
   164
  ],
  "foco": 37,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 13078,
+ "cofre": 11008,
  "livro": {
   "renda_casa": 3960,
   "despesa": 8230,
-  "ultima_semana": 434,
+  "ultima_semana": 441,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -297,6 +297,12 @@
    "valor": -5500,
    "motivo": "434: o OURO DO CONFISCO em pão e físicos para Levis (a briga do pão e da doença; a ordem do rei, a Brara reparte)",
    "saldo": 13078
+  },
+  {
+   "dia": 441,
+   "valor": -2070,
+   "motivo": "semana: casa 3960 + cidades 2200 − despesa 8230",
+   "saldo": 11008
   }
  ],
  "materiais": {
@@ -557,7 +563,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 1,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },

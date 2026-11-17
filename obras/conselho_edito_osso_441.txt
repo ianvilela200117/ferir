@@ -1,0 +1,8 @@
+DECLARADO (ED41) [Dia 441, 02:49] O CONSELHO VOTA: O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem para Farenta, com o servo Zyza atrás dele): os servos de osso do rei andam dentro da lei do reino? · A) aprovar o Édito do Osso (os servos do rei andam à vista; a Mamiltia e o Templo do Rio não vão gostar) · B) recusar (os servos ficam fora dos muros) · C) aprovar pela metade: os servos andam só com a hoste e na guerra, nunca nas ruas e nas feiras · cada cadeira: d20 por opção + inclinação, fica com a maior; maioria vence; empate: a Intendente · votam: Nouliel, Graur, Sira, Isolda, Herkald, Thuron · fora: Eliane, Tolvane · sem inclinações
+  Nouliel (Tesoureira e Intendente): A[1] B[20] C[9] → B
+  Graur (Guarda do Reino): A[9] B[12] C[1] → B
+  Sira (Mestra dos Segredos): A[2] B[20] C[11] → B
+  Isolda (Mestre das Águas): A[13] B[12] C[6] → A
+  Herkald (Mestre da Forja): A[20] B[13] C[1] → A
+  Thuron (O Colégio): A[19] B[4] C[15] → A
+  VENCE B) recusar (os servos ficam fora dos muros) · placar A 3 · B 3 · C 0 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Thuron

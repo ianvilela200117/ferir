@@ -1,0 +1,44 @@
+[02:48:17] Dia 439 · Pressão 3/5 · evento local 1d20 [15] -> um animal estranho nos lodaçais
+  O TEMPO (10 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, calmo (d6 [1] fica · vento d6 [1])
+   o Porto de Marasar: limpo, calmo (d6 [3] fica · vento d6 [1])
+   Levis: chuva de verão, vento forte (d6 [1] fica · vento d6 [6]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: limpo, vento firme (d6 [5] muda, d20 [5] · vento d6 [5])
+   O RIO: baixo [34/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 2 de PV do rei nesta aurora (d6 × 2) → pv: 52/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  ◈ festa em 5 dia(s) (Dia 444): a Procissão da Água · se o rei paga (50): o rei anda na procissão: reputação +2 com a fé da cidade em que ele estiver
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 439 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [9] Shizess (as caravanas)
+    A NOTÍCIA: [1] hoje
+    [MISSÃO]: Varol (o Mestre dá o nome pela ficção)
+    dificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Lendária
+    objetivo: escoltar alguém até um lugar
+    complicação escondida (Envelope): tem um monstro no caminho
+    prazo: 11 dias
+    recompensa: 6000 XP · 3000 de ouro · informação do Envelope
+    penalidade se falhar: Reputação −1 a −2 com quem pediu
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 439
+    Lendários: d20 [10] quietos hoje
+    trama do dia: Ruddo → Seline (em Ireviel) (TRAIÇÃO PENDENTE) d20 [18] um gesto dela aparece em cena hoje
+    FAÍSCA: Ardenghi deve a vida a Skedda, por causa de um mapa
+    FAÍSCA: ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322) descobre o segredo de Skugek, por causa de sal
+    FAÍSCA: Kasgal chantageia Gorron (oferece a missão do Delta), por causa de a Matriz
+  ▶ AGENDA #509 (era do Dia 438): CHEGA a Ireviel: o recado do rei à LURENTETTA, pelo YAVOR em Ireviel (o SAL contra a Elaeva) (saiu de Levis no 435)
+  ▶ AGENDA #514: A BARCA DO CORREIO chega a Levis com as notícias de Ireviel: a BATALHA DE MARASAR (a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu; o Facio na cela da Skotha) · o LOULA desceu a Ireviel e um dos SEM-TORRE sumiu (436) · (se o rei já tiver saído de Levis, a barca o cruza no rio)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): briga com os Rendidos de Marasar; vence os Rendidos de Marasar · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ceduion, reitor do Colégio de Telosus (Telosus): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Asesra (Raro, Kremir): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: a Companhia do Último Gancho (Qulosus): caçou Kervos e perdeu · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: OFERTA PÚBLICA: alguém paga por um serviço — Shizess (as caravanas) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi

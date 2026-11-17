@@ -1105,3 +1105,12 @@ Na primeira sala o guarda morto ainda estava onde caíra, frio como a pedra. O r
 Diante da última porta o rei fechou os olhos e olhou uma hora adiante. Viu a porta abrir. Viu uma coisa do tamanho de uma colina desenrolar cabeças no escuro, e um olho que parava os homens onde estavam. Viu o Eiagrir cair primeiro. Viu a mesma hora muitas vezes, e em nenhuma alguém passava da soleira. Abriu os olhos e não deixou ninguém tocar na porta.
 
 - **Parada:** manhã do 438, a porta fechada. O Zyza de pé atrás do rei.
+
+### De Zythir a Ireviel, 438 a 441
+O rei perguntou à pedra se havia palavra que deitasse a coisa da última sala. A voz de Tuir respondeu sem pressa: não havia. "Só a força. Mas ele não passa da porta. Quem não abre, não morre." E depois, como quem lembra de um vizinho velho: "Ele não come desde que me fecharam. É a fome que o fere."
+
+Saíram. Em Levis, as mulheres do cais puxaram as crianças para dentro quando o bicho morto passou atrás do rei, e ninguém disse nada. A barca desceu três dias um rio magro, de pedras à mostra. Toda aurora o rei acordava mais pálido e o Zyza mais firme.
+
+Em Ireviel o conselho se reuniu na casa do cais, porque a Intendente não quis o servo dentro dos muros nem para a conversa. Três disseram sim e três disseram não. A Nouliel, que tinha dito não, fechou o livro e disse não outra vez. O Zyza ficou na barca, de pé na proa, olhando a cidade.
+
+- **Parada:** manhã do 441, o cais de Ireviel. A barca pronta para Farenta; uma cidade inteira querendo falar com o rei antes.

@@ -329,3 +329,5 @@ depois vira linha nova aqui.
 - (437, fora do jogo) MOTOR 9: a revisão completa e o LIVRO NOVE (compendio/08_livro_nove.md; G25 a G34). A Chuva de Brasas vale ×5 (área). O rei tem um Despertar em aberto.
 
 - (438) O ZYZA erguido como SERVO ARMADO do rei (nível 129; a palavra do Osso que Cresce; o preço dele: a FOME, carne de bicho Raro ou acima uma vez por lua). O Despertar do rei: MÃO QUE DOMA (teto de servos 7). A Visão do Tempo diante da sala 9 de Zythir: o guardião VDOGEK (Único, besta do tamanho de uma colina, Elo) derruba o Moreth, o Eiagrir e o Zyza em todas as vezes; a porta ficou fechada.
+
+- (438-441) O eco de Tuir: nada deita o guardião da sala 9 senão a força; a FOME o fere. Zythir fica fechada. O rei desce a Ireviel com o servo Zyza (Levis e Ireviel o viram: −5 cada). O conselho RECUSOU o Édito do Osso (3 a 3; a Intendente desempatou). A Mamiltia: a prova aponta a ALMISION, não o Adurel; pede que o rei não aja ainda. A Lurentetta manda o sal e 20 lanças com a Mie a Farenta. Ireviel: Defesa 1/4 (briga no cais). A missão do Ithvil (10.000, até o 449). MOTOR 9b: as seis correções feitas (G35 a G37).

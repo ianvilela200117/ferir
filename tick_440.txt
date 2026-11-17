@@ -1,0 +1,43 @@
+[02:48:30] Dia 440 · Pressão 4/5 · evento local 1d20 [14] -> um vizinho reclama do barulho ou da fumaça
+  O TEMPO (11 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: calor forte, brisa (d6 [5] muda, d20 [12] · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: limpo, brisa (d6 [2] fica · vento d6 [3])
+   Levis: limpo, brisa (d6 [4] muda, d20 [2] · vento d6 [4])
+   Farenta: limpo, calmo (d6 [1] fica · vento d6 [1])
+   O RIO: baixo [29/100]
+  avistamento de monstro 1d20 [12] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra 8 de PV do rei nesta aurora (d6 × 2) → pv: 84/402
+     a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua)
+  ◈ festa em 4 dia(s) (Dia 444): a Procissão da Água · se o rei paga (50): o rei anda na procissão: reputação +2 com a fé da cidade em que ele estiver
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 440 (dia)
+    d20 [18] LUGAR NOVO DESCOBERTO
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    nome: Zaira
+    o que era: cemitério de reis
+    por que caiu: guerra
+    o que guarda: uma receita
+    o que habita: nada, e é isso que assusta
+    custo de entrar: um teste de Vigor por hora
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 440
+    Lendários: d20 [13] quietos hoje
+    trama do dia: a cantora do templo → a mestra Carea (PAIXÃO PROIBIDA) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: Lurentetta salva Seline, por causa de um feitiço proibido
+    FAÍSCA: a Guardiã da Tenaz foge de Eiandald, por causa de um herdeiro dos Steunn
+    FAÍSCA: Skotha Graskur chantageia Ardenghi, por causa de uma peça Lendária roubada
+  ▶ AGENDA #509 (era do Dia 438): CHEGA a Ireviel: o recado do rei à LURENTETTA, pelo YAVOR em Ireviel (o SAL contra a Elaeva) (saiu de Levis no 435)
+  ▶ AGENDA #514 (era do Dia 439): A BARCA DO CORREIO chega a Levis com as notícias de Ireviel: a BATALHA DE MARASAR (a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu; o Facio na cela da Skotha) · o LOULA desceu a Ireviel e um dos SEM-TORRE sumiu (436) · (se o rei já tiver saído de Levis, a barca o cruza no rio)
+  ▶ AGENDA #492: FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #493: FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)
+  ▶ AGENDA #494: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ▶ AGENDA #503: [OCULTO] (OCULTO) A PALAVRA DA MAMILTIA chega ao rei (os olhos voltaram de Zisrir no 434): a prova aponta a ALMISION, não o Adurel (MO34 [6], MO34b [2]); rolar como a Mamiltia recebe o erro do nome que o rei deu (406) e o que faz com a Almision
+  ▶ AGENDA #511: O YAVOR leva ao Delta o recado do SAL à Lurentetta (sai de Ireviel no 438; 1 a 2 dias): rolar a resposta dela (as salinas)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Rendidos de Marasar (o Porto de Marasar e o cais de Ireviel): dá um passo no que quer · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: as Mãos de Breu (Qulosus): matou Asith · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi

@@ -2968,6 +2968,62 @@
    "chegada": "[6] não chega sozinha (só se alguém for atrás)",
    "resumo": "CLIMA ESTRANHO — Steunn",
    "toca": true
+  },
+  {
+   "dia": 439,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "[MISSÃO]: Varol (o Mestre dá o nome pela ficção)\ndificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Lendária\nobjetivo: escoltar alguém até um lugar\ncomplicação escondida (Envelope): tem um monstro no caminho\nprazo: 11 dias\nrecompensa: 6000 XP · 3000 de ouro · informação do Envelope\npenalidade se falhar: Reputação −1 a −2 com quem pediu\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 439,
+   "chegada": "[1] hoje",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 440,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "nome: Zaira\no que era: cemitério de reis\npor que caiu: guerra\no que guarda: uma receita\no que habita: nada, e é isso que assusta\ncusto de entrar: um teste de Vigor por hora\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "LUGAR NOVO DESCOBERTO — Kremir (Zaira)",
+   "toca": false
+  },
+  {
+   "dia": 441,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "[MISSÃO]: Lumvil (o Mestre dá o nome pela ficção)\ndificuldade: D  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Classe\nobjetivo: recuperar um objeto roubado\ncomplicação escondida (Envelope): o prazo é menor do que parece\nprazo: 8 dias\nrecompensa: 400 XP · 100 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: Reputação −1 a −2 com quem pediu\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 441,
+   "chegada": "[1] hoje",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Zisrir",
+   "toca": false
+  },
+  {
+   "dia": 441,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Veyvil\no que era: mina\npor que caiu: praga\no que guarda: material Raro a Lendário\no que habita: um culto\ncusto de entrar: um teste de Vigor por hora\n————————————————————————————————————————",
+   "noticia_chega": 443,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — Steunn (Veyvil)",
+   "toca": true
+  },
+  {
+   "dia": 441,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [5]",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 443,
+   "chegada": "[3] em 1d3 [2] dias",
+   "leitura": "um portal",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: um portal — Lumron (terra nova)",
+   "toca": false
   }
  ]
 }
