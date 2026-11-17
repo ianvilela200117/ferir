@@ -1,0 +1,32 @@
+[02:07:35] Dia 440 · Pressão 4/5 · evento local 1d20 [8] -> briga na feira
+  O TEMPO (11 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [3] fica · vento d6 [4])
+   o Porto de Marasar: nublado, brisa (d6 [3] fica · vento d6 [3])
+   Levis: limpo, brisa (d6 [6] muda, d20 [3] · vento d6 [3])
+   Farenta: limpo, brisa (d6 [1] fica · vento d6 [4])
+   O RIO: baixo [30/100]
+  avistamento de monstro 1d20 [7] -> alguém vê um · tabela 1d5 [1] Lianniel
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra do rei 1d6 × 2 de PV nesta aurora (rolar no selo.py e lançar em ficha.py pv) · a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua) · lua nova no 460: o nome e a gota de sangue
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 440 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d27 [15] o sul, onde a areia come a pedra
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 440
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) → Gorra (DÍVIDA) d20 [20] UM GESTO GRANDE em cena hoje
+    FAÍSCA: Borecci oferece aliança a Moreth, por causa de uma profecia
+    FAÍSCA: Leliel inveja Almision, por causa de uma terra além do mapa
+    FAÍSCA: Aeliae oferece aliança a o Doge Pelaone, por causa de a Fornalha que Não Apaga
+  ▶ AGENDA #492: FACÇÃO — os da Luz do Cais (o porto de Marasar) oferece ajuda ou aliança à casa. O que querem: acendem velas para a luz que matou o Naudren (o Moreth)
+  ▶ AGENDA #493: FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)
+  ▶ AGENDA #494: FACÇÃO — os Descalços do Cais (o Porto de Marasar (de Ireviel)) pede audiência ao conselho. O que querem: a metade dos Descalços que vive no porto de Ireviel e não quer mais briga com a casa (o interrogatório do 336)
+  ▶ AGENDA #503: [OCULTO] (OCULTO) A PALAVRA DA MAMILTIA chega ao rei (os olhos voltaram de Zisrir no 434): a prova aponta a ALMISION, não o Adurel (MO34 [6], MO34b [2]); rolar como a Mamiltia recebe o erro do nome que o rei deu (406) e o que faz com a Almision
+  ▶ AGENDA #511: O YAVOR leva ao Delta o recado do SAL à Lurentetta (sai de Ireviel no 438; 1 a 2 dias): rolar a resposta dela (as salinas)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Rendidos de Marasar (o Porto de Marasar e o cais de Ireviel): dá um passo no que quer · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: as Mãos de Breu (Qulosus): matou Asith · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi

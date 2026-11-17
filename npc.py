@@ -164,7 +164,7 @@ def vida(db, nomes, dia):
         for c, _ in CAMPOS:
             if v.get(c): continue
             if L and L.get(c): v[c] = L[c]; tirou.append(f'{k}.{c} (mundo_vivo)'); continue
-            m = re.search(rx[c], txt, re.I)
+            m = re.search(rx[c], txt, re.I) or (re.search(r'(nunca [^·;]+)', txt, re.I) if c == 'linha_vermelha' else None)   # 441: a linha vermelha escrita sem rótulo
             if m and len(m.group(1).strip()) > 3: v[c] = m.group(1).strip().rstrip('.'); tirou.append(f'{k}.{c} (texto)'); continue
             falta[c].append(k)
     grava(ARQ, db)

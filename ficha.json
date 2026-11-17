@@ -19,11 +19,11 @@
   "Afinidade": 171
  },
  "pv": [
-  54,
+  139,
   402
  ],
  "mana": [
-  129,
+  164,
   164
  ],
  "foco": 37,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 13078,
+ "cofre": 11658,
  "livro": {
   "renda_casa": 3960,
   "despesa": 8230,
-  "ultima_semana": 434,
+  "ultima_semana": 441,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -297,6 +297,30 @@
    "valor": -5500,
    "motivo": "434: o OURO DO CONFISCO em pão e físicos para Levis (a briga do pão e da doença; a ordem do rei, a Brara reparte)",
    "saldo": 13078
+  },
+  {
+   "dia": 441,
+   "valor": -1820,
+   "motivo": "semana: casa 3960 + cidades 2450 − despesa 8230",
+   "saldo": 11258
+  },
+  {
+   "dia": 441,
+   "valor": 200,
+   "motivo": "AC41: o ouro achado debaixo de Ireviel (moedas de quem viveu antes)",
+   "saldo": 11458
+  },
+  {
+   "dia": 441,
+   "valor": 300,
+   "motivo": "G15 (441): o Herkald trabalha (TL41 [6])",
+   "saldo": 11758
+  },
+  {
+   "dia": 441,
+   "valor": -100,
+   "motivo": "G15 (441): a Tilde treina a forja e o Draron treina o machado (50 cada)",
+   "saldo": 11658
   }
  ],
  "materiais": {
@@ -332,12 +356,13 @@
    ]
   },
   "shasha": {
-   "kg": 4.0,
+   "kg": 5.0,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
     "Dia 420: +1 420: o quilo da Doge (tratado)",
-    "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)"
+    "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)",
+    "Dia 441: +1 o tratado da Doge Skotha: o kg da semana (441, cumpre)"
    ]
   },
   "zezha": {
@@ -557,7 +582,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 1,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },

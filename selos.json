@@ -1,44 +1,5 @@
 {
  "ordem": [
-  "LU24d",
-  "PR24",
-  "MK24",
-  "CP24",
-  "DR24a",
-  "DR24b",
-  "DR24c",
-  "SU25",
-  "TR25a",
-  "TR25b",
-  "PF25",
-  "PF25b",
-  "PF25c",
-  "PF25d",
-  "DZ25Ferir",
-  "DZ25Moreth",
-  "DZ25Eiagrir",
-  "FC25",
-  "TH25",
-  "MR25a",
-  "MR25b",
-  "STR25",
-  "STR25n",
-  "STR25r",
-  "TG25",
-  "GV25",
-  "GM25",
-  "MA25",
-  "MM25",
-  "FM25",
-  "IS25a",
-  "IS25b",
-  "IS25c",
-  "IS25d",
-  "PE26a",
-  "PE26b",
-  "PE26c",
-  "AL26a",
-  "AL26b",
   "CX26",
   "SK26",
   "BR26",
@@ -399,1598 +360,48 @@
   "438dk",
   "438dl",
   "438dm",
-  "438dn"
+  "438dn",
+  "TZ38",
+  "FM38",
+  "ZR38",
+  "PZ39",
+  "PZ40",
+  "MM40a",
+  "MM40b",
+  "LU40",
+  "HV40",
+  "HV40n",
+  "441-laco-quem",
+  "441-laco",
+  "441-chamado",
+  "441-vinculos",
+  "PZ41",
+  "VG41a",
+  "VG41b",
+  "KR41",
+  "KR41b",
+  "IZ41",
+  "AC41",
+  "DP41",
+  "DP41b",
+  "DF41",
+  "DF41b",
+  "MT41",
+  "TO41",
+  "GO41",
+  "GO41n",
+  "TV41a",
+  "TL41",
+  "NV41a",
+  "NV41b",
+  "NV41c",
+  "NV41d",
+  "AC41o",
+  "DP41m",
+  "OT41",
+  "OG41"
  ],
  "selos": {
-  "LU24d": {
-   "id": "LU24d",
-   "dia": 424,
-   "hora": "11:11:15",
-   "titulo": "EM QUANTOS DIAS CHEGA O ENVIADO DA LURENTETTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado em dias (a contar do 424)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado em dias (a contar do 424)",
-     "txt": "[3] → o dado em dias (a contar do 424)"
-    }
-   ],
-   "hora_rolado": "11:11:15"
-  },
-  "PR24": {
-   "id": "PR24",
-   "dia": 424,
-   "hora": "11:11:29",
-   "titulo": "OS 7 NA PRAÇA (fanáticos do fim do mundo, diante do povo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "CALAM E REZAM"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "UM DELES PREGA na praça o fim das dívidas e do mundo; gente do povo escuta (rola o PR24b)"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "UM FALA PARA SE SALVAR: diz o ALVO DO PIChE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "CALAM E REZAM",
-     "txt": "[8] → CALAM E REZAM"
-    }
-   ],
-   "hora_rolado": "11:11:29"
-  },
-  "MK24": {
-   "id": "MK24",
-   "dia": 424,
-   "hora": "11:11:59",
-   "titulo": "O MOREK NA NOITE DO 424 (a barca do piche volta da forquilha com o recado do Starkald)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NA FORQUILHA: a armadilha está pronta para o amanhecer do 425"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "RONDA RIO ABAIXO, perto da rota das barcas; a armadilha espera ele voltar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "NA FORQUILHA: a armadilha está pronta para o amanhecer do 425",
-     "txt": "[4] → NA FORQUILHA: a armadilha está pronta para o amanhecer do 425"
-    }
-   ],
-   "hora_rolado": "11:11:59"
-  },
-  "CP24": {
-   "id": "CP24",
-   "dia": 424,
-   "hora": "12:02:21",
-   "titulo": "A COMPLICAÇÃO DA MISSÃO (A FORQUILHA LIMPA): um bicho no caminho da barca do rei, rio abaixo, de noite — de que tamanho",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "RARO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ÉPICO"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ÚNICO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "RARO",
-     "txt": "[1] → RARO"
-    }
-   ],
-   "hora_rolado": "12:02:21"
-  },
-  "DR24a": {
-   "id": "DR24a",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "O DRAEK DO NEANE (couro/escama, Raro, Sombra): quantos kg",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado mais dois"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado mais dois",
-     "txt": "[3] → o dado mais dois"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "DR24b": {
-   "id": "DR24b",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "A ERYRA (a glândula do Neane, Raro, Sombra): quantas porções",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado",
-     "txt": "[1] → o dado"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "DR24c": {
-   "id": "DR24c",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "O SANGUE DE SOMBRA DO NEANE (para o SYSRETH: 1 porção por 2 kg da liga): quantas porções se guardam na barca",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado",
-     "txt": "[1] → o dado"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "SU25": {
-   "id": "SU25",
-   "dia": 425,
-   "hora": "12:04:41",
-   "titulo": "AMANHECER DO 425, A FORQUILHA: o Morek dorme na margem (o Starkald); a barca do rei chega no escuro; ele acorda antes?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 20,
-     "res": "SURPRESA: ele não age na 1ª rodada e a vala o pega inteiro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)",
-     "txt": "[5] → ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)"
-    }
-   ],
-   "hora_rolado": "12:04:41"
-  },
-  "TR25a": {
-   "id": "TR25a",
-   "dia": 425,
-   "hora": "12:04:53",
-   "titulo": "A VALA DE PIChE ACESA (5 barris; o capim seco do calor corre: +2d6): 12d6 de FOGO; o Morek acordou e passou voando: METADE; depois ×2 (fraco a fogo) − RD 12",
-   "dado": [
-    12,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 72,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1,
-      6,
-      1,
-      1,
-      3,
-      4,
-      3,
-      1,
-      6,
-      4,
-      2,
-      2
-     ],
-     "total": 34,
-     "res": "o total",
-     "txt": "[1, 6, 1, 1, 3, 4, 3, 1, 6, 4, 2, 2] +0 = 34 → o total"
-    }
-   ],
-   "hora_rolado": "12:04:53"
-  },
-  "TR25b": {
-   "id": "TR25b",
-   "dia": 425,
-   "hora": "12:04:53",
-   "titulo": "AS FLECHAS DE FOGO DOS 6 CAÇADORES (das barcas): 6 que pegam, 1d8 de fogo cada, ×2, − RD 12 cada (mínimo 0)",
-   "dado": [
-    6,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 48,
-     "res": "o total (conta cada dado)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      8,
-      4,
-      3,
-      3,
-      1
-     ],
-     "total": 25,
-     "res": "o total (conta cada dado)",
-     "txt": "[6, 8, 4, 3, 3, 1] +0 = 25 → o total (conta cada dado)"
-    }
-   ],
-   "hora_rolado": "12:04:53"
-  },
-  "PF25": {
-   "id": "PF25",
-   "dia": 425,
-   "hora": "12:06:41",
-   "titulo": "O MOREK DEPOIS QUE O GRUPO CAI (814/2440; caçador: escolhe a presa e a segue por dias)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "LEVA UM DOS MORTOS para a água (rola quem) e some no fundo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "RECUA FERIDO para o fundo da forquilha (se cura em dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ESCOLHE A PRESA: fica olhando a barca do rei; vai segui-lo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "LEVA UM DOS MORTOS para a água (rola quem) e some no fundo",
-     "txt": "[1] → LEVA UM DOS MORTOS para a água (rola quem) e some no fundo"
-    }
-   ],
-   "hora_rolado": "12:06:41"
-  },
-  "PF25b": {
-   "id": "PF25b",
-   "dia": 425,
-   "hora": "12:06:41",
-   "titulo": "AS BARCAS: os 6 caçadores tiram da margem quem puderem (debaixo do bicho ferido)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só os VIVOS (os mortos ficam na margem)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "os vivos e UM MORTO (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "TODOS, vivos e mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os vivos e UM MORTO (rola qual)",
-     "txt": "[4] → os vivos e UM MORTO (rola qual)"
-    }
-   ],
-   "hora_rolado": "12:06:41"
-  },
-  "PF25c": {
-   "id": "PF25c",
-   "dia": 425,
-   "hora": "12:06:50",
-   "titulo": "QUEM O MOREK LEVA PARA A ÁGUA",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "a ISOLDA"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o STARKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o GOIR"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o GOIR",
-     "txt": "[3] → o GOIR"
-    }
-   ],
-   "hora_rolado": "12:06:50"
-  },
-  "PF25d": {
-   "id": "PF25d",
-   "dia": 425,
-   "hora": "12:06:50",
-   "titulo": "QUAL MORTO AS BARCAS TIRAM (dos dois que ficaram)",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o primeiro dos dois que restam (na ordem Isolda, Starkald, Goir)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o segundo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o primeiro dos dois que restam (na ordem Isolda, Starkald, Goir)",
-     "txt": "[1] → o primeiro dos dois que restam (na ordem Isolda, Starkald, Goir)"
-    }
-   ],
-   "hora_rolado": "12:06:50"
-  },
-  "DZ25Ferir": {
-   "id": "DZ25Ferir",
-   "dia": 425,
-   "hora": "12:06:57",
-   "titulo": "A DOENÇA DO MOREK em Ferir (levou golpe; 2d20 + Vigor 9 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 9; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3,
-      3
-     ],
-     "total": 6,
-     "res": "soma mais 9; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)",
-     "txt": "[3, 3] +0 = 6 → soma mais 9; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "12:06:57"
-  },
-  "DZ25Moreth": {
-   "id": "DZ25Moreth",
-   "dia": 425,
-   "hora": "12:06:57",
-   "titulo": "A DOENÇA DO MOREK em Moreth (levou golpe; 2d20 + Vigor 15 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 15; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8,
-      12
-     ],
-     "total": 20,
-     "res": "soma mais 15; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)",
-     "txt": "[8, 12] +0 = 20 → soma mais 15; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "12:06:57"
-  },
-  "DZ25Eiagrir": {
-   "id": "DZ25Eiagrir",
-   "dia": 425,
-   "hora": "12:06:58",
-   "titulo": "A DOENÇA DO MOREK em Eiagrir (levou golpe; 2d20 + Vigor 13 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 13; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      7,
-      5
-     ],
-     "total": 12,
-     "res": "soma mais 13; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)",
-     "txt": "[7, 5] +0 = 12 → soma mais 13; falha abaixo de 22: a FEBRE DO ESPINHO (o ferimento leva o DOBRO do tempo, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "12:06:58"
-  },
-  "FC25": {
-   "id": "FC25",
-   "dia": 425,
-   "hora": "12:07:20",
-   "titulo": "O FÍSICO-CHEFE trata a FEBRE DO ESPINHO do rei (tarde do 425, a caixa nova e a LANCETA-MESTRA: +2 na Técnica; 1x por cirurgia um 1 vira 2; o Sono do Ferro): d20 + 2 contra 15",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "NÃO CURA AINDA: a febre segue, o ferimento do rei vai até o 429"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 20,
-     "res": "CURA A FEBRE: fica só o leve, até o 427"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      14
-     ],
-     "total": 14,
-     "res": "CURA A FEBRE: fica só o leve, até o 427",
-     "txt": "[14] → CURA A FEBRE: fica só o leve, até o 427"
-    }
-   ],
-   "hora_rolado": "12:07:20"
-  },
-  "TH25": {
-   "id": "TH25",
-   "dia": 425,
-   "hora": "12:07:20",
-   "titulo": "O THURON (69, mago de Osso) lê a letra antiga das tábuas de Eryssa (manhã do 425)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "NÃO LÊ: é uma letra que ele não conhece (precisa de outro sábio)"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 20,
-     "res": "LÊ: o outro ingrediente"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "NÃO LÊ: é uma letra que ele não conhece (precisa de outro sábio)",
-     "txt": "[5] → NÃO LÊ: é uma letra que ele não conhece (precisa de outro sábio)"
-    }
-   ],
-   "hora_rolado": "12:07:20"
-  },
-  "MR25a": {
-   "id": "MR25a",
-   "dia": 425,
-   "hora": "13:17:27",
-   "titulo": "A CURA DO MORETH (noite do 425): o físico-chefe com a LANCETA-MESTRA (+2 na Técnica; 1x por cirurgia um 1 natural vira 2; o SONO DO FERRO o põe para dormir na mesa) e a caixa nova; a ferida é PARA SEMPRE: d20 + 2 contra o que ela pede",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 11,
-     "res": "A CURA NÃO SEGURA: a perda vem inteira (rola o MR25b)"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 17,
-     "res": "SALVA O QUE DÁ: a perda vem pela METADE (rola o MR25b)"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "SALVA: nada se perde de vez; ficam só os 30 dias sem lutar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      9
-     ],
-     "total": 9,
-     "res": "A CURA NÃO SEGURA: a perda vem inteira (rola o MR25b)",
-     "txt": "[9] → A CURA NÃO SEGURA: a perda vem inteira (rola o MR25b)"
-    }
-   ],
-   "hora_rolado": "13:17:27"
-  },
-  "MR25b": {
-   "id": "MR25b",
-   "dia": 425,
-   "hora": "13:17:42",
-   "titulo": "O QUE O MORETH PERDE PARA SEMPRE (o jogador: nem a mão, nem o olho, nem a perna; o dado decide)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "O FÔLEGO: o peito não fecha direito: −1 ação por rodada"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "A MAGIA: a que voltou nele queimou o canal: a magia dele dá METADE do dano"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "A FORÇA DO OMBRO (o braço, não a mão): −3 no dano dos golpes"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "OS ANOS: o corpo envelhece dez anos: −2 em Agilidade e em Vigor (−2 na Defesa)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "O SANGUE: a ferida não fecha inteira: −60 no PV máximo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "O FÔLEGO: o peito não fecha direito: −1 ação por rodada",
-     "txt": "[1] → O FÔLEGO: o peito não fecha direito: −1 ação por rodada"
-    }
-   ],
-   "hora_rolado": "13:17:42"
-  },
-  "STR25": {
-   "id": "STR25",
-   "dia": 425,
-   "hora": "13:17:54",
-   "titulo": "OS SEM-TORRE NA MESA (noite do 425): o MORMIR (16, mago; CRUEL e CURIOSO; nunca machuca criança; fez um pacto, oculto) e os magos que Telosus mandou embora sem paga: O QUE PEDEM ao reino",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "PÃO E TETO: são poucos e com fome; servem à casa por abrigo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "QUE O REI INTERCEDA em Telosus: a paga atrasada e a volta ao Colégio (o rei é o ferreiro da Matriz; o Colégio o ouve)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "UMA TORRE EM IREVIEL: um colégio deles, sob a casa, ao lado do Colégio do Thuron"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "PÃO E TETO: são poucos e com fome; servem à casa por abrigo",
-     "txt": "[1] → PÃO E TETO: são poucos e com fome; servem à casa por abrigo"
-    }
-   ],
-   "hora_rolado": "13:17:54"
-  },
-  "STR25n": {
-   "id": "STR25n",
-   "dia": 425,
-   "hora": "13:17:54",
-   "titulo": "QUANTOS SÃO OS SEM-TORRE QUE VIERAM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado mais quatro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado mais quatro",
-     "txt": "[4] → o dado mais quatro"
-    }
-   ],
-   "hora_rolado": "13:17:54"
-  },
-  "STR25r": {
-   "id": "STR25r",
-   "dia": 425,
-   "hora": "13:18:06",
-   "titulo": "O REI PERGUNTA AOS OITO MAGOS PELA RESSURREIÇÃO (Luz 7º; o rei quer a Isolda e o Starkald de volta)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 10,
-     "res": "ninguém sabe mais que o nome no grimório"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 17,
-     "res": "o MORMIR sabe QUEM a lança hoje: a LUMINE, pelo patrono escondido dela (o Gorine, Lendário); a Yeane do templo de baixo é a porta"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "o MORMIR sabe de um GRIMÓRIO ANTIGO de Luz (rola onde)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 17,
-     "res": "o MORMIR sabe QUEM a lança hoje: a LUMINE, pelo patrono escondido dela (o Gorine, Lendário); a Yeane do templo de baixo é a porta",
-     "txt": "[17] → o MORMIR sabe QUEM a lança hoje: a LUMINE, pelo patrono escondido dela (o Gorine, Lendário); a Yeane do templo de baixo é a porta"
-    }
-   ],
-   "hora_rolado": "13:18:06"
-  },
-  "TG25": {
-   "id": "TG25",
-   "dia": 425,
-   "hora": "13:18:17",
-   "titulo": "O NÍVEL DO TEGRE (o caçador da Guilda que encostou as barcas e puxou os vivos na forquilha; nome por nomes.py montanhesa livre)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "vinte e cinco mais o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "vinte e cinco mais o dado",
-     "txt": "[19] → vinte e cinco mais o dado"
-    }
-   ],
-   "hora_rolado": "13:18:17"
-  },
-  "GV25": {
-   "id": "GV25",
-   "dia": 425,
-   "hora": "13:18:17",
-   "titulo": "A GUILDA ESCOLHE O SEU NOME para mestre (os que sobraram, antes do conselho)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o ULOUNN (62, batedor de mata; chegou pelo chamado no 392; RELIGIOSO, TEIMOSO)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "o TEGRE (o caçador que puxou os vivos na forquilha; é deles)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o ULOUNN (62, batedor de mata; chegou pelo chamado no 392; RELIGIOSO, TEIMOSO)",
-     "txt": "[1] → o ULOUNN (62, batedor de mata; chegou pelo chamado no 392; RELIGIOSO, TEIMOSO)"
-    }
-   ],
-   "hora_rolado": "13:18:17"
-  },
-  "GM25": {
-   "id": "GM25",
-   "dia": 425,
-   "hora": "13:18:25",
-   "titulo": "O CONSELHO VOTA: O NOVO MESTRE DA GUILDA DOS AVENTUREIROS (o Starkald morreu; a Guilda pediu o ULOUNN: GV25 [1])",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) o ULOUNN (62, batedor de mata; o nome da Guilda) · placar A 5 · B 1 · VOTO VENCIDO: Graur",
-     "txt": "VENCE A) o ULOUNN (62, batedor de mata; o nome da Guilda) · placar A 5 · B 1 · VOTO VENCIDO: Graur"
-    }
-   ]
-  },
-  "MA25": {
-   "id": "MA25",
-   "dia": 425,
-   "hora": "13:18:33",
-   "titulo": "O CONSELHO VOTA: QUEM FICA COM AS ÁGUAS (a cadeira da Isolda: a alfândega do rio e a galé)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) o FABAINO (100, escrivão das casas da Liga que caíram; HONESTO e ORGULHOSO): alfândega e galé · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Sira, Thuron, Graur, Herkald",
-     "txt": "VENCE A) o FABAINO (100, escrivão das casas da Liga que caíram; HONESTO e ORGULHOSO): alfândega e galé · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Sira, Thuron, Graur, Herkald"
-    }
-   ]
-  },
-  "MM25": {
-   "id": "MM25",
-   "dia": 425,
-   "hora": "13:18:46",
-   "titulo": "O MENSAGEIRO À MAMILTIA (ela saiu no 417 pela estrada de Steunn com o Fumigador): em quantos dias a alcança",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "o dado mais dois"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado mais dois",
-     "txt": "[3] → o dado mais dois"
-    }
-   ],
-   "hora_rolado": "13:18:46"
-  },
-  "FM25": {
-   "id": "FM25",
-   "dia": 425,
-   "hora": "14:19:44",
-   "titulo": "O CUSTO DO FALAR COM MORTO no THURON (Osso cobra sempre: 1d6 × 3 de PV)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado vezes três"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado vezes três",
-     "txt": "[1] → o dado vezes três"
-    }
-   ],
-   "hora_rolado": "14:19:44"
-  },
-  "IS25a": {
-   "id": "IS25a",
-   "dia": 425,
-   "hora": "14:19:44",
-   "titulo": "A ISOLDA RESPONDE (morta; FRIA; lealdade 4/10; o rei pede desculpas e diz que a culpa é dele): 1ª PERGUNTA, 'o que você acha disso tudo?'",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "DURA: 'Você nos levou para morrer por três mil e uma promessa.'"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 14,
-     "res": "FRIA E JUSTA: 'Eu desci porque quis. A culpa não é só sua.'"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "SURPREENDE: ela o PERDOA e diz que lutaria de novo ao lado dele"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      15
-     ],
-     "total": 15,
-     "res": "SURPREENDE: ela o PERDOA e diz que lutaria de novo ao lado dele",
-     "txt": "[15] → SURPREENDE: ela o PERDOA e diz que lutaria de novo ao lado dele"
-    }
-   ],
-   "hora_rolado": "14:19:44"
-  },
-  "IS25b": {
-   "id": "IS25b",
-   "dia": 425,
-   "hora": "14:19:44",
-   "titulo": "2ª PERGUNTA: 'você quer voltar?' (o plano da Ressurreição: a Lumine, o núcleo de Luz, até o 455)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "NÃO: ela não quer voltar (rola o porquê)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "SÓ COM UMA CONDIÇÃO (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "SIM"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "SIM",
-     "txt": "[5] → SIM"
-    }
-   ],
-   "hora_rolado": "14:19:44"
-  },
-  "IS25c": {
-   "id": "IS25c",
-   "dia": 425,
-   "hora": "14:19:44",
-   "titulo": "3ª PERGUNTA: 'o que você amou, que eu possa levar?' (o componente da Ressurreição)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o GORJAL dela (a peça; o Toque do Ceifador)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a GALÉ: o leme da galé que ela capitaneava"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma PESSOA (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um LUGAR da infância dela (rola onde)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "um LUGAR da infância dela (rola onde)",
-     "txt": "[6] → um LUGAR da infância dela (rola onde)"
-    }
-   ],
-   "hora_rolado": "14:19:44"
-  },
-  "IS25d": {
-   "id": "IS25d",
-   "dia": 425,
-   "hora": "14:20:01",
-   "titulo": "O LUGAR DA INFÂNCIA QUE A ISOLDA AMOU (o componente: um punhado dele no altar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "as SALINAS DO DELTA: uma vila de sal onde ela cresceu (sal da salina dela)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o CAIS VELHO DE MARASAR (a água do cais)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a MATA DE ELAIS (a terra de baixo de uma árvore)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um FORTE DO NORTE, na neve de Steunn (a neve do forte)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a MATA DE ELAIS (a terra de baixo de uma árvore)",
-     "txt": "[5] → a MATA DE ELAIS (a terra de baixo de uma árvore)"
-    }
-   ],
-   "hora_rolado": "14:20:01"
-  },
-  "PE26a": {
-   "id": "PE26a",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "EVENTO DE MUNDO (PERTO, Levis): CARAVANA OU FROTA PERDIDA — o que se perdeu (a verdade)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "A BARCA DO REI (o ferro e as ferraduras começadas, que chegava hoje)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "uma CARAVANA de mercadores de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "uma BARCA DA LIGA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "uma CARAVANA de mercadores de Levis",
-     "txt": "[4] → uma CARAVANA de mercadores de Levis"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "PE26b": {
-   "id": "PE26b",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "COMO SE PERDEU",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o RIO CHEIO a virou na correnteza"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ASSALTO no rio (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "um BICHO (o Isyzis, no rio acima de Levis)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o RIO CHEIO a virou na correnteza",
-     "txt": "[2] → o RIO CHEIO a virou na correnteza"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "PE26c": {
-   "id": "PE26c",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "A LIGA REAGE (encadeamento)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "OFERECE barcas e homens, a preço de Liga"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)",
-     "txt": "[5] → APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "AL26a": {
-   "id": "AL26a",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "EVENTO DE MUNDO (ALEATÓRIO, Farenta): FRONTEIRA MUDA (terra tomada ou perdida) — quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a GUARDA DO PEDÁGIO (inimiga; juraram queimar) toma as terras do pedágio velho"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a LIGA compra ou toma uma faixa da margem"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta",
-     "txt": "[6] → os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "AL26b": {
-   "id": "AL26b",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "ESCALADA (encadeamento [1]): o que piora",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "há SANGUE: um homem do Tirello morto na terra tomada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "QUEIMAM: um celeiro ou uma ponte de Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "há SANGUE: um homem do Tirello morto na terra tomada",
-     "txt": "[2] → há SANGUE: um homem do Tirello morto na terra tomada"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
   "CX26": {
    "id": "CX26",
    "dia": 426,
@@ -30093,6 +28504,2066 @@
     }
    ],
    "hora_rolado": "23:23:52"
+  },
+  "TZ38": {
+   "id": "TZ38",
+   "dia": 438,
+   "hora": "02:05:43",
+   "titulo": "(OCULTO) O QUE DESARMA O GUARDIÃO VDOGEK SEM LUTA (Lei 15; a inscrição de Zythir: 'que ele espere aqui até que o reino o chame'; guardião de ELO, cria no ventre)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o CHAMADO DE UM REI em nome do reino de Zythir: um rei que fala pelo reino e chama o que está preso faz o guardião baixar as cabeças"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a CRIA: quem mostra que tem a vida da cria dele na mão (ou a ameaça) o faz recuar para o fundo do covil"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a SENHA dita DE DENTRO: só quem está preso atrás dele pode mandá-lo deitar"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "NADA: só a força"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o CHAMADO DE UM REI em nome do reino de Zythir: um rei que fala pelo reino e chama o que está preso faz o guardião baixar as cabeças",
+     "txt": "[1] → o CHAMADO DE UM REI em nome do reino de Zythir: um rei que fala pelo reino e chama o que está preso faz o guardião baixar as cabeças"
+    }
+   ],
+   "hora_rolado": "02:05:43"
+  },
+  "FM38": {
+   "id": "FM38",
+   "dia": 438,
+   "hora": "02:06:21",
+   "titulo": "O SANGUE DO FALAR COM MORTO (Osso 3º cobra 3d6 de PV do rei, que está com 54; e 15 de Mana)",
+   "dado": [
+    3,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 18,
+     "res": "tantos PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2,
+      4,
+      5
+     ],
+     "total": 11,
+     "res": "tantos PV",
+     "txt": "[2, 4, 5] +0 = 11 → tantos PV"
+    }
+   ],
+   "hora_rolado": "02:06:21"
+  },
+  "ZR38": {
+   "id": "ZR38",
+   "dia": 438,
+   "hora": "02:06:21",
+   "titulo": "(OCULTO) COMO A RAINHA ZATHA RESPONDE A QUEM A MATOU (o feitiço obriga a responder, não a dizer a verdade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "MENTE onde pode: UMA das três respostas é falsa (o d3 da ZR38b diz qual)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "responde curto e torto: a verdade, mas em enigma"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "responde a verdade crua, com ódio"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "responde a verdade crua, com ódio",
+     "txt": "[6] → responde a verdade crua, com ódio"
+    }
+   ],
+   "hora_rolado": "02:06:21"
+  },
+  "PZ39": {
+   "id": "PZ39",
+   "dia": 439,
+   "hora": "02:07:24",
+   "titulo": "A PALAVRA DO ZYZA COBRA DO REI NA AURORA DO 439 (G23: 1d6 × 2 de PV; o rei a 83)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado vezes dois"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado vezes dois",
+     "txt": "[3] → o dado vezes dois"
+    }
+   ],
+   "hora_rolado": "02:07:24"
+  },
+  "PZ40": {
+   "id": "PZ40",
+   "dia": 440,
+   "hora": "02:08:51",
+   "titulo": "A PALAVRA DO ZYZA COBRA DO REI NA AURORA DO 440 (G23: 1d6 × 2 de PV; o rei a 117)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado vezes dois"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o dado vezes dois",
+     "txt": "[6] → o dado vezes dois"
+    }
+   ],
+   "hora_rolado": "02:08:51"
+  },
+  "MM40a": {
+   "id": "MM40a",
+   "dia": 440,
+   "hora": "02:08:51",
+   "titulo": "COMO A MAMILTIA RECEBE O ERRO DO NOME QUE O REI LHE DEU EM 406 (o Adurel; a prova dos olhos dela aponta a ALMISION, que deu o nome ao rei); +1 ela mesma pediu a prova antes de matar (406) · +1 amiga (reputação 60) · −1 CRUEL e o nome saiu da boca do rei",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "CULPA O REI JUNTO: reputação −20 e cobra uma reparação (uma peça para a fé dela dentro de uma lua)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "o rei foi enganado como ela: reputação −5, sem cobrança"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 7,
+     "res": "agradece o rei ter pedido que ela esperasse a prova: reputação +5"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 4,
+     "res": "o rei foi enganado como ela: reputação −5, sem cobrança",
+     "txt": "[3] +1 = 4 → o rei foi enganado como ela: reputação −5, sem cobrança"
+    }
+   ],
+   "hora_rolado": "02:08:51"
+  },
+  "MM40b": {
+   "id": "MM40b",
+   "dia": 440,
+   "hora": "02:08:51",
+   "titulo": "(OCULTO) O QUE A MAMILTIA FAZ COM A ALMISION (Primordial 1149, CRUEL e GENEROSA; a Almision Lendária 440, na estrada com o corvo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "VAI ATRÁS DELA JÁ, com a maça (a luta das duas rola quando se acharem)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CHAMA A ALMISION A JUÍZO diante da Mão Queimada e da Escola Única, e pede ao rei que diga em público o que a Almision lhe disse em 406"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ESPERA E JUNTA PROVA E GENTE: a Mão Queimada se arma (a obra dela anda 1)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "ESPERA E JUNTA PROVA E GENTE: a Mão Queimada se arma (a obra dela anda 1)",
+     "txt": "[6] → ESPERA E JUNTA PROVA E GENTE: a Mão Queimada se arma (a obra dela anda 1)"
+    }
+   ],
+   "hora_rolado": "02:08:51"
+  },
+  "LU40": {
+   "id": "LU40",
+   "dia": 440,
+   "hora": "02:08:51",
+   "titulo": "(OCULTO até a resposta chegar ao rei, ~443) A RESPOSTA DA LURENTETTA AO RECADO DO SAL (o Yavor no Delta; o povo dela eram os salineiros que a Elaeva matou; a aliança de 427: 20 lanças e a Mie para a caçada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "O SAL FICA COM ELA: ela mesma o usará quando a fera chegar ao Delta; a casa fica sem a parte dela por ora"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MANDA O SAL: barcas de sal das salinas a Farenta (chegam ~446) e a MIE com as 20 lanças já"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "VEM ELA MESMA a Farenta com o sal e a guarda (chega ~447): quer ver a fera morrer"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "VEM ELA MESMA a Farenta com o sal e a guarda (chega ~447): quer ver a fera morrer",
+     "txt": "[6] → VEM ELA MESMA a Farenta com o sal e a guarda (chega ~447): quer ver a fera morrer"
+    }
+   ],
+   "hora_rolado": "02:08:51"
+  },
+  "HV40": {
+   "id": "HV40",
+   "dia": 440,
+   "hora": "02:09:24",
+   "titulo": "A SURPRESA DO ITHVIL (FIEL, pelo posto dos Mineiros, G11): QUEM É A HURVA (o gerador: RELIGIOSA e TEIMOSA; quer curar alguém; ambição: casar acima da classe; teme a solidão; nunca se ajoelha), e ela entra na vida do GURKA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma CAÇADORA que segue o Ithvil nas terras altas para tirar a SHEZHIS (a raiz que cresce onde ele dorme) e curar quem ela quer curar"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma PASTORA das terras altas que perdeu o rebanho para ele no 423 e pede aos Mineiros que o matem"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a SACERDOTISA de uma fé nova que nasce em volta do bicho (os que o viram comer o rebanho e voltaram vivos)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "uma CAÇADORA que segue o Ithvil nas terras altas para tirar a SHEZHIS (a raiz que cresce onde ele dorme) e curar quem ela quer curar",
+     "txt": "[1] → uma CAÇADORA que segue o Ithvil nas terras altas para tirar a SHEZHIS (a raiz que cresce onde ele dorme) e curar quem ela quer curar"
+    }
+   ],
+   "hora_rolado": "02:09:24"
+  },
+  "HV40n": {
+   "id": "HV40n",
+   "dia": 440,
+   "hora": "02:09:24",
+   "titulo": "O NÍVEL DA HURVA",
+   "dado": [
+    2,
+    20,
+    10
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 50,
+     "res": "tanto"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20,
+      19
+     ],
+     "total": 49,
+     "res": "tanto",
+     "txt": "[20, 19] +10 = 49 → tanto"
+    }
+   ],
+   "hora_rolado": "02:09:24"
+  },
+  "441-laco-quem": {
+   "id": "441-laco-quem",
+   "dia": 441,
+   "hora": "02:09:53",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a AELIAE",
+     "txt": "[6] → a AELIAE"
+    }
+   ],
+   "hora_rolado": "02:09:54"
+  },
+  "441-laco": {
+   "id": "441-laco",
+   "dia": 441,
+   "hora": "02:09:53",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "MOMENTO",
+     "txt": "[3] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "02:09:54"
+  },
+  "441-chamado": {
+   "id": "441-chamado",
+   "dia": 441,
+   "hora": "02:09:54",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 4,
+     "res": "ninguém digno",
+     "txt": "[1] +3 = 4 → ninguém digno"
+    }
+   ],
+   "hora_rolado": "02:09:54"
+  },
+  "441-vinculos": {
+   "id": "441-vinculos",
+   "dia": 441,
+   "hora": "02:09:54",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "Nouliel–Herkald",
+     "txt": "#1 [1] → Nouliel–Herkald"
+    },
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Moreth–Eiagrir",
+     "txt": "#2 [3] → Moreth–Eiagrir"
+    }
+   ],
+   "hora_rolado": "02:09:54"
+  },
+  "PZ41": {
+   "id": "PZ41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "A PALAVRA DO ZYZA COBRA DO REI NA AURORA DO 441 (G23: 1d6 × 2 de PV; o rei a 145)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado vezes dois"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado vezes dois",
+     "txt": "[3] → o dado vezes dois"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "VG41a": {
+   "id": "VG41a",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "A VIGIA DO ITHVIL (G11, o posto dos Mineiros; ele persegue uma caravana ou barca de Levis nas terras altas)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "NÃO VIU A TEMPO: a caravana perdida (1d6 × 3 mortos; Comércio de Levis −1 até o 455)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: a caravana larga a carga e foge, sem mortos (Comércio de Levis −1 até o 448)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO (o dano pela metade e um RUMOR EXATO: onde ele dorme)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "PEGO NO LUGAR: a casa sabe a hora e o lugar para caçar com SURPRESA (Mítico: só com a palavra do rei)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 22,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[20] +2 = 22 → SURPRESA (gerador novidade) (20 NATURAL)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "VG41b": {
+   "id": "VG41b",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "A VIGIA DO VATHEXA (G11, o posto da Luz do Cais; o Lendário 268 de Tempo migra da costa para IREVIEL E O RIO)",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "NÃO VIU A TEMPO: a notícia só chega no 447 e ele escolhe o covil novo sem ninguém ver"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: Ireviel sabe hoje que ele sobe da costa para o rio"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO do covil novo (rumor exato)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "PEGO NO LUGAR: a hora e o lugar para caçar com SURPRESA (Lendário: só com a palavra do rei)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 9,
+     "res": "AVISO A TEMPO: Ireviel sabe hoje que ele sobe da costa para o rio",
+     "txt": "[7] +2 = 9 → AVISO A TEMPO: Ireviel sabe hoje que ele sobe da costa para o rio"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "KR41": {
+   "id": "KR41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O KROTHOS (Lendário 295, Sombra) BRIGA COM OUTRO BICHO GRANDE PERTO DE LEVIS: COM QUEM",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o ITHVIL (Mítico 276, Fogo)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o ISYZIS (Épico 95, Espinho), no rio acima de Levis"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o ISYZIS (Épico 95, Espinho), no rio acima de Levis",
+     "txt": "[6] → o ISYZIS (Épico 95, Espinho), no rio acima de Levis"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "KR41b": {
+   "id": "KR41b",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "QUEM SAI FERIDO DA BRIGA DO KROTHOS",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o KROTHOS (fica ferido, mais perto de Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o OUTRO (fica ferido)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o OUTRO (fica ferido)",
+     "txt": "[6] → o OUTRO (fica ferido)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "IZ41": {
+   "id": "IZ41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "QUANTAS CRIAS O ISYZIS PÕE NO RIO ACIMA DE LEVIS (FIEL; sem posto)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantas crias (Raras, um degrau abaixo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "tantas crias (Raras, um degrau abaixo)",
+     "txt": "[4] → tantas crias (Raras, um degrau abaixo)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "AC41": {
+   "id": "AC41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O ACHADO DEBAIXO DE IREVIEL (o evento da cidade, d20 [17])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OURO: 1d6 × 100 no cofre (moedas de quem viveu antes)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MATERIAL: um veio ou um depósito na escavação (gerador material, o mais próximo do Livro)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma RUÍNA debaixo da cidade (gerador lugar; o atlas, G37)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "OURO: 1d6 × 100 no cofre (moedas de quem viveu antes)",
+     "txt": "[2] → OURO: 1d6 × 100 no cofre (moedas de quem viveu antes)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "DP41": {
+   "id": "DP41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O DESASTRE NO PORTO DE MARASAR (o evento da cidade, d20 [1]; hoje CALOR FORTE e capim seco)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "INCÊNDIO num armazém do cais"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "DESABAMENTO de um armazém velho do cais"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "DESABAMENTO de um armazém velho do cais",
+     "txt": "[4] → DESABAMENTO de um armazém velho do cais"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "DP41b": {
+   "id": "DP41b",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O TAMANHO DO DESASTRE DO PORTO",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "pequeno: Comércio −1 até o 448"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "médio: Comércio −1 e Saúde −1 até o 455; 1d6 mortos"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "grande: Comércio −1, Saúde −1 e Ordem −1 até o 455; 2d6 mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "médio: Comércio −1 e Saúde −1 até o 455; 1d6 mortos",
+     "txt": "[4] → médio: Comércio −1 e Saúde −1 até o 455; 1d6 mortos"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "DF41": {
+   "id": "DF41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O DESASTRE EM FARENTA (o evento da cidade, d20 [1]; hoje VENTO FORTE)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "INCÊNDIO que o vento leva por uma rua"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "DESABAMENTO (a muralha velha ou um armazém)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "INCÊNDIO que o vento leva por uma rua",
+     "txt": "[3] → INCÊNDIO que o vento leva por uma rua"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "DF41b": {
+   "id": "DF41b",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O TAMANHO DO DESASTRE DE FARENTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "pequeno: Comércio −1 até o 448"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "médio: Comércio −1 e Saúde −1 até o 455; 1d6 mortos"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "grande: Comércio −1, Saúde −1 e Ordem −1 até o 455; 2d6 mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "pequeno: Comércio −1 até o 448",
+     "txt": "[2] → pequeno: Comércio −1 até o 448"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "MT41": {
+   "id": "MT41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "LEVIS CAI A ORDEM 0 (o 1 natural do reino; PROBLEMA [3] briga ou motim; o Culto do Xaathis juntou gente: força 5; o rei está na cidade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "uma BRIGA GRANDE na praça (os do culto contra os da Mina Fechada), com feridos"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um MOTIM nas ruas baixas: o celeiro do confisco cercado"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o MOTIM chega à porta da governadoria (a Brara)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o MOTIM chega à porta da governadoria (a Brara)",
+     "txt": "[6] → o MOTIM chega à porta da governadoria (a Brara)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "TO41": {
+   "id": "TO41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "A OBRA DO TERASETH SE COMPLETA (Lendário 432, AMBICIOSO e COVARDE; vingar os barqueiros mortos pela guerra do rio; amigo da casa +50)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "AFUNDA AS BARCAS DA LIGA no rio, abaixo de Levis e na forquilha (a Liga perde a frota do rio; o Croque leva a glória)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MATA QUEM MANDOU: um capitão da Liga da guerra do rio aparece morto no cais de Ireviel, com o croque cravado"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "O RIO JURA A ELE: os barqueiros, os Afogados Vivos e o Croque o chamam de senhor do rio (uma força no rio que não é do rei)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "O RIO JURA A ELE: os barqueiros, os Afogados Vivos e o Croque o chamam de senhor do rio (uma força no rio que não é do rei)",
+     "txt": "[6] → O RIO JURA A ELE: os barqueiros, os Afogados Vivos e o Croque o chamam de senhor do rio (uma força no rio que não é do rei)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "GO41": {
+   "id": "GO41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "A OBRA DO GARKUNN SE COMPLETA (Lendário 343, CRUEL e VINGATIVO, Mordun; acabar com uma fé ou uma raça)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os VRURN, os trolls de Yaelane, mortos ou dispersos"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a VIGÍLIA em Shizess: os templos queimados e os vigilantes mortos"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "os ELOULANE, os guardas do veio-mãe de Yaelane (a Chama sob a Areia), caçados"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os VRURN, os trolls de Yaelane, mortos ou dispersos",
+     "txt": "[1] → os VRURN, os trolls de Yaelane, mortos ou dispersos"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "GO41n": {
+   "id": "GO41n",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "QUANDO A NOTÍCIA DA OBRA DO GARKUNN CHEGA A IREVIEL",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "no 444"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "no 446"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "não chega sozinha (só quem for atrás)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "não chega sozinha (só quem for atrás)",
+     "txt": "[6] → não chega sozinha (só quem for atrás)"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "TV41a": {
+   "id": "TV41a",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O TOLVANE EM LUMADE: A AMOSTRA DO HADUN (o recado do rei; o Celocus o tem à venda)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o CELOCUS não vende amostra: quer o rei em pessoa"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "vende uma amostra (uma pena), 200 do bolso da viagem"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "dá a amostra de presente e mostra a carga inteira"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o CELOCUS não vende amostra: quer o rei em pessoa",
+     "txt": "[1] → o CELOCUS não vende amostra: quer o rei em pessoa"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "TL41": {
+   "id": "TL41",
+   "dia": 441,
+   "hora": "02:13:24",
+   "titulo": "O TEMPO LIVRE DA SEMANA (G15; ninguém escolheu: o Mestre pega os parados) · o HERKALD TRABALHA: 1d6 × 50 ao cofre",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado vezes 50"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o dado vezes 50",
+     "txt": "[6] → o dado vezes 50"
+    }
+   ],
+   "hora_rolado": "02:13:24"
+  },
+  "NV41a": {
+   "id": "NV41a",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A SURPRESA DA VIGIA DO ITHVIL (VG41a [20]; ele perseguia uma caravana de Levis nas terras altas; o posto dos Mineiros)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "um material novo aparece à venda ou em boato"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um monstro novo é avistado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "um NPC novo, com ambição, entra na vida de alguém próximo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "uma missão nova bate à porta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um lugar novo é descoberto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um culto mostra o sinal"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "uma facção nova nasce de um conflito antigo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "uma técnica, receita ou feitiço novo circula"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "um NPC antigo volta mudado"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "uma promessa antiga cobra"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "uma consequência antiga chega (de algo feito há mais de 30 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "um preço ou uma lei muda e alguém sofre com isso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um culto mostra o sinal",
+     "txt": "[6] → um culto mostra o sinal"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "NV41b": {
+   "id": "NV41b",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A SURPRESA DE LEVIS (o evento da cidade, d20 [20]; o motim na porta da governadoria)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "um material novo aparece à venda ou em boato"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um monstro novo é avistado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "um NPC novo, com ambição, entra na vida de alguém próximo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "uma missão nova bate à porta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um lugar novo é descoberto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um culto mostra o sinal"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "uma facção nova nasce de um conflito antigo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "uma técnica, receita ou feitiço novo circula"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "um NPC antigo volta mudado"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "uma promessa antiga cobra"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "uma consequência antiga chega (de algo feito há mais de 30 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "um preço ou uma lei muda e alguém sofre com isso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "um monstro novo é avistado",
+     "txt": "[2] → um monstro novo é avistado"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "NV41c": {
+   "id": "NV41c",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A SURPRESA DA ELIANE (a semana dela, d10 [10]; de cama em Levis até o 443)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "um material novo aparece à venda ou em boato"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um monstro novo é avistado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "um NPC novo, com ambição, entra na vida de alguém próximo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "uma missão nova bate à porta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um lugar novo é descoberto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um culto mostra o sinal"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "uma facção nova nasce de um conflito antigo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "uma técnica, receita ou feitiço novo circula"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "um NPC antigo volta mudado"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "uma promessa antiga cobra"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "uma consequência antiga chega (de algo feito há mais de 30 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "um preço ou uma lei muda e alguém sofre com isso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um culto mostra o sinal",
+     "txt": "[6] → um culto mostra o sinal"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "NV41d": {
+   "id": "NV41d",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A SURPRESA DE LUMADE (o evento de mundo de PERTO: uma caravana ou frota perdida; o Tolvane e o Hruthos estão lá)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "um material novo aparece à venda ou em boato"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um monstro novo é avistado"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "um NPC novo, com ambição, entra na vida de alguém próximo"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "uma missão nova bate à porta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um lugar novo é descoberto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um culto mostra o sinal"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "uma facção nova nasce de um conflito antigo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "uma técnica, receita ou feitiço novo circula"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "um NPC antigo volta mudado"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "uma promessa antiga cobra"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "uma consequência antiga chega (de algo feito há mais de 30 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "um preço ou uma lei muda e alguém sofre com isso"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um culto mostra o sinal",
+     "txt": "[6] → um culto mostra o sinal"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "AC41o": {
+   "id": "AC41o",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "O OURO ACHADO DEBAIXO DE IREVIEL (AC41 [2])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o dado vezes 100"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o dado vezes 100",
+     "txt": "[2] → o dado vezes 100"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "DP41m": {
+   "id": "DP41m",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "OS MORTOS DO DESABAMENTO NO PORTO DE MARASAR (DP41b [4])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantos mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "tantos mortos",
+     "txt": "[3] → tantos mortos"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "OT41": {
+   "id": "OT41",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A OBRA NOVA DO TERASETH (a outra obra, depois do rio; mundo_vivo.py OBRAS)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "unificar os clãs do norte sob uma coroa"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "forjar uma arma que muda a guerra"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "fundar uma fé nova"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "quebrar a Liga de Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "abrir uma passagem para o que dorme"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com a magia"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fechar a coberta do mundo de novo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "criar uma escola de magia sem limites"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "comprar todas as dívidas da costa"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "domar um monstro Mítico"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "achar as três ferramentas dos reis"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "ressuscitar um morto amado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 10,
+     "res": "domar um monstro Mítico",
+     "txt": "[10] → domar um monstro Mítico"
+    }
+   ],
+   "hora_rolado": "02:13:57"
+  },
+  "OG41": {
+   "id": "OG41",
+   "dia": 441,
+   "hora": "02:13:57",
+   "titulo": "A OBRA NOVA DO GARKUNN (mundo_vivo.py OBRAS)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "unificar os clãs do norte sob uma coroa"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "forjar uma arma que muda a guerra"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "fundar uma fé nova"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "quebrar a Liga de Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "abrir uma passagem para o que dorme"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acabar com a magia"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "fechar a coberta do mundo de novo"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "criar uma escola de magia sem limites"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "comprar todas as dívidas da costa"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "domar um monstro Mítico"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "achar as três ferramentas dos reis"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "ressuscitar um morto amado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "quebrar a Liga de Marasar",
+     "txt": "[4] → quebrar a Liga de Marasar"
+    }
+   ],
+   "hora_rolado": "02:13:57"
   }
  }
 }

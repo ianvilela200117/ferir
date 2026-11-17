@@ -2968,6 +2968,61 @@
    "chegada": "[6] não chega sozinha (só se alguém for atrás)",
    "resumo": "CLIMA ESTRANHO — Steunn",
    "toca": true
+  },
+  {
+   "dia": 439,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [13] a Mata de Elais",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "DESCOBERTA DE MATERIAL — a Mata de Elais",
+   "toca": false
+  },
+  {
+   "dia": 440,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [15] o sul, onde a areia come a pedra",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — o sul, onde a areia come a pedra",
+   "toca": false
+  },
+  {
+   "dia": 441,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 447,
+   "chegada": "[5] em 1d6 [6] dias",
+   "resumo": "CLIMA ESTRANHO — as Montanhas de Fogo",
+   "toca": false
+  },
+  {
+   "dia": 441,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "nome: Kreula\no que era: templo\npor que caiu: terremoto\no que guarda: uma receita\no que habita: um eremita\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": 443,
+   "chegada": "[5] em 1d6 [2] dias",
+   "resumo": "UMA RUÍNA SE ABRE — as Montanhas de Fogo (Kreula)",
+   "toca": false
+  },
+  {
+   "dia": 441,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 444,
+   "chegada": "[3] em 1d3 [3] dias",
+   "resumo": "CLIMA ESTRANHO — Shizess (as caravanas)",
+   "toca": false
   }
  ]
 }

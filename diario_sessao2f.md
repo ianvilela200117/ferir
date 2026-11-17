@@ -1112,3 +1112,11 @@ O jogo parou diante da porta da sala 9 e não andou. O jogador mandou fazer as s
 
 - **Parada:** a mesma: manhã do 438, a porta da sala 9 fechada, o Zyza de pé atrás do rei. As perguntas 1 a 3 esperam.
 
+## Dias 438 a 441: Zythir fechada, Levis em chamas de gente
+
+Na sala 3 o eco de Tuir ouviu a pergunta do rei e respondeu sem pressa: o guardião não deixa passar ninguém, a não ser quem um rei chamar em nome do reino de Zythir; e o reino ainda tem uma voz, a dele, o arauto. Na sala 8 o rei abriu a palma de novo e falou com a rainha morta. Ela respondeu as três perguntas inteiras, com ódio: a fome e a cria são a fraqueza do guardião; um rei que chame pelo reino o faz baixar as cabeças; e quem espera atrás da porta é o próprio Tuir, vivo. A casa saiu, fechou a tumba e deixou o Zyza de guarda na boca, nas minas velhas.
+
+Em Levis, três dias de cama e de cartas. A Mamiltia escreveu que a prova dos olhos dela aponta a Almision, e que o rei foi enganado como ela. No 441 a cidade caiu na desordem: o culto do dente arrancado levou o motim até a porta da governadoria, onde a Brara, cansada, falou em largar o posto. Um dente apareceu pregado na porta do quarto da Eliane. Do alto da cidade se viu, nas montanhas, uma coisa de pedra fria do tamanho de uma colina; e no rio de cima o Krothos feriu o Isyzis, que pôs quatro crias.
+
+- **Parada:** tarde do 441, Levis, o motim na porta da governadoria.
+

@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 434,
+  "dia": 441,
   "prestigio": 6,
   "legitimidade": 10,
   "conselho_real": {
@@ -28,12 +28,12 @@
    "AS CAÇADAS DO REINO (339): toda semana a Marechal escolhe UM bicho a até 3 dias, pela régua; heróis na frente, a hoste aprende, os despojos à forja; se a régua der mais de 2% de morte a qualquer um dos nossos, não vai sem o rei"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": 3,
+   "a Doge Skotha (Marasar)": 4,
    "o Clã Hegre": -2,
    "Steunn": -1,
-   "os Do Junco (o Delta)": -2,
+   "os Do Junco (o Delta)": -1,
    "a Escola Única (Almision)": 2,
-   "o Colégio": 4,
+   "o Colégio": 3,
    "a Leliel (o Norte; a Liga é dela)": -5,
    "a Escola Única": -1
   },
@@ -74,9 +74,10 @@
    "424: legitimidade 9 → 10 (julgamento EP24: os 7 de Eryssa à morte (a praça esperava))",
    "427: semana do reino; renda de fora do livro +2050",
    "434: semana do reino; renda de fora do livro +2600",
-   "434: legitimidade 9 → 10 (julgamento LV34 (Levis, 434): a sentença que a praça esperava)"
+   "434: legitimidade 9 → 10 (julgamento LV34 (Levis, 434): a sentença que a praça esperava)",
+   "441: semana do reino; renda de fora do livro +2450"
   ],
-  "ultima_semana": 434
+  "ultima_semana": 441
  },
  "cidades": [
   {
@@ -84,12 +85,12 @@
    "tipo": "capital",
    "gente": 14000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 4,
     "Comércio": 4,
     "Dinheiro": 4,
-    "Saúde": 4,
-    "Ordem": 4,
-    "Defesa": 2
+    "Saúde": 3,
+    "Ordem": 3,
+    "Defesa": 1
    },
    "mods": {
     "Comida": [
@@ -110,10 +111,6 @@
      [
       -1,
       "a festa da coroação já passou (era só da semana do 301)"
-     ],
-     [
-      -1,
-      "clima: 2 dias de tempestade (barco parado) (até o 440)"
      ]
     ],
     "Dinheiro": [
@@ -225,7 +222,8 @@
     "413: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [9]",
     "420: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 2 · Ordem 4 · Defesa 2 · evento [1]",
     "427: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [6]",
-    "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]"
+    "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
+    "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 3 · Defesa 1 · evento [17]"
    ],
    "obras_feitas": [
     {
@@ -247,12 +245,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 2,
     "Comércio": 1,
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -263,10 +261,6 @@
      [
       1,
       "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
-     ],
-     [
-      1,
-      "423: as duas barcas de grão de Ireviel, até o 436"
      ]
     ],
     "Comércio": [
@@ -280,7 +274,7 @@
      ],
      [
       -1,
-      "431: o sinal da VATHEXA junto de uma aldeia da costa; a gente fugiu (a vigia não viu a tempo, VX31); até o 438"
+      "DP41: um armazém velho do cais desabou, 3 mortos (até o 455)"
      ]
     ],
     "Saúde": [
@@ -291,6 +285,10 @@
      [
       -1,
       "o Ouvald foi para Levis (397, voto do conselho)"
+     ],
+     [
+      -1,
+      "DP41: um armazém velho do cais desabou, 3 mortos (até o 455)"
      ]
     ],
     "Ordem": [
@@ -304,7 +302,7 @@
      ],
      [
       -1,
-      "pão caro: grão a 174 (até o 440)"
+      "pão caro: grão a 175 (até o 447)"
      ]
     ],
     "Defesa": [
@@ -342,7 +340,8 @@
     "413: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
     "420: Comida 1 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
     "427: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [17]",
-    "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]"
+    "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]",
+    "441: Comida 2 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]"
    ]
   },
   {
@@ -351,10 +350,10 @@
    "gente": 9000,
    "pilares": {
     "Comida": 2,
-    "Comércio": 4,
+    "Comércio": 3,
     "Dinheiro": 4,
-    "Saúde": 3,
-    "Ordem": 1,
+    "Saúde": 4,
+    "Ordem": 0,
     "Defesa": 4
    },
    "mods": {
@@ -384,6 +383,10 @@
      [
       1,
       "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
+     ],
+     [
+      1,
+      "clima: semana boa para o campo, 5 dias de chuva mansa (até o 447)"
      ]
     ],
     "Comércio": [
@@ -407,16 +410,7 @@
      ]
     ],
     "Defesa": [],
-    "Dinheiro": [
-     [
-      -1,
-      "o comércio sente: algo enorme acordou perto de Levis e quebrou um caminho (423; até o 437)"
-     ],
-     [
-      -1,
-      "a LIGA sobe o frete do rio para Levis depois que a correnteza virou uma caravana de Levis (426; até o 440)"
-     ]
-    ],
+    "Dinheiro": [],
     "Saude": [
      [
       1,
@@ -449,7 +443,8 @@
     "427: Comida 2 · Comércio 3 · Dinheiro 4 · Saúde 2 · Ordem 1 · Defesa 4 · evento [10]",
     "434: Comida 1 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 0 · Defesa 4 · evento [4]",
     "434: Comida +1 de vez (o pão do confisco do rei, 5.500)",
-    "pilar Ordem → 1 (435: o pão do confisco nas ruas baixas; a TIGRA faz as filas aceitarem (OR35 [20] natural: surpresa))"
+    "pilar Ordem → 1 (435: o pão do confisco nas ruas baixas; a TIGRA faz as filas aceitarem (OR35 [20] natural: surpresa))",
+    "441: Comida 2 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 0 · Defesa 4 · evento [20]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -477,17 +472,13 @@
     "Dinheiro": 3,
     "Saúde": 3,
     "Ordem": 3,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Ordem": [
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
-     ],
-     [
-      -1,
-      "a BOTICA VELHA fechou com um vizinho uma terra que era de Farenta; um homem do Tirello morto lá (426; até o 440)"
      ]
     ],
     "Dinheiro": [
@@ -500,14 +491,13 @@
      [
       1,
       "o porto aberto ao reino (357)"
-     ]
-    ],
-    "Comida": [
+     ],
      [
       -1,
-      "clima: 6 dias de calor forte, tempestade (até o 440)"
+      "DF41: um incêndio que o vento levou por uma rua (até o 448)"
      ]
     ],
+    "Comida": [],
     "Saúde": [],
     "Defesa": []
    },
@@ -533,7 +523,8 @@
     "413: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [20]",
     "420: Comida 4 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
     "427: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 4 · Defesa 4 · evento [18]",
-    "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]"
+    "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]",
+    "441: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 3 · evento [1]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

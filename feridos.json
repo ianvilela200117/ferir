@@ -1,15 +1,6 @@
 {
  "feridos": [
   {
-   "nome": "Isolda",
-   "grau": "GRAVE",
-   "efeito": "não luta · MARCA: manca",
-   "desde": 426,
-   "ate": 441,
-   "causa": "Morek",
-   "nota": "434 (G15, CURAR-SE): sara o dobro na semana: de 447 para 441"
-  },
-  {
    "nome": "Eliane",
    "grau": "SÉRIO",
    "efeito": "de cama; não luta",

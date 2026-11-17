@@ -123,7 +123,7 @@
    "usos": 3,
    "desde": 437,
    "cargas": {
-    "atual": 1,
+    "atual": 2,
     "max": 2
    },
    "origem": "aula do 266"
@@ -156,7 +156,7 @@
    "tipo": "Magia",
    "efeito": "Osso 3º: três perguntas a um morto (a Receita Mestra pede que o morto ACEITE) · 15 de Mana e 3d6 de PV",
    "grau": 1,
-   "usos": 1,
+   "usos": 2,
    "desde": 437,
    "origem": "o rei sabe"
   },

@@ -145,7 +145,7 @@ def semana(dia):
     if prontos: print('  OBRAS PRONTAS E PARADAS (o Lendário não tem obra nova; o mundo dele parou): '+', '.join(prontos)+'  → mundo_vivo.py nova_obra "NOME"')
     print(' MONSTROS GRANDES (Épico para cima):')
     for m in M['monstros']:
-        if m['estado'] in ('morto',): continue
+        if 'MORT' in str(m.get('estado','')).upper(): continue   # 441: 'MORTO (432; ...)' passava (a Eloune e o Asith agiam mortos)
         if m['estado']=='dormindo':
             r=d(20); print(f"  {m['nome']} ({m['cat']}, dormindo, {m['regiao']}) d20 [{r}] " + ('ACORDA' if r==20 else 'dorme'));
             if r==20: m['estado']='ativo'

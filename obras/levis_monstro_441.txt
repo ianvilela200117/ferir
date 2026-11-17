@@ -1,0 +1,28 @@
+nome: Morssa
+categoria: Mítico
+nível: 316
+corpo: constructo
+tamanho: colina
+essência: Gelo
+números: PV 31600 · Defesa 119 · RD 50 · ataque +109 · 4 ataque(s) por rodada · dano 3d10 × 100 · XP 3160 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · dono de território (no covil dele, o covil age duas vezes por rodada)
+  · carrega um tesouro (o tesouro do covil rola duas vezes)
+  · rouba o fôlego (cada golpe tira 2 de Estamina ou Mana)
+  · veneno no golpe
+  · come magia (o 1º feitiço de cada rodada o cura, salvo o da fraqueza)
+poder assinatura: o golpe congela: o alvo perde 12 de Defesa por 1 rodada, em área de 21 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Fogo: dano dobrado e corta a regeneração · e mais uma, a descobrir: o próprio nome
+comportamento: territorial: ataca quem entra
+habitat: montanha
+sinal (Lei 15): tremores
+drops:
+  · couro ou escama ×200: «kasvil» (Mítico, Gelo + Veneno), serve para armadura: RD 12 contra fogo
+  · glândula ×200: «lumdun» (Mítico, Gelo), serve para ofício e poção: tempera sem empenar: +12 em Técnica
+  · olho ×150: «varium» (Mítico, Gelo), serve para armadura: RD 12 contra fogo
+  · osso ou presa ×200: «fenkos» (Mítico, Gelo + Tempo), serve para arma: o golpe congela: o alvo perde 12 de Defesa por 1 rodada
+  · sangue ou ícor ×100: «braol» (Mítico, Gelo + Agua), serve para ofício e poção: tempera sem empenar: +12 em Técnica
+  · CORAÇÃO: núcleo Mítico de Gelo, serve de NÚCLEO para Mítico e Primordial
+ficha de luta (colar em "monstro" no arquivo de sims/; conferir pela G9; o luta.py roda os traços que conhece): {"nome": "Morssa", "cat": "Mítico", "nivel": 316, "pv": 31600, "df": 119, "rd": 50, "at": 109, "dado": "3d10", "mult": 100, "essencia": "Gelo", "fraqueza": "Fogo", "tracos": ["dono de território (no covil dele, o covil age duas vezes por rodada)", "carrega um tesouro (o tesouro do covil rola duas vezes)", "rouba o fôlego (cada golpe tira 2 de Estamina ou Mana)", "veneno no golpe", "come magia (o 1º feitiço de cada rodada o cura, salvo o da fraqueza)"], "poder": {"nome": "o golpe congela: o alvo perde 12 de Defesa por 1 rodada", "tipo": "area", "cd": 34, "dano": "20d6"}}
+  se lutar NA TOCA (G13), somar: {"covil": {"nome": "o covil dele", "dano": "12d6", "cd": 27, "efeito": "uma condição da G16"}}
+————————————————————————————————————————

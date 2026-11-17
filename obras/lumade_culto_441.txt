@@ -1,0 +1,10 @@
+nome: Culto da Draek
+adora: a praga
+promete: vingança
+sinal: olhos pintados
+células: 5 cidades
+líder: nível 200, classe Rara a Lendária
+rito: febre
+plano (relógio de 6): abrir um selo
+fraqueza: brigam pela sucessão
+————————————————————————————————————————

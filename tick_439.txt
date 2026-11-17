@@ -1,0 +1,31 @@
+[02:06:48] Dia 439 · Pressão 3/5 · evento local 1d20 [8] -> briga na feira
+  O TEMPO (10 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, vento forte (d6 [1] fica · vento d6 [6])
+   o Porto de Marasar: nublado, calmo (d6 [6] muda, d20 [13] · vento d6 [2])
+   Levis: chuva de verão, brisa (d6 [1] fica · vento d6 [3]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: limpo, brisa (d6 [4] muda, d20 [3] · vento d6 [4])
+   O RIO: baixo [34/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d5 [4] Loula
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Zyza (nível 129): a PALAVRA cobra do rei 1d6 × 2 de PV nesta aurora (rolar no selo.py e lançar em ficha.py pv) · a FOME: carne de bicho Raro ou acima uma vez por lua, até o Dia 468 (sem isso perde 5 níveis por lua) · lua nova no 460: o nome e a gota de sangue
+  FERIDO: Isolda (GRAVE: não luta · MARCA: manca) até o Dia 441
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 443
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 439 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d27 [13] a Mata de Elais
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    ——
+  O MUNDO VIVO — Dia 439
+    um Lendário age (d20 [1]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado · notícia d20 [10] chega no dia 442
+    trama do dia: Isolda → Almision (RESSENTIMENTO) d20 [17] um gesto dela aparece em cena hoje
+    FAÍSCA: Draa quer matar Krernos, por causa de uma receita perdida
+    FAÍSCA: a mestra Carea ama em segredo Bjorvunn (pesquisador de monstros e núcleos, 46; AGENTE DA LUMINE, PEGO no 308), por causa de um título
+    FAÍSCA: Nouse salva Seline, por causa de um núcleo de monstro
+  ▶ AGENDA #514: A BARCA DO CORREIO chega a Levis com as notícias de Ireviel: a BATALHA DE MARASAR (a revolta quebrada; ninguém de Ireviel caiu; o chefe dos Fiéis fugiu; o Facio na cela da Skotha) · o LOULA desceu a Ireviel e um dos SEM-TORRE sumiu (436) · (se o rei já tiver saído de Levis, a barca o cruza no rio)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): briga com os Rendidos de Marasar; vence os Rendidos de Marasar · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ceduion, reitor do Colégio de Telosus (Telosus): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: Asesra (Raro, Kremir): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [10] FIEL
+  ✉ notícia de longe que chega hoje: a Companhia do Último Gancho (Qulosus): caçou Kervos e perdeu · COMO CHEGA: d20 [11] FIEL
