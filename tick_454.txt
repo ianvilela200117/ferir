@@ -1,0 +1,44 @@
+[20:35:17] Dia 454 · Pressão 3/5 · evento local 1d20 [1] -> nada
+  O TEMPO (25 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: neblina, brisa (d6 [5] muda, d20 [18] · vento d6 [4]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   o Porto de Marasar: limpo, brisa (d6 [6] muda, d20 [1] · vento d6 [4])
+   Levis: limpo, brisa (d6 [2] fica · vento d6 [3])
+   Farenta: nublado, calmo (d6 [1] fica · vento d6 [1])
+   O RIO: baixo [17/100]
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 454 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [10] o Delta e as salinas  ◆ TOCA A CASA
+    A NOTÍCIA: [1] hoje
+    [MISSÃO]: Morol (o Mestre dá o nome pela ficção)
+    dificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Lendária
+    objetivo: caçar uma criatura
+    complicação escondida (Envelope): tem um monstro no caminho
+    prazo: 4 dias
+    recompensa: 50 XP · 10 de ouro · ??? (revelada ao concluir)
+    penalidade se falhar: a região piora um passo
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 454
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Tilde → Ulair (RESSENTIMENTO) d20 [3] nada visível
+    FAÍSCA: o podestà Tirello salva Almision, por causa de o perdão
+    FAÍSCA: Ardenghi pede ajuda a Celocus, por causa de um feitiço proibido
+    FAÍSCA: Brara chantageia a irmã Oisse, por causa de sal
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #361 (era do Dia 443): LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ▶ AGENDA #519 (era do Dia 444): CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [saiu de Ireviel no 442, pela costa: 2 dias]
+  ▶ AGENDA #577 (era do Dia 445): A CAÇADA DA MISSÃO DO ITHVIL: o recado chega à ELIANE em Levis (de pé desde o 443): a Marechal aplica a LEI DAS CAÇADAS (339) com o que há em Levis (ela, as 10 lanças da ronda, a Guilda de Levis, a Bigorna Livre se quiser): a régua OCULTA contra a criatura (sims/ithvil_cria_base.json); acima de 2% de morte, não vai sem o rei (e o rei não luta até o 458); o prazo da missão é o 449
+  ▶ AGENDA #578 (era do Dia 445): CHEGA a Levis: o recado do rei à ELIANE, em Levis: o reino ACEITA a missão do Ithvil (10.000, até o 449); a Marechal monta a caçada pela Lei das Caçadas (339) (saiu de Ireviel no 441) [de barca rápida: 4 dias rio acima; o rio baixo não atrasa a barca leve]
+  ▶ AGENDA #590 (era do Dia 447): (OCULTO) FARENTA: o GOLPE OU A SUCESSÃO aparece (G8, a pressão do 446; GS46 [1]): rolar quem e o quê (o podestà Tirello, a Guarda do Pedágio, a Botica Velha, a gente do Tirello morto, os Olhos Pintados)
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ✉ NOTÍCIA QUE CHEGA HOJE: OFERTA PÚBLICA: alguém paga por um serviço — o Delta e as salinas · COMO CHEGA: d20 [9] FIEL (a célula da casa confirma)
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [20] FIEL

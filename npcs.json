@@ -7066,5 +7066,23 @@
   ],
   "classe": "viajante (a gerar a classe em cena)",
   "ocupacao": "chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha"
+ },
+ "Dulassetta": {
+  "nivel": 34,
+  "xp": 0,
+  "log": [
+   "Dia 454: entra no livro (nível 34)"
+  ],
+  "classe": "conselheiro de Farenta (Burocrata)",
+  "ocupacao": "do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele)"
+ },
+ "Yinnor": {
+  "nivel": 88,
+  "xp": 0,
+  "log": [
+   "Dia 454: entra no livro (nível 88)"
+  ],
+  "classe": "mestre da Luz do Colégio de Ireviel (Sacerdote)",
+  "ocupacao": "ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz"
  }
 }

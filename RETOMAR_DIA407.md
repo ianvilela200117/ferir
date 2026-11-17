@@ -1,4 +1,4 @@
-# RETOMAR — tarde do Dia 452, FARENTA: a galé pronta para Ireviel (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 454, IREVIEL: a mesa do plano do reino (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 454, IREVIEL (os ticks do 453 e 454 rodados; o tick SEMANAL é no 455). O rei 402/402 (o ferimento acaba no 456 pela Casa de Cura), Mana 149/164, a Visão 2/2; o Purificar (novo) e a Cura Maior. A ISOLDA na estrada sul de Farenta atrás do corvo (volta no 457: #647). O corpo da Mamiltia QUEIMADO na forja santa (RT54 [3]); o velho deu ao rei uma BRASA DO FOGO DO TEMPLO (a Receita da Mão que Volta pede o fogo de um templo). YEOR deu o nome: DULASSETTA (npcs; conselheiro do podestà de Farenta) manda cartas à LELIEL; Yeor é cunhado dele. (OCULTO) o CEDUION (CD53 [5]) oferece ensinar um feitiço do 7º círculo: a resposta chega no 468 (#649). O TOLVANE recebe o recado no 464. A ELAEVA (oculto: chega ao Delta no 465). O PLANO DO REINO está nas perguntas: o dinheiro (vender os materiais Épicos: yeviel 60, neiel 20; preço de Épico 600 a 1.000 o kg; a venda grande derruba o preço), as cidades (Feira Franca em Levis, a muralha de Farenta, o Édito do Físico, o Grão Guardado), o exército (a Série de armaduras com seor, leor, gusta e nee; o óleo de VIDA; o chamado), o povo, e o Delta (o rei de pé no 456). O cofre: 8.168; a semana: −1.940.
+
+Antes (452):
 Tarde do 452, FARENTA (os ticks do 450, 451 e 452 rodados). A GALÉ (a Isolda, capitã +21) e a barca do rei no cais, prontas para IREVIEL (2 dias pela costa: 454). A bordo: o corpo SALGADO da Mamiltia (o rito: a forja santa da Mão Queimada de Ireviel; FE51 [5] oculto: eles HONRAM o rei, +5), o Moreth (600), o Eiagrir (420), o cabo Gonde e os 10, NOVE carroças de sal. O rei 402/402, Mana 164, GRAVE até o 458. A ELAEVA: 17.845 (47%), rumo ao Delta; (OCULTO) chega às salinas no 465 (#640); a casa sabe: a fraqueza VIDA e o SAL; o fogo não dobra; no Delta, entre os braços, ela não foge. A MIE chegou ao Delta no 452 (a resposta da Lurentetta a rolar quando chegar ao rei). YEOR (npcs): quer a cura da filha (a febre; PURIFICAR, Luz 3º, aula no Colégio de Ireviel); (OCULTO) sabe de um crime de alguém importante. A ISOLDA pede a caça ao corvo da Almision (IS52 [1]); a promessa do rei à Mamiltia (esperar antes de agir contra a Almision) acabou com a morte dela? (decisão do jogador). A carta do Tolvane lida (o Skorval; errado). A Guilda recusou Levis (GU50 [1]). Farenta: o incêndio, a febre e o comércio até o 455-458. A costa: o inverno fora de hora (Comida −1 em Ireviel e no Porto de Marasar até o 458).
 
 Antes (449):
@@ -281,10 +284,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (449 → 452): 1b o servo armado, senão c · 2b voltar, sarar, caçar: "vou vingar a Mamiltia" · 3a a galé a Farenta e o Delta juntos
 - FM49 10 · SA49 [1] recusa · Q249 [5] a forja santa · o saber dela EXTRAORDINÁRIO (a Vida, o sal, a ilha do Delta, o corvo) · os ticks 450-452 · GU50 [1] · SI50 [2] · D51 [6] · MF51 6 · CL51 [1] · FE51 [5] (oculto) · YE51 [6] · YQ51 [1] · IS52 [1].
 
+## RESPONDIDO (452 → 454): "melhorar as cenas" · 1a · 2a "não se arrisque à toa; ninguém morre nos devendo" · 3a · o plano do reino · o Delta
+- IH52 [2] · IV52 [2] · CD53 [5] (oculto) · os ticks 453-454 · RT54 [3] · o Purificar · YS54 [6] · YC54 [6]: Dulassetta (correção: não é o Donione).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. YEOR e a filha com febre: a) levá-los a Ireviel na galé (a Oisse cuida dela; o rei pode aprender o PURIFICAR, Luz 3º, numa aula do Colégio e curá-la) · b) deixar · c) levar, mas pedir antes o que ele sabe (ele parece guardar alguma coisa).
-2. A ISOLDA pede a caça ao CORVO DA ALMISION: a) sim, agora (ela vai sozinha, com o gorjal) · b) sim, mas depois da Elaeva · c) não: a promessa à Mamiltia (esperar) ainda vale para o rei.
-3. A CARTA DO TOLVANE (ele acredita que o Skorval vende o hadun ao Celocus): a) mandar o Tolvane voltar a Ireviel · b) mandá-lo ficar em Lumade de olhos abertos · c) nada.
+1. O DINHEIRO: a) vender 40 kg de yeviel e 10 de neiel no mercado de Ireviel · b) vender só 20 kg de yeviel · c) não vender; a Intendente corta a despesa · d) vender e cortar.
+2. AS CIDADES (ao conselho): a) a FEIRA FRANCA em Levis e o reparo da muralha de Farenta · b) o ÉDITO DO FÍSICO (Saúde +1 em toda cidade; 480 por semana) · c) o GRÃO GUARDADO (100 por semana) · d) tudo.
+3. O EXÉRCITO: a) a forja do rei faz uma SÉRIE de armaduras para a Hoste com seor, leor, gusta e nee · b) procurar ÓLEO DE ESSÊNCIA DE VIDA para o Delta · c) o CHAMADO de lanças · d) tudo.
+4. O DELTA: a) partir no 456, com o rei de pé, a galé, o sal, o Moreth e o Eiagrir, e preparar a ilha com a Lurentetta · b) esperar a Isolda (457) e chamar a Eliane de Levis antes · c) outra.
+5. DULASSETTA (as cartas à Leliel): a) prender pelo podestà · b) vigiar e ler as cartas antes que saiam (a contra-espionagem) · c) usá-lo para mandar à Leliel o que o rei quiser que ela saiba.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

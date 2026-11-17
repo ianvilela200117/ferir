@@ -1,11 +1,5 @@
 {
  "ordem": [
-  "CL23",
-  "IT23",
-  "IT23b",
-  "KR23",
-  "KR23b",
-  "KM23",
   "AL23",
   "VR23",
   "VZ23",
@@ -399,279 +393,15 @@
   "YE51",
   "MF51",
   "YQ51",
-  "IS52"
+  "IS52",
+  "IH52",
+  "IV52",
+  "CD53",
+  "RT54",
+  "YS54",
+  "YC54"
  ],
  "selos": {
-  "CL23": {
-   "id": "CL23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O MEDO DO CELOCUS (a PRISÃO) aparece em Lumade (notícia FIEL hoje)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "FOGE de Lumade, de noite, para a cidade do filho"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "SE ESCONDE na casa-forte, fecha as portas e paga guarda dobrada"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "FAZ ALGO DESESPERADO: queima os próprios livros de conta antes que um juiz os leia"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "FAZ ALGO DESESPERADO: queima os próprios livros de conta antes que um juiz os leia",
-     "txt": "[5] → FAZ ALGO DESESPERADO: queima os próprios livros de conta antes que um juiz os leia"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "IT23": {
-   "id": "IT23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O ITHVIL (Mítico 274, Levis) come algo que o muda (notícia FIEL): quantos níveis sobe",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "sobe o dado em níveis"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "sobe o dado em níveis",
-     "txt": "[2] → sobe o dado em níveis"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "IT23b": {
-   "id": "IT23b",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O QUE O ITHVIL COMEU (o que a notícia conta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um rebanho inteiro das terras altas de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um veio de metal na mina velha (come pedra com ferro)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a raiz de SHEZHIS onde dorme (a Luz cresce nele)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "outro monstro (um Raro da serra)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "um rebanho inteiro das terras altas de Levis",
-     "txt": "[2] → um rebanho inteiro das terras altas de Levis"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "KR23": {
-   "id": "KR23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O KROTHOS (Lendário 295, Levis) destrói algo (a verdade; a notícia chega INCOMPLETA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma PONTE (a de pedra de Levis-baixa)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a ESTRADA DO RIO acima de Levis (o aterro)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "uma MINA (a boca de uma das minas de baixo)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a ESTRADA DO RIO acima de Levis (o aterro)",
-     "txt": "[3] → a ESTRADA DO RIO acima de Levis (o aterro)"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "KR23b": {
-   "id": "KR23b",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "O QUE FALTA NA NOTÍCIA DO KROTHOS",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "QUEM FEZ (sabe-se o lugar; ninguém viu o bicho)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "ONDE FOI (dizem que algo enorme acordou e quebrou; não se sabe o quê)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "ONDE FOI (dizem que algo enorme acordou e quebrou; não se sabe o quê)",
-     "txt": "[2] → ONDE FOI (dizem que algo enorme acordou e quebrou; não se sabe o quê)"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
-  "KM23": {
-   "id": "KM23",
-   "dia": 423,
-   "hora": "08:58:00",
-   "titulo": "A INVENÇÃO DE KREMIR (notícia FIEL hoje): de que ofício",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "OFICINA (um fole ou um torno novo)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MAGIA (um selo que se grava em ferro)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "GUERRA (uma besta que atira duas vezes)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "PLANTIO (um arado de ferro que vira a terra funda)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "PLANTIO (um arado de ferro que vira a terra funda)",
-     "txt": "[4] → PLANTIO (um arado de ferro que vira a terra funda)"
-    }
-   ],
-   "hora_rolado": "08:58:00"
-  },
   "AL23": {
    "id": "AL23",
    "dia": 423,
@@ -19597,6 +19327,276 @@
     }
    ],
    "hora_rolado": "20:19:59"
+  },
+  "IH52": {
+   "id": "IH52",
+   "dia": 452,
+   "hora": "20:34:54",
+   "titulo": "ONDE ESTÁ O RASTRO DO CORVO DA ALMISION (a Isolda sai pela estrada sul na noite do 452)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a estrada sul de Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "Telosus, a Escola Única"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "em volta de Ireviel, sobre a Casa dos Estudiosos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a estrada sul de Farenta",
+     "txt": "[2] → a estrada sul de Farenta"
+    }
+   ],
+   "hora_rolado": "20:34:54"
+  },
+  "IV52": {
+   "id": "IV52",
+   "dia": 452,
+   "hora": "20:34:54",
+   "titulo": "EM QUANTOS DIAS A ISOLDA VOLTA (d6 + 3)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "+ 3 dias"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "+ 3 dias",
+     "txt": "[2] → + 3 dias"
+    }
+   ],
+   "hora_rolado": "20:34:54"
+  },
+  "CD53": {
+   "id": "CD53",
+   "dia": 453,
+   "hora": "20:35:16",
+   "titulo": "(OCULTO) O CEDUION E A COBRANÇA DO REI",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nega e ameaça"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "paga em silêncio"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "pede perdão e oferece ensinar um feitiço do 7º círculo"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "pede perdão e oferece ensinar um feitiço do 7º círculo",
+     "txt": "[5] → pede perdão e oferece ensinar um feitiço do 7º círculo"
+    }
+   ],
+   "hora_rolado": "20:35:16"
+  },
+  "RT54": {
+   "id": "RT54",
+   "dia": 454,
+   "hora": "20:35:38",
+   "titulo": "O RITO DA MAMILTIA NA FORJA SANTA DA MÃO QUEIMADA DE IREVIEL",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "pedem que o rei dê a mão ao fogo com eles"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "o mais velho a queima, e a fé agradece"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o mais velho a queima, e a fé agradece",
+     "txt": "[3] → o mais velho a queima, e a fé agradece"
+    }
+   ],
+   "hora_rolado": "20:35:38"
+  },
+  "YS54": {
+   "id": "YS54",
+   "dia": 454,
+   "hora": "20:35:38",
+   "titulo": "YEOR, COM A FILHA CURADA, CONTA O QUE SABE?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "agradece e guarda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "conta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "conta",
+     "txt": "[6] → conta"
+    }
+   ],
+   "hora_rolado": "20:35:38"
+  },
+  "YC54": {
+   "id": "YC54",
+   "dia": 454,
+   "hora": "20:35:43",
+   "titulo": "O CRIME QUE YEOR CONTA: DE QUEM",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o podestà Tirello de Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o CEDUION (o roubo do Colégio de Telosus foi ele mesmo)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Botica Velha"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a Guarda do Pedágio"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o Celocus"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "alguém do conselho de Farenta que manda carta à Leliel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "alguém do conselho de Farenta que manda carta à Leliel",
+     "txt": "[6] → alguém do conselho de Farenta que manda carta à Leliel"
+    }
+   ],
+   "hora_rolado": "20:35:43"
   }
  }
 }

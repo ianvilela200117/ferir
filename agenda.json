@@ -1,5 +1,5 @@
 {
- "prox_id": 647,
+ "prox_id": 652,
  "itens": [
   {
    "id": 1,
@@ -7172,7 +7172,7 @@
    "oculto": false,
    "para": false,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9110,6 +9110,69 @@
     10,
     "FIEL"
    ]
+  },
+  {
+   "id": 647,
+   "dia": 457,
+   "texto": "VOLTA a ISOLDA da estrada sul de Farenta (o rastro do corvo da Almision; IH52 [2]): rolar o que ela traz, com a regra do rei (ao primeiro risco, volta): d6 declarado no dia; e ela traz notícia dos Olhos Pintados (a mesma estrada)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 648,
+   "dia": 455,
+   "texto": "UMA RUÍNA SE ABRE — Kremir (Quoula)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 453",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 649,
+   "dia": 468,
+   "texto": "(OCULTO) CHEGA a Ireviel a RESPOSTA DO CEDUION à cobrança do rei (CD53)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 650,
+   "dia": 454,
+   "texto": "OFERTA PÚBLICA: alguém paga por um serviço — o Delta e as salinas",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 454",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "FIEL (a célula da casa confirma)"
+   ]
+  },
+  {
+   "id": 651,
+   "dia": 464,
+   "texto": "CHEGA a Lumade: o recado do rei ao TOLVANE: voltar a Ireviel (saiu de Ireviel no 454)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "viagem.py",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

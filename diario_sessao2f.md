@@ -1203,3 +1203,43 @@ No dia seguinte o bairro da febre pegou fogo, e um padre disse na praça que era
 A galé entrou no porto na tarde do 452, com a Isolda na popa, mancando como o rei. Ela ouviu a história do corvo inteira, calada, e no fim disse só: "Esse é meu."
 
 - **Parada:** tarde do 452. A galé pronta; a Mamiltia a bordo, salgada; o Delta a esperar.
+
+### A popa da galé, noite do 452, a praia sul de Farenta
+O bote raspou na areia antes que o remador desse a última remada. A Isolda já estava com um pé fora, a capa enrolada no braço, o gorjal por baixo da gola. Cheirava a sal, a breu e, mais fundo, ao corpo coberto de lona no meio da galé, que ninguém mencionava.
+
+"Ao primeiro sinal, voltas", disse o rei da amurada. "Se vires a dona do corvo, não esperas para ver o resto."
+
+Ela olhou a estrada que subia escura entre as dunas. "E se o corvo estiver sozinho?"
+
+"Mesmo assim. A nossa hora chega. Ninguém morre nos devendo."
+
+A Isolda não respondeu. Pôs a mão no casco da galé, como quem toca o ombro de alguém, e subiu a duna sem barulho. O remador esperou um tempo, olhando o lugar onde ela tinha estado, e depois puxou o bote de volta.
+
+### O cais de Ireviel, manhã do 454, na neblina
+A neblina engolia a cidade a trinta passos. O primeiro sinal de casa foi um sino: o da torre nova do cais afundado, a que o rei mandara erguer antes da lua nova, tocando duas vezes para a galé que não se via. O segundo foi o cheiro de carvão molhado.
+
+No cais esperavam uns vinte homens e mulheres de mãos marcadas, em silêncio, e à frente deles a Nouliel, com o livro debaixo do braço e a capa úmida até os joelhos.
+
+"A Mão Queimada quer o corpo hoje", disse ela, antes do bom-dia. "O rito leva lenha de carvalho, três dias de forja apagada no bairro deles e o meu sal de volta. Isso é dinheiro que não temos."
+
+O Moreth passou por ela com a lona nos braços, sem pedir licença. "É uma santa, Intendente."
+
+"Era. E nós temos quatro semanas de cofre." A Nouliel não ergueu os olhos do livro. Mas abriu caminho.
+
+### A forja santa da Mão Queimada, meio-dia do 454
+O mais velho tinha a mão direita inteira coberta de cicatriz, lisa e brilhante como cera. Não falou com o rei: falou com o fogo. Pôs a Mamiltia sobre as brasas com o sal ainda nos pulsos, e o sal estalou primeiro, como chuva em telha, antes que a lona pegasse.
+
+O calor batia na cara de quem estava a três passos. Os ferreiros cantavam uma coisa sem palavras, de boca fechada, que fazia o peito vibrar. Quando o fogo subiu azul, o velho pegou com a tenaz uma brasa do fundo da forja e a estendeu ao rei, embrulhada num pano grosso.
+
+"Ela te ensinou a receita da mão que volta", disse. "Pede o fogo de um templo. Este é o nosso."
+
+O rei pegou a brasa. O pano esquentava a mão até doer.
+
+### A Casa de Cura, tarde do 454
+O Yinnor, o mestre da Luz do Colégio, ensinou o Purificar com um copo de vidro cheio de água turva, e só deixou o rei sair quando a água ficou limpa sem ninguém tocar nela.
+
+A menina de Yeor estava na cama do canto, com a boca seca e os olhos meio abertos. Quando o rei falou a palavra, a febre saiu dela como uma fumaça cinza, devagar, pela boca e pelos cabelos, e se desfez no ar quente do quarto. Ela pediu água.
+
+Yeor não se ajoelhou. Ficou de pé, com o chapéu torcido nas mãos, olhando a filha e não o rei. "Há um homem no conselho do podestà", disse, baixo. "Dulassetta. Manda cartas ao norte, à Leliel. Eu vi uma sair pelo correio." Engoliu em seco. "É casado com a minha irmã."
+
+- **Parada:** noite do 454, a sala do conselho. A Nouliel abriu o livro na página das contas.

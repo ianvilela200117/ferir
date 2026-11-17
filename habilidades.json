@@ -311,6 +311,14 @@
    "usos": 1,
    "desde": 441,
    "origem": "aula do Colégio, 441"
+  },
+  "Purificar": {
+   "tipo": "Magia",
+   "efeito": "Luz 3º: remove maldição, veneno ou doença de um · 15 de Mana (30 sem vela ou vidro)",
+   "grau": 1,
+   "usos": 1,
+   "desde": 454,
+   "origem": "aula do Colégio, 454"
   }
  },
  "titulos": [
