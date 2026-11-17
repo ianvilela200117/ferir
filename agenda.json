@@ -1,5 +1,5 @@
 {
- "prox_id": 643,
+ "prox_id": 647,
  "itens": [
   {
    "id": 1,
@@ -8155,7 +8155,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -8192,7 +8192,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -8274,7 +8274,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -8311,7 +8311,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9008,7 +9008,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9019,7 +9019,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9041,7 +9041,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9052,8 +9052,64 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
+  },
+  {
+   "id": 643,
+   "dia": 452,
+   "texto": "EMBAIXADA OU VISITA de terra distante — Zaitor (terra nova) (Selmir)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 450",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 644,
+   "dia": 452,
+   "texto": "CHEGA a Farenta pela costa: a GALÉ com a ISOLDA (capitã +21), o SAL de Ireviel (SI50) e a carta do Tolvane; daí todos a Ireviel (454): o rito da Mamiltia na forja da Mão Queimada; o rei sara no 458; e o Delta",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 645,
+   "dia": 455,
+   "texto": "MUDANÇA POLÍTICA: lei nova — Gogrunn (as minas)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 451",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 646,
+   "dia": 457,
+   "texto": "DESCOBERTA DE MATERIAL — Mordun (a Boca com Fome)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 452",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    10,
+    "FIEL"
+   ]
   }
  ],
  "fios": [

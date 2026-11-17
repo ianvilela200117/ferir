@@ -3136,6 +3136,40 @@
    "chegada": "[6] não chega sozinha (só se alguém for atrás)",
    "resumo": "UMA RUÍNA SE ABRE — as Montanhas de Fogo (Fenron)",
    "toca": false
+  },
+  {
+   "dia": 450,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [23] Zaitor (terra nova)",
+   "detalhe": "nome: Selmir\ndesejo: enriquecer\nambição (relógio de 4): comprar a liberdade da família\nmedo: voltar a ser escravo\nsegredo: roubou o que tem\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: GENEROSO e AMBICIOSO\n————————————————————————————————————————",
+   "noticia_chega": 452,
+   "chegada": "[5] em 1d6 [2] dias",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Zaitor (terra nova) (Selmir)",
+   "toca": false
+  },
+  {
+   "dia": 451,
+   "d20": 16,
+   "o_que": "MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [5]",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 455,
+   "chegada": "[4] em 1d6 [4] dias",
+   "leitura": "lei nova",
+   "resumo": "MUDANÇA POLÍTICA: lei nova — Gogrunn (as minas)",
+   "toca": false
+  },
+  {
+   "dia": 452,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 457,
+   "chegada": "[5] em 1d6 [5] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Mordun (a Boca com Fome)",
+   "toca": false
   }
  ]
 }

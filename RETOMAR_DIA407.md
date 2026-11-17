@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 449, FARENTA LIVRE: a Elaeva rumo ao Delta; o corpo da Mamiltia salgado (MOTOR 9b: G1 a G37)
+# RETOMAR — tarde do Dia 452, FARENTA: a galé pronta para Ireviel (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Tarde do 452, FARENTA (os ticks do 450, 451 e 452 rodados). A GALÉ (a Isolda, capitã +21) e a barca do rei no cais, prontas para IREVIEL (2 dias pela costa: 454). A bordo: o corpo SALGADO da Mamiltia (o rito: a forja santa da Mão Queimada de Ireviel; FE51 [5] oculto: eles HONRAM o rei, +5), o Moreth (600), o Eiagrir (420), o cabo Gonde e os 10, NOVE carroças de sal. O rei 402/402, Mana 164, GRAVE até o 458. A ELAEVA: 17.845 (47%), rumo ao Delta; (OCULTO) chega às salinas no 465 (#640); a casa sabe: a fraqueza VIDA e o SAL; o fogo não dobra; no Delta, entre os braços, ela não foge. A MIE chegou ao Delta no 452 (a resposta da Lurentetta a rolar quando chegar ao rei). YEOR (npcs): quer a cura da filha (a febre; PURIFICAR, Luz 3º, aula no Colégio de Ireviel); (OCULTO) sabe de um crime de alguém importante. A ISOLDA pede a caça ao corvo da Almision (IS52 [1]); a promessa do rei à Mamiltia (esperar antes de agir contra a Almision) acabou com a morte dela? (decisão do jogador). A carta do Tolvane lida (o Skorval; errado). A Guilda recusou Levis (GU50 [1]). Farenta: o incêndio, a febre e o comércio até o 455-458. A costa: o inverno fora de hora (Comida −1 em Ireviel e no Porto de Marasar até o 458).
+
+Antes (449):
 Manhã do 449, FARENTA LIVRE (o tick do 449 rodado). A ELAEVA FOI EMBORA (o cerco: d6 [2] abaixo de 50%), 17.845 de 37.600 (47%), rumo ao DELTA (PE49 [4]); (OCULTO) chega às salinas no 465 (agenda #640). A MAMILTIA: o corpo inteiro e SALGADO na casa da guarda (guarda até o 478); o que fica possível: a RESSURREIÇÃO (Luz 7º, até 1 mês: até o 478; um núcleo de Luz Raro e algo que ela amou; aprender com um Lendário: o Ceduion no Colégio de Telosus, a Almision, a Gorine) · a RECEITA MESTRA do servo armado (Falar com Morto; ela tem de aceitar: d6 a declarar; o núcleo no peito da categoria dela, que o rei não tem) · entregá-la à fé (Telosus) · enterrá-la. (OCULTO) a notícia chega à Mão Queimada de Ireviel no 451 (agenda #641): rolar a reação. O ZYZA desfeito; o núcleo dele de volta (2 Épicos de Podridão). A MIE e as 20 lanças vão ao Delta (chegam no 452). A galé da Isolda: a barca rápida chega a Ireviel no 450 (agenda #639). LEVIS: a missão falhou; Dinheiro 2/4; Levis 40. O SAL: sete carroças. O rei 402/402, Mana 164/164, Visão 2/2, GRAVE até o 458. O Moreth 600, o Eiagrir 420.
 
 Antes (a noite do 448):
@@ -275,10 +278,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (448 → 449): 1 e 2c "o cerco para distrair; depois recupero o corpo e o servo"
 - FC48b [4,3,4] −110 · o tick do 449 · LV49 [3] · CE49 ELA VAI EMBORA · PE49 [4] · CM49 [4] · NZ49 [4] · MI49 [1] · ED49 (oculto).
 
+## RESPONDIDO (449 → 452): 1b o servo armado, senão c · 2b voltar, sarar, caçar: "vou vingar a Mamiltia" · 3a a galé a Farenta e o Delta juntos
+- FM49 10 · SA49 [1] recusa · Q249 [5] a forja santa · o saber dela EXTRAORDINÁRIO (a Vida, o sal, a ilha do Delta, o corvo) · os ticks 450-452 · GU50 [1] · SI50 [2] · D51 [6] · MF51 6 · CL51 [1] · FE51 [5] (oculto) · YE51 [6] · YQ51 [1] · IS52 [1].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A MAMILTIA (o corpo salgado, até o 478): a) a RESSURREIÇÃO: procurar quem ensine a Luz 7º (o Ceduion, reitor do Colégio de Telosus, Lendário de magia) e juntar um núcleo de Luz Raro e algo que ela amou · b) o SERVO ARMADO: Falar com Morto agora (ela tem de aceitar; falta o núcleo da categoria dela; a fé dela vai saber) · c) levar o corpo à fé dela, em Telosus · d) enterrá-la em Farenta, com honras.
-2. A ELAEVA vai ao Delta (a Mie foi avisar): a) o rei segue para o Delta com a casa, para caçá-la junto da Lurentetta · b) voltar a Ireviel, sarar (458) e preparar a caçada · c) segui-la de longe por terra, com batedores.
-3. A GALÉ DA ISOLDA, já chamada (a ordem chega a Ireviel amanhã): a) que venha a Farenta, como pedido · b) que vá direto ao Delta · c) que fique em Ireviel.
+1. YEOR e a filha com febre: a) levá-los a Ireviel na galé (a Oisse cuida dela; o rei pode aprender o PURIFICAR, Luz 3º, numa aula do Colégio e curá-la) · b) deixar · c) levar, mas pedir antes o que ele sabe (ele parece guardar alguma coisa).
+2. A ISOLDA pede a caça ao CORVO DA ALMISION: a) sim, agora (ela vai sozinha, com o gorjal) · b) sim, mas depois da Elaeva · c) não: a promessa à Mamiltia (esperar) ainda vale para o rei.
+3. A CARTA DO TOLVANE (ele acredita que o Skorval vende o hadun ao Celocus): a) mandar o Tolvane voltar a Ireviel · b) mandá-lo ficar em Lumade de olhos abertos · c) nada.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -1,0 +1,55 @@
+[20:18:42] Dia 450 · Pressão 4/5 · evento local 1d20 [14] -> um vizinho reclama do barulho ou da fumaça
+  O TEMPO (21 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: calor forte, brisa (d6 [1] fica · vento d6 [4]) → cansaço dobrado em armadura e na forja grande, água vale ouro, capim seco (fogo corre)
+   o Porto de Marasar: limpo, brisa (d6 [4] muda, d20 [8] · vento d6 [4])
+   Levis: chuva de verão, vento forte (d6 [5] muda, d20 [16] · vento d6 [6]) → pancada curta: refresca, apaga rastro, enche as cisternas
+   Farenta: nublado, brisa (d6 [4] muda, d20 [13] · vento d6 [4])
+   O RIO: baixo [26/100]
+  avistamento de monstro 1d20 [9] -> nenhum
+  Fortuna volta ao máximo
+  FERIDO: Ferir (GRAVE: não luta · MARCA: manca) até o Dia 458
+  O MUNDO SE MOVE — Dia 450 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d27 [23] Zaitor (terra nova)
+    A NOTÍCIA: [5] em 1d6 [2] dias
+    nome: Selmir
+    desejo: enriquecer
+    ambição (relógio de 4): comprar a liberdade da família
+    medo: voltar a ser escravo
+    segredo: roubou o que tem
+    linha vermelha: nunca machuca uma criança
+    dilema que vai chegar: salvar um filho custa a vida de um estranho
+    traços: GENEROSO e AMBICIOSO
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 450
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Skotha Graskur → Lasca e Miro (presos) (RESSENTIMENTO) d20 [9] nada visível
+    FAÍSCA: Celocus oferece aliança a Draron (da casa), por causa de um mapa
+    FAÍSCA: Dovan ama em segredo Almision, por causa de uma criança
+    FAÍSCA: Haast (fornecedor do Odrum, CURIOSO e ORGULHOSO; OCULTO: trabalha para outra facção, 322) procura a casa da fundição, por causa de a Matriz
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #361 (era do Dia 443): LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ▶ AGENDA #519 (era do Dia 444): CHEGA a Farenta: o rei, o Moreth, o Eiagrir, o Zyza, o cabo Gonde e os 10 da guarda (a barca do rei; Farenta, contra a Elaeva) (saiu de Levis no 438) [saiu de Ireviel no 442, pela costa: 2 dias]
+  ▶ AGENDA #577 (era do Dia 445): A CAÇADA DA MISSÃO DO ITHVIL: o recado chega à ELIANE em Levis (de pé desde o 443): a Marechal aplica a LEI DAS CAÇADAS (339) com o que há em Levis (ela, as 10 lanças da ronda, a Guilda de Levis, a Bigorna Livre se quiser): a régua OCULTA contra a criatura (sims/ithvil_cria_base.json); acima de 2% de morte, não vai sem o rei (e o rei não luta até o 458); o prazo da missão é o 449
+  ▶ AGENDA #578 (era do Dia 445): CHEGA a Levis: o recado do rei à ELIANE, em Levis: o reino ACEITA a missão do Ithvil (10.000, até o 449); a Marechal monta a caçada pela Lei das Caçadas (339) (saiu de Ireviel no 441) [de barca rápida: 4 dias rio acima; o rio baixo não atrasa a barca leve]
+  ▶ AGENDA #579 (era do Dia 447): CHEGA a Farenta: a MIE (150) e as 20 lanças da Lurentetta, com o SAL (MI41 [2]: o Delta a Ireviel em 2 dias, e 2 pela costa) [a tempestade do 446: a barca dela abrigou na costa: chega no 447]
+  ▶ AGENDA #590 (era do Dia 447): (OCULTO) FARENTA: o GOLPE OU A SUCESSÃO aparece (G8, a pressão do 446; GS46 [1]): rolar quem e o quê (o podestà Tirello, a Guarda do Pedágio, a Botica Velha, a gente do Tirello morto, os Olhos Pintados)
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #588 (era do Dia 448): CHEGA a Farenta pela costa: a OISSE e as irmãs da ordem dela (a febre), na barca rápida que saiu no 445
+  ▶ AGENDA #591 (era do Dia 448): CHEGA a Ireviel, pela estrada da costa: a ordem do rei à GUILDA DOS AVENTUREIROS (o Starkald): ir a Levis caçar a criatura da missão do Ithvil pelo contrato do reino (a lei nova das caçadas, 446): a Guilda decide por conta e risco dela; de barca chega a Levis no 452
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #582 (era do Dia 449): CHEGA a Ireviel: a CARTA DO TOLVANE de Lumade: comprou uma pena de hadun (300); ACREDITA (errado) que o SKORVAL vende as penas ao Celocus (OCULTO: é uma partida de caça do Celocus colhendo o Husgarn dormindo, e o Skorval não sabe); de Ireviel a Farenta, mais 2 dias
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #639: CHEGA a Ireviel: a barca rápida de Farenta (saiu na noite do 448, o plano B): chamar a ISOLDA e a GALÉ e comprar SAL; a galé chegaria a Farenta no 452 (a fera já foi embora no 449: o rei pode mudar o rumo)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Eloune, a Mãe-Lodo (Épico, Ireviel e o rio): fica ferido (alguém o caçou e quase conseguiu) · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [18] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Kervos (Único, o brejo do oeste): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Thargos (Mítico, as Fundas do Norte): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [17] FIEL
+  ✉ notícia de longe que chega hoje: UM CULTO CRESCE ou nasce — Zaitor (terra nova) (Culto do Lumra) · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: MONSTRO NOVO OU MIGRAÇÃO — Ulra (terra nova) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Quneus, o Caçador de Gigantes (Lendário, Mordun): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: Asith (Incomum, Zisrir): migra 1 região (rola para onde) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: os Afogados Vivos (o rio): alguém grande passou a pagar ou proteger · COMO CHEGA: d20 [12] FIEL

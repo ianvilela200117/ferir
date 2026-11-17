@@ -987,7 +987,7 @@
    "nivel": 376,
    "regiao": "o vale, rumo ao Delta (as salinas)",
    "estado": "ativo",
-   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta) · 449: FOI EMBORA de Farenta com 47% (o cerco: ela decide abaixo de 50%), rumo ao DELTA e às salinas da Lurentetta (PE49 [4]); matou a MAMILTIA no 448",
+   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta) · 449: FOI EMBORA de Farenta com 47% (o cerco: ela decide abaixo de 50%), rumo ao DELTA e às salinas da Lurentetta (PE49 [4]); matou a MAMILTIA no 448 · 449 (a casa SABE, pelo Falar com Morto e o saber extraordinário da Mamiltia): na fase dos 50% trocou a Essência: o FOGO não dobra mais; a fraqueza nova é VIDA; o SAL segue; no DELTA, entre os braços do rio, ela fica presa (não atravessa água corrente larga)",
    "pv_atual": 17845,
    "nota_383": "ferida pelo cerco de Farenta (382-387): 28.793 de 37.600; foi para os Picos Brancos"
   },
@@ -4070,10 +4070,11 @@
    ]
   },
   "a Mamiltia": {
-   "valor": 65,
+   "valor": 70,
    "log": [
     "433: partida (o Mestre, pelo que a casa viveu com eles)",
-    "441: +5 (441: o rei disse diante dos da Mão Queimada de Ireviel que o nome que deu (o Adurel) estava errado, e prometeu esperar)"
+    "441: +5 (441: o rei disse diante dos da Mão Queimada de Ireviel que o nome que deu (o Adurel) estava errado, e prometeu esperar)",
+    "451: +5 (451 (a fé dela, a Mão Queimada de Ireviel): honram o rei: ela caiu defendendo uma cidade do reino)"
    ]
   },
   "o Celocus (Lumade)": {

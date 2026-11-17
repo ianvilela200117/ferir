@@ -1,17 +1,5 @@
 {
  "ordem": [
-  "CH420ac",
-  "CH420bc",
-  "CH420an",
-  "CH420bn",
-  "NS1",
-  "NS2",
-  "EL22",
-  "CE22",
-  "VZ22",
-  "SR22",
-  "SR22q",
-  "SR22c",
   "CL23",
   "IT23",
   "IT23b",
@@ -399,570 +387,21 @@
   "CM49",
   "NZ49",
   "MI49",
-  "ED49"
+  "ED49",
+  "FM49",
+  "SA49",
+  "Q249",
+  "GU50",
+  "SI50",
+  "D51",
+  "CL51",
+  "FE51",
+  "YE51",
+  "MF51",
+  "YQ51",
+  "IS52"
  ],
  "selos": {
-  "CH420ac": {
-   "id": "CH420ac",
-   "dia": 421,
-   "hora": "08:08:33",
-   "titulo": "A CLASSE DA HASSA (chegou pelo chamado no 420)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "PEDREIRO-MESTRE"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "FÍSICO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "AGRIMENSOR e lavrador"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "FERREIRO"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "CAÇADOR"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "MERCADOR"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "AGRIMENSOR e lavrador",
-     "txt": "[3] → AGRIMENSOR e lavrador"
-    }
-   ],
-   "hora_rolado": "08:08:33"
-  },
-  "CH420bc": {
-   "id": "CH420bc",
-   "dia": 421,
-   "hora": "08:08:33",
-   "titulo": "A CLASSE DO GOIR (chegou pelo chamado no 420)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "PEDREIRO-MESTRE"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "FÍSICO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "AGRIMENSOR e lavrador"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "FERREIRO"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "CAÇADOR"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "MERCADOR"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "CAÇADOR",
-     "txt": "[5] → CAÇADOR"
-    }
-   ],
-   "hora_rolado": "08:08:33"
-  },
-  "CH420an": {
-   "id": "CH420an",
-   "dia": 421,
-   "hora": "08:08:53",
-   "titulo": "O NÍVEL DA HASSA (chamado do 420)",
-   "dado": [
-    2,
-    20,
-    10
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 50,
-     "res": "nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19,
-      15
-     ],
-     "total": 44,
-     "res": "nível",
-     "txt": "[19, 15] +10 = 44 → nível"
-    }
-   ],
-   "hora_rolado": "08:08:53"
-  },
-  "CH420bn": {
-   "id": "CH420bn",
-   "dia": 421,
-   "hora": "08:08:53",
-   "titulo": "O NÍVEL DO GOIR (chamado do 420)",
-   "dado": [
-    2,
-    20,
-    10
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 50,
-     "res": "nível"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18,
-      18
-     ],
-     "total": 46,
-     "res": "nível",
-     "txt": "[18, 18] +10 = 46 → nível"
-    }
-   ],
-   "hora_rolado": "08:08:53"
-  },
-  "NS1": {
-   "id": "NS1",
-   "dia": 421,
-   "hora": "08:09:22",
-   "titulo": "A MISSÃO 'A FORQUILHA LIMPA' (gerador missão: Nesra; A; caçar uma criatura; 7 dias; 6.000 XP, 3.000 e uma informação; a SURPRESA do Fabaino, 413 [4]): QUEM PAGA, pela boca do Fabaino",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "os BARQUEIROS DO LIVRO do Leve (perderam uma barca para o Morek)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "os mercadores do sal da forquilha"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os BARQUEIROS DO LIVRO do Leve (perderam uma barca para o Morek)",
-     "txt": "[1] → os BARQUEIROS DO LIVRO do Leve (perderam uma barca para o Morek)"
-    }
-   ],
-   "hora_rolado": "08:09:22"
-  },
-  "NS2": {
-   "id": "NS2",
-   "dia": 421,
-   "hora": "08:09:22",
-   "titulo": "A INFORMAÇÃO DA RECOMPENSA (o Envelope): QUEM É O PATRONO NOVO dos Barqueiros do Livro (a notícia do 420 chegou FALSA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a LELIEL (a Liga quer a forquilha)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o CELOCUS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a DOGE SKOTHA"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a DOGE SKOTHA",
-     "txt": "[6] → a DOGE SKOTHA"
-    }
-   ],
-   "hora_rolado": "08:09:22"
-  },
-  "EL22": {
-   "id": "EL22",
-   "dia": 422,
-   "hora": "08:09:44",
-   "titulo": "A ELOUNE, A MÃE-LODO (Épica 136, Água) CAÇA PERTO DE IREVIEL (notícia FIEL do 422): o que some",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "GADO da várzea, onde a obra da várzea nova começa"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um PESCADOR e o barco, abaixo do cais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "dois PEDREIROS do dique, no bairro velho, à noite"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "GADO da várzea, onde a obra da várzea nova começa",
-     "txt": "[2] → GADO da várzea, onde a obra da várzea nova começa"
-    }
-   ],
-   "hora_rolado": "08:09:44"
-  },
-  "CE22": {
-   "id": "CE22",
-   "dia": 422,
-   "hora": "08:09:45",
-   "titulo": "O PASSO DO CELOCUS NO QUE ELE QUER PARA SI (notícia FIEL do 422; desejo: proteger um filho; obra: enriquecer acima de todos)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "COMPRA as terras secas em volta de Lumade a preço de fome"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "CASA O FILHO com uma casa forte do Norte (a Liga) para protegê-lo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "CONTRATA uma companhia de espadas para Lumade"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "COMPRA as terras secas em volta de Lumade a preço de fome",
-     "txt": "[1] → COMPRA as terras secas em volta de Lumade a preço de fome"
-    }
-   ],
-   "hora_rolado": "08:09:45"
-  },
-  "VZ22": {
-   "id": "VZ22",
-   "dia": 422,
-   "hora": "08:09:45",
-   "titulo": "QUEM RECLAMA DA FUMAÇA (evento local: um vizinho reclama do barulho ou da fumaça; a forja grande começou a série de ferraduras e eixos, e a Fornalha acende à noite)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a rua dos tecelões, ao lado da forja grande: a fumaça suja o pano"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o templo de baixo (o do Yeane)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os da Cinza, de Ireviel velha"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o templo de baixo (o do Yeane)",
-     "txt": "[5] → o templo de baixo (o do Yeane)"
-    }
-   ],
-   "hora_rolado": "08:09:45"
-  },
-  "SR22": {
-   "id": "SR22",
-   "dia": 422,
-   "hora": "08:56:21",
-   "titulo": "A SIRA DESCE A ERYSSA (noite do 422): d20 + 8 (Furtividade, chefe da espionagem) contra a vigia de quem mora lá",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "VISTA no fundo do mercado (rola o SR22b)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 9,
-     "res": "OUVIDA; volta a tempo e vê pouco: mora gente lá, não sabe quem"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 17,
-     "res": "VÊ E VOLTA: quem mora, quantos, o que guardam à vista; copia as letras da porta"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "VÊ, VOLTA e OUVE COMO ABREM A PORTA (a senha)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10
-     ],
-     "total": 10,
-     "res": "VÊ E VOLTA: quem mora, quantos, o que guardam à vista; copia as letras da porta",
-     "txt": "[10] → VÊ E VOLTA: quem mora, quantos, o que guardam à vista; copia as letras da porta"
-    }
-   ],
-   "hora_rolado": "08:56:21"
-  },
-  "SR22q": {
-   "id": "SR22q",
-   "dia": 422,
-   "hora": "08:56:21",
-   "titulo": "QUANTOS MORAM EM ERYSSA (a ala do cais do Xaathis)",
-   "dado": [
-    2,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "dez mais o dado"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10,
-      8
-     ],
-     "total": 18,
-     "res": "dez mais o dado",
-     "txt": "[10, 8] +0 = 18 → dez mais o dado"
-    }
-   ],
-   "hora_rolado": "08:56:21"
-  },
-  "SR22c": {
-   "id": "SR22c",
-   "dia": 422,
-   "hora": "08:56:32",
-   "titulo": "O QUE OS DE ERYSSA FAZEM NESTA NOITE (o que a Sira vê)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "rezam ao fim do mundo e dormem nas bancas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "juntam ARMAS e barris de piche na forja velha do mercado"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "recebem um de fora, encapuzado, que chega de barca pelo canal velho"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "há alguém CONHECIDO da casa entre eles (rola quem)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "juntam ARMAS e barris de piche na forja velha do mercado",
-     "txt": "[3] → juntam ARMAS e barris de piche na forja velha do mercado"
-    }
-   ],
-   "hora_rolado": "08:56:32"
-  },
   "CL23": {
    "id": "CL23",
    "dia": 423,
@@ -19627,6 +19066,537 @@
     }
    ],
    "hora_rolado": "19:54:21"
+  },
+  "FM49": {
+   "id": "FM49",
+   "dia": 449,
+   "hora": "20:18:03",
+   "titulo": "O SANGUE DO FALAR COM MORTO NA MAMILTIA (Osso 3º)",
+   "dado": [
+    3,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 18,
+     "res": "tantos PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      1,
+      4
+     ],
+     "total": 10,
+     "res": "tantos PV",
+     "txt": "[5, 1, 4] +0 = 10 → tantos PV"
+    }
+   ],
+   "hora_rolado": "20:18:03"
+  },
+  "SA49": {
+   "id": "SA49",
+   "dia": 449,
+   "hora": "20:18:03",
+   "titulo": "A MAMILTIA ACEITA SERVIR, ERGUIDA PELA PALAVRA DO REI?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "RECUSA"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "aceita com um preço"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "aceita"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "RECUSA",
+     "txt": "[1] → RECUSA"
+    }
+   ],
+   "hora_rolado": "20:18:03"
+  },
+  "Q249": {
+   "id": "Q249",
+   "dia": 449,
+   "hora": "20:18:10",
+   "titulo": "O QUE A MAMILTIA QUER DO CORPO DELA (ela recusou servir)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "ser levada à Mão Queimada de Telosus"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "ser queimada na forja de um ferreiro santo"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ficar onde caiu, em Farenta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ser queimada na forja de um ferreiro santo",
+     "txt": "[5] → ser queimada na forja de um ferreiro santo"
+    }
+   ],
+   "hora_rolado": "20:18:10"
+  },
+  "GU50": {
+   "id": "GU50",
+   "dia": 450,
+   "hora": "20:18:56",
+   "titulo": "A GUILDA DOS AVENTUREIROS E A CRIATURA DE LEVIS",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "recusa"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "manda só batedores a ver"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "vai caçar"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "recusa",
+     "txt": "[1] → recusa"
+    }
+   ],
+   "hora_rolado": "20:18:56"
+  },
+  "SI50": {
+   "id": "SI50",
+   "dia": 450,
+   "hora": "20:18:56",
+   "titulo": "O SAL QUE A NOULIEL COMPRA EM IREVIEL PARA A GALÉ",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "duas carroças"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "quatro"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "seis"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "duas carroças",
+     "txt": "[2] → duas carroças"
+    }
+   ],
+   "hora_rolado": "20:18:56"
+  },
+  "D51": {
+   "id": "D51",
+   "dia": 451,
+   "hora": "20:19:18",
+   "titulo": "O DESASTRE EM FARENTA NO 451 (a pressão)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "terremoto: a muralha cai num trecho"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "enchente do mar no bairro do porto"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "incêndio no bairro da febre"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "incêndio no bairro da febre",
+     "txt": "[6] → incêndio no bairro da febre"
+    }
+   ],
+   "hora_rolado": "20:19:18"
+  },
+  "CL51": {
+   "id": "CL51",
+   "dia": 451,
+   "hora": "20:19:18",
+   "titulo": "O CLIMA ESTRANHO NA COSTA IREVIEL–MARASAR",
+   "dado": [
+    1,
+    4,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o inverno que não acaba"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "neve vermelha"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "seca de sal"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "tempestade de cinza"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o inverno que não acaba",
+     "txt": "[1] → o inverno que não acaba"
+    }
+   ],
+   "hora_rolado": "20:19:18"
+  },
+  "FE51": {
+   "id": "FE51",
+   "dia": 451,
+   "hora": "20:19:18",
+   "titulo": "(OCULTO) A MÃO QUEIMADA DE IREVIEL E A MORTE DA MAMILTIA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "culpa o rei"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "luto, pedem o corpo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "honram o rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "honram o rei",
+     "txt": "[5] → honram o rei"
+    }
+   ],
+   "hora_rolado": "20:19:18"
+  },
+  "YE51": {
+   "id": "YE51",
+   "dia": 451,
+   "hora": "20:19:18",
+   "titulo": "(OCULTO) YEOR CRUZA COM O REI EM FARENTA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "não"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "procura o rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "procura o rei",
+     "txt": "[6] → procura o rei"
+    }
+   ],
+   "hora_rolado": "20:19:18"
+  },
+  "MF51": {
+   "id": "MF51",
+   "dia": 451,
+   "hora": "20:19:33",
+   "titulo": "OS MORTOS DO INCÊNDIO NO BAIRRO DA FEBRE (451)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3,
+      3
+     ],
+     "total": 6,
+     "res": "mortos",
+     "txt": "[3, 3] +0 = 6 → mortos"
+    }
+   ],
+   "hora_rolado": "20:19:33"
+  },
+  "YQ51": {
+   "id": "YQ51",
+   "dia": 451,
+   "hora": "20:19:33",
+   "titulo": "QUEM YEOR QUER CURAR (ele procura o rei em Farenta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a filha dele, com a febre de Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o senhor a quem serve, envenenado, em Farenta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ele mesmo: uma doença que esconde"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a filha dele, com a febre de Farenta",
+     "txt": "[1] → a filha dele, com a febre de Farenta"
+    }
+   ],
+   "hora_rolado": "20:19:33"
+  },
+  "IS52": {
+   "id": "IS52",
+   "dia": 452,
+   "hora": "20:19:59",
+   "titulo": "O GESTO DA ISOLDA EM FARENTA (a trama dela: RESSENTIMENTO contra a Almision; ela ouve do rei a memória do corvo nos olhos da Mamiltia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "pede ao rei a caça ao corvo da Almision, para ela"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "conta que o corvo grande foi visto em Ireviel, sobre a Casa dos Estudiosos, no 449"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "jura diante do rei matar a Almision, e pede o Elo de Juramento"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "pede ao rei a caça ao corvo da Almision, para ela",
+     "txt": "[1] → pede ao rei a caça ao corvo da Almision, para ela"
+    }
+   ],
+   "hora_rolado": "20:19:59"
   }
  }
 }

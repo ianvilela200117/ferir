@@ -1194,3 +1194,12 @@ O Gonde foi buscar os mortos com a carroça. A Mamiltia estava deitada entre ra�
 A Mie não esperou o almoço. Disse que a fera ia para a terra da senhora dela e que alguém tinha de chegar antes. Ao meio-dia a barca do Delta saiu com ela e as vinte lanças.
 
 - **Parada:** manhã do 449. Farenta livre; a Mamiltia salgada; a fera no caminho do Delta.
+
+### Farenta, 449 a 452
+O rei falou com a morta na casa da guarda, com a palma aberta sobre o sal. Ela respondeu com a voz que tinha em vida, mas sem fôlego por trás. Não serviria. Queria o fogo de uma forja santa, como os dela. E, antes que a palavra se apagasse, disse o que a fera tinha virado na metade da luta, e onde ela não teria para onde fugir. Nos olhos abertos dela, por um instante, o rei viu um corvo grande pousado no mato, e ouviu uma mulher dizer um nome que ele não conhecia.
+
+No dia seguinte o bairro da febre pegou fogo, e um padre disse na praça que era castigo pela santa morta. No outro, um homem de capa boa, que não olhava ninguém nos olhos, pediu ao rei que lhe curasse a filha.
+
+A galé entrou no porto na tarde do 452, com a Isolda na popa, mancando como o rei. Ela ouviu a história do corvo inteira, calada, e no fim disse só: "Esse é meu."
+
+- **Parada:** tarde do 452. A galé pronta; a Mamiltia a bordo, salgada; o Delta a esperar.

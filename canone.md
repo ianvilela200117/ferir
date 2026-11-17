@@ -349,3 +349,5 @@ depois vira linha nova aqui.
 - (448) O ZYZA, servo armado do rei, foi desfeito pela Elaeva ao tentar buscar o corpo da Mamiltia (o núcleo Épico de Podridão ficou no mato).
 
 - (449) A ELAEVA foi embora de Farenta com 47%, pelo vale, rumo ao DELTA e às salinas da Lurentetta. O corpo da Mamiltia foi trazido inteiro e salgado (guarda até o 478); o núcleo do Zyza recuperado. A Mie partiu para avisar a Lurentetta. A missão do Ithvil falhou em Levis.
+
+- (449-452) A Mamiltia, pelo Falar com Morto, recusou servir e pediu a forja de um ferreiro santo; contou que a Elaeva trocou a pele (o fogo não a dobra mais; a VIDA e o SAL a ferem) e que no Delta, entre os braços do rio, ela fica presa. Nos olhos dela o rei viu um corvo e ouviu uma mulher dizer um nome. Incêndio no bairro da febre de Farenta (451). O inverno fora de hora na costa de Ireviel a Marasar. Yeor pede ao rei a cura da filha. A galé da Isolda chegou a Farenta (452); a Isolda pede a caça ao corvo da Almision.
