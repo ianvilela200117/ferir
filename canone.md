@@ -347,3 +347,5 @@ depois vira linha nova aqui.
 - (448) A MAMILTIA (Primordial) saiu sozinha contra a Elaeva, com sal nas mãos, e a levou de 77% a 48% em três trocas; caiu numa ação lendária e MORREU no mato, ao pé da fera. A Elaeva entrou em fúria e mudou (a segunda fase). O rei tem até uma hora para o Erguer o Caído.
 
 - (448) O ZYZA, servo armado do rei, foi desfeito pela Elaeva ao tentar buscar o corpo da Mamiltia (o núcleo Épico de Podridão ficou no mato).
+
+- (449) A ELAEVA foi embora de Farenta com 47%, pelo vale, rumo ao DELTA e às salinas da Lurentetta. O corpo da Mamiltia foi trazido inteiro e salgado (guarda até o 478); o núcleo do Zyza recuperado. A Mie partiu para avisar a Lurentetta. A missão do Ithvil falhou em Levis.

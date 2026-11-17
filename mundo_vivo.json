@@ -877,7 +877,7 @@
    "ambicao": "tomar o lugar do chefe",
    "tracos": "CRUEL e GENEROSA",
    "pecas": null,
-   "estado": "vivo",
+   "estado": "MORTA (448, Farenta, pela Elaeva)",
    "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). não sabe ler; nunca deixa um ferido para trás",
    "log": [
     "294: [10] procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz)",
@@ -985,10 +985,10 @@
    "nome": "Elaeva, a Floresta que Anda",
    "cat": "Mítico",
    "nivel": 376,
-   "regiao": "Farenta",
+   "regiao": "o vale, rumo ao Delta (as salinas)",
    "estado": "ativo",
-   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta)",
-   "pv_atual": 17955,
+   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta) · 449: FOI EMBORA de Farenta com 47% (o cerco: ela decide abaixo de 50%), rumo ao DELTA e às salinas da Lurentetta (PE49 [4]); matou a MAMILTIA no 448",
+   "pv_atual": 17845,
    "nota_383": "ferida pelo cerco de Farenta (382-387): 28.793 de 37.600; foi para os Picos Brancos"
   },
   {
@@ -4033,12 +4033,13 @@
    ]
   },
   "Levis (a cidade)": {
-   "valor": 50,
+   "valor": 40,
    "log": [
     "433: partida (o Mestre, pelo que a casa viveu com eles)",
     "433: +5 (433: o rei recusou em público o ouro da Liga no cais de uma aldeia de Levis (a surpresa boa do saber: alguém viu e conta))",
     "435: +10 (435: a fundição velha inteira para Levis e as dívidas do Ardenghi rasgadas em praça)",
-    "438: -5 (438: a cidade viu o servo de osso do rei andando (G23))"
+    "438: -5 (438: a cidade viu o servo de osso do rei andando (G23))",
+    "449: -10 (449: o reino aceitou a missão do Ithvil e não a cumpriu)"
    ]
   },
   "o Porto de Marasar (a cidade)": {

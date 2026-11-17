@@ -1,5 +1,5 @@
 {
- "prox_id": 639,
+ "prox_id": 643,
  "itens": [
   {
    "id": 1,
@@ -8122,7 +8122,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -8263,7 +8263,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9004,6 +9004,50 @@
    "id": 638,
    "dia": 451,
    "texto": "(OCULTO) CHEGA a Farenta uma PESSOA IMPORTANTE que viaja (o mundo do 448; NP48): YEOR (o gerador deu Selron, que bate no Selron da Liga; nomes.py liquida livre): COVARDE e ORGULHOSO; desejo curar alguém; ambição derrubar quem humilhou a família; medo o fogo; segredo: sabe de um crime de alguém importante; linha vermelha nunca se ajoelha; o dilema: a verdade do segredo dele destruiria quem confia nele (pode cruzar com o rei)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 639,
+   "dia": 450,
+   "texto": "CHEGA a Ireviel: a barca rápida de Farenta (saiu na noite do 448, o plano B): chamar a ISOLDA e a GALÉ e comprar SAL; a galé chegaria a Farenta no 452 (a fera já foi embora no 449: o rei pode mudar o rumo)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 640,
+   "dia": 465,
+   "texto": "(OCULTO) A ELAEVA CHEGA AO DELTA, às salinas da LURENTETTA (ED49), ferida a 47%: o choque das duas (a Lurentetta Mítica 774); a Mie avisou antes",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 641,
+   "dia": 451,
+   "texto": "(OCULTO) A NOTÍCIA DA MORTE DA MAMILTIA chega à MÃO QUEIMADA de Ireviel (e a Telosus no 455): rolar a reação da fé (o rei queimou a pena que a chamou; ela saiu sozinha contra a palavra dele; o corpo está com o rei)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 642,
+   "dia": 452,
+   "texto": "CHEGA ao Delta, pelo mar: a MIE e as 20 lanças, com o aviso à Lurentetta: a Elaeva desce o vale rumo às salinas",
    "tipo": "marco",
    "oculto": false,
    "para": false,

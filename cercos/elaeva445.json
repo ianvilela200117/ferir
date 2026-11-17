@@ -1,10 +1,9 @@
 {
- "pv": 17955,
+ "pv": 17845,
  "pvm": 37600,
  "a_bordo": [
   "Moreth",
-  "Eiagrir",
-  "Mamiltia"
+  "Eiagrir"
  ],
  "dias": [
   {
@@ -30,9 +29,16 @@
    "antes": 28793,
    "depois": 28793,
    "dano": {}
+  },
+  {
+   "dia": 449,
+   "antes": 17845,
+   "depois": 17845,
+   "dano": {},
+   "sal": true
   }
  ],
- "fim": null,
+ "fim": "foi embora",
  "feridos": {},
  "alvo": {
   "nome": "a Elaeva",
@@ -83,6 +89,8 @@
   "feita": true
  },
  "notas": [
-  "448: a MAMILTIA sozinha, com sal nas mãos (LM48, sims/elaeva448_M_saida.txt): 28.793 → 17.955 em 3 rodadas; a SEGUNDA FASE entrou (troca de Essência; a fraqueza nova VIDA, oculta; o sal segue); FÚRIA"
- ]
+  "448: a MAMILTIA sozinha, com sal nas mãos (LM48, sims/elaeva448_M_saida.txt): 28.793 → 17.955 em 3 rodadas; a SEGUNDA FASE entrou (troca de Essência; a fraqueza nova VIDA, oculta; o sal segue); FÚRIA",
+  "448 noite: o FOGO DOS CAMPOS: −110 (FC48b [4,3,4]; o fogo não dobrou: a fase); +2 no onde ela está do 449"
+ ],
+ "praia_mod": 2
 }

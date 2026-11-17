@@ -19,11 +19,11 @@
   "Afinidade": 171
  },
  "pv": [
-  392,
+  402,
   402
  ],
  "mana": [
-  124,
+  164,
   164
  ],
  "foco": 37,
@@ -481,11 +481,12 @@
    ]
   },
   "núcleo-épico-de-podridão": {
-   "kg": 1.0,
+   "kg": 2.0,
    "log": [
     "Dia 435: +1 436: o CORAÇÃO do Zyza (núcleo Épico de Podridão: serve para Mítica)",
     "Dia 437: +1 437: o coração da rainha Zatha",
-    "Dia 438: -1 438: no peito do Zyza (a Receita Mestra do Servo Armado)"
+    "Dia 438: -1 438: no peito do Zyza (a Receita Mestra do Servo Armado)",
+    "Dia 449: +1 449: o núcleo do Zyza, achado nos pedaços dele (NZ49)"
    ]
   },
   "nee": {
@@ -581,7 +582,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 0,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },

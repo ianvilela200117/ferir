@@ -1185,3 +1185,12 @@ A floresta ficou parada um instante. A casca dela escureceu, como madeira molhad
 O Zyza saiu pela porta pequena sem esperar ordem duas vezes, rente ao chão, como quando era guarda de uma rainha. Não chegou à metade do caminho. Uma raiz desceu do escuro e outra veio de lado, e o que tinha sido o Zyza se espalhou em pedaços de casca e osso. Na porta, o rei sentiu aquilo no peito como um prego e se agarrou ao batente.
 
 O corpo da Mamiltia continuava lá, entre as raízes, com as mãos brancas de sal.
+
+### Farenta, 449
+O fogo dos campos andou a noite toda para o lado do mato, e de manhã a floresta tinha um flanco preto. Quando a barca soltou os cabos, com o sal a bordo e o Moreth na proa, a Elaeva já não estava na muralha. Tinha virado as costas ao mar outra vez, devagar, e descia o vale para o sul e o oeste, para onde ficam as salinas.
+
+O Gonde foi buscar os mortos com a carroça. A Mamiltia estava deitada entre raízes quebradas, de olhos abertos, com as mãos ainda brancas de sal. Do Zyza havia só casca, osso e, no meio, o coração cinzento, inteiro. O rei mandou cobrir o corpo da Mamiltia de sal na casa da guarda e ficou um tempo sozinho com ela.
+
+A Mie não esperou o almoço. Disse que a fera ia para a terra da senhora dela e que alguém tinha de chegar antes. Ao meio-dia a barca do Delta saiu com ela e as vinte lanças.
+
+- **Parada:** manhã do 449. Farenta livre; a Mamiltia salgada; a fera no caminho do Delta.

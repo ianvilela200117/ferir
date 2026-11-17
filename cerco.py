@@ -42,9 +42,9 @@ def um_dia(S, tempo, quieto=False):
     elif frac < 0.50:
         r = d(6); L.append(f"ELA DECIDE (abaixo de 50%): d6 [{r}] → " + ('VAI EMBORA' if r <= 2 else 'fica'))
         if r <= 2: S['fim'] = 'foi embora'; return L, dano
-    r = d(6)
-    if r <= 2: L.append(f'ONDE ELA ESTÁ: d6 [{r}] → longe da costa hoje; ninguém atira'); return L, dano
-    L.append(f'ONDE ELA ESTÁ: d6 [{r}] → na praia, ao alcance')
+    r0 = d(6); pm = S.pop('praia_mod', 0); r = min(6, r0 + pm)   # 448: o fogo dos campos empurra a fera à praia (+2 no dado do dia)
+    if r <= 2: L.append(f'ONDE ELA ESTÁ: d6 [{r0}]' + (f'+{pm}' if pm else '') + ' → longe da costa hoje; ninguém atira'); return L, dano
+    L.append(f'ONDE ELA ESTÁ: d6 [{r0}]' + (f'+{pm}' if pm else '') + ' → na praia, ao alcance')
     ceu, vento = tempo
     if ceu == 'tempestade': L.append('O TEMPO: tempestade → a galé não sai do abrigo; ninguém atira'); return L, dano
     mod = -4 if ceu == 'neblina' else 0

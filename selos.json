@@ -1,12 +1,5 @@
 {
  "ordem": [
-  "YE21",
-  "BQ22",
-  "ER1",
-  "ER2",
-  "ER3",
-  "MK1",
-  "MK2",
   "CH420ac",
   "CH420bc",
   "CH420an",
@@ -399,320 +392,16 @@
   "MO48",
   "SM48",
   "SF48",
-  "FC48"
+  "FC48",
+  "FC48b",
+  "LV49",
+  "PE49",
+  "CM49",
+  "NZ49",
+  "MI49",
+  "ED49"
  ],
  "selos": {
-  "YE21": {
-   "id": "YE21",
-   "dia": 421,
-   "hora": "00:49:49",
-   "titulo": "O NÍVEL DO YEANE (sacerdote da Lumine em Ireviel)",
-   "dado": [
-    2,
-    20,
-    15
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 55,
-     "res": "nível"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19,
-      17
-     ],
-     "total": 51,
-     "res": "nível",
-     "txt": "[19, 17] +15 = 51 → nível"
-    }
-   ],
-   "hora_rolado": "00:49:49"
-  },
-  "BQ22": {
-   "id": "BQ22",
-   "dia": 421,
-   "hora": "08:07:22",
-   "titulo": "OS BARQUEIROS LEVAM O GRÃO A MARASAR? (422; contestam o decreto dos barcos que o conselho manteve; os Barqueiros do Livro ganharam um patrono no 420) · +2 é frete pago · −2 o decreto mantido",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "RECUSAM: o grão vai na galé da casa (a Isolda), um dia a mais, e os barqueiros cruzam os braços no cais"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "LEVAM, pelo frete de sempre"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LEVAM e pedem em troca que o decreto não se repita (um acordo escrito)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "LEVAM, pelo frete de sempre",
-     "txt": "[3] → LEVAM, pelo frete de sempre"
-    }
-   ],
-   "hora_rolado": "08:07:22"
-  },
-  "ER1": {
-   "id": "ER1",
-   "dia": 421,
-   "hora": "08:07:51",
-   "titulo": "ERYSSA, O MERCADO AFOGADO debaixo do bairro dos refugiados (a SURPRESA da Nouliel, 413 [5], gerador lugar: mercado · caiu por maldição · guarda uma receita · habita um culto · entra-se com uma chave): QUE CULTO MORA LÁ",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o XAATHIS (a ALA DO CAIS: o dente na poterna veio daqui)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o XAATHIS (a ALA DO ARDENGHI, sem pagador)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um culto que a casa não conhece (gerar)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o XAATHIS (a ALA DO CAIS: o dente na poterna veio daqui)",
-     "txt": "[2] → o XAATHIS (a ALA DO CAIS: o dente na poterna veio daqui)"
-    }
-   ],
-   "hora_rolado": "08:07:51"
-  },
-  "ER2": {
-   "id": "ER2",
-   "dia": 421,
-   "hora": "08:07:51",
-   "titulo": "QUE RECEITA ERYSSA GUARDA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma liga de metal que ninguém mais sabe bater"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um remédio (a FEBRE CINZA?)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um veneno"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um rito (o selo que o culto quer abrir)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "uma liga de metal que ninguém mais sabe bater",
-     "txt": "[1] → uma liga de metal que ninguém mais sabe bater"
-    }
-   ],
-   "hora_rolado": "08:07:51"
-  },
-  "ER3": {
-   "id": "ER3",
-   "dia": 421,
-   "hora": "08:07:51",
-   "titulo": "QUE CHAVE ABRE ERYSSA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma chave de ferro de mercador, de alguém que ainda vive em Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um nome dito na porta (uma senha)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a mão de alguém de sangue do mercado (os da Cinza?)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um nome dito na porta (uma senha)",
-     "txt": "[4] → um nome dito na porta (uma senha)"
-    }
-   ],
-   "hora_rolado": "08:07:51"
-  },
-  "MK1": {
-   "id": "MK1",
-   "dia": 421,
-   "hora": "08:08:06",
-   "titulo": "ONDE O STARKALD VIU O MOREK (a SURPRESA dele do 413 [2]: um monstro novo; Único 122, aquático, do tamanho de uma torre; sinal: tremores)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "na FORQUILHA do rio (o Leve), a meio dia de Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "no BRAÇO OESTE, a caminho do Delta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "rio acima, nos VAUS DE CIMA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "na FORQUILHA do rio (o Leve), a meio dia de Ireviel",
-     "txt": "[1] → na FORQUILHA do rio (o Leve), a meio dia de Ireviel"
-    }
-   ],
-   "hora_rolado": "08:08:06"
-  },
-  "MK2": {
-   "id": "MK2",
-   "dia": 421,
-   "hora": "08:08:27",
-   "titulo": "O MOREK E AS DUAS BARCAS DE GRÃO (passam pela FORQUILHA no 422-423 a caminho de Marasar; o Morek é caçador e escolhe a presa)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o MOREK pega uma barca: o grão de uma se perde, 1d6 barqueiros mortos"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "passam"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "passam",
-     "txt": "[3] → passam"
-    }
-   ],
-   "hora_rolado": "08:08:27"
-  },
   "CH420ac": {
    "id": "CH420ac",
    "dia": 421,
@@ -19637,6 +19326,307 @@
     }
    ],
    "hora_rolado": "19:03:36"
+  },
+  "FC48b": {
+   "id": "FC48b",
+   "dia": 448,
+   "hora": "19:52:54",
+   "titulo": "O FOGO DOS CAMPOS FERE A ELAEVA (noite do 448)",
+   "dado": [
+    3,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 18,
+     "res": "× 10 de PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4,
+      3,
+      4
+     ],
+     "total": 11,
+     "res": "× 10 de PV",
+     "txt": "[4, 3, 4] +0 = 11 → × 10 de PV"
+    }
+   ],
+   "hora_rolado": "19:52:54"
+  },
+  "LV49": {
+   "id": "LV49",
+   "dia": 449,
+   "hora": "19:53:09",
+   "titulo": "A MISSÃO DO ITHVIL FALHA EM LEVIS: O PILAR QUE RECUA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Comida"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Comércio"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Dinheiro"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Saúde"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Ordem"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Defesa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Dinheiro",
+     "txt": "[3] → Dinheiro"
+    }
+   ],
+   "hora_rolado": "19:53:09"
+  },
+  "PE49": {
+   "id": "PE49",
+   "dia": 449,
+   "hora": "19:53:36",
+   "titulo": "PARA ONDE A ELAEVA VAI (449)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o noroeste, aos Picos Brancos"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "o vale, rumo ao Delta e às salinas"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o sul, pela estrada sul de Farenta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o vale, rumo ao Delta e às salinas",
+     "txt": "[4] → o vale, rumo ao Delta e às salinas"
+    }
+   ],
+   "hora_rolado": "19:53:36"
+  },
+  "CM49": {
+   "id": "CM49",
+   "dia": 449,
+   "hora": "19:53:36",
+   "titulo": "O CORPO DA MAMILTIA QUANDO A FLORESTA ANDA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "as raízes o levam"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "fica no chão, inteiro"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "fica no chão, inteiro",
+     "txt": "[4] → fica no chão, inteiro"
+    }
+   ],
+   "hora_rolado": "19:53:36"
+  },
+  "NZ49": {
+   "id": "NZ49",
+   "dia": 449,
+   "hora": "19:53:36",
+   "titulo": "O NÚCLEO DO ZYZA NOS PEDAÇOS DELE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "perdido"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "achado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "achado",
+     "txt": "[4] → achado"
+    }
+   ],
+   "hora_rolado": "19:53:36"
+  },
+  "MI49": {
+   "id": "MI49",
+   "dia": 449,
+   "hora": "19:54:08",
+   "titulo": "A MIE QUANDO SABE QUE A ELAEVA VAI AO DELTA (a terra dela e da Lurentetta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "pede ao rei que vá junto"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta",
+     "txt": "[1] → parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta"
+    }
+   ],
+   "hora_rolado": "19:54:08"
+  },
+  "ED49": {
+   "id": "ED49",
+   "dia": 449,
+   "hora": "19:54:21",
+   "titulo": "(OCULTO) EM QUANTOS DIAS A ELAEVA CHEGA AO DELTA, pelo vale (anda devagar; em 252 levou ~14 dias)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "+ 8 dias"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6,
+      2
+     ],
+     "total": 8,
+     "res": "+ 8 dias",
+     "txt": "[6, 2] +0 = 8 → + 8 dias"
+    }
+   ],
+   "hora_rolado": "19:54:21"
   }
  }
 }

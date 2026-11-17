@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 448, FARENTA: A MAMILTIA MORREU; a primeira hora (G9) (MOTOR 9b: G1 a G37)
+# RETOMAR — manhã do Dia 449, FARENTA LIVRE: a Elaeva rumo ao Delta; o corpo da Mamiltia salgado (MOTOR 9b: G1 a G37)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 449, FARENTA LIVRE (o tick do 449 rodado). A ELAEVA FOI EMBORA (o cerco: d6 [2] abaixo de 50%), 17.845 de 37.600 (47%), rumo ao DELTA (PE49 [4]); (OCULTO) chega às salinas no 465 (agenda #640). A MAMILTIA: o corpo inteiro e SALGADO na casa da guarda (guarda até o 478); o que fica possível: a RESSURREIÇÃO (Luz 7º, até 1 mês: até o 478; um núcleo de Luz Raro e algo que ela amou; aprender com um Lendário: o Ceduion no Colégio de Telosus, a Almision, a Gorine) · a RECEITA MESTRA do servo armado (Falar com Morto; ela tem de aceitar: d6 a declarar; o núcleo no peito da categoria dela, que o rei não tem) · entregá-la à fé (Telosus) · enterrá-la. (OCULTO) a notícia chega à Mão Queimada de Ireviel no 451 (agenda #641): rolar a reação. O ZYZA desfeito; o núcleo dele de volta (2 Épicos de Podridão). A MIE e as 20 lanças vão ao Delta (chegam no 452). A galé da Isolda: a barca rápida chega a Ireviel no 450 (agenda #639). LEVIS: a missão falhou; Dinheiro 2/4; Levis 40. O SAL: sete carroças. O rei 402/402, Mana 164/164, Visão 2/2, GRAVE até o 458. O Moreth 600, o Eiagrir 420.
+
+Antes (a noite do 448):
 AINDA A PRIMEIRA HORA DA NOITE DO 448 (G9). ZB48: o ZYZA foi DESFEITO buscando o corpo (servos.json de_pe False; npcs MORTO). O corpo da Mamiltia ao pé da Elaeva; sem corpo, nem o Erguer o Caído nem a Receita Mestra. O que resta ao rei: PRENDER A ALMA (Osso 6º, 30 de Mana e 6d6 de PV; alcance 30 m à vista pela leitura do Mestre; DC48: d6 1-3 o corpo está a menos de 30 m da torre, 4-6 além), para depois a Ressurreição (Luz 7º, que o rei não sabe) ou a Arma Viva (Livro Nove 7.2). O rei atordoado um instante (a Mão que Doma). Mana 124/164, PV 392/402. O "4b" do jogador não casou com pergunta aberta: perguntado de novo.
 
 Noite do 448, FARENTA, DENTRO DA PRIMEIRA HORA (G9). A MAMILTIA MORREU (LM48; sims/elaeva448_M_saida.txt): o corpo no mato, ao pé da Elaeva (o espinheiro alcança 18 m). A ELAEVA: 17.955 de 37.600 (48%), em FÚRIA, na SEGUNDA FASE (troca de Essência: a fraqueza nova VIDA, FE46b [5], OCULTA; o SAL segue, é a raiz; no cerco a Mamiltia passaria a × 10, mas ela morreu); no cerco, abaixo de 50%: a cada dia d6 1-2 ela vai embora. O rei: 392/402, Mana 124/164, a Visão 0 de 2 (volta na aurora), GRAVE até o 458. O SAL: OITO carroças (uma foi nas mãos da Mamiltia) = 2 dias de tiro com sal. O FOGO DOS CAMPOS (FC48 [3]: corre para o mato) ficou para a noite, depois da hora. O cerco sem a Mamiltia: a bordo o Moreth e o Eiagrir (tirar a Mamiltia do cercos/elaeva445.json com cerco.py elaeva445 sai Mamiltia). O ZYZA: a barda de ziis (obra_valor.py, o Martelo que Ensina vai com o rei; a Tenaz ficou na Fornalha), a PRESSA e a RAIZ DE PEDRA no corpo (o Osso Gravado +3), o núcleo Mítico quando houver (o da Elaeva, se ela morrer) e comer o que matar. O preso ao podestà (2b). Cofre 8.168. As consequências do mundo pela morte da Mamiltia (a Mão Queimada, Telosus, a Almision) rolam depois da hora, pela decisão do jogador.
@@ -269,9 +272,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (448, a primeira hora): 1 "tentar o A com o Zyza; senão, o B" · "4b" (sem pergunta 4: perguntado de novo)
 - ZB48: o Zyza desfeito por duas ações lendárias.
 
+## RESPONDIDO (448 → 449): 1 e 2c "o cerco para distrair; depois recupero o corpo e o servo"
+- FC48b [4,3,4] −110 · o tick do 449 · LV49 [3] · CE49 ELA VAI EMBORA · PE49 [4] · CM49 [4] · NZ49 [4] · MI49 [1] · ED49 (oculto).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A ALMA DA MAMILTIA, ainda dentro da hora: a) PRENDER A ALMA da torre (o dado diz se o corpo está ao alcance: 30 de Mana e 6d6 de PV; guarda a alma numa pedra ou num osso) · b) mandar mais alguém buscar o corpo (a Mie, o Moreth ou o Eiagrir: a fera desfez o Zyza com dois golpes; eles têm menos PV) · c) deixá-la ir.
-2. O "4b" que você escreveu (não há pergunta 4): a) era a 2b: atirar já, de noite, das muralhas, com a Lança do Sol do Moreth e do Eiagrir (eles ficam ao alcance: as Visões dão morte) · b) era outra coisa (diga qual) · c) o cerco com sal na aurora e o fogo nos campos esta noite (a 2a).
+1. A MAMILTIA (o corpo salgado, até o 478): a) a RESSURREIÇÃO: procurar quem ensine a Luz 7º (o Ceduion, reitor do Colégio de Telosus, Lendário de magia) e juntar um núcleo de Luz Raro e algo que ela amou · b) o SERVO ARMADO: Falar com Morto agora (ela tem de aceitar; falta o núcleo da categoria dela; a fé dela vai saber) · c) levar o corpo à fé dela, em Telosus · d) enterrá-la em Farenta, com honras.
+2. A ELAEVA vai ao Delta (a Mie foi avisar): a) o rei segue para o Delta com a casa, para caçá-la junto da Lurentetta · b) voltar a Ireviel, sarar (458) e preparar a caçada · c) segui-la de longe por terra, com batedores.
+3. A GALÉ DA ISOLDA, já chamada (a ordem chega a Ireviel amanhã): a) que venha a Farenta, como pedido · b) que vá direto ao Delta · c) que fique em Ireviel.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -3125,6 +3125,17 @@
    "chegada": "[3] em 1d3 [3] dias",
    "resumo": "UMA PESSOA IMPORTANTE VIAJA — Farenta (Selron)",
    "toca": true
+  },
+  {
+   "dia": 449,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "nome: Fenron\no que era: mercado\npor que caiu: traição\no que guarda: um núcleo\no que habita: bandidos\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "UMA RUÍNA SE ABRE — as Montanhas de Fogo (Fenron)",
+   "toca": false
   }
  ]
 }

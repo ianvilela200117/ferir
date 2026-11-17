@@ -347,7 +347,7 @@
    "pilares": {
     "Comida": 3,
     "Comércio": 4,
-    "Dinheiro": 3,
+    "Dinheiro": 2,
     "Saúde": 4,
     "Ordem": 2,
     "Defesa": 4
@@ -437,7 +437,8 @@
     "434: Comida +1 de vez (o pão do confisco do rei, 5.500)",
     "pilar Ordem → 1 (435: o pão do confisco nas ruas baixas; a TIGRA faz as filas aceitarem (OR35 [20] natural: surpresa))",
     "441: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 1 · Defesa 4 · evento [14]",
-    "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]"
+    "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]",
+    "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [

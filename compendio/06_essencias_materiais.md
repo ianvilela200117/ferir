@@ -174,5 +174,5 @@ Saem do `ficha.json` a cada vez que o `livro_sync.py` roda. São drops de bichos
 | **ziis** | ~6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
 | **ziza** | ~0.8 | a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento) |
 
-**Núcleos na mão do rei:** núcleo-épico-de-espinho ×1 · núcleo-épico-de-podridão ×1 · núcleo-épico-de-água ×1.
+**Núcleos na mão do rei:** núcleo-épico-de-espinho ×1 · núcleo-épico-de-podridão ×2 · núcleo-épico-de-água ×1.
 <!-- SYNC:FIM -->
