@@ -693,6 +693,36 @@
     ],
     "mult": 1
    }
+  },
+  "Lurentetta": {
+   "nome": "Lurentetta",
+   "nivel": 774,
+   "nivel_ref": 774,
+   "at": 97,
+   "df": 104,
+   "rd": 10,
+   "pv": 2000,
+   "dado": "1d10",
+   "mult": 4.0,
+   "b": 26,
+   "heroi": 1,
+   "arma": "o sal das salinas",
+   "pecas": "(nenhuma peça registrada; a força é dela) · Mítica do Delta, LEAL e TEIMOSA · (OCULTO) uma doença escondida (não entra na ficha)",
+   "nota": "465: ficha feita pelo Mestre, declarada antes das Visões (a conta dos heróis: ataque 20 + nível ÷ 10; Defesa ataque + 7; PV ≈ 2,6 × nível, como a Mamiltia e o Moreth; o poder pela conta da Mamiltia, × 20 aos 1.149 → × 15 aos 774)",
+   "magias": [
+    {
+     "nome": "O SAL DAS SALINAS (o poder dela; área; 1x por cena)",
+     "dado": "8d6",
+     "dano": "8d6",
+     "mult": 15,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    }
+   ],
+   "essencia": "Sal"
   }
  }
 }

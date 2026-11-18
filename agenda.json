@@ -1,5 +1,5 @@
 {
- "prox_id": 780,
+ "prox_id": 785,
  "itens": [
   {
    "id": 1,
@@ -9030,7 +9030,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9171,7 +9171,7 @@
    "oculto": false,
    "para": false,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10115,7 +10115,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10927,7 +10927,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10981,6 +10981,69 @@
     15,
     "FIEL"
    ]
+  },
+  {
+   "id": 780,
+   "dia": 465,
+   "texto": "Xaysress (Kremir): a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 464",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 781,
+   "dia": 474,
+   "texto": "(OCULTO) CHEGA A FARENTA A COLUNA DO NORTE da Leliel (LE64 [2]: ela engoliu a isca; a obra dela: RETOMAR FARENTA); o Graur e dez da Hoste esperam (a isca da Sira); declarar no dia o tamanho da coluna (gerar: quantos e quem a comanda) e a batalha (batalha.py)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 782,
+   "dia": 466,
+   "texto": "(OCULTO) o DULASSETTA chega ao Norte e conta à Leliel que a casa sabia dele: a coluna já saiu (LE64); declarar se ela manda voltar ou segue",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 783,
+   "dia": 468,
+   "texto": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 465",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 784,
+   "dia": 469,
+   "texto": "a ORDEM DO REI (3b, 463): os três éditos por cima do conselho (a Feira Franca em Levis, o Físico, o Grão Guardado): entram no tick semanal; Legitimidade −1 então (o rei pode trocar ou desfazer até lá) · e a Intendente paga a mesa da Colheita (3a, 200)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

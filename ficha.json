@@ -23,7 +23,7 @@
   402
  ],
  "mana": [
-  164,
+  124,
   164
  ],
  "foco": 37,
@@ -660,7 +660,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 2,
+   "tem": 0,
    "max": 2,
    "renova": "dia"
   },
@@ -670,7 +670,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 1,
+   "tem": 0,
    "max": 1,
    "renova": "semana"
   }

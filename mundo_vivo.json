@@ -648,7 +648,8 @@
     "427: [17] desafia alguém em público (duelo, debate, prova)",
     "429: [7] um segredo dele vaza (boato ou espionagem)",
     "441: [4] ataca ou sabota a obra do RIVAL lendário",
-    "455: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)"
+    "455: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "464: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)"
    ],
    "obras_feitas": [
     "abrir um caminho além do mapa"

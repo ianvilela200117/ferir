@@ -1,0 +1,49 @@
+[04:33:49] Dia 465 · Pressão 4/5 · evento local 1d20 [11] -> uma criança doente na enfermaria piora ou sara
+  O TEMPO (6 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: nublado, calmo (d6 [5] muda, d20 [6] · vento d6 [1])
+   o Porto de Marasar: chuva, calmo (d6 [3] fica · vento d6 [1]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: nublado, brisa (d6 [1] fica · vento d6 [4])
+   Farenta: nublado, calmo (d6 [6] muda, d20 [7] · vento d6 [1])
+   O RIO: baixo [31/100]
+  avistamento de monstro 1d20 [13] -> nenhum
+  Fortuna volta ao máximo
+  ◈ festa em 4 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 465 (dia)
+    d20 [11] UM CULTO CRESCE ou nasce
+    ONDE: d27 [16] as Montanhas de Fogo
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    nome: Culto da Thuium
+    adora: um deus morto
+    promete: vingança
+    sinal: cheiro de incenso
+    células: 2 cidades
+    líder: nível 210, classe Rara a Lendária
+    rito: sacrifício
+    plano (relógio de 6): tomar uma cidade por dentro
+    fraqueza: dependem de um material
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 465
+    Lendários: d20 [17] quietos hoje
+    trama do dia: Tilde → Ulair (RESSENTIMENTO) d20 [6] nada visível
+    FAÍSCA: Thugek sonha com Celocus, por causa de uma criança
+    FAÍSCA: Skotha Graskur chantageia a Guardiã da Tenaz, por causa de um núcleo de monstro
+    FAÍSCA: Brara inveja Aeliae, por causa de sal
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #640: (OCULTO) A ELAEVA CHEGA AO DELTA, às salinas da LURENTETTA (ED49), ferida a 47%: o choque das duas (a Lurentetta Mítica 774); a Mie avisou antes
+  ▶ AGENDA #775: [OCULTO] (OCULTO) a NOTÍCIA DA MORTE DO TERASETH (TD62 [2]): rio acima, perto das Fundas, o colosso afundou o barco dele; a armadura do rei e o Croque do Rio no fundo do rio; os do Croque, com a casa no Delta, sabem pelos barqueiros
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM LENDÁRIO AGE: morre — Ireviel e o rio · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Lurentetta (o Delta): compra, toma ou destrói algo de valor ligado à Obra · COMO CHEGA: d20 [1] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Mãe Branca (Primordial, Steunn): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, Zisrir): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Bruur (Épico, Marasar): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Sem-Coroa (a Companhia, em Marasar): dá um passo no que quer · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: os Grukos (ogros) (a Mata de Elais): atacam outro povo-monstro (guerra de bandos) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): a ambição dele avança fora da Obra (um passo no que ele quer para si) · COMO CHEGA: d20 [12] FIEL

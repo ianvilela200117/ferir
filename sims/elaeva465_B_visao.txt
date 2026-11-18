@@ -1,0 +1,8 @@
+RÉGUA de 2000 lutas simuladas (sem valor de jogo; margem de ±2 pontos) · Elaeva (Mítico 380) contra 7
+  desfecho: O GRUPO CAI 100%
+  duração: mediana 1 rodadas (de 1 a 1 em 8 de cada 10 lutas)
+  quando o bicho NÃO morre, sai com 47% do PV (entre 44% e 47%)
+  MORRE: Eliane 100% · Isolda 100% · Ferir 100% · Eiagrir 100% · Mie 100% · Moreth 100% · Lurentetta 73%
+  cai ou recua ferido: Ferir 100% · Moreth 100% · Eiagrir 100% · Eliane 100% · Isolda 100% · Mie 100% · Lurentetta 100%
+  LEI DAS CAÇADAS (339, limite de 2% de morte para qualquer um dos nossos): o pior risco é 100.0% → ACIMA: não vai sem o rei
+  (régua gravada no envelope como OCULTO; não mostrar ao jogador sem a Visão do Tempo)

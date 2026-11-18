@@ -3340,6 +3340,28 @@
    "leitura": "terremoto",
    "resumo": "PESTE OU DESASTRE: terremoto — Kreade (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 464,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [8] Telosus (o Colégio)",
+   "detalhe": "[MISSÃO]: Eryium (o Mestre dá o nome pela ficção)\ndificuldade: C  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Facção\nobjetivo: levar uma mensagem que outros querem\ncomplicação escondida (Envelope): a recompensa não existe mais\nprazo: 5 dias\nrecompensa: 1000 XP · 300 de ouro · informação do Envelope\npenalidade se falhar: uma facção ganha um segmento\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Telosus (o Colégio)",
+   "toca": true
+  },
+  {
+   "dia": 465,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "nome: Culto da Thuium\nadora: um deus morto\npromete: vingança\nsinal: cheiro de incenso\ncélulas: 2 cidades\nlíder: nível 210, classe Rara a Lendária\nrito: sacrifício\nplano (relógio de 6): tomar uma cidade por dentro\nfraqueza: dependem de um material\n————————————————————————————————————————",
+   "noticia_chega": 468,
+   "chegada": "[4] em 1d6 [3] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium)",
+   "toca": false
   }
  ]
 }

@@ -1,0 +1,55 @@
+[04:32:40] Dia 464 · Pressão 3/5 · evento local 1d20 [12] -> um barqueiro traz boato do rio
+  O TEMPO (5 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: chuva, vento forte (d6 [6] muda, d20 [17] · vento d6 [6]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   o Porto de Marasar: chuva, calmo (d6 [3] fica · vento d6 [2]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: nublado, brisa (d6 [3] fica · vento d6 [4])
+   Farenta: nublado, calmo (d6 [2] fica · vento d6 [1])
+   O RIO: baixo [31/100]
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d5 [1] Lianniel
+  Fortuna volta ao máximo
+  ◈ festa em 5 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 464 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [8] Telosus (o Colégio)  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    [MISSÃO]: Eryium (o Mestre dá o nome pela ficção)
+    dificuldade: C  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: De Facção
+    objetivo: levar uma mensagem que outros querem
+    complicação escondida (Envelope): a recompensa não existe mais
+    prazo: 5 dias
+    recompensa: 1000 XP · 300 de ouro · informação do Envelope
+    penalidade se falhar: uma facção ganha um segmento
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 464
+    um Lendário age (d20 [4]):
+    Xaysress (ofício, Kremir) d20 [18] a ambição dele avança fora da Obra (um passo no que ele quer para si) · notícia d20 [10] chega no dia 465
+    trama do dia: Tilde → Ulair (RESSENTIMENTO) d20 [7] nada visível
+    FAÍSCA: Draron (da casa) foge de Adurel, por causa de uma dívida antiga
+    FAÍSCA: Lubassino (salineiro do Delta, AMBICIOSO e LEAL; quer formar uma companhia; sócio proposto do Krernos, 301) acusa em público Adurel, por causa de a Matriz
+    FAÍSCA: o Visconte Aldoveri inveja Kreium (preso), por causa de um feitiço proibido
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #651: CHEGA a Lumade: o recado do rei ao TOLVANE: voltar a Ireviel (saiu de Ireviel no 454)
+  ▶ AGENDA #719: [OCULTO] (OCULTO) a LELIEL lê a carta do Dulassetta (a isca: o rei no Delta com tudo, Farenta sem guarda, o cofre vazio); a obra dela é RETOMAR FARENTA (LO55): declarar no dia o que ela faz e quando chega
+  ✉ NOTÍCIA QUE CHEGA HOJE: Skotha Graskur (o sul (a Companhia)): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Borecci (Steunn): um segredo dele vaza (boato ou espionagem) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krothos (Lendário, Levis): persegue uma caravana ou barca por dias · COMO CHEGA: d20 [19] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): fazem um ritual (o xamã ou o sacerdote ganha poder) · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): briga com os da Mina Fechada; vence o Culto do Xaathis · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Arpões do Sal Vermelho (Shizess): dá um passo: caçar o THARGOS (Mítico, as Fundas) e ficar com o núcleo · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Skotha Graskur (o sul (a Companhia)): um discípulo ou herdeiro dele aparece no mundo · COMO CHEGA: d20 [15] FIEL
+  ✉ notícia de longe que chega hoje: UM CULTO CRESCE ou nasce — Lumron (terra nova) (Culto da Varek) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Naera (as Fundas do Norte): oferece um acordo a um rival (paz, casamento, troca) · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, o sul da areia): SURPRESA: gerador de novidade ligado a ele · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: Syess (Incomum, Gogrunn): um culto ou bando passa a adorá-lo · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: o Círculo da Areia Cantante (Yaelane): matou Lumdun e levou o núcleo · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi

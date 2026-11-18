@@ -1,0 +1,26 @@
+{
+ "monstro": {
+  "nome": "Elaeva",
+  "cat": "Mítico",
+  "nivel": 380,
+  "pv": 38000,
+  "df": 135,
+  "rd": 50,
+  "at": 125,
+  "dado": "3d10",
+  "mult": 100,
+  "b": 0,
+  "poder": {
+   "nome": "o espinheiro (Agilidade CD 30, 18 m)",
+   "tipo": "area",
+   "dano": "40d6",
+   "cd": 30
+  },
+  "fraqueza": "Sal",
+  "moral": false,
+  "pv_atual": 17845,
+  "essencia": "Espinho",
+  "nota": "465 (a ILHA do Delta): Mítica 380 (+4 no 462), 17.845 de 38.000; a segunda fase já passou no 448 (a fraqueza VIDA; o SAL segue: a fraqueza da luta é SAL e todas as armas e feitiços levam sal, como no plano do 448); FÚRIA por estar abaixo de 50% (o luta.py a põe sozinho); encurralada: não foge (moral falso); o espinheiro 40d6 em 18 m"
+ },
+ "grupo": []
+}

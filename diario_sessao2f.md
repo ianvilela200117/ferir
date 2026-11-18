@@ -1481,3 +1481,49 @@ A Mie, encostada no batente, mexia numa ponta de lança sem olhar para ninguém.
 Lá longe, para os lados do vale, ao cair da noite, ouviu-se um som comprido, de madeira rachando, como se uma floresta inteira estivesse se espreguiçando.
 
 - **Parada:** noite do 463, o Delta, o galpão da Lurentetta. O mapa da ilha no chão.
+
+## Do 462 ao 465: a escola do Herkald, a ilha e as duas horas que o rei viu
+
+### A Fornalha, tarde do 462 (o resto da conversa)
+"Que homem era?", perguntou o rei.
+
+O Herkald demorou. Passou o polegar na boca da tenaz, onde o ferro tinha uma mossa velha.
+
+"Mago das torres. Novo. Falava que a coberta do mundo era uma mentira dos reis, que quem tirasse o vaduar do chão teria magia sem fim." Encolheu os ombros. "A mestra o fechou no círculo de cinza e me deu a pá. Eu tinha dezessete anos e uma cama na forja dela. Quem não obedecia não comia."
+
+"E agora?"
+
+"Agora os filhos dos que ficaram com ele pintam a minha mão no muro." Pegou um martelo pequeno da parede e o pesou na palma, como se pesasse uma coisa que não estava ali. "Eu queria uma escola, rei. Uma bancada para os meninos da Cinza. Ensinar o fogo a quem tem raiva de mim. É a única reparação que eu sei fazer."
+
+Pendurou o martelo. Não olhou para ver o que o rei achava.
+
+### A ilha, o 464
+Os salineiros da Lurentetta trabalharam de sol a sol nas comportas velhas, umas portas de madeira negra do tamanho de uma casa, que a Liga tinha abandonado com as salinas. Rangiam como navio. Ao meio-dia a água salgada começou a subir no braço de cima, grossa, quase branca, e ao entardecer chegava à borda da língua de terra, lambendo o capim.
+
+"O sal do braço vale por dois", disse a Lurentetta, com os pés na água até o tornozelo, as rachaduras das mãos ardendo. "Vocês molham as pontas aqui e atiram."
+
+Os barqueiros do Croque encheram os barris com a mesma água e puseram nas barcas, em fila, como quem arruma pão.
+
+### As salinas, manhã do 465
+O barqueiro da barba trançada voltou de um bote de notícias com o rosto cinza. Juntou os outros num círculo, na beira do braço doce, e falou baixo. Um deles jogou o remo na água. Outro sentou na lama.
+
+Depois o de barba trançada foi até o rei.
+
+"O Teraseth morreu no rio", disse. "Não sabem onde. Não sabem do quê." Olhou a ilha, a água branca do braço de sal. "A gente fica. Ele ia querer a fera morta."
+
+### A ilha, entardecer do 465
+Ela veio sem pressa, como vem a maré. Primeiro o cheiro, resina e terra revirada; depois o barulho, galhos quebrando a meia légua; depois as copas, andando por cima do capim, uma floresta inteira de pé, e no meio dela um tronco mais escuro que os outros, rachado de cima a baixo, que respirava.
+
+Entrou na língua de terra atrás do cheiro da gente das salinas. Quando a última raiz passou do marco de pedra, a Lurentetta levantou o braço, e as comportas desceram com um estrondo que fez o chão das palafitas tremer.
+
+A fera parou na borda. Estendeu uma raiz para a água salgada e a recolheu, chiando, como mão que toca brasa.
+
+O rei abriu a Visão duas vezes, e duas vezes viu uma hora que ainda não tinha acontecido.
+
+Na primeira, a galé e as barcas iam e vinham nos dois braços, atirando com as pontas molhadas na água branca, e a casca dela abria em feridas que não fechavam; ela não saía; às vezes se escondia no meio da ilha, e ninguém a alcançava.
+
+Na segunda, ele pôs os pés na ilha com todos os seus. E viu o espinheiro subir do chão de uma vez, numa onda só, e não sobrou ninguém para ver o resto. Nem a Lurentetta.
+
+Ele fechou a Visão com o gosto de terra na boca. A fera, na borda da ilha, virou para a galé o tronco escuro, como quem olha.
+
+- **Parada:** noite do 465, o Delta. A ilha fechada, a fera dentro. O cerco começa na aurora, se o rei mandar.

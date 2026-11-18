@@ -36,14 +36,15 @@ def load():
     return S
 def um_dia(S, tempo, quieto=False):
     L = []; frac = S['pv'] / S['pvm']; dano = {}
+    ilha = S.get('ilha')   # 465: a ILHA do Delta (as comportas fechadas): ela tenta sair e não sai; só o 1 do d6 a esconde no meio
     if frac < 0.25:
-        r = d(6); L.append(f"ELA DECIDE (abaixo de 25%): d6 [{r}] → " + ('VAI EMBORA' if r <= 4 else 'fica'))
-        if r <= 4: S['fim'] = 'foi embora'; return L, dano
+        r = d(6); L.append(f"ELA DECIDE (abaixo de 25%): d6 [{r}] → " + (('TENTA SAIR: as comportas seguram' if ilha else 'VAI EMBORA') if r <= 4 else 'fica'))
+        if r <= 4 and not ilha: S['fim'] = 'foi embora'; return L, dano
     elif frac < 0.50:
-        r = d(6); L.append(f"ELA DECIDE (abaixo de 50%): d6 [{r}] → " + ('VAI EMBORA' if r <= 2 else 'fica'))
-        if r <= 2: S['fim'] = 'foi embora'; return L, dano
+        r = d(6); L.append(f"ELA DECIDE (abaixo de 50%): d6 [{r}] → " + (('TENTA SAIR: as comportas seguram' if ilha else 'VAI EMBORA') if r <= 2 else 'fica'))
+        if r <= 2 and not ilha: S['fim'] = 'foi embora'; return L, dano
     r0 = d(6); pm = S.pop('praia_mod', 0); r = min(6, r0 + pm)   # 448: o fogo dos campos empurra a fera à praia (+2 no dado do dia)
-    if r <= 2: L.append(f'ONDE ELA ESTÁ: d6 [{r0}]' + (f'+{pm}' if pm else '') + ' → longe da costa hoje; ninguém atira'); return L, dano
+    if r <= (1 if ilha else 2): L.append(f'ONDE ELA ESTÁ: d6 [{r0}]' + (f'+{pm}' if pm else '') + ' → longe da costa hoje; ninguém atira'); return L, dano
     L.append(f'ONDE ELA ESTÁ: d6 [{r0}]' + (f'+{pm}' if pm else '') + ' → na praia, ao alcance')
     ceu, vento = tempo
     if ceu == 'tempestade': L.append('O TEMPO: tempestade → a galé não sai do abrigo; ninguém atira'); return L, dano

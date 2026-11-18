@@ -1,11 +1,5 @@
 {
  "ordem": [
-  "PE26b",
-  "PE26c",
-  "AL26a",
-  "AL26b",
-  "CX26",
-  "SK26",
   "BR26",
   "YE26",
   "YE26p",
@@ -399,279 +393,15 @@
   "VD62",
   "PC62",
   "PR62",
-  "LR63"
+  "LR63",
+  "PI64",
+  "AGd64",
+  "AGe64",
+  "PA64",
+  "LE64",
+  "CK65"
  ],
  "selos": {
-  "PE26b": {
-   "id": "PE26b",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "COMO SE PERDEU",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o RIO CHEIO a virou na correnteza"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ASSALTO no rio (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "um BICHO (o Isyzis, no rio acima de Levis)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o RIO CHEIO a virou na correnteza",
-     "txt": "[2] → o RIO CHEIO a virou na correnteza"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "PE26c": {
-   "id": "PE26c",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "A LIGA REAGE (encadeamento)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "OFERECE barcas e homens, a preço de Liga"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)",
-     "txt": "[5] → APROVEITA: sobe o frete do rio para Levis (Dinheiro de Levis sente)"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "AL26a": {
-   "id": "AL26a",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "EVENTO DE MUNDO (ALEATÓRIO, Farenta): FRONTEIRA MUDA (terra tomada ou perdida) — quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a GUARDA DO PEDÁGIO (inimiga; juraram queimar) toma as terras do pedágio velho"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a LIGA compra ou toma uma faixa da margem"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta",
-     "txt": "[6] → os da BOTICA VELHA fecham com um vizinho uma terra que era de Farenta"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "AL26b": {
-   "id": "AL26b",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "ESCALADA (encadeamento [1]): o que piora",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "há SANGUE: um homem do Tirello morto na terra tomada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "QUEIMAM: um celeiro ou uma ponte de Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "há SANGUE: um homem do Tirello morto na terra tomada",
-     "txt": "[2] → há SANGUE: um homem do Tirello morto na terra tomada"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "CX26": {
-   "id": "CX26",
-   "dia": 426,
-   "hora": "14:21:24",
-   "titulo": "QUEM PASSOU A PAGAR OU PROTEGER O CULTO DO XAATHIS (notícia FIEL hoje)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a LIGA (dinheiro de Marasar)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um LENDÁRIO (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os BARQUEIROS DO LIVRO"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a LUMINE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a LIGA (dinheiro de Marasar)",
-     "txt": "[1] → a LIGA (dinheiro de Marasar)"
-    }
-   ],
-   "hora_rolado": "14:21:24"
-  },
-  "SK26": {
-   "id": "SK26",
-   "dia": 426,
-   "hora": "14:21:57",
-   "titulo": "A BARCA DOS CAÇADORES NA FORQUILHA, AMANHECER DO 426 (o corpo do STARKALD; o rio cheio; o Morek ferido; o calor de dois dias)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "O MOREK ESTÁ NA MARGEM: não chegam perto; voltam sem o corpo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 10,
-     "res": "trazem o corpo COMIDO EM PARTE pelos bichos e pelo calor (a Ressurreição devolve inteiro; o corpo chega)"
-    },
-    {
-     "tipo": "num",
-     "a": 11,
-     "b": 20,
-     "res": "trazem o corpo INTEIRO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      9
-     ],
-     "total": 9,
-     "res": "trazem o corpo COMIDO EM PARTE pelos bichos e pelo calor (a Ressurreição devolve inteiro; o corpo chega)",
-     "txt": "[9] → trazem o corpo COMIDO EM PARTE pelos bichos e pelo calor (a Ressurreição devolve inteiro; o corpo chega)"
-    }
-   ],
-   "hora_rolado": "14:21:57"
-  },
   "BR26": {
    "id": "BR26",
    "dia": 426,
@@ -19847,6 +19577,259 @@
     }
    ],
    "hora_rolado": "03:46:48"
+  },
+  "PI64": {
+   "id": "PI64",
+   "dia": 463,
+   "hora": "04:32:11",
+   "titulo": "A ILHA PREPARADA NO 464 (2b; as comportas da Lurentetta, o sal nas barcas e na galé, o fogo nos braços) · d20 + 6 (os salineiros conhecem as comportas +4; a Mie e as lanças +2)",
+   "dado": [
+    1,
+    20,
+    6
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "as comportas fecham, mas o braço doce está baixo: a ilha tem um VAU raso por onde a fera pode tentar sair"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 21,
+     "res": "TUDO PRONTO: a ilha fecha inteira"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "tudo pronto e um ganho: o braço de sal cheio até a borda (o sal das barcas rende o dobro de tiros)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 25,
+     "res": "tudo pronto e um ganho: o braço de sal cheio até a borda (o sal das barcas rende o dobro de tiros)",
+     "txt": "[19] +6 = 25 → tudo pronto e um ganho: o braço de sal cheio até a borda (o sal das barcas rende o dobro de tiros)"
+    }
+   ],
+   "hora_rolado": "04:32:11"
+  },
+  "AGd64": {
+   "id": "AGd64",
+   "dia": 463,
+   "hora": "04:32:11",
+   "titulo": "A SIRA INTERROGA o agente dos DESCALÇOS (força pequena; quer a Matriz) (+6 a Sira; +1 pelo que ele é)",
+   "dado": [
+    1,
+    20,
+    7
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA ÚTIL"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "o QUE VEIO FAZER"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      13
+     ],
+     "total": 20,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
+     "txt": "[13] +7 = 20 → o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "hora_rolado": "04:32:11"
+  },
+  "AGe64": {
+   "id": "AGe64",
+   "dia": 463,
+   "hora": "04:32:11",
+   "titulo": "A SIRA INTERROGA o agente do ARDENGHI (a rede do morto; vinha pelo Pilão de Varade) (+6 a Sira; +2: sem patrão vivo)",
+   "dado": [
+    1,
+    20,
+    8
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA ÚTIL"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "o QUE VEIO FAZER"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 18,
+     "res": "o que veio fazer e QUEM O MANDA de perto (um nome)",
+     "txt": "[10] +8 = 18 → o que veio fazer e QUEM O MANDA de perto (um nome)"
+    }
+   ],
+   "hora_rolado": "04:32:11"
+  },
+  "PA64": {
+   "id": "PA64",
+   "dia": 463,
+   "hora": "04:32:35",
+   "titulo": "O CONSELHO VOTA: OS DOIS AGENTES NOVOS (o dos Descalços, mandado pela Zitha; o do Ardenghi, mandado pelo Salvio): a pena (3c; o rei no Delta)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE C) cela até a guerra acabar (moeda de troca) · placar A 0 · B 1 · C 3 · VOTO VENCIDO: Thuron",
+     "txt": "VENCE C) cela até a guerra acabar (moeda de troca) · placar A 0 · B 1 · C 3 · VOTO VENCIDO: Thuron"
+    }
+   ]
+  },
+  "LE64": {
+   "id": "LE64",
+   "dia": 464,
+   "hora": "04:33:38",
+   "titulo": "A LELIEL LÊ A ISCA (a carta do Dulassetta, que acreditou: o rei no Delta com tudo, Farenta sem guarda, o cofre vazio; a obra dela: RETOMAR FARENTA; o Dulassetta fugido ainda não chegou ao Norte)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "manda GENTE JÁ: uma coluna do Norte contra Farenta (chega no 474)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "manda OURO e os conselheiros para comprar o conselho de Farenta e o voto do podestà (chegam no 470)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ESPERA o Dulassetta chegar (466) e então decide"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "manda GENTE JÁ: uma coluna do Norte contra Farenta (chega no 474)",
+     "txt": "[2] → manda GENTE JÁ: uma coluna do Norte contra Farenta (chega no 474)"
+    }
+   ],
+   "hora_rolado": "04:33:38"
+  },
+  "CK65": {
+   "id": "CK65",
+   "dia": 465,
+   "hora": "04:36:05",
+   "titulo": "OS DO CROQUE SABEM QUE O TERASETH MORREU (a notícia do 465 chega incompleta: morreu no rio, não se sabe onde nem como; os barqueiros estão no Delta com a casa)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "METADE das barcas do Croque sobe o rio atrás do corpo dele (a casa fica com a outra metade)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "FICAM: 'ele ia querer a fera morta'"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "FICAM: 'ele ia querer a fera morta'",
+     "txt": "[6] → FICAM: 'ele ia querer a fera morta'"
+    }
+   ],
+   "hora_rolado": "04:36:05"
   }
  }
 }

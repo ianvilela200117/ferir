@@ -1,0 +1,75 @@
+{
+ "pv": 17845,
+ "pvm": 38000,
+ "ilha": true,
+ "a_bordo": [
+  "Ferir",
+  "Moreth",
+  "Eiagrir",
+  "Eliane"
+ ],
+ "dias": [],
+ "fim": null,
+ "feridos": {},
+ "alvo": {
+  "nome": "a Elaeva",
+  "df": 149,
+  "rd": 50
+ },
+ "atiradores": {
+  "Ferir": [
+   7,
+   8,
+   5,
+   34
+  ],
+  "Moreth": [
+   2,
+   16,
+   10,
+   44
+  ],
+  "Eiagrir": [
+   2,
+   16,
+   5,
+   36
+  ],
+  "Eliane": [
+   1,
+   9,
+   2.5,
+   24
+  ],
+  "Mie": [
+   1,
+   9,
+   3,
+   38
+  ],
+  "Lurentetta": [
+   2,
+   8,
+   15,
+   97
+  ]
+ },
+ "agi": {
+  "Ferir": 7,
+  "Moreth": 8,
+  "Eiagrir": 6,
+  "Eliane": 8
+ },
+ "lugar": "Ireviel",
+ "capitao": [
+  "a Isolda",
+  21
+ ],
+ "fase": {
+  "nome": "troca de Essência (já passou no 448)",
+  "feita": true
+ },
+ "notas": [
+  "465: o cerco da ILHA do Delta (PI64 25: as comportas fechadas, o braço de sal cheio: o sal dura seis dias); a fera a 47%, Mítica 380 (+4 no 462)"
+ ]
+}

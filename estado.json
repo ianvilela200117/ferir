@@ -1,11 +1,11 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 463,
+  "dia": 465,
   "hora": "noite",
-  "local": "o Delta, as salinas da Lurentetta",
+  "local": "o Delta, a ilha entre o braço de sal e o braço doce",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 2,
+  "pressao": 4,
   "primeiro_tick_semanal": 469,
   "limiar_pressao": 5,
   "proxima_auditoria": 468

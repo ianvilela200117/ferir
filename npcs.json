@@ -1997,9 +1997,10 @@
    "Tick 455: SOBE a 70",
    "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria A) trabalho forçado, cinco anos (somam à G6)",
    "Dia 462: VOTO VENCIDO no conselho (OS TRÊS ÉDITOS DE NOVO (462; a venda da Fornalha já está no ): queria A) os três: a Feira Franca em Levis, o Físico e o Grã",
-   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria B) só em Ireviel e Farenta (280 por semana)"
+   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria B) só em Ireviel e Farenta (280 por semana)",
+   "Dia 463: VOTO VENCIDO no conselho (OS DOIS AGENTES NOVOS (o dos Descalços, mandado pela Zitha; ): queria B) morte em praça"
   ],
-  "votos_vencidos": 15,
+  "votos_vencidos": 16,
   "tracos": [
    "ORGULHOSO",
    "CRUEL"
@@ -2012,7 +2013,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 4,
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "desejo": "proteger um filho",
   "ambicao": "comprar a liberdade da família",
   "medo": "a magia",

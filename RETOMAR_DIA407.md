@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 463, O DELTA: o galpão da Lurentetta, o plano da ilha (MOTOR 9b: G1 a G38)
+# RETOMAR — noite do Dia 465, O DELTA: a Elaeva presa na ilha; o cerco na aurora (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 465, O DELTA, A ILHA FECHADA (os ticks do 464 e do 465 rodados). O rei 402/402, Mana 124/164 (as duas Visões), a Visão 0/2, o ERUDITO 0/1 (volta no 469), XP 1.223.764 (faltam 936). A ELAEVA na ilha (cercos/elaeva465.json, com 'ilha': ela não sai; só o 1 do d6 a esconde): 17.845 de 38.000, Mítica 380, a fraqueza VIDA, o SAL dobra; o braço de sal cheio: o sal dura seis dias. As Visões: A o cerco ~1.800 por dia; B em terra todos morrem (sims/elaeva465_B_visao.txt). Na galé (a Isolda capitã): o rei, o Moreth, o Eiagrir, a Eliane (241); nas barcas do Croque: a Mie e a Lurentetta (ficha nova em fichas_combate.json). (OCULTO) o Teraseth morreu (TD62: o Ssish; a armadura do rei e o Croque do Rio no fundo do rio, perto das Fundas). (OCULTO) a COLUNA DO NORTE da Leliel chega a Farenta no 474 (LE64 [2]; o Graur e dez da Hoste esperam); o Dulassetta chega ao Norte no 466. A ordem dos três éditos entra no 469 (Legitimidade −1 então; pode ser desfeita antes). Cofre 62.383.
+
+Antes (463):
 Noite do 463, O DELTA, AS SALINAS DA LURENTETTA (os ticks do 459 ao 463 rodados, o semanal do 462 e as auditorias do 458 e do 463). O rei 402/402, Mana 164/164, a Visão 2/2, o ERUDITO 1/1, XP 1.223.764 (faltam 936). Com o rei no Delta: o Moreth, o Eiagrir, a Eliane (~241/260), a Isolda, o Gonde e os 10, a galé, as barcas do Croque, 9 carroças de sal, a Mie e as 20 lanças, a LURENTETTA (Mítica 774) e os salineiros (~300 refugiados). LR63 [5]: ela aceitou a ILHA (entre o braço de sal e o braço doce; as comportas). (OCULTO) a ELAEVA entra nas salinas no 465 (#640): Mítica 380, 17.845 de 38.000, a fraqueza VIDA, o SAL dobra, não atravessa água corrente larga. (OCULTO) o TERASETH MORREU no 462 (TD62 [2]: o Ssish, perto das Fundas; a armadura do rei e o Croque do Rio no fundo do rio); a notícia chega no 465 (#). (OCULTO) a Leliel lê a isca no 464 (#; o Dulassetta sumiu: declarar se pesa); o Seeth é da Almision e ela sabe que a casa sabe (AL59 [6]: o corvo não volta); o Haast em Marasar (HF57). O Graur em Farenta (a petição: ficar). Os éditos e a Ronda: C (a Nouliel); o conselho vota de novo os éditos no 469. Cofre 62.383.
 
 Antes (458):
@@ -311,11 +314,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (458 → 463): 1b · 2c · 3b · 4b (o Mestre avisou do erro: o rei forja as Lendárias; o jogador escolheu PARTIR NO 462) · 5a
 - SCq [2] · SCs 7 (falha feia) · AL59 [6] (oculto) · HC59 8 · GP59 (49 × 32) · os ticks 459-463 · a estrela (iolosar) · EI60 [1] + CR60 [2] + a luta das crias (sims/isyzis_crias460_saida.txt) · DU60 [1] · FC60 [5] · o defeito do mundo_vivo.py (os mortos rolavam) corrigido · FD61 [4] · LV61 [6] · Nymiceth · TD62 [2] (oculto) · PM62 [3] · PL62 [5] · PF62 [5] · RS62 [6] · VD62 [2] · PC62 C · PR62 C · LR63 [5].
 
+## RESPONDIDO (463 → 465): o ERUDITO ("as melhores ações para a cidade") · 1a · 2b · 3 tudo · 4 curioso
+- o Erudito (sem dado) · PI64 25 · AGd64 20 (a Zitha) · AGe64 18 (o Salvio) · PA64 C · LE64 [2] (oculto) · os ticks 464-465 · CK65 [6] · a ilha fechada · as Visões A (cerco, 500 futuros) e B (régua 2000) · o cerco.py aprendeu a ILHA.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O PLANO DA ILHA (a fera em uns dois dias; G9 antes de toda luta): a) a VISÃO DO TEMPO antes (2 por dia), de um plano que o jogador diga · b) o CERCO: a fera presa na ilha, as comportas fechadas, e a casa atira com sal das barcas e da galé nos braços do rio, sem pôr pé na ilha, até ela cair · c) a ilha fechada e a LURENTETTA luta com a casa em terra (o rei, os heróis, as lanças) · d) outro.
-2. AMANHÃ, 464 (o último dia livre): a) caçar o BRAKOS (o bicho de VIDA dos canais: material de Vida para as armas) · b) preparar a ilha (comportas, sal nas barcas, fogo nos braços) · c) descansar e rezar.
-3. IREVIEL, de longe: a) a Intendente paga a mesa da Colheita no 469 (200) · b) o rei passa por cima do conselho nos três éditos (Legitimidade −1) · c) os dois agentes novos (o dos Descalços e o do Ardenghi, que vinha pelo Pilão de Varade): a Sira interroga e o conselho julga · (pode marcar mais de uma)
-4. O HERKALD (o laço da semana: ele falou de Fenmir pela primeira vez): o que o rei sente e responde.
+1. O CERCO DA ILHA (começa na aurora do 466): a) o cerco como na Visão (o rei com a Chuva de Brasas, 7 por dia) · b) o cerco, e o rei troca a Chuva pela LANÇA DO SOL (16d6 de luz; 20 de Mana, 40 sem foco de Luz) · c) outro.
+2. OS TRÊS ÉDITOS (a ordem entra no 469): a) manter os três · b) trocar pelo que o Erudito apontou: a Feira Franca no PORTO DE MARASAR, e uma obra de câmbio em Levis (Dinheiro) · c) desfazer a ordem.
+3. O HERKALD quer uma ESCOLA de forja para os filhos da Cinza: a) sim, na forja grande (uma obra pequena) · b) depois da guerra · c) não.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
