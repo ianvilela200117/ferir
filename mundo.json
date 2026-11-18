@@ -3663,6 +3663,107 @@
    "chegada": "[2] em 1d3 [3] dias",
    "resumo": "UMA PESSOA IMPORTANTE VIAJA — Zaitor (terra nova) (Hagal)",
    "toca": false
+  },
+  {
+   "dia": 486,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [15] o sul, onde a areia come a pedra",
+   "detalhe": "nome: Orium\no que era: mina\npor que caiu: terremoto\no que guarda: um prisioneiro\no que habita: bandidos\ncusto de entrar: uma luta\n————————————————————————————————————————",
+   "noticia_chega": 488,
+   "chegada": "[4] em 1d6 [2] dias",
+   "resumo": "LUGAR NOVO DESCOBERTO — o sul, onde a areia come a pedra (Orium)",
+   "toca": false
+  },
+  {
+   "dia": 487,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [4]",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 488,
+   "chegada": "[3] em 1d3 [1] dias",
+   "leitura": "um rio muda",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: um rio muda — Ulra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 488,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "nome: Ezdua\ndesejo: voltar para casa\nambição (relógio de 4): formar uma companhia\nmedo: voltar a ser escravo\nsegredo: ama alguém proibido\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: a ambição dele exige trair alguém que ele ama\ntraços: GENEROSO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": 491,
+   "chegada": "[2] em 1d3 [3] dias",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — o brejo do oeste (a Torre Afogada) (Ezdua)",
+   "toca": false,
+   "nota_nome": "488: o gerador deu VEYSSA, que bate no cânone (Veydun, Veyula); trocado por EZDUA (nomes.py arcaica livre)"
+  },
+  {
+   "dia": 489,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Orssa\ndesejo: proteger um filho\nambição (relógio de 4): derrubar quem humilhou a família\nmedo: a solidão\nsegredo: não sabe ler\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: TEIMOSO e LEAL\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — a costa (Ireviel–Marasar) (Orssa)",
+   "toca": true
+  },
+  {
+   "dia": 490,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "FESTIVAL, TORNEIO OU FEIRA GRANDE — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 490,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 491,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — as Montanhas de Fogo",
+   "toca": false
+  },
+  {
+   "dia": 490,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [13] a Mata de Elais",
+   "detalhe": "",
+   "noticia_chega": 491,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — a Mata de Elais",
+   "toca": false
+  },
+  {
+   "dia": 491,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "[MISSÃO]: Kreast (o Mestre dá o nome pela ficção)\ndificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Encadeada (1 de 1d4+1)\nobjetivo: recuperar um objeto roubado\ncomplicação escondida (Envelope): outra facção quer o contrário\nprazo: 2 dias\nrecompensa: 50 XP · 10 de ouro · 1 ponto de Trilha\npenalidade se falhar: o rival ganha o feito e a Fama\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 497,
+   "chegada": "[5] em 1d6 [6] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Gogrunn (as minas)",
+   "toca": false
+  },
+  {
+   "dia": 492,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "[MISSÃO]: Ithula (o Mestre dá o nome pela ficção)\ndificuldade: D  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Normal\nobjetivo: defender um lugar por um tempo\ncomplicação escondida (Envelope): o prazo é menor do que parece\nprazo: 3 dias\nrecompensa: 400 XP · 100 de ouro · ??? (revelada ao concluir)\npenalidade se falhar: o rival ganha o feito e a Fama\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Steunn",
+   "toca": true
   }
  ]
 }

@@ -17,7 +17,7 @@
      "quem": "eles",
      "o_que": "1 kg de shasha",
      "a_cada": 7,
-     "proxima": 484
+     "proxima": 491
     },
     {
      "quem": "eles",
@@ -41,7 +41,8 @@
     "462: eles, cláusula 2: [18]+1 cumprem",
     "469: eles, cláusula 2: [1]+0 FALHAM",
     "476: eles, cláusula 2: [9]+0 cumprem",
-    "483: eles, cláusula 2: [16]-1 cumprem"
+    "483: eles, cláusula 2: [16]-1 cumprem",
+    "490: eles, cláusula 2: [19]-1 cumprem"
    ]
   },
   "lumade": {
@@ -84,7 +85,8 @@
     {
      "quem": "nos",
      "o_que": "uma ARMA da forja do rei, Lendária ou melhor, para a Lurentetta",
-     "ate": 487
+     "ate": 487,
+     "feito": false
     },
     {
      "quem": "eles",

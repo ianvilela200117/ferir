@@ -1,0 +1,33 @@
+ENCANTAMENTO "Purificar" (3º círculo) numa peça Primordial · LIMIAR 125 (CD 125 +0 pelo círculo)
+     +9  MÃO · Maestria Encantamento Mestre
+     +9  MÃO · (Int 102 + Afinidade 88) ÷ 20 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +3  MÃO · Mão de Mestre (Processo, Técnica, Matéria)
+     +3  MÃO · Mão que Não Treme 3 (toda obra)
+    +10  MÃO · Mão que Encanta 5 (ramo Processo; pontos do 111 e do 153)
+     +8  MÃO · Mão que Sela 4 (ramo Técnica, pontos do 78, 81, 84 e 114; proposta do Mestre)
+     +8  MÃO · Olho do Encanto 4 (ramo Matéria, pontos do 87, 90, 93 e 102)
+     +8  MÃO · Bancada do Encanto 4 (ramo Oficina, pontos do 96, 99, 105 e 117; proposta do Mestre)
+     +2  MÃO · Condutor Fiel 4 (grau 4, ponto do 108; proposta do Mestre)
+     +5  MÃO · Assinatura do Encanto 4: Selo do Rei, Duas Vozes, Peso da Mão, Alma Gravada (pontos do 120, 123, 126 e 129; proposta do Mestre; +2 a mais no 4º círculo para cima)
+     +2  MÃO · Mão que Escuta 4 (ramo Matéria; ponto do 138, proposta do Mestre)
+     +4  MÃO · Alma no Aço 5 (ramo Assinatura; pontos do 141, do 147 e do 150; só peça que ele mesmo forjou)
+     +1  MÃO · Olho do Material (+2 em Matéria, toda obra)
+     +7  CONDUTOR epico
+    +10  FERRAMENTA BURIL DE HAMIR (Mítico, 230; Lendário desde o 80, Mítico no 150) (mitico)
+     +8  FERRAMENTA · buril: o Hamir como ferramenta (+8 em Infusão e Encantamento)
+    +10  FERRAMENTA O BERÇO DE SELO (Mítico, 407: vorthil, o coração do Vorthen e veyine; a bigorna do encantador) (mitico)
+     +5  FERRAMENTA · berço: Gelo com Gelo, B 5 (+5 em Técnica: o selo não empena)
+     +2  FERRAMENTA · berço: o veyine como ferramenta (+2 em Infusão e Encantamento)
+     +2  FERRAMENTA · berço: fala, soa diferente quando a peça tem falha (+2 na Matéria)
+     +3  FERRAMENTA LUVAS DO ENCANTADOR (Lendárias de veyine, 218; Lendárias desde o 80) (lendario, metade)
+     +2  FERRAMENTA · luvas: o veyine como ferramenta (+2 em Infusão e Encantamento)
+     +6  OFICINA Fornalha que Não Apaga
+    ---- SOMA DOS VALORES: 146
+  dados finais: [8] + [2] → TOTAL 156
+  dados de saída: [8] + [2] = 156
+  RESULTADO: INTEIRO
+  XP: 50000
+  → lançar: python3 ficha.py xp 50000 "encanto Purificar (Primordial)"
+  (REFORÇO: um encantamento mais fraco pode ser refeito 1x por semana com meio condutor; se não chegar ao inteiro, fica como está)

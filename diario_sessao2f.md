@@ -1802,3 +1802,45 @@ No 485 o rio secou de novo. Os baixios das Fundas apareceram, lama preta e pedra
 Na mesma noite chegou a barca de Ireviel. A cidade dizia que o rei tinha perdido a força em Dragal. Os da Cinza tinham pintado nas portas: O REI CAIU.
 
 - **Parada:** noite do 485, as Fundas. O barco do Teraseth achado; o corpo debaixo do casco, para amanhã. O boato em Ireviel. O rei no nível 12.
+
+## Dia 486 a noite do 492 — o Yolorvus, a Ressurreição que falhou, a Cisterna
+
+### As Fundas, 486
+Os mergulhadores dos Afogados Vivos passaram as cordas por baixo do casco e puxaram com os do Croque, cantando baixo para marcar o tempo. O Teraseth saiu da lama com a armadura do rei no peito e o Croque do Rio ainda preso na mão, os dedos fechados nele como na última noite.
+
+A Isolda o embrulhou em sal com as próprias mãos e não deixou ninguém ajudar.
+
+### A gruta do penhasco, manhã do 488
+O Starkald esperava sentado na pedra, com o arco no colo. "Ele fala", disse. "Passou a noite falando comigo lá de dentro. Prometeu que me dava ouro se eu fosse embora."
+
+O Yolorvus saiu da gruta quando o rei pisou a boca dela: uma planta do tamanho de uma casa, de folhas brancas como papel, com uma luz dentro que doía nos olhos. Disse o nome do rei antes de atacar. O primeiro golpe abriu a cota da Eliane no ombro.
+
+O Toque saiu do Foco de Osso. O Moreth acendeu a maça. O Eiagrir ergueu a lança. Na segunda rodada a planta caiu de lado, e a última flecha do Starkald entrou no lugar onde a luz morava. Quando a luz apagou, ficou na mão do rei, quente como pão, o coração dela: um núcleo de Luz.
+
+### O rio, noite do 489
+A Eliane acordou com uma mão no braço, onde estavam os aros. A Lança do Bren já tinha avisado. O homem se jogou no rio com o sangue dela no punho e não subiu mais. No cinto dele, que ficou preso na borda, havia uma pena preta de corvo.
+
+### Ireviel, a Vindima, entardecer do 490
+O rei desceu da barca no cais cheio de gente com uvas e jarros, e a cidade o viu inteiro. As portas pintadas O REI CAIU foram lavadas antes da noite.
+
+### A casa, noite do 490
+O Ceduion saiu da porta de preto no meio da sala, com o Cajado de Âmbar na mão. Olhou o corpo salgado em cima da mesa, o Croque nas mãos do morto e o núcleo de Luz que o rei lhe estendeu.
+
+Falou o sétimo círculo devagar, palavra por palavra. A luz subiu do núcleo pela mão dele e pelo braço, e por um instante a sala inteira ficou branca e todos viram o peito do Teraseth se mexer.
+
+Depois o núcleo rachou com um estalo de vidro e queimou na mão do Ceduion até virar cinza. A luz se apagou. O peito não se mexeu de novo.
+
+O Ceduion ficou um tempo olhando a própria mão queimada.
+
+"O Colégio cobrou o feitiço", disse por fim, "não o milagre." Guardou o Cajado debaixo do braço e voltou pela porta de preto.
+
+A Isolda não chorou. Foi até a mesa, tirou o Croque das mãos do morto e as cruzou sobre o peito dele, do jeito que os barqueiros fazem.
+
+### A Fornalha, 491 e 492
+O rei não dormiu. Assentou o núcleo da Elaeva no meio de vinte quilos de uldun e bateu o Martelo do Rei sobre a Matriz dois dias seguidos, com a Tilde e o Iorin nos foles. A Tilde não falou com ele o dia inteiro; tinha os olhos vermelhos e batia o fole com raiva.
+
+Na noite do 492 a peça estava pronta: uma boca de metal escuro, do tamanho de uma roda de carroça, que zumbia baixo como um poço fundo. Quando o rei pôs nela o Purificar, o zumbido mudou de nota, e a febre que ainda queimava três crianças na enfermaria baixou antes da meia-noite.
+
+O rei ficou sentado diante dela até o fogo da Fornalha ser a única coisa acordada.
+
+- **Parada:** noite do 492, a Fornalha. A Cisterna pronta para descer à cisterna grande. O Teraseth morto de vez, na mesa da casa. A carta da Almision no banco.

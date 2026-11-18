@@ -1,0 +1,19 @@
+{
+ "monstro": {
+  "nome": "o Yolorvus",
+  "cat": "Épico",
+  "nivel": 92,
+  "pv": 1380,
+  "df": 43,
+  "rd": 6,
+  "at": 33,
+  "dado": "1d12",
+  "mult": 5,
+  "moral": true,
+  "essencia": "Luz",
+  "fraqueza": "Sombra",
+  "nota": "488 (GL78 [4], VY78 [3], GW87 [5]): o YOLORVUS, Épico 92 de Luz (o gerador; o nome trocado de VEYMIR), planta do tamanho de uma casa, fala e mente, escava; nas grutas de cal do penhasco do rio abaixo de Levis; a luta na boca da gruta, de manhã",
+  "nao_roda": ["cega por 1 rodada com 18 a 20, em área de 12 m, uma vez a cada 3 rodadas: não entra no luta.py (declarado)", "a segunda fraqueza, a LUZ DO SOL: a luta é na boca da gruta, meio na sombra: não entra (declarado; os dois lados ficam sem o que o script não roda)", "escava: se fugir pela moral, foge para dentro da gruta (a caça segue, rolada à parte)"]
+ },
+ "grupo": []
+}

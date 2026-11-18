@@ -1,22 +1,5 @@
 {
  "ordem": [
-  "GR28b",
-  "MR29",
-  "SK29",
-  "SB29",
-  "LO29",
-  "EN30",
-  "LI30",
-  "MM30",
-  "GB30",
-  "LN30",
-  "TH30",
-  "IZ30",
-  "FA30",
-  "LB30",
-  "LB30c",
-  "LB31",
-  "VX31",
   "GR31",
   "HG31",
   "LV31",
@@ -399,825 +382,26 @@
   "GO83",
   "BF84",
   "CN84",
-  "BF85"
+  "BF85",
+  "GD86",
+  "RP86",
+  "GW87",
+  "LR87",
+  "RV88",
+  "490-laco-quem",
+  "490-laco",
+  "490-chamado",
+  "490-vinculos",
+  "CB90a",
+  "CB90b",
+  "CB90c",
+  "LD89",
+  "CV90",
+  "RS90",
+  "CJ90",
+  "MG91"
  ],
  "selos": {
-  "GR28b": {
-   "id": "GR28b",
-   "dia": 428,
-   "hora": "01:54:32",
-   "titulo": "O QUE ELE COBRA DA GROA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "OURO (2d6 × 50)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "UM SERVIÇO: um desenho ou uma medida da Fornalha"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "que ela VOLTE A STEUNN com ele"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "UM SERVIÇO: um desenho ou uma medida da Fornalha",
-     "txt": "[4] → UM SERVIÇO: um desenho ou uma medida da Fornalha"
-    }
-   ],
-   "hora_rolado": "01:54:32"
-  },
-  "MR29": {
-   "id": "MR29",
-   "dia": 429,
-   "hora": "01:56:41",
-   "titulo": "QUEM SE REBELA EM MARASAR (o mundo do 428: d20 [1] guerra, 1d6 [4] uma cidade se rebela; a notícia chega à casa no 430)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os do CAIS DE BAIXO (inimigos; a greve vira motim no porto)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os SEM-CORONA (oficiais que não aceitam a Skotha)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os DA BRECHA VELHA (perderam a terra no conselho do 428)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta",
-     "txt": "[1] → os FIÉIS DO DOGE VELHO (inimigos, força 6; a Liga paga): querem o Doge velho de volta"
-    }
-   ],
-   "hora_rolado": "01:56:41"
-  },
-  "SK29": {
-   "id": "SK29",
-   "dia": 429,
-   "hora": "01:56:41",
-   "titulo": "A RESPOSTA DA SKOTHA AO RECADO DO REI (os nomes do livro com a Leliel; ela é a patrona dos Barqueiros do Livro; relação +3)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "AGRADECE e põe as barcas dela de guarda na foz do braço leste (os Barqueiros do lado de Marasar ficam cobertos)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "diz que JÁ SABIA (a espionagem dela) e oferece aliança contra a Leliel"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar",
-     "txt": "[3] → AGRADECE e pede o FACIO (o traidor dos barqueiros dela) para julgar em Marasar"
-    }
-   ],
-   "hora_rolado": "01:56:41"
-  },
-  "SB29": {
-   "id": "SB29",
-   "dia": 429,
-   "hora": "01:56:41",
-   "titulo": "O GESTO GRANDE DA SOUANE PARA A BRARA EM LEVIS (a trama DESEJO SECRETO, d20 [20]; a Souane: Lendária do Delta, quer dar de comer a todo o Delta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um PRESENTE grande: barcas de sal e de grão para a fundição velha de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "vem EM PESSOA a Levis e pede à Brara uma peça da fundição"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "declara em praça que a Brara está sob a PROTEÇÃO dela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "declara em praça que a Brara está sob a PROTEÇÃO dela",
-     "txt": "[5] → declara em praça que a Brara está sob a PROTEÇÃO dela"
-    }
-   ],
-   "hora_rolado": "01:56:41"
-  },
-  "LO29": {
-   "id": "LO29",
-   "dia": 429,
-   "hora": "01:56:41",
-   "titulo": "QUEM VIU O LOULA (avistamento do 429)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um coveiro, à noite, fora do portão de Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "um vaqueiro, na beira da várzea nova"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "um coveiro, à noite, fora do portão de Ireviel",
-     "txt": "[2] → um coveiro, à noite, fora do portão de Ireviel"
-    }
-   ],
-   "hora_rolado": "01:56:41"
-  },
-  "EN30": {
-   "id": "EN30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "O ENCONTRO NO RIO (tick 430 em estrada [7]; a TEMPESTADE prende a barca do rei num remanso, um dia acima de Ireviel)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "barqueiros de Levis abrigados no mesmo remanso, com notícia de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os restos da CARAVANA DE LEVIS virada pela correnteza (a #379, mais cedo), e um sobrevivente"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma barca da LIGA subindo com frete, abrigada do outro lado do remanso"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "uma barca da LIGA subindo com frete, abrigada do outro lado do remanso",
-     "txt": "[5] → uma barca da LIGA subindo com frete, abrigada do outro lado do remanso"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "LI30": {
-   "id": "LI30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "ONDE A LIANNIEL FOI VISTA (avistamento do 430)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "borbulhou de novo no cais afundado de Ireviel (os pescadores)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "da barca do rei, na tempestade: um dorso na água do remanso"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "borbulhou de novo no cais afundado de Ireviel (os pescadores)",
-     "txt": "[1] → borbulhou de novo no cais afundado de Ireviel (os pescadores)"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "MM30": {
-   "id": "MM30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "A RESPOSTA DA MAMILTIA (o mensageiro do 425 a alcança na estrada de Steunn: o pedido de ajuda contra o Morek, que já morreu)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "manda dizer que segue a Steunn e volta para a caçada da Elaeva, como prometido"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "manda gente da MÃO QUEIMADA a Ireviel para a caçada"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver",
-     "txt": "[4] → manda uma PENA dela: queimada, chama-a uma vez, onde o rei estiver"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "GB30": {
-   "id": "GB30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "A GUILDA (o Tegre, 6 caçadores) E OS DO CROQUE CHEGAM A MARASAR PARA OLHAR O BRUUR (+2: os do Croque conhecem a água; a cidade está em REVOLTA, os Fiéis do Doge Velho)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "os FIÉIS os pegam no caminho: luta pequena (rola feridos)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 9,
-     "res": "a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 17,
-     "res": "chegam ao BRUUR pelos alagados: dorme onde se dizia (o LUGAR EXATO) e veem a revolta"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 22,
-     "res": "e um RUMOR EXATO (o drop ou a fraqueza)"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      7
-     ],
-     "total": 9,
-     "res": "a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta",
-     "txt": "[7] +2 = 9 → a revolta fecha o caminho: não chegam ao Bruur; voltam com a notícia certa da revolta"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "LN30": {
-   "id": "LN30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "O RUMOR EXATO DO LAENNOR (notícia fiel do 430: alguém o viu e sobreviveu)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "O DROP: o que o corpo dele dá (gerador material Raro)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada",
-     "txt": "[1] → A TOCA: o redemoinho gira em cima de uma escada de pedra afundada, a entrada de QUOIUM, a cidade afundada"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "TH30": {
-   "id": "TH30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "O RUMOR EXATO DO THARGOS (notícia fiel do 430, as Fundas do Norte)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a FRAQUEZA: o raio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o DROP: o coração é núcleo MÍTICO de Água"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o COSTUME: voa, some na paisagem, e o olhar paralisa"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o DROP: o coração é núcleo MÍTICO de Água",
-     "txt": "[4] → o DROP: o coração é núcleo MÍTICO de Água"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "IZ30": {
-   "id": "IZ30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "QUANTAS CRIAS A ISYZIS TEM DE VERDADE (a notícia do 430 chega EXAGERADA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado em crias"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado em crias",
-     "txt": "[1] → o dado em crias"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "FA30": {
-   "id": "FA30",
-   "dia": 430,
-   "hora": "01:59:10",
-   "titulo": "O MONSTRO QUE CHEGOU A FARENTA (a notícia do 430 chega INCOMPLETA: falta qual e onde)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um BICHO NOVO (gerador monstro)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o NAIEL desce a costa até Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a VATHEXA marca território perto de Farenta"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "um BICHO NOVO (gerador monstro)",
-     "txt": "[1] → um BICHO NOVO (gerador monstro)"
-    }
-   ],
-   "hora_rolado": "01:59:10"
-  },
-  "LB30": {
-   "id": "LB30",
-   "dia": 430,
-   "hora": "01:59:38",
-   "titulo": "A BARCA DA LIGA NO REMANSO (EN30 [5]): QUANTOS SE VEEM A BORDO, na tempestade, do outro lado da água",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "8 remadores e 4 guardas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "12 remadores e 8 guardas"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "16 remadores, 8 guardas e um homem de capa que manda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "16 remadores, 8 guardas e um homem de capa que manda",
-     "txt": "[5] → 16 remadores, 8 guardas e um homem de capa que manda"
-    }
-   ],
-   "hora_rolado": "01:59:38"
-  },
-  "LB30c": {
-   "id": "LB30c",
-   "dia": 430,
-   "hora": "01:59:38",
-   "titulo": "O QUE A BARCA DA LIGA LEVA RIO ACIMA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "sal e grão (o frete caro da Liga)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ARMAS (lanças e bestas em fardos)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "OURO e PAPÉIS da Liga"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "GENTE (presos amarrados no porão)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "OURO e PAPÉIS da Liga",
-     "txt": "[5] → OURO e PAPÉIS da Liga"
-    }
-   ],
-   "hora_rolado": "01:59:38"
-  },
-  "LB31": {
-   "id": "LB31",
-   "dia": 431,
-   "hora": "03:06:36",
-   "titulo": "O 2º DIA DE TEMPESTADE NO REMANSO (431: o barco não sai; as duas barcas seguem amarradas, uma de frente para a outra; 1c: o rei não aborda): O QUE O HOMEM DE CAPA DA LIGA FAZ",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "NADA: mantém a lanterna acesa de vigia e espera a tempestade passar"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "manda um ESQUIFE com um remador: pergunta de quem é a barca e oferece pagar a portagem do rio"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "RECONHECEU o rei (a lança, a guarda): de madrugada corta as amarras e sai na tempestade, rio acima (rola se a barca aguenta)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "NADA: mantém a lanterna acesa de vigia e espera a tempestade passar",
-     "txt": "[3] → NADA: mantém a lanterna acesa de vigia e espera a tempestade passar"
-    }
-   ],
-   "hora_rolado": "03:06:36"
-  },
-  "VX31": {
-   "id": "VX31",
-   "dia": 431,
-   "hora": "03:06:36",
-   "titulo": "A VIGIA DA VATHEXA (G11, a 1ª vez: o posto da Luz do Cais; a Lendária 262 marca território mais perto de gente, na costa; notícia FIEL)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: a aldeia recolhe os barcos e a gente; sem perda"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO: sem perda, e um RUMOR EXATO dela (fraqueza, toca ou drop)"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "vista NO LUGAR, de dia, parada: a casa sabe onde ela dorme"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 4,
-     "res": "não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)",
-     "txt": "[2] +2 = 4 → não viram a tempo: o sinal dela aparece junto de uma aldeia da costa e a gente foge (Comércio do Porto −1 na semana)"
-    }
-   ],
-   "hora_rolado": "03:06:36"
-  },
   "GR31": {
    "id": "GR31",
    "dia": 431,
@@ -19953,6 +19137,1095 @@
     }
    ],
    "hora_rolado": "14:11:15"
+  },
+  "GD86": {
+   "id": "GD86",
+   "dia": 485,
+   "hora": "14:58:42",
+   "titulo": "A GALÉ DA ISOLDA DESCE COM O CORPO DO TERASETH (486; o corpo tirado de debaixo do casco com cordas, salgado no porão, com a armadura do rei e o Croque do Rio; o rio baixo e seco nos vaus)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os vaus secos seguram a galé: chega a Ireviel na noite do 488"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chega a Ireviel na noite do 487"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os vaus secos seguram a galé: chega a Ireviel na noite do 488",
+     "txt": "[1] → os vaus secos seguram a galé: chega a Ireviel na noite do 488"
+    }
+   ],
+   "hora_rolado": "14:58:42"
+  },
+  "RP86": {
+   "id": "RP86",
+   "dia": 485,
+   "hora": "14:58:42",
+   "titulo": "O REI SOBE ÀS GRUTAS DO PENHASCO (486; as barcas leves, à corda nos vaus; o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, a Matriz e o Martelo; a Guilda do Starkald já está lá procurando)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os vaus: chega na manhã do 488"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chega na tarde do 487, quando a Guilda acha a gruta do Yolorvus"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os vaus: chega na manhã do 488",
+     "txt": "[1] → os vaus: chega na manhã do 488"
+    }
+   ],
+   "hora_rolado": "14:58:43"
+  },
+  "GW87": {
+   "id": "GW87",
+   "dia": 485,
+   "hora": "14:58:58",
+   "titulo": "O STARKALD ACHA A GRUTA DO YOLORVUS (487, as grutas de cal do penhasco; a ordem que ele tem é caçar; o rei chega na manhã do 488 e manda que esperem, mas a ordem nova só chega com ele; o Starkald é CRUEL e AMBICIOSO, a Guilda tem força 2)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "AMBICIOSO, ele não espera: entra na gruta no 487 com os da Guilda (a luta da Guilda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "ESPERA: vigia a boca da gruta e manda um corredor rio abaixo; o rei chega no 488"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ESPERA: vigia a boca da gruta e manda um corredor rio abaixo; o rei chega no 488",
+     "txt": "[5] → ESPERA: vigia a boca da gruta e manda um corredor rio abaixo; o rei chega no 488"
+    }
+   ],
+   "hora_rolado": "14:58:58"
+  },
+  "LR87": {
+   "id": "LR87",
+   "dia": 488,
+   "hora": "14:59:43",
+   "titulo": "(OCULTO até chegar ao rei) A LURENTETTA E O PRAZO QUE PASSOU (487; a peça Lendária ou melhor que o rei devia em duas luas; ela é LEAL e TEIMOSA; a casa matou a Elaeva que comeu o povo dela e deu-lhe metade do corpo: +2)",
+   "dado": [
+    1,
+    6,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "OFENDIDA: 'o rei de Ireviel deve e não paga'; o sal a meio preço acaba e a aliança esfria (a relação cai)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "ESPERA, mas manda um enviado lembrar a dívida (chega a Ireviel no 491)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 1000000,
+     "res": "não diz nada: a fera morta paga a demora; a peça é esperada quando o rei puder"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 7,
+     "res": "não diz nada: a fera morta paga a demora; a peça é esperada quando o rei puder",
+     "txt": "[5] +2 = 7 → não diz nada: a fera morta paga a demora; a peça é esperada quando o rei puder"
+    }
+   ],
+   "hora_rolado": "14:59:43"
+  },
+  "RV88": {
+   "id": "RV88",
+   "dia": 488,
+   "hora": "16:11:53",
+   "titulo": "A VOLTA DO REI A IREVIEL RIO ABAIXO (sai do penhasco no 488 à tarde, com o núcleo de Luz; o rio baixo, 19/100; rio abaixo anda mais)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os vaus seguram: chega a Ireviel na manhã do 491"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chega a Ireviel no entardecer do 490 (a Vindima)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "chega a Ireviel no entardecer do 490 (a Vindima)",
+     "txt": "[3] → chega a Ireviel no entardecer do 490 (a Vindima)"
+    }
+   ],
+   "hora_rolado": "16:11:53"
+  },
+  "490-laco-quem": {
+   "id": "490-laco-quem",
+   "dia": 490,
+   "hora": "16:12:07",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a TILDE",
+     "txt": "[3] → a TILDE"
+    }
+   ],
+   "hora_rolado": "16:12:07"
+  },
+  "490-laco": {
+   "id": "490-laco",
+   "dia": 490,
+   "hora": "16:12:07",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ATRITO",
+     "txt": "[1] → ATRITO"
+    }
+   ],
+   "hora_rolado": "16:12:07"
+  },
+  "490-chamado": {
+   "id": "490-chamado",
+   "dia": 490,
+   "hora": "16:12:07",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 24,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 24,
+     "res": "SURPRESA",
+     "txt": "[20] +4 = 24 → SURPRESA (20 NATURAL)"
+    }
+   ],
+   "hora_rolado": "16:12:07"
+  },
+  "490-vinculos": {
+   "id": "490-vinculos",
+   "dia": 490,
+   "hora": "16:12:07",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Thuron–Erymir",
+     "txt": "#1 [5] → Thuron–Erymir"
+    },
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "Nouliel–Herkald",
+     "txt": "#2 [1] → Nouliel–Herkald"
+    }
+   ],
+   "hora_rolado": "16:12:07"
+  },
+  "CB90a": {
+   "id": "CB90a",
+   "dia": 490,
+   "hora": "16:12:54",
+   "titulo": "(OCULTO) A COBIÇA DO 490: A MATRIZ (d20 [3]; a Matriz está com o rei, voltando de barca a Ireviel; os conselheiros da Liga acabam de saber o segredo dela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os CONSELHEIROS pagam gente para tomar a Matriz no cais quando a barca do rei chegar (uma emboscada no 490, à vista: a guarda e o Moreth)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma TENTATIVA de noite na Fornalha depois que ela volta: a guarda pega um"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "SÓ OLHOS: contam os guardas do cais"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "uma TENTATIVA de noite na Fornalha depois que ela volta: a guarda pega um",
+     "txt": "[3] → uma TENTATIVA de noite na Fornalha depois que ela volta: a guarda pega um"
+    }
+   ],
+   "hora_rolado": "16:12:54"
+  },
+  "CB90b": {
+   "id": "CB90b",
+   "dia": 490,
+   "hora": "16:12:54",
+   "titulo": "(OCULTO) A COBIÇA DO 490: OS AROS DA ELIANE (d20 [3]; a carta da Almision já pediu)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um ladrão tenta tirar os aros da Eliane dormindo, na barca (ela acorda: a Lança do Bren)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a Almision manda o corvo vigiar a Eliane"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "SÓ OLHOS"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "um ladrão tenta tirar os aros da Eliane dormindo, na barca (ela acorda: a Lança do Bren)",
+     "txt": "[1] → um ladrão tenta tirar os aros da Eliane dormindo, na barca (ela acorda: a Lança do Bren)"
+    }
+   ],
+   "hora_rolado": "16:12:54"
+  },
+  "CB90c": {
+   "id": "CB90c",
+   "dia": 490,
+   "hora": "16:12:54",
+   "titulo": "(OCULTO) A COBIÇA DO 490: OS AROS DO GRAUR, d20 [1]: ALGUÉM GRANDE (o Graur em Farenta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a LELIEL (o norte; Farenta é a obra dela) manda tomar os aros do Graur em Farenta (perigo ao Graur)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o BORECCI (Steunn) oferece ao Graur ouro e um título pelos aros (o coração dele: o PROBLEMA do 483)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a ALMISION pede também os aros do Graur, na mesma carta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "a ALMISION pede também os aros do Graur, na mesma carta",
+     "txt": "[5] → a ALMISION pede também os aros do Graur, na mesma carta"
+    }
+   ],
+   "hora_rolado": "16:12:54"
+  },
+  "LD89": {
+   "id": "LD89",
+   "dia": 490,
+   "hora": "16:13:09",
+   "titulo": "O LADRÃO DOS AROS DA ELIANE NA BARCA (CB90b [1]; a noite do 489, rio abaixo; ela acorda com a mão dele no braço; a Lança do Bren AVISA do inimigo escondido a 9 m)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele escapa pela água sem nada; ela só vê a tatuagem de uma mão preta no pulso (as MÃOS DE BREU)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ela o fere e ele se joga no rio e se afoga; no cinto, uma pena preta de corvo (a ALMISION?)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ela o pega VIVO e o amarra na proa: ele fala em Ireviel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ela o fere e ele se joga no rio e se afoga; no cinto, uma pena preta de corvo (a ALMISION?)",
+     "txt": "[4] → ela o fere e ele se joga no rio e se afoga; no cinto, uma pena preta de corvo (a ALMISION?)"
+    }
+   ],
+   "hora_rolado": "16:13:09"
+  },
+  "CV90": {
+   "id": "CV90",
+   "dia": 490,
+   "hora": "16:13:09",
+   "titulo": "O CEDUION VEM A IREVIEL (490, entardecer: o rei chega com o núcleo Épico de Luz; o corpo do Teraseth está salgado na casa desde a noite do 488; o Thuron leva o recado pela Porta do Nada de um mestre do Colégio)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o Ceduion está fora de Telosus: chega só na MANHÃ DO 492, o último dia do prazo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "atravessa a Porta do Nada na NOITE DO 490"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "atravessa a Porta do Nada na NOITE DO 490",
+     "txt": "[6] → atravessa a Porta do Nada na NOITE DO 490"
+    }
+   ],
+   "hora_rolado": "16:13:09"
+  },
+  "RS90": {
+   "id": "RS90",
+   "dia": 490,
+   "hora": "16:13:26",
+   "titulo": "A RESSURREIÇÃO DO TERASETH (noite do 490, Ireviel, a casa; o CEDUION, Arquimago, lança o 7º círculo; o corpo morreu no 462, há 28 dias: dentro do mês; o componente: o NÚCLEO ÉPICO DE LUZ do Yolorvus (consumido) e o que ele amou: o CROQUE DO RIO, posto nas mãos dele; o preço pago ao Colégio: o CAJADO DE ÂMBAR)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "FALHA: o núcleo queima na mão do Ceduion e o Teraseth não volta (o mês acaba sem outra chance)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "o TERASETH VOLTA, inteiro"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o TERASETH VOLTA inteiro e traz do fundo uma coisa que viu morto: onde o Ssish guarda o que come"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "FALHA: o núcleo queima na mão do Ceduion e o Teraseth não volta (o mês acaba sem outra chance)",
+     "txt": "[1] → FALHA: o núcleo queima na mão do Ceduion e o Teraseth não volta (o mês acaba sem outra chance)"
+    }
+   ],
+   "hora_rolado": "16:13:27"
+  },
+  "CJ90": {
+   "id": "CJ90",
+   "dia": 490,
+   "hora": "16:13:46",
+   "titulo": "O CEDUION E O PREÇO DEPOIS DA FALHA (RS90 [1]; o Cajado de Âmbar já estava na mão dele; ele é HUMILDE e CÍNICO: +1)",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele GUARDA o Cajado: 'o Colégio cobrou o feitiço, não o milagre'"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ele guarda o Cajado e diz que o COLÉGIO DEVE ao rei um favor pelo morto que não voltou"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "ele DEVOLVE o Cajado: 'não cobro por um morto que não voltou'"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 2,
+     "res": "ele GUARDA o Cajado: 'o Colégio cobrou o feitiço, não o milagre'",
+     "txt": "[1] +1 = 2 → ele GUARDA o Cajado: 'o Colégio cobrou o feitiço, não o milagre'"
+    }
+   ],
+   "hora_rolado": "16:13:46"
+  },
+  "MG91": {
+   "id": "MG91",
+   "dia": 491,
+   "hora": "16:15:54",
+   "titulo": "A MAGIA DA CISTERNA QUE COME A FEBRE (Primordial; o rerrolar do script porque o 2º não cabe; os 52 do 7º e 8º círculo do grimório; 1x por cena, sem saber magia)",
+   "dado": [
+    1,
+    52,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Chuva de Estrelas (Chama 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Alma de Fornalha (Chama 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Coroa de Fogo (Chama 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Cidade em Brasa (Chama 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Rio Parado (Gelo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Coração Gelado (Gelo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Inverno Eterno (Gelo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Exército de Gelo (Gelo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "A Montanha Cai (Pedra 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Veio Chamado (Pedra 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "Fortaleza do Chão (Pedra 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "Coração da Montanha (Pedra 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "Furacão (Vento 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "Corpo de Vento (Vento 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "O Céu Fecha (Vento 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "Martelo do Céu (Vento 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "Ressurreição (Luz 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "Lança da Aurora (Luz 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "Dia Sem Noite (Luz 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "Curar a Cidade (Luz 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 21,
+     "b": 21,
+     "res": "Noite Sobre a Cidade (Sombra 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 22,
+     "res": "Duplo de Sombra (Sombra 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 23,
+     "b": 23,
+     "res": "Engolir na Sombra (Sombra 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 24,
+     "b": 24,
+     "res": "Mil Olhos (Sombra 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 25,
+     "b": 25,
+     "res": "Exército Ferido (Sangue 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 26,
+     "b": 26,
+     "res": "Corpo Emprestado (Sangue 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 27,
+     "b": 27,
+     "res": "Pacto de Sangue (Sangue 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 28,
+     "b": 28,
+     "res": "Vida Longa (Sangue 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 29,
+     "b": 29,
+     "res": "Cemitério Acorda (Osso 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 30,
+     "b": 30,
+     "res": "Filactério (Osso 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 31,
+     "b": 31,
+     "res": "Dragão de Ossos (Osso 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 32,
+     "b": 32,
+     "res": "Palavra de Morte (Osso 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 33,
+     "b": 33,
+     "res": "Desfazer o Encanto (Vazio 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 34,
+     "b": 34,
+     "res": "Bolso do Mundo (Vazio 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 35,
+     "b": 35,
+     "res": "Silêncio de Região (Vazio 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 36,
+     "b": 36,
+     "res": "Apagar o Nome (Vazio 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 37,
+     "b": 37,
+     "res": "Juramento de Cidade (Elo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 38,
+     "b": 38,
+     "res": "Corrente do Mundo (Elo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 39,
+     "b": 39,
+     "res": "Elo de Almas (Elo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 40,
+     "b": 40,
+     "res": "Domar (Elo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 41,
+     "b": 41,
+     "res": "Ver o Mês (Tempo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 42,
+     "b": 42,
+     "res": "Prender no Tempo (Tempo 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 43,
+     "b": 43,
+     "res": "Voltar Atrás (Tempo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 44,
+     "b": 44,
+     "res": "Juventude (Tempo 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 45,
+     "b": 45,
+     "res": "Exército Sonha (Mente 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 46,
+     "b": 46,
+     "res": "Ler a Alma (Mente 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 47,
+     "b": 47,
+     "res": "Mudar o Coração (Mente 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 48,
+     "b": 48,
+     "res": "Loucura (Mente 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 49,
+     "b": 49,
+     "res": "A Mata Acorda (Raiz 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 50,
+     "b": 50,
+     "res": "Forma de Fera Antiga (Raiz 7º)"
+    },
+    {
+     "tipo": "num",
+     "a": 51,
+     "b": 51,
+     "res": "Primavera (Raiz 8º)"
+    },
+    {
+     "tipo": "num",
+     "a": 52,
+     "b": 52,
+     "res": "Fome da Terra (Raiz 8º)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "Curar a Cidade (Luz 8º)",
+     "txt": "[20] → Curar a Cidade (Luz 8º)"
+    }
+   ],
+   "hora_rolado": "16:15:54"
   }
  }
 }

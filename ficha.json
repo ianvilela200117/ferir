@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 12,
- "xp": 7590,
+ "nivel": 47,
+ "xp": 108510,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 80,
+  "Inteligência": 115,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,17 +16,17 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 66
+  "Afinidade": 101
  },
  "pv": [
-  193,
-  193
+  263,
+  263
  ],
  "mana": [
-  59,
-  59
+  94,
+  94
  ],
- "foco": 8,
+ "foco": 15,
  "fortuna": [
   3,
   3
@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 57766,
+ "cofre": 57593,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 483,
+  "ultima_semana": 490,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -453,6 +453,12 @@
    "valor": -23,
    "motivo": "semana: casa 6457 + cidades 2450 − despesa 8930",
    "saldo": 57766
+  },
+  {
+   "dia": 490,
+   "valor": -173,
+   "motivo": "semana: casa 6457 + cidades 2300 − despesa 8930",
+   "saldo": 57593
   }
  ],
  "materiais": {
@@ -489,7 +495,7 @@
    ]
   },
   "shasha": {
-   "kg": 5.8,
+   "kg": 6.8,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
@@ -497,7 +503,8 @@
     "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)",
     "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)",
     "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)",
-    "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar"
+    "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar",
+    "Dia 490: +1 490: o tratado da Doge Skotha cumpre (1 kg de shasha)"
    ]
   },
   "zezha": {
@@ -688,9 +695,10 @@
    ]
   },
   "uldun": {
-   "kg": 100.0,
+   "kg": 80.0,
    "log": [
-    "Dia 469: +100 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+    "Dia 469: +100 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])",
+    "Dia 491: -20 491-492: o CORAÇÃO DA CISTERNA (Primordial)"
    ]
   },
   "gnaos": {
@@ -706,9 +714,10 @@
    ]
   },
   "núcleo-mítico-de-podridão": {
-   "kg": 1.0,
+   "kg": 0.0,
    "log": [
-    "Dia 469: +1 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+    "Dia 469: +1 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])",
+    "Dia 491: -1 491-492: o núcleo da Elaeva no centro da CISTERNA QUE COME A FEBRE (Primordial)"
    ]
   },
   "núcleo-lendário-de-silêncio": {
@@ -737,35 +746,28 @@
     "Dia 483: +2 478 e 483: o ícor dos cinco bichos da colmeia (Raro, Som: ofício, afina a peça, +2 em Processo)",
     "Dia 484: +1.5 484: o ícor de mais quatro bichos da colmeia"
    ]
+  },
+  "núcleo-épico-de-luz": {
+   "kg": 1.0,
+   "log": [
+    "Dia 488: +1 488: o coração do YOLORVUS (a Ressurreição do Teraseth)"
+   ]
+  },
+  "veygal": {
+   "kg": 7.0,
+   "log": [
+    "Dia 488: +8 488: as presas do Yolorvus (Épico, Luz: arma, cega 1 rodada com 18-20)",
+    "Dia 492: -1 492: o condutor do Purificar na Cisterna"
+   ]
+  },
+  "thura": {
+   "kg": 5.0,
+   "log": [
+    "Dia 488: +5 488: a seiva do Yolorvus (Épico, Luz: ofício e poção, +3 em Técnica)"
+   ]
   }
  },
  "xp_log": [
-  "Dia 406: +2200 406 (noite): reforja da LANÇA DE GUERRA, Épica → LENDÁRIA (RF7; total 126)",
-  "Dia 406: SOBE ao 144",
-  "Dia 407: +7500 407: a Lança de Guerra fica MÍTICA (um ano de vida): a diferença Lendária → Mítica",
-  "Dia 407: +770 407: o VORTHEN morto (Épico 77; nível × 10)",
-  "Dia 407: +10000 407 (noite): o BERÇO DE SELO, MÍTICO (OB407; total 128)",
-  "Dia 407: SOBE ao 145",
-  "Dia 408: +50000 408 (noite): encanto TOQUE DO CEIFADOR no Foco de Osso (Primordial), INTEIRO (ENC8; 177 contra 140)",
-  "Dia 408: SOBE ao 146",
-  "Dia 408: SOBE ao 147",
-  "Dia 408: SOBE ao 148",
-  "Dia 409: +50000 409 (noite): encanto TOQUE DO CEIFADOR no GORJAL DA ISOLDA (Primordial), INTEIRO (ENC9; 206 contra 140)",
-  "Dia 409: SOBE ao 149",
-  "Dia 409: SOBE ao 150",
-  "Dia 409: SOBE ao 151",
-  "Dia 409: SOBE ao 152",
-  "Dia 412: +7250 412: a coluna da emboscada destroçada na estrada do rio (25 descalços e o Shyssis mortos)",
-  "Dia 415: +16300 415 (noite): a espera do Ardenghi destroçada em Levis-baixa; o ARDENGHI, o capitão ruivo e o sacerdote do Xaathis mortos",
-  "Dia 415: SOBE ao 153",
-  "Dia 422: +2500 422 (noite): as LÂMINAS DAS CAIXAS DE FÍSICO (o jogo-mestre LENDÁRIO; OB422)",
-  "Dia 423: +6650 423: ERYSSA tomada (a ala do cais do Xaathis quebrada; o sacerdote de Sangue morto)",
-  "Dia 423: SOBE ao 154",
-  "Dia 423: +2500 423 (noite): o ARADO FUNDO (alcançou Mítica; sem núcleo: Lendária; OB423)",
-  "Dia 424: +620 424 (noite): o NEANE (Raro 62, Sombra) derrubado no rio",
-  "Dia 425: +1220 425: a luta contra o MOREK na forquilha (o bicho vivo, 814/2440; lutou: nível × 10)",
-  "Dia 425: +7500 425 (noite): o ARADO FUNDO vira MÍTICO (o rei pagou um ano de vida)",
-  "Dia 426: +-1220 ANULADO (426): o XP da luta LM25 do Morek (refeita)",
   "Dia 426: +1220 425 (a luta REFEITA no 426): o MOREK fugiu ferido (467/2440); lutou: nível × 10",
   "Dia 427: +6100 427: o MOREK morto na forquilha (Único 122; chefe: × 5)",
   "Dia 427: SOBE ao 155",
@@ -800,7 +802,45 @@
   "Dia 483: +1110 483: três bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
   "Dia 483: SOBE ao 11",
   "Dia 484: +1480 484: quatro bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
-  "Dia 484: SOBE ao 12"
+  "Dia 484: SOBE ao 12",
+  "Dia 488: +920 488: o YOLORVUS (Épico 92 de Luz), na gruta do penhasco",
+  "Dia 488: SOBE ao 13",
+  "Dia 491: +50000 492: A CISTERNA QUE COME A FEBRE (Primordial)",
+  "Dia 491: SOBE ao 14",
+  "Dia 491: SOBE ao 15",
+  "Dia 491: SOBE ao 16",
+  "Dia 491: SOBE ao 17",
+  "Dia 491: SOBE ao 18",
+  "Dia 491: SOBE ao 19",
+  "Dia 491: SOBE ao 20",
+  "Dia 491: SOBE ao 21",
+  "Dia 491: SOBE ao 22",
+  "Dia 491: SOBE ao 23",
+  "Dia 491: SOBE ao 24",
+  "Dia 491: SOBE ao 25",
+  "Dia 491: SOBE ao 26",
+  "Dia 491: SOBE ao 27",
+  "Dia 491: SOBE ao 28",
+  "Dia 491: SOBE ao 29",
+  "Dia 491: SOBE ao 30",
+  "Dia 491: SOBE ao 31",
+  "Dia 491: SOBE ao 32",
+  "Dia 491: SOBE ao 33",
+  "Dia 491: SOBE ao 34",
+  "Dia 492: +50000 492: o encanto PURIFICAR na CISTERNA QUE COME A FEBRE (Primordial; inteiro; a Prova lendária do Encantamento)",
+  "Dia 492: SOBE ao 35",
+  "Dia 492: SOBE ao 36",
+  "Dia 492: SOBE ao 37",
+  "Dia 492: SOBE ao 38",
+  "Dia 492: SOBE ao 39",
+  "Dia 492: SOBE ao 40",
+  "Dia 492: SOBE ao 41",
+  "Dia 492: SOBE ao 42",
+  "Dia 492: SOBE ao 43",
+  "Dia 492: SOBE ao 44",
+  "Dia 492: SOBE ao 45",
+  "Dia 492: SOBE ao 46",
+  "Dia 492: SOBE ao 47"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

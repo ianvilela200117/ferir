@@ -1,0 +1,21 @@
+LEI DAS AÇÕES: o Yolorvus (nível 92) contra 5 · PV 1380/1380 · RD 10 · 4 ações · reação 2 · grupo: Ferir 1, Moreth 4, Eiagrir 3, Eliane 2, Starkald 2
+INICIATIVA: o Yolorvus 2d20+9 = 63 × o grupo 2d20+11 (média) = 34 → o Yolorvus AGE PRIMEIRO
+--- RODADA 1 · o Yolorvus 1380/1380
+    ataque em Ferir: [[18], [3]]+33=54 vs 59 erra
+    ataque em Eliane: [[20, 19], [13]]+33=85 vs 47 ACERTA CRÍTICO [5, 3, 4]×5+0+18=78 − RD 4 = 74 (186)
+    ataque em Eiagrir: [[2], [1]]+33=36 vs 56 erra
+    ataque em Eiagrir: [[19], [3]]+33=55 vs 56 erra
+--- RODADA 2 · o Yolorvus 1380/1380
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 410; [[4], [4]]+34=42 vs 57 o alvo resiste: metade → 400 (980)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 590; [[3], [10]]+44=57 vs 57 pega em cheio → 580 (400)
+  Moreth: [[19], [18]]+44=81 ACERTA [2]×3+15+46=67 − RD 10 = 57 (343)
+  Moreth: [[4], [6]]+44=54 vs 57 erra
+  Moreth: [[2], [2]]+44=48 vs 57 erra
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 285; [[11], [11]]+36=58 vs 57 pega em cheio → 275 (68)
+  Eiagrir: [[1], [12]]+36=49 vs 57 erra
+  Eiagrir: [[11], [13]]+36=60 ACERTA [3]×3+12+26=47 − RD 10 = 37 (31)
+  Eliane lança PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena): 13; [[11], [1]]+24=36 vs 57 o alvo resiste: metade → 3 (28)
+  Eliane: [[17], [14]]+24=55 ACERTA [3]×2.5+9+20=36 − RD 10 = 26 (2)
+  Starkald lança TIRO DUPLO (Arte de arco, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena): 12; [[8], [14]]+24=46 vs 57 o alvo resiste: metade → 2 (0)
+  o Yolorvus CAI
+FIM: morto · rodadas 2 · mortos [] · PV 0/1380 · grupo {'Ferir': 193, 'Moreth': 600, 'Eiagrir': 420, 'Eliane': 186, 'Starkald': 230}

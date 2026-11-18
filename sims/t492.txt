@@ -1,0 +1,57 @@
+[16:16:41] Dia 492 · Pressão 1/5 · evento local 1d20 [14] -> um vizinho reclama do barulho ou da fumaça
+  O TEMPO (3 da Lua do Vinho de 1013 d.S., Colheita)
+   Ireviel: neblina, brisa (d6 [3] fica · vento d6 [3]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   o Porto de Marasar: nublado, calmo (d6 [5] muda, d20 [7] · vento d6 [1])
+   Levis: chuva forte, calmo (d6 [4] muda, d20 [18] · vento d6 [1]) → estrada cortada em trechos, o rio sobe, fogo ao ar livre não pega
+   Farenta: chuva, calmo (d6 [4] muda, d20 [16] · vento d6 [1]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   O RIO: baixo [24/100]
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d5 [4] Loula
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 492 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [20] Steunn  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    [MISSÃO]: Ithula (o Mestre dá o nome pela ficção)
+    dificuldade: D  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Normal
+    objetivo: defender um lugar por um tempo
+    complicação escondida (Envelope): o prazo é menor do que parece
+    prazo: 3 dias
+    recompensa: 400 XP · 100 de ouro · ??? (revelada ao concluir)
+    penalidade se falhar: o rival ganha o feito e a Fama
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 492
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Orast → os Jurados de Steunn (RESSENTIMENTO) d20 [1] nada visível
+    FAÍSCA: Souane procura Kreium (preso), por causa de a Fornalha que Não Apaga
+    FAÍSCA: Seline desafia para duelo o Visconte Aldoveri, por causa de uma peça Lendária roubada
+    FAÍSCA: Lurentetta vai trair Kasgal, por causa de dinheiro da Liga
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #817 (era do Dia 469): FACÇÃO CUMPRIU O OBJETIVO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ▶ AGENDA #861 (era do Dia 477): FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio
+  ▶ AGENDA #865 (era do Dia 477): FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)
+  ▶ AGENDA #871 (era do Dia 483): GUILDA — as Mãos de Breu (Qulosus; chefe Zazess, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem)
+  ▶ AGENDA #913 (era do Dia 483): FACÇÃO CUMPRIU O OBJETIVO — os da Muralha Velha (Ireviel): os velhos da muralha, amigos do Tamel; querem voz na guarda
+  ▶ AGENDA #911 (era do Dia 484): FACÇÃO — os da Mão Queimada (Telosus) pede audiência ao conselho. O que querem: as harpias Kraek e os que sobraram do povo que a Elaeva matou, na fé da MAMILTIA
+  ▶ AGENDA #919 (era do Dia 485): (OCULTO até chegar) A NOTÍCIA DE IREVIEL sobe o rio ao rei: o boato 'o rei perdeu a força em Dragal' e as portas pintadas 'o rei caiu' pelos da Cinza (GO83 [4]); Ordem −1 até o rei voltar
+  ▶ AGENDA #431 (era do Dia 487): PRAZO DA LURENTETTA: a ARMA Lendária ou melhor da forja do rei (o preço da aliança contra a Elaeva, 427)
+  ▶ AGENDA #918 (era do Dia 487): [OCULTO] (OCULTO) CHEGA A CARTA DA ALMISION ao rei: pede os AROS DA ELIANE em troca de um favor grande (CB83a [2])
+  ▶ AGENDA #946 (era do Dia 491): FACÇÃO — os Jurados de Steunn (Steunn, em volta do Lumdun) pede audiência ao conselho. O que querem: os clãs de cima juram pelo herdeiro perdido dos Steunn
+  ▶ AGENDA #873: PRAZO DA RESSURREIÇÃO DO TERASETH (morto no 462; um mês): o CEDUION vem a Ireviel pela Porta do Nada quando o corpo estiver lá (CE77 [3]); falta à casa o NÚCLEO DE LUZ Raro+; o Colégio quer uma peça Lendária do rei; o que ele amou: o Croque do Rio (no fundo com ele)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Maneus, o Afogado do Vento (Lendário, Telosus): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Mãe Branca (Primordial, Steunn): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop) · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Arpões do Sal Vermelho (Shizess): caçou Fenron e perdeu · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, o sul da areia): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ■ PARADA: agenda #873: PRAZO DA RESSURREIÇÃO DO TERASETH (morto no 462; um mês): o CEDUION vem a Ireviel pela Porta do Nada quando o 

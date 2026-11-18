@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 483,
+  "dia": 490,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -31,13 +31,13 @@
   ],
   "relacoes": {
    "a Doge Skotha (Marasar)": -1,
-   "o Clã Hegre": -1,
+   "o Clã Hegre": 0,
    "Steunn": 0,
-   "os Do Junco (o Delta)": -2,
-   "a Escola Única (Almision)": 1,
+   "os Do Junco (o Delta)": -1,
+   "a Escola Única (Almision)": 0,
    "o Colégio": 4,
    "a Leliel (o Norte; a Liga é dela)": -3,
-   "a Escola Única": 1
+   "a Escola Única": 2
   },
   "log": [
    "290: o reino nasce no papel: Ireviel e o Porto de Marasar",
@@ -84,9 +84,10 @@
    "462: semana do reino; renda de fora do livro +2200",
    "469: semana do reino; renda de fora do livro +2400",
    "476: semana do reino; renda de fora do livro +2150",
-   "483: semana do reino; renda de fora do livro +2450"
+   "483: semana do reino; renda de fora do livro +2450",
+   "490: semana do reino; renda de fora do livro +2300"
   ],
-  "ultima_semana": 483,
+  "ultima_semana": 490,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -134,10 +135,6 @@
      [
       2,
       "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
-     ],
-     [
-      -1,
-      "420: a ENCHENTE no bairro dos refugiados; duas semanas"
      ]
     ],
     "Saúde": [
@@ -154,8 +151,8 @@
       "a Casa de Cura (pronta no 449; de vez)"
      ],
      [
-      -1,
-      "479: a FEBRE no rio (mundo.py, notícia FIEL; até o 493)"
+      1,
+      "492: A CISTERNA QUE COME A FEBRE (Primordial; o poder de cidade: de vez)"
      ]
     ],
     "Ordem": [
@@ -168,16 +165,8 @@
       "411: CASA FIRME (talento do rei, 150)"
      ],
      [
-      -1,
-      "420: a ENCHENTE no bairro dos refugiados (11 mortos); duas semanas"
-     ],
-     [
       1,
       "a RONDA: 10 lanças novas em Ireviel-baixa (423, enquanto a ronda durar)"
-     ],
-     [
-      -1,
-      "GO83: o boato 'o rei perdeu a força em Dragal' e as portas pintadas pelos da Cinza (até a volta do rei)"
      ]
     ],
     "Defesa": [
@@ -228,7 +217,8 @@
     "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
     "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]",
     "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]",
-    "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]"
+    "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]",
+    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]"
    ],
    "obras_feitas": [
     {
@@ -281,10 +271,10 @@
    "gente": 3000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 2,
+    "Comércio": 1,
     "Dinheiro": 3,
     "Saúde": 4,
-    "Ordem": 3,
+    "Ordem": 2,
     "Defesa": 4
    },
    "mods": {
@@ -300,10 +290,6 @@
      [
       1,
       "a sobra de grão da várzea nova de Ireviel (451; de vez)"
-     ],
-     [
-      1,
-      "clima: colheita em tempo seco, 4 dias limpos (até o 489)"
      ]
     ],
     "Comércio": [
@@ -386,7 +372,8 @@
     "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]",
     "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]",
     "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]",
-    "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]"
+    "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]",
+    "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]"
    ]
   },
   {
@@ -398,8 +385,8 @@
     "Comércio": 4,
     "Dinheiro": 1,
     "Saúde": 3,
-    "Ordem": 3,
-    "Defesa": 4
+    "Ordem": 2,
+    "Defesa": 3
    },
    "mods": {
     "Ordem": [
@@ -424,10 +411,6 @@
      [
       -1,
       "o colapso da Liga"
-     ],
-     [
-      1,
-      "clima: colheita em tempo seco, 5 dias limpos (até o 489)"
      ]
     ],
     "Comércio": [
@@ -493,7 +476,8 @@
     "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]",
     "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]",
     "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]",
-    "483: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 3 · Defesa 4 · evento [19]"
+    "483: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 3 · Defesa 4 · evento [19]",
+    "490: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [14]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -522,12 +506,12 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 4,
     "Comércio": 4,
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 3,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Ordem": [
@@ -581,7 +565,8 @@
     "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]",
     "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]",
     "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
-    "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]"
+    "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]",
+    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

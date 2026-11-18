@@ -1,94 +1,24 @@
 {
- "agua": 14,
+ "agua": 24,
  "hoje": {
   "Ireviel": {
-   "ceu": "limpo",
-   "vento": "vento forte"
-  },
-  "o Porto de Marasar": {
    "ceu": "neblina",
    "vento": "brisa"
   },
-  "Levis": {
+  "o Porto de Marasar": {
    "ceu": "nublado",
-   "vento": "brisa"
+   "vento": "calmo"
+  },
+  "Levis": {
+   "ceu": "chuva forte",
+   "vento": "calmo"
   },
   "Farenta": {
-   "ceu": "nublado",
-   "vento": "brisa"
+   "ceu": "chuva",
+   "vento": "calmo"
   }
  },
  "historia": [
-  {
-   "dia": 446,
-   "tempo": {
-    "Ireviel": "chuva de verão",
-    "o Porto de Marasar": "limpo",
-    "Levis": "calor forte",
-    "Farenta": "tempestade"
-   },
-   "agua": 20
-  },
-  {
-   "dia": 447,
-   "tempo": {
-    "Ireviel": "chuva de verão",
-    "o Porto de Marasar": "nublado",
-    "Levis": "chuva de verão",
-    "Farenta": "tempestade"
-   },
-   "agua": 29
-  },
-  {
-   "dia": 448,
-   "tempo": {
-    "Ireviel": "calor forte",
-    "o Porto de Marasar": "limpo",
-    "Levis": "chuva de verão",
-    "Farenta": "limpo"
-   },
-   "agua": 28
-  },
-  {
-   "dia": 449,
-   "tempo": {
-    "Ireviel": "calor forte",
-    "o Porto de Marasar": "neblina",
-    "Levis": "chuva de verão",
-    "Farenta": "nublado"
-   },
-   "agua": 27
-  },
-  {
-   "dia": 450,
-   "tempo": {
-    "Ireviel": "calor forte",
-    "o Porto de Marasar": "limpo",
-    "Levis": "chuva de verão",
-    "Farenta": "nublado"
-   },
-   "agua": 26
-  },
-  {
-   "dia": 451,
-   "tempo": {
-    "Ireviel": "calor forte",
-    "o Porto de Marasar": "limpo",
-    "Levis": "chuva de verão",
-    "Farenta": "nublado"
-   },
-   "agua": 25
-  },
-  {
-   "dia": 452,
-   "tempo": {
-    "Ireviel": "limpo",
-    "o Porto de Marasar": "calor forte",
-    "Levis": "chuva de verão",
-    "Farenta": "nublado"
-   },
-   "agua": 24
-  },
   {
    "dia": 453,
    "tempo": {
@@ -418,6 +348,76 @@
     "Farenta": "nublado"
    },
    "agua": 14
+  },
+  {
+   "dia": 486,
+   "tempo": {
+    "Ireviel": "nublado",
+    "o Porto de Marasar": "neblina",
+    "Levis": "nublado",
+    "Farenta": "nublado"
+   },
+   "agua": 13
+  },
+  {
+   "dia": 487,
+   "tempo": {
+    "Ireviel": "nublado",
+    "o Porto de Marasar": "nublado",
+    "Levis": "neblina",
+    "Farenta": "chuva forte"
+   },
+   "agua": 18
+  },
+  {
+   "dia": 488,
+   "tempo": {
+    "Ireviel": "neblina",
+    "o Porto de Marasar": "nublado",
+    "Levis": "neblina",
+    "Farenta": "chuva"
+   },
+   "agua": 19
+  },
+  {
+   "dia": 489,
+   "tempo": {
+    "Ireviel": "neblina",
+    "o Porto de Marasar": "limpo",
+    "Levis": "nublado",
+    "Farenta": "nublado"
+   },
+   "agua": 17
+  },
+  {
+   "dia": 490,
+   "tempo": {
+    "Ireviel": "neblina",
+    "o Porto de Marasar": "chuva",
+    "Levis": "limpo",
+    "Farenta": "neblina"
+   },
+   "agua": 18
+  },
+  {
+   "dia": 491,
+   "tempo": {
+    "Ireviel": "neblina",
+    "o Porto de Marasar": "nublado",
+    "Levis": "limpo",
+    "Farenta": "neblina"
+   },
+   "agua": 16
+  },
+  {
+   "dia": 492,
+   "tempo": {
+    "Ireviel": "neblina",
+    "o Porto de Marasar": "nublado",
+    "Levis": "chuva forte",
+    "Farenta": "chuva"
+   },
+   "agua": 24
   }
  ]
 }

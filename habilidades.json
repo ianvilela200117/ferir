@@ -360,6 +360,14 @@
    "usos": 0,
    "desde": 478,
    "origem": "a classe Herdeiro do Rei-Ferreiro"
+  },
+  "Obra-Prima": {
+   "tipo": "Passiva",
+   "efeito": "ponto do 9 do Herdeiro (486), grau 1: 1x por mês, um 20 natural na forja dá +1 efeito da lista declarada antes",
+   "grau": 1,
+   "usos": 0,
+   "desde": 486,
+   "origem": "a árvore da Forja (Assinatura)"
   }
  },
  "titulos": [
@@ -414,6 +422,10 @@
   {
    "nome": "DESPERTAR (100): Mão que Doma",
    "efeito": "+1 no teto de servos (7) e de crias (2); os laços com eles duram o dobro · preço: sente a morte de cada um (Atordoado 1 rodada quando um cai)"
+  },
+  {
+   "nome": "MÃO QUE GOVERNA",
+   "efeito": "talento do 10 do Herdeiro (486): um pilar de uma cidade sobe 1 a mais quando uma obra do reino termina ali"
   }
  ],
  "pericias": {

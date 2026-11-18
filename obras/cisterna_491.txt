@@ -1,0 +1,38 @@
+OBRA "A Cisterna que Come a Febre" (objeto)
+    +12  MÃO · Maestria Forja Lendário
+     +8  MÃO · Inteligência 81 ÷ 10 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +6  MÃO · Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)
+     +1  MÃO · Olho do Material
+     +1  MÃO · Fole Firme 2
+     +1  MÃO · Alma no Aço 2
+     +3  MÃO · Mão que Não Treme 3
+     +1  MÃO · Veio Certo 1 (ponto do 3 do Herdeiro, 486)
+     +1  MÃO · Golpe de Mestre 1 (ponto do 6 do Herdeiro, 486)
+    +18  MATERIAL mitico
+     +7  FERRAMENTA O MARTELO DO REI (Ferramenta de Rei, de Dragal) (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): o Martelo do Rei soma o dobro
+     +7  FERRAMENTA A MATRIZ (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): a Matriz soma o dobro
+     +5  FERRAMENTA TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150) (mitico, metade)
+     +5  FERRAMENTA · FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)
+     +3  FERRAMENTA · fole: o arvel como ferramenta (+3 em toda obra de forja)
+     +2  FERRAMENTA · fole: segura o calor certo (+2 no Processo)
+     +6  OFICINA Fornalha que Não Apaga
+     +2  AJUDANTES (máx. +6)
+     +1  EXTRAS
+    ---- SOMA DOS VALORES: 123
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [13] + [13] → TOTAL 149
+  dados de saída: [13] + [13] = 149
+  RESULTADO: A Cisterna que Come a Febre — PRIMORDIAL · XP 50000
+  → lançar: python3 ficha.py xp 50000 "A Cisterna que Come a Febre (Primordial)"   (ajudantes: 1/4 cada, no cresce.py)
+    efeito novo 1: não enferruja nem apodrece
+    efeito novo 2: esconde o que guarda da magia de procura
+    efeito novo 3: a chave pode ser escondida em qualquer anel ou fita
+    efeito novo 4: esconde-se: quem não sabe que está ali não a acha (Percepção CD 30)
+    efeito novo 5: quem força ganha um choque (2d6, Vontade CD 20 para não soltar)
+    efeito novo 6: tranca sozinha quando fechada
+    efeito novo 7: toca um sino baixo quando tocada por mão estranha
+    efeito de magia (d182 do grimório): Falar com Bicho (Raiz 2º): fala com um animal por 1 cena (ele responde como bicho) — 1x por cena, sem saber magia (se não couber na peça, rerrolar)
