@@ -597,6 +597,13 @@ A forja e o encantamento usam a **Lei do Valor** (`obra_valor.py`): a soma dos v
   - **Mão de Ouro** (Passiva): +4 em toda obra de engenho.
   - *Fraqueza:* engenho dele é cobiçado; ninguém mais faz igual.
   - *Prova:* um engenho que vença um Lendário.
+- **Herdeiro do Rei-Ferreiro** (só pela PEÇA OCULTA: o Martelo do Rei, de Dragal, no Marco 4; posta no Livro no Dia 472, quando o rei tomou o Martelo)
+  - **Mão de Rei** (Passiva): na forja e no encantamento, a Mão conta o MAIOR nível que ele já teve; as peças que ele mesmo forjou rendem inteiras na mão dele, sem requisito de nível.
+  - **Martelo e Bigorna** (Passiva): com o Martelo do Rei e a Matriz juntos na obra, cada um soma +14 (o dobro de uma ferramenta de rei). Com as três ferramentas de rei (a Tenaz-Coroa também), o **Teto Aberto**: a obra pode passar de Primordial.
+  - **Remendar a Coberta** (1 dia, 10 de Foco): sobre um selo aberto ou um veio onde a coberta afinou, com o Martelo e a Matriz, fecha o selo: a magia do lugar volta, e o que saiu por ele enfraquece. Sente o vaduar e os selos a um dia de viagem. Depois, Exausto até a aurora seguinte.
+  - *Fraqueza:* **a dívida da Liga.** A Liga nasceu da traição deste rei. Enquanto ele tiver a classe, nenhum acordo com um conselho da Liga fecha, e no tick semanal, d6: no 1, um agente vem pelo Martelo. Cada selo que ele fecha acorda um pouco quem dorme: o culto daquele selo avança 1 no relógio.
+  - *Custo (VII.6):* o nível volta a 1, com 25% dos atributos ganhos por nível; ficam maestrias, títulos e talentos. Os pontos da árvore ficam, mas um grau acima do que o nível permite dorme até o nível chegar (na forja e no encantamento, a Mão de Rei os acorda).
+  - *Pela lei V.3:* com uma classe Lendária da FORJA, ele pode ter uma segunda perícia Lendária da mesma família, o ENCANTAMENTO, pelo caminho do V.3 (30 dias, CD 35, uma Prova e um mestre ou uma fonte). A Magia não é da família.
 
 ---
 

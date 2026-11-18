@@ -123,7 +123,7 @@
    "usos": 7,
    "desde": 437,
    "cargas": {
-    "atual": 0,
+    "atual": 2,
     "max": 2
    },
    "origem": "aula do 266"
@@ -144,10 +144,10 @@
    "tipo": "Magia",
    "efeito": "Osso 6º, pelo FOCO DE OSSO (rende Mítico ×10): 24d6 num alvo; quem o Toque derruba levanta como servo até a aurora (G23) · 2x por cena pelo Foco, sem Mana e sem sangue (a peça já pagou)",
    "grau": 1,
-   "usos": 0,
+   "usos": 1,
    "desde": 437,
    "cargas": {
-    "atual": 2,
+    "atual": 1,
     "max": 2
    },
    "origem": "aula do 378; o Foco de Osso"

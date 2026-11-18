@@ -1624,3 +1624,62 @@ Não estava molhada. Usava um pano de templo que tinha sido branco, preso por um
 O homem de ferro esperava ajoelhado na água. O velho de Ninnane tinha virado o rosto para o outro lado.
 
 - **Parada:** entardecer do 472, o portão afundado de Dragal. A sacerdotisa espera o preço.
+
+## Entardecer e noite do 472 — Dragal: o preço, o salão do rei afogado, o Martelo
+
+### O portão afundado, entardecer do 472
+"Dos meus pais", disse o rei.
+
+A Eliane deu um passo antes de pensar. "Senhor. Isso não volta."
+
+"Eu sei."
+
+O Moreth tinha tirado o elmo. "Tira a minha", disse à sacerdotisa. "Eu tenho muitas. Ele tem poucas."
+
+Ela não olhou para ele. "Ele já disse a dele."
+
+Andou sobre a água até a barca sem molhar a barra do pano e pôs as duas mãos nas têmporas do rei. Eram frias e cheiravam a pedra de rio e a cera velha.
+
+*Era inverno em Ireviel, e a rua da Cinza fedia a lama gelada e a carvão. O menino ia nos ombros do pai, com as mãos agarradas no cabelo dele, e o pai ria e reclamava. Os dedos que seguravam os tornozelos do menino eram sujos de tinta. A mãe ia na frente com a lanterna, cantando baixo uma canção de barqueiro, e a luz balançava nas poças. No fim da rua havia uma porta aberta e, lá dentro, um fogo que não era de lareira: branco no meio, laranja nas beiras, e um homem batendo um ferro que cuspia estrelas. O pai parou. "Olha, menino", disse. "Ali o ferro vira outra coisa." A mãe se virou, rindo: "Não enche a cabeça dele." O pai o levantou mais alto, para ele ver as faíscas. Depois daquela noite, o menino nunca mais quis ser outra coisa.*
+
+Quando a sacerdotisa tirou as mãos, o rei piscou.
+
+Sabia que tinha tido pai e mãe. Sabia que o pai escrevia e que a mãe cantava. Sabia que alguma coisa tinha saído dele, como um dente arrancado que a língua procura. Não sabia o quê.
+
+O Gonde, ao lado, viu uma lágrima descer pelo rosto do rei, e viu que o rei não sabia que estava chorando.
+
+"Está pago", disse a sacerdotisa. "Vem."
+
+### A barca, a primeira hora da noite
+O velho de Ninnane não desceu. "Eu fico com as barcas."
+
+Quando os outros já pisavam na ponte de pedra, ele segurou a manga do rei e falou baixo, porque era depois do escuro.
+
+"Faz vinte anos, trouxe um homem aqui. Pagou com a lembrança do filho. Na volta, no meio do brejo, levantou na barca e disse que tinha esquecido uma coisa e ia buscar. Pulou." Soltou a manga. "Não achei. Na volta, eu sento do teu lado."
+
+### Dragal, noite do 472
+A cidade estava debaixo da água, mas não inteira. As pontes de pedra passavam um palmo acima dela, e embaixo das pontes os telhados desciam para o escuro. Peixes entravam e saíam pelas portas. Em cada verga havia uma bigorna talhada, gasta pelos mil anos até virar uma sombra.
+
+A sacerdotisa ia na frente e não fazia barulho na pedra. Atrás de todos vinha o Erygal, com a água pelo peito, empurrando-a como um boi empurra o rio.
+
+O salão do rei tinha um furo no teto da cúpula, e as estrelas estavam na água lá dentro, paradas. A água chegava ao joelho. Ao fundo havia uma forja seca e, ao lado dela, numa cadeira de pedra, o rei afogado: ossos num manto que tinha sido azul, um aro de ferro na testa e, atravessado nos joelhos, o Martelo. O cabo era de madeira negra e não tinha apodrecido. A cabeça era de um metal cinza que bebia a luz da lanterna em vez de devolvê-la.
+
+A Eliane disse alguma coisa perto da forja. A boca mexeu e a voz não saiu. Ela recuou um passo e, um passo depois, a voz voltou no meio da palavra. No coração da forja, onde devia haver brasa, havia uma pedra escura do tamanho de um punho, e em volta dela não havia som nenhum.
+
+"Ele foi traído pelos que contavam o vaduar em moedas", disse a sacerdotisa. "Ficaram com o ouro e fundaram uma casa com ele. Os netos deles ainda contam." Olhou para o rei. "Ele me mandou guardar a porta até vir uma mão que batesse frio. Eu guardei."
+
+O rei estendeu a mão. Os dedos de osso do rei afogado se abriram sem que ninguém os tocasse, como os de quem entrega.
+
+O Martelo pesava menos do que devia e estava frio como o fundo de um poço. E o rei soube o que ele queria, do jeito que sempre soube o que um metal quer ser: ele queria a Matriz. No primeiro golpe deste martelo naquela bigorna, alguma coisa ia lhe perguntar se ele aceitava ser o herdeiro, e a mão dele recomeçaria do começo.
+
+A sacerdotisa sentou-se na água, aos pés do rei morto, e cruzou as mãos no peito.
+
+"Quando saíres com ele, eu durmo", disse. "Mil anos é muito. A não ser que o herdeiro me mande ficar."
+
+O Moreth se ajoelhou ao lado dela. "Ela merece um rito. E sabe mil anos de coisas."
+
+"Uma morta na corte custa a cidade", disse a Eliane. "Deixa ela dormir."
+
+Na porta do salão, o Erygal esperava de joelhos, com a água pelo peito e as estrelas em volta.
+
+- **Parada:** noite do 472, o salão do rei afogado. O Martelo do Rei na mão do rei; a classe espera o primeiro golpe na Matriz. A sacerdotisa espera a ordem.

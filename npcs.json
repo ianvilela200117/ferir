@@ -7509,5 +7509,20 @@
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 469)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499"
+ },
+ "A Sacerdotisa de Dragal": {
+  "nivel": 90,
+  "xp": 0,
+  "log": [
+   "Dia 472: entra no livro (nível 90; Atlas 3.6): a ÚLTIMA SACERDOTISA do último Rei-Ferreiro, morta-viva; guardou a porta de Dragal mil anos; cobrou do rei a lembrança mais querida dos pais (PL72 [5]); levou o grupo ao salão do rei afogado (DN72 [5]). Quer DORMIR quando o Martelo sair, a não ser que o herdeiro a mande ficar. Sabe: o rei foi traído pelos mercadores que contavam o vaduar em moedas (os fundadores da Liga)."
+  ]
+ },
+ "O Velho de Ninnane": {
+  "nivel": 12,
+  "xp": 0,
+  "log": [
+   "Dia 471: o barqueiro de olho branco que leva o rei a Dragal por 500 (NB70 [3]); a condição: ninguém fala alto no brejo depois do escuro",
+   "Dia 472: contou (VB72 [5]): há vinte anos levou um homem que pagou com a lembrança do filho e, na volta, se jogou no brejo dizendo que ia buscar o que tinha esquecido. 'Na volta, eu sento do teu lado.'"
+  ]
  }
 }

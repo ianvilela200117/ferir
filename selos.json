@@ -1,10 +1,5 @@
 {
  "ordem": [
-  "FD27",
-  "427-laco-quem",
-  "427-laco",
-  "427-chamado",
-  "427-vinculos",
   "DR27ESCAMA",
   "DR27OLHO",
   "DR27PRESA",
@@ -399,282 +394,14 @@
   "EG71",
   "SE71",
   "XC71",
-  "CZ72"
+  "CZ72",
+  "PL72",
+  "VB72",
+  "DN72",
+  "NC72",
+  "EN72"
  ],
  "selos": {
-  "FD27": {
-   "id": "FD27",
-   "dia": 426,
-   "hora": "14:50:54",
-   "titulo": "AMANHECER DO 427, A FORQUILHA: a Eliane segue o rastro escuro do sangue do Morek (955/2440; o rio cheio)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NÃO O ACHAM: o fundo da forquilha é fundo demais; voltam (Levis atrasa mais um dia)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 14,
-     "res": "ACHAM: luta na água rasa da forquilha (o terreno é dele: +2 na Defesa dele)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "PEGAM-NO DORMINDO na margem, sarando: SURPRESA (ele não age na 1ª rodada)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      14
-     ],
-     "total": 14,
-     "res": "ACHAM: luta na água rasa da forquilha (o terreno é dele: +2 na Defesa dele)",
-     "txt": "[14] → ACHAM: luta na água rasa da forquilha (o terreno é dele: +2 na Defesa dele)"
-    }
-   ],
-   "hora_rolado": "14:50:54"
-  },
-  "427-laco-quem": {
-   "id": "427-laco-quem",
-   "dia": 427,
-   "hora": "14:51:27",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a BRARA",
-     "txt": "[5] → a BRARA"
-    }
-   ],
-   "hora_rolado": "14:51:27"
-  },
-  "427-laco": {
-   "id": "427-laco",
-   "dia": 427,
-   "hora": "14:51:27",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "MOMENTO",
-     "txt": "[5] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "14:51:27"
-  },
-  "427-chamado": {
-   "id": "427-chamado",
-   "dia": 427,
-   "hora": "14:51:27",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 6,
-     "res": "ninguém digno",
-     "txt": "[3] +3 = 6 → ninguém digno"
-    }
-   ],
-   "hora_rolado": "14:51:27"
-  },
-  "427-vinculos": {
-   "id": "427-vinculos",
-   "dia": 427,
-   "hora": "14:51:27",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "Tilde–Iorin",
-     "txt": "#1 [2] → Tilde–Iorin"
-    },
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Moreth–Eiagrir",
-     "txt": "#2 [3] → Moreth–Eiagrir"
-    }
-   ],
-   "hora_rolado": "14:51:27"
-  },
   "DR27ESCAMA": {
    "id": "DR27ESCAMA",
    "dia": 427,
@@ -19878,6 +19605,248 @@
     }
    ],
    "hora_rolado": "12:06:37"
+  },
+  "PL72": {
+   "id": "PL72",
+   "dia": 472,
+   "hora": "12:39:55",
+   "titulo": "O QUE A SACERDOTISA TIRA (1a: a lembrança DOS PAIS do rei; ela a tira e ela não volta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "TUDO: o rei sabe que teve pai e mãe e mais nada: nem rosto, nem voz, nem nome; a letra do pai (a senha de Iroule) vira letra de estranho"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "A MAIS QUERIDA, e ao segurá-la a sacerdotisa diz ao rei uma coisa que viu nela e que ele nunca soube do pai (um fio)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado",
+     "txt": "[5] → A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado"
+    }
+   ],
+   "hora_rolado": "12:39:55"
+  },
+  "VB72": {
+   "id": "VB72",
+   "dia": 472,
+   "hora": "12:39:55",
+   "titulo": "(OCULTO) O QUE O VELHO DE NINNANE SABE (virou o rosto quando a sacerdotisa falou)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "ele PAGOU aqui, moço: trouxe a mulher para pedir ao rei afogado e deu uma lembrança; não sabe qual; voltou com o olho branco e chora sem saber por quê"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ele é SANGUE DOS MERCADORES que traíram o rei (os fundadores da Liga): a sacerdotisa o reconhece, e ele não entra"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta",
+     "txt": "[5] → ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta"
+    }
+   ],
+   "hora_rolado": "12:39:55"
+  },
+  "DN72": {
+   "id": "DN72",
+   "dia": 472,
+   "hora": "12:39:55",
+   "titulo": "A NOITE EM DRAGAL (pago o preço, a sacerdotisa leva o grupo pela cidade afundada; o Erygal servo do Toque até a aurora)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "A CORTE AFOGADA levanta (a guarda do rei traído, morta-viva, que não sabe que a sacerdotisa deixou passar): a luta no salão (G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "A ÁGUA SOBE com a noite: o salão do rei só se abre na maré baixa da aurora; esperam numa torre seca (o Erygal cai na aurora, antes de entrarem)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos",
+     "txt": "[5] → a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos"
+    }
+   ],
+   "hora_rolado": "12:39:55"
+  },
+  "NC72": {
+   "id": "NC72",
+   "dia": 472,
+   "hora": "12:39:55",
+   "titulo": "(OCULTO) O NÚCLEO DE DRAGAL (o que o último Rei-Ferreiro guardava com o Martelo; Atlas: 'guarda o Martelo do Rei e um núcleo'), a categoria",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "núcleo LENDÁRIO"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "núcleo MÍTICO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "núcleo LENDÁRIO",
+     "txt": "[2] → núcleo LENDÁRIO"
+    }
+   ],
+   "hora_rolado": "12:39:55"
+  },
+  "EN72": {
+   "id": "EN72",
+   "dia": 472,
+   "hora": "12:39:55",
+   "titulo": "(OCULTO) O NÚCLEO DE DRAGAL, a Essência (o rei que fez o Silêncio)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "METAL"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "FOGO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "TERRA"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "ÁGUA (a cidade afundada)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "SILÊNCIO (a coberta)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "TEMPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "SILÊNCIO (a coberta)",
+     "txt": "[5] → SILÊNCIO (a coberta)"
+    }
+   ],
+   "hora_rolado": "12:39:55"
   }
  }
 }
