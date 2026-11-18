@@ -1,18 +1,5 @@
 {
  "ordem": [
-  "YE26q",
-  "BL26",
-  "BL26w",
-  "EC26a",
-  "EC26b",
-  "EC26c",
-  "EC26d",
-  "MF26",
-  "DZ26Ferir",
-  "DZ26Moreth",
-  "DZ26Eiagrir",
-  "DZ26Isolda",
-  "DZ26Starkald",
   "DZ26Goir",
   "FC26",
   "BJ26",
@@ -399,576 +386,22 @@
   "CK65",
   "DQ66",
   "FD66",
-  "MH67"
+  "MH67",
+  "LP69",
+  "BK69",
+  "469-laco-quem",
+  "469-laco",
+  "469-chamado",
+  "469-vinculos",
+  "CG69",
+  "DM69",
+  "AF69",
+  "AB69",
+  "CH69",
+  "AF69o",
+  "NV69"
  ],
  "selos": {
-  "YE26q": {
-   "id": "YE26q",
-   "dia": 426,
-   "hora": "14:22:22",
-   "titulo": "QUANTO TEMPO A RESPOSTA DO GORINE (escondido) leva",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "o dado mais dois, em dias"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado mais dois, em dias",
-     "txt": "[1] → o dado mais dois, em dias"
-    }
-   ],
-   "hora_rolado": "14:22:22"
-  },
-  "BL26": {
-   "id": "BL26",
-   "dia": 426,
-   "hora": "14:22:59",
-   "titulo": "O BICHO DE LUZ QUE O YEANE CONHECE (tem de dar NÚCLEO: Épico ou maior)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "ÉPICO"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ÚNICO"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LENDÁRIO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "LENDÁRIO",
-     "txt": "[6] → LENDÁRIO"
-    }
-   ],
-   "hora_rolado": "14:23:00"
-  },
-  "BL26w": {
-   "id": "BL26w",
-   "dia": 426,
-   "hora": "14:23:19",
-   "titulo": "ONDE FICA O LAGO GELADO DO NESIUM (o que o Yeane sabe)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os PICOS BRANCOS (um lago no alto, onde a Elaeva anda)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "as FUNDAS DO NORTE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "STEUNN (o lago perto de Itheth, o cemitério dos reis)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "STEUNN (o lago perto de Itheth, o cemitério dos reis)",
-     "txt": "[5] → STEUNN (o lago perto de Itheth, o cemitério dos reis)"
-    }
-   ],
-   "hora_rolado": "14:23:19"
-  },
-  "EC26a": {
-   "id": "EC26a",
-   "dia": 426,
-   "hora": "14:35:01",
-   "titulo": "ERGUER O CAÍDO NO STARKALD (dentro da hora, na margem da forquilha)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "FALHA: o feitiço se desfaz e volta: retrochoque 6d10 no rei"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "O STARKALD VOLTA com 1 PV e −1 para sempre num atributo (rola qual)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "O STARKALD VOLTA com 1 PV e −1 para sempre num atributo (rola qual)",
-     "txt": "[19] → O STARKALD VOLTA com 1 PV e −1 para sempre num atributo (rola qual)"
-    }
-   ],
-   "hora_rolado": "14:35:01"
-  },
-  "EC26b": {
-   "id": "EC26b",
-   "dia": 426,
-   "hora": "14:35:01",
-   "titulo": "ERGUER O CAÍDO NO GOIR (dentro da hora)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "FALHA: o feitiço se desfaz e volta: retrochoque 6d10 no rei"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 20,
-     "res": "O GOIR VOLTA com 1 PV e −1 para sempre num atributo (rola qual)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      14
-     ],
-     "total": 14,
-     "res": "O GOIR VOLTA com 1 PV e −1 para sempre num atributo (rola qual)",
-     "txt": "[14] → O GOIR VOLTA com 1 PV e −1 para sempre num atributo (rola qual)"
-    }
-   ],
-   "hora_rolado": "14:35:01"
-  },
-  "EC26c": {
-   "id": "EC26c",
-   "dia": 426,
-   "hora": "14:35:09",
-   "titulo": "O STARKALD: o −1 PARA SEMPRE (o preço do Erguer o Caído)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "FORÇA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "AGILIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "VIGOR"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "SABEDORIA"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "PERCEPÇÃO"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "CARISMA"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "VONTADE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "FORÇA",
-     "txt": "[1] → FORÇA"
-    }
-   ],
-   "hora_rolado": "14:35:09"
-  },
-  "EC26d": {
-   "id": "EC26d",
-   "dia": 426,
-   "hora": "14:35:09",
-   "titulo": "O GOIR: o −1 PARA SEMPRE",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "FORÇA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "AGILIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "VIGOR"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "SABEDORIA"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "PERCEPÇÃO"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "CARISMA"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "VONTADE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10
-     ],
-     "total": 10,
-     "res": "VONTADE",
-     "txt": "[10] → VONTADE"
-    }
-   ],
-   "hora_rolado": "14:35:09"
-  },
-  "MF26": {
-   "id": "MF26",
-   "dia": 426,
-   "hora": "14:35:09",
-   "titulo": "PARA ONDE O MOREK FOGE (467/2440; voa; caçador: escolhe a presa e a segue por dias)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "RIO ABAIXO, para o fundo da forquilha: sara lá"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "VOA PARA LONGE, para fora do reino (rola onde depois)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SE ESCONDE PERTO e marca a presa: vai seguir o rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "RIO ABAIXO, para o fundo da forquilha: sara lá",
-     "txt": "[3] → RIO ABAIXO, para o fundo da forquilha: sara lá"
-    }
-   ],
-   "hora_rolado": "14:35:09"
-  },
-  "DZ26Ferir": {
-   "id": "DZ26Ferir",
-   "dia": 426,
-   "hora": "14:35:09",
-   "titulo": "A DOENÇA DO MOREK em Ferir (levou golpe; 2d20 + Vigor 9 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 9; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2,
-      19
-     ],
-     "total": 21,
-     "res": "soma mais 9; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[2, 19] +0 = 21 → soma mais 9; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:09"
-  },
-  "DZ26Moreth": {
-   "id": "DZ26Moreth",
-   "dia": 426,
-   "hora": "14:35:10",
-   "titulo": "A DOENÇA DO MOREK em Moreth (levou golpe; 2d20 + Vigor 15 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 15; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      7,
-      6
-     ],
-     "total": 13,
-     "res": "soma mais 15; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[7, 6] +0 = 13 → soma mais 15; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:10"
-  },
-  "DZ26Eiagrir": {
-   "id": "DZ26Eiagrir",
-   "dia": 426,
-   "hora": "14:35:10",
-   "titulo": "A DOENÇA DO MOREK em Eiagrir (levou golpe; 2d20 + Vigor 13 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 13; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      7,
-      11
-     ],
-     "total": 18,
-     "res": "soma mais 13; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[7, 11] +0 = 18 → soma mais 13; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:10"
-  },
-  "DZ26Isolda": {
-   "id": "DZ26Isolda",
-   "dia": 426,
-   "hora": "14:35:10",
-   "titulo": "A DOENÇA DO MOREK em Isolda (levou golpe; 2d20 + Vigor 14 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 14; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10,
-      1
-     ],
-     "total": 11,
-     "res": "soma mais 14; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[10, 1] +0 = 11 → soma mais 14; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:10"
-  },
-  "DZ26Starkald": {
-   "id": "DZ26Starkald",
-   "dia": 426,
-   "hora": "14:35:10",
-   "titulo": "A DOENÇA DO MOREK em Starkald (levou golpe; 2d20 + Vigor 12 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 12; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2,
-      2
-     ],
-     "total": 4,
-     "res": "soma mais 12; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[2, 2] +0 = 4 → soma mais 12; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:10"
-  },
   "DZ26Goir": {
    "id": "DZ26Goir",
    "dia": 426,
@@ -19824,6 +19257,658 @@
     }
    ],
    "hora_rolado": "04:50:31"
+  },
+  "LP69": {
+   "id": "LP69",
+   "dia": 468,
+   "hora": "11:33:44",
+   "titulo": "A LURENTETTA OUVE A PARTILHA (1a: a casa fica com o coração da fera; ela com metade do corpo, quando for cortado; LEAL e TEIMOSA; a fera comeu as aldeias dela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "RECUSA: quer o CORAÇÃO, pelo povo dela; propõe trocá-lo por todo o material"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 5,
+     "res": "ACEITA: metade do material, e o sal do Delta à casa por um ano a meio preço"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ACEITA e jura ao rei: a guarda dela (a Mie e as 20 lanças) à disposição da casa contra a Liga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ACEITA: metade do material, e o sal do Delta à casa por um ano a meio preço",
+     "txt": "[3] → ACEITA: metade do material, e o sal do Delta à casa por um ano a meio preço"
+    }
+   ],
+   "hora_rolado": "11:33:44"
+  },
+  "BK69": {
+   "id": "BK69",
+   "dia": 468,
+   "hora": "11:33:44",
+   "titulo": "ACHAR O BRAKOS NOS CANAIS (4c; o elemental de VIDA, Raro 35, camuflado; os salineiros conhecem os canais +2; a Mie +2)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 9,
+     "res": "NÃO O ACHAM (as árvores marcadas, nada mais)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 17,
+     "res": "ACHAM: a luta (G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "acham e o pegam de SURPRESA (a luta, com surpresa)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 14,
+     "res": "ACHAM: a luta (G9)",
+     "txt": "[10] +4 = 14 → ACHAM: a luta (G9)"
+    }
+   ],
+   "hora_rolado": "11:33:44"
+  },
+  "469-laco-quem": {
+   "id": "469-laco-quem",
+   "dia": 469,
+   "hora": "11:34:52",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a AELIAE",
+     "txt": "[6] → a AELIAE"
+    }
+   ],
+   "hora_rolado": "11:34:52"
+  },
+  "469-laco": {
+   "id": "469-laco",
+   "dia": 469,
+   "hora": "11:34:52",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "ATRITO",
+     "txt": "[2] → ATRITO"
+    }
+   ],
+   "hora_rolado": "11:34:52"
+  },
+  "469-chamado": {
+   "id": "469-chamado",
+   "dia": 469,
+   "hora": "11:34:52",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      16
+     ],
+     "total": 19,
+     "res": "chegam 2",
+     "txt": "[16] +3 = 19 → chegam 2"
+    }
+   ],
+   "hora_rolado": "11:34:52"
+  },
+  "469-vinculos": {
+   "id": "469-vinculos",
+   "dia": 469,
+   "hora": "11:34:52",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Thuron–Erymir",
+     "txt": "#1 [5] → Thuron–Erymir"
+    },
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "Nouliel–Herkald",
+     "txt": "#2 [1] → Nouliel–Herkald"
+    }
+   ],
+   "hora_rolado": "11:34:52"
+  },
+  "CG69": {
+   "id": "CG69",
+   "dia": 469,
+   "hora": "11:35:31",
+   "titulo": "IREVIEL: CRIME GRANDE (o EVENTO [2] do reino: alguém importante roubado ou morto; o rei está no Delta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "roubam a caixa-forte da Nouliel à noite (d6 × 500)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "matam a ZOLALLETTA, a embaixadora de Lumade, na hospedaria"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "roubam a casa do ULURVE (os 6.000 dele)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "matam o BRAETH, o ancião do Clã"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "roubam da Fornalha um molde e a encomenda nova"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ferem o YINNOR, o mestre da Luz do Colégio, numa rua escura (de cama uma semana)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "ferem o YINNOR, o mestre da Luz do Colégio, numa rua escura (de cama uma semana)",
+     "txt": "[6] → ferem o YINNOR, o mestre da Luz do Colégio, numa rua escura (de cama uma semana)"
+    }
+   ],
+   "hora_rolado": "11:35:31"
+  },
+  "DM69": {
+   "id": "DM69",
+   "dia": 469,
+   "hora": "11:35:31",
+   "titulo": "O PORTO DE MARASAR: DESASTRE (o EVENTO [1] do reino)",
+   "dado": [
+    1,
+    3,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "INCÊNDIO no cais (Comércio −1 até o 476; já está em 1/4: cai a 0 e traz problema)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "ENCHENTE no bairro do rio (Comida −1 até o 476)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "DESABAMENTO de um armazém velho (1d6 × 3 mortos; Ordem −1 até o 476)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "INCÊNDIO no cais (Comércio −1 até o 476; já está em 1/4: cai a 0 e traz problema)",
+     "txt": "[1] → INCÊNDIO no cais (Comércio −1 até o 476; já está em 1/4: cai a 0 e traz problema)"
+    }
+   ],
+   "hora_rolado": "11:35:31"
+  },
+  "AF69": {
+   "id": "AF69",
+   "dia": 469,
+   "hora": "11:35:31",
+   "titulo": "FARENTA: ACHADO (o EVENTO [17] do reino: ouro, material ou ruína debaixo da cidade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "OURO: 2d6 × 100 numa parede da casa do Dulassetta, que o Graur revista (metade à casa)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "MATERIAL debaixo do porto, junto do veio de sal-gema (gerador.py material)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma RUÍNA: a galeria velha debaixo da muralha de fora, aberta pela obra (boato de masmorra)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "OURO: 2d6 × 100 numa parede da casa do Dulassetta, que o Graur revista (metade à casa)",
+     "txt": "[2] → OURO: 2d6 × 100 numa parede da casa do Dulassetta, que o Graur revista (metade à casa)"
+    }
+   ],
+   "hora_rolado": "11:35:31"
+  },
+  "AB69": {
+   "id": "AB69",
+   "dia": 469,
+   "hora": "11:35:31",
+   "titulo": "A TRAMA ALMISION → BRAETH EXPLODE (dívida: um segredo descoberto; ela o tem na mão)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o BRAETH SOME de Ireviel numa noite, rumo ao sul (vai pagar à Almision)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o BRAETH procura a SIRA e conta o que a Almision sabe dele, para se livrar da dívida (um nome e um pedido de proteção)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o BRAETH procura a SIRA e conta o que a Almision sabe dele, para se livrar da dívida (um nome e um pedido de proteção)",
+     "txt": "[4] → o BRAETH procura a SIRA e conta o que a Almision sabe dele, para se livrar da dívida (um nome e um pedido de proteção)"
+    }
+   ],
+   "hora_rolado": "11:35:31"
+  },
+  "CH69": {
+   "id": "CH69",
+   "dia": 469,
+   "hora": "11:35:31",
+   "titulo": "QUEM CHEGA À CASA PELO CHAMADO (469: chegam 2; G3: peça Rara+ dentro de uma lua): O NÍVEL (a tabela do 434)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "nível 30 a 50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nível 50 a 80"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "nível 80 a 110"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "nível 110 a 140"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "nível 80 a 110",
+     "txt": "#1 [5] → nível 80 a 110"
+    },
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nível 30 a 50",
+     "txt": "#2 [2] → nível 30 a 50"
+    }
+   ],
+   "hora_rolado": "11:35:31"
+  },
+  "AF69o": {
+   "id": "AF69o",
+   "dia": 469,
+   "hora": "11:35:48",
+   "titulo": "O OURO NA PAREDE DA CASA DO DULASSETTA (AF69 [2])",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "× 100"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1,
+      1
+     ],
+     "total": 2,
+     "res": "× 100",
+     "txt": "[1, 1] +0 = 2 → × 100"
+    }
+   ],
+   "hora_rolado": "11:35:48"
+  },
+  "NV69": {
+   "id": "NV69",
+   "dia": 469,
+   "hora": "11:35:48",
+   "titulo": "O NÍVEL EXATO DOS DOIS DO CHAMADO (o dado soma ao piso: o 1º 80, o 2º 30)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "soma ao piso"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "soma ao piso",
+     "txt": "#1 [20] → soma ao piso"
+    },
+    {
+     "dados": [
+      15
+     ],
+     "total": 15,
+     "res": "soma ao piso",
+     "txt": "#2 [15] → soma ao piso"
+    }
+   ],
+   "hora_rolado": "11:35:48"
   }
  }
 }

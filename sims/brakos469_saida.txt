@@ -1,0 +1,6 @@
+LEI DAS AÇÕES: Brakos (nível 35) contra 4 · PV 280/280 · RD 5 · 2 ações · reação 1 · grupo: Moreth 4, Eiagrir 3, Eliane 2, Mie 3
+INICIATIVA: Brakos 2d20+3 = 18 × o grupo 2d20+14 (média) = 44 → o grupo age primeiro
+--- RODADA 1 · Brakos 280/280
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 590; [[6], [17]]+44=67 vs 38 pega em cheio → 585 (-305)
+  Brakos CAI
+FIM: morto · rodadas 1 · mortos [] · PV -305/280 · grupo {'Moreth': 600, 'Eiagrir': 420, 'Eliane': 241, 'Mie': 560}

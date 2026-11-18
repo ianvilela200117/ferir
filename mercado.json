@@ -1,32 +1,32 @@
 {
  "cidades": {
   "Ireviel": {
-   "grão": 71,
-   "sal": 92,
-   "ferro": 104,
-   "carvão": 81,
-   "peixe": 100
+   "grão": 74,
+   "sal": 89,
+   "ferro": 108,
+   "carvão": 83,
+   "peixe": 99
   },
   "o Porto de Marasar": {
-   "grão": 135,
-   "sal": 136,
-   "ferro": 140,
-   "carvão": 141,
-   "peixe": 147
+   "grão": 138,
+   "sal": 138,
+   "ferro": 151,
+   "carvão": 144,
+   "peixe": 142
   },
   "Levis": {
-   "grão": 82,
-   "sal": 100,
-   "ferro": 102,
-   "carvão": 76,
-   "peixe": 114
+   "grão": 80,
+   "sal": 99,
+   "ferro": 92,
+   "carvão": 89,
+   "peixe": 108
   },
   "Farenta": {
-   "grão": 108,
-   "sal": 115,
-   "ferro": 110,
-   "carvão": 90,
-   "peixe": 133
+   "grão": 95,
+   "sal": 102,
+   "ferro": 108,
+   "carvão": 94,
+   "peixe": 132
   }
  },
  "log": []

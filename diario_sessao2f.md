@@ -1556,3 +1556,32 @@ O rei olhou para o sul, para os lados de Farenta, onde uma mulher de fogo tinha 
 No meio da ilha, debaixo das copas deitadas, o coração da fera ainda estava quente.
 
 - **Parada:** noite do 468, o Delta. A Elaeva morta na ilha; o coração e o corpo a partilhar.
+
+## O 469: a partilha, o bicho de Vida e as cartas
+
+### As salinas da Lurentetta, manhã do 469
+Os salineiros cobriram a floresta morta de sal como se cobre um peixe grande, em camadas, com pás, cantando a mesma reza de três notas. Ao meio-dia a ilha estava branca, e as copas deitadas pareciam neve no capim.
+
+A Lurentetta ouviu a partilha de pé, com os braços cruzados.
+
+"O coração é vosso. Quem matou foi a tua luz." Olhou o sal. "Metade do corpo é meu, quando cortarem. E o sal das minhas salinas vai a Ireviel a meio preço, um ano. Porque vocês vieram."
+
+Não estendeu a mão. Bateu duas vezes no próprio peito, onde a camisa estava dura de sal, e foi embora.
+
+### Os canais, tarde do 469
+O Brakos estava onde a Mie disse que estaria, deitado na lama entre as árvores marcadas, verde como o musgo, do tamanho de um cavalo. Só se via quando respirava. O Moreth levantou a maça, e a luz que saiu dela acertou o bicho antes de ele terminar de se levantar.
+
+Ele se desfez em folhas. No meio delas ficaram um couro mole, que ainda estava morno, e umas escamas finas que cheiravam a chuva.
+
+### O galpão, noite do 469
+O bote de notícias trouxe três cartas.
+
+A primeira, do Colégio de Telosus, em letra miúda e lacre azul. O Ceduion pedia perdão pela carta que mandara à Leliel e oferecia, como paga, ensinar ao rei "um feitiço do sétimo círculo, à escolha".
+
+A segunda, do Celocus, por um mensageiro que chegara a Ireviel exausto. Os magos da Areia Cantante tinham tomado as aldeias do vale de cima de Lumade. "O pacto do 371 diz que abrimos Lumade juntos. Não há Lumade para abrir se eles ficarem."
+
+A terceira era da Sira, curta como ela. O Braeth fora procurá-la de noite. A Almision sabia que ele escondia um filho do clã de Kasgal, herdeiro dos Steunn, e por isso o mandara abrir caminho ao Seeth até a Fornalha. "Ele pede a proteção da casa. Eu o pus num quarto com uma porta só. O Seeth trabalha na forja grande como se nada fosse."
+
+O rei dobrou as três cartas e ficou olhando a ilha branca pela janela.
+
+- **Parada:** noite do 469, o Delta. Amanhã a saída a Dragal e a busca rio acima.

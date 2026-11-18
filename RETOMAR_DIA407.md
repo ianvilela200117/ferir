@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 468, O DELTA: a Elaeva morta; o despojo e o Teraseth (MOTOR 9b: G1 a G38)
+# RETOMAR — noite do Dia 469, O DELTA: o núcleo, as cartas, a saída a Dragal (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 469, O DELTA (o tick SEMANAL do 469 rodado). O rei 159, PV 408/408, Mana 167/167, Erudito 1/1, Visão 2/2; o PONTO DO 159 por escolher. O corpo da ELAEVA inteiro e salgado (uma lua); o NÚCLEO MÍTICO DE PODRIDÃO ainda no peito dela; a partilha acertada com a Lurentetta (LP69 [3]). A saída do 470: a DRAGAL (o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, nas barcas leves dos salineiros, por Ninnane) e a BUSCA do Teraseth rio acima (a Isolda e a galé, metade do Croque); (OCULTO) ele está no fundo do rio perto das Fundas, a uns 2 dias acima de Ireviel, com a armadura do rei e o Croque do Rio; os bichos da colmeia saem das Fundas (MH67); o Ssish dorme. As cartas: o Ceduion (ensinar um 7º; o rei não pode aprender: Magia Mestre), o Celocus (Lumade), a Sira (o Braeth e o Seeth: a Almision). (OCULTO) a coluna da Leliel voltou. Cofre 58.462.
+
+Antes (468):
 Noite do 468, O DELTA, A ILHA (os ticks do 466 ao 468 rodados; o cerco: cercos/elaeva465.json, FIM: MORTA). A ELAEVA MORREU no 468 pela Lança do Sol do rei. O rei NÍVEL 159 (o ponto de habilidade do 159 pendente; o talento no 160), PV 408/408, Mana 47/167, a Visão 2/2 na aurora, o Erudito 0/1 (volta no 469). O DESPOJO (obras/despojo_elaeva_468.txt): o núcleo Mítico de Podridão, uldun 200 kg, gnaos 150 kg, bzarnur 150 kg (a partilha com a Lurentetta: pergunta). Não lançados ainda no ficha.json (esperam a partilha). (OCULTO) o TERASETH: morto no 462 pelo Ssish perto das Fundas; o corpo, a armadura do rei e o Croque do Rio no fundo do rio; a Ressurreição (Luz 7º) vale até o ~492 e pede quem a lance (o rei não pode: Magia Mestre), um núcleo de Luz Raro e algo que ele amou; os bichos da colmeia atacam uma aldeia rio acima (MH67). A carta do CEDUION (CD53 [5]: ensinar um 7º círculo) e a do CELOCUS (LM56: o Círculo tomou o vale de cima de Lumade) chegam ao rei no 469. (OCULTO) a coluna da Leliel VOLTOU (DQ66). O tick do 469: a Feira no Porto (Legitimidade −1) e o câmbio em Levis; a mesa da Colheita; o conselho. Cofre 61.983.
 
 Antes (465):
@@ -323,11 +326,16 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (465 → 468): 1b · 2b · 3a · "tem como reviver o Teraseth?" (regra: resposta inteira)
 - os ticks 466-468 · DQ66 [1] (oculto) · FD66 [6] · o cerco 466 (e os tiros que faltaram) · MH67 [2] (oculto) · o cerco 467 · o cerco 468: MORTA · XP 38.000 (o rei ao 159) · o despojo.
 
+## RESPONDIDO (468 → 469): 1a · 2a ("quero ressuscitar servo armado") · 3 (as melhores opções) · 4c,b · "a Elaeva como servo armado?" (regra)
+- LP69 [3] · BK69 14 · a luta do Brakos · o tick semanal do 469 · CG69 [6] · DM69 [1] · AF69 [2] (200) · AB69 [4] · CH69 [5,2] · NV69 [20,15].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O DESPOJO DA ELAEVA (a caçada foi da casa e da Lurentetta): a) a casa fica com o NÚCLEO e a Lurentetta com metade do material · b) meio a meio em tudo, e a casa compra a parte dela no núcleo · c) a Lurentetta escolhe primeiro (ela perdeu as aldeias) · d) outra.
-2. O TERASETH (a Ressurreição vale até o ~492): a) a casa procura o corpo rio acima com os do Croque (onde ele morreu, ninguém sabe) · b) primeiro achar quem lance a Ressurreição (o Colégio, a Almision) e um núcleo de Luz · c) deixar os mortos em paz.
-3. O PONTO DE HABILIDADE DO 159: o jogador escolhe (ou o Mestre propõe).
-4. A VOLTA: a) Ireviel já (as cartas do Ceduion e do Celocus chegam amanhã) · b) DRAGAL, a oeste do Delta, pelos barqueiros de Ninnane (o Martelo do Rei) · c) ficar um dia no Delta (a partilha, os salineiros, o Brakos).
+1. O NÚCLEO MÍTICO (o coração da Elaeva): a) forjar uma MÍTICA com ele (Primordial é possível) · b) erguer a ELAEVA como servo armado (as consequências na resposta) · c) guardar.
+2. O CEDUION (oferece ensinar um 7º círculo; o rei não pode aprender): a) pedir que ELE lance a Ressurreição no Teraseth quando o corpo for achado · b) aceitar o perdão e pedir outra paga · c) recusar.
+3. O CELOCUS (a Areia Cantante tomou o vale de cima de Lumade): a) mandar gente agora · b) ir depois de Dragal · c) pedir que espere.
+4. O SEETH E O BRAETH: a) prender o Seeth · b) proteger o Braeth e usar o Seeth para mandar mentiras à Almision · c) mandar o Seeth embora.
+5. O PONTO DO 159: a) Série de Mestre 3 · b) Mão que Não Treme 4 · c) Osso Gravado 2 · d) Selo do Rei (Assinatura do Encanto 1) · e) guardar.
+6. A SAÍDA DO 470: a) como está (Dragal: o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10; a busca: a Isolda, a galé e metade do Croque) · b) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

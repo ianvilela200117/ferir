@@ -1,0 +1,20 @@
+{
+ "monstro": {
+  "nome": "Brakos",
+  "cat": "Raro",
+  "nivel": 35,
+  "pv": 280,
+  "df": 24,
+  "rd": 3,
+  "at": 14,
+  "dado": "1d10",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Vida",
+  "fraqueza": "Podridao",
+  "regenera": 4,
+  "nota": "469 (BK69 14): o elemental de VIDA do Delta (Raro 35, do tamanho de um cavalo; notícia 211): as contas do gerador para Raro 35 (PV 280, Defesa 24, RD 3, ataque +14, 1d10 × 2,5); 'cada golpe que fere cura 4 em área' vira regenera 4; fraco a Podridão e água corrente (luta-se nos canais: declarado, não muda o número); camuflado (achado no dado)",
+  "nao_roda": ["a cura em área atinge também quem está perto dele (declarado: não entra)"]
+ },
+ "grupo": []
+}

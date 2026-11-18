@@ -23,7 +23,7 @@
   408
  ],
  "mana": [
-  47,
+  167,
   167
  ],
  "foco": 37,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 61983,
+ "cofre": 58462,
  "livro": {
   "renda_casa": 3790,
-  "despesa": 8230,
-  "ultima_semana": 462,
+  "despesa": 8330,
+  "ultima_semana": 469,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -393,6 +393,36 @@
    "valor": -400,
    "motivo": "465 (ordem do rei, 3a): a escola do Herkald na forja grande (500; G6: 400)",
    "saldo": 61983
+  },
+  {
+   "dia": 469,
+   "valor": -2040,
+   "motivo": "semana: casa 3790 + cidades 2400 − despesa 8230",
+   "saldo": 59943
+  },
+  {
+   "dia": 469,
+   "valor": -2000,
+   "motivo": "469: a obra da casa de câmbio de Levis (2.500; G6: 2.000)",
+   "saldo": 57943
+  },
+  {
+   "dia": 469,
+   "valor": -200,
+   "motivo": "469: a mesa do rei na praça na festa da COLHEITA (a Intendente paga)",
+   "saldo": 57743
+  },
+  {
+   "dia": 469,
+   "valor": 619,
+   "motivo": "469: a festa da Colheita: a renda da semana +10% (3.790 + 2.400 = 6.190)",
+   "saldo": 58362
+  },
+  {
+   "dia": 469,
+   "valor": 100,
+   "motivo": "469: a metade do ouro achado na parede da casa do Dulassetta em Farenta (AF69: 200)",
+   "saldo": 58462
   }
  ],
  "materiais": {
@@ -610,6 +640,18 @@
     "Dia 437: +20 437: a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno",
     "Dia 455: -14 455: a Série da Hoste (5 × 2,8 kg)"
    ]
+  },
+  "seane": {
+   "kg": 2.0,
+   "log": [
+    "Dia 468: +2 469: o BRAKOS (Raro, Vida; couro): cada golpe que fere cura 4 · armadura: cura 1d6 por hora, Sangrando para (o gerador deu ZAIKOS, que bate no Zaiast: nomes.py liquida livre)"
+   ]
+  },
+  "yaane": {
+   "kg": 4.0,
+   "log": [
+    "Dia 468: +4 469: o BRAKOS (Raro, Vida; escama): o mesmo (o gerador deu FENINE, que bate no Fenmir: nomes.py liquida livre)"
+   ]
   }
  },
  "xp_log": [
@@ -681,7 +723,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 0,
+   "tem": 1,
    "max": 1,
    "renova": "semana"
   }

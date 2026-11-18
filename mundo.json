@@ -3397,6 +3397,40 @@
    "chegada": "[4] em 1d6 [5] dias",
    "resumo": "DESCOBERTA DE MATERIAL — Zisrir",
    "toca": false
+  },
+  {
+   "dia": 469,
+   "d20": 18,
+   "o_que": "LUGAR NOVO DESCOBERTO",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "nome: Varula\no que era: mina\npor que caiu: monstro\no que guarda: um prisioneiro\no que habita: monstro (gerar)\ncusto de entrar: um preço a alguém\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "LUGAR NOVO DESCOBERTO — Zisrir (Varula)",
+   "toca": false
+  },
+  {
+   "dia": 469,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [5]",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "leitura": "bandidos viram exército",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: bandidos viram exército — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 469,
+   "d20": 17,
+   "o_que": "CLIMA ESTRANHO (inverno que não acaba, neve vermelha, seca, tempestade de cinza)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 470,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "CLIMA ESTRANHO — Lumade",
+   "toca": true
   }
  ]
 }

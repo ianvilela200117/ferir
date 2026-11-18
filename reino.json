@@ -2,9 +2,9 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 462,
+  "dia": 469,
   "prestigio": 6,
-  "legitimidade": 10,
+  "legitimidade": 9,
   "conselho_real": {
    "Tesoureira": "Nouliel",
    "Marechal": "Eliane",
@@ -26,10 +26,11 @@
    "QUEM MANDA ESPIÃO A IREVIEL É INIMIGO DECLARADO E CAÇADO, sem exceção (323)",
    "EXCEÇÃO (336): quem manda olhos por FÉ, e não por guerra, fica VIGIADO, não caçado",
    "AS CAÇADAS DO REINO (339): toda semana a Marechal escolhe UM bicho a até 3 dias, pela régua; heróis na frente, a hoste aprende, os despojos à forja; se a régua der mais de 2% de morte a qualquer um dos nossos, não vai sem o rei · MUDADA NO 446 (ordem do rei): quando a conta proíbe os nossos, a Marechal pode pôr o CONTRATO para gente de fora (guildas, caçadores, companhias), que vai por conta e risco dela; o reino paga o prêmio e fica com a primeira compra do núcleo",
-   "A LEI DO PORTO (441): portagem menor para toda barca que traz carga DA casa ou PARA a casa; quem levar carga da LIGA perde TODA isenção (pedido dos Afogados Vivos, pelos barqueiros do Teraseth)"
+   "A LEI DO PORTO (441): portagem menor para toda barca que traz carga DA casa ou PARA a casa; quem levar carga da LIGA perde TODA isenção (pedido dos Afogados Vivos, pelos barqueiros do Teraseth)",
+   "ÉDITO DA FEIRA FRANCA (469; o Porto de Marasar): uma novidade de mercado por lua na cidade; a portagem dela cai à metade (os 100 por semana)"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": 1,
+   "a Doge Skotha (Marasar)": 0,
    "o Clã Hegre": -2,
    "Steunn": 0,
    "os Do Junco (o Delta)": -3,
@@ -80,9 +81,18 @@
    "448: semana do reino; renda de fora do livro +2350",
    "455: semana do reino; renda de fora do livro +2300",
    "457: legitimidade 10 → 10 (julgamento RD57: o título falso da casa da Seline; a sentença foi a que a praça esperava)",
-   "462: semana do reino; renda de fora do livro +2200"
+   "462: semana do reino; renda de fora do livro +2200",
+   "469: semana do reino; renda de fora do livro +2400"
   ],
-  "ultima_semana": 462
+  "ultima_semana": 469,
+  "editos": [
+   {
+    "nome": "da Feira Franca",
+    "dia": 469,
+    "cidade": "o Porto de Marasar",
+    "custo_semana": 100
+   }
+  ]
  },
  "cidades": [
   {
@@ -95,7 +105,7 @@
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -110,10 +120,6 @@
      [
       1,
       "a várzea nova (pronta no 451; de vez)"
-     ],
-     [
-      1,
-      "clima: colheita em tempo seco, 3 dias limpos (até o 468)"
      ]
     ],
     "Comércio": [
@@ -229,7 +235,8 @@
     "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 1 · evento [9]",
     "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
-    "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]"
+    "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
+    "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]"
    ],
    "obras_feitas": [
     {
@@ -305,6 +312,14 @@
      [
       -1,
       "315: a ROTA DA COSTA fechada (os bichos que a Isessir junta), enquanto fechada"
+     ],
+     [
+      1,
+      "Édito da Feira Franca"
+     ],
+     [
+      -1,
+      "o incêndio no cais (DM69 [1]; até o 476)"
      ]
     ],
     "Saúde": [
@@ -366,7 +381,8 @@
     "441: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]",
     "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]",
-    "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]"
+    "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]",
+    "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]"
    ]
   },
   {
@@ -374,9 +390,9 @@
    "tipo": "cidade (tomada da Liga no 332; anexada pelo conselho)",
    "gente": 9000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 2,
     "Comércio": 4,
-    "Dinheiro": 1,
+    "Dinheiro": 2,
     "Saúde": 4,
     "Ordem": 3,
     "Defesa": 4
@@ -404,10 +420,6 @@
      [
       1,
       "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
-     ],
-     [
-      1,
-      "clima: colheita em tempo seco, 4 dias limpos (até o 468)"
      ]
     ],
     "Comércio": [
@@ -439,7 +451,14 @@
     "base": 400,
     "custo": 350
    },
-   "obras": [],
+   "obras": [
+    {
+     "nome": "a CASA DE CÂMBIO e a alfândega da Brara (a ordem do rei, 465)",
+     "custo": 2500,
+     "pronta": 479,
+     "efeito": "Dinheiro +1 de vez em Levis"
+    }
+   ],
    "log": [
     "332: tomada pela coalizão; anexada; a casa manda comida (−400 por semana enquanto a Comida estiver abaixo de 2)",
     "335: a Brara governadora",
@@ -465,7 +484,8 @@
     "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]",
     "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))",
     "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]",
-    "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]"
+    "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]",
+    "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -488,12 +508,12 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 2,
     "Comércio": 4,
-    "Dinheiro": 3,
+    "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 2
+    "Defesa": 3
    },
    "mods": {
     "Ordem": [
@@ -520,20 +540,18 @@
     ],
     "Comida": [],
     "Saúde": [],
-    "Defesa": []
+    "Defesa": [
+     [
+      1,
+      "obra: o reparo da muralha de fora (de vez)"
+     ]
+    ]
    },
    "renda": {
     "base": 350,
     "custo": 300
    },
-   "obras": [
-    {
-     "nome": "o reparo da muralha de fora (as raízes da Elaeva racharam e um trecho caiu)",
-     "custo": 2500,
-     "pronta": 465,
-     "efeito": "Defesa +1 de vez em Farenta"
-    }
-   ],
+   "obras": [],
    "log": [
     "356: tomada pela coalizão (nenhum bairro queimado); 357: anexada pelo conselho [12]+2; gente 10.000 [4]; pilares rolados [1][4][1][1][4][1] − 1",
     "357: Comida 1 · Comércio 4 · Dinheiro 0 · Saúde 0 · Ordem 3 · Defesa 0 · evento [2]",
@@ -555,7 +573,8 @@
     "441: Comida 3 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [16]",
     "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]",
     "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]",
-    "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]"
+    "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]",
+    "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [
@@ -570,6 +589,12 @@
      "custo": 2500,
      "pronta": 408,
      "efeito": "Dinheiro +1 de vez (o Mestre sobe o pilar quando ficar pronta)"
+    },
+    {
+     "nome": "o reparo da muralha de fora (as raízes da Elaeva racharam e um trecho caiu)",
+     "custo": 2500,
+     "pronta": 465,
+     "efeito": "Defesa +1 de vez em Farenta"
     }
    ]
   }

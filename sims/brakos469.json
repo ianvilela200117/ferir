@@ -1,0 +1,321 @@
+{
+ "monstro": {
+  "nome": "Brakos",
+  "cat": "Raro",
+  "nivel": 35,
+  "pv": 280,
+  "df": 24,
+  "rd": 3,
+  "at": 14,
+  "dado": "1d10",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Vida",
+  "fraqueza": "Podridao",
+  "regenera": 4,
+  "nota": "469 (BK69 14): o elemental de VIDA do Delta (Raro 35, do tamanho de um cavalo; notícia 211): as contas do gerador para Raro 35 (PV 280, Defesa 24, RD 3, ataque +14, 1d10 × 2,5); 'cada golpe que fere cura 4 em área' vira regenera 4; fraco a Podridão e água corrente (luta-se nos canais: declarado, não muda o número); camuflado (achado no dado)",
+  "nao_roda": [
+   "a cura em área atinge também quem está perto dele (declarado: não entra)"
+  ]
+ },
+ "grupo": [
+  {
+   "nome": "Moreth",
+   "nivel": 232,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10, em ÁREA vale metade: ×5; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Fogo"
+    },
+    {
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      4
+     ],
+     "efeito": "derruba",
+     "cd_efeito": 25,
+     "area": true
+    },
+    {
+     "nome": "CORTE DO HORIZONTE (Arte de espada, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      5
+     ],
+     "ignora_rd": 0.5
+    },
+    {
+     "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      6
+     ],
+     "efeito": "dobra_se_caido"
+    },
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      7
+     ],
+     "area": true
+    },
+    {
+     "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      8
+     ]
+    },
+    {
+     "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      9
+     ],
+     "efeito": "quebra_guarda"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido, Corte Do Horizonte, Quebra-Guarda, Tremor De Ferro, Bigorna; auras: Pele de Pedra",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "artes": {
+    "maestria": "Lendário",
+    "teto": 6,
+    "artes": [
+     "Fio Duplo",
+     "Corte Corrido",
+     "Corte Do Horizonte",
+     "Quebra-Guarda",
+     "Tremor De Ferro",
+     "Bigorna"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 5.0
+   },
+   "arma": [
+    "espada",
+    "maça"
+   ],
+   "rd_ess": {
+    "Podridão": 5
+   }
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 126,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      4
+     ]
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra, Raiz de Pedra menor",
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra",
+     "Raiz de Pedra menor"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança",
+   "rd_ess": {
+    "Fogo": 5
+   }
+  },
+  {
+   "nome": "Eliane",
+   "nivel": 96,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 241,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança",
+   "pvmax_real": 260
+  },
+  {
+   "nome": "Mie",
+   "nivel": 150,
+   "at": 38,
+   "df": 44,
+   "rd": 8,
+   "pv": 560,
+   "dado": "1d10",
+   "mult": 3.0,
+   "b": 13,
+   "heroi": 1,
+   "arma": "lança",
+   "pecas": "a lança da campeã da Lurentetta (categoria não registrada: conta como Épica, ×3) · Campeão (AÇO, Épico): Golpe de Campeão, Resistência, Desafio Público · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas, Lança Que Não Dobra; auras: Pele de Pedra, Raiz de Pedra menor, Passo de Vento",
+   "nota": "a CAMPEÃ DA GUARDA DA LURENTETTA (150; npcs: Mie); ficha feita no 448 pelo nível, ao lado do Eiagrir (126) e do Moreth (232); Resistência (+1 PV por nível) somada",
+   "magias": [
+    {
+     "nome": "LANÇA QUE NÃO DOBRA (Arte de lança, 6º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "13d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "ignora_rd": 1.0
+    },
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "9d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      2
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×1; 1x por cena)",
+     "dano": "5d6",
+     "mult": 1,
+     "cd": 30,
+     "rodada": [
+      3
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Lendário",
+    "teto": 6,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas",
+     "Lança Que Não Dobra"
+    ],
+    "auras": [
+     "Pele de Pedra",
+     "Raiz de Pedra menor",
+     "Passo de Vento"
+    ],
+    "mult": 1
+   }
+  }
+ ]
+}
