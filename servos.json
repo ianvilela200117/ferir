@@ -14,6 +14,14 @@
    "lua_nova": 460,
    "osso_que_cresce": true,
    "fim": "448: desfeito por duas ações lendárias da Elaeva, buscando o corpo da Mamiltia (sims/elaeva448_ZB_saida.txt); o núcleo Épico de Podridão ficou no corpo dele, no mato"
+  },
+  {
+   "nome": "Erygal",
+   "de_pe": true,
+   "tipo": "servo do Toque (G23 a: até a aurora do 473, a não ser que a Receita Mestra seja feita no corpo antes)",
+   "nivel": 17,
+   "desde": 472,
+   "nota": "o guardião de ferro do portão de Dragal (Raro 35, morto-vivo de Metal; quebra armas); derrubado pelo Toque do Ceifador do rei; levanta com metade do nível; a palavra não cobra (o Foco pagou)"
   }
  ]
 }

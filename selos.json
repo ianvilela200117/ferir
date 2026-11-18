@@ -1,12 +1,5 @@
 {
  "ordem": [
-  "DZ26Goir",
-  "FC26",
-  "BJ26",
-  "TS26",
-  "BJ26c",
-  "BJ26w",
-  "BJ26k",
   "FD27",
   "427-laco-quem",
   "427-laco",
@@ -399,344 +392,16 @@
   "AB69",
   "CH69",
   "AF69o",
-  "NV69"
+  "NV69",
+  "VN70",
+  "NB70",
+  "EB71",
+  "EG71",
+  "SE71",
+  "XC71",
+  "CZ72"
  ],
  "selos": {
-  "DZ26Goir": {
-   "id": "DZ26Goir",
-   "dia": 426,
-   "hora": "14:35:10",
-   "titulo": "A DOENÇA DO MOREK em Goir (levou golpe; 2d20 + Vigor 8 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 8; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19,
-      4
-     ],
-     "total": 23,
-     "res": "soma mais 8; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)",
-     "txt": "[19, 4] +0 = 23 → soma mais 8; abaixo de 22 pega a FEBRE DO ESPINHO (o ferimento leva o dobro, até um físico com a caixa tratar)"
-    }
-   ],
-   "hora_rolado": "14:35:10"
-  },
-  "FC26": {
-   "id": "FC26",
-   "dia": 426,
-   "hora": "14:35:35",
-   "titulo": "O FÍSICO-CHEFE trata a FEBRE DO ESPINHO do STARKALD (tarde do 425, a caixa nova e a LANCETA-MESTRA): d20 + 2 contra 15",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "NÃO CURA AINDA: a febre segue; a cura dele leva o dobro"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 20,
-     "res": "CURA A FEBRE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 17,
-     "res": "CURA A FEBRE",
-     "txt": "[17] → CURA A FEBRE"
-    }
-   ],
-   "hora_rolado": "14:35:35"
-  },
-  "BJ26": {
-   "id": "BJ26",
-   "dia": 426,
-   "hora": "14:49:56",
-   "titulo": "O BJORVUNN (46, pesquisador de monstros e núcleos; agente da Lumine, pego no 308; a Eliane deve a vida a ele) diante do rei, noite do 426: o que ele sabe de NÚCLEOS perto do reino",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "NADA NOVO: fala dos bichos que a casa já conhece"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 14,
-     "res": "sabe de UM NÚCLEO À VENDA (rola onde e de quê)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 19,
-     "res": "sabe de um BICHO ÉPICO OU MAIOR perto do reino que a casa não conhece (rola)"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "as duas coisas"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      16
-     ],
-     "total": 16,
-     "res": "sabe de um BICHO ÉPICO OU MAIOR perto do reino que a casa não conhece (rola)",
-     "txt": "[16] → sabe de um BICHO ÉPICO OU MAIOR perto do reino que a casa não conhece (rola)"
-    }
-   ],
-   "hora_rolado": "14:49:56"
-  },
-  "TS26": {
-   "id": "TS26",
-   "dia": 426,
-   "hora": "14:49:56",
-   "titulo": "A TESSAL E A LILE procuram ALNESAR nos papéis da Casa (a busca andou devagar desde o 309; agora com ordem do rei e urgência)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "AINDA NÃO: os papéis falam de um cemitério de reis, sem caminho"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 20,
-     "res": "ACHAM O LUGAR (dizem ao rei quando ele voltar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "ACHAM O LUGAR (dizem ao rei quando ele voltar)",
-     "txt": "[19] → ACHAM O LUGAR (dizem ao rei quando ele voltar)"
-    }
-   ],
-   "hora_rolado": "14:49:56"
-  },
-  "BJ26c": {
-   "id": "BJ26c",
-   "dia": 426,
-   "hora": "14:50:06",
-   "titulo": "O BICHO QUE O BJORVUNN CONHECE: de que tamanho (tem de dar núcleo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "ÉPICO"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ÚNICO"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LENDÁRIO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ÚNICO",
-     "txt": "[5] → ÚNICO"
-    }
-   ],
-   "hora_rolado": "14:50:06"
-  },
-  "BJ26w": {
-   "id": "BJ26w",
-   "dia": 426,
-   "hora": "14:50:06",
-   "titulo": "ONDE ELE ESTÁ (perto do reino)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Ireviel e o rio"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Levis e Levis-baixa"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Marasar"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o Delta e as salinas"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "o brejo do oeste"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "a costa"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o Delta e as salinas",
-     "txt": "[6] → o Delta e as salinas"
-    }
-   ],
-   "hora_rolado": "14:50:06"
-  },
-  "BJ26k": {
-   "id": "BJ26k",
-   "dia": 426,
-   "hora": "14:50:46",
-   "titulo": "O QUE O BJORVUNN SABE DO ULMIR (Único 178, Raio, nas salinas do Delta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o que é, onde e o coração (núcleo Único de Raio)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "isso e a FRAQUEZA (Água)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "isso, a fraqueza e o que ele faz (devolve magia, sara rápido)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "isso, a fraqueza e o que ele faz (devolve magia, sara rápido)",
-     "txt": "[6] → isso, a fraqueza e o que ele faz (devolve magia, sara rápido)"
-    }
-   ],
-   "hora_rolado": "14:50:46"
-  },
   "FD27": {
    "id": "FD27",
    "dia": 426,
@@ -19909,6 +19574,310 @@
     }
    ],
    "hora_rolado": "11:35:48"
+  },
+  "VN70": {
+   "id": "VN70",
+   "dia": 470,
+   "hora": "12:05:01",
+   "titulo": "DO DELTA A NINNANE (as barcas leves dos salineiros pelo braço oeste até a beira do brejo; sai na manhã do 470)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "chega a Ninnane na tarde do 470"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "chega na manhã do 471 (o braço tem bancos de lama)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "chega na manhã do 471 (o braço tem bancos de lama)",
+     "txt": "[6] → chega na manhã do 471 (o braço tem bancos de lama)"
+    }
+   ],
+   "hora_rolado": "12:05:01"
+  },
+  "NB70": {
+   "id": "NB70",
+   "dia": 470,
+   "hora": "12:05:01",
+   "titulo": "OS BARQUEIROS DE NINNANE E DRAGAL ('quem a procura não volta'; levam tudo por um preço)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "NENHUM aceita levar o rei: têm medo; um velho vende o caminho desenhado num couro (300) e não vai junto"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 4,
+     "res": "UM VELHO aceita levar, por 500 e uma condição: ninguém fala alto no brejo depois do escuro"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "DOIS barqueiros levam por 300; um deles já viu o portão afundado e conta o que mora lá"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "UM VELHO aceita levar, por 500 e uma condição: ninguém fala alto no brejo depois do escuro",
+     "txt": "[3] → UM VELHO aceita levar, por 500 e uma condição: ninguém fala alto no brejo depois do escuro"
+    }
+   ],
+   "hora_rolado": "12:05:01"
+  },
+  "EB71": {
+   "id": "EB71",
+   "dia": 470,
+   "hora": "12:05:29",
+   "titulo": "O BREJO DE DRAGAL (o dia 471 de barca no brejo, com o velho de Ninnane; a condição: ninguém fala alto depois do escuro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "uma SERPENTE-DO-BREJO (Raro, Veneno) sobe na barca do Gonde (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "depois do escuro um dos dez da guarda grita (uma sanguessuga); o velho apaga a lanterna e espera: luzes frias se acendem na água em volta, e o caminho se perde até a aurora (chega um dia depois)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "nada além do silêncio: chegam ao PORTÃO AFUNDADO ao entardecer do 471"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "depois do escuro um dos dez da guarda grita (uma sanguessuga); o velho apaga a lanterna e espera: luzes frias se acendem na água em volta, e o caminho se perde até a aurora (chega um dia depois)",
+     "txt": "[2] → depois do escuro um dos dez da guarda grita (uma sanguessuga); o velho apaga a lanterna e espera: luzes frias se acendem na água em volta, e o caminho se perde até a aurora (chega um dia depois)"
+    }
+   ],
+   "hora_rolado": "12:05:29"
+  },
+  "EG71": {
+   "id": "EG71",
+   "dia": 470,
+   "hora": "12:05:29",
+   "titulo": "O ERYGAL NO PORTÃO DE DRAGAL (o 'homem de ferro no rio', guardião do portão; no Dia ~84 acordou e subiu o rio chamado pela Matriz)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "VOLTOU ao portão: está de pé na água, à espera (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o portão está VAZIO: ele segue em algum lugar do rio, longe (o caminho está aberto)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "VOLTOU ao portão: está de pé na água, à espera (a luta, G9)",
+     "txt": "[3] → VOLTOU ao portão: está de pé na água, à espera (a luta, G9)"
+    }
+   ],
+   "hora_rolado": "12:05:29"
+  },
+  "SE71": {
+   "id": "SE71",
+   "dia": 470,
+   "hora": "12:05:29",
+   "titulo": "A SIRA E A GUARDA PRENDEM O SEETH NA FORJA GRANDE (4a; a ordem chega a Ireviel pela barca no 471; ele sabe que a casa sabe: o corvo viu a Sira)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele SOME antes: a cama da forja grande vazia e a janela aberta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "PRESO na forja grande, de avental, com um caderno de desenhos da Fornalha escondido no forro"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ele SOME antes: a cama da forja grande vazia e a janela aberta",
+     "txt": "[1] → ele SOME antes: a cama da forja grande vazia e a janela aberta"
+    }
+   ],
+   "hora_rolado": "12:05:29"
+  },
+  "XC71": {
+   "id": "XC71",
+   "dia": 472,
+   "hora": "12:06:37",
+   "titulo": "O CULTO DO XAATHIS CUMPRE O OBJETIVO (6/6: 'abrir um selo') e a FRONTEIRA DE LEVIS MUDA (o G8 do 471: terra tomada); a notícia pela Brara no 475",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o selo de IOTHEMNA: o culto faz o SACRIFÍCIO escrito na porta e abre a oficina do mestre morto; os mortos de lá sobem às minas; LEVIS-BAIXA cai nas mãos do culto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o selo de ZYTHIR: o culto abre por baixo a porta da SALA 9; o guardião sai pelas minas fundas; a gente foge de Levis-baixa e o culto fica com ela"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o selo velho do rio acima de Levis (as estacas com dentes): a coberta afina, a magia some em Levis-baixa por uma lua, e o culto toma o bairro"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o selo velho do rio acima de Levis (as estacas com dentes): a coberta afina, a magia some em Levis-baixa por uma lua, e o culto toma o bairro",
+     "txt": "[6] → o selo velho do rio acima de Levis (as estacas com dentes): a coberta afina, a magia some em Levis-baixa por uma lua, e o culto toma o bairro"
+    }
+   ],
+   "hora_rolado": "12:06:37"
+  },
+  "CZ72": {
+   "id": "CZ72",
+   "dia": 472,
+   "hora": "12:06:37",
+   "titulo": "A ESCOLA DO HERKALD ABRE (472) e OS DA CINZA procuram a casa (ameaçam ou sabotam)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "SABOTAM: fogo na bancada nova da escola na noite da abertura (a escola atrasa uma semana)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a REPARAÇÃO pesa: os filhos de duas famílias da Cinza entram na escola; os da Cinza racham (força −1)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)",
+     "txt": "[4] → AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)"
+    }
+   ],
+   "hora_rolado": "12:06:37"
   }
  }
 }

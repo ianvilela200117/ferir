@@ -319,6 +319,14 @@
    "usos": 1,
    "desde": 454,
    "origem": "aula do Colégio, 454"
+  },
+  "Série de Mestre 3": {
+   "tipo": "Passiva",
+   "efeito": "duas séries de armas ao mesmo tempo na forja grande (o ponto do 159)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 469,
+   "origem": "ponto do 159"
   }
  },
  "titulos": [

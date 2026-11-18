@@ -1,5 +1,5 @@
 {
- "prox_id": 824,
+ "prox_id": 827,
  "itens": [
   {
    "id": 1,
@@ -10167,7 +10167,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": false
   },
   {
@@ -10938,7 +10938,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": false
   },
   {
@@ -10949,7 +10949,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": false
   },
   {
@@ -11042,7 +11042,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11109,7 +11109,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11285,7 +11285,7 @@
    "oculto": false,
    "para": false,
    "origem": "mundo_vivo.py, tick 469",
-   "feito": false,
+   "feito": true,
    "toca": true,
    "boato": [
     2,
@@ -11609,6 +11609,51 @@
    "origem": "mestre",
    "feito": false,
    "toca": false
+  },
+  {
+   "id": 824,
+   "dia": 470,
+   "texto": "EMBAIXADA OU VISITA de terra distante — as Montanhas de Fogo (Kasvil)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 470",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 825,
+   "dia": 473,
+   "texto": "PESTE OU DESASTRE: febre — Kreade (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 471",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 826,
+   "dia": 472,
+   "texto": "Adurel (Zisrir (o vale)): a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 472",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
   }
  ],
  "fios": [

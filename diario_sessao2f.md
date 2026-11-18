@@ -1585,3 +1585,42 @@ A terceira era da Sira, curta como ela. O Braeth fora procurá-la de noite. A Al
 O rei dobrou as três cartas e ficou olhando a ilha branca pela janela.
 
 - **Parada:** noite do 469, o Delta. Amanhã a saída a Dragal e a busca rio acima.
+
+## Do 470 ao 472: Ninnane, o brejo e o portão afundado
+
+### Ninnane, manhã do 471
+As casas de Ninnane ficavam de pé na água sobre pernas de pau, como garças, ligadas por pontes de tábua que gemiam. Ninguém saiu para ver o rei. Viam pelas frestas.
+
+O velho que aceitou levá-los tinha um olho branco e as mãos de quem remou a vida inteira. Contou as moedas duas vezes e guardou na boca.
+
+"Lá dentro ninguém fala alto depois do escuro", disse, com as moedas na bochecha. "Não é superstição. Eles escutam."
+
+Não disse quem eram eles.
+
+### O brejo, noite do 471
+Os juncos fechavam o céu. A barca andava devagar por canais que o velho parecia escolher pelo cheiro.
+
+Já era noite fechada quando um dos dez da guarda sentiu a sanguessuga na perna e gritou.
+
+O velho apagou a lanterna antes de o grito acabar. No escuro, em volta das barcas, a água começou a acender: luzes frias, verdes, do tamanho de um punho, uma depois da outra, como olhos abrindo. Ficaram ali, paradas, a noite inteira. Ninguém mais falou. O rei ouviu o próprio coração e o do Gonde, sentado ao lado.
+
+Na aurora as luzes tinham sumido, e o velho não reconhecia mais o canal. Perderam o dia procurando o caminho.
+
+### O portão afundado, entardecer do 472
+Dragal apareceu primeiro como um erro na paisagem: duas torres tortas saindo da água, cobertas de limo, e entre elas um arco de pedra afundado até a metade. A água ali era parada e escura como óleo.
+
+No meio do arco, de pé, com a água pela cintura, estava o homem de ferro. Tinha a altura de dois homens e não tinha rosto, só uma grade de metal enferrujado onde o rosto devia estar. Virou a grade para as barcas.
+
+O rei não esperou que ele andasse. O Foco de Osso esfriou na mão, e o Toque saiu dele como uma sombra que corre na água. O homem de ferro se desmanchou para dentro, como uma armadura que perde quem a veste, e caiu de costas no arco.
+
+Depois se levantou de novo, devagar, e se ajoelhou na água diante do rei. A grade de ferro baixou. Era dele, agora, até a aurora.
+
+Foi então que a água do arco se abriu sem barulho e dela saiu uma mulher.
+
+Não estava molhada. Usava um pano de templo que tinha sido branco, preso por um cordão de contas de vidro, e tinha as mãos cruzadas no peito como os mortos as cruzam nos túmulos. A pele era cinza e lisa como pedra de rio. Os olhos estavam vivos.
+
+"Faz mil anos que ninguém passa", disse, numa língua velha que o rei entendeu sem saber de onde. "O rei que dormiu aqui me deixou guardando a porta. Quem quer entrar paga." Olhou cada um deles, devagar, até chegar ao rei. "Uma lembrança querida. A tua, ou a de alguém que veio contigo. Eu a tiro, e ela não volta."
+
+O homem de ferro esperava ajoelhado na água. O velho de Ninnane tinha virado o rosto para o outro lado.
+
+- **Parada:** entardecer do 472, o portão afundado de Dragal. A sacerdotisa espera o preço.

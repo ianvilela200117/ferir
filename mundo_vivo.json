@@ -438,7 +438,8 @@
     "416: a boca da passagem dele em Zisrir DESABADA por gente paga pelo CELOCUS (a notícia chega a Levis no 416)",
     "434: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
     "435: [2] compra, toma ou destrói algo de valor ligado à Obra",
-    "469: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta"
+    "469: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+    "472: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)"
    ],
    "prox": 499,
    "dons": [
@@ -1081,7 +1082,7 @@
    "cat": "Raro",
    "nivel": 35,
    "regiao": "o Delta",
-   "estado": "ativo",
+   "estado": "MORTO (469, nos canais do Delta, pela Lança do Sol do Moreth)",
    "nota": "elemental de Vida, tamanho de cavalo; camuflado; cada golpe que fere cura 4 em área; fraco a Podridão e água corrente; desce às aldeias no inverno; sinal: árvores marcadas (notícia 211) · 458: apareceu de dia no Delta; a vigia não viu a tempo: 1 salineiro morto",
    "nivel_base": 34
   },

@@ -410,6 +410,10 @@
      [
       1,
       "a RONDA: 10 lanças em Levis-baixa (427, enquanto a ronda durar)"
+     ],
+     [
+      -1,
+      "o CULTO DO XAATHIS tomou LEVIS-BAIXA (XC71 [6]; até a casa retomar)"
      ]
     ],
     "Comida": [
@@ -439,7 +443,12 @@
      ]
     ],
     "Defesa": [],
-    "Dinheiro": [],
+    "Dinheiro": [
+     [
+      -1,
+      "Levis-baixa nas mãos do culto (XC71 [6]; até a casa retomar)"
+     ]
+    ],
     "Saude": [
      [
       1,

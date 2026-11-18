@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 469, O DELTA: o núcleo, as cartas, a saída a Dragal (MOTOR 9b: G1 a G38)
+# RETOMAR — entardecer do Dia 472, O PORTÃO DE DRAGAL: a sacerdotisa e o preço (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 472, O PORTÃO AFUNDADO DE DRAGAL (os ticks do 470 ao 472 rodados). O rei 159 (XP 1.262.114), PV 408/408, Mana 167/167, Erudito 1/1, Visão 2/2. Com ele: o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, o velho de Ninnane. O ERYGAL é SERVO DO TOQUE até a aurora do 473 (servos.json); a Receita Mestra o faria durar (núcleo Raro+ no peito). A SACERDOTISA (morta-viva, 90) cobra UMA LEMBRANÇA QUERIDA (do rei ou de outro) para passar. (OCULTO) dentro: o MARTELO DO REI (a Peça Oculta: oferece a classe HERDEIRO DO REI-FERREIRO, Lendária; o nível volta a 1) e um núcleo. (OCULTO) a Isolda sobe o rio (o Teraseth no fundo perto das Fundas; os bichos da colmeia, MH67). (OCULTO) Levis-baixa tomada pelo culto do Xaathis (XC71 [6]; a carta da Brara no 475). O Seeth fugiu (SE71). A Mítica na volta (a Obra Diz). Cofre 57.962.
+
+Antes (469):
 Noite do 469, O DELTA (o tick SEMANAL do 469 rodado). O rei 159, PV 408/408, Mana 167/167, Erudito 1/1, Visão 2/2; o PONTO DO 159 por escolher. O corpo da ELAEVA inteiro e salgado (uma lua); o NÚCLEO MÍTICO DE PODRIDÃO ainda no peito dela; a partilha acertada com a Lurentetta (LP69 [3]). A saída do 470: a DRAGAL (o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, nas barcas leves dos salineiros, por Ninnane) e a BUSCA do Teraseth rio acima (a Isolda e a galé, metade do Croque); (OCULTO) ele está no fundo do rio perto das Fundas, a uns 2 dias acima de Ireviel, com a armadura do rei e o Croque do Rio; os bichos da colmeia saem das Fundas (MH67); o Ssish dorme. As cartas: o Ceduion (ensinar um 7º; o rei não pode aprender: Magia Mestre), o Celocus (Lumade), a Sira (o Braeth e o Seeth: a Almision). (OCULTO) a coluna da Leliel voltou. Cofre 58.462.
 
 Antes (468):
@@ -329,13 +332,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (468 → 469): 1a · 2a ("quero ressuscitar servo armado") · 3 (as melhores opções) · 4c,b · "a Elaeva como servo armado?" (regra)
 - LP69 [3] · BK69 14 · a luta do Brakos · o tick semanal do 469 · CG69 [6] · DM69 [1] · AF69 [2] (200) · AB69 [4] · CH69 [5,2] · NV69 [20,15].
 
+## RESPONDIDO (469 → 472): o ponto do 159: a · 1a (uma Mítica para o reino) · 2b ("quero virar Lendário na magia") · 3b · 4a · 6a
+- a Série de Mestre 3 · a partilha cortada · VN70 [6] · NB70 [3] (500) · EB71 [2] · EG71 [3] · SE71 [1] · os ticks 470-472 · XC71 [6] (oculto) · CZ72 [4] · a luta do Erygal (Toque) · o Brakos marcado morto (erro do 469).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O NÚCLEO MÍTICO (o coração da Elaeva): a) forjar uma MÍTICA com ele (Primordial é possível) · b) erguer a ELAEVA como servo armado (as consequências na resposta) · c) guardar.
-2. O CEDUION (oferece ensinar um 7º círculo; o rei não pode aprender): a) pedir que ELE lance a Ressurreição no Teraseth quando o corpo for achado · b) aceitar o perdão e pedir outra paga · c) recusar.
-3. O CELOCUS (a Areia Cantante tomou o vale de cima de Lumade): a) mandar gente agora · b) ir depois de Dragal · c) pedir que espere.
-4. O SEETH E O BRAETH: a) prender o Seeth · b) proteger o Braeth e usar o Seeth para mandar mentiras à Almision · c) mandar o Seeth embora.
-5. O PONTO DO 159: a) Série de Mestre 3 · b) Mão que Não Treme 4 · c) Osso Gravado 2 · d) Selo do Rei (Assinatura do Encanto 1) · e) guardar.
-6. A SAÍDA DO 470: a) como está (Dragal: o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10; a busca: a Isolda, a galé e metade do Croque) · b) outra.
+1. O PREÇO DA SACERDOTISA (uma lembrança querida; ela não volta): a) a do rei (o jogador diz qual) · b) a de outro que veio (o jogador diz quem; a pessoa pode recusar) · c) não pagar: forçar a passagem · d) voltar.
+2. O ERYGAL (servo do Toque até a aurora): a) a Receita Mestra no corpo (núcleo Raro+ no peito; o Falar com Morto pergunta se ele aceita) · b) deixá-lo cair na aurora.
+3. A MÍTICA DO REINO (a Obra Diz: devolver à terra o que morreu): a) O ADUBO DO REI (Comida) · b) O PORTÃO QUE APODRECE (Defesa) · c) A CISTERNA QUE COME A FEBRE (Saúde) · d) outra ideia.
+4. O CEDUION (Lendário na magia não pode): a) que ele lance a Ressurreição no Teraseth · b) que ensine um feitiço até o 6º círculo · c) uma dívida de favor do Colégio · d) o jogador quer uma regra da casa para a segunda Lendária (o Mestre propõe, com preço).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

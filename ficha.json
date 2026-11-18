@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 159,
- "xp": 1261764,
+ "xp": 1262114,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -56,10 +56,10 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 58462,
+ "cofre": 57962,
  "livro": {
-  "renda_casa": 3790,
-  "despesa": 8330,
+  "renda_casa": 6457,
+  "despesa": 8780,
   "ultima_semana": 469,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
@@ -423,6 +423,12 @@
    "valor": 100,
    "motivo": "469: a metade do ouro achado na parede da casa do Dulassetta em Farenta (AF69: 200)",
    "saldo": 58462
+  },
+  {
+   "dia": 470,
+   "valor": -500,
+   "motivo": "471: o velho barqueiro de Ninnane que leva o rei a Dragal (NB70 [3])",
+   "saldo": 57962
   }
  ],
  "materiais": {
@@ -652,6 +658,30 @@
    "log": [
     "Dia 468: +4 469: o BRAKOS (Raro, Vida; escama): o mesmo (o gerador deu FENINE, que bate no Fenmir: nomes.py liquida livre)"
    ]
+  },
+  "uldun": {
+   "kg": 100.0,
+   "log": [
+    "Dia 469: +100 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+   ]
+  },
+  "gnaos": {
+   "kg": 75.0,
+   "log": [
+    "Dia 469: +75 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+   ]
+  },
+  "bzarnur": {
+   "kg": 75.0,
+   "log": [
+    "Dia 469: +75 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+   ]
+  },
+  "núcleo-mítico-de-podridão": {
+   "kg": 1.0,
+   "log": [
+    "Dia 469: +1 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+   ]
   }
  },
  "xp_log": [
@@ -706,7 +736,8 @@
   "Dia 468: SOBE ao 157",
   "Dia 468: SOBE ao 158",
   "Dia 468: SOBE ao 159",
-  "Dia 468: +0 conferência"
+  "Dia 468: +0 conferência",
+  "Dia 472: +350 472: o ERYGAL (Raro 35, o guardião do portão de Dragal), pelo Toque do Ceifador (nível × 10)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 98,
-  "xp": 28423,
+  "xp": 28773,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -130,7 +130,8 @@
    "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)",
    "+350 469: o BRAKOS (Raro 35, Vida), morto nos canais do Delta (nível × 10)",
    "+500 Tick 469: PASSO (comanda a guarda e a milícia; treina a milícia; caça)",
-   "Tick 469: SOBE a 98 (de 96: fila de XP)"
+   "Tick 469: SOBE a 98 (de 96: fila de XP)",
+   "+350 472: o ERYGAL no portão de Dragal"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -284,7 +285,8 @@
    "+500 Tick 462: PASSO (mestre da bancada; o martinete)",
    "Dia 462: VOTO VENCIDO no conselho (OS TRÊS ÉDITOS DE NOVO (462; a venda da Fornalha já está no ): queria A) os três: a Feira Franca em Levis, o Físico e o Grã",
    "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria A) em toda cidade (560 por semana)",
-   "Dia 465: lealdade 6 → 7 (465: o rei disse sim à escola para os filhos da Cinza (a ambição dele: fundar uma escola))"
+   "Dia 465: lealdade 6 → 7 (465: o rei disse sim à escola para os filhos da Cinza (a ambição dele: fundar uma escola))",
+   "Dia 472: 472: a escola dele abriu na forja grande e ficou VAZIA: a mão pintada na porta; nenhum menino da Cinza veio (CZ72 [4])"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
@@ -3635,7 +3637,7 @@
  },
  "Moreth": {
   "nivel": 233,
-  "xp": 32555,
+  "xp": 32905,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3743,7 +3745,8 @@
    "+500 Tick 462: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)",
    "+350 469: o BRAKOS (Raro 35, Vida), morto nos canais do Delta (nível × 10)",
-   "Tick 469: SOBE a 233"
+   "Tick 469: SOBE a 233",
+   "+350 472: o ERYGAL no portão de Dragal"
   ],
   "tracos": [
    "LEAL",
@@ -5517,7 +5520,7 @@
  },
  "Eiagrir": {
   "nivel": 128,
-  "xp": 25738,
+  "xp": 26088,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5591,7 +5594,8 @@
    "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)",
    "+350 469: o BRAKOS (Raro 35, Vida), morto nos canais do Delta (nível × 10)",
    "+1000 Tick 469: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
-   "Tick 469: SOBE a 128 (de 126: fila de XP)"
+   "Tick 469: SOBE a 128 (de 126: fila de XP)",
+   "+350 472: o ERYGAL no portão de Dragal"
   ],
   "ultima_subida": 469,
   "tracos": [
@@ -7434,7 +7438,8 @@
    "Dia 455: 455: no portão da Fornalha, de noite, pede para ver a forja; o Gonde diz que não; o Ulurve diz que é o ferreiro que levou os braseiros do Clã",
    "Dia 455: 456: a lâmina de prova na forja grande, de ferro comum: ÉPICA (65; quase Única); o olho do rei não acha marca de escola (SM56 26); (OCULTO, SP56 [6]) é pago pela ALMISION",
    "Dia 458: 458: aceitou o posto na forja grande, vigiado (3d); (SS58 19) de noite o CORVO GRANDE desceu no telhado da casa onde ele dorme, e ele abriu a janela: a Sira viu",
-   "+1000 Tick 462: MISSÃO/FEITO (em Ireviel desde o 455: o TALENTO que apareceu (EVENTO [18]); pede para ver a Fornalha)"
+   "+1000 Tick 462: MISSÃO/FEITO (em Ireviel desde o 455: o TALENTO que apareceu (EVENTO [18]); pede para ver a Fornalha)",
+   "Dia 472: 471: SUMIU da forja grande antes de a ordem de prisão chegar (SE71 [1]): a cama vazia, a janela aberta"
   ],
   "classe": "FORJA (um ferreiro de mão rara; a classe do Livro em cena)",
   "ocupacao": "em Ireviel desde o 455: o TALENTO que apareceu (EVENTO [18]); pede para ver a Fornalha"

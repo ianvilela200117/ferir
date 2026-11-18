@@ -1,0 +1,6 @@
+LEI DAS AÇÕES: Erygal (nível 35) contra 4 · PV 280/280 · RD 5 · 2 ações · reação 1 · grupo: Ferir 3, Moreth 4, Eiagrir 3, Eliane 2
+INICIATIVA: Erygal 2d20+3 = 27 × o grupo 2d20+14 (média) = 39 → o grupo age primeiro
+--- RODADA 1 · Erygal 280/280
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 810; [[13], [11]]+34=58 vs 38 pega em cheio → 805 (-525)
+  Erygal CAI
+FIM: morto · rodadas 1 · mortos [] · PV -525/280 · grupo {'Ferir': 408, 'Moreth': 600, 'Eiagrir': 420, 'Eliane': 260}

@@ -3431,6 +3431,40 @@
    "chegada": "[3] em 1d3 [1] dias",
    "resumo": "CLIMA ESTRANHO — Lumade",
    "toca": true
+  },
+  {
+   "dia": 470,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "nome: Kasvil\ndesejo: casar com quem ama\nambição (relógio de 4): formar uma companhia\nmedo: a humilhação pública\nsegredo: fez um pacto\nlinha vermelha: nunca entrega um amigo à lei\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: AMBICIOSO e ORGULHOSO\n————————————————————————————————————————",
+   "noticia_chega": 470,
+   "chegada": "[1] hoje",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — as Montanhas de Fogo (Kasvil)",
+   "toca": false
+  },
+  {
+   "dia": 471,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 473,
+   "chegada": "[3] em 1d3 [2] dias",
+   "leitura": "febre",
+   "resumo": "PESTE OU DESASTRE: febre — Kreade (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 472,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Lumron (terra nova)",
+   "toca": false
   }
  ]
 }

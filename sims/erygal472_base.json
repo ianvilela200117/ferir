@@ -1,0 +1,19 @@
+{
+ "monstro": {
+  "nome": "Erygal",
+  "cat": "Raro",
+  "nivel": 35,
+  "pv": 280,
+  "df": 24,
+  "rd": 3,
+  "at": 14,
+  "dado": "1d8",
+  "mult": 2.5,
+  "moral": false,
+  "essencia": "Metal",
+  "fraqueza": "Luz",
+  "nota": "472 (EG71 [3]): o guardião do portão afundado de Dragal, o 'homem de ferro no rio' (o atlas: Raro 35, morto-vivo de Metal; quebra armas; fraco a Podridão e água corrente); as contas do gerador para Raro 35; morto-vivo: a LANÇA DO SOL dobra contra mortos (o feitiço), por isso a fraqueza da luta é LUZ; não foge (guarda o portão)",
+  "nao_roda": ["QUEBRA ARMAS: a primeira arma Rara ou menor que o acerta se quebra; acima disso perde 1d6 de durabilidade (as armas do grupo são Lendárias ou acima: só durabilidade; declarado)"]
+ },
+ "grupo": []
+}

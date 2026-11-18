@@ -1,0 +1,47 @@
+[12:05:49] Dia 471 · Pressão 5/5 · evento local 1d20 [8] -> briga na feira
+  O TEMPO (12 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: geada cedo, calmo (d6 [5] muda, d20 [19] · vento d6 [1]) → PERIGO PARA A COLHEITA que ainda está no campo
+   o Porto de Marasar: nublado, vento firme (d6 [6] muda, d20 [8] · vento d6 [5])
+   Levis: neblina, calmo (d6 [5] muda, d20 [12] · vento d6 [1]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Farenta: limpo, brisa (d6 [4] muda, d20 [3] · vento d6 [3])
+   O RIO: baixo [31/100]
+  avistamento de monstro 1d20 [14] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [4] Morte de figura importante · encadeamento 1d20 [10] Herói local · ONDE: d19 [15] Zaitor (terra nova)
+  EVENTO DE MUNDO (PERTO) 1d20 [19] Fronteira muda (terra tomada ou perdida) · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · ONDE: d8 [2] Levis e Levis-baixa
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [1] Guerra · encadeamento 1d20 [16] Alguém some · ONDE: d27 [24] Haula (terra nova)
+  Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 471 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [1]
+    ONDE: d27 [27] Kreade (terra nova)
+    A NOTÍCIA: [3] em 1d3 [2] dias
+    → LEITURA DO DADO: febre
+    ——
+  O MUNDO VIVO — Dia 471
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Altheltia → Aeliae (PAIXÃO PROIBIDA) d20 [7] nada visível
+    FAÍSCA: Braeth (o ancião do Clã) acusa em público Skedda, por causa de uma dívida antiga
+    FAÍSCA: Seline acusa em público a casa da fundição, por causa de uma criança
+    FAÍSCA: Iorin esconde um filho de Kasgal, por causa de vingança
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #776 (era do Dia 469): A FESTA DA COLHEITA: se o rei (ou a Intendente) paga 200, a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  ▶ AGENDA #777 (era do Dia 469): o CONSELHO vota de novo os três éditos (PC62 C: esperar uma semana)
+  ▶ AGENDA #784 (era do Dia 469): a ORDEM DO REI (3b, 463): os três éditos por cima do conselho (a Feira Franca em Levis, o Físico, o Grão Guardado): entram no tick semanal; Legitimidade −1 então (o rei pode trocar ou desfazer até lá) · e a Intendente paga a mesa da Colheita (3a, 200)
+  ▶ AGENDA #789 (era do Dia 469): a carta do CEDUION chega ao rei no Delta (CD53 [5]: ele pede perdão e oferece ensinar um feitiço do 7º círculo) · e a do mensageiro do CELOCUS (LM56: o Círculo da Areia Cantante tomou o vale de cima de Lumade; ele pede ajuda pelo pacto)
+  ▶ AGENDA #817 (era do Dia 469): FACÇÃO CUMPRIU O OBJETIVO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ✉ NOTÍCIA QUE CHEGA HOJE: Maneus, o Afogado do Vento (Lendário, Telosus): marca território: o sinal dele aparece mais perto de gente · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Thargos (Mítico, as Fundas do Norte): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [2] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Varogh (Lendário, Steunn): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Bruur (Épico, Marasar): é caçado por alguém (uma companhia, um Lendário, um culto) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Ireviel e o rio): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [11] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): dá um passo no que quer · COMO CHEGA: d20 [12] FIEL
+  ✉ notícia de longe que chega hoje: o Círculo da Areia Cantante (Yaelane): entrou em Ithium e levou o que ele guardava · COMO CHEGA: d20 [17] FIEL

@@ -1,0 +1,306 @@
+{
+ "monstro": {
+  "nome": "Erygal",
+  "cat": "Raro",
+  "nivel": 35,
+  "pv": 280,
+  "df": 24,
+  "rd": 3,
+  "at": 14,
+  "dado": "1d8",
+  "mult": 2.5,
+  "moral": false,
+  "essencia": "Metal",
+  "fraqueza": "Luz",
+  "nota": "472 (EG71 [3]): o guardião do portão afundado de Dragal, o 'homem de ferro no rio' (o atlas: Raro 35, morto-vivo de Metal; quebra armas; fraco a Podridão e água corrente); as contas do gerador para Raro 35; morto-vivo: a LANÇA DO SOL dobra contra mortos (o feitiço), por isso a fraqueza da luta é LUZ; não foge (guarda o portão)",
+  "nao_roda": [
+   "QUEBRA ARMAS: a primeira arma Rara ou menor que o acerta se quebra; acima disso perde 1d6 de durabilidade (as armas do grupo são Lendárias ou acima: só durabilidade; declarado)"
+  ]
+ },
+ "grupo": [
+  {
+   "nome": "Ferir",
+   "nivel": 159,
+   "at": 34,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 10,
+   "df": 45,
+   "rd": 10,
+   "pv": 408,
+   "vigor": 9,
+   "heroi": true,
+   "imune_empurrao": true,
+   "essencia": "Vento",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho",
+   "magias": [
+    {
+     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
+     "dano": "24d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": ""
+    },
+    {
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo foco Mítico ×10, em ÁREA vale metade: ×5; 7 por dia; FOGO)",
+     "dano": "8d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "essencia": "Fogo"
+    }
+   ],
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · sabe ERGUER O CAÍDO (Luz 6º) · RECEITA MESTRA DO SERVO ARMADO · GIBÃO DE ORLOXA DO REI (Mítico, inteiro desde o Sob Medida 4): 1x por cena +4 de Defesa · RD +3 contra fogo · RD 3 contra doença e veneno · 1x POR DIA DESFAZ UM GOLPE RECEBIDO · não é derrubado nem empurrado · esconde",
+   "desfaz": 1,
+   "desfaz_nome": "o Gibão de Orloxa do Rei"
+  },
+  {
+   "nome": "Moreth",
+   "nivel": 233,
+   "at": 44,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 15,
+   "df": 50,
+   "rd": 8,
+   "pv": 600,
+   "vigor": 15,
+   "agi": 12,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE BRASAS (a Espada do Moreth, foco Mítico ×10, em ÁREA vale metade: ×5; 1x por cena; FOGO)",
+     "dano": "8d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "essencia": "Fogo"
+    },
+    {
+     "nome": "TREMOR DE FERRO (Arte de maça, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      4
+     ],
+     "efeito": "derruba",
+     "cd_efeito": 25,
+     "area": true
+    },
+    {
+     "nome": "CORTE DO HORIZONTE (Arte de espada, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      5
+     ],
+     "ignora_rd": 0.5
+    },
+    {
+     "nome": "BIGORNA (Arte de maça, 6º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "13d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      6
+     ],
+     "efeito": "dobra_se_caido"
+    },
+    {
+     "nome": "CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      7
+     ],
+     "area": true
+    },
+    {
+     "nome": "FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      8
+     ]
+    },
+    {
+     "nome": "QUEBRA-GUARDA (Arte de maça, 2º; G30: metade do multiplicador da arma, ×5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 5.0,
+     "cd": 30,
+     "rodada": [
+      9
+     ],
+     "efeito": "quebra_guarda"
+    }
+   ],
+   "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido, Corte Do Horizonte, Quebra-Guarda, Tremor De Ferro, Bigorna; auras: Pele de Pedra",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "artes": {
+    "maestria": "Lendário",
+    "teto": 6,
+    "artes": [
+     "Fio Duplo",
+     "Corte Corrido",
+     "Corte Do Horizonte",
+     "Quebra-Guarda",
+     "Tremor De Ferro",
+     "Bigorna"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 5.0
+   },
+   "arma": [
+    "espada",
+    "maça"
+   ],
+   "rd_ess": {
+    "Podridão": 5
+   }
+  },
+  {
+   "nome": "Eiagrir",
+   "nivel": 128,
+   "at": 36,
+   "dado": "1d10",
+   "mult": 3,
+   "b": 12,
+   "df": 42,
+   "rd": 8,
+   "pv": 420,
+   "vigor": 13,
+   "heroi": true,
+   "magias": [
+    {
+     "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
+     "dano": "16d6",
+     "mult": 5,
+     "cd": 30,
+     "rodada": [
+      1,
+      2
+     ],
+     "essencia": "Luz"
+    },
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      3
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      4
+     ]
+    }
+   ],
+   "pecas": "LANÇA DO RIO LIMPO (Primordial; Vida, Som e Gelo; Lança do Sol) · LANÇA DE VEYDUN (Mítica, reserva) · COURAÇA DE ASCRA (Mítica) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra, Raiz de Pedra menor",
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra",
+     "Raiz de Pedra menor"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança",
+   "rd_ess": {
+    "Fogo": 5
+   }
+  },
+  {
+   "nome": "Eliane",
+   "nivel": 98,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 260,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança"
+  }
+ ]
+}
