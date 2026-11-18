@@ -7972,10 +7972,15 @@
   "log": [
    "Dia 500: entra no livro (nível 120)",
    "Dia 500: 500: entra no livro (nível 120; o gerador deu SELEK, que bate no cânone: trocado por UXRAXION, nomes.py arcaica livre): CRUEL e AMBICIOSO · desejo: SAIR DA CIDADE · ambição: conquistar terra · medo: a HUMILHAÇÃO PÚBLICA · (OCULTO) segredo: traiu um amigo uma vez · linha vermelha: nunca trabalha para uma certa facção · dilema: a ambição dele exige trair alguém que ele ama",
-   "Dia 501: 501: na fala a sós com o rei nas estacas (FL01 16) ACEITOU: a revolta acaba; o culto fica como fé, sem armas e sem veneno; deixou as estacas; Levis-baixa voltou à Brara; as dívidas pequenas do bairro rasgadas"
+   "Dia 501: 501: na fala a sós com o rei nas estacas (FL01 16) ACEITOU: a revolta acaba; o culto fica como fé, sem armas e sem veneno; deixou as estacas; Levis-baixa voltou à Brara; as dívidas pequenas do bairro rasgadas",
+   "502: os traços que já pesaram no FL01 e no SL02 (CRUEL, AMBICIOSO) postos na ficha; antes o tracos.py dizia \"nenhum\""
   ],
   "classe": "o líder do Culto do Xaathis (Levis-baixa)",
-  "ocupacao": "sentado nas estacas do selo velho do rio acima de Levis, com o culto (desde o ~471)"
+  "ocupacao": "em Levis-baixa (deixou as estacas pelo acordo do 501; o culto é fé sem armas); veio às estacas a chamado do rei no 502 e recusou o selo (\"o selo é do deus\")",
+  "tracos": [
+   "CRUEL",
+   "AMBICIOSO"
+  ]
  },
  "Zutocca": {
   "nivel": 40,
@@ -7984,6 +7989,6 @@
    "Dia 501: entra no livro (nível 40)"
   ],
   "classe": "homem dos conselheiros da Liga em Levis",
-  "ocupacao": "PRESO pela Brara no 501 (pagou o capitão Zubacca pela emboscada do vau; a carta do Aldoveri)"
+  "ocupacao": "TRABALHO FORÇADO nas minas de cima de Levis (o julgamento em praça do 502), com os onze do vau, para os da Mina Fechada"
  }
 }

@@ -42,7 +42,7 @@ elif a[0]=='xp':
         db[n]['xp']+=q; db[n].setdefault('log',[]).append(f"+{q} {m}"); print(f"{n}: +{q} ({m}) → {db[n]['xp']}/{100*db[n]['nivel']}")
     save()
 elif a[0]=='tick':
-    dia=a[1]; ndia=int(dia) if dia.isdigit() else 0; sobem=[]
+    dia=a[1]; ndia=int(dia) if dia.isdigit() else 0; sobem=[]; subidas=[]
     for n,v in db.items():
         if 'MORTO' in v.get('estado',''): continue   # auditoria 203
         if not v.get('nivel'): continue   # Dia 245: sem ficha (nível 0) não sobe sozinho; gerar o nível quando entrar em cena
@@ -56,6 +56,14 @@ elif a[0]=='tick':
             v['xp']-=100*v['nivel']; v['nivel']+=1; lim-=1
         v['ultima_subida']=ndia; v.setdefault('log',[]).append(f"Tick {dia}: SOBE a {v['nivel']}" + (f" (de {de}: fila de XP)" if v['nivel']-de>1 else ''))
         print(f"{n}: SOBE a {v['nivel']}" + (f" (de {de}, fila de XP)" if v['nivel']-de>1 else '') + f" (sobra {v['xp']}/{100*v['nivel']})"); sobem.append(f"{n} {v['nivel']}")
+        subidas.append((n, de, v['nivel']))
     save()
+    # 502 (G39, pedido do jogador): o nível destrava o resto, sozinho: o PV da ficha de combate, a classe da faixa nova (a Prova),
+    # o Despertar no 100/200/300 e as Artes. Depois do save(), porque o encadeia.py grava no npcs.json por conta própria.
+    try:
+        import encadeia
+        for n, de, para in subidas:
+            for l in encadeia.subiu(n, de, para, dia): print(l)
+    except Exception as e: print('⚠ G39: o encadeamento da subida falhou:', e)
     if RES and sobem: print('::R:: SOBEM DE NÍVEL: '+' · '.join(sobem))
 else: sys.exit(__doc__)

@@ -292,6 +292,10 @@ def um_dia(estrada, limite):
             ev, en = d(20), d(20); od, onome = _mg.onde_de(_M, alvo)
             C.append(f'  EVENTO DE MUNDO ({rot}) 1d20 [{ev}] {EVENTO[ev - 1]} · encadeamento 1d20 [{en}] {ENCADEIA[en - 1]} · ONDE: {od}')
             R.append(f'  ★ EVENTO DE MUNDO ({rot}) [{ev}] {EVENTO[ev - 1]} · encadeamento [{en}] {ENCADEIA[en - 1]} · ONDE: {od}' + ('  ◆ TOCA A CASA' if toca_a_casa(onome) else ''))
+            if 'volta em 1d6' in ENCADEIA[en - 1]:   # 502 (G39): antes o 'volta em 1d6 dias' ficava escrito e ninguém rolava (481, GS81)
+                vd = d(6)
+                nucleo.agenda_add(dia + vd, f'O EVENTO DE MUNDO ({rot}) do Dia {dia} VOLTA: [{ev}] {EVENTO[ev - 1]} · ONDE: {od} · rolar o encadeamento de novo (tick.py: d20 na tabela ENCADEIA)', origem=f'tick.py {dia} (G39)')
+                C.append(f'    G39: volta em 1d6 [{vd}] → Dia {dia + vd} (posto na agenda)'); R.append(f'    ↳ volta em 1d6 [{vd}]: Dia {dia + vd} (na agenda)')
         C.append('  Pressão zera')
         t['pressao'] = 0
     C.append('  Fortuna volta ao máximo')
@@ -365,6 +369,11 @@ def um_dia(estrada, limite):
         n1, r1, err = roda('cresce.py', 'tick', dia)
         C += ['      ' + l for l in n1] or ['      ninguém sobe nesta semana' + (f' (falhou: {err})' if err else '')]
         R += ['    ' + l for l in r1]
+        # 502 (G39): o Despertar roda toda semana (rola só o que falta; quem já tem Dom não rola de novo)
+        C.append('   [13b] O DESPERTAR (despertar.py rola, G39: quem passou de 100/200/300 e ainda não tem o Dom):')
+        nd, _, err = roda('despertar.py', 'rola')
+        C += ['      ' + l for l in nd] or ['      ninguém' + (f' (falhou: {err})' if err else '')]
+        R += ['    ✦ ' + ('rolagem oculta (um grande do mundo despertou; o Dom está no tick_N.txt)' if 'OCULTO' in l else l) for l in nd if l.strip() and 'ninguém a despertar' not in l]
         # --- MOTOR 6: o reino, os relógios, a rotina e o livro, sem chamada à mão ---
         if nucleo.camada('clima'):
             C.append('   [14a] O CLIMA DA SEMANA (clima.py semana; pesa na Comida e no Comércio antes do dado do reino):')
@@ -445,6 +454,14 @@ def um_dia(estrada, limite):
         R.append(f'  AUDITORIA do Dia {dia}: ' + (f'{len(avisos)} avisos novos do conferidor' if avisos else 'o conferidor não achou nada novo') + ' · no REGISTRO: 1 coisa esquecida e 1 sistema ajustado')
         R += ['    ' + l for l in avisos[:8]]
         t['proxima_auditoria'] = dia + 5
+    try:   # 502 (G39, pedido do jogador): o que vence em 3 dias, o que atrasou, as escolhas em aberto e as fichas velhas
+        import encadeia
+        pend = encadeia.pendencias(3, dia)
+        if pend:
+            C.append('  G39 — PENDÊNCIAS (encadeia.py pendencias):'); C += ['    ' + l for l in pend]
+            R.append('  ⏳ G39 PENDÊNCIAS:'); R += ['    ' + l for l in pend[:10]]
+    except Exception as ex:
+        R.append(f'  ⚠ G39: as pendências não rodaram: {ex}')
     ag, par = agenda_linhas(dia, rs.get('outras_noticias_max', 8))
     C += ag
     R += ag

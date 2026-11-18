@@ -448,6 +448,10 @@ if __name__=='__main__':
                     if g.get('caido') or g.get('recuou'): feridos.rola(g['nome'], caiu=bool(g.get('caido')), medicina=med, causa=F['monstro']['nome'])
         except ImportError: pass
         print('FIM:', r['res'], '· rodadas', r['rnd'], '· mortos', r['mortos'], '· PV', f"{r['pv']}/{r['pvm']}", '· grupo', {g['nome']:g['pv'] for g in r['G']})
+        if 'sem_xp' not in sys.argv:   # 502 (G39, pedido do jogador): o XP da luta vai sozinho para quem lutou
+            try:
+                import encadeia; F['_arquivo']=sys.argv[1]; encadeia.xp_luta(F, r)
+            except Exception as e: print('⚠ G39: o XP da luta NÃO foi lançado:', e)
         caidos=[g['nome'] for g in r['G'] if g['pv']<=0]
         if r['mortos'] or caidos:   # 426 (G9): a trava que faltou na forquilha
             print('⛔ G9: PARAR AQUI, DENTRO DA HORA. Mortos:', r['mortos'] or 'nenhum', '· caídos:', caidos or 'nenhum')

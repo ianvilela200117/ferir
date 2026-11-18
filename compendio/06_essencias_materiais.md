@@ -155,24 +155,34 @@ Saem do `ficha.json` a cada vez que o `livro_sync.py` roda. São drops de bichos
 
 | Material | A casa tem | O que se sabe |
 | --- | --- | --- |
+| **bzarnur** | ~75 | a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3]) |
 | **draek** | ~5 | o couro do Neane (Raro, Sombra) |
+| **drakos** | ~3.5 | 478 e 483: o ícor dos cinco bichos da colmeia (Raro, Som: ofício, afina a peça, +2 em Processo) |
 | **eryra** | ~1 | a glândula do Neane (1 porção; Raro, Sombra) |
-| **gusta** | ~20 | a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno |
+| **fenra** | ~3.5 | 478 e 483: os olhos dos cinco bichos da colmeia (Raro, Som: armadura, ouve passos a 20 m) |
+| **gnaos** | ~73 | a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3]) |
+| **gusta** | ~6 | a rainha Zatha: asa Épica de Podridão + Silêncio, armadura: RD 3 contra doença e veneno |
 | **heald** | ~3 | a presa do Morek (Único, Espinho; arma: o golpe prende como raiz) |
 | **laiel** | ~2 | os ossos do Zyza (Épico, Podridão + Sombra; arma: a ferida infecciona, Vigor CD 16 |
 | **laliel** | ~6 | o olho do Morek (Único, Espinho) |
 | **leor** | ~10 | a rainha Zatha: olho Épico de Podridão, armadura: RD 3 contra doença e veneno |
 | **maor** | ~4 | os olhos do Zyza (Épico, Podridão + Mente; armadura: RD 3 contra doença e veneno |
-| **nee** | ~30 | o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6 |
+| **nee** | ~16 | o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6 |
 | **neiel** | ~20 | a rainha Zatha: glândula Épica de Podridão, ofício e poção: dissolve impurezas, +3 em Matéria |
 | **sangue-de-sombra** | ~1 | o sangue do Neane, guardado para o SYSRETH (1 porção = 2 kg da liga) |
 | **sasis** | ~0 | o pelo do Morek (Único, Espinho + Raio) |
+| **seane** | ~2 | o BRAKOS (Raro, Vida; couro): cada golpe que fere cura 4 |
 | **seor** | ~6 | as escamas do Zyza (Épico, Podridão; armadura: RD 3 contra doença e veneno |
 | **ssythis** | ~0 | a escama do Morek (Único, Espinho) |
+| **thura** | ~5 | a seiva do Yolorvus (Épico, Luz: ofício e poção, +3 em Técnica) |
+| **uldun** | ~80 | a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3]) |
+| **veygal** | ~7 | as presas do Yolorvus (Épico, Luz: arma, cega 1 rodada com 18-20) |
 | **vorgel** | ~2 | glândulas do Vorthen (unidades, não kg) |
-| **yeviel** | ~60 | o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia |
-| **ziis** | ~6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
+| **yaane** | ~3.5 | o BRAKOS (Raro, Vida |
+| **yeviel** | ~54 | o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia |
+| **zainar** | ~11 | 478 e 483: os ossos dos cinco bichos da colmeia (Raro, Som: arma, o grito do metal atordoa, Vontade CD 14) |
+| **ziis** | ~5.6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
 | **ziza** | ~0.8 | a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento) |
 
-**Núcleos na mão do rei:** núcleo-épico-de-espinho ×1 · núcleo-épico-de-podridão ×2 · núcleo-épico-de-água ×1.
+**Núcleos na mão do rei:** núcleo-lendário-de-silêncio ×1 · núcleo-épico-de-espinho ×1 · núcleo-épico-de-luz ×1 · núcleo-épico-de-podridão ×2 · núcleo-épico-de-água ×1.
 <!-- SYNC:FIM -->

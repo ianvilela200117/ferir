@@ -61,6 +61,8 @@ def ver(F):
         print('  MATERIAL: ' + ' · '.join(f"{k} ~{v['kg']:g} kg" for k, v in F['materiais'].items()))
     if F.get('recursos'):
         print('  RECURSOS: ' + ' · '.join(f"{k} {v['tem']}/{v['max']} (por {v['renova']})" for k, v in F['recursos'].items()))
+    if F.get('escolhas_pendentes'):   # 502 (G39)
+        print('  ⏳ ESCOLHAS DO JOGADOR EM ABERTO: ' + ' · '.join(F['escolhas_pendentes']) + '  (python3 ficha.py escolhido "texto" quando ele escolher)')
     for av in F.get('avisos', []):
         print('  ⚠ ' + av)
 
@@ -94,8 +96,10 @@ def sobe(F, motivo):
         out.append(f'  próximo nível em {br(limiar(n))} XP')
         if n % 3 == 0:
             out.append(f'  ★ PONTO DE HABILIDADE do {n}: o jogador escolhe (ou o Mestre propõe)')
+            F.setdefault('escolhas_pendentes', []).append(f'o PONTO DE HABILIDADE do {n}')   # 502 (G39): fica na lista até o jogador escolher
         if n % 10 == 0:
             out.append(f'  ★ TALENTO do {n}: o jogador escolhe')
+            F.setdefault('escolhas_pendentes', []).append(f'o TALENTO do {n}')
         for marco in F.get('marcos_de_nivel', []):
             if marco['nivel'] == n:
                 out.append(f"  ★ MARCO DO {n}: {marco['texto']}")
@@ -118,6 +122,11 @@ def main():
         ver(F)
         return
     c = a[0]
+    if c == 'escolhido' and len(a) > 1:   # 502 (G39): o jogador escolheu: tira da lista de escolhas pendentes
+        alvo = ' '.join(a[1:]).lower(); antes = F.get('escolhas_pendentes', [])
+        F['escolhas_pendentes'] = [e for e in antes if alvo not in e.lower()]
+        grava(ARQ, F)
+        print('escolhas pendentes: ' + (' · '.join(F['escolhas_pendentes']) or 'nenhuma')); return
     dia = dia_atual()
     if c == 'xp':
         q = int(a[1].replace('.', ''))

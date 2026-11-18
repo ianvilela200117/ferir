@@ -1955,3 +1955,51 @@ O rei sentiu a coisa voltar nele também. A Lança do Sol, a Cura Maior, a Visã
 Do outro lado, entre as estacas de dentes de ferro, o rio velho corria escuro sobre o selo aberto.
 
 - **Parada:** noite do 501, Levis. O acordo feito. Doze presos para o julgamento em praça. O selo aberto. O rei no nível 50.
+
+## Dia 502 — a praça de Levis, as estacas
+
+### A praça, manhã do 502
+A geada tinha caído de madrugada. Quando a guarda da Brara trouxe os doze pela rua da fundição, o restolho dos campos atrás das casas ainda estava branco, e gente de Levis já andava curvada entre as fileiras, arrancando o que dava antes do sol. Quem ficou para o julgamento ficou com as mãos sujas de terra.
+
+Os onze do vau vinham amarrados pela cintura, um atrás do outro. Os sete feridos andavam como podiam; um deles, o da perna aberta, ia num carrinho de minério empurrado por dois guardas. O Zutocca vinha por último, de capa emprestada, de queixo erguido.
+
+O rei não subiu no estrado. Ficou no chão, na frente dele, com o Moreth meio passo atrás.
+
+"Vocês vieram ao último vau para matar quem levava a pedra do rei", disse. "Tinham ouro do Porto e uma carta do Aldoveri. Não vão morrer por isso. Vão trabalhar nas minas de Levis cinco anos, como os outros."
+
+A praça não respondeu logo. Alguém, no fundo, cuspiu no chão. Uma mulher de Levis-baixa, com a boca falhada do culto, olhou para o Zutocca e depois para o rei, e não disse nada.
+
+Quem falou foi um velho da Mina Fechada. Tossia seco, a tosse cinza que todo mineiro de cima conhece, e precisou de duas tentativas para chegar ao fim da frase.
+
+"As de cima. Mande eles para as de cima, senhor. Os trinta e dois da Liga que o senhor condenou no 434 limparam o caminho da mina que o Ithvil quebrou. Estes podem fechar as velhas. Ninguém nosso quer mais descer lá."
+
+A Brara cruzou os braços. "Lá em cima o pó mata em dois anos."
+
+"Mata os nossos também", disse o velho.
+
+O Zutocca riu, curto. "O Aldoveri paga melhor que a Mina, velho."
+
+Ninguém riu com ele. A praça murmurou uma coisa só, baixa, que não era raiva: era aprovação. A Brara descruzou os braços e mandou a guarda virar os doze para a estrada da serra.
+
+### As estacas, tarde do 502
+O Uxraxion veio porque o rei mandou chamar, e veio sozinho. Desde o acordo não se sentava mais ali. Parou na beira da água, entre duas estacas de dentes de ferro, e não olhou para dentro.
+
+A Eliane ficou um passo atrás do rei. Desde o Despertar ela via o que os outros não viam, e o rio ali tinha uma luz fria por baixo, fina como óleo na água, que nenhum dos outros enxergava.
+
+"Eu cumpri", disse o rei. "As dívidas estão rasgadas. O bairro está com a Brara. Agora eu quero fechar isto. Um dia de trabalho. Seu povo pode olhar."
+
+O Uxraxion passou a língua no buraco dos dentes.
+
+"Você rasgou o livro de um homem morto. Isto aqui", e apontou a água sem olhar, "nós abrimos com as nossas mãos. Custou o que custou. O selo é do deus."
+
+"E se eu fechar mesmo assim?"
+
+"Aí você terá rasgado o livro duas vezes. O primeiro era do Ardenghi. O segundo é o nosso."
+
+A Eliane não disse nada. Depois, com o Uxraxion já de costas, subindo para o bairro, ela chegou perto do rei e falou baixo:
+
+"Ele não mentiu. Acredita em cada palavra."
+
+O rei ficou olhando a água. Entre as estacas, a luz fria corria devagar, rio abaixo, na direção de Levis.
+
+- **Parada:** tarde do 502, Levis, as estacas. Os doze às minas de cima. O Uxraxion recusou o selo. O selo aberto.

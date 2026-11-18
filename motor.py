@@ -42,6 +42,7 @@ REPUTAÇÃO (G21)        python3 reputacao.py ver · muda "QUEM" +N "motivo"
 HABILIDADES À MÃO (G24) python3 habilidades.py mao   (a linha 🛠️ do turno) · usa "Nome" · carga "Nome" -1|cheio
 A FICHA DO BICHO       python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]   (depois combate.py monta ... conferido=1)
 ARTES E DESPERTAR      python3 artes.py ver|aplica|lista ARMA NIVEL|grandes · python3 despertar.py ver [tudo]|rola
+ENCADEAMENTOS (G39)    python3 encadeia.py pendencias [DIAS] · sincroniza   (luta.py lança o XP sozinho; sem_xp desliga) · obra_valor.py ... lanca=1 ajudantes=A,B teto=CAT · ficha.py escolhido "TALENTO do N"
 ÉDITOS · CRIAS · CANÇÕES   python3 edito.py ver|decreta|revoga · python3 cria.py ver|nova|laco|morre · python3 cancao.py ver|compoe
 COLETA · FESTAS · ATLAS    python3 coleta.py ver|rola|esfola|equipe · python3 festas.py ver|hoje · python3 atlas.py ver [tudo]|nova|conhece
 O LIVRO E OS NPCs      python3 livro_sync.py · python3 classe_mapa.py [ver] e python3 classe.py migra

@@ -438,6 +438,10 @@
   {
    "nome": "ESCOLA FUNDA (LUZ)",
    "efeito": "talento do 40 do Herdeiro (493; Magia Mestre): na LUZ, +2 no teste e +1 dado (a Lança do Sol, a Cura Maior, o Purificar, o Erguer o Caído); a SOMBRA custa +5 (a escola proposta pelo Mestre; o jogador pode trocar antes de usar)"
+  },
+  {
+   "nome": "MANA LARGA",
+   "efeito": "talento do 50 do Herdeiro (501; Int 80): +20 de Mana máxima"
   }
  ],
  "pericias": {

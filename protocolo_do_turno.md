@@ -59,7 +59,7 @@ Ninguém precisa me lembrar disto:
 - **G4 · A CURA:** sara 1/10 do PV máximo por noite de descanso, para todos.
 - **TETO LENDÁRIO DE UMA PEÇA QUE ALCANÇOU MAIS:** ficam 3 efeitos e a magia, pela ordem rolada.
 - **G5 · O ESTOQUE DA CIDADE (403, ordem do rei; vale desde a semana do 406):** a Intendente separa 400 por semana para material de forja nos mercados das quatro cidades; d20 por semana: 1-10 Comum, 2d6 kg (12/kg) · 11-17 Incomum, 1d4 kg (50/kg) · 18-19 Raro, 1 kg (200/kg) · 20 Épico, 0,5 kg (800/kg: passa do orçamento, o rei decide) ou um rumor de núcleo; o que sobra volta ao cofre; núcleos pela ordem do G1 (compra se o cofre ficar acima de 10.000); nomes do Livro pelo gerador.py material. · **O CHAMADO** rola **d20+3** desde o 406 (G3; corrigido na rotina.json).
-- **G6 · O DESCONTO DOS FORÇADOS (noite do 406, palavra do rei; o jogador foi avisado):** enquanto os condenados ao trabalho forçado servirem (hoje **119**: os 78 do Ardenghi, os 2 saqueadores da costa, o Skarkek, os 6 da guarda da Torre Acesa e, desde o 434, os 32 da barca da Liga (servem em Levis); cinco anos a contar do 401, do 404 e do 434), toda **OBRA DO REINO** nova (`reino.py projeto`, em qualquer das quatro cidades) custa **quatro quintos** do preço: cobrar com `ficha.py cofre` o valor já descontado, arredondado para cima. **Não vale** para obra já paga, forja, material, soldo nem para a despesa semanal das guildas. Quem foge, morre, é resgatado ou toma a marca da Mão Queimada sai da conta: com **menos de 44** servindo (a metade) o desconto acaba. Lembrar na auditoria de 5 em 5 dias: contar os forçados.
+- **G6 · O DESCONTO DOS FORÇADOS (noite do 406, palavra do rei; o jogador foi avisado):** enquanto os condenados ao trabalho forçado servirem (hoje **131**: os 78 do Ardenghi, os 2 saqueadores da costa, o Skarkek, os 6 da guarda da Torre Acesa, desde o 434 os 32 da barca da Liga (servem em Levis) e, desde o 502, os 12 do vau com o Zutocca (as minas de cima de Levis, para os da Mina Fechada); cinco anos a contar do 401, do 404, do 434 e do 502), toda **OBRA DO REINO** nova (`reino.py projeto`, em qualquer das quatro cidades) custa **quatro quintos** do preço: cobrar com `ficha.py cofre` o valor já descontado, arredondado para cima. **Não vale** para obra já paga, forja, material, soldo nem para a despesa semanal das guildas. Quem foge, morre, é resgatado ou toma a marca da Mão Queimada sai da conta: com **menos de 44** servindo (a metade) o desconto acaba. Lembrar na auditoria de 5 em 5 dias: contar os forçados.
 - **G7 · A SÉRIE DE OFÍCIO (dia 422, palavra do rei; o jogador foi avisado):** a forja grande pode trocar a SÉRIE de armas da semana por uma série de FERRAMENTAS para uma cidade (picaretas, ferraduras e eixos, arados, anzóis e âncoras, lâminas de físico): custo de 300 a 600 conforme a série (a cidade de fora paga metade); UMA série por semana na forja grande, e na semana dela a série de armas não sai (o Herkald não ganha o XP das armas). Outras forjas do reino (a fundição velha de Levis; ferreiros pagos em Farenta) podem fazer uma série ao mesmo tempo, pagas à parte. EFEITO quando fica pronta: **+1 (mod) num pilar da cidade, até o 480** (o inverno; o motivo leva 'até o 480' para vencer sozinho). Não acumula: duas séries no mesmo pilar da mesma cidade valem +1. Não substitui obra: a obra dá passo DE VEZ; a série só ajuda o dado.
 
 ### G8 — O MUNDO QUE SE MEXE (pedido do jogador, Dia 422)
@@ -202,6 +202,47 @@ O texto inteiro está em `compendio/08_livro_nove.md` (a aba "Livro Nove" do Liv
 - O Livro diz "1x por sessão" (o ERUDITO, a Oportunidade do Motor) e não diz o que é uma sessão. O jogo aqui é contínuo, sem noite de mesa marcada, então a SESSÃO é a **SEMANA DE JOGO**: vai de um tick semanal ao seguinte.
 - O que é "1x por sessão" **volta no tick semanal** (o próximo é o do 462). É um recurso no `ficha.json` com `renova: semana`: o tick o enche sozinho; gastar é `python3 ficha.py usa Erudito`.
 - O ERUDITO pode ser usado de dois jeitos (os dois gastam a vez): o jogador pede um fato e a resposta é verdadeira (o texto do talento), ou vira uma FALHA do `saber.py` num fato verdadeiro (G10).
+
+### G39 — OS ENCADEAMENTOS (Dia 502, pedido do jogador: "se ativar um, ative o outro para não esquecer"; `encadeia.py`)
+O que depende de outra coisa agora vem ligado no script, e o Mestre não precisa lembrar. A lista inteira está no topo do `encadeia.py`.
+- **LUTA → XP.** Todo `luta.py` de luta de verdade (não o simulador) lança sozinho, no fim, o XP de quem lutou e ficou de pé. É nível do caído × 10 × caídos, × 10 se for Lendário, Mítico ou Primordial e × 5 se for chefe; no enxame vale `quantos`. Ferir recebe pelo `ficha.py` e os outros pelo `cresce.py`. Depois ele lembra o despojo e anota no envelope. `sem_xp` no comando desliga (luta de treino). Quem ajudou sem estar na ficha da luta ganha 1/4, à mão, no `cresce.py xp`.
+- **OBRA → XP.** `obra_valor.py ... lanca=1 ajudantes=A,B` lança o XP de Ferir e 1/4 para cada ajudante. Sem `lanca=1` o script mostra as duas linhas prontas. `teto=lendario` para a peça no teto (sem núcleo): os 20 seguem dando efeito, o QUASE e a Obra-Prima não passam do teto, e a magia sai da faixa da categoria final.
+- **NÍVEL → O RESTO.** Quando o `cresce.py tick` sobe um NPC, o `encadeia.subiu` faz o resto na hora:
+  - (a) a ficha de combate ganha PV +2 por nível (Motor IV) e o `nivel_ref` novo;
+  - (b) se a FAIXA da classe mudou (20, 50, 100, 150), corre a PROVA no d6: 1-2 falha e fica `prova_pendente`; 3-6 passa, e a classe sobe para uma da mesma família na raridade nova, sorteada do Livro, guardando as assinaturas antigas;
+  - (c) no 100, 200 e 300, o Despertar (`despertar.py rola`);
+  - (d) no 50, 150, 200, 250 e 300, as Artes da arma (`artes.py aplica`).
+- **REI SOBE → ESCOLHA.** Cada ponto (a cada 3 níveis) e talento (a cada 10) do rei fica em `ficha.json › escolhas_pendentes` até o jogador escolher (`python3 ficha.py escolhido "TALENTO do 60"`). O `ficha.py ver` e o tick mostram o que está em aberto.
+- **TODO DIA → AS PENDÊNCIAS.** O tick diário roda `encadeia.pendencias(3)` e põe no resumo:
+  - prazo da casa que vence em 3 dias e prazo vencido;
+  - escolha do jogador em aberto;
+  - herói sem o Dom do nível dele;
+  - ficha de combate de nível velho;
+  - Prova da classe por passar.
+  À mão: `python3 encadeia.py pendencias [DIAS]` (a 🧵 do turno lê daqui) · `python3 encadeia.py sincroniza` (todas as fichas de combate pelo nível).
+- **TODA SEMANA → O DESPERTAR.** O tick semanal roda `despertar.py rola` depois do `cresce.py` (pega quem escapou).
+- **EVENTO QUE "VOLTA EM 1d6 DIAS".** O tick rola o d6 na hora e põe na agenda o dia em que o evento volta. Antes ficava escrito e ninguém rolava (481).
+- O que ainda é à mão (fica no checklist): o XP da semana de quem fez algo fora de luta e obra (`cresce.py xp`, pela tabela XVI.4); o despojo; a Prova contada na cena.
+
+### G40 — O FOCO COM FEITIÇO QUE O REI NÃO SABE (Dia 502, pedido do jogador: "ver se tem como colocar feitiços que não sei"; o jogador foi avisado)
+- **Pode.** O feitiço que o rei sabe já conta como a receita do encanto. O que ele não sabe pede a **PESQUISA DE RECEITA** daquele feitiço (XXIII.9 e XI.6). Antes da primeira tentativa, o Mestre escreve no envelope a receita verdadeira: os 4 componentes e a condição.
+- **O teste:** d20 + Inteligência ÷ 5 + Encantamento (hoje 23 + 6 = **+29**) contra a CD do grau, em ordem: Fragmento 15 · Esboço 20 · Receita 25 · Receita Mestra 35.
+  - Cada tentativa custa **um dia** e o material do componente.
+  - Cada fonte tira 2 da CD, até −4 por tentativa: um texto antigo, uma obra antiga, um mestre (uma vez cada conversa) ou uma ruína.
+  - A falha rola a Serendipidade (XI.6).
+  - Peça Lendária ou acima pede a **Receita Mestra**: quatro graus, ao menos quatro dias por feitiço.
+  - A Receita dá 500 de XP e a Receita Mestra 1.000 (com `lanca=1`, o XP vai sozinho, G39).
+- **Os tetos (o equilíbrio):**
+  - (a) o círculo do encanto nunca passa da **condutividade do condutor** (XI.8; o shasha é 8, o tiald 10);
+  - (b) pela categoria da peça (a mesma faixa do X.2): até Lendária, do **1º ao 6º**; o **7º e o 8º** só em peça **Mítica ou Primordial** (pede núcleo, ou um ano de vida);
+  - (c) o **9º não se grava** (o preço é do conjurador);
+  - (d) no 7º e no 8º, a fonte tem de ser um Lendário, uma Receita Mestra ou um grimório antigo.
+- **Quantos por peça:** 1 encanto; 2 com condutor de condutividade 5 ou mais; **3 em peça Lendária ou acima** (XI.8).
+- **O uso:** o feitiço da peça sai **1x por cena, sem Mana**, pela mão de quem a empunha (mais vezes só com os 20 do encanto). O multiplicador é o da peça, não o do Foco de Osso.
+  - O componente que o Livro pede ao lançar (o núcleo de Luz da Ressurreição, a água de três templos, "algo que o morto amou") **segue sendo pedido a cada vez**.
+  - O que se grava na peça é o feitiço, não o preço dele.
+  - O feitiço de efeito **permanente** ou de um ano (a Muralha de Cidade, a Fortaleza do Chão, o Selo Santo) sai da peça **1x por semana**. O que já tem limite próprio ("1x por estação", "1x na vida") guarda o limite.
+- **O outro caminho:** aprender o feitiço numa aula (uma por semana, com quem sabe). Daí em diante ele conta como receita, sem pesquisa.
 
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).

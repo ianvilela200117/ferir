@@ -24,6 +24,7 @@ Uso:
   python3 obra_valor.py fichas                                  (mostra as fichas de valor guardadas)
 Opções: mao=N (no lugar da ficha) · mat=CAT · matx=N · martelo=CAT · bigorna=CAT · apoio=CAT · ofic=NOME|N · rec=GRAU · condicao=1
         ajud=N (soma dos ajudantes) · extra=N · pct=N · cdmenos=N · alma=N · fortuna=N · x19=1 (o 19 também explode)
+        teto=CAT (G39: a peça para nessa categoria, p.ex. teto=lendario sem núcleo) · lanca=1 (G39: lança o XP sozinho) · ajudantes=A,B (1/4 do XP cada)
 TIPO: arma armadura ferramenta objeto foco
 
 MOTOR 6 (Dia 379): as fichas de Ferir (quem=ferir, quem=ferir_enc) leem o NÍVEL e os ATRIBUTOS de ficha.json. Antes os
@@ -46,7 +47,7 @@ V_MAT  = {'sucata':-3,'comum':0,'incomum':2,'raro':4,'epico':7,'unico':10,'lenda
 V_FERR = {'improvisada':-2,'nenhuma':0,'comum':0,'incomum':1,'raro':2,'epico':3,'unico':5,'lendario':7,'mitico':10,'primordial':14}
 V_OFIC = {'campo':-4,'improvisada':-2,'comum':0,'boa':2,'grande':3,'mestra':4,'lendaria':6,'mitica':8,'primordial':12}
 V_REC  = {'nenhuma':0,'fragmento':1,'esboco':2,'receita':4,'mestra':5}
-CIRC_AJ = {1:-10,2:-5,3:0,4:5,5:10,6:15,7:20}
+CIRC_AJ = {1:-10,2:-5,3:0,4:5,5:10,6:15,7:20,8:25}   # 502 (erro achado): o 8º não estava na tabela e somava +0 calado; fora da tabela agora para com erro
 
 # FICHAS DE VALOR (o que cada um soma; mudar aqui quando subir de nível, maestria ou equipamento)
 FICHAS = {
@@ -193,6 +194,21 @@ def cat_de(T,cdm,atual=None):
         if T>=CD[c]-cdm+extra: r=c
     return r
 
+def lanca_xp(a, xp, motivo):
+    """502 (G39, pedido do jogador): com lanca=1 o XP da obra vai sozinho: Ferir pelo ficha.py, os ajudantes (ajudantes=A,B) 1/4 cada pelo cresce.py"""
+    if xp <= 0 or opt(a,'lanca','0') in ('0','nao','não'):
+        if xp > 0 and opt(a,'ajudantes'): print(f'  → ajudantes ({opt(a,"ajudantes")}): python3 cresce.py xp "{opt(a,"ajudantes")}" {xp//4} "{motivo}"  (ou rode com lanca=1)')
+        return
+    import subprocess
+    aqui = os.path.dirname(os.path.abspath(__file__))
+    if (opt(a,'quem','') or '').startswith('ferir'):
+        p = subprocess.run([sys.executable, os.path.join(aqui,'ficha.py'), 'xp', str(xp), motivo], capture_output=True, text=True, cwd=aqui)
+        print('  G39 lançado: ' + (p.stdout.strip() or p.stderr.strip()).replace('\n', '\n  '))
+    aj = opt(a,'ajudantes')
+    if aj:
+        p = subprocess.run([sys.executable, os.path.join(aqui,'cresce.py'), 'xp', aj, str(xp//4), f'ajudou: {motivo}'], capture_output=True, text=True, cwd=aqui)
+        print('  G39 lançado (ajudantes, 1/4): ' + (p.stdout.strip() or p.stderr.strip()).replace('\n', ' · '))
+
 def efeitos(nomep,tipo,f,extra,marav,npec,de=0):
     nef=max(NEF[f]-NEF[de],0) if de else NEF[f]
     mag = 1 if (f>=4 and de<4) else 0
@@ -238,13 +254,15 @@ def obra(a, reforja=False):
         return
     if f<0: print('  RESULTADO: abaixo de 15: MATERIAL PERDIDO'); return
     notas=[]; extra=0; marav=0; tw=sum(x==20 for x in A+B); extra+=tw
+    tc = CAT.index(norm(opt(a,'teto'))) if opt(a,'teto') else 7   # 502 (G39): teto=CAT (sem núcleo, Lendário): a peça para no teto; os 20 seguem dando efeito; o QUASE não passa do teto
+    if f > tc: notas.append(f'TETO {NOME[tc]} (sem núcleo): o total chegava a {NOME[f]}; a peça para em {NOME[tc]}'); f = tc
     if A[0]==20 and B[0]==20:
         r=d(6)
-        if r<=3 and f<7: f+=1; notas.append(f'OBRA-PRIMA (os dois abriram em 20) 1d6 [{r}] → sobe a {NOME[f]}')
+        if r<=3 and f<min(7,tc): f+=1; notas.append(f'OBRA-PRIMA (os dois abriram em 20) 1d6 [{r}] → sobe a {NOME[f]}')
         else: extra+=1; notas.append(f'OBRA-PRIMA 1d6 [{r}] → +1 efeito')
     if tw>=3: marav+=1; notas.append(f'{tw} VINTES: MARAVILHA')
     if tw>=5: marav+=1; notas.append('LENDA: a peça acorda (nome próprio; o mundo fica sabendo)')
-    if f<7 and CD[f+1]-cdm-T<=3: extra+=1; notas.append(f'QUASE: ficou a {CD[f+1]-cdm-T} da CD {NOME[f+1]} → +1 efeito (a peça quis subir)')
+    if f<min(7,tc) and CD[f+1]-cdm-T<=3: extra+=1; notas.append(f'QUASE: ficou a {CD[f+1]-cdm-T} da CD {NOME[f+1]} → +1 efeito (a peça quis subir)')
     ones=[x for x in (A[0],B[0]) if x==1]
     for _ in ones:
         r=d(6)
@@ -255,13 +273,15 @@ def obra(a, reforja=False):
     if reforja and f<=atual: print(f'  RESULTADO: a complicação segurou a peça em {NOME[atual]}.'); return
     xp = XP[f]-(XP[atual] if reforja else 0)
     print(f'  RESULTADO: {nomep} — {NOME[f].upper()} · XP {xp}' + (f' (diferença {NOME[atual]} → {NOME[f]}; mantém todos os efeitos e o encantamento)' if reforja else ''))
-    if (opt(a,'quem','') or '').startswith('ferir') and xp>0: print(f'  → lançar: python3 ficha.py xp {xp} "{nomep} ({NOME[f]})"   (ajudantes: 1/4 cada, no cresce.py)')
+    if (opt(a,'quem','') or '').startswith('ferir') and xp>0 and opt(a,'lanca','0')=='0': print(f'  → lançar: python3 ficha.py xp {xp} "{nomep} ({NOME[f]})"   (ajudantes: 1/4 cada, no cresce.py; ou lanca=1)')
+    lanca_xp(a, xp, f'{nomep} ({NOME[f]})')
     npec=tw+len(ones)+(1 if d(10)==1 else 0)
     efeitos(nomep,tipo,f,extra,marav,npec,de=atual if reforja else 0)
 
 def encantar(a):
     feit,circ,cat=a[1],int(a[2]),CAT.index(norm(a[3]))
     L,s,cdm,x19,alma,fort=valores(a,'encantar')
+    if circ not in CIRC_AJ: sys.exit(f'círculo {circ} fora da tabela do encanto (1º ao 8º). Nada foi rolado.')
     lim=CD[cat]+CIRC_AJ.get(circ,0)-cdm
     print(f'ENCANTAMENTO "{feit}" ({circ}º círculo) numa peça {NOME[cat]} · LIMIAR {lim} (CD {CD[cat]} {CIRC_AJ.get(circ,0):+d} pelo círculo{f" −{cdm}" if cdm else ""})')
     mostra(L,s,cdm)
@@ -276,7 +296,8 @@ def encantar(a):
     if (A[0]==1 or B[0]==1) and 'FALHA' not in g:
         r=d(6); print(f'  um 1 natural: complicação 1d6 [{r}] → '+('a peça perde 1 de durabilidade' if r>1 else 'o condutor se perde (não pega)'))
     if 'FALHA' not in g: print(f'  XP: {XP[cat]}')
-    if 'FALHA' not in g and (opt(a,'quem','') or '').startswith('ferir'): print(f'  → lançar: python3 ficha.py xp {XP[cat]} "encanto {feit} ({NOME[cat]})"')
+    if 'FALHA' not in g and (opt(a,'quem','') or '').startswith('ferir') and opt(a,'lanca','0')=='0': print(f'  → lançar: python3 ficha.py xp {XP[cat]} "encanto {feit} ({NOME[cat]})"  (ou lanca=1)')
+    if 'FALHA' not in g: lanca_xp(a, XP[cat], f'encanto {feit} ({NOME[cat]})')
     print('  (REFORÇO: um encantamento mais fraco pode ser refeito 1x por semana com meio condutor; se não chegar ao inteiro, fica como está)')
 
 def conserto(a):

@@ -244,6 +244,33 @@
     }
    ],
    "sentenca": "CULPADO: o papel rasgado em praça; a casa à Seline e o trapiche ao Croque; o RUDDO e o BINIO ao trabalho forçado, dois anos (o conselho, PJ57 A, 3 a 2 a 1)"
+  },
+  "vau502": {
+   "id": "vau502",
+   "caso": "Os onze pagos da emboscada do último vau (500) e o ZUTOCCA, homem dos conselheiros da Liga em Levis, que os pagou (a carta do Aldoveri). Pegos armados contra o rei e a Matriz.",
+   "acusador": "a coroa",
+   "reu": "os onze do vau,Zutocca",
+   "lei": "a lei do rei (ataque armado ao rei)",
+   "dia": 502,
+   "estado": "julgado",
+   "itens": [
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: pegos armados no vau; nove mortos na luta"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 3,
+     "txt": "PROVA: a carta do Aldoveri e os 600 de ouro com o Zutocca (ZT01, CT01)"
+    },
+    {
+     "lado": "acusacao",
+     "peso": 1,
+     "txt": "os presos deram os nomes (IN01)"
+    }
+   ],
+   "sentenca": "CULPADOS: TRABALHO FORÇADO, cinco anos a contar do 502, nas minas de cima de Levis (fechá-las, para os da Mina Fechada); a praça aprovou (JG02 [4])"
   }
  }
 }

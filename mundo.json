@@ -3893,6 +3893,18 @@
    "chegada": "[5] em 1d6 [1] dias",
    "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — o brejo do oeste (a Torre Afogada)",
    "toca": false
+  },
+  {
+   "dia": 502,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [3]",
+   "onde": "d27 [24] Haula (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 503,
+   "chegada": "[2] em 1d3 [1] dias",
+   "leitura": "os mortos se mexem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: os mortos se mexem — Haula (terra nova)",
+   "toca": false
   }
  ]
 }

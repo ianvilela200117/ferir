@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 501, LEVIS: o acordo com o culto; doze presos; o selo aberto (MOTOR 9b: G1 a G38)
+# RETOMAR — tarde do Dia 502, LEVIS: os doze às minas; o Uxraxion recusa o selo (MOTOR 9b: G1 a G40)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Tarde do 502, LEVIS, as estacas (o tick do 502; o semanal é no 504). O rei HERDEIRO no NÍVEL 50 (XP 123.510; o 51 em 127.600), Int 118, Afinidade 104, PV 269, **Mana 117 (MANA LARGA, o talento do 50)**, Foco 16, 1 ação; Erudito 1/1; Visão 2/2. O JULGAMENTO DOS DOZE (manhã): trabalho forçado, cinco anos, nas MINAS DE CIMA de Levis, para os da MINA FECHADA (JG02 [4]: a praça aprovou); os forçados agora são 131 (G6). O SELO: o UXRAXION RECUSOU (SL02 3: 'o selo é do deus'); fechar mesmo assim = QUEBRA DO ACORDO (a pergunta 1); o selo ABERTO; o Remendar não foi feito. A pesquisa dos focos (G40, a regra escrita hoje) espera a Fornalha e a escolha dos feitiços. A aula do 6º da Almision por escolher. Em Levis, GEADA CEDO: a colheita no campo em perigo. A ROTA DE LUMADE ABRIU. O chefe dos Vradda é o RHOGOS (o gerador deu Skaa). O MOTOR G39 (encadeia.py) ligado. Com o rei: o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, a Matriz e o Martelo; a Brara. Cofre 54.520.
+
+Antes (501, noite):
 Noite do 501, LEVIS (o tick do 501). O rei HERDEIRO no NÍVEL 50 (XP 123.510; o 51 em 127.600), Int 118, Afinidade 104, PV 269, Mana 97, Foco 16, 1 ação (2 no 60); os feitiços do 4º ao 6º ACORDADOS; o Foco de Osso Primordial ×20 pela Mão de Rei (as fichas acertadas); Veio Certo 3, Golpe de Mestre 3, Obra-Prima 3, 7 pontos guardados; o TALENTO do 50 por escolher; Erudito 1/1. O ACORDO DE LEVIS-BAIXA (FL01 16): o Uxraxion aceitou; a revolta acabou; o culto fica como fé; Levis-baixa da Brara; as dívidas pequenas rasgadas; os −1 de Levis saíram. DOZE PRESOS (os onze do vau e o ZUTOCCA, homem dos conselheiros) para o JULGAMENTO EM PRAÇA (502; a sentença é a pergunta). A CARTA DO ALDOVERI: a Liga sabe o segredo da Matriz. O capitão ZUBACCA fugiu. O SELO das estacas ABERTO (a magia voltou com a lua). Com o rei: o Moreth, o Eiagrir, a Eliane (o Despertar OLHO ABERTO, rolado no 501 com o erro anotado), o Gonde e os 10, a Matriz e o Martelo; a Brara. A aula da Almision (6º círculo) devida no 50: ela manda dizer quando. Cofre 54.520.
 
 Antes (500, entardecer):
@@ -377,12 +380,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (500 → 501): a pergunta do XP dos NPCs (código: resposta inteira) · 'quero fazer focos para usar mais magias' (regra) · 1c,b cercar, falar e esperar a magia · 2a,b interrogar e julgar · 3 'o que ganho e o que custa fechar o selo' (regra) · 4a o grau 3 no 50
 - o Despertar da Eliane (o erro do motor) · IN01 [4] · ZT01 [3] · CT01 [4] · OU01 [3] · FL01 16 · o rei ao 50 · o Foco de Osso ×20 (o erro achado, contra a casa) · o tick do 501.
 
+## RESPONDIDO (501 → 502): 1a o motor dos NPCs ligado ao cresce.py, e 'faz um jeito de você parar de esquecer' (a G39) · 2b os doze às minas · 3a fechar o selo, pedindo antes ao Uxraxion · 4b os focos na Fornalha; 'quero pesquisar feitiços que não sei' (regra: a G40) · 5a MANA LARGA
+- JG02 [4] a praça aprova; os da Mina Fechada pedem os presos para as minas de cima · SL02 [5]−2 = 3 RECUSA · HA02 [1] e HE02 [5] (o atraso do 501, achado pela G39) · o Skaa → Rhogos · o 8º círculo no obra_valor (corrigido) · o tick do 502.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O MOTOR DOS NPCs (a proposta): a) ligar tudo ao cresce.py: quando um NPC sobe, a ficha de combate sobe junto, a classe sobe de faixa (a Prova no dado), o Despertar e as Artes saem sozinhos, e o luta.py lança o XP da luta · b) só a ficha de combate e o Despertar · c) deixar como está.
-2. OS DOZE PRESOS (o julgamento em praça em Levis, 502; pegos armados atacando o rei; a carta): a sentença: a) morte em praça · b) trabalho forçado nas minas de Levis · c) trocar ou usar de isca contra o Aldoveri · d) outra.
-3. O SELO: a) fechar, pedindo antes ao Uxraxion (rolagem social; o culto avança 1) · b) fechar sem pedir · c) deixar aberto.
-4. OS FOCOS (feitiços encantados em peças, que lançam sem Mana): onde: a) já, na fundição velha de Levis (a Matriz está aqui; a oficina rende menos) · b) na Fornalha, na volta · e quais feitiços (a Lança do Sol, a Cura Maior, a Visão do Tempo, o Erguer o Caído, ou outros).
-5. O TALENTO DO 50: a) MANA LARGA (+20 de Mana) · b) CONSELHO OUVIDO · c) LEITURA DE COMBATE · d) outro.
+1. O SELO (o Uxraxion recusou: 'o selo é do deus'): a) fechar mesmo assim: o Remendar (1 dia nas estacas, a Matriz e o Martelo à vista; Exausto até a aurora); o culto lê como QUEBRA do acordo (a reação vai ao dado; a revolta pode voltar) e o relógio dele +1 · b) deixar aberto (a coberta fina em Levis: os eventos de 'a coberta afina' podem cair lá) · c) oferecer uma troca ao Uxraxion pelo selo (o rei diz o quê; vai ao dado de novo).
+2. A PESQUISA DOS FOCOS (G40; na Fornalha; 3 encantos por peça Lendária; uns 4 dias por feitiço): a) O FOCO DA HOSTE: Cura em Roda (Luz 5º, com a Escola Funda) · Elo de Guerra (Elo 5º) · Muralha da Mente (Mente 6º) · b) O FOCO DAS CIDADES: Colheita Boa (Raiz 5º) · Remédio Vivo (Raiz 6º) · Coração de Fornalha (Chama 5º) · c) O FOCO DA GUERRA: Sol de Mão (Chama 6º) · Tempestade (Vento 6º) · Âncora (Elo 6º) · d) outros (o jogador diz os três).
+3. A AULA DA ALMISION (o 6º devido no 50; o feitiço aprendido vai ao foco sem pesquisa): a) Pressa de Tropa · b) Desfazer o Dia · c) Porta do Nada · d) outro do 6º.
+4. A VOLTA: a) amanhã, 503, rio abaixo para Ireviel (a pesquisa começa na Fornalha) · b) ficar em Levis até o tick semanal (504).
+5. A GEADA EM LEVIS (a colheita ainda no campo): a) a casa paga braços para colher já (300 de ouro; um d6 declarado diz quanto se salva) · b) deixar com a Brara e o povo.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

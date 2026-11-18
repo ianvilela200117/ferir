@@ -590,4 +590,6 @@ Saem do `atlas.json` a cada vez que o `livro_sync.py` roda. O que a casa não sa
 | **Alnesar** | as colinas a leste de Ireviel, a 2 dias | ? | ? | numa metade, um NÚCLEO e nada mora lá; na outra, bandidos guardam um segredo de facção | bandidos numa metade | uma luta de um lado; uma chave do outro |
 | **Quoium** | a escada afundada onde mora o Laennor | ? | ? | ? | o Laennor, o Redemoinho, mora por cima | passar pelo Laennor |
 | **Iroule** | ? | ? | ? | ? | ? | uma senha: estava nos papéis do velho, na letra do pai do rei |
+| **Iothemna** | debaixo das minas fundas de Levis (uma porta velha achada pelos mineiros da Brara, mais funda que Zythir) | ? | oficina de mestre morto | um núcleo | mortos | um sacrifício |
+| **Nymiceth** | debaixo do mercado velho de Ireviel (a terra cedeu no 461, na neblina, e abriu uma escada de pedra) | ? | mercado | uma peça antiga | nada, e é isso que assusta | um teste de Vigor por hora |
 <!-- SYNC:FIM -->

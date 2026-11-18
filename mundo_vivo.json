@@ -620,7 +620,8 @@
     "420: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
     "441: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
     "462: [13] oferece um acordo a um rival (paz, casamento, troca)",
-    "483: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
+    "483: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+    "502: [20] SURPRESA: gerador de novidade ligado a ele"
    ],
    "prox": 499,
    "dons": [
@@ -1345,7 +1346,7 @@
    "povo": "homens-lagarto",
    "regiao": "Gogrunn",
    "numero": 60,
-   "chefe": "Skaa",
+   "chefe": "Rhogos",
    "chefe_nivel": 42,
    "classe_chefe": "chefe-guerreiro (AÇO)",
    "desejo": "enriquecer",

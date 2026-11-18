@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "GU6f",
-  "GU6c",
-  "GU6o",
-  "GU6p",
   "GU6m",
   "GUIr",
   "GU1fa",
@@ -399,247 +395,13 @@
   "FL01",
   "ZT01",
   "CT01",
-  "OU01"
+  "OU01",
+  "JG02",
+  "SL02",
+  "HA02",
+  "HE02"
  ],
  "selos": {
-  "GU6f": {
-   "id": "GU6f",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "força 4",
-     "txt": "[2] → força 4"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU6c": {
-   "id": "GU6c",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "275",
-     "txt": "[5] → 275"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU6o": {
-   "id": "GU6o",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "dominar uma ROTA de comércio",
-     "txt": "[3] → dominar uma ROTA de comércio"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU6p": {
-   "id": "GU6p",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "neutra",
-     "txt": "[2] → neutra"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
   "GU6m": {
    "id": "GU6m",
    "dia": 432,
@@ -20818,6 +20580,280 @@
     }
    ],
    "hora_rolado": "20:03:54"
+  },
+  "JG02": {
+   "id": "JG02",
+   "dia": 502,
+   "hora": "21:56:23",
+   "titulo": "A PRAÇA DE LEVIS NO JULGAMENTO DOS DOZE (502, manhã; os onze do vau e o Zutocca; pegos armados contra o rei, e a carta do Aldoveri; a sentença do rei, 2b: TRABALHO FORÇADO NAS MINAS de Levis; a praça tem gente do culto, que fez o acordo ontem, e os da Mina Fechada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a praça queria SANGUE ('os pagos da Liga mataram os nossos no 416'): murmura; a Brara segura"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "a praça APROVA: os da Mina Fechada pedem os presos para fechar as minas de cima (a febre cinza)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a praça aprova e o povo de Levis-baixa, culto e tudo, VÊ o rei poupar quem veio matá-lo: Levis Ordem +1 por duas semanas (até o 516)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a praça APROVA: os da Mina Fechada pedem os presos para fechar as minas de cima (a febre cinza)",
+     "txt": "[4] → a praça APROVA: os da Mina Fechada pedem os presos para fechar as minas de cima (a febre cinza)"
+    }
+   ],
+   "hora_rolado": "21:56:23"
+  },
+  "SL02": {
+   "id": "SL02",
+   "dia": 502,
+   "hora": "21:56:23",
+   "titulo": "O REI PEDE AO UXRAXION PARA FECHAR O SELO (502, tarde; 3a; o selo é a obra do deus deles, o que o culto conquistou; o acordo de ontem está fresco e o rei cumpriu o que prometeu: as dívidas rasgadas) · +2 o acordo fresco · +2 o rei cumpriu · −4 o selo é a obra do deus · −1 CRUEL · −1 AMBICIOSO",
+   "dado": [
+    1,
+    20,
+    -2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "RECUSA: 'o selo é do deus'; se o rei fechar mesmo assim, o culto lê como QUEBRA do acordo (a decisão volta ao rei)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 14,
+     "res": "ACEITA COM UMA CONDIÇÃO: que o culto veja, e que o dente de cada um fique pregado numa estaca (o rito deles, sem sangue)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 1000000,
+     "res": "ACEITA e o culto GUARDA as estacas enquanto o rei trabalha (ninguém de fora chega perto)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 3,
+     "res": "RECUSA: 'o selo é do deus'; se o rei fechar mesmo assim, o culto lê como QUEBRA do acordo (a decisão volta ao rei)",
+     "txt": "[5] -2 = 3 → RECUSA: 'o selo é do deus'; se o rei fechar mesmo assim, o culto lê como QUEBRA do acordo (a decisão volta ao rei)"
+    }
+   ],
+   "hora_rolado": "21:56:23"
+  },
+  "HA02": {
+   "id": "HA02",
+   "dia": 502,
+   "hora": "22:04:00",
+   "titulo": "G39, atraso achado: o evento de mundo LONGE do 501 (monstro grande desce em Haula) dizia 'volta em 1d6 dias' e o d6 não foi rolado; rola agora, uma vez, contado do 501",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "volta no Dia 501 + o número"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "volta no Dia 501 + o número",
+     "txt": "[1] → volta no Dia 501 + o número"
+    }
+   ],
+   "hora_rolado": "22:04:00"
+  },
+  "HE02": {
+   "id": "HE02",
+   "dia": 502,
+   "hora": "22:04:08",
+   "titulo": "o monstro grande que desceu em Haula (501, LONGE) volta hoje: o encadeamento (tabela ENCADEIA do tick)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Escalada"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Reação"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Oportunidade"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Refugiado"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Preço"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Silêncio"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Vingança"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Aliança inesperada"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Boato errado"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Herói local"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "Mercado reage"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "Fé reage"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "A Liga reage"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "Um monstro aproveita"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "Alguém lucra"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "Alguém some"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "Pedido de ajuda a Ireviel"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "O eco chega à casa (liga a um fio ativo)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "Nada por enquanto (volta em 1d6 dias)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Preço",
+     "txt": "[5] → Preço"
+    }
+   ],
+   "hora_rolado": "22:04:08"
   }
  }
 }

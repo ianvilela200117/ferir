@@ -1,5 +1,5 @@
 {
- "prox_id": 1000,
+ "prox_id": 1003,
  "itens": [
   {
    "id": 1,
@@ -6066,7 +6066,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9797,7 +9797,7 @@
    "oculto": false,
    "para": true,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11525,7 +11525,7 @@
    "oculto": false,
    "para": true,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -12925,7 +12925,7 @@
    "oculto": false,
    "para": true,
    "origem": "faccoes.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -14201,6 +14201,47 @@
     15,
     "FIEL"
    ]
+  },
+  {
+   "id": 1000,
+   "dia": 503,
+   "texto": "FENÔMENO MÁGICO: a coberta afina: os mortos se mexem — Haula (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 502",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 1001,
+   "dia": 505,
+   "texto": "Naera (as Fundas do Norte): SURPRESA: gerador de novidade ligado a ele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 502",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1002,
+   "dia": 502,
+   "texto": "O EVENTO DE MUNDO (LONGE) do Dia 501 VOLTA: monstro grande desce · ONDE: Haula (longe) · rolar o encadeamento de novo (tick.py: d20 na tabela ENCADEIA) (HA02 [1], G39)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": true,
+   "toca": false
   }
  ],
  "fios": [

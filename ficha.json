@@ -23,8 +23,8 @@
   269
  ],
  "mana": [
-  97,
-  97
+  117,
+  117
  ],
  "foco": 16,
  "fortuna": [
@@ -852,7 +852,8 @@
   "Dia 495: SOBE ao 49",
   "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)",
   "Dia 500: +1000 501: FEITO GRANDE: a revolta de Levis-baixa encerrada pela palavra (o acordo com o Uxraxion, sem sangue)",
-  "Dia 500: SOBE ao 50"
+  "Dia 500: SOBE ao 50",
+  "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -878,5 +879,6 @@
  "talento_150": "CASA FIRME (+1 de Ordem em toda cidade do reino; preço: −1 de Comércio na primeira lua depois de anexar uma cidade)",
  "exaustao": 0,
  "nivel_maximo": 159,
- "classe_lendaria": "Herdeiro do Rei-Ferreiro"
+ "classe_lendaria": "Herdeiro do Rei-Ferreiro",
+ "escolhas_pendentes": []
 }
