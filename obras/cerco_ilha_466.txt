@@ -1,0 +1,9 @@
+CERCO, Dia 466 (Ireviel: nublado, calmo) · a Elaeva 17845/38000
+  ELA DECIDE (abaixo de 50%): d6 [2] → TENTA SAIR: as comportas seguram
+  ONDE ELA ESTÁ: d6 [5] → na praia, ao alcance
+  O PERIGO: d20 [12] → nada
+  Ferir: 45 resiste +SAL ×2 380 · 75 MORDE +SAL ×2 2200 · 55 resiste +SAL ×2 450 · 46 resiste +SAL ×2 460 · 49 resiste +SAL ×2 460 · 60 resiste +SAL ×2 460 → 4410
+  Moreth: 58 resiste +SAL ×2 580 · 69 resiste +SAL ×2 450 → 1030
+  Eiagrir: 75 resiste +SAL ×2 204 · 67 resiste +SAL ×2 190 → 394
+  Eliane: 56 resiste 0 → 0
+  → a Elaeva 12011/38000 (32%) · perdeu 5834 hoje

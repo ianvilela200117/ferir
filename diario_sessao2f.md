@@ -1527,3 +1527,32 @@ Na segunda, ele pôs os pés na ilha com todos os seus. E viu o espinheiro subir
 Ele fechou a Visão com o gosto de terra na boca. A fera, na borda da ilha, virou para a galé o tronco escuro, como quem olha.
 
 - **Parada:** noite do 465, o Delta. A ilha fechada, a fera dentro. O cerco começa na aurora, se o rei mandar.
+
+## Do 466 ao 468: o cerco da ilha e a queda da floresta
+
+### O braço de sal, aurora do 466
+A galé ancorou a trinta braças da borda, onde a água branca fazia espuma nas pedras. O rei molhou as mãos no barril antes de cada palavra. O sal ardia nas rachaduras dos dedos, e a Lança do Sol saía da palma dele como um fio de manhã esticado, reto, sem som, e entrava na casca escura com um chiado de ferro na água.
+
+Na quarta, a casca abriu. Não foi um estalo: foi como uma porta grande cedendo, e por dentro havia uma coisa vermelha e úmida que pulsava. A fera recuou para o meio da ilha e arrastou atrás de si um rastro de seiva preta.
+
+À tarde, a barca da Mie atravessou para o braço de baixo, com o barqueiro da barba trançada remando de pé. A Lurentetta ia na proa, as mãos já molhadas. Atirou duas vezes antes do sol baixar, e a cada vez a água branca do braço subia junto, como se a seguisse.
+
+### A ilha, 467
+A floresta tentou sair à noite. Ouviu-se do galpão as raízes batendo nas comportas como punhos numa porta, e os salineiros rezando em voz baixa, todos juntos, uma reza de sal que ninguém mais lembrava inteira. As portas negras rangeram e seguraram.
+
+De manhã ela estava na borda outra vez, mais baixa, as copas de um lado secas como palha. O Moreth acertou com a maça uma vez no tronco escuro, e o tronco gritou. Não era som de bicho. Era o som que a madeira faz quando racha no fogo, mas comprido, muito comprido.
+
+### A ilha, 468
+O rei atirou na aurora, a primeira do dia, e a luz mordeu fundo. A floresta se encolheu sobre a ferida como um homem sobre a barriga. Ele molhou as mãos de novo. A segunda, a terceira. Na sexta, o tronco escuro parou de respirar.
+
+Não caiu de uma vez. As copas foram se deitando uma por uma, para os lados, devagar, e o capim por baixo delas ficou cinza. O cheiro de resina virou cheiro de terra molhada, depois de nada.
+
+Ninguém comemorou. A Lurentetta tirou os pés da água e ficou olhando as comportas fechadas. O Eiagrir soltou a lança no convés e sentou ao lado dela.
+
+O rei olhou para o sul, para os lados de Farenta, onde uma mulher de fogo tinha saído sozinha pela porta numa tarde de tempestade, sem esperar ninguém.
+
+"Pagou", disse o Moreth, baixo, a ninguém.
+
+No meio da ilha, debaixo das copas deitadas, o coração da fera ainda estava quente.
+
+- **Parada:** noite do 468, o Delta. A Elaeva morta na ilha; o coração e o corpo a partilhar.

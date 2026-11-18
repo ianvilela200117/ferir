@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 465, O DELTA: a Elaeva presa na ilha; o cerco na aurora (MOTOR 9b: G1 a G38)
+# RETOMAR — noite do Dia 468, O DELTA: a Elaeva morta; o despojo e o Teraseth (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 468, O DELTA, A ILHA (os ticks do 466 ao 468 rodados; o cerco: cercos/elaeva465.json, FIM: MORTA). A ELAEVA MORREU no 468 pela Lança do Sol do rei. O rei NÍVEL 159 (o ponto de habilidade do 159 pendente; o talento no 160), PV 408/408, Mana 47/167, a Visão 2/2 na aurora, o Erudito 0/1 (volta no 469). O DESPOJO (obras/despojo_elaeva_468.txt): o núcleo Mítico de Podridão, uldun 200 kg, gnaos 150 kg, bzarnur 150 kg (a partilha com a Lurentetta: pergunta). Não lançados ainda no ficha.json (esperam a partilha). (OCULTO) o TERASETH: morto no 462 pelo Ssish perto das Fundas; o corpo, a armadura do rei e o Croque do Rio no fundo do rio; a Ressurreição (Luz 7º) vale até o ~492 e pede quem a lance (o rei não pode: Magia Mestre), um núcleo de Luz Raro e algo que ele amou; os bichos da colmeia atacam uma aldeia rio acima (MH67). A carta do CEDUION (CD53 [5]: ensinar um 7º círculo) e a do CELOCUS (LM56: o Círculo tomou o vale de cima de Lumade) chegam ao rei no 469. (OCULTO) a coluna da Leliel VOLTOU (DQ66). O tick do 469: a Feira no Porto (Legitimidade −1) e o câmbio em Levis; a mesa da Colheita; o conselho. Cofre 61.983.
+
+Antes (465):
 Noite do 465, O DELTA, A ILHA FECHADA (os ticks do 464 e do 465 rodados). O rei 402/402, Mana 124/164 (as duas Visões), a Visão 0/2, o ERUDITO 0/1 (volta no 469), XP 1.223.764 (faltam 936). A ELAEVA na ilha (cercos/elaeva465.json, com 'ilha': ela não sai; só o 1 do d6 a esconde): 17.845 de 38.000, Mítica 380, a fraqueza VIDA, o SAL dobra; o braço de sal cheio: o sal dura seis dias. As Visões: A o cerco ~1.800 por dia; B em terra todos morrem (sims/elaeva465_B_visao.txt). Na galé (a Isolda capitã): o rei, o Moreth, o Eiagrir, a Eliane (241); nas barcas do Croque: a Mie e a Lurentetta (ficha nova em fichas_combate.json). (OCULTO) o Teraseth morreu (TD62: o Ssish; a armadura do rei e o Croque do Rio no fundo do rio, perto das Fundas). (OCULTO) a COLUNA DO NORTE da Leliel chega a Farenta no 474 (LE64 [2]; o Graur e dez da Hoste esperam); o Dulassetta chega ao Norte no 466. A ordem dos três éditos entra no 469 (Legitimidade −1 então; pode ser desfeita antes). Cofre 62.383.
 
 Antes (463):
@@ -317,10 +320,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (463 → 465): o ERUDITO ("as melhores ações para a cidade") · 1a · 2b · 3 tudo · 4 curioso
 - o Erudito (sem dado) · PI64 25 · AGd64 20 (a Zitha) · AGe64 18 (o Salvio) · PA64 C · LE64 [2] (oculto) · os ticks 464-465 · CK65 [6] · a ilha fechada · as Visões A (cerco, 500 futuros) e B (régua 2000) · o cerco.py aprendeu a ILHA.
 
+## RESPONDIDO (465 → 468): 1b · 2b · 3a · "tem como reviver o Teraseth?" (regra: resposta inteira)
+- os ticks 466-468 · DQ66 [1] (oculto) · FD66 [6] · o cerco 466 (e os tiros que faltaram) · MH67 [2] (oculto) · o cerco 467 · o cerco 468: MORTA · XP 38.000 (o rei ao 159) · o despojo.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CERCO DA ILHA (começa na aurora do 466): a) o cerco como na Visão (o rei com a Chuva de Brasas, 7 por dia) · b) o cerco, e o rei troca a Chuva pela LANÇA DO SOL (16d6 de luz; 20 de Mana, 40 sem foco de Luz) · c) outro.
-2. OS TRÊS ÉDITOS (a ordem entra no 469): a) manter os três · b) trocar pelo que o Erudito apontou: a Feira Franca no PORTO DE MARASAR, e uma obra de câmbio em Levis (Dinheiro) · c) desfazer a ordem.
-3. O HERKALD quer uma ESCOLA de forja para os filhos da Cinza: a) sim, na forja grande (uma obra pequena) · b) depois da guerra · c) não.
+1. O DESPOJO DA ELAEVA (a caçada foi da casa e da Lurentetta): a) a casa fica com o NÚCLEO e a Lurentetta com metade do material · b) meio a meio em tudo, e a casa compra a parte dela no núcleo · c) a Lurentetta escolhe primeiro (ela perdeu as aldeias) · d) outra.
+2. O TERASETH (a Ressurreição vale até o ~492): a) a casa procura o corpo rio acima com os do Croque (onde ele morreu, ninguém sabe) · b) primeiro achar quem lance a Ressurreição (o Colégio, a Almision) e um núcleo de Luz · c) deixar os mortos em paz.
+3. O PONTO DE HABILIDADE DO 159: o jogador escolhe (ou o Mestre propõe).
+4. A VOLTA: a) Ireviel já (as cartas do Ceduion e do Celocus chegam amanhã) · b) DRAGAL, a oeste do Delta, pelos barqueiros de Ninnane (o Martelo do Rei) · c) ficar um dia no Delta (a partilha, os salineiros, o Brakos).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

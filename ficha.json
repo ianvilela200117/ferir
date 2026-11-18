@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
- "nivel": 156,
- "xp": 1223764,
+ "nivel": 159,
+ "xp": 1261764,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 185,
+  "Inteligência": 188,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 171
+  "Afinidade": 174
  },
  "pv": [
-  402,
-  402
+  408,
+  408
  ],
  "mana": [
-  124,
-  164
+  47,
+  167
  ],
  "foco": 37,
  "fortuna": [
@@ -56,7 +56,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 62383,
+ "cofre": 61983,
  "livro": {
   "renda_casa": 3790,
   "despesa": 8230,
@@ -387,6 +387,12 @@
    "valor": -400,
    "motivo": "462: os roubos da semana: o armazém do sal do Porto de Marasar (PM62, −100) e a caixa da Brara em Levis (PL62, −300)",
    "saldo": 62383
+  },
+  {
+   "dia": 465,
+   "valor": -400,
+   "motivo": "465 (ordem do rei, 3a): a escola do Herkald na forja grande (500; G6: 400)",
+   "saldo": 61983
   }
  ],
  "materiais": {
@@ -653,14 +659,19 @@
   "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)",
   "Dia 458: +300 458: a SÉRIE DA HOSTE pronta (cinco armaduras Épicas de nee e gusta; pela melhor peça do lote)",
   "Dia 460: +2500 460: L1, a armadura de escamas Lendária de yeviel (do Teraseth)",
-  "Dia 462: +2500 462: L2, a espada Lendária de ziis (do Colégio)"
+  "Dia 462: +2500 462: L2, a espada Lendária de ziis (do Colégio)",
+  "Dia 468: +38000 468: a ELAEVA, a Floresta que Anda (Mítica 380), morta no cerco da ilha do Delta pela Lança do Sol do rei (nível × 10 × 10: Lendário ou maior)",
+  "Dia 468: SOBE ao 157",
+  "Dia 468: SOBE ao 158",
+  "Dia 468: SOBE ao 159",
+  "Dia 468: +0 conferência"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 0,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },

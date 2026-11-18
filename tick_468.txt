@@ -1,0 +1,44 @@
+[04:50:59] Dia 468 · Pressão 2/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  O TEMPO (9 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: limpo, vento forte (d6 [3] fica · vento d6 [6])
+   o Porto de Marasar: neblina, vento firme (d6 [5] muda, d20 [11] · vento d6 [5]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: nublado, brisa (d6 [4] muda, d20 [6] · vento d6 [3])
+   Farenta: chuva forte, vento forte (d6 [5] muda, d20 [18] · vento d6 [6]) → estrada cortada em trechos, o rio sobe, fogo ao ar livre não pega
+   O RIO: normal [37/100] · MUDOU: era baixo
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  ◈ festa em 1 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 468 (dia)
+    d20 [4] DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)
+    ONDE: d27 [21] Zisrir
+    A NOTÍCIA: [4] em 1d6 [5] dias
+    ——
+  O MUNDO VIVO — Dia 468
+    Lendários: d20 [14] quietos hoje
+    trama do dia: Orast → os Jurados de Steunn (RESSENTIMENTO) d20 [13] nada visível
+    FAÍSCA: Nouliel desafia para duelo Seline (em Ireviel), por causa de uma terra além do mapa
+    FAÍSCA: Aeliae quer matar Adurel, por causa de uma terra além do mapa
+    FAÍSCA: Petoino (ex-escravo, GENEROSO e HONESTO; quer curar alguém e tomar o lugar do chefe; já matou e ninguém sabe; a serviço do Tirello, 308) encomenda uma peça para Xaysress, por causa de sal
+  AUDITORIA (XXIII.23, Dia 468): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 468 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 62.383, envelope diz 41.183.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #649: (OCULTO) CHEGA a Ireviel a RESPOSTA DO CEDUION à cobrança do rei (CD53)
+  ▶ AGENDA #786: NOTÍCIA de Farenta pelo Graur: um VEIO DE SAL-GEMA debaixo do porto (Comércio +1 até o 480); o conselho do podestà briga pelo direito; e o Graur conta do Dubacco
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM VILÃO NOVO entra no mundo — Lumade (Varast) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Isyzis (Épico, o rio acima de Levis): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: (culto) os Olhos Pintados (a estrada sul de Ireviel): dá um passo no que quer · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Muralha Velha (Ireviel): dá um passo no que quer · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): acham um líder de fora (um humano, um monstro grande) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium) · COMO CHEGA: d20 [12] FIEL

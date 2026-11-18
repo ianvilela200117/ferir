@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 96,
-  "xp": 8873,
+  "xp": 46873,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -126,7 +126,8 @@
    "Dia 460: 460: as duas crias do Isyzis atacaram a barca dela no rio; ela as matou sozinha em 17 rodadas (163/260)",
    "+500 Tick 462: PASSO (comanda a guarda e a milícia; treina a milícia; caça)",
    "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria B) só em Ireviel e Farenta (280 por semana)",
-   "Dia 462: 462: chegou a Ireviel (215/260); votou no conselho"
+   "Dia 462: 462: chegou a Ireviel (215/260); votou no conselho",
+   "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -279,13 +280,14 @@
    "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria C) cela e ferro até a guerra acabar (moeda de troca)",
    "+500 Tick 462: PASSO (mestre da bancada; o martinete)",
    "Dia 462: VOTO VENCIDO no conselho (OS TRÊS ÉDITOS DE NOVO (462; a venda da Fornalha já está no ): queria A) os três: a Feira Franca em Levis, o Físico e o Grã",
-   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria A) em toda cidade (560 por semana)"
+   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria A) em toda cidade (560 por semana)",
+   "Dia 465: lealdade 6 → 7 (465: o rei disse sim à escola para os filhos da Cinza (a ambição dele: fundar uma escola))"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
   "ultima_subida": 434,
   "votos_vencidos": 12,
-  "lealdade": 6,
+  "lealdade": 7,
   "tracos": [
    "TEIMOSO",
    "LEAL",
@@ -1780,7 +1782,7 @@
  },
  "Isolda": {
   "nivel": 117,
-  "xp": 6540,
+  "xp": 44540,
   "classe": "Assassina (SOMBRA/AÇO, Rara) · venenos, disfarce · FRIA",
   "ocupacao": "MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329)",
   "log": [
@@ -1869,7 +1871,8 @@
    "Dia 457: VOTO VENCIDO no conselho (A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a ba): queria B) o papel rasgado; o Binio expulso do cartório e aço",
    "Dia 457: 457: voltou da estrada sul ao primeiro risco, inteira: o rastro do corvo acaba numa torre velha à beira da estrada sul de Farenta, onde alguém espera o corvo",
    "+500 Tick 462: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
-   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria A) em toda cidade (560 por semana)"
+   "Dia 462: VOTO VENCIDO no conselho (O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quand): queria A) em toda cidade (560 por semana)",
+   "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)"
   ],
   "tracos": [
    "FRIO"
@@ -3600,7 +3603,7 @@
  },
  "Moreth": {
   "nivel": 232,
-  "xp": 17405,
+  "xp": 55405,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3705,7 +3708,8 @@
    "+500 Tick 441: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+500 Tick 448: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+1000 Tick 455: MISSÃO/FEITO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
-   "+500 Tick 462: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)"
+   "+500 Tick 462: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
+   "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)"
   ],
   "tracos": [
    "LEAL",
@@ -5463,7 +5467,7 @@
  },
  "Eiagrir": {
   "nivel": 126,
-  "xp": 11688,
+  "xp": 49688,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5533,7 +5537,8 @@
    "+780 437: o Huir, a sala 5 de Zythir",
    "+1130 437: a rainha Zatha, a sala 8 de Zythir",
    "+500 Tick 455: SURPRESA (gerador) (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
-   "+1000 Tick 462: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))"
+   "+1000 Tick 462: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
+   "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)"
   ],
   "ultima_subida": 434,
   "tracos": [
@@ -6990,13 +6995,14 @@
  },
  "Mie": {
   "nivel": 150,
-  "xp": 3000,
+  "xp": 41000,
   "log": [
    "Dia 427: entra no livro (nível 150)",
    "+1000 Tick 441: MISSÃO/FEITO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
    "+1000 Tick 448: MISSÃO/FEITO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
    "+500 Tick 455: SURPRESA (gerador) (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
-   "+500 Tick 462: PASSO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))"
+   "+500 Tick 462: PASSO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
+   "+38000 468: a ELAEVA (Mítica 380), morta no cerco da ilha (nível × 10 × 10)"
   ],
   "classe": "Campeã da guarda da Lurentetta (o Delta)",
   "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)",

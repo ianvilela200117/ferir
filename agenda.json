@@ -1,5 +1,5 @@
 {
- "prox_id": 785,
+ "prox_id": 790,
  "itens": [
   {
    "id": 1,
@@ -9145,7 +9145,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10060,7 +10060,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11000,12 +11000,12 @@
   {
    "id": 781,
    "dia": 474,
-   "texto": "(OCULTO) CHEGA A FARENTA A COLUNA DO NORTE da Leliel (LE64 [2]: ela engoliu a isca; a obra dela: RETOMAR FARENTA); o Graur e dez da Hoste esperam (a isca da Sira); declarar no dia o tamanho da coluna (gerar: quantos e quem a comanda) e a batalha (batalha.py)",
+   "texto": "(OCULTO) CHEGA A FARENTA A COLUNA DO NORTE da Leliel (LE64 [2]: ela engoliu a isca; a obra dela: RETOMAR FARENTA); o Graur e dez da Hoste esperam (a isca da Sira); declarar no dia o tamanho da coluna (gerar: quantos e quem a comanda) e a batalha (batalha.py) · (466, DQ66 [1]: a LELIEL MANDOU A COLUNA VOLTAR: desconfiou da isca depois que o Dulassetta contou que a casa sabia dele)",
    "tipo": "marco",
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11016,7 +11016,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -11038,6 +11038,73 @@
    "id": 784,
    "dia": 469,
    "texto": "a ORDEM DO REI (3b, 463): os três éditos por cima do conselho (a Feira Franca em Levis, o Físico, o Grão Guardado): entram no tick semanal; Legitimidade −1 então (o rei pode trocar ou desfazer até lá) · e a Intendente paga a mesa da Colheita (3a, 200)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 785,
+   "dia": 469,
+   "texto": "UM LENDÁRIO AGE: funda algo — Kasra (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 466",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 786,
+   "dia": 468,
+   "texto": "NOTÍCIA de Farenta pelo Graur: um VEIO DE SAL-GEMA debaixo do porto (Comércio +1 até o 480); o conselho do podestà briga pelo direito; e o Graur conta do Dubacco",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 787,
+   "dia": 467,
+   "texto": "Qunemneth, o Médico Cinzento (Marasar (a Vigília)): um segredo dele vaza (boato ou espionagem)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 467",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 788,
+   "dia": 473,
+   "texto": "DESCOBERTA DE MATERIAL — Zisrir",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 468",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 789,
+   "dia": 469,
+   "texto": "a carta do CEDUION chega ao rei no Delta (CD53 [5]: ele pede perdão e oferece ensinar um feitiço do 7º círculo) · e a do mensageiro do CELOCUS (LM56: o Círculo da Areia Cantante tomou o vale de cima de Lumade; ele pede ajuda pelo pacto)",
    "tipo": "marco",
    "oculto": false,
    "para": false,

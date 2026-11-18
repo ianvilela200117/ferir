@@ -3362,6 +3362,41 @@
    "chegada": "[4] em 1d6 [3] dias",
    "resumo": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium)",
    "toca": false
+  },
+  {
+   "dia": 466,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [6]",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 469,
+   "chegada": "[2] em 1d3 [3] dias",
+   "leitura": "funda algo",
+   "resumo": "UM LENDÁRIO AGE: funda algo — Kasra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 467,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "leitura": "monstros contra homens",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: monstros contra homens — Ireviel e o rio",
+   "toca": true
+  },
+  {
+   "dia": 468,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [21] Zisrir",
+   "detalhe": "",
+   "noticia_chega": 473,
+   "chegada": "[4] em 1d6 [5] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Zisrir",
+   "toca": false
   }
  ]
 }

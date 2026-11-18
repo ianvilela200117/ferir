@@ -196,7 +196,14 @@
    "renda": {
     "no_livro": true
    },
-   "obras": [],
+   "obras": [
+    {
+     "nome": "a ESCOLA DO HERKALD: uma bancada e um teto na forja grande para os filhos da Cinza",
+     "custo": 500,
+     "pronta": 472,
+     "efeito": "o Herkald ensina o fogo aos filhos da Cinza (a reparação de Fenmir); rolar a resposta dos da Cinza quando abrir"
+    }
+   ],
    "log": [
     "294: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [16]",
     "301: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [1]",
@@ -505,6 +512,10 @@
      [
       1,
       "o porto aberto ao reino (357)"
+     ],
+     [
+      1,
+      "um veio de sal-gema debaixo do porto (FD66 [6]); o conselho briga pelo direito; até o 480"
      ]
     ],
     "Comida": [],

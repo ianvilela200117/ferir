@@ -1,0 +1,38 @@
+[04:50:17] Dia 467 · Pressão 1/5 · evento local 1d20 [13] -> uma encomenda nova chega à forja
+  O TEMPO (8 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: limpo, calmo (d6 [5] muda, d20 [4] · vento d6 [2])
+   o Porto de Marasar: chuva, brisa (d6 [5] muda, d20 [17] · vento d6 [4]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: chuva, calmo (d6 [5] muda, d20 [16] · vento d6 [2]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Farenta: limpo, brisa (d6 [2] fica · vento d6 [3])
+   O RIO: baixo [34/100]
+  avistamento de monstro 1d20 [15] -> nenhum
+  Fortuna volta ao máximo
+  ◈ festa em 2 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 467 (dia)
+    d20 [1] GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [6]
+    ONDE: d27 [1] Ireviel e o rio  ◆ TOCA A CASA
+    A NOTÍCIA: [6] não chega sozinha (só se alguém for atrás)
+    → LEITURA DO DADO: monstros contra homens
+    ——
+  O MUNDO VIVO — Dia 467
+    um Lendário age (d20 [5]):
+    Qunemneth, o Médico Cinzento (ameaça, Marasar (a Vigília)) d20 [7] um segredo dele vaza (boato ou espionagem) · notícia d20 [1] chega hoje
+    trama do dia: Tilde → Ulair (RESSENTIMENTO) d20 [4] nada visível
+    FAÍSCA: Altheltia pede ajuda a Almision, por causa de vaduar
+    FAÍSCA: a cantora do templo sonha com Skugek, por causa de uma dívida antiga
+    FAÍSCA: Aeliae pede ajuda a Mormir (o eremita de Quoine, os Sem-Torre), por causa de um núcleo de monstro
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #714 (era do Dia 466): [OCULTO] (OCULTO) CHEGA a Ireviel o mensageiro de LUMADE (LM56 [1]): o CÍRCULO DA AREIA CANTANTE tomou as aldeias do vale de cima de Lumade; o CELOCUS pede ajuda ao rei pelo pacto do 371 · e a canção de Gogrunn (GG56 [4]: a terra tremeu nas minas; a magia sumiu um dia; uma menina tirou dez de dentro)
+  ▶ AGENDA #782 (era do Dia 466): [OCULTO] (OCULTO) o DULASSETTA chega ao Norte e conta à Leliel que a casa sabia dele: a coluna já saiu (LE64); declarar se ela manda voltar ou segue
+  ✉ NOTÍCIA QUE CHEGA HOJE: Fenron (Épico, Steunn): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Guilda dos Salineiros do Delta (o Delta): dá um passo no que quer · COMO CHEGA: d20 [14] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): dá um passo no que quer · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Qunemneth, o Médico Cinzento (Marasar (a Vigília)): um segredo dele vaza (boato ou espionagem) · COMO CHEGA: d20 [18] FIEL
+  ✉ notícia de longe que chega hoje: FENÔMENO MÁGICO: a coberta afina: magia selvagem — Kasra (terra nova) · COMO CHEGA: d20 [14] FIEL

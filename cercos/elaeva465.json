@@ -1,5 +1,5 @@
 {
- "pv": 17845,
+ "pv": 0,
  "pvm": 38000,
  "ilha": true,
  "a_bordo": [
@@ -8,8 +8,47 @@
   "Eiagrir",
   "Eliane"
  ],
- "dias": [],
- "fim": null,
+ "dias": [
+  {
+   "dia": 466,
+   "antes": 17845,
+   "depois": 11301,
+   "dano": {
+    "Ferir": 4410,
+    "Moreth": 1030,
+    "Eiagrir": 394,
+    "Eliane": 0,
+    "Mie": 10,
+    "Lurentetta": 700
+   },
+   "sal": true,
+   "correcao": "tiros de ['Mie', 'Lurentetta'] rolados depois (o Mestre os tinha esquecido)"
+  },
+  {
+   "dia": 467,
+   "antes": 11301,
+   "depois": 3287,
+   "dano": {
+    "Ferir": 4060,
+    "Moreth": 2870,
+    "Eiagrir": 160,
+    "Eliane": 0,
+    "Mie": 0,
+    "Lurentetta": 924
+   },
+   "sal": true
+  },
+  {
+   "dia": 468,
+   "antes": 3287,
+   "depois": 0,
+   "dano": {
+    "Ferir": 4000
+   },
+   "sal": true
+  }
+ ],
+ "fim": "MORTA",
  "feridos": {},
  "alvo": {
   "nome": "a Elaeva",
@@ -18,9 +57,9 @@
  },
  "atiradores": {
   "Ferir": [
-   7,
-   8,
-   5,
+   6,
+   16,
+   10,
    34
   ],
   "Moreth": [
@@ -70,6 +109,11 @@
   "feita": true
  },
  "notas": [
-  "465: o cerco da ILHA do Delta (PI64 25: as comportas fechadas, o braço de sal cheio: o sal dura seis dias); a fera a 47%, Mítica 380 (+4 no 462)"
+  "465: o cerco da ILHA do Delta (PI64 25: as comportas fechadas, o braço de sal cheio: o sal dura seis dias); a fera a 47%, Mítica 380 (+4 no 462)",
+  "465 (1b): o rei atira a LANÇA DO SOL (6 por dia, 16d6 × 10, ataque 34), não a Chuva; guarda 44 de Mana para o Erguer o Caído"
+ ],
+ "outros": [
+  "Mie",
+  "Lurentetta"
  ]
 }

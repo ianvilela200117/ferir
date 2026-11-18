@@ -1,0 +1,38 @@
+[04:48:40] Dia 466 · Pressão 5/5 · evento local 1d20 [6] -> nada
+  O TEMPO (7 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: nublado, calmo (d6 [1] fica · vento d6 [2])
+   o Porto de Marasar: chuva, vento firme (d6 [5] muda, d20 [16] · vento d6 [5]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: limpo, calmo (d6 [5] muda, d20 [5] · vento d6 [1])
+   Farenta: limpo, vento forte (d6 [6] muda, d20 [5] · vento d6 [6])
+   O RIO: baixo [31/100]
+  avistamento de monstro 1d20 [8] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [1] Guerra · encadeamento 1d20 [2] Reação · ONDE: d19 [17] Ulra (terra nova)
+  EVENTO DE MUNDO (PERTO) 1d20 [5] Descoberta · encadeamento 1d20 [2] Reação · ONDE: d8 [4] Farenta
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [17] Um Lendário aparece em público · encadeamento 1d20 [13] A Liga reage · ONDE: d27 [16] as Montanhas de Fogo
+  Pressão zera
+  Fortuna volta ao máximo
+  ◈ festa em 3 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 466 (dia)
+    d20 [3] UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [6]
+    ONDE: d27 [22] Kasra (terra nova)
+    A NOTÍCIA: [2] em 1d3 [3] dias
+    → LEITURA DO DADO: funda algo
+    ——
+  O MUNDO VIVO — Dia 466
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Braeth (o ancião do Clã) → Lasca e Miro (presos) (TRAIÇÃO PENDENTE) d20 [4] nada visível
+    FAÍSCA: Herkald sonha com Dovan, por causa de um feitiço proibido
+    FAÍSCA: Nouse oferece aliança a a casa da fundição, por causa de uma terra além do mapa
+    FAÍSCA: Moreth esconde um filho de Lurentetta, por causa de sal
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #714: [OCULTO] (OCULTO) CHEGA a Ireviel o mensageiro de LUMADE (LM56 [1]): o CÍRCULO DA AREIA CANTANTE tomou as aldeias do vale de cima de Lumade; o CELOCUS pede ajuda ao rei pelo pacto do 371 · e a canção de Gogrunn (GG56 [4]: a terra tremeu nas minas; a magia sumiu um dia; uma menina tirou dez de dentro)
+  ▶ AGENDA #782: [OCULTO] (OCULTO) o DULASSETTA chega ao Norte e conta à Leliel que a casa sabia dele: a coluna já saiu (LE64); declarar se ela manda voltar ou segue
+  ✉ NOTÍCIA QUE CHEGA HOJE: Almision (a estrada (com o corvo)): recruta: gente, uma facção ou um monstro passa para o lado dele · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: PESTE OU DESASTRE: terremoto — Kreade (terra nova) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi

@@ -1,8 +1,5 @@
 {
  "ordem": [
-  "BR26",
-  "YE26",
-  "YE26p",
   "YE26q",
   "BL26",
   "BL26w",
@@ -399,147 +396,12 @@
   "AGe64",
   "PA64",
   "LE64",
-  "CK65"
+  "CK65",
+  "DQ66",
+  "FD66",
+  "MH67"
  ],
  "selos": {
-  "BR26": {
-   "id": "BR26",
-   "dia": 426,
-   "hora": "14:21:57",
-   "titulo": "A CARTA DO REI CHEGA À BRARA (426; as picaretas e RASGAR EM PRAÇA as dívidas pequenas do livro do Ardenghi; opinião −5 desde a partilha; laço 3)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "COBRA: faz as picaretas, mas manda dizer que a partilha foi injusta e não rasga nada antes de ver o rei"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 14,
-     "res": "ACEITA e RASGA AS DÍVIDAS em praça (o culto em Levis perde o que pregar)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "ACEITA, RASGA em praça e manda dizer que espera o rei na fundição (o laço sobe)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "COBRA: faz as picaretas, mas manda dizer que a partilha foi injusta e não rasga nada antes de ver o rei",
-     "txt": "[1] → COBRA: faz as picaretas, mas manda dizer que a partilha foi injusta e não rasga nada antes de ver o rei"
-    }
-   ],
-   "hora_rolado": "14:21:57"
-  },
-  "YE26": {
-   "id": "YE26",
-   "dia": 426,
-   "hora": "14:22:16",
-   "titulo": "O REI VAI AO YEANE NO TEMPLO DE BAIXO (tarde do 426; pede a RESSURREIÇÃO da Isolda e do Starkald pela Lumine; as séries já saíram da Fornalha, a fumaça acabou)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 5,
-     "res": "RECUSA: 'a Lumine não devolve assassina nem quem caçou por ouro'"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 15,
-     "res": "LEVA O PEDIDO AO GORINE e diz o PREÇO da Lumine (rola)"
-    },
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 20,
-     "res": "LEVA AO GORINE, diz o PREÇO e sabe de um BICHO DE LUZ (o núcleo)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "LEVA AO GORINE, diz o PREÇO e sabe de um BICHO DE LUZ (o núcleo)",
-     "txt": "[18] → LEVA AO GORINE, diz o PREÇO e sabe de um BICHO DE LUZ (o núcleo)"
-    }
-   ],
-   "hora_rolado": "14:22:16"
-  },
-  "YE26p": {
-   "id": "YE26p",
-   "dia": 426,
-   "hora": "14:22:22",
-   "titulo": "O PREÇO DA LUMINE pela Ressurreição (o Yeane fala pelo templo; o Gorine confirma)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "O PILÃO DE VARADE (a Lumine o quer há tempo; o remédio da febre da casa sai dele)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "UMA PEÇA DE LUZ do rei para o Gorine (Lendária ou melhor) e o Pilão emprestado por um ano"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "A CASA CONTRA O SILÊNCIO: a casa entra na obra do Gorine (quebrar o que resta do pacto do Silêncio)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "O PILÃO DE VARADE (a Lumine o quer há tempo; o remédio da febre da casa sai dele)",
-     "txt": "[3] → O PILÃO DE VARADE (a Lumine o quer há tempo; o remédio da febre da casa sai dele)"
-    }
-   ],
-   "hora_rolado": "14:22:22"
-  },
   "YE26q": {
    "id": "YE26q",
    "dia": 426,
@@ -19830,6 +19692,138 @@
     }
    ],
    "hora_rolado": "04:36:05"
+  },
+  "DQ66": {
+   "id": "DQ66",
+   "dia": 466,
+   "hora": "04:49:05",
+   "titulo": "O DULASSETTA CHEGA AO NORTE E CONTA À LELIEL QUE A CASA SABIA DELE (a coluna já marcha para Farenta, LE64)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela MANDA A COLUNA VOLTAR (desconfia da isca)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "a coluna SEGUE: ela quer Farenta de qualquer jeito, e manda mais gente atrás (chega no 474, maior)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SEGUE, e a Leliel manda matar o Dulassetta por ter sido visto"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ela MANDA A COLUNA VOLTAR (desconfia da isca)",
+     "txt": "[1] → ela MANDA A COLUNA VOLTAR (desconfia da isca)"
+    }
+   ],
+   "hora_rolado": "04:49:05"
+  },
+  "FD66": {
+   "id": "FD66",
+   "dia": 466,
+   "hora": "04:49:05",
+   "titulo": "(G8, PERTO) FARENTA: UMA DESCOBERTA e uma REAÇÃO (o Graur está lá; a notícia chega ao rei no 468)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os homens do Graur acham no porão do Dulassetta as RESPOSTAS DA LELIEL: uma coluna do Norte vem a Farenta (a data)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "as obras da muralha abrem uma GALERIA VELHA por baixo da muralha de fora (um caminho para dentro da cidade); o conselho quer fechá-la, a guilda do porto quer usá-la"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um VEIO DE SAL-GEMA debaixo do porto: Comércio de Farenta +1 até o 480; o conselho briga pelo direito"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "um VEIO DE SAL-GEMA debaixo do porto: Comércio de Farenta +1 até o 480; o conselho briga pelo direito",
+     "txt": "[6] → um VEIO DE SAL-GEMA debaixo do porto: Comércio de Farenta +1 até o 480; o conselho briga pelo direito"
+    }
+   ],
+   "hora_rolado": "04:49:05"
+  },
+  "MH67": {
+   "id": "MH67",
+   "dia": 467,
+   "hora": "04:50:31",
+   "titulo": "(o mundo do 467, oculto: 'monstros contra homens' em IREVIEL E O RIO; a notícia não chega sozinha) O QUE É",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "das FUNDAS, rio acima, saem bichos da COLMEIA do colosso que dorme e atacam uma aldeia de pescadores (2d6 mortos)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "a IRASA, que sobe das salinas velhas, vira barcas de pesca no braço leste (1d6 mortos)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "das FUNDAS, rio acima, saem bichos da COLMEIA do colosso que dorme e atacam uma aldeia de pescadores (2d6 mortos)",
+     "txt": "[2] → das FUNDAS, rio acima, saem bichos da COLMEIA do colosso que dorme e atacam uma aldeia de pescadores (2d6 mortos)"
+    }
+   ],
+   "hora_rolado": "04:50:31"
   }
  }
 }

@@ -1,0 +1,7 @@
+CERCO, Dia 468 (Ireviel: limpo, vento forte) · a Elaeva 3287/38000
+  ELA DECIDE (abaixo de 25%): d6 [1] → TENTA SAIR: as comportas seguram
+  ONDE ELA ESTÁ: d6 [6] → na praia, ao alcance
+  O PERIGO: d20 [17] → nada
+  Ferir: 78 MORDE +SAL ×2 1720 · 49 resiste +SAL ×2 400 · 51 resiste +SAL ×2 480 · 45 resiste +SAL ×2 370 · 65 resiste +SAL ×2 500 · 51 resiste +SAL ×2 530 → 4000
+  A ELAEVA CAI
+  → a Elaeva 0/38000 (0%) · perdeu 3287 hoje · FIM: MORTA

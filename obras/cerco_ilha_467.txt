@@ -1,0 +1,11 @@
+CERCO, Dia 467 (Ireviel: limpo, calmo) · a Elaeva 11301/38000
+  ELA DECIDE (abaixo de 50%): d6 [4] → fica
+  ONDE ELA ESTÁ: d6 [2] → na praia, ao alcance
+  O PERIGO: d20 [14] → nada
+  Ferir: 76 MORDE +SAL ×2 1900 · 60 resiste +SAL ×2 440 · 71 resiste +SAL ×2 560 · 78 resiste +SAL ×2 440 · 43 resiste +SAL ×2 370 · 66 resiste +SAL ×2 350 → 4060
+  Moreth: 78 resiste +SAL ×2 470 · 86 MORDE +SAL ×2 2400 → 2870
+  Eiagrir: 38 desfaz 0 · 60 resiste +SAL ×2 160 → 160
+  Eliane: 48 resiste 0 → 0
+  Mie: 44 resiste 0 → 0
+  Lurentetta: 116 resiste +SAL ×2 424 · 156 em cheio +SAL ×2 500 → 924
+  → a Elaeva 3287/38000 (9%) · perdeu 8014 hoje

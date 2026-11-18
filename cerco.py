@@ -62,7 +62,8 @@ def um_dia(S, tempo, quieto=False):
             L.append(f'   remadores caídos: 1d6 [{d(6)}]')
     elif p >= 19: mod += 10; L.append(f'O PERIGO: d20 [{p}] A FERA SE EXPÕE: o cerne aparece (+10 no ataque de todos hoje)')
     else: L.append(f'O PERIGO: d20 [{p}] → nada')
-    for n in S['a_bordo']:
+    for n in S['a_bordo'] + [o for o in S.get('outros', []) if o not in S['a_bordo']]:   # 466: 'outros' atiram de outras barcas (sem o perigo do convés da galé)
+        if S.get('so_estes') and n not in S['so_estes']: continue   # 466: 'tiros' (só os que faltaram num dia já rolado)
         vezes, q, mult, at = TODOS[n]; tot = 0; det = []
         for _ in range(vezes):
             a, b = d(20), d(20); xa, xb = a, b
@@ -88,6 +89,31 @@ def um_dia(S, tempo, quieto=False):
             fs['feita'] = True; L.append(f"SEGUNDA FASE ({fs.get('nome', '')}): " + fs.get('efeito_cerco', 'o Mestre aplica o que a fase diz'))
             for k, v in fs.get('atiradores', {}).items(): TODOS[k] = tuple(v); S['atiradores'][k] = v
     return L, dano
+def um_tiros(S, dano, L, mod=0):
+    """466: só os tiros (de quem está em S['so_estes']), sem decidir, sem onde, sem perigo"""
+    for n in S['so_estes']:
+        vezes, q, mult, at = TODOS[n]; tot = 0; det = []
+        for _ in range(vezes):
+            a, b = d(20), d(20); xa, xb = a, b
+            while a == 20: a = d(20); xa += a
+            while b == 20: b = d(20); xb += b
+            a0, b0 = (20 if xa >= 20 else xa), (20 if xb >= 20 else xb)
+            t = xa + xb + at + mod
+            crit = (a0 == 20 and b0 >= 11) or (b0 == 20 and a0 >= 11)
+            if xa == 1 and xb == 1: liq = 0; como = 'desfaz'
+            else:
+                dm = int(sum(d(6) for _ in range(q * (2 if crit else 1))) * mult)
+                if crit: como = 'MORDE'
+                elif t >= DF: como = 'em cheio'
+                else: dm //= 2; como = 'resiste'
+                liq = max(dm - RD, 0)
+                if S.get('sal_hoje') and liq > 0: liq *= 2; como += ' +SAL ×2'
+            tot += liq; det.append(f'{t} {como} {liq}')
+        dano[n] = tot; S['pv'] -= tot
+        L.append(f'{n}: ' + ' · '.join(det) + f' → {tot}')
+        if S['pv'] <= 0: S['pv'] = 0; S['fim'] = 'MORTA'; L.append(f'{ALVO.upper()} CAI'); break
+    return L
+
 def main():
     global SIM, ARQ
     a = sys.argv[1:]
@@ -98,6 +124,14 @@ def main():
         return
     ARQ = f'cercos/{a[0]}.json'; a = a[1:]
     S = load()
+    if a and a[0] == 'tiros':   # 466: os tiros de quem faltou num dia já rolado (o erro do Mestre: corrige pelo dado só o que faltou)
+        dia = int(a[1]); quem = [x for x in a[2:] if x != 'sal']; S['sal_hoje'] = 'sal' in a; S['so_estes'] = quem
+        antes = S['pv']; L, dn = [], {}
+        T = um_tiros(S, dn, L)
+        S.pop('so_estes', None); S.pop('sal_hoje', None)
+        rec = next((x for x in S['dias'] if x['dia'] == dia), None)
+        if rec: rec['depois'] = S['pv']; rec['dano'].update(dn); rec['correcao'] = f'tiros de {quem} rolados depois (o Mestre os tinha esquecido)'
+        grava(ARQ, S); print('\n'.join(L)); print(f'  → {ALVO} {S["pv"]}/{S["pvm"]} ({100 * S["pv"] / S["pvm"]:.0f}%) · perdeu {antes - S["pv"]} nestes tiros'); return
     if not a or a[0] == 'ver':
         print(f"{ALVO} {S['pv']}/{S['pvm']} ({100 * S['pv'] / S['pvm']:.0f}%) · a bordo: {', '.join(S['a_bordo'])} · dias de cerco: {len(S['dias'])} · fim: {S['fim']} · feridos: {S['feridos']}")
         for x in S['dias'][-5:]: print(f"   Dia {x['dia']}: {x['antes']} → {x['depois']} · " + ' · '.join(f'{k} {v}' for k, v in x['dano'].items()))
