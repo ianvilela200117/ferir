@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 455,
+  "dia": 462,
   "prestigio": 6,
   "legitimidade": 10,
   "conselho_real": {
@@ -29,13 +29,13 @@
    "A LEI DO PORTO (441): portagem menor para toda barca que traz carga DA casa ou PARA a casa; quem levar carga da LIGA perde TODA isenção (pedido dos Afogados Vivos, pelos barqueiros do Teraseth)"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": 2,
+   "a Doge Skotha (Marasar)": 1,
    "o Clã Hegre": -2,
    "Steunn": 0,
-   "os Do Junco (o Delta)": -2,
-   "a Escola Única (Almision)": 2,
+   "os Do Junco (o Delta)": -3,
+   "a Escola Única (Almision)": 1,
    "o Colégio": 4,
-   "a Leliel (o Norte; a Liga é dela)": -5,
+   "a Leliel (o Norte; a Liga é dela)": -4,
    "a Escola Única": 1
   },
   "log": [
@@ -79,9 +79,10 @@
    "441: semana do reino; renda de fora do livro +2200",
    "448: semana do reino; renda de fora do livro +2350",
    "455: semana do reino; renda de fora do livro +2300",
-   "457: legitimidade 10 → 10 (julgamento RD57: o título falso da casa da Seline; a sentença foi a que a praça esperava)"
+   "457: legitimidade 10 → 10 (julgamento RD57: o título falso da casa da Seline; a sentença foi a que a praça esperava)",
+   "462: semana do reino; renda de fora do livro +2200"
   ],
-  "ultima_semana": 455
+  "ultima_semana": 462
  },
  "cidades": [
   {
@@ -91,10 +92,10 @@
    "pilares": {
     "Comida": 4,
     "Comércio": 4,
-    "Dinheiro": 3,
+    "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -107,12 +108,12 @@
       "os ARADOS da fundição velha de Levis (metade à várzea nova; até o 480)"
      ],
      [
-      -1,
-      "o inverno que não acaba na costa: a pesca parou (CL51; até o 458)"
+      1,
+      "a várzea nova (pronta no 451; de vez)"
      ],
      [
       1,
-      "a várzea nova (pronta no 451; de vez)"
+      "clima: colheita em tempo seco, 3 dias limpos (até o 468)"
      ]
     ],
     "Comércio": [
@@ -220,7 +221,8 @@
     "434: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "441: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 1 · evento [9]",
     "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
-    "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]"
+    "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
+    "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]"
    ],
    "obras_feitas": [
     {
@@ -267,11 +269,11 @@
    "gente": 3000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 2,
-    "Dinheiro": 4,
-    "Saúde": 4,
-    "Ordem": 4,
-    "Defesa": 3
+    "Comércio": 1,
+    "Dinheiro": 3,
+    "Saúde": 3,
+    "Ordem": 3,
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -282,10 +284,6 @@
      [
       1,
       "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
-     ],
-     [
-      -1,
-      "o inverno que não acaba na costa: a pesca parou (CL51; até o 458)"
      ],
      [
       1,
@@ -360,7 +358,8 @@
     "434: Comida 3 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [19]",
     "441: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]",
-    "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]"
+    "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]",
+    "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]"
    ]
   },
   {
@@ -370,9 +369,9 @@
    "pilares": {
     "Comida": 3,
     "Comércio": 4,
-    "Dinheiro": 2,
+    "Dinheiro": 1,
     "Saúde": 4,
-    "Ordem": 2,
+    "Ordem": 3,
     "Defesa": 4
    },
    "mods": {
@@ -401,7 +400,7 @@
      ],
      [
       1,
-      "clima: semana boa para o campo, 4 dias de chuva mansa (até o 461)"
+      "clima: colheita em tempo seco, 4 dias limpos (até o 468)"
      ]
     ],
     "Comércio": [
@@ -458,7 +457,8 @@
     "441: Comida 3 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 1 · Defesa 4 · evento [14]",
     "448: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [12]",
     "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))",
-    "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]"
+    "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]",
+    "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -481,26 +481,18 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 2,
-    "Comércio": 3,
-    "Dinheiro": 2,
+    "Comida": 3,
+    "Comércio": 4,
+    "Dinheiro": 3,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 2
    },
    "mods": {
     "Ordem": [
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
-     ],
-     [
-      -1,
-      "a febre: a gente foge do bairro baixo (FB44; até o 455)"
-     ],
-     [
-      -1,
-      "o espinheiro da Elaeva passou a muralha e matou gente num bairro (EC48; até o 455)"
      ]
     ],
     "Dinheiro": [
@@ -513,23 +505,10 @@
      [
       1,
       "o porto aberto ao reino (357)"
-     ],
-     [
-      -1,
-      "o incêndio no mercado (D48; até o 455)"
      ]
     ],
     "Comida": [],
-    "Saúde": [
-     [
-      -1,
-      "a febre do 442, forte (FB44; até o 455)"
-     ],
-     [
-      -1,
-      "o incêndio no bairro da febre (D51; até o 458)"
-     ]
-    ],
+    "Saúde": [],
     "Defesa": []
    },
    "renda": {
@@ -564,7 +543,8 @@
     "434: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [4]",
     "441: Comida 3 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [16]",
     "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]",
-    "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]"
+    "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]",
+    "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

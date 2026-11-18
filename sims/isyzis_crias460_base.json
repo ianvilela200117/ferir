@@ -1,0 +1,21 @@
+{
+ "monstro": {
+  "nome": "duas crias do Isyzis",
+  "cat": "Raro",
+  "nivel": 30,
+  "pv": 480,
+  "df": 23,
+  "rd": 3,
+  "at": 13,
+  "dado": "1d8",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Espinho",
+  "fraqueza": "Fogo",
+  "enxame": true,
+  "acoes": 2,
+  "nota": "460 (EI60 [1], CR60 [2]): duas crias Raras (nível 30, recém-nascidas no 456) do Isyzis atacam a barca rápida da Eliane no rio acima de Ireviel; contas do gerador para Raro 30 (PV 240 cada); uma ação cada; enxame",
+  "nao_roda": ["o golpe prende como raiz (Espinho): não entra (declarado)"]
+ },
+ "grupo": []
+}

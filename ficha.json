@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1218764,
+ "xp": 1223764,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 10873,
+ "cofre": 62383,
  "livro": {
-  "renda_casa": 3940,
+  "renda_casa": 3790,
   "despesa": 8230,
-  "ultima_semana": 455,
+  "ultima_semana": 462,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -351,6 +351,42 @@
    "valor": -2000,
    "motivo": "455: a obra do reparo da muralha de fora de Farenta (2.500; G6: quatro quintos)",
    "saldo": 10873
+  },
+  {
+   "dia": 460,
+   "valor": 36000,
+   "motivo": "460: a armadura Lendária de yeviel entregue ao TERASETH (CL56 [2]: metade em ouro; a outra metade nas barcas do Croque para a caçada do Delta)",
+   "saldo": 46873
+  },
+  {
+   "dia": 460,
+   "valor": -3600,
+   "motivo": "460: a parte do ULURVE, sócio da forja da venda (um décimo)",
+   "saldo": 43273
+  },
+  {
+   "dia": 462,
+   "valor": -2090,
+   "motivo": "semana: casa 3940 + cidades 2200 − despesa 8230",
+   "saldo": 41183
+  },
+  {
+   "dia": 462,
+   "valor": 24000,
+   "motivo": "462: a espada Lendária de ziis entregue ao COLÉGIO (CL56 [6]: o preço inteiro e um favor ao rei)",
+   "saldo": 65183
+  },
+  {
+   "dia": 462,
+   "valor": -2400,
+   "motivo": "462: a parte do ULURVE, sócio da forja da venda (um décimo)",
+   "saldo": 62783
+  },
+  {
+   "dia": 462,
+   "valor": -400,
+   "motivo": "462: os roubos da semana: o armazém do sal do Porto de Marasar (PM62, −100) e a caixa da Brara em Levis (PL62, −300)",
+   "saldo": 62383
   }
  ],
  "materiais": {
@@ -386,12 +422,13 @@
    ]
   },
   "shasha": {
-   "kg": 4.0,
+   "kg": 5.0,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
     "Dia 420: +1 420: o quilo da Doge (tratado)",
-    "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)"
+    "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)",
+    "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)"
    ]
   },
   "zezha": {
@@ -614,7 +651,9 @@
   "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)",
   "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)",
   "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)",
-  "Dia 458: +300 458: a SÉRIE DA HOSTE pronta (cinco armaduras Épicas de nee e gusta; pela melhor peça do lote)"
+  "Dia 458: +300 458: a SÉRIE DA HOSTE pronta (cinco armaduras Épicas de nee e gusta; pela melhor peça do lote)",
+  "Dia 460: +2500 460: L1, a armadura de escamas Lendária de yeviel (do Teraseth)",
+  "Dia 462: +2500 462: L2, a espada Lendária de ziis (do Colégio)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -631,7 +670,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 0,
+   "tem": 1,
    "max": 1,
    "renova": "semana"
   }

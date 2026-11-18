@@ -1,0 +1,10 @@
+DECLARADO (PR62) [Dia 462, 03:45] O CONSELHO VOTA: O ÉDITO DA RONDA DE NOVO (a ordem do rei do 441: votar quando a Eliane voltasse; Ordem +1; 140 por semana por cidade) · A) em toda cidade (560 por semana) · B) só em Ireviel e Farenta (280 por semana) · C) não · cada cadeira: d20 por opção + inclinação, fica com a maior; maioria vence; empate: a Intendente · votam: Nouliel, Eliane, Sira, Isolda, Herkald, Thuron · fora: Tolvane, Graur · inclinações: Nouliel A+1,B+1; Eliane A+2,C-1; Sira A+1,B+1,C-1; Isolda B+1,C-1; Herkald B+2; Thuron A+1,C-4
+  Nouliel (Tesoureira e Intendente): A[11]+1 B[1]+1 C[16] → C
+  Eliane (Marechal): A[6]+2 B[15] C[12]-1 → B
+  Sira (Mestra dos Segredos): A[3]+1 B[5]+1 C[18]-1 → C
+  Isolda (Mestre das Águas): A[20] B[16]+1 C[10]-1 → A
+  Herkald (Mestre da Forja): A[18] B[2]+2 C[10] → A
+  Thuron (O Colégio): A[10]+1 B[12] C[13]-4 → B
+  VENCE C) não · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Eliane, Thuron
+  Herkald: terceiro voto vencido seguido de mágoa: lealdade → 6/10
+  Thuron: terceiro voto vencido seguido de mágoa: lealdade → 4/10

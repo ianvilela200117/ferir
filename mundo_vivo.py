@@ -86,6 +86,11 @@ def load(): return json.load(open(ARQ))
 def save(M):
     if _grava: _grava('mundo_vivo.json',M)
     else: json.dump(M,open(ARQ,'w'),ensure_ascii=False,indent=1)
+def _m(x):
+    """Dia 460: MORTO é qualquer estado que comece por 'mort' ('MORTO (432; ...)', 'MORTA (448, ...)'); antes só 'morto' exato
+    saía da semana, e os mortos pelas guildas (o Krekos, o Kervos, o Asith, a Asesra), a Eloune e a Mamiltia seguiam rolando"""
+    return str(x.get('estado', '')).strip().lower().startswith('mort')
+
 def _mortos():
     """MOTOR 6: quem está MORTO no npcs.json não entra em faísca nem em trama nova"""
     try: db=json.load(open(os.path.join(AQUI,'npcs.json'),encoding='utf-8'))
@@ -103,7 +108,7 @@ def _sob_cerco():
 def nomes_canon(M):
     mortos=_mortos()
     gente=[g for g in M.get('gente',[]) if '(morto' not in g.lower() and '(morta' not in g.lower() and g.split(' (')[0].strip().lower() not in mortos]
-    xs=[l['nome'] for l in M['lendarios'] if l['estado']!='morto']+[p['chefe'] for p in M['povos']]+gente
+    xs=[l['nome'] for l in M['lendarios'] if not _m(l)]+[p['chefe'] for p in M['povos']]+gente
     return xs
 
 def faisca(M,n,dia):
@@ -125,7 +130,7 @@ def semana(dia):
     print(' OS LENDÁRIOS:')
     avan=[]
     for l in M['lendarios']:
-        if l['estado']=='morto': continue
+        if _m(l): continue
         l['prox']=l.get('prox',dia)
         if dia>=l['prox'] and l['relogio'][0]<l['relogio'][1]:
             l['relogio'][0]+=1; l['prox']=dia+l['ritmo']; avan.append(l)
@@ -134,18 +139,18 @@ def semana(dia):
             print(lendario_age(l,dia,M))
         else: print(f"  {l['nome']} {l['relogio'][0]}/{l['relogio'][1]} (próximo passo no dia {l['prox']})")
     for l in avan:
-        rv=next((x for x in M['lendarios'] if x['nome']==l.get('rival') and x['estado']!='morto'),None)
+        rv=next((x for x in M['lendarios'] if x['nome']==l.get('rival') and not _m(x)),None)
         if rv and rv in avan:
             a=sum(ex())+l['regua']; b=sum(ex())+rv['regua']; w,lo=(l,rv) if a>=b else (rv,l)
             lo['relogio'][0]=max(0,lo['relogio'][0]-2)
             print(f"  CHOQUE DE RIVAIS: {l['nome']} {a} × {rv['nome']} {b} → {lo['nome']} recua 2 ({lo['relogio'][0]}/{lo['relogio'][1]})")
     for l in avan:   # auditoria 203: a OBRA só se completa DEPOIS dos choques
         if l['relogio'][0]>=l['relogio'][1]: print(f"  {l['nome']}: OBRA COMPLETA ({l['obra']}): muda o mundo (Registro), e começa outra obra")
-    prontos=[l['nome'] for l in M['lendarios'] if l['estado']!='morto' and l['relogio'][0]>=l['relogio'][1] and l not in avan]
+    prontos=[l['nome'] for l in M['lendarios'] if not _m(l) and l['relogio'][0]>=l['relogio'][1] and l not in avan]
     if prontos: print('  OBRAS PRONTAS E PARADAS (o Lendário não tem obra nova; o mundo dele parou): '+', '.join(prontos)+'  → mundo_vivo.py nova_obra "NOME"')
     print(' MONSTROS GRANDES (Épico para cima):')
     for m in M['monstros']:
-        if m['estado'] in ('morto',): continue
+        if _m(m): continue
         if m['estado']=='dormindo':
             r=d(20); print(f"  {m['nome']} ({m['cat']}, dormindo, {m['regiao']}) d20 [{r}] " + ('ACORDA' if r==20 else 'dorme'));
             if r==20: m['estado']='ativo'
@@ -236,7 +241,7 @@ def dia(n):
     M=load(); print(f'O MUNDO VIVO — Dia {n}')
     r=d(20)
     if r<=7:
-        vivos=[l for l in M['lendarios'] if l['estado']!='morto']; l=pick(vivos); print(f'  um Lendário age (d20 [{r}]):'); print(lendario_age(l,n,M))
+        vivos=[l for l in M['lendarios'] if not _m(l)]; l=pick(vivos); print(f'  um Lendário age (d20 [{r}]):'); print(lendario_age(l,n,M))
     else: print(f'  Lendários: d20 [{r}] quietos hoje')
     vivas=[t for t in M['tramas'] if t['estado']=='viva']
     if vivas:

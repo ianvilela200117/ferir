@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 458, IREVIEL: a Fornalha, a Sira e o corvo do Seeth (MOTOR 9b: G1 a G38)
+# RETOMAR — noite do Dia 463, O DELTA: o galpão da Lurentetta, o plano da ilha (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 463, O DELTA, AS SALINAS DA LURENTETTA (os ticks do 459 ao 463 rodados, o semanal do 462 e as auditorias do 458 e do 463). O rei 402/402, Mana 164/164, a Visão 2/2, o ERUDITO 1/1, XP 1.223.764 (faltam 936). Com o rei no Delta: o Moreth, o Eiagrir, a Eliane (~241/260), a Isolda, o Gonde e os 10, a galé, as barcas do Croque, 9 carroças de sal, a Mie e as 20 lanças, a LURENTETTA (Mítica 774) e os salineiros (~300 refugiados). LR63 [5]: ela aceitou a ILHA (entre o braço de sal e o braço doce; as comportas). (OCULTO) a ELAEVA entra nas salinas no 465 (#640): Mítica 380, 17.845 de 38.000, a fraqueza VIDA, o SAL dobra, não atravessa água corrente larga. (OCULTO) o TERASETH MORREU no 462 (TD62 [2]: o Ssish, perto das Fundas; a armadura do rei e o Croque do Rio no fundo do rio); a notícia chega no 465 (#). (OCULTO) a Leliel lê a isca no 464 (#; o Dulassetta sumiu: declarar se pesa); o Seeth é da Almision e ela sabe que a casa sabe (AL59 [6]: o corvo não volta); o Haast em Marasar (HF57). O Graur em Farenta (a petição: ficar). Os éditos e a Ronda: C (a Nouliel); o conselho vota de novo os éditos no 469. Cofre 62.383.
+
+Antes (458):
 Noite do 458, IREVIEL, A FORNALHA (o tick do 458 rodado; a auditoria feita). O rei 402/402, Mana 164/164, a Visão 2/2, o ERUDITO 0/1 (volta no tick do 462: G38). A execução feita (EX58 [6]). O HAAST fugiu (OCULTO: a Marasar, ao Draek, HF57 [5]). O GRAUR a caminho de Farenta (chega no 460, #). O SEETH na forja grande; (OCULTO: pago pela Almision, SP56) o corvo no telhado dele (SS58). As quatro armaduras aos recrutas. A L1 (armadura) pronta no 460 para o Teraseth; a L2 (espada) no 462 para o Colégio; a parte do Ulurve 3.600 + 2.400. A ELIANE no 462 (rolar no 460 o trecho do Isyzis, #). (OCULTO) a Leliel lê a isca no 464 (#); o fogo da Guarda do Pedágio no Leve no 459 (#707); o Ssish nas Fundas no 462; o mensageiro de Lumade no 466. Farenta: o conselho do podestà quer podestà novo (o Dulassetta assina). IOTHEMNA conhecida (atlas). A ELAEVA na borda das salinas (OCULTO: nas salinas da Lurentetta no 465). O BRAKOS (Vida) no Delta. A missão de Marasar chega no 459 (o gerador deu KRETOR, que bate nos olhos de kretor: trocar). Cofre 10.873.
 
 Antes (457):
@@ -305,12 +308,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (457 → 458): "quando recupero o Erudito?" (G38: a semana de jogo; volta no 462) · 1a · 2a · 3d · 4a · 5a · 6a
 - o Purificar (15) · HA57 [1] · HF57 [5] (oculto) · ZL57 [3] · o tick do 458 · EX58 [6] · GF58 [5] · SS58 19 · EL58 [6] · BK58 7 (BK58m [1]) · KR58 20 (KR58r [2]) · a auditoria do 458.
 
+## RESPONDIDO (458 → 463): 1b · 2c · 3b · 4b (o Mestre avisou do erro: o rei forja as Lendárias; o jogador escolheu PARTIR NO 462) · 5a
+- SCq [2] · SCs 7 (falha feia) · AL59 [6] (oculto) · HC59 8 · GP59 (49 × 32) · os ticks 459-463 · a estrela (iolosar) · EI60 [1] + CR60 [2] + a luta das crias (sims/isyzis_crias460_saida.txt) · DU60 [1] · FC60 [5] · o defeito do mundo_vivo.py (os mortos rolavam) corrigido · FD61 [4] · LV61 [6] · Nymiceth · TD62 [2] (oculto) · PM62 [3] · PL62 [5] · PF62 [5] · RS62 [6] · VD62 [2] · PC62 C · PR62 C · LR63 [5].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O SEETH E O CORVO (a Sira pergunta): a) prendê-lo já · b) deixá-lo no posto e a Sira tenta pegar o recado do corvo · c) mandá-lo embora com uma mentira para a Almision · d) chamá-lo diante do rei e perguntar.
-2. FARENTA (o conselho do podestà quer podestà novo, sem o Tirello; o Dulassetta assina; o Graur chega no 460): a) o rei sustenta o Tirello: sem o selo do rei o voto não vale · b) o rei aceita o voto, mas o nome novo passa pelo conselho real · c) prender o Dulassetta (a isca morre com ele) · d) o rei vai a Farenta antes do Delta.
-3. O HAAST (fugiu rio abaixo pelo leito seco): a) a Isolda vai atrás · b) a Guilda (o Starkald) vai atrás · c) deixar ir e mandar o retrato dele às cidades.
-4. O DELTA (a floresta na borda das salinas; o Brakos de Vida nos canais): a) partir no 462 com a Eliane, como estava · b) partir já no 459, sem a Eliane, e preparar a ilha · c) no 462, e caçar o Brakos primeiro (material de Vida para as armas).
-5. IOTHEMNA (Levis: a oficina com um núcleo, mortos e um sacrifício escrito na porta): a) depois do Delta, junto com a sala 9 de Zythir · b) mandar olhos agora (a Brara e os mineiros) · c) não agora.
+1. O PLANO DA ILHA (a fera em uns dois dias; G9 antes de toda luta): a) a VISÃO DO TEMPO antes (2 por dia), de um plano que o jogador diga · b) o CERCO: a fera presa na ilha, as comportas fechadas, e a casa atira com sal das barcas e da galé nos braços do rio, sem pôr pé na ilha, até ela cair · c) a ilha fechada e a LURENTETTA luta com a casa em terra (o rei, os heróis, as lanças) · d) outro.
+2. AMANHÃ, 464 (o último dia livre): a) caçar o BRAKOS (o bicho de VIDA dos canais: material de Vida para as armas) · b) preparar a ilha (comportas, sal nas barcas, fogo nos braços) · c) descansar e rezar.
+3. IREVIEL, de longe: a) a Intendente paga a mesa da Colheita no 469 (200) · b) o rei passa por cima do conselho nos três éditos (Legitimidade −1) · c) os dois agentes novos (o dos Descalços e o do Ardenghi, que vinha pelo Pilão de Varade): a Sira interroga e o conselho julga · (pode marcar mais de uma)
+4. O HERKALD (o laço da semana: ele falou de Fenmir pela primeira vez): o que o rei sente e responde.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

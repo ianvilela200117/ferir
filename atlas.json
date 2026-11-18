@@ -216,6 +216,18 @@
    "degrau": "?",
    "conhecida": false,
    "como": "455: a SURPRESA dos Caçadores Livres (faccoes [20]; novidade [5]: um lugar novo; gerador lugar deu NESADE, que bate no cânone: trocado por nomes.py liquida livre); eles VENDEM o caminho a quem pagar mais (a agenda #571: pedem audiência)"
+  },
+  {
+   "nome": "Nymiceth",
+   "onde": "debaixo do mercado velho de Ireviel (a terra cedeu no 461, na neblina, e abriu uma escada de pedra)",
+   "era": "mercado",
+   "caiu": "terremoto",
+   "guarda": "uma peça antiga",
+   "habita": "nada, e é isso que assusta",
+   "entrar": "um teste de Vigor por hora",
+   "degrau": "?",
+   "conhecida": true,
+   "como": "461: a SURPRESA do dia em Ireviel (evento local [20]; novidade [5]: um lugar novo); o gerador deu VARVIL, que bate no Varade e no Varogh: trocado por nomes.py arcaica livre"
   }
  ]
 }

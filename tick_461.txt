@@ -1,0 +1,44 @@
+[03:42:31] Dia 461 · Pressão 5/5 · evento local 1d20 [20] -> SURPRESA (gerador novidade)
+  O TEMPO (2 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: neblina, vento firme (d6 [1] fica · vento d6 [5]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   o Porto de Marasar: chuva, brisa (d6 [4] muda, d20 [14] · vento d6 [3]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: chuva, calmo (d6 [3] fica · vento d6 [1]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Farenta: chuva, calmo (d6 [5] muda, d20 [15] · vento d6 [1]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   O RIO: baixo [27/100]
+  avistamento de monstro 1d20 [4] -> alguém vê um · tabela 1d5 [5] Laennor, o Redemoinho
+  EVENTO DE MUNDO (LONGE) 1d20 [12] Cisma religioso ou milagre · encadeamento 1d20 [7] Vingança · ONDE: d19 [8] o sul, onde a areia come a pedra
+  EVENTO DE MUNDO (PERTO) 1d20 [10] Fome ou colheita perdida · encadeamento 1d20 [4] Refugiado · ONDE: d8 [6] o Delta e as salinas
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [13] Caravana ou frota perdida · encadeamento 1d20 [6] Silêncio · ONDE: d27 [2] Levis e Levis-baixa
+  Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 461 (dia)
+    d20 [6] FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]
+    ONDE: d27 [22] Kasra (terra nova)
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    → LEITURA DO DADO: magia selvagem
+    ——
+  O MUNDO VIVO — Dia 461
+    Lendários: d20 [15] quietos hoje
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [16] um gesto dela aparece em cena hoje
+    FAÍSCA: Ruddo vai trair Souane, por causa de uma receita perdida
+    FAÍSCA: Lurentetta salva a Guardiã da Tenaz, por causa de fome
+    FAÍSCA: Higrunn descobre o segredo de a irmã Oisse, por causa de uma peça Lendária roubada
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #703 (era do Dia 459): CHEGA a Levis: o recado do rei à ELIANE, em Levis: voltar a Ireviel para a caçada do Delta (a barca rápida) (saiu de Ireviel no 455)
+  ▶ AGENDA #707 (era do Dia 459): [OCULTO] (OCULTO) a GUARDA DO PEDÁGIO (objetivo 6/6, GP55 [5]) manda gente ao LEVE, na forquilha de Ireviel, para queimar as barcas dos Barqueiros do Livro: rolar a contra-espionagem (2d20 + 35) contra a Guarda (2d20 + 3 × 2 + 10): pega antes, ou o fogo vem
+  ▶ AGENDA #713 (era do Dia 459): NOTÍCIA pelo THURON (o Colégio): caiu uma ESTRELA perto de Telosus (TL56 [4]); metal novo à venda (gerar o material no dia: gerador.py material)
+  ▶ AGENDA #715 (era do Dia 460): [OCULTO] (OCULTO) A ELIANE desce o rio de Levis a Ireviel (459-462) pelo trecho do ISYZIS, que deu CRIAS (a notícia FIEL do 456): declarar no dia o encontro da barca dela (quantas crias, d6; se a barca é vista)
+  ▶ AGENDA #716 (era do Dia 460): L1 PRONTA: a armadura de escamas Lendária de yeviel; o TERASETH paga 36.000 e dá as barcas do Croque para a caçada do Delta (CL56 [2]); 2.500 XP ao rei, 625 à Tilde, ao Iorin e ao Ulurve · a parte do ULURVE (sócio): um décimo (3.600 no 460; 2.400 no 462)
+  ▶ AGENDA #724 (era do Dia 460): CHEGA a Farenta a coluna do GRAUR (os três capuzes e dez da Hoste com Épicas; a quinta armadura nova no cabo deles; GF58 [5]): segura a cidade para a isca (4a)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, Zisrir): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: UM CULTO CRESCE ou nasce — Lumade (Culto da Gorek) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: a Guardiã da Tenaz (o sul, onde a areia come a pedra): faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual) · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Husgarn (Único, os Picos Brancos): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Syess (Incomum, Gogrunn): um culto ou bando passa a adorá-lo · COMO CHEGA: d20 [18] FIEL

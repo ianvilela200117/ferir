@@ -1,0 +1,97 @@
+LEI DAS AÇÕES: duas crias do Isyzis (nível 30) contra 1 · PV 480/480 · RD 5 · 2 ações · reação 1 · grupo: Eliane 2
+INICIATIVA: duas crias do Isyzis 2d20+3 = 33 × o grupo 2d20+9 (média) = 21 → duas crias do Isyzis AGE PRIMEIRO
+--- RODADA 1 · duas crias do Isyzis 480/480
+    ataque em Eliane: [[12], [17]]+13=42 vs 47 erra
+    ataque em Eliane: [[7], [13]]+13=33 vs 47 erra
+--- RODADA 2 · duas crias do Isyzis 480/480
+  Eliane lança PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena): 60; [[17], [13]]+24=54 vs 37 pega em cheio → 27 (453)
+  Eliane: [[13], [17]]+24=54 ACERTA [5]×2.5+9+19=40 − RD 5 = 17 (436)
+    ataque em Eliane: [[19], [4]]+13=36 vs 47 erra
+    ataque em Eliane: [[14], [1]]+13=28 vs 47 erra
+--- RODADA 3 · duas crias do Isyzis 436/480
+  Eliane: [[10], [20, 1]]+24=55 ACERTA [3]×2.5+9+19=35 − RD 5 = 15 (421)
+  Eliane: [[13], [5]]+24=42 ACERTA [10]×2.5+9+19=53 − RD 5 = 24 (397)
+    ataque em Eliane: [[17], [1]]+13=31 vs 47 erra
+    ataque em Eliane: [[6], [19]]+13=38 vs 47 erra
+--- RODADA 4 · duas crias do Isyzis 397/480
+  Eliane: [[6], [4]]+24=34 vs 37 erra
+  Eliane: [[4], [16]]+24=44 ACERTA [6]×2.5+9+19=43 − RD 5 = 19 (378)
+    ataque em Eliane: [[4], [19]]+13=36 vs 47 erra
+    ataque em Eliane: [[1], [8]]+13=22 vs 47 erra
+--- RODADA 5 · duas crias do Isyzis 378/480
+  Eliane: [[16], [3]]+24=43 ACERTA [5]×2.5+9+19=40 − RD 5 = 17 (361)
+  Eliane: [[4], [3]]+24=31 vs 37 erra
+    ataque em Eliane: [[8], [13]]+13=34 vs 47 erra
+    ataque em Eliane: [[3], [7]]+13=23 vs 47 erra
+--- RODADA 6 · duas crias do Isyzis 361/480
+  Eliane: [[2], [11]]+24=37 ACERTA [4]×2.5+9+19=38 − RD 5 = 16 (345)
+  Eliane: [[3], [7]]+24=34 vs 37 erra
+    ataque em Eliane: [[15], [5]]+13=33 vs 47 erra
+    ataque em Eliane: [[12], [1]]+13=26 vs 47 erra
+--- RODADA 7 · duas crias do Isyzis 345/480
+  Eliane: [[10], [13]]+24=47 ACERTA [2]×2.5+9+19=33 − RD 5 = 14 (331)
+  Eliane: [[17], [16]]+24=57 ACERTA [4]×2.5+9+19=38 − RD 5 = 16 (315)
+    ataque em Eliane: [[9], [14]]+13=36 vs 47 erra
+    ataque em Eliane: [[11], [19]]+13=43 vs 47 erra
+--- RODADA 8 · duas crias do Isyzis 315/480
+  Eliane: [[4], [17]]+24=45 ACERTA [5]×2.5+9+19=40 − RD 5 = 17 (298)
+  Eliane: [[10], [12]]+24=46 ACERTA [2]×2.5+9+19=33 − RD 5 = 14 (284)
+    ataque em Eliane: [[13], [16]]+13=42 vs 47 erra
+    ataque em Eliane: [[8], [18]]+13=39 vs 47 erra
+--- RODADA 9 · duas crias do Isyzis 284/480
+  Eliane: [[11], [2]]+24=37 ACERTA [4]×2.5+9+19=38 − RD 5 = 16 (268)
+  Eliane: [[13], [17]]+24=54 ACERTA [1]×2.5+9+19=30 − RD 5 = 12 (256)
+    ataque em Eliane: [[20, 16], [12]]+13=61 vs 47 ACERTA CRÍTICO [2, 8, 5]×2.5+0+6=43 − RD 4 = 39 (221)
+    ataque em Eliane: [[16], [3]]+13=32 vs 47 erra
+--- RODADA 10 · duas crias do Isyzis 256/480
+  Eliane: [[6], [10]]+24=40 ACERTA [1]×2.5+9+19=30 − RD 5 = 12 (244)
+  Eliane: [[2], [1]]+24=27 vs 37 erra
+    ataque em Eliane: [[19], [1]]+13=33 vs 47 erra
+    ataque em Eliane: [[2], [17]]+13=32 vs 47 erra
+--- RODADA 11 · duas crias do Isyzis 244/480
+  Eliane: [[4], [9]]+24=37 ACERTA [2]×2.5+9+19=33 − RD 5 = 14 (230)
+  Eliane: [[15], [20, 4]]+24=63 ACERTA CRÍTICO [7, 7, 2]×2.5+9+19=68 − RD 2 = 33 (197)
+  REAÇÃO:
+    ataque em Eliane: [[14], [19]]+13=46 vs 47 erra
+  FÚRIA: +1 ação, o poder recarrega
+    ataque em Eliane: [[6], [17]]+13=36 vs 47 erra
+    ataque em Eliane: [[16], [11]]+13=40 vs 46 erra
+    ataque em Eliane: [[14], [3]]+13=30 vs 45 erra
+--- RODADA 12 · duas crias do Isyzis 197/480
+  Eliane: [[16], [3]]+24=43 ACERTA [7]×2.5+9+19=45 − RD 5 = 20 (177)
+  Eliane: [[2], [16]]+24=42 ACERTA [2]×2.5+9+19=33 − RD 5 = 14 (163)
+    ataque em Eliane: [[8], [9]]+13=30 vs 47 erra
+    ataque em Eliane: [[2], [10]]+13=25 vs 47 erra
+    ataque em Eliane: [[1], [14]]+13=28 vs 46 erra
+--- RODADA 13 · duas crias do Isyzis 163/480
+  Eliane: [[10], [17]]+24=51 ACERTA [3]×2.5+9+19=35 − RD 5 = 15 (148)
+  Eliane: [[20, 13], [15]]+24=72 ACERTA CRÍTICO [6, 1, 5]×2.5+9+19=58 − RD 2 = 28 (120)
+  REAÇÃO:
+    ataque em Eliane: [[1], [15]]+13=29 vs 47 erra
+    ataque em Eliane: [[4], [13]]+13=30 vs 47 erra
+    ataque em Eliane: [[17], [13]]+13=43 vs 46 erra
+    ataque em Eliane: [[14], [4]]+13=31 vs 45 erra
+--- RODADA 14 · duas crias do Isyzis 120/480
+  Eliane: [[12], [10]]+24=46 ACERTA [3]×2.5+9+19=35 − RD 5 = 15 (105)
+  Eliane: [[10], [6]]+24=40 ACERTA [3]×2.5+9+19=35 − RD 5 = 15 (90)
+  MORAL d6 [5] → luta até cair
+    ataque em Eliane: [[12], [20, 19]]+13=64 vs 47 ACERTA CRÍTICO [4, 1, 6]×2.5+0+6=33 − RD 4 = 29 (192)
+    ataque em Eliane: [[13], [16]]+13=42 vs 47 erra
+    ataque em Eliane: [[13], [18]]+13=44 vs 46 erra
+--- RODADA 15 · duas crias do Isyzis 90/480
+  Eliane: [[10], [17]]+24=51 ACERTA [9]×2.5+9+19=50 − RD 5 = 22 (68)
+  Eliane: [[5], [16]]+24=45 ACERTA [3]×2.5+9+19=35 − RD 5 = 15 (53)
+    ataque em Eliane: [[11], [18]]+13=42 vs 47 erra
+    ataque em Eliane: [[20, 13], [13]]+13=59 vs 47 ACERTA CRÍTICO [3, 5, 3]×2.5+0+6=33 − RD 4 = 29 (163)
+    ataque em Eliane: [[16], [5]]+13=34 vs 46 erra
+--- RODADA 16 · duas crias do Isyzis 53/480
+  Eliane: [[6], [16]]+24=46 ACERTA [4]×2.5+9+19=38 − RD 5 = 16 (37)
+  Eliane: [[10], [8]]+24=42 ACERTA [5]×2.5+9+19=40 − RD 5 = 17 (20)
+    ataque em Eliane: [[12], [11]]+13=36 vs 47 erra
+    ataque em Eliane: [[13], [5]]+13=31 vs 47 erra
+    ataque em Eliane: [[15], [5]]+13=33 vs 46 erra
+--- RODADA 17 · duas crias do Isyzis 20/480
+  Eliane: [[20, 1], [2]]+24=47 ACERTA [6]×2.5+9+19=43 − RD 5 = 19 (1)
+  Eliane: [[9], [19]]+24=52 ACERTA [2]×2.5+9+19=33 − RD 5 = 14 (-13)
+  duas crias do Isyzis CAI
+FIM: morto · rodadas 17 · mortos [] · PV -13/480 · grupo {'Eliane': 163}

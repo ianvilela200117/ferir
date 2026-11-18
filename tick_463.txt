@@ -1,0 +1,47 @@
+[03:46:15] Dia 463 · Pressão 2/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (4 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: nublado, calmo (d6 [4] muda, d20 [7] · vento d6 [2])
+   o Porto de Marasar: chuva, vento firme (d6 [1] fica · vento d6 [5]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   Levis: nublado, brisa (d6 [6] muda, d20 [7] · vento d6 [4])
+   Farenta: nublado, calmo (d6 [2] fica · vento d6 [2])
+   O RIO: baixo [28/100]
+  avistamento de monstro 1d20 [3] -> alguém vê um · tabela 1d5 [2] Irasa
+  Fortuna volta ao máximo
+  ◈ festa em 6 dia(s) (Dia 469): a Colheita · se o rei paga (200): a mesa do rei na praça: a renda da semana +10% e reputação +2 em toda cidade
+  O MUNDO SE MOVE — Dia 463 (dia)
+    d20 [8] PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]
+    ONDE: d27 [27] Kreade (terra nova)
+    A NOTÍCIA: [4] em 1d6 [3] dias
+    → LEITURA DO DADO: terremoto
+    ——
+  O MUNDO VIVO — Dia 463
+    um Lendário age (d20 [2]):
+    Skotha Graskur (combate, o sul (a Companhia)) d20 [16] um discípulo ou herdeiro dele aparece no mundo · notícia d20 [10] chega no dia 464
+    trama do dia: Orast → os Jurados de Steunn (RESSENTIMENTO) d20 [19] um gesto dela aparece em cena hoje
+    FAÍSCA: Graur chantageia a casa da fundição, por causa de fome
+    FAÍSCA: Gorine deve a vida a Nouliel, por causa de um título
+    FAÍSCA: Kasgal descobre o segredo de a cantora do templo, por causa de a coberta do mundo
+  AUDITORIA (XXIII.23, Dia 463): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 463 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 10.873, envelope diz 41.183.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #361 (era do Dia 462): LEVIS, A FUNDIÇÃO VELHA acaba as PICARETAS (a fila depois dos arados), se ninguém de Levis pegar a série antes (a Bigorna Livre pede audiência desde o 414)
+  ▶ AGENDA #704 (era do Dia 462): CHEGA a Ireviel: a ELIANE volta de Levis a Ireviel, rio abaixo (se sair no dia em que o recado chega) (saiu de Levis no 459)
+  ▶ AGENDA #708 (era do Dia 462): [OCULTO] (OCULTO) o SSISH (Primordial 466, da colmeia; obedece à HIGRUNN) assentou nas FUNDAS, rio acima (SS55 [1]): o sinal chega a Ireviel: cheiro de enxofre no rio, peixe morto na água
+  ▶ AGENDA #768: FACÇÃO — os Rendidos de Marasar (o Porto de Marasar e o cais de Ireviel) ameaça ou sabota a casa (pequeno, mas visível). O que querem: os mercenários que se renderam em Marasar no 392 (um deles quis comprar os aros da Eliane); viraram companhia sem dono e querem os AROS DA ELIANE (o fio F7: o G
+  ▶ AGENDA #769: FACÇÃO — os do Croque (o rio de Ireviel (as barcas que caçam com o Teraseth)) oferece ajuda ou aliança à casa. O que querem: os barqueiros que caçam com o TERASETH desde a guerra do rio viraram irmandade; ele não trabalha para facção, eles trabalham para ele; vêm à caçada do rei no lu
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, o vale, rumo ao Delta): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [14] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ithvil (Mítico, Levis): destrói uma ponte, estrada ou mina (o comércio sente) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Ireviel e o rio): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Chama da Hoste (Ireviel): dá um passo no que quer · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi

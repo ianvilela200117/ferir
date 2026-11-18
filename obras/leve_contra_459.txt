@@ -1,0 +1,3 @@
+oposto: [[12], [4]] + 16 + nível 0 = 32
+teste: [[2], [11]] + 36 + nível 0 = 49 vs 32 (margem +17)
+grau: SUCESSO COM GANHO

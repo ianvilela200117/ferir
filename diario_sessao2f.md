@@ -1434,3 +1434,50 @@ Ela ficou de pé, com os braços cruzados, o rosto sem nada.
 "Quer que eu feche a janela dele, rei? Ou que eu leia o que o corvo leva?"
 
 - **Parada:** noite do 458, a Fornalha. A Sira espera a ordem sobre o Seeth.
+
+## Do 459 ao 463: o telhado, a armadura do Teraseth, a mão do Herkald e as salinas paradas
+
+### O telhado da casa do Seeth, noite do 459
+A Sira esperou deitada nas telhas desde a meia-noite, com o rosto virado para o lado do rio e a capa por cima da cabeça, como um saco esquecido. O corvo veio do sul, baixo, sem bater asa, e pousou na cumeeira a dois braços dela.
+
+Virou a cabeça. Olhou.
+
+Ficou assim o tempo de três respirações, um olho de cada vez. Depois abriu as asas e foi embora com o que trazia na pata, e a janela do Seeth, que estava aberta, fechou devagar, sem barulho.
+
+### O pátio da Fornalha, manhã do 460
+O Teraseth vestiu a armadura ali mesmo, por cima da camisa, e ficou parado, sentindo. Tirou um saco de couro do ombro e o pôs na bigorna, sem contar.
+
+"Trinta e seis mil. As barcas do Croque estão no cais: os meus vão com o rei ao Delta." Bateu no peito de yeviel com os nós dos dedos, e o metal respondeu surdo, como madeira viva. "Eu subo o rio. Os pescadores de cima falam de peixe morto e cheiro de ovo podre. Quero ver o que é."
+
+O Ulurve contou a parte dele duas vezes e guardou o saco menor no avental. Não disse nada. Mas assobiou, baixo, o resto da manhã.
+
+### A sala do conselho e a Fornalha, 462
+A Eliane chegou pela barca leve com a lança suja de um sangue verde-escuro e um corte novo no braço, mal fechado. "Duas crias do bicho do rio", disse, e sentou para votar sem pedir água.
+
+A Nouliel tinha os dois pagamentos no livro e a mesma resposta: "Mais uma semana." A Ronda também caiu, no voto dela. O Thuron saiu da sala antes do fim.
+
+O Herkald ficou. Na Fornalha, à tarde, ele limpava a tenaz que já estava limpa.
+
+"Pintaram uma mão no muro da Ireviel velha", disse, sem levantar os olhos. "A minha. Querem a minha mão pelo que eu fiz em Fenmir. Vinte anos." Pôs a tenaz no gancho. "Eu fecharia de novo. A mestra mandou, e eu obedecia. Mas eu escuto aquele homem gritando, de noite, quando o fole para."
+
+Foi a primeira vez em anos que o Herkald falou de si sem que ninguém perguntasse.
+
+### O cais de Ireviel, fim da tarde do 462
+A galé desceu o braço oeste com o sal amarrado em lona, nove carroças desmontadas no porão, e atrás dela vinham as barcas compridas do Croque, pretas de piche, os barqueiros remando em pé. Um deles, de barba trançada, perguntou ao Gonde se o Teraseth vinha.
+
+"Subiu o rio", disse o Gonde.
+
+O barqueiro olhou para cima, para a curva onde o rio some, e cuspiu na água para dar sorte.
+
+### As salinas da Lurentetta, o Delta, tarde do 463
+As salinas estavam paradas. Os tanques brancos, que deviam estar cheios de gente raspando sal, refletiam o céu sem ninguém em volta. A gente estava toda dentro, nos galpões e nas palafitas, uns trezentos, com o que tinha conseguido carregar. Cheirava a peixe salgado, fumaça de turfa e medo.
+
+A Lurentetta recebeu o rei de pé, na porta do galpão maior. Era mais alta que o Moreth e magra como uma vara de remo, com as mãos rachadas de sal até os pulsos. Não fez reverência.
+
+"Ela comeu a aldeia de Lerane inteira, com as casas", disse. "Vem por aí. Três dias, os meus dizem." Abriu um mapa de couro no chão, com seixos nas pontas. "Aqui. Entre o braço de sal e o braço doce, há uma língua de terra que vira ilha quando as comportas fecham. Os meus sabem fechar." Pôs o dedo no couro. "Ela entra. A gente fecha. Ela não sai."
+
+A Mie, encostada no batente, mexia numa ponta de lança sem olhar para ninguém.
+
+Lá longe, para os lados do vale, ao cair da noite, ouviu-se um som comprido, de madeira rachando, como se uma floresta inteira estivesse se espreguiçando.
+
+- **Parada:** noite do 463, o Delta, o galpão da Lurentetta. O mapa da ilha no chão.

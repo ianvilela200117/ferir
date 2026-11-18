@@ -1,0 +1,7 @@
+nome: Varvil
+o que era: mercado
+por que caiu: terremoto
+o que guarda: uma peça antiga
+o que habita: nada, e é isso que assusta
+custo de entrar: um teste de Vigor por hora
+————————————————————————————————————————

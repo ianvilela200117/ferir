@@ -1,0 +1,74 @@
+{
+ "monstro": {
+  "nome": "duas crias do Isyzis",
+  "cat": "Raro",
+  "nivel": 30,
+  "pv": 480,
+  "df": 23,
+  "rd": 3,
+  "at": 13,
+  "dado": "1d8",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Espinho",
+  "fraqueza": "Fogo",
+  "enxame": true,
+  "acoes": 2,
+  "nota": "460 (EI60 [1], CR60 [2]): duas crias Raras (nível 30, recém-nascidas no 456) do Isyzis atacam a barca rápida da Eliane no rio acima de Ireviel; contas do gerador para Raro 30 (PV 240 cada); uma ação cada; enxame",
+  "nao_roda": [
+   "o golpe prende como raiz (Espinho): não entra (declarado)"
+  ]
+ },
+ "grupo": [
+  {
+   "nome": "Eliane",
+   "nivel": 96,
+   "at": 24,
+   "dado": "1d10",
+   "mult": 2.5,
+   "b": 9,
+   "df": 33,
+   "rd": 8,
+   "pv": 260,
+   "vigor": 12,
+   "agi": 8,
+   "heroi": true,
+   "pecas": "LANÇA DO BREN (Lendária, ela usa inteira: 1x por cena o golpe DERRUBA · SANGRA 1d6 por rodada até tratar · AVISA do inimigo escondido a 9 m · ABRIR A ROCHA 1x por cena · Terra: dano dobrado contra o Laennor e corta a regeneração · corta encantamentos · pesa o dobro) · LANÇA DE SELKOS (Lendária, ela usa inteira: Terra contra o Laennor · bebe o golpe 1d6 · corta magia de 1º círculo) · COTA DE MESTRE (Lendária: devolve 1d8 1x por dia · RD +3 · +3 Furtividade e Defesa no escuro · voo curto 1 cena por dia · Elo de Guarda) · ARTES DE ARMA (G30): Ponta Que Espera, Chuva De Pontas; auras: Pele de Pedra",
+   "nota": "428 (G9, conferência): a ficha dizia que a Lança do Bren volta à mão, bebe o golpe, dá passo de vento e +1d6 de fogo; isso é da Lança de Vestrin (o Hruthos). Corrigida pelo estado_vivo e pelo cânone (207). Na luta do 427 o erro pôs +7 no golpe dela (que não acertou na rodada) e entrou no bônus do grupo na fuga (24 contra 61): sem ele, a fuga segue falha feia; o resultado não muda.",
+   "magias": [
+    {
+     "nome": "CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "9d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      1
+     ],
+     "area": true
+    },
+    {
+     "nome": "PONTA QUE ESPERA (Arte de lança, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena)",
+     "dano": "5d6",
+     "mult": 2.5,
+     "cd": 30,
+     "rodada": [
+      2
+     ]
+    }
+   ],
+   "artes": {
+    "maestria": "Mestre",
+    "teto": 4,
+    "artes": [
+     "Ponta Que Espera",
+     "Chuva De Pontas"
+    ],
+    "auras": [
+     "Pele de Pedra"
+    ],
+    "mult": 2.5
+   },
+   "arma": "lança"
+  }
+ ]
+}

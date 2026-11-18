@@ -1,0 +1,46 @@
+[03:37:47] Dia 459 · Pressão 3/5 · evento local 1d20 [5] -> nada
+  O TEMPO (30 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, vento forte (d6 [1] fica · vento d6 [6])
+   o Porto de Marasar: nublado, vento forte (d6 [3] fica · vento d6 [6])
+   Levis: limpo, brisa (d6 [3] fica · vento d6 [4])
+   Farenta: tempestade, VENTANIA (d6 [3] fica · vento d6 [2]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: baixo [19/100]
+  avistamento de monstro 1d20 [19] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 459 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [13] a Mata de Elais
+    A NOTÍCIA: [5] em 1d6 [1] dias
+    [MISSÃO]: Zaiade (o Mestre dá o nome pela ficção)
+    dificuldade: S  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Normal
+    objetivo: escoltar alguém até um lugar
+    complicação escondida (Envelope): quem pediu mente sobre algo
+    prazo: 10 dias
+    recompensa: 15000 XP · 10000 de ouro · 1 ponto de Trilha
+    penalidade se falhar: a região piora um passo
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 459
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Tilde → Ulair (RESSENTIMENTO) d20 [13] nada visível
+    FAÍSCA: Hrotgar sonha com Isolda, por causa de uma peça Lendária roubada
+    FAÍSCA: Teraseth descobre o segredo de Sira, por causa de um herdeiro dos Steunn
+    FAÍSCA: Skedda encomenda uma peça para Kreine (da casa), por causa de um título
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #703: CHEGA a Levis: o recado do rei à ELIANE, em Levis: voltar a Ireviel para a caçada do Delta (a barca rápida) (saiu de Ireviel no 455)
+  ▶ AGENDA #707: [OCULTO] (OCULTO) a GUARDA DO PEDÁGIO (objetivo 6/6, GP55 [5]) manda gente ao LEVE, na forquilha de Ireviel, para queimar as barcas dos Barqueiros do Livro: rolar a contra-espionagem (2d20 + 35) contra a Guarda (2d20 + 3 × 2 + 10): pega antes, ou o fogo vem
+  ▶ AGENDA #713: NOTÍCIA pelo THURON (o Colégio): caiu uma ESTRELA perto de Telosus (TL56 [4]); metal novo à venda (gerar o material no dia: gerador.py material)
+  ✉ NOTÍCIA QUE CHEGA HOJE: FESTIVAL, TORNEIO OU FEIRA GRANDE — Marasar (a Liga e o Doge) · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Descalços do Cais (o Porto de Marasar (de Ireviel)): dá um passo no que quer · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: OFERTA PÚBLICA: alguém paga por um serviço — Marasar (a Liga e o Doge) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Fenron (Épico, a Mata de Elais): migra 1 região (rola para onde) · COMO CHEGA: d20 [20] FIEL
+  ✉ notícia de longe que chega hoje: a Companhia do Último Gancho (Qulosus): racha: perde gente; tundald vai embora → força 2 · COMO CHEGA: d20 [11] FIEL

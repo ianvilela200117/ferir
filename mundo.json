@@ -3260,6 +3260,86 @@
    "chegada": "[3] em 1d3 [1] dias",
    "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Marasar (a Liga e o Doge)",
    "toca": true
+  },
+  {
+   "dia": 459,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [13] a Mata de Elais",
+   "detalhe": "[MISSÃO]: Zaiade (o Mestre dá o nome pela ficção)\ndificuldade: S  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Normal\nobjetivo: escoltar alguém até um lugar\ncomplicação escondida (Envelope): quem pediu mente sobre algo\nprazo: 10 dias\nrecompensa: 15000 XP · 10000 de ouro · 1 ponto de Trilha\npenalidade se falhar: a região piora um passo\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 460,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — a Mata de Elais",
+   "toca": false
+  },
+  {
+   "dia": 460,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Culto da Gorek\nadora: a fome\npromete: cura\nsinal: fita de cor\ncélulas: 5 cidades\nlíder: nível 90, classe Rara a Lendária\nrito: sangue\nplano (relógio de 6): envenenar uma feira\nfraqueza: um membro quer sair\n————————————————————————————————————————",
+   "noticia_chega": 461,
+   "chegada": "[4] em 1d6 [1] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — Lumade (Culto da Gorek)",
+   "toca": true
+  },
+  {
+   "dia": 461,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 467,
+   "chegada": "[4] em 1d6 [6] dias",
+   "leitura": "magia selvagem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Kasra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 462,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [1]",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 465,
+   "chegada": "[2] em 1d3 [3] dias",
+   "leitura": "morre",
+   "resumo": "UM LENDÁRIO AGE: morre — Ireviel e o rio",
+   "toca": true
+  },
+  {
+   "dia": 462,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Varast\ndesejo: ser perdoado\nambição (relógio de 4): virar Lendário\nmedo: o próprio passado\nsegredo: tem um filho em outra cidade\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: TEIMOSO e CRUEL\nnível: 110\nobra sinistra (relógio de 8): vingar o povo dele\npor que é humano: acredita salvar mais gente do que mata\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: dinheiro\no que o faria parar: nada\n————————————————————————————————————————",
+   "noticia_chega": 468,
+   "chegada": "[4] em 1d6 [6] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — Lumade (Varast)",
+   "toca": true
+  },
+  {
+   "dia": 462,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [26] Lumron (terra nova)",
+   "detalhe": "nome: Culto da Varek\nadora: a praga\npromete: poder sobre os mortos\nsinal: dente arrancado\ncélulas: 2 cidades\nlíder: nível 120, classe Rara a Lendária\nrito: jejum\nplano (relógio de 6): abrir um selo\nfraqueza: um membro quer sair\n————————————————————————————————————————",
+   "noticia_chega": 464,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — Lumron (terra nova) (Culto da Varek)",
+   "toca": false
+  },
+  {
+   "dia": 463,
+   "d20": 8,
+   "o_que": "PESTE OU DESASTRE (1d6: 1 febre · 2 fome · 3 enchente · 4 incêndio · 5 terremoto · 6 praga nos animais) · 1d6 [5]",
+   "onde": "d27 [27] Kreade (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 466,
+   "chegada": "[4] em 1d6 [3] dias",
+   "leitura": "terremoto",
+   "resumo": "PESTE OU DESASTRE: terremoto — Kreade (terra nova)",
+   "toca": false
   }
  ]
 }

@@ -1,0 +1,16 @@
+nome: Fenine
+categoria: Único
+origem: monstro (couro)
+essência: Tempo + Som
+oposta: Sorte
+propriedades: dureza 10 · maleabilidade 2 · condutividade mágica 8
+na forja: Matéria +2 · Processo -1 · aceita infusão até o 8º círculo
+efeitos:
+  na arma: uma vez por luta, um ataque a mais
+  na armadura: uma vez por dia, desfaz um golpe recebido
+  na ferramenta: a peça fica pronta 50% mais rápido
+  secundário (Som, só ofensa): o grito do metal atordoa (Vontade contra CD 20)
+defeito: envelhece o portador 1 dia por uso
+preço: 2.500-4.000/kg
+ocorrência: reserva grande (rolar ao achar o veio ou o ninho)
+————————————————————————————————————————
