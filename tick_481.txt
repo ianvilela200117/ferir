@@ -1,0 +1,42 @@
+[14:07:08] Dia 481 · Pressão 5/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  O TEMPO (22 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: nublado, calmo (d6 [5] muda, d20 [7] · vento d6 [2])
+   o Porto de Marasar: limpo, calmo (d6 [2] fica · vento d6 [1])
+   Levis: limpo, brisa (d6 [2] fica · vento d6 [3])
+   Farenta: chuva, calmo (d6 [6] muda, d20 [17] · vento d6 [2]) → estrada de lama (viagem mais lenta), arco molhado, rastro some em horas
+   O RIO: baixo [16/100] · MUDOU: era SECO
+  avistamento de monstro 1d20 [10] -> nenhum
+  EVENTO DE MUNDO (LONGE) 1d20 [10] Fome ou colheita perdida · encadeamento 1d20 [14] Um monstro aproveita · ONDE: d19 [9] as Montanhas de Fogo
+  EVENTO DE MUNDO (PERTO) 1d20 [9] Casamento ou aliança de casas · encadeamento 1d20 [18] O eco chega à casa (liga a um fio ativo) · ONDE: d8 [6] o Delta e as salinas
+  EVENTO DE MUNDO (ALEATÓRIO) 1d20 [8] Golpe ou sucessão · encadeamento 1d20 [19] Nada por enquanto (volta em 1d6 dias) · ONDE: d27 [1] Ireviel e o rio
+  Pressão zera
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 481 (dia)
+    d20 [16] MUDANÇA POLÍTICA (1d6: 1 morre um governante · 2 golpe · 3 casamento · 4 herdeiro · 5 lei nova · 6 um traidor exposto) · 1d6 [6]
+    ONDE: d27 [10] o Delta e as salinas  ◆ TOCA A CASA
+    A NOTÍCIA: [3] em 1d3 [3] dias
+    → LEITURA DO DADO: um traidor exposto
+    ——
+  O MUNDO VIVO — Dia 481
+    um Lendário age (d20 [6]):
+    a Guardiã da Tenaz (ofício, o sul, onde a areia come a pedra) d20 [20] SURPRESA: gerador de novidade ligado a ele · notícia d20 [6] chega no dia 483
+    trama do dia: Skotha Graskur → Lasca e Miro (presos) (RESSENTIMENTO) d20 [9] nada visível
+    FAÍSCA: Nouse vende algo a o Doge Pelaone, por causa de um núcleo de monstro
+    FAÍSCA: Adurel pede ajuda a Kasgal, por causa de uma dívida antiga
+    FAÍSCA: Tano (carregador, primo da Caciccetta) chantageia Skugek, por causa de vaduar
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #817 (era do Dia 469): FACÇÃO CUMPRIU O OBJETIVO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ▶ AGENDA #861 (era do Dia 477): FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio
+  ▶ AGENDA #865 (era do Dia 477): FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)
+  ▶ AGENDA #74 (era do Dia 480): PRAZO DA PROMESSA À MAMILTIA: caçar a Elaeva nos Picos Brancos antes da primeira neve.
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): SURPRESA: gerador de novidade ligado a eles · COMO CHEGA: d20 [13] FIEL
+  ✉ notícia de longe que chega hoje: UM VILÃO NOVO entra no mundo — Kasra (terra nova) (Braek) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi

@@ -1,14 +1,14 @@
 {
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
- "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
- "nivel": 159,
- "xp": 1262114,
+ "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
+ "nivel": 12,
+ "xp": 7590,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 188,
+  "Inteligência": 80,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,17 +16,17 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 174
+  "Afinidade": 66
  },
  "pv": [
-  408,
-  408
+  193,
+  193
  ],
  "mana": [
-  167,
-  167
+  59,
+  59
  ],
- "foco": 37,
+ "foco": 8,
  "fortuna": [
   3,
   3
@@ -44,8 +44,20 @@
  "sob_medida_desconto": 40,
  "marcos_de_nivel": [
   {
-   "nivel": 150,
-   "texto": "as ferramentas MÍTICAS de Ferir (Tenaz de Eiurvo, Buril de Hamir, Fole de Arvel) e o Martelo de Zeieth passam a render como Míticos (requisito 180 − 30 do Sob Medida). O obra_valor.py já recalcula sozinho: conferir com `obra_valor.py fichas`."
+   "nivel": 20,
+   "texto": "o Foco passa de 10 (o Foco do Herdeiro é 6 + nível ÷ 5)"
+  },
+  {
+   "nivel": 50,
+   "texto": "os feitiços do 4º ao 6º círculo voltam (Lança do Sol, Cura Maior, Visão do Tempo, Erguer o Caído, Prender a Alma, Apagar, Servo de Osso, Elo de Juramento, Chuva de Brasas)"
+  },
+  {
+   "nivel": 60,
+   "texto": "2 ações por rodada (luta.py: 1 + nível ÷ 60)"
+  },
+  {
+   "nivel": 160,
+   "texto": "passa do maior nível que já teve: a Mão de Rei passa a contar o nível de verdade"
   },
   {
    "nivel": 200,
@@ -56,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 57789,
+ "cofre": 57766,
  "livro": {
   "renda_casa": 6457,
-  "despesa": 8780,
-  "ultima_semana": 476,
+  "despesa": 8930,
+  "ultima_semana": 483,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -435,6 +447,12 @@
    "valor": -173,
    "motivo": "semana: casa 6457 + cidades 2150 − despesa 8780",
    "saldo": 57789
+  },
+  {
+   "dia": 483,
+   "valor": -23,
+   "motivo": "semana: casa 6457 + cidades 2450 − despesa 8930",
+   "saldo": 57766
   }
  ],
  "materiais": {
@@ -450,10 +468,11 @@
    ]
   },
   "ormieth": {
-   "kg": 0.8,
+   "kg": 0.0,
    "log": [
     "Dia 372: um fio no aro do anel; sobra ~0,9 kg (partida do MOTOR 6)",
-    "Dia 401: -0.1 o bico do Fumigador da Higrunn (401)"
+    "Dia 401: -0.1 o bico do Fumigador da Higrunn (401)",
+    "Dia 477: -0.8 478: a cabeça do Cajado de Âmbar"
    ]
   },
   "ziza": {
@@ -470,14 +489,15 @@
    ]
   },
   "shasha": {
-   "kg": 6.0,
+   "kg": 5.8,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
     "Dia 420: +1 420: o quilo da Doge (tratado)",
     "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)",
     "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)",
-    "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)"
+    "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)",
+    "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar"
    ]
   },
   "zezha": {
@@ -487,9 +507,10 @@
    ]
   },
   "eiurvo": {
-   "kg": 6.6,
+   "kg": 5.4,
    "log": [
-    "Dia 406: +6.6 406 (noite): o eiurvo entra na conta (~7 kg no estado vivo) menos 0,4 kg na reforja da Lança de Guerra"
+    "Dia 406: +6.6 406 (noite): o eiurvo entra na conta (~7 kg no estado vivo) menos 0,4 kg na reforja da Lança de Guerra",
+    "Dia 477: -1.2 478: a haste do Cajado de Âmbar"
    ]
   },
   "vorthil": {
@@ -695,17 +716,30 @@
    "log": [
     "Dia 472: +1 472: o NÚCLEO DE DRAGAL (NC72 [2] Lendário, EN72 [5] Silêncio), na pedra fria da forja do último Rei-Ferreiro"
    ]
+  },
+  "zainar": {
+   "kg": 11.0,
+   "log": [
+    "Dia 483: +6 478 e 483: os ossos dos cinco bichos da colmeia (Raro, Som: arma, o grito do metal atordoa, Vontade CD 14)",
+    "Dia 484: +5 484: os ossos de mais quatro bichos da colmeia"
+   ]
+  },
+  "fenra": {
+   "kg": 3.5,
+   "log": [
+    "Dia 483: +2 478 e 483: os olhos dos cinco bichos da colmeia (Raro, Som: armadura, ouve passos a 20 m)",
+    "Dia 484: +1.5 484: os olhos de mais quatro bichos da colmeia"
+   ]
+  },
+  "drakos": {
+   "kg": 3.5,
+   "log": [
+    "Dia 483: +2 478 e 483: o ícor dos cinco bichos da colmeia (Raro, Som: ofício, afina a peça, +2 em Processo)",
+    "Dia 484: +1.5 484: o ícor de mais quatro bichos da colmeia"
+   ]
   }
  },
  "xp_log": [
-  "Dia 373: NÍVEL 143 com o anel do Celocus (partida do MOTOR 6)",
-  "Dia 387: +1000 a Elaeva expulsa de Farenta (feito grande)",
-  "Dia 396: +500 feito: o julgamento de Fenmir em praça aberta (396)",
-  "Dia 400: +1500 400: FEITO (os três golpes da lua nova quebrados numa noite) 1.000 + PASSO (feriu o Zesreth; o fogo contido) 500",
-  "Dia 401: +2500 401: o Fumigador de Colmeia da Higrunn (Lendário)",
-  "Dia 402: +2500 402: encanto MULTIDÃO MANSA inteiro no Fumigador da Higrunn (Lendário)",
-  "Dia 403: +1000 404: FEITO: a Torre Acesa a zero (o golpe na madrugada)",
-  "Dia 406: +3000 406 (noite): a MAMILTIA paga a METADE da missão (o nome e o lugar de quem acordou a Elaeva; MN7 [8]+1)",
   "Dia 406: +2200 406 (noite): reforja da LANÇA DE GUERRA, Épica → LENDÁRIA (RF7; total 126)",
   "Dia 406: SOBE ao 144",
   "Dia 407: +7500 407: a Lança de Guerra fica MÍTICA (um ano de vida): a diferença Lendária → Mítica",
@@ -750,7 +784,23 @@
   "Dia 468: SOBE ao 158",
   "Dia 468: SOBE ao 159",
   "Dia 468: +0 conferência",
-  "Dia 472: +350 472: o ERYGAL (Raro 35, o guardião do portão de Dragal), pelo Toque do Ceifador (nível × 10)"
+  "Dia 472: +350 472: o ERYGAL (Raro 35, o guardião do portão de Dragal), pelo Toque do Ceifador (nível × 10)",
+  "Dia 478: O GOLPE DO MARTELO DO REI NA MATRIZ: a classe HERDEIRO DO REI-FERREIRO (Lendária, Forja; Marco 4, Peça Oculta): o nível volta a 1 (era 159, XP 1.262.114); 25% dos atributos ganhos por nível ficam (VII.6)",
+  "Dia 477: +2500 479: O CAJADO DE ÂMBAR (Lendário; a peça do Colégio)",
+  "Dia 477: SOBE ao 2",
+  "Dia 477: SOBE ao 3",
+  "Dia 477: SOBE ao 4",
+  "Dia 477: SOBE ao 5",
+  "Dia 477: SOBE ao 6",
+  "Dia 477: SOBE ao 7",
+  "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
+  "Dia 477: SOBE ao 8",
+  "Dia 477: SOBE ao 9",
+  "Dia 477: SOBE ao 10",
+  "Dia 483: +1110 483: três bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
+  "Dia 483: SOBE ao 11",
+  "Dia 484: +1480 484: quatro bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
+  "Dia 484: SOBE ao 12"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -774,5 +824,7 @@
  },
  "anos_de_vida_pagos": 2,
  "talento_150": "CASA FIRME (+1 de Ordem em toda cidade do reino; preço: −1 de Comércio na primeira lua depois de anexar uma cidade)",
- "exaustao": 0
+ "exaustao": 0,
+ "nivel_maximo": 159,
+ "classe_lendaria": "Herdeiro do Rei-Ferreiro"
 }

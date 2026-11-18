@@ -60,7 +60,8 @@ def main():
             for k, h in sorted(H.items()):
                 if h['tipo'] != tipo: continue
                 cg = h.get('cargas'); sem = cg and cg['atual'] <= 0
-                print(f"  {'✗' if sem else '•'} [{tipo}] {k}" + (f" ({cg['atual']}/{cg['max']})" if cg else '') + f" · {h['efeito']}")
+                dorme = h.get('nivel_min') and F.get('nivel', 0) < h['nivel_min']   # 478: o Herdeiro no nível 1 (o 4º ao 6º círculo pede o 50)
+                print(f"  {'✗' if (sem or dorme) else '•'} [{tipo}] {k}" + (f" ({cg['atual']}/{cg['max']})" if cg else '') + (f" · DORME até o nível {h['nivel_min']}" if dorme else '') + f" · {h['efeito']}")
         if S['talentos']: print('  TALENTOS que se usam: ' + ' · '.join(t_['nome'] for t_ in S['talentos'] if any(x in t_['efeito'] for x in ('1x', 'por dia', 'por sessão', 'por cena', 'por mês', 'por obra'))))
         return
     c = a[0]

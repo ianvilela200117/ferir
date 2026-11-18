@@ -1,0 +1,35 @@
+OBRA "O Cajado de Âmbar" (foco)
+    +12  MÃO · Maestria Forja Lendário
+     +6  MÃO · Inteligência 69 ÷ 10 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +6  MÃO · Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)
+     +1  MÃO · Olho do Material
+     +1  MÃO · Fole Firme 2
+     +1  MÃO · Alma no Aço 2
+     +3  MÃO · Mão que Não Treme 3
+     +7  MATERIAL epico
+     +7  FERRAMENTA O MARTELO DO REI (Ferramenta de Rei, de Dragal) (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): o Martelo do Rei soma o dobro
+     +7  FERRAMENTA A MATRIZ (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): a Matriz soma o dobro
+     +5  FERRAMENTA TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150) (mitico, metade)
+     +5  FERRAMENTA · FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)
+     +3  FERRAMENTA · fole: o arvel como ferramenta (+3 em toda obra de forja)
+     +2  FERRAMENTA · fole: segura o calor certo (+2 no Processo)
+     +6  OFICINA Fornalha que Não Apaga
+    ---- SOMA DOS VALORES: 105
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [16] + [2] → TOTAL 123
+  dados de saída: [16] + [5] = 126
+  ALMA OUVIDA (sem Revés): [5] → [2] (total 123)
+  QUASE: ficou a 2 da CD Primordial → +1 efeito (a peça quis subir)
+  RESULTADO: O Cajado de Âmbar — MÍTICA · XP 10000
+  → lançar: python3 ficha.py xp 10000 "O Cajado de Âmbar (Mítica)"   (ajudantes: 1/4 cada, no cresce.py)
+    efeito novo 1: quem toca sem ser dono sente frio e solta
+    efeito novo 2: o foco aprende: cada feitiço lançado 10 vezes com ele ganha +1
+    efeito novo 3: +2 nos feitiços de uma escola (1d12 decide qual) [1d12 → Gelo]
+    efeito novo 4: 1x por cena, repete o último feitiço de 1º círculo
+    efeito novo 5: escreve sozinho o que o dono dita (Sussurro de papel)
+    efeito novo 6: grava em metal duro sem lascar
+    efeito de magia (d182 do grimório): Elo de Guerra (Elo 5º): até 10 aliados ligados por 1 cena: dano dividido entre todos, e todos sabem onde os outros estão — 1x por cena, sem saber magia (se não couber na peça, rerrolar)

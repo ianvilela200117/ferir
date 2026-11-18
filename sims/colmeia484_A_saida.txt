@@ -1,0 +1,14 @@
+LEI DAS AÇÕES: quatro bichos da colmeia do Ssish (484) (nível 37) contra 5 · PV 1184/1184 · RD 5 · 4 ações · reação 1 · grupo: Ferir 1, Moreth 4, Eiagrir 3, Eliane 2, Isolda 3
+INICIATIVA: quatro bichos da colmeia do Ssish (484) 2d20+3 = 26 × o grupo 2d20+11 (média) = 29 → o grupo age primeiro
+--- RODADA 1 · quatro bichos da colmeia do Ssish (484) 1184/1184
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 940; [[4], [3]]+34=41 vs 39 pega em cheio → 467 (717)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 460; [[6], [17]]+44=67 vs 39 pega em cheio → 227 (490)
+  Moreth: [[16], [16]]+44=76 ACERTA [7]×3+15+46=82 − RD 5 = 38 (452)
+  Moreth: [[13], [8]]+44=65 ACERTA [9]×3+15+46=88 − RD 5 = 41 (411)
+  Moreth: [[18], [18]]+44=80 ACERTA [5]×3+15+46=76 − RD 5 = 35 (376)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 315; [[4], [10]]+36=50 vs 39 pega em cheio → 155 (221)
+  Eiagrir: [[11], [16]]+36=63 ACERTA [10]×3+12+26=68 − RD 5 = 31 (190)
+  Eiagrir: [[6], [17]]+36=59 ACERTA [9]×3+12+26=65 − RD 5 = 30 (160)
+  Eliane lança CHUVA DE PONTAS (Arte de lança, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena): 85; [[10], [5]]+24=39 vs 39 pega em cheio → 160 (0)
+  quatro bichos da colmeia do Ssish (484) CAI
+FIM: morto · rodadas 1 · mortos [] · PV 0/1184 · grupo {'Ferir': 191, 'Moreth': 600, 'Eiagrir': 420, 'Eliane': 260, 'Isolda': 300}

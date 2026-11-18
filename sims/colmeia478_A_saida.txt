@@ -1,0 +1,72 @@
+LEI DAS AÇÕES: três bichos da colmeia do Ssish (nível 37) contra 1 · PV 888/888 · RD 5 · 3 ações · reação 1 · grupo: Isolda 2
+INICIATIVA: três bichos da colmeia do Ssish 2d20+3 = 55 × o grupo 2d20+11 (média) = 32 → três bichos da colmeia do Ssish AGE PRIMEIRO
+--- RODADA 1 · três bichos da colmeia do Ssish 888/888
+    ataque em Isolda: [[19], [11]]+15=45 vs 54 erra
+    ataque em Isolda: [[14], [18]]+15=47 vs 54 erra
+    ataque em Isolda: [[2], [13]]+15=30 vs 53 erra
+--- RODADA 2 · três bichos da colmeia do Ssish 888/888
+  Isolda lança TOQUE DO CEIFADOR (o gorjal Primordial, rende Lendário ×5; 2x por cena): 335; [[8], [10]]+34=52 vs 39 pega em cheio → 165 (723)
+  Isolda: [[8], [4]]+34=46 ACERTA [3]×3+10+23=42 − RD 5 = 18 (705)
+    ataque em Isolda: [[16], [3]]+15=34 vs 54 erra
+    ataque em Isolda: [[18], [11]]+15=44 vs 54 erra
+    ataque em Isolda: [[3], [6]]+15=24 vs 53 erra
+--- RODADA 3 · três bichos da colmeia do Ssish 705/888
+  Isolda lança CORTE CORRIDO (Arte de espada, 4º; G30: metade do multiplicador da arma, ×2.5; 1x por cena): 90; [[15], [14]]+34=63 vs 39 pega em cheio → 170 (535)
+  Isolda: [[17], [8]]+34=59 ACERTA [8]×3+10+23=57 − RD 5 = 26 (509)
+    ataque em Isolda: [[18], [6]]+15=39 vs 54 erra
+    ataque em Isolda: [[3], [1]]+15=19 vs 54 erra
+    ataque em Isolda: [[4], [20, 9]]+15=48 vs 53 erra
+--- RODADA 4 · três bichos da colmeia do Ssish 509/888
+  Isolda lança FIO DUPLO (Arte de espada, 2º; G30: metade do multiplicador da arma, ×2.5; 1x por cena): 22; [[6], [4]]+34=44 vs 39 pega em cheio → 8 (501)
+  Isolda: [[11], [18]]+34=63 ACERTA [3]×3+10+23=42 − RD 5 = 18 (483)
+    ataque em Isolda: [[15], [9]]+15=39 vs 54 erra
+    ataque em Isolda: [[16], [8]]+15=39 vs 54 erra
+    ataque em Isolda: [[18], [12]]+15=45 vs 53 erra
+--- RODADA 5 · três bichos da colmeia do Ssish 483/888
+  Isolda: [[6], [14]]+34=54 ACERTA [8]×3+10+23=57 − RD 5 = 26 (457)
+  Isolda: [[14], [12]]+34=60 ACERTA [1]×3+10+23=36 − RD 5 = 15 (442)
+  FÚRIA: +1 ação, o poder recarrega
+    ataque em Isolda: [[16], [6]]+15=37 vs 54 erra
+    ataque em Isolda: [[17], [6]]+15=38 vs 54 erra
+    ataque em Isolda: [[18], [13]]+15=46 vs 53 erra
+    ataque em Isolda: [[1], [13]]+15=29 vs 52 erra
+--- RODADA 6 · três bichos da colmeia do Ssish 442/888
+  Isolda: [[5], [9]]+34=48 ACERTA [8]×3+10+23=57 − RD 5 = 26 (416)
+  Isolda: [[14], [13]]+34=61 ACERTA [1]×3+10+23=36 − RD 5 = 15 (401)
+    ataque em Isolda: [[5], [7]]+15=27 vs 54 erra
+    ataque em Isolda: [[19], [11]]+15=45 vs 54 erra
+    ataque em Isolda: [[14], [17]]+15=46 vs 53 erra
+    ataque em Isolda: [[19], [11]]+15=45 vs 52 erra
+--- RODADA 7 · três bichos da colmeia do Ssish 401/888
+  Isolda: [[7], [2]]+34=43 ACERTA [2]×3+10+23=39 − RD 5 = 17 (384)
+  Isolda: [[18], [10]]+34=62 ACERTA [2]×3+10+23=39 − RD 5 = 17 (367)
+    ataque em Isolda: [[20, 7], [18]]+15=60 vs 54 ACERTA CRÍTICO [7, 1, 8, 6, 1]×2.5+0+7=64 − RD 3 = 61 (239)
+    ataque em Isolda: [[6], [7]]+15=28 vs 54 erra
+    ataque em Isolda: [[11], [15]]+15=41 vs 53 erra
+    ataque em Isolda: [[17], [19]]+15=51 vs 52 erra
+--- RODADA 8 · três bichos da colmeia do Ssish 367/888
+  Isolda: [[2], [8]]+34=44 ACERTA [6]×3+10+23=51 − RD 5 = 23 (344)
+  Isolda: [[15], [13]]+34=62 ACERTA [8]×3+10+23=57 − RD 5 = 26 (318)
+    ataque em Isolda: [[12], [4]]+15=31 vs 54 erra
+    ataque em Isolda: [[20, 10], [16]]+15=61 vs 54 ACERTA CRÍTICO [5, 9, 5, 7, 10]×2.5+0+7=97 − RD 3 = 94 (145)
+    ataque em Isolda: [[13], [15]]+15=43 vs 53 erra
+    ataque em Isolda: [[7], [2]]+15=24 vs 52 erra
+--- RODADA 9 · três bichos da colmeia do Ssish 318/888
+  Isolda: [[16], [11]]+34=61 ACERTA [5]×3+10+23=48 − RD 5 = 21 (297)
+  Isolda: [[11], [2]]+34=47 ACERTA [2]×3+10+23=39 − RD 5 = 17 (280)
+    ataque em Isolda: [[15], [17]]+15=47 vs 54 erra
+    ataque em Isolda: [[20, 3], [2]]+15=40 vs 54 erra
+    ataque em Isolda: [[15], [18]]+15=48 vs 53 erra
+    ataque em Isolda: [[16], [13]]+15=44 vs 52 erra
+--- RODADA 10 · três bichos da colmeia do Ssish 280/888
+  Isolda: [[9], [5]]+34=48 ACERTA [3]×3+10+23=42 − RD 5 = 18 (262)
+  Isolda: [[10], [2]]+34=46 ACERTA [5]×3+10+23=48 − RD 5 = 21 (241)
+    ataque em Isolda: [[18], [16]]+15=49 vs 54 erra
+    ataque em Isolda: [[7], [6]]+15=28 vs 54 erra
+    ataque em Isolda: [[12], [13]]+15=40 vs 53 erra
+    ataque em Isolda: [[19], [1]]+15=35 vs 52 erra
+--- RODADA 11 · três bichos da colmeia do Ssish 241/888
+  Isolda: [[6], [12]]+34=52 ACERTA [7]×3+10+23=54 − RD 5 = 24 (217)
+  Isolda: [[9], [6]]+34=49 ACERTA [8]×3+10+23=57 − RD 5 = 26 (191)
+  MORAL d6 [2] → FOGE
+FIM: fugiu · rodadas 11 · mortos [] · PV 191/888 · grupo {'Isolda': 145}

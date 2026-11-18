@@ -1750,3 +1750,55 @@ Um golpe daquele martelo naquela bigorna faria dele o herdeiro. Daria a ele a m�
 O rei olhou o fogo por muito tempo.
 
 - **Parada:** meia-noite do 477, a Fornalha. O Martelo e a Matriz na mesma bancada, sem o golpe. A carta da Brara. O Ceduion espera o corpo. A Isolda nas Fundas.
+
+## Madrugada do 478 a noite do 485 — o golpe, o Cajado de Âmbar, as Fundas
+
+### A Fornalha, madrugada do 478
+O rei tirou a lona da Matriz e desenrolou o Martelo do pano. A Tilde dormia sentada no banco do canto, com a cabeça na parede.
+
+Ergueu o Martelo do Rei, que pesava menos do que devia, e o desceu sobre a bigorna.
+
+O golpe não fez barulho. A Fornalha inteira ficou um instante sem som, como se o fogo tivesse prendido o fôlego. Depois a Matriz respondeu: um zumbido baixo, que subiu pelo cabo até o osso do braço e se espalhou pelo peito. O rei sentiu a coisa sair dele, não de uma vez, mas como a água sai de um pano torcido: a força dos anos, o fôlego das três ações, o peso que ele tinha no corpo. Caiu de joelhos.
+
+Ficou a mão. A mão sabia tudo o que sempre soube. O corpo em volta dela era o de um começo.
+
+A Tilde acordou com o rei ajoelhado no chão, com as duas mãos ainda no cabo, rindo baixo e chorando ao mesmo tempo.
+
+### A Fornalha, 478 e 479
+O âmbar-velho tinha um inseto preso dentro havia mil anos. O rei o assentou na ponta de uma haste de eiurvo e bateu o metal em volta, com o Martelo do Rei sobre a Matriz, e as duas ferramentas cantaram juntas como nunca tinham cantado com outro martelo.
+
+O Herkald veio na tarde do 479 e ficou na porta, de braços cruzados.
+
+"Você trocou cinquenta anos de corpo por um martelo de morto", disse. "E vai às Fundas assim."
+
+"Vou."
+
+"Então eu não abençoo." Deu as costas e foi embora. Era a primeira vez em anos que ele saía da Fornalha sem dizer até amanhã.
+
+Naquela noite, sobre o Berço de Selo, o rei pôs a Pressa no Cajado. A Nouliel ficou até o fim, contando o carvão no livro só para ter o que fazer com as mãos. Quando ele terminou, ela fechou o livro.
+
+"O Herkald te ama", disse. "Por isso grita."
+
+"Eu sei." O rei olhou para ela muito tempo. "Você é um dos poucos afetos que me sobraram."
+
+Ela não respondeu. Pôs a mão sobre a dele, em cima do cajado ainda morno.
+
+### O rio seco, 480 a 482
+No 480 o rio baixou até mostrar as pedras. As barcas leves foram puxadas à corda nos vaus, com a Matriz amarrada no fundo de uma delas como um defunto. O rei puxava junto e sentia nos ombros, pela primeira vez em muitos anos, o que é ser um homem comum numa corda.
+
+### As Fundas, 483 a 485
+A galé da Isolda estava ancorada meio dia abaixo das Fundas, com a borda arranhada de garras e duas carcaças cinzentas amarradas no costado. A Isolda tinha um curativo no braço e o mesmo rosto de sempre.
+
+"Três vieram", disse. "Dois ficaram. Eu esperei, como o senhor manda."
+
+Nas Fundas a água era funda, verde e parada, e cheirava a enxofre. O rei fechou os olhos e procurou o Croque do Rio, como quem procura uma ferramenta no escuro da própria bancada. Achou: um puxão fraco, para o fundo e para a margem de pedra.
+
+Os bichos subiram da água antes que o primeiro mergulhador entrasse. Insetos do tamanho de cavalos, com asas de vidro sujo, gritando um som de metal raspado. O Foco de Osso esfriou na mão do rei, e o Toque saiu dele como sempre tinha saído, porque o Toque era da peça e a peça era dele. O Moreth e o Eiagrir acenderam as Lanças do Sol. Os bichos caíram na água antes de chegar às barcas, no 483 e outra vez no 484.
+
+No 485 o rio secou de novo. Os baixios das Fundas apareceram, lama preta e pedra. E na lama, onde o puxão do Croque apontava, os mergulhadores dos Afogados Vivos acharam a quilha do barco do Teraseth, deitado de lado como um bicho que morreu dormindo.
+
+"Ele está mais fundo", disse o mais velho deles, com lama até o peito. "Debaixo do casco. Amanhã, com cordas."
+
+Na mesma noite chegou a barca de Ireviel. A cidade dizia que o rei tinha perdido a força em Dragal. Os da Cinza tinham pintado nas portas: O REI CAIU.
+
+- **Parada:** noite do 485, as Fundas. O barco do Teraseth achado; o corpo debaixo do casco, para amanhã. O boato em Ireviel. O rei no nível 12.

@@ -17,7 +17,7 @@
      "quem": "eles",
      "o_que": "1 kg de shasha",
      "a_cada": 7,
-     "proxima": 477
+     "proxima": 484
     },
     {
      "quem": "eles",
@@ -40,7 +40,8 @@
     "455: eles, cláusula 2: [12]+2 cumprem",
     "462: eles, cláusula 2: [18]+1 cumprem",
     "469: eles, cláusula 2: [1]+0 FALHAM",
-    "476: eles, cláusula 2: [9]+0 cumprem"
+    "476: eles, cláusula 2: [9]+0 cumprem",
+    "483: eles, cláusula 2: [16]-1 cumprem"
    ]
   },
   "lumade": {
@@ -88,10 +89,13 @@
     {
      "quem": "eles",
      "o_que": "20 lanças da guarda dela (nível 80 a 110) e a campeã MIE (150) na caçada da Elaeva",
-     "ate": 480
+     "ate": 480,
+     "feito": true
     }
    ],
-   "log": []
+   "log": [
+    "483: eles, cláusula 2: [14]-3 cumprem"
+   ]
   }
  }
 }

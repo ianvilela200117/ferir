@@ -1,29 +1,5 @@
 {
  "ordem": [
-  "CF28",
-  "IR28",
-  "TR28",
-  "TR28b",
-  "JS28",
-  "FB28",
-  "LC28",
-  "OP28",
-  "FE28",
-  "BL28",
-  "SR28",
-  "SR28b",
-  "LC28n",
-  "TF28",
-  "TF28b",
-  "FB28s",
-  "JS28s",
-  "GI28",
-  "TE28",
-  "BR28",
-  "GI28b",
-  "TI28",
-  "LC28v",
-  "GR28",
   "GR28b",
   "MR29",
   "SK29",
@@ -399,1092 +375,33 @@
   "IS77",
   "CE77",
   "AV77",
-  "BR77"
+  "BR77",
+  "GL78",
+  "VY78",
+  "VD78",
+  "IS78",
+  "IS79",
+  "IS80",
+  "IS81",
+  "CN78",
+  "RF80",
+  "483-laco-quem",
+  "483-laco",
+  "483-chamado",
+  "483-vinculos",
+  "CB76",
+  "CB83a",
+  "CB83b",
+  "CB83c",
+  "BF83",
+  "CN83",
+  "GS81",
+  "GO83",
+  "BF84",
+  "CN84",
+  "BF85"
  ],
  "selos": {
-  "CF28": {
-   "id": "CF28",
-   "dia": 427,
-   "hora": "01:15:15",
-   "titulo": "O CONSELHO VOTA: O FACIO (pobre; dorme no cais; vendeu à Liga os nomes do livro no 278, cumpriu a prisão até a primavera; contou ao rei que os nomes foram à Leliel e quer voltar para casa): o que o reino faz com ele?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE B) teto e trabalho na casa, à vista da guarda · placar A 0 · B 3 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Thuron",
-     "txt": "VENCE B) teto e trabalho na casa, à vista da guarda · placar A 0 · B 3 · C 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Herkald, Thuron"
-    }
-   ]
-  },
-  "IR28": {
-   "id": "IR28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "QUEM VIU A IRASA (avistamento do 428) E ONDE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "os salineiros, nas salinas velhas (onde ela já foi vista)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "os barqueiros, no braço oeste do rio"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os vaqueiros da várzea nova, perto de Ireviel"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "os salineiros, nas salinas velhas (onde ela já foi vista)",
-     "txt": "[3] → os salineiros, nas salinas velhas (onde ela já foi vista)"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "TR28": {
-   "id": "TR28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "A RESPOSTA DO TERASETH (Lendário 432; o recado do 425: caçar a ELOUNE juntos; o aliado dele morreu para ela no 424; o Morek já está morto)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "RECUSA: caça sozinho, como sempre"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "ACEITA caçar a Eloune junto (rola quando)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "ACEITA e vem já: está perto, rio acima"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "TR28b": {
-   "id": "TR28b",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "QUANDO O TERASETH QUER CAÇAR A ELOUNE (só vale se o TR28 der 2-4)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "AMANHÃ, no amanhecer do 429 (o dia da saída a Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "na VOLTA do rei de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "na LUA NOVA, o 430 (a lama mais funda e a lua escura)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "na VOLTA do rei de Levis",
-     "txt": "[4] → na VOLTA do rei de Levis"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "JS28": {
-   "id": "JS28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "O QUE OS JURADOS DE STEUNN PEDEM NA AUDIÊNCIA (os clãs de cima; desde o 408 pedem a Tilde ou quem responda por ela)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "A TILDE: que vá a Steunn ser julgada na feira, e as guildas abrem a estrada de pedra"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "QUEM RESPONDA POR ELA: o rei ou um da casa vai à feira de Steunn falar por ela"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "UMA TROCA: que o rei reconheça o juramento deles pelo herdeiro perdido dos Steunn, e param de pedir a menina"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "FB28": {
-   "id": "FB28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "O QUE OS FILHOS DA BRECHA PEDEM NA AUDIÊNCIA (veteranos da brecha de Marasar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "TERRA no porto de Marasar (que é do reino) para os veteranos"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "TERRA e um posto na guarda do porto"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "LC28": {
-   "id": "LC28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "O QUE OS DA LUZ DO CAIS OFERECEM (amigos; acendem velas para a luz que matou o Naudren, o Moreth)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "OLHOS: +2 na espionagem da casa em Marasar por uma lua"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "UM AVISO do porto de Marasar"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)",
-     "txt": "[3] → MÃOS: 1d6×5 voluntários para a caçada (gente do porto, nível baixo)"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "OP28": {
-   "id": "OP28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "O QUE OS OLHOS PINTADOS FAZEM (ameaça ou sabotagem pequena, mas visível; a guarda está dobrada na rua do rio e na enfermaria)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "uma pedra de olhos pintados na porta da enfermaria das crianças"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "tentam levar uma criança da enfermaria; as Mães da Porta gritam e a guarda chega (rola quem pegam)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada",
-     "txt": "[4] → um sapato de criança e um olho pintado no muro da casa, na rua do rio, debaixo da guarda dobrada"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "FE28": {
-   "id": "FE28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "DE QUEM É A FESTA OU O CASAMENTO NO BAIRRO (evento local do 428)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "dos SEM-TORRE: um casamento entre os que a casa acolheu"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "dos FILHOS DO LIVRO, as famílias dos barqueiros"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "da GUARDA: um lanceiro da cidade casa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "dos SEM-TORRE: um casamento entre os que a casa acolheu",
-     "txt": "[1] → dos SEM-TORRE: um casamento entre os que a casa acolheu"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "BL28": {
-   "id": "BL28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "COMO OS BARQUEIROS DO LIVRO RECEBEM O AVISO DO REI (o recado chega à forquilha ao meio-dia do 428)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "agradecem e pedem ABRIGO para as famílias dentro dos muros de Ireviel"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "agradecem e se ARMAM: mandam vigias rio acima"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "querem o FACIO (o aviso é dele, e ele ganhou teto na casa): pedem que o rei o entregue"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "agradecem e se ARMAM: mandam vigias rio acima",
-     "txt": "[3] → agradecem e se ARMAM: mandam vigias rio acima"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "SR28": {
-   "id": "SR28",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "A SIRA E O PRESO DA LIGA (o homem do Draek, preso no 420): o que a Leliel vai fazer com os nomes do livro (Sira +8)",
-   "dado": [
-    1,
-    20,
-    8
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "NADA: ele não sabe ou não fala"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 14,
-     "res": "POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 20,
-     "res": "SABE para quê (rola o quê)"
-    },
-    {
-     "tipo": "num",
-     "a": 21,
-     "b": 27,
-     "res": "SABE para quê e QUEM no norte guarda a lista"
-    },
-    {
-     "tipo": "num",
-     "a": 28,
-     "b": 1000000,
-     "res": "tudo isso e uma pista nova"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 9,
-     "res": "POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe",
-     "txt": "[1] +8 = 9 → POUCO: os nomes estão com a Leliel no norte; para quê, ele não sabe"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "SR28b": {
-   "id": "SR28b",
-   "dia": 428,
-   "hora": "01:17:30",
-   "titulo": "PARA QUE A LELIEL QUER OS NOMES DO LIVRO (só vale se o SR28 der 15+)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "COMPRAR: ouro aos barqueiros marcados para virarem olhos dela no rio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "COBRAR: os parentes deles no norte pagam ou somem (chantagem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "CAÇAR: matadores descem o rio atrás deles"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "CAÇAR: matadores descem o rio atrás deles",
-     "txt": "[5] → CAÇAR: matadores descem o rio atrás deles"
-    }
-   ],
-   "hora_rolado": "01:17:30"
-  },
-  "LC28n": {
-   "id": "LC28n",
-   "dia": 428,
-   "hora": "01:17:39",
-   "titulo": "QUANTOS VOLUNTÁRIOS DA LUZ DO CAIS (1d6 × 5)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 5 voluntários"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado × 5 voluntários",
-     "txt": "[4] → o dado × 5 voluntários"
-    }
-   ],
-   "hora_rolado": "01:17:39"
-  },
-  "TF28": {
-   "id": "TF28",
-   "dia": 428,
-   "hora": "01:18:04",
-   "titulo": "A SURPRESA NA RESPOSTA DO TERASETH (gerador novidade [7]: uma facção nova nasce de um conflito antigo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "OS POUPADOS: os da Liga que o Teraseth deixou viver na guerra do rio viraram bando e caçam a gente dele: o recado do rei não chegou, e o mensageiro voltou ferido"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)",
-     "txt": "[2] → OS DO CROQUE: os barqueiros que caçam com o Teraseth desde a guerra do rio viraram irmandade e trazem a resposta dele (rola qual)"
-    }
-   ],
-   "hora_rolado": "01:18:04"
-  },
-  "TF28b": {
-   "id": "TF28b",
-   "dia": 428,
-   "hora": "01:18:04",
-   "titulo": "A RESPOSTA DO TERASETH QUE OS DO CROQUE TRAZEM (só vale se o TF28 der 1-3)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ele CAÇA COM O REI quando o rei voltar de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ele quer o CORAÇÃO da Eloune (o núcleo Épico de Água) como preço"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele",
-     "txt": "[1] → ele caça a Eloune SOZINHO, e os do Croque vêm à caçada do rei no lugar dele"
-    }
-   ],
-   "hora_rolado": "01:18:04"
-  },
-  "FB28s": {
-   "id": "FB28s",
-   "dia": 428,
-   "hora": "01:18:04",
-   "titulo": "A SURPRESA NA AUDIÊNCIA DOS FILHOS DA BRECHA (gerador novidade [7]: uma facção nova nasce de um conflito antigo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "OS FILHOS RACHAM: os veteranos mais novos saem e viram companhia de aluguel"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)",
-     "txt": "[2] → OS DA BRECHA VELHA: os que defenderam a brecha de Marasar pela Liga no 287 e perderam se juntam contra os veteranos (a terra que os Filhos pedem era deles)"
-    }
-   ],
-   "hora_rolado": "01:18:05"
-  },
-  "JS28s": {
-   "id": "JS28s",
-   "dia": 428,
-   "hora": "01:18:04",
-   "titulo": "QUEM O NPC NOVO DOS JURADOS DE STEUNN (gerador novidade [3]: entra na vida de alguém próximo) PROCURA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a TILDE (a menina que os Jurados pedem)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o HERKALD (o mestre do fogo dela)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o HIALD (o aprendiz de Steunn na forja grande)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a TILDE (a menina que os Jurados pedem)",
-     "txt": "[3] → a TILDE (a menina que os Jurados pedem)"
-    }
-   ],
-   "hora_rolado": "01:18:05"
-  },
-  "GI28": {
-   "id": "GI28",
-   "dia": 428,
-   "hora": "01:18:49",
-   "titulo": "QUE NÍVEL TEM O GIUNN (o jurado de Steunn que procura a Tilde; gerador npc)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "nível 20"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "nível 35"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "nível 50"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "nível 70"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "nível 35",
-     "txt": "[4] → nível 35"
-    }
-   ],
-   "hora_rolado": "01:18:49"
-  },
-  "TE28": {
-   "id": "TE28",
-   "dia": 428,
-   "hora": "01:19:54",
-   "titulo": "EM QUANTOS DIAS O TERASETH CAÇA A ELOUNE SOZINHO (TF28b [1]; a contar do 428)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado em dias"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado em dias",
-     "txt": "[4] → o dado em dias"
-    }
-   ],
-   "hora_rolado": "01:19:54"
-  },
-  "BR28": {
-   "id": "BR28",
-   "dia": 428,
-   "hora": "01:52:05",
-   "titulo": "O CONSELHO VOTA: A TERRA DO PORTO DE MARASAR (do reino desde o 287): os FILHOS DA BRECHA (veteranos que tomaram a brecha pela casa) pedem terra; os DA BRECHA VELHA (os que defenderam a brecha pela Liga e perderam) dizem que a terra era deles. O rei mandou ao conselho (3c).",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE A) a terra aos Filhos da Brecha · placar A 5 · B 0 · C 1 · VOTO VENCIDO: Nouliel",
-     "txt": "VENCE A) a terra aos Filhos da Brecha · placar A 5 · B 0 · C 1 · VOTO VENCIDO: Nouliel"
-    }
-   ]
-  },
-  "GI28b": {
-   "id": "GI28b",
-   "dia": 428,
-   "hora": "01:52:24",
-   "titulo": "O QUE O GIUNN DIZ À TILDE (4a: à vista do Herkald; CURIOSO e AMBICIOSO; os Jurados sofrem a estrada de pedra fechada desde o 408)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "PERGUNTA: quer saber dela mesma se bateu o vaduar quente, e promete falar por ela na feira de Steunn se ela disser a verdade"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "AVISO: as guildas de Steunn mandaram mais gente a Ireviel além do Hiald"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre",
-     "txt": "[4] → CONVITE: que ela vá a Steunn por vontade própria; os clãs de cima a guardam e a estrada abre"
-    }
-   ],
-   "hora_rolado": "01:52:24"
-  },
-  "TI28": {
-   "id": "TI28",
-   "dia": 428,
-   "hora": "01:52:24",
-   "titulo": "COMO A TILDE RESPONDE AO GIUNN (PREGUIÇOSA e GENEROSA; opinião do rei +10; o Herkald ao lado)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "não responde: segura a manga do Herkald e pergunta ao rei depois"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "responde de criança séria: pergunta POR QUE as guildas a querem"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "gosta dele: quer ouvir mais da montanha (pede para ele voltar)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "responde de criança séria: pergunta POR QUE as guildas a querem",
-     "txt": "[3] → responde de criança séria: pergunta POR QUE as guildas a querem"
-    }
-   ],
-   "hora_rolado": "01:52:24"
-  },
-  "LC28v": {
-   "id": "LC28v",
-   "dia": 428,
-   "hora": "01:52:48",
-   "titulo": "DE QUE NÍVEL SÃO OS 20 VOLUNTÁRIOS DA LUZ DO CAIS (gente do porto; 5a: vão à Guilda)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "nível 5 a 10"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "nível 10 a 20"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "nível 20 a 30"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "nível 10 a 20",
-     "txt": "[4] → nível 10 a 20"
-    }
-   ],
-   "hora_rolado": "01:52:48"
-  },
-  "GR28": {
-   "id": "GR28",
-   "dia": 428,
-   "hora": "01:54:32",
-   "titulo": "QUEM COBRA A PROMESSA ANTIGA DA GROA (a surpresa atrasada dela, G8-C; gerador novidade [10]; a ferreira refugiada de Steunn)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um homem que veio com os JURADOS DE STEUNN (gente dos clãs de cima)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um homem das GUILDAS DE STEUNN (o lado do Borecci)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "um homem das GUILDAS DE STEUNN (o lado do Borecci)",
-     "txt": "[5] → um homem das GUILDAS DE STEUNN (o lado do Borecci)"
-    }
-   ],
-   "hora_rolado": "01:54:32"
-  },
   "GR28b": {
    "id": "GR28b",
    "dia": 428,
@@ -19817,6 +18734,1225 @@
     }
    ],
    "hora_rolado": "13:27:43"
+  },
+  "GL78": {
+   "id": "GL78",
+   "dia": 477,
+   "hora": "14:02:40",
+   "titulo": "A GUILDA DOS AVENTUREIROS DE IREVIEL PROCURA UM BICHO DE LUZ (2b; força 2, fama 38, o Starkald 87; o núcleo tem de ser de bicho ÉPICO ou maior; o Nesium em Steunn é longe e grande demais para ela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "NADA: as matas e o rio do reino não têm bicho de Luz; os rastreadores voltam no 481 de mãos vazias"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um RUMOR: um bicho de Luz ÉPICO (o gerador) a 1d6+3 dias de Ireviel; a Guilda vai atrás (a caça rola quando chegar)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a Guilda ACHA um bicho de Luz ÉPICO a 1d3 dias de Ireviel e sai para caçá-lo (a caça rola quando chegar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um RUMOR: um bicho de Luz ÉPICO (o gerador) a 1d6+3 dias de Ireviel; a Guilda vai atrás (a caça rola quando chegar)",
+     "txt": "[4] → um RUMOR: um bicho de Luz ÉPICO (o gerador) a 1d6+3 dias de Ireviel; a Guilda vai atrás (a caça rola quando chegar)"
+    }
+   ],
+   "hora_rolado": "14:02:40"
+  },
+  "VY78": {
+   "id": "VY78",
+   "dia": 477,
+   "hora": "14:02:58",
+   "titulo": "ONDE ESTÁ O BICHO DE LUZ DO RUMOR (GL78 [4]; o gerador deu VEYMIR, que bate no cânone (Veydun, Veyula): trocado por YOLORVUS (nomes.py arcaica livre); Épico 92, planta do tamanho de uma casa, Luz, mora em cavernas, fala e mente; coração: núcleo Épico de Luz), o lugar",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "as cavernas das COLINAS DE KREMIR, a oeste"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "as grutas de cal do PENHASCO DO RIO, abaixo de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "as covas debaixo de LUMGAL, o cemitério dos reis"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "as grutas de cal do PENHASCO DO RIO, abaixo de Levis",
+     "txt": "[3] → as grutas de cal do PENHASCO DO RIO, abaixo de Levis"
+    }
+   ],
+   "hora_rolado": "14:02:58"
+  },
+  "VD78": {
+   "id": "VD78",
+   "dia": 477,
+   "hora": "14:02:58",
+   "titulo": "QUANTOS DIAS ATÉ O YOLORVUS (GL78: 1d6+3 dias de Ireviel)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "4 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "5 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "6 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "7 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "8 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "9 dias"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "9 dias",
+     "txt": "[6] → 9 dias"
+    }
+   ],
+   "hora_rolado": "14:02:58"
+  },
+  "IS78": {
+   "id": "IS78",
+   "dia": 477,
+   "hora": "14:05:02",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, QUARTO DIA (478; o Ssish marca território nesta semana)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO do Teraseth (o corpo está perto: +2 na busca de amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)",
+     "txt": "[1] → os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
+    }
+   ],
+   "hora_rolado": "14:05:02"
+  },
+  "IS79": {
+   "id": "IS79",
+   "dia": 477,
+   "hora": "14:05:02",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, QUINTO DIA (479)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO (+2 amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)",
+     "txt": "[2] → os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)"
+    }
+   ],
+   "hora_rolado": "14:05:02"
+  },
+  "IS80": {
+   "id": "IS80",
+   "dia": 477,
+   "hora": "14:05:02",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, SEXTO DIA (480; o rei sai de Ireviel rio acima)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO (+2 amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)",
+     "txt": "[1] → os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)"
+    }
+   ],
+   "hora_rolado": "14:05:02"
+  },
+  "IS81": {
+   "id": "IS81",
+   "dia": 477,
+   "hora": "14:05:02",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, SÉTIMO DIA (481)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO (+2 amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nada no fundo",
+     "txt": "[3] → nada no fundo"
+    }
+   ],
+   "hora_rolado": "14:05:02"
+  },
+  "CN78": {
+   "id": "CN78",
+   "dia": 477,
+   "hora": "14:06:08",
+   "titulo": "(OCULTO) QUANTOS BICHOS DA COLMEIA ATACAM A GALÉ DA ISOLDA (IS78 [1], 478, as Fundas; os bichos do Ssish: Raro 37, Som, insetos do tamanho de um cavalo, voam baixo sobre a água; PV 296, Defesa 25, RD 3, +15, 2d10 × 2,5; cospem visgo e prendem um a 18 m; o grito do metal atordoa (Vontade CD 14, 9 m, a cada 3 rodadas); fraqueza SILÊNCIO; o gerador deu o nome ERYVIL, que bate no cânone: ficam sem nome, 'os bichos da colmeia')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "DOIS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TRÊS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "QUATRO bichos"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "TRÊS bichos",
+     "txt": "[4] → TRÊS bichos"
+    }
+   ],
+   "hora_rolado": "14:06:08"
+  },
+  "RF80": {
+   "id": "RF80",
+   "dia": 481,
+   "hora": "14:07:46",
+   "titulo": "A VIAGEM DO REI DE IREVIEL ÀS FUNDAS (sai na manhã do 480 nas barcas leves, com a Matriz, o Martelo, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10 e os mergulhadores dos Afogados Vivos; o RIO SECO no 480: barca grande encalha, vau a pé em vários pontos; volta a baixo no 481)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os vaus secos: as barcas puxadas à corda; chega à galé da Isolda na MANHÃ DO 483"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "chega à galé da Isolda no ENTARDECER DO 482"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os vaus secos: as barcas puxadas à corda; chega à galé da Isolda na MANHÃ DO 483",
+     "txt": "[1] → os vaus secos: as barcas puxadas à corda; chega à galé da Isolda na MANHÃ DO 483"
+    }
+   ],
+   "hora_rolado": "14:07:46"
+  },
+  "483-laco-quem": {
+   "id": "483-laco-quem",
+   "dia": 483,
+   "hora": "14:07:52",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o HERKALD",
+     "txt": "[1] → o HERKALD"
+    }
+   ],
+   "hora_rolado": "14:07:52"
+  },
+  "483-laco": {
+   "id": "483-laco",
+   "dia": 483,
+   "hora": "14:07:52",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "ATRITO",
+     "txt": "[2] → ATRITO"
+    }
+   ],
+   "hora_rolado": "14:07:52"
+  },
+  "483-chamado": {
+   "id": "483-chamado",
+   "dia": 483,
+   "hora": "14:07:52",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 24,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      11
+     ],
+     "total": 15,
+     "res": "chega 1",
+     "txt": "[11] +4 = 15 → chega 1"
+    }
+   ],
+   "hora_rolado": "14:07:52"
+  },
+  "483-vinculos": {
+   "id": "483-vinculos",
+   "dia": 483,
+   "hora": "14:07:52",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "Tilde–Iorin",
+     "txt": "#1 [2] → Tilde–Iorin"
+    },
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "Brara–Thugek",
+     "txt": "#2 [6] → Brara–Thugek"
+    }
+   ],
+   "hora_rolado": "14:07:52"
+  },
+  "CB76": {
+   "id": "CB76",
+   "dia": 483,
+   "hora": "14:08:51",
+   "titulo": "(OCULTO) A COBIÇA DO 476 QUE O MESTRE ESQUECEU (o PILÃO DE VARADE, Mítico, na casa em Ireviel, d20 [3]: alguém age pela peça; rolada no 483, com o erro anotado)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ROUBO: o pilão some da casa (a Sira tem um rastro)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TENTATIVA: um homem do Ardenghi (o Salvio) entra de noite e a guarda o pega"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "SÓ OLHOS: um agente mede a casa e a guarda; volta depois"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "TENTATIVA: um homem do Ardenghi (o Salvio) entra de noite e a guarda o pega",
+     "txt": "[4] → TENTATIVA: um homem do Ardenghi (o Salvio) entra de noite e a guarda o pega"
+    }
+   ],
+   "hora_rolado": "14:08:51"
+  },
+  "CB83a": {
+   "id": "CB83a",
+   "dia": 483,
+   "hora": "14:08:51",
+   "titulo": "(OCULTO) A COBIÇA DO 483: OS AROS DA ELIANE, d20 [1]: ALGUÉM GRANDE age pela peça (a Eliane está com o rei, rio acima)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a ALMISION (a Escola Única) manda pedir os aros em troca de um favor grande (carta ao rei, chega no 487)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o BORECCI (as guildas de Steunn) paga gente para tomar os aros da Eliane na estrada (uma emboscada a caminho de Levis)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a LELIEL põe preço na cabeça da Eliane pelos aros (os caçadores do norte; o perigo vem devagar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a ALMISION (a Escola Única) manda pedir os aros em troca de um favor grande (carta ao rei, chega no 487)",
+     "txt": "[2] → a ALMISION (a Escola Única) manda pedir os aros em troca de um favor grande (carta ao rei, chega no 487)"
+    }
+   ],
+   "hora_rolado": "14:08:51"
+  },
+  "CB83b": {
+   "id": "CB83b",
+   "dia": 483,
+   "hora": "14:08:51",
+   "titulo": "(OCULTO) A COBIÇA DO 483: A LANÇA DE VEYDUN (Mítica; a reserva do Eiagrir, guardada em Ireviel), d20 [3]",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ROUBO: a lança some do arsenal da Fornalha (a Sira tem um rastro)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TENTATIVA: um ladrão das MÃOS DE BREU entra e a guarda da Fornalha o pega"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "SÓ OLHOS: alguém pergunta pela lança no cais"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "SÓ OLHOS: alguém pergunta pela lança no cais",
+     "txt": "[5] → SÓ OLHOS: alguém pergunta pela lança no cais"
+    }
+   ],
+   "hora_rolado": "14:08:51"
+  },
+  "CB83c": {
+   "id": "CB83c",
+   "dia": 483,
+   "hora": "14:08:51",
+   "titulo": "(OCULTO) A COBIÇA DO 483: O PILÃO DE VARADE (Mítico, na casa em Ireviel), d20 [2]",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ROUBO: o pilão some da casa (a Sira tem um rastro)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TENTATIVA: entram de noite e a guarda pega um"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "SÓ OLHOS: alguém mede a casa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "TENTATIVA: entram de noite e a guarda pega um",
+     "txt": "[3] → TENTATIVA: entram de noite e a guarda pega um"
+    }
+   ],
+   "hora_rolado": "14:08:51"
+  },
+  "BF83": {
+   "id": "BF83",
+   "dia": 483,
+   "hora": "14:09:16",
+   "titulo": "A BUSCA DO TERASETH COM O REI (483, as Fundas; a PEÇA QUE LEMBRA aponta o CROQUE DO RIO, Primordial, que o rei forjou e que afundou com o Teraseth; os mergulhadores dos AFOGADOS VIVOS; a galé da Isolda; a colmeia do Ssish acordada nesta semana)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA sobem das Fundas contra as barcas (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "acham o BARCO AFUNDADO pela direção do Croque; o corpo está mais fundo: amanhã"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "os mergulhadores acham o CORPO do Teraseth, com a armadura do rei e o Croque do Rio na mão"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os BICHOS DA COLMEIA sobem das Fundas contra as barcas (a luta, G9)",
+     "txt": "[1] → os BICHOS DA COLMEIA sobem das Fundas contra as barcas (a luta, G9)"
+    }
+   ],
+   "hora_rolado": "14:09:16"
+  },
+  "CN83": {
+   "id": "CN83",
+   "dia": 483,
+   "hora": "14:09:35",
+   "titulo": "QUANTOS BICHOS DA COLMEIA SOBEM CONTRA AS BARCAS DO REI (BF83 [1], 483, as Fundas; os mesmos bichos do 478: Raro 37, Som, PV 296 cada; o terceiro do 478 fugiu ferido para a colmeia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "DOIS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TRÊS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "QUATRO bichos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "TRÊS bichos",
+     "txt": "[3] → TRÊS bichos"
+    }
+   ],
+   "hora_rolado": "14:09:35"
+  },
+  "GS81": {
+   "id": "GS81",
+   "dia": 483,
+   "hora": "14:10:11",
+   "titulo": "QUANDO VOLTA O 'GOLPE OU SUCESSÃO' EM IREVIEL (o evento PERTO de mundo do 481: 'nada por enquanto, volta em 1d6 dias'; o 1d6 devia ter sido rolado no 481 e o Mestre esqueceu: rolado agora, no 483)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "no 482"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "no 483"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "no 484"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "no 485"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "no 486"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "no 487"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "no 483",
+     "txt": "[2] → no 483"
+    }
+   ],
+   "hora_rolado": "14:10:11"
+  },
+  "GO83": {
+   "id": "GO83",
+   "dia": 483,
+   "hora": "14:10:28",
+   "titulo": "(OCULTO) O GOLPE OU SUCESSÃO EM IREVIEL (483; GS81 [2]; o rei rio acima no nível 11; a Nouliel governa pela linha selada; a Liga e os conselheiros entraram na cidade nestas semanas; os da Muralha Velha acabaram de ganhar voz na guarda; o Graur em Farenta, o Tolvane na estrada de Lumade; a notícia sobe o rio em 2 dias: 485)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "os RENDIDOS DE MARASAR (força 6, hostis), pagos pela Liga, tomam o cais de Ireviel de noite; a guarda da Nouliel os cerca na casa da alfândega (Ordem −1; luta no cais)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o THURON (lealdade 4) chama o conselho para tirar da Nouliel a linha selada enquanto o rei não volta; o conselho se divide (o voto rola)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "os da MURALHA VELHA exigem o comando do portão; a Sira acha que um deles é pago pelos conselheiros"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o BOATO 'o rei perdeu a força em Dragal' corre a cidade; os da Cinza pintam 'o rei caiu' nas portas (Ordem −1 até a volta do rei)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a SUCESSÃO: o conselho pergunta quem governa se o rei morrer (não há herdeiro); a Nouliel é apontada; a Sira e o Thuron contra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um susto só: um agente da Liga tenta abrir a poterna e a guarda o pega"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o BOATO 'o rei perdeu a força em Dragal' corre a cidade; os da Cinza pintam 'o rei caiu' nas portas (Ordem −1 até a volta do rei)",
+     "txt": "[4] → o BOATO 'o rei perdeu a força em Dragal' corre a cidade; os da Cinza pintam 'o rei caiu' nas portas (Ordem −1 até a volta do rei)"
+    }
+   ],
+   "hora_rolado": "14:10:28"
+  },
+  "BF84": {
+   "id": "BF84",
+   "dia": 484,
+   "hora": "14:10:42",
+   "titulo": "A BUSCA DO TERASETH, SEGUNDO DIA COM O REI (484, as Fundas; a PEÇA QUE LEMBRA aponta o Croque do Rio; os mergulhadores dos Afogados; a colmeia perdeu cinco bichos no 478 e no 483: o perigo cai a 1 em 6)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "mais BICHOS DA COLMEIA sobem (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "acham o BARCO AFUNDADO pela direção do Croque; o corpo está mais fundo, na lama: amanhã"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "os mergulhadores acham o CORPO do Teraseth, com a armadura do rei e o Croque do Rio na mão"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "mais BICHOS DA COLMEIA sobem (a luta, G9)",
+     "txt": "[1] → mais BICHOS DA COLMEIA sobem (a luta, G9)"
+    }
+   ],
+   "hora_rolado": "14:10:42"
+  },
+  "CN84": {
+   "id": "CN84",
+   "dia": 484,
+   "hora": "14:10:49",
+   "titulo": "QUANTOS BICHOS DA COLMEIA SOBEM NO 484 (BF84 [1]; Raro 37, Som, PV 296 cada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "DOIS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TRÊS bichos"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "QUATRO bichos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "QUATRO bichos",
+     "txt": "[5] → QUATRO bichos"
+    }
+   ],
+   "hora_rolado": "14:10:49"
+  },
+  "BF85": {
+   "id": "BF85",
+   "dia": 485,
+   "hora": "14:11:15",
+   "titulo": "A BUSCA DO TERASETH, TERCEIRO DIA COM O REI (485, as Fundas; o RIO SECO de novo, 14/100: a lama do fundo aparece nos baixios e o mergulho fica raso; a Peça que Lembra aponta o Croque; a colmeia perdeu nove bichos)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "mais BICHOS DA COLMEIA sobem (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "acham o BARCO AFUNDADO; o corpo está mais fundo: amanhã"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "acham o CORPO do Teraseth na lama do baixio, com a armadura do rei e o Croque do Rio na mão"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "acham o BARCO AFUNDADO; o corpo está mais fundo: amanhã",
+     "txt": "[2] → acham o BARCO AFUNDADO; o corpo está mais fundo: amanhã"
+    }
+   ],
+   "hora_rolado": "14:11:15"
   }
  }
 }

@@ -1,0 +1,11 @@
+LEI DAS AÇÕES: três bichos da colmeia do Ssish (483) (nível 37) contra 5 · PV 888/888 · RD 5 · 3 ações · reação 1 · grupo: Ferir 1, Moreth 4, Eiagrir 3, Eliane 2, Isolda 3
+INICIATIVA: três bichos da colmeia do Ssish (483) 2d20+3 = 26 × o grupo 2d20+11 (média) = 40 → o grupo age primeiro
+--- RODADA 1 · três bichos da colmeia do Ssish (483) 888/888
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana): 800; [[17], [14]]+34=65 vs 39 pega em cheio → 397 (491)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 670; [[12], [19]]+44=75 vs 39 pega em cheio → 332 (159)
+  Moreth: [[3], [1]]+44=48 ACERTA [3]×3+15+46=70 − RD 5 = 32 (127)
+  Moreth: [[15], [14]]+44=73 ACERTA [1]×3+15+46=64 − RD 5 = 29 (98)
+  Moreth: [[12], [18]]+44=74 ACERTA [6]×3+15+46=79 − RD 5 = 37 (61)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 260; [[16], [10]]+36=62 vs 39 pega em cheio → 127 (-66)
+  três bichos da colmeia do Ssish (483) CAI
+FIM: morto · rodadas 1 · mortos [] · PV -66/888 · grupo {'Ferir': 189, 'Moreth': 600, 'Eiagrir': 420, 'Eliane': 260, 'Isolda': 300}

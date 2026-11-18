@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 476,
+  "dia": 483,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -30,13 +30,13 @@
    "ÉDITO DA FEIRA FRANCA (469; o Porto de Marasar): uma novidade de mercado por lua na cidade; a portagem dela cai à metade (os 100 por semana)"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": 0,
-   "o Clã Hegre": -2,
+   "a Doge Skotha (Marasar)": -1,
+   "o Clã Hegre": -1,
    "Steunn": 0,
    "os Do Junco (o Delta)": -2,
-   "a Escola Única (Almision)": 0,
-   "o Colégio": 3,
-   "a Leliel (o Norte; a Liga é dela)": -4,
+   "a Escola Única (Almision)": 1,
+   "o Colégio": 4,
+   "a Leliel (o Norte; a Liga é dela)": -3,
    "a Escola Única": 1
   },
   "log": [
@@ -83,9 +83,10 @@
    "457: legitimidade 10 → 10 (julgamento RD57: o título falso da casa da Seline; a sentença foi a que a praça esperava)",
    "462: semana do reino; renda de fora do livro +2200",
    "469: semana do reino; renda de fora do livro +2400",
-   "476: semana do reino; renda de fora do livro +2150"
+   "476: semana do reino; renda de fora do livro +2150",
+   "483: semana do reino; renda de fora do livro +2450"
   ],
-  "ultima_semana": 476,
+  "ultima_semana": 483,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -103,7 +104,7 @@
    "pilares": {
     "Comida": 4,
     "Comércio": 4,
-    "Dinheiro": 3,
+    "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
     "Defesa": 4
@@ -113,10 +114,6 @@
      [
       1,
       "(reconstruído no 308: a soma de antes; os nomes se perderam num erro do Mestre)"
-     ],
-     [
-      1,
-      "os ARADOS da fundição velha de Levis (metade à várzea nova; até o 480)"
      ],
      [
       1,
@@ -155,6 +152,10 @@
      [
       1,
       "a Casa de Cura (pronta no 449; de vez)"
+     ],
+     [
+      -1,
+      "479: a FEBRE no rio (mundo.py, notícia FIEL; até o 493)"
      ]
     ],
     "Ordem": [
@@ -173,6 +174,10 @@
      [
       1,
       "a RONDA: 10 lanças novas em Ireviel-baixa (423, enquanto a ronda durar)"
+     ],
+     [
+      -1,
+      "GO83: o boato 'o rei perdeu a força em Dragal' e as portas pintadas pelos da Cinza (até a volta do rei)"
      ]
     ],
     "Defesa": [
@@ -186,19 +191,10 @@
      ],
      [
       1,
-      "433: as FERRADURAS E OS EIXOS da fundição velha de Levis (G7) voltaram; até o 480"
-     ],
-     [
-      1,
       "a muralha do rio e as torres de vigia (pronta no 449; de vez)"
      ]
     ],
-    "Saude": [
-     [
-      1,
-      "AS CAIXAS DE FÍSICO montadas (as lâminas do rei; até o 480)"
-     ]
-    ]
+    "Saude": []
    },
    "renda": {
     "no_livro": true
@@ -231,7 +227,8 @@
     "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
     "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
     "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]",
-    "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]"
+    "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]",
+    "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]"
    ],
    "obras_feitas": [
     {
@@ -283,12 +280,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 3,
-    "Comércio": 1,
+    "Comida": 4,
+    "Comércio": 2,
     "Dinheiro": 3,
-    "Saúde": 3,
-    "Ordem": 2,
-    "Defesa": 3
+    "Saúde": 4,
+    "Ordem": 3,
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -303,6 +300,10 @@
      [
       1,
       "a sobra de grão da várzea nova de Ireviel (451; de vez)"
+     ],
+     [
+      1,
+      "clima: colheita em tempo seco, 4 dias limpos (até o 489)"
      ]
     ],
     "Comércio": [
@@ -317,10 +318,6 @@
      [
       1,
       "Édito da Feira Franca"
-     ],
-     [
-      -1,
-      "o incêndio no cais (DM69 [1]; até o 476)"
      ]
     ],
     "Saúde": [
@@ -388,7 +385,8 @@
     "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]",
     "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]",
     "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]",
-    "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]"
+    "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]",
+    "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]"
    ]
   },
   {
@@ -397,9 +395,9 @@
    "gente": 9000,
    "pilares": {
     "Comida": 2,
-    "Comércio": 3,
+    "Comércio": 4,
     "Dinheiro": 1,
-    "Saúde": 4,
+    "Saúde": 3,
     "Ordem": 3,
     "Defesa": 4
    },
@@ -429,7 +427,7 @@
      ],
      [
       1,
-      "os ARADOS da fundição velha (o desenho do arado fundo, G7; até o 480)"
+      "clima: colheita em tempo seco, 5 dias limpos (até o 489)"
      ]
     ],
     "Comércio": [
@@ -466,14 +464,7 @@
     "base": 400,
     "custo": 350
    },
-   "obras": [
-    {
-     "nome": "a CASA DE CÂMBIO e a alfândega da Brara (a ordem do rei, 465)",
-     "custo": 2500,
-     "pronta": 479,
-     "efeito": "Dinheiro +1 de vez em Levis"
-    }
-   ],
+   "obras": [],
    "log": [
     "332: tomada pela coalizão; anexada; a casa manda comida (−400 por semana enquanto a Comida estiver abaixo de 2)",
     "335: a Brara governadora",
@@ -501,7 +492,8 @@
     "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]",
     "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]",
     "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]",
-    "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]"
+    "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]",
+    "483: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 3 · Defesa 4 · evento [19]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -516,6 +508,12 @@
      "custo": 800,
      "pronta": 409,
      "efeito": "abre a GUILDA DOS MINEIROS (forma C: só as minas de baixo, o ferro): 2d6×10 kg de ferro por semana; regra G2"
+    },
+    {
+     "nome": "a CASA DE CÂMBIO e a alfândega da Brara (a ordem do rei, 465)",
+     "custo": 2500,
+     "pronta": 479,
+     "efeito": "Dinheiro +1 de vez em Levis"
     }
    ]
   },
@@ -524,11 +522,11 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 2,
+    "Comida": 3,
     "Comércio": 4,
     "Dinheiro": 4,
     "Saúde": 4,
-    "Ordem": 4,
+    "Ordem": 3,
     "Defesa": 4
    },
    "mods": {
@@ -538,28 +536,14 @@
       "411: CASA FIRME (talento do rei, 150)"
      ]
     ],
-    "Dinheiro": [
-     [
-      1,
-      "a série dos anzóis, chumbadas e âncoras (G7, 429; até o 480)"
-     ]
-    ],
+    "Dinheiro": [],
     "Comércio": [
      [
       1,
       "o porto aberto ao reino (357)"
-     ],
-     [
-      1,
-      "um veio de sal-gema debaixo do porto (FD66 [6]); o conselho briga pelo direito; até o 480"
      ]
     ],
-    "Comida": [
-     [
-      1,
-      "clima: colheita em tempo seco, 4 dias limpos (até o 482)"
-     ]
-    ],
+    "Comida": [],
     "Saúde": [],
     "Defesa": [
      [
@@ -596,7 +580,8 @@
     "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]",
     "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]",
     "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]",
-    "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]"
+    "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
+    "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

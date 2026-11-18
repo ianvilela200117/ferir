@@ -1,7 +1,7 @@
 {
  "Eliane": {
-  "nivel": 99,
-  "xp": 19473,
+  "nivel": 100,
+  "xp": 12663,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -134,7 +134,11 @@
    "+350 472: o ERYGAL no portão de Dragal",
    "+500 Tick 476: PASSO (comanda a guarda e a milícia; treina a milícia; caça)",
    "Tick 476: SOBE a 99",
-   "Dia 477: 477: a palavra do rei ao conselho (FE77 [5]+2; viu o preço em Dragal): o momento é verdadeiro: contou à mesa o que o rei pagou; propôs a PAREDE DOS NOMES na Fornalha (os mortos da casa gravados) · lealdade 5 → 7"
+   "Dia 477: 477: a palavra do rei ao conselho (FE77 [5]+2; viu o preço em Dragal): o momento é verdadeiro: contou à mesa o que o rei pagou; propôs a PAREDE DOS NOMES na Fornalha (os mortos da casa gravados) · lealdade 5 → 7",
+   "+500 Tick 483: PASSO (comanda a guarda e a milícia; treina a milícia; caça)",
+   "Tick 483: SOBE a 100",
+   "+1110 483: três bichos da colmeia do Ssish nas Fundas",
+   "+1480 484: quatro bichos da colmeia do Ssish nas Fundas"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -154,7 +158,7 @@
   "voz": "frases curtas, de quartel; diz o custo antes do plano; chama o rei de 'senhor' só em público",
   "lealdade": 7,
   "votos_seguidos": 1,
-  "ultima_subida": 476,
+  "ultima_subida": 483,
   "desejo": "deixar uma obra",
   "ambicao": "descobrir uma receita perdida",
   "medo": "o próprio passado",
@@ -291,7 +295,8 @@
    "Dia 465: lealdade 6 → 7 (465: o rei disse sim à escola para os filhos da Cinza (a ambição dele: fundar uma escola))",
    "Dia 472: 472: a escola dele abriu na forja grande e ficou VAZIA: a mão pintada na porta; nenhum menino da Cinza veio (CZ72 [4])",
    "+500 Tick 476: PASSO (mestre da bancada; o martinete)",
-   "Dia 477: 477: a palavra do rei ao conselho (FH77 [5]+1): o momento é verdadeiro: contou ao rei a noite de inverno em que um escrevente de dedos sujos de tinta trouxe um menino nos ombros até a porta da forja dele, com a mulher cantando; o rei ouviu como quem ouve a história de outro · lealdade 7 → 9"
+   "Dia 477: 477: a palavra do rei ao conselho (FH77 [5]+1): o momento é verdadeiro: contou ao rei a noite de inverno em que um escrevente de dedos sujos de tinta trouxe um menino nos ombros até a porta da forja dele, com a mulher cantando; o rei ouviu como quem ouve a história de outro · lealdade 7 → 9",
+   "Dia 485: 479: o LAÇO da semana (ATRITO): brigou com o rei por ir às Fundas no nível 1 ('você trocou cinquenta anos de corpo por um martelo de morto'); saiu da Fornalha sem dizer até amanhã"
   ],
   "classe": "Armeiro (FORJA, Incomum) · Forja Mestre · TEIMOSO, LEAL, PACIENTE",
   "ocupacao": "mestre da bancada; o martinete",
@@ -529,8 +534,8 @@
   "fraqueza": "obras finas e joias, −2."
  },
  "Krernos": {
-  "nivel": 50,
-  "xp": 4500,
+  "nivel": 51,
+  "xp": 0,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 153: o grão",
@@ -601,14 +606,16 @@
    "+500 Tick 455: PASSO (Comida e Comércio; o sal do Delta)",
    "+500 Tick 462: SURPRESA (gerador) (Comida e Comércio; o sal do Delta)",
    "+500 Tick 469: SURPRESA (gerador) (Comida e Comércio; o sal do Delta)",
-   "+500 Tick 476: PASSO (Comida e Comércio; o sal do Delta)"
+   "+500 Tick 476: PASSO (Comida e Comércio; o sal do Delta)",
+   "+500 Tick 483: SURPRESA (gerador) (Comida e Comércio; o sal do Delta)",
+   "Tick 483: SOBE a 51"
   ],
   "classe": "Bandido-chefe (AÇO, Comum) · Ladinagem · AVARENTO?",
   "ocupacao": "Comida e Comércio; o sal do Delta",
   "tracos": [
    "AVARENTO"
   ],
-  "ultima_subida": 427,
+  "ultima_subida": 483,
   "desejo": "ser perdoado",
   "ambicao": "derrubar quem humilhou a família",
   "medo": "voltar a ser escravo",
@@ -669,7 +676,7 @@
  },
  "Ulurve": {
   "nivel": 44,
-  "xp": 1150,
+  "xp": 1650,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+1000 152: ambição cumprida",
@@ -725,7 +732,8 @@
    "+625 462: ajudantes da L2 (1/4 de 2.500)",
    "+1000 Tick 469: MISSÃO/FEITO (a ponte do Clã; o Braseiro)",
    "Tick 469: SOBE a 44",
-   "+500 Tick 476: PASSO (a ponte do Clã; o Braseiro)"
+   "+500 Tick 476: PASSO (a ponte do Clã; o Braseiro)",
+   "+500 Tick 483: PASSO (a ponte do Clã; o Braseiro)"
   ],
   "classe": "Ferreiro (FORJA, Comum) · Forja Treinado · AMBICIOSO, CURIOSO, LEAL",
   "ocupacao": "a ponte do Clã; o Braseiro",
@@ -755,7 +763,7 @@
  },
  "Nouliel": {
   "nivel": 34,
-  "xp": 400,
+  "xp": 1400,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 153: intendente",
@@ -840,7 +848,9 @@
    "+500 Tick 469: PASSO (o livro; os pilares; a caixa-forte)",
    "+1000 Tick 476: MISSÃO/FEITO (o livro; os pilares; a caixa-forte)",
    "Tick 476: SOBE a 34",
-   "Dia 477: 477: a palavra do rei ao conselho (família; FN77 [6]+1): o momento é verdadeiro: pôs a mão no ombro dele diante da mesa e abriu o LIVRO DAS VIÚVAS (proposta: meio soldo às famílias dos mortos da casa) · lealdade 5 → 7"
+   "Dia 477: 477: a palavra do rei ao conselho (família; FN77 [6]+1): o momento é verdadeiro: pôs a mão no ombro dele diante da mesa e abriu o LIVRO DAS VIÚVAS (proposta: meio soldo às famílias dos mortos da casa) · lealdade 5 → 7",
+   "+1000 Tick 483: MISSÃO/FEITO (o livro; os pilares; a caixa-forte)",
+   "Dia 485: 479: o rei disse a ela, na Fornalha: 'você é um dos poucos afetos que me sobraram'; ela pôs a mão sobre a dele"
   ],
   "classe": "Intendente (OURO, Comum) · HONESTA, AVARENTA, DILIGENTE",
   "ocupacao": "o livro; os pilares; a caixa-forte",
@@ -883,7 +893,7 @@
  },
  "Skedda": {
   "nivel": 54,
-  "xp": 2880,
+  "xp": 3380,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 runas das bases",
@@ -981,7 +991,8 @@
    "+500 Tick 455: SURPRESA (gerador) (o pedágio do sal; os 10 Selos)",
    "+500 Tick 462: PASSO (o pedágio do sal; os 10 Selos)",
    "+500 Tick 469: PASSO (o pedágio do sal; os 10 Selos)",
-   "+1000 Tick 476: MISSÃO/FEITO (o pedágio do sal; os 10 Selos)"
+   "+1000 Tick 476: MISSÃO/FEITO (o pedágio do sal; os 10 Selos)",
+   "+500 Tick 483: SURPRESA (gerador) (o pedágio do sal; os 10 Selos)"
   ],
   "classe": "Runista (MAGIA, Comum) · Magia Treinado (runas) · AVARENTA, COVARDE, GREGÁRIA",
   "ocupacao": "o pedágio do sal; os 10 Selos",
@@ -1011,7 +1022,7 @@
  },
  "Iorin": {
   "nivel": 62,
-  "xp": 5598,
+  "xp": 6098,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 155: chefe das bases",
@@ -1143,7 +1154,8 @@
    "+500 Tick 462: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
    "+625 462: ajudantes da L2 (1/4 de 2.500)",
    "+1000 Tick 469: MISSÃO/FEITO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
-   "+1000 Tick 476: MISSÃO/FEITO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)"
+   "+1000 Tick 476: MISSÃO/FEITO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
+   "+500 Tick 483: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · Forja Iniciante→Treinado · ORGULHOSO, DILIGENTE, DESCONFIADO",
   "ocupacao": "ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa",
@@ -1173,7 +1185,7 @@
  },
  "Sira": {
   "nivel": 33,
-  "xp": 1870,
+  "xp": 2370,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 expedição",
@@ -1274,7 +1286,8 @@
    "+500 Tick 462: SURPRESA (gerador) (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
    "Dia 462: VOTO VENCIDO no conselho (OS TRÊS ÉDITOS DE NOVO (462; a venda da Fornalha já está no ): queria A) os três: a Feira Franca em Levis, o Físico e o Grã",
    "+500 Tick 476: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
-   "Dia 477: 477: a palavra do rei ao conselho (FS77 [1]−1): não pegou: \"família não guarda segredo; reino guarda\""
+   "Dia 477: 477: a palavra do rei ao conselho (FS77 [1]−1): não pegou: \"família não guarda segredo; reino guarda\"",
+   "+500 Tick 483: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)"
   ],
   "classe": "Cavaleira (AÇO, Comum)",
   "ocupacao": "LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275",
@@ -1343,7 +1356,7 @@
  },
  "Gaald": {
   "nivel": 26,
-  "xp": 1600,
+  "xp": 2100,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 Tick 203: PASSO (a forja grande)",
@@ -1384,7 +1397,8 @@
    "Tick 455: SOBE a 26",
    "+500 Tick 462: PASSO (a forja grande)",
    "+500 Tick 469: PASSO (a forja grande)",
-   "+500 Tick 476: PASSO (a forja grande)"
+   "+500 Tick 476: PASSO (a forja grande)",
+   "+500 Tick 483: SURPRESA (gerador) (a forja grande)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · NERVOSO, LEAL, TEIMOSO",
   "ocupacao": "a forja grande",
@@ -1413,7 +1427,7 @@
  },
  "Brara": {
   "nivel": 63,
-  "xp": 2900,
+  "xp": 3400,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+200 147: a Fornalha Única (ajudante, 1/4 de 800)",
@@ -1470,7 +1484,8 @@
    "+500 Tick 455: PASSO (GOVERNADORA DE LEVIS (335))",
    "+1000 Tick 469: MISSÃO/FEITO (GOVERNADORA DE LEVIS (335))",
    "+500 Tick 476: PASSO (GOVERNADORA DE LEVIS (335))",
-   "Dia 477: 475: a carta: o culto do Xaathis abriu o selo velho do rio acima de Levis; a magia sumiu em Levis-baixa por uma lua; o culto tomou o bairro; ela ACHOU o líder (120) nas estacas do selo velho, e ele não sai dali (BR77 [6])"
+   "Dia 477: 475: a carta: o culto do Xaathis abriu o selo velho do rio acima de Levis; a magia sumiu em Levis-baixa por uma lua; o culto tomou o bairro; ela ACHOU o líder (120) nas estacas do selo velho, e ele não sai dali (BR77 [6])",
+   "+500 Tick 483: SURPRESA (gerador) (GOVERNADORA DE LEVIS (335))"
   ],
   "classe": "Fundidora (FORJA, Incomum) · Forja Mestre · TEIMOSA, HONESTA, CORAJOSA",
   "ocupacao": "GOVERNADORA DE LEVIS (335)",
@@ -1591,7 +1606,7 @@
  },
  "Nelior": {
   "nivel": 35,
-  "xp": 2000,
+  "xp": 2500,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 Tick 203: SURPRESA (gerador) (o lazareto e a enfermaria das crianças)",
@@ -1637,7 +1652,8 @@
    "+500 Tick 455: PASSO (o lazareto e a enfermaria das crianças)",
    "+500 Tick 462: PASSO (o lazareto e a enfermaria das crianças)",
    "+500 Tick 469: PASSO (o lazareto e a enfermaria das crianças)",
-   "+500 Tick 476: PASSO (o lazareto e a enfermaria das crianças)"
+   "+500 Tick 476: PASSO (o lazareto e a enfermaria das crianças)",
+   "+500 Tick 483: PASSO (o lazareto e a enfermaria das crianças)"
   ],
   "classe": "Curandeiro (FÉ/VÉU, Comum)",
   "ocupacao": "o lazareto e a enfermaria das crianças",
@@ -1666,7 +1682,7 @@
  },
  "Tirello": {
   "nivel": 49,
-  "xp": 2900,
+  "xp": 3400,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 153: a praça",
@@ -1719,7 +1735,8 @@
    "Tick 448: SOBE a 49",
    "+1000 Tick 455: MISSÃO/FEITO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
    "+500 Tick 462: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
-   "+1000 Tick 469: MISSÃO/FEITO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))"
+   "+1000 Tick 469: MISSÃO/FEITO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))",
+   "+500 Tick 483: PASSO (a praça, as festas e os casamentos (o conselho governa, escrito no 204))"
   ],
   "classe": "Podestà (VOZ/OURO, Incomum) · DEVOTO, PRÁTICO, MEDROSO",
   "ocupacao": "a praça, as festas e os casamentos (o conselho governa, escrito no 204)",
@@ -1749,7 +1766,7 @@
  },
  "Thugek": {
   "nivel": 40,
-  "xp": 3000,
+  "xp": 3500,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+1000 Tick 203: MISSÃO/FEITO (Levis, ao serviço do Clã)",
@@ -1792,7 +1809,8 @@
    "+500 Tick 448: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))",
    "+500 Tick 462: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))",
    "+1000 Tick 469: MISSÃO/FEITO (ENTREGUE à justiça de Levis pelo conselho (304))",
-   "+1000 Tick 476: MISSÃO/FEITO (ENTREGUE à justiça de Levis pelo conselho (304))"
+   "+1000 Tick 476: MISSÃO/FEITO (ENTREGUE à justiça de Levis pelo conselho (304))",
+   "+500 Tick 483: PASSO (ENTREGUE à justiça de Levis pelo conselho (304))"
   ],
   "classe": "Soldado Hegre (AÇO, Comum) · LEAL, HONESTO, PACIENTE",
   "ocupacao": "ENTREGUE à justiça de Levis pelo conselho (304)",
@@ -1821,8 +1839,8 @@
   ]
  },
  "Isolda": {
-  "nivel": 119,
-  "xp": 22040,
+  "nivel": 120,
+  "xp": 13470,
   "classe": "Assassina (SOMBRA/AÇO, Rara) · venenos, disfarce · FRIA",
   "ocupacao": "MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329)",
   "log": [
@@ -1916,7 +1934,11 @@
    "+500 Tick 469: SURPRESA (gerador) (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
    "Tick 469: SOBE a 118",
    "+500 Tick 476: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
-   "Tick 476: SOBE a 119"
+   "Tick 476: SOBE a 119",
+   "+740 478: dois bichos da colmeia do Ssish mortos nas Fundas (Raro 37 × 10 cada); o terceiro fugiu",
+   "Tick 483: SOBE a 120",
+   "+1110 483: três bichos da colmeia do Ssish nas Fundas",
+   "+1480 484: quatro bichos da colmeia do Ssish nas Fundas"
   ],
   "tracos": [
    "FRIO"
@@ -1931,7 +1953,7 @@
   "votos_vencidos": 16,
   "votos_seguidos": 1,
   "lealdade": 4,
-  "ultima_subida": 476,
+  "ultima_subida": 483,
   "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
   "dons": [
    "Nome que Anda"
@@ -1949,7 +1971,7 @@
  },
  "Thuron": {
   "nivel": 70,
-  "xp": 1905,
+  "xp": 2405,
   "classe": "Mago de Osso (MAGIA, Rara) do Colégio de Telosus · ORGULHOSO, CRUEL · fez um pacto",
   "ocupacao": "conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso",
   "log": [
@@ -2048,7 +2070,8 @@
    "Dia 463: VOTO VENCIDO no conselho (OS DOIS AGENTES NOVOS (o dos Descalços, mandado pela Zitha; ): queria B) morte em praça",
    "+500 Tick 469: PASSO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
    "+500 Tick 476: PASSO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
-   "Dia 477: 477: a palavra do rei ao conselho (FT77 [2]−1): não pegou; mas levou o pedido ao Ceduion pela Porta do Nada de um mestre do Colégio na mesma noite (CR77 [6])"
+   "Dia 477: 477: a palavra do rei ao conselho (FT77 [2]−1): não pegou; mas levou o pedido ao Ceduion pela Porta do Nada de um mestre do Colégio na mesma noite (CR77 [6])",
+   "+500 Tick 483: PASSO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)"
   ],
   "votos_vencidos": 16,
   "tracos": [
@@ -2077,8 +2100,8 @@
   "ultima_subida": 455
  },
  "Ithra": {
-  "nivel": 38,
-  "xp": 3500,
+  "nivel": 39,
+  "xp": 200,
   "classe": "Maga de Elo (MAGIA), de Shizess · AMBICIOSA, COVARDE · nunca machuca uma criança",
   "ocupacao": "VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre",
   "log": [
@@ -2131,13 +2154,15 @@
    "+1000 Tick 441: MISSÃO/FEITO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
    "+500 Tick 448: SURPRESA (gerador) (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
    "+500 Tick 455: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
-   "+500 Tick 462: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)"
+   "+500 Tick 462: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
+   "+500 Tick 483: PASSO (VOLTOU a Ireviel (Dia 212): carrega a SOMBRA DO PACTO, achada noutra torre)",
+   "Tick 483: SOBE a 39"
   ],
   "tracos": [
    "AMBICIOSO",
    "COVARDE"
   ],
-  "ultima_subida": 413,
+  "ultima_subida": 483,
   "linha_vermelha": "nunca machuca uma criança",
   "desejo": "proteger um filho",
   "ambicao": "virar Lendário",
@@ -2324,7 +2349,7 @@
  },
  "Odrum": {
   "nivel": 21,
-  "xp": 1500,
+  "xp": 2000,
   "classe": "Mineiro (TERRA, Comum) · FALADOR, MEDROSO",
   "ocupacao": "refugiado em Ireviel (Dia 202)",
   "log": [
@@ -2381,7 +2406,8 @@
    "+500 Tick 441: PASSO (refugiado em Ireviel (Dia 202))",
    "Tick 441: SOBE a 21",
    "+500 Tick 448: SURPRESA (gerador) (refugiado em Ireviel (Dia 202))",
-   "+1000 Tick 469: MISSÃO/FEITO (refugiado em Ireviel (Dia 202))"
+   "+1000 Tick 469: MISSÃO/FEITO (refugiado em Ireviel (Dia 202))",
+   "+500 Tick 483: SURPRESA (gerador) (refugiado em Ireviel (Dia 202))"
   ],
   "tracos": [
    "SABIO",
@@ -2439,7 +2465,7 @@
  },
  "Tilde": {
   "nivel": 59,
-  "xp": 3643,
+  "xp": 4643,
   "classe": "a menina da casa (Ferir a ama como filha) · pratica a forja escondida",
   "ocupacao": "ajudante de Ferir na forja (sempre ao lado dele)",
   "log": [
@@ -2563,7 +2589,8 @@
    "Tick 462: SOBE a 59",
    "+625 462: ajudantes da L2 (1/4 de 2.500)",
    "+1000 Tick 469: MISSÃO/FEITO (ajudante de Ferir na forja (sempre ao lado dele))",
-   "+500 Tick 476: PASSO (ajudante de Ferir na forja (sempre ao lado dele))"
+   "+500 Tick 476: PASSO (ajudante de Ferir na forja (sempre ao lado dele))",
+   "+1000 Tick 483: MISSÃO/FEITO (ajudante de Ferir na forja (sempre ao lado dele))"
   ],
   "ultima_subida": 462,
   "tracos": [
@@ -2632,7 +2659,7 @@
  },
  "Brua": {
   "nivel": 29,
-  "xp": 290,
+  "xp": 790,
   "classe": "Capuz do Graur (AÇO, Comum)",
   "ocupacao": "os capuzes do Graur",
   "log": [
@@ -2683,7 +2710,8 @@
    "+1000 Tick 455: MISSÃO/FEITO (os capuzes do Graur)",
    "+500 Tick 469: SURPRESA (gerador) (os capuzes do Graur)",
    "+500 Tick 476: PASSO (os capuzes do Graur)",
-   "Tick 476: SOBE a 29"
+   "Tick 476: SOBE a 29",
+   "+500 Tick 483: PASSO (os capuzes do Graur)"
   ],
   "ultima_subida": 476,
   "tracos": [
@@ -2789,7 +2817,7 @@
  },
  "capuz 4": {
   "nivel": 28,
-  "xp": 1000,
+  "xp": 1500,
   "classe": "Capuz do Graur (AÇO, Comum)",
   "ocupacao": "os capuzes do Graur",
   "log": [
@@ -2834,7 +2862,8 @@
    "+500 Tick 455: PASSO (os capuzes do Graur)",
    "Tick 455: SOBE a 28",
    "+500 Tick 469: PASSO (os capuzes do Graur)",
-   "+500 Tick 476: PASSO (os capuzes do Graur)"
+   "+500 Tick 476: PASSO (os capuzes do Graur)",
+   "+500 Tick 483: SURPRESA (gerador) (os capuzes do Graur)"
   ],
   "tracos": [
    "JUSTO",
@@ -2862,7 +2891,7 @@
  },
  "Kreium": {
   "nivel": 45,
-  "xp": 1000,
+  "xp": 1500,
   "classe": "Chefe de batedores Hegre (AÇO, Comum) do Hrotgar · CURIOSO, ORGULHOSO · medo do fogo",
   "ocupacao": "devolvido ao Clã (208), na barca para Levis",
   "log": [
@@ -2907,7 +2936,8 @@
    "+500 Tick 462: PASSO (devolvido ao Clã (208), na barca para Levis)",
    "+1000 Tick 469: MISSÃO/FEITO (devolvido ao Clã (208), na barca para Levis)",
    "Tick 469: SOBE a 45",
-   "+500 Tick 476: PASSO (devolvido ao Clã (208), na barca para Levis)"
+   "+500 Tick 476: PASSO (devolvido ao Clã (208), na barca para Levis)",
+   "+500 Tick 483: PASSO (devolvido ao Clã (208), na barca para Levis)"
   ],
   "tracos": [
    "CURIOSO",
@@ -3121,7 +3151,7 @@
  },
  "Pelaccino": {
   "nivel": 110,
-  "xp": 3000,
+  "xp": 3500,
   "classe": "Lâmina de Aluguel (SOMBRA/AÇO, Rara) · Porta de Sombra, venenos · ORGULHOSO",
   "ocupacao": "MORTO na cela no 344 (um guarda comprado; o cânone)",
   "log": [
@@ -3137,7 +3167,8 @@
    "+500 Tick 448: PASSO (MORTO na cela no 344 (um guarda comprado; o cânone))",
    "+500 Tick 455: PASSO (MORTO na cela no 344 (um guarda comprado; o cânone))",
    "+500 Tick 469: PASSO (MORTO na cela no 344 (um guarda comprado; o cânone))",
-   "+500 Tick 476: SURPRESA (gerador) (MORTO na cela no 344 (um guarda comprado; o cânone))"
+   "+500 Tick 476: SURPRESA (gerador) (MORTO na cela no 344 (um guarda comprado; o cânone))",
+   "+500 Tick 483: PASSO (MORTO na cela no 344 (um guarda comprado; o cânone))"
   ],
   "estado": "morto",
   "tracos": [
@@ -3269,8 +3300,8 @@
   ]
  },
  "Dolassi": {
-  "nivel": 24,
-  "xp": 2000,
+  "nivel": 25,
+  "xp": 100,
   "classe": "Remador (AÇO, Comum) · LEAL (à irmã), DESCONFIADO",
   "ocupacao": "na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210)",
   "log": [
@@ -3321,13 +3352,15 @@
    "Tick 434: SOBE a 24",
    "+1000 Tick 441: MISSÃO/FEITO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
    "+500 Tick 455: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
-   "+500 Tick 469: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))"
+   "+500 Tick 469: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
+   "+500 Tick 483: PASSO (na casa (o Krernos responde por ele); ofício na casa, longe de faca (o preço da irmã, 210))",
+   "Tick 483: SOBE a 25"
   ],
   "tracos": [
    "LEAL",
    "DESCONFIADO"
   ],
-  "ultima_subida": 434,
+  "ultima_subida": 483,
   "desejo": "curar alguém",
   "ambicao": "entrar numa facção que o recusou",
   "medo": "o próprio passado",
@@ -3349,7 +3382,7 @@
  },
  "Draron": {
   "nivel": 57,
-  "xp": 2500,
+  "xp": 3000,
   "classe": "Guerreiro-mago (MAGIA/AÇO) · GENEROSO, VINGATIVO · nunca volta atrás numa palavra",
   "ocupacao": "da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida",
   "log": [
@@ -3403,7 +3436,8 @@
    "+500 Tick 441: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
    "+1000 Tick 448: MISSÃO/FEITO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
    "+500 Tick 469: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
-   "+500 Tick 476: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)"
+   "+500 Tick 476: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)",
+   "+500 Tick 483: PASSO (da casa (Dia 210): o ANEL ÚNICO (foco ×3, +2 Chama, Medo) e a BRIGANTINA ÚNICA de eiurvo (Ler a Superfície), sob medida)"
   ],
   "tracos": [
    "GENEROSO",
@@ -3518,7 +3552,7 @@
  },
  "Braeth": {
   "nivel": 53,
-  "xp": 1200,
+  "xp": 1700,
   "classe": "Ancião do Clã Hegre (VOZ) · ORGULHOSO, AVARENTO · medo do fogo · nunca entrega um amigo à lei",
   "ocupacao": "enviado do Hrotgar a Ireviel (Dia 210)",
   "log": [
@@ -3564,7 +3598,8 @@
    "Tick 455: SOBE a 53",
    "+500 Tick 462: SURPRESA (gerador) (enviado do Hrotgar a Ireviel (Dia 210))",
    "Dia 469: 469: procurou a Sira: a Almision sabe que ele esconde um filho do clã de Kasgal (herdeiro dos Steunn) e o mandou abrir caminho ao Seeth até a forja; pede a proteção da casa",
-   "+500 Tick 476: PASSO (enviado do Hrotgar a Ireviel (Dia 210))"
+   "+500 Tick 476: PASSO (enviado do Hrotgar a Ireviel (Dia 210))",
+   "+500 Tick 483: PASSO (enviado do Hrotgar a Ireviel (Dia 210))"
   ],
   "tracos": [
    "ORGULHOSO",
@@ -3590,7 +3625,7 @@
  },
  "Mormir": {
   "nivel": 19,
-  "xp": 900,
+  "xp": 1400,
   "classe": "Mago (MAGIA) · CRUEL, CURIOSO · nunca machuca uma criança · fez um pacto (oculto)",
   "ocupacao": "chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei)",
   "log": [
@@ -3652,7 +3687,8 @@
    "+500 Tick 462: PASSO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))",
    "+500 Tick 469: PASSO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))",
    "+1000 Tick 476: MISSÃO/FEITO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))",
-   "Tick 476: SOBE a 19"
+   "Tick 476: SOBE a 19",
+   "+500 Tick 483: PASSO (chefe dos SEM-TORRE; na mesa do conselho de Ireviel no 425 com 8 magos: pedem pão e teto e servem à casa (a resposta é do rei))"
   ],
   "tracos": [
    "CRUEL",
@@ -3678,7 +3714,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 10605,
+  "xp": 14195,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3789,7 +3825,10 @@
    "Tick 469: SOBE a 233",
    "+350 472: o ERYGAL no portão de Dragal",
    "+1000 Tick 476: MISSÃO/FEITO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
-   "Tick 476: SOBE a 234"
+   "Tick 476: SOBE a 234",
+   "+1000 Tick 483: MISSÃO/FEITO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
+   "+1110 483: três bichos da colmeia do Ssish nas Fundas",
+   "+1480 484: quatro bichos da colmeia do Ssish nas Fundas"
   ],
   "tracos": [
    "LEAL",
@@ -3820,8 +3859,8 @@
   ]
  },
  "Draek": {
-  "nivel": 72,
-  "xp": 6900,
+  "nivel": 73,
+  "xp": 200,
   "classe": "Emissário da Liga (VOZ) · AMBICIOSO, LEAL · nunca vende o ofício barato",
   "ocupacao": "emissário da Liga em Ireviel (Dia 211); volta a Marasar",
   "log": [
@@ -3860,13 +3899,15 @@
    "+1000 Tick 448: MISSÃO/FEITO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
    "+1000 Tick 455: MISSÃO/FEITO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
    "+500 Tick 462: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
-   "+500 Tick 476: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)"
+   "+500 Tick 476: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
+   "+500 Tick 483: PASSO (emissário da Liga em Ireviel (Dia 211); volta a Marasar)",
+   "Tick 483: SOBE a 73"
   ],
   "tracos": [
    "AMBICIOSO",
    "LEAL"
   ],
-  "ultima_subida": 406,
+  "ultima_subida": 483,
   "linha_vermelha": "nunca vende o ofício barato",
   "desejo": "ser perdoado",
   "ambicao": "tomar o lugar do chefe",
@@ -3887,7 +3928,7 @@
  },
  "Kassa": {
   "nivel": 73,
-  "xp": 200,
+  "xp": 1200,
   "classe": "mago, dono de uma TORRE ALÉM DO MAPA · CURIOSO e GENEROSO · desejo: uma casa própria · ambição (4): tomar o lugar do chefe · medo: ser esquecido · segredo: ama alguém proibido · linha vermelha: nunca trai a família · dilema: o desejo dele e o do parceiro não cabem juntos",
   "ocupacao": "vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219)",
   "log": [
@@ -3932,7 +3973,8 @@
    "+500 Tick 462: SURPRESA (gerador) (vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219))",
    "+500 Tick 469: SURPRESA (gerador) (vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219))",
    "+500 Tick 476: PASSO (vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219))",
-   "Tick 476: SOBE a 73"
+   "Tick 476: SOBE a 73",
+   "+1000 Tick 483: MISSÃO/FEITO (vem atrás da SOMBRA DO PACTO que a Ithra roubou da torre dele (OCULTO: chega no DIA 219))"
   ],
   "ultima_subida": 476,
   "tracos": [
@@ -3956,7 +3998,7 @@
  },
  "Veyula": {
   "nivel": 77,
-  "xp": 2900,
+  "xp": 3900,
   "classe": "ENVIADO DA ALMISION · HONESTO e GENEROSO · desejo: vingar um morto · ambição (4): formar uma companhia · medo: a morte de um filho · segredo: deve a alguém perigoso · linha vermelha: nunca trai a família · dilema: o desejo dele e o do parceiro não cabem juntos",
   "ocupacao": "em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto",
   "log": [
@@ -3997,7 +4039,8 @@
    "+1000 Tick 441: MISSÃO/FEITO (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
    "+500 Tick 448: SURPRESA (gerador) (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
    "+500 Tick 462: PASSO (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
-   "+500 Tick 469: SURPRESA (gerador) (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)"
+   "+500 Tick 469: SURPRESA (gerador) (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)",
+   "+1000 Tick 483: MISSÃO/FEITO (em Ireviel desde o Dia 214: quer VER A MATRIZ; frio e correto)"
   ],
   "tracos": [
    "HONESTO",
@@ -4021,8 +4064,8 @@
   "fraqueza": "um discurso que falha vira piada (−1 de Fama)."
  },
  "Selron": {
-  "nivel": 41,
-  "xp": 3500,
+  "nivel": 42,
+  "xp": 400,
   "classe": "chefe de BATEDORES DA LIGA · HONESTO e TEIMOSO · desejo: pagar uma dívida antiga · ambição (4): conquistar terra · medo: a pobreza · segredo: roubou o que tem · linha vermelha: nunca se ajoelha · dilema: a ambição exige trair alguém que ama",
   "ocupacao": "espia a estrada de Ireviel; olhava A FORJA (Dia 215)",
   "log": [
@@ -4066,7 +4109,9 @@
    "+500 Tick 455: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
    "+1000 Tick 462: MISSÃO/FEITO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
    "+1000 Tick 469: MISSÃO/FEITO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
-   "+500 Tick 476: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))"
+   "+500 Tick 476: PASSO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
+   "+1000 Tick 483: MISSÃO/FEITO (espia a estrada de Ireviel; olhava A FORJA (Dia 215))",
+   "Tick 483: SOBE a 42"
   ],
   "tracos": [
    "HONESTO",
@@ -4087,11 +4132,11 @@
    "Caminho (Passiva)"
   ],
   "fraqueza": "na cidade, perde tudo.",
-  "ultima_subida": 441
+  "ultima_subida": 483
  },
  "Goreth": {
   "nivel": 41,
-  "xp": 2000,
+  "xp": 2500,
   "classe": "velho companheiro do Kreine na Liga · AMBICIOSO e COVARDE · desejo: enriquecer · ambição (4): descobrir uma RECEITA PERDIDA · medo: a morte de um filho · segredo: já matou e ninguém sabe · linha vermelha: nunca vende o ofício barato · dilema: cumprir a palavra vai custar a casa dele",
   "ocupacao": "em Ireviel desde o Dia 215: veio cobrar algo do Kreine",
   "log": [
@@ -4135,7 +4180,8 @@
    "Tick 441: SOBE a 41",
    "+500 Tick 448: PASSO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
    "+500 Tick 455: PASSO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
-   "+1000 Tick 476: MISSÃO/FEITO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)"
+   "+1000 Tick 476: MISSÃO/FEITO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)",
+   "+500 Tick 483: PASSO (em Ireviel desde o Dia 215: veio cobrar algo do Kreine)"
   ],
   "tracos": [
    "AMBICIOSO",
@@ -4159,8 +4205,8 @@
   "fraqueza": "com armadura pesada, perde a Dança."
  },
  "Ulnar": {
-  "nivel": 20,
-  "xp": 1500,
+  "nivel": 21,
+  "xp": 500,
   "classe": "'um herdeiro dos Steunn' · desejo: uma casa própria · ambição (4): ganhar a guerra do seu povo · (OCULTO: o TRAIDOR exposto em Steunn no 219)",
   "ocupacao": "o Malvezzi encomenda para ele uma espada (Dia 217)",
   "log": [
@@ -4216,13 +4262,15 @@
    "+1000 Tick 448: MISSÃO/FEITO (o Malvezzi encomenda para ele uma espada (Dia 217))",
    "Tick 448: SOBE a 20",
    "+500 Tick 469: SURPRESA (gerador) (o Malvezzi encomenda para ele uma espada (Dia 217))",
-   "+500 Tick 476: PASSO (o Malvezzi encomenda para ele uma espada (Dia 217))"
+   "+500 Tick 476: PASSO (o Malvezzi encomenda para ele uma espada (Dia 217))",
+   "+1000 Tick 483: MISSÃO/FEITO (o Malvezzi encomenda para ele uma espada (Dia 217))",
+   "Tick 483: SOBE a 21"
   ],
   "tracos": [
    "DISCIPLINADO",
    "SABIO"
   ],
-  "ultima_subida": 448,
+  "ultima_subida": 483,
   "desejo": "uma casa própria",
   "ambicao": "ganhar a guerra do seu povo",
   "medo": "a velhice",
@@ -4242,7 +4290,7 @@
  },
  "Gorron": {
   "nivel": 20,
-  "xp": 0,
+  "xp": 500,
   "classe": "o homem que ofereceu a missão do Delta (antigo, sem ficha no livro)",
   "ocupacao": "casou no Clã, com gente do Hrotgar (Dia 218)",
   "log": [
@@ -4298,7 +4346,8 @@
    "Tick 462: SOBE a 19",
    "+500 Tick 469: PASSO (casou no Clã, com gente do Hrotgar (Dia 218))",
    "+1000 Tick 476: MISSÃO/FEITO (casou no Clã, com gente do Hrotgar (Dia 218))",
-   "Tick 476: SOBE a 20"
+   "Tick 476: SOBE a 20",
+   "+500 Tick 483: PASSO (casou no Clã, com gente do Hrotgar (Dia 218))"
   ],
   "ultima_subida": 476,
   "tracos": [
@@ -4506,7 +4555,7 @@
  },
  "Thuast": {
   "nivel": 76,
-  "xp": 5100,
+  "xp": 5600,
   "classe": "CAPITÃO DA COMPANHIA DA SKOTHA · desejo: ser reconhecido no ofício · ambição: abrir o próprio negócio",
   "ocupacao": "em Ireviel (231): fala pela Skotha; pede a galé",
   "log": [
@@ -4554,7 +4603,8 @@
    "+1000 Tick 448: MISSÃO/FEITO (em Ireviel (231): fala pela Skotha; pede a galé)",
    "+500 Tick 455: SURPRESA (gerador) (em Ireviel (231): fala pela Skotha; pede a galé)",
    "+500 Tick 469: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)",
-   "+500 Tick 476: SURPRESA (gerador) (em Ireviel (231): fala pela Skotha; pede a galé)"
+   "+500 Tick 476: SURPRESA (gerador) (em Ireviel (231): fala pela Skotha; pede a galé)",
+   "+500 Tick 483: PASSO (em Ireviel (231): fala pela Skotha; pede a galé)"
   ],
   "classe_livro": "Capitão",
   "assinaturas": [
@@ -4793,7 +4843,7 @@
  },
  "Selvil": {
   "nivel": 21,
-  "xp": 600,
+  "xp": 1100,
   "classe": "COVARDE e VINGATIVO · desejo: enriquecer · ambição (4): ganhar a guerra do seu povo · medo: a solidão · segredo: tem uma doença escondida · linha vermelha: nunca se ajoelha · dilema: a verdade sobre o segredo dele destruiria quem confia nele",
   "ocupacao": "voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas",
   "log": [
@@ -4837,7 +4887,8 @@
    "+500 Tick 455: SURPRESA (gerador) (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
    "+1000 Tick 462: MISSÃO/FEITO (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
    "+1000 Tick 476: MISSÃO/FEITO (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)",
-   "Tick 476: SOBE a 21"
+   "Tick 476: SOBE a 21",
+   "+500 Tick 483: PASSO (voluntário salineiro da HOSTE (Dia 245): quer a hoste contra os bandidos das salinas)"
   ],
   "ultima_subida": 476,
   "tracos": [
@@ -4862,7 +4913,7 @@
  },
  "Orol": {
   "nivel": 40,
-  "xp": 2500,
+  "xp": 3000,
   "classe": "AMBICIOSO e ORGULHOSO · desejo: ser perdoado · ambição (4): abrir o próprio negócio · medo: perder a mão do ofício · segredo: roubou o que tem · linha vermelha: nunca machuca uma criança · dilema: a facção que o paga quer algo que fere a sua linha vermelha",
   "ocupacao": "ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA",
   "log": [
@@ -4894,7 +4945,8 @@
    "Tick 441: SOBE a 40",
    "+1000 Tick 462: MISSÃO/FEITO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
    "+1000 Tick 469: MISSÃO/FEITO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
-   "+500 Tick 476: PASSO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)"
+   "+500 Tick 476: PASSO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)",
+   "+500 Tick 483: PASSO (ferreiro refugiado de Levis; FORJA PRÓPRIA em Ireviel pelo Fundo dos Ofícios (600, 250): PROSPERA)"
   ],
   "tracos": [
    "AMBICIOSO",
@@ -5031,8 +5083,8 @@
   "fraqueza": "não pode ficar mais de uma lua no mesmo lugar sem −1 em tudo."
  },
  "Tolvane": {
-  "nivel": 24,
-  "xp": 2000,
+  "nivel": 25,
+  "xp": 600,
   "classe": "salineiro velho · GENEROSO e RELIGIOSO · desejo: deixar uma obra · ambição (4): virar Lendário · medo: voltar a ser escravo · segredo: sabe de um crime de alguém importante · linha vermelha: nunca volta atrás numa palavra dada",
   "ocupacao": "VOZ DO POVO no conselho real (eleito no 296)",
   "log": [
@@ -5078,7 +5130,9 @@
    "Tick 448: SOBE a 24",
    "+500 Tick 455: PASSO (VOZ DO POVO no conselho real (eleito no 296))",
    "+500 Tick 462: SURPRESA (gerador) (VOZ DO POVO no conselho real (eleito no 296))",
-   "+1000 Tick 469: MISSÃO/FEITO (VOZ DO POVO no conselho real (eleito no 296))"
+   "+1000 Tick 469: MISSÃO/FEITO (VOZ DO POVO no conselho real (eleito no 296))",
+   "+1000 Tick 483: MISSÃO/FEITO (VOZ DO POVO no conselho real (eleito no 296))",
+   "Tick 483: SOBE a 25"
   ],
   "tracos": [
    "GENEROSO",
@@ -5087,7 +5141,7 @@
   "votos_vencidos": 13,
   "lealdade": 4,
   "votos_seguidos": 1,
-  "ultima_subida": 448,
+  "ultima_subida": 483,
   "desejo": "deixar uma obra",
   "ambicao": "virar Lendário",
   "medo": "voltar a ser escravo",
@@ -5106,7 +5160,7 @@
  },
  "Carea": {
   "nivel": 21,
-  "xp": 1100,
+  "xp": 1600,
   "classe": "Armeira · HONESTA, ORGULHOSA",
   "ocupacao": "mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4",
   "log": [
@@ -5144,7 +5198,8 @@
    "+500 Tick 455: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
    "Tick 455: SOBE a 21",
    "+500 Tick 469: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
-   "+500 Tick 476: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)"
+   "+500 Tick 476: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
+   "+500 Tick 483: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)"
   ],
   "ultima_subida": 455,
   "tracos": [
@@ -5179,7 +5234,7 @@
  },
  "Tessal": {
   "nivel": 25,
-  "xp": 1625,
+  "xp": 2125,
   "classe": "PESQUISADORA (alquimia e remédios) · LEAL e RELIGIOSA · desejo: um título · ambição (4): ganhar a guerra do seu povo · medo: a humilhação pública · segredo: roubou o que tem · linha vermelha: nunca volta atrás numa palavra dada",
   "ocupacao": "Casa dos Estudiosos (259): bolsa de 40 por semana",
   "log": [
@@ -5216,7 +5271,8 @@
    "Dia 427: 427: diz ao rei: ALNESAR fica nas COLINAS A LESTE DE IREVIEL, a 2 dias; numa metade, um NÚCLEO e nada mora lá (entrar custa uma luta); na outra, bandidos guardam um segredo de facção (entrar pede uma chave)",
    "+500 Tick 448: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)",
    "+500 Tick 462: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)",
-   "+500 Tick 476: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)"
+   "+500 Tick 476: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)",
+   "+500 Tick 483: PASSO (Casa dos Estudiosos (259): bolsa de 40 por semana)"
   ],
   "tracos": [
    "LEAL",
@@ -5241,7 +5297,7 @@
  },
  "Tedulteth": {
   "nivel": 29,
-  "xp": 1000,
+  "xp": 1500,
   "classe": "PESQUISADOR (alquimia e remédios) · CURIOSO e AMBICIOSO · desejo: ser reconhecido no ofício · ambição (4): abrir o próprio negócio · medo: o fogo · segredo: roubou o que tem · linha vermelha: nunca entrega um amigo à lei",
   "ocupacao": "Casa dos Estudiosos (266): bolsa de 40 por semana",
   "log": [
@@ -5272,7 +5328,8 @@
    "+500 Tick 462: PASSO (Casa dos Estudiosos (266): bolsa de 40 por semana)",
    "+500 Tick 469: PASSO (Casa dos Estudiosos (266): bolsa de 40 por semana)",
    "Tick 469: SOBE a 29",
-   "+1000 Tick 476: MISSÃO/FEITO (Casa dos Estudiosos (266): bolsa de 40 por semana)"
+   "+1000 Tick 476: MISSÃO/FEITO (Casa dos Estudiosos (266): bolsa de 40 por semana)",
+   "+500 Tick 483: PASSO (Casa dos Estudiosos (266): bolsa de 40 por semana)"
   ],
   "tracos": [
    "CURIOSO",
@@ -5297,7 +5354,7 @@
  },
  "Groa": {
   "nivel": 63,
-  "xp": 3425,
+  "xp": 3925,
   "classe": "ferreira refugiada de STEUNN · COVARDE e RELIGIOSA · desejo: voltar para casa · ambição (4): casar acima da sua classe · medo: a morte de um filho · segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato",
   "ocupacao": "ajudante na Fornalha (272; 20 por semana)",
   "log": [
@@ -5370,7 +5427,8 @@
    "+500 Tick 448: PASSO (ajudante na Fornalha (272; 20 por semana))",
    "+500 Tick 455: SURPRESA (gerador) (ajudante na Fornalha (272; 20 por semana))",
    "+1000 Tick 469: MISSÃO/FEITO (ajudante na Fornalha (272; 20 por semana))",
-   "+1000 Tick 476: MISSÃO/FEITO (ajudante na Fornalha (272; 20 por semana))"
+   "+1000 Tick 476: MISSÃO/FEITO (ajudante na Fornalha (272; 20 por semana))",
+   "+500 Tick 483: PASSO (ajudante na Fornalha (272; 20 por semana))"
   ],
   "ultima_subida": 441,
   "tracos": [
@@ -5462,8 +5520,8 @@
   "ultima_subida": 441
  },
  "Lucissi": {
-  "nivel": 16,
-  "xp": 1100,
+  "nivel": 17,
+  "xp": 0,
   "classe": "mãe do RONIO, o primeiro aprendiz do Moreth, morto pelo Bren",
   "ocupacao": "em Ireviel, sustentada pelo Moreth (264)",
   "log": [
@@ -5500,9 +5558,11 @@
    "+1000 Tick 448: MISSÃO/FEITO (em Ireviel, sustentada pelo Moreth (264))",
    "+1000 Tick 462: MISSÃO/FEITO (em Ireviel, sustentada pelo Moreth (264))",
    "Tick 462: SOBE a 16",
-   "+500 Tick 476: PASSO (em Ireviel, sustentada pelo Moreth (264))"
+   "+500 Tick 476: PASSO (em Ireviel, sustentada pelo Moreth (264))",
+   "+500 Tick 483: PASSO (em Ireviel, sustentada pelo Moreth (264))",
+   "Tick 483: SOBE a 17"
   ],
-  "ultima_subida": 462,
+  "ultima_subida": 483,
   "tracos": [
    "CINICO",
    "TEIMOSO"
@@ -5528,7 +5588,7 @@
  },
  "Tavrel": {
   "nivel": 25,
-  "xp": 500,
+  "xp": 1000,
   "classe": "mercador (ferro de Levis) · GENEROSO e AMBICIOSO",
   "ocupacao": "passou por Ireviel no 260",
   "log": [
@@ -5558,7 +5618,8 @@
    "+500 Tick 455: SURPRESA (gerador) (passou por Ireviel no 260)",
    "+500 Tick 462: PASSO (passou por Ireviel no 260)",
    "Tick 462: SOBE a 25",
-   "+500 Tick 476: PASSO (passou por Ireviel no 260)"
+   "+500 Tick 476: PASSO (passou por Ireviel no 260)",
+   "+500 Tick 483: PASSO (passou por Ireviel no 260)"
   ],
   "tracos": [
    "GENEROSO",
@@ -5584,8 +5645,8 @@
   ]
  },
  "Eiagrir": {
-  "nivel": 129,
-  "xp": 13788,
+  "nivel": 130,
+  "xp": 3478,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5662,9 +5723,12 @@
    "Tick 469: SOBE a 128 (de 126: fila de XP)",
    "+350 472: o ERYGAL no portão de Dragal",
    "+500 Tick 476: PASSO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
-   "Tick 476: SOBE a 129"
+   "Tick 476: SOBE a 129",
+   "Tick 483: SOBE a 130",
+   "+1110 483: três bichos da colmeia do Ssish nas Fundas",
+   "+1480 484: quatro bichos da colmeia do Ssish nas Fundas"
   ],
-  "ultima_subida": 476,
+  "ultima_subida": 483,
   "tracos": [
    "CURIOSO",
    "RELIGIOSO"
@@ -5689,7 +5753,7 @@
  },
  "Nialla": {
   "nivel": 32,
-  "xp": 2500,
+  "xp": 3000,
   "classe": "PESQUISADORA (plantas e terras) · AMBICIOSA e CRUEL · desejo: aprender um segredo · ambição (4): ganhar a guerra do seu povo · medo: o próprio passado · segredo: deve a alguém perigoso · linha vermelha: nunca volta atrás numa palavra dada",
   "ocupacao": "Casa dos Estudiosos (273); voz dos DO JUNCO",
   "log": [
@@ -5716,7 +5780,8 @@
    "+1000 Tick 420: MISSÃO/FEITO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
    "+500 Tick 434: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
    "+500 Tick 441: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)",
-   "+500 Tick 476: SURPRESA (gerador) (Casa dos Estudiosos (273); voz dos DO JUNCO)"
+   "+500 Tick 476: SURPRESA (gerador) (Casa dos Estudiosos (273); voz dos DO JUNCO)",
+   "+500 Tick 483: PASSO (Casa dos Estudiosos (273); voz dos DO JUNCO)"
   ],
   "tracos": [
    "AMBICIOSO",
@@ -5769,7 +5834,7 @@
  },
  "Oisse": {
   "nivel": 34,
-  "xp": 400,
+  "xp": 900,
   "classe": "irmã, curandeira, com a sua ORDEM",
   "ocupacao": "em Ireviel desde o 275: a enfermaria da casa",
   "log": [
@@ -5798,7 +5863,8 @@
    "+500 Tick 462: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
    "+500 Tick 469: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
    "+500 Tick 476: PASSO (em Ireviel desde o 275: a enfermaria da casa)",
-   "Tick 476: SOBE a 34"
+   "Tick 476: SOBE a 34",
+   "+500 Tick 483: PASSO (em Ireviel desde o 275: a enfermaria da casa)"
   ],
   "tracos": [
    "AMBICIOSO",
@@ -5861,7 +5927,7 @@
  },
  "Hruthos": {
   "nivel": 91,
-  "xp": 6878,
+  "xp": 7378,
   "classe": "LANCEIRO · VINGATIVO e CRUEL · desejo: vingar um morto · ambição (4): ganhar a guerra do seu povo · medo: perder a mão do ofício · segredo: TRABALHA PARA OUTRA FACÇÃO (oculto: a Lumine) · linha vermelha: nunca trai a família",
   "ocupacao": "da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar",
   "log": [
@@ -5908,7 +5974,8 @@
    "+1000 Tick 455: MISSÃO/FEITO (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)",
    "+500 Tick 462: PASSO (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)",
    "+500 Tick 469: SURPRESA (gerador) (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)",
-   "+500 Tick 476: SURPRESA (gerador) (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)"
+   "+500 Tick 476: SURPRESA (gerador) (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)",
+   "+500 Tick 483: PASSO (da casa (287): a LANÇA DE VESTRIN (Mítica; usa como Lendária); traz a missão de curar a praga de Marasar)"
   ],
   "tracos": [
    "VINGATIVO",
@@ -5991,7 +6058,7 @@
  },
  "Starkald": {
   "nivel": 87,
-  "xp": 6778,
+  "xp": 7278,
   "classe": "BATEDOR (o chamado do 301) · CRUEL e AMBICIOSO · desejo: voltar para casa · ambição (4): abrir o próprio negócio · medo: a humilhação pública · segredo: sabe de um crime de alguém importante · linha vermelha: nunca vende o ofício barato · dilema: a verdade sobre o segredo dele destruiria quem confia nele",
   "ocupacao": "chegou a Ireviel pelo chamado (301); quer uma peça de Ferir",
   "log": [
@@ -6038,7 +6105,8 @@
    "+1000 Tick 448: MISSÃO/FEITO (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)",
    "+500 Tick 455: PASSO (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)",
    "Dia 455: 455: comprou pela Guilda a espada Épica de yeviel do rei (2.000)",
-   "+500 Tick 476: PASSO (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)"
+   "+500 Tick 476: PASSO (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)",
+   "+500 Tick 483: PASSO (chegou a Ireviel pelo chamado (301); quer uma peça de Ferir)"
   ],
   "tracos": [
    "CRUEL",
@@ -6063,7 +6131,7 @@
  },
  "Vrethur": {
   "nivel": 67,
-  "xp": 400,
+  "xp": 900,
   "classe": "COVEIRO de Steunn que lê ossos (o chamado do 315; classe SURPRESA) · ORGULHOSO e RELIGIOSO · quer ser perdoado · quer o lugar do chefe · teme a morte de um filho · deve a alguém perigoso · nunca entrega um amigo à lei",
   "ocupacao": "chegou pelo chamado (315)",
   "log": [
@@ -6089,7 +6157,8 @@
    "+1000 Tick 462: MISSÃO/FEITO (chegou pelo chamado (315))",
    "+1000 Tick 469: MISSÃO/FEITO (chegou pelo chamado (315))",
    "+500 Tick 476: SURPRESA (gerador) (chegou pelo chamado (315))",
-   "Tick 476: SOBE a 67"
+   "Tick 476: SOBE a 67",
+   "+500 Tick 483: SURPRESA (gerador) (chegou pelo chamado (315))"
   ],
   "ultima_subida": 476,
   "tracos": [
@@ -6169,7 +6238,7 @@
  },
  "Ssashir": {
   "nivel": 36,
-  "xp": 1600,
+  "xp": 2100,
   "classe": "PESQUISADOR (metais e forja) · HONESTO e AMBICIOSO",
   "ocupacao": "Casa dos Estudiosos (336): bolsa de 40 por semana",
   "log": [
@@ -6185,7 +6254,8 @@
    "+1000 Tick 448: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
    "Tick 448: SOBE a 36",
    "+500 Tick 455: PASSO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
-   "+1000 Tick 469: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)"
+   "+1000 Tick 469: MISSÃO/FEITO (Casa dos Estudiosos (336): bolsa de 40 por semana)",
+   "+500 Tick 483: PASSO (Casa dos Estudiosos (336): bolsa de 40 por semana)"
   ],
   "desejo": "voltar para casa",
   "ambicao": "casar acima da sua classe",
@@ -6253,7 +6323,7 @@
  },
  "Tuald": {
   "nivel": 61,
-  "xp": 2000,
+  "xp": 3000,
   "classe": "herdeiro da Skotha (a gerar a classe em cena) · TEIMOSO e RELIGIOSO",
   "ocupacao": "APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia",
   "log": [
@@ -6273,7 +6343,8 @@
    "+500 Tick 455: SURPRESA (gerador) (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
    "Tick 455: SOBE a 61",
    "+1000 Tick 462: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
-   "+1000 Tick 469: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)"
+   "+1000 Tick 469: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)",
+   "+1000 Tick 483: MISSÃO/FEITO (APRENDIZ na forja grande (347, o conselho), longe da Matriz; o Graur o vigia)"
   ],
   "desejo": "mandar em alguém",
   "ambicao": "entrar numa facção que o recusou",
@@ -6296,7 +6367,7 @@
  },
  "Pebanda": {
   "nivel": 31,
-  "xp": 600,
+  "xp": 1100,
   "classe": "PESQUISADOR (plantas e terras) · AMBICIOSO e VINGATIVO",
   "ocupacao": "Casa dos Estudiosos (343): bolsa de 40 por semana",
   "log": [
@@ -6312,7 +6383,8 @@
    "+500 Tick 441: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
    "+500 Tick 455: PASSO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
    "+1000 Tick 462: MISSÃO/FEITO (Casa dos Estudiosos (343): bolsa de 40 por semana)",
-   "Tick 462: SOBE a 31"
+   "Tick 462: SOBE a 31",
+   "+500 Tick 483: SURPRESA (gerador) (Casa dos Estudiosos (343): bolsa de 40 por semana)"
   ],
   "desejo": "curar alguém",
   "ambicao": "formar uma companhia",
@@ -6371,7 +6443,7 @@
  },
  "Holgir": {
   "nivel": 66,
-  "xp": 4500,
+  "xp": 5000,
   "classe": "(a gerar em cena) · AVARENTO e HONESTO",
   "ocupacao": "chegou pelo chamado (350)",
   "log": [
@@ -6384,7 +6456,8 @@
    "+500 Tick 448: PASSO (chegou pelo chamado (350))",
    "+500 Tick 455: PASSO (chegou pelo chamado (350))",
    "+500 Tick 462: PASSO (chegou pelo chamado (350))",
-   "+500 Tick 476: SURPRESA (gerador) (chegou pelo chamado (350))"
+   "+500 Tick 476: SURPRESA (gerador) (chegou pelo chamado (350))",
+   "+500 Tick 483: SURPRESA (gerador) (chegou pelo chamado (350))"
   ],
   "desejo": "vingar um morto",
   "ambicao": "virar Lendário",
@@ -6473,7 +6546,7 @@
  },
  "Ulounn": {
   "nivel": 63,
-  "xp": 800,
+  "xp": 1300,
   "log": [
    "Dia 397: entra no livro (nível 62)",
    "Dia 397: 397: quer CURAR ALGUÉM; ambição: fundar uma escola; medo: perder a mão do ofício; nunca trabalha para a Liga (LEITURA da facção X) · [OCULTO] roubou o que tem; não é agente (ULa [18])",
@@ -6493,7 +6566,8 @@
    "+500 Tick 462: PASSO (chegou pelo chamado (392); pede lugar na casa)",
    "+500 Tick 469: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)",
    "Tick 469: SOBE a 63",
-   "+500 Tick 476: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)"
+   "+500 Tick 476: SURPRESA (gerador) (chegou pelo chamado (392); pede lugar na casa)",
+   "+500 Tick 483: PASSO (chegou pelo chamado (392); pede lugar na casa)"
   ],
   "classe": "Batedor de Mata (RAIZ, Incomum) · RELIGIOSO, TEIMOSO",
   "ocupacao": "chegou pelo chamado (392); pede lugar na casa",
@@ -6522,7 +6596,7 @@
  },
  "Dotocci": {
   "nivel": 31,
-  "xp": 2500,
+  "xp": 3000,
   "log": [
    "Dia 397: entra no livro (nível 30)",
    "Dia 397: 398 (auditoria; o NPC novo do Porto, problema do Comércio do 392): quer mandar em alguém; ambição: casar acima da classe; medo: a humilhação pública; nunca trabalha para a Liga · [OCULTO] sabe de um crime de alguém importante; nível 30 posto pelo Mestre (chefe de estiva), sem dado",
@@ -6534,7 +6608,8 @@
    "Tick 441: SOBE a 31",
    "+500 Tick 455: PASSO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
    "+1000 Tick 462: MISSÃO/FEITO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
-   "+1000 Tick 469: MISSÃO/FEITO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))"
+   "+1000 Tick 469: MISSÃO/FEITO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))",
+   "+500 Tick 483: PASSO (o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa))"
   ],
   "classe": "Estivador-chefe (VOZ, Comum) · GENEROSO, HONESTO",
   "ocupacao": "o Porto de Marasar: fala pelos do Cais de Baixo (a greve contra a casa)",
@@ -6564,7 +6639,7 @@
  },
  "Hirkunn": {
   "nivel": 93,
-  "xp": 6000,
+  "xp": 6500,
   "log": [
    "Dia 400: entra no livro (nível 93)",
    "Dia 403: 402: RECUSOU o lugar: deve à família dona de um túmulo de khan que ele selou e que foi saqueado; o SEVOR desse túmulo está à venda em Marasar",
@@ -6577,7 +6652,8 @@
    "+1000 Tick 455: MISSÃO/FEITO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
    "+500 Tick 462: SURPRESA (gerador) (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
    "+500 Tick 469: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
-   "+500 Tick 476: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)"
+   "+500 Tick 476: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)",
+   "+500 Tick 483: PASSO (o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa)"
   ],
   "classe": "Selador (SELO, Incomum) · HONESTO, GENEROSO",
   "ocupacao": "o TALENTO que apareceu no Porto de Marasar (399); ainda não falou com a casa",
@@ -6605,7 +6681,7 @@
  },
  "Zitha": {
   "nivel": 115,
-  "xp": 4500,
+  "xp": 5000,
   "log": [
    "Dia 401: entra no livro (nível 115)",
    "+1000 Tick 420: MISSÃO/FEITO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
@@ -6614,7 +6690,8 @@
    "+1000 Tick 448: MISSÃO/FEITO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
    "+500 Tick 455: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
    "+500 Tick 462: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
-   "+500 Tick 476: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)"
+   "+500 Tick 476: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)",
+   "+500 Tick 483: PASSO (FUGIU de Ireviel (401) depois de errar o copo do rei)"
   ],
   "classe": "Veneneiro (SOMBRA, Raro) · matador da Leliel",
   "ocupacao": "FUGIU de Ireviel (401) depois de errar o copo do rei",
@@ -6640,8 +6717,8 @@
   ]
  },
  "Gurka": {
-  "nivel": 27,
-  "xp": 1900,
+  "nivel": 28,
+  "xp": 200,
   "log": [
    "Dia 402: entra no livro (nível 26)",
    "+500 Tick 406: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
@@ -6652,7 +6729,9 @@
    "Tick 448: SOBE a 27",
    "+500 Tick 462: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
    "+500 Tick 469: PASSO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
-   "+500 Tick 476: SURPRESA (gerador) (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))"
+   "+500 Tick 476: SURPRESA (gerador) (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
+   "+1000 Tick 483: MISSÃO/FEITO (MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada))",
+   "Tick 483: SOBE a 28"
   ],
   "classe": "Mestre-mineiro (FORJA/AÇO, Comum) · ORGULHOSO e TEIMOSO",
   "ocupacao": "MESTRE DA GUILDA DOS MINEIROS DE LEVIS (402; escolhido pela Brara entre os da Mina Fechada)",
@@ -6678,11 +6757,11 @@
    "Peça Móvel (Passiva)"
   ],
   "fraqueza": "sem ferramentas finas, −4.",
-  "ultima_subida": 448
+  "ultima_subida": 483
  },
  "Quthemnus": {
   "nivel": 229,
-  "xp": 5000,
+  "xp": 5500,
   "log": [
    "Dia 404: entra no livro (nível 229)",
    "+500 Tick 406: PASSO (MORTO em praça por sentença do conselho (404))",
@@ -6692,7 +6771,8 @@
    "+500 Tick 448: PASSO (MORTO em praça por sentença do conselho (404))",
    "+500 Tick 455: SURPRESA (gerador) (MORTO em praça por sentença do conselho (404))",
    "+1000 Tick 469: MISSÃO/FEITO (MORTO em praça por sentença do conselho (404))",
-   "+500 Tick 476: SURPRESA (gerador) (MORTO em praça por sentença do conselho (404))"
+   "+500 Tick 476: SURPRESA (gerador) (MORTO em praça por sentença do conselho (404))",
+   "+500 Tick 483: PASSO (MORTO em praça por sentença do conselho (404))"
   ],
   "classe": "Mago das torres (ELO, Lendário de magia, fraco)",
   "ocupacao": "MORTO em praça por sentença do conselho (404)",
@@ -6719,8 +6799,8 @@
   ]
  },
  "Hiald": {
-  "nivel": 24,
-  "xp": 2000,
+  "nivel": 25,
+  "xp": 100,
   "log": [
    "Dia 406: entra no livro (nível 24)",
    "Dia 406: 406: [OCULTO] mandado pelo BORECCI (a explosão do ódio contra a Tilde; surpresa [3]); a ordem (HIo [4]): LEVAR A MENINA A STEUNN; quer enriquecer; ambição: achar uma receita perdida; medo: a pobreza; ama alguém proibido; NUNCA MACHUCA UMA CRIANÇA; o dilema: o desejo dele e o do parceiro não cabem juntos",
@@ -6731,7 +6811,9 @@
    "+500 Tick 413: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
    "+500 Tick 441: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
    "+500 Tick 448: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
-   "+500 Tick 469: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)"
+   "+500 Tick 469: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
+   "+500 Tick 483: PASSO (pede lugar na forja grande (406); faz amizade com a Tilde)",
+   "Tick 483: SOBE a 25"
   ],
   "classe": "Aprendiz de ferreiro de Steunn (FORJA, Comum) · HONESTO e VINGATIVO",
   "ocupacao": "pede lugar na forja grande (406); faz amizade com a Tilde",
@@ -6755,11 +6837,12 @@
    "ambicao",
    "medo",
    "linha_vermelha"
-  ]
+  ],
+  "ultima_subida": 483
  },
  "Rindald": {
   "nivel": 83,
-  "xp": 5000,
+  "xp": 5500,
   "log": [
    "Dia 406: entra no livro (nível 83)",
    "Dia 406: 406: quer vingar um morto; ambição: derrubar quem humilhou a família; medo: a magia; nunca trai a família; [OCULTO] sabe de um crime de alguém importante; não é agente (CH1a [19])",
@@ -6769,7 +6852,8 @@
    "+500 Tick 455: PASSO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
    "+500 Tick 462: SURPRESA (gerador) (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
    "+500 Tick 469: PASSO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
-   "+1000 Tick 476: MISSÃO/FEITO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))"
+   "+1000 Tick 476: MISSÃO/FEITO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))",
+   "+500 Tick 483: PASSO (chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3))"
   ],
   "classe": "Diplomata (VOZ, Incomum) · RELIGIOSO e VINGATIVO",
   "ocupacao": "chegou pelo chamado (406); pede lugar na casa e uma peça da forja (G3)",
@@ -6843,7 +6927,7 @@
  },
  "Gundald": {
   "nivel": 18,
-  "xp": 200,
+  "xp": 1200,
   "log": [
    "Dia 413: entra no livro (nível 16)",
    "Dia 415: 415: guardou os cavalos do rei, o Drassa e o menino no galpão de carroças, pelo Hruthos",
@@ -6855,7 +6939,8 @@
    "+500 Tick 448: PASSO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
    "+500 Tick 462: PASSO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
    "+500 Tick 469: PASSO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))",
-   "Tick 469: SOBE a 18"
+   "Tick 469: SOBE a 18",
+   "+1000 Tick 483: MISSÃO/FEITO (carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança))"
   ],
   "classe": "Comum (carroceiro)",
   "ocupacao": "carroceiro de Levis; deve a vida ao HRUTHOS (a praga de Marasar); recusado pelo chamado da casa; quer pagar a dívida e entrar na casa (ORGULHOSO, TEIMOSO; já matou e ninguém sabe; nunca machuca criança)",
@@ -6881,7 +6966,7 @@
  },
  "Drassa": {
   "nivel": 36,
-  "xp": 0,
+  "xp": 1000,
   "log": [
    "Dia 415: entra no livro (nível 35)",
    "Dia 415: 415: preso e guia do rei em Levis; levou o grupo pela porta das carroças; está no galpão do Gundald com o filho e a bolsa",
@@ -6895,7 +6980,8 @@
    "+500 Tick 448: PASSO (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))",
    "+500 Tick 462: PASSO (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))",
    "+500 Tick 469: PASSO (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))",
-   "Tick 469: SOBE a 36"
+   "Tick 469: SOBE a 36",
+   "+1000 Tick 483: MISSÃO/FEITO (GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou))"
   ],
   "classe": "Comum (guarda-livros)",
   "ocupacao": "GUARDA-LIVROS do Ardenghi em Levis; FOGE de Levis na tempestade com o FILHO e uma bolsa tirada do cofre do Ardenghi (COVARDE, LEAL; nunca machuca criança; quer entrar numa facção que o recusou)",
@@ -6984,7 +7070,7 @@
  },
  "Goir": {
   "nivel": 47,
-  "xp": 120,
+  "xp": 620,
   "log": [
    "Dia 421: entra no livro (nível 46)",
    "Dia 422: 422: o Starkald o põe na Guilda (caçador): a Eloune na várzea e o Morek na forquilha",
@@ -6999,7 +7085,8 @@
    "+1000 Tick 441: MISSÃO/FEITO (chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)",
    "+1000 Tick 462: MISSÃO/FEITO (chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)",
    "+500 Tick 476: PASSO (chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)",
-   "Tick 476: SOBE a 47"
+   "Tick 476: SOBE a 47",
+   "+500 Tick 483: PASSO (chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua)"
   ],
   "classe": "Caçador",
   "ocupacao": "chegou pelo chamado no 420; DESEJO aprender um segredo; AMBIÇÃO conquistar terra; MEDO voltar a ser escravo; SEGREDO tem um filho em outra cidade; LINHA VERMELHA nunca trabalha para a Liga (a facção X, declarada agora: a Liga); DILEMA a facção que o paga quer algo que fere a linha vermelha; HONESTO e AVARENTO; pede uma peça da forja (Rara ou melhor) no lugar de soldo, dentro de uma lua",
@@ -7055,7 +7142,7 @@
  },
  "Tegre": {
   "nivel": 45,
-  "xp": 100,
+  "xp": 1100,
   "log": [
    "Dia 425: entra no livro (nível 44)",
    "+500 Tick 427: PASSO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
@@ -7065,7 +7152,8 @@
    "+1000 Tick 455: MISSÃO/FEITO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
    "+500 Tick 469: SURPRESA (gerador) (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
    "+500 Tick 476: PASSO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))",
-   "Tick 476: SOBE a 45"
+   "Tick 476: SOBE a 45",
+   "+1000 Tick 483: MISSÃO/FEITO (caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425))"
   ],
   "classe": "Caçador (AÇO, Comum)",
   "ocupacao": "caçador da Guilda de Ireviel; encostou as barcas e puxou os vivos na forquilha (425)",
@@ -7090,8 +7178,8 @@
   "ultima_subida": 476
  },
  "Bjorvunn": {
-  "nivel": 46,
-  "xp": 4500,
+  "nivel": 47,
+  "xp": 400,
   "log": [
    "Dia 426: entra no livro (nível 46)",
    "Dia 426: 426 noite: contou ao rei do ULMIR, bicho ÚNICO de Raio nas salinas do Delta: o coração é núcleo Único de Raio (BJ26)",
@@ -7101,7 +7189,9 @@
    "+500 Tick 448: PASSO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
    "+500 Tick 455: SURPRESA (gerador) (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
    "+1000 Tick 462: MISSÃO/FEITO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
-   "+500 Tick 476: PASSO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)"
+   "+500 Tick 476: PASSO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
+   "+500 Tick 483: PASSO (na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele)",
+   "Tick 483: SOBE a 47"
   ],
   "classe": "Pesquisador (monstros e núcleos)",
   "ocupacao": "na Casa dos Estudiosos desde o 308 (agente da Lumine, pego vendo o Pilão de Varade); a Eliane deve a vida a ele",
@@ -7122,7 +7212,8 @@
    "Achado do Dia (1x/dia)",
    "Mapa Torto (Passiva)"
   ],
-  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar)."
+  "fraqueza": "não resiste a uma ruína (Vontade CD 15 para passar).",
+  "ultima_subida": 483
  },
  "Yavor": {
   "nivel": 80,
@@ -7174,7 +7265,7 @@
  },
  "Mie": {
   "nivel": 152,
-  "xp": 11750,
+  "xp": 12250,
   "log": [
    "Dia 427: entra no livro (nível 150)",
    "+1000 Tick 441: MISSÃO/FEITO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
@@ -7185,7 +7276,8 @@
    "+350 469: o BRAKOS (Raro 35, Vida), morto nos canais do Delta (nível × 10)",
    "Tick 469: SOBE a 151",
    "+500 Tick 476: PASSO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))",
-   "Tick 476: SOBE a 152"
+   "Tick 476: SOBE a 152",
+   "+500 Tick 483: PASSO (no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427))"
   ],
   "classe": "Campeã da guarda da Lurentetta (o Delta)",
   "ocupacao": "no Delta; vem à caçada da Elaeva com 20 lanças da guarda (427)",
@@ -7214,7 +7306,7 @@
  },
  "Giunn": {
   "nivel": 35,
-  "xp": 2500,
+  "xp": 3000,
   "log": [
    "Dia 428: entra no livro (nível 35)",
    "Dia 428: 428: gerador npc: desejo mandar em alguém · ambição (4) conquistar terra · medo a morte de um filho · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca entrega um amigo à lei · dilema que vem: salvar um filho custa a vida de um estranho · veio com os Jurados à audiência do 428 e pediu para falar com a TILDE, não com o conselho (JS28 [6], novidade [3], JS28s [3])",
@@ -7222,7 +7314,8 @@
    "+500 Tick 441: PASSO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))",
    "+500 Tick 455: PASSO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))",
    "+500 Tick 469: PASSO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))",
-   "+1000 Tick 476: MISSÃO/FEITO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))"
+   "+1000 Tick 476: MISSÃO/FEITO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))",
+   "+500 Tick 483: PASSO (em Ireviel com os Jurados de Steunn; procura a TILDE (428))"
   ],
   "classe": "Jurado de Steunn (os clãs de cima)",
   "ocupacao": "em Ireviel com os Jurados de Steunn; procura a TILDE (428)",
@@ -7252,7 +7345,7 @@
  },
  "Yais": {
   "nivel": 90,
-  "xp": 3000,
+  "xp": 3500,
   "log": [
    "Dia 433: entra no livro (nível 90)",
    "Dia 433: 433: gerador npc: desejo enriquecer · ambição (4) casar acima da sua classe · medo a velhice · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca vende o ofício barato · ofereceu 1.500 ao rei para seguir (recusado); confessou em parte: a barca é da Liga, leva a paga da Liga a um homem do Delta, e diz que paga portagem 'desde a paz' (caiu no 339) · o rei leu nele (extraordinário) mais medo de quem espera o ouro do que do rei",
@@ -7262,7 +7355,8 @@
    "+500 Tick 448: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))",
    "+500 Tick 455: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))",
    "+500 Tick 462: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))",
-   "+500 Tick 469: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))"
+   "+500 Tick 469: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))",
+   "+500 Tick 483: PASSO (a barca da Liga no cais da aldeia abaixo de Levis (433))"
   ],
   "classe": "Capitão da Liga (o rio; espada)",
   "ocupacao": "a barca da Liga no cais da aldeia abaixo de Levis (433)",
@@ -7291,8 +7385,8 @@
   "fraqueza": "se cair, a tropa testa moral."
  },
  "Yesiel": {
-  "nivel": 31,
-  "xp": 3000,
+  "nivel": 32,
+  "xp": 400,
   "log": [
    "Dia 434: entra no livro (nível 31)",
    "Dia 434: 434: gerador npc: AMBICIOSO e CRUEL · desejo curar alguém · ambição entrar numa facção que o recusou · medo a solidão · (OCULTO) segredo: fez um pacto · linha vermelha: nunca trabalha para a facção X (a definir na ficção)",
@@ -7303,7 +7397,9 @@
    "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))",
    "+500 Tick 462: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
    "+500 Tick 469: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
-   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)"
+   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
+   "+500 Tick 483: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
+   "Tick 483: SOBE a 32"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
@@ -7325,11 +7421,12 @@
    "Muralha (Postura)"
   ],
   "fraqueza": "se o protegido morre, −2 em tudo por um dia.",
-  "lealdade": 6
+  "lealdade": 6,
+  "ultima_subida": 483
  },
  "Helgunn": {
   "nivel": 46,
-  "xp": 3000,
+  "xp": 4000,
   "log": [
    "Dia 434: entra no livro (nível 46)",
    "Dia 434: 434: gerador npc: TEIMOSO e CURIOSO · desejo casar com quem ama · ambição ganhar a guerra do seu povo · medo a humilhação pública · (OCULTO) segredo: ama alguém proibido · linha vermelha: nunca machuca uma criança",
@@ -7339,7 +7436,8 @@
    "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))",
    "+1000 Tick 462: MISSÃO/FEITO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
    "+500 Tick 469: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
-   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)"
+   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
+   "+1000 Tick 483: MISSÃO/FEITO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
@@ -7402,7 +7500,7 @@
  },
  "Gonde": {
   "nivel": 31,
-  "xp": 0,
+  "xp": 500,
   "log": [
    "Dia 436: entra no livro (nível 30)",
    "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)",
@@ -7410,7 +7508,8 @@
    "+500 Tick 462: PASSO (comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir)",
    "+500 Tick 469: PASSO (comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir)",
    "+1000 Tick 476: MISSÃO/FEITO (comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir)",
-   "Tick 476: SOBE a 31"
+   "Tick 476: SOBE a 31",
+   "+500 Tick 483: PASSO (comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir)"
   ],
   "classe": "Cabo da guarda do rei (lança)",
   "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir",
@@ -7480,41 +7579,44 @@
  },
  "Dulassetta": {
   "nivel": 34,
-  "xp": 2500,
+  "xp": 3000,
   "log": [
    "Dia 454: entra no livro (nível 34)",
    "+500 Tick 455: PASSO (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))",
    "Dia 460: 460: SUMIU de Farenta antes de o Graur chegar com a ordem de prisão (DU60 [1]); alguém o avisou",
    "+500 Tick 462: SURPRESA (gerador) (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))",
    "+1000 Tick 469: MISSÃO/FEITO (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))",
-   "+500 Tick 476: PASSO (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))"
+   "+500 Tick 476: PASSO (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))",
+   "+500 Tick 483: PASSO (do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele))"
   ],
   "classe": "conselheiro de Farenta (Burocrata)",
   "ocupacao": "do conselho do podestà Tirello; MANDA CARTAS À LELIEL (o Norte; a Liga é dela): Yeor o viu entregar uma ao correio do norte (454); Yeor o conhece de perto (o dilema dele: a verdade destrói quem confia nele)"
  },
  "Yinnor": {
   "nivel": 88,
-  "xp": 2500,
+  "xp": 3000,
   "log": [
    "Dia 454: entra no livro (nível 88)",
    "+1000 Tick 455: MISSÃO/FEITO (ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz)",
    "+500 Tick 462: PASSO (ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz)",
    "+1000 Tick 469: MISSÃO/FEITO (ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz)",
-   "Dia 469: 469: ferido numa rua escura de Ireviel; de cama uma semana (CG69 [6])"
+   "Dia 469: 469: ferido numa rua escura de Ireviel; de cama uma semana (CG69 [6])",
+   "+500 Tick 483: PASSO (ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz)"
   ],
   "classe": "mestre da Luz do Colégio de Ireviel (Sacerdote)",
   "ocupacao": "ensinou ao rei a Cura Maior (441) e o Purificar (454); mede o rei pelo que ele faz com a luz"
  },
  "Kveur": {
   "nivel": 45,
-  "xp": 1500,
+  "xp": 2000,
   "log": [
    "Dia 455: entra no livro (nível 45)",
    "Dia 455: 455: gerador npc (o nome do gerador, ITHVIL, bate no Mítico de Levis: trocado por nomes.py aspera livre): COVARDE e GENEROSO · desejo uma casa própria · ambição tomar o lugar do chefe · medo a humilhação pública · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca se ajoelha · dilema: a facção que o paga quer algo que fere a linha vermelha",
    "Dia 458: 458: recebeu do rei uma ARMADURA DE ESCAMAS ÉPICA da Série da Hoste (nee e gusta: não derruba · leve · quem agarra sangra 6 · RD 3 contra doença e veneno): o G3 cumprido",
    "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))",
    "+1000 Tick 462: MISSÃO/FEITO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))",
-   "+500 Tick 469: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))"
+   "+500 Tick 469: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))",
+   "+500 Tick 483: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 455)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)",
@@ -7522,7 +7624,7 @@
  },
  "Hurke": {
   "nivel": 62,
-  "xp": 2000,
+  "xp": 2500,
   "log": [
    "Dia 455: entra no livro (nível 62)",
    "Dia 455: 455: gerador npc (o nome do gerador, VARETH, bate no Varogh e no Pilão de Varade: trocado por nomes.py montanhesa livre): RELIGIOSO e HONESTO · desejo voltar para casa · ambição fundar uma escola · medo o próprio passado · (OCULTO) segredo: trabalha para outra facção · linha vermelha: nunca se ajoelha · dilema: a ambição exige trair alguém que ele ama",
@@ -7530,7 +7632,8 @@
    "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))",
    "+500 Tick 462: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))",
    "+1000 Tick 469: MISSÃO/FEITO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))",
-   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))"
+   "+500 Tick 476: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))",
+   "+500 Tick 483: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 455)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)",
@@ -7580,33 +7683,36 @@
  },
  "Zolalletta": {
   "nivel": 38,
-  "xp": 1000,
+  "xp": 2000,
   "log": [
    "Dia 457: entra no livro (nível 38)",
    "Dia 457: 457: gerador do 455 (o nome dava KREULA, que bate no Kreine e no Kredun: trocado por nomes.py mercante livre): desejo proteger um filho · ambição derrubar quem humilhou a família · medo a pobreza · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca volta atrás numa palavra dada",
    "+500 Tick 469: PASSO (embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz)",
-   "+500 Tick 476: PASSO (embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz)"
+   "+500 Tick 476: PASSO (embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz)",
+   "+1000 Tick 483: MISSÃO/FEITO (embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz)"
   ],
   "classe": "Diplomata (VOZ) · GENEROSA e CRUEL",
   "ocupacao": "embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz"
  },
  "Dubacco": {
   "nivel": 30,
-  "xp": 500,
+  "xp": 1000,
   "log": [
    "Dia 460: entra no livro (nível 30)",
-   "+500 Tick 462: SURPRESA (gerador) (conselheiro do podestà de Farenta; armou com o Dulassetta o voto do podestà novo (apontado no 460))"
+   "+500 Tick 462: SURPRESA (gerador) (conselheiro do podestà de Farenta; armou com o Dulassetta o voto do podestà novo (apontado no 460))",
+   "+500 Tick 483: PASSO (conselheiro do podestà de Farenta; armou com o Dulassetta o voto do podestà novo (apontado no 460))"
   ],
   "classe": "Conselheiro (VOZ)",
   "ocupacao": "conselheiro do podestà de Farenta; armou com o Dulassetta o voto do podestà novo (apontado no 460)"
  },
  "Tulgald": {
   "nivel": 100,
-  "xp": 500,
+  "xp": 1000,
   "log": [
    "Dia 469: entra no livro (nível 100)",
    "Dia 469: 469: gerador npc (o nome dava ZAIRA, que bate no cânone: nomes.py montanhesa livre): VINGATIVO e TEIMOSO · desejo sair da cidade · ambição fundar uma escola · medo a magia · (OCULTO) segredo: já matou e ninguém sabe · linha vermelha: nunca trabalha para a facção X (a definir na ficção)",
-   "+500 Tick 476: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499)"
+   "+500 Tick 476: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499)",
+   "+500 Tick 483: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 469)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499"

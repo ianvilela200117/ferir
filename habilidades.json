@@ -126,7 +126,8 @@
     "atual": 2,
     "max": 2
    },
-   "origem": "aula do 266"
+   "origem": "aula do 266",
+   "nivel_min": 50
   },
   "Chuva de Brasas": {
    "tipo": "Magia",
@@ -138,16 +139,17 @@
     "atual": 7,
     "max": 7
    },
-   "origem": "o foco"
+   "origem": "o foco",
+   "nivel_min": 50
   },
   "Toque do Ceifador": {
    "tipo": "Magia",
    "efeito": "Osso 6º, pelo FOCO DE OSSO (rende Mítico ×10): 24d6 num alvo; quem o Toque derruba levanta como servo até a aurora (G23) · 2x por cena pelo Foco, sem Mana e sem sangue (a peça já pagou)",
    "grau": 1,
-   "usos": 1,
+   "usos": 3,
    "desde": 437,
    "cargas": {
-    "atual": 1,
+    "atual": 2,
     "max": 2
    },
    "origem": "aula do 378; o Foco de Osso"
@@ -166,7 +168,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 301"
+   "origem": "aula do 301",
+   "nivel_min": 50
   },
   "Prender a Alma": {
    "tipo": "Magia",
@@ -174,7 +177,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 371"
+   "origem": "aula do 371",
+   "nivel_min": 50
   },
   "Erguer o Caído": {
    "tipo": "Magia",
@@ -182,7 +186,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 357"
+   "origem": "aula do 357",
+   "nivel_min": 50
   },
   "Lança do Sol": {
    "tipo": "Magia",
@@ -190,7 +195,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 245"
+   "origem": "aula do 245",
+   "nivel_min": 50
   },
   "Apagar": {
    "tipo": "Magia",
@@ -198,7 +204,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 364"
+   "origem": "aula do 364",
+   "nivel_min": 50
   },
   "Peso do Nada": {
    "tipo": "Magia",
@@ -250,7 +257,8 @@
    "grau": 1,
    "usos": 0,
    "desde": 437,
-   "origem": "aula do 273"
+   "origem": "aula do 273",
+   "nivel_min": 50
   },
   "Calma (o Martelo que Ensina)": {
    "tipo": "Magia",
@@ -310,7 +318,8 @@
    "grau": 1,
    "usos": 1,
    "desde": 441,
-   "origem": "aula do Colégio, 441"
+   "origem": "aula do Colégio, 441",
+   "nivel_min": 50
   },
   "Purificar": {
    "tipo": "Magia",
@@ -327,6 +336,30 @@
    "usos": 0,
    "desde": 469,
    "origem": "ponto do 159"
+  },
+  "Mão de Rei": {
+   "tipo": "Passiva",
+   "efeito": "HERDEIRO: na forja e no encantamento a Mão conta o maior nível que já teve (159); as peças que ele mesmo forjou rendem inteiras na mão dele, sem requisito de nível",
+   "grau": 1,
+   "usos": 0,
+   "desde": 478,
+   "origem": "a classe Herdeiro do Rei-Ferreiro"
+  },
+  "Martelo e Bigorna": {
+   "tipo": "Passiva",
+   "efeito": "HERDEIRO: com o Martelo do Rei e a Matriz juntos na obra, cada um soma +14; com as três ferramentas de rei, o Teto Aberto (passa de Primordial)",
+   "grau": 1,
+   "usos": 0,
+   "desde": 478,
+   "origem": "a classe Herdeiro do Rei-Ferreiro"
+  },
+  "Remendar a Coberta": {
+   "tipo": "Ativa",
+   "efeito": "HERDEIRO (1 dia de trabalho sobre o selo, com o Martelo e a Matriz; sem Foco): fecha um selo aberto; a magia do lugar volta e o que saiu por ele enfraquece; sente vaduar e selos a um dia de viagem; depois, Exausto até a aurora · o culto daquele selo avança 1 no relógio",
+   "grau": 1,
+   "usos": 0,
+   "desde": 478,
+   "origem": "a classe Herdeiro do Rei-Ferreiro"
   }
  },
  "titulos": [

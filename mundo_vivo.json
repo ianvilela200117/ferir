@@ -39,12 +39,13 @@
     "420: [4] ataca ou sabota a obra do RIVAL lendário",
     "441: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
     "462: [20] SURPRESA: gerador de novidade ligado a ele",
-    "463: [16] um discípulo ou herdeiro dele aparece no mundo"
+    "463: [16] um discípulo ou herdeiro dele aparece no mundo",
+    "483: [4] ataca ou sabota a obra do RIVAL lendário"
    ],
    "obras_feitas": [
     "tomar Marasar e se fazer Doge pela espada"
    ],
-   "prox": 481,
+   "prox": 502,
    "dons": [
     "Fôlego Sem Fundo",
     "Passo Certo",
@@ -101,9 +102,10 @@
     "405: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
     "427: [13] oferece um acordo a um rival (paz, casamento, troca)",
     "455: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
-    "467: [7] um segredo dele vaza (boato ou espionagem)"
+    "467: [7] um segredo dele vaza (boato ou espionagem)",
+    "483: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)"
    ],
-   "prox": 479,
+   "prox": 507,
    "dons": [
     "Segundo Coração",
     "Pele do Mundo (Essência: Espinho)",
@@ -118,7 +120,7 @@
    "regua": 215,
    "obra": "quebrar a Liga de Marasar",
    "relogio": [
-    4,
+    5,
     8
    ],
    "ritmo": 18,
@@ -152,12 +154,14 @@
     "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "420: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
     "441: [4] ataca ou sabota a obra do RIVAL lendário",
-    "462: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
+    "462: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "478: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "483: [17] desafia alguém em público (duelo, debate, prova)"
    ],
    "obras_feitas": [
     "a Escola Única"
    ],
-   "prox": 480,
+   "prox": 501,
    "dons": [
     "Memória de Rei",
     "Nome que Anda",
@@ -172,7 +176,7 @@
    "regua": 170,
    "obra": "quebrar o que resta do pacto do Silêncio",
    "relogio": [
-    2,
+    0,
     8
    ],
    "ritmo": 22,
@@ -202,9 +206,10 @@
     "427: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
     "455: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
     "473: [14] perde uma peça ou um aliado para alguém",
-    "475: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado"
+    "475: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+    "483: [16] um discípulo ou herdeiro dele aparece no mundo"
    ],
-   "prox": 477,
+   "prox": 505,
    "dons": [
     "Sorte Velha",
     "Olho Aberto",
@@ -219,7 +224,7 @@
    "regua": 175,
    "obra": "domar um monstro Mítico",
    "relogio": [
-    1,
+    0,
     8
    ],
    "ritmo": 28,
@@ -251,9 +256,10 @@
     "433 (a casa SABE): o Ceduion escreveu em cifra à LELIEL oferecendo a fraqueza escondida da Elaeva (o sal) em troca do PERDÃO DO NORTE; a carta foi tomada pelo rei na barca da Liga",
     "438: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "444: [4] ataca ou sabota a obra do RIVAL lendário",
-    "455: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
+    "455: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "483: [20] SURPRESA: gerador de novidade ligado a ele"
    ],
-   "prox": 483,
+   "prox": 511,
    "dons": [
     "Memória de Rei",
     "Sangue Grosso",
@@ -296,9 +302,11 @@
     "402: [5] viaja: aparece num lugar onde não era esperado",
     "427: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
     "428: [12] o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
-    "455: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)"
+    "455: [9] faz uma OBRA ligada à frente (uma peça, uma lei, uma batalha, um ritual)",
+    "481: [20] SURPRESA: gerador de novidade ligado a ele",
+    "483: [13] oferece um acordo a um rival (paz, casamento, troca)"
    ],
-   "prox": 479,
+   "prox": 507,
    "dons": [
     "Memória de Rei",
     "Olho Aberto",
@@ -343,12 +351,13 @@
     "420: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
     "431: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
     "441: [20] SURPRESA: gerador de novidade ligado a ele",
-    "462: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)"
+    "462: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+    "483: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
    ],
    "obras_feitas": [
     "ressuscitar um morto amado"
    ],
-   "prox": 477,
+   "prox": 498,
    "dons": [
     "Nome que Anda",
     "Mão que Doma",
@@ -460,7 +469,7 @@
    "regua": 139,
    "obra": "achar as três ferramentas dos reis",
    "relogio": [
-    1,
+    0,
     8
    ],
    "ritmo": 14,
@@ -495,12 +504,13 @@
     "427: [4] ataca ou sabota a obra do RIVAL lendário",
     "441: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "455: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
-    "469: [19] manda caçar alguém (um nome, uma peça, um monstro)"
+    "469: [19] manda caçar alguém (um nome, uma peça, um monstro)",
+    "483: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
    ],
    "obras_feitas": [
     "fundar uma ordem (a Ordem dos Juncos: ofício e cura)"
    ],
-   "prox": 483,
+   "prox": 497,
    "dons": [
     "Memória de Rei",
     "Pele do Mundo (Essência: Fogo)"
@@ -581,7 +591,7 @@
    "regua": 170,
    "obra": "vingar um povo (as aldeias do Kredun)",
    "relogio": [
-    7,
+    8,
     8
    ],
    "ritmo": 16,
@@ -604,9 +614,10 @@
     "399: [2] compra, toma ou destrói algo de valor ligado à Obra",
     "420: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
     "441: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
-    "462: [13] oferece um acordo a um rival (paz, casamento, troca)"
+    "462: [13] oferece um acordo a um rival (paz, casamento, troca)",
+    "483: [11] o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)"
    ],
-   "prox": 478,
+   "prox": 499,
    "dons": [
     "Olho Aberto",
     "Voz de Mando",
@@ -622,7 +633,7 @@
    "regua": 147,
    "obra": "fechar a coberta do mundo de novo",
    "relogio": [
-    3,
+    2,
     8
    ],
    "ritmo": 14,
@@ -657,12 +668,13 @@
     "441: [4] ataca ou sabota a obra do RIVAL lendário",
     "455: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
     "464: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
-    "469: [14] perde uma peça ou um aliado para alguém"
+    "469: [14] perde uma peça ou um aliado para alguém",
+    "483: [6] manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)"
    ],
    "obras_feitas": [
     "abrir um caminho além do mapa"
    ],
-   "prox": 483,
+   "prox": 497,
    "dons": [
     "Sorte Velha",
     "Nome que Anda"
@@ -766,7 +778,7 @@
    "regua": 362,
    "obra": "enriquecer acima de todos",
    "relogio": [
-    9,
+    10,
     12
    ],
    "ritmo": 21,
@@ -795,9 +807,10 @@
     "424 (LM24 [4], FIEL): o INCÊNDIO DE LUMADE queimou o BAIRRO DOS ARMAZÉNS: o grão de Lumade queimou; a fome lá piora",
     "441: [17] desafia alguém em público (duelo, debate, prova)",
     "460: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
-    "462: [3] recruta: gente, uma facção ou um monstro passa para o lado dele"
+    "462: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
+    "483: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)"
    ],
-   "prox": 483,
+   "prox": 504,
    "dons": [
     "Pele do Mundo (Essência: Fogo)",
     "Pele do Mundo (Essência: Podridão)",
@@ -813,7 +826,7 @@
    "regua": 392,
    "obra": "vingar um povo",
    "relogio": [
-    9,
+    10,
     12
    ],
    "ritmo": 21,
@@ -838,9 +851,10 @@
     "427: o ENVIADO dela em Ireviel pede ao rei ALIANÇA CONTRA A ELAEVA (quem matou o povo dela; LU27 [3], LU27b [4])",
     "427 (noite): o rei ACEITOU a aliança contra a Elaeva antes de ouvir o preço; ela dá 20 lanças da guarda e a campeã MIE (150) à caçada (YV27a [1], YV27c [6]+2, YV27d [6]); o preço: uma ARMA Lendária ou melhor da forja do rei até o 487 (YV27b [1], YV27e [2]); o enviado é o YAVOR (80)",
     "441: [19] manda caçar alguém (um nome, uma peça, um monstro)",
-    "462: [2] compra, toma ou destrói algo de valor ligado à Obra"
+    "462: [2] compra, toma ou destrói algo de valor ligado à Obra",
+    "483: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta"
    ],
-   "prox": 483,
+   "prox": 504,
    "dons": [
     "Memória de Rei",
     "Pele do Mundo (Essência: Sombra)",
@@ -856,7 +870,7 @@
    "regua": 312,
    "obra": "unificar uma terra",
    "relogio": [
-    9,
+    10,
     12
    ],
    "ritmo": 21,
@@ -878,9 +892,10 @@
     "399: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
     "420: [8] sofre um revés (ferida, perda, traição de um próximo)",
     "441: [1] um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
-    "462: [7] um segredo dele vaza (boato ou espionagem)"
+    "462: [7] um segredo dele vaza (boato ou espionagem)",
+    "483: [13] oferece um acordo a um rival (paz, casamento, troca)"
    ],
-   "prox": 483,
+   "prox": 504,
    "dons": [
     "Olho Aberto",
     "Mão do Mundo",
@@ -1231,10 +1246,11 @@
   {
    "nome": "Ssish, o Colosso da Colmeia",
    "cat": "Primordial",
-   "nivel": 466,
+   "nivel": 472,
    "regiao": "Ireviel e o rio",
    "estado": "ativo",
-   "nota": "360: entra no mundo (pedido do jogador). Inseto do tamanho de uma colina, SOM; PV 139.800, Def 176, RD 100, at +166, 3d10×500; voa, devora metal, grito de medo, camuflagem, couraça, olhar paralisante; poder: o grito do metal (Vontade CD 50, 24 m, a cada 3 rodadas); fraqueza SILÊNCIO e luz do sol; COLMEIA: obedece a uma rainha (OCULTO: a Higrunn); sinal: cheiro de enxofre; drops gistald, zysris, siess, núcleo Primordial de Som. Saiu de Steunn andando; chega às Fundas ~367; a notícia chega no 362. · 455: migrou de Marasar para IREVIEL E O RIO; (OCULTO, SS55 [1]) assenta LONGE, nas Fundas, rio acima; o sinal (cheiro de enxofre no rio) chega a Ireviel no 462; a casa só sabe que saiu de Marasar (notícia INCOMPLETA)"
+   "nota": "360: entra no mundo (pedido do jogador). Inseto do tamanho de uma colina, SOM; PV 139.800, Def 176, RD 100, at +166, 3d10×500; voa, devora metal, grito de medo, camuflagem, couraça, olhar paralisante; poder: o grito do metal (Vontade CD 50, 24 m, a cada 3 rodadas); fraqueza SILÊNCIO e luz do sol; COLMEIA: obedece a uma rainha (OCULTO: a Higrunn); sinal: cheiro de enxofre; drops gistald, zysris, siess, núcleo Primordial de Som. Saiu de Steunn andando; chega às Fundas ~367; a notícia chega no 362. · 455: migrou de Marasar para IREVIEL E O RIO; (OCULTO, SS55 [1]) assenta LONGE, nas Fundas, rio acima; o sinal (cheiro de enxofre no rio) chega a Ireviel no 462; a casa só sabe que saiu de Marasar (notícia INCOMPLETA)",
+   "nivel_base": 466
   },
   {
    "nome": "Syess",
@@ -1258,7 +1274,7 @@
    "relacao": "SAQUEIA quem passa",
    "plano": "unir as tribos sob um só chefe",
    "relogio": [
-    1,
+    2,
     6
    ],
    "habitat": "montanhas e passos",
@@ -1297,7 +1313,7 @@
    "nome": "Vrurn (trolls)",
    "povo": "trolls",
    "regiao": "Yaelane",
-   "numero": 160,
+   "numero": 210,
    "chefe": "Ulair",
    "chefe_nivel": 31,
    "classe_chefe": "sacerdote de um deus morto (FÉ)",
@@ -1305,7 +1321,7 @@
    "relacao": "VASSALO de alguém (rolar quem)",
    "plano": "acordar algo que dorme sob o covil",
    "relogio": [
-    3,
+    4,
     6
    ],
    "habitat": "pontes e gargantas",
@@ -1788,7 +1804,7 @@
    "b": "Gorra",
    "tipo": "DÍVIDA",
    "causa": "uma peça (arma, joia, bigorna)",
-   "int": 2,
+   "int": 1,
    "desde": 392,
    "estado": "viva"
   },
@@ -1797,9 +1813,9 @@
    "b": "Lasca e Miro (presos)",
    "tipo": "RESSENTIMENTO",
    "causa": "um cargo ou título",
-   "int": 3,
+   "int": 4,
    "desde": 399,
-   "estado": "viva"
+   "estado": "explodiu"
   },
   {
    "a": "o Doge Pelaone",
@@ -1833,9 +1849,9 @@
    "b": "Brara",
    "tipo": "DESEJO SECRETO",
    "causa": "uma morte antiga",
-   "int": 3,
+   "int": 4,
    "desde": 427,
-   "estado": "viva"
+   "estado": "explodiu"
   },
   {
    "a": "Tilde",
@@ -1887,7 +1903,7 @@
    "b": "Aeliae",
    "tipo": "PAIXÃO PROIBIDA",
    "causa": "um cargo ou título",
-   "int": 3,
+   "int": 2,
    "desde": 469,
    "estado": "viva"
   },
@@ -1900,6 +1916,15 @@
    "desde": 476,
    "estado": "anulada",
    "nota": "476: ANULADA pelo Mestre (a Tilde é a menina da casa, uma criança: não há paixão com um ancião)"
+  },
+  {
+   "a": "Kreine (da casa)",
+   "b": "Naera",
+   "tipo": "VINGANÇA JURADA",
+   "causa": "uma promessa quebrada",
+   "int": 1,
+   "desde": 483,
+   "estado": "viva"
   }
  ],
  "espionagem": {
@@ -2014,8 +2039,8 @@
   },
   {
    "nome": "a Lumine",
-   "forca": 24,
-   "volta": 483
+   "forca": 26,
+   "volta": 497
   },
   {
    "nome": "os conselheiros (Pelagri, Aldoveri, Tiracci)",
@@ -2029,8 +2054,8 @@
   },
   {
    "nome": "o Clã do Hrotgar",
-   "forca": 24,
-   "volta": 483
+   "forca": 26,
+   "volta": 497
   }
  ],
  "infiltrados": [
@@ -2137,7 +2162,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [3] quieta",
     "420: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
     "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
     "434: [8] quieta",
@@ -2146,7 +2170,8 @@
     "455: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
     "462: [8] quieta",
     "469: [10] junta gente ou recurso → força 6",
-    "476: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê"
+    "476: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
+    "483: [8] quieta"
    ]
   },
   {
@@ -2223,13 +2248,12 @@
    "o_que": "barqueiros da Liga que pagavam o pedágio secreto aos conselheiros; pedem a Carta de Passagem de Ireviel",
    "forca": 4,
    "relogio": [
-    3,
+    4,
     6
    ],
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [12] AGE PELO OBJETIVO → 1/6",
     "420: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 3",
     "427: [4] quieta",
     "434: [12] AGE PELO OBJETIVO → 3/6",
@@ -2238,7 +2262,8 @@
     "455: [3] quieta",
     "462: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 3/6",
     "469: [10] junta gente ou recurso → força 4",
-    "476: [2] quieta"
+    "476: [2] quieta",
+    "483: [12] AGE PELO OBJETIVO → 4/6"
    ]
   },
   {
@@ -2268,13 +2293,12 @@
    "o_que": "salineiros que saem do exército de bandidos e querem vender só a Ireviel",
    "forca": 4,
    "relogio": [
-    3,
+    4,
     6
    ],
    "postura": 1,
    "estado": "viva",
    "log": [
-    "413: [1] RACHA: perde gente → força 3",
     "420: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
     "427: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
     "434: [14] BATE DE FRENTE com os Devolvidos: [8]+3 × [6]+1 → vence a Guilda dos Salineiros do Delta (",
@@ -2283,7 +2307,8 @@
     "455: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 2/6",
     "462: [12] AGE PELO OBJETIVO → 3/6",
     "469: [10] junta gente ou recurso → força 4",
-    "476: [6] quieta"
+    "476: [6] quieta",
+    "483: [13] não acha rival na terra: age pelo objetivo → 4/6"
    ]
   },
   {
@@ -2315,7 +2340,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [8] quieta",
     "420: [1] RACHA: perde gente → força 3",
     "427: [2] quieta",
     "434: [13] BATE DE FRENTE com os do Cais de Baixo: [7]+3 × [7]+4 → vence os do Cais de Baixo (2/6); o",
@@ -2324,7 +2348,8 @@
     "455: [2] quieta",
     "462: [11] AGE PELO OBJETIVO → 1/6",
     "469: [2] quieta",
-    "476: [9] junta gente ou recurso → força 3"
+    "476: [9] junta gente ou recurso → força 3",
+    "483: [3] quieta"
    ]
   },
   {
@@ -2365,7 +2390,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [6] quieta",
     "420: [13] não acha rival na terra: age pelo objetivo → 1/6",
     "427: [10] junta gente ou recurso → força 4",
     "434: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
@@ -2374,7 +2398,8 @@
     "455: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "462: [2] quieta",
     "469: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
-    "476: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6"
+    "476: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "483: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
    ]
   },
   {
@@ -2410,13 +2435,12 @@
    "o_que": "rouba crianças; 305: uma pedra com olhos pintados e um sapato de criança na estrada sul (o culto avança)",
    "forca": 3,
    "relogio": [
-    1,
+    2,
     6
    ],
    "postura": -1,
    "estado": "viva",
    "log": [
-    "413: [10] junta gente ou recurso → força 2",
     "420: [4] quieta",
     "427: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
     "434: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
@@ -2425,7 +2449,8 @@
     "455: [9] junta gente ou recurso → força 3",
     "462: [7] NÃO DORME (G8-D) 1d6 [4]: AGE PELO OBJETIVO → 1/6",
     "469: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
-    "476: [14] BATE DE FRENTE com os Rendidos de Marasar: [12]+3 × [6]+6 → vence (culto) os Olhos Pintado"
+    "476: [14] BATE DE FRENTE com os Rendidos de Marasar: [12]+3 × [6]+6 → vence (culto) os Olhos Pintado",
+    "483: [8] NÃO DORME (G8-D) 1d6 [5]: AGE PELO OBJETIVO → 2/6"
    ]
   },
   {
@@ -2484,13 +2509,12 @@
    "o_que": "boticários que perderam a venda quando o remédio da casa correu o rio",
    "forca": 6,
    "relogio": [
-    0,
+    1,
     6
    ],
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "420: [11] AGE PELO OBJETIVO → 1/6",
     "427: [6] quieta",
     "434: [7] quieta",
@@ -2499,7 +2523,8 @@
     "455: [14] BATE DE FRENTE com a Guarda do Pedágio: [11]+6 × [15]+3 → vence a Guarda do Pedágio (6/6);",
     "462: [6] quieta",
     "469: [10] junta gente ou recurso → força 6",
-    "476: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
+    "476: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "483: [11] AGE PELO OBJETIVO → 1/6"
    ]
   },
   {
@@ -2509,13 +2534,12 @@
    "o_que": "os velhos da muralha, amigos do Tamel; querem voz na guarda",
    "forca": 3,
    "relogio": [
-    5,
+    6,
     6
    ],
    "postura": 0,
-   "estado": "viva",
+   "estado": "cumpriu",
    "log": [
-    "413: [12] AGE PELO OBJETIVO → 2/6",
     "420: [8] quieta",
     "427: [7] quieta",
     "434: [4] quieta",
@@ -2524,7 +2548,8 @@
     "455: [11] AGE PELO OBJETIVO → 4/6",
     "462: [11] AGE PELO OBJETIVO → 5/6",
     "469: [3] quieta",
-    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)"
+    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "483: [14] BATE DE FRENTE com os do Croque: [16]+3 × [6]+5 → vence os da Muralha Velha (6/6); os do C"
    ]
   },
   {
@@ -2540,7 +2565,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "420: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
     "427: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
     "428 (noite): o CONSELHO deu a eles a terra do porto de Marasar (BR28: A, 5 a 1; vencida a Nouliel)",
     "434: [6] quieta",
@@ -2549,7 +2573,8 @@
     "455: [8] quieta",
     "462: [4] quieta",
     "469: [10] junta gente ou recurso → força 4",
-    "476: [7] quieta"
+    "476: [7] quieta",
+    "483: [7] quieta"
    ]
   },
   {
@@ -2565,7 +2590,6 @@
    "postura": 1,
    "estado": "viva",
    "log": [
-    "413: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
     "420: [10] junta gente ou recurso → força 3",
     "427: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa",
     "434: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa",
@@ -2574,7 +2598,8 @@
     "455: [2] quieta",
     "462: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
     "469: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
-    "476: [1] RACHA: perde gente → força 1"
+    "476: [1] RACHA: perde gente → força 1",
+    "483: [6] quieta"
    ]
   },
   {
@@ -2590,7 +2615,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [4] quieta",
     "420: [1] RACHA: perde gente → força 1",
     "427: [5] quieta",
     "434: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
@@ -2599,7 +2623,8 @@
     "455: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "462: [7] quieta",
     "469: [14] BATE DE FRENTE com os do Rio Vermelho: [13]+3 × [19]+4 → vence os do Rio Vermelho (1/6); o",
-    "476: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho"
+    "476: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
+    "483: [4] quieta"
    ],
    "objetivo": "402: passaram para o lado do Teraseth (notícia FIEL)"
   },
@@ -2616,7 +2641,6 @@
    "postura": 2,
    "estado": "viva",
    "log": [
-    "413: [10] junta gente ou recurso → força 4",
     "420: [14] BATE DE FRENTE com a Luz Partida: [11]+4 × [13]+3 → vence a Luz Partida (4/6); os Filhos d",
     "427: [4] quieta",
     "434: [9] junta gente ou recurso → força 4",
@@ -2625,7 +2649,8 @@
     "455: [6] quieta",
     "462: [6] quieta",
     "469: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
-    "476: [3] quieta"
+    "476: [3] quieta",
+    "483: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê"
    ]
   },
   {
@@ -2658,7 +2683,7 @@
    "onde": "Levis",
    "desde": 336,
    "o_que": "mineiros de Levis que querem fechar as minas de cima (a febre cinza e a Que Come a Pedra); o Odrum fala por eles",
-   "forca": 3,
+   "forca": 4,
    "relogio": [
     0,
     6
@@ -2666,7 +2691,6 @@
    "postura": 1,
    "estado": "viva",
    "log": [
-    "413: [14] BATE DE FRENTE com a Bigorna Livre: [10]+4 × [9]+3 → vence os da Mina Fechada (1/6); a Big",
     "420: [9] junta gente ou recurso → força 5",
     "427: [7] quieta",
     "434: [6] quieta",
@@ -2675,7 +2699,8 @@
     "455: [13] BATE DE FRENTE com o Culto do Xaathis: [8]+5 × [11]+6 → vence o Culto do Xaathis (4/6); os",
     "462: [2] quieta",
     "469: [3] quieta",
-    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)"
+    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "483: [9] junta gente ou recurso → força 4"
    ]
   },
   {
@@ -2710,13 +2735,12 @@
    "o_que": "parentes dos barqueiros que a Liga matou; querem Farenta queimada",
    "forca": 4,
    "relogio": [
-    1,
+    0,
     6
    ],
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [7] quieta",
     "420: [9] junta gente ou recurso → força 3",
     "427: [14] BATE DE FRENTE com os Barqueiros do Livro: [9]+3 × [12]+3 → vence os Barqueiros do Livro (",
     "434: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
@@ -2725,7 +2749,8 @@
     "455: [9] junta gente ou recurso → força 4",
     "462: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "469: [4] quieta",
-    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)"
+    "476: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
+    "483: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6"
    ]
   },
   {
@@ -2733,7 +2758,7 @@
    "onde": "o Porto de Marasar",
    "desde": 351,
    "o_que": "estivadores em greve contra a casa",
-   "forca": 5,
+   "forca": 4,
    "relogio": [
     1,
     6
@@ -2741,7 +2766,6 @@
    "postura": -2,
    "estado": "viva",
    "log": [
-    "413: [13] BATE DE FRENTE com os da Luz do Cais: [3]+4 × [17]+2 → vence os da Luz do Cais (1/6); os d",
     "420: [10] junta gente ou recurso → força 4",
     "427: [12] AGE PELO OBJETIVO → 1/6",
     "434: [13] BATE DE FRENTE com a Luz Partida: [15]+4 × [12]+4 → vence os do Cais de Baixo (3/6); a Luz",
@@ -2750,7 +2774,8 @@
     "455: [5] NÃO DORME (G8-D) 1d6 [1]: junta gente → força 6",
     "462: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 2/6",
     "469: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
-    "476: [1] RACHA: perde gente → força 5"
+    "476: [1] RACHA: perde gente → força 5",
+    "483: [1] RACHA: perde gente → força 4"
    ]
   },
   {
@@ -2760,13 +2785,12 @@
    "o_que": "as mães da enfermaria das crianças contra os Olhos Pintados",
    "forca": 6,
    "relogio": [
-    1,
+    2,
     6
    ],
    "postura": 1,
    "estado": "viva",
    "log": [
-    "413: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "420: [6] quieta",
     "427: [6] quieta",
     "434: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
@@ -2775,7 +2799,8 @@
     "455: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
     "462: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "469: [14] BATE DE FRENTE com os da Cinza: [20]+6 × [16]+3 → vence as Mães da Porta (1/6); os da Cinz",
-    "476: [7] quieta"
+    "476: [7] quieta",
+    "483: [13] BATE DE FRENTE com os Caçadores Livres: [3]+6 × [2]+2 → vence as Mães da Porta (2/6); os C"
    ]
   },
   {
@@ -2785,13 +2810,12 @@
    "o_que": "os magos da hoste viram irmandade (o Bjarkunn)",
    "forca": 5,
    "relogio": [
-    2,
+    1,
     6
    ],
    "postura": 2,
    "estado": "viva",
    "log": [
-    "413: [9] junta gente ou recurso → força 5",
     "420: [4] quieta",
     "427: [6] quieta",
     "434: [5] quieta",
@@ -2800,7 +2824,8 @@
     "455: [10] junta gente ou recurso → força 5",
     "462: [12] AGE PELO OBJETIVO → 2/6",
     "469: [5] quieta",
-    "476: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa"
+    "476: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa",
+    "483: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6"
    ]
   },
   {
@@ -2810,13 +2835,12 @@
    "o_que": "famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald",
    "forca": 2,
    "relogio": [
-    1,
+    2,
     6
    ],
    "postura": -1,
    "estado": "viva",
    "log": [
-    "413: [10] junta gente ou recurso → força 5",
     "420: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
     "427: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
     "434: [13] BATE DE FRENTE com as Mães da Porta: [3]+4 × [16]+4 → vence as Mães da Porta (1/6); os da ",
@@ -2825,7 +2849,8 @@
     "455: [19] GESTO PÚBLICO (marcha, greve, procissão ou pichação): todo mundo vê",
     "462: [11] AGE PELO OBJETIVO → 2/6",
     "469: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
-    "476: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6"
+    "476: [16] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
+    "483: [6] NÃO DORME (G8-D) 1d6 [4]: AGE PELO OBJETIVO → 2/6"
    ]
   },
   {
@@ -2878,7 +2903,6 @@
    "postura": 0,
    "estado": "viva",
    "log": [
-    "413: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 2",
     "420: [4] quieta",
     "427: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 3",
     "434: [11] AGE PELO OBJETIVO → 2/6",
@@ -2887,7 +2911,8 @@
     "455: [17] PROCURA A CASA: PEDE AUDIÊNCIA ao conselho",
     "462: [5] quieta",
     "469: [8] quieta",
-    "476: [13] BATE DE FRENTE com os Descalços do Cais: [7]+3 × [6]+1 → vence os da Moeda Velha (3/6); os"
+    "476: [13] BATE DE FRENTE com os Descalços do Cais: [7]+3 × [6]+1 → vence os da Moeda Velha (3/6); os",
+    "483: [7] quieta"
    ]
   },
   {
@@ -2904,9 +2929,10 @@
     "455: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 6",
     "462: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
     "469: [4] NÃO DORME (G8-D) 1d6 [1]: junta gente → força 6",
-    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6"
+    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
+    "483: [9] junta gente ou recurso → força 6"
    ],
-   "forca": 5,
+   "forca": 6,
    "relogio": [
     1,
     6
@@ -2927,11 +2953,12 @@
     "455: [10] junta gente ou recurso → força 6",
     "462: [17] PROCURA A CASA: OFERECE ajuda ou aliança à casa",
     "469: [1] RACHA: perde gente → força 5",
-    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6"
+    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
+    "483: [12] AGE PELO OBJETIVO → 2/6"
    ],
-   "forca": 5,
+   "forca": 4,
    "relogio": [
-    1,
+    2,
     6
    ],
    "postura": 1
@@ -2951,11 +2978,12 @@
     "455: [9] junta gente ou recurso → força 5",
     "462: [1] RACHA: perde gente → força 4",
     "469: [5] NÃO DORME (G8-D) 1d6 [2]: junta gente → força 5",
-    "476: [7] NÃO DORME (G8-D) 1d6 [5]: AGE PELO OBJETIVO → 2/6"
+    "476: [7] NÃO DORME (G8-D) 1d6 [5]: AGE PELO OBJETIVO → 2/6",
+    "483: [6] NÃO DORME (G8-D) 1d6 [6]: AGE PELO OBJETIVO → 3/6"
    ],
    "forca": 5,
    "relogio": [
-    2,
+    3,
     6
    ],
    "postura": -1
@@ -2974,9 +3002,10 @@
     "455: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
     "462: [2] quieta",
     "469: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
-    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6"
+    "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 0/6",
+    "483: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)"
    ],
-   "forca": 2,
+   "forca": 1,
    "relogio": [
     0,
     6
@@ -3818,7 +3847,7 @@
    "sede": "Yaelane",
    "oficio": "magos",
    "forca": 4,
-   "fama": 61,
+   "fama": 62,
    "postura": 0,
    "objetivo": "tomar LUMADE (a cidade do Celocus)",
    "relogio": [
@@ -3849,7 +3878,7 @@
     }
    ],
    "estado": "viva",
-   "cofre": 3200,
+   "cofre": 1200,
    "nucleos": [
     "núcleo Único de Kervos (441)",
     "núcleo Lendário de Lumdun (462)",
@@ -3865,7 +3894,8 @@
     "455: [6] RECRUTA → força 4",
     "462: [11] CAÇA Lumdun (Lendário 216, Mordun): 32 × 27 → MATA e fica com o NÚCLEO · fama 56",
     "469: [13] EXPLORA Ithium (os Picos Brancos): 24 contra 18 → LEVA o que ele guardava",
-    "476: [12] CAÇA Isyzis (Épico 95, o rio acima de Levis): 33 × 19 → MATA e fica com o NÚCLEO · fama 61"
+    "476: [12] CAÇA Isyzis (Épico 95, o rio acima de Levis): 33 × 19 → MATA e fica com o NÚCLEO · fama 61",
+    "483: [16] COMPRA 1d6 [4]: material raro"
    ]
   },
   {
@@ -3874,7 +3904,7 @@
    "sede": "Yaelane",
    "oficio": "magos",
    "forca": 6,
-   "fama": 72,
+   "fama": 73,
    "postura": 0,
    "objetivo": "acabar com a ORDEM DA TOCHA BRANCA",
    "relogio": [
@@ -3905,7 +3935,7 @@
     }
    ],
    "estado": "viva",
-   "cofre": 5900,
+   "cofre": 6400,
    "nucleos": [
     "núcleo Épico de Yirane, a Que Come a Pedra (469)"
    ],
@@ -3918,7 +3948,8 @@
     "455: [4] CONTRATOS: cofre +500 → 6200 · fama 67",
     "462: [17] PROCURA A CASA: PROPÕE um negócio à casa (uma peça da forja, um contrato) (o enviado chega no 470)",
     "469: [12] CAÇA Yirane, a Que Come a Pedra (Épico 136, Yaelane): 33 × 15 → MATA e fica com o NÚCLEO · fama 70",
-    "476: [7] RECRUTA → força 6"
+    "476: [7] RECRUTA → força 6",
+    "483: [4] CONTRATOS: cofre +500 → 6400 · fama 73"
    ]
   },
   {
@@ -3926,7 +3957,7 @@
    "nome": "os Arpões do Sal Vermelho",
    "sede": "Shizess",
    "oficio": "caçadores de monstros",
-   "forca": 4,
+   "forca": 5,
    "fama": 46,
    "postura": -1,
    "objetivo": "caçar o THARGOS (Mítico, as Fundas) e ficar com o núcleo",
@@ -3964,7 +3995,8 @@
     "455: [7] NÃO DORME 1d6 [2]: junta gente → força 5",
     "462: [9] AGE PELO OBJETIVO (caçar o THARGOS (Mítico, as Fundas) e ficar com o núcleo) → 2/8",
     "469: [1] RACHA: perde gente; Sizhir vai embora → força 4",
-    "476: [7] NÃO DORME 1d6 [5]: AGE PELO OBJETIVO → 3/8"
+    "476: [7] NÃO DORME 1d6 [5]: AGE PELO OBJETIVO → 3/8",
+    "483: [5] NÃO DORME 1d6 [3]: junta gente → força 5"
    ]
   },
   {
@@ -3972,7 +4004,7 @@
    "nome": "a Ordem da Tocha Branca",
    "sede": "Telosus",
    "oficio": "cruzados de uma fé",
-   "forca": 3,
+   "forca": 4,
    "fama": 45,
    "postura": 0,
    "objetivo": "caçar o KREDUN, a Filha da Mãe Branca (Mítico, as Fundas) e ficar com o núcleo",
@@ -4004,7 +4036,7 @@
     }
    ],
    "estado": "viva",
-   "cofre": 4700,
+   "cofre": 4400,
    "nucleos": [],
    "desde": 433,
    "log": [
@@ -4015,7 +4047,8 @@
     "455: [20] SURPRESA: gerador de novidade ligado a ela (python3 gerador.py novidade)",
     "462: [12] CAÇA Maneus, o Afogado do Vento (292): 34 × 34 → PERDE: feridos → força 4",
     "469: [5] CONTRATOS: cofre +400 → 4700 · fama 45",
-    "476: [14] GUERRA DE GUILDA contra a Torre dos Sete Véus: [16]+4 × [15]+6 → vence a Torre dos Sete Véus; a Ordem da Tocha"
+    "476: [14] GUERRA DE GUILDA contra a Torre dos Sete Véus: [16]+4 × [15]+6 → vence a Torre dos Sete Véus; a Ordem da Tocha",
+    "483: [6] RECRUTA → força 4"
    ]
   },
   {
@@ -4023,7 +4056,7 @@
    "nome": "a Companhia do Último Gancho",
    "sede": "Qulosus",
    "oficio": "caçadores de monstros",
-   "forca": 4,
+   "forca": 5,
    "fama": 48,
    "postura": 0,
    "objetivo": "VINGAR-SE da ORDEM DA TOCHA BRANCA (a derrota antiga)",
@@ -4044,7 +4077,7 @@
    },
    "membros": [],
    "estado": "viva",
-   "cofre": 2600,
+   "cofre": 2300,
    "nucleos": [],
    "desde": 433,
    "log": [
@@ -4055,7 +4088,8 @@
     "455: [1] RACHA: perde gente; Tundald vai embora → força 2",
     "462: [6] RECRUTA → força 3",
     "469: [9] AGE PELO OBJETIVO (VINGAR-SE da ORDEM DA TOCHA BRANCA (a derrota antiga)) → 1/8",
-    "476: [6] RECRUTA → força 4"
+    "476: [6] RECRUTA → força 4",
+    "483: [7] RECRUTA → força 5"
    ]
   },
   {
@@ -4073,7 +4107,7 @@
    ],
    "chefe": {
     "nome": "Zazess",
-    "nivel": 275,
+    "nivel": 277,
     "classe": "Mão-Mestra (ladrões)",
     "tracos": "CRUEL e COVARDE",
     "desejo": "curar alguém",
@@ -4106,7 +4140,8 @@
     "455: [5] CONTRATOS: cofre +300 → 4400 · fama 51",
     "462: [5] CONTRATOS: cofre +400 → 4800 · fama 52",
     "469: [6] RECRUTA → força 5",
-    "476: [17] PROCURA A CASA: PROPÕE um negócio à casa (uma peça da forja, um contrato) (o enviado chega no 483)"
+    "476: [17] PROCURA A CASA: PROPÕE um negócio à casa (uma peça da forja, um contrato) (o enviado chega no 483)",
+    "483: [18] O CHEFE Zazess SOBE 2 → nível 277"
    ]
   }
  ],

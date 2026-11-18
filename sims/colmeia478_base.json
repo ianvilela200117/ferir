@@ -1,0 +1,21 @@
+{
+ "monstro": {
+  "nome": "três bichos da colmeia do Ssish",
+  "cat": "Raro",
+  "nivel": 37,
+  "pv": 888,
+  "df": 25,
+  "rd": 3,
+  "at": 15,
+  "dado": "2d10",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Som",
+  "fraqueza": "Silencio",
+  "enxame": true,
+  "acoes": 3,
+  "nota": "478 (IS78 [1], CN78 [4]): três bichos Raros 37 da colmeia do Ssish atacam a galé da Isolda nas Fundas; contas do gerador para Raro 37 (PV 296 cada); uma ação cada; enxame (o precedente das crias do Isyzis, 460)",
+  "nao_roda": ["cospe visgo e prende um a 18 m: não entra (declarado)", "o grito do metal atordoa (Vontade CD 14) a cada 3 rodadas: não entra no luta.py (declarado; a Isolda tem Vontade de capitã)"]
+ },
+ "grupo": []
+}

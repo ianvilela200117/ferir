@@ -95,6 +95,15 @@ def viva(chave, f):
     F = ficha_viva()
     if not F or chave not in REAL: return f
     f = copy.deepcopy(f); n = F['nivel']; A = F['atributos']; desc = F.get('sob_medida_desconto', 30)
+    herdeiro = F.get('classe_lendaria') == 'Herdeiro do Rei-Ferreiro'
+    if herdeiro:   # 478 (a classe HERDEIRO DO REI-FERREIRO, compendio/04_classes.md): MÃO DE REI e MARTELO E BIGORNA
+        n = max(n, F.get('nivel_maximo', n))   # a Mão conta o maior nível que ele já teve
+        desc = 999                             # as peças que ele mesmo forjou rendem inteiras na mão dele (sem requisito)
+        if chave == 'ferir':                   # o Martelo do Rei é o martelo da obra; com a Matriz, cada um soma +14
+            f['martelo'] = 'lendario'; f['martelo_nome'] = 'O MARTELO DO REI (Ferramenta de Rei, de Dragal)'
+            f['martelo_x'] = [('Martelo e Bigorna (Herdeiro): o Martelo do Rei soma o dobro', 7)]
+            f['bigorna_x'] = [('Martelo e Bigorna (Herdeiro): a Matriz soma o dobro', 7)]
+            REAL[chave] = {k: v for k, v in REAL[chave].items() if k != 'martelo'}
     I, S, Af = A['Inteligência'], A['Sorte'], A['Afinidade']
     troca = [(r'^Inteligência \d+ ÷ 10 \(teto 10\)', f'Inteligência {I} ÷ 10 (teto 10)', min(10, I//10)),
              (r'^\(Int \d+ \+ Afinidade \d+\) ÷ 20 \(teto 10\)', f'(Int {I} + Afinidade {Af}) ÷ 20 (teto 10)', min(10, (I+Af)//20)),

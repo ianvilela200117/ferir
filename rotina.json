@@ -18,10 +18,10 @@
   {
    "nome": "chamado",
    "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": "d20+3",
-   "tabela": "1-12: ninguém digno | 13-17: chega 1 | 18-23: chegam 2 | 20n: SURPRESA",
+   "dado": "d20+4",
+   "tabela": "1-12: ninguém digno | 13-17: chega 1 | 18-24: chegam 2 | 20n: SURPRESA",
    "ativo": true,
-   "nota": "402 (G3): o chamado anunciado nas quatro cidades: +3; quem entra pede uma peça da forja (Raro+) no lugar de soldo"
+   "nota": "402 (G3): o chamado anunciado nas quatro cidades: +3; quem entra pede uma peça da forja (Raro+) no lugar de soldo · 478: o LIVRO DAS VIÚVAS (meio soldo às famílias dos mortos da casa): +1 (d20+4)"
   },
   {
    "nome": "vinculos",

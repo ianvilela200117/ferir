@@ -1,14 +1,14 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 477,
+  "dia": 485,
   "hora": "amanhecer",
   "local": "Dragal, o portão afundado",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 1,
-  "primeiro_tick_semanal": 483,
+  "pressao": 4,
+  "primeiro_tick_semanal": 490,
   "limiar_pressao": 5,
-  "proxima_auditoria": 478
+  "proxima_auditoria": 488
  },
  "bestiario": {
   "avistamento": [
@@ -29,7 +29,8 @@
    "o Gorjal da Isolda (Primordial)",
    "a Espada do Moreth (Mítica)",
    "a Lança de Veydun (Mítica)",
-   "o Pilão de Varade (Mítico)"
+   "o Pilão de Varade (Mítico)",
+   "o Martelo do Rei (Ferramenta de Rei)"
   ]
  }
 }

@@ -1,5 +1,5 @@
 {
- "prox_id": 874,
+ "prox_id": 922,
  "itens": [
   {
    "id": 1,
@@ -1038,7 +1038,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true,
    "aprox": true
   },
@@ -12335,6 +12335,710 @@
    "origem": "mestre",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 874,
+   "dia": 479,
+   "texto": "PESTE OU DESASTRE: febre — Ireviel e o rio",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 479",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 875,
+   "dia": 481,
+   "texto": "UM VILÃO NOVO entra no mundo — Kasra (terra nova) (Kvunur)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 480",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 876,
+   "dia": 484,
+   "texto": "MUDANÇA POLÍTICA: um traidor exposto — o Delta e as salinas",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 481",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "FIEL (a célula da casa confirma)"
+   ]
+  },
+  {
+   "id": 877,
+   "dia": 483,
+   "texto": "a Guardiã da Tenaz (o sul, onde a areia come a pedra): SURPRESA: gerador de novidade ligado a ele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 481",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 878,
+   "dia": 482,
+   "texto": "PESTE OU DESASTRE: febre — o sul, onde a areia come a pedra",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 482",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 879,
+   "dia": 484,
+   "texto": "SURPRESA: o gerador de novidade — Steunn",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 880,
+   "dia": 489,
+   "texto": "Skotha Graskur (o sul (a Companhia)): ataca ou sabota a obra do RIVAL lendário",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 881,
+   "dia": 483,
+   "texto": "Almision (a estrada (com o corvo)): desafia alguém em público (duelo, debate, prova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 882,
+   "dia": 486,
+   "texto": "Gorine (escondido (patrono da Lumine)): um discípulo ou herdeiro dele aparece no mundo",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 883,
+   "dia": 486,
+   "texto": "Ceduion, reitor do Colégio de Telosus (Telosus): SURPRESA: gerador de novidade ligado a ele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 884,
+   "dia": 484,
+   "texto": "a Guardiã da Tenaz (o sul, onde a areia come a pedra): oferece um acordo a um rival (paz, casamento, troca)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 885,
+   "dia": 486,
+   "texto": "Eiandald (Yaelane): recruta: gente, uma facção ou um monstro passa para o lado dele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 886,
+   "dia": 485,
+   "texto": "Altheltia (o Delta): recruta: gente, uma facção ou um monstro passa para o lado dele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "FIEL (a célula da casa confirma)"
+   ]
+  },
+  {
+   "id": 887,
+   "dia": 485,
+   "texto": "Naera (as Fundas do Norte): o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 888,
+   "dia": 483,
+   "texto": "Xaysress (Kremir): manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    14,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 889,
+   "dia": 483,
+   "texto": "Celocus (Lumade): a ambição dele avança fora da Obra (um passo no que ele quer para si)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 890,
+   "dia": 485,
+   "texto": "Lurentetta (o Delta): um gesto público grande (discurso, decreto, desafio) que todo mundo comenta",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "FIEL (a célula da casa confirma)"
+   ]
+  },
+  {
+   "id": 891,
+   "dia": 489,
+   "texto": "Borecci (Steunn): oferece um acordo a um rival (paz, casamento, troca)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 892,
+   "dia": 484,
+   "texto": "Stundald, a Raiz-de-Ferro (Épico, Telosus): aparece de dia, à vista de muitos (pânico e notícia certa)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 893,
+   "dia": 484,
+   "texto": "Maneus, o Afogado do Vento (Lendário, Telosus): cria: aparecem crias (1d6) perto do habitat",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 894,
+   "dia": 483,
+   "texto": "Quneus, o Caçador de Gigantes (Lendário, Marasar): persegue uma caravana ou barca por dias",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 895,
+   "dia": 485,
+   "texto": "Ithvil (Mítico, Levis): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 896,
+   "dia": 484,
+   "texto": "Kredun, a Filha da Mãe Branca (Mítico, as Fundas do Norte): um culto ou bando passa a adorá-lo",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 897,
+   "dia": 484,
+   "texto": "a Mãe Branca (Primordial, Steunn): persegue uma caravana ou barca por dias",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 898,
+   "dia": 483,
+   "texto": "Fenron (Épico, Steunn): persegue uma caravana ou barca por dias",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 899,
+   "dia": 484,
+   "texto": "Laennor, o Redemoinho (Raro, Zisrir): muda de comportamento (fica mais manso ou mais faminto)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 900,
+   "dia": 483,
+   "texto": "Thargos (Mítico, as Fundas do Norte): cria: aparecem crias (1d6) perto do habitat",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 901,
+   "dia": 489,
+   "texto": "Varogh (Lendário, Steunn): briga com outro monstro grande (um sai ferido)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 902,
+   "dia": 486,
+   "texto": "Husgarn (Único, os Picos Brancos): ataca uma aldeia ou caravana (notícia certa)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 903,
+   "dia": 484,
+   "texto": "Krothos (Lendário, Levis): aparece de dia, à vista de muitos (pânico e notícia certa)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 904,
+   "dia": 485,
+   "texto": "Vathexa (Lendário, o sul da areia): destrói uma ponte, estrada ou mina (o comércio sente)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 905,
+   "dia": 483,
+   "texto": "Syess (Incomum, Gogrunn): um culto ou bando passa a adorá-lo",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 906,
+   "dia": 486,
+   "texto": "os Thog (orcs) (Marasar): descem para perto das cidades (fome, frio, medo de algo maior)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 907,
+   "dia": 485,
+   "texto": "os Grukos (ogros) (a Mata de Elais): atacam outro povo-monstro (guerra de bandos)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 908,
+   "dia": 485,
+   "texto": "os Vrurn (trolls) (Yaelane): cresce: +1d6×10 de número; o chefe ganha prestígio",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 909,
+   "dia": 483,
+   "texto": "os Kraek (harpias) (Telosus): o chefe é desafiado (1d6: 1-3 cai, novo chefe)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 910,
+   "dia": 487,
+   "texto": "os Barqueiros do Livro (o Leve (a forquilha de Ireviel)): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 911,
+   "dia": 484,
+   "texto": "FACÇÃO — os da Mão Queimada (Telosus) pede audiência ao conselho. O que querem: as harpias Kraek e os que sobraram do povo que a Elaeva matou, na fé da MAMILTIA",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 912,
+   "dia": 485,
+   "texto": "a Botica Velha (Farenta): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 913,
+   "dia": 483,
+   "texto": "FACÇÃO CUMPRIU O OBJETIVO — os da Muralha Velha (Ireviel): os velhos da muralha, amigos do Tamel; querem voz na guarda",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 914,
+   "dia": 483,
+   "texto": "os Filhos do Livro (Ireviel): gesto público",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 915,
+   "dia": 489,
+   "texto": "as Mães da Porta (Ireviel): briga com os Caçadores Livres; vence as Mães da Porta",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 916,
+   "dia": 487,
+   "texto": "os da Cinza (Ireviel velha): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 917,
+   "dia": 487,
+   "texto": "os da Brecha Velha (o Porto de Marasar): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 483",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 918,
+   "dia": 487,
+   "texto": "(OCULTO) CHEGA A CARTA DA ALMISION ao rei: pede os AROS DA ELIANE em troca de um favor grande (CB83a [2])",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 919,
+   "dia": 485,
+   "texto": "(OCULTO até chegar) A NOTÍCIA DE IREVIEL sobe o rio ao rei: o boato 'o rei perdeu a força em Dragal' e as portas pintadas 'o rei caiu' pelos da Cinza (GO83 [4]); Ordem −1 até o rei voltar",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 920,
+   "dia": 484,
+   "texto": "MUDANÇA POLÍTICA: casamento — Levis e Levis-baixa",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 484",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 921,
+   "dia": 488,
+   "texto": "UMA PESSOA IMPORTANTE VIAJA — Zaitor (terra nova) (Hagal)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 485",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    14,
+    "FIEL"
+   ]
   }
  ],
  "fios": [
