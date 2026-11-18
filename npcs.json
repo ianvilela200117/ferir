@@ -451,7 +451,8 @@
    "+1000 Tick 448: MISSÃO/FEITO (a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209))",
    "Dia 455: VOTO VENCIDO no conselho (O PLANO DAS CIDADES (455, Ireviel; o rei propõe tudo, e paga): queria A) aprovar tudo (os três éditos: +680 por semana; a o",
    "Dia 457: VOTO VENCIDO no conselho (A PENA DO RUDDO E DO BINIO (o título da casa da Seline; a ba): queria C) o papel rasgado e o EXÍLIO dos dois",
-   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria A) trabalho forçado, cinco anos (somam à G6)"
+   "Dia 457: VOTO VENCIDO no conselho (OS TRÊS ESPIÕES PEGOS PELA CONTRA-ESPIONAGEM (o da Liga, man): queria A) trabalho forçado, cinco anos (somam à G6)",
+   "Dia 458: 458: sai por terra pela estrada da costa com os três capuzes e dez da Hoste para segurar Farenta (4a); chega no 460"
   ],
   "classe": "Forjador de Guerra (FORJA/AÇO, Incomum) · DISCIPLINADO, ORGULHOSO",
   "ocupacao": "a forja grande; os capuzes; a chave da cela; leva a BENGALA DE REI (Única, desde a noite do 209)",
@@ -970,7 +971,7 @@
  },
  "Iorin": {
   "nivel": 62,
-  "xp": 1773,
+  "xp": 1848,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 155: chefe das bases",
@@ -1096,7 +1097,8 @@
    "+2500 428 (noite): ajudaram na Couraça de Espinho do Moreth (Mítica)",
    "Tick 434: SOBE a 62",
    "+500 Tick 448: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
-   "+75 455: ajudantes do lote de venda da Fornalha (Épico, 1/4 de 300)"
+   "+75 455: ajudantes do lote de venda da Fornalha (Épico, 1/4 de 300)",
+   "+75 458: ajudantes da Série da Hoste (1/4 de 300)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · Forja Iniciante→Treinado · ORGULHOSO, DILIGENTE, DESCONFIADO",
   "ocupacao": "ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa",
@@ -2354,7 +2356,7 @@
  },
  "Tilde": {
   "nivel": 58,
-  "xp": 6118,
+  "xp": 6193,
   "classe": "a menina da casa (Ferir a ama como filha) · pratica a forja escondida",
   "ocupacao": "ajudante de Ferir na forja (sempre ao lado dele)",
   "log": [
@@ -2471,7 +2473,8 @@
    "Tick 448: SOBE a 57",
    "+500 Tick 455: PASSO (ajudante de Ferir na forja (sempre ao lado dele))",
    "Tick 455: SOBE a 58",
-   "+75 455: ajudantes do lote de venda da Fornalha (Épico, 1/4 de 300)"
+   "+75 455: ajudantes do lote de venda da Fornalha (Épico, 1/4 de 300)",
+   "+75 458: ajudantes da Série da Hoste (1/4 de 300)"
   ],
   "ultima_subida": 455,
   "tracos": [
@@ -7015,7 +7018,9 @@
    "Dia 434: 434: gerador npc: AMBICIOSO e CRUEL · desejo curar alguém · ambição entrar numa facção que o recusou · medo a solidão · (OCULTO) segredo: fez um pacto · linha vermelha: nunca trabalha para a facção X (a definir na ficção)",
    "+500 Tick 441: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
    "+500 Tick 448: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
-   "+500 Tick 455: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)"
+   "+500 Tick 455: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
+   "Dia 458: 458: recebeu do rei uma ARMADURA DE ESCAMAS ÉPICA da Série da Hoste (nee e gusta: não derruba · leve · quem agarra sangra 6 · RD 3 contra doença e veneno): o G3 cumprido",
+   "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
@@ -7036,7 +7041,8 @@
    "Olho no Protegido (Passiva)",
    "Muralha (Postura)"
   ],
-  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia.",
+  "lealdade": 6
  },
  "Helgunn": {
   "nivel": 46,
@@ -7045,7 +7051,9 @@
    "Dia 434: entra no livro (nível 46)",
    "Dia 434: 434: gerador npc: TEIMOSO e CURIOSO · desejo casar com quem ama · ambição ganhar a guerra do seu povo · medo a humilhação pública · (OCULTO) segredo: ama alguém proibido · linha vermelha: nunca machuca uma criança",
    "+500 Tick 441: SURPRESA (gerador) (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
-   "+500 Tick 455: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)"
+   "+500 Tick 455: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua)",
+   "Dia 458: 458: recebeu do rei uma ARMADURA DE ESCAMAS ÉPICA da Série da Hoste (nee e gusta: não derruba · leve · quem agarra sangra 6 · RD 3 contra doença e veneno): o G3 cumprido",
+   "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 434)",
   "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua",
@@ -7066,7 +7074,8 @@
    "Olho no Protegido (Passiva)",
    "Muralha (Postura)"
   ],
-  "fraqueza": "se o protegido morre, −2 em tudo por um dia."
+  "fraqueza": "se o protegido morre, −2 em tudo por um dia.",
+  "lealdade": 6
  },
  "Tigra": {
   "nivel": 16,
@@ -7195,20 +7204,26 @@
   "xp": 0,
   "log": [
    "Dia 455: entra no livro (nível 45)",
-   "Dia 455: 455: gerador npc (o nome do gerador, ITHVIL, bate no Mítico de Levis: trocado por nomes.py aspera livre): COVARDE e GENEROSO · desejo uma casa própria · ambição tomar o lugar do chefe · medo a humilhação pública · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca se ajoelha · dilema: a facção que o paga quer algo que fere a linha vermelha"
+   "Dia 455: 455: gerador npc (o nome do gerador, ITHVIL, bate no Mítico de Levis: trocado por nomes.py aspera livre): COVARDE e GENEROSO · desejo uma casa própria · ambição tomar o lugar do chefe · medo a humilhação pública · (OCULTO) segredo: deve a alguém perigoso · linha vermelha: nunca se ajoelha · dilema: a facção que o paga quer algo que fere a linha vermelha",
+   "Dia 458: 458: recebeu do rei uma ARMADURA DE ESCAMAS ÉPICA da Série da Hoste (nee e gusta: não derruba · leve · quem agarra sangra 6 · RD 3 contra doença e veneno): o G3 cumprido",
+   "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 455)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)",
+  "lealdade": 6
  },
  "Hurke": {
   "nivel": 62,
   "xp": 0,
   "log": [
    "Dia 455: entra no livro (nível 62)",
-   "Dia 455: 455: gerador npc (o nome do gerador, VARETH, bate no Varogh e no Pilão de Varade: trocado por nomes.py montanhesa livre): RELIGIOSO e HONESTO · desejo voltar para casa · ambição fundar uma escola · medo o próprio passado · (OCULTO) segredo: trabalha para outra facção · linha vermelha: nunca se ajoelha · dilema: a ambição exige trair alguém que ele ama"
+   "Dia 455: 455: gerador npc (o nome do gerador, VARETH, bate no Varogh e no Pilão de Varade: trocado por nomes.py montanhesa livre): RELIGIOSO e HONESTO · desejo voltar para casa · ambição fundar uma escola · medo o próprio passado · (OCULTO) segredo: trabalha para outra facção · linha vermelha: nunca se ajoelha · dilema: a ambição exige trair alguém que ele ama",
+   "Dia 458: 458: recebeu do rei uma ARMADURA DE ESCAMAS ÉPICA da Série da Hoste (nee e gusta: não derruba · leve · quem agarra sangra 6 · RD 3 contra doença e veneno): o G3 cumprido",
+   "Dia 458: lealdade 6 → 6 (458: a peça do chamado cumprida (começa em 6))"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 455)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), dentro de uma lua (até o 485)",
+  "lealdade": 6
  },
  "Seeth": {
   "nivel": 75,
@@ -7217,7 +7232,8 @@
    "Dia 455: entra no livro (nível 75)",
    "Dia 455: 455: gerador npc (o nome do gerador, ITHKOS, bate no Ithvil e no Ithra: trocado por nomes.py sibilante livre): CRUEL e COVARDE · desejo um título · ambição formar uma companhia · medo a humilhação pública · (OCULTO) segredo: TRABALHA PARA OUTRA FACÇÃO · linha vermelha: nunca entrega um amigo à lei · dilema: salvar um filho custa a vida de um estranho",
    "Dia 455: 455: no portão da Fornalha, de noite, pede para ver a forja; o Gonde diz que não; o Ulurve diz que é o ferreiro que levou os braseiros do Clã",
-   "Dia 455: 456: a lâmina de prova na forja grande, de ferro comum: ÉPICA (65; quase Única); o olho do rei não acha marca de escola (SM56 26); (OCULTO, SP56 [6]) é pago pela ALMISION"
+   "Dia 455: 456: a lâmina de prova na forja grande, de ferro comum: ÉPICA (65; quase Única); o olho do rei não acha marca de escola (SM56 26); (OCULTO, SP56 [6]) é pago pela ALMISION",
+   "Dia 458: 458: aceitou o posto na forja grande, vigiado (3d); (SS58 19) de noite o CORVO GRANDE desceu no telhado da casa onde ele dorme, e ele abriu a janela: a Sira viu"
   ],
   "classe": "FORJA (um ferreiro de mão rara; a classe do Livro em cena)",
   "ocupacao": "em Ireviel desde o 455: o TALENTO que apareceu (EVENTO [18]); pede para ver a Fornalha"
@@ -7238,7 +7254,8 @@
   "xp": 0,
   "log": [
    "Dia 455: entra no livro (nível 40)",
-   "Dia 455: 456: o agente dos conselheiros pego junto da casa do Graur deu o nome dele à Sira (AGc56 [20]+8): o HAAST, fornecedor do Odrum, é quem manda de perto (o segredo da trama do 322: trabalha para os conselheiros)"
+   "Dia 455: 456: o agente dos conselheiros pego junto da casa do Graur deu o nome dele à Sira (AGc56 [20]+8): o HAAST, fornecedor do Odrum, é quem manda de perto (o segredo da trama do 322: trabalha para os conselheiros)",
+   "Dia 458: 457 (noite): ESCAPOU da guarda (HA57 [1]): a casa vazia, a lareira cheia de papel queimado; saiu a pé pelo leito seco do rio; (OCULTO, HF57 [5]) rio abaixo, para Marasar e o Draek"
   ],
   "classe": "Mercador (OURO, Comum) · CURIOSO e ORGULHOSO",
   "ocupacao": "fornecedor do Odrum em Ireviel (322); (revelado no 456) o homem dos CONSELHEIROS em Ireviel"

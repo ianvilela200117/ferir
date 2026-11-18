@@ -3249,6 +3249,17 @@
    "leitura": "casamento",
    "resumo": "MUDANÇA POLÍTICA: casamento — o sul, onde a areia come a pedra",
    "toca": false
+  },
+  {
+   "dia": 458,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "[MISSÃO]: Kretor (o Mestre dá o nome pela ficção)\ndificuldade: S  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Oculta\nobjetivo: pagar ou cobrar uma dívida\ncomplicação escondida (Envelope): outra facção quer o contrário\nprazo: 7 dias\nrecompensa: 15000 XP · 10000 de ouro · 1 ponto de Trilha\npenalidade se falhar: quem pediu morre ou se perde\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 459,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Marasar (a Liga e o Doge)",
+   "toca": true
   }
  ]
 }

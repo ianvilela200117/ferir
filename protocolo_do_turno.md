@@ -198,6 +198,11 @@ O texto inteiro está em `compendio/08_livro_nove.md` (a aba "Livro Nove" do Liv
 ### G37 — O ATLAS DE MASMORRAS (Livro Nove 16; `atlas.py`)
 - O tick semanal rola o boato (d20, 18+). `atlas.py ver tudo` é só do Mestre. Lugar novo que o mundo gera entra no atlas (`atlas.py nova`).
 
+### G38 — O QUE É "POR SESSÃO" (Dia 457, pergunta do jogador: "quando recupero o Erudito?"; o jogador foi avisado)
+- O Livro diz "1x por sessão" (o ERUDITO, a Oportunidade do Motor) e não diz o que é uma sessão. O jogo aqui é contínuo, sem noite de mesa marcada, então a SESSÃO é a **SEMANA DE JOGO**: vai de um tick semanal ao seguinte.
+- O que é "1x por sessão" **volta no tick semanal** (o próximo é o do 462). É um recurso no `ficha.json` com `renova: semana`: o tick o enche sozinho; gastar é `python3 ficha.py usa Erudito`.
+- O ERUDITO pode ser usado de dois jeitos (os dois gastam a vez): o jogador pede um fato e a resposta é verdadeira (o texto do talento), ou vira uma FALHA do `saber.py` num fato verdadeiro (G10).
+
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
 - **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.

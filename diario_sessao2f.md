@@ -1376,3 +1376,61 @@ O Gonde veio dizer, sem ser chamado: o velho Braeth, o do Clã, tinha ido ao por
 No andar de cima, numa das camas novas, a menina que dormia melhor desde a véspera acordou queimando de febre. Uma das Mães da Porta segurava a mão dela e olhava para a escada, onde se ouvia o passo manco do rei.
 
 - **Parada:** noite do 457, a Casa de Cura. A febre da menina voltou; amanhã cedo a execução dos três espiões.
+
+## Do 457 ao 458: a febre, a casa vazia, a praça e a janela do Seeth
+
+### A Casa de Cura, noite do 457
+A escada rangia em cada degrau, e a perna ruim do rei fazia o rangido sair dobrado. Em cima, o quarto cheirava a vinagre e a lã molhada. A Mãe da Porta não largou a mão da menina quando ele entrou; só chegou o banco para o lado com o pé.
+
+O Purificar pede vela ou vidro. Ele pôs a vela no parapeito, entre a menina e a noite, e falou a palavra baixo. A chama ficou branca e reta, sem tremer, e o calor saiu da testa da menina pela mão dele, subindo pelo braço como água de poço, fria até o cotovelo.
+
+Ela abriu os olhos e pediu pão com mel.
+
+"O homem que contava as camas", disse a Mãe, sem olhar para o rei. "O da Lumine. Amanhã?"
+
+"Amanhã."
+
+Ela assentiu e foi buscar o pão.
+
+### A casa do Haast, madrugada do 457
+A porta estava encostada. Dentro, a lareira ainda estalava, cheia de papel enrolado em cinza, e o cheiro de lacre queimado grudava na roupa. O Gonde mexeu as brasas com a ponta da espada e tirou meia folha: uma coluna de números e um nome cortado pela metade.
+
+No quintal, o muro dava para o rio. O rio não estava lá: só lama rachada, pedras e um barco de pesca deitado de lado como um cachorro morto. As pegadas desciam a lama, fundas, apressadas, rumo ao mar.
+
+### A praça, amanhecer do 458
+A Nouliel leu a sentença em voz de livro, sem pausa. Os três subiram um de cada vez.
+
+O da Lumine cantou. Uma coisa de três notas, a mesma, até o fim. O da Liga procurou alguém na multidão com os olhos, de rosto em rosto, e não achou. O dos conselheiros pediu água e não lha deram a tempo.
+
+A praça não vaiou nem chorou. Um carregador do cais disse alto "guerra é guerra", e alguém atrás dele disse "é", e foi tudo o que se disse. A Sira olhou o tempo inteiro para a multidão, não para o cadafalso.
+
+### O pátio da Fornalha, manhã do 458
+As cinco armaduras estavam no cavalete, verdes de nee e foscas de gusta, cheirando ainda a óleo. O Yesiel vestiu a dele ali mesmo e tentou empurrar o Helgunn, de brincadeira, e não o tirou do lugar. O Hurke passou a mão na pena do Huir eriçada no ombro e recolheu os dedos sangrando um fio.
+
+"Picou", disse, e riu.
+
+O Graur esperava no portão, com os três capuzes e dez da Hoste, a quinta armadura no cabo deles. Fez a continência inteira, a de manual.
+
+"Farenta não cai enquanto eu estiver lá, majestade. É a ordem que recebi."
+
+Saiu pela estrada da costa sem olhar para trás. No céu do sul, para os lados de Farenta, havia uma nuvem preta e baixa, do tamanho de uma montanha.
+
+### A sala do conselho, tarde do 458
+Chegaram três notícias, uma atrás da outra.
+
+De Farenta, pela estrada: o conselho do podestà quer um podestà novo e vai votar sem o Tirello na sala. Entre os que assinaram está o Dulassetta.
+
+De Levis, a carta da Brara, com a letra grande dela: os mineiros abriram uma porta nas minas fundas, mais funda que Zythir. Do outro lado havia uma oficina de mestre morto, com uma pedra que pulsa no meio da bancada e mortos que se levantaram quando a lanterna entrou. "Pedem um sacrifício na porta, escrito. Não abri mais." E, no pé da carta: o culto pôs fogo na fundição velha de noite.
+
+Do Delta, pelos salineiros: a floresta chegou à borda das salinas e comeu uma aldeia. A gente fugiu para dentro, para os braços do rio, e a Lurentetta abriu as salinas para eles. No mesmo dia o Brakos, o bicho de Vida, saiu de dia no meio dos canais e matou um homem.
+
+### A Fornalha, noite do 458
+A Sira entrou sem bater, o que nela era urgência.
+
+"O corvo", disse. "O grande. O da torre da Isolda. Desceu no telhado do Seeth à meia-noite. Ele abriu a janela antes de o bicho pousar, como quem espera visita."
+
+Ela ficou de pé, com os braços cruzados, o rosto sem nada.
+
+"Quer que eu feche a janela dele, rei? Ou que eu leia o que o corvo leva?"
+
+- **Parada:** noite do 458, a Fornalha. A Sira espera a ordem sobre o Seeth.

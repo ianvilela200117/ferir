@@ -1,0 +1,60 @@
+[02:04:25] Dia 458 · Pressão 2/5 · evento local 1d20 [10] -> um roubo pequeno no cais
+  O TEMPO (29 da Lua da Seca de 1013 d.S., Sol)
+   Ireviel: limpo, brisa (d6 [2] fica · vento d6 [3])
+   o Porto de Marasar: nublado, vento firme (d6 [1] fica · vento d6 [5])
+   Levis: limpo, vento firme (d6 [3] fica · vento d6 [5])
+   Farenta: tempestade, VENTANIA (d6 [6] muda, d20 [19] · vento d6 [4]) → BARCO NÃO SAI, estrada perigosa, telhado e andaime em risco, raio (o fogo e o Ar ficam imprevisíveis)
+   O RIO: baixo [15/100] · MUDOU: era SECO
+  avistamento de monstro 1d20 [14] -> nenhum
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 458 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [4] Marasar (a Liga e o Doge)  ◆ TOCA A CASA
+    A NOTÍCIA: [3] em 1d3 [1] dias
+    [MISSÃO]: Kretor (o Mestre dá o nome pela ficção)
+    dificuldade: S  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: Oculta
+    objetivo: pagar ou cobrar uma dívida
+    complicação escondida (Envelope): outra facção quer o contrário
+    prazo: 7 dias
+    recompensa: 15000 XP · 10000 de ouro · 1 ponto de Trilha
+    penalidade se falhar: quem pediu morre ou se perde
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 458
+    Lendários: d20 [9] quietos hoje
+    trama do dia: Orast → os Jurados de Steunn (RESSENTIMENTO) d20 [13] nada visível
+    FAÍSCA: Teraseth esconde um filho de Hrotgar, por causa de uma dívida antiga
+    FAÍSCA: Messer Baldo Cerrini (mercador de lã de Farenta; o depósito) rouba de a Guardiã da Tenaz, por causa de a Fornalha que Não Apaga
+    FAÍSCA: o podestà Tirello pede ajuda a a Guardiã da Tenaz, por causa de um mapa
+  AUDITORIA (XXIII.23, Dia 458): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 458 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 16.698, envelope diz 10.873.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #705 (era do Dia 456): [OCULTO] (OCULTO) FARENTA: o CONSELHO do podestà se junta contra o TIRELLO (GO55 [1]; o Dulassetta entre eles; a mão da Leliel, cuja obra nova é RETOMAR FARENTA): pedem um podestà novo, por voto forçado; a notícia chega a Ireviel no 458
+  ▶ AGENDA #706: NOTÍCIA de Farenta (pela costa): o conselho do podestà pede um podestà novo e quer o voto (GO55); a Sira sabe que o Dulassetta está no meio
+  ▶ AGENDA #709: A SÉRIE DA HOSTE pronta na Fornalha: cinco armaduras de escamas Épicas de nee e gusta (não derruba nem empurra · leve na marcha · quem agarra sangra 6 · RD 3 contra doença e veneno); 300 XP ao rei, 75 à Tilde e ao Iorin
+  ▶ AGENDA #711: LEVIS, pela carta da BRARA (rio abaixo): (1) os mineiros abriram uma PORTA VELHA nas minas fundas, mais funda que Zythir: IOTHEMNA (atlas.py conhece Iothemna 'a carta da Brara'): era a oficina de um mestre morto; caiu por maldição; guarda UM NÚCLEO; moram mortos; entrar pede um sacrifício · (2) o CULTO DO XAATHIS pôs fogo de noite na fundição velha (XA55 [5]): a série de picaretas atrasa uma semana (#361 no 462)
+  ▶ AGENDA #718: a carta do YEOR (a isca da Sira) chega ao DULASSETTA em Farenta; (OCULTO, DB56 [3]) ele acredita e manda à Leliel pelo correio do norte (6 dias: a Leliel lê no 464)
+  ▶ AGENDA #721: AMANHECER: a MORTE EM PRAÇA dos três espiões (PA57 B: o da Liga, o da Lumine, o dos conselheiros); depois, rolar a reação das três redes (a Lumine perdeu o que contava as crianças)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Elaeva, a Floresta que Anda (Mítico, o vale, rumo ao Delta): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [6] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: a Mãe Branca (Primordial, Steunn): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Brakos (Raro, o Delta): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [2] FIEL (a célula da casa confirma)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Krothos (Lendário, Levis): aparece de dia, à vista de muitos (pânico e notícia certa) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Vradda (homens-lagarto) (Gogrunn): o chefe é desafiado (1d6: 1-3 cai, novo chefe) · COMO CHEGA: d20 [1] FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)
+  ✉ notícia de longe que chega hoje: ROTA DE COMÉRCIO abre ou fecha, mudando preços: fecha — a Mata de Elais · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi
+  ✉ notícia de longe que chega hoje: Yirane, a Que Come a Pedra (Épico, as Montanhas de Fogo): deixa cair um drop onde gente acha (material à venda) · COMO CHEGA: d20 [16] FIEL
+  ✉ notícia de longe que chega hoje: Kredun, a Filha da Mãe Branca (Mítico, as Fundas do Norte): muda de comportamento (fica mais manso ou mais faminto) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: os Vrurn (trolls) (Yaelane): um deles vira herói ou traidor (rumor com nome) · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi

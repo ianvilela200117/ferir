@@ -997,7 +997,7 @@
    "nivel": 376,
    "regiao": "o vale, rumo ao Delta (as salinas)",
    "estado": "ativo",
-   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta) · 449: FOI EMBORA de Farenta com 47% (o cerco: ela decide abaixo de 50%), rumo ao DELTA e às salinas da Lurentetta (PE49 [4]); matou a MAMILTIA no 448 · 449 (a casa SABE, pelo Falar com Morto e o saber extraordinário da Mamiltia): na fase dos 50% trocou a Essência: o FOGO não dobra mais; a fraqueza nova é VIDA; o SAL segue; no DELTA, entre os braços do rio, ela fica presa (não atravessa água corrente larga)",
+   "nota": "essência ESPINHO, fraqueza FOGO; não atravessa ÁGUA CORRENTE LARGA; acordada pela obra do ADUREL; desce o vale rumo ao Delta (chega ~266) (o Colégio, 252) · 433 (a casa SABE, pela carta cifrada do Colégio de Telosus à Leliel, lida pelo rei: LC35 [3], FE35 [1]): uma FRAQUEZA ESCONDIDA além do fogo: o SAL seca a raiz dela (dano dobrado e corta a regeneração) · e, pelo Colégio, quem a FERIU no 428 foram os OLHOS DA MAMILTIA, a caminho de Zisrir (QF35 [4]) · 448: a MAMILTIA sozinha a levou a 17.955 (48%): a segunda fase (troca de Essência; oculta) · 449: FOI EMBORA de Farenta com 47% (o cerco: ela decide abaixo de 50%), rumo ao DELTA e às salinas da Lurentetta (PE49 [4]); matou a MAMILTIA no 448 · 449 (a casa SABE, pelo Falar com Morto e o saber extraordinário da Mamiltia): na fase dos 50% trocou a Essência: o FOGO não dobra mais; a fraqueza nova é VIDA; o SAL segue; no DELTA, entre os braços do rio, ela fica presa (não atravessa água corrente larga) · 458 (notícia FIEL, EL58 [6]): atacou uma aldeia na borda das salinas; os salineiros fugiram para dentro do Delta e a Lurentetta os recebeu",
    "pv_atual": 17845,
    "nota_383": "ferida pelo cerco de Farenta (382-387): 28.793 de 37.600; foi para os Picos Brancos"
   },
@@ -1065,7 +1065,7 @@
    "nivel": 35,
    "regiao": "o Delta",
    "estado": "ativo",
-   "nota": "elemental de Vida, tamanho de cavalo; camuflado; cada golpe que fere cura 4 em área; fraco a Podridão e água corrente; desce às aldeias no inverno; sinal: árvores marcadas (notícia 211)",
+   "nota": "elemental de Vida, tamanho de cavalo; camuflado; cada golpe que fere cura 4 em área; fraco a Podridão e água corrente; desce às aldeias no inverno; sinal: árvores marcadas (notícia 211) · 458: apareceu de dia no Delta; a vigia não viu a tempo: 1 salineiro morto",
    "nivel_base": 34
   },
   {
@@ -1160,7 +1160,7 @@
    "nivel": 295,
    "regiao": "Levis",
    "estado": "ACORDADO (423)",
-   "nota": "constructo do TAMANHO DE UMA TORRE, SOMBRA; muitas cabeças ou membros; invoca crias; fala e mente; carrega doença; PV 7375 · Def 103 · RD 25 · +93 · 3 ataques · 2d10×25; resto da ficha a descobrir (301, interrogatório da Lumine) · 423 (KR23 [3], a verdade): ACORDOU e quebrou o ATERRO DA ESTRADA DO RIO acima de Levis; a notícia chegou INCOMPLETA (KR23b [2]: sabe-se que algo enorme acordou e quebrou, não onde nem o quê)"
+   "nota": "constructo do TAMANHO DE UMA TORRE, SOMBRA; muitas cabeças ou membros; invoca crias; fala e mente; carrega doença; PV 7375 · Def 103 · RD 25 · +93 · 3 ataques · 2d10×25; resto da ficha a descobrir (301, interrogatório da Lumine) · 423 (KR23 [3], a verdade): ACORDOU e quebrou o ATERRO DA ESTRADA DO RIO acima de Levis; a notícia chegou INCOMPLETA (KR23b [2]: sabe-se que algo enorme acordou e quebrou, não onde nem o quê) · 458 (KR58, a vigia dos mineiros): apareceu de dia em Levis; ninguém morreu; o rumor exato: ao sol a casca dele fumega (a LUZ o fere)"
   },
   {
    "nome": "Hagal",
@@ -1854,7 +1854,7 @@
   "chefe": "Sira",
   "chefe_bonus": 8,
   "contra": "Graur + Krernos (desde o 228) + Skedda (Selos) + olhos nos salineiros + runas do Colégio (233) + P4 (252) + o OLHO DO LEVE (Mítico, 257: +5, teto 35)",
-  "contra_bonus": 35,
+  "contra_bonus": 36,
   "contra_max": 35,
   "custo_semana": 340,
   "celulas": {
@@ -1944,7 +1944,10 @@
   "nota_rede_farenta": "209: na rede em Ireviel: o Tano (FUGIU na noite do 209), o Cerrini (PRESO na noite do 209), o sargento Malvezzi (VIGIADO: o Krernos e a Skedda passam mentira por ele)",
   "nota_delta_210": "210: a célula do Delta achou: a GALÉ DA LIGA chega às salinas do contato no DIA 218",
   "nota_210": "210: Marasar e Farenta FALHA FEIA: um agente de cada pego; as duas células caem a 0; quem pegou sabe que a casa espiona",
-  "nota_211": "211: o aviso do Krernos chegou a tempo às salinas do contato; a galé (218): 40 soldados, capitão 80, um mago, 2 balistas, ~60 remadores"
+  "nota_211": "211: o aviso do Krernos chegou a tempo às salinas do contato; a galé (218): 40 soldados, capitão 80, um mago, 2 balistas, ~60 remadores",
+  "notas": [
+   "458: +1 por duas semanas (EX58 [6]: a praça aprovou a morte dos espiões; o medo segura os pequenos); volta a 35 no 472 (o teto)"
+  ]
  },
  "redes_inimigas": [
   {
@@ -3247,21 +3250,24 @@
    "de": "a Liga (o Doge)",
    "desde": 455,
    "tracos": "",
-   "nota": "455: pego pela contra-espionagem de Ireviel (44 contra 29) no cais"
+   "nota": "455: pego pela contra-espionagem de Ireviel (44 contra 29) no cais · 458: MORTO EM PRAÇA (PA57 B)",
+   "estado": "morto"
   },
   {
    "nome": "o agente da Lumine",
    "de": "a Lumine",
    "desde": 455,
    "tracos": "",
-   "nota": "455: pego pela contra-espionagem de Ireviel (57 contra 45)"
+   "nota": "455: pego pela contra-espionagem de Ireviel (57 contra 45) · 458: MORTO EM PRAÇA (PA57 B)",
+   "estado": "morto"
   },
   {
    "nome": "o agente dos conselheiros (Pelagri, Aldoveri, Tiracci)",
    "de": "os conselheiros",
    "desde": 455,
    "tracos": "",
-   "nota": "455: pego pela contra-espionagem (52 contra 35) de noite junto da casa do GRAUR, com um molde de cera: a COBIÇA da semana ([3] nos aros do Graur: alguém age pela peça)"
+   "nota": "455: pego pela contra-espionagem (52 contra 35) de noite junto da casa do GRAUR, com um molde de cera: a COBIÇA da semana ([3] nos aros do Graur: alguém age pela peça) · 458: MORTO EM PRAÇA (PA57 B)",
+   "estado": "morto"
   }
  ],
  "segredos_da_casa": [

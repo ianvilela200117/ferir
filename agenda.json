@@ -1,5 +1,5 @@
 {
- "prox_id": 722,
+ "prox_id": 725,
  "itens": [
   {
    "id": 1,
@@ -7098,7 +7098,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": false
   },
   {
@@ -9957,7 +9957,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -9968,7 +9968,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10001,7 +10001,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10012,7 +10012,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": false
   },
   {
@@ -10023,7 +10023,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10104,7 +10104,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -10137,6 +10137,43 @@
    "id": 721,
    "dia": 458,
    "texto": "AMANHECER: a MORTE EM PRAÇA dos três espiões (PA57 B: o da Liga, o da Lumine, o dos conselheiros); depois, rolar a reação das três redes (a Lumine perdeu o que contava as crianças)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 722,
+   "dia": 459,
+   "texto": "OFERTA PÚBLICA: alguém paga por um serviço — Marasar (a Liga e o Doge)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 458",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 723,
+   "dia": 472,
+   "texto": "a contra-espionagem volta de 36 a 35 (o +1 do EX58 era por duas semanas; o teto é 35)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": false
+  },
+  {
+   "id": 724,
+   "dia": 460,
+   "texto": "CHEGA a Farenta a coluna do GRAUR (os três capuzes e dez da Hoste com Épicas; a quinta armadura nova no cabo deles; GF58 [5]): segura a cidade para a isca (4a)",
    "tipo": "marco",
    "oculto": false,
    "para": false,

@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 457, IREVIEL: a Casa de Cura, a febre da menina; a execução no amanhecer (MOTOR 9b: G1 a G37)
+# RETOMAR — noite do Dia 458, IREVIEL: a Fornalha, a Sira e o corvo do Seeth (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 458, IREVIEL, A FORNALHA (o tick do 458 rodado; a auditoria feita). O rei 402/402, Mana 164/164, a Visão 2/2, o ERUDITO 0/1 (volta no tick do 462: G38). A execução feita (EX58 [6]). O HAAST fugiu (OCULTO: a Marasar, ao Draek, HF57 [5]). O GRAUR a caminho de Farenta (chega no 460, #). O SEETH na forja grande; (OCULTO: pago pela Almision, SP56) o corvo no telhado dele (SS58). As quatro armaduras aos recrutas. A L1 (armadura) pronta no 460 para o Teraseth; a L2 (espada) no 462 para o Colégio; a parte do Ulurve 3.600 + 2.400. A ELIANE no 462 (rolar no 460 o trecho do Isyzis, #). (OCULTO) a Leliel lê a isca no 464 (#); o fogo da Guarda do Pedágio no Leve no 459 (#707); o Ssish nas Fundas no 462; o mensageiro de Lumade no 466. Farenta: o conselho do podestà quer podestà novo (o Dulassetta assina). IOTHEMNA conhecida (atlas). A ELAEVA na borda das salinas (OCULTO: nas salinas da Lurentetta no 465). O BRAKOS (Vida) no Delta. A missão de Marasar chega no 459 (o gerador deu KRETOR, que bate nos olhos de kretor: trocar). Cofre 10.873.
+
+Antes (457):
 Noite do 457, IREVIEL, A CASA DE CURA (os ticks do 456 e do 457 rodados). O rei DE PÉ (manca), 402/402, Mana 164/164, a Visão 2/2; o ERUDITO desta sessão GASTO (Lumade: o túmulo das rainhas, Rilge, e o Martelo do Rei em Dragal; a classe que o Martelo dá NÃO foi à mesa). O ULURVE sócio (um décimo da forja da venda). O SEETH (OCULTO: pago pela ALMISION, SP56 [6]) fez uma Épica de ferro comum; o Braeth falou com ele (BR57). O RUDDO e o BINIO ao trabalho forçado (RD57; PJ57 A). Os TRÊS ESPIÕES: MORTE EM PRAÇA no amanhecer do 458 (PA57 B); a Sira 4/10 e o Graur 5/10 de lealdade. As LENDÁRIAS: L1 armadura ao TERASETH no 460 (36.000 + as barcas do Croque); L2 espada ao COLÉGIO no 462 (24.000 + um favor). A Série da Hoste sai no 458 (4 aos recrutas). A ISCA: chega ao Dulassetta no 458; (OCULTO) ele acredita (DB56); a Leliel lê no 464 (#; a obra dela é RETOMAR FARENTA). A ISOLDA voltou: a torre velha do marco de pedra na estrada sul de Farenta. ZOLALLETTA (Lumade) pede o túmulo das rainhas já, com o rei e a Matriz; (OCULTO) o Círculo da Areia Cantante tomou o vale de cima de Lumade no 456 (o mensageiro do Celocus chega no 466). A febre da menina voltou (CR57). O RIO SECO. A ELIANE chega no 462 (o trecho do Isyzis, que deu crias: rolar no 460). (OCULTO) o fogo da Guarda do Pedágio no Leve no 459 (#707); o SSISH nas Fundas (462); IOTHEMNA pela carta da Brara no 458. Cofre 10.873.
 
 Antes (455):
@@ -299,13 +302,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (455 → 457): o ERUDITO ("o que tem em Lumade que pode me ajudar a ser um ferreiro melhor?") · 1 "duas Lendárias ou Míticas, vender a um aliado ou amigo" · 2a · 3b · 4c,b · 5a,b · 6a,b "quero o Ulurve de volta, meu grande amigo" · 7b
 - o Erudito sem dado (a resposta verdadeira) · UL55 [3]+1 · SP56 [6] (oculto) · SM56 26 · SE56 Épica · NS56 [1] · QS56 [6] Binio · YO56 [4] · DB56 [3] (oculto) · AGa56 18 · AGb56 14 · AGc56 28 · L1 126 e L2 138 (Lendárias pelo teto do núcleo) · CL56 [2,6] · LM56 [1] · TL56 [4] · GG56 [4] (ocultos) · IS57 [2] · EM57 [4] · CR57 [1] · AV57 [3] · BR57 [5] · RD57 +4 · PJ57 A · PA57 B.
 
+## RESPONDIDO (457 → 458): "quando recupero o Erudito?" (G38: a semana de jogo; volta no 462) · 1a · 2a · 3d · 4a · 5a · 6a
+- o Purificar (15) · HA57 [1] · HF57 [5] (oculto) · ZL57 [3] · o tick do 458 · EX58 [6] · GF58 [5] · SS58 19 · EL58 [6] · BK58 7 (BK58m [1]) · KR58 20 (KR58r [2]) · a auditoria do 458.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. LUMADE (a Zolalletta, pelo Celocus: abrir já o túmulo das rainhas, com o rei e a Matriz): a) depois do Delta (a Elaeva primeiro) · b) já, antes do Delta (10 dias de ida) · c) a Matriz vai com uma coluna forte, sem o rei · d) não agora.
-2. O HAAST (o homem dos conselheiros em Ireviel): a) prender já · b) vigiar e ler o que ele manda · c) usá-lo, como o Dulassetta.
-3. O SEETH (Épica de ferro comum; falou em segredo com o Braeth): a) um posto na forja grande, vigiado · b) a Sira segue os dois · c) mandar embora · d) a e b.
-4. FARENTA (a isca chega amanhã: "Farenta sem guarda"): quem segura a cidade enquanto a casa vai ao Delta? a) o Graur com a guarda da casa e parte da Hoste · b) a Isolda e a galé no porto · c) só a guarda de Farenta e um sino de aviso · d) outra.
-5. A MENINA DA CASA DE CURA (a febre voltou): a) o rei sobe agora e lança o Purificar (15 de Mana) · b) os físicos da casa.
-6. A EXECUÇÃO NO AMANHECER (o conselho votou a morte dos três): a) como o conselho decidiu · b) o rei passa por cima e troca por trabalho forçado (Legitimidade −1) · c) poupar só o da Liga e mandá-lo de volta ao Draek com a mesma isca.
+1. O SEETH E O CORVO (a Sira pergunta): a) prendê-lo já · b) deixá-lo no posto e a Sira tenta pegar o recado do corvo · c) mandá-lo embora com uma mentira para a Almision · d) chamá-lo diante do rei e perguntar.
+2. FARENTA (o conselho do podestà quer podestà novo, sem o Tirello; o Dulassetta assina; o Graur chega no 460): a) o rei sustenta o Tirello: sem o selo do rei o voto não vale · b) o rei aceita o voto, mas o nome novo passa pelo conselho real · c) prender o Dulassetta (a isca morre com ele) · d) o rei vai a Farenta antes do Delta.
+3. O HAAST (fugiu rio abaixo pelo leito seco): a) a Isolda vai atrás · b) a Guilda (o Starkald) vai atrás · c) deixar ir e mandar o retrato dele às cidades.
+4. O DELTA (a floresta na borda das salinas; o Brakos de Vida nos canais): a) partir no 462 com a Eliane, como estava · b) partir já no 459, sem a Eliane, e preparar a ilha · c) no 462, e caçar o Brakos primeiro (material de Vida para as armas).
+5. IOTHEMNA (Levis: a oficina com um núcleo, mortos e um sacrifício escrito na porta): a) depois do Delta, junto com a sala 9 de Zythir · b) mandar olhos agora (a Brara e os mineiros) · c) não agora.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

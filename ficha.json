@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma",
  "nivel": 156,
- "xp": 1218464,
+ "xp": 1218764,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -613,7 +613,8 @@
   "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)",
   "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)",
   "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)",
-  "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)"
+  "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)",
+  "Dia 458: +300 458: a SÉRIE DA HOSTE pronta (cinco armaduras Épicas de nee e gusta; pela melhor peça do lote)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -628,6 +629,11 @@
    "tem": 7,
    "max": 7,
    "renova": "dia"
+  },
+  "Erudito": {
+   "tem": 0,
+   "max": 1,
+   "renova": "semana"
   }
  },
  "anos_de_vida_pagos": 2,

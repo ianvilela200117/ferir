@@ -1,18 +1,5 @@
 {
  "ordem": [
-  "TR24c",
-  "LU24d",
-  "PR24",
-  "MK24",
-  "CP24",
-  "DR24a",
-  "DR24b",
-  "DR24c",
-  "SU25",
-  "TR25a",
-  "TR25b",
-  "PF25",
-  "PF25b",
   "PF25c",
   "PF25d",
   "DZ25Ferir",
@@ -401,533 +388,20 @@
   "AV57",
   "BR57",
   "PJ57",
-  "PA57"
+  "PA57",
+  "HA57",
+  "ZL57",
+  "HF57",
+  "EX58",
+  "GF58",
+  "SS58",
+  "EL58",
+  "BK58",
+  "KR58",
+  "BK58m",
+  "KR58r"
  ],
  "selos": {
-  "TR24c": {
-   "id": "TR24c",
-   "dia": 424,
-   "hora": "11:11:15",
-   "titulo": "QUE BICHO MATOU O ALIADO DO TERASETH (Ireviel e o rio)",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o MOREK, na forquilha"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a ELOUNE, nos lodaçais"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a ELOUNE, nos lodaçais",
-     "txt": "[2] → a ELOUNE, nos lodaçais"
-    }
-   ],
-   "hora_rolado": "11:11:15"
-  },
-  "LU24d": {
-   "id": "LU24d",
-   "dia": 424,
-   "hora": "11:11:15",
-   "titulo": "EM QUANTOS DIAS CHEGA O ENVIADO DA LURENTETTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado em dias (a contar do 424)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado em dias (a contar do 424)",
-     "txt": "[3] → o dado em dias (a contar do 424)"
-    }
-   ],
-   "hora_rolado": "11:11:15"
-  },
-  "PR24": {
-   "id": "PR24",
-   "dia": 424,
-   "hora": "11:11:29",
-   "titulo": "OS 7 NA PRAÇA (fanáticos do fim do mundo, diante do povo)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "CALAM E REZAM"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "UM DELES PREGA na praça o fim das dívidas e do mundo; gente do povo escuta (rola o PR24b)"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 20,
-     "res": "UM FALA PARA SE SALVAR: diz o ALVO DO PIChE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "CALAM E REZAM",
-     "txt": "[8] → CALAM E REZAM"
-    }
-   ],
-   "hora_rolado": "11:11:29"
-  },
-  "MK24": {
-   "id": "MK24",
-   "dia": 424,
-   "hora": "11:11:59",
-   "titulo": "O MOREK NA NOITE DO 424 (a barca do piche volta da forquilha com o recado do Starkald)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "NA FORQUILHA: a armadilha está pronta para o amanhecer do 425"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "RONDA RIO ABAIXO, perto da rota das barcas; a armadilha espera ele voltar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "NA FORQUILHA: a armadilha está pronta para o amanhecer do 425",
-     "txt": "[4] → NA FORQUILHA: a armadilha está pronta para o amanhecer do 425"
-    }
-   ],
-   "hora_rolado": "11:11:59"
-  },
-  "CP24": {
-   "id": "CP24",
-   "dia": 424,
-   "hora": "12:02:21",
-   "titulo": "A COMPLICAÇÃO DA MISSÃO (A FORQUILHA LIMPA): um bicho no caminho da barca do rei, rio abaixo, de noite — de que tamanho",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "RARO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ÉPICO"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ÚNICO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "RARO",
-     "txt": "[1] → RARO"
-    }
-   ],
-   "hora_rolado": "12:02:21"
-  },
-  "DR24a": {
-   "id": "DR24a",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "O DRAEK DO NEANE (couro/escama, Raro, Sombra): quantos kg",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado mais dois"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado mais dois",
-     "txt": "[3] → o dado mais dois"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "DR24b": {
-   "id": "DR24b",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "A ERYRA (a glândula do Neane, Raro, Sombra): quantas porções",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado",
-     "txt": "[1] → o dado"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "DR24c": {
-   "id": "DR24c",
-   "dia": 424,
-   "hora": "12:03:21",
-   "titulo": "O SANGUE DE SOMBRA DO NEANE (para o SYSRETH: 1 porção por 2 kg da liga): quantas porções se guardam na barca",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado",
-     "txt": "[1] → o dado"
-    }
-   ],
-   "hora_rolado": "12:03:21"
-  },
-  "SU25": {
-   "id": "SU25",
-   "dia": 425,
-   "hora": "12:04:41",
-   "titulo": "AMANHECER DO 425, A FORQUILHA: o Morek dorme na margem (o Starkald); a barca do rei chega no escuro; ele acorda antes?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 20,
-     "res": "SURPRESA: ele não age na 1ª rodada e a vala o pega inteiro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)",
-     "txt": "[5] → ACORDA: sem surpresa (e ele voa por cima de parte do fogo: o fogo da vala vale metade)"
-    }
-   ],
-   "hora_rolado": "12:04:41"
-  },
-  "TR25a": {
-   "id": "TR25a",
-   "dia": 425,
-   "hora": "12:04:53",
-   "titulo": "A VALA DE PIChE ACESA (5 barris; o capim seco do calor corre: +2d6): 12d6 de FOGO; o Morek acordou e passou voando: METADE; depois ×2 (fraco a fogo) − RD 12",
-   "dado": [
-    12,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 72,
-     "res": "o total"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1,
-      6,
-      1,
-      1,
-      3,
-      4,
-      3,
-      1,
-      6,
-      4,
-      2,
-      2
-     ],
-     "total": 34,
-     "res": "o total",
-     "txt": "[1, 6, 1, 1, 3, 4, 3, 1, 6, 4, 2, 2] +0 = 34 → o total"
-    }
-   ],
-   "hora_rolado": "12:04:53"
-  },
-  "TR25b": {
-   "id": "TR25b",
-   "dia": 425,
-   "hora": "12:04:53",
-   "titulo": "AS FLECHAS DE FOGO DOS 6 CAÇADORES (das barcas): 6 que pegam, 1d8 de fogo cada, ×2, − RD 12 cada (mínimo 0)",
-   "dado": [
-    6,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 48,
-     "res": "o total (conta cada dado)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      8,
-      4,
-      3,
-      3,
-      1
-     ],
-     "total": 25,
-     "res": "o total (conta cada dado)",
-     "txt": "[6, 8, 4, 3, 3, 1] +0 = 25 → o total (conta cada dado)"
-    }
-   ],
-   "hora_rolado": "12:04:53"
-  },
-  "PF25": {
-   "id": "PF25",
-   "dia": 425,
-   "hora": "12:06:41",
-   "titulo": "O MOREK DEPOIS QUE O GRUPO CAI (814/2440; caçador: escolhe a presa e a segue por dias)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "LEVA UM DOS MORTOS para a água (rola quem) e some no fundo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "RECUA FERIDO para o fundo da forquilha (se cura em dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ESCOLHE A PRESA: fica olhando a barca do rei; vai segui-lo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "LEVA UM DOS MORTOS para a água (rola quem) e some no fundo",
-     "txt": "[1] → LEVA UM DOS MORTOS para a água (rola quem) e some no fundo"
-    }
-   ],
-   "hora_rolado": "12:06:41"
-  },
-  "PF25b": {
-   "id": "PF25b",
-   "dia": 425,
-   "hora": "12:06:41",
-   "titulo": "AS BARCAS: os 6 caçadores tiram da margem quem puderem (debaixo do bicho ferido)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "só os VIVOS (os mortos ficam na margem)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "os vivos e UM MORTO (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "TODOS, vivos e mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os vivos e UM MORTO (rola qual)",
-     "txt": "[4] → os vivos e UM MORTO (rola qual)"
-    }
-   ],
-   "hora_rolado": "12:06:41"
-  },
   "PF25c": {
    "id": "PF25c",
    "dia": 425,
@@ -19763,6 +19237,516 @@
      "txt": "VENCE B) morte em praça (espiões em tempo de guerra) · placar A 2 · B 2 · C 2 (EMPATE em 2 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Thuron, Sira, Herkald"
     }
    ]
+  },
+  "HA57": {
+   "id": "HA57",
+   "dia": 457,
+   "hora": "02:04:16",
+   "titulo": "A GUARDA PRENDE O HAAST ESTA NOITE (2a; o fornecedor do Odrum, homem dos conselheiros; antes da execução do amanhecer, que ele ainda não sabe)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ESCAPA: a guarda acha a casa vazia, a lareira cheia de papel queimado; ele saiu a pé pelo leito seco do rio"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 4,
+     "res": "PRESO, mas queimou os papéis antes de abrir a porta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "PRESO COM OS PAPÉIS: as cartas aos conselheiros, com nomes"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ESCAPA: a guarda acha a casa vazia, a lareira cheia de papel queimado; ele saiu a pé pelo leito seco do rio",
+     "txt": "[1] → ESCAPA: a guarda acha a casa vazia, a lareira cheia de papel queimado; ele saiu a pé pelo leito seco do rio"
+    }
+   ],
+   "hora_rolado": "02:04:16"
+  },
+  "ZL57": {
+   "id": "ZL57",
+   "dia": 457,
+   "hora": "02:04:16",
+   "titulo": "A ZOLALLETTA OUVE 'DEPOIS DO DELTA' (1a; GENEROSA e CRUEL; nunca volta atrás numa palavra dada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "parte já para Lumade com a resposta (10 dias) e diz que o Celocus não gosta de esperar"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "fica em Ireviel até o rei voltar do Delta, como hóspede (e vê tudo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "fica em Ireviel até o rei voltar do Delta, como hóspede (e vê tudo)",
+     "txt": "[3] → fica em Ireviel até o rei voltar do Delta, como hóspede (e vê tudo)"
+    }
+   ],
+   "hora_rolado": "02:04:16"
+  },
+  "HF57": {
+   "id": "HF57",
+   "dia": 457,
+   "hora": "02:04:25",
+   "titulo": "PARA ONDE FOGE O HAAST (a pé, pelo leito seco do rio, na noite do 457)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "RIO ACIMA, para Levis e o Norte (os conselheiros); a pé, uns 6 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "RIO ABAIXO, para Marasar e o Draek (a Liga); 1 dia e meio a pé"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "FICA em Ireviel, escondido na Ireviel velha (os da Cinza o abrigam)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "RIO ABAIXO, para Marasar e o Draek (a Liga); 1 dia e meio a pé",
+     "txt": "[5] → RIO ABAIXO, para Marasar e o Draek (a Liga); 1 dia e meio a pé"
+    }
+   ],
+   "hora_rolado": "02:04:25"
+  },
+  "EX58": {
+   "id": "EX58",
+   "dia": 458,
+   "hora": "02:05:05",
+   "titulo": "A PRAÇA E AS REDES DEPOIS DA MORTE DOS TRÊS ESPIÕES (amanhecer do 458)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a praça acha duro (Ireviel −5) e a LUMINE jura vingança (a rede dela volta no 462, força +2)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "a praça cala; a LUMINE jura vingança (a rede volta no 462)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "a praça aprova (espiões em tempo de guerra); as redes se recolhem como já estavam"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a praça aprova e a contra-espionagem ganha +1 (o medo segura os pequenos)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "a praça aprova e a contra-espionagem ganha +1 (o medo segura os pequenos)",
+     "txt": "[6] → a praça aprova e a contra-espionagem ganha +1 (o medo segura os pequenos)"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "GF58": {
+   "id": "GF58",
+   "dia": 458,
+   "hora": "02:05:05",
+   "titulo": "A COLUNA DO GRAUR PELA ESTRADA DA COSTA (sai no 458; em Farenta, tempestade e ventania hoje)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a tempestade fecha a estrada um dia: chega a Farenta no 461"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chega a Farenta no 460"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "chega a Farenta no 460",
+     "txt": "[5] → chega a Farenta no 460"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "SS58": {
+   "id": "SS58",
+   "dia": 458,
+   "hora": "02:05:05",
+   "titulo": "A SIRA SEGUE O SEETH E O BRAETH (3d; a primeira noite, 458) · d20 +6 (a Sira; o Seeth é cuidadoso: −2)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 10,
+     "res": "NADA: o Seeth dorme cedo, o Braeth não sai"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 17,
+     "res": "os dois se veem de novo, na Casa dos Estudiosos; o Braeth entrega ao Seeth um embrulho do tamanho de um livro"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "o CORVO GRANDE desce de noite no telhado da casa onde o Seeth dorme, e ele abre a janela"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      15
+     ],
+     "total": 19,
+     "res": "o CORVO GRANDE desce de noite no telhado da casa onde o Seeth dorme, e ele abre a janela",
+     "txt": "[15] +4 = 19 → o CORVO GRANDE desce de noite no telhado da casa onde o Seeth dorme, e ele abre a janela"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "EL58": {
+   "id": "EL58",
+   "dia": 458,
+   "hora": "02:05:06",
+   "titulo": "ONDE A ELAEVA ATACOU (a notícia FIEL, a célula do Delta confirma; ela desce o vale rumo às salinas)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma CARAVANA DE SAL na estrada do vale: 2d6 mortos, o sal perdido"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma ALDEIA DE LENHADORES no vale: 2d6 × 3 mortos; os que sobram fogem para o Delta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe",
+     "txt": "[6] → uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "BK58": {
+   "id": "BK58",
+   "dia": 458,
+   "hora": "02:05:06",
+   "titulo": "A VIGIA DO BRAKOS (G11; Raro 35, VIDA; aparece de dia no Delta, à vista de muitos; o posto: a célula do Delta) · d20+2",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: o povo se abriga (metade)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO: a toca dele e um RUMOR EXATO (o que ele larga: material de VIDA)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "PEGO NO LUGAR: a caçada abre já, com SURPRESA"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 7,
+     "res": "não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)",
+     "txt": "[5] +2 = 7 → não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "KR58": {
+   "id": "KR58",
+   "dia": 458,
+   "hora": "02:05:06",
+   "titulo": "A VIGIA DO KROTHOS (G11; Lendário 295, Sombra; aparece de dia em LEVIS, à vista de muitos; o posto: a Guilda dos Mineiros do Gurka) · d20+2",
+   "dado": [
+    1,
+    20,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 7,
+     "res": "não viu a tempo: o pânico vem inteiro (Ordem de Levis −1 até o 465 e 2d6 mortos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 14,
+     "res": "AVISO A TEMPO: a gente se abriga (Ordem −1, 1d6 mortos)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 21,
+     "res": "o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 1000000,
+     "res": "o bicho é visto no lugar dele e volta à toca sem ferir ninguém (acima da casa: só vigiar)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 20,
+     "res": "o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)",
+     "txt": "[18] +2 = 20 → o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)"
+    }
+   ],
+   "hora_rolado": "02:05:06"
+  },
+  "BK58m": {
+   "id": "BK58m",
+   "dia": 458,
+   "hora": "02:05:18",
+   "titulo": "OS MORTOS DO PÂNICO DO BRAKOS no Delta (BK58: não viu a tempo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantos salineiros mortos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "tantos salineiros mortos",
+     "txt": "[1] → tantos salineiros mortos"
+    }
+   ],
+   "hora_rolado": "02:05:18"
+  },
+  "KR58r": {
+   "id": "KR58r",
+   "dia": 458,
+   "hora": "02:05:39",
+   "titulo": "QUAL É O RUMOR EXATO DO KROTHOS (KR58: a vigia viu o lugar)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a TOCA: o aterro quebrado da estrada do rio, acima de Levis (onde acordou no 423)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o DROP: uma lasca da casca caiu na rua: metal de SOMBRA, Lendário"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)",
+     "txt": "[2] → a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)"
+    }
+   ],
+   "hora_rolado": "02:05:39"
   }
  }
 }

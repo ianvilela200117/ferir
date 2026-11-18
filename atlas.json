@@ -202,8 +202,8 @@
    "habita": "mortos",
    "entrar": "um sacrifício",
    "degrau": "?",
-   "conhecida": false,
-   "como": "455: o achado de Levis (EVENTO [17], AL55 [6]): os mineiros da Brara abriram uma porta velha nas minas fundas; o gerador deu ZAIEK, que bate no Zaiast: trocado por nomes.py arcaica livre (Iothemna) · a casa sabe no 458, pela carta da Brara (rio abaixo)"
+   "conhecida": true,
+   "como": "a carta da Brara (458): os mineiros abriram a porta nas minas fundas de Levis"
   },
   {
    "nome": "Meane",
