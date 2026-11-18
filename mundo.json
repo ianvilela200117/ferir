@@ -1444,9 +1444,10 @@
    "d20": 11,
    "o_que": "UM CULTO CRESCE ou nasce",
    "onde": "d27 [25] Ulra (terra nova)",
-   "detalhe": "nome: Culto da Draol\nadora: um monstro Mítico adormecido\npromete: vida eterna\nsinal: dente arrancado\ncélulas: 4 cidades\nlíder: nível 90, classe Rara a Lendária\nrito: queima de livros\nplano (relógio de 6): matar um herdeiro\nfraqueza: dependem de um material\n————————————————————————————————————————",
+   "detalhe": "nome: Culto da Zrodda\nadora: um monstro Mítico adormecido\npromete: vida eterna\nsinal: dente arrancado\ncélulas: 4 cidades\nlíder: nível 90, classe Rara a Lendária\nrito: queima de livros\nplano (relógio de 6): matar um herdeiro\nfraqueza: dependem de um material\n————————————————————————————————————————",
    "noticia_chega": 326,
-   "chegada": "[5] em 1d6 [3] dias"
+   "chegada": "[5] em 1d6 [3] dias",
+   "nota_nome": "500: o gerador deu Draol, que bate no cânone; trocado por Zrodda (nomes.py aspera livre)"
   },
   {
    "dia": 324,
@@ -3800,6 +3801,87 @@
    "resumo": "UMA PESSOA IMPORTANTE VIAJA — a costa (Ireviel–Marasar) (Zunindi)",
    "toca": true,
    "nota_nome": "495: o gerador deu Thuium, que bate no cânone; trocado por Zunindi (nomes.py livre)"
+  },
+  {
+   "dia": 496,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Zrodda\ndesejo: proteger um filho\nambição (relógio de 4): virar Lendário\nmedo: perder a mão do ofício\nsegredo: deve a alguém perigoso\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: GENEROSO e ORGULHOSO\nnível: 190\nobra sinistra (relógio de 8): comprar o reino\npor que é humano: quer que o pai finalmente o veja\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: chantagem\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 496,
+   "chegada": "[1] hoje",
+   "resumo": "UM VILÃO NOVO entra no mundo — Lumade (Zrodda)",
+   "toca": true,
+   "nota_nome": "500: o gerador deu Draol, que bate no cânone; trocado por Zrodda (nomes.py aspera livre)"
+  },
+  {
+   "dia": 497,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]",
+   "onde": "d27 [5] Farenta",
+   "detalhe": "",
+   "noticia_chega": 499,
+   "chegada": "[2] em 1d3 [2] dias",
+   "leitura": "desaparece",
+   "resumo": "UM LENDÁRIO AGE: desaparece — Farenta",
+   "toca": true
+  },
+  {
+   "dia": 497,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "",
+   "noticia_chega": 497,
+   "chegada": "[1] hoje",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — Ireviel e o rio",
+   "toca": true
+  },
+  {
+   "dia": 497,
+   "d20": 10,
+   "o_que": "UMA RUÍNA SE ABRE (masmorra, cripta, cidade afundada)",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Bzoos\no que era: mina\npor que caiu: maldição\no que guarda: um segredo de facção\no que habita: bandidos\ncusto de entrar: uma senha\n————————————————————————————————————————",
+   "noticia_chega": 500,
+   "chegada": "[4] em 1d6 [3] dias",
+   "resumo": "UMA RUÍNA SE ABRE — Steunn (Bzoos)",
+   "toca": true,
+   "nota_nome": "500: o gerador deu Fenade, que bate no cânone; trocado por Bzoos (nomes.py aspera livre)"
+  },
+  {
+   "dia": 498,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 499,
+   "chegada": "[2] em 1d3 [1] dias",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — o brejo do oeste (a Torre Afogada)",
+   "toca": false
+  },
+  {
+   "dia": 499,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 502,
+   "chegada": "[5] em 1d6 [3] dias",
+   "leitura": "abre",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Lumade",
+   "toca": true
+  },
+  {
+   "dia": 500,
+   "d20": 14,
+   "o_que": "FESTIVAL, TORNEIO OU FEIRA GRANDE (oportunidade de fama, ouro e material)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 500,
+   "chegada": "[1] hoje",
+   "resumo": "FESTIVAL, TORNEIO OU FEIRA GRANDE — Lumade",
+   "toca": true
   }
  ]
 }

@@ -1,41 +1,5 @@
 {
  "ordem": [
-  "ST32",
-  "CL32",
-  "CH33",
-  "FL33",
-  "GU1s",
-  "GU1t",
-  "GU1f",
-  "GU1c",
-  "GU1o",
-  "GU1p",
-  "GU1m",
-  "GU2s",
-  "GU2t",
-  "GU2f",
-  "GU2c",
-  "GU2o",
-  "GU2p",
-  "GU2m",
-  "GU3s",
-  "GU3t",
-  "GU3f",
-  "GU3c",
-  "GU3o",
-  "GU3p",
-  "GU3m",
-  "GU4s",
-  "GU4t",
-  "GU4f",
-  "GU4c",
-  "GU4o",
-  "GU4p",
-  "GU4m",
-  "GU5s",
-  "GU5t",
-  "GU5f",
-  "GU5c",
   "GU5o",
   "GU5p",
   "GU5m",
@@ -399,2177 +363,45 @@
   "FV93",
   "CV93",
   "CQ93",
-  "MG93"
+  "MG93",
+  "MG95",
+  "RL96",
+  "BD96",
+  "AV96",
+  "497-laco-quem",
+  "497-laco",
+  "497-chamado",
+  "497-vinculos",
+  "TD99",
+  "CB97a",
+  "CB97b",
+  "EM00",
+  "SP00",
+  "CR00a",
+  "CR00b",
+  "CR00c",
+  "CF00-01",
+  "CF00-02",
+  "CF00-03",
+  "CF00-04",
+  "CF00-05",
+  "CF00-06",
+  "CF00-07",
+  "CF00-08",
+  "CF00-09",
+  "CF00-10",
+  "CF00-11",
+  "CF00-12",
+  "CF00-13",
+  "CF00-14",
+  "CF00-15",
+  "CF00-16",
+  "CF00-17",
+  "CF00-18",
+  "CF00-19",
+  "CF00-20"
  ],
  "selos": {
-  "ST32": {
-   "id": "ST32",
-   "dia": 432,
-   "hora": "03:09:29",
-   "titulo": "A FACÇÃO NOVA DA SURPRESA ATRASADA DO STARKALD (G8-C, novidade [7]: nasce de um conflito antigo; ele é o mestre da Guilda dos Aventureiros, fraco até o 435)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "OS DA FORQUILHA: os parentes dos caçadores que o Morek matou (o Goir e o Starkald quase) querem a Guilda fechada até haver caçada sem morte"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais",
-     "txt": "[2] → OS CAÇADORES LIVRES: os caçadores velhos de Ireviel que perderam a caça para a Guilda (412) viram bando; vendem rastro de bicho a quem pagar mais"
-    }
-   ],
-   "hora_rolado": "03:09:29"
-  },
-  "CL32": {
-   "id": "CL32",
-   "dia": 432,
-   "hora": "03:09:29",
-   "titulo": "A RESPOSTA DO CELOCUS AO TOLVANE EM LUMADE (a oferta do rei: perdoar os 2.500 e os 800 por porcentagem baixa; nada fecha sem o selo do rei; o conselho preferia depois da guerra)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ACEITA a porcentagem baixa (20%) e manda o selo dele: falta o do rei"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "CONTRAPROPÕE: 30% e o anel de volta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "RECUSA: só depois da guerra, como disse"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "03:09:29"
-  },
-  "CH33": {
-   "id": "CH33",
-   "dia": 432,
-   "hora": "03:28:59",
-   "titulo": "A CHAMA DA HOSTE (aliada, força 5; os magos da hoste, o Bjarkunn) VAI A MARASAR com o Graur?",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "NÃO: a irmandade fica a guardar Ireviel com o rei e a Marechal fora"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "VAI: 1d6+4 magos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "VAI: 1d6+4 magos",
-     "txt": "[6] → VAI: 1d6+4 magos"
-    }
-   ],
-   "hora_rolado": "03:28:59"
-  },
-  "FL33": {
-   "id": "FL33",
-   "dia": 432,
-   "hora": "03:28:59",
-   "titulo": "OS FILHOS DO LIVRO (aliados, força 3; as famílias dos barqueiros do livro; pediram guerra contra a Liga) VÃO A MARASAR?",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "VÃO: 2d6×5 homens de remo e arpão"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas",
-     "txt": "[1] → NÃO: os do Rio Vermelho os venceram no 430 e lambem as feridas"
-    }
-   ],
-   "hora_rolado": "03:28:59"
-  },
-  "GU1s": {
-   "id": "GU1s",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "Yaelane",
-     "txt": "[6] → Yaelane"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1t": {
-   "id": "GU1t",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "MAGOS",
-     "txt": "[4] → MAGOS"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1f": {
-   "id": "GU1f",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "força 3",
-     "txt": "[1] → força 3"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1c": {
-   "id": "GU1c",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "275",
-     "txt": "[5] → 275"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1o": {
-   "id": "GU1o",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "tomar uma CIDADE",
-     "txt": "[4] → tomar uma CIDADE"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1p": {
-   "id": "GU1p",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "neutra",
-     "txt": "[4] → neutra"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU1m": {
-   "id": "GU1m",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 1: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [1] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [1] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2s": {
-   "id": "GU2s",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "Yaelane",
-     "txt": "[6] → Yaelane"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2t": {
-   "id": "GU2t",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "MAGOS",
-     "txt": "[4] → MAGOS"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2f": {
-   "id": "GU2f",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "força 6",
-     "txt": "[4] → força 6"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2c": {
-   "id": "GU2c",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "175",
-     "txt": "[1] → 175"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2o": {
-   "id": "GU2o",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "acabar com uma guilda RIVAL",
-     "txt": "[6] → acabar com uma guilda RIVAL"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2p": {
-   "id": "GU2p",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "neutra",
-     "txt": "[5] → neutra"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU2m": {
-   "id": "GU2m",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 2: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [3] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [5] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3s": {
-   "id": "GU3s",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "Shizess",
-     "txt": "[4] → Shizess"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3t": {
-   "id": "GU3t",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "CAÇADORES DE MONSTROS",
-     "txt": "[1] → CAÇADORES DE MONSTROS"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3f": {
-   "id": "GU3f",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "força 4",
-     "txt": "[2] → força 4"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3c": {
-   "id": "GU3c",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "200",
-     "txt": "[2] → 200"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3o": {
-   "id": "GU3o",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo",
-     "txt": "[2] → caçar um MÍTICO e ficar com o núcleo"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3p": {
-   "id": "GU3p",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "hostil",
-     "txt": "[1] → hostil"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU3m": {
-   "id": "GU3m",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 3: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [5] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [5] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4s": {
-   "id": "GU4s",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 4: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "Telosus",
-     "txt": "[2] → Telosus"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4t": {
-   "id": "GU4t",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 4: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "CRUZADOS DE UMA FÉ",
-     "txt": "[6] → CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4f": {
-   "id": "GU4f",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 4: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "força 4",
-     "txt": "[2] → força 4"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4c": {
-   "id": "GU4c",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 4: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "300",
-     "txt": "[6] → 300"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4o": {
-   "id": "GU4o",
-   "dia": 432,
-   "hora": "03:29:44",
-   "titulo": "G12, A GUILDA 4: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo",
-     "txt": "[2] → caçar um MÍTICO e ficar com o núcleo"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4p": {
-   "id": "GU4p",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 4: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "neutra",
-     "txt": "[4] → neutra"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU4m": {
-   "id": "GU4m",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 4: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [4] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [3] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU5s": {
-   "id": "GU5s",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "Qulosus",
-     "txt": "[8] → Qulosus"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU5t": {
-   "id": "GU5t",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "CAÇADORES DE MONSTROS",
-     "txt": "[1] → CAÇADORES DE MONSTROS"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU5f": {
-   "id": "GU5f",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: A FORÇA (1d4+2)",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "força 3"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "força 4"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "força 5"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "força 6"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "força 3",
-     "txt": "[1] → força 3"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
-  "GU5c": {
-   "id": "GU5c",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: O NÍVEL DO CHEFE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "175"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "200"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "225"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "250"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "275"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "300"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "275",
-     "txt": "[5] → 275"
-    }
-   ],
-   "hora_rolado": "03:29:45"
-  },
   "GU5o": {
    "id": "GU5o",
    "dia": 432,
@@ -20780,6 +18612,2275 @@
     }
    ],
    "hora_rolado": "17:21:44"
+  },
+  "MG95": {
+   "id": "MG95",
+   "dia": 495,
+   "hora": "17:59:06",
+   "titulo": "A MAGIA DOS AROS DA ALMISION (Lendária; o rerrolar porque o 7º não cabe; os 104 do 4º ao 6º; 1x por cena, sem saber magia)",
+   "dado": [
+    1,
+    104,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Chuva de Brasas (Chama 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Inverno Breve (Gelo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Tremor (Pedra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Tempestade Local (Vento 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Lança do Sol (Luz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Noite Fechada (Sombra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Corrente de Sangue (Sangue 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Quebra-Ossos (Osso 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Servo de Osso (Osso 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Sono do Ferro (Vazio 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "Selo de Silêncio (Vazio 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "Elo de Juramento (Elo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "Visão do Tempo (Tempo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "Comando (Mente 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "Muralha de Fogo (Chama 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "Lança de Magma (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "Coração de Fornalha (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "Pele de Brasa (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "Sol de Mão (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "Passo de Brasa (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 21,
+     "b": 21,
+     "res": "Forja Sem Mão (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 22,
+     "res": "Lança de Gelo (Gelo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 23,
+     "b": 23,
+     "res": "Tumba de Gelo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 24,
+     "b": 24,
+     "res": "Inverno de Campo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 25,
+     "b": 25,
+     "res": "Armadura de Gelo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 26,
+     "b": 26,
+     "res": "Nevasca (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 27,
+     "b": 27,
+     "res": "Castelo de Gelo (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 28,
+     "b": 28,
+     "res": "Sono Branco (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 29,
+     "b": 29,
+     "res": "Mão da Terra (Pedra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 30,
+     "b": 30,
+     "res": "Terremoto (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 31,
+     "b": 31,
+     "res": "Corpo de Pedra (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 32,
+     "b": 32,
+     "res": "Abrir Caminho (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 33,
+     "b": 33,
+     "res": "Golem de Pedra (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 34,
+     "b": 34,
+     "res": "Engolir (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 35,
+     "b": 35,
+     "res": "Muralha de Cidade (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 36,
+     "b": 36,
+     "res": "Asas de Vento (Vento 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 37,
+     "b": 37,
+     "res": "Ciclone (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 38,
+     "b": 38,
+     "res": "Vento de Viagem (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 39,
+     "b": 39,
+     "res": "Raio (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 40,
+     "b": 40,
+     "res": "Tempestade (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 41,
+     "b": 41,
+     "res": "Andar no Ar (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 42,
+     "b": 42,
+     "res": "Muralha de Vento (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 43,
+     "b": 43,
+     "res": "Cura Maior (Luz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 44,
+     "b": 44,
+     "res": "Cura em Roda (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 45,
+     "b": 45,
+     "res": "Escudo de Luz (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 46,
+     "b": 46,
+     "res": "Verdade (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 47,
+     "b": 47,
+     "res": "Erguer o Caído (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 48,
+     "b": 48,
+     "res": "Sol de Meio-Dia (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 49,
+     "b": 49,
+     "res": "Selo Santo (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 50,
+     "b": 50,
+     "res": "Lâmina de Sombra (Sombra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 51,
+     "b": 51,
+     "res": "Exército de Sombras (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 52,
+     "b": 52,
+     "res": "Sumir de Vez (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 53,
+     "b": 53,
+     "res": "Pesadelo (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 54,
+     "b": 54,
+     "res": "Estrada de Sombra (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 55,
+     "b": 55,
+     "res": "Roubar a Sombra (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 56,
+     "b": 56,
+     "res": "Casa Escondida (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 57,
+     "b": 57,
+     "res": "Ferver o Sangue (Sangue 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 58,
+     "b": 58,
+     "res": "Doar a Vida (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 59,
+     "b": 59,
+     "res": "Marionete (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 60,
+     "b": 60,
+     "res": "Sangue de Ferro (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 61,
+     "b": 61,
+     "res": "Chuva de Sangue (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 62,
+     "b": 62,
+     "res": "Laço de Família (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 63,
+     "b": 63,
+     "res": "Sangue Novo (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 64,
+     "b": 64,
+     "res": "Reanimar (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 65,
+     "b": 65,
+     "res": "Mão Que Seca (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 66,
+     "b": 66,
+     "res": "Muro de Ossos (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 67,
+     "b": 67,
+     "res": "Exército de Ossos (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 68,
+     "b": 68,
+     "res": "Prender a Alma (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 69,
+     "b": 69,
+     "res": "Toque do Ceifador (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 70,
+     "b": 70,
+     "res": "Apagar (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 71,
+     "b": 71,
+     "res": "Lugar Nenhum (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 72,
+     "b": 72,
+     "res": "Rasgo (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 73,
+     "b": 73,
+     "res": "Campo Morto (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 74,
+     "b": 74,
+     "res": "Porta do Nada (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 75,
+     "b": 75,
+     "res": "Esquecer (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 76,
+     "b": 76,
+     "res": "Corrente Viva (Elo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 77,
+     "b": 77,
+     "res": "Corrente Mestre (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 78,
+     "b": 78,
+     "res": "Elo de Guerra (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 79,
+     "b": 79,
+     "res": "Puxar (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 80,
+     "b": 80,
+     "res": "Laço de Servo (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 81,
+     "b": 81,
+     "res": "Âncora (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 82,
+     "b": 82,
+     "res": "Romper Laço (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 83,
+     "b": 83,
+     "res": "Lento (Tempo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 84,
+     "b": 84,
+     "res": "Parar a Hora (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 85,
+     "b": 85,
+     "res": "Ler o Ano (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 86,
+     "b": 86,
+     "res": "Envelhecer o Alvo (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 87,
+     "b": 87,
+     "res": "Desfazer o Dia (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 88,
+     "b": 88,
+     "res": "Pressa de Tropa (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 89,
+     "b": 89,
+     "res": "Guardar a Hora (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 90,
+     "b": 90,
+     "res": "Medo em Massa (Mente 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 91,
+     "b": 91,
+     "res": "Dominar (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 92,
+     "b": 92,
+     "res": "Elo de Mente (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 93,
+     "b": 93,
+     "res": "Golpe na Mente (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 94,
+     "b": 94,
+     "res": "Apagar Lembrança (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 95,
+     "b": 95,
+     "res": "Multidão Mansa (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 96,
+     "b": 96,
+     "res": "Muralha da Mente (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 97,
+     "b": 97,
+     "res": "Forma de Fera (Raiz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 98,
+     "b": 98,
+     "res": "Mata Fechada (Raiz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 99,
+     "b": 99,
+     "res": "Praga (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 100,
+     "b": 100,
+     "res": "Colheita Boa (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 101,
+     "b": 101,
+     "res": "Árvore que Anda (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 102,
+     "b": 102,
+     "res": "Caminho da Mata (Raiz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 103,
+     "b": 103,
+     "res": "Enxame (Raiz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 104,
+     "b": 104,
+     "res": "Remédio Vivo (Raiz 6º)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      67
+     ],
+     "total": 67,
+     "res": "Exército de Ossos (Osso 6º)",
+     "txt": "[67] → Exército de Ossos (Osso 6º)"
+    }
+   ],
+   "hora_rolado": "17:59:07"
+  },
+  "RL96": {
+   "id": "RL96",
+   "dia": 495,
+   "hora": "17:59:40",
+   "titulo": "A VIAGEM A LEVIS (sai na manhã do 496, 4 dias rio acima pelas barcas leves: o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, a Matriz e o Martelo; o rio baixo, 31; o RHAOS, Raro 44 de Fogo e CAÇADOR, anda no rio desde o 490)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o RHAOS escolhe as barcas e as segue: ataca na noite do 498 (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "os vaus seguram: Levis na manhã do 501"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "Levis no entardecer do 500"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Levis no entardecer do 500",
+     "txt": "[4] → Levis no entardecer do 500"
+    }
+   ],
+   "hora_rolado": "17:59:40"
+  },
+  "BD96": {
+   "id": "BD96",
+   "dia": 495,
+   "hora": "17:59:40",
+   "titulo": "(OCULTO até a notícia) A ISOLDA LEVA A BALANÇA À LURENTETTA (sai no 496 rio abaixo com os do Croque; o Delta em ~2 dias: 498; o prazo passou no 487 e ela não cobrou; a peça é Lendária, feita do corpo da fera que comeu o povo dela, e jura as duas cidades)",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela a aceita, fria: 'paga, e tarde' (a dívida fechada, nada mais)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ela a aceita e JURA sobre ela com a Isolda pela casa: as duas cidades presas pelo Elo de Juramento (a aliança vira pacto)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "ela jura e manda ao rei a MIE e vinte lanças para Levis, para o que ele for fazer lá (chegam em ~4 dias)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 2,
+     "res": "ela a aceita, fria: 'paga, e tarde' (a dívida fechada, nada mais)",
+     "txt": "[1] +1 = 2 → ela a aceita, fria: 'paga, e tarde' (a dívida fechada, nada mais)"
+    }
+   ],
+   "hora_rolado": "17:59:40"
+  },
+  "AV96": {
+   "id": "AV96",
+   "dia": 495,
+   "hora": "17:59:40",
+   "titulo": "QUANDO A ALMISION MANDA BUSCAR OS AROS (o corvo leva a notícia na aurora do 496; ela está na estrada, caçada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela mesma vem pela Porta do Nada no 497 e leva os aros (e paga a aula no 50)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "um homem dela vem no 499 com o selo da Escola Única"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ninguém vem: o corvo volta só, e a Almision cala (a caçada a alcançou?)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um homem dela vem no 499 com o selo da Escola Única",
+     "txt": "[4] → um homem dela vem no 499 com o selo da Escola Única"
+    }
+   ],
+   "hora_rolado": "17:59:40"
+  },
+  "497-laco-quem": {
+   "id": "497-laco-quem",
+   "dia": 497,
+   "hora": "17:59:53",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o HERKALD",
+     "txt": "[1] → o HERKALD"
+    }
+   ],
+   "hora_rolado": "17:59:53"
+  },
+  "497-laco": {
+   "id": "497-laco",
+   "dia": 497,
+   "hora": "17:59:53",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "MOMENTO",
+     "txt": "[5] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "17:59:53"
+  },
+  "497-chamado": {
+   "id": "497-chamado",
+   "dia": 497,
+   "hora": "17:59:53",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 24,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      9
+     ],
+     "total": 13,
+     "res": "chega 1",
+     "txt": "[9] +4 = 13 → chega 1"
+    }
+   ],
+   "hora_rolado": "17:59:53"
+  },
+  "497-vinculos": {
+   "id": "497-vinculos",
+   "dia": 497,
+   "hora": "17:59:53",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "Nouliel–Herkald",
+     "txt": "#1 [1] → Nouliel–Herkald"
+    },
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Krernos–Graur",
+     "txt": "#2 [4] → Krernos–Graur"
+    }
+   ],
+   "hora_rolado": "17:59:53"
+  },
+  "TD99": {
+   "id": "TD99",
+   "dia": 500,
+   "hora": "18:00:35",
+   "titulo": "O TULGALD E O DUTOONE NO PRAZO (499; pedem uma peça Rara+ cada um, no lugar de soldo; o rei fora; a NOULIEL governa e a forja grande do Herkald faz Épicas toda semana)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "eles VÃO EMBORA: a casa não pagou no prazo (a palavra da casa pesa no próximo chamado: −1)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "a NOULIEL e o HERKALD dão a cada um uma ÉPICA da série da semana (a venda perdida: −3.200 no cofre) e eles ficam"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a NOULIEL e o HERKALD dão a cada um uma ÉPICA da série da semana (a venda perdida: −3.200 no cofre) e eles ficam",
+     "txt": "[4] → a NOULIEL e o HERKALD dão a cada um uma ÉPICA da série da semana (a venda perdida: −3.200 no cofre) e eles ficam"
+    }
+   ],
+   "hora_rolado": "18:00:35"
+  },
+  "CB97a": {
+   "id": "CB97a",
+   "dia": 500,
+   "hora": "18:00:35",
+   "titulo": "(OCULTO até acontecer) A COBIÇA DO 497: A MATRIZ, d20 [1]: ALGUÉM GRANDE (a Matriz vai com o rei rio acima, a Levis; os conselheiros da Liga sabem o segredo dela desde o 490)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os CONSELHEIROS pagam gente para tomar a Matriz no último vau antes de Levis, na tarde do 500 (a emboscada: a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o CULTO DO XAATHIS sabe que a Matriz vem: o líder espera nas estacas com o culto inteiro"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o BORECCI manda uma carta ao rei em Levis: quer comprar a Matriz (um preço de reino)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "os CONSELHEIROS pagam gente para tomar a Matriz no último vau antes de Levis, na tarde do 500 (a emboscada: a luta, G9)",
+     "txt": "[1] → os CONSELHEIROS pagam gente para tomar a Matriz no último vau antes de Levis, na tarde do 500 (a emboscada: a luta, G9)"
+    }
+   ],
+   "hora_rolado": "18:00:35"
+  },
+  "CB97b": {
+   "id": "CB97b",
+   "dia": 500,
+   "hora": "18:00:35",
+   "titulo": "(OCULTO) A COBIÇA DO 497: OS AROS DO GRAUR, d20 [3] (o Graur em Farenta; a Almision também os pediu)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um ladrão tenta em Farenta; o Graur o pega (DISCIPLINADO, nunca dorme em vigia: os aros)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a Almision escreve ao Graur direto, oferecendo a ele o que ofereceu ao rei"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "só olhos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a Almision escreve ao Graur direto, oferecendo a ele o que ofereceu ao rei",
+     "txt": "[3] → a Almision escreve ao Graur direto, oferecendo a ele o que ofereceu ao rei"
+    }
+   ],
+   "hora_rolado": "18:00:35"
+  },
+  "EM00": {
+   "id": "EM00",
+   "dia": 500,
+   "hora": "18:01:14",
+   "titulo": "QUEM EMBOSCA NO ÚLTIMO VAU ANTES DE LEVIS (CB97a [1]; tarde do 500; gente paga pelos CONSELHEIROS da Liga, que sabem o segredo da Matriz; a Matriz amarrada no fundo da barca do rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "VINTE pagos (soldados) e um capitão (Raro, nível 60)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "TRINTA pagos e dois capitães (60 e 70)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "TRINTA pagos, um capitão (70) e um MAGO pago (Épico, nível 90, fogo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "VINTE pagos (soldados) e um capitão (Raro, nível 60)",
+     "txt": "[2] → VINTE pagos (soldados) e um capitão (Raro, nível 60)"
+    }
+   ],
+   "hora_rolado": "18:01:14"
+  },
+  "SP00": {
+   "id": "SP00",
+   "dia": 500,
+   "hora": "18:01:14",
+   "titulo": "A ESCOLTA VÊ A EMBOSCADA ANTES? (o vau raso é lugar certo de emboscada; os do Gonde na proa; a Lança do Bren da Eliane AVISA do inimigo escondido a 9 m)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "NÃO: eles batem primeiro (a escolta −5 na primeira rodada do combate rápido)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 1000000,
+     "res": "SIM: a Lança avisa e a escolta bate primeiro (os pagos −5 na primeira rodada)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 23,
+     "res": "SIM: a Lança avisa e a escolta bate primeiro (os pagos −5 na primeira rodada)",
+     "txt": "[19] +4 = 23 → SIM: a Lança avisa e a escolta bate primeiro (os pagos −5 na primeira rodada)"
+    }
+   ],
+   "hora_rolado": "18:01:14"
+  },
+  "CR00a": {
+   "id": "CR00a",
+   "dia": 500,
+   "hora": "18:01:34",
+   "titulo": "COMBATE RÁPIDO NO VAU: A ESCOLTA",
+   "dado": [
+    1,
+    20,
+    54
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 200,
+     "res": "o total"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      10
+     ],
+     "total": 64,
+     "res": "o total",
+     "txt": "[10] +54 = 64 → o total"
+    }
+   ],
+   "hora_rolado": "18:01:35"
+  },
+  "CR00b": {
+   "id": "CR00b",
+   "dia": 500,
+   "hora": "18:01:35",
+   "titulo": "COMBATE RÁPIDO NO VAU: OS PAGOS",
+   "dado": [
+    1,
+    20,
+    25
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 200,
+     "res": "o total"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 45,
+     "res": "o total",
+     "txt": "[20] +25 = 45 → o total"
+    }
+   ],
+   "hora_rolado": "18:01:35"
+  },
+  "CR00c": {
+   "id": "CR00c",
+   "dia": 500,
+   "hora": "18:01:35",
+   "titulo": "COMO OS PAGOS QUEBRAM (vale se forem destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o capitão e uns cinco fogem pelo mato"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o capitão foge só, os outros caem"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ninguém escapa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o capitão foge só, os outros caem",
+     "txt": "[3] → o capitão foge só, os outros caem"
+    }
+   ],
+   "hora_rolado": "18:01:35"
+  },
+  "CF00-01": {
+   "id": "CF00-01",
+   "dia": 500,
+   "hora": "18:01:47",
+   "titulo": "O PAGO CAÍDO Nº 1 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-02": {
+   "id": "CF00-02",
+   "dia": 500,
+   "hora": "18:01:47",
+   "titulo": "O PAGO CAÍDO Nº 2 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-03": {
+   "id": "CF00-03",
+   "dia": 500,
+   "hora": "18:01:47",
+   "titulo": "O PAGO CAÍDO Nº 3 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "leve (preso)",
+     "txt": "[5] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-04": {
+   "id": "CF00-04",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 4 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-05": {
+   "id": "CF00-05",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 5 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "morto",
+     "txt": "[1] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-06": {
+   "id": "CF00-06",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 6 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "grave (preso)",
+     "txt": "[3] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-07": {
+   "id": "CF00-07",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 7 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "leve (preso)",
+     "txt": "[5] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-08": {
+   "id": "CF00-08",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 8 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "grave (preso)",
+     "txt": "[3] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-09": {
+   "id": "CF00-09",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 9 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-10": {
+   "id": "CF00-10",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 10 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-11": {
+   "id": "CF00-11",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 11 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "morto",
+     "txt": "[1] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-12": {
+   "id": "CF00-12",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 12 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-13": {
+   "id": "CF00-13",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 13 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "leve (preso)",
+     "txt": "[5] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-14": {
+   "id": "CF00-14",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 14 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "morto",
+     "txt": "[1] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-15": {
+   "id": "CF00-15",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 15 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "leve (preso)",
+     "txt": "[6] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-16": {
+   "id": "CF00-16",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 16 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "grave (preso)",
+     "txt": "[3] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-17": {
+   "id": "CF00-17",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 17 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "morto",
+     "txt": "[1] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-18": {
+   "id": "CF00-18",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 18 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "grave (preso)",
+     "txt": "[3] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-19": {
+   "id": "CF00-19",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 19 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
+  },
+  "CF00-20": {
+   "id": "CF00-20",
+   "dia": 500,
+   "hora": "18:01:48",
+   "titulo": "O PAGO CAÍDO Nº 20 NO VAU (CR00: destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "18:01:48"
   }
  }
 }

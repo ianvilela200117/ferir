@@ -1,0 +1,39 @@
+OBRA "Os Aros da Almision" (armadura)
+    +12  MÃO · Maestria Forja Lendário
+    +10  MÃO · Inteligência 116 ÷ 10 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +6  MÃO · Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)
+     +1  MÃO · Olho do Material
+     +1  MÃO · Fole Firme 2
+     +1  MÃO · Alma no Aço 2
+     +3  MÃO · Mão que Não Treme 3
+     +2  MÃO · Veio Certo 2 (pontos do 3 e do 15 do Herdeiro)
+     +2  MÃO · Golpe de Mestre 2 (pontos do 6 e do 18 do Herdeiro)
+     +7  MATERIAL epico
+     +7  FERRAMENTA O MARTELO DO REI (Ferramenta de Rei, de Dragal) (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): o Martelo do Rei soma o dobro
+     +7  FERRAMENTA A MATRIZ (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): a Matriz soma o dobro
+     +5  FERRAMENTA TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150) (mitico, metade)
+     +5  FERRAMENTA · FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)
+     +3  FERRAMENTA · fole: o arvel como ferramenta (+3 em toda obra de forja)
+     +2  FERRAMENTA · fole: segura o calor certo (+2 no Processo)
+     +6  OFICINA Fornalha que Não Apaga
+     +5  RECEITA (mestra)
+     +2  AJUDANTES (máx. +6)
+    ---- SOMA DOS VALORES: 120
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [4] + [12] → TOTAL 136
+  dados de saída: [3] + [12] = 135
+  ALMA OUVIDA (sem Revés): [3] → [4] (total 136)
+  RESULTADO: Os Aros da Almision — PRIMORDIAL · XP 50000
+  → lançar: python3 ficha.py xp 50000 "Os Aros da Almision (Primordial)"   (ajudantes: 1/4 cada, no cresce.py)
+    efeito novo 1: RD +2 contra lâminas
+    efeito novo 2: quem a veste ouve o próprio coração: nunca dorme em vigia
+    efeito novo 3: veste e tira sozinho em meio minuto
+    efeito novo 4: a armadura avisa veneno: o metal escurece perto dele
+    efeito novo 5: 1x por cena, um crítico vira golpe normal
+    efeito novo 6: 1x por cena, +4 de Defesa por 1 rodada
+    efeito novo 7: 1x por dia, devolve 1d8 a quem acertar o portador
+    efeito de magia (d52 do grimório): Prender no Tempo (Tempo 7º): um alvo fica parado no tempo por 1 dia (Vontade CD 55). Componente: um núcleo de Tempo Raro — 1x por cena, sem saber magia (se não couber na peça, rerrolar)

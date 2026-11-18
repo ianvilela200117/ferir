@@ -1882,3 +1882,37 @@ A letra da Almision era pequena e reta. Aros novos serviam, se fossem da mão de
 Não dizia quem.
 
 - **Parada:** manhã do 495, a Fornalha. A carta da Almision. A Balança pronta para o Delta. A Matriz e o Martelo prontos para Levis.
+
+## Dia 495 ao entardecer do 500 — os aros, o cais, o vau, Levis
+
+### A Fornalha, 495
+O vaduar não gosta de fogo. O rei o bateu a frio sobre a Matriz, com o couro do Brakos dobrado dentro, e o metal cinza foi ficando escuro como cinza molhada. Quando os dois aros ficaram prontos, a lamparina da bancada tremeu e quase apagou, como se alguém tivesse respirado em cima dela.
+
+Na noite, o Apagar entrou neles sem resistência. A Tilde os segurou contra a luz e disse que pareciam com fome.
+
+### O cais de Ireviel, manhã do 496
+O Herkald estava no cais antes do rei, com o capuz de lã velho e as mãos nos bolsos.
+
+"Fui duro", disse. "Não retiro." Olhou a Matriz sendo amarrada no fundo da barca. "Mas um velho que viu um menino nos ombros do pai não tem o direito de ficar de braços cruzados quando o menino vai para o rio sozinho."
+
+Deu ao rei um embrulho: pão, sal e um martelinho de bolso, o primeiro que o rei teve, que o Herkald guardava havia trinta anos sem dizer.
+
+### O último vau, tarde do 500
+O vau era raso e largo, com mato alto dos dois lados, o lugar certo para uma emboscada, e todos sabiam disso. A Lança do Bren tremeu na mão da Eliane antes do primeiro barulho.
+
+"Mato da esquerda", disse ela. "Vinte, ou mais."
+
+A escolta bateu primeiro. O Moreth saiu da barca para a água rasa com a maça acesa, e o mato pegou fogo onde a luz tocou. O Eiagrir varreu a margem com a lança. Os pagos não chegaram às barcas. Quando acabou, nove estavam mortos na lama e onze estavam amarrados, e o capitão deles corria pelo mato sozinho, sem olhar para trás.
+
+Um dos presos, com o braço quebrado, cuspiu na água. "A pedra", disse. "Pagaram pela pedra."
+
+### Levis, entardecer do 500
+A Brara esperava na cabeça da ponte de Levis-baixa com trinta homens da guarda e um rosto que não dormia havia uma semana.
+
+"Eles estão lá", disse, e apontou com o queixo.
+
+Do outro lado da ponte, Levis-baixa estava quieta demais. Não havia luz nas janelas. No fim do bairro, onde o rio velho corria entre estacas de madeira escura com dentes de ferro, havia um homem sentado, de costas para a cidade, com gente ajoelhada em volta dele.
+
+"Nenhum feitiço pega lá dentro", disse a Brara. "Nem os nossos. Mas amanhã ou depois, dizem os velhos, a coisa volta. E eu não sei se volta para nós ou para eles."
+
+- **Parada:** entardecer do 500, a ponte de Levis-baixa. Onze presos. O líder do culto nas estacas. O rei a um passo do nível 50.

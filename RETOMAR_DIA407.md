@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 495, IREVIEL, A FORNALHA: a carta da Almision; a Balança pronta; Levis à frente (MOTOR 9b: G1 a G38)
+# RETOMAR — entardecer do Dia 500, LEVIS, a ponte de Levis-baixa (MOTOR 9b: G1 a G38)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 500, LEVIS, a cabeça da ponte de Levis-baixa (os ticks do 496 ao 500; o semanal no 497). O rei HERDEIRO no NÍVEL 49 (XP 122.510; o 50 em 122.600: faltam 90), Int 117, Afinidade 103, PV 267, Mana 96, Foco 15, 1 ação; Erudito 1/1; 10 pontos guardados. Com ele: o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, a MATRIZ e o MARTELO; a BRARA e trinta da guarda de Levis. ONZE PRESOS da emboscada do vau (os pagos dos conselheiros da Liga; 7 graves); o capitão fugiu. LEVIS-BAIXA: o culto do Xaathis; o LÍDER (120) sentado nas estacas do selo velho com o culto ajoelhado; a magia volta por volta do 501 (para os dois lados); o Remendar a Coberta (1 dia sobre o selo) fecharia o selo (o relógio do culto +1). O ITHVIL (Mítico 276) visto de dia em Levis. Os da Mina Fechada oferecem aliança. A Isolda no Delta (a Balança entregue, a dívida da Lurentetta fechada). Os aros da Almision entregues no 499; a aula do 6º círculo no nível 50. Cofre 53.920.
+
+Antes (495, manhã):
 Manhã do 495, IREVIEL, A FORNALHA (os ticks do 493 ao 495). O rei HERDEIRO no NÍVEL 48 (XP 113.510; o 50 em 122.600), Int 116, Afinidade 102, PV 265, Mana 95, Foco 15, 1 ação; ERUDITO 1/1; os pontos: Veio Certo 2, Golpe de Mestre 2, Obra-Prima 2, 10 GUARDADOS; os talentos novos: Estrela Boa, Foco Vivo, ESCOLA FUNDA na LUZ (a escola posta pelo Mestre; troca se o jogador quiser). O TERASETH entregue ao rio (493). A ISOLDA herdou o Croque do Rio e a armadura do rei (CV93 B) e é a capitã dos do Croque (CQ93 [6]; força 5). A BALANÇA DAS DUAS MARGENS (Lendária; Elo de Juramento inteiro; Pressa de Tropa; range quando o dono tem medo) pronta para a Lurentetta, no Delta. A CARTA DA ALMISION (495): aros novos de Cinza Saciado servem, da mão do rei; o favor: um feitiço do 6º círculo da Escola Única quando ele chegar ao 50; 'para me guardar de quem me caça' ((OCULTO) HA93 [1]: o BORECCI). A casa tem vaduar 0,5 kg e as pedras de Cinza Saciado de Farenta. A Matriz e o Martelo prontos para Levis-baixa (o culto, o líder nas estacas, a magia volta por volta do 501). A Tilde voltou a falar com o rei (um pouco); o Herkald ainda brigado. Cofre 57.593.
 
 Antes (492, noite):
@@ -365,11 +368,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (492 → 495): 1a o Teraseth no rio; o conselho e os do Croque decidem as peças · 2b ouvir o favor da Almision; 'posso forjar outros aros? para que ela os quer?' · 3a a peça da Lurentetta já ('unir as duas cidades e ajudar a cidade dela') · 4b Levis depois · 5 os pontos como a proposta; os talentos Estrela Boa, Foco Vivo, Escola Funda
 - a regra dos aros (sem dado) · AL93 [5] · HA93 [1] · TR93 [3] · AR93 [5] · FV93 [4] · CV93 B · CQ93 [6] · a Balança (176: Lendária pelo teto) · MG93 Pressa de Tropa · o encanto Elo de Juramento (181: inteiro) · os ticks 493-495 · os nomes trocados (Haron → Vdernos; Thuium → Zunindi).
 
+## RESPONDIDO (495 → 500): 1a os aros já · 2a a Isolda leva a Balança · 3a Levis com o Moreth, o Eiagrir, a Eliane, o Gonde e os 10 · 4a a Escola Funda na Luz
+- os Aros da Almision (136: Lendários pelo teto) · MG95 Exército de Ossos · o encanto Apagar (173: inteiro) · RL96 [4] · BD96 2 · AV96 [4] · os ticks 496-500 · TD99 [4] (o prazo do chamado, erro do Mestre) · CB97a [1] · CB97b [3] · EM00 [2] · SP00 23 · CR00 (64 × 45) · CR00c [3] · CF00 (9 mortos, 11 presos) · os nomes trocados (Draol → Zrodda; Fenade → Bzoos; Nesgal → Nulalletta).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. OS AROS PARA A ALMISION (aros novos de Cinza Saciado, da mão do rei; o vaduar 0,5 kg; a frio sobre a Matriz, um dia; o favor: um feitiço do 6º círculo quando o rei chegar ao 50): a) forjar já, antes de Levis · b) forjar na volta de Levis · c) recusar · d) perguntar antes quem a caça.
-2. A BALANÇA PARA A LURENTETTA (o Delta, rio abaixo): a) a Isolda leva, com os do Croque · b) o Krernos leva, com a barca do sal · c) o rei leva na volta de Levis.
-3. LEVIS-BAIXA (4 dias rio acima; a Matriz e o Martelo para o Remendar a Coberta; o líder do culto nas estacas; lá a magia some até ~501): quem vai com o rei: a) o Moreth, o Eiagrir, a Eliane, o Gonde e os 10 · b) e mais a Hoste (as lanças) · c) outro.
-4. A ESCOLA FUNDA: a) fica na LUZ (a proposta do Mestre) · b) outra escola (diga qual).
+1. AS ESTACAS DE LEVIS-BAIXA (o líder do culto, 120, e o culto; lá NENHUMA magia pega, nem a das peças, até ~501): a) atacar JÁ, sem magia: só aço (o Moreth, o Eiagrir, a Eliane, a guarda da Brara) · b) esperar a magia voltar (~501: volta para os dois lados) · c) cercar o bairro e falar com o líder antes · d) outra.
+2. OS ONZE PRESOS (pagos dos conselheiros da Liga, pela Matriz): a) interrogar (quem pagou, por onde) · b) julgamento em praça, em Levis · c) mortos na muralha (a Liga a zero) · d) usar de isca.
+3. O REMENDAR A COBERTA (depois das estacas): a) fechar o selo (um dia sobre ele; o culto avança 1 no relógio) · b) não fechar ainda.
+4. O NÍVEL 50 (faltam 90 de XP): os feitiços do 4º ao 6º acordam; a aula da Almision; o grau 3 dos pontos: a) gastar 3 dos guardados no grau 3 (Veio Certo, Golpe de Mestre, Obra-Prima) quando chegar · b) guardar todos.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

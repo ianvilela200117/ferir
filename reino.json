@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 490,
+  "dia": 497,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -30,12 +30,12 @@
    "ÉDITO DA FEIRA FRANCA (469; o Porto de Marasar): uma novidade de mercado por lua na cidade; a portagem dela cai à metade (os 100 por semana)"
   ],
   "relacoes": {
-   "a Doge Skotha (Marasar)": -1,
-   "o Clã Hegre": 0,
+   "a Doge Skotha (Marasar)": 0,
+   "o Clã Hegre": -1,
    "Steunn": 0,
    "os Do Junco (o Delta)": -1,
    "a Escola Única (Almision)": 0,
-   "o Colégio": 4,
+   "o Colégio": 5,
    "a Leliel (o Norte; a Liga é dela)": -3,
    "a Escola Única": 2
   },
@@ -85,9 +85,10 @@
    "469: semana do reino; renda de fora do livro +2400",
    "476: semana do reino; renda de fora do livro +2150",
    "483: semana do reino; renda de fora do livro +2450",
-   "490: semana do reino; renda de fora do livro +2300"
+   "490: semana do reino; renda de fora do livro +2300",
+   "497: semana do reino; renda de fora do livro +2000"
   ],
-  "ultima_semana": 490,
+  "ultima_semana": 497,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -108,7 +109,7 @@
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -218,7 +219,8 @@
     "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]",
     "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]",
     "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]",
-    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]"
+    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]",
+    "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]"
    ],
    "obras_feitas": [
     {
@@ -270,7 +272,7 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 4,
+    "Comida": 3,
     "Comércio": 1,
     "Dinheiro": 3,
     "Saúde": 4,
@@ -290,6 +292,10 @@
      [
       1,
       "a sobra de grão da várzea nova de Ireviel (451; de vez)"
+     ],
+     [
+      1,
+      "clima: colheita em tempo seco, 5 dias limpos (até o 503)"
      ]
     ],
     "Comércio": [
@@ -324,10 +330,6 @@
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
-     ],
-     [
-      -1,
-      "FD76: o Pelaone desembarca e Marasar racha (até o 490)"
      ]
     ],
     "Defesa": [
@@ -373,7 +375,8 @@
     "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]",
     "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]",
     "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]",
-    "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]"
+    "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]",
+    "497: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [11]"
    ]
   },
   {
@@ -381,8 +384,8 @@
    "tipo": "cidade (tomada da Liga no 332; anexada pelo conselho)",
    "gente": 9000,
    "pilares": {
-    "Comida": 2,
-    "Comércio": 4,
+    "Comida": 1,
+    "Comércio": 3,
     "Dinheiro": 1,
     "Saúde": 3,
     "Ordem": 2,
@@ -477,7 +480,8 @@
     "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]",
     "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]",
     "483: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 3 · Defesa 4 · evento [19]",
-    "490: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [14]"
+    "490: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [14]",
+    "497: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [12]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -507,11 +511,11 @@
    "gente": 10000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 4,
+    "Comércio": 3,
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 3,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Ordem": [
@@ -566,7 +570,8 @@
     "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]",
     "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
     "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]",
-    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]"
+    "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]",
+    "497: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [7]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

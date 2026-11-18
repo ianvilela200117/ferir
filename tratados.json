@@ -17,7 +17,7 @@
      "quem": "eles",
      "o_que": "1 kg de shasha",
      "a_cada": 7,
-     "proxima": 491
+     "proxima": 498
     },
     {
      "quem": "eles",
@@ -42,7 +42,8 @@
     "469: eles, cláusula 2: [1]+0 FALHAM",
     "476: eles, cláusula 2: [9]+0 cumprem",
     "483: eles, cláusula 2: [16]-1 cumprem",
-    "490: eles, cláusula 2: [19]-1 cumprem"
+    "490: eles, cláusula 2: [19]-1 cumprem",
+    "497: eles, cláusula 2: [11]+0 cumprem"
    ]
   },
   "lumade": {

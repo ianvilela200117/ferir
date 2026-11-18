@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 48,
- "xp": 113510,
+ "nivel": 49,
+ "xp": 122510,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 116,
+  "Inteligência": 117,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 102
+  "Afinidade": 103
  },
  "pv": [
-  265,
-  265
+  267,
+  267
  ],
  "mana": [
-  95,
-  95
+  96,
+  96
  ],
  "foco": 15,
  "fortuna": [
@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 57593,
+ "cofre": 53920,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 490,
+  "ultima_semana": 497,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -459,6 +459,18 @@
    "valor": -173,
    "motivo": "semana: casa 6457 + cidades 2300 − despesa 8930",
    "saldo": 57593
+  },
+  {
+   "dia": 497,
+   "valor": -473,
+   "motivo": "semana: casa 6457 + cidades 2000 − despesa 8930",
+   "saldo": 57120
+  },
+  {
+   "dia": 500,
+   "valor": -3200,
+   "motivo": "499: TD99: a Nouliel e o Herkald dão ao TULGALD e ao DUTOONE uma Épica cada da série da semana (o preço do chamado, G3; a venda perdida)",
+   "saldo": 53920
   }
  ],
  "materiais": {
@@ -495,7 +507,7 @@
    ]
   },
   "shasha": {
-   "kg": 6.6,
+   "kg": 6.4,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
@@ -505,7 +517,8 @@
     "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)",
     "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar",
     "Dia 490: +1 490: o tratado da Doge Skotha cumpre (1 kg de shasha)",
-    "Dia 492: -0.2 494: o condutor do Elo de Juramento na Balança"
+    "Dia 492: -0.2 494: o condutor do Elo de Juramento na Balança",
+    "Dia 495: -0.2 495: o condutor do Apagar nos Aros da Almision"
    ]
   },
   "zezha": {
@@ -548,9 +561,10 @@
    ]
   },
   "vaduar": {
-   "kg": 0.5,
+   "kg": 0.0,
    "log": [
-    "Dia 416: +0.5 416: uma das duas barras de vaduar do armazém do Ardenghi (a partilha; a outra fica em Levis)"
+    "Dia 416: +0.5 416: uma das duas barras de vaduar do armazém do Ardenghi (a partilha; a outra fica em Levis)",
+    "Dia 495: -0.5 495: os AROS DA ALMISION (Cinza Saciado)"
    ]
   },
   "draek": {
@@ -691,9 +705,10 @@
    ]
   },
   "yaane": {
-   "kg": 4.0,
+   "kg": 3.5,
    "log": [
-    "Dia 468: +4 469: o BRAKOS (Raro, Vida; escama): o mesmo (o gerador deu FENINE, que bate no Fenmir: nomes.py liquida livre)"
+    "Dia 468: +4 469: o BRAKOS (Raro, Vida; escama): o mesmo (o gerador deu FENINE, que bate no Fenmir: nomes.py liquida livre)",
+    "Dia 495: -0.5 495: o material de Vida dos AROS DA ALMISION"
    ]
   },
   "uldun": {
@@ -771,11 +786,6 @@
   }
  },
  "xp_log": [
-  "Dia 468: SOBE ao 158",
-  "Dia 468: SOBE ao 159",
-  "Dia 468: +0 conferência",
-  "Dia 472: +350 472: o ERYGAL (Raro 35, o guardião do portão de Dragal), pelo Toque do Ceifador (nível × 10)",
-  "Dia 478: O GOLPE DO MARTELO DO REI NA MATRIZ: a classe HERDEIRO DO REI-FERREIRO (Lendária, Forja; Marco 4, Peça Oculta): o nível volta a 1 (era 159, XP 1.262.114); 25% dos atributos ganhos por nível ficam (VII.6)",
   "Dia 477: +2500 479: O CAJADO DE ÂMBAR (Lendário; a peça do Colégio)",
   "Dia 477: SOBE ao 2",
   "Dia 477: SOBE ao 3",
@@ -831,7 +841,11 @@
   "Dia 492: SOBE ao 47",
   "Dia 492: +2500 494: A BALANÇA DAS DUAS MARGENS (Lendária; a peça da Lurentetta)",
   "Dia 492: +2500 494: o encanto ELO DE JURAMENTO na Balança das Duas Margens (inteiro)",
-  "Dia 492: SOBE ao 48"
+  "Dia 492: SOBE ao 48",
+  "Dia 495: +2500 495: OS AROS DA ALMISION (Lendários; Cinza Saciado)",
+  "Dia 495: +2500 495: o encanto APAGAR nos Aros da Almision (inteiro)",
+  "Dia 495: SOBE ao 49",
+  "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

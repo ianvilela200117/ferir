@@ -1,0 +1,34 @@
+ENCANTAMENTO "Apagar" (5º círculo) numa peça Lendária · LIMIAR 94 (CD 84 +10 pelo círculo)
+     +9  MÃO · Maestria Encantamento Mestre
+    +10  MÃO · (Int 116 + Afinidade 102) ÷ 20 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +3  MÃO · Mão de Mestre (Processo, Técnica, Matéria)
+     +3  MÃO · Mão que Não Treme 3 (toda obra)
+    +10  MÃO · Mão que Encanta 5 (ramo Processo; pontos do 111 e do 153)
+     +8  MÃO · Mão que Sela 4 (ramo Técnica, pontos do 78, 81, 84 e 114; proposta do Mestre)
+     +8  MÃO · Olho do Encanto 4 (ramo Matéria, pontos do 87, 90, 93 e 102)
+     +8  MÃO · Bancada do Encanto 4 (ramo Oficina, pontos do 96, 99, 105 e 117; proposta do Mestre)
+     +2  MÃO · Condutor Fiel 4 (grau 4, ponto do 108; proposta do Mestre)
+     +5  MÃO · Assinatura do Encanto 4: Selo do Rei, Duas Vozes, Peso da Mão, Alma Gravada (pontos do 120, 123, 126 e 129; proposta do Mestre; +2 a mais no 4º círculo para cima)
+     +2  MÃO · Mão que Escuta 4 (ramo Matéria; ponto do 138, proposta do Mestre)
+     +4  MÃO · Alma no Aço 5 (ramo Assinatura; pontos do 141, do 147 e do 150; só peça que ele mesmo forjou)
+     +1  MÃO · Olho do Material (+2 em Matéria, toda obra)
+     +4  CONDUTOR raro
+    +10  FERRAMENTA BURIL DE HAMIR (Mítico, 230; Lendário desde o 80, Mítico no 150) (mitico)
+     +8  FERRAMENTA · buril: o Hamir como ferramenta (+8 em Infusão e Encantamento)
+    +10  FERRAMENTA O BERÇO DE SELO (Mítico, 407: vorthil, o coração do Vorthen e veyine; a bigorna do encantador) (mitico)
+     +5  FERRAMENTA · berço: Gelo com Gelo, B 5 (+5 em Técnica: o selo não empena)
+     +2  FERRAMENTA · berço: o veyine como ferramenta (+2 em Infusão e Encantamento)
+     +2  FERRAMENTA · berço: fala, soa diferente quando a peça tem falha (+2 na Matéria)
+     +3  FERRAMENTA LUVAS DO ENCANTADOR (Lendárias de veyine, 218; Lendárias desde o 80) (lendario, metade)
+     +2  FERRAMENTA · luvas: o veyine como ferramenta (+2 em Infusão e Encantamento)
+     +6  OFICINA Fornalha que Não Apaga
+    ---- SOMA DOS VALORES: 144
+  dados finais: [10] + [19] → TOTAL 173
+  dados de saída: [10] + [1] = 155
+  ALMA OUVIDA (sem Revés): [1] → [19] (total 173)
+  RESULTADO: INTEIRO
+  XP: 2500
+  → lançar: python3 ficha.py xp 2500 "encanto Apagar (Lendária)"
+  (REFORÇO: um encantamento mais fraco pode ser refeito 1x por semana com meio condutor; se não chegar ao inteiro, fica como está)
