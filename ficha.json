@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 49,
- "xp": 122510,
+ "nivel": 50,
+ "xp": 123510,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 117,
+  "Inteligência": 118,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,17 +16,17 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 103
+  "Afinidade": 104
  },
  "pv": [
-  267,
-  267
+  269,
+  269
  ],
  "mana": [
-  96,
-  96
+  97,
+  97
  ],
- "foco": 15,
+ "foco": 16,
  "fortuna": [
   3,
   3
@@ -68,7 +68,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 53920,
+ "cofre": 54520,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
@@ -471,6 +471,12 @@
    "valor": -3200,
    "motivo": "499: TD99: a Nouliel e o Herkald dão ao TULGALD e ao DUTOONE uma Épica cada da série da semana (o preço do chamado, G3; a venda perdida)",
    "saldo": 53920
+  },
+  {
+   "dia": 500,
+   "valor": 600,
+   "motivo": "501: o ouro que sobrou com o ZUTOCCA (a paga dos conselheiros da Liga pela emboscada do vau)",
+   "saldo": 54520
   }
  ],
  "materiais": {
@@ -786,7 +792,6 @@
   }
  },
  "xp_log": [
-  "Dia 477: +2500 479: O CAJADO DE ÂMBAR (Lendário; a peça do Colégio)",
   "Dia 477: SOBE ao 2",
   "Dia 477: SOBE ao 3",
   "Dia 477: SOBE ao 4",
@@ -845,7 +850,9 @@
   "Dia 495: +2500 495: OS AROS DA ALMISION (Lendários; Cinza Saciado)",
   "Dia 495: +2500 495: o encanto APAGAR nos Aros da Almision (inteiro)",
   "Dia 495: SOBE ao 49",
-  "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)"
+  "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)",
+  "Dia 500: +1000 501: FEITO GRANDE: a revolta de Levis-baixa encerrada pela palavra (o acordo com o Uxraxion, sem sangue)",
+  "Dia 500: SOBE ao 50"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

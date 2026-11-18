@@ -131,7 +131,7 @@
   },
   "Chuva de Brasas": {
    "tipo": "Magia",
-   "efeito": "Chama 4º, pelo foco (Mítico ×10; ÁREA: ×5): 8d6 de fogo em 9 m, o chão queima 2 rodadas · 7 por dia",
+   "efeito": "Chama 4º, pelo foco (Primordial ×20 pela Mão de Rei; ÁREA: ×10): 8d6 de fogo em 9 m, o chão queima 2 rodadas · 7 por dia",
    "grau": 1,
    "usos": 0,
    "desde": 437,
@@ -144,7 +144,7 @@
   },
   "Toque do Ceifador": {
    "tipo": "Magia",
-   "efeito": "Osso 6º, pelo FOCO DE OSSO (rende Mítico ×10): 24d6 num alvo; quem o Toque derruba levanta como servo até a aurora (G23) · 2x por cena pelo Foco, sem Mana e sem sangue (a peça já pagou)",
+   "efeito": "Osso 6º, pelo FOCO DE OSSO (PRIMORDIAL inteiro pela Mão de Rei: ×20): 24d6 num alvo; quem o Toque derruba levanta como servo até a aurora (G23) · 2x por cena pelo Foco, sem Mana e sem sangue (a peça já pagou)",
    "grau": 1,
    "usos": 3,
    "desde": 437,
@@ -363,8 +363,8 @@
   },
   "Obra-Prima": {
    "tipo": "Passiva",
-   "efeito": "pontos do 9 e do 21 do Herdeiro, grau 2: 2x por mês, um 20 natural na forja dá +1 efeito da lista declarada antes",
-   "grau": 2,
+   "efeito": "pontos do 9, do 21 e um guardado no 50 (grau 3): 3x por mês, um 20 natural na forja dá +1 efeito da lista declarada antes",
+   "grau": 3,
    "usos": 0,
    "desde": 486,
    "origem": "a árvore da Forja (Assinatura)"

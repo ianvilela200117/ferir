@@ -951,9 +951,9 @@
    ],
    "prox": 462,
    "dons": [
-    "Mão que Doma",
-    "Segundo Coração",
-    "Mão do Mundo"
+    "Nome que Anda",
+    "Fôlego Sem Fundo",
+    "Memória de Rei"
    ]
   },
   {
@@ -2738,8 +2738,8 @@
     6,
     6
    ],
-   "postura": -1,
-   "estado": "cumpriu",
+   "postura": 0,
+   "estado": "acordo (501)",
    "log": [
     "420: [18] GANHA UM PATRONO (o Mestre escolhe quem, pelo fio mais perto) → força 6",
     "422 noite: a Sira os viu em ERYSSA (28, a ala do cais) juntando armas e piche",
@@ -2750,7 +2750,8 @@
     "448: [3] NÃO DORME (G8-D) 1d6 [1]: junta gente → força 6",
     "455: [17] PROCURA A CASA: AMEAÇA ou SABOTA a casa (pequeno, mas visível)",
     "462: [14] BATE DE FRENTE com os da Mina Fechada: [11]+6 × [3]+4 → vence o Culto do Xaathis (5/6); os",
-    "469: [5] NÃO DORME (G8-D) 1d6 [5]: AGE PELO OBJETIVO → 6/6 → OBJETIVO CUMPRIDO: a terra dela muda ("
+    "469: [5] NÃO DORME (G8-D) 1d6 [5]: AGE PELO OBJETIVO → 6/6 → OBJETIVO CUMPRIDO: a terra dela muda (",
+    "501: FL01 16: o ACORDO com o rei nas estacas: a revolta acaba; o culto fica como fé, sem armas e sem veneno; o Uxraxion deixa as estacas; Levis-baixa volta à Brara; as dívidas pequenas do livro do Ardenghi rasgadas"
    ]
   },
   {

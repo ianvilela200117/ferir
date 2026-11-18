@@ -26,8 +26,7 @@
    "nivel_ref": 1149,
    "magias": [],
    "pecas": "",
-   "sem_arte": true,
-   "segundo_coracao": 1
+   "sem_arte": true
   },
   "Moreth": {
    "nome": "Moreth",
@@ -344,21 +343,37 @@
    "imune_empurrao": true,
    "nivel_ref": 10,
    "essencia": "Vento",
-   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta · 501: NÍVEL 50: os feitiços do 4º ao 6º acordam (a Chuva de Brasas volta à ficha) · 501 (ERRO ACHADO): desde o 478 a Mão de Rei faz o Foco de Osso (Primordial, forjado pelo rei) render INTEIRO: o foco é ×20 (área ×10), não ×10; as lutas do 483, 484 e 488 rodaram com ×10 (contra a casa; ficam como estão)",
    "magias": [
     {
-     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, rende Mítico ×10; 2x por cena, sem Mana)",
+     "nome": "TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana)",
      "dano": "24d6",
-     "mult": 10,
+     "mult": 20,
      "cd": 30,
      "rodada": [
       1,
       2
      ],
      "essencia": ""
+    },
+    {
+     "nome": "CHUVA DE BRASAS (Chama 4º, pelo Foco de Osso Primordial ×20, em ÁREA vale metade: ×10; 7 por dia; FOGO)",
+     "dano": "8d6",
+     "mult": 10,
+     "cd": 30,
+     "rodada": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "essencia": "Fogo"
     }
    ],
-   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · (a Chuva de Brasas, a Lança do Sol e o Erguer o Caído DORMEM até o nível 50) · o MARTELO DO REI · RECEITA MESTRA DO SERVO ARMADO · GIBÃO DE ORLOXA DO REI (Mítico, inteiro desde o Sob Medida 4): 1x por cena +4 de Defesa · RD +3 contra fogo · RD 3 contra doença e veneno · 1x POR DIA DESFAZ UM GOLPE RECEBIDO · não é derrubado nem empurrado · esconde",
+   "pecas": "LANÇA DE GUERRA MÍTICA (Vento) · FOCO DE OSSO PRIMORDIAL (Toque do Ceifador 2x por cena) · CHUVA DE BRASAS 7 por dia pelo foco · LANÇA DO SOL 16d6 ×10 (Mana 20) · ERGUER O CAÍDO (Luz 6º) (acordados no 50, dia 501) · o MARTELO DO REI · RECEITA MESTRA DO SERVO ARMADO · GIBÃO DE ORLOXA DO REI (Mítico, inteiro desde o Sob Medida 4): 1x por cena +4 de Defesa · RD +3 contra fogo · RD 3 contra doença e veneno · 1x POR DIA DESFAZ UM GOLPE RECEBIDO · não é derrubado nem empurrado · esconde",
    "desfaz": 1,
    "desfaz_nome": "o Gibão de Orloxa do Rei"
   },

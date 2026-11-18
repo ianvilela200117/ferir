@@ -1916,3 +1916,42 @@ Do outro lado da ponte, Levis-baixa estava quieta demais. Não havia luz nas jan
 "Nenhum feitiço pega lá dentro", disse a Brara. "Nem os nossos. Mas amanhã ou depois, dizem os velhos, a coisa volta. E eu não sei se volta para nós ou para eles."
 
 - **Parada:** entardecer do 500, a ponte de Levis-baixa. Onze presos. O líder do culto nas estacas. O rei a um passo do nível 50.
+
+## Noite do 500 e o 501 — a cela da Brara, as estacas, o nível 50
+
+### A cela da Brara, noite do 500
+O preso do braço quebrado falou primeiro, porque a Eliane não levantou a voz uma vez. Disse o nome do capitão que fugiu, Zubacca, e o de quem pagou: um certo Zutocca, que tinha uma mesa na casa de câmbio velha de Levis e mandava ouro rio acima "pela gente do Porto".
+
+A Brara não esperou o dia. Antes da meia-noite a guarda dela trouxe o Zutocca de camisola, com seiscentas moedas num saco e uma carta dobrada no cinto. A carta tinha o selo de cera do Aldoveri e, embaixo da ordem, uma linha só:
+
+*A pedra do rei bate a frio o metal que come o fogo.*
+
+O rei leu duas vezes e guardou a carta junto ao peito.
+
+### As estacas, manhã do 501
+O rei foi sozinho, sem guarda, até o meio do caminho. Disse ao Moreth que ficasse na ponte e que, se ouvisse um grito, não atravessasse sem a Brara.
+
+O Uxraxion não se levantou. Era magro, tinha os dentes da frente arrancados como os do culto, e olhava o rio entre as estacas como quem espera uma coisa sair dele.
+
+"Você matou o nosso padre", disse, sem virar a cabeça.
+
+"Matei. E os doze que estavam com o Ardenghi." O rei sentou numa pedra a dois passos dele. "Não vim matar mais ninguém. O seu deus pode ficar com vocês. As dívidas também não: eu tenho o livro do Ardenghi, e as pequenas, as do bairro, eu rasguei hoje de manhã."
+
+O Uxraxion virou a cabeça, enfim.
+
+"O que você quer?"
+
+"Que a revolta acabe. Sem armas no bairro. Sem veneno na água. E que você saia daqui sem que ninguém veja você sair."
+
+O homem ficou muito tempo olhando para ele. Depois se levantou, devagar, e passou pela gente ajoelhada sem dizer nada. Um a um, os do culto se levantaram atrás dele. Não houve grito.
+
+A Brara, na ponte, soltou o ar que estava segurando desde o dia anterior.
+
+### Levis, tarde do 501
+Na tarde do 501, a primeira vela acesa em Levis-baixa em um mês se acendeu sozinha, numa janela, sem ninguém perto dela. A magia tinha voltado.
+
+O rei sentiu a coisa voltar nele também. A Lança do Sol, a Cura Maior, a Visão do Tempo, tudo o que dormia desde a madrugada do golpe acordou de uma vez, como o fôlego volta depois de um mergulho comprido. Ele teve de sentar na amurada da ponte.
+
+Do outro lado, entre as estacas de dentes de ferro, o rio velho corria escuro sobre o selo aberto.
+
+- **Parada:** noite do 501, Levis. O acordo feito. Doze presos para o julgamento em praça. O selo aberto. O rei no nível 50.

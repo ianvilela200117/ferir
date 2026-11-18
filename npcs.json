@@ -142,7 +142,8 @@
    "+920 488: o Yolorvus (Épico 92)",
    "+500 Tick 490: PASSO (comanda a guarda e a milícia; treina a milícia; caça)",
    "Tick 490: SOBE a 101",
-   "+4000 500: a emboscada do vau (vinte pagos)"
+   "+4000 500: a emboscada do vau (vinte pagos)",
+   "Dia 501: 501: o DESPERTAR que faltava (passou do 100 no 483; o despertar.py não roda no tick): d12 [3] OLHO ABERTO: vê magia ativa e sente mentira grossa sem teste; recupera um quarto a menos de PV por noite"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -172,6 +173,9 @@
    "ambicao",
    "medo",
    "linha_vermelha"
+  ],
+  "dons": [
+   "Olho Aberto"
   ]
  },
  "Herkald": {
@@ -7757,7 +7761,12 @@
    "+500 Tick 497: SURPRESA (gerador) (MORTA (448) contra a Elaeva em Farenta; o rei falou com ela morta no 449)"
   ],
   "classe": "Primordial da fé (a Mão Queimada)",
-  "ocupacao": "MORTA (448) contra a Elaeva em Farenta; o rei falou com ela morta no 449"
+  "ocupacao": "MORTA (448) contra a Elaeva em Farenta; o rei falou com ela morta no 449",
+  "dons": [
+   "Nome que Anda",
+   "Fôlego Sem Fundo",
+   "Memória de Rei"
+  ]
  },
  "Yeor": {
   "nivel": 50,
@@ -7925,7 +7934,10 @@
    "+500 Tick 497: PASSO (em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499)"
   ],
   "classe": "a gerar a classe em cena (chegou pelo chamado, 469)",
-  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499"
+  "ocupacao": "em Ireviel, à espera do rei: pede uma peça da forja, Rara ou melhor, no lugar de soldo (G3), até o 499",
+  "dons": [
+   "Voz de Mando"
+  ]
  },
  "Dutoone": {
   "nivel": 45,
@@ -7953,5 +7965,25 @@
    "Dia 471: o barqueiro de olho branco que leva o rei a Dragal por 500 (NB70 [3]); a condição: ninguém fala alto no brejo depois do escuro",
    "Dia 472: contou (VB72 [5]): há vinte anos levou um homem que pagou com a lembrança do filho e, na volta, se jogou no brejo dizendo que ia buscar o que tinha esquecido. 'Na volta, eu sento do teu lado.'"
   ]
+ },
+ "Uxraxion": {
+  "nivel": 120,
+  "xp": 0,
+  "log": [
+   "Dia 500: entra no livro (nível 120)",
+   "Dia 500: 500: entra no livro (nível 120; o gerador deu SELEK, que bate no cânone: trocado por UXRAXION, nomes.py arcaica livre): CRUEL e AMBICIOSO · desejo: SAIR DA CIDADE · ambição: conquistar terra · medo: a HUMILHAÇÃO PÚBLICA · (OCULTO) segredo: traiu um amigo uma vez · linha vermelha: nunca trabalha para uma certa facção · dilema: a ambição dele exige trair alguém que ele ama",
+   "Dia 501: 501: na fala a sós com o rei nas estacas (FL01 16) ACEITOU: a revolta acaba; o culto fica como fé, sem armas e sem veneno; deixou as estacas; Levis-baixa voltou à Brara; as dívidas pequenas do bairro rasgadas"
+  ],
+  "classe": "o líder do Culto do Xaathis (Levis-baixa)",
+  "ocupacao": "sentado nas estacas do selo velho do rio acima de Levis, com o culto (desde o ~471)"
+ },
+ "Zutocca": {
+  "nivel": 40,
+  "xp": 0,
+  "log": [
+   "Dia 501: entra no livro (nível 40)"
+  ],
+  "classe": "homem dos conselheiros da Liga em Levis",
+  "ocupacao": "PRESO pela Brara no 501 (pagou o capitão Zubacca pela emboscada do vau; a carta do Aldoveri)"
  }
 }

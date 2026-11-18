@@ -1,11 +1,11 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 500,
+  "dia": 501,
   "hora": "amanhecer",
   "local": "Dragal, o portão afundado",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 4,
+  "pressao": 0,
   "primeiro_tick_semanal": 504,
   "limiar_pressao": 5,
   "proxima_auditoria": 503

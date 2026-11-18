@@ -1,10 +1,5 @@
 {
  "ordem": [
-  "GU5o",
-  "GU5p",
-  "GU5m",
-  "GU6s",
-  "GU6t",
   "GU6f",
   "GU6c",
   "GU6o",
@@ -399,325 +394,14 @@
   "CF00-17",
   "CF00-18",
   "CF00-19",
-  "CF00-20"
+  "CF00-20",
+  "IN01",
+  "FL01",
+  "ZT01",
+  "CT01",
+  "OU01"
  ],
  "selos": {
-  "GU5o": {
-   "id": "GU5o",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: O OBJETIVO (relógio de 8)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ser a PRIMEIRA GUILDA do mundo (fama)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "caçar um MÍTICO e ficar com o núcleo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "dominar uma ROTA de comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tomar uma CIDADE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "achar uma RELÍQUIA (as ferramentas dos reis, um núcleo perdido)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acabar com uma guilda RIVAL"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "fundar uma ESCOLA ou ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "VINGAR uma derrota antiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "VINGAR uma derrota antiga",
-     "txt": "[8] → VINGAR uma derrota antiga"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU5p": {
-   "id": "GU5p",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: A POSTURA PARA A CASA DE FERIR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "hostil"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 5,
-     "res": "neutra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "amiga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "neutra",
-     "txt": "[4] → neutra"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU5m": {
-   "id": "GU5m",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 5: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [6] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [4] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU6s": {
-   "id": "GU6s",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: A SEDE (as terras do Livro fora do reino)",
-   "dado": [
-    1,
-    10,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Steunn"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Kremir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Shizess"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o Norte (Eiest)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Yaelane"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 9,
-     "res": "Gogrunn"
-    },
-    {
-     "tipo": "num",
-     "a": 10,
-     "b": 10,
-     "res": "Kasra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      8
-     ],
-     "total": 8,
-     "res": "Qulosus",
-     "txt": "[8] → Qulosus"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU6t": {
-   "id": "GU6t",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: O OFÍCIO",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "CAÇADORES DE MONSTROS"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "MERCENÁRIOS"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "MERCADORES E ARTÍFICES"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "MAGOS"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "LADRÕES E ESPIÕES"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CRUZADOS DE UMA FÉ"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "LADRÕES E ESPIÕES",
-     "txt": "[5] → LADRÕES E ESPIÕES"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
   "GU6f": {
    "id": "GU6f",
    "dia": 432,
@@ -20881,6 +20565,259 @@
     }
    ],
    "hora_rolado": "18:01:48"
+  },
+  "IN01": {
+   "id": "IN01",
+   "dia": 500,
+   "hora": "20:03:12",
+   "titulo": "O INTERROGATÓRIO DOS ONZE PRESOS DO VAU (2a; noite do 500, a cela da Brara; a Eliane e a Brara perguntam; um preso já disse 'pagaram pela pedra')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "só sabem do CAPITÃO que fugiu (o nome dele) e do ouro, metade antes"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "o CAPITÃO e quem o pagou: um homem dos conselheiros em Levis (o nome), e a rota do ouro: pelo Porto de Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um deles diz mais: o NOME do conselheiro que pagou e que a Liga SABE O SEGREDO DA MATRIZ (soube em Ireviel nesta lua)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o CAPITÃO e quem o pagou: um homem dos conselheiros em Levis (o nome), e a rota do ouro: pelo Porto de Marasar",
+     "txt": "[4] → o CAPITÃO e quem o pagou: um homem dos conselheiros em Levis (o nome), e a rota do ouro: pelo Porto de Marasar"
+    }
+   ],
+   "hora_rolado": "20:03:12"
+  },
+  "FL01": {
+   "id": "FL01",
+   "dia": 500,
+   "hora": "20:03:12",
+   "titulo": "A FALA COM O UXRAXION (manhã do 501, nas estacas, a sós, sem plateia; o bairro cercado pela guarda da Brara e pela escolta do rei; a oferta: o culto fica como fé, sem armas e sem veneno; a revolta acaba; o bairro volta à Brara; as DÍVIDAS PEQUENAS de Levis-baixa rasgadas no livro do Ardenghi) · +3 as dívidas (a promessa do culto cumprida pelo rei) · +2 o cerco · +1 a sós (o medo dele) · +1 a Brara (honesta, conhecida) · −4 o 416 (o rei matou o sacerdote e doze da ala do cais) · −2 o patrono que cobra caro · −1 CRUEL · −2 a ambição dele (conquistar terra: o bairro é a terra dele)",
+   "dado": [
+    1,
+    20,
+    -2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "RECUSA: 'a terra é do deus agora'; ficam nas estacas; a magia volta para os dois lados"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "PEDE MAIS: para a revolta se ELE puder SAIR de Levis com os que quiserem segui-lo, sem ser caçado (o desejo dele); o rei decide"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 18,
+     "res": "ACEITA: a revolta para; o culto fica como fé, sem armas e sem veneno; ele deixa as estacas; Levis-baixa volta à Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 1000000,
+     "res": "ACEITA e diz o nome do PATRONO que cobra caro"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 16,
+     "res": "ACEITA: a revolta para; o culto fica como fé, sem armas e sem veneno; ele deixa as estacas; Levis-baixa volta à Brara",
+     "txt": "[18] -2 = 16 → ACEITA: a revolta para; o culto fica como fé, sem armas e sem veneno; ele deixa as estacas; Levis-baixa volta à Brara"
+    }
+   ],
+   "hora_rolado": "20:03:12"
+  },
+  "ZT01": {
+   "id": "ZT01",
+   "dia": 500,
+   "hora": "20:03:41",
+   "titulo": "A BRARA VAI ATRÁS DO ZUTOCCA (IN01 [4]: o homem dos CONSELHEIROS da Liga em Levis que pagou o capitão ZUBACCA, o que fugiu do vau; o ouro veio pelo Porto de Marasar; os nomes do nomes.py mercante livre)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele JÁ FUGIU (soube do vau pelo capitão): a casa dele vazia, cartas queimadas na lareira"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "a guarda da Brara o PEGA de noite na casa de câmbio velha, com o resto do ouro e uma carta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a guarda da Brara o PEGA de noite na casa de câmbio velha, com o resto do ouro e uma carta",
+     "txt": "[3] → a guarda da Brara o PEGA de noite na casa de câmbio velha, com o resto do ouro e uma carta"
+    }
+   ],
+   "hora_rolado": "20:03:41"
+  },
+  "CT01": {
+   "id": "CT01",
+   "dia": 500,
+   "hora": "20:03:54",
+   "titulo": "A CARTA NO CINTO DO ZUTOCCA (os conselheiros da Liga: o Pelagri, o Aldoveri e o Tiracci; souberam o segredo da Matriz em Ireviel no 490)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "só a ordem e a paga do vau, sem nome"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "a ordem com o selo do ALDOVERI e uma linha: 'a pedra do rei bate a frio o metal que come o fogo' (a Liga sabe o segredo da Matriz)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a ordem do TIRACCI e o plano seguinte: tomar a Matriz na estrada de Lumade, quando o rei for, com gente que já está lá"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a ordem com o selo do ALDOVERI e uma linha: 'a pedra do rei bate a frio o metal que come o fogo' (a Liga sabe o segredo da Matriz)",
+     "txt": "[4] → a ordem com o selo do ALDOVERI e uma linha: 'a pedra do rei bate a frio o metal que come o fogo' (a Liga sabe o segredo da Matriz)"
+    }
+   ],
+   "hora_rolado": "20:03:54"
+  },
+  "OU01": {
+   "id": "OU01",
+   "dia": 500,
+   "hora": "20:03:54",
+   "titulo": "O OURO QUE SOBROU COM O ZUTOCCA (a segunda metade da paga dos vinte)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "400"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "600"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "800"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "1000"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "1200"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "600",
+     "txt": "[3] → 600"
+    }
+   ],
+   "hora_rolado": "20:03:54"
   }
  }
 }

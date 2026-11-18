@@ -3882,6 +3882,17 @@
    "chegada": "[1] hoje",
    "resumo": "FESTIVAL, TORNEIO OU FEIRA GRANDE — Lumade",
    "toca": true
+  },
+  {
+   "dia": 501,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "[MISSÃO]: Eryra (o Mestre dá o nome pela ficção)\ndificuldade: A  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: De Mundo\nobjetivo: convencer alguém poderoso\ncomplicação escondida (Envelope): quem pediu mente sobre algo\nprazo: 7 dias\nrecompensa: 6000 XP · 3000 de ouro · informação do Envelope\npenalidade se falhar: perde um item ou o adiantamento em dobro\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 502,
+   "chegada": "[5] em 1d6 [1] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — o brejo do oeste (a Torre Afogada)",
+   "toca": false
   }
  ]
 }
