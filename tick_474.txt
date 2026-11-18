@@ -1,0 +1,44 @@
+[13:21:38] Dia 474 · Pressão 3/5 · evento local 1d20 [12] -> um barqueiro traz boato do rio
+  O TEMPO (15 da Lua do Grão de 1013 d.S., Colheita) · lua cheia
+   Ireviel: neblina, brisa (d6 [1] fica · vento d6 [4]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   o Porto de Marasar: limpo, vento firme (d6 [5] muda, d20 [5] · vento d6 [5])
+   Levis: neblina, brisa (d6 [2] fica · vento d6 [3]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Farenta: neblina, calmo (d6 [4] muda, d20 [13] · vento d6 [2]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   O RIO: baixo [23/100]
+  avistamento de monstro 1d20 [20] -> nenhum
+  Fortuna volta ao máximo
+  ☠ SERVO ARMADO Erygal (nível 17): a PALAVRA cobra 10 de PV do rei nesta aurora (d6 × 2) → pv: 390/408
+  O MUNDO SE MOVE — Dia 474 (dia)
+    d20 [19] UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)
+    ONDE: d27 [20] Steunn  ◆ TOCA A CASA
+    A NOTÍCIA: [2] em 1d3 [2] dias
+    nome: Gorol
+    desejo: voltar para casa
+    ambição (relógio de 4): derrubar quem humilhou a família
+    medo: a prisão
+    segredo: é filho de quem não deveria
+    linha vermelha: nunca volta atrás numa palavra dada
+    dilema que vai chegar: o desejo dele e o do parceiro não cabem juntos
+    traços: AMBICIOSO e LEAL
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 474
+    Lendários: d20 [13] quietos hoje
+    trama do dia: Orast → os Jurados de Steunn (RESSENTIMENTO) d20 [8] nada visível
+    FAÍSCA: Bruno Malvezzi (sargento do podestà, da rede de Farenta) vende algo a Draron (da casa), por causa de uma dívida antiga
+    FAÍSCA: Skugek deve a vida a Ithra, por causa de a Matriz
+    FAÍSCA: Ceduion, reitor do Colégio de Telosus acusa em público Eliane, por causa de um núcleo de monstro
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #817 (era do Dia 469): FACÇÃO CUMPRIU O OBJETIVO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ✉ NOTÍCIA QUE CHEGA HOJE: Laennor, o Redemoinho (Raro, Zisrir): dorme fundo (some por 1d4 semanas) · COMO CHEGA: d20 [4] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: Gorine (escondido (patrono da Lumine)): perde uma peça ou um aliado para alguém · COMO CHEGA: d20 [9] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: Xaysress (Kremir): perde uma peça ou um aliado para alguém · COMO CHEGA: d20 [5] EXAGERADA: chega maior do que foi

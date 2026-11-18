@@ -1683,3 +1683,70 @@ O Moreth se ajoelhou ao lado dela. "Ela merece um rito. E sabe mil anos de coisa
 Na porta do salão, o Erygal esperava de joelhos, com a água pelo peito e as estrelas em volta.
 
 - **Parada:** noite do 472, o salão do rei afogado. O Martelo do Rei na mão do rei; a classe espera o primeiro golpe na Matriz. A sacerdotisa espera a ordem.
+
+## Aurora do 473 a noite do 477 — a volta de Dragal, a mesa do conselho, a Porta do Nada
+
+### Dragal, aurora do 473
+"Vem", disse o rei. "Ireviel precisa do que tu sabes."
+
+A sacerdotisa se levantou. A água escorreu dela sem molhá-la. Andou até a borda do salão, onde começava a ponte, e pôs um pé na pedra de fora do arco.
+
+As pontas dos dedos dela ficaram cinzentas e caíram, como cinza que se solta de uma lenha queimada. Ela olhou a mão sem espanto e recuou. Os dedos não voltaram.
+
+"O meu rei me prendeu à cidade dele", disse. "Fora dela eu sou o que mil anos fazem de uma mulher." Sentou-se de novo na água, aos pés do rei morto. "Vai, herdeiro. Eu durmo."
+
+Na porta, o Moreth olhou para trás. Ela tinha fechado os olhos, e as estrelas na água não se mexiam.
+
+No arco do portão, com o primeiro cinza da aurora, o Erygal se desfez sem barulho: as placas de ferro escorregaram para a água uma por uma, e a grade do rosto foi a última.
+
+### O brejo, 473
+O velho de Ninnane sentou ao lado do rei o dia inteiro e não disse nada. De noite, em Ninnane, o rei dormiu. O velho não.
+
+### O rio, 474 a 476
+No Delta, as lanternas da Lurentetta piscavam nas salinas. Na manhã do 475 as barcas dos salineiros subiram o rio contra a água baixa, dentro de uma neblina que não deixava ver a margem. Remaram dois dias. O rei levava o Martelo enrolado num pano, e o frio dele atravessava o pano.
+
+### Ireviel, manhã do 477
+A Nouliel esperava no cais com o livro debaixo do braço. Viu o rosto do rei e soube de alguma coisa antes de ele falar.
+
+As notícias vieram na ordem dela: a cama do Seeth vazia e a janela aberta; uma carta da Brara, de dois dias; e de Marasar, que o Doge velho, o Pelaone, tinha desembarcado na guarnição velha com espadas da Liga e que a cidade tinha rachado ao meio.
+
+### A mesa do conselho, tarde do 477
+"Em Dragal eu dei a lembrança mais querida que eu tinha dos meus pais", disse o rei. "Não sei qual era. Sei que era a mais querida porque foi ela que escolheu."
+
+Ninguém mexeu nos papéis.
+
+"Agora, sem ela, cada vez mais o reino e vocês são a única família que me resta. Quero que vocês se vejam assim. E que vejam o povo assim. Como família."
+
+"Eu vi", disse a Eliane, e contou: a água, as mãos frias nas têmporas, a lágrima que ele não sabia que chorava. Quando terminou, disse: "Na Fornalha tem uma parede sem nada. Os nossos mortos podiam estar nela. Quem morre na casa fica no nome de quem fica."
+
+O Herkald demorou a falar, como sempre.
+
+"Teu pai tinha os dedos sujos de tinta", disse. "Escrevente. Tua mãe cantava a do barqueiro. Era inverno. Ele te trouxe nos ombros até a minha porta e disse 'olha, menino'. Eu me lembro porque achei graça. Ninguém trazia filho para ver ferreiro."
+
+O rei ouviu como quem ouve a história de outro. Não sentiu nada, só o lugar onde aquilo devia estar.
+
+A Nouliel se levantou, deu a volta na mesa e pôs a mão no ombro dele, diante de todos. Depois abriu o livro.
+
+"Se é família, a família paga a mesa de quem morre por ela", disse. "Meio soldo às viúvas e aos órfãos da casa. Eu faço a conta."
+
+"Família não guarda segredo", disse a Sira, da ponta da mesa, sem levantar a voz. "Reino guarda. Eu fico com o reino."
+
+O Thuron não olhou para ninguém. "Família ou não, o barqueiro tem quinze dias. Vou a Telosus esta noite."
+
+### A torre do Colégio, noite do 477
+O mestre do Colégio abriu a porta no meio do ar: um retângulo de preto com as beiras zumbindo, que cheirava a pedra molhada e a nada. O Thuron atravessou.
+
+Voltou antes da meia-noite, com geada na barba.
+
+"Ele vem quando o corpo estiver aqui", disse. "O núcleo de Luz é vosso. E o Colégio quer uma peça Lendária da vossa mão."
+
+### A Fornalha, meia-noite do 477
+O fogo que não apaga fazia a única luz. Na bancada estavam o Martelo, ainda no pano, a carta da Brara e, debaixo da lona, a Matriz.
+
+A carta dizia que o culto do Xaathis tinha tomado Levis-baixa, que lá nenhum feitiço pegava fazia uma semana e que o homem que abriu o selo estava sentado nas estacas velhas do rio e não saía dali.
+
+Um golpe daquele martelo naquela bigorna faria dele o herdeiro. Daria a ele a mão que fecha selos. E faria do corpo dele o de um começo, na véspera das Fundas.
+
+O rei olhou o fogo por muito tempo.
+
+- **Parada:** meia-noite do 477, a Fornalha. O Martelo e a Matriz na mesma bancada, sem o golpe. A carta da Brara. O Ceduion espera o corpo. A Isolda nas Fundas.

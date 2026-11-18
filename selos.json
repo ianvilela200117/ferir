@@ -1,26 +1,5 @@
 {
  "ordem": [
-  "DR27ESCAMA",
-  "DR27OLHO",
-  "DR27PRESA",
-  "DR27PELO",
-  "DZ27E",
-  "NV27",
-  "NV27b",
-  "EV27",
-  "LU27",
-  "LU27b",
-  "YV27a",
-  "YV27b",
-  "FC27a",
-  "FC27b",
-  "FC27c",
-  "YV27c",
-  "YV27d",
-  "YV27e",
-  "CL27",
-  "EL27",
-  "YV27f",
   "CF28",
   "IR28",
   "TR28",
@@ -399,1053 +378,30 @@
   "VB72",
   "DN72",
   "NC72",
-  "EN72"
+  "EN72",
+  "SD73",
+  "BV73",
+  "MV73",
+  "RI75",
+  "IS75",
+  "476-laco-quem",
+  "476-laco",
+  "476-chamado",
+  "476-vinculos",
+  "FD76",
+  "IS76",
+  "FN77",
+  "FS77",
+  "FH77",
+  "FT77",
+  "FE77",
+  "CR77",
+  "IS77",
+  "CE77",
+  "AV77",
+  "BR77"
  ],
  "selos": {
-  "DR27ESCAMA": {
-   "id": "DR27ESCAMA",
-   "dia": 427,
-   "hora": "14:53:57",
-   "titulo": "OS DESPOJOS DO MOREK (Único, torre): ESCAMA, o ssythis — (Único, Espinho; armadura: quem agarra o portador sangra 10), em kg (precedente do Vorthen: tabela em kg)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "3 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "6 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "9 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "3 kg",
-     "txt": "[2] → 3 kg"
-    }
-   ],
-   "hora_rolado": "14:53:57"
-  },
-  "DR27OLHO": {
-   "id": "DR27OLHO",
-   "dia": 427,
-   "hora": "14:53:57",
-   "titulo": "OS DESPOJOS DO MOREK (Único, torre): OLHO, o laliel — (Único, Espinho; armadura: quem agarra o portador sangra 10), em kg (precedente do Vorthen: tabela em kg)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "3 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "6 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "9 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "6 kg",
-     "txt": "[4] → 6 kg"
-    }
-   ],
-   "hora_rolado": "14:53:57"
-  },
-  "DR27PRESA": {
-   "id": "DR27PRESA",
-   "dia": 427,
-   "hora": "14:53:57",
-   "titulo": "OS DESPOJOS DO MOREK (Único, torre): PRESA, o heald — (Único, Espinho; arma: o golpe prende como raiz, Força CD 20), em kg (precedente do Vorthen: tabela em kg)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "3 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "6 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "9 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "3 kg",
-     "txt": "[2] → 3 kg"
-    }
-   ],
-   "hora_rolado": "14:53:57"
-  },
-  "DR27PELO": {
-   "id": "DR27PELO",
-   "dia": 427,
-   "hora": "14:53:57",
-   "titulo": "OS DESPOJOS DO MOREK (Único, torre): PELO, o sasis — (Único, Espinho + Raio; armadura: quem agarra o portador sangra 10), em kg (precedente do Vorthen: tabela em kg)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "3 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "6 kg"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "9 kg"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "3 kg",
-     "txt": "[2] → 3 kg"
-    }
-   ],
-   "hora_rolado": "14:53:57"
-  },
-  "DZ27E": {
-   "id": "DZ27E",
-   "dia": 427,
-   "hora": "14:53:57",
-   "titulo": "A DOENÇA DO MOREK no EIAGRIR (levou golpe no 427; 2d20 + Vigor 13 contra CD 22)",
-   "dado": [
-    2,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 40,
-     "res": "soma mais 13; abaixo de 22 pega a febre do espinho"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      9
-     ],
-     "total": 14,
-     "res": "soma mais 13; abaixo de 22 pega a febre do espinho",
-     "txt": "[5, 9] +0 = 14 → soma mais 13; abaixo de 22 pega a febre do espinho"
-    }
-   ],
-   "hora_rolado": "14:53:57"
-  },
-  "NV27": {
-   "id": "NV27",
-   "dia": 427,
-   "hora": "14:54:29",
-   "titulo": "A SURPRESA LOCAL DE IREVIEL (427; gerador: um NPC antigo volta mudado): QUEM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o KREINE (o exilado do 324, desertor da Liga)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a SORVANE (a mercadora que voltou rica de Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o FACIO (o barqueiro traidor, solto depois da primavera)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o DOVAN (o que sabia de Alnesar, julgado pela lei no 309)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o BRAETH (o que o Hrotgar quis ver pedir desculpas)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o TANO (o marcado por feitiço proibido, preso no 273)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o FACIO (o barqueiro traidor, solto depois da primavera)",
-     "txt": "[3] → o FACIO (o barqueiro traidor, solto depois da primavera)"
-    }
-   ],
-   "hora_rolado": "14:54:29"
-  },
-  "NV27b": {
-   "id": "NV27b",
-   "dia": 427,
-   "hora": "14:54:30",
-   "titulo": "COMO ELE VOLTA MUDADO",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "SUBIU: rico ou com poder novo"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "CAIU: pobre, ferido ou caçado"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "CASOU ou se juntou a alguém (rola com quem depois)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "PERDEU ALGUÉM e vem por causa disso"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "CAIU: pobre, ferido ou caçado",
-     "txt": "[2] → CAIU: pobre, ferido ou caçado"
-    }
-   ],
-   "hora_rolado": "14:54:30"
-  },
-  "EV27": {
-   "id": "EV27",
-   "dia": 427,
-   "hora": "14:54:30",
-   "titulo": "QUEM VIU A ELOUNE (avistamento do 427) E ONDE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os vaqueiros, na VÁRZEA NOVA de novo (o gado da obra)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os pescadores, no lodaçal perto do cais afundado"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os forçados do DIQUE, na lama do bairro afogado"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a gente do TERASETH, rio acima (estão atrás dela)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os pescadores, no lodaçal perto do cais afundado",
-     "txt": "[4] → os pescadores, no lodaçal perto do cais afundado"
-    }
-   ],
-   "hora_rolado": "14:54:30"
-  },
-  "LU27": {
-   "id": "LU27",
-   "dia": 427,
-   "hora": "14:54:30",
-   "titulo": "O QUE O ENVIADO DA LURENTETTA (Lendária 774, o Delta; obra: vingar um povo) VEIO PEDIR AO REI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma PEÇA da forja do rei para a obra dela (paga bem)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma ALIANÇA contra quem matou o povo dela (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "passagem e abrigo no rio para a gente dela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um AVISO: alguém grande vem contra a casa"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "uma ALIANÇA contra quem matou o povo dela (rola quem)",
-     "txt": "[3] → uma ALIANÇA contra quem matou o povo dela (rola quem)"
-    }
-   ],
-   "hora_rolado": "14:54:30"
-  },
-  "LU27b": {
-   "id": "LU27b",
-   "dia": 427,
-   "hora": "14:54:37",
-   "titulo": "CONTRA QUEM A LURENTETTA QUER A ALIANÇA (quem matou o povo dela)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a LIGA de Marasar"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a ELAEVA, a Floresta que Anda"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o ULMIR, o bicho Único das salinas do Delta"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a ALTHELTIA, a Lendária rival no Delta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a ELAEVA, a Floresta que Anda",
-     "txt": "[4] → a ELAEVA, a Floresta que Anda"
-    }
-   ],
-   "hora_rolado": "14:54:37"
-  },
-  "YV27a": {
-   "id": "YV27a",
-   "dia": 427,
-   "hora": "00:43:57",
-   "titulo": "O QUE A LURENTETTA DÁ NA ALIANÇA CONTRA A ELAEVA (o Yavor fala por ela)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "SAL E PRATA: paga à casa por semana enquanto a aliança durar"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "O SEGREDO DA ELAEVA: um rumor exato do que ela sabe da fera (fraqueza, lugar ou como a feriu)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ELA MESMA vem à caçada, ao lado do rei e da Mamiltia"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)",
-     "txt": "[1] → LANÇAS: gente dela na caçada da Elaeva (rola quantos e de que nível)"
-    }
-   ],
-   "hora_rolado": "00:43:57"
-  },
-  "YV27b": {
-   "id": "YV27b",
-   "dia": 427,
-   "hora": "00:43:57",
-   "titulo": "O PREÇO DA LURENTETTA (o rei aceitou antes de ouvir)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "A LIGA DO DELTA: o rei entrega a ela o que sobrar da Liga no Delta (presos e devedores da Leliel) e não cobra nada deles"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "PASSAGEM: as barcas dela sobem e descem o rio do reino sem portagem enquanto a aliança durar (passa pela Intendente)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "O CORAÇÃO DA FERA: o núcleo Mítico de Espinho da Elaeva fica com ela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas",
-     "txt": "[1] → UMA PEÇA da forja do rei para ela, Lendária ou melhor, dentro de duas luas"
-    }
-   ],
-   "hora_rolado": "00:43:57"
-  },
-  "FC27a": {
-   "id": "FC27a",
-   "dia": 427,
-   "hora": "00:43:57",
-   "titulo": "COMO O FACIO CAIU (NV27b [2])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "POBRE: perdeu a barca e a casa; dorme no cais"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "FERIDO: uma faca no lado, mal costurada"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "CAÇADO: alguém o quer morto (rola quem)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "POBRE: perdeu a barca e a casa; dorme no cais",
-     "txt": "[1] → POBRE: perdeu a barca e a casa; dorme no cais"
-    }
-   ],
-   "hora_rolado": "00:43:57"
-  },
-  "FC27b": {
-   "id": "FC27b",
-   "dia": 427,
-   "hora": "00:43:57",
-   "titulo": "O QUE O FACIO SABE DOS NOMES DO LIVRO (o que ele conta ao rei)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ele mesmo vendeu, e só ele: vem confessar de novo e pedir para voltar para casa"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a lista não foi só dele: um SEGUNDO em Ireviel copiou o livro para a Liga (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte",
-     "txt": "[5] → o caminho dos nomes: a Liga os passou à LELIEL, e os Barqueiros do Livro estão marcados no norte"
-    }
-   ],
-   "hora_rolado": "00:43:57"
-  },
-  "FC27c": {
-   "id": "FC27c",
-   "dia": 427,
-   "hora": "00:43:57",
-   "titulo": "O FACIO DIZ A VERDADE?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "MENTE (quer pão e abrigo e diz o que o rei quer ouvir)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 20,
-     "res": "diz a verdade"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 12,
-     "res": "diz a verdade",
-     "txt": "[12] → diz a verdade"
-    }
-   ],
-   "hora_rolado": "00:43:57"
-  },
-  "YV27c": {
-   "id": "YV27c",
-   "dia": 427,
-   "hora": "00:44:57",
-   "titulo": "QUANTAS LANÇAS A LURENTETTA MANDA À CAÇADA DA ELAEVA (+2: a surpresa boa do saber do rei)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "10 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 12,
-     "res": "20 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "30 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 21,
-     "res": "50 lanças"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "50 lanças e um barco de guerra do Delta"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 8,
-     "res": "20 lanças",
-     "txt": "[6] +2 = 8 → 20 lanças"
-    }
-   ],
-   "hora_rolado": "00:44:57"
-  },
-  "YV27d": {
-   "id": "YV27d",
-   "dia": 427,
-   "hora": "00:44:57",
-   "titulo": "DE QUE NÍVEL SÃO AS LANÇAS DA LURENTETTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "salineiros armados (nível 20 a 40)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "caçadores do Delta (nível 40 a 70)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a guarda dela (nível 80 a 110)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a guarda dela e um campeão (nível 150)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a guarda dela e um campeão (nível 150)",
-     "txt": "[6] → a guarda dela e um campeão (nível 150)"
-    }
-   ],
-   "hora_rolado": "00:44:57"
-  },
-  "YV27e": {
-   "id": "YV27e",
-   "dia": 427,
-   "hora": "00:44:57",
-   "titulo": "QUE PEÇA A LURENTETTA QUER DA FORJA DO REI (o preço, até o Dia 487)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma ARMA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma ARMADURA"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma FERRAMENTA do ofício dela"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um FOCO de magia"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "uma ARMA",
-     "txt": "[2] → uma ARMA"
-    }
-   ],
-   "hora_rolado": "00:44:57"
-  },
-  "CL27": {
-   "id": "CL27",
-   "dia": 427,
-   "hora": "00:44:57",
-   "titulo": "COMO O CLIMA PIORA (a surpresa ruim do saber da Nouliel), noite do 427 em Ireviel",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o vento vira e traz fogo no capim seco da margem norte (alguém tem de apagar esta noite)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o calor não quebra: noite abafada, ninguém dorme direito (a cura da noite do 427, G4, vale a metade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)",
-     "txt": "[3] → trovoada seca na madrugada: TEMPESTADE em Ireviel no amanhecer do 428 (o barco não sai: +1 dia na viagem a Levis)"
-    }
-   ],
-   "hora_rolado": "00:44:57"
-  },
-  "EL27": {
-   "id": "EL27",
-   "dia": 427,
-   "hora": "00:46:16",
-   "titulo": "A FACÇÃO NOVA QUE NASCE DE UM CONFLITO ANTIGO (a surpresa atrasada da ELIANE, G8-C; gerador novidade [7])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "os da MILÍCIA que ela reprovou no treino: viram irmandade e pedem voz na guarda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)",
-     "txt": "[1] → os MERCENÁRIOS RENDIDOS em Marasar (392): viram companhia sem dono e querem os AROS dela (o fio F7, o Garkunn)"
-    }
-   ],
-   "hora_rolado": "00:46:16"
-  },
-  "YV27f": {
-   "id": "YV27f",
-   "dia": 427,
-   "hora": "00:46:38",
-   "titulo": "QUE NÍVEL TEM O YAVOR, o enviado da Lurentetta (diplomata do Delta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "nível 40"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "nível 60"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "nível 80"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "nível 100"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "nível 80",
-     "txt": "[5] → nível 80"
-    }
-   ],
-   "hora_rolado": "00:46:38"
-  },
   "CF28": {
    "id": "CF28",
    "dia": 427,
@@ -19847,6 +18803,1020 @@
     }
    ],
    "hora_rolado": "12:39:55"
+  },
+  "SD73": {
+   "id": "SD73",
+   "dia": 472,
+   "hora": "13:21:16",
+   "titulo": "A SACERDOTISA E A ORDEM DO HERDEIRO (2c: vir a Ireviel; ela queria dormir quando o Martelo saísse)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "VEM, mas pede antes o rito do rei afogado (deitá-lo na forja fria e fechar o salão): a manhã do 473 se perde"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "VEM na aurora, sem pedir nada; vai na barca do rei, coberta por um pano, de costas para o sol"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai",
+     "txt": "[1] → ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai"
+    }
+   ],
+   "hora_rolado": "13:21:16"
+  },
+  "BV73": {
+   "id": "BV73",
+   "dia": 472,
+   "hora": "13:21:16",
+   "titulo": "O BREJO NA VOLTA (473, de Dragal a Ninnane com o velho)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "uma SERPENTE-DO-BREJO (Raro, Veneno) sobe na barca do Gonde (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o caminho se perde de novo (Ninnane só na manhã do 474: chega um dia depois)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "Ninnane ao entardecer do 473"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "Ninnane ao entardecer do 473",
+     "txt": "[5] → Ninnane ao entardecer do 473"
+    }
+   ],
+   "hora_rolado": "13:21:16"
+  },
+  "MV73": {
+   "id": "MV73",
+   "dia": 472,
+   "hora": "13:21:16",
+   "titulo": "O BURACO DA LEMBRANÇA NO BREJO (a noite do 473 no brejo ou em Ninnane; o velho senta ao lado do rei; VB72: o homem que pulou)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "de noite o rei levanta na barca dizendo que esqueceu uma coisa; o velho e o Gonde o seguram; as luzes frias acendem na água em volta até ele sentar"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada; o rei dorme, e o velho não"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nada; o rei dorme, e o velho não",
+     "txt": "[2] → nada; o rei dorme, e o velho não"
+    }
+   ],
+   "hora_rolado": "13:21:16"
+  },
+  "RI75": {
+   "id": "RI75",
+   "dia": 472,
+   "hora": "13:21:16",
+   "titulo": "DO DELTA A IREVIEL RIO ACIMA (as barcas leves dos salineiros; a galé está com a Isolda)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o rio vem contra: chega a Ireviel na manhã do 477"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chega a Ireviel ao entardecer do 476"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o rio vem contra: chega a Ireviel na manhã do 477",
+     "txt": "[2] → o rio vem contra: chega a Ireviel na manhã do 477"
+    }
+   ],
+   "hora_rolado": "13:21:16"
+  },
+  "IS75": {
+   "id": "IS75",
+   "dia": 472,
+   "hora": "13:21:16",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, PRIMEIRO DIA (475; a galé e metade do Croque; o corpo do Teraseth no fundo perto das Fundas, com a armadura do rei e o Croque do Rio; o Ssish dorme)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "nat",
+     "a": 1,
+     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO do Teraseth (o corpo está perto: +2 na busca de amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nada no fundo",
+     "txt": "[4] → nada no fundo"
+    }
+   ],
+   "hora_rolado": "13:21:16"
+  },
+  "476-laco-quem": {
+   "id": "476-laco-quem",
+   "dia": 476,
+   "hora": "13:21:40",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a NOULIEL",
+     "txt": "[2] → a NOULIEL"
+    }
+   ],
+   "hora_rolado": "13:21:40"
+  },
+  "476-laco": {
+   "id": "476-laco",
+   "dia": 476,
+   "hora": "13:21:40",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "MOMENTO",
+     "txt": "[4] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "13:21:40"
+  },
+  "476-chamado": {
+   "id": "476-chamado",
+   "dia": 476,
+   "hora": "13:21:40",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 23,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 7,
+     "res": "ninguém digno",
+     "txt": "[4] +3 = 7 → ninguém digno"
+    }
+   ],
+   "hora_rolado": "13:21:40"
+  },
+  "476-vinculos": {
+   "id": "476-vinculos",
+   "dia": 476,
+   "hora": "13:21:40",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "Nouliel–Herkald",
+     "txt": "#1 [1] → Nouliel–Herkald"
+    },
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "Krernos–Graur",
+     "txt": "#2 [4] → Krernos–Graur"
+    }
+   ],
+   "hora_rolado": "13:21:40"
+  },
+  "FD76": {
+   "id": "FD76",
+   "dia": 476,
+   "hora": "13:24:40",
+   "titulo": "OS FIÉIS DO DOGE VELHO CUMPREM O OBJETIVO (6/6, agenda #858: o Doge velho, o PELAONE, exilado, de volta; força 2; a Liga paga pelo cais; Marasar é da Doge Skotha, o Porto de Marasar é do rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o PELAONE desembarca na guarnição velha com espadas da Liga e é aclamado: Marasar RACHA (a Skotha segura o palácio; luta nas ruas; o Porto do rei sente: Ordem −1 por duas semanas)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o PELAONE volta e a Skotha, para não ter guerra, dá a ele uma cadeira no conselho da cidade: a LIGA volta a ter voz em Marasar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o PELAONE volta e fica senhor da guarnição velha e do cais velho: Marasar tem dois donos; a Skotha cerca o bairro e pede ajuda ao rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o PELAONE desembarca na guarnição velha com espadas da Liga e é aclamado: Marasar RACHA (a Skotha segura o palácio; luta nas ruas; o Porto do rei sente: Ordem −1 por duas semanas)",
+     "txt": "[2] → o PELAONE desembarca na guarnição velha com espadas da Liga e é aclamado: Marasar RACHA (a Skotha segura o palácio; luta nas ruas; o Porto do rei sente: Ordem −1 por duas semanas)"
+    }
+   ],
+   "hora_rolado": "13:24:40"
+  },
+  "IS76": {
+   "id": "IS76",
+   "dia": 476,
+   "hora": "13:24:40",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, SEGUNDO DIA (476; o Ssish MARCA TERRITÓRIO perto de gente nesta semana, mundo_vivo 476: o perigo sobe)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO do Teraseth (o corpo está perto: +2 na busca de amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nada no fundo",
+     "txt": "[3] → nada no fundo"
+    }
+   ],
+   "hora_rolado": "13:24:40"
+  },
+  "FN77": {
+   "id": "FN77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "A PALAVRA DO REI AO CONSELHO, A NOULIEL (477: 'sem a lembrança, o reino e vocês são a única família que me resta; vejam-se e vejam o povo como família'; HONESTO, AVARENTO, DILIGENTE; o PAR do rei; o laço da semana é MOMENTO: +1)",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a palavra não pega nela"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "pega: lealdade +1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dela"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 7,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dela",
+     "txt": "[6] +1 = 7 → o momento é verdadeiro: lealdade +2 e um gesto dela"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "FS77": {
+   "id": "FS77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "A PALAVRA DO REI AO CONSELHO, A SIRA (FRIO, HONESTO: −1)",
+   "dado": [
+    1,
+    6,
+    -1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a palavra não pega nela"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "pega: lealdade +1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dela"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 0,
+     "res": "a palavra não pega nela",
+     "txt": "[1] -1 = 0 → a palavra não pega nela (abaixo da tabela: vale a primeira faixa)"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "FH77": {
+   "id": "FH77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "A PALAVRA DO REI AO CONSELHO, O HERKALD (TEIMOSO, LEAL, PACIENTE: +1; foi ele o mestre do menino que viu a forja)",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a palavra não pega nele"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "pega: lealdade +1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dele"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 6,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dele",
+     "txt": "[5] +1 = 6 → o momento é verdadeiro: lealdade +2 e um gesto dele"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "FT77": {
+   "id": "FT77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "A PALAVRA DO REI AO CONSELHO, O THURON (ORGULHOSO, CRUEL: −1)",
+   "dado": [
+    1,
+    6,
+    -1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a palavra não pega nele"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "pega: lealdade +1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dele"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 1,
+     "res": "a palavra não pega nele",
+     "txt": "[2] -1 = 1 → a palavra não pega nele"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "FE77": {
+   "id": "FE77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "A PALAVRA DO REI AO CONSELHO, A ELIANE (LEAL, ORGULHOSO, JUSTO: +1; viu o preço em Dragal: +1)",
+   "dado": [
+    1,
+    6,
+    2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a palavra não pega nela"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "pega: lealdade +1"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 1000000,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dela"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 7,
+     "res": "o momento é verdadeiro: lealdade +2 e um gesto dela",
+     "txt": "[5] +2 = 7 → o momento é verdadeiro: lealdade +2 e um gesto dela"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "CR77": {
+   "id": "CR77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "O PEDIDO AO CEDUION PELO THURON E PELO COLÉGIO DE IREVIEL (4a: a Ressurreição no Teraseth; Telosus a 15 dias; o prazo é o ~492; o Colégio caiu a +3 nesta semana)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o Thuron só tem a carta: chega a Telosus no ~492 (tarde para o Teraseth)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um mestre do Colégio de Ireviel abre a PORTA DO NADA a Telosus por 500: o pedido chega no 478"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o próprio Thuron passa pela Porta do Nada de um mestre do Colégio: o pedido chega na noite do 477, sem custo"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o próprio Thuron passa pela Porta do Nada de um mestre do Colégio: o pedido chega na noite do 477, sem custo",
+     "txt": "[6] → o próprio Thuron passa pela Porta do Nada de um mestre do Colégio: o pedido chega na noite do 477, sem custo"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "IS77": {
+   "id": "IS77",
+   "dia": 477,
+   "hora": "13:26:32",
+   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, TERCEIRO DIA (477; o Ssish marca território nesta semana)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nada no fundo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acham o BARCO AFUNDADO do Teraseth (o corpo está perto: +2 na busca de amanhã)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "acham o CORPO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nada no fundo",
+     "txt": "[4] → nada no fundo"
+    }
+   ],
+   "hora_rolado": "13:26:32"
+  },
+  "CE77": {
+   "id": "CE77",
+   "dia": 477,
+   "hora": "13:26:47",
+   "titulo": "A RESPOSTA DO CEDUION (4a, o pedido chega pela Porta do Nada na noite do 477: que ele lance a RESSURREIÇÃO no Teraseth quando o corpo for achado; ele pediu perdão no 469 e ofereceu ensinar um 7º; o Colégio a +3; o feitiço pede um núcleo de Luz Raro+ e algo que o morto amou, e o corpo em até um mês: ~492)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "RECUSA: 'um sétimo círculo não se gasta por um barqueiro'; oferece de novo ensinar o 6º"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ACEITA COM PREÇO: vem pela Porta do Nada a Ireviel quando o corpo estiver lá; o núcleo de Luz Raro+ é da casa (que não tem); e o Colégio quer uma peça Lendária do rei"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ACEITA E TRAZ o núcleo de Luz do Colégio: vem quando o corpo estiver em Ireviel; a dívida do perdão fica paga"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ACEITA COM PREÇO: vem pela Porta do Nada a Ireviel quando o corpo estiver lá; o núcleo de Luz Raro+ é da casa (que não tem); e o Colégio quer uma peça Lendária do rei",
+     "txt": "[3] → ACEITA COM PREÇO: vem pela Porta do Nada a Ireviel quando o corpo estiver lá; o núcleo de Luz Raro+ é da casa (que não tem); e o Colégio quer uma peça Lendária do rei"
+    }
+   ],
+   "hora_rolado": "13:26:47"
+  },
+  "AV77": {
+   "id": "AV77",
+   "dia": 477,
+   "hora": "13:27:43",
+   "titulo": "OS AFOGADOS VIVOS NA AUDIÊNCIA (agenda #863: gente do rio que passou para o lado do Teraseth no 402; o rei em Ireviel no 477)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "vêm COBRAR: o Teraseth morreu vestindo a armadura do rei; querem os do Croque de volta ao rio e o corpo entregue a eles, não à casa"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "vêm OFERECER os mergulhadores deles para a busca, se o rei trouxer o Teraseth de volta"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um velho deles VIU o barco do Teraseth afundar na segunda curva das Fundas: +2 na busca do dia em que chegarem lá"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "vêm OFERECER os mergulhadores deles para a busca, se o rei trouxer o Teraseth de volta",
+     "txt": "[3] → vêm OFERECER os mergulhadores deles para a busca, se o rei trouxer o Teraseth de volta"
+    }
+   ],
+   "hora_rolado": "13:27:43"
+  },
+  "BR77": {
+   "id": "BR77",
+   "dia": 477,
+   "hora": "13:27:43",
+   "titulo": "A CARTA DA BRARA (escrita no ~473, chegou a Ireviel no 475; XC71 [6]: o culto do Xaathis abriu o selo velho do rio acima de Levis, a magia some em Levis-baixa por uma lua e o culto toma o bairro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela JÁ ATACOU o bairro com a guarda e perdeu (sem magia lá, a casa de Levis ficou cega): Levis Defesa −1 até a casa retomar, mortos na ponte"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ela SEGURA a ponte de Levis-baixa e pede ao rei a Hoste e o olho da forja (lá nenhum feitiço pega)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ela ACHOU quem abriu: o líder do culto (120) está em Levis-baixa, nas estacas do selo velho, e não sai dali (a chance de pegá-lo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "ela ACHOU quem abriu: o líder do culto (120) está em Levis-baixa, nas estacas do selo velho, e não sai dali (a chance de pegá-lo)",
+     "txt": "[6] → ela ACHOU quem abriu: o líder do culto (120) está em Levis-baixa, nas estacas do selo velho, e não sai dali (a chance de pegá-lo)"
+    }
+   ],
+   "hora_rolado": "13:27:43"
   }
  }
 }

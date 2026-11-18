@@ -1,5 +1,5 @@
 {
- "prox_id": 827,
+ "prox_id": 874,
  "itens": [
   {
    "id": 1,
@@ -11654,6 +11654,687 @@
     4,
     "EXAGERADA: chega maior do que foi"
    ]
+  },
+  {
+   "id": 827,
+   "dia": 476,
+   "texto": "MUDANÇA POLÍTICA: um traidor exposto — a Mata de Elais",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 473",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 828,
+   "dia": 474,
+   "texto": "Gorine (escondido (patrono da Lumine)): perde uma peça ou um aliado para alguém",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 473",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 829,
+   "dia": 476,
+   "texto": "UMA PESSOA IMPORTANTE VIAJA — Steunn (Nucicco)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 474",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 830,
+   "dia": 476,
+   "texto": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Levis e Levis-baixa",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 475",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 831,
+   "dia": 479,
+   "texto": "Gorine (escondido (patrono da Lumine)): o MEDO dele aparece: foge, se esconde ou faz algo desesperado",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 475",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 832,
+   "dia": 479,
+   "texto": "CLIMA ESTRANHO — as Fundas do Norte (o Clã Hegre)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 833,
+   "dia": 482,
+   "texto": "UMA RUÍNA SE ABRE — Levis e Levis-baixa (Uxlomna)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 834,
+   "dia": 476,
+   "texto": "Leliel (o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)): manda um enviado (pode vir a Ireviel se a Obra tocar a casa: 1-3 no d20)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 835,
+   "dia": 477,
+   "texto": "Stundald, a Raiz-de-Ferro (Épico, Telosus): ataca uma aldeia ou caravana (notícia certa)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 836,
+   "dia": 477,
+   "texto": "Maneus, o Afogado do Vento (Lendário, Telosus): briga com outro monstro grande (um sai ferido)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 837,
+   "dia": 477,
+   "texto": "Quneus, o Caçador de Gigantes (Lendário, Marasar): atrai monstros menores ao redor (o lugar fica perigoso)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 838,
+   "dia": 476,
+   "texto": "Ithvil (Mítico, Levis): marca território: o sinal dele aparece mais perto de gente",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 839,
+   "dia": 476,
+   "texto": "a Mãe Branca (Primordial, Steunn): destrói uma ponte, estrada ou mina (o comércio sente)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 840,
+   "dia": 478,
+   "texto": "Fenron (Épico, Steunn): dorme fundo (some por 1d4 semanas)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 841,
+   "dia": 476,
+   "texto": "Laennor, o Redemoinho (Raro, Zisrir): fica ferido (alguém o caçou e quase conseguiu)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 842,
+   "dia": 482,
+   "texto": "Thargos (Mítico, as Fundas do Norte): é caçado por alguém (uma companhia, um Lendário, um culto)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 843,
+   "dia": 476,
+   "texto": "Varogh (Lendário, Steunn): um culto ou bando passa a adorá-lo",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    6,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 844,
+   "dia": 476,
+   "texto": "Husgarn (Único, os Picos Brancos): marca território: o sinal dele aparece mais perto de gente",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 845,
+   "dia": 478,
+   "texto": "Bruur (Épico, Marasar): fica ferido (alguém o caçou e quase conseguiu)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 846,
+   "dia": 482,
+   "texto": "Krothos (Lendário, Levis): é caçado por alguém (uma companhia, um Lendário, um culto)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 847,
+   "dia": 477,
+   "texto": "Vathexa (Lendário, o sul da areia): caça perto do habitat (gado ou gente some)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    14,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 848,
+   "dia": 477,
+   "texto": "Isyzis (Épico, o rio acima de Levis): atrai monstros menores ao redor (o lugar fica perigoso)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 849,
+   "dia": 477,
+   "texto": "Gegrald (Raro, o deserto de sal): come algo que o muda (sobe 1d6 níveis)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 850,
+   "dia": 480,
+   "texto": "Ssish, o Colosso da Colmeia (Primordial, Ireviel e o rio): marca território: o sinal dele aparece mais perto de gente",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 851,
+   "dia": 478,
+   "texto": "Syess (Incomum, Gogrunn): alguém o viu e sobreviveu: um rumor exato (fraqueza, lugar ou drop)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    4,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 852,
+   "dia": 477,
+   "texto": "os Thog (orcs) (Marasar): o chefe é desafiado (1d6: 1-3 cai, novo chefe)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    3,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 853,
+   "dia": 477,
+   "texto": "os Grukos (ogros) (a Mata de Elais): cresce: +1d6×10 de número; o chefe ganha prestígio",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    19,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 854,
+   "dia": 481,
+   "texto": "os Vrurn (trolls) (Yaelane): SURPRESA: gerador de novidade ligado a eles",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    13,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 855,
+   "dia": 477,
+   "texto": "os Vradda (homens-lagarto) (Gogrunn): constroem algo (forte, ponte, templo)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 856,
+   "dia": 477,
+   "texto": "os Kraek (harpias) (Telosus): um deles vira herói ou traidor (rumor com nome)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 857,
+   "dia": 476,
+   "texto": "os Jurados de Steunn (Steunn, em volta do Lumdun): gesto público",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 858,
+   "dia": 476,
+   "texto": "FACÇÃO CUMPRIU O OBJETIVO — os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): nasceram da guerra velha Liga × Skotha: querem o Doge velho de volta; a LIGA paga com ouro e espadas que a MÃO MOLHADA passa pelo cais (a contra da casa achou n",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "faccoes.py",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 859,
+   "dia": 476,
+   "texto": "os Fiéis do Doge Velho (Marasar (a guarnição velha da Liga que se rendeu)): conseguiu o que queria",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 860,
+   "dia": 479,
+   "texto": "(culto) os Olhos Pintados (a estrada sul de Ireviel): briga com os Rendidos de Marasar; vence (culto) os Olhos Pintados",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 861,
+   "dia": 477,
+   "texto": "FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 862,
+   "dia": 478,
+   "texto": "os da Luz do Cais (o porto de Marasar): RACHA: perde gente → força 1",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 863,
+   "dia": 477,
+   "texto": "FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 864,
+   "dia": 478,
+   "texto": "os do Cais de Baixo (o Porto de Marasar): RACHA: perde gente → força 5",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 865,
+   "dia": 477,
+   "texto": "FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 866,
+   "dia": 479,
+   "texto": "os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)): briga com os Descalços do Cais; vence os da Moeda Velha",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 867,
+   "dia": 477,
+   "texto": "os da Brecha Velha (o Porto de Marasar): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    14,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 868,
+   "dia": 477,
+   "texto": "o Círculo da Areia Cantante (Yaelane): matou Isyzis e levou o núcleo",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 869,
+   "dia": 478,
+   "texto": "os Arpões do Sal Vermelho (Shizess): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py, tick 476",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 870,
+   "dia": 476,
+   "texto": "a Ordem da Tocha Branca (Telosus): guerra contra a Torre dos Sete Véus; vence a Torre dos Sete Véus",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py, tick 476",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 871,
+   "dia": 483,
+   "texto": "GUILDA — as Mãos de Breu (Qulosus; chefe Zazess, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 872,
+   "dia": 483,
+   "texto": "OFERTA PÚBLICA: alguém paga por um serviço — Kremir",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 477",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 873,
+   "dia": 492,
+   "texto": "PRAZO DA RESSURREIÇÃO DO TERASETH (morto no 462; um mês): o CEDUION vem a Ireviel pela Porta do Nada quando o corpo estiver lá (CE77 [3]); falta à casa o NÚCLEO DE LUZ Raro+; o Colégio quer uma peça Lendária do rei; o que ele amou: o Croque do Rio (no fundo com ele)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

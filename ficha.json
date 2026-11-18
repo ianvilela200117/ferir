@@ -56,11 +56,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 57962,
+ "cofre": 57789,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8780,
-  "ultima_semana": 469,
+  "ultima_semana": 476,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -429,6 +429,12 @@
    "valor": -500,
    "motivo": "471: o velho barqueiro de Ninnane que leva o rei a Dragal (NB70 [3])",
    "saldo": 57962
+  },
+  {
+   "dia": 476,
+   "valor": -173,
+   "motivo": "semana: casa 6457 + cidades 2150 − despesa 8780",
+   "saldo": 57789
   }
  ],
  "materiais": {
@@ -464,13 +470,14 @@
    ]
   },
   "shasha": {
-   "kg": 5.0,
+   "kg": 6.0,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
     "Dia 420: +1 420: o quilo da Doge (tratado)",
     "Dia 434: +1 434: o tratado da Doge Skotha: 1 kg de shasha da semana (cumpre)",
-    "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)"
+    "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)",
+    "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)"
    ]
   },
   "zezha": {
@@ -760,7 +767,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 0,
+   "tem": 1,
    "max": 1,
    "renova": "semana"
   }

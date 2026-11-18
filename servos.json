@@ -17,11 +17,11 @@
   },
   {
    "nome": "Erygal",
-   "de_pe": true,
+   "de_pe": false,
    "tipo": "servo do Toque (G23 a: até a aurora do 473, a não ser que a Receita Mestra seja feita no corpo antes)",
    "nivel": 17,
    "desde": 472,
-   "nota": "o guardião de ferro do portão de Dragal (Raro 35, morto-vivo de Metal; quebra armas); derrubado pelo Toque do Ceifador do rei; levanta com metade do nível; a palavra não cobra (o Foco pagou)"
+   "nota": "o guardião de ferro do portão de Dragal (Raro 35, morto-vivo de Metal; quebra armas); derrubado pelo Toque do Ceifador do rei; levanta com metade do nível; a palavra não cobra (o Foco pagou) · CAIU na aurora do 473 (servo do Toque, G23 a; sem a Receita: Raro 35, a regra do jogador pede maior que 150)"
   }
  ]
 }

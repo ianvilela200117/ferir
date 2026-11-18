@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 469,
+  "dia": 476,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -33,9 +33,9 @@
    "a Doge Skotha (Marasar)": 0,
    "o Clã Hegre": -2,
    "Steunn": 0,
-   "os Do Junco (o Delta)": -3,
-   "a Escola Única (Almision)": 1,
-   "o Colégio": 4,
+   "os Do Junco (o Delta)": -2,
+   "a Escola Única (Almision)": 0,
+   "o Colégio": 3,
    "a Leliel (o Norte; a Liga é dela)": -4,
    "a Escola Única": 1
   },
@@ -82,9 +82,10 @@
    "455: semana do reino; renda de fora do livro +2300",
    "457: legitimidade 10 → 10 (julgamento RD57: o título falso da casa da Seline; a sentença foi a que a praça esperava)",
    "462: semana do reino; renda de fora do livro +2200",
-   "469: semana do reino; renda de fora do livro +2400"
+   "469: semana do reino; renda de fora do livro +2400",
+   "476: semana do reino; renda de fora do livro +2150"
   ],
-  "ultima_semana": 469,
+  "ultima_semana": 476,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -102,10 +103,10 @@
    "pilares": {
     "Comida": 4,
     "Comércio": 4,
-    "Dinheiro": 4,
+    "Dinheiro": 3,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -202,14 +203,7 @@
    "renda": {
     "no_livro": true
    },
-   "obras": [
-    {
-     "nome": "a ESCOLA DO HERKALD: uma bancada e um teto na forja grande para os filhos da Cinza",
-     "custo": 500,
-     "pronta": 472,
-     "efeito": "o Herkald ensina o fogo aos filhos da Cinza (a reparação de Fenmir); rolar a resposta dos da Cinza quando abrir"
-    }
-   ],
+   "obras": [],
    "log": [
     "294: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 2 · Defesa 4 · evento [16]",
     "301: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [1]",
@@ -236,7 +230,8 @@
     "448: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 2 · evento [9]",
     "455: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 3 · evento [18]",
     "462: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [11]",
-    "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]"
+    "469: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [2]",
+    "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]"
    ],
    "obras_feitas": [
     {
@@ -274,6 +269,12 @@
      "custo": 2800,
      "pronta": 449,
      "efeito": "Defesa +1 de vez em Ireviel; as torres dão o aviso da G11 (bicho no rio e na várzea)"
+    },
+    {
+     "nome": "a ESCOLA DO HERKALD: uma bancada e um teto na forja grande para os filhos da Cinza",
+     "custo": 500,
+     "pronta": 472,
+     "efeito": "o Herkald ensina o fogo aos filhos da Cinza (a reparação de Fenmir); rolar a resposta dos da Cinza quando abrir"
     }
    ]
   },
@@ -282,12 +283,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 4,
+    "Comida": 3,
     "Comércio": 1,
     "Dinheiro": 3,
     "Saúde": 3,
-    "Ordem": 3,
-    "Defesa": 4
+    "Ordem": 2,
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -340,6 +341,10 @@
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
+     ],
+     [
+      -1,
+      "FD76: o Pelaone desembarca e Marasar racha (até o 490)"
      ]
     ],
     "Defesa": [
@@ -382,7 +387,8 @@
     "448: Comida 4 · Comércio 1 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 3 · evento [12]",
     "455: Comida 4 · Comércio 2 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [12]",
     "462: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [13]",
-    "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]"
+    "469: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 3 · Defesa 4 · evento [1]",
+    "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]"
    ]
   },
   {
@@ -391,8 +397,8 @@
    "gente": 9000,
    "pilares": {
     "Comida": 2,
-    "Comércio": 4,
-    "Dinheiro": 2,
+    "Comércio": 3,
+    "Dinheiro": 1,
     "Saúde": 4,
     "Ordem": 3,
     "Defesa": 4
@@ -494,7 +500,8 @@
     "pilar Dinheiro → 2 (449: a missão do Ithvil falhou (a região piora um passo; LV49))",
     "455: Comida 3 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 2 · Defesa 4 · evento [17]",
     "462: Comida 3 · Comércio 4 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [11]",
-    "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]"
+    "469: Comida 2 · Comércio 4 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 4 · evento [13]",
+    "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -522,7 +529,7 @@
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Ordem": [
@@ -547,7 +554,12 @@
       "um veio de sal-gema debaixo do porto (FD66 [6]); o conselho briga pelo direito; até o 480"
      ]
     ],
-    "Comida": [],
+    "Comida": [
+     [
+      1,
+      "clima: colheita em tempo seco, 4 dias limpos (até o 482)"
+     ]
+    ],
     "Saúde": [],
     "Defesa": [
      [
@@ -583,7 +595,8 @@
     "448: Comida 3 · Comércio 3 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [1]",
     "455: Comida 2 · Comércio 3 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 3 · evento [8]",
     "462: Comida 3 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 2 · evento [19]",
-    "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]"
+    "469: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [17]",
+    "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

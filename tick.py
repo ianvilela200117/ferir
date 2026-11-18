@@ -296,7 +296,13 @@ def um_dia(estrada, limite):
         t['pressao'] = 0
     C.append('  Fortuna volta ao máximo')
     _sv = carrega('servos.json', {'servos': []})   # MOTOR 9 (438, G23): a palavra dos servos armados cobra sangue a cada aurora; o tick ROLA e LANÇA sozinho
+    _caiu = False
     for _s in [x for x in _sv.get('servos', []) if x.get('de_pe')]:
+        if str(_s.get('tipo', '')).startswith('servo do Toque'):   # 477 (erro achado): o servo do Toque não cobra palavra (o Foco pagou) e CAI na aurora seguinte (G23 a)
+            if dia > _s.get('desde', dia):
+                _s['de_pe'] = False; _s['nota'] = (_s.get('nota', '') + f' · CAIU na aurora do {dia} (servo do Toque, G23 a)').strip(' ·'); _caiu = True
+                C.append(f"  ☠ SERVO DO TOQUE {_s['nome']}: cai nesta aurora (G23 a); a palavra não cobra")
+            continue
         _x = d(6) * _s.get('palavra_mult', 2); _pv = carrega('ficha.json').get('pv', [0, 0])[0]
         if _pv - _x < 1:
             C.append(f"  ☠ SERVO ARMADO {_s['nome']}: a PALAVRA pede {_x} de PV (d6 × {_s.get('palavra_mult', 2)}) e o rei tem {_pv}: SEM O SANGUE, o servo NÃO ANDA hoje (Lei 2)")
@@ -305,6 +311,7 @@ def um_dia(estrada, limite):
             C.append(f"  ☠ SERVO ARMADO {_s['nome']} (nível {_s.get('nivel', '?')}): a PALAVRA cobra {_x} de PV do rei nesta aurora (d6 × {_s.get('palavra_mult', 2)}) → " + (_l[-1].strip() if _l else str(_e)))
         if _s.get('preco'): C.append(f"     {_s['preco']}" + (' ⚠ O PRAZO PASSOU' if _s.get('prazo') and dia > _s['prazo'] else ''))
         if _s.get('lua_nova') and dia >= _s['lua_nova'] - 2: C.append(f"     lua nova no {_s['lua_nova']}: o nome dele e a gota de sangue")
+    if _caiu: grava('servos.json', _sv)
     if os.path.exists(P('festas.py')):   # MOTOR 9 (G36): a festa de hoje e as da semana
         _fl, _, _fe = roda('festas.py', 'hoje', dia)
         C += [l for l in _fl if l.strip()]

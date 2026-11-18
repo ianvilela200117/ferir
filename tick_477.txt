@@ -1,0 +1,56 @@
+[13:25:45] Dia 477 · Pressão 1/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (18 da Lua do Grão de 1013 d.S., Colheita)
+   Ireviel: neblina, calmo (d6 [2] fica · vento d6 [2]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   o Porto de Marasar: nublado, calmo (d6 [3] fica · vento d6 [2])
+   Levis: limpo, brisa (d6 [5] muda, d20 [1] · vento d6 [3])
+   Farenta: limpo, calmo (d6 [2] fica · vento d6 [1])
+   O RIO: baixo [17/100]
+  avistamento de monstro 1d20 [5] -> alguém vê um · tabela 1d5 [5] Laennor, o Redemoinho
+  Fortuna volta ao máximo
+  O MUNDO SE MOVE — Dia 477 (dia)
+    d20 [15] OFERTA PÚBLICA: alguém paga por um serviço
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [4] em 1d6 [6] dias
+    [MISSÃO]: Orvil (o Mestre dá o nome pela ficção)
+    dificuldade: F  (pela razão Ameaça ÷ régua, Parte XVI.6)
+    tipo: De Facção
+    objetivo: caçar uma criatura
+    complicação escondida (Envelope): a recompensa não existe mais
+    prazo: 5 dias
+    recompensa: 50 XP · 10 de ouro · ??? (revelada ao concluir)
+    penalidade se falhar: uma facção ganha um segmento
+    quem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 477
+    Lendários: d20 [16] quietos hoje
+    trama do dia: Souane → Brara (DESEJO SECRETO) d20 [14] um gesto dela aparece em cena hoje
+    FAÍSCA: ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322) esconde um filho de Odrum, por causa de uma criança
+    FAÍSCA: Oslo chantageia o Visconte Aldoveri, por causa de uma profecia
+    FAÍSCA: Celocus ama em segredo Tilde, por causa de uma profecia
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #693 (era do Dia 455): FACÇÃO CUMPRIU O OBJETIVO — a Luz Partida (Marasar e Ireviel): a metade da Lumine que seguia quem a Donione servia; rachou depois do sumiço dela (301)
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #817 (era do Dia 469): FACÇÃO CUMPRIU O OBJETIVO — o Culto do Xaathis (Levis e Levis-baixa (4 cidades)): adora o fim do mundo; promete o fim das dívidas; sinal: um dente arrancado; líder nível 120; rito: veneno; plano (6): abrir um selo; fraqueza: o patrono cobra c
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ▶ AGENDA #861: FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio
+  ▶ AGENDA #863: FACÇÃO — os Afogados Vivos (o rio) pede audiência ao conselho. O que querem: 402: passaram para o lado do Teraseth (notícia FIEL)
+  ▶ AGENDA #865: FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)
+  ✉ NOTÍCIA QUE CHEGA HOJE: Stundald, a Raiz-de-Ferro (Épico, Telosus): ataca uma aldeia ou caravana (notícia certa) · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Maneus, o Afogado do Vento (Lendário, Telosus): briga com outro monstro grande (um sai ferido) · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Quneus, o Caçador de Gigantes (Lendário, Marasar): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [12] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Isyzis (Épico, o rio acima de Levis): atrai monstros menores ao redor (o lugar fica perigoso) · COMO CHEGA: d20 [7] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Thog (orcs) (Marasar): o chefe é desafiado (1d6: 1-3 cai, novo chefe) · COMO CHEGA: d20 [3] EXAGERADA: chega maior do que foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Vradda (homens-lagarto) (Gogrunn): constroem algo (forte, ponte, templo) · COMO CHEGA: d20 [10] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): um deles vira herói ou traidor (rumor com nome) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ NOTÍCIA QUE CHEGA HOJE: os da Brecha Velha (o Porto de Marasar): dá um passo no que quer · COMO CHEGA: d20 [14] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: o Círculo da Areia Cantante (Yaelane): matou Isyzis e levou o núcleo · COMO CHEGA: d20 [11] FIEL
+  ✉ notícia de longe que chega hoje: Vathexa (Lendário, o sul da areia): caça perto do habitat (gado ou gente some) · COMO CHEGA: d20 [14] FIEL
+  ✉ notícia de longe que chega hoje: Gegrald (Raro, o deserto de sal): come algo que o muda (sobe 1d6 níveis) · COMO CHEGA: d20 [8] INCOMPLETA: falta quem fez ou onde foi
+  ✉ notícia de longe que chega hoje: os Grukos (ogros) (a Mata de Elais): cresce: +1d6×10 de número; o chefe ganha prestígio · COMO CHEGA: d20 [19] FIEL
