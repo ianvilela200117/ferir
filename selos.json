@@ -1,13 +1,5 @@
 {
  "ordem": [
-  "GR31",
-  "HG31",
-  "LV31",
-  "BR32",
-  "TE32",
-  "TE32p",
-  "MR30",
-  "PM30",
   "ST32",
   "CL32",
   "CH33",
@@ -399,413 +391,17 @@
   "CV90",
   "RS90",
   "CJ90",
-  "MG91"
+  "MG91",
+  "AL93",
+  "HA93",
+  "TR93",
+  "AR93",
+  "FV93",
+  "CV93",
+  "CQ93",
+  "MG93"
  ],
  "selos": {
-  "GR31": {
-   "id": "GR31",
-   "dia": 431,
-   "hora": "03:06:36",
-   "titulo": "A GROA E O HOMEM DAS GUILDAS DE STEUNN (ele cobra a medida ou o desenho da Fornalha; ela é COVARDE, deve a alguém perigoso, e nunca vende o ofício barato)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 13,
-     "res": "ELA ENROLA: pede uma semana (ele volta no tick do 434)"
-    },
-    {
-     "tipo": "num",
-     "a": 14,
-     "b": 19,
-     "res": "ELA CONTA ao Herkald: a casa sabe do homem e do que ele quer"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "conta ao Herkald e entrega o homem: a Sira o prende esta noite"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)",
-     "txt": "[3] → ELA PASSA uma medida da Fornalha (o homem entra nos infiltrados)"
-    }
-   ],
-   "hora_rolado": "03:06:36"
-  },
-  "HG31": {
-   "id": "HG31",
-   "dia": 431,
-   "hora": "03:06:36",
-   "titulo": "A TRAIÇÃO DENTRO DO CLÃ HEGRE (evento de mundo ALEATÓRIO do 431, as Fundas do Norte; o eco chega à casa por um fio ativo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "um chefe do Clã VENDE AO BORECCI (Steunn) o therk prometido ao rei (o tratado proposto 'cla', F4)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um parente tenta matar o chefe e FOGE PARA O SUL: vem pedir abrigo a Ireviel (chega em 2d6 dias)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os do Clã que queriam a mediação do rei com os Vradda (F5) são expulsos, e o Hulgunn perde quem o recebia"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "03:06:36"
-  },
-  "LV31": {
-   "id": "LV31",
-   "dia": 431,
-   "hora": "03:06:36",
-   "titulo": "QUEM LUCRA COM A FROTA PERDIDA DE LEVIS (evento de mundo PERTO do 431: caravana ou frota perdida, na tempestade; 'alguém lucra')",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a LIGA: sem as barcas de Levis, o frete dela no rio sobe de novo"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o CULTO DO XAATHIS: a carga some nas minas de baixo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BIGORNA LIVRE: compra o ferro perdido barato de quem o pescou"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "03:06:36"
-  },
-  "BR32": {
-   "id": "BR32",
-   "dia": 432,
-   "hora": "03:07:43",
-   "titulo": "QUANDO A BARCA RÁPIDA DA INTENDENTE ALCANÇA O REI (sai de Ireviel na manhã do 432, com o céu limpo e o rio normal, levando as notícias do 430 e do 431, o mensageiro da Skotha, o relato da Guilda e a pena da Mamiltia; o rei saiu do remanso ao amanhecer)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "na NOITE DO 432, no pouso da barca do rei"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "só ao MEIO-DIA DO 433"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "na NOITE DO 432, no pouso da barca do rei",
-     "txt": "[3] → na NOITE DO 432, no pouso da barca do rei"
-    }
-   ],
-   "hora_rolado": "03:07:43"
-  },
-  "TE32": {
-   "id": "TE32",
-   "dia": 432,
-   "hora": "03:07:43",
-   "titulo": "O TERASETH CAÇA A ELOUNE SOZINHO NOS LODAÇAIS (Lendário 432, com o Croque do Rio, Primordial, contra a Épica 136 no terreno dela: 4 crias, veneno, olhar que paralisa)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "ela ESCAPA de novo no lodaçal fundo; ele perde o rastro"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "ela o FERE (o olhar e o veneno) e ele recua; ela fica ferida e mais faminta"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 16,
-     "res": "ELE A MATA: o coração (núcleo Épico de Água) é dele; as crias fogem (1d4)"
-    },
-    {
-     "tipo": "num",
-     "a": 17,
-     "b": 19,
-     "res": "ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)"
-    },
-    {
-     "tipo": "num",
-     "a": 20,
-     "b": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)",
-     "txt": "[19] → ele a mata e MANDA OFERECER O CORAÇÃO AO REI, por um preço (rola qual)"
-    }
-   ],
-   "hora_rolado": "03:07:43"
-  },
-  "TE32p": {
-   "id": "TE32p",
-   "dia": 432,
-   "hora": "03:07:57",
-   "titulo": "O PREÇO DO TERASETH PELO CORAÇÃO DA ELOUNE (núcleo Épico de Água)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "OURO: 3d6 × 1.000"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "UMA PEÇA da forja do rei para ele: uma ARMADURA, Lendária ou melhor"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "UM FAVOR: as lanças do rei contra os que mataram os barqueiros dele na guerra do rio (a Liga no rio)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "NADA: é presente, pelo Croque do Rio"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "NADA: é presente, pelo Croque do Rio",
-     "txt": "[6] → NADA: é presente, pelo Croque do Rio"
-    }
-   ],
-   "hora_rolado": "03:07:57"
-  },
-  "MR30": {
-   "id": "MR30",
-   "dia": 432,
-   "hora": "03:08:23",
-   "titulo": "O QUE A GUILDA E OS DO CROQUE VIRAM DA REVOLTA DE MARASAR (430; os Fiéis do Doge Velho, força 6, contra a Skotha)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "os Fiéis têm o QUARTEL VELHO e o PORTÃO DO RIO; a Skotha segura o palácio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a Skotha já os APERTOU no quartel velho: cerco dentro da cidade"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os Fiéis tomaram também a estrada do PORTO DE MARASAR (o porto do rei está cortado da cidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto",
-     "txt": "[4] → LUTA DE RUA em meia cidade; a Skotha segura o palácio e o cais dela; ninguém manda no resto"
-    }
-   ],
-   "hora_rolado": "03:08:23"
-  },
-  "PM30": {
-   "id": "PM30",
-   "dia": 432,
-   "hora": "03:08:23",
-   "titulo": "O PORTO DE MARASAR (do rei, ~3.000) NA REVOLTA: o que a Guilda viu ao passar",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "quieto, de portas fechadas; a guarda do porto nas muralhas"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "gente da cidade foge para o porto (refugiados)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais",
-     "txt": "[5] → os do CAIS DE BAIXO (inimigos, a greve) aproveitam: motim pequeno no cais"
-    }
-   ],
-   "hora_rolado": "03:08:23"
-  },
   "ST32": {
    "id": "ST32",
    "dia": 432,
@@ -20226,6 +19822,964 @@
     }
    ],
    "hora_rolado": "16:15:54"
+  },
+  "AL93": {
+   "id": "AL93",
+   "dia": 492,
+   "hora": "17:19:58",
+   "titulo": "(OCULTO) POR QUE A ALMISION QUER OS AROS DE CINZA SACIADO (a Lendária 440 da Escola Única, guardiã do pacto do Silêncio; na estrada com o corvo; sofreu um revés no 478; manda caçar alguém no 488; a pena de corvo no ladrão da Eliane)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "para ESTUDÁ-LOS: o Cinza Saciado come magia, e ela quer saber se come também a magia que acorda os deuses (remendar a coberta sem a Matriz)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "para TIRÁ-LOS DO MUNDO: o Cinza Saciado é vaduar queimado, e cada peça dele afina a coberta um pouco; ela os quer para enterrar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "para SE PROTEGER: alguém grande a caça desde o revés do 478, com magia, e os aros comem magia"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "para SE PROTEGER: alguém grande a caça desde o revés do 478, com magia, e os aros comem magia",
+     "txt": "[5] → para SE PROTEGER: alguém grande a caça desde o revés do 478, com magia, e os aros comem magia"
+    }
+   ],
+   "hora_rolado": "17:19:58"
+  },
+  "HA93": {
+   "id": "HA93",
+   "dia": 492,
+   "hora": "17:20:24",
+   "titulo": "(OCULTO) QUEM CAÇA A ALMISION (AL93 [5]; alguém grande, com magia, desde o revés dela no 478)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o BORECCI (Mítico, Steunn; a faísca do 488: ele esconde um filho dela)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o GORINE (o patrono escondido da Lumine)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o MÉDICO CINZENTO (o Qunemneth, a Vigília)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "algo do SILÊNCIO: um deus que se mexe debaixo da terra e sente quem guarda o pacto"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o BORECCI (Mítico, Steunn; a faísca do 488: ele esconde um filho dela)",
+     "txt": "[1] → o BORECCI (Mítico, Steunn; a faísca do 488: ele esconde um filho dela)"
+    }
+   ],
+   "hora_rolado": "17:20:24"
+  },
+  "TR93": {
+   "id": "TR93",
+   "dia": 492,
+   "hora": "17:20:24",
+   "titulo": "QUANDO CHEGA A RESPOSTA DA ALMISION (o rei responde no 493 pelo mesmo mensageiro: 'qual é o favor? e para que os aros? posso forjar outros')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "no 494 (o corvo)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "no 495"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "no 496"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "no 495",
+     "txt": "[3] → no 495"
+    }
+   ],
+   "hora_rolado": "17:20:24"
+  },
+  "AR93": {
+   "id": "AR93",
+   "dia": 492,
+   "hora": "17:20:24",
+   "titulo": "O QUE A ALMISION RESPONDE SOBRE OS AROS (ela é Lendária, fria e direta; o rei ofereceu forjar outros)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela quer ESTES, os da Eliane e os do Graur: 'aros que comeram magia por anos estão saciados; aros novos têm fome e não me servem'"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "AROS NOVOS SERVEM, se forem da mão do rei: o favor por um par"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "aros novos servem, e ela paga o favor ANTES"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "AROS NOVOS SERVEM, se forem da mão do rei: o favor por um par",
+     "txt": "[5] → AROS NOVOS SERVEM, se forem da mão do rei: o favor por um par"
+    }
+   ],
+   "hora_rolado": "17:20:24"
+  },
+  "FV93": {
+   "id": "FV93",
+   "dia": 492,
+   "hora": "17:20:24",
+   "titulo": "O FAVOR GRANDE QUE A ALMISION OFERECE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ela conta ao rei o que a caça e o que isso quer de Ireviel (um aviso que vale uma guerra)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ela ensina ao rei um feitiço do 6º círculo, quando ele chegar ao 50 (a aula dela, da Escola Única)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ela dá ao rei o CAMINHO DE KASRON e o que se paga lá para tirar a Tenaz-Coroa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ela ensina ao rei um feitiço do 6º círculo, quando ele chegar ao 50 (a aula dela, da Escola Única)",
+     "txt": "[4] → ela ensina ao rei um feitiço do 6º círculo, quando ele chegar ao 50 (a aula dela, da Escola Única)"
+    }
+   ],
+   "hora_rolado": "17:20:24"
+  },
+  "CV93": {
+   "id": "CV93",
+   "dia": 492,
+   "hora": "17:20:51",
+   "titulo": "O CONSELHO VOTA: QUEM HERDA AS PEÇAS DO TERASETH (o CROQUE DO RIO, Primordial, e a ARMADURA DO REI, Lendária de yeviel), ouvidos os do Croque (o jogador: 'chamar os do Croque e o conselho para decidir quem vai herdar')",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [],
+     "total": 0,
+     "res": "VENCE B) a ISOLDA, Mestra das Águas, que o tirou do rio · placar A 2 · B 3 · C 0 · D 1 · VOTO VENCIDO: Nouliel, Thuron, Sira",
+     "txt": "VENCE B) a ISOLDA, Mestra das Águas, que o tirou do rio · placar A 2 · B 3 · C 0 · D 1 · VOTO VENCIDO: Nouliel, Thuron, Sira"
+    }
+   ]
+  },
+  "CQ93": {
+   "id": "CQ93",
+   "dia": 492,
+   "hora": "17:21:04",
+   "titulo": "OS DO CROQUE OUVEM O VOTO (CV93 B: o Croque do Rio e a armadura do rei à ISOLDA, Mestra das Águas; eles queriam o Croque nas barcas; força 4, amigos da casa; ela os comandou na busca e o tirou do rio)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "RESSENTIDOS: metade deles deixa as barcas da casa e vai para os Afogados Vivos (os do Croque força −1)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "ACEITAM: a Isolda é a capitã nova das barcas do Croque"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "JURAM à Isolda sobre o corpo: ela é a capitã deles, e a força dos do Croque sobe (+1)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "JURAM à Isolda sobre o corpo: ela é a capitã deles, e a força dos do Croque sobe (+1)",
+     "txt": "[6] → JURAM à Isolda sobre o corpo: ela é a capitã deles, e a força dos do Croque sobe (+1)"
+    }
+   ],
+   "hora_rolado": "17:21:04"
+  },
+  "MG93": {
+   "id": "MG93",
+   "dia": 492,
+   "hora": "17:21:44",
+   "titulo": "A MAGIA DA BALANÇA DAS DUAS MARGENS (Lendária; o rerrolar porque o 7º não cabe; os feitiços do 4º ao 6º do grimório; 1x por cena, sem saber magia)",
+   "dado": [
+    1,
+    104,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Chuva de Brasas (Chama 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Inverno Breve (Gelo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Tremor (Pedra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Tempestade Local (Vento 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Lança do Sol (Luz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Noite Fechada (Sombra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Corrente de Sangue (Sangue 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Quebra-Ossos (Osso 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Servo de Osso (Osso 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Sono do Ferro (Vazio 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "Selo de Silêncio (Vazio 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "Elo de Juramento (Elo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "Visão do Tempo (Tempo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "Comando (Mente 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "Muralha de Fogo (Chama 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "Lança de Magma (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "Coração de Fornalha (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "Pele de Brasa (Chama 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "Sol de Mão (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "Passo de Brasa (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 21,
+     "b": 21,
+     "res": "Forja Sem Mão (Chama 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 22,
+     "res": "Lança de Gelo (Gelo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 23,
+     "b": 23,
+     "res": "Tumba de Gelo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 24,
+     "b": 24,
+     "res": "Inverno de Campo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 25,
+     "b": 25,
+     "res": "Armadura de Gelo (Gelo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 26,
+     "b": 26,
+     "res": "Nevasca (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 27,
+     "b": 27,
+     "res": "Castelo de Gelo (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 28,
+     "b": 28,
+     "res": "Sono Branco (Gelo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 29,
+     "b": 29,
+     "res": "Mão da Terra (Pedra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 30,
+     "b": 30,
+     "res": "Terremoto (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 31,
+     "b": 31,
+     "res": "Corpo de Pedra (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 32,
+     "b": 32,
+     "res": "Abrir Caminho (Pedra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 33,
+     "b": 33,
+     "res": "Golem de Pedra (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 34,
+     "b": 34,
+     "res": "Engolir (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 35,
+     "b": 35,
+     "res": "Muralha de Cidade (Pedra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 36,
+     "b": 36,
+     "res": "Asas de Vento (Vento 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 37,
+     "b": 37,
+     "res": "Ciclone (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 38,
+     "b": 38,
+     "res": "Vento de Viagem (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 39,
+     "b": 39,
+     "res": "Raio (Vento 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 40,
+     "b": 40,
+     "res": "Tempestade (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 41,
+     "b": 41,
+     "res": "Andar no Ar (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 42,
+     "b": 42,
+     "res": "Muralha de Vento (Vento 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 43,
+     "b": 43,
+     "res": "Cura Maior (Luz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 44,
+     "b": 44,
+     "res": "Cura em Roda (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 45,
+     "b": 45,
+     "res": "Escudo de Luz (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 46,
+     "b": 46,
+     "res": "Verdade (Luz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 47,
+     "b": 47,
+     "res": "Erguer o Caído (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 48,
+     "b": 48,
+     "res": "Sol de Meio-Dia (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 49,
+     "b": 49,
+     "res": "Selo Santo (Luz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 50,
+     "b": 50,
+     "res": "Lâmina de Sombra (Sombra 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 51,
+     "b": 51,
+     "res": "Exército de Sombras (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 52,
+     "b": 52,
+     "res": "Sumir de Vez (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 53,
+     "b": 53,
+     "res": "Pesadelo (Sombra 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 54,
+     "b": 54,
+     "res": "Estrada de Sombra (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 55,
+     "b": 55,
+     "res": "Roubar a Sombra (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 56,
+     "b": 56,
+     "res": "Casa Escondida (Sombra 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 57,
+     "b": 57,
+     "res": "Ferver o Sangue (Sangue 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 58,
+     "b": 58,
+     "res": "Doar a Vida (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 59,
+     "b": 59,
+     "res": "Marionete (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 60,
+     "b": 60,
+     "res": "Sangue de Ferro (Sangue 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 61,
+     "b": 61,
+     "res": "Chuva de Sangue (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 62,
+     "b": 62,
+     "res": "Laço de Família (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 63,
+     "b": 63,
+     "res": "Sangue Novo (Sangue 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 64,
+     "b": 64,
+     "res": "Reanimar (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 65,
+     "b": 65,
+     "res": "Mão Que Seca (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 66,
+     "b": 66,
+     "res": "Muro de Ossos (Osso 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 67,
+     "b": 67,
+     "res": "Exército de Ossos (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 68,
+     "b": 68,
+     "res": "Prender a Alma (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 69,
+     "b": 69,
+     "res": "Toque do Ceifador (Osso 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 70,
+     "b": 70,
+     "res": "Apagar (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 71,
+     "b": 71,
+     "res": "Lugar Nenhum (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 72,
+     "b": 72,
+     "res": "Rasgo (Vazio 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 73,
+     "b": 73,
+     "res": "Campo Morto (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 74,
+     "b": 74,
+     "res": "Porta do Nada (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 75,
+     "b": 75,
+     "res": "Esquecer (Vazio 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 76,
+     "b": 76,
+     "res": "Corrente Viva (Elo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 77,
+     "b": 77,
+     "res": "Corrente Mestre (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 78,
+     "b": 78,
+     "res": "Elo de Guerra (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 79,
+     "b": 79,
+     "res": "Puxar (Elo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 80,
+     "b": 80,
+     "res": "Laço de Servo (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 81,
+     "b": 81,
+     "res": "Âncora (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 82,
+     "b": 82,
+     "res": "Romper Laço (Elo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 83,
+     "b": 83,
+     "res": "Lento (Tempo 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 84,
+     "b": 84,
+     "res": "Parar a Hora (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 85,
+     "b": 85,
+     "res": "Ler o Ano (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 86,
+     "b": 86,
+     "res": "Envelhecer o Alvo (Tempo 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 87,
+     "b": 87,
+     "res": "Desfazer o Dia (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 88,
+     "b": 88,
+     "res": "Pressa de Tropa (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 89,
+     "b": 89,
+     "res": "Guardar a Hora (Tempo 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 90,
+     "b": 90,
+     "res": "Medo em Massa (Mente 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 91,
+     "b": 91,
+     "res": "Dominar (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 92,
+     "b": 92,
+     "res": "Elo de Mente (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 93,
+     "b": 93,
+     "res": "Golpe na Mente (Mente 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 94,
+     "b": 94,
+     "res": "Apagar Lembrança (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 95,
+     "b": 95,
+     "res": "Multidão Mansa (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 96,
+     "b": 96,
+     "res": "Muralha da Mente (Mente 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 97,
+     "b": 97,
+     "res": "Forma de Fera (Raiz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 98,
+     "b": 98,
+     "res": "Mata Fechada (Raiz 4º)"
+    },
+    {
+     "tipo": "num",
+     "a": 99,
+     "b": 99,
+     "res": "Praga (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 100,
+     "b": 100,
+     "res": "Colheita Boa (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 101,
+     "b": 101,
+     "res": "Árvore que Anda (Raiz 5º)"
+    },
+    {
+     "tipo": "num",
+     "a": 102,
+     "b": 102,
+     "res": "Caminho da Mata (Raiz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 103,
+     "b": 103,
+     "res": "Enxame (Raiz 6º)"
+    },
+    {
+     "tipo": "num",
+     "a": 104,
+     "b": 104,
+     "res": "Remédio Vivo (Raiz 6º)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      88
+     ],
+     "total": 88,
+     "res": "Pressa de Tropa (Tempo 6º)",
+     "txt": "[88] → Pressa de Tropa (Tempo 6º)"
+    }
+   ],
+   "hora_rolado": "17:21:44"
   }
  }
 }

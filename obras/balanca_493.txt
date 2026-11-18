@@ -1,0 +1,40 @@
+OBRA "A Balança das Duas Margens" (objeto)
+    +12  MÃO · Maestria Forja Lendário
+    +10  MÃO · Inteligência 115 ÷ 10 (teto 10)
+     +4  MÃO · Sorte 95 ÷ 20
+    +15  MÃO · nível 159 ÷ 10
+     +6  MÃO · Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)
+     +1  MÃO · Olho do Material
+     +1  MÃO · Fole Firme 2
+     +1  MÃO · Alma no Aço 2
+     +3  MÃO · Mão que Não Treme 3
+     +2  MÃO · Veio Certo 2 (pontos do 3 e do 15 do Herdeiro)
+     +2  MÃO · Golpe de Mestre 2 (pontos do 6 e do 18 do Herdeiro)
+    +18  MATERIAL mitico
+     +7  FERRAMENTA O MARTELO DO REI (Ferramenta de Rei, de Dragal) (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): o Martelo do Rei soma o dobro
+     +7  FERRAMENTA A MATRIZ (lendario)
+     +7  FERRAMENTA · Martelo e Bigorna (Herdeiro): a Matriz soma o dobro
+     +5  FERRAMENTA TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150) (mitico, metade)
+     +5  FERRAMENTA · FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)
+     +3  FERRAMENTA · fole: o arvel como ferramenta (+3 em toda obra de forja)
+     +2  FERRAMENTA · fole: segura o calor certo (+2 no Processo)
+     +6  OFICINA Fornalha que Não Apaga
+     +2  AJUDANTES (máx. +6)
+     +1  EXTRAS
+    ---- SOMA DOS VALORES: 127
+    CDs: Comum 15 · Incomum 26 · Rara 42 · Épica 55 · Única 68 · Lendária 84 · Mítica 102 · Primordial 125
+  dados finais: [18] + [20, 11] → TOTAL 176
+  dados de saída: [18] + [20, 11] = 176
+  RESULTADO: A Balança das Duas Margens — PRIMORDIAL · XP 50000
+  → lançar: python3 ficha.py xp 50000 "A Balança das Duas Margens (Primordial)"   (ajudantes: 1/4 cada, no cresce.py)
+    efeito novo 1: quem a abre sem direito esquece o que viu (Vontade CD 25)
+    efeito novo 2: pesa o dobro para quem não é dono
+    efeito novo 3: sela com cera de runa: mostra se alguém tentou
+    efeito novo 4: guarda o frio ou o calor de dentro por um mês
+    efeito novo 5: esconde o que guarda da magia de procura
+    efeito novo 6: não abre sem a chave certa: Ladinagem CD 40
+    efeito novo 7: não pode ser tirada do lugar onde foi posta sem a chave
+    efeito novo 8: não queima nem racha no fogo
+    efeito de magia (d52 do grimório): Cemitério Acorda (Osso 7º): todos os mortos de um cemitério levantam e obedecem por 1 noite. Componente: terra do túmulo mais velho — 1x por cena, sem saber magia (se não couber na peça, rerrolar)
+    PECULIARIDADE: DEFEITO: range quando o dono tem medo

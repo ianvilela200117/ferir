@@ -1,5 +1,5 @@
 {
- "prox_id": 958,
+ "prox_id": 961,
  "itens": [
   {
    "id": 1,
@@ -11022,7 +11022,7 @@
   {
    "id": 783,
    "dia": 468,
-   "texto": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium)",
+   "texto": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Zunindi)",
    "tipo": "noticia",
    "oculto": false,
    "para": false,
@@ -13574,6 +13574,51 @@
    "boato": [
     15,
     "FIEL"
+   ]
+  },
+  {
+   "id": 958,
+   "dia": 494,
+   "texto": "SURPRESA: o gerador de novidade — Mordun (a Boca com Fome)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 493",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 959,
+   "dia": 496,
+   "texto": "UM VILÃO NOVO entra no mundo — Gogrunn (as minas) (Vdernos)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 494",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    19,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 960,
+   "dia": 496,
+   "texto": "UMA PESSOA IMPORTANTE VIAJA — a costa (Ireviel–Marasar) (Zunindi)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 495",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
    ]
   }
  ],

@@ -160,7 +160,7 @@
   "fraqueza": "se cair, a tropa testa moral.",
   "voz": "frases curtas, de quartel; diz o custo antes do plano; chama o rei de 'senhor' só em público",
   "lealdade": 7,
-  "votos_seguidos": 1,
+  "votos_seguidos": 0,
   "ultima_subida": 490,
   "desejo": "deixar uma obra",
   "ambicao": "descobrir uma receita perdida",
@@ -857,12 +857,13 @@
    "Dia 477: 477: a palavra do rei ao conselho (família; FN77 [6]+1): o momento é verdadeiro: pôs a mão no ombro dele diante da mesa e abriu o LIVRO DAS VIÚVAS (proposta: meio soldo às famílias dos mortos da casa) · lealdade 5 → 7",
    "+1000 Tick 483: MISSÃO/FEITO (o livro; os pilares; a caixa-forte)",
    "Dia 485: 479: o rei disse a ela, na Fornalha: 'você é um dos poucos afetos que me sobraram'; ela pôs a mão sobre a dele",
-   "+500 Tick 490: PASSO (o livro; os pilares; a caixa-forte)"
+   "+500 Tick 490: PASSO (o livro; os pilares; a caixa-forte)",
+   "Dia 492: VOTO VENCIDO no conselho (QUEM HERDA AS PEÇAS DO TERASETH (o CROQUE DO RIO, Primordial): queria A) os do Croque escolhem um capitão novo e as duas pe"
   ],
   "classe": "Intendente (OURO, Comum) · HONESTA, AVARENTA, DILIGENTE",
   "ocupacao": "o livro; os pilares; a caixa-forte",
   "ultima_subida": 476,
-  "votos_vencidos": 14,
+  "votos_vencidos": 15,
   "tracos": [
    "HONESTO",
    "AVARENTO",
@@ -878,7 +879,7 @@
    }
   ],
   "lealdade": 7,
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "desejo": "nunca mais passar fome",
   "ambicao": "fundar uma escola",
   "medo": "a velhice",
@@ -1029,7 +1030,7 @@
  },
  "Iorin": {
   "nivel": 62,
-  "xp": 18598,
+  "xp": 19223,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 155: chefe das bases",
@@ -1163,7 +1164,8 @@
    "+1000 Tick 469: MISSÃO/FEITO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
    "+1000 Tick 476: MISSÃO/FEITO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
    "+500 Tick 483: PASSO (ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa)",
-   "+12500 492: ajudante da CISTERNA QUE COME A FEBRE (Primordial, 1/4 de 50.000)"
+   "+12500 492: ajudante da CISTERNA QUE COME A FEBRE (Primordial, 1/4 de 50.000)",
+   "+625 494: ajudante da Balança das Duas Margens (Lendária, 1/4)"
   ],
   "classe": "Aprendiz de ferreiro (FORJA, Comum) · Forja Iniciante→Treinado · ORGULHOSO, DILIGENTE, DESCONFIADO",
   "ocupacao": "ajudante de Ferir na Fornalha (com a Tilde, desde o 209); as bases da Faca Acesa",
@@ -1297,11 +1299,12 @@
    "Dia 477: 477: a palavra do rei ao conselho (FS77 [1]−1): não pegou: \"família não guarda segredo; reino guarda\"",
    "+500 Tick 483: PASSO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
    "+1000 Tick 490: MISSÃO/FEITO (LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275)",
-   "Tick 490: SOBE a 34"
+   "Tick 490: SOBE a 34",
+   "Dia 492: VOTO VENCIDO no conselho (QUEM HERDA AS PEÇAS DO TERASETH (o CROQUE DO RIO, Primordial): queria D) dividir: o Croque do Rio aos do Croque (o capitão "
   ],
   "classe": "Cavaleira (AÇO, Comum)",
   "ocupacao": "LIVRE (resgatada na noite do 274 pelo Eiagrir e pela Isolda); de volta a Ireviel no 275",
-  "votos_vencidos": 16,
+  "votos_vencidos": 17,
   "tracos": [
    "FRIO",
    "HONESTO"
@@ -1314,7 +1317,7 @@
   ],
   "fraqueza": "a pé, perde a Carga; quebrar o voto tira o Juramento.",
   "voz": "baixo, sem adjetivo; responde pergunta com pergunta; conta o que viu antes do que acha",
-  "votos_seguidos": 0,
+  "votos_seguidos": 1,
   "lealdade": 4,
   "ultima_subida": 490,
   "desejo": "uma casa própria",
@@ -1958,7 +1961,8 @@
    "+1110 483: três bichos da colmeia do Ssish nas Fundas",
    "+1480 484: quatro bichos da colmeia do Ssish nas Fundas",
    "+500 Tick 490: PASSO (MESTRA DAS ÁGUAS (conselho real) e capitã da galé (329))",
-   "Tick 490: SOBE a 121"
+   "Tick 490: SOBE a 121",
+   "Dia 492: 493: HERDA o CROQUE DO RIO (Primordial) e a ARMADURA DO REI (Lendária, yeviel) pelo voto do conselho (CV93 B, 3 a 2 a 1); os do Croque juram a ela sobre o corpo do Teraseth (CQ93 [6]): é a capitã deles · no nível 121 as duas rendem uma categoria abaixo (a armadura como Única, o Croque como Mítico); conferir a ficha de combate no G9 da próxima luta"
   ],
   "tracos": [
    "FRIO"
@@ -1971,7 +1975,7 @@
   ],
   "fraqueza": "a guilda dele cobra uma morte por ano.",
   "votos_vencidos": 16,
-  "votos_seguidos": 1,
+  "votos_seguidos": 0,
   "lealdade": 4,
   "ultima_subida": 490,
   "estado": "viva (GRAVE até o 447, manca; o Morek, 425)",
@@ -1987,6 +1991,14 @@
    "ambicao",
    "medo",
    "linha_vermelha"
+  ],
+  "opiniao": [
+   {
+    "v": 10,
+    "motivo": "493: o conselho lhe deu o Croque do Rio e a armadura do rei, e os do Croque juraram a ela",
+    "dia": 492,
+    "ate": 582
+   }
   ]
  },
  "Thuron": {
@@ -2092,9 +2104,10 @@
    "+500 Tick 476: PASSO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
    "Dia 477: 477: a palavra do rei ao conselho (FT77 [2]−1): não pegou; mas levou o pedido ao Ceduion pela Porta do Nada de um mestre do Colégio na mesma noite (CR77 [6])",
    "+500 Tick 483: PASSO (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
-   "+500 Tick 490: SURPRESA (gerador) (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)"
+   "+500 Tick 490: SURPRESA (gerador) (conselheiro real pelo COLÉGIO (295); ensina a Ferir a escola de Osso)",
+   "Dia 492: VOTO VENCIDO no conselho (QUEM HERDA AS PEÇAS DO TERASETH (o CROQUE DO RIO, Primordial): queria A) os do Croque escolhem um capitão novo e as duas pe"
   ],
-  "votos_vencidos": 16,
+  "votos_vencidos": 17,
   "tracos": [
    "ORGULHOSO",
    "CRUEL"
@@ -2107,7 +2120,7 @@
   ],
   "fraqueza": "sem o grimório, só lembra 3 feitiços.",
   "lealdade": 4,
-  "votos_seguidos": 1,
+  "votos_seguidos": 2,
   "desejo": "proteger um filho",
   "ambicao": "comprar a liberdade da família",
   "medo": "a magia",
@@ -2489,7 +2502,7 @@
  },
  "Tilde": {
   "nivel": 59,
-  "xp": 17643,
+  "xp": 18268,
   "classe": "a menina da casa (Ferir a ama como filha) · pratica a forja escondida",
   "ocupacao": "ajudante de Ferir na forja (sempre ao lado dele)",
   "log": [
@@ -2616,7 +2629,8 @@
    "+500 Tick 476: PASSO (ajudante de Ferir na forja (sempre ao lado dele))",
    "+1000 Tick 483: MISSÃO/FEITO (ajudante de Ferir na forja (sempre ao lado dele))",
    "+500 Tick 490: PASSO (ajudante de Ferir na forja (sempre ao lado dele))",
-   "+12500 492: ajudante da CISTERNA QUE COME A FEBRE (Primordial, 1/4 de 50.000)"
+   "+12500 492: ajudante da CISTERNA QUE COME A FEBRE (Primordial, 1/4 de 50.000)",
+   "+625 494: ajudante da Balança das Duas Margens (Lendária, 1/4)"
   ],
   "ultima_subida": 462,
   "tracos": [

@@ -2954,7 +2954,7 @@
   },
   {
    "nome": "os do Croque",
-   "onde": "o rio de Ireviel (as barcas que caçam com o Teraseth)",
+   "onde": "o rio de Ireviel (as barcas que caçavam com o Teraseth; desde o 493, com a ISOLDA)",
    "desde": 428,
    "o_que": "os barqueiros que caçam com o TERASETH desde a guerra do rio viraram irmandade; ele não trabalha para facção, eles trabalham para ele; vêm à caçada do rei no lugar dele",
    "estado": "viva",
@@ -2968,9 +2968,10 @@
     "469: [1] RACHA: perde gente → força 5",
     "476: [15] PERDE TERRENO (a guarda, a lei ou um rival aperta) → 1/6",
     "483: [12] AGE PELO OBJETIVO → 2/6",
-    "490: [8] quieta"
+    "490: [8] quieta",
+    "493: CQ93 [6] juram à ISOLDA sobre o corpo do Teraseth: ela é a capitã deles · força +1"
    ],
-   "forca": 4,
+   "forca": 5,
    "relogio": [
     2,
     6

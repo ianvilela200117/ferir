@@ -1844,3 +1844,41 @@ Na noite do 492 a peça estava pronta: uma boca de metal escuro, do tamanho de u
 O rei ficou sentado diante dela até o fogo da Fornalha ser a única coisa acordada.
 
 - **Parada:** noite do 492, a Fornalha. A Cisterna pronta para descer à cisterna grande. O Teraseth morto de vez, na mesa da casa. A carta da Almision no banco.
+
+## Dia 493 a manhã do 495 — o rio leva o Teraseth, o conselho, a Balança
+
+### O cais de Ireviel, aurora do 493
+Os Afogados Vivos vieram em silêncio, em barcas sem lanterna, e os do Croque remaram a barca do Teraseth até o meio do rio. Ele ia deitado no fundo dela, enrolado num pano de vela, sem o sal, porque barqueiro não se enterra salgado.
+
+O mais velho dos Afogados cantou a canção de barqueiro. O rei ouviu a primeira linha e sentiu alguma coisa se mexer no lugar vazio, e não soube o quê.
+
+Quando a canção acabou, abriram o fundo da barca, e o rio o levou.
+
+### A mesa do conselho, tarde do 493
+O Croque do Rio estava em cima da mesa, ainda com lama seca nos dentes, ao lado da armadura que o rei tinha feito para o Teraseth.
+
+O capitão mais velho dos do Croque falou de pé, sem tirar o chapéu. "Ele era nosso. O Croque é do rio, não de uma cadeira."
+
+O Herkald disse que era verdade, e votou pela Isolda mesmo assim. A Eliane também. A Isolda votou nela mesma e não pediu desculpa por isso. A Nouliel e o Thuron votaram com os do Croque. A Sira quis partir as peças ao meio e perdeu.
+
+A Isolda pegou o Croque da mesa e saiu sem dizer nada. Na porta, os do Croque estavam esperando. O capitão velho olhou para ela muito tempo. Depois tirou o chapéu e se ajoelhou na pedra, e os outros atrás dele.
+
+"Sobre o corpo dele", disse. "Sobre o rio que levou ele."
+
+### A Fornalha, 493 e 494
+Os pratos da balança saíram do gnaos da Elaeva, o corpo da fera que comeu o povo da Lurentetta. O fiel era um cristal de sal das Salinas Velhas. Quando o rei pôs nela o Elo de Juramento, a balança ficou parada no meio sem nada nos pratos, como quem espera que alguém jure.
+
+A Tilde continuava sem falar. Na noite do 494, quando o rei terminou, ela pegou a balança para guardar, e a balança rangeu na mão dela.
+
+"Ela range quando tem medo", disse o rei.
+
+"Quem tem medo é o dono", disse a Tilde. Foi a primeira coisa que ela disse em três dias.
+
+### A Fornalha, manhã do 495
+O corvo pousou no beiral com o sol nascendo e não foi embora até o rei pegar a carta.
+
+A letra da Almision era pequena e reta. Aros novos serviam, se fossem da mão dele. Em troca, quando ele chegasse ao quinquagésimo degrau, ela lhe ensinaria um feitiço do sexto círculo, da Escola Única. E no fim, numa linha só: *Para me guardar de quem me caça.*
+
+Não dizia quem.
+
+- **Parada:** manhã do 495, a Fornalha. A carta da Almision. A Balança pronta para o Delta. A Matriz e o Martelo prontos para Levis.

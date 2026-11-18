@@ -51,7 +51,7 @@ CIRC_AJ = {1:-10,2:-5,3:0,4:5,5:10,6:15,7:20}
 # FICHAS DE VALOR (o que cada um soma; mudar aqui quando subir de nível, maestria ou equipamento)
 FICHAS = {
  'ferir': dict(desc='Ferir, Forja (Lendário)', mao=[('Maestria Forja Lendário',12),('Inteligência 171 ÷ 10 (teto 10)',10),('Sorte 95 ÷ 20',4),('nível 142 ÷ 10',14),
-               ('Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)',6),('Olho do Material',1),('Fole Firme 2',1),('Alma no Aço 2',1),('Mão que Não Treme 3',3),('Veio Certo 1 (ponto do 3 do Herdeiro, 486)',1),('Golpe de Mestre 1 (ponto do 6 do Herdeiro, 486)',1)],
+               ('Mão de Mestre (Técnica, Matéria e Processo; talentos do 80 e do 90)',6),('Olho do Material',1),('Fole Firme 2',1),('Alma no Aço 2',1),('Mão que Não Treme 3',3),('Veio Certo 2 (pontos do 3 e do 15 do Herdeiro)',2),('Golpe de Mestre 2 (pontos do 6 e do 18 do Herdeiro)',2)],
                martelo='lendario', martelo_nome='O MARTELO DE ZEIETH (Primordial, 352; rende Lendário até o 150, Mítico até o 230, com o nome dele)', martelo_x=[('martelo de zeieth: fala, soa diferente na falha (+2 na Matéria)',2)], bigorna='lendario', bigorna_nome='A MATRIZ',
                apoio='lendario', apoio_nome='TENAZ DE EIURVO (Mítica, 229; Lendária desde o 80, Mítica no 150)', apoio_x=[('FOLE DE ARVEL (Mítico, 267; 3ª ferramenta pela metade: Lendário desde o 80)',3),('fole: o arvel como ferramenta (+3 em toda obra de forja)',3),('fole: segura o calor certo (+2 no Processo)',2)], ofic='lendaria', ofic_nome='Fornalha que Não Apaga', alma=1, naotreme=1),
  'ferir_enc': dict(desc='Ferir, Encantamento (Mestre)', mao=[('Maestria Encantamento Mestre',9),('(Int 171 + Afinidade 157) ÷ 20 (teto 10)',10),('Sorte 95 ÷ 20',4),

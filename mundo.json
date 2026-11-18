@@ -3357,11 +3357,12 @@
    "d20": 11,
    "o_que": "UM CULTO CRESCE ou nasce",
    "onde": "d27 [16] as Montanhas de Fogo",
-   "detalhe": "nome: Culto da Thuium\nadora: um deus morto\npromete: vingança\nsinal: cheiro de incenso\ncélulas: 2 cidades\nlíder: nível 210, classe Rara a Lendária\nrito: sacrifício\nplano (relógio de 6): tomar uma cidade por dentro\nfraqueza: dependem de um material\n————————————————————————————————————————",
+   "detalhe": "nome: Culto da Zunindi\nadora: um deus morto\npromete: vingança\nsinal: cheiro de incenso\ncélulas: 2 cidades\nlíder: nível 210, classe Rara a Lendária\nrito: sacrifício\nplano (relógio de 6): tomar uma cidade por dentro\nfraqueza: dependem de um material\n————————————————————————————————————————",
    "noticia_chega": 468,
    "chegada": "[4] em 1d6 [3] dias",
-   "resumo": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Thuium)",
-   "toca": false
+   "resumo": "UM CULTO CRESCE ou nasce — as Montanhas de Fogo (Culto da Zunindi)",
+   "toca": false,
+   "nota_nome": "495: o gerador deu Thuium, que bate no cânone; trocado por Zunindi (nomes.py livre)"
   },
   {
    "dia": 466,
@@ -3764,6 +3765,41 @@
    "chegada": "[6] não chega sozinha (só se alguém for atrás)",
    "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Steunn",
    "toca": true
+  },
+  {
+   "dia": 493,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "1d12 [2] um monstro novo é avistado (gerar monstro)",
+   "noticia_chega": 494,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "SURPRESA: o gerador de novidade — Mordun (a Boca com Fome)",
+   "toca": false
+  },
+  {
+   "dia": 494,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "nome: Vdernos\ndesejo: deixar uma obra\nambição (relógio de 4): formar uma companhia\nmedo: a morte de um filho\nsegredo: fez um pacto\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: salvar um filho custa a vida de um estranho\ntraços: CRUEL e LEAL\nnível: 270\nobra sinistra (relógio de 8): forjar uma arma Mítica proibida\npor que é humano: foi traído pelo reino\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: lei\no que o faria parar: ser desmascarado em público\n————————————————————————————————————————",
+   "noticia_chega": 496,
+   "chegada": "[3] em 1d3 [2] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — Gogrunn (as minas) (Vdernos)",
+   "toca": false,
+   "nota_nome": "495: o gerador deu Haron, que bate no cânone; trocado por Vdernos (nomes.py livre)"
+  },
+  {
+   "dia": 495,
+   "d20": 19,
+   "o_que": "UMA PESSOA IMPORTANTE VIAJA (pode cruzar com Ferir)",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "nome: Zunindi\ndesejo: curar alguém\nambição (relógio de 4): formar uma companhia\nmedo: a prisão\nsegredo: roubou o que tem\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: COVARDE e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 496,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "UMA PESSOA IMPORTANTE VIAJA — a costa (Ireviel–Marasar) (Zunindi)",
+   "toca": true,
+   "nota_nome": "495: o gerador deu Thuium, que bate no cânone; trocado por Zunindi (nomes.py livre)"
   }
  ]
 }

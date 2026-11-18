@@ -363,8 +363,8 @@
   },
   "Obra-Prima": {
    "tipo": "Passiva",
-   "efeito": "ponto do 9 do Herdeiro (486), grau 1: 1x por mês, um 20 natural na forja dá +1 efeito da lista declarada antes",
-   "grau": 1,
+   "efeito": "pontos do 9 e do 21 do Herdeiro, grau 2: 2x por mês, um 20 natural na forja dá +1 efeito da lista declarada antes",
+   "grau": 2,
    "usos": 0,
    "desde": 486,
    "origem": "a árvore da Forja (Assinatura)"
@@ -426,6 +426,18 @@
   {
    "nome": "MÃO QUE GOVERNA",
    "efeito": "talento do 10 do Herdeiro (486): um pilar de uma cidade sobe 1 a mais quando uma obra do reino termina ali"
+  },
+  {
+   "nome": "ESTRELA BOA",
+   "efeito": "talento do 20 do Herdeiro (493; casa, Sorte 95): 1x por mês, um 1 natural vira 10"
+  },
+  {
+   "nome": "FOCO VIVO",
+   "efeito": "talento do 30 do Herdeiro (493; Afinidade 70): conjura sem foco material sem dobrar o custo, até o 3º círculo"
+  },
+  {
+   "nome": "ESCOLA FUNDA (LUZ)",
+   "efeito": "talento do 40 do Herdeiro (493; Magia Mestre): na LUZ, +2 no teste e +1 dado (a Lança do Sol, a Cura Maior, o Purificar, o Erguer o Caído); a SOMBRA custa +5 (a escola proposta pelo Mestre; o jogador pode trocar antes de usar)"
   }
  ],
  "pericias": {

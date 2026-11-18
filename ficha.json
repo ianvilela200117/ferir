@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 47,
- "xp": 108510,
+ "nivel": 48,
+ "xp": 113510,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 115,
+  "Inteligência": 116,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 101
+  "Afinidade": 102
  },
  "pv": [
-  263,
-  263
+  265,
+  265
  ],
  "mana": [
-  94,
-  94
+  95,
+  95
  ],
  "foco": 15,
  "fortuna": [
@@ -495,7 +495,7 @@
    ]
   },
   "shasha": {
-   "kg": 6.8,
+   "kg": 6.6,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
@@ -504,13 +504,15 @@
     "Dia 462: +1 462: o quilo da Doge (o tratado; d20 [18]+1 cumpre)",
     "Dia 476: +1 476: o tratado da Doge Skotha cumpre (1 kg de shasha)",
     "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar",
-    "Dia 490: +1 490: o tratado da Doge Skotha cumpre (1 kg de shasha)"
+    "Dia 490: +1 490: o tratado da Doge Skotha cumpre (1 kg de shasha)",
+    "Dia 492: -0.2 494: o condutor do Elo de Juramento na Balança"
    ]
   },
   "zezha": {
-   "kg": 1.0,
+   "kg": 0.5,
    "log": [
-    "Dia 406: +1 406: o estoque da cidade (G5): 1 kg Raro, 200 (o gerador deu um Raro de Luz que não está no Livro: vale o mais próximo, o zezha, cristal)"
+    "Dia 406: +1 406: o estoque da cidade (G5): 1 kg Raro, 200 (o gerador deu um Raro de Luz que não está no Livro: vale o mais próximo, o zezha, cristal)",
+    "Dia 492: -0.5 493: o fiel da Balança das Duas Margens"
    ]
   },
   "eiurvo": {
@@ -702,9 +704,10 @@
    ]
   },
   "gnaos": {
-   "kg": 75.0,
+   "kg": 73.0,
    "log": [
-    "Dia 469: +75 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])"
+    "Dia 469: +75 469: a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3])",
+    "Dia 492: -2 493: os pratos da Balança das Duas Margens"
    ]
   },
   "bzarnur": {
@@ -768,21 +771,6 @@
   }
  },
  "xp_log": [
-  "Dia 426: +1220 425 (a luta REFEITA no 426): o MOREK fugiu ferido (467/2440); lutou: nível × 10",
-  "Dia 427: +6100 427: o MOREK morto na forquilha (Único 122; chefe: × 5)",
-  "Dia 427: SOBE ao 155",
-  "Dia 427: +6000 427: a missão A FORQUILHA LIMPA cumprida (grau A)",
-  "Dia 428: +10000 428: a Couraça de Espinho do Moreth (MÍTICA; o teto do núcleo Único)",
-  "Dia 428: SOBE ao 156",
-  "Dia 435: +1580 436: o ZYZA (Épico 158), o guarda da sala 1 de Zythir (nível × 10)",
-  "Dia 437: +780 437: o HUIR (Épico 78), o guarda da sala 5 de Zythir (nível × 10)",
-  "Dia 437: +1130 437: a rainha ZATHA (Épica 113), a sala 8 de Zythir (nível × 10)",
-  "Dia 455: +300 455: o lote de venda da Fornalha (Épico, pela melhor peça do lote)",
-  "Dia 458: +300 458: a SÉRIE DA HOSTE pronta (cinco armaduras Épicas de nee e gusta; pela melhor peça do lote)",
-  "Dia 460: +2500 460: L1, a armadura de escamas Lendária de yeviel (do Teraseth)",
-  "Dia 462: +2500 462: L2, a espada Lendária de ziis (do Colégio)",
-  "Dia 468: +38000 468: a ELAEVA, a Floresta que Anda (Mítica 380), morta no cerco da ilha do Delta pela Lança do Sol do rei (nível × 10 × 10: Lendário ou maior)",
-  "Dia 468: SOBE ao 157",
   "Dia 468: SOBE ao 158",
   "Dia 468: SOBE ao 159",
   "Dia 468: +0 conferência",
@@ -840,7 +828,10 @@
   "Dia 492: SOBE ao 44",
   "Dia 492: SOBE ao 45",
   "Dia 492: SOBE ao 46",
-  "Dia 492: SOBE ao 47"
+  "Dia 492: SOBE ao 47",
+  "Dia 492: +2500 494: A BALANÇA DAS DUAS MARGENS (Lendária; a peça da Lurentetta)",
+  "Dia 492: +2500 494: o encanto ELO DE JURAMENTO na Balança das Duas Margens (inteiro)",
+  "Dia 492: SOBE ao 48"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
