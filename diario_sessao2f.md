@@ -2093,3 +2093,40 @@ Sozinho na tábua, o rei tirou do saco o cravo de ferradura dobrado em F. Ferro 
 Lá em cima, na casa do Celocus, uma lanterna andou de janela em janela e parou na última.
 
 - **Parada:** noite do 506, Lumade, o pátio do celeiro. O ultimato do Celocus: o túmulo amanhã, ou o pacto quebrado. O Moreth e o Eiagrir sem se falar.
+
+## Noite do 506 e manhã do 507 — a porta das rainhas
+
+### O vento na janela, noite do 506
+O rei soprou a palavra do Vento sobre uma pena, na palma, e deixou o ar subir do pátio até a casa de pedra vermelha. Voltou com vozes.
+
+"Quarenta carroças de grão e dezoito arcas", dizia um escrivão. "Nenhuma chegou. A estrada do sul engoliu tudo."
+
+"O túmulo paga o grão." Era o Celocus. Mais tarde, a outra voz, de homem de armas: "Vinte de lança na porta amanhã. Ninguém sai antes de contar. Nem o rei."
+
+A janela não se fechou. O rei soltou o vento e ficou um tempo olhando a lanterna lá em cima.
+
+### A porta, aurora do 507
+Na subida do mercado, uma vendedora de grão contou à Tigra, sem que ninguém perguntasse, que o Celocus tinha perdido três caravanas e o filho junto. Um homem de fala do sul perguntou onde o rei acendia a forja dele em Lumade, e sumiu entre as bancas antes da resposta.
+
+O túmulo ficava na encosta acima da cidade, uma porta baixa de pedra sem nome. Os vinte do Celocus estavam em meia-lua diante dela, de lança. Ele mesmo, na frente, com o anel do rei na mão esquerda.
+
+O rei disse a condição: o que fosse papel e sangue ficava fora da conta; ouro, material e peças, contados na saída.
+
+O Celocus pensou o tempo de uma respiração. "Papel não se pesa." Virou-se para os seus. "Contamos na saída."
+
+A Eliane deu a ordem sem levantar a voz: ela e o Moreth na frente; o Gonde com a Matriz ao lado do rei; o Eiagrir atrás, com dois. Dois ficaram com a carroça, diante dos vinte.
+
+No meio da porta havia um vazio na pedra com a forma exata da Matriz. O Gonde a encaixou. A pedra deu uma nota baixa, de sino debaixo d'água, e correu para dentro. O ar que saiu tinha trinta anos: pó, cera seca, ferro frio.
+
+### A primeira sala
+Uma sala comprida, de nichos vazios. Cinco mulheres de linho cinzento, magras como varas, varriam a pedra com vassouras de palha que se desfaziam e não acabavam. Não levantaram os olhos até o Gonde entrar com a Matriz. Então pararam e se afastaram para ela passar.
+
+Quando o Moreth deu o passo seguinte, cinco vassouras se cruzaram na frente dele.
+
+A mais velha falou com voz de folha seca: "De quem é a casa? Diga o nome dela, e passa."
+
+No fundo da sala havia duas portas, à esquerda e à direita, como a planta mostrava. A mão do Moreth foi ao cabo da maça. "Ninguém se mexe", disse a Eliane. Lá atrás, o Eiagrir não disse nada.
+
+O pó caía devagar na luz da tocha. A velha esperava, com a vassoura erguida.
+
+- **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 1. As aias pedem o nome de uma rainha.

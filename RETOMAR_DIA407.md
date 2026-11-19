@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 506, LUMADE: o ultimato do Celocus (o túmulo amanhã ou o pacto quebrado) (MOTOR 9b: G1 a G41)
+# RETOMAR — manhã do Dia 507, LUMADE, O TÚMULO DAS RAINHAS, a sala 1: as aias pedem o nome de uma rainha (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 507, O TÚMULO DAS RAINHAS (Lumade, a encosta acima da cidade), a SALA 1 (o tick do 507 rodado: tick_507.txt; o semanal no 511; a auditoria no 508). O rei nível 50, PV 269/269, **Mana 107/117** (a Voz no Vento), Erudito 0/1 (volta no 511), Visão 2/2, Fortuna 3/3, Revés 4/6. Dentro, pela ordem da Eliane (EL06 [4]): ela e o Moreth à frente, o Gonde com a MATRIZ ao lado do rei, o Eiagrir atrás com 2 guardas; 6 guardas dentro; 2 na porta com a carroça, diante dos 20 lanças do Celocus. O Moreth e o Eiagrir seguem estremecidos. A Tigra e o mensageiro ferido ficaram em Lumade, no pátio do celeiro. A CONDIÇÃO ACEITA (CC07 12): papel e sangue FORA dos 40%; ouro, material e peças contados na saída pelos homens do Celocus. A Voz no Vento (VV06 [19]): a caravana perdida e a ordem das 20 lanças. A SALA 1 (HB07 [1]): 5 AIAS MORTAS (Raras, HB07b [3]); deixam passar a Matriz; a quem vem atrás pedem o nome de uma rainha ('De quem é a casa? Diga o nome dela, e passa'). As portas da sala 1 levam à 2 e à 4. (OCULTO) o mapa inteiro em masmorras/túmulo_das_rainhas.json e no envelope (sala 2 tesouro · 3 armadilha · 4 vazia · 5 armadilha · 6 o que habita · 7 o coração, o guardião Épico). O ERUDITO: a laje na 3ª e na 5ª (+5 no notar).
+
+Antes (506, noite):
 Noite do 506, LUMADE, o pátio de um celeiro abaixo do mercado (sem tick novo: tudo na noite do 506; o próximo tick é o do 507; o semanal no 511; a auditoria no 508). O rei HERDEIRO no NÍVEL 50 (XP 123.510; o 51 em 127.600), PV 269/269, Mana 117/117, Foco 16, 1 ação; **Erudito 0/1 (gasto no túmulo; volta no 511)**; Visão 2/2. Com ele: o Moreth e o Eiagrir (ESTREMECIDOS: a conversa do rei com os dois juntos FALHOU, ME06: obedecem seco; o Moreth vai na frente, o Eiagrir atrás, 'como sempre'), a Eliane, a Tigra, o Gonde e 8 da guarda, a MATRIZ e o MARTELO, o mensageiro ferido. O CELOCUS RECUSOU o pedido de um ou dois dias (CL06b [7]−2 = 5): **o túmulo amanhã na primeira luz, ou ele conta o pacto como quebrado, em praça** (a pergunta 1). O rei trata o Celocus como inimigo (palavra do jogador): a casa dormiu longe do teto dele. O TÚMULO DAS RAINHAS tem mapa (G14; ÉPICO, TU06 [2]; 7 salas; (OCULTO) no envelope e em masmorras/túmulo_das_rainhas.json). O ERUDITO deu o fato verdadeiro: a laje das rainhas (armadilha dos construtores) na 3ª e na 5ª sala; os desvios 1→4 e 3→6; nelas o notar tem +5. (OCULTO, a notícia no 507) a caravana grande de ouro e grão do Celocus sumiu na estrada do sul (CE04 [3]); os dois cavaleiros que saíram de noite pela estrada do sul. O resto do 506 (a carta tomada, Levis, Ireviel, Marasar, o cofre 53.547) segue como no parágrafo de baixo.
 
 Antes (506, entardecer):
@@ -399,11 +402,16 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 4a: ME06 37 vs 43 → FALHA (seguem estremecidos). 5: o laço da Tilde, momento (saudade).
 - NOTA: a sessão começou num ramo velho (o 441); o que o Mestre rolou ali foi descartado (git stash); o save é o do main.
 
+## RESPONDIDO (506 noite → 507): 1a · 2b · 3c · 4a
+- 4a: VV06 [19] a conta da caravana perdida e a ordem das 20 lanças; VV06b (oculto) [13] ele não sentiu.
+- 3c: EL06 [4] a Eliane separa o Moreth e o Eiagrir.
+- 2b: CC07 [16]−4 = 12 → aceita como está: 'papel não se pesa'.
+- 1a: a porta abriu à Matriz na aurora do 507; a sala 1: as aias mortas (HB07 [1], 5).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O ULTIMATO DO CELOCUS ('amanhã na primeira luz, ou conto o pacto como quebrado, em praça'): a) entrar amanhã, como ele quer (vale a 2a) · b) entrar amanhã, mas olhar a porta do túmulo por fora ESTA NOITE, à luz de tocha (Rilge fica para depois) · c) romper o pacto (sem a Matriz ninguém entra; o Celocus, Mítico, vira inimigo aberto na cidade dele, com a casa lá dentro e oito guardas) · d) outra.
-2. OS 40% CONTADOS ANTES e o LIVRO DE SANGUE (a vergonha dos fundadores da Liga; quem a tiver manda no Conselho): a) contar tudo como ele quer, o livro incluído · b) a condição: papel e sangue fora da conta, só ouro, material e peças (vai ao dado; ele é honesto e orgulhoso, e está frio) · c) calar e decidir lá dentro, quando o livro aparecer.
-3. A ORDEM NO TÚMULO (o Moreth e o Eiagrir não se falam): a) o Moreth na frente e o Eiagrir atrás, como disseram · b) separar: a Eliane e o Gonde na frente, o Moreth no meio, o Eiagrir guardando a porta de trás · c) a Eliane decide (é a Marechal).
-4. (à mão, G24) Esta noite, a VOZ NO VENTO (10 de Mana) ouve uma conversa longe: a) ouvir a casa do Celocus · b) não.
+1. AS AIAS ('De quem é a casa? Diga o nome dela, e passa'): a) o rei tenta lembrar o nome de uma rainha (G10: o saber dele vai ao dado; nome errado é perigoso) · b) FALAR COM MORTO numa aia (Osso 3º: 15 de Mana e 3d6 de PV; três perguntas; ela tem de responder) · c) só o Gonde passa com a Matriz (elas não tocam quem a traz) e olha a sala seguinte; os outros esperam · d) abrir caminho à força (5 aias Raras; a luta pela G9) · e) outra.
+2. O CAMINHO, depois das aias (a planta): a) a porta da esquerda, à 2ª sala (e dela à 3ª, uma laje das rainhas) · b) a da direita, direto à 4ª (e dela à 5ª, a outra laje).
+3. A PORTA DE FORA (2 dos nossos e a carroça diante das 20 lanças do Celocus): a) deixar como está · b) mais dois guardas voltam para a porta (ficam 4 dentro).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

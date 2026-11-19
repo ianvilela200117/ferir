@@ -1,11 +1,5 @@
 {
  "ordem": [
-  "LT35",
-  "AR35b",
-  "CR35",
-  "CR35l",
-  "LC35",
-  "QB35",
   "FE35",
   "QF35",
   "434-laco-quem",
@@ -399,255 +393,15 @@
   "CL06",
   "CT05",
   "CL06b",
-  "TU06"
+  "TU06",
+  "VV06",
+  "VV06b",
+  "EL06",
+  "CC07",
+  "HB07",
+  "HB07b"
  ],
  "selos": {
-  "LT35": {
-   "id": "LT35",
-   "dia": 433,
-   "hora": "12:47:05",
-   "titulo": "A CARTA DO COLÉGIO DE TELOSUS À LELIEL: COMO VEM ESCRITA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "em LETRA CLARA, a mão de um escrivão do Colégio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "em CIFRA do Colégio (o rei rola o saber de magia para ler)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "em CIFRA do Colégio (o rei rola o saber de magia para ler)",
-     "txt": "[5] → em CIFRA do Colégio (o rei rola o saber de magia para ler)"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
-  "AR35b": {
-   "id": "AR35b",
-   "dia": 433,
-   "hora": "12:47:26",
-   "titulo": "OS 4 GUARDAS DA LIGA NA ESTALAGEM, QUANDO A ELIANE ENTRA DE NOITE COM 8 DA GUARDA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "RENDEM-SE ao ver a Marechal e a Lança do Bren"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "LUTAM (o combate rápido abaixo)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "LUTAM (o combate rápido abaixo)",
-     "txt": "[5] → LUTAM (o combate rápido abaixo)"
-    }
-   ],
-   "hora_rolado": "12:47:26"
-  },
-  "CR35": {
-   "id": "CR35",
-   "dia": 433,
-   "hora": "12:47:26",
-   "titulo": "COMBATE RÁPIDO NA ESTALAGEM (só vale se o AR35b der 3-6; o precedente CR12): a ELIANE d20 + 24 (o ataque dela) + 4 (os 8 da guarda) + 2 (a noite: a Cota de Mestre no escuro) contra os 4 GUARDAS DA LIGA d20 + 14 + 3; pela MARGEM",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "o dado da Eliane (o da Liga sai abaixo, LIGA)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      10
-     ],
-     "total": 10,
-     "res": "o dado da Eliane (o da Liga sai abaixo, LIGA)",
-     "txt": "[10] → o dado da Eliane (o da Liga sai abaixo, LIGA)"
-    }
-   ],
-   "hora_rolado": "12:47:26"
-  },
-  "CR35l": {
-   "id": "CR35l",
-   "dia": 433,
-   "hora": "12:47:26",
-   "titulo": "COMBATE RÁPIDO NA ESTALAGEM: o dado dos 4 guardas da Liga (só vale com o CR35)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "o dado da Liga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o dado da Liga",
-     "txt": "[6] → o dado da Liga"
-    }
-   ],
-   "hora_rolado": "12:47:26"
-  },
-  "LC35": {
-   "id": "LC35",
-   "dia": 433,
-   "hora": "12:47:26",
-   "titulo": "O QUE A CARTA CIFRADA DO CEDUION (o reitor do Colégio de Telosus) OFERECE À LELIEL, EM TROCA DO PERDÃO DO NORTE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o LUGAR onde a Elaeva dorme nos Picos Brancos e quando ela acorda"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma FRAQUEZA escondida da Elaeva, além do fogo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o modo de DESVIAR a fera: o que ela segue quando anda"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "tudo isso"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "uma FRAQUEZA escondida da Elaeva, além do fogo",
-     "txt": "[3] → uma FRAQUEZA escondida da Elaeva, além do fogo"
-    }
-   ],
-   "hora_rolado": "12:47:26"
-  },
-  "QB35": {
-   "id": "QB35",
-   "dia": 433,
-   "hora": "12:47:57",
-   "titulo": "COMO OS 4 GUARDAS DA LIGA QUEBRAM NA ESTALAGEM (CR35: 40 × 23, margem 17: DESTROÇADOS)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "os QUATRO caem no pátio"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "DOIS caem e DOIS fogem a cavalo pela estrada do sal (a notícia corre aos Devolvidos)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "rendem-se no meio da luta, os quatro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "rendem-se no meio da luta, os quatro",
-     "txt": "[6] → rendem-se no meio da luta, os quatro"
-    }
-   ],
-   "hora_rolado": "12:47:57"
-  },
   "FE35": {
    "id": "FE35",
    "dia": 433,
@@ -21103,6 +20857,339 @@
     }
    ],
    "hora_rolado": "01:43:28"
+  },
+  "VV06": {
+   "id": "VV06",
+   "dia": 506,
+   "hora": "02:06:12",
+   "titulo": "4a, O QUE A VOZ NO VENTO OUVE NA CASA DO CELOCUS (noite do 506; Vento 2º, a até 1 km; o Celocus é HONESTO e ORGULHOSO, quer enriquecer acima de todos, quer proteger um filho de outra cidade, e quer entrar numa facção que o recusou; os dois cavaleiros pela estrada do sul)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "SÓ A CONTA: ele e o escrivão refazem a conta de uma caravana grande de ouro e grão que sumiu na estrada do sul; Lumade com fome; o túmulo paga o grão"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "A CONTA E O LIVRO: isso e, depois, ao escrivão: 'o livro de sangue não entra na conta de ninguém: é o que me abre a porta que me fecharam'"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "O FILHO: isso e uma carta do filho, de outra cidade; ele fala do filho numa voz que não usa na porta"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 19,
+     "res": "A PORTA: isso e uma ordem: vinte homens armados à porta do túmulo amanhã, 'ninguém sai antes de contar'"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      19
+     ],
+     "total": 19,
+     "res": "A PORTA: isso e uma ordem: vinte homens armados à porta do túmulo amanhã, 'ninguém sai antes de contar'",
+     "txt": "[19] → A PORTA: isso e uma ordem: vinte homens armados à porta do túmulo amanhã, 'ninguém sai antes de contar'"
+    }
+   ],
+   "hora_rolado": "02:06:12"
+  },
+  "VV06b": {
+   "id": "VV06b",
+   "dia": 506,
+   "hora": "02:06:12",
+   "titulo": "(OCULTO) O CELOCUS SENTE O VENTO NA JANELA (Mítico 714, Dons: Pele do Mundo ×2 e Fôlego Sem Fundo, nenhum de sentir magia; a Voz no Vento é sutil)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 15,
+     "res": "não sente"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 19,
+     "res": "sente uma corrente fria que não devia e manda fechar as janelas: a conversa para no meio (o resto do VV06 não se ouve)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "sente e sabe que é magia: amanhã, à porta, diz ao rei que 'quem escuta janela não é honesto' (reputação Celocus −5; o 2b com −2)"
+    }
+   ],
+   "oculto": true,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      13
+     ],
+     "total": 13,
+     "res": "não sente",
+     "txt": "[13] → não sente"
+    }
+   ],
+   "hora_rolado": "02:06:12"
+  },
+  "EL06": {
+   "id": "EL06",
+   "dia": 506,
+   "hora": "02:06:12",
+   "titulo": "3c, A ORDEM QUE A ELIANE DÁ PARA O TÚMULO (Marechal; LEAL, ORGULHOSO, JUSTO; Ler o Campo e Formação; sabe do Moreth e do Eiagrir estremecidos; a Matriz, 20 kg, vai dentro; a planta: a laje na 3ª e na 5ª)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "COMO ELES DISSERAM: o Moreth à frente, o Gonde com a Matriz, o rei e ela no meio, o Eiagrir atrás; 4 guardas dentro, 4 na porta com a carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "SEPARA OS DOIS: ela e o Moreth à frente, o Gonde com a Matriz ao lado do rei, o Eiagrir na retaguarda com 2 guardas; 6 guardas dentro, 2 na porta"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "OS DOIS LADO A LADO à frente ('quem não se fala luta melhor sem ter de olhar'), ela atrás deles, o rei e o Gonde com a Matriz no meio; 6 dentro, 2 na porta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "SEPARA OS DOIS: ela e o Moreth à frente, o Gonde com a Matriz ao lado do rei, o Eiagrir na retaguarda com 2 guardas; 6 guardas dentro, 2 na porta",
+     "txt": "[4] → SEPARA OS DOIS: ela e o Moreth à frente, o Gonde com a Matriz ao lado do rei, o Eiagrir na retaguarda com 2 guardas; 6 guardas dentro, 2 na porta"
+    }
+   ],
+   "hora_rolado": "02:06:12"
+  },
+  "CC07": {
+   "id": "CC07",
+   "dia": 507,
+   "hora": "02:07:18",
+   "titulo": "2b, A CONDIÇÃO NA PORTA DO TÚMULO (aurora do 507): papel e sangue fora da conta, só ouro, material e peças · o Celocus (Mítico 714, HONESTO e ORGULHOSO): +2 a condição é clara e dita antes de entrar · −2 o orgulho: posta na porta, depois do adiamento negado · −2 frio (CL06) · +2 o ouro, o material e as peças seguem inteiros na conta (a caravana perdida: ele precisa de ouro) · −3 (OCULTO) a ambição dele: entrar numa facção que o recusou (o livro de sangue manda no Conselho) · −1 a praça fala hoje da perda dele, exagerada · total −4",
+   "dado": [
+    1,
+    20,
+    -4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "RECUSA: 'tudo entra na conta' (vale a 1a: entram na conta dele, o livro incluído)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 11,
+     "res": "ACEITA COM PREÇO: papel e sangue fora da conta, mas a parte dele sobe a 45% do ouro, do material e das peças"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 17,
+     "res": "ACEITA COMO ESTÁ: 'papel não se pesa'"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "ACEITA E AVISA: diz o que sabe do livro (um fato verdadeiro dele)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      16
+     ],
+     "total": 12,
+     "res": "ACEITA COMO ESTÁ: 'papel não se pesa'",
+     "txt": "[16] -4 = 12 → ACEITA COMO ESTÁ: 'papel não se pesa'"
+    }
+   ],
+   "hora_rolado": "02:07:18"
+  },
+  "HB07": {
+   "id": "HB07",
+   "dia": 507,
+   "hora": "02:07:18",
+   "titulo": "O QUE HABITA O TÚMULO DAS RAINHAS, A SALA 1 (Épico; caído e guardado; trinta anos fechado por fora; a porta responde à Matriz; Rilge, a oficina dos mortos, fica perto) · toda saída deixa uma escolha à casa antes de qualquer golpe",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "AS AIAS MORTAS: servas das rainhas mortas-vivas (Raras; quantas: 1d6+2, HB07b) ainda varrendo a pedra; não tocam quem traz a Matriz, mas não deixam passar quem não diz o nome de uma rainha"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 10,
+     "res": "A GUARDA DE OSSO: esqueletos da guarda das rainhas (Raros; quantos: 2d6, HB07b), de lança, em linha atrás de uma faixa de pedra; não se mexem enquanto ninguém passa da faixa"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 14,
+     "res": "OS QUE ENTRARAM ANTES: saqueadores vivos do Círculo da Areia Cantante, entrados por um desabamento no teto (quantos: 2d6, HB07b; nível 30 a 60, com um chefe); acampados; querem o que há dentro"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 18,
+     "res": "UMA RAINHA QUE NÃO DORME: o espírito de uma das rainhas; fala; pergunta por que a Matriz voltou e pede uma coisa (o d6 HB07c diz qual: 1-2 o nome de quem a enterrou · 3-4 que o livro de sangue seja queimado · 5-6 que a Matriz fique)"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "OS MORTOS DE RILGE subiram por uma galeria de baixo (Rilge liga ao túmulo): de avental de couro, com ferramentas; olham a Matriz"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "AS AIAS MORTAS: servas das rainhas mortas-vivas (Raras; quantas: 1d6+2, HB07b) ainda varrendo a pedra; não tocam quem traz a Matriz, mas não deixam passar quem não diz o nome de uma rainha",
+     "txt": "[1] → AS AIAS MORTAS: servas das rainhas mortas-vivas (Raras; quantas: 1d6+2, HB07b) ainda varrendo a pedra; não tocam quem traz a Matriz, mas não deixam passar quem não diz o nome de uma rainha"
+    }
+   ],
+   "hora_rolado": "02:07:18"
+  },
+  "HB07b": {
+   "id": "HB07b",
+   "dia": 507,
+   "hora": "02:09:46",
+   "titulo": "QUANTAS AIAS MORTAS NA SALA 1 DO TÚMULO DAS RAINHAS (1d6+2; declarado no HB07)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "3 aias"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "4 aias"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "5 aias"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "6 aias"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "7 aias"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "8 aias"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "5 aias",
+     "txt": "[3] → 5 aias"
+    }
+   ],
+   "hora_rolado": "02:09:46"
   }
  }
 }

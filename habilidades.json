@@ -227,7 +227,7 @@
    "tipo": "Magia",
    "efeito": "Vento 2º: a voz chega a 1 km, ou ouve uma conversa longe · 10 de Mana",
    "grau": 1,
-   "usos": 0,
+   "usos": 1,
    "desde": 437,
    "origem": "aula do 231"
   },

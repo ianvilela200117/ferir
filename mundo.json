@@ -3974,6 +3974,17 @@
    "chegada": "[1] hoje",
    "resumo": "SURPRESA: o gerador de novidade — Lumade",
    "toca": true
+  },
+  {
+   "dia": 507,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [10] o Delta e as salinas",
+   "detalhe": "nome: Brassa\ndesejo: nunca mais passar fome\nambição (relógio de 4): formar uma companhia\nmedo: a prisão\nsegredo: tem uma doença escondida\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AVARENTO e CRUEL\nnível: 340\nobra sinistra (relógio de 8): conquistar uma região\npor que é humano: tem medo de morrer\nequipamento: 2 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: dinheiro\no que o faria parar: perder quem ama\n————————————————————————————————————————",
+   "noticia_chega": 510,
+   "chegada": "[2] em 1d3 [3] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — o Delta e as salinas (Brassa)",
+   "toca": true
   }
  ]
 }

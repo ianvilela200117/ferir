@@ -1,34 +1,24 @@
 {
- "agua": 60,
+ "agua": 57,
  "hoje": {
   "Ireviel": {
-   "ceu": "tempestade",
-   "vento": "VENTANIA"
+   "ceu": "limpo",
+   "vento": "vento forte"
   },
   "o Porto de Marasar": {
    "ceu": "neblina",
    "vento": "brisa"
   },
   "Levis": {
-   "ceu": "chuva",
-   "vento": "calmo"
+   "ceu": "nublado",
+   "vento": "vento forte"
   },
   "Farenta": {
    "ceu": "chuva",
-   "vento": "calmo"
+   "vento": "brisa"
   }
  },
  "historia": [
-  {
-   "dia": 467,
-   "tempo": {
-    "Ireviel": "limpo",
-    "o Porto de Marasar": "chuva",
-    "Levis": "chuva",
-    "Farenta": "limpo"
-   },
-   "agua": 34
-  },
   {
    "dia": 468,
    "tempo": {
@@ -418,6 +408,16 @@
     "Farenta": "chuva"
    },
    "agua": 60
+  },
+  {
+   "dia": 507,
+   "tempo": {
+    "Ireviel": "limpo",
+    "o Porto de Marasar": "neblina",
+    "Levis": "nublado",
+    "Farenta": "chuva"
+   },
+   "agua": 57
   }
  ]
 }
