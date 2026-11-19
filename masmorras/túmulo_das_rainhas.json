@@ -1,0 +1,71 @@
+{
+ "nome": "Túmulo das Rainhas",
+ "cat": "Épico",
+ "guarda": "a vergonha dos fundadores da Liga, escrita em sangue (quem a tiver manda no Conselho)",
+ "gerada": 506,
+ "salas": [
+  {
+   "n": 1,
+   "dado": 19,
+   "o_que": "O QUE HABITA o lugar (encontro; pode ser conversa)",
+   "leva_a": [
+    2,
+    4
+   ],
+   "vista": false
+  },
+  {
+   "n": 2,
+   "dado": 15,
+   "o_que": "TESOURO (G17, degrau Épico)",
+   "leva_a": [
+    3
+   ],
+   "vista": false
+  },
+  {
+   "n": 3,
+   "dado": 10,
+   "o_que": "ARMADILHA: notar CD 21; falha: 4d6 e uma condição (G16)",
+   "leva_a": [
+    4,
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 4,
+   "dado": 2,
+   "o_que": "VAZIA (um rastro)",
+   "leva_a": [
+    5
+   ],
+   "vista": false
+  },
+  {
+   "n": 5,
+   "dado": 9,
+   "o_que": "ARMADILHA: notar CD 21; falha: 4d6 e uma condição (G16)",
+   "leva_a": [
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 6,
+   "dado": 19,
+   "o_que": "O QUE HABITA o lugar (encontro; pode ser conversa)",
+   "leva_a": [
+    7
+   ],
+   "vista": false
+  },
+  {
+   "n": 7,
+   "dado": null,
+   "o_que": "O CORAÇÃO: a vergonha dos fundadores da Liga, escrita em sangue (quem a tiver manda no Conselho), com o guardião (Épico)",
+   "leva_a": [],
+   "vista": false
+  }
+ ]
+}

@@ -2057,3 +2057,39 @@ Do mercado embaixo subia uma conversa que não era sobre o rei. Falavam de um br
 O Celocus ouviu também. Não disse nada.
 
 - **Parada:** entardecer do 506, Lumade, a porta do Celocus. O túmulo amanhã, os 40% contados antes. Ezmisa a meio dia.
+
+## Noite do 506 — o ultimato
+
+### A porta do Celocus, entardecer do 506
+O rei pediu um dia. Dois, se desse. Queria ver Rilge e a porta do túmulo por fora antes de pôr a Matriz no chão de lá.
+
+O Celocus girou com o polegar o anel da mão esquerda, o que o rei tinha batido para ele no 371, e olhou por cima do ombro do rei para a rua do sul, por onde o homem do pó de estrada tinha descido.
+
+"Trinta anos." Disse sem levantar a voz. "Amanhã, na primeira luz. Ou eu conto o pacto como quebrado, e conto na praça, em voz alta, quanto vale a palavra de um rei."
+
+Atrás do rei, a Eliane não se mexeu. Depois, já no pátio, disse baixo: "Ele não está blefando. Vai fazer o que disse."
+
+### O pátio do celeiro, noite
+Ninguém da casa dormiu debaixo do teto do Celocus. O Gonde alugou o pátio de um celeiro abaixo do mercado, pôs a carroça da Matriz no meio, a lona amarrada em quatro pontos, e dividiu os oito em três turnos. O mensageiro ferido dormia encostado nos sacos; o ombro dele cheirava a terra molhada e a febre baixa.
+
+No alto, as lanternas da casa de pedra vermelha não se apagaram. Duas vezes, antes da meia-noite, um cavaleiro saiu pelo portão e tomou a estrada do sul.
+
+O rei abriu as duas metades do mapa na tábua da carroça: o couro oleado da Brara e o caderno da Gilaccetta, na letra apertada dela. Sete salas, da porta ao coração. Na terceira e na quinta, o mesmo sinal miúdo, uma coroa com uma rachadura no meio. Nos cadernos, a Gilaccetta tinha escrito ao lado: "onde a rainha racha, não se pisa sem bater antes". Da primeira sala saía um corredor que ia direto à quarta; da terceira, outro que pulava para a sexta. O rei passou o dedo por todos os caminhos e chegou sempre à mesma conta: nenhum ia ao coração sem passar por uma das duas coroas rachadas.
+
+### O fogo, mais tarde
+Chamou os dois juntos. O Moreth sentou do lado da carroça; o Eiagrir, do outro, com a lança atravessada nos joelhos. O rei falou da carta e dos dois guardas que a levaram, e disse que amanhã precisava dos dois inteiros, um de costas para o outro.
+
+O Moreth ouviu até o fim. "Amanhã eu vou na frente, senhor."
+
+Fazia anos que ele não chamava o rei de senhor fora da praça.
+
+"E eu atrás dele", disse o Eiagrir, sem tirar os olhos da ponta. "Como sempre."
+
+A Tigra passou com o pão e deu um pedaço a cada um. Os dois comeram, cada um do seu lado do fogo, e foram dormir em turnos diferentes.
+
+### O cravo
+Sozinho na tábua, o rei tirou do saco o cravo de ferradura dobrado em F. Ferro frio, dobrado a frio, torto do jeito que a Tilde dobrava quando ainda não tinha força no pulso para a tenaz grande. Ele se lembrou do dia em que ela sarou e pediu para ouvir o fole de arvel, e das mãos pequenas dela na bigorna da Fornalha. Ficou com saudade da sua menina.
+
+Lá em cima, na casa do Celocus, uma lanterna andou de janela em janela e parou na última.
+
+- **Parada:** noite do 506, Lumade, o pátio do celeiro. O ultimato do Celocus: o túmulo amanhã, ou o pacto quebrado. O Moreth e o Eiagrir sem se falar.

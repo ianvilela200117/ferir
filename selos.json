@@ -1,7 +1,5 @@
 {
  "ordem": [
-  "CT35",
-  "OU35",
   "LT35",
   "AR35b",
   "CR35",
@@ -399,90 +397,11 @@
   "MS04c",
   "TG04",
   "CL06",
-  "CT05"
+  "CT05",
+  "CL06b",
+  "TU06"
  ],
  "selos": {
-  "CT35": {
-   "id": "CT35",
-   "dia": 433,
-   "hora": "12:47:05",
-   "titulo": "O QUE A ELIANE ACHA NA ESTALAGEM DA ESTRADA DO SAL (de noite; ela, os dois que sabem o caminho e mais 6)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "só os 3 CARROCEIROS, bêbados, e os fardos no galpão"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "os carroceiros e 4 GUARDAS da Liga que esperavam a carroça"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os DEVOLVIDOS chegaram antes para buscar o ouro (rola quantos)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os carroceiros e 4 GUARDAS da Liga que esperavam a carroça",
-     "txt": "[4] → os carroceiros e 4 GUARDAS da Liga que esperavam a carroça"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
-  "OU35": {
-   "id": "OU35",
-   "dia": 433,
-   "hora": "12:47:05",
-   "titulo": "QUANTO OURO HÁ NOS FARDOS DA CARROÇA (a paga da Liga aos Devolvidos)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "o dado × 500 em moeda de Marasar"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      6
-     ],
-     "total": 11,
-     "res": "o dado × 500 em moeda de Marasar",
-     "txt": "[5, 6] +0 = 11 → o dado × 500 em moeda de Marasar"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
   "LT35": {
    "id": "LT35",
    "dia": 433,
@@ -21081,6 +21000,109 @@
     }
    ],
    "hora_rolado": "01:17:22"
+  },
+  "CL06b": {
+   "id": "CL06b",
+   "dia": 506,
+   "hora": "01:43:28",
+   "titulo": "1c, O CELOCUS OUVE O PEDIDO DE UM OU DOIS DIAS (Mítico 714, ORGULHOSO e HONESTO; esperou trinta anos; a conta que não fechou: a caravana perdida, ainda calada; o pedido é honesto e dito de frente +2; o orgulho ferido −2; a pressa do ouro −2)",
+   "dado": [
+    1,
+    20,
+    -2
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "RECUSA SECA: 'amanhã, ou conto o pacto como quebrado' (o rei escolhe: entrar no 507 sem ver Rilge, ou romper)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 12,
+     "res": "UM DIA: o túmulo no 508; e dois homens dele 'acompanham' o rei a Rilge e ao túmulo (olhos do Celocus)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "DOIS DIAS: o túmulo no 509; 'quem conta antes de entrar não me ofende'; manda um guia de Lumade a Rilge"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 1000000,
+     "res": "DOIS DIAS E ABRE O JOGO: conta a caravana perdida e pede que a parte dele saia primeiro em ouro (o resto pode esperar)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 5,
+     "res": "RECUSA SECA: 'amanhã, ou conto o pacto como quebrado' (o rei escolhe: entrar no 507 sem ver Rilge, ou romper)",
+     "txt": "[7] -2 = 5 → RECUSA SECA: 'amanhã, ou conto o pacto como quebrado' (o rei escolhe: entrar no 507 sem ver Rilge, ou romper)"
+    }
+   ],
+   "hora_rolado": "01:43:28"
+  },
+  "TU06": {
+   "id": "TU06",
+   "dia": 506,
+   "hora": "01:43:28",
+   "titulo": "O DEGRAU DO TÚMULO DAS RAINHAS (o Livro: o cemitério das rainhas dos Reis-Ferreiros, caído e guardado; a porta responde à Matriz; Zythir, o cemitério de reis, era Único)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "Épico"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "Único"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Lendário"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "Épico",
+     "txt": "[2] → Épico"
+    }
+   ],
+   "hora_rolado": "01:43:28"
   }
  }
 }

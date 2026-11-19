@@ -1,4 +1,4 @@
-# RETOMAR — entardecer do Dia 506, LUMADE: o Celocus frio; o túmulo amanhã; Ezmisa (MOTOR 9b: G1 a G41)
+# RETOMAR — noite do Dia 506, LUMADE: o ultimato do Celocus (o túmulo amanhã ou o pacto quebrado) (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 506, LUMADE, o pátio de um celeiro abaixo do mercado (sem tick novo: tudo na noite do 506; o próximo tick é o do 507; o semanal no 511; a auditoria no 508). O rei HERDEIRO no NÍVEL 50 (XP 123.510; o 51 em 127.600), PV 269/269, Mana 117/117, Foco 16, 1 ação; **Erudito 0/1 (gasto no túmulo; volta no 511)**; Visão 2/2. Com ele: o Moreth e o Eiagrir (ESTREMECIDOS: a conversa do rei com os dois juntos FALHOU, ME06: obedecem seco; o Moreth vai na frente, o Eiagrir atrás, 'como sempre'), a Eliane, a Tigra, o Gonde e 8 da guarda, a MATRIZ e o MARTELO, o mensageiro ferido. O CELOCUS RECUSOU o pedido de um ou dois dias (CL06b [7]−2 = 5): **o túmulo amanhã na primeira luz, ou ele conta o pacto como quebrado, em praça** (a pergunta 1). O rei trata o Celocus como inimigo (palavra do jogador): a casa dormiu longe do teto dele. O TÚMULO DAS RAINHAS tem mapa (G14; ÉPICO, TU06 [2]; 7 salas; (OCULTO) no envelope e em masmorras/túmulo_das_rainhas.json). O ERUDITO deu o fato verdadeiro: a laje das rainhas (armadilha dos construtores) na 3ª e na 5ª sala; os desvios 1→4 e 3→6; nelas o notar tem +5. (OCULTO, a notícia no 507) a caravana grande de ouro e grão do Celocus sumiu na estrada do sul (CE04 [3]); os dois cavaleiros que saíram de noite pela estrada do sul. O resto do 506 (a carta tomada, Levis, Ireviel, Marasar, o cofre 53.547) segue como no parágrafo de baixo.
+
+Antes (506, entardecer):
 Entardecer do 506, LUMADE, a porta do Celocus (os ticks do 503 ao 506; o semanal no 504; o próximo no 511; a auditoria no 508). O rei HERDEIRO no NÍVEL 50 (XP 123.510; o 51 em 127.600), PV 269, Mana 117, Foco 16, 1 ação; Erudito 1/1; Visão 2/2. Com ele: o Moreth, o Eiagrir (os dois ESTREMECIDOS: o vínculo desceu na estrada, pela carta), a Eliane, a Tigra, o Gonde e 8 da guarda, a MATRIZ e o MARTELO, e o MENSAGEIRO FERIDO de Lumade (três rasgos de garra no ombro). O CELOCUS (Mítico 714, ORGULHOSO e HONESTO; o pacto do 371: 40% e o anel) recebeu FRIO (CL06 [1]): o TÚMULO DAS RAINHAS amanhã e os 40% contados antes (o mapa inteiro com o rei; a porta responde à Matriz; dentro, 'a vergonha dos fundadores da Liga, escrita em sangue; quem a tiver manda no Conselho'; RILGE, a oficina caída, com uma peça antiga e mortos, pede um sacrifício; o túmulo vale −2 de fonte na pesquisa da G40). (OCULTO até o 507) o Celocus perdeu uma caravana grande de ouro e grão (CE04 [3]). EZMISA (lugar novo): a cidade afundada a meio dia, no brejo ao pé do vale de cima (o Círculo); caiu de praga; guarda um NÚCLEO; um eremita; entra-se com uma chave. (OCULTO) a carta para a Brara foi TOMADA numa emboscada (CT05 [2]); os dois guardas voltam feridos a Levis; a Brara escreve (#1045, 511). (OCULTO) os VRURN na estrada de Lumade. Levis: a CAREA morreu (a febre cinza); o grão 144; o selo aberto; o Uxraxion despertou (Passo Certo, OCULTO; a Tigra viu o rastro). Ireviel (a carta da Nouliel no 513, #1046): o cais novo desabou (Comércio −1 até o 518); o milagre da Cisterna; o desertor dos Olhos Pintados com um nome; a petição do Porto; a Doge mandou o shasha (7,4 kg). (OCULTO) MARASAR: a guarda da Liga tomou o Arsenal contra a Doge (MR03 [1]). Cofre 53.547.
 
 Antes (502, tarde):
@@ -389,12 +392,18 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (502 → 506): 1b o selo aberto ('esperar chegar em Ireviel, para decidir') · 2b o FOCO DAS CIDADES · 3b DESFAZER O DIA · 4a e 'acelerar Lumade': avisado do mapa (Lumade a 4 dias de Levis), LUMADE DIRETO DE LEVIS · 5a os braços pagos · a palavra do rei: os forçados nos piores trabalhos (G41) · a carta do mensageiro: DOIS GUARDAS DO GONDE levam
 - as três receitas escritas (OCULTO) · CO03 [4] · AL03 [2] · EN03 [2] · EN04 [6] (dvonur) · MS04 [1], MS04c [1], MS04b [4] (oculto) · CT05 [2] (oculto) · EL04 [3], TG04 [1] · CH04 [3] · CB04a [4] (oculto), CB04b [5] · DS04 [6] · PT04 [2] · IM04 [6] · MR03 [1] (oculto) · MF06 [4], MF06b [1] · MI06 [2] · CE04 [3] (oculto até o 507) · CL06 [1] · os erros achados: os mods de Levis (o 416, a 'Saude'), os mortos que viviam a semana, a dívida da Lurentetta que o motor ainda cobrava.
 
+## RESPONDIDO (506, noite): o ERUDITO sobre o túmulo · 1c com 'são meus inimigos' · 2a · 3a · 4a · 5 'saudade da minha criança'
+- O ERUDITO: a laje das rainhas na 3ª e na 5ª sala; os desvios 1→4 e 3→6 (o fato da obra dos construtores; o que mora lá, não).
+- 1c: CL06b [7]−2 = 5 → RECUSA SECA: amanhã ou o pacto quebrado. 'São meus inimigos': ninguém do Celocus entra; a casa dorme longe do teto dele.
+- 2a: guardada para quando o rei entrar. 3a: Ezmisa depois do túmulo.
+- 4a: ME06 37 vs 43 → FALHA (seguem estremecidos). 5: o laço da Tilde, momento (saudade).
+- NOTA: a sessão começou num ramo velho (o 441); o que o Mestre rolou ali foi descartado (git stash); o save é o do main.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CELOCUS (frio: o túmulo amanhã, os 40% contados antes): a) aceitar como ele quer · b) aceitar amanhã, com uma condição: o que é de papel e sangue (a vergonha da Liga) não entra na conta, só ouro, material e peças (vai ao dado: ele é HONESTO e ORGULHOSO; quer enriquecer) · c) pedir um ou dois dias antes (ver Rilge e o túmulo por fora; ele esfria mais) · d) outra.
-2. QUEM ENTRA NO TÚMULO (a porta responde à Matriz; o túmulo vira masmorra por salas, G14; a Matriz vai junto): a) o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 8 · b) o rei, o Moreth e a Eliane; o Eiagrir, a Tigra e a guarda seguram a porta · c) aceitar gente do Celocus dentro, para contar.
-3. EZMISA (a cidade afundada a meio dia; um núcleo; um eremita; uma chave): a) depois do túmulo · b) mandar o Gonde e dois ver de longe amanhã · c) deixar para outra hora.
-4. O MORETH E O EIAGRIR (estremecidos na estrada, pela carta): a) o rei fala com os dois juntos · b) com o Moreth a sós · c) deixar o túmulo resolver.
-5. O CRAVO DA TILDE (o F torto, dobrado a frio, achado no saco): o que Ferir sente? (o jogador diz)
+1. O ULTIMATO DO CELOCUS ('amanhã na primeira luz, ou conto o pacto como quebrado, em praça'): a) entrar amanhã, como ele quer (vale a 2a) · b) entrar amanhã, mas olhar a porta do túmulo por fora ESTA NOITE, à luz de tocha (Rilge fica para depois) · c) romper o pacto (sem a Matriz ninguém entra; o Celocus, Mítico, vira inimigo aberto na cidade dele, com a casa lá dentro e oito guardas) · d) outra.
+2. OS 40% CONTADOS ANTES e o LIVRO DE SANGUE (a vergonha dos fundadores da Liga; quem a tiver manda no Conselho): a) contar tudo como ele quer, o livro incluído · b) a condição: papel e sangue fora da conta, só ouro, material e peças (vai ao dado; ele é honesto e orgulhoso, e está frio) · c) calar e decidir lá dentro, quando o livro aparecer.
+3. A ORDEM NO TÚMULO (o Moreth e o Eiagrir não se falam): a) o Moreth na frente e o Eiagrir atrás, como disseram · b) separar: a Eliane e o Gonde na frente, o Moreth no meio, o Eiagrir guardando a porta de trás · c) a Eliane decide (é a Marechal).
+4. (à mão, G24) Esta noite, a VOZ NO VENTO (10 de Mana) ouve uma conversa longe: a) ouvir a casa do Celocus · b) não.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

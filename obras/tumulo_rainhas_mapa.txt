@@ -1,0 +1,1 @@
+MASMORRA Túmulo das Rainhas: 7 salas geradas (o mapa no envelope, oculto; masmorras/túmulo_das_rainhas.json)
