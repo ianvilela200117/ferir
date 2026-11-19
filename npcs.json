@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 101,
-  "xp": 8583,
+  "xp": 9083,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -144,7 +144,8 @@
    "Tick 490: SOBE a 101",
    "+4000 500: a emboscada do vau (vinte pagos)",
    "Dia 501: 501: o DESPERTAR que faltava (passou do 100 no 483; o despertar.py não roda no tick): d12 [3] OLHO ABERTO: vê magia ativa e sente mentira grossa sem teste; recupera um quarto a menos de PV por noite",
-   "+500 Tick 504: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)"
+   "+500 Tick 504: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)",
+   "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -3833,7 +3834,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 20615,
+  "xp": 21115,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3952,7 +3953,8 @@
    "+500 Tick 490: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+500 Tick 497: PASSO (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+4000 500: a emboscada do vau (vinte pagos)",
-   "+500 Tick 504: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)"
+   "+500 Tick 504: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
+   "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)"
   ],
   "tracos": [
    "LEAL",
@@ -5842,7 +5844,7 @@
  },
  "Eiagrir": {
   "nivel": 130,
-  "xp": 10898,
+  "xp": 11398,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5927,7 +5929,8 @@
    "+1000 Tick 490: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
    "+500 Tick 497: PASSO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
    "+4000 500: a emboscada do vau (vinte pagos)",
-   "+1000 Tick 504: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))"
+   "+1000 Tick 504: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
+   "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)"
   ],
   "ultima_subida": 483,
   "tracos": [
@@ -7792,7 +7795,7 @@
  },
  "Gonde": {
   "nivel": 32,
-  "xp": 1400,
+  "xp": 1900,
   "log": [
    "Dia 436: entra no livro (nível 30)",
    "Dia 436: 436: recebeu do rei o ELMO DE GUARDA REAL (Raro: +2 em Vontade contra medo), achado na sala 1 de Zythir (o nome do cabo, sem ficha antes, saiu do nomes.py livre)",
@@ -7803,7 +7806,8 @@
    "Tick 476: SOBE a 31",
    "+500 Tick 483: PASSO (comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir)",
    "+4000 500: a emboscada do vau (vinte pagos)",
-   "Tick 504: SOBE a 32"
+   "Tick 504: SOBE a 32",
+   "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)"
   ],
   "classe": "Cabo da guarda do rei (lança)",
   "ocupacao": "comanda os 10 da guarda do rei enquanto a Eliane está de cama (436); leva o ELMO DE GUARDA REAL de Zythir",
@@ -8104,5 +8108,15 @@
   ],
   "classe": "homem dos conselheiros da Liga em Levis",
   "ocupacao": "TRABALHO FORÇADO nas minas de cima de Levis (o julgamento em praça do 502), com os onze do vau, para os da Mina Fechada"
+ },
+ "Nutoccone": {
+  "nivel": 90,
+  "xp": 0,
+  "log": [
+   "Dia 507: entra no livro (nível 90)",
+   "507: rende-se ao rei com os seus (RN07 [[2],[19]] 42 vs 34)"
+  ],
+  "classe": "chefe dos Herdeiros da Primeira Liga (herdeiro de casa de mercador acusada pelo livro de sangue)",
+  "ocupacao": "PRESO (507) na sala 6 do Túmulo das Rainhas, com as duas dúzias dos Herdeiros da Primeira Liga; à espera do julgamento"
  }
 }

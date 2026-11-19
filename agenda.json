@@ -15523,6 +15523,14 @@
    "aberto": 502,
    "tocado": 502,
    "fechado": false
+  },
+  {
+   "id": 78,
+   "texto": "O JULGAMENTO DOS HERDEIROS DA PRIMEIRA LIGA (24 com o Nutoccone, presos na sala 6 do túmulo no 507): ao conselho logo depois (a regra: julgamento depois da batalha); a palavra do rei: 'mortos, presos ou servindo'",
+   "oculto": false,
+   "aberto": 507,
+   "tocado": 507,
+   "fechado": false
   }
  ]
 }

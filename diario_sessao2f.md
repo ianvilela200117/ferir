@@ -2192,3 +2192,24 @@ O Nutoccone veio à frente devagar, as mãos abertas. Tinha a barba grisalha e u
 O Moreth olhou para o saco e depois para o rei. O Eiagrir, lá atrás, contou as armas deles em voz baixa, para si mesmo.
 
 - **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 6. Os herdeiros da Primeira Liga oferecem 600 pelo livro queimado. A porta do coração, fechada; o guardião, dentro.
+
+### A ordem, sala 6
+A Eliane não disse nada em voz alta. Tocou o ombro do Eiagrir e apontou com o queixo a fumaça das velas, que corria baixo pelo chão para um canto escuro da sala, onde o ar entrava frio. Era a galeria de Rilge. O Eiagrir foi até lá devagar, com os dois guardas da retaguarda, e firmou a lança atravessada na boca do buraco.
+
+O Nutoccone viu. Os herdeiros também viram.
+
+"Vocês vieram queimar o que os seus avós escreveram com sangue de rei", disse o rei. "Eu vim ler. Larguem as armas. Prendam ou matem, daqui eles não saem."
+
+A última frase não era para os herdeiros. O Moreth deu um passo à frente, e a maça dele bateu de leve na própria palma, uma vez.
+
+Por um momento ninguém se mexeu. Uma vela estalou. Um rapaz do fundo olhou para a galeria, para a lança do Eiagrir atravessada nela, e depois para o Nutoccone.
+
+O velho mercador fechou os olhos. Quando os abriu, tirou a faca do cinto e a pôs no chão, ao lado do saco de couro.
+
+"Três casas morreram com o rei em Dragal", disse. "A quarta morre aqui, de joelhos. Pelo menos de joelhos é diante de um rei."
+
+Ferro bateu na pedra, uma arma depois da outra, até não sobrar nenhuma de pé. O Gonde e os guardas passaram as cordas.
+
+Atrás deles, do outro lado da porta alta, alguma coisa grande mudou de posição. Foi um som de pedra raspando pedra, devagar, e depois nada.
+
+- **Parada:** manhã do 507, a sala 6. Os herdeiros da Primeira Liga presos. A porta do coração fechada; o que mora dentro, acordado.

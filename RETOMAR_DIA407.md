@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 6: a oferta dos herdeiros da Primeira Liga (MOTOR 9b: G1 a G41)
+# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 6: os herdeiros da Primeira Liga presos; a porta do coração (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 507, a SALA 6 do Túmulo das Rainhas. Os HERDEIROS DA PRIMEIRA LIGA (as duas dúzias e o NUTOCCONE, 90; npcs.json) RENDERAM-SE (RN07 42 vs 34) e estão PRESOS, desarmados e amarrados, diante da porta do coração; o Eiagrir e 2 guardas na boca da galeria de Rilge; o ouro deles (600) tomado (cofre 54.147); o julgamento vai ao conselho (fio F78). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 124.010 (o 51 em 127.600). A casa inteira, ninguém ferido: o Moreth e a Eliane à frente, o Gonde com a Matriz, o Eiagrir, 6 guardas. A volta pela sala 5 é segura (o teto calçado). Os 20 do Celocus à porta do túmulo ('ninguém sai antes de contar'). A PORTA DO CORAÇÃO (o vazio da Matriz) fechada; dentro, o ZRAOS (Épico 112; sims/guardiao_rainhas_visao.json é SEM covil: no coração, a toca dele, montar de novo com covil= pela G13/G17, 4d6 CD 21) e o livro de sangue; algo grande se mexeu atrás da porta. (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no coração.
+
+Antes (507, sala 6, a oferta):
 Manhã do 507, a SALA 6 do Túmulo das Rainhas (salas 1 a 6 vistas). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6. A casa inteira, ninguém ferido. O relógio (CK4 [2], CK5 [3], CK6 [3]) não trouxe nada. O teto da sala 5 CALÇADO (AR5n ganho): a volta é segura. SALA 6: os HERDEIROS DA PRIMEIRA LIGA (força 4; duas dúzias; o NUTOCCONE, 90; desconfiados, de arma na mão). A BARGANHA FALHOU (NG07 25 vs 32): oferecem 600 em ouro (OF07 [3]) pelo livro queimado diante deles. A Fortuna não foi gasta pelo Mestre (fica à escolha do jogador). A PORTA DO CORAÇÃO tem o vazio da Matriz; dentro, o ZRAOS (Épico 112, ave do tamanho de uma casa; a ficha e a G9 prontas: sims/guardiao_rainhas_visao.json; a régua: morre 100%) e o livro de sangue. Ao abrir o coração: o guardião (G13/G17: a toca dele, o covil pelo degrau, 4d6 CD 21; a ficha da visão era SEM covil: montar de novo com covil=). (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no coração.
 
 Antes (507, sala 3, depois das Visões):
@@ -428,8 +431,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, sala 3 → 6): 1a 'avisar todos do teto' · 2a 'eles têm que me oferecer algo muito bom, afinal a Liga é minha inimiga'
 - CK4, CK5, CK6: nada · AR5n ganho (o teto calçado) · NG07 FALHA → 600 em ouro (OF07).
 
+## RESPONDIDO (507, sala 6): 1b PRENDÊ-LOS: 'prendam ou matem, daqui eles não saem' (à Liga: aqui, os herdeiros dela)
+- RN07 [[2],[19]] + 16 + 5 = 42 vs 34 → SUCESSO: rendem-se todos · o ouro tomado · +500 XP (feito menor) · um dado CN06 rolado por engano num save velho, antes de achar este: não vale.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A OFERTA DO NUTOCCONE (600 em ouro pelo livro queimado diante deles): a) recusar e mandar que saiam pela galeria de Rilge (vai ao dado: estão desconfiados) · b) prendê-los ('mortos, presos ou servindo'; duas dúzias, força 4; se resistirem, luta pela G9) · c) aceitar (o livro queima diante deles; os 600 são deles, fora da contagem do Celocus) · d) gastar 1 Fortuna e apertar de novo (a barganha rola outra vez; Revés 4 → 5) · e) abrir o coração com eles ali e decidir depois (o guardião está dentro) · f) outra.
+1. O CORAÇÃO (a porta pede a Matriz; dentro o ZRAOS na toca dele, com o covil: a ficha monta de novo, G9; e o livro de sangue): a) abrir já · b) levar os presos à porta do túmulo primeiro (a volta é segura; os 20 do Celocus lá fora) e voltar · c) descansar antes (a Mana 67/117; a Visão volta amanhã).
+2. QUEM GUARDA OS 24 PRESOS se a casa abrir o coração: a) o Gonde e os 6 guardas; entram o rei, o Moreth, o Eiagrir e a Eliane · b) o Eiagrir fica também; entram o rei, o Moreth e a Eliane · c) amarrados e sós na sala 6.
+3. O NUTOCCONE (preso): a) perguntar já (o jogador diz o quê; ele responde pelo que sabe, G10) · b) depois.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

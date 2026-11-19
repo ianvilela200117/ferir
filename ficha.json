@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 50,
- "xp": 123510,
+ "xp": 124010,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -68,7 +68,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 53547,
+ "cofre": 54147,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
@@ -489,6 +489,12 @@
    "valor": -673,
    "motivo": "semana: casa 6457 + cidades 1800 − despesa 8930",
    "saldo": 53547
+  },
+  {
+   "dia": 507,
+   "valor": 600,
+   "motivo": "507: o ouro que os herdeiros da Primeira Liga trouxeram, tomado na prisão (o que é deles, fora da conta das rainhas)",
+   "saldo": 54147
   }
  ],
  "materiais": {
@@ -805,9 +811,6 @@
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 2",
-  "Dia 477: SOBE ao 3",
-  "Dia 477: SOBE ao 4",
   "Dia 477: SOBE ao 5",
   "Dia 477: SOBE ao 6",
   "Dia 477: SOBE ao 7",
@@ -866,7 +869,8 @@
   "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)",
   "Dia 500: +1000 501: FEITO GRANDE: a revolta de Levis-baixa encerrada pela palavra (o acordo com o Uxraxion, sem sangue)",
   "Dia 500: SOBE ao 50",
-  "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)"
+  "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)",
+  "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
