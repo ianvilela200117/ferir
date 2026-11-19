@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 507, LUMADE, O TÚMULO DAS RAINHAS, a sala 3: a porta reta ou o corredor (MOTOR 9b: G1 a G41)
+# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 3, depois das duas Visões: o caminho e os herdeiros da Primeira Liga (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 507, a SALA 3 do Túmulo das Rainhas, depois das DUAS VISÕES (Mana 67/117; Visão 0/2 hoje; PV 269/269; Erudito 0/1). A casa dentro como antes (a Eliane e o Moreth à frente, o Gonde com a Matriz, o rei, o Eiagrir e 2 atrás; 6 guardas). O QUE AS VISÕES MOSTRARAM: sala 4, a lista das rainhas com o último nome raspado a faca (R407 [2]) · sala 5, a 2ª laje: teto que cai (AR507 [7]) · sala 6: OS HERDEIROS DA PRIMEIRA LIGA (mundo_vivo, facção nova; força 4; chefe NUTOCCONE 90; desconfiados; o preço: o livro queimado diante deles) · o GUARDIÃO, o ZRAOS (Épico 112, ave do tamanho de uma casa, Sorte; sims/guardiao_rainhas_base.json; regenera; fraqueza Tempo; camuflagem), em 1 de 6 vezes sai ao entrar na 6 (o d6 do relógio, G34); a régua: morre 100%, mediana 2 rodadas; Eliane cai 4%, morre <1%. G9 feito para ele: o Moreth df 52 (a pendência do 428; o raio da Couraça à mão), o rei com o nível de referência 50. Da 4ª em diante, o d6 do relógio rola de verdade ao entrar em cada sala.
+
+Antes (507, manhã, sala 3):
 Manhã do 507, O TÚMULO DAS RAINHAS, a SALA 3 (salas 1, 2 e 3 vistas). O rei nível 50, PV 269/269, Mana 107/117, Erudito 0/1 (volta no 511), Visão 2/2, Fortuna 3/3, Revés 4/6. Dentro: a Eliane e o Moreth à frente, o Gonde com a Matriz ao lado do rei, o Eiagrir atrás com 2; 6 guardas; 2 na porta de fora com a carroça, diante dos 20 do Celocus. O MORETH voltou a chamar o rei pelo nome (opinião +5, 60 dias); com o Eiagrir segue estremecido. SALA 1: o rei disse IOMILTIA (SB07 sucesso); as aias abriram. SALA 2 (TS07 [20]): 300 em moeda antiga · 2 kg de SYIR (Raro, Sorte; nome novo, trocado de Veyula) · o PUNHAL DE CERIMÔNIA de Iomiltia (Raro, Mente: −2 na próxima ação de quem ele fere); tudo vai à CONTAGEM DA SAÍDA (40% do Celocus em ouro, material e peças; papel fora). SALA 3: o fosso de estacas (AR07 [1]) achado antes de disparar (AR07n extraordinário). (OCULTO) o resto do mapa: 4 vazia (um rastro) → 5 armadilha (a outra laje, CD 21, +5) → 6 · 6 O QUE HABITA (encontro; pode ser conversa) → 7 · 7 O CORAÇÃO: o livro de sangue, com o guardião Épico. Da 4ª sala em diante, G34: d6 ao entrar; com 1, um perigo de sala não vista vem até a casa. A verdade dos cadernos (oculta): a última rainha, 'a que escreveu com sangue', escreveu o livro e dorme no coração.
 
 Antes (507, aurora):
@@ -416,8 +419,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 2a: a sala 2 (o tesouro: as três coisas) e a sala 3 (o fosso de estacas achado; o Moreth larga o 'senhor').
 - 3a: a porta de fora fica com 2 guardas e a carroça.
 
+## RESPONDIDO (507, sala 3): 'usar a Visão do Tempo para saber por onde vamos, qual a melhor opção' · e, perguntado, 'as duas: comparar'
+- As duas Visões (40 de Mana); a sala 6 (S607 [20] → a facção nova, FC07), o rastro da 4 (R407), a laje da 5 (AR507), o guardião (GD07, o Zraos) e a régua dele.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. DA SALA 3 (a planta): a) a porta reta, à 4ª sala (e depois a 5ª, a outra laje das rainhas, e a 6ª) · b) o corredor à esquerda, direto à 6ª (a última antes do coração; a 4ª e a 5ª ficam para trás). Da 4ª sala em diante, a cada sala um d6 do relógio do lugar: com 1, um perigo de uma sala ainda não vista vem até a casa.
+1. O CAMINHO, depois das visões: a) a porta reta (a lista das rainhas e o nome raspado na 4ª; a laje do teto na 5ª; ~3 em 10 de encontrar os herdeiros num corredor estreito) · b) o corredor, direto à 6ª. Nos dois, ao entrar na 6ª, 1 em 6 de o guardião sair.
+2. OS HERDEIROS DA PRIMEIRA LIGA na 6ª (duas dúzias, o Nutoccone; desconfiados; o preço: o livro queimado diante deles): a) falar e ouvir o que oferecem · b) recusar o preço e mandar que saiam pela galeria de Rilge · c) prendê-los (são da Liga: 'mortos, presos ou servindo'; vai à luta se resistirem) · d) atacar primeiro, antes que falem (luta, G9) · e) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -35,7 +35,7 @@
    "dado": "1d10",
    "mult": 3,
    "b": 15,
-   "df": 50,
+   "df": 52,
    "rd": 8,
    "pv": 610,
    "vigor": 15,
@@ -127,7 +127,7 @@
     }
    ],
    "pecas": "ESPADA DO MORETH (Mítica; CHUVA DE BRASAS, foco ×10) · MAÇA DO RIO LIMPO (Mítica; Lança do Sol 16d6 ×10, 2x por cena; atravessa escudo) · COURAÇA DE ESPINHO (Mítica, 428; Sob Medida 4: inteira): leve · +2 Vontade contra medo · não range · veste sozinho · RD +3 contra fogo · esconde · MANTO DE SOMBRA 1x por cena · quem o agarra sangra 16 · quem o golpeia leva 10 de raio · defeitos: floresce e pesa; atrai tempestade · ARTES DE ARMA (G30): Fio Duplo, Corte Corrido, Corte Do Horizonte, Quebra-Guarda, Tremor De Ferro, Bigorna; auras: Pele de Pedra",
-   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura",
+   "nota": "428: a COURAÇA DE ESPINHO (armadura média) tira a fraqueza da classe (−2 de Defesa sem armadura média ou pesada); conferir na G9 da próxima luta se o df 50 já contava com armadura · 507 (G9, conferido): a ficha do 427 tinha df 50 SEM armadura nenhuma (a fraqueza da classe estava dentro); com a Couraça de Espinho, df 52. RD fica 8 (a Couraça dá RD +3 só contra fogo). O RAIO da Couraça ('quem o golpeia leva 10') NÃO RODA no luta.py: fica à mão (a régua o conta a menos, contra a casa).",
    "artes": {
     "maestria": "Lendário",
     "teto": 6,
@@ -341,9 +341,9 @@
    "vigor": 9,
    "heroi": true,
    "imune_empurrao": true,
-   "nivel_ref": 10,
+   "nivel_ref": 50,
    "essencia": "Vento",
-   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta · 501: NÍVEL 50: os feitiços do 4º ao 6º acordam (a Chuva de Brasas volta à ficha) · 501 (ERRO ACHADO): desde o 478 a Mão de Rei faz o Foco de Osso (Primordial, forjado pelo rei) render INTEIRO: o foco é ×20 (área ×10), não ×10; as lutas do 483, 484 e 488 rodaram com ×10 (contra a casa; ficam como estão)",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta · 501: NÍVEL 50: os feitiços do 4º ao 6º acordam (a Chuva de Brasas volta à ficha) · 501 (ERRO ACHADO): desde o 478 a Mão de Rei faz o Foco de Osso (Primordial, forjado pelo rei) render INTEIRO: o foco é ×20 (área ×10), não ×10; as lutas do 483, 484 e 488 rodaram com ×10 (contra a casa; ficam como estão) · 507 (G9): ataque e defesa conferidos no 501 (a Mão de Rei: as peças dele rendem inteiras); o nível de referência marcado 50; o PV vem da ficha viva.",
    "magias": [
     {
      "nome": "TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana)",

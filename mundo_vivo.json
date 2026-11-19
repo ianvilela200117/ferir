@@ -3061,6 +3061,22 @@
     6
    ],
    "postura": 0
+  },
+  {
+   "nome": "os Herdeiros da Primeira Liga",
+   "onde": "o Túmulo das Rainhas (Lumade), a sala 6; entram pela galeria de Rilge",
+   "desde": 507,
+   "o_que": "herdeiros dos mercadores que o livro de sangue acusa (os fundadores da Liga que traíram o último Rei-Ferreiro em Dragal); querem o livro para queimá-lo e limpar o nome das casas · duas dúzias; chefe NUTOCCONE (nível 90; nomes.py mercante livre) · acampados com velas diante da porta do coração, sem conseguir abri-la (a porta pede a Matriz) · recebem a casa DESCONFIADOS (FC07e 17−4 = 13), de arma na mão · o PREÇO para deixar a casa chegar à porta: o livro QUEIMADO diante deles assim que sair do coração (FC07f [3]) · nasceram do conflito antigo (S607 [20] → novidade [7]; FC07a [4])",
+   "forca": 4,
+   "relogio": [
+    0,
+    6
+   ],
+   "postura": -1,
+   "estado": "viva",
+   "log": [
+    "507: nasce no túmulo das rainhas (a novidade da sala 6); a Visão do Tempo do rei os viu antes de a casa chegar"
+   ]
   }
  ],
  "lugares": [

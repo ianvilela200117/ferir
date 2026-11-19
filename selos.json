@@ -1,14 +1,5 @@
 {
  "ordem": [
-  "VKR34",
-  "KRc34",
-  "ED34",
-  "MO34",
-  "CH34",
-  "MO34b",
-  "CH34n",
-  "MT34",
-  "LV31n",
   "LV31m",
   "LV31c",
   "OR35",
@@ -399,474 +390,18 @@
   "PA07a",
   "PA07b",
   "PA07c",
-  "MT07b"
+  "MT07b",
+  "S607",
+  "R407",
+  "FC07a",
+  "FC07b",
+  "FC07c",
+  "FC07d",
+  "FC07e",
+  "FC07f",
+  "AR507"
  ],
  "selos": {
-  "VKR34": {
-   "id": "VKR34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "A VIGIA DO KROTHOS (G11; o posto dos mineiros de Levis; ele CRIA: aparecem crias perto do habitat)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viram a tempo: as crias saem pelas minas de baixo"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: os mineiros fecham as galerias; sem perda"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO das crias, e um RUMOR EXATO"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "as crias PEGAS NO LUGAR: a Guilda dos Mineiros as encurrala"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      9
-     ],
-     "total": 11,
-     "res": "AVISO A TEMPO: os mineiros fecham as galerias; sem perda",
-     "txt": "[9] +2 = 11 → AVISO A TEMPO: os mineiros fecham as galerias; sem perda"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "KRc34": {
-   "id": "KRc34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "QUANTAS CRIAS O KROTHOS FEZ (a notícia chega EXAGERADA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado em crias"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado em crias",
-     "txt": "[1] → o dado em crias"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "ED34": {
-   "id": "ED34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "O SEGREDO QUE A CÉLULA DO DELTA ACHOU (espionagem 40 × 28: plano de facção, Lendário ou vilão da região)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a OBRA DA SOUANE: ela compra o sal e o grão do Delta inteiro"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a ALTHELTIA (a Lendária do ofício no Delta): o que ela quer"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os DO JUNCO: o que tramam contra a casa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a LURENTETTA: a doença que ela esconde"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor",
-     "txt": "[4] → o VARUUN (o vilão das caravanas de Shizess) procura o núcleo Mítico debaixo do redemoinho do Laennor"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "MO34": {
-   "id": "MO34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "OS OLHOS DA MAMILTIA VOLTAM DE ZISRIR (a missão: QUEM ACORDOU A ELAEVA; o rei deu o nome, o ADUREL; o Celocus desabou a boca da passagem no 416; no caminho eles feriram a Elaeva no 428)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a PROVA: o Adurel abriu a passagem e acordou a fera (a Mamiltia paga o resto: 3.000 XP, 1.500 e a coisa oculta; e vai atrás do Adurel)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a passagem DESABADA: a prova pela metade (ela paga metade do resto)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a prova aponta OUTRO, não o Adurel (rola quem)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a prova aponta OUTRO, não o Adurel (rola quem)",
-     "txt": "[6] → a prova aponta OUTRO, não o Adurel (rola quem)"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "CH34": {
-   "id": "CH34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "QUEM CHEGA À CASA PELO CHAMADO (434: chegam 2; G3: cada um pede uma peça da forja, Rara ou melhor, no lugar de soldo, dentro de uma lua): O NÍVEL DE CADA UM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "nível 30 a 50"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "nível 50 a 80"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "nível 80 a 110"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "nível 110 a 140"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nível 30 a 50",
-     "txt": "#1 [2] → nível 30 a 50"
-    },
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nível 30 a 50",
-     "txt": "#2 [2] → nível 30 a 50"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "MO34b": {
-   "id": "MO34b",
-   "dia": 434,
-   "hora": "13:56:29",
-   "titulo": "(OCULTO) A QUEM A PROVA DOS OLHOS DA MAMILTIA APONTA: QUEM ACORDOU A ELAEVA SOBRE TELOSUS (não o Adurel)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o CELOCUS (desabou a boca da passagem no 416 para apagar o rastro)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o CEDUION (o Colégio de Telosus sabe demais da fera)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)",
-     "txt": "[2] → a ALMISION (deu ao rei o nome do Adurel para jogar a Mamiltia contra ele)"
-    }
-   ],
-   "hora_rolado": "13:56:29"
-  },
-  "CH34n": {
-   "id": "CH34n",
-   "dia": 434,
-   "hora": "13:56:52",
-   "titulo": "O NÍVEL EXATO DOS DOIS DO CHAMADO (30 a 50: 30 + d20)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "30 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "30 + o dado",
-     "txt": "#1 [1] → 30 + o dado"
-    },
-    {
-     "dados": [
-      16
-     ],
-     "total": 16,
-     "res": "30 + o dado",
-     "txt": "#2 [16] → 30 + o dado"
-    }
-   ],
-   "hora_rolado": "13:56:52"
-  },
-  "MT34": {
-   "id": "MT34",
-   "dia": 434,
-   "hora": "13:57:44",
-   "titulo": "DE QUE É A BRIGA EM LEVIS (o reino do 434: Ordem 1 → 0, 'briga ou motim'; Comida 1 e surto de doença; gente fugindo pela estrada do rio)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o CULTO DO XAATHIS agita as minas de baixo (o fim das dívidas; a Liga paga o culto)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BIGORNA LIVRE contra a Guilda (a briga do 245, que espera audiência desde o 414)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)",
-     "txt": "[1] → o PÃO CARO e a DOENÇA: o povo das ruas baixas contra a governadora (a Brara)"
-    }
-   ],
-   "hora_rolado": "13:57:44"
-  },
-  "LV31n": {
-   "id": "LV31n",
-   "dia": 434,
-   "hora": "13:57:44",
-   "titulo": "QUEM LUCROU COM A FROTA PERDIDA DE LEVIS (o mundo do 431, LV31 [6] → novidade [9]: um NPC antigo volta mudado)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o THUGEK (entregue à justiça de Levis no 304)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a CAREA (a mestra da Guilda de Levis)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o GUNDALD (que guardava o Drassa no 415)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o OUVALD (o físico)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o ODRUM (fala pelos da Mina Fechada)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o GURKA (o mestre da Guilda dos Mineiros)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o ODRUM (fala pelos da Mina Fechada)",
-     "txt": "[5] → o ODRUM (fala pelos da Mina Fechada)"
-    }
-   ],
-   "hora_rolado": "13:57:44"
-  },
   "LV31m": {
    "id": "LV31m",
    "dia": 434,
@@ -21290,6 +20825,526 @@
     }
    ],
    "hora_rolado": "03:23:57"
+  },
+  "S607": {
+   "id": "S607",
+   "dia": 507,
+   "hora": "12:14:15",
+   "titulo": "O QUE HABITA A SALA 6 DO TÚMULO DAS RAINHAS (a última antes do coração; Épico; a primeira vista é a da Visão do Tempo)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "A GUARDA DE OSSO DAS RAINHAS: esqueletos de lança (Raros; quantos: 2d6, S607b) em linha diante da porta do coração; não se mexem enquanto ninguém a toca; quem a toca sem a Matriz é atacado"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 10,
+     "res": "UMA RAINHA QUE NÃO DORME: o espírito de uma rainha sem nome; fala; quer uma coisa (S607c, d6: 1-2 o nome de quem a enterrou · 3-4 que o livro de sangue seja queimado · 5-6 que a Matriz fique no túmulo)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 14,
+     "res": "OS QUE ENTRARAM ANTES: saqueadores vivos do Círculo da Areia Cantante, por um desabamento no teto (quantos: 2d6, S607b; nível 30 a 60; um chefe), acampados diante da porta do coração sem conseguir abri-la"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 17,
+     "res": "OS MORTOS DE RILGE: ferreiros mortos subidos pela galeria de baixo, de avental de couro; querem a Matriz para acender a forja de Rilge"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 19,
+     "res": "O GUARDIÃO FORA DO CORAÇÃO: o guardião Épico dorme enrolado na sala 6 (gerado então)"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[20] → SURPRESA (gerador novidade) (20 NATURAL)"
+    }
+   ],
+   "hora_rolado": "12:14:15"
+  },
+  "R407": {
+   "id": "R407",
+   "dia": 507,
+   "hora": "12:14:15",
+   "titulo": "O RASTRO DA SALA 4 (VAZIA: um rastro que diz algo do lugar; a Visão do caminho reto passa por ela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a lista das rainhas gravada na parede, com o último nome raspado a faca"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os ossos de um homem de roupa de mercador antigo, com o anel da Primeira Liga no dedo e uma faca quebrada"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "marcas fundas de garra na pedra do chão, do coração até ali e de volta (o guardião sai)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "uma vela de cera de abelha gasta pela metade, posta há pouco (alguém entra aqui)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a lista das rainhas gravada na parede, com o último nome raspado a faca",
+     "txt": "[2] → a lista das rainhas gravada na parede, com o último nome raspado a faca"
+    }
+   ],
+   "hora_rolado": "12:14:15"
+  },
+  "FC07a": {
+   "id": "FC07a",
+   "dia": 507,
+   "hora": "12:14:58",
+   "titulo": "A FACÇÃO NOVA DA SALA 6 (S607 [20] → novidade [7]: uma facção nova nasce de um conflito antigo): QUE CONFLITO ELA CARREGA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "A TRAIÇÃO DE DRAGAL: descendentes da guarda e dos criados dos Reis-Ferreiros, que juraram guardar o livro de sangue contra a Liga"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "A PRIMEIRA LIGA: herdeiros dos mercadores que o livro acusa; querem o livro para queimá-lo e limpar o nome das casas"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "AS RAINHAS CONTRA OS REIS: um culto às rainhas, que culpa os próprios Reis-Ferreiros pela queda"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O ADUREL CONTRA O CELOCUS: gente do Adurel, o rival do Celocus, entrada por baixo para levar o livro antes dele"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "A PRIMEIRA LIGA: herdeiros dos mercadores que o livro acusa; querem o livro para queimá-lo e limpar o nome das casas",
+     "txt": "[4] → A PRIMEIRA LIGA: herdeiros dos mercadores que o livro acusa; querem o livro para queimá-lo e limpar o nome das casas"
+    }
+   ],
+   "hora_rolado": "12:14:58"
+  },
+  "FC07b": {
+   "id": "FC07b",
+   "dia": 507,
+   "hora": "12:14:58",
+   "titulo": "QUANTOS SÃO E A FORÇA DA FACÇÃO NOVA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um punhado, seis (força 2)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma dúzia (força 3)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "duas dúzias (força 4)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "duas dúzias (força 4)",
+     "txt": "[6] → duas dúzias (força 4)"
+    }
+   ],
+   "hora_rolado": "12:14:58"
+  },
+  "FC07c": {
+   "id": "FC07c",
+   "dia": 507,
+   "hora": "12:14:58",
+   "titulo": "POR ONDE ENTRARAM NO TÚMULO FECHADO HÁ TRINTA ANOS",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "pela galeria de baixo, que vem de Rilge"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "por um desabamento no teto, numa encosta que só eles conhecem"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "pela galeria de Rilge, e há anos: vivem aqui dentro, de geração em geração"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "pela galeria de baixo, que vem de Rilge",
+     "txt": "[2] → pela galeria de baixo, que vem de Rilge"
+    }
+   ],
+   "hora_rolado": "12:14:58"
+  },
+  "FC07d": {
+   "id": "FC07d",
+   "dia": 507,
+   "hora": "12:14:58",
+   "titulo": "O CHEFE DA FACÇÃO NOVA: NÍVEL (30 + d6 × 10)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "40"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "60"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "70"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "80"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "90"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "90",
+     "txt": "[6] → 90"
+    }
+   ],
+   "hora_rolado": "12:14:58"
+  },
+  "FC07e": {
+   "id": "FC07e",
+   "dia": 507,
+   "hora": "12:14:58",
+   "titulo": "COMO RECEBEM QUEM CHEGA COM A MATRIZ (o rei é HERDEIRO DO REI-FERREIRO e traz a pedra dos reis; os modificadores pelo FC07a, declarados agora: Dragal +4 · Primeira Liga −4 · as rainhas +0 · o Adurel −2)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "HOSTIS: armas erguidas; querem a Matriz ou o livro, e não abrem caminho"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 14,
+     "res": "DESCONFIADOS: falam, com a arma na mão, e põem um preço para deixar passar"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 19,
+     "res": "RECEBEM: abaixam as armas; querem falar com o rei antes do coração"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "RECEBEM: abaixam as armas; querem falar com o rei antes do coração",
+     "txt": "[17] → RECEBEM: abaixam as armas; querem falar com o rei antes do coração"
+    }
+   ],
+   "hora_rolado": "12:14:58"
+  },
+  "FC07f": {
+   "id": "FC07f",
+   "dia": 507,
+   "hora": "12:15:23",
+   "titulo": "O PREÇO QUE OS HERDEIROS DA PRIMEIRA LIGA PÕEM PARA DEIXAR A CASA CHEGAR À PORTA DO CORAÇÃO (querem o livro de sangue para queimá-lo e limpar o nome das casas)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o livro, QUEIMADO diante deles, assim que sair do coração"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "entrar junto no coração e LER o livro antes de qualquer um (para saber que nomes ele traz)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "OURO: oferecem um resgate ao rei pelo livro (o d6 da quantia, então)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o livro, QUEIMADO diante deles, assim que sair do coração",
+     "txt": "[3] → o livro, QUEIMADO diante deles, assim que sair do coração"
+    }
+   ],
+   "hora_rolado": "12:15:23"
+  },
+  "AR507": {
+   "id": "AR507",
+   "dia": 507,
+   "hora": "12:16:02",
+   "titulo": "O TIPO DA 2ª LAJE DAS RAINHAS, NA SALA 5 (G34, d12; a Visão do caminho reto a atravessa)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "fosso com estacas"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "dardos na parede (Envenenado)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "laje que desce (a sala se fecha: Força CD 29 ou 1 hora)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "gás de sono (dorme 1 hora; os perigos da sala seguinte vêm)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "fogo de runa (Queimando)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "lâmina de pêndulo (Sangrando)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "teto que cai (Preso, 10 minutos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "água que sobe (3 rodadas para sair)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "espelho que prende (Enfeitiçado 1 cena, Vontade)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "chão falso para outra sala (cai sozinho na sala seguinte)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "alarme (+2 em todos os perigos do lugar)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "maldição do dono (Amaldiçoado até sair, ou Purificar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 7,
+     "res": "teto que cai (Preso, 10 minutos)",
+     "txt": "[7] → teto que cai (Preso, 10 minutos)"
+    }
+   ],
+   "hora_rolado": "12:16:02"
   }
  }
 }

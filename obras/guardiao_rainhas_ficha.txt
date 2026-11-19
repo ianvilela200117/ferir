@@ -1,0 +1,4 @@
+Zraos (Épico 112): PV 1680 · Defesa 48 · RD 6 · ataque +38 · 1d12 × 5 · 4 ações
+  roda sozinho: regenera, poder, fraqueza
+  ⚠ NÃO RODA no luta.py (declarar antes como aplica, G33): camuflagem (desvantagem para achá-lo)
+  escrito: sims/guardiao_rainhas_base.json

@@ -1,0 +1,21 @@
+nome: Kasek
+categoria: Épico
+nível: 112
+corpo: ave
+tamanho: casa
+essência: Sorte
+números: PV 1680 · Defesa 48 · RD 6 · ataque +38 · 2 ataque(s) por rodada · dano 1d12 × 5 · XP 1120 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · camuflagem (desvantagem para achá-lo)
+  · regenera (cura nível ÷ 2 PV por rodada, menos contra a Essência oposta)
+poder assinatura: o 19 natural também é crítico, em área de 12 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Tempo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol
+comportamento: territorial: ataca quem entra
+habitat: montanha
+sinal (Lei 15): poços secos
+drops:
+  · chifre ou garra ×10: «ulnar» (Épico, Sorte + Sangue), serve para arma: o 19 natural também é crítico
+  · couro ou escama ×15: «thumir» (Épico, Sorte), serve para armadura: +3 num teste por dia, à escolha
+  · olho ×20: «eryine» (Épico, Sorte + Agua), serve para armadura: +3 num teste por dia, à escolha
+  · CORAÇÃO: núcleo Épico de Sorte, serve de NÚCLEO para Mítico
+————————————————————————————————————————

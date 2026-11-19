@@ -1,0 +1,29 @@
+{
+ "monstro": {
+  "nome": "Zraos",
+  "cat": "Épico",
+  "nivel": 112,
+  "pv": 1680,
+  "df": 48,
+  "rd": 6,
+  "at": 38,
+  "dado": "1d12",
+  "mult": 5,
+  "moral": false,
+  "essencia": "Sorte",
+  "regenera": 56,
+  "acoes": 4,
+  "poder": {
+   "nome": "o 19 natural também é crítico",
+   "tipo": "area",
+   "cd": 21,
+   "dano": "4d6"
+  },
+  "fraqueza": "Tempo",
+  "nota": "bicho.py (obras/guardiao_rainhas.txt): ave, casa, Sorte; territorial: ataca quem entra; fraqueza: a Essência Tempo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol",
+  "nao_roda": [
+   "camuflagem (desvantagem para achá-lo)"
+  ]
+ },
+ "grupo": []
+}

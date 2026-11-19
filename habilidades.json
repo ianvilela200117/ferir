@@ -120,7 +120,7 @@
    "tipo": "Magia",
    "efeito": "Tempo 4º: vê uma hora à frente · 20 de Mana · só quando o jogador pede (a régua)",
    "grau": 1,
-   "usos": 7,
+   "usos": 9,
    "desde": 437,
    "cargas": {
     "atual": 2,

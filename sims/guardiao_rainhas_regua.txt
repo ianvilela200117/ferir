@@ -1,0 +1,7 @@
+RÉGUA de 2000 lutas simuladas (sem valor de jogo; margem de ±2 pontos) · Zraos (Épico 112) contra 4
+  desfecho: Zraos MORRE 100%
+  duração: mediana 2 rodadas (de 1 a 3 em 8 de cada 10 lutas)
+  MORRE: Eliane <1%
+  cai ou recua ferido: Eliane 4% · Ferir <1%
+  LEI DAS CAÇADAS (339, limite de 2% de morte para qualquer um dos nossos): o pior risco é 0.4% → DENTRO da lei
+  (régua gravada no envelope como OCULTO; não mostrar ao jogador sem a Visão do Tempo)

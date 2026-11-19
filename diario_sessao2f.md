@@ -2157,3 +2157,18 @@ Lá atrás, o Eiagrir soltou o ar e não disse nada.
 Da terceira sala saíam duas passagens: uma porta reta e, à esquerda, um corredor estreito. Do corredor vinha um ar frio que cheirava a cera. Da porta reta não vinha nada, nem som.
 
 - **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 3. A porta reta, para a 4ª sala, ou o corredor, para a 6ª.
+
+### As duas visões, sala 3, manhã do 507
+O rei fechou os olhos na boca do corredor e olhou uma hora adiante. Depois olhou outra vez, pelo outro caminho.
+
+Pela porta reta, viu a quarta sala vazia, e na parede a lista das rainhas gravada fundo, nome sob nome. O último estava raspado a faca, tão fundo que a pedra tinha esbranquiçado. Na quinta, a outra coroa rachada: quase sempre a casa a achava; uma vez, o teto descia sobre quem ia na frente. E muitas vezes, antes da sexta, vinham ao encontro dele homens de arma na mão, num corredor onde dois não passavam lado a lado.
+
+Pelo corredor, viu só pedra fria e um cheiro de cera ficando mais forte.
+
+Pelos dois caminhos, a sexta sala era a mesma. Duas dúzias de homens e mulheres em volta de velas, diante de uma porta grande sem maçaneta. Roupas de mercador, gastas de baixo da terra. À frente deles, um homem de barba grisalha que chamavam de Nutoccone. Eles não abaixavam as armas, mas falavam. Queriam uma coisa só: o livro, queimado na frente deles assim que saísse do coração. "Nossos avós assinaram a vergonha. Nós vamos apagá-la."
+
+E às vezes, em poucas das muitas horas, a porta do coração se abria por dentro e saía uma ave do tamanho de uma casa, de penas cor de pedra, que até se mexer parecia parte da parede. Nessas horas ela caía diante da casa, sempre, quase sempre na segunda troca. Uma vez ou outra, a Eliane ficava no chão.
+
+O rei abriu os olhos com a boca seca. A Mana tinha ido quase toda.
+
+- **Parada:** manhã do 507, a sala 3, depois das duas visões. A porta reta ou o corredor; e os herdeiros da Primeira Liga na sexta sala.

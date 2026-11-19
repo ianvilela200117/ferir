@@ -23,7 +23,7 @@
   269
  ],
  "mana": [
-  107,
+  67,
   117
  ],
  "foco": 16,
@@ -873,7 +873,7 @@
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 2,
+   "tem": 0,
    "max": 2,
    "renova": "dia"
   },
