@@ -2230,3 +2230,31 @@ As cinco aias estavam de pé diante da porta, lado a lado, as vassouras de palha
 O Nutoccone baixou a cabeça. Atrás do rei, alguém da fila começou a rezar.
 
 - **Parada:** meio-dia do 507, a sala 1. As aias não deixam os presos sair pela porta.
+
+### A porta das aias, sala 1
+O rei falou com elas devagar, com o nome de Iomiltia na boca e a Matriz à vista. As aias ouviram de olhos fechados. A do meio respondeu a mesma coisa, com a mesma voz: "Quem não entrou pela porta não sai por ela." Não disse preço.
+
+"Corram", disse o rei aos presos. "Se elas deixarem, vocês vivem."
+
+O Nutoccone foi o primeiro. A corda puxou o segundo, e o terceiro, e a fila inteira passou de cabeça baixa entre as vassouras de palha erguidas. As aias não se mexeram. Olharam, de olhos fechados, até o último sair para a luz. Depois baixaram as vassouras e voltaram a varrer.
+
+Lá fora, os vinte do Celocus contaram os presos um por um, com a mão no cabo da espada, e não levaram nenhum. O Gonde e os guardas sentaram os vinte e quatro no chão, junto da carroça.
+
+### O coração
+O Moreth encaixou a Matriz no vazio da porta. A pedra abriu para dentro, sem som, e o ar que saiu era seco como palha velha.
+
+Ele já estava descendo da parede antes que alguém o visse: uma ave do tamanho de uma casa, de penas cor de pedra, com o bico rachado de velho. O primeiro bater de asas jogou poeira na cara de todos. Uma pedra solta do teto pegou a Eliane no ombro.
+
+O Zraos caiu sobre o Moreth e sobre a Eliane. O Moreth aparou com o escudo e ficou de pé. A Eliane levou o golpe no flanco e cuspiu sangue.
+
+O rei apontou o Foco de Osso. O Toque do Ceifador pegou a ave de raspão, e as penas da asa esquerda ficaram cinzentas de uma vez. O Moreth ergueu a Maça do Rio Limpo, e a Lança do Sol entrou no peito do bicho em cheio, com cheiro de pena queimada. O Eiagrir cravou a dele num pé, depois na coxa.
+
+Então a ave gritou, e o grito foi de fúria. Virou-se inteira para a Eliane. Três golpes, um depois do outro, de bico e de garra. No terceiro a Eliane recuou contra a parede, a lança atravessada no peito para segurar o próximo, e o Gonde não estava ali para tomar o golpe por ela.
+
+O rei soltou a Chuva de Brasas sobre a asa boa. O Moreth soltou a dele por cima. A ave tentou levantar, e o Moreth a acertou na cabeça com a maça, de baixo para cima, com o peso do corpo inteiro. Ela caiu de lado e não se mexeu mais.
+
+A Eliane estava sentada no chão, com a mão no flanco. "Não é nada", disse, e não conseguiu levantar.
+
+No fundo do coração, sobre um atril de pedra, havia um livro de capa escura, manchada. Atrás dele, um esquife de pedra, fechado, sem nome nenhum gravado.
+
+- **Parada:** tarde do 507, o coração do túmulo. O guardião morto. O livro de sangue no atril. O esquife sem nome. A Eliane ferida.

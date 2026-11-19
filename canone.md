@@ -401,3 +401,5 @@ depois vira linha nova aqui.
 - (507) Na sala 6 do túmulo, o rei mandou que os herdeiros da Primeira Liga largassem as armas ("prendam ou matem, daqui eles não saem"), com o Eiagrir atravessado na galeria de Rilge. O Nutoccone e as duas dúzias se renderam sem luta e foram presos; o ouro deles foi tomado. O julgamento vai ao conselho.
 
 - (507) O Nutoccone não soube dizer quem manda hoje no Conselho da Liga, só os três conselheiros que a casa já conhecia. Na sala 1, as aias mortas não deixaram os presos sair: quem não entrou pela porta das rainhas não sai por ela.
+
+- (507) As aias não deixaram os presos sair pela porta; o rei os mandou correr, e elas só olharam: os 24 passaram e ficaram presos à porta, contados e não tomados pelos homens do Celocus. No coração do túmulo, a casa matou o ZRAOS, o guardião (Épico, ave do tamanho de uma casa), em três rodadas; a Eliane ficou ferida, de cama por dez dias. O despojo: o núcleo Épico de Sorte, a garra (yior), o couro (miiel) e os olhos (nior). No coração há o livro de sangue num atril e um esquife de pedra sem nome.

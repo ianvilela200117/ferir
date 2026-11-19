@@ -1,3 +1,12 @@
 {
- "feridos": []
+ "feridos": [
+  {
+   "nome": "Eliane",
+   "grau": "SÉRIO",
+   "efeito": "de cama; não luta",
+   "desde": 507,
+   "ate": 517,
+   "causa": "Zraos"
+  }
+ ]
 }

@@ -330,20 +330,20 @@
   },
   "Ferir": {
    "nome": "Ferir",
-   "nivel": 1,
+   "nivel": 50,
    "at": 34,
    "dado": "1d10",
    "mult": 3,
    "b": 10,
    "df": 45,
    "rd": 10,
-   "pv": 189,
+   "pv": 269,
    "vigor": 9,
    "heroi": true,
    "imune_empurrao": true,
    "nivel_ref": 50,
    "essencia": "Vento",
-   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta · 501: NÍVEL 50: os feitiços do 4º ao 6º acordam (a Chuva de Brasas volta à ficha) · 501 (ERRO ACHADO): desde o 478 a Mão de Rei faz o Foco de Osso (Primordial, forjado pelo rei) render INTEIRO: o foco é ×20 (área ×10), não ×10; as lutas do 483, 484 e 488 rodaram com ×10 (contra a casa; ficam como estão) · 507 (G9): ataque e defesa conferidos no 501 (a Mão de Rei: as peças dele rendem inteiras); o nível de referência marcado 50; o PV vem da ficha viva.",
+   "nota": "426 (G9): fichas conferidas peça por peça; as magias em lista (luta.py lê \"magias\"); a Lança do Sol fica de fora (a Chuva de Brasas faz mais contra bicho fraco a fogo) · 436 (G9, ERRO DO MESTRE): a ficha não tinha o Gibão de Orloxa (o 1x por dia desfaz um golpe); corrigida, e o luta.py agora faz o desfaz sozinho · 478: HERDEIRO DO REI-FERREIRO: o nível volta a 1 (PV 171, Mana 48, 1 ação); as peças que ele forjou rendem inteiras (Mão de Rei); os feitiços dele do 4º ao 6º dormem até o 50 (o Toque do Ceifador é do Foco de Osso: fica). CONFERIR no G9 da próxima luta · 501: NÍVEL 50: os feitiços do 4º ao 6º acordam (a Chuva de Brasas volta à ficha) · 501 (ERRO ACHADO): desde o 478 a Mão de Rei faz o Foco de Osso (Primordial, forjado pelo rei) render INTEIRO: o foco é ×20 (área ×10), não ×10; as lutas do 483, 484 e 488 rodaram com ×10 (contra a casa; ficam como estão) · 507 (G9): ataque e defesa conferidos no 501 (a Mão de Rei: as peças dele rendem inteiras); o nível de referência marcado 50; o PV vem da ficha viva. · 507 (G9, erro achado): o PV de combate estava 189 (o do reset, nível 10) e o da ficha é 269: acertado; a G39 agora o segue sozinha",
    "magias": [
     {
      "nome": "TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana)",

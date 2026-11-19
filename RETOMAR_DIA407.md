@@ -1,4 +1,4 @@
-# RETOMAR — meio-dia do Dia 507, O TÚMULO DAS RAINHAS, a sala 1: as aias não deixam os presos sair (MOTOR 9b: G1 a G41)
+# RETOMAR — tarde do Dia 507, O TÚMULO DAS RAINHAS, o coração: o guardião morto; o livro de sangue e o esquife sem nome (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Tarde do 507, O CORAÇÃO do Túmulo das Rainhas. O ZRAOS MORTO (sims/coracao_507_saida.txt: 3 rodadas; ninguém morto). Dentro: o rei 240/269 (Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 125.130), o Moreth 572/610, o Eiagrir 432/432, a ELIANE 55/272 FERIDA (SÉRIO: de cama até o 517; feridos.py). No coração: o LIVRO DE SANGUE num atril de pedra e, atrás, um ESQUIFE DE PEDRA FECHADO, SEM NOME. (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no esquife. O DESPOJO, a contar na saída (os 40% do Celocus em ouro, material e peças; o papel fora): o NÚCLEO ÉPICO DE SORTE (núcleo para Mítico), yior 10 kg (garra), miiel 15 kg (couro), nior 20 kg (olhos), e o da sala 2: 300 em moeda antiga, 2 kg de syir, o punhal de Iomiltia. À PORTA: os 24 HERDEIROS PRESOS (passaram pelas aias: FG07 [5]), com o Gonde e os guardas; os 20 do Celocus contaram e não tomaram (CP07 [15]). O G9 achou e acertou a ficha de combate do rei (PV e nível velhos); a G39 agora leva o PV do rei à ficha no fim da luta. Cofre 54.147.
+
+Antes (507, sala 1, as aias):
 Meio-dia do 507, a SALA 1 do Túmulo das Rainhas, diante da porta de fora. A casa inteira (o rei, o Moreth, o Eiagrir, a Eliane, o Gonde, 6 guardas, a Matriz) com os 24 HERDEIROS DA PRIMEIRA LIGA amarrados em fila (o Nutoccone, 90). AI07 [1]: as cinco AIAS mortas (Raras) param a fila: 'QUEM NÃO ENTROU PELA PORTA NÃO SAI POR ELA' (os presos vieram pela galeria de Rilge). O Nutoccone NÃO SABE quem manda hoje no Conselho da Liga (G10 falha 29 vs 30). Dados já rolados que esperam a condição: CP07 [15] (se os presos saírem pela porta: os 20 do Celocus contam e não tomam) · CK6b [3] (ao entrar de novo na 6: nada vem). A porta do coração fechada; o ZRAOS dentro (no coração, a ficha monta de novo com covil, G9). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 124.010. Os 20 do Celocus à porta de fora; 2 guardas com a carroça. Cofre 54.147.
 
 Antes (507, sala 6, os presos):
@@ -440,8 +443,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, sala 6 → sala 1): 1b e depois a: os presos à porta primeiro, depois o coração · 2 'vamos entrar depois de devolver os presos' · 3a a pergunta ao Nutoccone (o jogador escolheu: o Conselho da Liga)
 - G10 FALHA (29 vs 30) · AI07 [1] as aias param a fila · CP07 [15] e CK6b [3], à espera da condição.
 
+## RESPONDIDO (507, sala 1 → o coração): 1c falar com as aias; se recusassem, os presos correm ('se sobreviverem, beleza; se não, ok; não deixo inimigos soltos')
+- AS07 FALHA (28 vs 33) · FG07 [5] passam todos · CP07 [15] · CK6b [3] · a G9 do coração (o covil 4d6 CD 21; a camuflagem não vale) · a LUTA: o Zraos morto em 3 rodadas · a Eliane ferida (SÉRIO, até o 517) · +1.120 XP · o despojo (os nomes trocados: yior, miiel, nior).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. AS AIAS (os presos não saem pela porta das rainhas): a) levá-los de volta e tirá-los pela GALERIA DE RILGE, por onde entraram (o Gonde e 4 guardas com eles num caminho que a casa não conhece; os mortos de Rilge; os herdeiros já pagaram o sacrifício) · b) deixá-los amarrados na sala 1 com o Gonde e 4 guardas, e abrir o coração · c) falar com as aias: o que pedem para deixá-los sair (um teste com os mortos) · d) levá-los de volta à sala 6 e abrir o coração com eles lá · e) outra.
+1. O LIVRO DE SANGUE (no atril; a vergonha dos fundadores da Liga, 'quem a tiver manda no Conselho'): a) tomá-lo e sair · b) lê-lo aqui primeiro (o que ele diz vai pelo saber do rei, G10) · c) outra.
+2. O ESQUIFE DE PEDRA SEM NOME (atrás do atril; fechado): a) deixar fechado · b) abrir · c) outra.
+3. A ELIANE (55/272; o ferimento SÉRIO só o tempo e o físico curam): a) a CURA MAIOR já (repõe o PV; 20 de Mana com vela ou vidro, 40 sem; o ferimento segue) · b) esperar.
+4. A CONTA NA SAÍDA (os 40% do Celocus em ouro, material e peças; o papel fora): a) em VALOR: o rei escolhe o que fica (o núcleo e o punhal com a casa; os 40% pesados no resto) · b) 40% DE CADA COISA (o núcleo não se parte: vai a quem?) · c) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

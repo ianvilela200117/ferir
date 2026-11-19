@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 50,
- "xp": 124010,
+ "xp": 125130,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -19,7 +19,7 @@
   "Afinidade": 104
  },
  "pv": [
-  269,
+  240,
   269
  ],
  "mana": [
@@ -811,7 +811,6 @@
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 5",
   "Dia 477: SOBE ao 6",
   "Dia 477: SOBE ao 7",
   "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
@@ -870,7 +869,8 @@
   "Dia 500: +1000 501: FEITO GRANDE: a revolta de Levis-baixa encerrada pela palavra (o acordo com o Uxraxion, sem sangue)",
   "Dia 500: SOBE ao 50",
   "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)",
-  "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)"
+  "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)",
+  "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

@@ -3960,6 +3960,30 @@
    "essencia": "Sorte",
    "origem": "metal (veio profundo)",
    "nota": "a sala 2 do Túmulo das Rainhas, em Lumade (TS07 [20]; 2 kg, MT07b [2]); dureza 8, maleabilidade 1, condutividade 3; infusão até o 3º; na forja: Matéria +1, Processo −1; arma: o 19 natural também é crítico; armadura: +2 num teste por dia, à escolha; ferramenta: +2 no Acaso; defeito: a sorte cobra +1 de Revés por semana; 150-250/kg · o nome do gerador (Veyula) bate no cânone (o enviado da Almision): trocado por SYIR · entra na contagem da saída (40% do Celocus)"
+  },
+  {
+   "nome": "yior",
+   "dia": 507,
+   "cat": "Épico",
+   "essencia": "Sorte + Sangue",
+   "origem": "monstro (garra)",
+   "nota": "a garra do ZRAOS (507, o coração do Túmulo das Rainhas); arma: o 19 natural também é crítico; 10 kg; o nome do gerador (ulnar) é o de um NPC: trocado"
+  },
+  {
+   "nome": "miiel",
+   "dia": 507,
+   "cat": "Épico",
+   "essencia": "Sorte",
+   "origem": "monstro (couro)",
+   "nota": "o couro do ZRAOS (507); armadura: +3 num teste por dia, à escolha; 15 kg; o nome do gerador (thumir) batia em Thuron e thura: trocado"
+  },
+  {
+   "nome": "nior",
+   "dia": 507,
+   "cat": "Épico",
+   "essencia": "Sorte + Água",
+   "origem": "monstro (olho)",
+   "nota": "os olhos do ZRAOS (507); armadura: +3 num teste por dia, à escolha; 20 kg; o nome do gerador (eryine) batia em Erygal e eryra: trocado"
   }
  ],
  "guildas": [
