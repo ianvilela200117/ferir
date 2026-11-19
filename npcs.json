@@ -3980,6 +3980,14 @@
    "desejo",
    "ambicao",
    "medo"
+  ],
+  "opiniao": [
+   {
+    "v": 5,
+    "motivo": "507: no túmulo, o rei parou a frente um passo antes do fosso das rainhas; o Moreth deixou de chamá-lo de senhor",
+    "dia": 507,
+    "ate": 567
+   }
   ]
  },
  "Draek": {

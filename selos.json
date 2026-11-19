@@ -1,14 +1,5 @@
 {
  "ordem": [
-  "FE35",
-  "QF35",
-  "434-laco-quem",
-  "434-laco",
-  "434-chamado",
-  "434-vinculos",
-  "EN34",
-  "VLA34",
-  "VBR34",
   "VKR34",
   "KRc34",
   "ED34",
@@ -399,518 +390,18 @@
   "EL06",
   "CC07",
   "HB07",
-  "HB07b"
+  "HB07b",
+  "TS07",
+  "TS07b",
+  "AR07",
+  "AR07c",
+  "AR07d",
+  "PA07a",
+  "PA07b",
+  "PA07c",
+  "MT07b"
  ],
  "selos": {
-  "FE35": {
-   "id": "FE35",
-   "dia": 433,
-   "hora": "12:47:57",
-   "titulo": "A FRAQUEZA ESCONDIDA DA ELAEVA QUE A CARTA DO CEDUION OFERECE À LELIEL (além do fogo; LC35 [3])",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o SAL: seca a raiz dela (dano dobrado e corta a regeneração)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a FOME (a Essência que devora): dano dobrado"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "um SOM: o sino de bronze velho a faz parar uma rodada"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o SEU NOME dito em voz alta, na língua antiga, a faz recuar"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a LUA NOVA: na noite sem lua ela dorme onde estiver"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o MACHADO: lâmina de ferro frio batida a frio corta a casca dela como carne"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o SAL: seca a raiz dela (dano dobrado e corta a regeneração)",
-     "txt": "[1] → o SAL: seca a raiz dela (dano dobrado e corta a regeneração)"
-    }
-   ],
-   "hora_rolado": "12:47:57"
-  },
-  "QF35": {
-   "id": "QF35",
-   "dia": 433,
-   "hora": "12:47:57",
-   "titulo": "A PISTA NOVA DA CARTA (o EXTRAORDINÁRIO do rei): QUEM FERIU A ELAEVA NO 428, segundo o Colégio",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "gente da LELIEL (o norte tentou dobrá-la e quase morreu)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os OLHOS DA MAMILTIA, a caminho de Zisrir"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o próprio COLÉGIO DE TELOSUS (o Ceduion quis o núcleo)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "gente da LURENTETTA (o Delta)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "os OLHOS DA MAMILTIA, a caminho de Zisrir",
-     "txt": "[4] → os OLHOS DA MAMILTIA, a caminho de Zisrir"
-    }
-   ],
-   "hora_rolado": "12:47:57"
-  },
-  "434-laco-quem": {
-   "id": "434-laco-quem",
-   "dia": 434,
-   "hora": "13:54:35",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a AELIAE",
-     "txt": "[6] → a AELIAE"
-    }
-   ],
-   "hora_rolado": "13:54:35"
-  },
-  "434-laco": {
-   "id": "434-laco",
-   "dia": 434,
-   "hora": "13:54:35",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "MOMENTO",
-     "txt": "[4] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "13:54:35"
-  },
-  "434-chamado": {
-   "id": "434-chamado",
-   "dia": 434,
-   "hora": "13:54:35",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 22,
-     "res": "chegam 2",
-     "txt": "[19] +3 = 22 → chegam 2"
-    }
-   ],
-   "hora_rolado": "13:54:35"
-  },
-  "434-vinculos": {
-   "id": "434-vinculos",
-   "dia": 434,
-   "hora": "13:54:35",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "Krernos–Graur",
-     "txt": "#1 [4] → Krernos–Graur"
-    },
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Moreth–Eiagrir",
-     "txt": "#2 [3] → Moreth–Eiagrir"
-    }
-   ],
-   "hora_rolado": "13:54:35"
-  },
-  "EN34": {
-   "id": "EN34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "O ENCONTRO NA ESTRADA DO RIO (434, a meio dia de Levis, com a barca da Liga tomada a reboque e os 32 presos)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "gente de LEVIS fugindo da cidade (a briga, a doença)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a barca dos DO CROQUE alcança a do rei (o recado do Teraseth)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "uma patrulha da BRARA vem ver quem traz tanta gente presa"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "gente de LEVIS fugindo da cidade (a briga, a doença)",
-     "txt": "[2] → gente de LEVIS fugindo da cidade (a briga, a doença)"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "VLA34": {
-   "id": "VLA34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "A VIGIA DO LAENNOR (G11; o posto dos salineiros; ele APARECE DE DIA nas salinas velhas, à vista de muitos)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viram a tempo: pânico nas salinas, um salineiro some"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: a gente sai da beira; sem perda"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO, e um RUMOR EXATO"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "pego NO LUGAR, parado: a casa sabe onde ele gira e quando"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      11
-     ],
-     "total": 13,
-     "res": "AVISO A TEMPO: a gente sai da beira; sem perda",
-     "txt": "[11] +2 = 13 → AVISO A TEMPO: a gente sai da beira; sem perda"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
-  "VBR34": {
-   "id": "VBR34",
-   "dia": 434,
-   "hora": "13:56:10",
-   "titulo": "A VIGIA DO BRUUR (G11; o posto da Guilda e dos do Croque; ele APARECE DE DIA em Marasar, à vista de muitos, no meio da revolta)",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viram a tempo: pânico; gente pisoteada na fuga"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: a gente se abriga; sem perda"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO, e um RUMOR EXATO"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "pego NO LUGAR, de dia, parado: a casa sabe onde ele dorme"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      12
-     ],
-     "total": 14,
-     "res": "AVISO A TEMPO: a gente se abriga; sem perda",
-     "txt": "[12] +2 = 14 → AVISO A TEMPO: a gente se abriga; sem perda"
-    }
-   ],
-   "hora_rolado": "13:56:10"
-  },
   "VKR34": {
    "id": "VKR34",
    "dia": 434,
@@ -21190,6 +20681,615 @@
     }
    ],
    "hora_rolado": "02:09:46"
+  },
+  "TS07": {
+   "id": "TS07",
+   "dia": 507,
+   "hora": "03:22:06",
+   "titulo": "O TESOURO DA SALA 2 DO TÚMULO DAS RAINHAS (G17 pelo degrau do LUGAR, Épico = degrau 3; sem bicho, o 1-6 vira MOEDA, G14)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "MOEDA: 3 × 1d6 × 100 (TS07b)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 16,
+     "res": "MATERIAL (gerador.py material Raro, um degrau abaixo)"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 19,
+     "res": "UMA PEÇA ANTIGA (Rara, um degrau abaixo; de uma rainha; tem história)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "as três coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "as três coisas",
+     "txt": "[20] → as três coisas"
+    }
+   ],
+   "hora_rolado": "03:22:06"
+  },
+  "TS07b": {
+   "id": "TS07b",
+   "dia": 507,
+   "hora": "03:22:06",
+   "titulo": "A MOEDA DA SALA 2 (vale só se o TS07 der MOEDA ou 20): 3 × 1d6 × 100",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "300"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "600"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "900"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "1.200"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "1.500"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "1.800"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "300",
+     "txt": "[1] → 300"
+    }
+   ],
+   "hora_rolado": "03:22:06"
+  },
+  "AR07": {
+   "id": "AR07",
+   "dia": 507,
+   "hora": "03:22:06",
+   "titulo": "O TIPO DA LAJE DAS RAINHAS NA SALA 3 (G34, Livro Nove 9.1, d12, ao entrar)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "fosso com estacas (Caído; sair leva 1 rodada)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "dardos na parede (Envenenado)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "laje que desce (a sala se fecha: Força CD 29 ou 1 hora)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "gás de sono (dorme 1 hora, Vigor; os perigos da sala seguinte vêm)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "fogo de runa (Queimando; apaga com Desfazer)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "lâmina de pêndulo (Sangrando)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "teto que cai (Preso até cavar, 10 minutos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "água que sobe (3 rodadas para sair)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "espelho que prende (o primeiro que olha: Enfeitiçado 1 cena, Vontade)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "chão falso para outra sala (cai sozinho na sala seguinte)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "alarme (sem dano: +2 em todos os perigos do lugar até sair)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "maldição do dono (Amaldiçoado até sair, ou Purificar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "fosso com estacas (Caído; sair leva 1 rodada)",
+     "txt": "[1] → fosso com estacas (Caído; sair leva 1 rodada)"
+    }
+   ],
+   "hora_rolado": "03:22:06"
+  },
+  "AR07c": {
+   "id": "AR07c",
+   "dia": 507,
+   "hora": "03:22:06",
+   "titulo": "SE O NOTAR FALHAR, QUEM PISA NA LAJE (a ordem da Eliane: ela e o Moreth à frente; na FALHA FEIA, os dois)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a Eliane"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o Moreth"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a Eliane",
+     "txt": "[1] → a Eliane"
+    }
+   ],
+   "hora_rolado": "03:22:06"
+  },
+  "AR07d": {
+   "id": "AR07d",
+   "dia": 507,
+   "hora": "03:22:06",
+   "titulo": "O DANO DA LAJE (vale só se o notar falhar): 4d6, o dano do degrau Épico",
+   "dado": [
+    4,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 24,
+     "res": "tantos PV"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1,
+      6,
+      2,
+      1
+     ],
+     "total": 10,
+     "res": "tantos PV",
+     "txt": "[1, 6, 2, 1] +0 = 10 → tantos PV"
+    }
+   ],
+   "hora_rolado": "03:22:07"
+  },
+  "PA07a": {
+   "id": "PA07a",
+   "dia": 507,
+   "hora": "03:23:11",
+   "titulo": "A PEÇA ANTIGA DA SALA 2 (Rara: 1 efeito, Motor X.2; de uma rainha): O QUE É (o lugar do efeito vem dela)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "um diadema baixo de ferro (armadura)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um anel (ferramenta)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "uma fíbula de manto (armadura)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "um punhal de cerimônia (arma)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um espelho de mão, de metal polido (ferramenta)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um cinto de elos (armadura)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um punhal de cerimônia (arma)",
+     "txt": "[4] → um punhal de cerimônia (arma)"
+    }
+   ],
+   "hora_rolado": "03:23:11"
+  },
+  "PA07b": {
+   "id": "PA07b",
+   "dia": 507,
+   "hora": "03:23:11",
+   "titulo": "A ESSÊNCIA DA PEÇA ANTIGA (as 24 do gerador, na ordem; o efeito é o da Essência no lugar da peça, grau Raro: gerador.efeito)",
+   "dado": [
+    1,
+    24,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Fogo"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Gelo"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Vento"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Terra"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Água"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Raio"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "Vida"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "Podridão"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "Sangue"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "Sombra"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "Luz"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "Som"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 13,
+     "res": "Silêncio"
+    },
+    {
+     "tipo": "num",
+     "a": 14,
+     "b": 14,
+     "res": "Mente"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 15,
+     "res": "Tempo"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 16,
+     "res": "Peso"
+    },
+    {
+     "tipo": "num",
+     "a": 17,
+     "b": 17,
+     "res": "Sal"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 18,
+     "res": "Força"
+    },
+    {
+     "tipo": "num",
+     "a": 19,
+     "b": 19,
+     "res": "Veneno"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "Sorte"
+    },
+    {
+     "tipo": "num",
+     "a": 21,
+     "b": 21,
+     "res": "Elo"
+    },
+    {
+     "tipo": "num",
+     "a": 22,
+     "b": 22,
+     "res": "Metal"
+    },
+    {
+     "tipo": "num",
+     "a": 23,
+     "b": 23,
+     "res": "Fome"
+    },
+    {
+     "tipo": "num",
+     "a": 24,
+     "b": 24,
+     "res": "Espinho"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      14
+     ],
+     "total": 14,
+     "res": "Mente",
+     "txt": "[14] → Mente"
+    }
+   ],
+   "hora_rolado": "03:23:11"
+  },
+  "PA07c": {
+   "id": "PA07c",
+   "dia": 507,
+   "hora": "03:23:11",
+   "titulo": "DE QUEM ERA A PEÇA ANTIGA (os cadernos: IOMILTIA, a primeira; a última, 'a que escreveu com sangue')",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "de IOMILTIA, a primeira rainha"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "de uma rainha sem nome nos cadernos"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "da ÚLTIMA, a que escreveu com sangue"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "de IOMILTIA, a primeira rainha",
+     "txt": "[1] → de IOMILTIA, a primeira rainha"
+    }
+   ],
+   "hora_rolado": "03:23:11"
+  },
+  "MT07b": {
+   "id": "MT07b",
+   "dia": 507,
+   "hora": "03:23:57",
+   "titulo": "QUANTOS KG DE SYIR NA SALA 2 (1d6 kg; declarado no MT07)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantos kg"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "tantos kg",
+     "txt": "[2] → tantos kg"
+    }
+   ],
+   "hora_rolado": "03:23:57"
   }
  }
 }

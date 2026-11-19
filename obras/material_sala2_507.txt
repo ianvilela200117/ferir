@@ -1,0 +1,15 @@
+nome: Veyula
+categoria: Raro
+origem: metal (veio profundo)
+essência: Sorte
+oposta: Tempo
+propriedades: dureza 8 · maleabilidade 1 · condutividade mágica 3
+na forja: Matéria +1 · Processo -1 · aceita infusão até o 3º círculo
+efeitos:
+  na arma: o 19 natural também é crítico
+  na armadura: +2 num teste por dia, à escolha
+  na ferramenta: +2 no Acaso
+defeito: a sorte cobra: +1 de Revés por semana
+preço: 150-250/kg
+ocorrência: reserva grande (rolar ao achar o veio ou o ninho)
+————————————————————————————————————————

@@ -1,0 +1,4 @@
+DECLARADO (G10) PERGUNTA DO JOGADOR, pelo saber de Ferir: "o nome de uma rainha dos Reis-Ferreiros" · domínio mundo · obscura (CD 25, o aberto soma +10) · bônus 19 (Int ÷10 + ERUDITO (Saber MESTRE +6) + apoio 2; nível 50) · falha feia: crença errada (verdade no envelope) · falha: não sabe · sucesso: o essencial · ganho: e um detalhe · extraordinário: tudo e uma pista
+CD 25 da escala velha → 35 nos dois dados
+teste: [[13], [6]] + 19 + nível 5 = 43 vs 35 (margem +8)
+grau: sucesso

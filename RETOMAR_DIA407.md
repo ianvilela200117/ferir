@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 507, LUMADE, O TÚMULO DAS RAINHAS, a sala 1: as aias pedem o nome de uma rainha (MOTOR 9b: G1 a G41)
+# RETOMAR — manhã do Dia 507, LUMADE, O TÚMULO DAS RAINHAS, a sala 3: a porta reta ou o corredor (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 507, O TÚMULO DAS RAINHAS, a SALA 3 (salas 1, 2 e 3 vistas). O rei nível 50, PV 269/269, Mana 107/117, Erudito 0/1 (volta no 511), Visão 2/2, Fortuna 3/3, Revés 4/6. Dentro: a Eliane e o Moreth à frente, o Gonde com a Matriz ao lado do rei, o Eiagrir atrás com 2; 6 guardas; 2 na porta de fora com a carroça, diante dos 20 do Celocus. O MORETH voltou a chamar o rei pelo nome (opinião +5, 60 dias); com o Eiagrir segue estremecido. SALA 1: o rei disse IOMILTIA (SB07 sucesso); as aias abriram. SALA 2 (TS07 [20]): 300 em moeda antiga · 2 kg de SYIR (Raro, Sorte; nome novo, trocado de Veyula) · o PUNHAL DE CERIMÔNIA de Iomiltia (Raro, Mente: −2 na próxima ação de quem ele fere); tudo vai à CONTAGEM DA SAÍDA (40% do Celocus em ouro, material e peças; papel fora). SALA 3: o fosso de estacas (AR07 [1]) achado antes de disparar (AR07n extraordinário). (OCULTO) o resto do mapa: 4 vazia (um rastro) → 5 armadilha (a outra laje, CD 21, +5) → 6 · 6 O QUE HABITA (encontro; pode ser conversa) → 7 · 7 O CORAÇÃO: o livro de sangue, com o guardião Épico. Da 4ª sala em diante, G34: d6 ao entrar; com 1, um perigo de sala não vista vem até a casa. A verdade dos cadernos (oculta): a última rainha, 'a que escreveu com sangue', escreveu o livro e dorme no coração.
+
+Antes (507, aurora):
 Manhã do 507, O TÚMULO DAS RAINHAS (Lumade, a encosta acima da cidade), a SALA 1 (o tick do 507 rodado: tick_507.txt; o semanal no 511; a auditoria no 508). O rei nível 50, PV 269/269, **Mana 107/117** (a Voz no Vento), Erudito 0/1 (volta no 511), Visão 2/2, Fortuna 3/3, Revés 4/6. Dentro, pela ordem da Eliane (EL06 [4]): ela e o Moreth à frente, o Gonde com a MATRIZ ao lado do rei, o Eiagrir atrás com 2 guardas; 6 guardas dentro; 2 na porta com a carroça, diante dos 20 lanças do Celocus. O Moreth e o Eiagrir seguem estremecidos. A Tigra e o mensageiro ferido ficaram em Lumade, no pátio do celeiro. A CONDIÇÃO ACEITA (CC07 12): papel e sangue FORA dos 40%; ouro, material e peças contados na saída pelos homens do Celocus. A Voz no Vento (VV06 [19]): a caravana perdida e a ordem das 20 lanças. A SALA 1 (HB07 [1]): 5 AIAS MORTAS (Raras, HB07b [3]); deixam passar a Matriz; a quem vem atrás pedem o nome de uma rainha ('De quem é a casa? Diga o nome dela, e passa'). As portas da sala 1 levam à 2 e à 4. (OCULTO) o mapa inteiro em masmorras/túmulo_das_rainhas.json e no envelope (sala 2 tesouro · 3 armadilha · 4 vazia · 5 armadilha · 6 o que habita · 7 o coração, o guardião Épico). O ERUDITO: a laje na 3ª e na 5ª (+5 no notar).
 
 Antes (506, noite):
@@ -408,10 +411,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - 2b: CC07 [16]−4 = 12 → aceita como está: 'papel não se pesa'.
 - 1a: a porta abriu à Matriz na aurora do 507; a sala 1: as aias mortas (HB07 [1], 5).
 
+## RESPONDIDO (507, manhã): 1a · 2a · 3a
+- 1a: SB07 43 vs 35 → SUCESSO: IOMILTIA; as aias abrem.
+- 2a: a sala 2 (o tesouro: as três coisas) e a sala 3 (o fosso de estacas achado; o Moreth larga o 'senhor').
+- 3a: a porta de fora fica com 2 guardas e a carroça.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. AS AIAS ('De quem é a casa? Diga o nome dela, e passa'): a) o rei tenta lembrar o nome de uma rainha (G10: o saber dele vai ao dado; nome errado é perigoso) · b) FALAR COM MORTO numa aia (Osso 3º: 15 de Mana e 3d6 de PV; três perguntas; ela tem de responder) · c) só o Gonde passa com a Matriz (elas não tocam quem a traz) e olha a sala seguinte; os outros esperam · d) abrir caminho à força (5 aias Raras; a luta pela G9) · e) outra.
-2. O CAMINHO, depois das aias (a planta): a) a porta da esquerda, à 2ª sala (e dela à 3ª, uma laje das rainhas) · b) a da direita, direto à 4ª (e dela à 5ª, a outra laje).
-3. A PORTA DE FORA (2 dos nossos e a carroça diante das 20 lanças do Celocus): a) deixar como está · b) mais dois guardas voltam para a porta (ficam 4 dentro).
+1. DA SALA 3 (a planta): a) a porta reta, à 4ª sala (e depois a 5ª, a outra laje das rainhas, e a 6ª) · b) o corredor à esquerda, direto à 6ª (a última antes do coração; a 4ª e a 5ª ficam para trás). Da 4ª sala em diante, a cada sala um d6 do relógio do lugar: com 1, um perigo de uma sala ainda não vista vem até a casa.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

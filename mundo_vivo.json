@@ -3935,6 +3935,14 @@
    "essencia": "Espinho",
    "origem": "essência (cinza de incêndio antigo)",
    "nota": "um mascate na estrada de Lumade (EN04 [6] → novidade [1]); dureza 7, maleabilidade 5, condutividade 2; infusão até o 2º; arma: o golpe prende como raiz (Força CD 12); armadura: quem agarra o portador sangra 2; ferramenta: cresce (conserta 1 por dia); defeito: floresce na primavera e pesa; 40-60/kg; reserva pequena · o nome do gerador (Ulvil) já é do Livro: trocado por DVONUR"
+  },
+  {
+   "nome": "syir",
+   "dia": 507,
+   "cat": "Raro",
+   "essencia": "Sorte",
+   "origem": "metal (veio profundo)",
+   "nota": "a sala 2 do Túmulo das Rainhas, em Lumade (TS07 [20]; 2 kg, MT07b [2]); dureza 8, maleabilidade 1, condutividade 3; infusão até o 3º; na forja: Matéria +1, Processo −1; arma: o 19 natural também é crítico; armadura: +2 num teste por dia, à escolha; ferramenta: +2 no Acaso; defeito: a sorte cobra +1 de Revés por semana; 150-250/kg · o nome do gerador (Veyula) bate no cânone (o enviado da Almision): trocado por SYIR · entra na contagem da saída (40% do Celocus)"
   }
  ],
  "guildas": [

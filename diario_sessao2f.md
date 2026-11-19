@@ -2130,3 +2130,30 @@ No fundo da sala havia duas portas, à esquerda e à direita, como a planta most
 O pó caía devagar na luz da tocha. A velha esperava, com a vassoura erguida.
 
 - **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 1. As aias pedem o nome de uma rainha.
+
+## Manhã do 507 — as três primeiras salas
+
+### O nome
+O rei abriu o caderno da Gilaccetta na luz da tocha. Na margem da planta, em letra miúda, havia uma linha que ele tinha lido no inverno e esquecido: "Iomiltia, a primeira, a que pôs a pedra."
+
+Disse o nome em voz alta.
+
+A velha baixou a vassoura. As cinco voltaram a varrer, como se ninguém tivesse entrado. O pó continuou caindo.
+
+### A sala da oferenda
+A segunda sala era baixa, com uma mesa de pedra no meio. Em cima dela havia um montinho de moedas com o rosto de uma mulher coroada que ninguém conhecia, uma barra de metal cinzento que puxava para o amarelo quando se virava, e um punhal de cerimônia com o cabo enrolado num fio desbotado. Na lâmina, o mesmo nome: IOMILTIA.
+
+A Eliane o pegou e o largou depressa, como quem perde o fio do que ia dizer.
+
+O Gonde contou as moedas em voz alta, para a contagem da saída. "Trezentas." Ninguém respondeu.
+
+### A coroa rachada
+Na terceira sala, o rei mandou a frente parar no lugar onde a planta punha a coroa rachada. A Eliane bateu na pedra com o pé da lança. A laje cedeu e caiu para dentro, e lá embaixo apareceu um fosso de estacas de ferro velho, pretas de tempo.
+
+O Moreth estava com o pé no ar em cima dela. Baixou-o devagar, do lado de cá, e olhou para trás. "Bom olho, Ferir."
+
+Lá atrás, o Eiagrir soltou o ar e não disse nada.
+
+Da terceira sala saíam duas passagens: uma porta reta e, à esquerda, um corredor estreito. Do corredor vinha um ar frio que cheirava a cera. Da porta reta não vinha nada, nem som.
+
+- **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 3. A porta reta, para a 4ª sala, ou o corredor, para a 6ª.

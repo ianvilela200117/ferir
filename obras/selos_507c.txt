@@ -1,0 +1,7 @@
+DECLARADO (PA07a) [Dia 507, 03:23] A PEÇA ANTIGA DA SALA 2 (Rara: 1 efeito, Motor X.2; de uma rainha): O QUE É (o lugar do efeito vem dela), d6: 1 um diadema baixo de ferro (armadura) · 2 um anel (ferramenta) · 3 uma fíbula de manto (armadura) · 4 um punhal de cerimônia (arma) · 5 um espelho de mão, de metal polido (ferramenta) · 6 um cinto de elos (armadura)
+DECLARADO (PA07b) [Dia 507, 03:23] A ESSÊNCIA DA PEÇA ANTIGA (as 24 do gerador, na ordem; o efeito é o da Essência no lugar da peça, grau Raro: gerador.efeito), d24: 1 Fogo · 2 Gelo · 3 Vento · 4 Terra · 5 Água · 6 Raio · 7 Vida · 8 Podridão · 9 Sangue · 10 Sombra · 11 Luz · 12 Som · 13 Silêncio · 14 Mente · 15 Tempo · 16 Peso · 17 Sal · 18 Força · 19 Veneno · 20 Sorte · 21 Elo · 22 Metal · 23 Fome · 24 Espinho
+DECLARADO (PA07c) [Dia 507, 03:23] DE QUEM ERA A PEÇA ANTIGA (os cadernos: IOMILTIA, a primeira; a última, 'a que escreveu com sangue'), d6: 1-3 de IOMILTIA, a primeira rainha · 4-5 de uma rainha sem nome nos cadernos · 6 da ÚLTIMA, a que escreveu com sangue
+— todas declaradas; agora os dados —
+ROLADO (PA07a) [03:23] A PEÇA ANTIGA DA SALA 2 (Rara: 1 efeito, Motor X.2; de uma rainha): O QUE É (o lugar do efeito vem dela): [4] → um punhal de cerimônia (arma)
+ROLADO (PA07b) [03:23] A ESSÊNCIA DA PEÇA ANTIGA (as 24 do gerador, na ordem; o efeito é o da Essência no lugar da peça, grau Raro: gerador.efeito): [14] → Mente
+ROLADO (PA07c) [03:23] DE QUEM ERA A PEÇA ANTIGA (os cadernos: IOMILTIA, a primeira; a última, 'a que escreveu com sangue'): [1] → de IOMILTIA, a primeira rainha

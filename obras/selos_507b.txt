@@ -1,0 +1,11 @@
+DECLARADO (TS07) [Dia 507, 03:22] O TESOURO DA SALA 2 DO TÚMULO DAS RAINHAS (G17 pelo degrau do LUGAR, Épico = degrau 3; sem bicho, o 1-6 vira MOEDA, G14), d20: 1-12 MOEDA: 3 × 1d6 × 100 (TS07b) · 13-16 MATERIAL (gerador.py material Raro, um degrau abaixo) · 17-19 UMA PEÇA ANTIGA (Rara, um degrau abaixo; de uma rainha; tem história) · 20 as três coisas
+DECLARADO (TS07b) [Dia 507, 03:22] A MOEDA DA SALA 2 (vale só se o TS07 der MOEDA ou 20): 3 × 1d6 × 100, d6: 1 300 · 2 600 · 3 900 · 4 1.200 · 5 1.500 · 6 1.800
+DECLARADO (AR07) [Dia 507, 03:22] O TIPO DA LAJE DAS RAINHAS NA SALA 3 (G34, Livro Nove 9.1, d12, ao entrar), d12: 1 fosso com estacas (Caído; sair leva 1 rodada) · 2 dardos na parede (Envenenado) · 3 laje que desce (a sala se fecha: Força CD 29 ou 1 hora) · 4 gás de sono (dorme 1 hora, Vigor; os perigos da sala seguinte vêm) · 5 fogo de runa (Queimando; apaga com Desfazer) · 6 lâmina de pêndulo (Sangrando) · 7 teto que cai (Preso até cavar, 10 minutos) · 8 água que sobe (3 rodadas para sair) · 9 espelho que prende (o primeiro que olha: Enfeitiçado 1 cena, Vontade) · 10 chão falso para outra sala (cai sozinho na sala seguinte) · 11 alarme (sem dano: +2 em todos os perigos do lugar até sair) · 12 maldição do dono (Amaldiçoado até sair, ou Purificar)
+DECLARADO (AR07c) [Dia 507, 03:22] SE O NOTAR FALHAR, QUEM PISA NA LAJE (a ordem da Eliane: ela e o Moreth à frente; na FALHA FEIA, os dois), d6: 1-3 a Eliane · 4-6 o Moreth
+DECLARADO (AR07d) [Dia 507, 03:22] O DANO DA LAJE (vale só se o notar falhar): 4d6, o dano do degrau Épico, 4d6: 4-24 tantos PV
+— todas declaradas; agora os dados —
+ROLADO (TS07) [03:22] O TESOURO DA SALA 2 DO TÚMULO DAS RAINHAS (G17 pelo degrau do LUGAR, Épico = degrau 3; sem bicho, o 1-6 vira MOEDA, G14): [20] → as três coisas
+ROLADO (TS07b) [03:22] A MOEDA DA SALA 2 (vale só se o TS07 der MOEDA ou 20): 3 × 1d6 × 100: [1] → 300
+ROLADO (AR07) [03:22] O TIPO DA LAJE DAS RAINHAS NA SALA 3 (G34, Livro Nove 9.1, d12, ao entrar): [1] → fosso com estacas (Caído; sair leva 1 rodada)
+ROLADO (AR07c) [03:22] SE O NOTAR FALHAR, QUEM PISA NA LAJE (a ordem da Eliane: ela e o Moreth à frente; na FALHA FEIA, os dois): [1] → a Eliane
+ROLADO (AR07d) [03:22] O DANO DA LAJE (vale só se o notar falhar): 4d6, o dano do degrau Épico: [1, 6, 2, 1] +0 = 10 → tantos PV

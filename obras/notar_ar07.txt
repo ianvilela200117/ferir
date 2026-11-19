@@ -1,0 +1,4 @@
+CD 21 da escala velha → 31 nos dois dados
+teste: [[7], [20, 11]] + 16 + nível 5 = 59 vs 31 (margem +28)
+grau: EXTRAORDINÁRIO
+  SURPRESA BOA (d20): um laço se aproxima (momento verdadeiro)
