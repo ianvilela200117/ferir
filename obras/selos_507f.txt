@@ -1,0 +1,7 @@
+DECLARADO (CK4) [Dia 507, 14:15] O RELÓGIO DO LUGAR AO ENTRAR NA SALA 4 (G34; com 1, o perigo da sala não vista mais perto vem até a casa: os HERDEIROS da sala 6, de arma na mão, num corredor estreito; a conversa da 2a acontece ali, com −2 no teste do rei), d6: 1 os herdeiros vêm ao encontro · 2-6 nada vem
+DECLARADO (CK5) [Dia 507, 14:15] O RELÓGIO AO ENTRAR NA SALA 5 (G34; o mesmo: com 1, os herdeiros vêm, se ainda não vieram), d6: 1 os herdeiros vêm ao encontro · 2-6 nada vem
+DECLARADO (CK6) [Dia 507, 14:15] O RELÓGIO AO ENTRAR NA SALA 6 (G34; com 1, o perigo da sala não vista mais perto é o do CORAÇÃO: o ZRAOS sai pela porta por dentro: a luta pela G9, sims/guardiao_rainhas_visao.json, o luta.py de verdade; os herdeiros fogem pela galeria ou morrem, o d6 HZ07 então), d6: 1 o guardião sai · 2-6 nada vem
+— todas declaradas; agora os dados —
+ROLADO (CK4) [14:15] O RELÓGIO DO LUGAR AO ENTRAR NA SALA 4 (G34; com 1, o perigo da sala não vista mais perto vem até a casa: os HERDEIROS da sala 6, de arma na mão, num corredor estreito; a conversa da 2a acontece ali, com −2 no teste do rei): [2] → nada vem
+ROLADO (CK5) [14:15] O RELÓGIO AO ENTRAR NA SALA 5 (G34; o mesmo: com 1, os herdeiros vêm, se ainda não vieram): [3] → nada vem
+ROLADO (CK6) [14:15] O RELÓGIO AO ENTRAR NA SALA 6 (G34; com 1, o perigo da sala não vista mais perto é o do CORAÇÃO: o ZRAOS sai pela porta por dentro: a luta pela G9, sims/guardiao_rainhas_visao.json, o luta.py de verdade; os herdeiros fogem pela galeria ou morrem, o d6 HZ07 então): [3] → nada vem

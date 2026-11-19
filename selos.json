@@ -1,9 +1,5 @@
 {
  "ordem": [
-  "LV31m",
-  "LV31c",
-  "OR35",
-  "BR35",
   "BG35",
   "MB35g",
   "MB35m",
@@ -399,222 +395,13 @@
   "FC07d",
   "FC07e",
   "FC07f",
-  "AR507"
+  "AR507",
+  "CK4",
+  "CK5",
+  "CK6",
+  "OF07"
  ],
  "selos": {
-  "LV31m": {
-   "id": "LV31m",
-   "dia": 434,
-   "hora": "13:57:44",
-   "titulo": "COMO ELE VOLTA MUDADO",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "SUBIU: rico, com o ferro e o grão que a correnteza deu"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "CAIU: pobre ou caçado (os que perderam tudo o culpam)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "CASOU ou se juntou a alguém (rola com quem depois)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "PERDEU ALGUÉM no rio e vem por causa disso"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "CASOU ou se juntou a alguém (rola com quem depois)",
-     "txt": "[3] → CASOU ou se juntou a alguém (rola com quem depois)"
-    }
-   ],
-   "hora_rolado": "13:57:44"
-  },
-  "LV31c": {
-   "id": "LV31c",
-   "dia": 434,
-   "hora": "13:57:59",
-   "titulo": "COM QUEM O ODRUM SE JUNTOU (ele lucrou com o ferro e o grão da frota perdida de Levis)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "com os da MOEDA VELHA, que viram sócios dele no que o rio deu"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "CASOU com a viúva de um barqueiro afogado na frota"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "com o CULTO DO XAATHIS (o fim das dívidas)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "com uma guilda do mundo: as MÃOS DE BREU, que querem o rio"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "com os da MOEDA VELHA, que viram sócios dele no que o rio deu",
-     "txt": "[2] → com os da MOEDA VELHA, que viram sócios dele no que o rio deu"
-    }
-   ],
-   "hora_rolado": "13:57:59"
-  },
-  "OR35": {
-   "id": "OR35",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "A ORDEM EM LEVIS, MANHÃ DO 435 (2c: o pão do confisco nas ruas baixas e os físicos; a guarda do rei com a da Brara; o julgamento justo na praça ontem; a Brara malquista): d20 +3 (o pão) +2 (a justiça em praça) −2 (contra a Brara)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "a briga PIORA: uma carroça de pão é tomada e há feridos"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 14,
-     "res": "ACALMA: as ruas baixas recebem o pão; a Ordem de Levis sobe a 1"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "ACALMA e a cidade aplaude o rei: Ordem a 1 e Levis +10 na reputação"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "e a Brara volta a ser ouvida: Ordem a 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      20
-     ],
-     "total": 23,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[20] +3 = 23 → SURPRESA (gerador novidade) (20 NATURAL)"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
-  "BR35": {
-   "id": "BR35",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "O QUE A BRARA COBRA DO REI CARA A CARA (BR26: a partilha dos bens do Ardenghi foi injusta, meio a meio no 416; ela não rasga as dívidas pequenas do livro do Ardenghi antes de ver o rei; opinião −5; laço 3; TEIMOSA, HONESTA, CORAJOSA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "que o REI rasgue ele mesmo as dívidas em praça (ela não quer o ódio dos credores)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "as duas"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio",
-     "txt": "[1] → a PARTILHA DE NOVO: a fundição velha de Levis-baixa inteira para Levis, não meio a meio"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
   "BG35": {
    "id": "BG35",
    "dia": 435,
@@ -21345,6 +21132,190 @@
     }
    ],
    "hora_rolado": "12:16:02"
+  },
+  "CK4": {
+   "id": "CK4",
+   "dia": 507,
+   "hora": "14:15:35",
+   "titulo": "O RELÓGIO DO LUGAR AO ENTRAR NA SALA 4 (G34; com 1, o perigo da sala não vista mais perto vem até a casa: os HERDEIROS da sala 6, de arma na mão, num corredor estreito; a conversa da 2a acontece ali, com −2 no teste do rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "os herdeiros vêm ao encontro"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "nada vem",
+     "txt": "[2] → nada vem"
+    }
+   ],
+   "hora_rolado": "14:15:35"
+  },
+  "CK5": {
+   "id": "CK5",
+   "dia": 507,
+   "hora": "14:15:35",
+   "titulo": "O RELÓGIO AO ENTRAR NA SALA 5 (G34; o mesmo: com 1, os herdeiros vêm, se ainda não vieram)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "os herdeiros vêm ao encontro"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nada vem",
+     "txt": "[3] → nada vem"
+    }
+   ],
+   "hora_rolado": "14:15:35"
+  },
+  "CK6": {
+   "id": "CK6",
+   "dia": 507,
+   "hora": "14:15:35",
+   "titulo": "O RELÓGIO AO ENTRAR NA SALA 6 (G34; com 1, o perigo da sala não vista mais perto é o do CORAÇÃO: o ZRAOS sai pela porta por dentro: a luta pela G9, sims/guardiao_rainhas_visao.json, o luta.py de verdade; os herdeiros fogem pela galeria ou morrem, o d6 HZ07 então)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o guardião sai"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nada vem",
+     "txt": "[3] → nada vem"
+    }
+   ],
+   "hora_rolado": "14:15:35"
+  },
+  "OF07": {
+   "id": "OF07",
+   "dia": 507,
+   "hora": "14:15:57",
+   "titulo": "A OFERTA DOS HERDEIROS NA FALHA DA BARGANHA (NG07 25 vs 32): o ouro que trouxeram, d6 × 200 (declarado no NG07)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "200"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "400"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "600"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "800"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "1.000"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "1.200"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "600",
+     "txt": "[3] → 600"
+    }
+   ],
+   "hora_rolado": "14:15:57"
   }
  }
 }

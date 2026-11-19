@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 3, depois das duas Visões: o caminho e os herdeiros da Primeira Liga (MOTOR 9b: G1 a G41)
+# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 6: a oferta dos herdeiros da Primeira Liga (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Manhã do 507, a SALA 6 do Túmulo das Rainhas (salas 1 a 6 vistas). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6. A casa inteira, ninguém ferido. O relógio (CK4 [2], CK5 [3], CK6 [3]) não trouxe nada. O teto da sala 5 CALÇADO (AR5n ganho): a volta é segura. SALA 6: os HERDEIROS DA PRIMEIRA LIGA (força 4; duas dúzias; o NUTOCCONE, 90; desconfiados, de arma na mão). A BARGANHA FALHOU (NG07 25 vs 32): oferecem 600 em ouro (OF07 [3]) pelo livro queimado diante deles. A Fortuna não foi gasta pelo Mestre (fica à escolha do jogador). A PORTA DO CORAÇÃO tem o vazio da Matriz; dentro, o ZRAOS (Épico 112, ave do tamanho de uma casa; a ficha e a G9 prontas: sims/guardiao_rainhas_visao.json; a régua: morre 100%) e o livro de sangue. Ao abrir o coração: o guardião (G13/G17: a toca dele, o covil pelo degrau, 4d6 CD 21; a ficha da visão era SEM covil: montar de novo com covil=). (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no coração.
+
+Antes (507, sala 3, depois das Visões):
 Manhã do 507, a SALA 3 do Túmulo das Rainhas, depois das DUAS VISÕES (Mana 67/117; Visão 0/2 hoje; PV 269/269; Erudito 0/1). A casa dentro como antes (a Eliane e o Moreth à frente, o Gonde com a Matriz, o rei, o Eiagrir e 2 atrás; 6 guardas). O QUE AS VISÕES MOSTRARAM: sala 4, a lista das rainhas com o último nome raspado a faca (R407 [2]) · sala 5, a 2ª laje: teto que cai (AR507 [7]) · sala 6: OS HERDEIROS DA PRIMEIRA LIGA (mundo_vivo, facção nova; força 4; chefe NUTOCCONE 90; desconfiados; o preço: o livro queimado diante deles) · o GUARDIÃO, o ZRAOS (Épico 112, ave do tamanho de uma casa, Sorte; sims/guardiao_rainhas_base.json; regenera; fraqueza Tempo; camuflagem), em 1 de 6 vezes sai ao entrar na 6 (o d6 do relógio, G34); a régua: morre 100%, mediana 2 rodadas; Eliane cai 4%, morre <1%. G9 feito para ele: o Moreth df 52 (a pendência do 428; o raio da Couraça à mão), o rei com o nível de referência 50. Da 4ª em diante, o d6 do relógio rola de verdade ao entrar em cada sala.
 
 Antes (507, manhã, sala 3):
@@ -422,9 +425,11 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, sala 3): 'usar a Visão do Tempo para saber por onde vamos, qual a melhor opção' · e, perguntado, 'as duas: comparar'
 - As duas Visões (40 de Mana); a sala 6 (S607 [20] → a facção nova, FC07), o rastro da 4 (R407), a laje da 5 (AR507), o guardião (GD07, o Zraos) e a régua dele.
 
+## RESPONDIDO (507, sala 3 → 6): 1a 'avisar todos do teto' · 2a 'eles têm que me oferecer algo muito bom, afinal a Liga é minha inimiga'
+- CK4, CK5, CK6: nada · AR5n ganho (o teto calçado) · NG07 FALHA → 600 em ouro (OF07).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CAMINHO, depois das visões: a) a porta reta (a lista das rainhas e o nome raspado na 4ª; a laje do teto na 5ª; ~3 em 10 de encontrar os herdeiros num corredor estreito) · b) o corredor, direto à 6ª. Nos dois, ao entrar na 6ª, 1 em 6 de o guardião sair.
-2. OS HERDEIROS DA PRIMEIRA LIGA na 6ª (duas dúzias, o Nutoccone; desconfiados; o preço: o livro queimado diante deles): a) falar e ouvir o que oferecem · b) recusar o preço e mandar que saiam pela galeria de Rilge · c) prendê-los (são da Liga: 'mortos, presos ou servindo'; vai à luta se resistirem) · d) atacar primeiro, antes que falem (luta, G9) · e) outra.
+1. A OFERTA DO NUTOCCONE (600 em ouro pelo livro queimado diante deles): a) recusar e mandar que saiam pela galeria de Rilge (vai ao dado: estão desconfiados) · b) prendê-los ('mortos, presos ou servindo'; duas dúzias, força 4; se resistirem, luta pela G9) · c) aceitar (o livro queima diante deles; os 600 são deles, fora da contagem do Celocus) · d) gastar 1 Fortuna e apertar de novo (a barganha rola outra vez; Revés 4 → 5) · e) abrir o coração com eles ali e decidir depois (o guardião está dentro) · f) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

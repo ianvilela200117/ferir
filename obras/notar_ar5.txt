@@ -1,0 +1,3 @@
+CD 21 da escala velha → 31 nos dois dados
+teste: [[1], [19]] + 21 + nível 5 = 46 vs 31 (margem +15)
+grau: SUCESSO COM GANHO

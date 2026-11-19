@@ -1,0 +1,3 @@
+CD 22 da escala velha → 32 nos dois dados
+teste: [[3], [3]] + 14 + nível 5 = 25 vs 32 (margem -7)
+grau: falha

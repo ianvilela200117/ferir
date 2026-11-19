@@ -2172,3 +2172,23 @@ E às vezes, em poucas das muitas horas, a porta do coração se abria por dentr
 O rei abriu os olhos com a boca seca. A Mana tinha ido quase toda.
 
 - **Parada:** manhã do 507, a sala 3, depois das duas visões. A porta reta ou o corredor; e os herdeiros da Primeira Liga na sexta sala.
+
+### A lista e o teto, salas 4 e 5
+Na quarta sala, a lista das rainhas estava onde a visão a tinha mostrado, gravada fundo na parede, nome sob nome. O primeiro era IOMILTIA. O último tinha sido raspado a faca até a pedra esbranquiçar; ainda se via o começo de uma letra que ninguém soube qual era.
+
+Antes da quinta, o rei parou a fila e disse a todos o que vinha: o teto, a laje marcada, onde não pisar. A Eliane achou a laje com o pé da lança, sem apoiar o peso. O Gonde e dois guardas enfiaram duas lanças e uma pedra debaixo dela, para que a volta fosse segura. Lá em cima, alguma coisa rangeu e ficou parada.
+
+### Os herdeiros, sala 6
+A sexta sala cheirava a cera e a gente que dormia ali havia muito tempo. Duas dúzias de homens e mulheres se levantaram de uma vez em volta das velas, e as armas subiram junto. Atrás deles havia uma porta alta de pedra, sem maçaneta, com o mesmo vazio da porta de fora, do tamanho exato da Matriz.
+
+O Nutoccone veio à frente devagar, as mãos abertas. Tinha a barba grisalha e um casaco de mercador remendado tantas vezes que já não tinha cor.
+
+"Nossos avós assinaram aquele livro com o sangue de um rei", disse. "Nós vivemos debaixo da terra para que ninguém o lesse. Abra a porta, deixe-nos ver queimar, e é seu o que trouxemos." Um rapaz pôs no chão, entre os dois grupos, um saco de couro que tilintou pouco.
+
+"É tudo?", perguntou a Eliane.
+
+"É tudo o que sobrou do nome de três casas."
+
+O Moreth olhou para o saco e depois para o rei. O Eiagrir, lá atrás, contou as armas deles em voz baixa, para si mesmo.
+
+- **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 6. Os herdeiros da Primeira Liga oferecem 600 pelo livro queimado. A porta do coração, fechada; o guardião, dentro.
