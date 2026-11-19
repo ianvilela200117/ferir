@@ -1,0 +1,4 @@
+DECLARADO (G10) PERGUNTA DO JOGADOR, pelo saber de Nutoccone: "quem manda hoje no Conselho da Liga e onde guardam o ouro" · domínio gente · dificil (CD 20, o aberto soma +10) · bônus 0 (Nutoccone: ofício 0 em gente; nível 90) · falha feia: crença errada (verdade no envelope) · falha: não sabe · sucesso: o essencial · ganho: e um detalhe · extraordinário: tudo e uma pista
+CD 20 da escala velha → 30 nos dois dados
+teste: [[8], [12]] + 0 + nível 9 = 29 vs 30 (margem -1)
+grau: falha

@@ -1,8 +1,5 @@
 {
  "ordem": [
-  "BG35",
-  "MB35g",
-  "MB35m",
   "MB35s",
   "MB35f",
   "MB35c",
@@ -399,124 +396,12 @@
   "CK4",
   "CK5",
   "CK6",
-  "OF07"
+  "OF07",
+  "AI07",
+  "CP07",
+  "CK6b"
  ],
  "selos": {
-  "BG35": {
-   "id": "BG35",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "O QUE A BIGORNA LIVRE PEDE AO REI NA AUDIÊNCIA (ferreiros de Levis sem registro na Guilda, da briga do 245; o Xaathis os venceu, força 1; esperam desde o 414)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "REGISTRO na Guilda de Levis (a Carea) e a SÉRIE DAS PICARETAS da fundição velha"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "PROTEÇÃO contra o Culto do Xaathis, que os venceu nas ruas"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "SURPRESA (gerador novidade)",
-     "txt": "[6] → SURPRESA (gerador novidade)"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
-  "MB35g": {
-   "id": "MB35g",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "MARASAR, A FORÇA DO GRAUR: QUANTOS DA GUARDA DE IREVIEL PUDERAM SAIR (a muralha fica com o resto)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "o dado × 5"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2,
-      1
-     ],
-     "total": 3,
-     "res": "o dado × 5",
-     "txt": "[2, 1] +0 = 3 → o dado × 5"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
-  "MB35m": {
-   "id": "MB35m",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "MARASAR: OS MAGOS DA CHAMA DA HOSTE (1d6+4)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado + 4"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado + 4",
-     "txt": "[1] → o dado + 4"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
   "MB35s": {
    "id": "MB35s",
    "dia": 435,
@@ -21316,6 +21201,138 @@
     }
    ],
    "hora_rolado": "14:15:57"
+  },
+  "AI07": {
+   "id": "AI07",
+   "dia": 507,
+   "hora": "18:07:17",
+   "titulo": "AS AIAS DA SALA 1 E OS PRESOS (as cinco aias mortas, Raras, varrendo; abriram à casa quando o rei disse IOMILTIA; não tocam quem traz a Matriz; os 24 presos NÃO entraram pela porta: vieram pela galeria de Rilge)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "as aias param a fila diante da porta: 'quem não entrou pela porta não sai por ela' (a decisão volta ao rei: devolvê-los por Rilge, ou outra coisa)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "deixam passar: o nome dito pelo rei vale para a fila inteira"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "as aias param a fila diante da porta: 'quem não entrou pela porta não sai por ela' (a decisão volta ao rei: devolvê-los por Rilge, ou outra coisa)",
+     "txt": "[1] → as aias param a fila diante da porta: 'quem não entrou pela porta não sai por ela' (a decisão volta ao rei: devolvê-los por Rilge, ou outra coisa)"
+    }
+   ],
+   "hora_rolado": "18:07:17"
+  },
+  "CP07": {
+   "id": "CP07",
+   "dia": 507,
+   "hora": "18:07:17",
+   "titulo": "OS VINTE DO CELOCUS À PORTA VEEM SAIR 24 PRESOS (a ordem deles: 'ninguém sai antes de contar'; os presos não são do túmulo; o Celocus HONESTO, e Lumade com fome desde a caravana perdida: herdeiros de casas de mercador valem resgate) · +2 HONESTO (o pacto é do túmulo) · −2 a fome de Lumade e o resgate",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "QUEREM OS PRESOS: 'em Lumade, quem prende é o Celocus'; o chefe deles manda chamá-lo (a decisão volta ao rei)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 15,
+     "res": "CONTAM E NÃO TOMAM: os presos ficam com a gente do rei à porta, sob os olhos deles"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 19,
+     "res": "AJUDAM: oferecem a cela da cidade, em nome do rei"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      15
+     ],
+     "total": 15,
+     "res": "CONTAM E NÃO TOMAM: os presos ficam com a gente do rei à porta, sob os olhos deles",
+     "txt": "[15] → CONTAM E NÃO TOMAM: os presos ficam com a gente do rei à porta, sob os olhos deles"
+    }
+   ],
+   "hora_rolado": "18:07:17"
+  },
+  "CK6b": {
+   "id": "CK6b",
+   "dia": 507,
+   "hora": "18:07:17",
+   "titulo": "O RELÓGIO AO ENTRAR DE NOVO NA SALA 6 (G34; o rei, o Moreth, o Eiagrir e a Eliane, com a Matriz; com 1, o perigo da sala não vista mais perto é o do CORAÇÃO: o ZRAOS sai pela porta por dentro e a luta é na sala 6, sem covil, com a ficha da visão)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o guardião sai"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "nada vem",
+     "txt": "[3] → nada vem"
+    }
+   ],
+   "hora_rolado": "18:07:17"
   }
  }
 }

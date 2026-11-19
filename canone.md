@@ -399,3 +399,5 @@ depois vira linha nova aqui.
 - (507) No túmulo, a casa passou pelas salas 4 e 5 sem disparar o teto das rainhas (calçado para a volta) e viu de perto a lista das rainhas, com o último nome raspado. Na sala 6, o Nutoccone, chefe dos herdeiros da Primeira Liga, ofereceu ao rei o que trouxeram (600 em ouro, 'tudo o que sobrou do nome de três casas') para ver o livro de sangue queimar. A porta do coração tem o mesmo vazio da Matriz.
 
 - (507) Na sala 6 do túmulo, o rei mandou que os herdeiros da Primeira Liga largassem as armas ("prendam ou matem, daqui eles não saem"), com o Eiagrir atravessado na galeria de Rilge. O Nutoccone e as duas dúzias se renderam sem luta e foram presos; o ouro deles foi tomado. O julgamento vai ao conselho.
+
+- (507) O Nutoccone não soube dizer quem manda hoje no Conselho da Liga, só os três conselheiros que a casa já conhecia. Na sala 1, as aias mortas não deixaram os presos sair: quem não entrou pela porta das rainhas não sai por ela.

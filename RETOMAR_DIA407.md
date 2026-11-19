@@ -1,4 +1,4 @@
-# RETOMAR — manhã do Dia 507, O TÚMULO DAS RAINHAS, a sala 6: os herdeiros da Primeira Liga presos; a porta do coração (MOTOR 9b: G1 a G41)
+# RETOMAR — meio-dia do Dia 507, O TÚMULO DAS RAINHAS, a sala 1: as aias não deixam os presos sair (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Meio-dia do 507, a SALA 1 do Túmulo das Rainhas, diante da porta de fora. A casa inteira (o rei, o Moreth, o Eiagrir, a Eliane, o Gonde, 6 guardas, a Matriz) com os 24 HERDEIROS DA PRIMEIRA LIGA amarrados em fila (o Nutoccone, 90). AI07 [1]: as cinco AIAS mortas (Raras) param a fila: 'QUEM NÃO ENTROU PELA PORTA NÃO SAI POR ELA' (os presos vieram pela galeria de Rilge). O Nutoccone NÃO SABE quem manda hoje no Conselho da Liga (G10 falha 29 vs 30). Dados já rolados que esperam a condição: CP07 [15] (se os presos saírem pela porta: os 20 do Celocus contam e não tomam) · CK6b [3] (ao entrar de novo na 6: nada vem). A porta do coração fechada; o ZRAOS dentro (no coração, a ficha monta de novo com covil, G9). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 124.010. Os 20 do Celocus à porta de fora; 2 guardas com a carroça. Cofre 54.147.
+
+Antes (507, sala 6, os presos):
 Manhã do 507, a SALA 6 do Túmulo das Rainhas. Os HERDEIROS DA PRIMEIRA LIGA (as duas dúzias e o NUTOCCONE, 90; npcs.json) RENDERAM-SE (RN07 42 vs 34) e estão PRESOS, desarmados e amarrados, diante da porta do coração; o Eiagrir e 2 guardas na boca da galeria de Rilge; o ouro deles (600) tomado (cofre 54.147); o julgamento vai ao conselho (fio F78). O rei PV 269/269, Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 124.010 (o 51 em 127.600). A casa inteira, ninguém ferido: o Moreth e a Eliane à frente, o Gonde com a Matriz, o Eiagrir, 6 guardas. A volta pela sala 5 é segura (o teto calçado). Os 20 do Celocus à porta do túmulo ('ninguém sai antes de contar'). A PORTA DO CORAÇÃO (o vazio da Matriz) fechada; dentro, o ZRAOS (Épico 112; sims/guardiao_rainhas_visao.json é SEM covil: no coração, a toca dele, montar de novo com covil= pela G13/G17, 4d6 CD 21) e o livro de sangue; algo grande se mexeu atrás da porta. (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no coração.
 
 Antes (507, sala 6, a oferta):
@@ -434,10 +437,11 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, sala 6): 1b PRENDÊ-LOS: 'prendam ou matem, daqui eles não saem' (à Liga: aqui, os herdeiros dela)
 - RN07 [[2],[19]] + 16 + 5 = 42 vs 34 → SUCESSO: rendem-se todos · o ouro tomado · +500 XP (feito menor) · um dado CN06 rolado por engano num save velho, antes de achar este: não vale.
 
+## RESPONDIDO (507, sala 6 → sala 1): 1b e depois a: os presos à porta primeiro, depois o coração · 2 'vamos entrar depois de devolver os presos' · 3a a pergunta ao Nutoccone (o jogador escolheu: o Conselho da Liga)
+- G10 FALHA (29 vs 30) · AI07 [1] as aias param a fila · CP07 [15] e CK6b [3], à espera da condição.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CORAÇÃO (a porta pede a Matriz; dentro o ZRAOS na toca dele, com o covil: a ficha monta de novo, G9; e o livro de sangue): a) abrir já · b) levar os presos à porta do túmulo primeiro (a volta é segura; os 20 do Celocus lá fora) e voltar · c) descansar antes (a Mana 67/117; a Visão volta amanhã).
-2. QUEM GUARDA OS 24 PRESOS se a casa abrir o coração: a) o Gonde e os 6 guardas; entram o rei, o Moreth, o Eiagrir e a Eliane · b) o Eiagrir fica também; entram o rei, o Moreth e a Eliane · c) amarrados e sós na sala 6.
-3. O NUTOCCONE (preso): a) perguntar já (o jogador diz o quê; ele responde pelo que sabe, G10) · b) depois.
+1. AS AIAS (os presos não saem pela porta das rainhas): a) levá-los de volta e tirá-los pela GALERIA DE RILGE, por onde entraram (o Gonde e 4 guardas com eles num caminho que a casa não conhece; os mortos de Rilge; os herdeiros já pagaram o sacrifício) · b) deixá-los amarrados na sala 1 com o Gonde e 4 guardas, e abrir o coração · c) falar com as aias: o que pedem para deixá-los sair (um teste com os mortos) · d) levá-los de volta à sala 6 e abrir o coração com eles lá · e) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

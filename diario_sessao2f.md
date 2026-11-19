@@ -2213,3 +2213,20 @@ Ferro bateu na pedra, uma arma depois da outra, até não sobrar nenhuma de pé.
 Atrás deles, do outro lado da porta alta, alguma coisa grande mudou de posição. Foi um som de pedra raspando pedra, devagar, e depois nada.
 
 - **Parada:** manhã do 507, a sala 6. Os herdeiros da Primeira Liga presos. A porta do coração fechada; o que mora dentro, acordado.
+
+### A fila, salas 6 a 1
+O rei perguntou ao Nutoccone quem mandava no Conselho da Liga e onde guardavam o ouro. O velho riu sem graça.
+
+"O Pelagri, o Aldoveri, o Tiracci. Isso o senhor já sabe. Minha casa não senta àquela mesa há três avós. Onde eles guardam o ouro, eu daria um dedo para saber."
+
+Saíram pelo corredor frio, que cheirava a cera, os presos amarrados pela cintura um atrás do outro. Na terceira sala, o Gonde passou a fila rente à parede, longe da laje marcada, contando cabeças em voz baixa.
+
+Na primeira sala, o som das vassouras parou.
+
+As cinco aias estavam de pé diante da porta, lado a lado, as vassouras de palha em pé como lanças. Tinham as caras secas e os olhos fechados, e mesmo assim olhavam para os presos.
+
+"Quem não entrou pela porta não sai por ela", disse a do meio.
+
+O Nutoccone baixou a cabeça. Atrás do rei, alguém da fila começou a rezar.
+
+- **Parada:** meio-dia do 507, a sala 1. As aias não deixam os presos sair pela porta.
