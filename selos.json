@@ -1,6 +1,5 @@
 {
  "ordem": [
-  "PG35",
   "CT35",
   "OU35",
   "LT35",
@@ -399,55 +398,10 @@
   "CE04",
   "MS04c",
   "TG04",
-  "CL06"
+  "CL06",
+  "CT05"
  ],
  "selos": {
-  "PG35": {
-   "id": "PG35",
-   "dia": 433,
-   "hora": "12:47:05",
-   "titulo": "O QUE O CAPITÃO YAIS RESPONDE A 'VOCÊ SABE QUE NÃO PODE PASSAR COM CARGA DA LIGA: POR QUE SE ARRISCAR?' (LEAL à Liga; quer enriquecer; OCULTO: deve a alguém perigoso)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "A DÍVIDA, a verdade: deve a alguém perigoso, e a corrida do rio fechado paga a dívida (rola a quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "CALA: é da Liga e não fala da Liga"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)",
-     "txt": "[4] → O DINHEIRO: a Liga paga o triplo a quem passa o rio fechado (é verdade, e não é tudo)"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
   "CT35": {
    "id": "CT35",
    "dia": 433,
@@ -21081,6 +21035,52 @@
     }
    ],
    "hora_rolado": "22:39:24"
+  },
+  "CT05": {
+   "id": "CT05",
+   "dia": 506,
+   "hora": "01:17:22",
+   "titulo": "(OCULTO até a notícia) OS DOIS GUARDAS COM A CARTA PARA A BRARA (saem do acampamento na aurora do 505 para o leste; dois dias a Levis; prazo 509; (oculto) os VRURN, trolls de Yaelane, desceram à estrada de Lumade, MS04b [4]; e outros querem a carta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "os Vrurn os pegam: um morre, o outro foge sem a carta (a carta perdida; o rival ganha o feito)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "alguém que quer a carta os embosca: a carta tomada, os dois feridos voltam a Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "chegam a Levis no 506 e a carta chega à Brara"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "alguém que quer a carta os embosca: a carta tomada, os dois feridos voltam a Levis",
+     "txt": "[2] → alguém que quer a carta os embosca: a carta tomada, os dois feridos voltam a Levis"
+    }
+   ],
+   "hora_rolado": "01:17:22"
   }
  }
 }

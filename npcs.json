@@ -5330,7 +5330,7 @@
   "nivel": 22,
   "xp": 1000,
   "classe": "Armeira · HONESTA, ORGULHOSA",
-  "ocupacao": "mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4",
+  "ocupacao": "MORTA no 506 (a febre cinza): era a mestra da GUILDA DE LEVIS; registrou Ferir no Dia 4",
   "log": [
    "Dia 245: declara os ferreiros de Ireviel SEM REGISTRO na Liga (a lei)",
    "Dia 249: +1 Memória com Ferir (respeita a carta honesta da baixa)",
@@ -5371,7 +5371,8 @@
    "+500 Tick 490: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
    "Tick 490: SOBE a 22",
    "+500 Tick 497: PASSO (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
-   "+500 Tick 504: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)"
+   "+500 Tick 504: SURPRESA (gerador) (mestra da GUILDA DE LEVIS (mora em Levis); registrou Ferir no Dia 4)",
+   "506: MORRE em Levis, da febre cinza (MF06 [4], MF06b [1]; a pressão cheia do 506)"
   ],
   "ultima_subida": 490,
   "tracos": [
@@ -5402,7 +5403,8 @@
    "ambicao",
    "medo",
    "linha_vermelha"
-  ]
+  ],
+  "estado": "MORTA (506, a febre cinza, em Levis)"
  },
  "Tessal": {
   "nivel": 26,

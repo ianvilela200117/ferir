@@ -131,6 +131,10 @@
      [
       -1,
       "a festa da coroação já passou (era só da semana do 301) · de vez: compensa o +1 da festa que ficou na soma do 308"
+     ],
+     [
+      -1,
+      "504: um trecho do CAIS NOVO desabou na chuva (DS04 [6]) (até o 518)"
      ]
     ],
     "Dinheiro": [
@@ -222,7 +226,8 @@
     "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]",
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]",
     "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
-    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [1]"
+    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [1]",
+    "504: o desabamento de um trecho do cais novo (o EVENTO [1] do reino; DS04 [6]): Comércio −1 até o 518"
    ],
    "obras_feitas": [
     {

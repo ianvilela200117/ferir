@@ -26,26 +26,28 @@
   "motivo": "422-432"
  },
  "Ferir": {
-  "lugar": "Levis (434)",
-  "desde": 434,
+  "lugar": "Lumade",
+  "desde": 506,
   "motivo": ""
  },
  "Moreth": {
   "lugar": "Lumade",
-  "chega": 506,
-  "desde": 502,
+  "desde": 506,
   "motivo": ""
  },
  "Eiagrir": {
   "lugar": "Lumade",
-  "chega": 506,
-  "desde": 502,
+  "desde": 506,
   "motivo": ""
  },
  "Eliane": {
   "lugar": "Lumade",
-  "chega": 506,
-  "desde": 502,
+  "desde": 506,
+  "motivo": ""
+ },
+ "Tigra": {
+  "lugar": "Lumade",
+  "desde": 506,
   "motivo": ""
  }
 }

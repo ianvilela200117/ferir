@@ -1,5 +1,5 @@
 {
- "prox_id": 1045,
+ "prox_id": 1047,
  "itens": [
   {
    "id": 1,
@@ -14251,7 +14251,7 @@
    "oculto": false,
    "para": true,
    "origem": "viagem.py",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -14868,6 +14868,28 @@
     15,
     "FIEL (a célula da casa confirma)"
    ]
+  },
+  {
+   "id": 1045,
+   "dia": 511,
+   "texto": "(OCULTO até chegar) A CARTA DA BRARA CHEGA AO REI EM LUMADE: os dois guardas do Gonde voltaram feridos a Levis; a carta do mensageiro (para a Brara) foi TOMADA numa emboscada na estrada (CT05 [2]); quem tomou e o que dizia: rolar então",
+   "tipo": "marco",
+   "oculto": true,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 1046,
+   "dia": 513,
+   "texto": "A CARTA DA NOULIEL CHEGA AO REI EM LUMADE (de Ireviel, por cavaleiro): o cais novo desabou (DS04, Comércio −1 até o 518) · a PETIÇÃO do Porto de Marasar: grão do celeiro de Ireviel a preço velho (PT04 [2]) · o DESERTOR DOS OLHOS PINTADOS chegou com um nome (CH04 [3]: rolar o nome então) · o MILAGRE da Cisterna (MI06 [2]; o silêncio) · a REVOLTA DE MARASAR (incompleta) · o shasha da Doge chegou",
+   "tipo": "marco",
+   "oculto": false,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

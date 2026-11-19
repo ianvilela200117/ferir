@@ -15,7 +15,7 @@
    "peixe": 140
   },
   "Levis": {
-   "grão": 132,
+   "grão": 144,
    "sal": 90,
    "ferro": 89,
    "carvão": 88,
@@ -29,5 +29,7 @@
    "peixe": 106
   }
  },
- "log": []
+ "log": [
+  "506: a CAREA, mestra da Guilda de Levis, morre da febre cinza (MF06 [4], MF06b [1]); o mercado reage (o encadeamento): a Guilda fecha três dias pelo luto e o grão de Levis sobe 132→144"
+ ]
 }

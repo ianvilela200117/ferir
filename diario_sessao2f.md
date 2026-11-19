@@ -2003,3 +2003,57 @@ A Eliane não disse nada. Depois, com o Uxraxion já de costas, subindo para o b
 O rei ficou olhando a água. Entre as estacas, a luz fria corria devagar, rio abaixo, na direção de Levis.
 
 - **Parada:** tarde do 502, Levis, as estacas. Os doze às minas de cima. O Uxraxion recusou o selo. O selo aberto.
+
+## Dias 503 a 506 — a estrada de Lumade
+
+### As colinas a oeste de Levis, 503
+O vento das colinas cortava a geada em pó e a jogava na cara. A carroça da Matriz rangia em cada pedra, com o Gonde andando ao lado, a mão no varal, como se fosse uma pessoa doente.
+
+Na segunda curva da manhã vieram as famílias. Três carroças de boi, uma vaca magra, crianças em cima dos sacos. Vinham do vale de cima de Lumade.
+
+"O Círculo cobra o grão e leva os moços para cavar", disse o homem da frente, sem tirar o chapéu. "Pedimos lança ao Celocus. Ele mandou cobrar o imposto."
+
+A Eliane perguntou quantos homens o Círculo tinha no vale. O homem olhou para os dez da guarda, para a carroça coberta, e respondeu outra coisa: que em Levis pelo menos havia trabalho nas minas.
+
+### O acampamento, noite do 504
+A lua cheia deixava a estrada branca como osso. O homem chegou pelo lado de Lumade, a pé, segurando o cavalo pelo freio porque não conseguia mais montar. Tinha três rasgos no ombro, fundos e paralelos, e a camisa colada de sangue seco.
+
+O Moreth o deitou perto do fogo antes que alguém perguntasse nada. O cheiro da ferida era de carne e de terra molhada.
+
+"Uma carta para a governadora de Levis." O rapaz tirou do peito um rolo lacrado, sem selo que alguém ali conhecesse. "Me pagaram para não abrir. Alguém já tentou tirar de mim duas vezes."
+
+"Eu levo", disse o Moreth.
+
+O Eiagrir nem levantou os olhos da lança que estava limpando. "Você é a lâmina do rei. Levar carta é para quem tem perna, não para quem tem espada."
+
+"E você acha que eu não tenho perna?"
+
+O rei mandou dois dos homens do Gonde. Saíram antes da aurora, a pé, com o rolo enrolado em couro. O Moreth ficou olhando a estrada do leste até eles sumirem, e depois disso não falou mais com o Eiagrir até o meio-dia.
+
+Naquela noite, procurando a pedra de amolar no fundo do saco, o rei achou uma coisa que não tinha posto lá: um cravo de ferradura, dobrado a frio em forma de letra. Era um F torto. A Tilde o devia ter enfiado ali no cais, na partida, sem dizer nada.
+
+### A borda das terras de Lumade, 505
+Choveu o dia inteiro, e a lama pegava na roda até o meio. No alto do vale, à direita, havia um posto de pedra com uma bandeira cor de areia, molhada, batendo no mastro. Ninguém desceu. Ninguém se escondeu também.
+
+"Eles querem que a gente veja", disse a Eliane.
+
+Pela tarde, a Tigra alcançou o grupo. Tinha vindo de Levis a cavalo, emprestado, sem parar. Falou com a Eliane primeiro e só depois com o rei, de cabeça baixa.
+
+"O homem do culto anda nas estacas de noite. O povo viu. Ele anda diferente, senhor. Leve. Como se fosse outro."
+
+### Lumade, entardecer do 506
+Lumade tinha o cheiro de grão molhado e de cera. A casa do Celocus ficava acima do mercado, de pedra vermelha, com as janelas pequenas de quem guarda coisas.
+
+Ele recebeu o rei de pé, na porta, sem mesa posta. Era alto, de barba aparada rente, com um anel de cada lado. Um homem com pó de estrada nas botas tinha acabado de sair por trás dele, e ele ainda tinha a cara de quem fez uma conta que não fechou.
+
+"Trinta anos esperei aquela porta", disse o Celocus. "Abrimos amanhã. E os meus quarenta contamos antes de qualquer um sair de lá com alguma coisa na mão."
+
+"Você não confia em mim?"
+
+"Eu confio em conta." Ele olhou para a carroça coberta no pátio. "É honestidade, não ofensa."
+
+Do mercado embaixo subia uma conversa que não era sobre o rei. Falavam de um brejo a meio dia dali, onde a água tinha baixado com o fim do verão, e de pontas de torre de pedra aparecendo no meio do junco. Uma cidade inteira debaixo da lama. Ezmisa, dizia um velho, alto demais. A cidade que a praga afundou.
+
+O Celocus ouviu também. Não disse nada.
+
+- **Parada:** entardecer do 506, Lumade, a porta do Celocus. O túmulo amanhã, os 40% contados antes. Ezmisa a meio dia.

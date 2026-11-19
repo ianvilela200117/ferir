@@ -3890,6 +3890,16 @@
    "entrar": "uma senha",
    "onde": "debaixo das minas velhas de Levis (os da Bigorna Livre acharam a porta cavando ferro sem registro)",
    "notas": "gerador lugar (435; BG35 [6] → novidade [5]); o nome do gerador (Quomir) é o de um material da casa: trocado por Yiis, que também é material do Livro (o yiis): trocado de novo por Zaess · e Zaess também é material (o zaess): trocado por ZYTHIR (conferido à mão contra o compendio, o cânone, o estado, os NPCs e o mundo: as três primeiras letras não aparecem)"
+  },
+  {
+   "nome": "Ezmisa",
+   "o_que_era": "uma cidade afundada",
+   "por_que_caiu": "praga",
+   "guarda": "um núcleo",
+   "habita": "um eremita",
+   "entrar": "uma chave",
+   "onde": "a meio dia de Lumade, no brejo ao pé do vale de cima (o vale que o Círculo da Areia Cantante tomou no 456): a água baixou e as pontas das torres apareceram",
+   "notas": "gerador lugar (506; o mundo do 506 [20] SURPRESA em Lumade → 1d12 [5] um lugar novo; a notícia FIEL no mesmo dia); o nome do gerador (Ithek) bate no Ithvil e na Ithra, e já é de uma ruína de Mordun (mundo.json): trocado por EZMISA (nomes.py arcaica livre)"
   }
  ],
  "materiais_novos": [
@@ -3909,6 +3919,22 @@
    "essencia": "Veneno",
    "origem": "pedra (vidro de raio)",
    "nota": "(OCULTO até a carta do Tolvane) o CELOCUS, em Lumade, não respondeu à oferta do rei: mostrou ao Tolvane uma carga de HADUN à venda (CL32 [6] → novidade [1]); dureza 5, maleabilidade 4, condutividade 4; infusão até o 4º círculo"
+  },
+  {
+   "nome": "gnuek",
+   "dia": 504,
+   "cat": "Épico",
+   "essencia": "Terra + Podridão",
+   "origem": "monstro (pena)",
+   "nota": "(OCULTO até a notícia do 510) DESCOBERTA DE MATERIAL em Lumade (o mundo do 504 [4]); dureza 4, maleabilidade 3, condutividade 5; infusão até o 5º; arma: o golpe derruba (Vigor CD 16); armadura RD +3; ferramenta +3 em Matéria; secundário: a ferida infecciona; defeito: pesa o dobro; 600-1.000/kg; reserva pequena · o nome do gerador (Hassa) é o de um NPC da casa: trocado por GNUEK"
+  },
+  {
+   "nome": "dvonur",
+   "dia": 504,
+   "cat": "Incomum",
+   "essencia": "Espinho",
+   "origem": "essência (cinza de incêndio antigo)",
+   "nota": "um mascate na estrada de Lumade (EN04 [6] → novidade [1]); dureza 7, maleabilidade 5, condutividade 2; infusão até o 2º; arma: o golpe prende como raiz (Força CD 12); armadura: quem agarra o portador sangra 2; ferramenta: cresce (conserta 1 por dia); defeito: floresce na primavera e pesa; 40-60/kg; reserva pequena · o nome do gerador (Ulvil) já é do Livro: trocado por DVONUR"
   }
  ],
  "guildas": [

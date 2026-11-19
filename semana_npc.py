@@ -28,7 +28,7 @@ try:
     DET=bool(json.load(open(os.path.join(P,'motor.json'),encoding='utf-8')).get('camadas',{}).get('detalhe_npc',True))
 except Exception: DET=True
 for n,v in db.items():
-    if 'MORTO' in v.get('estado','') or v.get('servo'): continue   # auditoria 203: morto não vive a semana (438: nem servo armado; o XP dele vem do que mata)
+    if __import__('nucleo').morto(v) or v.get('servo'): continue   # auditoria 203: morto não vive a semana (438: nem servo armado; o XP dele vem do que mata)
     oc=v.get('ocupacao','')
     if not oc or 'presa' in oc.lower() or 'preso' in oc.lower() or v.get('lendario'): continue
     if not v.get('nivel'):   # MOTOR 6: ficha sem nível derrubava o script no meio (desde ~336, os 8 últimos NPCs do livro não viviam a semana)

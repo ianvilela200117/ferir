@@ -179,3 +179,12 @@ def acha_nome(nome, chaves):
 
 def faixa_txt(a, b):
     return str(a) if a == b else f'{a}-{b}'
+
+
+def morto(v):
+    """506 (erro achado): morto é quem tem MORTO ou MORTA no estado (em qualquer caixa) ou na frente da ocupação.
+    Antes cada script procurava só 'MORTO' no estado, e a Mamiltia, a Carea, o Quthemnus e o Pelaccino viviam a semana."""
+    import re as _re
+    e = str(v.get('estado', '')).upper(); o = str(v.get('ocupacao', '')).upper().lstrip('( ')
+    if e.lstrip('( ').startswith('VIVO'): return False   # 'vivo (morto pelo Morek no 425 e ERGUIDO...)': o Starkald e o Goir
+    return bool(_re.search(r'\bMORT[OA]\b', e)) or o.startswith('MORTO') or o.startswith('MORTA')

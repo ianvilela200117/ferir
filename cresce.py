@@ -44,7 +44,7 @@ elif a[0]=='xp':
 elif a[0]=='tick':
     dia=a[1]; ndia=int(dia) if dia.isdigit() else 0; sobem=[]; subidas=[]
     for n,v in db.items():
-        if 'MORTO' in v.get('estado',''): continue   # auditoria 203
+        if __import__('nucleo').morto(v): continue   # auditoria 203 (506: MORTA e a ocupação também contam)
         if not v.get('nivel'): continue   # Dia 245: sem ficha (nível 0) não sobe sozinho; gerar o nível quando entrar em cena
         custo=100*v['nivel']
         if v['xp']<custo: continue

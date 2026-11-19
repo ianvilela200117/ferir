@@ -95,7 +95,7 @@ def _mortos():
     """MOTOR 6: quem está MORTO no npcs.json não entra em faísca nem em trama nova"""
     try: db=json.load(open(os.path.join(AQUI,'npcs.json'),encoding='utf-8'))
     except Exception: return set()
-    return {n.lower() for n,v in db.items() if 'MORTO' in str(v.get('estado','')).upper()}
+    return {n.lower() for n,v in db.items() if __import__('nucleo').morto(v)}
 def _sob_cerco():
     import glob
     out=set()

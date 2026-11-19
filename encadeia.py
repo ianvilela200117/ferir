@@ -153,7 +153,7 @@ def pendencias(dias=7, dia=None):
     N = carrega('npcs.json', {})
     FC = carrega('fichas_combate.json', {'fichas': {}}).get('fichas', {})
     for n, v in N.items():
-        if 'MORTO' in str(v.get('estado', '')): continue
+        if __import__('nucleo').morto(v): continue
         nv = v.get('nivel') or 0
         precisa = sum(1 for m in (100, 200, 300) if nv >= m)
         if precisa > len(v.get('dons', [])) and n in FC:
