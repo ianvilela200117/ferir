@@ -1,0 +1,3 @@
+1d12 [4] uma missão nova bate à porta (gerar missão)
+1d12 [11] uma consequência antiga chega (de algo feito há mais de 30 dias)
+1d12 [6] um culto mostra o sinal (gerar culto, ou avançar um existente)

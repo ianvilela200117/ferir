@@ -1,31 +1,5 @@
 {
  "ordem": [
-  "GU6m",
-  "GUIr",
-  "GU1fa",
-  "GU2fa",
-  "GU3fa",
-  "GU4fa",
-  "GU5fa",
-  "GU6fa",
-  "GU1x",
-  "GU2x",
-  "GU3x",
-  "GU4x",
-  "GU5x",
-  "GU6x",
-  "GU4h",
-  "EN33",
-  "CE33",
-  "HC33",
-  "RV33",
-  "CR33",
-  "SU33",
-  "CA34",
-  "PP34",
-  "FC34",
-  "LP34",
-  "AR35",
   "PG35",
   "CT35",
   "OU35",
@@ -399,1117 +373,35 @@
   "JG02",
   "SL02",
   "HA02",
-  "HE02"
+  "HE02",
+  "CO03",
+  "AL03",
+  "504-laco-quem",
+  "504-laco",
+  "504-chamado",
+  "504-vinculos",
+  "EN03",
+  "EN04",
+  "EN05",
+  "MS04",
+  "MS04b",
+  "EL04",
+  "CH04",
+  "CB04a",
+  "CB04b",
+  "DS04",
+  "PT04",
+  "IM04",
+  "MR03",
+  "MF06",
+  "MF06b",
+  "MI06",
+  "CE04",
+  "MS04c",
+  "TG04",
+  "CL06"
  ],
  "selos": {
-  "GU6m": {
-   "id": "GU6m",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12, A GUILDA 6: OS DOIS MEMBROS FORTES (o nível de cada um é o do chefe menos o dado × 15)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#1 [2] → o dado × 15 a menos (o primeiro)"
-    },
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o dado × 15 a menos (o primeiro)",
-     "txt": "#2 [2] → o dado × 15 a menos (o primeiro)"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GUIr": {
-   "id": "GUIr",
-   "dia": 432,
-   "hora": "03:29:45",
-   "titulo": "G12: A FAMA DE PARTIDA DA GUILDA DOS AVENTUREIROS DE IREVIEL (força 2; aberta no 412; o Starkald, 87)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "20 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 18,
-     "res": "20 + o dado",
-     "txt": "[18] → 20 + o dado"
-    }
-   ],
-   "hora_rolado": "03:29:46"
-  },
-  "GU1fa": {
-   "id": "GU1fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 1: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      19
-     ],
-     "total": 19,
-     "res": "força × 10 + o dado",
-     "txt": "[19] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU2fa": {
-   "id": "GU2fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 2: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "força × 10 + o dado",
-     "txt": "[3] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU3fa": {
-   "id": "GU3fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 3: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "força × 10 + o dado",
-     "txt": "[3] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU4fa": {
-   "id": "GU4fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 4: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "força × 10 + o dado",
-     "txt": "[3] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU5fa": {
-   "id": "GU5fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 5: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      17
-     ],
-     "total": 17,
-     "res": "força × 10 + o dado",
-     "txt": "[17] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU6fa": {
-   "id": "GU6fa",
-   "dia": 432,
-   "hora": "11:39:25",
-   "titulo": "G12, A GUILDA 6: A FAMA DE PARTIDA (força × 10 + o dado)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 20,
-     "res": "força × 10 + o dado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "força × 10 + o dado",
-     "txt": "[6] → força × 10 + o dado"
-    }
-   ],
-   "hora_rolado": "11:39:25"
-  },
-  "GU1x": {
-   "id": "GU1x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: QUE CIDADE O CÍRCULO DA AREIA CANTANTE (magos de Yaelane) QUER TOMAR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "YAELANE mesmo (o governo do Clã Eloulane)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "KREMIR"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "SHIZESS"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LUMADE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "LUMADE",
-     "txt": "[6] → LUMADE"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU2x": {
-   "id": "GU2x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: A GUILDA RIVAL QUE A TORRE DOS SETE VÉUS (magos de Yaelane) QUER ACABAR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "o CÍRCULO DA AREIA CANTANTE (a outra de Yaelane)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "as MÃOS DE BREU"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a ORDEM DA TOCHA BRANCA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a ORDEM DA TOCHA BRANCA",
-     "txt": "[6] → a ORDEM DA TOCHA BRANCA"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU3x": {
-   "id": "GU3x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: QUE MÍTICO OS ARPÕES DO SAL VERMELHO (caçadores de Shizess) QUEREM",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o ITHVIL (Levis, Fogo)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o THARGOS (as Fundas, Água)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a ELAEVA (os Picos Brancos, Espinho)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o THARGOS (as Fundas, Água)",
-     "txt": "[3] → o THARGOS (as Fundas, Água)"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU4x": {
-   "id": "GU4x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: QUE MÍTICO A ORDEM DA TOCHA BRANCA (cruzados de Telosus) QUER",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "a ELAEVA (matou o povo de Telosus)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o KREDUN (as Fundas)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o THARGOS"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "o KREDUN (as Fundas)",
-     "txt": "[5] → o KREDUN (as Fundas)"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU5x": {
-   "id": "GU5x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: A DERROTA ANTIGA QUE A COMPANHIA DO ÚLTIMO GANCHO (caçadores de Qulosus) QUER VINGAR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "contra a ORDEM DA TOCHA BRANCA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "contra o MANEUS, o Afogado do Vento (o bicho que os quebrou)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "contra as MÃOS DE BREU (a outra de Qulosus)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "contra a ORDEM DA TOCHA BRANCA",
-     "txt": "[2] → contra a ORDEM DA TOCHA BRANCA"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU6x": {
-   "id": "GU6x",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: QUE ROTA AS MÃOS DE BREU (ladrões de Qulosus) QUEREM DOMINAR",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a ESTRADA DO SAL (Shizess a Yaelane)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o MAR de Qulosus"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o RIO DE IREVIEL"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o RIO DE IREVIEL",
-     "txt": "[6] → o RIO DE IREVIEL"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "GU4h": {
-   "id": "GU4h",
-   "dia": 432,
-   "hora": "11:40:19",
-   "titulo": "G12: FOI A ORDEM DA TOCHA BRANCA QUEM FERIU A ELAEVA NO 428? (a notícia fiel do 428: 'alguém a caçou e quase conseguiu')",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "SIM"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "NÃO: foi outra mão"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "NÃO: foi outra mão",
-     "txt": "[6] → NÃO: foi outra mão"
-    }
-   ],
-   "hora_rolado": "11:40:19"
-  },
-  "EN33": {
-   "id": "EN33",
-   "dia": 433,
-   "hora": "11:43:12",
-   "titulo": "O ENCONTRO NO RIO (433, tick em estrada [7]; o rio abaixo de Levis, a meio dia da cidade)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "barqueiros de Levis descendo, com as notícias da cidade"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "um bicho na água: um dorso de espinhos do tamanho de um potro (a cria da Isyzis?)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos",
-     "txt": "[4] → a BARCA DA LIGA de novo, amarrada no cais de uma aldeia, descarregando fardos"
-    }
-   ],
-   "hora_rolado": "11:43:12"
-  },
-  "CE33": {
-   "id": "CE33",
-   "dia": 433,
-   "hora": "11:43:12",
-   "titulo": "O CELOCUS PAGA OS 800 DO CRÉDITO DE GRÃO (o voto C403a; vence hoje; ele não respondeu ao Tolvane sobre o acordo grande)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "PAGA: o ouro chega a Ireviel pela estrada de Lumade"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ATRASA: manda dizer que paga quando o acordo fechar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "PAGA: o ouro chega a Ireviel pela estrada de Lumade",
-     "txt": "[1] → PAGA: o ouro chega a Ireviel pela estrada de Lumade"
-    }
-   ],
-   "hora_rolado": "11:43:12"
-  },
-  "HC33": {
-   "id": "HC33",
-   "dia": 433,
-   "hora": "12:19:48",
-   "titulo": "QUEM É O HOMEM DE CAPA DA BARCA DA LIGA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "um FEITOR da Liga do rio (nível 45)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um CAPITÃO da Liga (nível 90, espada)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um homem da LELIEL, mago do norte (nível 130)"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "um CAPITÃO da Liga (nível 90, espada)",
-     "txt": "[4] → um CAPITÃO da Liga (nível 90, espada)"
-    }
-   ],
-   "hora_rolado": "12:19:48"
-  },
-  "RV33": {
-   "id": "RV33",
-   "dia": 433,
-   "hora": "12:19:48",
-   "titulo": "O QUE O HOMEM DE CAPA FAZ QUANDO O REI MANDA ABRIR OS FARDOS (a barca do rei no cais: o rei, o Moreth, o Eiagrir, a Eliane e 10 da guarda; ele tem 16 remadores e 8 guardas; a carga OCULTA: ouro e papéis)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "SUBMETE-SE: abre os fardos e paga a portagem"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "FOGE: corta as amarras e sobe o rio; a carroça foge por terra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "LUTA: os 8 guardas puxam lâmina e os remadores pegam os remos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima",
-     "txt": "[4] → FALA E SUBORNA: oferece ouro para o rei seguir, enquanto a CARROÇA sai pela estrada com os fardos de cima"
-    }
-   ],
-   "hora_rolado": "12:19:48"
-  },
-  "CR33": {
-   "id": "CR33",
-   "dia": 433,
-   "hora": "12:19:48",
-   "titulo": "PARA ONDE VAI A CARROÇA DOS FARDOS (por terra, a partir da aldeia)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a LEVIS-BAIXA, ao CULTO DO XAATHIS (a Liga paga o culto)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "às MINAS DE BAIXO de Levis"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a um COMPRADOR do Delta, pela estrada do sal"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "a um COMPRADOR do Delta, pela estrada do sal",
-     "txt": "[6] → a um COMPRADOR do Delta, pela estrada do sal"
-    }
-   ],
-   "hora_rolado": "12:19:48"
-  },
-  "SU33": {
-   "id": "SU33",
-   "dia": 433,
-   "hora": "12:20:01",
-   "titulo": "QUANTO O CAPITÃO DA LIGA OFERECE AO REI PARA SEGUIR VIAGEM (1d6 × 500)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 500 em moeda de Marasar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado × 500 em moeda de Marasar",
-     "txt": "[3] → o dado × 500 em moeda de Marasar"
-    }
-   ],
-   "hora_rolado": "12:20:01"
-  },
-  "CA34": {
-   "id": "CA34",
-   "dia": 433,
-   "hora": "12:37:32",
-   "titulo": "O QUE O CAPITÃO (YAIS; LEAL e CRUEL; quer enriquecer) DIZ QUANDO O REI RECUSA O OURO E PERGUNTA DE QUEM É A BARCA, O QUE LEVA E PARA ONDE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "MENTE: a barca foi vendida a um mercador do Delta, a marca é velha; mostra uma CARTA DE PASSAGEM (falsa)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "CALA e pede para falar a sós com o rei: oferece um nome grande da Liga em troca de seguir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)",
-     "txt": "[2] → a VERDADE em parte: é da Liga, leva a paga da Liga a um homem do Delta, e diz que a Liga paga a portagem desde a paz (que caiu no 339)"
-    }
-   ],
-   "hora_rolado": "12:37:32"
-  },
-  "PP34": {
-   "id": "PP34",
-   "dia": 433,
-   "hora": "12:37:32",
-   "titulo": "ONDE ESTÃO OS PAPÉIS DA LIGA (a carga oculta: ouro e papéis; a carta do Ceduion à Leliel)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "foram na CARROÇA, com o ouro"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "ficaram na ARCA do capitão, na barca, debaixo da tábua da popa"
-    }
-   ],
-   "oculto": true,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ficaram na ARCA do capitão, na barca, debaixo da tábua da popa",
-     "txt": "[5] → ficaram na ARCA do capitão, na barca, debaixo da tábua da popa"
-    }
-   ],
-   "hora_rolado": "12:37:32"
-  },
-  "FC34": {
-   "id": "FC34",
-   "dia": 433,
-   "hora": "12:37:32",
-   "titulo": "OS DOIS DA GUARDA QUE SEGUEM A CARROÇA DE LONGE PELA ESTRADA DO SAL (sem tocar; até a noite)",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "os carroceiros os VEEM e apertam o passo; perdem a carroça no escuro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 11,
-     "res": "seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda"
-    },
-    {
-     "tipo": "num",
-     "a": 12,
-     "b": 18,
-     "res": "veem a carroça ENCONTRAR o comprador num vau da estrada do sal (rola quem)"
-    },
-    {
-     "tipo": "num",
-     "a": 19,
-     "b": 20,
-     "res": "e ouvem o nome de quem paga (uma pista nova)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda",
-     "txt": "[5] → seguem até a noite: a carroça para numa estalagem de beira de estrada e ninguém a encontra ainda"
-    }
-   ],
-   "hora_rolado": "12:37:32"
-  },
-  "LP34": {
-   "id": "LP34",
-   "dia": 433,
-   "hora": "12:38:02",
-   "titulo": "A QUEM A LIGA PAGA NO DELTA (a lista nos papéis da arca do capitão; a carroça leva o ouro)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "um homem das CARAVANAS DE SHIZESS (o que compra gente para achar o núcleo Mítico do Delta)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "os DO JUNCO (o Delta)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)",
-     "txt": "[1] → os DEVOLVIDOS (os 60 salineiros que a Leliel soltou no 395; racharam a Guilda dos Salineiros)"
-    }
-   ],
-   "hora_rolado": "12:38:02"
-  },
-  "AR35": {
-   "id": "AR35",
-   "dia": 433,
-   "hora": "12:47:05",
-   "titulo": "QUANDO O REI MANDA PRENDER (a guarda do rei com o Moreth, o Eiagrir e a Eliane no cais; o capitão Yais, 90, LEAL e CRUEL; 8 guardas e 16 remadores da Liga)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "RENDEM-SE: o capitão manda baixar as armas"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "os 8 GUARDAS da Liga resistem; o capitão e os remadores não"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o capitão tenta FUGIR pela água, de noite"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "RENDEM-SE: o capitão manda baixar as armas",
-     "txt": "[1] → RENDEM-SE: o capitão manda baixar as armas"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
   "PG35": {
    "id": "PG35",
    "dia": 433,
@@ -20854,6 +19746,1341 @@
     }
    ],
    "hora_rolado": "22:04:08"
+  },
+  "CO03": {
+   "id": "CO03",
+   "dia": 502,
+   "hora": "22:33:43",
+   "titulo": "A COLHEITA DE LEVIS DEPOIS DA GEADA (5a: a casa paga braços, 300 de ouro; noite do 502 e manhã do 503; a geada cedo do 502 queimou a ponta do campo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a geada volta na noite e queima metade do que restava: Levis Comida −1 até o 516"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 4,
+     "res": "colhe-se quase tudo a tempo: nada pesa"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "tudo no celeiro antes do sol, e Levis vê a casa pagar no frio: Levis Ordem +1 até o 509"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "colhe-se quase tudo a tempo: nada pesa",
+     "txt": "[4] → colhe-se quase tudo a tempo: nada pesa"
+    }
+   ],
+   "hora_rolado": "22:33:43"
+  },
+  "AL03": {
+   "id": "AL03",
+   "dia": 502,
+   "hora": "22:33:43",
+   "titulo": "A RESPOSTA DA ALMISION (a carta do rei com a escolha da aula: DESFAZER O DIA, Tempo 6º; vai pelo corvo dela, que anda perto da casa; o rei parte para Lumade no 503)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um homem dela espera o rei na Fornalha, em Ireviel (a aula na volta)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 5,
+     "res": "o corvo acha o rei na estrada de Lumade em 1d3 dias, e um homem dela ensina numa noite de acampamento"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "ELA MESMA vem, na estrada de Lumade, em 1d3 dias: ensina, e quer falar com o rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "um homem dela espera o rei na Fornalha, em Ireviel (a aula na volta)",
+     "txt": "[2] → um homem dela espera o rei na Fornalha, em Ireviel (a aula na volta)"
+    }
+   ],
+   "hora_rolado": "22:33:43"
+  },
+  "504-laco-quem": {
+   "id": "504-laco-quem",
+   "dia": 504,
+   "hora": "22:34:08",
+   "titulo": "LAÇO da semana: quem",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "o HERKALD"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a NOULIEL"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TILDE"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o ULURVE"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a BRARA"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a AELIAE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a TILDE",
+     "txt": "[3] → a TILDE"
+    }
+   ],
+   "hora_rolado": "22:34:08"
+  },
+  "504-laco": {
+   "id": "504-laco",
+   "dia": 504,
+   "hora": "22:34:08",
+   "titulo": "LAÇO da semana: o quê",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATRITO"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "MOMENTO"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "MOMENTO",
+     "txt": "[6] → MOMENTO"
+    }
+   ],
+   "hora_rolado": "22:34:08"
+  },
+  "504-chamado": {
+   "id": "504-chamado",
+   "dia": 504,
+   "hora": "22:34:08",
+   "titulo": "CHAMADO (chega alguém digno à casa?)",
+   "dado": [
+    1,
+    20,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 12,
+     "res": "ninguém digno"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "chega 1"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 24,
+     "res": "chegam 2"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 24,
+     "res": "SURPRESA",
+     "txt": "[20] +4 = 24 → SURPRESA (20 NATURAL)"
+    }
+   ],
+   "hora_rolado": "22:34:08"
+  },
+  "504-vinculos": {
+   "id": "504-vinculos",
+   "dia": 504,
+   "hora": "22:34:08",
+   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "Nouliel–Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "Tilde–Iorin"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "Moreth–Eiagrir"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "Krernos–Graur"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "Thuron–Erymir"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "Brara–Thugek"
+    }
+   ],
+   "oculto": false,
+   "x": 2,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "Moreth–Eiagrir",
+     "txt": "#1 [3] → Moreth–Eiagrir"
+    },
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "Tilde–Iorin",
+     "txt": "#2 [2] → Tilde–Iorin"
+    }
+   ],
+   "hora_rolado": "22:34:08"
+  },
+  "EN03": {
+   "id": "EN03",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "O ENCONTRO NA ESTRADA, DIA 503 (o primeiro dia a oeste de Levis, as colinas; geada e vento forte; o rei, o Moreth, o Eiagrir, a Eliane, o Gonde e os 10, a Matriz e o Martelo numa carroça)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "gente de Lumade vindo para o leste: famílias do vale de cima que o Círculo da Areia Cantante tomou (o que contam)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "uma caravana de grão de Levis a Lumade (a rota aberta no 502), parada com um eixo partido; pede escolta"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o rastro do KROTHOS (Lendário de Levis) atravessa a estrada, fresco: ossos de boi e árvores partidas"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um cavaleiro sem bandeira segue o grupo de longe e some quando é visto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "gente de Lumade vindo para o leste: famílias do vale de cima que o Círculo da Areia Cantante tomou (o que contam)",
+     "txt": "[2] → gente de Lumade vindo para o leste: famílias do vale de cima que o Círculo da Areia Cantante tomou (o que contam)"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "EN04": {
+   "id": "EN04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "O ENCONTRO NA ESTRADA, DIA 504 (a meio caminho de Lumade; lua cheia; nublado)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "uma aldeia de estrada pede justiça ao rei: homens do Celocus levaram o grão deles para Lumade (a fome de lá)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "um MENSAGEIRO DO CELOCUS, vindo a Levis atrás do rei, com uma carta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "uma patrulha do CÍRCULO DA AREIA CANTANTE (a guilda que tomou o vale de cima) cobra pedágio na estrada"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "caçadores com um bicho morto que não conhecem (material à venda)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "EMBOSCADA: gente paga pelos conselheiros da Liga, com o ZUBACCA (o capitão que fugiu do vau), atrás da Matriz (a luta, G9)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "SURPRESA (gerador novidade)",
+     "txt": "[6] → SURPRESA (gerador novidade)"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "EN05": {
+   "id": "EN05",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "O ENCONTRO NA ESTRADA, DIA 505 (a borda das terras de Lumade; chuva e lama)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a gente do CELOCUS vem ao encontro do rei (uma escolta de Lumade, pelo pacto do 371)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a ponte do vau de Lumade caiu na chuva: um dia a mais pela margem, ou a passagem a vau com a Matriz em risco (a escolha é do rei)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "um posto do Círculo da Areia Cantante no alto do vale; vê-se a bandeira; ninguém desce"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um velho na beira da estrada que serviu no túmulo das rainhas e fala de Rilge"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um posto do Círculo da Areia Cantante no alto do vale; vê-se a bandeira; ninguém desce",
+     "txt": "[4] → um posto do Círculo da Areia Cantante no alto do vale; vê-se a bandeira; ninguém desce"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MS04": {
+   "id": "MS04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "A MISSÃO QUE BATE À PORTA DO MORETH (o tick 504: a SURPRESA dele, gerador novidade [4]; a missão gerada: Lendária, dificuldade C, levar uma mensagem que outros querem, prazo 5 dias, 1000 XP, 300 de ouro e material do grau; quem oferece, pela ficção)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um mensageiro de Lumade, ferido na estrada, com uma carta que outros querem"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um carroceiro da rota de Lumade, com uma carta para a Brara que alguém já tentou roubar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um homem do CÍRCULO DA AREIA CANTANTE que quer desertar (a guilda rachou: o Liis foi embora), com uma carta para o Celocus"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "um mensageiro de Lumade, ferido na estrada, com uma carta que outros querem",
+     "txt": "[1] → um mensageiro de Lumade, ferido na estrada, com uma carta que outros querem"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MS04b": {
+   "id": "MS04b",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "(OCULTO) O MONSTRO NO CAMINHO DA MENSAGEM DO MORETH (a complicação escondida da missão)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o KROTHOS (Lendário 301, Levis): a fome dele mudou"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um bando dos VRURN (trolls de Yaelane, que assaltam estrada) desceu até a estrada de Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma fera menor de covil (Rara; o bicho.py a gera se a missão andar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um bando dos VRURN (trolls de Yaelane, que assaltam estrada) desceu até a estrada de Lumade",
+     "txt": "[4] → um bando dos VRURN (trolls de Yaelane, que assaltam estrada) desceu até a estrada de Lumade"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "EL04": {
+   "id": "EL04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "A CONSEQUÊNCIA ANTIGA QUE CHEGA À ELIANE (o tick 504: a SURPRESA dela, gerador novidade [11]: algo feito há mais de 30 dias)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o BJORVUNN (a Eliane deve a vida a ele, 308; agente da Lumine pego) manda cobrar a dívida: quer a liberdade"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a TIGRA (Levis, 435) alcança o grupo na estrada, com uma notícia de Levis-baixa para a Eliane"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o GRAUR escreve de Farenta à Eliane (o vínculo dos dois)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a RONDA (o édito de 441): uma das 10 lanças de Levis-baixa foi morta, e a Eliane sabe pela carta da Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um dos que ela prendeu em Ireviel saiu e a procura"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a TIGRA (Levis, 435) alcança o grupo na estrada, com uma notícia de Levis-baixa para a Eliane",
+     "txt": "[3] → a TIGRA (Levis, 435) alcança o grupo na estrada, com uma notícia de Levis-baixa para a Eliane"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "CH04": {
+   "id": "CH04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "O CHAMADO DO 504 (20 natural: SURPRESA; chega a Ireviel alguém digno; o gerador novidade [6]: um culto mostra o sinal)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um do culto do XAATHIS, de dente arrancado, chega em paz e pede para servir a casa (o acordo do 501 correu o rio)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um desertor dos OLHOS PINTADOS (perderam terreno esta semana) chega com o olho lavado e um nome"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o sinal de um culto NOVO (gerador culto) no peito de quem chega"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "um desertor dos OLHOS PINTADOS (perderam terreno esta semana) chega com o olho lavado e um nome",
+     "txt": "[3] → um desertor dos OLHOS PINTADOS (perderam terreno esta semana) chega com o olho lavado e um nome"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "CB04a": {
+   "id": "CB04a",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "(OCULTO) A COBIÇA DO 504: OS AROS DO GRAUR [3] (o Graur em Farenta)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um ladrão tenta em Farenta; o Graur o pega"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o DUBACCO (do conselho do podestà) oferece ouro ao Graur pelos aros"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "só olhos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o DUBACCO (do conselho do podestà) oferece ouro ao Graur pelos aros",
+     "txt": "[4] → o DUBACCO (do conselho do podestà) oferece ouro ao Graur pelos aros"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "CB04b": {
+   "id": "CB04b",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "(OCULTO até acontecer) A COBIÇA DO 504: A ESPADA DO MORETH [3] (o Moreth na estrada de Lumade, com o rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "um ladrão no acampamento, numa noite da estrada (a guarda do Gonde vigia)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "em Lumade, alguém da casa do Celocus pergunta o preço da espada ao Moreth"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "só olhos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "só olhos",
+     "txt": "[5] → só olhos"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "DS04": {
+   "id": "DS04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "O DESASTRE EM IREVIEL (o EVENTO [1] do reino, semana 504; chuva e vento firme; o rei longe, a Nouliel governa)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "INCÊNDIO nos armazéns do cais: o grão e o sal de uma semana (Comida de Ireviel −1 até o 518)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "INCÊNDIO na forja grande (a do Graur e dos capuzes): a forja parada uma semana"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "DESABAMENTO de casas velhas na Ireviel velha, com a chuva: 1d6 mortos"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "DESABAMENTO de um trecho do cais novo (Comércio de Ireviel −1 até o 518)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "DESABAMENTO de um trecho do cais novo (Comércio de Ireviel −1 até o 518)",
+     "txt": "[6] → DESABAMENTO de um trecho do cais novo (Comércio de Ireviel −1 até o 518)"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "PT04": {
+   "id": "PT04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "A PETIÇÃO DO PORTO DE MARASAR AO REI (o EVENTO [19]; a Nouliel recebe; o grão do Porto a 136)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "que a casa venda grão do celeiro de Ireviel a preço velho"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "guarda contra os do Cais de Baixo (inimigos, juntaram gente)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "que a portagem baixe para o peixe"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "que a casa venda grão do celeiro de Ireviel a preço velho",
+     "txt": "[2] → que a casa venda grão do celeiro de Ireviel a preço velho"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "IM04": {
+   "id": "IM04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "DE ONDE VÊM OS IMIGRANTES DE LEVIS (o EVENTO [15]; Levis com Comida 1/4)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "do vale de cima de Lumade (o Círculo tomou as terras deles)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "de Steunn (a Mãe Branca nas estradas)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "de Marasar (a revolta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "de Marasar (a revolta)",
+     "txt": "[6] → de Marasar (a revolta)"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MR03": {
+   "id": "MR03",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "(OCULTO) QUEM SE REBELA EM MARASAR (o EVENTO de mundo do 503, [4] uma cidade se rebela; a notícia chegou INCOMPLETA no 505: falta quem)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a guarda da Liga (os conselheiros) contra a Doge Skotha: tomam o Arsenal"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o povo do porto, pela fome (o grão a 136), contra a Doge"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "os RENDIDOS DE MARASAR (com o patrono novo) tomam o cais"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "os orcs THOG (contratados por alguém) entram, e o bairro de fora se levanta"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a guarda da Liga (os conselheiros) contra a Doge Skotha: tomam o Arsenal",
+     "txt": "[1] → a guarda da Liga (os conselheiros) contra a Doge Skotha: tomam o Arsenal"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MF06": {
+   "id": "MF06",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "QUEM MORRE EM LEVIS (a PRESSÃO cheia do 506, PERTO: morte de figura importante; encadeamento: o mercado reage)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a BRARA, a governadora"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "o UXRAXION, o líder do culto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o GURKA, mestre da Guilda dos Mineiros"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "a CAREA, mestra da Guilda de Levis"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "o ZUTOCCA, nas minas de cima"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um mercador grande de Levis, o maior do grão (gerar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "a CAREA, mestra da Guilda de Levis",
+     "txt": "[4] → a CAREA, mestra da Guilda de Levis"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MF06b": {
+   "id": "MF06b",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "DE QUE MORRE (a morte do 506 em Levis)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "doença ou idade (a febre cinza)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ASSASSINADO (quem e por quê, num dado seguinte)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "acidente (a mina, o rio cheio, a lama)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "um bicho grande (o Krothos ou o Ithvil)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "doença ou idade (a febre cinza)",
+     "txt": "[1] → doença ou idade (a febre cinza)"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MI06": {
+   "id": "MI06",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "IREVIEL: CISMA OU MILAGRE (a PRESSÃO cheia do 506, ALEATÓRIO; encadeamento: SILÊNCIO, ninguém fala disso para fora; a tempestade do 506)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "MILAGRE: um doente da febre do pó, que a Cisterna não cura, amanhece são, e o povo diz que foi a Cisterna"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CISMA na Mão Queimada de Ireviel: metade diz que o rei deixou a Mamiltia morrer, metade não"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "CISMA no templo da Luz: um sacerdote prega que a Matriz é coisa de deus e não de rei"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "a forja santa da Mão Queimada apaga sozinha na tempestade"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "MILAGRE: um doente da febre do pó, que a Cisterna não cura, amanhece são, e o povo diz que foi a Cisterna",
+     "txt": "[2] → MILAGRE: um doente da febre do pó, que a Cisterna não cura, amanhece são, e o povo diz que foi a Cisterna"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "CE04": {
+   "id": "CE04",
+   "dia": 506,
+   "hora": "22:38:02",
+   "titulo": "(OCULTO até o 507) O REVÉS DO CELOCUS (o mundo vivo do 504: sofre um revés; a notícia no 507, com o rei em Lumade)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "FERIDO: um atentado na casa dele"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "PERDA: uma caravana grande de ouro e grão sumiu na estrada do sul"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "TRAIÇÃO de um próximo: o filho dele, de outra cidade, vendeu-se ao Círculo da Areia Cantante"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "PERDA: uma caravana grande de ouro e grão sumiu na estrada do sul",
+     "txt": "[3] → PERDA: uma caravana grande de ouro e grão sumiu na estrada do sul"
+    }
+   ],
+   "hora_rolado": "22:38:02"
+  },
+  "MS04c": {
+   "id": "MS04c",
+   "dia": 506,
+   "hora": "22:39:24",
+   "titulo": "PARA QUEM É A CARTA DO MENSAGEIRO FERIDO (a missão do Moreth; noite do 504, lua cheia, no acampamento; o homem vinha de Lumade para o leste, ferido por algo grande, de garra; prazo 5 dias: até o 509)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "para a BRARA, em Levis (dois dias para trás)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "para a ZOLALLETTA, a embaixadora de Lumade em Ireviel (dois dias a Levis e três de barca: o prazo justo)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "para o REI (o Celocus o chamava): a carta entregue na hora, e a missão vira guardar o mensageiro até Lumade"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "para a BRARA, em Levis (dois dias para trás)",
+     "txt": "[1] → para a BRARA, em Levis (dois dias para trás)"
+    }
+   ],
+   "hora_rolado": "22:39:24"
+  },
+  "TG04": {
+   "id": "TG04",
+   "dia": 506,
+   "hora": "22:39:24",
+   "titulo": "A NOTÍCIA QUE A TIGRA TRAZ DE LEVIS-BAIXA À ELIANE (ela alcança o grupo na estrada, na tarde do 505; saiu de Levis no 503)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o Uxraxion foi visto andar nas estacas de noite, e anda diferente, leve, como outro homem"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "nas minas de cima um dos onze do vau já tosse sangue (a febre cinza); a Mina Fechada pôs os trinta e dois junto"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a gente de Levis-baixa pergunta se o rei volta para fechar o selo, ou se o deixa aberto de vez (o medo do selo)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o Uxraxion foi visto andar nas estacas de noite, e anda diferente, leve, como outro homem",
+     "txt": "[1] → o Uxraxion foi visto andar nas estacas de noite, e anda diferente, leve, como outro homem"
+    }
+   ],
+   "hora_rolado": "22:39:24"
+  },
+  "CL06": {
+   "id": "CL06",
+   "dia": 506,
+   "hora": "22:39:24",
+   "titulo": "COMO O CELOCUS RECEBE O REI (Lumade, entardecer do 506; Lendário 714, 'enriquecer acima de todos', relógio 11/12; o pacto do 371: 40% do túmulo e o anel já dado; a rota de Lumade aberta no 502; a Zolalletta pediu o túmulo aberto 'já' desde o 457)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "FRIO: quer o túmulo aberto amanhã mesmo e os 40% contados antes"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "BEM: a casa dele, mesa posta, e a abertura do túmulo marcada para dali a 1d3 dias"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "COM FESTA, e pede antes do túmulo um favor ao rei (diz qual à mesa)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "FRIO: quer o túmulo aberto amanhã mesmo e os 40% contados antes",
+     "txt": "[1] → FRIO: quer o túmulo aberto amanhã mesmo e os 40% contados antes"
+    }
+   ],
+   "hora_rolado": "22:39:24"
   }
  }
 }

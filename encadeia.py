@@ -162,6 +162,17 @@ def pendencias(dias=7, dia=None):
             out.append(f"⚠ a ficha de combate de {n} é do nível {FC[n]['nivel_ref']}; o nível de hoje é {nv} (encadeia.py sincroniza)")
         if v.get('prova_pendente'):
             out.append(f"⚠ {n}: a Prova da faixa {v['prova_pendente']} ainda por passar (o próximo tick tenta)")
+    R = carrega('reino.json', {'cidades': []})   # 502 (erro achado): mod com chave fora dos pilares ou prazo sem data nunca vence nem conta
+    for c in R.get('cidades', []):
+        for pl, lst in c.get('mods', {}).items():
+            for v, m in lst:
+                if pl not in c.get('pilares', {}):
+                    out.append(f"⚠ {c['nome']}: o modificador '{m[:60]}' está na chave '{pl}', fora dos pilares (não conta)")
+                elif not re.search(r'até o \d+', m) and re.search(r'\bsemanas?\b|\bdias\b|\blua\b', m) and 'enquanto' not in m and 'de vez' not in m:
+                    out.append(f"⚠ {c['nome']} {pl} {v:+d}: '{m[:60]}' tem prazo sem 'até o N' (nunca vence)")
+    fz = carrega('estado.json', {}).get('forcados')   # 503 (G41): o desconto da G6 acaba abaixo de 44
+    if fz and fz.get('n', 0) < 50:
+        out.append(f"⚠ G6/G41: os forçados são {fz['n']}; com menos de 44 o desconto das obras do reino acaba")
     return out
 
 

@@ -1,64 +1,24 @@
 {
- "agua": 39,
+ "agua": 60,
  "hoje": {
   "Ireviel": {
-   "ceu": "chuva",
-   "vento": "calmo"
+   "ceu": "tempestade",
+   "vento": "VENTANIA"
   },
   "o Porto de Marasar": {
-   "ceu": "nublado",
+   "ceu": "neblina",
    "vento": "brisa"
   },
   "Levis": {
-   "ceu": "geada cedo",
-   "vento": "brisa"
+   "ceu": "chuva",
+   "vento": "calmo"
   },
   "Farenta": {
-   "ceu": "nublado",
-   "vento": "brisa"
+   "ceu": "chuva",
+   "vento": "calmo"
   }
  },
  "historia": [
-  {
-   "dia": 463,
-   "tempo": {
-    "Ireviel": "nublado",
-    "o Porto de Marasar": "chuva",
-    "Levis": "nublado",
-    "Farenta": "nublado"
-   },
-   "agua": 28
-  },
-  {
-   "dia": 464,
-   "tempo": {
-    "Ireviel": "chuva",
-    "o Porto de Marasar": "chuva",
-    "Levis": "nublado",
-    "Farenta": "nublado"
-   },
-   "agua": 31
-  },
-  {
-   "dia": 465,
-   "tempo": {
-    "Ireviel": "nublado",
-    "o Porto de Marasar": "chuva",
-    "Levis": "nublado",
-    "Farenta": "nublado"
-   },
-   "agua": 31
-  },
-  {
-   "dia": 466,
-   "tempo": {
-    "Ireviel": "nublado",
-    "o Porto de Marasar": "chuva",
-    "Levis": "limpo",
-    "Farenta": "limpo"
-   },
-   "agua": 31
-  },
   {
    "dia": 467,
    "tempo": {
@@ -418,6 +378,46 @@
     "Farenta": "nublado"
    },
    "agua": 39
+  },
+  {
+   "dia": 503,
+   "tempo": {
+    "Ireviel": "chuva",
+    "o Porto de Marasar": "chuva forte",
+    "Levis": "geada cedo",
+    "Farenta": "limpo"
+   },
+   "agua": 44
+  },
+  {
+   "dia": 504,
+   "tempo": {
+    "Ireviel": "chuva",
+    "o Porto de Marasar": "chuva forte",
+    "Levis": "nublado",
+    "Farenta": "neblina"
+   },
+   "agua": 49
+  },
+  {
+   "dia": 505,
+   "tempo": {
+    "Ireviel": "nublado",
+    "o Porto de Marasar": "chuva forte",
+    "Levis": "chuva",
+    "Farenta": "neblina"
+   },
+   "agua": 53
+  },
+  {
+   "dia": 506,
+   "tempo": {
+    "Ireviel": "tempestade",
+    "o Porto de Marasar": "neblina",
+    "Levis": "chuva",
+    "Farenta": "chuva"
+   },
+   "agua": 60
   }
  ]
 }

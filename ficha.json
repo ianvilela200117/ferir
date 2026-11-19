@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 54520,
+ "cofre": 53547,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 497,
+  "ultima_semana": 504,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -477,6 +477,18 @@
    "valor": 600,
    "motivo": "501: o ouro que sobrou com o ZUTOCCA (a paga dos conselheiros da Liga pela emboscada do vau)",
    "saldo": 54520
+  },
+  {
+   "dia": 502,
+   "valor": -300,
+   "motivo": "503: os braços pagos para colher Levis depois da geada (5a, CO03 [4])",
+   "saldo": 54220
+  },
+  {
+   "dia": 504,
+   "valor": -673,
+   "motivo": "semana: casa 6457 + cidades 1800 − despesa 8930",
+   "saldo": 53547
   }
  ],
  "materiais": {
@@ -513,7 +525,7 @@
    ]
   },
   "shasha": {
-   "kg": 6.4,
+   "kg": 7.4,
    "log": [
     "Dia 406: +1 406: o kg de shasha da Doge (o tratado)",
     "Dia 413: +1 413: o quilo da Doge (tratado)",
@@ -524,7 +536,8 @@
     "Dia 477: -0.2 479: o condutor do encanto Pressa no Cajado de Âmbar",
     "Dia 490: +1 490: o tratado da Doge Skotha cumpre (1 kg de shasha)",
     "Dia 492: -0.2 494: o condutor do Elo de Juramento na Balança",
-    "Dia 495: -0.2 495: o condutor do Apagar nos Aros da Almision"
+    "Dia 495: -0.2 495: o condutor do Apagar nos Aros da Almision",
+    "Dia 506: +1 504: a Doge Skotha cumpre o tratado: 1 kg de shasha (chega a Ireviel)"
    ]
   },
   "zezha": {

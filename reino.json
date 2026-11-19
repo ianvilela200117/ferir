@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 497,
+  "dia": 504,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -31,12 +31,12 @@
   ],
   "relacoes": {
    "a Doge Skotha (Marasar)": 0,
-   "o Clã Hegre": -1,
+   "o Clã Hegre": 0,
    "Steunn": 0,
-   "os Do Junco (o Delta)": -1,
+   "os Do Junco (o Delta)": -2,
    "a Escola Única (Almision)": 0,
    "o Colégio": 5,
-   "a Leliel (o Norte; a Liga é dela)": -3,
+   "a Leliel (o Norte; a Liga é dela)": -4,
    "a Escola Única": 2
   },
   "log": [
@@ -86,9 +86,10 @@
    "476: semana do reino; renda de fora do livro +2150",
    "483: semana do reino; renda de fora do livro +2450",
    "490: semana do reino; renda de fora do livro +2300",
-   "497: semana do reino; renda de fora do livro +2000"
+   "497: semana do reino; renda de fora do livro +2000",
+   "504: semana do reino; renda de fora do livro +1800"
   ],
-  "ultima_semana": 497,
+  "ultima_semana": 504,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -107,9 +108,9 @@
     "Comida": 4,
     "Comércio": 4,
     "Dinheiro": 4,
-    "Saúde": 4,
+    "Saúde": 3,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -129,7 +130,7 @@
      ],
      [
       -1,
-      "a festa da coroação já passou (era só da semana do 301)"
+      "a festa da coroação já passou (era só da semana do 301) · de vez: compensa o +1 da festa que ficou na soma do 308"
      ]
     ],
     "Dinheiro": [
@@ -220,7 +221,8 @@
     "476: Comida 4 · Comércio 4 · Dinheiro 3 · Saúde 4 · Ordem 4 · Defesa 4 · evento [14]",
     "483: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [13]",
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]",
-    "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]"
+    "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
+    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [1]"
    ],
    "obras_feitas": [
     {
@@ -272,12 +274,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 3,
-    "Comércio": 1,
-    "Dinheiro": 3,
+    "Comida": 2,
+    "Comércio": 2,
+    "Dinheiro": 2,
     "Saúde": 4,
-    "Ordem": 2,
-    "Defesa": 4
+    "Ordem": 3,
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -292,10 +294,6 @@
      [
       1,
       "a sobra de grão da várzea nova de Ireviel (451; de vez)"
-     ],
-     [
-      1,
-      "clima: colheita em tempo seco, 5 dias limpos (até o 503)"
      ]
     ],
     "Comércio": [
@@ -376,7 +374,8 @@
     "476: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 3 · Ordem 2 · Defesa 3 · evento [6]",
     "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]",
     "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]",
-    "497: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [11]"
+    "497: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [11]",
+    "504: Comida 2 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [19]"
    ]
   },
   {
@@ -387,19 +386,15 @@
     "Comida": 1,
     "Comércio": 3,
     "Dinheiro": 1,
-    "Saúde": 3,
-    "Ordem": 2,
-    "Defesa": 3
+    "Saúde": 4,
+    "Ordem": 3,
+    "Defesa": 4
    },
    "mods": {
     "Ordem": [
      [
       1,
       "411: CASA FIRME (talento do rei, 150)"
-     ],
-     [
-      -1,
-      "416: a ala do cais do Xaathis leu os doze na muralha como guerra ao culto inteiro (LV16 3); duas semanas"
      ],
      [
       1,
@@ -426,16 +421,14 @@
      [
       1,
       "o Ouvald e o remédio chegaram (405; voto C397c)"
+     ],
+     [
+      1,
+      "G2: duas semanas depois de fechadas as minas de cima (423) (a chave estava sem acento e o reino.py não a contava; acertado no 502) · de vez"
      ]
     ],
     "Defesa": [],
-    "Dinheiro": [],
-    "Saude": [
-     [
-      1,
-      "G2: duas semanas depois de fechadas as minas de cima (423)"
-     ]
-    ]
+    "Dinheiro": []
    },
    "renda": {
     "base": 400,
@@ -472,7 +465,10 @@
     "476: Comida 2 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [10]",
     "483: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 3 · Defesa 4 · evento [19]",
     "490: Comida 2 · Comércio 4 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [14]",
-    "497: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [12]"
+    "497: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [12]",
+    "502 (erro achado): o −1 de Ordem do 416 (duas semanas) nunca venceu: tirado · o +1 de Saúde da G2 (423) estava na chave \"Saude\" e não contava: passado para \"Saúde\"",
+    "504: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [15]",
+    "504: o −1 de Comida do clima (a geada) tirado: os braços pagos salvaram a colheita (CO03 [4], declarado antes); no rolar do 504 ele não mudou nada ([5]−1 = 4 também fica)"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -502,10 +498,10 @@
    "gente": 10000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 3,
+    "Comércio": 4,
     "Dinheiro": 4,
     "Saúde": 4,
-    "Ordem": 3,
+    "Ordem": 4,
     "Defesa": 4
    },
    "mods": {
@@ -562,7 +558,8 @@
     "476: Comida 2 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
     "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]",
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]",
-    "497: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [7]"
+    "497: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [7]",
+    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

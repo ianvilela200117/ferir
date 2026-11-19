@@ -1,4 +1,4 @@
-# RETOMAR — tarde do Dia 502, LEVIS: os doze às minas; o Uxraxion recusa o selo (MOTOR 9b: G1 a G40)
+# RETOMAR — tarde do Dia 502, LEVIS: os doze às minas; o Uxraxion recusa o selo (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).

@@ -369,6 +369,23 @@ def um_dia(estrada, limite):
         n1, r1, err = roda('cresce.py', 'tick', dia)
         C += ['      ' + l for l in n1] or ['      ninguém sobe nesta semana' + (f' (falhou: {err})' if err else '')]
         R += ['    ' + l for l in r1]
+        # 503 (G41, palavra do rei): os forçados nos piores trabalhos: o dado da semana (morte e fuga), rolado e lançado aqui
+        fz = e.get('forcados')
+        if fz and fz.get('piores') and fz.get('n', 0) > 0:
+            r = d(6)
+            if r == 1:
+                m = min(fz['n'], d(3)); fz['n'] -= m; txt = f'[1] morrem {m} (o pó, a pedra, a água)'
+            elif r == 2:
+                f2 = d(6)
+                if f2 <= 2:
+                    q = min(fz['n'], d(3)); fz['n'] -= q; txt = f'[2] tentam fugir · d6 [{f2}]: {q} ESCAPAM (à solta; o Mestre diz onde e de que grupo)'
+                else:
+                    txt = f'[2] tentam fugir · d6 [{f2}]: a guarda pega (o Mestre decide a pena com o rei)'
+            else:
+                txt = f'[{r}] a semana passa sem morte nem fuga'
+            fz.setdefault('log', []).append(f'{dia}: {txt} → {fz["n"]}')
+            C.append(f"   [13c] OS FORÇADOS NOS PIORES TRABALHOS (G41) 1d6 {txt} → {fz['n']} servindo")
+            R.append(f"  ⛏ forçados (G41): {txt} → {fz['n']}" + ('  ⚠ abaixo de 44 o desconto da G6 acaba' if fz['n'] < 44 else ''))
         # 502 (G39): o Despertar roda toda semana (rola só o que falta; quem já tem Dom não rola de novo)
         C.append('   [13b] O DESPERTAR (despertar.py rola, G39: quem passou de 100/200/300 e ainda não tem o Dom):')
         nd, _, err = roda('despertar.py', 'rola')

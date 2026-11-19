@@ -31,18 +31,21 @@
   "motivo": ""
  },
  "Moreth": {
-  "lugar": "Levis (434)",
-  "desde": 434,
+  "lugar": "Lumade",
+  "chega": 506,
+  "desde": 502,
   "motivo": ""
  },
  "Eiagrir": {
-  "lugar": "Levis (434)",
-  "desde": 434,
+  "lugar": "Lumade",
+  "chega": 506,
+  "desde": 502,
   "motivo": ""
  },
  "Eliane": {
-  "lugar": "Levis (434)",
-  "desde": 434,
+  "lugar": "Lumade",
+  "chega": 506,
+  "desde": 502,
   "motivo": ""
  }
 }

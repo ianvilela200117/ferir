@@ -5,7 +5,7 @@ Este arquivo é lido sozinho no começo de cada sessão. Ele aponta para as regr
 
 ## Ao abrir a sessão (antes de responder qualquer coisa do jogo)
 1. Leia `MESTRE.md` inteiro (as instruções do Mestre e as regras do jogador).
-2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G40** valem sempre (G39: os encadeamentos do `encadeia.py`; G40: o foco com feitiço que o rei não sabe).
+2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G41** valem sempre (G39: os encadeamentos do `encadeia.py`; G40: o foco com feitiço que o rei não sabe; G41: os forçados nos piores trabalhos).
 3. Leia `RETOMAR_DIA407.md` (o nome é antigo; é o arquivo de retomada do ÚLTIMO turno): o que foi respondido, os ocultos guardados e as **PERGUNTAS ABERTAS**.
 4. Rode `python3 contexto.py` e leia o `BRIEFING.md`; leia o bloco do topo de "## Pendentes que Ferir conhece" no `estado_vivo.md`.
 5. Rode `python3 tick.py status` para saber o dia, a hora e a pressão.

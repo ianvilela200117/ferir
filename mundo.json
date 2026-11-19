@@ -3905,6 +3905,75 @@
    "leitura": "os mortos se mexem",
    "resumo": "FENÔMENO MÁGICO: a coberta afina: os mortos se mexem — Haula (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 503,
+   "d20": 1,
+   "o_que": "GUERRA OU ESCARAMUÇA entre dois poderes (1d6: 1-2 a Liga contra alguém · 3 dois clãs · 4 uma cidade se rebela · 5 bandidos viram exército · 6 monstros contra homens) · 1d6 [4]",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 505,
+   "chegada": "[2] em 1d3 [2] dias",
+   "leitura": "uma cidade se rebela",
+   "resumo": "GUERRA OU ESCARAMUÇA entre dois poderes: uma cidade se rebela — Marasar (a Liga e o Doge)",
+   "toca": true
+  },
+  {
+   "dia": 504,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [14] o brejo do oeste (a Torre Afogada)",
+   "detalhe": "",
+   "noticia_chega": 505,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — o brejo do oeste (a Torre Afogada)",
+   "toca": false
+  },
+  {
+   "dia": 504,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [5]",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "",
+   "noticia_chega": 505,
+   "chegada": "[3] em 1d3 [1] dias",
+   "leitura": "um portal",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: um portal — Gogrunn (as minas)",
+   "toca": false
+  },
+  {
+   "dia": 504,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "",
+   "noticia_chega": 510,
+   "chegada": "[4] em 1d6 [6] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Lumade",
+   "toca": true
+  },
+  {
+   "dia": 505,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [3]",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": 509,
+   "chegada": "[4] em 1d6 [4] dias",
+   "leitura": "abre",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — a costa (Ireviel–Marasar)",
+   "toca": true
+  },
+  {
+   "dia": 506,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "1d12 [5] um lugar novo é descoberto (gerar lugar)",
+   "noticia_chega": 506,
+   "chegada": "[1] hoje",
+   "resumo": "SURPRESA: o gerador de novidade — Lumade",
+   "toca": true
   }
  ]
 }

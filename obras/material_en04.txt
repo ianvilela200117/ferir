@@ -1,0 +1,15 @@
+nome: Ulvil
+categoria: Incomum
+origem: essencia (cinza de incêndio antigo)
+essência: Espinho
+oposta: Fogo
+propriedades: dureza 7 · maleabilidade 5 · condutividade mágica 2
+na forja: Matéria +1 · Processo +1 · aceita infusão até o 2º círculo
+efeitos:
+  na arma: o golpe prende como raiz (Força contra CD 12)
+  na armadura: quem agarra o portador sangra 2
+  na ferramenta: cresce: a peça se conserta 1 de durabilidade por dia
+defeito: floresce na primavera e pesa
+preço: 40-60/kg
+ocorrência: reserva pequena (rolar ao achar o veio ou o ninho)
+————————————————————————————————————————

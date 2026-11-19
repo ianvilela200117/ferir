@@ -1,0 +1,16 @@
+nome: Hassa
+categoria: Épico
+origem: monstro (pena)
+essência: Terra + Podridao
+oposta: Vento
+propriedades: dureza 4 · maleabilidade 3 · condutividade mágica 5
+na forja: Matéria -1 · Processo +0 · aceita infusão até o 5º círculo
+efeitos:
+  na arma: o golpe derruba (Vigor contra CD 16)
+  na armadura: RD +3
+  na ferramenta: +3 em Matéria
+  secundário (Podridao, só ofensa): a ferida infecciona (Vigor contra CD 16)
+defeito: pesa o dobro
+preço: 600-1.000/kg
+ocorrência: reserva pequena (rolar ao achar o veio ou o ninho)
+————————————————————————————————————————
