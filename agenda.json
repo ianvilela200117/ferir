@@ -15503,8 +15503,8 @@
   },
   {
    "id": 77,
-   "texto": "A AULA DA ALMISION (Desfazer o Dia, Tempo 6º): um homem dela espera o rei na FORNALHA, em Ireviel; a aula quando o rei voltar (AL03 [2])",
-   "oculto": false,
+   "texto": "(OCULTO até o rei voltar a Ireviel) A AULA DA ALMISION (Desfazer o Dia, Tempo 6º): um homem dela espera o rei na FORNALHA, em Ireviel; a aula quando o rei voltar (AL03 [2])",
+   "oculto": true,
    "aberto": 502,
    "tocado": 502,
    "fechado": false
