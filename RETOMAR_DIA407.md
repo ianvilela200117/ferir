@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 508, EZMISA, a terceira casa: a laje da segunda fechada, com o Círculo do outro lado (MOTOR 9b: G1 a G42)
+# RETOMAR — noite do Dia 508, a beira de EZMISA: seis presos do Círculo; o posto aceso no alto (MOTOR 9b: G1 a G42)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 508, A BEIRA DE EZMISA, a carroça (fora do túmulo de Ezmisa, limpo; a porta e as aias deixam sair). O rei NÍVEL 52 (XP 134.090; o 53 em 137.900), Int 120, Afinidade 106, PV 265/273, Mana 49/119, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6 (a febre curada pelo Purificar). Com ele: o Moreth 574/610 e o Eiagrir 432/432 (os dois com XP para subir no tick do 511), o Gonde e 2 guardas, a ELIANE de cama (até o 517), a Matriz e o Martelo, o LIVRO DE SANGUE, o NÚCLEO ÉPICO DE VENENO (núcleo para uma Mítica), yelle 10, yomiar 15. SEIS PRESOS DO CÍRCULO DA AREIA CANTANTE: o chefe do posto LIOR (80; npcs.json; grave), 4 homens (nível 50; 1 grave, 3 leves) e o olheiro (ouviu que o livro está na carroça); 1 morto na segunda casa. O MAPA DO VALE DE CIMA (PC09 [3]): os poços que o Círculo cava, numa só linha. Os quatro do Círculo que estavam fora FUGIRAM ao posto do alto com a notícia (CN09r [5], CB09 [1]): o posto ACESO. O eremita Ioduxeth na beira. (OCULTO) O CÍRCULO REAGE no 512 (CI09d [4]; agenda #1050, para; o que faz: rolar no dia). (OCULTO) o comboio quebrado pelos Vrurn (os 24 soltos; a notícia em Lumade no entardecer do 509, #1048). Lumade a meio dia. Cofre 59.567.
+
+Antes (508, a terceira casa):
 Noite do 508, EZMISA, a 3ª casa. O TKORNA MORTO (o núcleo Épico de Veneno, yelle 10, yomiar 15 com a casa). O rei NÍVEL 51 (XP 130.790), PV 263/271, Mana 98/118, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, DOENTE (a FEBRE DA LAMA: −2 em tudo; o Purificar tira: 15 de Mana com vela, 30 sem). O Moreth 574/610, o Eiagrir 432/432. A LAJE DA SEGUNDA CASA DESCEU (a armadilha da laje que fecha a sala: Força CD 29 para abrir, ou ela sobe sozinha em 1 hora): do outro lado, presos, o CHEFE DO POSTO DO CÍRCULO (nível 80) e 5 homens (CI08s [3], CI08t [1]); a única saída de Ezmisa passa pela segunda casa. (OCULTO à casa dentro) LÁ FORA, 4 do Círculo CERCAM A CARROÇA (a Eliane de cama, o Gonde e 2 guardas, o olheiro preso, a Matriz, o Martelo, o livro de sangue): um impasse; querem o olheiro e o núcleo. (OCULTO) o comboio quebrado pelos Vrurn nesta noite (2 guardas mortos; os 24 SOLTOS); a notícia em Lumade no entardecer do 509 (#1048). G42 ESCRITA (a reviravolta do bloco: a primeira deu RV08 [3]). Cofre 59.567.
 
 Antes (508, a sexta casa):
@@ -470,10 +473,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (508, a sexta casa → a terceira): 1b a Visão antes; 'se ganharmos na visão, a' · 2b Fole Firme 1 · o pedido 'uma história mais emocionante, com reviravolta e dificuldades realmente cruéis' (a G42)
 - a G9 (o veneno que dura posto na ficha; voa sem efeito; o sal fora) · a VISÃO (100%; Lei das Caçadas 0,0%) · a luta: o Tkorna morto numa rodada · FB08b FALHA (o rei doente), FB08c EXTRAORDINÁRIO (FV08 [5] o F17) · o despojo · RV08 [3] (os RV08b/c/d não valem) · CI08n 10, CI08ch 80, CI08r [6], CI08s [3], CI08t [1].
 
+## RESPONDIDO (508, a terceira casa → a beira): 1a abrir à força e lutar · 2a o Purificar já · 3b,a a Voz no Vento: avisar o Gonde e ouvir a carroça
+- o Purificar e as Vozes (Mana 98 → 48) · VZ08 [2] · FO09 GANHO (o lote recusou calado o FO09 e o VZ08: anotado; o VZ08 rolado depois com selo.py rola) · CR09 a casa 57 × 40: destroçados · CR09c [6] · CF09 · CR09m [4] · CN09r [5] · CB09 [1] · PC09 [3] · CI09d [4] (oculto) · +3.300 XP: o rei 52 · o erro achado: o relógio dizia 'Dragal' (onde.py agora o segue).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. A SEGUNDA CASA FECHADA (do outro lado, o chefe do posto do Círculo, nível 80, e 5, presos; é a única saída): a) abrir à força (o Moreth: Força CD 29) e lutar com eles lá dentro · b) falar através da pedra (o jogador diz o que quer deles) · c) esperar: em uma hora a laje sobe sozinha, e eles saem antes · d) outra.
-2. A FEBRE DO REI (Doente, −2 em tudo): a) PURIFICAR já (15 de Mana com vela, 30 sem) · b) depois.
-3. A VOZ NO VENTO (10 de Mana; a voz chega a 1 km, ou ouve uma conversa longe): a) ouvir a carroça, lá fora · b) avisar o Gonde · c) não usar.
+1. OS SEIS PRESOS DO CÍRCULO (o chefe Lior grave, 4 homens, o olheiro que sabe do livro): a) levá-los a Lumade (a cidade é do Celocus: 'em Lumade, quem prende é o Celocus') · b) levá-los com a casa, a Ireviel, para o conselho · c) G41: mandá-los às minas de cima de Levis com uma escolta · d) outra.
+2. A NOITE (o posto aceso no alto; o Círculo sabe; Lumade a meio dia): a) voltar já a Lumade, de noite, com os presos e a carroça · b) acampar na beira e partir na aurora · c) subir ao posto do Círculo, no alto, agora · d) outra.
+3. O CHEFE LIOR (grave): a) interrogá-lo já (o mapa dos poços; o que o Círculo quer; o que Meor manda) · b) depois.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 51,
- "xp": 130790,
+ "nivel": 52,
+ "xp": 134090,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 119,
+  "Inteligência": 120,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 105
+  "Afinidade": 106
  },
  "pv": [
-  263,
-  271
+  265,
+  273
  ],
  "mana": [
-  98,
-  118
+  49,
+  119
  ],
  "foco": 16,
  "fortuna": [
@@ -859,7 +859,6 @@
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 10",
   "Dia 483: +1110 483: três bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
   "Dia 483: SOBE ao 11",
   "Dia 484: +1480 484: quatro bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
@@ -918,7 +917,9 @@
   "Dia 508: +3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
   "Dia 508: SOBE ao 51",
   "Dia 508: o PONTO do 51: FOLE FIRME 1 (+2 no Processo em oficina de campanha)",
-  "Dia 508: +980 508: Tkorna (Épico 98; 1 caído(s))"
+  "Dia 508: +980 508: Tkorna (Épico 98; 1 caído(s))",
+  "Dia 508: +3300 508: os do CÍRCULO na segunda casa de Ezmisa (o chefe do posto, 80, e 5, nível 50: destroçados no combate rápido; 1 morto, 5 presos)",
+  "Dia 508: SOBE ao 52"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

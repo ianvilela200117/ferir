@@ -1,0 +1,3 @@
+CD 29 da escala velha → 39 nos dois dados
+teste: [[8], [9]] + 17 + nível 23 = 57 vs 39 (margem +18)
+grau: SUCESSO COM GANHO

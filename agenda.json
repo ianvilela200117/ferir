@@ -1,5 +1,5 @@
 {
- "prox_id": 1050,
+ "prox_id": 1051,
  "itens": [
   {
    "id": 1,
@@ -14931,6 +14931,17 @@
     1,
     "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
    ]
+  },
+  {
+   "id": 1050,
+   "dia": 512,
+   "texto": "(OCULTO até o dia) O CÍRCULO DA AREIA CANTANTE REAGE à prisão do chefe do posto (LIOR) e à casa em Ezmisa com o coração do bicho (CI09d [4], G42: o inimigo pensa; o que faz: rolar no dia)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": false
   }
  ],
  "fios": [

@@ -1,26 +1,5 @@
 {
  "ordem": [
-  "EC45",
-  "PM45",
-  "MC45",
-  "ED45",
-  "FE46",
-  "FE46b",
-  "SM46",
-  "MS46",
-  "EC46",
-  "RG46",
-  "GS46",
-  "OL46",
-  "MA47",
-  "QG47",
-  "MP47",
-  "EC47",
-  "CR47",
-  "448-laco-quem",
-  "448-laco",
-  "448-chamado",
-  "448-vinculos",
   "D48",
   "MH48",
   "SQ48",
@@ -399,1036 +378,30 @@
   "CI08r",
   "CI08s",
   "CI08t",
-  "CI08m"
+  "CI08m",
+  "VZ08",
+  "CR09a1",
+  "CR09b1",
+  "CR09a2",
+  "CR09b2",
+  "CR09a3",
+  "CR09b3",
+  "CR09c",
+  "CR09q",
+  "CR09m",
+  "CF09-1",
+  "CF09-2",
+  "CF09-3",
+  "CF09-4",
+  "CF09-5",
+  "CF09-6",
+  "CN09r",
+  "CB09",
+  "PC09",
+  "PC09b",
+  "CI09d"
  ],
  "selos": {
-  "EC45": {
-   "id": "EC45",
-   "dia": 445,
-   "hora": "12:47:05",
-   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 445 (às muralhas ao pôr do sol)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cerca e não toca"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "as raízes racham a muralha de fora: Defesa −1 e Comida −1"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o ESPINHEIRO passa por cima da muralha num bairro: 2d6 × 5 mortos e Ordem −1"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "as raízes racham a muralha de fora: Defesa −1 e Comida −1",
-     "txt": "[5] → as raízes racham a muralha de fora: Defesa −1 e Comida −1"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
-  "PM45": {
-   "id": "PM45",
-   "dia": 445,
-   "hora": "12:47:05",
-   "titulo": "A PENA QUEIMADA AO PÔR DO SOL DO 445: QUANDO VEM A MAMILTIA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "na mesma noite, uma coluna de fogo no cais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "na aurora do 446"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "na mesma noite, uma coluna de fogo no cais",
-     "txt": "[2] → na mesma noite, uma coluna de fogo no cais"
-    }
-   ],
-   "hora_rolado": "12:47:05"
-  },
-  "MC45": {
-   "id": "MC45",
-   "dia": 445,
-   "hora": "12:47:28",
-   "titulo": "O QUE A MAMILTIA FAZ AO CHEGAR A FARENTA (noite do 445)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "entra no fogo do cerco"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "entra no cerco e quer o sal e o fogo juntos"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "sai sozinha à muralha nesta noite"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "sai sozinha à muralha nesta noite",
-     "txt": "[6] → sai sozinha à muralha nesta noite"
-    }
-   ],
-   "hora_rolado": "12:47:28"
-  },
-  "ED45": {
-   "id": "ED45",
-   "dia": 445,
-   "hora": "12:48:05",
-   "titulo": "A DECISÃO DA ELIANE EM LEVIS (a régua da Lei das Caçadas deu 95% de morte às lanças: não vai sem o rei)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cumpre a lei e espera o rei: a missão falha no 449"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "a lei protege os nossos, não os de fora: põe o contrato de 10.000 na praça de Levis"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "cumpre a lei e espera o rei: a missão falha no 449",
-     "txt": "[1] → cumpre a lei e espera o rei: a missão falha no 449"
-    }
-   ],
-   "hora_rolado": "12:48:05"
-  },
-  "FE46": {
-   "id": "FE46",
-   "dia": 445,
-   "hora": "13:01:04",
-   "titulo": "A SEGUNDA FASE DA ELAEVA AOS 50% (G33; OCULTA)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "troca de Essência"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "chama crias"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o covil muda"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "recua ao mato e a luta recomeça noutro lugar"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "perde a fraqueza conhecida e ganha outra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "fala: oferece um trato"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "troca de Essência",
-     "txt": "[1] → troca de Essência"
-    }
-   ],
-   "hora_rolado": "13:01:04"
-  },
-  "FE46b": {
-   "id": "FE46b",
-   "dia": 445,
-   "hora": "13:01:15",
-   "titulo": "A FRAQUEZA NOVA DA ELAEVA DEPOIS DA TROCA DE ESSÊNCIA (OCULTA; o fogo deixa de dobrar)",
-   "dado": [
-    1,
-    8,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Gelo"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Raio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Luz"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Água"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Vida"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Som"
-    },
-    {
-     "tipo": "num",
-     "a": 7,
-     "b": 7,
-     "res": "Sal (a de sempre: só ela fica)"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 8,
-     "res": "Fogo (a troca não muda a fraqueza)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "Vida",
-     "txt": "[5] → Vida"
-    }
-   ],
-   "hora_rolado": "13:01:15"
-  },
-  "SM46": {
-   "id": "SM46",
-   "dia": 445,
-   "hora": "13:01:34",
-   "titulo": "A MAMILTIA ACREDITA NO QUE O REI VIU? (o pedido de esperar a aurora; a alavanca é a prova da Visão; a última palavra dele a ela estava errada)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "NÃO acredita e sai"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "ACREDITA e espera a aurora e o fogo dos barcos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ACREDITA e espera a aurora e o fogo dos barcos",
-     "txt": "[5] → ACREDITA e espera a aurora e o fogo dos barcos"
-    }
-   ],
-   "hora_rolado": "13:01:34"
-  },
-  "MS46": {
-   "id": "MS46",
-   "dia": 446,
-   "hora": "13:03:03",
-   "titulo": "A MAMILTIA COM A TEMPESTADE DA AURORA DO 446",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "sai sozinha agora"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "espera a tempestade passar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "espera a tempestade passar",
-     "txt": "[4] → espera a tempestade passar"
-    }
-   ],
-   "hora_rolado": "13:03:03"
-  },
-  "EC46": {
-   "id": "EC46",
-   "dia": 446,
-   "hora": "13:03:03",
-   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 446",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cerca e não toca"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "as raízes racham mais a muralha: Defesa −1 a mais e Comida −1 a mais"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o ESPINHEIRO passa por cima da muralha num bairro: 2d6 × 5 mortos e Ordem −1"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "cerca e não toca",
-     "txt": "[3] → cerca e não toca"
-    }
-   ],
-   "hora_rolado": "13:03:03"
-  },
-  "RG46": {
-   "id": "RG46",
-   "dia": 446,
-   "hora": "13:03:04",
-   "titulo": "O RECADO À GUILDA PELA ESTRADA DA COSTA NA TEMPESTADE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "atrasa um dia (Ireviel no 449)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "chega a Ireviel no 448"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "chega a Ireviel no 448",
-     "txt": "[2] → chega a Ireviel no 448"
-    }
-   ],
-   "hora_rolado": "13:03:04"
-  },
-  "GS46": {
-   "id": "GS46",
-   "dia": 446,
-   "hora": "13:03:04",
-   "titulo": "(OCULTO) EM QUANTOS DIAS O GOLPE OU A SUCESSÃO DE FARENTA APARECE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "tantos dias"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "tantos dias",
-     "txt": "[1] → tantos dias"
-    }
-   ],
-   "hora_rolado": "13:03:04"
-  },
-  "OL46": {
-   "id": "OL46",
-   "dia": 446,
-   "hora": "16:23:01",
-   "titulo": "O ÓLEO DE ESSÊNCIA (FOGO) EM FARENTA, de noite",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "nenhum frasco"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "1d6 frascos na Botica Velha, 150 cada"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "uma Mestre Alquimista de Farenta faz 2d6 por dia, 150 cada"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "nenhum frasco",
-     "txt": "[3] → nenhum frasco"
-    }
-   ],
-   "hora_rolado": "16:23:02"
-  },
-  "MA47": {
-   "id": "MA47",
-   "dia": 447,
-   "hora": "16:23:44",
-   "titulo": "A MIE NA TEMPESTADE DO 447",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a barca espera o tempo"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "marcha pela estrada da costa: chega ao fim do 447 com o sal"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "a barca espera o tempo",
-     "txt": "[3] → a barca espera o tempo"
-    }
-   ],
-   "hora_rolado": "16:23:44"
-  },
-  "QG47": {
-   "id": "QG47",
-   "dia": 447,
-   "hora": "16:23:44",
-   "titulo": "(OCULTO) O GOLPE OU A SUCESSÃO EM FARENTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o podestà Tirello morre"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a Guarda do Pedágio toma a porta do sul"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a Botica Velha compra o conselho"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a gente do morto de 427 se levanta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "os Olhos Pintados levam uma criança e o povo culpa o podestà"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "alguém quer entregar a cidade à Elaeva"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "os Olhos Pintados levam uma criança e o povo culpa o podestà",
-     "txt": "[5] → os Olhos Pintados levam uma criança e o povo culpa o podestà"
-    }
-   ],
-   "hora_rolado": "16:23:44"
-  },
-  "MP47": {
-   "id": "MP47",
-   "dia": 447,
-   "hora": "16:23:44",
-   "titulo": "A PACIÊNCIA DA MAMILTIA NO SEGUNDO DIA DE TEMPESTADE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "sai sozinha à praia"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "espera"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "espera",
-     "txt": "[2] → espera"
-    }
-   ],
-   "hora_rolado": "16:23:44"
-  },
-  "EC47": {
-   "id": "EC47",
-   "dia": 447,
-   "hora": "16:23:44",
-   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 447",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cerca e não toca"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais",
-     "txt": "[4] → as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
-    }
-   ],
-   "hora_rolado": "16:23:44"
-  },
-  "CR47": {
-   "id": "CR47",
-   "dia": 447,
-   "hora": "16:35:55",
-   "titulo": "(OCULTO) ONDE ESTÁ A CRIANÇA LEVADA PELOS OLHOS PINTADOS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ainda na cidade, num porão perto da porta do sul"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "na estrada sul, a meio dia"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "vendida a alguém de dentro de Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "foi com eles por vontade (a promessa de cura)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ainda na cidade, num porão perto da porta do sul",
-     "txt": "[1] → ainda na cidade, num porão perto da porta do sul"
-    }
-   ],
-   "hora_rolado": "16:35:55"
-  },
-  "448-laco-quem": {
-   "id": "448-laco-quem",
-   "dia": 448,
-   "hora": "16:36:08",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o HERKALD",
-     "txt": "[1] → o HERKALD"
-    }
-   ],
-   "hora_rolado": "16:36:08"
-  },
-  "448-laco": {
-   "id": "448-laco",
-   "dia": 448,
-   "hora": "16:36:08",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "MOMENTO",
-     "txt": "[5] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "16:36:08"
-  },
-  "448-chamado": {
-   "id": "448-chamado",
-   "dia": 448,
-   "hora": "16:36:08",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      14
-     ],
-     "total": 17,
-     "res": "chega 1",
-     "txt": "[14] +3 = 17 → chega 1"
-    }
-   ],
-   "hora_rolado": "16:36:08"
-  },
-  "448-vinculos": {
-   "id": "448-vinculos",
-   "dia": 448,
-   "hora": "16:36:08",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Moreth–Eiagrir",
-     "txt": "#1 [3] → Moreth–Eiagrir"
-    },
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Moreth–Eiagrir",
-     "txt": "#2 [3] → Moreth–Eiagrir"
-    }
-   ],
-   "hora_rolado": "16:36:08"
-  },
   "D48": {
    "id": "D48",
    "dia": 448,
@@ -21255,6 +20228,888 @@
     }
    ],
    "hora_rolado": "19:11:25"
+  },
+  "VZ08": {
+   "id": "VZ08",
+   "dia": 508,
+   "hora": "20:47:29",
+   "titulo": "OS QUATRO DO CÍRCULO EM VOLTA DA CARROÇA OUVEM A VOZ DO REI (que gente deles entrou e a casa sabe; ainda não sabem que o chefe está preso; o Gonde de lança atravessada)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "dois descem a Ezmisa atrás do chefe; dois ficam na carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "apertam o Gonde: querem o olheiro AGORA, em troca de irem embora"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "esperam o chefe, de arma na mão"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "dois descem a Ezmisa atrás do chefe; dois ficam na carroça",
+     "txt": "[2] → dois descem a Ezmisa atrás do chefe; dois ficam na carroça"
+    }
+   ],
+   "hora_rolado": "20:48:11"
+  },
+  "CR09a1": {
+   "id": "CR09a1",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 1: A CASA (d20 + 50)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 7,
+     "res": "o dado",
+     "txt": "[7] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:37"
+  },
+  "CR09b1": {
+   "id": "CR09b1",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 1: OS DO CÍRCULO (d20 + 36)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o dado",
+     "txt": "[4] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:37"
+  },
+  "CR09a2": {
+   "id": "CR09a2",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 2: A CASA (d20 + 48, menos o teto perdido)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "o dado",
+     "txt": "[18] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09b2": {
+   "id": "CR09b2",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 2: OS DO CÍRCULO (d20 + 36, menos o teto perdido)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      20
+     ],
+     "total": 20,
+     "res": "o dado",
+     "txt": "[20] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09a3": {
+   "id": "CR09a3",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 3: A CASA",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "o dado",
+     "txt": "[17] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09b3": {
+   "id": "CR09b3",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMBATE RÁPIDO NA SEGUNDA CASA, RODADA 3: OS DO CÍRCULO",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "o dado",
+     "txt": "[18] → o dado"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09c": {
+   "id": "CR09c",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "COMO OS DO CÍRCULO QUEBRAM (vale se forem destroçados; a sala aberta para a 1ª casa)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o CHEFE e uns dois correm pela primeira casa para a porta"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o CHEFE larga a arma e se rende; os outros caem"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ninguém escapa: caem todos"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "ninguém escapa: caem todos",
+     "txt": "[6] → ninguém escapa: caem todos"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09q": {
+   "id": "CR09q",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "QUEM DA CASA CAI (vale se a casa perder gente)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o rei"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o Moreth"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o Eiagrir"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o Eiagrir",
+     "txt": "[6] → o Eiagrir"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CR09m": {
+   "id": "CR09m",
+   "dia": 508,
+   "hora": "20:48:37",
+   "titulo": "O NÍVEL DOS CINCO HOMENS DO CHEFE (para o XP; os saqueadores do Círculo, 30 a 60)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "35"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "40"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "45"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "50"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "55"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "60"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "50",
+     "txt": "[4] → 50"
+    }
+   ],
+   "hora_rolado": "20:48:38"
+  },
+  "CF09-1": {
+   "id": "CF09-1",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O CHEFE DO POSTO DO CÍRCULO CAÍDO (nível 80; CR09)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CF09-2": {
+   "id": "CF09-2",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O HOMEM DO CÍRCULO CAÍDO Nº 1 (nível 50)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "leve (preso)",
+     "txt": "[5] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CF09-3": {
+   "id": "CF09-3",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O HOMEM DO CÍRCULO CAÍDO Nº 2",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CF09-4": {
+   "id": "CF09-4",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O HOMEM DO CÍRCULO CAÍDO Nº 3",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "leve (preso)",
+     "txt": "[6] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CF09-5": {
+   "id": "CF09-5",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O HOMEM DO CÍRCULO CAÍDO Nº 4",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "morto",
+     "txt": "[1] → morto"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CF09-6": {
+   "id": "CF09-6",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "O HOMEM DO CÍRCULO CAÍDO Nº 5",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "leve (preso)",
+     "txt": "[5] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CN09r": {
+   "id": "CN09r",
+   "dia": 508,
+   "hora": "20:48:57",
+   "titulo": "OS DOIS QUE DESCEM CHEGAM À PRIMEIRA CASA (declarado acima, CN09)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "lutam"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "rendem-se"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "fogem pela porta para o posto, com a notícia"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "fogem pela porta para o posto, com a notícia",
+     "txt": "[5] → fogem pela porta para o posto, com a notícia"
+    }
+   ],
+   "hora_rolado": "20:48:57"
+  },
+  "CB09": {
+   "id": "CB09",
+   "dia": 508,
+   "hora": "20:49:30",
+   "titulo": "OS DOIS DO CÍRCULO NA CARROÇA VEEM OS OUTROS DOIS FUGIREM PARA O POSTO (o Gonde e os 2 guardas, a Eliane de cama, o olheiro preso)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "vão junto para o posto (a carroça fica livre)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ficam, de arma na mão, até o rei sair"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "vão junto para o posto (a carroça fica livre)",
+     "txt": "[1] → vão junto para o posto (a carroça fica livre)"
+    }
+   ],
+   "hora_rolado": "20:49:30"
+  },
+  "PC09": {
+   "id": "PC09",
+   "dia": 508,
+   "hora": "20:49:30",
+   "titulo": "O QUE O CHEFE DO POSTO LEVA CONSIGO (a casa revista os presos ao sair)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ORDENS DO CÍRCULO com o selo de MEOR, o chefe da guilda: tomar Ezmisa e o coração do bicho (a obra de tomar Lumade)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um MAPA do vale de cima, com os poços que o Círculo cava"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "OURO do Círculo (1d6 × 100) e nada escrito"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "um MAPA do vale de cima, com os poços que o Círculo cava",
+     "txt": "[3] → um MAPA do vale de cima, com os poços que o Círculo cava"
+    }
+   ],
+   "hora_rolado": "20:49:30"
+  },
+  "PC09b": {
+   "id": "PC09b",
+   "dia": 508,
+   "hora": "20:49:30",
+   "titulo": "O OURO DO CHEFE (vale só se o PC09 der 5-6)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o número × 100"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o número × 100",
+     "txt": "[5] → o número × 100"
+    }
+   ],
+   "hora_rolado": "20:49:30"
+  },
+  "CI09d": {
+   "id": "CI09d",
+   "dia": 508,
+   "hora": "20:49:30",
+   "titulo": "(OCULTO até o dia) QUANDO O CÍRCULO REAGE (G42, o inimigo pensa: a notícia sobe ao posto nesta noite; a guilda é a força do posto e a de Meor, em Yaelane)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "em tantos dias, a contar do 508 (o que faz: rolar no dia)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "em tantos dias, a contar do 508 (o que faz: rolar no dia)",
+     "txt": "[4] → em tantos dias, a contar do 508 (o que faz: rolar no dia)"
+    }
+   ],
+   "hora_rolado": "20:49:30"
   }
  }
 }

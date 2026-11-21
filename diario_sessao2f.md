@@ -2370,3 +2370,37 @@ O Moreth encostou o ouvido na pedra. "Cinco, seis. E um que fala como chefe."
 A única saída de Ezmisa passava por ali.
 
 - **Parada:** noite do 508, Ezmisa, a terceira casa. A segunda casa fechada, com gente do Círculo presa do outro lado.
+
+### A laje, a terceira casa
+O rei pôs as duas mãos na laje e falou a palavra do Purificar para dentro de si. O peso atrás dos olhos foi embora como água que escorre. Custou mais do que devia: não havia vela, só a tocha, e a tocha não serve à Luz.
+
+Depois mandou a voz pelo vento, até a beira do brejo. "Gonde. Gente do Círculo entrou atrás de nós. Segura a carroça e o preso." E ficou ouvindo de volta.
+
+Ouviu o Gonde respirar. Ouviu um homem que não era da casa rir baixo e dizer que o chefe e cinco tinham descido atrás do rei, e que voltariam com o coração. Ouviu outro mandar dois descerem também.
+
+"Quatro na carroça", disse o rei. "Agora dois."
+
+O Moreth encostou o ombro na laje, o Eiagrir e o rei empurraram junto. A pedra subiu de uma vez, com um som de pilão.
+
+Do outro lado, seis homens de casaco cor de areia se viravam ainda, as espadas meio fora. O chefe era um homem grosso, de barba raspada e um cordão de dentes de bicho no pescoço.
+
+A luta não teve começo. O Moreth entrou antes de a laje acabar de subir. O primeiro homem caiu sem levantar a espada. O Eiagrir varreu dois com a haste da lança contra a parede. O chefe chegou a ferir o ar, e o Moreth lhe quebrou o braço da espada com a maça, depois o joelho.
+
+Um rapaz tentou correr para a primeira casa. A lança do Eiagrir o pegou nas costas, e ele não levantou mais.
+
+Do fundo, das bandas da primeira casa, vieram passos correndo e pararam. Dois homens olharam, viram a gente deles no chão e o rei de pé, e voltaram correndo para a porta.
+
+O Eiagrir saltou atrás deles. Quando chegou à primeira casa, os dois já tinham passado entre as aias e saído pela porta, e o brejo os engoliu no escuro.
+
+No cinto do chefe havia um couro dobrado: um mapa do vale de cima, com poços marcados a carvão, um ao lado do outro, todos numa só linha.
+
+### A beira do brejo
+A carroça estava sozinha com o Gonde e os dois guardas. Os dois que a vigiavam tinham subido a encosta com os dois que fugiram, quatro tochas indo para o posto.
+
+"Saíram correndo quando os dois passaram", disse o Gonde. "Não quiseram mais nada."
+
+A Eliane se ergueu num cotovelo, na carroça, e contou os presos que vinham amarrados: cinco, e o olheiro.
+
+No alto do vale, as tochas do posto se acenderam todas de uma vez.
+
+- **Parada:** noite do 508, a beira de Ezmisa. Seis presos do Círculo. O posto aceso.

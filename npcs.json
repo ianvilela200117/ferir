@@ -3836,7 +3836,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 27395,
+  "xp": 30695,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3960,7 +3960,8 @@
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
    "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
    "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
-   "+980 508: Tkorna (Épico 98; 1 caído(s))"
+   "+980 508: Tkorna (Épico 98; 1 caído(s))",
+   "+3300 508: os do Círculo na segunda casa de Ezmisa (CR09)"
   ],
   "tracos": [
    "LEAL",
@@ -5850,7 +5851,7 @@
  },
  "Eiagrir": {
   "nivel": 130,
-  "xp": 17678,
+  "xp": 20978,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5940,7 +5941,8 @@
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
    "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
    "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
-   "+980 508: Tkorna (Épico 98; 1 caído(s))"
+   "+980 508: Tkorna (Épico 98; 1 caído(s))",
+   "+3300 508: os do Círculo na segunda casa de Ezmisa (CR09)"
   ],
   "ultima_subida": 483,
   "tracos": [
@@ -8137,5 +8139,14 @@
   ],
   "classe": "eremita (o último vivo de Ezmisa)",
   "ocupacao": "a beira do brejo de Ezmisa, a meio dia de Lumade, desde que a água cobriu a cidade"
+ },
+ "Lior": {
+  "nivel": 80,
+  "xp": 0,
+  "log": [
+   "Dia 508: entra no livro (nível 80)"
+  ],
+  "classe": "chefe do posto do Círculo da Areia Cantante no vale de cima de Lumade",
+  "ocupacao": "PRESO pela casa em Ezmisa (508), ferido grave; levava um mapa dos poços do vale de cima"
  }
 }
