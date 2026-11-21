@@ -800,7 +800,7 @@
    "medo": "a prisão",
    "ambicao": "entrar numa facção que o recusou",
    "tracos": "ORGULHOSO e HONESTO",
-   "pecas": null,
+   "pecas": "o núcleo Épico de Sorte do Zraos (507)",
    "estado": "vivo",
    "nota": "290: entra no mundo (pedido do jogador: até 15 Lendários, 3 Míticos 500+, 1 Primordial 1000+). tem um filho em outra cidade; nunca trabalha para uma facção (a rolar) · 336: a casa sabe a REGIÃO (o mapa do rei, a Sira [18]); a obra segue oculta",
    "log": [
@@ -822,7 +822,8 @@
     "460: [15] funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
     "462: [3] recruta: gente, uma facção ou um monstro passa para o lado dele",
     "483: [18] a ambição dele avança fora da Obra (um passo no que ele quer para si)",
-    "504: [8] sofre um revés (ferida, perda, traição de um próximo)"
+    "504: [8] sofre um revés (ferida, perda, traição de um próximo)",
+    "507: a conta do túmulo das rainhas: 40% de cada coisa; fica com o NÚCLEO ÉPICO DE SORTE (avaliado em 9.000) e paga à casa 5.400 (CT07 [1])"
    ],
    "prox": 525,
    "dons": [

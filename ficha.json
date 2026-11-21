@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 50,
- "xp": 125130,
+ "xp": 126130,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -23,7 +23,7 @@
   269
  ],
  "mana": [
-  67,
+  47,
   117
  ],
  "foco": 16,
@@ -68,7 +68,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 54147,
+ "cofre": 59567,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
@@ -495,6 +495,12 @@
    "valor": 600,
    "motivo": "507: o ouro que os herdeiros da Primeira Liga trouxeram, tomado na prisão (o que é deles, fora da conta das rainhas)",
    "saldo": 54147
+  },
+  {
+   "dia": 507,
+   "valor": 5420,
+   "motivo": "507: a CONTA DO TÚMULO com o Celocus (4b, 40% de cada coisa): 180 da moeda antiga (60%) + 5.400 (60% do núcleo Épico de Sorte, avaliado em 9.000, que fica com o Celocus, CT07 [1]) − 160 (40% do punhal de Iomiltia, que fica com a casa)",
+   "saldo": 59567
   }
  ],
  "materiais": {
@@ -808,10 +814,33 @@
    "log": [
     "Dia 488: +5 488: a seiva do Yolorvus (Épico, Luz: ofício e poção, +3 em Técnica)"
    ]
+  },
+  "syir": {
+   "kg": 1.2,
+   "log": [
+    "Dia 507: +1.2 507: 60% dos 2 kg da sala 2 (Raro, Sorte)"
+   ]
+  },
+  "yior": {
+   "kg": 6.0,
+   "log": [
+    "Dia 507: +6 507: 60% da garra do Zraos (Épico, Sorte + Sangue)"
+   ]
+  },
+  "miiel": {
+   "kg": 9.0,
+   "log": [
+    "Dia 507: +9 507: 60% do couro do Zraos (Épico, Sorte)"
+   ]
+  },
+  "nior": {
+   "kg": 12.0,
+   "log": [
+    "Dia 507: +12 507: 60% dos olhos do Zraos (Épico, Sorte + Água)"
+   ]
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 6",
   "Dia 477: SOBE ao 7",
   "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
   "Dia 477: SOBE ao 8",
@@ -870,7 +899,8 @@
   "Dia 500: SOBE ao 50",
   "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)",
   "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)",
-  "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))"
+  "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))",
+  "Dia 507: +1000 507: o LIVRO DE SANGUE lido inteiro e AENELTA, a última rainha, posta em paz pelo nome (feito grande)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

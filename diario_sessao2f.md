@@ -2258,3 +2258,39 @@ A Eliane estava sentada no chão, com a mão no flanco. "Não é nada", disse, e
 No fundo do coração, sobre um atril de pedra, havia um livro de capa escura, manchada. Atrás dele, um esquife de pedra, fechado, sem nome nenhum gravado.
 
 - **Parada:** tarde do 507, o coração do túmulo. O guardião morto. O livro de sangue no atril. O esquife sem nome. A Eliane ferida.
+
+### O livro e o esquife, o coração
+O rei curou a Eliane antes de tudo, com uma vela dos herdeiros acesa no chão de pedra. A luz entrou nela devagar, e a cor voltou ao rosto. A ferida do flanco fechou por fora e ficou funda por dentro: ela se levantou e sentou de novo.
+
+"Dez dias", disse o Moreth. "Na carroça, ou numa cama."
+
+O livro estava frio ao toque, a capa dura de couro velho. A letra era a dos reis, a mesma dos cadernos da Gilaccetta, mas a tinta era marrom e tinha rachado em escamas. O rei leu tudo, de pé, por uma hora, e ninguém falou.
+
+Sete selos de cera no fim do pacto, cada um com um nome embaixo. Três eram as casas dos presos lá fora. Dois eram casas de que ninguém ali ouvira falar. Os outros dois eram de nomes que o rei conhecia muito bem: ALDOVERI e TIRACCI.
+
+Na última folha, copiada com cuidado, havia uma lei da Primeira Liga, contra eles mesmos: a casa que vender um rei coroado perde a cadeira e o que tem. E embaixo, numa letra que tremia, um nome e um pedido.
+
+*Eu sou Aenelta. Que o leiam em voz alta diante deles.*
+
+O Moreth e o Eiagrir levantaram juntos a tampa do esquife. Dentro havia uma mulher magra, de cabelo branco e mãos cruzadas sobre o peito. Os dedos tinham as pontas escuras, de quem escreveu com o próprio sangue até não ter mais.
+
+"Aenelta", disse o rei.
+
+Ela abriu os olhos. Olhou para ele, para a Matriz no braço do Moreth, para o livro na mão do rei. Não se levantou.
+
+"Leia diante deles", disse, com uma voz que era mais pó que voz. "A porta é tua agora."
+
+E fechou os olhos de novo. Ninguém soube dizer se tinha respirado alguma vez.
+
+### A conta, a porta do túmulo
+Lá fora, os homens do Celocus contaram tudo sobre um pano estendido no chão, peça por peça, e escreveram. Quando chegou o núcleo, o chefe deles mandou chamar o Celocus em pessoa.
+
+O Celocus o pegou com as duas mãos e não o soltou mais.
+
+"O coração do guardião das minhas rainhas fica em Lumade", disse. "Pago a tua parte em ouro, e bem."
+
+Pagou: cinco mil e quatrocentos, contados ali mesmo. O punhal de Iomiltia ficou com o rei.
+
+No mercado, no caminho de volta, um velho vendia papéis antigos estendidos numa esteira. Num deles, gasto nas dobras, estava desenhado um campo de trigo e escrito, na letra dos reis: *para que a terra dê duas vezes*.
+
+- **Parada:** entardecer do 507, a porta do túmulo. O livro de sangue com o rei. Os 24 presos à porta. O núcleo com o Celocus.

@@ -167,19 +167,23 @@ Saem do `ficha.json` a cada vez que o `livro_sync.py` roda. São drops de bichos
 | **laliel** | ~6 | o olho do Morek (Único, Espinho) |
 | **leor** | ~10 | a rainha Zatha: olho Épico de Podridão, armadura: RD 3 contra doença e veneno |
 | **maor** | ~4 | os olhos do Zyza (Épico, Podridão + Mente; armadura: RD 3 contra doença e veneno |
+| **miiel** | ~9 | 60% do couro do Zraos (Épico, Sorte) |
 | **nee** | ~16 | o Huir (sala 5 de Zythir): pena Épica de Espinho + Vento, armadura: quem agarra o portador sangra 6 |
 | **neiel** | ~20 | a rainha Zatha: glândula Épica de Podridão, ofício e poção: dissolve impurezas, +3 em Matéria |
+| **nior** | ~12 | 60% dos olhos do Zraos (Épico, Sorte + Água) |
 | **sangue-de-sombra** | ~1 | o sangue do Neane, guardado para o SYSRETH (1 porção = 2 kg da liga) |
 | **sasis** | ~0 | o pelo do Morek (Único, Espinho + Raio) |
 | **seane** | ~2 | o BRAKOS (Raro, Vida; couro): cada golpe que fere cura 4 |
 | **seor** | ~6 | as escamas do Zyza (Épico, Podridão; armadura: RD 3 contra doença e veneno |
 | **ssythis** | ~0 | a escama do Morek (Único, Espinho) |
+| **syir** | ~1.2 | 60% dos 2 kg da sala 2 (Raro, Sorte) |
 | **thura** | ~5 | a seiva do Yolorvus (Épico, Luz: ofício e poção, +3 em Técnica) |
 | **uldun** | ~80 | a parte da casa no corpo da ELAEVA (a partilha com a Lurentetta, LP69 [3]) |
 | **veygal** | ~7 | as presas do Yolorvus (Épico, Luz: arma, cega 1 rodada com 18-20) |
 | **vorgel** | ~2 | glândulas do Vorthen (unidades, não kg) |
 | **yaane** | ~3.5 | o BRAKOS (Raro, Vida |
 | **yeviel** | ~54 | o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia |
+| **yior** | ~6 | 60% da garra do Zraos (Épico, Sorte + Sangue) |
 | **zainar** | ~11 | 478 e 483: os ossos dos cinco bichos da colmeia (Raro, Som: arma, o grito do metal atordoa, Vontade CD 14) |
 | **ziis** | ~5.6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
 | **ziza** | ~0.8 | a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento) |

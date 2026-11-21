@@ -1,7 +1,7 @@
 {
  "Eliane": {
   "nivel": 101,
-  "xp": 10203,
+  "xp": 10703,
   "log": [
    "nível de partida (estado, ~Dia 140-159)",
    "+500 147: recrutou 21",
@@ -146,7 +146,8 @@
    "Dia 501: 501: o DESPERTAR que faltava (passou do 100 no 483; o despertar.py não roda no tick): d12 [3] OLHO ABERTO: vê magia ativa e sente mentira grossa sem teste; recupera um quarto a menos de PV por noite",
    "+500 Tick 504: SURPRESA (gerador) (comanda a guarda e a milícia; treina a milícia; caça)",
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
-   "+1120 507: Zraos (Épico 112; 1 caído(s))"
+   "+1120 507: Zraos (Épico 112; 1 caído(s))",
+   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)"
   ],
   "classe": "Capitão (AÇO, Rara) · Luta Mestre · traços LEAL, ORGULHOSA, JUSTA",
   "ocupacao": "comanda a guarda e a milícia; treina a milícia; caça",
@@ -3835,7 +3836,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 22235,
+  "xp": 22735,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3956,7 +3957,8 @@
    "+4000 500: a emboscada do vau (vinte pagos)",
    "+500 Tick 504: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
-   "+1120 507: Zraos (Épico 112; 1 caído(s))"
+   "+1120 507: Zraos (Épico 112; 1 caído(s))",
+   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)"
   ],
   "tracos": [
    "LEAL",
@@ -5846,7 +5848,7 @@
  },
  "Eiagrir": {
   "nivel": 130,
-  "xp": 12518,
+  "xp": 13018,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5933,7 +5935,8 @@
    "+4000 500: a emboscada do vau (vinte pagos)",
    "+1000 Tick 504: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
-   "+1120 507: Zraos (Épico 112; 1 caído(s))"
+   "+1120 507: Zraos (Épico 112; 1 caído(s))",
+   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)"
   ],
   "ultima_subida": 483,
   "tracos": [

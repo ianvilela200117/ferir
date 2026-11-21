@@ -1,13 +1,5 @@
 {
  "ordem": [
-  "MB35f",
-  "MB35c",
-  "OR35w",
-  "OR35n",
-  "PD35",
-  "PD35r",
-  "CF35",
-  "FC35",
   "BR36",
   "CA36",
   "EZ36",
@@ -399,369 +391,17 @@
   "AI07",
   "CP07",
   "CK6b",
-  "FG07"
+  "FG07",
+  "LV07a",
+  "LV07b",
+  "LV07c",
+  "EQ07",
+  "EQ07b",
+  "VL07",
+  "CT07",
+  "RM07"
  ],
  "selos": {
-  "MB35f": {
-   "id": "MB35f",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "MARASAR: QUANTOS FIÉIS DO DOGE VELHO NAS RUAS (força 5; a guarnição velha da Liga; ouro e espadas da Liga)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 50 + 150"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o dado × 50 + 150",
-     "txt": "[3] → o dado × 50 + 150"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
-  "MB35c": {
-   "id": "MB35c",
-   "dia": 435,
-   "hora": "14:19:01",
-   "titulo": "MARASAR: O NÍVEL DO CHEFE DOS FIÉIS (o comando deles)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "o dado × 10 + 60"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o dado × 10 + 60",
-     "txt": "[1] → o dado × 10 + 60"
-    }
-   ],
-   "hora_rolado": "14:19:01"
-  },
-  "OR35w": {
-   "id": "OR35w",
-   "dia": 435,
-   "hora": "14:19:43",
-   "titulo": "EM QUE VIDA ENTRA O NPC NOVO DAS RUAS BAIXAS DE LEVIS (a surpresa do 20 natural na ordem do pão)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "a da BRARA (a governadora)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "a da ELIANE (a Marechal, que guarda as carroças)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a do MORETH"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a da ELIANE (a Marechal, que guarda as carroças)",
-     "txt": "[4] → a da ELIANE (a Marechal, que guarda as carroças)"
-    }
-   ],
-   "hora_rolado": "14:19:43"
-  },
-  "OR35n": {
-   "id": "OR35n",
-   "dia": 435,
-   "hora": "14:19:44",
-   "titulo": "O NÍVEL DO NPC NOVO DAS RUAS BAIXAS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "nível 15"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "nível 30"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "nível 50"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nível 15",
-     "txt": "[2] → nível 15"
-    }
-   ],
-   "hora_rolado": "14:19:44"
-  },
-  "PD35": {
-   "id": "PD35",
-   "dia": 435,
-   "hora": "14:21:03",
-   "titulo": "QUEM SÃO OS 8 QUE CAÍRAM DO LADO DA COROA EM MARASAR (BT35: 8 de 227)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "os 8 da COMPANHIA da Skotha (que ia na frente)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "6 da Companhia e 2 das LANÇAS DE IREVIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "5 da Companhia, 2 das lanças de Ireviel e 1 dos VOLUNTÁRIOS da Luz do Cais"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "os 8 da COMPANHIA da Skotha (que ia na frente)",
-     "txt": "[3] → os 8 da COMPANHIA da Skotha (que ia na frente)"
-    }
-   ],
-   "hora_rolado": "14:21:03"
-  },
-  "PD35r": {
-   "id": "PD35r",
-   "dia": 435,
-   "hora": "14:21:03",
-   "titulo": "OS DE IREVIEL QUE CAÍRAM (só vale se o PD35 der 4-6), um d6 por caído",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "MORTO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ferido GRAVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ferido leve"
-    }
-   ],
-   "oculto": false,
-   "x": 3,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "MORTO",
-     "txt": "#1 [1] → MORTO"
-    },
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ferido leve",
-     "txt": "#2 [5] → ferido leve"
-    },
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "ferido GRAVE",
-     "txt": "#3 [3] → ferido GRAVE"
-    }
-   ],
-   "hora_rolado": "14:21:04"
-  },
-  "CF35": {
-   "id": "CF35",
-   "dia": 435,
-   "hora": "14:21:03",
-   "titulo": "O CHEFE DOS FIÉIS DO DOGE VELHO (nível 70) QUANDO A GUARNIÇÃO QUEBRA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "MORRE na rua, na frente do quartel velho"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "PRESO: vai à justiça da Skotha"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "FOGE pelo portão do rio, com uns 30"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "FOGE pelo portão do rio, com uns 30",
-     "txt": "[6] → FOGE pelo portão do rio, com uns 30"
-    }
-   ],
-   "hora_rolado": "14:21:04"
-  },
-  "FC35": {
-   "id": "FC35",
-   "dia": 435,
-   "hora": "14:21:03",
-   "titulo": "A SKOTHA RECEBE O FACIO (a entrega que o rei mandou; ela o pediu para julgá-lo em Marasar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "manda-o à cela e julga depois da revolta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "agradece ao rei e o entrega aos BARQUEIROS DO LIVRO, para que eles decidam"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "julga-o na hora, em praça, diante dos barqueiros (rola a pena depois)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "manda-o à cela e julga depois da revolta",
-     "txt": "[2] → manda-o à cela e julga depois da revolta"
-    }
-   ],
-   "hora_rolado": "14:21:04"
-  },
   "BR36": {
    "id": "BR36",
    "dia": 435,
@@ -21345,6 +20985,351 @@
     }
    ],
    "hora_rolado": "19:15:14"
+  },
+  "LV07a": {
+   "id": "LV07a",
+   "dia": 507,
+   "hora": "04:53:11",
+   "titulo": "(OCULTO) A CASA DO PELAGRI ESTÁ NO LIVRO DE SANGUE? (um dos três conselheiros da Liga de hoje)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "SIM: o selo dela está no pacto de Dragal"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "NÃO: é casa mais nova"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "NÃO: é casa mais nova",
+     "txt": "[6] → NÃO: é casa mais nova"
+    }
+   ],
+   "hora_rolado": "04:53:11"
+  },
+  "LV07b": {
+   "id": "LV07b",
+   "dia": 507,
+   "hora": "04:53:11",
+   "titulo": "(OCULTO) A CASA DO ALDOVERI ESTÁ NO LIVRO DE SANGUE?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "SIM: o selo dela está no pacto de Dragal"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "NÃO: é casa mais nova"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "SIM: o selo dela está no pacto de Dragal",
+     "txt": "[4] → SIM: o selo dela está no pacto de Dragal"
+    }
+   ],
+   "hora_rolado": "04:53:11"
+  },
+  "LV07c": {
+   "id": "LV07c",
+   "dia": 507,
+   "hora": "04:53:11",
+   "titulo": "(OCULTO) A CASA DO TIRACCI ESTÁ NO LIVRO DE SANGUE?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 4,
+     "res": "SIM: o selo dela está no pacto de Dragal"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "NÃO: é casa mais nova"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "SIM: o selo dela está no pacto de Dragal",
+     "txt": "[4] → SIM: o selo dela está no pacto de Dragal"
+    }
+   ],
+   "hora_rolado": "04:53:11"
+  },
+  "EQ07": {
+   "id": "EQ07",
+   "dia": 507,
+   "hora": "04:54:07",
+   "titulo": "O ESQUIFE SEM NOME ABERTO (2b; depois da leitura; dentro dorme AENELTA, a última rainha, 'a que escreveu com sangue') · +6 o rei sabe o nome dela (a última página) · +2 o Herdeiro com a Matriz · +2 leu o livro inteiro · −2 a casa matou o guardião dela",
+   "dado": [
+    1,
+    20,
+    8
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "ACORDA CONTRA ELES: a luta (G9; a ficha pelo gerador, morta-viva Única)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 12,
+     "res": "ACORDA E COBRA uma coisa, EQ07b d6: 1-2 que o livro seja lido em voz alta diante do Conselho · 3-4 que a Matriz fique no túmulo · 5-6 o nome dela de volta na parede (a decisão volta ao rei)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "OUVE O PRÓPRIO NOME E DORME EM PAZ: pede o que a última página pede; e dá ao rei a porta: as aias obedecem à palavra dele"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 28,
+     "res": "ABENÇOA O HERDEIRO: o mesmo, e o SELO DELA (um anel de sangue seco): com ele, o livro mostrado ao Conselho não se nega"
+    },
+    {
+     "tipo": "nat",
+     "a": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 13,
+     "res": "OUVE O PRÓPRIO NOME E DORME EM PAZ: pede o que a última página pede; e dá ao rei a porta: as aias obedecem à palavra dele",
+     "txt": "[5] +8 = 13 → OUVE O PRÓPRIO NOME E DORME EM PAZ: pede o que a última página pede; e dá ao rei a porta: as aias obedecem à palavra dele"
+    }
+   ],
+   "hora_rolado": "04:54:07"
+  },
+  "EQ07b": {
+   "id": "EQ07b",
+   "dia": 507,
+   "hora": "04:54:07",
+   "titulo": "O QUE AENELTA COBRA (vale só se o EQ07 der 6-12)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "que o livro seja lido em voz alta diante do Conselho da Liga"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "que a Matriz fique no túmulo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o nome dela de volta na parede da sala 4"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "o nome dela de volta na parede da sala 4",
+     "txt": "[5] → o nome dela de volta na parede da sala 4"
+    }
+   ],
+   "hora_rolado": "04:54:07"
+  },
+  "VL07": {
+   "id": "VL07",
+   "dia": 507,
+   "hora": "04:54:07",
+   "titulo": "O VALOR DO NÚCLEO ÉPICO DE SORTE NA CONTA (os homens do Celocus avaliam; o precedente da casa: o núcleo Épico de Água, 3d6 × 1.000, 432)",
+   "dado": [
+    3,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 18,
+     "res": "o valor é o número × 1.000"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3,
+      2,
+      4
+     ],
+     "total": 9,
+     "res": "o valor é o número × 1.000",
+     "txt": "[3, 2, 4] +0 = 9 → o valor é o número × 1.000"
+    }
+   ],
+   "hora_rolado": "04:54:07"
+  },
+  "CT07": {
+   "id": "CT07",
+   "dia": 507,
+   "hora": "04:54:07",
+   "titulo": "QUEM FICA COM O NÚCLEO E O PUNHAL (4b: 40% de cada coisa; os dois não se partem; o Celocus ORGULHOSO e HONESTO; Lumade com fome desde a caravana perdida)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ORGULHOSO: o Celocus fica com o NÚCLEO ('o coração do guardião das minhas rainhas fica em Lumade') e paga à casa 60% do valor em ouro; o punhal fica com a casa, que lhe paga 40% (160)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "HONESTO e com fome: a casa fica com o núcleo e o punhal e paga a ele 40% do valor dos dois em ouro"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ORGULHOSO: o Celocus fica com o NÚCLEO ('o coração do guardião das minhas rainhas fica em Lumade') e paga à casa 60% do valor em ouro; o punhal fica com a casa, que lhe paga 40% (160)",
+     "txt": "[1] → ORGULHOSO: o Celocus fica com o NÚCLEO ('o coração do guardião das minhas rainhas fica em Lumade') e paga à casa 60% do valor em ouro; o punhal fica com a casa, que lhe paga 40% (160)"
+    }
+   ],
+   "hora_rolado": "04:54:07"
+  },
+  "RM07": {
+   "id": "RM07",
+   "dia": 507,
+   "hora": "04:54:36",
+   "titulo": "O RUMOR QUE A LEITURA TROUXE (a surpresa boa do aberto: 'o mundo responde: um rumor novo chega' → o gerador novidade [8]: uma técnica, receita ou feitiço novo circula; em Lumade, quando a casa sai do túmulo)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "TÉCNICA: quem saiu vivo de Rilge vende o segredo dos mortos de lá: temperar no frio (a técnica da oficina caída)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "RECEITA: um texto antigo de Lumade sobre a COLHEITA BOA corre no mercado (uma FONTE para a pesquisa da G40: −2 na CD)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "FEITIÇO: um mago de passagem em Lumade ensina um feitiço do 5º círculo, por um preço"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "RECEITA: um texto antigo de Lumade sobre a COLHEITA BOA corre no mercado (uma FONTE para a pesquisa da G40: −2 na CD)",
+     "txt": "[3] → RECEITA: um texto antigo de Lumade sobre a COLHEITA BOA corre no mercado (uma FONTE para a pesquisa da G40: −2 na CD)"
+    }
+   ],
+   "hora_rolado": "04:54:36"
   }
  }
 }

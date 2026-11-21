@@ -1,4 +1,4 @@
-# RETOMAR — tarde do Dia 507, O TÚMULO DAS RAINHAS, o coração: o guardião morto; o livro de sangue e o esquife sem nome (MOTOR 9b: G1 a G41)
+# RETOMAR — entardecer do Dia 507, LUMADE, a porta do túmulo: o livro de sangue com o rei; os 24 presos; Ezmisa (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 507, LUMADE, à porta do Túmulo das Rainhas (limpo; a porta e as aias obedecem ao rei). O rei PV 240/269, Mana 47/117, Visão 0/2 (volta amanhã), Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 126.130 (o 51 em 127.600). Com ele: o LIVRO DE SANGUE (lido inteiro: os selos de Nutoccone, Zulandino, Bitoa, Jetoi, Jelaino, ALDOVERI e TIRACCI; a lei da Primeira Liga: 'a casa que vender um rei coroado perde a cadeira e o que tem'; o pedido de AENELTA: lê-lo em voz alta diante do Conselho; fio F79) e o PUNHAL DE IOMILTIA. A casa: o Moreth 572/610, o Eiagrir, a ELIANE 272/272 mas DE CAMA até o 517, o Gonde e 6 guardas, a Matriz e o Martelo; a Tigra e o mensageiro ferido em Lumade. Os 24 HERDEIROS DA PRIMEIRA LIGA PRESOS à porta (julgamento: fio F78). O CELOCUS ficou com o NÚCLEO ÉPICO DE SORTE (pagou 5.400). Material novo: yior 6, miiel 9, nior 12, syir 1,2. No mercado, um TEXTO ANTIGO DA COLHEITA BOA (fonte −2 para a G40; fio F80). EZMISA a meio dia (a cidade afundada; um núcleo; um eremita; uma chave). Cartas a caminho: a da Brara (~511, #1045), a da Nouliel (~513, #1046). Cofre 59.567.
+
+Antes (507, o coração):
 Tarde do 507, O CORAÇÃO do Túmulo das Rainhas. O ZRAOS MORTO (sims/coracao_507_saida.txt: 3 rodadas; ninguém morto). Dentro: o rei 240/269 (Mana 67/117, Visão 0/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 125.130), o Moreth 572/610, o Eiagrir 432/432, a ELIANE 55/272 FERIDA (SÉRIO: de cama até o 517; feridos.py). No coração: o LIVRO DE SANGUE num atril de pedra e, atrás, um ESQUIFE DE PEDRA FECHADO, SEM NOME. (OCULTO) a última rainha, 'a que escreveu com sangue', dorme no esquife. O DESPOJO, a contar na saída (os 40% do Celocus em ouro, material e peças; o papel fora): o NÚCLEO ÉPICO DE SORTE (núcleo para Mítico), yior 10 kg (garra), miiel 15 kg (couro), nior 20 kg (olhos), e o da sala 2: 300 em moeda antiga, 2 kg de syir, o punhal de Iomiltia. À PORTA: os 24 HERDEIROS PRESOS (passaram pelas aias: FG07 [5]), com o Gonde e os guardas; os 20 do Celocus contaram e não tomaram (CP07 [15]). O G9 achou e acertou a ficha de combate do rei (PV e nível velhos); a G39 agora leva o PV do rei à ficha no fim da luta. Cofre 54.147.
 
 Antes (507, sala 1, as aias):
@@ -446,11 +449,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, sala 1 → o coração): 1c falar com as aias; se recusassem, os presos correm ('se sobreviverem, beleza; se não, ok; não deixo inimigos soltos')
 - AS07 FALHA (28 vs 33) · FG07 [5] passam todos · CP07 [15] · CK6b [3] · a G9 do coração (o covil 4d6 CD 21; a camuflagem não vale) · a LUTA: o Zraos morto em 3 rodadas · a Eliane ferida (SÉRIO, até o 517) · +1.120 XP · o despojo (os nomes trocados: yior, miiel, nior).
 
+## RESPONDIDO (507, o coração): 1b ler o livro aqui · 2b (perguntado: o '3b' era o 2b) abrir o esquife · 3a a Cura Maior · 4b 40% de cada coisa
+- a Cura Maior (sem dado: o mínimo bastava) · a LEITURA: G10 EXTRAORDINÁRIO (56 vs 35) · LV07a [6], LV07b [4], LV07c [4] (ocultos, antes da leitura) · EQ07 13: Aenelta em paz; a porta do rei · VL07 9.000 · CT07 [1]: o núcleo com o Celocus · RM07 [3]: o texto da Colheita Boa · +1.000 XP.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O LIVRO DE SANGUE (no atril; a vergonha dos fundadores da Liga, 'quem a tiver manda no Conselho'): a) tomá-lo e sair · b) lê-lo aqui primeiro (o que ele diz vai pelo saber do rei, G10) · c) outra.
-2. O ESQUIFE DE PEDRA SEM NOME (atrás do atril; fechado): a) deixar fechado · b) abrir · c) outra.
-3. A ELIANE (55/272; o ferimento SÉRIO só o tempo e o físico curam): a) a CURA MAIOR já (repõe o PV; 20 de Mana com vela ou vidro, 40 sem; o ferimento segue) · b) esperar.
-4. A CONTA NA SAÍDA (os 40% do Celocus em ouro, material e peças; o papel fora): a) em VALOR: o rei escolhe o que fica (o núcleo e o punhal com a casa; os 40% pesados no resto) · b) 40% DE CADA COISA (o núcleo não se parte: vai a quem?) · c) outra.
+1. OS 24 PRESOS (o julgamento vai ao conselho; a palavra do rei: 'mortos, presos ou servindo'): a) levá-los a Ireviel para o conselho (a volta é por Levis, 10 dias) · b) julgá-los aqui pela palavra do rei, com o conselho por carta · c) mandá-los já às minas de cima de Levis (G41), com o julgamento por carta.
+2. O LIVRO DE SANGUE (o pedido de Aenelta; com ele mostrado ao Conselho, as cadeiras do Aldoveri e do Tiracci caem): a) guardá-lo e levá-lo a Ireviel (o conselho do rei decide como usar) · b) ir com ele ao Conselho da Liga, em Marasar · c) mandar copiar e espalhar o que diz (a cópia não tem os selos: corre como boato) · d) outra.
+3. EZMISA (a cidade afundada a meio dia; um núcleo; um eremita; uma chave) e O TEXTO DA COLHEITA BOA no mercado: a) Ezmisa amanhã · b) comprar o texto e voltar · c) as duas.
+4. A ELIANE (de cama até o 517): a) fica em Lumade com dois guardas até sarar · b) vai na carroça com a casa.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
