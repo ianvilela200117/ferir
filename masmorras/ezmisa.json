@@ -57,14 +57,15 @@
    "leva_a": [
     7
    ],
-   "vista": false
+   "vista": true
   },
   {
    "n": 7,
    "dado": null,
    "o_que": "O CORAÇÃO: um núcleo, com o guardião (Épico)",
    "leva_a": [],
-   "vista": false
+   "vista": true
   }
- ]
+ ],
+ "estado": "508: o coração aberto; o TKORNA e as 8 crias mortos; o núcleo levado; a inscrição da 1ª casa não lida"
 }

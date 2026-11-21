@@ -42,11 +42,11 @@
   },
   "Fole Firme": {
    "tipo": "Passiva",
-   "efeito": "2",
+   "efeito": "+2 no Processo da forja em oficina improvisada ou de campanha (fora da Fornalha); no obra_valor.py, extra=2",
    "grau": 1,
    "usos": 0,
-   "desde": 396,
-   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+   "desde": 508,
+   "origem": "o ponto do 51 (a árvore da Forja do Herdeiro, ramo Processo)"
   },
   "Alma no Aço": {
    "tipo": "Passiva",

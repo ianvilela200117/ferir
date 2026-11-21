@@ -182,11 +182,13 @@ Saem do `ficha.json` a cada vez que o `livro_sync.py` roda. São drops de bichos
 | **veygal** | ~7 | as presas do Yolorvus (Épico, Luz: arma, cega 1 rodada com 18-20) |
 | **vorgel** | ~2 | glândulas do Vorthen (unidades, não kg) |
 | **yaane** | ~3.5 | o BRAKOS (Raro, Vida |
+| **yelle** | ~10 | as glândulas do Tkorna (Épico, Veneno: ofício e poção, +3 em alquimia |
 | **yeviel** | ~54 | o Huir: sangue Épico de Espinho, ofício e poção: cresce, a peça se conserta 1 de durabilidade por dia |
 | **yior** | ~6 | 60% da garra do Zraos (Épico, Sorte + Sangue) |
+| **yomiar** | ~15 | as presas do Tkorna (Épico, Veneno + Vento: arma, envenena 2d6 por rodada até Vigor CD 16 |
 | **zainar** | ~11 | 478 e 483: os ossos dos cinco bichos da colmeia (Raro, Som: arma, o grito do metal atordoa, Vontade CD 14) |
 | **ziis** | ~5.6 | o tesouro da sala 6 de Zythir (Épico, Raio + Tempo: arma +2d6 de raio que salta; armadura: quem golpeia leva 6; ferramenta +3 em Processo; Tempo, só defesa: 1x por dia desfaz um golpe; defeito: atrai tempestade; 600-1.000/kg) |
 | **ziza** | ~0.8 | a barra que o ladrão dos Descalços trazia (noite do 394; Raro, Vento) |
 
-**Núcleos na mão do rei:** núcleo-lendário-de-silêncio ×1 · núcleo-épico-de-espinho ×1 · núcleo-épico-de-luz ×1 · núcleo-épico-de-podridão ×2 · núcleo-épico-de-água ×1.
+**Núcleos na mão do rei:** núcleo-lendário-de-silêncio ×1 · núcleo-épico-de-espinho ×1 · núcleo-épico-de-luz ×1 · núcleo-épico-de-podridão ×2 · núcleo-épico-de-veneno ×1 · núcleo-épico-de-água ×1.
 <!-- SYNC:FIM -->

@@ -15573,6 +15573,14 @@
    "aberto": 507,
    "tocado": 507,
    "fechado": false
+  },
+  {
+   "id": 81,
+   "texto": "F17 VOLTA A FAVOR (FV08 [5], a surpresa boa do 508): FENMIR e o HUGR; a forma do favor, d6 quando o rei chegar a Ireviel",
+   "oculto": false,
+   "aberto": 508,
+   "tocado": 508,
+   "fechado": false
   }
  ]
 }

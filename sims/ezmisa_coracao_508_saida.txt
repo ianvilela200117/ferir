@@ -1,0 +1,22 @@
+LEI DAS AÇÕES: Tkorna (nível 98) contra 3 · PV 1470/1470 · RD 10 · 4 ações · reação 2 · grupo: Ferir 1, Moreth 4, Eiagrir 3
+INICIATIVA: Tkorna 2d20+9 = 30 × o grupo 2d20+13 (média) = 38 → o grupo age primeiro
+--- RODADA 1 · Tkorna 1470/1470
+  COVIL (o coração de Ezmisa) d6 [4]: um alvo
+    Ferir: resiste [18] vs 21 → 3 (263)
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana): 700; [[13], [10]]+34=57 vs 58 o alvo resiste: metade → 690 (780)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 480; [[10], [14]]+44=68 vs 58 pega em cheio → 470 (310)
+  Moreth: [[16], [1]]+44=61 ACERTA [2]×3+15+46=67 − RD 10 = 57 (253)
+    Moreth leva 12 de volta (598)
+  Moreth: [[10], [6]]+44=60 ACERTA [2]×3+15+46=67 − RD 10 = 57 (196)
+    Moreth leva 12 de volta (586)
+  Moreth: [[11], [5]]+44=60 ACERTA [2]×3+15+46=67 − RD 10 = 57 (139)
+    Moreth leva 12 de volta (574)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 250; [[17], [15]]+36=68 vs 58 pega em cheio → 240 (-101)
+  Tkorna CAI
+FIM: morto · rodadas 1 · mortos [] · PV -101/1470 · grupo {'Ferir': 263, 'Moreth': 574, 'Eiagrir': 432}
+G39 · o PV do rei no fim da luta vai à ficha: 266 → 263/271
+G39 · XP DA LUTA, sozinho: 980 a cada um que lutou (98 × 10 × 1): Ferir, Moreth, Eiagrir
+   XP +980 (508: Tkorna (Épico 98; 1 caído(s))) → 130.790 / 132.700
+   Moreth: +980 (508: Tkorna (Épico 98; 1 caído(s))) → 27395/23400
+   Eiagrir: +980 (508: Tkorna (Épico 98; 1 caído(s))) → 17678/13000
+   G39 · o DESPOJO: o bicho deixa corpo: ver os drops do gerador e lançar com ficha.py mat

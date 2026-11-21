@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 508, EZMISA, a sexta casa: diante da porta do coração (MOTOR 9b: G1 a G41)
+# RETOMAR — noite do Dia 508, EZMISA, a terceira casa: a laje da segunda fechada, com o Círculo do outro lado (MOTOR 9b: G1 a G42)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 508, EZMISA, a 3ª casa. O TKORNA MORTO (o núcleo Épico de Veneno, yelle 10, yomiar 15 com a casa). O rei NÍVEL 51 (XP 130.790), PV 263/271, Mana 98/118, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, DOENTE (a FEBRE DA LAMA: −2 em tudo; o Purificar tira: 15 de Mana com vela, 30 sem). O Moreth 574/610, o Eiagrir 432/432. A LAJE DA SEGUNDA CASA DESCEU (a armadilha da laje que fecha a sala: Força CD 29 para abrir, ou ela sobe sozinha em 1 hora): do outro lado, presos, o CHEFE DO POSTO DO CÍRCULO (nível 80) e 5 homens (CI08s [3], CI08t [1]); a única saída de Ezmisa passa pela segunda casa. (OCULTO à casa dentro) LÁ FORA, 4 do Círculo CERCAM A CARROÇA (a Eliane de cama, o Gonde e 2 guardas, o olheiro preso, a Matriz, o Martelo, o livro de sangue): um impasse; querem o olheiro e o núcleo. (OCULTO) o comboio quebrado pelos Vrurn nesta noite (2 guardas mortos; os 24 SOLTOS); a notícia em Lumade no entardecer do 509 (#1048). G42 ESCRITA (a reviravolta do bloco: a primeira deu RV08 [3]). Cofre 59.567.
+
+Antes (508, a sexta casa):
 Noite do 508, EZMISA, a 6ª casa (as crias mortas), diante da PORTA DO CORAÇÃO. O rei NÍVEL 51 (XP 129.810; o 52 em 132.700), PV 266/271, Mana 118/118, Visão 2/2, Erudito 0/1, Fortuna 3/3, Revés 4/6; o PONTO DO 51 por escolher (ficha.json › escolhas_pendentes). Com ele: o Moreth 610, o Eiagrir 432 (os dois com XP para subir no tick do 511). Lá fora: o Gonde e 2 guardas, a ELIANE de cama (até o 517), a carroça, a Matriz e o Martelo, o LIVRO DE SANGUE, e o OLHEIRO DO CÍRCULO PRESO (GN08 [3]; (OCULTO) ele ouviu que o livro está na carroça, SG08 [2]). O eremita IODUXETH (30) na beira. O que a casa sabe: a febre na lama (o sal na ferida +5 no Vigor); 'o que trouxe a praga não suporta sal'; o Círculo volta na lua nova e quer o coração para tomar Lumade. (OCULTO) o mapa: o coração é a 7ª casa; o guardião TKORNA (inseto Épico 98, Veneno, voa; envenena em área 12 m; sangue que queima; fraqueza VIDA e SAL; o covil; sims/ezmisa_guardiao_base.json; NÃO RODA: voa); o núcleo Épico de Veneno no peito dele; a inscrição da 1ª casa não vista. (OCULTO) O COMBOIO quebrado nesta noite pelos Vrurn: 2 guardas mortos, os 24 SOLTOS; a notícia em Lumade no entardecer do 509 (#1048). Cofre 59.567.
 
 Antes (508, a beira de Ezmisa):
@@ -464,9 +467,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (508, a beira → a sexta casa): 'você contabilizou o XP da última rodada?' (regra: sim, tudo lançado; resposta inteira) · 1a entrar já · 2b o rei, o Moreth e o Eiagrir · 3a as quatro perguntas ao eremita
 - ER08 [2] (30) · S608 [15], PR08 [2], QE08 [1], CI08 [2] (ocultos antes) · os saberes: FALHA FEIA, GANHO, EXTRAORDINÁRIO · SG08 [2] (oculto), GN08 [3] · SE1 [4] e o notar FALHA FEIA, PF08 [2], FB08 sucesso · AR2e [3] EXTRAORDINÁRIO (o relógio da Leliel −1) · R3e [6] · CK4e [5] · AR4e [9] EXTRAORDINÁRIO · CK5e [4] · R5e [2] · CR6q 8 · CN08 [3] · a luta das crias (2 rodadas) · o rei ao 51.
 
+## RESPONDIDO (508, a sexta casa → a terceira): 1b a Visão antes; 'se ganharmos na visão, a' · 2b Fole Firme 1 · o pedido 'uma história mais emocionante, com reviravolta e dificuldades realmente cruéis' (a G42)
+- a G9 (o veneno que dura posto na ficha; voa sem efeito; o sal fora) · a VISÃO (100%; Lei das Caçadas 0,0%) · a luta: o Tkorna morto numa rodada · FB08b FALHA (o rei doente), FB08c EXTRAORDINÁRIO (FV08 [5] o F17) · o despojo · RV08 [3] (os RV08b/c/d não valem) · CI08n 10, CI08ch 80, CI08r [6], CI08s [3], CI08t [1].
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O CORAÇÃO (atrás da porta, o que trouxe a praga; a casa sabe: o sal o fere): a) abrir já · b) a VISÃO DO TEMPO antes (2/2; 20 de Mana cada) · c) sair e voltar de dia.
-2. O PONTO DO 51: a) guardar (8 guardados) · b) FOLE FIRME 1 (+2 no Processo em oficina de campanha) · c) SÉRIE DE MESTRE 1 (a forja grande faz a série uma categoria acima) · d) outro nó da árvore (o jogador diz; até o grau 3).
+1. A SEGUNDA CASA FECHADA (do outro lado, o chefe do posto do Círculo, nível 80, e 5, presos; é a única saída): a) abrir à força (o Moreth: Força CD 29) e lutar com eles lá dentro · b) falar através da pedra (o jogador diz o que quer deles) · c) esperar: em uma hora a laje sobe sozinha, e eles saem antes · d) outra.
+2. A FEBRE DO REI (Doente, −2 em tudo): a) PURIFICAR já (15 de Mana com vela, 30 sem) · b) depois.
+3. A VOZ NO VENTO (10 de Mana; a voz chega a 1 km, ou ouve uma conversa longe): a) ouvir a carroça, lá fora · b) avisar o Gonde · c) não usar.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

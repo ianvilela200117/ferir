@@ -260,6 +260,18 @@ O que depende de outra coisa agora vem ligado no script, e o Mestre não precisa
   - Em média, uns 20 a 25 por ano saem da conta. Com **menos de 44**, o desconto da G6 acaba (o tick e as pendências da G39 avisam).
 - **A contagem:** `estado.json › forcados.n` (131 no 503). Quem morre, foge, é resgatado ou cumpre a pena sai dela.
 
+### G42 — A HISTÓRIA QUE MORDE (Dia 508, pedido do jogador: "uma história mais emocionante, com reviravolta e dificuldades realmente cruéis"; o jogador foi avisado)
+O dado já é duro. A G42 faz o mundo USAR o que tem contra a casa, e faz a vitória cobrar. Tudo sai do dado declarado antes, nunca da mão do Mestre.
+- **(1) A REVIRAVOLTA DO BLOCO.** Uma vez por turno, no fim do bloco, o Mestre declara e rola 1d6 sobre o que existe (o fio mais quente, o segredo guardado, a informação que vazou). A tabela de cada vez diz quem e o quê.
+  - 1-2 **O PREÇO DA VITÓRIA:** o maior sucesso do bloco cobra um custo escondido (quem viu, quem perdeu, o que se quebrou).
+  - 3-4 **O INIMIGO USA O QUE SABE:** uma informação que vazou (um olheiro, um preso solto, uma carta tomada) vira ação contra a casa.
+  - 5 **ALGUÉM DE PERTO PAGA:** um dos laços da casa, sorteado entre os que estão longe do rei. O que paga sai no d6: ferido grave · preso ou tomado · morto · trai.
+  - 6 **O MUNDO SEGUE:** sem reviravolta além do tick.
+- **(2) O SEGREDO MORDE NA HORA PIOR.** O oculto do envelope que toca a casa é revelado quando dói mais (na volta de uma vitória, numa festa, no meio de uma luta). A data já está na agenda; muda só a cena em que chega.
+- **(3) O INIMIGO PENSA.** Facção, vilão ou Lendário hostil que sabe algo age com isso: o Mestre põe na agenda o dia, pelo d6.
+- **(4) SEM ALÍVIO.** Nada se rola de novo, e nada se salva no grito. A Lei das Caçadas é do rei: protege as decisões dele, não o mundo.
+- **O equilíbrio:** a reviravolta nasce do que a casa fez e do que o mundo sabe. O sucesso grande continua grande; só deixa de ser grátis.
+
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
 - **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.

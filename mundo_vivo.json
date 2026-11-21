@@ -3719,6 +3719,12 @@
    "drops": "garras ZRUNA (Raro, Fogo: arma +1d6 de fogo) · glândula VDUNEK (Raro, Fogo: +2 em Processo na têmpera) · ícor (o mesmo)",
    "estado": "vivo",
    "nota": "490: o CHAMADO da Vindima deu 20 natural: SURPRESA (gerador novidade [2]: um monstro novo avistado); o gerador deu LUMGAL (o nome do cemitério dos reis), ULVIL e KREINE: trocados por RHAOS, ZRUNA e VDUNEK (nomes.py aspera livre)"
+  },
+  {
+   "nome": "Tkorna",
+   "cat": "Épico",
+   "nivel": 98,
+   "nota": "o guardião do coração de Ezmisa (inseto do tamanho de uma casa, Veneno; voa; o sangue queima; fraqueza Vida e sal); MORTO pela casa no 508; o gerador deu Nestor, que bate em Nesgal e outros: trocado"
   }
  ],
  "notas_ocultas": [
@@ -3986,6 +3992,22 @@
    "essencia": "Sorte + Água",
    "origem": "monstro (olho)",
    "nota": "os olhos do ZRAOS (507); armadura: +3 num teste por dia, à escolha; 20 kg; o nome do gerador (eryine) batia em Erygal e eryra: trocado"
+  },
+  {
+   "nome": "yelle",
+   "dia": 508,
+   "cat": "Épico",
+   "essencia": "Veneno",
+   "origem": "monstro (glândula)",
+   "nota": "as glândulas do TKORNA (Ezmisa); ofício e poção: +3 em alquimia (destila); 10 kg; o gerador deu thuast (NPC): trocado"
+  },
+  {
+   "nome": "yomiar",
+   "dia": 508,
+   "cat": "Épico",
+   "essencia": "Veneno + Vento",
+   "origem": "monstro (presa)",
+   "nota": "as presas do TKORNA (Ezmisa); arma: envenena 2d6 por rodada até Vigor CD 16; 15 kg; o gerador deu ulra (lugar): trocado"
   }
  ],
  "guildas": [

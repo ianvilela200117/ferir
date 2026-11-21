@@ -2346,3 +2346,27 @@ Oito, do tamanho de um cão, de carapaça cor de lodo e patas que estalavam na p
 Do outro lado da casa, uma porta baixa respirava um ar quente e doce, como fruta podre.
 
 - **Parada:** noite do 508, Ezmisa, a sexta casa. Diante da porta do coração.
+
+### O coração de Ezmisa
+Antes de abrir, o rei fechou os olhos e viu a hora que vinha, muitas vezes: o inseto caindo sempre, quase sempre de uma vez. Abriu.
+
+O coração era uma adega afundada, de teto baixo, com o ar quente e doce de fruta podre. O Tkorna pendia do teto como um saco de casca, do tamanho de uma casa. Quando caiu, as asas bateram uma vez e apagaram duas tochas.
+
+O Toque do rei o pegou de lado. A Lança do Sol do Moreth entrou na carapaça e a abriu. O Moreth bateu três vezes, e a cada golpe o sangue do bicho espirrava e chiava na pele dele como óleo quente. A lança do Eiagrir fechou a conta.
+
+Durou menos que uma respiração longa. O rei tinha um corte no braço, de uma lasca de pedra que caiu do teto, e o corte já ardia diferente. Esfregou sal. Dessa vez o sal não bastou: antes de chegarem à sexta casa, ele já tinha suor frio na nuca e um peso atrás dos olhos.
+
+O coração do bicho era uma pedra verde-escura, do tamanho de um punho, ainda morna.
+
+### A volta
+Na terceira casa, a casca da muda estava onde a tinham deixado. A passagem para a segunda casa não estava mais. No lugar dela havia uma laje inteira de pedra, descida até o chão.
+
+Do outro lado, alguém batia na pedra com o cabo de uma arma. Vozes. Uma delas mandava, e as outras calavam.
+
+"O chão que mata", disse o Eiagrir baixo. "Alguém entrou atrás de nós."
+
+O Moreth encostou o ouvido na pedra. "Cinco, seis. E um que fala como chefe."
+
+A única saída de Ezmisa passava por ali.
+
+- **Parada:** noite do 508, Ezmisa, a terceira casa. A segunda casa fechada, com gente do Círculo presa do outro lado.

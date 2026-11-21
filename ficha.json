@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 51,
- "xp": 129810,
+ "xp": 130790,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -19,11 +19,11 @@
   "Afinidade": 105
  },
  "pv": [
-  266,
+  263,
   271
  ],
  "mana": [
-  118,
+  98,
   118
  ],
  "foco": 16,
@@ -838,12 +838,27 @@
    "log": [
     "Dia 507: +12 507: 60% dos olhos do Zraos (Épico, Sorte + Água)"
    ]
+  },
+  "núcleo-épico-de-veneno": {
+   "kg": 1.0,
+   "log": [
+    "Dia 508: +1 508: o CORAÇÃO do TKORNA (Ezmisa): núcleo Épico de Veneno, serve de núcleo para Mítico"
+   ]
+  },
+  "yelle": {
+   "kg": 10.0,
+   "log": [
+    "Dia 508: +10 508: as glândulas do Tkorna (Épico, Veneno: ofício e poção, +3 em alquimia; o gerador deu 'thuast', nome de NPC: trocado)"
+   ]
+  },
+  "yomiar": {
+   "kg": 15.0,
+   "log": [
+    "Dia 508: +15 508: as presas do Tkorna (Épico, Veneno + Vento: arma, envenena 2d6 por rodada até Vigor CD 16; o gerador deu 'ulra', nome de lugar: trocado)"
+   ]
   }
  },
  "xp_log": [
-  "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
-  "Dia 477: SOBE ao 8",
-  "Dia 477: SOBE ao 9",
   "Dia 477: SOBE ao 10",
   "Dia 483: +1110 483: três bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
   "Dia 483: SOBE ao 11",
@@ -901,14 +916,16 @@
   "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))",
   "Dia 507: +1000 507: o LIVRO DE SANGUE lido inteiro e AENELTA, a última rainha, posta em paz pelo nome (feito grande)",
   "Dia 508: +3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
-  "Dia 508: SOBE ao 51"
+  "Dia 508: SOBE ao 51",
+  "Dia 508: o PONTO do 51: FOLE FIRME 1 (+2 no Processo em oficina de campanha)",
+  "Dia 508: +980 508: Tkorna (Épico 98; 1 caído(s))"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 2,
+   "tem": 1,
    "max": 2,
    "renova": "dia"
   },
@@ -928,7 +945,5 @@
  "exaustao": 0,
  "nivel_maximo": 159,
  "classe_lendaria": "Herdeiro do Rei-Ferreiro",
- "escolhas_pendentes": [
-  "o PONTO DE HABILIDADE do 51"
- ]
+ "escolhas_pendentes": []
 }

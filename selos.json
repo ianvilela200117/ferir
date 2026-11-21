@@ -1,16 +1,5 @@
 {
  "ordem": [
-  "AU41a",
-  "AU41b",
-  "AU41c",
-  "RO41",
-  "AF41",
-  "MI41",
-  "HT42",
-  "MR42",
-  "SG42",
-  "EL44",
-  "FB44",
   "EC45",
   "PM45",
   "MC45",
@@ -399,475 +388,20 @@
   "CK5e",
   "R5e",
   "CR6q",
-  "CN08"
+  "CN08",
+  "FV08",
+  "RV08",
+  "RV08b",
+  "RV08c",
+  "RV08d",
+  "CI08n",
+  "CI08ch",
+  "CI08r",
+  "CI08s",
+  "CI08t",
+  "CI08m"
  ],
  "selos": {
-  "AU41a": {
-   "id": "AU41a",
-   "dia": 441,
-   "hora": "12:11:10",
-   "titulo": "A AUDIÊNCIA DA LUZ DO CAIS (o porto de Marasar; acendem velas para a luz do Moreth que matou o Naudren): o que oferecem e pedem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "os olhos deles no porto de Marasar (+2 na contra-espionagem lá), e pedem uma capela no cais"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "aliança formal: lutam pela casa no porto, e pedem uma peça da forja com luz"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez",
-     "txt": "[1] → mais 20 voluntários à Guilda, e pedem que o Moreth vá ao cais deles uma vez"
-    }
-   ],
-   "hora_rolado": "12:11:10"
-  },
-  "AU41b": {
-   "id": "AU41b",
-   "dia": 441,
-   "hora": "12:11:10",
-   "titulo": "A AUDIÊNCIA DOS AFOGADOS VIVOS (o rio; agora do lado do Teraseth): o que querem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a portagem do rio menor para os barqueiros do Teraseth"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um recado do Teraseth: ele se oferece para a caçada da Elaeva, com os barqueiros, por um preço"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o perdão de um dos deles, preso em Ireviel"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a portagem do rio menor para os barqueiros do Teraseth",
-     "txt": "[2] → a portagem do rio menor para os barqueiros do Teraseth"
-    }
-   ],
-   "hora_rolado": "12:11:10"
-  },
-  "AU41c": {
-   "id": "AU41c",
-   "dia": 441,
-   "hora": "12:11:10",
-   "titulo": "A AUDIÊNCIA DOS DESCALÇOS DO CAIS (a metade que vive no porto de Ireviel e não quer mais briga): o que querem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "trabalho na estiva da casa para os deles"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "entregam quem começou a briga do cais desta semana, se o rei não punir a metade deles"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "que o rei solte um dos deles da cela do 336"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "trabalho na estiva da casa para os deles",
-     "txt": "[1] → trabalho na estiva da casa para os deles"
-    }
-   ],
-   "hora_rolado": "12:11:10"
-  },
-  "RO41": {
-   "id": "RO41",
-   "dia": 441,
-   "hora": "12:11:28",
-   "titulo": "O CONSELHO VOTA: O ÉDITO DA RONDA (441, Ireviel; a briga do cais deixou a Defesa de Ireviel em 1/4): a ronda paga em toda cidade do reino",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron",
-     "txt": "VENCE B) recusar · placar A 3 · B 3 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Graur, Sira, Thuron"
-    }
-   ]
-  },
-  "AF41": {
-   "id": "AF41",
-   "dia": 441,
-   "hora": "12:32:27",
-   "titulo": "COMO OS AFOGADOS VIVOS RECEBEM A MEIA RESPOSTA (a portagem só para a carga da casa)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "FRIOS: o Teraseth ouve que o rei regateou (reputação −5)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "ACEITAM"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "GRATOS: contam que barca da Liga desce o rio esta semana"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "ACEITAM",
-     "txt": "[4] → ACEITAM"
-    }
-   ],
-   "hora_rolado": "12:32:27"
-  },
-  "MI41": {
-   "id": "MI41",
-   "dia": 441,
-   "hora": "12:32:27",
-   "titulo": "A MIE E AS 20 LANÇAS DA LURENTETTA: do Delta a Ireviel (saem no 442)",
-   "dado": [
-    1,
-    2,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "tantos dias (e mais 2 pela costa até Farenta)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "tantos dias (e mais 2 pela costa até Farenta)",
-     "txt": "[2] → tantos dias (e mais 2 pela costa até Farenta)"
-    }
-   ],
-   "hora_rolado": "12:32:27"
-  },
-  "HT42": {
-   "id": "HT42",
-   "dia": 442,
-   "hora": "12:33:23",
-   "titulo": "DE ONDE VEM O HADUN DO CELOCUS (OCULTO)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a partida de caça do Celocus colhe as penas do HUSGARN dormindo"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o SKORVAL VENDE as penas ao Celocus"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "hadun FALSO, pena tingida"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a partida de caça do Celocus colhe as penas do HUSGARN dormindo",
-     "txt": "[1] → a partida de caça do Celocus colhe as penas do HUSGARN dormindo"
-    }
-   ],
-   "hora_rolado": "12:33:23"
-  },
-  "MR42": {
-   "id": "MR42",
-   "dia": 442,
-   "hora": "12:33:23",
-   "titulo": "A MAMILTIA E O RECADO DO SAL (chegou a Steunn no 441)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "espera a pena"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "manda os olhos dela a Farenta (448)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "espera a pena",
-     "txt": "[3] → espera a pena"
-    }
-   ],
-   "hora_rolado": "12:33:23"
-  },
-  "SG42": {
-   "id": "SG42",
-   "dia": 442,
-   "hora": "12:33:39",
-   "titulo": "O SEGREDO PEQUENO DO REI QUE ESCAPA EM LUMADE (pela boca do Tolvane)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o rei LEU a carta cifrada do Colégio à Leliel"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o rei paga com sangue a palavra de um servo morto"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o rei está FERIDO e não luta até o 458"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o rei LEU a carta cifrada do Colégio à Leliel",
-     "txt": "[2] → o rei LEU a carta cifrada do Colégio à Leliel"
-    }
-   ],
-   "hora_rolado": "12:33:39"
-  },
-  "EL44": {
-   "id": "EL44",
-   "dia": 444,
-   "hora": "12:34:23",
-   "titulo": "ONDE ESTÁ A ELAEVA quando o rei chega a Farenta",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a um dia e meio, nos morros do noroeste"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "a um dia: as fazendas de cima fogem para dentro dos muros"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "já à vista das muralhas, ao pôr do sol"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a um dia: as fazendas de cima fogem para dentro dos muros",
-     "txt": "[5] → a um dia: as fazendas de cima fogem para dentro dos muros"
-    }
-   ],
-   "hora_rolado": "12:34:23"
-  },
-  "FB44": {
-   "id": "FB44",
-   "dia": 444,
-   "hora": "12:34:23",
-   "titulo": "A FEBRE EM FARENTA (a peste do 442)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "branda: Saúde −1 até o 451"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "forte: Saúde −1 até o 455 e Ordem −1"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a FEBRE CINZA de volta: Saúde −2 até tratar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "forte: Saúde −1 até o 455 e Ordem −1",
-     "txt": "[3] → forte: Saúde −1 até o 455 e Ordem −1"
-    }
-   ],
-   "hora_rolado": "12:34:23"
-  },
   "EC45": {
    "id": "EC45",
    "dia": 445,
@@ -21178,6 +20712,549 @@
     }
    ],
    "hora_rolado": "13:56:21"
+  },
+  "FV08": {
+   "id": "FV08",
+   "dia": 508,
+   "hora": "19:09:38",
+   "titulo": "O VELHO FIO ESQUECIDO QUE VOLTA A FAVOR (a surpresa boa do Vigor do Moreth; entre os seis fios à vista mais parados da agenda)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "F4 o Clã (o therk e o Thargos)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "F5 os Vradda e o Hulgunn (a mediação)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "F6 o SALVIO, capitão da Tiracci, que fugiu com o ouro do norte"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "F19 os Descalços do Cais (a audiência)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "F17 Fenmir e o Hugr"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "F20 o Tolvane e a Leliel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "F17 Fenmir e o Hugr",
+     "txt": "[5] → F17 Fenmir e o Hugr"
+    }
+   ],
+   "hora_rolado": "19:09:38"
+  },
+  "RV08": {
+   "id": "RV08",
+   "dia": 508,
+   "hora": "19:10:42",
+   "titulo": "A REVIRAVOLTA DO BLOCO (G42, a primeira; o fim da noite do 508 em Ezmisa: o maior sucesso foi o coração aberto, o Tkorna morto e o núcleo; o que vazou: o olheiro do Círculo, preso pelo Gonde, que não voltou ao posto)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "O PREÇO DA VITÓRIA: o coração do Tkorna, ao parar, solta a praga que guardava: a febre da lama sobe com a água do brejo (RV08b)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "O INIMIGO USA O QUE SABE: o olheiro não voltou ao posto: o CÍRCULO desce ao brejo nesta noite (2d6 + 4 homens, com o chefe do posto) e acha a carroça antes de o rei sair de Ezmisa"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "ALGUÉM DE PERTO PAGA: a carta que vem traz a desgraça de um dos da casa que estão longe (RV08c quem, RV08d o quê)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O MUNDO SEGUE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "O INIMIGO USA O QUE SABE: o olheiro não voltou ao posto: o CÍRCULO desce ao brejo nesta noite (2d6 + 4 homens, com o chefe do posto) e acha a carroça antes de o rei sair de Ezmisa",
+     "txt": "[3] → O INIMIGO USA O QUE SABE: o olheiro não voltou ao posto: o CÍRCULO desce ao brejo nesta noite (2d6 + 4 homens, com o chefe do posto) e acha a carroça antes de o rei sair de Ezmisa"
+    }
+   ],
+   "hora_rolado": "19:10:42"
+  },
+  "RV08b": {
+   "id": "RV08b",
+   "dia": 508,
+   "hora": "19:10:42",
+   "titulo": "QUEM A FEBRE DO BRejo PEGA (vale só com o RV08 em 1-2)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "os cortadores de junco e o eremita"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "a carroça: a Eliane ferida e os guardas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "os cortadores de junco e o eremita",
+     "txt": "[2] → os cortadores de junco e o eremita"
+    }
+   ],
+   "hora_rolado": "19:10:42"
+  },
+  "RV08c": {
+   "id": "RV08c",
+   "dia": 508,
+   "hora": "19:10:42",
+   "titulo": "QUEM PAGA, LONGE (vale só com o RV08 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a Tilde"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a Nouliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Isolda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o Graur"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o Herkald",
+     "txt": "[4] → o Herkald"
+    }
+   ],
+   "hora_rolado": "19:10:42"
+  },
+  "RV08d": {
+   "id": "RV08d",
+   "dia": 508,
+   "hora": "19:10:42",
+   "titulo": "O QUE ACONTECE A QUEM PAGA (vale só com o RV08 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ferido grave"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "preso ou tomado"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "trai a casa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "morto",
+     "txt": "[5] → morto"
+    }
+   ],
+   "hora_rolado": "19:10:42"
+  },
+  "CI08n": {
+   "id": "CI08n",
+   "dia": 508,
+   "hora": "19:11:07",
+   "titulo": "QUANTOS DO CÍRCULO DESCEM AO BREJO (G42: 2d6 + 4)",
+   "dado": [
+    2,
+    6,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 16,
+     "res": "o número de homens"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3,
+      3
+     ],
+     "total": 10,
+     "res": "o número de homens",
+     "txt": "[3, 3] +4 = 10 → o número de homens"
+    }
+   ],
+   "hora_rolado": "19:11:07"
+  },
+  "CI08ch": {
+   "id": "CI08ch",
+   "dia": 508,
+   "hora": "19:11:07",
+   "titulo": "O CHEFE DO POSTO DO CÍRCULO: O NÍVEL (30 + d6 × 10)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "40"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "60"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "70"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "80"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "90"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "80",
+     "txt": "[5] → 80"
+    }
+   ],
+   "hora_rolado": "19:11:07"
+  },
+  "CI08r": {
+   "id": "CI08r",
+   "dia": 508,
+   "hora": "19:11:07",
+   "titulo": "O QUE O CÍRCULO FAZ AO ACHAR A CARROÇA (querem o olheiro de volta e o coração do bicho; a carroça com três de pé e uma ferida; a Matriz e o Martelo à vista se olharem dentro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ATACAM A CARROÇA (o combate rápido: o Gonde e os 2 contra eles)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "CERCAM A CARROÇA e esperam o rei sair: querem o olheiro e o núcleo (barganha, com faca no pescoço de quem está ali)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "cercam a carroça e mandam gente para dentro de Ezmisa atrás do rei (a casa os encontra na volta, numa das casas)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "cercam a carroça e mandam gente para dentro de Ezmisa atrás do rei (a casa os encontra na volta, numa das casas)",
+     "txt": "[6] → cercam a carroça e mandam gente para dentro de Ezmisa atrás do rei (a casa os encontra na volta, numa das casas)"
+    }
+   ],
+   "hora_rolado": "19:11:07"
+  },
+  "CI08s": {
+   "id": "CI08s",
+   "dia": 508,
+   "hora": "19:11:25",
+   "titulo": "QUEM DO CÍRCULO ENTRA EM EZMISA ATRÁS DO REI (CI08r [6]; os 10 e o chefe 80)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "o CHEFE e 5 entram; 4 cercam a carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "4 entram, sem o chefe; o CHEFE e 5 cercam a carroça"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o CHEFE e 5 entram; 4 cercam a carroça",
+     "txt": "[3] → o CHEFE e 5 entram; 4 cercam a carroça"
+    }
+   ],
+   "hora_rolado": "19:11:25"
+  },
+  "CI08t": {
+   "id": "CI08t",
+   "dia": 508,
+   "hora": "19:11:25",
+   "titulo": "A LAJE DA SEGUNDA CASA E OS DO CÍRCULO (eles não sabem da armadilha; vão atrás das pegadas da casa na lama)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a laje desce sobre eles: a segunda casa se fecha com eles dentro (Força CD 29 ou 1 hora)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "passam: pisaram onde a casa pisou"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "a laje desce sobre eles: a segunda casa se fecha com eles dentro (Força CD 29 ou 1 hora)",
+     "txt": "[1] → a laje desce sobre eles: a segunda casa se fecha com eles dentro (Força CD 29 ou 1 hora)"
+    }
+   ],
+   "hora_rolado": "19:11:25"
+  },
+  "CI08m": {
+   "id": "CI08m",
+   "dia": 508,
+   "hora": "19:11:25",
+   "titulo": "ONDE A CASA ENCONTRA OS DO CÍRCULO NA VOLTA (se passarem da segunda casa; a casa volta pela 6ª, 4ª, 3ª, 2ª e 1ª)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "na QUARTA (o espelho coberto pelo manto do Eiagrir)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "na TERCEIRA (a casca da muda)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "na SEXTA, às portas do coração (eles chegam lá antes de a casa sair)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "na TERCEIRA (a casca da muda)",
+     "txt": "[4] → na TERCEIRA (a casca da muda)"
+    }
+   ],
+   "hora_rolado": "19:11:25"
   }
  }
 }

@@ -3836,7 +3836,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 26415,
+  "xp": 27395,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3959,7 +3959,8 @@
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
    "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
-   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))"
+   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
+   "+980 508: Tkorna (Épico 98; 1 caído(s))"
   ],
   "tracos": [
    "LEAL",
@@ -5849,7 +5850,7 @@
  },
  "Eiagrir": {
   "nivel": 130,
-  "xp": 16698,
+  "xp": 17678,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5938,7 +5939,8 @@
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
    "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
-   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))"
+   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
+   "+980 508: Tkorna (Épico 98; 1 caído(s))"
   ],
   "ultima_subida": 483,
   "tracos": [
