@@ -3996,6 +3996,17 @@
    "chegada": "[5] em 1d6 [4] dias",
    "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Ireviel e o rio",
    "toca": true
+  },
+  {
+   "dia": 509,
+   "d20": 4,
+   "o_que": "DESCOBERTA DE MATERIAL (um veio, uma árvore, uma fera nova)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "",
+   "noticia_chega": 512,
+   "chegada": "[2] em 1d3 [3] dias",
+   "resumo": "DESCOBERTA DE MATERIAL — Yaelane",
+   "toca": false
   }
  ]
 }

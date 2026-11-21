@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 508, o posto vazio do Círculo: o túnel sob Lumade e a lua nova (MOTOR 9b: G1 a G42)
+# RETOMAR — entardecer do Dia 509, LUMADE: o pacto de forja; o comboio perdido; os 24 soltos (MOTOR 9b: G1 a G42)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 509, LUMADE, a casa do Celocus. O PACTO DE FORJA selado (DL09 24; tratados.json forja_lumade: um ano; todo mês 3 kg Raro ou 1,5 Épico e um núcleo quando houver; a casa vende armas a preço do Motor); o NÚCLEO ÉPICO DE SORTE devolvido. O rei NÍVEL 52 (XP 136.090; o 53 em 137.900), PV 265/273, Mana 49/119, EXAUSTO 1 (a noite do 508 sem sono; a G16), Visão 2/2 (o dia 509), Erudito 0/1 (volta no 511). O Moreth 574/610 e o Eiagrir 432/432, EXAUSTOS 1 (os dois sobem no tick do 511). A Eliane de cama (até o 517). O Gonde e 2 guardas; os 4 guardas FERIDOS do comboio (2 graves, 2 leves); NYRAUS e DVURNOS MORTOS na estrada (os corpos lá, a um dia a leste). NOVE PRESOS DO CÍRCULO (o chefe LIOR e 8). Com a casa: a Matriz, o Martelo, o LIVRO DE SANGUE, os núcleos Épicos de VENENO e de SORTE, yelle 10, yomiar 15, yior 6, miiel 9, nior 12. OS 24 HERDEIROS DA PRIMEIRA LIGA SOLTOS desde a noite do 508 (o Nutoccone; sabem do livro). Os VRURN (7 trolls) na estrada do leste. O CÍRCULO: o chefe novo (80) e uns cinco nos poços; o túnel sob a praça do mercado; a casa sabe de lua nova (520). (OCULTO) o TÚNEL ABRE NO 514 (#1052, para; G42 RV10). (OCULTO) o Círculo reage no 512 (#1050). (OCULTO) MEOR VEM na lua nova. Cartas a caminho: a da Brara (~511), a da Nouliel (~513). Cofre 59.567.
+
+Antes (508, o posto vazio):
 Noite do 508, O POSTO VAZIO DO CÍRCULO, no alto do vale de cima de Lumade (o fogo aceso, comida, a bandeira). O rei NÍVEL 52 (XP 134.090), PV 265/273, Mana 49/119, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6. Com ele no alto: o Moreth 574/610 e o Eiagrir 432/432 (os dois sobem no tick do 511). Lá embaixo, na beira de Ezmisa: o Gonde e 2 guardas, a ELIANE de cama (até o 517), a carroça com a Matriz, o Martelo, o LIVRO DE SANGUE, o NÚCLEO ÉPICO DE VENENO, yelle e yomiar; os SEIS PRESOS DO CÍRCULO: o chefe LIOR (80; npcs.json; CURIOSO e ORGULHOSO; FALOU, IN09 sucesso; os quatro homens dele o ouviram), 4 homens e o olheiro. O QUE A CASA SABE: o TÚNEL do Círculo até a velha mina debaixo da PRAÇA DO MERCADO de Lumade, faltando dois poços (umas duas semanas); o plano de ENVENENAR O POÇO DA PRAÇA (metade da cidade bebe dali) na LUA NOVA (520) com o coração do bicho, que está com o rei; o mapa dos poços. O Círculo (10, um chefe 80) fugiu vale acima, aos poços, com a notícia. O rei trata o CELOCUS e a gente dele como INIMIGOS (a palavra do 506). (OCULTO) MEOR VEM EM PESSOA na lua nova, com a guilda (T3L [1]). (OCULTO) o Círculo reage no 512 (#1050). (OCULTO) os 24 herdeiros SOLTOS desde a noite do 508; o comboio quebrado (a notícia em Lumade no entardecer do 509, #1048). Cofre 59.567.
 
 Antes (508, a beira de Ezmisa):
@@ -482,9 +485,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (508, a beira → o posto): 1b os seis presos com a casa a Ireviel · 2c subir ao posto agora · 3a 'ou resposta ou morte lenta'
 - o Lior com traços (gerador.py npc) · IN09 sucesso (41 vs 33): ele fala · T1L [3], T2L [3], T3L [1] (ocultos antes) · o saber do Lior: GANHO, GANHO, FALHA · PO09q 10, PO09c 80, PO09r [4] o posto abandonado, PO09v [5] · RV09 [6] o mundo segue.
 
+## RESPONDIDO (508 → 509): 1c vender o aviso ao Celocus pelo acordo de forja ('quero um acordo vantajoso') · 2a perseguir o Círculo agora, de noite
+- PS10 17 · CR10 68 × 54, CR10c [2] (o chefe e cinco fogem), CF10 (1 morto, 3 presos) · +2.000 XP · o descanso desfeito (sem sono: Exaustão 1) · EN09 [4] · DL09 24 (o pacto e o núcleo devolvido) · RV10 [3] (oculto: o túnel no 514) · a notícia do comboio no entardecer.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. LUMADE E O TÚNEL (o rei trata o Celocus como inimigo, pela palavra do 506; mas metade da cidade bebe do poço da praça; a lua nova é o 520): a) avisar o Celocus · b) não avisar: deixar o Círculo e o Celocus se ferirem · c) vender a informação ao Celocus (o jogador diz o preço) · d) tomar o túnel para a casa (fechá-lo, ou usá-lo).
-2. A NOITE (o Círculo fugiu vale acima, para os poços; a Mana do rei 49): a) persegui-los agora, vale acima, de noite · b) descer à carroça e voltar a Lumade na aurora · c) ir aos poços do mapa na aurora · d) outra.
+1. OS 24 HERDEIROS SOLTOS (o Nutoccone e os seus; sabem que o livro de sangue está com o rei; fugiram a um dia a leste): a) caçá-los com a casa · b) pedir ao Celocus que os cace (o pacto novo) · c) avisar Levis e Ireviel por carta e seguir · d) outra.
+2. OS VRURN (sete trolls na estrada do leste, entre Lumade e Levis: o caminho de volta; os corpos de Nyraus e Dvurnos lá): a) caçá-los na estrada (vingar os dois) · b) voltar por outro caminho · c) esperar e voltar com gente do Celocus.
+3. LUMADE E O TÚNEL (a casa sabe: a lua nova do 520; o pacto novo): a) ficar e defender Lumade com o Celocus · b) voltar a Ireviel (o livro, a Fornalha, os focos, os nove presos) e deixar Lumade com o Celocus · c) fechar o túnel antes de ir (os poços do mapa).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

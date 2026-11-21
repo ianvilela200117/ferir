@@ -1,26 +1,5 @@
 {
  "ordem": [
-  "PE49",
-  "CM49",
-  "NZ49",
-  "MI49",
-  "ED49",
-  "FM49",
-  "SA49",
-  "Q249",
-  "GU50",
-  "SI50",
-  "D51",
-  "CL51",
-  "FE51",
-  "YE51",
-  "MF51",
-  "YQ51",
-  "IS52",
-  "IH52",
-  "IV52",
-  "CD53",
-  "RT54",
   "YS54",
   "YC54",
   "455-laco-quem",
@@ -399,907 +378,30 @@
   "RV09b",
   "RV09c",
   "RV09d",
-  "RV09e"
+  "RV09e",
+  "PS10",
+  "CR10a1",
+  "CR10b1",
+  "CR10a2",
+  "CR10b2",
+  "CR10a3",
+  "CR10b3",
+  "CR10c",
+  "CR10q",
+  "CF10-1",
+  "CF10-2",
+  "CF10-3",
+  "CF10-4",
+  "EN09",
+  "DL09",
+  "DL09b",
+  "DL09c",
+  "RV10",
+  "RV10b",
+  "RV10c",
+  "RV10d"
  ],
  "selos": {
-  "PE49": {
-   "id": "PE49",
-   "dia": 449,
-   "hora": "19:53:36",
-   "titulo": "PARA ONDE A ELAEVA VAI (449)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "o noroeste, aos Picos Brancos"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "o vale, rumo ao Delta e às salinas"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o sul, pela estrada sul de Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "o vale, rumo ao Delta e às salinas",
-     "txt": "[4] → o vale, rumo ao Delta e às salinas"
-    }
-   ],
-   "hora_rolado": "19:53:36"
-  },
-  "CM49": {
-   "id": "CM49",
-   "dia": 449,
-   "hora": "19:53:36",
-   "titulo": "O CORPO DA MAMILTIA QUANDO A FLORESTA ANDA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "as raízes o levam"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "fica no chão, inteiro"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "fica no chão, inteiro",
-     "txt": "[4] → fica no chão, inteiro"
-    }
-   ],
-   "hora_rolado": "19:53:36"
-  },
-  "NZ49": {
-   "id": "NZ49",
-   "dia": 449,
-   "hora": "19:53:36",
-   "titulo": "O NÚCLEO DO ZYZA NOS PEDAÇOS DELE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "perdido"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "achado"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "achado",
-     "txt": "[4] → achado"
-    }
-   ],
-   "hora_rolado": "19:53:36"
-  },
-  "MI49": {
-   "id": "MI49",
-   "dia": 449,
-   "hora": "19:54:08",
-   "titulo": "A MIE QUANDO SABE QUE A ELAEVA VAI AO DELTA (a terra dela e da Lurentetta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 4,
-     "res": "parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "pede ao rei que vá junto"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta",
-     "txt": "[1] → parte hoje pelo mar ao Delta com as 20 lanças, para avisar a Lurentetta"
-    }
-   ],
-   "hora_rolado": "19:54:08"
-  },
-  "ED49": {
-   "id": "ED49",
-   "dia": 449,
-   "hora": "19:54:21",
-   "titulo": "(OCULTO) EM QUANTOS DIAS A ELAEVA CHEGA AO DELTA, pelo vale (anda devagar; em 252 levou ~14 dias)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "+ 8 dias"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      2
-     ],
-     "total": 8,
-     "res": "+ 8 dias",
-     "txt": "[6, 2] +0 = 8 → + 8 dias"
-    }
-   ],
-   "hora_rolado": "19:54:21"
-  },
-  "FM49": {
-   "id": "FM49",
-   "dia": 449,
-   "hora": "20:18:03",
-   "titulo": "O SANGUE DO FALAR COM MORTO NA MAMILTIA (Osso 3º)",
-   "dado": [
-    3,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 18,
-     "res": "tantos PV"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      1,
-      4
-     ],
-     "total": 10,
-     "res": "tantos PV",
-     "txt": "[5, 1, 4] +0 = 10 → tantos PV"
-    }
-   ],
-   "hora_rolado": "20:18:03"
-  },
-  "SA49": {
-   "id": "SA49",
-   "dia": 449,
-   "hora": "20:18:03",
-   "titulo": "A MAMILTIA ACEITA SERVIR, ERGUIDA PELA PALAVRA DO REI?",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "RECUSA"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "aceita com um preço"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "aceita"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "RECUSA",
-     "txt": "[1] → RECUSA"
-    }
-   ],
-   "hora_rolado": "20:18:03"
-  },
-  "Q249": {
-   "id": "Q249",
-   "dia": 449,
-   "hora": "20:18:10",
-   "titulo": "O QUE A MAMILTIA QUER DO CORPO DELA (ela recusou servir)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "ser levada à Mão Queimada de Telosus"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ser queimada na forja de um ferreiro santo"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ficar onde caiu, em Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ser queimada na forja de um ferreiro santo",
-     "txt": "[5] → ser queimada na forja de um ferreiro santo"
-    }
-   ],
-   "hora_rolado": "20:18:10"
-  },
-  "GU50": {
-   "id": "GU50",
-   "dia": 450,
-   "hora": "20:18:56",
-   "titulo": "A GUILDA DOS AVENTUREIROS E A CRIATURA DE LEVIS",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "recusa"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "manda só batedores a ver"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "vai caçar"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "recusa",
-     "txt": "[1] → recusa"
-    }
-   ],
-   "hora_rolado": "20:18:56"
-  },
-  "SI50": {
-   "id": "SI50",
-   "dia": 450,
-   "hora": "20:18:56",
-   "titulo": "O SAL QUE A NOULIEL COMPRA EM IREVIEL PARA A GALÉ",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "duas carroças"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "quatro"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "seis"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "duas carroças",
-     "txt": "[2] → duas carroças"
-    }
-   ],
-   "hora_rolado": "20:18:56"
-  },
-  "D51": {
-   "id": "D51",
-   "dia": 451,
-   "hora": "20:19:18",
-   "titulo": "O DESASTRE EM FARENTA NO 451 (a pressão)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "terremoto: a muralha cai num trecho"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "enchente do mar no bairro do porto"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "incêndio no bairro da febre"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "incêndio no bairro da febre",
-     "txt": "[6] → incêndio no bairro da febre"
-    }
-   ],
-   "hora_rolado": "20:19:18"
-  },
-  "CL51": {
-   "id": "CL51",
-   "dia": 451,
-   "hora": "20:19:18",
-   "titulo": "O CLIMA ESTRANHO NA COSTA IREVIEL–MARASAR",
-   "dado": [
-    1,
-    4,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o inverno que não acaba"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "neve vermelha"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "seca de sal"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "tempestade de cinza"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "o inverno que não acaba",
-     "txt": "[1] → o inverno que não acaba"
-    }
-   ],
-   "hora_rolado": "20:19:18"
-  },
-  "FE51": {
-   "id": "FE51",
-   "dia": 451,
-   "hora": "20:19:18",
-   "titulo": "(OCULTO) A MÃO QUEIMADA DE IREVIEL E A MORTE DA MAMILTIA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "culpa o rei"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "luto, pedem o corpo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "honram o rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "honram o rei",
-     "txt": "[5] → honram o rei"
-    }
-   ],
-   "hora_rolado": "20:19:18"
-  },
-  "YE51": {
-   "id": "YE51",
-   "dia": 451,
-   "hora": "20:19:18",
-   "titulo": "(OCULTO) YEOR CRUZA COM O REI EM FARENTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "não"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "procura o rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "procura o rei",
-     "txt": "[6] → procura o rei"
-    }
-   ],
-   "hora_rolado": "20:19:18"
-  },
-  "MF51": {
-   "id": "MF51",
-   "dia": 451,
-   "hora": "20:19:33",
-   "titulo": "OS MORTOS DO INCÊNDIO NO BAIRRO DA FEBRE (451)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3,
-      3
-     ],
-     "total": 6,
-     "res": "mortos",
-     "txt": "[3, 3] +0 = 6 → mortos"
-    }
-   ],
-   "hora_rolado": "20:19:33"
-  },
-  "YQ51": {
-   "id": "YQ51",
-   "dia": 451,
-   "hora": "20:19:33",
-   "titulo": "QUEM YEOR QUER CURAR (ele procura o rei em Farenta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a filha dele, com a febre de Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o senhor a quem serve, envenenado, em Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ele mesmo: uma doença que esconde"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a filha dele, com a febre de Farenta",
-     "txt": "[1] → a filha dele, com a febre de Farenta"
-    }
-   ],
-   "hora_rolado": "20:19:33"
-  },
-  "IS52": {
-   "id": "IS52",
-   "dia": 452,
-   "hora": "20:19:59",
-   "titulo": "O GESTO DA ISOLDA EM FARENTA (a trama dela: RESSENTIMENTO contra a Almision; ela ouve do rei a memória do corvo nos olhos da Mamiltia)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "pede ao rei a caça ao corvo da Almision, para ela"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "conta que o corvo grande foi visto em Ireviel, sobre a Casa dos Estudiosos, no 449"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "jura diante do rei matar a Almision, e pede o Elo de Juramento"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "pede ao rei a caça ao corvo da Almision, para ela",
-     "txt": "[1] → pede ao rei a caça ao corvo da Almision, para ela"
-    }
-   ],
-   "hora_rolado": "20:19:59"
-  },
-  "IH52": {
-   "id": "IH52",
-   "dia": 452,
-   "hora": "20:34:54",
-   "titulo": "ONDE ESTÁ O RASTRO DO CORVO DA ALMISION (a Isolda sai pela estrada sul na noite do 452)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a estrada sul de Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "Telosus, a Escola Única"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "em volta de Ireviel, sobre a Casa dos Estudiosos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a estrada sul de Farenta",
-     "txt": "[2] → a estrada sul de Farenta"
-    }
-   ],
-   "hora_rolado": "20:34:54"
-  },
-  "IV52": {
-   "id": "IV52",
-   "dia": 452,
-   "hora": "20:34:54",
-   "titulo": "EM QUANTOS DIAS A ISOLDA VOLTA (d6 + 3)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "+ 3 dias"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "+ 3 dias",
-     "txt": "[2] → + 3 dias"
-    }
-   ],
-   "hora_rolado": "20:34:54"
-  },
-  "CD53": {
-   "id": "CD53",
-   "dia": 453,
-   "hora": "20:35:16",
-   "titulo": "(OCULTO) O CEDUION E A COBRANÇA DO REI",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "nega e ameaça"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "paga em silêncio"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "pede perdão e oferece ensinar um feitiço do 7º círculo"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "pede perdão e oferece ensinar um feitiço do 7º círculo",
-     "txt": "[5] → pede perdão e oferece ensinar um feitiço do 7º círculo"
-    }
-   ],
-   "hora_rolado": "20:35:16"
-  },
-  "RT54": {
-   "id": "RT54",
-   "dia": 454,
-   "hora": "20:35:38",
-   "titulo": "O RITO DA MAMILTIA NA FORJA SANTA DA MÃO QUEIMADA DE IREVIEL",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "pedem que o rei dê a mão ao fogo com eles"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "o mais velho a queima, e a fé agradece"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o mais velho a queima, e a fé agradece",
-     "txt": "[3] → o mais velho a queima, e a fé agradece"
-    }
-   ],
-   "hora_rolado": "20:35:38"
-  },
   "YS54": {
    "id": "YS54",
    "dia": 454,
@@ -21174,6 +20276,924 @@
     }
    ],
    "hora_rolado": "22:57:34"
+  },
+  "PS10": {
+   "id": "PS10",
+   "dia": 508,
+   "hora": "23:05:18",
+   "titulo": "A PERSEGUIÇÃO DO CÍRCULO VALE ACIMA (noite do 508; os 10 com um chefe nível 80 fogem aos poços com tochas; o rei, o Moreth e o Eiagrir sem carroça) · +4 as tochas deles à vista · +2 a casa anda leve e é mais forte · −3 a noite e a pedra solta · −2 eles conhecem o vale · −2 a dianteira deles",
+   "dado": [
+    1,
+    20,
+    -1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "OS PERDEM: as tochas se apagam no alto e o vale engole o rastro (a casa chega aos poços na aurora, sem eles)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 12,
+     "res": "ALCANÇAM NOS POÇOS: eles se entrincheiram na boca do túnel (o combate rápido, com eles +3 pela posição)"
+    },
+    {
+     "tipo": "num",
+     "a": 13,
+     "b": 17,
+     "res": "ALCANÇAM NA ENCOSTA: pegam a retaguarda (o combate rápido, sem posição; a casa +2)"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 20,
+     "res": "ALCANÇAM ANTES DOS POÇOS E OS CERCAM numa garganta (o combate rápido; eles −3; ninguém foge)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 17,
+     "res": "ALCANÇAM NA ENCOSTA: pegam a retaguarda (o combate rápido, sem posição; a casa +2)",
+     "txt": "[18] -1 = 17 → ALCANÇAM NA ENCOSTA: pegam a retaguarda (o combate rápido, sem posição; a casa +2)"
+    }
+   ],
+   "hora_rolado": "23:05:19"
+  },
+  "CR10a1": {
+   "id": "CR10a1",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 1: A CASA (d20 + 50)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "o dado",
+     "txt": "[18] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10b1": {
+   "id": "CR10b1",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 1: O CÍRCULO (d20 + 36)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      18
+     ],
+     "total": 18,
+     "res": "o dado",
+     "txt": "[18] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10a2": {
+   "id": "CR10a2",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 2: A CASA (d20 + 48, menos o teto perdido)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o dado",
+     "txt": "[3] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10b2": {
+   "id": "CR10b2",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 2: O CÍRCULO (d20 + 36, menos o teto perdido)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      9
+     ],
+     "total": 9,
+     "res": "o dado",
+     "txt": "[9] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10a3": {
+   "id": "CR10a3",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 3: A CASA",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 17,
+     "res": "o dado",
+     "txt": "[17] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10b3": {
+   "id": "CR10b3",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMBATE RÁPIDO NA ENCOSTA, RODADA 3: O CÍRCULO",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 20,
+     "res": "o dado"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      7
+     ],
+     "total": 7,
+     "res": "o dado",
+     "txt": "[7] → o dado"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10c": {
+   "id": "CR10c",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "COMO OS DO CÍRCULO QUEBRAM NA ENCOSTA (vale se forem destroçados)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o chefe e uns cinco fogem no escuro aos poços, com a notícia"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o chefe cai; uns três fogem"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "ninguém escapa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o chefe e uns cinco fogem no escuro aos poços, com a notícia",
+     "txt": "[2] → o chefe e uns cinco fogem no escuro aos poços, com a notícia"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CR10q": {
+   "id": "CR10q",
+   "dia": 508,
+   "hora": "23:05:35",
+   "titulo": "QUEM DA CASA CAI (vale se a casa perder gente)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o rei"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o Moreth"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o Eiagrir"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o rei",
+     "txt": "[1] → o rei"
+    }
+   ],
+   "hora_rolado": "23:05:35"
+  },
+  "CF10-1": {
+   "id": "CF10-1",
+   "dia": 508,
+   "hora": "23:05:45",
+   "titulo": "O DO CÍRCULO CAÍDO NA ENCOSTA Nº 1 (nível 50)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "grave (preso)",
+     "txt": "[4] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "23:05:45"
+  },
+  "CF10-2": {
+   "id": "CF10-2",
+   "dia": 508,
+   "hora": "23:05:45",
+   "titulo": "O DO CÍRCULO CAÍDO NA ENCOSTA Nº 2",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "morto",
+     "txt": "[2] → morto"
+    }
+   ],
+   "hora_rolado": "23:05:45"
+  },
+  "CF10-3": {
+   "id": "CF10-3",
+   "dia": 508,
+   "hora": "23:05:45",
+   "titulo": "O DO CÍRCULO CAÍDO NA ENCOSTA Nº 3",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "leve (preso)",
+     "txt": "[6] → leve (preso)"
+    }
+   ],
+   "hora_rolado": "23:05:45"
+  },
+  "CF10-4": {
+   "id": "CF10-4",
+   "dia": 508,
+   "hora": "23:05:45",
+   "titulo": "O DO CÍRCULO CAÍDO NA ENCOSTA Nº 4",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "grave (preso)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "leve (preso)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "grave (preso)",
+     "txt": "[3] → grave (preso)"
+    }
+   ],
+   "hora_rolado": "23:05:45"
+  },
+  "EN09": {
+   "id": "EN09",
+   "dia": 509,
+   "hora": "23:06:46",
+   "titulo": "O ENCONTRO NA ESTRADA DE EZMISA A LUMADE (509; a casa com a carroça, a Eliane de cama e nove presos do Círculo; o rei sem dormir, Exausto 1)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "na estrada, cordas cortadas e muitas pegadas que vêm do leste e somem no mato (um rastro)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "gente do CELOCUS vem ao encontro: ele mandou buscar o rei"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "o EREMITA Ioduxeth vem atrás da carroça: quer ir junto"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "mercadores da rota de Lumade que viram as tochas do Círculo e perguntam o que foi"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "um bando de corvos sobre a estrada, seguindo a carroça (o corvo da Almision?)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "mercadores da rota de Lumade que viram as tochas do Círculo e perguntam o que foi",
+     "txt": "[4] → mercadores da rota de Lumade que viram as tochas do Círculo e perguntam o que foi"
+    }
+   ],
+   "hora_rolado": "23:06:46"
+  },
+  "DL09": {
+   "id": "DL09",
+   "dia": 509,
+   "hora": "23:06:46",
+   "titulo": "O ACORDO COM O CELOCUS (509, tarde, a casa dele em Lumade; o rei vende o que sabe: o TÚNEL do Círculo até a mina velha sob a PRAÇA DO MERCADO, o VENENO no poço da praça e a LUA NOVA do 520; o PREÇO do jogador: 'um acordo vantajoso à casa: o Celocus fornece material de forja, núcleo entre outros; em troca a casa vende armas a ele e o que precisar') · +6 a informação salva a cidade dele · +2 HONESTO (paga o que vale) · +2 o rei cumpriu (o túmulo e a conta) · +2 'enriquecer acima de todos': o acordo também o enriquece · −2 ORGULHOSO (o preço posto por um rei que o trata como inimigo) · −2 a frieza do 506 ('são meus inimigos') · −1 a caravana perdida (dinheiro curto)",
+   "dado": [
+    1,
+    20,
+    7
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 8,
+     "res": "RECUSA o pacto: paga a informação em ouro (DL09b: d6 × 1.000) e nada mais"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 15,
+     "res": "ACEITA COM CONTRAPROPOSTA: o pacto de forja por um ano, mas com EXCLUSIVIDADE (a casa não vende armas aos rivais de Lumade) e preço de amigo (−20% nas armas)"
+    },
+    {
+     "tipo": "num",
+     "a": 16,
+     "b": 22,
+     "res": "ACEITA: O PACTO DE FORJA por um ano: Lumade dá à casa todo mês material de forja (DL09c: d6 kg de Raro ou Épico) e um NÚCLEO quando houver; compra as armas da casa a preço do Motor"
+    },
+    {
+     "tipo": "num",
+     "a": 23,
+     "b": 27,
+     "res": "ACEITA E MAIS: o pacto, e DEVOLVE O NÚCLEO ÉPICO DE SORTE (o coração do guardião das rainhas) como sinal"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      17
+     ],
+     "total": 24,
+     "res": "ACEITA E MAIS: o pacto, e DEVOLVE O NÚCLEO ÉPICO DE SORTE (o coração do guardião das rainhas) como sinal",
+     "txt": "[17] +7 = 24 → ACEITA E MAIS: o pacto, e DEVOLVE O NÚCLEO ÉPICO DE SORTE (o coração do guardião das rainhas) como sinal"
+    }
+   ],
+   "hora_rolado": "23:06:46"
+  },
+  "DL09b": {
+   "id": "DL09b",
+   "dia": 509,
+   "hora": "23:06:46",
+   "titulo": "O OURO PELA INFORMAÇÃO (vale só com o DL09 em 1-8)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o número × 1.000"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o número × 1.000",
+     "txt": "[6] → o número × 1.000"
+    }
+   ],
+   "hora_rolado": "23:06:46"
+  },
+  "DL09c": {
+   "id": "DL09c",
+   "dia": 509,
+   "hora": "23:06:46",
+   "titulo": "O MATERIAL DE FORJA DE CADA MÊS (vale com o DL09 em 9 ou mais)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "tantos kg de Raro ou Épico por mês (o de Épico é a metade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "tantos kg de Raro ou Épico por mês (o de Épico é a metade)",
+     "txt": "[3] → tantos kg de Raro ou Épico por mês (o de Épico é a metade)"
+    }
+   ],
+   "hora_rolado": "23:06:46"
+  },
+  "RV10": {
+   "id": "RV10",
+   "dia": 509,
+   "hora": "23:07:41",
+   "titulo": "A REVIRAVOLTA DO BLOCO (G42; o 509: o maior sucesso foi o PACTO DE FORJA com o Celocus e o núcleo devolvido; o que vazou: o chefe do Círculo fugiu aos poços sabendo que a casa conhece o túnel)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "O PREÇO DA VITÓRIA: o ADUREL (Lendário, Zisrir), o rival do Celocus, sabe do pacto e passa a tratar a casa como inimiga"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "O INIMIGO USA O QUE SABE: o Círculo adianta o golpe: o túnel abre ANTES da lua nova (RV10b: em 1d6 + 3 dias, a contar do 509)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "ALGUÉM DE PERTO PAGA: a carta que vem traz a desgraça de um dos da casa que estão longe (RV10c quem, RV10d o quê)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O MUNDO SEGUE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "O INIMIGO USA O QUE SABE: o Círculo adianta o golpe: o túnel abre ANTES da lua nova (RV10b: em 1d6 + 3 dias, a contar do 509)",
+     "txt": "[3] → O INIMIGO USA O QUE SABE: o Círculo adianta o golpe: o túnel abre ANTES da lua nova (RV10b: em 1d6 + 3 dias, a contar do 509)"
+    }
+   ],
+   "hora_rolado": "23:07:41"
+  },
+  "RV10b": {
+   "id": "RV10b",
+   "dia": 509,
+   "hora": "23:07:41",
+   "titulo": "EM QUANTOS DIAS O TÚNEL ABRE (vale só com o RV10 em 3-4)",
+   "dado": [
+    1,
+    6,
+    3
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 9,
+     "res": "a contar do 509"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 5,
+     "res": "a contar do 509",
+     "txt": "[2] +3 = 5 → a contar do 509"
+    }
+   ],
+   "hora_rolado": "23:07:42"
+  },
+  "RV10c": {
+   "id": "RV10c",
+   "dia": 509,
+   "hora": "23:07:41",
+   "titulo": "QUEM PAGA, LONGE (vale só com o RV10 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a Tilde"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a Nouliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Isolda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o Graur"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "a Nouliel",
+     "txt": "[2] → a Nouliel"
+    }
+   ],
+   "hora_rolado": "23:07:42"
+  },
+  "RV10d": {
+   "id": "RV10d",
+   "dia": 509,
+   "hora": "23:07:41",
+   "titulo": "O QUE ACONTECE A QUEM PAGA (vale só com o RV10 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ferido grave"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "preso ou tomado"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "trai a casa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "morto",
+     "txt": "[5] → morto"
+    }
+   ],
+   "hora_rolado": "23:07:42"
   }
  }
 }

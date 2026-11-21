@@ -2434,3 +2434,32 @@ O fogo ainda queimava. Havia pão cortado sobre uma tábua, um caldeirão de fei
 Vale acima, longe, uma fila de tochas subia em direção aos poços.
 
 - **Parada:** noite do 508, o posto vazio do Círculo. Lumade tem doze noites até a lua nova.
+
+### A encosta, noite do 508
+As tochas deles subiam devagar, de dez em dez passos, e o vale era de pedra solta. O Eiagrir as seguia como quem segue uma fila de formigas, sem tirar os olhos.
+
+Alcançaram a retaguarda numa curva da encosta. O Moreth chegou primeiro, e a primeira tocha caiu rolando morro abaixo, acesa ainda. Foi rápido e no escuro. Quando acabou, um estava morto na pedra, três estavam no chão gemendo, e o resto, com o chefe novo à frente, tinha sumido vale acima sem tocha nenhuma.
+
+O rei ficou parado um tempo olhando o escuro para onde eles tinham ido. Não dormiu naquela noite. Nenhum dos três dormiu.
+
+### Lumade, a tarde do 509
+O Celocus ouviu tudo de pé, na mesma porta onde tinha recebido o rei com frieza três dias antes. O túnel. A praça do mercado. O poço de onde metade da cidade bebe. A lua nova.
+
+Quando o rei disse o preço, o material de forja todo mês, os núcleos, as armas da casa em troca, o Celocus não regateou. Entrou na casa e voltou com uma caixa de madeira escura.
+
+Dentro estava o coração do guardião das rainhas.
+
+"É seu", disse. "Para que se lembre de que eu pago bem quem me avisa."
+
+Mandaram vir vinho. Era o primeiro brinde entre os dois.
+
+### O entardecer
+O vinho ainda estava no copo quando os guardas chegaram à porta. Eram quatro, e dois vinham carregados.
+
+Um deles, com o braço preso numa tala de galho, ajoelhou diante do rei sem esperar ordem.
+
+"Trolls, senhor. Sete. Na primeira noite, a um dia daqui. Nyraus morreu de pé. Dvurnos não chegou a levantar." Engoliu. "Os presos cortaram as cordas na confusão. Correram todos. O velho mercador também."
+
+O Celocus pousou o copo na mesa, sem barulho nenhum.
+
+- **Parada:** entardecer do 509, Lumade. O pacto selado. Dois guardas mortos. Os vinte e quatro herdeiros da Primeira Liga soltos.

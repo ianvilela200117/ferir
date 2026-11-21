@@ -222,7 +222,7 @@ O que depende de outra coisa agora vem ligado no script, e o Mestre não precisa
   À mão: `python3 encadeia.py pendencias [DIAS]` (a 🧵 do turno lê daqui) · `python3 encadeia.py sincroniza` (todas as fichas de combate pelo nível).
 - **TODA SEMANA → O DESPERTAR.** O tick semanal roda `despertar.py rola` depois do `cresce.py` (pega quem escapou).
 - **EVENTO QUE "VOLTA EM 1d6 DIAS".** O tick rola o d6 na hora e põe na agenda o dia em que o evento volta. Antes ficava escrito e ninguém rolava (481).
-- **AURORA → O DESCANSO (508).** O tick devolve sozinho, a cada aurora, a Mana inteira ao rei e 1/10 do PV (G4). Numa noite sem sono, pôr `estado.json › tempo.sem_sono = true`.
+- **AURORA → O DESCANSO (508).** O tick devolve sozinho, a cada aurora, a Mana inteira ao rei e 1/10 do PV (G4). Numa noite sem sono, pôr `estado.json › tempo.sem_sono = true` ANTES de rodar o dia. É noite de vigília, de luta ou de marcha, e ela dá a Exaustão da G16. O 509 rodou sem isso, e o descanso foi desfeito à mão.
 - **FIM DE LUTA → O PV DO REI (507).** O PV do rei no fim da luta vai à ficha sozinho. A ficha de combate dele segue o nível e o PV do `ficha.json` (`encadeia.py sincroniza`; as pendências avisam se não bater).
 - **O QUE É OCULTO NÃO VAI À MESA.** Nas pendências, item oculto da agenda aparece sem o texto.
 - **O MODIFICADOR DE CIDADE.** As pendências acusam modificador com chave fora dos pilares ou com prazo sem data ('até o N').

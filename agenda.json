@@ -1,5 +1,5 @@
 {
- "prox_id": 1051,
+ "prox_id": 1053,
  "itens": [
   {
    "id": 1,
@@ -14914,7 +14914,7 @@
    "oculto": true,
    "para": true,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -14942,6 +14942,32 @@
    "origem": "mestre",
    "feito": false,
    "toca": false
+  },
+  {
+   "id": 1051,
+   "dia": 512,
+   "texto": "DESCOBERTA DE MATERIAL — Yaelane",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 509",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    13,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1052,
+   "dia": 514,
+   "texto": "(OCULTO até o dia) O TÚNEL DO CÍRCULO ABRE debaixo da PRAÇA DO MERCADO DE LUMADE, antes da lua nova (G42 RV10 [3], RV10b [2]+3: o Círculo adianta o golpe porque sabe que a casa conhece o túnel); o que sobe por ele: rolar no dia",
+   "tipo": "marco",
+   "oculto": true,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [
