@@ -8144,9 +8144,21 @@
   "nivel": 80,
   "xp": 0,
   "log": [
-   "Dia 508: entra no livro (nível 80)"
+   "Dia 508: entra no livro (nível 80)",
+   "Dia 508: ocupação nova (antes: PRESO pela casa em Ezmisa (508), ferido grave; levava um mapa dos poços do vale de cima)"
   ],
   "classe": "chefe do posto do Círculo da Areia Cantante no vale de cima de Lumade",
-  "ocupacao": "PRESO pela casa em Ezmisa (508), ferido grave; levava um mapa dos poços do vale de cima"
+  "ocupacao": "PRESO pela casa (508), ferido grave (o braço e o joelho); FALOU no interrogatório (o túnel e o veneno de Lumade); vai com a casa a Ireviel, para o conselho",
+  "tracos": [
+   "CURIOSO",
+   "ORGULHOSO"
+  ],
+  "desejo": "ser perdoado",
+  "ambicao": "comprar a liberdade da família",
+  "medo": "ser esquecido",
+  "segredo": "(OCULTO) já matou e ninguém sabe",
+  "linha_vermelha": "nunca volta atrás numa palavra dada",
+  "dilema": "salvar um filho custa a vida de um estranho",
+  "gerado_508": "gerador.py npc (o nome do gerador, Ulron, não vale: é o Lior)"
  }
 }

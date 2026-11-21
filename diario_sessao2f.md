@@ -2404,3 +2404,33 @@ A Eliane se ergueu num cotovelo, na carroça, e contou os presos que vinham amar
 No alto do vale, as tochas do posto se acenderam todas de uma vez.
 
 - **Parada:** noite do 508, a beira de Ezmisa. Seis presos do Círculo. O posto aceso.
+
+### O interrogatório, a carroça
+O Lior estava encostado na roda, com o braço quebrado amarrado ao peito e o joelho torto para o lado errado. O rei se agachou diante dele, com o mapa aberto sobre a coxa.
+
+"Os poços", disse o rei. "O coração. Meor. Ou você me responde, ou morre devagar, aqui, e ninguém em Yaelane vai saber o seu nome."
+
+O Moreth, atrás do rei, mudou o peso de um pé para o outro e não disse nada. A Eliane, na carroça, virou a cabeça para o outro lado.
+
+O Lior olhou para o mapa muito tempo. Depois cuspiu sangue para o lado.
+
+"Não é poço. É túnel. Cada buraco desce mais fundo que o outro, até a mina velha. A mina velha passa debaixo da praça do mercado de Lumade. Faltam dois. Duas semanas."
+
+"E o coração do bicho?"
+
+"No poço da praça. Na lua nova. Metade da cidade bebe dali." Ele riu, sem graça nenhuma. "Agora está com o senhor."
+
+"E Meor?"
+
+"Meor manda carta. A carta diz lua nova. Eu não sei mais que isso." E então, mais baixo, para ninguém: "Eu dei minha palavra."
+
+Os quatro homens dele, amarrados mais adiante, tinham ouvido tudo. Nenhum disse nada. Também não olharam mais para ele.
+
+### O posto
+A subida foi pela encosta de pedra solta, sem tocha, guiada pelas luzes lá de cima. Quando chegaram, o posto estava vazio.
+
+O fogo ainda queimava. Havia pão cortado sobre uma tábua, um caldeirão de feijão no gancho, uma capa largada no chão. No alto do mastro, a bandeira cor de areia batia no vento.
+
+Vale acima, longe, uma fila de tochas subia em direção aos poços.
+
+- **Parada:** noite do 508, o posto vazio do Círculo. Lumade tem doze noites até a lua nova.

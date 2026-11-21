@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 508, a beira de EZMISA: seis presos do Círculo; o posto aceso no alto (MOTOR 9b: G1 a G42)
+# RETOMAR — noite do Dia 508, o posto vazio do Círculo: o túnel sob Lumade e a lua nova (MOTOR 9b: G1 a G42)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 508, O POSTO VAZIO DO CÍRCULO, no alto do vale de cima de Lumade (o fogo aceso, comida, a bandeira). O rei NÍVEL 52 (XP 134.090), PV 265/273, Mana 49/119, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6. Com ele no alto: o Moreth 574/610 e o Eiagrir 432/432 (os dois sobem no tick do 511). Lá embaixo, na beira de Ezmisa: o Gonde e 2 guardas, a ELIANE de cama (até o 517), a carroça com a Matriz, o Martelo, o LIVRO DE SANGUE, o NÚCLEO ÉPICO DE VENENO, yelle e yomiar; os SEIS PRESOS DO CÍRCULO: o chefe LIOR (80; npcs.json; CURIOSO e ORGULHOSO; FALOU, IN09 sucesso; os quatro homens dele o ouviram), 4 homens e o olheiro. O QUE A CASA SABE: o TÚNEL do Círculo até a velha mina debaixo da PRAÇA DO MERCADO de Lumade, faltando dois poços (umas duas semanas); o plano de ENVENENAR O POÇO DA PRAÇA (metade da cidade bebe dali) na LUA NOVA (520) com o coração do bicho, que está com o rei; o mapa dos poços. O Círculo (10, um chefe 80) fugiu vale acima, aos poços, com a notícia. O rei trata o CELOCUS e a gente dele como INIMIGOS (a palavra do 506). (OCULTO) MEOR VEM EM PESSOA na lua nova, com a guilda (T3L [1]). (OCULTO) o Círculo reage no 512 (#1050). (OCULTO) os 24 herdeiros SOLTOS desde a noite do 508; o comboio quebrado (a notícia em Lumade no entardecer do 509, #1048). Cofre 59.567.
+
+Antes (508, a beira de Ezmisa):
 Noite do 508, A BEIRA DE EZMISA, a carroça (fora do túmulo de Ezmisa, limpo; a porta e as aias deixam sair). O rei NÍVEL 52 (XP 134.090; o 53 em 137.900), Int 120, Afinidade 106, PV 265/273, Mana 49/119, Visão 1/2, Erudito 0/1, Fortuna 3/3, Revés 4/6 (a febre curada pelo Purificar). Com ele: o Moreth 574/610 e o Eiagrir 432/432 (os dois com XP para subir no tick do 511), o Gonde e 2 guardas, a ELIANE de cama (até o 517), a Matriz e o Martelo, o LIVRO DE SANGUE, o NÚCLEO ÉPICO DE VENENO (núcleo para uma Mítica), yelle 10, yomiar 15. SEIS PRESOS DO CÍRCULO DA AREIA CANTANTE: o chefe do posto LIOR (80; npcs.json; grave), 4 homens (nível 50; 1 grave, 3 leves) e o olheiro (ouviu que o livro está na carroça); 1 morto na segunda casa. O MAPA DO VALE DE CIMA (PC09 [3]): os poços que o Círculo cava, numa só linha. Os quatro do Círculo que estavam fora FUGIRAM ao posto do alto com a notícia (CN09r [5], CB09 [1]): o posto ACESO. O eremita Ioduxeth na beira. (OCULTO) O CÍRCULO REAGE no 512 (CI09d [4]; agenda #1050, para; o que faz: rolar no dia). (OCULTO) o comboio quebrado pelos Vrurn (os 24 soltos; a notícia em Lumade no entardecer do 509, #1048). Lumade a meio dia. Cofre 59.567.
 
 Antes (508, a terceira casa):
@@ -476,10 +479,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (508, a terceira casa → a beira): 1a abrir à força e lutar · 2a o Purificar já · 3b,a a Voz no Vento: avisar o Gonde e ouvir a carroça
 - o Purificar e as Vozes (Mana 98 → 48) · VZ08 [2] · FO09 GANHO (o lote recusou calado o FO09 e o VZ08: anotado; o VZ08 rolado depois com selo.py rola) · CR09 a casa 57 × 40: destroçados · CR09c [6] · CF09 · CR09m [4] · CN09r [5] · CB09 [1] · PC09 [3] · CI09d [4] (oculto) · +3.300 XP: o rei 52 · o erro achado: o relógio dizia 'Dragal' (onde.py agora o segue).
 
+## RESPONDIDO (508, a beira → o posto): 1b os seis presos com a casa a Ireviel · 2c subir ao posto agora · 3a 'ou resposta ou morte lenta'
+- o Lior com traços (gerador.py npc) · IN09 sucesso (41 vs 33): ele fala · T1L [3], T2L [3], T3L [1] (ocultos antes) · o saber do Lior: GANHO, GANHO, FALHA · PO09q 10, PO09c 80, PO09r [4] o posto abandonado, PO09v [5] · RV09 [6] o mundo segue.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. OS SEIS PRESOS DO CÍRCULO (o chefe Lior grave, 4 homens, o olheiro que sabe do livro): a) levá-los a Lumade (a cidade é do Celocus: 'em Lumade, quem prende é o Celocus') · b) levá-los com a casa, a Ireviel, para o conselho · c) G41: mandá-los às minas de cima de Levis com uma escolta · d) outra.
-2. A NOITE (o posto aceso no alto; o Círculo sabe; Lumade a meio dia): a) voltar já a Lumade, de noite, com os presos e a carroça · b) acampar na beira e partir na aurora · c) subir ao posto do Círculo, no alto, agora · d) outra.
-3. O CHEFE LIOR (grave): a) interrogá-lo já (o mapa dos poços; o que o Círculo quer; o que Meor manda) · b) depois.
+1. LUMADE E O TÚNEL (o rei trata o Celocus como inimigo, pela palavra do 506; mas metade da cidade bebe do poço da praça; a lua nova é o 520): a) avisar o Celocus · b) não avisar: deixar o Círculo e o Celocus se ferirem · c) vender a informação ao Celocus (o jogador diz o preço) · d) tomar o túnel para a casa (fechá-lo, ou usá-lo).
+2. A NOITE (o Círculo fugiu vale acima, para os poços; a Mana do rei 49): a) persegui-los agora, vale acima, de noite · b) descer à carroça e voltar a Lumade na aurora · c) ir aos poços do mapa na aurora · d) outra.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

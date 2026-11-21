@@ -1,17 +1,5 @@
 {
  "ordem": [
-  "D48",
-  "MH48",
-  "SQ48",
-  "OS48",
-  "EC48",
-  "MP48",
-  "MO48",
-  "SM48",
-  "SF48",
-  "FC48",
-  "FC48b",
-  "LV49",
   "PE49",
   "CM49",
   "NZ49",
@@ -399,522 +387,21 @@
   "CB09",
   "PC09",
   "PC09b",
-  "CI09d"
+  "CI09d",
+  "T1L",
+  "T2L",
+  "T3L",
+  "PO09q",
+  "PO09c",
+  "PO09r",
+  "PO09v",
+  "RV09",
+  "RV09b",
+  "RV09c",
+  "RV09d",
+  "RV09e"
  ],
  "selos": {
-  "D48": {
-   "id": "D48",
-   "dia": 448,
-   "hora": "16:36:52",
-   "titulo": "O DESASTRE DA SEMANA EM FARENTA",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "incêndio no mercado"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "enchente no bairro do porto"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "desabamento de um trecho da muralha rachada"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "incêndio no mercado",
-     "txt": "[1] → incêndio no mercado"
-    }
-   ],
-   "hora_rolado": "16:36:52"
-  },
-  "MH48": {
-   "id": "MH48",
-   "dia": 448,
-   "hora": "16:36:52",
-   "titulo": "A MIE CHEGA A FARENTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "de manhã: o sal vai a bordo hoje"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "à tarde: o sal só a partir do 449"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "à tarde: o sal só a partir do 449",
-     "txt": "[5] → à tarde: o sal só a partir do 449"
-    }
-   ],
-   "hora_rolado": "16:36:52"
-  },
-  "SQ48": {
-   "id": "SQ48",
-   "dia": 448,
-   "hora": "16:36:52",
-   "titulo": "QUANTO SAL A LURENTETTA MANDOU",
-   "dado": [
-    1,
-    3,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "tantos dias de tiro com sal"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "tantos dias de tiro com sal",
-     "txt": "[1] → tantos dias de tiro com sal"
-    }
-   ],
-   "hora_rolado": "16:36:52"
-  },
-  "OS48": {
-   "id": "OS48",
-   "dia": 448,
-   "hora": "16:36:52",
-   "titulo": "A OISSE E AS IRMÃS NA FEBRE DE FARENTA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a febre é maior que elas"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "a febre quebra no 451"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "quebra no 450 e o povo abençoa o rei"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a febre é maior que elas",
-     "txt": "[1] → a febre é maior que elas"
-    }
-   ],
-   "hora_rolado": "16:36:52"
-  },
-  "EC48": {
-   "id": "EC48",
-   "dia": 448,
-   "hora": "16:37:17",
-   "titulo": "O QUE A ELAEVA FAZ A FARENTA NO 448",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "cerca e não toca"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "as raízes racham mais a muralha: Defesa −1 e Comida −1 a mais"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1",
-     "txt": "[6] → o espinheiro passa a muralha num bairro: 2d6 × 5 mortos e Ordem −1"
-    }
-   ],
-   "hora_rolado": "16:37:17"
-  },
-  "MP48": {
-   "id": "MP48",
-   "dia": 448,
-   "hora": "16:37:17",
-   "titulo": "A PACIÊNCIA DA MAMILTIA NO QUARTO DIA SEM UM TIRO (a fera longe da água)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "sai sozinha à fera"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "espera"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "sai sozinha à fera",
-     "txt": "[1] → sai sozinha à fera"
-    }
-   ],
-   "hora_rolado": "16:37:17"
-  },
-  "MO48": {
-   "id": "MO48",
-   "dia": 448,
-   "hora": "16:37:52",
-   "titulo": "OS MORTOS DO ESPINHEIRO NO BAIRRO DE FARENTA (448, ao entardecer)",
-   "dado": [
-    2,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 12,
-     "res": "× 5 mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6,
-      4
-     ],
-     "total": 10,
-     "res": "× 5 mortos",
-     "txt": "[6, 4] +0 = 10 → × 5 mortos"
-    }
-   ],
-   "hora_rolado": "16:37:52"
-  },
-  "SM48": {
-   "id": "SM48",
-   "dia": 448,
-   "hora": "19:03:35",
-   "titulo": "A MAMILTIA ACEITA O CERCO DEPOIS DA VISÃO NOVA (todos morrem na luta direta; 50 mortos no bairro)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "sai sozinha mesmo assim"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "aceita o cerco"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "sai sozinha mesmo assim",
-     "txt": "[2] → sai sozinha mesmo assim"
-    }
-   ],
-   "hora_rolado": "19:03:35"
-  },
-  "SF48": {
-   "id": "SF48",
-   "dia": 448,
-   "hora": "19:03:36",
-   "titulo": "QUANTO SAL HÁ NO MERCADO DE FARENTA (a febre e o incêndio)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma carroça"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "três carroças"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "seis carroças"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "seis carroças",
-     "txt": "[6] → seis carroças"
-    }
-   ],
-   "hora_rolado": "19:03:36"
-  },
-  "FC48": {
-   "id": "FC48",
-   "dia": 448,
-   "hora": "19:03:36",
-   "titulo": "O FOGO NOS CAMPOS ATRÁS DA ELAEVA, À NOITE, COM VENTO FORTE",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o vento vira o fogo contra a cidade: um bairro queima"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "o fogo corre para o mato"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "o fogo corre para o mato",
-     "txt": "[3] → o fogo corre para o mato"
-    }
-   ],
-   "hora_rolado": "19:03:36"
-  },
-  "FC48b": {
-   "id": "FC48b",
-   "dia": 448,
-   "hora": "19:52:54",
-   "titulo": "O FOGO DOS CAMPOS FERE A ELAEVA (noite do 448)",
-   "dado": [
-    3,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 18,
-     "res": "× 10 de PV"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4,
-      3,
-      4
-     ],
-     "total": 11,
-     "res": "× 10 de PV",
-     "txt": "[4, 3, 4] +0 = 11 → × 10 de PV"
-    }
-   ],
-   "hora_rolado": "19:52:54"
-  },
-  "LV49": {
-   "id": "LV49",
-   "dia": 449,
-   "hora": "19:53:09",
-   "titulo": "A MISSÃO DO ITHVIL FALHA EM LEVIS: O PILAR QUE RECUA",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Comida"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Comércio"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Dinheiro"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Saúde"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Ordem"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Defesa"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "Dinheiro",
-     "txt": "[3] → Dinheiro"
-    }
-   ],
-   "hora_rolado": "19:53:09"
-  },
   "PE49": {
    "id": "PE49",
    "dia": 449,
@@ -21110,6 +20597,583 @@
     }
    ],
    "hora_rolado": "20:49:30"
+  },
+  "T1L": {
+   "id": "T1L",
+   "dia": 508,
+   "hora": "22:56:37",
+   "titulo": "(OCULTO) A VERDADE: O QUE O CÍRCULO CAVA NOS POÇOS EM LINHA DO VALE DE CIMA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "VADUAR: o metal que come magia, para a guerra contra os magos e o Celocus"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "UM TÚNEL POR BAIXO DE LUMADE: os poços descem até a velha mina sob a cidade, para tomá-la por dentro"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "DRENAM O BREJO para chegar ao coração de Ezmisa (agora inútil)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "UM TÚNEL POR BAIXO DE LUMADE: os poços descem até a velha mina sob a cidade, para tomá-la por dentro",
+     "txt": "[3] → UM TÚNEL POR BAIXO DE LUMADE: os poços descem até a velha mina sob a cidade, para tomá-la por dentro"
+    }
+   ],
+   "hora_rolado": "22:56:37"
+  },
+  "T2L": {
+   "id": "T2L",
+   "dia": 508,
+   "hora": "22:56:37",
+   "titulo": "(OCULTO) A VERDADE: O QUE O CÍRCULO QUERIA COM O CORAÇÃO DO BICHO (o núcleo Épico de Veneno, agora com o rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "FORJAR uma peça Mítica para MEOR: uma arma de praga"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ENVENENAR A ÁGUA DE LUMADE na lua nova (o coração de Veneno no poço da cidade)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "VENDER o núcleo ao BORECCI, em troca de soldados"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "ENVENENAR A ÁGUA DE LUMADE na lua nova (o coração de Veneno no poço da cidade)",
+     "txt": "[3] → ENVENENAR A ÁGUA DE LUMADE na lua nova (o coração de Veneno no poço da cidade)"
+    }
+   ],
+   "hora_rolado": "22:56:37"
+  },
+  "T3L": {
+   "id": "T3L",
+   "dia": 508,
+   "hora": "22:56:37",
+   "titulo": "(OCULTO) A VERDADE: O QUE MEOR MANDA (o chefe da guilda, 275, em Yaelane)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "MEOR VEM EM PESSOA na lua nova (520), com a guilda, para tomar Lumade"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "Meor manda um capitão novo e quarenta homens na lua nova"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "MEOR NÃO SABE DE NADA: o posto agia por conta própria (o Lior queria comprar a família com o coração)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "MEOR VEM EM PESSOA na lua nova (520), com a guilda, para tomar Lumade",
+     "txt": "[1] → MEOR VEM EM PESSOA na lua nova (520), com a guilda, para tomar Lumade"
+    }
+   ],
+   "hora_rolado": "22:56:37"
+  },
+  "PO09q": {
+   "id": "PO09q",
+   "dia": 508,
+   "hora": "22:57:13",
+   "titulo": "QUANTOS NO POSTO DO CÍRCULO (os 4 que fugiram + 2d6)",
+   "dado": [
+    2,
+    6,
+    4
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 16,
+     "res": "o número"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5,
+      1
+     ],
+     "total": 10,
+     "res": "o número",
+     "txt": "[5, 1] +4 = 10 → o número"
+    }
+   ],
+   "hora_rolado": "22:57:13"
+  },
+  "PO09c": {
+   "id": "PO09c",
+   "dia": 508,
+   "hora": "22:57:13",
+   "titulo": "O CHEFE DE AGORA NO POSTO (o Lior está preso): o nível",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "40"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "50"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "60"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "70"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "80"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "90"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "80",
+     "txt": "[5] → 80"
+    }
+   ],
+   "hora_rolado": "22:57:13"
+  },
+  "PO09r": {
+   "id": "PO09r",
+   "dia": 508,
+   "hora": "22:57:13",
+   "titulo": "O QUE O POSTO FAZ QUANDO A CASA SOBE",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ESPERAM NO POSTO, de arco (eles +5 pela pedra e pelo alto)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ABANDONAM O POSTO e fogem vale acima com a notícia"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "DESCEM AO ENCONTRO no escuro da encosta (sem a pedra)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "ABANDONAM O POSTO e fogem vale acima com a notícia",
+     "txt": "[4] → ABANDONAM O POSTO e fogem vale acima com a notícia"
+    }
+   ],
+   "hora_rolado": "22:57:13"
+  },
+  "PO09v": {
+   "id": "PO09v",
+   "dia": 508,
+   "hora": "22:57:13",
+   "titulo": "O QUE HÁ NO POSTO VAZIO (vale só com o PO09r em 3-4)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "as CARTAS DE MEOR ao posto"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "ferramentas de cava e um carro de VADUAR"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "nada além de fogo aceso e comida"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "nada além de fogo aceso e comida",
+     "txt": "[5] → nada além de fogo aceso e comida"
+    }
+   ],
+   "hora_rolado": "22:57:13"
+  },
+  "RV09": {
+   "id": "RV09",
+   "dia": 508,
+   "hora": "22:57:34",
+   "titulo": "A REVIRAVOLTA DO BLOCO (G42; a noite do 508 depois de Ezmisa: o maior sucesso foi o Lior falar; o que vazou: a fala dele ouvida pelos outros cinco presos; o posto fugiu vale acima com a notícia; os 24 herdeiros SOLTOS, oculto, sabem do livro)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "O PREÇO DA VITÓRIA: o Lior falou contra a palavra que deu à guilda (a linha vermelha dele): nesta noite os quatro homens dele, amarrados ao lado, tentam matá-lo (RV09b)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "O INIMIGO USA O QUE SABE: os 24 HERDEIROS SOLTOS (o Nutoccone sabe do livro de sangue e de quem o leva) vão atrás da casa: em 1d6 dias (RV09c)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "ALGUÉM DE PERTO PAGA: a carta que vem traz a desgraça de um dos da casa que estão longe (RV09d quem, RV09e o quê)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O MUNDO SEGUE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "O MUNDO SEGUE",
+     "txt": "[6] → O MUNDO SEGUE"
+    }
+   ],
+   "hora_rolado": "22:57:34"
+  },
+  "RV09b": {
+   "id": "RV09b",
+   "dia": 508,
+   "hora": "22:57:34",
+   "titulo": "OS HOMENS DO LIOR TENTAM MATÁ-LO NA NOITE (vale só com o RV09 em 1-2; o Gonde e os 2 vigiam)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "conseguem: o LIOR MORRE estrangulado na corda"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o Gonde chega a tempo: o Lior vive, ferido de novo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "o Gonde vê antes: os quatro separados, amordaçados"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "o Gonde vê antes: os quatro separados, amordaçados",
+     "txt": "[6] → o Gonde vê antes: os quatro separados, amordaçados"
+    }
+   ],
+   "hora_rolado": "22:57:34"
+  },
+  "RV09c": {
+   "id": "RV09c",
+   "dia": 508,
+   "hora": "22:57:34",
+   "titulo": "EM QUANTOS DIAS OS HERDEIROS SOLTOS ALCANÇAM A CASA (vale só com o RV09 em 3-4)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "a contar do 508"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "a contar do 508",
+     "txt": "[5] → a contar do 508"
+    }
+   ],
+   "hora_rolado": "22:57:34"
+  },
+  "RV09d": {
+   "id": "RV09d",
+   "dia": 508,
+   "hora": "22:57:34",
+   "titulo": "QUEM PAGA, LONGE (vale só com o RV09 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a Tilde"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a Nouliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Isolda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o Graur"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a Isolda",
+     "txt": "[3] → a Isolda"
+    }
+   ],
+   "hora_rolado": "22:57:34"
+  },
+  "RV09e": {
+   "id": "RV09e",
+   "dia": 508,
+   "hora": "22:57:34",
+   "titulo": "O QUE ACONTECE A QUEM PAGA (vale só com o RV09 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ferido grave"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "preso ou tomado"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "trai a casa"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "morto",
+     "txt": "[5] → morto"
+    }
+   ],
+   "hora_rolado": "22:57:34"
   }
  }
 }
