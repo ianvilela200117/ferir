@@ -1,0 +1,3 @@
+CD 20 da escala velha → 30 nos dois dados
+teste: [[17], [9]] + 7 + nível 5 = 38 vs 30 (margem +8)
+grau: sucesso

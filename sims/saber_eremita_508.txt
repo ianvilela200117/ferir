@@ -1,0 +1,14 @@
+== o que mora dentro de Ezmisa (a sexta casa e o coração)
+CD 15 da escala velha → 25 nos dois dados
+teste: [[5], [7]] + 0 + nível 3 = 15 vs 25 (margem -10)
+grau: FALHA FEIA (complicação)
+  SURPRESA RUIM (d20): um segredo pequeno de Ferir escapa
+== a praga que afundou Ezmisa, e se ela ainda está na lama
+CD 10 da escala velha → 20 nos dois dados
+teste: [[15], [12]] + 0 + nível 3 = 30 vs 20 (margem +10)
+grau: SUCESSO COM GANHO
+== o que o Círculo da Areia Cantante faz no vale de cima, e se já tentou entrar em Ezmisa
+CD 15 da escala velha → 25 nos dois dados
+teste: [[20, 18], [17]] + 0 + nível 3 = 58 vs 25 (margem +33)
+grau: EXTRAORDINÁRIO
+  SURPRESA BOA (d20): um inimigo comete um erro e se expõe

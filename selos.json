@@ -1,22 +1,5 @@
 {
  "ordem": [
-  "CU37",
-  "SB37",
-  "SZ38",
-  "ZA38",
-  "PZ38",
-  "FZ38",
-  "GV38",
-  "441-laco-quem",
-  "441-laco",
-  "441-chamado",
-  "441-vinculos",
-  "MW41",
-  "MA41",
-  "LS41",
-  "ED41",
-  "IT41",
-  "CM41",
   "AU41a",
   "AU41b",
   "AU41c",
@@ -399,865 +382,26 @@
   "EM08",
   "EM08b",
   "KY08",
-  "EK08"
+  "EK08",
+  "ER08",
+  "S608",
+  "PR08",
+  "QE08",
+  "CI08",
+  "SG08",
+  "GN08",
+  "SE1",
+  "PF08",
+  "AR2e",
+  "R3e",
+  "CK4e",
+  "AR4e",
+  "CK5e",
+  "R5e",
+  "CR6q",
+  "CN08"
  ],
  "selos": {
-  "CU37": {
-   "id": "CU37",
-   "dia": 437,
-   "hora": "16:09:35",
-   "titulo": "O QUE HÁ NO MUNDO QUE TIRE UM FERIMENTO GRAVE POR MAGIA (OCULTO; a verdade antes do saber do rei)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "um MILAGRE de fé: a Mão ao Fogo do Ferreiro Santo da Mamiltia, com preço (um juramento à fé)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "um feitiço velho, CARNE NOVA (Vida 7º; componente: um núcleo de Vida), cuja página o Colégio de Ireviel guarda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)",
-     "txt": "[1] → NÃO há; só o tempo e o físico (a Cura Maior repõe o PV e tira o veneno)"
-    }
-   ],
-   "hora_rolado": "16:09:35"
-  },
-  "SB37": {
-   "id": "SB37",
-   "dia": 437,
-   "hora": "16:09:54",
-   "titulo": "A SURPRESA BOA DO SABER (EXTRAORDINÁRIO): QUEM MUDA DE OPINIÃO SOBRE FERIR PARA MELHOR (+1 Memória; os que estão com ele em Zythir)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o Moreth"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a Tigra"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "o cabo Gonde"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "o eco de Tuir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "um dos 10 da guarda"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "um dos 10 da guarda",
-     "txt": "[6] → um dos 10 da guarda"
-    }
-   ],
-   "hora_rolado": "16:09:54"
-  },
-  "SZ38": {
-   "id": "SZ38",
-   "dia": 438,
-   "hora": "17:26:53",
-   "titulo": "O SANGUE DO FALAR COM MORTO (Osso 3º cobra 3d6 de PV do rei, que está com 63)",
-   "dado": [
-    3,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 18,
-     "res": "tantos PV"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1,
-      2,
-      6
-     ],
-     "total": 9,
-     "res": "tantos PV",
-     "txt": "[1, 2, 6] +0 = 9 → tantos PV"
-    }
-   ],
-   "hora_rolado": "17:26:53"
-  },
-  "ZA38": {
-   "id": "ZA38",
-   "dia": 438,
-   "hora": "17:26:53",
-   "titulo": "O ZYZA ACEITA SERVIR O REI? (Falar com Morto, 438)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "RECUSA"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "ACEITA COM UM PREÇO"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "ACEITA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "ACEITA COM UM PREÇO",
-     "txt": "[3] → ACEITA COM UM PREÇO"
-    }
-   ],
-   "hora_rolado": "17:26:53"
-  },
-  "PZ38": {
-   "id": "PZ38",
-   "dia": 438,
-   "hora": "17:27:09",
-   "titulo": "O PREÇO DO ZYZA PARA SERVIR (ele aceita com um preço)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "o NOME: quer o nome dele dito pelo rei a cada AURORA; na aurora sem o nome, não obedece naquele dia"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a RAINHA: o corpo da rainha levado à sala 1 e selado na tumba; e ele nunca luta contra cria da colmeia"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a VERDADE: o rei responde três perguntas dele sem mentir, a primeira agora"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer",
-     "txt": "[1] → a FOME: carne de bicho Raro ou acima uma vez por lua; sem isso perde 5 níveis por lua até comer"
-    }
-   ],
-   "hora_rolado": "17:27:09"
-  },
-  "FZ38": {
-   "id": "FZ38",
-   "dia": 438,
-   "hora": "17:28:39",
-   "titulo": "A SEGUNDA FASE DO GUARDIÃO VDOGEK AOS 50% (G33; OCULTO até a Visão ou a luta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "troca de Essência"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "chama crias"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "o covil muda"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "foge para outra sala e a luta recomeça lá"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "perde a fraqueza conhecida e ganha outra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "fala: oferece um trato (Lei 15)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "troca de Essência",
-     "txt": "[1] → troca de Essência"
-    }
-   ],
-   "hora_rolado": "17:28:39"
-  },
-  "GV38": {
-   "id": "GV38",
-   "dia": 438,
-   "hora": "02:47:37",
-   "titulo": "O QUE DESARMA O GUARDIÃO DA SALA 9 SEM LUTA (OCULTO; a verdade antes do saber do eco)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "O CHAMADO de um rei em nome de um reino vivo, com Elo de Juramento"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "A CRIA: quem jura não tocar no prisioneiro nem na cria entra e fala, sem tirá-lo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "A SENHA DE DENTRO: Tuir manda, se alguém pagar um ano de vida à pedra"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "NADA: só a força"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "NADA: só a força",
-     "txt": "[6] → NADA: só a força"
-    }
-   ],
-   "hora_rolado": "02:47:37"
-  },
-  "441-laco-quem": {
-   "id": "441-laco-quem",
-   "dia": 441,
-   "hora": "02:48:59",
-   "titulo": "LAÇO da semana: quem",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "o HERKALD"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "a NOULIEL"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "a TILDE"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "a ULURVE"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "a BRARA"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "a AELIAE"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "a ULURVE",
-     "txt": "[4] → a ULURVE"
-    }
-   ],
-   "hora_rolado": "02:49:00"
-  },
-  "441-laco": {
-   "id": "441-laco",
-   "dia": 441,
-   "hora": "02:48:59",
-   "titulo": "LAÇO da semana: o quê",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "ATRITO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "MOMENTO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "MOMENTO",
-     "txt": "[6] → MOMENTO"
-    }
-   ],
-   "hora_rolado": "02:49:00"
-  },
-  "441-chamado": {
-   "id": "441-chamado",
-   "dia": 441,
-   "hora": "02:48:59",
-   "titulo": "CHAMADO (chega alguém digno à casa?)",
-   "dado": [
-    1,
-    20,
-    3
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 12,
-     "res": "ninguém digno"
-    },
-    {
-     "tipo": "num",
-     "a": 13,
-     "b": 17,
-     "res": "chega 1"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 23,
-     "res": "chegam 2"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 4,
-     "res": "ninguém digno",
-     "txt": "[1] +3 = 4 → ninguém digno"
-    }
-   ],
-   "hora_rolado": "02:49:00"
-  },
-  "441-vinculos": {
-   "id": "441-vinculos",
-   "dia": 441,
-   "hora": "02:48:59",
-   "titulo": "VÍNCULOS que se movem (a direção vem dos dois d20 do tick, na ordem)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "Nouliel–Herkald"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "Tilde–Iorin"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "Moreth–Eiagrir"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "Krernos–Graur"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "Thuron–Erymir"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "Brara–Thugek"
-    }
-   ],
-   "oculto": false,
-   "x": 2,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "Nouliel–Herkald",
-     "txt": "#1 [1] → Nouliel–Herkald"
-    },
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "Nouliel–Herkald",
-     "txt": "#2 [1] → Nouliel–Herkald"
-    }
-   ],
-   "hora_rolado": "02:49:00"
-  },
-  "MW41": {
-   "id": "MW41",
-   "dia": 441,
-   "hora": "02:49:43",
-   "titulo": "COMO A MAMILTIA RECEBE O ERRO DO NOME (o rei lhe deu o Adurel no 406; a prova dos olhos dela aponta a ALMISION)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "OFENDIDA: 'olhei para o lado errado por tua palavra': reputação −10 e cobra uma reparação"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "FRIA: aceita o erro como erro, e quer que o rei diga diante dos dela que o nome estava errado"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "GRATA assim mesmo: o erro a levou à prova certa; a aliança fica inteira"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "FRIA: aceita o erro como erro, e quer que o rei diga diante dos dela que o nome estava errado",
-     "txt": "[3] → FRIA: aceita o erro como erro, e quer que o rei diga diante dos dela que o nome estava errado"
-    }
-   ],
-   "hora_rolado": "02:49:43"
-  },
-  "MA41": {
-   "id": "MA41",
-   "dia": 441,
-   "hora": "02:49:43",
-   "titulo": "O QUE A MAMILTIA FAZ COM A ALMISION (a prova na mão)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "chama a Almision a responder em Telosus, num juízo de fé, e quer o rei como testemunha"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "guarda a prova e pede ao rei que NÃO aja ainda: quer pegar a Almision com a Elaeva na mão"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "manda os dela contra a Escola Única já: guerra de fé, o reino tem de escolher lado"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "propõe ao rei caçarem a Almision juntos, depois da Elaeva"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      3
-     ],
-     "total": 3,
-     "res": "guarda a prova e pede ao rei que NÃO aja ainda: quer pegar a Almision com a Elaeva na mão",
-     "txt": "[3] → guarda a prova e pede ao rei que NÃO aja ainda: quer pegar a Almision com a Elaeva na mão"
-    }
-   ],
-   "hora_rolado": "02:49:43"
-  },
-  "LS41": {
-   "id": "LS41",
-   "dia": 441,
-   "hora": "02:49:43",
-   "titulo": "A RESPOSTA DA LURENTETTA AO RECADO DO SAL (as salinas dela; contra a Elaeva)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "recusa: o sal é do povo dela"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "manda o sal e cobra um preço (1.000 ou uma peça da forja)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "manda o sal e as 20 lanças com a Mie a Farenta"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "vem ela mesma a Farenta"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "manda o sal e as 20 lanças com a Mie a Farenta",
-     "txt": "[5] → manda o sal e as 20 lanças com a Mie a Farenta"
-    }
-   ],
-   "hora_rolado": "02:49:43"
-  },
-  "ED41": {
-   "id": "ED41",
-   "dia": 441,
-   "hora": "02:49:53",
-   "titulo": "O CONSELHO VOTA: O ÉDITO DO OSSO (441, Ireviel; o rei propõe, de passagem para Farenta, com o servo Zyza atrás dele): os servos de osso do rei andam dentro da lei do reino?",
-   "dado": [
-    1,
-    20,
-    0
-   ],
-   "tabela": [],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [],
-     "total": 0,
-     "res": "VENCE B) recusar (os servos ficam fora dos muros) · placar A 3 · B 3 · C 0 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Thuron",
-     "txt": "VENCE B) recusar (os servos ficam fora dos muros) · placar A 3 · B 3 · C 0 (EMPATE em 3 votos: decide a Intendente, Nouliel) · VOTO VENCIDO: Isolda, Herkald, Thuron"
-    }
-   ]
-  },
-  "IT41": {
-   "id": "IT41",
-   "dia": 441,
-   "hora": "12:10:40",
-   "titulo": "A CRIATURA DA MISSÃO DO ITHVIL (OCULTO)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma CRIA do Ithvil, com fome"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma fera ferida que FOGE do Varogh"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "uma MÃE DE VEIO das minas velhas de Levis (a Bigorna Livre cava no ninho dela)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "uma CRIA do Ithvil, com fome",
-     "txt": "[2] → uma CRIA do Ithvil, com fome"
-    }
-   ],
-   "hora_rolado": "12:10:40"
-  },
-  "CM41": {
-   "id": "CM41",
-   "dia": 441,
-   "hora": "12:10:40",
-   "titulo": "A CURA MAIOR DO REI EM SI MESMO (Luz 4º, 16d6 × 10 pelo foco)",
-   "dado": [
-    16,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 16,
-     "b": 96,
-     "res": "× 10 de PV"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5,
-      5,
-      5,
-      1,
-      3,
-      4,
-      6,
-      6,
-      3,
-      4,
-      6,
-      3,
-      1,
-      1,
-      4,
-      6
-     ],
-     "total": 63,
-     "res": "× 10 de PV",
-     "txt": "[5, 5, 5, 1, 3, 4, 6, 6, 3, 4, 6, 3, 1, 1, 4, 6] +0 = 63 → × 10 de PV"
-    }
-   ],
-   "hora_rolado": "12:10:40"
-  },
   "AU41a": {
    "id": "AU41a",
    "dia": 441,
@@ -21167,6 +20311,873 @@
     }
    ],
    "hora_rolado": "05:15:48"
+  },
+  "ER08": {
+   "id": "ER08",
+   "dia": 508,
+   "hora": "13:53:23",
+   "titulo": "O NÍVEL DO EREMITA DE EZMISA (a ficha nova; o nome: IODUXETH, nomes.py arcaica livre)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o nível é 10 + o número × 10"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o nível é 10 + o número × 10",
+     "txt": "[2] → o nível é 10 + o número × 10"
+    }
+   ],
+   "hora_rolado": "13:53:23"
+  },
+  "S608": {
+   "id": "S608",
+   "dia": 508,
+   "hora": "13:53:23",
+   "titulo": "(OCULTO) O QUE HABITA A SEXTA CASA DE EZMISA (Épica; a cidade caiu de praga; o guardião do coração é o TKORNA, inseto de Veneno)",
+   "dado": [
+    1,
+    20,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 5,
+     "res": "OS MORTOS DA PRAGA: afogados de pé na lama, Raros (2d6), que se mexem com quem entra"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 10,
+     "res": "UM MORTO QUE NÃO DORME: o espírito de quem fechou a cidade; fala; quer uma coisa"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 14,
+     "res": "OS QUE ENTRARAM ANTES: gente do Círculo da Areia Cantante, presa ali dentro (2d6; um chefe)"
+    },
+    {
+     "tipo": "num",
+     "a": 15,
+     "b": 17,
+     "res": "AS CRIAS DO TKORNA: insetos Raros (2d6) do tamanho de um cão"
+    },
+    {
+     "tipo": "num",
+     "a": 18,
+     "b": 19,
+     "res": "NADA VIVO: só a lama e o que ela guarda (um tesouro afogado, G17)"
+    },
+    {
+     "tipo": "num",
+     "a": 20,
+     "b": 20,
+     "res": "SURPRESA (gerador novidade)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      15
+     ],
+     "total": 15,
+     "res": "AS CRIAS DO TKORNA: insetos Raros (2d6) do tamanho de um cão",
+     "txt": "[15] → AS CRIAS DO TKORNA: insetos Raros (2d6) do tamanho de um cão"
+    }
+   ],
+   "hora_rolado": "13:53:23"
+  },
+  "PR08": {
+   "id": "PR08",
+   "dia": 508,
+   "hora": "13:53:23",
+   "titulo": "(OCULTO) A PRAGA AINDA ESTÁ NA LAMA DE EZMISA?",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "SIM: a lama guarda a febre: quem se ferir lá dentro testa Vigor CD 20 ou adoece (G16)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "NÃO: morreu com a cidade; o veneno que sobra é o do Tkorna"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "SIM: a lama guarda a febre: quem se ferir lá dentro testa Vigor CD 20 ou adoece (G16)",
+     "txt": "[2] → SIM: a lama guarda a febre: quem se ferir lá dentro testa Vigor CD 20 ou adoece (G16)"
+    }
+   ],
+   "hora_rolado": "13:53:23"
+  },
+  "QE08": {
+   "id": "QE08",
+   "dia": 508,
+   "hora": "13:53:23",
+   "titulo": "(OCULTO até ele contar) QUEM É O EREMITA (ele recebeu a casa e conta o que sabe, EM08 [5])",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "o ÚLTIMO VIVO de Ezmisa: era criança quando a água a cobriu"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "o GUARDA que fechou a porta com a cidade dentro, para a praga não sair: a culpa o prende ali"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um homem da VIGÍLIA (a fé que não acorda o que dorme): vigia Ezmisa e quer que acabe"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "o ÚLTIMO VIVO de Ezmisa: era criança quando a água a cobriu",
+     "txt": "[1] → o ÚLTIMO VIVO de Ezmisa: era criança quando a água a cobriu"
+    }
+   ],
+   "hora_rolado": "13:53:23"
+  },
+  "CI08": {
+   "id": "CI08",
+   "dia": 508,
+   "hora": "13:53:23",
+   "titulo": "(OCULTO) O QUE O CÍRCULO DA AREIA CANTANTE FAZ NO VALE DE CIMA, E EZMISA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "QUER EZMISA: já mandou gente que não voltou (os que entraram antes)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "cava o vale de cima por outra coisa (uma mina) e não liga para o brejo"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "PAGA O EREMITA para avisar quem entra: ele é olho deles"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "QUER EZMISA: já mandou gente que não voltou (os que entraram antes)",
+     "txt": "[2] → QUER EZMISA: já mandou gente que não voltou (os que entraram antes)"
+    }
+   ],
+   "hora_rolado": "13:53:23"
+  },
+  "SG08": {
+   "id": "SG08",
+   "dia": 508,
+   "hora": "13:54:21",
+   "titulo": "(OCULTO) O SEGREDO PEQUENO DO REI QUE ESCAPA (a surpresa ruim do saber do eremita; quem ouve: um olheiro do Círculo escondido no junco, perto do tronco do eremita)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "que o rei leva o LIVRO DE SANGUE na carroça"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "que a ELIANE está de cama e não luta"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "que a PALAVRA da estátua agora é do rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "que o rei leva o LIVRO DE SANGUE na carroça",
+     "txt": "[2] → que o rei leva o LIVRO DE SANGUE na carroça"
+    }
+   ],
+   "hora_rolado": "13:54:22"
+  },
+  "GN08": {
+   "id": "GN08",
+   "dia": 508,
+   "hora": "13:54:22",
+   "titulo": "O OLHEIRO DO CÍRCULO SE EXPÕE (a surpresa boa: 'um inimigo comete um erro'; ele pisa no junco seco ao recuar; o GONDE, que ficou com a Eliane e a carroça, o vê)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ele corre e chega ao posto no alto (o Círculo sabe que a casa está em Ezmisa)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 6,
+     "res": "o GONDE o pega no junco: preso, à espera do rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "o GONDE o pega no junco: preso, à espera do rei",
+     "txt": "[3] → o GONDE o pega no junco: preso, à espera do rei"
+    }
+   ],
+   "hora_rolado": "13:54:22"
+  },
+  "SE1": {
+   "id": "SE1",
+   "dia": 508,
+   "hora": "13:54:40",
+   "titulo": "A PRIMEIRA CASA DE EZMISA: O SEGREDO (declarado acima)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "PORTA ESCONDIDA: atalho à 4ª casa"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "INSCRIÇÃO que explica o lugar"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "PASSAGEM por baixo ao coração (a surpresa na luta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "INSCRIÇÃO que explica o lugar",
+     "txt": "[4] → INSCRIÇÃO que explica o lugar"
+    }
+   ],
+   "hora_rolado": "13:54:40"
+  },
+  "PF08": {
+   "id": "PF08",
+   "dia": 508,
+   "hora": "13:54:59",
+   "titulo": "O DANO DO PASSO EM FALSO NA PRIMEIRA CASA (o rei)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "o PV perdido"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "o PV perdido",
+     "txt": "[2] → o PV perdido"
+    }
+   ],
+   "hora_rolado": "13:54:59"
+  },
+  "AR2e": {
+   "id": "AR2e",
+   "dia": 508,
+   "hora": "13:55:12",
+   "titulo": "O TIPO DA ARMADILHA DA SEGUNDA CASA DE EZMISA (G34)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "fosso com estacas"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "dardos na parede (Envenenado)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "laje que desce (a sala se fecha: Força CD 29 ou 1 hora)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "gás de sono (dorme 1 hora; os perigos da sala seguinte vêm)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "fogo de runa (Queimando)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "lâmina de pêndulo (Sangrando)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "teto que cai (Preso, 10 minutos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "água que sobe (3 rodadas para sair)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "espelho que prende (Enfeitiçado 1 cena, Vontade)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "chão falso para outra sala (cai sozinho na sala seguinte)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "alarme (+2 em todos os perigos do lugar)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "maldição do dono (Amaldiçoado até sair, ou Purificar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "laje que desce (a sala se fecha: Força CD 29 ou 1 hora)",
+     "txt": "[3] → laje que desce (a sala se fecha: Força CD 29 ou 1 hora)"
+    }
+   ],
+   "hora_rolado": "13:55:13"
+  },
+  "R3e": {
+   "id": "R3e",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "O RASTRO DA TERCEIRA CASA DE EZMISA (vazia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os ossos de homens do CÍRCULO, com a bandeira cor de areia rasgada (os que não voltaram)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "marcas de muitas garras pequenas no lodo, indo e vindo (algo sai daqui de noite)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "uma casca de inseto do tamanho de um homem, vazia, rachada nas costas (uma muda)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      6
+     ],
+     "total": 6,
+     "res": "uma casca de inseto do tamanho de um homem, vazia, rachada nas costas (uma muda)",
+     "txt": "[6] → uma casca de inseto do tamanho de um homem, vazia, rachada nas costas (uma muda)"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "CK4e": {
+   "id": "CK4e",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "O RELÓGIO AO ENTRAR NA QUARTA CASA DE EZMISA (G34; com 1, o perigo da sala não vista mais perto vem até a casa: o que habita a 6ª, as CRIAS, junto da armadilha)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "as crias vêm até a casa, na 4ª"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 5,
+     "res": "nada vem",
+     "txt": "[5] → nada vem"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "AR4e": {
+   "id": "AR4e",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "O TIPO DA ARMADILHA DA QUARTA CASA DE EZMISA (G34; o 'chão que mata' do eremita)",
+   "dado": [
+    1,
+    12,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "fosso com estacas"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "dardos na parede (Envenenado)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "laje que desce (a sala se fecha: Força CD 29 ou 1 hora)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "gás de sono (dorme 1 hora; os perigos da sala seguinte vêm)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "fogo de runa (Queimando)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "lâmina de pêndulo (Sangrando)"
+    },
+    {
+     "tipo": "num",
+     "a": 7,
+     "b": 7,
+     "res": "teto que cai (Preso, 10 minutos)"
+    },
+    {
+     "tipo": "num",
+     "a": 8,
+     "b": 8,
+     "res": "água que sobe (3 rodadas para sair)"
+    },
+    {
+     "tipo": "num",
+     "a": 9,
+     "b": 9,
+     "res": "espelho que prende (Enfeitiçado 1 cena, Vontade)"
+    },
+    {
+     "tipo": "num",
+     "a": 10,
+     "b": 10,
+     "res": "chão falso para outra sala (cai sozinho na sala seguinte)"
+    },
+    {
+     "tipo": "num",
+     "a": 11,
+     "b": 11,
+     "res": "alarme (+2 em todos os perigos do lugar)"
+    },
+    {
+     "tipo": "num",
+     "a": 12,
+     "b": 12,
+     "res": "maldição do dono (Amaldiçoado até sair, ou Purificar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      9
+     ],
+     "total": 9,
+     "res": "espelho que prende (Enfeitiçado 1 cena, Vontade)",
+     "txt": "[9] → espelho que prende (Enfeitiçado 1 cena, Vontade)"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "CK5e": {
+   "id": "CK5e",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "O RELÓGIO AO ENTRAR NA QUINTA CASA DE EZMISA (G34; com 1, as crias vêm até a casa, se ainda não vieram)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "as crias vêm até a casa, na 5ª"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 6,
+     "res": "nada vem"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "nada vem",
+     "txt": "[4] → nada vem"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "R5e": {
+   "id": "R5e",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "O RASTRO DA QUINTA CASA DE EZMISA (vazia)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "uma porta de casa com marcas de unha por dentro (a praga fechou gente viva)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um poço seco com fios de baba endurecida descendo (o ninho é perto)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "árvores mortas brotando da lama, todas marcadas a garra na mesma altura (o sinal do guardião)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "uma porta de casa com marcas de unha por dentro (a praga fechou gente viva)",
+     "txt": "[2] → uma porta de casa com marcas de unha por dentro (a praga fechou gente viva)"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "CR6q": {
+   "id": "CR6q",
+   "dia": 508,
+   "hora": "13:55:46",
+   "titulo": "(OCULTO até a casa ver) QUANTAS CRIAS DO TKORNA NA SEXTA CASA (S608 [15]; insetos Raros do tamanho de um cão)",
+   "dado": [
+    2,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 12,
+     "res": "o número"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2,
+      6
+     ],
+     "total": 8,
+     "res": "o número",
+     "txt": "[2, 6] +0 = 8 → o número"
+    }
+   ],
+   "hora_rolado": "13:55:46"
+  },
+  "CN08": {
+   "id": "CN08",
+   "dia": 508,
+   "hora": "13:56:21",
+   "titulo": "(OCULTO até a luta) O NÍVEL DAS CRIAS DO TKORNA (Raras, um degrau abaixo de Ezmisa; o Livro: Raro 30 a 70)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "30"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "38"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "46"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "54"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "62"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "70"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "46",
+     "txt": "[3] → 46"
+    }
+   ],
+   "hora_rolado": "13:56:21"
   }
  }
 }

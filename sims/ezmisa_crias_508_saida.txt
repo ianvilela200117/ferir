@@ -1,0 +1,28 @@
+LEI DAS AÇÕES: as crias do Tkorna (nível 46) contra 3 · PV 2944/2944 · RD 5 · 2 ações · reação 1 · grupo: Ferir 1, Moreth 4, Eiagrir 3
+INICIATIVA: as crias do Tkorna 2d20+4 = 28 × o grupo 2d20+13 (média) = 29 → o grupo age primeiro
+--- RODADA 1 · as crias do Tkorna 2944/2944
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana): 2000; [[6], [11]]+34=51 vs 41 pega em cheio → 997 (1947)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 520; [[19], [7]]+44=70 vs 41 pega em cheio → 257 (1690)
+  Moreth: [[14], [19]]+44=77 ACERTA [5]×3+15+46=76 − RD 5 = 35 (1655)
+  Moreth: [[5], [1]]+44=50 ACERTA [7]×3+15+46=82 − RD 5 = 38 (1617)
+  Moreth: [[17], [18]]+44=79 ACERTA [5]×3+15+46=76 − RD 5 = 35 (1582)
+  Eiagrir lança LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena): 260; [[3], [20, 11]]+36=70 vs 41 pega em cheio → 127 (1455)
+  Eiagrir: [[9], [12]]+36=57 ACERTA [3]×3+12+26=47 − RD 5 = 21 (1434)
+  Eiagrir: [[5], [7]]+36=48 ACERTA [1]×3+12+26=41 − RD 5 = 18 (1416)
+  FÚRIA: +1 ação, o poder recarrega
+    ataque em Ferir: [[7], [17]]+17=41 vs 59 erra
+    ataque em Eiagrir: [[14], [15]]+17=46 vs 56 erra
+    ataque em Ferir: [[4], [8]]+17=29 vs 58 erra
+--- RODADA 2 · as crias do Tkorna 1416/2944
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana): 1740; [[2], [17]]+34=53 vs 41 pega em cheio → 867 (549)
+  Moreth lança LANÇA DO SOL (a Maça do Rio Limpo, Mítica ×10; 2 tiros por cena): 1120; [[17], [20, 6]]+44=87 CRÍTICO (dados dobrados) → 557 (-8)
+  as crias do Tkorna CAI
+FIM: morto · rodadas 2 · mortos [] · PV -8/2944 · grupo {'Ferir': 264, 'Moreth': 610, 'Eiagrir': 432}
+G39 · XP DA LUTA, sozinho: 3680 a cada um que lutou (46 × 10 × 8): Ferir, Moreth, Eiagrir
+   XP +3.680 (508: as crias do Tkorna (Raro 46; 8 caído(s))) → 129.810 / 132.700
+   ⬆ SUBIU AO NÍVEL 51 (508: as crias do Tkorna (Raro 46; 8 caído(s)))
+     próximo nível em 132.700 XP
+     ★ PONTO DE HABILIDADE do 51: o jogador escolhe (ou o Mestre propõe)
+   Moreth: +3680 (508: as crias do Tkorna (Raro 46; 8 caído(s))) → 26415/23400
+   Eiagrir: +3680 (508: as crias do Tkorna (Raro 46; 8 caído(s))) → 16698/13000
+   G39 · o DESPOJO: o bicho deixa corpo: ver os drops do gerador e lançar com ficha.py mat

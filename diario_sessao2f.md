@@ -2320,3 +2320,29 @@ Levou o rei pela beira até o arco. Na frente dele, metida na lama até os joelh
 O Eiagrir olhou para a lama em volta da estátua, depois para o céu, que escurecia. O Moreth já tinha a mão no cabo da maça.
 
 - **Parada:** entardecer do 508, a beira de Ezmisa. A chave no pescoço da estátua; a palavra com o rei.
+
+### O eremita
+Antes de o rei descer, o eremita falou mais do que tinha falado em anos. Era menino quando a água cobriu Ezmisa: estava no telhado da casa do pai, e ficou. Desde então mora na beira.
+
+"Lá dentro só há os mortos da cidade, de pé na lama", disse, convicto. "E no fundo dorme o deus da praga. Ele não acorda."
+
+Da praga ele sabia mais. "A febre ainda está na lama. Quem se corta lá dentro, adoece. Nós lavávamos as feridas com sal. O que trouxe a praga não suporta sal."
+
+E do Círculo: dois grupos neste verão, uma dúzia de homens ao todo, nenhum voltou. O chefe do posto jurou voltar na lua nova com mais gente. "Querem o coração do bicho. Para tomar Lumade, dizem lá em cima."
+
+Foi então que o junco estalou atrás do tronco. O Gonde virou-se primeiro e o pegou pelo pescoço antes de o homem levantar: um rapaz magro, de casaco cor de areia, com a faca ainda na bainha.
+
+### As casas de Ezmisa
+O rei disse a palavra, e a corrente verde soltou-se do pescoço da estátua como se nunca tivesse estado presa. A chave abriu o arco com um estalo de ferro molhado.
+
+Na primeira casa o rei pisou num ferro velho debaixo da lama e cortou o pé. Esfregou sal na ferida, que ardeu como brasa, e a febre não veio. Nenhum dos três viu as letras gravadas na parede do fundo.
+
+Na segunda casa o Moreth parou com o pé no ar, sobre uma laje mais lisa que as outras. Passaram rente à parede. Na terceira havia uma casca de inseto do tamanho de um homem, vazia, rachada nas costas. Na quarta havia um espelho de metal polido, e o Eiagrir cobriu-o com o manto sem olhar para ele. Na quinta, uma porta tinha marcas de unha por dentro.
+
+Na sexta, a lama mexeu.
+
+Oito, do tamanho de um cão, de carapaça cor de lodo e patas que estalavam na pedra. O Toque do rei apagou a metade de uma vez; a Lança do Sol do Moreth queimou o resto. Nenhum chegou a tocar ninguém.
+
+Do outro lado da casa, uma porta baixa respirava um ar quente e doce, como fruta podre.
+
+- **Parada:** noite do 508, Ezmisa, a sexta casa. Diante da porta do coração.

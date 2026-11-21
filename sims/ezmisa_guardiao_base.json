@@ -1,0 +1,35 @@
+{
+ "monstro": {
+  "nome": "Tkorna",
+  "cat": "Épico",
+  "nivel": 98,
+  "pv": 1470,
+  "df": 44,
+  "rd": 6,
+  "at": 34,
+  "dado": "1d12",
+  "mult": 5,
+  "moral": false,
+  "essencia": "Veneno",
+  "sangue_queima": "3d6",
+  "acoes": 4,
+  "poder": {
+   "nome": "envenena: 2d6 por rodada até passar em Vigor contra CD 16",
+   "tipo": "area",
+   "cd": 16,
+   "dano": "4d6"
+  },
+  "fraqueza": "Vida",
+  "covil": {
+   "nome": "o coração de Ezmisa",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": ""
+  },
+  "nota": "bicho.py (obras/ezmisa_guardiao.txt): inseto, casa, Veneno; guardião: protege um lugar ou uma coisa; fraqueza: a Essência Vida: dano dobrado e corta a regeneração · e mais uma, a descobrir: sal",
+  "nao_roda": [
+   "voa"
+  ]
+ },
+ "grupo": []
+}

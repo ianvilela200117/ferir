@@ -1,0 +1,4 @@
+CD 21 da escala velha → 31 nos dois dados
+teste: [[2], [4]] + 9 + nível 5 = 20 vs 31 (margem -11)
+grau: FALHA FEIA (complicação)
+  SURPRESA RUIM (d20): a próxima rolagem da cena tem −2

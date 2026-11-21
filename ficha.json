@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 50,
- "xp": 126130,
+ "nivel": 51,
+ "xp": 129810,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 118,
+  "Inteligência": 119,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 104
+  "Afinidade": 105
  },
  "pv": [
   266,
-  269
+  271
  ],
  "mana": [
-  117,
-  117
+  118,
+  118
  ],
  "foco": 16,
  "fortuna": [
@@ -841,7 +841,6 @@
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 7",
   "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
   "Dia 477: SOBE ao 8",
   "Dia 477: SOBE ao 9",
@@ -900,7 +899,9 @@
   "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)",
   "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)",
   "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))",
-  "Dia 507: +1000 507: o LIVRO DE SANGUE lido inteiro e AENELTA, a última rainha, posta em paz pelo nome (feito grande)"
+  "Dia 507: +1000 507: o LIVRO DE SANGUE lido inteiro e AENELTA, a última rainha, posta em paz pelo nome (feito grande)",
+  "Dia 508: +3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
+  "Dia 508: SOBE ao 51"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -927,5 +928,7 @@
  "exaustao": 0,
  "nivel_maximo": 159,
  "classe_lendaria": "Herdeiro do Rei-Ferreiro",
- "escolhas_pendentes": []
+ "escolhas_pendentes": [
+  "o PONTO DE HABILIDADE do 51"
+ ]
 }

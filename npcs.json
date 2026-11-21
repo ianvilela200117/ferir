@@ -3836,7 +3836,7 @@
  },
  "Moreth": {
   "nivel": 234,
-  "xp": 22735,
+  "xp": 26415,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3958,7 +3958,8 @@
    "+500 Tick 504: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
-   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)"
+   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
+   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))"
   ],
   "tracos": [
    "LEAL",
@@ -5848,7 +5849,7 @@
  },
  "Eiagrir": {
   "nivel": 130,
-  "xp": 13018,
+  "xp": 16698,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5936,7 +5937,8 @@
    "+1000 Tick 504: MISSÃO/FEITO (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
    "+500 507: os herdeiros da Primeira Liga presos sem sangue (RN07)",
    "+1120 507: Zraos (Épico 112; 1 caído(s))",
-   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)"
+   "+500 507: o coração do túmulo das rainhas (o livro e a rainha em paz)",
+   "+3680 508: as crias do Tkorna (Raro 46; 8 caído(s))"
   ],
   "ultima_subida": 483,
   "tracos": [
@@ -8124,5 +8126,14 @@
   ],
   "classe": "chefe dos Herdeiros da Primeira Liga (herdeiro de casa de mercador acusada pelo livro de sangue)",
   "ocupacao": "PRESO (507) na sala 6 do Túmulo das Rainhas, com as duas dúzias dos Herdeiros da Primeira Liga; à espera do julgamento"
+ },
+ "Ioduxeth": {
+  "nivel": 30,
+  "xp": 0,
+  "log": [
+   "Dia 508: entra no livro (nível 30)"
+  ],
+  "classe": "eremita (o último vivo de Ezmisa)",
+  "ocupacao": "a beira do brejo de Ezmisa, a meio dia de Lumade, desde que a água cobriu a cidade"
  }
 }

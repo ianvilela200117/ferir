@@ -1,4 +1,4 @@
-# RETOMAR — entardecer do Dia 508, a beira de EZMISA: a chave na estátua e a palavra (MOTOR 9b: G1 a G41)
+# RETOMAR — noite do Dia 508, EZMISA, a sexta casa: diante da porta do coração (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 508, EZMISA, a 6ª casa (as crias mortas), diante da PORTA DO CORAÇÃO. O rei NÍVEL 51 (XP 129.810; o 52 em 132.700), PV 266/271, Mana 118/118, Visão 2/2, Erudito 0/1, Fortuna 3/3, Revés 4/6; o PONTO DO 51 por escolher (ficha.json › escolhas_pendentes). Com ele: o Moreth 610, o Eiagrir 432 (os dois com XP para subir no tick do 511). Lá fora: o Gonde e 2 guardas, a ELIANE de cama (até o 517), a carroça, a Matriz e o Martelo, o LIVRO DE SANGUE, e o OLHEIRO DO CÍRCULO PRESO (GN08 [3]; (OCULTO) ele ouviu que o livro está na carroça, SG08 [2]). O eremita IODUXETH (30) na beira. O que a casa sabe: a febre na lama (o sal na ferida +5 no Vigor); 'o que trouxe a praga não suporta sal'; o Círculo volta na lua nova e quer o coração para tomar Lumade. (OCULTO) o mapa: o coração é a 7ª casa; o guardião TKORNA (inseto Épico 98, Veneno, voa; envenena em área 12 m; sangue que queima; fraqueza VIDA e SAL; o covil; sims/ezmisa_guardiao_base.json; NÃO RODA: voa); o núcleo Épico de Veneno no peito dele; a inscrição da 1ª casa não vista. (OCULTO) O COMBOIO quebrado nesta noite pelos Vrurn: 2 guardas mortos, os 24 SOLTOS; a notícia em Lumade no entardecer do 509 (#1048). Cofre 59.567.
+
+Antes (508, a beira de Ezmisa):
 Entardecer do 508, a BEIRA DE EZMISA (a cidade afundada a meio dia de Lumade, no brejo ao pé do vale de cima; o posto do Círculo no alto). O rei PV 266/269, Mana 117/117, Visão 2/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 126.130. Com ele: o Moreth, o Eiagrir, o Gonde e 2 guardas, a ELIANE de cama na carroça (até o 517), a Matriz e o Martelo, o LIVRO DE SANGUE e o punhal de Iomiltia. O EREMITA (sem nome dito) recebeu a casa (EM08 [5]): a CHAVE no pescoço de uma ESTÁTUA da porta afundada; a PALAVRA que a solta, ele a disse ao rei (KY08 [5]); 'a segunda e a quarta casa têm o chão que mata' (EK08 [3]: o notar delas +5). (OCULTO) o mapa: masmorras/ezmisa.json (Épica, 7 salas: 1 segredo, 2 armadilha, 3 vazia, 4 armadilha, 5 vazia, 6 o que habita, 7 o coração com um núcleo e o guardião Épico). (OCULTO) O COMBOIO: os Vrurn o quebram na noite do 508 (CV08: 2 guardas mortos, 2 graves, 2 leves; os 24 HERDEIROS SOLTOS); os 4 feridos chegam a Lumade no entardecer do 509 (#1048, para). Cartas a caminho: a da Brara (~511, #1045), a da Nouliel (~513, #1046). Cofre 59.567.
 
 Antes (507, a porta do túmulo):
@@ -458,10 +461,12 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507 → 508): 1c os 24 às minas de cima de Levis (o julgamento por carta) · 2a o livro a Ireviel · 3a Ezmisa amanhã · 4b a Eliane na carroça
 - a escolta: 6 guardas (leitura do Mestre) · CV08 [1] e a luta oculta (CV08n, q, a1/b1, c, p, g1-g6) · EZ08 [4] Épica · o tick do 508 · EN08 [4] · EM08 [5] · KY08 [5] · EK08 [3] · os erros: o descanso e o texto oculto nas pendências.
 
+## RESPONDIDO (508, a beira → a sexta casa): 'você contabilizou o XP da última rodada?' (regra: sim, tudo lançado; resposta inteira) · 1a entrar já · 2b o rei, o Moreth e o Eiagrir · 3a as quatro perguntas ao eremita
+- ER08 [2] (30) · S608 [15], PR08 [2], QE08 [1], CI08 [2] (ocultos antes) · os saberes: FALHA FEIA, GANHO, EXTRAORDINÁRIO · SG08 [2] (oculto), GN08 [3] · SE1 [4] e o notar FALHA FEIA, PF08 [2], FB08 sucesso · AR2e [3] EXTRAORDINÁRIO (o relógio da Leliel −1) · R3e [6] · CK4e [5] · AR4e [9] EXTRAORDINÁRIO · CK5e [4] · R5e [2] · CR6q 8 · CN08 [3] · a luta das crias (2 rodadas) · o rei ao 51.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. EZMISA (a chave na estátua; a palavra com o rei; a segunda e a quarta casa com o chão que mata): a) entrar já, de noite · b) dormir na beira do brejo e entrar na aurora (a Visão é 2/2 hoje e volta amanhã) · c) outra.
-2. QUEM ENTRA: a) o rei, o Moreth, o Eiagrir, o Gonde e os 2 (a Eliane fica na carroça, sozinha na beira) · b) o rei, o Moreth e o Eiagrir; o Gonde e os 2 ficam com a Eliane e a carroça.
-3. O EREMITA: a) perguntar mais a ele (o jogador diz o quê) · b) deixá-lo.
+1. O CORAÇÃO (atrás da porta, o que trouxe a praga; a casa sabe: o sal o fere): a) abrir já · b) a VISÃO DO TEMPO antes (2/2; 20 de Mana cada) · c) sair e voltar de dia.
+2. O PONTO DO 51: a) guardar (8 guardados) · b) FOLE FIRME 1 (+2 no Processo em oficina de campanha) · c) SÉRIE DE MESTRE 1 (a forja grande faz a série uma categoria acima) · d) outro nó da árvore (o jogador diz; até o grau 3).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
