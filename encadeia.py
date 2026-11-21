@@ -149,6 +149,7 @@ def pendencias(dias=7, dia=None):
     for it in A.get('itens', []):
         if it.get('feito'): continue
         t = it.get('texto', ''); di = it.get('dia') or 0
+        if it.get('oculto') or t.startswith('(OCULTO'): t = '(OCULTO: o texto está na agenda e no envelope; não vai à mesa)'   # 508 (erro achado): o resumo do tick vai à mesa
         casa = it.get('para') or 'PRAZO' in t.upper() or it.get('tipo') in ('marco', 'fio')
         if not casa or it.get('tipo') == 'noticia': continue
         if dia <= di <= dia + dias:

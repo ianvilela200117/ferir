@@ -3074,10 +3074,11 @@
     6
    ],
    "postura": -1,
-   "estado": "PRESOS (507): as duas dúzias e o Nutoccone renderam-se na sala 6 (RN07 sucesso); à espera do julgamento",
+   "estado": "(OCULTO até a notícia do 509) SOLTOS: fugiram na noite do 508, quando os Vrurn quebraram a escolta (CV08); estavam presos desde o 507",
    "log": [
     "507: nasce no túmulo das rainhas (a novidade da sala 6); a Visão do Tempo do rei os viu antes de a casa chegar",
-    "507: rendem-se ao rei na sala 6 (\"prendam ou matem, daqui eles não saem\"); o Eiagrir na boca da galeria de Rilge; o ouro tomado (600)"
+    "507: rendem-se ao rei na sala 6 (\"prendam ou matem, daqui eles não saem\"); o Eiagrir na boca da galeria de Rilge; o ouro tomado (600)",
+    "508 (oculto): soltos na luta dos Vrurn contra a escolta; fogem todos"
    ]
   }
  ],

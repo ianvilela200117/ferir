@@ -3985,6 +3985,17 @@
    "chegada": "[2] em 1d3 [3] dias",
    "resumo": "UM VILÃO NOVO entra no mundo — o Delta e as salinas (Brassa)",
    "toca": true
+  },
+  {
+   "dia": 508,
+   "d20": 15,
+   "o_que": "OFERTA PÚBLICA: alguém paga por um serviço",
+   "onde": "d27 [1] Ireviel e o rio",
+   "detalhe": "[MISSÃO]: Ulron (o Mestre dá o nome pela ficção)\ndificuldade: E  (pela razão Ameaça ÷ régua, Parte XVI.6)\ntipo: Oculta\nobjetivo: caçar uma criatura\ncomplicação escondida (Envelope): o alvo tem um motivo bom\nprazo: 4 dias\nrecompensa: 150 XP · 30 de ouro · 1 ponto de Trilha\npenalidade se falhar: a região piora um passo\nquem oferece: um NPC ou um sinal no mundo, nunca do nada (XVI.6)\n————————————————————————————————————————",
+   "noticia_chega": 512,
+   "chegada": "[5] em 1d6 [4] dias",
+   "resumo": "OFERTA PÚBLICA: alguém paga por um serviço — Ireviel e o rio",
+   "toca": true
   }
  ]
 }

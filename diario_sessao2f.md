@@ -2294,3 +2294,29 @@ Pagou: cinco mil e quatrocentos, contados ali mesmo. O punhal de Iomiltia ficou 
 No mercado, no caminho de volta, um velho vendia papéis antigos estendidos numa esteira. Num deles, gasto nas dobras, estava desenhado um campo de trigo e escrito, na letra dos reis: *para que a terra dê duas vezes*.
 
 - **Parada:** entardecer do 507, a porta do túmulo. O livro de sangue com o rei. Os 24 presos à porta. O núcleo com o Celocus.
+
+## Dia 508 — o comboio e a beira de Ezmisa
+
+### Lumade, a aurora
+Os seis guardas saíram para o leste antes do sol, com os vinte e quatro amarrados em fila e a carta do rei para o conselho dentro de um tubo de couro. O Nutoccone ia no meio. Na curva da estrada olhou para trás uma vez, para a porta do túmulo, e depois não olhou mais.
+
+O rei saiu para o oeste com o resto. A Eliane ia deitada na carroça, ao lado da Matriz, reclamando de cada buraco.
+
+### O brejo
+Os cortadores de junco trabalhavam com água pela cintura. Um deles, sem largar a foice, apontou com o queixo para o meio do brejo.
+
+"A água baixou ali, nesse verão. Viu as pontas? Ninguém entra. O junco cresce torto em cima das casas."
+
+Eram torres. Pontas de pedra escura saindo do junco como dedos, e mais longe o arco de uma porta, afundado até a metade na lama.
+
+O eremita esperava sentado num tronco, na beira, como quem já sabia que vinham. Era velho, de barba amarrada com um cordão, e cheirava a fumaça e a peixe seco.
+
+"O senhor é o que abriu a porta das rainhas", disse. Não era pergunta. "Então pode abrir esta."
+
+Levou o rei pela beira até o arco. Na frente dele, metida na lama até os joelhos, havia uma estátua de mulher com as mãos estendidas. No pescoço dela, numa corrente verde, pendia uma chave do tamanho de uma mão.
+
+"Ninguém tira sem a palavra." O eremita se inclinou e disse a palavra no ouvido do rei, baixo, para que nem o Moreth ouvisse. "E cuidado na segunda casa e na quarta. O chão mata."
+
+O Eiagrir olhou para a lama em volta da estátua, depois para o céu, que escurecia. O Moreth já tinha a mão no cabo da maça.
+
+- **Parada:** entardecer do 508, a beira de Ezmisa. A chave no pescoço da estátua; a palavra com o rei.

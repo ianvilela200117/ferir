@@ -1,0 +1,70 @@
+{
+ "nome": "Ezmisa",
+ "cat": "Épico",
+ "guarda": "um núcleo",
+ "gerada": 508,
+ "salas": [
+  {
+   "n": 1,
+   "dado": 12,
+   "o_que": "SEGREDO (porta, passagem ou inscrição)",
+   "leva_a": [
+    2
+   ],
+   "vista": false
+  },
+  {
+   "n": 2,
+   "dado": 9,
+   "o_que": "ARMADILHA: notar CD 21; falha: 4d6 e uma condição (G16)",
+   "leva_a": [
+    3
+   ],
+   "vista": false
+  },
+  {
+   "n": 3,
+   "dado": 2,
+   "o_que": "VAZIA (um rastro)",
+   "leva_a": [
+    4
+   ],
+   "vista": false
+  },
+  {
+   "n": 4,
+   "dado": 11,
+   "o_que": "ARMADILHA: notar CD 21; falha: 4d6 e uma condição (G16)",
+   "leva_a": [
+    5,
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 5,
+   "dado": 3,
+   "o_que": "VAZIA (um rastro)",
+   "leva_a": [
+    6
+   ],
+   "vista": false
+  },
+  {
+   "n": 6,
+   "dado": 18,
+   "o_que": "O QUE HABITA o lugar (encontro; pode ser conversa)",
+   "leva_a": [
+    7
+   ],
+   "vista": false
+  },
+  {
+   "n": 7,
+   "dado": null,
+   "o_que": "O CORAÇÃO: um núcleo, com o guardião (Épico)",
+   "leva_a": [],
+   "vista": false
+  }
+ ]
+}

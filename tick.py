@@ -299,6 +299,19 @@ def um_dia(estrada, limite):
         C.append('  Pressão zera')
         t['pressao'] = 0
     C.append('  Fortuna volta ao máximo')
+    try:   # 508 (G39, erro achado: 'a Mana volta inteira com uma noite de sono' e a G4 ninguém lançava): a aurora faz sozinha
+        _F = carrega('ficha.json')
+        if _F and not t.get('sem_sono'):
+            _m0, _p0 = _F['mana'][0], _F['pv'][0]
+            _F['mana'][0] = _F['mana'][1]; _F['pv'][0] = min(_F['pv'][1], _F['pv'][0] + _F['pv'][1] // 10)
+            grava('ficha.json', _F)
+            if (_m0, _p0) != (_F['mana'][0], _F['pv'][0]):
+                C.append(f"  a noite de sono (G4 e o protocolo): o rei Mana {_m0} → {_F['mana'][0]} · PV {_p0} → {_F['pv'][0]}/{_F['pv'][1]}")
+                R.append(f"  ☾ a noite de sono: Mana {_F['mana'][0]}/{_F['mana'][1]} · PV {_F['pv'][0]}/{_F['pv'][1]}")
+        elif t.get('sem_sono'):
+            C.append('  sem sono esta noite (estado.json › tempo.sem_sono): a Mana e o PV não voltam'); t['sem_sono'] = False
+    except Exception as _ex:
+        R.append(f'  ⚠ a noite de sono não foi lançada: {_ex}')
     _sv = carrega('servos.json', {'servos': []})   # MOTOR 9 (438, G23): a palavra dos servos armados cobra sangue a cada aurora; o tick ROLA e LANÇA sozinho
     _caiu = False
     for _s in [x for x in _sv.get('servos', []) if x.get('de_pe')]:

@@ -1,5 +1,5 @@
 {
- "prox_id": 1048,
+ "prox_id": 1050,
  "itens": [
   {
    "id": 1,
@@ -14904,6 +14904,32 @@
    "boato": [
     19,
     "FIEL (a célula da casa confirma)"
+   ]
+  },
+  {
+   "id": 1048,
+   "dia": 509,
+   "texto": "(OCULTO até chegar) OS QUATRO GUARDAS FERIDOS VOLTAM A LUMADE (entardecer): os Vrurn atacaram o comboio na noite do 508; dois guardas mortos; os 24 herdeiros FUGIRAM soltos (CV08)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 1049,
+   "dia": 512,
+   "texto": "OFERTA PÚBLICA: alguém paga por um serviço — Ireviel e o rio",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 508",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
    ]
   }
  ],

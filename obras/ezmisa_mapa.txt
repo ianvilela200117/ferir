@@ -1,0 +1,1 @@
+MASMORRA Ezmisa: 7 salas geradas (o mapa no envelope, oculto; masmorras/ezmisa.json)

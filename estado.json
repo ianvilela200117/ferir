@@ -1,14 +1,14 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 507,
+  "dia": 508,
   "hora": "entardecer",
   "local": "Dragal, o portão afundado",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 1,
+  "pressao": 2,
   "primeiro_tick_semanal": 511,
   "limiar_pressao": 5,
-  "proxima_auditoria": 508
+  "proxima_auditoria": 513
  },
  "bestiario": {
   "avistamento": [
@@ -30,7 +30,8 @@
    "a Espada do Moreth (Mítica)",
    "a Lança de Veydun (Mítica)",
    "o Pilão de Varade (Mítico)",
-   "o Martelo do Rei (Ferramenta de Rei)"
+   "o Martelo do Rei (Ferramenta de Rei)",
+   "o livro de sangue (a vergonha da Liga)"
   ]
  },
  "forcados": {
@@ -46,5 +47,6 @@
    "503: G41, a palavra do rei: os forçados vão aos piores trabalhos (131)",
    "504: [3] a semana passa sem morte nem fuga → 131"
   ]
- }
+ },
+ "cofre": 59567
 }

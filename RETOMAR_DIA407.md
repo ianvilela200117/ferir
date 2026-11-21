@@ -1,4 +1,4 @@
-# RETOMAR — entardecer do Dia 507, LUMADE, a porta do túmulo: o livro de sangue com o rei; os 24 presos; Ezmisa (MOTOR 9b: G1 a G41)
+# RETOMAR — entardecer do Dia 508, a beira de EZMISA: a chave na estátua e a palavra (MOTOR 9b: G1 a G41)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Entardecer do 508, a BEIRA DE EZMISA (a cidade afundada a meio dia de Lumade, no brejo ao pé do vale de cima; o posto do Círculo no alto). O rei PV 266/269, Mana 117/117, Visão 2/2, Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 126.130. Com ele: o Moreth, o Eiagrir, o Gonde e 2 guardas, a ELIANE de cama na carroça (até o 517), a Matriz e o Martelo, o LIVRO DE SANGUE e o punhal de Iomiltia. O EREMITA (sem nome dito) recebeu a casa (EM08 [5]): a CHAVE no pescoço de uma ESTÁTUA da porta afundada; a PALAVRA que a solta, ele a disse ao rei (KY08 [5]); 'a segunda e a quarta casa têm o chão que mata' (EK08 [3]: o notar delas +5). (OCULTO) o mapa: masmorras/ezmisa.json (Épica, 7 salas: 1 segredo, 2 armadilha, 3 vazia, 4 armadilha, 5 vazia, 6 o que habita, 7 o coração com um núcleo e o guardião Épico). (OCULTO) O COMBOIO: os Vrurn o quebram na noite do 508 (CV08: 2 guardas mortos, 2 graves, 2 leves; os 24 HERDEIROS SOLTOS); os 4 feridos chegam a Lumade no entardecer do 509 (#1048, para). Cartas a caminho: a da Brara (~511, #1045), a da Nouliel (~513, #1046). Cofre 59.567.
+
+Antes (507, a porta do túmulo):
 Entardecer do 507, LUMADE, à porta do Túmulo das Rainhas (limpo; a porta e as aias obedecem ao rei). O rei PV 240/269, Mana 47/117, Visão 0/2 (volta amanhã), Erudito 0/1, Fortuna 3/3, Revés 4/6, XP 126.130 (o 51 em 127.600). Com ele: o LIVRO DE SANGUE (lido inteiro: os selos de Nutoccone, Zulandino, Bitoa, Jetoi, Jelaino, ALDOVERI e TIRACCI; a lei da Primeira Liga: 'a casa que vender um rei coroado perde a cadeira e o que tem'; o pedido de AENELTA: lê-lo em voz alta diante do Conselho; fio F79) e o PUNHAL DE IOMILTIA. A casa: o Moreth 572/610, o Eiagrir, a ELIANE 272/272 mas DE CAMA até o 517, o Gonde e 6 guardas, a Matriz e o Martelo; a Tigra e o mensageiro ferido em Lumade. Os 24 HERDEIROS DA PRIMEIRA LIGA PRESOS à porta (julgamento: fio F78). O CELOCUS ficou com o NÚCLEO ÉPICO DE SORTE (pagou 5.400). Material novo: yior 6, miiel 9, nior 12, syir 1,2. No mercado, um TEXTO ANTIGO DA COLHEITA BOA (fonte −2 para a G40; fio F80). EZMISA a meio dia (a cidade afundada; um núcleo; um eremita; uma chave). Cartas a caminho: a da Brara (~511, #1045), a da Nouliel (~513, #1046). Cofre 59.567.
 
 Antes (507, o coração):
@@ -452,11 +455,13 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (507, o coração): 1b ler o livro aqui · 2b (perguntado: o '3b' era o 2b) abrir o esquife · 3a a Cura Maior · 4b 40% de cada coisa
 - a Cura Maior (sem dado: o mínimo bastava) · a LEITURA: G10 EXTRAORDINÁRIO (56 vs 35) · LV07a [6], LV07b [4], LV07c [4] (ocultos, antes da leitura) · EQ07 13: Aenelta em paz; a porta do rei · VL07 9.000 · CT07 [1]: o núcleo com o Celocus · RM07 [3]: o texto da Colheita Boa · +1.000 XP.
 
+## RESPONDIDO (507 → 508): 1c os 24 às minas de cima de Levis (o julgamento por carta) · 2a o livro a Ireviel · 3a Ezmisa amanhã · 4b a Eliane na carroça
+- a escolta: 6 guardas (leitura do Mestre) · CV08 [1] e a luta oculta (CV08n, q, a1/b1, c, p, g1-g6) · EZ08 [4] Épica · o tick do 508 · EN08 [4] · EM08 [5] · KY08 [5] · EK08 [3] · os erros: o descanso e o texto oculto nas pendências.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. OS 24 PRESOS (o julgamento vai ao conselho; a palavra do rei: 'mortos, presos ou servindo'): a) levá-los a Ireviel para o conselho (a volta é por Levis, 10 dias) · b) julgá-los aqui pela palavra do rei, com o conselho por carta · c) mandá-los já às minas de cima de Levis (G41), com o julgamento por carta.
-2. O LIVRO DE SANGUE (o pedido de Aenelta; com ele mostrado ao Conselho, as cadeiras do Aldoveri e do Tiracci caem): a) guardá-lo e levá-lo a Ireviel (o conselho do rei decide como usar) · b) ir com ele ao Conselho da Liga, em Marasar · c) mandar copiar e espalhar o que diz (a cópia não tem os selos: corre como boato) · d) outra.
-3. EZMISA (a cidade afundada a meio dia; um núcleo; um eremita; uma chave) e O TEXTO DA COLHEITA BOA no mercado: a) Ezmisa amanhã · b) comprar o texto e voltar · c) as duas.
-4. A ELIANE (de cama até o 517): a) fica em Lumade com dois guardas até sarar · b) vai na carroça com a casa.
+1. EZMISA (a chave na estátua; a palavra com o rei; a segunda e a quarta casa com o chão que mata): a) entrar já, de noite · b) dormir na beira do brejo e entrar na aurora (a Visão é 2/2 hoje e volta amanhã) · c) outra.
+2. QUEM ENTRA: a) o rei, o Moreth, o Eiagrir, o Gonde e os 2 (a Eliane fica na carroça, sozinha na beira) · b) o rei, o Moreth e o Eiagrir; o Gonde e os 2 ficam com a Eliane e a carroça.
+3. O EREMITA: a) perguntar mais a ele (o jogador diz o quê) · b) deixá-lo.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
