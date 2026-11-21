@@ -1,14 +1,14 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 509,
-  "hora": "entardecer",
+  "dia": 514,
+  "hora": "noite",
   "local": "Lumade",
   "clima": "neblina, brisa (vê-se a 30 passos)",
   "pressao": 3,
-  "primeiro_tick_semanal": 511,
+  "primeiro_tick_semanal": 518,
   "limiar_pressao": 5,
-  "proxima_auditoria": 513
+  "proxima_auditoria": 518
  },
  "bestiario": {
   "avistamento": [
@@ -35,7 +35,7 @@
   ]
  },
  "forcados": {
-  "n": 131,
+  "n": 130,
   "piores": true,
   "grupos": [
    "78 do Ardenghi, 2 saqueadores da costa e o Skarkek (401; Farenta e Levis)",
@@ -45,7 +45,8 @@
   ],
   "log": [
    "503: G41, a palavra do rei: os forçados vão aos piores trabalhos (131)",
-   "504: [3] a semana passa sem morte nem fuga → 131"
+   "504: [3] a semana passa sem morte nem fuga → 131",
+   "511: [2] tentam fugir · d6 [2]: 1 ESCAPAM (à solta; o Mestre diz onde e de que grupo) → 130"
   ]
  },
  "cofre": 59567

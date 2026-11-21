@@ -1,0 +1,59 @@
+[23:27:49] Dia 513 · Pressão 2/5 · evento local 1d20 [16] -> uma festa ou casamento no bairro
+  O TEMPO (24 da Lua do Vinho de 1013 d.S., Colheita)
+   Ireviel: nublado, calmo (d6 [4] muda, d20 [6] · vento d6 [2])
+   o Porto de Marasar: geada cedo, calmo (d6 [6] muda, d20 [19] · vento d6 [2]) → PERIGO PARA A COLHEITA que ainda está no campo
+   Levis: geada cedo, brisa (d6 [4] muda, d20 [19] · vento d6 [3]) → PERIGO PARA A COLHEITA que ainda está no campo
+   Farenta: neblina, calmo (d6 [5] muda, d20 [11] · vento d6 [1]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   O RIO: normal [42/100]
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d5 [1] Lianniel
+  Fortuna volta ao máximo
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 517
+  O MUNDO SE MOVE — Dia 513 (dia)
+    d20 [5] MONSTRO NOVO OU MIGRAÇÃO
+    ONDE: d27 [16] as Montanhas de Fogo
+    A NOTÍCIA: [4] em 1d6 [1] dias
+    ——
+  O MUNDO VIVO — Dia 513
+    um Lendário age (d20 [7]):
+    Higrunn (influência, Steunn) d20 [13] oferece um acordo a um rival (paz, casamento, troca) · notícia d20 [15] chega no dia 515
+    trama do dia: a cantora do templo → Borecci (DÍVIDA) d20 [2] nada visível
+    FAÍSCA: a Guardiã da Tenaz quer casar com Thugek, por causa de dinheiro da Liga
+    FAÍSCA: Sira vai trair Moreth, por causa de vingança
+    FAÍSCA: Thuron pede ajuda a ALLOLTION (sacerdote AVARENTO e RELIGIOSO; corteja a Lucissi; doença escondida, 322), por causa de um mapa
+  AUDITORIA (XXIII.23, Dia 513): relógios de facção/vilão/culto · ambições · comida e soldo · material · cobiça · pendentes do Envelope · prática · Revés e Fortuna · o que ficou para trás
+  AUDITORIA — CONFERIR SOZINHO (regra da casa do Dia 199): toda Obra dos últimos 5 dias (LEI DO VALOR: a soma de valores e os dados anotados? obra_valor.py) · XP de Ferir somado de novo do zero · npcs.json (todos lançados?) · estado_vivo.md bate com o diário? · relógios e pendentes · erro achado = corrigir e anotar (regra 14)
+    === CONFERIDOR · Dia 513 ===
+    ⚠ NOMES PARECIDOS: ['Zatha'] × ['Zitha']
+    ⚠ FICHAS SEM NÍVEL (gerar quando entrarem em cena): Orvenne, Girendino, Lile, Gicilla
+    ⚠ COFRE: estado diz 62.383, envelope diz 58.744.
+    (3 avisos novos · 12 já vistos e anotados. Reler o canone.md antes de narrar.)
+  G39 — PENDÊNCIAS (encadeia.py pendencias):
+    ⚠ PRAZO em 0 dia(s) (#1046, Dia 513): A CARTA DA NOULIEL CHEGA AO REI EM LUMADE (de Ireviel, por cavaleiro): o cais novo desabou (DS04, Comércio −1 até o 518) · a PETIÇÃO do Porto de Marasar: grão d
+    ⚠ PRAZO em 1 dia(s) (#1052, Dia 514): (OCULTO: o texto está na agenda e no envelope; não vai à mesa)
+    ⚠ Moua: a Prova da faixa Incomum ainda por passar (o próximo tick tenta)
+    ⚠ Gundald: a Prova da faixa Incomum ainda por passar (o próximo tick tenta)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ▶ AGENDA #861 (era do Dia 477): FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio
+  ▶ AGENDA #865 (era do Dia 477): FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)
+  ▶ AGENDA #871 (era do Dia 483): GUILDA — as Mãos de Breu (Qulosus; chefe Zazess, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem)
+  ▶ AGENDA #911 (era do Dia 484): FACÇÃO — os da Mão Queimada (Telosus) pede audiência ao conselho. O que querem: as harpias Kraek e os que sobraram do povo que a Elaeva matou, na fé da MAMILTIA
+  ▶ AGENDA #919 (era do Dia 485): (OCULTO até chegar) A NOTÍCIA DE IREVIEL sobe o rio ao rei: o boato 'o rei perdeu a força em Dragal' e as portas pintadas 'o rei caiu' pelos da Cinza (GO83 [4]); Ordem −1 até o rei voltar
+  ▶ AGENDA #918 (era do Dia 487): [OCULTO] (OCULTO) CHEGA A CARTA DA ALMISION ao rei: pede os AROS DA ELIANE em troca de um favor grande (CB83a [2])
+  ▶ AGENDA #946 (era do Dia 491): FACÇÃO — os Jurados de Steunn (Steunn, em volta do Lumdun) pede audiência ao conselho. O que querem: os clãs de cima juram pelo herdeiro perdido dos Steunn
+  ▶ AGENDA #990 (era do Dia 498): FACÇÃO — os da Mina Fechada (Levis) oferece ajuda ou aliança à casa. O que querem: mineiros de Levis que querem fechar as minas de cima (a febre cinza e a Que Come a Pedra); o Odrum fala por eles
+  ▶ AGENDA #1046: A CARTA DA NOULIEL CHEGA AO REI EM LUMADE (de Ireviel, por cavaleiro): o cais novo desabou (DS04, Comércio −1 até o 518) · a PETIÇÃO do Porto de Marasar: grão do celeiro de Ireviel a preço velho (PT04 [2]) · o DESERTOR DOS OLHOS PINTADOS chegou com um nome (CH04 [3]: rolar o nome então) · o MILAGRE da Cisterna (MI06 [2]; o silêncio) · a REVOLTA DE MARASAR (incompleta) · o shasha da Doge chegou
+  ✉ NOTÍCIA QUE CHEGA HOJE: EMBAIXADA OU VISITA de terra distante — Lumade (Selron) · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ceduion, reitor do Colégio de Telosus (Telosus): procura um ferreiro, um mago ou um objeto (1-3 no d20: procura Ferir ou a Matriz) · COMO CHEGA: d20 [18] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: Ssish, o Colosso da Colmeia (Primordial, Ireviel e o rio): cria: aparecem crias (1d6) perto do habitat · COMO CHEGA: d20 [13] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Kraek (harpias) (Telosus): negocia: vende ou troca com humanos (oportunidade) · COMO CHEGA: d20 [17] FIEL
+  ✉ NOTÍCIA QUE CHEGA HOJE: os Rendidos de Marasar (o Porto de Marasar e o cais de Ireviel): dá um passo no que quer · COMO CHEGA: d20 [19] FIEL
+  ✉ notícia de longe que chega hoje: Naera (as Fundas do Norte): o desejo dele pesa: faz algo pessoal, fora da Obra (amor, vingança, saudade) · COMO CHEGA: d20 [6] EXAGERADA: chega maior do que foi
+  ■ PARADA: agenda #1046: A CARTA DA NOULIEL CHEGA AO REI EM LUMADE (de Ireviel, por cavaleiro): o cais novo desabou (DS04, Comércio −1 

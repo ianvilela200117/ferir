@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 504,
+  "dia": 511,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -31,13 +31,13 @@
   ],
   "relacoes": {
    "a Doge Skotha (Marasar)": 0,
-   "o Clã Hegre": 0,
-   "Steunn": 0,
-   "os Do Junco (o Delta)": -2,
-   "a Escola Única (Almision)": 0,
+   "o Clã Hegre": 1,
+   "Steunn": -1,
+   "os Do Junco (o Delta)": -3,
+   "a Escola Única (Almision)": -1,
    "o Colégio": 5,
    "a Leliel (o Norte; a Liga é dela)": -4,
-   "a Escola Única": 2
+   "a Escola Única": 3
   },
   "log": [
    "290: o reino nasce no papel: Ireviel e o Porto de Marasar",
@@ -87,9 +87,10 @@
    "483: semana do reino; renda de fora do livro +2450",
    "490: semana do reino; renda de fora do livro +2300",
    "497: semana do reino; renda de fora do livro +2000",
-   "504: semana do reino; renda de fora do livro +1800"
+   "504: semana do reino; renda de fora do livro +1800",
+   "511: semana do reino; renda de fora do livro +1650"
   ],
-  "ultima_semana": 504,
+  "ultima_semana": 511,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -106,11 +107,11 @@
    "gente": 14000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 4,
+    "Comércio": 3,
     "Dinheiro": 4,
-    "Saúde": 3,
+    "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 4
+    "Defesa": 3
    },
    "mods": {
     "Comida": [
@@ -227,7 +228,8 @@
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [2]",
     "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
     "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [1]",
-    "504: o desabamento de um trecho do cais novo (o EVENTO [1] do reino; DS04 [6]): Comércio −1 até o 518"
+    "504: o desabamento de um trecho do cais novo (o EVENTO [1] do reino; DS04 [6]): Comércio −1 até o 518",
+    "511: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]"
    ],
    "obras_feitas": [
     {
@@ -279,7 +281,7 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 2,
+    "Comida": 3,
     "Comércio": 2,
     "Dinheiro": 2,
     "Saúde": 4,
@@ -380,7 +382,8 @@
     "483: Comida 4 · Comércio 2 · Dinheiro 3 · Saúde 4 · Ordem 3 · Defesa 4 · evento [19]",
     "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]",
     "497: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [11]",
-    "504: Comida 2 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [19]"
+    "504: Comida 2 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [19]",
+    "511: Comida 3 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [8]"
    ]
   },
   {
@@ -389,10 +392,10 @@
    "gente": 9000,
    "pilares": {
     "Comida": 1,
-    "Comércio": 3,
+    "Comércio": 2,
     "Dinheiro": 1,
     "Saúde": 4,
-    "Ordem": 3,
+    "Ordem": 4,
     "Defesa": 4
    },
    "mods": {
@@ -473,7 +476,8 @@
     "497: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 3 · Ordem 2 · Defesa 3 · evento [12]",
     "502 (erro achado): o −1 de Ordem do 416 (duas semanas) nunca venceu: tirado · o +1 de Saúde da G2 (423) estava na chave \"Saude\" e não contava: passado para \"Saúde\"",
     "504: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [15]",
-    "504: o −1 de Comida do clima (a geada) tirado: os braços pagos salvaram a colheita (CO03 [4], declarado antes); no rolar do 504 ele não mudou nada ([5]−1 = 4 também fica)"
+    "504: o −1 de Comida do clima (a geada) tirado: os braços pagos salvaram a colheita (CO03 [4], declarado antes); no rolar do 504 ele não mudou nada ([5]−1 = 4 também fica)",
+    "511: Comida 1 · Comércio 2 · Dinheiro 1 · Saúde 4 · Ordem 4 · Defesa 4 · evento [7]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -523,7 +527,12 @@
       "o porto aberto ao reino (357)"
      ]
     ],
-    "Comida": [],
+    "Comida": [
+     [
+      1,
+      "clima: colheita em tempo seco, 3 dias limpos (até o 517)"
+     ]
+    ],
     "Saúde": [],
     "Defesa": [
      [
@@ -564,7 +573,8 @@
     "483: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [14]",
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]",
     "497: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [7]",
-    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]"
+    "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
+    "511: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [4]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

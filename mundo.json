@@ -4007,6 +4007,84 @@
    "chegada": "[2] em 1d3 [3] dias",
    "resumo": "DESCOBERTA DE MATERIAL — Yaelane",
    "toca": false
+  },
+  {
+   "dia": 510,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [3] Lumade",
+   "detalhe": "nome: Selron\ndesejo: casar com quem ama\nambição (relógio de 4): entrar numa facção que o recusou\nmedo: a morte de um filho\nsegredo: roubou o que tem\nlinha vermelha: nunca machuca uma criança\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: AVARENTO e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 513,
+   "chegada": "[3] em 1d3 [3] dias",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Lumade (Selron)",
+   "toca": true
+  },
+  {
+   "dia": 511,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [4] Marasar (a Liga e o Doge)",
+   "detalhe": "",
+   "noticia_chega": 511,
+   "chegada": "[1] hoje",
+   "leitura": "magia selvagem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Marasar (a Liga e o Doge)",
+   "toca": true
+  },
+  {
+   "dia": 511,
+   "d20": 12,
+   "o_que": "UM VILÃO NOVO entra no mundo",
+   "onde": "d27 [20] Steunn",
+   "detalhe": "nome: Varium\ndesejo: um título\nambição (relógio de 4): casar acima da sua classe\nmedo: a solidão\nsegredo: roubou o que tem\nlinha vermelha: nunca vende o ofício barato\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: RELIGIOSO e TEIMOSO\nnível: 180\nobra sinistra (relógio de 8): trazer de volta um morto amado\npor que é humano: perdeu tudo para quem hoje é herói\nequipamento: 1 peça(s) Lendária(s) ou Mítica(s) (o mundo também tem Míticos)\nmétodo: lei\no que o faria parar: receber o que quer de outro jeito\n————————————————————————————————————————",
+   "noticia_chega": 512,
+   "chegada": "[3] em 1d3 [1] dias",
+   "resumo": "UM VILÃO NOVO entra no mundo — Steunn (Varium)",
+   "toca": true
+  },
+  {
+   "dia": 511,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [19] Yaelane",
+   "detalhe": "nome: Erymir\ndesejo: deixar uma obra\nambição (relógio de 4): formar uma companhia\nmedo: a magia\nsegredo: roubou o que tem\nlinha vermelha: nunca se ajoelha\ndilema que vai chegar: a verdade sobre o segredo dele destruiria quem confia nele\ntraços: COVARDE e HONESTO\n————————————————————————————————————————",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Yaelane (Erymir)",
+   "toca": false
+  },
+  {
+   "dia": 512,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "",
+   "noticia_chega": 512,
+   "chegada": "[1] hoje",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — as Fundas do Norte (o Clã Hegre)",
+   "toca": true
+  },
+  {
+   "dia": 513,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [16] as Montanhas de Fogo",
+   "detalhe": "",
+   "noticia_chega": 514,
+   "chegada": "[4] em 1d6 [1] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — as Montanhas de Fogo",
+   "toca": false
+  },
+  {
+   "dia": 514,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [22] Kasra (terra nova)",
+   "detalhe": "nome: Orade\ndesejo: sair da cidade\nambição (relógio de 4): virar Lendário\nmedo: a morte de um filho\nsegredo: é filho de quem não deveria\nlinha vermelha: nunca trabalha para a facção X\ndilema que vai chegar: a facção que o paga quer algo que fere a sua linha vermelha\ntraços: RELIGIOSO e HONESTO\n————————————————————————————————————————",
+   "noticia_chega": 514,
+   "chegada": "[1] hoje",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Kasra (terra nova) (Orade)",
+   "toca": false
   }
  ]
 }

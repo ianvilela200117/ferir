@@ -1,4 +1,4 @@
-# RETOMAR — entardecer do Dia 509, LUMADE: o pacto de forja; o comboio perdido; os 24 soltos (MOTOR 9b: G1 a G42)
+# RETOMAR — noite do Dia 514, LUMADE: os Vrurn mortos; o Nutoccone preso de novo; o veneno no poço da praça (MOTOR 9b: G1 a G42)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 514, LUMADE, a casa do Celocus. O rei NÍVEL 53 (XP 138.490; o 54 em 143.200), Int 121, Afinidade 107, PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6, sem Exaustão. O Moreth 235 (612), o Eiagrir 131 (434). A Eliane de cama (até o 517). O Gonde e 2; os 4 guardas FERIDOS (beberam do poço: um dia de vômito). NYRAUS e DVURNOS ENTERRADOS na estrada do leste. OS VRURN DESTROÇADOS (511; seis mortos; um fugiu pelo rio; na ponte o sinal do deus morto de Ulair). A CARTA DO CONSELHO achada no covil, inteira. PRESOS: o NUTOCCONE e OITO herdeiros (513, de novo) e os NOVE DO CÍRCULO (o Lior e 8) na cela do Celocus; uns 15 herdeiros soltos pelas aldeias do vale. O recado do Nutoccone à Liga saiu no 512 (chega ao Porto de Marasar no 515; a casa sabe que saiu). O VENENO NO POÇO DA PRAÇA (514, meio-dia; febre fraca); o Celocus TAPOU a boca do túnel com pedra. As cartas lidas: a da Brara (a carta de Lumade TOMADA na estrada) e a da Nouliel (o cais, a petição do Porto, o chefe dos Olhos Pintados na torre velha da estrada sul, o milagre da Cisterna, Marasar, o shasha). Missões: o Eiagrir (o VDAEK, #1099) e a Eliane (a curandeira, #1100), até o 518. (OCULTO) o Círculo joga num SEGUNDO POÇO no 516 (#1095) · (OCULTO) MEOR na lua nova, 520 (#1098), sabendo os pontos fracos da muralha (a carta tomada era do Celocus) · (OCULTO) a gente da LIGA chega a Lumade atrás do livro no 521 (#1096). Cofre 59.744.
+
+Antes (509, o entardecer em Lumade):
 Entardecer do 509, LUMADE, a casa do Celocus. O PACTO DE FORJA selado (DL09 24; tratados.json forja_lumade: um ano; todo mês 3 kg Raro ou 1,5 Épico e um núcleo quando houver; a casa vende armas a preço do Motor); o NÚCLEO ÉPICO DE SORTE devolvido. O rei NÍVEL 52 (XP 136.090; o 53 em 137.900), PV 265/273, Mana 49/119, EXAUSTO 1 (a noite do 508 sem sono; a G16), Visão 2/2 (o dia 509), Erudito 0/1 (volta no 511). O Moreth 574/610 e o Eiagrir 432/432, EXAUSTOS 1 (os dois sobem no tick do 511). A Eliane de cama (até o 517). O Gonde e 2 guardas; os 4 guardas FERIDOS do comboio (2 graves, 2 leves); NYRAUS e DVURNOS MORTOS na estrada (os corpos lá, a um dia a leste). NOVE PRESOS DO CÍRCULO (o chefe LIOR e 8). Com a casa: a Matriz, o Martelo, o LIVRO DE SANGUE, os núcleos Épicos de VENENO e de SORTE, yelle 10, yomiar 15, yior 6, miiel 9, nior 12. OS 24 HERDEIROS DA PRIMEIRA LIGA SOLTOS desde a noite do 508 (o Nutoccone; sabem do livro). Os VRURN (7 trolls) na estrada do leste. O CÍRCULO: o chefe novo (80) e uns cinco nos poços; o túnel sob a praça do mercado; a casa sabe de lua nova (520). (OCULTO) o TÚNEL ABRE NO 514 (#1052, para; G42 RV10). (OCULTO) o Círculo reage no 512 (#1050). (OCULTO) MEOR VEM na lua nova. Cartas a caminho: a da Brara (~511), a da Nouliel (~513). Cofre 59.567.
 
 Antes (508, o posto vazio):
@@ -488,10 +491,15 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (508 → 509): 1c vender o aviso ao Celocus pelo acordo de forja ('quero um acordo vantajoso') · 2a perseguir o Círculo agora, de noite
 - PS10 17 · CR10 68 × 54, CR10c [2] (o chefe e cinco fogem), CF10 (1 morto, 3 presos) · +2.000 XP · o descanso desfeito (sem sono: Exaustão 1) · EN09 [4] · DL09 24 (o pacto e o núcleo devolvido) · RV10 [3] (oculto: o túnel no 514) · a notícia do comboio no entardecer.
 
+## RESPONDIDO (509 → 514): 1a caçar os herdeiros com a casa · 2a caçar os Vrurn e vingar os dois · 3a ficar e defender Lumade com o Celocus (lidas juntas: a caça sai de Lumade e volta)
+- LG10 [6] os corpos inteiros, enterrados · RT10 7 o covil da ponte velha · HD10 [5] os herdeiros se partem · CR11 50 × 30 (seis Vrurn mortos, um fugiu) · LV10 [6], OU11 1.000 · +2.400 XP (o rei no 53) · o tick semanal do 511 · CI12 [6] · PH11 14 · RN13 7 (rendem-se) · IN13 [1] · TU14 ao meio-dia, o veneno; VG14 9 · FB14 [5] fraca · FB14c [3] · CE14 [4] · CH14 [2] (a torre velha) · RV11 (oculto).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. OS 24 HERDEIROS SOLTOS (o Nutoccone e os seus; sabem que o livro de sangue está com o rei; fugiram a um dia a leste): a) caçá-los com a casa · b) pedir ao Celocus que os cace (o pacto novo) · c) avisar Levis e Ireviel por carta e seguir · d) outra.
-2. OS VRURN (sete trolls na estrada do leste, entre Lumade e Levis: o caminho de volta; os corpos de Nyraus e Dvurnos lá): a) caçá-los na estrada (vingar os dois) · b) voltar por outro caminho · c) esperar e voltar com gente do Celocus.
-3. LUMADE E O TÚNEL (a casa sabe: a lua nova do 520; o pacto novo): a) ficar e defender Lumade com o Celocus · b) voltar a Ireviel (o livro, a Fornalha, os focos, os nove presos) e deixar Lumade com o Celocus · c) fechar o túnel antes de ir (os poços do mapa).
+1. OS NOVE DA PRIMEIRA LIGA PRESOS DE NOVO (o Nutoccone e oito; o recado deles já vai à Liga; uns 15 soltos pelas aldeias do vale): a) julgá-los aqui, já ('prendam ou matem') · b) guardá-los na cela do Celocus até a casa voltar a Ireviel · c) mandá-los a Levis com gente do Celocus (o pacto) · d) outra (e dizer dos 15 do vale).
+2. O VENENO DO POÇO (a missão da curandeira, até o 518; o túnel tapado pelo Celocus): a) o rei estuda a água e faz um remédio · b) destapar a boca e descer atrás do ramo do túnel · c) vigiar todos os poços de Lumade com a gente do Celocus (pode juntar).
+3. A MISSÃO DO EIAGRIR (o VDAEK, sangue Lendário de vento, nas gargantas; até o 518): a) a casa vai (sai de Lumade de novo) · b) o Eiagrir vai sozinho · c) recusar.
+4. O CHEFE DOS OLHOS PINTADOS (nas ruínas de uma torre velha, na estrada sul de Ireviel): a) a Nouliel manda a guarda de Ireviel buscá-lo · b) vigiar e esperar o rei · c) deixar.
+5. A PETIÇÃO DO PORTO DE MARASAR (grão do celeiro de Ireviel a preço velho; Levis com pouco grão): a) vender · b) recusar · c) o conselho decide.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

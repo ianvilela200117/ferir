@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 52,
- "xp": 136090,
+ "nivel": 53,
+ "xp": 138490,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 120,
+  "Inteligência": 121,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 106
+  "Afinidade": 107
  },
  "pv": [
-  265,
-  273
+  275,
+  275
  ],
  "mana": [
-  49,
-  119
+  120,
+  120
  ],
  "foco": 16,
  "fortuna": [
@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 59567,
+ "cofre": 59744,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 504,
+  "ultima_semana": 511,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -501,6 +501,18 @@
    "valor": 5420,
    "motivo": "507: a CONTA DO TÚMULO com o Celocus (4b, 40% de cada coisa): 180 da moeda antiga (60%) + 5.400 (60% do núcleo Épico de Sorte, avaliado em 9.000, que fica com o Celocus, CT07 [1]) − 160 (40% do punhal de Iomiltia, que fica com a casa)",
    "saldo": 59567
+  },
+  {
+   "dia": 511,
+   "valor": -823,
+   "motivo": "semana: casa 6457 + cidades 1650 − despesa 8930",
+   "saldo": 58744
+  },
+  {
+   "dia": 514,
+   "valor": 1000,
+   "motivo": "511: o ouro dos mercadores no covil dos Vrurn (OU11)",
+   "saldo": 59744
   }
  ],
  "materiais": {
@@ -865,7 +877,6 @@
   }
  },
  "xp_log": [
-  "Dia 484: +1480 484: quatro bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
   "Dia 484: SOBE ao 12",
   "Dia 488: +920 488: o YOLORVUS (Épico 92 de Luz), na gruta do penhasco",
   "Dia 488: SOBE ao 13",
@@ -924,7 +935,9 @@
   "Dia 508: +980 508: Tkorna (Épico 98; 1 caído(s))",
   "Dia 508: +3300 508: os do CÍRCULO na segunda casa de Ezmisa (o chefe do posto, 80, e 5, nível 50: destroçados no combate rápido; 1 morto, 5 presos)",
   "Dia 508: SOBE ao 52",
-  "Dia 508: +2000 508: a encosta do vale de cima (o Círculo destroçado; 4 caídos, nível 50; o chefe fugiu)"
+  "Dia 508: +2000 508: a encosta do vale de cima (o Círculo destroçado; 4 caídos, nível 50; o chefe fugiu)",
+  "Dia 510: +2400 511: os Vrurn no covil da ponte velha (CR11; 6 trolls nível 40)",
+  "Dia 510: SOBE ao 53"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
@@ -941,7 +954,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 0,
+   "tem": 1,
    "max": 1,
    "renova": "semana"
   }

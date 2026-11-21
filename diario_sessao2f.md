@@ -2463,3 +2463,56 @@ Um deles, com o braço preso numa tala de galho, ajoelhou diante do rei sem espe
 O Celocus pousou o copo na mesa, sem barulho nenhum.
 
 - **Parada:** entardecer do 509, Lumade. O pacto selado. Dois guardas mortos. Os vinte e quatro herdeiros da Primeira Liga soltos.
+
+## Dias 510 a 514 — a ponte velha, a estalagem do sul, o poço da praça (as respostas: 1a caçar os herdeiros · 2a caçar os Vrurn · 3a ficar e defender Lumade)
+- **Rolagens:** LG10 [6] · RT10 [5]+2 = 7 · HD10 [5] · CR11 a casa [2]+48 = 50 × os Vrurn [3]+27 = 30: destroçados; CR11c [4] um fugiu · LV10 [6] · OU11 [4,6] = 1.000 · o tick semanal do 511 · PH11 [15]−1 = 14 · RN13 [6]+1 = 7 · IN13 [1] · TU14h [4] · TU14 [1] · VG14 [10]−1 = 9 · FB14 [5] · FB14c [3] · CE14 [4] · CH14 [2], CH14o [1] · RV11 (rolagem oculta).
+
+### A estrada do leste, 510
+A carroça estava virada na beira da estrada, com as rodas para o céu. Os trolls tinham levado os cavalos e a comida e deixado o resto.
+
+Nyraus e Dvurnos estavam debaixo dela, inteiros. Enterraram os dois ali, ao pé de um marco de estrada, com as lanças por cima.
+
+O rastro dos trolls saía da estrada para o norte. Era largo como de boi e descia para as gargantas.
+
+### A ponte velha, 511
+Era uma ponte de pedra que ninguém mais usava, sobre um rio verde e rápido. Debaixo dela, no escuro e no fedor, sete trolls dormiam amontoados.
+
+Um acordou tarde demais. A luta foi curta e feia. Quando acabou, seis estavam no chão, e o sétimo tinha se jogado no rio. A água o levou para baixo, rolando.
+
+Queimaram os seis até não sobrar nada que pudesse levantar.
+
+No fundo do covil, entre ossos, estavam as armas dos guardas, uma bolsa de mercador e um maço de papel lacrado: a carta ao conselho, inteira. Os trolls não leem.
+
+Na pedra da ponte, debaixo do musgo, alguém tinha riscado fundo um círculo cortado por uma linha. Havia sangue velho por cima.
+
+### A estalagem do sul, 513
+O rastro dos herdeiros se partia num vau: um grupo grande para as aldeias do vale, e um pequeno, mais rápido, para o sul. A casa foi atrás do pequeno.
+
+Achou-o numa estalagem de beira de estrada. Nove homens à mesa, com copos de água, pedindo cavalos fiado pelo nome das casas.
+
+O Nutoccone viu o Moreth na porta. Levantou-se, olhou, e sentou de novo.
+
+"De novo", disse.
+
+O dono da estalagem quis ficar bem com o rei. "Um rapaz meu saiu ontem para o Porto de Marasar, senhor. Com um recado deles. Foi pago no fiado."
+
+O Nutoccone não levantou os olhos do copo.
+
+### Lumade, a noite do 514
+Chegaram de noite, com os nove amarrados em fila. A praça do mercado estava fechada com carroças, e a gente do Celocus andava nela com tochas. Pelas ruas havia cheiro de vômito.
+
+A casa do poço estava com a porta arrombada.
+
+O Celocus esperava à porta da casa dele.
+
+"Ao meio-dia", disse. "Seis. Subiram pela casa do poço, jogaram e desceram. Minha gente estava na mina velha e não ouviu nada." Esperou um pouco. "A boca está tapada. Pedra até em cima."
+
+Os quatro guardas feridos tinham comido na estalagem da praça. Estavam deitados no pátio, vomitando num balde.
+
+Ao lado da cama da Eliane, uma curandeira de Lumade segurava um frasco da água do poço contra a vela.
+
+"Isto não mata", disse. "Não desta vez."
+
+Na mesa, duas cartas esperavam o rei: uma de Levis e uma de Ireviel.
+
+- **Parada:** noite do 514, Lumade. Os Vrurn mortos. O Nutoccone preso de novo, e o recado dele a caminho da Liga. O poço da praça envenenado e o túnel tapado.
