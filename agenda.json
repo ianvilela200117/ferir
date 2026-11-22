@@ -1,5 +1,5 @@
 {
- "prox_id": 1136,
+ "prox_id": 1138,
  "itens": [
   {
    "id": 1,
@@ -16169,6 +16169,36 @@
    "origem": "mestre",
    "feito": false,
    "toca": true
+  },
+  {
+   "id": 1136,
+   "dia": 521,
+   "texto": "EMBAIXADA OU VISITA de terra distante — as Fundas do Norte (o Clã Hegre) (Nesra)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 521",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    8,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1137,
+   "dia": 527,
+   "texto": "Souane (o Delta): manda caçar alguém (um nome, uma peça, um monstro)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 521",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL (a célula da casa confirma)"
+   ]
   }
  ],
  "fios": [

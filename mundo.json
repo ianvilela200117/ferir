@@ -4176,6 +4176,17 @@
    "leitura": "magia selvagem",
    "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Ulra (terra nova)",
    "toca": false
+  },
+  {
+   "dia": 521,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [12] as Fundas do Norte (o Clã Hegre)",
+   "detalhe": "nome: Nesra\ndesejo: uma casa própria\nambição (relógio de 4): casar acima da sua classe\nmedo: ser esquecido\nsegredo: não sabe ler\nlinha vermelha: nunca deixa um ferido para trás\ndilema que vai chegar: o desejo dele e o do parceiro não cabem juntos\ntraços: AVARENTO e GENEROSO\n————————————————————————————————————————",
+   "noticia_chega": 521,
+   "chegada": "[1] hoje",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — as Fundas do Norte (o Clã Hegre) (Nesra)",
+   "toca": true
   }
  ]
 }

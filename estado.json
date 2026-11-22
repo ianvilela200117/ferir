@@ -1,11 +1,11 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 520,
-  "hora": "tarde",
+  "dia": 521,
+  "hora": "entardecer",
   "local": "Levis",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 4,
+  "pressao": 0,
   "primeiro_tick_semanal": 525,
   "limiar_pressao": 5,
   "proxima_auditoria": 523,
@@ -36,19 +36,21 @@
   ]
  },
  "forcados": {
-  "n": 130,
+  "n": 139,
   "piores": true,
   "grupos": [
    "78 do Ardenghi, 2 saqueadores da costa e o Skarkek (401; Farenta e Levis)",
    "6 da guarda da Torre Acesa (404)",
    "32 da barca da Liga (434; Levis)",
-   "12 do vau com o Zutocca (502; as minas de cima de Levis)"
+   "12 do vau com o Zutocca (502; as minas de cima de Levis)",
+   "9 da Primeira Liga com o NUTOCCONE (520; as minas de cima de Levis, os piores trabalhos: \"para aprender\", a palavra do rei)"
   ],
   "log": [
    "503: G41, a palavra do rei: os forçados vão aos piores trabalhos (131)",
    "504: [3] a semana passa sem morte nem fuga → 131",
    "511: [2] tentam fugir · d6 [2]: 1 ESCAPAM (à solta; o Mestre diz onde e de que grupo) → 130",
-   "518: [5] a semana passa sem morte nem fuga → 130"
+   "518: [5] a semana passa sem morte nem fuga → 130",
+   "520: +9 (os herdeiros da Primeira Liga: o Nutoccone e oito, depois da terceira tentativa de fuga) → 139"
   ]
  },
  "cofre": 59567

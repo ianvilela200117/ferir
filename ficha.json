@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 53,
- "xp": 141220,
+ "xp": 141520,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -23,7 +23,7 @@
   275
  ],
  "mana": [
-  120,
+  105,
   120
  ],
  "foco": 16,
@@ -68,7 +68,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 57251,
+ "cofre": 57101,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
@@ -543,6 +543,12 @@
    "valor": 100,
    "motivo": "520: o mercador de Levis paga o frasco de vdaek (a missão do Eiagrir)",
    "saldo": 57251
+  },
+  {
+   "dia": 521,
+   "valor": -150,
+   "motivo": "521: casca de salgueiro e sal para o remédio da febre da lã (RM21), Levis",
+   "saldo": 57101
   }
  ],
  "materiais": {
@@ -927,7 +933,6 @@
   }
  },
  "xp_log": [
-  "Dia 491: SOBE ao 15",
   "Dia 491: SOBE ao 16",
   "Dia 491: SOBE ao 17",
   "Dia 491: SOBE ao 18",
@@ -986,7 +991,8 @@
   "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)",
   "Dia 515: +1500 515: a casa vazia junto à muralha (CR15; três do Círculo, nível 50)",
   "Dia 517: +680 517: Bzuur (Raro 68; 1 caído(s))",
-  "Dia 520: +400 520: a missão do vdaek (o Bzuur, o frasco ao mercador)"
+  "Dia 520: +400 520: a missão do vdaek (o Bzuur, o frasco ao mercador)",
+  "Dia 521: +300 521: o remédio da febre da lã em Levis (RM21 ganho; uma cidade com doença)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

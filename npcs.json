@@ -7394,7 +7394,11 @@
   ],
   "fraqueza": "fora do campo, −1 em Persuasão.",
   "ultima_subida": 511,
-  "prova_pendente": "Incomum"
+  "prova_pendente": "Incomum",
+  "tracos": [
+   "ORGULHOSO",
+   "TEIMOSO"
+  ]
  },
  "Drassa": {
   "nivel": 36,
@@ -7438,7 +7442,11 @@
    "Arquivo (Passiva)"
   ],
   "fraqueza": "sem um cargo, perde o Papel.",
-  "ultima_subida": 469
+  "ultima_subida": 469,
+  "tracos": [
+   "COVARDE",
+   "LEAL"
+  ]
  },
  "Yeane": {
   "nivel": 51,
@@ -7507,7 +7515,11 @@
    "Arquivo (Passiva)"
   ],
   "fraqueza": "sem um cargo, perde o Papel.",
-  "ultima_subida": 511
+  "ultima_subida": 511,
+  "tracos": [
+   "CURIOSO",
+   "COVARDE"
+  ]
  },
  "Goir": {
   "nivel": 47,
@@ -7554,7 +7566,11 @@
    "Caminho (Passiva)"
   ],
   "fraqueza": "na cidade, perde tudo.",
-  "ultima_subida": 476
+  "ultima_subida": 476,
+  "tracos": [
+   "HONESTO",
+   "AVARENTO"
+  ]
  },
  "Nivis": {
   "nivel": 14,
@@ -8077,7 +8093,11 @@
    "+500 Tick 518: SURPRESA (gerador) (chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha)"
   ],
   "classe": "viajante (a gerar a classe em cena)",
-  "ocupacao": "chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha"
+  "ocupacao": "chegou a Farenta no 451; COVARDE e ORGULHOSO; quer CURAR A FILHA da febre de Farenta (YQ51 [1]); ambição: derrubar quem humilhou a família; medo: o fogo; (OCULTO) sabe de um crime de alguém importante; linha vermelha: nunca se ajoelha",
+  "tracos": [
+   "COVARDE",
+   "ORGULHOSO"
+  ]
  },
  "Dulassetta": {
   "nivel": 35,
@@ -8213,7 +8233,11 @@
    "+500 Tick 518: PASSO (fornecedor do Odrum em Ireviel (322); (revelado no 456) o homem dos CONSELHEIROS em Ireviel)"
   ],
   "classe": "Mercador (OURO, Comum) · CURIOSO e ORGULHOSO",
-  "ocupacao": "fornecedor do Odrum em Ireviel (322); (revelado no 456) o homem dos CONSELHEIROS em Ireviel"
+  "ocupacao": "fornecedor do Odrum em Ireviel (322); (revelado no 456) o homem dos CONSELHEIROS em Ireviel",
+  "tracos": [
+   "CURIOSO",
+   "ORGULHOSO"
+  ]
  },
  "Zolalletta": {
   "nivel": 38,
@@ -8228,7 +8252,11 @@
    "+500 Tick 511: SURPRESA (gerador) (embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz)"
   ],
   "classe": "Diplomata (VOZ) · GENEROSA e CRUEL",
-  "ocupacao": "embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz"
+  "ocupacao": "embaixadora de LUMADE em Ireviel desde o 457, em nome do CELOCUS: quer abrir já o túmulo das rainhas (o pacto do 371) com o rei e a Matriz",
+  "tracos": [
+   "GENEROSO",
+   "CRUEL"
+  ]
  },
  "Dubacco": {
   "nivel": 31,
@@ -8335,7 +8363,7 @@
    "507: rende-se ao rei com os seus (RN07 [[2],[19]] 42 vs 34)"
   ],
   "classe": "chefe dos Herdeiros da Primeira Liga (herdeiro de casa de mercador acusada pelo livro de sangue)",
-  "ocupacao": "PRESO DE NOVO (513), com oito dos herdeiros, numa estalagem da estrada do sul do vale de Lumade (PH11, RN13: renderam-se sem luta); levado a Lumade na noite do 514, amarrado; antes mandou um cavaleiro com o recado do livro à Liga (MS11)"
+  "ocupacao": "FORÇADO (520) nas MINAS DE CIMA DE LEVIS, nos piores trabalhos (G41), com os oito herdeiros da Primeira Liga; depois da terceira tentativa de fuga (cortou a corda na noite do 518); a palavra do rei: \"vão todos às minas pegar os piores trabalhos, para aprender\""
  },
  "Ioduxeth": {
   "nivel": 30,
@@ -8374,6 +8402,23 @@
    "Dia 520: entra no livro (nível 31)"
   ],
   "classe": "forçado fugido (guarda da Liga condenado no 434)",
-  "ocupacao": "FUGIU das minas de cima de Levis no 511 (G41 [2],[2]); pego pelo MORETH roubando pão da carroça na estrada do leste, noite do 518 (TD18 [4]); TEIMOSO e AMBICIOSO; desejo: nunca mais passar fome; ambição: derrubar quem humilhou a família; medo: voltar a ser escravo; segredo: um filho em outra cidade; linha vermelha: nunca vende o ofício barato; amarrado com os presos; a pena é do rei"
+  "ocupacao": "DA CASA (520), sob o MORETH (3b): o forçado fugido das minas de cima de Levis (511), pego roubando pão na estrada (518); sai da conta dos forçados; TEIMOSO e AMBICIOSO; desejo: nunca mais passar fome; medo: voltar a ser escravo",
+  "tracos": [
+   "TEIMOSO",
+   "AMBICIOSO"
+  ]
+ },
+ "Rigr": {
+  "nivel": 45,
+  "xp": 0,
+  "log": [
+   "Dia 520: entra no livro (nível 45)"
+  ],
+  "classe": "ladrão do Norte (gente da Leliel)",
+  "ocupacao": "PRESO (519): tentou levar a MATRIZ da carroça do rei na estrada do leste com um parceiro (morto pelo Moreth); uma moeda do Norte com a cara da Leliel no cinto; GENEROSO e TEIMOSO; desejo: uma casa própria; ambição: tomar o lugar do chefe; medo: a prisão; segredo: ama alguém proibido; linha vermelha: nunca machuca uma criança · 520: FALOU no interrogatório (IN20 ganho): a Liga do arsenal de Marasar, com moeda da Leliel; o terceiro no Remo Torto (fugiu ao norte, BR20); acredita, errado, num homem de dentro da Fornalha",
+  "tracos": [
+   "GENEROSO",
+   "TEIMOSO"
+  ]
  }
 }

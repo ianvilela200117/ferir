@@ -289,6 +289,11 @@ O dado já é duro. A G42 faz o mundo USAR o que tem contra a casa, e faz a vit�
 - **A lista dos grandes:** o Mestre mantém na 🧵 os inimigos conhecidos de 150+ que a casa pode encontrar. Hoje: **Meor** (275, o Círculo; vem na lua nova).
 - **A história épica:** a G42 segue. O inimigo grande vira servo só se o dado deixar; a luta com ele é a mais dura do bloco.
 
+### G45 — A HISTÓRIA COMO LIVRO (Dia 520, pedido do jogador: "quero que sua história tenha mais vida, como se eu estivesse lendo uma história num livro com vários personagens"; o jogador foi avisado)
+- A CENA vira **capítulo**, com vários pontos de vista, um elenco que volta e interlúdios sem o rei. As regras de como escrever estão no fim do `ESTILO_NARRATIVO.md` ("A história como livro").
+- **O que não muda:** o dado decide; nada oculto vaza, nem como cena de longe; o que Ferir sente é do jogador.
+- **Antes de escrever:** `tracos.py cena` para cada voz que fala, e o desejo e o medo de quem ganha ponto de vista.
+
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
 - **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.

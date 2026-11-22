@@ -1,16 +1,5 @@
 {
  "ordem": [
-  "CZ72",
-  "PL72",
-  "VB72",
-  "DN72",
-  "NC72",
-  "EN72",
-  "SD73",
-  "BV73",
-  "MV73",
-  "RI75",
-  "IS75",
   "476-laco-quem",
   "476-laco",
   "476-chamado",
@@ -399,520 +388,20 @@
   "ME20n",
   "RW20",
   "RW20n",
-  "TD18n"
+  "TD18n",
+  "LL20n",
+  "T1R",
+  "T2R",
+  "T3R",
+  "T4R",
+  "SR20",
+  "BR20",
+  "LG21",
+  "CL21",
+  "DL21",
+  "RM21d"
  ],
  "selos": {
-  "CZ72": {
-   "id": "CZ72",
-   "dia": 472,
-   "hora": "12:06:37",
-   "titulo": "A ESCOLA DO HERKALD ABRE (472) e OS DA CINZA procuram a casa (ameaçam ou sabotam)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "SABOTAM: fogo na bancada nova da escola na noite da abertura (a escola atrasa uma semana)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "a REPARAÇÃO pesa: os filhos de duas famílias da Cinza entram na escola; os da Cinza racham (força −1)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)",
-     "txt": "[4] → AMEAÇAM: a mão pintada na porta da escola; nenhum menino da Cinza vem (a escola abre vazia)"
-    }
-   ],
-   "hora_rolado": "12:06:37"
-  },
-  "PL72": {
-   "id": "PL72",
-   "dia": 472,
-   "hora": "12:39:55",
-   "titulo": "O QUE A SACERDOTISA TIRA (1a: a lembrança DOS PAIS do rei; ela a tira e ela não volta)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "TUDO: o rei sabe que teve pai e mãe e mais nada: nem rosto, nem voz, nem nome; a letra do pai (a senha de Iroule) vira letra de estranho"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 5,
-     "res": "A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "A MAIS QUERIDA, e ao segurá-la a sacerdotisa diz ao rei uma coisa que viu nela e que ele nunca soube do pai (um fio)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado",
-     "txt": "[5] → A MAIS QUERIDA: a cena que mais o fez quem ele é (a mesa a vê uma vez, quando sai); o resto fica, desbotado"
-    }
-   ],
-   "hora_rolado": "12:39:55"
-  },
-  "VB72": {
-   "id": "VB72",
-   "dia": 472,
-   "hora": "12:39:55",
-   "titulo": "(OCULTO) O QUE O VELHO DE NINNANE SABE (virou o rosto quando a sacerdotisa falou)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "ele PAGOU aqui, moço: trouxe a mulher para pedir ao rei afogado e deu uma lembrança; não sabe qual; voltou com o olho branco e chora sem saber por quê"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "ele é SANGUE DOS MERCADORES que traíram o rei (os fundadores da Liga): a sacerdotisa o reconhece, e ele não entra"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta",
-     "txt": "[5] → ele trouxe um homem há vinte anos, que pagou com a lembrança do filho e se afogou no brejo na volta"
-    }
-   ],
-   "hora_rolado": "12:39:55"
-  },
-  "DN72": {
-   "id": "DN72",
-   "dia": 472,
-   "hora": "12:39:55",
-   "titulo": "A NOITE EM DRAGAL (pago o preço, a sacerdotisa leva o grupo pela cidade afundada; o Erygal servo do Toque até a aurora)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "A CORTE AFOGADA levanta (a guarda do rei traído, morta-viva, que não sabe que a sacerdotisa deixou passar): a luta no salão (G9)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "A ÁGUA SOBE com a noite: o salão do rei só se abre na maré baixa da aurora; esperam numa torre seca (o Erygal cai na aurora, antes de entrarem)"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos",
-     "txt": "[5] → a sacerdotisa os leva DIRETO ao SALÃO DO REI pelas pontes de pedra, ainda de noite: o rei afogado sentado, o Martelo nas mãos"
-    }
-   ],
-   "hora_rolado": "12:39:55"
-  },
-  "NC72": {
-   "id": "NC72",
-   "dia": 472,
-   "hora": "12:39:55",
-   "titulo": "(OCULTO) O NÚCLEO DE DRAGAL (o que o último Rei-Ferreiro guardava com o Martelo; Atlas: 'guarda o Martelo do Rei e um núcleo'), a categoria",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "núcleo LENDÁRIO"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "núcleo MÍTICO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "núcleo LENDÁRIO",
-     "txt": "[2] → núcleo LENDÁRIO"
-    }
-   ],
-   "hora_rolado": "12:39:55"
-  },
-  "EN72": {
-   "id": "EN72",
-   "dia": 472,
-   "hora": "12:39:55",
-   "titulo": "(OCULTO) O NÚCLEO DE DRAGAL, a Essência (o rei que fez o Silêncio)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "METAL"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "FOGO"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 3,
-     "res": "TERRA"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 4,
-     "res": "ÁGUA (a cidade afundada)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "SILÊNCIO (a coberta)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "TEMPO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "SILÊNCIO (a coberta)",
-     "txt": "[5] → SILÊNCIO (a coberta)"
-    }
-   ],
-   "hora_rolado": "12:39:55"
-  },
-  "SD73": {
-   "id": "SD73",
-   "dia": 472,
-   "hora": "13:21:16",
-   "titulo": "A SACERDOTISA E A ORDEM DO HERDEIRO (2c: vir a Ireviel; ela queria dormir quando o Martelo saísse)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 3,
-     "res": "VEM, mas pede antes o rito do rei afogado (deitá-lo na forja fria e fechar o salão): a manhã do 473 se perde"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 6,
-     "res": "VEM na aurora, sem pedir nada; vai na barca do rei, coberta por um pano, de costas para o sol"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai",
-     "txt": "[1] → ELA NÃO PODE: fora de Dragal a morte a desfaz em pó (o rito a prende à cidade); ela fica sentada na água e dorme quando o rei sai"
-    }
-   ],
-   "hora_rolado": "13:21:16"
-  },
-  "BV73": {
-   "id": "BV73",
-   "dia": 472,
-   "hora": "13:21:16",
-   "titulo": "O BREJO NA VOLTA (473, de Dragal a Ninnane com o velho)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "uma SERPENTE-DO-BREJO (Raro, Veneno) sobe na barca do Gonde (a luta, G9)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 2,
-     "res": "o caminho se perde de novo (Ninnane só na manhã do 474: chega um dia depois)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "Ninnane ao entardecer do 473"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 5,
-     "res": "Ninnane ao entardecer do 473",
-     "txt": "[5] → Ninnane ao entardecer do 473"
-    }
-   ],
-   "hora_rolado": "13:21:16"
-  },
-  "MV73": {
-   "id": "MV73",
-   "dia": 472,
-   "hora": "13:21:16",
-   "titulo": "O BURACO DA LEMBRANÇA NO BREJO (a noite do 473 no brejo ou em Ninnane; o velho senta ao lado do rei; VB72: o homem que pulou)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 1,
-     "res": "de noite o rei levanta na barca dizendo que esqueceu uma coisa; o velho e o Gonde o seguram; as luzes frias acendem na água em volta até ele sentar"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 6,
-     "res": "nada; o rei dorme, e o velho não"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "nada; o rei dorme, e o velho não",
-     "txt": "[2] → nada; o rei dorme, e o velho não"
-    }
-   ],
-   "hora_rolado": "13:21:16"
-  },
-  "RI75": {
-   "id": "RI75",
-   "dia": 472,
-   "hora": "13:21:16",
-   "titulo": "DO DELTA A IREVIEL RIO ACIMA (as barcas leves dos salineiros; a galé está com a Isolda)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "o rio vem contra: chega a Ireviel na manhã do 477"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 6,
-     "res": "chega a Ireviel ao entardecer do 476"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "o rio vem contra: chega a Ireviel na manhã do 477",
-     "txt": "[2] → o rio vem contra: chega a Ireviel na manhã do 477"
-    }
-   ],
-   "hora_rolado": "13:21:16"
-  },
-  "IS75": {
-   "id": "IS75",
-   "dia": 472,
-   "hora": "13:21:16",
-   "titulo": "(OCULTO) A BUSCA DA ISOLDA NAS FUNDAS, PRIMEIRO DIA (475; a galé e metade do Croque; o corpo do Teraseth no fundo perto das Fundas, com a armadura do rei e o Croque do Rio; o Ssish dorme)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "nat",
-     "a": 1,
-     "res": "os BICHOS DA COLMEIA saem das Fundas e atacam a galé (a luta da Isolda, G9)"
-    },
-    {
-     "tipo": "num",
-     "a": 2,
-     "b": 4,
-     "res": "nada no fundo"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 5,
-     "res": "acham o BARCO AFUNDADO do Teraseth (o corpo está perto: +2 na busca de amanhã)"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "acham o CORPO"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      4
-     ],
-     "total": 4,
-     "res": "nada no fundo",
-     "txt": "[4] → nada no fundo"
-    }
-   ],
-   "hora_rolado": "13:21:16"
-  },
   "476-laco-quem": {
    "id": "476-laco-quem",
    "dia": 476,
@@ -20898,6 +20387,482 @@
     }
    ],
    "hora_rolado": "17:10:16"
+  },
+  "LL20n": {
+   "id": "LL20n",
+   "dia": 520,
+   "hora": "17:35:28",
+   "titulo": "O NÍVEL DO HOMEM DA LELIEL (o ladrão do Norte que tentou a Matriz; o gerador deu Drator, que bate em Draek e Drassa: RIGR, nomes.py montanhesa livre)",
+   "dado": [
+    1,
+    20,
+    40
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 41,
+     "b": 60,
+     "res": "o nível"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      5
+     ],
+     "total": 45,
+     "res": "o nível",
+     "txt": "[5] +40 = 45 → o nível"
+    }
+   ],
+   "hora_rolado": "17:35:28"
+  },
+  "T1R": {
+   "id": "T1R",
+   "dia": 520,
+   "hora": "17:35:52",
+   "titulo": "(OCULTO, a verdade lacrada antes do interrogatório) QUEM MANDOU O RIGR ATRÁS DA MATRIZ",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a LELIEL mesma, do Norte, por um homem de confiança dela"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "os conselheiros da LIGA que tomaram o arsenal de Marasar, pagos com moeda da Leliel"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "MESSA TIRACCI (a casa Tiracci, um dos selos do livro de sangue), em nome da Leliel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "os conselheiros da LIGA que tomaram o arsenal de Marasar, pagos com moeda da Leliel",
+     "txt": "[4] → os conselheiros da LIGA que tomaram o arsenal de Marasar, pagos com moeda da Leliel"
+    }
+   ],
+   "hora_rolado": "17:35:52"
+  },
+  "T2R": {
+   "id": "T2R",
+   "dia": 520,
+   "hora": "17:35:52",
+   "titulo": "(OCULTO) PARA QUE QUERIAM A MATRIZ",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "LEVÁ-LA AO NORTE (a Leliel quer o que forja o Mítico)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "QUEBRÁ-LA (sem a Matriz o rei-ferreiro não passa do Lendário)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "TROCÁ-LA PELO LIVRO DE SANGUE (a Liga quer o livro de volta)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "LEVÁ-LA AO NORTE (a Leliel quer o que forja o Mítico)",
+     "txt": "[1] → LEVÁ-LA AO NORTE (a Leliel quer o que forja o Mítico)"
+    }
+   ],
+   "hora_rolado": "17:35:52"
+  },
+  "T3R": {
+   "id": "T3R",
+   "dia": 520,
+   "hora": "17:35:52",
+   "titulo": "(OCULTO) QUEM MAIS ANDA COM ELES",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ninguém: eram os dois"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um TERCEIRO esperava com os cavalos a meio dia e está em LEVIS agora, numa estalagem do cais"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "um BANDO espera a casa em IREVIEL, no cais (o golpe seguinte)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "um TERCEIRO esperava com os cavalos a meio dia e está em LEVIS agora, numa estalagem do cais",
+     "txt": "[3] → um TERCEIRO esperava com os cavalos a meio dia e está em LEVIS agora, numa estalagem do cais"
+    }
+   ],
+   "hora_rolado": "17:35:52"
+  },
+  "T4R": {
+   "id": "T4R",
+   "dia": 520,
+   "hora": "17:35:52",
+   "titulo": "(OCULTO) COMO SOUBERAM POR ONDE A CASA VOLTAVA",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "um INFILTRADO em Ireviel mandou dizer que a Matriz saiu da Fornalha com o rei"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "o CÍRCULO VENDEU À LELIEL AS CARTAS DO REI tomadas ao cavaleiro morto"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "o CÍRCULO VENDEU À LELIEL AS CARTAS DO REI tomadas ao cavaleiro morto",
+     "txt": "[4] → o CÍRCULO VENDEU À LELIEL AS CARTAS DO REI tomadas ao cavaleiro morto"
+    }
+   ],
+   "hora_rolado": "17:35:52"
+  },
+  "SR20": {
+   "id": "SR20",
+   "dia": 520,
+   "hora": "17:36:40",
+   "titulo": "A SURPRESA RUIM DO SABER DO RIGR (a falha feia: 'o barulho atrai algo'; noite do 520, o porão da casa da Brara em Levis, com a cidade com fome)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "GENTE COM FOME à porta da Brara: ouviram que o rei está ali e vieram pedir pão (umas cinquenta pessoas; a Ordem treme)"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "UM MENINO escutando na grade do porão: corre antes que o peguem (é dos da Mina Fechada)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O TERCEIRO DA LELIEL veio rondar a casa da Brara para saber do parceiro, e a guarda o vê"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "UM MENINO escutando na grade do porão: corre antes que o peguem (é dos da Mina Fechada)",
+     "txt": "[4] → UM MENINO escutando na grade do porão: corre antes que o peguem (é dos da Mina Fechada)"
+    }
+   ],
+   "hora_rolado": "17:36:40"
+  },
+  "BR20": {
+   "id": "BR20",
+   "dia": 520,
+   "hora": "17:36:40",
+   "titulo": "A BRARA MANDA A GUARDA DELA À ESTALAGEM DO REMO TORTO, NO CAIS, NA MESMA NOITE (a Brara: TEIMOSA, HONESTA, CORAJOSA; é a cidade dela; o terceiro da Leliel, de chapéu de feltro verde, espera até o 522) · −2 se a surpresa acima deu 6 (ele já está na rua)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ELE SUMIU: viu a guarda no cais e fugiu a cavalo para o norte"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "PRESO DEPOIS DE BRIGA: um guarda da Brara ferido na escada"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "PRESO DORMINDO, com os cavalos e um bilhete"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "ELE SUMIU: viu a guarda no cais e fugiu a cavalo para o norte",
+     "txt": "[2] → ELE SUMIU: viu a guarda no cais e fugiu a cavalo para o norte"
+    }
+   ],
+   "hora_rolado": "17:36:40"
+  },
+  "LG21": {
+   "id": "LG21",
+   "dia": 521,
+   "hora": "17:36:57",
+   "titulo": "(OCULTO) A GENTE DA LIGA CHEGA A LUMADE ATRÁS DO LIVRO (#1096) e acha a casa do rei saída há cinco dias, com o livro; o Celocus na cidade",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "SEGUEM a casa pela estrada do leste, até Levis e o rio (chegam a Levis por volta do 526, e a Ireviel depois)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "APERTAM O CELOCUS: querem saber do livro; o Celocus os põe para fora (o Celocus contra a Liga)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "VOLTAM A MARASAR e mandam dizer à Leliel que o livro vai para Ireviel"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "APERTAM O CELOCUS: querem saber do livro; o Celocus os põe para fora (o Celocus contra a Liga)",
+     "txt": "[3] → APERTAM O CELOCUS: querem saber do livro; o Celocus os põe para fora (o Celocus contra a Liga)"
+    }
+   ],
+   "hora_rolado": "17:36:57"
+  },
+  "CL21": {
+   "id": "CL21",
+   "dia": 521,
+   "hora": "17:36:57",
+   "titulo": "(OCULTO, a verdade antes da busca) QUEM ROUBOU O CELEIRO DE LEVIS (o tick 518: furto grande; Levis com fome; o pão a 188)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "os da MINA FECHADA (amigos da casa): o grão foi para as famílias dos mineiros, que passam fome primeiro"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "um MERCADOR DE GRÃO de Levis, que escondeu o grão para vender a 188"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "gente da LIGA, para Levis cair de fome com o rei longe"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um MERCADOR DE GRÃO de Levis, que escondeu o grão para vender a 188",
+     "txt": "[4] → um MERCADOR DE GRÃO de Levis, que escondeu o grão para vender a 188"
+    }
+   ],
+   "hora_rolado": "17:36:57"
+  },
+  "DL21": {
+   "id": "DL21",
+   "dia": 521,
+   "hora": "17:36:57",
+   "titulo": "(OCULTO, a verdade antes do exame) A DOENÇA DA CIDADE BAIXA DE LEVIS (o tick 518: surto; chegaram imigrantes)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "a FEBRE CINZA de volta (a casa tem o remédio desde o 245)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "uma FEBRE NOVA que veio com a gente de fora (o Purificar cura um por vez; o remédio por fazer)"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 6,
+     "res": "a FEBRE DO PÓ das minas de cima, que desceu com os mineiros (a G41: os forçados lá em cima; o pó mata devagar)"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "uma FEBRE NOVA que veio com a gente de fora (o Purificar cura um por vez; o remédio por fazer)",
+     "txt": "[4] → uma FEBRE NOVA que veio com a gente de fora (o Purificar cura um por vez; o remédio por fazer)"
+    }
+   ],
+   "hora_rolado": "17:36:57"
+  },
+  "RM21d": {
+   "id": "RM21d",
+   "dia": 521,
+   "hora": "17:37:42",
+   "titulo": "QUANTAS DOSES DO REMÉDIO DA FEBRE DA LÃ (RM21 ganho), 1d6 × 20",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "× 20 doses"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "× 20 doses",
+     "txt": "[2] → × 20 doses"
+    }
+   ],
+   "hora_rolado": "17:37:42"
   }
  }
 }

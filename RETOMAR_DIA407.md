@@ -1,4 +1,4 @@
-# RETOMAR — tarde do Dia 520, LEVIS: a volta ao reino; o Nutoccone pego na corda; a Matriz tentada pela Leliel (MOTOR 9b: G1 a G44)
+# RETOMAR — noite do Dia 521, LEVIS: o grão do Ducirzino; a febre da lã; o plano da Brara (MOTOR 9b: G1 a G45)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 521, LEVIS, a casa da Brara. O rei NÍVEL 53 (XP 141.520; o 54 em 143.200), PV 275/275, Mana 105/120 (o Purificar com vela na panela, 15, como no 515), Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6. A casa: o Moreth 235, o Eiagrir 132, a ELIANE de pé (de bengala), o Gonde e 2, os 4 feridos, o TONDUNN (31, da casa, sob o Moreth). A carroça: a Matriz, o Martelo, o livro de sangue, a carta do conselho, os núcleos Épicos de Sorte e de Veneno, 20 doses do remédio do poço, vdaek ~1,75, nytheion 10. PRESOS: onze do Círculo (o Lior, o carvoeiro) e o RIGR (45; falou). OS NOVE DA LIGA NAS MINAS (139 forçados). LEVIS: Comida 0/4 (a ordem do grão: Comida +1 até o 534; o grão do DUCIRZINO achado no porão dele, no cais), Comércio 2, Dinheiro 0, Saúde 4, Ordem 4, Defesa 4; a FEBRE DA LÃ com remédio (40 doses, a receita com os curandeiros). A BRARA pediu para ir embora de Levis quando a cidade estiver de pé. A barca a Ireviel: sai no 522, chega por volta do 524. Esperam em Ireviel: o conselho (a petição do Porto, 5c), a torre velha dos Olhos Pintados (4a), o cais, o 'homem de dentro da Fornalha' (o Rigr acredita; (OCULTO) é FALSO: o Círculo vendeu as cartas à Leliel, T4R). (OCULTO) a Liga em Lumade foi posta para fora pelo Celocus (LG21) · MEOR (281) perto de Ireviel no 534 (#1134; G44) · a notícia de Lumade no 530 (#1135). Cofre 57.101.
+
+Antes (520, a chegada a Levis):
 Tarde do 520, LEVIS. O rei NÍVEL 53 (XP 141.220; o 54 em 143.200), PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6. O Moreth 235, o Eiagrir 132, a ELIANE de pé, o Gonde e 2, os 4 feridos, os quatro cavaleiros do Celocus (voltam a Lumade daqui). A carroça: a MATRIZ (tentada pela Leliel no 519), o Martelo, o livro de sangue, a carta do conselho, os núcleos Épicos de Sorte e de Veneno, 20 doses, vdaek ~1,75 kg, nytheion 10. VINTE E DOIS PRESOS: o NUTOCCONE e oito (ele e dois CORTARAM A CORDA na noite do 518, pegos na corda: a palavra do rei 'não prendo vivos a terceira vez' espera o rei), onze do Círculo (o Lior, o carvoeiro), O HOMEM DA LELIEL (moeda do Norte; calado), o TONDUNN (31; forçado fugido; o Moreth inclina pela misericórdia, tracos B+3). LEVIS: Comida 0/4 (a ORDEM DO GRÃO dada: 1.500, Comida +1 até o 534), o celeiro roubado, Dinheiro 0/4, doença na cidade baixa. O vdaek era da ALMISION. As ordens perdidas com o cavaleiro (a torre velha, 4a; a petição, 5c) seguem com o rei. A barca a Ireviel: 3 dias. (OCULTO) MEOR (281) vira para IREVIEL: perto no 534 (#1134; G44) · a notícia de Lumade no 530 (#1135) · 521 a Liga em Lumade (#1096). Cofre 57.251.
 
 Antes (517, as gargantas):
@@ -512,11 +515,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (517 → 520): 1a lutar com o bicho · 'quando eu tiver oportunidade de tornar servo um cara de level alto, avise; quero dificuldade boa e história épica' (a G44)
 - a luta: o Toque, rodada 1 (o Bzuur morto; servo até a aurora) · VD17 2 kg · o tick 518 · GD18 o yorasar perdido · TD18 o Tondunn · PN18 o Nutoccone na corda · CB18 a Leliel na Matriz (um morto, um preso) · a ordem do grão em Levis (1.500) · RW20 a Almision · ME20 (oculto).
 
+## RESPONDIDO (520 → 521): 1 'vão todos às minas pegar os piores trabalhos para aprender' (os nove da Liga) · 2 'tirar toda informação possível' (o Rigr) · 3b o Tondunn com o Moreth · 4a ficar um dia · 'planejar com a Brara tudo o que a cidade precisa' · 'quero que sua história tenha mais vida, como se eu estivesse lendo um livro com vários personagens' (a G45)
+- CM20 o Rigr resiste · IN20 ganho (ele fala; a falha feia no 4º: a crença errada do homem de dentro) · BR20 o terceiro fugiu · CL21/SB o grão do Ducirzino · DL21/SB extraordinário a febre da lã · RM21 ganho (40 doses) · LG21 (oculto).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O NUTOCCONE E OS DOIS (cortaram a corda na noite do 518; pegos na corda; a palavra do rei: 'não vou prender vivos a terceira vez'): a) cumprir a palavra: morte, aqui em Levis · b) não chegaram a fugir: seguem ao julgamento em Ireviel (3c) · c) outra.
-2. O HOMEM DA LELIEL (tentou levar a Matriz; calado; uma moeda do Norte): a) interrogar já · b) ao conselho em Ireviel · c) outra.
-3. O TONDUNN (forçado fugido das minas de cima; o Moreth tem pena dele): a) de volta às minas (G41) · b) servir à casa, sob o Moreth · c) outra.
-4. LEVIS (a fome com o grão a caminho; o celeiro roubado; a doença na cidade baixa): a) o rei fica um dia: o roubo e a doença · b) a barca para Ireviel amanhã (chega por volta do 523).
+1. O DUCIRZINO (escondeu o grão de Levis para vender a 188): a) tomar o grão para o povo e ele às minas (G41) · b) tomar o grão e uma multa grande · c) enforcar na praça do cais (exemplo) · d) outra.
+2. O PLANO DA BRARA (escolher quantas; os preços já com o desconto dos forçados, G6): a) CELEIRO DE PEDRA COM GUARDA: Comida +1 de vez · 1.920 · 14 dias · b) POSTOS NA ESTRADA DE LUMADE (os trolls; o pacto de forja passa por Levis): Comércio +1 de vez · 1.600 · 21 dias · c) CARVÃO PARA A FUNDIÇÃO VELHA (a pedra que a Brara mais empurra): Dinheiro +1 de vez · 1.440 · 14 dias · d) A CASA DOS DE FORA (abrigo e trabalho para os imigrantes): Dinheiro +1 por 4 semanas e a Ordem firme · 900 · 7 dias.
+3. O PEDIDO DA BRARA ('quando Levis estiver de pé, eu queria ir embora daqui'): a) prometer, com um prazo · b) 'Levis precisa de você' · c) perguntar para onde ela quer ir.
+4. O RIGR (falou; acredita que alguém de dentro da Fornalha avisou a Leliel): a) às minas (G41) · b) a Ireviel, ao conselho · c) outra · e dizer: procurar o 'homem de dentro' ao chegar a Ireviel?
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.
