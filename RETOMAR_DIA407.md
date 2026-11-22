@@ -429,6 +429,8 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 - CK4, CK5, CK6: nada · AR5n ganho (o teto calçado) · NG07 FALHA → 600 em ouro (OF07).
 
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
+> **JOGO PARADO NO 507 (pedido do jogador):** ele respondeu '1b, prendam ou matem, daqui eles não saem' e INTERROMPEU antes de qualquer dado; em seguida pediu uma REVISÃO GRANDE DO MOTOR (ver `REVISAO_MOTOR10.md`) e pensa em recomeçar. O 1b NÃO foi rolado. Antes de rolar qualquer coisa: perguntar se ele segue este save (e se o 1b vale) ou recomeça.
+
 1. A OFERTA DO NUTOCCONE (600 em ouro pelo livro queimado diante deles): a) recusar e mandar que saiam pela galeria de Rilge (vai ao dado: estão desconfiados) · b) prendê-los ('mortos, presos ou servindo'; duas dúzias, força 4; se resistirem, luta pela G9) · c) aceitar (o livro queima diante deles; os 600 são deles, fora da contagem do Celocus) · d) gastar 1 Fortuna e apertar de novo (a barganha rola outra vez; Revés 4 → 5) · e) abrir o coração com eles ali e decidir depois (o guardião está dentro) · f) outra.
 
 ## Regras do jogador em vigor

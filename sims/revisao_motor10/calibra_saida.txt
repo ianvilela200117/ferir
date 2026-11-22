@@ -1,0 +1,31 @@
+fichas pela conta do Livro:
+  nível 60 com Mítico (rende Lendário)   ataque +36 · Defesa 38 · RD 25 · PV 200 · 1d10 × 25 + 10
+  nível 60 com Mítico INTEIRO            ataque +46 · Defesa 48 · RD 50 · PV 200 · 1d10 × 100 + 10
+  nível 90 com Mítico (rende Lendário)   ataque +38 · Defesa 40 · RD 25 · PV 260 · 1d10 × 25 + 12
+  nível 275 com Comum                    ataque +29 · Defesa 29 · RD 0 · PV 670 · 1d10 × 1 + 19
+  nível 275 com Raro                     ataque +33 · Defesa 33 · RD 3 · PV 670 · 1d10 × 2.5 + 19
+  nível 275 com Épico                    ataque +37 · Defesa 37 · RD 6 · PV 670 · 1d10 × 5 + 19
+  nível 275 com Único                    ataque +42 · Defesa 42 · RD 12 · PV 670 · 1d10 × 10 + 19
+  nível 275 com Lendário                 ataque +47 · Defesa 47 · RD 25 · PV 670 · 1d10 × 25 + 19
+
+DUELO (vitória do PRIMEIRO)                                      motor de hoje     protótipo
+nível 60 Mítico × nível 275 COMUM                                     7% ( 2 r)     100% ( 5 r)
+nível 60 Mítico × nível 275 RARO                                      1% ( 1 r)      98% ( 5 r)
+nível 60 Mítico × nível 275 ÉPICO                                     0% ( 1 r)      78% ( 6 r)
+nível 60 Mítico × nível 275 ÚNICO                                     0% ( 1 r)       0% ( 1 r)
+nível 60 Mítico × nível 275 LENDÁRIO                                  0% ( 1 r)       0% ( 1 r)
+nível 60 Mítico INTEIRO (sob medida) × nível 275 ÚNICO               24% ( 1 r)      82% ( 2 r)
+nível 60 Mítico INTEIRO (sob medida) × nível 275 LENDÁRIO             5% ( 1 r)       6% ( 1 r)
+IGUAIS NA ARMA (Épico): nível 70 × nível 80                          41% ( 3 r)      38% ( 6 r)
+IGUAIS NA ARMA (Épico): nível 70 × nível 95                          18% ( 3 r)      16% ( 6 r)
+IGUAIS NA ARMA (Épico): nível 70 × nível 120                          0% ( 2 r)       0% ( 2 r)
+UMA categoria: nível 60 Único × nível 120 Épico                       9% ( 2 r)       3% ( 3 r)
+DUAS categorias: nível 60 Único × nível 120 Raro                     52% ( 3 r)      99% ( 5 r)
+
+UM CONTRA A GUILDA (vitória do sozinho)                          motor de hoje     protótipo
+nível 90 Mítico × nível 275 RARO (contra 3)                           0% ( 1 r)      41% (11 r)
+nível 90 Mítico × nível 275 RARO (contra 10)                          0% ( 1 r)       0% ( 4 r)
+nível 90 Mítico INTEIRO × nível 275 RARO (contra 3)                  20% ( 2 r)      98% ( 5 r)
+nível 90 Mítico INTEIRO × nível 275 RARO (contra 10)                  0% ( 1 r)       1% ( 5 r)
+nível 90 Mítico INTEIRO × nível 275 ÉPICO (contra 3)                  3% ( 1 r)      78% ( 5 r)
+nível 90 Mítico INTEIRO × nível 275 ÉPICO (contra 10)                 0% ( 1 r)       0% ( 2 r)

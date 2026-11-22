@@ -1,0 +1,22 @@
+=== 1. SENSIBILIDADE: o mesmo guerreiro (a ficha típica do save no nível 95: +24, Defesa 32, RD 6, PV 230, 1d10 × 2,5 + 8) contra ele mesmo, mudando UMA coisa ===
+  nada (controle)                                                                vence  51% · 5 rodada(s)
+  SÓ o número do nível: 95 → 275 (ataque, Defesa, PV e arma iguais)              vence 100% · 2 rodada(s)
+  SÓ o número do nível: 95 → 180                                                 vence  99% · 2 rodada(s)
+  a arma como as fichas do save tratam o MÍTICO: × 2,5 → × 3                     vence  57% · 5 rodada(s)
+  a armadura como as fichas tratam o MÍTICO: RD 6 → 8                            vence  54% · 6 rodada(s)
+  arma E armadura Míticas pelas fichas (× 3, RD 8, +4 ataque, +2 Defesa)         vence  87% · 5 rodada(s)
+  a arma LENDÁRIA pela tabela do Livro: × 25                                     vence  97% · 2 rodada(s)
+  a armadura LENDÁRIA pela tabela do Livro: RD 25                                vence  89% · 6 rodada(s)
+
+=== 2. O DUELO DO OVERGEARED: nível 60 MUITO BEM ARMADO contra nível 275 MAL ARMADO ===
+  (a) pelas fichas como o save as monta:            o nível 60 bem armado vence   0% · 1 rodada(s)
+  (b) pela tabela do Livro, no luta.py de hoje:      o nível 60 bem armado vence   2% · 1 rodada(s)
+  (c) idem, com as ações do Livro (1 + nível ÷ 100): o nível 60 bem armado vence   2% · 2 rodada(s)
+
+=== 3. UMA GUILDA: dez de nível 275 mal armados (fichas do save) contra UM nível 90 com Mítico ===
+  pelas fichas do save · contra  1: o bem armado vence   0% · 1 rodada(s)
+  pelas fichas do save · contra  3: o bem armado vence   0% · 1 rodada(s)
+  pelas fichas do save · contra 10: o bem armado vence   0% · 1 rodada(s)
+  pela tabela do Livro · contra  1: o bem armado vence  29% · 2 rodada(s)
+  pela tabela do Livro · contra  3: o bem armado vence   0% · 1 rodada(s)
+  pela tabela do Livro · contra 10: o bem armado vence   0% · 1 rodada(s)
