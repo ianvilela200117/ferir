@@ -279,6 +279,16 @@ O dado já é duro. A G42 faz o mundo USAR o que tem contra a casa, e faz a vit�
 - **O custo:** o mercado da semana pesa. Com o índice do grão acima de 150 naquela cidade, as duas semanas custam 1.500.
 - **A ordem viaja.** Ela só vale onde chegou: por carta, por enviado, ou pela boca do rei.
 
+### G44 — O AVISO DO SERVO (Dia 517, pedido do jogador: "quando eu tiver oportunidade de tornar servo um cara de level alto, avise; quero algo com uma dificuldade boa e história épica"; o jogador foi avisado)
+- **O corte do jogador:** servo vale a pena de **nível 150 para cima** (a palavra do 472: "só se ele for maior que 150"). Abaixo disso, o Mestre só põe uma linha curta.
+- **Quando avisar** (na linha 🛠️ e numa linha ⚠️ SERVO no topo do turno, com o custo):
+  - antes da luta com alguém de 150+ (na conferência da G9): o servo do TOQUE pede que o **Toque do Ceifador dê o golpe que derruba**;
+  - quando alguém de 150+ cai e o corpo está ali: a **Receita do Servo Armado** (o núcleo, a palavra, o nome; antes da aurora, se for servo do Toque) e o **Prender a Alma** (até 1 hora; a Arma Viva);
+  - quando um preso de 150+ vai morrer pela mão da casa (julgamento ou execução).
+- **O que o aviso diz:** o nível que o servo teria (metade; 3/4 se aceitar; inteiro com núcleo Mítico), o teto de servos (1 a cada 50 níveis do rei: hoje **1**) e o preço por aurora (G23 d).
+- **A lista dos grandes:** o Mestre mantém na 🧵 os inimigos conhecidos de 150+ que a casa pode encontrar. Hoje: **Meor** (275, o Círculo; vem na lua nova).
+- **A história épica:** a G42 segue. O inimigo grande vira servo só se o dado deixar; a luta com ele é a mais dura do bloco.
+
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
 - **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.

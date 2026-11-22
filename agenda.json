@@ -1,5 +1,5 @@
 {
- "prox_id": 1105,
+ "prox_id": 1136,
  "itens": [
   {
    "id": 1,
@@ -15640,7 +15640,7 @@
    "oculto": true,
    "para": true,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -15651,7 +15651,7 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -15714,6 +15714,455 @@
    "id": 1104,
    "dia": 520,
    "texto": "(OCULTO até a casa saber) NO GOLPE DE MEOR, o CÍRCULO LEVA A CURANDEIRA DE LUMADE (a receita do remédio; G42 RV13 [1], RV13e [5])",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": true,
+   "toca": true
+  },
+  {
+   "id": 1105,
+   "dia": 520,
+   "texto": "MONSTRO NOVO OU MIGRAÇÃO — Ulra (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 518",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1106,
+   "dia": 518,
+   "texto": "SURPRESA: o gerador de novidade — Levis e Levis-baixa",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1107,
+   "dia": 518,
+   "texto": "Leliel (o norte (fugida de Farenta no 356, com as duas peças e os conselheiros)): funda ou compra algo (uma casa, uma ordem, uma cidade pequena)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    13,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1108,
+   "dia": 518,
+   "texto": "Stundald, a Raiz-de-Ferro (Épico, Telosus): cria: aparecem crias (1d6) perto do habitat",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    1,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 1109,
+   "dia": 524,
+   "texto": "Maneus, o Afogado do Vento (Lendário, Telosus): atrai monstros menores ao redor (o lugar fica perigoso)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1110,
+   "dia": 518,
+   "texto": "Quneus, o Caçador de Gigantes (Lendário, Marasar): briga com outro monstro grande (um sai ferido)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1111,
+   "dia": 523,
+   "texto": "Ithvil (Mítico, Levis): SURPRESA: gerador de novidade ligado a ele",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
+  },
+  {
+   "id": 1112,
+   "dia": 518,
+   "texto": "Fenron (Épico, Steunn): aparece de dia, à vista de muitos (pânico e notícia certa)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    19,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1113,
+   "dia": 519,
+   "texto": "Laennor, o Redemoinho (Raro, Zisrir): persegue uma caravana ou barca por dias",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    7,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1114,
+   "dia": 518,
+   "texto": "Thargos (Mítico, as Fundas do Norte): dorme fundo (some por 1d4 semanas)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1115,
+   "dia": 518,
+   "texto": "Varogh (Lendário, Steunn): muda de comportamento (fica mais manso ou mais faminto)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    12,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1116,
+   "dia": 518,
+   "texto": "Bruur (Épico, Marasar): migra 1 região (rola para onde)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    11,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1117,
+   "dia": 518,
+   "texto": "Krothos (Lendário, as Fundas do Norte): fica ferido (alguém o caçou e quase conseguiu)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 1118,
+   "dia": 521,
+   "texto": "Ssish, o Colosso da Colmeia (Primordial, Ireviel e o rio): é caçado por alguém (uma companhia, um Lendário, um culto)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    19,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1119,
+   "dia": 519,
+   "texto": "os Thog (orcs) (Marasar): acha algo nas ruínas ou minas (material, núcleo, relíquia)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    18,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1120,
+   "dia": 523,
+   "texto": "os Grukos (ogros) (a Mata de Elais): acha algo nas ruínas ou minas (material, núcleo, relíquia)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    19,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1121,
+   "dia": 520,
+   "texto": "os Vrurn (trolls) (Yaelane): pegam prisioneiros humanos (resgate ou escravos)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1122,
+   "dia": 519,
+   "texto": "os Vradda (homens-lagarto) (Gogrunn): um deles vira herói ou traidor (rumor com nome)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1123,
+   "dia": 518,
+   "texto": "os Kraek (harpias) (Telosus): SURPRESA: gerador de novidade ligado a eles",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo_vivo.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    10,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1124,
+   "dia": 519,
+   "texto": "FACÇÃO — os Jurados de Steunn (Steunn, em volta do Lumdun) pede audiência ao conselho. O que querem: os clãs de cima juram pelo herdeiro perdido dos Steunn",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 1125,
+   "dia": 518,
+   "texto": "os Filhos da Brecha (Marasar): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1126,
+   "dia": 521,
+   "texto": "os Filhos do Livro (Ireviel): briga com os do Croque; vence os Filhos do Livro",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1127,
+   "dia": 520,
+   "texto": "os da Mina Fechada (Levis): dá um passo no que quer",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    9,
+    "INCOMPLETA: falta quem fez ou onde foi"
+   ]
+  },
+  {
+   "id": 1128,
+   "dia": 519,
+   "texto": "FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)",
+   "tipo": "marco",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 1129,
+   "dia": 520,
+   "texto": "os Rendidos de Marasar (o Porto de Marasar e o cais de Ireviel): RACHA: perde gente → força 5",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "faccoes.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1130,
+   "dia": 518,
+   "texto": "a Torre dos Sete Véus (Yaelane): guerra contra a Ordem da Tocha Branca; vence a Ordem da Tocha Branca",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py, tick 518",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    17,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1131,
+   "dia": 522,
+   "texto": "a Ordem da Tocha Branca (Telosus): caçou Maneus, o Afogado do Vento e perdeu",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "guildas.py, tick 518",
+   "feito": false,
+   "toca": true,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1132,
+   "dia": 522,
+   "texto": "UM LENDÁRIO AGE: desaparece — Shizess (as caravanas)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 519",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    16,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1133,
+   "dia": 522,
+   "texto": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Ulra (terra nova)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 520",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    15,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1134,
+   "dia": 534,
+   "texto": "(OCULTO até o dia) MEOR (281, o Círculo da Areia Cantante) CHEGA PERTO DE IREVIEL com a guilda, atrás do rei, do coração do Tkorna e do livro (ME20 [6], ME20i [4]+10); o que faz: rolar no dia (G44: um inimigo de 150+: o aviso do servo vale)",
+   "tipo": "marco",
+   "oculto": true,
+   "para": true,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
+  },
+  {
+   "id": 1135,
+   "dia": 530,
+   "texto": "(OCULTO até chegar) A NOTÍCIA DE LUMADE CHEGA AO REI (ME20n [5]+5): na lua nova o Círculo NÃO atacou a cidade; levou a CURANDEIRA (a receita do remédio) e sumiu da beira de Lumade; o Celocus manda dizer que 'os túneis seguem tapados'",
    "tipo": "marco",
    "oculto": true,
    "para": false,

@@ -2585,3 +2585,46 @@ No fundo de uma garganta seca, onde o rio já não passa, havia uma coisa verde 
 A coisa dormia. A cada respiração dela, a pedra tremia.
 
 - **Parada:** meio-dia do 517, as gargantas. O bicho dorme em cima do vdaek. Antes de qualquer luta, a palavra do rei (G9).
+
+## Dias 517 a 520 — o Toque nas gargantas, as noites da estrada, Levis com fome (as respostas: 1a lutar; e o pedido: avisar do servo de nível alto, a G44)
+- **Rolagens:** a luta (sims/gargantas_517_saida.txt): o Toque do Ceifador [13, 4]+34 = 51 contra 47, 1.695 de dano: o Bzuur cai na rodada 1 · VD17 [4] · VT17 [1] · PN17 [6] · o tick semanal do 518 · GD18 [3] · TD18 [4], TD18n 31 · CB18 [2], CB18w [6], CB18r [2] · PN18 [1], PN18w [3], PN18x [4] · EN19 [5] · PN19 [2] · RW20 [6], RW20n [6] · CB18g e ME20 (rolagens ocultas).
+
+### As gargantas, 517
+O rei chegou a três passos da coisa. Ela respirava, e a pedra tremia.
+
+O Foco de Osso esfriou na mão dele antes do golpe. Quando o Toque entrou, a planta inteira se encolheu de uma vez, como folha no fogo, e não respirou mais.
+
+Um pouco depois, ela se desenrolou devagar e ficou de pé, verde e escura, esperando.
+
+Levantaram a asa cinzenta e rasparam da pedra o sangue velho, duro como resina. Encheram dois quilos.
+
+Naquela noite, o bicho ficou de pé ao lado das cordas dos presos, sem dormir e sem fazer barulho. Ninguém tentou nada.
+
+Na aurora ele caiu como uma árvore cortada.
+
+### A estrada, 518
+Um saco caiu no vau quando a carroça balançou. Era o osso do bicho. O Gonde entrou na água até o peito e não achou.
+
+De noite, o Nutoccone e dois dos seus cortaram a corda com uma pedra afiada. A vigia os pegou com as mãos ainda nos nós.
+
+Mais tarde, um homem magro, de pés enrolados em pano, chegou à carroça para roubar pão. O Moreth o segurou pelo braço. O homem tinha nas costas as marcas das minas de cima de Levis.
+
+"Fugi", disse. "Na lua passada. Não vou voltar."
+
+O Moreth ficou olhando as marcas um tempo. Ele também tinha as dele, da galé.
+
+### A estrada, 519
+Na segunda noite, dois homens entraram no acampamento sem fazer barulho e foram direto à carroça da Matriz.
+
+O Moreth dormia ao lado da roda. Acordou com a lona se mexendo.
+
+Um morreu ali mesmo. O outro ficou amarrado até de manhã, sem falar. Tinha no cinto uma moeda do Norte, com a cara da Leliel.
+
+### Levis, 520
+Levis estava cinzenta e com fome. O pão custava o dobro, o celeiro tinha sido roubado, e numa rua da cidade baixa havia gente de cama.
+
+A Brara ouviu do rei a ordem do grão e mandou comprar no mesmo dia.
+
+No mercado, o homem que queria o vdaek pagou o frasco e, para ficar bem com o rei, contou quem o tinha encomendado: a Almision.
+
+- **Parada:** tarde do 520, Levis. Vinte e dois presos. A Matriz inteira. A barca para Ireviel espera a palavra do rei.

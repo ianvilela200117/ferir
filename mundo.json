@@ -4119,6 +4119,63 @@
    "chegada": "[5] em 1d6 [6] dias",
    "resumo": "UM CULTO CRESCE ou nasce — Gogrunn (as minas) (Culto da Kreine)",
    "toca": false
+  },
+  {
+   "dia": 518,
+   "d20": 5,
+   "o_que": "MONSTRO NOVO OU MIGRAÇÃO",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 520,
+   "chegada": "[2] em 1d3 [2] dias",
+   "resumo": "MONSTRO NOVO OU MIGRAÇÃO — Ulra (terra nova)",
+   "toca": false
+  },
+  {
+   "dia": 518,
+   "d20": 9,
+   "o_que": "INVENÇÃO OU TÉCNICA NOVA (oficina, magia, guerra, plantio): alguém aprendeu algo que pode ser comprado ou roubado",
+   "onde": "d27 [18] a costa (Ireviel–Marasar)",
+   "detalhe": "",
+   "noticia_chega": null,
+   "chegada": "[6] não chega sozinha (só se alguém for atrás)",
+   "resumo": "INVENÇÃO OU TÉCNICA NOVA: alguém aprendeu algo que pode ser comprado ou roubado — a costa (Ireviel–Marasar)",
+   "toca": true
+  },
+  {
+   "dia": 518,
+   "d20": 20,
+   "o_que": "SURPRESA: o gerador de novidade",
+   "onde": "d27 [2] Levis e Levis-baixa",
+   "detalhe": "1d12 [5] um lugar novo é descoberto (gerar lugar)",
+   "noticia_chega": 518,
+   "chegada": "[1] hoje",
+   "resumo": "SURPRESA: o gerador de novidade — Levis e Levis-baixa",
+   "toca": true
+  },
+  {
+   "dia": 519,
+   "d20": 3,
+   "o_que": "UM LENDÁRIO AGE (1d6: 1 morre · 2 aparece um novo · 3 ataca · 4 desaparece · 5 procura um ferreiro · 6 funda algo) · 1d6 [4]",
+   "onde": "d27 [9] Shizess (as caravanas)",
+   "detalhe": "",
+   "noticia_chega": 522,
+   "chegada": "[4] em 1d6 [3] dias",
+   "leitura": "desaparece",
+   "resumo": "UM LENDÁRIO AGE: desaparece — Shizess (as caravanas)",
+   "toca": false
+  },
+  {
+   "dia": 520,
+   "d20": 6,
+   "o_que": "FENÔMENO MÁGICO: a coberta afina (1d6: 1 estrela cai · 2 magia selvagem · 3 os mortos se mexem · 4 um rio muda · 5 um portal · 6 o céu sangra) · 1d6 [2]",
+   "onde": "d27 [25] Ulra (terra nova)",
+   "detalhe": "",
+   "noticia_chega": 522,
+   "chegada": "[2] em 1d3 [2] dias",
+   "leitura": "magia selvagem",
+   "resumo": "FENÔMENO MÁGICO: a coberta afina: magia selvagem — Ulra (terra nova)",
+   "toca": false
   }
  ]
 }

@@ -1,14 +1,14 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 517,
-  "hora": "amanhecer",
-  "local": "as gargantas ao norte da estrada do leste (o vdaek)",
+  "dia": 520,
+  "hora": "tarde",
+  "local": "Levis",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 1,
-  "primeiro_tick_semanal": 518,
+  "pressao": 4,
+  "primeiro_tick_semanal": 525,
   "limiar_pressao": 5,
-  "proxima_auditoria": 518,
+  "proxima_auditoria": 523,
   "sem_sono": false
  },
  "bestiario": {
@@ -47,7 +47,8 @@
   "log": [
    "503: G41, a palavra do rei: os forçados vão aos piores trabalhos (131)",
    "504: [3] a semana passa sem morte nem fuga → 131",
-   "511: [2] tentam fugir · d6 [2]: 1 ESCAPAM (à solta; o Mestre diz onde e de que grupo) → 130"
+   "511: [2] tentam fugir · d6 [2]: 1 ESCAPAM (à solta; o Mestre diz onde e de que grupo) → 130",
+   "518: [5] a semana passa sem morte nem fuga → 130"
   ]
  },
  "cofre": 59567

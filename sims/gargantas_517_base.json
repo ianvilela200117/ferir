@@ -20,7 +20,8 @@
    "dano": "3d6"
   },
   "fraqueza": "Som",
-  "nota": "bicho.py (obras/gargantas_517.txt): planta, casa, Silencio; dorminhoco: acorda com barulho, sangue ou magia; fraqueza: a Essência Som: dano dobrado e corta a regeneração · e mais uma, a descobrir: água corrente"
+  "nota": "bicho.py (obras/gargantas_517.txt): planta, casa, Silencio; dorminhoco: acorda com barulho, sangue ou magia; fraqueza: a Essência Som: dano dobrado e corta a regeneração · e mais uma, a descobrir: água corrente · 517 (G9): DORMINDO (AP17 [5]): a casa o pega de SURPRESA (não age na 1ª rodada); o rio não passa na garganta seca (a água corrente não entra)",
+  "surpresa": true
  },
  "grupo": []
 }

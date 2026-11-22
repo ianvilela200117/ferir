@@ -1,0 +1,11 @@
+LEI DAS AÇÕES: Bzuur (nível 68) contra 3 · PV 544/544 · RD 5 · 3 ações · reação 1 · grupo: Ferir 1, Moreth 4, Eiagrir 3
+INICIATIVA: Bzuur 2d20+6 = 24 × o grupo 2d20+13 (média) = 59 → o grupo age primeiro
+--- RODADA 1 · Bzuur 544/544
+  Ferir lança TOQUE DO CEIFADOR (o Foco de Osso, PRIMORDIAL inteiro pela Mão de Rei ×20; 2x por cena, sem Mana): 1700; [[13], [4]]+34=51 vs 47 pega em cheio → 1695 (-1151)
+  Bzuur CAI
+FIM: morto · rodadas 1 · mortos [] · PV -1151/544 · grupo {'Ferir': 275, 'Moreth': 612, 'Eiagrir': 434}
+G39 · XP DA LUTA, sozinho: 680 a cada um que lutou (68 × 10 × 1): Ferir, Moreth, Eiagrir
+   XP +680 (517: Bzuur (Raro 68; 1 caído(s))) → 140.820 / 143.200
+   Moreth: +680 (517: Bzuur (Raro 68; 1 caído(s))) → 14375/23500
+   Eiagrir: +680 (517: Bzuur (Raro 68; 1 caído(s))) → 15058/13100
+   G39 · o DESPOJO: o bicho deixa corpo: ver os drops do gerador e lançar com ficha.py mat

@@ -22,6 +22,14 @@
    "nivel": 17,
    "desde": 472,
    "nota": "o guardião de ferro do portão de Dragal (Raro 35, morto-vivo de Metal; quebra armas); derrubado pelo Toque do Ceifador do rei; levanta com metade do nível; a palavra não cobra (o Foco pagou) · CAIU na aurora do 473 (servo do Toque, G23 a; sem a Receita: Raro 35, a regra do jogador pede maior que 150)"
+  },
+  {
+   "nome": "Bzuur",
+   "de_pe": false,
+   "tipo": "servo do Toque (G23 a: até a aurora do 518, a não ser que a Receita Mestra seja feita no corpo antes)",
+   "nivel": 34,
+   "desde": 517,
+   "nota": "Raro 68, planta do tamanho de uma casa (Silêncio; agarra e arrasta); derrubado pelo Toque do Ceifador do rei nas gargantas (sims/gargantas_517_saida.txt); levanta com metade do nível; de vigia aos vinte presos na noite do 517; abaixo do corte do jogador (150, G44): sem a Receita, cai na aurora e o corpo vai ao despojo · CAIU na aurora do 518 (servo do Toque, G23 a; sem a Receita); o corpo ao despojo: nytheion 10, yorasar 10"
   }
  ]
 }

@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 53,
- "xp": 140140,
+ "xp": 141220,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 59574,
+ "cofre": 57251,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 511,
+  "ultima_semana": 518,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -525,6 +525,24 @@
    "valor": 30,
    "motivo": "515: a missão da curandeira de Lumade (o remédio)",
    "saldo": 59574
+  },
+  {
+   "dia": 518,
+   "valor": -923,
+   "motivo": "semana: casa 6457 + cidades 1550 − despesa 8930",
+   "saldo": 58651
+  },
+  {
+   "dia": 520,
+   "valor": -1500,
+   "motivo": "520: a ORDEM DO GRÃO em Levis (G43; o grão a 188, acima de 150: duas semanas a 1.500), pela boca do rei à Brara",
+   "saldo": 57151
+  },
+  {
+   "dia": 520,
+   "valor": 100,
+   "motivo": "520: o mercador de Levis paga o frasco de vdaek (a missão do Eiagrir)",
+   "saldo": 57251
   }
  ],
  "materiais": {
@@ -886,11 +904,29 @@
    "log": [
     "Dia 509: +1 509: o CELOCUS DEVOLVE o núcleo Épico de Sorte (o coração do Zraos) como sinal do PACTO DE FORJA (DL09 24)"
    ]
+  },
+  "vdaek": {
+   "kg": 1.75,
+   "log": [
+    "Dia 517: +2 517: o sangue seco do bicho de vento nas gargantas (VD17 [4]); 1 frasco é do mercador da missão",
+    "Dia 520: -0.25 520: um frasco ao mercador de Levis (a missão do Eiagrir; a encomenda era da Almision)"
+   ]
+  },
+  "nytheion": {
+   "kg": 10.0,
+   "log": [
+    "Dia 517: +10 518: a glândula do Bzuur (gargantas), na aurora em que o servo caiu"
+   ]
+  },
+  "yorasar": {
+   "kg": 0.0,
+   "log": [
+    "Dia 517: +10 518: o osso do Bzuur (gargantas)",
+    "Dia 518: -10 518: o saco caiu no vau (o erro do Gonde, GD18 [3])"
+   ]
   }
  },
  "xp_log": [
-  "Dia 491: +50000 492: A CISTERNA QUE COME A FEBRE (Primordial)",
-  "Dia 491: SOBE ao 14",
   "Dia 491: SOBE ao 15",
   "Dia 491: SOBE ao 16",
   "Dia 491: SOBE ao 17",
@@ -948,7 +984,9 @@
   "Dia 510: +2400 511: os Vrurn no covil da ponte velha (CR11; 6 trolls nível 40)",
   "Dia 510: SOBE ao 53",
   "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)",
-  "Dia 515: +1500 515: a casa vazia junto à muralha (CR15; três do Círculo, nível 50)"
+  "Dia 515: +1500 515: a casa vazia junto à muralha (CR15; três do Círculo, nível 50)",
+  "Dia 517: +680 517: Bzuur (Raro 68; 1 caído(s))",
+  "Dia 520: +400 520: a missão do vdaek (o Bzuur, o frasco ao mercador)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

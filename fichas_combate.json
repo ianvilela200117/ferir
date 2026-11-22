@@ -154,17 +154,17 @@
   },
   "Eiagrir": {
    "nome": "Eiagrir",
-   "nivel": 131,
+   "nivel": 132,
    "at": 36,
    "dado": "1d10",
    "mult": 3,
    "b": 12,
    "df": 42,
    "rd": 8,
-   "pv": 434,
+   "pv": 436,
    "vigor": 13,
    "heroi": true,
-   "nivel_ref": 131,
+   "nivel_ref": 132,
    "magias": [
     {
      "nome": "LANÇA DO SOL (a Lança do Rio Limpo, Primordial, rende Lendário ×5; 2 tiros por cena)",
@@ -214,7 +214,9 @@
    "arma": "lança",
    "rd_ess": {
     "Fogo": 5
-   }
+   },
+   "essencia": "Som",
+   "nota": "517 (G9): a essência do golpe é SOM (a Lança do Rio Limpo: Vida, Som e Gelo; o luta.py lê uma; contra o Bzuur, fraco a Som, vale o Som)"
   },
   "Isolda": {
    "nome": "Isolda",

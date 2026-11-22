@@ -1,4 +1,4 @@
-# RETOMAR — meio-dia do Dia 517, AS GARGANTAS: o Bzuur dorme em cima do vdaek; a casa volta ao reino (MOTOR 9b: G1 a G43)
+# RETOMAR — tarde do Dia 520, LEVIS: a volta ao reino; o Nutoccone pego na corda; a Matriz tentada pela Leliel (MOTOR 9b: G1 a G44)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Tarde do 520, LEVIS. O rei NÍVEL 53 (XP 141.220; o 54 em 143.200), PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6. O Moreth 235, o Eiagrir 132, a ELIANE de pé, o Gonde e 2, os 4 feridos, os quatro cavaleiros do Celocus (voltam a Lumade daqui). A carroça: a MATRIZ (tentada pela Leliel no 519), o Martelo, o livro de sangue, a carta do conselho, os núcleos Épicos de Sorte e de Veneno, 20 doses, vdaek ~1,75 kg, nytheion 10. VINTE E DOIS PRESOS: o NUTOCCONE e oito (ele e dois CORTARAM A CORDA na noite do 518, pegos na corda: a palavra do rei 'não prendo vivos a terceira vez' espera o rei), onze do Círculo (o Lior, o carvoeiro), O HOMEM DA LELIEL (moeda do Norte; calado), o TONDUNN (31; forçado fugido; o Moreth inclina pela misericórdia, tracos B+3). LEVIS: Comida 0/4 (a ORDEM DO GRÃO dada: 1.500, Comida +1 até o 534), o celeiro roubado, Dinheiro 0/4, doença na cidade baixa. O vdaek era da ALMISION. As ordens perdidas com o cavaleiro (a torre velha, 4a; a petição, 5c) seguem com o rei. A barca a Ireviel: 3 dias. (OCULTO) MEOR (281) vira para IREVIEL: perto no 534 (#1134; G44) · a notícia de Lumade no 530 (#1135) · 521 a Liga em Lumade (#1096). Cofre 57.251.
+
+Antes (517, as gargantas):
 Meio-dia do 517, AS GARGANTAS ao norte da estrada do leste (um dia a leste de Lumade), DENTRO DA REGRA G9: o BZUUR (Raro 68; sims/gargantas_517_base.json; planta do tamanho de uma casa, Silêncio; agarra e arrasta; o golpe sem som; FRACO A SOM (a Lança do Rio Limpo do Eiagrir é Vida e Som); (OCULTO) também água corrente; DORMINHOCO: acorda com barulho, sangue ou magia) DORME (AP17 [5]) enrolado por cima da carcaça do bicho de vento; o VDAEK debaixo. O rei NÍVEL 53 (XP 140.140; o 54 em 143.200), PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6, sem Exaustão; o Moreth 235 (612), o Eiagrir 131 (434; XP para subir no 518). A CARROÇA na estrada, no lugar da emboscada: o Gonde e 2, a ELIANE DE PÉ (517), os 4 feridos, os QUATRO CAVALEIROS DO CELOCUS e dois cavalos de tiro (até Levis), a Matriz, o Martelo, o livro de sangue, a carta do conselho, 20 doses do remédio, os núcleos Épicos de Sorte e de Veneno; VINTE PRESOS: o NUTOCCONE e oito (3c: o julgamento em Ireviel; a palavra do rei: na terceira fuga, morte) e ONZE do Círculo (o Lior, o carvoeiro). O CAVALEIRO DAS CARTAS MORTO (as cartas tomadas: (OCULTO) pelo Círculo, RD16): a ordem do grão (G43), a torre velha (4a) e a petição (5c) NÃO CHEGARAM; o rei as dá de boca em Levis. O plano: Levis por volta do 520, Ireviel por volta do 523. (OCULTO) 518 tick semanal · 520 MEOR em Lumade (#1098) e a CURANDEIRA levada (#1104) · 521 a Liga em Lumade atrás do livro (#1096; a casa já saiu com ele). Cofre 59.574.
 
 Antes (515, a noite em Lumade):
@@ -506,8 +509,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (515 → 517): 1a a casa toda junta · 2a a batida na casa vazia · 3c o Nutoccone a julgamento em Ireviel · 4a o desvio do vdaek
 - CV15 [3] · CR15 59 × 39 (um morto, dois presos, um fugiu pelo ramo) · +1.500 XP · sem sono · CE16 8 (quatro cavaleiros e dois cavalos) · RD16v [2] o cavaleiro morto · PN16 [6] · MG17 Raro (o Bzuur) · AP17 [5] dorme · SP16, RD16, RV13 (ocultos).
 
+## RESPONDIDO (517 → 520): 1a lutar com o bicho · 'quando eu tiver oportunidade de tornar servo um cara de level alto, avise; quero dificuldade boa e história épica' (a G44)
+- a luta: o Toque, rodada 1 (o Bzuur morto; servo até a aurora) · VD17 2 kg · o tick 518 · GD18 o yorasar perdido · TD18 o Tondunn · PN18 o Nutoccone na corda · CB18 a Leliel na Matriz (um morto, um preso) · a ordem do grão em Levis (1.500) · RW20 a Almision · ME20 (oculto).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O BICHO QUE DORME EM CIMA DO VDAEK (do tamanho de uma casa, verde e escuro, enrolado como raiz; o chão treme): a) lutar (o rei, o Moreth e o Eiagrir; a G9 confere as fichas antes; a Visão pode ver a primeira hora) · b) tirar o vdaek sem acordá-lo · c) deixar o vdaek e voltar à estrada.
+1. O NUTOCCONE E OS DOIS (cortaram a corda na noite do 518; pegos na corda; a palavra do rei: 'não vou prender vivos a terceira vez'): a) cumprir a palavra: morte, aqui em Levis · b) não chegaram a fugir: seguem ao julgamento em Ireviel (3c) · c) outra.
+2. O HOMEM DA LELIEL (tentou levar a Matriz; calado; uma moeda do Norte): a) interrogar já · b) ao conselho em Ireviel · c) outra.
+3. O TONDUNN (forçado fugido das minas de cima; o Moreth tem pena dele): a) de volta às minas (G41) · b) servir à casa, sob o Moreth · c) outra.
+4. LEVIS (a fome com o grão a caminho; o celeiro roubado; a doença na cidade baixa): a) o rei fica um dia: o roubo e a doença · b) a barca para Ireviel amanhã (chega por volta do 523).
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

@@ -2,7 +2,7 @@
  "reino": {
   "nome": "Reino de Ireviel",
   "rei": "FERIR, o Forjador (coroado no 293)",
-  "dia": 511,
+  "dia": 518,
   "prestigio": 6,
   "legitimidade": 9,
   "conselho_real": {
@@ -37,7 +37,7 @@
    "a Escola Única (Almision)": -1,
    "o Colégio": 5,
    "a Leliel (o Norte; a Liga é dela)": -4,
-   "a Escola Única": 3
+   "a Escola Única": 2
   },
   "log": [
    "290: o reino nasce no papel: Ireviel e o Porto de Marasar",
@@ -88,9 +88,10 @@
    "490: semana do reino; renda de fora do livro +2300",
    "497: semana do reino; renda de fora do livro +2000",
    "504: semana do reino; renda de fora do livro +1800",
-   "511: semana do reino; renda de fora do livro +1650"
+   "511: semana do reino; renda de fora do livro +1650",
+   "518: semana do reino; renda de fora do livro +1550"
   ],
-  "ultima_semana": 511,
+  "ultima_semana": 518,
   "editos": [
    {
     "nome": "da Feira Franca",
@@ -107,11 +108,11 @@
    "gente": 14000,
    "pilares": {
     "Comida": 4,
-    "Comércio": 3,
+    "Comércio": 4,
     "Dinheiro": 4,
     "Saúde": 4,
     "Ordem": 4,
-    "Defesa": 3
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -122,6 +123,10 @@
      [
       1,
       "a várzea nova (pronta no 451; de vez)"
+     ],
+     [
+      1,
+      "clima: colheita em tempo seco, 5 dias limpos (até o 524)"
      ]
     ],
     "Comércio": [
@@ -229,7 +234,8 @@
     "497: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
     "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 3 · Ordem 4 · Defesa 4 · evento [1]",
     "504: o desabamento de um trecho do cais novo (o EVENTO [1] do reino; DS04 [6]): Comércio −1 até o 518",
-    "511: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]"
+    "511: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 3 · evento [16]",
+    "518: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [18]"
    ],
    "obras_feitas": [
     {
@@ -281,12 +287,12 @@
    "tipo": "porto (o cais e os bairros do rio, de Ireviel desde o 287)",
    "gente": 3000,
    "pilares": {
-    "Comida": 3,
+    "Comida": 4,
     "Comércio": 2,
     "Dinheiro": 2,
     "Saúde": 4,
-    "Ordem": 3,
-    "Defesa": 3
+    "Ordem": 4,
+    "Defesa": 4
    },
    "mods": {
     "Comida": [
@@ -383,7 +389,8 @@
     "490: Comida 4 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [9]",
     "497: Comida 3 · Comércio 1 · Dinheiro 3 · Saúde 4 · Ordem 2 · Defesa 4 · evento [11]",
     "504: Comida 2 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [19]",
-    "511: Comida 3 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [8]"
+    "511: Comida 3 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 3 · Defesa 3 · evento [8]",
+    "518: Comida 4 · Comércio 2 · Dinheiro 2 · Saúde 4 · Ordem 4 · Defesa 4 · evento [19]"
    ]
   },
   {
@@ -391,9 +398,9 @@
    "tipo": "cidade (tomada da Liga no 332; anexada pelo conselho)",
    "gente": 9000,
    "pilares": {
-    "Comida": 1,
+    "Comida": 0,
     "Comércio": 2,
-    "Dinheiro": 1,
+    "Dinheiro": 0,
     "Saúde": 4,
     "Ordem": 4,
     "Defesa": 4
@@ -407,12 +414,20 @@
      [
       1,
       "a RONDA: 10 lanças em Levis-baixa (427, enquanto a ronda durar)"
+     ],
+     [
+      -1,
+      "pão caro: grão a 188 (até o 524)"
      ]
     ],
     "Comida": [
      [
       -1,
       "o colapso da Liga"
+     ],
+     [
+      1,
+      "a ordem do grão (G43, 520), até o 534"
      ]
     ],
     "Comércio": [
@@ -477,7 +492,8 @@
     "502 (erro achado): o −1 de Ordem do 416 (duas semanas) nunca venceu: tirado · o +1 de Saúde da G2 (423) estava na chave \"Saude\" e não contava: passado para \"Saúde\"",
     "504: Comida 1 · Comércio 3 · Dinheiro 1 · Saúde 4 · Ordem 3 · Defesa 4 · evento [15]",
     "504: o −1 de Comida do clima (a geada) tirado: os braços pagos salvaram a colheita (CO03 [4], declarado antes); no rolar do 504 ele não mudou nada ([5]−1 = 4 também fica)",
-    "511: Comida 1 · Comércio 2 · Dinheiro 1 · Saúde 4 · Ordem 4 · Defesa 4 · evento [7]"
+    "511: Comida 1 · Comércio 2 · Dinheiro 1 · Saúde 4 · Ordem 4 · Defesa 4 · evento [7]",
+    "518: Comida 0 · Comércio 2 · Dinheiro 0 · Saúde 4 · Ordem 4 · Defesa 4 · evento [15]"
    ],
    "governo": "a BRARA, governadora (335; o Teraseth recusou)",
    "obras_feitas": [
@@ -506,7 +522,7 @@
    "tipo": "porto (tomado da Leliel no 356; anexado pelo conselho no 357)",
    "gente": 10000,
    "pilares": {
-    "Comida": 4,
+    "Comida": 3,
     "Comércio": 4,
     "Dinheiro": 4,
     "Saúde": 4,
@@ -527,12 +543,7 @@
       "o porto aberto ao reino (357)"
      ]
     ],
-    "Comida": [
-     [
-      1,
-      "clima: colheita em tempo seco, 3 dias limpos (até o 517)"
-     ]
-    ],
+    "Comida": [],
     "Saúde": [],
     "Defesa": [
      [
@@ -574,7 +585,8 @@
     "490: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 3 · evento [3]",
     "497: Comida 4 · Comércio 3 · Dinheiro 4 · Saúde 4 · Ordem 3 · Defesa 4 · evento [7]",
     "504: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [10]",
-    "511: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [4]"
+    "511: Comida 4 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [4]",
+    "518: Comida 3 · Comércio 4 · Dinheiro 4 · Saúde 4 · Ordem 4 · Defesa 4 · evento [6]"
    ],
    "governo": "o TIRELLO (o conselho, 357)",
    "obras_feitas": [

@@ -26,24 +26,24 @@
   "motivo": "422-432"
  },
  "Ferir": {
-  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
-  "desde": 517,
-  "motivo": "517: o desvio do vdaek (4a)"
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Moreth": {
-  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
-  "desde": 517,
-  "motivo": "517: o desvio do vdaek (4a)"
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Eiagrir": {
-  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
-  "desde": 517,
-  "motivo": "517: o desvio do vdaek (4a)"
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Eliane": {
-  "lugar": "a estrada do leste de Lumade (o lugar da emboscada)",
-  "desde": 516,
-  "motivo": "516: a volta ao reino (1a)"
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Tigra": {
   "lugar": "Lumade",
@@ -51,8 +51,8 @@
   "motivo": ""
  },
  "Gonde": {
-  "lugar": "a estrada do leste de Lumade (o lugar da emboscada)",
-  "desde": 516,
-  "motivo": "516: a volta ao reino (1a)"
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  }
 }
