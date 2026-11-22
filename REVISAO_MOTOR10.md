@@ -272,3 +272,29 @@ Este save não se perde em nenhum caso: está guardado no Dia 507 e pode ser ret
 **Como as medições foram feitas:** duelos no simulador do próprio `luta.py` (o modo de régua, que não grava nada), 3 a 4 mil por linha. "Pelas fichas do save" usa números como os das fichas reais (multiplicador 1 a 3, RD 2 a 8). "Pela tabela do Livro" monta a ficha pela conta do X.2: ataque = atributo ÷ 10 + maestria + bônus da arma; Defesa = 10 + Agilidade ÷ 10 + armadura; PV = Vigor ÷ 10 × 10 + nível × 2; dano = 1d10 × categoria + Força ÷ 10. O protótipo é o `luta.py` de hoje com três trocas feitas em memória (ações ÷ 100, o teto na mão da experiência, aço contra aço). Não é regra e não toca o jogo.
 
 Para repetir: `python3 sims/revisao_motor10/mede.py` (o motor de hoje) e `python3 sims/revisao_motor10/calibra.py` (hoje contra o protótipo). As saídas desta revisão estão ao lado, em `mede_saida.txt` e `calibra_saida.txt`.
+
+---
+
+## 10. As decisões do jogador e o que já existe (Dia 507)
+
+**As respostas à seção 9:**
+1. A arma tem de decidir muito: "uma arma dar chance de um nível 50 vencer um nível 500". Sem restrição de nível para usar a peça.
+2. Misturar o **b** e o **c**: sob medida, e requisito por atributo.
+3. **a:** a luta para e pergunta sempre que algo muda.
+4. Todos os módulos do combate.
+5. O mundo: coisas para fazer; outras pessoas vivas além do personagem, que não é o centro; medo e emoção; conquista tão difícil que dê o peso e o alívio de conseguir.
+6. Entre o **b** e o **c**: pediu a opinião do Mestre (a resposta está na conversa: o mesmo mundo, outra era).
+7. **a:** começar o Motor 10 pela luta e pelo Livro de Itens.
+
+**O que já está escrito e provado, em `motor10/`:**
+- `REGRAS.md`: o livro de regras da luta e dos itens (um só, numerado, sem história);
+- `tabelas.py`: todos os números num lugar;
+- `itens.py`: o Livro de Itens e a janela do item;
+- `pessoas.py`: a ficha de luta que sai sozinha do que a pessoa veste;
+- `luta.py`: a luta nova, com os dez módulos, as ordens e as paradas;
+- `provas.py`: o banco de provas, **28 de 28** (a saída em `dados/provas_saida.txt`);
+- `MUDANCAS.md`: o diário de mudanças.
+
+**O que o banco de provas mede hoje:** uma arma duas categorias acima dá ao nível 50 **28%** contra o nível 500; três acima, **76%**; o conjunto inteiro duas acima, **100%**. Um nível 90 vestido de Mítico vence dez de nível 275 de Raro em 100% das vezes. Com a mesma arma, o nível decide (nível 150 contra 50: 96%).
+
+**Falta, nesta ordem:** a magia e os encantos de peça · os bichos · o ofício (forjar, consertar, a escada das categorias) · o mundo vivo · o turno em dois comandos.

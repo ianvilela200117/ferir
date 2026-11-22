@@ -1,0 +1,18 @@
+{
+ "nota": "Exemplo de cenário: um corredor escuro, três da casa contra um bando. Serve de molde.",
+ "inicio": "perto",
+ "lugar": {"largura": 2, "sem_saida": "B"},
+ "tempo": ["escuro"],
+ "A": [
+  {"nome": "Aldric", "nivel": 40, "controla": true, "moral": "firme", "linha": "trás", "veste": {"arma": ["lança", "Épico"], "armadura": ["couro", "Raro"]}},
+  {"nome": "Bera", "nivel": 120, "moral": "firme", "lider": true, "veste": {"arma": ["maça", "Único"], "armadura": ["malha", "Único"], "escudo": "Épico"}},
+  {"nome": "Tomas", "nivel": 32, "papel": "guarda", "guarda": "Aldric", "moral": "firme", "veste": {"arma": ["espada", "Raro"], "armadura": ["malha", "Raro"], "escudo": "Raro"}}
+ ],
+ "B": [
+  {"nome": "o chefe", "nivel": 90, "lider": true, "veste": {"arma": ["espada", "Épico"], "armadura": ["malha", "Raro"], "escudo": "Raro"}},
+  {"nome": "lanceiro 1", "nivel": 35, "veste": {"arma": ["lança", "Incomum"], "armadura": ["couro", "Incomum"]}},
+  {"nome": "lanceiro 2", "nivel": 40, "veste": {"arma": ["lança", "Incomum"], "armadura": ["couro", "Incomum"]}},
+  {"nome": "machado 1", "nivel": 45, "veste": {"arma": ["machado", "Incomum"], "armadura": ["couro", "Incomum"]}},
+  {"nome": "arqueira", "nivel": 50, "linha": "trás", "veste": {"arma": ["arco", "Raro"], "arma2": ["adaga", "Comum"], "armadura": ["couro", "Incomum"]}}
+ ]
+}

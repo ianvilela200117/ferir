@@ -1,0 +1,37 @@
+BANCO DE PROVAS DO MOTOR 10 · 600 lutas por meta
+
+O EQUILÍBRIO (vitória do primeiro)                                             faixa   medido
+SIMETRIA: iguais em tudo (nível 50, Raro)                                     44-56%     53%  passa  (4 rodadas)
+A ARMA: mesmo nível, só a ARMA uma categoria acima                            80-99%     93%  passa  (2 rodadas)
+O CONJUNTO: mesmo nível, tudo uma categoria acima                            88-100%    100%  passa  (2 rodadas)
+O NÍVEL AJUDA DEVAGAR: mesma arma, 50 contra 75                               52-68%     57%  passa  (4 rodadas)
+O NÍVEL CONTA: mesma arma, 50 contra 150                                     85-100%     96%  passa  (3 rodadas)
+UMA categoria na arma compensa 100 níveis (50 × 150)                          35-65%     51%  passa  (3 rodadas)
+DUAS categorias na arma vencem 150 níveis (50 × 200)                          60-95%     86%  passa  (1 rodadas)
+A CHANCE: uma arma duas acima, nível 50 × nível 500                           10-40%     28%  passa  (2 rodadas)
+A ARMA DECIDE: uma arma três acima, nível 50 × nível 500                      55-90%     76%  passa  (1 rodadas)
+O CONJUNTO duas acima, nível 50 × nível 500                                  85-100%    100%  passa  (3 rodadas)
+A GUILDA: um nível 90 de conjunto Mítico × dez de nível 275 de Raro          90-100%    100%  passa  (5 rodadas)
+SÓ A ARMA NÃO BASTA contra dez: o mesmo, com armadura Rara                     0-40%      0%  passa  (1 rodadas)
+O NÚMERO CONTA: um nível 120 de Lendário × dez de nível 60 de Único            0-25%      1%  passa  (2 rodadas)
+SOLDADOS COMUNS não derrubam o Lendário: um nível 120 × dez de nível 15      97-100%    100%  passa  (3 rodadas)
+
+A DURAÇÃO (mediana de rodadas)                                                 faixa   medido
+duelo entre iguais (nível 50, Raro)                                            4-9 r     4 r  passa
+duelo entre iguais (nível 150, Lendário)                                       4-9 r     4 r  passa
+cinco contra cinco (nível 40, Incomum)                                        4-12 r     7 r  passa
+
+OS MÓDULOS (cada coisa que interfere, interfere para o lado certo)
+  passa  1 ALCANCE: duas lanças contra duas espadas num corredor de um (a de trás bate por cima do ombro) e em campo aberto: 86% contra 73%
+  passa  1 DISTÂNCIA: a arqueira começa longe ou começa colada: 36% contra 2%
+  passa  3 O TEMPO: a mesma arqueira, no escuro: 21% contra 36%
+  passa  2 O LUGAR: um contra quatro, em campo aberto ou num corredor de um: 1% contra 20%
+  passa  5 GOLPE CONTRA ARMADURA: o malho e o montante contra a placa: 78% contra 34%
+  passa  4 FÔLEGO E REQUISITO: a placa em quem não tem Força para ela: Defesa 26 contra 34; fôlego por rodada 5 contra 1
+  passa  SOB MEDIDA: a mesma peça na mão do dono e na mão de outro: acerto +23.25 e × 125 contra +15.25 e × 50
+  passa  SINTONIA: duas peças despertas em quem só sustenta uma: dormem: escudo Épico
+  passa  7 DURABILIDADE: espada Comum batendo em armadura Épica quebra: em 100% das lutas
+  passa  8 MORAL: seis contra um muito mais forte: alguém foge ou se rende: em 56% das lutas
+  passa  10 PARA E PERGUNTA: a luta para antes da 1ª rodada, e a ordem de recuar é cumprida: parada; o rei foi da casa 0 para a -2
+
+28 de 28 metas passam.
