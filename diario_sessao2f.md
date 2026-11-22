@@ -2516,3 +2516,35 @@ Ao lado da cama da Eliane, uma curandeira de Lumade segurava um frasco da água 
 Na mesa, duas cartas esperavam o rei: uma de Levis e uma de Ireviel.
 
 - **Parada:** noite do 514, Lumade. Os Vrurn mortos. O Nutoccone preso de novo, e o recado dele a caminho da Liga. O poço da praça envenenado e o túnel tapado.
+
+## Dia 515 — o remédio, o carvoeiro, a grade (as respostas: 1b os nove na cela, "não prendo vivo a terceira vez" · 2a o remédio · 3 a opinião do Eiagrir · 4a a guarda de Ireviel à torre velha · 5c o conselho, e "não deixem as cidades passarem fome")
+- **Rolagens:** SB15 [10, 4] + 20 + 5 = 39 × 30: sucesso · RM15 [17, 18] + 22 + 5 = 62 × 35: EXTRAORDINÁRIO · RM15d [2]: 40 doses · RM15s [4] · RV12 e RV12r (rolagem oculta, abaixo à mesa: o Celocus conta) · RD15 (rolagem oculta).
+
+### A noite do 514
+O recado foi pela grade, do jeito que o rei disse: não fuja; não haverá terceira vez.
+
+O Nutoccone ouviu sentado no chão da cela, com as costas na pedra. Não respondeu.
+
+### O dia 515
+Ferveram a água do poço na cozinha do Celocus. Quando secou no fundo da panela, ficou uma crosta vermelha e escura, que o rei já tinha visto: no chão da sexta casa de Ezmisa, onde as crias do Tkorna morreram.
+
+Era sangue delas, fervido com sal de areia.
+
+O resto do dia foi de sal limpo, de uma erva verde que a curandeira trouxe do mercado e da luz do Purificar numa vela, gota por gota. No meio da tarde a água da panela ficou clara.
+
+Encheram quarenta frascos de barro.
+
+"Com isto", disse a curandeira, "nem o poço bebe veneno. E quem tomar antes fica uma semana sem beber nenhum."
+
+Perto do anoitecer, um menino da casa do Celocus veio correndo. Um carvoeiro que ninguém conhecia tinha comprado sal de areia no mercado, o cinzento, que vem de Yaelane. O homem do Celocus foi atrás dele até uma casa vazia junto à muralha, no trecho onde as pedras são velhas.
+
+### A noite do 515
+O Celocus veio ele mesmo até o rei.
+
+"Seu preso me ofereceu uma cadeira na Liga", disse. "Pelo seu livro e pela porta da cela."
+
+Esperou um pouco.
+
+"A Liga me fechou a porta uma vez. Hoje fui eu que fechei."
+
+- **Parada:** noite do 515, Lumade. O remédio pronto. O carvoeiro na casa vazia junto à muralha. O cavaleiro com as cartas do rei sai na aurora. O plano de volta ao reino espera a palavra do rei.

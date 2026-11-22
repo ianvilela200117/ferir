@@ -1,12 +1,5 @@
 {
  "ordem": [
-  "EL58",
-  "BK58",
-  "KR58",
-  "BK58m",
-  "KR58r",
-  "SCq",
-  "SCs",
   "HC59",
   "AL59",
   "EI60",
@@ -399,347 +392,16 @@
   "CH14w",
   "CH14p",
   "EL14",
-  "CH14o"
+  "CH14o",
+  "RM15d",
+  "RM15s",
+  "RV12",
+  "RV12c",
+  "RV12d",
+  "RV12r",
+  "RD15"
  ],
  "selos": {
-  "EL58": {
-   "id": "EL58",
-   "dia": 458,
-   "hora": "02:05:06",
-   "titulo": "ONDE A ELAEVA ATACOU (a notícia FIEL, a célula do Delta confirma; ela desce o vale rumo às salinas)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "uma CARAVANA DE SAL na estrada do vale: 2d6 mortos, o sal perdido"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "uma ALDEIA DE LENHADORES no vale: 2d6 × 3 mortos; os que sobram fogem para o Delta"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      6
-     ],
-     "total": 6,
-     "res": "uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe",
-     "txt": "[6] → uma ALDEIA NA BORDA DAS SALINAS: os salineiros fogem para dentro do Delta e a Lurentetta os recebe"
-    }
-   ],
-   "hora_rolado": "02:05:06"
-  },
-  "BK58": {
-   "id": "BK58",
-   "dia": 458,
-   "hora": "02:05:06",
-   "titulo": "A VIGIA DO BRAKOS (G11; Raro 35, VIDA; aparece de dia no Delta, à vista de muitos; o posto: a célula do Delta) · d20+2",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: o povo se abriga (metade)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO: a toca dele e um RUMOR EXATO (o que ele larga: material de VIDA)"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "PEGO NO LUGAR: a caçada abre já, com SURPRESA"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      5
-     ],
-     "total": 7,
-     "res": "não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)",
-     "txt": "[5] +2 = 7 → não viu a tempo: o pânico vem inteiro (1d6 salineiros mortos)"
-    }
-   ],
-   "hora_rolado": "02:05:06"
-  },
-  "KR58": {
-   "id": "KR58",
-   "dia": 458,
-   "hora": "02:05:06",
-   "titulo": "A VIGIA DO KROTHOS (G11; Lendário 295, Sombra; aparece de dia em LEVIS, à vista de muitos; o posto: a Guilda dos Mineiros do Gurka) · d20+2",
-   "dado": [
-    1,
-    20,
-    2
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 7,
-     "res": "não viu a tempo: o pânico vem inteiro (Ordem de Levis −1 até o 465 e 2d6 mortos)"
-    },
-    {
-     "tipo": "num",
-     "a": 8,
-     "b": 14,
-     "res": "AVISO A TEMPO: a gente se abriga (Ordem −1, 1d6 mortos)"
-    },
-    {
-     "tipo": "num",
-     "a": 15,
-     "b": 21,
-     "res": "o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)"
-    },
-    {
-     "tipo": "num",
-     "a": 22,
-     "b": 1000000,
-     "res": "o bicho é visto no lugar dele e volta à toca sem ferir ninguém (acima da casa: só vigiar)"
-    },
-    {
-     "tipo": "nat",
-     "a": 20,
-     "res": "SURPRESA (gerador novidade)"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      18
-     ],
-     "total": 20,
-     "res": "o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)",
-     "txt": "[18] +2 = 20 → o aviso e o LUGAR EXATO: ninguém morre, e um RUMOR EXATO (fraqueza, toca ou drop)"
-    }
-   ],
-   "hora_rolado": "02:05:06"
-  },
-  "BK58m": {
-   "id": "BK58m",
-   "dia": 458,
-   "hora": "02:05:18",
-   "titulo": "OS MORTOS DO PÂNICO DO BRAKOS no Delta (BK58: não viu a tempo)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 6,
-     "res": "tantos salineiros mortos"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 1,
-     "res": "tantos salineiros mortos",
-     "txt": "[1] → tantos salineiros mortos"
-    }
-   ],
-   "hora_rolado": "02:05:18"
-  },
-  "KR58r": {
-   "id": "KR58r",
-   "dia": 458,
-   "hora": "02:05:39",
-   "titulo": "QUAL É O RUMOR EXATO DO KROTHOS (KR58: a vigia viu o lugar)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 2,
-     "res": "a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)"
-    },
-    {
-     "tipo": "num",
-     "a": 3,
-     "b": 4,
-     "res": "a TOCA: o aterro quebrado da estrada do rio, acima de Levis (onde acordou no 423)"
-    },
-    {
-     "tipo": "num",
-     "a": 5,
-     "b": 6,
-     "res": "o DROP: uma lasca da casca caiu na rua: metal de SOMBRA, Lendário"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)",
-     "txt": "[2] → a FRAQUEZA: ao sol, de dia, a casca dele fumega (a LUZ o fere)"
-    }
-   ],
-   "hora_rolado": "02:05:39"
-  },
-  "SCq": {
-   "id": "SCq",
-   "dia": 458,
-   "hora": "03:37:32",
-   "titulo": "QUANDO O CORVO VOLTA AO SEETH (1b; ele veio na meia-noite do 458)",
-   "dado": [
-    1,
-    6,
-    0
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 3,
-     "res": "na noite do 459"
-    },
-    {
-     "tipo": "num",
-     "a": 4,
-     "b": 5,
-     "res": "na noite do 460"
-    },
-    {
-     "tipo": "num",
-     "a": 6,
-     "b": 6,
-     "res": "não volta esta semana"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      2
-     ],
-     "total": 2,
-     "res": "na noite do 459",
-     "txt": "[2] → na noite do 459"
-    }
-   ],
-   "hora_rolado": "03:37:32"
-  },
-  "SCs": {
-   "id": "SCs",
-   "dia": 458,
-   "hora": "03:37:32",
-   "titulo": "A SIRA TENTA PEGAR O RECADO DO CORVO quando ele voltar (d20 + 6 a Sira; o corvo é bicho de uma Lendária: CD alta)",
-   "dado": [
-    1,
-    20,
-    6
-   ],
-   "tabela": [
-    {
-     "tipo": "num",
-     "a": 1,
-     "b": 8,
-     "res": "FALHA FEIA: o corvo a vê no telhado; a Almision vai saber que a casa sabe"
-    },
-    {
-     "tipo": "num",
-     "a": 9,
-     "b": 17,
-     "res": "nada: o recado entra e sai sem ela ler"
-    },
-    {
-     "tipo": "num",
-     "a": 18,
-     "b": 24,
-     "res": "lê o recado na pata sem ninguém saber (o texto)"
-    },
-    {
-     "tipo": "num",
-     "a": 25,
-     "b": 1000000,
-     "res": "lê e COPIA, e o corvo segue sem saber; a casa pode escrever por cima"
-    }
-   ],
-   "oculto": false,
-   "x": 1,
-   "nomes": [],
-   "estado": "rolado",
-   "rolagens": [
-    {
-     "dados": [
-      1
-     ],
-     "total": 7,
-     "res": "FALHA FEIA: o corvo a vê no telhado; a Almision vai saber que a casa sabe",
-     "txt": "[1] +6 = 7 → FALHA FEIA: o corvo a vê no telhado; a Almision vai saber que a casa sabe"
-    }
-   ],
-   "hora_rolado": "03:37:32"
-  },
   "HC59": {
    "id": "HC59",
    "dia": 458,
@@ -20985,6 +20647,340 @@
     }
    ],
    "hora_rolado": "23:29:51"
+  },
+  "RM15d": {
+   "id": "RM15d",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "QUANTAS DOSES DO REMÉDIO SAEM NO 515 (RM15 extraordinário), 1d6 × 20",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 6,
+     "res": "× 20 doses"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      2
+     ],
+     "total": 2,
+     "res": "× 20 doses",
+     "txt": "[2] → × 20 doses"
+    }
+   ],
+   "hora_rolado": "05:45:06"
+  },
+  "RM15s": {
+   "id": "RM15s",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "A SURPRESA BOA DO RM15 (aberto.py: um inimigo comete um erro e se expõe; o Círculo tem pó para mais de um poço, o envelope)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "a gente do Celocus, limpando os poços pelo jeito do rei, ouve PÁ E VOZES no fundo do POÇO DO BAIRRO ALTO: o segundo ramo do túnel achado antes da hora"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "um do Círculo, disfarçado de carvoeiro, compra sal de areia no mercado e é seguido até uma casa vazia junto à muralha"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "as duas coisas"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      4
+     ],
+     "total": 4,
+     "res": "um do Círculo, disfarçado de carvoeiro, compra sal de areia no mercado e é seguido até uma casa vazia junto à muralha",
+     "txt": "[4] → um do Círculo, disfarçado de carvoeiro, compra sal de areia no mercado e é seguido até uma casa vazia junto à muralha"
+    }
+   ],
+   "hora_rolado": "05:45:06"
+  },
+  "RV12": {
+   "id": "RV12",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "A REVIRAVOLTA DO BLOCO (G42; o 515: o maior sucesso foi o REMÉDIO extraordinário; o que vazou: o Nutoccone ouviu o 'não vou prender vivos a terceira vez' e sabe que o Celocus quer entrar numa facção que o recusou)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "O PREÇO DA VITÓRIA: Lumade agradece ao rei na praça, e o CELOCUS, ORGULHOSO, vê a cidade dele louvar outro (a opinião dele sobre o rei −10; ele cobra o pacto mais duro)"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 4,
+     "res": "O INIMIGO USA O QUE SABE: o NUTOCCONE, pela grade, oferece ao CELOCUS uma cadeira na Liga (a facção que o recusou) pelo livro de sangue e pela fuga dos nove"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "ALGUÉM DE PERTO PAGA (RV12c quem, RV12d o quê)"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "O MUNDO SEGUE"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "O INIMIGO USA O QUE SABE: o NUTOCCONE, pela grade, oferece ao CELOCUS uma cadeira na Liga (a facção que o recusou) pelo livro de sangue e pela fuga dos nove",
+     "txt": "[3] → O INIMIGO USA O QUE SABE: o NUTOCCONE, pela grade, oferece ao CELOCUS uma cadeira na Liga (a facção que o recusou) pelo livro de sangue e pela fuga dos nove"
+    }
+   ],
+   "hora_rolado": "05:45:07"
+  },
+  "RV12c": {
+   "id": "RV12c",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "QUEM PAGA, LONGE (vale só com RV12 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "a Tilde"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 2,
+     "res": "a Nouliel"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "a Isolda"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 4,
+     "res": "o Herkald"
+    },
+    {
+     "tipo": "num",
+     "a": 5,
+     "b": 5,
+     "res": "a Brara"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "o Graur"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 3,
+     "res": "a Isolda",
+     "txt": "[3] → a Isolda"
+    }
+   ],
+   "hora_rolado": "05:45:07"
+  },
+  "RV12d": {
+   "id": "RV12d",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "O QUE ACONTECE A QUEM PAGA (vale só com RV12 em 5)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 2,
+     "res": "ferido grave"
+    },
+    {
+     "tipo": "num",
+     "a": 3,
+     "b": 3,
+     "res": "preso ou tomado"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 5,
+     "res": "morto"
+    },
+    {
+     "tipo": "num",
+     "a": 6,
+     "b": 6,
+     "res": "trai"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "ferido grave",
+     "txt": "[1] → ferido grave"
+    }
+   ],
+   "hora_rolado": "05:45:07"
+  },
+  "RV12r": {
+   "id": "RV12r",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "(vale com RV12 em 3-4) A RESPOSTA DO CELOCUS AO NUTOCCONE (Mítico 714, ORGULHOSO e HONESTO; a ambição: entrar numa facção que o recusou; o pacto com o rei de dez dias) · +2 honesto · +1 o pacto · −2 a ambição",
+   "dado": [
+    1,
+    6,
+    1
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 3,
+     "res": "ACEITA EM SEGREDO: quando a casa sair, os nove fogem 'sozinhos' e o livro some da casa-forte"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 1000000,
+     "res": "RECUSA e conta ao rei"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      3
+     ],
+     "total": 4,
+     "res": "RECUSA e conta ao rei",
+     "txt": "[3] +1 = 4 → RECUSA e conta ao rei"
+    }
+   ],
+   "hora_rolado": "05:45:07"
+  },
+  "RD15": {
+   "id": "RD15",
+   "dia": 514,
+   "hora": "05:45:06",
+   "titulo": "O CAVALEIRO COM AS CARTAS DO REI (sai de Lumade na aurora do 516: a Levis, à Brara, com a ordem do grão, e de lá à Nouliel por barca, com a ordem da torre velha e a petição ao conselho; a cavalo e de barca; a estrada do leste)",
+   "dado": [
+    1,
+    6,
+    0
+   ],
+   "tabela": [
+    {
+     "tipo": "num",
+     "a": 1,
+     "b": 1,
+     "res": "NÃO CHEGA (some na estrada; sabe-se depois)"
+    },
+    {
+     "tipo": "num",
+     "a": 2,
+     "b": 3,
+     "res": "chega a Levis no 518 e a Ireviel no 521"
+    },
+    {
+     "tipo": "num",
+     "a": 4,
+     "b": 6,
+     "res": "chega a Levis no 517 e a Ireviel no 520"
+    }
+   ],
+   "oculto": false,
+   "x": 1,
+   "nomes": [],
+   "estado": "rolado",
+   "rolagens": [
+    {
+     "dados": [
+      1
+     ],
+     "total": 1,
+     "res": "NÃO CHEGA (some na estrada; sabe-se depois)",
+     "txt": "[1] → NÃO CHEGA (some na estrada; sabe-se depois)"
+    }
+   ],
+   "hora_rolado": "05:45:07"
   }
  }
 }

@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 514, LUMADE: os Vrurn mortos; o Nutoccone preso de novo; o veneno no poço da praça (MOTOR 9b: G1 a G42)
+# RETOMAR — noite do Dia 515, LUMADE: o remédio; o carvoeiro na casa vazia; o plano de volta ao reino (MOTOR 9b: G1 a G43)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Noite do 515, LUMADE, a casa do Celocus. O rei NÍVEL 53 (XP 138.640; o 54 em 143.200), PV 275/275, Mana 105/120 (o Purificar com vela na panela, 15; a aurora a devolve), Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6. O Moreth 235, o Eiagrir 131, a Eliane de cama até o 517, o Gonde e 2, os 4 guardas feridos. PRESOS na cela do Celocus: o NUTOCCONE e oito (a palavra do rei: 'não prendo vivo a terceira vez'; ele ofereceu ao Celocus uma cadeira na Liga pelo livro e pela fuga; o Celocus RECUSOU e contou) e os NOVE DO CÍRCULO (o Lior). O REMÉDIO: 40 doses, a receita com a curandeira, limpar um poço com sal e o Purificar (15), a dose que guarda uma semana. UM DO CÍRCULO (o carvoeiro) numa CASA VAZIA JUNTO À MURALHA. O cavaleiro com as cartas do rei sai na aurora do 516 (à Brara a ordem do grão, G43; à Nouliel a 4a e a 5c). O PLANO DE VOLTA AO REINO à espera da palavra do rei. (OCULTO) RD15 [1] o cavaleiro NÃO CHEGA · (OCULTO) 516 o segundo poço (#1095; a casa vazia pesa se for revistada antes) · 520 Meor (#1098) · 521 a Liga atrás do livro (#1096). Cofre 59.574.
+
+Antes (514, a noite em Lumade):
 Noite do 514, LUMADE, a casa do Celocus. O rei NÍVEL 53 (XP 138.490; o 54 em 143.200), Int 121, Afinidade 107, PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6, sem Exaustão. O Moreth 235 (612), o Eiagrir 131 (434). A Eliane de cama (até o 517). O Gonde e 2; os 4 guardas FERIDOS (beberam do poço: um dia de vômito). NYRAUS e DVURNOS ENTERRADOS na estrada do leste. OS VRURN DESTROÇADOS (511; seis mortos; um fugiu pelo rio; na ponte o sinal do deus morto de Ulair). A CARTA DO CONSELHO achada no covil, inteira. PRESOS: o NUTOCCONE e OITO herdeiros (513, de novo) e os NOVE DO CÍRCULO (o Lior e 8) na cela do Celocus; uns 15 herdeiros soltos pelas aldeias do vale. O recado do Nutoccone à Liga saiu no 512 (chega ao Porto de Marasar no 515; a casa sabe que saiu). O VENENO NO POÇO DA PRAÇA (514, meio-dia; febre fraca); o Celocus TAPOU a boca do túnel com pedra. As cartas lidas: a da Brara (a carta de Lumade TOMADA na estrada) e a da Nouliel (o cais, a petição do Porto, o chefe dos Olhos Pintados na torre velha da estrada sul, o milagre da Cisterna, Marasar, o shasha). Missões: o Eiagrir (o VDAEK, #1099) e a Eliane (a curandeira, #1100), até o 518. (OCULTO) o Círculo joga num SEGUNDO POÇO no 516 (#1095) · (OCULTO) MEOR na lua nova, 520 (#1098), sabendo os pontos fracos da muralha (a carta tomada era do Celocus) · (OCULTO) a gente da LIGA chega a Lumade atrás do livro no 521 (#1096). Cofre 59.744.
 
 Antes (509, o entardecer em Lumade):
@@ -494,12 +497,14 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (509 → 514): 1a caçar os herdeiros com a casa · 2a caçar os Vrurn e vingar os dois · 3a ficar e defender Lumade com o Celocus (lidas juntas: a caça sai de Lumade e volta)
 - LG10 [6] os corpos inteiros, enterrados · RT10 7 o covil da ponte velha · HD10 [5] os herdeiros se partem · CR11 50 × 30 (seis Vrurn mortos, um fugiu) · LV10 [6], OU11 1.000 · +2.400 XP (o rei no 53) · o tick semanal do 511 · CI12 [6] · PH11 14 · RN13 7 (rendem-se) · IN13 [1] · TU14 ao meio-dia, o veneno; VG14 9 · FB14 [5] fraca · FB14c [3] · CE14 [4] · CH14 [2] (a torre velha) · RV11 (oculto).
 
+## RESPONDIDO (514 → 515): 1b os nove na cela ('não prendo vivos a terceira vez') · 2a o remédio · 3 'pergunta o que ele acha' (o Eiagrir) · 4a a guarda de Ireviel à torre velha · 5c o conselho, e a ordem do grão (G43) · 'um plano para voltar ao reino, urgente'
+- SB15 sucesso · RM15 EXTRAORDINÁRIO (40 doses; a surpresa: o carvoeiro do Círculo) · o Eiagrir (tracos: A+4, B+2) · RV12 [3], RV12r 4 (o Celocus recusa a Liga e conta) · RD15 (oculto) · a G43 escrita.
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. OS NOVE DA PRIMEIRA LIGA PRESOS DE NOVO (o Nutoccone e oito; o recado deles já vai à Liga; uns 15 soltos pelas aldeias do vale): a) julgá-los aqui, já ('prendam ou matem') · b) guardá-los na cela do Celocus até a casa voltar a Ireviel · c) mandá-los a Levis com gente do Celocus (o pacto) · d) outra (e dizer dos 15 do vale).
-2. O VENENO DO POÇO (a missão da curandeira, até o 518; o túnel tapado pelo Celocus): a) o rei estuda a água e faz um remédio · b) destapar a boca e descer atrás do ramo do túnel · c) vigiar todos os poços de Lumade com a gente do Celocus (pode juntar).
-3. A MISSÃO DO EIAGRIR (o VDAEK, sangue Lendário de vento, nas gargantas; até o 518): a) a casa vai (sai de Lumade de novo) · b) o Eiagrir vai sozinho · c) recusar.
-4. O CHEFE DOS OLHOS PINTADOS (nas ruínas de uma torre velha, na estrada sul de Ireviel): a) a Nouliel manda a guarda de Ireviel buscá-lo · b) vigiar e esperar o rei · c) deixar.
-5. A PETIÇÃO DO PORTO DE MARASAR (grão do celeiro de Ireviel a preço velho; Levis com pouco grão): a) vender · b) recusar · c) o conselho decide.
+1. O PLANO DE VOLTA AO REINO (Lumade a Levis: 4 dias a pé, 2 a cavalo; Levis a Ireviel: 3 de barca): a) A CASA TODA JUNTA na aurora do 516 (a carroça com a Matriz e a Eliane; os 18 presos a pé; Levis no 520, Ireviel no 523) · b) O REI NA FRENTE (recomendado): o rei, o Moreth e o Eiagrir a cavalo, com o livro, os núcleos e o Martelo (Levis no 518, Ireviel no 521); a carroça com a Matriz, o Gonde, a Eliane (de pé no 517), os feridos e os presos sai no 517, com uma escolta do Celocus pelo pacto (Ireviel por volta do 524) · c) DEPOIS DA LUA NOVA (ficar até o 521; Ireviel por volta do 528) · e dizer: os presos vão ou ficam com o Celocus?
+2. A CASA VAZIA JUNTO À MURALHA (o carvoeiro do Círculo; o sal de areia): a) a casa a revista esta noite (se houver luta, a G9 antes) · b) a gente do Celocus · c) vigiar e seguir.
+3. O NUTOCCONE (tentou comprar a fuga pela grade; não fugiu): a) a palavra vale: morte · b) não fugiu: segue preso, sem falar com ninguém · c) o julgamento em Ireviel.
+4. O VDAEK (o Eiagrir quer que a casa vá; as gargantas ficam a um dia ao norte da estrada do leste): a) o desvio de um dia no caminho · b) não.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

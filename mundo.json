@@ -4085,6 +4085,17 @@
    "chegada": "[1] hoje",
    "resumo": "EMBAIXADA OU VISITA de terra distante — Kasra (terra nova) (Orade)",
    "toca": false
+  },
+  {
+   "dia": 515,
+   "d20": 13,
+   "o_que": "EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)",
+   "onde": "d27 [7] Kremir",
+   "detalhe": "nome: Nesol\ndesejo: vingar um morto\nambição (relógio de 4): abrir o próprio negócio\nmedo: a solidão\nsegredo: ama alguém proibido\nlinha vermelha: nunca volta atrás numa palavra dada\ndilema que vai chegar: cumprir a palavra vai custar a casa dele\ntraços: RELIGIOSO e COVARDE\n————————————————————————————————————————",
+   "noticia_chega": 519,
+   "chegada": "[4] em 1d6 [4] dias",
+   "resumo": "EMBAIXADA OU VISITA de terra distante — Kremir (Nesol)",
+   "toca": false
   }
  ]
 }

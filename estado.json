@@ -1,11 +1,11 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 514,
-  "hora": "noite",
+  "dia": 515,
+  "hora": "amanhecer",
   "local": "Lumade",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 3,
+  "pressao": 4,
   "primeiro_tick_semanal": 518,
   "limiar_pressao": 5,
   "proxima_auditoria": 518

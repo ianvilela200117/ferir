@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 53,
- "xp": 138490,
+ "xp": 138640,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -23,7 +23,7 @@
   275
  ],
  "mana": [
-  120,
+  105,
   120
  ],
  "foco": 16,
@@ -68,7 +68,7 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 59744,
+ "cofre": 59574,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
@@ -513,6 +513,18 @@
    "valor": 1000,
    "motivo": "511: o ouro dos mercadores no covil dos Vrurn (OU11)",
    "saldo": 59744
+  },
+  {
+   "dia": 515,
+   "valor": -200,
+   "motivo": "515: ervas e sal limpo para o remédio do poço (RM15)",
+   "saldo": 59544
+  },
+  {
+   "dia": 515,
+   "valor": 30,
+   "motivo": "515: a missão da curandeira de Lumade (o remédio)",
+   "saldo": 59574
   }
  ],
  "materiais": {
@@ -877,8 +889,6 @@
   }
  },
  "xp_log": [
-  "Dia 484: SOBE ao 12",
-  "Dia 488: +920 488: o YOLORVUS (Épico 92 de Luz), na gruta do penhasco",
   "Dia 488: SOBE ao 13",
   "Dia 491: +50000 492: A CISTERNA QUE COME A FEBRE (Primordial)",
   "Dia 491: SOBE ao 14",
@@ -937,7 +947,8 @@
   "Dia 508: SOBE ao 52",
   "Dia 508: +2000 508: a encosta do vale de cima (o Círculo destroçado; 4 caídos, nível 50; o chefe fugiu)",
   "Dia 510: +2400 511: os Vrurn no covil da ponte velha (CR11; 6 trolls nível 40)",
-  "Dia 510: SOBE ao 53"
+  "Dia 510: SOBE ao 53",
+  "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

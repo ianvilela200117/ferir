@@ -272,6 +272,13 @@ O dado já é duro. A G42 faz o mundo USAR o que tem contra a casa, e faz a vit�
 - **(4) SEM ALÍVIO.** Nada se rola de novo, e nada se salva no grito. A Lei das Caçadas é do rei: protege as decisões dele, não o mundo.
 - **O equilíbrio:** a reviravolta nasce do que a casa fez e do que o mundo sabe. O sucesso grande continua grande; só deixa de ser grátis.
 
+### G43 — A ORDEM DO GRÃO (Dia 515, palavra do rei: "não deixem as cidades passarem fome; comprem grão com ouro se necessário"; o jogador foi avisado)
+- **O que é:** ordem de pé para a Intendente e os governadores. O SOCORRO DE COMIDA do reino.py (400 por semana, cidade com Comida abaixo de 2) segue como antes: impede a fome, mas não sobe o pilar.
+- **A COMPRA DE GRÃO:** quando a ordem chega à cidade, quem governa compra grão a ouro por **duas semanas, 1.000 de uma vez** (ficha.py cofre), e a cidade ganha **Comida +1 na rolagem** por esse tempo (`reino.py mod CIDADE Comida 1 "a ordem do grão, até o N"`, que vence sozinho).
+- Vale para toda cidade do reino que começar a semana com **Comida 1 ou menos**. Com Comida 2 ou mais, a compra para.
+- **O custo:** o mercado da semana pesa. Com o índice do grão acima de 150 naquela cidade, as duas semanas custam 1.500.
+- **A ordem viaja.** Ela só vale onde chegou: por carta, por enviado, ou pela boca do rei.
+
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).
 - **O `luta.py` agora roda:** regeneração (a fraqueza corta) · o olhar e a teia que prendem · as fases dos chefes · pele que devolve · enxame · agarra · sangue que queima · casca que racha · duas vidas · come magia · faro de ferida · dono de território · cria no ventre · devora metal · os efeitos das Artes (derruba, quebra-guarda, sangra, ignora RD) · o veneno do golpe de um aliado · a palavra do servo que se rompe · o Segundo Coração · a RD contra uma Essência (Pele do Mundo) · a Voz de Mando.

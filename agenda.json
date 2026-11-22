@@ -1,5 +1,5 @@
 {
- "prox_id": 1101,
+ "prox_id": 1102,
  "itens": [
   {
    "id": 1,
@@ -15629,7 +15629,7 @@
    "oculto": true,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -15662,8 +15662,23 @@
    "oculto": false,
    "para": false,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
+  },
+  {
+   "id": 1101,
+   "dia": 519,
+   "texto": "EMBAIXADA OU VISITA de terra distante — Kremir (Nesol)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 515",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    5,
+    "EXAGERADA: chega maior do que foi"
+   ]
   }
  ],
  "fios": [

@@ -1,0 +1,56 @@
+[05:45:31] Dia 515 · Pressão 4/5 · evento local 1d20 [5] -> nada
+  O TEMPO (26 da Lua do Vinho de 1013 d.S., Colheita)
+   Ireviel: limpo, vento firme (d6 [1] fica · vento d6 [5])
+   o Porto de Marasar: neblina, calmo (d6 [6] muda, d20 [11] · vento d6 [1]) → vê-se a 30 passos: emboscada e fuga ficam fáceis, tiro longo fica difícil, barca grande anda devagar
+   Levis: limpo, calmo (d6 [4] muda, d20 [3] · vento d6 [2])
+   Farenta: nublado, brisa (d6 [3] fica · vento d6 [3])
+   O RIO: baixo [34/100] · MUDOU: era normal
+  avistamento de monstro 1d20 [2] -> alguém vê um · tabela 1d5 [2] Irasa
+  Fortuna volta ao máximo
+  FERIDO: Eliane (SÉRIO: de cama; não luta) até o Dia 517
+  O MUNDO SE MOVE — Dia 515 (dia)
+    d20 [13] EMBAIXADA OU VISITA de terra distante (quer comprar, aliar-se ou espiar)
+    ONDE: d27 [7] Kremir
+    A NOTÍCIA: [4] em 1d6 [4] dias
+    nome: Nesol
+    desejo: vingar um morto
+    ambição (relógio de 4): abrir o próprio negócio
+    medo: a solidão
+    segredo: ama alguém proibido
+    linha vermelha: nunca volta atrás numa palavra dada
+    dilema que vai chegar: cumprir a palavra vai custar a casa dele
+    traços: RELIGIOSO e COVARDE
+    ————————————————————————————————————————
+    ——
+  O MUNDO VIVO — Dia 515
+    Lendários: d20 [18] quietos hoje
+    trama do dia: Celocus → Kreium (preso) (RESSENTIMENTO) d20 [4] nada visível
+    FAÍSCA: Fatolli (do Delta, HONESTO e TEIMOSO; fez um pacto; quer derrubar quem humilhou a família; abrigado pela Nialla, 301) ama em segredo Adurel, por causa de uma terra além do mapa
+    FAÍSCA: Kreium (preso) rouba de a irmã Oisse, por causa de fome
+    FAÍSCA: Dovan quer casar com Tano (carregador, primo da Caciccetta), por causa de uma receita perdida
+  G39 — PENDÊNCIAS (encadeia.py pendencias):
+    ⚠ PRAZO em 1 dia(s) (#1095, Dia 516): (OCULTO: o texto está na agenda e no envelope; não vai à mesa)
+    ⚠ PRAZO em 0 dia(s) (#1097, Dia 515): (OCULTO: o texto está na agenda e no envelope; não vai à mesa)
+    ⚠ PRAZO em 3 dia(s) (#1099, Dia 518): MISSÃO DO EIAGRIR (a surpresa da semana, 511): o mercador da estalagem do sul paga 100 de ouro e mais (a dizer ao fim) por um frasco de VDAEK, sangue Lendário d
+    ⚠ PRAZO em 3 dia(s) (#1100, Dia 518): MISSÃO DA ELIANE (a surpresa da semana): a curandeira de Lumade pede à casa o que era o veneno do poço da praça e um remédio, se voltar; prazo dito: até o 518 (
+    ⚠ Moua: a Prova da faixa Incomum ainda por passar (o próximo tick tenta)
+    ⚠ Gundald: a Prova da faixa Incomum ainda por passar (o próximo tick tenta)
+  ▶ AGENDA #499 (era do Dia 442): GUILDA — o Círculo da Areia Cantante (Yaelane; chefe Meor, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: tomar LUMADE (a cidade do Celocus)
+  ▶ AGENDA #565 (era do Dia 442): FACÇÃO — os Filhos do Livro (Ireviel) oferece ajuda ou aliança à casa. O que querem: famílias dos barqueiros do Livro; pediram para ir à guerra contra a Liga
+  ▶ AGENDA #571 (era do Dia 442): FACÇÃO — os Caçadores Livres (Ireviel e as matas do rio) pede audiência ao conselho. O que querem: os caçadores velhos de Ireviel que perderam a caça para a Guilda dos Aventureiros (412); vendem rastro de bicho a quem pagar mais
+  ▶ AGENDA #573 (era do Dia 448): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #580 (era do Dia 449): (FIO, sem dia certo) QUANDO A ELIANE VOLTAR A IREVIEL: o conselho VOTA DE NOVO o Édito da Ronda (ordem do rei, 441: 5c) · e a PROMESSA à Luz do Cais: o Moreth vai uma vez ao cais deles, no porto de Marasar (quebrar: −15 com eles)
+  ▶ AGENDA #626 (era do Dia 449): FACÇÃO — a Guilda dos Salineiros do Delta (o Delta) oferece ajuda ou aliança à casa. O que querem: salineiros que saem do exército de bandidos e querem vender só a Ireviel
+  ▶ AGENDA #701 (era do Dia 456): FACÇÃO — os da Moeda Velha (Ireviel (o cais e o bairro dos refugiados)) pede audiência ao conselho. O que querem: refugiados e credores pequenos que guardam moeda e notas velhas da Liga; querem que as dívidas da Liga sejam pagas com os bens que a coroa confiscou; o ODRUM fa
+  ▶ AGENDA #772 (era do Dia 470): GUILDA — a Torre dos Sete Véus (Yaelane; chefe Mave, 175) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: acabar com a ORDEM DA TOCHA BRANCA
+  ▶ AGENDA #819 (era do Dia 470): FACÇÃO — os da Cinza (Ireviel velha) ameaça ou sabota a casa (pequeno, mas visível). O que querem: famílias da Noite das Torres que ficaram com o mago depois da sentença dividida (396); querem a mão do Herkald
+  ▶ AGENDA #861 (era do Dia 477): FACÇÃO — a Botica Velha (Farenta) pede audiência ao conselho. O que querem: boticários que perderam a venda quando o remédio da casa correu o rio
+  ▶ AGENDA #865 (era do Dia 477): FACÇÃO — os da Chama da Hoste (Ireviel) oferece ajuda ou aliança à casa. O que querem: os magos da hoste viram irmandade (o Bjarkunn)
+  ▶ AGENDA #871 (era do Dia 483): GUILDA — as Mãos de Breu (Qulosus; chefe Zazess, 275) propõe um negócio à casa (uma peça da forja, um contrato). O que quer: dominar o RIO DE IREVIEL (o comércio, o contrabando, a portagem)
+  ▶ AGENDA #911 (era do Dia 484): FACÇÃO — os da Mão Queimada (Telosus) pede audiência ao conselho. O que querem: as harpias Kraek e os que sobraram do povo que a Elaeva matou, na fé da MAMILTIA
+  ▶ AGENDA #919 (era do Dia 485): (OCULTO até chegar) A NOTÍCIA DE IREVIEL sobe o rio ao rei: o boato 'o rei perdeu a força em Dragal' e as portas pintadas 'o rei caiu' pelos da Cinza (GO83 [4]); Ordem −1 até o rei voltar
+  ▶ AGENDA #918 (era do Dia 487): [OCULTO] (OCULTO) CHEGA A CARTA DA ALMISION ao rei: pede os AROS DA ELIANE em troca de um favor grande (CB83a [2])
+  ▶ AGENDA #946 (era do Dia 491): FACÇÃO — os Jurados de Steunn (Steunn, em volta do Lumdun) pede audiência ao conselho. O que querem: os clãs de cima juram pelo herdeiro perdido dos Steunn
+  ▶ AGENDA #990 (era do Dia 498): FACÇÃO — os da Mina Fechada (Levis) oferece ajuda ou aliança à casa. O que querem: mineiros de Levis que querem fechar as minas de cima (a febre cinza e a Que Come a Pedra); o Odrum fala por eles
+  ▶ AGENDA #1097: [OCULTO] (OCULTO) O RECADO DO NUTOCCONE CHEGA AO PORTO DE MARASAR (MS11 [1]): 'o livro de sangue está com o rei de Ireviel, em Lumade' (a casa SABE que o cavaleiro saiu, IN13 [1])
+  ✉ NOTÍCIA QUE CHEGA HOJE: Higrunn (Steunn): oferece um acordo a um rival (paz, casamento, troca) · COMO CHEGA: d20 [11] FIEL
