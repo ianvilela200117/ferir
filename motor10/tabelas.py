@@ -4,12 +4,12 @@ Nenhum outro script do Motor 10 traz número de regra. Mudar o jogo é mudar est
 se uma meta do banco de provas quebra, a mudança não entra.
 
 A ESCALA (a regra de ouro do Motor 10, "o item decide"):
-  cada categoria vale 2,5 vezes a de baixo, na arma E na armadura, e o que conta é a DIFERENÇA entre as duas.
+  cada categoria vale o TRIPLO da de baixo, na arma E na armadura, e o que conta é a DIFERENÇA entre as duas.
     dano = dado × K_DANO × valor da arma ÷ proteção da parte atingida, vezes a força de quem bate
     mesma categoria ......... o golpe passa inteiro (× 1)
-    arma UMA acima .......... × 2,5          armadura UMA acima ....... × 0,4
-    arma DUAS acima ......... × 6            armadura DUAS acima ...... × 0,16
-    arma TRÊS acima ......... × 15           armadura TRÊS acima ...... quase nada (só o crítico arranha)
+    arma UMA acima .......... × 3            armadura UMA acima ....... um terço
+    arma DUAS acima ......... × 9            armadura DUAS acima ...... um nono
+    arma TRÊS acima ......... × 27           armadura TRÊS acima ...... quase nada (só o crítico arranha)
   Por isso um duelo entre iguais dura o mesmo em qualquer degrau, e quem está mal armado não fere quem está bem vestido.
 """
 
@@ -17,11 +17,11 @@ CATS = ['Comum', 'Incomum', 'Raro', 'Épico', 'Único', 'Lendário', 'Mítico', 
 ATRIBUTOS = ['Força', 'Agilidade', 'Vigor', 'Vontade', 'Percepção', 'Afinidade']
 
 # ---------- a categoria ----------
-MULT = [1, 2.5, 6, 15, 40, 100, 250, 600]      # o valor da arma
-RD = [1, 2.5, 6, 15, 40, 100, 250, 600]        # a proteção da armadura de MALHA: DIVIDE o golpe (couro e placa: MATERIAIS)
+MULT = [1, 3, 9, 27, 81, 243, 729, 2187]       # o valor da arma: o triplo a cada categoria
+RD = [1, 3, 9, 27, 81, 243, 729, 2187]         # a proteção da armadura de MALHA: DIVIDE o golpe (couro e placa: MATERIAIS)
 NU = 0.4                                       # a proteção de uma parte sem armadura (um degrau abaixo do Comum)
 K_DANO = 4.5                                   # o tamanho do golpe entre iguais (afina a duração da luta)
-BON = [0, 3, 6, 9, 12, 15, 18, 21]             # acerto (arma) e Defesa (escudo; ou metade, ao aparar com a arma)
+BON = [0, 4, 8, 12, 16, 20, 24, 28]            # acerto (arma) e Defesa (escudo; ou metade, ao aparar com a arma)
 DUR = [10, 20, 30, 40, 50, 60, 80, 100]        # durabilidade de uma peça nova
 
 # ---------- as armas ----------
@@ -72,9 +72,9 @@ SINTONIA_DESDE = 3          # índice da categoria Épico
 DEF_BASE = 24               # Defesa = isto + Agilidade ÷ 20 + maestria ÷ 2 + escudo (ou metade do bônus da arma)
 def acerto_base(maestria, forca, agil): return maestria + (forca // 10 + agil // 10) / 4
 def defesa_base(maestria, agil): return DEF_BASE + (agil // 10) / 2 + maestria / 2
-def pv_max(vigor, nivel): return vigor * 2 + nivel // 2
+def pv_max(vigor, nivel): return vigor * 2 + nivel // 4
 def folego_max(vigor): return 6 + vigor // 10
-def forca_mult(atributo): return 1 + (atributo // 10) * 0.04      # a força empurra o que o aço abriu
+def forca_mult(atributo): return 1 + (atributo // 10) * 0.03      # a força empurra o que o aço abriu
 def acoes(maestria): return 2 + (1 if maestria >= 6 else 0) + (1 if maestria >= 8 else 0)
 def reacoes(maestria): return 1 + (1 if maestria >= 8 else 0)
 MAESTRIAS = {0: 'Leigo', 2: 'Iniciante', 4: 'Treinado', 6: 'Mestre', 8: 'Lendário'}

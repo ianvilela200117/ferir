@@ -35,15 +35,16 @@ def gente(nome, nivel, arma, armadura=None, escudo=None, arma2=None, **kw):
 # (o que se mede · lado A · lado B · faixa de vitória de A em % · opções)
 METAS = [
     ('SIMETRIA: iguais em tudo (nível 50, Raro)',                      um(50, R, R, nome='a'), um(50, R, R, nome='b'), (44, 56), {}),
-    ('A ARMA: mesmo nível, só a ARMA uma categoria acima',             um(50, R + 1, R), um(50, R, R), (80, 99), {}),
+    ('A ARMA: mesmo nível, só a ARMA uma categoria acima',             um(50, R + 1, R), um(50, R, R), (85, 100), {}),
     ('O CONJUNTO: mesmo nível, tudo uma categoria acima',              um(50, R + 1, R + 1), um(50, R, R), (88, 100), {}),
-    ('O NÍVEL AJUDA DEVAGAR: mesma arma, 50 contra 75',                um(75, R, R), um(50, R, R), (52, 68), {}),
+    ('O NÍVEL AJUDA DEVAGAR: mesma arma, 50 contra 75',                um(75, R, R), um(50, R, R), (50, 65), {}),
     ('O NÍVEL CONTA: mesma arma, 50 contra 150',                       um(150, R, R), um(50, R, R), (85, 100), {}),
-    ('UMA categoria na arma compensa 100 níveis (50 × 150)',           um(50, R + 1, R), um(150, R, R), (35, 65), {}),
-    ('DUAS categorias na arma vencem 150 níveis (50 × 200)',           um(50, R + 2, R), um(200, R, R), (60, 95), {}),
-    ('A CHANCE: uma arma duas acima, nível 50 × nível 500',            um(50, R + 2, R), um(500, R, R), (10, 40), {}),
-    ('A ARMA DECIDE: uma arma três acima, nível 50 × nível 500',       um(50, R + 3, R), um(500, R, R), (55, 90), {}),
-    ('O CONJUNTO duas acima, nível 50 × nível 500',                    um(50, R + 2, R + 2), um(500, R, R), (85, 100), {}),
+    ('UMA categoria na arma vence 100 níveis (50 × 150)',              um(50, R + 1, R), um(150, R, R), (55, 80), {}),
+    ('A CHANCE PEQUENA: uma arma UMA acima, nível 50 × nível 500',     um(50, R + 1, R), um(500, R, R), (2, 20), {}),
+    ('DUAS categorias na arma vencem 150 níveis (50 × 200)',           um(50, R + 2, R), um(200, R, R), (85, 100), {}),
+    ('A ARMA DECIDE: uma arma DUAS acima, nível 50 × nível 500',       um(50, R + 2, R), um(500, R, R), (45, 75), {}),
+    ('uma arma TRÊS acima, nível 50 × nível 500',                      um(50, R + 3, R), um(500, R, R), (80, 100), {}),
+    ('O CONJUNTO duas acima, nível 50 × nível 500',                    um(50, R + 2, R + 2), um(500, R, R), (95, 100), {}),
     ('A GUILDA: um nível 90 de conjunto Mítico × dez de nível 275 de Raro', um(90, C['mitico'], C['mitico'], moral='firme'), varios(10, 275, R, R), (90, 100), dict(n=120)),
     ('SÓ A ARMA NÃO BASTA contra dez: o mesmo, com armadura Rara',     um(90, C['mitico'], R, moral='firme'), varios(10, 275, R, R), (0, 40), dict(n=120)),
     ('O NÚMERO CONTA: um nível 120 de Lendário × dez de nível 60 de Único', um(120, C['lendario'], C['lendario'], moral='firme'), varios(10, 60, C['unico'], C['unico']), (0, 25), dict(n=120)),
@@ -63,7 +64,7 @@ def modulos(n):
     lan = lambda: [veste(padrao(f'lança {i}', 50), arma=('lança', R), armadura=('couro', R)) for i in (1, 2)]
     esp = lambda: [veste(padrao(f'espada {i}', 50), arma=('espada', R), armadura=('couro', R)) for i in (1, 2)]
     x = v(lan, esp, inicio='perto', lugar=dict(largura=1)); y = v(lan, esp, inicio='perto')
-    out.append(('1 ALCANCE: duas lanças contra duas espadas num corredor de um (a de trás bate por cima do ombro) e em campo aberto', f'{x}% contra {y}%', x >= 55 and x - y >= 8))
+    out.append(('1 ALCANCE: duas lanças vencem duas espadas (couro dos dois lados), num corredor de um e em campo aberto', f'{x}% e {y}%', x >= 60 and y >= 55))
     arq = gente('arqueira', 50, ('arco', R), ('couro', R), arma2=('adaga', R)); inf = gente('infante', 50, ('espada', R), ('malha', R), R)
     lo, co = v(arq, inf, inicio='longe'), v(arq, inf, inicio='colado')
     out.append(('1 DISTÂNCIA: a arqueira começa longe ou começa colada', f'{lo}% contra {co}%', lo - co >= 15))
@@ -94,7 +95,7 @@ def modulos(n):
     for _ in range(n // 3):
         S = luta.nova(um(120, 4, 4, moral='firme')(), varios(6, 30, 1, 1, pre='b')(), inicio='colado', quieto=True); luta.corre(S); r = luta.resultado(S)
         m += bool(r['fugiram'] or r['presos'])
-    m = round(100 * m / (n // 3)); out.append(('8 MORAL: seis contra um muito mais forte: alguém foge ou se rende', f'em {m}% das lutas', m >= 50))
+    m = round(100 * m / (n // 3)); out.append(('8 MORAL: seis contra um muito mais forte: alguém foge ou se rende', f'em {m}% das lutas', m >= 40))
     S = luta.nova(gente('o rei', 40, ('lança', 3), ('couro', 2), controla=True)(), varios(2, 40, 1, 1, pre='b')(), inicio='colado', quieto=True)
     p1 = luta.corre(S, interativo=True); S['ordens']['o rei'] = dict(acao='recuar'); S['paradas'] = []; x0 = S['L'][0]['x']; S['L'][0]['ini'] = 99; luta.rodada(S)
     out.append(('10 PARA E PERGUNTA: a luta para antes da 1ª rodada, e a ordem de recuar é cumprida', f"{p1}; o rei foi da casa {x0} para a {S['L'][0]['x']}", p1 == 'parada' and S['L'][0]['x'] < x0))

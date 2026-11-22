@@ -15,7 +15,7 @@ Os números moram todos no `tabelas.py`. Nenhuma regra vale antes de passar no b
 
 1.1 **Atributos.** Seis entram na luta: Força, Agilidade, Vigor, Vontade, Percepção, Afinidade. O bônus de um atributo é o atributo ÷ 10.
 
-1.2 **Nível.** Cada nível dá 1 ponto de atributo e meio ponto de PV. Fora isso, o nível não soma em nada na luta: nem no acerto, nem no dano, nem nas ações.
+1.2 **Nível.** Cada nível dá 1 ponto de atributo e um quarto de ponto de PV. Fora isso, o nível não soma em nada na luta: nem no acerto, nem no dano, nem nas ações.
 
 1.3 **Maestria** na arma: Leigo 0, Iniciante 2, Treinado 4, Mestre 6, Lendário 8. Vem de treino e de feito, não de nível.
 
@@ -23,11 +23,11 @@ Os números moram todos no `tabelas.py`. Nenhuma regra vale antes de passar no b
 
 | | Conta |
 | --- | --- |
-| PV | Vigor × 2 + nível ÷ 2 |
+| PV | Vigor × 2 + nível ÷ 4 |
 | Fôlego | 6 + bônus de Vigor |
 | Acerto | maestria + (bônus de Força + bônus de Agilidade) ÷ 4 + o bônus da arma |
 | Defesa | 24 + bônus de Agilidade ÷ 2 + maestria ÷ 2 + o bônus do escudo (sem escudo: metade do bônus da arma, ao aparar) |
-| Força do golpe | o dano vezes 1 + 0,04 por ponto de bônus de Força (arco: Agilidade) |
+| Força do golpe | o dano vezes 1 + 0,03 por ponto de bônus de Força (arco: Agilidade) |
 | Ações por rodada | 2; Mestre 3; Lendário 4 |
 | Reações por rodada | 1; Lendário 2 |
 
@@ -42,24 +42,24 @@ Os números moram todos no `tabelas.py`. Nenhuma regra vale antes de passar no b
 | Categoria | Valor (arma e armadura) | Bônus (acerto ou Defesa) | Durabilidade |
 | --- | --- | --- | --- |
 | Comum | 1 | 0 | 10 |
-| Incomum | 2,5 | +3 | 20 |
-| Raro | 6 | +6 | 30 |
-| Épico | 15 | +9 | 40 |
-| Único | 40 | +12 | 50 |
-| Lendário | 100 | +15 | 60 |
-| Mítico | 250 | +18 | 80 |
-| Primordial | 600 | +21 | 100 |
+| Incomum | 3 | +4 | 20 |
+| Raro | 9 | +8 | 30 |
+| Épico | 27 | +12 | 40 |
+| Único | 81 | +16 | 50 |
+| Lendário | 243 | +20 | 60 |
+| Mítico | 729 | +24 | 80 |
+| Primordial | 2.187 | +28 | 100 |
 
-2.3 **A regra de ouro: o item decide.** Cada categoria vale 2,5 vezes a de baixo, e o que conta é a **diferença** entre a arma de quem bate e a armadura de quem apanha:
+2.3 **A regra de ouro: o item decide.** Cada categoria vale o triplo da de baixo, e o que conta é a **diferença** entre a arma de quem bate e a armadura de quem apanha:
 
 | A arma está… | O golpe vale |
 | --- | --- |
 | na mesma categoria da armadura | × 1 |
-| uma acima | × 2,5 |
-| duas acima | × 6 |
-| três acima | × 15 |
-| uma abaixo | × 0,4 |
-| duas abaixo | × 0,16 |
+| uma acima | × 3 |
+| duas acima | × 9 |
+| três acima | × 27 |
+| uma abaixo | um terço |
+| duas abaixo | um nono |
 | três abaixo ou mais | quase nada (só o crítico arranha) |
 
 Parte do corpo sem armadura conta como um degrau abaixo do Comum.
@@ -216,22 +216,23 @@ As metas de hoje (a medição completa está em `dados/provas_saida.txt`):
 
 | O que se mede | Meta | Medido |
 | --- | --- | --- |
-| iguais em tudo | 44 a 56% | 53% |
-| mesmo nível, só a arma uma categoria acima | 80 a 99% | 93% |
+| iguais em tudo | 44 a 56% | 52% |
+| mesmo nível, só a arma uma categoria acima | 85 a 100% | 96% |
 | mesmo nível, o conjunto uma categoria acima | 88 a 100% | 100% |
-| mesma arma, nível 75 contra 50 | 52 a 68% | 57% |
-| mesma arma, nível 150 contra 50 | 85 a 100% | 96% |
-| uma categoria na arma contra 100 níveis (50 × 150) | 35 a 65% | 51% |
-| duas categorias na arma contra 150 níveis (50 × 200) | 60 a 95% | 86% |
-| **uma arma duas acima, nível 50 × nível 500** | 10 a 40% | **28%** |
-| **uma arma três acima, nível 50 × nível 500** | 55 a 90% | **76%** |
-| o conjunto duas acima, nível 50 × nível 500 | 85 a 100% | 100% |
+| mesma arma, nível 75 contra 50 | 50 a 65% | 52% |
+| mesma arma, nível 150 contra 50 | 85 a 100% | 95% |
+| uma categoria na arma contra 100 níveis (50 × 150) | 55 a 80% | 70% |
+| uma arma uma acima, nível 50 × nível 500 | 2 a 20% | 6% |
+| duas categorias na arma contra 150 níveis (50 × 200) | 85 a 100% | 94% |
+| **uma arma duas acima, nível 50 × nível 500** | 45 a 75% | **59%** |
+| **uma arma três acima, nível 50 × nível 500** | 80 a 100% | **86%** |
+| o conjunto duas acima, nível 50 × nível 500 | 95 a 100% | 100% |
 | um nível 90 de conjunto Mítico × dez de nível 275 de Raro | 90 a 100% | 100% |
 | o mesmo, só com a arma Mítica | 0 a 40% | 0% |
-| um nível 120 de Lendário × dez de nível 60 de Único | 0 a 25% | 1% |
+| um nível 120 de Lendário × dez de nível 60 de Único | 0 a 25% | 2% |
 | um nível 120 de Lendário × dez soldados Comuns | 97 a 100% | 100% |
 | duração de um duelo entre iguais | 4 a 9 rodadas | 4 |
-| duração de cinco contra cinco | 4 a 12 rodadas | 7 |
+| duração de cinco contra cinco | 4 a 12 rodadas | 8 |
 
 Mais onze provas de módulo: o alcance, a distância, o escuro, o corredor, o golpe contra a armadura, o requisito, o sob medida, a sintonia, a durabilidade, a moral, e a luta que para e obedece à ordem.
 
