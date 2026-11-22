@@ -4096,6 +4096,29 @@
    "chegada": "[4] em 1d6 [4] dias",
    "resumo": "EMBAIXADA OU VISITA de terra distante — Kremir (Nesol)",
    "toca": false
+  },
+  {
+   "dia": 516,
+   "d20": 7,
+   "o_que": "ROTA DE COMÉRCIO abre ou fecha (1d6: 1-3 abre · 4-6 fecha), mudando preços · 1d6 [1]",
+   "onde": "d27 [11] Mordun (a Boca com Fome)",
+   "detalhe": "",
+   "noticia_chega": 516,
+   "chegada": "[1] hoje",
+   "leitura": "abre",
+   "resumo": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Mordun (a Boca com Fome)",
+   "toca": false
+  },
+  {
+   "dia": 517,
+   "d20": 11,
+   "o_que": "UM CULTO CRESCE ou nasce",
+   "onde": "d27 [6] Gogrunn (as minas)",
+   "detalhe": "nome: Culto da Kreine\nadora: um Lendário morto\npromete: vingança\nsinal: cheiro de incenso\ncélulas: 3 cidades\nlíder: nível 150, classe Rara a Lendária\nrito: febre\nplano (relógio de 6): espalhar uma praga\nfraqueza: um membro quer sair\n————————————————————————————————————————",
+   "noticia_chega": 523,
+   "chegada": "[5] em 1d6 [6] dias",
+   "resumo": "UM CULTO CRESCE ou nasce — Gogrunn (as minas) (Culto da Kreine)",
+   "toca": false
   }
  ]
 }

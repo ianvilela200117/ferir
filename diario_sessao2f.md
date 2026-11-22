@@ -2548,3 +2548,40 @@ Esperou um pouco.
 "A Liga me fechou a porta uma vez. Hoje fui eu que fechei."
 
 - **Parada:** noite do 515, Lumade. O remédio pronto. O carvoeiro na casa vazia junto à muralha. O cavaleiro com as cartas do rei sai na aurora. O plano de volta ao reino espera a palavra do rei.
+
+## Dias 515 (noite) a 517 — o porão, a estrada, as gargantas (as respostas: 1a a casa toda junta · 2a a batida na casa vazia · 3c o Nutoccone a julgamento em Ireviel · 4a o vdaek)
+- **Rolagens:** CV15 [3] · CR15 a casa [11]+48 = 59 × o Círculo [15]+24 = 39: destroçados; CR15c [1] um fugiu pelo ramo · CR15f [6] · CE16 [6]+2 = 8 · RD16v [2] · PN16 [6] · MG17 [4] · AP17 [5] · SP16, RD16, RV13 (rolagens ocultas).
+
+### O porão, a noite do 515
+A casa vazia tinha a porta presa com arame por dentro. O Moreth a abriu com o ombro.
+
+Embaixo, no porão, havia uma panela no fogo baixo, um saco de sal cinzento e um buraco no chão, do tamanho de um homem, com uma escada de corda descendo para o escuro.
+
+Eram quatro. A luta durou o tempo de uma respiração. O maior deles se jogou no buraco e a corda balançou vazia.
+
+Ficaram três no chão: um morto, o carvoeiro e outro, amarrados.
+
+Ninguém dormiu. Na aurora, a gente do Celocus encheu o buraco de pedra.
+
+### A despedida, aurora do 516
+O Celocus estava no portão do leste com quatro cavaleiros e dois cavalos de tiro já arreados.
+
+"Até Levis", disse. "Os cavalos ficam com o senhor."
+
+### A estrada, 516
+A meio dia de Lumade, os corvos estavam numa vala na beira da estrada.
+
+Era o cavaleiro das cartas. Tinha duas flechas nas costas. O cavalo não estava ali, nem a bolsa.
+
+Enterraram-no também.
+
+### As gargantas, 517
+A carroça ficou na estrada, no lugar da emboscada, com o Gonde, a Eliane já de pé, os feridos, os cavaleiros do Celocus e os vinte presos.
+
+O rei, o Moreth e o Eiagrir desceram para as gargantas. Ao meio-dia o chão tremeu debaixo das botas, de leve, como respiração.
+
+No fundo de uma garganta seca, onde o rio já não passa, havia uma coisa verde e escura do tamanho de uma casa, enrolada em si mesma como uma raiz. Por baixo dela saía uma asa enorme, de penas cinzentas, e uma mancha de sangue velho na pedra.
+
+A coisa dormia. A cada respiração dela, a pedra tremia.
+
+- **Parada:** meio-dia do 517, as gargantas. O bicho dorme em cima do vdaek. Antes de qualquer luta, a palavra do rei (G9).

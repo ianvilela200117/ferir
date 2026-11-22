@@ -1,5 +1,5 @@
 {
- "prox_id": 1102,
+ "prox_id": 1105,
  "itens": [
   {
    "id": 1,
@@ -15607,7 +15607,7 @@
    "oculto": true,
    "para": true,
    "origem": "mestre",
-   "feito": false,
+   "feito": true,
    "toca": true
   },
   {
@@ -15679,6 +15679,47 @@
     5,
     "EXAGERADA: chega maior do que foi"
    ]
+  },
+  {
+   "id": 1102,
+   "dia": 516,
+   "texto": "ROTA DE COMÉRCIO abre ou fecha, mudando preços: abre — Mordun (a Boca com Fome)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 516",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    20,
+    "FIEL"
+   ]
+  },
+  {
+   "id": 1103,
+   "dia": 523,
+   "texto": "UM CULTO CRESCE ou nasce — Gogrunn (as minas) (Culto da Kreine)",
+   "tipo": "noticia",
+   "oculto": false,
+   "para": false,
+   "origem": "mundo.py, tick 517",
+   "feito": false,
+   "toca": false,
+   "boato": [
+    2,
+    "FALSA: chega trocada (outro lugar, outro culpado ou o contrário do que houve)"
+   ]
+  },
+  {
+   "id": 1104,
+   "dia": 520,
+   "texto": "(OCULTO até a casa saber) NO GOLPE DE MEOR, o CÍRCULO LEVA A CURANDEIRA DE LUMADE (a receita do remédio; G42 RV13 [1], RV13e [5])",
+   "tipo": "marco",
+   "oculto": true,
+   "para": false,
+   "origem": "mestre",
+   "feito": false,
+   "toca": true
   }
  ],
  "fios": [

@@ -3,7 +3,7 @@
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
  "nivel": 53,
- "xp": 138640,
+ "xp": 140140,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
@@ -23,7 +23,7 @@
   275
  ],
  "mana": [
-  105,
+  120,
   120
  ],
  "foco": 16,
@@ -889,7 +889,6 @@
   }
  },
  "xp_log": [
-  "Dia 488: SOBE ao 13",
   "Dia 491: +50000 492: A CISTERNA QUE COME A FEBRE (Primordial)",
   "Dia 491: SOBE ao 14",
   "Dia 491: SOBE ao 15",
@@ -948,7 +947,8 @@
   "Dia 508: +2000 508: a encosta do vale de cima (o Círculo destroçado; 4 caídos, nível 50; o chefe fugiu)",
   "Dia 510: +2400 511: os Vrurn no covil da ponte velha (CR11; 6 trolls nível 40)",
   "Dia 510: SOBE ao 53",
-  "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)"
+  "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)",
+  "Dia 515: +1500 515: a casa vazia junto à muralha (CR15; três do Círculo, nível 50)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"

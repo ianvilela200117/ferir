@@ -1,4 +1,4 @@
-# RETOMAR — noite do Dia 515, LUMADE: o remédio; o carvoeiro na casa vazia; o plano de volta ao reino (MOTOR 9b: G1 a G43)
+# RETOMAR — meio-dia do Dia 517, AS GARGANTAS: o Bzuur dorme em cima do vdaek; a casa volta ao reino (MOTOR 9b: G1 a G43)
 
 ## Primeiro
 1. `python3 contexto.py` e ler o BRIEFING.md, o MESTRE.md e o protocolo_do_turno.md (o MOTOR 7.2 e as regras da casa G1 a G10 estão no fim dele).
@@ -8,6 +8,9 @@
 5. O save canônico é o do Dia 396 em diante. O bloco 379-384 rolado num chat antigo sobre o save velho foi ANULADO.
 
 ## Onde paramos
+Meio-dia do 517, AS GARGANTAS ao norte da estrada do leste (um dia a leste de Lumade), DENTRO DA REGRA G9: o BZUUR (Raro 68; sims/gargantas_517_base.json; planta do tamanho de uma casa, Silêncio; agarra e arrasta; o golpe sem som; FRACO A SOM (a Lança do Rio Limpo do Eiagrir é Vida e Som); (OCULTO) também água corrente; DORMINHOCO: acorda com barulho, sangue ou magia) DORME (AP17 [5]) enrolado por cima da carcaça do bicho de vento; o VDAEK debaixo. O rei NÍVEL 53 (XP 140.140; o 54 em 143.200), PV 275/275, Mana 120/120, Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6, sem Exaustão; o Moreth 235 (612), o Eiagrir 131 (434; XP para subir no 518). A CARROÇA na estrada, no lugar da emboscada: o Gonde e 2, a ELIANE DE PÉ (517), os 4 feridos, os QUATRO CAVALEIROS DO CELOCUS e dois cavalos de tiro (até Levis), a Matriz, o Martelo, o livro de sangue, a carta do conselho, 20 doses do remédio, os núcleos Épicos de Sorte e de Veneno; VINTE PRESOS: o NUTOCCONE e oito (3c: o julgamento em Ireviel; a palavra do rei: na terceira fuga, morte) e ONZE do Círculo (o Lior, o carvoeiro). O CAVALEIRO DAS CARTAS MORTO (as cartas tomadas: (OCULTO) pelo Círculo, RD16): a ordem do grão (G43), a torre velha (4a) e a petição (5c) NÃO CHEGARAM; o rei as dá de boca em Levis. O plano: Levis por volta do 520, Ireviel por volta do 523. (OCULTO) 518 tick semanal · 520 MEOR em Lumade (#1098) e a CURANDEIRA levada (#1104) · 521 a Liga em Lumade atrás do livro (#1096; a casa já saiu com ele). Cofre 59.574.
+
+Antes (515, a noite em Lumade):
 Noite do 515, LUMADE, a casa do Celocus. O rei NÍVEL 53 (XP 138.640; o 54 em 143.200), PV 275/275, Mana 105/120 (o Purificar com vela na panela, 15; a aurora a devolve), Visão 2/2, Erudito 1/1, Fortuna 3/3, Revés 4/6. O Moreth 235, o Eiagrir 131, a Eliane de cama até o 517, o Gonde e 2, os 4 guardas feridos. PRESOS na cela do Celocus: o NUTOCCONE e oito (a palavra do rei: 'não prendo vivo a terceira vez'; ele ofereceu ao Celocus uma cadeira na Liga pelo livro e pela fuga; o Celocus RECUSOU e contou) e os NOVE DO CÍRCULO (o Lior). O REMÉDIO: 40 doses, a receita com a curandeira, limpar um poço com sal e o Purificar (15), a dose que guarda uma semana. UM DO CÍRCULO (o carvoeiro) numa CASA VAZIA JUNTO À MURALHA. O cavaleiro com as cartas do rei sai na aurora do 516 (à Brara a ordem do grão, G43; à Nouliel a 4a e a 5c). O PLANO DE VOLTA AO REINO à espera da palavra do rei. (OCULTO) RD15 [1] o cavaleiro NÃO CHEGA · (OCULTO) 516 o segundo poço (#1095; a casa vazia pesa se for revistada antes) · 520 Meor (#1098) · 521 a Liga atrás do livro (#1096). Cofre 59.574.
 
 Antes (514, a noite em Lumade):
@@ -500,11 +503,11 @@ Antes (noite do 427, o cais; Levis ficou para depois por causa do rio cheio):
 ## RESPONDIDO (514 → 515): 1b os nove na cela ('não prendo vivos a terceira vez') · 2a o remédio · 3 'pergunta o que ele acha' (o Eiagrir) · 4a a guarda de Ireviel à torre velha · 5c o conselho, e a ordem do grão (G43) · 'um plano para voltar ao reino, urgente'
 - SB15 sucesso · RM15 EXTRAORDINÁRIO (40 doses; a surpresa: o carvoeiro do Círculo) · o Eiagrir (tracos: A+4, B+2) · RV12 [3], RV12r 4 (o Celocus recusa a Liga e conta) · RD15 (oculto) · a G43 escrita.
 
+## RESPONDIDO (515 → 517): 1a a casa toda junta · 2a a batida na casa vazia · 3c o Nutoccone a julgamento em Ireviel · 4a o desvio do vdaek
+- CV15 [3] · CR15 59 × 39 (um morto, dois presos, um fugiu pelo ramo) · +1.500 XP · sem sono · CE16 8 (quatro cavaleiros e dois cavalos) · RD16v [2] o cavaleiro morto · PN16 [6] · MG17 Raro (o Bzuur) · AP17 [5] dorme · SP16, RD16, RV13 (ocultos).
+
 ## PERGUNTAS ABERTAS (o jogador ainda NÃO respondeu; esperar a resposta antes de rolar)
-1. O PLANO DE VOLTA AO REINO (Lumade a Levis: 4 dias a pé, 2 a cavalo; Levis a Ireviel: 3 de barca): a) A CASA TODA JUNTA na aurora do 516 (a carroça com a Matriz e a Eliane; os 18 presos a pé; Levis no 520, Ireviel no 523) · b) O REI NA FRENTE (recomendado): o rei, o Moreth e o Eiagrir a cavalo, com o livro, os núcleos e o Martelo (Levis no 518, Ireviel no 521); a carroça com a Matriz, o Gonde, a Eliane (de pé no 517), os feridos e os presos sai no 517, com uma escolta do Celocus pelo pacto (Ireviel por volta do 524) · c) DEPOIS DA LUA NOVA (ficar até o 521; Ireviel por volta do 528) · e dizer: os presos vão ou ficam com o Celocus?
-2. A CASA VAZIA JUNTO À MURALHA (o carvoeiro do Círculo; o sal de areia): a) a casa a revista esta noite (se houver luta, a G9 antes) · b) a gente do Celocus · c) vigiar e seguir.
-3. O NUTOCCONE (tentou comprar a fuga pela grade; não fugiu): a) a palavra vale: morte · b) não fugiu: segue preso, sem falar com ninguém · c) o julgamento em Ireviel.
-4. O VDAEK (o Eiagrir quer que a casa vá; as gargantas ficam a um dia ao norte da estrada do leste): a) o desvio de um dia no caminho · b) não.
+1. O BICHO QUE DORME EM CIMA DO VDAEK (do tamanho de uma casa, verde e escuro, enrolado como raiz; o chão treme): a) lutar (o rei, o Moreth e o Eiagrir; a G9 confere as fichas antes; a Visão pode ver a primeira hora) · b) tirar o vdaek sem acordá-lo · c) deixar o vdaek e voltar à estrada.
 
 ## Regras do jogador em vigor
 - Formato: ⏳ PENDENTE · 🕰️ RELÓGIO · 🎲 ROLAGEM · 🎭 CENA · 👁️ O QUE VOCÊ VÊ · 🏙️ CIDADE E FORJA · 🧵 FIOS · 🛠️ HABILIDADES À MÃO (G24: avisar antes, com o custo) · 🎯 PERGUNTAS · 📊 ESTADO · 📜 REGISTRO. O jogador responde "1a.2b…"; "conselho" quer dizer que o conselho decide por voto.

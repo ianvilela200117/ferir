@@ -1,0 +1,26 @@
+{
+ "monstro": {
+  "nome": "Bzuur",
+  "cat": "Raro",
+  "nivel": 68,
+  "pv": 544,
+  "df": 33,
+  "rd": 3,
+  "at": 23,
+  "dado": "1d12",
+  "mult": 2.5,
+  "moral": true,
+  "essencia": "Silencio",
+  "agarra": true,
+  "acoes": 3,
+  "poder": {
+   "nome": "o golpe não faz som: +2 contra quem não viu o portador",
+   "tipo": "area",
+   "cd": 16,
+   "dano": "3d6"
+  },
+  "fraqueza": "Som",
+  "nota": "bicho.py (obras/gargantas_517.txt): planta, casa, Silencio; dorminhoco: acorda com barulho, sangue ou magia; fraqueza: a Essência Som: dano dobrado e corta a regeneração · e mais uma, a descobrir: água corrente"
+ },
+ "grupo": []
+}

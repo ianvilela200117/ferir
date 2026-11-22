@@ -1,14 +1,15 @@
 {
  "nota": "ESTADO DE TRABALHO (sessão 2): só o que os scripts leem. O estado completo continua no estado.json do projeto + diario_sessao2.md.",
  "tempo": {
-  "dia": 515,
+  "dia": 517,
   "hora": "amanhecer",
-  "local": "Lumade",
+  "local": "as gargantas ao norte da estrada do leste (o vdaek)",
   "clima": "neblina, brisa (vê-se a 30 passos)",
-  "pressao": 4,
+  "pressao": 1,
   "primeiro_tick_semanal": 518,
   "limiar_pressao": 5,
-  "proxima_auditoria": 518
+  "proxima_auditoria": 518,
+  "sem_sono": false
  },
  "bestiario": {
   "avistamento": [

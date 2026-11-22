@@ -26,28 +26,33 @@
   "motivo": "422-432"
  },
  "Ferir": {
-  "lugar": "Lumade",
-  "desde": 514,
-  "motivo": "514 à noite: de volta com o Nutoccone e os oito"
+  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
+  "desde": 517,
+  "motivo": "517: o desvio do vdaek (4a)"
  },
  "Moreth": {
-  "lugar": "Lumade",
-  "desde": 514,
-  "motivo": "514 à noite: de volta com o Nutoccone e os oito"
+  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
+  "desde": 517,
+  "motivo": "517: o desvio do vdaek (4a)"
  },
  "Eiagrir": {
-  "lugar": "Lumade",
-  "desde": 514,
-  "motivo": "514 à noite: de volta com o Nutoccone e os oito"
+  "lugar": "as gargantas ao norte da estrada do leste (o vdaek)",
+  "desde": 517,
+  "motivo": "517: o desvio do vdaek (4a)"
  },
  "Eliane": {
-  "lugar": "Lumade",
-  "desde": 509,
-  "motivo": ""
+  "lugar": "a estrada do leste de Lumade (o lugar da emboscada)",
+  "desde": 516,
+  "motivo": "516: a volta ao reino (1a)"
  },
  "Tigra": {
   "lugar": "Lumade",
   "desde": 506,
   "motivo": ""
+ },
+ "Gonde": {
+  "lugar": "a estrada do leste de Lumade (o lugar da emboscada)",
+  "desde": 516,
+  "motivo": "516: a volta ao reino (1a)"
  }
 }

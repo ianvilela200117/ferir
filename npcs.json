@@ -3865,7 +3865,7 @@
  },
  "Moreth": {
   "nivel": 235,
-  "xp": 12195,
+  "xp": 13695,
   "classe": "Guerreiro andarilho (AÇO) · LEAL, GENEROSO, RELIGIOSO, CURIOSO · não sabe ler · nunca trabalha para uma certa facção (OCULTO: a Companhia da Skotha)",
   "ocupacao": "LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra",
   "log": [
@@ -3994,7 +3994,8 @@
    "+2000 508: a encosta do vale de cima (CR10)",
    "+2400 511: os Vrurn no covil da ponte velha (CR11)",
    "+500 Tick 511: SURPRESA (gerador) (LÂMINA DA CASA (Dia 218): cumpriu a galé; ganha casa e terra)",
-   "Tick 511: SOBE a 235"
+   "Tick 511: SOBE a 235",
+   "+1500 515: a casa vazia junto à muralha (CR15)"
   ],
   "tracos": [
    "LEAL",
@@ -5902,7 +5903,7 @@
  },
  "Eiagrir": {
   "nivel": 131,
-  "xp": 12878,
+  "xp": 14378,
   "classe": "LANCEIRO (herói) · CURIOSO e RELIGIOSO · desejo: vingar um morto · ambição (4): derrubar quem humilhou a família · medo: perder a mão do ofício · segredo: tem uma doença escondida · linha vermelha: NUNCA TRABALHA PARA A LIGA",
   "ocupacao": "da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306)",
   "log": [
@@ -5997,7 +5998,8 @@
    "+2000 508: a encosta do vale de cima (CR10)",
    "+2400 511: os Vrurn no covil da ponte velha (CR11)",
    "+500 Tick 511: SURPRESA (gerador) (da casa (273); trouxe o corpo do irmão (morto na cela); quer saber QUEM entregou os nomes do livro à Liga (até o 280) · 299: leva a LANÇA DE VEYDUN (Lendária para ele) · 303: a LANÇA DO RIO LIMPO (PRIMORDIAL; Lendária para ele; Vida e Som; a Lança do Sol 2x por cena desde o 306))",
-   "Tick 511: SOBE a 131"
+   "Tick 511: SOBE a 131",
+   "+1500 515: a casa vazia junto à muralha (CR15)"
   ],
   "ultima_subida": 511,
   "tracos": [
