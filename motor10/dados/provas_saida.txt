@@ -21,9 +21,9 @@ O CONJUNTO duas acima (com Vontade para sustentar), 50 × 500                   
 A FANTASIA: um nível 50 de conjunto Lendário × dez de nível 275 de Raro                                    85-100%     92%  passa  (5 rodadas)
 A GUILDA: um nível 90 de conjunto Mítico × dez de nível 275 de Raro                                        90-100%    100%  passa  (3 rodadas)
 SÓ A ARMA NÃO BASTA contra dez: o mesmo, com armadura Rara                                                   0-40%     12%  passa  (2 rodadas)
-O NÚMERO CONTA: uma categoria não garante contra dez (nível 120 de Lendário × dez de nível 60 de Único)     15-60%     51%  passa  (4 rodadas)
+O NÚMERO CONTA: uma categoria não garante contra dez (nível 120 de Lendário × dez de nível 60 de Único)     15-60%     49%  passa  (4 rodadas)
 ... e na mesma categoria os dez vencem sempre                                                                 0-5%      0%  passa  (2 rodadas)
-... mas DUAS categorias no conjunto vencem os dez                                                          90-100%    100%  passa  (3 rodadas)
+... mas DUAS categorias no conjunto vencem os dez                                                          90-100%    100%  passa  (4 rodadas)
 SOLDADOS COMUNS não derrubam o Lendário: um nível 120 × dez de nível 15                                    97-100%    100%  passa  (3 rodadas)
 
 A DURAÇÃO (mediana de rodadas)                                                                               faixa   medido
@@ -33,36 +33,64 @@ cinco contra cinco (nível 40, Incomum)                                         
 a luta em que o aço não passa não se arrasta: só a armadura DUAS acima, 50 × 500                            4-30 r    12 r  passa
 
 AS ARMAS ENTRE SI (cada montagem Rara de nível 60 contra todas as outras; a meta: nenhuma abaixo de 35% nem acima de 65%)
-  malho, placa 62% · maça e escudo, placa 60% · montante, placa 60% · malho, malha 59%
+  malho, placa 62% · montante, placa 61% · maça e escudo, placa 60% · malho, malha 59%
   maça e escudo, malha 57% · martelo e escudo, placa 57% · alabarda, placa 56% · montante, malha 55%
-  martelo e escudo, malha 54% · lança e escudo, placa 54% · espada e escudo, placa 51% · lança e escudo, malha 51%
-  alabarda, malha 51% · machado e escudo, placa 49% · espada e escudo, malha 47% · montante, couro 47%
-  maça e escudo, couro 46% · malho, couro 46% · lança e escudo, couro 43% · machado e escudo, malha 42%
+  martelo e escudo, malha 54% · lança e escudo, placa 54% · espada e escudo, placa 52% · lança e escudo, malha 51%
+  alabarda, malha 51% · espada e escudo, malha 48% · machado e escudo, placa 48% · montante, couro 47%
+  malho, couro 46% · maça e escudo, couro 45% · machado e escudo, malha 42% · lança e escudo, couro 42%
   martelo e escudo, couro 41% · alabarda, couro 40% · espada e escudo, couro 37% · machado e escudo, couro 36%
   passa  a melhor 62%, a pior 36%
 
 OS MÓDULOS (cada coisa que interfere, interfere para o lado certo)
-  passa  1 ALCANCE: três lanças contra três espadas (sem escudo), num corredor de um e em campo aberto: 71% e 42%
-  passa  1 DISTÂNCIA: a arqueira começa longe ou começa colada: 35% contra 14%
-  passa  3 O TEMPO: a mesma arqueira, de longe: na neblina, com tempo limpo, na lama: 12%, 35%, 60%
-  passa  2 O LUGAR: um contra quatro, em campo aberto ou num corredor de um: 40% contra 87%
-  passa  5 GOLPE CONTRA ARMADURA: o malho e o montante contra a placa: 75% contra 45%
+  passa  1 ALCANCE: três lanças contra três espadas (sem escudo), num corredor de um e em campo aberto: 70% e 40%
+  passa  1 DISTÂNCIA: a arqueira começa longe ou começa colada: 34% contra 16%
+  passa  3 O TEMPO: a mesma arqueira, de longe: na neblina, com tempo limpo, na lama: 11%, 34%, 59%
+  passa  2 O LUGAR: um contra quatro, em campo aberto ou num corredor de um: 48% contra 85%
+  passa  5 GOLPE CONTRA ARMADURA: o malho e o montante contra a placa: 78% contra 46%
   passa  4 REQUISITO: a placa em quem não tem Força para ela: Defesa 28.5 contra 36.5; fôlego por rodada 5 contra 1
   passa  4 REQUISITO: a gente gerada de nível baixo não tem Força para a placa nem para a arma pesada: nível 20: Força 76 (a placa pede 80)
   passa  4 FÔLEGO: quem começa o turno sem fôlego faz uma ação só: 1 golpe(s) no turno
   passa  SOB MEDIDA: a mesma peça na mão do dono e na mão de outro: acerto +28 e × 303.75 contra +19 e × 101.25
   passa  SINTONIA: quatro peças despertas em quem só sustenta uma: dormem: escudo Épico, armadura de malha Épico, elmo de malha Épico
-  passa  SINTONIA NA LUTA: o conjunto Épico contra três de nível 100 de Raro, com Vontade para as quatro peças e sem: 59% contra 17%
-  passa  6 PARTE DO CORPO: o mesmo guerreiro sem o elmo, contra o de elmo: 34%
-  passa  7 DURABILIDADE: o mestre de nível 300 com espada Comum quebra a espada na armadura Única: em 96% das lutas
+  passa  SINTONIA NA LUTA: o conjunto Épico contra três de nível 100 de Raro, com Vontade para as quatro peças e sem: 62% contra 20%
+  passa  6 PARTE DO CORPO: o mesmo guerreiro sem o elmo, contra o de elmo: 32%
+  passa  7 DURABILIDADE: o mestre de nível 300 com espada Comum quebra a espada na armadura Única: em 98% das lutas
   passa  O IMPASSE: quando ninguém fere ninguém, os lados se separam (a luta não vai a 60 rodadas): em 100% dessas lutas
-  passa  8 MORAL: seis contra um muito mais forte: alguém foge ou se rende: em 44% das lutas
+  passa  8 MORAL: seis contra um muito mais forte: alguém foge ou se rende: em 42% das lutas
   passa  8 MORAL: quem o jogador comanda nunca foge nem se rende pelo dado: 0 vez(es) em 100 lutas perdidas
   passa  9 O CERCO: dez contra um em campo aberto, quantos batem nele numa rodada: 4 (o teto é 4 de perto e 2 de haste)
   passa  9 O CONTORNO: sete contra uma linha de um: os que sobram passam e chegam em quem está atrás: em 100% das lutas, em três rodadas
   passa  10 PARA E PERGUNTA: a luta para antes da 1ª rodada, e a ordem de recuar é cumprida: parada; o rei foi da casa 0 para a -2
-  passa  10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam: em 93% das lutas houve parada com turnos por vir
+  passa  10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam: em 95% das lutas houve parada com turnos por vir
   passa  A RETIRADA: com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta: em 100% das lutas
   passa  O CENÁRIO É CONFERIDO antes de qualquer dado (nome repetido, tempo que não existe): recusou
 
-51 de 51 metas passam.
+OS BICHOS (as oito metas da etapa 2, de B1 a B8, e o que o corpo do bicho tem de ser)
+  passa  B1 O MESMO DEGRAU: um nível 50, tudo Raro, contra a pantera (Rara, média, sozinha): 40 a 60%: 46%
+  passa  B2 A ARMA DECIDE CONTRA O BICHO: o mesmo homem com a arma uma categoria acima vence em 80% ou mais; com a arma uma abaixo, perde em 80% ou mais: vence 87%; perde 92%
+  passa  B3 O BANDO: quatro lobos Incomuns contra um nível 30 de conjunto Incomum: 10 a 35% em campo aberto, e 20 pontos a mais num corredor de um: 14% e 69%
+  passa  B4 O CHEFE: a serpe (Épica, enorme) contra quatro de nível 60 de conjunto Raro (5 a 30%) e de conjunto Épico (55 a 90%): 24% e 66% (gente gerada: a Vontade 56 sustenta duas peças Épicas, a arma e o escudo, e a armadura dorme; com Vontade 80, o conjunto inteiro desperto: 100%)
+  passa  B5 O TAMANHO (o mesmo bicho pequeno, médio, grande e enorme): o maior tem mais PV, alcança mais longe, apanha de mais gente, toma mais do corredor e é mais fácil de acertar: PV 100, 168, 252, 420 · alcança 1, 1, 2, 3 casa(s) · batem nele na rodada 2, 4, 6, 8 · cabem 4, 2, 1, 1 na frente de um corredor de dois · Defesa 39.5, 37.5, 35.5, 33.5 · o homem acerta 49%, 56%, 64%, 73% dos golpes
+  passa  B6 O TRAÇO MATILHA: quatro lobos contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 16% com, 34% sem: +18
+  passa  B6 O TRAÇO BOTE: a pantera contra um nível 50 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 50% com, 69% sem: +19
+  passa  B6 O TRAÇO INVESTIDA: o javali, vindo de longe, contra um nível 10 de conjunto Comum, com o traço e sem ele (8 pontos ou mais): vence 58% com, 74% sem: +16
+  passa  B6 O TRAÇO VENENO: a surucucu contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 52% com, 86% sem: +34
+  passa  B6 O TRAÇO AGARRA: o urso contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 51% com, 62% sem: +11
+  passa  B6 O TRAÇO VOA: o grifo contra um nível 50 de conjunto Raro, de espada, com o traço e sem ele (8 pontos ou mais): vence 46% com, 65% sem: +19; de lança, 54%
+  passa  B6 O TRAÇO REGENERA: o trasgo contra um nível 50 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 48% com, 80% sem: +32
+  passa  B6 O TRAÇO APAVORA: a hidra contra quatro de nível 120 de conjunto Único, com o traço e sem ele (8 pontos ou mais): vence 43% com, 71% sem: +28
+  passa  B6 O TRAÇO COURAÇA: o basilisco (Épico) contra quatro de nível 60 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 9% com, 40% sem: +31
+  passa  B6 O TRAÇO SOPRO: a serpe contra quatro de nível 60 de conjunto Épico, com o traço e sem ele (8 pontos ou mais): vence 67% com, 86% sem: +19
+  passa  B7 A MORAL: o bicho comum ferido foge em 30% ou mais das lutas que perde (cada espécie que não é chefe, sozinha, contra o homem do degrau dela); o encurralado e o chefe não fogem; ninguém se rende: foge em 32% das 1022 lutas perdidas (a que mais foge: basilisco, 88%; a que menos: ratazana, 19%) · a pantera sem saída fugiu 0 vez(es) · a serpe fugiu 0 vez(es) · rendições: 0
+  passa  B8 A DURAÇÃO: a luta de um contra um bicho do mesmo degrau, mediana de 3 a 9 rodadas (a de B1, e a de cada bicho que anda sozinho contra o homem do degrau dele): a pantera 3 rodadas; javali 3, surucucu 3, urso 3, trasgo 5, basilisco 4
+  passa  B+ O CORPO NÃO É PEÇA: não quebra, não tem dono nem registro no Livro, e não ocupa sintonia (mas gasta o aço de quem bate nele com arma pior): em 60 lutas longas contra o basilisco (Épico), o corpo se gastou ou ganhou dono em 0; a espada Rara do caçador se gastou na luta em 100%; o dragão (corpo Lendário) com Vontade 10: 0 peça(s) dormindo
+  passa  B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste; da que anda em bando, diz que o grau é o de um só e quanto vale o bando (um grau acima com 2 ou 3, dois com 4 ou mais), o cerco e o corredor; do bicho pequeno, que o traço dele não derruba gente: 14 de 14 espécies; o lobo contra quem veste Comum: diz um terço e o triplo; o aviso do bando em 5 de 5 espécies de bando (e em nenhuma das 9 que andam sós); duas corças valem grau E e quatro lobos, grau B: dito; a ratazana: diz que não derruba gente
+  passa  B+ O DESPOJO: sai da tabela (de metade ao inteiro de cada bem, matéria até o Raro), a mesma sorte dá o mesmo despojo, e só o chefe dá núcleo, da categoria dele: 14 de 14 espécies certas; chefes: serpe, hidra, dragão
+  passa  B+ O CENÁRIO: o bicho que o bichos.bicho devolve passa pelo cenário da luta (o do ato.py também), pelo atalho {"bicho": espécie}, vai ao arquivo e volta; traço fora da lista é recusado: 14 de 14 espécies com a mesma ficha pelos três caminhos e a luta inteira depois de ir ao arquivo; o traço inventado: recusou
+  passa  B+ O AGARRADO: fica onde está (não anda, não recua, e quem vem atrás não troca de lugar com ele), e só é agarrado quem está colado: o lanceiro, que bate a duas casas, o urso não abraça: dois de espada contra o urso num corredor de um, em 120 lutas: 146 abraços, e o agarrado saiu do lugar 0 vez(es); um de lança contra o urso: agarrado em 0 de 120 lutas
+  passa  B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé): com o lobo morto, fraquejou em 0 de 200 sustos; com o lobo de pé, em 60 (e a um bicho não se rendeu: certo)
+  passa  B+ QUEM NÃO ANDA NÃO FOGE: o bicho que vai ao chão ou fica com a perna presa não sai da luta (nem o que levou, de costas, o golpe que o derrubou); com a perna presa, luta como encurralado: 600 lutas do caçador de começo contra duas corças surpreendidas: 720 corças fugiram, 0 delas no chão ou com a perna presa; o golpe pelas costas segurou 26; ficaram encurraladas 86
+  passa  B+ AS ESPÉCIES: de 12 a 16, do Comum ao Lendário, com o grau de F a S casado com a categoria; há bicho de bando, bicho sozinho e chefe (um núcleo para cada categoria, do Épico ao Lendário); os traços são uma lista fechada de 8 a 12, todos em uso; cada espécie tem a ficha inteira, e o despojo fala a língua comum dos bens (matéria da categoria dela, até o Raro): 14 espécies, 14 com a ficha inteira; categorias: Comum, Incomum, Raro, Épico, Único, Lendário; graus: F, E, D, C, B, A, S; 5 de bando, 6 que andam sós, 3 chefes (Épico, Único, Lendário); 10 traços, 10 em uso
+  passa  B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes: a luta acabou (A, 8 rodadas); o Aldric: vivo, PV 76, 0 ferida(s); eventos de luta: 1; gente e Livro: os mesmos; estado inteiro; MESA: 11 espécies de dois lugares, cada uma dita uma vez, em 910 bytes
+
+77 de 77 metas passam.

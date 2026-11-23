@@ -48,7 +48,7 @@ MATERIA_ARMA = {
     'besta':    dict(madeira=3, metal=1),
 }                                               # as mãos ("punho") não se forjam
 MATERIA_ARMADURA = dict(couro=('couro', 1), malha=('metal', 1), placa=('metal', 2))     # a matéria, e quanto por ponto de corpo coberto
-PARTE_PESO = dict(cabeça=1, tronco=2, braços=1, pernas=1)                               # o corpo inteiro são 4 pontos; o elmo, 1
+PARTE_PESO = M.PARTE_PESO                                                               # cabeça 1, tronco 2, braços 1, pernas 1 (tabelas_mundo: o mercado usa o mesmo peso no preço)
 MATERIA_ESCUDO = dict(madeira=2, metal=1)
 OFICIO_COURO = ('couro',)   # as armaduras deste material são do ofício "couro"; todo o resto é da "forja"
 
@@ -77,7 +77,7 @@ CONSERTO_BLOCO = 5          # pontos de durabilidade que um bloco de bancada dev
 CONSERTO_MATERIA = 10       # cada tantos pontos (ou parte) gastam 1 de matéria principal da peça
 PAGO_BLOCO = 10             # pago à oficina: um bloco de espera a cada tantos pontos (ou parte)
 def preco(cat): return M.PECA_BASE * M.PECA_VEZES ** cat                # o preço de tabela da peça nova (30 a Comum, vezes 6 por categoria)
-def conserto_pago(cat, pontos): return max(1, math.ceil(round(preco(cat) * M.CONSERTO_PONTO * pontos, 6)))     # 2% do preço por ponto, em prata inteira
+def conserto_pago(cat, pontos, peso=1.0): return max(1, math.ceil(round(preco(cat) * peso * M.CONSERTO_PONTO * pontos, 6)))     # 2% do preço da peça por ponto, em prata inteira (o preço da armadura segue o que ela cobre: tabelas_mundo.peso_da_peca)
 
 # ---------- ajustar (sob medida) ----------
 AJUSTE_BASE = 22            # o teste do ajuste: a mesma soma da forja, contra isto mais 6 por categoria da peça
@@ -87,4 +87,10 @@ def ajuste_grau(maestria): return max(0, min(T.SOB_MEDIDA_GRAUS[1], maestria // 
 AJUSTE_ESTRAGO = 5          # ajuste que falha por 5 ou mais gasta isto da durabilidade da peça
 
 # ---------- o jornal (trabalhar na oficina do lugar) ----------
-JORNAL_ESFORCO = 'pesado'   # bloco de bancada é sempre pesado; a paga é a do grau de ofício da pessoa (tabelas_mundo.SALARIO)
+JORNAL_ESFORCO = 'pesado'   # bloco de bancada é sempre pesado
+JORNAL_GRAU = {2: 'aprendiz', 4: 'oficial', 6: 'mestre'}        # quem serve na bancada ganha pelo que a mão vale (tabelas_mundo.SALARIO): de Iniciante, o salário de aprendiz;
+                                                                # de Treinado, o de oficial; de Mestre para cima, o de mestre. Nunca menos que o grau de ofício que a pessoa já tem.
+def jornal_grau(maestria, grau='diarista'):
+    """o grau de ofício pelo qual a oficina paga o jornal a quem tem esta maestria no ofício e este grau de ofício: o que pagar mais"""
+    da_mao = next((g for m, g in sorted(JORNAL_GRAU.items(), reverse=True) if maestria >= m), grau)
+    return max((grau if grau in M.SALARIO else 'diarista', da_mao), key=lambda g: M.SALARIO[g])

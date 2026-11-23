@@ -81,14 +81,16 @@ def preco_peca(cat): return M.PECA_BASE * M.PECA_VEZES ** cat      # o preço de
 SUCATA = 0.10               # a peça quebrada (durabilidade 0) vale esta fração do preço de tabela; e nenhuma peça vale menos que isto
 # a peça gasta vale o preço de tabela menos o conserto que ela pede (tabelas_mundo.CONSERTO_PONTO: 2% do preço por ponto gasto)
 # a peça sob medida vale como uma categoria abaixo (tabelas.NAO_E_DELE): na mão de outro é isso que ela rende
+# a armadura vale pelo que cobre (tabelas_mundo.PARTE_PESO): o preço de tabela é o da que cobre tronco, braços e pernas; o elmo vale um quarto; a manga, um quarto
 # a loja negocia peças até o Épico (tabelas_mundo.PECA_LOJA_ATE); núcleo não se negocia em loja
-FARTA = 0.8                 # a loja paga isto vezes por cada peça IGUAL (mesmo tipo, família ou material, partes e categoria) que já tem na prateleira:
+FARTA = 0.8                 # a loja paga isto vezes por cada peça IGUAL (mesmo tipo, mesma família ou material, mesma categoria; o recorte não conta) que já tem na prateleira:
                             # com uma igual, 80% do que pagaria; com cinco, um terço (1 desliga a regra). O que ela PEDE pela peça não muda.
 
 
-def valor_peca(cat, dur, dur_max, sob_medida=False):
-    """o valor de uma peça (antes de arredondar): o preço da categoria, menos o conserto que ela pede; quebrada, a sucata"""
-    p = preco_peca(cat) / (M.PECA_VEZES ** T.NAO_E_DELE if sob_medida else 1)
+def valor_peca(cat, dur, dur_max, sob_medida=False, peso=1.0):
+    """o valor de uma peça (antes de arredondar): o preço da categoria vezes o tamanho dela (tabelas_mundo.peso_da_peca: a armadura vale pelo que cobre),
+    menos o conserto que ela pede; quebrada, a sucata"""
+    p = preco_peca(cat) * peso / (M.PECA_VEZES ** T.NAO_E_DELE if sob_medida else 1)
     if dur <= 0: return p * SUCATA
     return p * max(SUCATA, 1 - M.CONSERTO_PONTO * (dur_max - dur))
 

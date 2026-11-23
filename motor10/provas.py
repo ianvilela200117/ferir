@@ -284,13 +284,14 @@ def bichos(n):
     falta = [e for e, d in TB.ESPECIES.items() if not all(x in B.ameaca(e) for x in (f"grau {d['grau']}", T.CATS[d['cat']], d['tamanho'][:-1], d['couro'], TB.GRAU_DIZ[d['grau']])) or any(TB.TRACOS[t] not in B.ameaca(e) for t in d['tracos'])
              or ('não foge' in B.ameaca(e)) != d['chefe']]
     a = B.ameaca('lobo', n=4, arma='Comum', armadura='Comum')
-    em_bando = [e for e, d in TB.ESPECIES.items() if d['bando'][1] > 1]; avisa = [e for e in em_bando if 'Em bando: o grau é o de' in B.ameaca(e) and 'Em bando' not in B.ameaca(e, n=1)]
-    sozinhas = [e for e, d in TB.ESPECIES.items() if d['bando'][1] == 1 and 'Em bando' not in B.ameaca(e)]; rato = B.ameaca('ratazana')
+    em_bando = [e for e, d in TB.ESPECIES.items() if d['bando'][1] > 1]; avisa = [e for e in em_bando if 'EM BANDO, o grau' in B.ameaca(e) and 'o bando vale grau' in B.ameaca(e) and 'EM BANDO' not in B.ameaca(e, n=1)]
+    sozinhas = [e for e, d in TB.ESPECIES.items() if d['bando'][1] == 1 and 'EM BANDO' not in B.ameaca(e)]; rato = B.ameaca('ratazana')
+    sobe = f"valem grau {TB.grau_do_bando('F', 2)}" in B.ameaca('corça', n=2) and f"valem grau {TB.grau_do_bando('D', 4)}" in a and TB.grau_do_bando('F', 2) == 'E' and TB.grau_do_bando('D', 4) == 'B' and TB.grau_do_bando('S', 9) == 'S'
     ok('B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste; '
-       'da que anda em bando, diz que o grau é o de um só, o cerco e o corredor; do bicho pequeno, que o traço dele não derruba gente',
+       'da que anda em bando, diz que o grau é o de um só e quanto vale o bando (um grau acima com 2 ou 3, dois com 4 ou mais), o cerco e o corredor; do bicho pequeno, que o traço dele não derruba gente',
        f"{len(TB.ESPECIES) - len(falta)} de {len(TB.ESPECIES)} espécies; o lobo contra quem veste Comum: {'diz um terço e o triplo' if 'um terço' in a and 'o triplo' in a else 'NÃO DIZ'}; "
-       f"o aviso do bando em {len(avisa)} de {len(em_bando)} espécies de bando (e em nenhuma das {len(sozinhas)} que andam sós); a ratazana: {'diz que não derruba gente' if 'não derruba nem agarra gente' in rato else 'NÃO DIZ'}",
-       not falta and 'um terço' in a and 'o triplo' in a and 'são 4' in a and len(avisa) == len(em_bando) and len(sozinhas) + len(em_bando) == len(TB.ESPECIES) and 'não derruba nem agarra gente' in rato and 'não derruba nem agarra gente' not in B.ameaca('lobo'))
+       f"o aviso do bando em {len(avisa)} de {len(em_bando)} espécies de bando (e em nenhuma das {len(sozinhas)} que andam sós); duas corças valem grau {TB.grau_do_bando('F', 2)} e quatro lobos, grau {TB.grau_do_bando('D', 4)}: {'dito' if sobe else 'NÃO DITO'}; a ratazana: {'diz que não derruba gente' if 'não derruba nem agarra gente' in rato else 'NÃO DIZ'}",
+       not falta and sobe and 'um terço' in a and 'o triplo' in a and 'são 4' in a and len(avisa) == len(em_bando) and len(sozinhas) + len(em_bando) == len(TB.ESPECIES) and 'não derruba nem agarra gente' in rato and 'não derruba nem agarra gente' not in B.ameaca('lobo'))
     # B+: o despojo e o núcleo
     ruim = []; r1 = B.despojo('serpe', random.Random(3)); r2 = B.despojo('serpe', random.Random(3))
     for e, d in TB.ESPECIES.items():
@@ -337,6 +338,17 @@ def bichos(n):
     for i in range(k): S['r'] = i + 1; luta._moral(S, S['L'][0], 'golpe_terrivel'); com += S['L'][0]['estado'] != 'pe' or S['L'][0]['abalado']; S['L'][0]['abalado'] = False
     ok('B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé)',
        f'com o lobo morto, fraquejou em {mudou} de {k} sustos; com o lobo de pé, em {com} (e a um bicho não se rendeu: {"certo" if S["L"][0]["estado"] == "pe" else "RENDEU-SE"})', mudou == 0 and com >= k // 10 and S['L'][0]['estado'] == 'pe')
+    # B+: quem foi posto no chão, ou ficou com a perna presa, não foge (a caça perdia a carcaça de um bicho que a mesa dizia caído)
+    k = max(200, n); fug = 0; mal = 0; parou = 0; enc = 0
+    for i in range(k):
+        luta.semente(9000 + i); S = luta.nova(varios(1, 10, 0, 0)(), B.bando('corça', n=2), inicio='colado', surpresa='B'); luta.corre(S)
+        for f in S['L']:
+            if f['lado'] != 'B': continue
+            fug += f['estado'] == 'fugiu'; mal += f['estado'] == 'fugiu' and bool(f['chao'] or f['preso']); enc += bool(f.get('encurralado'))
+        parou += sum('NÃO SAI' in l for l in S['log'])
+    luta.D = luta.Dados()
+    ok('B+ QUEM NÃO ANDA NÃO FOGE: o bicho que vai ao chão ou fica com a perna presa não sai da luta (nem o que levou, de costas, o golpe que o derrubou); com a perna presa, luta como encurralado',
+       f'{k} lutas do caçador de começo contra duas corças surpreendidas: {fug} corças fugiram, {mal} delas no chão ou com a perna presa; o golpe pelas costas segurou {parou}; ficaram encurraladas {enc}', fug > k // 4 and mal == 0 and parou >= 1)
     # B+: as espécies (o que o contrato pede da lista, e a API fixa que a caça usa)
     import tabelas_mundo as M
     API = ('nome', 'cat', 'grau', 'tamanho', 'bando', 'despojo', 'nucleo', 'habitat'); mal = []; ES = TB.ESPECIES
@@ -362,7 +374,7 @@ def bichos(n):
         E = provas_mundo.vila(); E['lugares']['mata'] = dict(nome='a Mata de Prova', em='na Mata de Prova', tipo='ermo', estoque={}); conta = {e: 5 for e in ES}
         estado.aplica(E, 'gera', [['lugar', 'vila', 'vizinhos', 'poe', ['mata']], ['lugar', 'vila', 'bichos.ratazana', 'poe', 37]] + [['lugar', 'mata', f'bichos.{e}', 'poe', q] for e, q in conta.items()], texto='os bichos de prova')
         estado.grava(E); linhas = B.mesa(E); txt = '\n'.join(linhas); comuns_ = [d['nome'] for d in ES.values() if not d['chefe']]
-        mesa_ok = len(linhas) == 3 and all(x in linhas[2] for x in comuns_) and not any(d['nome'] in txt for d in ES.values() if d['chefe']) and '37' not in txt and len(txt.encode()) <= 2000
+        mesa_ok = len(linhas) == 2 and all(x in linhas[1] for x in comuns_) and txt.count('ratazana (') == 1 and not any(d['nome'] in txt for d in ES.values() if d['chefe']) and '37' not in txt and len(txt.encode()) <= 2000
         arq_c, arq_l = os.path.join(pasta, 'cen.json'), os.path.join(pasta, 'luta.json'); livro = sorted(E['itens']['itens']); gente_ = sorted(E['gente'])
         json.dump(dict(inicio='perto', A=[dict(id='eu', controla=True)], B=[dict(nome='a corça de prova', nivel=0, bicho='corça'), B.bicho('ratazana', nome='a ratazana de prova')]), open(arq_c, 'w', encoding='utf-8'), ensure_ascii=False)
         with contextlib.redirect_stdout(io.StringIO()):
@@ -379,7 +391,7 @@ def bichos(n):
         ok('B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, '
            'e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes',
            f"a luta acabou ({S['fim']}, {S['r']} rodadas); o Aldric: {p['estado']}, PV {p['pv']}, {len(p['feridas'])} ferida(s); eventos de luta: {nl}; gente e Livro: {'os mesmos' if sorted(E['gente']) == gente_ and sorted(E['itens']['itens']) == livro else 'MUDARAM'}; "
-           f"estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}; MESA: {len(linhas) - 1} lugares, {len(comuns_)} espécies, {len(txt.encode())} bytes", certo and mesa_ok)
+           f"estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}; MESA: {len(comuns_)} espécies de dois lugares, cada uma dita uma vez, em {len(txt.encode())} bytes", certo and mesa_ok)
     finally:
         os.environ.pop('MOTOR10_MUNDO', None)
         if antes is not None: os.environ['MOTOR10_MUNDO'] = antes

@@ -28,6 +28,16 @@ def faixa(p, m):
     return sum(1 for l in M.LIMIARES[m] if p['corpo'][m] >= l)
 
 
+def faixas(p): return {m: faixa(p, m) for m in M.MEDIDORES}       # o retrato dos limiares, para comparar depois (cruzou)
+
+
+def cruzou(p, antes):
+    """o que o corpo cruzou para cima desde `antes` (o que faixas() devolveu): a frase que faz o ato longo parar, ou None"""
+    nomes = dict(fome=['', 'está com fome', 'está faminto'], sono=['', 'está com sono', 'está caindo de sono'], cansaco=['', 'está exausto'])
+    L = [nomes[m][faixa(p, m)] for m in M.MEDIDORES if faixa(p, m) > antes[m]]
+    return f"{p['nome']} " + ' e '.join(L) if L else None
+
+
 def diz(p):
     c = p['corpo']; pn = pena(p); fm = folego_menos(p)
     nomes = dict(fome=['sem fome', 'com fome', 'faminto'], sono=['desperto', 'com sono', 'caindo de sono'], cansaco=['inteiro', 'exausto'])

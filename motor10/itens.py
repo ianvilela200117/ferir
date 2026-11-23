@@ -1,17 +1,19 @@
 #!/usr/bin/env python3
 """itens.py — MOTOR 10: O LIVRO DE ITENS. Uma peça que não está aqui não existe.
 
-Toda arma, armadura e escudo é um registro em dados/itens.json: o que é, de que categoria, quanto aguenta, o que faz,
-de quem é, quem fez e o que viveu. A ficha de luta de quem veste sai DAQUI (pessoas.py): ninguém digita ataque e dano.
+Toda arma, armadura, escudo e núcleo é um registro: o que é, de que categoria, quanto aguenta, o que faz, de quem é, quem fez e o que viveu.
+A ficha de luta de quem veste sai DAQUI (pessoas.py): ninguém digita ataque e dano.
+  HAVENDO UM MUNDO (a pasta de MOTOR10_MUNDO, ou `mundo/`), o Livro é o do mundo (itens.json do save): `ver` e `janela` leem dele, e `nova`, `dono` e
+  `conserta` entram por um evento "mestre" (o gravador é um só). Sem mundo, vale o Livro solto (dados/itens.json), que só serve à luta fora do mundo.
 
 Uso:
-  python3 itens.py nova arma FAMILIA CATEGORIA "Nome" [dono=Nome] [feito=Nome] [dia=N] [efeito=chave[:valor]]... [sob=Dono:grau]
+  python3 itens.py nova arma FAMILIA CATEGORIA "Nome" [dono=ID] [onde=LUGAR] [feito=Nome] [dia=N] [efeito=chave[:valor]]... [sob=Dono:grau]
   python3 itens.py nova armadura MATERIAL CATEGORIA "Nome" [cobre=tronco,braços,pernas] ...   (elmo: cobre=cabeça)
   python3 itens.py nova escudo CATEGORIA "Nome" ...
-  python3 itens.py nova nucleo CATEGORIA "Nome" [de=ESPECIE] [dono=Nome]     o núcleo de um chefe (o que a obra Épica ou maior pede)
-  python3 itens.py ver [dono=Nome]          a lista
+  python3 itens.py nova nucleo CATEGORIA "Nome" [de=ESPECIE] [dono=ID] [onde=LUGAR]     o núcleo de um chefe (o que a obra Épica ou maior pede)
+  python3 itens.py ver [dono=ID]            a lista
   python3 itens.py janela ID                a janela do item (a que aparece na cena)
-  python3 itens.py dono ID "Nome" ["o que houve"]     a peça muda de mão (entra na história dela)
+  python3 itens.py dono ID PESSOA ["o que houve"]     a peça muda de mão (entra na história dela)
   python3 itens.py conserta ID [N]          devolve N de durabilidade (sem N: toda)
 FAMILIA: punho adaga espada maça machado martelo lança montante alabarda malho arco besta · MATERIAL: couro malha placa
 CATEGORIA: Comum Incomum Raro Épico Único Lendário Mítico Primordial
@@ -111,8 +113,8 @@ def janela(it):
         return '\n'.join(L)
     L.append(f"Categoria: {CATS[c]}      Durabilidade: {it['dur'][0]}/{it['dur'][1]}")
     if it['tipo'] == 'arma':
-        f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 else 1)
-        L.append(f"Ataque: {f['dado']} × {m:g} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + ' casa(s)'}")
+        f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 and not f.get('distancia') else 1)       # o arco e a besta não ganham o das duas mãos (2.4)
+        L.append(f"Ataque: {f['dado']} × {str(round(m, 2)).rstrip('0').rstrip('.').replace('.', ',')} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + ' casa(s)'}")
     elif it['tipo'] == 'armadura':
         mat = MATERIAIS[it['material']]
         L.append(f"Proteção: {RD[c] * mat['rd']:g} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
@@ -138,43 +140,104 @@ def grava(B):
     json.dump(B, open(ARQ, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
 
 
+def _mundo():
+    """o módulo do estado, se HÁ UM MUNDO (a pasta de MOTOR10_MUNDO, ou `mundo/` ao lado): aí o Livro de Itens é o dele, e só o gravador o muda. Senão, None."""
+    import estado
+    return estado if os.path.exists(os.path.join(estado.pasta(), 'relogio.json')) else None
+
+
+def _monta(a, op, pos):
+    """o registro pedido na linha de comando (`nova ...`), sem dono nem id"""
+    if len(pos) >= 3 and pos[1] == 'nucleo': return item('nucleo', pos[2], pos[3] if len(pos) > 3 else None, de=op.get('de'))
+    if len(pos) < 3 or pos[1] not in ('arma', 'armadura', 'escudo') or (pos[1] != 'escudo' and len(pos) < 4): sys.exit(__doc__)
+    ef = []
+    for x in a:
+        if x.startswith('efeito='):
+            k, _, v = x[7:].partition(':'); ef.append(dict(chave=k, **({'valor': int(v)} if v.isdigit() else {})))
+    sob = None
+    if op.get('sob'):
+        d, _, g = op['sob'].partition(':'); sob = dict(dono=d, grau=int(g) if g.isdigit() else 1)
+    tipo = pos[1]
+    if tipo == 'arma': it = item('arma', pos[3], pos[4] if len(pos) > 4 else None, familia=pos[2], efeitos=ef, sob=sob)
+    elif tipo == 'armadura': it = item('armadura', pos[3], pos[4] if len(pos) > 4 else None, material=pos[2], cobre=op['cobre'].split(',') if op.get('cobre') else None, efeitos=ef, sob=sob)
+    else: it = item('escudo', pos[2], pos[3] if len(pos) > 3 else None, efeitos=ef, sob=sob)
+    it['feito_por'] = op.get('feito'); it['dia'] = int(op['dia']) if op.get('dia', '').isdigit() else None
+    return it
+
+
+def _no_mundo(estado, a, op, pos):
+    """a linha de comando quando há um mundo: olhar lê o Livro dele; o que muda entra por um evento "mestre" (o gravador é um só)"""
+    E = estado.carrega(); L = E['itens']['itens']
+    quem = lambda x: x if x in E['gente'] else next((k for k, p in E['gente'].items() if p['nome'] == x), None) or sys.exit(f'não há a pessoa "{x}" no mundo (use o id ou o nome: {", ".join(E["gente"])})')
+    dono_diz = lambda it: (f" · de {E['gente'][it['dono']]['nome']}" + (' (em uso)' if it.get('uso') else '') if it.get('dono') in E['gente'] else f" · {estado.em(E, it['onde'])}" + (', no chão' if it.get('solto') else '') if it.get('onde') in E['lugares'] else '')
+    if a[0] == 'ver':
+        alvo = quem(op['dono']) if op.get('dono') else None
+        for i, it in L.items():
+            if alvo and it.get('dono') != alvo: continue
+            print(f"  {i}  {it['nome']} · {CATS[it['cat']]} · {it['dur'][0]}/{it['dur'][1]}" + dono_diz(it))
+        if not L: print('  (o Livro de Itens do mundo está vazio)')
+        return
+    if a[0] == 'nova':
+        it = _monta(a, op, pos)
+        if op.get('onde'):
+            if op['onde'] not in E['lugares']: sys.exit(f'não há o lugar "{op["onde"]}" (os que há: {", ".join(E["lugares"])})')
+            it['onde'] = op['onde']
+        elif op.get('dono'): it['dono'] = quem(op['dono'])
+        else: sys.exit('num mundo, a peça nasce com dono (dono=ID) ou num lugar (onde=LUGAR): solta no nada, não existe')
+        ev = estado.aplica(E, 'mestre', [['item', 'nasce', it]], onde=it.get('onde'), quem=[it['dono']] if it.get('dono') else [], texto=f"o Mestre põe no mundo: {it['nome']}")
+        iid = f"i{E['itens']['seq']:04d}"; estado.grava(E); print(f"{iid} entrou no Livro de Itens do mundo (evento #{ev['id']}).\n"); print(_janela_mundo(E, E['itens']['itens'][iid])); return
+    if a[0] in ('janela', 'dono', 'conserta') and len(pos) > 1:
+        it = L.get(pos[1]) or sys.exit(f'não há item "{pos[1]}" no Livro de Itens do mundo (itens.py ver)')
+        if a[0] == 'dono':
+            if len(pos) < 3: sys.exit('diga para quem: itens.py dono ID PESSOA ["o que houve"]')
+            pid = quem(pos[2]); de = E['gente'][it['dono']]['nome'] if it.get('dono') in E['gente'] else 'ninguém'
+            ev = estado.aplica(E, 'mestre', [['item', pos[1], 'dono', 'poe', pid], ['item', pos[1], 'historia', 'junta', f"Dia {E['relogio']['dia']}: de {de} para {E['gente'][pid]['nome']}" + (f': {pos[3]}' if len(pos) > 3 else '')]],
+                               quem=[pid], texto=f"{it['nome']} passa de {de} para {E['gente'][pid]['nome']}")
+            estado.grava(E)
+        if a[0] == 'conserta':
+            n = int(pos[2]) if len(pos) > 2 and pos[2].isdigit() else it['dur'][1] - it['dur'][0]
+            if n < 1 or not estado.aplica(E, 'mestre', [['item', pos[1], 'dur', 'soma', n]], texto=f"o Mestre conserta {it['nome']} ({n} ponto(s))"): print('(já estava inteira: nada mudou)')
+            estado.grava(E)
+        print(_janela_mundo(E, E['itens']['itens'][pos[1]])); return
+    print(__doc__)
+
+
+def _janela_mundo(E, it):
+    """a janela do item com os nomes de quem é e de quem fez (o Livro do mundo guarda os ids), e onde está"""
+    v = dict(it); nome = lambda x: E['gente'][x]['nome'] if x in E['gente'] else x
+    if v.get('dono'): v['dono'] = nome(v['dono']) + (' (em uso)' if it.get('uso') else ' (guardada)' if it['tipo'] != 'nucleo' else '')
+    if v.get('feito_por'): v['feito_por'] = nome(v['feito_por'])
+    txt = janela(v)
+    if it.get('onde') in E['lugares'] and it['tipo'] != 'nucleo': txt += f"\nEstá {E['lugares'][it['onde']].get('em', it['onde'])}" + (', no chão (solta)' if it.get('solto') else ', sem dono')
+    return txt
+
+
 def main():
     a = sys.argv[1:]
     if not a: print(__doc__); return
     op = {k: v for k, v in (x.split('=', 1) for x in a if '=' in x and not x.startswith('efeito='))}
     pos = [x for x in a if '=' not in x]
-    B = carrega()
-    if a[0] == 'nova' and len(pos) >= 3 and pos[1] == 'nucleo':
-        it = item('nucleo', pos[2], pos[3] if len(pos) > 3 else None, de=op.get('de'))
+    estado = _mundo()
+    if estado: return _no_mundo(estado, a, op, pos)
+    B = carrega()                                           # sem mundo: o Livro solto (dados/itens.json), que só serve à luta fora do mundo (luta.py nova)
+    if a[0] == 'nova':
+        it = _monta(a, op, pos)
         B['seq'] += 1; it['id'] = f"i{B['seq']:04d}"; it['dono'] = op.get('dono')
-        B['itens'][it['id']] = it; grava(B); print(f"{it['id']} entrou no Livro de Itens.\n"); print(janela(it)); return
-    if a[0] == 'nova' and len(pos) >= 4:
-        ef = []
-        for x in a:
-            if x.startswith('efeito='):
-                k, _, v = x[7:].partition(':'); ef.append(dict(chave=k, **({'valor': int(v)} if v else {})))
-        sob = None
-        if op.get('sob'):
-            d, _, g = op['sob'].partition(':'); sob = dict(dono=d, grau=int(g or 1))
-        tipo = pos[1]
-        if tipo == 'arma': it = item('arma', pos[3], pos[4] if len(pos) > 4 else None, familia=pos[2], efeitos=ef, sob=sob)
-        elif tipo == 'armadura': it = item('armadura', pos[3], pos[4] if len(pos) > 4 else None, material=pos[2], cobre=op['cobre'].split(',') if op.get('cobre') else None, efeitos=ef, sob=sob)
-        else: it = item('escudo', pos[2], pos[3] if len(pos) > 3 else None, efeitos=ef, sob=sob)
-        B['seq'] += 1; it['id'] = f"i{B['seq']:04d}"; it['dono'] = op.get('dono'); it['feito_por'] = op.get('feito'); it['dia'] = int(op['dia']) if op.get('dia') else None
-        B['itens'][it['id']] = it; grava(B); print(f"{it['id']} entrou no Livro de Itens.\n"); print(janela(it)); return
+        B['itens'][it['id']] = it; grava(B); print(f"{it['id']} entrou no Livro de Itens solto ({ARQ}): vale para a luta fora do mundo. Num mundo (MOTOR10_MUNDO), o mesmo comando grava nele, por evento.\n"); print(janela(it)); return
     if a[0] == 'ver':
         for i, it in B['itens'].items():
             if op.get('dono') and it.get('dono') != op['dono']: continue
             print(f"  {i}  {it['nome']} · {CATS[it['cat']]} · {it['dur'][0]}/{it['dur'][1]}" + (f" · de {it['dono']}" if it.get('dono') else ''))
-        if not B['itens']: print('  (o Livro de Itens está vazio)')
+        if not B['itens']: print('  (o Livro de Itens solto está vazio; não há mundo em MOTOR10_MUNDO)')
         return
     if a[0] in ('janela', 'dono', 'conserta') and len(pos) > 1:
         it = B['itens'].get(pos[1])
         if not it: sys.exit(f'não há item "{pos[1]}" (itens.py ver)')
         if a[0] == 'dono':
+            if len(pos) < 3: sys.exit('diga para quem: itens.py dono ID "Nome" ["o que houve"]')
             it['historia'].append(f"de {it.get('dono') or 'ninguém'} para {pos[2]}" + (f': {pos[3]}' if len(pos) > 3 else '')); it['dono'] = pos[2]; grava(B)
         if a[0] == 'conserta':
-            it['dur'][0] = min(it['dur'][1], it['dur'][0] + int(pos[2])) if len(pos) > 2 else it['dur'][1]; grava(B)
+            it['dur'][0] = min(it['dur'][1], it['dur'][0] + int(pos[2])) if len(pos) > 2 and pos[2].isdigit() else it['dur'][1]; grava(B)
         print(janela(it)); return
     print(__doc__)
 

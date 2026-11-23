@@ -13,6 +13,7 @@ import contextlib, copy, io, json, math, random, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_mercado as C
+import tabelas_oficio as O_
 import estado, ato, mercado, turno
 import provas_mundo as PM
 from itens import item
@@ -225,24 +226,38 @@ def _gasta_e_quebrada(n):
 
 
 # ---------- as provas que o contrato não lista, mas o módulo deve ----------
+def _pelo_que_cobre(n):
+    """a armadura vale pelo que cobre (o preço de tabela é o da que cobre tronco, braços e pernas), e a loja farta conta por material, não por recorte"""
+    E = vila(prata=50); pecas = [('o corpo inteiro (tronco, braços e pernas)', None), ('só o tronco', ['tronco']), ('o elmo', ['cabeça']), ('só os braços', ['braços']), ('o corpo e a cabeça', ['cabeça', 'tronco', 'braços', 'pernas'])]
+    estado.aplica(E, 'gera', [['item', 'nasce', item('armadura', 1, material='placa', cobre=c, dono='eu')] for _, c in pecas] + [['item', 'nasce', item('armadura', 1, material='placa', cobre=['pernas'], dono='eu')]], texto='as placas de prova')
+    ids = [i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it.get('material') == 'placa']; L = E['itens']['itens']; vale = [mercado.preco_peca(L[i]) for i in ids[:5]]; p0 = prata(E)
+    conserto = [O_.conserto_pago(1, 10, M.peso_da_peca('armadura', c)) for _, c in pecas]; pagou = [mercado.vender_peca(E, 'eu', i)['prata'] for i in ids]      # a loja não tinha placa nenhuma: as seis são "iguais" entre si
+    cheio = [math.floor(round(C.PAGA * v * C.FARTA ** k, 6)) for k, v in enumerate(vale + [mercado.preco_peca(L[ids[5]])])]
+    return ('A ARMADURA VALE PELO QUE COBRE: o preço de tabela é o da armadura de tronco, braços e pernas; a que cobre menos vale a proporção (o elmo, um quarto), no preço e no conserto; e a loja farta conta por material, não por recorte',
+            'placa Incomum (tabela 180): ' + '; '.join(f'{nome}, {v}' for (nome, _), v in zip(pecas, vale)) + f"; consertar 10 pontos de cada: {', '.join(map(str, conserto))} de prata; "
+            f"vendidas uma atrás da outra, a loja pagou {', '.join(map(str, pagou))} (cada recorte conta como mais uma placa igual: 20% a menos de cada vez); a prata fecha",
+            vale == [180, 90, 45, 45, 225] and conserto == [36, 18, 9, 9, 45] and pagou == cheio and pagou[0] == 108 and pagou[1] < 0.6 * 90 and prata(E) == p0 and inteiro(E))
+
+
 def _pecas_do_livro(n):
     """as peças da loja são itens do Livro de Itens com "onde" no lugar e sem dono; comprar e vender mudam o dono e o "onde" por evento"""
     E = mais_um_lugar(vila(prata=400)); L = lambda: E['itens']['itens']; p0 = prata(E); loja = mercado.prateleira(E, 'vila'); todas = all(it['onde'] == 'vila' and it['dono'] is None and it['id'] in L() for it in loja.values())
     iid = next(i for i, it in loja.items() if it.get('familia') == 'espada' and it['cat'] == 1); cx = mercado.caixa(E, 'vila'); eu = E['gente']['eu']['moedas']
     c = mercado.comprar_peca(E, 'eu', iid); it = L()[iid]; comprou = it['dono'] == 'eu' and it['onde'] is None and iid not in mercado.prateleira(E, 'vila') and c['prata'] == C.preco_peca(1) == 180 and mercado.caixa(E, 'vila') == cx + 180 and E['gente']['eu']['moedas'] == eu - 180
     estado.aplica(E, 'mestre', [['item', 'i0001', 'uso', 'poe', None], ['item', iid, 'uso', 'poe', 'arma']], texto='o Aldric empunha a peça comprada')
-    v = mercado.vender_peca(E, 'eu', iid); it = L()[iid]; vendeu = it['dono'] is None and it['onde'] == 'vila' and it['uso'] is None and iid in mercado.prateleira(E, 'vila') and v['prata'] == 108 and len(it['historia']) == 2 and inteiro(E)
-    estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 4, 'Lança Única de prova', familia='lança', dono='eu')], ['item', 'nasce', item('arma', 4, 'Maça Única largada', familia='maça', onde='vila')],
+    em_uso = recusa(lambda: mercado.vender_peca(E, 'eu', iid)); quieto_ = ato.tirar(E, 'eu', iid)                 # a peça em uso não se vende: guarda-se antes
+    v = mercado.vender_peca(E, 'eu', iid); it = L()[iid]; vendeu = bool(em_uso) and it['dono'] is None and it['onde'] == 'vila' and it['uso'] is None and iid in mercado.prateleira(E, 'vila') and v['prata'] == 108 and len(it['historia']) == 2 and inteiro(E)
+    estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 0, 'Adaga caída de prova', familia='adaga', onde='vila', solto=True)], ['item', 'nasce', item('arma', 4, 'Lança Única de prova', familia='lança', dono='eu')], ['item', 'nasce', item('arma', 4, 'Maça Única largada', familia='maça', onde='vila')],
                               ['item', 'nasce', dict(tipo='nucleo', cat=3, nome='Núcleo Épico de prova', dur=[1, 1], dono='eu', onde=None, de='bicho de prova', historia=[])]], texto='o que a loja não negocia')
-    unica, largada, nucleo = (f"i{E['itens']['seq'] - 2 + k:04d}" for k in range(3)); outra = next(iter(mercado.prateleira(E, 'cidade'))); da_bera = 'i0002'; estado.aplica(E, 'mestre', [['item', da_bera, 'dono', 'poe', 'bera']], texto='o gibão passa para a Bera'); antes = retrato(E)
+    caida, unica, largada, nucleo = (f"i{E['itens']['seq'] - 3 + k:04d}" for k in range(4)); fora_da_loja = caida not in mercado.prateleira(E, 'vila'); outra = next(iter(mercado.prateleira(E, 'cidade'))); da_bera = 'i0002'; estado.aplica(E, 'mestre', [['item', da_bera, 'dono', 'poe', 'bera']], texto='o gibão passa para a Bera'); antes = retrato(E)
     casos = [('vender uma peça Única', lambda: mercado.vender_peca(E, 'eu', unica)), ('vender um núcleo', lambda: mercado.vender_peca(E, 'eu', nucleo)), ('vender a peça de outro', lambda: mercado.vender_peca(E, 'eu', da_bera)),
-             ('comprar uma peça Única largada no lugar', lambda: mercado.comprar_peca(E, 'eu', largada)), ('comprar a peça da prateleira de outro lugar', lambda: mercado.comprar_peca(E, 'eu', outra)),
+             ('comprar uma peça Única largada no lugar', lambda: mercado.comprar_peca(E, 'eu', largada)), ('comprar uma peça caída no chão (solta: não é da loja)', lambda: mercado.comprar_peca(E, 'eu', caida)), ('comprar a peça da prateleira de outro lugar', lambda: mercado.comprar_peca(E, 'eu', outra)),
              ('comprar uma peça que tem dono', lambda: mercado.comprar_peca(E, 'eu', da_bera)), ('comprar o que não está no Livro', lambda: mercado.comprar_peca(E, 'eu', 'i9999'))]
     rec = [nome for nome, f in casos if recusa(f)]; igual = antes == retrato(E)
     return ('AS PEÇAS DA LOJA são itens do Livro de Itens com "onde" no lugar e sem dono; a compra e a venda mudam o dono e o "onde", por evento',
-            f"{len(loja)} peças na prateleira da vila, todas no Livro, sem dono e com onde = vila; comprar a espada Incomum: 180 de prata para o lugar, dono = eu, onde = nada; vendê-la de volta (empunhada): 108 ({pc(1 - v['prata'] / c['prata'])} de perda), "
+            f"{len(loja)} peças na prateleira da vila, todas no Livro, sem dono e com onde = vila; comprar a espada Incomum: 180 de prata para o lugar, dono = eu, onde = nada; vendê-la empunhada: {'recusado' if em_uso else 'ACEITO'}; guardada: 108 ({pc(1 - v['prata'] / c['prata'])} de perda), "
             f"sai da mão, volta à prateleira, e a história dela guarda as duas linhas; {len(rec)} de {len(casos)} pedidos errados recusados" + ('' if len(rec) == len(casos) else f" (passaram: {', '.join(x for x, _ in casos if x not in rec)})")
-            + f"; estado {'intacto' if igual else 'MUDOU'}; a prata fecha", todas and comprou and vendeu and len(rec) == len(casos) and igual and prata(E) == p0 and 1 - v['prata'] / c['prata'] >= PERDE)
+            + f"; a peça caída no chão não entra na prateleira: {'sim' if fora_da_loja else 'NÃO'}; estado {'intacto' if igual else 'MUDOU'}; a prata fecha", todas and comprou and vendeu and fora_da_loja and len(rec) == len(casos) and igual and prata(E) == p0 and 1 - v['prata'] / c['prata'] >= PERDE)
 
 
 def _loja_farta(n):
@@ -384,7 +399,7 @@ def provas(n=300):
     try: A = um_ano()
     except (SystemExit, Exception) as e: out.append(('O ANO (a medição)', f'A PROVA QUEBROU: {type(e).__name__}: {e}', False))
     for nome, f in (('IDA E VOLTA', lambda: _ida_e_volta(n)), ('A PRATA FECHA', lambda: _duzentos(n)), ('A FAIXA E O CAIXA', lambda: _faixa_e_caixa(n)), ('O ANO', lambda: _o_ano(A)), ('O DIARISTA VIVE', lambda: _o_diarista(A)),
-                    ('A PEÇA GASTA E A QUEBRADA', lambda: _gasta_e_quebrada(n)), ('AS PEÇAS DA LOJA', lambda: _pecas_do_livro(n)), ('A LOJA FARTA', lambda: _loja_farta(n)), ('O PREÇO ANDA SOZINHO', lambda: _anda_sozinho(A)), ('O CELEIRO SE ACERTA SOZINHO', lambda: _celeiro(A)), ('A MÃO DE COMÉRCIO', lambda: _comercio(n)),
+                    ('A PEÇA GASTA E A QUEBRADA', lambda: _gasta_e_quebrada(n)), ('AS PEÇAS DA LOJA', lambda: _pecas_do_livro(n)), ('A ARMADURA VALE PELO QUE COBRE', lambda: _pelo_que_cobre(n)), ('A LOJA FARTA', lambda: _loja_farta(n)), ('O PREÇO ANDA SOZINHO', lambda: _anda_sozinho(A)), ('O CELEIRO SE ACERTA SOZINHO', lambda: _celeiro(A)), ('A MÃO DE COMÉRCIO', lambda: _comercio(n)),
                     ('AS RECUSAS', lambda: _recusas(n)), ('A MESA', lambda: _a_mesa(n)), ('O MESMO MUNDO', lambda: _mesmo_mundo(A))):
         roda(nome, f)
     return out

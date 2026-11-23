@@ -8,5 +8,6 @@ Para trabalhar no Motor 10, ler nesta ordem:
 2. `REGRAS.md`: o livro de regras (um só, por assunto).
 3. `MUDANCAS.md`: o que mudou, quando e por quê.
 
-Conferir que tudo segue de pé: `python3 provas.py` (a luta e os itens) e `python3 provas_mundo.py` (o mundo).
+Conferir que tudo segue de pé: `python3 provas.py 600` (a luta, os itens e os bichos), `python3 provas_mundo.py` (o mundo: as etapas 1 e 2) e `python3 estresse.py 1500`.
+Para experimentar: `python3 vila_teste.py PASTA` cria a vila de teste, fora do cânone (o guia é o `GUIA_VILA.md`).
 Os números moram nas páginas `tabelas*.py`. Só o `estado.py` grava o mundo. Os rascunhos de projeto ficam em `projeto/`.

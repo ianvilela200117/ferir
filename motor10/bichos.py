@@ -107,7 +107,9 @@ def ameaca(esp, n=None, arma=None, armadura=None):
         L.append(f"Por ser pequen{'a' if fem else 'o'}, não derruba nem agarra gente: só quem é do tamanho {dele}.")
     if (n or hi) > 1:                                       # o bando: o grau fala de um só, e o cerco e o flanco são os de toda luta (tabelas.py)
         vaga = int(1 / tam['ocupa']); chegam = 'só um chega' if vaga <= 1 else f'só {vaga} chegam'
-        L.append(f"Em bando: o grau é o de {'uma' if fem else 'um'} só. Até {T.CERCO} batem em você de perto na mesma rodada, e cada um que já bateu tira {T.FLANCO} da sua Defesa "
+        if n and n > 1: g2 = TB.grau_do_bando(e['grau'], n); vale = f"{n} junt{'a' if fem else 'o'}s valem grau {g2} para quem está sozinho ({TB.GRAU_DIZ[g2]})"
+        else: ga, gb = TB.grau_do_bando(e['grau'], max(lo, 2)), TB.grau_do_bando(e['grau'], hi); vale = f"o bando vale grau {ga}" + (f' a {gb}' if gb != ga else '') + f" para quem está sozinho ({TB.GRAU_DIZ[gb]})"
+        L.append(f"EM BANDO, o grau {e['grau']} é o de {'uma' if fem else 'um'} só: {vale}. Até {T.CERCO} batem em você de perto na mesma rodada, e cada um que já bateu tira {T.FLANCO} da sua Defesa "
                  f"para o próximo (até {_menos(-T.FLANCO * T.FLANCO_MAX)}); num corredor de um, {chegam} de cada vez.")
     L.append(f"Sabe-se: {e['sabe']}.")
     if e['chefe']: L.append(f"É chefe: não foge, e {'morta' if fem else 'morto'} dá um núcleo {C}.")
@@ -132,18 +134,21 @@ def resumo(esp, n=None):
 
 
 def mesa(E):
-    """as linhas dos bichos para a MESA.md (que tem teto de tamanho): uma linha por lugar, o do personagem e os vizinhos, com o resumo de
-    cada espécie contada ali. Sem a contagem (é do Mestre) e sem os CHEFES (onde há um núcleo não se sabe de graça: acha-se no rastro).
+    """as linhas dos bichos para a MESA.md (que tem teto de tamanho): cada espécie contada no lugar do personagem ou num vizinho aparece UMA vez, com o resumo dela
+    e os lugares onde há. Sem a contagem (é do Mestre) e sem os CHEFES (onde há um núcleo não se sabe de graça: acha-se no rastro).
     A frase inteira de cada espécie é a ameaca(): o caçador a lê quando o bicho aparece."""
     import estado
     pid = estado.eu(E)
     if not pid: return []
-    aqui = E['gente'][pid]['lugar']; L = []
-    for lid in [aqui] + list(E['lugares'][aqui].get('vizinhos', [])):
-        l = E['lugares'].get(lid) or {}
-        esps = sorted((esp for esp, q in (l.get('bichos') or {}).items() if q > 0 and esp in TB.ESPECIES and not TB.ESPECIES[esp]['chefe']), key=_ordem)
-        if esps: L.append(f"- **{l.get('nome', lid)}:** " + ' · '.join(resumo(esp) for esp in esps))
-    return ['## Os bichos daqui (o que todo mundo sabe; a frase inteira: `bichos.py ameaca ESPECIE`)'] + L if L else []
+    aqui = E['gente'][pid]['lugar']; onde = {}
+    for lid in [aqui] + [v for v in (E['lugares'][aqui].get('vizinhos') or []) if v in E['lugares']]:
+        l = E['lugares'][lid]; conta = l.get('bichos') if isinstance(l.get('bichos'), dict) else {}
+        for esp, q in conta.items():
+            if esp in TB.ESPECIES and not TB.ESPECIES[esp]['chefe'] and isinstance(q, (int, float)) and not isinstance(q, bool) and q > 0: onde.setdefault(esp, []).append(l.get('nome', lid))
+    if not onde: return []
+    varios = len({n for L in onde.values() for n in L}) > 1
+    return ['## Os bichos daqui (o que todo mundo sabe; a frase inteira: `bichos.py ameaca ESPECIE`)',
+            '- ' + ' · '.join(resumo(esp) + (f" [{', '.join(onde[esp])}]" if varios else '') for esp in sorted(onde, key=_ordem))]
 
 
 # ---------- olhar ----------

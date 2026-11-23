@@ -132,7 +132,11 @@ def _guarda_item(S, it):
 
 # ---------- olhar o campo ----------
 def diz(S, txt):
-    if not S['quieto']: S['log'].append(txt)
+    if not S['quieto']: S['log'].append(TB.contrai(txt))
+def _n(x): return f'{x:g}'.replace('.', ',')                 # 23,5
+def _oa(f): return 'A' if f.get('bicho') and TB.ESPECIES.get(f['bicho'], {}).get('artigo') == 'a' else 'O'       # ENCURRALADA, CAÍDA, MORTA: o gênero do bicho
+def _parte(e, parte): return TB.PARTES_BICHO.get(parte, parte) if e.get('bicho') else parte                       # bicho não tem braços
+SUSTOS = dict(lider_caiu='o líder caiu', metade_caiu='metade dos seus caiu', golpe_terrivel='o golpe terrível', ferido_grave='por um fio', ferido='a ferida', pavor='o pavor')
 def de_pe(S, lado=None): return [f for f in S['L'] if f['estado'] == 'pe' and (lado is None or f['lado'] == lado)]
 def outro(lado): return 'B' if lado == 'A' else 'A'
 def inimigos(S, f): return de_pe(S, outro(f['lado']))
@@ -247,7 +251,7 @@ def golpe(S, a, e, w, livre=''):
         diz(S, f"{cab}: dois 1, erra feio"); _gasta(S, a, w, 1); return
     if j['total'] < df and not j['crit']:
         gb, gp = guarda_de(S, e); aparado = not tiro and gb > 0 and df - j['total'] <= gb
-        diz(S, f"{cab}: {j['total']:g} contra {df:g}, {'aparado' if aparado else 'erra'}")
+        diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}, {'aparado' if aparado else 'erra'}")
         if aparado and gp['cat'] != w['cat']:                # dois aços se encontram: o pior gasta
             if gp['cat'] > w['cat']: _gasta(S, a, w, 1)
             elif gp is e['escudo']: _gasta_armadura(S, e, gp['nome'], gp['item'], 1)
@@ -263,7 +267,7 @@ def golpe(S, a, e, w, livre=''):
     esc = e['escudo']
     if j['crit'] and esc and inteiro(S, esc['item']) and arma_de(S, e)['maos'] == 1: _gasta_armadura(S, e, esc['nome'], esc['item'], 1)
     e['pv'] -= dano; e['agressor'] = a['nome']
-    diz(S, f"{cab}: {j['total']:g} contra {df:g}{', CRÍTICO' + (' (a couraça não abre)' if tem(e, 'couraça') else '') if j['crit'] else ''}, {parte}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else ''))
+    diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}{', CRÍTICO' + (' (a couraça não abre)' if tem(e, 'couraça') else '') if j['crit'] else ''}, {_parte(e, parte)}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else ''))
     dv = efeito(S, e, 'devolve')
     if not tiro and dv and a['estado'] == 'pe':
         a['pv'] -= dv; diz(S, f"    a armadura de {e['nome']} devolve {dv} em {a['nome']} ({max(a['pv'], 0)}/{a['pvmax']})"); S['dano_r'] += dv / a['pvmax']
@@ -336,8 +340,8 @@ def _gasta_armadura(S, e, nome, chave, n):
 
 
 def _ferida(S, e, parte, grave, w, dano):
-    e['feridas'].append([parte, grave]); g = 1 if grave else 0; txt = f"    FERIDA{' GRAVE' if grave else ''} em {e['nome']}, {parte}: "; sangra = grave or bool(w['efeitos'].get('sangra'))
-    if parte == 'cabeça': e['atordoado'] = max(e['atordoado'], T.FERIDAS['cabeça'][g]); txt += 'atordoado'
+    e['feridas'].append([parte, grave]); g = 1 if grave else 0; txt = f"    FERIDA{' GRAVE' if grave else ''} em {e['nome']}, {_parte(e, parte)}: "; sangra = grave or bool(w['efeitos'].get('sangra'))
+    if parte == 'cabeça': e['atordoado'] = max(e['atordoado'], T.FERIDAS['cabeça'][g]); txt += 'atordoad' + _oa(e).lower()
     elif parte == 'braços':
         txt += f"{T.FERIDAS['braços'][g]} no acerto"
         if grave and not e['sem_arma'] and not e.get('bicho'): e['sem_arma'] = True; txt += ' e larga a arma'
@@ -348,7 +352,7 @@ def _ferida(S, e, parte, grave, w, dano):
     if sangra:
         n = T.SANGRA_RODADAS[1 if grave or w['efeitos'].get('sangra') else 0]; q = max(1, int(dano * T.SANGRA)); ant = e['sangra'] or [0, 0]
         e['sangra'] = [max(q, ant[0]), max(n, ant[1])]; txt += f' · sangra {e["sangra"][0]} por {e["sangra"][1]} rodadas'
-    diz(S, txt); _para(S, e, f"{e['nome']} foi ferido ({parte}{', grave' if grave else ''})", so_controlado=True)
+    diz(S, txt); _para(S, e, f"{e['nome']} foi ferid{_oa(e).lower()} ({_parte(e, parte)}{', grave' if grave else ''})", so_controlado=True)
 
 
 def _cai(S, e, dano):
@@ -367,26 +371,29 @@ def _cai(S, e, dano):
 def _moral(S, f, motivo):
     if f['moral'] == 'firme' or f['estado'] != 'pe' or (motivo in f['testou'] and motivo != 'golpe_terrivel') or f.get('moral_r') == [S['r'], motivo]: return
     if not inimigos(S, f): return                           # sem inimigo de pé não há de quem fugir nem a quem se render: quem ficou com o campo não testa a coragem
+    bicho = f.get('bicho') and not f.get('controla')
+    if bicho and f['chao'] and not f['preso'] and S['lugar'].get('sem_saida') != f['lado']: return       # o bicho no chão não tem como correr agora: o susto fica para quando ele se levantar
     f['testou'].append(motivo); f['moral_r'] = [S['r'], motivo]
     meus, deles = len(de_pe(S, f['lado'])), len(de_pe(S, outro(f['lado'])))
     ld = lider(S, f['lado']); bon = f['vontade_b'] + f.get('coragem', 0) + (T.MORAL_LIDER if ld and ld['estado'] == 'pe' and ld is not f else 0)
     if tem(f, 'matilha') and any(o is not f and tem(o, 'matilha') for o in de_pe(S, f['lado'])): bon += TB.MATILHA_CORAGEM       # a matilha dá coragem
     bon += T.MORAL_MAIS if meus > deles else T.MORAL_MENOS if deles >= 2 * meus else 0
-    t = sum(d20x()) + sum(d20x()) + bon; cd = T.MORAL[motivo] if motivo in T.MORAL else TB.PAVOR if motivo == 'pavor' else TB.MORAL[motivo]; que = motivo.replace('_', ' ')
+    t = sum(d20x()) + sum(d20x()) + bon; cd = T.MORAL[motivo] if motivo in T.MORAL else TB.PAVOR if motivo == 'pavor' else TB.MORAL[motivo]; que = SUSTOS.get(motivo, motivo.replace('_', ' '))
     if t >= cd: return
-    if f.get('bicho') and not f.get('controla'):       # o BICHO não fica abalado nem se rende: foge. Encurralado, luta até o fim
-        if S['lugar'].get('sem_saida') == f['lado']:
-            if not f.get('encurralado'): f['encurralado'] = True; diz(S, f"    {f['nome']} está ENCURRALADO: não tem para onde fugir ({que}: {t} contra {cd})")
+    if bicho:       # o BICHO não fica abalado nem se rende: foge. Encurralado (sem saída, ou sem pernas para correr), luta até o fim
+        if S['lugar'].get('sem_saida') == f['lado'] or f['preso']:
+            if not f.get('encurralado'): f['encurralado'] = True; diz(S, f"    {f['nome']} está ENCURRALAD{_oa(f)}: não tem {'para onde' if not f['preso'] else 'pernas para'} fugir ({que}: {t} contra {cd})")
             return
         f['estado'] = 'fugiu'; diz(S, f"    {f['nome']} FOGE ({que}: {t} contra {cd})"); _para(S, f, f"{f['nome']} fugiu")
-        if not _no_ar(S, f): _golpe_livre(S, f, 'ele dá as costas')      # quem voa sai por cima
+        if not _no_ar(S, f): _golpe_livre(S, f, 'dá as costas')      # quem voa sai por cima
+        if _nao_saiu(S, f): return
         if f.get('lider'):
             for o in de_pe(S, f['lado']): _moral(S, o, 'lider_caiu')
         _fim(S); return
     if f.get('controla'):       # quem o jogador comanda não foge nem se rende pelo dado: fica abalado, e a escolha é do jogador
         f['abalado'] = True; diz(S, f"    {f['nome']} FRAQUEJA ({que}: {t} contra {cd})"); _para(S, f, f"{f['nome']} fraquejou ({que}): lutar abalado, recuar ou render-se é escolha sua"); return
     if t > cd - T.MORAL_QUEBRA and not f['abalado']:
-        f['abalado'] = True; diz(S, f"    {f['nome']} fica ABALADO ({que}: {t} contra {cd})"); return
+        f['abalado'] = True; diz(S, f"    {f['nome']} fica ABALAD{_oa(f)} ({que}: {t} contra {cd})"); return
     rende = f['pv'] < f['pvmax'] * 0.25 or S['lugar'].get('sem_saida') == f['lado']
     if rende and inimigos(S, f) and all(o.get('bicho') for o in inimigos(S, f)):       # ninguém se rende a um bicho: foge, se tem por onde
         if S['lugar'].get('sem_saida') == f['lado']:
@@ -395,10 +402,21 @@ def _moral(S, f, motivo):
     f['estado'] = 'rendido' if rende else 'fugiu'
     diz(S, f"    {f['nome']} {'SE RENDE' if rende else 'FOGE'} ({que}: {t} contra {cd})")
     _para(S, f, f"{f['nome']} {'se rendeu' if rende else 'fugiu'}")
-    if not rende: _golpe_livre(S, f, 'ele dá as costas')
+    if not rende: _golpe_livre(S, f, 'dá as costas')
+    if not rende and _nao_saiu(S, f): return
     if f.get('lider'):
         for o in de_pe(S, f['lado']): _moral(S, o, 'lider_caiu')
     _fim(S)
+
+
+def _nao_saiu(S, f):
+    """quem fugia e levou, de costas, o golpe que o pôs no chão (ou lhe prendeu a perna) NÃO SAIU: segue na luta, onde caiu. Devolve True se foi assim."""
+    if f['estado'] != 'fugiu' or not (f['chao'] or f['preso']): return False
+    f['estado'] = 'pe'; txt = f"{f['nome']} fugiu"
+    if txt in S['paradas']: S['paradas'].remove(txt)
+    if f['preso'] and f.get('bicho') and not f.get('controla'): f['encurralado'] = True
+    diz(S, f"    {f['nome']} NÃO SAI: o golpe {'prendeu-lhe a perna' if f['preso'] else 'pôs no chão quem fugia'}" + (f" (ENCURRALAD{_oa(f)}: luta até o fim)" if f.get('encurralado') else ''))
+    return True
 
 
 def _golpe_livre(S, f, porque, quem=None, vinha_de=None):
@@ -581,7 +599,7 @@ def _turno(S, f):
     custos = [1] if zerado else [1] * T.ACOES + list(f['esforcos'])
     if f.get('bicho'): _turno_do_bicho(S, f)
     if f['atordoado']:
-        perde = min(len(custos), f['atordoado']); custos = custos[perde:]; f['atordoado'] = 0; diz(S, f"  {f['nome']} está atordoado: perde {perde} ação(ões)")
+        perde = min(len(custos), f['atordoado']); custos = custos[perde:]; f['atordoado'] = 0; diz(S, f"  {f['nome']} está atordoad{_oa(f).lower()}: perde {perde} {'ação' if perde == 1 else 'ações'}")
     pagou = False; feitas = 0
     for mult in custos:
         if f['estado'] != 'pe' or S['fim']: break
@@ -592,7 +610,8 @@ def _turno(S, f):
         feitas += 1
         if ac[0] in ('golpe', 'anda', 'sopro') and not pagou: pagou = True; f['fol'] -= _peso(S, f)
         if ac[0] == 'folego':
-            g = rola(T.TOMA_FOLEGO[0]) + T.TOMA_FOLEGO[1]; f['fol'] = min(f['folmax'], max(f['fol'], 0) + g); f['resguardo'] = True; diz(S, f"  {f['nome']} toma fôlego (+{g}: {f['fol']}/{f['folmax']})")
+            g = rola(T.TOMA_FOLEGO[0]) + T.TOMA_FOLEGO[1]; tinha = max(f['fol'], 0); f['fol'] = min(f['folmax'], tinha + g); f['resguardo'] = True
+            diz(S, f"  {f['nome']} toma fôlego (+{f['fol'] - tinha}: {f['fol']}/{f['folmax']})" if f['fol'] > tinha else f"  {f['nome']} se resguarda (o fôlego já está cheio: {f['fol']}/{f['folmax']})")
         elif ac[0] == 'levanta': f['chao'] = False; diz(S, f"  {f['nome']} se levanta")
         elif ac[0] == 'pega': f['sem_arma'] = False; diz(S, f"  {f['nome']} apanha a arma")
         elif ac[0] == 'recarrega': f['recarga'] -= 1
@@ -719,20 +738,34 @@ def resultado(S):
                 quebradas=[it.get('nome', k) for k, it in S['itens'].items() if it['dur'][0] <= 0 and it.get('nome') != 'as mãos'])
 
 
+def resultado_diz(S):
+    """o fim da luta numa linha, para a mesa (o resultado() é o mesmo, em registro, para os scripts)"""
+    R = resultado(S); quem = dict(A='a casa fica com o campo', B='o outro lado fica com o campo', impasse='impasse: os dois lados se separam', empate='empate: ninguém fica com o campo').get(R['vencedor'], str(R['vencedor']))
+    L = [f"{quem}, em {R['rodadas']} rodada{'s' if R['rodadas'] != 1 else ''}"]
+    for k, nome in (('mortos', 'mortos'), ('caidos', 'caídos'), ('fugiram', 'fugiram'), ('sairam', 'saíram da luta'), ('presos', 'rendidos')):
+        if R[k]: L.append(f"{nome}: {', '.join(R[k])}")
+    if R['feridas']: L.append('feridas: ' + '; '.join(f"{n} ({', '.join(_parte(por_nome(S, n) or {}, p) + (' grave' if g else '') for p, g in fs)})" for n, fs in R['feridas'].items()))
+    if R['quebradas']: L.append('peças quebradas: ' + ', '.join(R['quebradas']))
+    return ' · '.join(L)
+
+
 def situacao(S):
     """o quadro que o jogador vê quando a luta para"""
-    L = [f"RODADA {S['r']} · " + ' · '.join(S['tempo'] or ['tempo limpo']) + (f" · lugar: {S['lugar']}" if S['lugar'] else '')]
+    lado = dict(A='a casa', B='o outro lado'); lg = S['lugar'] or {}
+    lugar = [x for x in ([f"corredor de {lg['largura']}" if lg.get('largura') else ''] + [f"{lado.get(lg[k], lg[k])} {txt}" for k, txt in (('alto', 'no alto'), ('cobertura', 'com cobertura'), ('sem_saida', 'sem saída')) if lg.get(k)]) if x]
+    lugar += [f'{k}: {v}' for k, v in lg.items() if k not in ('largura', 'alto', 'cobertura', 'sem_saida')]
+    L = [f"RODADA {S['r']} · " + ' · '.join(S['tempo'] or ['tempo limpo']) + (f" · lugar: {', '.join(lugar)}" if lugar else '')]
     for lado, nome in (('A', 'A CASA'), ('B', 'O OUTRO LADO')):
         L.append(nome + ':')
         for f in S['L']:
             if f['lado'] != lado: continue
-            est = dict(pe='de pé', caido='CAÍDO', morto='MORTO', fugiu='fugiu', rendido='rendido', saiu='saiu')[f['estado']]
-            fer = ', '.join(p + (' (grave)' if g else '') for p, g in f['feridas'])
+            oa = _oa(f); est = dict(pe='de pé', caido='CAÍD' + oa, morto='MORT' + oa, fugiu='fugiu', rendido='rendid' + oa.lower(), saiu='saiu')[f['estado']]
+            fer = ', '.join(_parte(f, p) + (' (grave)' if g else '') for p, g in f['feridas'])
             L.append(f"  {f['nome']:<22} {est:<8} PV {max(f['pv'], 0):>4}/{f['pvmax']:<4} fôlego {max(f['fol'], 0):>2}/{f['folmax']:<2} casa {f['x']:>3}"
                      + (f" · feridas: {fer}" if fer else '') + (f" · sangrando ({f['sangra'][0]} por rodada)" if f['sangra'] and f['estado'] == 'pe' else '')
-                     + (' · abalado' if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else '')
+                     + (' · abalad' + oa.lower() if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else '')
                      + (f" · envenenado ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · agarrado por {f['agarrado']}" if f['estado'] == 'pe' and _agarrado(S, f) else '')
-                     + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralado' if f.get('encurralado') else '') if f.get('bicho') else ''))
+                     + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralad' + oa.lower() if f.get('encurralado') else '') if f.get('bicho') else ''))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))
     if S['paradas']: L.append('PAROU PORQUE: ' + ' · '.join(S['paradas']))
     return '\n'.join(L)
@@ -834,7 +867,7 @@ def _demo():
     while corre(S, interativo=True) == 'parada':
         print('\n'.join(S['log'])); S['log'] = []; print(); print(situacao(S)); print()
         if any('abaixo de 50%' in p for p in S['paradas']): ordem(S, 'o ferreiro: recuar defensiva'); print('>>> ordem: o ferreiro recua\n')
-    print('\n'.join(S['log'])); print(); print(situacao(S)); print(); print(json.dumps(resultado(S), ensure_ascii=False))
+    print('\n'.join(S['log'])); print(); print(situacao(S)); print(); print('FIM:', resultado_diz(S))
 
 
 if __name__ == '__main__':
@@ -849,6 +882,6 @@ if __name__ == '__main__':
         for o in a[2:]: ordem(S, o)
         S['log'] = []; fim = corre(S, interativo=True)
         print('\n'.join(S['log'])); print(); print(situacao(S))
-        if fim == 'fim': print(); print('FIM:', json.dumps(resultado(S), ensure_ascii=False))
+        if fim == 'fim': print(); print('FIM:', resultado_diz(S))
         salva(S, a[1])
     else: print(__doc__)

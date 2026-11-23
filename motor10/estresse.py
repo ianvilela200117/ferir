@@ -84,8 +84,8 @@ def cena(i):
     return A, B, dict(inicio=R.choice(['longe', 'perto', 'colado', 5, 12]), lugar=lugar, tempo=tempo, surpresa=R.choice([None, None, 'A', 'B']))
 
 
-MARCAS = {'matilha': 'a matilha o derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'está envenenado', 'agarra': ' AGARRA ', 'voa': '(no ar)', 'regenera': ' regenera (', 'apavora': '(pavor:',
-          'couraça': '(a couraça não abre)', 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALADO', 'apertado': 'luta apertado', 'veneno depois da luta': 'para o veneno depois da luta'}
+MARCAS = {'matilha': 'a matilha o derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'está envenenado', 'agarra': ' AGARRA ', 'voa': '(no ar)', 'regenera': ' regenera (', 'apavora': '(o pavor:',
+          'couraça': '(a couraça não abre)', 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALAD', 'apertado': 'luta apertado', 'veneno depois da luta': 'para o veneno depois da luta'}
 fins = collections.Counter(); rod = []; paradas = collections.Counter(); erros = 0; com_bicho = 0; visto = collections.Counter()
 N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 3000
 for i in range(N):
@@ -121,6 +121,7 @@ for i in range(N):
                 if f['estado'] == 'pe': assert f['pv'] > 0, f"{f['nome']} de pé com PV {f['pv']}"
                 assert f['pv'] <= f['pvmax'], f"{f['nome']} com PV acima do máximo"
                 if f.get('controla'): assert f['estado'] not in ('fugiu', 'rendido'), 'o comandado fugiu ou se rendeu pelo dado'
+                assert not (f['estado'] == 'fugiu' and (f['chao'] or f['preso'])), f"{f['nome']} fugiu no chão ou com a perna presa"
                 if f.get('bicho'):
                     assert f['estado'] != 'rendido', f"{f['nome']} é bicho e se rendeu"
                     assert not f['sem_arma'], f"{f['nome']} é bicho e largou a arma"

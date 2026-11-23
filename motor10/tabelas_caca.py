@@ -1,4 +1,4 @@
-"""tabelas_caca.py — MOTOR 10: TODOS os números da caça e da coleta num lugar só (a saída, o rastro, a posição, o acaso, a fuga, a cria, a coleta, a fauna dos ermos).
+"""tabelas_caca.py — MOTOR 10: TODOS os números da caça e da coleta num lugar só (a saída, o rastro, a posição, a presa ferida, o acaso, a fuga, a cria, a coleta, a maestria, a fauna dos ermos).
 
 Os números dos bichos moram no tabelas_bichos.py (a espécie, o bando, o despojo); os do mundo, no tabelas_mundo.py; os da luta, no tabelas.py.
 Mudar a caça é mudar esta página e rodar `provas_caca.py` (ou `provas_mundo.py`, que o chama).
@@ -19,7 +19,7 @@ ESFORCO = dict(ida='leve', volta='leve', procura='leve', coleta='pesado')       
 
 # ---------- o rastro ----------
 # rastrear: 2d20 + Percepção ÷ 10 + maestria de caça (+ a pena do corpo), UMA vez por bloco de procura, contra a FARTURA do ermo:
-RASTRO_BASE = 22            # o número contra, com a espécie no teto...
+RASTRO_BASE = 20            # o número contra, com a espécie no teto...
 RASTRO_ARISCO = [0, 2, 4, 6, 8, 10]      # ... mais isto pela categoria do bicho (o bicho raro é arisco)...
 RASTRO_CHEFE = 4            # ... mais isto se é chefe...
 RASTRO_FALTA = 12           # ... mais isto vezes o que falta da espécie (1 − contagem ÷ teto): na metade do teto, +6; quase sumida, +12
@@ -31,7 +31,7 @@ def arisco(especie):
     return RASTRO_ARISCO[min(e['cat'], len(RASTRO_ARISCO) - 1)] + (RASTRO_CHEFE if e['chefe'] else 0)
 
 # ---------- a posição: o que a margem do rastro dá a quem viu primeiro ----------
-# passou no rastro: o caçador VIU PRIMEIRO. Se atacar, o bicho é surpreendido (perde o primeiro turno) e a luta começa longe ou perto, à escolha.
+# passou no rastro: o caçador VIU PRIMEIRO. Pode deixar o bicho ou recuar sem custo. Se atacar, o bicho é surpreendido (perde o primeiro turno) e a luta começa longe ou perto, à escolha.
 POSICAO_CADA = 5            # cada tantos pontos de margem dão UMA vantagem de terreno, à escolha...
 POSICAO_MAX = 2             # ... até tantas
 # a vantagem → a chave do lugar da luta (as que o luta.py roda: REGRAS 3.8) e o que ela vale ali
@@ -54,7 +54,7 @@ SANGUE_ESFRIA = 3           # ... e isto mais difícil a cada nova perseguição
 
 # ---------- o acaso: aparece o que não se procurava ----------
 # no bloco em que o rastro falhou (e em todo bloco de coleta), o mundo rola: a chance é a soma, sobre as espécies do ermo, de contagem × ousadia, dividida por isto
-ACASO_CADA = 1200
+ACASO_CADA = 1500
 ACASO_MAX = 0.5             # nunca mais que isto por bloco
 # a ÍNDOLE de cada espécie: (ousadia: o quanto ela vem ao encontro de gente · investe: a chance de atacar quem não a atacou)
 INDOLE = {
@@ -71,9 +71,9 @@ FUGA_BASE = 20
 
 # ---------- a virada: os bichos criam devagar ----------
 # por dia, de cada espécie nascem contagem × CRIA × (1 − contagem ÷ teto): muito devagar com poucos, devagar perto do teto, e nunca acima dele
-CRIA = [0.05, 0.03, 0.012]  # por categoria (Comum, Incomum, Raro; daí para cima vale a última)
+CRIA = [0.04, 0.025, 0.01]  # por categoria (Comum, Incomum, Raro; daí para cima vale a última)
 CRIA_MIN = 2                # com menos disto a espécie não cria: fica à espera de que venha de fora
-VEM_DE_FORA = [20, 45, 120] # ... e de fora vem um casal, em média, a cada tantos dias (por categoria): espécie caçada até o fim some por muito tempo
+VEM_DE_FORA = [60, 100, 180]        # ... e de fora vem um casal, em média, a cada tantos dias (por categoria): espécie caçada até o fim some por muito tempo
 CHEFE_NASCE = {3: 180, 4: 364, 5: 0}     # o chefe não cria: nasce outro, em média, a cada tantos dias enquanto a contagem está abaixo do teto (0: não nasce de novo)
 def cria(cat): return CRIA[min(cat, len(CRIA) - 1)]
 def vem_de_fora(cat): return VEM_DE_FORA[min(cat, len(VEM_DE_FORA) - 1)]
@@ -99,9 +99,12 @@ FEITO_COLETA = {6: 2}       # Mestre: ter tirado matéria Rara com a própria m�
 
 # ---------- a fartura, em palavras (o que o povo sabe; a contagem é do Mestre) ----------
 FARTURA = [(0.75, 'há fartura'), (0.4, 'há, mas rareou'), (0.1, 'é raro ver'), (0.0, 'quase sumiu')]
+POUCOS = 3                  # a espécie de que cabem até tantos no ermo é rara por natureza: mesmo no teto, o povo diz só que...
+POUCOS_DIZ = 'há pouco, e sempre foi assim'
 def fartura_diz(tem, teto):
     if tem <= 0: return 'sumiu'
     f = tem / teto if teto else 1
+    if teto and teto <= POUCOS and f >= FARTURA[1][0]: return POUCOS_DIZ
     return next(txt for lim, txt in FARTURA if f >= lim)
 
 # ---------- a fauna e a matéria de um ermo novo (o gerador e o Mestre povoam por aqui: caca.py povoa) ----------

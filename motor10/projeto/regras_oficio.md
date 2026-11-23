@@ -1,5 +1,7 @@
 # O OFÍCIO: forjar, consertar e ajustar (etapa 2)
 
+> **RASCUNHO GUARDADO.** O capítulo que vale é o 7 do `../REGRAS.md`, que a integração da etapa 2 acertou (regras mudadas e números medidos de novo). O que está aqui é o texto do construtor, de antes da revisão: as tabelas de medida e as réguas são daquele dia.
+
 Capítulo para o `REGRAS.md` (o número 7 é provisório: quem monta o livro o acerta). Os números moram no `tabelas_oficio.py`; as provas, no `provas_oficio.py`.
 O comando é o `oficio.py`. Tudo o que ele faz entra por evento (`forjar`, `consertar`, `ajustar`, `trabalhar`), e a prata só muda de mão.
 

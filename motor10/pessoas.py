@@ -171,7 +171,12 @@ def defesa(F, w=None, escudo_inteiro=True):
 
 
 def linha(F):
-    """a ficha em três linhas, para a mesa"""
+    """a ficha em três linhas, para a mesa (os números com vírgula)"""
+    import re
+    return re.sub(r'(\d)\.(\d)', r'\1,\2', _linha(F))
+
+
+def _linha(F):
     if F.get('bicho'):
         w = F['arma']; pt = F['partes']['tronco']; ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
         return (f"{F['nome']} (bicho {F['tamanho']}, nível {F['nivel']}, instinto de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"

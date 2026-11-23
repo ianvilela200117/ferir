@@ -1,5 +1,7 @@
 # O MERCADO: o preço que sai do estoque, a prata contada, as peças da loja (etapa 2)
 
+> **RASCUNHO GUARDADO.** O capítulo que vale é o 8 do `../REGRAS.md`, que a integração da etapa 2 acertou (regras mudadas e números medidos de novo). O que está aqui é o texto do construtor, de antes da revisão: as tabelas de medida e as réguas são daquele dia.
+
 Capítulo para o `REGRAS.md` (o número 8 é provisório: quem monta o livro o acerta). Os números moram no `tabelas_mercado.py`; as provas, no `provas_mercado.py`.
 O comando é o `mercado.py`. Tudo o que ele faz entra por evento (`compra`, `venda`, `producao`, `consumo`), e a prata só muda de mão.
 

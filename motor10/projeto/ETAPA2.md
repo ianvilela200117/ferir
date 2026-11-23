@@ -1,5 +1,7 @@
 # ETAPA 2 — viver de um ofício: o contrato de construção
 
+> **ETAPA FECHADA.** Este contrato foi cumprido, revisto e integrado: o que entrou, o que os revisores acharam e o que mudou está no `../MUDANCAS.md`; as regras, no `../REGRAS.md` (capítulos 6 a 9). Na integração, todos os arquivos (os do alicerce e o `estresse.py` também) passaram a ser de quem integra.
+
 Quatro módulos entram no Motor 10 nesta etapa: **os bichos**, **o ofício** (forjar, consertar, ajustar), **o mercado** e **a caça e a coleta**.
 Este arquivo é o contrato entre quem constrói cada um. Ler antes: `../LEIA.md`, `../PROJETO.md`, `../REGRAS.md` (capítulos 1 a 5), o cabeçalho do `../estado.py`, as páginas `../tabelas*.py` e o `../provas_mundo.py`.
 

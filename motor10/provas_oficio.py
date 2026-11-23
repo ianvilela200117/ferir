@@ -161,16 +161,19 @@ def escada(vidas):
         deu = (f"nasce no Dia {m} (o dia em que metade das {n} vidas já a tinha)" if m is not None else f"NÃO NASCE na metade das {n} vidas até o Dia {ate}")
         deu += f"; nasceu em {len(tem)} de {n}" + (f", entre o Dia {min(tem)} e o {max(tem)}" if tem else '')
         deu += f"; a primeira obra {oficio.FEM[cat]} fecha no Dia {f}" if f is not None else f"; a primeira obra {oficio.FEM[cat]} não chega a fechar na metade das vidas"
+        pior = max((V['tentou'].get(cat, 0) for V in vidas), default=0); o_que = 'núcleos' if O.pede_nucleo(cat) else 'levas de matéria'
         if prim: deu += f", e acerta de primeira em {sum(prim) / len(prim):.0%} das vidas ({tent / n:.1f} obras por vida)"
+        deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria" + (' e núcleo novos' if O.pede_nucleo(cat) else ' nova') + f" a cada obra: {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
+                + (f". COM UM NÚCLEO SÓ, a peça nasce em {sum(prim) / len(prim):.0%} das vidas; nas outras, o núcleo se gastou ou se perdeu" if prim and O.pede_nucleo(cat) else ''))
         fechos[cat] = f
-        out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira peça {oficio.FEM[cat]} do robô ferreiro sai entre os dias {a} e {b}", deu, m is not None and a <= m <= b))
+        out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira peça {oficio.FEM[cat]} do robô ferreiro sai entre os dias {a} e {b} (na melhor oficina, com o preparo todo e com núcleo novo a cada obra: a linha diz o que isso gasta)", deu, m is not None and a <= m <= b))
     out.append(('O RITMO DA BANCADA (a outra leitura da meta da escada: o dia em que a primeira OBRA de cada categoria fecha, acerte ou não), nas mesmas janelas',
                 ' · '.join(f"{oficio.FEM[c]}: Dia {fechos[c]} ({a} a {b})" if fechos[c] is not None else f"{oficio.FEM[c]}: não fecha na metade das vidas ({a} a {b})" for c, (a, b) in JANELAS.items()),
                 all(fechos[c] is not None and a <= fechos[c] <= b for c, (a, b) in JANELAS.items())))
     vidas = todas; n = len(vidas); ritmo = sum(V['bancada'] for V in vidas) / max(1, sum(V['dia'] - 1 for V in vidas)); certo = all(V['prata'] and V['materia'] and V['nucleos'] and not V['quebrado'] and V['vivo'] for V in vidas)
     mal = sum(V['parou'] + V['pena'] + V['chao'] + V['jejum'] for V in vidas)
     dias = max(1, sum(V['dia'] - 1 for V in vidas))
-    deu = (f"{n} vidas ({sum(V['cheia'] for V in vidas)} de até {ROBO['dias']} dias): {ritmo:.2f} blocos de bancada por dia; {sum(V['camas'] for V in vidas) / dias:.2f} noite de cama e {sum(V['refeicoes'] for V in vidas) / dias:.2f} refeição pagas por dia; "
+    deu = (f"{n} vidas ({sum(V['cheia'] for V in vidas)} de até {ROBO['dias']} dias): {ritmo:.2f} blocos de bancada por dia; o jornal pago pelo que a mão vale (aprendiz, oficial, mestre), até {M.JORNADA} blocos por dia; {sum(V['camas'] for V in vidas) / dias:.2f} noite de cama e {sum(V['refeicoes'] for V in vidas) / dias:.2f} refeição pagas por dia; "
            f"noites no chão, jejuns, paradas do corpo e testes com pena: {mal}; a prata do mundo {'fecha' if all(V['prata'] for V in vidas) else 'NÃO FECHA'}; "
            f"a matéria e os núcleos entregues {'entraram todos em obra' if all(V['materia'] and V['nucleos'] for V in vidas) else 'NÃO FECHAM'}; estado {'inteiro' if not any(V['quebrado'] for V in vidas) else 'QUEBRADO'}")
     out.append(('O ROBÔ VIVE DE VERDADE: come, dorme, paga a cama, vive do jornal; a prata e a matéria fecham', deu, certo and mal == 0 and 3 <= ritmo <= 3.6))
@@ -186,7 +189,7 @@ def _melhor(n):
 
 def _iniciante(n):
     com, cc = mede(n, 0, **VILA); rar, cr = mede(n, 2, **VILA); nu = oficio.chances(VILA['mao'] + VILA['nivel'] + VILA['afinidade'] // 10, O.contra(0))[0]
-    return ('UM INICIANTE EM OFICINA DE VILA acerta a Comum em 85% ou mais, e a Rara em menos de 25%',
+    return ('UM INICIANTE EM OFICINA DE VILA acerta a Comum em 85% ou mais, e a Rara em menos de 25% (a Comum, medida com os quatro preparos do Comum; a linha diz também a conta sem preparo nenhum)',
             f"Comum, com o preparo do Comum inteiro (+8): conta exata {cc['acerta']:.1%}, medido {com:.1%} em {n} obras (sem preparo nenhum: {nu:.1%}); Rara, onde aquele preparo não alcança: conta exata {cr['acerta']:.1%}, medido {rar:.1%}",
             cc['acerta'] >= 0.85 and cr['acerta'] < 0.25 and bate(com, cc['acerta'], n) and bate(rar, cr['acerta'], n))
 
@@ -322,13 +325,14 @@ def _recusas(n):
     total = oficio.prata_do_mundo(E); J = oficio.jornal(E, 'eu', 1); sem_paga = J['feitos'] == 1 and J['ganhou'] == 0 and E['gente']['eu']['treino']['forja'] == 3 and oficio.prata_do_mundo(E) == total
     M2 = oficina_de_prova(nivel=1, carga={'metal:0': 3}); estado.aplica(M2, 'gera', [['item', 'i0001', 'uso', 'poe', None], ['item', 'i0002', 'uso', 'poe', None]], texto='o Aldric tira as peças')
     oficio.forjar(M2, 'eu', espada(0), blocos=0); estado.aplica(M2, 'mestre', [['pessoa', 'eu', 'pv', 'soma', -9999], ['pessoa', 'eu', 'estado', 'poe', 'morto']], texto='o ferreiro morre, para a prova')
-    solta = len(estado.valida(M2)); oficio.virada(M2); desfez = solta == 1 and not estado.valida(M2) and not M2['itens']['obras']       # a obra de um morto quebra um invariante; a virada a desfaz
+    L2 = M2['itens']['itens']; caiu = all(it.get('dono') is None and it.get('onde') == 'vila' and it.get('solto') for it in L2.values())
+    desfez = not estado.valida(M2) and not M2['itens']['obras'] and caiu and not M2['gente']['eu'].get('carga') and M2['gente']['eu']['moedas'] == 0       # a regra da morte: a obra se desfaz NA HORA, e o que era dele cai solto onde morreu
     with contextlib.redirect_stdout(io.StringIO()) as tela: oficio.main([])
     uso = tela.getvalue().startswith('oficio.py') and 'Uso' in tela.getvalue()
     return ('AS RECUSAS: o que não pode abrir não abre, e nada muda pela metade; sem argumento, o script só diz o uso',
             f"{len(rec)} de {len(casos)} recusados" + ('' if len(rec) == len(casos) else f" (passaram: {', '.join(x for x, _ in casos if x not in rec)})") + f"; estado {'intacto' if igual else 'MUDOU'}; "
             f"teste antes de os blocos fecharem: {'recusado' if cedo else 'ACEITO'}; obra largada com zero blocos devolve a matéria: {'sim' if voltou else 'NÃO'}; largada com dois blocos, perde a matéria e fica com o núcleo: {'sim' if largou else 'NÃO'}; "
-            f"oficina sem prata não paga o jornal, e o bloco conta: {'sim' if sem_paga else 'NÃO'}; a obra de quem morreu se desfaz na virada do dia: {'sim' if desfez else 'NÃO'}; sem argumento: {'só o uso' if uso else 'FEZ OUTRA COISA'}",
+            f"oficina sem prata não paga o jornal, e o bloco conta: {'sim' if sem_paga else 'NÃO'}; a obra de quem morreu se desfaz na hora da morte, e o que era dele cai solto onde morreu (o estado segue inteiro): {'sim' if desfez else 'NÃO'}; sem argumento: {'só o uso' if uso else 'FEZ OUTRA COISA'}",
             len(rec) == len(casos) and igual and cedo and voltou and largou and sem_paga and desfez and uso and not estado.valida(E))
 
 

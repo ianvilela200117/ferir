@@ -1,5 +1,7 @@
 # OS BICHOS (etapa 2)
 
+> **RASCUNHO GUARDADO.** O capítulo que vale é o 6 do `../REGRAS.md`, que a integração da etapa 2 acertou (regras mudadas e números medidos de novo). O que está aqui é o texto do construtor, de antes da revisão: as tabelas de medida e as réguas são daquele dia.
+
 Capítulo para o `REGRAS.md` (o número 6 é provisório: quem monta o livro o acerta). Os números moram no `tabelas_bichos.py`; as provas, no `provas.py` (bloco OS BICHOS).
 A luta é a do capítulo 3, sem tirar nada: o `luta.py` roda o bicho como roda gente. O comando para olhar é o `bichos.py`; ele não rola dado de jogo nem mexe em save.
 

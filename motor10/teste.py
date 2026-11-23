@@ -24,6 +24,7 @@ def d20x():
 def rola(E, o_que, atributo, contra, mais=0, quem=None, oculto=False):
     pid = quem or estado.eu(E); p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
     if atributo not in T.ATRIBUTOS: sys.exit(f'atributo desconhecido: "{atributo}" (use: {", ".join(T.ATRIBUTOS)})')
+    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não está vivo: não testa nada")
     a, b = d20x(), d20x(); bonus = p['atributos'][atributo] // 10; pena = corpo.pena(p)
     total = sum(a) + sum(b) + bonus + pena + mais
     r = dict(n=len(E['turno']['dados']) + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], quem=pid, o_que=o_que, atributo=atributo, dados=[a, b],
@@ -48,5 +49,9 @@ if __name__ == '__main__':
         print('\n'.join(diz(E, r, mestre=True) for r in E['turno']['dados']) or '(nenhuma rolagem neste turno)'); sys.exit()
     op = dict(x.split('=', 1) for x in a if '=' in x); pos = [x for x in a if '=' not in x]
     if len(pos) < 2 or 'contra' not in op: sys.exit(__doc__)
-    r = rola(E, pos[0], pos[1], int(op['contra']), mais=int(op.get('mais', 0)), quem=op.get('quem'), oculto='oculto' in pos)
+    def num(k, pad=None):
+        v = op.get(k, pad)
+        try: return int(v)
+        except (TypeError, ValueError): sys.exit(f'"{k}=" pede um número inteiro (veio "{v}")')
+    r = rola(E, pos[0], pos[1], num('contra'), mais=num('mais', 0), quem=op.get('quem'), oculto='oculto' in pos)
     estado.grava(E); print(diz(E, r))

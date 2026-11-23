@@ -14,8 +14,14 @@ import tabelas as T
 # O grau fala de UM bicho contra um homem do mesmo degrau (o conjunto da categoria do bicho); o bando pesa mais, e a ameaça avisa.
 GRAUS = ['F', 'E', 'D', 'C', 'B', 'A', 'S']
 GRAU_DA_CAT = {0: ('F', 'E'), 1: ('D',), 2: ('C',), 3: ('B',), 4: ('A',), 5: ('S',)}
-GRAU_DIZ = dict(F='presa: sozinha quase nunca derruba um homem armado, mas o golpe de sorte abre ferida', E='perigo para quem está sozinho e mal armado', D='perigo para um homem armado', C='mata um veterano',
-                B='pede um grupo', A='pede um grupo de mestres', S='calamidade')
+GRAU_DIZ = dict(F='presa: sozinha quase nunca derruba um homem armado, mas o golpe de sorte abre ferida', E='perigo de morte para quem está sozinho com peças Comuns',
+                D='perigo de morte para um homem armado, mesmo com peças Incomuns', C='mata um veterano', B='pede um grupo', A='pede um grupo de mestres', S='calamidade')
+# O BANDO PESA MAIS QUE O GRAU DE UM SÓ: para quem está sozinho, N juntos valem tantos graus acima (medido na régua do capítulo 6: duas corças derrubam o caçador
+# de começo uma vez em quatro; seis ratazanas vencem-no em seis de dez; quatro lobos vencem o homem de conjunto Incomum em oito de dez)
+BANDO_GRAU = [(4, 2), (2, 1)]      # com 4 ou mais, dois graus acima; com 2 ou 3, um grau acima
+def grau_do_bando(grau, n):
+    sobe = next((s for q, s in BANDO_GRAU if n >= q), 0)
+    return GRAUS[min(len(GRAUS) - 1, GRAUS.index(grau) + sobe)]
 
 # ---------- o tamanho ----------
 # pv: vezes o PV · alcance: casas que o corpo alcança · cerco: quantos batem nele de perto na mesma rodada, e quantos mais de haste
@@ -79,6 +85,19 @@ TRACOS = {
 MORAL = dict(ferido=26)     # o susto que só o bicho tem: levou uma FERIDA. Os outros são os de toda a gente (tabelas.MORAL): abaixo de um quarto do PV, o golpe terrível num do bando, metade do bando caída, o alfa caído
 ENCURRALADO = 2             # sem saída o bicho não foge: luta até o fim, com isto no acerto
 # o chefe não testa (moral "firme")
+
+# ---------- dizer ----------
+PARTES_BICHO = dict(braços='patas da frente', pernas='patas de trás')      # o que a mesa lê quando o golpe cai nos "braços" ou nas "pernas" de um bicho (a regra é a mesma: tabelas.ONDE)
+import re as _re
+_CONTRAI = {('em', 'a'): 'na', ('em', 'o'): 'no', ('em', 'as'): 'nas', ('em', 'os'): 'nos', ('de', 'a'): 'da', ('de', 'o'): 'do', ('de', 'as'): 'das', ('de', 'os'): 'dos',
+            ('por', 'a'): 'pela', ('por', 'o'): 'pelo', ('por', 'as'): 'pelas', ('por', 'os'): 'pelos'}
+_CONTRAI_RE = _re.compile(r'\b([Ee]m|[Dd]e|[Pp]or) (as|os|a|o) (?=[a-zà-ú])')
+def contrai(txt):
+    """o nome do bicho sozinho leva o artigo ("a corça", "o javali"): "em a corça" vira "na corça", "de o javali" vira "do javali", "por o lobo" vira "pelo lobo"."""
+    def f(m):
+        c = _CONTRAI[(m.group(1).lower(), m.group(2).lower())]
+        return (c.capitalize() if m.group(1)[0].isupper() else c) + ' '
+    return _CONTRAI_RE.sub(f, txt)
 
 # ---------- o despojo ----------
 DESPOJO_MIN = 0.5           # a luta estraga: de cada bem sai desta fração (arredondada para cima) até o inteiro da tabela

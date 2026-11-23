@@ -1,6 +1,6 @@
 # MOTOR 10 — O PROJETO DO RESTO
 
-O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha (`REGRAS.md`, 51 de 51 no banco de provas).
+O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 77 de 77 no `provas.py`). As etapas 1 e 2 do mundo estão feitas (70 de 70 no `provas_mundo.py` na rodada guardada; a prova da primeira peça Lendária é de dado de verdade e não é firme: passou numa rodada de sete, e está dita no `REGRAS.md` 7.13).
 Este é o plano do que falta até o Dia 1 de um **mundo novo, do zero**: o mundo vivo, a magia, os bichos, o ofício e o turno.
 Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números e as etapas.
 **As decisões do jogador já estão tomadas (seção 12) e o plano abaixo já as segue.**
@@ -47,7 +47,7 @@ Ferida sara em 7 dias; a grave, em 21 (com curandeiro, metade). PV: 10% por noit
 
 **A história.** O gerador não começa no Dia 1: ele roda de 400 a 1.000 anos em passos largos (ano a ano) antes de você nascer. Disso saem as casas e as linhagens, os reinos e as fronteiras, as guerras e as dívidas de sangue, as lendas mortas, as ruínas (que são as masmorras, cada uma com a sua origem) e a história de cada peça alta: quem forjou, quem perdeu, quem tem hoje. O presente é a ponta dessa história, e a crônica fica à disposição do Mestre e, aos pedaços, da gente do mundo, que conta o que sabe.
 
-**Economia.** Prata. Viver custa 3 por dia; o diarista ganha 4; o oficial, 12. Preço = base × √(alvo ÷ estoque), entre 0,4 e 3 vezes. **Toda compra mexe no estoque, a sua também.** Peça de loja: Comum 30, vezes 6 por categoria, até o Épico (6.480). De Único para cima não há loja: leilão, encomenda ou despojo.
+**Economia.** Prata. Viver custa 3 por dia; o diarista ganha 4; o oficial, 12 (a jornada são 2 blocos pagos por dia). Preço = base × √(alvo ÷ estoque), entre 0,4 e 3 vezes. **Toda compra mexe no estoque, a sua também.** Peça de loja: Comum 30, vezes 6 por categoria, até o Épico (6.480). De Único para cima não há loja: leilão, encomenda ou despojo.
 
 **Frentes.** Doze no Dia 1 (4 ameaças, 4 ambições, 2 faltas, 2 mistérios), e o chão gera outras por limiar: grão abaixo de 10 dias, nasce a fome; ninhada acima do teto, nasce a praga. Cada uma rola por semana contra a resistência do lugar. Missão cumprida contra ela tira um passo; qualquer um pode cumprir. O passo 6 é o desfecho, sem volta.
 
@@ -102,7 +102,7 @@ Padrões que valem se você não disser outra coisa: seis escolas para começar;
 
 ## 8. Dados e scripts
 
-`mundo/`: `relogio` · `lugares` (povo, estoque, produz, oficina, dano) · `rotas` · `ermos` (espécies contadas, masmorras) · `gente` (nomeados, rivais, você) · `guildas` · `frentes` · `missoes` · `caixa` · `noticias` · `oculto` · `diretor` · `turno_aberto` · `eventos.jsonl` (o único histórico; o diário sai dele). Os itens seguem em `dados/itens.json`.
+`mundo/`: `relogio` · `lugares` (povo, estoque, produz, oficina, dano) · `rotas` · `ermos` (espécies contadas, masmorras) · `gente` (nomeados, rivais, você) · `guildas` · `frentes` · `missoes` · `caixa` · `noticias` · `oculto` · `diretor` · `turno_aberto` · `eventos.jsonl` (o único histórico; o diário sai dele). Os itens moram no `itens.json` do save (o `dados/itens.json` é só o Livro solto da luta fora do mundo).
 
 Scripts novos, cerca de 5.500 linhas: `tabelas_mundo` · `estado` · `corpo` · `ato` · `oficio` · `bichos` · `mercado` · `viagem` · `gente` · `rivais` · `frentes` · `missoes` · `caixa` · `diretor` · `magia` e `tabelas_magia` · `turno` · `gera` · `cria` · `provas_mundo`. Sem argumento, todo script só imprime o uso.
 
@@ -129,7 +129,7 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | Etapa | O que entra | O que se joga |
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
-| 2. Viver de um ofício | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **No fim dela, a vila de teste** (fora do cânone) |
+| 2. Viver de um ofício **(FEITA: 77 de 77 no `provas.py`, com as 26 dos bichos; no `provas_mundo.py`, o alicerce 18 de 18, o mercado 15 de 15, a caça 22 de 22 e o ofício 14 ou 15 de 15, conforme o dado: a primeira peça Lendária não é firme; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
 | 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia | focos, feitiços, encantos de peça | o mago, o curandeiro, a peça encantada |
 | 5. A corrida | rivais, guildas, masmorras, ranking, torneio, leilão, a janela do mundo | disputar |
