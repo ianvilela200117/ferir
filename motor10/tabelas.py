@@ -84,6 +84,7 @@ def acerto_base(maestria, forca, agil): return maestria + (forca // 10 + agil //
 def defesa_base(maestria, agil): return DEF_BASE + (agil // 10) / 2 + maestria / 2
 def pv_max(vigor, nivel): return vigor * 2 + nivel // 4
 def folego_max(vigor): return 6 + vigor // 10
+FOLEGO_MIN = 2              # o cansaço do corpo não baixa o fôlego máximo além disto
 def forca_mult(atributo): return 1 + (atributo // 10) * 0.03      # a força empurra o que o aço abriu
 MAESTRIAS = {0: 'Leigo', 2: 'Iniciante', 4: 'Treinado', 6: 'Mestre', 8: 'Lendário'}
 ACOES = 2                   # as ações de todo mundo, por rodada

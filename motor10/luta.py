@@ -103,6 +103,10 @@ def nova(lado_a, lado_b, inicio='perto', lugar=None, tempo=None, surpresa=None, 
             f.update(x=x, estado='pe', feridas=[], sangra=None, atordoado=0, chao=False, preso=False, abalado=False, reac=f['reacoes'], postura='firme',
                      usou=[], testou=[], morte=[0, 0], agressor=None, recarga=0, sem_arma=False, resguardo=False, fugiu=False, golpeado=[], ini=0, pv_visto=f['pv'])
             f.setdefault('moral', 'testa'); f.setdefault('papel', 'guarda' if f.get('guarda') else 'frente')
+            f['feridas'] = f.pop('feridas0'); f['feridas_antes'] = len(f['feridas'])
+            for parte, grave in f['feridas']:               # a ferida que a pessoa já traz entra na luta com ela
+                if parte == 'tronco': f['fol'] = max(0, f['fol'] - T.FERIDAS['tronco'][1 if grave else 0])
+                if parte == 'pernas' and grave: f['preso'] = True
             for w in (f['arma'], f['arma2'], f['punho']):
                 if w: w['item'] = _guarda_item(S, w['item'])
             for pc in f['partes'].values(): pc['item'] = _guarda_item(S, pc['item'])
@@ -637,6 +641,7 @@ def cenario(arq):
 def salva(S, arq):
     """guarda a luta no arquivo e devolve ao Livro de Itens a durabilidade gasta até aqui"""
     json.dump(S, open(arq, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    if S.get('mundo'): return                               # luta do mundo: a durabilidade volta por evento, no ato.py (o gravador é um só)
     from itens import carrega, grava
     B = carrega(); mudou = False
     for it in S['itens'].values():

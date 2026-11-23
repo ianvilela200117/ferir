@@ -121,7 +121,7 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 
 | Etapa | O que entra | O que se joga |
 | --- | --- | --- |
-| 1. Um dia numa vila | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
+| 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
 | 2. Viver de um ofício | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **Aqui cabe uma vila de teste** |
 | 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia | focos, feitiços, encantos de peça | o mago, o curandeiro, a peça encantada |

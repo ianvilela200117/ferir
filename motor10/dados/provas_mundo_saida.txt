@@ -1,0 +1,16 @@
+BANCO DE PROVAS DO MUNDO · etapa 1: um dia numa vila
+
+  passa  A ROTINA: 30 dias dormindo, comendo uma vez e trabalhando dois blocos: pior pena 0; prata 30 → 60; corpo {'fome': 2, 'sono': 4, 'cansaco': 4}
+  passa  O SONO: acordado sem parar, o ato longo para sozinho; com 9 blocos acordado, a pena é −4: parou em 6 blocos (Aldric está com sono); pena -4
+  passa  A FOME: seis dias sem comer: fome 10; PV 106 de 130; pena -4
+  passa  A FERIDA: sara com 7 dias de repouso (a grave, com 21); trabalhando pesado, não sara: feridas no dia 6, 7, 20, 21: 2, 1, 1, 0; trabalhando 10 dias: 1
+  passa  A NOITE: dois blocos dormidos sem fome devolvem um décimo do PV: 12 de 130
+  passa  O GRAVADOR: nove eventos errados são recusados, e o estado não muda nem pela metade: 9 de 9 recusados; estado intacto
+  passa  OS INVARIANTES: seis estragos plantados por fora do gravador: limpo: 0 problema(s); estragado: 6
+  passa  O CORPO NA LUTA: o mesmo homem, moído (sono 8, cansaço 9), contra ele descansado: vence 23%; fôlego 9 contra 12; acerto -1 contra 3
+  passa  A LUTA VOLTA AO ESTADO: PV, feridas e morte entram por um evento só; com a luta aberta o turno não fecha: a luta acabou (A); o Aldric: vivo, PV 111, 0 ferida(s); eventos de luta: 1; fechar com ela aberta: recusado
+  passa  O TURNO: cinco fechamentos e respostas erradas são recusados; o certo fecha e gera o RETOMAR e a MESA: recusas: 5 de 5; RETOMAR 999 bytes; MESA 1327 bytes
+  passa  O MESMO MUNDO: mesma semente e mesmos atos dão o mesmo estado; semente diferente, não: conferido em 12 dias sem dormir (o acaso do sono entra)
+  passa  O TREINO: 42 blocos com a espada fazem um Iniciante; 600 blocos fazem um Treinado, e Mestre só com um feito: depois de 14 dias: Iniciante (42 blocos); com 600 a mais: Treinado
+
+12 de 12 provas passam.

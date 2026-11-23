@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos no `tabelas.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas). O plano do resto (magia, bichos, ofício, mundo vivo, o turno) está no `PROJETO.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas) e o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo). O plano do resto está no `PROJETO.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -316,6 +316,43 @@ Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas 
 
 ---
 
+## 5. O mundo: o tempo, o corpo, o estado e o turno (etapa 1)
+
+Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_mundo.py` (12 de 12).
+
+5.1 **O tempo.** O dia tem 6 blocos de 4 horas: madrugada, alvorada, manhã, tarde, entardecer, noite. Semana de 7 dias, estação de 91, ano de 364. Todo ato custa blocos. A madrugada e a noite são escuras: a luta ao ar livre ganha "escuro" sozinha.
+
+5.2 **O corpo** tem três medidores, de 0 a 10:
+
+| | Sobe | Desce | Cobra |
+| --- | --- | --- | --- |
+| Fome | +1 a cada 2 blocos | refeição −3 (1 de prata) | em 4: −2; em 7: −4, e 5% do PV máximo a cada virada do dia |
+| Sono | +1 por bloco acordado | −3 por bloco na cama; −2 no chão | em 6: −2; em 8: −4, e Vontade contra 28 a cada bloco, ou dorme ali mesmo |
+| Cansaço | bloco pesado +2, leve +1, luta +2 | −3 por bloco na cama; −2 no chão; −1 descansando | cada 3 pontos tiram 1 do fôlego máximo; em 9: −2 |
+
+**A pena do corpo** é a pior das três (não somam) e entra em todo teste, no acerto e na Defesa. O mesmo homem, com sono 8 e cansaço 9, vence a si mesmo descansado em 23% das lutas.
+
+5.3 **Curar.** Cada bloco dormido sem fome (abaixo de 4) devolve 5% do PV máximo, em no máximo dois blocos por dia: um décimo por noite. A ferida sara com **7 dias de repouso**; a grave, com **21**. Dia com dois blocos pesados não conta como repouso. Estar ferido custa: quem não trabalha não ganha.
+
+5.4 **Viver.** Refeição 1 de prata; cama 2 por noite. O diarista ganha 2 por bloco, e a jornada são 2 blocos: sobra 1 de prata por dia. Uma refeição por dia segura a fome.
+
+5.5 **Treinar.** Bloco de treino é pesado. A maestria numa arma sobe aos 40 blocos (Iniciante), 160 (Treinado), 500 (Mestre) e 1.500 (Lendário). De Mestre para cima, os blocos não bastam: é preciso um **feito** com a arma, que o mundo registra.
+
+5.6 **O ato longo para.** Dormir, trabalhar, treinar ou esperar vários blocos para quando o corpo cruza um limiar (fome, sono, cansaço), e diz por quê.
+
+5.7 **O estado e o gravador único.** O save é uma pasta com o relógio, os lugares, a gente, o Livro de Itens, o caderno do turno e o registro de eventos. **Só `estado.aplica()` muda o mundo.** Um evento sem efeito é recusado: o que não muda número não aconteceu. Um evento com um efeito errado é recusado inteiro: nada muda pela metade. Cada fato mora num lugar só (o dono de uma peça, só no Livro de Itens). O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos.
+
+5.8 **O dado de quem está em cena** (`teste.py`): 2d20 + bônus do atributo + a pena do corpo, contra um número. O comando declara e rola no mesmo passo, uma vez, e o resultado fica escrito no turno. A rolagem oculta aparece na mesa só como "rolagem oculta"; a verdade vai para a parte do Mestre.
+
+5.9 **A luta dentro do mundo** (`ato.py luta`). Quem tem ficha no mundo entra com o que veste hoje, o PV, as feridas e a pena do corpo. Acabada, a luta volta ao estado num evento só: PV, feridas novas, mortes, o cansaço e a durabilidade das peças.
+
+5.10 **O turno em dois comandos.**
+- `turno.py abre` só lê e gera a `MESA.md`: você, o lugar, o que dá para fazer e o que custa, as perguntas abertas, e o SÓ O MESTRE.
+- `turno.py responde "1a.2b"` confere cada código contra as perguntas abertas. Código que não bate é recusado, e nada é marcado.
+- `turno.py fecha "o que houve"` **recusa** se: há luta aberta · há menos de 2 perguntas abertas · o relógio não andou (a não ser que se diga `parado`) · o estado quebrou um invariante. Passando, gera o `RETOMAR.md` (o agora, o que houve, os fatos do registro, as perguntas, o que só o Mestre sabe) e a `MESA.md` nova. Com `git`, guarda e envia, e avisa se o envio falhou.
+
+---
+
 ## Os comandos
 
 ```
@@ -327,6 +364,15 @@ python3 luta.py nova dados/cenario_exemplo.json lutas/corredor.json
 python3 luta.py roda lutas/corredor.json "Aldric: atacar o chefe agressiva" "grupo: segurar"
 python3 luta.py demo
 python3 provas.py
+
+python3 provas_mundo.py                              as provas do mundo
+python3 provas_mundo.py vila /caminho/da/pasta       cria uma vila de prova para experimentar
+MOTOR10_MUNDO=/caminho/da/pasta python3 turno.py abre
+python3 ato.py comer | dormir N | trabalhar N | treinar N ARMA | descansar N | esperar N
+python3 ato.py luta nova CENARIO.json LUTA.json  ·  python3 ato.py luta roda LUTA.json "Nome: atacar"
+python3 teste.py "o que se tenta" Força contra=26 [oculto]
+python3 turno.py pergunta "texto" "a=..." "b=..."  ·  turno.py responde "1a.2b"  ·  turno.py fecha "o que houve"
+python3 estado.py valida | eventos | pessoa ID
 ```
 
 No cenário, cada pessoa veste `arma`, `arma2`, `armadura`, `elmo`, `escudo` e `pecas` (mais peças de armadura). Cada uma é o id de um item do Livro, ou um atalho para gente miúda: `["espada", "Raro"]`. O atalho de armadura veste o corpo e um elmo igual; `"elmo": false` tira o elmo.

@@ -45,6 +45,12 @@ def veste(p, arma=None, armadura=None, escudo=None, arma2=None, elmo=None, pecas
     return p
 
 
+def _maestria(p, familia):
+    """a maestria da pessoa NESTA arma: um número só (gente gerada) ou um por família de arma (gente do mundo)"""
+    m = p['maestria']
+    return m.get(familia, 0) if isinstance(m, dict) else m
+
+
 def _assenta(it, p, dorme):
     """(a categoria que a peça rende, o que falta de atributo, o bônus de assento) para ESTA pessoa"""
     a, q = pede(it, dorme); c = it['cat'] - (T.SINTONIA_ABAIXO if dorme else 0); mais = 0
@@ -66,7 +72,7 @@ def _arma(it, p, dorme):
     return dict(nome=it['nome'] + (' (quebrada)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
                 recarga=f.get('recarga', 0), haste=f['alcance'] == 2 and not tiro,
                 mult=T.MULT[c] * (T.DUAS_MAOS if f['maos'] == 2 and not tiro else 1),
-                acerto=T.acerto_base(p['maestria'], at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0),
+                acerto=T.acerto_base(_maestria(p, it['familia']), at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0),
                 aparo=0 if tiro or quebrada else T.BON[c] + f.get('apara', 0),
                 folego=1 + (1 if f['peso'] == 'pesada' else 0) + falta // T.FALTA_FOLEGO,
                 fmult=T.BESTA_FORCA if it['familia'] == 'besta' else T.forca_mult(at[f.get('atributo', 'Força')]),
@@ -75,14 +81,14 @@ def _arma(it, p, dorme):
 
 def ficha(p):
     """a ficha de luta desta pessoa, hoje, com o que ela veste"""
-    at = p['atributos']; eq = p.get('equip') or {}; m = p['maestria']
+    at = p['atributos']; eq = p.get('equip') or {}; m = _maestria(p, (eq.get('arma') or {}).get('familia', 'punho'))
     arm = [x for x in eq.get('armaduras') or [] if x]
     todas = [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + arm
     # SINTONIA: as peças Épicas ou melhores, da melhor para a pior; as que passam do limite dormem
     altas = sorted([it for it in todas if it['cat'] >= T.SINTONIA_DESDE], key=lambda i: -i['cat'])
     limite = max(1, at['Vontade'] // T.SINTONIA)
     sono = {id(it) for it in altas[limite:]}; dorme = lambda it: id(it) in sono
-    F = dict(nome=p['nome'], nivel=p['nivel'], maestria=m, pvmax=T.pv_max(at['Vigor'], p['nivel']), folmax=T.folego_max(at['Vigor']),
+    F = dict(nome=p['nome'], nivel=p['nivel'], maestria=m, pvmax=T.pv_max(at['Vigor'], p['nivel']), folmax=max(T.FOLEGO_MIN, T.folego_max(at['Vigor']) - p.get('fol_menos', 0)),
              esforcos=T.esforcos(m), reacoes=T.reacoes(m), vontade_b=at['Vontade'] // 10, percep_b=at['Percepção'] // 10, agil_b=at['Agilidade'] // 10,
              forca_b=at['Força'] // 10, dormem=[it['nome'] for it in altas[limite:]])
     F['pv'] = p.get('pv', F['pvmax']); F['fol'] = F['folmax']
@@ -102,14 +108,15 @@ def ficha(p):
             if parte not in F['partes'] or prot > F['partes'][parte]['rd']:
                 F['partes'][parte] = dict(nome=it['nome'], cat=c, material=it['material'], rd=prot, item=it)
     F['nuas'] = [x for x in T.PARTES if x not in F['partes']]
-    F['def_fixa'] = T.defesa_base(m, at['Agilidade']) + corpo['defesa'] - falta_arm // T.FALTA_ACERTO
+    F['def_fixa'] = T.defesa_base(m, at['Agilidade']) + corpo['defesa'] - falta_arm // T.FALTA_ACERTO + p.get('pena', 0)      # a pena do corpo (fome, sono, cansaço)
+    F['feridas0'] = [list(x) for x in p.get('feridas', [])]                                                             # as feridas que a pessoa já traz
     F['escudo'] = None; esc = eq.get('escudo')
     if esc:
         c, falta, mais = _assenta(esc, p, dorme(esc)); falta_arm += falta
         F['escudo'] = dict(nome=esc['nome'], cat=c, bonus=T.ESCUDO_BASE + T.BON[c] + mais - falta // T.FALTA_ACERTO, item=esc)
         F['fontes'].append(dict(item=esc, efeitos=_efeitos(esc, dorme(esc))))
     F['fol_rodada'] = fol_arm + falta_arm // T.FALTA_FOLEGO; F['ini_mod'] = corpo['ini']
-    for k in ('lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
+    for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
         if k in p: F[k] = p[k]
     return F
 
