@@ -3,6 +3,14 @@
 Quatro módulos entram no Motor 10 nesta etapa: **os bichos**, **o ofício** (forjar, consertar, ajustar), **o mercado** e **a caça e a coleta**.
 Este arquivo é o contrato entre quem constrói cada um. Ler antes: `../LEIA.md`, `../PROJETO.md`, `../REGRAS.md` (capítulos 1 a 5), o cabeçalho do `../estado.py`, as páginas `../tabelas*.py` e o `../provas_mundo.py`.
 
+## AVISO: esta é a SEGUNDA tentativa (leia antes de tudo)
+
+A primeira frota foi cortada no meio. O que ela fez está no disco e não é para refazer:
+
+- **O ofício está INTEIRO** (`oficio.py`, `tabelas_oficio.py`, `provas_oficio.py`, `projeto/regras_oficio.md`): 14 de 15 provas; a da Lendária não bate, e isso está dito no banco dele. Ninguém o reescreve.
+- **Os bichos estão QUASE PRONTOS.** `luta.py`, `pessoas.py`, `itens.py`, `tabelas.py`, `provas.py`, `estresse.py`, `bichos.py` e `tabelas_bichos.py` já foram mudados pelo construtor anterior. Hoje `python3 provas.py` passa **72 de 72** (as 51 metas antigas e as 21 dos bichos, B1 a B8) e o `estresse.py` roda sem erro. **O construtor dos bichos NÃO recomeça:** lê o que está no disco, confere contra a seção 4 (a API fixa, a lista fechada de traços, a moral, a frase da ameaça, o corpo que não é peça, o estresse com bichos), termina o que faltar, escreve o capítulo `projeto/regras_bichos.md` (que não existe ainda) e entrega o relatório. A linha de base dele é 72 de 72, não 51.
+- **Faltam inteiros:** o mercado e a caça. Depois, a revisão, a integração e a vila de teste.
+
 ## 0. Como trabalhar (vale para todos)
 
 1. **Isto é FORA do jogo do Ferir.** O `CLAUDE.md` da raiz é do jogo: NÃO siga o ritual de abertura dele. **NUNCA rode script da raiz do repositório** (eles rolam dado e mexem num save que está em uso). Trabalhe só dentro de `motor10/`. Não use git. Não toque em nada fora de `motor10/`.
