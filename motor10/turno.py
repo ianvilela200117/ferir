@@ -3,13 +3,16 @@
 
   python3 turno.py abre                         só lê. Gera e mostra a MESA.md: o relógio, o corpo, o lugar, o que dá para fazer, as perguntas abertas, e o SÓ O MESTRE.
   python3 turno.py responde "1a.2b"             confere os códigos do jogador contra as perguntas abertas e diz o que cada um quer dizer
+                                                (cada pergunta guarda o número com que foi aberta até o turno fechar; a já respondida recusa segunda resposta)
   python3 turno.py pergunta "texto" "a=..." "b=..." ["c=..."]     abre uma pergunta para o fim do turno
   python3 turno.py nota "o que só o Mestre sabe"                  uma nota oculta (vai para o RETOMAR, na parte do Mestre)
   python3 turno.py fecha "o que houve" [parado] [git]             fecha o turno. `parado`: o turno foi só conversa, o relógio não andou. `git`: guarda no git e envia.
 
 `fecha` RECUSA se: há luta aberta · há menos de 2 perguntas abertas
-· o relógio não andou (e não foi dito `parado`) · o estado quebrou um invariante (moeda negativa, peça com dono que não existe, morto com peça, saída torta...).
-MORTO o personagem, a MESA e o RETOMAR abrem com isso, sem a lista de atos; o turno fecha (o herdeiro é da etapa 6: até lá, as perguntas do turno são do Mestre).
+· o relógio não andou (e não foi dito `parado`) · o estado quebrou um invariante (moeda negativa, peça com dono que não existe, peça de quem morreu, saída torta...).
+O RETOMAR NUNCA CORTA CALADO: o que se repete todo dia (comer, dormir, a cama, esperar) vira uma linha por dia; se os fatos ainda passam do teto, a primeira linha
+diz quantos ficaram de fora e como lê-los (`estado.py eventos N`).
+Se o personagem MORREU, a MESA e o RETOMAR abrem com isso, sem a lista de atos; o turno fecha (o herdeiro é da etapa 6: até lá, as perguntas do turno são do Mestre).
 No meio do turno usa-se: ato.py (o que a pessoa faz), teste.py (o dado), ato.py luta (a luta), mercado.py, oficio.py, caca.py.
 """
 import json, os, subprocess, sys
@@ -23,6 +26,9 @@ def _eventos_desde(n):
     return [e for e in map(json.loads, open(arq, encoding='utf-8').read().splitlines()) if e['id'] > n]
 
 
+def _mil(n): return f'{int(n):,}'.replace(',', '.')          # 18.279
+
+
 def _carga_diz(p):
     def nome(b):
         n, c = M.le_materia(b); return b if c is None else f"{n} {pessoas.T.CATS[c] if not n.endswith('a') else ['Comum', 'Incomum', 'Rara'][min(c, 2)]}"
@@ -33,15 +39,16 @@ def _voce(E):
     import ato
     pid = estado.eu(E); p = E['gente'][pid]; f = estado.fora(E, pid)
     if p['estado'] != 'vivo':
-        return [f"**{p['nome']} ESTÁ MORTO:** {estado.morte_diz(E, p)}. Morto não age: nenhum ato dele vale.",
-                'O que era dele caiu onde morreu (as peças, soltas; a carga e a prata, no estoque do lugar). O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto).']
+        return [f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')}). Quem morreu não age: nenhum ato em nome de {p['nome']} vale.",
+                f"O que {p['nome']} tinha caiu onde a morte veio (as peças, soltas; a carga e a prata, no estoque do lugar). O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto)."]
     L = [f"**{p['nome']}**, nível {p['nivel']} · PV {p['pv']}/{estado.pv_max(p)} · {p['moedas']} de prata · " + (f"FORA, {estado.em(E, f)} (mora {estado.em(E, p['lugar'])})" if f else estado.em(E, p['lugar'])), f"Corpo: {corpo.diz(p)}"]
     for fe in p['feridas']: L.append(f"Ferida{' GRAVE' if fe['grave'] else ''}: {fe['parte']} (Dia {fe['dia']}; {fe['repouso']} de {M.FERIDA_DIAS[1 if fe['grave'] else 0]} dias de repouso)")
     L.append('```'); L.append(pessoas.linha(pessoas.ficha(estado.lutador(E, pid)))); L.append('```')
     pecas = ato.diz_pecas(E, pid)
     L.append('Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): ' + ' · '.join(pecas[:10]) + (f' · e mais {len(pecas) - 10}' if len(pecas) > 10 else ''))
     if _carga_diz(p): L.append('Carga: ' + _carga_diz(p) + (' (`ato.py comer carga` come da sua comida)' if (p.get('carga') or {}).get('comida', 0) >= 1 else ''))
-    tr = [f"{a}: {b} blocos" + (f" ({pessoas.T.MAESTRIAS[p.get('maestria', {}).get(a, 0)]})") for a, b in p.get('treino', {}).items()]
+    conta = lambda a, b: estado.tantos(b, 'dia de negócio', 'dias de negócio') if a == 'comércio' else estado.tantos(b, 'bloco')        # o comércio conta dias de negócio; o resto, blocos
+    tr = [f"{a}: {conta(a, b)}" + (f" ({pessoas.T.MAESTRIAS[p.get('maestria', {}).get(a, 0)]})") for a, b in p.get('treino', {}).items()]
     if tr: L.append('Treino: ' + ' · '.join(tr))
     return L
 
@@ -50,15 +57,16 @@ def _aqui(E):
     import ato
     pid = estado.eu(E); p = E['gente'][pid]; l = E['lugares'][p['lugar']]; of = p.get('grau_oficio', 'diarista'); f = estado.fora(E, pid)
     if f: return [f"**{p['nome']} está fora, {estado.em(E, f)}.** Enquanto a saída estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A caça e a coleta\"."]
-    L = [f"**{l['nome']}** · comida no lugar: {l['estoque'].get('comida', 0):g} · {'há cama' if l.get('cama') else 'não há cama: dorme-se no chão'}"]
+    L = [f"**{l['nome']}** · comida no lugar: {_mil(l['estoque'].get('comida', 0))} · {'há cama' if l.get('cama') else 'não há cama: dorme-se no chão'}"]
     outros = [q['nome'] + (f" ({q['sobre']})" if q.get('sobre') else '') for k, q in E['gente'].items() if k != pid and q['lugar'] == p['lugar'] and q['estado'] == 'vivo' and not estado.fora(E, k)]
     if outros: L.append('Quem está aqui: ' + ', '.join(outros[:12]) + (f' e mais {len(outros) - 12}' if len(outros) > 12 else ''))
-    feito = ato.jornada(E, pid)
+    feito = ato.jornada(E, pid); cama = ato.cama_diz(E, pid)
     L += ['', '**O que dá para fazer, e o que custa** (1 bloco = 4 horas):',
-          f"- comer: {M.REFEICAO_PRECO} de prata, fome {M.REFEICAO} (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)",
-          f"- dormir: {'cama por ' + str(M.CAMA_PRECO) + ' de prata; ' if l.get('cama') else ''}cada bloco tira {-M.SONO_CAMA} de sono e de cansaço (no chão, {-M.SONO_CHAO}) e devolve PV (`ato.py dormir N`)",
+          f"- comer: {M.REFEICAO_PRECO} de prata, fome −{-M.REFEICAO} (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)",
+          f"- dormir: {f'cama por {M.CAMA_PRECO} de prata, ' + ('e a sua está ' + cama + '; ' if cama else f'que vale {M.CAMA_VALE} blocos (um dia) a contar de quando se paga; ') if l.get('cama') else ''}"
+          f"cada bloco tira {-M.SONO_CAMA} de sono e de cansaço (no chão, {-M.SONO_CHAO}) e devolve PV (`ato.py dormir N`)",
           f"- trabalhar ({of}): {M.SALARIO[of]} de prata por bloco, esforço {M.ESFORCO_OFICIO[of]}; a jornada são {M.JORNADA} blocos pagos por dia (hoje: {feito} de {M.JORNADA}) (`ato.py trabalhar N`)",
-          f"- treinar com uma arma: esforço pesado; a maestria sobe aos {', '.join(str(v) for v in M.MAESTRIA_BLOCOS.values())} blocos (`ato.py treinar N ARMA`)",
+          f"- treinar com uma arma: esforço pesado; a maestria sobe aos {', '.join(_mil(v) for v in M.MAESTRIA_BLOCOS.values())} blocos (`ato.py treinar N ARMA`)",
           "- descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)"]
     return L
 
@@ -78,16 +86,20 @@ def _modulos(E, gancho):
 
 def mesa(E):
     t = E['turno']; pid = estado.eu(E); vivo = E['gente'][pid]['estado'] == 'vivo'
-    L = [f"# MESA · turno {t['n']} · {estado.quando(E)}", '', '## Você'] + _voce(E)
+    L = [f"# MESA · turno {t['n']} · {estado.quando(E)}"]
+    if estado.luta_aberta(E): L += ['', f"**LUTA ABERTA.** {estado.luta_diz(E)[0].upper() + estado.luta_diz(E)[1:]}"]
+    L += ['', '## Você'] + _voce(E)
     if vivo:
         L += ['', '## Aqui'] + _aqui(E)
         for linhas in _modulos(E, 'mesa'): L += [''] + linhas      # cada módulo do mundo põe na mesa a sua parte (o mercado, a oficina, a caça)
     L += ['', '## Perguntas abertas']
-    L += [f"{i + 1}. {q['texto']}  " + ' · '.join(f"**{k})** {v}" for k, v in q['opcoes'].items()) for i, q in enumerate(t['perguntas'])] or ['(nenhuma: o turno precisa abrir pelo menos duas antes de fechar)']
+    L += lista_perguntas(t) or ['(nenhuma: o turno precisa abrir pelo menos duas antes de fechar)']
     if t['respondidas']: L += ['', '**Respondido neste turno (cumprir antes de fechar):** ' + ' · '.join(f"{r['texto']} → {r['cod']}) {r['opcao']}" for r in t['respondidas'])]
     L += ['', '## SÓ O MESTRE']
     L += [f"- {teste.diz(E, r, mestre=True)}" for r in t['dados'] if r['oculto']] + [f"- nota: {n}" for n in t['notas']]
     L += [f"- LUTA ABERTA: {l['arq']} (`ato.py luta roda {l['arq']} \"Nome: ordem\"`)" for l in t['lutas'] if not l['fim']]
+    if vivo:
+        for linhas in _modulos(E, 'so_mestre'): L += [x if x.startswith('- ') else '- ' + x for x in linhas]       # o que cada módulo do mundo só mostra ao Mestre (a contagem do ermo...): a função so_mestre(E) do módulo
     aqui = estado.onde(E, pid); soltos = [f"{i} {it['nome']}" for i, it in E['itens']['itens'].items() if it.get('onde') == aqui and it.get('solto')]
     if soltos: L.append(f"- no chão {estado.em(E, aqui)} (soltas; quem fica com elas entra por evento): " + ' · '.join(soltos[:8]) + (f' · e mais {len(soltos) - 8}' if len(soltos) > 8 else ''))
     P = estado.valida(E); L += [f"- ESTADO QUEBRADO: {x}" for x in P] or ['- o estado está inteiro.']
@@ -98,50 +110,98 @@ def abre(E):
     txt = mesa(E); open(os.path.join(estado.pasta(), 'MESA.md'), 'w', encoding='utf-8').write(txt); return txt
 
 
+def numera(t):
+    """cada pergunta aberta GUARDA O NÚMERO com que foi aberta (o que o jogador leu no RETOMAR.md) até o turno fechar: responder uma não muda o número das outras.
+    Pergunta de save antigo, sem número, ganha um aqui: o primeiro livre, na ordem em que estão. Devolve as perguntas abertas."""
+    usados = {q['n'] for q in t['perguntas'] if isinstance(q.get('n'), int)} | {r['n'] for r in t.get('respondidas', []) if isinstance(r.get('n'), int)}
+    for q in t['perguntas']:
+        if not isinstance(q.get('n'), int):
+            q['n'] = next(k for k in range(1, len(usados) + 2) if k not in usados); usados.add(q['n'])
+    return t['perguntas']
+
+
+def lista_perguntas(t): return [f"{q['n']}. {q['texto']}  " + ' · '.join(f"**{k})** {v}" for k, v in q['opcoes'].items()) for q in numera(t)]        # as perguntas abertas, cada uma com o número dela
+
+
 def pergunta(E, texto, opcoes):
-    ops = dict(o.split('=', 1) for o in opcoes if '=' in o)
+    ops = dict(o.split('=', 1) for o in opcoes if '=' in o); t = E['turno']
     if len(ops) < 2 or any(len(k) != 1 or not k.isalpha() for k in ops): sys.exit('a pergunta pede pelo menos duas opções, cada uma com uma letra: "a=..." "b=..."')
-    E['turno']['perguntas'].append(dict(texto=texto, opcoes=ops)); return f"pergunta {len(E['turno']['perguntas'])} aberta."
+    n = max([q['n'] for q in numera(t)] + [r['n'] for r in t.get('respondidas', []) if isinstance(r.get('n'), int)] + [0]) + 1      # o número seguinte ao maior já usado neste turno (aberto ou respondido)
+    t['perguntas'].append(dict(n=n, texto=texto, opcoes=ops)); return f"pergunta {n} aberta."
 
 
 def responde(E, codigos):
-    """'1a.2b': cada código tem de bater numa pergunta aberta e numa opção dela. Nada é executado: o Mestre cumpre com os comandos."""
-    t = E['turno']; pares = []
+    """'1a.2b': cada código tem de bater numa pergunta aberta (pelo NÚMERO com que ela foi aberta) e numa opção dela. A pergunta já respondida neste turno recusa segunda resposta.
+    Nada é executado: o Mestre cumpre com os comandos."""
+    t = E['turno']; pares = []; abertas = {q['n']: q for q in numera(t)}; feitas = {r['n']: r for r in t.get('respondidas', []) if isinstance(r.get('n'), int)}
     for c in [x for x in codigos.replace(',', '.').replace(' ', '.').split('.') if x]:
         num = ''.join(ch for ch in c if ch.isdigit()); letra = c[len(num):].lower()
-        if not num or not 1 <= int(num) <= len(t['perguntas']): sys.exit(f'o código "{c}" não bate em nenhuma pergunta aberta (há {len(t["perguntas"])}). Nada foi marcado.')
-        q = t['perguntas'][int(num) - 1]
-        if letra not in q['opcoes']: sys.exit(f'a pergunta {num} não tem a opção "{letra}" (tem: {", ".join(q["opcoes"])}). Nada foi marcado.')
-        pares.append((int(num) - 1, letra))
-    if len({i for i, _ in pares}) != len(pares): sys.exit('a mesma pergunta foi respondida duas vezes. Nada foi marcado.')
+        if num and int(num) in feitas and int(num) not in abertas:
+            sys.exit(f'a pergunta {int(num)} já foi respondida neste turno ("{feitas[int(num)]["texto"]}" → {feitas[int(num)]["cod"]}) {feitas[int(num)]["opcao"]}): não aceita segunda resposta. Nada foi marcado.')
+        if not num or int(num) not in abertas:
+            sys.exit(f'o código "{c}" não bate em nenhuma pergunta aberta (' + (f"as abertas: {', '.join(str(k) for k in sorted(abertas))}" if abertas else 'não há nenhuma') + '). Nada foi marcado.')
+        q = abertas[int(num)]
+        if letra not in q['opcoes']: sys.exit(f'a pergunta {int(num)} não tem a opção "{letra}" (tem: {", ".join(q["opcoes"])}). Nada foi marcado.')
+        pares.append((int(num), letra))
+    if len({n for n, _ in pares}) != len(pares): sys.exit('a mesma pergunta foi respondida duas vezes. Nada foi marcado.')
     out = []
-    for i, letra in pares:
-        q = t['perguntas'][i]; t['respondidas'].append(dict(texto=q['texto'], cod=letra, opcao=q['opcoes'][letra])); out.append(f"{i + 1}{letra}: {q['texto']} → {q['opcoes'][letra]}")
-    t['perguntas'] = [q for i, q in enumerate(t['perguntas']) if i not in {i for i, _ in pares}]
-    return '\n'.join(out) + (f"\nFicam abertas: {len(t['perguntas'])}." if t['perguntas'] else '')
+    for n, letra in pares:
+        q = abertas[n]; t['respondidas'].append(dict(n=n, texto=q['texto'], cod=letra, opcao=q['opcoes'][letra])); out.append(f"{n}{letra}: {q['texto']} → {q['opcoes'][letra]}")
+    t['perguntas'] = [q for q in t['perguntas'] if q['n'] not in {n for n, _ in pares}]
+    return '\n'.join(out) + (f"\nFicam abertas: {', '.join(str(q['n']) for q in t['perguntas'])}." if t['perguntas'] else '')
+
+
+def fatos(evs, teto=None, nasce=False):
+    """as linhas dos fatos do turno, tiradas do registro de eventos, para o RETOMAR.md. NUNCA CORTA CALADO.
+    O mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz) não é fato do turno, a não ser que alguém morra.
+    Com `nasce` (o primeiro turno de um mundo), os eventos do gerador que abrem o registro (o mundo nascendo) também ficam de fora: não são coisa que alguém fez.
+    O que se repete todo dia (comer, dormir, a cama, descansar, esperar) vira UMA linha por dia; o mesmo fato repetido no mesmo dia vira uma linha, com a conta.
+    O evento que foi gravado SEM TEXTO (e não é o mundo andando sozinho) entra assim mesmo, com o número e o tipo dele: nada do que alguém fez some calado.
+    Se ainda assim passa do teto (tabelas_mundo.RETOMAR_FATOS), ficam as mais novas, e a primeira linha diz quantas ficaram de fora e como lê-las."""
+    teto = teto or M.RETOMAR_FATOS; linhas = []; onde = {}
+    for e in evs:
+        if nasce and e['tipo'] == 'gera': continue
+        nasce = False
+        morte = any(isinstance(x, list) and len(x) == 5 and x[0] == 'pessoa' and x[2:] == ['estado', 'poe', 'morto'] for x in e.get('efeitos', []))
+        if e['tipo'] in M.MUNDO_SOZINHO and not morte: continue
+        if not e.get('texto'): e = dict(e, texto=f"(evento #{e.get('id', '?')}, {e['tipo']}, sem texto: `python3 estado.py eventos` mostra o que ele mudou)")      # o evento gravado sem texto não some calado: entra com o número dele
+        if e['tipo'] in M.ROTINA and not morte:
+            chave = ('rotina', e['dia'])
+            if chave not in onde: onde[chave] = dict(dia=e['dia'], rotina={}); linhas.append(onde[chave])
+            onde[chave]['rotina'][e['texto']] = onde[chave]['rotina'].get(e['texto'], 0) + 1
+        else:
+            chave = (e['dia'], e['texto'])
+            if chave not in onde: onde[chave] = dict(dia=e['dia'], bloco=e['bloco'], texto=e['texto'], vezes=0); linhas.append(onde[chave])
+            onde[chave]['vezes'] += 1
+    vezes = lambda k: f' (× {k})' if k > 1 else ''
+    def diz(x):
+        if 'rotina' in x: return f"- Dia {x['dia']}, a rotina: " + ' · '.join(txt + vezes(k) for txt, k in x['rotina'].items())
+        return f"- Dia {x['dia']}, {M.BLOCOS[x['bloco']]}: {x['texto']}{vezes(x['vezes'])}"
+    if not linhas: return ['- (nenhum fato registrado neste turno)']
+    if len(linhas) <= teto: return [diz(x) for x in linhas]
+    fora = linhas[:len(linhas) - (teto - 1)]; ficam = linhas[len(fora):]; d0, d1 = fora[0]['dia'], fora[-1]['dia']
+    aviso = (f"- (ficaram de fora {estado.tantos(len(fora), 'fato mais antigo', 'fatos mais antigos')}, " + (f'do Dia {d0}' if d0 == d1 else f'do Dia {d0} ao Dia {d1}')
+             + f": o registro inteiro do turno sai com `python3 estado.py eventos {len(evs)}`)")
+    return [aviso] + [diz(x) for x in ficam]
 
 
 def fecha(E, resumo, parado=False, git=False):
     t = E['turno']; R = []
-    R += [f"há uma luta aberta: {l['arq']} (acabe-a com `ato.py luta roda {l['arq']}`; se o arquivo se perdeu, `ato.py luta larga`)" for l in t['lutas'] if not l['fim']]
-    if len(t['perguntas']) < 2: R.append(f"há {len(t['perguntas'])} pergunta(s) aberta(s): o turno fecha com pelo menos duas (`turno.py pergunta`)")
+    if estado.luta_aberta(E): R.append(estado.luta_diz(E))
+    if len(t['perguntas']) < 2: R.append(('não há pergunta aberta' if not t['perguntas'] else 'há uma pergunta aberta só') + ': o turno fecha com pelo menos duas (`turno.py pergunta`)')
     if estado.agora(E) == (t['aberto']['dia'] - 1) * M.BLOCOS_DIA + t['aberto']['bloco'] and not parado: R.append('o relógio não andou neste turno. Todo ato custa tempo; se foi só conversa, feche com `parado`')
     R += [f'o estado quebrou: {x}' for x in estado.valida(E)]
     if not resumo.strip(): R.append('falta dizer o que houve no turno')
     if R: sys.exit('O TURNO NÃO FECHA:\n  - ' + '\n  - '.join(R))
+    for i, q in enumerate(t['perguntas']): q['n'] = i + 1         # o turno fecha: as perguntas que ficam abertas são numeradas de novo, de 1 em diante. É com esse número que o jogador as lê no RETOMAR.md e responde
     pid = estado.eu(E); p = E['gente'][pid]; evs = _eventos_desde(t.get('evento0', 0)) + E['_novos']; f = estado.fora(E, pid)
-    if p['estado'] != 'vivo': agora = f"**{p['nome']} ESTÁ MORTO:** {estado.morte_diz(E, p)}"
+    if p['estado'] != 'vivo': agora = f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')})"
     else: agora = f"{p['nome']} " + (f"FORA, {estado.em(E, f)} (a saída está aberta)" if f else estado.em(E, p['lugar'])) + f" · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata"
     L = [f"# RETOMAR · depois do turno {t['n']}", '', f"**Agora:** {estado.quando(E)} · {agora}", '', f"**O que houve no turno {t['n']}:** {resumo}"]
     for linhas in _modulos(E, 'retomar'): L += [''] + linhas
     if t['respondidas']: L += ['', '**Respondido:** ' + ' · '.join(f"{r['texto']} → {r['opcao']}" for r in t['respondidas'])]
-    vistos = [f"- Dia {e['dia']}, {M.BLOCOS[e['bloco']]}: {e['texto']}" for e in evs if e['texto'] and e['tipo'] not in ('virada',)]
-    resum = []
-    for x in vistos:                                        # atos repetidos (oito blocos de sono) viram uma linha só
-        if resum and resum[-1][0].split(': ', 1)[1] == x.split(': ', 1)[1]: resum[-1][1] += 1
-        else: resum.append([x, 1])
-    L += ['', '**Os fatos do turno** (do registro de eventos):'] + [x + (f' (× {k})' if k > 1 else '') for x, k in resum[-25:]]
-    L += ['', '## PERGUNTAS ABERTAS'] + [f"{i + 1}. {q['texto']}  " + ' · '.join(f"**{k})** {v}" for k, v in q['opcoes'].items()) for i, q in enumerate(t['perguntas'])]
+    L += ['', '**Os fatos do turno** (do registro de eventos):'] + fatos(evs, nasce=not t.get('evento0'))
+    L += ['', '## PERGUNTAS ABERTAS'] + lista_perguntas(t)
     ocultas = [f"- {teste.diz(E, r, mestre=True)}" for r in t['dados'] if r['oculto']] + [f"- {n}" for n in t['notas']]
     L += ['', '## SÓ O MESTRE'] + (ocultas or ['- nada oculto neste turno.'])
     txt = '\n'.join(L) + '\n'
@@ -158,12 +218,18 @@ def fecha(E, resumo, parado=False, git=False):
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     a = sys.argv[1:]
-    if not a: print(__doc__); sys.exit()
+    if not a or a[0] not in ('abre', 'pergunta', 'responde', 'nota', 'fecha'): print(__doc__); sys.exit()
     E = estado.carrega()
     if a[0] == 'abre': print(abre(E)); sys.exit()
-    if a[0] == 'pergunta' and len(a) >= 4: print(pergunta(E, a[1], a[2:])); estado.grava(E)
-    elif a[0] == 'responde' and len(a) == 2: print(responde(E, a[1])); estado.grava(E)
-    elif a[0] == 'nota' and len(a) == 2: E['turno']['notas'].append(a[1]); estado.grava(E); print('nota guardada (só o Mestre vê).')
-    elif a[0] == 'fecha' and len(a) >= 2: print(fecha(E, a[1], parado='parado' in a[2:], git='git' in a[2:]))
-    else: print(__doc__)
+    if a[0] == 'pergunta':
+        if len(a) < 2 or not a[1].strip(): sys.exit('diga a pergunta e as opções: `turno.py pergunta "O que fazer de manhã?" "a=trabalhar" "b=treinar"`')
+        print(pergunta(E, a[1], a[2:])); estado.grava(E)
+    elif a[0] == 'responde':
+        if len(a) != 2: sys.exit('diga os códigos do jogador, juntos: `turno.py responde "1a.2b"`')
+        print(responde(E, a[1])); estado.grava(E)
+    elif a[0] == 'nota':
+        if len(a) != 2 or not a[1].strip(): sys.exit('diga a nota, entre aspas: `turno.py nota "o que só o Mestre sabe"`')
+        E['turno']['notas'].append(a[1]); estado.grava(E); print('nota guardada (só o Mestre vê).')
+    else: print(fecha(E, a[1] if len(a) > 1 else '', parado='parado' in a[2:], git='git' in a[2:]))

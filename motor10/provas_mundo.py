@@ -3,7 +3,8 @@
 
 ETAPA 1, "um dia numa vila": o gravador único, o relógio, o corpo, os atos, a ferida que dura, a luta que volta ao estado, abrir e fechar o turno.
 ETAPA 2, o alicerce (o que a integração pôs nele): a morte numa regra só, nascer por evento, vestir e guardar, a jornada, comer da carga, os invariantes novos,
-o evento que não muda nada; e depois os bancos dos módulos (o mercado, o ofício, a caça e a coleta).
+o evento que não muda nada; a cama por noite, a luta aberta que tranca o mundo, o RETOMAR que não corta calado, o sob medida pelo id, as entradas tortas e a língua
+da mesa (a segunda volta); e depois os bancos dos módulos (o mercado, o ofício, a caça e a coleta).
 As provas rodam numa pasta de rascunho (nunca num save de verdade).
 
 Uso: python3 provas_mundo.py [N]             N = lutas da prova do corpo (padrão 300)
@@ -54,7 +55,7 @@ def provas(n):
     E = vila(); E['relogio']['bloco'] = 0; E['turno']['aberto']['bloco'] = 0; pior = 0
     for _ in range(30): dia_de_rotina(E); pior = min(pior, corpo.pena(E['gente']['eu']))
     p = E['gente']['eu']
-    ok('A ROTINA: 30 dias dormindo, comendo uma vez e trabalhando dois blocos', f"pior pena {pior}; prata 30 → {p['moedas']}; corpo {p['corpo']}", pior == 0 and 50 <= p['moedas'] <= 70 and not estado.valida(E))
+    ok('A ROTINA: 30 dias dormindo, comendo uma vez e trabalhando dois blocos', f"pior pena {pior}; prata 30 → {p['moedas']}; o corpo no fim: {corpo.diz(p)}", pior == 0 and 50 <= p['moedas'] <= 70 and not estado.valida(E))
     # 2 quem não dorme
     E = vila(); n_feitos, pq = ato.passa(E, 'eu', 18, 'esperar'); p = E['gente']['eu']
     E2 = vila(); ato.passa(E2, 'eu', 9, 'esperar', para=False)
@@ -175,8 +176,8 @@ def provas_alicerce2(n=300):
     rec = [x for x, f in atos if recusa(f)]; mesa = turno.mesa(E)
     ok('A MORTE, UMA REGRA SÓ: o morto não fica com nada (as peças e o núcleo caem soltos onde ele morreu, a obra se desfaz, a carga e a prata ficam no lugar); morto não age, e nada é cobrado dele; a MESA abre com a morte',
        f"as {n_itens} peças (duas vestidas, uma guardada, o núcleo que estava na obra) soltas na vila, e a obra desfeita: {'sim' if caiu else 'NÃO'}; a carga e os 40 de prata no estoque do lugar: {'sim' if nada else 'NÃO'}; a prata do mundo fecha: {'sim' if prata_do_mundo(E) == p0 else 'NÃO'}; "
-       f"estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}; {len(rec)} de {len(atos)} atos do morto recusados, sem mudar nada: {'sim' if antes == retrato(E) else 'NÃO'}; a MESA diz que ele morreu e não lista atos: {'sim' if 'ESTÁ MORTO' in mesa and 'ato.py comer' not in mesa else 'NÃO'}",
-       caiu and nada and prata_do_mundo(E) == p0 and not estado.valida(E) and len(rec) == len(atos) and antes == retrato(E) and 'ESTÁ MORTO' in mesa and 'ato.py comer' not in mesa)
+       f"estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}; {len(rec)} de {len(atos)} atos do morto recusados, sem mudar nada: {'sim' if antes == retrato(E) else 'NÃO'}; a MESA diz que ele morreu e não lista atos: {'sim' if 'MORREU' in mesa and 'ato.py comer' not in mesa else 'NÃO'}",
+       caiu and nada and prata_do_mundo(E) == p0 and not estado.valida(E) and len(rec) == len(atos) and antes == retrato(E) and 'MORREU' in mesa and 'ESTÁ MORTO' not in mesa and 'ato.py comer' not in mesa)
     # 15 vestir e guardar
     E = vila(); estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 1, 'Arco de prova', familia='arco', dono='eu')], ['item', 'nasce', item('armadura', 1, 'Cota de prova', material='malha', dono='eu')],
                                           ['item', 'nasce', item('armadura', 0, 'Elmo de prova', material='couro', cobre=['cabeça'], dono='eu')], ['item', 'nasce', item('escudo', 0, 'Escudo de prova', dono='eu')],
@@ -256,6 +257,198 @@ def provas_alicerce2(n=300):
     ok('O QUE NÃO MUDA NÃO ACONTECEU: o evento cujos efeitos não mudam nada (somar no que já está no teto, pôr o que já está posto) não entra no registro; o evento sem efeito segue recusado',
        f"cinco eventos sem mudança: {'nenhum registrado' if calou else 'REGISTRADOS'}; evento vazio: {'recusado' if vazio else 'ACEITO'}; em oito dias sem comer nem dormir (o corpo no teto), {cont['todos']} eventos registrados, {cont['nulos']} sem mudança",
        calou and vazio and cont['todos'] > 40 and cont['nulos'] == 0)
+    # 19 a cama é por noite
+    conta_cama = lambda E: sum(1 for e in E['_novos'] if e['texto'].endswith('paga a cama'))
+    E = vila(prata=20); p0 = prata_do_mundo(E)
+    diz_mesa = False
+    for antes_de_dormir in (0, 1, 2):                        # dorme nos blocos 0, 2 e 5 depois de pagar: três deitadas no prazo de uma cama
+        quieto(ato.passa, E, 'eu', antes_de_dormir, 'esperar', para=False); quieto(ato.dormir, E, 'eu', 1, para=False); diz_mesa = diz_mesa or 'paga até o Dia 2, manhã' in turno.mesa(E)
+    tres = (conta_cama(E), E['gente']['eu']['moedas'])
+    quieto(ato.dormir, E, 'eu', 1, para=False); venceu = (conta_cama(E), E['gente']['eu']['moedas'])                                                        # o bloco 6 depois de pagar: o prazo venceu, paga outra noite
+    E2 = vila(prata=20); quieto(ato.dormir, E2, 'eu', 8, para=False); longo = (conta_cama(E2), E2['gente']['eu']['moedas'], estado.agora(E2))                # oito blocos seguidos: duas noites
+    E3 = vila(prata=3); txt = quieto(ato.dormir, E3, 'eu', 8, para=False); curto = (conta_cama(E3), E3['gente']['eu']['moedas'], estado.agora(E3) - 2)       # sem prata para a segunda noite: o sono para ali
+    E4 = vila(prata=20); quieto(ato.dormir, E4, 'eu', 1, para=False)
+    estado.aplica(E4, 'mestre', [['lugar', 'nasce', 'outra', dict(nome='a Outra Vila', em='na Outra Vila', tipo='vila', cama=True, estoque=dict(comida=10, prata=0))], ['pessoa', 'eu', 'lugar', 'poe', 'outra']], texto='muda de vila')
+    quieto(ato.dormir, E4, 'eu', 1, para=False); outra = (conta_cama(E4), E4['gente']['eu']['moedas'])                                                      # em outro lugar, outra cama
+    E5 = vila(prata=20); quieto(ato.dormir, E5, 'eu', 1, chao=True, para=False); chao = (conta_cama(E5), E5['gente']['eu']['moedas'])
+    fecha = all(prata_do_mundo(x) == p0 for x in (E, E2, E4, E5)) and not any(estado.valida(x) for x in (E, E2, E3, E4, E5))
+    ok(f'A CAMA É POR NOITE: a cama paga vale {M.CAMA_VALE} blocos (um dia inteiro) a contar do bloco em que se pagou, no lugar onde se pagou; dormir de novo nesse prazo não cobra; passado o prazo, ou em outro lugar, paga-se outra; a MESA diz até quando está paga',
+       f"três deitadas no mesmo dia: {tres[0]} cama paga, prata 20 → {tres[1]}; a MESA diz até quando: {'sim' if diz_mesa else 'NÃO'}; a quarta, com o prazo vencido: {venceu[0]} pagas, prata {venceu[1]}; oito blocos seguidos: {longo[0]} noites pagas, prata {longo[1]}; "
+       f"com 3 de prata, o sono de oito para em {curto[2]} blocos («{txt.split('PAROU: ')[-1][:38]}»); em outro lugar: {outra[0]} pagas, prata {outra[1]}; no chão: {chao[0]} pagas; a prata do mundo {'fecha' if fecha else 'NÃO FECHA'}",
+       tres == (1, 18) and diz_mesa and venceu == (2, 16) and longo == (2, 16, 10) and curto == (1, 1, 6) and 'a cama paga venceu' in txt and outra == (2, 16) and chao == (0, 20) and fecha)
+    # 20 a luta aberta tranca o mundo
+    import caca
+    d = tempfile.mkdtemp(prefix='m10_'); os.environ['MOTOR10_MUNDO'] = d
+    try:
+        E = vila(prata=40); at = dict(E['gente']['eu']['atributos'])
+        estado.aplica(E, 'gera', [['lugar', 'vila', 'oficina', 'poe', 1], ['pessoa', 'eu', 'carga.comida', 'soma', 3], ['pessoa', 'eu', 'carga.metal:0', 'soma', 3], ['pessoa', 'eu', 'fome', 'soma', 4],
+                                  ['pessoa', 'nasce', 'bera', dict(nome='Bera', nivel=5, atributos=at, lugar='vila', moedas=20)], ['item', 'nasce', item('arma', 0, 'Adaga de prova', familia='adaga', dono='eu')],
+                                  ['lugar', 'nasce', 'mata', dict(nome='a Mata', em='na Mata', tipo='ermo', vizinhos=['vila'], bichos={'corça': 80}, teto={'corça': 80}, coleta={'madeira:0': 50}, coleta_teto={'madeira:0': 50})],
+                                  ['lugar', 'vila', 'vizinhos', 'poe', ['mata']]], texto='o mundo da prova')
+        quieto(mercado.funda, E, 'vila', 400); estado.grava(E)
+        json.dump(dict(inicio='colado', A=[dict(id='eu', controla=True)], B=[dict(nome='o ladrão de galinhas', nivel=3, molde='comum', veste=dict(arma=['adaga', 'Comum']))]), open(os.path.join(d, 'cen.json'), 'w'))
+        arq = os.path.join(d, 'briga.json'); quieto(ato.luta_nova, E, os.path.join(d, 'cen.json'), arq); antes = retrato(E); relogio = estado.agora(E)
+        atos = [('dormir', lambda: ato.dormir(E, 'eu', 1)), ('comer', lambda: ato.comer(E, 'eu')), ('comer da carga', lambda: ato.comer(E, 'eu', da_carga=True)), ('trabalhar', lambda: ato.trabalhar(E, 'eu', 1)),
+                ('treinar', lambda: ato.treinar(E, 'eu', 1, 'espada')), ('descansar', lambda: ato.descansar(E, 'eu', 1)), ('esperar', lambda: ato.esperar(E, 'eu', 1)), ('vestir', lambda: ato.vestir(E, 'eu', 'i0003', 'arma2')),
+                ('tirar', lambda: ato.tirar(E, 'eu', 'i0001')), ('outra pessoa espera', lambda: ato.esperar(E, 'bera', 1)), ('outra pessoa dorme', lambda: ato.dormir(E, 'bera', 2)), ('comprar', lambda: mercado.comprar(E, 'eu', 'comida', 1)),
+                ('vender', lambda: mercado.vender_cesta(E, 'eu')), ('outra pessoa compra', lambda: mercado.comprar(E, 'bera', 'comida', 1)), ('servir na forja', lambda: oficio.jornal(E, 'eu', 1)),
+                ('forjar', lambda: oficio.forjar(E, 'eu', oficio.molde('arma', 0, 'Adaga nova', familia='adaga'), blocos=1)), ('outra pessoa sai para caçar', lambda: caca.sair(E, 'bera', 'mata', blocos=1)),
+                ('outra pessoa sai para tirar lenha', lambda: caca.coletar(E, 'bera', 'madeira:0', 'mata', blocos=1)), ('abrir outra luta', lambda: ato.luta_nova(E, os.path.join(d, 'cen.json'), os.path.join(d, 'briga2.json'))),
+                ('fechar o turno', lambda: turno.fecha(E, 'no meio da luta')), ('um evento de compra direto no gravador', lambda: estado.aplica(E, 'compra', [['pessoa', 'eu', 'moedas', 'soma', -1], ['estoque', 'vila', 'prata', 'soma', 1]])),
+                ('um evento do gerador', lambda: estado.aplica(E, 'gera', [['pessoa', 'eu', 'moedas', 'soma', 5]])), ('o relógio direto no gravador', lambda: estado.aplica(E, 'esperar', [['relogio', 1]]))]
+        frases = [(nome, recusa(f)) for nome, f in atos]; rec = [nome for nome, fr in frases if fr]; diz = all(fr and 'luta aberta' in fr and 'ato.py luta roda' in fr and 'ato.py luta larga' in fr for _, fr in frases if _ != 'fechar o turno')
+        parado = antes == retrato(E) and relogio == estado.agora(E); mesa_diz = 'LUTA ABERTA' in turno.mesa(E).split('## Você')[0]
+        mestre = bool(estado.aplica(E, 'mestre', [['pessoa', 'eu', 'moedas', 'soma', 1]], texto='a mão do Mestre passa'))
+        for _ in range(200):
+            S = json.load(open(arq, encoding='utf-8'))
+            if S['fim']: break
+            quieto(ato.luta_roda, E, arq, ['Aldric: atacar'] if S['L'][0]['estado'] == 'pe' else [])
+        S = json.load(open(arq, encoding='utf-8')); acabou = bool(S['fim']) and not estado.luta_aberta(E); vivo = E['gente']['eu']['estado'] == 'vivo'
+        depois = recusa(lambda: ato.esperar(E, 'bera', 1)) is None and estado.agora(E) == relogio + 1                                      # acabada a luta, o mundo anda de novo
+        json.dump(dict(inicio='longe', A=[dict(id='bera', controla=True)], B=[dict(nome='o ladrão de galinhas', nivel=3, molde='comum', veste=dict(arma=['adaga', 'Comum']))]), open(os.path.join(d, 'cen2.json'), 'w'))
+        quieto(ato.luta_nova, E, os.path.join(d, 'cen2.json'), os.path.join(d, 'briga3.json')); trancou = bool(recusa(lambda: ato.esperar(E, 'bera', 1)))
+        quieto(ato.luta_larga, E, os.path.join(d, 'briga3.json'), 'a cena mudou'); solta = trancou and recusa(lambda: ato.esperar(E, 'bera', 1)) is None       # o Mestre solta a luta, e o mundo anda
+        # a caça não quebra: a luta de caça abre (a nota da saída entra), tranca o mundo para os outros, roda pelo `caca.py luta`, e as contas saem
+        cacou = None
+        if E['gente']['bera']['estado'] == 'vivo':
+            estado.aplica(E, 'mestre', [['pessoa', 'bera', 'fome', 'soma', -10], ['pessoa', 'bera', 'sono', 'soma', -10], ['pessoa', 'bera', 'cansaco', 'soma', -10], ['pessoa', 'nasce', 'caio', dict(nome='Caio', nivel=5, atributos=at, lugar='vila', moedas=20)],
+                                        ['item', 'nasce', item('arma', 0, 'Arco da Bera', familia='arco', dono='bera')]], texto='a Bera se apronta')
+            estado.aplica(E, 'mestre', [['item', f"i{E['itens']['seq']:04d}", 'uso', 'poe', 'arma']], texto='a Bera empunha o arco')
+            for _ in range(40):
+                R = quieto(caca.sair, E, 'bera', 'mata', alvo='corça', blocos=4)
+                if R.get('fase') == 'encontro' or E['gente']['bera']['estado'] != 'vivo': break
+                if caca.saida(E['gente']['bera']): quieto(caca.volta, E, 'bera')                                                           # o corpo pediu no meio da procura: volta, e tenta de novo
+                estado.aplica(E, 'mestre', [['pessoa', 'bera', 'fome', 'soma', -10], ['pessoa', 'bera', 'sono', 'soma', -10], ['pessoa', 'bera', 'cansaco', 'soma', -10]], texto='a Bera descansa')
+            if R.get('fase') == 'encontro':
+                R = quieto(caca.atacar, E, 'bera'); s = caca.saida(E['gente']['bera']); antes = retrato(E); frase = estado.luta_diz(E) or ''
+                aberta = R.get('fase') == 'luta' and s['fase'] == 'luta' and estado.luta_aberta(E) == s['luta'] and 'caca.py luta' in frase and 'quem=bera' in frase
+                presos = [recusa(f) for f in (lambda: ato.esperar(E, 'caio', 1), lambda: caca.sair(E, 'caio', 'mata', blocos=1), lambda: caca.volta(E, 'bera'), lambda: ato.comer(E, 'eu') if vivo else ato.esperar(E, 'caio', 2))]
+                preso = all(presos) and antes == retrato(E)
+                for _ in range(80):
+                    try: R = quieto(caca.luta_roda, E, 'bera', ['Bera: atacar'])
+                    except SystemExit: R = quieto(caca.luta_roda, E, 'bera', [])
+                    if R.get('fase') != 'luta': break
+                cacou = aberta and preso and R.get('fase') != 'luta' and not estado.luta_aberta(E) and recusa(lambda: ato.esperar(E, 'caio', 1)) is None and not estado.valida(E)
+        ok('A LUTA ABERTA TRANCA O MUNDO: enquanto há luta aberta, nenhum ato que grava é aceito, de ninguém (nem o relógio anda), fora a própria luta e a mão do Mestre; a recusa diz como acabar ou soltar a luta; acabada ou solta, o mundo anda de novo; e a caça segue inteira',
+           f"{len(rec)} de {len(atos)} atos recusados com a luta aberta" + (f" (passaram: {', '.join(n for n, fr in frases if not fr)})" if len(rec) < len(atos) else '') + f"; a frase diz como seguir e como soltar: {'sim' if diz else 'NÃO'}; o estado e o relógio {'não mexeram' if parado else 'MEXERAM'}; "
+           f"a MESA abre com o aviso: {'sim' if mesa_diz else 'NÃO'}; a mão do Mestre passa: {'sim' if mestre else 'NÃO'}; a luta acaba pelo `ato.py luta roda` e o mundo anda: {'sim' if acabou and depois else 'NÃO'}; o Mestre solta outra com `luta larga`: {'sim' if solta else 'NÃO'}; "
+           f"na caça: a luta abre, tranca os outros, roda pelo `caca.py luta` e fecha com as contas: {'sim' if cacou else 'NÃO' if cacou is not None else 'o encontro de prova não saiu'}",
+           len(rec) == len(atos) and diz and parado and mesa_diz and mestre and acabou and depois and solta and cacou)
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None); shutil.rmtree(d, ignore_errors=True)
+    # 21 o RETOMAR não corta calado
+    d = tempfile.mkdtemp(prefix='m10_'); os.environ['MOTOR10_MUNDO'] = d
+    def dia(E):                                              # um dia de atos pela porta da frente: dorme dois blocos, come, trabalha dois, espera dois
+        ato.dormir(E, 'eu', 2, para=False); ato.comer(E, 'eu'); ato.trabalhar(E, 'eu', 2); ato.esperar(E, 'eu', 2)
+    try:
+        E = vila(prata=60); estado.aplica(E, 'gera', [['lugar', 'nasce', 'mata', dict(nome='a Mata', tipo='ermo', vizinhos=['vila'], bichos={'corça': 1000}, teto={'corça': 2000})], ['pessoa', 'eu', 'fome', 'soma', 1]], texto='o mundo da prova')
+        quieto(mercado.funda, E, 'vila', 400); E['relogio']['bloco'] = 0; E['turno'].update(aberto=dict(dia=1, bloco=0), evento0=E['relogio']['eventos']); estado.grava(E)
+        E = estado.carrega(); estado.aplica(E, 'mestre', [['pessoa', 'eu', 'moedas', 'soma', 1]], texto='O PRIMEIRO FATO: achou uma moeda no Dia 1')
+        for _ in range(2): quieto(dia, E)
+        turno.pergunta(E, 'a?', ['a=x', 'b=y']); turno.pergunta(E, 'b?', ['a=x', 'b=y']); todos = turno._eventos_desde(E['turno']['evento0']) + E['_novos']
+        with contextlib.redirect_stdout(io.StringIO()): turno.fecha(E, 'dois dias de rotina')
+        ret = open(os.path.join(d, 'RETOMAR.md'), encoding='utf-8').read(); linhas = [x for x in ret.split('**Os fatos do turno**')[1].split('## PERGUNTAS')[0].splitlines() if x.startswith('- ')]
+        tipos = {e['tipo'] for e in todos}; rotina = [x for x in linhas if 'a rotina:' in x]; n_curto = len(linhas)
+        curto = ('O PRIMEIRO FATO' in ret and 'ficaram de fora' not in ret and len(rotina) == 2 and all('come' in x and 'paga a cama' in x and 'dorme (na cama) (× 2)' in x for x in rotina)
+                 and {'producao', 'consumo', 'ninhada', 'virada'} <= tipos and 'se refaz' not in ret and 'o dia vira' not in ret and len(linhas) == 1 + 2 + 2)        # o primeiro fato, a rotina de cada dia, o trabalho de cada dia
+        E = estado.carrega(); estado.aplica(E, 'mestre', [['pessoa', 'eu', 'moedas', 'soma', 1]], texto='O FATO MAIS ANTIGO do turno comprido')
+        for j in range(6):
+            quieto(dia, E)
+            for k in range(8): estado.aplica(E, 'mestre', [['pessoa', 'eu', 'moedas', 'soma', 1]], texto=f'fato {k + 1} do dia {j + 1} do turno comprido')
+        turno.pergunta(E, 'c?', ['a=x', 'b=y']); todos = turno._eventos_desde(E['turno']['evento0']) + E['_novos']; inteiras = turno.fatos(todos, teto=10 ** 9)
+        with contextlib.redirect_stdout(io.StringIO()): turno.fecha(E, 'seis dias cheios')
+        ret = open(os.path.join(d, 'RETOMAR.md'), encoding='utf-8').read(); linhas = [x for x in ret.split('**Os fatos do turno**')[1].split('## PERGUNTAS')[0].splitlines() if x.startswith('- ')]
+        fora = len(inteiras) - (len(linhas) - 1); aviso = linhas[0] if linhas else ''
+        comprido = (len(inteiras) > M.RETOMAR_FATOS and len(linhas) == M.RETOMAR_FATOS and f'ficaram de fora {fora} fatos mais antigos' in aviso and f'estado.py eventos {len(todos)}' in aviso and linhas[1:] == inteiras[fora:]
+                    and 'O FATO MAIS ANTIGO' not in ret and 'fato 8 do dia 6' in ret)
+        # o evento gravado SEM TEXTO (a mão do Mestre, por código) não some calado: entra nos fatos com o número e o tipo dele
+        E = estado.carrega(); ev = estado.aplica(E, 'mestre', [['pessoa', 'eu', 'moedas', 'soma', 500]], texto=''); turno.pergunta(E, 'd?', ['a=x', 'b=y']); ato.esperar(E, 'eu', 1)
+        with contextlib.redirect_stdout(io.StringIO()): turno.fecha(E, 'quinhentas moedas sem dizer de onde')
+        ret2 = open(os.path.join(d, 'RETOMAR.md'), encoding='utf-8').read(); mudo = f"(evento #{ev['id']}, mestre, sem texto" in ret2.split('**Os fatos do turno**')[1]
+        ok('O RETOMAR NÃO CORTA CALADO: o que se repete todo dia (comer, dormir, a cama, esperar) vira uma linha por dia; o mundo andando sozinho (a virada, a produção, o consumo, o ermo que se refaz) não entra; se os fatos passam do teto, a primeira linha diz quantos ficaram de fora e como lê-los; '
+           'e o evento gravado sem texto entra com o número dele',
+           f"turno de dois dias: {n_curto} linhas, a rotina numa linha por dia, o primeiro fato lá, nenhum aviso de corte: {'sim' if curto else 'NÃO'}; turno de seis dias cheios: {len(inteiras)} linhas de fatos para um teto de {M.RETOMAR_FATOS}; "
+           f"a primeira linha avisa («{aviso[2:70]}...»): {'sim' if comprido else 'NÃO'}; o evento do Mestre gravado sem texto (500 de prata) aparece nos fatos com o número dele: {'sim' if mudo else 'NÃO'}; RETOMAR {len(ret.encode())} bytes",
+           curto and comprido and mudo and len(ret.encode()) <= 6000)
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None); shutil.rmtree(d, ignore_errors=True)
+    # 22 o sob medida é de uma pessoa, não de um nome
+    E = vila(); at = dict(E['gente']['eu']['atributos'])
+    estado.aplica(E, 'gera', [['pessoa', 'nasce', 'xara', dict(nome='Aldric', nivel=1, atributos=at, lugar='vila')], ['item', 'nasce', item('arma', 2, 'Espada sob medida', familia='espada', dono='eu', sob=dict(dono='Aldric', grau=2, id='eu'))],
+                              ['item', 'nasce', item('arma', 2, 'Espada antiga', familia='espada', dono='xara', sob=dict(dono='Aldric', grau=2))]], texto='dois de mesmo nome')
+    nova, antiga = (f'i{k:04d}' for k in (3, 4)); estado.aplica(E, 'gera', [['item', nova, 'uso', 'poe', 'arma'], ['item', antiga, 'uso', 'poe', 'arma']], texto='empunham')
+    dono = ficha(estado.lutador(E, 'eu'))['arma']; estado.aplica(E, 'mestre', [['item', nova, 'dono', 'poe', 'xara'], ['item', antiga, 'dono', 'poe', 'eu']], texto='trocam de espada')
+    estado.aplica(E, 'gera', [['item', nova, 'uso', 'poe', 'arma'], ['item', antiga, 'uso', 'poe', 'arma']], texto='empunham'); xara = ficha(estado.lutador(E, 'xara'))['arma']; pelo_nome = ficha(estado.lutador(E, 'eu'))['arma']
+    ok('SOB MEDIDA É DE UMA PESSOA, NÃO DE UM NOME: a peça ajustada guarda o id do dono; na mão de outro de MESMO NOME rende uma categoria abaixo; a peça antiga, que só guarda o nome, segue valendo pelo nome',
+       f"no dono: × {dono['mult']:g}, acerto +{dono['acerto']:g}; na mão do xará (mesmo nome, outro id): × {xara['mult']:g}, acerto +{xara['acerto']:g}; a peça sem id, pelo nome: × {pelo_nome['mult']:g}",
+       dono['mult'] == T.MULT[2] and xara['mult'] == T.MULT[1] and xara['acerto'] < dono['acerto'] and pelo_nome['mult'] == T.MULT[2])
+    # 23 as entradas tortas: uma frase por erro, e nada cobrado
+    import subprocess
+    E = vila(prata=10); antes = retrato(E); sem_fome = recusa(lambda: ato.comer(E, 'eu')) or ''; estado.aplica(E, 'mestre', [['pessoa', 'eu', 'carga.comida', 'soma', 1]], texto='merenda'); a2 = retrato(E)
+    sem_fome2 = recusa(lambda: ato.comer(E, 'eu', da_carga=True)) or ''; nada = 'não tem fome' in sem_fome and 'não tem fome' in sem_fome2 and a2 == retrato(E) and E['gente']['eu']['moedas'] == 10
+    E2 = vila(prata=10); E2['lugares']['vila']['estoque']['comida'] = 0; estado.aplica(E2, 'mestre', [['pessoa', 'eu', 'fome', 'soma', 5]], texto='fome'); sem_comida = recusa(lambda: ato.comer(E2, 'eu')) or ''
+    E3 = vila(prata=1); estado.aplica(E3, 'mestre', [['pessoa', 'eu', 'sono', 'soma', 5]], texto='sono'); sem_cama = recusa(lambda: ato.dormir(E3, 'eu', 2)) or ''
+    E4 = vila(prata=50); estado.aplica(E4, 'gera', [['lugar', 'vila', 'oficina', 'poe', 1], ['item', 'i0001', 'dur', 'soma', -1]], texto='a espada gasta um ponto'); so_um = quieto(oficio.consertar, E4, 'eu', 'i0001', pontos=5, pago=True)['texto']
+    d = tempfile.mkdtemp(prefix='m10_'); amb = dict(os.environ, MOTOR10_MUNDO=d, PYTHONDONTWRITEBYTECODE='1'); aqui = os.path.dirname(os.path.abspath(__file__))
+    try:
+        os.environ['MOTOR10_MUNDO'] = d; E = vila(); estado.aplica(E, 'gera', [['lugar', 'vila', 'oficina', 'poe', 1]], texto='a oficina'); estado.grava(E); os.environ.pop('MOTOR10_MUNDO', None)
+        def roda(*a, mundo=True):
+            r = subprocess.run([sys.executable] + list(a), cwd=aqui, env=amb if mundo else {k: v for k, v in amb.items() if k != 'MOTOR10_MUNDO'} | dict(MOTOR10_MUNDO=os.path.join(d, 'nao_ha')), capture_output=True, text=True)
+            return (r.stdout + r.stderr).strip()
+        tortas = [('oficio.py', 'jornal', '0'), ('oficio.py', 'jornal', 'x'), ('mercado.py', 'funda', 'abc'), ('mercado.py', 'funda', '-5'), ('ato.py', 'dormir', 'muito'), ('ato.py', 'treinar', '2'), ('ato.py', 'vestir'),
+                  ('oficio.py', 'consertar'), ('mercado.py', 'comprar'), ('teste.py', 'abrir a porta'), ('turno.py', 'responde'), ('caca.py', 'coletar'), ('estado.py', 'mestre', '[["pessoa","eu","moedas","soma",500]]', ''),
+                  ('ato.py', 'luta', 'nova', os.path.join(aqui, 'dados', 'cenario_exemplo.json'), os.path.join(d, 'pasta_que_nao_ha', 'luta.json'))]
+        saidas = [(' '.join(a), roda(*a)) for a in tortas]; frase = [n for n, o in saidas if o and len(o.splitlines()) == 1 and 'Traceback' not in o and 'Uso' not in o]
+        corpo_uso = roda('corpo.py', mundo=False); usa = 'Uso' in corpo_uso and 'não há mundo' not in corpo_uso and 'Traceback' not in corpo_uso; corpo_ver = roda('corpo.py', 'ver')
+        os.environ['MOTOR10_MUNDO'] = d; intacto = estado.carrega()['gente']['eu']['moedas'] == 30 and not estado.carrega()['turno']['lutas']; os.environ.pop('MOTOR10_MUNDO', None)      # nenhum dos pedidos tortos cobrou, deu prata ou abriu luta
+        # a luta aberta só com o nome do arquivo fica DENTRO do save (em lutas/, criada na hora), e o save guarda o caminho relativo: a luta vai junto se a pasta mudar de lugar
+        cen = os.path.join(d, 'cen.json'); json.dump(dict(inicio='perto', A=[dict(id='eu', controla=True)], B=[dict(nome='lobo 1', bicho='lobo')]), open(cen, 'w', encoding='utf-8'), ensure_ascii=False)
+        nova = roda('ato.py', 'luta', 'nova', cen, 'briga.json'); os.environ['MOTOR10_MUNDO'] = d; guardada = estado.carrega()['turno']['lutas']; pelo_nome = ato._arq_luta('briga.json'); os.environ.pop('MOTOR10_MUNDO', None)
+        dentro = (os.path.exists(os.path.join(d, 'lutas', 'briga.json')) and not os.path.exists(os.path.join(aqui, 'briga.json')) and guardada == [dict(arq=os.path.join('lutas', 'briga.json'), fim=None)] and 'lutas/briga.json' in nova
+                  and 'Traceback' not in nova and pelo_nome == os.path.join(d, 'lutas', 'briga.json') and 'largada' in roda('ato.py', 'luta', 'larga', 'briga.json', 'fim da prova'))      # o `luta roda` e o `luta larga` acham a luta só pelo nome
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None); shutil.rmtree(d, ignore_errors=True)
+    ok('AS ENTRADAS TORTAS: o pedido errado ganha UMA frase que diz o que está errado (não o uso inteiro, nem erro de programa), e nada é cobrado: comer sem fome, lugar sem comida, cama sem prata, conserto pedido a mais, número que não é número',
+       f"comer sem fome (na taverna e da carga): recusado, sem cobrar: {'sim' if nada else 'NÃO'} («{sem_fome[:34]}»); lugar sem comida: «{sem_comida[:38]}»; cama sem prata: «{sem_cama[:28]}»; conserto de 5 pontos numa peça com 1 gasto avisa: {'sim' if 'só tinha' in so_um else 'NÃO'}; "
+       f"{len(frase)} de {len(tortas)} comandos tortos respondem com uma frase só (entre eles: o evento do Mestre sem texto, `caca.py coletar` sem dizer o quê, a luta nova numa pasta que não existe)" + (f" (não: {', '.join(n for n, o in saidas if n not in frase)})" if len(frase) < len(tortas) else '')
+       + f", e nada mudou: {'sim' if intacto else 'NÃO'}; `corpo.py` sem argumento só diz o uso, sem abrir mundo: {'sim' if usa else 'NÃO'}; a luta aberta só com o nome do arquivo fica dentro do save, em lutas/, com o caminho relativo guardado: {'sim' if dentro else 'NÃO'}",
+       nada and 'não há comida' in sem_comida and 'a cama custa' in sem_cama and 'só tinha' in so_um and len(frase) == len(tortas) and intacto and usa and 'Aldric' in corpo_ver and dentro)
+    # 24 a língua da mesa: as frases de gente não dependem de gênero; a categoria não se diz duas vezes; a unidade certa
+    E = vila(); p = E['gente']['eu']; ditos = []
+    for fome in (0, 4, 7):
+        for sono in (0, 6, 8):
+            for cansaco in (0, 9):
+                antes_c = corpo.faixas(p); p['corpo'].update(fome=fome, sono=sono, cansaco=cansaco); ditos += [corpo.diz(p), corpo.cruzou(p, dict(fome=0, sono=0, cansaco=0)) or '']
+    p['corpo'].update(fome=1, sono=3, cansaco=3); ditos.append(quieto(ato.dormir, E, 'eu', 3)); estado.aplica(E, 'gera', [['lugar', 'vila', 'oficina', 'poe', 1], ['pessoa', 'eu', 'treino.comércio', 'soma', 1], ['pessoa', 'eu', 'treino.espada', 'soma', 1]], texto='um dia de negócio')
+    pede = oficio.pede(E, 'eu', oficio.molde('arma', 2, familia='espada')); voce = '\n'.join(turno._voce(E)); luta.semente(3)
+    S = luta.nova([estado.lutador(E, 'eu')], [estado.lutador(E, 'eu', nome='a outra', id=None)], inicio='colado', quieto=False); S['L'][0]['estado'] = 'caido'; S['L'][1]['estado'] = 'morto'; S['L'][0]['abalado'] = True; S['fim'] = 'B'; quadro = luta.situacao(S); fim = luta.resultado_diz(S); luta.D = luta.Dados()
+    ruins = [w for w in ('exausto', 'faminto', 'desperto', 'descansado', 'inteiro (', 'CAÍDO', 'MORTO', 'abalado', 'atordoado', 'mortos:', 'caídos:', 'bloco(s)', 'Raro (Raro)', '1 blocos') if w in '\n'.join(ditos + [pede, voce, quadro, fim])]
+    # o sinal de menos e a vírgula da mesa; e do morto só se diz que morreu
+    from itens import janela
+    S2 = luta.nova([estado.lutador(E, 'eu')], [estado.lutador(E, 'eu', nome='a outra', id=None)], inicio='colado', quieto=False); luta._ferida(S2, S2['L'][1], 'braços', False, luta.arma_de(S2, S2['L'][0]), 5); ferida = S2['log'][-1]
+    gibao = janela(E['itens']['itens']['i0002']); estado.aplica(E, 'mestre', [['pessoa', 'eu', 'estado', 'poe', 'morto'], ['pessoa', 'eu', 'pv', 'soma', -999]], texto='morre, para a prova'); morto = '\n'.join(turno._voce(E))
+    miudos = '−' in ferida and not any(c + ' no acerto' in ferida for c in ('-1', '-2', '-3', '-4')) and 'Proteção: 0,7' in gibao and '0.7' not in gibao and 'MORREU' in morto and 'MORREU:' not in morto and 'com forças' not in morto and 'sem fome' not in morto
+    certo = (not ruins and 'no limite das forças' in ''.join(ditos) and 'acorda com o sono em dia' in ditos[-1] and pede.startswith('espada Rara ·') and 'comércio: 1 dia de negócio' in voce and 'espada: 1 bloco' in voce
+             and 'CAIU' in quadro and 'MORREU' in quadro and 'fraquejou' in quadro and 'morreram: a outra' in fim and 'caíram: Aldric' in fim and miudos)
+    ok('A LÍNGUA DA MESA: as frases de gente servem a qualquer pessoa (não dependem de gênero); a categoria concorda com a peça e não se diz duas vezes; o comércio conta dias de negócio, e o plural é plural',
+       f"o corpo, o sono, o quadro e o fim da luta: {'nenhuma palavra presa a gênero' if not ruins else 'SOBROU: ' + ', '.join(ruins)}; «{ditos[-1].split('PAROU: ')[-1]}»; `oficio.py pede arma espada Raro` abre com «{pede.split(' · ')[0]}»; "
+       f"o treino na MESA: «{voce.split('Treino: ')[-1]}»; o quadro diz CAIU e MORREU; o fim: «{fim}»; a ferida no braço com o sinal de menos da mesa («{ferida.strip().split(': ')[-1]}»), a janela com vírgula («{gibao.splitlines()[2].split('      ')[0]}»), "
+       f"e do morto a MESA só diz que morreu: {'sim' if miudos else 'NÃO'}", certo)
+    # 25 as perguntas guardam o número com que foram abertas, até o turno fechar
+    d = tempfile.mkdtemp(prefix='m10_'); os.environ['MOTOR10_MUNDO'] = d
+    try:
+        E = vila(); turno.pergunta(E, 'Forja ou caça?', ['a=forja', 'b=caça']); turno.pergunta(E, 'Segue na forja?', ['a=segue', 'b=vai caçar']); quieto(ato.esperar, E, 'eu', 1)
+        quieto(turno.fecha, E, 'um bloco de espera'); ret = open(os.path.join(d, 'RETOMAR.md'), encoding='utf-8').read(); lido = '1. Forja ou caça?' in ret and '2. Segue na forja?' in ret
+        E = estado.carrega(); r1 = turno.responde(E, '1a'); estado.grava(E); E = estado.carrega(); de_novo = recusa(lambda: turno.responde(E, '1a')) or ''; outra = recusa(lambda: turno.responde(E, '1b')) or ''; fora = recusa(lambda: turno.responde(E, '3a')) or ''
+        r2 = turno.responde(E, '2b'); resp = [(r['n'], r['cod'], r['texto']) for r in E['turno']['respondidas']]; n3 = turno.pergunta(E, 'E amanhã?', ['a=dorme', 'b=treina']); mesa = turno.mesa(E)
+        turno.pergunta(E, 'E depois?', ['a=fica', 'b=parte']); quieto(ato.esperar, E, 'eu', 1); quieto(turno.fecha, E, 'respondeu as duas'); ret2 = open(os.path.join(d, 'RETOMAR.md'), encoding='utf-8').read(); E = estado.carrega()
+        certo = (lido and 'Ficam abertas: 2.' in r1 and 'já foi respondida' in de_novo and 'já foi respondida' in outra and 'não bate em nenhuma pergunta aberta' in fora and r2.startswith('2b: Segue na forja? → vai caçar')
+                 and resp == [(1, 'a', 'Forja ou caça?'), (2, 'b', 'Segue na forja?')] and n3 == 'pergunta 3 aberta.' and '3. E amanhã?' in mesa and '1. E amanhã?' in ret2 and '2. E depois?' in ret2 and [q['n'] for q in E['turno']['perguntas']] == [1, 2])
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None); shutil.rmtree(d, ignore_errors=True)
+    ok('AS PERGUNTAS GUARDAM O NÚMERO com que foram abertas até o turno fechar: responder uma não muda o número das outras; a já respondida recusa segunda resposta; a pergunta nova ganha o número seguinte; no fechar, as que ficam são numeradas de novo, de 1 em diante',
+       f"com as perguntas 1 e 2 do RETOMAR abertas: `responde 1a` deixa a outra como 2 («{r1.splitlines()[-1]}»); `responde 1a` de novo e `responde 1b`: {'recusados' if de_novo and outra else 'ACEITOS'} («{de_novo[:44]}...»); `responde 2b` marca a segunda («{r2}»); "
+       f"a pergunta aberta depois é a {n3.split()[1]}; fechado o turno, o RETOMAR as lista como 1 e 2: {'sim' if certo else 'NÃO'}", certo)
     return out
 
 
@@ -268,7 +461,7 @@ def main():
     print('BANCO DE PROVAS DO MUNDO\n\netapa 1: um dia numa vila\n')
     res = provas(n)
     for nome, deu, passa in res: print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
-    print('\netapa 2: o alicerce (a morte, nascer, vestir, a jornada, os invariantes novos)\n'); mais = provas_alicerce2(n); res += mais
+    print('\netapa 2: o alicerce (a morte, nascer, vestir, a jornada, os invariantes novos; a cama, a luta aberta, o RETOMAR, as entradas tortas)\n'); mais = provas_alicerce2(n); res += mais
     for nm, deu, passa in mais: print(f"  {'passa' if passa else 'FALHA'}  {nm}: {deu}")
     import importlib
     for nome, titulo in (('provas_mercado', 'etapa 2: o mercado'), ('provas_oficio', 'etapa 2: o ofício'), ('provas_caca', 'etapa 2: a caça e a coleta')):

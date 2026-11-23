@@ -40,6 +40,7 @@ LUTA_CANSA = 2              # uma luta cansa isto
 # ---------- viver (em prata) ----------
 REFEICAO_PRECO = 1
 CAMA_PRECO = 2              # por noite (paga-se ao deitar numa pousada)
+CAMA_VALE = 6               # a cama paga vale tantos blocos (um dia inteiro), a contar do bloco em que se pagou, no lugar onde se pagou: dormir de novo nesse prazo não cobra
 SALARIO = dict(diarista=2, aprendiz=3, oficial=6, mestre=10)      # por bloco trabalhado
 JORNADA = 2                 # a jornada: o lugar paga a cada pessoa no máximo tantos blocos de serviço por dia (trabalhar e o jornal da oficina contam juntos)
 ESFORCO_OFICIO = dict(diarista='pesado', aprendiz='pesado', oficial='leve', mestre='leve')
@@ -74,6 +75,10 @@ MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FE
 EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'vestir', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
            'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada']
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
+NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
+ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
+MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz): não é fato do turno, a não ser que alguém morra
+RETOMAR_FATOS = 40          # o teto de linhas de fatos no RETOMAR.md; passando disso, a primeira linha diz quantos ficaram de fora e como lê-los
 OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura']      # os ofícios que têm maestria e treino, como as armas (maestria.forja, treino.caça)
-MODULOS = ['mercado', 'oficio', 'caca']     # os módulos do mundo: cada um pode ter virada(E) (roda quando o dia vira) e mesa(E) (linhas para a MESA.md)
+MODULOS = ['mercado', 'oficio', 'caca']     # os módulos do mundo: cada um pode ter virada(E) (roda quando o dia vira), mesa(E) (linhas para a MESA.md), so_mestre(E) (linhas para o SÓ O MESTRE da MESA) e retomar(E) (linhas para o RETOMAR.md)
 ESTADOS = ['vivo', 'morto']

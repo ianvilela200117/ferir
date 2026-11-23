@@ -84,8 +84,15 @@ def cena(i):
     return A, B, dict(inicio=R.choice(['longe', 'perto', 'colado', 5, 12]), lugar=lugar, tempo=tempo, surpresa=R.choice([None, None, 'A', 'B']))
 
 
-MARCAS = {'matilha': 'a matilha o derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'está envenenado', 'agarra': ' AGARRA ', 'voa': '(no ar)', 'regenera': ' regenera (', 'apavora': '(o pavor:',
-          'couraça': '(a couraça não abre)', 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALAD', 'apertado': 'luta apertado', 'veneno depois da luta': 'para o veneno depois da luta'}
+MARCAS = {'matilha': 'a matilha derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'o veneno entra em', 'agarra': ' AGARRA ', 'voa': '(no ar)', 'regenera': ' regenera (', 'apavora': '(o pavor:',
+          'couraça': '(a couraça não abre)', 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALAD', 'apertado': 'luta sem espaço', 'veneno depois da luta': 'para o veneno depois da luta'}
+# por que a luta parou, em palavras inteiras (a frase da parada traz nomes e números: aqui ela vira o motivo)
+MOTIVOS = [('a luta vai começar', 'a luta vai começar'), ('rodadas sem novidade', 'três rodadas sem novidade'), ('morreu', 'alguém morreu'), ('caiu', 'alguém caiu'), ('fugiu', 'alguém fugiu'),
+           ('se rendeu', 'alguém se rendeu'), ('saiu da luta', 'alguém saiu da luta'), ('abaixo de 50% do PV', 'o comandado abaixo de metade do PV'), ('abaixo de 25% do PV', 'o comandado abaixo de um quarto do PV'),
+           ('levou uma ferida', 'o comandado levou uma ferida'), ('está sem fôlego', 'o comandado ficou sem fôlego'), ('fraquejou', 'o comandado fraquejou'), ('é só apanhar', 'o comandado segura onde só apanha'),
+           ('quebrou', 'uma peça quebrou'), ('não está mais de pé', 'o alvo da ordem não está mais de pé'), ('agarrou', 'um bicho agarrou o comandado'), ('recuperou o fôlego', 'a ordem de tomar fôlego acabou')]
+def motivo(p): return next((nome for marca, nome in MOTIVOS if marca in p), 'outro motivo: ' + p)
+FINS = dict(A='a casa ficou com o campo', B='o outro lado ficou com o campo', impasse='impasse', empate='empate', ninguém='ninguém ficou de pé')
 fins = collections.Counter(); rod = []; paradas = collections.Counter(); erros = 0; com_bicho = 0; visto = collections.Counter()
 N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 3000
 for i in range(N):
@@ -94,12 +101,12 @@ for i in range(N):
         tem_bicho = any(p.get('bicho') for p in A + B); com_bicho += tem_bicho
         S = luta.nova(A, B, quieto=(i % 5 != 0 and not tem_bicho), **kw); larg = S['lugar'].get('largura'); passos = 0        # toda luta com bicho guarda o registro: é nele que se vê o traço acontecer
         so_bichos = {lado: all(f.get('bicho') for f in S['L'] if f['lado'] == lado) for lado in 'AB'}
-        if tem_bicho: visto['apertado'] += any('apertado' in a for a in S['avisos'])
+        if tem_bicho: visto['apertado'] += any(MARCAS['apertado'] in a for a in S['avisos'])
         st = luta.corre(S, interativo=True)
         while st == 'parada':
             passos += 1
             assert passos < 400, 'paradas demais'
-            for p in S['paradas']: paradas[p.split(' ')[-1] if 'rodadas' in p else ' '.join(w for w in p.split() if not any(c.isdigit() for c in w))[-28:]] += 1
+            for p in S['paradas']: paradas[motivo(p)] += 1
             if R.random() < .7:
                 meus = [f['nome'] for f in luta.de_pe(S, 'A')]; deles = [f['nome'] for f in luta.de_pe(S, 'B')]
                 if meus:
@@ -154,8 +161,8 @@ for i in range(N):
         erros += 1; import traceback; print(f'#{i} ERRO: {type(e).__name__}: {e}'); traceback.print_exc(limit=3)
         if erros > 12: break
 rod.sort()
-print(f'{N} lutas · erros {erros} · fins {dict(fins)} · rodadas: mediana {rod[len(rod)//2]}, p90 {rod[int(len(rod)*.9)]}, máx {rod[-1]}')
-print('paradas mais comuns:', paradas.most_common(14))
+print(f"{N} lutas · erros {erros} · como acabaram: {', '.join(f'{FINS.get(k, k)} {v}' for k, v in fins.most_common())} · rodadas: a do meio {rod[len(rod)//2]}, nove em dez até {rod[int(len(rod)*.9)]}, a mais longa {rod[-1]}")
+print('por que a luta parou e perguntou (as mais comuns):', ', '.join(f'{k} {v}' for k, v in paradas.most_common(14)))
 if COM_BICHOS:
     print(f'lutas com bicho: {com_bicho} · em quantas cada traço esteve em campo:', ', '.join(f"{t} {visto['com o traço ' + t]}" for t in TB.TRACOS))
     print('em quantas lutas com bicho se viu acontecer (pelo registro):', ', '.join(f'{k} {visto[k]}' for k in MARCAS if MARCAS[k]))

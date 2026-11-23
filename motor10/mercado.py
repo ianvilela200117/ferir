@@ -34,7 +34,7 @@ import tabelas as T
 import tabelas_mundo as M
 import tabelas_mercado as C
 import estado, corpo
-from itens import item
+from itens import item, rotulo
 
 PECAS = ('arma', 'armadura', 'escudo')
 FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino
@@ -168,7 +168,7 @@ def comprar(E, pid, bem, n):
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); _base(bem); n = _quantos(n); tem = l['estoque'].get(bem, 0)
     if tem < n: sys.exit(f"{l['nome']} só tem {_m(tem)} de {nome_bem(bem)} (pediu {_m(n)})")
     prata = custa(E, lid, bem, n); antes = preco(E, lid, bem)
-    if p['moedas'] < prata: sys.exit(f"{_m(n)} de {nome_bem(bem)} custam {_m(prata)} de prata {_em(E, lid)}; {p['nome']} tem {_m(p['moedas'])}")
+    if p['moedas'] < prata: sys.exit(f"{_m(n)} de {nome_bem(bem)} {'custa' if n == 1 else 'custam'} {_m(prata)} de prata {_em(E, lid)}; {p['nome']} tem {_m(p['moedas'])}")
     ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['estoque', lid, bem, 'soma', -n], ['pessoa', pid, 'carga.' + bem, 'soma', n]] + _treino(E, pid, prata)
     txt = f"{p['nome']} compra {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}"
     estado.aplica(E, 'compra', ef, onde=lid, quem=[pid], texto=txt); depois = preco(E, lid, bem)
@@ -182,9 +182,9 @@ def vender(E, pid, bem, n):
     n = _quantos(n)
     if tem < n: sys.exit(f"{p['nome']} carrega {_m(tem)} de {nome_bem(bem)} (quis vender {_m(n)})")
     prata = paga(E, pid, bem, n); antes = preco(E, lid, bem); cx = caixa(E, lid)
-    if prata < 1: sys.exit(f"{_m(n)} de {nome_bem(bem)} não valem uma moeda de prata {_em(E, lid)}: junte mais para vender")
+    if prata < 1: sys.exit(f"{_m(n)} de {nome_bem(bem)} não {'vale' if n == 1 else 'valem'} uma moeda de prata {_em(E, lid)}: junte mais para vender")
     if cx < prata:
-        k = cabe(E, pid, bem); sys.exit(f"a loja de {l['nome']} tem {_m(cx)} de prata e não paga {_m(prata)} por {_m(n)} de {nome_bem(bem)}" + (f': hoje ela compra até {_m(k)}' if k and paga(E, pid, bem, k) >= 1 else ': hoje ela não compra'))
+        k = cabe(E, pid, bem); sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_m(n)} de {nome_bem(bem)}" + (f': hoje ela compra até {_m(k)}' if k and paga(E, pid, bem, k) >= 1 else ': hoje ela não compra'))
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['pessoa', pid, 'carga.' + bem, 'soma', -n], ['estoque', lid, bem, 'soma', n]] + _treino(E, pid, prata)
     txt = f"{p['nome']} vende {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}"
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt); depois = preco(E, lid, bem)
@@ -203,7 +203,7 @@ def vender_cesta(E, pid, cesta=None):
         if carga.get(b, 0) < q: sys.exit(f"{p['nome']} carrega {_m(carga.get(b, 0))} de {nome_bem(b)} (quis vender {_m(q)})")
     prata = math.floor(round(parte(p) * sum(lote(E, lid, b, q, compra=False) for b, q in cesta.items()), 6)); cx = caixa(E, lid); lista = ', '.join(f'{_m(q)} de {nome_bem(b)}' for b, q in cesta.items())
     if prata < 1: sys.exit(f"{lista}: isso não vale uma moeda de prata {_em(E, lid)}: junte mais para vender")
-    if cx < prata: sys.exit(f"a loja de {l['nome']} tem {_m(cx)} de prata e não paga {_m(prata)} pela cesta ({lista}): venda aos poucos (`mercado.py preco BEM N` diz quanto ela paga)")
+    if cx < prata: sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} pela cesta ({lista}): venda aos poucos (`mercado.py preco BEM N` diz quanto ela paga)")
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata]]
     for b, q in cesta.items(): ef += [['pessoa', pid, 'carga.' + b, 'soma', -q], ['estoque', lid, b, 'soma', q]]
     txt = f"{p['nome']} vende {lista} por {_m(prata)} de prata {_em(E, lid)}"
@@ -237,20 +237,20 @@ def paga_peca(E, pid, it, lid=None):
     p = E['gente'][pid]; return math.floor(round(parte(p) * valor(it) * C.FARTA ** iguais(E, lid or p['lugar'], it), 6))
 
 
-def _diz_peca(it): return f"{it['nome']} ({T.CATS[it['cat']]}, {it['dur'][0]}/{it['dur'][1]}" + (', QUEBRADA' if it['dur'][0] <= 0 else '') + (f", sob medida para {it['sob_medida'].get('dono')}" if it.get('sob_medida') else '') + ')'
+def _diz_peca(it): return rotulo(it, f"{it['dur'][0]}/{it['dur'][1]}", 'QUEBROU' if it['dur'][0] <= 0 else '', f"sob medida para {it['sob_medida'].get('dono')}" if it.get('sob_medida') else '')
 
 
 def comprar_peca(E, pid, iid):
     """a pessoa compra uma peça da prateleira do lugar onde está: a prata vai para o lugar e o dono entra no Livro de Itens"""
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
     if iid not in prateleira(E, lid):
-        sys.exit(f"{it['nome']} ({iid}) não está na prateleira de {l['nome']}" + (f": é de {E['gente'][it['dono']]['nome']}" if it.get('dono') in E['gente']
-                 else ': está caída no chão, não é da loja (quem fica com ela entra por evento do Mestre)' if it.get('onde') == lid and it.get('solto')
+        sys.exit(f"{it['nome']} ({iid}) não está na prateleira {estado.de(E, lid)}" + (f": é de {E['gente'][it['dono']]['nome']}" if it.get('dono') in E['gente']
+                 else ': está no chão, não é da loja (quem fica com ela entra por evento do Mestre)' if it.get('onde') == lid and it.get('solto')
                  else f": a loja só negocia arma, armadura e escudo, até o {T.CATS[M.PECA_LOJA_ATE]}" if it.get('onde') == lid else ''))
     prata = preco_peca(it)
     if p['moedas'] < prata: sys.exit(f"{_diz_peca(it)} custa {_m(prata)} de prata; {p['nome']} tem {_m(p['moedas'])}")
     ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['item', iid, 'dono', 'poe', pid],
-          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: comprada por {p['nome']} {_em(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
+          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} comprou {_em(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
     txt = f"{p['nome']} compra {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}"
     estado.aplica(E, 'compra', ef, onde=lid, quem=[pid], texto=txt)
     return dict(item=iid, prata=prata, texto=txt + (sobe(E, pid) or '.'))
@@ -265,13 +265,13 @@ def vender_peca(E, pid, iid):
     if any(o.get('item') == iid for o in E['itens'].get('obras', {}).values()): sys.exit(f"{it['nome']} está num ajuste aberto: feche ou largue a obra antes de vender")
     if it.get('uso'): sys.exit(f"{it['nome']} está em uso: guarde antes de vender (`ato.py tirar {iid}`)")
     prata = paga_peca(E, pid, it); cx = caixa(E, lid); k = iguais(E, lid, it)
-    if prata < 1: sys.exit(f"{_diz_peca(it)} não vale uma moeda de prata {_em(E, lid)}" + (f': a loja já tem {k} igual(is) na prateleira' if k else ''))
-    if cx < prata: sys.exit(f"a loja de {l['nome']} tem {_m(cx)} de prata e não paga {_m(prata)} por {_diz_peca(it)}")
+    if prata < 1: sys.exit(f"{_diz_peca(it)} não vale uma moeda de prata {_em(E, lid)}" + (f": a loja já tem {estado.tantos(k, 'igual', 'iguais')} na prateleira" if k else ''))
+    if cx < prata: sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_diz_peca(it)}")
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['item', iid, 'dono', 'poe', None], ['item', iid, 'onde', 'poe', lid],
-          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: vendida por {p['nome']} à loja de {l['nome']}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
+          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} vendeu à loja {estado.de(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
     txt = f"{p['nome']} vende {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}"
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt)
-    return dict(item=iid, prata=prata, iguais=k, texto=txt + (f' (a loja já tinha {k} igual(is): pagou menos)' if k and C.FARTA < 1 else '') + (sobe(E, pid) or '.'))
+    return dict(item=iid, prata=prata, iguais=k, texto=txt + (f" (a loja já tinha {estado.tantos(k, 'igual', 'iguais')}: pagou menos)" if k and C.FARTA < 1 else '') + (sobe(E, pid) or '.'))
 
 
 # ---------- a virada do dia ----------
@@ -357,7 +357,7 @@ def ver(E, pid):
             if it['dur'][0] == it['dur'][1] and not it.get('sob_medida'): novas.setdefault((it['cat'], preco_peca(it)), []).append(f"{i} {it['nome']}")
             else: outras.append(f"- {i} {_diz_peca(it)}: {_m(preco_peca(it))} de prata")
         L += [f"- novas, a {_m(pr)} de prata cada ({T.CATS[cat]}): " + ' · '.join(v[:14]) + (f' · e mais {len(v) - 14}' if len(v) > 14 else '') for (cat, pr), v in sorted(novas.items())]
-        L += outras[:8] + ([f'- ... e mais {len(outras) - 8} peça(s) gasta(s)'] if len(outras) > 8 else [])
+        L += outras[:8] + ([f"- ... e mais {estado.tantos(len(outras) - 8, 'peça gasta', 'peças gastas')}"] if len(outras) > 8 else [])
     minhas = [(i, it) for i, it in itens.items() if it.get('dono') == pid and _e_peca(it)]
     if minhas: L += ['', f'**As suas peças** (o que a loja paga; {1 - C.FARTA:.0%} a menos por peça igual que ela já tem; a que está em uso não se vende sem guardar): '
                      + ' · '.join(f"{i} {_diz_peca(it)}{' EM USO' if it.get('uso') else ''}: {_m(paga_peca(E, pid, it))}" for i, it in minhas[:8]) + (f' · e mais {len(minhas) - 8}' if len(minhas) > 8 else '')]
@@ -387,7 +387,11 @@ def main(a=None):
     a = sys.argv[1:] if a is None else list(a)
     if not a: print(__doc__); return
     op = dict(x.split('=', 1) for x in a if '=' in x); pos = [x for x in a if '=' not in x]
-    if not pos or pos[0] not in ('ver', 'preco', 'comprar', 'vender', 'funda') or (pos[0] != 'ver' and len(pos) < 2): print(__doc__); return
+    if not pos or pos[0] not in ('ver', 'preco', 'comprar', 'vender', 'funda'): print(__doc__); return
+    if pos[0] != 'ver' and len(pos) < 2:                    # uma frase por erro, em vez do uso inteiro
+        sys.exit(dict(preco='diga de que bem quer o preço: `python3 mercado.py preco comida 10`', funda='diga quanta gente tem o lugar, em número inteiro (1 ou mais): `python3 mercado.py funda 400 "como foi"`')
+                 .get(pos[0], f'diga o que {pos[0]}: um bem e quantas unidades (`python3 mercado.py {pos[0]} comida 3`) ou o id de uma peça (`python3 mercado.py {pos[0]} i0007`)'))
+    if pos[0] == 'funda' and (not pos[1].isdigit() or int(pos[1]) < 1): sys.exit(f'o povo de um mercado é um número inteiro, 1 ou mais (veio "{pos[1]}"): `python3 mercado.py funda 400 "como foi"`')
     E = estado.carrega(); pid = op.get('quem') or estado.eu(E)
     if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
     if pos[0] == 'ver': print('\n'.join(ver(E, pid))); return
@@ -398,13 +402,13 @@ def main(a=None):
     elif pos[0] == 'vender' and e_item: out = vender_peca(E, pid, pos[1])['texto']
     elif pos[0] == 'comprar' and len(pos) > 2: out = comprar(E, pid, pos[1], pos[2])['texto']
     elif pos[0] == 'vender' and len(pos) > 2: out = vender(E, pid, pos[1], pos[2])['texto']
-    elif pos[0] == 'funda' and pos[1].isdigit(): out = funda(E, E['gente'][pid]['lugar'], int(pos[1]), como=pos[2] if len(pos) > 2 else '')
-    elif pos[0] in ('comprar', 'vender'): sys.exit(f'diga quantas unidades de "{pos[1]}" (ou o id de uma peça do Livro de Itens: i0007). Veja o uso: python3 mercado.py')
-    else: print(__doc__); return
+    elif pos[0] == 'funda': out = funda(E, E['gente'][pid]['lugar'], int(pos[1]), como=pos[2] if len(pos) > 2 else '')
+    else: sys.exit(f'diga quantas unidades de "{pos[1]}" (ou o id de uma peça do Livro de Itens: i0007). Veja o uso: python3 mercado.py')
     estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar
     print(out)
     print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {_m(p['moedas'])} de prata")
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     main()

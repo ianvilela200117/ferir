@@ -38,6 +38,17 @@ EFEITOS = {
 }
 
 
+# a língua da mesa: a categoria concorda com o nome da peça ("espada Rara", "arco Raro"), e não se diz duas vezes ("espada Rara", e não "espada Rara (Raro)")
+FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino
+FEMININAS = ('adaga', 'espada', 'maça', 'lança', 'alabarda', 'besta')                          # as armas de nome feminino (a armadura também é; o elmo, o escudo e o núcleo, não)
+
+
+def rotulo(it, *mais):
+    """o nome de uma peça com a categoria entre parênteses, e o que mais vier ("Adaga da Cira (Comum, 10/10)"). Se o nome já diz a categoria, ela não se repete ("espada Rara (30/30)")."""
+    c = it['cat']; partes = ([] if str(it['nome']).endswith((CATS[c], FEM[c])) else [CATS[c]]) + [str(x) for x in mais if x]
+    return it['nome'] + (f" ({', '.join(partes)})" if partes else '')
+
+
 def cat_i(c):
     """'Raro' ou 2 → 2"""
     if isinstance(c, int):
@@ -60,13 +71,13 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
     it = dict(tipo=tipo, cat=c, nome=nome, dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), sob_medida=sob, historia=[], dono=None, onde=None)
     if tipo == 'arma':
         if familia not in FAMILIAS: sys.exit(f'família de arma desconhecida: "{familia}" (use: {", ".join(FAMILIAS)})')
-        it['familia'] = familia; it['nome'] = nome or f'{familia} {CATS[c]}'
+        it['familia'] = familia; it['nome'] = nome or f'{familia} {(FEM if familia in FEMININAS else CATS)[c]}'
     elif tipo == 'armadura':
         if material not in MATERIAIS: sys.exit(f'material desconhecido: "{material}" (use: {", ".join(MATERIAIS)})')
         it['material'] = material; it['cobre'] = list(cobre or ['tronco', 'braços', 'pernas'])
         for p in it['cobre']:
             if p not in PARTES: sys.exit(f'parte desconhecida: "{p}" (use: {", ".join(PARTES)})')
-        it['nome'] = nome or (f'elmo de {material}' if it['cobre'] == ['cabeça'] else f'armadura de {material}') + f' {CATS[c]}'
+        it['nome'] = nome or (f'elmo de {material} {CATS[c]}' if it['cobre'] == ['cabeça'] else f'armadura de {material} {FEM[c]}')
     elif tipo == 'escudo':
         it['nome'] = nome or f'escudo {CATS[c]}'
     else:
@@ -106,7 +117,7 @@ def janela(it):
     c = it['cat']; L = [f"[ {it['nome']} ]"]
     if it['tipo'] == 'nucleo':
         L.append(f"Categoria: {CATS[c]}      Núcleo" + (f" de {it['de']}" if it.get('de') else ''))
-        L.append(f"Serve para: uma obra {CATS[c]} (do Épico para cima, a forja pede um núcleo da categoria da peça). Não se veste e não gasta.")
+        L.append(f"Serve para: uma obra {FEM[c]} (do Épico para cima, a forja pede um núcleo da categoria da peça). Não se veste e não gasta.")
         if it.get('dono'): L.append(f"Dono: {it['dono']}")
         if it.get('onde'): L.append(f"Está em: {it['onde']}")
         for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
@@ -114,17 +125,17 @@ def janela(it):
     L.append(f"Categoria: {CATS[c]}      Durabilidade: {it['dur'][0]}/{it['dur'][1]}")
     if it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 and not f.get('distancia') else 1)       # o arco e a besta não ganham o das duas mãos (2.4)
-        L.append(f"Ataque: {f['dado']} × {str(round(m, 2)).rstrip('0').rstrip('.').replace('.', ',')} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + ' casa(s)'}")
+        L.append(f"Ataque: {f['dado']} × {str(round(m, 2)).rstrip('0').rstrip('.').replace('.', ',')} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + (' casa' if f['alcance'] == 1 else ' casas')}")
     elif it['tipo'] == 'armadura':
-        mat = MATERIAIS[it['material']]
-        L.append(f"Proteção: {RD[c] * mat['rd']:g} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
+        mat = MATERIAIS[it['material']]; prot = f"{RD[c] * mat['rd']:g}".replace('.', ',')        # a vírgula da mesa: 0,7
+        L.append(f"Proteção: {prot} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
     else:
         L.append(f"Defesa: +{T.ESCUDO_BASE + BON[c]:g}")
     a, q = pede(it); L.append(f"Pede: {a} {q}")
     if it['efeitos']: L.append('Efeitos: ' + ' · '.join(EFEITOS[e['chave']][0].format(valor=e.get('valor', '')) for e in it['efeitos']))
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")
-    if it.get('feito_por'): L.append(f"Feita por: {it['feito_por']}" + (f", Dia {it['dia']}" if it.get('dia') else ''))
+    if it.get('feito_por'): L.append(f"Quem fez: {it['feito_por']}" + (f", Dia {it['dia']}" if it.get('dia') else ''))
     for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
     return '\n'.join(L)
 
@@ -196,7 +207,7 @@ def _no_mundo(estado, a, op, pos):
             estado.grava(E)
         if a[0] == 'conserta':
             n = int(pos[2]) if len(pos) > 2 and pos[2].isdigit() else it['dur'][1] - it['dur'][0]
-            if n < 1 or not estado.aplica(E, 'mestre', [['item', pos[1], 'dur', 'soma', n]], texto=f"o Mestre conserta {it['nome']} ({n} ponto(s))"): print('(já estava inteira: nada mudou)')
+            if n < 1 or not estado.aplica(E, 'mestre', [['item', pos[1], 'dur', 'soma', n]], texto=f"o Mestre conserta {it['nome']} ({estado.tantos(n, 'ponto')})"): print('(não havia o que consertar: nada mudou)')
             estado.grava(E)
         print(_janela_mundo(E, E['itens']['itens'][pos[1]])); return
     print(__doc__)
@@ -205,10 +216,10 @@ def _no_mundo(estado, a, op, pos):
 def _janela_mundo(E, it):
     """a janela do item com os nomes de quem é e de quem fez (o Livro do mundo guarda os ids), e onde está"""
     v = dict(it); nome = lambda x: E['gente'][x]['nome'] if x in E['gente'] else x
-    if v.get('dono'): v['dono'] = nome(v['dono']) + (' (em uso)' if it.get('uso') else ' (guardada)' if it['tipo'] != 'nucleo' else '')
+    if v.get('dono'): v['dono'] = nome(v['dono']) + (' (em uso)' if it.get('uso') else ' (na guarda)' if it['tipo'] != 'nucleo' else '')
     if v.get('feito_por'): v['feito_por'] = nome(v['feito_por'])
     txt = janela(v)
-    if it.get('onde') in E['lugares'] and it['tipo'] != 'nucleo': txt += f"\nEstá {E['lugares'][it['onde']].get('em', it['onde'])}" + (', no chão (solta)' if it.get('solto') else ', sem dono')
+    if it.get('onde') in E['lugares'] and it['tipo'] != 'nucleo': txt += f"\nEstá {E['lugares'][it['onde']].get('em', it['onde'])}" + ((', no chão, junto de um corpo: quem fica com ela é decisão de cena' if it.get('corpo') else ', no chão, de quem achar') if it.get('solto') else ', sem dono')
     return txt
 
 
@@ -243,4 +254,5 @@ def main():
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     main()

@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos nas páginas `tabelas*.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py` e `python3 provas_mundo.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Uma meta da etapa 2 não é firme, e está dita no 7.13: a primeira peça Lendária (passou numa rodada de sete). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Uma meta da etapa 2 não bate, e está dita no 7.13: a primeira peça Lendária (falhou nas treze rodadas da última medida). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -118,6 +118,7 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 2.8 **Sob medida.** Peça feita ou ajustada por um ferreiro para um dono, com o nome gravado:
 - **para o dono**, pede 10 a menos por grau do ferreiro (graus 1 a 4) e assenta (+1 no acerto ou na Defesa; a armadura protege um décimo a mais);
 - **na mão de outro**, rende uma categoria abaixo.
+- **O dono é uma pessoa, não um nome:** a peça ajustada no mundo guarda quem é o dono. Na mão de outra pessoa de mesmo nome, é peça de outro.
 
 2.9 **Sintonia.** A pessoa sustenta **Vontade ÷ 20** peças Épicas ou melhores (no mínimo uma), as melhores primeiro. Cada peça que passa disso **dorme**: rende uma categoria abaixo e os efeitos dela não valem (nem o "leve", nem o "não quebra"). Vontade 55 sustenta duas: quem quer o conjunto inteiro treina a Vontade.
 
@@ -225,7 +226,7 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 | metade do seu lado caiu | 26 |
 | o líder caiu ou fugiu | 29 |
 
-Falhou por pouco: fica **abalado** (−2 no acerto). Falhou de novo, ou por 10 ou mais: **quebra**. Quem quebra foge (e leva um golpe livre de quem está colado), ou **se rende** se está muito ferido ou sem saída. Rendido é prisioneiro, com nome.
+Falhou por pouco: **fraqueja**, e segue na luta com o ânimo abalado (−2 no acerto). Falhou de novo, ou por 10 ou mais: **quebra**. Quem quebra foge (e leva um golpe livre de quem está colado), ou **se rende** se está muito ferido ou sem saída. Rendido é prisioneiro, com nome.
 - **Quem fugia e leva, de costas, o golpe que o põe no chão (ou lhe prende a perna) não sai:** segue na luta, onde caiu.
 - **Ninguém se rende a um bicho:** quem quebraria se rendendo foge; sem saída, fica abalado e luta.
 - **Quem ficou com o campo não testa a coragem:** sem inimigo de pé, ninguém foge nem se rende.
@@ -239,18 +240,20 @@ Falhou por pouco: fica **abalado** (−2 no acerto). Falhou de novo, ou por 10 o
 - alguém da casa cai, morre, foge, se rende, ou tem uma peça quebrada;
 - o líder do outro lado cai ou foge, ou alguém de lá se rende;
 - quem o jogador comanda é ferido, passa de metade ou de um quarto do PV, fica sem fôlego, fraqueja, perde o alvo, ou está segurando onde só apanha;
+- quem o jogador mandou tomar fôlego encheu o fôlego (a ordem acabou);
 - passam três rodadas sem novidade.
 
 O jogador então dá a ordem de quem ele comanda, e a ordem do grupo (só o lado dele recebe ordem; nome ou ação que não existe é recusado, com a lista do que vale):
 `atacar [alvo]` (se o alvo está longe, vai até ele, contornando se a linha deixar) · `segurar` (não anda; bate em quem chega) · `avancar` · `recuar` (mantém distância) · `folego` · `guardar NOME`, e no fim a postura.
 A ordem do grupo é uma palavra: `atacar`, `segurar` ou `recuar`.
+**A ordem `folego` acaba quando o fôlego enche:** daí em diante a pessoa segura (bate em quem chega), e a luta para e pergunta. Ninguém fica tomando fôlego de fôlego cheio enquanto o inimigo chega.
 
 ---
 
 ## 4. O banco de provas
 
 Toda mudança de regra ou de número roda `python3 provas.py`. Meta que falha: a mudança não entra, ou a meta muda com a palavra do jogador.
-A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **77 de 77 passam:** as 51 metas deste capítulo e as 26 dos bichos (6.14).
+A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **79 de 79 passam:** as 53 metas deste capítulo e as 26 dos bichos (6.14).
 
 ### Quem vence
 
@@ -314,6 +317,8 @@ Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas 
 | moral | seis contra um muito mais forte: alguém foge ou se rende em 42% das lutas; quem o jogador comanda, nunca |
 | cerco e contorno | dez contra um: 4 batem por rodada; sete contra uma linha de um: os que sobram chegam em quem está atrás em 100% |
 | para e pergunta | para antes da 1ª rodada; cumpre a ordem; em 95% das lutas houve parada no meio da rodada |
+| a ordem de fôlego | 60 lutas com a ordem dada de fôlego cheio e o inimigo longe: nenhuma ação gasta tomando fôlego à toa; a luta parou e avisou nas 60 |
+| o registro na ordem | 120 lutas de um lanceiro contra dois de adaga, 95 golpes de "o alcance bate primeiro": em nenhuma a linha do passo veio depois do golpe (ninguém avança, no registro, depois de cair ou de morrer) |
 | retirada | com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta em 100% |
 | cenário conferido | nome repetido e tempo que não existe: recusado antes de qualquer dado |
 
@@ -321,7 +326,7 @@ Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas 
 
 ## 5. O mundo: o tempo, o corpo, o estado e o turno (etapa 1)
 
-Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_mundo.py` (as 12 da etapa 1 e as 6 que a etapa 2 pôs no alicerce: 18 de 18).
+Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_mundo.py` (as 12 da etapa 1 e as 12 que a etapa 2 pôs no alicerce: 24 de 24).
 
 5.1 **O tempo.** O dia tem 6 blocos de 4 horas: madrugada, alvorada, manhã, tarde, entardecer, noite. Semana de 7 dias, estação de 91, ano de 364. Todo ato custa blocos. A madrugada e a noite são escuras: a luta ao ar livre ganha "escuro" sozinha.
 
@@ -338,6 +343,8 @@ Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_m
 5.3 **Curar.** Cada bloco dormido sem fome (abaixo de 4) devolve 5% do PV máximo, em no máximo dois blocos por dia: um décimo por noite. A ferida sara com **7 dias de repouso**; a grave, com **21**. Dia com dois blocos pesados não conta como repouso. Estar ferido custa: quem não trabalha não ganha.
 
 5.4 **Viver.** Refeição 1 de prata; cama 2 por noite. O diarista ganha 2 por bloco. Uma refeição por dia segura a fome.
+- **A cama é por noite, não por deitada.** A cama paga vale 6 blocos (um dia inteiro) a contar do bloco em que se pagou, no lugar onde se pagou. Dormir de novo nesse prazo não cobra. Passado o prazo, ou em outro lugar, paga-se outra. O sono que atravessa o prazo paga a noite seguinte; sem prata para ela, a pessoa acorda ali. A `MESA.md` diz até quando a cama está paga.
+- **Quem não tem fome não come:** com a fome em zero a refeição é recusada, e nada é cobrado.
 - **A jornada são 2 blocos pagos por dia.** O lugar não paga mais que isso a ninguém: o terceiro bloco é recusado. O `ato.py trabalhar` e o jornal da oficina (7.12) contam juntos. Sobra 1 de prata por dia ao diarista.
 - **O lugar paga com a prata dele** (8.6). Sem prata, não há serviço pago, e o comando diz isso.
 - **Quem carrega comida come da própria carga,** sem pagar: 1 de comida, fome −3 (`ato.py comer carga`).
@@ -348,6 +355,8 @@ Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_m
 | aprendiz | 3 | 6 |
 | oficial | 6 | 12 |
 | mestre | 10 | 20 |
+
+**O grau de ofício** é o posto da pessoa no lugar. Decide o salário do `ato.py trabalhar` e o esforço do bloco (pesado para o diarista e o aprendiz; leve para o oficial e o mestre). Não sobe sozinho: é o Mestre que o dá em cena, por evento (`estado.py mestre '[["pessoa","eu","grau_oficio","poe","oficial"]]' "o que houve"`). Na bancada, o jornal paga pelo que a mão vale, e nunca menos que o posto (7.12).
 
 5.5 **Treinar.** Bloco de treino é pesado. A maestria numa arma sobe aos 40 blocos (Iniciante), 160 (Treinado), 500 (Mestre) e 1.500 (Lendário). De Mestre para cima, os blocos não bastam: é preciso um **feito** com a arma, que o mundo registra.
 
@@ -362,16 +371,22 @@ Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_m
 5.8 **O dado de quem está em cena** (`teste.py`): 2d20 + bônus do atributo + a pena do corpo, contra um número. O comando declara e rola no mesmo passo, uma vez, e o resultado fica escrito no turno. A rolagem oculta aparece na mesa só como "rolagem oculta"; a verdade vai para a parte do Mestre.
 
 5.9 **A luta dentro do mundo** (`ato.py luta`). Quem tem ficha no mundo entra com o que veste hoje, o PV, as feridas e a pena do corpo. Acabada, a luta volta ao estado num evento só: PV, feridas novas, mortes, o cansaço e a durabilidade das peças. O save guarda o caminho do arquivo da luta relativo à pasta dele: a pasta pode mudar de lugar.
+- **O arquivo da luta fica dentro do save.** No `ato.py luta nova CENARIO.json LUTA.json`, o segundo nome dito sem pasta fica na pasta do save, em `lutas/` (criada se faltar), como as lutas da caça. Dito com pasta, fica onde se disse: se a pasta não existe, a recusa é uma frase; se fica fora do save, o comando avisa que a luta não vai junto se o save mudar de lugar. O `luta roda` e o `luta larga` acham a luta só pelo nome.
+- **Com uma luta aberta, o mundo não anda.** Até ela acabar, nenhum ato que mexe no mundo é aceito, de ninguém: nem dormir, nem comer, nem trabalhar, nem negociar, nem forjar, nem sair para caçar, nem abrir outra luta. O relógio fica parado.
+- **Valem só a própria luta e a mão do Mestre:** `ato.py luta roda` (na caça, `caca.py luta`, com as contas no fim) e `estado.py mestre`. O dado de cena (`teste.py`) e as perguntas e notas do turno também valem: não mexem no mundo.
+- **A recusa diz como sair:** como seguir a luta, e como o Mestre a solta se o arquivo se perdeu ou a cena mudou (`ato.py luta larga`; na caça, `caca.py larga`). A `MESA.md` abre com o aviso.
 
 5.10 **O turno em dois comandos.**
 - `turno.py abre` só lê e gera a `MESA.md`: você, o lugar, o que dá para fazer e o que custa, as perguntas abertas, e o SÓ O MESTRE.
-- `turno.py responde "1a.2b"` confere cada código contra as perguntas abertas. Código que não bate é recusado, e nada é marcado.
+- `turno.py responde "1a.2b"` confere cada código contra as perguntas abertas. Código que não bate é recusado, e nada é marcado. **Cada pergunta guarda o número com que foi aberta até o turno fechar:** responder a 1 não faz da 2 a nova 1. A pergunta já respondida recusa segunda resposta. A pergunta aberta no meio do turno ganha o número seguinte. No fechar, as que ficam são numeradas de novo, de 1 em diante: é com esse número que o `RETOMAR.md` as mostra.
 - `turno.py fecha "o que houve"` **recusa** se: há luta aberta · há menos de 2 perguntas abertas · o relógio não andou (a não ser que se diga `parado`) · o estado quebrou um invariante. Passando, gera o `RETOMAR.md` (o agora, o que houve, os fatos do registro, a saída de caça que ficou aberta, as perguntas, o que só o Mestre sabe) e a `MESA.md` nova. Com `git`, guarda e envia, e avisa se o envio falhou.
+- **O `RETOMAR.md` nunca corta calado.** O que se repete todo dia (comer, dormir, a cama, descansar, esperar) vira uma linha por dia. O mesmo fato repetido no dia vira uma linha, com a conta. O mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz) e o mundo nascendo não são fato do turno; a morte de alguém sempre é. Se ainda assim os fatos passam de 40 linhas, ficam as mais novas, e a primeira diz quantas ficaram de fora e como lê-las (`estado.py eventos N`). O evento gravado sem texto entra assim mesmo, com o número e o tipo dele. E o `estado.py mestre` recusa o texto vazio: o que o Mestre decide em cena vai para o registro com o que houve.
 
 5.11 **A morte.** Todo mundo morre de vez. A regra é uma só, para a fome, a luta e a mão do Mestre: **o morto não fica com nada.**
-- As peças dele (as vestidas, as guardadas e os núcleos) caem **soltas** onde ele morreu, com a história escrita.
+- As peças dele (as vestidas, as guardadas e os núcleos) caem **soltas** onde ele morreu, com a história escrita e a marca de quem eram (`corpo`).
 - As obras dele se desfazem: a matéria se perde; o núcleo cai com o resto.
-- A carga e a prata ficam no estoque do lugar onde ele morreu. Num lugar com povo, o povo fica com elas. No ermo, ficam no chão, de quem achar (9.10).
+- A carga e a prata ficam no estoque do lugar onde ele morreu. Num lugar com povo, o povo fica com elas. No ermo, ficam no chão, junto do corpo.
+- **O que era de um morto não muda de mão sozinho.** Na vila ou no ermo, quem fica com as peças, a carga e a prata é decisão de cena: o Mestre registra por evento (`itens.py dono ITEM PESSOA`, `estado.py mestre`). No ermo, quem passa num rastro acha o corpo e lê o que ficou com ele (9.10), e mais nada. A família, o guarda e a herança são da etapa 6.
 - **Morto não age:** todo ato dele é recusado antes de cobrar qualquer coisa. A `MESA.md` e o `RETOMAR.md` abrem dizendo quando e onde ele morreu, sem a lista de atos. O turno fecha. O herdeiro é da etapa 6.
 
 5.12 **Fora.** Quem saiu para o ermo (9.2) está lá, não no lugar onde mora, até voltar. Os atos da vila (dormir na pousada, trabalhar, treinar, comprar, vender, forjar, consertar) são recusados, para quem comanda a saída e para quem foi junto. No ermo come-se da própria carga.
@@ -554,7 +569,7 @@ No registro da luta, o golpe que cai nos braços ou nas pernas de um bicho é di
 
 Em B4, o conjunto Épico é o de gente gerada: no nível 60 a Vontade sustenta duas peças Épicas (2.9), e a armadura dorme. Com Vontade 80, os quatro vencem a serpe em 100%.
 **A régua** (`bichos.py mede ESPECIE NIVEL CATEGORIA`) mede qualquer encontro em lutas de ensaio, sem guardar nada. O que ela mostra: na mesma categoria, o bicho sozinho de grau D ou C é moeda no ar, e o bando mata; com o conjunto uma categoria acima, o homem vence quase sempre; do grau B para cima, um homem só não basta.
-**O teste de estresse** (`python3 estresse.py 1500`): 1.500 lutas ao acaso, 735 com bichos misturados, nenhum erro e nenhum invariante quebrado.
+**O teste de estresse** (`python3 estresse.py 1500`): 1.500 lutas ao acaso, 712 com bichos misturados, nenhum erro e nenhum invariante quebrado.
 
 ---
 
@@ -678,27 +693,27 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 **Como ler:** cada grau de maestria vale 2 pontos; a oficina, até 4; o preparo, até 8. O dado pesa mais que tudo isso. Do Épico para cima, mesmo o melhor ferreiro perde núcleos: é para doer.
 
-7.13 **Medido** (`python3 provas_oficio.py`; 15 de 15 na rodada guardada, e 14 de 15 nas outras seis: a da Lendária não é firme). O robô ferreiro vive de verdade: dorme na cama e paga, come e paga, vive do jornal, faz 3,5 blocos de bancada por dia. Sobe um degrau de cada vez, e só abre a obra quando tem a mão que ela pede.
+7.13 **Medido** (`python3 provas_oficio.py`, em 21 rodadas: treze da medida, cinco da conferência e três do acerto; em todas, 14 de 15: a da Lendária não bate). O dado é o de verdade, e a medida muda de uma rodada para outra: por isso a tabela diz o centro do que se viu ("cerca de") e a faixa vista. **Uma rodada nova pode sair um pouco fora da faixa vista; o que não pode é sair da meta.** O robô ferreiro vive de verdade: dorme na cama e paga uma noite por dia, come e paga, vive do jornal, faz 3,5 blocos de bancada por dia. Sobe um degrau de cada vez, e só abre a obra quando tem a mão que ela pede.
 **Com que a escada vale:** na forja mestra (+4), com os quatro preparos (+8) desde o Dia 1, e com matéria e núcleo novos a cada obra.
 
 | A primeira peça | Meta (o dia) | Medido (o dia em que metade das vidas já a tinha) | A primeira obra fecha | Núcleos por vida | Com um núcleo só, nasce em |
 | --- | --- | --- | --- | --- | --- |
-| Rara | 15 a 30 | Dia 17 | Dia 17 | (1,7 levas de matéria) | |
-| Épica | 45 a 80 | Dia 59 (nas sete rodadas: 51 a 59) | Dia 51 | 3,1 (a pior vida: 10) | 40% das vidas |
-| Única | 130 a 200 | Dia 177 (nas sete rodadas: 154 a 200) | Dia 131 | 3,5 (a pior vida: 9) | 26% das vidas |
-| Lendária | 300 a 450 | **NÃO É FIRME:** Dia 428 nesta rodada (nasceu em 16 de 30 vidas); nas outras seis, em 13, 11, 7, 5, 5 e 8 de 30, e a prova falhou | Dia 356 | 2,0 | 27% das vidas (a conta exata: 15%) |
+| Rara | 15 a 30 | Dia 17 (em duas das 21 rodadas, Dia 20) | Dia 17 | (cerca de 1,7 leva de matéria, visto de 1,6 a 1,9; a pior vida, de 4 a 9) | |
+| Épica | 45 a 80 | Dia 59 (numa das 21 rodadas, Dia 51) | Dia 51 | cerca de 2,5 (visto de 1,9 a 3,2; a pior vida: de 6 a 14) | cerca de um terço das vidas (visto de 20 a 52%) |
+| Única | 130 a 200 | Dia 177 em treze das 21 rodadas; Dia 154 em cinco; Dia 189 numa; Dia 200 em duas, em cima do limite | Dia 131 | cerca de 3,5 (visto de 2,7 a 4,2; a pior vida: de 7 a 14) | cerca de um quarto das vidas (visto de 10 a 46%) |
+| Lendária | 300 a 450 | **NÃO BATE:** nasceu em 3 a 12 de 30 vidas (a prova pede 15) e falhou nas 21 rodadas | Dia 356 | cerca de 2,5 (visto de 2,2 a 2,8) | cerca de 12% das vidas (visto de 0 a 24%; a conta exata: 15%) |
 
 | O que mais se mede | Meta | Medido |
 | --- | --- | --- |
-| o melhor ferreiro possível (Lendário, oficina 4, preparo 8, Afinidade 100) acerta a Lendária | 15 a 30% | 25,7% (a conta exata) |
-| um Iniciante em oficina de vila acerta a Comum, com os quatro preparos do Comum | 85% ou mais | 86,2% (sem preparo nenhum: 57,2%) |
-| o mesmo acerta a Rara | menos de 25% | 15,4% |
+| o melhor ferreiro possível (Lendário, oficina 4, preparo 8, Afinidade 100) acerta a Lendária | 15 a 30% | 25,7% (a conta exata; medido em 600 obras, de 24,3 a 29,7%) |
+| um Iniciante em oficina de vila acerta a Comum, com os quatro preparos do Comum | 85% ou mais | 86,2% (a conta exata; medido, de 83,5 a 87,7%; sem preparo nenhum: 57,2%) |
+| o mesmo acerta a Rara | menos de 25% | 15,4% (a conta exata; medido, de 12,2 a 18,0%) |
 | a matéria da obra falhada some do mundo; o núcleo perdido sai do Livro | sempre | 60 obras Épicas, nenhuma conta errada |
 | a obra de vários dias sobrevive a gravar e abrir o estado; o ato para quando o corpo pede | sim | sim |
 | consertar 10 pontos de uma peça Rara, pago | 216 de prata, para a oficina | 216 |
 | a peça ajustada rende no dono, e uma categoria abaixo na mão de outro | sim | sim |
 
-**A Lendária não bate de forma firme, e não é afinação:** as duas metas não cabem juntas. O robô acerta a Lendária 1 vez em 6 ou 7 (o melhor ferreiro possível, 1 em 4), e cada obra são 243 blocos (70 dias): cabem duas até o Dia 450, e a metade das vidas quase nunca chega à peça. A prova passa quando o dado ajuda (uma rodada em sete). Na outra leitura (o dia em que a primeira obra de cada categoria **fecha**), as quatro batem: dias 17, 51, 131 e 356. Qual das duas é a meta, decide o jogador.
+**A Lendária não bate, e não é afinação:** as duas metas não cabem juntas. O robô acerta a Lendária 1 vez em 6 ou 7 (o melhor ferreiro possível, 1 em 4), e cada obra são 243 blocos (70 dias): cabem duas até o Dia 450, e a metade das vidas quase nunca chega à peça. Nas 21 rodadas desta medida a prova não passou nenhuma vez. Na outra leitura (o dia em que a primeira obra de cada categoria **fecha**), as quatro batem: dias 17, 51, 131 e 356. Qual das duas é a meta, decide o jogador.
 **A escada só anda assim com núcleo à vontade.** O mundo dá 6 núcleos Épicos e 2 Únicos por ano (`PROJETO.md`). Na forja de cidade, sem preparo, a primeira Épica sai perto do Dia 100.
 
 ---
@@ -804,7 +819,7 @@ Por isso **o preço anda sozinho:** o que foi comprado a mais volta em cerca de 
 | depois da colheita (o fim do outono: o piso) | × 0,66 |
 | o fim do inverno | × 1,14 |
 
-**O pico do ano é o fim da primavera, não o fim do inverno:** a colheita da primavera é meia e o celeiro segue caindo até o verão. No verão, com a comida cara, o povo produz mais, e o preço cede.
+**A comida é mais cara na entressafra, do fim do inverno ao fim da primavera, e mais barata depois da colheita.** O pico do ano é o fim da primavera, não o fim do inverno: a colheita da primavera é meia e o celeiro segue caindo até o verão. No verão, com a comida cara, o povo produz mais, e o preço cede.
 **O celeiro se acerta sozinho.** O lugar que colhe 10% a menos do que come não desanda: acha outro ciclo, mais caro (de × 0,70 a × 2,18). O que colhe 10% a mais, um mais barato (× 0,63 a × 1,42).
 Com 20% a menos a comida bate no teto toda entressafra (medido em rascunho): é fome, e é assunto das frentes.
 
@@ -821,7 +836,7 @@ o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inver
 | comprar sobe o preço e vender desce; comprar e vender de volta perde | 20% ou mais | 600 idas e voltas: a menor perda, 45,5% (Leigo) e 27,3% (Lendário) |
 | a prata do mundo antes e depois de 200 negócios ao acaso | a mesma | 12.200 e 12.200 |
 | o preço nunca sai da faixa; a loja sem prata recusa a compra | 0,4 a 3 bases | 22 bens, 308 estoques: nenhum fora; recusa |
-| um ano de viradas numa vila de 400: a comida | 0,6 a 2,2 bases | de × 0,66 (depois da colheita) a × 1,73 (a entressafra) |
+| um ano de viradas numa vila de 400: a comida, mais cara na entressafra (do fim do inverno ao fim da primavera) e mais barata depois da colheita | 0,6 a 2,2 bases | de × 0,66 (depois da colheita) a × 1,73 (o fim da primavera); no fim do inverno, × 1,14 |
 | o diarista vive: o salário de um dia paga a cama e a comida | sobra de 0 a 2 | sobra de 0 a 0,86; 1,00 comendo na taverna |
 | peça gasta vale menos que nova; quebrada vale sucata | sim | a espada Rara: 1.080, 756 e 108 |
 | a armadura vale pelo que cobre (placa Incomum) | a proporção | o corpo 180; só o tronco 90; o elmo 45 |
@@ -844,14 +859,14 @@ Caça-se e coleta-se no ermo **vizinho** do lugar onde a pessoa mora (`lugar.viz
 | menos de 10% | quase sumiu |
 | nada | sumiu |
 
-Da espécie de que cabem até 3 no ermo, o povo diz só "há pouco, e sempre foi assim". Dos chefes ninguém sabe de graça: acha-se no rastro.
+**Com o teto pequeno, "há fartura" enganaria, e a palavra é outra.** Da espécie de que cabem até 3 no ermo, o povo diz só "há pouco, e sempre foi assim". Da matéria de que cabem até 10 unidades, "é coisa pouca, e sempre foi assim". Dos chefes ninguém sabe de graça: acha-se no rastro.
 
 9.2 **A saída** é um ato só: a ida, os blocos de procura (ou de coleta) e a volta. A pessoa segue morando no lugar dela.
-- A ida custa 1 bloco (o ermo pode dizer outro número em `longe`); a volta, o mesmo. A procura vai de 1 a 6 blocos; sem dizer, 2.
+- A ida custa 1 bloco (o ermo pode dizer outro número em `longe`); a volta, o mesmo. A procura vai de 1 a 6 blocos; sem dizer, 2. A coleta vai de 1 a 4: com a ida e a volta ao ermo vizinho, é um dia inteiro.
 - A ida, a volta e a procura são blocos **leves**; a coleta é bloco **pesado**. Cada luta cansa 2 (5.2).
 - A saída aberta fica escrita na pessoa (`marca.caca`) até a volta: sobrevive a fechar e abrir o estado, e a `MESA.md` a mostra. Por isso a escolha diante do bicho pode ser uma pergunta do turno.
 - A procura **para** quando aparece alguma coisa e quando o corpo cruza um limiar (5.6). Acabados os blocos, a volta sai sozinha.
-- **Quem vai junto** (`com=`) é gente do mundo que está no mesmo lugar: entra na luta ao lado do caçador, fica marcado na saída de quem comanda, e o corpo dele passa os mesmos blocos, com o mesmo esforço. Quem decide é quem comanda.
+- **Quem vai junto** (`com=`) é gente do mundo que está no mesmo lugar: entra na luta ao lado do caçador, fica marcado na saída de quem comanda, e o corpo dele passa os mesmos blocos, com o mesmo esforço. Quem decide é quem comanda. **Quem vai junto tem parte no despojo** (9.10): não é mão de graça.
 - **Com a saída aberta, a pessoa está fora** (5.12): os atos da vila são recusados, para ela e para quem foi junto. No ermo come-se da própria carga.
 - **Quem cai no sono no ermo dorme ali** (5.2), e a procura para. Bicho não acha quem dorme no mato: essa regra ainda não existe.
 
@@ -868,6 +883,10 @@ Da espécie de que cabem até 3 no ermo, o povo diz só "há pouco, e sempre foi
 Sem alvo ("o que aparecer"), o número é a base mais o que falta do ermo inteiro, e a espécie sai da sorte do mundo, com o peso da contagem de cada uma.
 
 9.4 **O que aparece sai da contagem real:** um bicho, um bando, ou nada. O bando é o da espécie (6.9), **nunca maior do que a contagem**. Com a espécie a zero, quem passa no teste acha um rastro velho e mais nada.
+**O alvo que não vive ali.** Do bicho que não é chefe, todo mundo sabe o que cada ermo tem. Sair atrás de uma espécie que aquele ermo nunca teve é **recusado antes de gastar um bloco**, e o comando diz o que vive lá.
+Do chefe ninguém sabe de graça, e por isso a saída segue. Se a espécie não é bicho daquele tipo de ermo (a serpe é de serra e de ruína, não de floresta), a saída abre com um **aviso**. O aviso sai só do tipo do ermo: é o mesmo, haja ou não um chefe ali.
+**Atrás de chefe, a rolagem do rastro é oculta.** O número do rastro muda com a contagem (9.3): com a serpe ali é um, sem ela é outro, e quem lesse o número saberia se há chefe. À mesa sai só "rolagem oculta"; o número e os dados ficam no SÓ O MESTRE da `MESA.md` e do `RETOMAR.md`. O que o caçador vê é o que o rastro lhe deu: o bicho, ou nada.
+Quem passa no rastro atrás de um chefe que nunca viveu ali lê "nenhum sinal", e não "o rastro é velho".
 
 9.5 **O acaso.** No bloco em que o rastro **falha** (e em todo bloco de coleta), pode aparecer o que não se procurava. A chance, por bloco, é a soma de contagem × ousadia de todas as espécies do ermo, dividida por 1.500 (nunca mais que metade). **Esse bicho viu o caçador.**
 
@@ -918,12 +937,14 @@ Na borda da floresta, com tudo no teto, o acaso é de 3% por bloco de rastro fal
 
 9.10 **As contas da luta** entram num evento só (`despojo`):
 - **bicho morto sai da contagem.** O caído é rematado por quem ficou com o campo; se a casa não ficou com o campo, o caído que não morreu segue vivo. **O que fugiu segue no ermo.**
-- **se a casa ficou com o campo, o despojo de cada carcaça entra na carga** de quem comanda a saída (ou do companheiro vivo, se ele morreu): de cada bem, da metade ao inteiro da tabela da espécie (6.11, `bichos.despojo`);
-- **o núcleo do chefe entra no Livro de Itens** (2.1) no mesmo evento: `de` é a espécie; o dono é quem ficou com o campo (e `onde` fica vazio: peça com dono não está largada); a história diz o dia, o bicho e o ermo;
+- **se a casa ficou com o campo, o despojo de cada carcaça entra na carga:** de cada bem, da metade ao inteiro da tabela da espécie (6.11, `bichos.despojo`);
+- **o despojo é de quem lutou até o fim.** Reparte-se em partes iguais entre os da casa que acabaram a luta **de pé no campo, ou caídos nele e vivos**. O que sobra da divisão vai, uma unidade a cada um, em roda, a começar por quem comanda. **Quem saiu da luta antes do fim** (recuou para fora dela, 3.15; fugiu; rendeu-se) **não leva nada**, nem que seja quem comanda a saída. Sozinho, o caçador que ficou com o campo leva tudo, como sempre;
+- **o núcleo do chefe entra no Livro de Itens** (2.1) no mesmo evento: `de` é a espécie; o dono é quem comanda a saída, se lutou até o fim, ou o primeiro dos que ficaram (e `onde` fica vazio: peça com dono não está largada); a história diz o dia, o bicho e o ermo. O abate e o feito (9.14) vão para o mesmo;
 - **quem perde o campo deixa a carcaça no mato:** nada entra em carga nenhuma. O núcleo do chefe que morreu assim nasce no ermo: sem dono, solto, com `onde` no ermo;
 - **quem perdeu e vive volta na hora.** O que foi deixado por morto (caiu e não morreu, 3.13) volta arrastando-se: 1 bloco a mais. Quem ficou com o campo pode seguir a procura;
 - **quem morre no ermo fica lá com tudo o que era dele** (5.11): as peças, as guardadas e os núcleos também, ficam soltas no ermo; a carga e a prata, no chão;
-- **quem passa num rastro naquele ermo acha o que está solto** (o núcleo da carcaça velha, as peças junto do corpo) **e o que está no chão** (a carga e a prata do morto): passa a ser dele. **Só o que está solto:** se o lugar tem loja, a prateleira não é achado.
+- **quem passa num rastro naquele ermo acha o que está solto:** o núcleo da carcaça que ninguém abriu e a peça largada passam a ser dele. **Só o que está solto:** se o lugar tem loja, a prateleira não é achado;
+- **o que era de um morto não muda de mão sozinho** (5.11). Quem passa num rastro **acha o corpo** e lê o que ficou com ele (as peças, a carga, a prata), uma vez por saída, e não fica com nada. Quem fica com o quê é decisão de cena, e o Mestre registra por evento. Levar gente para morrer e voltar para apanhar o que era dela não é renda: é uma cena, com quem cobra.
 
 9.11 **A presa ferida.** O bicho que foge **com ferida aberta** deixa sangue. Quem ficou com o campo pode segui-lo **na hora, sem gastar bloco**:
 - o teste é o do rastro da espécie, **6 mais fácil**; e **3 mais difícil** a cada perseguição já feita naquele bloco (a presa ganha distância);
@@ -931,7 +952,8 @@ Na borda da floresta, com tudo no teto, o acaso é de 3% por bloco de rastro fal
 - falhou, seguiu a procura, ou voltou: perdeu-o. O bicho segue na contagem, e na próxima vez é um bicho inteiro;
 - **é agora ou nunca:** se o relógio andou, o sangue esfriou.
 
-9.12 **A coleta** (minério, madeira, erva) é uma saída como a da caça, com blocos pesados. Um teste por bloco: **2d20 + atributo ÷ 10 + maestria de coleta** contra **20 + 4 por categoria da matéria + 8 × o que falta dela** (1 − o que há ÷ teto).
+9.12 **A coleta** (minério, madeira, erva) é uma saída como a da caça, com blocos pesados. Um teste por bloco: **2d20 + atributo ÷ 10 + maestria de coleta**, com a pena do corpo, contra **20 + 8 por categoria da matéria + 8 × o que falta dela** (1 − o que há ÷ teto).
+Com o veio cheio: Comum 20, Incomum 28, Rara 36.
 
 | Matéria | Atributo | O bloco que passa rende | Volta por dia (do teto) |
 | --- | --- | --- | --- |
@@ -939,8 +961,28 @@ Na borda da floresta, com tudo no teto, o acaso é de 3% por bloco de rastro fal
 | madeira (`madeira:N`) | Força | 2 | 2% |
 | erva (`erva:N`) | Percepção | 1 | 4% |
 
-Passar por 5 rende 1 a mais (e mais 1 a cada 5). Falhar por menos de 5 ainda rende 1; por 5 ou mais, nada. **Nunca se tira mais do que há:** o que acabou, acabou. O que se tira sai do `coleta` do ermo e entra na carga **no mesmo evento**.
-Em todo bloco de coleta o acaso rola (9.5): quem corta lenha não está olhando o mato.
+- **O bloco que passa rende o da tabela, e só isso.** Passar por muito não rende mais. **O bloco que falha não rende nada.**
+- **A matéria pede mão.** É tranca, não conselho: sem a mão, o comando recusa antes de gastar a saída, e diz a mão que a matéria pede, quantos blocos de coleta a pessoa tem e quantos faltam.
+
+| Matéria | A mão que pede (a maestria de coleta) |
+| --- | --- |
+| Comum | Leigo: qualquer um tira |
+| Incomum | Iniciante (40 blocos de coleta) |
+| Rara | Treinado (160 blocos) |
+
+- **A borda só dá matéria Comum.** A Incomum e a Rara só há do interior para cima (9.15).
+- **Nunca se tira mais do que há:** o que acabou, acabou. O que se tira sai do `coleta` do ermo e entra na carga **no mesmo evento**.
+- Em todo bloco de coleta o acaso rola (9.5): quem corta lenha não está olhando o mato.
+
+Quanto se acerta, com o veio cheio (a conta exata do dado):
+
+| Quem | Comum | Incomum | Rara |
+| --- | --- | --- | --- |
+| Leigo, Força 56 (o homem de começo) | 77% | não tira | não tira |
+| Iniciante, Força 56 | 83,5% | 52,5% | não tira |
+| Treinado, Força 56 | 89% | 62% | 29% |
+| Treinado, atributo 90 | 96% | 77% | 44% |
+| Mestre, atributo 90 | 98,5% | 83,5% | 52,5% |
 
 9.13 **A virada do dia** (`caca.virada`), em todo lugar com teto:
 - **os bichos criam devagar:** de cada espécie nascem, por dia, contagem × cria × (1 − contagem ÷ teto). A cria é 4% (Comum), 2,5% (Incomum), 1% (Raro para cima). Nunca passa do teto;
@@ -950,7 +992,7 @@ Em todo bloco de coleta o acaso rola (9.5): quem corta lenha não está olhando 
 
 A parte quebrada de cada conta vira a chance de mais um, pela sorte do mundo: mesma semente, mesmo ermo.
 
-9.14 **A maestria de caça e a de coleta** (`maestria.caça`, `maestria.coleta`) sobem por blocos, como a das armas (5.5): 40 blocos de procura (ou de coleta) fazem um Iniciante; 160, um Treinado; 500, um Mestre; 1.500, um Lendário. A de caça soma no rastro; a de coleta, no teste da coleta.
+9.14 **A maestria de caça e a de coleta** (`maestria.caça`, `maestria.coleta`) sobem por blocos, como a das armas (5.5): 40 blocos de procura (ou de coleta) fazem um Iniciante; 160, um Treinado; 500, um Mestre; 1.500, um Lendário. A de caça soma no rastro; a de coleta soma no teste da coleta e é a mão que a matéria pede (9.12).
 De Mestre para cima os blocos não bastam: pede o **feito**. Na caça, ficar com a carcaça de um bicho Raro (para Lendário, Épico). Na coleta, ter tirado matéria Rara com a própria mão.
 
 9.15 **Povoar um ermo** (`caca.povoa`, o gerador ou o Mestre): o habitat e o perigo (1, a borda; 2, o interior; 3, o coração) dão as espécies que vivem ali, cada uma no teto, e a matéria.
@@ -964,33 +1006,63 @@ De Mestre para cima os blocos não bastam: pede o **feito**. Na caça, ficar com
 | caverna | ratazana 90, urso 3 | aranha 6, trasgo 2 | basilisco 1 |
 | ruína | ratazana 90, surucucu 8 | aranha 6, trasgo 2 | basilisco 1, serpe 1, hidra 1, dragão 1 |
 
-| Habitat | A matéria (o teto) |
-| --- | --- |
-| floresta | madeira Comum 200, erva Comum 60, madeira Incomum 20, erva Incomum 10; no interior, madeira Rara 4 e erva Rara 3 |
-| campo | erva Comum 80, madeira Comum 40, erva Incomum 8 |
-| brejo | erva Comum 90, erva Incomum 20, madeira Comum 60; no interior, erva Rara 5 |
-| serra | minério Comum 150, minério Incomum 20, madeira Comum 60; no interior, minério Raro 5 |
-| caverna | minério Comum 100, minério Incomum 30; no interior, minério Raro 6 |
-| ruína | minério Comum 40, minério Incomum 10, erva Comum 30; no coração, minério Raro 4 |
+| Habitat | A matéria da borda (o teto) | No interior, além disso | No coração, além disso |
+| --- | --- | --- | --- |
+| floresta | madeira Comum 200, erva Comum 60 | madeira Incomum 20, erva Incomum 10, madeira Rara 4, erva Rara 3 | |
+| campo | erva Comum 80, madeira Comum 40 | erva Incomum 8 | |
+| brejo | erva Comum 90, madeira Comum 60 | erva Incomum 20, erva Rara 5 | |
+| serra | minério Comum 150, madeira Comum 60 | minério Incomum 20, minério Raro 5 | |
+| caverna | minério Comum 100 | minério Incomum 30, minério Raro 6 | |
+| ruína | minério Comum 40, erva Comum 30 | minério Incomum 10 | minério Raro 4 |
 
+**A borda só dá matéria Comum.** A Incomum e a Rara só há do interior para cima, onde o bicho também é pior.
 **O bicho raro é contado:** uma floresta inteira tem duas panteras e seis aranhas, e cada uma que morre leva meio ano para voltar.
 
-9.16 **Na mesa.** O `caca.mesa` põe na `MESA.md`: os ermos vizinhos e o que se sabe deles (a fartura, em palavras), a mão de caça e de coleta, a saída aberta e o que falta decidir, o resumo dos bichos dali (`bichos.mesa`, sem os chefes), e uma linha marcada **SÓ O MESTRE** com a contagem e a chance do acaso. A saída que ficou aberta no fim do turno vai também para o `RETOMAR.md`.
+9.16 **Na mesa.** O `caca.mesa` põe na `MESA.md`: os ermos vizinhos e o que se sabe deles (a fartura, em palavras, e a mão que cada matéria pede, se o personagem não a tem), a mão de caça e de coleta, a conta do rastro e a da coleta, a saída aberta e o que falta decidir, e o resumo dos bichos dali (`bichos.mesa`, sem os chefes). **A contagem não sai na parte pública:** o `caca.so_mestre` a põe na seção SÓ O MESTRE da página, com os chefes, a chance do acaso e o que os mortos deixaram no ermo. A saída que ficou aberta no fim do turno vai também para o `RETOMAR.md`.
 
-9.17 **Medido** (`python3 provas_caca.py`; 22 de 22). O dado é o de verdade: as medidas mudam um pouco de uma rodada para outra.
+9.17 **Medido** (`python3 provas_caca.py`; 30 de 30). O dado é o de verdade: as medidas mudam de uma rodada para outra. A coluna "Medido" diz o centro do que se viu ("cerca de") e, entre parênteses, a faixa vista em 23 rodadas do banco (15 da medida, 5 da conferência, 3 do acerto). **Uma rodada nova pode sair um pouco fora da faixa vista; o que não pode é sair da meta.**
 O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e elmo de malha, tudo Comum, no ermo de começo (a borda da floresta). Vive de verdade: dorme na cama e paga, come e paga, vende o despojo na loja (a 60%) e manda consertar o que veste. Procura corça, e a encurrala sempre que o rastro lhe dá o cerco.
 
-| O que se mede | Meta | Medido |
+| O que se mede | Meta | Medido (75 vidas de 30 dias por rodada) |
 | --- | --- | --- |
-| o caçador tira por dia, com o despojo ao preço de base | 1,5 a 4 diárias (a diária: 4 de prata) | 2,02 diárias (75 vidas de 30 dias; nas rodadas, de 1,98 a 2,07) |
-| o mesmo robô sai ferido ou morto | em 2 a 12% das saídas | em 4,7% (nas rodadas, de 4,2 a 4,9%); morreram 15 de 75 em 30 dias |
-| o mesmo robô, afoito, morre em 30 dias | em 70% das sementes, ou mais | em 100%; a metade até o Dia 2 |
-| caçar 60 corças derruba a contagem, e o rastro fica mais difícil | sim | de 80 para 36, 41 e 43; o rastro, de 20 para 26 e 27 |
-| e a espécie volta a nove décimos do teto (medido do teto menos os 60) | em 30 a 120 dias | em 86 a 96 dias; de onde o caçador a deixou, em 49 a 62 |
-| nenhuma contagem negativa; o núcleo do chefe no Livro, com `de` e `onde` | sim | 150 vidas, nenhuma; sim |
-| o que sai do ermo é o que entra na carga | em toda vida | 150 vidas, 2.084 bichos, nenhuma conta aberta |
+| o caçador tira por dia, com o despojo ao preço de base | 1,5 a 4 diárias (a diária: 4 de prata) | cerca de 2,1 diárias (visto de 1,95 a 2,19) |
+| o mesmo robô sai ferido ou morto | em 2 a 12% das saídas | em cerca de 4,5% (visto de 3,6 a 5,6%); morrem cerca de 17 de 75 em 30 dias (visto de 8 a 24) |
+| o mesmo robô, afoito, morre em 30 dias | em 70% das sementes, ou mais | em 100%, em todas as rodadas; a metade até o Dia 2 |
+| caçar 60 corças derruba a contagem, e o rastro fica mais difícil | sim | de 80 para cerca de 40 (visto de 31 a 46); o rastro, de 20 para 26 (visto de 25 a 27) |
+| e a espécie volta a nove décimos do teto (medido do teto menos os 60) | em 30 a 120 dias | em cerca de 85 dias (visto de 68 a 98); de onde o caçador a deixou, em cerca de 47 (visto de 36 a 63) |
+| nenhuma contagem negativa; o núcleo do chefe no Livro, com `de` e `onde` | sim | 150 vidas por rodada, nenhuma; sim |
+| o que sai do ermo é o que entra na carga | em toda vida | 150 vidas, cerca de 2.100 bichos por rodada, nenhuma conta aberta |
+| **o despojo é de quem lutou até o fim** (prova nova do acerto) | partes iguais entre os que ficaram; quem saiu da luta, nada | três desfechos postos à mão e um caminho com o dado de verdade (quem comanda manda o grupo atacar e recua para fora da luta): a carga dele não muda |
+| **o que era do morto não muda de mão sozinho** (a prova QUEM MORRE NO ERMO, refeita) | quem passa num rastro acha o corpo e não fica com nada | as 6 peças, a carga e os 250 de prata seguem no chão; por um evento do Mestre, passam |
+| **atrás de chefe, a rolagem do rastro é oculta** (a prova O ALVO QUE NÃO VIVE ALI, estendida) | a saída inteira igual, haja ou não um chefe | com o dado preso, o mesmo texto nos três mundos (nunca houve serpe, há uma, houve e morreu); o número (42, 30 e 42) só com o Mestre |
 
-**O que a meta não mede, e a mesa sente.** Na loja, o que o caçador tira vale 4,76 de prata por dia; o conserto leva 0,63; a cama e a comida, 3. **No bolso dos que chegam vivos fica +1,16 por dia** (o diarista fica com +1,00), e um em cada cinco morre no mês. O cauteloso, que só encurrala a corça sozinha e do alto, tira 1,87 diária e fere-se em 1,4% das saídas (abaixo da faixa). A caça de começo paga pouco mais que a diária, e mata: se é isso que se quer, decide o jogador.
+**O que a meta não mede, e a mesa sente.** Na loja, o que o caçador tira vale cerca de 5 de prata por dia (visto de 4,6 a 5,2); o conserto leva perto de 0,7; a cama e a comida, 3. **No bolso dos que chegam vivos fica cerca de +1,2 por dia** (visto de +1,0 a +1,4; o diarista fica com +1,00), e morre, em média, um em cada cinco no mês. O cauteloso, que só encurrala a corça sozinha e do alto, tira cerca de 1,8 diária (visto de 1,7 a 1,9) e fere-se em cerca de 1,7% das saídas (visto de 1,0 a 2,6%: quase sempre abaixo da faixa). A caça de começo paga pouco mais que a diária, e mata: se é isso que se quer, decide o jogador.
+
+**A coleta: as metas K1 a K4.** O robô coletor de começo é o mesmo homem do caçador (nível 10, o mesmo conjunto Comum), Leigo em coleta, com a mesma vida: come, dorme, paga a cama, vende na loja, e sai uma vez por dia, de manhã, por dois blocos de coleta.
+É ganancioso: tira sempre a matéria que mais vale por bloco, das que a mão dele tira (o preço de base vezes o que o bloco rende em média, pela conta exata do dado). Do bicho que aparece, foge; da presa, só sai de perto. Conta-se a matéria que chega em casa: o despojo de uma luta forçada não é coleta.
+
+| O que se mede | Meta | Medido (o centro, e a faixa vista em 23 rodadas) |
+| --- | --- | --- |
+| **K1**, na borda da floresta, em 30 dias: o que ele tira, ao preço de base | 1,0 a 2,0 diárias por dia | cerca de 1,5 (visto de 1,44 a 1,56; 50 vidas por rodada; só madeira Comum) |
+| e sai ferido ou morto | em 0,3 a 4% das saídas | em cerca de 1,4% (visto de 1,0 a 1,8%); morrem cerca de 14 de 50 (visto de 9 a 20) |
+| **K1**, na borda da serra | 1,0 a 2,0 diárias por dia | cerca de 1,34 (visto de 1,31 a 1,36; 150 vidas por rodada; madeira Comum enquanto há, depois minério) |
+| e sai ferido ou morto | em 0,3 a 4% das saídas | em cerca de 0,7% (visto de 0,4 a 0,9%: perto do chão da meta); morrem cerca de 26 de 150 (visto de 17 a 31) |
+| **K2**, o mesmo robô, sozinho no mesmo ermo, dos dias 91 a 120 | 0,7 a 2,0 diárias por dia | floresta: cerca de 1,6 (visto de 1,38 a 1,71); serra: cerca de 1,18 (visto de 1,10 a 1,23; já Treinado em coleta) |
+| **K3**, o Leigo de começo acerta o bloco de matéria Rara | em 15% ou menos | em 0%: o comando recusa (a matéria Rara pede mão de Treinado) |
+| o bloco que falha | não rende nada | não rendeu nada, em nenhuma rodada |
+| o Treinado (maestria 4, atributo 90) acerta o bloco de matéria Rara | em 35 a 60% | em 43,7% (a conta exata); medido, de 36 a 49% em 300 blocos |
+| **K4**, na vila de teste, a saída de coleta mais longa (4 blocos: um dia inteiro), vendendo tudo o que tirou | no máximo 12 de prata, no pior caso de 200 vilas | 9 de prata no pior caso, em todas as rodadas (8 de madeira Comum); em média, cerca de 6,5 (visto de 6,3 a 6,8) |
+| **a vila de teste segue a tabela** (prova nova do acerto) | a matéria da mata igual à da tabela (9.15), nos três começos; a gente com os blocos da mão que tem; o estado inteiro | sim, nos três |
+
+- **Por que a floresta nunca passa de 2 diárias:** dois blocos por dia, 2 de madeira por bloco, 2 de prata cada uma: 8 de prata, se nenhum bloco falhar.
+- **No ermo de borda, o que o robô tira volta:** no Dia 120 a floresta segue com 200 de 200 de madeira; a serra tem perto de 140 de 150 de minério, e a madeira dela (60) fica rala, perto de 8.
+- **O que a meta não mede, e a mesa sente.** Na loja isso dá cerca de 2,9 de prata por dia na floresta e 2,6 na serra (a loja paga 60%, o preço cede um pouco e o troco arredonda para baixo); a cama e a comida levam 3.
+  **No bolso, o coletor de começo fica no zero a zero:** perto de zero na floresta (visto de −0,1 a +0,1 por dia), cerca de −0,35 na serra (o diarista fica com +1,00). E morre: de um em cinco a dois em cinco por mês na floresta, perto de um em seis na serra. Quase toda saída ruim é morte, porque o bicho que alcança quem foge pega pelas costas.
+- **Sem julgar (não é meta): o Treinado no interior.** O mesmo homem, já Treinado em coleta, ao lado de um ermo de interior, em 30 dias (10 vidas por rodada):
+  no interior da serra, cerca de 7 diárias por dia ao preço de base (visto de 6,5 a 7,5), cerca de +19 de prata por dia no bolso (visto de +17 a +21), ferido ou morto em até 1,1% das saídas, e morreram de nenhum a 3 de 10;
+  no interior da floresta, cerca de 8,5 diárias (visto de 6,6 a 9,8), cerca de +30 no bolso (visto de +25 a +35), ferido ou morto em 0,4 a 3,7% das saídas, e morreram de 1 a 5 de 10.
+  São dez vidas por rodada: estes números balançam mais que os das metas.
+  É a matéria Incomum e a Rara do primeiro mês; a Rara, vendida numa vila que não tinha nenhuma, onde o preço nasce perto do teto (8.2). Se é muito, decide o jogador.
 
 ### O que a etapa 2 não resolve (fica dito)
 
@@ -1001,10 +1073,11 @@ O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e el
 - **A taverna tem preço fixo:** 1 de prata o ano inteiro. O mercado sabe dizer o que a refeição valeria no dia (`mercado.refeicao`), e ninguém cobra isso ainda.
 - **A prata do lugar não se repõe.** Uma vila de 400 tem 2.000: compra três espadas Raras e recusa a quarta.
 - **O preço da arma não olha a matéria:** a adaga (1 de metal) e o montante (5) valem o mesmo.
-- **A coleta não tem meta de renda.** Medido pelos revisores: enquanto a matéria Incomum e a Rara duram, tirá-la rende de 2 a 6 vezes a caça.
+- **A coleta de quem já tem mão não tem meta.** A de começo tem (K1 a K4, 9.17). A do Treinado no interior foi só medida: rende de 6,5 a 9,8 diárias por dia no primeiro mês.
 - **O povo não passa fome,** e o bicho não vem à vila: é das frentes.
 - **Não há tempo de céu** na caça: só o escuro entra sozinho na luta.
-- **A morte não tem herdeiro** (etapa 6). Na vila, quem fica com o que o morto largou é decisão de cena, por evento.
+- **A morte não tem herdeiro** (etapa 6). Na vila e no ermo, quem fica com o que o morto largou é decisão de cena, por evento (5.11).
+- **Quem vai junto não pede paga.** Vai quando é chamado e leva a parte dele do despojo (9.10). Se o companheiro pede prata, recusa o perigo ou cobra depois, decide o jogador.
 
 ---
 
@@ -1013,6 +1086,7 @@ O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e el
 ```
 python3 provas.py 600                                as provas da luta, dos itens e dos bichos
 python3 provas_mundo.py                              as provas do mundo: a etapa 1, o alicerce da etapa 2, o mercado, o ofício, a caça
+python3 provas_caca.py coleta                        só as metas da coleta (K1 a K4) e a vila de teste contra a tabela
 python3 estresse.py 1500                             lutas ao acaso, com bichos misturados
 python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N]      a vila de teste (GUIA_VILA.md)
 export MOTOR10_MUNDO=PASTA                           o save em que os comandos abaixo mexem (sem isso: a pasta mundo/)
@@ -1021,9 +1095,9 @@ python3 turno.py abre                                gera e mostra a MESA.md
 python3 turno.py pergunta "texto" "a=..." "b=..."  ·  turno.py responde "1a.2b"  ·  turno.py nota "só o Mestre"  ·  turno.py fecha "o que houve" [parado] [git]
 python3 ato.py comer [carga] | dormir N [chao] | trabalhar N | treinar N ARMA | descansar N | esperar N
 python3 ato.py pecas | vestir ITEM [arma|arma2|escudo] | tirar ITEM
-python3 ato.py luta nova CENARIO.json LUTA.json  ·  ato.py luta roda LUTA.json "Nome: atacar"  ·  ato.py luta larga LUTA.json "por quê"
+python3 ato.py luta nova CENARIO.json LUTA.json  ·  ato.py luta roda LUTA.json "Nome: atacar"  ·  ato.py luta larga LUTA.json "por quê"      (LUTA.json sem pasta fica no save, em lutas/)
 python3 teste.py "o que se tenta" Força contra=26 [mais=N] [quem=ID] [oculto]
-python3 estado.py valida | eventos [N] | pessoa ID | lugar ID
+python3 estado.py valida | eventos [N] | pessoa ID | lugar ID  ·  corpo.py ver [ID]
 python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas"      o que o Mestre decide em cena, por evento
 
 python3 mercado.py ver | preco BEM [N] | comprar BEM N | vender BEM N|tudo | vender tudo | comprar ITEM | vender ITEM
@@ -1034,7 +1108,7 @@ python3 oficio.py forjar arma espada Raro "Nome" [blocos=N] [nucleo=ID]  ·  for
 python3 oficio.py continua [OBRA] [blocos=N]  ·  larga OBRA  ·  consertar ITEM [pontos=N] [pago]  ·  ajustar ITEM [para=ID]  ·  jornal N
 python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA "como foi"  ·  oficio.py oficina NIVEL "como foi"      (o Mestre registra)
 
-python3 caca.py ver | sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID] | coletar BEM [ERMO] [blocos=N]
+python3 caca.py ver | sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID] | coletar BEM [ERMO] [blocos=N]      (procura: N de 1 a 6; coleta: N de 1 a 4)
 python3 caca.py atacar [inicio=longe|perto|colado] [vantagem=alto,cerco] | deixar | fugir
 python3 caca.py luta "Nome: ordem" ["grupo: ordem"] | sangue | segue | volta
 python3 caca.py conta [ERMO]  ·  caca.py povoa ERMO HABITAT [perigo=1] [vizinho=LUGAR]  ·  caca.py larga "por quê"      (só o Mestre)

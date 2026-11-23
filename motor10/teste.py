@@ -24,7 +24,7 @@ def d20x():
 def rola(E, o_que, atributo, contra, mais=0, quem=None, oculto=False):
     pid = quem or estado.eu(E); p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
     if atributo not in T.ATRIBUTOS: sys.exit(f'atributo desconhecido: "{atributo}" (use: {", ".join(T.ATRIBUTOS)})')
-    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não está vivo: não testa nada")
+    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não testa nada: {estado.morte_diz(E, p)}")
     a, b = d20x(), d20x(); bonus = p['atributos'][atributo] // 10; pena = corpo.pena(p)
     total = sum(a) + sum(b) + bonus + pena + mais
     r = dict(n=len(E['turno']['dados']) + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], quem=pid, o_que=o_que, atributo=atributo, dados=[a, b],
@@ -36,19 +36,20 @@ def rola(E, o_que, atributo, contra, mais=0, quem=None, oculto=False):
 def diz(E, r, mestre=False):
     if r['oculto'] and not mestre: return f"#{r['n']} rolagem oculta ({r['o_que']})"
     p = E['gente'][r['quem']]; partes = f"{'+'.join(map(str, r['dados'][0]))} e {'+'.join(map(str, r['dados'][1]))}, +{r['bonus']} de {r['atributo']}"
-    if r['pena']: partes += f", {r['pena']} do corpo"
-    if r['mais']: partes += f", {r['mais']:+d}"
+    if r['pena']: partes += f", −{-r['pena']} do corpo"
+    if r['mais']: partes += f", {r['mais']:+d}".replace('-', '−')
     return f"#{r['n']} {p['nome']}, {r['o_que']}: {partes} = {r['total']} contra {r['contra']}: {'PASSA' if r['passou'] else 'FALHA'}" + (' (OCULTA)' if r['oculto'] else '')
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     a = sys.argv[1:]
     if not a: print(__doc__); sys.exit()
     E = estado.carrega()
     if a[0] == 'ver':
         print('\n'.join(diz(E, r, mestre=True) for r in E['turno']['dados']) or '(nenhuma rolagem neste turno)'); sys.exit()
     op = dict(x.split('=', 1) for x in a if '=' in x); pos = [x for x in a if '=' not in x]
-    if len(pos) < 2 or 'contra' not in op: sys.exit(__doc__)
+    if len(pos) < 2 or 'contra' not in op: sys.exit('diga o que se tenta, o atributo e contra que número: `python3 teste.py "arrombar a porta" Força contra=26`')
     def num(k, pad=None):
         v = op.get(k, pad)
         try: return int(v)

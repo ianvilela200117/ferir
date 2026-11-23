@@ -133,8 +133,8 @@ def vida(semente, dias=None, ate=O.FORJA_ATE):
             else: V['jejum'] += 1
         aguenta = c['cansaco'] + M.ESFORCO['pesado'] < M.LIMIARES['cansaco'][0] and c['sono'] + M.SONO_ACORDADO < M.LIMIARES['sono'][0]
         if b in (0, 1) or (b == 5 and not aguenta):                                         # dorme a madrugada e a alvorada; deita na noite quando o corpo não dá mais um bloco
-            chao = p['moedas'] < M.CAMA_PRECO; V['chao' if chao else 'camas'] += 1
-            ato.dormir(E, 'eu', (2 - b) if b < 2 else 3, chao=chao, para=False)
+            chao = not ato.cama_paga(E, 'eu') and p['moedas'] < M.CAMA_PRECO; V['chao'] += chao; tinha = p['moedas']       # a cama é por noite: paga uma vez, vale o dia inteiro
+            ato.dormir(E, 'eu', (2 - b) if b < 2 else 3, chao=chao, para=False); V['camas'] += (tinha - E['gente']['eu']['moedas']) // M.CAMA_PRECO
         elif aguenta: bancada()
         else: ato.descansar(E, 'eu', 1)
         E['_novos'].clear()                                                                  # a vida de rascunho não vai para arquivo: não guarda o registro na memória
@@ -329,10 +329,12 @@ def _recusas(n):
     desfez = not estado.valida(M2) and not M2['itens']['obras'] and caiu and not M2['gente']['eu'].get('carga') and M2['gente']['eu']['moedas'] == 0       # a regra da morte: a obra se desfaz NA HORA, e o que era dele cai solto onde morreu
     with contextlib.redirect_stdout(io.StringIO()) as tela: oficio.main([])
     uso = tela.getvalue().startswith('oficio.py') and 'Uso' in tela.getvalue()
-    return ('AS RECUSAS: o que não pode abrir não abre, e nada muda pela metade; sem argumento, o script só diz o uso',
+    tortas = [recusa(lambda a=a: oficio.main(a)) or '' for a in (['jornal', '0'], ['jornal', 'x'], ['jornal'])]              # o número torto: UMA frase que diz o que falta, e não o uso inteiro
+    uso = uso and all(t.startswith('diga quantos blocos de jornal') and len(t.splitlines()) == 1 for t in tortas)
+    return ('AS RECUSAS: o que não pode abrir não abre, e nada muda pela metade; sem argumento, o script só diz o uso; o jornal com número torto ganha uma frase',
             f"{len(rec)} de {len(casos)} recusados" + ('' if len(rec) == len(casos) else f" (passaram: {', '.join(x for x, _ in casos if x not in rec)})") + f"; estado {'intacto' if igual else 'MUDOU'}; "
             f"teste antes de os blocos fecharem: {'recusado' if cedo else 'ACEITO'}; obra largada com zero blocos devolve a matéria: {'sim' if voltou else 'NÃO'}; largada com dois blocos, perde a matéria e fica com o núcleo: {'sim' if largou else 'NÃO'}; "
-            f"oficina sem prata não paga o jornal, e o bloco conta: {'sim' if sem_paga else 'NÃO'}; a obra de quem morreu se desfaz na hora da morte, e o que era dele cai solto onde morreu (o estado segue inteiro): {'sim' if desfez else 'NÃO'}; sem argumento: {'só o uso' if uso else 'FEZ OUTRA COISA'}",
+            f"oficina sem prata não paga o jornal, e o bloco conta: {'sim' if sem_paga else 'NÃO'}; a obra de quem morreu se desfaz na hora da morte, e o que era dele cai solto onde morreu (o estado segue inteiro): {'sim' if desfez else 'NÃO'}; sem argumento, só o uso, e `jornal 0`, `jornal x` e `jornal` com uma frase cada: {'sim' if uso else 'NÃO'}",
             len(rec) == len(casos) and igual and cedo and voltou and largou and sem_paga and desfez and uso and not estado.valida(E))
 
 

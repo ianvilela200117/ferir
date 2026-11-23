@@ -15,6 +15,7 @@ IDA = 1                     # blocos de ida até o ermo vizinho (o ermo pode diz
 ARRASTA = 1                 # quem perdeu a luta e não morreu volta arrastando-se: isto a mais de blocos na volta
 PROCURA = 2                 # os blocos de procura (ou de coleta) de uma saída, se ninguém disser outro número
 PROCURA_MAX = 6             # uma saída não passa disto: é ir e voltar, não é morar no mato
+COLETA_MAX = 4              # ... e uma saída de COLETA não passa disto: é serviço pesado, de ir, tirar e voltar no mesmo dia (com a ida e a volta ao ermo vizinho, um dia inteiro)
 ESFORCO = dict(ida='leve', volta='leve', procura='leve', coleta='pesado')        # o que cada bloco pesa no corpo (tabelas_mundo.ESFORCO): procurar rastro é andar devagar; o que cansa é a luta. Tirar minério e madeira é serviço pesado
 
 # ---------- o rastro ----------
@@ -80,16 +81,18 @@ def vem_de_fora(cat): return VEM_DE_FORA[min(cat, len(VEM_DE_FORA) - 1)]
 
 # ---------- a coleta (minério, madeira, erva): matéria com categoria, tirada do `coleta` do ermo ----------
 # um teste por bloco: 2d20 + atributo ÷ 10 + maestria de coleta, contra COLETA_BASE + COLETA_CAT × categoria + COLETA_FALTA × (1 − quanto há ÷ teto)
+# PASSOU, o bloco rende o da tabela, e só isso (passar por muito não rende mais). FALHOU, não rende nada.
 COLETA = {                  # atributo do teste · quanto rende o bloco que passa · a fração do teto que volta por dia · o nome do que se tira
     'metal':   dict(atributo='Força',     rende=1, volta=0.004, nome='minério'),
     'madeira': dict(atributo='Força',     rende=2, volta=0.02,  nome='madeira'),
     'erva':    dict(atributo='Percepção', rende=1, volta=0.04,  nome='erva'),
 }
 COLETA_BASE = 20
-COLETA_CAT = 4
+COLETA_CAT = 8              # por categoria da matéria: Comum 20, Incomum 28, Rara 36
 COLETA_FALTA = 8
-COLETA_MARGEM = 5           # passar por tantos pontos rende 1 a mais (e mais 1 a cada tantos)
-COLETA_POUCO = 5            # falhar por menos disto ainda rende 1; por isto ou mais, nada
+# A MÃO QUE A MATÉRIA PEDE (a maestria de coleta, por categoria): Comum, Leigo; Incomum, Iniciante; Rara, Treinado. É TRANCA: sem ela não se tira (o comando recusa antes de gastar a saída)
+COLETA_MAO = [0, 2, 4]
+def coleta_mao(cat): return COLETA_MAO[min(max(cat, 0), len(COLETA_MAO) - 1)]
 
 # ---------- a maestria (maestria.caça, maestria.coleta): sobe por blocos, como a das armas ----------
 CACA_BLOCOS = {2: 40, 4: 160, 6: 500, 8: 1500}       # blocos de procura
@@ -101,11 +104,15 @@ FEITO_COLETA = {6: 2}       # Mestre: ter tirado matéria Rara com a própria m�
 FARTURA = [(0.75, 'há fartura'), (0.4, 'há, mas rareou'), (0.1, 'é raro ver'), (0.0, 'quase sumiu')]
 POUCOS = 3                  # a espécie de que cabem até tantos no ermo é rara por natureza: mesmo no teto, o povo diz só que...
 POUCOS_DIZ = 'há pouco, e sempre foi assim'
-def fartura_diz(tem, teto):
+POUCA = 10                  # a matéria de que cabem até tantas unidades no ermo é pouca por natureza: mesmo no teto, o povo diz só que...
+POUCA_DIZ = 'é coisa pouca, e sempre foi assim'
+def fartura_diz(tem, teto, poucos=POUCOS, diz=POUCOS_DIZ):
+    """a fartura em palavras. Com o teto pequeno (até `poucos`), "há fartura" enganaria: a palavra é outra."""
     if tem <= 0: return 'sumiu'
     f = tem / teto if teto else 1
-    if teto and teto <= POUCOS and f >= FARTURA[1][0]: return POUCOS_DIZ
+    if teto and teto <= poucos and f >= FARTURA[1][0]: return diz
     return next(txt for lim, txt in FARTURA if f >= lim)
+def fartura_materia(tem, teto): return fartura_diz(tem, teto, POUCA, POUCA_DIZ)
 
 # ---------- a fauna e a matéria de um ermo novo (o gerador e o Mestre povoam por aqui: caca.py povoa) ----------
 PERIGOS = ['borda', 'interior', 'coração']      # o perigo do ermo (1 a 3): a borda é o ermo de começo, ao lado da vila
@@ -114,14 +121,14 @@ TETO = {
     'corça': (1, 80), 'ratazana': (1, 90), 'javali': (1, 40), 'lobo': (1, 12), 'surucucu': (1, 8), 'urso': (1, 3),
     'pantera': (2, 2), 'aranha': (2, 6), 'grifo': (2, 2), 'trasgo': (2, 2), 'basilisco': (3, 1), 'serpe': (3, 1), 'hidra': (3, 1), 'dragão': (3, 1),
 }
-# habitat: {matéria: (o perigo a partir do qual há, o teto)}
+# habitat: {matéria: (o perigo a partir do qual há, o teto)}. A BORDA SÓ DÁ MATÉRIA COMUM: a Incomum e a Rara só há do interior (perigo 2) para cima
 COLETA_TETO = {
-    'floresta': {'madeira:0': (1, 200), 'erva:0': (1, 60), 'madeira:1': (1, 20), 'erva:1': (1, 10), 'madeira:2': (2, 4), 'erva:2': (2, 3)},
-    'campo':    {'erva:0': (1, 80), 'madeira:0': (1, 40), 'erva:1': (1, 8)},
-    'brejo':    {'erva:0': (1, 90), 'erva:1': (1, 20), 'madeira:0': (1, 60), 'erva:2': (2, 5)},
-    'serra':    {'metal:0': (1, 150), 'metal:1': (1, 20), 'madeira:0': (1, 60), 'metal:2': (2, 5)},
-    'caverna':  {'metal:0': (1, 100), 'metal:1': (1, 30), 'metal:2': (2, 6)},
-    'ruína':    {'metal:0': (1, 40), 'metal:1': (1, 10), 'erva:0': (1, 30), 'metal:2': (3, 4)},
+    'floresta': {'madeira:0': (1, 200), 'erva:0': (1, 60), 'madeira:1': (2, 20), 'erva:1': (2, 10), 'madeira:2': (2, 4), 'erva:2': (2, 3)},
+    'campo':    {'erva:0': (1, 80), 'madeira:0': (1, 40), 'erva:1': (2, 8)},
+    'brejo':    {'erva:0': (1, 90), 'madeira:0': (1, 60), 'erva:1': (2, 20), 'erva:2': (2, 5)},
+    'serra':    {'metal:0': (1, 150), 'madeira:0': (1, 60), 'metal:1': (2, 20), 'metal:2': (2, 5)},
+    'caverna':  {'metal:0': (1, 100), 'metal:1': (2, 30), 'metal:2': (2, 6)},
+    'ruína':    {'metal:0': (1, 40), 'erva:0': (1, 30), 'metal:1': (2, 10), 'metal:2': (3, 4)},
 }
 HABITATS = list(COLETA_TETO)
 

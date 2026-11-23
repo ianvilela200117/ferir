@@ -6,9 +6,11 @@
 Cria, numa pasta NOVA (recusa escrever por cima de qualquer coisa), tudo por eventos "gera":
   PEDRA RASA, uma vila de 400 pessoas: pousada, mercado (os bens no ponto do ano, 15 peças Comuns e Incomuns na prateleira, 2.000 de prata contada)
     e a forja da vila (oficina 1; o fogo e a bigorna servem até o Incomum);
-  A MATA DO CORVO, o ermo vizinho, a 1 bloco: corça, javali, lobo e urso; UMA pantera (o bicho raro: dá matéria Rara) e UMA serpe (o chefe: dá núcleo Épico);
-    madeira, erva e minério para tirar (o Raro, contado: 4 de minério e 2 de erva);
-  OITO PESSOAS com nome e ficha de luta (o ferreiro, a taverneira, a caçadora, o guarda, o lenhador, a curandeira, o mercador, o aprendiz);
+  A MATA DO CORVO, o ermo vizinho, a 1 bloco, borda de floresta: corça, javali, lobo e urso; e, postas à mão para o teste, UMA pantera (o bicho raro: dá couro e osso Raros)
+    e UMA serpe (o chefe: dá núcleo Épico). Para tirar, o que a tabela dá à borda de uma floresta (tabelas_caca.COLETA_TETO): madeira e erva Comuns.
+    A matéria Incomum e a Rara só há do interior para cima: na borda não há;
+  OITO PESSOAS com nome e ficha de luta (o ferreiro, a taverneira, a caçadora, o guarda, o lenhador, a curandeira, o mercador, o aprendiz),
+    cada uma com os blocos de treino que explicam a mão que tem (a tabela de cada ofício e a das armas);
   e O PERSONAGEM do começo escolhido: nível 5, a mão de Iniciante no ofício dele, peças Comuns, 30 de prata.
 Depois: MOTOR10_MUNDO=PASTA python3 turno.py abre      (o guia está no GUIA_VILA.md)
 """
@@ -16,14 +18,17 @@ import os, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_bichos as TB
+import tabelas_caca as K
+import tabelas_oficio as O
+import tabelas_mercado as C
 import estado, mercado, turno
 from itens import item
 from pessoas import padrao
 
 VILA = dict(id='vila', nome='Pedra Rasa', em='em Pedra Rasa', pop=400, oficina=1, fogo=1, bigorna=1)
 ERMO = dict(id='mata', nome='a Mata do Corvo', em='na Mata do Corvo', habitat='floresta', perigo=1, longe=1,
-            bichos={'corça': 80, 'javali': 40, 'lobo': 12, 'urso': 3, 'pantera': 1, 'serpe': 1},                              # a pantera é o bicho raro; a serpe, o chefe (dá núcleo Épico)
-            coleta={'madeira:0': 200, 'erva:0': 60, 'metal:0': 60, 'madeira:1': 20, 'erva:1': 10, 'metal:1': 8, 'metal:2': 4, 'erva:2': 2})        # o minério Raro é pouco e quase não volta
+            bichos={'corça': 80, 'javali': 40, 'lobo': 12, 'urso': 3, 'pantera': 1, 'serpe': 1})                              # a pantera é o bicho raro; a serpe, o chefe (dá núcleo Épico): as duas postas à mão, para o teste
+ERMO['coleta'] = K.materia(ERMO['habitat'], ERMO['perigo'])      # a matéria é a que a tabela dá a este tipo de ermo (a borda só dá matéria Comum): a vila de teste não desmente a regra
 # quem tem nome: (id, nome, o que é, nível, molde, grau de ofício, maestria, prata, as peças: (tipo, família ou material, categoria, cobre, uso))
 GENTE = [
     ('bento', 'Bento', 'o ferreiro da vila; conserta e vende o que forja', 28, 'guerreiro', 'oficial', {'forja': 4, 'martelo': 2}, 60,
@@ -41,21 +46,29 @@ GENTE = [
     ('lino', 'Lino', 'o mercador da loja', 10, 'comum', 'oficial', {'comércio': 4}, 150, []),
     ('zeca', 'Zeca', 'o aprendiz da forja; novo, quer aprender', 3, 'comum', 'aprendiz', {}, 5, []),
 ]
-# os começos: os atributos (a soma é a mesma: 340), a mão de Iniciante, o treino que a explica, o grau de ofício, as peças Comuns e a carga
+# os começos: os atributos (a soma é a mesma: 340), a mão de Iniciante, o treino que a explica, o grau de ofício, as peças Comuns e a carga.
+# O `sobre` não depende de gênero: o nome do personagem é o jogador quem dá
 COMECOS = dict(
-    ferreiro=dict(sobre='ferreiro novo, com a mão de Iniciante na forja', atributos=dict(Força=65, Agilidade=50, Vigor=65, Vontade=50, Percepção=45, Afinidade=65), grau_oficio='aprendiz',
+    ferreiro=dict(sobre='vive da forja, com a mão de Iniciante', atributos=dict(Força=65, Agilidade=50, Vigor=65, Vontade=50, Percepção=45, Afinidade=65), grau_oficio='aprendiz',
                   maestria={'forja': 2, 'martelo': 2}, treino={'forja': 50, 'martelo': 40}, marca={'prep_receita': 0}, carga={'metal:0': 4, 'madeira:0': 2},
                   pecas=[('arma', 'martelo', 0, None, 'arma'), ('armadura', 'couro', 0, None, 'veste')]),
-    cacador=dict(sobre='caçador novo, com a mão de Iniciante no rastro e no arco', atributos=dict(Força=55, Agilidade=70, Vigor=60, Vontade=45, Percepção=70, Afinidade=40), grau_oficio='diarista',
+    cacador=dict(sobre='vive da caça, com a mão de Iniciante no rastro e no arco', atributos=dict(Força=55, Agilidade=70, Vigor=60, Vontade=45, Percepção=70, Afinidade=40), grau_oficio='diarista',
                  maestria={'caça': 2, 'arco': 2}, treino={'caça': 40, 'arco': 40}, marca={}, carga={'comida': 2},
                  pecas=[('arma', 'arco', 0, None, 'arma'), ('arma', 'adaga', 0, None, 'arma2'), ('armadura', 'couro', 0, None, 'veste')]),
-    guerreiro=dict(sobre='guerreiro novo, com a mão de Iniciante na espada', atributos=dict(Força=70, Agilidade=60, Vigor=70, Vontade=50, Percepção=50, Afinidade=40), grau_oficio='diarista',
+    guerreiro=dict(sobre='vive das armas, com a mão de Iniciante na espada', atributos=dict(Força=70, Agilidade=60, Vigor=70, Vontade=50, Percepção=50, Afinidade=40), grau_oficio='diarista',
                    maestria={'espada': 2}, treino={'espada': 40}, marca={}, carga={},
                    pecas=[('arma', 'espada', 0, None, 'arma'), ('escudo', None, 0, None, 'escudo'), ('armadura', 'malha', 0, None, 'veste')]),
 )
 NIVEL = 5
 PRATA = 30
 NOMES = dict(ferreiro='Aldo', cacador='Cira', guerreiro='Maro')
+
+
+def treino_da_mao(maestria):
+    """os blocos de treino que explicam a mão de alguém: para cada arma ou ofício, os blocos que a tabela pede para o grau que a pessoa tem (as armas, a forja e o couro, a caça,
+    a coleta; no comércio, os dias de negócio). A cura ainda não tem tabela de treino: fica sem número."""
+    tabela = lambda k: M.MAESTRIA_BLOCOS if k in T.FAMILIAS else {'forja': O.OFICIO_BLOCOS, 'couro': O.OFICIO_BLOCOS, 'caça': K.CACA_BLOCOS, 'coleta': K.COLETA_BLOCOS, 'comércio': C.COMERCIO_DIAS}.get(k, {})
+    return {k: tabela(k)[g] for k, g in maestria.items() if g in tabela(k)}
 
 
 def _peca(tipo, qual, cat, cobre, de, dono):
@@ -83,7 +96,7 @@ def cria(comeco='guerreiro', nome=None, semente=1):
     estado.aplica(E, 'gera', [['lugar', v['id'], 'oficina', 'poe', v['oficina']], ['lugar', v['id'], 'preparo.fogo', 'poe', v['fogo']], ['lugar', v['id'], 'preparo.bigorna', 'poe', v['bigorna']]],
                   onde=v['id'], texto=f"a forja de {v['nome']}: oficina {v['oficina']}; o fogo e a bigorna servem até o {T.CATS[v['fogo']]}")
     for pid, n, sobre, nivel, molde, grau, maestria, prata, pecas in GENTE:
-        estado.aplica(E, 'gera', [['pessoa', 'nasce', pid, dict(nome=n, nivel=nivel, atributos=padrao(n, nivel, molde=molde)['atributos'], lugar=v['id'], grau_oficio=grau, maestria=dict(maestria), moedas=prata, sobre=sobre)]],
+        estado.aplica(E, 'gera', [['pessoa', 'nasce', pid, dict(nome=n, nivel=nivel, atributos=padrao(n, nivel, molde=molde)['atributos'], lugar=v['id'], grau_oficio=grau, maestria=dict(maestria), treino=treino_da_mao(maestria), moedas=prata, sobre=sobre)]],
                       onde=v['id'], quem=[pid], texto=f'{n}, {sobre}')
         _veste(E, pid, n, pecas)
     estado.aplica(E, 'gera', [['pessoa', 'nasce', 'eu', dict(nome=nome, nivel=NIVEL, atributos=dict(c['atributos']), lugar=v['id'], grau_oficio=c['grau_oficio'], maestria=dict(c['maestria']), treino=dict(c['treino']),
@@ -98,7 +111,7 @@ def resumo(E):
     v = E['lugares'][VILA['id']]; e = E['lugares'][ERMO['id']]; p = E['gente']['eu']; raro = [TB.ESPECIES[x]['nome'] for x in e['bichos'] if TB.ESPECIES[x]['cat'] >= 2 and not TB.ESPECIES[x]['chefe']]
     chefe = [TB.ESPECIES[x]['nome'] for x in e['bichos'] if TB.ESPECIES[x]['chefe']]
     return [f"{v['nome']}: {v['pop']} de povo, {v['estoque'].get('prata', 0)} de prata, {len(mercado.prateleira(E, VILA['id']))} peças na prateleira, pousada, forja (oficina {v['oficina']}).",
-            f"{e['nome']}, a {e['longe']} bloco: " + ', '.join(f"{TB.ESPECIES[x]['nome']} {q}" for x, q in e['bichos'].items()) + f" (o raro: {', '.join(raro)}; o chefe: {', '.join(chefe)}); tira-se: " + ', '.join(e['coleta']) + '.',
+            f"{e['nome']}, a {e['longe']} bloco: " + ', '.join(f"{TB.ESPECIES[x]['nome']} {q}" for x, q in e['bichos'].items()) + f" (o raro: {', '.join(raro)}; o chefe: {', '.join(chefe)}); tira-se: " + ', '.join(mercado.nome_bem(b) for b in e['coleta']) + '.',
             'Gente com nome: ' + ', '.join(f"{q['nome']} ({q['sobre'].split(';')[0]})" for k, q in E['gente'].items() if k != 'eu') + '.',
             f"O personagem: {p['nome']}, nível {p['nivel']}, {p['sobre']}; {p['moedas']} de prata; " + ', '.join(it['nome'] for it in E['itens']['itens'].values() if it.get('dono') == 'eu') + '.']
 
@@ -122,4 +135,5 @@ def main(a=None):
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: a vila já foi gravada antes de falar
     main()

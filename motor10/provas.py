@@ -177,6 +177,27 @@ def modulos(n):
         while luta.corre(S, interativo=True) == 'parada':
             if S['fila']: meio += 1; break
     meio = round(100 * meio / k); out.append(('10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam', f'em {meio}% das lutas houve parada com turnos por vir', meio >= 50))
+    D0 = luta.D; luta.semente(35); gasto = avisou = 0; k = 60       # dados à parte: as outras provas rolam os mesmos de antes
+    for _ in range(k):
+        S = luta.nova(gente('o rei', 40, ('espada', 1), ('couro', 1), controla=True)(), varios(2, 40, 1, 1, pre='b')(), inicio='longe', quieto=False)
+        luta.corre(S, interativo=True); luta.ordem(S, 'o rei: folego'); viu = False
+        while luta.corre(S, interativo=True) == 'parada': viu = viu or any('recuperou o fôlego' in x for x in S['paradas'])
+        gasto += sum('o rei se resguarda (o fôlego já está cheio' in x for x in S['log']); avisou += viu
+    luta.D = D0
+    out.append(('10 A ORDEM DE FÔLEGO ACABA quando o fôlego enche: a luta para e pergunta, e ninguém segue tomando fôlego de fôlego cheio enquanto o inimigo chega',
+                f'{k} lutas com a ordem dada de fôlego cheio e o inimigo longe: {gasto} ações gastas tomando fôlego à toa; a luta parou e avisou em {avisou}', gasto == 0 and avisou == k))
+    D0 = luta.D; luta.semente(36); k = 120; pegou = torto = 0      # dados à parte, como na prova de cima
+    for _ in range(k):
+        S = luta.nova(gente('o guarda', 30, ('lança', 1), ('malha', 0), escudo=0)(), [x for i in (1, 2) for x in gente(f'bandido {i}', 7, ('adaga', 0))()], inicio='perto', quieto=False)
+        luta.corre(S); L = S['log']
+        for i, linha in enumerate(L):
+            if '(o alcance bate primeiro)' not in linha: continue
+            quem = next((f['nome'] for f in S['L'] if f['lado'] == 'B' and f"golpeia {f['nome']} (o alcance" in linha), None); pegou += 1
+            depois = next((x for x in L[i + 1:] if not x.startswith('    ')), '')        # a primeira linha depois do golpe e do que ele causou (as linhas dele vêm mais recuadas)
+            torto += bool(quem) and (depois.startswith(f'  {quem} avança') or not (i > 0 and L[i - 1].startswith(f'  {quem} avança')))
+    luta.D = D0
+    out.append(('O REGISTRO NA ORDEM: quem avança para dentro de uma arma mais longa aparece dando o passo ANTES do golpe que o pega; ninguém avança, no registro, depois de cair ou de morrer',
+                f'{k} lutas de um lanceiro contra dois de adaga: {pegou} golpes de "o alcance bate primeiro"; em {torto} a linha do passo veio depois do golpe', pegou >= 20 and torto == 0))
     saiu = 0; k = max(60, n // 5)
     for _ in range(k):
         S = luta.nova(gente('o rei', 40, ('espada', 1), ('couro', 1), controla=True, linha='trás')() + varios(2, 60, 2, 2, pre='guarda ', moral='firme')(), varios(4, 40, 1, 1, pre='b')(), inicio='perto', lugar=dict(largura=2), quieto=True)
@@ -318,7 +339,7 @@ def bichos(n):
     ok('B+ O CENÁRIO: o bicho que o bichos.bicho devolve passa pelo cenário da luta (o do ato.py também), pelo atalho {"bicho": espécie}, vai ao arquivo e volta; traço fora da lista é recusado',
        f'{certo} de {len(esps)} espécies com a mesma ficha pelos três caminhos e a luta inteira depois de ir ao arquivo; o traço inventado: {rec}', certo == len(esps) and rec == 'recusou')
     # B+: o agarrado fica onde está, e só se agarra quem está colado
-    viol = pegou = 0; k = max(60, n // 5); caiu = ('CAI', 'MORRE', 'FOGE', 'sangra até cair', 'cai envenenado', 'morre no chão')
+    viol = pegou = 0; k = max(60, n // 5); caiu = ('CAI', 'MORRE', 'FOGE', 'sangra até cair', 'cai pelo veneno', 'morre no chão')
     for _ in range(k):
         S = luta.nova(varios(2, 30, 1, 1, pre='homem ')(), bi('urso', moral='firme')(), inicio='perto', lugar=dict(largura=1)); luta.corre(S); presos = set()
         for l in S['log']:

@@ -6,7 +6,7 @@ Ninguém digita ataque, Defesa nem dano. Vestiu, a ficha muda.
 O REQUISITO é por ATRIBUTO, nunca por nível: a peça pede Força (ou Agilidade) pelo PESO dela.
   Faltou atributo: a peça pesa (−1 no acerto ou na Defesa a cada 5 que faltam; +1 de fôlego a cada 10). A falta conta peça por peça.
   SOB MEDIDA (feita ou ajustada pelo ferreiro para um dono, com o nome gravado): para o dono, pede 10 a menos por grau do
-  ferreiro e assenta; na mão de outro, rende uma categoria abaixo.
+  ferreiro e assenta; na mão de outro, rende uma categoria abaixo. O dono é reconhecido pelo id da pessoa, quando a peça o guarda; senão, pelo nome.
   SINTONIA: a pessoa sustenta Vontade ÷ 20 peças Épicas ou melhores (as melhores primeiro). As que passam disso rendem uma
   categoria abaixo, e os efeitos delas dormem.
 
@@ -59,7 +59,9 @@ def _assenta(it, p, dorme):
     a, q = pede(it, dorme); c = it['cat'] - (T.SINTONIA_ABAIXO if dorme else 0); mais = 0
     sm = it.get('sob_medida')
     if sm:
-        if sm['dono'] == p['nome']: q -= T.SOB_MEDIDA * sm.get('grau', 1); mais = 1
+        # de quem é o ajuste: pelo ID da pessoa, quando a peça o guarda e quem veste tem ficha no mundo (dois de mesmo nome não dividem a peça); senão, pelo nome
+        dele = sm['id'] == p['id'] if sm.get('id') and p.get('id') else sm['dono'] == p['nome']
+        if dele: q -= T.SOB_MEDIDA * sm.get('grau', 1); mais = 1
         else: c -= T.NAO_E_DELE
     return max(0, c), max(0, q - p['atributos'][a]), mais
 
@@ -72,7 +74,7 @@ def _arma(it, p, dorme):
     f = T.FAMILIAS[it['familia']]; c, falta, mais = _assenta(it, p, dorme); at = p['atributos']; tiro = bool(f.get('distancia'))
     quebrada = it['dur'][0] <= 0
     if quebrada: c = 0
-    return dict(nome=it['nome'] + (' (quebrada)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
+    return dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
                 recarga=f.get('recarga', 0), haste=f['alcance'] == 2 and not tiro,
                 mult=T.MULT[c] * (T.DUAS_MAOS if f['maos'] == 2 and not tiro else 1),
                 acerto=T.acerto_base(_maestria(p, it['familia']), at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0),
@@ -173,20 +175,20 @@ def defesa(F, w=None, escudo_inteiro=True):
 def linha(F):
     """a ficha em três linhas, para a mesa (os números com vírgula)"""
     import re
-    return re.sub(r'(\d)\.(\d)', r'\1,\2', _linha(F))
+    return re.sub(r'(?<![\w])-(\d)', r'−\1', re.sub(r'(\d)\.(\d)', r'\1,\2', _linha(F)))       # 29,5 · −2
 
 
 def _linha(F):
     if F.get('bicho'):
         w = F['arma']; pt = F['partes']['tronco']; ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
         return (f"{F['nome']} (bicho {F['tamanho']}, nível {F['nivel']}, instinto de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
-                f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto +{w['acerto']:g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa(s)"
+                f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto +{w['acerto']:g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa{'s' if w['alcance'] != 1 else ''}"
                 + (f" · {F['sopro']['nome']} ({F['sopro']['dado']} × {F['sopro']['mult']:g}, a {F['sopro']['alcance']} casas)" if F.get('sopro') else '') + '\n'
                 f"  Defesa {defesa(F):g} · o corpo é a armadura: {pt['nome']} (proteção {pt['rd']:g}, vale como {pt['material']}) · cerco: {F['cerco'][0]} de perto e {F['cerco'][1]} de haste · ocupa {F['ocupa']:g} de um corredor"
                 + (f" · traços: {', '.join(F['tracos'])}" if F['tracos'] else '') + (f" · coragem {F['coragem']:+d}" if F.get('moral') != 'firme' else ' · não foge'))
     w = F['arma']; ps = ' · '.join(f"{k} {v['rd']:g}" for k, v in F['partes'].items()) or 'sem armadura'
     ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
-    return (f"{F['nome']} (nível {F['nivel']}, {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
+    return (f"{F['nome']} (nível {F['nivel']}, mão de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
             f"  {w['nome']}: acerto +{w['acerto']:g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
             + (f", mais {F['fol_rodada']} por rodada da armadura" if F['fol_rodada'] else '') + '\n'
             f"  Defesa {defesa(F):g}" + (f" (com {F['escudo']['nome']})" if F['escudo'] and w['maos'] == 1 else '') + f" · proteção: {ps}"
@@ -194,8 +196,9 @@ def _linha(F):
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     a = sys.argv[1:]
-    if len(a) < 2 or a[0] != 'padrao': sys.exit(__doc__)
+    if len(a) < 2 or a[0] != 'padrao' or not a[1].isdigit(): sys.exit('diga o nível, em número: `python3 pessoas.py padrao 50 arma=espada:Raro armadura=malha:Raro escudo=Raro`' if a[:1] == ['padrao'] else __doc__)
     op = dict(x.split('=', 1) for x in a[2:])
     par = lambda s: (s.split(':')[0], cat_i(s.split(':')[1]))
     p = veste(padrao('exemplo', int(a[1]), molde=op.get('molde', 'guerreiro')), arma=par(op['arma']) if 'arma' in op else None,

@@ -5,7 +5,7 @@ Este script não grava nada: ele só diz QUAIS EFEITOS um bloco de tempo tem no 
   a pena do corpo (a PIOR das três, não somam) entra em todo teste, no acerto e na Defesa;
   cada 3 pontos de cansaço tiram 1 do fôlego máximo.
 
-Uso (para olhar): python3 corpo.py [ID]      o corpo de alguém (sem ID: o do personagem)
+Uso (para olhar): python3 corpo.py ver [ID]      o corpo de alguém (sem ID: o do personagem)
 """
 import sys
 import tabelas_mundo as M
@@ -33,16 +33,16 @@ def faixas(p): return {m: faixa(p, m) for m in M.MEDIDORES}       # o retrato do
 
 def cruzou(p, antes):
     """o que o corpo cruzou para cima desde `antes` (o que faixas() devolveu): a frase que faz o ato longo parar, ou None"""
-    nomes = dict(fome=['', 'está com fome', 'está faminto'], sono=['', 'está com sono', 'está caindo de sono'], cansaco=['', 'está exausto'])
+    nomes = dict(fome=['', 'está com fome', 'passa fome'], sono=['', 'está com sono', 'está caindo de sono'], cansaco=['', 'está no limite das forças'])       # frases que servem a qualquer pessoa: não dependem de gênero
     L = [nomes[m][faixa(p, m)] for m in M.MEDIDORES if faixa(p, m) > antes[m]]
     return f"{p['nome']} " + ' e '.join(L) if L else None
 
 
 def diz(p):
     c = p['corpo']; pn = pena(p); fm = folego_menos(p)
-    nomes = dict(fome=['sem fome', 'com fome', 'faminto'], sono=['desperto', 'com sono', 'caindo de sono'], cansaco=['inteiro', 'exausto'])
+    nomes = dict(fome=['sem fome', 'com fome', 'passando fome'], sono=['sem sono', 'com sono', 'caindo de sono'], cansaco=['com forças', 'no limite das forças'])
     partes = [f"{nomes[m][faixa(p, m)]} ({m.replace('cansaco', 'cansaço')} {c[m]})" for m in M.MEDIDORES]
-    return ' · '.join(partes) + (f' · pena {pn} em todo teste' if pn else '') + (f' · fôlego máximo −{fm}' if fm else '')
+    return ' · '.join(partes) + (f' · pena −{-pn} em todo teste' if pn else '') + (f' · fôlego máximo −{fm}' if fm else '')
 
 
 def bloco(E, pid, esforco='nada', dorme=None):
@@ -83,8 +83,12 @@ def virada(E, pid):
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
+    a = sys.argv[1:]
+    if a[:1] != ['ver'] or len(a) > 2: print(__doc__); sys.exit()
     import estado
-    E = estado.carrega(); pid = sys.argv[1] if len(sys.argv) > 1 else estado.eu(E)
+    E = estado.carrega(); pid = a[1] if len(a) > 1 else estado.eu(E)
     p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
+    if p['estado'] != 'vivo': print(f"{p['nome']} {estado.morte_diz(E, p)}."); sys.exit()        # do morto só se diz que morreu: não tem fome, nem sono, nem forças
     print(f"{p['nome']} · PV {p['pv']}/{estado.pv_max(p)} · {diz(p)}")
     for f in p['feridas']: print(f"  ferida{' GRAVE' if f['grave'] else ''}: {f['parte']} (Dia {f['dia']}; {f['repouso']} de {M.FERIDA_DIAS[1 if f['grave'] else 0]} dias de repouso)")

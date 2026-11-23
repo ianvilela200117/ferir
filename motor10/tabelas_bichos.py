@@ -66,16 +66,17 @@ SOPRO = dict(dado='1d8', alcance=4, recarga=2, folego=3, forca=1.2)     # o sopr
 # o bote, a investida e a matilha não derrubam quem é maior que o bicho; o que agarra não agarra quem é maior que ele, nem quem não está colado nele (um de cada vez)
 PEDE_TAMANHO = ('matilha', 'bote', 'investida', 'agarra')      # os traços que derrubam ou agarram: no bicho pequeno não pegam gente (a ameaça avisa)
 _n = lambda x: f'{x:+d}'.replace('-', '−')
+# as frases dos traços vão à mesa dentro da ameaça de qualquer espécie ("a pantera", "o urso"): não dizem "dele", "nele", "contra ele"
 TRACOS = {
     'matilha':   f'o golpe que fere um alvo em que outro da matilha já bateu nesta rodada o derruba; com outro da matilha de pé, {_n(MATILHA_CORAGEM)} na coragem',
-    'bote':      f"na primeira rodada age antes de todos; o primeiro golpe dele tem {_n(BOTE['acerto'])} e rola os dados {BOTE['dados']} vezes; quem ele ferir vai ao chão e perde {BOTE['atordoa']} ação",
+    'bote':      f"na primeira rodada age antes de todos; o primeiro golpe tem {_n(BOTE['acerto'])} e rola os dados {BOTE['dados']} vezes; quem esse golpe ferir vai ao chão e perde {BOTE['atordoa']} ação",
     'investida': f"se correu {INVESTIDA['casas']} casas ou mais desde o último golpe, o golpe tem {_n(INVESTIDA['acerto'])}, rola os dados {INVESTIDA['dados']} vezes e derruba quem ferir",
     'veneno':    f"o golpe que fere envenena: por {VENENO['rodadas']} rodadas a vítima perde por rodada {VENENO['fracao']:.0%} do golpe e tem {_n(VENENO['acerto'])} no acerto; não acumula: vale a pior mordida, e o prazo recomeça",
-    'agarra':    f"o golpe que fere quem está colado nele agarra: o agarrado não anda, não recua, não troca de lugar e tem {_n(AGARRADO['acerto'])} no acerto e {_n(AGARRADO['defesa'])} na Defesa, até o bicho passar um turno sem feri-lo",
-    'voa':       f'arma de alcance 1 tem {_n(VOA)} contra ele; a linha não o segura; não leva golpe livre ao se afastar; num corredor, ou no chão, não voa',
-    'regenera':  f'no começo de cada turno dele recupera {REGENERA:.0%} do PV máximo',
+    'agarra':    f"o golpe que fere quem está colado no bicho agarra: o agarrado não anda, não recua, não troca de lugar e tem {_n(AGARRADO['acerto'])} no acerto e {_n(AGARRADO['defesa'])} na Defesa, até o bicho passar um turno sem feri-lo",
+    'voa':       f'arma de alcance 1 tem {_n(VOA)} contra quem voa; a linha não segura quem voa; não leva golpe livre ao se afastar; num corredor, ou no chão, não voa',
+    'regenera':  f'no começo de cada turno, recupera {REGENERA:.0%} do PV máximo',
     'apavora':   f'quando a luta começa, quem não é de ferro testa a coragem contra {PAVOR}',
-    'couraça':   'não tem fresta: ninguém mira a fresta nele, e o crítico não corta a proteção dele pela metade',
+    'couraça':   'não tem fresta: ninguém mira a fresta, e o crítico não corta a proteção pela metade',
     'sopro':     f"a cada {SOPRO['recarga']} rodadas sopra em todos os inimigos a até {SOPRO['alcance']} casas: um ataque em cada um, com a categoria do corpo, que não se apara; o tempo e a cobertura valem como num tiro",
 }
 

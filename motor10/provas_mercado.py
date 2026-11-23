@@ -177,15 +177,16 @@ def _faixa_e_caixa(n):
 
 
 def _o_ano(A):
-    """4. um ano de viradas numa vila de 400 pessoas: a comida fica entre 0,6 e 2,2 bases, cara no fim do inverno e barata depois da colheita"""
+    """4. um ano de viradas numa vila de 400 pessoas: a comida fica entre 0,6 e 2,2 bases, mais cara na entressafra (do fim do inverno ao fim da primavera) e mais barata depois da colheita.
+    (O que se mede: a faixa do ano; o fim do inverno pelo menos 10% acima da base e 40% acima do pós-colheita; o pós-colheita pelo menos 10% abaixo da base; o piso do ano no pós-colheita.)"""
     S = {d: v[0] for d, v in A['serie'].items()}; lo = min(S, key=S.get); hi = max(S, key=S.get); E = A['E']; est = M.ESTACAO
     marcos = [('o Dia 1', 1), ('o fim da primavera', est + 1), ('o fim do verão', 2 * est + 1), ('depois da colheita (o fim do outono)', 3 * est + 1), ('o fim do inverno', 4 * est + 1)]
     colheita = S[3 * est + 1]; inverno = S[4 * est + 1]; acima = sum(1 for v in S.values() if v > inverno)
     certo = (FAIXA_ANO[0] <= S[lo] and S[hi] <= FAIXA_ANO[1] and inverno >= 1.10 and colheita <= 0.90 and inverno >= 1.4 * colheita and abs(lo - (3 * est + 1)) <= 3
              and A['prata'] and A['inteiro'] and A['faixa'] and E['relogio']['dia'] == M.ANO + 1)
-    return ('O ANO: 364 viradas numa vila de 400 pessoas; a comida fica entre 0,6 e 2,2 bases, cara no fim do inverno e barata depois da colheita',
+    return ('O ANO: 364 viradas numa vila de 400 pessoas; a comida fica entre 0,6 e 2,2 bases, mais cara na entressafra (do fim do inverno ao fim da primavera) e mais barata depois da colheita',
             f"a comida andou de × {vz(S[lo])} (Dia {lo}) a × {vz(S[hi])} (Dia {hi}); " + ' · '.join(f"{nome}: × {vz(S[d])}" for nome, d in marcos)
-            + f"; o fim do inverno fica {pc(inverno / colheita - 1)} acima do pós-colheita e {pc(inverno - 1)} acima da base, mas NÃO é o pico do ano: o pico é a entressafra (Dia {hi}), e {acima} dias do ano são mais caros que o fim do inverno, "
+            + f"; a entressafra começa no fim do inverno ({pc(inverno / colheita - 1)} acima do pós-colheita e {pc(inverno - 1)} acima da base) e tem o pico no fim da primavera (Dia {hi}): {acima} dias do ano são mais caros que o fim do inverno, "
             f"porque a colheita da primavera é meia (tabelas_mundo.COLHEITA); o celeiro: {_m(round(E['lugares']['vila']['estoque']['comida']))} de comida no fim (começou com {_m(round(C.celeiro_dias(1) * 400))}); a prata fecha; estado {'inteiro' if A['inteiro'] else 'QUEBRADO'}", certo)
 
 
@@ -348,12 +349,12 @@ def _recusas(n):
     estado.aplica(E, 'mestre', [['pessoa', 'eu', 'pv', 'soma', -9999], ['pessoa', 'eu', 'estado', 'poe', 'morto'], ['item', 'i0001', 'uso', 'poe', None], ['item', 'i0002', 'uso', 'poe', None]], texto='o Aldric morre, para a prova'); morto = recusa(lambda: mercado.vender(E, 'eu', 'lenha', 5))
     with contextlib.redirect_stdout(io.StringIO()) as tela: mercado.main([])
     uso = tela.getvalue().startswith('mercado.py') and 'Uso' in tela.getvalue()
-    with contextlib.redirect_stdout(io.StringIO()) as tela2: mercado.main(['comprar'])
-    uso2 = tela2.getvalue() == tela.getvalue()
-    return ('AS RECUSAS: o que não pode ser negociado é recusado e nada muda pela metade; lugar sem povo não tem mercado; sem argumento, o script só diz o uso',
+    meias = [recusa(lambda a=a: mercado.main(a)) or '' for a in (['comprar'], ['funda'], ['funda', 'abc'], ['funda', '-5'], ['preco'])]      # o comando pela metade, ou com o número torto: UMA frase que diz o que falta
+    uso2 = all(m and len(m.splitlines()) == 1 and 'Uso' not in m for m in meias)
+    return ('AS RECUSAS: o que não pode ser negociado é recusado e nada muda pela metade; lugar sem povo não tem mercado; sem argumento, o script só diz o uso; com o comando pela metade, uma frase diz o que falta',
             f"{len(rec)} de {len(casos)} recusados" + ('' if len(rec) == len(casos) else f" (passaram: {', '.join(x for x, _ in casos if x not in rec)})") + f"; estado {'intacto' if igual else 'MUDOU'}; "
             f"na vila da etapa 1 (sem `pop`): comprar, vender e vender peça recusados, e a virada não gera evento nenhum: {'sim' if parado else 'NÃO'}; abrir mercado onde já há: {'recusado' if r2 else 'ACEITO'}; morto não negocia: {'recusado' if morto else 'ACEITO'}; "
-            f"sem argumento (e com o comando pela metade): {'só o uso' if uso and uso2 else 'FEZ OUTRA COISA'}; a prata fecha", len(rec) == len(casos) and igual and parado and r2 and morto and uso and uso2 and prata(E) == p0 and prata(S) == s0)
+            f"sem argumento: {'só o uso' if uso else 'FEZ OUTRA COISA'}; cinco comandos pela metade ou com número torto: {'uma frase cada' if uso2 else 'NÃO'} («{meias[2][:44]}...»); a prata fecha", len(rec) == len(casos) and igual and parado and r2 and morto and uso and uso2 and prata(E) == p0 and prata(S) == s0)
 
 
 def _a_mesa(n):

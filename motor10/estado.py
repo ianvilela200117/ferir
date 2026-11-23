@@ -22,9 +22,12 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias)
   O ITEM SEM DONO está num lugar (`onde`). Ali ele é da LOJA (a prateleira), a não ser que esteja SOLTO (`solto`): caído no chão, de quem achar.
   A MORTE é uma regra só, dentro do efeito ['pessoa', id, 'estado', 'poe', 'morto']: o morto não fica com nada. As peças dele (vestidas ou guardadas, e os núcleos)
-    caem SOLTAS onde ele morreu; as obras dele se desfazem (a matéria se perde; o núcleo cai com o resto); a carga e a prata ficam no estoque desse lugar
-    (num lugar com povo, o povo fica com elas; no ermo, ficam no chão, de quem achar).
+    caem SOLTAS onde ele morreu, com a marca `corpo` (de quem eram); as obras dele se desfazem (a matéria se perde; o núcleo cai com o resto); a carga e a prata
+    ficam no estoque desse lugar (num lugar com povo, o povo fica com elas; no ermo, ficam no chão, junto do corpo).
+    O QUE ERA DE UM MORTO NÃO MUDA DE MÃO SOZINHO: quem passa ali acha o corpo, mas quem fica com o quê é decisão de cena, por evento "mestre" (o herdeiro é da etapa 6).
   QUEM SAIU para o ermo (a saída de caça ou de coleta, escrita em marca.caca) está FORA: `fora()` diz onde, e `presente()` recusa o ato da vila.
+  COM UMA LUTA ABERTA (no caderno do turno) O MUNDO NÃO ANDA: `aplica()` só aceita a luta que volta ao estado (evento "luta"), a mão do Mestre (evento "mestre")
+    e a nota da saída de caça que diz que ela está naquela luta. O resto é recusado, de qualquer pessoa, com a frase que diz como acabar ou soltar a luta.
   O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos. Fora disso, não aconteceu.
 
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
@@ -98,17 +101,63 @@ def fora(E, pid):
 
 def onde(E, pid): return fora(E, pid) or E['gente'][pid]['lugar']          # onde o corpo está agora: no ermo da saída, ou no lugar onde mora
 def em(E, lid): l = E['lugares'][lid]; return l.get('em', 'em ' + l['nome'])
+def de(E, lid):
+    """o lugar depois de "de", com a contração do artigo do nome: "da Vila de Prova", "do Mato", "de Pedra Rasa"""
+    n = E['lugares'][lid]['nome']; art, _, resto = n.partition(' ')
+    return {'a': 'da ', 'o': 'do ', 'as': 'das ', 'os': 'dos '}[art] + resto if art in ('a', 'o', 'as', 'os') and resto else 'de ' + n
 
 
 def morte_diz(E, p):
     m = p.get('morte') or {}
-    return f"morreu no Dia {m['dia']}, {em(E, m['onde'])}" if m.get('onde') in E['lugares'] else 'está morto'
+    return f"morreu no Dia {m['dia']}, {em(E, m['onde'])}" if m.get('onde') in E['lugares'] else 'já morreu'
+
+
+def de_morto(it):
+    """esta peça solta ficou com o corpo de alguém que morreu? Devolve o id do morto (a marca `corpo`), True se só a história o diz (save antigo), ou None"""
+    if not it.get('solto') or it.get('dono'): return None
+    return it.get('corpo') or (True if 'ficou com o corpo de' in ''.join((it.get('historia') or [])[-1:]) else None)
+
+
+def tantos(n, um, muitos=None):
+    """o número com a palavra no singular ou no plural: "1 bloco", "3 blocos", "2 ações" (tantos(2, 'ação', 'ações'))"""
+    return f"{n:g} {um if n == 1 else (muitos or um + 's')}"
+
+
+# ---------- a luta aberta tranca o mundo ----------
+def luta_aberta(E):
+    """o arquivo (como o save o guarda) da luta que está aberta no caderno do turno, ou None"""
+    return next((l['arq'] for l in E['turno'].get('lutas', []) if not l.get('fim')), None)
+
+
+def luta_diz(E):
+    """a frase da tranca (ou None, se não há luta aberta): há uma luta aberta, o mundo não anda, e é assim que ela acaba ou se solta"""
+    arq = luta_aberta(E)
+    if not arq: return None
+    dono = next((k for k, p in E['gente'].items() if isinstance(p, dict) and isinstance((p.get('marca') or {}).get('caca'), dict) and p['marca']['caca'].get('luta') == arq), None)
+    quem = f' quem={dono}' if dono and dono != eu(E) else ''
+    if dono: acaba, solta = f'`caca.py luta "Nome: ordem"{quem}`', f'`caca.py larga "por quê"{quem}`'
+    else: acaba, solta = f'`ato.py luta roda {arq} "Nome: ordem"`', f'`ato.py luta larga {arq} "por quê"`'
+    return f"há uma luta aberta ({arq}): enquanto ela não acabar, nada mais anda no mundo. Para seguir a luta: {acaba}. Se o arquivo se perdeu ou a cena mudou, o Mestre a solta: {solta}."
+
+
+def sem_luta(E):
+    """recusa, com a frase, se há luta aberta no mundo: todo ato que grava chama isto ANTES de cobrar ou rolar qualquer coisa"""
+    t = luta_diz(E)
+    if t: sys.exit(t)
+
+
+def _nota_da_luta(E, efeitos):
+    """os efeitos são só a nota da saída de caça dizendo que ela está NAQUELA luta aberta? (é o que a caça escreve logo ao abrir a luta: não mexe em tempo, prata nem peça)"""
+    abertas = [l['arq'] for l in E['turno'].get('lutas', []) if not l.get('fim')]
+    return bool(efeitos) and all(isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] == 'marca.caca' and ef[3] == 'poe' and isinstance(ef[4], dict)
+                                 and ef[4].get('fase') == 'luta' and ef[4].get('luta') in abertas for ef in efeitos)
 
 
 def presente(E, pid, o_que='agir aqui'):
-    """a condição de todo ato da vila: a pessoa existe, está viva e está NO LUGAR ONDE MORA (sem saída aberta). Senão, recusa com a frase. Devolve a pessoa."""
+    """a condição de todo ato da vila: a pessoa existe, está viva, está NO LUGAR ONDE MORA (sem saída aberta) e não há luta aberta no mundo. Senão, recusa com a frase. Devolve a pessoa."""
     p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
-    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não está vivo ({morte_diz(E, p)})")
+    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não age: {morte_diz(E, p)}")
+    sem_luta(E)
     f = fora(E, pid)
     if f: sys.exit(f"{p['nome']} está fora, {em(E, f)} (a saída está aberta): não pode {o_que}. `caca.py ver` diz o que há à frente; `caca.py volta` fecha a saída.")
     return p
@@ -178,7 +227,7 @@ def _morre(E, pid):
     for oid in [k for k, o in E['itens'].get('obras', {}).items() if o.get('quem') == pid]: del E['itens']['obras'][oid]
     for it in E['itens']['itens'].values():
         if it.get('dono') == pid:
-            it['dono'] = None; it['uso'] = None; it['onde'] = lid; it['solto'] = True
+            it['dono'] = None; it['uso'] = None; it['onde'] = lid; it['solto'] = True; it['corpo'] = pid      # solta, junto do corpo: `corpo` diz de quem era (sai quando a peça ganha dono ou vai para a prateleira)
             it.setdefault('historia', []).append(f"Dia {dia}: ficou com o corpo de {p['nome']} {em(E, lid)}")
     est = l.setdefault('estoque', {})
     for b, q in (p.get('carga') or {}).items():
@@ -361,7 +410,7 @@ def _um(E, ef):
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
         if not (isinstance(it['dur'], list) and len(it['dur']) == 2 and all(_int(x) for x in it['dur']) and 0 <= it['dur'][0] <= it['dur'][1]): return _erro(ef, 'a durabilidade é [quanto tem, quanto cabe]')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
-        if it.get('dono') is not None and E['gente'][it['dono']]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][it["dono"]]["nome"]} não está vivo: não recebe peça')
+        if it.get('dono') is not None and E['gente'][it['dono']]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][it["dono"]]["nome"]} morreu: não recebe peça')
         if it.get('onde') is not None and it['onde'] not in E['lugares']: return _erro(ef, f'não há o lugar "{it["onde"]}"')
         if it.get('dono') is not None and it.get('onde') is not None: return _erro(ef, 'a peça nasce com dono OU num lugar, não os dois')
         if it.get('dono') is None and it.get('onde') is None: return _erro(ef, 'a peça nasce com dono (dono=) ou num lugar (onde=): solta no nada, não existe')
@@ -378,20 +427,20 @@ def _um(E, ef):
         _, _, campo, op, val = ef
         if campo == 'dono' and op == 'poe':
             if val is not None and val not in E['gente']: return _erro(ef, f'não há a pessoa "{val}"')
-            if val is not None and E['gente'][val]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][val]["nome"]} não está vivo: não recebe peça')
+            if val is not None and E['gente'][val]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][val]["nome"]} morreu: não recebe peça')
             it['dono'] = val; it['uso'] = None
-            if val is not None: it['onde'] = None; it.pop('solto', None)
+            if val is not None: it['onde'] = None; it.pop('solto', None); it.pop('corpo', None)
             return
         if campo == 'onde' and op == 'poe':
             if val is not None and val not in E['lugares']: return _erro(ef, f'não há o lugar "{val}"')
             if val is not None and it.get('dono'): return _erro(ef, 'peça com dono não fica largada num lugar: tire o dono antes')
             it['onde'] = val
-            if val is None: it.pop('solto', None)
+            if val is None: it.pop('solto', None); it.pop('corpo', None)
             return
         if campo == 'solto' and op == 'poe':
             if val and (it.get('dono') or it.get('onde') is None): return _erro(ef, 'só fica solta (caída no chão) a peça sem dono que está num lugar')
             if val: it['solto'] = True
-            else: it.pop('solto', None)
+            else: it.pop('solto', None); it.pop('corpo', None)
             return
         if campo == 'sob_medida' and op == 'poe':
             if val is not None and not (isinstance(val, dict) and val.get('dono') and _num(val.get('grau', 0)) and T.SOB_MEDIDA_GRAUS[0] <= val.get('grau', 0) <= T.SOB_MEDIDA_GRAUS[1]): return _erro(ef, 'o sob medida é {dono, grau de 1 a 4}, ou nada')
@@ -414,9 +463,11 @@ def _um(E, ef):
 
 def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
     """A ÚNICA PORTA. Ensaia todos os efeitos numa cópia; se um falha, NADA muda e o erro sai com o motivo.
-    O evento cujos efeitos não mudam nada (somar no que já está no teto, pôr o que já está posto) não aconteceu: não entra no registro, e devolve None."""
+    O evento cujos efeitos não mudam nada (somar no que já está no teto, pôr o que já está posto) não aconteceu: não entra no registro, e devolve None.
+    COM UMA LUTA ABERTA no mundo, só entram a luta que volta ao estado, a mão do Mestre e a nota da saída de caça que está naquela luta (tabelas_mundo.NA_LUTA)."""
     if tipo not in M.EVENTOS: sys.exit(f'evento desconhecido: "{tipo}" (os que existem: {", ".join(M.EVENTOS)})')
     if not efeitos: sys.exit(f'evento "{tipo}" sem efeito: recusado. O que não muda número não aconteceu.')
+    if tipo not in M.NA_LUTA and luta_aberta(E) and not _nota_da_luta(E, efeitos): sys.exit(luta_diz(E))
     ensaio = {k: copy.deepcopy(E[k]) for k in ARQS}
     for ef in efeitos:
         if tipo not in M.NASCE and isinstance(ef, (list, tuple)) and len(ef) > 1 and ef[0] in ('pessoa', 'lugar') and ef[1] == 'nasce':
@@ -474,7 +525,7 @@ def valida(E):
         if not _int(p['moedas']) or p['moedas'] < 0: P.append(f'{n} tem prata errada: {p["moedas"]}')
         if p['estado'] not in M.ESTADOS: P.append(f'{n} tem estado desconhecido: {p["estado"]}')
         if not 0 <= p['pv'] <= pv_max(p): P.append(f'{n} tem PV fora da faixa: {p["pv"]} de {pv_max(p)}')
-        if p['estado'] == 'vivo' and p['pv'] <= 0: P.append(f'{n} está vivo com PV zero')
+        if p['estado'] == 'vivo' and p['pv'] <= 0: P.append(f'{n} consta entre os vivos com PV zero')
         for m in M.MEDIDORES:
             if not 0 <= p['corpo'][m] <= M.MED_MAX: P.append(f'{n} tem {m} fora da faixa: {p["corpo"][m]}')
         for b, q in (p.get('carga') or {}).items():
@@ -488,7 +539,7 @@ def valida(E):
             if usos.count(u) > 1: P.append(f'{n} tem duas peças em "{u}"')
         s = (p.get('marca') or {}).get('caca')
         if p['estado'] == 'morto':
-            if p['moedas'] or p.get('carga'): P.append(f'{n} está morto e ainda tem prata ou carga (o morto não fica com nada)')
+            if p['moedas'] or p.get('carga'): P.append(f'{n} morreu e ainda tem prata ou carga (quem morre não fica com nada)')
             if s is not None: P.append(f'{n} morreu com a saída aberta: `caca.py volta quem={pid}` faz as contas e fecha (ou `caca.py larga quem={pid}`)')
         if s is not None:
             if not isinstance(s, dict) or s.get('ermo') not in E['lugares']: P.append(f'{n} tem a saída (marca.caca) torta: não diz um ermo que existe'); return
@@ -507,13 +558,13 @@ def valida(E):
         if it.get('tipo') not in ('arma', 'armadura', 'escudo', 'nucleo'): P.append(f'{n} tem tipo desconhecido: {it.get("tipo")}')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): P.append(f'{n} tem categoria fora da tabela: {it["cat"]}')
         if dono is not None and dono not in E['gente']: P.append(f'{n} tem dono que não existe: {dono}')
-        if it.get('uso') and not dono: P.append(f'{n} está vestida sem dono')
-        if dono in E['gente'] and E['gente'][dono]['estado'] == 'morto': P.append(f'{n} ' + ('está vestida num morto' if it.get('uso') else 'é de um morto (o morto não fica com nada)'))
+        if it.get('uso') and not dono: P.append(f'{n} está em uso sem dono')
+        if dono in E['gente'] and E['gente'][dono]['estado'] == 'morto': P.append(f'{n} ' + ('está em uso com alguém que morreu' if it.get('uso') else 'é de alguém que morreu (quem morre não fica com nada)'))
         if not 0 <= it['dur'][0] <= it['dur'][1]: P.append(f'{n} tem durabilidade fora da faixa')
         if it.get('onde') is not None and it['onde'] not in E['lugares']: P.append(f'{n} está num lugar que não existe: {it["onde"]}')
         if it.get('onde') is not None and dono: P.append(f'{n} tem dono e está largada num lugar ao mesmo tempo')
         if it.get('onde') is None and dono is None: P.append(f'{n} não tem dono nem lugar: não está em parte nenhuma')
-        if it.get('solto') and (dono or it.get('onde') is None): P.append(f'{n} está solta (caída no chão) e tem dono, ou não tem lugar')
+        if it.get('solto') and (dono or it.get('onde') is None): P.append(f'{n} consta no chão (sem dono) e tem dono, ou não tem lugar')
         if it.get('uso') and it.get('uso') not in PARTES_VESTE: P.append(f'{n} tem uso desconhecido: {it["uso"]}')
         if it.get('tipo') == 'nucleo' and (it['dur'][0] != it['dur'][1] or it.get('uso')): P.append(f'{n} é núcleo e está gasto ou em uso')
     for iid, it in L.items(): tenta(f'o item {iid}', lambda: item_(iid, it))
@@ -552,33 +603,54 @@ def valida(E):
 
 
 if __name__ == '__main__':
+    import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     a = sys.argv[1:]
     if a[:1] == ['valida']:
         P = valida(carrega()); print('\n'.join(P) if P else 'o estado está inteiro.'); sys.exit(1 if P else 0)
     elif a[:1] == ['eventos']:
         arq = os.path.join(pasta(), 'eventos.jsonl'); n = int(a[1]) if len(a) > 1 and a[1].isdigit() else 15
         for l in (open(arq, encoding='utf-8').read().splitlines()[-n:] if os.path.exists(arq) else []):
-            ev = json.loads(l); print(f"#{ev['id']} Dia {ev['dia']}, {M.BLOCOS[ev['bloco']]} · {ev['tipo']}" + (f" · {ev['texto']}" if ev['texto'] else '') + f" · {len(ev['efeitos'])} efeito(s)")
+            ev = json.loads(l); print(f"#{ev['id']} Dia {ev['dia']}, {M.BLOCOS[ev['bloco']]} · {ev['tipo']}" + (f" · {ev['texto']}" if ev['texto'] else '') + f" · {tantos(len(ev['efeitos']), 'efeito')}")
     elif a[:1] == ['pessoa'] and len(a) > 1:
         E = carrega(); p = E['gente'].get(a[1]) or sys.exit(f'não há a pessoa "{a[1]}"')
-        import pessoas
+        import pessoas, corpo
+        from itens import rotulo
+        if p['estado'] != 'vivo':                           # do morto só se diz que morreu (e onde): não tem ficha de luta, nem fome, nem forças, nem peça
+            print(f"{p['nome']}, nível {p['nivel']}: {morte_diz(E, p)}. Quem morreu não fica com nada: o que era de {p['nome']} caiu ali."); sys.exit()
         print(pessoas.linha(pessoas.ficha(lutador(E, a[1]))))
-        print(f"  corpo: {p['corpo']} · feridas: {p['feridas']} · prata: {p['moedas']} · {em(E, onde(E, a[1]))}" + (f" · MORTO ({morte_diz(E, p)})" if p['estado'] != 'vivo' else ''))
+        feridas = ', '.join(f"{f['parte']}{' (grave)' if f['grave'] else ''}, do Dia {f['dia']}" for f in p['feridas']) or 'nenhuma'
+        print(f"  corpo: {corpo.diz(p)} · feridas: {feridas} · prata: {p['moedas']} · {em(E, onde(E, a[1]))}")
         if p.get('carga'): print('  carga: ' + ', '.join(f'{q:g} de {b}' for b, q in p['carga'].items()))
+        usos = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo')
         for i, it in E['itens']['itens'].items():
-            if it.get('dono') == a[1]: print(f"  {i} {it['nome']} ({T.CATS[it['cat']]}, {it['dur'][0]}/{it['dur'][1]})" + (f" · em uso: {it['uso']}" if it.get('uso') else ' · guardada'))
+            if it.get('dono') == a[1]: print(f"  {i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]))}" + (f" · em uso, {usos.get(it['uso'], it['uso'])}" if it.get('uso') else ' · na guarda'))
     elif a[:1] == ['lugar'] and len(a) > 1:
         E = carrega(); l = E['lugares'].get(a[1]) or sys.exit(f'não há o lugar "{a[1]}" (os que há: {", ".join(E["lugares"])})')
-        print(json.dumps(l, ensure_ascii=False, indent=1))
+        from itens import FEM, rotulo
+        def bem(b): n, c = M.le_materia(b); return b if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+        mil = lambda x: f'{int(x):,}'.replace(',', '.') if float(x).is_integer() else f'{x:g}'.replace('.', ',')
+        conta = lambda d, teto=None, nome=str: ' · '.join(f"{nome(k)} {mil(v)}" + (f"/{mil(teto[k])}" if teto and k in teto else '') for k, v in d.items()) or 'nada'
+        print(f"{l['nome']} [{a[1]}] · {l.get('tipo', 'lugar')}" + (f" · {l['habitat']}" if l.get('habitat') else '') + (f" · perigo {l['perigo']}" if l.get('perigo') else '') + (f" · a {tantos(l['longe'], 'bloco')} dos vizinhos" if l.get('longe') else '')
+              + (f" · {mil(l['pop'])} de povo" if l.get('pop') else '') + (' · há cama' if l.get('cama') else '') + (f" · oficina {l['oficina']}" if l.get('oficina') is not None else ''))
+        if l.get('sobre'): print(f"  {l['sobre']}")
+        if l.get('vizinhos'): print('  vizinhos: ' + ', '.join(f"{E['lugares'][v]['nome']} [{v}]" if v in E['lugares'] else v for v in l['vizinhos']))
+        if isinstance(l.get('preparo'), dict) and l['preparo']: print('  preparo da forja: ' + ' · '.join(f"{k} até o {T.CATS[v]}" for k, v in l['preparo'].items() if _int(v) and 0 <= v < len(T.CATS)))
+        print('  estoque: ' + conta({k: v for k, v in l['estoque'].items() if v}, nome=bem))
+        if isinstance(l.get('produz'), dict) and l['produz']: print('  produz por dia (antes de o preço e a estação mexerem): ' + conta(l['produz'], nome=bem))
+        if isinstance(l.get('bichos'), dict) or isinstance(l.get('teto'), dict): print('  SÓ O MESTRE, os bichos (há/cabem): ' + conta(l.get('bichos') or {}, l.get('teto') or {}))
+        if isinstance(l.get('coleta'), dict) or isinstance(l.get('coleta_teto'), dict): print('  SÓ O MESTRE, a matéria para tirar (há/cabe): ' + conta(l.get('coleta') or {}, l.get('coleta_teto') or {}, nome=bem))
+        outros = {k: v for k, v in l.items() if k not in ('nome', 'em', 'tipo', 'habitat', 'perigo', 'longe', 'pop', 'cama', 'oficina', 'sobre', 'vizinhos', 'preparo', 'estoque', 'produz', 'bichos', 'teto', 'coleta', 'coleta_teto')}
+        if outros: print('  e mais: ' + ' · '.join(f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in outros.items()))
         for i, it in E['itens']['itens'].items():
-            if it.get('onde') == a[1]: print(f"  {i} {it['nome']} ({T.CATS[it['cat']]})" + (' · SOLTA (caída no chão)' if it.get('solto') else ' · na prateleira'))
+            if it.get('onde') == a[1]: print(f"  {i} {rotulo(it)}" + ((' · NO CHÃO, junto de um corpo (quem fica com ela é decisão de cena)' if de_morto(it) else ' · NO CHÃO, de quem achar') if it.get('solto') else ' · na prateleira'))
     elif a[:1] == ['mestre'] and len(a) in (2, 3):
         E = carrega()
         try: ef = json.loads(a[1])
         except ValueError as x: sys.exit(f'os efeitos vêm em JSON: uma lista de efeitos, cada um uma lista ({x}). Veja os verbos: python3 estado.py')
         if not isinstance(ef, list) or not ef or not all(isinstance(x, list) for x in ef): sys.exit('os efeitos são uma lista de listas: \'[["pessoa","eu","moedas","soma",5]]\'')
+        if len(a) > 2 and not a[2].strip(): sys.exit('diga o que houve, entre aspas: o evento do Mestre vai para o registro e para o RETOMAR com esse texto (`python3 estado.py mestre \'[["pessoa","eu","moedas","soma",5]]\' "achou cinco moedas"`)')
         ev = aplica(E, 'mestre', ef, quem=[x[1] for x in ef if x[:1] == ['pessoa'] and len(x) > 1 and x[1] in E['gente']][:1], texto=a[2] if len(a) > 2 else 'o Mestre decide')
         if not ev: print('nada mudou: os efeitos já eram verdade. Nenhum evento foi registrado.'); sys.exit()
-        grava(E); print(f"evento #{ev['id']} (mestre): {ev['texto']} · {len(ev['efeitos'])} efeito(s)"); P = valida(E)
+        grava(E); print(f"evento #{ev['id']} (mestre): {ev['texto']} · {tantos(len(ev['efeitos']), 'efeito')}"); P = valida(E)
         if P: print('ATENÇÃO, o estado ficou com problema:\n  ' + '\n  '.join(P))
     else: print(__doc__)
