@@ -16,27 +16,30 @@ FAMILIA: punho adaga espada maça machado martelo lança montante alabarda malho
 CATEGORIA: Comum Incomum Raro Épico Único Lendário Mítico Primordial
 """
 import json, os, sys
+import tabelas as T
 from tabelas import CATS, MULT, RD, BON, DUR, FAMILIAS, MATERIAIS, PARTES, PEDE_PESO, DUAS_MAOS
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARQ = os.path.join(AQUI, 'dados', 'itens.json')
 
-# os efeitos que a luta sabe rodar. Efeito que não está aqui não entra numa peça.
+# os efeitos que a luta sabe rodar, e em que tipo de peça cada um vale. Efeito que não está aqui não entra numa peça.
 EFEITOS = {
-    'sangra':     'a ferida que ela abre sangra',
-    'critico_19': 'o 19 também é crítico',
-    'derruba':    'uma vez por luta, o golpe que fere derruba',
-    'devolve':    'quem golpeia o dono corpo a corpo leva {valor}',
-    'firme':      'o dono não é derrubado',
-    'leve':       'pede 20 a menos de atributo',
-    'pesa':       'pede 20 a mais de atributo',
-    'nao_quebra': 'não perde durabilidade',
+    'sangra':     ('a ferida que ela abre sangra mais (cinco rodadas)', ('arma',)),
+    'critico_19': ('o 19 também é crítico', ('arma',)),
+    'derruba':    ('uma vez por luta, o golpe que fere derruba', ('arma',)),
+    'devolve':    ('quem golpeia o dono corpo a corpo leva {valor}', ('armadura',)),
+    'firme':      ('o dono não é derrubado', ('armadura', 'escudo')),
+    'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo')),
+    'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo')),
+    'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo')),
 }
 
 
 def cat_i(c):
     """'Raro' ou 2 → 2"""
-    if isinstance(c, int): return c
+    if isinstance(c, int):
+        if not 0 <= c < len(CATS): sys.exit(f'categoria fora da tabela: {c} (vai de 0, Comum, a 7, Primordial)')
+        return c
     n = c.strip().lower().replace('epico', 'épico').replace('unico', 'único').replace('lendario', 'lendário').replace('mitico', 'mítico')
     for i, x in enumerate(CATS):
         if x.lower() == n: return i
@@ -62,6 +65,11 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
         sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo)')
     for e in it['efeitos']:
         if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
+        if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
+        if e['chave'] == 'devolve' and not 1 <= e.get('valor', 0) <= T.devolve_max(c):
+            sys.exit(f'"devolve" numa peça {CATS[c]} vai de 1 a {T.devolve_max(c)} (veio {e.get("valor")})')
+    if sob and not T.SOB_MEDIDA_GRAUS[0] <= sob.get('grau', 1) <= T.SOB_MEDIDA_GRAUS[1]:
+        sys.exit(f'o grau do sob medida vai de {T.SOB_MEDIDA_GRAUS[0]} a {T.SOB_MEDIDA_GRAUS[1]} (veio {sob.get("grau")})')
     it.update(mais)
     return it
 
@@ -73,12 +81,13 @@ def tem(it, chave):
     return None
 
 
-def pede(it):
-    """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível."""
-    aj = (20 if tem(it, 'pesa') else 0) - (20 if tem(it, 'leve') else 0)
+def pede(it, dorme=False):
+    """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível.
+    Peça que dorme (sintonia) não tem efeito nenhum: nem o "leve"."""
+    aj = 0 if dorme else (T.AJUSTE_PESO if tem(it, 'pesa') else 0) - (T.AJUSTE_PESO if tem(it, 'leve') else 0)
     if it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]
-        return f.get('atributo', 'Agilidade' if it['familia'] == 'adaga' else 'Força'), PEDE_PESO[f['peso']] + aj
+        return f.get('atributo', 'Força'), PEDE_PESO[f['peso']] + aj
     if it['tipo'] == 'armadura': return 'Força', MATERIAIS[it['material']]['pede'] + aj
     return 'Força', PEDE_PESO['media'] + aj
 
@@ -91,11 +100,12 @@ def janela(it):
         f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 else 1)
         L.append(f"Ataque: {f['dado']} × {m:g} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + ' casa(s)'}")
     elif it['tipo'] == 'armadura':
-        L.append(f"Proteção: {RD[c] * MATERIAIS[it['material']]['rd']:g} ({it['material']})      Cobre: {', '.join(it['cobre'])}")
+        mat = MATERIAIS[it['material']]
+        L.append(f"Proteção: {RD[c] * mat['rd']:g} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
     else:
-        L.append(f"Defesa: +{BON[c]}")
+        L.append(f"Defesa: +{T.ESCUDO_BASE + BON[c]:g}")
     a, q = pede(it); L.append(f"Pede: {a} {q}")
-    if it['efeitos']: L.append('Efeitos: ' + ' · '.join(EFEITOS[e['chave']].format(valor=e.get('valor', '')) for e in it['efeitos']))
+    if it['efeitos']: L.append('Efeitos: ' + ' · '.join(EFEITOS[e['chave']][0].format(valor=e.get('valor', '')) for e in it['efeitos']))
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")
     if it.get('feito_por'): L.append(f"Feita por: {it['feito_por']}" + (f", Dia {it['dia']}" if it.get('dia') else ''))

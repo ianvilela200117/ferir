@@ -1,5 +1,5 @@
 {
- "nota": "Exemplo de cenário: um corredor escuro, três da casa contra um bando. Serve de molde.",
+ "nota": "Exemplo de cenário: um corredor escuro, três da casa contra um bando. Serve de molde. Cada peça é o id de um item do Livro de Itens ou um atalho [família ou material, categoria]. O atalho de armadura veste o corpo e um elmo igual; \"elmo\": false tira o elmo; \"pecas\": [...] acrescenta peças de armadura.",
  "inicio": "perto",
  "lugar": {"largura": 2, "sem_saida": "B"},
  "tempo": ["escuro"],
