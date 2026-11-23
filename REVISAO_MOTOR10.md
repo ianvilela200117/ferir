@@ -286,15 +286,18 @@ Para repetir: `python3 sims/revisao_motor10/mede.py` (o motor de hoje) e `python
 6. Entre o **b** e o **c**: pediu a opinião do Mestre (a resposta está na conversa: o mesmo mundo, outra era).
 7. **a:** começar o Motor 10 pela luta e pelo Livro de Itens.
 
+**Depois disso o jogador decidiu:** mundo novo, do zero (o save do Ferir fica guardado como está); a arma "mais forte ainda"; e a ordem do trabalho a critério do Mestre.
+
 **O que já está escrito e provado, em `motor10/`:**
 - `REGRAS.md`: o livro de regras da luta e dos itens (um só, numerado, sem história);
 - `tabelas.py`: todos os números num lugar;
 - `itens.py`: o Livro de Itens e a janela do item;
 - `pessoas.py`: a ficha de luta que sai sozinha do que a pessoa veste;
-- `luta.py`: a luta nova, com os dez módulos, as ordens e as paradas;
-- `provas.py`: o banco de provas, **28 de 28** (a saída em `dados/provas_saida.txt`);
-- `MUDANCAS.md`: o diário de mudanças.
+- `luta.py`: a luta nova, turno a turno, com as ordens e as paradas no meio da rodada;
+- `provas.py`: o banco de provas, **51 de 51** (a saída em `dados/provas_saida.txt`);
+- `MUDANCAS.md`: o diário de mudanças (a revisão adversarial do núcleo e os consertos estão lá);
+- `PROJETO.md`: o plano do resto (mundo vivo, magia, bichos, ofício, turno), com as etapas e as seis decisões que são do jogador.
 
-**O que o banco de provas mede hoje:** uma arma duas categorias acima dá ao nível 50 **28%** contra o nível 500; três acima, **76%**; o conjunto inteiro duas acima, **100%**. Um nível 90 vestido de Mítico vence dez de nível 275 de Raro em 100% das vezes. Com a mesma arma, o nível decide (nível 150 contra 50: 96%).
+**O que o banco de provas mede hoje:** uma arma uma categoria acima vence 100 níveis de diferença em 78%; duas acima dão ao nível 50 **63%** contra o nível 500; três acima, **93%**. Um nível 50 vestido de Lendário vence dez de nível 275 de Raro em **92%**. Com a mesma arma, o nível 150 vence o 50 em 88%. Só a armadura duas acima, contra o nível 500, dá 7%: a armadura mantém vivo, a arma decide.
 
-**Falta, nesta ordem:** a magia e os encantos de peça · os bichos · o ofício (forjar, consertar, a escada das categorias) · o mundo vivo · o turno em dois comandos.
+**Falta:** as seis decisões do jogador no `motor10/PROJETO.md`, seção 12, e as sete etapas da seção 10.
