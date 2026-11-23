@@ -146,10 +146,10 @@ def tem(f, traco): return traco in f.get('tracos', ())          # o traço de bi
 
 
 def _agarrado(S, f):
-    """quem agarra este lutador agora (ou None). O bicho que cai ou foge solta."""
+    """quem agarra este lutador agora (ou None). O bicho que cai, foge ou se afasta solta: só se agarra quem está colado."""
     if not f.get('agarrado'): return None
     g = por_nome(S, f['agarrado'])
-    if g and g['estado'] == 'pe': return g
+    if g and g['estado'] == 'pe' and dist(g, f) <= 1: return g
     f['agarrado'] = None
     return None
 
@@ -241,7 +241,7 @@ def golpe(S, a, e, w, livre=''):
     for pc in list(e['partes'].values()) + ([e['escudo']] if e['escudo'] else []):
         if pc['item'] not in S['usadas']: S['usadas'].append(pc['item'])
     j = jogada(bon, crit19=bool(w['efeitos'].get('critico_19')))
-    cab = f"  {a['nome']} {'sopra em' if w.get('area') else 'atira em' if tiro else 'golpeia'} {e['nome']}" + (f' ({livre})' if livre and not w.get('area') else '') + (f" ({esp['nome']})" if esp else '') + (' mirando a fresta' if mira else '')
+    cab = f"  {a['nome']} {'sopra em' if w.get('area') else 'atira em' if tiro else 'golpeia'} {e['nome']}" + (f' ({livre})' if livre and not w.get('area') else '') + (f" ({esp['nome']})" if esp else '') + (' mirando a fresta' if mira else '') + (' (no ar)' if not tiro and w['alcance'] < 2 and _no_ar(S, e) else '')
     if a.get('bicho') and not w.get('area'): a['golpes'] += 1; a['andou_t'] = 0
     if j['falha']:
         diz(S, f"{cab}: dois 1, erra feio"); _gasta(S, a, w, 1); return
@@ -263,7 +263,7 @@ def golpe(S, a, e, w, livre=''):
     esc = e['escudo']
     if j['crit'] and esc and inteiro(S, esc['item']) and arma_de(S, e)['maos'] == 1: _gasta_armadura(S, e, esc['nome'], esc['item'], 1)
     e['pv'] -= dano; e['agressor'] = a['nome']
-    diz(S, f"{cab}: {j['total']:g} contra {df:g}{', CRÍTICO' if j['crit'] else ''}, {parte}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else ''))
+    diz(S, f"{cab}: {j['total']:g} contra {df:g}{', CRÍTICO' + (' (a couraça não abre)' if tem(e, 'couraça') else '') if j['crit'] else ''}, {parte}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else ''))
     dv = efeito(S, e, 'devolve')
     if not tiro and dv and a['estado'] == 'pe':
         a['pv'] -= dv; diz(S, f"    a armadura de {e['nome']} devolve {dv} em {a['nome']} ({max(a['pv'], 0)}/{a['pvmax']})"); S['dano_r'] += dv / a['pvmax']
@@ -312,7 +312,7 @@ def _depois_do_golpe(S, a, e, w, dano, esp, abriu):
         if tem(a, 'veneno'):
             q = max(1, int(dano * TB.VENENO['fracao'])); ant = e['veneno'] or [0, 0]
             e['veneno'] = [max(q, ant[0]), TB.VENENO['rodadas']]; diz(S, f"    {e['nome']} está envenenado ({e['veneno'][0]} por rodada)")
-        if tem(a, 'agarra') and a['estado'] == 'pe' and e.get('ocupa', 1) <= a['ocupa'] and not any(o is not e and o['estado'] == 'pe' and o.get('agarrado') == a['nome'] for o in S['L']):
+        if tem(a, 'agarra') and a['estado'] == 'pe' and dist(a, e) <= 1 and e.get('ocupa', 1) <= a['ocupa'] and not any(o is not e and o['estado'] == 'pe' and _agarrado(S, o) is a for o in S['L']):
             if e.get('agarrado') != a['nome']:
                 e['agarrado'] = a['nome']; diz(S, f"    {a['nome']} AGARRA {e['nome']}"); _para(S, e, f"{e['nome']} foi agarrado por {a['nome']}", so_controlado=True)
             if e['nome'] not in a['feriu_t']: a['feriu_t'].append(e['nome'])
@@ -366,6 +366,7 @@ def _cai(S, e, dano):
 
 def _moral(S, f, motivo):
     if f['moral'] == 'firme' or f['estado'] != 'pe' or (motivo in f['testou'] and motivo != 'golpe_terrivel') or f.get('moral_r') == [S['r'], motivo]: return
+    if not inimigos(S, f): return                           # sem inimigo de pé não há de quem fugir nem a quem se render: quem ficou com o campo não testa a coragem
     f['testou'].append(motivo); f['moral_r'] = [S['r'], motivo]
     meus, deles = len(de_pe(S, f['lado'])), len(de_pe(S, outro(f['lado'])))
     ld = lider(S, f['lado']); bon = f['vontade_b'] + f.get('coragem', 0) + (T.MORAL_LIDER if ld and ld['estado'] == 'pe' and ld is not f else 0)
@@ -457,8 +458,8 @@ def _livre(S, f, nx, avanca):
 
 
 def _troca(S, f, a, avanca):
-    """f pode trocar de lugar com o aliado a? (a não vai para onde f vai, e os dois tomam o mesmo tanto do corredor)"""
-    return _fica(S, a) == avanca and a.get('ocupa', 1) == f.get('ocupa', 1)
+    """f pode trocar de lugar com o aliado a? (a não vai para onde f vai, os dois tomam o mesmo tanto do corredor, e ninguém tira do lugar quem o bicho agarrou)"""
+    return _fica(S, a) == avanca and a.get('ocupa', 1) == f.get('ocupa', 1) and not _agarrado(S, a)
 
 
 def _rumo(S, f, w, alvo=None):
@@ -520,7 +521,7 @@ def _decide(S, f, pagou):
     if nome and not pref:
         if f.get('controla'): _para(S, f, f"o alvo de {f['nome']} ({nome}) não está mais de pé")
         o['alvo'] = None
-    if f.get('bicho') and not pref: pref = next((x[0] for x in al if x[0].get('agarrado') == f['nome']), None)      # o bicho não larga quem agarrou
+    if f.get('bicho') and not pref: pref = next((x[0] for x in al if _agarrado(S, x[0]) is f), None)      # o bicho não larga quem agarrou
     if f.get('sopro') and f['sopro_r'] <= 0 and f['fol'] >= f['sopro']['folego']:              # o SOPRO: quando pega dois ou mais, ou quando não alcança ninguém de outro jeito
         n = len(_no_sopro(S, f))
         if n >= 2 or (n == 1 and not al): return ('sopro',)
@@ -731,7 +732,7 @@ def situacao(S):
                      + (f" · feridas: {fer}" if fer else '') + (f" · sangrando ({f['sangra'][0]} por rodada)" if f['sangra'] and f['estado'] == 'pe' else '')
                      + (' · abalado' if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else '')
                      + (f" · envenenado ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · agarrado por {f['agarrado']}" if f['estado'] == 'pe' and _agarrado(S, f) else '')
-                     + (f" · bicho {f['tamanho']}" + (', encurralado' if f.get('encurralado') else '') if f.get('bicho') else ''))
+                     + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralado' if f.get('encurralado') else '') if f.get('bicho') else ''))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))
     if S['paradas']: L.append('PAROU PORQUE: ' + ' · '.join(S['paradas']))
     return '\n'.join(L)

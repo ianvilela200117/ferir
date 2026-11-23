@@ -284,8 +284,13 @@ def bichos(n):
     falta = [e for e, d in TB.ESPECIES.items() if not all(x in B.ameaca(e) for x in (f"grau {d['grau']}", T.CATS[d['cat']], d['tamanho'][:-1], d['couro'], TB.GRAU_DIZ[d['grau']])) or any(TB.TRACOS[t] not in B.ameaca(e) for t in d['tracos'])
              or ('não foge' in B.ameaca(e)) != d['chefe']]
     a = B.ameaca('lobo', n=4, arma='Comum', armadura='Comum')
-    ok('B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste',
-       f"{len(TB.ESPECIES) - len(falta)} de {len(TB.ESPECIES)} espécies; o lobo contra quem veste Comum: {'diz um terço e o triplo' if 'um terço' in a and 'o triplo' in a else 'NÃO DIZ'}", not falta and 'um terço' in a and 'o triplo' in a and 'são 4' in a)
+    em_bando = [e for e, d in TB.ESPECIES.items() if d['bando'][1] > 1]; avisa = [e for e in em_bando if 'Em bando: o grau é o de' in B.ameaca(e) and 'Em bando' not in B.ameaca(e, n=1)]
+    sozinhas = [e for e, d in TB.ESPECIES.items() if d['bando'][1] == 1 and 'Em bando' not in B.ameaca(e)]; rato = B.ameaca('ratazana')
+    ok('B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste; '
+       'da que anda em bando, diz que o grau é o de um só, o cerco e o corredor; do bicho pequeno, que o traço dele não derruba gente',
+       f"{len(TB.ESPECIES) - len(falta)} de {len(TB.ESPECIES)} espécies; o lobo contra quem veste Comum: {'diz um terço e o triplo' if 'um terço' in a and 'o triplo' in a else 'NÃO DIZ'}; "
+       f"o aviso do bando em {len(avisa)} de {len(em_bando)} espécies de bando (e em nenhuma das {len(sozinhas)} que andam sós); a ratazana: {'diz que não derruba gente' if 'não derruba nem agarra gente' in rato else 'NÃO DIZ'}",
+       not falta and 'um terço' in a and 'o triplo' in a and 'são 4' in a and len(avisa) == len(em_bando) and len(sozinhas) + len(em_bando) == len(TB.ESPECIES) and 'não derruba nem agarra gente' in rato and 'não derruba nem agarra gente' not in B.ameaca('lobo'))
     # B+: o despojo e o núcleo
     ruim = []; r1 = B.despojo('serpe', random.Random(3)); r2 = B.despojo('serpe', random.Random(3))
     for e, d in TB.ESPECIES.items():
@@ -311,6 +316,74 @@ def bichos(n):
     except SystemExit: rec = 'recusou'
     ok('B+ O CENÁRIO: o bicho que o bichos.bicho devolve passa pelo cenário da luta (o do ato.py também), pelo atalho {"bicho": espécie}, vai ao arquivo e volta; traço fora da lista é recusado',
        f'{certo} de {len(esps)} espécies com a mesma ficha pelos três caminhos e a luta inteira depois de ir ao arquivo; o traço inventado: {rec}', certo == len(esps) and rec == 'recusou')
+    # B+: o agarrado fica onde está, e só se agarra quem está colado
+    viol = pegou = 0; k = max(60, n // 5); caiu = ('CAI', 'MORRE', 'FOGE', 'sangra até cair', 'cai envenenado', 'morre no chão')
+    for _ in range(k):
+        S = luta.nova(varios(2, 30, 1, 1, pre='homem ')(), bi('urso', moral='firme')(), inicio='perto', lugar=dict(largura=1)); luta.corre(S); presos = set()
+        for l in S['log']:
+            if ' AGARRA ' in l: presos.add(l.split(' AGARRA ')[1].strip()); pegou += 1
+            elif ' solta ' in l: presos.discard(l.split(' solta ')[1].strip())
+            elif any(x in l for x in caiu): presos = set() if 'o urso' in l else {x for x in presos if x not in l}
+            else: viol += any(l.startswith(f'  {x} avança') or l.startswith(f'  {x} recua') or l.endswith(f'troca de lugar com {x}') for x in presos)
+    de_lanca = 0
+    for _ in range(k):
+        S = luta.nova(um(30, 1, 1, familia='lança')(), bi('urso')(), inicio='perto'); luta.corre(S); de_lanca += any(' AGARRA ' in l for l in S['log'])
+    ok('B+ O AGARRADO: fica onde está (não anda, não recua, e quem vem atrás não troca de lugar com ele), e só é agarrado quem está colado: o lanceiro, que bate a duas casas, o urso não abraça',
+       f'dois de espada contra o urso num corredor de um, em {k} lutas: {pegou} abraços, e o agarrado saiu do lugar {viol} vez(es); um de lança contra o urso: agarrado em {de_lanca} de {k} lutas', pegou >= k // 2 and viol == 0 and de_lanca == 0)
+    # B+: quem ficou com o campo não testa a coragem (não há de quem fugir nem a quem se render)
+    S = luta.nova(varios(2, 30, 1, 1, pre='vencedor ')(), bi('lobo')(), lugar=dict(sem_saida='A'), quieto=True); S['L'][2]['estado'] = 'morto'; S['L'][0]['pv'] = 1; mudou = 0; k = 200
+    for i in range(k): S['r'] = i + 1; luta._moral(S, S['L'][0], 'metade_caiu' if i % 2 else 'golpe_terrivel'); S['L'][0]['testou'] = []; mudou += S['L'][0]['estado'] != 'pe' or S['L'][0]['abalado']
+    S = luta.nova(varios(2, 30, 1, 1, pre='acuado ')(), bi('lobo')(), lugar=dict(sem_saida='A'), quieto=True); S['L'][0]['pv'] = 1; com = 0
+    for i in range(k): S['r'] = i + 1; luta._moral(S, S['L'][0], 'golpe_terrivel'); com += S['L'][0]['estado'] != 'pe' or S['L'][0]['abalado']; S['L'][0]['abalado'] = False
+    ok('B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé)',
+       f'com o lobo morto, fraquejou em {mudou} de {k} sustos; com o lobo de pé, em {com} (e a um bicho não se rendeu: {"certo" if S["L"][0]["estado"] == "pe" else "RENDEU-SE"})', mudou == 0 and com >= k // 10 and S['L'][0]['estado'] == 'pe')
+    # B+: as espécies (o que o contrato pede da lista, e a API fixa que a caça usa)
+    import tabelas_mundo as M
+    API = ('nome', 'cat', 'grau', 'tamanho', 'bando', 'despojo', 'nucleo', 'habitat'); mal = []; ES = TB.ESPECIES
+    for e, d in ES.items():
+        if any(k not in d for k in API + ('nivel', 'instinto', 'atributos', 'armas', 'couro', 'tracos', 'moral', 'coragem', 'chefe')): mal.append(e); continue
+        lo, hi = d['bando']; mat = [M.le_materia(b) for b in d['despojo'] if ':' in b]
+        if not (d['grau'] in TB.GRAU_DA_CAT[d['cat']] and d['tamanho'] in TB.TAMANHOS and d['couro'] in TB.COUROS and d['armas'] and all(x in TB.ARMAS_CORPO for x in d['armas']) and all(t in TB.TRACOS for t in d['tracos'])
+                and set(d['atributos']) == set(T.ATRIBUTOS) and d['instinto'] in T.MAESTRIAS and 1 <= lo <= hi and d['habitat'] and d['nucleo'] == d['chefe'] and (d['moral'] == 'firme') == d['chefe']
+                and d['despojo'] and all(isinstance(q, int) and q >= 1 for q in d['despojo'].values()) and all(b in M.BENS for b in d['despojo'] if ':' not in b)
+                and all(nome in M.MATERIAS and c == min(d['cat'], M.MATERIA_ATE) for nome, c in mat)): mal.append(e)
+    cats = {d['cat'] for d in ES.values()}; graus = {d['grau'] for d in ES.values()}; chefes = {d['cat'] for d in ES.values() if d['chefe']}; usados = {t for d in ES.values() for t in d['tracos']}
+    de_bando = sum(d['bando'][1] > 1 for d in ES.values()); sos_ = sum(d['bando'][1] == 1 and not d['chefe'] for d in ES.values())
+    ok('B+ AS ESPÉCIES: de 12 a 16, do Comum ao Lendário, com o grau de F a S casado com a categoria; há bicho de bando, bicho sozinho e chefe (um núcleo para cada categoria, do Épico ao Lendário); '
+       'os traços são uma lista fechada de 8 a 12, todos em uso; cada espécie tem a ficha inteira, e o despojo fala a língua comum dos bens (matéria da categoria dela, até o Raro)',
+       f"{len(ES)} espécies, {len(ES) - len(mal)} com a ficha inteira; categorias: {', '.join(T.CATS[c] for c in sorted(cats))}; graus: {', '.join(g for g in TB.GRAUS if g in graus)}; "
+       f"{de_bando} de bando, {sos_} que andam sós, {sum(d['chefe'] for d in ES.values())} chefes ({', '.join(T.CATS[c] for c in sorted(chefes))}); {len(TB.TRACOS)} traços, {len(usados)} em uso",
+       not mal and 12 <= len(ES) <= 16 and cats == set(range(6)) and graus == set(TB.GRAUS) and de_bando and sos_ and {3, 4, 5} <= chefes and 8 <= len(TB.TRACOS) <= 12 and usados == set(TB.TRACOS))
+    # B+: o bicho na luta DO MUNDO (ato.py luta), numa pasta de rascunho: a luta volta ao estado por um evento, e o bicho e o corpo dele não entram no mundo; as linhas para a MESA
+    import os, shutil, tempfile
+    import estado, ato, provas_mundo
+    pasta = tempfile.mkdtemp(prefix='m10_bichos_'); antes = os.environ.get('MOTOR10_MUNDO'); os.environ['MOTOR10_MUNDO'] = pasta
+    try:
+        E = provas_mundo.vila(); E['lugares']['mata'] = dict(nome='a Mata de Prova', em='na Mata de Prova', tipo='ermo', estoque={}); conta = {e: 5 for e in ES}
+        estado.aplica(E, 'gera', [['lugar', 'vila', 'vizinhos', 'poe', ['mata']], ['lugar', 'vila', 'bichos.ratazana', 'poe', 37]] + [['lugar', 'mata', f'bichos.{e}', 'poe', q] for e, q in conta.items()], texto='os bichos de prova')
+        estado.grava(E); linhas = B.mesa(E); txt = '\n'.join(linhas); comuns_ = [d['nome'] for d in ES.values() if not d['chefe']]
+        mesa_ok = len(linhas) == 3 and all(x in linhas[2] for x in comuns_) and not any(d['nome'] in txt for d in ES.values() if d['chefe']) and '37' not in txt and len(txt.encode()) <= 2000
+        arq_c, arq_l = os.path.join(pasta, 'cen.json'), os.path.join(pasta, 'luta.json'); livro = sorted(E['itens']['itens']); gente_ = sorted(E['gente'])
+        json.dump(dict(inicio='perto', A=[dict(id='eu', controla=True)], B=[dict(nome='a corça de prova', nivel=0, bicho='corça'), B.bicho('ratazana', nome='a ratazana de prova')]), open(arq_c, 'w', encoding='utf-8'), ensure_ascii=False)
+        with contextlib.redirect_stdout(io.StringIO()):
+            ato.luta_nova(E, arq_c, arq_l)
+            for _ in range(80):
+                E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8'))
+                if S['fim']: break
+                ato.luta_roda(E, arq_l, ['Aldric: atacar'] if S['L'][0]['estado'] == 'pe' else []); estado.grava(E)
+        E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8')); f = S['L'][0]; p = E['gente']['eu']; bs = [x for x in S['L'] if x.get('bicho')]; corpos = [it for it in S['itens'].values() if it.get('tipo') == 'corpo']
+        nl = sum(json.loads(x)['tipo'] == 'luta' for x in open(os.path.join(pasta, 'eventos.jsonl'), encoding='utf-8').read().splitlines())
+        certo = (bool(S['fim']) and not estado.valida(E) and sorted(E['gente']) == gente_ and sorted(E['itens']['itens']) == livro and nl == 1 and len(bs) == 2 and not any(x.get('id') for x in bs)
+                 and len(corpos) == 2 and all(it['dur'] == [1, 1] and not it.get('id') and not it.get('dono') for it in corpos) and E['turno']['lutas'][0]['fim'] == S['fim'] and E['lugares']['mata']['bichos'] == conta
+                 and (p['estado'] == 'morto') == (f['estado'] == 'morto') and (p['estado'] == 'morto' or p['pv'] == max(1, f['pv'])) and len(p['feridas']) == len(f['feridas']))
+        ok('B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, '
+           'e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes',
+           f"a luta acabou ({S['fim']}, {S['r']} rodadas); o Aldric: {p['estado']}, PV {p['pv']}, {len(p['feridas'])} ferida(s); eventos de luta: {nl}; gente e Livro: {'os mesmos' if sorted(E['gente']) == gente_ and sorted(E['itens']['itens']) == livro else 'MUDARAM'}; "
+           f"estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}; MESA: {len(linhas) - 1} lugares, {len(comuns_)} espécies, {len(txt.encode())} bytes", certo and mesa_ok)
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None)
+        if antes is not None: os.environ['MOTOR10_MUNDO'] = antes
+        shutil.rmtree(pasta, ignore_errors=True)
     return out
 
 

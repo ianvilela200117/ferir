@@ -5,6 +5,7 @@ Cada luta: de 1 a 6 contra de 1 a 8, todas as armas e categorias, corredores, al
 peças com efeito, peças já gastas, ordens ao acaso a cada parada, e o estado indo ao arquivo e voltando.
 Em metade das lutas entram BICHOS misturados (bichos.py): bandos inteiros, bichos soltos no meio da gente, bichos do lado da casa, e
 bichos fora do comum (outro tamanho, outra categoria, outro couro, outras armas do corpo, traços ao acaso, com ou sem moral de chefe).
+Toda luta com bicho guarda o registro, e no fim se conta em quantas cada traço foi visto acontecer (o bote, o veneno, o sopro, a fuga...).
 Confere a cada parada: ninguém de pé com PV zero nem acima do máximo · quem o jogador comanda não foge nem se rende pelo dado · o corredor
 nunca tem mais do que cabe (cada um toma o seu tanto; o bicho grande demais fica sozinho na casa) nem os dois lados na mesma casa · a
 durabilidade não sai da faixa · todo caído tem destino no fim · o corpo do bicho não gasta, não tem registro nem dono · bicho não se rende
@@ -83,15 +84,15 @@ def cena(i):
     return A, B, dict(inicio=R.choice(['longe', 'perto', 'colado', 5, 12]), lugar=lugar, tempo=tempo, surpresa=R.choice([None, None, 'A', 'B']))
 
 
-MARCAS = {'matilha': 'a matilha o derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'está envenenado', 'agarra': ' AGARRA ', 'voa': None, 'regenera': ' regenera (', 'apavora': '(pavor:',
-          'couraça': None, 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALADO', 'apertado': 'luta apertado', 'veneno depois da luta': 'para o veneno depois da luta'}
+MARCAS = {'matilha': 'a matilha o derruba', 'bote': '(bote)', 'investida': '(investida)', 'veneno': 'está envenenado', 'agarra': ' AGARRA ', 'voa': '(no ar)', 'regenera': ' regenera (', 'apavora': '(pavor:',
+          'couraça': '(a couraça não abre)', 'sopro': ' SOPRA', 'foge': ' FOGE (', 'encurralado': 'ENCURRALADO', 'apertado': 'luta apertado', 'veneno depois da luta': 'para o veneno depois da luta'}
 fins = collections.Counter(); rod = []; paradas = collections.Counter(); erros = 0; com_bicho = 0; visto = collections.Counter()
 N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 3000
 for i in range(N):
     luta.semente(i); A, B, kw = cena(i)
     try:
-        S = luta.nova(A, B, quieto=(i % 5 != 0), **kw); larg = S['lugar'].get('largura'); passos = 0
-        tem_bicho = any(f.get('bicho') for f in S['L']); com_bicho += tem_bicho
+        tem_bicho = any(p.get('bicho') for p in A + B); com_bicho += tem_bicho
+        S = luta.nova(A, B, quieto=(i % 5 != 0 and not tem_bicho), **kw); larg = S['lugar'].get('largura'); passos = 0        # toda luta com bicho guarda o registro: é nele que se vê o traço acontecer
         so_bichos = {lado: all(f.get('bicho') for f in S['L'] if f['lado'] == lado) for lado in 'AB'}
         if tem_bicho: visto['apertado'] += any('apertado' in a for a in S['avisos'])
         st = luta.corre(S, interativo=True)
@@ -156,5 +157,7 @@ print(f'{N} lutas · erros {erros} · fins {dict(fins)} · rodadas: mediana {rod
 print('paradas mais comuns:', paradas.most_common(14))
 if COM_BICHOS:
     print(f'lutas com bicho: {com_bicho} · em quantas cada traço esteve em campo:', ', '.join(f"{t} {visto['com o traço ' + t]}" for t in TB.TRACOS))
-    print('o que se viu acontecer nas lutas com registro (uma em cada cinco):', ', '.join(f'{k} {visto[k]}' for k in MARCAS if MARCAS[k]))
+    print('em quantas lutas com bicho se viu acontecer (pelo registro):', ', '.join(f'{k} {visto[k]}' for k in MARCAS if MARCAS[k]))
+    nunca = [k for k in MARCAS if MARCAS[k] and not visto[k]]
+    if nunca: print('NÃO SE VIU ACONTECER nestas lutas (rode mais, ou veja a prova do traço no provas.py):', ', '.join(nunca))
 sys.exit(1 if erros else 0)

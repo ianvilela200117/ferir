@@ -11,9 +11,10 @@ import tabelas as T
 
 # ---------- o grau (o que o caçador lê) casa com a categoria do corpo ----------
 # F é o Comum que foge ou que só incomoda; E, o Comum que fere; daí para cima, um grau por categoria.
+# O grau fala de UM bicho contra um homem do mesmo degrau (o conjunto da categoria do bicho); o bando pesa mais, e a ameaça avisa.
 GRAUS = ['F', 'E', 'D', 'C', 'B', 'A', 'S']
 GRAU_DA_CAT = {0: ('F', 'E'), 1: ('D',), 2: ('C',), 3: ('B',), 4: ('A',), 5: ('S',)}
-GRAU_DIZ = dict(F='presa: quase não fere', E='perigo para quem está sozinho e mal armado', D='perigo para um homem armado', C='mata um veterano',
+GRAU_DIZ = dict(F='presa: sozinha quase nunca derruba um homem armado, mas o golpe de sorte abre ferida', E='perigo para quem está sozinho e mal armado', D='perigo para um homem armado', C='mata um veterano',
                 B='pede um grupo', A='pede um grupo de mestres', S='calamidade')
 
 # ---------- o tamanho ----------
@@ -51,19 +52,20 @@ MATILHA_CORAGEM = 4         # o que o bicho de matilha soma na coragem enquanto 
 BOTE = dict(ini=20, acerto=8, dados=3, atordoa=1)   # a iniciativa a mais na primeira rodada; o acerto do primeiro golpe; quantas vezes os dados; ações que perde quem o bote derruba
 INVESTIDA = dict(casas=2, acerto=8, dados=3)        # quanto tem de correr desde o último golpe; o acerto da carga; quantas vezes os dados
 VENENO = dict(fracao=0.5, rodadas=4, acerto=-2)     # a fração do golpe que a vítima perde por rodada; por quantas rodadas; a pena de quem está envenenado
-AGARRADO = dict(acerto=-4, defesa=-2)               # a pena de quem está agarrado (não tem espaço para a arma)
+AGARRADO = dict(acerto=-4, defesa=-4)               # a pena de quem está agarrado: não tem espaço para a arma, e está tão exposto quanto quem está no chão
 VOA = -6                    # arma de alcance 1 contra o bicho no ar
 REGENERA = 0.15             # a fração do PV máximo que volta a cada turno do bicho
 PAVOR = 28                  # o teste de coragem de quem começa a luta contra o que apavora
 SOPRO = dict(dado='1d8', alcance=4, recarga=2, folego=3, forca=1.2)     # o sopro não se apara; a força dele é fixa, como a da besta
-# o bote, a investida e a matilha não derrubam quem é maior que o bicho; o que agarra não agarra quem é maior que ele
+# o bote, a investida e a matilha não derrubam quem é maior que o bicho; o que agarra não agarra quem é maior que ele, nem quem não está colado nele (um de cada vez)
+PEDE_TAMANHO = ('matilha', 'bote', 'investida', 'agarra')      # os traços que derrubam ou agarram: no bicho pequeno não pegam gente (a ameaça avisa)
 _n = lambda x: f'{x:+d}'.replace('-', '−')
 TRACOS = {
     'matilha':   f'o golpe que fere um alvo em que outro da matilha já bateu nesta rodada o derruba; com outro da matilha de pé, {_n(MATILHA_CORAGEM)} na coragem',
     'bote':      f"na primeira rodada age antes de todos; o primeiro golpe dele tem {_n(BOTE['acerto'])} e rola os dados {BOTE['dados']} vezes; quem ele ferir vai ao chão e perde {BOTE['atordoa']} ação",
     'investida': f"se correu {INVESTIDA['casas']} casas ou mais desde o último golpe, o golpe tem {_n(INVESTIDA['acerto'])}, rola os dados {INVESTIDA['dados']} vezes e derruba quem ferir",
     'veneno':    f"o golpe que fere envenena: por {VENENO['rodadas']} rodadas a vítima perde por rodada {VENENO['fracao']:.0%} do golpe e tem {_n(VENENO['acerto'])} no acerto; não acumula: vale a pior mordida, e o prazo recomeça",
-    'agarra':    f"o golpe que fere agarra: o agarrado não anda nem recua e tem {_n(AGARRADO['acerto'])} no acerto e {_n(AGARRADO['defesa'])} na Defesa, até o bicho passar um turno sem feri-lo",
+    'agarra':    f"o golpe que fere quem está colado nele agarra: o agarrado não anda, não recua, não troca de lugar e tem {_n(AGARRADO['acerto'])} no acerto e {_n(AGARRADO['defesa'])} na Defesa, até o bicho passar um turno sem feri-lo",
     'voa':       f'arma de alcance 1 tem {_n(VOA)} contra ele; a linha não o segura; não leva golpe livre ao se afastar; num corredor, ou no chão, não voa',
     'regenera':  f'no começo de cada turno dele recupera {REGENERA:.0%} do PV máximo',
     'apavora':   f'quando a luta começa, quem não é de ferro testa a coragem contra {PAVOR}',
@@ -95,7 +97,7 @@ def _esp(nome, artigo, cat, grau, nivel, instinto, atributos, armas, couro, tama
 # despojo: o que o bicho inteiro rende (a matéria tem categoria: "couro:1"; a comum vai até o Raro) · chefe: não foge e dá NÚCLEO da categoria dele
 ESPECIES = {
     'corça':     _esp('corça', 'a', 0, 'F', 4, 0, (45, 70, 45, 30, 70, 20), ['casco'], 'pelo', 'médio', [], -6, (1, 2),
-                      {'comida': 6, 'couro:0': 2, 'osso:0': 1}, ['floresta', 'campo'], 'foge ao primeiro sangue; encurralada, escoiceia'),
+                      {'comida': 6, 'couro:0': 2, 'osso:0': 1}, ['floresta', 'campo'], 'foge ao primeiro sangue, mas até lá escoiceia'),
     'ratazana':  _esp('ratazana', 'a', 0, 'F', 3, 0, (35, 70, 35, 30, 55, 20), ['dente'], 'pelo', 'pequeno', ['matilha'], -2, (3, 6),
                       {'comida': 1, 'couro:0': 1}, ['brejo', 'ruína', 'caverna'], 'sozinha não é nada; em bando perdem o medo, e cabem duas onde cabe um homem'),
     'javali':    _esp('javali', 'o', 0, 'E', 10, 0, (70, 50, 100, 50, 45, 20), ['presa'], 'pelo', 'médio', ['investida'], 4, (1, 1),
@@ -105,7 +107,7 @@ ESPECIES = {
     'surucucu':  _esp('surucucu', 'a', 1, 'D', 25, 2, (60, 90, 60, 40, 70, 20), ['dente'], 'escama', 'médio', ['bote', 'veneno'], 2, (1, 1),
                       {'comida': 2, 'couro:1': 2, 'osso:1': 1}, ['brejo', 'floresta', 'ruína'], 'o primeiro bote é o pior; o veneno segue trabalhando depois da mordida'),
     'urso':      _esp('urso', 'o', 1, 'D', 35, 4, (100, 50, 80, 50, 50, 20), ['garra', 'presa'], 'pelo', 'grande', ['agarra'], 2, (1, 1),
-                      {'comida': 10, 'couro:1': 4, 'osso:1': 2}, ['floresta', 'serra', 'caverna'], 'quem ele abraça não recua; a pata alcança antes da espada'),
+                      {'comida': 10, 'couro:1': 4, 'osso:1': 2}, ['floresta', 'serra', 'caverna'], 'quem ele abraça não recua; a pata alcança antes da espada, e só a lança o segura fora do abraço'),
     'pantera':   _esp('pantera', 'a', 2, 'C', 50, 6, (100, 95, 100, 50, 80, 20), ['garra', 'presa'], 'pelo', 'médio', ['bote'], 4, (1, 1),
                       {'comida': 4, 'couro:2': 2, 'osso:2': 1}, ['floresta', 'serra'], 'escolhe a hora: o primeiro golpe é dela, e derruba'),
     'aranha':    _esp('aranha-de-toca', 'a', 2, 'C', 45, 2, (50, 80, 40, 40, 60, 20), ['ferrão'], 'carapaça', 'médio', ['veneno'], 2, (2, 3),

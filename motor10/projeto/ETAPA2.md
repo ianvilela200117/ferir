@@ -3,13 +3,16 @@
 Quatro módulos entram no Motor 10 nesta etapa: **os bichos**, **o ofício** (forjar, consertar, ajustar), **o mercado** e **a caça e a coleta**.
 Este arquivo é o contrato entre quem constrói cada um. Ler antes: `../LEIA.md`, `../PROJETO.md`, `../REGRAS.md` (capítulos 1 a 5), o cabeçalho do `../estado.py`, as páginas `../tabelas*.py` e o `../provas_mundo.py`.
 
-## AVISO: esta é a SEGUNDA tentativa (leia antes de tudo)
+## AVISO: esta é a TERCEIRA tentativa (leia antes de tudo)
 
-A primeira frota foi cortada no meio. O que ela fez está no disco e não é para refazer:
+As duas primeiras frotas foram cortadas no meio. O que elas fizeram está no disco, guardado, e não é para refazer:
 
-- **O ofício está INTEIRO** (`oficio.py`, `tabelas_oficio.py`, `provas_oficio.py`, `projeto/regras_oficio.md`): 14 de 15 provas; a da Lendária não bate, e isso está dito no banco dele. Ninguém o reescreve.
-- **Os bichos estão QUASE PRONTOS.** `luta.py`, `pessoas.py`, `itens.py`, `tabelas.py`, `provas.py`, `estresse.py`, `bichos.py` e `tabelas_bichos.py` já foram mudados pelo construtor anterior. Hoje `python3 provas.py` passa **72 de 72** (as 51 metas antigas e as 21 dos bichos, B1 a B8) e o `estresse.py` roda sem erro. **O construtor dos bichos NÃO recomeça:** lê o que está no disco, confere contra a seção 4 (a API fixa, a lista fechada de traços, a moral, a frase da ameaça, o corpo que não é peça, o estresse com bichos), termina o que faltar, escreve o capítulo `projeto/regras_bichos.md` (que não existe ainda) e entrega o relatório. A linha de base dele é 72 de 72, não 51.
-- **Faltam inteiros:** o mercado e a caça. Depois, a revisão, a integração e a vila de teste.
+- **Os bichos estão PRONTOS:** `python3 provas.py` passa **76 de 76** (as 51 metas antigas e as 25 dos bichos) e o `estresse.py` roda sem erro. O capítulo está em `projeto/regras_bichos.md`.
+- **O ofício está PRONTO** (`oficio.py`, `tabelas_oficio.py`, `provas_oficio.py`, `projeto/regras_oficio.md`): 14 de 15; a prova da Lendária não bate, e isso está dito no banco dele.
+- **O mercado está PRONTO** (`mercado.py`, `tabelas_mercado.py`, `provas_mercado.py`, `projeto/regras_mercado.md`).
+- Hoje `python3 provas_mundo.py` dá **40 de 41** (a que falha é a da Lendária do ofício).
+- **A caça está só começada:** existe `tabelas_caca.py`, de um construtor que foi cortado. **O construtor da caça NÃO recomeça do zero:** lê essa página, aproveita o que presta, e escreve o `caca.py`, o `provas_caca.py` e o `projeto/regras_caca.md`.
+- **Faltam:** a caça, a revisão, a integração (com a vila de teste) e a verificação.
 
 ## 0. Como trabalhar (vale para todos)
 
