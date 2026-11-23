@@ -43,10 +43,27 @@ CAMA_PRECO = 2              # por noite (paga-se ao deitar numa pousada)
 SALARIO = dict(diarista=2, aprendiz=3, oficial=6, mestre=10)      # por bloco trabalhado (a jornada são 2 blocos)
 ESFORCO_OFICIO = dict(diarista='pesado', aprendiz='pesado', oficial='leve', mestre='leve')
 
+# ---------- o vocabulário comum dos bens (etapa 2: o mercado, o ofício e a caça falam a mesma língua) ----------
+# a matéria de ofício tem categoria; a chave dela, na carga e no estoque, é "nome:categoria" ("metal:0", "couro:2", "osso:1")
+MATERIAS = ['metal', 'couro', 'osso', 'madeira', 'erva']
+def materia(nome, cat): return f'{nome}:{cat}'
+def le_materia(chave):
+    n, _, c = chave.partition(':')
+    return (n, int(c)) if c.isdigit() else (chave, None)
+BENS = ['comida', 'lenha', 'carvão', 'sal', 'pano', 'remédio', 'ferramenta']     # os bens sem categoria ("prata" é o dinheiro do lugar, no estoque dele)
+MATERIA_ATE = 2             # a matéria comum vai até o Raro; do Épico para cima a obra pede um NÚCLEO (item do Livro de Itens, tipo 'nucleo', contado no mundo)
+PECA_BASE = 30              # o preço de uma peça Comum nova, em prata
+PECA_VEZES = 6              # ... vezes isto a cada categoria
+PECA_LOJA_ATE = 3           # a loja vende até o Épico; daí para cima, só leilão, encomenda ou despojo
+CONSERTO_PONTO = 0.02       # consertar na oficina de outro: esta fração do preço da peça por ponto de durabilidade
+
 # ---------- treinar ----------
 MAESTRIA_BLOCOS = {2: 40, 4: 160, 6: 500, 8: 1500}       # blocos de treino ou de luta com a arma para cada grau
 MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FEITO com a arma (o mundo registra)
 
 # ---------- os eventos (o que pode acontecer; evento fora desta lista é recusado) ----------
-EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera']
+EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
+           'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada']
+OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura']      # os ofícios que têm maestria e treino, como as armas (maestria.forja, treino.caça)
+MODULOS = ['mercado', 'oficio', 'caca']     # os módulos do mundo: cada um pode ter virada(E) (roda quando o dia vira) e mesa(E) (linhas para a MESA.md)
 ESTADOS = ['vivo', 'morto']

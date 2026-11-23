@@ -7,11 +7,15 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
   SÓ `aplica()` MUDA O ESTADO. Um evento é {dia, bloco, tipo, onde, quem, efeitos, texto}; sem efeito, é recusado.
   Um efeito é uma operação tipada de uma lista fechada:
     ['relogio', blocos]                              o tempo anda
-    ['pessoa', id, campo, 'soma'|'poe', valor]       moedas · pv · fome · sono · cansaco · lugar · estado · nivel · treino.ARMA · maestria.ARMA · marca.X
+    ['pessoa', id, campo, 'soma'|'poe', valor]       moedas · pv · fome · sono · cansaco · lugar · estado · nivel · treino.X · maestria.X (X: arma ou ofício) · marca.X
+                                                     · carga.BEM (o que a pessoa carrega: só 'soma', nunca abaixo de zero)
+    ['lugar', id, campo ou campo.sub, 'soma'|'poe', valor]   um número ou uma marca do lugar (bichos.lobo, coleta.minério, oficina); 'soma' nunca abaixo de zero
     ['ferida', id, 'abre', parte, grave]  ·  ['ferida', id, 'repousa', n]  ·  ['ferida', id, 'sara', indice]
     ['estoque', lugar, bem, 'soma', valor]
     ['item', id, campo, 'poe'|'soma', valor]         dono · uso · dur
-    ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência)
+    ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência); também núcleos (tipo 'nucleo')
+    ['item', id, 'onde', 'poe', lugar]  ·  ['item', id, 'sob_medida', 'poe', {dono, grau}]  ·  ['item', id, 'historia', 'junta', 'texto']  ·  ['item', id, 'some']
+    ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias)
   O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos. Fora disso, não aconteceu.
 
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID
@@ -52,7 +56,7 @@ def grava(E):
 
 def novo(semente=1):
     """um estado vazio (o gerador e as provas partem daqui)"""
-    return dict(relogio=dict(semente=semente, dia=1, bloco=2, eventos=0), lugares={}, gente={}, itens=dict(seq=0, itens={}),
+    return dict(relogio=dict(semente=semente, dia=1, bloco=2, eventos=0), lugares={}, gente={}, itens=dict(seq=0, itens={}, oseq=0, obras={}),
                 turno=dict(n=1, aberto=dict(dia=1, bloco=2), dados=[], lutas=[], perguntas=[], respondidas=[], notas=[]), _novos=[])
 
 
@@ -93,9 +97,16 @@ def _um(E, ef):
         _, pid, campo, op, val = ef; p = E['gente'].get(pid)
         if not p: return _erro(ef, f'não há a pessoa "{pid}"')
         raiz, _, sub = campo.partition('.')
+        if raiz == 'carga':
+            if not sub or op != 'soma': return _erro(ef, "a carga muda por ['pessoa', id, 'carga.BEM', 'soma', valor]")
+            d = p.setdefault('carga', {}); q = d.get(sub, 0) + val
+            if q < 0: return _erro(ef, f'{p["nome"]} só carrega {d.get(sub, 0)} de {sub}')
+            if q: d[sub] = q
+            else: d.pop(sub, None)
+            return
         if raiz in ('treino', 'maestria', 'marca'):
             if not sub: return _erro(ef, f'"{raiz}" pede o nome depois do ponto (treino.espada)')
-            if raiz != 'marca' and sub not in T.FAMILIAS: return _erro(ef, f'arma desconhecida: "{sub}"')
+            if raiz != 'marca' and sub not in T.FAMILIAS and sub not in M.OFICIOS: return _erro(ef, f'arma ou ofício desconhecido: "{sub}"')
             d = p.setdefault(raiz, {})
             if op == 'soma': d[sub] = d.get(sub, 0) + val
             elif op == 'poe': d[sub] = val
@@ -130,6 +141,32 @@ def _um(E, ef):
             if not 0 <= ef[3] < len(p['feridas']): return _erro(ef, 'não há essa ferida')
             p['feridas'].pop(ef[3]); return
         return _erro(ef, "use ['ferida', id, 'abre', parte, grave], ['ferida', id, 'repousa', n] ou ['ferida', id, 'sara', indice]")
+    if v == 'lugar':
+        if len(ef) != 5 or ef[3] not in ('soma', 'poe'): return _erro(ef, "use ['lugar', id, campo ou campo.sub, 'soma'|'poe', valor]")
+        l = E['lugares'].get(ef[1])
+        if not l: return _erro(ef, f'não há o lugar "{ef[1]}"')
+        raiz, _, sub = ef[2].partition('.')
+        if raiz in ('estoque', 'nome'): return _erro(ef, f'"{raiz}" não se muda por aqui (o estoque tem o verbo dele)')
+        d = l.setdefault(raiz, {}) if sub else l; k = sub or raiz
+        if ef[3] == 'poe': d[k] = ef[4]
+        else:
+            if not isinstance(d.get(k, 0), (int, float)) or isinstance(d.get(k, 0), bool): return _erro(ef, f'"{ef[2]}" não é número')
+            q = d.get(k, 0) + ef[4]
+            if q < 0: return _erro(ef, f'{l["nome"]} só tem {d.get(k, 0)} de {ef[2]}')
+            d[k] = q
+        return
+    if v == 'obra':
+        O = E['itens'].setdefault('obras', {})
+        if len(ef) == 3 and ef[1] == 'abre':
+            o = copy.deepcopy(ef[2])
+            if not isinstance(o, dict) or o.get('quem') not in E['gente']: return _erro(ef, 'a obra pede um registro com "quem" (uma pessoa que existe)')
+            E['itens']['oseq'] = E['itens'].get('oseq', 0) + 1; o['id'] = f"o{E['itens']['oseq']:04d}"; o.setdefault('dia', E['relogio']['dia']); O[o['id']] = o; return
+        o = O.get(ef[1]) if len(ef) > 2 else None
+        if not o: return _erro(ef, 'não há essa obra')
+        if len(ef) == 3 and ef[2] == 'fecha': del O[ef[1]]; return
+        if len(ef) == 5 and ef[3] == 'soma': o[ef[2]] = o.get(ef[2], 0) + ef[4]; return
+        if len(ef) == 5 and ef[3] == 'poe': o[ef[2]] = ef[4]; return
+        return _erro(ef, "use ['obra', 'abre', registro], ['obra', id, campo, 'soma'|'poe', valor] ou ['obra', id, 'fecha']")
     if v == 'estoque':
         if len(ef) != 5 or ef[3] != 'soma': return _erro(ef, "use ['estoque', lugar, bem, 'soma', valor]")
         l = E['lugares'].get(ef[1])
@@ -139,17 +176,32 @@ def _um(E, ef):
         l['estoque'][ef[2]] = q; return
     if v == 'item' and len(ef) == 3 and ef[1] == 'nasce':
         it = copy.deepcopy(ef[2])
-        if not isinstance(it, dict) or it.get('tipo') not in ('arma', 'armadura', 'escudo') or 'dur' not in it: return _erro(ef, 'o registro tem de sair do itens.item()')
+        if not isinstance(it, dict) or it.get('tipo') not in ('arma', 'armadura', 'escudo', 'nucleo') or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
+        if it.get('onde') is not None and it['onde'] not in E['lugares']: return _erro(ef, f'não há o lugar "{it["onde"]}"')
         E['itens']['seq'] += 1; it['id'] = f"i{E['itens']['seq']:04d}"; it.setdefault('uso', None); E['itens']['itens'][it['id']] = it; return
+    if v == 'item' and len(ef) == 3 and ef[2] == 'some':
+        if ef[1] not in E['itens']['itens']: return _erro(ef, f'não há o item "{ef[1]}" no Livro de Itens')
+        del E['itens']['itens'][ef[1]]; return
     if v == 'item':
-        if len(ef) != 5: return _erro(ef, "use ['item', id, campo, 'poe'|'soma', valor] ou ['item', 'nasce', registro]")
+        if len(ef) != 5: return _erro(ef, "use ['item', id, campo, 'poe'|'soma', valor], ['item', 'nasce', registro] ou ['item', id, 'some']")
         it = E['itens']['itens'].get(ef[1])
         if not it: return _erro(ef, f'não há o item "{ef[1]}" no Livro de Itens')
         _, _, campo, op, val = ef
         if campo == 'dono' and op == 'poe':
             if val is not None and val not in E['gente']: return _erro(ef, f'não há a pessoa "{val}"')
-            it['dono'] = val; it['uso'] = None; return
+            it['dono'] = val; it['uso'] = None
+            if val is not None: it['onde'] = None
+            return
+        if campo == 'onde' and op == 'poe':
+            if val is not None and val not in E['lugares']: return _erro(ef, f'não há o lugar "{val}"')
+            if val is not None and it.get('dono'): return _erro(ef, 'peça com dono não fica largada num lugar: tire o dono antes')
+            it['onde'] = val; return
+        if campo == 'sob_medida' and op == 'poe':
+            if val is not None and not (isinstance(val, dict) and val.get('dono') and T.SOB_MEDIDA_GRAUS[0] <= val.get('grau', 0) <= T.SOB_MEDIDA_GRAUS[1]): return _erro(ef, 'o sob medida é {dono, grau de 1 a 4}, ou nada')
+            it['sob_medida'] = val; return
+        if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
+        if campo == 'nome' and op == 'poe' and val: it['nome'] = str(val); return
         if campo == 'uso' and op == 'poe':
             if val not in (None,) + PARTES_VESTE: return _erro(ef, f'uso desconhecido: "{val}" (arma, arma2, escudo, veste ou nada)')
             if val and not it.get('dono'): return _erro(ef, 'peça sem dono não se veste')
@@ -157,8 +209,8 @@ def _um(E, ef):
             if val and it['tipo'] != tipo_certo[val]: return _erro(ef, f'{it["nome"]} é {it["tipo"]}: não vai em "{val}"')
             it['uso'] = val; return
         if campo == 'dur' and op == 'soma': it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + val)); return
-        return _erro(ef, 'no item muda-se: dono (poe), uso (poe), dur (soma)')
-    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, item)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, sob_medida, nome (poe) · dur (soma) · historia (junta)')
+    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra)')
 
 
 def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
@@ -214,6 +266,8 @@ def valida(E):
         if p['estado'] == 'vivo' and p['pv'] <= 0: P.append(f'{n} está vivo com PV zero')
         for m in M.MEDIDORES:
             if not 0 <= p['corpo'][m] <= M.MED_MAX: P.append(f'{n} tem {m} fora da faixa: {p["corpo"][m]}')
+        for b, q in p.get('carga', {}).items():
+            if q < 0: P.append(f'{n} carrega quantidade negativa de {b}')
         usos = [it['uso'] for it in E['itens']['itens'].values() if it.get('dono') == pid and it.get('uso') in ('arma', 'arma2', 'escudo')]
         for u in set(usos):
             if usos.count(u) > 1: P.append(f'{n} tem duas peças em "{u}"')
@@ -222,9 +276,16 @@ def valida(E):
         if it.get('uso') and not it.get('dono'): P.append(f'{it["nome"]} ({iid}) está vestida sem dono')
         if it.get('uso') and it.get('dono') in E['gente'] and E['gente'][it['dono']]['estado'] == 'morto': P.append(f'{it["nome"]} ({iid}) está vestida num morto')
         if not 0 <= it['dur'][0] <= it['dur'][1]: P.append(f'{it["nome"]} ({iid}) tem durabilidade fora da faixa')
+        if it.get('onde') is not None and it['onde'] not in E['lugares']: P.append(f'{it["nome"]} ({iid}) está num lugar que não existe: {it["onde"]}')
+        if it.get('onde') is not None and it.get('dono'): P.append(f'{it["nome"]} ({iid}) tem dono e está largada num lugar ao mesmo tempo')
+    for oid, o in E['itens'].get('obras', {}).items():
+        if o.get('quem') not in E['gente'] or E['gente'][o['quem']]['estado'] == 'morto': P.append(f'a obra {oid} é de alguém que não existe ou morreu')
     for lid, l in E['lugares'].items():
         for b, q in l['estoque'].items():
             if q < 0: P.append(f'{l["nome"]} tem estoque negativo de {b}')
+        for campo in ('bichos', 'coleta'):
+            for b, q in l.get(campo, {}).items():
+                if q < 0: P.append(f'{l["nome"]} tem {campo} negativo de {b}')
     return P
 
 

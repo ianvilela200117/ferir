@@ -39,6 +39,7 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
         else:                                               # o último bloco do dia: o bloco, e depois a virada (com o relógio)
             if ef: estado.aplica(E, tipo, ef, onde=p['lugar'], quem=[pid], texto=texto)
             estado.aplica(E, 'virada', corpo.virada(E, pid) + [['relogio', 1]], onde=p['lugar'], quem=[pid], texto='o dia vira')
+            _mundo_vira(E)
         feitos += 1; p = E['gente'][pid]
         if p['pv'] <= 0:
             estado.aplica(E, 'virada', [['pessoa', pid, 'estado', 'poe', 'morto']], onde=p['lugar'], quem=[pid], texto='a fome leva'); porque = f"{p['nome']} morreu de fome"; break
@@ -49,6 +50,17 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
             if t < M.SONO_CAI[1]: porque = f"{p['nome']} cai no sono onde está (Vontade {t} contra {M.SONO_CAI[1]})"
         if porque and para: break
     return feitos, porque
+
+
+def _mundo_vira(E):
+    """o dia virou: cada módulo do mundo que tiver virada(E) roda a sua parte (o mercado produz e consome, os bichos criam...)"""
+    import importlib
+    for nome in M.MODULOS:
+        try: mod = importlib.import_module(nome)
+        except ModuleNotFoundError as e:
+            if e.name != nome: raise
+            continue
+        if hasattr(mod, 'virada'): mod.virada(E)
 
 
 def comer(E, pid):

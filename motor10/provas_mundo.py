@@ -147,6 +147,14 @@ def main():
     print('BANCO DE PROVAS DO MUNDO · etapa 1: um dia numa vila\n')
     res = provas(n)
     for nome, deu, passa in res: print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+    import importlib
+    for nome, titulo in (('provas_mercado', 'etapa 2: o mercado'), ('provas_oficio', 'etapa 2: o ofício'), ('provas_caca', 'etapa 2: a caça e a coleta')):
+        try: mod = importlib.import_module(nome)
+        except ModuleNotFoundError as e:
+            if e.name != nome: raise
+            continue
+        print(f'\n{titulo}\n'); mais = mod.provas(n); res += mais
+        for nm, deu, passa in mais: print(f"  {'passa' if passa else 'FALHA'}  {nm}: {deu}")
     print(f'\n{sum(p for _, _, p in res)} de {len(res)} provas passam.')
     return all(p for _, _, p in res)
 

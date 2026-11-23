@@ -48,6 +48,13 @@ def _aqui(E):
 
 def mesa(E):
     t = E['turno']; L = [f"# MESA · turno {t['n']} · {estado.quando(E)}", '', '## Você'] + _voce(E) + ['', '## Aqui'] + _aqui(E)
+    import importlib
+    for nome in M.MODULOS:                                  # cada módulo do mundo põe na mesa a sua parte (o mercado, a oficina, a caça)
+        try: mod = importlib.import_module(nome)
+        except ModuleNotFoundError as e:
+            if e.name != nome: raise
+            continue
+        if hasattr(mod, 'mesa'): L += [''] + list(mod.mesa(E))
     L += ['', '## Perguntas abertas']
     L += [f"{i + 1}. {q['texto']}  " + ' · '.join(f"**{k})** {v}" for k, v in q['opcoes'].items()) for i, q in enumerate(t['perguntas'])] or ['(nenhuma: o turno precisa abrir pelo menos duas antes de fechar)']
     if t['respondidas']: L += ['', '**Respondido neste turno (cumprir antes de fechar):** ' + ' · '.join(f"{r['texto']} → {r['cod']}) {r['opcao']}" for r in t['respondidas'])]

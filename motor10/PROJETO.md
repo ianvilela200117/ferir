@@ -2,12 +2,14 @@
 
 O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha (`REGRAS.md`, 51 de 51 no banco de provas).
 Este é o plano do que falta até o Dia 1 de um **mundo novo, do zero**: o mundo vivo, a magia, os bichos, o ofício e o turno.
-Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números, as etapas e as seis decisões que são suas.
+Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números e as etapas.
+**As decisões do jogador já estão tomadas (seção 12) e o plano abaixo já as segue.**
 
 ## 1. Em uma página
 
 1. O mundo é uma região de **16 lugares** com estoque, gente, bichos e força contados. Um relógio só roda tudo, com você ou sem você.
-2. Nele vivem **10.000 pessoas em número, 150 com nome e ficha, e 40 rivais** que começaram no mesmo dia que você e sobem a mesma escada pela mesma regra.
+2. Nele vivem **10.000 pessoas em número, 150 com nome e ficha, e 40 aventureiros rivais**, gente do próprio mundo, de todos os níveis, que disputa a mesma escada pela mesma regra e morre de vez.
+2b. **O mundo já é velho quando você nasce:** de 400 a 1.000 anos de história gerada (casas, reinos, guerras, lendas, ruínas, peças com dono e passado). Você nasce numa casa, com parentes.
 3. **O raro é contado.** Doze peças Épicas, quatro Únicas, três Lendárias no mundo inteiro. O que um rival leva, saiu do mundo.
 4. **Doze frentes** (ameaças, ambições, faltas, mistérios) têm dono, meta e um relógio de 6 passos. Cada passo muda número: fecha estrada, mata gente, sobe preço.
 5. O que toca você cai numa **caixa de entrada com prazo**. Calar tem preço escrito, e a caixa se resolve sozinha.
@@ -41,7 +43,9 @@ Ferida sara em 7 dias; a grave, em 21 (com curandeiro, metade). PV: 10% por noit
 
 **Gente.** O povo é número por lugar e ofício: come, produz, migra, passa fome, engrossa o bando. Os **150 nomeados** têm ficha de luta, rotina de 6 blocos, um querer por semana (que vira ato com efeito), laços, e **memória**: até 12 fatos com peso, de onde sai a opinião sobre você, com os porquês.
 
-**Rivais.** 40 "jogadores" em 6 guildas e alguns sozinhos. Por semana escolhem um plano entre as mesmas missões, masmorras e leilões que você vê; por dia, executam. Compram no mesmo mercado. Longe de você a luta deles sai de uma conta rápida, calibrada contra o `luta.py` (erro menor que 8 pontos). O ranking sai toda semana.
+**Rivais.** 40 aventureiros nativos, em 6 guildas e alguns sozinhos, espalhados por todos os níveis: há novatos como você, veteranos e três Lendas vivas. Por semana escolhem um plano entre as mesmas missões, masmorras e leilões que você vê; por dia, executam. Compram no mesmo mercado. **Morrem de vez**, e a cada ano gente nova chega à idade de pegar em armas. Longe de você a luta deles sai de uma conta rápida, calibrada contra o `luta.py` (erro menor que 8 pontos). O ranking sai toda semana.
+
+**A história.** O gerador não começa no Dia 1: ele roda de 400 a 1.000 anos em passos largos (ano a ano) antes de você nascer. Disso saem as casas e as linhagens, os reinos e as fronteiras, as guerras e as dívidas de sangue, as lendas mortas, as ruínas (que são as masmorras, cada uma com a sua origem) e a história de cada peça alta: quem forjou, quem perdeu, quem tem hoje. O presente é a ponta dessa história, e a crônica fica à disposição do Mestre e, aos pedaços, da gente do mundo, que conta o que sabe.
 
 **Economia.** Prata. Viver custa 3 por dia; o diarista ganha 4; o oficial, 12. Preço = base × √(alvo ÷ estoque), entre 0,4 e 3 vezes. **Toda compra mexe no estoque, a sua também.** Peça de loja: Comum 30, vezes 6 por categoria, até o Épico (6.480). De Único para cima não há loja: leilão, encomenda ou despojo.
 
@@ -57,13 +61,15 @@ O item decide a luta; por isso a escada das peças É a escada do poder, e ela �
 
 | Categoria | Dia da primeira (jogando bem) | Quantas no Dia 1 | O que tranca |
 | --- | --- | --- | --- |
-| Incomum | 8 a 15 | à venda | dinheiro: 180 de prata |
-| Raro | 30 a 45 | 60 | material de masmorra ou de bicho contado; ofício Treinado; forja de cidade |
-| Épico | 90 a 130 | 12 | núcleo de chefe (nascem 4 por ano no mundo todo); 27 blocos de forja |
-| Único | 240 a 330 | 4 | núcleo de chefe maior (1 por ano) ou primeira limpeza; 81 blocos; Mestre |
-| Lendário | 540 a 720 | 3, com as Lendas | núcleo de calamidade; 243 blocos (40 dias); o melhor ferreiro acerta 1 em 5 |
+| Incomum | 5 a 10 | à venda | dinheiro: 180 de prata |
+| Raro | 20 a 30 | 60 | material de masmorra ou de bicho contado; ofício Treinado; forja de cidade |
+| Épico | 60 a 85 | 12 | núcleo de chefe (nascem 6 por ano no mundo todo); 27 blocos de forja |
+| Único | 160 a 220 | 4 | núcleo de chefe maior (2 por ano) ou primeira limpeza; 81 blocos; Mestre |
+| Lendário | 360 a 480 | 3, com as Lendas | núcleo de calamidade; 243 blocos (40 dias); o melhor ferreiro acerta 1 em 5 |
 | Mítico | depois do ano 2 | 1, dormindo | |
 | Primordial | talvez nunca | 0 | |
+
+**Estes dias não são tranca.** Não há regra que diga "antes do dia tal, não". São o dia em que um jogador aplicado costuma chegar lá pelo caminho comum (juntar o material, subir o ofício, forjar). O que tranca é o que existe no mundo. Quem achar outro caminho chega antes: tomar a peça de quem a tem, herdar, ganhar de um senhor, ser o primeiro a limpar uma ruína, comprar num leilão, roubar. Como o item decide a luta, uma peça alta nas mãos no dia 20 é possível, e muda tudo. E pinta um alvo nas suas costas.
 
 **Forjar:** material da categoria (do Épico para cima, um núcleo, que é item contado, com dono e lugar) + tempo de 3^categoria blocos + teste: 2d20 + maestria + Afinidade ÷ 10 + oficina (0 a 4) + preparo (até +8, cada +2 ganho no mundo: receita, ajudante, fogo, bigorna) contra 28 + 6 por categoria.
 **Falhar custa:** por menos de 5, a peça sai uma categoria abaixo; por 5 ou mais, o material some. Missão falhada: a caução, a fama, e o dano acontece. Masmorra: a morte.
@@ -71,9 +77,9 @@ O item decide a luta; por isso a escada das peças É a escada do poder, e ela �
 
 ## 5. O medo
 
-- **O nativo morre de vez.** Companheiro contratado é nativo.
-- **A sua morte** é a primeira decisão da seção 11. A que recomendo: você acorda 3 dias depois no templo; a **melhor peça vestida fica com quem matou** (e pode ser retomada); perde o que carregava e um décimo dos níveis; os 3 dias correm sem você, e a caixa se resolve sozinha. Como o item decide, perder a peça é perder o degrau.
-- **O nêmesis:** quem derruba você, ou pega a sua peça, vira uma frente pessoal.
+- **Todo mundo morre de vez. Você também.** A vida é uma só.
+- **O herdeiro.** Em vida você nomeia quem segue: um filho, um irmão, um aprendiz, um companheiro jurado. É uma pessoa do mundo, com ficha própria, que vive e pode morrer antes de você. Morto o personagem, o jogo continua com o herdeiro: ele herda a casa, a oficina, as dívidas, os amigos e os inimigos, e as peças que o matador não levou. **Não herda o nível nem a maestria:** tem os dele. Quem morre sem herdeiro deixa a casa acabar, e o jogo recomeça com um estranho no mesmo mundo, que lembra do morto.
+- **O nêmesis:** quem mata você fica com o que você vestia e vira uma frente pessoal do herdeiro.
 - **Você vê** os sinais que a notícia trouxe, os prazos, o perigo das estradas que andou. **Fica oculto** o relógio de cada frente, a força, o chefe, os planos dos rivais, onde estão os núcleos. Investigar é ação com teste, e abre um campo por vez.
 - **O diretor** só escolhe quais frentes entram em cena no dia (até 3). Não toca em dado, relógio nem estoque: o banco prova que o estado final é idêntico com ele ligado e desligado. Depois de queda ou peça perdida, ele não empilha ameaça; mas também não inventa alívio que não exista.
 
@@ -107,12 +113,13 @@ Scripts novos, cerca de 5.500 linhas: `tabelas_mundo` · `estado` · `corpo` · 
 1. Nenhum item da caixa vence sem resolução; nunca mais de 7 abertos.
 2. Todo evento aplicou efeito; morto não age; estoque nunca negativo; a soma das moedas fecha.
 3. Diretor neutro: estado final idêntico com ele ligado e desligado.
-4. Rivais: o primeiro entre os níveis 55 e 85; de 2 a 5 com peça Épica; no máximo 1 com Única; nenhum com Lendária; o líder do ranking troca de 3 a 10 vezes.
-5. A primeira Épica nova do mundo sai entre os dias 80 e 140.
+4. Rivais: de 10 a 30% morrem no ano, e entram outros tantos novos; o número de peças Épicas, Únicas e Lendárias em mãos vivas não cai; o líder do ranking troca de 1 a 6 vezes; nenhuma casa grande some sem um evento que a explique.
+5. A primeira Épica nova do mundo sai entre os dias 40 e 110.
+5b. **A história:** em 20 sementes, toda peça Única ou maior tem a cadeia de donos sem buraco; toda ruína tem origem; nenhuma pessoa viva é mais velha que o seu povo permite; toda casa viva tem pelo menos um herdeiro possível.
 6. Das 12 frentes, de 3 a 6 chegam ao fim e de 2 a 5 são barradas.
 7. Grão entre 0,6 e 2,2 vezes a base; fome em 20 a 60% dos mundos; no máximo 2 vilas perdidas.
 8. A conta rápida erra menos de 8 pontos contra o `luta.py`.
-9. **Robôs:** o ferreiro aplicado faz a primeira Épica entre os dias 90 e 130 e nenhuma Única antes do 240; o parado está abaixo da mediana do ranking no dia 60; o afoito morre em 30 dias em 80% das sementes; o mudo perde por calar (a opinião média sobre ele cai, um rival fica com os clientes).
+9. **Robôs:** o ferreiro aplicado faz a primeira Épica entre os dias 60 e 85 e a primeira Única entre o 160 e o 220; o parado está abaixo da mediana dos da idade dele no dia 60; o afoito morre em 30 dias em 80% das sementes; o mudo perde por calar (a opinião média sobre ele cai, um rival fica com os clientes).
 10. No dia 365, `RETOMAR.md` + `MESA.md` cabem em 14 KB; o ano roda em menos de 2 minutos; mesma semente, mesmo mundo.
 
 ## 10. As etapas
@@ -122,12 +129,12 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | Etapa | O que entra | O que se joga |
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
-| 2. Viver de um ofício | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **Aqui cabe uma vila de teste** |
+| 2. Viver de um ofício | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **No fim dela, a vila de teste** (fora do cânone) |
 | 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia | focos, feitiços, encantos de peça | o mago, o curandeiro, a peça encantada |
 | 5. A corrida | rivais, guildas, masmorras, ranking, torneio, leilão, a janela do mundo | disputar |
-| 6. O medo | frentes, calamidade, morte, nêmesis, diretor | perder |
-| 7. O ano de prova | o gerador em 20 sementes, a calibração, a criação do personagem | **o Dia 1** |
+| 6. O medo | frentes, calamidade, a morte e o herdeiro, nêmesis, diretor | perder |
+| 7. A história e o ano de prova | o gerador que roda de 400 a 1.000 anos, 20 sementes, a calibração, a criação do personagem dentro de uma casa | **o Dia 1** |
 
 ## 11. Riscos
 
@@ -136,11 +143,15 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 3. **Os moldes de frente acabam** em cerca de um ano de jogo. O chão gera frentes novas; e moldes novos entram como conteúdo, sem mexer em regra.
 4. **O motor cresce** para umas 8.000 linhas. O gravador único, os invariantes do `fecha` e os dois bancos de provas são o que impede de virar remendo de novo.
 
-## 12. As decisões que são suas
+## 12. As decisões do jogador (tomadas)
 
-1. **A sua morte.** a) acorda em 3 dias e perde a melhor peça vestida, o que carrega e um décimo dos níveis (recomendo: é o Satisfy, e dói) · b) vida única, com herdeiro · c) três vidas.
-2. **Os rivais.** a) "jogadores" como você: falam do jogo como jogo e voltam quando morrem (recomendo) · b) aventureiros nativos, que morrem de vez.
-3. **O ritmo da escada** (o dia da primeira Épica, Única e Lendária, jogando bem). a) rápido: 60, 160, 360 · b) médio: 90, 240, 540 (recomendo) · c) lento: 150, 375, 850.
-4. **O começo.** a) o mundo abre no seu Dia 1, todos no nível 1 (recomendo) · b) você chega um ano atrasado, com os outros na frente.
-5. **A vila de teste.** a) quando a etapa 2 ficar pronta, você joga uma vila fora do cânone, para sentir a luta e a forja e mandar mudar o que não gostar (recomendo) · b) só o Dia 1, com tudo pronto.
-6. **Como eu trabalho.** As duas frotas de agentes que usei gastaram, cada uma, uma janela inteira do seu limite de uso. a) sigo sozinho, etapa por etapa: mais lento, bem mais barato (recomendo) · b) uso a frota de novo nas etapas grandes.
+1. **A morte: vida única, com herdeiro.** (Seção 5.)
+2. **Os rivais: aventureiros nativos, que morrem de vez.** (Seção 3.)
+3. **O ritmo: o rápido.** A primeira Épica perto do dia 60, a Única do 160, a Lendária do 360, pelo caminho comum. Os dias não são tranca: quem achar outro caminho chega antes (seção 4).
+4. **O começo: um mundo que já tem história,** de 400 a 1.000 anos, e o personagem nasce nele (seção 3, "A história").
+5. **A vila de teste: sim.** Quando a etapa 2 ficar pronta, joga-se uma vila fora do cânone para sentir a luta e a forja.
+6. **O trabalho: com a frota de agentes** nas etapas grandes.
+7. **Um contra dez com uma categoria de vantagem: fica moeda no ar.**
+8. **O `main`:** o Motor 10 foi levado para o `main`. O save do Ferir, que seguiu em outro chat, não foi tocado.
+
+**O que estas decisões mudam no jeito do mundo:** não é um jogo com "jogadores" que renascem. É um mundo de verdade, velho, onde todo mundo morre uma vez. Ficam as leis dele: níveis, categorias de peça, a janela do item. Fica também a janela do mundo, como coisa que aquele mundo tem: quando uma peça Única nasce ou uma ruína é limpa pela primeira vez, todos ficam sabendo.
