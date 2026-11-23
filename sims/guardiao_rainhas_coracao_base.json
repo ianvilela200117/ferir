@@ -1,0 +1,35 @@
+{
+ "monstro": {
+  "nome": "Zraos",
+  "cat": "Épico",
+  "nivel": 112,
+  "pv": 1680,
+  "df": 48,
+  "rd": 6,
+  "at": 38,
+  "dado": "1d12",
+  "mult": 5,
+  "moral": false,
+  "essencia": "Sorte",
+  "regenera": 56,
+  "acoes": 4,
+  "poder": {
+   "nome": "o 19 natural também é crítico",
+   "tipo": "area",
+   "cd": 21,
+   "dano": "4d6"
+  },
+  "fraqueza": "Tempo",
+  "nota": "bicho.py (obras/guardiao_rainhas.txt): ave, casa, Sorte; territorial: ataca quem entra; fraqueza: a Essência Tempo: dano dobrado e corta a regeneração · e mais uma, a descobrir: luz do sol · 507: no CORAÇÃO, a toca dele: o covil pelo degrau (G13, Épico 4d6 CD 21), posto à mão como o bicho.py põe (sem rodar o bicho.py de novo)",
+  "nao_roda": [
+   "camuflagem (desvantagem para achá-lo)"
+  ],
+  "covil": {
+   "nome": "o coração do Túmulo das Rainhas (a toca do guardião)",
+   "dano": "4d6",
+   "cd": 21,
+   "efeito": ""
+  }
+ },
+ "grupo": []
+}

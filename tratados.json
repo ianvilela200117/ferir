@@ -17,7 +17,7 @@
      "quem": "eles",
      "o_que": "1 kg de shasha",
      "a_cada": 7,
-     "proxima": 505
+     "proxima": 519
     },
     {
      "quem": "eles",
@@ -44,7 +44,9 @@
     "483: eles, cláusula 2: [16]-1 cumprem",
     "490: eles, cláusula 2: [19]-1 cumprem",
     "497: eles, cláusula 2: [11]+0 cumprem",
-    "504: eles, cláusula 2: [7]+0 cumprem"
+    "504: eles, cláusula 2: [7]+0 cumprem",
+    "511: eles, cláusula 2: [12]+0 cumprem",
+    "518: eles, cláusula 2: [19]+0 cumprem"
    ]
   },
   "lumade": {
@@ -101,6 +103,33 @@
     "483: eles, cláusula 2: [14]-3 cumprem",
     "506: nós cumprimos a cláusula 1"
    ]
+  },
+  "forja_lumade": {
+   "id": "forja_lumade",
+   "com": "o Celocus (Lumade)",
+   "texto": "O PACTO DE FORJA (509, DL09 24): pelo aviso do rei (o túnel do Círculo sob a praça do mercado, o veneno no poço da praça, a lua nova do 520), Lumade dá à casa material de forja todo mês e um núcleo quando houver, e compra as armas da casa a preço do Motor; por um ano (até o 874); o Celocus devolveu o núcleo Épico de Sorte como sinal",
+   "estado": "vigente",
+   "desde": 509,
+   "clausulas": [
+    {
+     "quem": "eles",
+     "o_que": "3 kg de material Raro (ou 1,5 kg de Épico) de forja",
+     "a_cada": 30,
+     "proxima": 539
+    },
+    {
+     "quem": "eles",
+     "o_que": "um NÚCLEO, quando Lumade tiver um (o Mestre rola na semana: 1 em 6)",
+     "a_cada": 30,
+     "proxima": 539
+    },
+    {
+     "quem": "nos",
+     "o_que": "vender a Lumade as armas que o Celocus pedir, a preço do Motor (encomenda)",
+     "ate": 874
+    }
+   ],
+   "log": []
   }
  }
 }

@@ -1,0 +1,4 @@
+VD17 ;; QUANTO VDAEK SE TIRA (o sangue seco do bicho de vento na pedra, debaixo do Bzuur; a missão do Eiagrir pede um frasco) ;; d6 ;; 1-6: × 0,5 kg
+VT17 ;; O QUE MAIS SOBROU DO BICHO DE VENTO (Lendário pelo sangue; o Bzuur dormia em cima e comia devagar) ;; d6 ;; 1-3: só o sangue seco (o vdaek) | 4-5: e as PENAS GRANDES da asa (material Lendário de Vento, para o gerador) | 6: e, no peito aberto, o CORAÇÃO: um NÚCLEO LENDÁRIO DE VENTO
+PN17 ;; OS VINTE PRESOS NA NOITE DO 517 (a carroça no lugar da emboscada; o rei de volta ao anoitecer; o BZUUR, servo do Toque até a aurora, de pé ao lado das cordas: os presos o veem) ;; d6 ;; 1: TENTAM (PN17w quem) | 2-6: a noite passa
+PN17w ;; (vale com PN17 em 1) QUEM TENTA (com o servo de vigia, a vigia os pega na corda; quem é da Liga cai na terceira vez) ;; d6 ;; 1-3: os da LIGA (o Nutoccone) | 4-6: os do CÍRCULO (o Lior)

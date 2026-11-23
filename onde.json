@@ -26,28 +26,33 @@
   "motivo": "422-432"
  },
  "Ferir": {
-  "lugar": "Lumade",
-  "desde": 506,
-  "motivo": ""
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Moreth": {
-  "lugar": "Lumade",
-  "desde": 506,
-  "motivo": ""
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Eiagrir": {
-  "lugar": "Lumade",
-  "desde": 506,
-  "motivo": ""
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Eliane": {
-  "lugar": "Lumade",
-  "desde": 506,
-  "motivo": ""
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  },
  "Tigra": {
   "lugar": "Lumade",
   "desde": 506,
   "motivo": ""
+ },
+ "Gonde": {
+  "lugar": "Levis",
+  "desde": 519,
+  "motivo": "520: de passagem, a volta ao reino"
  }
 }

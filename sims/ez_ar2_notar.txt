@@ -1,0 +1,4 @@
+CD 21 da escala velha → 31 nos dois dados
+teste: [[13], [20, 14]] + 14 + nível 5 = 66 vs 31 (margem +35)
+grau: EXTRAORDINÁRIO
+  SURPRESA BOA (d20): ganha tempo: o relógio de uma facção contrária atrasa um passo

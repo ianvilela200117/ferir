@@ -1,0 +1,18 @@
+nome: Bzuur
+categoria: Raro
+nível: 68
+corpo: planta
+tamanho: casa
+essência: Silencio
+números: PV 544 · Defesa 33 · RD 3 · ataque +23 · 1 ataque(s) por rodada · dano 1d12 × 2.5 · XP 680 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · agarra e arrasta (quem ele acerta fica Agarrado e é levado 6 m por rodada)
+poder assinatura: o golpe não faz som: +2 contra quem não viu o portador, em área de 9 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Som: dano dobrado e corta a regeneração · e mais uma, a descobrir: água corrente
+comportamento: dorminhoco: acorda com barulho, sangue ou magia
+habitat: gargantas
+sinal (Lei 15): tremores
+drops:
+  · glândula ×10: «nytheion» (Raro, Silencio), serve para ofício e poção: oficina sem barulho: o turno rende 1 hora a mais
+  · osso ou presa ×10: «yorasar» (Raro, Silencio), serve para arma: o golpe não faz som: +2 contra quem não viu o portador
+————————————————————————————————————————

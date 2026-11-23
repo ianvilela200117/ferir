@@ -2,13 +2,13 @@
  "nota": "FICHA VIVA DE FERIR (MOTOR 6). Fonte única dos números: nível, XP, atributos, cofre e material contado. Mexer só com ficha.py. Os talentos, peças e receitas continuam em estado_vivo.md.",
  "nome": "Ferir",
  "titulo": "Rei de Ireviel (coroado no 293) · Forjador de Alma · HERDEIRO DO REI-FERREIRO (478)",
- "nivel": 50,
- "xp": 123510,
+ "nivel": 53,
+ "xp": 141520,
  "atributos": {
   "Força": 40,
   "Agilidade": 70,
   "Vigor": 45,
-  "Inteligência": 118,
+  "Inteligência": 121,
   "Sabedoria": 40,
   "Percepção": 96,
   "Carisma": 40,
@@ -16,15 +16,15 @@
   "Empatia": 40,
   "Vontade": 40,
   "Sorte": 95,
-  "Afinidade": 104
+  "Afinidade": 107
  },
  "pv": [
-  269,
-  269
+  275,
+  275
  ],
  "mana": [
-  67,
-  117
+  105,
+  120
  ],
  "foco": 16,
  "fortuna": [
@@ -68,11 +68,11 @@
    "texto": "o Martelo de Zeieth (Primordial) passa a render inteiro (requisito 260 − 30)."
   }
  ],
- "cofre": 53547,
+ "cofre": 57101,
  "livro": {
   "renda_casa": 6457,
   "despesa": 8930,
-  "ultima_semana": 504,
+  "ultima_semana": 518,
   "nota": "valores fixos tirados do LIVRO do 371 e do 378 (2.900 + cidades − 6.046). O socorro de comida (−400 por cidade com Comida abaixo de 2) já entra na conta das cidades (reino.py). Compras e vendas avulsas: ficha.py cofre."
  },
  "livro_log": [
@@ -489,6 +489,66 @@
    "valor": -673,
    "motivo": "semana: casa 6457 + cidades 1800 − despesa 8930",
    "saldo": 53547
+  },
+  {
+   "dia": 507,
+   "valor": 600,
+   "motivo": "507: o ouro que os herdeiros da Primeira Liga trouxeram, tomado na prisão (o que é deles, fora da conta das rainhas)",
+   "saldo": 54147
+  },
+  {
+   "dia": 507,
+   "valor": 5420,
+   "motivo": "507: a CONTA DO TÚMULO com o Celocus (4b, 40% de cada coisa): 180 da moeda antiga (60%) + 5.400 (60% do núcleo Épico de Sorte, avaliado em 9.000, que fica com o Celocus, CT07 [1]) − 160 (40% do punhal de Iomiltia, que fica com a casa)",
+   "saldo": 59567
+  },
+  {
+   "dia": 511,
+   "valor": -823,
+   "motivo": "semana: casa 6457 + cidades 1650 − despesa 8930",
+   "saldo": 58744
+  },
+  {
+   "dia": 514,
+   "valor": 1000,
+   "motivo": "511: o ouro dos mercadores no covil dos Vrurn (OU11)",
+   "saldo": 59744
+  },
+  {
+   "dia": 515,
+   "valor": -200,
+   "motivo": "515: ervas e sal limpo para o remédio do poço (RM15)",
+   "saldo": 59544
+  },
+  {
+   "dia": 515,
+   "valor": 30,
+   "motivo": "515: a missão da curandeira de Lumade (o remédio)",
+   "saldo": 59574
+  },
+  {
+   "dia": 518,
+   "valor": -923,
+   "motivo": "semana: casa 6457 + cidades 1550 − despesa 8930",
+   "saldo": 58651
+  },
+  {
+   "dia": 520,
+   "valor": -1500,
+   "motivo": "520: a ORDEM DO GRÃO em Levis (G43; o grão a 188, acima de 150: duas semanas a 1.500), pela boca do rei à Brara",
+   "saldo": 57151
+  },
+  {
+   "dia": 520,
+   "valor": 100,
+   "motivo": "520: o mercador de Levis paga o frasco de vdaek (a missão do Eiagrir)",
+   "saldo": 57251
+  },
+  {
+   "dia": 521,
+   "valor": -150,
+   "motivo": "521: casca de salgueiro e sal para o remédio da febre da lã (RM21), Levis",
+   "saldo": 57101
   }
  ],
  "materiais": {
@@ -802,28 +862,77 @@
    "log": [
     "Dia 488: +5 488: a seiva do Yolorvus (Épico, Luz: ofício e poção, +3 em Técnica)"
    ]
+  },
+  "syir": {
+   "kg": 1.2,
+   "log": [
+    "Dia 507: +1.2 507: 60% dos 2 kg da sala 2 (Raro, Sorte)"
+   ]
+  },
+  "yior": {
+   "kg": 6.0,
+   "log": [
+    "Dia 507: +6 507: 60% da garra do Zraos (Épico, Sorte + Sangue)"
+   ]
+  },
+  "miiel": {
+   "kg": 9.0,
+   "log": [
+    "Dia 507: +9 507: 60% do couro do Zraos (Épico, Sorte)"
+   ]
+  },
+  "nior": {
+   "kg": 12.0,
+   "log": [
+    "Dia 507: +12 507: 60% dos olhos do Zraos (Épico, Sorte + Água)"
+   ]
+  },
+  "núcleo-épico-de-veneno": {
+   "kg": 1.0,
+   "log": [
+    "Dia 508: +1 508: o CORAÇÃO do TKORNA (Ezmisa): núcleo Épico de Veneno, serve de núcleo para Mítico"
+   ]
+  },
+  "yelle": {
+   "kg": 10.0,
+   "log": [
+    "Dia 508: +10 508: as glândulas do Tkorna (Épico, Veneno: ofício e poção, +3 em alquimia; o gerador deu 'thuast', nome de NPC: trocado)"
+   ]
+  },
+  "yomiar": {
+   "kg": 15.0,
+   "log": [
+    "Dia 508: +15 508: as presas do Tkorna (Épico, Veneno + Vento: arma, envenena 2d6 por rodada até Vigor CD 16; o gerador deu 'ulra', nome de lugar: trocado)"
+   ]
+  },
+  "núcleo-épico-de-sorte": {
+   "kg": 1.0,
+   "log": [
+    "Dia 509: +1 509: o CELOCUS DEVOLVE o núcleo Épico de Sorte (o coração do Zraos) como sinal do PACTO DE FORJA (DL09 24)"
+   ]
+  },
+  "vdaek": {
+   "kg": 1.75,
+   "log": [
+    "Dia 517: +2 517: o sangue seco do bicho de vento nas gargantas (VD17 [4]); 1 frasco é do mercador da missão",
+    "Dia 520: -0.25 520: um frasco ao mercador de Levis (a missão do Eiagrir; a encomenda era da Almision)"
+   ]
+  },
+  "nytheion": {
+   "kg": 10.0,
+   "log": [
+    "Dia 517: +10 518: a glândula do Bzuur (gargantas), na aurora em que o servo caiu"
+   ]
+  },
+  "yorasar": {
+   "kg": 0.0,
+   "log": [
+    "Dia 517: +10 518: o osso do Bzuur (gargantas)",
+    "Dia 518: -10 518: o saco caiu no vau (o erro do Gonde, GD18 [3])"
+   ]
   }
  },
  "xp_log": [
-  "Dia 477: SOBE ao 2",
-  "Dia 477: SOBE ao 3",
-  "Dia 477: SOBE ao 4",
-  "Dia 477: SOBE ao 5",
-  "Dia 477: SOBE ao 6",
-  "Dia 477: SOBE ao 7",
-  "Dia 477: +2500 479: o encanto PRESSA no Cajado de Âmbar (inteiro)",
-  "Dia 477: SOBE ao 8",
-  "Dia 477: SOBE ao 9",
-  "Dia 477: SOBE ao 10",
-  "Dia 483: +1110 483: três bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
-  "Dia 483: SOBE ao 11",
-  "Dia 484: +1480 484: quatro bichos da colmeia do Ssish nas Fundas (Raro 37 × 10 cada)",
-  "Dia 484: SOBE ao 12",
-  "Dia 488: +920 488: o YOLORVUS (Épico 92 de Luz), na gruta do penhasco",
-  "Dia 488: SOBE ao 13",
-  "Dia 491: +50000 492: A CISTERNA QUE COME A FEBRE (Primordial)",
-  "Dia 491: SOBE ao 14",
-  "Dia 491: SOBE ao 15",
   "Dia 491: SOBE ao 16",
   "Dia 491: SOBE ao 17",
   "Dia 491: SOBE ao 18",
@@ -866,14 +975,31 @@
   "Dia 500: +4000 500: a emboscada do último vau antes de Levis (vinte pagos dos conselheiros destroçados)",
   "Dia 500: +1000 501: FEITO GRANDE: a revolta de Levis-baixa encerrada pela palavra (o acordo com o Uxraxion, sem sangue)",
   "Dia 500: SOBE ao 50",
-  "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)"
+  "Dia 501: o TALENTO do 50: MANA LARGA (+20 de Mana máxima)",
+  "Dia 507: +500 507: os HERDEIROS DA PRIMEIRA LIGA presos sem sangue na sala 6 do túmulo (RN07: feito menor)",
+  "Dia 507: +1120 507: Zraos (Épico 112; 1 caído(s))",
+  "Dia 507: +1000 507: o LIVRO DE SANGUE lido inteiro e AENELTA, a última rainha, posta em paz pelo nome (feito grande)",
+  "Dia 508: +3680 508: as crias do Tkorna (Raro 46; 8 caído(s))",
+  "Dia 508: SOBE ao 51",
+  "Dia 508: o PONTO do 51: FOLE FIRME 1 (+2 no Processo em oficina de campanha)",
+  "Dia 508: +980 508: Tkorna (Épico 98; 1 caído(s))",
+  "Dia 508: +3300 508: os do CÍRCULO na segunda casa de Ezmisa (o chefe do posto, 80, e 5, nível 50: destroçados no combate rápido; 1 morto, 5 presos)",
+  "Dia 508: SOBE ao 52",
+  "Dia 508: +2000 508: a encosta do vale de cima (o Círculo destroçado; 4 caídos, nível 50; o chefe fugiu)",
+  "Dia 510: +2400 511: os Vrurn no covil da ponte velha (CR11; 6 trolls nível 40)",
+  "Dia 510: SOBE ao 53",
+  "Dia 515: +150 515: a missão da curandeira de Lumade: o veneno achado e o remédio (RM15 extraordinário)",
+  "Dia 515: +1500 515: a casa vazia junto à muralha (CR15; três do Círculo, nível 50)",
+  "Dia 517: +680 517: Bzuur (Raro 68; 1 caído(s))",
+  "Dia 520: +400 520: a missão do vdaek (o Bzuur, o frasco ao mercador)",
+  "Dia 521: +300 521: o remédio da febre da lã em Levis (RM21 ganho; uma cidade com doença)"
  ],
  "avisos": [
   "425: o rei pagou o 2º ANO DE VIDA (o arado fundo vira MÍTICO; o 1º foi a Lança de Guerra no 407)"
  ],
  "recursos": {
   "Visão do Tempo": {
-   "tem": 0,
+   "tem": 2,
    "max": 2,
    "renova": "dia"
   },
@@ -883,7 +1009,7 @@
    "renova": "dia"
   },
   "Erudito": {
-   "tem": 0,
+   "tem": 1,
    "max": 1,
    "renova": "semana"
   }

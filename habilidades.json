@@ -42,11 +42,11 @@
   },
   "Fole Firme": {
    "tipo": "Passiva",
-   "efeito": "2",
+   "efeito": "+2 no Processo da forja em oficina improvisada ou de campanha (fora da Fornalha); no obra_valor.py, extra=2",
    "grau": 1,
    "usos": 0,
-   "desde": 396,
-   "origem": "semeada do estado_vivo: conferir tipo e efeito"
+   "desde": 508,
+   "origem": "o ponto do 51 (a árvore da Forja do Herdeiro, ramo Processo)"
   },
   "Alma no Aço": {
    "tipo": "Passiva",
@@ -227,7 +227,7 @@
    "tipo": "Magia",
    "efeito": "Vento 2º: a voz chega a 1 km, ou ouve uma conversa longe · 10 de Mana",
    "grau": 1,
-   "usos": 1,
+   "usos": 3,
    "desde": 437,
    "origem": "aula do 231"
   },
@@ -316,7 +316,7 @@
    "tipo": "Magia",
    "efeito": "Luz 4º: cura 16d6 (× o foco) e tira Sangrando, Atordoado e Envenenado · 20 de Mana (40 sem vela ou vidro)",
    "grau": 1,
-   "usos": 1,
+   "usos": 2,
    "desde": 441,
    "origem": "aula do Colégio, 441",
    "nivel_min": 50
@@ -325,7 +325,7 @@
    "tipo": "Magia",
    "efeito": "Luz 3º: remove maldição, veneno ou doença de um · 15 de Mana (30 sem vela ou vidro)",
    "grau": 1,
-   "usos": 1,
+   "usos": 2,
    "desde": 454,
    "origem": "aula do Colégio, 454"
   },

@@ -222,6 +222,10 @@ O que depende de outra coisa agora vem ligado no script, e o Mestre não precisa
   À mão: `python3 encadeia.py pendencias [DIAS]` (a 🧵 do turno lê daqui) · `python3 encadeia.py sincroniza` (todas as fichas de combate pelo nível).
 - **TODA SEMANA → O DESPERTAR.** O tick semanal roda `despertar.py rola` depois do `cresce.py` (pega quem escapou).
 - **EVENTO QUE "VOLTA EM 1d6 DIAS".** O tick rola o d6 na hora e põe na agenda o dia em que o evento volta. Antes ficava escrito e ninguém rolava (481).
+- **AURORA → O DESCANSO (508).** O tick devolve sozinho, a cada aurora, a Mana inteira ao rei e 1/10 do PV (G4). Numa noite sem sono, pôr `estado.json › tempo.sem_sono = true` ANTES de rodar o dia. É noite de vigília, de luta ou de marcha, e ela dá a Exaustão da G16. O 509 rodou sem isso, e o descanso foi desfeito à mão.
+- **FIM DE LUTA → O PV DO REI (507).** O PV do rei no fim da luta vai à ficha sozinho. A ficha de combate dele segue o nível e o PV do `ficha.json` (`encadeia.py sincroniza`; as pendências avisam se não bater).
+- **O QUE É OCULTO NÃO VAI À MESA.** Nas pendências, item oculto da agenda aparece sem o texto.
+- **O MODIFICADOR DE CIDADE.** As pendências acusam modificador com chave fora dos pilares ou com prazo sem data ('até o N').
 - O que ainda é à mão (fica no checklist): o XP da semana de quem fez algo fora de luta e obra (`cresce.py xp`, pela tabela XVI.4); o despojo; a Prova contada na cena.
 
 ### G40 — O FOCO COM FEITIÇO QUE O REI NÃO SABE (Dia 502, pedido do jogador: "ver se tem como colocar feitiços que não sei"; o jogador foi avisado)
@@ -255,6 +259,40 @@ O que depende de outra coisa agora vem ligado no script, e o Mestre não precisa
   - 3-6: nada.
   - Em média, uns 20 a 25 por ano saem da conta. Com **menos de 44**, o desconto da G6 acaba (o tick e as pendências da G39 avisam).
 - **A contagem:** `estado.json › forcados.n` (131 no 503). Quem morre, foge, é resgatado ou cumpre a pena sai dela.
+
+### G42 — A HISTÓRIA QUE MORDE (Dia 508, pedido do jogador: "uma história mais emocionante, com reviravolta e dificuldades realmente cruéis"; o jogador foi avisado)
+O dado já é duro. A G42 faz o mundo USAR o que tem contra a casa, e faz a vitória cobrar. Tudo sai do dado declarado antes, nunca da mão do Mestre.
+- **(1) A REVIRAVOLTA DO BLOCO.** Uma vez por turno, no fim do bloco, o Mestre declara e rola 1d6 sobre o que existe (o fio mais quente, o segredo guardado, a informação que vazou). A tabela de cada vez diz quem e o quê.
+  - 1-2 **O PREÇO DA VITÓRIA:** o maior sucesso do bloco cobra um custo escondido (quem viu, quem perdeu, o que se quebrou).
+  - 3-4 **O INIMIGO USA O QUE SABE:** uma informação que vazou (um olheiro, um preso solto, uma carta tomada) vira ação contra a casa.
+  - 5 **ALGUÉM DE PERTO PAGA:** um dos laços da casa, sorteado entre os que estão longe do rei. O que paga sai no d6: ferido grave · preso ou tomado · morto · trai.
+  - 6 **O MUNDO SEGUE:** sem reviravolta além do tick.
+- **(2) O SEGREDO MORDE NA HORA PIOR.** O oculto do envelope que toca a casa é revelado quando dói mais (na volta de uma vitória, numa festa, no meio de uma luta). A data já está na agenda; muda só a cena em que chega.
+- **(3) O INIMIGO PENSA.** Facção, vilão ou Lendário hostil que sabe algo age com isso: o Mestre põe na agenda o dia, pelo d6.
+- **(4) SEM ALÍVIO.** Nada se rola de novo, e nada se salva no grito. A Lei das Caçadas é do rei: protege as decisões dele, não o mundo.
+- **O equilíbrio:** a reviravolta nasce do que a casa fez e do que o mundo sabe. O sucesso grande continua grande; só deixa de ser grátis.
+
+### G43 — A ORDEM DO GRÃO (Dia 515, palavra do rei: "não deixem as cidades passarem fome; comprem grão com ouro se necessário"; o jogador foi avisado)
+- **O que é:** ordem de pé para a Intendente e os governadores. O SOCORRO DE COMIDA do reino.py (400 por semana, cidade com Comida abaixo de 2) segue como antes: impede a fome, mas não sobe o pilar.
+- **A COMPRA DE GRÃO:** quando a ordem chega à cidade, quem governa compra grão a ouro por **duas semanas, 1.000 de uma vez** (ficha.py cofre), e a cidade ganha **Comida +1 na rolagem** por esse tempo (`reino.py mod CIDADE Comida 1 "a ordem do grão, até o N"`, que vence sozinho).
+- Vale para toda cidade do reino que começar a semana com **Comida 1 ou menos**. Com Comida 2 ou mais, a compra para.
+- **O custo:** o mercado da semana pesa. Com o índice do grão acima de 150 naquela cidade, as duas semanas custam 1.500.
+- **A ordem viaja.** Ela só vale onde chegou: por carta, por enviado, ou pela boca do rei.
+
+### G44 — O AVISO DO SERVO (Dia 517, pedido do jogador: "quando eu tiver oportunidade de tornar servo um cara de level alto, avise; quero algo com uma dificuldade boa e história épica"; o jogador foi avisado)
+- **O corte do jogador:** servo vale a pena de **nível 150 para cima** (a palavra do 472: "só se ele for maior que 150"). Abaixo disso, o Mestre só põe uma linha curta.
+- **Quando avisar** (na linha 🛠️ e numa linha ⚠️ SERVO no topo do turno, com o custo):
+  - antes da luta com alguém de 150+ (na conferência da G9): o servo do TOQUE pede que o **Toque do Ceifador dê o golpe que derruba**;
+  - quando alguém de 150+ cai e o corpo está ali: a **Receita do Servo Armado** (o núcleo, a palavra, o nome; antes da aurora, se for servo do Toque) e o **Prender a Alma** (até 1 hora; a Arma Viva);
+  - quando um preso de 150+ vai morrer pela mão da casa (julgamento ou execução).
+- **O que o aviso diz:** o nível que o servo teria (metade; 3/4 se aceitar; inteiro com núcleo Mítico), o teto de servos (1 a cada 50 níveis do rei: hoje **1**) e o preço por aurora (G23 d).
+- **A lista dos grandes:** o Mestre mantém na 🧵 os inimigos conhecidos de 150+ que a casa pode encontrar. Hoje: **Meor** (275, o Círculo; vem na lua nova).
+- **A história épica:** a G42 segue. O inimigo grande vira servo só se o dado deixar; a luta com ele é a mais dura do bloco.
+
+### G45 — A HISTÓRIA COMO LIVRO (Dia 520, pedido do jogador: "quero que sua história tenha mais vida, como se eu estivesse lendo uma história num livro com vários personagens"; o jogador foi avisado)
+- A CENA vira **capítulo**, com vários pontos de vista, um elenco que volta e interlúdios sem o rei. As regras de como escrever estão no fim do `ESTILO_NARRATIVO.md` ("A história como livro").
+- **O que não muda:** o dado decide; nada oculto vaza, nem como cena de longe; o que Ferir sente é do jogador.
+- **Antes de escrever:** `tracos.py cena` para cada voz que fala, e o desejo e o medo de quem ganha ponto de vista.
 
 ### OS SCRIPTS NOVOS (usar sempre; nada disto se faz à mão)
 - **A FICHA DO BICHO:** `gerador.py monstro ... > obras/x.txt` (a saída INTEIRA) → `python3 bicho.py obras/x.txt sims/x_base.json [nome=] [covil="..."] [volta] [surpresa]`. Ele põe sozinho: números, ações, traços, poder, veneno, fraqueza, o covil pelo degrau e a SEGUNDA FASE (d6, uma vez, oculto no envelope). O que ele listar em "NÃO RODA" o Mestre declara antes (G33).

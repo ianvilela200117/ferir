@@ -52,3 +52,11 @@ Voz de resumo ("o rei decidiu então que...") · lista dentro da cena · explica
 - Alguma coisa antiga voltou?
 - A cena termina aberta?
 - Nada oculto vazou?
+
+## A história como livro (Dia 520, pedido do jogador: "quero que a história tenha mais vida, como se eu estivesse lendo um livro com vários personagens"; a G45)
+- **Capítulos, não quadros.** Cada bloco é um capítulo com título. Cada parte dele tem lugar, hora e **o ponto de vista de alguém**: o rei, mas também o Moreth, a Eliane, a Brara, o Gonde, um preso, uma padeira de Levis.
+- **O elenco volta.** Cada capítulo tem ao menos **três personagens da casa** com um momento só deles, que segue de capítulo a capítulo: o Moreth e o Tondunn, a Eliane voltando a andar, o Gonde e o erro dele, a Brara e a cidade dela.
+- **Por dentro, pelo gesto.** Do ponto de vista de um NPC dá para mostrar o que ele pensa (os traços, o desejo, o medo do npcs.json). Do rei, nunca: o que Ferir sente é do jogador.
+- **Interlúdio.** Uma cena curta sem o rei: em Ireviel, numa estrada, na casa de um inimigo. Só com o que **não é segredo**: o que o envelope guarda oculto não entra, nem como cena de longe.
+- **As falas fazem a história andar.** Gente discute, mente, faz piada, tem fome. Pelo menos uma conversa por capítulo com idas e voltas, não só uma fala solta.
+- **Tamanho:** o capítulo pode ir a **1.200 a 1.800 palavras** quando o bloco tem vários dias e várias vozes. A ROLAGEM e o resto do turno seguem curtos.

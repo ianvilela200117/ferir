@@ -1,0 +1,4 @@
+CD 21 da escala velha → 31 nos dois dados
+teste: [[9], [20, 16]] + 14 + nível 5 = 64 vs 31 (margem +33)
+grau: EXTRAORDINÁRIO
+  SURPRESA BOA (d20): o feito ensina: +1 dia de prática na perícia

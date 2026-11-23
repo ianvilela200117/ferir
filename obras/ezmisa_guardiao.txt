@@ -1,0 +1,20 @@
+nome: Nestor
+categoria: Épico
+nível: 98
+corpo: inseto
+tamanho: casa
+essência: Veneno
+números: PV 1470 · Defesa 44 · RD 6 · ataque +34 · 1 ataque(s) por rodada · dano 1d12 × 5 · XP 980 (×5 chefe, ×10 Lendário ou acima)
+traços:
+  · voa
+  · sangue que queima (golpe cortante nele espirra 1d6 × degrau em quem está ao lado)
+poder assinatura: envenena: 2d6 por rodada até passar em Vigor contra CD 16, em área de 12 m, uma vez a cada 3 rodadas
+fraqueza: a Essência Vida: dano dobrado e corta a regeneração · e mais uma, a descobrir: sal
+comportamento: guardião: protege um lugar ou uma coisa
+habitat: ruínas
+sinal (Lei 15): árvores marcadas
+drops:
+  · glândula ×10: «thuast» (Épico, Veneno), serve para ofício e poção: +3 em alquimia (destila)
+  · osso ou presa ×15: «ulra» (Épico, Veneno + Vento), serve para arma: envenena: 2d6 por rodada até passar em Vigor contra CD 16
+  · CORAÇÃO: núcleo Épico de Veneno, serve de NÚCLEO para Mítico
+————————————————————————————————————————

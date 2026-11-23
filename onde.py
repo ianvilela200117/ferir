@@ -41,6 +41,8 @@ def main():
     else: print(__doc__); return
     O = {k: v for k, v in O.items() if v['lugar'].lower() != 'ireviel' or (v.get('chega') and v['chega'] > dia)}
     grava(ARQ, O)
+    if 'Ferir' in nomes and a[0] in ('poe', 'viaja'):   # 508 (G39, erro achado: o relógio do briefing dizia 'Dragal' desde o 472): o lugar do rei vai ao relógio sozinho
+        e = carrega('estado.json'); e['tempo']['local'] = a[2]; grava('estado.json', e)
     for n in nomes: print(f'{n}: {lugar_de(n, O, dia)}')
 
 

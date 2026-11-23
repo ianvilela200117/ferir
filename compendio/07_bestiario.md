@@ -157,6 +157,7 @@ Saem do jogo (`mundo_vivo.json`) a cada vez que o `livro_sync.py` roda. Só o qu
 | **Vdogek** | Único | 183 | Elo | Zythir, a sala 9 (o coração) | vivo | VIVO; visto só pela Visão do Tempo do rei (438): o GUARDIÃO do coração de Zythir; besta do tamanho de uma colina; olhar paralisante; muitas cabeças; o golpe corta laços e encantos |
 | **Tkurnek** | Único | 200 | Fogo | as terras altas de Levis | vivo | ninguém da casa a viu; em Levis dizem que é o próprio Ithvil; gigante do tamanho de uma casa; sombra própria; regenera; escava; o golpe queima; fraca a Gelo e à luz do sol; morta, o Ithvil acorda e sabe quem foi |
 | **Rhaos** | Raro | 44 | Fogo | o rio de Ireviel (avistado na Vindima; sinal: poços secos) | vivo | 490: o CHAMADO da Vindima deu 20 natural: SURPRESA (gerador novidade [2]: um monstro novo avistado) |
+| **Tkorna** | Épico | 98 |  |  | vivo | o guardião do coração de Ezmisa (inseto do tamanho de uma casa, Veneno; voa; o sangue queima; fraqueza Vida e sal); MORTO pela casa no 508 |
 
 Os traços novos, as fases dos chefes, os nomeados e as crias estão no **Livro Nove**, seção 8.
 <!-- SYNC:FIM -->

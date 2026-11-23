@@ -1,0 +1,6 @@
+CR11 ;; A LUTA NO COVIL DOS VRURN, debaixo da ponte velha (511, de dia; RT10 7: eles +1, a posição mas dormem), COMBATE RÁPIDO (XXIII.18; o precedente do vau e da encosta): A CASA d20 + 44 (o Moreth) + 4 (o teto: o rei, o Moreth, o Eiagrir) · OS VRURN d20 + 16 (trolls nível 40, Raros) + 10 (o teto: 7) + 1 · pela margem: empate cada lado perde 1 · 1-4 o perdedor perde 1 · 5-9 metade · 10+ destroçado ou foge · até 3 rodadas · os trolls caídos MORREM (a vingança; queimados, para não voltarem) · RODADA 1: A CASA (d20 + 48) ;; d20 ;; 1-20: o dado
+CR11b1 ;; RODADA 1: OS VRURN (d20 + 27) ;; d20 ;; 1-20: o dado
+CR11a2 ;; RODADA 2: A CASA (d20 + 48, menos o teto perdido) ;; d20 ;; 1-20: o dado
+CR11b2 ;; RODADA 2: OS VRURN (d20 + 27, menos o teto perdido) ;; d20 ;; 1-20: o dado
+CR11c ;; COMO OS VRURN QUEBRAM NO COVIL (vale se forem destroçados; o rio corre debaixo da ponte) ;; d6 ;; 1-2: dois se jogam no rio e somem (regeneram; levam a notícia ao bando grande de Ulair) | 3-4: um se joga no rio e some | 5-6: nenhum escapa
+CR11q ;; QUEM DA CASA CAI (vale se a casa perder gente) ;; d6 ;; 1-2: o rei | 3-4: o Moreth | 5-6: o Eiagrir

@@ -1,0 +1,4 @@
+Tkorna (Épico 98): PV 1470 · Defesa 44 · RD 6 · ataque +34 · 1d12 × 5 · 4 ações
+  roda sozinho: sangue_queima, poder, covil, fraqueza
+  ⚠ NÃO RODA no luta.py (declarar antes como aplica, G33): voa
+  escrito: sims/ezmisa_guardiao_base.json

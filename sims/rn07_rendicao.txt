@@ -1,0 +1,3 @@
+CD 24 da escala velha → 34 nos dois dados
+teste: [[2], [19]] + 16 + nível 5 = 42 vs 34 (margem +8)
+grau: sucesso

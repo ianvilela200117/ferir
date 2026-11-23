@@ -2192,3 +2192,538 @@ O Nutoccone veio à frente devagar, as mãos abertas. Tinha a barba grisalha e u
 O Moreth olhou para o saco e depois para o rei. O Eiagrir, lá atrás, contou as armas deles em voz baixa, para si mesmo.
 
 - **Parada:** manhã do 507, o Túmulo das Rainhas, a sala 6. Os herdeiros da Primeira Liga oferecem 600 pelo livro queimado. A porta do coração, fechada; o guardião, dentro.
+
+### A ordem, sala 6
+A Eliane não disse nada em voz alta. Tocou o ombro do Eiagrir e apontou com o queixo a fumaça das velas, que corria baixo pelo chão para um canto escuro da sala, onde o ar entrava frio. Era a galeria de Rilge. O Eiagrir foi até lá devagar, com os dois guardas da retaguarda, e firmou a lança atravessada na boca do buraco.
+
+O Nutoccone viu. Os herdeiros também viram.
+
+"Vocês vieram queimar o que os seus avós escreveram com sangue de rei", disse o rei. "Eu vim ler. Larguem as armas. Prendam ou matem, daqui eles não saem."
+
+A última frase não era para os herdeiros. O Moreth deu um passo à frente, e a maça dele bateu de leve na própria palma, uma vez.
+
+Por um momento ninguém se mexeu. Uma vela estalou. Um rapaz do fundo olhou para a galeria, para a lança do Eiagrir atravessada nela, e depois para o Nutoccone.
+
+O velho mercador fechou os olhos. Quando os abriu, tirou a faca do cinto e a pôs no chão, ao lado do saco de couro.
+
+"Três casas morreram com o rei em Dragal", disse. "A quarta morre aqui, de joelhos. Pelo menos de joelhos é diante de um rei."
+
+Ferro bateu na pedra, uma arma depois da outra, até não sobrar nenhuma de pé. O Gonde e os guardas passaram as cordas.
+
+Atrás deles, do outro lado da porta alta, alguma coisa grande mudou de posição. Foi um som de pedra raspando pedra, devagar, e depois nada.
+
+- **Parada:** manhã do 507, a sala 6. Os herdeiros da Primeira Liga presos. A porta do coração fechada; o que mora dentro, acordado.
+
+### A fila, salas 6 a 1
+O rei perguntou ao Nutoccone quem mandava no Conselho da Liga e onde guardavam o ouro. O velho riu sem graça.
+
+"O Pelagri, o Aldoveri, o Tiracci. Isso o senhor já sabe. Minha casa não senta àquela mesa há três avós. Onde eles guardam o ouro, eu daria um dedo para saber."
+
+Saíram pelo corredor frio, que cheirava a cera, os presos amarrados pela cintura um atrás do outro. Na terceira sala, o Gonde passou a fila rente à parede, longe da laje marcada, contando cabeças em voz baixa.
+
+Na primeira sala, o som das vassouras parou.
+
+As cinco aias estavam de pé diante da porta, lado a lado, as vassouras de palha em pé como lanças. Tinham as caras secas e os olhos fechados, e mesmo assim olhavam para os presos.
+
+"Quem não entrou pela porta não sai por ela", disse a do meio.
+
+O Nutoccone baixou a cabeça. Atrás do rei, alguém da fila começou a rezar.
+
+- **Parada:** meio-dia do 507, a sala 1. As aias não deixam os presos sair pela porta.
+
+### A porta das aias, sala 1
+O rei falou com elas devagar, com o nome de Iomiltia na boca e a Matriz à vista. As aias ouviram de olhos fechados. A do meio respondeu a mesma coisa, com a mesma voz: "Quem não entrou pela porta não sai por ela." Não disse preço.
+
+"Corram", disse o rei aos presos. "Se elas deixarem, vocês vivem."
+
+O Nutoccone foi o primeiro. A corda puxou o segundo, e o terceiro, e a fila inteira passou de cabeça baixa entre as vassouras de palha erguidas. As aias não se mexeram. Olharam, de olhos fechados, até o último sair para a luz. Depois baixaram as vassouras e voltaram a varrer.
+
+Lá fora, os vinte do Celocus contaram os presos um por um, com a mão no cabo da espada, e não levaram nenhum. O Gonde e os guardas sentaram os vinte e quatro no chão, junto da carroça.
+
+### O coração
+O Moreth encaixou a Matriz no vazio da porta. A pedra abriu para dentro, sem som, e o ar que saiu era seco como palha velha.
+
+Ele já estava descendo da parede antes que alguém o visse: uma ave do tamanho de uma casa, de penas cor de pedra, com o bico rachado de velho. O primeiro bater de asas jogou poeira na cara de todos. Uma pedra solta do teto pegou a Eliane no ombro.
+
+O Zraos caiu sobre o Moreth e sobre a Eliane. O Moreth aparou com o escudo e ficou de pé. A Eliane levou o golpe no flanco e cuspiu sangue.
+
+O rei apontou o Foco de Osso. O Toque do Ceifador pegou a ave de raspão, e as penas da asa esquerda ficaram cinzentas de uma vez. O Moreth ergueu a Maça do Rio Limpo, e a Lança do Sol entrou no peito do bicho em cheio, com cheiro de pena queimada. O Eiagrir cravou a dele num pé, depois na coxa.
+
+Então a ave gritou, e o grito foi de fúria. Virou-se inteira para a Eliane. Três golpes, um depois do outro, de bico e de garra. No terceiro a Eliane recuou contra a parede, a lança atravessada no peito para segurar o próximo, e o Gonde não estava ali para tomar o golpe por ela.
+
+O rei soltou a Chuva de Brasas sobre a asa boa. O Moreth soltou a dele por cima. A ave tentou levantar, e o Moreth a acertou na cabeça com a maça, de baixo para cima, com o peso do corpo inteiro. Ela caiu de lado e não se mexeu mais.
+
+A Eliane estava sentada no chão, com a mão no flanco. "Não é nada", disse, e não conseguiu levantar.
+
+No fundo do coração, sobre um atril de pedra, havia um livro de capa escura, manchada. Atrás dele, um esquife de pedra, fechado, sem nome nenhum gravado.
+
+- **Parada:** tarde do 507, o coração do túmulo. O guardião morto. O livro de sangue no atril. O esquife sem nome. A Eliane ferida.
+
+### O livro e o esquife, o coração
+O rei curou a Eliane antes de tudo, com uma vela dos herdeiros acesa no chão de pedra. A luz entrou nela devagar, e a cor voltou ao rosto. A ferida do flanco fechou por fora e ficou funda por dentro: ela se levantou e sentou de novo.
+
+"Dez dias", disse o Moreth. "Na carroça, ou numa cama."
+
+O livro estava frio ao toque, a capa dura de couro velho. A letra era a dos reis, a mesma dos cadernos da Gilaccetta, mas a tinta era marrom e tinha rachado em escamas. O rei leu tudo, de pé, por uma hora, e ninguém falou.
+
+Sete selos de cera no fim do pacto, cada um com um nome embaixo. Três eram as casas dos presos lá fora. Dois eram casas de que ninguém ali ouvira falar. Os outros dois eram de nomes que o rei conhecia muito bem: ALDOVERI e TIRACCI.
+
+Na última folha, copiada com cuidado, havia uma lei da Primeira Liga, contra eles mesmos: a casa que vender um rei coroado perde a cadeira e o que tem. E embaixo, numa letra que tremia, um nome e um pedido.
+
+*Eu sou Aenelta. Que o leiam em voz alta diante deles.*
+
+O Moreth e o Eiagrir levantaram juntos a tampa do esquife. Dentro havia uma mulher magra, de cabelo branco e mãos cruzadas sobre o peito. Os dedos tinham as pontas escuras, de quem escreveu com o próprio sangue até não ter mais.
+
+"Aenelta", disse o rei.
+
+Ela abriu os olhos. Olhou para ele, para a Matriz no braço do Moreth, para o livro na mão do rei. Não se levantou.
+
+"Leia diante deles", disse, com uma voz que era mais pó que voz. "A porta é tua agora."
+
+E fechou os olhos de novo. Ninguém soube dizer se tinha respirado alguma vez.
+
+### A conta, a porta do túmulo
+Lá fora, os homens do Celocus contaram tudo sobre um pano estendido no chão, peça por peça, e escreveram. Quando chegou o núcleo, o chefe deles mandou chamar o Celocus em pessoa.
+
+O Celocus o pegou com as duas mãos e não o soltou mais.
+
+"O coração do guardião das minhas rainhas fica em Lumade", disse. "Pago a tua parte em ouro, e bem."
+
+Pagou: cinco mil e quatrocentos, contados ali mesmo. O punhal de Iomiltia ficou com o rei.
+
+No mercado, no caminho de volta, um velho vendia papéis antigos estendidos numa esteira. Num deles, gasto nas dobras, estava desenhado um campo de trigo e escrito, na letra dos reis: *para que a terra dê duas vezes*.
+
+- **Parada:** entardecer do 507, a porta do túmulo. O livro de sangue com o rei. Os 24 presos à porta. O núcleo com o Celocus.
+
+## Dia 508 — o comboio e a beira de Ezmisa
+
+### Lumade, a aurora
+Os seis guardas saíram para o leste antes do sol, com os vinte e quatro amarrados em fila e a carta do rei para o conselho dentro de um tubo de couro. O Nutoccone ia no meio. Na curva da estrada olhou para trás uma vez, para a porta do túmulo, e depois não olhou mais.
+
+O rei saiu para o oeste com o resto. A Eliane ia deitada na carroça, ao lado da Matriz, reclamando de cada buraco.
+
+### O brejo
+Os cortadores de junco trabalhavam com água pela cintura. Um deles, sem largar a foice, apontou com o queixo para o meio do brejo.
+
+"A água baixou ali, nesse verão. Viu as pontas? Ninguém entra. O junco cresce torto em cima das casas."
+
+Eram torres. Pontas de pedra escura saindo do junco como dedos, e mais longe o arco de uma porta, afundado até a metade na lama.
+
+O eremita esperava sentado num tronco, na beira, como quem já sabia que vinham. Era velho, de barba amarrada com um cordão, e cheirava a fumaça e a peixe seco.
+
+"O senhor é o que abriu a porta das rainhas", disse. Não era pergunta. "Então pode abrir esta."
+
+Levou o rei pela beira até o arco. Na frente dele, metida na lama até os joelhos, havia uma estátua de mulher com as mãos estendidas. No pescoço dela, numa corrente verde, pendia uma chave do tamanho de uma mão.
+
+"Ninguém tira sem a palavra." O eremita se inclinou e disse a palavra no ouvido do rei, baixo, para que nem o Moreth ouvisse. "E cuidado na segunda casa e na quarta. O chão mata."
+
+O Eiagrir olhou para a lama em volta da estátua, depois para o céu, que escurecia. O Moreth já tinha a mão no cabo da maça.
+
+- **Parada:** entardecer do 508, a beira de Ezmisa. A chave no pescoço da estátua; a palavra com o rei.
+
+### O eremita
+Antes de o rei descer, o eremita falou mais do que tinha falado em anos. Era menino quando a água cobriu Ezmisa: estava no telhado da casa do pai, e ficou. Desde então mora na beira.
+
+"Lá dentro só há os mortos da cidade, de pé na lama", disse, convicto. "E no fundo dorme o deus da praga. Ele não acorda."
+
+Da praga ele sabia mais. "A febre ainda está na lama. Quem se corta lá dentro, adoece. Nós lavávamos as feridas com sal. O que trouxe a praga não suporta sal."
+
+E do Círculo: dois grupos neste verão, uma dúzia de homens ao todo, nenhum voltou. O chefe do posto jurou voltar na lua nova com mais gente. "Querem o coração do bicho. Para tomar Lumade, dizem lá em cima."
+
+Foi então que o junco estalou atrás do tronco. O Gonde virou-se primeiro e o pegou pelo pescoço antes de o homem levantar: um rapaz magro, de casaco cor de areia, com a faca ainda na bainha.
+
+### As casas de Ezmisa
+O rei disse a palavra, e a corrente verde soltou-se do pescoço da estátua como se nunca tivesse estado presa. A chave abriu o arco com um estalo de ferro molhado.
+
+Na primeira casa o rei pisou num ferro velho debaixo da lama e cortou o pé. Esfregou sal na ferida, que ardeu como brasa, e a febre não veio. Nenhum dos três viu as letras gravadas na parede do fundo.
+
+Na segunda casa o Moreth parou com o pé no ar, sobre uma laje mais lisa que as outras. Passaram rente à parede. Na terceira havia uma casca de inseto do tamanho de um homem, vazia, rachada nas costas. Na quarta havia um espelho de metal polido, e o Eiagrir cobriu-o com o manto sem olhar para ele. Na quinta, uma porta tinha marcas de unha por dentro.
+
+Na sexta, a lama mexeu.
+
+Oito, do tamanho de um cão, de carapaça cor de lodo e patas que estalavam na pedra. O Toque do rei apagou a metade de uma vez; a Lança do Sol do Moreth queimou o resto. Nenhum chegou a tocar ninguém.
+
+Do outro lado da casa, uma porta baixa respirava um ar quente e doce, como fruta podre.
+
+- **Parada:** noite do 508, Ezmisa, a sexta casa. Diante da porta do coração.
+
+### O coração de Ezmisa
+Antes de abrir, o rei fechou os olhos e viu a hora que vinha, muitas vezes: o inseto caindo sempre, quase sempre de uma vez. Abriu.
+
+O coração era uma adega afundada, de teto baixo, com o ar quente e doce de fruta podre. O Tkorna pendia do teto como um saco de casca, do tamanho de uma casa. Quando caiu, as asas bateram uma vez e apagaram duas tochas.
+
+O Toque do rei o pegou de lado. A Lança do Sol do Moreth entrou na carapaça e a abriu. O Moreth bateu três vezes, e a cada golpe o sangue do bicho espirrava e chiava na pele dele como óleo quente. A lança do Eiagrir fechou a conta.
+
+Durou menos que uma respiração longa. O rei tinha um corte no braço, de uma lasca de pedra que caiu do teto, e o corte já ardia diferente. Esfregou sal. Dessa vez o sal não bastou: antes de chegarem à sexta casa, ele já tinha suor frio na nuca e um peso atrás dos olhos.
+
+O coração do bicho era uma pedra verde-escura, do tamanho de um punho, ainda morna.
+
+### A volta
+Na terceira casa, a casca da muda estava onde a tinham deixado. A passagem para a segunda casa não estava mais. No lugar dela havia uma laje inteira de pedra, descida até o chão.
+
+Do outro lado, alguém batia na pedra com o cabo de uma arma. Vozes. Uma delas mandava, e as outras calavam.
+
+"O chão que mata", disse o Eiagrir baixo. "Alguém entrou atrás de nós."
+
+O Moreth encostou o ouvido na pedra. "Cinco, seis. E um que fala como chefe."
+
+A única saída de Ezmisa passava por ali.
+
+- **Parada:** noite do 508, Ezmisa, a terceira casa. A segunda casa fechada, com gente do Círculo presa do outro lado.
+
+### A laje, a terceira casa
+O rei pôs as duas mãos na laje e falou a palavra do Purificar para dentro de si. O peso atrás dos olhos foi embora como água que escorre. Custou mais do que devia: não havia vela, só a tocha, e a tocha não serve à Luz.
+
+Depois mandou a voz pelo vento, até a beira do brejo. "Gonde. Gente do Círculo entrou atrás de nós. Segura a carroça e o preso." E ficou ouvindo de volta.
+
+Ouviu o Gonde respirar. Ouviu um homem que não era da casa rir baixo e dizer que o chefe e cinco tinham descido atrás do rei, e que voltariam com o coração. Ouviu outro mandar dois descerem também.
+
+"Quatro na carroça", disse o rei. "Agora dois."
+
+O Moreth encostou o ombro na laje, o Eiagrir e o rei empurraram junto. A pedra subiu de uma vez, com um som de pilão.
+
+Do outro lado, seis homens de casaco cor de areia se viravam ainda, as espadas meio fora. O chefe era um homem grosso, de barba raspada e um cordão de dentes de bicho no pescoço.
+
+A luta não teve começo. O Moreth entrou antes de a laje acabar de subir. O primeiro homem caiu sem levantar a espada. O Eiagrir varreu dois com a haste da lança contra a parede. O chefe chegou a ferir o ar, e o Moreth lhe quebrou o braço da espada com a maça, depois o joelho.
+
+Um rapaz tentou correr para a primeira casa. A lança do Eiagrir o pegou nas costas, e ele não levantou mais.
+
+Do fundo, das bandas da primeira casa, vieram passos correndo e pararam. Dois homens olharam, viram a gente deles no chão e o rei de pé, e voltaram correndo para a porta.
+
+O Eiagrir saltou atrás deles. Quando chegou à primeira casa, os dois já tinham passado entre as aias e saído pela porta, e o brejo os engoliu no escuro.
+
+No cinto do chefe havia um couro dobrado: um mapa do vale de cima, com poços marcados a carvão, um ao lado do outro, todos numa só linha.
+
+### A beira do brejo
+A carroça estava sozinha com o Gonde e os dois guardas. Os dois que a vigiavam tinham subido a encosta com os dois que fugiram, quatro tochas indo para o posto.
+
+"Saíram correndo quando os dois passaram", disse o Gonde. "Não quiseram mais nada."
+
+A Eliane se ergueu num cotovelo, na carroça, e contou os presos que vinham amarrados: cinco, e o olheiro.
+
+No alto do vale, as tochas do posto se acenderam todas de uma vez.
+
+- **Parada:** noite do 508, a beira de Ezmisa. Seis presos do Círculo. O posto aceso.
+
+### O interrogatório, a carroça
+O Lior estava encostado na roda, com o braço quebrado amarrado ao peito e o joelho torto para o lado errado. O rei se agachou diante dele, com o mapa aberto sobre a coxa.
+
+"Os poços", disse o rei. "O coração. Meor. Ou você me responde, ou morre devagar, aqui, e ninguém em Yaelane vai saber o seu nome."
+
+O Moreth, atrás do rei, mudou o peso de um pé para o outro e não disse nada. A Eliane, na carroça, virou a cabeça para o outro lado.
+
+O Lior olhou para o mapa muito tempo. Depois cuspiu sangue para o lado.
+
+"Não é poço. É túnel. Cada buraco desce mais fundo que o outro, até a mina velha. A mina velha passa debaixo da praça do mercado de Lumade. Faltam dois. Duas semanas."
+
+"E o coração do bicho?"
+
+"No poço da praça. Na lua nova. Metade da cidade bebe dali." Ele riu, sem graça nenhuma. "Agora está com o senhor."
+
+"E Meor?"
+
+"Meor manda carta. A carta diz lua nova. Eu não sei mais que isso." E então, mais baixo, para ninguém: "Eu dei minha palavra."
+
+Os quatro homens dele, amarrados mais adiante, tinham ouvido tudo. Nenhum disse nada. Também não olharam mais para ele.
+
+### O posto
+A subida foi pela encosta de pedra solta, sem tocha, guiada pelas luzes lá de cima. Quando chegaram, o posto estava vazio.
+
+O fogo ainda queimava. Havia pão cortado sobre uma tábua, um caldeirão de feijão no gancho, uma capa largada no chão. No alto do mastro, a bandeira cor de areia batia no vento.
+
+Vale acima, longe, uma fila de tochas subia em direção aos poços.
+
+- **Parada:** noite do 508, o posto vazio do Círculo. Lumade tem doze noites até a lua nova.
+
+### A encosta, noite do 508
+As tochas deles subiam devagar, de dez em dez passos, e o vale era de pedra solta. O Eiagrir as seguia como quem segue uma fila de formigas, sem tirar os olhos.
+
+Alcançaram a retaguarda numa curva da encosta. O Moreth chegou primeiro, e a primeira tocha caiu rolando morro abaixo, acesa ainda. Foi rápido e no escuro. Quando acabou, um estava morto na pedra, três estavam no chão gemendo, e o resto, com o chefe novo à frente, tinha sumido vale acima sem tocha nenhuma.
+
+O rei ficou parado um tempo olhando o escuro para onde eles tinham ido. Não dormiu naquela noite. Nenhum dos três dormiu.
+
+### Lumade, a tarde do 509
+O Celocus ouviu tudo de pé, na mesma porta onde tinha recebido o rei com frieza três dias antes. O túnel. A praça do mercado. O poço de onde metade da cidade bebe. A lua nova.
+
+Quando o rei disse o preço, o material de forja todo mês, os núcleos, as armas da casa em troca, o Celocus não regateou. Entrou na casa e voltou com uma caixa de madeira escura.
+
+Dentro estava o coração do guardião das rainhas.
+
+"É seu", disse. "Para que se lembre de que eu pago bem quem me avisa."
+
+Mandaram vir vinho. Era o primeiro brinde entre os dois.
+
+### O entardecer
+O vinho ainda estava no copo quando os guardas chegaram à porta. Eram quatro, e dois vinham carregados.
+
+Um deles, com o braço preso numa tala de galho, ajoelhou diante do rei sem esperar ordem.
+
+"Trolls, senhor. Sete. Na primeira noite, a um dia daqui. Nyraus morreu de pé. Dvurnos não chegou a levantar." Engoliu. "Os presos cortaram as cordas na confusão. Correram todos. O velho mercador também."
+
+O Celocus pousou o copo na mesa, sem barulho nenhum.
+
+- **Parada:** entardecer do 509, Lumade. O pacto selado. Dois guardas mortos. Os vinte e quatro herdeiros da Primeira Liga soltos.
+
+## Dias 510 a 514 — a ponte velha, a estalagem do sul, o poço da praça (as respostas: 1a caçar os herdeiros · 2a caçar os Vrurn · 3a ficar e defender Lumade)
+- **Rolagens:** LG10 [6] · RT10 [5]+2 = 7 · HD10 [5] · CR11 a casa [2]+48 = 50 × os Vrurn [3]+27 = 30: destroçados; CR11c [4] um fugiu · LV10 [6] · OU11 [4,6] = 1.000 · o tick semanal do 511 · PH11 [15]−1 = 14 · RN13 [6]+1 = 7 · IN13 [1] · TU14h [4] · TU14 [1] · VG14 [10]−1 = 9 · FB14 [5] · FB14c [3] · CE14 [4] · CH14 [2], CH14o [1] · RV11 (rolagem oculta).
+
+### A estrada do leste, 510
+A carroça estava virada na beira da estrada, com as rodas para o céu. Os trolls tinham levado os cavalos e a comida e deixado o resto.
+
+Nyraus e Dvurnos estavam debaixo dela, inteiros. Enterraram os dois ali, ao pé de um marco de estrada, com as lanças por cima.
+
+O rastro dos trolls saía da estrada para o norte. Era largo como de boi e descia para as gargantas.
+
+### A ponte velha, 511
+Era uma ponte de pedra que ninguém mais usava, sobre um rio verde e rápido. Debaixo dela, no escuro e no fedor, sete trolls dormiam amontoados.
+
+Um acordou tarde demais. A luta foi curta e feia. Quando acabou, seis estavam no chão, e o sétimo tinha se jogado no rio. A água o levou para baixo, rolando.
+
+Queimaram os seis até não sobrar nada que pudesse levantar.
+
+No fundo do covil, entre ossos, estavam as armas dos guardas, uma bolsa de mercador e um maço de papel lacrado: a carta ao conselho, inteira. Os trolls não leem.
+
+Na pedra da ponte, debaixo do musgo, alguém tinha riscado fundo um círculo cortado por uma linha. Havia sangue velho por cima.
+
+### A estalagem do sul, 513
+O rastro dos herdeiros se partia num vau: um grupo grande para as aldeias do vale, e um pequeno, mais rápido, para o sul. A casa foi atrás do pequeno.
+
+Achou-o numa estalagem de beira de estrada. Nove homens à mesa, com copos de água, pedindo cavalos fiado pelo nome das casas.
+
+O Nutoccone viu o Moreth na porta. Levantou-se, olhou, e sentou de novo.
+
+"De novo", disse.
+
+O dono da estalagem quis ficar bem com o rei. "Um rapaz meu saiu ontem para o Porto de Marasar, senhor. Com um recado deles. Foi pago no fiado."
+
+O Nutoccone não levantou os olhos do copo.
+
+### Lumade, a noite do 514
+Chegaram de noite, com os nove amarrados em fila. A praça do mercado estava fechada com carroças, e a gente do Celocus andava nela com tochas. Pelas ruas havia cheiro de vômito.
+
+A casa do poço estava com a porta arrombada.
+
+O Celocus esperava à porta da casa dele.
+
+"Ao meio-dia", disse. "Seis. Subiram pela casa do poço, jogaram e desceram. Minha gente estava na mina velha e não ouviu nada." Esperou um pouco. "A boca está tapada. Pedra até em cima."
+
+Os quatro guardas feridos tinham comido na estalagem da praça. Estavam deitados no pátio, vomitando num balde.
+
+Ao lado da cama da Eliane, uma curandeira de Lumade segurava um frasco da água do poço contra a vela.
+
+"Isto não mata", disse. "Não desta vez."
+
+Na mesa, duas cartas esperavam o rei: uma de Levis e uma de Ireviel.
+
+- **Parada:** noite do 514, Lumade. Os Vrurn mortos. O Nutoccone preso de novo, e o recado dele a caminho da Liga. O poço da praça envenenado e o túnel tapado.
+
+## Dia 515 — o remédio, o carvoeiro, a grade (as respostas: 1b os nove na cela, "não prendo vivo a terceira vez" · 2a o remédio · 3 a opinião do Eiagrir · 4a a guarda de Ireviel à torre velha · 5c o conselho, e "não deixem as cidades passarem fome")
+- **Rolagens:** SB15 [10, 4] + 20 + 5 = 39 × 30: sucesso · RM15 [17, 18] + 22 + 5 = 62 × 35: EXTRAORDINÁRIO · RM15d [2]: 40 doses · RM15s [4] · RV12 e RV12r (rolagem oculta, abaixo à mesa: o Celocus conta) · RD15 (rolagem oculta).
+
+### A noite do 514
+O recado foi pela grade, do jeito que o rei disse: não fuja; não haverá terceira vez.
+
+O Nutoccone ouviu sentado no chão da cela, com as costas na pedra. Não respondeu.
+
+### O dia 515
+Ferveram a água do poço na cozinha do Celocus. Quando secou no fundo da panela, ficou uma crosta vermelha e escura, que o rei já tinha visto: no chão da sexta casa de Ezmisa, onde as crias do Tkorna morreram.
+
+Era sangue delas, fervido com sal de areia.
+
+O resto do dia foi de sal limpo, de uma erva verde que a curandeira trouxe do mercado e da luz do Purificar numa vela, gota por gota. No meio da tarde a água da panela ficou clara.
+
+Encheram quarenta frascos de barro.
+
+"Com isto", disse a curandeira, "nem o poço bebe veneno. E quem tomar antes fica uma semana sem beber nenhum."
+
+Perto do anoitecer, um menino da casa do Celocus veio correndo. Um carvoeiro que ninguém conhecia tinha comprado sal de areia no mercado, o cinzento, que vem de Yaelane. O homem do Celocus foi atrás dele até uma casa vazia junto à muralha, no trecho onde as pedras são velhas.
+
+### A noite do 515
+O Celocus veio ele mesmo até o rei.
+
+"Seu preso me ofereceu uma cadeira na Liga", disse. "Pelo seu livro e pela porta da cela."
+
+Esperou um pouco.
+
+"A Liga me fechou a porta uma vez. Hoje fui eu que fechei."
+
+- **Parada:** noite do 515, Lumade. O remédio pronto. O carvoeiro na casa vazia junto à muralha. O cavaleiro com as cartas do rei sai na aurora. O plano de volta ao reino espera a palavra do rei.
+
+## Dias 515 (noite) a 517 — o porão, a estrada, as gargantas (as respostas: 1a a casa toda junta · 2a a batida na casa vazia · 3c o Nutoccone a julgamento em Ireviel · 4a o vdaek)
+- **Rolagens:** CV15 [3] · CR15 a casa [11]+48 = 59 × o Círculo [15]+24 = 39: destroçados; CR15c [1] um fugiu pelo ramo · CR15f [6] · CE16 [6]+2 = 8 · RD16v [2] · PN16 [6] · MG17 [4] · AP17 [5] · SP16, RD16, RV13 (rolagens ocultas).
+
+### O porão, a noite do 515
+A casa vazia tinha a porta presa com arame por dentro. O Moreth a abriu com o ombro.
+
+Embaixo, no porão, havia uma panela no fogo baixo, um saco de sal cinzento e um buraco no chão, do tamanho de um homem, com uma escada de corda descendo para o escuro.
+
+Eram quatro. A luta durou o tempo de uma respiração. O maior deles se jogou no buraco e a corda balançou vazia.
+
+Ficaram três no chão: um morto, o carvoeiro e outro, amarrados.
+
+Ninguém dormiu. Na aurora, a gente do Celocus encheu o buraco de pedra.
+
+### A despedida, aurora do 516
+O Celocus estava no portão do leste com quatro cavaleiros e dois cavalos de tiro já arreados.
+
+"Até Levis", disse. "Os cavalos ficam com o senhor."
+
+### A estrada, 516
+A meio dia de Lumade, os corvos estavam numa vala na beira da estrada.
+
+Era o cavaleiro das cartas. Tinha duas flechas nas costas. O cavalo não estava ali, nem a bolsa.
+
+Enterraram-no também.
+
+### As gargantas, 517
+A carroça ficou na estrada, no lugar da emboscada, com o Gonde, a Eliane já de pé, os feridos, os cavaleiros do Celocus e os vinte presos.
+
+O rei, o Moreth e o Eiagrir desceram para as gargantas. Ao meio-dia o chão tremeu debaixo das botas, de leve, como respiração.
+
+No fundo de uma garganta seca, onde o rio já não passa, havia uma coisa verde e escura do tamanho de uma casa, enrolada em si mesma como uma raiz. Por baixo dela saía uma asa enorme, de penas cinzentas, e uma mancha de sangue velho na pedra.
+
+A coisa dormia. A cada respiração dela, a pedra tremia.
+
+- **Parada:** meio-dia do 517, as gargantas. O bicho dorme em cima do vdaek. Antes de qualquer luta, a palavra do rei (G9).
+
+## Dias 517 a 520 — o Toque nas gargantas, as noites da estrada, Levis com fome (as respostas: 1a lutar; e o pedido: avisar do servo de nível alto, a G44)
+- **Rolagens:** a luta (sims/gargantas_517_saida.txt): o Toque do Ceifador [13, 4]+34 = 51 contra 47, 1.695 de dano: o Bzuur cai na rodada 1 · VD17 [4] · VT17 [1] · PN17 [6] · o tick semanal do 518 · GD18 [3] · TD18 [4], TD18n 31 · CB18 [2], CB18w [6], CB18r [2] · PN18 [1], PN18w [3], PN18x [4] · EN19 [5] · PN19 [2] · RW20 [6], RW20n [6] · CB18g e ME20 (rolagens ocultas).
+
+### As gargantas, 517
+O rei chegou a três passos da coisa. Ela respirava, e a pedra tremia.
+
+O Foco de Osso esfriou na mão dele antes do golpe. Quando o Toque entrou, a planta inteira se encolheu de uma vez, como folha no fogo, e não respirou mais.
+
+Um pouco depois, ela se desenrolou devagar e ficou de pé, verde e escura, esperando.
+
+Levantaram a asa cinzenta e rasparam da pedra o sangue velho, duro como resina. Encheram dois quilos.
+
+Naquela noite, o bicho ficou de pé ao lado das cordas dos presos, sem dormir e sem fazer barulho. Ninguém tentou nada.
+
+Na aurora ele caiu como uma árvore cortada.
+
+### A estrada, 518
+Um saco caiu no vau quando a carroça balançou. Era o osso do bicho. O Gonde entrou na água até o peito e não achou.
+
+De noite, o Nutoccone e dois dos seus cortaram a corda com uma pedra afiada. A vigia os pegou com as mãos ainda nos nós.
+
+Mais tarde, um homem magro, de pés enrolados em pano, chegou à carroça para roubar pão. O Moreth o segurou pelo braço. O homem tinha nas costas as marcas das minas de cima de Levis.
+
+"Fugi", disse. "Na lua passada. Não vou voltar."
+
+O Moreth ficou olhando as marcas um tempo. Ele também tinha as dele, da galé.
+
+### A estrada, 519
+Na segunda noite, dois homens entraram no acampamento sem fazer barulho e foram direto à carroça da Matriz.
+
+O Moreth dormia ao lado da roda. Acordou com a lona se mexendo.
+
+Um morreu ali mesmo. O outro ficou amarrado até de manhã, sem falar. Tinha no cinto uma moeda do Norte, com a cara da Leliel.
+
+### Levis, 520
+Levis estava cinzenta e com fome. O pão custava o dobro, o celeiro tinha sido roubado, e numa rua da cidade baixa havia gente de cama.
+
+A Brara ouviu do rei a ordem do grão e mandou comprar no mesmo dia.
+
+No mercado, o homem que queria o vdaek pagou o frasco e, para ficar bem com o rei, contou quem o tinha encomendado: a Almision.
+
+- **Parada:** tarde do 520, Levis. Vinte e dois presos. A Matriz inteira. A barca para Ireviel espera a palavra do rei.
+
+## Dias 520 (noite) e 521 — Levis (as respostas: 1 os nove da Liga às minas, nos piores trabalhos, "para aprender" · 2 tirar toda informação do Rigr · 3b o Tondunn com o Moreth · 4a ficar um dia · planejar com a Brara · e o pedido: a história como livro, a G45)
+- **Rolagens:** LL20n 45 · CM20 35 × 35 (o Rigr resiste) · IN20 42 × 26 ganho · o saber do Rigr: ganho, falha, ganho, falha feia · SR20 [4] · BR20 [2] · SB notar 41 × 25 ganho · SB magia extraordinário · RM21 48 × 35 ganho · RM21d [2] · T1R a T4R, LG21, CL21, DL21 (rolagens ocultas).
+
+### Capítulo — O pão de Levis
+
+#### I. O porão da Brara · noite do 520
+O porão da casa da governadora cheirava a carvão velho e a maçã guardada. A Brara tinha tirado as maçãs do caixote para o homem da Leliel sentar.
+
+Ele não sentou. Ficou de pé, com as mãos amarradas para trás, olhando a moeda do Norte que o Moreth tinha posto na mesa, entre os dois.
+
+Quando o rei disse a palavra das Luvas, o homem fechou os olhos e trincou os dentes. A palavra bateu nele e escorregou, como chuva em lona encerada.
+
+"Teimoso", disse a Brara, e pela primeira vez na noite pareceu gostar de alguém.
+
+Foi o Moreth quem falou das minas. Não ameaçou. Contou: o frio que entra pela sola, o pó que fica no peito, os homens que param de contar os dias. Falou devagar, como quem lembra.
+
+O homem da Leliel abriu os olhos.
+
+"Rigr", disse. Era o nome dele. Depois disse o resto.
+
+O dinheiro tinha vindo de Marasar, da gente da Liga que tomou o arsenal, pela mão de um guarda do cais. A moeda era do Norte porque a Liga já não tinha ouro dela. Havia um terceiro com os cavalos, no Remo Torto, de chapéu de feltro verde.
+
+"E como sabiam por onde viríamos?", perguntou a Brara.
+
+Rigr levantou o queixo. "Alguém de dentro da sua Fornalha, senhor. Mandou dizer que a pedra tinha saído com o rei."
+
+Disse isso olhando para o rei, e acreditava no que dizia.
+
+Lá em cima, na grade do porão, uma sombra pequena se mexeu e sumiu. Quando a Brara chegou à porta, só se ouviam pés descalços correndo na lama da rua.
+
+A guarda dela desceu ao cais antes da meia-noite. No Remo Torto havia uma cama ainda morna e uma janela aberta. Na estrada do norte, longe, um cavalo a galope.
+
+#### II. A descida · aurora do 521
+Os nove da Primeira Liga subiram a trilha das minas de cima antes do sol, em fila, com a corda passando de cintura em cintura.
+
+O Nutoccone ia na frente. Nos primeiros cem passos olhou para trás duas vezes, para a cidade lá embaixo, com as chaminés frias. Depois parou de olhar.
+
+O capataz da mina de cima, um homem sem os dois dedos da mão esquerda, leu o papel da Brara e cuspiu de lado.
+
+"Os piores trabalhos", leu em voz alta. "Para aprender."
+
+Deu ao Nutoccone uma picareta de cabo rachado e apontou a galeria que ninguém queria, a do pó.
+
+O herdeiro de uma das casas mais velhas da Liga pegou a picareta com as duas mãos, do jeito errado.
+
+#### III. O pão · manhã do 521
+Na fila do forno da rua do cais havia mais gente que pão. Nanne, a padeira, contava os pães com o dedo e mentia para cada um sobre quantos ainda havia.
+
+O rei atravessou a fila com dois guardas da Brara e com o Eiagrir, que parava para olhar tudo: as portas, as marcas de carroça na lama, as sacas vazias empilhadas atrás do forno.
+
+"As carroças do celeiro saíram de noite", disse o Eiagrir, agachado. "Mas não foram longe. A lama da roda é do cais. Lama do cais é preta."
+
+Nanne ouviu e parou de contar.
+
+"A casa do Ducirzino é no cais", disse, baixo, sem olhar para ninguém. "E o Ducirzino vende pão de ontem pelo preço de amanhã."
+
+No porão da casa do mercador, debaixo de redes de pesca velhas, havia sacas até o teto. O grão de Levis estava ali, seco e inteiro.
+
+O Ducirzino chegou correndo, com o gorro na mão e a boca já cheia de números.
+
+#### IV. A rua de baixo · tarde do 521
+Na cidade baixa, os doentes estavam numa casa de tábuas onde os de fora tinham sido postos ao chegar. Tossiam com o peito, e a pele deles ficava áspera como lã molhada.
+
+O chefe dos de fora era um velho alto, de barba amarrada com fio vermelho. Ficou na porta de braços cruzados enquanto o rei entrava. Ninguém de Levis tinha entrado ali.
+
+"Na nossa terra", disse ele, sem ser perguntado, "chamamos isso de febre da lã. Vem das ovelhas. A gente curava com casca de salgueiro e fogo limpo."
+
+Ficaram a tarde inteira entre a panela e as esteiras. A casca de salgueiro fervida, o sal, a luz do Purificar numa vela, gota por gota. No fim do dia, um menino que não abria os olhos desde a véspera pediu água.
+
+O velho descruzou os braços. Não agradeceu. Foi buscar a água ele mesmo.
+
+#### V. O que a casa conversa · entardecer do 521
+No pátio da casa da Brara, o Tondunn comia sentado no chão, de costas para a parede, com o pão protegido entre os joelhos, como quem ainda espera que alguém o tome.
+
+O Moreth sentou ao lado dele sem dizer nada e lhe deu o próprio pedaço de queijo.
+
+"Por que?", perguntou o Tondunn, de boca cheia.
+
+O Moreth pensou um tempo. "Porque alguém fez isso por mim uma vez", disse. "Na galé."
+
+A Eliane andava de um lado a outro do pátio, de bengala, contando os passos em voz baixa. Quando o Gonde passou, de cabeça baixa, com o cheiro do vau ainda na roupa, ela o parou com a ponta da bengala no peito.
+
+"Perdeu um saco de osso", disse. "Ninguém morreu. Levante a cabeça e vá contar os presos."
+
+Ele foi. Contou duas vezes.
+
+#### VI. A mesa da Brara · noite do 521
+A Brara abriu sobre a mesa o mapa de Levis, com as manchas de vela de muitas noites. Pôs em cima uma pedra para cada coisa que faltava: o celeiro, a estrada de Lumade, a fundição velha sem carvão, a casa dos de fora.
+
+"O grão que o senhor mandou comprar chega em duas semanas", disse. "Até lá, a cidade come o grão do Ducirzino. Depois, come o quê?"
+
+Ela falou de custo antes de falar de plano, do jeito dela, de dedo na mesa. A fundição era a pedra que ela mais empurrava.
+
+Quando terminou, ficou olhando o mapa um tempo, sem tirar as mãos dele.
+
+"E quando Levis estiver de pé, senhor", disse, sem levantar os olhos, "eu queria ir embora daqui."
+
+- **Parada:** noite do 521, Levis. O grão do Ducirzino achado. A febre da lã com remédio. A Brara com o mapa na mesa e um pedido.

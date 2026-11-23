@@ -1,0 +1,8 @@
+nome: Thudun
+categoria: Lendário
+origem: monstro (sangue)
+essência: Vento + Elo
+oposta: Terra
+propriedades: dureza 9 · maleabilidade 2 · condutividade mágica 8
+na forja: Matéria +2 · Processo -1 · aceita infusão até o 8º círculo
+efeitos:

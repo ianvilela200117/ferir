@@ -52,6 +52,14 @@ def xp_luta(F, r, dia=None):
         caidos = int(dano // pv_un) if quantos > 1 else 0
     if M.get('enxame') and quantos == 1:
         out.append("⚠ G39: enxame sem 'quantos' no arquivo da luta: o XP conta um só (pôr 'quantos' e 'pv_un' na base)")
+    try:   # 507 (G39, erro achado no G9 do coração): o PV do rei no fim da luta vai à ficha sozinho (antes ficava cheio no ficha.json)
+        g = next((x for x in r.get('G', []) if x.get('nome') == 'Ferir'), None)
+        if g is not None and 'sim=' not in ' '.join(sys.argv):
+            Fi = carrega('ficha.json'); pv_fim = max(0, int(g.get('pva', g.get('pv', Fi['pv'][0]))))
+            if pv_fim != Fi['pv'][0]:
+                out.append(f"G39 · o PV do rei no fim da luta vai à ficha: {Fi['pv'][0]} → {pv_fim}/{Fi['pv'][1]}"); Fi['pv'][0] = min(pv_fim, Fi['pv'][1]); grava('ficha.json', Fi)
+    except Exception as ex:
+        out.append(f'⚠ G39: o PV do rei não foi à ficha: {ex}')
     mult = 10 if cat in GRANDES else (5 if M.get('chefe') else 1)
     cada = nivel * 10 * caidos * mult
     vivos = [g for g in r['G'] if g['nome'] not in r['mortos'] and not g['nome'].startswith('hoste')]
@@ -141,6 +149,7 @@ def pendencias(dias=7, dia=None):
     for it in A.get('itens', []):
         if it.get('feito'): continue
         t = it.get('texto', ''); di = it.get('dia') or 0
+        if it.get('oculto') or t.startswith('(OCULTO'): t = '(OCULTO: o texto está na agenda e no envelope; não vai à mesa)'   # 508 (erro achado): o resumo do tick vai à mesa
         casa = it.get('para') or 'PRAZO' in t.upper() or it.get('tipo') in ('marco', 'fio')
         if not casa or it.get('tipo') == 'noticia': continue
         if dia <= di <= dia + dias:
@@ -162,6 +171,9 @@ def pendencias(dias=7, dia=None):
             out.append(f"⚠ a ficha de combate de {n} é do nível {FC[n]['nivel_ref']}; o nível de hoje é {nv} (encadeia.py sincroniza)")
         if v.get('prova_pendente'):
             out.append(f"⚠ {n}: a Prova da faixa {v['prova_pendente']} ainda por passar (o próximo tick tenta)")
+    Fr = carrega('ficha.json', {}); fr = FC.get('Ferir')   # 507 (G9): o PV de combate do rei contra o da ficha
+    if Fr and fr and fr.get('pv') != Fr.get('pv', [0, 0])[1]:
+        out.append(f"⚠ a ficha de combate do rei tem PV {fr.get('pv')}; a ficha diz {Fr['pv'][1]} (encadeia.py sincroniza)")
     R = carrega('reino.json', {'cidades': []})   # 502 (erro achado): mod com chave fora dos pilares ou prazo sem data nunca vence nem conta
     for c in R.get('cidades', []):
         for pl, lst in c.get('mods', {}).items():
@@ -185,6 +197,13 @@ def sincroniza():
         g['nivel_ref'] = nv; g['nivel'] = nv
     grava('fichas_combate.json', FC)
     if out: anota(f"- G39 [Dia {dia_atual()}] SINCRONIA DAS FICHAS DE COMBATE (o PV pelo nível de hoje): " + ' · '.join(out))
+    try:   # 507 (G9, erro achado): o rei não está no npcs.json; o PV de combate dele segue o ficha.json
+        F = carrega('ficha.json', {}); FCx = carrega('fichas_combate.json', {'fichas': {}})
+        fr = FCx['fichas'].get('Ferir')
+        if F and fr and (fr.get('pv') != F['pv'][1] or fr.get('nivel_ref') != F['nivel'] or fr.get('nivel') != F['nivel']):
+            out.append(f"Ferir: PV de combate {fr.get('pv')} → {F['pv'][1]} (nível {F['nivel']})"); fr['pv'] = F['pv'][1]; fr['nivel_ref'] = F['nivel']; fr['nivel'] = F['nivel']; grava('fichas_combate.json', FCx)
+    except Exception as ex:
+        out.append(f'⚠ a ficha de combate do rei não sincronizou: {ex}')
     return out
 
 

@@ -1,0 +1,12 @@
+== o que o Círculo cava nos poços em linha do vale de cima
+CD 10 da escala velha → 20 nos dois dados
+teste: [[19], [11]] + 0 + nível 8 = 38 vs 20 (margem +18)
+grau: SUCESSO COM GANHO
+== o que o Círculo queria com o coração do bicho de Ezmisa
+CD 15 da escala velha → 25 nos dois dados
+teste: [[17], [11]] + 0 + nível 8 = 36 vs 25 (margem +11)
+grau: SUCESSO COM GANHO
+== o que Meor, o chefe da guilda, manda
+CD 15 da escala velha → 25 nos dois dados
+teste: [[12], [4]] + 0 + nível 8 = 24 vs 25 (margem -1)
+grau: falha

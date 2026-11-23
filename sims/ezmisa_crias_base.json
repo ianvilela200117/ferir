@@ -1,0 +1,19 @@
+{
+ "monstro": {
+  "nome": "as crias do Tkorna",
+  "cat": "Raro",
+  "nivel": 46,
+  "pv": 2944,
+  "df": 27,
+  "rd": 3,
+  "at": 17,
+  "dado": "1d8",
+  "mult": 2.5,
+  "essencia": "Veneno",
+  "fraqueza": "Vida",
+  "enxame": true,
+  "quantos": 8,
+  "pv_un": 368,
+  "nota": "508: as 8 crias (CR6q [2,6]) do TKORNA na 6ª casa de Ezmisa (S608 [15]); Raras, nível 46 (CN08 [3]); a tabela do Livro: PV nível × 8 (368 cada), ataque e defesa nível ÷ 4 + 6, dano do tamanho (cão: o do homem, 1d8) × 2,5; fracas a VIDA como a mãe; um ENXAME (o luta.py: o golpe único pela metade, a área em dobro); o XP pela G39 com quantos e pv_un"
+ }
+}
