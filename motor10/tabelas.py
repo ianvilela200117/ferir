@@ -2,6 +2,7 @@
 
 Nenhum outro script do Motor 10 traz número de regra. Mudar o jogo é mudar esta página e rodar `provas.py`:
 se uma meta do banco de provas quebra, a mudança não entra.
+(Os números dos BICHOS moram na página deles, o tabelas_bichos.py: o corpo do bicho usa a mesma escala de categoria daqui.)
 
 A ESCALA (a regra de ouro do Motor 10, "o item decide"):
   cada categoria vale o TRIPLO da de baixo, na arma E na armadura, e o que conta é a DIFERENÇA entre as duas.
@@ -23,6 +24,7 @@ NU = 1 / 3                                     # a proteção de uma parte sem a
 K_DANO = 4.0                                   # o tamanho do golpe entre iguais (afina a duração da luta)
 BON = [0, 4, 8, 12, 16, 20, 24, 28]            # acerto da arma; e Defesa, do escudo ou da arma que apara
 DUR = [10, 20, 30, 40, 50, 60, 80, 100]        # durabilidade de uma peça nova
+NUCLEO_DUR = 1                                 # o núcleo (item do Livro, tipo 'nucleo': o que a obra Épica ou maior pede) não gasta: 1 de 1
 
 # ---------- as armas ----------
 # dado · golpe (corte, ponta, impacto) · alcance em casas (1 casa ≈ 3 m) · mãos · peso · apara (Defesa a mais) · à distância?

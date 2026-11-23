@@ -10,6 +10,9 @@ O REQUISITO é por ATRIBUTO, nunca por nível: a peça pede Força (ou Agilidade
   SINTONIA: a pessoa sustenta Vontade ÷ 20 peças Épicas ou melhores (as melhores primeiro). As que passam disso rendem uma
   categoria abaixo, e os efeitos delas dormem.
 
+  O BICHO (bichos.py) tem a mesma ficha: o corpo dele é a arma e a armadura, com categoria. O corpo não é peça: não está no
+  Livro de Itens, não quebra, não tem dono e não ocupa sintonia. O tamanho mexe no PV, no alcance, no cerco, no corredor e na Defesa.
+
 Uso (para olhar): python3 pessoas.py padrao NIVEL [molde=guerreiro|arqueiro|comum] [arma=FAMILIA:CAT] [armadura=MATERIAL:CAT] [escudo=CAT]
 """
 import sys
@@ -79,8 +82,47 @@ def _arma(it, p, dorme):
                 efeitos=_efeitos(it, dorme), item=it)
 
 
+def ficha_bicho(p):
+    """a ficha de luta de um BICHO (a pessoa que o bichos.bicho devolve). O corpo é a arma e a armadura, com categoria, e não é peça:
+    um registro só para o corpo todo, sem id e sem dono, que não quebra e não entra na conta da sintonia."""
+    import tabelas_bichos as TB
+    b = p['bicho']; at = p['atributos']; m = p['maestria']; c = b['cat']
+    if b['tamanho'] not in TB.TAMANHOS: sys.exit(f'{p["nome"]}: tamanho desconhecido: "{b["tamanho"]}" (use: {", ".join(TB.TAMANHOS)})')
+    if b['couro'] not in TB.COUROS: sys.exit(f'{p["nome"]}: couro desconhecido: "{b["couro"]}" (use: {", ".join(TB.COUROS)})')
+    if not b['armas'] or any(x not in TB.ARMAS_CORPO for x in b['armas']): sys.exit(f'{p["nome"]}: as armas do corpo são: {", ".join(TB.ARMAS_CORPO)} (veio {b["armas"]})')
+    for t in b['tracos']:
+        if t not in TB.TRACOS: sys.exit(f'{p["nome"]}: traço desconhecido: "{t}" (os que a luta roda: {", ".join(TB.TRACOS)})')
+    tam = TB.TAMANHOS[b['tamanho']]; como = TB.COUROS[b['couro']]; mat = T.MATERIAIS[como]
+    corpo = dict(tipo='corpo', cat=c, nome=f"o corpo de {p['nome']}", dur=[1, 1], efeitos=[dict(chave='nao_quebra')])
+    acerto = T.acerto_base(m, at['Força'], at['Agilidade']) + T.BON[c] + p.get('pena', 0)
+    def arma(nome):
+        a = TB.ARMAS_CORPO[nome]
+        return dict(nome=f'{nome} {T.CATS[c]}', cat=c, dado=a['dado'], golpe=a['golpe'], alcance=tam['alcance'], distancia=False, maos=1, recarga=0, haste=False, mult=T.MULT[c],
+                    acerto=acerto, aparo=T.BON[c], folego=a['folego'], fmult=T.forca_mult(at['Força']), efeitos={'nao_quebra': True}, corpo=True, item=corpo)
+    F = dict(nome=p['nome'], nivel=p['nivel'], maestria=m, pvmax=int(T.pv_max(at['Vigor'], p['nivel']) * tam['pv']), folmax=max(T.FOLEGO_MIN, T.folego_max(at['Vigor']) - p.get('fol_menos', 0)),
+             esforcos=T.esforcos(m), reacoes=T.reacoes(m), vontade_b=at['Vontade'] // 10, percep_b=at['Percepção'] // 10, agil_b=at['Agilidade'] // 10, forca_b=at['Força'] // 10, dormem=[],
+             bicho=b.get('especie') or 'bicho', tamanho=b['tamanho'], tracos=list(b['tracos']), ocupa=tam['ocupa'], cerco=list(tam['cerco']), coragem=b.get('coragem', 0))
+    F['pv'] = min(p.get('pv', F['pvmax']), F['pvmax']); F['fol'] = F['folmax']
+    F['arma'] = arma(b['armas'][0]); F['arma2'] = None; F['punho'] = arma(b['armas'][0]); F['armas_corpo'] = [arma(x) for x in b['armas']]
+    if 'sopro' in b['tracos']:
+        F['sopro'] = dict(nome='o sopro', cat=c, dado=TB.SOPRO['dado'], golpe='sopro', alcance=TB.SOPRO['alcance'], distancia=True, maos=1, recarga=0, haste=False, mult=T.MULT[c],
+                          acerto=acerto, aparo=0, folego=TB.SOPRO['folego'], fmult=TB.SOPRO['forca'], efeitos={'nao_quebra': True}, corpo=True, area=True, item=corpo)
+    F['partes'] = {parte: dict(nome=f"{b['couro']} {T.CATS[c]}", cat=c, material=como, rd=T.RD[c] * mat['rd'], item=corpo) for parte in T.PARTES}
+    F['nuas'] = []; F['fontes'] = [dict(item=corpo, efeitos={'nao_quebra': True})]; F['escudo'] = None; F['fol_rodada'] = 0; F['ini_mod'] = mat['ini']
+    F['def_fixa'] = T.defesa_base(m, at['Agilidade']) + mat['defesa'] + tam['defesa'] + p.get('pena', 0)
+    F['feridas0'] = [list(x) for x in p.get('feridas', [])]
+    for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
+        if k in p: F[k] = p[k]
+    return F
+
+
 def ficha(p):
     """a ficha de luta desta pessoa, hoje, com o que ela veste"""
+    if p.get('bicho'):
+        if isinstance(p['bicho'], str):                     # o atalho do cenário ({"nome": ..., "nivel": 0, "bicho": "lobo"}): a espécie inteira sai da tabela
+            import bichos
+            p = bichos.bicho(p['bicho'], **{k: p[k] for k in ('nome', 'id', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha', 'pv', 'feridas', 'pena', 'fol_menos') if k in p})
+        return ficha_bicho(p)
     at = p['atributos']; eq = p.get('equip') or {}; m = _maestria(p, (eq.get('arma') or {}).get('familia', 'punho'))
     arm = [x for x in eq.get('armaduras') or [] if x]
     todas = [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + arm
@@ -130,6 +172,13 @@ def defesa(F, w=None, escudo_inteiro=True):
 
 def linha(F):
     """a ficha em três linhas, para a mesa"""
+    if F.get('bicho'):
+        w = F['arma']; pt = F['partes']['tronco']; ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
+        return (f"{F['nome']} (bicho {F['tamanho']}, nível {F['nivel']}, instinto de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
+                f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto +{w['acerto']:g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa(s)"
+                + (f" · {F['sopro']['nome']} ({F['sopro']['dado']} × {F['sopro']['mult']:g}, a {F['sopro']['alcance']} casas)" if F.get('sopro') else '') + '\n'
+                f"  Defesa {defesa(F):g} · o corpo é a armadura: {pt['nome']} (proteção {pt['rd']:g}, vale como {pt['material']}) · cerco: {F['cerco'][0]} de perto e {F['cerco'][1]} de haste · ocupa {F['ocupa']:g} de um corredor"
+                + (f" · traços: {', '.join(F['tracos'])}" if F['tracos'] else '') + (f" · coragem {F['coragem']:+d}" if F.get('moral') != 'firme' else ' · não foge'))
     w = F['arma']; ps = ' · '.join(f"{k} {v['rd']:g}" for k, v in F['partes'].items()) or 'sem armadura'
     ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
     return (f"{F['nome']} (nível {F['nivel']}, {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"

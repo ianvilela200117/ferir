@@ -8,6 +8,7 @@ Uso:
   python3 itens.py nova arma FAMILIA CATEGORIA "Nome" [dono=Nome] [feito=Nome] [dia=N] [efeito=chave[:valor]]... [sob=Dono:grau]
   python3 itens.py nova armadura MATERIAL CATEGORIA "Nome" [cobre=tronco,braços,pernas] ...   (elmo: cobre=cabeça)
   python3 itens.py nova escudo CATEGORIA "Nome" ...
+  python3 itens.py nova nucleo CATEGORIA "Nome" [de=ESPECIE] [dono=Nome]     o núcleo de um chefe (o que a obra Épica ou maior pede)
   python3 itens.py ver [dono=Nome]          a lista
   python3 itens.py janela ID                a janela do item (a que aparece na cena)
   python3 itens.py dono ID "Nome" ["o que houve"]     a peça muda de mão (entra na história dela)
@@ -49,6 +50,11 @@ def cat_i(c):
 def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=None, sob=None, **mais):
     """monta um registro de item (sem gravar). É o que os testes e o `nova` usam."""
     c = cat_i(cat)
+    if tipo == 'nucleo':                                    # o NÚCLEO: não se veste, não gasta, não leva efeito. É contado no mundo, com dono e lugar.
+        if efeitos or sob or familia or material or cobre: sys.exit('o núcleo não leva efeito, sob medida, família nem material: só a categoria, o nome e de que bicho veio (de=)')
+        it = dict(tipo='nucleo', cat=c, nome=nome or f'núcleo {CATS[c]}', dur=[T.NUCLEO_DUR, T.NUCLEO_DUR], dono=None, onde=None, de=mais.pop('de', None), historia=[])
+        it.update(mais)
+        return it
     it = dict(tipo=tipo, cat=c, nome=nome, dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), sob_medida=sob, historia=[], dono=None, onde=None)
     if tipo == 'arma':
         if familia not in FAMILIAS: sys.exit(f'família de arma desconhecida: "{familia}" (use: {", ".join(FAMILIAS)})')
@@ -62,7 +68,7 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
     elif tipo == 'escudo':
         it['nome'] = nome or f'escudo {CATS[c]}'
     else:
-        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo)')
+        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo)')
     for e in it['efeitos']:
         if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
         if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
@@ -84,6 +90,7 @@ def tem(it, chave):
 def pede(it, dorme=False):
     """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível.
     Peça que dorme (sintonia) não tem efeito nenhum: nem o "leve"."""
+    if it['tipo'] == 'nucleo': return 'Força', 0            # o núcleo não se empunha
     aj = 0 if dorme else (T.AJUSTE_PESO if tem(it, 'pesa') else 0) - (T.AJUSTE_PESO if tem(it, 'leve') else 0)
     if it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]
@@ -95,6 +102,13 @@ def pede(it, dorme=False):
 def janela(it):
     """a janela do item, como aparece na cena"""
     c = it['cat']; L = [f"[ {it['nome']} ]"]
+    if it['tipo'] == 'nucleo':
+        L.append(f"Categoria: {CATS[c]}      Núcleo" + (f" de {it['de']}" if it.get('de') else ''))
+        L.append(f"Serve para: uma obra {CATS[c]} (do Épico para cima, a forja pede um núcleo da categoria da peça). Não se veste e não gasta.")
+        if it.get('dono'): L.append(f"Dono: {it['dono']}")
+        if it.get('onde'): L.append(f"Está em: {it['onde']}")
+        for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
+        return '\n'.join(L)
     L.append(f"Categoria: {CATS[c]}      Durabilidade: {it['dur'][0]}/{it['dur'][1]}")
     if it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 else 1)
@@ -130,6 +144,10 @@ def main():
     op = {k: v for k, v in (x.split('=', 1) for x in a if '=' in x and not x.startswith('efeito='))}
     pos = [x for x in a if '=' not in x]
     B = carrega()
+    if a[0] == 'nova' and len(pos) >= 3 and pos[1] == 'nucleo':
+        it = item('nucleo', pos[2], pos[3] if len(pos) > 3 else None, de=op.get('de'))
+        B['seq'] += 1; it['id'] = f"i{B['seq']:04d}"; it['dono'] = op.get('dono')
+        B['itens'][it['id']] = it; grava(B); print(f"{it['id']} entrou no Livro de Itens.\n"); print(janela(it)); return
     if a[0] == 'nova' and len(pos) >= 4:
         ef = []
         for x in a:

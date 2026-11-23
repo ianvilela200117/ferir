@@ -5,6 +5,8 @@ O que entra na conta (as regras estão no REGRAS.md; os números, no tabelas.py)
   1 distância e alcance · 2 o lugar (estreito, alto, cobertura, sem saída) · 3 o tempo (escuro, chuva, lama, neblina, vento, calor, água)
   4 fôlego · 5 golpe contra armadura · 6 parte do corpo e ferida · 7 durabilidade · 8 moral · 9 grupo contra grupo
   10 A LUTA PARA E PERGUNTA: quando algo muda, o turno acaba e o script devolve o quadro; a ordem do jogador volta por `ordem`.
+  11 OS BICHOS (bichos.py; os números, no tabelas_bichos.py): o corpo é a arma e a armadura, com categoria, e não é peça (não quebra);
+     o tamanho mexe no PV, no alcance, no cerco, no corredor e na Defesa; os traços (lista fechada); a moral do bicho (foge ferido, não se rende).
 
 Uso em código:
   S = nova(lado_a, lado_b, inicio='perto', lugar={...}, tempo=[...])     (listas de pessoas do pessoas.py; o lado A é o do jogador)
@@ -19,6 +21,7 @@ Uso de linha de comando (a luta de verdade: dado de verdade, o estado guardado n
 """
 import json, math, random, secrets, sys
 import tabelas as T
+import tabelas_bichos as TB
 from pessoas import ficha
 
 
@@ -52,9 +55,9 @@ def chance(falta):
     return max(0.05, sum(min(s - 1, 41 - s) for s in range(n, 41)) / 400)
 
 
-def rola(dado, dobra=False):
+def rola(dado, vezes=1):
     n, f = map(int, dado.split('d'))
-    return sum(D.d(f) for _ in range(n * (2 if dobra else 1)))
+    return sum(D.d(f) for _ in range(n * vezes))
 
 
 # ---------- montar a luta ----------
@@ -96,24 +99,26 @@ def nova(lado_a, lado_b, inicio='perto', lugar=None, tempo=None, surpresa=None, 
     for lado, gente, x0, tras in (('A', lado_a, 0, -1), ('B', lado_b, sep, 1)):
         larg = lugar.get('largura') or 99; cheio = {}
         for p in sorted(gente, key=lambda p: p.get('linha') == 'trás'):
-            f = ficha(p); f['lado'] = lado
+            f = ficha(p); f['lado'] = lado; oc = f.get('ocupa', 1)       # o que cada um toma do corredor: gente 1; o bicho, pelo tamanho
             x = x0 + (tras if p.get('linha') == 'trás' else 0)
-            while cheio.get(x, 0) >= larg: x += tras
-            cheio[x] = cheio.get(x, 0) + 1
+            while cheio.get(x, 0) and cheio[x] + oc > larg: x += tras
+            cheio[x] = cheio.get(x, 0) + oc
             f.update(x=x, estado='pe', feridas=[], sangra=None, atordoado=0, chao=False, preso=False, abalado=False, reac=f['reacoes'], postura='firme',
-                     usou=[], testou=[], morte=[0, 0], agressor=None, recarga=0, sem_arma=False, resguardo=False, fugiu=False, golpeado=[], ini=0, pv_visto=f['pv'])
+                     usou=[], testou=[], morte=[0, 0], agressor=None, recarga=0, sem_arma=False, resguardo=False, fugiu=False, golpeado=[], ini=0, pv_visto=f['pv'],
+                     veneno=None, agarrado=None, encurralado=False, golpes=0, andou_t=0, feriu_t=[], sopro_r=0)
             f.setdefault('moral', 'testa'); f.setdefault('papel', 'guarda' if f.get('guarda') else 'frente')
             f['feridas'] = f.pop('feridas0'); f['feridas_antes'] = len(f['feridas'])
             for parte, grave in f['feridas']:               # a ferida que a pessoa já traz entra na luta com ela
                 if parte == 'tronco': f['fol'] = max(0, f['fol'] - T.FERIDAS['tronco'][1 if grave else 0])
                 if parte == 'pernas' and grave: f['preso'] = True
-            for w in (f['arma'], f['arma2'], f['punho']):
+            for w in [f['arma'], f['arma2'], f['punho']] + f.get('armas_corpo', []) + [f.get('sopro')]:
                 if w: w['item'] = _guarda_item(S, w['item'])
             for pc in f['partes'].values(): pc['item'] = _guarda_item(S, pc['item'])
             for src in f['fontes']: src['item'] = _guarda_item(S, src['item'])
             if f['escudo']: f['escudo']['item'] = _guarda_item(S, f['escudo']['item'])
             if f['fol_rodada'] + f['arma']['folego'] > f['folmax']: S['avisos'].append(f"{f['nome']} veste mais peso do que o fôlego aguenta: vai lutar sem fôlego")
             if f['nuas'] and f['partes']: S['avisos'].append(f"{f['nome']} está sem proteção em: {', '.join(f['nuas'])}")
+            if oc > larg: S['avisos'].append(f"{f['nome']} é maior que o corredor: luta apertado")
             S['L'].append(f)
     return S
 
@@ -137,10 +142,32 @@ def entre(S, a, b): return any(min(a['x'], b['x']) < o['x'] < max(a['x'], b['x']
 def lider(S, lado): return next((f for f in S['L'] if f['lado'] == lado and f.get('lider')), None)
 def por_nome(S, nome): return next((f for f in S['L'] if f['nome'] == nome), None)
 def inteiro(S, chave): return S['itens'][chave]['dur'][0] > 0
+def tem(f, traco): return traco in f.get('tracos', ())          # o traço de bicho (lista fechada do tabelas_bichos)
+
+
+def _agarrado(S, f):
+    """quem agarra este lutador agora (ou None). O bicho que cai ou foge solta."""
+    if not f.get('agarrado'): return None
+    g = por_nome(S, f['agarrado'])
+    if g and g['estado'] == 'pe': return g
+    f['agarrado'] = None
+    return None
+
+
+def _nao_anda(S, f): return bool(f['preso'] or _agarrado(S, f))
+def _no_ar(S, f): return tem(f, 'voa') and not f['chao'] and not f['preso'] and not S['lugar'].get('largura') and not _agarrado(S, f)
+def _derruba(S, a, e): return e['estado'] == 'pe' and not efeito(S, e, 'firme') and e.get('ocupa', 1) <= a.get('ocupa', 1)      # ninguém derruba quem é maior que ele
+
+
+def _apertado(S, f):
+    """o bicho maior que o corredor luta apertado"""
+    larg = S['lugar'].get('largura')
+    return TB.APERTADO * math.ceil(f['ocupa'] - larg) if larg and f.get('ocupa', 1) > larg else 0
 
 
 def arma_de(S, f):
     """a arma em uso agora: a principal; a segunda (ou as mãos) se a principal caiu, ou se é de tiro e há inimigo colado"""
+    if f.get('bicho'): return f['armas_corpo'][f['golpes'] % len(f['armas_corpo'])]      # o bicho alterna as armas do corpo, golpe a golpe
     w = f['arma']
     if f['sem_arma'] or (w['distancia'] and any(dist(f, e) <= 1 for e in inimigos(S, f))): return f['arma2'] or f['punho']
     return w
@@ -164,11 +191,12 @@ def efeito(S, f, chave):
 
 
 def _vaga(S, f, e, w):
-    """o CERCO: em campo aberto só tantos batem corpo a corpo no mesmo alvo na mesma rodada"""
+    """o CERCO: em campo aberto só tantos batem corpo a corpo no mesmo alvo na mesma rodada (em volta do bicho, pelo tamanho dele)"""
     if S['lugar'].get('largura'): return True
     longe = w['haste'] and dist(f, e) == 2
     if any(n == f['nome'] for n, _ in e['golpeado']): return True
-    return sum(1 for _, l in e['golpeado'] if l == longe) < (T.CERCO_HASTE if longe else T.CERCO)
+    perto, haste = e.get('cerco') or (T.CERCO, T.CERCO_HASTE)
+    return sum(1 for _, l in e['golpeado'] if l == longe) < (haste if longe else perto)
 
 
 def alvos(S, f, w, cerco=True):
@@ -190,7 +218,7 @@ def alvos(S, f, w, cerco=True):
 
 # ---------- o golpe ----------
 def golpe(S, a, e, w, livre=''):
-    g = next((x for x in de_pe(S, e['lado']) if x.get('guarda') == e['nome'] and x is not e and dist(x, e) <= 1 and x['reac'] > 0), None)
+    g = None if w.get('area') else next((x for x in de_pe(S, e['lado']) if x.get('guarda') == e['nome'] and x is not e and dist(x, e) <= 1 and x['reac'] > 0), None)
     if g: g['reac'] -= 1; diz(S, f"  {g['nome']} se põe na frente de {e['nome']}"); e = g
     tiro = w['distancia']; pa, pd = T.POSTURAS[a['postura']], T.POSTURAS[e['postura']]
     if not tiro and not livre and not any(n == a['nome'] for n, _ in e['golpeado']): e['golpeado'].append([a['nome'], bool(w['haste'] and dist(a, e) == 2)])
@@ -199,20 +227,22 @@ def golpe(S, a, e, w, livre=''):
     bon += sum(T.TEMPO[k].get('tiro' if tiro else 'acerto', 0) for k in S['tempo'])
     if S['lugar'].get('alto') == a['lado']: bon += T.ALTO['tiro' if tiro else 'acerto']
     if tiro and S['lugar'].get('cobertura') == e['lado']: bon += T.COBERTURA
-    if entre(S, a, e) and S['lugar'].get('alto') != a['lado']: bon += T.ENTRE
+    if entre(S, a, e) and S['lugar'].get('alto') != a['lado'] and not w.get('area'): bon += T.ENTRE
     if w['haste'] and dist(a, e) <= 1: bon += T.HASTE_COLADO
     if tiro and a['fugiu']: bon += T.TIRO_FUGINDO
-    df = defesa_de(S, e) + pd[1] - (T.SEM_FOLEGO if e['fol'] <= 0 else 0) + (T.CHAO if e['chao'] else 0) + (T.PRESO if e['preso'] else 0) + (T.RESGUARDO if e['resguardo'] else 0)
+    esp = _golpe_especial(S, a, w, livre); mb, md = _dos_bichos(S, a, e, w, esp); bon += mb      # o bote e a investida; o que os traços e o tamanho mexem
+    df = md + (e['def_fixa'] if w.get('area') else defesa_de(S, e)) + pd[1] - (T.SEM_FOLEGO if e['fol'] <= 0 else 0) + (T.CHAO if e['chao'] else 0) + (T.PRESO if e['preso'] else 0) + (T.RESGUARDO if e['resguardo'] else 0)
     df += sum(T.TEMPO[k].get('defesa', 0) for k in S['tempo'])
     df -= T.FLANCO * min(T.FLANCO_MAX, sum(1 for n, _ in e['golpeado'] if n != a['nome']))       # cercado: cada um que já bateu nele abre a guarda para o próximo
     tr = e['partes'].get('tronco')                                                                   # mirar a fresta: só contra armadura melhor que a arma, e só quando compensa
-    mira = bool(tr and inteiro(S, tr['item']) and tr['cat'] > w['cat'] and chance(df - bon - T.MIRA_ACERTO) * T.MIRA_PROT > chance(df - bon))
+    mira = bool(tr and inteiro(S, tr['item']) and tr['cat'] > w['cat'] and not tem(e, 'couraça') and not w.get('area') and chance(df - bon - T.MIRA_ACERTO) * T.MIRA_PROT > chance(df - bon))
     if mira: bon += T.MIRA_ACERTO
     if w['item'] not in S['usadas']: S['usadas'].append(w['item'])
     for pc in list(e['partes'].values()) + ([e['escudo']] if e['escudo'] else []):
         if pc['item'] not in S['usadas']: S['usadas'].append(pc['item'])
     j = jogada(bon, crit19=bool(w['efeitos'].get('critico_19')))
-    cab = f"  {a['nome']} {'atira em' if tiro else 'golpeia'} {e['nome']}" + (f' ({livre})' if livre else '') + (' mirando a fresta' if mira else '')
+    cab = f"  {a['nome']} {'sopra em' if w.get('area') else 'atira em' if tiro else 'golpeia'} {e['nome']}" + (f' ({livre})' if livre and not w.get('area') else '') + (f" ({esp['nome']})" if esp else '') + (' mirando a fresta' if mira else '')
+    if a.get('bicho') and not w.get('area'): a['golpes'] += 1; a['andou_t'] = 0
     if j['falha']:
         diz(S, f"{cab}: dois 1, erra feio"); _gasta(S, a, w, 1); return
     if j['total'] < df and not j['crit']:
@@ -224,9 +254,9 @@ def golpe(S, a, e, w, livre=''):
             else: _gasta(S, e, gp, 1)
         return
     parte = T.ONDE[D.d(10)]; pc = e['partes'].get(parte); vestida = bool(pc and inteiro(S, pc['item']))
-    prot = pc['rd'] * T.MATRIZ[w['golpe']][pc['material']] / (2 if j['crit'] else 1) if vestida else T.NU
+    prot = pc['rd'] * (1 if w.get('area') else T.MATRIZ[w['golpe']][pc['material']]) / (2 if j['crit'] and not tem(e, 'couraça') else 1) if vestida else T.NU
     if mira and vestida and pc['cat'] > w['cat']: prot /= T.MIRA_PROT
-    dano = int(rola(w['dado'], dobra=j['crit']) * T.K_DANO * w['mult'] / prot * w['fmult'])
+    dano = int(rola(w['dado'], max(2 if j['crit'] else 1, esp['dados'] if esp else 1)) * T.K_DANO * w['mult'] / prot * w['fmult'])
     # o aço gasta o aço
     if dano == 0: _gasta(S, a, w, 1)
     if vestida and (w['cat'] > pc['cat'] or j['crit']): _gasta_armadura(S, e, pc['nome'], pc['item'], 2 if w['cat'] >= pc['cat'] + 2 else 1)
@@ -240,15 +270,53 @@ def golpe(S, a, e, w, livre=''):
         if a['pv'] <= 0: _cai(S, a, 0)
     if dano <= 0: return
     S['dano_r'] += dano / e['pvmax']
-    terrivel = dano >= e['pvmax'] * T.FERIDA_GRAVE
+    terrivel = dano >= e['pvmax'] * T.FERIDA_GRAVE; abertas = len(e['feridas'])
     if e['pv'] <= 0: _cai(S, e, dano)
     elif dano >= e['pvmax'] * T.FERIDA or (j['crit'] and dano >= e['pvmax'] * T.FERIDA_MIN): _ferida(S, e, parte, terrivel, w, dano)
-    if w['efeitos'].get('derruba') and 'derruba' not in a['usou'] and e['estado'] == 'pe' and not efeito(S, e, 'firme'):
+    if w['efeitos'].get('derruba') and 'derruba' not in a['usou'] and _derruba(S, a, e):
         a['usou'].append('derruba'); e['chao'] = True; diz(S, f"    {e['nome']} vai ao chão")
+    if a.get('bicho') or e.get('bicho'): _depois_do_golpe(S, a, e, w, dano, esp, len(e['feridas']) > abertas)
     if terrivel:
         for o in de_pe(S, e['lado']):
             if o is not e and dist(o, e) <= 2: _moral(S, o, 'golpe_terrivel')
     if e['estado'] == 'pe' and e['pv'] < e['pvmax'] * 0.25: _moral(S, e, 'ferido_grave')
+
+
+def _golpe_especial(S, a, w, livre):
+    """o BOTE (o primeiro golpe do bicho na luta) e a INVESTIDA (o golpe depois de correr): acertam mais, rolam os dados mais vezes e derrubam"""
+    if not a.get('bicho') or w['distancia'] or livre: return None
+    if tem(a, 'bote') and 'bote' not in a['usou']:
+        a['usou'].append('bote'); return dict(nome='bote', acerto=TB.BOTE['acerto'], dados=TB.BOTE['dados'])
+    if tem(a, 'investida') and a['andou_t'] >= TB.INVESTIDA['casas']: return dict(nome='investida', acerto=TB.INVESTIDA['acerto'], dados=TB.INVESTIDA['dados'])
+    return None
+
+
+def _dos_bichos(S, a, e, w, esp):
+    """o que os traços, o tamanho e a moral dos bichos mexem neste golpe: (no acerto de quem bate, na Defesa de quem apanha). Entre gente, (0, 0)."""
+    bon = esp['acerto'] if esp else 0; df = 0
+    if a.get('veneno'): bon += TB.VENENO['acerto']
+    if _agarrado(S, a): bon += TB.AGARRADO['acerto']
+    if _agarrado(S, e): df += TB.AGARRADO['defesa']
+    if S['lugar'].get('largura'): bon += _apertado(S, a); df += _apertado(S, e)
+    if a.get('encurralado'): bon += TB.ENCURRALADO
+    if not w['distancia'] and w['alcance'] < 2 and _no_ar(S, e): bon += TB.VOA
+    return bon, df
+
+
+def _depois_do_golpe(S, a, e, w, dano, esp, abriu):
+    """o golpe feriu, e um dos dois é bicho: o bote, a investida e a matilha derrubam, o veneno entra, o que agarra segura, e o bicho ferido testa a coragem"""
+    if not e['chao'] and _derruba(S, a, e) and (esp or (tem(a, 'matilha') and w.get('corpo') and sum(1 for n, _ in e['golpeado'] if n != a['nome'] and tem(por_nome(S, n), 'matilha')) >= TB.MATILHA)):
+        e['chao'] = True; diz(S, f"    {e['nome']} vai ao chão" + ('' if esp else ' (a matilha o derruba)'))
+        if esp and esp['nome'] == 'bote': e['atordoado'] = max(e['atordoado'], TB.BOTE['atordoa'])           # pego de surpresa
+    if w.get('corpo') and not w.get('area') and e['estado'] == 'pe':
+        if tem(a, 'veneno'):
+            q = max(1, int(dano * TB.VENENO['fracao'])); ant = e['veneno'] or [0, 0]
+            e['veneno'] = [max(q, ant[0]), TB.VENENO['rodadas']]; diz(S, f"    {e['nome']} está envenenado ({e['veneno'][0]} por rodada)")
+        if tem(a, 'agarra') and a['estado'] == 'pe' and e.get('ocupa', 1) <= a['ocupa'] and not any(o is not e and o['estado'] == 'pe' and o.get('agarrado') == a['nome'] for o in S['L']):
+            if e.get('agarrado') != a['nome']:
+                e['agarrado'] = a['nome']; diz(S, f"    {a['nome']} AGARRA {e['nome']}"); _para(S, e, f"{e['nome']} foi agarrado por {a['nome']}", so_controlado=True)
+            if e['nome'] not in a['feriu_t']: a['feriu_t'].append(e['nome'])
+    if abriu and e.get('bicho') and e['estado'] == 'pe': _moral(S, e, 'ferido')
 
 
 def _gasta(S, a, w, n):
@@ -272,7 +340,7 @@ def _ferida(S, e, parte, grave, w, dano):
     if parte == 'cabeça': e['atordoado'] = max(e['atordoado'], T.FERIDAS['cabeça'][g]); txt += 'atordoado'
     elif parte == 'braços':
         txt += f"{T.FERIDAS['braços'][g]} no acerto"
-        if grave and not e['sem_arma']: e['sem_arma'] = True; txt += ' e larga a arma'
+        if grave and not e['sem_arma'] and not e.get('bicho'): e['sem_arma'] = True; txt += ' e larga a arma'
     elif parte == 'tronco': e['fol'] = max(0, e['fol'] - T.FERIDAS['tronco'][g]); sangra = True; txt += 'perde o fôlego'
     else:
         if not efeito(S, e, 'firme'): e['chao'] = True
@@ -300,15 +368,29 @@ def _moral(S, f, motivo):
     if f['moral'] == 'firme' or f['estado'] != 'pe' or (motivo in f['testou'] and motivo != 'golpe_terrivel') or f.get('moral_r') == [S['r'], motivo]: return
     f['testou'].append(motivo); f['moral_r'] = [S['r'], motivo]
     meus, deles = len(de_pe(S, f['lado'])), len(de_pe(S, outro(f['lado'])))
-    ld = lider(S, f['lado']); bon = f['vontade_b'] + (T.MORAL_LIDER if ld and ld['estado'] == 'pe' and ld is not f else 0)
+    ld = lider(S, f['lado']); bon = f['vontade_b'] + f.get('coragem', 0) + (T.MORAL_LIDER if ld and ld['estado'] == 'pe' and ld is not f else 0)
+    if tem(f, 'matilha') and any(o is not f and tem(o, 'matilha') for o in de_pe(S, f['lado'])): bon += TB.MATILHA_CORAGEM       # a matilha dá coragem
     bon += T.MORAL_MAIS if meus > deles else T.MORAL_MENOS if deles >= 2 * meus else 0
-    t = sum(d20x()) + sum(d20x()) + bon; cd = T.MORAL[motivo]; que = motivo.replace('_', ' ')
+    t = sum(d20x()) + sum(d20x()) + bon; cd = T.MORAL[motivo] if motivo in T.MORAL else TB.PAVOR if motivo == 'pavor' else TB.MORAL[motivo]; que = motivo.replace('_', ' ')
     if t >= cd: return
+    if f.get('bicho') and not f.get('controla'):       # o BICHO não fica abalado nem se rende: foge. Encurralado, luta até o fim
+        if S['lugar'].get('sem_saida') == f['lado']:
+            if not f.get('encurralado'): f['encurralado'] = True; diz(S, f"    {f['nome']} está ENCURRALADO: não tem para onde fugir ({que}: {t} contra {cd})")
+            return
+        f['estado'] = 'fugiu'; diz(S, f"    {f['nome']} FOGE ({que}: {t} contra {cd})"); _para(S, f, f"{f['nome']} fugiu")
+        if not _no_ar(S, f): _golpe_livre(S, f, 'ele dá as costas')      # quem voa sai por cima
+        if f.get('lider'):
+            for o in de_pe(S, f['lado']): _moral(S, o, 'lider_caiu')
+        _fim(S); return
     if f.get('controla'):       # quem o jogador comanda não foge nem se rende pelo dado: fica abalado, e a escolha é do jogador
         f['abalado'] = True; diz(S, f"    {f['nome']} FRAQUEJA ({que}: {t} contra {cd})"); _para(S, f, f"{f['nome']} fraquejou ({que}): lutar abalado, recuar ou render-se é escolha sua"); return
     if t > cd - T.MORAL_QUEBRA and not f['abalado']:
         f['abalado'] = True; diz(S, f"    {f['nome']} fica ABALADO ({que}: {t} contra {cd})"); return
     rende = f['pv'] < f['pvmax'] * 0.25 or S['lugar'].get('sem_saida') == f['lado']
+    if rende and inimigos(S, f) and all(o.get('bicho') for o in inimigos(S, f)):       # ninguém se rende a um bicho: foge, se tem por onde
+        if S['lugar'].get('sem_saida') == f['lado']:
+            f['abalado'] = True; diz(S, f"    {f['nome']} não tem a quem se render nem por onde fugir ({que}: {t} contra {cd})"); return
+        rende = False
     f['estado'] = 'rendido' if rende else 'fugiu'
     diz(S, f"    {f['nome']} {'SE RENDE' if rende else 'FOGE'} ({que}: {t} contra {cd})")
     _para(S, f, f"{f['nome']} {'se rendeu' if rende else 'fugiu'}")
@@ -338,7 +420,8 @@ def _para(S, f, txt, so_controlado=False):
 
 
 # ---------- o turno de cada um ----------
-def _passo(S):
+def _passo(S, f=None):
+    if f is not None and _no_ar(S, f): return T.PASSO          # quem voa não pisa na lama nem na água
     return min([T.PASSO] + [T.TEMPO[k]['passo'] for k in S['tempo'] if 'passo' in T.TEMPO[k]])
 
 
@@ -350,7 +433,7 @@ def _ordem_de(S, a):
 
 def _fica(S, a):
     """este aliado não vai para a frente: num corredor, quem vem atrás pode trocar de lugar com ele"""
-    if a['chao'] or a['preso'] or a['fol'] <= 0 or arma_de(S, a)['distancia']: return True
+    if a['chao'] or _nao_anda(S, a) or a['fol'] <= 0 or arma_de(S, a)['distancia']: return True
     o = _ordem_de(S, a)
     if o in ('recuar', 'folego'): return True
     if alvos(S, a, arma_de(S, a), cerco=False): return False
@@ -364,12 +447,18 @@ def _livre(S, f, nx, avanca):
     larg = S['lugar'].get('largura'); la = [e for e in inimigos(S, f) if e['x'] == nx]
     if la:
         if larg or not avanca: return ''
+        if _no_ar(S, f): return 'contorna'                      # quem voa passa por cima da linha
         colados = [a for a in de_pe(S, f['lado']) if a is not f and any(dist(a, e) <= 1 for e in la)]
         return 'contorna' if len(colados) >= T.SEGURA * len(la) else ''
     if larg:
-        meus = [a for a in de_pe(S, f['lado']) if a['x'] == nx and a is not f]
-        if len(meus) >= larg: return 'troca' if any(_fica(S, a) == avanca for a in meus) else ''
+        meus = [a for a in de_pe(S, f['lado']) if a['x'] == nx and a is not f]      # a casa está cheia? (cada um toma o seu tanto; o bicho grande demais cabe sozinho, apertado)
+        if meus and sum(a.get('ocupa', 1) for a in meus) + f.get('ocupa', 1) > larg: return 'troca' if any(_troca(S, f, a, avanca) for a in meus) else ''
     return 'sim'
+
+
+def _troca(S, f, a, avanca):
+    """f pode trocar de lugar com o aliado a? (a não vai para onde f vai, e os dois tomam o mesmo tanto do corredor)"""
+    return _fica(S, a) == avanca and a.get('ocupa', 1) == f.get('ocupa', 1)
 
 
 def _rumo(S, f, w, alvo=None):
@@ -385,23 +474,23 @@ def _rumo(S, f, w, alvo=None):
 def _anda(S, f, dx, recuo=False, ate=None):
     """anda até PASSO casas para o lado dx da linha. Devolve as casas andadas.
     Quem se afasta de um inimigo colado leva o golpe livre dele (no avanço, só de quem não está seguro por dois dos seus)."""
-    avanca = not recuo; passo = _passo(S)
-    if avanca and dx == frente(f) and S['lugar'].get('alto') == outro(f['lado']): passo = 1       # subindo
+    avanca = not recuo; passo = _passo(S, f)
+    if avanca and dx == frente(f) and S['lugar'].get('alto') == outro(f['lado']) and not _no_ar(S, f): passo = 1       # subindo
     if not _livre(S, f, f['x'] + dx, avanca): return 0
     colados = [e for e in inimigos(S, f) if dist(f, e) <= 1 and abs(e['x'] - (f['x'] + dx)) > dist(f, e)]
     if avanca: colados = [e for e in colados if len([a for a in de_pe(S, f['lado']) if a is not f and dist(a, e) <= 1]) < T.SEGURA]
-    if colados:
+    if colados and not _no_ar(S, f):                            # quem voa sai por cima: não dá as costas a ninguém
         if recuo: f['fugiu'] = True
         _golpe_livre(S, f, 'ele recua' if recuo else 'ele dá o flanco', quem=colados)
     andou = 0
     for _ in range(passo):
-        if f['estado'] != 'pe' or f['chao'] or f['preso']: break      # o golpe que o pegou no caminho o parou
+        if f['estado'] != 'pe' or f['chao'] or _nao_anda(S, f): break      # o golpe que o pegou no caminho o parou
         nx = f['x'] + dx; como = _livre(S, f, nx, avanca)
         if not como: break
         al = alvos(S, f, arma_de(S, f))
         if avanca and como == 'sim' and (any(x[0] is ate for x in al) if ate else al): break    # já alcança: para aqui
         if como == 'troca':
-            o = next(a for a in de_pe(S, f['lado']) if a['x'] == nx and a is not f and _fica(S, a) == avanca)
+            o = next(a for a in de_pe(S, f['lado']) if a['x'] == nx and a is not f and _troca(S, f, a, avanca))
             o['x'] = f['x']; diz(S, f"  {f['nome']} troca de lugar com {o['nome']}")
         elif como == 'contorna': diz(S, f"  {f['nome']} contorna a linha")
         de = f['x']; f['x'] = nx; andou += 1
@@ -411,7 +500,7 @@ def _anda(S, f, dx, recuo=False, ate=None):
 
 
 def _decide(S, f, pagou):
-    """o que este lutador faz com a ação: ('golpe', alvo) · ('anda', lado, recuo?, até quem) · ('folego',) · ('levanta',) · ('pega',) · ('recarrega',) · ('espera',)"""
+    """o que este lutador faz com a ação: ('golpe', alvo) · ('anda', lado, recuo?, até quem) · ('folego',) · ('levanta',) · ('pega',) · ('recarrega',) · ('espera',) · ('sopro',)"""
     w = arma_de(S, f); o = S['ordens'].get(f['nome']) or {}
     if not f.get('controla'): o = dict(acao=_ordem_de(S, f)) if _ordem_de(S, f) else {}
     acao = o.get('acao', 'atacar'); f['postura'] = o.get('postura', f['postura'] if f.get('controla') else 'firme')
@@ -420,7 +509,8 @@ def _decide(S, f, pagou):
     if f['chao']: return ('levanta',)
     colado = any(dist(f, e) <= 1 for e in inimigos(S, f))
     if f['sem_arma'] and not colado: return ('pega',)
-    tras = -frente(f); pode_recuar = not f['preso'] and bool(_livre(S, f, f['x'] + tras, False))
+    preso = _nao_anda(S, f)                                     # a perna que não anda mais, ou o bicho que o agarra
+    tras = -frente(f); pode_recuar = not preso and bool(_livre(S, f, f['x'] + tras, False))
     if acao == 'recuar':
         if min([dist(f, e) for e in inimigos(S, f)] or [9]) < 3 and pode_recuar: return ('anda', tras, True, None)
         acao = 'atacar' if colado else 'segurar'            # longe o bastante, segura; encurralado, luta
@@ -430,7 +520,11 @@ def _decide(S, f, pagou):
     if nome and not pref:
         if f.get('controla'): _para(S, f, f"o alvo de {f['nome']} ({nome}) não está mais de pé")
         o['alvo'] = None
-    if pref and not any(x[0] is pref for x in al) and not f['preso']:      # o alvo da ordem está fora de alcance: vai até ele
+    if f.get('bicho') and not pref: pref = next((x[0] for x in al if x[0].get('agarrado') == f['nome']), None)      # o bicho não larga quem agarrou
+    if f.get('sopro') and f['sopro_r'] <= 0 and f['fol'] >= f['sopro']['folego']:              # o SOPRO: quando pega dois ou mais, ou quando não alcança ninguém de outro jeito
+        n = len(_no_sopro(S, f))
+        if n >= 2 or (n == 1 and not al): return ('sopro',)
+    if pref and not any(x[0] is pref for x in al) and not preso:      # o alvo da ordem está fora de alcance: vai até ele
         dx = _rumo(S, f, w, pref)
         if dx and _livre(S, f, f['x'] + dx, True): return ('anda', dx, False, pref)
     if al:
@@ -444,8 +538,8 @@ def _decide(S, f, pagou):
     if gd:
         if dist(f, gd) <= 1: return ('espera',)
         s = 1 if gd['x'] > f['x'] else -1
-        if not f['preso'] and _livre(S, f, f['x'] + s, True): return ('anda', s, False, None)     # sem caminho até o guardado, luta como soldado
-    if f['preso']: return ('espera',)
+        if not preso and _livre(S, f, f['x'] + s, True): return ('anda', s, False, None)     # sem caminho até o guardado, luta como soldado
+    if preso: return ('espera',)
     if acao == 'segurar':
         apanha = any(arma_de(S, e)['distancia'] or dist(e, f) <= max(1, arma_de(S, e)['alcance']) for e in inimigos(S, f))
         if not apanha: return ('espera',)
@@ -456,8 +550,27 @@ def _decide(S, f, pagou):
 
 
 def _peso(S, f):
-    """o fôlego que a armadura cobra numa rodada em que a pessoa se mexe"""
-    return f['fol_rodada'] + sum(T.TEMPO[k].get('folego', 0) for k in S['tempo']) + (sum(T.TEMPO[k].get('folego_armadura', 0) for k in S['tempo']) if any(p['material'] != 'couro' for p in f['partes'].values()) else 0)
+    """o fôlego que a armadura cobra numa rodada em que a pessoa se mexe (o couro do bicho é o corpo dele: não pesa nem esquenta)"""
+    return f['fol_rodada'] + sum(T.TEMPO[k].get('folego', 0) for k in S['tempo']) + (sum(T.TEMPO[k].get('folego_armadura', 0) for k in S['tempo']) if not f.get('bicho') and any(p['material'] != 'couro' for p in f['partes'].values()) else 0)
+
+
+def _no_sopro(S, f):
+    """os inimigos de pé que o sopro deste bicho pega agora"""
+    alc = min([f['sopro']['alcance']] + [T.TEMPO[k]['sem_tiro_longe'] for k in S['tempo'] if 'sem_tiro_longe' in T.TEMPO[k]])       # o tempo vale como num tiro
+    return [e for e in inimigos(S, f) if dist(f, e) <= alc]
+
+
+def _turno_do_bicho(S, f, fim=False):
+    """o que só o bicho faz no começo e no fim do turno dele: a carne que fecha, o sopro que volta, a presa que ele solta"""
+    if fim:
+        for v in S['L']:
+            if v.get('agarrado') == f['nome'] and v['nome'] not in f['feriu_t']: v['agarrado'] = None; diz(S, f"  {f['nome']} solta {v['nome']}")
+        return
+    f['feriu_t'] = []
+    if f['sopro_r'] > 0: f['sopro_r'] -= 1
+    if tem(f, 'regenera') and f['pv'] < f['pvmax']:
+        g = min(f['pvmax'] - f['pv'], max(1, int(f['pvmax'] * TB.REGENERA))); f['pv'] += g; S['dano_r'] -= g / f['pvmax']
+        diz(S, f"  {f['nome']} regenera (+{g}: {f['pv']}/{f['pvmax']})")
 
 
 def _turno(S, f):
@@ -465,6 +578,7 @@ def _turno(S, f):
     zerado = f['fol'] <= 0                                     # começou o turno sem fôlego: uma ação só
     f['fol'] = min(f['folmax'], f['fol'] + 1 + T.POSTURAS[f['postura']][2])
     custos = [1] if zerado else [1] * T.ACOES + list(f['esforcos'])
+    if f.get('bicho'): _turno_do_bicho(S, f)
     if f['atordoado']:
         perde = min(len(custos), f['atordoado']); custos = custos[perde:]; f['atordoado'] = 0; diz(S, f"  {f['nome']} está atordoado: perde {perde} ação(ões)")
     pagou = False; feitas = 0
@@ -475,7 +589,7 @@ def _turno(S, f):
             if ac[0] != 'golpe' or f['postura'] == 'defensiva': break
             if f['fol'] - w['folego'] * mult < (0 if f['postura'] == 'agressiva' else f['folmax'] // 3): break
         feitas += 1
-        if ac[0] in ('golpe', 'anda') and not pagou: pagou = True; f['fol'] -= _peso(S, f)
+        if ac[0] in ('golpe', 'anda', 'sopro') and not pagou: pagou = True; f['fol'] -= _peso(S, f)
         if ac[0] == 'folego':
             g = rola(T.TOMA_FOLEGO[0]) + T.TOMA_FOLEGO[1]; f['fol'] = min(f['folmax'], max(f['fol'], 0) + g); f['resguardo'] = True; diz(S, f"  {f['nome']} toma fôlego (+{g}: {f['fol']}/{f['folmax']})")
         elif ac[0] == 'levanta': f['chao'] = False; diz(S, f"  {f['nome']} se levanta")
@@ -486,9 +600,15 @@ def _turno(S, f):
             k = _anda(S, f, ac[1], recuo=ac[2], ate=ac[3])
             if not k: f['resguardo'] = True; break
             f['fol'] -= mult; diz(S, f"  {f['nome']} {'recua' if ac[2] else 'avança'} ({k} casa{'s' if k > 1 else ''})")
+            if f.get('bicho') and not ac[2]: f['andou_t'] += k               # a investida conta as casas corridas desde o último golpe
         elif ac[0] == 'golpe':
             golpe(S, f, ac[1], w); f['fol'] -= w['folego'] * mult; f['recarga'] = w['recarga'] if w['distancia'] else 0
+        elif ac[0] == 'sopro':
+            ws = f['sopro']; f['fol'] -= ws['folego'] * mult; f['sopro_r'] = TB.SOPRO['recarga']; diz(S, f"  {f['nome']} SOPRA")
+            for e in _no_sopro(S, f):
+                if f['estado'] == 'pe' and e['estado'] == 'pe': golpe(S, f, e, ws, livre='o sopro')
         _fim(S)
+    if f.get('bicho'): _turno_do_bicho(S, f, fim=True)
     if f['fol'] > 0: f['avisou_fol'] = False
     elif f['estado'] == 'pe' and f.get('controla') and not f.get('avisou_fol'): f['avisou_fol'] = True; _para(S, f, f"{f['nome']} está sem fôlego")
 
@@ -503,9 +623,13 @@ def _fim(S):
 
 def _abre_rodada(S):
     S['r'] += 1; S['dano_r'] = 0; S['houve_parada'] = False; diz(S, f"— RODADA {S['r']} —")
+    if S['r'] == 1:                                         # o que APAVORA: quem começa a luta contra ele testa a coragem
+        for lado in 'AB':
+            if any(tem(b, 'apavora') for b in de_pe(S, lado)):
+                for o in de_pe(S, outro(lado)): _moral(S, o, 'pavor')
     vivos = de_pe(S)
     for f in S['L']: f['golpeado'] = []
-    for f in vivos: f['ini'] = sum(d20x()) + sum(d20x()) + f['percep_b'] + f['agil_b'] + f['ini_mod']
+    for f in vivos: f['ini'] = sum(d20x()) + sum(d20x()) + f['percep_b'] + f['agil_b'] + f['ini_mod'] + (TB.BOTE['ini'] if S['r'] == 1 and tem(f, 'bote') else 0)
     S['fila'] = [f['nome'] for f in sorted(vivos, key=lambda f: -f['ini'])]
 
 
@@ -520,6 +644,11 @@ def _fecha_rodada(S):
         elif f['estado'] == 'caido' and max(f['morte']) < 3:
             ok = D.d(20) >= T.MORTE_CD; f['morte'][0 if ok else 1] += 1
             if f['morte'][1] >= 3: f['estado'] = 'morto'; diz(S, f"  ☠ {f['nome']} morre no chão"); _para(S, f, f"{f['nome']} morreu no chão")
+    for f in S['L']:                                        # o veneno
+        if f['estado'] == 'pe' and f.get('veneno'):
+            f['pv'] -= f['veneno'][0]; f['veneno'][1] -= 1; S['dano_r'] += f['veneno'][0] / f['pvmax']
+            if f['veneno'][1] <= 0: f['veneno'] = None
+            if f['pv'] <= 0: diz(S, f"  {f['nome']} cai envenenado"); _cai(S, f, 0)
     for f in de_pe(S):                                      # a retirada: quem recua e ficou longe de todos saiu da luta
         if _ordem_de(S, f) == 'recuar' and all(dist(f, e) >= T.RETIRADA for e in inimigos(S, f)):
             f['estado'] = 'saiu'; diz(S, f"  {f['nome']} SAI DA LUTA"); _para(S, f, f"{f['nome']} saiu da luta")
@@ -559,6 +688,9 @@ def _fecha_luta(S):
         it = S['itens'][k]
         if it['dur'][0] > 0 and not any(x.get('chave') == 'nao_quebra' for x in it.get('efeitos', [])): it['dur'][0] -= 1
     for f in S['L']:
+        if f['estado'] == 'pe' and f.get('veneno'):         # o veneno que sobra corre depois da luta: deixa por um fio, mas sozinho não mata
+            q = min(f['pv'] - 1, f['veneno'][0] * f['veneno'][1]); f['veneno'] = None
+            if q > 0: f['pv'] -= q; diz(S, f"  {f['nome']} ainda perde {q} para o veneno depois da luta ({f['pv']}/{f['pvmax']})")
         if f['estado'] != 'caido': continue
         if f['lado'] == S['fim']: f['estavel'] = True; continue
         while max(f['morte']) < 3: f['morte'][0 if D.d(20) >= T.MORTE_CD else 1] += 1
@@ -597,7 +729,9 @@ def situacao(S):
             fer = ', '.join(p + (' (grave)' if g else '') for p, g in f['feridas'])
             L.append(f"  {f['nome']:<22} {est:<8} PV {max(f['pv'], 0):>4}/{f['pvmax']:<4} fôlego {max(f['fol'], 0):>2}/{f['folmax']:<2} casa {f['x']:>3}"
                      + (f" · feridas: {fer}" if fer else '') + (f" · sangrando ({f['sangra'][0]} por rodada)" if f['sangra'] and f['estado'] == 'pe' else '')
-                     + (' · abalado' if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else ''))
+                     + (' · abalado' if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else '')
+                     + (f" · envenenado ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · agarrado por {f['agarrado']}" if f['estado'] == 'pe' and _agarrado(S, f) else '')
+                     + (f" · bicho {f['tamanho']}" + (', encurralado' if f.get('encurralado') else '') if f.get('bicho') else ''))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))
     if S['paradas']: L.append('PAROU PORQUE: ' + ' · '.join(S['paradas']))
     return '\n'.join(L)
@@ -619,6 +753,7 @@ def cenario(arq):
     """monta a luta de um arquivo de cenário: {"inicio","lugar","tempo","surpresa","A":[pessoa...],"B":[pessoa...]}
     pessoa = {"nome","nivel", "molde"?, "maestria"?, "atributos"?, "controla"?, "lider"?, "guarda"?, "moral"?, "linha"?,
               "veste": {"arma", "arma2", "armadura", "elmo", "escudo", "pecas": [...]}}
+    bicho  = {"bicho": "lobo", "nome"?: "lobo 1", "lider"?, "linha"?}     (a espécie inteira sai do tabelas_bichos.py; ou a pessoa que o bichos.bicho devolve)
     cada peça é o id de um item do Livro de Itens, ou o atalho ["espada","Raro"] (armadura: ["malha","Raro"] veste corpo e elmo; escudo: "Raro")."""
     from pessoas import padrao, veste
     from itens import carrega, cat_i
@@ -629,7 +764,11 @@ def cenario(arq):
         if isinstance(x, str) and tipo != 'escudo': sys.exit(f'não há o item "{x}" no Livro de Itens (itens.py ver)')
         return cat_i(x) if tipo == 'escudo' else (x[0], cat_i(x[1]))
     def pessoa(d):
-        d = dict(d); v = d.pop('veste', {})
+        d = dict(d)
+        if isinstance(d.get('bicho'), str):
+            import bichos
+            esp = d.pop('bicho'); d.pop('nivel', None); return bichos.bicho(esp, **d)
+        v = d.pop('veste', {})
         ruins = [k for k in v if k not in ('arma', 'arma2', 'armadura', 'elmo', 'escudo', 'pecas')]
         if ruins: sys.exit(f'{d.get("nome")}: não sei vestir "{ruins[0]}" (use: arma, arma2, armadura, elmo, escudo, pecas)')
         p = padrao(d.pop('nome'), d.pop('nivel'), molde=d.pop('molde', 'guerreiro'), maestria=d.pop('maestria', None), atributos=d.pop('atributos', None), **d)

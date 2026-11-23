@@ -4,8 +4,9 @@
 Toda mudança no tabelas.py ou no luta.py roda isto. Meta que falha: a mudança não entra (ou a meta muda, com a palavra do jogador).
 As metas dizem em números o que o jogador pediu:
   "a arma decide muito quem vence" · "uma arma dá chance de um nível 50 vencer um nível 500" · "sem restrição de nível para usar a peça".
-Quatro blocos: O EQUILÍBRIO (quem vence) · A DURAÇÃO (quanto dura) · AS ARMAS ENTRE SI (nenhuma escolha é a única certa)
-· OS MÓDULOS (cada coisa que interfere, interfere mesmo, e para o lado certo).
+Cinco blocos: O EQUILÍBRIO (quem vence) · A DURAÇÃO (quanto dura) · AS ARMAS ENTRE SI (nenhuma escolha é a única certa)
+· OS MÓDULOS (cada coisa que interfere, interfere mesmo, e para o lado certo) · OS BICHOS (as oito metas da etapa 2: o corpo é a arma
+e a armadura, o bando, o chefe, o tamanho, os traços, a moral, a duração; e o que o corpo do bicho tem de ser).
 
 Uso: python3 provas.py [N]        N = lutas por meta (padrão 600)
 """
@@ -189,6 +190,130 @@ def modulos(n):
     return out
 
 
+def bichos(n):
+    """OS BICHOS: as oito metas do contrato da etapa 2 (projeto/ETAPA2.md, seção 4), de B1 a B8, e o que o corpo do bicho tem de ser (B+).
+    As lutas começam "perto" (3 casas), como um encontro no ermo. O homem do degrau é o do banco: gente gerada, de espada, malha e escudo.
+    Devolve [(o que se mede, o que deu, passou?)]."""
+    import contextlib, io, json, random
+    import bichos as B
+    import tabelas_bichos as TB
+    out = []; ok = lambda nome, deu, passa: out.append((nome, deu, bool(passa)))
+    bi = lambda esp, q=None, **mais: (lambda: B.bando(esp, n=q, **mais) if q else [B.bicho(esp, **mais)])
+    v = lambda a, b, **kw: luta.duelos(a, b, **{**dict(n=n, inicio='perto'), **kw})
+    ref = {0: 10, 1: 30, 2: 50, 3: 90, 4: 120, 5: 150}                    # o nível do homem do degrau, por categoria
+    # B1 e B8: o mesmo degrau
+    x, rod = v(um(50, R, R), bi('pantera'))
+    ok('B1 O MESMO DEGRAU: um nível 50, tudo Raro, contra a pantera (Rara, média, sozinha): 40 a 60%', f'{x}%', 40 <= x <= 60)
+    # B2: uma categoria na arma
+    mais = v(um(50, R + 1, R), bi('pantera'))[0]; perde = 0
+    for _ in range(n):
+        S = luta.nova(um(50, R - 1, R)(), bi('pantera')(), inicio='perto', quieto=True); luta.corre(S); perde += S['fim'] == 'B'
+    perde = round(100 * perde / n)
+    ok('B2 A ARMA DECIDE CONTRA O BICHO: o mesmo homem com a arma uma categoria acima vence em 80% ou mais; com a arma uma abaixo, perde em 80% ou mais', f'vence {mais}%; perde {perde}%', mais >= 80 and perde >= 80)
+    # B3: o bando
+    ab, co = v(um(30, 1, 1), bi('lobo', 4))[0], v(um(30, 1, 1), bi('lobo', 4), lugar=dict(largura=1))[0]
+    ok('B3 O BANDO: quatro lobos Incomuns contra um nível 30 de conjunto Incomum: 10 a 35% em campo aberto, e 20 pontos a mais num corredor de um', f'{ab}% e {co}%', 10 <= ab <= 35 and co - ab >= 20)
+    # B4: o chefe
+    ra, ep = v(varios(4, 60, R, R), bi('serpe'))[0], v(varios(4, 60, R + 1, R + 1), bi('serpe'))[0]; ev = v(varios(4, 60, R + 1, R + 1, atributos={'Vontade': 80}), bi('serpe'), n=max(100, n // 3))[0]
+    ok('B4 O CHEFE: a serpe (Épica, enorme) contra quatro de nível 60 de conjunto Raro (5 a 30%) e de conjunto Épico (55 a 90%)',
+       f'{ra}% e {ep}% (gente gerada: a Vontade 56 sustenta duas peças Épicas, a arma e o escudo, e a armadura dorme; com Vontade 80, o conjunto inteiro desperto: {ev}%)', 5 <= ra <= 30 and 55 <= ep <= 90)
+    # B5: o tamanho
+    tams = list(TB.TAMANHOS); med = {}
+    for t in tams:
+        f = ficha(B.bicho('urso', tamanho=t, tracos=[], cat=R)); S = luta.nova(bi('urso', nome='o alvo', tamanho=t, tracos=[], cat=5, moral='firme')(), varios(14, 50, R, R, pre='c', moral='firme')(), inicio='colado', quieto=True); mx = 0
+        for _ in range(2): luta.rodada(S); mx = max(mx, len(S['L'][0]['golpeado']))
+        S = luta.nova(um(50, R, R)(), [B.bicho('urso', nome=f'bicho {i}', tamanho=t, tracos=[]) for i in range(4)], lugar=dict(largura=2), quieto=True); cabem = sum(1 for g in S['L'][1:] if g['x'] == S['L'][1]['x'])
+        tent = acert = 0
+        for _ in range(max(150, n // 2)):
+            S = luta.nova(um(50, R, R, nome='o homem', moral='firme')(), bi('urso', nome='o alvo', tamanho=t, tracos=[], cat=R, moral='firme')(), inicio='colado'); luta.corre(S, maximo=6)
+            gol = [l for l in S['log'] if l.startswith('  o homem golpeia o alvo')]; tent += len(gol); acert += sum(1 for l in gol if 'erra' not in l and 'aparado' not in l)
+        med[t] = dict(pv=f['pvmax'], alc=f['arma']['alcance'], defesa=defesa(f), cerco=mx, cabem=cabem, acerta=round(100 * acert / max(1, tent)))
+    cresce = lambda k, estrito=True: all((med[a][k] < med[b][k]) if estrito else (med[a][k] <= med[b][k]) for a, b in zip(tams, tams[1:]))
+    lst = lambda k, suf='': ', '.join(f'{med[t][k]:g}{suf}' for t in tams)
+    ok('B5 O TAMANHO (o mesmo bicho pequeno, médio, grande e enorme): o maior tem mais PV, alcança mais longe, apanha de mais gente, toma mais do corredor e é mais fácil de acertar',
+       f"PV {lst('pv')} · alcança {lst('alc')} casa(s) · batem nele na rodada {lst('cerco')} · cabem {lst('cabem')} na frente de um corredor de dois · Defesa {lst('defesa')} · o homem acerta {lst('acerta', '%')} dos golpes",
+       cresce('pv') and cresce('alc', False) and med['enorme']['alc'] > med['pequeno']['alc'] and cresce('cerco') and [med[t]['cerco'] for t in tams] == [TB.TAMANHOS[t]['cerco'][0] for t in tams]
+       and all(med[a]['cabem'] >= med[b]['cabem'] for a, b in zip(tams, tams[1:])) and med['pequeno']['cabem'] > med['médio']['cabem'] > med['grande']['cabem'] and cresce('acerta') and med['enorme']['acerta'] - med['pequeno']['acerta'] >= 15)
+    # B6: cada traço, com e sem (a vitória de quem enfrenta o bicho tem de cair 8 pontos ou mais com o traço)
+    casos = [('matilha', 'quatro lobos contra um nível 30 de conjunto Incomum', um(30, 1, 1), 'lobo', 4, {}),
+             ('bote', 'a pantera contra um nível 50 de conjunto Raro', um(50, R, R), 'pantera', None, {}),
+             ('investida', 'o javali, vindo de longe, contra um nível 10 de conjunto Comum', um(10, 0, 0), 'javali', None, dict(inicio='longe')),
+             ('veneno', 'a surucucu contra um nível 30 de conjunto Incomum', um(30, 1, 1), 'surucucu', None, {}),
+             ('agarra', 'o urso contra um nível 30 de conjunto Incomum', um(30, 1, 1), 'urso', None, {}),
+             ('voa', 'o grifo contra um nível 50 de conjunto Raro, de espada', um(50, R, R), 'grifo', None, {}),
+             ('regenera', 'o trasgo contra um nível 50 de conjunto Raro', um(50, R, R), 'trasgo', None, {}),
+             ('apavora', 'a hidra contra quatro de nível 120 de conjunto Único', varios(4, 120, 4, 4), 'hidra', None, {}),
+             ('couraça', 'o basilisco (Épico) contra quatro de nível 60 de conjunto Raro', varios(4, 60, R, R), 'basilisco', None, {}),
+             ('sopro', 'a serpe contra quatro de nível 60 de conjunto Épico', varios(4, 60, R + 1, R + 1), 'serpe', None, {})]
+    assert [c[0] for c in casos] == list(TB.TRACOS), 'cada traço da lista fechada tem a sua prova'
+    for t, nome, quem, esp, q, kw in casos:
+        com = v(quem, bi(esp, q), **kw)[0]; sem = v(quem, bi(esp, q, tracos=[x for x in TB.ESPECIES[esp]['tracos'] if x != t]), **kw)[0]
+        extra = f"; de lança, {v(um(50, R, R, familia='lança'), bi('grifo'), n=max(100, n // 3))[0]}%" if t == 'voa' else ''
+        ok(f'B6 O TRAÇO {t.upper()}: {nome}, com o traço e sem ele (8 pontos ou mais)', f'vence {com}% com, {sem}% sem: {sem - com:+d}{extra}', sem - com >= 8)
+    # B7: a moral do bicho
+    comuns = [k for k, e in TB.ESPECIES.items() if not e['chefe']]; k = max(60, n // 4); tot_v = tot_f = 0; por = {}; rend = 0
+    def fugas(a, b, k, **kw):
+        nv = nf = nr = 0
+        for _ in range(k):
+            S = luta.nova(a(), b(), quieto=True, **{**dict(inicio='perto'), **kw}); luta.corre(S); nr += any(f['estado'] == 'rendido' for f in S['L'])
+            if S['fim'] == 'A': nv += 1; nf += any(f['estado'] == 'fugiu' for f in S['L'] if f['lado'] == 'B')
+        return nv, nf, nr
+    for esp in comuns:
+        c = TB.ESPECIES[esp]['cat']; nv, nf, nr = fugas(um(ref[c], c, c, **(dict(atributos={'Vontade': 80}) if c >= 3 else {})), bi(esp), k); tot_v += nv; tot_f += nf; rend += nr; por[esp] = round(100 * nf / max(1, nv))
+    _, enc, _ = fugas(um(50, R, R), bi('pantera'), k, lugar=dict(sem_saida='B')); _, chf, _ = fugas(varios(4, 90, 3, 3, atributos={'Vontade': 80}), bi('serpe'), k)
+    geral = round(100 * tot_f / max(1, tot_v)); menos_foge = min(por, key=por.get)
+    ok('B7 A MORAL: o bicho comum ferido foge em 30% ou mais das lutas que perde (cada espécie que não é chefe, sozinha, contra o homem do degrau dela); o encurralado e o chefe não fogem; ninguém se rende',
+       f"foge em {geral}% das {tot_v} lutas perdidas (a que mais foge: {max(por, key=por.get)}, {max(por.values())}%; a que menos: {menos_foge}, {por[menos_foge]}%) · a pantera sem saída fugiu {enc} vez(es) · a serpe fugiu {chf} vez(es) · rendições: {rend}",
+       geral >= 30 and enc == 0 and chf == 0 and rend == 0)
+    # B8: a duração
+    sos = [e for e, d in TB.ESPECIES.items() if d['bando'] == (1, 1) and not d['chefe'] and e != 'pantera']        # os outros bichos que andam sozinhos, cada um contra o homem do degrau dele
+    dur = {e: luta.duelos(um(ref[TB.ESPECIES[e]['cat']], TB.ESPECIES[e]['cat'], TB.ESPECIES[e]['cat'], **(dict(atributos={'Vontade': 80}) if TB.ESPECIES[e]['cat'] >= 3 else {})), bi(e), n=max(200, n // 3), inicio='perto')[1] for e in sos}
+    ok('B8 A DURAÇÃO: a luta de um contra um bicho do mesmo degrau, mediana de 3 a 9 rodadas (a de B1, e a de cada bicho que anda sozinho contra o homem do degrau dele)',
+       f"a pantera {rod} rodadas; " + ', '.join(f'{e} {r}' for e, r in dur.items()), 3 <= rod <= 9 and all(3 <= r <= 9 for r in dur.values()))
+    # B+: o corpo não é peça
+    gasta = quebrou = dorme = 0; k = max(30, n // 10)
+    for _ in range(k):
+        S = luta.nova(gente('o caçador', 150, ('espada', R), ('malha', R + 2), R + 2, moral='firme', atributos={'Vontade': 90})(), bi('basilisco', moral='firme')(), inicio='colado', quieto=True); luta.corre(S)
+        corpos = [it for it in S['itens'].values() if it.get('tipo') == 'corpo']; quebrou += any(it['dur'] != [1, 1] or it.get('id') or it.get('dono') for it in corpos) or bool(luta.resultado(S)['quebradas'] and any('corpo' in q for q in luta.resultado(S)['quebradas']))
+        gasta += any(it['dur'][0] < it['dur'][1] - 1 for it in S['itens'].values() if it.get('tipo') == 'arma')
+    f = ficha(B.bicho('dragão', atributos={'Vontade': 10})); dorme = len(f['dormem'])
+    ok('B+ O CORPO NÃO É PEÇA: não quebra, não tem dono nem registro no Livro, e não ocupa sintonia (mas gasta o aço de quem bate nele com arma pior)',
+       f"em {k} lutas longas contra o basilisco (Épico), o corpo se gastou ou ganhou dono em {quebrou}; a espada Rara do caçador se gastou na luta em {round(100 * gasta / k)}%; o dragão (corpo Lendário) com Vontade 10: {dorme} peça(s) dormindo",
+       quebrou == 0 and dorme == 0 and gasta >= k * 0.5)
+    # B+: a ameaça
+    falta = [e for e, d in TB.ESPECIES.items() if not all(x in B.ameaca(e) for x in (f"grau {d['grau']}", T.CATS[d['cat']], d['tamanho'][:-1], d['couro'], TB.GRAU_DIZ[d['grau']])) or any(TB.TRACOS[t] not in B.ameaca(e) for t in d['tracos'])
+             or ('não foge' in B.ameaca(e)) != d['chefe']]
+    a = B.ameaca('lobo', n=4, arma='Comum', armadura='Comum')
+    ok('B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste',
+       f"{len(TB.ESPECIES) - len(falta)} de {len(TB.ESPECIES)} espécies; o lobo contra quem veste Comum: {'diz um terço e o triplo' if 'um terço' in a and 'o triplo' in a else 'NÃO DIZ'}", not falta and 'um terço' in a and 'o triplo' in a and 'são 4' in a)
+    # B+: o despojo e o núcleo
+    ruim = []; r1 = B.despojo('serpe', random.Random(3)); r2 = B.despojo('serpe', random.Random(3))
+    for e, d in TB.ESPECIES.items():
+        for i in range(20):
+            bens, nuc = B.despojo(e, random.Random(i))
+            if set(bens) != set(d['despojo']) or any(not 1 <= bens[b] <= d['despojo'][b] for b in bens) or bool(nuc) != d['chefe']: ruim.append(e)
+            if nuc and not (nuc['tipo'] == 'nucleo' and nuc['cat'] == d['cat'] and nuc['de'] == e and nuc['dur'] == [1, 1] and nuc['dono'] is None): ruim.append(e)
+            if any(M_cat is not None and M_cat > 2 for M_cat in [int(b.split(':')[1]) if ':' in b else None for b in bens]): ruim.append(e)
+    ok('B+ O DESPOJO: sai da tabela (de metade ao inteiro de cada bem, matéria até o Raro), a mesma sorte dá o mesmo despojo, e só o chefe dá núcleo, da categoria dele',
+       f"{len(TB.ESPECIES) - len(set(ruim))} de {len(TB.ESPECIES)} espécies certas; chefes: {', '.join(e for e, d in TB.ESPECIES.items() if d['chefe'])}", not ruim and r1 == r2)
+    # B+: o bicho entra pelo cenário (o do luta.py e o do ato.py), vai ao arquivo e volta
+    from pessoas import padrao as _padrao, veste as _veste
+    def pelo_cenario(d):                                    # o que o ato.luta_nova faz com cada pessoa do cenário que não tem "id"
+        d = json.loads(json.dumps(d)); vs = d.pop('veste', {})
+        return _veste(_padrao(d.pop('nome'), d.pop('nivel'), molde=d.pop('molde', 'guerreiro'), maestria=d.pop('maestria', None), atributos=d.pop('atributos', None), **d))
+    certo = 0; esps = list(TB.ESPECIES)
+    for e in esps:
+        direto = ficha(B.bicho(e)); volta = ficha(pelo_cenario(B.bicho(e))); atalho = ficha(pelo_cenario(dict(nome=direto['nome'], nivel=0, bicho=e)))
+        S = luta.nova(um(50, R, R)(), [pelo_cenario(x) for x in B.bando(e, random.Random(1))], quieto=True); luta.rodada(S); S = json.loads(json.dumps(S)); luta.corre(S)
+        certo += json.dumps(direto, sort_keys=True) == json.dumps(volta, sort_keys=True) == json.dumps(atalho, sort_keys=True) and S['fim'] in ('A', 'B', 'ninguém', 'impasse', 'empate')
+    try:
+        with contextlib.redirect_stdout(io.StringIO()): ficha(B.bicho('lobo', tracos=['invisível'])); rec = 'aceitou'
+    except SystemExit: rec = 'recusou'
+    ok('B+ O CENÁRIO: o bicho que o bichos.bicho devolve passa pelo cenário da luta (o do ato.py também), pelo atalho {"bicho": espécie}, vai ao arquivo e volta; traço fora da lista é recusado',
+       f'{certo} de {len(esps)} espécies com a mesma ficha pelos três caminhos e a luta inteira depois de ir ao arquivo; o traço inventado: {rec}', certo == len(esps) and rec == 'recusou')
+    return out
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 600
     luta.semente(10); ok = 0; tot = 0
@@ -207,6 +332,10 @@ def main():
     print(f"  {'passa' if passa else 'FALHA'}  a melhor {tab[0][1]}%, a pior {tab[-1][1]}%")
     print('\nOS MÓDULOS (cada coisa que interfere, interfere para o lado certo)')
     for nome, deu, passa in modulos(max(300, n // 2)):
+        ok += passa; tot += 1
+        print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+    print('\nOS BICHOS (as oito metas da etapa 2, de B1 a B8, e o que o corpo do bicho tem de ser)')
+    for nome, deu, passa in bichos(n):
         ok += passa; tot += 1
         print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
     print(f'\n{ok} de {tot} metas passam.')
