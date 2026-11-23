@@ -1,0 +1,640 @@
+#!/usr/bin/env python3
+"""caca.py — MOTOR 10: A CAÇA E A COLETA. O ermo tem bichos contados e matéria contada. O que se tira, sai. O que nasce, nasce devagar.
+Tudo por evento (`cacar`, `coletar`, `despojo`, `ninhada`); os números moram no tabelas_caca.py; os bichos, no bichos.py e no tabelas_bichos.py.
+
+  A SAÍDA é um ato só: a ida ao ermo vizinho, os blocos de procura (ou de coleta) e a volta. A pessoa segue morando no lugar dela.
+    A saída aberta fica escrita na pessoa (marca.caca) até a volta: sobrevive a fechar e abrir o estado.
+  O RASTRO: um teste por bloco de procura, 2d20 + Percepção ÷ 10 + maestria de caça (+ a pena do corpo), contra a FARTURA do ermo:
+    22, mais o arisco da espécie, mais até 12 pelo que falta dela (contagem ÷ teto). De noite, −4.
+  O QUE APARECE SAI DA CONTAGEM REAL: um bicho, um bando (nunca mais do que há), ou nada. No bloco em que o rastro falha, pode
+    aparecer o que não se procurava (o acaso do mundo), e esse VIU o caçador.
+  ANTES DA LUTA O CAÇADOR LÊ A AMEAÇA (bichos.ameaca) e escolhe: atacar, deixar, fugir.
+    Quem viu primeiro ataca com o bicho surpreendido, de longe ou de perto, e a margem do rastro dá o terreno (alto, cerco, estreito, cobertura).
+    O bicho que viu o caçador pode investir em quem o deixa, e vir atrás de quem corre (Agilidade contra a dele; alcançado, luta colado e surpreendido).
+  A LUTA É A DO `ato.py luta`, com paradas e ordens: este script só monta o cenário e, no fim, faz as contas.
+    Bicho morto sai da contagem. Se a casa ficou com o campo, o despojo entra na carga e o núcleo do chefe entra no Livro de Itens.
+    Quem perde o campo deixa a carcaça no mato. O bicho que fugiu segue no ermo.
+  A PRESA FERIDA: o bicho que fugiu com ferida aberta deixa SANGUE. Quem ficou com o campo pode segui-lo na hora, sem gastar bloco: o rastro fica mais fácil,
+    e quem passa acha o mesmo bicho, com o PV e as feridas com que fugiu. Cada nova perseguição no mesmo bloco é mais difícil. Quem segue a procura, larga-o.
+  A COLETA (minério, madeira, erva): um teste por bloco; o que se tira sai do `coleta` do ermo e entra na carga, no mesmo evento.
+  A VIRADA: os bichos criam devagar até o teto; a espécie caçada até o fim some por muito tempo; o chefe demora a nascer; a matéria volta devagar.
+
+Uso (o personagem do jogador, ou quem=ID):
+  python3 caca.py ver                                   os ermos vizinhos (o que se sabe), a sua mão, a saída aberta
+  python3 caca.py sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID]      sai para caçar: a ida, e a procura até aparecer alguma coisa (sem alvo: o que aparecer)
+  python3 caca.py atacar [inicio=longe|perto|colado] [vantagem=alto,cerco]    ataca o que apareceu: monta a luta e mostra o quadro
+  python3 caca.py luta ["Nome: ordem"] ["grupo: ordem"]  roda a luta aberta até a próxima parada (é o `ato.py luta roda`); no fim, faz as contas do despojo
+  python3 caca.py sangue                                segue o rastro de sangue da presa que fugiu ferida (sem gastar bloco: é agora ou nunca)
+  python3 caca.py deixar                                deixa o bicho e segue a procura (o que viu você pode investir)
+  python3 caca.py fugir                                 larga a caçada e volta (do bicho que viu você: Agilidade contra a dele)
+  python3 caca.py segue                                 segue a procura (ou a coleta) com os blocos que restam
+  python3 caca.py volta                                 volta para casa: fecha a saída
+  python3 caca.py coletar BEM [ERMO] [blocos=N]         sai para tirar matéria: metal:0 madeira:0 erva:1 ... (0 Comum, 1 Incomum, 2 Raro)
+  python3 caca.py conta [ERMO]                          SÓ O MESTRE: a contagem de verdade, o número do rastro e a chance do acaso
+  python3 caca.py povoa ERMO HABITAT [perigo=1] [vizinho=LUGAR] [longe=N] ["como foi"]     o Mestre povoa um lugar que já existe (bichos e matéria no teto)
+HABITAT: floresta campo brejo serra caverna ruína · perigo: 1 (a borda), 2 (o interior), 3 (o coração)
+"""
+import json, math, os, sys
+import tabelas as T
+import tabelas_mundo as M
+import tabelas_bichos as TB
+import tabelas_caca as K
+import estado, ato, corpo, teste, bichos
+
+FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino
+EVENTO = {'caça': 'cacar', 'coleta': 'coletar'}
+OFICIO = {'caça': 'caça', 'coleta': 'coleta'}
+
+
+# ---------- dizer ----------
+def _em(E, lid): l = E['lugares'][lid]; return l.get('em', 'em ' + l['nome'])
+def _bem(chave):
+    n, c = M.le_materia(chave)
+    return chave if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+def _lista(d): return ', '.join(f'{q} de {_bem(b)}' for b, q in d.items()) or 'nada'
+def _nome(esp, n=1):
+    e = TB.ESPECIES[esp]; return f"{e['artigo']} {e['nome']}" if n == 1 else f"{n} {e['nome']}s"
+def _s(n, um, muitos): return um if n == 1 else muitos
+
+
+# ---------- ler ----------
+def _vivo(E, pid):
+    p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
+    if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não está vivo")
+    return p
+
+
+def _num(d): return {k: v for k, v in d.items() if isinstance(v, (int, float)) and not isinstance(v, bool)} if isinstance(d, dict) else {}
+def mao(p, oficio='caça'): m = p.get('maestria'); return m.get(oficio, 0) if isinstance(m, dict) else 0             # a maestria no ofício (0 a 8)
+def saida(p): s = (p.get('marca') or {}).get('caca'); return s if isinstance(s, dict) else None                      # a saída aberta desta pessoa, ou None
+def bichos_de(E, lid): return {e: int(q) for e, q in _num(E['lugares'][lid].get('bichos')).items() if e in TB.ESPECIES and q >= 1}      # a contagem real: {espécie: quantos}
+def teto_de(E, lid): return {e: q for e, q in _num(E['lugares'][lid].get('teto')).items() if e in TB.ESPECIES and q > 0}
+def coleta_de(E, lid): return {b: q for b, q in _num(E['lugares'][lid].get('coleta')).items() if M.le_materia(b)[0] in K.COLETA}
+def coleta_teto(E, lid): return {b: q for b, q in _num(E['lugares'][lid].get('coleta_teto')).items() if M.le_materia(b)[0] in K.COLETA and q > 0}
+def tem_caca(E, lid): return bool(teto_de(E, lid) or bichos_de(E, lid))
+def e_ermo(E, lid): return tem_caca(E, lid) or bool(coleta_teto(E, lid))
+def ermos(E, lid): return [v for v in (E['lugares'][lid].get('vizinhos') or []) if v in E['lugares'] and e_ermo(E, v)]         # os ermos vizinhos de um lugar
+def longe(E, lid): v = E['lugares'][lid].get('longe'); return v if isinstance(v, int) and not isinstance(v, bool) and v >= 1 else K.IDA      # os blocos de ida (a volta custa o mesmo)
+
+
+def falta(tem, teto):
+    """o que falta para o teto, de 0 (cheio) a 1 (sumiu)"""
+    return (0.0 if tem > 0 else 1.0) if teto <= 0 else max(0.0, 1 - tem / teto)
+
+
+def rastro_contra(E, lid, alvo=None):
+    """o número do rastro neste ermo, hoje: a base, o arisco da espécie e o que falta dela. Sem alvo: a base e o que falta do ermo inteiro."""
+    B = bichos_de(E, lid); Tt = teto_de(E, lid)
+    if alvo: return K.RASTRO_BASE + K.arisco(alvo) + round(K.RASTRO_FALTA * falta(B.get(alvo, 0), Tt.get(alvo, 0)))
+    return K.RASTRO_BASE + round(K.RASTRO_FALTA * falta(sum(B.values()), sum(Tt.values())))
+
+
+def acaso(E, lid):
+    """a chance, por bloco, de aparecer o que não se procurava: a soma de contagem × ousadia, dividida pela tabela"""
+    return min(K.ACASO_MAX, sum(q * K.indole(e)[0] for e, q in bichos_de(E, lid).items()) / K.ACASO_CADA)
+
+
+def coleta_contra(E, lid, bem):
+    """o número da coleta desta matéria neste ermo, hoje"""
+    _, cat = M.le_materia(bem); ha = coleta_de(E, lid).get(bem, 0)
+    return K.COLETA_BASE + K.COLETA_CAT * (cat or 0) + round(K.COLETA_FALTA * falta(ha, coleta_teto(E, lid).get(bem, 0)))
+
+
+def posicao(enc):
+    """o que o encontro dá a quem ataca: (os começos possíveis, quantas vantagens de terreno, o lado surpreendido)"""
+    if enc['viu'] == 'caçador':
+        m = enc['margem']; return list(K.INICIOS_RASTRO) + (['colado'] if m >= K.COLADO else []), max(0, min(K.POSICAO_MAX, m // K.POSICAO_CADA)), 'B'
+    if enc['viu'] == 'alcançado': return [K.INICIO_ALCANCADO], 0, 'A'
+    return [K.INICIO_ACASO], 0, None
+
+
+def _especie(x):
+    """a espécie pelo nome da tabela ou pelo nome que vai à mesa ("aranha" ou "aranha-de-toca")"""
+    k = next((k for k, d in TB.ESPECIES.items() if x in (k, d['nome'])), None)
+    return k or sys.exit(f'espécie desconhecida: "{x}" (as que existem: {", ".join(TB.ESPECIES)})')
+
+
+def _veste(E, pid):
+    """(a categoria da arma, a da armadura do tronco) de quem lê a ameaça, ou None"""
+    eq = estado.pecas(E, pid); tronco = [it['cat'] for it in eq['veste'] if 'tronco' in it.get('cobre', []) and it['dur'][0] > 0]
+    return (eq['arma']['cat'] if eq['arma'] and eq['arma']['dur'][0] > 0 else None), (max(tronco) if tronco else None)
+
+
+def _inteiro(E, x, chave):
+    """x em unidades inteiras: a parte quebrada vira a chance de mais uma (o acaso do mundo: mesma semente, mesmo mundo)"""
+    n = math.floor(x); resto = x - n
+    return n + (1 if resto > 1e-9 and estado.sorte(E, chave).random() < resto else 0)
+
+
+def _sorteia(pesos, r):
+    """uma chave ao acaso, com a chance do peso dela (None se não há peso nenhum)"""
+    tot = sum(pesos.values())
+    if tot <= 0: return None
+    x = r.random() * tot; ult = None
+    for k in sorted(pesos):
+        if pesos[k] <= 0: continue
+        ult = k; x -= pesos[k]
+        if x < 0: return k
+    return ult
+
+
+def _marca(E, pid, s, texto, mais=(), tipo=None):
+    """a saída aberta (ou None: fechada) fica escrita na pessoa, por evento"""
+    p = E['gente'][pid]; ant = saida(p) or s or {}
+    estado.aplica(E, tipo or EVENTO[ant.get('quer', 'caça')], [['pessoa', pid, 'marca.caca', 'poe', s]] + list(mais), onde=ant.get('ermo'), quem=[pid], texto=texto)
+
+
+# ---------- a maestria ----------
+def sobe(E, pid, oficio='caça'):
+    """a maestria de caça (ou de coleta) sobe quando os blocos chegam; de Mestre para cima, só com o FEITO (marca.feito_OFICIO: a categoria mais alta que a mão já tirou)"""
+    p = E['gente'][pid]; tem = mao(p, oficio); bl = (p.get('treino') or {}).get(oficio, 0); txt = ''
+    tab, feito = (K.CACA_BLOCOS, K.FEITO_CACA) if oficio == 'caça' else (K.COLETA_BLOCOS, K.FEITO_COLETA)
+    for grau, quer in sorted(tab.items()):
+        if grau <= tem or bl < quer: continue
+        if grau in feito and p.get('marca', {}).get(f'feito_{oficio}', -1) < feito[grau]:
+            o_que = 'ficar com a carcaça de um bicho' if oficio == 'caça' else 'tirar matéria'
+            txt = f" (tem os blocos para {T.MAESTRIAS[grau]} em {oficio}; falta o feito: {o_que} {T.CATS[feito[grau]]} ou maior)"; break
+        estado.aplica(E, 'treinar', [['pessoa', pid, 'maestria.' + oficio, 'poe', grau]], onde=p['lugar'], quem=[pid], texto=f"{p['nome']} chega a {T.MAESTRIAS[grau]} em {oficio}")
+        p = E['gente'][pid]; tem = grau; txt = f'. MAESTRIA: {T.MAESTRIAS[grau]} em {oficio}'
+    return txt
+
+
+# ---------- a saída ----------
+def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
+    p = _vivo(E, pid); aqui = p['lugar']
+    if saida(p): sys.exit(f"{p['nome']} já tem uma saída aberta ({_agora(E, pid)}). Feche-a antes: `caca.py volta`")
+    viz = ermos(E, aqui)
+    if ermo is None:
+        if len(viz) != 1: sys.exit(f"diga a que ermo ({', '.join(viz)})" if viz else f"{E['lugares'][aqui]['nome']} não tem ermo vizinho: não há aonde sair")
+        ermo = viz[0]
+    elif ermo not in viz: sys.exit(f'"{ermo}" não é um ermo vizinho de {E["lugares"][aqui]["nome"]}' + (f" (os que há: {', '.join(viz)})" if viz else ' (não há nenhum)'))
+    l = E['lugares'][ermo]
+    if quer == 'caça':
+        if alvo is not None: alvo = _especie(alvo)
+        if not tem_caca(E, ermo): sys.exit(f"{l['nome']} não tem caça")
+    else:
+        nome, cat = M.le_materia(alvo or '')
+        if nome not in K.COLETA or cat is None: sys.exit(f'não se coleta "{alvo}" (coleta-se: {", ".join(n + ":0" for n in K.COLETA)}; o número é a categoria, de 0 a {M.MATERIA_ATE})')
+        if alvo not in coleta_teto(E, ermo): sys.exit(f"{l['nome']} não dá {_bem(alvo)}" + (f" (dá: {', '.join(_bem(b) for b in coleta_teto(E, ermo))})" if coleta_teto(E, ermo) else ''))
+    try: n = K.PROCURA if blocos is None else int(blocos)
+    except ValueError: n = 0
+    if not 1 <= n <= K.PROCURA_MAX: sys.exit(f'os blocos de {"procura" if quer == "caça" else "coleta"} de uma saída vão de 1 a {K.PROCURA_MAX} (veio "{blocos}"). Um bloco são 4 horas.')
+    com = list(dict.fromkeys(com))
+    for c in com:
+        q = E['gente'].get(c) or sys.exit(f'não há a pessoa "{c}"')
+        if c == pid or q['estado'] != 'vivo' or q['lugar'] != aqui or saida(q): sys.exit(f"{q['nome']} não pode ir junto (tem de estar vivo, {_em(E, aqui)}, e sem saída aberta)")
+    ida = longe(E, ermo); o_que = (TB.ESPECIES[alvo]['nome'] if alvo else 'o que aparecer') if quer == 'caça' else _bem(alvo)
+    s = dict(ermo=ermo, casa=aqui, quer=quer, alvo=alvo, restam=n, com=com, dia=E['relogio']['dia'], fase='procura', encontro=None, luta=None, lutas=0, parou=None, sangue=None)
+    txt = f"{p['nome']} sai para {'caçar' if quer == 'caça' else 'tirar'} {o_que} {_em(E, ermo)}" + (f", com {', '.join(E['gente'][c]['nome'] for c in com)}" if com else '')
+    estado.aplica(E, EVENTO[quer], [['pessoa', pid, 'marca.caca', 'poe', s]], onde=ermo, quem=[pid] + com, texto=txt)
+    ato.passa(E, pid, ida, EVENTO[quer], esforco=K.ESFORCO['ida'], para=False, texto=f"{p['nome']} vai ao ermo ({l['nome']})")
+    return _anda(E, pid, [f"{txt}: {ida} bloco(s) de ida, {n} de {'procura' if quer == 'caça' else 'coleta'}, {ida} de volta."])
+
+
+def sair(E, pid, ermo=None, alvo=None, blocos=None, com=()):
+    """sai para caçar no ermo vizinho: a ida, e a procura bloco a bloco até aparecer alguma coisa (aí PARA, e o caçador lê a ameaça), até o corpo pedir,
+    ou até os blocos acabarem (aí volta sozinho). alvo: a espécie que se procura (None: o que aparecer). com: quem vai junto (entra na luta)."""
+    return _abre(E, pid, 'caça', ermo, alvo, blocos, com)
+
+
+def coletar(E, pid, bem, ermo=None, blocos=None, com=()):
+    """sai para tirar matéria (\"metal:0\", \"madeira:1\", \"erva:0\") do ermo vizinho: a ida, os blocos de coleta (um teste cada), a volta"""
+    return _abre(E, pid, 'coleta', ermo, bem, blocos, com)
+
+
+def _anda(E, pid, L):
+    """a procura (ou a coleta) segue, bloco a bloco: até aparecer alguma coisa, o corpo pedir, ou os blocos acabarem (aí a volta sai sozinha)"""
+    while True:
+        p = E['gente'][pid]; s = saida(p)
+        if p['estado'] != 'vivo': return _morreu(E, pid, L)
+        if s['restam'] <= 0: return volta(E, pid, L)
+        R = (_bloco_caca if s['quer'] == 'caça' else _bloco_coleta)(E, pid, L)
+        if R: return R
+
+
+def _quantos(E, lid, esp, chave):
+    """quantos aparecem: o bando da espécie (o acaso do mundo), nunca mais do que a contagem real"""
+    return min(bichos_de(E, lid).get(esp, 0), len(bichos.bando(esp, estado.sorte(E, chave))))
+
+
+def _bloco_caca(E, pid, L):
+    """um bloco de procura: o tempo passa, e sai o teste do rastro. Devolve o que parou a procura, ou None."""
+    p = E['gente'][pid]; s = dict(saida(p)); ermo = s['ermo']; alvo = s['alvo']; escuro = E['relogio']['bloco'] in M.ESCUROS
+    s.update(restam=s['restam'] - 1, parou=None, sangue=None)
+    _, pq = ato.passa(E, pid, 1, 'cacar', esforco=K.ESFORCO['procura'], texto=f"{p['nome']} procura rastro {_em(E, ermo)}",
+                      mais=lambda i: [['pessoa', pid, 'treino.caça', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
+    p = E['gente'][pid]
+    if p['estado'] != 'vivo': return None
+    contra = rastro_contra(E, ermo, alvo); o_que = TB.ESPECIES[alvo]['nome'] if alvo else 'o que aparecer'; B = bichos_de(E, ermo); enc = None
+    r = teste.rola(E, f"rastrear {o_que} {_em(E, ermo)}" + (', no escuro' if escuro else ''), 'Percepção', contra, mais=mao(p) + (K.RASTRO_ESCURO if escuro else 0), quem=pid)
+    L.append(teste.diz(E, r))
+    if r['passou']:
+        _acha_nucleo(E, pid, ermo, L)
+        esp = alvo or _sorteia(B, estado.sorte(E, f'caca|{pid}|aparece'))
+        if esp and B.get(esp, 0) >= 1: enc = dict(especie=esp, n=_quantos(E, ermo, esp, f'caca|{pid}|bando'), viu='caçador', margem=int(r['total'] - contra), escuro=escuro)
+        else: L.append('O rastro é velho: não há nada no fim dele.')
+    else:
+        rs = estado.sorte(E, f'caca|{pid}|acaso')
+        if rs.random() < acaso(E, ermo):
+            esp = _sorteia({e: q * K.indole(e)[0] for e, q in B.items()}, rs)
+            if esp: enc = dict(especie=esp, n=_quantos(E, ermo, esp, f'caca|{pid}|bando'), viu='bicho', margem=0, escuro=escuro)
+        if not enc: L.append('Nenhum rastro neste bloco.')
+    if enc: return _encontro(E, pid, enc, L)
+    if pq and s['restam'] > 0: return _pausa(E, pid, pq, L)
+    return None
+
+
+def _acha_nucleo(E, pid, ermo, L):
+    """quem passa num rastro acha o que ficou no chão do ermo (no Livro de Itens, com `onde` ali e sem dono): o núcleo da carcaça que ninguém abriu,
+    e as peças de quem morreu ali. Passa a ser dele (as peças vão guardadas, não vestidas)."""
+    p = E['gente'][pid]
+    for iid, it in list(E['itens']['itens'].items()):
+        if it.get('onde') == ermo and not it.get('dono'):
+            de_que = 'numa carcaça velha' if it.get('tipo') == 'nucleo' else 'junto de um corpo'
+            estado.aplica(E, 'despojo', [['item', iid, 'dono', 'poe', pid], ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: achado por {p['nome']} {de_que} {_em(E, ermo)}"]],
+                          onde=ermo, quem=[pid], texto=f"{p['nome']} acha {it['nome']} {de_que} {_em(E, ermo)}")
+            L.append(f"  ACHADO {de_que}: {it['nome']} ({iid}, {T.CATS[it['cat']]}). Agora é de {p['nome']}.")
+
+
+def _bloco_coleta(E, pid, L):
+    """um bloco de coleta: o tempo passa, sai o teste, e o que se tira sai do ermo e entra na carga no mesmo evento. Pode aparecer bicho."""
+    p = E['gente'][pid]; s = dict(saida(p)); ermo = s['ermo']; bem = s['alvo']; nome, cat = M.le_materia(bem); tab = K.COLETA[nome]; escuro = E['relogio']['bloco'] in M.ESCUROS
+    s.update(restam=s['restam'] - 1, parou=None, sangue=None)
+    _, pq = ato.passa(E, pid, 1, 'coletar', esforco=K.ESFORCO['coleta'], texto=f"{p['nome']} tira {tab['nome']} {_em(E, ermo)}",
+                      mais=lambda i: [['pessoa', pid, 'treino.coleta', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
+    p = E['gente'][pid]
+    if p['estado'] != 'vivo': return None
+    contra = coleta_contra(E, ermo, bem); ha = int(coleta_de(E, ermo).get(bem, 0))
+    r = teste.rola(E, f"tirar {_bem(bem)} {_em(E, ermo)}", tab['atributo'], contra, mais=mao(p, 'coleta'), quem=pid); m = r['total'] - contra; L.append(teste.diz(E, r))
+    q = min(ha, tab['rende'] + int(m // K.COLETA_MARGEM) if m >= 0 else 1 if m > -K.COLETA_POUCO else 0)
+    if q > 0:
+        ef = [['lugar', ermo, 'coleta.' + bem, 'soma', -q], ['pessoa', pid, 'carga.' + bem, 'soma', q]]
+        if p.get('marca', {}).get('feito_coleta', -1) < cat: ef.append(['pessoa', pid, 'marca.feito_coleta', 'poe', cat])
+        estado.aplica(E, 'coletar', ef, onde=ermo, quem=[pid], texto=f"{p['nome']} tira {q} de {_bem(bem)} {_em(E, ermo)}")
+        L.append(f"  Tirou {q} de {_bem(bem)}.")
+    else: L.append('  Não rendeu nada.' if ha else f"  Não há mais {_bem(bem)} aqui: esgotou.")
+    rs = estado.sorte(E, f'caca|{pid}|acaso'); B = bichos_de(E, ermo)
+    if rs.random() < acaso(E, ermo):
+        esp = _sorteia({e: n * K.indole(e)[0] for e, n in B.items()}, rs)
+        if esp: return _encontro(E, pid, dict(especie=esp, n=_quantos(E, ermo, esp, f'caca|{pid}|bando'), viu='bicho', margem=0, escuro=escuro), L)
+    if pq and s['restam'] > 0: return _pausa(E, pid, pq, L)
+    return None
+
+
+def _pausa(E, pid, pq, L):
+    """o corpo pediu: a procura para, e o caçador escolhe seguir ou voltar"""
+    s = dict(saida(E['gente'][pid]), parou=pq); _marca(E, pid, s, f"a procura para: {pq}")
+    L.append(f"PAROU: {pq}. Restam {s['restam']} bloco(s): `caca.py segue` ou `caca.py volta`.")
+    return dict(fase='procura', parou=pq, texto='\n'.join(L))
+
+
+def _le_encontro(E, pid, enc, restam):
+    """o que o caçador lê quando o bicho aparece: a ameaça (com a conta do que ele veste), o que a posição dá, e as escolhas"""
+    esp = enc['especie']; n = enc['n']; arma, armadura = _veste(E, pid); inis, nv, _ = posicao(enc)
+    L = [('A PRESA FERIDA, no fim do sangue: ' if enc.get('feridos') else 'APARECE: ' if enc['viu'] == 'caçador' else 'APARECE, E VIU VOCÊ: ') + _nome(esp, n) + (' (PV ' + ', '.join(str(f['pv']) for f in enc['feridos']) + ')' if enc.get('feridos') else '') + ('. Está ESCURO: a luta terá −4 no golpe e −8 no tiro.' if enc.get('escuro') else '.'), bichos.ameaca(esp, n=n, arma=arma, armadura=armadura)]
+    if enc['viu'] == 'caçador':
+        L.append(f"VOCÊ VIU PRIMEIRO (o rastro passou por {enc['margem']}): se atacar, {_s(n, 'o bicho perde', 'os bichos perdem')} o primeiro turno, e a luta começa {' ou '.join(inis)}."
+                 + (f" Terreno: {nv} {_s(nv, 'vantagem', 'vantagens')} à escolha: " + ' · '.join(f'{k} ({v})' for k, v in K.VANTAGEM_DIZ.items()) + '.' if nv else ' Sem vantagem de terreno.'))
+        L.append(f"ESCOLHA: `caca.py atacar [inicio={'|'.join(inis)}]" + (f" [vantagem={','.join(list(K.VANTAGENS)[:nv])}]" if nv else '') + f"` · `caca.py deixar` (segue a procura: restam {restam} bloco(s)) · `caca.py fugir` (larga a caçada e volta)")
+    else:
+        agil = TB.ESPECIES[esp]['atributos']['Agilidade'] // 10
+        L.append(f"ESCOLHA: `caca.py atacar` (a luta começa {K.INICIO_ACASO}; ninguém é surpreendido) · `caca.py deixar` (fica onde está: {_s(n, 'ele pode', 'eles podem')} investir, e aí a luta é a mesma) · "
+                 f"`caca.py fugir` (larga a caçada; se {_s(n, 'ele vier', 'eles vierem')} atrás, Agilidade contra {K.FUGA_BASE + agil}: alcançado, luta {K.INICIO_ALCANCADO} e surpreendido)")
+    return L
+
+
+def _encontro(E, pid, enc, L):
+    s = dict(saida(E['gente'][pid]), fase='encontro', encontro=enc, parou=None)
+    _marca(E, pid, s, f"aparece {_nome(enc['especie'], enc['n'])} {_em(E, s['ermo'])}" + (' (viu o caçador)' if enc['viu'] == 'bicho' else ''))
+    return dict(fase='encontro', encontro=dict(enc), texto='\n'.join(L + _le_encontro(E, pid, enc, s['restam'])))
+
+
+def _no_encontro(E, pid):
+    p = _vivo(E, pid); s = saida(p)
+    if not s: sys.exit(f"{p['nome']} não tem saída aberta (`caca.py sair`)")
+    if s['fase'] != 'encontro': sys.exit(f"não há bicho à frente de {p['nome']} agora ({_agora(E, pid)})")
+    return p, s, s['encontro']
+
+
+def atacar(E, pid, inicio=None, vantagens=()):
+    """ataca o que apareceu: confere o que a posição dá, monta o cenário e abre a luta (a do ato.py luta). Devolve o quadro."""
+    p, s, enc = _no_encontro(E, pid); inis, nv, surp = posicao(enc); vs = list(dict.fromkeys(vantagens))
+    ini = inicio or (K.INICIO_PADRAO if K.INICIO_PADRAO in inis else inis[0])
+    if ini not in inis: sys.exit(f'esta luta não começa "{ini}": começa {" ou ".join(inis)}' + ('' if enc['viu'] == 'caçador' else ' (o bicho viu você)'))
+    ruins = [v for v in vs if v not in K.VANTAGENS]
+    if ruins: sys.exit(f'vantagem desconhecida: "{ruins[0]}" (as que há: {", ".join(K.VANTAGENS)})')
+    if len(vs) > nv: sys.exit(f"a posição dá {nv} {_s(nv, 'vantagem', 'vantagens')} de terreno (uma a cada {K.POSICAO_CADA} pontos de margem no rastro, até {K.POSICAO_MAX}); vieram {len(vs)}")
+    return _luta_abre(E, pid, ini, {K.VANTAGENS[v][0]: K.VANTAGENS[v][1] for v in vs}, surp, vs, [])
+
+
+def _luta_abre(E, pid, ini, lugar, surp, vs, L):
+    """monta o cenário (a casa: o caçador e quem veio junto; o outro lado: os bichos, tirados da contagem real) e chama o ato.luta_nova"""
+    p = E['gente'][pid]; s = dict(saida(p)); enc = dict(s['encontro']); esp = enc['especie']; n = min(enc['n'], bichos_de(E, s['ermo']).get(esp, 0))
+    if n < 1:                                               # não há mais nenhum (o Mestre mexeu na contagem no meio da saída): o encontro se desfaz
+        s.update(fase='procura', encontro=None); _marca(E, pid, s, 'o bicho não está mais lá'); return _anda(E, pid, L + ['Não há mais nada ali.'])
+    k = s['lutas'] + 1; B = bichos.bando(esp, estado.sorte(E, f'caca|{pid}|luta|{k}'), n=n)
+    for b, fd in zip(B, enc.get('feridos') or []): b['pv'] = fd['pv']; b['feridas'] = [list(x) for x in fd['feridas']]       # a presa que fugiu ferida volta com o PV e as feridas com que fugiu
+    A = [dict(id=pid, controla=True)] + [dict(id=c) for c in s['com'] if E['gente'].get(c, {}).get('estado') == 'vivo']
+    pasta = os.path.join(estado.pasta(), 'lutas'); os.makedirs(pasta, exist_ok=True); base = os.path.join(pasta, f"caca_{pid}_d{E['relogio']['dia']}b{E['relogio']['bloco']}_{k}")
+    escuro = bool(enc.get('escuro'))                           # a luz é a do bloco em que o bicho apareceu (o relógio já andou até o fim dele)
+    json.dump(dict(inicio=ini, lugar=lugar, surpresa=surp, tempo=['escuro'] if escuro else [], luz=not escuro, A=A, B=B), open(base + '_cenario.json', 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
+    quadro = ato.luta_nova(E, base + '_cenario.json', base + '_luta.json')
+    enc.update(n=n, inicio=ini, vantagens=vs, surpresa=surp); s.update(fase='luta', luta=base + '_luta.json', lutas=k, encontro=enc)
+    _marca(E, pid, s, f"{p['nome']} luta com {_nome(esp, n)} {_em(E, s['ermo'])} (começa {ini}" + (f", {', '.join(vs)}" if vs else '') + ({'A': ', surpreendido', 'B': ', o bicho surpreendido'}.get(surp, '')) + ')')
+    L = L + [f"A LUTA ABRE: {p['nome']} contra {_nome(esp, n)}, começando {ini}" + (f"; terreno: {', '.join(vs)}" if vs else '') + ({'A': '; VOCÊ foi surpreendido (perde o primeiro turno)', 'B': '; o bicho foi surpreendido (perde o primeiro turno)'}.get(surp, '')) + '.',
+             quadro, f'Siga com `caca.py luta "{p["nome"]}: atacar"` (ou `ato.py luta roda {s["luta"]} "{p["nome"]}: ordem"`); acabada a luta, `caca.py segue` ou `caca.py volta`.']
+    return dict(fase='luta', luta=s['luta'], encontro=enc, texto='\n'.join(L))
+
+
+def deixar(E, pid):
+    """deixa o bicho. O que não viu o caçador segue o caminho dele; o que viu pode investir (o acaso do mundo, pela índole da espécie). Depois, a procura segue."""
+    p, s, enc = _no_encontro(E, pid); esp = enc['especie']; n = enc['n']; L = []
+    if enc['viu'] != 'caçador':
+        if estado.sorte(E, f"caca|{pid}|investe|{s['restam']}|{s['lutas']}").random() < K.indole(esp)[1]:
+            return _luta_abre(E, pid, K.INICIO_ACASO, {}, None, [], [f"{_nome(esp, n).capitalize()} não {_s(n, 'deixa', 'deixam')}: {_s(n, 'INVESTE', 'INVESTEM')}."])
+        L.append(f"{_nome(esp, n).capitalize()} {_s(n, 'olha e vai', 'olham e vão')} embora.")
+    else: L.append(f"{p['nome']} deixa {_nome(esp, n)} ir.")
+    s = dict(s, fase='procura', encontro=None); _marca(E, pid, s, f"{p['nome']} deixa {_nome(esp, n)}")
+    return _anda(E, pid, L)
+
+
+def fugir(E, pid):
+    """larga a caçada e volta. Do bicho que não viu o caçador, sem teste. Do que viu: ele pode vir atrás (a índole, mais o que a corrida chama); aí é Agilidade
+    contra a dele: quem passa, escapa; quem falha é alcançado, e luta colado e surpreendido."""
+    p, s, enc = _no_encontro(E, pid); esp = enc['especie']; n = enc['n']; L = []
+    if enc['viu'] != 'caçador':
+        if estado.sorte(E, f"caca|{pid}|persegue|{s['restam']}|{s['lutas']}").random() < min(1.0, K.indole(esp)[1] + K.INVESTE_FUGA):
+            contra = K.FUGA_BASE + TB.ESPECIES[esp]['atributos']['Agilidade'] // 10
+            r = teste.rola(E, f"fugir de {_nome(esp, n)}", 'Agilidade', contra, quem=pid); L += [f"{_nome(esp, n).capitalize()} {_s(n, 'vem', 'vêm')} atrás.", teste.diz(E, r)]
+            if not r['passou']:
+                s = dict(s, encontro=dict(enc, viu='alcançado')); _marca(E, pid, s, f"{p['nome']} é alcançado por {_nome(esp, n)}")
+                return _luta_abre(E, pid, K.INICIO_ALCANCADO, {}, 'A', [], L + ['ALCANÇADO.'])
+            L.append(f"{p['nome']} escapa.")
+        else: L.append(f"{_nome(esp, n).capitalize()} não {_s(n, 'vem', 'vêm')} atrás.")
+    else: L.append(f"{p['nome']} recua sem ser visto.")
+    s = dict(s, fase='procura', encontro=None); _marca(E, pid, s, f"{p['nome']} larga a caçada")
+    return volta(E, pid, L)
+
+
+def luta_roda(E, pid, ordens=()):
+    """roda a luta aberta da saída até a próxima parada, com as ordens dadas: é o ato.luta_roda. Acabada a luta, faz as contas (acerta)."""
+    p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"'); s = saida(p)
+    if not s or s['fase'] != 'luta': sys.exit(f"{p['nome']} não tem luta de caça aberta")
+    out = ato.luta_roda(E, s['luta'], list(ordens))
+    if json.load(open(s['luta'], encoding='utf-8'))['fim']: R = acerta(E, pid); R['texto'] = out + '\n\n' + R['texto']; return R
+    return dict(fase='luta', luta=s['luta'], texto=out)
+
+
+def acerta(E, pid):
+    """A LUTA ACABOU: as contas, num evento só. Bicho morto sai da contagem (o caído é rematado por quem ficou com o campo). Se a casa ficou com o campo,
+    o despojo de cada carcaça (bichos.despojo) entra na carga e o núcleo do chefe entra no Livro de Itens, com dono; se não ficou, a carcaça fica no mato,
+    e o núcleo fica no ermo (no Livro, com `onde`). Quem perdeu o campo e vive volta na hora; quem ficou com ele pode seguir a procura."""
+    p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"'); s = saida(p)
+    if not s or s['fase'] != 'luta': sys.exit(f"{p['nome']} não tem luta de caça para acertar")
+    S = json.load(open(s['luta'], encoding='utf-8'))
+    if not S['fim']: sys.exit(f'a luta ainda não acabou: siga com `caca.py luta "{p["nome"]}: atacar"`')
+    if any(l['arq'] == os.path.abspath(s['luta']) and not l['fim'] for l in E['turno']['lutas']): ato.luta_fecha(E, S, s['luta'])       # a luta acabou no arquivo e ainda não voltou ao estado
+    p = E['gente'][pid]; ermo = s['ermo']; enc = s['encontro']; esp = enc['especie']; e = TB.ESPECIES[esp]; bs = [f for f in S['L'] if f['lado'] == 'B']; campo = S['fim'] == 'A'
+    mortos = sum(f['estado'] == 'morto' for f in bs); caidos = sum(f['estado'] == 'caido' for f in bs); fugiram = sum(f['estado'] == 'fugiu' for f in bs)
+    saem = min(mortos + (caidos if campo else 0), bichos_de(E, ermo).get(esp, 0)); ef = []; bens = {}; nucleos = 0; L = []
+    leva = None if not campo else pid if p['estado'] == 'vivo' else next((c for c in s['com'] if E['gente'].get(c, {}).get('estado') == 'vivo'), None)
+    if saem: ef.append(['lugar', ermo, f'bichos.{esp}', 'soma', -saem])
+    for i in range(saem):
+        b, nuc = bichos.despojo(esp, estado.sorte(E, f"caca|{pid}|despojo|{s['lutas']}|{i}"))
+        if leva:
+            for k, q in b.items(): bens[k] = bens.get(k, 0) + q
+        if nuc:
+            como = f"tirado de {_nome(esp)} por {E['gente'][leva]['nome']}" if leva else f"ficou na carcaça de {_nome(esp)}"
+            ef.append(['item', 'nasce', dict(nuc, dono=leva, onde=None if leva else ermo, historia=[f"Dia {E['relogio']['dia']}: {como} {_em(E, ermo)}"])]); nucleos += 1
+    if leva:
+        q = E['gente'][leva]; ef += [['pessoa', leva, 'carga.' + k, 'soma', v] for k, v in bens.items()]
+        if saem:
+            ef.append(['pessoa', leva, 'marca.abates', 'soma', saem])
+            if q.get('marca', {}).get('feito_caça', -1) < e['cat']: ef.append(['pessoa', leva, 'marca.feito_caça', 'poe', e['cat']])
+    if saem: L.append(f"{_nome(esp, saem).capitalize()} {_s(saem, 'morreu', 'morreram')}: {_s(saem, 'sai', 'saem')} da contagem {_em(E, ermo)}.")
+    if fugiram: L.append(f"{_nome(esp, fugiram).capitalize()} {_s(fugiram, 'fugiu', 'fugiram')}: {_s(fugiram, 'segue', 'seguem')} no ermo.")
+    if leva and saem: L.append(f"DESPOJO ({E['gente'][leva]['nome']}): {_lista(bens)}" + (f", e {nucleos} núcleo(s) {T.CATS[e['cat']]} (no Livro de Itens)" if nucleos else '') + '.')
+    elif saem: L.append('A casa não ficou com o campo: a carcaça ficou no mato.' + (f" O núcleo ficou com ela (no Livro de Itens, {_em(E, ermo)})." if nucleos else ''))
+    for m in [pid] + list(s['com']):                           # quem morreu no ermo fica lá com o que vestia: as peças seguem no Livro, sem dono, com `onde` no ermo
+        if E['gente'].get(m, {}).get('estado') != 'morto': continue
+        for iid, it in E['itens']['itens'].items():
+            if it.get('dono') == m and it.get('uso'):
+                ef += [['item', iid, 'dono', 'poe', None], ['item', iid, 'onde', 'poe', ermo], ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: ficou com o corpo de {E['gente'][m]['nome']} {_em(E, ermo)}"]]
+        L.append(f"{E['gente'][m]['nome']} morreu {_em(E, ermo)}: o que vestia fica lá, com o corpo (no Livro de Itens, sem dono).")
+    vivo = p['estado'] == 'vivo'; meu = next((f for f in S['L'] if f.get('id') == pid), {}); segue = vivo and S['fim'] in ('A', 'impasse', 'empate')
+    feridos = [dict(pv=f['pv'], feridas=f['feridas']) for f in bs if f['estado'] == 'fugiu' and f['feridas'] and f['pv'] > 0] if campo else []
+    sg = dict(especie=esp, feridos=feridos, vezes=(enc.get('perseguiu') or 0), escuro=bool(enc.get('escuro'))) if feridos else None
+    s2 = dict(s, fase='procura', encontro=None, luta=None, sangue=sg) if vivo else None
+    txt = f"{p['nome']} " + (f"fica com o campo {_em(E, ermo)}" if campo else f"perde o campo {_em(E, ermo)}") + (f": {saem} de {e['nome']} a menos" if saem else '') + (f"; leva {_lista(bens)}" if bens else '')
+    estado.aplica(E, 'despojo' if saem else 'cacar', ef + [['pessoa', pid, 'marca.caca', 'poe', s2]], onde=ermo, quem=[pid] + [c for c in s['com'] if c in E['gente']], texto=txt)
+    R = dict(fim=S['fim'], campo=campo, especie=esp, eram=len(bs), mortos=saem, fugiram=fugiram, leva=leva, bens=bens, nucleos=nucleos, meu=meu.get('estado'), rodadas=S['r'],
+             ids_nucleos=[f"i{E['itens']['seq'] - k:04d}" for k in reversed(range(nucleos))])
+    if not vivo: R.update(fase='morto', texto='\n'.join(L + [f"{p['nome']} morreu {_em(E, ermo)}. A saída acaba aqui."])); return R
+    R['sangue'] = len(feridos) if segue else 0
+    if segue:
+        if feridos: L.append(f"SANGUE: {_nome(esp, len(feridos))} {_s(len(feridos), 'fugiu ferida' if e['artigo'] == 'a' else 'fugiu ferido', 'fugiram com ferida aberta')}. `caca.py sangue` segue o rastro AGORA, sem gastar bloco "
+                             f"(Percepção contra {sangue_contra(E, ermo, sg)}); seguir a procura ou voltar é largar a presa.")
+        L.append(f"Restam {s2['restam']} bloco(s) de {'procura' if s['quer'] == 'caça' else 'coleta'}: `caca.py segue` ou `caca.py volta`."); R.update(fase='procura', texto='\n'.join(L)); return R
+    caiu = meu.get('estado') == 'caido'
+    L.append(f"{p['nome']} " + ('foi deixado por morto e volta arrastando-se.' if caiu else 'larga o campo e volta.'))
+    V = volta(E, pid, L, arrasta=caiu); R.update(fase=V['fase'], texto=V['texto']); return R
+
+
+def sangue_contra(E, lid, sg):
+    """o número do rastro de sangue: o do rastro da espécie, mais fácil pelo sangue, e mais difícil a cada perseguição no mesmo bloco"""
+    return rastro_contra(E, lid, sg['especie']) - K.SANGUE + K.SANGUE_ESFRIA * sg['vezes']
+
+
+def sangue(E, pid):
+    """segue o rastro de sangue da presa que fugiu ferida, na hora (não gasta bloco). Passou: acha o mesmo bicho, com o PV e as feridas com que fugiu,
+    e viu primeiro. Falhou: perdeu-o (ele segue no ermo). Cada nova perseguição no mesmo bloco é mais difícil."""
+    p = _vivo(E, pid); s = saida(p)
+    if not s: sys.exit(f"{p['nome']} não tem saída aberta (`caca.py sair`)")
+    if s['fase'] == 'luta': acerta(E, pid); p = E['gente'][pid]; s = saida(p)
+    if not s or s['fase'] != 'procura' or not s.get('sangue'): sys.exit(f"não há rastro de sangue para {p['nome']} seguir" + (f" ({_agora(E, pid)})" if s else ''))
+    sg = s['sangue']; esp = sg['especie']; ermo = s['ermo']; fer = sg['feridos'][:bichos_de(E, ermo).get(esp, 0)]; contra = sangue_contra(E, ermo, sg)
+    r = teste.rola(E, f"seguir o sangue de {_nome(esp, len(sg['feridos']))} {_em(E, ermo)}", 'Percepção', contra, mais=mao(p) + (K.RASTRO_ESCURO if sg['escuro'] else 0), quem=pid); L = [teste.diz(E, r)]
+    if r['passou'] and fer:
+        s = dict(s, sangue=None); _marca(E, pid, s, f"{p['nome']} segue o sangue")
+        return _encontro(E, pid, dict(especie=esp, n=len(fer), viu='caçador', margem=int(r['total'] - contra), escuro=sg['escuro'], feridos=fer, perseguiu=sg['vezes'] + 1), L)
+    s = dict(s, sangue=None); _marca(E, pid, s, f"{p['nome']} perde o rastro de sangue")
+    L.append(f"O sangue some no mato: {_nome(esp, len(sg['feridos']))} escapou. Restam {s['restam']} bloco(s): `caca.py segue` ou `caca.py volta`.")
+    return dict(fase='procura', texto='\n'.join(L))
+
+
+def segue(E, pid):
+    """segue a procura (ou a coleta) com os blocos que restam (depois de uma luta ganha, ou de o corpo ter pedido). Sem blocos, volta."""
+    p = _vivo(E, pid); s = saida(p)
+    if not s: sys.exit(f"{p['nome']} não tem saída aberta (`caca.py sair`)")
+    if s['fase'] == 'luta': R = acerta(E, pid); return R if R['fase'] != 'procura' else _anda(E, pid, [R['texto'].rsplit('\n', 1)[0]])
+    if s['fase'] == 'encontro': sys.exit('há um bicho à sua frente: `caca.py atacar`, `caca.py deixar` ou `caca.py fugir`')
+    return _anda(E, pid, [])
+
+
+def volta(E, pid, L=None, arrasta=False):
+    """volta para casa: os blocos de volta (mais os de quem se arrasta), e a saída fecha"""
+    p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"'); s = saida(p); L = list(L or [])
+    if not s: sys.exit(f"{p['nome']} não tem saída aberta")
+    if p['estado'] != 'vivo': return _morreu(E, pid, L)
+    if s['fase'] == 'luta':
+        R = acerta(E, pid)
+        if R['fase'] != 'procura': return R
+        L.append(R['texto'].rsplit('\n', 1)[0]); s = saida(E['gente'][pid])
+    if s['fase'] == 'encontro': sys.exit('há um bicho à sua frente: `caca.py atacar`, `caca.py deixar` ou `caca.py fugir` (fugir é o jeito de voltar agora)')
+    n = longe(E, s['ermo']) + (K.ARRASTA if arrasta else 0); of = OFICIO[s['quer']]
+    ato.passa(E, pid, n, EVENTO[s['quer']], esforco=K.ESFORCO['volta'], para=False, texto=f"{p['nome']} volta do ermo" + (' arrastando-se' if arrasta else ''),
+              mais=lambda i: [['pessoa', pid, 'marca.caca', 'poe', None]] if i == n - 1 else [])
+    p = E['gente'][pid]
+    if p['estado'] != 'vivo': return _morreu(E, pid, L)
+    if saida(p): _marca(E, pid, None, f"{p['nome']} chega do ermo")
+    carga = {b: q for b, q in p.get('carga', {}).items() if q}
+    L.append(f"{p['nome']} volta ({n} bloco(s)) e chega {_em(E, p['lugar'])}. Carrega: {_lista(carga)}" + (sobe(E, pid, of) or '.'))
+    return dict(fase='fim', texto='\n'.join(L))
+
+
+def _morreu(E, pid, L):
+    p = E['gente'][pid]
+    if saida(p): _marca(E, pid, None, f"{p['nome']} não volta do ermo")
+    return dict(fase='morto', texto='\n'.join(list(L) + [f"{p['nome']} morreu. A saída acaba aqui."]))
+
+
+def _agora(E, pid):
+    """a saída aberta, numa frase: onde está e o que falta decidir"""
+    p = E['gente'][pid]; s = saida(p)
+    if not s: return 'sem saída aberta'
+    o_que = (TB.ESPECIES[s['alvo']]['nome'] if s['alvo'] else 'o que aparecer') if s['quer'] == 'caça' else _bem(s['alvo'])
+    base = f"{'caçando' if s['quer'] == 'caça' else 'tirando'} {o_que} {_em(E, s['ermo'])} desde o Dia {s['dia']}; restam {s['restam']} bloco(s)"
+    if s['fase'] == 'encontro': return base + f"; À FRENTE: {_nome(s['encontro']['especie'], s['encontro']['n'])}: `caca.py atacar`, `deixar` ou `fugir`"
+    if s['fase'] == 'luta': return base + f"; EM LUTA com {_nome(s['encontro']['especie'], s['encontro']['n'])}: `caca.py luta \"{p['nome']}: atacar\"`"
+    return base + (f"; parou ({s['parou']})" if s.get('parou') else '') + (f"; há SANGUE de {_nome(s['sangue']['especie'], len(s['sangue']['feridos']))}: `caca.py sangue`" if s.get('sangue') else '') + ': `caca.py segue` ou `caca.py volta`'
+
+
+# ---------- a virada do dia ----------
+def virada(E):
+    """o dia virou: em cada lugar com teto de bichos ou de matéria, os bichos criam devagar (até o teto), o chefe pode nascer, e a matéria volta devagar.
+    Por dia, de cada espécie nascem contagem × cria × (1 − contagem ÷ teto). Com menos de dois, a espécie não cria: espera um casal de fora."""
+    for lid in list(E['lugares']):
+        B = bichos_de(E, lid); ef = []
+        for esp, teto in sorted(teto_de(E, lid).items()):
+            e = TB.ESPECIES[esp]; c = B.get(esp, 0)
+            if c >= teto: continue
+            if e['chefe']: dias = K.CHEFE_NASCE.get(e['cat'], 0); n = 1 if dias and estado.sorte(E, f'caca|{lid}|{esp}|chefe').random() < 1 / dias else 0
+            elif c >= K.CRIA_MIN: n = _inteiro(E, c * K.cria(e['cat']) * (1 - c / teto), f'caca|{lid}|{esp}|cria')
+            else: n = 2 if estado.sorte(E, f'caca|{lid}|{esp}|fora').random() < 1 / K.vem_de_fora(e['cat']) else 0
+            n = min(n, math.ceil(teto - c))
+            if n > 0: ef.append(['lugar', lid, f'bichos.{esp}', 'soma', n])
+        ha = coleta_de(E, lid)
+        for bem, teto in sorted(coleta_teto(E, lid).items()):
+            c = ha.get(bem, 0)
+            if c >= teto: continue
+            n = min(_inteiro(E, teto * K.COLETA[M.le_materia(bem)[0]]['volta'], f'caca|{lid}|{bem}|volta'), math.ceil(teto - c))
+            if n > 0: ef.append(['lugar', lid, f'coleta.{bem}', 'soma', n])
+        if ef: estado.aplica(E, 'ninhada', ef, onde=lid, texto=f"{E['lugares'][lid].get('nome', lid)} se refaz")
+
+
+# ---------- o gerador: povoar um ermo ----------
+def povoa(E, lid, habitat, perigo=1, vizinho=None, longe_=None, cheio=1.0, como=''):
+    """o gerador (ou o Mestre) povoa um lugar QUE JÁ EXISTE, por um evento "gera": o habitat, o perigo, o teto e a contagem de cada espécie que vive ali,
+    e o teto e o que há de cada matéria (tabelas_caca.fauna e materia). vizinho: o lugar de onde se sai para ele (os dois passam a ser vizinhos).
+    cheio: a fração do teto com que o ermo começa (1: cheio)."""
+    l = E['lugares'].get(lid) or sys.exit(f'não há o lugar "{lid}" (criar lugar é do gerador do mundo; este comando povoa um que já existe)')
+    if habitat not in K.HABITATS: sys.exit(f'habitat desconhecido: "{habitat}" (os que há: {", ".join(K.HABITATS)})')
+    if not isinstance(perigo, int) or not 1 <= perigo <= len(K.PERIGOS): sys.exit(f'o perigo vai de 1 a {len(K.PERIGOS)} ({", ".join(K.PERIGOS)})')
+    if e_ermo(E, lid): sys.exit(f"{l['nome']} já tem bichos ou matéria contados: não se povoa por cima")
+    if vizinho is not None and (vizinho not in E['lugares'] or vizinho == lid): sys.exit(f'não há o lugar vizinho "{vizinho}"')
+    fa = K.fauna(habitat, perigo); ma = K.materia(habitat, perigo); cheio = max(0.0, min(1.0, cheio))
+    ef = [['lugar', lid, 'habitat', 'poe', habitat], ['lugar', lid, 'perigo', 'poe', perigo], ['lugar', lid, 'teto', 'poe', dict(fa)], ['lugar', lid, 'bichos', 'poe', {e: round(t * cheio) for e, t in fa.items()}],
+          ['lugar', lid, 'coleta_teto', 'poe', dict(ma)], ['lugar', lid, 'coleta', 'poe', {b: round(t * cheio) for b, t in ma.items()}]]
+    if longe_ is not None:
+        if not isinstance(longe_, int) or longe_ < 1: sys.exit('os blocos de ida são 1 ou mais')
+        ef.append(['lugar', lid, 'longe', 'poe', longe_])
+    if vizinho is not None:
+        for a, b in ((lid, vizinho), (vizinho, lid)):
+            v = list(E['lugares'][a].get('vizinhos') or [])
+            if b not in v: ef.append(['lugar', a, 'vizinhos', 'poe', v + [b]])
+    txt = f"{l['nome']} é povoado: {habitat}, {K.PERIGOS[perigo - 1]}; {len(fa)} espécie(s), {len(ma)} matéria(s)" + (f': {como}' if como else '')
+    estado.aplica(E, 'gera', ef, onde=lid, texto=txt)
+    return txt + '.'
+
+
+# ---------- olhar ----------
+def _sabe(E, lid):
+    """o que todo mundo sabe de um ermo: a fartura de cada espécie (sem os chefes) e de cada matéria, em palavras. A contagem é do Mestre."""
+    B = bichos_de(E, lid); Tt = teto_de(E, lid); ha = coleta_de(E, lid)
+    bi = [f"{TB.ESPECIES[e]['nome']} ({K.fartura_diz(B.get(e, 0), Tt.get(e, 0))})" for e in sorted(set(B) | set(Tt), key=lambda e: (TB.ESPECIES[e]['cat'], e)) if not TB.ESPECIES[e]['chefe']]
+    ma = [f"{_bem(b)} ({K.fartura_diz(ha.get(b, 0), t)})" for b, t in coleta_teto(E, lid).items()]
+    return bi, ma
+
+
+def ver(E, pid):
+    """as linhas da caça para esta pessoa: os ermos vizinhos e o que se sabe deles, a mão dela, a saída aberta"""
+    p = E['gente'][pid]; aqui = p['lugar']; viz = ermos(E, aqui); L = []
+    if saida(p): L.append(f"**SAÍDA ABERTA:** {_agora(E, pid)}")
+    if not viz: return L + [f"{E['lugares'][aqui]['nome']} não tem ermo vizinho: daqui não se sai para caçar nem para coletar."]
+    for lid in viz:
+        l = E['lugares'][lid]; bi, ma = _sabe(E, lid); n = longe(E, lid)
+        L.append(f"**{l['nome']}**" + (f" ({l['habitat']}, {K.PERIGOS[l['perigo'] - 1]})" if l.get('habitat') in K.HABITATS and l.get('perigo') in (1, 2, 3) else '') + f", a {n} bloco(s) [`{lid}`]"
+                 + (' · caça: ' + ', '.join(bi) if bi else '') + (' · tira-se: ' + ', '.join(ma) if ma else ''))
+    tr = p.get('treino') or {}
+    L.append(f"A sua mão: caça {T.MAESTRIAS.get(mao(p), mao(p))} ({tr.get('caça', 0)} blocos), coleta {T.MAESTRIAS.get(mao(p, 'coleta'), mao(p, 'coleta'))} ({tr.get('coleta', 0)} blocos). "
+             f"O rastro: 2d20 + {p['atributos']['Percepção'] // 10 + mao(p) + corpo.pena(p)} contra {K.RASTRO_BASE} ou mais (o bicho arisco e o que rareou pedem mais; de noite, {K.RASTRO_ESCURO}).".replace('-', '−'))
+    L.append(f"`caca.py sair [ERMO] [alvo=ESPECIE] [blocos=N]` (ida, N de procura, volta; N de 1 a {K.PROCURA_MAX}, {K.PROCURA} se não disser) · `caca.py coletar BEM [ERMO] [blocos=N]`")
+    return L
+
+
+def conta(E, lid=None, pid=None):
+    """SÓ O MESTRE: a contagem de verdade de um ermo (ou dos vizinhos de quem pergunta), o número do rastro de cada espécie e a chance do acaso"""
+    lids = [lid] if lid else ermos(E, E['gente'][pid]['lugar']) if pid else [k for k in E['lugares'] if e_ermo(E, k)]; L = []
+    for k in lids:
+        if k not in E['lugares']: sys.exit(f'não há o lugar "{k}"')
+        B = bichos_de(E, k); Tt = teto_de(E, k); ha = coleta_de(E, k); ct = coleta_teto(E, k)
+        L.append(f"{E['lugares'][k]['nome']} [{k}] · acaso por bloco: {acaso(E, k):.1%} · rastro sem alvo: contra {rastro_contra(E, k)}")
+        L += [f"  {TB.ESPECIES[e]['nome']:<16} {B.get(e, 0):>3} de {Tt.get(e, 0):<4g} · rastro contra {rastro_contra(E, k, e)}" + (' · CHEFE' if TB.ESPECIES[e]['chefe'] else '') for e in sorted(set(B) | set(Tt), key=lambda e: (TB.ESPECIES[e]['cat'], e))]
+        L += [f"  {_bem(b):<16} {ha.get(b, 0):>3g} de {t:<4g} · coleta contra {coleta_contra(E, k, b)}" for b, t in ct.items()]
+        L += [f"  no chão: {it['nome']} ({i})" for i, it in E['itens']['itens'].items() if it.get('onde') == k and not it.get('dono')]
+    return L or ['não há ermo contado.']
+
+
+def mesa(E):
+    """as linhas da caça e da coleta para a MESA.md: os ermos vizinhos (o que se sabe), a saída aberta, as espécies (bichos.mesa), e a contagem, que é só do Mestre"""
+    pid = estado.eu(E)
+    if not pid: return []
+    p = E['gente'][pid]; viz = ermos(E, p['lugar'])
+    if not viz and not saida(p): return []
+    L = ['## A caça e a coleta'] + ['- ' + x for x in ver(E, pid)]
+    for lid in viz:
+        B = bichos_de(E, lid); Tt = teto_de(E, lid)
+        L.append(f"- SÓ O MESTRE, a contagem {_em(E, lid)}: " + ' · '.join(f"{TB.ESPECIES[e]['nome']} {B.get(e, 0)}/{Tt.get(e, 0):g}" for e in sorted(set(B) | set(Tt), key=lambda e: (TB.ESPECIES[e]['cat'], e))) + f" · acaso {acaso(E, lid):.0%} por bloco")
+    return L + [''] + list(bichos.mesa(E))
+
+
+# ---------- a linha de comando ----------
+def main(a=None):
+    a = sys.argv[1:] if a is None else list(a)
+    if not a: print(__doc__); return
+    op = dict(x.split('=', 1) for x in a if '=' in x and ':' not in x.split('=', 1)[0] and ' ' not in x.split('=', 1)[0]); pos = [x for x in a if not ('=' in x and ':' not in x.split('=', 1)[0] and ' ' not in x.split('=', 1)[0])]
+    cmds = ('ver', 'sair', 'atacar', 'luta', 'sangue', 'deixar', 'fugir', 'segue', 'volta', 'coletar', 'conta', 'povoa')
+    if not pos or pos[0] not in cmds or (pos[0] == 'coletar' and len(pos) < 2) or (pos[0] == 'povoa' and len(pos) < 3): print(__doc__); return
+    E = estado.carrega(); pid = op.get('quem') or estado.eu(E)
+    if pos[0] == 'conta': print('\n'.join(conta(E, pos[1] if len(pos) > 1 else None, pid if pid in E['gente'] else None))); return
+    if pos[0] == 'povoa':
+        num = lambda k, pad: pad if k not in op else int(op[k]) if op[k].isdigit() else sys.exit(f'"{k}" é um número (veio "{op[k]}")')
+        print(povoa(E, pos[1], pos[2], perigo=num('perigo', 1), vizinho=op.get('vizinho'), longe_=num('longe', None), como=pos[3] if len(pos) > 3 else '')); estado.grava(E); return
+    if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
+    if pos[0] == 'ver': print('\n'.join(ver(E, pid))); return
+    com = [c for c in op.get('com', '').split(',') if c]
+    if pos[0] == 'sair': R = sair(E, pid, pos[1] if len(pos) > 1 else None, alvo=op.get('alvo'), blocos=op.get('blocos'), com=com)
+    elif pos[0] == 'coletar': R = coletar(E, pid, pos[1], pos[2] if len(pos) > 2 else None, blocos=op.get('blocos'), com=com)
+    elif pos[0] == 'atacar': R = atacar(E, pid, inicio=op.get('inicio'), vantagens=[v for v in op.get('vantagem', '').split(',') if v])
+    elif pos[0] == 'luta': R = luta_roda(E, pid, pos[1:])
+    elif pos[0] == 'sangue': R = sangue(E, pid)
+    elif pos[0] == 'deixar': R = deixar(E, pid)
+    elif pos[0] == 'fugir': R = fugir(E, pid)
+    elif pos[0] == 'segue': R = segue(E, pid)
+    else: R = volta(E, pid)
+    print(R['texto']); estado.grava(E); p = E['gente'][pid]
+    print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
+
+
+if __name__ == '__main__':
+    main()

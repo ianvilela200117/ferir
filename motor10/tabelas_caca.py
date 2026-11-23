@@ -15,7 +15,7 @@ IDA = 1                     # blocos de ida até o ermo vizinho (o ermo pode diz
 ARRASTA = 1                 # quem perdeu a luta e não morreu volta arrastando-se: isto a mais de blocos na volta
 PROCURA = 2                 # os blocos de procura (ou de coleta) de uma saída, se ninguém disser outro número
 PROCURA_MAX = 6             # uma saída não passa disto: é ir e voltar, não é morar no mato
-ESFORCO = dict(ida='leve', volta='leve', procura='pesado', coleta='pesado')      # o que cada bloco pesa no corpo (tabelas_mundo.ESFORCO)
+ESFORCO = dict(ida='leve', volta='leve', procura='leve', coleta='pesado')        # o que cada bloco pesa no corpo (tabelas_mundo.ESFORCO): procurar rastro é andar devagar; o que cansa é a luta. Tirar minério e madeira é serviço pesado
 
 # ---------- o rastro ----------
 # rastrear: 2d20 + Percepção ÷ 10 + maestria de caça (+ a pena do corpo), UMA vez por bloco de procura, contra a FARTURA do ermo:
@@ -34,15 +34,27 @@ def arisco(especie):
 # passou no rastro: o caçador VIU PRIMEIRO. Se atacar, o bicho é surpreendido (perde o primeiro turno) e a luta começa longe ou perto, à escolha.
 POSICAO_CADA = 5            # cada tantos pontos de margem dão UMA vantagem de terreno, à escolha...
 POSICAO_MAX = 2             # ... até tantas
-VANTAGENS = dict(alto=('alto', 'A'), cerco=('sem_saida', 'B'))      # a vantagem → a chave do lugar da luta e o lado (o caçador no alto; o bicho sem saída)
+# a vantagem → a chave do lugar da luta (as que o luta.py roda: REGRAS 3.8) e o que ela vale ali
+VANTAGENS = dict(alto=('alto', 'A'), cerco=('sem_saida', 'B'), estreito=('largura', 1), cobertura=('cobertura', 'A'))
+VANTAGEM_DIZ = dict(alto='você no alto: +1 no golpe, +2 no tiro, e quem sobe anda 1 casa por ação',
+                    cerco='o bicho sem saída: não foge (e o encurralado luta até o fim)',
+                    estreito='uma passagem de um: o bando chega um de cada vez, e o bicho grande luta apertado',
+                    cobertura='você com cobertura: −4 no tiro e no sopro contra você')
 COLADO = 5                  # com esta margem ou mais, a luta pode começar colada (chegou ao alcance do braço sem ser visto)
 INICIOS_RASTRO = ('longe', 'perto')      # os começos de quem viu primeiro (mais 'colado', com a margem acima)
+INICIO_PADRAO = 'perto'     # o começo de quem ataca sem dizer de onde
 INICIO_ACASO = 'perto'      # o que apareceu sem ser procurado está perto, e viu o caçador: ninguém é surpreendido, e não há vantagem de terreno
 INICIO_ALCANCADO = 'colado' # quem fugiu e foi alcançado luta colado, e SURPREENDIDO (foi pego de costas)
 
+# ---------- a presa ferida: o rastro de sangue ----------
+# o bicho que fugiu com ferida aberta deixa sangue: quem ficou com o campo pode segui-lo NA HORA, sem gastar bloco. Quem passa acha o mesmo bicho, com o PV e as feridas
+# com que fugiu (e viu primeiro: a margem dá a posição, como em todo rastro). Quem falha, ou segue a procura, perdeu-o.
+SANGUE = 6                  # o rastro de sangue é isto mais fácil que o rastro da espécie...
+SANGUE_ESFRIA = 3           # ... e isto mais difícil a cada nova perseguição no mesmo bloco (a presa ganha distância)
+
 # ---------- o acaso: aparece o que não se procurava ----------
 # no bloco em que o rastro falhou (e em todo bloco de coleta), o mundo rola: a chance é a soma, sobre as espécies do ermo, de contagem × ousadia, dividida por isto
-ACASO_CADA = 400
+ACASO_CADA = 1200
 ACASO_MAX = 0.5             # nunca mais que isto por bloco
 # a ÍNDOLE de cada espécie: (ousadia: o quanto ela vem ao encontro de gente · investe: a chance de atacar quem não a atacou)
 INDOLE = {
