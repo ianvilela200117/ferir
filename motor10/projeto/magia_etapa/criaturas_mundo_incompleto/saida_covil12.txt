@@ -1,0 +1,23 @@
+PARTE 1 — o bando sozinho na Mata do Corvo (10 mundos, 365 dias; começa com 9 cabeças e 20 de prata no tesouro)
+  Dia  30: cabeças 12.5 (de 10 a 15) · corça 76.6 de 80 (de 72 a 79) · javali 38.9 de 40 · fome 0.0
+  Dia  60: cabeças 14.2 (de 12 a 15) · corça 75.9 de 80 (de 72 a 79) · javali 37.7 de 40 · fome 0.0
+  Dia 120: cabeças 15.7 (de 15 a 16) · corça 76.0 de 80 (de 74 a 79) · javali 38.2 de 40 · fome 0.0
+  Dia 240: cabeças 15.9 (de 15 a 16) · corça 77.5 de 80 (de 75 a 80) · javali 38.2 de 40 · fome 0.0
+  Dia 365: cabeças 16.0 (de 16 a 16) · corça 77.8 de 80 (de 72 a 80) · javali 38.0 de 40 · fome 0.0
+  no ano: comeu 44 corças e 22 javalis · roubou 41.3 vezes: 1264 de comida (a vila come 400 por dia) e 82.2 de prata (de 45 a 123)
+  o tesouro no fim do ano: 102 de prata (de 65 a 143) · a soma da prata do mundo (com o tesouro) fecha em 10 de 10 mundos
+
+PARTE 2 — o robô LIMPADOR (30 vidas de 120 dias): assalta de madrugada (o bando surpreendido) sempre que há 6 cabeças ou mais; ferido alguém, repousa 9 dias
+  alguém da casa morreu (ou a casa perdeu o campo) em 3 de 30 vidas · assaltos por vida: 4.0 · goblins que ficaram no campo por vida: 13.4
+  a PRIMEIRA limpeza rende 74 de prata (de 0 a 91) para os três · cada limpeza seguinte: 11 (de 2 a 59; 89 limpezas)
+  nas 27 vidas em que ninguém morreu: 109 de prata em 120 dias = 0.30 de prata por dia e por cabeça (0.08 diária)
+  em todas as vidas: 0.39 de prata por dia e por cabeça, até morrer alguém
+  a pior vida (a que mais rendeu): 134 de prata · o bando no fim: 3.4 cabeças · uma vida de exemplo (dia, cabeças antes, ficaram no campo, prata): [(2, 9, 3, 82), (11, 7, 4, 18), (56, 6, 2, 5), (67, 6, 2, 5), (100, 6, 3, 8), (118, 6, 3, 8)]
+
+PARTE 2 — o robô LIMPADOR (30 vidas de 120 dias): assalta de dia (ninguém surpreendido) sempre que há 6 cabeças ou mais; ferido alguém, repousa 9 dias
+  alguém da casa morreu (ou a casa perdeu o campo) em 25 de 30 vidas · assaltos por vida: 2.1 · goblins que ficaram no campo por vida: 6.4
+  a PRIMEIRA limpeza rende 52 de prata (de 0 a 95) para os três · cada limpeza seguinte: 9 (de 0 a 23; 32 limpezas)
+  nas 5 vidas em que ninguém morreu: 108 de prata em 120 dias = 0.30 de prata por dia e por cabeça (0.07 diária)
+  em todas as vidas: 1.87 de prata por dia e por cabeça, até morrer alguém
+  a pior vida (a que mais rendeu): 119 de prata · o bando no fim: 10.7 cabeças · uma vida de exemplo (dia, cabeças antes, ficaram no campo, prata): [(2, 9, 5, 88)]
+

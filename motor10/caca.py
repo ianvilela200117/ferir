@@ -6,8 +6,8 @@ Tudo por evento (`cacar`, `coletar`, `despojo`, `ninhada`); os números moram no
     A saída aberta fica escrita na pessoa (marca.caca) até a volta: sobrevive a fechar e abrir o estado. Quem vai junto (com=) fica marcado na saída de quem
     comanda, e o corpo dele passa os mesmos blocos. ENQUANTO A SAÍDA ESTÁ ABERTA, A PESSOA ESTÁ NO ERMO: os atos da vila (dormir, trabalhar, comprar, forjar)
     são recusados (estado.presente); só come da própria carga.
-    QUEM VAI JUNTO CUIDA DE SI: ao entrar na saída, o tempo que ele passou em casa é acertado antes de mais nada (estado.em_cena: 3 blocos ou mais fora de cena,
-    e a fome, o sono e o cansaço voltam a zero; a cada 6, uma noite de cura). Se mesmo assim não vai inteiro (ferida aberta, PV abaixo de 90%, o corpo cobrando),
+    QUEM VAI JUNTO CUIDA DE SI: ao entrar na saída, o tempo que ele passou em casa é acertado antes de mais nada (estado.em_cena: passados 3 blocos ou mais do último
+    bloco em cena, dois inteiros em casa, a fome, o sono e o cansaço voltam a zero; a cada 6, uma noite de cura). Se mesmo assim não vai inteiro (ferida aberta, PV abaixo de 90%, o corpo cobrando),
     a mesa diz. No ermo, quem vai junto e tem comida na carga come quando a fome cobra.
   O RASTRO: um teste por bloco de procura, 2d20 + Percepção ÷ 10 + maestria de caça (+ a pena do corpo), contra a FARTURA do ermo:
     20, mais o arisco da espécie, mais até 12 pelo que falta dela (contagem ÷ teto). De noite, −4.
@@ -95,7 +95,8 @@ def nao_inteiro(E, c):
     if q['pv'] < estado.pv_max(q) * M.INTEIRO_PV: L.append(f"PV {q['pv']}/{estado.pv_max(q)}")
     L += [f"ferida{' grave' if f['grave'] else ''} {NA_PARTE.get(f['parte'], f['parte'])} ({f['repouso']} de {M.FERIDA_DIAS[1 if f['grave'] else 0]} dias de repouso)" for f in q['feridas']]
     if corpo.pena(q) or corpo.folego_menos(q):
-        ha = corpo.fora_de_cena(E, c); L.append(corpo.diz(q) + f" (em casa há {_bl(ha)}: com {M.CASA_ZERA} ou mais, teria comido e dormido por conta própria)")
+        em_casa = max(0, corpo.fora_de_cena(E, c) - 1)       # os blocos inteiros em casa: o descanso conta do último bloco em cena, e esse não é de casa
+        L.append(corpo.diz(q) + f" (em casa há {_bl(em_casa)}: com {M.CASA_ZERA - 1} ou mais, teria comido e dormido por conta própria)")
     return f"{q['nome']}: " + ' · '.join(L) if L else None
 
 
@@ -367,7 +368,7 @@ def _bloco_caca(E, pid, L):
                       mais=lambda i: [['pessoa', pid, 'treino.caça', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
     p = E['gente'][pid]
     if p['estado'] != 'vivo': return None
-    merenda(E, s['com'], L)
+    merenda(E, s['com'], L); p = E['gente'][pid]
     if pq and ato_caiu(pq, p): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não há rastro a ler
     contra = rastro_contra(E, ermo, alvo); o_que = TB.ESPECIES[alvo]['nome'] if alvo else 'o que aparecer'; B = bichos_de(E, ermo); enc = None
     # ATRÁS DE CHEFE A ROLAGEM É OCULTA: o número do rastro muda com a contagem (há um, não há), e do chefe ninguém sabe de graça. À mesa sai só "rolagem oculta"; o número fica com o Mestre
@@ -436,7 +437,7 @@ def _bloco_coleta(E, pid, L):
                       mais=lambda i: [['pessoa', pid, 'treino.coleta', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
     p = E['gente'][pid]
     if p['estado'] != 'vivo': return None
-    merenda(E, s['com'], L)
+    merenda(E, s['com'], L); p = E['gente'][pid]
     if pq and ato_caiu(pq, p): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não tirou nada
     contra = coleta_contra(E, ermo, bem); ha = int(coleta_de(E, ermo).get(bem, 0))
     r = teste.rola(E, f"tirar {_bem(bem)} {_em(E, ermo)}", tab['atributo'], contra, mais=mao(p, 'coleta'), quem=pid); m = r['total'] - contra; L.append(teste.diz(E, r))

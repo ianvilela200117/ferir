@@ -1,0 +1,72 @@
+FICHAS (procuração)
+goblin 1 (nível 6, mão de Leigo) · PV 71/71 · fôlego 9 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  adaga Comum: acerto +2,5 · 1d4 × 1 (ponta), força × 1,18 · 1 de fôlego por golpe
+  Defesa 28 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · SEM PROTEÇÃO: cabeça
+
+goblin 2 (nível 6, mão de Leigo) · PV 71/71 · fôlego 9 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  arco Comum: acerto +2,5 · 1d8 × 1 (ponta), força × 1,18 · 1 de fôlego por golpe
+  Defesa 28 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · SEM PROTEÇÃO: cabeça
+
+o chefe goblin (nível 16, mão de Iniciante) · PV 114/114 · fôlego 11 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  espada Incomum: acerto +9 · 1d8 × 3 (corte), força × 1,18 · 1 de fôlego por golpe
+  Defesa 35 (com escudo Comum) · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · cabeça 0,7
+
+orc 1 (nível 22, mão de Iniciante) · PV 155/155 · fôlego 13 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  machado Incomum: acerto +9,25 · 1d10 × 3 (corte), força × 1,21 · 2 de fôlego por golpe
+  Defesa 33 · proteção: tronco 2,1 · braços 2,1 · pernas 2,1 · SEM PROTEÇÃO: cabeça
+
+o orc que manda (nível 30, mão de Treinado) · PV 161/161 · fôlego 13 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  machado Incomum: acerto +11,25 · 1d10 × 3 (corte), força × 1,21 · 2 de fôlego por golpe
+  Defesa 34 · proteção: tronco 2,1 · braços 2,1 · pernas 2,1 · cabeça 2,1
+
+Maro (nível 5, mão de Iniciante) · PV 141/141 · fôlego 13 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  espada Comum: acerto +5,25 · 1d8 × 1 (corte), força × 1,21 · 1 de fôlego por golpe
+  Defesa 30 (com escudo Comum) · proteção: tronco 1 · braços 1 · pernas 1 · SEM PROTEÇÃO: cabeça
+
+o caçador (nível 10, mão de Iniciante) · PV 126/126 · fôlego 12 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  arco Comum: acerto +5 · 1d8 × 1 (ponta), força × 1,21 · 1 de fôlego por golpe
+  Defesa 25,5 · proteção: tronco 1 · braços 1 · pernas 1 · cabeça 1
+
+Tomé (nível 30, mão de Treinado) · PV 161/161 · fôlego 13 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  lança Incomum: acerto +11,25 · 1d8 × 3 (ponta), força × 1,21 · 1 de fôlego por golpe
+  Defesa 31 (com escudo Comum) · proteção: tronco 1 · braços 1 · pernas 1 · cabeça 1
+
+Rute (nível 22, mão de Treinado) · PV 133/133 · fôlego 12 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  arco Incomum: acerto +11,25 · 1d8 × 3 (ponta), força × 1,24 · 1 de fôlego por golpe
+  Defesa 31 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · SEM PROTEÇÃO: cabeça
+
+== UM HOMEM SÓ contra a PATRULHA de goblins (campo aberto, perto, ninguém surpreendido) ==
+Maro (nível 5, sem elmo) contra 1 goblin(s) de adaga                       vence  97% · perde   3% · o 1º da casa: morto   2%, caído ou morto   3%, ferido  15% · alguém da casa morto   2% · do bando (1): ficam no campo 0.9, fogem 0.0, rendem-se 0.1 · 2 rodadas · conserto do 1º: 1.9 de prata
+Maro (nível 5, sem elmo) contra 2 goblin(s) de adaga                       vence  90% · perde  10% · o 1º da casa: morto   6%, caído ou morto  11%, ferido  33% · alguém da casa morto   6% · do bando (2): ficam no campo 1.4, fogem 0.3, rendem-se 0.1 · 3 rodadas · conserto do 1º: 2.2 de prata
+Maro (nível 5, sem elmo) contra 3 goblin(s) de adaga                       vence  59% · perde  41% · o 1º da casa: morto  25%, caído ou morto  41%, ferido  63% · alguém da casa morto  25% · do bando (3): ficam no campo 1.4, fogem 0.3, rendem-se 0.2 · 3 rodadas · conserto do 1º: 2.5 de prata
+Maro (nível 5, sem elmo) contra 4 goblin(s) de adaga                       vence  37% · perde  63% · o 1º da casa: morto  36%, caído ou morto  64%, ferido  75% · alguém da casa morto  36% · do bando (4): ficam no campo 1.1, fogem 0.5, rendem-se 0.2 · 3 rodadas · conserto do 1º: 2.6 de prata
+Maro (nível 5, sem elmo) contra 6 goblin(s) de adaga                       vence  10% · perde  90% · o 1º da casa: morto  58%, caído ou morto  90%, ferido  92% · alguém da casa morto  58% · do bando (6): ficam no campo 0.7, fogem 0.6, rendem-se 0.1 · 2 rodadas · conserto do 1º: 2.8 de prata
+Maro COM elmo contra 2 goblins                                             vence  92% · perde   8% · o 1º da casa: morto   6%, caído ou morto   9%, ferido  27% · alguém da casa morto   6% · do bando (2): ficam no campo 1.4, fogem 0.4, rendem-se 0.1 · 2 rodadas · conserto do 1º: 2.3 de prata
+Maro COM elmo contra 3 goblins                                             vence  62% · perde  38% · o 1º da casa: morto  25%, caído ou morto  39%, ferido  54% · alguém da casa morto  25% · do bando (3): ficam no campo 1.5, fogem 0.4, rendem-se 0.1 · 3 rodadas · conserto do 1º: 2.7 de prata
+Maro COM elmo contra 4 goblins                                             vence  35% · perde  65% · o 1º da casa: morto  42%, caído ou morto  65%, ferido  75% · alguém da casa morto  42% · do bando (4): ficam no campo 1.1, fogem 0.5, rendem-se 0.1 · 3 rodadas · conserto do 1º: 2.9 de prata
+o caçador do banco (nível 10, arco) contra 2 goblins, de longe, eles surpreendidos vence  98% · perde   2% · o 1º da casa: morto   2%, caído ou morto   2%, ferido   7% · alguém da casa morto   2% · do bando (2): ficam no campo 1.5, fogem 0.3, rendem-se 0.2 · 3 rodadas · conserto do 1º: 1.2 de prata
+o caçador do banco (nível 10, arco) contra 3 goblins, de longe, eles surpreendidos vence  86% · perde  14% · o 1º da casa: morto  10%, caído ou morto  14%, ferido  21% · alguém da casa morto  10% · do bando (3): ficam no campo 2.0, fogem 0.5, rendem-se 0.2 · 5 rodadas · conserto do 1º: 1.8 de prata
+o caçador do banco (nível 10, arco) contra 4 goblins, de longe, eles surpreendidos vence  69% · perde  31% · o 1º da casa: morto  17%, caído ou morto  31%, ferido  42% · alguém da casa morto  17% · do bando (4): ficam no campo 2.0, fogem 0.8, rendem-se 0.2 · 5 rodadas · conserto do 1º: 2.0 de prata
+Maro contra 3 goblins num corredor de um (estreito)                        vence  81% · perde  19% · o 1º da casa: morto  11%, caído ou morto  19%, ferido  43% · alguém da casa morto  11% · do bando (3): ficam no campo 1.9, fogem 0.5, rendem-se 0.2 · 5 rodadas · conserto do 1º: 2.4 de prata
+Maro contra 3 goblins (2 de arco), campo aberto                            vence  39% · perde  61% · o 1º da casa: morto  48%, caído ou morto  61%, ferido  79% · alguém da casa morto  48% · do bando (3): ficam no campo 1.0, fogem 0.3, rendem-se 0.1 · 3 rodadas · conserto do 1º: 2.5 de prata
+Maro contra 4 goblins num corredor de um (estreito)                        vence  77% · perde  23% · o 1º da casa: morto  15%, caído ou morto  23%, ferido  50% · alguém da casa morto  15% · do bando (4): ficam no campo 2.3, fogem 0.8, rendem-se 0.4 · 6 rodadas · conserto do 1º: 2.4 de prata
+Maro contra 4 goblins (2 de arco), campo aberto                            vence  17% · perde  83% · o 1º da casa: morto  63%, caído ou morto  83%, ferido  91% · alguém da casa morto  63% · do bando (4): ficam no campo 0.8, fogem 0.3, rendem-se 0.1 · 2 rodadas · conserto do 1º: 2.5 de prata
+== O GRUPO DA VILA contra o ACAMPAMENTO (o chefe e N goblins, 3 de arco) ==
+Maro, Tomé e Rute contra o chefe e 6 goblins                               vence  84% · perde  16% · o 1º da casa: morto  27%, caído ou morto  45%, ferido  59% · alguém da casa morto  32% · do bando (7): ficam no campo 2.9, fogem 3.0, rendem-se 0.1 · 2 rodadas · conserto do 1º: 2.2 de prata
+Maro, Tomé e Rute contra o chefe e 8 goblins                               vence  69% · perde  31% · o 1º da casa: morto  35%, caído ou morto  59%, ferido  72% · alguém da casa morto  40% · do bando (9): ficam no campo 3.2, fogem 3.5, rendem-se 0.2 · 2 rodadas · conserto do 1º: 2.3 de prata
+Maro, Tomé e Rute contra o chefe e 10 goblins                              vence  57% · perde  43% · o 1º da casa: morto  42%, caído ou morto  70%, ferido  79% · alguém da casa morto  51% · do bando (11): ficam no campo 3.4, fogem 4.1, rendem-se 0.2 · 2 rodadas · conserto do 1º: 2.4 de prata
+Maro, Tomé e Rute contra o chefe e 12 goblins                              vence  60% · perde  40% · o 1º da casa: morto  37%, caído ou morto  66%, ferido  78% · alguém da casa morto  49% · do bando (13): ficam no campo 3.7, fogem 5.1, rendem-se 0.2 · 2 rodadas · conserto do 1º: 2.4 de prata
+os mesmos, eles surpreendidos (de madrugada)                               vence  97% · perde   3% · o 1º da casa: morto   7%, caído ou morto  15%, ferido  25% · alguém da casa morto   8% · do bando (9): ficam no campo 3.5, fogem 5.1, rendem-se 0.2 · 2 rodadas · conserto do 1º: 1.5 de prata
+os mesmos, na boca da toca (corredor de 2)                                 vence  81% · perde  19% · o 1º da casa: morto  33%, caído ou morto  52%, ferido  69% · alguém da casa morto  36% · do bando (9): ficam no campo 3.7, fogem 3.7, rendem-se 0.2 · 2 rodadas · conserto do 1º: 2.3 de prata
+os mesmos, eles surpreendidos (de madrugada)                               vence  95% · perde   5% · o 1º da casa: morto   9%, caído ou morto  22%, ferido  35% · alguém da casa morto  11% · do bando (13): ficam no campo 4.4, fogem 7.8, rendem-se 0.2 · 2 rodadas · conserto do 1º: 1.8 de prata
+os mesmos, na boca da toca (corredor de 2)                                 vence  74% · perde  26% · o 1º da casa: morto  41%, caído ou morto  66%, ferido  76% · alguém da casa morto  45% · do bando (13): ficam no campo 5.1, fogem 5.5, rendem-se 0.3 · 3 rodadas · conserto do 1º: 2.5 de prata
+Maro, Tomé, Rute e Bento contra o chefe e 8 goblins                        vence  77% · perde  23% · o 1º da casa: morto  31%, caído ou morto  54%, ferido  65% · alguém da casa morto  38% · do bando (9): ficam no campo 3.3, fogem 3.8, rendem-se 0.2 · 2 rodadas · conserto do 1º: 2.3 de prata
+Maro, Tomé, Rute e Bento contra o chefe e 12 goblins                       vence  66% · perde  34% · o 1º da casa: morto  37%, caído ou morto  60%, ferido  70% · alguém da casa morto  49% · do bando (13): ficam no campo 3.7, fogem 5.6, rendem-se 0.3 · 2 rodadas · conserto do 1º: 2.3 de prata
+Maro, Tomé, Rute e Bento contra o chefe e 15 goblins                       vence  55% · perde  45% · o 1º da casa: morto  41%, caído ou morto  67%, ferido  78% · alguém da casa morto  56% · do bando (16): ficam no campo 4.0, fogem 6.4, rendem-se 0.3 · 2 rodadas · conserto do 1º: 2.3 de prata
+== ORCS (nível 22, machado e couro Incomuns; o que manda: nível 30) ==
+Maro contra 1 orc                                                          vence   3% · perde  97% · o 1º da casa: morto  83%, caído ou morto  97%, ferido  98% · alguém da casa morto  83% · do bando (1): ficam no campo 0.0, fogem 0.0, rendem-se 0.0 · 2 rodadas · conserto do 1º: 3.6 de prata
+um veterano (nível 30, conjunto Incomum) contra 1 orc                      vence  89% · perde  11% · o 1º da casa: morto   7%, caído ou morto  10%, ferido  30% · alguém da casa morto   7% · do bando (1): ficam no campo 0.8, fogem 0.0, rendem-se 0.1 · 2 rodadas · conserto do 1º: 12.6 de prata
+um veterano (nível 30, conjunto Incomum) contra 3 orcs                     vence  10% · perde  90% · o 1º da casa: morto  48%, caído ou morto  73%, ferido  89% · alguém da casa morto  48% · do bando (3): ficam no campo 0.3, fogem 0.1, rendem-se 0.1 · 2 rodadas · conserto do 1º: 15.1 de prata
+Maro, Tomé e Rute contra 3 orcs                                            vence  20% · perde  80% · o 1º da casa: morto  79%, caído ou morto  92%, ferido  95% · alguém da casa morto  87% · do bando (3): ficam no campo 0.4, fogem 0.2, rendem-se 0.1 · 2 rodadas · conserto do 1º: 3.1 de prata
+quatro veteranos (nível 30, Incomum) contra 5 orcs                         vence  86% · perde  14% · o 1º da casa: morto  16%, caído ou morto  38%, ferido  57% · alguém da casa morto  27% · do bando (5): ficam no campo 2.5, fogem 1.5, rendem-se 0.4 · 2 rodadas · conserto do 1º: 12.8 de prata
+quatro veteranos (nível 30, Incomum) contra 8 orcs                         vence  42% · perde  58% · o 1º da casa: morto  36%, caído ou morto  53%, ferido  71% · alguém da casa morto  66% · do bando (8): ficam no campo 2.2, fogem 1.7, rendem-se 0.3 · 3 rodadas · conserto do 1º: 13.6 de prata

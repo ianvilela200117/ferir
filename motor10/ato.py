@@ -72,7 +72,7 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
         if not ultimo: estado.aplica(E, tipo, ef + [['relogio', 1]], onde=lid, quem=[pid] + junto, texto=texto)
         else:                                               # o último bloco do dia: o bloco, e depois a virada (com o relógio)
             if ef: estado.aplica(E, tipo, ef, onde=lid, quem=[pid] + junto, texto=texto)
-            vir = [['pessoa', c, 'marca.cena', 'poe', estado.agora(E) + 1] for c in [pid] + junto if not E['gente'][c].get('jogador')]      # o corpo de quem não é o personagem foi mexido até o fim deste bloco (o gravador marcou o começo dele)
+            vir = []
             for c in todos: vir += corpo.virada(E, c)
             estado.aplica(E, 'virada', vir + [['relogio', 1]], onde=lid, quem=[pid] + junto, texto='o dia vira')
             _mundo_vira(E)

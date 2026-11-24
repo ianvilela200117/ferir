@@ -1,0 +1,44 @@
+Pedra Rasa: prata 2000 · alvo de peças {0: 11, 1: 4} · prateleira 15
+
+== A PATRULHA: 3 goblins de adaga (todos ficam no campo) ==
+
+  A (ingênuo: toda peça é de verdade e inteira)              peças:   16 de prata (5 vendidas, 1 sem comprador) · bens:   0 · tesouro:   0 · TOTAL   16 =   4.0 diárias; por cabeça (1):  16.0 de prata
+  B (ingênuo, mas tosca e gasta: 4/10 e 8/20)                peças:   13 de prata (4 vendidas, 2 sem comprador) · bens:   0 · tesouro:   0 · TOTAL   13 =   3.2 diárias; por cabeça (1):  13.0 de prata
+  C (PROPOSTA: o raso larga matéria; só o chefe larga peça)  peças:    0 de prata (0 vendidas, 0 sem comprador) · bens:   8 · tesouro:   0 · TOTAL    8 =   2.0 diárias; por cabeça (1):   8.0 de prata
+     a prata da loja no fim de C: 1992 de 2.000 · o que A deixou na loja: ver acima · os bens de C ao preço de base: 15
+
+== O ACAMPAMENTO, O QUE FICA NO CAMPO NUMA VITÓRIA (medido no mede_luta: de 13, ficam 4 a 5 e fogem 8): o chefe e 4 goblins; tesouro: 40 de prata, 12 de comida, 2 de sal, 1 de pano ==
+
+  A (ingênuo: toda peça é de verdade e inteira)              peças:   84 de prata (8 vendidas, 5 sem comprador) · bens:  14 · tesouro:  40 · TOTAL  138 =  34.5 diárias; por cabeça (3):  46.0 de prata
+  B (ingênuo, mas tosca e gasta: 4/10 e 8/20)                peças:   65 de prata (7 vendidas, 6 sem comprador) · bens:  14 · tesouro:  40 · TOTAL  119 =  29.8 diárias; por cabeça (3):  39.7 de prata
+  C (PROPOSTA: o raso larga matéria; só o chefe larga peça)  peças:   43 de prata (1 vendidas, 0 sem comprador) · bens:  26 · tesouro:  40 · TOTAL  109 =  27.2 diárias; por cabeça (3):  36.3 de prata
+     a prata da loja no fim de C: 1931 de 2.000 · o que A deixou na loja: ver acima · os bens de C ao preço de base: 43
+
+== O ACAMPAMENTO INTEIRO MORTO (o teto do que se tira: o chefe e 12 goblins, 3 de arco), o mesmo tesouro ==
+
+  A (ingênuo: toda peça é de verdade e inteira)              peças:   85 de prata (8 vendidas, 23 sem comprador) · bens:  14 · tesouro:  40 · TOTAL  139 =  34.8 diárias; por cabeça (3):  46.3 de prata
+  B (ingênuo, mas tosca e gasta: 4/10 e 8/20)                peças:   68 de prata (8 vendidas, 23 sem comprador) · bens:  14 · tesouro:  40 · TOTAL  122 =  30.5 diárias; por cabeça (3):  40.7 de prata
+  C (PROPOSTA: o raso larga matéria; só o chefe larga peça)  peças:   43 de prata (1 vendidas, 0 sem comprador) · bens:  49 · tesouro:  40 · TOTAL  132 =  33.0 diárias; por cabeça (3):  44.0 de prata
+     a prata da loja no fim de C: 1908 de 2.000 · o que A deixou na loja: ver acima · os bens de C ao preço de base: 83
+
+== O MESMO, com o tesouro de um bando VELHO e ladrão (120 de prata, 40 de comida, 6 de sal, 4 de pano, 2 de ferramenta) ==
+
+  A (ingênuo: toda peça é de verdade e inteira)              peças:   85 de prata (8 vendidas, 23 sem comprador) · bens:  64 · tesouro: 120 · TOTAL  269 =  67.2 diárias; por cabeça (3):  89.7 de prata
+  B (ingênuo, mas tosca e gasta: 4/10 e 8/20)                peças:   68 de prata (8 vendidas, 23 sem comprador) · bens:  64 · tesouro: 120 · TOTAL  252 =  63.0 diárias; por cabeça (3):  84.0 de prata
+  C (PROPOSTA: o raso larga matéria; só o chefe larga peça)  peças:   43 de prata (1 vendidas, 0 sem comprador) · bens:  99 · tesouro: 120 · TOTAL  262 =  65.5 diárias; por cabeça (3):  87.3 de prata
+     a prata da loja no fim de C: 1858 de 2.000 · o que A deixou na loja: ver acima · os bens de C ao preço de base: 162
+
+== ORCS: 5 no campo (o que manda e 4), numa VILA ==
+  A (ingênuo)                                                peças:  229 de prata (10 vendidas, 1 sem comprador) · bens:   0 · tesouro:   0 · TOTAL  229 =  57.2 diárias; por cabeça (4):  57.2 de prata
+      [('machado Incomum', 72), ('armadura de couro Incomum', 46), ('machado Incomum', 36), ('armadura de couro Incomum', 23), ('machado Incomum', 18), ('armadura de couro Incomum', 12), ('machado Incomum', 9), ('armadura de couro Incomum', 6), ('machado Incomum', 4), ('armadura de couro Incomum', 3)]
+  B (tosca e gasta: 8/20)                                    peças:  173 de prata (10 vendidas, 1 sem comprador) · bens:   0 · tesouro:   0 · TOTAL  173 =  43.2 diárias; por cabeça (4):  43.2 de prata
+  C (PROPOSTA)                                               peças:   89 de prata (2 vendidas, 0 sem comprador) · bens:  87 · tesouro:   0 · TOTAL  176 =  44.0 diárias; por cabeça (4):  44.0 de prata
+      os bens de C ao preço de base: 155 · as peças: [('machado Incomum', 54), ('armadura de couro Incomum', 35)]
+
+== COMPARAR COM O BICHO DE HOJE (o despojo inteiro, ao preço de base · na loja, a um Leigo) ==
+  1 × corça     base   11 · na loja    7 de prata
+  1 × javali    base   12 · na loja    7 de prata
+  4 × lobo      base  132 · na loja   74 de prata
+  1 × urso      base   70 · na loja   41 de prata
+  1 × pantera   base  184 · na loja  218 de prata
+  1 × trasgo    base  324 · na loja  305 de prata

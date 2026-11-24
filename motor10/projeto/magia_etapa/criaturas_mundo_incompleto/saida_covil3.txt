@@ -1,0 +1,12 @@
+PARTE 3 — o caçador do banco (nível 10, arco, conjunto Comum; o robô PRUDENTE do provas_caca), 120 vidas de 30 dias na borda da floresta, com um bando de N goblins na mata
+          (os goblins entram na contagem como espécie de rascunho, com dente e pelo Comuns no lugar da adaga e do couro: aparecem pelo acaso, em patrulha de 2 a 4,
+           investem em 60% das vezes, vêm atrás de quem corre em 80%, e comem a caça contada. A "ousadia" diz quanto a patrulha pesa no acaso do bloco.)
+  bando de  0 (ousadia 0; acaso de 2.8% por bloco): 2.01 diárias por dia · ferido ou morto em 4.6% das saídas · morrem 23 de 120 (19%) · lutas com goblins: 0 · a corça no Dia 30: 64 de 80
+  bando de  8 (ousadia 0.8; acaso de 3.2% por bloco): 2.01 diárias por dia · ferido ou morto em 4.5% das saídas · morrem 24 de 120 (20%) · lutas com goblins: 0 · a corça no Dia 30: 60 de 80
+  bando de 16 (ousadia 0.8; acaso de 3.6% por bloco): 1.92 diárias por dia · ferido ou morto em 4.4% das saídas · morrem 21 de 120 (18%) · lutas com goblins: 4 · a corça no Dia 30: 57 de 80
+  bando de  8 (ousadia 5; acaso de 5.5% por bloco): 1.96 diárias por dia · ferido ou morto em 4.7% das saídas · morrem 24 de 120 (20%) · lutas com goblins: 5 · a corça no Dia 30: 60 de 80
+  bando de 16 (ousadia 5; acaso de 8.1% por bloco): 1.83 diárias por dia · ferido ou morto em 6.0% das saídas · morrem 37 de 120 (31%) · lutas com goblins: 13 · a corça no Dia 30: 59 de 80
+
+real	3m9.603s
+user	2m19.844s
+sys	0m28.141s

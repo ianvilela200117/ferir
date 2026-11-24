@@ -30,8 +30,9 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     e a nota da saída de caça que diz que ela está naquela luta. O resto é recusado, de qualquer pessoa, com a frase que diz como acabar ou soltar a luta.
   O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos. Fora disso, não aconteceu.
   QUEM NÃO É O PERSONAGEM CUIDA DE SI QUANDO NÃO ESTÁ EM CENA (o descanso em casa). O gravador guarda, em cada pessoa que não é o personagem, o bloco em que o corpo dela
-    (a fome, o sono, o cansaço, o PV, as feridas) foi mexido pela última vez: `marca.cena`. Quando ela volta a agir (um ato com quem=, entrar numa saída ou numa luta),
-    `em_cena()` acerta ANTES, num evento "casa", o tempo que passou: 3 blocos ou mais, o corpo volta a zero; a cada 6, uma noite de cura e um dia de repouso (corpo.casa).
+    (a fome, o sono, o cansaço, o PV, as feridas) foi mexido pela última vez: `marca.cena` (o último bloco em que esteve em cena). Quando ela volta a agir (um ato com quem=,
+    entrar numa saída ou numa luta), `em_cena()` acerta ANTES, num evento "casa", o tempo que passou desde esse bloco: 3 blocos ou mais, o corpo volta a zero; a cada 6, uma noite
+    de cura e um dia de repouso (corpo.casa). Quem volta do ermo no bloco da noite e é chamado às 8h passou 3 blocos (dois inteiros em casa): descansou.
     O personagem nunca ganha descanso de graça. Save de antes desta regra: quem não tem a marca conta como descansado, sem noite de cura.
 
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
@@ -503,11 +504,11 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
         except (TypeError, KeyError, IndexError, AttributeError, ValueError) as x: e = _erro(ef, f'efeito malformado ({type(x).__name__})')
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {e}')
     if all(ensaio[k] == E[k] for k in ARQS): return None
-    for pid, p in ensaio['gente'].items():                  # quem não é o personagem guarda o bloco em que o corpo foi mexido pela última vez: o descanso em casa conta daí (em_cena)
-        a = E['gente'].get(pid)
+    for pid, p in ensaio['gente'].items() if tipo != 'casa' else ():       # quem não é o personagem guarda O BLOCO EM QUE o corpo foi mexido pela última vez (o bloco deste evento: o relógio de antes de ele andar): o descanso em casa conta daí (em_cena).
+        a = E['gente'].get(pid)                             # O próprio acerto do descanso (evento "casa") não é "estar em cena": ele não marca o bloco (as noites já contadas, o corpo.casa desconta à parte)
         if isinstance(a, dict) and isinstance(p, dict) and not p.get('jogador') and p.get('estado') == 'vivo' and any(a.get(k) != p.get(k) for k in ('corpo', 'pv', 'feridas')):
             if not isinstance(p.get('marca'), dict): p['marca'] = {}
-            p['marca']['cena'] = agora(ensaio)
+            p['marca']['cena'] = agora(E)
     ev = dict(id=E['relogio']['eventos'] + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], tipo=tipo, onde=onde, quem=list(quem), efeitos=[list(x) for x in efeitos], texto=texto)
     for k in ARQS: E[k] = ensaio[k]
     E['relogio']['eventos'] = ev['id']; E['_novos'].append(ev)

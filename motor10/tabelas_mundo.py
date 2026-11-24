@@ -38,8 +38,9 @@ PESADOS_SEM_REPOUSO = 2     # dia com tantos blocos pesados não conta para sara
 LUTA_CANSA = 2              # uma luta cansa isto
 
 # ---------- o descanso em casa (quem NÃO é o personagem cuida de si quando não está em cena; o personagem nunca descansa de graça) ----------
-CASA_ZERA = 3               # fora de cena por tantos blocos ou mais: a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria); com menos, nada muda
-CASA_NOITE = 6              # a cada tantos blocos inteiros fora de cena (um dia): uma noite dormida de cura (CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas
+CASA_ZERA = 3               # passados tantos blocos ou mais do último bloco em cena (o bloco em que o corpo foi mexido pela última vez): a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria); com menos, nada muda.
+                            # Quem volta no bloco da noite e é chamado às 8h passou 3: são dois blocos inteiros em casa
+CASA_NOITE = 6              # a cada tantos blocos inteiros passados (um dia): uma noite dormida de cura (CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas
 INTEIRO_PV = 0.9            # ao abrir uma saída, a mesa diz o estado de quem vai junto se ele não está inteiro: PV abaixo desta fração do máximo, ferida aberta, ou o corpo cobrando
 
 # ---------- viver (em prata) ----------

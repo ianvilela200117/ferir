@@ -1,6 +1,6 @@
 # MOTOR 10 — O PROJETO DO RESTO
 
-O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 79 de 79 no `provas.py`). As etapas 1 e 2 do mundo estão feitas, e o `provas_mundo.py` passa inteiro (87 de 87). Duas metas da etapa 2 foram fechadas por decisão do jogador (seção 12, 9 e 10): a Lendária é difícil de propósito, e a loja paga 40% pelas peças.
+O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 80 de 80 no `provas.py`). As etapas 1 e 2 do mundo estão feitas, e o `provas_mundo.py` passa inteiro (98 de 98). Duas metas da etapa 2 foram fechadas por decisão do jogador (seção 12, 9 e 10): a Lendária é difícil de propósito, e a loja paga 40% pelas peças.
 Este é o plano do que falta até o Dia 1 de um **mundo novo, do zero**: o mundo vivo, a magia, os bichos, o ofício e o turno.
 Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números e as etapas.
 **As decisões do jogador já estão tomadas (seção 12) e o plano abaixo já as segue.**
@@ -129,7 +129,7 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | Etapa | O que entra | O que se joga |
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
-| 2. Viver de um ofício **(FEITA: 79 de 79 no `provas.py`, com os bichos; 87 de 87 no `provas_mundo.py`: o alicerce 25 de 25, o mercado 17 de 17, o ofício 15 de 15, a caça e a coleta 30 de 30; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
+| 2. Viver de um ofício **(FEITA: 80 de 80 no `provas.py`, com os bichos; 98 de 98 no `provas_mundo.py`; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
 | 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia | focos, feitiços, encantos de peça | o mago, o curandeiro, a peça encantada |
 | 5. A corrida | rivais, guildas, masmorras, ranking, torneio, leilão, a janela do mundo | disputar |

@@ -5,7 +5,7 @@ Este script não grava nada: ele só diz QUAIS EFEITOS um bloco de tempo tem no 
   a pena do corpo (a PIOR das três, não somam) entra em todo teste, no acerto e na Defesa;
   cada 3 pontos de cansaço tiram 1 do fôlego máximo;
   a ferida sara com dias de REPOUSO: não conta o dia de dois blocos pesados, nem o dia em que a pessoa lutou, nem o dia em que passou um bloco ou mais numa saída ao ermo;
-  O DESCANSO EM CASA (`casa`): quem NÃO é o personagem cuida de si quando não está em cena. Fora de cena por 3 blocos ou mais, a fome, o sono e o cansaço voltam a zero;
+  O DESCANSO EM CASA (`casa`): quem NÃO é o personagem cuida de si quando não está em cena. Passados 3 blocos ou mais do último bloco em cena, a fome, o sono e o cansaço voltam a zero;
   a cada 6 blocos inteiros, uma noite de cura e um dia de repouso nas feridas. O personagem nunca descansa de graça.
 
 Uso (para olhar): python3 corpo.py ver [ID]      o corpo de alguém (sem ID: o do personagem)
@@ -98,8 +98,9 @@ def virada(E, pid):
 
 
 def fora_de_cena(E, pid):
-    """há quantos blocos o corpo desta pessoa não é mexido (o gravador guarda o bloco em marca.cena, de quem não é o personagem). Quem nunca teve o corpo mexido, e a gente
-    de um save de antes de a marca existir, conta como tendo descansado: tantos blocos quantos zeram o corpo, e nenhuma noite de cura que o motor não viu passar."""
+    """quantos blocos passaram desde O BLOCO EM QUE o corpo desta pessoa foi mexido pela última vez (o último bloco em que esteve em cena: o gravador o guarda em marca.cena,
+    de quem não é o personagem). Quem volta do ermo no bloco da noite e é chamado às 8h passou 3 (dois blocos inteiros em casa). Quem nunca teve o corpo mexido, e a gente de um
+    save de antes de a marca existir, conta como tendo descansado: tantos blocos quantos zeram o corpo, e nenhuma noite de cura que o motor não viu passar."""
     import estado
     visto = (E['gente'][pid].get('marca') or {}).get('cena'); t = estado.agora(E)
     return t - visto if isinstance(visto, int) and not isinstance(visto, bool) and 0 <= visto <= t else M.CASA_ZERA
@@ -107,15 +108,17 @@ def fora_de_cena(E, pid):
 
 def casa(E, pid):
     """O DESCANSO EM CASA: os efeitos do tempo que alguém que NÃO é o personagem passou fora de cena (quem aplica é o estado.em_cena, num evento só, quando a pessoa volta a agir).
-    3 blocos ou mais: a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria). A cada 6 blocos inteiros (um dia): uma noite dormida de cura
+    Conta-se do último bloco em que ela esteve em cena. 3 blocos ou mais: a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria). A cada 6 blocos inteiros (um dia): uma noite dormida de cura
     (a mesma do personagem: CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas. Menos de 3 blocos: nada muda (ela ainda carrega o que a última saída deixou)."""
     import estado
     p = E['gente'][pid]; passou = fora_de_cena(E, pid)
     if p.get('jogador') or p['estado'] != 'vivo' or passou < M.CASA_ZERA: return []
-    ef = [['pessoa', pid, m, 'soma', -p['corpo'][m]] for m in M.MEDIDORES if p['corpo'][m] > 0]; noites = passou // M.CASA_NOITE
-    if noites and p['pv'] < estado.pv_max(p): ef.append(['pessoa', pid, 'pv', 'soma', noites * M.CURA_DIA * max(1, int(estado.pv_max(p) * M.CURA_BLOCO))])
-    if noites and p['feridas']: ef += _repouso(p, pid, noites)
-    return ef
+    ef = [['pessoa', pid, m, 'soma', -p['corpo'][m]] for m in M.MEDIDORES if p['corpo'][m] > 0]; noites = passou // M.CASA_NOITE; cura = []
+    if noites and p['pv'] < estado.pv_max(p): cura.append(['pessoa', pid, 'pv', 'soma', noites * M.CURA_DIA * max(1, int(estado.pv_max(p) * M.CURA_BLOCO))])
+    if noites and p['feridas']: cura += _repouso(p, pid, noites)
+    visto = (p.get('marca') or {}).get('cena')
+    if cura and isinstance(visto, int): cura.append(['pessoa', pid, 'marca.cena', 'poe', visto + noites * M.CASA_NOITE])      # as noites contadas não se contam de novo; o que sobra do dia segue contando para a próxima
+    return ef + cura
 
 
 if __name__ == '__main__':

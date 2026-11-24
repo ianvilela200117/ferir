@@ -1,0 +1,9 @@
+PARTE 1 — o bando sozinho na Mata do Corvo (10 mundos, 365 dias; começa com 9 cabeças e 20 de prata no tesouro)
+  Dia  30: cabeças 12.1 (de 10 a 15) · corça 74.0 de 80 (de 71 a 78) · javali 36.6 de 40 · fome 0.0
+  Dia  60: cabeças 14.2 (de 13 a 16) · corça 71.5 de 80 (de 68 a 75) · javali 34.1 de 40 · fome 0.2
+  Dia 120: cabeças 15.5 (de 15 a 16) · corça 68.2 de 80 (de 61 a 76) · javali 32.3 de 40 · fome 0.2
+  Dia 240: cabeças 16.0 (de 16 a 16) · corça 68.7 de 80 (de 62 a 73) · javali 32.5 de 40 · fome 0.2
+  Dia 365: cabeças 16.0 (de 16 a 16) · corça 66.0 de 80 (de 61 a 71) · javali 31.9 de 40 · fome 0.2
+  no ano: comeu 152 corças e 82 javalis · roubou 0.3 vezes: 14 de comida (a vila come 400 por dia) e 0.0 de prata (de 0 a 0)
+  o tesouro no fim do ano: 20 de prata (de 20 a 20) · a soma da prata do mundo (com o tesouro) fecha em 10 de 10 mundos
+

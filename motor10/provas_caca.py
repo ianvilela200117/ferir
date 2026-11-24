@@ -1130,50 +1130,54 @@ def _dia_com_ela(E, blocos, dorme, L):
 
 
 def _quem_vai_junto(n):
-    """QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (passou 3 blocos em casa); a saída logo em seguida,
-    ou com 2 blocos em casa, não zera, e a mesa avisa que ela não vai inteira; a MESA traz o estado de quem vai junto enquanto a saída está aberta. Nenhum dado decide."""
-    corpo_de = lambda E: dict(E['gente']['bera']['corpo']); falhas = []
+    """QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (descansou em casa); a saída logo em seguida, ou com um
+    bloco só em casa (menos de 3 blocos desde o último bloco em cena), não zera, e a mesa avisa que ela não vai inteira; com dois blocos inteiros em casa (3 desde o último em cena),
+    zera; a MESA traz o estado de quem vai junto enquanto a saída está aberta. Nenhum dado decide."""
+    corpo_de = lambda E: (E['gente']['bera']['corpo']['sono'], E['gente']['bera']['corpo']['cansaco']); falhas = []
     with rascunho():
         E = mundo(81, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); L = []
         _dia_com_ela(E, 1, 3, L); a = corpo_de(E)                     # a saída A (3 blocos), e 3 blocos em casa: fecha um dia
-        _dia_com_ela(E, 1, 0, L); b = corpo_de(E)                     # a saída B, um dia depois: ela começa de corpo zerado, e acaba como acabou a primeira
+        _dia_com_ela(E, 1, 0, L); b = corpo_de(E)                     # a saída B, UM DIA DEPOIS: ela começa de corpo zerado, e acaba como acabou a primeira
         casa = [e for e in E['_novos'] if e['tipo'] == 'casa']
-        _dia_com_ela(E, 1, 2, L); c = corpo_de(E)                     # a saída C, LOGO EM SEGUIDA (nenhum bloco em casa): não zera; depois, 2 blocos em casa
-        _dia_com_ela(E, 1, 0, L); d = corpo_de(E)                     # a saída D, com 2 blocos em casa (menos de 3): não zera
-        if not (a == b and a['sono'] == 3 and a['cansaco'] == 4): falhas.append(f'um dia depois ela não começou de corpo zerado: {a} e depois {b}')
-        if not (len(casa) == 1 and casa[0]['texto'] == 'Bera descansou em casa' and casa[0]['quem'] == ['bera']): falhas.append(f'o descanso em casa não é um evento só: {[e["texto"] for e in casa]}')
-        if 'ATENÇÃO' in L[0] or 'ATENÇÃO' in L[1]: falhas.append('a mesa avisou de quem ia inteira')
-        if not (c['sono'] == 6 and c['cansaco'] == 8 and 'ATENÇÃO, quem vai junto não vai inteiro: Bera:' in L[2] and 'em casa há 0 blocos' in L[2]): falhas.append(f'a saída logo em seguida zerou, ou a mesa não avisou: {c}')
-        if not (d['sono'] == 9 and d['cansaco'] == 10 and 'em casa há 2 blocos: com 3 ou mais, teria comido e dormido' in L[3] and 'pena −2' in L[3]): falhas.append(f'com 2 blocos em casa zerou, ou a mesa não avisou: {d}')
+        _dia_com_ela(E, 1, 1, L); c = corpo_de(E)                     # a saída C, LOGO EM SEGUIDA (nenhum bloco em casa: passou 1 bloco do último em cena): não zera; depois, 1 bloco em casa
+        _dia_com_ela(E, 1, 2, L); d = corpo_de(E)                     # a saída D, com UM bloco em casa (passaram 2): não zera; depois, 2 blocos em casa
+        _dia_com_ela(E, 1, 0, L); e5 = corpo_de(E)                    # a saída E, com DOIS blocos inteiros em casa (passaram 3): zera
+        if not (a == b == (3, 4)): falhas.append(f'um dia depois ela não começou de corpo zerado: {a} e depois {b}')
+        if not (len(casa) == 1 and casa[0]['texto'] == 'Bera descansou em casa' and casa[0]['quem'] == ['bera']): falhas.append(f'o descanso em casa não é um evento só: {[x["texto"] for x in casa]}')
+        if any('ATENÇÃO' in L[k] for k in (0, 1, 4)): falhas.append('a mesa avisou de quem ia inteira')
+        if not (c == (6, 8) and 'ATENÇÃO, quem vai junto não vai inteiro: Bera:' in L[2] and 'em casa há 0 blocos: com 2 ou mais, teria comido e dormido' in L[2]): falhas.append(f'a saída logo em seguida zerou, ou a mesa não avisou: {c}')
+        if not (d == (9, 10) and 'em casa há 1 bloco: com 2 ou mais, teria comido e dormido' in L[3] and 'pena −2' in L[3]): falhas.append(f'com 1 bloco em casa zerou, ou a mesa não avisou: {d}')
+        if e5 != (3, 4): falhas.append(f'com 2 blocos inteiros em casa não zerou: {e5}')
         if estado.valida(E): falhas.append('o estado quebrou')
     with rascunho():                                                # com a saída aberta, a MESA traz o estado de quem vai junto
         E = mundo(82, fauna={'corça': 80}, prata=60, mao=8, atributos={'Percepção': 150}); cacador(E, 'bera', nome='Bera'); estado.grava(E)
         R = ate_encontrar(E, 'eu', com=['bera']); mesa = turno.mesa(E) if R else ''
         if 'Vai junto: Bera (PV ' not in mesa: falhas.append('a MESA não traz o estado de quem vai junto')
-    return ('QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (descansou em casa); a saída logo em seguida, ou com menos de 3 blocos em casa, não zera, e a mesa avisa que ela não vai inteira; a MESA traz o estado de quem vai junto',
-            (f"quatro saídas de 3 blocos com a Bera: depois da primeira, sono {a['sono']} e cansaço {a['cansaco']}; a segunda, com 3 blocos em casa (um dia depois), acaba igual (um evento só: «Bera descansou em casa»); a terceira, logo em seguida, acaba com sono {c['sono']} e cansaço {c['cansaco']}, "
-             f"e a mesa avisou («{next((x for x in L[2].splitlines() if 'ATENÇÃO' in x), '')[:96]}...»); a quarta, com 2 blocos em casa, abre com o aviso (ela vai com sono 6: pena −2) e acaba com sono {d['sono']} e cansaço {d['cansaco']}; com a saída aberta, a MESA diz o estado dela: {sn(not any('MESA' in f for f in falhas))}") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
+    return ('QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (descansou em casa); a saída logo em seguida, ou com um bloco só em casa (menos de 3 blocos desde o último em cena), não zera, e a mesa avisa que ela não vai inteira; a MESA traz o estado de quem vai junto',
+            (f"cinco saídas de 3 blocos com a Bera: depois da primeira, sono {a[0]} e cansaço {a[1]}; a segunda, um dia depois, acaba igual (um evento só: «Bera descansou em casa»); a terceira, logo em seguida, acaba com sono {c[0]} e cansaço {c[1]}, "
+             f"e a mesa avisou («{next((x for x in L[2].splitlines() if 'ATENÇÃO' in x), '')[:96]}...»); a quarta, com 1 bloco em casa, abre com o aviso (ela vai com sono 6: pena −2) e acaba com sono {d[0]} e cansaço {d[1]}; "
+             f"a quinta, com 2 blocos inteiros em casa, volta a começar do zero (acaba com sono {e5[0]} e cansaço {e5[1]}); com a saída aberta, a MESA diz o estado dela: {sn(not any('MESA' in f for f in falhas))}") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
 
 
 def _cinco_saidas(n):
-    """CINCO SAÍDAS EM CINCO DIAS com a mesma companheira não matam ninguém de fome, e a prata do mundo fecha. No ciclo de 3 blocos fora e 3 em casa ela começa toda saída de
-    corpo zerado. No ciclo de 4 blocos fora e 2 em casa (menos de 3: não há descanso) ela não descansa: come da própria carga enquanto tem, a mesa avisa a cada saída, e ninguém morre."""
+    """CINCO SAÍDAS EM CINCO DIAS com a mesma companheira não matam ninguém de fome, e a prata do mundo fecha. O ciclo é o de todo dia (o que matava): a saída de 4 blocos às 8h,
+    a volta à meia-noite, comer e dormir até as 8h. A companheira vai no pior estado: PV 1 e nenhuma comida. E, no ermo, quem vai junto e tem comida na carga come quando a fome cobra."""
     falhas = []; vivos = lambda E: all(E['gente'][q]['estado'] == 'vivo' for q in ('eu', 'bera'))
-    with rascunho():                                                # 3 fora, 3 em casa
-        E = mundo(83, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); p0 = prata(E); L = []; fins = []
-        for _ in range(5): _dia_com_ela(E, 1, 3, L); fins.append(dict(E['gente']['bera']['corpo']))
-        tres = (vivos(E), prata(E) == p0, all(f == fins[0] for f in fins), not any('ATENÇÃO' in x for x in L), E['relogio']['dia'])
-        if not all(tres[:4]) or estado.valida(E): falhas.append(f'no ciclo de 3 e 3: vivos {tres[0]}, a prata fecha {tres[1]}, começa sempre do zero {tres[2]}, sem aviso {tres[3]}')
-    with rascunho():                                                # 4 fora (a saída atravessa a meia-noite), 2 em casa: ela nunca tem 3 blocos
-        E = mundo(84, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); estado.aplica(E, 'mestre', [['pessoa', 'bera', 'carga.comida', 'soma', 2]], texto='a merenda da Bera')
-        estado.aplica(E, 'tempo', [['relogio', 4]], texto='até o entardecer'); p0 = prata(E); L = []
-        for _ in range(5): _dia_com_ela(E, 2, 2, L)
-        b = E['gente']['bera']; comeu = sum(x.count('Bera come da própria carga') for x in L); avisos = sum('ATENÇÃO' in x for x in L)
-        quatro = (vivos(E), prata(E) == p0, comeu, avisos, dict(b['corpo']), b['pv'], estado.pv_max(b))
-        if not (quatro[0] and quatro[1] and comeu == 2 and not b.get('carga') and avisos == 4) or estado.valida(E): falhas.append(f'no ciclo de 4 e 2: vivos {quatro[0]}, a prata fecha {quatro[1]}, comeu {comeu} vez(es), avisos {avisos}')
+    with rascunho():                                                # o ciclo de todo dia: 4 blocos fora (a volta atravessa a meia-noite), 2 em casa
+        E = mundo(83, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); estado.aplica(E, 'mestre', [['pessoa', 'bera', 'pv', 'soma', 1 - E['gente']['bera']['pv']]], texto='a Bera por um fio')
+        estado.aplica(E, 'tempo', [['relogio', 2]], texto='até as 8h'); p0 = prata(E); L = []; fins = []
+        for _ in range(5): _dia_com_ela(E, 2, 2, L); fins.append(dict(E['gente']['bera']['corpo']))
+        b = E['gente']['bera']; cinco = (vivos(E), prata(E) == p0, all(f == fins[0] for f in fins), all('ATENÇÃO' in x and 'Bera: PV 1/' in x and 'pena' not in x and 'fôlego máximo' not in x for x in L), b['pv'], dict(b['corpo']), E['relogio']['dia'])
+        if not all(cinco[:4]) or E['relogio']['dia'] != 6 or estado.valida(E): falhas.append(f'no ciclo de todo dia: vivos {cinco[0]}, a prata fecha {cinco[1]}, começa sempre do zero {cinco[2]}, a mesa avisa só do PV {cinco[3]}')
+    with rascunho():                                                # a merenda: duas saídas com um bloco só em casa entre elas (ela não descansa), e 1 de comida na carga dela
+        E = mundo(84, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); estado.aplica(E, 'mestre', [['pessoa', 'bera', 'carga.comida', 'soma', 1]], texto='a merenda da Bera'); L = []
+        _dia_com_ela(E, 2, 1, L); antes = E['gente']['bera']['corpo']['fome']; _dia_com_ela(E, 2, 0, L); b = E['gente']['bera']
+        comeu = (L[0].count('Bera come da própria carga'), L[1].count('Bera come da própria carga'), b['corpo']['fome'], dict(b.get('carga') or {}), antes)
+        if not (comeu[:2] == (0, 1) and antes < M.LIMIARES['fome'][0] and b['corpo']['fome'] < M.LIMIARES['fome'][0] and not b.get('carga') and 'ATENÇÃO' in L[1] and vivos(E)) or estado.valida(E): falhas.append(f'a merenda: {comeu}')
     return ('CINCO SAÍDAS EM CINCO DIAS com a mesma companheira não matam ninguém de fome, e a prata do mundo fecha; no ermo, quem vai junto e tem comida na carga come quando a fome cobra',
-            (f"no ciclo de 3 blocos fora e 3 em casa: os dois vivos, a Bera começa as cinco saídas de corpo zerado, nenhum aviso, a prata fecha; no ciclo de 4 blocos fora e 2 em casa (menos de 3: ela NÃO descansa): os dois vivos no fim do quinto dia, "
-             f"a Bera comeu da própria carga as {quatro[2]} refeições que levava, a mesa avisou em {quatro[3]} das 5 saídas, e ela acaba com fome {quatro[4]['fome']}, sono {quatro[4]['sono']}, cansaço {quatro[4]['cansaco']} e PV {quatro[5]}/{quatro[6]}; a prata fecha") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
+            (f"o ciclo de todo dia (a saída de 4 blocos às 8h, a volta à meia-noite, comer e dormir até as 8h), com a Bera a PV 1 e sem comida: no Dia 6 os dois estão vivos (ela com PV {cinco[4]}: quem sai todo dia não ganha a noite de cura), "
+             f"ela começou as cinco saídas de corpo zerado (acaba cada uma com fome {cinco[5]['fome']}, sono {cinco[5]['sono']}, cansaço {cinco[5]['cansaco']}; a mesa avisou, a cada saída, só do PV dela), e a prata fecha; "
+             f"com 1 de comida na carga e um bloco só em casa entre duas saídas, a fome dela chega a {M.LIMIARES['fome'][0]} no ermo e ela come sozinha (uma linha na mesa; fica com fome {comeu[2]} e sem comida)") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
 
 
 # ---------- as metas da coleta: K1 a K4 ----------
