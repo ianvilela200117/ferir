@@ -1,29 +1,29 @@
 {
- "n": 3,
+ "n": 4,
  "aberto": {
   "dia": 2,
-  "bloco": 1
+  "bloco": 3
  },
- "evento0": 36,
+ "evento0": 42,
  "dados": [],
  "lutas": [],
  "perguntas": [
   {
    "n": 1,
-   "texto": "O que Maro faz no Dia 2?",
+   "texto": "Diante das duas corças (Maro viu primeiro; elas perdem o primeiro turno), o que ele faz?",
    "opcoes": {
-    "a": "repete a rotina (jornada e um bloco de treino de espada) por vários dias: diga quantos",
-    "b": "vai sozinho à Mata do Corvo atrás de corça",
-    "c": "chama a Rute e vai atrás de javali (ela leva a parte dela do despojo)",
-    "d": "vai atrás de lobos (bando de 3 a 5: perigo de morte para quem está sozinho)"
+    "a": "ataca, começando de perto",
+    "b": "ataca, começando de longe",
+    "c": "deixa as duas irem e segue a procura (resta 1 bloco)",
+    "d": "larga a caçada e volta para a vila"
    }
   },
   {
    "n": 2,
-   "texto": "Maro compra o elmo de malha (8 de prata) antes de se meter em luta? A cabeça está sem proteção.",
+   "texto": "Se uma corça fugir ferida, Maro segue o rastro de sangue?",
    "opcoes": {
-    "a": "compra",
-    "b": "não compra: guarda a prata"
+    "a": "segue",
+    "b": "não segue"
    }
   }
  ],

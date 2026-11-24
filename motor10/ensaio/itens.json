@@ -177,15 +177,17 @@
    ],
    "efeitos": [],
    "sob_medida": null,
-   "historia": [],
-   "dono": null,
-   "onde": "vila",
+   "historia": [
+    "Dia 2: Maro comprou em Pedra Rasa, por 8 de prata"
+   ],
+   "dono": "eu",
+   "onde": null,
    "material": "malha",
    "cobre": [
     "cabeça"
    ],
    "id": "i0010",
-   "uso": null
+   "uso": "veste"
   },
   "i0011": {
    "tipo": "escudo",

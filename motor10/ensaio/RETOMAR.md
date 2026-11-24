@@ -1,20 +1,24 @@
-# RETOMAR · depois do turno 2
+# RETOMAR · depois do turno 3
 
-**Agora:** Dia 2, alvorada (4h) · primavera · Maro em Pedra Rasa · PV 141/141 · sem fome (fome 0) · sem sono (sono 0) · com forças (cansaço 0) · 31 de prata
+**Agora:** Dia 2, tarde (12h) · primavera · Maro FORA, na Mata do Corvo (a saída está aberta) · PV 141/141 · sem fome (fome 1) · sem sono (sono 2) · com forças (cansaço 2) · 23 de prata
 
-**O que houve no turno 2:** Dia 1: Maro trabalhou a jornada (4 de prata), treinou um bloco de espada, dormiu na pousada e comeu ao acordar. Acorda no Dia 2, às 4h, com 31 de prata.
+**O que houve no turno 3:** Dia 2: Maro comprou o elmo de malha (8 de prata) e saiu sozinho para a Mata do Corvo. No primeiro bloco de procura achou rastro (21 contra 20) e deu com DUAS corças. Viu primeiro. A saída está aberta, à espera da escolha.
 
-**Respondido:** O que Maro faz na primeira manhã em Pedra Rasa? → trabalha a jornada (2 blocos, 4 de prata) e treina espada · Como você quer jogar a vila de teste? → rápido: só os comandos e os números, para testar o motor depressa
+**Saída aberta:** caçando corça na Mata do Corvo desde o Dia 2; resta 1 bloco; À FRENTE: 2 corças: `caca.py atacar`, `deixar` ou `fugir` (a ameaça e o que a posição dá: `caca.py ver`)
+
+**Respondido:** O que Maro faz no Dia 2? → vai sozinho à Mata do Corvo atrás de corça · Maro compra o elmo de malha (8 de prata) antes de se meter em luta? A cabeça está sem proteção. → compra
 
 **Os fatos do turno** (do registro de eventos):
-- Dia 1, manhã: Maro trabalha (diarista) (× 2)
-- Dia 1, entardecer: Maro treina com espada
-- Dia 1, a rotina: Maro paga a cama · Maro dorme (na cama)
-- Dia 2, a rotina: Maro dorme (na cama) · Maro come em Pedra Rasa
+- Dia 2, alvorada: Maro compra elmo de malha Comum (10/10) por 8 de prata em Pedra Rasa
+- Dia 2, alvorada: Maro veste elmo de malha Comum
+- Dia 2, alvorada: Maro sai para caçar corça na Mata do Corvo
+- Dia 2, alvorada: Maro vai ao ermo (a Mata do Corvo)
+- Dia 2, manhã: Maro procura rastro na Mata do Corvo
+- Dia 2, tarde: aparecem 2 corças na Mata do Corvo
 
 ## PERGUNTAS ABERTAS
-1. O que Maro faz no Dia 2?  **a)** repete a rotina (jornada e um bloco de treino de espada) por vários dias: diga quantos · **b)** vai sozinho à Mata do Corvo atrás de corça · **c)** chama a Rute e vai atrás de javali (ela leva a parte dela do despojo) · **d)** vai atrás de lobos (bando de 3 a 5: perigo de morte para quem está sozinho)
-2. Maro compra o elmo de malha (8 de prata) antes de se meter em luta? A cabeça está sem proteção.  **a)** compra · **b)** não compra: guarda a prata
+1. Diante das duas corças (Maro viu primeiro; elas perdem o primeiro turno), o que ele faz?  **a)** ataca, começando de perto · **b)** ataca, começando de longe · **c)** deixa as duas irem e segue a procura (resta 1 bloco) · **d)** larga a caçada e volta para a vila
+2. Se uma corça fugir ferida, Maro segue o rastro de sangue?  **a)** segue · **b)** não segue
 
 ## SÓ O MESTRE
 - nada oculto neste turno.

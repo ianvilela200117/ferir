@@ -281,13 +281,14 @@
    "espada": 2
   },
   "treino": {
-   "espada": 41
+   "espada": 41,
+   "caça": 1
   },
-  "moedas": 31,
+  "moedas": 23,
   "corpo": {
-   "fome": 0,
-   "sono": 0,
-   "cansaco": 0
+   "fome": 1,
+   "sono": 2,
+   "cansaco": 2
   },
   "pv": 141,
   "feridas": [],
@@ -300,6 +301,27 @@
    "cama": {
     "ate": 11,
     "onde": "vila"
+   },
+   "caca": {
+    "ermo": "mata",
+    "casa": "vila",
+    "quer": "caça",
+    "alvo": "corça",
+    "restam": 1,
+    "com": [],
+    "dia": 2,
+    "fase": "encontro",
+    "encontro": {
+     "especie": "corça",
+     "n": 2,
+     "viu": "caçador",
+     "margem": 1,
+     "escuro": false
+    },
+    "luta": null,
+    "lutas": 0,
+    "parou": null,
+    "sangue": null
    }
   },
   "carga": {},
