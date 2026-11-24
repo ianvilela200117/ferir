@@ -1,30 +1,29 @@
 {
- "n": 8,
+ "n": 9,
  "aberto": {
-  "dia": 7,
+  "dia": 8,
   "bloco": 1
  },
- "evento0": 151,
+ "evento0": 170,
  "dados": [],
  "lutas": [],
  "perguntas": [
   {
    "n": 1,
-   "texto": "Lúcia leu: a Espada do Guardião é MALDITA (a Mão Fria, Incomum, míngua). Quem a puser em uso pega a maldição e a mão não a larga mais; a cada dia ela pode piorar um passo e, se ninguém a quebrar, mata (nunca antes de 5 dias). Quebra devolvendo a espada à Cova Velha, ou com o rito de Lúcia (60 de prata). Você tinha dito para pôr em uso. Ainda põe?",
+   "texto": "O Dia 8 (Maro com PV 141/141, 5 de prata e 4 de comida)?",
    "opcoes": {
-    "a": "põe em uso mesmo assim (Incomum: vale três vezes a dele) e a devolve à cova quando quiser quebrar",
-    "b": "devolve a espada à Cova Velha agora (1 bloco de ida e 1 de volta)",
-    "c": "guarda e decide depois"
+    "a": "a rotina: vende o despojo (uns 2 de prata), jornada (4) e treino de espada",
+    "b": "procura a toca dos goblins, com Tomé e Rute (o que fugiu voltou para algum lugar; a procura é rolagem oculta)",
+    "c": "javali, com a Rute",
+    "d": "corça, sozinho"
    }
   },
   {
    "n": 2,
-   "texto": "E o Dia 7 (Maro com PV 136/141 e 7 de prata)?",
+   "texto": "Maro quer começar a aprender magia?",
    "opcoes": {
-    "a": "a rotina: jornada (4) e treino de espada",
-    "b": "caça goblins na Mata do Corvo, com Tomé e Rute",
-    "c": "javali, com a Rute",
-    "d": "corça, sozinho"
+    "a": "faz o voto do socorro no santuário e estuda a cura lá, de graça (6 blocos leves com talento comum; nos blocos que sobrarem do dia)",
+    "b": "ainda não"
    }
   }
  ],

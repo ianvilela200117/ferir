@@ -117,7 +117,7 @@
   "corpo": {
    "fome": 2,
    "sono": 4,
-   "cansaco": 8
+   "cansaco": 6
   },
   "pv": 133,
   "feridas": [],
@@ -129,13 +129,14 @@
     "caça": 160
    },
    "caca": null,
-   "ermo_dia": 5,
-   "cena": 28,
-   "luta_dia": 5
+   "ermo_dia": 7,
+   "cena": 40,
+   "luta_dia": 7
   },
   "carga": {
    "osso:0": 1,
-   "metal:0": 1
+   "metal:0": 1,
+   "couro:0": 1
   },
   "sobre": "a caçadora; conhece a Mata do Corvo",
   "talento": {
@@ -170,7 +171,7 @@
   "corpo": {
    "fome": 2,
    "sono": 4,
-   "cansaco": 8
+   "cansaco": 6
   },
   "pv": 161,
   "feridas": [],
@@ -181,13 +182,13 @@
     "haste": 160
    },
    "caca": null,
-   "ermo_dia": 5,
-   "cena": 28,
-   "luta_dia": 5
+   "ermo_dia": 7,
+   "cena": 40,
+   "luta_dia": 7
   },
   "carga": {
    "osso:0": 2,
-   "metal:0": 1
+   "metal:0": 2
   },
   "sobre": "o guarda da vila",
   "talento": {
@@ -385,15 +386,15 @@
   },
   "treino": {
    "espada": 42,
-   "caça": 4
+   "caça": 6
   },
-  "moedas": 7,
+  "moedas": 5,
   "corpo": {
    "fome": 3,
    "sono": 0,
    "cansaco": 3
   },
-  "pv": 136,
+  "pv": 141,
   "feridas": [],
   "estado": "vivo",
   "marca": {
@@ -402,23 +403,25 @@
    "jornada_dia": 6,
    "jornada": 2,
    "cama": {
-    "ate": 41,
+    "ate": 47,
     "onde": "vila"
    },
    "caca": null,
-   "abates": 8,
+   "abates": 10,
    "feito_caça": 0,
    "talento_base": {
     "fio": 41,
     "caça": 1
    },
-   "ermo_dia": 5,
-   "luta_dia": 5,
+   "ermo_dia": 7,
+   "luta_dia": 7,
    "curou_dia": 7,
-   "curou": 1
+   "curou": 2
   },
   "carga": {
-   "comida": 5
+   "comida": 4,
+   "metal:0": 1,
+   "couro:0": 1
   },
   "jogador": true,
   "sobre": "vive das armas, com a mão de Iniciante na espada",
@@ -428,8 +431,7 @@
    "fé": -1,
    "pacto": 1
   },
-  "inclinacao": "fio",
-  "funda": 0
+  "inclinacao": "fio"
  },
  "anselmo": {
   "nome": "Anselmo",

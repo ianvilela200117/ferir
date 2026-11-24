@@ -1,0 +1,1639 @@
+{
+ "r": 1,
+ "L": [
+  {
+   "nome": "Maro",
+   "nivel": 5,
+   "maestria": 2,
+   "pvmax": 141,
+   "folmax": 11,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 5,
+   "percep_b": 5,
+   "agil_b": 6,
+   "forca_b": 7,
+   "dormem": [],
+   "pv": 136,
+   "fol": 11,
+   "arma": {
+    "nome": "Espada de Maro",
+    "cat": 0,
+    "dado": "1d8",
+    "golpe": "corte",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 5.25,
+    "aparo": 2,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {},
+    "item": "p1"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 3.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p2"
+   },
+   "partes": {
+    "cabeça": {
+     "nome": "elmo de malha Comum",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p3"
+    },
+    "tronco": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    },
+    "braços": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    },
+    "pernas": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p3",
+     "efeitos": {}
+    },
+    {
+     "item": "p4",
+     "efeitos": {}
+    },
+    {
+     "item": "p5",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [],
+   "def_fixa": 26.0,
+   "escudo": {
+    "nome": "Escudo de Maro",
+    "cat": 0,
+    "bonus": 4,
+    "item": "p5"
+   },
+   "fol_rodada": 0,
+   "ini_mod": 0,
+   "id": "eu",
+   "controla": true,
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 9,
+   "mana": 9,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": 0,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [],
+   "atributos": {
+    "Força": 70,
+    "Agilidade": 60,
+    "Vigor": 70,
+    "Vontade": 50,
+    "Percepção": 50,
+    "Afinidade": 40
+   },
+   "afin_b": 4,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "firmeza0": 25.5,
+   "firmeza": 25.5,
+   "lado": "A",
+   "x": 0,
+   "estado": "pe",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": null,
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 24,
+   "pv_visto": 136,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null,
+   "guarda": null
+  },
+  {
+   "nome": "Tomé",
+   "nivel": 30,
+   "maestria": 4,
+   "pvmax": 161,
+   "folmax": 12,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 5,
+   "percep_b": 5,
+   "agil_b": 6,
+   "forca_b": 7,
+   "dormem": [],
+   "pv": 161,
+   "fol": 12,
+   "arma": {
+    "nome": "Lança de Tomé",
+    "cat": 1,
+    "dado": "1d8",
+    "golpe": "ponta",
+    "alcance": 2,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": true,
+    "mult": 3,
+    "acerto": 11.25,
+    "aparo": 4,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {},
+    "item": "p6"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 3.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p7"
+   },
+   "partes": {
+    "tronco": {
+     "nome": "Armadura de malha de Tomé",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p8"
+    },
+    "braços": {
+     "nome": "Armadura de malha de Tomé",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p8"
+    },
+    "pernas": {
+     "nome": "Armadura de malha de Tomé",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p8"
+    },
+    "cabeça": {
+     "nome": "Elmo de malha de Tomé",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p9"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p8",
+     "efeitos": {}
+    },
+    {
+     "item": "p9",
+     "efeitos": {}
+    },
+    {
+     "item": "p10",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [],
+   "def_fixa": 27.0,
+   "escudo": {
+    "nome": "Escudo de Tomé",
+    "cat": 0,
+    "bonus": 4,
+    "item": "p10"
+   },
+   "fol_rodada": 0,
+   "ini_mod": 0,
+   "id": "tome",
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 9,
+   "mana": 9,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": null,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [],
+   "atributos": {
+    "Força": 79,
+    "Agilidade": 66,
+    "Vigor": 77,
+    "Vontade": 53,
+    "Percepção": 53,
+    "Afinidade": 41
+   },
+   "afin_b": 4,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "firmeza0": 26.5,
+   "firmeza": 26.5,
+   "lado": "A",
+   "x": 0,
+   "estado": "pe",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": null,
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 29,
+   "pv_visto": 161,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null
+  },
+  {
+   "nome": "Rute",
+   "nivel": 22,
+   "maestria": 4,
+   "pvmax": 133,
+   "folmax": 11,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 5,
+   "percep_b": 6,
+   "agil_b": 8,
+   "forca_b": 5,
+   "dormem": [],
+   "pv": 133,
+   "fol": 9,
+   "arma": {
+    "nome": "Arco de Rute",
+    "cat": 1,
+    "dado": "1d8",
+    "golpe": "ponta",
+    "alcance": 12,
+    "distancia": true,
+    "maos": 2,
+    "recarga": 0,
+    "haste": false,
+    "mult": 3,
+    "acerto": 11.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.24,
+    "efeitos": {},
+    "item": "p11"
+   },
+   "arma2": {
+    "nome": "Adaga de Rute",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "ponta",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 5.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.24,
+    "efeitos": {},
+    "item": "p12"
+   },
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 3.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.15,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p13"
+   },
+   "partes": {
+    "tronco": {
+     "nome": "Armadura de couro de Rute",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p14"
+    },
+    "braços": {
+     "nome": "Armadura de couro de Rute",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p14"
+    },
+    "pernas": {
+     "nome": "Armadura de couro de Rute",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p14"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p14",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [
+    "cabeça"
+   ],
+   "def_fixa": 31.0,
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "id": "rute",
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 9,
+   "mana": 9,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": null,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [],
+   "atributos": {
+    "Força": 58,
+    "Agilidade": 82,
+    "Vigor": 64,
+    "Vontade": 52,
+    "Percepção": 68,
+    "Afinidade": 41
+   },
+   "afin_b": 4,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "firmeza0": 26.5,
+   "firmeza": 26.5,
+   "lado": "A",
+   "x": 0,
+   "estado": "pe",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": null,
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 35,
+   "pv_visto": 133,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null,
+   "avisou_fol": false
+  },
+  {
+   "nome": "goblin 1",
+   "nivel": 8,
+   "maestria": 0,
+   "pvmax": 38,
+   "folmax": 9,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 3,
+   "percep_b": 6,
+   "agil_b": 6,
+   "forca_b": 4,
+   "dormem": [],
+   "pv": -274,
+   "fol": 9,
+   "arma": {
+    "nome": "adaga Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "ponta",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.18,
+    "efeitos": {},
+    "item": "p15"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p16"
+   },
+   "partes": {
+    "tronco": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p17"
+    },
+    "braços": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p17"
+    },
+    "pernas": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p17"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p17",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [
+    "cabeça"
+   ],
+   "def_fixa": 30.0,
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 0,
+   "mana": 0,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": 1,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [
+    "noturno"
+   ],
+   "atributos": {
+    "Força": 46,
+    "Agilidade": 62,
+    "Vigor": 31,
+    "Vontade": 35,
+    "Percepção": 61,
+    "Afinidade": 30
+   },
+   "afin_b": 3,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "povo": "goblin",
+   "tamanho": "pequeno",
+   "ocupa": 0.5,
+   "cerco": [
+    2,
+    1
+   ],
+   "coragem": -4,
+   "firmeza0": 23.5,
+   "firmeza": 23.5,
+   "lado": "B",
+   "x": 8,
+   "estado": "morto",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": "Rute",
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 31,
+   "pv_visto": 38,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null
+  },
+  {
+   "nome": "goblin 2",
+   "nivel": 8,
+   "maestria": 0,
+   "pvmax": 38,
+   "folmax": 9,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 3,
+   "percep_b": 6,
+   "agil_b": 6,
+   "forca_b": 4,
+   "dormem": [],
+   "pv": -25,
+   "fol": 9,
+   "arma": {
+    "nome": "adaga Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "ponta",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.18,
+    "efeitos": {},
+    "item": "p18"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p19"
+   },
+   "partes": {
+    "tronco": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p20"
+    },
+    "braços": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p20"
+    },
+    "pernas": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p20"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p20",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [
+    "cabeça"
+   ],
+   "def_fixa": 30.0,
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 0,
+   "mana": 0,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": 1,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [
+    "noturno"
+   ],
+   "atributos": {
+    "Força": 46,
+    "Agilidade": 62,
+    "Vigor": 31,
+    "Vontade": 35,
+    "Percepção": 61,
+    "Afinidade": 30
+   },
+   "afin_b": 3,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "povo": "goblin",
+   "tamanho": "pequeno",
+   "ocupa": 0.5,
+   "cerco": [
+    2,
+    1
+   ],
+   "coragem": -4,
+   "firmeza0": 23.5,
+   "firmeza": 23.5,
+   "lado": "B",
+   "x": 8,
+   "estado": "morto",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [
+    "golpe_terrivel"
+   ],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": "Rute",
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 36,
+   "pv_visto": 38,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null,
+   "moral_r": [
+    1,
+    "golpe_terrivel"
+   ]
+  },
+  {
+   "nome": "goblin 3",
+   "nivel": 8,
+   "maestria": 0,
+   "pvmax": 38,
+   "folmax": 9,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 3,
+   "percep_b": 6,
+   "agil_b": 6,
+   "forca_b": 4,
+   "dormem": [],
+   "pv": 38,
+   "fol": 9,
+   "arma": {
+    "nome": "adaga Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "ponta",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.18,
+    "efeitos": {},
+    "item": "p21"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.5,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p22"
+   },
+   "partes": {
+    "tronco": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p23"
+    },
+    "braços": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p23"
+    },
+    "pernas": {
+     "nome": "armadura de couro Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p23"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p23",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [
+    "cabeça"
+   ],
+   "def_fixa": 30.0,
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "feiticos": [],
+   "tradicao": null,
+   "mana_max": 0,
+   "mana": 0,
+   "foco": null,
+   "amuleto": null,
+   "dom": {},
+   "pena_magia": 0,
+   "carga": {},
+   "elixires": [],
+   "doses": 0,
+   "curado": 0,
+   "funda": null,
+   "fases": [],
+   "maldicoes": [],
+   "tracos": [
+    "noturno"
+   ],
+   "atributos": {
+    "Força": 46,
+    "Agilidade": 62,
+    "Vigor": 31,
+    "Vontade": 35,
+    "Percepção": 61,
+    "Afinidade": 30
+   },
+   "afin_b": 3,
+   "pena": 0,
+   "benzido": false,
+   "guarda_p": null,
+   "pena_laco": 0,
+   "cat_corpo": 0,
+   "m_trad": {
+    "arcano": 0,
+    "fé": 0,
+    "verde": 0,
+    "pacto": 0
+   },
+   "foco_cat": null,
+   "foco_falta": 0,
+   "amuleto_cat": null,
+   "encantos": [],
+   "maldito": false,
+   "povo": "goblin",
+   "tamanho": "pequeno",
+   "ocupa": 0.5,
+   "cerco": [
+    2,
+    1
+   ],
+   "coragem": -4,
+   "firmeza0": 23.5,
+   "firmeza": 23.5,
+   "lado": "B",
+   "x": 8,
+   "estado": "fugiu",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [
+    "golpe_terrivel",
+    "metade_caiu"
+   ],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": null,
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 35,
+   "pv_visto": 38,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "est": {},
+   "calejo": 0,
+   "canaliza": null,
+   "moral_r": [
+    1,
+    "metade_caiu"
+   ]
+  }
+ ],
+ "itens": {
+  "p1": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Espada de Maro",
+   "dur": [
+    7,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "familia": "espada",
+   "id": "i0028",
+   "uso": "arma"
+  },
+  "p2": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p3": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "elmo de malha Comum",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 2: Maro comprou em Pedra Rasa, por 8 de prata"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0010",
+   "uso": "veste"
+  },
+  "p4": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Maro",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0030",
+   "uso": "veste"
+  },
+  "p5": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "Escudo de Maro",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "id": "i0029",
+   "uso": "escudo"
+  },
+  "p6": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Lança de Tomé",
+   "dur": [
+    19,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "familia": "lança",
+   "id": "i0022",
+   "uso": "arma"
+  },
+  "p7": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p8": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0024",
+   "uso": "veste"
+  },
+  "p9": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Elmo de malha de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0025",
+   "uso": "veste"
+  },
+  "p10": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "Escudo de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "id": "i0023",
+   "uso": "escudo"
+  },
+  "p11": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Arco de Rute",
+   "dur": [
+    17,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "familia": "arco",
+   "id": "i0019",
+   "uso": "arma"
+  },
+  "p12": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Rute",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0020",
+   "uso": "arma2"
+  },
+  "p13": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p14": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Rute",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0021",
+   "uso": "veste"
+  },
+  "p15": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    5,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "adaga",
+   "tosca": true
+  },
+  "p16": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p17": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    4,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "tosca": true
+  },
+  "p18": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    5,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "adaga",
+   "tosca": true
+  },
+  "p19": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p20": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    3,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "tosca": true
+  },
+  "p21": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    5,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "adaga",
+   "tosca": true
+  },
+  "p22": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p23": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    5,
+    5
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "tosca": true
+  }
+ },
+ "lugar": {
+  "alto": "A"
+ },
+ "tempo": [],
+ "log": [
+  "— RODADA 1 —",
+  "  Rute atira em goblin 1: 35,25 contra 30, cabeça: 312 (0/38)",
+  "    ☠ goblin 1 MORRE",
+  "  Rute atira em goblin 2: 31,25 contra 30, braços: 63 (0/38)",
+  "    ☠ goblin 2 MORRE",
+  "    goblin 3 FOGE (metade dos seus caiu: -2 contra 26)"
+ ],
+ "paradas": [],
+ "fim": "A",
+ "ordens": {
+  "Maro": {
+   "acao": "atacar",
+   "alvo": null
+  },
+  "grupo": "atacar"
+ },
+ "surpresa": "B",
+ "quieto": false,
+ "fila": [],
+ "comecou": true,
+ "usadas": [
+  "p11",
+  "p17",
+  "p20"
+ ],
+ "sem_dano": 0,
+ "sem_parada": 1,
+ "dano_r": 9.868421052631579,
+ "houve_parada": false,
+ "fechada": 1,
+ "avisos": [
+  "Rute está sem proteção em: cabeça",
+  "goblin 1 está sem proteção em: cabeça",
+  "goblin 2 está sem proteção em: cabeça",
+  "goblin 3 está sem proteção em: cabeça"
+ ],
+ "ermo": [
+  "corça",
+  "goblin",
+  "javali",
+  "lobo",
+  "pantera",
+  "serpe",
+  "urso"
+ ],
+ "magia": true,
+ "mundo": true,
+ "luta_fechada": true
+}

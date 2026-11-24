@@ -39,7 +39,10 @@ Dois projetos ficaram prontos, cada um numa metade da etapa: `projeto_a/PROJETO.
 
 O furto (etapa 3); a gente do mundo que contrata ladino ou guia; o mapa da região com as 8 masmorras e o orçamento de prata delas (etapas 3 e 7); o dragão como frente ou calamidade (etapa 6); os povos na história de 400 a 1.000 anos (etapa 7); o meio-elfo e os povos das criaturas como personagem.
 
-## As perguntas ao jogador (gosto)
+## As perguntas ao jogador (gosto): respondidas
+
+**As respostas: E1 a, E2 b, E3 a, E4 a** (o golpe pelas costas entra; o personagem humano ganha uma segunda inclinação; o dragão que voa foge ferido fora do covil e luta até morrer nele; o dragão jovem da vila de teste fica longe, em Vau Seco, e só se conta).
+
 
 - **E1.** O golpe pelas costas do ladino entra? a) entra: de Treinado na manha, o primeiro golpe contra quem foi surpreendido tem +4 e rola os dados 3 vezes (vale uns 11 pontos, como o Grande Dom; a arma uma acima segue vencendo 85%) · b) não entra: a surpresa já é a vantagem. Recomendação: a.
 - **E2.** O humano ganha alguma coisa? a) fica como está · b) o personagem humano ganha uma segunda inclinação (só o personagem). Recomendação: b.

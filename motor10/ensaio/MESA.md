@@ -1,68 +1,67 @@
-# MESA · turno 8 · Dia 7, alvorada (4h) · primavera
+# MESA · turno 9 · Dia 8, alvorada (4h) · primavera
 
 ## Você
-**Maro**, nível 5 · PV 136/141 · 7 de prata · em Pedra Rasa
+**Maro**, nível 5 · PV 141/141 · 5 de prata · em Pedra Rasa
 Corpo: sem fome (fome 3) · sem sono (sono 0) · com forças (cansaço 3) · fôlego máximo −1
 ```
-Maro (nível 5, mão de Iniciante) · PV 136/141 · fôlego 12 · 2 ações (a mais: 1 pelo dobro do fôlego)
+Maro (nível 5, mão de Iniciante) · PV 141/141 · fôlego 12 · 2 ações (a mais: 1 pelo dobro do fôlego)
   Espada de Maro: acerto +5,25 · 1d8 × 1 (corte), força × 1,21 · 1 de fôlego por golpe
   Defesa 30 (com Escudo de Maro) · proteção: cabeça 1 · tronco 1 · braços 1 · pernas 1
 ```
 Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): i0010 elmo de malha Comum (9/10) · EM USO, na cabeça · i0028 Espada de Maro (Comum, 7/10) · EM USO, na mão · i0029 Escudo de Maro (Comum, 9/10) · EM USO, no braço · i0030 Armadura de malha de Maro (Comum, 9/10) · EM USO, no corpo · i0044 a Espada do Guardião (Incomum, 20/20) · na guarda
-Carga: 5 de comida (`ato.py comer carga` come da sua comida)
-Treino: espada: 42 blocos (Iniciante) · caça: 4 blocos (Leigo)
+Carga: 4 de comida, 1 de metal Comum, 1 de couro Comum (`ato.py comer carga` come da sua comida)
+Treino: espada: 42 blocos (Iniciante) · caça: 6 blocos (Leigo)
 
 ## Aqui
-**Pedra Rasa** · comida no lugar: 17.779 · há cama
+**Pedra Rasa** · comida no lugar: 17.611 · há cama
 Quem está aqui: Bento (o ferreiro da vila; conserta e vende o que forja), Dalva (a taverneira da pousada; sabe de tudo o que se conta), Rute (a caçadora; conhece a Mata do Corvo), Tomé (o guarda da vila), Ivo (o lenhador; tira madeira na borda da mata), Nara (a curandeira; colhe erva e trata ferida), Lino (o mercador da loja), Zeca (o aprendiz da forja; novo, quer aprender), Anselmo (o mago velho; ensina o arcano a quem paga, e lê o que os outros não leem), Lúcia (a clériga do santuário; cura quem pede e quebra maldição com rito), Joana (a bruxa que mora na choupana da borda da Mata do Corvo; lê a sorte, amaldiçoa por encomenda e vende veneno de lâmina, escondido)
 
 **O que dá para fazer, e o que custa** (1 bloco = 4 horas):
 - comer: 1 de prata, fome −3 (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)
-- dormir: cama por 2 de prata, e a sua está paga até o Dia 7, noite (20h); cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
+- dormir: cama por 2 de prata, e a sua está paga até o Dia 8, noite (20h); cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
 - trabalhar (diarista): 2 de prata por bloco, esforço pesado; a jornada são 2 blocos pagos por dia (hoje: 0 de 2) (`ato.py trabalhar N`)
 - treinar com uma arma: esforço pesado; a maestria sobe aos 40, 160, 500, 1.500 blocos (`ato.py treinar N ARMA`)
 - descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)
 
 ## O mercado
-**Pedra Rasa** · 400 de povo · a loja tem 2.003 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
+**Pedra Rasa** · 400 de povo · a loja tem 2.005 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
 
 | bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |
 | --- | --- | --- | --- | --- | --- |
-| comida | 17.779 | 1,16 (× 1,16) | 10 por 13 | 6 por 10 | 5 |
+| comida | 17.611 | 1,17 (× 1,17) | 10 por 13 | 7 por 10 | 4 |
 | lenha | 3.000 | 1,00 (× 1,00) | 10 por 12 | 5 por 10 |  |
 | carvão | 240 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | sal | 240 | 3,00 (× 1,00) | 10 por 34 | 17 por 10 |  |
 | pano | 120 | 5,00 (× 1,00) | 1 por 6 | 2 por 1 |  |
 | remédio | 60 | 8,00 (× 1,00) | 1 por 9 | 4 por 1 |  |
 | ferramenta | 60 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
-| metal Comum | 121 | 2,99 (× 1,00) | 10 por 34 | 17 por 10 |  |
-| couro Comum | 125 | 1,96 (× 0,98) | 10 por 23 | 11 por 10 |  |
+| metal Comum | 121 | 2,99 (× 1,00) | 10 por 34 | 17 por 10 | 1 |
+| couro Comum | 125 | 1,96 (× 0,98) | 10 por 23 | 11 por 10 | 1 |
 | osso Comum | 65 | 0,96 (× 0,96) | 10 por 12 | 5 por 10 |  |
 | madeira Comum | 240 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | erva Comum | 120 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
-| metal Incomum | 20 | 18,00 (× 1,00) | 1 por 21 | 10 por 1 |  |
-| couro Incomum | 20 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
-| osso Incomum | 10 | 6,00 (× 1,00) | 1 por 7 | 3 por 1 |  |
-| madeira Incomum | 40 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
-| erva Incomum | 21 | 11,71 (× 0,98) | 1 por 14 | 6 por 1 |  |
+| metal Incomum | 19 | 18,47 (× 1,03) | 1 por 21 | 10 por 1 |  |
+| couro Incomum | 21 | 11,71 (× 0,98) | 1 por 14 | 6 por 1 |  |
+| osso Incomum | 9 | 6,32 (× 1,05) | 1 por 8 | 3 por 1 |  |
+| madeira Incomum | 41 | 11,85 (× 0,99) | 1 por 14 | 7 por 1 |  |
+| erva Incomum | 22 | 11,44 (× 0,95) | 1 por 13 | 6 por 1 |  |
 
 **A magia** (as poções até a Rara; a água benta; a peçonha):
 | bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |
 | --- | --- | --- | --- | --- | --- |
 | poção de cura Comum | 4 | 7,35 (× 1,22) | 1 por 9 | 4 por 1 |  |
-| antídoto Comum | 2 | 6,06 (× 1,01) | 1 por 8 | 3 por 1 |  |
+| antídoto Comum | 3 | 4,95 (× 0,82) | 1 por 6 | 2 por 1 |  |
 | poção de Mana Comum | 1 | 6,00 (× 1,00) | 1 por 10 | 2 por 1 |  |
 | poção de guarda Comum | 1 | 6,00 (× 1,00) | 1 por 10 | 2 por 1 |  |
 | poção de fúria Comum | 1 | 6,00 (× 1,00) | 1 por 10 | 2 por 1 |  |
 | poção de quebra-maldição Comum | 1 | 6,57 (× 1,10) | 1 por 11 | 3 por 1 |  |
-| poção de cura Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | antídoto Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | poção de Mana Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | poção de guarda Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | poção de fúria Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | poção de vigília Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
 | poção de quebra-maldição Incomum | 1 | 36,00 (× 1,00) | 1 por 57 | 17 por 1 |  |
-| água benta | 5 | 3,29 (× 1,10) | 5 por 30 | 14 por 10 |  |
+| água benta | 4 | 3,67 (× 1,22) | 4 por 26 | 15 por 10 |  |
 
 **A prateleira** (peças do Livro de Itens; o preço é o de tabela, menos o desgaste; a arma vale pela matéria que leva, e a armadura pelo que cobre):
 - novas, a 8 de prata cada (Comum): i0008 elmo de couro Comum
@@ -78,6 +77,7 @@ Negociar não gasta bloco: `mercado.py comprar BEM N` · `mercado.py vender BEM 
 **Pedra Rasa:** forja de vila (+1) · conserta, pago, até o Raro
 Mão: forja Leigo (0 blocos de bancada; Iniciante aos 50)
 Preparo (+2 cada, na obra que ele alcança): receita: não há · ajudante: não há · fogo: até o Incomum · bigorna: até o Incomum
+Matéria na carga: 1 de metal Comum, 1 de couro Comum
 
 **Na bancada** (bloco pesado; `oficio.py pede ...` diz a matéria e a chance antes de abrir):
 - forjar: Comum 1, Incomum 3, Raro 9, Épico 27, Único 81, Lendário 243 blocos; do Épico para cima pede núcleo. Falhar por 5 ou mais: a matéria some.
@@ -90,9 +90,9 @@ Preparo (+2 cada, na obra que ele alcança): receita: não há · ajudante: não
 - jornal: 2 de prata por bloco de bancada a serviço da oficina (paga-se pelo que a mão vale: diarista), até a jornada (2 blocos pagos por dia; hoje: 0) (`oficio.py jornal N`)
 
 ## A caça e a coleta
-- **a Mata do Corvo** (floresta, borda), a 1 bloco [`mata`] · caça: corça (há fartura), goblin (há, mas rareou), javali (há fartura), lobo (há fartura), urso (há pouco, e sempre foi assim), pantera (há pouco, e sempre foi assim) · tira-se: madeira Comum (há fartura), erva Comum (há fartura)
+- **a Mata do Corvo** (floresta, borda), a 1 bloco [`mata`] · caça: corça (há fartura), goblin (é raro ver), javali (há fartura), lobo (há fartura), urso (há pouco, e sempre foi assim), pantera (há pouco, e sempre foi assim) · tira-se: madeira Comum (há fartura), erva Comum (há fartura)
 - **a Cova Velha** (ruína, borda), a 1 bloco [`cova`] · caça: corpo-seco (sumiu), esqueleto (sumiu) · tira-se: metal Comum (há fartura), erva Comum (há fartura)
-- A sua mão: caça Leigo (4 blocos), coleta Leigo (0 blocos). O rastro: 2d20 + 5 contra 20 ou mais (o bicho arisco e o que rareou pedem mais; de noite, −4). A coleta: 2d20 + 7 (minério, madeira) ou + 5 (erva) contra 20, mais 8 por categoria, e o que rareou pede mais; o bloco que passa rende 1 de minério, 2 de madeira ou 1 de erva, e o que falha não rende.
+- A sua mão: caça Leigo (6 blocos), coleta Leigo (0 blocos). O rastro: 2d20 + 5 contra 20 ou mais (o bicho arisco e o que rareou pedem mais; de noite, −4). A coleta: 2d20 + 7 (minério, madeira) ou + 5 (erva) contra 20, mais 8 por categoria, e o que rareou pede mais; o bloco que passa rende 1 de minério, 2 de madeira ou 1 de erva, e o que falha não rende.
 - `caca.py sair [ERMO] [alvo=ESPECIE] [blocos=N]` (ida, N de procura, volta; N de 1 a 6, 2 se não disser) · `caca.py coletar BEM [ERMO] [blocos=N]` (N de 1 a 4)
 
 ## Os bichos daqui (o que todo mundo sabe; a frase inteira: `bichos.py ameaca ESPECIE`)
@@ -110,11 +110,11 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 **Pedra Rasa:** botica de vila (+1) · a leva Comum: 1 bloco pesado, 4 de matéria, rende 2 doses (`alquimia.py pede cura Comum`)
 
 ## Perguntas abertas
-1. Lúcia leu: a Espada do Guardião é MALDITA (a Mão Fria, Incomum, míngua). Quem a puser em uso pega a maldição e a mão não a larga mais; a cada dia ela pode piorar um passo e, se ninguém a quebrar, mata (nunca antes de 5 dias). Quebra devolvendo a espada à Cova Velha, ou com o rito de Lúcia (60 de prata). Você tinha dito para pôr em uso. Ainda põe?  **a)** põe em uso mesmo assim (Incomum: vale três vezes a dele) e a devolve à cova quando quiser quebrar · **b)** devolve a espada à Cova Velha agora (1 bloco de ida e 1 de volta) · **c)** guarda e decide depois
-2. E o Dia 7 (Maro com PV 136/141 e 7 de prata)?  **a)** a rotina: jornada (4) e treino de espada · **b)** caça goblins na Mata do Corvo, com Tomé e Rute · **c)** javali, com a Rute · **d)** corça, sozinho
+1. O Dia 8 (Maro com PV 141/141, 5 de prata e 4 de comida)?  **a)** a rotina: vende o despojo (uns 2 de prata), jornada (4) e treino de espada · **b)** procura a toca dos goblins, com Tomé e Rute (o que fugiu voltou para algum lugar; a procura é rolagem oculta) · **c)** javali, com a Rute · **d)** corça, sozinho
+2. Maro quer começar a aprender magia?  **a)** faz o voto do socorro no santuário e estuda a cura lá, de graça (6 blocos leves com talento comum; nos blocos que sobrarem do dia) · **b)** ainda não
 
 ## SÓ O MESTRE
-- a contagem na Mata do Corvo: corça 77/80 · goblin 8/16 · javali 38/40 · lobo 12/12 · urso 3/3 · pantera 1/1 · serpe 1/1 · acaso 3% por bloco
+- a contagem na Mata do Corvo: corça 76/80 · goblin 6/16 · javali 38/40 · lobo 12/12 · urso 3/3 · pantera 1/1 · serpe 1/1 · acaso 3% por bloco
 - a contagem na Cova Velha: corpo-seco 0/2 · esqueleto 0/3 · acaso 0% por bloco
 - talento e dom de Bento: Jeitoso em couro, Lerdo em comércio, Lerdo em alquimia
 - talento e dom de Dalva: Jeitoso em haste, Lerdo em forja, Lerdo em couro, Jeitoso em alquimia, Lerdo em encanto, Lerdo em pacto
@@ -132,5 +132,5 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - magia de Lúcia: Mana 17 de 19 · a fé: Mestre (502 blocos) · sabe: luz, cura, bênção, amparo, castigo, quebrar maldição · voto do socorro (em Pedra Rasa) · foco: Símbolo de Lúcia
 - magia de Joana: Mana 19 de 19 · o pacto: Treinado (160 blocos) · sabe: luz, mau-olhado, medo, sangria, ler, nó · dívida 2 (acima de 7 vira maldição) · foco: Talismã de Joana
 - peça maldita: i0044 a Espada do Guardião (a Mão Fria, Incomum, míngua); quebra: devolver a Espada do Guardião ao lugar dela, na Cova Velha
-- a toca dos goblins na Mata do Corvo: 8 goblins (teto 16), o capataz goblin de pé · fome 0 · tesouro: 20 de prata, 0 de comida (`caca.py sair mata alvo=toca`)
+- a toca dos goblins na Mata do Corvo: 6 goblins (teto 16), o capataz goblin de pé · fome 0 · tesouro: 20 de prata, 0 de comida (`caca.py sair mata alvo=toca`)
 - o estado está inteiro.

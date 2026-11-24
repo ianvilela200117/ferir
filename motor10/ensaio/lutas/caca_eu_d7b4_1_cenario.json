@@ -1,0 +1,39 @@
+{
+ "inicio": "longe",
+ "lugar": {
+  "alto": "A"
+ },
+ "surpresa": "B",
+ "tempo": [],
+ "luz": true,
+ "ermo": "mata",
+ "A": [
+  {
+   "id": "eu",
+   "controla": true
+  },
+  {
+   "id": "tome"
+  },
+  {
+   "id": "rute"
+  }
+ ],
+ "B": [
+  {
+   "bicho": "goblin",
+   "nome": "goblin 1",
+   "posto": "faca"
+  },
+  {
+   "bicho": "goblin",
+   "nome": "goblin 2",
+   "posto": "faca"
+  },
+  {
+   "bicho": "goblin",
+   "nome": "goblin 3",
+   "posto": "faca"
+  }
+ ]
+}
