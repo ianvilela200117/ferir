@@ -167,6 +167,12 @@ CHEFES = {
                            maldicao=dict(nome='a praga do brejo', tipo='chaga', condicao=dict(tipo='perdao'))),
     'vampiro': dict(especie='vampiro', linha='trás', lacaios=[('carniçal', None, 3, {}), ('lobo', None, 3, {})], guarda=0,
                     sabe='bebe a vida, a carne fecha, o olhar gela a coragem; os carniçais e os lobos vêm primeiro'),
+    # etapa 4b (a masmorra): o chefe do fundo da cripta. É o cavaleiro da cova na categoria da cripta (Comum), de montante e placa velha, nível 25, mão de Treinado.
+    # Medido (projeto A, m3): contra Maro, Tomé e Rute de PV cheio, perde 98% das lutas numa sala aberta e mata alguém da casa em 8%; sozinho com o Maro, o Maro morre em 64%
+    'guardião da cripta': dict(nome='o guardião da cripta', povo='cavaleiro-da-cova', posto='cavaleiro', cat=0, grau='E', nivel=25, maestria=4, arma=('montante', 0), escudo=False,
+                               fases=[dict(abaixo=0.5, diz='bate o pé no chão de pedra: os ossos da sala se levantam', ergue=2, brado=True)],
+                               lacaios=[('esqueleto', None, 2, {})], guarda=0,
+                               sabe='um cavaleiro morto, de montante e placa velha, que guarda a cripta e não cansa; ferido, bate o pé, e os ossos da sala se levantam com ele'),
 }
 
 # ---------- O BANDO NO ERMO (a patrulha) e A TOCA (o covil inteiro) ----------

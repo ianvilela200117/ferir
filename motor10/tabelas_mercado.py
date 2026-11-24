@@ -29,11 +29,19 @@ BASE_MAGIA = {'água benta': 3}                            # os bens novos sem c
 BASE_MAGIA_MATERIA = {'peçonha': 2}                       # a matéria nova, Comum (vezes MATERIA_VEZES por categoria, até o Raro)
 CRIME = ('veneno',)                                       # A LOJA NÃO NEGOCIA o veneno de lâmina: é crime nas vilas (quem vende é a bruxa, de pessoa a pessoa). O preço de base serve à conta dela
 
+# OS BENS DA ETAPA 4b (as masmorras): a TOCHA. Fica FORA de bens(), como a magia: o mercado que o gerador abre (funda) é o de sempre; a parte da masmorra abre-se à parte
+# (mercado.funda_masmorra: a tocha que o povo gasta, e a gazua na prateleira), onde há masmorra perto (na vila de teste, pelo manha.na_vila)
+BASE_MASMORRA = {'tocha': 1}                              # a tocha: 1 de prata; arde um bloco (quem a gasta na descida é a masmorra)
+PECAS_LADINO = ('gazua',)                                 # a loja negocia a GAZUA como peça (ter gazua não é crime: é ferramenta de serralheiro). Vale pela matéria (a da adaga: Comum 10);
+                                                          # paga-se como peça (40%, mais a mão de comércio) e enche a prateleira junto com as peças da mesma categoria.
+                                                          # A CHAVE a loja não compra nem vende (abre uma porta só)
+
 
 def base(bem):
-    """o preço de base de um bem ou de uma matéria ("metal:1"), ou None se a loja não sabe o que é (as poções e a peçonha até o Raro, e a água benta, também)"""
+    """o preço de base de um bem ou de uma matéria ("metal:1"), ou None se a loja não sabe o que é (as poções e a peçonha até o Raro, a água benta e a tocha, também)"""
     if bem in BASE: return BASE[bem]
     if bem in BASE_MAGIA: return BASE_MAGIA[bem]
+    if bem in BASE_MASMORRA: return BASE_MASMORRA[bem]
     nome, cat = M.le_materia(bem)
     if cat is None or cat > M.MATERIA_ATE: return None
     if nome in POCAO_BASE and cat <= M.POCAO_ATE: return POCAO_BASE[nome] * POCAO_VEZES ** cat
@@ -49,6 +57,8 @@ def bens_magia():
 
 def e_magia(bem): n, _ = M.le_materia(bem); return bem in BASE_MAGIA or n in POCAO_BASE or n in BASE_MAGIA_MATERIA      # é bem da magia? (fica fora da mesa e do gerador de sempre)
 def de_beber(bem): n, c = M.le_materia(bem); return bem == 'água benta' or (n in POCAO_BASE and c is not None)            # é de usar (poção, água benta)? "vender tudo" não leva
+def de_usar(bem): return de_beber(bem) or bem in BASE_MASMORRA                  # o que "vender tudo" não leva: as poções, a água benta e a tocha (etapa 4b): são de usar
+def bens_masmorra(): return list(BASE_MASMORRA)                                 # os bens da masmorra que a loja negocia (a tocha), na ordem da mesa
 
 
 def bens():
@@ -73,12 +83,14 @@ CONSUMO_POCAO = {'cura': 0.0005, 'antídoto': 0.00017, 'vigília': 0.0001, 'queb
                                                                                                         # a vila de 400 quer 6 de cura, 2 de antídoto, 1 de vigília e 1 de quebra-maldição Comuns, e 1 de cura Incomum.
                                                                                                         # As outras (Mana, guarda, fúria) o povo não gasta: o alvo é o mínimo
 CONSUMO_MAGIA = {'água benta': 0.0005}          # a água benta que o povo gasta (a vila de 400 quer 6)
+CONSUMO_MASMORRA = {'tocha': 0.01}              # a tocha que o povo gasta (etapa 4b; chute do projeto A): a vila de 400 queima 4 por dia e quer 120 no estoque
 
 
 def consumo(bem):
     """o que UMA pessoa gasta deste bem por dia (0 se o povo não o gasta)"""
     if bem in CONSUMO: return CONSUMO[bem]
     if bem in CONSUMO_MAGIA: return CONSUMO_MAGIA[bem]
+    if bem in CONSUMO_MASMORRA: return CONSUMO_MASMORRA[bem]
     nome, cat = M.le_materia(bem)
     if cat is not None and nome in CONSUMO_POCAO and cat <= M.POCAO_ATE: return CONSUMO_POCAO[nome] / CONSUMO_CAT ** cat
     if cat is None or nome not in CONSUMO_MATERIA or cat > M.MATERIA_ATE: return 0
@@ -147,6 +159,9 @@ PRATELEIRA_MAGIA = dict(vila=_MAGIA_VILA,
                         cidade=_MAGIA_VILA + [('foco', 'cajado', 0, None), ('foco', 'talismã', 0, None), ('amuleto', None, 1, None), ('foco', 'varinha', 1, None), ('foco', 'símbolo', 1, None),
                                               ('escrito', ['cura', 'bênção', 'amparo'], 0, 'Breviário da fé'), ('escrito', ['raízes', 'espinho', 'névoa'], 0, 'Folhas do verde'), ('escrito', ['lança-de-fogo'], 1, 'Tratado do fogo')])
 def prateleira_magia_de(tipo): return PRATELEIRA_MAGIA.get(tipo, PRATELEIRA_MAGIA['vila'])
+# A PRATELEIRA DO LADINO (etapa 4b: mercado.funda_masmorra): (tipo, nada, categoria, nome). Conta junto no alvo de peças da categoria (a loja farta), como a da magia
+PRATELEIRA_LADINO = dict(vila=[('gazua', None, 0, None)], cidade=[('gazua', None, 0, None), ('gazua', None, 0, None), ('gazua', None, 1, None)])
+def prateleira_ladino_de(tipo): return PRATELEIRA_LADINO.get(tipo, PRATELEIRA_LADINO['vila'])
 def alvo_pecas(tipo):
     """{categoria: quantas peças} a loja de um lugar deste tipo quer ter na prateleira: o que o gerador põe nela ao abrir a loja"""
     quer = {}

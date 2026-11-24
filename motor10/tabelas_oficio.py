@@ -40,6 +40,9 @@ PARTE_PESO = M.PARTE_PESO                                                       
 MATERIA_ESCUDO = M.MATERIA_ESCUDO                                                       # 2 de madeira e 1 de metal (tabelas_mundo)
 OFICIO_COURO = ('couro',)   # as armaduras deste material são do ofício "couro"; todo o resto é da "forja"
 PECAS_ENCANTO = ('foco', 'amuleto')     # (etapa da magia) o foco e o amuleto se fazem no ofício do ENCANTO, na mesa de runas, com os blocos, o teste e a falha da forja
+PECAS_LADINO = ('gazua',)   # (etapa 4b) a GAZUA se forja na oficina, como a adaga: 1 de metal da categoria (tabelas_mundo.MATERIA_GAZUA), os blocos, o teste e a falha da forja;
+                            # do Épico para cima, matéria Rara e um núcleo (a lei da forja). Conserta-se na bancada como as outras peças. A chave não se forja
+TALHES = (None, 'miúdo')    # (etapa 4b) a armadura se forja para um corpo: de gente (sem talhe) ou miúda (o pequenino e o gnomo: `forjar armadura ... talhe=miúdo`); a matéria é a mesma
 # A BANCADA DE CADA OFÍCIO (etapa da magia): o campo do lugar que é a bancada dele (0 a 4; o lugar sem o campo não a tem), e o tipo de evento do trabalho nela
 BANCA = dict(forja='oficina', couro='oficina', encanto='runas', alquimia='botica', fé='santuario')
 EVENTO_OFICIO = dict(encanto='encantar', alquimia='alquimia', fé='rito')        # o evento do bloco de bancada (a forja e o couro: o tipo da obra, forjar ou ajustar)
@@ -55,6 +58,7 @@ def materia(tipo, cat, familia=None, material=None, cobre=None):
     if tipo == 'arma': base = MATERIA_ARMA[familia]
     elif tipo == 'foco': base = M.MATERIA_FOCO[familia]             # o foco: a forma vem no lugar da família (varinha, cajado, símbolo, talismã)
     elif tipo == 'amuleto': base = M.MATERIA_AMULETO
+    elif tipo == 'gazua': base = M.MATERIA_GAZUA                   # a gazua (etapa 4b): 1 de metal, como a adaga
     elif tipo == 'armadura':
         nome, por = MATERIA_ARMADURA[material]; base = {nome: por * sum(PARTE_PESO[x] for x in (cobre or ['tronco', 'braços', 'pernas']))}
     else: base = MATERIA_ESCUDO

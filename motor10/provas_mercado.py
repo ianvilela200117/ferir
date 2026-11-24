@@ -320,9 +320,10 @@ def _loja_farta(n):
 
 
 # ---------- o robô ferreiro de loja (a meta FORJAR PARA A LOJA NÃO É MINA) ----------
-def _pecas_de_forja(cats):
-    """tudo o que se forja, nestas categorias: as onze armas, o escudo, e cada armadura inteira e o elmo dela"""
+def _pecas_de_forja(cats, gazua=False):
+    """tudo o que se forja, nestas categorias: as onze armas, o escudo, e cada armadura inteira e o elmo dela (com `gazua`, a gazua também: etapa 4b, a meta MA9 do provas_manha)"""
     for cat in cats:
+        if gazua: yield oficio.molde('gazua', cat)
         for fam in O_.MATERIA_ARMA: yield oficio.molde('arma', cat, familia=fam)
         yield oficio.molde('escudo', cat)
         for mat in O_.MATERIA_ARMADURA:
@@ -336,12 +337,12 @@ def _paga_se(E, peca, cat, tosca=False):
     return mercado.paga_peca(E, 'eu', it)
 
 
-def _escolhe(E, cats):
+def _escolhe(E, cats, gazua=False):
     """a peça que MAIS RENDE hoje, por bloco de bancada, a quem compra a matéria na loja e vende a peça à loja: o que a loja pagaria por ela (pesado pela chance
     de acertar e de sair uma abaixo), menos a matéria que falta comprar, menos o que a matéria que ele já tem valeria vendida. Devolve (a peça, a matéria a comprar),
     ou None se nenhuma paga a matéria (ou se o bolso não dá para a matéria e mais um dia de cama e comida)."""
     p = E['gente']['eu']; lid = p['lugar']; carga = p.get('carga', {}); est = E['lugares'][lid]['estoque']; melhor = None; reserva = M.CAMA_PRECO + M.REFEICAO_PRECO
-    for peca in _pecas_de_forja(cats):
+    for peca in _pecas_de_forja(cats, gazua):
         cat = peca['cat']; mat = oficio.materia_de(peca); falta = {k: q - carga.get(k, 0) for k, q in mat.items() if carga.get(k, 0) < q}
         if any(est.get(k, 0) < q for k, q in falta.items()): continue
         custo = sum(mercado.custa(E, lid, k, q) for k, q in falta.items())
@@ -354,13 +355,16 @@ def _escolhe(E, cats):
     return melhor and melhor[1:]
 
 
-def ferreiro_de_loja(semente, cats):
+def ferreiro_de_loja(semente, cats, gazua=False):
     """uma vida do FERREIRO DE LOJA: o ferreiro de começo da vila de TESTE (`vila_teste.py comeco=ferreiro`), do Dia 1 ao Dia 30. Vive de verdade (come e paga, dorme na cama
     e paga) e é GANANCIOSO: em todo bloco de bancada que o corpo deixa, compra na loja a matéria da peça que mais rende hoje (`_escolhe`), forja e vende a peça à loja na hora.
     Quando nenhuma peça paga a matéria, serve o jornal da oficina (é disso que come). Devolve, por janela (os 5 primeiros dias; daí ao Dia 30): o que a loja pagou pelas peças,
-    o que ele gastou em matéria, o jornal, as peças vendidas, as obras fechadas, e o bolso."""
+    o que ele gastou em matéria, o jornal, as peças vendidas, as obras fechadas, e o bolso.
+    Com `gazua` (etapa 4b, a meta MA9 do provas_manha): a loja abre a parte da masmorra (a tocha e a gazua na prateleira) e o robô põe a gazua na lista do que forja."""
     import vila_teste
-    E = vila_teste.cria('ferreiro', semente=semente); lid = E['gente']['eu']['lugar']; p0 = prata(E); t0 = estado.agora(E)
+    E = vila_teste.cria('ferreiro', semente=semente); lid = E['gente']['eu']['lugar']
+    if gazua: mercado.funda_masmorra(E, lid)
+    p0 = prata(E); t0 = estado.agora(E)
     corte = t0 + MINA_DIAS[0] * M.BLOCOS_DIA; fim = t0 + MINA_DIAS[1] * M.BLOCOS_DIA; parado = [None]
     V = dict(vendas=[0, 0], materia=[0, 0], jornal=[0, 0], pecas=[0, 0], obras=[0, 0], bolso=[E['gente']['eu']['moedas']], na_mao=0)
     w = lambda: 0 if estado.agora(E) < corte else 1          # a janela em que o relógio está
@@ -368,7 +372,7 @@ def ferreiro_de_loja(semente, cats):
         R = None
         if oficio.obras_de(E, 'eu'): R = oficio.continua(E, 'eu', blocos=1)
         elif parado[0] != E['relogio']['dia']:
-            melhor = _escolhe(E, cats)
+            melhor = _escolhe(E, cats, gazua)
             if melhor:
                 for k, q in melhor[1].items(): V['materia'][w()] += mercado.comprar(E, 'eu', k, q)['prata']
                 R = oficio.forjar(E, 'eu', melhor[0], blocos=1)

@@ -23,6 +23,9 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py forjar armadura MATERIAL CATEGORIA ["Nome"] [cobre=tronco,braços,pernas] [blocos=N] [nucleo=ID]    (elmo: cobre=cabeça)
   python3 oficio.py forjar escudo CATEGORIA ["Nome"] [blocos=N] [nucleo=ID]
   python3 oficio.py forjar foco FORMA CATEGORIA ["Nome"] · forjar amuleto CATEGORIA ["Nome"]    (etapa da magia) no ofício do encanto, na mesa de runas (o mesmo que encanto.py fazer)
+  python3 oficio.py forjar gazua CATEGORIA ["Nome"] [blocos=N]       (etapa 4b) a ferramenta do ladino, como a adaga: 1 de metal da categoria
+  python3 oficio.py forjar armadura MATERIAL CATEGORIA ... talhe=miúdo     (etapa 4b) a armadura do corpo miúdo (o pequenino, o gnomo): a mesma matéria, o mesmo teste
+                                                          (ou para=ID: a armadura sai no corpo dessa pessoa, miúda ou de gente)
   python3 oficio.py continua [OBRA] [blocos=N]            mais N blocos na obra aberta (sem N: até fechar, ou até o corpo parar)
   python3 oficio.py larga OBRA                            abandona a obra (a matéria que já foi ao fogo se perde; o núcleo fica)
   python3 oficio.py consertar ITEM [pontos=N] [pago]      devolve durabilidade: você na bancada, ou `pago` à oficina do lugar
@@ -33,7 +36,7 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA|nada "como foi ganho" [oficio=alquimia|encanto]     o Mestre registra um preparo ganho no mundo
                                                           (a alquimia: receita, ajudante, fogo, vidraria; o encanto: receita, ajudante, tinta, pedra)
   python3 oficio.py oficina NIVEL|nada "como foi"         o Mestre registra a oficina do lugar onde a pessoa está (0 a 4; nada: o lugar fica sem)
-FAMILIA: adaga espada maça machado martelo lança montante alabarda malho arco besta · MATERIAL: couro malha placa
+FAMILIA: adaga espada maça machado martelo lança montante alabarda malho arco besta · MATERIAL: couro malha placa · e a gazua (sem família): forjar gazua CATEGORIA
 CATEGORIA: Comum Incomum Raro Épico Único Lendário
 """
 import math, sys
@@ -44,7 +47,8 @@ import estado, ato, corpo, teste, talento
 from itens import item, cat_i, rotulo
 
 PECAS = ('arma', 'armadura', 'escudo')
-FORJA = PECAS + O.PECAS_ENCANTO                             # o que se forja (o foco e o amuleto, no ofício do encanto)
+FORJA = PECAS + O.PECAS_ENCANTO + O.PECAS_LADINO            # o que se forja (o foco e o amuleto, no ofício do encanto; a gazua, na oficina, como a adaga)
+SEM_FAMILIA = ('escudo', 'amuleto', 'gazua')                # o que se forja sem família, forma nem material: só a categoria
 FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino (a peça, a obra)
 
 
@@ -168,18 +172,22 @@ def prata_do_mundo(E): return sum(p['moedas'] for p in E['gente'].values()) + su
 
 
 # ---------- a peça que se quer ----------
-def molde(tipo, cat, nome=None, familia=None, material=None, cobre=None, forma=None):
-    """o que se vai forjar, conferido ANTES de qualquer coisa mudar: {tipo, cat, nome, familia | material e cobre | forma (o foco)}"""
+def molde(tipo, cat, nome=None, familia=None, material=None, cobre=None, forma=None, talhe=None):
+    """o que se vai forjar, conferido ANTES de qualquer coisa mudar: {tipo, cat, nome, familia | material e cobre (e o talhe da armadura miúda) | forma (o foco)}"""
     if tipo not in FORJA: sys.exit(f'não se forja "{tipo}" (forja-se: {", ".join(FORJA)})')
     c = cat_i(cat)
     if c > O.FORJA_ATE: sys.exit(f'ninguém forja acima do {T.CATS[O.FORJA_ATE]} (veio {T.CATS[c]})')
     if tipo == 'arma' and familia not in O.MATERIA_ARMA: sys.exit(f'não se forja a arma "{familia}" (forja-se: {", ".join(O.MATERIA_ARMA)})')
     if tipo == 'foco' and forma not in M.MATERIA_FOCO: sys.exit(f'não se faz o foco "{forma}" (faz-se: {", ".join(M.MATERIA_FOCO)})')
-    it = item(tipo, c, nome, **({'forma': forma} if tipo == 'foco' else {} if tipo == 'amuleto' else dict(familia=familia, material=material, cobre=cobre)))        # confere o material e as partes, e dá o nome padrão
+    if talhe not in O.TALHES + ('gente',): sys.exit(f'talhe desconhecido: "{talhe}" (a armadura é de gente, ou miúda: talhe=miúdo)')
+    if talhe == 'miúdo' and tipo != 'armadura': sys.exit('só a armadura se forja para o corpo miúdo (a arma, o escudo e a gazua servem em todo corpo)')
+    it = item(tipo, c, nome, **({'forma': forma} if tipo == 'foco' else {} if tipo in ('amuleto', 'gazua') else dict(familia=familia, material=material, cobre=cobre, talhe=None if talhe == 'gente' else talhe)))        # confere o material e as partes, e dá o nome padrão
     d = dict(tipo=tipo, cat=c, nome=it['nome'])
     if tipo == 'foco': d['forma'] = forma
     if tipo == 'arma': d['familia'] = familia
-    if tipo == 'armadura': d['material'] = material; d['cobre'] = it['cobre']
+    if tipo == 'armadura':
+        d['material'] = material; d['cobre'] = it['cobre']
+        if it.get('talhe'): d['talhe'] = it['talhe']            # a armadura miúda (etapa 4b): a peça nasce com o talhe
     return d
 
 
@@ -308,9 +316,9 @@ def _remata_forja(E, o):
     _faixa_do_dom(r, c, margem)
     fim = 'acertou' if margem >= 0 else 'abaixo' if sai is not None else 'perdeu'
     if sai is not None:
-        padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), forma=peca.get('forma'))['nome']       # o nome que a obra ganha quando não se dá nome: diz a categoria DA OBRA
+        padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), forma=peca.get('forma'), talhe=peca.get('talhe'))['nome']       # o nome que a obra ganha quando não se dá nome: diz a categoria DA OBRA
         nome = None if max(0, sai) != cat and peca['nome'] == padrao else peca['nome']      # a peça sem nome próprio que sai uma categoria abaixo ganha o nome da categoria em que saiu ("arco Incomum", e não "arco Raro")
-        forma = {'forma': fam} if peca['tipo'] == 'foco' else {} if peca['tipo'] == 'amuleto' else dict(familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'))
+        forma = {'forma': fam} if peca['tipo'] == 'foco' else {} if peca['tipo'] in ('amuleto', 'gazua') else dict(familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), **({'talhe': peca['talhe']} if peca.get('talhe') else {}))
         it = item(peca['tipo'], max(0, sai), nome, dono=pid, feito_por=pid, dia=dia, **forma)
         como = f"Dia {dia}: {p['nome']} forjou {_em(E, lid)}" + (f', com {nuc}' if nuc else '')
         if sai < 0: it['dur'][0] = max(1, int(it['dur'][1] * O.TOSCA)); como += '; a peça saiu tosca'
@@ -521,7 +529,7 @@ def ver(E, pid):
     if v is None: return L
     L += ['', '**Na bancada** (bloco pesado; `oficio.py pede ...` diz a matéria e a chance antes de abrir):',
           '- forjar: ' + ', '.join(f'{T.CATS[c]} {O.blocos(c)}' for c in range(O.FORJA_ATE + 1)) + f' blocos; do {T.CATS[M.MATERIA_ATE + 1]} para cima pede núcleo. Falhar por {O.POR_POUCO} ou mais: a matéria some.']
-    gastas = [(i, it) for i, it in itens.items() if it.get('dono') == pid and it['tipo'] in PECAS and it['dur'][0] < it['dur'][1]]
+    gastas = [(i, it) for i, it in itens.items() if it.get('dono') == pid and it['tipo'] in PECAS + O.PECAS_LADINO and it['dur'][0] < it['dur'][1]]
     for i, it in gastas[:4]:
         q = it['dur'][1] - it['dur'][0]; of = oficio_de(it); chave = _materia_conserto(it); pode = chave and it['cat'] < len(O.MAO_DA_OBRA) and mao(p, of) >= O.MAO_DA_OBRA[it['cat']]
         eu_txt = f"você, {tantos(math.ceil(q / O.CONSERTO_BLOCO), 'bloco')} e {math.ceil(q / O.CONSERTO_MATERIA)} de {_mat(chave)}" if pode else 'você não tem a mão'
@@ -557,13 +565,18 @@ def main(a=None):
     if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
     inteiro = lambda k: int(op[k]) if op.get(k, '').isdigit() else sys.exit(f'{k}= pede um número inteiro, de zero para cima (veio "{op[k]}")') if k in op else None
     def peca(i):
-        tipo = pos[i] if len(pos) > i else sys.exit('diga o que forjar: arma FAMILIA CATEGORIA, armadura MATERIAL CATEGORIA ou escudo CATEGORIA. Veja o uso: python3 oficio.py')
-        if tipo in ('escudo', 'amuleto'): fam = None; resto = pos[i + 1:]
+        tipo = pos[i] if len(pos) > i else sys.exit('diga o que forjar: arma FAMILIA CATEGORIA, armadura MATERIAL CATEGORIA, escudo CATEGORIA ou gazua CATEGORIA. Veja o uso: python3 oficio.py')
+        if tipo in SEM_FAMILIA: fam = None; resto = pos[i + 1:]
         else: fam = pos[i + 1] if len(pos) > i + 1 else None; resto = pos[i + 2:]
         if tipo in FORJA and not resto: sys.exit('falta a categoria da peça. Veja o uso: python3 oficio.py')
         resto = resto or [0]
         return molde(tipo, resto[0], resto[1] if len(resto) > 1 else None, familia=fam if tipo == 'arma' else None, material=fam if tipo == 'armadura' else None,
-                     cobre=op['cobre'].split(',') if op.get('cobre') else None, forma=fam if tipo == 'foco' else None)
+                     cobre=op['cobre'].split(',') if op.get('cobre') else None, forma=fam if tipo == 'foco' else None, talhe=talhe_de(tipo))
+    def talhe_de(tipo):
+        """o talhe da armadura que se forja: o dito (talhe=miúdo), ou o do corpo de quem vai vesti-la (para=ID; etapa 4b)"""
+        if 'para' not in op or tipo != 'armadura': return op.get('talhe')
+        q = E['gente'].get(op['para']) or sys.exit(f'não há a pessoa "{op["para"]}" (para= diz para quem é a armadura)')
+        c = estado.corpo_de(q); return None if c == 'gente' else c
     falta = lambda o_que, exemplo: sys.exit(f'{o_que}: `python3 oficio.py {exemplo}`')
     if pos[0] == 'ver': print('\n'.join(ver(E, pid))); return
     if pos[0] == 'pede': print(pede(E, pid, peca(1))); return
