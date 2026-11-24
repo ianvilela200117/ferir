@@ -115,9 +115,9 @@
   },
   "moedas": 25,
   "corpo": {
-   "fome": 0,
-   "sono": 0,
-   "cansaco": 0
+   "fome": 2,
+   "sono": 4,
+   "cansaco": 8
   },
   "pv": 133,
   "feridas": [],
@@ -127,9 +127,16 @@
     "fio": 40,
     "tiro": 160,
     "caça": 160
-   }
+   },
+   "caca": null,
+   "ermo_dia": 5,
+   "cena": 28,
+   "luta_dia": 5
   },
-  "carga": {},
+  "carga": {
+   "osso:0": 1,
+   "metal:0": 1
+  },
   "sobre": "a caçadora; conhece a Mata do Corvo",
   "talento": {
    "tiro": 1,
@@ -161,9 +168,9 @@
   },
   "moedas": 40,
   "corpo": {
-   "fome": 0,
-   "sono": 0,
-   "cansaco": 0
+   "fome": 2,
+   "sono": 4,
+   "cansaco": 8
   },
   "pv": 161,
   "feridas": [],
@@ -172,9 +179,16 @@
    "talento_base": {
     "fio": 40,
     "haste": 160
-   }
+   },
+   "caca": null,
+   "ermo_dia": 5,
+   "cena": 28,
+   "luta_dia": 5
   },
-  "carga": {},
+  "carga": {
+   "osso:0": 2,
+   "metal:0": 1
+  },
   "sobre": "o guarda da vila",
   "talento": {
    "forja": -1,
@@ -371,15 +385,15 @@
   },
   "treino": {
    "espada": 41,
-   "caça": 2
+   "caça": 4
   },
-  "moedas": 23,
+  "moedas": 11,
   "corpo": {
-   "fome": 1,
-   "sono": 2,
+   "fome": 3,
+   "sono": 0,
    "cansaco": 2
   },
-  "pv": 141,
+  "pv": 122,
   "feridas": [],
   "estado": "vivo",
   "marca": {
@@ -388,23 +402,26 @@
    "jornada_dia": 1,
    "jornada": 2,
    "cama": {
-    "ate": 24,
+    "ate": 35,
     "onde": "vila"
    },
    "caca": null,
-   "abates": 3,
+   "abates": 8,
    "feito_caça": 0,
    "talento_base": {
     "fio": 41,
     "caça": 1
    },
-   "ermo_dia": 3,
-   "luta_dia": 3
+   "ermo_dia": 5,
+   "luta_dia": 5,
+   "curou_dia": 6,
+   "curou": 1
   },
   "carga": {
-   "comida": 7,
+   "comida": 6,
    "couro:0": 2,
-   "osso:0": 1
+   "osso:0": 3,
+   "metal:0": 1
   },
   "jogador": true,
   "sobre": "vive das armas, com a mão de Iniciante na espada",
@@ -414,7 +431,8 @@
    "fé": -1,
    "pacto": 1
   },
-  "inclinacao": "fio"
+  "inclinacao": "fio",
+  "funda": 0
  },
  "anselmo": {
   "nome": "Anselmo",
@@ -486,14 +504,14 @@
    "maça": 2
   },
   "treino": {
-   "fé": 500,
+   "fé": 501,
    "maça": 40
   },
-  "moedas": 40,
+  "moedas": 50,
   "corpo": {
-   "fome": 0,
-   "sono": 0,
-   "cansaco": 0
+   "fome": 1,
+   "sono": 1,
+   "cansaco": 1
   },
   "pv": 152,
   "feridas": [],
@@ -502,7 +520,8 @@
    "talento_base": {
     "peso": 40,
     "fé": 500
-   }
+   },
+   "cena": 21
   },
   "carga": {},
   "talento": {
@@ -525,7 +544,8 @@
    "santuario": "vila",
    "dia": 2
   },
-  "sobre": "a clériga do santuário; cura quem pede e quebra maldição com rito"
+  "sobre": "a clériga do santuário; cura quem pede e quebra maldição com rito",
+  "mana": 17
  },
  "joana": {
   "nome": "Joana",

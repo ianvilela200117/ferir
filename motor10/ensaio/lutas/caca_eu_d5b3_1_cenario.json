@@ -1,0 +1,39 @@
+{
+ "inicio": "longe",
+ "lugar": {
+  "largura": 1
+ },
+ "surpresa": "B",
+ "tempo": [],
+ "luz": true,
+ "ermo": "cova",
+ "A": [
+  {
+   "id": "eu",
+   "controla": true
+  },
+  {
+   "id": "tome"
+  },
+  {
+   "id": "rute"
+  }
+ ],
+ "B": [
+  {
+   "bicho": "esqueleto",
+   "nome": "esqueleto 1",
+   "posto": "soldado"
+  },
+  {
+   "bicho": "esqueleto",
+   "nome": "esqueleto 2",
+   "posto": "soldado"
+  },
+  {
+   "bicho": "esqueleto",
+   "nome": "esqueleto 3",
+   "posto": "soldado"
+  }
+ ]
+}

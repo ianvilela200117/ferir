@@ -18,9 +18,11 @@ Os dons e os talentos (capítulo 10 do `REGRAS.md`), a magia na luta (11), a alq
 Os módulos novos: `talento.py`, `magia.py`, `magia_mundo.py`, `alquimia.py`, `maldicao.py`, `encanto.py`, `criaturas.py`; as páginas novas: `tabelas_talento.py`, `tabelas_magia.py`, `tabelas_magia_mundo.py`, `tabelas_criaturas.py`.
 Os bancos novos (o `provas_mundo.py` roda os três): `provas_talento.py`, `provas_magia.py`, `provas_criaturas.py`; as metas da magia na luta estão no `provas.py` (`python3 provas.py 600 magia`).
 
+**A próxima etapa:** a 4b, as masmorras e o mundo de fantasia (o ladino, os dragões, os povos do personagem), antes da região (`PROJETO.md`, seção 10, e a decisão 16).
+
 ## A vila de teste do jogador (`ensaio/`)
 
-**O save do jogador ainda não tem a etapa da magia:** ele foi jogado antes dela. Para pôr a magia nele, quando o jogador quiser: `python3 vila_teste.py magia ensaio inclinacao=CAMINHO` (a inclinação é a escolha dele: o caminho em que o talento do Maro rola duas vezes). Sem esse comando, o `ensaio/` segue jogando como antes, com o motor novo.
+**O save do jogador já tem a etapa da magia** (posta no turno 5 com `vila_teste.py magia ensaio inclinacao=fio`: a inclinação do Maro, escolhida pelo jogador, é nas lâminas).
 
 O jogador está jogando uma vila de teste, fora do cânone, para sentir a luta, a forja e o custo de viver, e mandar mudar o que quiser. O save é a pasta `ensaio/` (Maro, guerreiro, em Pedra Rasa).
 Para retomar, de dentro de `motor10/`:

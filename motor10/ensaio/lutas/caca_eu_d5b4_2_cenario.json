@@ -1,0 +1,82 @@
+{
+ "inicio": "longe",
+ "lugar": {},
+ "surpresa": "B",
+ "tempo": [],
+ "luz": true,
+ "ermo": "cova",
+ "A": [
+  {
+   "id": "eu",
+   "controla": true
+  },
+  {
+   "id": "tome"
+  },
+  {
+   "id": "rute"
+  }
+ ],
+ "B": [
+  {
+   "nome": "corpo-seco 1",
+   "nivel": 8,
+   "atributos": {
+    "Força": 70,
+    "Agilidade": 30,
+    "Vigor": 80,
+    "Vontade": 10,
+    "Percepção": 30,
+    "Afinidade": 10
+   },
+   "maestria": 0,
+   "equip": {},
+   "moral": "testa",
+   "bicho": {
+    "especie": "corpo-seco",
+    "cat": 0,
+    "armas": [
+     "garra"
+    ],
+    "couro": "pelo",
+    "tamanho": "médio",
+    "tracos": [
+     "sem vida",
+     "agarra",
+     "noturno"
+    ],
+    "coragem": 0
+   }
+  },
+  {
+   "nome": "corpo-seco 2",
+   "nivel": 8,
+   "atributos": {
+    "Força": 70,
+    "Agilidade": 30,
+    "Vigor": 80,
+    "Vontade": 10,
+    "Percepção": 30,
+    "Afinidade": 10
+   },
+   "maestria": 0,
+   "equip": {},
+   "moral": "testa",
+   "bicho": {
+    "especie": "corpo-seco",
+    "cat": 0,
+    "armas": [
+     "garra"
+    ],
+    "couro": "pelo",
+    "tamanho": "médio",
+    "tracos": [
+     "sem vida",
+     "agarra",
+     "noturno"
+    ],
+    "coragem": 0
+   }
+  }
+ ]
+}

@@ -5,7 +5,7 @@
   "tipo": "vila",
   "cama": true,
   "estoque": {
-   "comida": 18288,
+   "comida": 17947,
    "lenha": 3000,
    "carvão": 240,
    "sal": 240,
@@ -17,13 +17,13 @@
    "osso:0": 62,
    "madeira:0": 240,
    "erva:0": 120,
-   "metal:1": 20,
+   "metal:1": 19,
    "couro:1": 20,
    "osso:1": 10,
-   "madeira:1": 39,
-   "erva:1": 21,
-   "prata": 2007,
-   "cura:0": 6,
+   "madeira:1": 40,
+   "erva:1": 22,
+   "prata": 2009,
+   "cura:0": 4,
    "cura:1": 1,
    "antídoto:0": 2,
    "antídoto:1": 1,
@@ -105,7 +105,7 @@
   },
   "bichos": {
    "corça": 77,
-   "javali": 39,
+   "javali": 38,
    "lobo": 12,
    "urso": 3,
    "pantera": 1,
@@ -150,8 +150,8 @@
    "corpo-seco": 2
   },
   "bichos": {
-   "esqueleto": 3,
-   "corpo-seco": 2
+   "esqueleto": 0,
+   "corpo-seco": 0
   },
   "coleta_teto": {
    "metal:0": 40,

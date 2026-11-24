@@ -172,7 +172,7 @@
    "cat": 0,
    "nome": "elmo de malha Comum",
    "dur": [
-    10,
+    9,
     10
    ],
    "efeitos": [],
@@ -338,7 +338,7 @@
    "cat": 1,
    "nome": "Arco de Rute",
    "dur": [
-    20,
+    18,
     20
    ],
    "efeitos": [],
@@ -394,7 +394,7 @@
    "cat": 1,
    "nome": "Lança de Tomé",
    "dur": [
-    20,
+    19,
     20
    ],
    "efeitos": [],
@@ -503,7 +503,7 @@
    "cat": 0,
    "nome": "Espada de Maro",
    "dur": [
-    8,
+    7,
     10
    ],
    "efeitos": [],
@@ -520,7 +520,7 @@
    "cat": 0,
    "nome": "Escudo de Maro",
    "dur": [
-    10,
+    9,
     10
    ],
    "efeitos": [],
@@ -536,7 +536,7 @@
    "cat": 0,
    "nome": "Armadura de malha de Maro",
    "dur": [
-    10,
+    9,
     10
    ],
    "efeitos": [],
@@ -785,12 +785,12 @@
    "efeitos": [],
    "sob_medida": null,
    "historia": [
-    "largada na Cova Velha, junto de um morto que não se deita"
+    "largada na Cova Velha, junto de um morto que não se deita",
+    "Dia 5: Maro achou esta peça no chão, na Cova Velha"
    ],
-   "dono": null,
-   "onde": "cova",
+   "dono": "eu",
+   "onde": null,
    "familia": "espada",
-   "solto": true,
    "id": "i0044",
    "uso": null,
    "maldita": {
