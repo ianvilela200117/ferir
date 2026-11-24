@@ -9,6 +9,9 @@
   NINGUÉM NASCE SABENDO: o talento aparece na MESA 20 blocos depois de rolado, no caminho; o dom fica ESCONDIDO até o teste em que fez a diferença (o script sabe:
     "sem o dom, não passava"), ou até alguém o ler. Escondido, ele entra no dado (teste.rola, dom=) e não entra em conta nenhuma que vai à mesa.
   A pessoa comum (sem talento, sem dom) é a pessoa de hoje: multiplica por 1 e soma zero.
+  ETAPA 4b (o contrato: projeto/ETAPA_4B.md, seção 10): o 17º caminho, a MANHA (o ofício do ladino); a TENDÊNCIA do povo (o caminho a favor rola um dado a mais e vale o
+    melhor, o contra um a mais e vale o pior); a SEGUNDA INCLINAÇÃO do personagem humano (E2 b). Quem já tinha o talento rolado rola só o caminho que falta
+    (rola_caminho), sem rolar de novo os outros 16 e sem mexer no dom. O humano nasce igual ao de hoje, caminho por caminho.
 
 Uso (para olhar; não grava nada): python3 talento.py ver [ID]        o que a pessoa sabe de si (sem ID: o personagem)
                                   python3 talento.py mestre [ID]     tudo (SÓ O MESTRE)
@@ -101,47 +104,112 @@ def frase(p, c):
 
 
 def frase_dom(c, g):
-    onde = TT.DOM_ONDE['mao' if c in TT.MAOS else 'bancada' if c in ('forja', 'couro', 'alquimia', 'encanto') else 'comércio' if c == 'comércio' else 'tradicao' if c in TT.TRADICOES else 'rastro']
+    onde = TT.DOM_ONDE['mao' if c in TT.MAOS else 'bancada' if c in ('forja', 'couro', 'alquimia', 'encanto') else 'comércio' if c == 'comércio' else 'tradicao' if c in TT.TRADICOES else c if c in TT.DOM_ONDE else 'rastro']
     return f"Há alguma coisa em você: {TT.DOM_NOME[c]} ({TT.O_QUE[c]}), um {TT.DOM[g][0]}: soma +{g} {onde}."
 
 
 # ---------- o nascimento ----------
-def _sorteia(E, pid, inclinacao=None):
-    """o talento e o dom de alguém, pelo dado do mundo (mesma semente, mesma gente)"""
+def _tendencia(povo):
+    """(o caminho a favor, o contra) do povo (etapa 4b: tabelas_povos.POVOS); o humano, nenhum"""
+    try: import tabelas_povos as TP
+    except ModuleNotFoundError as x:
+        if x.name != 'tabelas_povos': raise
+        return None, None
+    r = TP.POVOS.get(povo or 'humano') or {}
+    return r.get('a_favor'), r.get('contra')
+
+
+def _um(E, pid, c, inclinacao=None, inclinacao2=None, povo=None):
+    """o grau do talento num caminho, pelo dado do mundo (a chave de sempre: talento|PESSOA|CAMINHO). Rola uma vez; cada inclinação naquele caminho soma um dado
+    (vale o melhor); o caminho a favor do povo soma TENDENCIA dado (o melhor), o contra soma TENDENCIA dado (o pior); o que soma e o que tira se anulam."""
     import estado
-    if inclinacao is not None and inclinacao not in TT.CAMINHOS: sys.exit(f'inclinação desconhecida: "{inclinacao}" (os caminhos: {", ".join(TT.CAMINHOS)})')
+    fav, con = _tendencia(povo)
+    n = (TT.INCLINACAO - 1) * ((c == inclinacao) + (c == inclinacao2)) + TT.TENDENCIA * ((c == fav) - (c == con))
+    r = estado.sorte(E, f'talento|{pid}|{c}'); d = r.randint(1, 100)
+    if n > 0: d = max([d] + [r.randint(1, 100) for _ in range(n)])
+    elif n < 0: d = min([d] + [r.randint(1, 100) for _ in range(-n)])
+    return next(g for ate, g in TT.TALENTO_D100 if d <= ate)
+
+
+def _sorteia(E, pid, inclinacao=None, inclinacao2=None, povo=None):
+    """o talento e o dom de alguém, pelo dado do mundo (mesma semente, mesma gente). O DOM sorteia-se entre os 16 caminhos de antes, como sempre; uma segunda sorte
+    (dom|PESSOA|novos) o passa a um caminho novo (a manha) na proporção do peso dele: a chance é a de 17 caminhos, e quem não caiu na manha tem o dom de hoje."""
+    import estado
+    for x in (inclinacao, inclinacao2):
+        if x is not None and x not in TT.CAMINHOS: sys.exit(f'inclinação desconhecida: "{x}" (os caminhos: {", ".join(TT.CAMINHOS)})')
+    if inclinacao2 is not None and inclinacao2 == inclinacao: sys.exit('a segunda inclinação é outro caminho, não o da primeira')
     tal = {}
     for c in TT.CAMINHOS:
-        r = estado.sorte(E, f'talento|{pid}|{c}'); d = r.randint(1, 100)
-        if c == inclinacao: d = max([d] + [r.randint(1, 100) for _ in range(TT.INCLINACAO - 1)])
-        g = next(g for ate, g in TT.TALENTO_D100 if d <= ate)
+        g = _um(E, pid, c, inclinacao, inclinacao2, povo)
         if g: tal[c] = g
     r = estado.sorte(E, f'dom|{pid}'); d = r.randint(1, 1000); gd = next((g for ate, g in TT.DOM_D1000 if d <= ate), 0)
-    dm = {r.choices(TT.CAMINHOS, weights=[TT.DOM_PESO if tal.get(c, 0) >= 1 else 1 for c in TT.CAMINHOS])[0]: gd} if gd else {}
-    return tal, dm
+    peso = lambda c: TT.DOM_PESO if tal.get(c, 0) >= 1 else 1
+    if not gd: return tal, {}
+    c = r.choices(TT.ANTIGOS, weights=[peso(x) for x in TT.ANTIGOS])[0]
+    tot = sum(peso(x) for x in TT.ANTIGOS); x = estado.sorte(E, f'dom|{pid}|novos').random() * (tot + sum(peso(n) for n in TT.NOVOS))
+    for nv in TT.NOVOS:
+        if x < tot: break
+        tot += peso(nv)
+        if x < tot: c = nv; break
+    return tal, {c: gd}
 
 
-def rola(E, pid, inclinacao=None):
+def falta(p):
+    """os caminhos novos (tabelas_talento.NOVOS: a manha) que esta pessoa, já rolada, ainda não rolou (marca.talento_novos diz os que já rolou): a gente de antes
+    da etapa 4b tem ['manha']; quem não foi rolado, ou já rolou tudo, []"""
+    if not rolado(p): return []
+    feitos = (p.get('marca') or {}).get('talento_novos') or []
+    return [c for c in TT.NOVOS if c not in feitos]
+
+
+def rola(E, pid, inclinacao=None, inclinacao2=None):
     """os efeitos do nascimento de quem JÁ EXISTE (o save antigo, a vila de teste que ganha a magia): o talento, o dom, a base dos blocos (o talento aparece 20 blocos
-    depois), e a inclinação do personagem. Grava-se num evento "talento" (ou "gera", "mestre"). Quem já foi rolado não rola de novo."""
+    depois), e a inclinação do personagem (e a segunda, do personagem humano). Grava-se num evento "talento" (ou "gera", "mestre"). Quem já foi rolado não rola de novo."""
     p = E['gente'][pid]
-    if rolado(p): sys.exit(f"{p['nome']} já tem o talento rolado: não se rola de novo")
-    if inclinacao is not None and not p.get('jogador'): sys.exit('só o personagem do jogador tem inclinação')
-    tal, dm = _sorteia(E, pid, inclinacao)
-    ef = [['pessoa', pid, 'talento', 'poe', tal], ['pessoa', pid, 'marca.talento_base', 'poe', base(p.get('treino'))]]
+    if rolado(p): sys.exit(f"{p['nome']} já tem o talento rolado: não se rola de novo" + (f" (falta-lhe só {', '.join(falta(p))}: talento.rola_caminho)" if falta(p) else ''))
+    if (inclinacao is not None or inclinacao2 is not None) and not p.get('jogador'): sys.exit('só o personagem do jogador tem inclinação')
+    if inclinacao2 is not None and (p.get('povo') or 'humano') != 'humano': sys.exit('a segunda inclinação é só do personagem humano')
+    tal, dm = _sorteia(E, pid, inclinacao, inclinacao2, p.get('povo'))
+    ef = [['pessoa', pid, 'talento', 'poe', tal], ['pessoa', pid, 'marca.talento_base', 'poe', base(p.get('treino'))], ['pessoa', pid, 'marca.talento_novos', 'poe', list(TT.NOVOS)]]
     if dm: ef.append(['pessoa', pid, 'dom', 'poe', dm])
     if inclinacao: ef.append(['pessoa', pid, 'inclinacao', 'poe', inclinacao])
+    if inclinacao2: ef.append(['pessoa', pid, 'inclinacao2', 'poe', inclinacao2])
     return ef
 
 
-def nasce(E, pid, registro, inclinacao=None):
-    """o registro de quem nasce agora (['pessoa', 'nasce', pid, registro]) com o talento e o dom já rolados pelo dado do mundo"""
-    if inclinacao is not None and not registro.get('jogador'): sys.exit('só o personagem do jogador tem inclinação')
-    r = dict(registro); tal, dm = _sorteia(E, pid, inclinacao); r['talento'] = tal
+def nasce(E, pid, registro, inclinacao=None, inclinacao2=None):
+    """o registro de quem nasce agora (['pessoa', 'nasce', pid, registro]) com o talento e o dom já rolados pelo dado do mundo (com a tendência do povo do registro, e a
+    segunda inclinação do personagem humano)"""
+    if (inclinacao is not None or inclinacao2 is not None) and not registro.get('jogador'): sys.exit('só o personagem do jogador tem inclinação')
+    if inclinacao2 is not None and (registro.get('povo') or 'humano') != 'humano': sys.exit('a segunda inclinação é só do personagem humano')
+    r = dict(registro); tal, dm = _sorteia(E, pid, inclinacao, inclinacao2, registro.get('povo')); r['talento'] = tal
     if dm: r['dom'] = dm
-    r['marca'] = dict(r.get('marca') or {}, talento_base=base(r.get('treino')))
+    r['marca'] = dict(r.get('marca') or {}, talento_base=base(r.get('treino')), talento_novos=list(TT.NOVOS))
     if inclinacao: r['inclinacao'] = inclinacao
+    if inclinacao2: r['inclinacao2'] = inclinacao2
     return r
+
+
+def rola_caminho(E, pid, caminho='manha', inclinacao2=None):
+    """os efeitos que rolam SÓ um caminho novo em quem já nasceu (a gente de antes da etapa 4b): os outros 16 não se rolam de novo e O DOM NÃO MUDA. Com a tendência
+    do povo dela; e, para o personagem humano, a segunda inclinação (E2 b: só vale no caminho que se rola agora). Grava-se num evento "gera" ou "talento"."""
+    p = E['gente'][pid]
+    if not rolado(p): sys.exit(f"{p['nome']} nunca teve o talento rolado: rola-se tudo de uma vez (talento.rola)")
+    if caminho not in falta(p): sys.exit(f"{p['nome']} já tem o caminho \"{caminho}\" rolado" if caminho in TT.CAMINHOS else f'caminho desconhecido: "{caminho}" (os novos: {", ".join(TT.NOVOS)})')
+    if inclinacao2 is not None:
+        if not p.get('jogador'): sys.exit('só o personagem do jogador tem inclinação')
+        if (p.get('povo') or 'humano') != 'humano': sys.exit('a segunda inclinação é só do personagem humano')
+        if inclinacao2 != caminho: sys.exit(f'a segunda inclinação só vale para o caminho que ainda não foi rolado ({caminho}): os outros já nasceram')
+        if p.get('inclinacao2'): sys.exit(f"{p['nome']} já tem a segunda inclinação ({p['inclinacao2']})")
+    g = _um(E, pid, caminho, p.get('inclinacao'), inclinacao2, p.get('povo'))
+    tal = dict(talentos(p))
+    if g: tal[caminho] = g
+    feitos = list((p.get('marca') or {}).get('talento_novos') or []) + [caminho]
+    ef = [['pessoa', pid, 'talento', 'poe', tal], ['pessoa', pid, 'marca.talento_novos', 'poe', feitos]]      # o talento vai sempre (mesmo Comum): o evento é segredo do Mestre
+    n = no_caminho(p, caminho)
+    if n > 0: ef.append(['pessoa', pid, 'marca.talento_base', 'poe', dict((p.get('marca') or {}).get('talento_base') or {}, **{caminho: n})])
+    if inclinacao2: ef.append(['pessoa', pid, 'inclinacao2', 'poe', inclinacao2])
+    return ef
 
 
 # ---------- a mesa ----------
@@ -157,7 +225,8 @@ def tudo(p):
     if not t and not dm: return 'Comum em tudo' if rolado(p) else 'ainda não rolado'
     L = [f"{TT.TALENTO[g][0]} em {c}" + (' (já aparece)' if aparece(p, c) else '') for c, g in t.items()]
     L += [f"{TT.DOM[g][0]} em {c} ({'já se mostrou' if visto(p) else 'escondido'})" for c, g in dm.items()]
-    return ', '.join(L) + (f" · inclinação do jogador: {p['inclinacao']}" if p.get('inclinacao') else '')
+    return ', '.join(L) + (f" · inclinação do jogador: {p['inclinacao']}" if p.get('inclinacao') else '') + (f" · segunda inclinação: {p['inclinacao2']}" if p.get('inclinacao2') else '') \
+        + (f" · falta rolar: {', '.join(falta(p))}" if falta(p) else '')
 
 
 def voce(E):

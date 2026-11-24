@@ -145,3 +145,4 @@ ESPECIES = {
     'dragão':    _esp('dragão', 'o', 5, 'S', 220, 8, (180, 70, 240, 100, 90, 60), ['garra', 'bocarra', 'cauda'], 'escama', 'enorme', ['voa', 'sopro', 'couraça', 'apavora'], 0, (1, 1),
                       {'couro:2': 12, 'osso:2': 10}, ['serra', 'ruína'], 'voa, sopra, não tem fresta. Só aço Lendário o fere de verdade', chefe=True),
 }
+NUCLEO_DESDE = 3            # etapa 4b: o chefe só dá núcleo do Épico para cima (a escada da forja não pede núcleo abaixo disso: o dragão filhote e o jovem dão couro e osso)

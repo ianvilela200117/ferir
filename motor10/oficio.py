@@ -430,6 +430,10 @@ def _remata_ajuste(E, o):
     if margem >= 0 and grau >= T.SOB_MEDIDA_GRAUS[0]:
         fim = 'acertou'; txt = f"{p['nome']} ajusta {it['nome']} para {a['nome']}, grau {grau} ({conta_txt})"
         ef += [['item', o['item'], 'sob_medida', 'poe', dict(dono=a['nome'], grau=grau, id=o['para'])], ['item', o['item'], 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} ajustou para {a['nome']} (grau {grau})"]]
+        corpo = estado.corpo_de(a)                          # O AJUSTE RECORTA A PEÇA (etapa 4b): a armadura passa a servir no corpo de quem a pede (tirada de uso antes, se preciso)
+        if it['tipo'] == 'armadura' and (it.get('talhe') or 'gente') != corpo:
+            if it.get('uso'): ef.append(['item', o['item'], 'uso', 'poe', None])
+            ef.append(['item', o['item'], 'talhe', 'poe', None if corpo == 'gente' else corpo]); txt += f" (recortada para o corpo {'miúdo' if corpo == 'miúdo' else 'de gente'})"
     elif margem > -O.POR_POUCO: fim = 'falhou'; txt = f"o ajuste de {it['nome']} não assenta ({conta_txt}): fica como estava"
     else:
         fim = 'estragou'; txt = f"o ajuste de {it['nome']} sai errado ({conta_txt}): a peça perde {O.AJUSTE_ESTRAGO} de durabilidade"

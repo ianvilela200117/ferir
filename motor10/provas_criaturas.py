@@ -329,9 +329,10 @@ def _vila(n):
     aqui = os.path.dirname(os.path.abspath(__file__)); ens = os.path.join(aqui, 'ensaio')
     d = tempfile.mkdtemp(prefix='provas_criaturas_vila_'); antes = os.environ.get('MOTOR10_MUNDO')
     try:
-        if os.path.exists(os.path.join(ens, 'relogio.json')): shutil.copytree(ens, d, dirs_exist_ok=True); de = 'uma cópia do ensaio/ do jogador'
+        ja = os.path.exists(os.path.join(ens, 'lugares.json')) and 'cova' in json.load(open(os.path.join(ens, 'lugares.json'), encoding='utf-8'))      # o save do jogador já tem a etapa da magia (posta no turno 5): ela não entra duas vezes
+        if os.path.exists(os.path.join(ens, 'relogio.json')) and not ja: shutil.copytree(ens, d, dirs_exist_ok=True); de = 'uma cópia do ensaio/ do jogador'
         else:
-            os.environ['MOTOR10_MUNDO'] = d; E0 = quieto(V.cria, 'guerreiro', None, 1); estado.grava(E0); de = 'uma vila de teste sem talento (o ensaio/ não estava)'
+            os.environ['MOTOR10_MUNDO'] = d; E0 = quieto(V.cria, 'guerreiro', None, 1); estado.grava(E0); de = 'uma vila de teste sem talento (o ensaio/ ' + ('já tem a magia' if ja else 'não estava') + ')'
         os.environ['MOTOR10_MUNDO'] = d; E = estado.carrega(); n0 = E['relogio']['eventos']; p0 = prata_do_mundo(E); itens0 = set(E['itens']['itens']); gente0 = set(E['gente'])
         k = quieto(V.magia, E, 'fio'); import turno
         tal = [e for e in E['_novos'] if any(isinstance(x, list) and len(x) == 5 and x[0] == 'pessoa' and x[2] == 'talento' for x in e.get('efeitos', []))]

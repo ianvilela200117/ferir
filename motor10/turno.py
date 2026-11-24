@@ -74,6 +74,7 @@ def _do_morto(E, pid):
 def _aqui(E):
     import ato
     pid = estado.eu(E); p = E['gente'][pid]; l = E['lugares'][p['lugar']]; of = p.get('grau_oficio', 'diarista'); f = estado.fora(E, pid)
+    if f and estado.quem_desce(E, pid): return [f"**{p['nome']} está {estado.em(E, f)}, na descida.** Enquanto a descida estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A masmorra\"."]
     if f: return [f"**{p['nome']} está fora, {estado.em(E, f)}.** Enquanto a saída estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A caça e a coleta\"."]
     L = [f"**{l['nome']}** · comida no lugar: {_mil(l['estoque'].get('comida', 0))} · {'há cama' if l.get('cama') else 'não há cama: dorme-se no chão'}"]
     outros = [q['nome'] + (f" ({q['sobre']})" if q.get('sobre') else '') for k, q in E['gente'].items() if k != pid and q['lugar'] == p['lugar'] and q['estado'] == 'vivo' and not estado.fora(E, k)]
@@ -169,7 +170,8 @@ def responde(E, codigos):
     return '\n'.join(out) + (f"\nFicam abertas: {', '.join(str(q['n']) for q in t['perguntas'])}." if t['perguntas'] else '')
 
 
-SEGREDO = {('pessoa', 'talento'), ('pessoa', 'dom'), ('item', 'maldita'), ('lugar', 'maldito'), ('lugar', 'covil')}      # o que o Mestre (ou o gerador) põe e a gente do mundo não sabe
+SEGREDO = {('pessoa', 'talento'), ('pessoa', 'dom'), ('item', 'maldita'), ('lugar', 'maldito'), ('lugar', 'covil'),      # o que o Mestre (ou o gerador) põe e a gente do mundo não sabe
+           ('lugar', 'dragao'), ('lugar', 'armadilhas'), ('lugar', 'segredos'), ('lugar', 'guardado'), ('lugar', 'portas'), ('lugar', 'vagantes'), ('lugar', 'chefe')}      # etapa 4b: o dragão e o mapa da masmorra
 
 
 def secreto(e):
@@ -178,6 +180,7 @@ def secreto(e):
     if e.get('tipo') not in ('gera', 'mestre'): return False
     for x in e.get('efeitos') or []:
         if not isinstance(x, list) or len(x) < 4: continue
+        if x[0] == 'lugar' and x[1] == 'nasce' and isinstance(x[3], dict) and x[3].get('tipo') in ('masmorra', 'sala'): return True      # a masmorra que nasce (etapa 4b): o mapa que ninguém viu
         if x[0] == 'maldicao' and x[2] == 'poe' and isinstance(x[3], dict) and (x[3].get('sabe') or 0) < 2: return True
         if x[0] in ('pessoa', 'item', 'lugar') and (x[0], str(x[2]).split('.')[0]) in SEGREDO: return True
     return False
@@ -232,7 +235,7 @@ def fecha(E, resumo, parado=False, git=False):
     for i, q in enumerate(t['perguntas']): q['n'] = i + 1         # o turno fecha: as perguntas que ficam abertas são numeradas de novo, de 1 em diante. É com esse número que o jogador as lê no RETOMAR.md e responde
     pid = estado.eu(E); p = E['gente'][pid]; evs = _eventos_desde(t.get('evento0', 0)) + E['_novos']; f = estado.fora(E, pid)
     if p['estado'] != 'vivo': agora = f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')})"
-    else: agora = f"{p['nome']} " + (f"FORA, {estado.em(E, f)} (a saída está aberta)" if f else estado.em(E, p['lugar'])) + f" · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata"
+    else: agora = f"{p['nome']} " + (f"FORA, {estado.em(E, f)} (a {'descida' if estado.quem_desce(E, pid) else 'saída'} está aberta)" if f else estado.em(E, p['lugar'])) + f" · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata"
     L = [f"# RETOMAR · depois do turno {t['n']}", '', f"**Agora:** {estado.quando(E)} · {agora}", '', f"**O que houve no turno {t['n']}:** {resumo}"]
     for linhas in _modulos(E, 'retomar'): L += [''] + linhas
     if t['respondidas']: L += ['', '**Respondido:** ' + ' · '.join(f"{r['texto']} → {r['opcao']}" for r in t['respondidas'])]

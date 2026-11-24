@@ -11,7 +11,7 @@ Uso em código (a caça usa isto):
   tabelas_bichos.ESPECIES[especie]         nome, cat, grau, tamanho, bando, despojo, nucleo, habitat (e o resto da ficha)
   bicho(especie, nome=None, **mais)        a pessoa pronta para o luta.nova (e para a lista "B" do cenário do ato.py luta)
   bando(especie, sorte, n=None)            a lista: quantos andam juntos sai da sorte (o acaso do mundo: estado.sorte(E, chave)); a espécie de alfa traz o líder
-  despojo(especie, sorte)                  ({bem: quantidade}, o registro do núcleo ou None)
+  despojo(especie, sorte, cat=None)        ({bem: quantidade}, o registro do núcleo ou None); com `cat`, na categoria de quem morreu (etapa 4b)
   ameaca(especie, n=None, arma=None, armadura=None)     a frase que o caçador lê ANTES da luta
   resumo(especie, n=None)                  a espécie numa linha curta · mesa(E): as linhas dos bichos para a MESA.md (sem contagem e sem chefes)
 Uso de linha de comando (só olha: não rola dado de jogo nem mexe em save):
@@ -27,10 +27,13 @@ AS CRIATURAS (etapa da magia: criaturas.py, tabelas_criaturas.py) passam pelas m
 aceitam as espécies do tabelas_criaturas.ESPECIES (a de corpo é um bicho; a de POVO é gente que veste, e o bicho() a entrega pronta pelo criaturas.criatura) e os
 chefes do tabelas_criaturas.CHEFES (o chefe sozinho). No cenário: {"bicho": "goblin", "nome": "goblin 1", "posto": "lanceiro"} ou {"bicho": "xamã goblin"}.
 As frases dos traços novos moram no tabelas_criaturas.TRACOS (nunca no tabelas_bichos.TRACOS).
+OS DRAGÕES (etapa 4b: tabelas_dragoes.ESPECIES, frente D) são bichos: especie(), bicho(), ameaca() e despojo() os aceitam ({"bicho": "dragão-da-serra-jovem"}).
+O DESPOJO PELA CATEGORIA DE QUEM MORREU (etapa 4b): despojo(esp, sorte, cat) põe a matéria na categoria do morto (até a Rara); o núcleo só do Épico para cima.
 """
 import math, random, sys
 import tabelas as T
 import tabelas_bichos as TB
+import tabelas_mundo as M
 from itens import item, cat_i
 
 CORPO = ('cat', 'armas', 'couro', 'tamanho', 'tracos', 'coragem')        # o que é do corpo; o resto do que se passa em `mais` é da pessoa
@@ -45,12 +48,23 @@ def _tc():
     return TC
 
 
+def _td():
+    """a página dos dragões (etapa 4b), ou None se ainda não existe"""
+    try: import tabelas_dragoes as TD
+    except ModuleNotFoundError as x:
+        if x.name != 'tabelas_dragoes': raise
+        return None
+    return TD
+
+
 def especie(e):
-    """o registro da espécie: um bicho (tabelas_bichos.ESPECIES) ou uma criatura (tabelas_criaturas.ESPECIES)"""
+    """o registro da espécie: um bicho (tabelas_bichos.ESPECIES), uma criatura (tabelas_criaturas.ESPECIES) ou um dragão (tabelas_dragoes.ESPECIES, etapa 4b)"""
     if e in TB.ESPECIES: return TB.ESPECIES[e]
     TC = _tc()
     if TC and e in TC.ESPECIES: return TC.ESPECIES[e]
-    sys.exit(f'espécie desconhecida: "{e}" (as que existem: {", ".join(list(TB.ESPECIES) + (list(TC.ESPECIES) if TC else []))})')
+    TD = _td()
+    if TD and e in TD.ESPECIES: return TD.ESPECIES[e]
+    sys.exit(f'espécie desconhecida: "{e}" (as que existem: {", ".join(list(TB.ESPECIES) + (list(TC.ESPECIES) if TC else []) + (list(TD.ESPECIES) if TD else []))})')
 
 
 def _povo_ou_chefe(esp):
@@ -102,16 +116,28 @@ def bando(esp, sorte=None, n=None, primeiro=1, **mais):
     return out
 
 
-def despojo(esp, sorte=None):
+def na_cat(bem, cat_esp, cat):
+    """O DESPOJO PELA CATEGORIA DE QUEM MORREU (etapa 4b, o defeito achado pelo projeto A, consertado em toda parte): a matéria que está na categoria da espécie
+    (até a Rara) vai para a categoria de quem morreu (até a Rara); a que a tabela põe noutra categoria anda junto, a mesma distância (de 0 à Rara). O bem sem categoria
+    (a comida, o pano) fica como está. Sem `cat`, ou na categoria da espécie, é a tabela de hoje."""
+    n, c = M.le_materia(bem)
+    if c is None or cat is None or cat == cat_esp: return bem
+    alvo = cat if c == min(cat_esp, M.MATERIA_ATE) else c + (cat - cat_esp)
+    return M.materia(n, max(0, min(M.MATERIA_ATE, alvo)))
+
+
+def despojo(esp, sorte=None, cat=None):
     """o que o bicho morto rende: ({bem: quantidade}, o núcleo). A luta estraga: de cada bem sai de metade ao inteiro da tabela.
-    O núcleo (só o chefe dá, sempre) é o registro pronto para o ['item', 'nasce', registro]: falta pôr o dono ou o lugar."""
-    if esp not in TB.ESPECIES:
+    O núcleo (só o chefe dá, e só do Épico para cima: tabelas_bichos.NUCLEO_DESDE) é o registro pronto para o ['item', 'nasce', registro]: falta pôr o dono ou o lugar.
+    `cat`: a categoria de quem morreu (etapa 4b; na luta, o cat_corpo do lutador): a matéria e o núcleo saem nela. Sem ela, a da espécie (a tabela de hoje)."""
+    TC = _tc()
+    if esp not in TB.ESPECIES and TC and esp in TC.ESPECIES:
         import criaturas
-        return criaturas.despojo(esp, sorte)
-    e = especie(esp); r = sorte or random.SystemRandom(); bens = {}
+        return criaturas.despojo(esp, sorte, cat=cat)
+    e = especie(esp); r = sorte or random.SystemRandom(); bens = {}; c = e['cat'] if cat is None else cat_i(cat)
     for bem, q in e['despojo'].items():
-        lo = max(1, math.ceil(q * TB.DESPOJO_MIN)); bens[bem] = lo if lo >= q else r.randint(lo, q)
-    nucleo = item('nucleo', e['cat'], f"núcleo de {e['nome']}", de=esp) if e['nucleo'] else None
+        lo = max(1, math.ceil(q * TB.DESPOJO_MIN)); k = na_cat(bem, e['cat'], c); bens[k] = bens.get(k, 0) + (lo if lo >= q else r.randint(lo, q))
+    nucleo = item('nucleo', c, f"núcleo de {e['nome']}", de=esp) if e['nucleo'] and c >= TB.NUCLEO_DESDE else None
     return bens, nucleo
 
 

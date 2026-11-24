@@ -615,7 +615,9 @@ def main():
     import importlib
     for nome, titulo in (('provas_mercado', 'etapa 2: o mercado'), ('provas_oficio', 'etapa 2: o ofício'), ('provas_caca', 'etapa 2: a caça e a coleta'),
                          ('provas_talento', 'etapa da magia: o alicerce (os dons e os talentos; os verbos, os tipos e os ganchos)'),
-                         ('provas_magia', 'etapa da magia: o mundo da magia'), ('provas_criaturas', 'etapa da magia: as criaturas e a vila')):     # os que ainda não existem ficam de fora
+                         ('provas_magia', 'etapa da magia: o mundo da magia'), ('provas_criaturas', 'etapa da magia: as criaturas e a vila'),
+                         ('provas_4b', 'etapa 4b: o alicerce (o vocabulário comum: os campos, os verbos, os invariantes; o despojo pela categoria; o 17º caminho; a luta de quem tem o traço)'),
+                         ('provas_masmorra', 'etapa 4b: a masmorra'), ('provas_manha', 'etapa 4b: o ladino'), ('provas_povos', 'etapa 4b: os povos'), ('provas_dragoes', 'etapa 4b: os dragões')):     # os que ainda não existem ficam de fora
         try: mod = importlib.import_module(nome)
         except ModuleNotFoundError as e:
             if e.name != nome: raise

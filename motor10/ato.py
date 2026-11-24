@@ -277,6 +277,9 @@ def vestir(E, pid, iid, uso=None):
     if uso == 'veste': saem += [o for o in eq['veste'] if o['id'] != iid and set(o.get('cobre') or []) & set(it.get('cobre') or [])]
     for o in ([it] if it.get('uso') else []) + saem:         # a peça maldita presa não muda de lugar nem dá lugar a outra (antes de montar o evento, em palavras simples)
         if presa_diz(E, pid, o): sys.exit(presa_diz(E, pid, o) + ('' if o is it else f" {it['nome']} não entra no lugar dela."))
+    for mod in estado.modulos('pode_vestir'):              # ANTES de montar o evento (etapa 4b): o que os módulos recusam (a armadura de outro corpo), em palavras simples
+        t = mod.pode_vestir(E, pid, iid)
+        if t: sys.exit(t)
     ef = [['item', o['id'], 'uso', 'poe', None] for o in saem] + [['item', iid, 'uso', 'poe', uso]]
     verbo = 'veste' if uso == 'veste' else 'põe' if uso == 'pescoco' else 'empunha'
     estado.aplica(E, 'vestir', ef, onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} {verbo} {it['nome']}" + (f" (guarda {', '.join(o['nome'] for o in saem)})" if saem else ''))

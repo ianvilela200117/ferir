@@ -393,7 +393,8 @@ def _ficha_magia(n):
 
 
 def _save_antigo(n):
-    """o save do jogador (ensaio/) abre com o motor novo: numa CÓPIA, o estado está inteiro, a MESA sai, a ficha sai, ninguém tem talento rolado (é o save de antes)"""
+    """o save do jogador (ensaio/) abre com o motor novo: numa CÓPIA, o estado está inteiro, a MESA sai, a ficha sai; o talento: ninguém rolado (o save de antes da magia) ou todos
+    os vivos rolados (depois do `vila_teste.py magia`, que o jogador pôs no turno 5)"""
     src = os.path.join(AQUI, 'ensaio')
     if not os.path.exists(os.path.join(src, 'relogio.json')): return [('A9 O SAVE ANTIGO ABRE', 'não há save em ensaio/ para conferir', True)]
     d = tempfile.mkdtemp(prefix='m10_tal_save_'); antes = os.environ.get('MOTOR10_MUNDO')
@@ -401,9 +402,9 @@ def _save_antigo(n):
         shutil.copytree(src, os.path.join(d, 'save')); os.environ['MOTOR10_MUNDO'] = os.path.join(d, 'save')
         E = estado.carrega(); P = estado.valida(E); txt = turno.mesa(E); pid = estado.eu(E)
         linha = pessoas.linha(ficha(estado.lutador(E, pid, visivel=True))) if E['gente'][pid]['estado'] == 'vivo' else '(morto)'
-        rolados = sum(1 for p in E['gente'].values() if talento.rolado(p))
-        return [('A9 O SAVE ANTIGO ABRE (o ensaio/ do jogador, numa cópia: nada é escrito nele): o estado está inteiro, a MESA e a ficha saem, e ninguém tem talento rolado (é o save de antes; a magia entra nele pelo vila_teste.py magia)',
-                 f"{len(E['gente'])} pessoas, {len(E['itens']['itens'])} itens; estado {'inteiro' if not P else 'QUEBRADO: ' + P[0]}; MESA de {len(txt)} letras; ficha: {linha.splitlines()[0][:70]}; talentos rolados: {rolados}", not P and rolados == 0 and len(txt) > 200)]
+        rolados = sum(1 for p in E['gente'].values() if p.get('estado') == 'vivo' and talento.rolado(p)); vivos = sum(1 for p in E['gente'].values() if p.get('estado') == 'vivo')
+        return [('A9 O SAVE ANTIGO ABRE (o ensaio/ do jogador, numa cópia: nada é escrito nele): o estado está inteiro, a MESA e a ficha saem, e o talento ou não foi rolado em ninguém (o save de antes da magia) ou foi em todos os vivos (depois do vila_teste.py magia)',
+                 f"{len(E['gente'])} pessoas, {len(E['itens']['itens'])} itens; estado {'inteiro' if not P else 'QUEBRADO: ' + P[0]}; MESA de {len(txt)} letras; ficha: {linha.splitlines()[0][:70]}; talentos rolados: {rolados} de {vivos} vivos", not P and rolados in (0, vivos) and len(txt) > 200)]
     finally:
         os.environ.pop('MOTOR10_MUNDO', None)
         if antes is not None: os.environ['MOTOR10_MUNDO'] = antes

@@ -221,3 +221,11 @@ def nome_feitico(k): return k if k == 'mau-olhado' else k.replace('-', ' ')     
 # OS TRAÇOS NOVOS (a lista fechada que a luta roda nesta etapa). NÃO entram no tabelas_bichos.TRACOS (a meta da etapa 2 sobre a lista dos bichos fica como está):
 # a frase de cada um mora na página das criaturas (tabelas_criaturas.TRACOS); os números, na página da magia na luta (tabelas_magia)
 TRACOS_NOVOS = ('resiste', 'imaterial', 'amaldiçoa', 'lança', 'sem vida', 'ossos', 'dreno', 'ardente', 'noturno')
+
+# ---------- a etapa 4b (as masmorras e o mundo de fantasia; o contrato: projeto/ETAPA_4B.md) ----------
+# O GOLPE PELAS COSTAS (E1 a): quem tem a manha de Treinado (4) ou mais dá, na primeira rodada, contra o lado surpreendido, o primeiro golpe de corpo a corpo da luta
+# com +4 no acerto e os dados rolados 3 vezes (vale uns 11 pontos, como o Grande Dom; a arma uma acima segue vencendo). Não derruba.
+COSTAS = dict(desde=4, acerto=4, dados=3)
+# OS TRAÇOS DO POVO (a lista fechada nova, da etapa 4b): NÃO entram no tabelas_bichos.TRACOS nem no TRACOS_NOVOS (não ligam a luta de magia).
+# A frase de cada um mora no tabelas_povos.TRACOS; os números (a fração do escuro e do veneno que ainda pesa), no tabelas_povos (ESCURO, VENENO)
+TRACOS_POVO = ('vê no escuro', 'resiste a veneno')

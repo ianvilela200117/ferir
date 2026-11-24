@@ -18,7 +18,7 @@ Uso em código (o que as outras frentes chamam):
   bando(especie, sorte=None, n=None, primeiro=1, **mais)   os que andam juntos (a patrulha do povo: o bando_postos da espécie; o corpo: como o bicho)
   chefe(qual, lacaios=True, **mais)                   o chefe e os lacaios, prontos para a luta (o primeiro é o chefe)
   toca(E, lid, n=None)                                quem está na toca (o chefe e a guarda, o líder, e o resto pelos postos)
-  despojo(especie, sorte=None)                        ({bem: quantos}, None): a sucata do povo; o corpo pela tabela (o bicho de veneno dá peçonha)
+  despojo(especie, sorte=None, cat=None)              ({bem: quantos}, None): a sucata do povo; o corpo pela tabela (o bicho de veneno dá peçonha); com `cat`, na categoria de quem morreu
   ameaca(especie, n=None, arma=None, armadura=None)   a frase que se lê antes da luta (o bichos.ameaca chama daqui para o povo)
   poe_covil(E, lid, especie, ...) · virada(E) · so_mestre(E) · voce(E)
 Uso de linha de comando (só olha, a não ser o `covil poe`):
@@ -212,12 +212,15 @@ def chefe(qual, lacaios=True, **mais):
 
 
 # ---------- o despojo ----------
-def despojo(esp, sorte=None):
+def despojo(esp, sorte=None, cat=None):
     """o que a criatura morta rende: ({bem: quantidade}, None). A luta estraga: de cada bem sai de metade ao inteiro da tabela (como no bicho).
-    O povo rende a sucata das peças (a peça é gasta e malfeita); o morto que anda, o osso; o bicho de veneno, a peçonha (está na tabela da espécie)."""
-    e = especie(esp); r = sorte or random.SystemRandom(); bens = {}
+    O povo rende a sucata das peças (a peça é gasta e malfeita); o morto que anda, o osso; o bicho de veneno, a peçonha (está na tabela da espécie).
+    O DESPOJO PELA CATEGORIA DE QUEM MORREU (etapa 4b): com `cat` (na luta, o cat_corpo do lutador), a matéria sai na categoria dele (bichos.na_cat): o cavaleiro da cova
+    feito Comum rende metal Comum, o esqueleto feito Raro, sucata Rara. Sem ela, a tabela de hoje."""
+    from bichos import na_cat
+    e = especie(esp); r = sorte or random.SystemRandom(); bens = {}; c = e['cat'] if cat is None else cat_i(cat)
     for bem, q in e['despojo'].items():
-        lo = max(1, math.ceil(q * TB.DESPOJO_MIN)); bens[bem] = lo if lo >= q else r.randint(lo, q)
+        lo = max(1, math.ceil(q * TB.DESPOJO_MIN)); k = na_cat(bem, e['cat'], c); bens[k] = bens.get(k, 0) + (lo if lo >= q else r.randint(lo, q))
     return bens, None
 
 

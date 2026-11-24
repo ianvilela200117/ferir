@@ -28,6 +28,13 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['maldicao', id, 'poe', registro]  ·  ['maldicao', id, MID, 'passo'|'quebra'|'sabe'|'suspensa'|'condicao', valor]
     ['item', id, 'encanto', 'grava', registro] · ['item', id, 'encanto', 'gasta'|'apaga', indice] · ['item', id, 'maldita'|'benta'|'veneno', 'poe', valor]
     (os tipos novos de item: foco, amuleto, elixir, escrito; os usos novos: foco, pescoco; no lugar: botica, runas, santuario, maldito, covil)
+  OS DA ETAPA 4b (as masmorras e o mundo de fantasia; a forma exata: projeto/ETAPA_4B.md, seção 6):
+    ['pessoa', id, 'povo'|'idade', 'poe', valor] (só em gera ou mestre) · ['pessoa', id, 'inclinacao2', 'poe', caminho] (só em gera, mestre ou talento)
+    · ['pessoa', id, 'marca.masmorra', 'poe', {...}] (a descida aberta) · ['item', id, 'talhe', 'poe', 'miúdo' | None] (só armadura: o corpo para que foi feita)
+    (os tipos novos de item: gazua, chave; o bem novo: tocha; no lugar: a masmorra e a sala (molde, niveis, entrada, portas, alarme, vagantes, limpa, origem; masmorra, nivel,
+    largura, acesa, cat, atento, armadilhas, guardado, segredos, chefe), a gente (povos) e o dragão (dragao))
+  QUEM ESTÁ NUMA DESCIDA (marca.masmorra) também está FORA: `fora()` diz a sala onde o grupo está. A morte lá dentro deixa tudo na sala; quem comanda e morre solta quem ia junto.
+  A ARMADURA É FEITA PARA UM CORPO (o `talhe`: sem ele, de gente; "miúdo"): a que não serve no corpo do dono não entra em uso. (O `corpo` de uma peça solta é outra coisa: de quem era o morto.)
   A PEÇA MALDITA NÃO SAI: enquanto o dono tem uma maldição andando que veio dela, a peça não sai de uso nem muda de dono. O morto não tem maldição andando
     (elas vão para a morte dele). A ferida funda some quando o PV enche.
   O ITEM SEM DONO está num lugar (`onde`). Ali ele é da LOJA (a prateleira), a não ser que esteja SOLTO (`solto`): caído no chão, de quem achar.
@@ -57,7 +64,7 @@ import tabelas_talento as TT
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARQS = ('relogio', 'lugares', 'gente', 'itens', 'turno')
 PARTES_VESTE = ('arma', 'arma2', 'escudo', 'veste', 'foco', 'pescoco')
-TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito')      # os tipos do Livro de Itens (os quatro últimos: etapa da magia)
+TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave')      # os tipos do Livro de Itens (foco a escrito: etapa da magia; gazua e chave: etapa 4b)
 USO_DO_TIPO = dict(arma='arma', arma2='arma', escudo='escudo', veste='armadura', foco='foco', pescoco='amuleto')     # onde cada uso pede que tipo de peça
 COM_ENCANTO = ('arma', 'armadura', 'escudo')        # as peças que levam encanto (o foco e o amuleto já são magia)
 TALENTO_EVENTOS = ('gera', 'mestre', 'talento')     # só nestes eventos se grava o talento e o dom (o talento já rolado, só em "mestre")
@@ -114,9 +121,29 @@ def eu(E):
 
 # ---------- onde a pessoa está, e o arquivo de uma luta ----------
 def fora(E, pid):
-    """o id do ermo onde a pessoa está, se SAIU do lugar onde mora (a saída de caça ou de coleta, escrita em marca.caca); senão None"""
+    """o lugar onde a pessoa está, se SAIU do lugar onde mora: o ermo da saída de caça ou de coleta (marca.caca), ou a sala da descida aberta (marca.masmorra,
+    etapa 4b: a sala de quem comanda); senão None"""
     s = (E['gente'][pid].get('marca') or {}).get('caca')
-    return s['ermo'] if isinstance(s, dict) and s.get('ermo') in E['lugares'] else None
+    if isinstance(s, dict) and s.get('ermo') in E['lugares']: return s['ermo']
+    d = descida(E, pid)
+    return d['sala'] if d else None
+
+
+def quem_desce(E, pid):
+    """o id de quem comanda a descida aberta em que a pessoa está (ela mesma, se comanda), ou None (etapa 4b: marca.masmorra; quem vai junto tem {"de": quem comanda})"""
+    p = E['gente'].get(pid) if isinstance(pid, str) else None
+    d = (p.get('marca') or {}).get('masmorra') if isinstance(p, dict) and isinstance(p.get('marca'), dict) else None
+    if not isinstance(d, dict): return None
+    if d.get('de') is None: return pid if d.get('sala') in E['lugares'] else None
+    q = E['gente'].get(d['de']) if isinstance(d['de'], str) else None
+    dq = (q.get('marca') or {}).get('masmorra') if isinstance(q, dict) and isinstance(q.get('marca'), dict) else None
+    return d['de'] if isinstance(dq, dict) and dq.get('de') is None and dq.get('sala') in E['lugares'] else None
+
+
+def descida(E, pid):
+    """a descida aberta em que a pessoa está: o registro de quem comanda (marca.masmorra: "masmorra", "sala", "com", "ordem", "lances", "luz", "fase", "luta"...), ou None"""
+    k = quem_desce(E, pid)
+    return E['gente'][k]['marca']['masmorra'] if k else None
 
 
 def onde(E, pid): return fora(E, pid) or E['gente'][pid]['lugar']          # onde o corpo está agora: no ermo da saída, ou no lugar onde mora
@@ -171,8 +198,10 @@ def luta_diz(E):
     arq = luta_aberta(E)
     if not arq: return None
     dono = next((k for k, p in E['gente'].items() if isinstance(p, dict) and isinstance((p.get('marca') or {}).get('caca'), dict) and p['marca']['caca'].get('luta') == arq), None)
-    quem = f' quem={dono}' if dono and dono != eu(E) else ''
-    if dono: acaba, solta = f'`caca.py luta "Nome: ordem"{quem}`', f'`caca.py larga "por quê"{quem}`'
+    desce = None if dono else next((k for k, p in E['gente'].items() if isinstance(p, dict) and isinstance((p.get('marca') or {}).get('masmorra'), dict) and p['marca']['masmorra'].get('luta') == arq), None)
+    quem = f' quem={dono or desce}' if (dono or desce) and (dono or desce) != eu(E) else ''
+    if desce: acaba, solta = f'`masmorra.py luta "Nome: ordem"{quem}`', f'`masmorra.py larga "por quê"{quem}`'
+    elif dono: acaba, solta = f'`caca.py luta "Nome: ordem"{quem}`', f'`caca.py larga "por quê"{quem}`'
     else: acaba, solta = f'`ato.py luta roda {arq} "Nome: ordem"`', f'`ato.py luta larga {arq} "por quê"`'
     return f"há uma luta aberta ({arq}): enquanto ela não acabar, nada mais anda no mundo. Para seguir a luta: {acaba}. Se o arquivo se perdeu ou a cena mudou, o Mestre a solta: {solta}."
 
@@ -184,9 +213,9 @@ def sem_luta(E):
 
 
 def _nota_da_luta(E, efeitos):
-    """os efeitos são só a nota da saída de caça dizendo que ela está NAQUELA luta aberta? (é o que a caça escreve logo ao abrir a luta: não mexe em tempo, prata nem peça)"""
+    """os efeitos são só a nota da saída de caça (ou da descida, etapa 4b) dizendo que ela está NAQUELA luta aberta? (é o que se escreve logo ao abrir a luta: não mexe em tempo, prata nem peça)"""
     abertas = [l['arq'] for l in E['turno'].get('lutas', []) if not l.get('fim')]
-    return bool(efeitos) and all(isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] == 'marca.caca' and ef[3] == 'poe' and isinstance(ef[4], dict)
+    return bool(efeitos) and all(isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in ('marca.caca', 'marca.masmorra') and ef[3] == 'poe' and isinstance(ef[4], dict)
                                  and ef[4].get('fase') == 'luta' and ef[4].get('luta') in abertas for ef in efeitos)
 
 
@@ -196,6 +225,7 @@ def presente(E, pid, o_que='agir aqui'):
     if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não age: {morte_diz(E, p)}")
     sem_luta(E)
     f = fora(E, pid)
+    if f and quem_desce(E, pid): sys.exit(f"{p['nome']} está {em(E, f)}, na descida (a descida está aberta): não pode {o_que}. `masmorra.py ver` diz onde o grupo está; `masmorra.py sair` volta para casa.")
     if f: sys.exit(f"{p['nome']} está fora, {em(E, f)} (a saída está aberta): não pode {o_que}. `caca.py ver` diz o que há à frente; `caca.py volta` fecha a saída.")
     em_cena(E, pid)
     return E['gente'][pid]
@@ -244,18 +274,55 @@ def e_pocao(b): n, c = M.le_materia(b); return n in M.POCOES and c is not None a
 
 _TC = 0
 def especie(k):
-    """o registro da espécie que a contagem do ermo e o encontro da caça aceitam: a dos bichos (tabelas_bichos.ESPECIES) ou a das criaturas (tabelas_criaturas.ESPECIES,
-    se a página existir; etapa da magia); None se não há"""
-    global _TC
+    """o registro da espécie que a contagem do ermo e o encontro da caça aceitam: a dos bichos (tabelas_bichos.ESPECIES), a das criaturas (tabelas_criaturas.ESPECIES,
+    se a página existir; etapa da magia) ou a dos dragões (tabelas_dragoes.ESPECIES, etapa 4b); None se não há"""
     if k in TB.ESPECIES: return TB.ESPECIES[k]
-    if _TC == 0:
-        try: import tabelas_criaturas as _m
+    mais = getattr(_tc(), 'ESPECIES', None)
+    if isinstance(mais, dict) and isinstance(k, str) and k in mais: return mais[k]
+    dr = getattr(_td(), 'ESPECIES', None)
+    return dr.get(k) if isinstance(dr, dict) and isinstance(k, str) else None
+
+
+_PAGINAS = {}
+def _pagina(nome):
+    """uma página de números da etapa 4b (tabelas_povos, tabelas_dragoes), importada uma vez só, ou None se ainda não existe"""
+    if nome not in _PAGINAS:
+        import importlib
+        try: _PAGINAS[nome] = importlib.import_module(nome)
         except ModuleNotFoundError as e:
-            if e.name != 'tabelas_criaturas': raise
-            _m = None
-        _TC = _m
-    mais = getattr(_TC, 'ESPECIES', None) if _TC else None
-    return mais.get(k) if isinstance(mais, dict) and isinstance(k, str) else None
+            if e.name != nome: raise
+            _PAGINAS[nome] = None
+    return _PAGINAS[nome]
+def _tc():
+    """a página das criaturas (etapa da magia), ou None"""
+    global _TC
+    if _TC == 0: _TC = _pagina('tabelas_criaturas')
+    return _TC
+def _tp(): return _pagina('tabelas_povos')
+def _td(): return _pagina('tabelas_dragoes')
+
+
+# ---------- a etapa 4b: o povo e o corpo da pessoa (leia sempre por aqui; os números: tabelas_povos) ----------
+def povo(p):
+    """o povo da pessoa: o nome; "humano" se ela não tem o campo (o save antigo, a gente de hoje)"""
+    v = p.get('povo') if isinstance(p, dict) else None
+    return v if isinstance(v, str) and v else 'humano'
+
+
+def _povo_reg(p):
+    """o registro do povo da pessoa (tabelas_povos.POVOS), ou {} (o humano, ou sem a página)"""
+    TP = _tp(); r = TP.POVOS.get(povo(p)) if TP else None
+    return r if isinstance(r, dict) else {}
+
+
+def corpo_de(p):
+    """o corpo da pessoa: "gente" ou "miúdo" (o do povo dela)"""
+    return _povo_reg(p).get('corpo') or 'gente'
+
+
+def serve(it, p):
+    """a peça serve no corpo desta pessoa? Só a armadura tem corpo (sem o campo: de gente); a arma, o escudo e o resto servem em todo corpo"""
+    return not isinstance(it, dict) or it.get('tipo') != 'armadura' or (it.get('talhe') or 'gente') == corpo_de(p)
 
 
 _MODS = None
@@ -302,6 +369,7 @@ def _lugar_erro(E, raiz, sub, val):
         if 'prata' in d: return 'o covil não guarda prata: o tesouro do covil é a prata do estoque do ermo'
         if 'cabecas' in d and not (_int(d['cabecas']) and d['cabecas'] >= 0): return 'as cabeças do covil são um número inteiro de zero para cima'
         return None
+    if raiz in CAMPOS_4B: return _lugar4b_erro(E, raiz, sub, val)
     if sub: return None
     if raiz in ('botica', 'runas', 'santuario'): return None if val is None or (_int(val) and 0 <= val <= M.BANCADA_MAX) else f'"{raiz}" vai de 0 a {M.BANCADA_MAX}, ou nada'
     if raiz == 'maldito': return None if val is None else _molde_erro(val)
@@ -312,6 +380,109 @@ def _lugar_erro(E, raiz, sub, val):
     if raiz == 'perigo': return None if _int(val) and 1 <= val <= M.PERIGO_MAX else f'o perigo vai de 1 a {M.PERIGO_MAX}'
     if raiz == 'vizinhos': return None if isinstance(val, list) and all(v in E['lugares'] for v in val) else 'os vizinhos são uma lista de lugares que existem'
     if raiz == 'cama': return None if isinstance(val, bool) else 'a cama é sim ou não'
+    return None
+
+
+# ---------- a etapa 4b no lugar: a masmorra, a sala, a gente e o dragão (a forma de cada campo; as ligações entre lugares são do valida) ----------
+CAMPOS_MASMORRA = ('molde', 'niveis', 'entrada', 'portas', 'alarme', 'vagantes', 'limpa', 'origem')
+CAMPOS_SALA = ('masmorra', 'nivel', 'largura', 'acesa', 'cat', 'atento', 'armadilhas', 'guardado', 'segredos', 'chefe')
+CAMPOS_4B = CAMPOS_MASMORRA + CAMPOS_SALA + ('povos', 'dragao')
+
+
+def _cat_ok(c): return _int(c) and 0 <= c < len(T.CATS)
+
+
+def _chefe_ok(q):
+    """um chefe que a tabela conhece: um dos tabelas_criaturas.CHEFES, ou uma espécie (bicho, criatura) que é chefe. O dragão não: a sala dele leva `dragao`"""
+    if not isinstance(q, str) or not q: return False
+    ch = getattr(_tc(), 'CHEFES', None)
+    return (isinstance(ch, dict) and q in ch) or bool((especie(q) or {}).get('chefe'))
+
+
+def _porta_erro(k, v):
+    a, sep, b = k.partition('|') if isinstance(k, str) else ('', '', '')
+    if not (sep and a and b and a < b): return f'a porta "{k}" se chama pelas duas salas, em ordem alfabética: "SALA_A|SALA_B"'
+    if not isinstance(v, dict) or v.get('estado') not in M.PORTAS: return f'a porta é {{estado: {" | ".join(M.PORTAS)}, material, cat, fechadura}}'
+    if v.get('material', 'madeira') not in M.PORTA_MATERIAL: return f'o material da porta é um de: {", ".join(M.PORTA_MATERIAL)}'
+    if not _cat_ok(v.get('cat', 0)) or not (v.get('fechadura') is None or _cat_ok(v['fechadura'])): return 'a categoria da porta e a da fechadura vão de 0 a 7 (a fechadura pode ser nada)'
+    if not isinstance(v.get('miudos', False), bool): return '"miudos" (só passa o corpo miúdo) é sim ou não'
+    return None
+
+
+def _armadilha_erro(a):
+    if not isinstance(a, dict) or a.get('tipo') not in M.ARMADILHAS or not _cat_ok(a.get('cat')): return f'cada armadilha é {{tipo: um de {", ".join(M.ARMADILHAS)}, cat: 0 a 7, onde, achada, feita}}'
+    o = a.get('onde', 'chão')
+    if not (o in M.ARMADILHA_ONDE or (isinstance(o, str) and o.startswith('porta:') and len(o) > 6)): return 'a armadilha fica no "chão", no "guardado" ou na "porta:SALA"'
+    if not (a.get('achada') is None or _int(a['achada'])) or a.get('feita') not in (None,) + M.ARMADILHA_FEITA: return f'"achada" é um dia (ou nada) e "feita" é {" ou ".join(M.ARMADILHA_FEITA)} (ou nada)'
+    return None
+
+
+def _dragao_erro(E, d):
+    """o registro do dragão de um lugar (frente D): a forma que o gravador confere"""
+    TD = _td()
+    if TD is None: return 'não há a página dos dragões (tabelas_dragoes)'
+    if not isinstance(d, dict) or not isinstance(d.get('nome'), str) or not d['nome']: return 'o dragão é um registro {nome, tipo, idade, pv, dorme_ate, punhados, vila, ...}, ou nada'
+    if 'prata' in d: return 'o dragão não guarda prata: o tesouro é o estoque do lugar e as peças guardadas nele'
+    if d.get('tipo') not in TD.TIPOS or d.get('idade') not in TD.IDADES: return f'o dragão tem um tipo ({", ".join(TD.TIPOS)}) e uma idade ({", ".join(TD.IDADES)})'
+    if 'pv' in d and not (_int(d['pv']) and d['pv'] >= 1): return 'o PV do dragão é um número inteiro de 1 para cima (sem o campo: cheio)'
+    if not (d.get('dorme_ate') is None or _int(d['dorme_ate'])) or not (_int(d.get('punhados', 0)) and d.get('punhados', 0) >= 0): return '"dorme_ate" é um dia (ou nada) e "punhados" um inteiro de zero para cima'
+    if d.get('vila') is not None and d['vila'] not in E['lugares']: return f'não há o lugar "{d["vila"]}" (a vila do dragão)'
+    return None
+
+
+def _lugar4b_erro(E, raiz, sub, val):
+    """o que um campo da etapa 4b no lugar aceita (None: aceita); com `sub`, a parte (portas.SALA_A|SALA_B, vagantes.ESPECIE, povos.POVO, dragao.CAMPO)"""
+    if raiz == 'portas':
+        d = {sub: val} if sub else val
+        if not isinstance(d, dict): return 'as portas são {"SALA_A|SALA_B": porta}'
+        return next((e for e in (_porta_erro(k, v) for k, v in d.items()) if e), None)
+    if raiz == 'vagantes':
+        d = {sub: val} if sub else val
+        if not isinstance(d, dict): return 'os que vagueiam são {espécie: quantos}'
+        return next((f'espécie desconhecida: "{k}"' if not especie(k) else f'"vagantes.{k}" é um inteiro de zero para cima' for k, v in d.items() if not especie(k) or not (_int(v) and v >= 0)), None)
+    if raiz == 'povos':
+        d = {sub: val} if sub else val
+        TP = _tp()
+        if not isinstance(d, dict) or any(TP is None or k not in TP.POVOS or not _num(v) or not 0 <= v <= 1 for k, v in d.items()): return 'a gente do lugar é {povo: fração de 0 a 1}, com os povos da tabela (tabelas_povos.POVOS)'
+        if not sub and sum(d.values()) > 1 + 1e-9: return f'as frações da gente do lugar somam até 1 (somam {sum(d.values()):g})'
+        return None
+    if raiz == 'dragao':
+        if sub == 'pv': return None if _int(val) and val >= 1 else 'o PV do dragão é um número inteiro de 1 para cima'
+        if sub == 'punhados': return None if _int(val) and val >= 0 else 'os punhados são um inteiro de zero para cima'
+        if sub: return None
+        return None if val is None else _dragao_erro(E, val)
+    if sub: return None
+    if raiz == 'molde': return None if val in M.MOLDES else f'o molde da masmorra é um de: {", ".join(M.MOLDES)}'
+    if raiz == 'niveis':
+        if not isinstance(val, list) or not val: return 'os níveis são [{n: 1, cat: 0, salas: [ids]}, ...]'
+        for i, x in enumerate(val, 1):
+            if not isinstance(x, dict) or x.get('n') != i or not _cat_ok(x.get('cat')) or not isinstance(x.get('salas'), list) or not all(isinstance(s, str) for s in x['salas']):
+                return 'os níveis são [{n: 1, cat: 0, salas: [ids]}, {n: 2, ...}], em ordem, com a categoria de 0 a 7'
+        return None
+    if raiz in ('entrada', 'masmorra'): return None if isinstance(val, str) and val else f'"{raiz}" é o id de um lugar'
+    if raiz == 'alarme': return None if _int(val) and 0 <= val <= M.ALARME_MAX else f'o alarme vai de 0 a {M.ALARME_MAX}'
+    if raiz == 'limpa': return None if val is None or (isinstance(val, dict) and _int(val.get('dia')) and isinstance(val.get('quem', []), list)) else 'a primeira limpeza é {dia, quem: [ids], chefe}, ou nada'
+    if raiz == 'origem': return None if isinstance(val, str) else 'a origem é texto'
+    if raiz == 'nivel': return None if _int(val) and val >= 1 else 'o nível da sala é um inteiro de 1 para cima'
+    if raiz == 'largura': return None if val is None or (_int(val) and val >= 1) else 'a largura é um inteiro de 1 para cima (1: corredor), ou nada (sala aberta)'
+    if raiz == 'acesa': return None if isinstance(val, bool) else '"acesa" é sim ou não'
+    if raiz == 'cat': return None if _cat_ok(val) else 'a categoria da sala vai de 0 a 7'
+    if raiz == 'atento': return None if val in M.ATENTOS and _int(val) else 'quem mora na sala está −1 (dormindo), 0 (à toa) ou 1 (alerta)'
+    if raiz == 'armadilhas':
+        if not isinstance(val, list): return 'as armadilhas são uma lista'
+        return next((e for e in (_armadilha_erro(a) for a in val) if e), None)
+    if raiz == 'guardado':
+        if val is None: return None
+        if not isinstance(val, dict) or not isinstance(val.get('nome'), str) or not val['nome'] or not (val.get('fechadura') is None or _cat_ok(val['fechadura'])) or not isinstance(val.get('aberto', False), bool):
+            return 'o guardado é {nome, fechadura: categoria ou nada, aberto: sim ou não} (o que tem dentro é o estoque e as peças guardadas da sala: não se lista)'
+        return None
+    if raiz == 'segredos':
+        if not isinstance(val, list) or any(not isinstance(x, dict) or not isinstance(x.get('para'), str) or not _cat_ok(x.get('cat')) for x in val): return 'os segredos são [{para: SALA, cat: 0 a 7}]'
+        return None
+    if raiz == 'chefe':
+        if val is None: return None
+        if not isinstance(val, dict) or not _chefe_ok(val.get('qual')) or not isinstance(val.get('vivo', True), bool): return 'o chefe da sala é {qual: um chefe que a tabela conhece, vivo: sim ou não} (o dragão não: a sala dele leva "dragao")'
+        return None
     return None
 
 
@@ -334,6 +505,12 @@ def _morre(E, pid):
     if p['moedas'] > 0: est['prata'] = est.get('prata', 0) + p['moedas']; p['moedas'] = 0
     s = (p.get('marca') or {}).get('caca')
     if isinstance(s, dict) and s.get('de'): p['marca'].pop('caca')
+    d = (p.get('marca') or {}).get('masmorra')                 # A DESCIDA (etapa 4b): quem ia junto e morre sai dela; quem comanda e morre solta quem ia junto (saem sozinhos:
+    if isinstance(d, dict) and d.get('de') is not None: p['marca'].pop('masmorra')       # é cena do Mestre); a descida de quem comandava fica escrita, para a masmorra fazer as contas
+    elif isinstance(d, dict):
+        for q in E['gente'].values():
+            dq = (q.get('marca') or {}).get('masmorra') if isinstance(q, dict) and isinstance(q.get('marca'), dict) else None
+            if isinstance(dq, dict) and dq.get('de') == pid: q['marca'].pop('masmorra')
 
 
 def _nasce_pessoa(E, ef):
@@ -353,7 +530,7 @@ def _nasce_pessoa(E, ef):
     if not isinstance(ca, dict) or any(not _num(v) or v <= 0 for v in ca.values()): return _erro(ef, 'a carga é {bem: quanto}, acima de zero')
     if not _int(mo) or mo < 0: return _erro(ef, 'a prata é um número inteiro de zero para cima')
     if r.get('jogador') and any(q.get('jogador') for q in E['gente'].values()): return _erro(ef, 'já há um personagem do jogador')
-    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre') + NASCE_MAGIA]
+    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre') + NASCE_MAGIA + PESSOA_4B]
     if ruins: return _erro(ef, f'a pessoa não tem o campo "{ruins[0]}"')
     p = dict(nome=r['nome'], lugar=r['lugar'], grau_oficio=of, nivel=r['nivel'], atributos={a: at[a] for a in T.ATRIBUTOS}, maestria=dict(ma), treino=dict(tr), moedas=mo,
              corpo={m: 0 for m in M.MEDIDORES}, pv=0, feridas=[], estado='vivo', marca=copy.deepcopy(r.get('marca') or {}), carga=dict(ca))
@@ -364,6 +541,11 @@ def _nasce_pessoa(E, ef):
             e = _magia_erro(E, p, 'feiticos' if k == 'feiticos' else k, r[k])
             if e: return _erro(ef, e)
             p[k] = copy.deepcopy(r[k]) if k != 'talento' or r[k] is None else {c: g for c, g in r[k].items() if g}
+    for k in PESSOA_4B:                                     # a etapa 4b: o povo, a idade, a segunda inclinação (o povo primeiro: a idade e a inclinação dependem dele)
+        if r.get(k) is not None:
+            e = _pessoa4b_erro(E, p, k, r[k])
+            if e: return _erro(ef, e)
+            p[k] = r[k]
     if r.get('sobre'): p['sobre'] = str(r['sobre'])
     E['gente'][pid] = p
 
@@ -400,6 +582,13 @@ def _um(E, ef):
         if not isinstance(campo, str): return _erro(ef, 'o campo é um nome')
         raiz, _, sub = campo.partition('.')
         if campo in PESSOA_MAGIA: return _pessoa_magia(E, pid, p, campo, op, val, ef)
+        if campo in PESSOA_4B:
+            if op != 'poe': return _erro(ef, f'"{campo}" só aceita "poe"')
+            e = _pessoa4b_erro(E, p, campo, val) if val is not None else None
+            if e: return _erro(ef, e)
+            if val is None: p.pop(campo, None)
+            else: p[campo] = val
+            return
         if raiz == 'carga':
             if not sub or op != 'soma' or not _int(val): return _erro(ef, "a carga muda por ['pessoa', id, 'carga.BEM', 'soma', número inteiro]")
             if not bem_conhecido(sub): return _erro(ef, f'não se carrega "{sub}" (carregam-se: {", ".join(M.BENS)}; e a matéria com a categoria, de 0 a {M.MATERIA_ATE}: metal:0, couro:1...)')
@@ -410,6 +599,12 @@ def _um(E, ef):
             return
         if raiz in ('treino', 'maestria', 'marca'):
             if not sub: return _erro(ef, f'"{raiz}" pede o nome depois do ponto (treino.espada)')
+            if raiz == 'marca' and sub in ('caca', 'masmorra') and op == 'poe' and val is not None:      # UMA SAÍDA E UMA DESCIDA NÃO ANDAM JUNTAS (etapa 4b)
+                outra = 'masmorra' if sub == 'caca' else 'caca'
+                if isinstance((p.get('marca') or {}).get(outra), dict): return _erro(ef, f"{p['nome']} já está n{'a descida' if outra == 'masmorra' else 'uma saída ao ermo'} aberta: feche-a antes")
+                if sub == 'masmorra':
+                    e = _descida_erro(E, val, pid)
+                    if e: return _erro(ef, f'a descida (marca.masmorra) {e}')
             if raiz != 'marca' and sub not in T.FAMILIAS and sub not in M.OFICIOS: return _erro(ef, f'arma ou ofício desconhecido: "{sub}"')
             if raiz != 'marca' and not _num(val): return _erro(ef, f'"{campo}" é um número')
             d = p.setdefault(raiz, {})
@@ -515,7 +710,7 @@ def _um(E, ef):
         it = copy.deepcopy(ef[2])
         if not isinstance(it, dict) or it.get('tipo') not in TIPOS_ITEM or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
-        e = _item_magia_erro(it)
+        e = _item_magia_erro(it) or _item4b_erro(it)
         if e: return _erro(ef, e)
         if not (isinstance(it['dur'], list) and len(it['dur']) == 2 and all(_int(x) for x in it['dur']) and 0 <= it['dur'][0] <= it['dur'][1]): return _erro(ef, 'a durabilidade é [quanto tem, quanto cabe]')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
@@ -563,17 +758,28 @@ def _um(E, ef):
             if val is not None and not (isinstance(val, dict) and val.get('dono') and _num(val.get('grau', 0)) and T.SOB_MEDIDA_GRAUS[0] <= val.get('grau', 0) <= T.SOB_MEDIDA_GRAUS[1]): return _erro(ef, 'o sob medida é {dono, grau de 1 a 4}, ou nada')
             if it['tipo'] == 'nucleo': return _erro(ef, 'núcleo não se ajusta')
             it['sob_medida'] = val; return
+        if campo == 'talhe' and op == 'poe':                # O TALHE DA ARMADURA (etapa 4b): o corpo para que foi feita; sem o campo, de gente; "miúdo", do pequenino e do gnomo
+            if it['tipo'] != 'armadura': return _erro(ef, 'só a armadura tem talhe (a arma e o escudo servem em todo corpo)')
+            if val not in (None, 'miúdo'): return _erro(ef, 'o talhe da armadura é "miúdo", ou nada (de gente)')
+            d = E['gente'].get(it.get('dono')) if it.get('dono') else None
+            if it.get('uso') and isinstance(d, dict) and (val or 'gente') != corpo_de(d): return _erro(ef, f'{it["nome"]} está em uso e deixaria de servir em {d["nome"]}: tire-a de uso antes, no mesmo evento')
+            if val is None: it.pop('talhe', None)
+            else: it['talhe'] = val
+            return
         if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
         if campo == 'nome' and op == 'poe' and val: it['nome'] = str(val); return
         if campo == 'uso' and op == 'poe':
             if val not in (None,) + PARTES_VESTE: return _erro(ef, f'uso desconhecido: "{val}" (arma, arma2, escudo, veste, foco, pescoco ou nada)')
             if val and not it.get('dono'): return _erro(ef, 'peça sem dono não se veste')
             if val and it['tipo'] != USO_DO_TIPO[val]: return _erro(ef, f'{it["nome"]} é {it["tipo"]}: não vai em "{val}"')
+            if val == 'veste' and not serve(it, E['gente'][it['dono']]):
+                d = E['gente'][it['dono']]
+                return _erro(ef, f'{it["nome"]} é de {"gente miúda" if it.get("talhe") == "miúdo" else "gente grande"}: não serve no corpo de {d["nome"]}. Um ferreiro a ajusta (`oficio.py ajustar {it.get("id", "ITEM")} para={it["dono"]}`)')
             it['uso'] = val; return
         if campo == 'dur' and op == 'soma' and _num(val):
-            if it['tipo'] in ('nucleo', 'elixir', 'escrito'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
+            if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno (poe) · dur (soma) · historia (junta) · encanto (grava, gasta, apaga)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia (junta) · encanto (grava, gasta, apaga)')
     return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao)')
 
 
@@ -628,6 +834,69 @@ def _pessoa_magia(E, pid, p, campo, op, val, ef):
     if campo == 'talento': p['talento'] = {k: g for k, g in val.items() if g}
     elif val is None and campo in ('funda',): p.pop(campo, None)
     else: p[campo] = copy.deepcopy(val)
+
+
+# ---------- a etapa 4b na pessoa e no item (as formas: projeto/ETAPA_4B.md, seções 1, 3 e 6) ----------
+PESSOA_4B = ('povo', 'idade', 'inclinacao2')     # o povo primeiro: a idade e a segunda inclinação dependem dele
+POVO_EVENTOS = ('gera', 'mestre')               # só nestes eventos se grava o povo e a idade (a segunda inclinação: os do talento)
+
+
+def _pessoa4b_erro(E, p, campo, v):
+    """o que o povo, a idade e a segunda inclinação aceitam (None: aceita). Serve ao gravador, ao nascer e aos invariantes."""
+    if campo == 'povo':
+        TP = _tp()
+        return None if TP is not None and v in TP.POVOS else 'o povo é um da tabela (' + (', '.join(TP.POVOS) if TP else 'não há a página dos povos') + ')'
+    if campo == 'idade':
+        if not _int(v) or v < 0: return 'a idade é um número inteiro de anos, de zero para cima'
+        vida = _povo_reg(p).get('vida'); mx = vida[2] if isinstance(vida, (list, tuple)) and len(vida) > 2 else None
+        return None if mx is None or v <= mx else f'{p.get("nome", "?")} não vive {v} anos: o povo {povo(p)} vive até {mx}'
+    if campo == 'inclinacao2':
+        if v not in TT.CAMINHOS: return f'a segunda inclinação é um caminho ({", ".join(TT.CAMINHOS)})'
+        if not p.get('jogador'): return 'só o personagem do jogador tem inclinação'
+        if povo(p) != 'humano': return 'a segunda inclinação é só do personagem humano (E2 b)'
+        if v == p.get('inclinacao'): return 'a segunda inclinação é outro caminho, não o da primeira'
+    return None
+
+
+def _descida_erro(E, d, pid=None):
+    """a forma da descida aberta (marca.masmorra; a frente M guarda o resto dos campos): o texto do erro, ou None"""
+    if not isinstance(d, dict): return 'é um registro {masmorra, sala, com, ordem, lances, luz, fase, luta...} (em quem vai junto: {de: quem comanda})'
+    if d.get('de') is not None: return None if d['de'] in E['gente'] and d['de'] != pid else f'diz que foi junto com quem não há: "{d["de"]}"'
+    m = E['lugares'].get(d.get('masmorra')) if isinstance(d.get('masmorra'), str) else None
+    if not isinstance(m, dict) or m.get('tipo') != 'masmorra': return f'não diz uma masmorra que existe ("{d.get("masmorra")}")'
+    s = E['lugares'].get(d.get('sala')) if isinstance(d.get('sala'), str) else None
+    if not isinstance(s, dict) or s.get('tipo') != 'sala' or s.get('masmorra') != d['masmorra']: return f'não diz uma sala daquela masmorra ("{d.get("sala")}")'
+    if not isinstance(d.get('com', []), list) or any(c not in E['gente'] for c in d.get('com', [])): return 'tem em "com" quem não existe'
+    if not (_int(d.get('lances', 0)) and d.get('lances', 0) >= 0): return 'tem os lances fora da conta (um inteiro de zero para cima)'
+    if not isinstance(d.get('fase', ''), str): return 'tem a fase torta (é texto)'
+    if d.get('fase') == 'luta' and not isinstance(d.get('luta'), str): return 'está em luta sem o arquivo dela'
+    return None
+
+
+def _item4b_erro(it):
+    """o que a gazua, a chave e o talhe da armadura pedem (None: certo)"""
+    if it.get('talhe') is not None and (it.get('tipo') != 'armadura' or it['talhe'] != 'miúdo'): return 'o talhe só existe em armadura, e é "miúdo" (sem o campo: de gente)'
+    if it.get('tipo') == 'chave' and (not isinstance(it.get('abre'), str) or not it['abre']): return 'a chave diz o que abre: a porta ("SALA_A|SALA_B") ou o guardado de uma sala ("SALA")'
+    return None
+
+
+def _abre_ok(E, a):
+    """a chave abre uma porta que existe (das portas da masmorra das duas salas) ou o guardado de uma sala que existe?"""
+    if not isinstance(a, str) or not a: return False
+    if '|' in a:
+        s = E['lugares'].get(a.split('|', 1)[0])
+        return isinstance(s, dict) and s.get('tipo') == 'sala' and a in ((E['lugares'].get(s.get('masmorra')) or {}).get('portas') or {})
+    s = E['lugares'].get(a)
+    return isinstance(s, dict) and isinstance(s.get('guardado'), dict)
+
+
+def _so_acrescenta(p, novo):
+    """o talento novo só ACRESCENTA os caminhos que faltam à pessoa (talento.falta), sem mexer nos outros? (o caminho novo de quem já nasceu entra em gera ou talento)"""
+    import talento
+    falta = talento.falta(p)
+    if not falta or not isinstance(novo, dict) or any(k not in TT.CAMINHOS for k in novo): return False
+    velho = p.get('talento') or {}
+    return all(novo.get(c, 0) == velho.get(c, 0) for c in TT.CAMINHOS if c not in falta)
 
 
 def _molde_erro(m):
@@ -752,8 +1021,10 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
         if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in ('talento', 'dom'):
             if tipo not in TALENTO_EVENTOS: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "o talento e o dom só se gravam em evento " + ", ".join(TALENTO_EVENTOS))}')
             q = E['gente'].get(ef[1]) if isinstance(ef[1], str) else None
-            if ef[2] == 'talento' and isinstance(q, dict) and q.get('talento') is not None and tipo != 'mestre':
-                sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, q["nome"] + " já tem o talento rolado: só o Mestre o troca")}')
+            if ef[2] == 'talento' and isinstance(q, dict) and q.get('talento') is not None and tipo != 'mestre' and not _so_acrescenta(q, ef[4]):
+                sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, q["nome"] + " já tem o talento rolado: só o Mestre o troca (o caminho novo que falta entra pelo talento.rola_caminho)")}')
+        if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in PESSOA_4B and tipo not in (TALENTO_EVENTOS if ef[2] == 'inclinacao2' else POVO_EVENTOS):
+            sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "este campo só se grava em evento " + " ou ".join(TALENTO_EVENTOS if ef[2] == "inclinacao2" else POVO_EVENTOS))}')
         if tipo not in M.NASCE and isinstance(ef, (list, tuple)) and len(ef) > 1 and ef[0] in ('pessoa', 'lugar') and ef[1] == 'nasce':
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "gente e lugar só nascem em evento " + " ou ".join(M.NASCE))}')
         try: e = _um(ensaio, ef)
@@ -857,6 +1128,9 @@ def lutador(E, pid, visivel=False, **mais):
     if not visivel and mana_max(p, True) != d['mana_max']: d['mana_vista'] = mana_max(p, True)                # o dom de tradição escondido: a luta usa a Mana de verdade, a mesa mostra a que a pessoa conhece
     pl = sum(m.pena_laco(E, pid) for m in modulos('pena_laco'))
     if pl: d['pena_laco'] = pl                                                              # o laço do druida com o ermo caçado até o fim tira da Conjuração dele
+    rp = _povo_reg(p)                                       # O POVO (etapa 4b): os traços e a coragem dele vão à luta (o nome não: o "povo" do lutador é o corpo das criaturas)
+    if rp.get('tracos'): d['tracos'] = list(rp['tracos'])
+    if rp.get('coragem'): d['coragem'] = rp['coragem']
     d.update(mais)
     return d
 
@@ -903,6 +1177,20 @@ def valida(E):
         usos = [it.get('uso') for it in L.values() if isinstance(it, dict) and it.get('dono') == pid and it.get('uso') in ('arma', 'arma2', 'escudo', 'foco', 'pescoco')]
         for u in set(usos):
             if usos.count(u) > 1: P.append(f'{n} tem duas peças em "{u}"')
+        for k in PESSOA_4B:                                 # a etapa 4b: o povo, a idade, a segunda inclinação
+            if p.get(k) is not None:
+                e = _pessoa4b_erro(E, p, k, p[k])
+                if e: P.append(f'{n}: {e}')
+        mm = (p.get('marca') or {}).get('masmorra')         # A DESCIDA (etapa 4b)
+        if mm is not None:
+            if isinstance((p.get('marca') or {}).get('caca'), dict): P.append(f'{n} tem saída ao ermo e descida abertas ao mesmo tempo')
+            e = _descida_erro(E, mm, pid)
+            if e: P.append(f'{n} tem a descida (marca.masmorra) torta: {e}')
+            elif mm.get('de') is not None:
+                d = E['gente'].get(mm['de']); dd = (d.get('marca') or {}).get('masmorra') if isinstance(d, dict) else None
+                if p['estado'] == 'morto' or not isinstance(dd, dict) or dd.get('de') is not None or pid not in (dd.get('com') or []) or d.get('estado') != 'vivo':
+                    P.append(f'{n} foi junto numa descida que não existe mais (marca.masmorra)')
+            elif p['estado'] == 'morto': P.append(f'{n} morreu com a descida aberta: `masmorra.py sair quem={pid}` faz as contas e fecha (ou `masmorra.py larga "por quê" quem={pid}`)')
         s = (p.get('marca') or {}).get('caca')
         if p['estado'] == 'morto':
             if p['moedas'] or p.get('carga'): P.append(f'{n} morreu e ainda tem prata ou carga (quem morre não fica com nada)')
@@ -936,6 +1224,10 @@ def valida(E):
         if it.get('solto') and (dono or it.get('onde') is None): P.append(f'{n} consta no chão (sem dono) e tem dono, ou não tem lugar')
         if it.get('uso') and it.get('uso') not in PARTES_VESTE: P.append(f'{n} tem uso desconhecido: {it["uso"]}')
         if it.get('tipo') == 'nucleo' and (it['dur'][0] != it['dur'][1] or it.get('uso')): P.append(f'{n} é núcleo e está gasto ou em uso')
+        e = _item4b_erro(it)                                # a etapa 4b: a gazua, a chave, o talhe da armadura
+        if e: P.append(f'{n}: {e}')
+        if it.get('tipo') == 'chave' and not _abre_ok(E, it.get('abre')): P.append(f'{n} abre o que não existe: "{it.get("abre")}" (uma porta das portas da masmorra, ou o guardado de uma sala)')
+        if it.get('uso') == 'veste' and dono in E['gente'] and not serve(it, E['gente'][dono]): P.append(f'{n} está em uso e não serve no corpo de {E["gente"][dono]["nome"]} ({corpo_de(E["gente"][dono])})')
     for iid, it in L.items(): tenta(f'o item {iid}', lambda: item_(iid, it))
     def obra(oid, o):
         if o.get('quem') not in E['gente'] or E['gente'][o['quem']]['estado'] == 'morto': P.append(f'a obra {oid} é de alguém que não existe ou morreu')
@@ -963,11 +1255,58 @@ def valida(E):
             for b, q in (l.get(teto) or {}).items():
                 e = _conta_erro(teto, b, q)
                 if e: P.append(f'{n}: {e}')
-        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas', 'botica', 'runas', 'santuario', 'maldito', 'covil'):
+        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas', 'botica', 'runas', 'santuario', 'maldito', 'covil') + CAMPOS_4B:
             if campo in l:
                 e = _lugar_erro(E, campo, None, l[campo])
                 if e: P.append(f'{n}: "{campo}" errado ({json.dumps(l[campo], ensure_ascii=False)[:60]}): {e}')
+        lugar4b(lid, l, n)
+    def lugar4b(lid, l, n):                                 # A ETAPA 4b: as ligações da masmorra e das salas; nenhuma sala é vizinha do que não é sala; o dragão
+        Ls = E['lugares']; t = l.get('tipo'); viz = [v for v in (l.get('vizinhos') or []) if v in Ls]
+        if t != 'sala':
+            for v in viz:
+                if Ls[v].get('tipo') == 'sala': P.append(f'{n} tem uma sala por vizinha ({v}): só as salas da mesma masmorra se ligam (a mesa da caça nunca lista uma sala)')
+        if t == 'masmorra':
+            if l.get('molde') not in M.MOLDES: P.append(f'{n} é masmorra e não diz o molde')
+            if any(l.get(k) for k in ('bichos', 'teto', 'coleta', 'coleta_teto')): P.append(f'{n} é masmorra e tem bichos ou coleta: quem mora está nas salas (a caça a listaria como ermo)')
+            minhas = {k for k, x in Ls.items() if isinstance(x, dict) and x.get('tipo') == 'sala' and x.get('masmorra') == lid}; vistas = []
+            for nv in l.get('niveis') or []:
+                for s in nv.get('salas') or []:
+                    x = Ls.get(s); vistas.append(s)
+                    if not isinstance(x, dict) or x.get('tipo') != 'sala' or x.get('masmorra') != lid or x.get('nivel') != nv.get('n'): P.append(f'{n}: a sala {s} do nível {nv.get("n")} não existe, não é dela ou está noutro nível')
+            for s in sorted(minhas - set(vistas)): P.append(f'{n}: a sala {s} é dela e não está em nível nenhum')
+            for s in sorted({s for s in vistas if vistas.count(s) > 1}): P.append(f'{n}: a sala {s} está em dois níveis')
+            nv1 = ((l.get('niveis') or [{}])[0] or {}).get('salas') or []
+            if l.get('entrada') not in nv1: P.append(f'{n}: a entrada ({l.get("entrada")}) não é uma sala do nível 1')
+            for k in (l.get('portas') or {}):
+                a, _, b = k.partition('|'); xa, xb = Ls.get(a), Ls.get(b)
+                if not (isinstance(xa, dict) and isinstance(xb, dict) and a in minhas and b in minhas): P.append(f'{n}: a porta {k} não é de duas salas dela'); continue
+                liga = (b in (xa.get('vizinhos') or []) and a in (xb.get('vizinhos') or [])) or any(isinstance(x, dict) and x.get('para') == o for s, o in ((xa, b), (xb, a)) for x in (s.get('segredos') or []))
+                if not liga: P.append(f'{n}: a porta {k} não é de uma passagem (nem de um segredo) que existe')
+        if t == 'sala':
+            m = Ls.get(l.get('masmorra'))
+            if not isinstance(m, dict) or m.get('tipo') != 'masmorra': P.append(f'{n} é sala de uma masmorra que não existe ({l.get("masmorra")})')
+            elif not any(isinstance(nv, dict) and nv.get('n') == l.get('nivel') and lid in (nv.get('salas') or []) for nv in m.get('niveis') or []): P.append(f'{n} não está no nível que diz ({l.get("nivel")})')
+            for v in viz:
+                x = Ls[v]
+                if x.get('tipo') != 'sala' or x.get('masmorra') != l.get('masmorra'): P.append(f'{n} tem por vizinha {v}, que não é sala da mesma masmorra (a entrada liga ao lado de fora pela masmorra)')
+                elif lid not in (x.get('vizinhos') or []): P.append(f'{n} passa a {v}, e {v} não passa a ela (a passagem vale para os dois lados)')
+            for x in l.get('segredos') or []:
+                o = Ls.get(x.get('para')) if isinstance(x, dict) else None
+                if not isinstance(o, dict) or o.get('tipo') != 'sala' or o.get('masmorra') != l.get('masmorra'): P.append(f'{n} tem um segredo para o que não é sala da mesma masmorra ({x})')
+            portas = [x['onde'][6:] for x in l.get('armadilhas') or [] if isinstance(x, dict) and isinstance(x.get('onde'), str) and x['onde'].startswith('porta:')]
+            for o in portas:
+                if o not in (l.get('vizinhos') or []) and not any(isinstance(x, dict) and x.get('para') == o for x in l.get('segredos') or []): P.append(f'{n} tem uma armadilha na porta para {o}, que não é passagem dela')
+            if l.get('guardado') is None and any(isinstance(x, dict) and x.get('onde') == 'guardado' for x in l.get('armadilhas') or []): P.append(f'{n} tem uma armadilha no guardado e não guarda nada')
+        if isinstance(l.get('povos'), dict) and all(_num(v) for v in l['povos'].values()) and sum(l['povos'].values()) > 1 + 1e-9: P.append(f'{n}: as frações da gente (povos) somam mais que 1')
+        dr = l.get('dragao')
+        if isinstance(dr, dict) and _td() and dr.get('tipo') in _td().TIPOS and dr.get('idade') in _td().IDADES:
+            esp = especie(_td().chave(dr['tipo'], dr['idade']))
+            if isinstance(esp, dict) and _int(dr.get('pv')):
+                mx = int(T.pv_max(esp['atributos']['Vigor'], esp['nivel']) * TB.TAMANHOS[esp['tamanho']]['pv'])
+                if dr['pv'] > mx: P.append(f'{n}: o dragão {dr["nome"]} tem PV {dr["pv"]}, acima do máximo dele ({mx})')
     for lid, l in E['lugares'].items(): tenta(f'o lugar {lid}', lambda: lugar(lid, l))
+    nomes = [x['dragao']['nome'] for x in E['lugares'].values() if isinstance(x, dict) and isinstance(x.get('dragao'), dict) and isinstance(x['dragao'].get('nome'), str)]
+    for nm in sorted({x for x in nomes if nomes.count(x) > 1}): P.append(f'o dragão {nm} mora em dois lugares')
     return P
 
 

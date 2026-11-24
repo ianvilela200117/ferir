@@ -15,6 +15,8 @@ O REQUISITO é por ATRIBUTO, nunca por nível: a peça pede Força (ou Agilidade
   DA ETAPA DA MAGIA (o contrato: projeto/ETAPA_MAGIA.md, seção 10):
   O DOM de uma mão de arma soma no acerto com as armas dela, e metade na Defesa (a ação e a reação a mais não: são da maestria).
   O POVO (goblin, orc, ogro...) é gente: veste peças de verdade, e o campo `povo` põe por cima o tamanho, os traços, a coragem e a pele (o couro onde a peça não cobre).
+  O POVO DO PERSONAGEM (etapa 4b: anão, elfo...) não é esse campo: o estado.lutador traz só os traços (tabelas.TRACOS_POVO) e a coragem dele, e a ficha os leva.
+  A MANHA (etapa 4b): a ficha leva a mão de manha (`manha`), para o golpe pelas costas da luta.
   A ficha já traz, com valor neutro, os campos da magia (feitiços, Mana, tradição, foco, amuleto, dom, Firmeza, traços, fases, poções): a luta de magia os usa.
   A MAGIA NA LUTA (capítulo 11; os números no tabelas_magia.py): o FOCO e o AMULETO se vestem (veste(..., foco=('cajado', 2), amuleto=2)) e entram na sintonia, como toda
   peça Épica ou melhor; a PEÇA ENCANTADA (arma, armadura ou escudo com encanto) ocupa sintonia de qualquer categoria, e a que dorme não solta o encanto.
@@ -119,7 +121,7 @@ def _cajado(it, p, dorme):
 
 def _tracos(p, tracos):
     for t in tracos:
-        if t not in TB_TRACOS() and t not in T.TRACOS_NOVOS: sys.exit(f'{p["nome"]}: traço desconhecido: "{t}" (os que a luta roda: {", ".join(list(TB_TRACOS()) + list(T.TRACOS_NOVOS))})')
+        if t not in TB_TRACOS() and t not in T.TRACOS_NOVOS and t not in T.TRACOS_POVO: sys.exit(f'{p["nome"]}: traço desconhecido: "{t}" (os que a luta roda: {", ".join(list(TB_TRACOS()) + list(T.TRACOS_NOVOS) + list(T.TRACOS_POVO))})')
     return list(tracos)
 
 
@@ -251,6 +253,8 @@ def ficha(p):
     mm = p['maestria']; trad = p.get('tradicao')
     mt = (mm.get(trad, 0) if trad else max([mm.get(t, 0) for t in T.TRADICOES] + [0])) if isinstance(mm, dict) else (mm or 0)
     _magia_neutra(F, p, mt); F['tracos'] = _tracos(p, p.get('tracos') or [])
+    if p.get('coragem'): F['coragem'] = p['coragem']                                # a coragem do povo do personagem (etapa 4b): soma no teste de coragem
+    if isinstance(mm, dict) and (mm.get('manha') or 0) > 0: F['manha'] = mm['manha']       # a mão de manha (etapa 4b): o golpe pelas costas
     if p.get('maldicao'): F['maldicao'] = dict(p['maldicao'])
     _magia_ficha(F, p, eq, dorme)
     if p.get('povo'): _povo(F, p)
@@ -337,7 +341,13 @@ def _linha(F):
             f"  {w['nome']}: acerto {w['acerto']:+g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
             + (f", mais {F['fol_rodada']} por rodada da armadura" if F['fol_rodada'] else '') + '\n'
             f"  Defesa {defesa(F):g}" + (f" (com {F['escudo']['nome']})" if F['escudo'] and w['maos'] == 1 else '') + f" · proteção: {ps}"
-            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else '') + _magia_linha(F))
+            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else '') + _povo_linha(F) + _magia_linha(F))
+
+
+def _povo_linha(F):
+    """o que o povo do personagem põe na ficha (etapa 4b): os traços dele e a coragem; de quem não tem nada disso, nada (a linha de hoje sai igual)"""
+    tp = [t for t in F.get('tracos') or [] if t in T.TRACOS_POVO]
+    return (f" · {', '.join(tp)}" if tp else '') + (f" · coragem {F['coragem']:+d}" if F.get('coragem') and not F.get('povo') else '') + (f" · manha de {T.MAESTRIAS.get(F['manha'], F['manha'])}" if F.get('manha') else '')
 
 
 if __name__ == '__main__':

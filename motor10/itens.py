@@ -15,6 +15,9 @@ Uso:
   python3 itens.py nova amuleto CATEGORIA "Nome" ...        o amuleto: a armadura contra a magia (no pescoço; um só)
   python3 itens.py nova elixir POCAO CATEGORIA "Nome" ...   a poção do Épico para cima (abaixo disso, a poção é bem: cura:0)
   python3 itens.py nova escrito CATEGORIA "Nome" feiticos=seta,luz ...     o escrito que ensina feitiços
+  python3 itens.py nova gazua CATEGORIA ["Nome"] ...       (etapa 4b) a ferramenta do ladino (não se veste: o teste usa a melhor que a pessoa leva)
+  python3 itens.py nova chave ["Nome"] abre=SALA_A|SALA_B ...    a chave de uma porta (ou abre=SALA: o guardado da sala); abre sem teste
+  python3 itens.py nova armadura MATERIAL CATEGORIA ["Nome"] talhe=miúdo ...    a armadura de talhe miúdo (o pequenino, o gnomo)
   python3 itens.py ver [dono=ID]            a lista
   python3 itens.py janela ID                a janela do item (a que aparece na cena)
   python3 itens.py dono ID PESSOA ["o que houve"]     a peça muda de mão (entra na história dela)
@@ -67,8 +70,13 @@ def cat_i(c):
 
 
 def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=None, sob=None, **mais):
-    """monta um registro de item (sem gravar). É o que os testes e o `nova` usam."""
+    """monta um registro de item (sem gravar). É o que os testes e o `nova` usam.
+    Etapa 4b: a GAZUA (`item('gazua', cat)`), a CHAVE (`item('chave', 0, nome, abre='SALA_A|SALA_B')`) e o TALHE da armadura (o corpo para que foi feita: `talhe='miúdo'`; sem ele, de gente)."""
     c = cat_i(cat)
+    if tipo in ('gazua', 'chave'): return _ladino(tipo, c, nome, efeitos, sob, familia, material, cobre, mais)
+    talhe = mais.pop('talhe', None)
+    if talhe not in (None, 'gente', 'miúdo'): sys.exit(f'talhe desconhecido: "{talhe}" (a armadura é de gente, ou miúda: talhe=miúdo)')
+    if talhe == 'miúdo' and tipo != 'armadura': sys.exit('só a armadura tem talhe (a arma e o escudo servem em todo corpo)')
     if tipo == 'nucleo':                                    # o NÚCLEO: não se veste, não gasta, não leva efeito. É contado no mundo, com dono e lugar.
         if efeitos or sob or familia or material or cobre: sys.exit('o núcleo não leva efeito, sob medida, família nem material: só a categoria, o nome e de que bicho veio (de=)')
         it = dict(tipo='nucleo', cat=c, nome=nome or f'núcleo {CATS[c]}', dur=[T.NUCLEO_DUR, T.NUCLEO_DUR], dono=None, onde=None, de=mais.pop('de', None), historia=[])
@@ -84,11 +92,13 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
         it['material'] = material; it['cobre'] = list(cobre or ['tronco', 'braços', 'pernas'])
         for p in it['cobre']:
             if p not in PARTES: sys.exit(f'parte desconhecida: "{p}" (use: {", ".join(PARTES)})')
-        it['nome'] = nome or (f'elmo de {material} {CATS[c]}' if it['cobre'] == ['cabeça'] else f'armadura de {material} {FEM[c]}')
+        it['nome'] = nome or ((f'elmo miúdo de {material} {CATS[c]}' if it['cobre'] == ['cabeça'] else f'armadura de {material} miúda {FEM[c]}') if talhe == 'miúdo' else
+                              (f'elmo de {material} {CATS[c]}' if it['cobre'] == ['cabeça'] else f'armadura de {material} {FEM[c]}'))
+        if talhe == 'miúdo': it['talhe'] = 'miúdo'
     elif tipo == 'escudo':
         it['nome'] = nome or f'escudo {CATS[c]}'
     else:
-        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo, foco, amuleto, elixir, escrito)')
+        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo, foco, amuleto, elixir, escrito, gazua, chave)')
     for e in it['efeitos']:
         if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
         if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
@@ -96,6 +106,20 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
             sys.exit(f'"devolve" numa peça {CATS[c]} vai de 1 a {T.devolve_max(c)} (veio {e.get("valor")})')
     if sob and not T.SOB_MEDIDA_GRAUS[0] <= sob.get('grau', 1) <= T.SOB_MEDIDA_GRAUS[1]:
         sys.exit(f'o grau do sob medida vai de {T.SOB_MEDIDA_GRAUS[0]} a {T.SOB_MEDIDA_GRAUS[1]} (veio {sob.get("grau")})')
+    it.update(mais)
+    return it
+
+
+def _ladino(tipo, c, nome, efeitos, sob, familia, material, cobre, mais):
+    """os tipos da etapa 4b: a GAZUA (a ferramenta do ladino, com categoria e durabilidade; vale pela matéria, a da adaga) e a CHAVE (abre sem teste a porta ou o guardado
+    que diz em `abre`; não gasta; a loja não a compra nem a vende)"""
+    if efeitos or sob or familia or material or cobre: sys.exit(f'a {tipo} não leva efeito, sob medida, família, material nem cobertura')
+    base = dict(cat=c, historia=[], dono=None, onde=None)
+    if tipo == 'gazua': it = dict(tipo='gazua', nome=nome or f'gazua {FEM[c]}', dur=[DUR[c], DUR[c]], efeitos=[], **base)
+    else:
+        abre = mais.pop('abre', None)
+        if not isinstance(abre, str) or not abre: sys.exit('a chave diz o que abre: abre="SALA_A|SALA_B" (a porta de uma passagem) ou abre="SALA" (o guardado da sala)')
+        it = dict(tipo='chave', nome=nome or 'chave', abre=abre, dur=[1, 1], **base)
     it.update(mais)
     return it
 
@@ -141,7 +165,7 @@ def tem(it, chave):
 def pede(it, dorme=False):
     """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível.
     Peça que dorme (sintonia) não tem efeito nenhum: nem o "leve"."""
-    if it['tipo'] in ('nucleo', 'amuleto', 'elixir', 'escrito'): return 'Força', 0       # o núcleo não se empunha; o amuleto não pede nada; o elixir e o escrito não se vestem
+    if it['tipo'] in ('nucleo', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave'): return 'Força', 0       # o núcleo não se empunha; o amuleto não pede nada; o elixir, o escrito, a gazua e a chave não se vestem
     aj = 0 if dorme else (T.AJUSTE_PESO if tem(it, 'pesa') else 0) - (T.AJUSTE_PESO if tem(it, 'leve') else 0)
     if it['tipo'] == 'foco': a, q = T.FOCOS[it['forma']]['pede']; return a, q + aj      # o foco pede Afinidade ou Vontade (a forma diz)
     if it['tipo'] == 'arma':
@@ -161,6 +185,11 @@ def janela(it):
         if it.get('onde'): L.append(f"Está em: {it['onde']}")
         for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
         return '\n'.join(L)
+    if it['tipo'] in ('gazua', 'chave'):
+        L.append(f"Categoria: {CATS[c]}      " + (f"Gazua (a ferramenta do ladino): durabilidade {it['dur'][0]}/{it['dur'][1]}; abre a fechadura da categoria dela (uma acima, a custo)" if it['tipo'] == 'gazua' else 'Chave: abre sem teste o que foi feita para abrir'))
+        if it.get('dono'): L.append(f"Dono: {it['dono']}")
+        for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
+        return '\n'.join(L)
     if it['tipo'] in ('elixir', 'escrito'):
         L.append(f"Categoria: {CATS[c]}      " + (f"Elixir: {M.POCOES[it['pocao']]}, uma dose (bebida, some)" if it['tipo'] == 'elixir' else 'Escrito: ensina ' + ', '.join(T.nome_feitico(f) for f in it['feiticos'])))
         if it.get('dono'): L.append(f"Dono: {it['dono']}")
@@ -177,7 +206,7 @@ def janela(it):
         L.append(f"Ataque: {f['dado']} × {str(round(m, 2)).rstrip('0').rstrip('.').replace('.', ',')} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + (' casa' if f['alcance'] == 1 else ' casas')}")
     elif it['tipo'] == 'armadura':
         mat = MATERIAIS[it['material']]; prot = f"{RD[c] * mat['rd']:g}".replace('.', ',')        # a vírgula da mesa: 0,7
-        L.append(f"Proteção: {prot} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
+        L.append(f"Proteção: {prot} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else '') + ('      Talhe: miúdo (não serve em gente grande)' if it.get('talhe') == 'miúdo' else ''))
     else:
         L.append(f"Defesa: +{T.ESCUDO_BASE + BON[c]:g}")
     a, q = pede(it); L.append(f"Pede: {a} {q}" if q else 'Pede: nada')
@@ -216,6 +245,8 @@ def _monta(a, op, pos):
     if len(pos) >= 3 and pos[1] == 'nucleo': return item('nucleo', pos[2], pos[3] if len(pos) > 3 else None, de=op.get('de'))
     if len(pos) >= 4 and pos[1] in ('foco', 'elixir'):
         return item(pos[1], pos[3], pos[4] if len(pos) > 4 else None, **({'forma': pos[2]} if pos[1] == 'foco' else {'pocao': pos[2]}))
+    if len(pos) >= 3 and pos[1] == 'gazua': return item('gazua', pos[2], pos[3] if len(pos) > 3 else None)
+    if len(pos) >= 2 and pos[1] == 'chave': return item('chave', 0, pos[2] if len(pos) > 2 else None, abre=op.get('abre'))
     if len(pos) >= 3 and pos[1] in ('amuleto', 'escrito'):
         return item(pos[1], pos[2], pos[3] if len(pos) > 3 else None, **({'feiticos': [x for x in op.get('feiticos', '').split(',') if x]} if pos[1] == 'escrito' else {}))
     if len(pos) < 3 or pos[1] not in ('arma', 'armadura', 'escudo') or (pos[1] != 'escudo' and len(pos) < 4): sys.exit(__doc__)
@@ -228,7 +259,7 @@ def _monta(a, op, pos):
         d, _, g = op['sob'].partition(':'); sob = dict(dono=d, grau=int(g) if g.isdigit() else 1)
     tipo = pos[1]
     if tipo == 'arma': it = item('arma', pos[3], pos[4] if len(pos) > 4 else None, familia=pos[2], efeitos=ef, sob=sob)
-    elif tipo == 'armadura': it = item('armadura', pos[3], pos[4] if len(pos) > 4 else None, material=pos[2], cobre=op['cobre'].split(',') if op.get('cobre') else None, efeitos=ef, sob=sob)
+    elif tipo == 'armadura': it = item('armadura', pos[3], pos[4] if len(pos) > 4 else None, material=pos[2], cobre=op['cobre'].split(',') if op.get('cobre') else None, efeitos=ef, sob=sob, talhe=op.get('talhe'))
     else: it = item('escudo', pos[2], pos[3] if len(pos) > 3 else None, efeitos=ef, sob=sob)
     it['feito_por'] = op.get('feito'); it['dia'] = int(op['dia']) if op.get('dia', '').isdigit() else None
     return it

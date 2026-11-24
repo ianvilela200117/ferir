@@ -11,6 +11,9 @@ O que entra na conta (as regras estão no REGRAS.md; os números, no tabelas.py)
   12 A MAGIA (magia.py; os números, no tabelas_magia.py; capítulo 11): lançar (a Conjuração contra a Defesa, a área ou a Firmeza; a Mana que volta 1 por turno;
      o feitiço longo e a concentração; o retrochoque; lançar no osso), os estados com prazo, o calejo, o campo, a cura, beber na luta, a peça encantada,
      os nove traços novos e as fases do chefe. Só numa luta em que alguém traz magia: a luta sem magia é a de sempre, dado por dado.
+  13 A ETAPA 4b (o contrato: projeto/ETAPA_4B.md, seção 9): os traços do povo (vê no escuro: o escuro tira a metade; resiste a veneno: o veneno pela metade; a coragem
+     do povo no teste de coragem), o GOLPE PELAS COSTAS de quem tem a manha de Treinado, e a fase "foge" do chefe que voa (magia.fase). Só para quem tem o traço, a manha
+     ou a fase: a luta de quem não tem é a de sempre, dado por dado.
 
 Uso em código:
   S = nova(lado_a, lado_b, inicio='perto', lugar={...}, tempo=[...])     (listas de pessoas do pessoas.py; o lado A é o do jogador)
@@ -32,6 +35,7 @@ if __name__ == '__main__': sys.modules.setdefault('luta', sys.modules[__name__])
 import tabelas as T
 import tabelas_bichos as TB
 import tabelas_magia as TM
+import tabelas_povos as TP
 import magia
 from pessoas import ficha
 
@@ -277,6 +281,7 @@ def golpe(S, a, e, w, livre=''):
     bon = w['acerto'] + pa[0] - (T.SEM_FOLEGO if a['fol'] <= 0 else 0) + (T.ABALADO if a['abalado'] else 0)
     bon += sum(T.FERIDAS['braços'][1 if gr else 0] for p, gr in a['feridas'] if p == 'braços')
     bon += sum(T.TEMPO[k].get('tiro' if tiro else 'acerto', 0) for k in S['tempo'])
+    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro'): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * (1 - TP.ESCURO)      # quem vê no escuro (o povo, etapa 4b): o escuro tira só a metade
     if S['lugar'].get('alto') == a['lado']: bon += T.ALTO['tiro' if tiro else 'acerto']
     if tiro and S['lugar'].get('cobertura') == e['lado']: bon += T.COBERTURA
     if entre(S, a, e) and S['lugar'].get('alto') != a['lado'] and not w.get('area'): bon += T.ENTRE
@@ -343,7 +348,11 @@ def golpe(S, a, e, w, livre=''):
 
 
 def _golpe_especial(S, a, w, livre):
-    """o BOTE (o primeiro golpe do bicho na luta) e a INVESTIDA (o golpe depois de correr): acertam mais, rolam os dados mais vezes e derrubam"""
+    """o BOTE (o primeiro golpe do bicho na luta) e a INVESTIDA (o golpe depois de correr): acertam mais, rolam os dados mais vezes e derrubam.
+    E O GOLPE PELAS COSTAS (etapa 4b, E1 a): quem tem a manha de Treinado ou mais, na primeira rodada, contra o lado surpreendido, dá o primeiro golpe de corpo a corpo
+    com mais acerto e os dados rolados mais vezes (tabelas.COSTAS). Não derruba."""
+    if not a.get('bicho') and (a.get('manha') or 0) >= T.COSTAS['desde'] and not w['distancia'] and not livre and 'costas' not in a['usou'] and S['r'] == 1 and S.get('surpresa') and S['surpresa'] != a['lado']:
+        a['usou'].append('costas'); return dict(nome='pelas costas', acerto=T.COSTAS['acerto'], dados=T.COSTAS['dados'])
     if not a.get('bicho') or w['distancia'] or livre: return None
     if tem(a, 'bote') and 'bote' not in a['usou']:
         a['usou'].append('bote'); return dict(nome='bote', acerto=TB.BOTE['acerto'], dados=TB.BOTE['dados'])
@@ -365,12 +374,13 @@ def _dos_bichos(S, a, e, w, esp):
 
 def _depois_do_golpe(S, a, e, w, dano, esp, abriu):
     """o golpe feriu, e um dos dois é bicho: o bote, a investida e a matilha derrubam, o veneno entra, o que agarra segura, e o bicho ferido testa a coragem"""
+    if esp and esp['nome'] == 'pelas costas': esp = None             # o golpe pelas costas (etapa 4b) não derruba
     if not e['chao'] and _derruba(S, a, e) and (esp or (tem(a, 'matilha') and w.get('corpo') and sum(1 for n, _ in e['golpeado'] if n != a['nome'] and tem(por_nome(S, n), 'matilha')) >= TB.MATILHA)):
         e['chao'] = True; diz(S, f"    {e['nome']} vai ao chão" + ('' if esp else ' (a matilha derruba)'))
         if esp and esp['nome'] == 'bote': e['atordoado'] = max(e['atordoado'], TB.BOTE['atordoa'])           # pego de surpresa
     if w.get('corpo') and not w.get('area') and e['estado'] == 'pe':
         if tem(a, 'veneno') and not (S.get('magia') and tem(e, 'sem vida')):
-            q = max(1, int(dano * TB.VENENO['fracao'])); ant = e['veneno'] or [0, 0]
+            q = max(1, int(dano * TB.VENENO['fracao'] * TP.VENENO)) if tem(e, 'resiste a veneno') else max(1, int(dano * TB.VENENO['fracao'])); ant = e['veneno'] or [0, 0]      # quem resiste a veneno (o povo): a metade
             e['veneno'] = [max(q, ant[0]), TB.VENENO['rodadas']]; diz(S, f"    o veneno entra em {e['nome']} ({e['veneno'][0]} por rodada)")
             if S.get('magia'): e['veneno_cat'] = max(e.get('veneno_cat', 0), w['cat'])        # a categoria do veneno (o antídoto tira até a dele)
         if tem(a, 'agarra') and a['estado'] == 'pe' and dist(a, e) <= 1 and e.get('ocupa', 1) <= a['ocupa'] and not any(o is not e and o['estado'] == 'pe' and _agarrado(S, o) is a for o in S['L']) \

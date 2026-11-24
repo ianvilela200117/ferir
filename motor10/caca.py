@@ -662,8 +662,9 @@ def acerta(E, pid):
     ficaram = [f['id'] for f in sorted((f for f in S['L'] if f['lado'] == 'A' and f['estado'] in FICOU and E['gente'].get(f.get('id'), {}).get('estado') == 'vivo'), key=lambda f: f['id'] != pid)] if campo else []
     leva = ficaram[0] if ficaram else None; partes = {q: {} for q in ficaram}                    # quem lutou até o fim (quem comanda primeiro), e a parte de cada um
     if saem: ef.append(['lugar', ermo, f'bichos.{esp}', 'soma', -saem])
+    cats = [f.get('cat_corpo') for f in bs if f['estado'] == 'morto' or (campo and f['estado'] == 'caido') or (rendidos and f['estado'] == 'rendido')]      # a categoria de cada morto (etapa 4b: o despojo pela categoria)
     for i in range(saem):
-        b, nuc = bichos.despojo(esp, estado.sorte(E, f"caca|{pid}|despojo|{s['lutas']}|{i}"))
+        b, nuc = bichos.despojo(esp, estado.sorte(E, f"caca|{pid}|despojo|{s['lutas']}|{i}"), cat=cats[i] if i < len(cats) and isinstance(cats[i], int) else None)
         if leva:
             for k, q in b.items(): bens[k] = bens.get(k, 0) + q
         if nuc:

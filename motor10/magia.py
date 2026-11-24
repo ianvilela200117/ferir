@@ -22,6 +22,7 @@ import tabelas as T
 import tabelas_bichos as TB
 import tabelas_magia as TM
 import tabelas_magia_mundo as W
+import tabelas_povos as TP
 import luta as L
 
 DANO_LONGE = ('seta', 'lança-de-fogo', 'bola-de-fogo', 'raio')      # quem sabe destes e não tem o que lançar, espera a Mana voltar em vez de ir ao corpo a corpo
@@ -175,6 +176,7 @@ def defesa(S, a, e, area):
 def mira(S, a, e, area):
     """o que pesa no feitiço que voa, como num tiro: o tempo (o escuro não, para quem é noturno), o alto, a cobertura, a gente no caminho, a cegueira"""
     b = sum(T.TEMPO[k].get('tiro', 0) for k in S['tempo'] if not (k == 'escuro' and tem(a, 'noturno')))
+    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro') and not tem(a, 'noturno'): b -= T.TEMPO['escuro']['tiro'] * (1 - TP.ESCURO)      # quem vê no escuro (o povo, etapa 4b): a metade
     if S['lugar'].get('alto') == a['lado']: b += T.ALTO['tiro']
     if S['lugar'].get('cobertura') == e['lado']: b += T.COBERTURA
     if not area and L.entre(S, a, e) and S['lugar'].get('alto') != a['lado']: b += T.ENTRE
@@ -216,7 +218,7 @@ def feriu(S, a, e, w, dano, abriu):
     """o golpe de aço tirou PV: a dose da lâmina, o dreno, a maldição de quem amaldiçoa, a concentração de quem canaliza e a fase do chefe"""
     if w.get('veneno') is not None and not w.get('corpo') and not w.get('area'):
         if e['estado'] == 'pe' and not sem_vida(e):            # A DOSE NA LÂMINA: a primeira vez que a arma tira sangue envenena; numa lâmina acima da dose, um terço por degrau
-            fr = TM.VENENO_LAMINA['fracao'] * TM.VENENO_LAMINA['acima'] ** max(0, w['cat'] - w['veneno']); q = max(1, int(dano * fr)); ant = e['veneno'] or [0, 0]
+            fr = TM.VENENO_LAMINA['fracao'] * TM.VENENO_LAMINA['acima'] ** max(0, w['cat'] - w['veneno']) * (TP.VENENO if tem(e, 'resiste a veneno') else 1); q = max(1, int(dano * fr)); ant = e['veneno'] or [0, 0]      # quem resiste a veneno (o povo): a metade
             e['veneno'] = [max(q, ant[0]), TM.VENENO_LAMINA['rodadas']]; e['veneno_cat'] = max(e.get('veneno_cat', 0), w['veneno'])
             L.diz(S, f"    o veneno da lâmina entra em {e['nome']} ({e['veneno'][0]} por rodada)")
         iid = S['itens'][w['item']].get('id'); w['veneno'] = None; conta(S, 'doses_lamina')
@@ -637,10 +639,18 @@ def fecha_luta(S):
 
 # ---------- as fases do chefe ----------
 def fase(S, e):
-    """o chefe cruzou o limiar do PV: ganha e perde traços, aprende feitiços, recobra Mana, dá o brado (os seus ficam benzidos) e ergue os mortos; a luta para e pergunta"""
+    """o chefe cruzou o limiar do PV: ganha e perde traços, aprende feitiços, recobra Mana, dá o brado (os seus ficam benzidos) e ergue os mortos; a luta para e pergunta.
+    A FASE "foge" (etapa 4b, E3 a): se ele está no ar (voa, e não está no chão, preso, agarrado nem num corredor) e o lado dele tem saída (o cenário não diz sem_saida dele),
+    foge pelo ar, sem golpe livre; senão, a fase vale como fúria (perde e ganha os traços dela). No covil, quem monta a luta põe sem_saida do lado do dragão."""
     for i, fs in enumerate(e['fases'], 1):
         if e.get('fase', 0) >= i or e['estado'] != 'pe' or e['pv'] > e['pvmax'] * fs.get('abaixo', 0): continue
         e['fase'] = i
+        if fs.get('foge') and L._no_ar(S, e) and S['lugar'].get('sem_saida') != e['lado']:
+            e['estado'] = 'fugiu'; txt = fs.get('foge_diz') or 'foge pelo ar, ferido'
+            L.diz(S, f"  ◆ {e['nome']}: {txt} ({max(e['pv'], 0)}/{e['pvmax']})"); _para_todos(S, f"{e['nome']} fugiu: {txt}"); conta(S, 'fugas')
+            if e.get('lider'):
+                for o in L.de_pe(S, e['lado']): L._moral(S, o, 'lider_caiu')
+            L._fim(S); return
         e['tracos'] = [t for t in e.get('tracos') or [] if t not in (fs.get('perde') or [])] + [t for t in fs.get('ganha') or [] if t not in (e.get('tracos') or [])]
         if sem_vida(e): e['moral'] = 'firme'
         if fs.get('feiticos'):
