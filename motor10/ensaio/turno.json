@@ -1,38 +1,30 @@
 {
- "n": 5,
+ "n": 6,
  "aberto": {
-  "dia": 2,
-  "bloco": 4
+  "dia": 4,
+  "bloco": 3
  },
- "evento0": 51,
+ "evento0": 106,
  "dados": [],
  "lutas": [],
  "perguntas": [
   {
    "n": 1,
-   "texto": "O que Maro faz com o despojo (12 de comida, 3 de couro, 2 de osso)?",
+   "texto": "A magia chegou a Pedra Rasa (Anselmo, Lúcia, Joana, a botica e o santuário). O que Maro faz no resto do Dia 4 (12h)?",
    "opcoes": {
-    "a": "vende tudo (uns 12 de prata)",
-    "b": "guarda 4 de comida para comer sem pagar e vende o resto (uns 9 de prata)",
-    "c": "guarda tudo por ora"
+    "a": "faz o voto do socorro no santuário (não recusar cura pedida) e começa a estudar a cura lá, de graça (quem tem voto aprende no santuário; 6 blocos leves para quem tem talento comum)",
+    "b": "compra um amuleto Comum (10 de prata: guarda inteira contra a magia) e uma poção de cura Comum (7)",
+    "c": "paga 10 de prata a Lúcia para ler se ele tem algum dom (1 bloco)",
+    "d": "a rotina: jornada (2 blocos, 4 de prata) e treino de espada"
    }
   },
   {
    "n": 2,
-   "texto": "As peças gastaram (espada 7/10; elmo, escudo e armadura 9/10). Manda consertar na forja?",
-   "opcoes": {
-    "a": "só a espada (2 de prata, 1 bloco de espera)",
-    "b": "tudo (5 de prata, 4 blocos de espera)",
-    "c": "não conserta agora"
-   }
-  },
-  {
-   "n": 3,
-   "texto": "E no Dia 3?",
+   "texto": "E no Dia 5?",
    "opcoes": {
     "a": "corça de novo, sozinho",
     "b": "javali, com a Rute (ela leva a parte dela)",
-    "c": "lobos (bando de 3 a 5)",
+    "c": "a Cova Velha, com Tomé e Rute (esqueletos em bando de 2 a 4: sozinho é morte; a espada vale a metade no osso)",
     "d": "a rotina: jornada e treino de espada"
    }
   }

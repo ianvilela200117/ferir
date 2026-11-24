@@ -1,5 +1,5 @@
 {
- "seq": 30,
+ "seq": 44,
  "itens": {
   "i0001": {
    "tipo": "arma",
@@ -172,7 +172,7 @@
    "cat": 0,
    "nome": "elmo de malha Comum",
    "dur": [
-    9,
+    10,
     10
    ],
    "efeitos": [],
@@ -503,7 +503,7 @@
    "cat": 0,
    "nome": "Espada de Maro",
    "dur": [
-    7,
+    8,
     10
    ],
    "efeitos": [],
@@ -520,7 +520,7 @@
    "cat": 0,
    "nome": "Escudo de Maro",
    "dur": [
-    9,
+    10,
     10
    ],
    "efeitos": [],
@@ -536,7 +536,7 @@
    "cat": 0,
    "nome": "Armadura de malha de Maro",
    "dur": [
-    9,
+    10,
     10
    ],
    "efeitos": [],
@@ -552,6 +552,257 @@
    ],
    "id": "i0030",
    "uso": "veste"
+  },
+  "i0031": {
+   "tipo": "amuleto",
+   "nome": "amuleto Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0031",
+   "uso": null
+  },
+  "i0032": {
+   "tipo": "amuleto",
+   "nome": "amuleto Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0032",
+   "uso": null
+  },
+  "i0033": {
+   "tipo": "foco",
+   "forma": "varinha",
+   "nome": "varinha Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0033",
+   "uso": null
+  },
+  "i0034": {
+   "tipo": "foco",
+   "forma": "símbolo",
+   "nome": "símbolo Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0034",
+   "uso": null
+  },
+  "i0035": {
+   "tipo": "escrito",
+   "feiticos": [
+    "seta",
+    "luz"
+   ],
+   "nome": "Cartilha do arcano",
+   "dur": [
+    1,
+    1
+   ],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0035",
+   "uso": null
+  },
+  "i0036": {
+   "tipo": "foco",
+   "forma": "cajado",
+   "nome": "Cajado de Anselmo",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "cat": 1,
+   "historia": [],
+   "dono": "anselmo",
+   "onde": null,
+   "id": "i0036",
+   "uso": "foco"
+  },
+  "i0037": {
+   "tipo": "amuleto",
+   "nome": "Amuleto de Anselmo",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": "anselmo",
+   "onde": null,
+   "id": "i0037",
+   "uso": "pescoco"
+  },
+  "i0038": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Anselmo",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "anselmo",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0038",
+   "uso": "veste"
+  },
+  "i0039": {
+   "tipo": "foco",
+   "forma": "símbolo",
+   "nome": "Símbolo de Lúcia",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": "lucia",
+   "onde": null,
+   "id": "i0039",
+   "uso": "foco"
+  },
+  "i0040": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Maça de Lúcia",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "lucia",
+   "onde": null,
+   "familia": "maça",
+   "id": "i0040",
+   "uso": "arma"
+  },
+  "i0041": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Lúcia",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "lucia",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0041",
+   "uso": "veste"
+  },
+  "i0042": {
+   "tipo": "foco",
+   "forma": "talismã",
+   "nome": "Talismã de Joana",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": "joana",
+   "onde": null,
+   "id": "i0042",
+   "uso": "foco"
+  },
+  "i0043": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Joana",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "joana",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0043",
+   "uso": "arma"
+  },
+  "i0044": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "a Espada do Guardião",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "largada na Cova Velha, junto de um morto que não se deita"
+   ],
+   "dono": null,
+   "onde": "cova",
+   "familia": "espada",
+   "solto": true,
+   "id": "i0044",
+   "uso": null,
+   "maldita": {
+    "nome": "a Mão Fria",
+    "cat": 1,
+    "tipo": "míngua",
+    "condicao": {
+     "tipo": "devolver",
+     "item": "i0044",
+     "onde": "cova"
+    }
+   }
   }
  },
  "oseq": 0,

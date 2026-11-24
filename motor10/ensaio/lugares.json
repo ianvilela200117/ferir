@@ -5,7 +5,7 @@
   "tipo": "vila",
   "cama": true,
   "estoque": {
-   "comida": 18625,
+   "comida": 18288,
    "lenha": 3000,
    "carvão": 240,
    "sal": 240,
@@ -13,19 +13,35 @@
    "remédio": 60,
    "ferramenta": 60,
    "metal:0": 120,
-   "couro:0": 120,
-   "osso:0": 60,
+   "couro:0": 123,
+   "osso:0": 62,
    "madeira:0": 240,
    "erva:0": 120,
-   "metal:1": 21,
-   "couro:1": 19,
-   "osso:1": 9,
-   "madeira:1": 40,
-   "erva:1": 20,
-   "prata": 2007
+   "metal:1": 20,
+   "couro:1": 20,
+   "osso:1": 10,
+   "madeira:1": 39,
+   "erva:1": 21,
+   "prata": 2007,
+   "cura:0": 6,
+   "cura:1": 1,
+   "antídoto:0": 2,
+   "antídoto:1": 1,
+   "mana:0": 1,
+   "mana:1": 1,
+   "guarda:0": 1,
+   "guarda:1": 1,
+   "fúria:0": 1,
+   "fúria:1": 1,
+   "vigília:0": 1,
+   "vigília:1": 1,
+   "quebra-maldição:0": 1,
+   "quebra-maldição:1": 1,
+   "água benta": 5
   },
   "vizinhos": [
-   "mata"
+   "mata",
+   "cova"
   ],
   "pop": 400,
   "produz": {
@@ -45,17 +61,25 @@
    "couro:1": 0.6667,
    "osso:1": 0.3333,
    "madeira:1": 1.3333,
-   "erva:1": 0.6667
+   "erva:1": 0.6667,
+   "cura:0": 0.2,
+   "antídoto:0": 0.068,
+   "vigília:0": 0.04,
+   "quebra-maldição:0": 0.04,
+   "água benta": 0.2
   },
   "alvo_pecas": {
-   "0": 11,
+   "0": 16,
    "1": 4
   },
   "oficina": 1,
   "preparo": {
    "fogo": 1,
    "bigorna": 1
-  }
+  },
+  "botica": 1,
+  "santuario": 1,
+  "feira_magia": 2
  },
  "mata": {
   "nome": "a Mata do Corvo",
@@ -64,7 +88,9 @@
   "habitat": "floresta",
   "perigo": 1,
   "longe": 1,
-  "estoque": {},
+  "estoque": {
+   "prata": 20
+  },
   "vizinhos": [
    "vila"
   ],
@@ -74,15 +100,17 @@
    "lobo": 12,
    "urso": 3,
    "pantera": 1,
-   "serpe": 1
+   "serpe": 1,
+   "goblin": 16
   },
   "bichos": {
-   "corça": 78,
-   "javali": 40,
+   "corça": 77,
+   "javali": 39,
    "lobo": 12,
    "urso": 3,
    "pantera": 1,
-   "serpe": 1
+   "serpe": 1,
+   "goblin": 8
   },
   "coleta_teto": {
    "madeira:0": 200,
@@ -91,6 +119,47 @@
   "coleta": {
    "madeira:0": 200,
    "erva:0": 60
+  },
+  "covil": {
+   "especie": "goblin",
+   "nome": "a toca dos goblins",
+   "teto": 16,
+   "lider": true,
+   "chefe": null,
+   "fome": 0,
+   "ult_roubo": 2,
+   "sem_lider": 0,
+   "cheio": 0,
+   "fora": 0,
+   "desde": 2
+  }
+ },
+ "cova": {
+  "nome": "a Cova Velha",
+  "em": "na Cova Velha",
+  "tipo": "ermo",
+  "habitat": "ruína",
+  "perigo": 1,
+  "longe": 1,
+  "estoque": {},
+  "vizinhos": [
+   "vila"
+  ],
+  "teto": {
+   "esqueleto": 3,
+   "corpo-seco": 2
+  },
+  "bichos": {
+   "esqueleto": 3,
+   "corpo-seco": 2
+  },
+  "coleta_teto": {
+   "metal:0": 40,
+   "erva:0": 30
+  },
+  "coleta": {
+   "metal:0": 40,
+   "erva:0": 30
   }
  }
 }

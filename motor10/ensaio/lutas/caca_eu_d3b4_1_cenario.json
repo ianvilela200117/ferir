@@ -1,0 +1,71 @@
+{
+ "inicio": "perto",
+ "lugar": {
+  "alto": "A",
+  "largura": 1
+ },
+ "surpresa": "B",
+ "tempo": [],
+ "luz": true,
+ "ermo": "mata",
+ "A": [
+  {
+   "id": "eu",
+   "controla": true
+  }
+ ],
+ "B": [
+  {
+   "nome": "corça 1",
+   "nivel": 4,
+   "atributos": {
+    "Força": 45,
+    "Agilidade": 70,
+    "Vigor": 45,
+    "Vontade": 30,
+    "Percepção": 70,
+    "Afinidade": 20
+   },
+   "maestria": 0,
+   "equip": {},
+   "moral": "testa",
+   "bicho": {
+    "especie": "corça",
+    "cat": 0,
+    "armas": [
+     "casco"
+    ],
+    "couro": "pelo",
+    "tamanho": "médio",
+    "tracos": [],
+    "coragem": -6
+   }
+  },
+  {
+   "nome": "corça 2",
+   "nivel": 4,
+   "atributos": {
+    "Força": 45,
+    "Agilidade": 70,
+    "Vigor": 45,
+    "Vontade": 30,
+    "Percepção": 70,
+    "Afinidade": 20
+   },
+   "maestria": 0,
+   "equip": {},
+   "moral": "testa",
+   "bicho": {
+    "especie": "corça",
+    "cat": 0,
+    "armas": [
+     "casco"
+    ],
+    "couro": "pelo",
+    "tamanho": "médio",
+    "tracos": [],
+    "coragem": -6
+   }
+  }
+ ]
+}

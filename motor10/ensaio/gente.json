@@ -29,9 +29,19 @@
   "pv": 161,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "peso": 40,
+    "forja": 150
+   }
+  },
   "carga": {},
-  "sobre": "o ferreiro da vila; conserta e vende o que forja"
+  "sobre": "o ferreiro da vila; conserta e vende o que forja",
+  "talento": {
+   "couro": 1,
+   "comércio": -1,
+   "alquimia": -1
+  }
  },
  "dalva": {
   "nome": "Dalva",
@@ -63,9 +73,22 @@
   "pv": 107,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "comércio": 20
+   }
+  },
   "carga": {},
-  "sobre": "a taverneira da pousada; sabe de tudo o que se conta"
+  "sobre": "a taverneira da pousada; sabe de tudo o que se conta",
+  "talento": {
+   "haste": 1,
+   "forja": -1,
+   "couro": -1,
+   "alquimia": 1,
+   "encanto": -1,
+   "pacto": -1
+  }
  },
  "rute": {
   "nome": "Rute",
@@ -99,9 +122,21 @@
   "pv": 133,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "tiro": 160,
+    "caça": 160
+   }
+  },
   "carga": {},
-  "sobre": "a caçadora; conhece a Mata do Corvo"
+  "sobre": "a caçadora; conhece a Mata do Corvo",
+  "talento": {
+   "tiro": 1,
+   "comércio": 1,
+   "alquimia": -1,
+   "arcano": -1
+  }
  },
  "tome": {
   "nome": "Tomé",
@@ -133,9 +168,18 @@
   "pv": 161,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "haste": 160
+   }
+  },
   "carga": {},
-  "sobre": "o guarda da vila"
+  "sobre": "o guarda da vila",
+  "talento": {
+   "forja": -1,
+   "fé": -2
+  }
  },
  "ivo": {
   "nome": "Ivo",
@@ -167,9 +211,17 @@
   "pv": 149,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "coleta": 40
+   }
+  },
   "carga": {},
-  "sobre": "o lenhador; tira madeira na borda da mata"
+  "sobre": "o lenhador; tira madeira na borda da mata",
+  "talento": {
+   "cura": 1
+  }
  },
  "nara": {
   "nome": "Nara",
@@ -186,10 +238,12 @@
   },
   "maestria": {
    "cura": 2,
-   "coleta": 2
+   "coleta": 2,
+   "alquimia": 2
   },
   "treino": {
-   "coleta": 40
+   "coleta": 40,
+   "alquimia": 50
   },
   "moedas": 30,
   "corpo": {
@@ -200,9 +254,19 @@
   "pv": 110,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "coleta": 40
+   }
+  },
   "carga": {},
-  "sobre": "a curandeira; colhe erva e trata ferida"
+  "sobre": "a curandeira; colhe erva e trata ferida",
+  "talento": {
+   "haste": 1,
+   "coleta": 1,
+   "alquimia": 1,
+   "pacto": -1
+  }
  },
  "lino": {
   "nome": "Lino",
@@ -232,9 +296,19 @@
   "pv": 106,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {
+    "comércio": 80
+   }
+  },
   "carga": {},
-  "sobre": "o mercador da loja"
+  "sobre": "o mercador da loja",
+  "talento": {
+   "forja": 1,
+   "coleta": -1,
+   "alquimia": -1,
+   "arcano": 1
+  }
  },
  "zeca": {
   "nome": "Zeca",
@@ -260,9 +334,24 @@
   "pv": 100,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "talento_base": {}
+  },
   "carga": {},
-  "sobre": "o aprendiz da forja; novo, quer aprender"
+  "sobre": "o aprendiz da forja; novo, quer aprender",
+  "talento": {
+   "haste": 1,
+   "forja": 2,
+   "couro": 1,
+   "coleta": 2,
+   "encanto": 1,
+   "arcano": -1,
+   "fé": -1,
+   "verde": 2
+  },
+  "dom": {
+   "forja": 2
+  }
  },
  "eu": {
   "nome": "Maro",
@@ -282,13 +371,13 @@
   },
   "treino": {
    "espada": 41,
-   "caça": 1
+   "caça": 2
   },
   "moedas": 23,
   "corpo": {
-   "fome": 2,
-   "sono": 3,
-   "cansaco": 7
+   "fome": 1,
+   "sono": 2,
+   "cansaco": 2
   },
   "pv": 141,
   "feridas": [],
@@ -299,19 +388,198 @@
    "jornada_dia": 1,
    "jornada": 2,
    "cama": {
-    "ate": 11,
+    "ate": 24,
     "onde": "vila"
    },
    "caca": null,
-   "abates": 2,
-   "feito_caça": 0
+   "abates": 3,
+   "feito_caça": 0,
+   "talento_base": {
+    "fio": 41,
+    "caça": 1
+   },
+   "ermo_dia": 3,
+   "luta_dia": 3
   },
   "carga": {
-   "comida": 12,
-   "couro:0": 3,
-   "osso:0": 2
+   "comida": 7,
+   "couro:0": 2,
+   "osso:0": 1
   },
   "jogador": true,
-  "sobre": "vive das armas, com a mão de Iniciante na espada"
+  "sobre": "vive das armas, com a mão de Iniciante na espada",
+  "talento": {
+   "haste": 1,
+   "tiro": 1,
+   "fé": -1,
+   "pacto": 1
+  },
+  "inclinacao": "fio"
+ },
+ "anselmo": {
+  "nome": "Anselmo",
+  "lugar": "vila",
+  "grau_oficio": "mestre",
+  "nivel": 40,
+  "atributos": {
+   "Força": 47,
+   "Agilidade": 59,
+   "Vigor": 61,
+   "Vontade": 75,
+   "Percepção": 61,
+   "Afinidade": 82
+  },
+  "maestria": {
+   "arcano": 4
+  },
+  "treino": {
+   "arcano": 160
+  },
+  "moedas": 80,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 132,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "arcano": 160
+   }
+  },
+  "carga": {},
+  "talento": {
+   "haste": -1,
+   "peso": 1,
+   "couro": -1,
+   "caça": 1,
+   "fé": 2,
+   "pacto": -1
+  },
+  "feiticos": [
+   "luz",
+   "seta",
+   "escudo",
+   "prender",
+   "lança-de-fogo"
+  ],
+  "tradicao": "arcano",
+  "sobre": "o mago velho; ensina o arcano a quem paga, e lê o que os outros não leem"
+ },
+ "lucia": {
+  "nome": "Lúcia",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 35,
+  "atributos": {
+   "Força": 65,
+   "Agilidade": 53,
+   "Vigor": 72,
+   "Vontade": 80,
+   "Percepção": 53,
+   "Afinidade": 55
+  },
+  "maestria": {
+   "fé": 6,
+   "maça": 2
+  },
+  "treino": {
+   "fé": 500,
+   "maça": 40
+  },
+  "moedas": 40,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 152,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "peso": 40,
+    "fé": 500
+   }
+  },
+  "carga": {},
+  "talento": {
+   "haste": -1,
+   "coleta": -1,
+   "cura": -1,
+   "alquimia": -1
+  },
+  "feiticos": [
+   "luz",
+   "cura",
+   "bênção",
+   "amparo",
+   "castigo",
+   "quebrar-maldição"
+  ],
+  "tradicao": "fé",
+  "voto": {
+   "qual": "socorro",
+   "santuario": "vila",
+   "dia": 2
+  },
+  "sobre": "a clériga do santuário; cura quem pede e quebra maldição com rito"
+ },
+ "joana": {
+  "nome": "Joana",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 30,
+  "atributos": {
+   "Força": 46,
+   "Agilidade": 58,
+   "Vigor": 59,
+   "Vontade": 72,
+   "Percepção": 59,
+   "Afinidade": 79
+  },
+  "maestria": {
+   "pacto": 4,
+   "adaga": 2
+  },
+  "treino": {
+   "pacto": 160,
+   "adaga": 40
+  },
+  "moedas": 25,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 125,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "pacto": 160
+   }
+  },
+  "carga": {
+   "veneno:0": 3,
+   "erva:0": 4
+  },
+  "talento": {
+   "caça": 1
+  },
+  "feiticos": [
+   "luz",
+   "mau-olhado",
+   "medo",
+   "sangria",
+   "ler",
+   "nó"
+  ],
+  "tradicao": "pacto",
+  "divida": 2,
+  "sobre": "a bruxa que mora na choupana da borda da Mata do Corvo; lê a sorte, amaldiçoa por encomenda e vende veneno de lâmina, escondido"
  }
 }
