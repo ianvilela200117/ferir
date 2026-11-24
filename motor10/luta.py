@@ -18,6 +18,8 @@ Uso de linha de comando (a luta de verdade: dado de verdade, o estado guardado n
   python3 luta.py roda lutas/NOME.json ["Nome: ordem"] ["grupo: ordem"]   roda até a próxima PARADA (ou o fim) com as ordens dadas
        ordem: atacar [alvo] · segurar · avancar · recuar · folego · guardar NOME, e no fim a postura (firme, agressiva, defensiva)
               (a ordem `folego` acaba quando o fôlego enche: daí a pessoa segura, e a luta para e pergunta)
+              (a ordem `recuar` é a retirada: a pessoa anda para trás enquanto houver inimigo de pé a menos de 8 casas; a 8 casas de todos, no fim da rodada, sai da luta.
+               SEM INIMIGO DE PÉ NÃO HÁ RETIRADA: a luta acabou, e quem recuava ficou com o campo como os outros)
        ordem do grupo: atacar · segurar · recuar
   python3 luta.py demo           uma luta de exemplo num corredor, com as paradas
 """
@@ -350,8 +352,10 @@ def _ferida(S, e, parte, grave, w, dano):
         if grave and not e['sem_arma'] and not e.get('bicho'): e['sem_arma'] = True; txt += ' e larga a arma'
     elif parte == 'tronco': e['fol'] = max(0, e['fol'] - T.FERIDAS['tronco'][g]); sangra = True; txt += 'perde o fôlego'
     else:
-        if not efeito(S, e, 'firme'): e['chao'] = True
-        e['preso'] = e['preso'] or grave; txt += 'vai ao chão' + (' e não anda mais' if grave else '')
+        firme = bool(efeito(S, e, 'firme'))
+        if not firme: e['chao'] = True
+        e['preso'] = e['preso'] or grave                    # a perna presa: a pessoa ainda se levanta, mas não sai mais do lugar
+        txt += ('a perna cede, mas a peça firme segura de pé' if firme else 'vai ao chão') + ('; com a perna presa, não sai mais do lugar (levantar-se, pode)' if grave else '')
     if sangra:
         n = T.SANGRA_RODADAS[1 if grave or w['efeitos'].get('sangra') else 0]; q = max(1, int(dano * T.SANGRA)); ant = e['sangra'] or [0, 0]
         e['sangra'] = [max(q, ant[0]), max(n, ant[1])]; txt += f' · sangra {e["sangra"][0]} por {e["sangra"][1]} rodadas'
@@ -536,8 +540,8 @@ def _decide(S, f, pagou):
     if f['sem_arma'] and not colado: return ('pega',)
     preso = _nao_anda(S, f)                                     # a perna que não anda mais, ou o bicho que o agarra
     tras = -frente(f); pode_recuar = not preso and bool(_livre(S, f, f['x'] + tras, False))
-    if acao == 'recuar':
-        if min([dist(f, e) for e in inimigos(S, f)] or [9]) < 3 and pode_recuar: return ('anda', tras, True, None)
+    if acao == 'recuar':                                    # A RETIRADA: quem recua ANDA PARA TRÁS enquanto houver inimigo de pé a menos de RETIRADA casas (a 8 de todos, no fim da rodada, saiu da luta)
+        if min([dist(f, e) for e in inimigos(S, f)] or [T.RETIRADA]) < T.RETIRADA and pode_recuar: return ('anda', tras, True, None)
         acao = 'atacar' if colado else 'segurar'            # longe o bastante, segura; encurralado, luta
     if w['distancia'] and f['recarga'] > 0: return ('recarrega',)
     if not f.get('controla') and f['arma']['distancia'] and not f['sem_arma'] and colado and pode_recuar and not f['fugiu']: return ('anda', tras, True, None)   # o atirador se afasta de quem colou
@@ -626,7 +630,7 @@ def _turno(S, f):
         if ac[0] == 'folego':
             g = rola(T.TOMA_FOLEGO[0]) + T.TOMA_FOLEGO[1]; tinha = max(f['fol'], 0); f['fol'] = min(f['folmax'], tinha + g); f['resguardo'] = True
             diz(S, f"  {f['nome']} toma fôlego (+{f['fol'] - tinha}: {f['fol']}/{f['folmax']})" if f['fol'] > tinha else f"  {f['nome']} se resguarda (o fôlego já está cheio: {f['fol']}/{f['folmax']})")
-        elif ac[0] == 'levanta': f['chao'] = False; diz(S, f"  {f['nome']} se levanta")
+        elif ac[0] == 'levanta': f['chao'] = False; diz(S, f"  {f['nome']} se levanta" + (' (com a perna presa: não sai do lugar)' if f['preso'] else ''))
         elif ac[0] == 'pega': f['sem_arma'] = False; diz(S, f"  {f['nome']} apanha a arma")
         elif ac[0] == 'recarrega': f['recarga'] -= 1
         elif ac[0] == 'espera': f['resguardo'] = True; break
@@ -672,19 +676,22 @@ def _fecha_rodada(S):
     S['fechada'] = S['r']
     for f in S['L']:                                        # o sangue e a vida por um fio
         if f['estado'] == 'pe' and f['sangra']:
-            f['pv'] -= f['sangra'][0]; f['sangra'][1] -= 1; S['dano_r'] += f['sangra'][0] / f['pvmax']
+            q = f['sangra'][0]; f['pv'] -= q; f['sangra'][1] -= 1; S['dano_r'] += q / f['pvmax']
             if f['sangra'][1] <= 0: f['sangra'] = None
+            diz(S, f"  {f['nome']} sangra {q} ({max(f['pv'], 0)}/{f['pvmax']})")       # o que o sangue tira fica escrito: a conta dos golpes fecha com o quadro
             if f['pv'] <= 0: diz(S, f"  {f['nome']} sangra até cair"); _cai(S, f, 0)
         elif f['estado'] == 'caido' and max(f['morte']) < 3:
             ok = D.d(20) >= T.MORTE_CD; f['morte'][0 if ok else 1] += 1
             if f['morte'][1] >= 3: f['estado'] = 'morto'; diz(S, f"  ☠ {f['nome']} morre no chão"); _para(S, f, f"{f['nome']} morreu no chão")
     for f in S['L']:                                        # o veneno
         if f['estado'] == 'pe' and f.get('veneno'):
-            f['pv'] -= f['veneno'][0]; f['veneno'][1] -= 1; S['dano_r'] += f['veneno'][0] / f['pvmax']
+            q = f['veneno'][0]; f['pv'] -= q; f['veneno'][1] -= 1; S['dano_r'] += q / f['pvmax']
             if f['veneno'][1] <= 0: f['veneno'] = None
+            diz(S, f"  {f['nome']} perde {q} para o veneno ({max(f['pv'], 0)}/{f['pvmax']})")      # como o sangue: o que o veneno tira fica escrito
             if f['pv'] <= 0: diz(S, f"  {f['nome']} cai pelo veneno"); _cai(S, f, 0)
-    for f in de_pe(S):                                      # a retirada: quem recua e ficou longe de todos saiu da luta
-        if _ordem_de(S, f) == 'recuar' and all(dist(f, e) >= T.RETIRADA for e in inimigos(S, f)):
+    for f in de_pe(S):                                      # a retirada: quem recua e ficou longe de todo inimigo de pé saiu da luta
+        ini = inimigos(S, f)                                # SEM INIMIGO DE PÉ NÃO HÁ RETIRADA: a luta acabou, e quem recuava ficou com o campo como os outros
+        if _ordem_de(S, f) == 'recuar' and ini and not S['fim'] and all(dist(f, e) >= T.RETIRADA for e in ini):
             f['estado'] = 'saiu'; diz(S, f"  {f['nome']} SAI DA LUTA"); _para(S, f, f"{f['nome']} saiu da luta")
     _fim(S)
     S['sem_dano'] = 0 if S['dano_r'] >= T.IMPASSE_MIN else S['sem_dano'] + 1
@@ -748,7 +755,7 @@ def corre(S, interativo=False, maximo=T.MAX_RODADAS):
 def resultado(S):
     q = lambda est: [f['nome'] for f in S['L'] if f['estado'] == est]
     return dict(vencedor=S['fim'], rodadas=S['r'], mortos=q('morto'), caidos=q('caido'), fugiram=q('fugiu'), sairam=q('saiu'), presos=q('rendido'),
-                feridas={f['nome']: f['feridas'] for f in S['L'] if f['feridas']},
+                feridas={f['nome']: f['feridas'][f.get('feridas_antes', 0):] for f in S['L'] if f['feridas'][f.get('feridas_antes', 0):]},      # só as feridas abertas NESTA luta (a que a pessoa já trazia não é notícia do fim)
                 quebradas=[it.get('nome', k) for k, it in S['itens'].items() if it['dur'][0] <= 0 and it.get('nome') != 'as mãos'])
 
 
@@ -777,7 +784,7 @@ def situacao(S):
             fer = ', '.join(_parte(f, p) + (' (grave)' if g else '') for p, g in f['feridas'])
             L.append(f"  {f['nome']:<22} {est:<8} PV {max(f['pv'], 0):>4}/{f['pvmax']:<4} fôlego {max(f['fol'], 0):>2}/{f['folmax']:<2} casa {f['x']:>3}"
                      + (f" · feridas: {fer}" if fer else '') + (f" · sangrando ({f['sangra'][0]} por rodada)" if f['sangra'] and f['estado'] == 'pe' else '')
-                     + (' · fraquejou' if f['abalado'] else '') + (' · no chão' if f['chao'] and f['estado'] != 'pe' else '') + (' · sem a arma' if f['sem_arma'] else '')
+                     + (' · fraquejou' if f['abalado'] else '') + (' · no chão' if f['chao'] and f['estado'] != 'pe' else '') + (' · sem a arma' if f['sem_arma'] else '') + (' · perna presa: não sai do lugar' if f['preso'] and f['estado'] == 'pe' else '')
                      + (f" · com veneno ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · {f['agarrado']} não solta" if f['estado'] == 'pe' and _agarrado(S, f) else '')
                      + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralad' + oa.lower() if f.get('encurralado') else '') if f.get('bicho') else ''))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))

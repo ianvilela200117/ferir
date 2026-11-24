@@ -182,14 +182,14 @@ def _linha(F):
     if F.get('bicho'):
         w = F['arma']; pt = F['partes']['tronco']; ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
         return (f"{F['nome']} (bicho {F['tamanho']}, nível {F['nivel']}, instinto de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
-                f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto +{w['acerto']:g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa{'s' if w['alcance'] != 1 else ''}"
+                f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto {w['acerto']:+g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa{'s' if w['alcance'] != 1 else ''}"
                 + (f" · {F['sopro']['nome']} ({F['sopro']['dado']} × {F['sopro']['mult']:g}, a {F['sopro']['alcance']} casas)" if F.get('sopro') else '') + '\n'
                 f"  Defesa {defesa(F):g} · o corpo é a armadura: {pt['nome']} (proteção {pt['rd']:g}, vale como {pt['material']}) · cerco: {F['cerco'][0]} de perto e {F['cerco'][1]} de haste · ocupa {F['ocupa']:g} de um corredor"
                 + (f" · traços: {', '.join(F['tracos'])}" if F['tracos'] else '') + (f" · coragem {F['coragem']:+d}" if F.get('moral') != 'firme' else ' · não foge'))
     w = F['arma']; ps = ' · '.join(f"{k} {v['rd']:g}" for k, v in F['partes'].items()) or 'sem armadura'
     ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
     return (f"{F['nome']} (nível {F['nivel']}, mão de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
-            f"  {w['nome']}: acerto +{w['acerto']:g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
+            f"  {w['nome']}: acerto {w['acerto']:+g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
             + (f", mais {F['fol_rodada']} por rodada da armadura" if F['fol_rodada'] else '') + '\n'
             f"  Defesa {defesa(F):g}" + (f" (com {F['escudo']['nome']})" if F['escudo'] and w['maos'] == 1 else '') + f" · proteção: {ps}"
             + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else ''))

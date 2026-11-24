@@ -457,9 +457,11 @@ def ver(E, pid):
     for i, it in gastas[:4]:
         q = it['dur'][1] - it['dur'][0]; of = oficio_de(it); chave = _materia_conserto(it); pode = chave and it['cat'] < len(O.MAO_DA_OBRA) and mao(p, of) >= O.MAO_DA_OBRA[it['cat']]
         eu_txt = f"você, {tantos(math.ceil(q / O.CONSERTO_BLOCO), 'bloco')} e {math.ceil(q / O.CONSERTO_MATERIA)} de {_mat(chave)}" if pode else 'você não tem a mão'
-        pago = f"pago, {O.conserto_pago(it['cat'], q, M.peso_do_item(it))} de prata" if it['cat'] <= v + O.OFICINA_CONSERTA else 'esta oficina não conserta'
+        pago = f"pago, {O.conserto_pago(it['cat'], q, M.peso_do_item(it))} de prata e {tantos(math.ceil(q / O.PAGO_BLOCO), 'bloco')} de espera" if it['cat'] <= v + O.OFICINA_CONSERTA else 'esta oficina não conserta'
         L.append(f"- consertar {it['nome']} ({i}, {it['dur'][0]}/{it['dur'][1]}): {eu_txt}; {pago}")
     if len(gastas) > 4: L.append(f"- ... e mais {tantos(len(gastas) - 4, 'peça gasta', 'peças gastas')}")
+    L.append(f"- o conserto pago (`oficio.py consertar ITEM pago`): {100 * M.CONSERTO_PONTO:g}% do preço da peça por ponto, em prata inteira (arredonda para cima: um ponto de uma espada Comum custa {O.conserto_pago(0, 1)} de prata), "
+             f"e um bloco de espera por peça (a cada {O.PAGO_BLOCO} pontos ou parte): mandar consertar quatro peças leva quatro blocos")
     g = O.ajuste_grau(mao(p))
     L.append('- ajustar (sob medida): ' + (f'grau {g}; de {O.ajuste_blocos(0)} (Comum) a {O.ajuste_blocos(O.FORJA_ATE)} blocos ({T.CATS[O.FORJA_ATE]}) e um teste contra {O.AJUSTE_BASE} + {O.TESTE_CAT} por categoria' if g else f'pede mão de {T.MAESTRIAS[2]}'))
     L.append(f"- jornal: {M.SALARIO[O.jornal_grau(mao(p), p.get('grau_oficio', 'diarista'))]} de prata por bloco de bancada a serviço da oficina (paga-se pelo que a mão vale: {O.jornal_grau(mao(p), p.get('grau_oficio', 'diarista'))}), até a jornada ({M.JORNADA} blocos pagos por dia; hoje: {ato.jornada(E, pid)}) (`oficio.py jornal N`)")
@@ -509,9 +511,9 @@ def main(a=None):
     else:                                                   # oficina
         if len(pos) < 2 or not (pos[1] == 'nada' or pos[1].isdigit()): falta(f'diga o nível da oficina, de 0 ({O.OFICINAS[0]}) a {len(O.OFICINAS) - 1} ({O.OFICINAS[-1]}), ou "nada"', 'oficina 1 "como foi"')
         out = poe_oficina(E, E['gente'][pid]['lugar'], None if pos[1] == 'nada' else int(pos[1]), como=pos[2] if len(pos) > 2 else '')
-    estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar: a saída cortada não perde o que o dado rolou
+    estado.grava(E)                                         # grava ANTES de falar: a saída cortada não perde o que o dado rolou
     print(out)
-    print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
+    print(ato.ultima_linha(E, pid))
 
 
 if __name__ == '__main__':

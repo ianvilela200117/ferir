@@ -205,6 +205,22 @@ def modulos(n):
         while luta.corre(S, interativo=True) == 'parada' and S['L'][2]['estado'] == 'pe': pass
         saiu += next(f for f in S['L'] if f['nome'] == 'o rei')['estado'] == 'saiu'
     saiu = round(100 * saiu / k); out.append(('A RETIRADA: com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta', f'em {saiu}% das lutas', saiu >= 80))
+    D0 = luta.D; luta.semente(52); k = 150; torto = venceu = ficou = 0      # dados à parte, para as outras medidas não mudarem
+    casa = lambda: gente('Maro', 5, ('espada', 0), ('malha', 0), escudo=0, controla=True)() + gente('Rute', 22, ('arco', 1), ('couro', 0), molde='arqueiro', controla=True)()
+    for _ in range(k):
+        S = luta.nova(casa(), gente('o ladrão', 1, ('adaga', 0), molde='comum')(), inicio='perto', quieto=False)
+        luta.corre(S, interativo=True); luta.ordem(S, 'Maro: recuar'); luta.ordem(S, 'Rute: atacar')
+        while luta.corre(S, interativo=True) == 'parada': pass
+        L = S['log'] if 'Maro SAI DA LUTA' in ''.join(S['log']) else []; sai = next((i for i, x in enumerate(L) if 'Maro SAI DA LUTA' in x), None)       # o registro da última corrida (onde a luta acabou)
+        caiu = next((i for i, x in enumerate(L) if 'o ladrão' in x and any(y in x for y in ('MORRE', 'CAI', 'sangra até cair'))), None)
+        torto += sai is not None and caiu is not None and caiu < sai                                                                                      # saiu DEPOIS de o último inimigo cair
+        venceu += S['fim'] == 'A'; ficou += S['fim'] == 'A' and luta.por_nome(S, 'Maro')['estado'] == 'pe'
+    S = luta.nova(casa(), gente('o ladrão', 1, ('adaga', 0), molde='comum')(), inicio='colado', quieto=True); S['comecou'] = True; S['r'] = 1; luta.ordem(S, 'Maro: recuar')
+    S['L'][2].update(estado='morto', pv=0); luta._fecha_rodada(S); mao = (luta.por_nome(S, 'Maro')['estado'], S['fim'])       # posto à mão: o último inimigo cai com quem recuava a 1 casa
+    luta.D = D0
+    out.append(('A RETIRADA SÓ EXISTE COM INIMIGO DE PÉ: quem tem ordem de recuar na rodada em que o último inimigo cai NÃO sai da luta: a luta acabou, e ele ficou com o campo como os outros',
+                f'{k} lutas de dois contra um ladrão, com "Maro: recuar": a casa venceu {venceu}, e Maro acabou de pé no campo em {ficou}; saiu da luta depois de o último inimigo cair: {torto} vez(es); '
+                f'posto à mão (o inimigo morto, Maro a 1 casa, com ordem de recuar): Maro fica "{mao[0]}" e o campo é de "{mao[1]}"', torto == 0 and mao == ('pe', 'A') and venceu >= k // 2 and ficou >= venceu // 2))
     try: luta.nova(um(50, R, R, nome='gêmeo')(), um(50, R, R, nome='gêmeo')(), tempo=['granizo'], quieto=True); erro = 'aceitou'
     except SystemExit as e: erro = 'recusou' if 'nome repetido' in str(e) and 'granizo' in str(e) else 'recusou pela metade'
     out.append(('O CENÁRIO É CONFERIDO antes de qualquer dado (nome repetido, tempo que não existe)', erro, erro == 'recusou'))

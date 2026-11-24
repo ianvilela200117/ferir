@@ -66,8 +66,9 @@ NOMES = dict(ferreiro='Aldo', cacador='Cira', guerreiro='Maro')
 
 def treino_da_mao(maestria):
     """os blocos de treino que explicam a mão de alguém: para cada arma ou ofício, os blocos que a tabela pede para o grau que a pessoa tem (as armas, a forja e o couro, a caça,
-    a coleta; no comércio, os dias de negócio). A cura ainda não tem tabela de treino: fica sem número."""
-    tabela = lambda k: M.MAESTRIA_BLOCOS if k in T.FAMILIAS else {'forja': O.OFICIO_BLOCOS, 'couro': O.OFICIO_BLOCOS, 'caça': K.CACA_BLOCOS, 'coleta': K.COLETA_BLOCOS, 'comércio': C.COMERCIO_DIAS}.get(k, {})
+    a coleta; no comércio, os dias de negócio). O ofício que ainda não tem tabela própria (a cura) segue a tabela geral, a das armas (tabelas_mundo.MAESTRIA_BLOCOS):
+    TODA mão nasce com os blocos dela."""
+    tabela = lambda k: {'forja': O.OFICIO_BLOCOS, 'couro': O.OFICIO_BLOCOS, 'caça': K.CACA_BLOCOS, 'coleta': K.COLETA_BLOCOS, 'comércio': C.COMERCIO_DIAS}.get(k, M.MAESTRIA_BLOCOS)
     return {k: tabela(k)[g] for k, g in maestria.items() if g in tabela(k)}
 
 

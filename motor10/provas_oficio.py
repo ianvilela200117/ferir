@@ -8,8 +8,10 @@ O ROBÔ FERREIRO vive de verdade: dorme na cama e paga, come e paga, trabalha na
 da oficina, e tem a matéria e o núcleo de cada obra na mão. Ele segue o caminho comum: um degrau de cada vez, e só abre a obra de um degrau quando
 tem a mão que a obra pede (tabelas_oficio.MAO_DA_OBRA). Repete o degrau até a peça nascer, com matéria e núcleo novos a cada obra.
 A MEDIDA DA ESCADA é o dia em que metade das vidas já tinha a peça (quem nunca a teve conta como nunca). A linha diz também quando a primeira obra fecha.
-A LENDÁRIA É DIFERENTE, por decisão do jogador: julga-se o dia em que a primeira OBRA fecha (a primeira tentativa); a peça nascer é raro de propósito;
-e uma linha à parte ("o ritmo da bancada") confere a outra leitura da meta: o dia em que a primeira obra de cada categoria fecha, acerte ou não.
+A LENDÁRIA É DIFERENTE, por decisão do jogador, e a prova dela julga DUAS coisas: (i) o dia em que a primeira OBRA fecha (a primeira tentativa: dias 300 a 450);
+(ii) a peça é RARA DE PROPÓSITO: nasce até o Dia 450 em pelo menos uma vida e em menos da metade delas (RARA_DE_PROPOSITO). É isto que é só dela:
+se a chance subir e a Lendária passar a nascer na metade das vidas, ou se deixar de nascer, a prova falha.
+Uma linha à parte ("o ritmo da bancada") confere a outra leitura da meta: o dia em que a primeira obra de cada categoria fecha, acerte ou não.
 
 Uso: python3 provas_oficio.py [N]      N = o tamanho das amostras (padrão 300): N ÷ 10 vidas inteiras do robô e N ÷ 15 curtas (no mínimo 20 de cada), 2 × N obras por medida de chance
      (o `python3 provas_mundo.py` também roda este banco)
@@ -26,6 +28,7 @@ from pessoas import ficha
 JANELAS = {2: (15, 30), 3: (45, 80), 4: (130, 200), 5: (300, 450)}      # o contrato: o dia em que a primeira peça de cada categoria sai
 PELA_OBRA = (5,)            # DECISÃO DO JOGADOR (MUDANCAS.md, etapa 2, terceira volta): a Lendária é difícil de propósito. A chance não sobe; a meta dela é o dia em que a
                             # primeira OBRA Lendária FECHA (a primeira tentativa), acerte ou não. Nas outras categorias a meta segue sendo o dia em que a peça NASCE.
+RARA_DE_PROPOSITO = (1, 0.5)        # ... e a peça Lendária é rara de propósito: até o Dia 450 nasce em pelo menos tantas vidas (1) e em MENOS desta fração delas (a metade). Medido: de 3 a 12 de 30
 ROBO = dict(nivel=4, afinidade=60, alcance=5, dias=450, curta=240)       # o robô: a melhor oficina, o preparo todo, Afinidade de bom aprendiz, mão de Leigo
                                                                          # (a vida curta para na primeira Única, ou no dia `curta`: só engrossa a amostra das três primeiras metas)
 MELHOR = dict(nivel=4, afinidade=100, alcance=5, mao=8)                  # o melhor ferreiro possível: Lendário, oficina 4, preparo 8 (e Afinidade 100)
@@ -169,9 +172,15 @@ def escada(vidas):
         deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria" + (' e núcleo novos' if O.pede_nucleo(cat) else ' nova') + f" a cada obra: {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
                 + (f". COM UM NÚCLEO SÓ, a peça nasce em {sum(prim) / len(prim):.0%} das vidas; nas outras, o núcleo se gastou ou se perdeu" if prim and O.pede_nucleo(cat) else ''))
         fechos[cat] = f
-        if cat in PELA_OBRA:    # a Lendária: julga-se a primeira TENTATIVA (o dia em que a primeira obra fecha); a peça nascer é raro de propósito, e a linha diz em quantas vidas nasceu
-            out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira OBRA {oficio.FEM[cat]} do robô ferreiro FECHA entre os dias {a} e {b} (a primeira tentativa; a peça nascer é difícil de propósito, e a linha diz em quantas vidas nasceu; na melhor oficina, com o preparo todo e com núcleo novo a cada obra)",
-                        (f"a primeira obra {oficio.FEM[cat]} fecha no Dia {f}" if f is not None else f"a primeira obra {oficio.FEM[cat]} NÃO FECHA na metade das {n} vidas até o Dia {ate}") + '. A PEÇA: ' + deu, f is not None and a <= f <= b))
+        if cat in PELA_OBRA:    # a Lendária julga DUAS coisas: a primeira TENTATIVA (o dia em que a primeira obra fecha), e a peça RARA DE PROPÓSITO (nasce em pelo menos uma vida e em menos da metade)
+            lo, hi = RARA_DE_PROPOSITO; rara = lo <= len(tem) < n * hi
+            deu = (f"a primeira obra {oficio.FEM[cat]} fecha no Dia {f}" if f is not None else f"a primeira obra {oficio.FEM[cat]} NÃO FECHA na metade das {n} vidas até o Dia {ate}")
+            deu += f"; a peça nasceu em {len(tem)} de {n} vidas até o Dia {ate}" + (f", entre o Dia {min(tem)} e o {max(tem)}" if tem else '') + (f" (a faixa: de {lo} a menos de {n * hi:g})" if rara else f" (FORA DA FAIXA: de {lo} a menos de {n * hi:g})")
+            if prim: deu += f"; acerta de primeira em {sum(prim) / len(prim):.0%} das vidas ({tent / n:.1f} obras por vida)"
+            deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria e núcleo novos a cada obra: {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
+                    + (f". COM UM NÚCLEO SÓ, a peça nasce em {sum(prim) / len(prim):.0%} das vidas; nas outras, o núcleo se gastou ou se perdeu" if prim else ''))
+            out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira OBRA {oficio.FEM[cat]} do robô ferreiro FECHA entre os dias {a} e {b} (a primeira tentativa), E a peça é rara de propósito: até o Dia {ate} nasce em pelo menos {lo} e em menos da metade das vidas (na melhor oficina, com o preparo todo e com núcleo novo a cada obra)",
+                        deu, f is not None and a <= f <= b and rara))
         else: out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira peça {oficio.FEM[cat]} do robô ferreiro sai entre os dias {a} e {b} (na melhor oficina, com o preparo todo e com núcleo novo a cada obra: a linha diz o que isso gasta)", deu, m is not None and a <= m <= b))
     out.append(('O RITMO DA BANCADA (a outra leitura da meta da escada: o dia em que a primeira OBRA de cada categoria fecha, acerte ou não), nas mesmas janelas',
                 ' · '.join(f"{oficio.FEM[c]}: Dia {fechos[c]} ({a} a {b})" if fechos[c] is not None else f"{oficio.FEM[c]}: não fecha na metade das vidas ({a} a {b})" for c, (a, b) in JANELAS.items()),

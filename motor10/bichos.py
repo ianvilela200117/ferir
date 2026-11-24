@@ -101,7 +101,8 @@ def ameaca(esp, n=None, arma=None, armadura=None):
     if e['alfa'] and (n is None or n > 1): quantos += ', atrás de um alfa'
     L = [f"{e['nome'].upper()} · grau {e['grau']} ({C}): {TB.GRAU_DIZ[e['grau']]} · {_tamanho_diz(e['tamanho'], fem)} · {quantos}."]
     armas = e['armas'][0] if len(e['armas']) == 1 else ', '.join(e['armas'][:-1]) + ' e ' + e['armas'][-1]
-    L.append(f"O corpo: {armas} de categoria {C}; {e['couro']} {C}, que vale como {TB.COUROS[e['couro']]}.")
+    from itens import FEM
+    L.append(f"O corpo: {armas} de categoria {C}; {e['couro']} {(FEM if e['couro'].endswith('a') else T.CATS)[c]}, que vale como {TB.COUROS[e['couro']]}.")       # a categoria concorda com o couro: pelo Comum, escama Épica, carapaça Rara
     if e['tracos']: L.append('Traços: ' + '. '.join(f'{t.capitalize()}: {TB.TRACOS[t]}' for t in e['tracos']) + '.')
     if tam['ocupa'] < 1 and any(t in TB.PEDE_TAMANHO for t in e['tracos']):       # ninguém derruba nem agarra quem é maior que ele: o traço do bicho pequeno não pega gente
         L.append(f"Por ser pequen{'a' if fem else 'o'}, não derruba nem agarra gente: só quem é do tamanho {dele}.")

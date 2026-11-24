@@ -3,8 +3,9 @@
 
   python3 turno.py abre                         só lê. Gera e mostra a MESA.md: o relógio, o corpo, o lugar, o que dá para fazer, as perguntas abertas, e o SÓ O MESTRE.
   python3 turno.py responde "1a.2b"             confere os códigos do jogador contra as perguntas abertas e diz o que cada um quer dizer
-                                                (cada pergunta guarda o número com que foi aberta até o turno fechar; a já respondida recusa segunda resposta)
-  python3 turno.py pergunta "texto" "a=..." "b=..." ["c=..."]     abre uma pergunta para o fim do turno
+                                                (cada pergunta guarda o número com que foi aberta até o turno fechar; a já respondida recusa segunda resposta;
+                                                 vale como o jogador escreve: "1c.2 a", "1c, 2a", "1c 2a")
+  python3 turno.py pergunta "texto" "a=..." "b=..." ["c=..."]     abre uma pergunta para o fim do turno, e diz o número que ela terá na lista do RETOMAR (o do código)
   python3 turno.py nota "o que só o Mestre sabe"                  uma nota oculta (vai para o RETOMAR, na parte do Mestre)
   python3 turno.py fecha "o que houve" [parado] [git]             fecha o turno. `parado`: o turno foi só conversa, o relógio não andou. `git`: guarda no git e envia.
 
@@ -40,7 +41,7 @@ def _voce(E):
     pid = estado.eu(E); p = E['gente'][pid]; f = estado.fora(E, pid)
     if p['estado'] != 'vivo':
         return [f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')}). Quem morreu não age: nenhum ato em nome de {p['nome']} vale.",
-                f"O que {p['nome']} tinha caiu onde a morte veio (as peças, soltas; a carga e a prata, no estoque do lugar). O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto)."]
+                _do_morto(E, pid) + ' O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto).']
     L = [f"**{p['nome']}**, nível {p['nivel']} · PV {p['pv']}/{estado.pv_max(p)} · {p['moedas']} de prata · " + (f"FORA, {estado.em(E, f)} (mora {estado.em(E, p['lugar'])})" if f else estado.em(E, p['lugar'])), f"Corpo: {corpo.diz(p)}"]
     for fe in p['feridas']: L.append(f"Ferida{' GRAVE' if fe['grave'] else ''}: {fe['parte']} (Dia {fe['dia']}; {fe['repouso']} de {M.FERIDA_DIAS[1 if fe['grave'] else 0]} dias de repouso)")
     L.append('```'); L.append(pessoas.linha(pessoas.ficha(estado.lutador(E, pid)))); L.append('```')
@@ -51,6 +52,24 @@ def _voce(E):
     tr = [f"{a}: {conta(a, b)}" + (f" ({pessoas.T.MAESTRIAS[p.get('maestria', {}).get(a, 0)]})") for a, b in p.get('treino', {}).items()]
     if tr: L.append('Treino: ' + ' · '.join(tr))
     return L
+
+
+def _do_morto(E, pid):
+    """o que ficou de quem morreu, com as palavras certas: as peças, soltas junto do corpo; a carga e a prata, com o povo do lugar (num lugar com povo: entram no estoque e
+    no caixa dele) ou no chão, junto do corpo (no ermo). O que era de um morto não muda de mão sozinho."""
+    p = E['gente'][pid]; m = p.get('morte') or {}; lid = m.get('onde') if m.get('onde') in E['lugares'] else None
+    if not lid: return f"O que {p['nome']} tinha caiu onde a morte veio."
+    l = E['lugares'][lid]; pecas = [f"{it['nome']} ({i})" for i, it in E['itens']['itens'].items() if it.get('corpo') == pid and it.get('solto') and it.get('onde') == lid]
+    carga = ', '.join(f'{q:g} de {estado.nome_bem(b)}' for b, q in (m.get('carga') or {}).items())
+    if 'prata' in m: partes = ([f'a carga ({carga})'] if carga else []) + ([f"a prata ({_mil(m['prata'])})"] if m.get('prata') else [])
+    else: partes = ['a carga', 'a prata']                    # o save de antes desta regra não guardou quanto ele deixou
+    L = [f"Com o corpo, {estado.em(E, lid)}, ficaram soltas: " + (', '.join(pecas) if pecas else 'nenhuma peça') + '.']
+    um = len(partes) == 1; o_que = ' e '.join(partes)
+    if not partes: L.append(f"{p['nome']} não tinha carga nem prata.")
+    elif l.get('pop'): L.append(f"{o_que[0].upper() + o_que[1:]} {'ficou' if um else 'ficaram'} com o povo do lugar: {'entrou' if um else 'entraram'} no estoque e no caixa {estado.de(E, lid)}.")
+    else: L.append(f"{o_que[0].upper() + o_que[1:]} {'ficou' if um else 'ficaram'} no chão, junto do corpo.")
+    L.append('O que era de um morto não muda de mão sozinho: quem fica com o quê é decisão de cena, e o Mestre registra por evento (`itens.py dono ITEM PESSOA`, `estado.py mestre`).')
+    return ' '.join(L)
 
 
 def _aqui(E):
@@ -98,9 +117,8 @@ def mesa(E):
     L += ['', '## SÓ O MESTRE']
     L += [f"- {teste.diz(E, r, mestre=True)}" for r in t['dados'] if r['oculto']] + [f"- nota: {n}" for n in t['notas']]
     L += [f"- LUTA ABERTA: {l['arq']} (`ato.py luta roda {l['arq']} \"Nome: ordem\"`)" for l in t['lutas'] if not l['fim']]
-    if vivo:
-        for linhas in _modulos(E, 'so_mestre'): L += [x if x.startswith('- ') else '- ' + x for x in linhas]       # o que cada módulo do mundo só mostra ao Mestre (a contagem do ermo...): a função so_mestre(E) do módulo
-    aqui = estado.onde(E, pid); soltos = [f"{i} {it['nome']}" for i, it in E['itens']['itens'].items() if it.get('onde') == aqui and it.get('solto')]
+    for linhas in _modulos(E, 'so_mestre'): L += [x if x.startswith('- ') else '- ' + x for x in linhas]       # o que cada módulo do mundo só mostra ao Mestre (a contagem do ermo, o que os mortos deixaram lá...): a função so_mestre(E) do módulo; vale também com o personagem morto
+    aqui = estado.onde(E, pid) if vivo else ((E['gente'][pid].get('morte') or {}).get('onde') if (E['gente'][pid].get('morte') or {}).get('onde') in E['lugares'] else estado.onde(E, pid)); soltos = [f"{i} {it['nome']}" for i, it in E['itens']['itens'].items() if it.get('onde') == aqui and it.get('solto')]
     if soltos: L.append(f"- no chão {estado.em(E, aqui)} (soltas; quem fica com elas entra por evento): " + ' · '.join(soltos[:8]) + (f' · e mais {len(soltos) - 8}' if len(soltos) > 8 else ''))
     P = estado.valida(E); L += [f"- ESTADO QUEBRADO: {x}" for x in P] or ['- o estado está inteiro.']
     return '\n'.join(L) + '\n'
@@ -127,20 +145,27 @@ def pergunta(E, texto, opcoes):
     ops = dict(o.split('=', 1) for o in opcoes if '=' in o); t = E['turno']
     if len(ops) < 2 or any(len(k) != 1 or not k.isalpha() for k in ops): sys.exit('a pergunta pede pelo menos duas opções, cada uma com uma letra: "a=..." "b=..."')
     n = max([q['n'] for q in numera(t)] + [r['n'] for r in t.get('respondidas', []) if isinstance(r.get('n'), int)] + [0]) + 1      # o número seguinte ao maior já usado neste turno (aberto ou respondido)
-    t['perguntas'].append(dict(n=n, texto=texto, opcoes=ops)); return f"pergunta {n} aberta."
+    t['perguntas'].append(dict(n=n, texto=texto, opcoes=ops)); lista = len(t['perguntas'])
+    # o número que vale para o jogador é o da LISTA do RETOMAR (no fechar, as que ficam são numeradas de novo, de 1 em diante): é com ele que o código da resposta vem ("1a")
+    if lista == n: return f"pergunta {n} aberta."
+    return f"pergunta {lista} aberta: é o número dela na lista do RETOMAR, e é com ele que o jogador responde ({lista}{next(iter(ops))}, {lista}{list(ops)[1]}...). Até este turno fechar, o caderno a guarda como {n}."
 
 
 def responde(E, codigos):
     """'1a.2b': cada código tem de bater numa pergunta aberta (pelo NÚMERO com que ela foi aberta) e numa opção dela. A pergunta já respondida neste turno recusa segunda resposta.
     Nada é executado: o Mestre cumpre com os comandos."""
     t = E['turno']; pares = []; abertas = {q['n']: q for q in numera(t)}; feitas = {r['n']: r for r in t.get('respondidas', []) if isinstance(r.get('n'), int)}
-    for c in [x for x in codigos.replace(',', '.').replace(' ', '.').split('.') if x]:
-        num = ''.join(ch for ch in c if ch.isdigit()); letra = c[len(num):].lower()
+    import re
+    cods = re.findall(r'(\d+)\s*([^\W\d_]*)', codigos); resto = re.sub(r'\d+\s*[^\W\d_]*', '', codigos)       # "1c.2 a", "1c, 2a", "1c 2a": o jogador escreve assim (espaço entre o número e a letra; vírgula, ponto ou espaço entre os códigos)
+    if not cods or re.sub(r'[\s.,;]', '', resto): sys.exit(f'não entendi "{codigos}": cada código é o número da pergunta e a letra da opção ("1a.2b", "1a, 2b" ou "1 a 2 b"). Nada foi marcado.')
+    for num, letra in cods:
+        c = num + letra; letra = letra.lower()
         if num and int(num) in feitas and int(num) not in abertas:
             sys.exit(f'a pergunta {int(num)} já foi respondida neste turno ("{feitas[int(num)]["texto"]}" → {feitas[int(num)]["cod"]}) {feitas[int(num)]["opcao"]}): não aceita segunda resposta. Nada foi marcado.')
         if not num or int(num) not in abertas:
             sys.exit(f'o código "{c}" não bate em nenhuma pergunta aberta (' + (f"as abertas: {', '.join(str(k) for k in sorted(abertas))}" if abertas else 'não há nenhuma') + '). Nada foi marcado.')
         q = abertas[int(num)]
+        if not letra: sys.exit(f'falta a letra da opção no código "{c}" (a pergunta {int(num)} tem: {", ".join(q["opcoes"])}). Nada foi marcado.')
         if letra not in q['opcoes']: sys.exit(f'a pergunta {int(num)} não tem a opção "{letra}" (tem: {", ".join(q["opcoes"])}). Nada foi marcado.')
         pares.append((int(num), letra))
     if len({n for n, _ in pares}) != len(pares): sys.exit('a mesma pergunta foi respondida duas vezes. Nada foi marcado.')
@@ -155,10 +180,11 @@ def fatos(evs, teto=None, nasce=False):
     """as linhas dos fatos do turno, tiradas do registro de eventos, para o RETOMAR.md. NUNCA CORTA CALADO.
     O mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz) não é fato do turno, a não ser que alguém morra.
     Com `nasce` (o primeiro turno de um mundo), os eventos do gerador que abrem o registro (o mundo nascendo) também ficam de fora: não são coisa que alguém fez.
-    O que se repete todo dia (comer, dormir, a cama, descansar, esperar) vira UMA linha por dia; o mesmo fato repetido no mesmo dia vira uma linha, com a conta.
+    O que se repete todo dia (comer, dormir, a cama, descansar, esperar) vira UMA linha por dia. O mesmo fato repetido SEGUIDO no mesmo dia vira uma linha, com a conta
+    e as horas do primeiro ao último ("manhã a noite: ... (× 4)"). O que aconteceu depois de outro fato fica na linha e na hora dele: nada vai parar na hora do primeiro.
     O evento que foi gravado SEM TEXTO (e não é o mundo andando sozinho) entra assim mesmo, com o número e o tipo dele: nada do que alguém fez some calado.
     Se ainda assim passa do teto (tabelas_mundo.RETOMAR_FATOS), ficam as mais novas, e a primeira linha diz quantas ficaram de fora e como lê-las."""
-    teto = teto or M.RETOMAR_FATOS; linhas = []; onde = {}
+    teto = teto or M.RETOMAR_FATOS; linhas = []; onde = {}; ultimo = None
     for e in evs:
         if nasce and e['tipo'] == 'gera': continue
         nasce = False
@@ -170,13 +196,14 @@ def fatos(evs, teto=None, nasce=False):
             if chave not in onde: onde[chave] = dict(dia=e['dia'], rotina={}); linhas.append(onde[chave])
             onde[chave]['rotina'][e['texto']] = onde[chave]['rotina'].get(e['texto'], 0) + 1
         else:
-            chave = (e['dia'], e['texto'])
-            if chave not in onde: onde[chave] = dict(dia=e['dia'], bloco=e['bloco'], texto=e['texto'], vezes=0); linhas.append(onde[chave])
-            onde[chave]['vezes'] += 1
+            if not (ultimo and ultimo['dia'] == e['dia'] and ultimo['texto'] == e['texto']):      # só se junta ao fato IGUAL que veio logo antes (a rotina e o mundo andando sozinho não contam como "entre os dois")
+                ultimo = dict(dia=e['dia'], bloco=e['bloco'], texto=e['texto'], vezes=0); linhas.append(ultimo)
+            ultimo['vezes'] += 1; ultimo['ate'] = e['bloco']
     vezes = lambda k: f' (× {k})' if k > 1 else ''
     def diz(x):
         if 'rotina' in x: return f"- Dia {x['dia']}, a rotina: " + ' · '.join(txt + vezes(k) for txt, k in x['rotina'].items())
-        return f"- Dia {x['dia']}, {M.BLOCOS[x['bloco']]}: {x['texto']}{vezes(x['vezes'])}"
+        hora = M.BLOCOS[x['bloco']] + (f" a {M.BLOCOS[x['ate']]}" if x['ate'] != x['bloco'] else '')        # "manhã a noite": do primeiro ao último dos fatos juntados
+        return f"- Dia {x['dia']}, {hora}: {x['texto']}{vezes(x['vezes'])}"
     if not linhas: return ['- (nenhum fato registrado neste turno)']
     if len(linhas) <= teto: return [diz(x) for x in linhas]
     fora = linhas[:len(linhas) - (teto - 1)]; ficam = linhas[len(fora):]; d0, d1 = fora[0]['dia'], fora[-1]['dia']
@@ -227,8 +254,8 @@ if __name__ == '__main__':
         if len(a) < 2 or not a[1].strip(): sys.exit('diga a pergunta e as opções: `turno.py pergunta "O que fazer de manhã?" "a=trabalhar" "b=treinar"`')
         print(pergunta(E, a[1], a[2:])); estado.grava(E)
     elif a[0] == 'responde':
-        if len(a) != 2: sys.exit('diga os códigos do jogador, juntos: `turno.py responde "1a.2b"`')
-        print(responde(E, a[1])); estado.grava(E)
+        if len(a) < 2: sys.exit('diga os códigos do jogador: `turno.py responde "1a.2b"` (vale também "1a, 2b" e "1 a 2 b")')
+        print(responde(E, ' '.join(a[1:]))); estado.grava(E)
     elif a[0] == 'nota':
         if len(a) != 2 or not a[1].strip(): sys.exit('diga a nota, entre aspas: `turno.py nota "o que só o Mestre sabe"`')
         E['turno']['notas'].append(a[1]); estado.grava(E); print('nota guardada (só o Mestre vê).')

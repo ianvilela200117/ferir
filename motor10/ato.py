@@ -2,6 +2,9 @@
 """ato.py — MOTOR 10: O QUE A PESSOA FAZ, COM O TEMPO QUE CUSTA. Todo ato anda o relógio e mexe no corpo, por evento.
 
 O ato longo PARA quando o corpo cruza um limiar (fome, sono, cansaço), e diz por quê. Quem cai no sono dorme ali mesmo, no chão.
+O TEMPO PASSA PARA O PERSONAGEM, AJA QUEM AGIR: quando o relógio anda por ato de outra pessoa (quem=ID), o corpo do personagem passa os mesmos blocos, no mesmo evento,
+como quem espera (a fome e o sono sobem); se ele cruza um limiar, o ato do outro para, e a mesa diz por quê. Não dobra quando ele já está no ato (vai junto na saída).
+QUEM NÃO É O PERSONAGEM CUIDA DE SI QUANDO NÃO ESTÁ EM CENA: ao voltar a agir, o tempo que passou em casa é acertado antes de mais nada (estado.em_cena; corpo.casa).
 QUEM MORREU NÃO AGE, e quem saiu para o ermo (a saída de caça ou de coleta aberta) não age na vila: o ato é recusado antes de cobrar qualquer coisa.
 COM UMA LUTA ABERTA O MUNDO NÃO ANDA: até ela acabar (ou o Mestre a soltar), todo ato é recusado, de qualquer pessoa, fora os da própria luta.
 
@@ -34,32 +37,47 @@ def _vivo(E, pid):
     p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
     if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não age: {estado.morte_diz(E, p)}")
     estado.sem_luta(E)
-    return p
+    estado.em_cena(E, pid)                                  # quem não é o personagem e volta a agir: antes de mais nada, o descanso em casa
+    return E['gente'][pid]
+
+
+def espera(E, pid, com=()):
+    """o personagem do jogador, se o ato é de OUTRA pessoa, ele não está nesse ato (nem age, nem vai junto) e está vivo: o tempo passa para ele também, como quem espera.
+    Senão (o ato é dele, ele vai junto, ou morreu), None."""
+    eu = estado.eu(E)
+    return eu if eu and eu != pid and eu not in com and E['gente'][eu]['estado'] == 'vivo' else None
 
 
 def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None, para=True, com=()):
     """anda o mundo `blocos` blocos com a pessoa fazendo isto: um evento por bloco. Devolve (blocos feitos, por que parou ou None).
     com: quem vai junto (a saída ao ermo): passa os mesmos blocos, com o mesmo esforço, no mesmo evento.
+    O TEMPO PASSA PARA O PERSONAGEM, AJA QUEM AGIR: se o ato é de outra pessoa e o personagem não está nele, o corpo dele passa os mesmos blocos, no mesmo evento, como quem
+    espera (esforço `nada`); as paradas do corpo valem para ele também.
     Com `para`, o ato para quando o corpo cruza um limiar; e quem cai no sono (sono 8 ou mais, Vontade falhada) dorme ali mesmo, no chão, até o sono baixar do primeiro limiar."""
     feitos = 0; porque = None
-    if blocos > 0: estado.sem_luta(E)                       # com uma luta aberta, o relógio não anda
+    if blocos > 0:
+        estado.sem_luta(E)                                  # com uma luta aberta, o relógio não anda
+        for q in [pid] + [c for c in com if c != pid]: estado.em_cena(E, q)      # quem não é o personagem e volta a agir: antes de mais nada, o descanso em casa
     for i in range(blocos):
         p = E['gente'][pid]
         if p['estado'] != 'vivo': porque = f"{p['nome']} morreu"; break
         junto = [c for c in com if c != pid and E['gente'].get(c, {}).get('estado') == 'vivo']
-        antes = corpo.faixas(p); ultimo = E['relogio']['bloco'] == M.BLOCOS_DIA - 1; lid = estado.onde(E, pid)
+        ve = espera(E, pid, junto); todos = [pid] + junto + ([ve] if ve else [])     # ve: o personagem, que espera enquanto outro age
+        antes = corpo.faixas(p); antes_ve = corpo.faixas(E['gente'][ve]) if ve else None
+        ultimo = E['relogio']['bloco'] == M.BLOCOS_DIA - 1; lid = estado.onde(E, pid)
         ef = corpo.bloco(E, pid, esforco, dorme)
         for c in junto: ef += corpo.bloco(E, c, esforco, dorme)
+        if ve: ef += corpo.bloco(E, ve, 'nada')
         ef += (mais(i) if mais else [])
         if not ultimo: estado.aplica(E, tipo, ef + [['relogio', 1]], onde=lid, quem=[pid] + junto, texto=texto)
         else:                                               # o último bloco do dia: o bloco, e depois a virada (com o relógio)
             if ef: estado.aplica(E, tipo, ef, onde=lid, quem=[pid] + junto, texto=texto)
-            vir = corpo.virada(E, pid)
-            for c in junto: vir += corpo.virada(E, c)
+            vir = [['pessoa', c, 'marca.cena', 'poe', estado.agora(E) + 1] for c in [pid] + junto if not E['gente'][c].get('jogador')]      # o corpo de quem não é o personagem foi mexido até o fim deste bloco (o gravador marcou o começo dele)
+            for c in todos: vir += corpo.virada(E, c)
             estado.aplica(E, 'virada', vir + [['relogio', 1]], onde=lid, quem=[pid] + junto, texto='o dia vira')
             _mundo_vira(E)
         feitos += 1
-        for q in [pid] + junto:
+        for q in todos:
             x = E['gente'][q]
             if x['estado'] == 'vivo' and x['pv'] <= 0:
                 estado.aplica(E, 'virada', [['pessoa', q, 'estado', 'poe', 'morto']], onde=estado.onde(E, q), quem=[q], texto=f"a fome leva {x['nome']}")
@@ -73,6 +91,19 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
                 n = math.ceil((p['corpo']['sono'] - (M.LIMIARES['sono'][0] - 1)) / -M.SONO_CHAO)
                 k, _ = passa(E, pid, n, 'dormir', dorme='chao', texto=f"{p['nome']} cai no sono e dorme no chão", para=False, com=com)
                 porque = f"{p['nome']} cai no sono onde está (Vontade {t} contra {M.SONO_CAI[1]}) e dorme {estado.tantos(k, 'bloco')} no chão"; break
+        if ve:                                              # quem espera: o corpo dele cobra igual, e o ato do outro para
+            x = E['gente'][ve]; pq = None
+            if x['estado'] != 'vivo': pq = f"{x['nome']}, que esperava, morreu de fome"
+            else:
+                c = corpo.cruzou(x, antes_ve)
+                if c: pq = f"{c} (esperava: o tempo passa também para quem espera)"
+                if para and x['corpo']['sono'] >= M.SONO_CAI[0]:
+                    r = estado.sorte(E, f'sono|{ve}'); t = r.randint(1, 20) + r.randint(1, 20) + x['atributos']['Vontade'] // 10
+                    if t < M.SONO_CAI[1]:
+                        n = math.ceil((x['corpo']['sono'] - (M.LIMIARES['sono'][0] - 1)) / -M.SONO_CHAO)
+                        k, _ = passa(E, ve, n, 'dormir', dorme='chao', texto=f"{x['nome']} cai no sono e dorme no chão", para=False)
+                        porque = ' · '.join(y for y in (porque, f"{x['nome']}, que esperava, cai no sono onde está (Vontade {t} contra {M.SONO_CAI[1]}) e dorme {estado.tantos(k, 'bloco')} no chão") if y); break
+            if pq: porque = ' · '.join(y for y in (porque, pq) if y)
         if porque and para: break
     return feitos, porque
 
@@ -95,7 +126,8 @@ def comer(E, pid, da_carga=False):
     if da_carga or f:
         if p.get('carga', {}).get('comida', 0) < 1: sys.exit(f"{p['nome']} não carrega comida" + (f" (e {estado.em(E, f)} não há quem sirva)" if f else ' (a refeição do lugar: `ato.py comer`)'))
         estado.aplica(E, 'comer', [['pessoa', pid, 'carga.comida', 'soma', -1], ['pessoa', pid, 'fome', 'soma', M.REFEICAO]], onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} come da própria carga")
-        q = E['gente'][pid]; return f"{p['nome']} come da própria carga (fome {q['corpo']['fome']}; resta {q.get('carga', {}).get('comida', 0):g} de comida)"
+        q = E['gente'][pid]; sobra = q.get('carga', {}).get('comida', 0)
+        return f"{p['nome']} come da própria carga (fome {q['corpo']['fome']}; {'resta' if sobra == 1 else 'restam'} {sobra:g} de comida)"
     l = E['lugares'][p['lugar']]
     if l['estoque'].get('comida', 0) < 1: sys.exit(f"não há comida {estado.em(E, p['lugar'])}: ninguém serve refeição" + (' (você carrega comida: `ato.py comer carga`)' if p.get('carga', {}).get('comida', 0) >= 1 else ''))
     if p['moedas'] < M.REFEICAO_PRECO: sys.exit(f"a refeição custa {M.REFEICAO_PRECO} de prata; {p['nome']} tem {p['moedas']}" + (' (você carrega comida: `ato.py comer carga`)' if p.get('carga', {}).get('comida', 0) >= 1 else ''))
@@ -201,13 +233,19 @@ USO_DO_TIPO = dict(arma='arma', escudo='escudo', armadura='veste')
 USO_DIZ = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo')       # o nome da peça pode ser masculino ou feminino: estas palavras servem aos dois
 
 
+def uso_diz(it, uso=None):
+    """onde a peça está em uso, em palavras: na mão, de reserva, no braço, no corpo; o elmo (a armadura que só cobre a cabeça), na cabeça"""
+    uso = uso or it.get('uso')
+    return 'na cabeça' if uso == 'veste' and list(it.get('cobre') or []) == ['cabeça'] else USO_DIZ.get(uso, uso)
+
+
 def diz_pecas(E, pid):
     """as peças da pessoa, uma linha cada: o que está em uso (e onde) e o que está guardado; e os núcleos"""
     L = []
     for i, it in E['itens']['itens'].items():
         if it.get('dono') != pid: continue
         if it['tipo'] == 'nucleo': L.append(f"{i} {rotulo(it)} · núcleo, na guarda"); continue
-        L.append(f"{i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]), 'QUEBROU' if it['dur'][0] <= 0 else '')} · {'EM USO, ' + USO_DIZ[it['uso']] if it.get('uso') else 'na guarda'}")
+        L.append(f"{i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]), 'QUEBROU' if it['dur'][0] <= 0 else '')} · {'EM USO, ' + uso_diz(it) if it.get('uso') else 'na guarda'}")
     return L or ['(nenhuma peça)']
 
 
@@ -219,7 +257,7 @@ def vestir(E, pid, iid, uso=None):
     uso = uso or USO_DO_TIPO[it['tipo']]
     if uso not in estado.PARTES_VESTE or (it['tipo'] == 'arma') != (uso in ('arma', 'arma2')) or (uso == 'escudo') != (it['tipo'] == 'escudo'):
         sys.exit(f"{it['nome']} é {it['tipo']}: vai em " + ('arma (na mão) ou arma2 (de reserva)' if it['tipo'] == 'arma' else USO_DO_TIPO[it['tipo']]) + f' (veio "{uso}")')
-    if it.get('uso') == uso: sys.exit(f"{it['nome']} já está em uso ({USO_DIZ[uso]})")
+    if it.get('uso') == uso: sys.exit(f"{it['nome']} já está em uso ({uso_diz(it, uso)})")
     eq = estado.pecas(E, pid); saem = []
     if uso != 'veste' and eq[uso] and eq[uso]['id'] != iid: saem.append(eq[uso])
     if uso == 'veste': saem += [o for o in eq['veste'] if o['id'] != iid and set(o.get('cobre') or []) & set(it.get('cobre') or [])]
@@ -228,7 +266,7 @@ def vestir(E, pid, iid, uso=None):
     aviso = ''
     arma = estado.pecas(E, pid)['arma']
     if arma and T.FAMILIAS[arma['familia']]['maos'] == 2 and estado.pecas(E, pid)['escudo']: aviso = f"\nAVISO: {arma['nome']} pede as duas mãos: o escudo não entra na conta enquanto ela estiver na mão."
-    return f"{p['nome']} {'veste' if uso == 'veste' else 'empunha'} {it['nome']} ({USO_DIZ[uso]})" + (f"; vai para a guarda: {', '.join(o['nome'] for o in saem)}" if saem else '') + '.' + aviso + '\n' + _ficha(E, pid)
+    return f"{p['nome']} {'veste' if uso == 'veste' else 'empunha'} {it['nome']} ({uso_diz(it, uso)})" + (f"; vai para a guarda: {', '.join(o['nome'] for o in saem)}" if saem else '') + '.' + aviso + '\n' + _ficha(E, pid)
 
 
 def tirar(E, pid, iid):
@@ -285,6 +323,7 @@ def luta_nova(E, arq_cenario, arq_luta):
             pid = d.pop('id')
             if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}" no mundo')
             if E['gente'][pid]['estado'] != 'vivo': sys.exit(f'{E["gente"][pid]["nome"]} não entra na luta: {estado.morte_diz(E, E["gente"][pid])}')
+            estado.em_cena(E, pid)                          # quem não é o personagem e entra numa luta: antes de mais nada, o descanso em casa
             return estado.lutador(E, pid, **d)
         if isinstance(d.get('bicho'), str):                 # o atalho do bicho: a espécie inteira sai da tabela (o nível, se vier, não conta)
             import bichos
@@ -326,7 +365,7 @@ def luta_fecha(E, S, arq_luta=None):
         if pv != p['pv']: ef.append(['pessoa', pid, 'pv', 'soma', pv - p['pv']])
         for parte, grave in f['feridas'][f['feridas_antes']:]: ef.append(['ferida', pid, 'abre', parte, grave])
         if morto: ef.append(['pessoa', pid, 'estado', 'poe', 'morto'])
-        else: ef.append(['pessoa', pid, 'cansaco', 'soma', M.LUTA_CANSA])
+        else: ef += [['pessoa', pid, 'cansaco', 'soma', M.LUTA_CANSA], ['pessoa', pid, 'marca.luta_dia', 'poe', E['relogio']['dia']]]       # o dia em que a pessoa lutou não é dia de repouso (corpo.repousou)
         novas = len(f['feridas']) - f['feridas_antes']
         linhas.append(f"  {p['nome']}: {'MORREU' if morto else f'PV {pv}'}" + (f", {estado.tantos(novas, 'ferida nova', 'feridas novas')}" if novas > 0 else ''))
     for it in S['itens'].values():
@@ -353,6 +392,18 @@ def luta_larga(E, arq_luta, porque):
     for l in abertas: l['fim'] = 'largada'
     E['turno']['notas'].append(f"luta largada ({abertas[0]['arq']}): {porque}")
     return f"luta largada: {abertas[0]['arq']} ({porque}). Nada voltou ao estado: o que houve nela entra por `estado.py mestre`."
+
+
+def ultima_linha(E, pid, prata=None):
+    """A ÚLTIMA LINHA de todo comando que mexe no mundo: a hora, e como ficou quem agiu. COM UMA LUTA ABERTA diz só a hora e que vale o quadro da luta (o PV do save é o de
+    antes dela: o da luta só volta ao estado quando ela acaba). De quem MORREU, só a hora e a morte. Se quem agiu não é o personagem, uma segunda linha diz como ficou o
+    personagem, que esperava: o tempo passa para ele também."""
+    p = E['gente'][pid]; eu = estado.eu(E); mil = prata or (lambda n: f'{n}')
+    if estado.luta_aberta(E): return f"{estado.quando(E)} · LUTA ABERTA: o PV, o fôlego e as feridas que valem agora são os do quadro da luta"
+    diz = lambda x: f"PV {x['pv']}/{estado.pv_max(x)} · {corpo.diz(x)} · {mil(x['moedas'])} de prata"
+    L = [f"{estado.quando(E)} · " + (f"{p['nome']} {estado.morte_diz(E, p)}" if p['estado'] != 'vivo' else diz(p))]
+    if eu and eu != pid and E['gente'][eu]['estado'] == 'vivo': L.append(f"{E['gente'][eu]['nome']}, que esperava: {diz(E['gente'][eu])}")
+    return '\n'.join(L)
 
 
 if __name__ == '__main__':
@@ -384,6 +435,6 @@ if __name__ == '__main__':
     elif pos[:2] == ['luta', 'roda']: out = luta_roda(E, pos[2], pos[3:]) if len(pos) >= 3 else falta('diga o arquivo da luta e, se quiser, as ordens', 'luta roda LUTA.json "Nome: atacar"')
     elif pos[:2] == ['luta', 'larga']: out = luta_larga(E, pos[2], pos[3]) if len(pos) == 4 else falta('diga o arquivo da luta e por quê ela é largada', 'luta larga LUTA.json "por quê"')
     else: falta('a luta tem três comandos: nova, roda e larga', 'luta roda LUTA.json "Nome: atacar"')
-    estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar: a saída cortada não perde o que o dado rolou
+    estado.grava(E)                                         # grava ANTES de falar: a saída cortada não perde o que o dado rolou
     print(out)
-    print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
+    print(ultima_linha(E, pid))

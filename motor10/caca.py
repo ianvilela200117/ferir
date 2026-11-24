@@ -6,6 +6,9 @@ Tudo por evento (`cacar`, `coletar`, `despojo`, `ninhada`); os números moram no
     A saída aberta fica escrita na pessoa (marca.caca) até a volta: sobrevive a fechar e abrir o estado. Quem vai junto (com=) fica marcado na saída de quem
     comanda, e o corpo dele passa os mesmos blocos. ENQUANTO A SAÍDA ESTÁ ABERTA, A PESSOA ESTÁ NO ERMO: os atos da vila (dormir, trabalhar, comprar, forjar)
     são recusados (estado.presente); só come da própria carga.
+    QUEM VAI JUNTO CUIDA DE SI: ao entrar na saída, o tempo que ele passou em casa é acertado antes de mais nada (estado.em_cena: 3 blocos ou mais fora de cena,
+    e a fome, o sono e o cansaço voltam a zero; a cada 6, uma noite de cura). Se mesmo assim não vai inteiro (ferida aberta, PV abaixo de 90%, o corpo cobrando),
+    a mesa diz. No ermo, quem vai junto e tem comida na carga come quando a fome cobra.
   O RASTRO: um teste por bloco de procura, 2d20 + Percepção ÷ 10 + maestria de caça (+ a pena do corpo), contra a FARTURA do ermo:
     20, mais o arisco da espécie, mais até 12 pelo que falta dela (contagem ÷ teto). De noite, −4.
   O QUE APARECE SAI DA CONTAGEM REAL: um bicho, um bando (nunca mais do que há), ou nada. No bloco em que o rastro falha, pode
@@ -80,6 +83,34 @@ def _resta(n, de=''):
     """o que resta da saída, numa frase: "Restam 2 blocos de procura: `caca.py segue` ou `caca.py volta`."; sem bloco nenhum, só há a volta"""
     return f"{_s(n, 'Resta', 'Restam')} {_bl(n)}{de}: `caca.py segue` ou `caca.py volta`." if n > 0 else f"Não resta bloco{de}: `caca.py volta`."
 def _cap(x): return x[:1].upper() + x[1:]                        # a primeira letra maiúscula, sem mexer no resto ("a Mata do Corvo" abre a frase como "A Mata do Corvo")
+
+
+NA_PARTE = {'cabeça': 'na cabeça', 'braços': 'nos braços', 'tronco': 'no tronco', 'pernas': 'nas pernas'}
+
+
+def nao_inteiro(E, c):
+    """o estado de quem vai junto, numa frase, SE ELE NÃO ESTÁ INTEIRO: PV abaixo de 90% (tabelas_mundo.INTEIRO_PV), ferida aberta, ou o corpo cobrando (pena ou fôlego a menos).
+    Inteiro, None."""
+    q = E['gente'][c]; L = []
+    if q['pv'] < estado.pv_max(q) * M.INTEIRO_PV: L.append(f"PV {q['pv']}/{estado.pv_max(q)}")
+    L += [f"ferida{' grave' if f['grave'] else ''} {NA_PARTE.get(f['parte'], f['parte'])} ({f['repouso']} de {M.FERIDA_DIAS[1 if f['grave'] else 0]} dias de repouso)" for f in q['feridas']]
+    if corpo.pena(q) or corpo.folego_menos(q):
+        ha = corpo.fora_de_cena(E, c); L.append(corpo.diz(q) + f" (em casa há {_bl(ha)}: com {M.CASA_ZERA} ou mais, teria comido e dormido por conta própria)")
+    return f"{q['nome']}: " + ' · '.join(L) if L else None
+
+
+def merenda(E, com, L):
+    """NO ERMO, QUEM VAI JUNTO COME DA PRÓPRIA CARGA quando a fome cobra (o primeiro limiar): ninguém manda nele, e ninguém passa fome com comida no alforje.
+    Não vale para o personagem (esse come quando o jogador manda). Uma linha na mesa por pessoa."""
+    if estado.luta_aberta(E): return
+    for c in com:
+        q = E['gente'].get(c); n = 0
+        if not q or q.get('jogador') or q['estado'] != 'vivo': continue
+        while E['gente'][c]['corpo']['fome'] >= M.LIMIARES['fome'][0] and (E['gente'][c].get('carga') or {}).get('comida', 0) >= 1:
+            estado.aplica(E, 'comer', [['pessoa', c, 'carga.comida', 'soma', -1], ['pessoa', c, 'fome', 'soma', M.REFEICAO]], onde=estado.onde(E, c), quem=[c], texto=f"{q['nome']} come da própria carga"); n += 1
+        if n:
+            q = E['gente'][c]; sobra = (q.get('carga') or {}).get('comida', 0)
+            L.append(f"{q['nome']} come da própria carga ({estado.tantos(n, 'refeição', 'refeições')}; fome {q['corpo']['fome']}; {_s(sobra, 'resta', 'restam')} {sobra:g} de comida).")
 
 
 # ---------- ler ----------
@@ -217,6 +248,7 @@ def _minha(E, pid, vivo=True):
     p = _vivo(E, pid) if vivo else (E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"'))
     if vai_com(p): sys.exit(f"{p['nome']} foi junto na saída de {E['gente'].get(vai_com(p), {}).get('nome', vai_com(p))}: quem decide é quem comanda (`quem={vai_com(p)}`)")
     s = saida(p)
+    if not s and p['estado'] != 'vivo': sys.exit(f"{p['nome']} não age: {estado.morte_diz(E, p)}. Não há saída aberta para fechar.")
     if not s: sys.exit(f"{p['nome']} não tem saída aberta (`caca.py sair`)")
     if s.get('ermo') not in E['lugares'] or s.get('fase') not in ('procura', 'encontro', 'luta') or not isinstance(s.get('restam'), int) or not isinstance(s.get('com', []), list):
         sys.exit(f"a saída de {p['nome']} está torta (o estado não a descreve direito: `estado.py valida`). SÓ O MESTRE: `caca.py larga \"por quê\"` a fecha sem as contas")
@@ -271,6 +303,9 @@ def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
     for c in com:
         q = E['gente'].get(c) or sys.exit(f'não há a pessoa "{c}"')
         if c == pid or q['estado'] != 'vivo' or q['lugar'] != aqui or (q.get('marca') or {}).get('caca'): sys.exit(f"{q['nome']} não pode ir junto (só vai quem vive, está {_em(E, aqui)} e não tem saída aberta)")
+    estado.sem_luta(E)
+    for c in [pid] + com: estado.em_cena(E, c)                 # quem não é o personagem volta à cena: ANTES de mais nada, o tempo que passou em casa (comeu, dormiu, sarou)
+    p = E['gente'][pid]; cansados = [x for x in (nao_inteiro(E, c) for c in com) if x]
     ida = longe(E, ermo); o_que = (TB.ESPECIES[alvo]['nome'] if alvo else 'o que aparecer') if quer == 'caça' else _bem(alvo)
     s = dict(ermo=ermo, casa=aqui, quer=quer, alvo=alvo, restam=n, com=com, dia=E['relogio']['dia'], fase='procura', encontro=None, luta=None, lutas=0, parou=None, sangue=None)
     txt = f"{p['nome']} sai para {'caçar' if quer == 'caça' else 'tirar'} {o_que} {_em(E, ermo)}" + (f", com {_e(E['gente'][c]['nome'] for c in com)}" if com else '')
@@ -278,6 +313,8 @@ def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
     antes = corpo.faixas(E['gente'][pid])
     ato.passa(E, pid, ida, EVENTO[quer], esforco=K.ESFORCO['ida'], para=False, texto=f"{p['nome']} vai ao ermo ({l['nome']})", com=com)
     L = ([aviso] if aviso else []) + [f"{txt}: {_bl(ida)} de ida, {n} de {'procura' if quer == 'caça' else 'coleta'}, {ida} de volta."]
+    if cansados: L.append(f"ATENÇÃO, quem vai junto não vai {_s(len(cansados), 'inteiro', 'inteiros')}: " + '; '.join(cansados) + '.')
+    merenda(E, com, L)
     if E['gente'][pid]['estado'] == 'vivo' and corpo.cruzou(E['gente'][pid], antes): L.append(f"No caminho: {corpo.cruzou(E['gente'][pid], antes)}.")
     return _anda(E, pid, L)
 
@@ -330,7 +367,8 @@ def _bloco_caca(E, pid, L):
                       mais=lambda i: [['pessoa', pid, 'treino.caça', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
     p = E['gente'][pid]
     if p['estado'] != 'vivo': return None
-    if pq and ato_caiu(pq): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não há rastro a ler
+    merenda(E, s['com'], L)
+    if pq and ato_caiu(pq, p): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não há rastro a ler
     contra = rastro_contra(E, ermo, alvo); o_que = TB.ESPECIES[alvo]['nome'] if alvo else 'o que aparecer'; B = bichos_de(E, ermo); enc = None
     # ATRÁS DE CHEFE A ROLAGEM É OCULTA: o número do rastro muda com a contagem (há um, não há), e do chefe ninguém sabe de graça. À mesa sai só "rolagem oculta"; o número fica com o Mestre
     r = teste.rola(E, f"rastrear {o_que} {_em(E, ermo)}" + (', no escuro' if escuro else ''), 'Percepção', contra, mais=mao(p) + (K.RASTRO_ESCURO if escuro else 0), quem=pid, oculto=bool(alvo and TB.ESPECIES[alvo]['chefe']))
@@ -354,7 +392,7 @@ def _bloco_caca(E, pid, L):
     return None
 
 
-def ato_caiu(pq): return 'cai no sono' in (pq or '')         # o ato parou porque a pessoa caiu no sono (e já dormiu ali, no chão: ato.passa)
+def ato_caiu(pq, p): return (pq or '').startswith(f"{p['nome']} cai no sono")         # o ato parou porque QUEM AGIA caiu no sono (e já dormiu ali, no chão: ato.passa); o personagem que esperava e caiu no sono não conta aqui
 
 
 def do_morto(E, ermo):
@@ -398,7 +436,8 @@ def _bloco_coleta(E, pid, L):
                       mais=lambda i: [['pessoa', pid, 'treino.coleta', 'soma', 1], ['pessoa', pid, 'marca.caca', 'poe', s]])
     p = E['gente'][pid]
     if p['estado'] != 'vivo': return None
-    if pq and ato_caiu(pq): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não tirou nada
+    merenda(E, s['com'], L)
+    if pq and ato_caiu(pq, p): return _pausa(E, pid, pq, L) if s['restam'] > 0 else L.append(f'PAROU: {pq}.')        # caiu no sono no meio do bloco: não tirou nada
     contra = coleta_contra(E, ermo, bem); ha = int(coleta_de(E, ermo).get(bem, 0))
     r = teste.rola(E, f"tirar {_bem(bem)} {_em(E, ermo)}", tab['atributo'], contra, mais=mao(p, 'coleta'), quem=pid); m = r['total'] - contra; L.append(teste.diz(E, r))
     q = coleta_rende(bem, m, ha)
@@ -430,7 +469,7 @@ def _le_encontro(E, pid, enc, restam):
     if enc['viu'] == 'caçador':
         L.append(f"VOCÊ VIU PRIMEIRO (o rastro passou por {enc['margem']}): se atacar, {_s(n, 'o bicho perde', 'os bichos perdem')} o primeiro turno, e a luta começa {_ou(inis)}."
                  + (f" Terreno: {nv} {_s(nv, 'vantagem', 'vantagens')} à escolha: " + ' · '.join(f'{k} ({v})' for k, v in K.VANTAGEM_DIZ.items()) + '.' if nv else ' Sem vantagem de terreno.'))
-        L.append(f"ESCOLHA: `caca.py atacar [inicio={'|'.join(inis)}]" + (f" [vantagem={'|'.join(K.VANTAGENS)}]" + (' (até duas, com vírgula)' if nv > 1 else '') if nv else '') + f"` · `caca.py deixar` ({'segue a procura: ' + _s(restam, 'resta', 'restam') + ' ' + _bl(restam) if restam > 0 else 'deixa o bicho ir; não resta bloco de procura: é a volta'}) · `caca.py fugir` (larga a caçada e volta)")
+        L.append(f"ESCOLHA: `caca.py atacar [inicio={'|'.join(inis)}]" + (f" [vantagem={'|'.join(K.VANTAGENS)}]" + (' (até duas, com vírgula)' if nv > 1 else '') if nv else '') + f"` · `caca.py deixar` ({'segue a procura: ' + _s(restam, 'resta', 'restam') + ' ' + _bl(restam) if restam > 0 else _s(n, 'deixa o bicho ir', 'deixa os bichos irem') + '; não resta bloco de procura: é a volta'}) · `caca.py fugir` (larga a caçada e volta)")
     else:
         agil = TB.ESPECIES[esp]['atributos']['Agilidade'] // 10
         L.append(f"ESCOLHA: `caca.py atacar` (a luta começa {K.INICIO_ACASO}; ninguém é surpreendido) · `caca.py deixar` (fica onde está: {_s(n, 'ele pode', 'eles podem')} investir, e aí a luta é a mesma) · "
@@ -584,7 +623,7 @@ def acerta(E, pid):
     s2 = dict(s, fase='procura', encontro=None, luta=None, sangue=sg) if vivo else None
     quem_ficou = _e(E['gente'][c]['nome'] for c in ficaram)
     txt = (f"{quem_ficou} {_s(len(ficaram), 'fica', 'ficam')} com o campo {_em(E, ermo)}" if campo and ficaram else f"{p['nome']} " + (f"fica com o campo {_em(E, ermo)}" if campo else f"perde o campo {_em(E, ermo)}")) \
-        + (f": {saem} de {e['nome']} a menos" if saem else '') + (f"; {_s(len(ficaram), 'leva', 'repartem')} {_lista(bens)}" if bens else '')
+        + (f": {saem} {e['nome'] if saem == 1 else _plural(e['nome'])} a menos" if saem else '') + (f"; {_s(len(ficaram), 'leva', 'repartem')} {_lista(bens)}" if bens else '')
     estado.aplica(E, 'despojo' if saem else 'cacar', ef + [['pessoa', pid, 'marca.caca', 'poe', s2]] + (_soltam(E, s) if s2 is None else []), onde=ermo, quem=[pid] + [c for c in s['com'] if c in E['gente']], texto=TB.contrai(txt))
     R = dict(fim=S['fim'], campo=campo, especie=esp, eram=len(bs), mortos=saem, fugiram=fugiram, leva=leva, bens=bens, partes=partes, nucleos=nucleos, meu=meu.get('estado'), rodadas=S['r'],
              ids_nucleos=[f"i{E['itens']['seq'] - k:04d}" for k in reversed(range(nucleos))])
@@ -649,6 +688,7 @@ def volta(E, pid, L=None, arrasta=False):
     p = E['gente'][pid]
     if p['estado'] != 'vivo': return _morreu(E, pid, L, s)
     if saida(p): _marca(E, pid, None, f"{p['nome']} chega do ermo")
+    merenda(E, s['com'], L); p = E['gente'][pid]
     carga = {b: q for b, q in p.get('carga', {}).items() if q}
     L.append(f"{p['nome']} volta ({_bl(n)}) e chega {_em(E, p['lugar'])}. Carrega: {_lista(carga)}" + (sobe(E, pid, of) or '.'))
     if corpo.cruzou(p, antes): L.append(f"No caminho: {corpo.cruzou(p, antes)}.")
@@ -752,6 +792,8 @@ def ver(E, pid):
     """as linhas da caça para esta pessoa: os ermos vizinhos e o que se sabe deles, a mão dela, a saída aberta"""
     p = E['gente'][pid]; aqui = p['lugar']; viz = ermos(E, aqui); L = []
     if saida(p) or vai_com(p): L.append(f"**SAÍDA ABERTA:** {_agora(E, pid)}")
+    junto = [E['gente'][c] for c in (saida(p) or {}).get('com', []) if E['gente'].get(c, {}).get('estado') == 'vivo']
+    if junto: L.append('Vai junto: ' + '; '.join(f"{q['nome']} (PV {q['pv']}/{estado.pv_max(q)} · {corpo.diz(q)}" + (f" · {estado.tantos(len(q['feridas']), 'ferida aberta', 'feridas abertas')}" if q['feridas'] else '') + ')' for q in junto))
     if not viz: return L + [f"{E['lugares'][aqui]['nome']} não tem ermo vizinho: daqui não se sai para caçar nem para coletar."]
     for lid in viz:
         l = E['lugares'][lid]; bi, ma = _sabe(E, lid, p); n = longe(E, lid)
@@ -845,10 +887,9 @@ def main(a=None):
     elif pos[0] == 'segue': R = segue(E, pid)
     elif pos[0] == 'larga': R = larga(E, pid, pos[1] if len(pos) > 1 else '')
     else: R = volta(E, pid)
-    estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar: a saída cortada não perde o que o dado rolou
+    estado.grava(E)                                         # grava ANTES de falar: a saída cortada não perde o que o dado rolou
     print(TB.contrai(R['texto']))
-    if p['estado'] != 'vivo': print(f"{estado.quando(E)} · {p['nome']} morreu")
-    else: print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
+    print(ato.ultima_linha(E, pid))                         # com a luta aberta, só a hora e que vale o quadro; de quem morreu, só a hora e a morte
 
 
 if __name__ == '__main__':

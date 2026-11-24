@@ -34,8 +34,13 @@ SONO_CAI = (8, 28)          # com sono 8 ou mais, por bloco acordado: Vontade co
 CURA_BLOCO = 0.05           # PV que um bloco dormido devolve (fração do máximo), sem fome 4 ou mais
 CURA_DIA = 2                # ... em no máximo tantos blocos por dia (10% por noite dormida)
 FERIDA_DIAS = (7, 21)       # dias de repouso para a ferida sarar (ferida, grave)
-PESADOS_SEM_REPOUSO = 2     # dia com tantos blocos pesados não conta para sarar
+PESADOS_SEM_REPOUSO = 2     # dia com tantos blocos pesados não conta para sarar (nem o dia em que a pessoa lutou, nem o dia em que passou um bloco ou mais numa saída ao ermo)
 LUTA_CANSA = 2              # uma luta cansa isto
+
+# ---------- o descanso em casa (quem NÃO é o personagem cuida de si quando não está em cena; o personagem nunca descansa de graça) ----------
+CASA_ZERA = 3               # fora de cena por tantos blocos ou mais: a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria); com menos, nada muda
+CASA_NOITE = 6              # a cada tantos blocos inteiros fora de cena (um dia): uma noite dormida de cura (CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas
+INTEIRO_PV = 0.9            # ao abrir uma saída, a mesa diz o estado de quem vai junto se ele não está inteiro: PV abaixo desta fração do máximo, ferida aberta, ou o corpo cobrando
 
 # ---------- viver (em prata) ----------
 REFEICAO_PRECO = 1
@@ -89,16 +94,16 @@ OFICINA_MAX = 4             # a oficina de um lugar vai de 0 (bancada) a isto (f
 PERIGO_MAX = 3              # o perigo de um ermo vai de 1 (a borda) a isto (o coração)
 
 # ---------- treinar ----------
-MAESTRIA_BLOCOS = {2: 40, 4: 160, 6: 500, 8: 1500}       # blocos de treino ou de luta com a arma para cada grau
+MAESTRIA_BLOCOS = {2: 40, 4: 160, 6: 500, 8: 1500}       # blocos de treino ou de luta com a arma para cada grau (o ofício que ainda não tem tabela própria, como a cura, segue esta)
 MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FEITO com a arma (o mundo registra)
 
 # ---------- os eventos (o que pode acontecer; evento fora desta lista é recusado) ----------
 EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'vestir', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
-           'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada']
+           'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada', 'casa']
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
-MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz): não é fato do turno, a não ser que alguém morra
+MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
 RETOMAR_FATOS = 40          # o teto de linhas de fatos no RETOMAR.md; passando disso, a primeira linha diz quantos ficaram de fora e como lê-los
 OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura']      # os ofícios que têm maestria e treino, como as armas (maestria.forja, treino.caça)
 MODULOS = ['mercado', 'oficio', 'caca']     # os módulos do mundo: cada um pode ter virada(E) (roda quando o dia vira), mesa(E) (linhas para a MESA.md), so_mestre(E) (linhas para o SÓ O MESTRE da MESA) e retomar(E) (linhas para o RETOMAR.md)

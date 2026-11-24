@@ -227,8 +227,9 @@ def _gasta_e_quebrada(n):
         p0 = prata(E); vale[nome] = mercado.preco_peca(L()[iid]); pagou[nome] = mercado.vender_peca(E, 'eu', iid)['prata']
         certo = certo and iid in mercado.prateleira(E, 'vila') and L()[iid]['dono'] is None and L()[iid]['onde'] == 'vila' and mercado.preco_peca(L()[iid]) == vale[nome] and prata(E) == p0 and inteiro(E)
     certo = (certo and vale['nova'] == tabela == 1080 and vale['gasta'] == tabela - conserto == 756 and vale['quebrada'] == round(tabela * C.SUCATA) == 108 and vale['sob'] == C.preco_peca(1) == 180
-             and pagou == {k: math.floor(round(C.PAGA_PECA * v, 6)) for k, v in vale.items()})       # a loja paga a parte dela nas PEÇAS (tabelas_mercado.PAGA_PECA) sobre o valor de cada uma
-    return ('A PEÇA GASTA E A QUEBRADA: peça gasta vale menos que nova; peça quebrada vale sucata',
+             and pagou == {k: math.floor(round(C.PAGA_PECA * v, 6)) for k, v in vale.items()}        # a loja paga a parte dela nas PEÇAS (tabelas_mercado.PAGA_PECA) sobre o valor de cada uma
+             and pagou == dict(nova=432, gasta=302, quebrada=43, sob=72))                             # A DECISÃO DO JOGADOR, ESCRITA: a loja paga 40% pelas peças a um Leigo. Com outro número na tabela, esta linha falha
+    return ('A PEÇA GASTA E A QUEBRADA: peça gasta vale menos que nova; peça quebrada vale sucata; pelas peças a loja paga 40% a um Leigo (432, 302, 43 e 72 pela espada Rara)',
             f"uma espada Rara: nova (30/30) vale {_m(vale['nova'])}; gasta (15/30), {vale['gasta']} (o preço menos os {conserto} do conserto que ela pede); quebrada (0/30), {vale['quebrada']} (a sucata: {pc(C.SUCATA)}); "
             f"sob medida para outro, {vale['sob']} (uma categoria abaixo); a loja pagou a um Leigo {pagou['nova']}, {pagou['gasta']}, {pagou['quebrada']} e {pagou['sob']}, e cada uma foi para a prateleira pelo valor dela; a prata fecha", certo)
 
@@ -466,10 +467,18 @@ def _comercio(n):
     L, Ld = (vila(prata=50) for _ in range(2)); estado.aplica(Ld, 'gera', [['pessoa', 'eu', 'maestria.comércio', 'poe', 8]], texto='a mão de prova')
     for X in (L, Ld): da(X, lenha=100)
     q0 = prata(L), prata(Ld); leigo = mercado.vender(L, 'eu', 'lenha', 100)['prata']; lend = mercado.vender(Ld, 'eu', 'lenha', 100)['prata']; fecha = q0 == (prata(L), prata(Ld)) and inteiro(L) and inteiro(Ld)
-    certo = (partes == [0.60, 0.65, 0.70, 0.75, 0.80] and (miudo, um) == (0, 1) and (antes, depois) == (0, 2) and 'MAESTRIA' in R['texto'] and abs(pct - 0.65) < 1e-9 and treinado == 4 and 'falta o feito' in falta
+    partes_peca = [C.parte_peca(m) for m in (0, 2, 4, 6, 8)]; espada = {}                             # NAS PEÇAS a mão soma os mesmos 5 pontos por grau, de 40 a 60%: a mesma espada Rara, por um Leigo e por um Lendário em comércio
+    for nome, mao_ in (('leigo', 0), ('lendario', 8)):
+        X = vila(prata=50)
+        if mao_: estado.aplica(X, 'gera', [['pessoa', 'eu', 'maestria.comércio', 'poe', mao_]], texto='a mão de prova')
+        estado.aplica(X, 'gera', [['item', 'nasce', item('arma', 2, 'Espada Rara de prova', familia='espada', dono='eu')]], texto='a peça de prova'); x0 = prata(X)
+        espada[nome] = mercado.vender_peca(X, 'eu', f"i{X['itens']['seq']:04d}")['prata']; fecha = fecha and prata(X) == x0 and inteiro(X)
+    nas_pecas = all(abs(a - b) < 1e-9 for a, b in zip(partes_peca, [0.40, 0.45, 0.50, 0.55, 0.60])) and len(partes_peca) == 5 and espada == dict(leigo=432, lendario=648)
+    certo = (nas_pecas and partes == [0.60, 0.65, 0.70, 0.75, 0.80] and (miudo, um) == (0, 1) and (antes, depois) == (0, 2) and 'MAESTRIA' in R['texto'] and abs(pct - 0.65) < 1e-9 and treinado == 4 and 'falta o feito' in falta
              and mestre == 6 and feito == 6 and leigo < lend and abs(lend / leigo - 80 / 60) < 0.03 and prata(E) == p0 and inteiro(E) and fecha)
-    return ('A MÃO DE COMÉRCIO: a loja paga 60% a um Leigo e 5 pontos a mais por grau, até 80%; a mão sobe por dias de negócio, e de Mestre para cima pede um negócio grande',
-            f"a loja paga {', '.join(pc(x) for x in partes)} (Leigo a Lendário): 100 de lenha rendem {leigo} a um Leigo e {lend} a um Lendário; negócio de menos de {C.NEGOCIO_MIN} de prata não conta, dois no mesmo dia contam um; "
+    return ('A MÃO DE COMÉRCIO: pelos bens a loja paga 60% a um Leigo e 5 pontos a mais por grau, até 80%; pelas PEÇAS, 40% e os mesmos 5 pontos por grau, até 60%; a mão sobe por dias de negócio, e de Mestre para cima pede um negócio grande',
+            f"pelos bens a loja paga {', '.join(pc(x) for x in partes)} (Leigo a Lendário): 100 de lenha rendem {leigo} a um Leigo e {lend} a um Lendário; pelas peças paga {', '.join(pc(x) for x in partes_peca)}: "
+            f"a mesma espada Rara (vale {_m(C.preco_peca(2))}) rende {espada['leigo']} a um Leigo e {espada['lendario']} a um Lendário em comércio; negócio de menos de {C.NEGOCIO_MIN} de prata não conta, dois no mesmo dia contam um; "
             f"com {C.COMERCIO_DIAS[2] - 1} dias de negócio: {T.MAESTRIAS[antes]}; com {C.COMERCIO_DIAS[2]}: {T.MAESTRIAS[depois]}; com {C.COMERCIO_DIAS[2] + C.COMERCIO_DIAS[6]} dias e nenhum negócio grande: {T.MAESTRIAS[treinado]} (falta o feito); "
             f"depois de comprar uma peça de {_m(C.preco_peca(2))}: {T.MAESTRIAS[mestre]}; a prata fecha", certo)
 

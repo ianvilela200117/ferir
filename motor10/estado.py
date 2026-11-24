@@ -29,6 +29,10 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
   COM UMA LUTA ABERTA (no caderno do turno) O MUNDO NÃO ANDA: `aplica()` só aceita a luta que volta ao estado (evento "luta"), a mão do Mestre (evento "mestre")
     e a nota da saída de caça que diz que ela está naquela luta. O resto é recusado, de qualquer pessoa, com a frase que diz como acabar ou soltar a luta.
   O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos. Fora disso, não aconteceu.
+  QUEM NÃO É O PERSONAGEM CUIDA DE SI QUANDO NÃO ESTÁ EM CENA (o descanso em casa). O gravador guarda, em cada pessoa que não é o personagem, o bloco em que o corpo dela
+    (a fome, o sono, o cansaço, o PV, as feridas) foi mexido pela última vez: `marca.cena`. Quando ela volta a agir (um ato com quem=, entrar numa saída ou numa luta),
+    `em_cena()` acerta ANTES, num evento "casa", o tempo que passou: 3 blocos ou mais, o corpo volta a zero; a cada 6, uma noite de cura e um dia de repouso (corpo.casa).
+    O personagem nunca ganha descanso de graça. Save de antes desta regra: quem não tem a marca conta como descansado, sem noite de cura.
 
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
      (o Mestre): python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas na estrada"      um evento "mestre", com os efeitos em JSON
@@ -118,6 +122,13 @@ def de_morto(it):
     return it.get('corpo') or (True if 'ficou com o corpo de' in ''.join((it.get('historia') or [])[-1:]) else None)
 
 
+def nome_bem(b):
+    """o nome de um bem como vai à mesa: a matéria com a categoria por extenso ("couro Comum", "madeira Rara", e não a chave "couro:0"); os outros bens, como são"""
+    from itens import FEM
+    n, c = M.le_materia(b)
+    return b if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+
+
 def tantos(n, um, muitos=None):
     """o número com a palavra no singular ou no plural: "1 bloco", "3 blocos", "2 ações" (tantos(2, 'ação', 'ações'))"""
     return f"{n:g} {um if n == 1 else (muitos or um + 's')}"
@@ -160,7 +171,19 @@ def presente(E, pid, o_que='agir aqui'):
     sem_luta(E)
     f = fora(E, pid)
     if f: sys.exit(f"{p['nome']} está fora, {em(E, f)} (a saída está aberta): não pode {o_que}. `caca.py ver` diz o que há à frente; `caca.py volta` fecha a saída.")
-    return p
+    em_cena(E, pid)
+    return E['gente'][pid]
+
+
+def em_cena(E, pid):
+    """QUEM NÃO É O PERSONAGEM VOLTA À CENA: antes de mais nada, acerta num evento só ("casa") o tempo que a pessoa passou fora de cena (corpo.casa: o descanso em casa).
+    Não vale para o personagem (ele nunca descansa de graça), para quem morreu, para quem está fora (no ermo, numa saída aberta: lá não é casa), nem com uma luta aberta
+    (o mundo está parado). Chamar de novo não muda nada: o acerto conta do bloco em que o corpo foi mexido pela última vez. Devolve o evento, ou None."""
+    import corpo
+    p = E['gente'].get(pid) if isinstance(pid, str) else None
+    if not isinstance(p, dict) or p.get('jogador') or p.get('estado') != 'vivo' or fora(E, pid) or luta_aberta(E): return None
+    ef = corpo.casa(E, pid)
+    return aplica(E, 'casa', ef, onde=p['lugar'], quem=[pid], texto=f"{p['nome']} descansou em casa") if ef else None
 
 
 def arq_guarda(arq):
@@ -226,7 +249,8 @@ def _morre(E, pid):
     """A MORTE, numa regra só: o morto não fica com nada. As peças e os núcleos dele caem SOLTOS onde ele morreu; as obras se desfazem; a carga e a prata ficam no
     estoque desse lugar. Quem foi junto na saída de outro deixa de estar nela; a saída de quem a comandava fica escrita, para a caça fazer as contas."""
     p = E['gente'][pid]; lid = onde(E, pid); l = E['lugares'][lid]; dia = E['relogio']['dia']
-    p['morte'] = dict(dia=dia, bloco=E['relogio']['bloco'], onde=lid)
+    p['morte'] = dict(dia=dia, bloco=E['relogio']['bloco'], onde=lid, prata=p['moedas'] if _int(p.get('moedas')) and p['moedas'] > 0 else 0,
+                      carga={b: q for b, q in (p.get('carga') or {}).items() if _num(q) and q > 0})       # o que ele deixou (a MESA de quem morreu diz); save antigo: sem estes dois campos, não se diz quanto
     for oid in [k for k, o in E['itens'].get('obras', {}).items() if o.get('quem') == pid]: del E['itens']['obras'][oid]
     for it in E['itens']['itens'].values():
         if it.get('dono') == pid:
@@ -479,6 +503,11 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
         except (TypeError, KeyError, IndexError, AttributeError, ValueError) as x: e = _erro(ef, f'efeito malformado ({type(x).__name__})')
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {e}')
     if all(ensaio[k] == E[k] for k in ARQS): return None
+    for pid, p in ensaio['gente'].items():                  # quem não é o personagem guarda o bloco em que o corpo foi mexido pela última vez: o descanso em casa conta daí (em_cena)
+        a = E['gente'].get(pid)
+        if isinstance(a, dict) and isinstance(p, dict) and not p.get('jogador') and p.get('estado') == 'vivo' and any(a.get(k) != p.get(k) for k in ('corpo', 'pv', 'feridas')):
+            if not isinstance(p.get('marca'), dict): p['marca'] = {}
+            p['marca']['cena'] = agora(ensaio)
     ev = dict(id=E['relogio']['eventos'] + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], tipo=tipo, onde=onde, quem=list(quem), efeitos=[list(x) for x in efeitos], texto=texto)
     for k in ARQS: E[k] = ensaio[k]
     E['relogio']['eventos'] = ev['id']; E['_novos'].append(ev)
@@ -620,17 +649,19 @@ if __name__ == '__main__':
         from itens import rotulo
         if p['estado'] != 'vivo':                           # do morto só se diz que morreu (e onde): não tem ficha de luta, nem fome, nem forças, nem peça
             print(f"{p['nome']}, nível {p['nivel']}: {morte_diz(E, p)}. Quem morreu não fica com nada: o que era de {p['nome']} caiu ali."); sys.exit()
+        casa = em_cena(E, a[1]); p = E['gente'][a[1]]         # quem não é o personagem aparece como VOLTA À CENA agora (o descanso em casa); este comando só olha: nada é gravado
         print(pessoas.linha(pessoas.ficha(lutador(E, a[1]))))
         feridas = ', '.join(f"{f['parte']}{' (grave)' if f['grave'] else ''}, do Dia {f['dia']}" for f in p['feridas']) or 'nenhuma'
         print(f"  corpo: {corpo.diz(p)} · feridas: {feridas} · prata: {p['moedas']} · {em(E, onde(E, a[1]))}")
-        if p.get('carga'): print('  carga: ' + ', '.join(f'{q:g} de {b}' for b, q in p['carga'].items()))
+        if casa: print(f"  ({p['nome']} descansou em casa desde a última vez em cena: é assim que volta a agir)")
+        if p.get('carga'): print('  carga: ' + ', '.join(f'{q:g} de {nome_bem(b)}' for b, q in p['carga'].items()))
         usos = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo')
         for i, it in E['itens']['itens'].items():
-            if it.get('dono') == a[1]: print(f"  {i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]))}" + (f" · em uso, {usos.get(it['uso'], it['uso'])}" if it.get('uso') else ' · na guarda'))
+            if it.get('dono') == a[1]: print(f"  {i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]))}" + (f" · em uso, {'na cabeça' if it['uso'] == 'veste' and list(it.get('cobre') or []) == ['cabeça'] else usos.get(it['uso'], it['uso'])}" if it.get('uso') else ' · na guarda'))
     elif a[:1] == ['lugar'] and len(a) > 1:
         E = carrega(); l = E['lugares'].get(a[1]) or sys.exit(f'não há o lugar "{a[1]}" (os que há: {", ".join(E["lugares"])})')
         from itens import FEM, rotulo
-        def bem(b): n, c = M.le_materia(b); return b if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+        bem = nome_bem
         mil = lambda x: f'{int(x):,}'.replace(',', '.') if float(x).is_integer() else f'{x:g}'.replace('.', ',')
         conta = lambda d, teto=None, nome=str: ' · '.join(f"{nome(k)} {mil(v)}" + (f"/{mil(teto[k])}" if teto and k in teto else '') for k, v in d.items()) or 'nada'
         print(f"{l['nome']} [{a[1]}] · {l.get('tipo', 'lugar')}" + (f" · {l['habitat']}" if l.get('habitat') else '') + (f" · perigo {l['perigo']}" if l.get('perigo') else '') + (f" · a {tantos(l['longe'], 'bloco')} dos vizinhos" if l.get('longe') else '')

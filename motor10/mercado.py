@@ -435,9 +435,10 @@ def main(a=None):
     elif pos[0] == 'vender' and len(pos) > 2: out = vender(E, pid, pos[1], pos[2])['texto']
     elif pos[0] == 'funda': out = funda(E, E['gente'][pid]['lugar'], int(pos[1]), como=pos[2] if len(pos) > 2 else '')
     else: sys.exit(f'diga quantas unidades de "{pos[1]}" (ou o id de uma peça do Livro de Itens: i0007). Veja o uso: python3 mercado.py')
-    estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar
+    estado.grava(E)                                         # grava ANTES de falar
     print(out)
-    print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {_m(p['moedas'])} de prata")
+    import ato
+    print(ato.ultima_linha(E, pid, prata=_m))
 
 
 if __name__ == '__main__':

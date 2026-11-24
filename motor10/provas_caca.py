@@ -1102,16 +1102,78 @@ def _a_lingua_da_caca(n):
         s = dict(ermo='mata', casa='vila', quer='caça', alvo='lobo', restam=0, com=[], dia=E['relogio']['dia'], fase='encontro', luta=None, lutas=0, parou=None, sangue=None, encontro=dict(especie='lobo', n=3, viu='caçador', margem=0, escuro=False))
         estado.aplica(E, 'mestre', [['pessoa', 'eu', 'marca.caca', 'poe', s]], texto='três lobos à frente, para a prova'); le = '\n'.join(caca.le(E, 'eu')); R = quieto(caca.atacar, E, 'eu', inicio='longe'); abre = R['texto'].split('\n')[0]
         if 'restam 0 blocos' in le or 'não resta bloco' not in le: ruins.append('"restam 0 blocos" diante do bicho')
+        if 'deixa os bichos irem' not in le or 'deixa o bicho ir;' in le: ruins.append('"deixa o bicho ir" diante de três lobos')
         if 'contra 3 lobos' not in abre or 'os bichos foram surpreendidos (perdem o primeiro turno)' not in abre or 'o bicho foi' in abre: ruins.append(f'três lobos e um bicho só surpreendido: «{abre}»')
-        quieto(caca.larga, E, 'eu', 'fim da prova')
+        arq = caca._arq(caca.saida(E['gente']['eu'])); S = json.load(open(arq, encoding='utf-8'))      # o desfecho posto à mão: os três lobos mortos, a casa de pé (o que se lê é o texto das contas)
+        for f in S['L']: f['estado'] = 'morto' if f['lado'] == 'B' else 'pe'
+        S['fim'] = 'A'; S['r'] = max(1, S['r']); json.dump(S, open(arq, 'w', encoding='utf-8'), ensure_ascii=False); quieto(caca.acerta, E, 'eu'); menos = next((e['texto'] for e in reversed(E['_novos']) if 'a menos' in e['texto']), '')
+        if '3 lobos a menos' not in menos or 'de lobo a menos' in menos: ruins.append(f'"3 de lobo a menos": «{menos}»')
+        encerra(E, 'eu'); estado.aplica(E, 'mestre', [['pessoa', 'eu', 'estado', 'poe', 'morto']], texto='morre, para a prova'); volta = recusa(lambda: caca.volta(E, 'eu')) or ''
+        if 'não age: morreu' not in volta or '`caca.py sair`' in volta: ruins.append(f'o `caca.py volta` de quem morreu: «{volta}»')
     if 'Não resta bloco' not in caca._resta(0) or '0 blocos' in caca._resta(0) or not caca._resta(1).startswith('Resta 1 bloco:') or not caca._resta(2, ' de procura').startswith('Restam 2 blocos de procura:'): ruins.append('o que resta da saída')
     for esp, e in TB.ESPECIES.items():                              # a ameaça de toda espécie de nome feminino: nenhuma frase diz "dele", "nele", "ele"
         if e['artigo'] != 'a': continue
         t = bichos.ameaca(esp) + ' ' + bichos.ameaca(esp, n=2, arma=0, armadura=0); m = re.findall(r'\b(dele|nele|ele|deles)\b', t)
         if m: ruins.append(f"a ameaça de {e['nome']} diz \"{m[0]}\"")
     femininas = [e['nome'] for e in TB.ESPECIES.values() if e['artigo'] == 'a']
-    return ('A LÍNGUA DA CAÇA: o "e" antes do último companheiro; contra vários, são "os bichos" os surpreendidos; um bloco é "1 bloco"; sem bloco de procura, ninguém lê "restam 0 blocos"; e a ameaça da espécie de nome feminino não diz "dele"',
+    return ('A LÍNGUA DA CAÇA: o "e" antes do último companheiro; contra vários, são "os bichos" os surpreendidos (e quem os deixa "deixa os bichos irem"); um bloco é "1 bloco"; sem bloco de procura, ninguém lê "restam 0 blocos"; três lobos mortos são "3 lobos a menos"; o `caca.py volta` de quem morreu diz que ele morreu; e a ameaça da espécie de nome feminino não diz "dele"',
             f"a saída com dois companheiros, três lobos à frente, a linha da mão e a ameaça de {len(femininas)} espécies de nome feminino ({', '.join(femininas)}): " + ('nenhuma frase torta' if not ruins else 'TORTAS: ' + '; '.join(ruins)), not ruins)
+
+
+# ---------- quem vai junto cuida de si (o acerto da terceira volta: J1) ----------
+def _dia_com_ela(E, blocos, dorme, L):
+    """um dia do personagem com a companheira: uma saída de coleta (ida, `blocos` de coleta, volta), come e dorme `dorme` blocos na cama. Junta em L o texto da saída."""
+    R = quieto(caca.coletar, E, 'eu', 'madeira:0', blocos=blocos, com=['bera']); L.append(R['texto'])
+    while E['gente']['eu']['estado'] == 'vivo' and E['gente']['eu']['corpo']['fome'] >= 1 and E['gente']['eu']['moedas'] >= M.REFEICAO_PRECO: quieto(ato.comer, E, 'eu')
+    if dorme: quieto(ato.dormir, E, 'eu', dorme, para=False)
+    E['turno']['dados'] = []
+
+
+def _quem_vai_junto(n):
+    """QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (passou 3 blocos em casa); a saída logo em seguida,
+    ou com 2 blocos em casa, não zera, e a mesa avisa que ela não vai inteira; a MESA traz o estado de quem vai junto enquanto a saída está aberta. Nenhum dado decide."""
+    corpo_de = lambda E: dict(E['gente']['bera']['corpo']); falhas = []
+    with rascunho():
+        E = mundo(81, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); L = []
+        _dia_com_ela(E, 1, 3, L); a = corpo_de(E)                     # a saída A (3 blocos), e 3 blocos em casa: fecha um dia
+        _dia_com_ela(E, 1, 0, L); b = corpo_de(E)                     # a saída B, um dia depois: ela começa de corpo zerado, e acaba como acabou a primeira
+        casa = [e for e in E['_novos'] if e['tipo'] == 'casa']
+        _dia_com_ela(E, 1, 2, L); c = corpo_de(E)                     # a saída C, LOGO EM SEGUIDA (nenhum bloco em casa): não zera; depois, 2 blocos em casa
+        _dia_com_ela(E, 1, 0, L); d = corpo_de(E)                     # a saída D, com 2 blocos em casa (menos de 3): não zera
+        if not (a == b and a['sono'] == 3 and a['cansaco'] == 4): falhas.append(f'um dia depois ela não começou de corpo zerado: {a} e depois {b}')
+        if not (len(casa) == 1 and casa[0]['texto'] == 'Bera descansou em casa' and casa[0]['quem'] == ['bera']): falhas.append(f'o descanso em casa não é um evento só: {[e["texto"] for e in casa]}')
+        if 'ATENÇÃO' in L[0] or 'ATENÇÃO' in L[1]: falhas.append('a mesa avisou de quem ia inteira')
+        if not (c['sono'] == 6 and c['cansaco'] == 8 and 'ATENÇÃO, quem vai junto não vai inteiro: Bera:' in L[2] and 'em casa há 0 blocos' in L[2]): falhas.append(f'a saída logo em seguida zerou, ou a mesa não avisou: {c}')
+        if not (d['sono'] == 9 and d['cansaco'] == 10 and 'em casa há 2 blocos: com 3 ou mais, teria comido e dormido' in L[3] and 'pena −2' in L[3]): falhas.append(f'com 2 blocos em casa zerou, ou a mesa não avisou: {d}')
+        if estado.valida(E): falhas.append('o estado quebrou')
+    with rascunho():                                                # com a saída aberta, a MESA traz o estado de quem vai junto
+        E = mundo(82, fauna={'corça': 80}, prata=60, mao=8, atributos={'Percepção': 150}); cacador(E, 'bera', nome='Bera'); estado.grava(E)
+        R = ate_encontrar(E, 'eu', com=['bera']); mesa = turno.mesa(E) if R else ''
+        if 'Vai junto: Bera (PV ' not in mesa: falhas.append('a MESA não traz o estado de quem vai junto')
+    return ('QUEM VAI JUNTO CUIDA DE SI: a segunda saída com a mesma companheira, um dia depois, começa com ela de corpo zerado (descansou em casa); a saída logo em seguida, ou com menos de 3 blocos em casa, não zera, e a mesa avisa que ela não vai inteira; a MESA traz o estado de quem vai junto',
+            (f"quatro saídas de 3 blocos com a Bera: depois da primeira, sono {a['sono']} e cansaço {a['cansaco']}; a segunda, com 3 blocos em casa (um dia depois), acaba igual (um evento só: «Bera descansou em casa»); a terceira, logo em seguida, acaba com sono {c['sono']} e cansaço {c['cansaco']}, "
+             f"e a mesa avisou («{next((x for x in L[2].splitlines() if 'ATENÇÃO' in x), '')[:96]}...»); a quarta, com 2 blocos em casa, abre com o aviso (ela vai com sono 6: pena −2) e acaba com sono {d['sono']} e cansaço {d['cansaco']}; com a saída aberta, a MESA diz o estado dela: {sn(not any('MESA' in f for f in falhas))}") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
+
+
+def _cinco_saidas(n):
+    """CINCO SAÍDAS EM CINCO DIAS com a mesma companheira não matam ninguém de fome, e a prata do mundo fecha. No ciclo de 3 blocos fora e 3 em casa ela começa toda saída de
+    corpo zerado. No ciclo de 4 blocos fora e 2 em casa (menos de 3: não há descanso) ela não descansa: come da própria carga enquanto tem, a mesa avisa a cada saída, e ninguém morre."""
+    falhas = []; vivos = lambda E: all(E['gente'][q]['estado'] == 'vivo' for q in ('eu', 'bera'))
+    with rascunho():                                                # 3 fora, 3 em casa
+        E = mundo(83, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); p0 = prata(E); L = []; fins = []
+        for _ in range(5): _dia_com_ela(E, 1, 3, L); fins.append(dict(E['gente']['bera']['corpo']))
+        tres = (vivos(E), prata(E) == p0, all(f == fins[0] for f in fins), not any('ATENÇÃO' in x for x in L), E['relogio']['dia'])
+        if not all(tres[:4]) or estado.valida(E): falhas.append(f'no ciclo de 3 e 3: vivos {tres[0]}, a prata fecha {tres[1]}, começa sempre do zero {tres[2]}, sem aviso {tres[3]}')
+    with rascunho():                                                # 4 fora (a saída atravessa a meia-noite), 2 em casa: ela nunca tem 3 blocos
+        E = mundo(84, fauna={}, materia={'madeira:0': 200}, prata=60); cacador(E, 'bera', nome='Bera'); estado.aplica(E, 'mestre', [['pessoa', 'bera', 'carga.comida', 'soma', 2]], texto='a merenda da Bera')
+        estado.aplica(E, 'tempo', [['relogio', 4]], texto='até o entardecer'); p0 = prata(E); L = []
+        for _ in range(5): _dia_com_ela(E, 2, 2, L)
+        b = E['gente']['bera']; comeu = sum(x.count('Bera come da própria carga') for x in L); avisos = sum('ATENÇÃO' in x for x in L)
+        quatro = (vivos(E), prata(E) == p0, comeu, avisos, dict(b['corpo']), b['pv'], estado.pv_max(b))
+        if not (quatro[0] and quatro[1] and comeu == 2 and not b.get('carga') and avisos == 4) or estado.valida(E): falhas.append(f'no ciclo de 4 e 2: vivos {quatro[0]}, a prata fecha {quatro[1]}, comeu {comeu} vez(es), avisos {avisos}')
+    return ('CINCO SAÍDAS EM CINCO DIAS com a mesma companheira não matam ninguém de fome, e a prata do mundo fecha; no ermo, quem vai junto e tem comida na carga come quando a fome cobra',
+            (f"no ciclo de 3 blocos fora e 3 em casa: os dois vivos, a Bera começa as cinco saídas de corpo zerado, nenhum aviso, a prata fecha; no ciclo de 4 blocos fora e 2 em casa (menos de 3: ela NÃO descansa): os dois vivos no fim do quinto dia, "
+             f"a Bera comeu da própria carga as {quatro[2]} refeições que levava, a mesa avisou em {quatro[3]} das 5 saídas, e ela acaba com fome {quatro[4]['fome']}, sono {quatro[4]['sono']}, cansaço {quatro[4]['cansaco']} e PV {quatro[5]}/{quatro[6]}; a prata fecha") if not falhas else 'NÃO: ' + '; '.join(falhas[:3]), not falhas)
 
 
 # ---------- as metas da coleta: K1 a K4 ----------
@@ -1257,7 +1319,9 @@ def _a_vila_segue_a_tabela(n):
     """a vila de TESTE não desmente a regra: nos três começos, a matéria da mata (o que há e o que cabe) é a que a tabela dá àquele tipo de ermo (a borda só dá matéria Comum);
     quem tem mão num ofício ou numa arma tem os blocos de treino que a explicam; e o estado nasce inteiro"""
     import vila_teste
-    falhas = []; visto = []
+    import tabelas_oficio as O
+    tabela_da_mao = lambda k: {'forja': O.OFICIO_BLOCOS, 'couro': O.OFICIO_BLOCOS, 'caça': K.CACA_BLOCOS, 'coleta': K.COLETA_BLOCOS, 'comércio': C.COMERCIO_DIAS}.get(k, M.MAESTRIA_BLOCOS)     # as armas e o ofício sem tabela própria (a cura): a geral
+    falhas = []; visto = []; maos = set()
     for comeco in vila_teste.COMECOS:
         E = vila_teste.cria(comeco, semente=3); ermos = [k for k in E['lugares'] if caca.e_ermo(E, k)]
         if not ermos: falhas.append(f'{comeco}: a vila nasceu sem ermo')
@@ -1266,14 +1330,15 @@ def _a_vila_segue_a_tabela(n):
             if l.get('coleta') != quer or l.get('coleta_teto') != quer: falhas.append(f"{comeco}: {l['nome']} tem {caca._lista(l.get('coleta_teto') or {})}, e a tabela dá {caca._lista(quer)}")
             if l.get('perigo') == 1 and any((M.le_materia(b)[1] or 0) > 0 for b in set(l.get('coleta') or {}) | set(l.get('coleta_teto') or {})): falhas.append(f"{comeco}: {l['nome']} é borda e tem matéria acima da Comum")
             if comeco == list(vila_teste.COMECOS)[0]: visto.append(f"{l['nome']} ({l.get('habitat')}, {K.PERIGOS[l.get('perigo', 1) - 1]}): {caca._lista(l.get('coleta_teto') or {})}")
-        for pid, q in E['gente'].items():
+        for pid, q in E['gente'].items():                               # TODA mão de TODA pessoa: a prova lê a tabela de cada ofício por conta própria (não pergunta ao gerador o que ele quis pôr)
             for k, g in (q.get('maestria') or {}).items():
-                pede = vila_teste.treino_da_mao({k: g}).get(k)
-                if pede is not None and (q.get('treino') or {}).get(k, 0) < pede: falhas.append(f"{comeco}: {q['nome']} é {T.MAESTRIAS[g]} em {k} com {(q.get('treino') or {}).get(k, 0)} blocos (a tabela pede {pede})")
+                if not g: continue
+                pede = tabela_da_mao(k).get(g); maos.add(k)
+                if pede is None or (q.get('treino') or {}).get(k, 0) < pede: falhas.append(f"{comeco}: {q['nome']} é {T.MAESTRIAS[g]} em {k} com {(q.get('treino') or {}).get(k, 0)} blocos (a tabela pede {pede})")
         P = estado.valida(E)
         if P: falhas.append(f'{comeco}: o estado nasce quebrado ({P[0]})')
-    return ('A VILA DE TESTE SEGUE A TABELA: nos três começos, a matéria do ermo vizinho (o que há e o que cabe) é a que a tabela dá àquele tipo de ermo (a borda só dá matéria Comum); quem tem mão tem os blocos de treino que a explicam; e o estado nasce inteiro',
-            f"os começos {', '.join(vila_teste.COMECOS)}: " + ('; '.join(visto) + '; a matéria igual à da tabela, a gente com os blocos da mão que tem, o estado inteiro: sim' if not falhas else 'NÃO: ' + '; '.join(falhas[:4])), not falhas)
+    return ('A VILA DE TESTE SEGUE A TABELA: nos três começos, a matéria do ermo vizinho (o que há e o que cabe) é a que a tabela dá àquele tipo de ermo (a borda só dá matéria Comum); toda mão de toda pessoa (arma ou ofício, a cura também) tem os blocos de treino que a explicam; e o estado nasce inteiro',
+            f"os começos {', '.join(vila_teste.COMECOS)}: " + ('; '.join(visto) + f"; a matéria igual à da tabela, a gente com os blocos de toda mão que tem ({', '.join(sorted(maos))}), o estado inteiro: sim" if not falhas else 'NÃO: ' + '; '.join(falhas[:4])), not falhas and 'cura' in maos)
 
 
 def provas_coleta(n=300):
@@ -1305,7 +1370,8 @@ def provas(n=300):
                     ('O NÚCLEO DO CHEFE', _o_nucleo), ('A CONTA FECHA', lambda: _a_conta(P, A)), ('A AMEAÇA É LIDA ANTES', lambda: _a_ameaca_antes(n)), ('O BICHO QUE VIU O CAÇADOR', lambda: _o_que_viu(n)),
                     ('A LUTA É A DO ato.py', lambda: _a_luta_do_ato(n)), ('A PRESA FERIDA', lambda: _a_presa_ferida(n)), ('QUEM MORRE NO ERMO', lambda: _quem_morre(n)), ('A VIRADA', lambda: _a_virada(n)),
                     ('A COLETA', lambda: _a_coleta(n)), ('A MAESTRIA DE CAÇA', lambda: _a_maestria(n)), ('O ROBÔ VIVE DE VERDADE', lambda: _o_robo_vive(P)), ('AS RECUSAS', lambda: _as_recusas(n)), ('A MESA', lambda: _a_mesa(n)),
-                    ('AS CONTAS DO LÍDER MORTO', lambda: _as_contas_do_morto(n)), ('O DESPOJO É DE QUEM LUTOU ATÉ O FIM', lambda: _o_despojo_de_quem_ficou(n)), ('FORA É FORA', lambda: _fora_e_fora(n)), ('A LOJA NÃO É ACHADO', lambda: _a_loja_nao_e_achado(n)), ('A PASTA DO SAVE MUDA DE LUGAR', lambda: _a_pasta_muda(n)), ('O ALVO QUE NÃO VIVE ALI', lambda: _o_alvo_que_nao_vive(n)), ('A LÍNGUA DA CAÇA', lambda: _a_lingua_da_caca(n))):
+                    ('AS CONTAS DO LÍDER MORTO', lambda: _as_contas_do_morto(n)), ('O DESPOJO É DE QUEM LUTOU ATÉ O FIM', lambda: _o_despojo_de_quem_ficou(n)), ('FORA É FORA', lambda: _fora_e_fora(n)), ('A LOJA NÃO É ACHADO', lambda: _a_loja_nao_e_achado(n)), ('A PASTA DO SAVE MUDA DE LUGAR', lambda: _a_pasta_muda(n)), ('O ALVO QUE NÃO VIVE ALI', lambda: _o_alvo_que_nao_vive(n)), ('A LÍNGUA DA CAÇA', lambda: _a_lingua_da_caca(n)),
+                    ('QUEM VAI JUNTO CUIDA DE SI', lambda: _quem_vai_junto(n)), ('CINCO SAÍDAS EM CINCO DIAS', lambda: _cinco_saidas(n))):
         roda(nome, f)
     return out + provas_coleta(n)
 

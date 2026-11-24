@@ -25,6 +25,7 @@ def rola(E, o_que, atributo, contra, mais=0, quem=None, oculto=False):
     pid = quem or estado.eu(E); p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
     if atributo not in T.ATRIBUTOS: sys.exit(f'atributo desconhecido: "{atributo}" (use: {", ".join(T.ATRIBUTOS)})')
     if p['estado'] != 'vivo': sys.exit(f"{p['nome']} não testa nada: {estado.morte_diz(E, p)}")
+    estado.em_cena(E, pid); p = E['gente'][pid]             # quem não é o personagem e volta a agir: antes de mais nada, o descanso em casa (a pena do corpo é a de agora)
     a, b = d20x(), d20x(); bonus = p['atributos'][atributo] // 10; pena = corpo.pena(p)
     total = sum(a) + sum(b) + bonus + pena + mais
     r = dict(n=len(E['turno']['dados']) + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], quem=pid, o_que=o_que, atributo=atributo, dados=[a, b],
