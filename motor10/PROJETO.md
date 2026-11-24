@@ -157,6 +157,9 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 10. **A loja paga 40% pelas peças** (pelos bens, 60%). Forjar para a loja deixou de ser mina, e a espada tirada de um morto rende pouco.
 11. **A caça de começo fica como está:** paga o mesmo que a diária e mata um em cada cinco por mês. Caçar é para quem aceita o risco.
 12. **A vila de teste: o guerreiro** (Maro), na pasta `ensaio/`.
+13. **A magia é a próxima etapa, antes da região,** e é central: "tem para todo lado: poções, maldições e magias de ataque e defesa". Entram junto os **dons e talentos** (para todo caminho: ferreiro, guerreiro, clérigo, druida, mago e outros) e as **criaturas mágicas** (orcs, goblins e outras, com chefes mágicos). O juízo e as respostas do jogador estão em `projeto/magia_etapa/DECISOES.md`; o contrato de construção, em `projeto/ETAPA_MAGIA.md`.
+14. **Na magia:** qualquer um aprende; talento é pressa e teto, dom é poder; a Mana volta devagar na luta; a maldição pode matar (um teste por dia); quem não tem amuleto é guardado em 60% pela armadura; o Prodígio aprende com a metade dos blocos; o personagem nasce pelo dado, com uma inclinação escolhida; o veneno de lâmina existe e é crime nas vilas.
+15. **A frota passa a ser enxuta:** o orquestrador julga os projetos; poucos construtores, um revisor e um verificador.
 
 **O que estas decisões mudam no jeito do mundo:** não é um jogo com "jogadores" que renascem. É um mundo de verdade, velho, onde todo mundo morre uma vez. Ficam as leis dele: níveis, categorias de peça, a janela do item. Fica também a janela do mundo, como coisa que aquele mundo tem: quando uma peça Única nasce ou uma ruína é limpa pela primeira vez, todos ficam sabendo.
 

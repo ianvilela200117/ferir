@@ -46,10 +46,10 @@ Dois projetos inteiros ficaram prontos (`conta/PROJETO.md` e `mundo/PROJETO.md`)
 
 O frasco de arremesso e o canto (tradições futuras); aprender com mestre que viaja; gente do mundo que procura clérigo sozinha (etapa 3); herdar talento pelo sangue (etapa 7, a história); masmorras, frentes e rivais (etapas 5 e 6): só os ganchos.
 
-## As perguntas ao jogador (o contrato segue a recomendação enquanto ele não responde)
+## As respostas do jogador às cinco perguntas (decidido)
 
-- **M1. Quem não tem amuleto, quanto apanha de magia?** a) a armadura guarda 60% (recomendado) · b) o amuleto vira peça obrigatória · c) a armadura guarda inteira.
-- **M2. Os talentos do seu personagem.** a) o dado decide tudo · b) o dado, e uma inclinação que você escolhe (recomendado) · c) você escolhe um caminho em que é talentoso, e o dado decide o resto.
-- **M3. A pressa do Prodígio.** a) a metade dos blocos (recomendado) · b) dois terços · c) a metade só até Mestre.
-- **M4. A dureza da maldição.** a) um teste por dia: mata em cerca de 15 dias (recomendado) · b) um teste a cada 3 dias · c) como a), mas gente com nome só morre depois de o aviso chegar ao personagem.
-- **M5. O veneno de lâmina.** a) existe para todos, um golpe por dose, crime nas vilas (recomendado) · b) três golpes por dose · c) só bicho e vilão usam.
+- **M1 a.** Quem não tem amuleto: a armadura guarda 60% do valor contra a magia.
+- **M2 b.** Os talentos do personagem: o dado decide, e o jogador escolhe uma inclinação (naquele caminho o dado rola duas vezes e vale o melhor).
+- **M3 a.** O Prodígio aprende com a metade dos blocos. O jogador sabe que isto adianta o melhor caminho: a primeira tentativa de Lendária de um prodígio da forja fecha perto do Dia 213, em vez do 356.
+- **M4 a.** A maldição: um teste por dia. Na categoria da guarda mata em cerca de 15 dias; num aldeão, em 10.
+- **M5 a.** O veneno de lâmina existe para todos, um golpe por dose, e é crime nas vilas.
