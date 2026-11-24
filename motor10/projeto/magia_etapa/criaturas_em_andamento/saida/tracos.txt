@@ -1,0 +1,13 @@
+== CADA TRAÇO NOVO, com ele e sem ele (400 lutas por linha): a vitória de quem enfrenta a criatura tem de cair 8 pontos ou mais com o traço ==
+  SEM VIDA    três corpos-secos contra dois homens Comuns                                vence  45% com,  57% sem: +12
+  OSSOS       o esqueleto contra um homem Comum de espada                                vence  77% com,  92% sem: +15
+  OSSOS       seis esqueletos contra quatro homens Comuns de espada                      vence  43% com,  82% sem: +39
+  IMATERIAL   a alma penada contra um homem Incomum                                      vence  44% com,  73% sem: +29
+  IMATERIAL   o espectro contra um homem Raro                                            vence   4% com,  74% sem: +70
+  PEDE PRATA  o lobisomem contra um homem Raro                                           vence  13% com,  63% sem: +50
+  DRENO       o espectro contra um homem Raro com arma de prata                          vence  74% com,  82% sem: +8
+  ARDENTE     o elemental do fogo contra um homem Raro                                   vence  56% com,  75% sem: +19
+  ATIRA       a mantícora contra um homem Raro, começando longe                          vence  37% com,  55% sem: +18
+  NOTURNO     quatro goblins contra um homem Comum, no escuro                            vence  22% com,  26% sem: +4
+  NOTURNO     oito goblins contra quatro homens Comuns, no escuro                        vence  62% com,  69% sem: +7
+

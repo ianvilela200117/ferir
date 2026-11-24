@@ -9,3 +9,9 @@ O jogador pediu: magia em todo lado (poções, maldições, magias de ataque e d
 
 Falta: o terceiro projeto (a pessoa, os dons e os talentos: foi cortado), os dois das criaturas, o julgamento e a síntese num contrato de construção (`ETAPA_MAGIA.md`).
 As perguntas que os projetistas deixaram para o jogador estão no fim de cada PROJETO.md.
+
+## Parado pelo jogador (Dia 24 de novembro, de madrugada)
+
+O jogador mandou parar para poupar os créditos. Foram parados no meio: o projetista das criaturas (o que ele tinha escrito e medido está em `criaturas_em_andamento/`, sem projeto fechado) e o redator do contrato (não chegou a escrever o `../ETAPA_MAGIA.md`).
+Já decidido e guardado: `DECISOES.md` (o juízo sobre os dois projetos e as respostas do jogador M1 a M5).
+Para retomar: redigir o contrato a partir de `DECISOES.md`, `conta/PROJETO.md` e `mundo/PROJETO.md`; fechar as criaturas a partir de `criaturas_em_andamento/`, `criaturas_luta_incompleto/` e `criaturas_mundo_incompleto/`; depois construir. O jogo da vila de teste (`../../ensaio/`) não depende disto e pode seguir.

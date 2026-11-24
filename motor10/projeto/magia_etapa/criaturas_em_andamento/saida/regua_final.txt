@@ -1,0 +1,85 @@
+A RÉGUA DAS CRIATURAS NOVAS (300 lutas por linha; o homem do degrau é o do banco: espada, malha e escudo da categoria, nível {0: 10, 1: 30, 2: 50, 3: 90, 4: 120, 5: 150}; o aço comum conta 1 categoria(s) abaixo em quem pede prata)
+goblin (grau F, Comum): 1 homem × 1                                            vence  92% · perde   8% · outro  0% ·  2 rodadas · caem 0.09 da casa · fogem 0.00 · rendem-se 0.07
+   1 homem × 8                                                                 vence   9% · perde  91% · outro  0% ·  2 rodadas · caem 0.73 da casa · fogem 1.08 · rendem-se 0.06
+   4 homens × 8                                                                vence  81% · perde  19% · outro  0% ·  2 rodadas · caem 0.69 da casa · fogem 3.89 · rendem-se 0.24
+goblin arqueiro (grau F, Comum): 1 homem × 1                                   vence  93% · perde   7% · outro  0% ·  2 rodadas · caem 0.07 da casa · fogem 0.00 · rendem-se 0.04
+   1 homem × 4                                                                 vence  36% · perde  63% · outro  0% ·  2 rodadas · caem 0.56 da casa · fogem 0.76 · rendem-se 0.09
+   4 homens × 4                                                                vence  97% · perde   3% · outro  0% ·  2 rodadas · caem 0.23 da casa · fogem 1.76 · rendem-se 0.24
+orc (grau D, Incomum): 1 homem × 1                                             vence  49% · perde  51% · outro  0% ·  5 rodadas · caem 0.45 da casa · fogem 0.00 · rendem-se 0.04
+   1 homem × 5                                                                 vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 0.76 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 5                                                                vence  21% · perde  79% · outro  0% ·  5 rodadas · caem 2.20 da casa · fogem 0.20 · rendem-se 0.17
+orc bruto (grau D, Incomum): 1 homem × 1                                       vence  41% · perde  59% · outro  0% ·  4 rodadas · caem 0.55 da casa · fogem 0.00 · rendem-se 0.04
+   1 homem × 2                                                                 vence   3% · perde  97% · outro  0% ·  2 rodadas · caem 0.83 da casa · fogem 0.01 · rendem-se 0.02
+   4 homens × 2                                                                vence  96% · perde   4% · outro  0% ·  2 rodadas · caem 0.48 da casa · fogem 0.20 · rendem-se 0.39
+homem-lagarto (grau D, Incomum): 1 homem × 1                                   vence  49% · perde  51% · outro  0% ·  5 rodadas · caem 0.47 da casa · fogem 0.00 · rendem-se 0.06
+   1 homem × 4                                                                 vence   1% · perde  99% · outro  0% ·  2 rodadas · caem 0.75 da casa · fogem 0.05 · rendem-se 0.01
+   4 homens × 4                                                                vence  39% · perde  61% · outro  0% ·  5 rodadas · caem 1.85 da casa · fogem 0.42 · rendem-se 0.40
+ogro (grau C, Raro): 1 homem × 1                                               vence  60% · perde  40% · outro  0% ·  2 rodadas · caem 0.38 da casa · fogem 0.00 · rendem-se 0.03
+   1 homem × 2                                                                 vence  17% · perde  83% · outro  0% ·  2 rodadas · caem 0.71 da casa · fogem 0.07 · rendem-se 0.00
+   4 homens × 2                                                                vence  97% · perde   3% · outro  0% ·  2 rodadas · caem 0.49 da casa · fogem 0.34 · rendem-se 0.21
+minotauro (grau C, Raro): 1 homem × 1                                          vence  38% · perde  62% · outro  0% ·  3 rodadas · caem 0.55 da casa · fogem 0.00 · rendem-se 0.01
+gigante (grau B, Épico): 1 homem × 1                                           vence   8% · perde  92% · outro  0% ·  4 rodadas · caem 0.89 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 2                                                                 vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 0.92 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 2                                                                vence  82% · perde  18% · outro  0% ·  5 rodadas · caem 1.47 da casa · fogem 0.10 · rendem-se 0.21
+   4 homens de conjunto uma categoria ABAIXO × 2                               vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 3.10 da casa · fogem 0.00 · rendem-se 0.00
+esqueleto (grau E, Comum): 1 homem × 1                                         vence  77% · perde  23% · outro  0% ·  4 rodadas · caem 0.21 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem de MAÇA × 1                                                         vence  91% · perde   9% · outro  0% ·  3 rodadas · caem 0.07 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 6                                                                 vence   0% · perde 100% · outro  0% ·  3 rodadas · caem 0.82 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 6                                                                vence  42% · perde  58% · outro  0% ·  6 rodadas · caem 1.72 da casa · fogem 0.00 · rendem-se 0.00
+cavaleiro da cova (grau B, Épico): 1 homem × 1                                 vence  12% · perde  88% · outro  0% ·  5 rodadas · caem 0.84 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 2                                                                 vence   0% · perde 100% · outro  0% ·  3 rodadas · caem 0.91 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 2                                                                vence  95% · perde   5% · outro  0% ·  4 rodadas · caem 0.73 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 2                               vence   0% · perde 100% · outro  0% ·  3 rodadas · caem 2.90 da casa · fogem 0.00 · rendem-se 0.00
+corpo-seco (grau E, Comum): 1 homem × 1                                        vence  77% · perde  23% · outro  0% ·  4 rodadas · caem 0.22 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 5                                                                 vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 0.82 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 5                                                                vence  71% · perde  29% · outro  0% ·  5 rodadas · caem 1.16 da casa · fogem 0.00 · rendem-se 0.00
+carniçal (grau D, Incomum): 1 homem × 1                                        vence  82% · perde  18% · outro  0% ·  3 rodadas · caem 0.21 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 4                                                                 vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 0.99 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 4                                                                vence  96% · perde   4% · outro  0% ·  3 rodadas · caem 0.59 da casa · fogem 0.00 · rendem-se 0.00
+múmia (grau C, Raro): 1 homem × 1                                              vence  59% · perde  41% · outro  0% ·  3 rodadas · caem 0.17 da casa · fogem 0.00 · rendem-se 0.00
+fogo-fátuo (grau D, Incomum): 1 homem × 1                                      vence  75% · perde  25% · outro  0% ·  3 rodadas · caem 0.22 da casa · fogem 0.30 · rendem-se 0.00
+   1 homem com arma de PRATA × 1                                               vence  83% · perde  17% · outro  0% ·  2 rodadas · caem 0.16 da casa · fogem 0.09 · rendem-se 0.00
+   1 homem com a arma uma categoria ACIMA × 1                                  vence  93% · perde   7% · outro  0% ·  2 rodadas · caem 0.07 da casa · fogem 0.17 · rendem-se 0.00
+   1 homem × 3                                                                 vence  10% · perde  90% · outro  0% ·  2 rodadas · caem 0.75 da casa · fogem 0.33 · rendem-se 0.00
+   4 homens × 3                                                                vence  94% · perde   6% · outro  0% ·  2 rodadas · caem 0.56 da casa · fogem 1.72 · rendem-se 0.00
+   4 homens com arma de PRATA × 3                                              vence  98% · perde   2% · outro  0% ·  1 rodadas · caem 0.25 da casa · fogem 1.63 · rendem-se 0.00
+alma penada (grau D, Incomum): 1 homem × 1                                     vence  45% · perde  55% · outro  0% ·  5 rodadas · caem 0.30 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem com arma de PRATA × 1                                               vence  73% · perde  27% · outro  0% ·  2 rodadas · caem 0.04 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem com a arma uma categoria ACIMA × 1                                  vence  75% · perde  25% · outro  0% ·  2 rodadas · caem 0.01 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 2                                                                 vence   1% · perde  99% · outro  0% ·  3 rodadas · caem 0.47 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 2                                                                vence  95% · perde   5% · outro  0% ·  3 rodadas · caem 0.16 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens com arma de PRATA × 2                                              vence  99% · perde   1% · outro  0% ·  2 rodadas · caem 0.03 da casa · fogem 0.00 · rendem-se 0.00
+espectro (grau C, Raro): 1 homem × 1                                           vence   3% · perde  97% · outro  0% ·  7 rodadas · caem 0.88 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem com arma de PRATA × 1                                               vence  71% · perde  29% · outro  0% ·  4 rodadas · caem 0.24 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem com a arma uma categoria ACIMA × 1                                  vence  89% · perde  11% · outro  0% ·  3 rodadas · caem 0.11 da casa · fogem 0.00 · rendem-se 0.00
+golem de barro (grau D, Incomum): 1 homem × 1                                  vence  54% · perde  46% · outro  0% ·  6 rodadas · caem 0.43 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 2                                                                 vence   1% · perde  99% · outro  0% ·  4 rodadas · caem 0.87 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 2                                                                vence  99% · perde   1% · outro  0% ·  3 rodadas · caem 0.17 da casa · fogem 0.00 · rendem-se 0.00
+gárgula (grau C, Raro): 1 homem × 1                                            vence  42% · perde  58% · outro  0% ·  4 rodadas · caem 0.54 da casa · fogem 0.26 · rendem-se 0.00
+   1 homem × 2                                                                 vence   3% · perde  97% · outro  0% ·  2 rodadas · caem 0.90 da casa · fogem 0.10 · rendem-se 0.00
+   4 homens × 2                                                                vence  96% · perde   4% · outro  0% ·  3 rodadas · caem 0.58 da casa · fogem 1.24 · rendem-se 0.00
+elemental do fogo (grau C, Raro): 1 homem × 1                                  vence  59% · perde  41% · outro  0% ·  4 rodadas · caem 0.37 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem × 2                                                                 vence   5% · perde  95% · outro  0% ·  3 rodadas · caem 0.84 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 2                                                                vence  99% · perde   1% · outro  0% ·  2 rodadas · caem 0.16 da casa · fogem 0.00 · rendem-se 0.00
+elemental da pedra (grau B, Épico): 1 homem × 1                                vence   0% · perde 100% · outro  0% ·  8 rodadas · caem 0.94 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 1                                                                vence 100% · perde   0% · outro  0% ·  4 rodadas · caem 0.07 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 1                               vence   0% · perde 100% · outro  0% ·  6 rodadas · caem 3.14 da casa · fogem 0.00 · rendem-se 0.00
+golem de ferro (grau B, Épico): 1 homem × 1                                    vence   0% · perde 100% · outro  0% ·  6 rodadas · caem 0.98 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens × 1                                                                vence 100% · perde   0% · outro  0% ·  4 rodadas · caem 0.16 da casa · fogem 0.00 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 1                               vence   0% · perde 100% · outro  0% ·  6 rodadas · caem 3.21 da casa · fogem 0.00 · rendem-se 0.00
+harpia (grau D, Incomum): 1 homem × 1                                          vence  89% · perde  11% · outro  0% ·  2 rodadas · caem 0.11 da casa · fogem 0.35 · rendem-se 0.00
+   1 homem × 4                                                                 vence  20% · perde  80% · outro  0% ·  2 rodadas · caem 0.65 da casa · fogem 0.88 · rendem-se 0.00
+   4 homens × 4                                                                vence  99% · perde   1% · outro  0% ·  1 rodadas · caem 0.27 da casa · fogem 2.86 · rendem-se 0.00
+lobisomem (grau C, Raro): 1 homem × 1                                          vence  13% · perde  87% · outro  0% ·  5 rodadas · caem 0.79 da casa · fogem 0.12 · rendem-se 0.00
+   1 homem com arma de PRATA × 1                                               vence  62% · perde  38% · outro  0% ·  3 rodadas · caem 0.33 da casa · fogem 0.24 · rendem-se 0.00
+   1 homem com a arma uma categoria ACIMA × 1                                  vence  82% · perde  18% · outro  0% ·  3 rodadas · caem 0.17 da casa · fogem 0.23 · rendem-se 0.00
+mantícora (grau C, Raro): 1 homem × 1                                          vence  50% · perde  50% · outro  0% ·  3 rodadas · caem 0.48 da casa · fogem 0.16 · rendem-se 0.00
+quimera (grau B, Épico): 1 homem × 1                                           vence  21% · perde  79% · outro  0% ·  5 rodadas · caem 0.76 da casa · fogem 0.12 · rendem-se 0.00
+   4 homens × 1                                                                vence 100% · perde   0% · outro  0% ·  2 rodadas · caem 0.13 da casa · fogem 0.49 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 1                               vence  17% · perde  83% · outro  0% ·  3 rodadas · caem 2.88 da casa · fogem 0.15 · rendem-se 0.00
+boitatá (grau B, Épico): 1 homem × 1                                           vence  10% · perde  89% · outro  1% ·  3 rodadas · caem 0.70 da casa · fogem 0.08 · rendem-se 0.00
+   4 homens × 1                                                                vence  96% · perde   4% · outro  0% ·  2 rodadas · caem 0.24 da casa · fogem 0.48 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 1                               vence  15% · perde  85% · outro  0% ·  2 rodadas · caem 2.27 da casa · fogem 0.14 · rendem-se 0.00
+mapinguari (grau B, Épico): 1 homem × 1                                        vence  10% · perde  90% · outro  0% ·  3 rodadas · caem 0.74 da casa · fogem 0.08 · rendem-se 0.00
+   4 homens × 1                                                                vence  98% · perde   2% · outro  0% ·  2 rodadas · caem 0.20 da casa · fogem 0.46 · rendem-se 0.00
+   4 homens de conjunto uma categoria ABAIXO × 1                               vence  10% · perde  90% · outro  0% ·  2 rodadas · caem 2.34 da casa · fogem 0.10 · rendem-se 0.00

@@ -1,0 +1,25 @@
+2 — O ROBÔ LIMPADOR (40 vidas de 120 dias; a casa: Maro, Tomé e Rute): assalta de madrugada (o bando surpreendido) sempre que há 6 cabeças ou mais; ferido alguém, repousa 9 dias
+  alguém da casa morreu (ou a casa perdeu o campo) em 5 de 40 vidas (Maro, em 5) · assaltos por vida: 5.6 · goblins que ficaram no campo por vida: 13.6
+  a PRIMEIRA limpeza rende 79 de prata para a casa inteira (de 0 a 96) · cada limpeza seguinte: 8 (de 0 a 61; 184 limpezas)
+  nas 35 vidas em que ninguém morreu: 121 de prata em 120 dias = 0.34 de prata por dia e por cabeça (0.08 diária) · a que mais rendeu: 147 · o bando no fim: 5.0 cabeças
+  uma vida de exemplo (dia, cabeças antes, ficaram no campo, prata): [(2, 9, 2, 86), (4, 7, 6, 17)]
+
+2 — O ROBÔ LIMPADOR (40 vidas de 120 dias; a casa: Maro, Tomé e Rute): assalta de dia (ninguém surpreendido) sempre que há 6 cabeças ou mais; ferido alguém, repousa 9 dias
+  alguém da casa morreu (ou a casa perdeu o campo) em 28 de 40 vidas (Maro, em 28) · assaltos por vida: 2.5 · goblins que ficaram no campo por vida: 6.3
+  a PRIMEIRA limpeza rende 43 de prata para a casa inteira (de 0 a 95) · cada limpeza seguinte: 11 (de 0 a 60; 61 limpezas)
+  nas 12 vidas em que ninguém morreu: 115 de prata em 120 dias = 0.32 de prata por dia e por cabeça (0.08 diária) · a que mais rendeu: 142 · o bando no fim: 10.8 cabeças
+  uma vida de exemplo (dia, cabeças antes, ficaram no campo, prata): [(2, 9, 2, 0)]
+
+2 — O ROBÔ LIMPADOR (40 vidas de 120 dias; a casa: Maro, Tomé, Rute e Bento): assalta de madrugada (o bando surpreendido) sempre que há 9 cabeças ou mais; ferido alguém, repousa 9 dias
+  alguém da casa morreu (ou a casa perdeu o campo) em 7 de 40 vidas (Maro, em 6) · assaltos por vida: 5.2 · goblins que ficaram no campo por vida: 12.6
+  a PRIMEIRA limpeza rende 72 de prata para a casa inteira (de 0 a 93) · cada limpeza seguinte: 11 (de 2 a 58; 167 limpezas)
+  nas 33 vidas em que ninguém morreu: 129 de prata em 120 dias = 0.27 de prata por dia e por cabeça (0.07 diária) · a que mais rendeu: 175 · o bando no fim: 8.0 cabeças
+  uma vida de exemplo (dia, cabeças antes, ficaram no campo, prata): [(2, 9, 2, 86), (15, 9, 1, 5), (24, 9, 2, 5), (36, 9, 3, 8), (91, 9, 2, 7), (116, 9, 1, 2)]
+
+3 — A PRIMEIRA LIMPEZA, por tamanho do covil (300 assaltos por linha; a prata é a da casa inteira, com o despojo vendido na loja de Pedra Rasa)
+  a toca de começo (9 cabeças, 20 de prata), Maro, Tomé e Rute, de madrugada             vence  95% · alguém da casa morre  10% (Maro:  10%) · ficam no campo 2.3 · quando vence, leva 88 de prata (de 35 a 97) = 22 diárias; por cabeça, 29 de prata
+  a mesma, de dia, sem surpresa                                                          vence  77% · alguém da casa morre  33% (Maro:  33%) · ficam no campo 2.4 · quando vence, leva 83 de prata (de 35 a 99) = 21 diárias; por cabeça, 28 de prata
+  a toca crescida (13 cabeças, 45 de prata), de madrugada                                vence  93% · alguém da casa morre  10% (Maro:  10%) · ficam no campo 2.6 · quando vence, leva 119 de prata (de 68 a 130) = 30 diárias; por cabeça, 40 de prata
+  a toca cheia com o xamã (16 cabeças, 100 de prata), Maro, Tomé e Rute, de madrugada    vence  46% · alguém da casa morre  68% (Maro:  67%) · ficam no campo 4.7 · quando vence, leva 214 de prata (de 133 a 250) = 54 diárias; por cabeça, 71 de prata
+  a mesma, com Bento (quatro), de madrugada                                              vence  56% · alguém da casa morre  62% (Maro:  56%) · ficam no campo 4.9 · quando vence, leva 211 de prata (de 127 a 255) = 53 diárias; por cabeça, 53 de prata
+  a mesma, com Bento, de dia, sem surpresa                                               vence  10% · alguém da casa morre  94% (Maro:  93%) · ficam no campo 3.2 · quando vence, leva 196 de prata (de 127 a 250) = 49 diárias; por cabeça, 49 de prata

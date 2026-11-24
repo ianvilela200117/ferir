@@ -1,0 +1,33 @@
+== OS BANDOS contra o homem do degrau deles (400 lutas por linha) ==
+GOBLINS (Comuns, grau F). A patrulha: os de faca. O covil: o capataz de peças comuns, um quarto de arco, um quarto de lança e escudo, o resto de faca
+1 homem Comum (nível 10) × a patrulha de 2                                     vence  84% · perde  16% · outro  0% ·  2 rodadas · caem 0.12 da casa · fogem 0.53 · rendem-se 0.08
+1 homem Comum (nível 10) × a patrulha de 3                                     vence  55% · perde  45% · outro  0% ·  3 rodadas · caem 0.33 da casa · fogem 0.52 · rendem-se 0.10
+1 homem Comum (nível 10) × a patrulha de 4                                     vence  38% · perde  62% · outro  0% ·  2 rodadas · caem 0.47 da casa · fogem 0.74 · rendem-se 0.09
+   × a patrulha de 4, num corredor de um                                       vence  62% · perde  38% · outro  0% ·  4 rodadas · caem 0.27 da casa · fogem 1.07 · rendem-se 0.14
+   × a patrulha de 4, eles surpreendidos                                       vence  45% · perde  55% · outro  0% ·  3 rodadas · caem 0.41 da casa · fogem 0.88 · rendem-se 0.09
+   × a patrulha de 3 e 1 de arco                                               vence  32% · perde  68% · outro  0% ·  2 rodadas · caem 0.52 da casa · fogem 0.56 · rendem-se 0.09
+   × o covil de 6                                                              vence  10% · perde  90% · outro  0% ·  2 rodadas · caem 0.73 da casa · fogem 0.61 · rendem-se 0.04
+1 homem de conjunto INCOMUM (nível 30) × o covil de 6                          vence  78% · perde  22% · outro  0% ·  2 rodadas · caem 0.17 da casa · fogem 2.61 · rendem-se 0.13
+   o mesmo × o covil de 12                                                     vence  54% · perde  46% · outro  0% ·  3 rodadas · caem 0.37 da casa · fogem 5.08 · rendem-se 0.11
+4 homens Comuns × o covil de 6                                                 vence  95% · perde   5% · outro  0% ·  2 rodadas · caem 0.41 da casa · fogem 3.30 · rendem-se 0.24
+4 homens Comuns × o covil de 9                                                 vence  70% · perde  30% · outro  0% ·  2 rodadas · caem 1.02 da casa · fogem 4.21 · rendem-se 0.26
+4 homens Comuns × o covil de 12                                                vence  52% · perde  48% · outro  0% ·  2 rodadas · caem 1.34 da casa · fogem 5.07 · rendem-se 0.24
+4 homens Comuns × o covil de 16                                                vence  29% · perde  71% · outro  0% ·  2 rodadas · caem 1.76 da casa · fogem 4.85 · rendem-se 0.17
+   4 homens Comuns × o covil de 12, num corredor de dois                       vence  49% · perde  50% · outro  0% ·  3 rodadas · caem 1.49 da casa · fogem 5.02 · rendem-se 0.22
+   4 homens Comuns × o covil de 12, no ESCURO (o goblin é noturno)             vence  41% · perde  58% · outro  1% ·  2 rodadas · caem 1.67 da casa · fogem 4.30 · rendem-se 0.20
+   4 homens Comuns × o covil de 12, eles surpreendidos                         vence  87% · perde  13% · outro  0% ·  2 rodadas · caem 0.41 da casa · fogem 7.97 · rendem-se 0.37
+4 homens INCOMUNS × o covil de 16                                              vence  97% · perde   3% · outro  0% ·  2 rodadas · caem 0.21 da casa · fogem 9.42 · rendem-se 0.31
+ORCS (Incomuns, grau D): soldados de machado, malha, elmo e escudo; o primeiro é o capitão
+1 homem Incomum (nível 30) × 2 orcs                                            vence   9% · perde  91% · outro  0% ·  3 rodadas · caem 0.70 da casa · fogem 0.05 · rendem-se 0.01
+1 homem Incomum (nível 30) × 3 orcs                                            vence   1% · perde  99% · outro  0% ·  2 rodadas · caem 0.77 da casa · fogem 0.01 · rendem-se 0.01
+1 homem Incomum (nível 30) × 5 orcs                                            vence   0% · perde 100% · outro  0% ·  2 rodadas · caem 0.77 da casa · fogem 0.00 · rendem-se 0.00
+   1 homem Incomum × 3 orcs, num corredor de um                                vence   4% · perde  96% · outro  0% ·  7 rodadas · caem 0.79 da casa · fogem 0.12 · rendem-se 0.03
+1 homem de conjunto RARO (nível 50) × 3 orcs                                   vence  82% · perde  18% · outro  0% ·  4 rodadas · caem 0.17 da casa · fogem 0.37 · rendem-se 0.15
+   o mesmo × 5 orcs                                                            vence  50% · perde  50% · outro  0% ·  4 rodadas · caem 0.37 da casa · fogem 0.63 · rendem-se 0.18
+4 homens Incomuns × 4 orcs e 0 brutos                                          vence  63% · perde  37% · outro  0% ·  5 rodadas · caem 1.43 da casa · fogem 0.83 · rendem-se 0.34
+4 homens Incomuns × 5 orcs e 0 brutos                                          vence  30% · perde  70% · outro  0% ·  5 rodadas · caem 1.97 da casa · fogem 0.68 · rendem-se 0.21
+4 homens Incomuns × 4 orcs e 2 brutos                                          vence   8% · perde  92% · outro  0% ·  3 rodadas · caem 2.34 da casa · fogem 0.36 · rendem-se 0.10
+4 homens Comuns (nível 10) × 4 orcs                                            vence   0% · perde 100% · outro  0% ·  1 rodadas · caem 2.41 da casa · fogem 0.01 · rendem-se 0.00
+4 homens RAROS × 5 orcs e 2 brutos                                             vence  98% · perde   2% · outro  0% ·  2 rodadas · caem 0.21 da casa · fogem 2.09 · rendem-se 0.50
+4 homens RAROS × 10 orcs e 2 brutos                                            vence  82% · perde  18% · outro  0% ·  3 rodadas · caem 0.60 da casa · fogem 3.46 · rendem-se 0.67
+
