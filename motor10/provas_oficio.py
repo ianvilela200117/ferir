@@ -227,6 +227,9 @@ def _margens(n):
     F, it, nid = obra(4, -4); feito = E['gente']['eu'].get('marca', {}).get('feito_forja')                                                                # a Única por pouco: nasce Épica, o núcleo se gasta, e vale como feito de Mestre
     ok.append(F['fim'] == 'abaixo' and it['cat'] == 3 and nid not in L() and feito == 6 and it.get('nucleo_de') == 'bicho de prova' and it['feito_por'] == 'eu')
     F, it, nid = obra(3, -5); ok.append(F['fim'] == 'perdeu' and it is None and nid not in L())                                                           # a Épica perdida: o núcleo sai do Livro
+    sem_nome = oficio.molde('arma', 2, familia='arco'); entrega(E, sem_nome); R = oficio.forjar(E, 'eu', sem_nome, blocos=0); estado.aplica(E, 'mestre', [['obra', R['obra'], 'blocos', 'poe', O.blocos(2)]], texto='os blocos da prova')
+    with dado_posto([-1]): F = oficio.remata(E, R['obra'])                                                                                                # a obra sem nome próprio que sai uma abaixo: a peça ganha o nome da categoria em que saiu
+    caiu = L()[F['item']]['nome']; ok.append(sem_nome['nome'] == 'arco Raro' and caiu == 'arco Incomum' and L()[F['item']]['cat'] == 1)
     estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 2, 'Espada Rara de prova', familia='espada', dono='eu')]], texto='a peça de prova'); iid = f"i{E['itens']['seq']:04d}"; aj = []
     for m, fim in ((-1, 'falhou'), (-5, 'estragou'), (0, 'acertou')):                                                                                     # o ajuste
         repousa(E); d0 = L()[iid]['dur'][0]
@@ -234,7 +237,7 @@ def _margens(n):
         it = L()[iid]; aj.append(R['fim']); ok.append(R['fim'] == fim and bool(it.get('sob_medida')) == (m >= 0) and it['dur'][0] == d0 - (O.AJUSTE_ESTRAGO if fim == 'estragou' else 0))
     return ('AS MARGENS (o dado posto à mão, só nesta prova): passar dá a peça; falhar por 1 a 4, uma categoria abaixo (o Comum, tosco); por 5 ou mais, nada, e o núcleo sai do Livro',
             f"{sum(ok)} de {len(ok)} saídas certas: a Rara com margem 0, +7, −1, −4, −5, −20; o Comum por −1 sai tosco ({tosca}); a Única por −4 nasce Épica, gasta o núcleo e vale como feito de Mestre; "
-            f"a Épica por −5 leva o núcleo; o ajuste por −1, −5 e 0: {', '.join(aj)}", all(ok) and not estado.valida(E) and oficio.prata_do_mundo(E) == p0)
+            f"a Épica por −5 leva o núcleo; a obra sem nome próprio (\"{sem_nome['nome']}\") que sai uma abaixo nasce \"{caiu}\"; o ajuste por −1, −5 e 0: {', '.join(aj)}", all(ok) and not estado.valida(E) and oficio.prata_do_mundo(E) == p0)
 
 
 def _obra_aberta(n):

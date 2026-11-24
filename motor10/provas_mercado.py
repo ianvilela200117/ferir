@@ -5,6 +5,8 @@ As metas são as do contrato (projeto/ETAPA2.md, seção 6). As provas rodam em 
 pelo `mercado.funda`: 400 de povo, o estoque no alvo, a prateleira, 2.000 de prata no lugar); nunca num save.
 TODA prova confere que a soma da prata do mundo (gente mais lugares) fecha e que o estado segue inteiro (`estado.valida`).
 O mercado não rola dado: o acaso dele é o do mundo (`estado.sorte`), e o das provas sai de uma semente fixa. Mesma semente, mesmas provas.
+A exceção é a meta FORJAR PARA A LOJA NÃO É MINA (a segunda volta): o ROBÔ FERREIRO DE LOJA vive na vila de TESTE (`vila_teste.py comeco=ferreiro`), compra a matéria na loja,
+forja o que mais rende e vende à loja. Aí o dado da forja é o de verdade, e a medida muda um pouco de uma rodada para outra. A faixa dela foi dada de fora, na segunda volta, e não se mexe nela para a prova passar: a prova diz o que mediu.
 
 Uso: python3 provas_mercado.py [N]      N = o tamanho das amostras (padrão 300): N idas e voltas ao acaso em cada mão de comércio. Os 200 negócios do contrato são sempre 200.
      (o `python3 provas_mundo.py` também roda este banco)
@@ -14,13 +16,18 @@ import tabelas as T
 import tabelas_mundo as M
 import tabelas_mercado as C
 import tabelas_oficio as O_
-import estado, ato, mercado, turno
+import estado, ato, mercado, oficio, turno
 import provas_mundo as PM
 from itens import item
 
 FAIXA_ANO = (0.6, 2.2)      # o contrato: a comida, num ano de viradas numa vila de 400 pessoas, fica entre estas duas vezes a base
 PERDE = 0.20                # o contrato: comprar e vender de volta no mesmo lugar perde isto ou mais
 SOBRA = (0, 2)              # o contrato: o que sobra ao diarista num dia comum, em prata
+# a meta FORJAR PARA A LOJA NÃO É MINA (a faixa foi dada de fora, na segunda volta; não se mexe nela para a prova passar):
+MINA_DIAS = (5, 30)         # as duas janelas: os 5 primeiros dias, e daí ao Dia 30
+MINA_COMECO = (6, 12)       # nos 5 primeiros dias, o que a forja rende ao ferreiro de começo, em prata por dia: em média no máximo 6 (uma diária e meia), e no pior caso no máximo 12
+MINA_DEPOIS = 4             # do Dia 6 ao 30, em média no máximo 4 por dia (uma diária)
+MINA_SEMENTES = 30          # em pelo menos tantas vilas de teste, de sementes diferentes
 
 
 # ---------- montar um mundo de rascunho ----------
@@ -233,11 +240,33 @@ def _pelo_que_cobre(n):
     estado.aplica(E, 'gera', [['item', 'nasce', item('armadura', 1, material='placa', cobre=c, dono='eu')] for _, c in pecas] + [['item', 'nasce', item('armadura', 1, material='placa', cobre=['pernas'], dono='eu')]], texto='as placas de prova')
     ids = [i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it.get('material') == 'placa']; L = E['itens']['itens']; vale = [mercado.preco_peca(L[i]) for i in ids[:5]]; p0 = prata(E)
     conserto = [O_.conserto_pago(1, 10, M.peso_da_peca('armadura', c)) for _, c in pecas]; pagou = [mercado.vender_peca(E, 'eu', i)['prata'] for i in ids]      # a loja não tinha placa nenhuma: as seis são "iguais" entre si
-    cheio = [math.floor(round(C.PAGA * v * C.FARTA ** k, 6)) for k, v in enumerate(vale + [mercado.preco_peca(L[ids[5]])])]
+    cheio = [math.floor(round(C.PAGA * v * C.FARTA ** (k + k), 6)) for k, v in enumerate(vale + [mercado.preco_peca(L[ids[5]])])]       # a k-ésima acha k placas iguais e k peças Incomuns acima do alvo da loja
     return ('A ARMADURA VALE PELO QUE COBRE: o preço de tabela é o da armadura de tronco, braços e pernas; a que cobre menos vale a proporção (o elmo, um quarto), no preço e no conserto; e a loja farta conta por material, não por recorte',
             'placa Incomum (tabela 180): ' + '; '.join(f'{nome}, {v}' for (nome, _), v in zip(pecas, vale)) + f"; consertar 10 pontos de cada: {', '.join(map(str, conserto))} de prata; "
-            f"vendidas uma atrás da outra, a loja pagou {', '.join(map(str, pagou))} (cada recorte conta como mais uma placa igual: 20% a menos de cada vez); a prata fecha",
+            f"vendidas uma atrás da outra, a loja pagou {', '.join(map(str, pagou))} (cada recorte conta como mais uma placa igual, e como mais uma peça Incomum acima do alvo da loja: 20% a menos por cada uma das duas contas); a prata fecha",
             vale == [180, 90, 45, 45, 225] and conserto == [36, 18, 9, 9, 45] and pagou == cheio and pagou[0] == 108 and pagou[1] < 0.6 * 90 and prata(E) == p0 and inteiro(E))
+
+
+def _pela_materia(n):
+    """a arma vale pela matéria que leva, como a armadura vale pelo que cobre: o preço de tabela é o da espada (3 unidades de matéria); cada arma vale a proporção das unidades
+    de matéria dela (a mesma tabela que o ofício gasta na obra); o escudo, a das dele. Vale no que a loja pede, no que ela paga e no conserto pago."""
+    base = sum(O_.MATERIA_ARMA[M.PECA_DE_TABELA].values()); pede = {0: {}, 1: {}}; certo = True; pontos = 5; paga_ = {}; conserto = {}
+    for cat in pede:
+        for fam in list(O_.MATERIA_ARMA) + ['escudo']:      # cada peça numa vila sua, com uma forja de vila: a prateleira no alvo, e a loja com as iguais que o gerador pôs
+            E = vila(prata=500); arma = fam != 'escudo'; peca = oficio.molde('arma' if arma else 'escudo', cat, familia=fam if arma else None); un = sum(oficio.materia_de(peca).values()); quer = C.preco_peca(cat) * un / base
+            estado.aplica(E, 'gera', [['lugar', 'vila', 'oficina', 'poe', 1], ['item', 'nasce', item(peca['tipo'], cat, familia=peca.get('familia'), dono='eu')]], texto='a peça e a forja de prova'); iid = f"i{E['itens']['seq']:04d}"
+            it = lambda: E['itens']['itens'][iid]; k = mercado.iguais(E, 'vila', it()); pede[cat][fam] = mercado.preco_peca(it()); pg = mercado.paga_peca(E, 'eu', it())
+            estado.aplica(E, 'mestre', [['item', iid, 'dur', 'soma', -pontos]], texto='o desgaste de prova'); p0 = prata(E); eu0 = E['gente']['eu']['moedas']; oficio.consertar(E, 'eu', iid, pago=True); custo = eu0 - E['gente']['eu']['moedas']
+            if fam in ('adaga', M.PECA_DE_TABELA, 'montante'): paga_[fam, cat] = pg; conserto[fam, cat] = custo
+            certo = (certo and pede[cat][fam] == math.ceil(round(quer, 6)) and pg == math.floor(round(C.PAGA * quer * C.FARTA ** k, 6)) and custo == max(1, math.ceil(round(quer * M.CONSERTO_PONTO * pontos, 6)))
+                     and it()['dur'][0] == it()['dur'][1] and prata(E) == p0 and inteiro(E))
+    t0, t1 = C.preco_peca(0), C.preco_peca(1)
+    certo = (certo and pede[0][M.PECA_DE_TABELA] == t0 == 30 and pede[1][M.PECA_DE_TABELA] == t1 == 180 and pede[0]['adaga'] * 3 == t0 and pede[1]['adaga'] * 3 == t1 and pede[0]['montante'] * 3 == 5 * t0
+             and pede[0]['escudo'] == t0 and len(set(pede[0].values())) >= 4)
+    return ('A ARMA VALE PELA MATÉRIA QUE LEVA: o preço de tabela é o da espada (3 unidades de matéria); cada arma vale a proporção das unidades de matéria dela, e o escudo, a das dele; no que a loja pede, no que paga e no conserto pago',
+            'Comuns (a loja pede): ' + ', '.join(f'{f} {v}' for f, v in pede[0].items()) + '; Incomuns: ' + ', '.join(f'{f} {v}' for f, v in pede[1].items())
+            + f"; a um Leigo, a loja que já tem uma igual paga {paga_['adaga', 0]} pela adaga Comum e {paga_[M.PECA_DE_TABELA, 0]} pela espada, e a que não tem nenhuma paga {paga_['montante', 0]} pelo montante; consertar {pontos} pontos, pago: "
+            f"{conserto['adaga', 1]} de prata na adaga Incomum, {conserto[M.PECA_DE_TABELA, 1]} na espada, {conserto['montante', 1]} no montante; a prata fecha", certo)
 
 
 def _pecas_do_livro(n):
@@ -262,20 +291,131 @@ def _pecas_do_livro(n):
 
 
 def _loja_farta(n):
-    """a loja paga menos pela peça que já tem na prateleira: forjar a mesma peça barata sem parar não é mina"""
-    E = vila(prata=50); n_ad = 14; estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 0, familia='adaga', dono='eu')] for _ in range(n_ad)] + [['item', 'nasce', item('arma', 0, familia='malho', dono='eu')]], texto='as adagas de prova')
-    ids = [i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it.get('familia') == 'adaga']; malho = next(i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it.get('familia') == 'malho')
-    p0 = prata(E); ja = mercado.iguais(E, 'vila', E['itens']['itens'][ids[0]]); metal = mercado.custa(E, 'vila', 'metal:0', 1); pagou = []; rec = 0
+    """a loja paga menos pela peça que já tem na prateleira, e menos por toda peça de uma categoria de que a prateleira já passou do alvo: forjar para a loja sem parar não é mina"""
+    E = vila(prata=50); n_ad = 14; L = lambda: E['itens']['itens']; alvo = mercado.alvo_pecas(E, 'vila'); nasce = lambda q, **k: ['item', 'nasce', item(*q, dono='eu', **k)]
+    na_loja = lambda X, cat: sum(1 for it in mercado.prateleira(X, 'vila').values() if it['cat'] == cat); no_alvo = all(na_loja(E, c) == q for c, q in alvo.items()) and bool(alvo)
+    estado.aplica(E, 'gera', [nasce(('arma', 0), familia='adaga') for _ in range(n_ad)] + [nasce(('arma', 0), familia='malho'), nasce(('arma', 1), familia='arco'), nasce(('arma', 1), familia='machado')], texto='as peças de prova')
+    meu = lambda fam, cat=0: [i for i, it in L().items() if it.get('dono') == 'eu' and it.get('familia') == fam and it['cat'] == cat]; ids = meu('adaga'); malho = meu('malho')[0]; arco = meu('arco', 1)[0]; machado = meu('machado', 1)[0]
+    p0 = prata(E); ja = mercado.iguais(E, 'vila', L()[ids[0]]); metal = mercado.custa(E, 'vila', 'metal:0', 1); pagou = []; rec = 0; v_ad = mercado.valor(L()[ids[0]]); v_malho = mercado.valor(L()[malho])
     for i in ids:
         r = recusa(lambda: pagou.append(mercado.vender_peca(E, 'eu', i)['prata'])); rec += bool(r)
-    outro = mercado.vender_peca(E, 'eu', malho)['prata']; pede = {mercado.preco_peca(it) for it in mercado.prateleira(E, 'vila').values() if it.get('familia') == 'adaga'}
-    cheio = math.floor(round(C.PAGA * C.preco_peca(0), 6)); espera = [math.floor(round(cheio * C.FARTA ** (ja + k), 6)) for k in range(n_ad)]; espera = [x for x in espera if x >= 1]
+    cheio = math.floor(round(C.PAGA * v_ad, 6)); espera = [math.floor(round(C.PAGA * v_ad * C.FARTA ** ((ja + k) + k), 6)) for k in range(n_ad)]; espera = [x for x in espera if x >= 1]     # a k-ésima acha ja + k iguais, e k peças Comuns acima do alvo
+    vendidas = len(pagou); outro = mercado.vender_peca(E, 'eu', malho)['prata']; outro_cheio = math.floor(round(C.PAGA * v_malho, 6)); outro_espera = math.floor(round(C.PAGA * v_malho * C.FARTA ** vendidas, 6))
+    inc = [mercado.vender_peca(E, 'eu', arco)['prata'], mercado.vender_peca(E, 'eu', machado)['prata']]; inc_cheio = math.floor(round(C.PAGA * C.preco_peca(1), 6))     # a outra categoria tem o alvo dela: a primeira peça Incomum sai inteira; a segunda acha uma acima do alvo
+    pede = {mercado.preco_peca(it) for it in mercado.prateleira(E, 'vila').values() if it.get('familia') == 'adaga'}
     compensa = sum(1 for x in pagou if x > metal)
-    certo = (pagou == espera and rec == n_ad - len(espera) > 0 and all(a >= b for a, b in zip(pagou, pagou[1:])) and pagou[0] < cheio == outro and compensa <= 6 and sum(pagou) < 0.3 * n_ad * cheio and pede == {C.preco_peca(0)}
-             and prata(E) == p0 and inteiro(E))
-    return ('A LOJA FARTA: a loja paga 20% a menos por cada peça igual que já tem na prateleira (o que ela pede não muda)',
-            f"{n_ad} adagas Comuns novas vendidas uma a uma numa vila que já tinha {ja}: a loja paga {', '.join(map(str, pagou))} e recusa as outras {rec} (não valem uma moeda); ao todo {sum(pagou)} de prata "
-            f"(sem a regra seriam {n_ad * cheio}); só as {compensa} primeiras pagam mais que o metal de uma adaga ({metal} de prata); um malho, que a loja não tinha, sai pelos {outro} inteiros; na prateleira cada adaga segue a {C.preco_peca(0)}; a prata fecha", certo)
+    # quem compra da prateleira abre espaço de novo: o que a loja pagaria por uma alabarda, antes e depois de o personagem comprar de volta uma adaga
+    estado.aplica(E, 'gera', [nasce(('arma', 0), familia='alabarda'), ['pessoa', 'eu', 'moedas', 'soma', 50]], texto='mais uma peça de prova, e prata para comprar'); p1 = prata(E); alab = meu('alabarda')[0]
+    antes = mercado.paga_peca(E, 'eu', L()[alab]); sobra0 = mercado.sobra(E, 'vila', L()[alab]); mercado.comprar_peca(E, 'eu', ids[0]); depois = mercado.paga_peca(E, 'eu', L()[alab]); sobra1 = mercado.sobra(E, 'vila', L()[alab])
+    torto = [recusa(lambda ef=ef: estado.aplica(E, 'mestre', [ef], texto='o alvo torto')) for ef in (['lugar', 'vila', 'alvo_pecas.0', 'poe', -1], ['lugar', 'vila', 'alvo_pecas', 'poe', {'9': 2}], ['lugar', 'vila', 'alvo_pecas.0', 'soma', -99])]
+    certo = (no_alvo and alvo == {0: 11, 1: 4} and all(torto) and pagou == espera and rec == n_ad - len(espera) > 0 and all(a >= b for a, b in zip(pagou, pagou[1:])) and pagou[0] < cheio and outro == outro_espera < outro_cheio
+             and inc == [inc_cheio, math.floor(round(inc_cheio * C.FARTA, 6))] and compensa <= 6 and sum(pagou) < 0.3 * n_ad * cheio and pede == {math.ceil(round(v_ad, 6))}
+             and sobra1 == sobra0 - 1 and depois > antes and prata(E) == p1 and p1 == p0 + 50 and inteiro(E))
+    return ('A LOJA FARTA: a loja paga 20% a menos por cada peça igual que já tem na prateleira, e também 20% a menos por cada peça da mesma categoria que a prateleira tem acima do alvo do lugar (o que o gerador pôs nela ao abrir a loja); o que ela pede não muda; quem compra da prateleira abre espaço de novo',
+            f"a vila nasce com a prateleira no alvo ({alvo.get(0, 0)} peças Comuns e {alvo.get(1, 0)} Incomuns, guardado no lugar por evento). {n_ad} adagas Comuns novas (cada uma vale {vz(v_ad, 0)}) vendidas uma a uma, numa loja que já tinha {ja}: "
+            f"a loja paga {', '.join(map(str, pagou))} e recusa as outras {rec} (não valem uma moeda); ao todo {sum(pagou)} de prata (sem a regra seriam {n_ad * cheio}); {compensa} delas pagam mais que o metal de uma adaga ({metal} de prata); "
+            f"um malho, que a loja não tinha, já não sai pelos {outro_cheio} inteiros: sai por {outro} (há {vendidas} peças Comuns acima do alvo); a outra categoria tem o alvo dela: um arco Incomum sai pelos {inc[0]} inteiros, e um machado Incomum, logo depois, por {inc[1]}; "
+            f"na prateleira cada adaga segue a {vz(v_ad, 0)}; comprada de volta uma adaga, a loja passa de {antes} a {depois} pela mesma alabarda (uma peça a menos acima do alvo); o alvo torto (negativo, ou de categoria que não existe) é recusado pelo gravador: {sum(bool(x) for x in torto)} de {len(torto)}; a prata fecha", certo)
+
+
+# ---------- o robô ferreiro de loja (a meta FORJAR PARA A LOJA NÃO É MINA) ----------
+def _pecas_de_forja(cats):
+    """tudo o que se forja, nestas categorias: as onze armas, o escudo, e cada armadura inteira e o elmo dela"""
+    for cat in cats:
+        for fam in O_.MATERIA_ARMA: yield oficio.molde('arma', cat, familia=fam)
+        yield oficio.molde('escudo', cat)
+        for mat in O_.MATERIA_ARMADURA:
+            for cobre in (None, ['cabeça']): yield oficio.molde('armadura', cat, material=mat, cobre=cobre)
+
+
+def _paga_se(E, peca, cat, tosca=False):
+    """o que a loja pagaria HOJE por esta peça, se ela nascesse nesta categoria (ou Comum e tosca)"""
+    it = item(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), dono='eu')
+    if tosca: it['dur'][0] = max(1, int(it['dur'][1] * O_.TOSCA))
+    return mercado.paga_peca(E, 'eu', it)
+
+
+def _escolhe(E, cats):
+    """a peça que MAIS RENDE hoje, por bloco de bancada, a quem compra a matéria na loja e vende a peça à loja: o que a loja pagaria por ela (pesado pela chance
+    de acertar e de sair uma abaixo), menos a matéria que falta comprar, menos o que a matéria que ele já tem valeria vendida. Devolve (a peça, a matéria a comprar),
+    ou None se nenhuma paga a matéria (ou se o bolso não dá para a matéria e mais um dia de cama e comida)."""
+    p = E['gente']['eu']; lid = p['lugar']; carga = p.get('carga', {}); est = E['lugares'][lid]['estoque']; melhor = None; reserva = M.CAMA_PRECO + M.REFEICAO_PRECO
+    for peca in _pecas_de_forja(cats):
+        cat = peca['cat']; mat = oficio.materia_de(peca); falta = {k: q - carga.get(k, 0) for k, q in mat.items() if carga.get(k, 0) < q}
+        if any(est.get(k, 0) < q for k, q in falta.items()): continue
+        custo = sum(mercado.custa(E, lid, k, q) for k, q in falta.items())
+        if p['moedas'] < custo + reserva: continue
+        meu = sum(mercado.parte(p) * mercado.lote(E, lid, k, min(q, carga.get(k, 0)), compra=False) for k, q in mat.items() if carga.get(k, 0) > 0)
+        c = oficio.conta(E, 'eu', cat, oficio.oficio_de(peca))
+        rende = c['acerta'] * _paga_se(E, peca, cat) + c['pouco'] * (_paga_se(E, peca, cat - 1) if cat else _paga_se(E, peca, 0, tosca=True))
+        lucro = (rende - custo - meu) / O_.blocos(cat)
+        if lucro > 0 and (melhor is None or lucro > melhor[0]): melhor = (lucro, peca, falta)
+    return melhor and melhor[1:]
+
+
+def ferreiro_de_loja(semente, cats):
+    """uma vida do FERREIRO DE LOJA: o ferreiro de começo da vila de TESTE (`vila_teste.py comeco=ferreiro`), do Dia 1 ao Dia 30. Vive de verdade (come e paga, dorme na cama
+    e paga) e é GANANCIOSO: em todo bloco de bancada que o corpo deixa, compra na loja a matéria da peça que mais rende hoje (`_escolhe`), forja e vende a peça à loja na hora.
+    Quando nenhuma peça paga a matéria, serve o jornal da oficina (é disso que come). Devolve, por janela (os 5 primeiros dias; daí ao Dia 30): o que a loja pagou pelas peças,
+    o que ele gastou em matéria, o jornal, as peças vendidas, as obras fechadas, e o bolso."""
+    import vila_teste
+    E = vila_teste.cria('ferreiro', semente=semente); lid = E['gente']['eu']['lugar']; p0 = prata(E); t0 = estado.agora(E)
+    corte = t0 + MINA_DIAS[0] * M.BLOCOS_DIA; fim = t0 + MINA_DIAS[1] * M.BLOCOS_DIA; parado = [None]
+    V = dict(vendas=[0, 0], materia=[0, 0], jornal=[0, 0], pecas=[0, 0], obras=[0, 0], bolso=[E['gente']['eu']['moedas']], na_mao=0)
+    w = lambda: 0 if estado.agora(E) < corte else 1          # a janela em que o relógio está
+    def bancada():
+        R = None
+        if oficio.obras_de(E, 'eu'): R = oficio.continua(E, 'eu', blocos=1)
+        elif parado[0] != E['relogio']['dia']:
+            melhor = _escolhe(E, cats)
+            if melhor:
+                for k, q in melhor[1].items(): V['materia'][w()] += mercado.comprar(E, 'eu', k, q)['prata']
+                R = oficio.forjar(E, 'eu', melhor[0], blocos=1)
+            else: parado[0] = E['relogio']['dia']             # nenhuma peça paga a matéria hoje: não pergunta de novo antes de o dia virar
+        if R is None: V['jornal'][w()] += oficio.jornal(E, 'eu', 1)['ganhou']; return
+        if not R.get('fim'): return
+        V['obras'][w()] += 1
+        if R['item']:
+            pg = mercado.paga_peca(E, 'eu', E['itens']['itens'][R['item']])
+            if 1 <= pg <= mercado.caixa(E, lid): V['vendas'][w()] += mercado.vender_peca(E, 'eu', R['item'])['prata']; V['pecas'][w()] += 1
+    while estado.agora(E) < fim and E['gente']['eu']['estado'] == 'vivo':
+        b = E['relogio']['bloco']; p = E['gente']['eu']; c = p['corpo']
+        if len(V['bolso']) == 1 and estado.agora(E) >= corte: V['bolso'].append(p['moedas'])
+        if (c['fome'] >= 3 or (b in (0, 1, 5) and c['fome'] >= 2)) and p['moedas'] >= M.REFEICAO_PRECO and E['lugares'][lid]['estoque'].get('comida', 0) > 0:
+            ato.comer(E, 'eu'); p = E['gente']['eu']; c = p['corpo']
+        aguenta = c['cansaco'] + M.ESFORCO['pesado'] < M.LIMIARES['cansaco'][0] and c['sono'] + M.SONO_ACORDADO < M.LIMIARES['sono'][0]
+        if b in (0, 1) or (b == 5 and not aguenta):                                         # dorme a madrugada e a alvorada; deita na noite quando o corpo não dá mais um bloco
+            ato.dormir(E, 'eu', (2 - b) if b < 2 else 3, chao=not ato.cama_paga(E, 'eu') and p['moedas'] < M.CAMA_PRECO, para=False)
+        elif aguenta: bancada()
+        else: ato.descansar(E, 'eu', 1)
+        E['_novos'].clear()                                                                  # a vida de rascunho não vai para arquivo: não guarda o registro na memória
+    eu = E['gente']['eu']; V['bolso'] += [eu['moedas']] * (3 - len(V['bolso'])); V['vivo'] = eu['estado'] == 'vivo'; V['prata'] = prata(E) == p0; V['inteiro'] = inteiro(E)
+    V['na_mao'] = sum(1 for it in E['itens']['itens'].values() if it.get('dono') == 'eu' and it.get('feito_por') == 'eu')      # as peças que ele forjou e a loja não quis
+    V['rende'] = [(V['vendas'][i] - V['materia'][i]) / d for i, d in enumerate((MINA_DIAS[0], MINA_DIAS[1] - MINA_DIAS[0]))]   # o que a forja rende por dia, em cada janela
+    V['no_bolso'] = [(V['bolso'][i + 1] - V['bolso'][i]) / d for i, d in enumerate((MINA_DIAS[0], MINA_DIAS[1] - MINA_DIAS[0]))]
+    return V
+
+
+def _forjar_nao_e_mina(n):
+    """FORJAR PARA A LOJA NÃO É MINA: o ferreiro de começo da vila de teste, comprando matéria na loja, forjando o que mais rende e vendendo à loja. Mede-se o que a FORJA
+    rende (o que a loja pagou pelas peças, menos a matéria comprada), em prata por dia. O robô tenta as duas escadas (só peças Comuns; Comuns e Incomuns) e julga-se a que rende mais."""
+    sementes = max(MINA_SEMENTES, n // 10); media = lambda L: sum(L) / len(L)
+    R = {nome: [ferreiro_de_loja(s, cats) for s in range(1, sementes + 1)] for nome, cats in (('só peças Comuns', (0,)), ('Comuns e Incomuns', (0, 1)))}
+    m5 = {k: media([V['rende'][0] for V in vs]) for k, vs in R.items()}; p5 = {k: max(V['rende'][0] for V in vs) for k, vs in R.items()}; m30 = {k: media([V['rende'][1] for V in vs]) for k, vs in R.items()}
+    todas = [V for vs in R.values() for V in vs]; fecha = all(V['prata'] and V['inteiro'] and V['vivo'] for V in todas)
+    def diz(k):
+        vs = R[k]; d5, d25 = MINA_DIAS[0], MINA_DIAS[1] - MINA_DIAS[0]
+        return (f"{k}: nos {d5} primeiros dias a forja rende {vz(m5[k])} de prata por dia (o pior caso: {vz(p5[k])}; o melhor: {vz(min(V['rende'][0] for V in vs))}), com {vz(media([V['pecas'][0] for V in vs]), 1)} peças vendidas "
+                f"em {vz(media([V['obras'][0] for V in vs]), 1)} obras; do Dia {d5 + 1} ao {MINA_DIAS[1]}, {vz(m30[k])} por dia ({vz(media([V['pecas'][1] for V in vs]), 1)} peças vendidas em {d25} dias); "
+                f"no bolso, com a cama, a comida e o jornal de quando nenhuma peça paga a matéria: {mais(media([V['no_bolso'][0] for V in vs]))} e {mais(media([V['no_bolso'][1] for V in vs]))} por dia "
+                f"(o jornal deu {vz(media([V['jornal'][0] for V in vs]) / d5)} e {vz(media([V['jornal'][1] for V in vs]) / d25)} por dia; sem ele, o bolso dos {d5} primeiros dias ficaria em {mais(media([V['no_bolso'][0] - V['jornal'][0] / d5 for V in vs]))})")
+    certo = sementes >= MINA_SEMENTES and max(m5.values()) <= MINA_COMECO[0] and max(p5.values()) <= MINA_COMECO[1] and max(m30.values()) <= MINA_DEPOIS and fecha
+    return (f"FORJAR PARA A LOJA NÃO É MINA: o ferreiro de começo da vila de TESTE, comprando matéria na loja, forjando o que mais rende e vendendo à loja, ganha com a forja (o que a loja paga pelas peças, menos a matéria) "
+            f"em média no máximo {MINA_COMECO[0]} de prata por dia nos {MINA_DIAS[0]} primeiros dias (no pior caso, no máximo {MINA_COMECO[1]}), e em média no máximo {MINA_DEPOIS} por dia do Dia {MINA_DIAS[0] + 1} ao {MINA_DIAS[1]}; "
+            f"vale para peças Comuns e Incomuns (julga-se a escada que rende mais)",
+            f"{sementes} vilas de teste por escada. " + '. '.join(diz(k) for k in R) + f". Julgado (a escada que rende mais): {vz(max(m5.values()))} em média e {vz(max(p5.values()))} no pior caso nos {MINA_DIAS[0]} primeiros dias "
+            f"({sum(V['rende'][0] > MINA_COMECO[1] for V in todas)} das {len(todas)} vidas passam de {MINA_COMECO[1]}); {vz(max(m30.values()))} em média depois; a prata {'fecha' if all(V['prata'] for V in todas) else 'NÃO FECHA'}; estado {'inteiro' if all(V['inteiro'] for V in todas) else 'QUEBRADO'}"
+            + ('' if all(V['vivo'] for V in todas) else f"; MORRERAM {sum(not V['vivo'] for V in todas)}"), certo)
 
 
 def _anda_sozinho(A):
@@ -388,7 +528,8 @@ def _mesmo_mundo(A):
 
 
 def _m(x): return mercado._m(x)
-def vz(x): return mercado._n(x)                                              # 1,17
+def vz(x, casas=2): return mercado._n(x, casas).replace('-', '−')              # 1,17 (e −0,35)
+def mais(x, casas=2): return ('+' if x > 0 else '') + mercado._n(x, casas).replace('-', '−')      # +1,17 e −0,35
 def pc(x, casas=0): return f'{100 * x:.{casas}f}%'.replace('.', ',')        # 36,4%
 
 
@@ -400,7 +541,7 @@ def provas(n=300):
     try: A = um_ano()
     except (SystemExit, Exception) as e: out.append(('O ANO (a medição)', f'A PROVA QUEBROU: {type(e).__name__}: {e}', False))
     for nome, f in (('IDA E VOLTA', lambda: _ida_e_volta(n)), ('A PRATA FECHA', lambda: _duzentos(n)), ('A FAIXA E O CAIXA', lambda: _faixa_e_caixa(n)), ('O ANO', lambda: _o_ano(A)), ('O DIARISTA VIVE', lambda: _o_diarista(A)),
-                    ('A PEÇA GASTA E A QUEBRADA', lambda: _gasta_e_quebrada(n)), ('AS PEÇAS DA LOJA', lambda: _pecas_do_livro(n)), ('A ARMADURA VALE PELO QUE COBRE', lambda: _pelo_que_cobre(n)), ('A LOJA FARTA', lambda: _loja_farta(n)), ('O PREÇO ANDA SOZINHO', lambda: _anda_sozinho(A)), ('O CELEIRO SE ACERTA SOZINHO', lambda: _celeiro(A)), ('A MÃO DE COMÉRCIO', lambda: _comercio(n)),
+                    ('A PEÇA GASTA E A QUEBRADA', lambda: _gasta_e_quebrada(n)), ('AS PEÇAS DA LOJA', lambda: _pecas_do_livro(n)), ('A ARMADURA VALE PELO QUE COBRE', lambda: _pelo_que_cobre(n)), ('A ARMA VALE PELA MATÉRIA QUE LEVA', lambda: _pela_materia(n)), ('A LOJA FARTA', lambda: _loja_farta(n)), ('FORJAR PARA A LOJA NÃO É MINA', lambda: _forjar_nao_e_mina(n)), ('O PREÇO ANDA SOZINHO', lambda: _anda_sozinho(A)), ('O CELEIRO SE ACERTA SOZINHO', lambda: _celeiro(A)), ('A MÃO DE COMÉRCIO', lambda: _comercio(n)),
                     ('AS RECUSAS', lambda: _recusas(n)), ('A MESA', lambda: _a_mesa(n)), ('O MESMO MUNDO', lambda: _mesmo_mundo(A))):
         roda(nome, f)
     return out

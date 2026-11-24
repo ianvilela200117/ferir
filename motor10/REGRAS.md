@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos nas páginas `tabelas*.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py` e `python3 provas_mundo.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Uma meta da etapa 2 não bate, e está dita no 7.13: a primeira peça Lendária (falhou nas treze rodadas da última medida). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Duas metas da etapa 2 não batem, e estão ditas: a primeira peça Lendária (7.13: falhou em todas as rodadas da medida) e a do ferreiro que forja para a loja (8.13: a forja ainda rende mais do que a meta deixa). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -326,7 +326,7 @@ Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas 
 
 ## 5. O mundo: o tempo, o corpo, o estado e o turno (etapa 1)
 
-Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_mundo.py` (as 12 da etapa 1 e as 12 que a etapa 2 pôs no alicerce: 24 de 24).
+Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_mundo.py` (as 12 da etapa 1 e as 13 que a etapa 2 pôs no alicerce: 25 de 25).
 
 5.1 **O tempo.** O dia tem 6 blocos de 4 horas: madrugada, alvorada, manhã, tarde, entardecer, noite. Semana de 7 dias, estação de 91, ano de 364. Todo ato custa blocos. A madrugada e a noite são escuras: a luta ao ar livre ganha "escuro" sozinha.
 
@@ -364,7 +364,7 @@ Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_m
 
 5.7 **O estado e o gravador único.** O save é uma pasta com o relógio, os lugares, a gente, o Livro de Itens, o caderno do turno e o registro de eventos. **Só `estado.aplica()` muda o mundo.** Um evento sem efeito é recusado: o que não muda número não aconteceu. O evento cujos efeitos não mudam nada (somar no que já está no teto) não entra no registro. Um evento com um efeito errado é recusado inteiro: nada muda pela metade. Cada fato mora num lugar só (o dono de uma peça, só no Livro de Itens). O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos (`estado.py mestre`).
 - **Lugar e gente nascem por evento** (`gera` ou `mestre`), com nome, nível, atributos e lugar; o resto tem padrão.
-- **O que é conta só aceita número, na faixa dele:** a contagem dos bichos, a matéria do ermo, o povo, a oficina, a carga (inteira, e só dos bens que existem).
+- **O que é conta só aceita número, na faixa dele:** a contagem dos bichos, a matéria do ermo, o povo, a oficina, o alvo de peças da loja (8.8), a carga (inteira, e só dos bens que existem).
 - **O item sem dono está num lugar.** Ali ele é da loja (8.8), a não ser que esteja **solto**: caído no chão, de quem achar (9.10).
 - **Os invariantes** (`estado.py valida`) cobrem também a obra, o núcleo, o ermo, o lugar e a saída de caça. O `fecha` recusa o turno com qualquer um quebrado.
 
@@ -626,6 +626,7 @@ Há dois ofícios de bancada: **forja** (armas, malha, placa, escudos) e **couro
 | armadura de placa (corpo · elmo) | 8 · 2 de metal |
 
 A armadura gasta por parte coberta: tronco 2, braços 1, pernas 1, cabeça 1 (a placa, o dobro).
+É por esta mesma tabela que a arma e o escudo valem na loja: pelas unidades de matéria que levam (8.8).
 
 7.5 **A obra fica aberta.** A matéria sai da carga e entra na obra **quando ela abre**. Os blocos somam de um dia para o outro; a obra mora no estado e sobrevive a fechar o turno.
 O ato de trabalhar para quando o corpo cruza um limiar (5.6). O teste só sai quando os blocos fecham. Trabalha-se na oficina onde a obra abriu.
@@ -660,9 +661,9 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 7.10 **Consertar** devolve durabilidade a uma peça sua. Não tem teste.
 - **Você, na bancada:** 5 pontos por bloco, e 1 de matéria principal da peça (metal, couro ou madeira, na categoria dela; Rara, do Épico para cima) a cada 10 pontos ou parte. Pede a mão que a categoria pede (7.3).
-- **Pago ao ferreiro do lugar:** **2% do preço da peça por ponto**, em prata inteira, que vai para o estoque do lugar; um bloco de espera a cada 10 pontos ou parte. A oficina conserta até a categoria do nível dela mais um (7.1). O preço da armadura segue o que ela cobre (8.8): consertar um elmo custa um quarto.
+- **Pago ao ferreiro do lugar:** **2% do preço da peça por ponto**, em prata inteira, que vai para o estoque do lugar; um bloco de espera a cada 10 pontos ou parte. A oficina conserta até a categoria do nível dela mais um (7.1). O preço da peça segue o tamanho dela (8.8): a armadura, o que cobre (consertar um elmo custa um quarto); a arma, a matéria que leva (consertar uma adaga custa um terço; um montante, cinco terços).
 
-| Categoria | Preço de tabela | Conserto pago, por ponto | 10 pontos |
+| Categoria | Preço de tabela (a espada, o escudo, a armadura inteira) | Conserto pago, por ponto | 10 pontos |
 | --- | --- | --- | --- |
 | Comum | 30 | 0,6 | 6 |
 | Incomum | 180 | 3,6 | 36 |
@@ -785,11 +786,25 @@ Do Épico para cima não há matéria: há núcleo (7.3), e núcleo não se nego
 | Lendário | 80% | 750 | um negócio só de 10.000 de prata ou mais |
 
 8.8 **As peças da loja** são itens do Livro de Itens com `onde` no lugar, sem dono e que não estão soltos, **até o Épico**. Daí para cima, e para núcleo, não há loja: leilão, encomenda ou despojo.
-- **O valor** de uma peça é o preço de tabela da categoria (Comum 30, vezes 6 por categoria: Incomum 180, Raro 1.080, Épico 6.480) **menos o conserto que ela pede** (7.10: 2% do preço por ponto gasto), e nunca menos que a sucata.
+- **O valor** de uma peça é o preço de tabela da categoria (Comum 30, vezes 6 por categoria: Incomum 180, Raro 1.080, Épico 6.480), **na proporção do tamanho dela** (as duas regras abaixo), **menos o conserto que ela pede** (7.10: 2% do preço dela por ponto gasto), e nunca menos que a sucata.
 - **A armadura vale pelo que cobre.** O preço de tabela é o da que cobre tronco, braços e pernas. Cada parte pesa: tronco 2, braços 1, pernas 1, cabeça 1, de 4. O elmo vale um quarto; só o tronco, metade.
-- **Quebrada** (durabilidade 0), vale **sucata: 10%** do preço de tabela.
+- **A arma vale pela matéria que leva.** O preço de tabela é o da espada, que leva 3 unidades de matéria (7.4). Cada arma vale a proporção das unidades de matéria dela, metal e madeira somados; o escudo, a das dele (3: o preço de tabela). Vale no que a loja pede, no que ela paga e no conserto pago (7.10).
+
+| Arma | Unidades de matéria | Comum | Incomum | Rara |
+| --- | --- | --- | --- | --- |
+| adaga | 1 | 10 | 60 | 360 |
+| espada, maça, machado, lança, arco; o escudo | 3 | 30 | 180 | 1.080 |
+| martelo, besta | 4 | 40 | 240 | 1.440 |
+| montante, alabarda, malho | 5 | 50 | 300 | 1.800 |
+
+- **Quebrada** (durabilidade 0), vale **sucata: 10%** do preço dela, nova.
 - **Sob medida** (2.8), vale como **uma categoria abaixo**: na mão de outro é isso que ela rende.
 - **A loja pede** o valor, sem os 10% dos bens. **A loja paga** a parte dela (60 a 80%, 8.7), e **20% a menos por cada peça igual que já tem na prateleira** (mesmo tipo, mesma família ou material, mesma categoria; o recorte da armadura não conta).
+- **A loja farta conta a prateleira inteira da categoria.** Cada lugar tem um **alvo de peças por categoria**: o que o gerador pôs na prateleira ao abrir a loja (a vila, 11 Comuns e 4 Incomuns; a cidade, 11 e 9), guardado no lugar, por evento (`lugar.alvo_pecas`).
+  A loja paga **também 20% a menos por cada peça da mesma categoria que a prateleira já tem acima desse alvo**, seja de que tipo for. As duas contas se multiplicam. O que a loja pede não muda.
+  **Quem compra da prateleira abre espaço de novo.** Categoria sem alvo (a Rara, numa vila) tem alvo zero: a primeira peça sai inteira, e a segunda já acha uma acima.
+  O mercado aberto antes de esta regra existir não guardou alvo: vale o da tabela do tipo do lugar.
+  Numa vila com a prateleira no alvo, quatro peças Comuns de tipos que a loja não tem, vendidas uma atrás da outra por um Leigo, saem por 60%, 48%, 38% e 31% do valor.
 - Comprada, a peça ganha dono e chega guardada (5.13); vendida, fica sem dono e com `onde` no lugar. As duas coisas entram na história dela.
 - **A peça em uso não se vende:** guarda-se antes (`ato.py tirar ITEM`).
 
@@ -826,10 +841,10 @@ Com 20% a menos a comida bate no teto toda entressafra (medido em rascunho): é 
 8.11 **Negociar não gasta bloco** (como comer). Só se negocia no lugar onde a pessoa mora, e estando lá: quem saiu para o ermo (5.12) não compra nem vende. Morto não negocia.
 
 8.12 **Abrir um mercado** é coisa do gerador, ou do Mestre, por um evento `gera` (`mercado.py funda POVO`). Ele põe: o povo; a produção igual ao consumo desse povo, menos a da matéria Rara (o preço de equilíbrio fica na base);
-o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inverno); a prateleira do tipo do lugar (peças Comuns e algumas Incomuns); e, se o lugar não tem prata, **5 de prata por pessoa**
+o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inverno); a prateleira do tipo do lugar (peças Comuns e algumas Incomuns) e o alvo de peças por categoria (o que a prateleira nasce tendo: 8.8); e, se o lugar não tem prata, **5 de prata por pessoa**
 (aldeia de 120: 600; vila de 400: 2.000; cidade de 1.500: 7.500).
 
-8.13 **Medido** (`python3 provas_mercado.py`; 15 de 15). Toda prova confere que a soma da prata do mundo fecha.
+8.13 **Medido** (`python3 provas_mercado.py`; 16 de 17: a meta "forjar para a loja não é mina" não bate, e está dita abaixo). Toda prova confere que a soma da prata do mundo fecha.
 
 | O que se mede | Meta | Medido |
 | --- | --- | --- |
@@ -840,7 +855,19 @@ o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inver
 | o diarista vive: o salário de um dia paga a cama e a comida | sobra de 0 a 2 | sobra de 0 a 0,86; 1,00 comendo na taverna |
 | peça gasta vale menos que nova; quebrada vale sucata | sim | a espada Rara: 1.080, 756 e 108 |
 | a armadura vale pelo que cobre (placa Incomum) | a proporção | o corpo 180; só o tronco 90; o elmo 45 |
-| a loja farta: 14 adagas iguais | cada uma vale menos | 14, 11, 9, 7, 5, 4, 3, 3, 2, 1, 1, 1 e recusa duas |
+| a arma vale pela matéria que leva (as onze armas e o escudo, Comuns e Incomuns) | a proporção das unidades de matéria; a espada, o preço de tabela | Comuns: a adaga 10, a espada 30, o martelo 40, o montante 50; Incomuns: 60, 180, 240 e 300; consertar 5 pontos de uma Incomum, pago: 6 na adaga, 18 na espada, 30 no montante |
+| a loja farta: 14 adagas iguais (cada uma vale 10), numa vila com a prateleira no alvo | cada uma vale menos | 4, 3, 1, 1 e recusa as outras dez |
+| a loja farta da categoria inteira: depois dessas, um malho, que a loja não tinha | sai por menos que os 30 inteiros | sai por 12 (há quatro peças Comuns acima do alvo); um arco Incomum sai pelos 108 inteiros, e um machado Incomum, logo depois, por 86 |
+| quem compra da prateleira abre espaço de novo | a loja volta a pagar mais | comprada de volta uma adaga, a loja passa de 9 a 12 pela mesma alabarda |
+| **forjar para a loja não é mina** (meta da segunda volta). O ferreiro de começo da vila de teste compra a matéria na loja, forja o que mais rende e vende à loja; mede-se o que a forja lhe rende (o que a loja paga pelas peças, menos a matéria), em 30 vilas por escada | nos 5 primeiros dias, em média no máximo 6 de prata por dia, e no pior caso no máximo 12; do Dia 6 ao 30, em média no máximo 4 | **NÃO BATE** (em nenhuma das 10 rodadas da medida). Só com peças Comuns: cerca de 8,2 por dia nos 5 primeiros dias (visto de 7,9 a 8,4; o pior caso, 8,8), e nada depois. Com Comuns e Incomuns: cerca de 11 (visto de 8,4 a 14,3; o pior caso, 22,2 em quase todas as rodadas e 32,8 numa), e perto de zero depois (visto de −0,4 a +1,3) |
+
+**A meta do ferreiro de loja não bate, e fica falhando às claras.** O dado da forja é o de verdade: a medida muda de uma rodada para outra, e a tabela diz o centro e a faixa vista. O robô vive de verdade na vila de teste (come, dorme, paga a cama) e é ganancioso: em todo bloco de bancada escolhe a peça que mais rende hoje (o que a loja pagaria, pesado pela chance de acertar, menos a matéria). Quando nenhuma peça paga a matéria, serve o jornal.
+- **Antes das duas regras do 8.8** (a arma pela matéria; a loja farta da categoria inteira), a forja rendia ao mesmo robô cerca de 17 de prata por dia só com peças Comuns, e cerca de 31 com Incomuns (o pior caso, 65). Só com a primeira regra, 24 e 26.
+- **Com as duas,** a forja rende o que a tabela diz: cerca de 8 e cerca de 11. Do Dia 6 em diante, quase nada.
+- **O que ainda passa da meta:** a matéria de começo (4 de metal e 2 de madeira) vira, no Dia 1, uma alabarda que a loja paga por 30; e a primeira peça de cada categoria ainda sai pelo preço inteiro. Um arco Incomum que dá certo paga 108 por 41 de madeira. É moeda no ar (o ferreiro de começo acerta a Incomum em 52%), e por isso de 12 a 21 das 30 vidas dessa escada passam de 12 por dia.
+- **Depois de três peças Comuns e uma ou duas Incomuns, a loja não paga mais a matéria de peça nenhuma.** A prateleira não escoa (ninguém além do personagem compra), e o ferreiro passa a viver do jornal: cerca de +3 de prata por dia no bolso.
+- **No bolso,** com a cama, a comida e o jornal, o robô fica com cerca de +10 por dia nos 5 primeiros dias só com Comuns (visto de +10,1 a +10,7; sem o jornal, cerca de +5), e de +9,6 a +15,5 com Incomuns.
+As duas regras não bastam para a meta. Outra regra, ou outra meta, é decisão que ainda não foi tomada.
 
 ---
 
@@ -1066,13 +1093,12 @@ O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e el
 
 ### O que a etapa 2 não resolve (fica dito)
 
-- **Só quem está em cena age.** Os caçadores do povo, os fregueses e os rivais são das etapas 3 e 5. Ninguém além do personagem compra peça: a prateleira não escoa.
+- **Só quem está em cena age.** Os caçadores do povo, os fregueses e os rivais são das etapas 3 e 5. Ninguém além do personagem compra peça: a prateleira não escoa. Com a loja farta (8.8), isso pesa: vendidas três ou quatro peças de uma categoria, a loja de uma vila não paga mais a matéria de peça nenhuma dela, e só volta a pagar quando alguém compra da prateleira.
 - **Um relógio só.** Quando outra pessoa age (`quem=ID`), o tempo do mundo anda, e o corpo de quem ficou parado não sente. O corpo dos outros é da etapa 3.
 - **Não há viagem.** O ermo é o vizinho, a um número fixo de blocos.
 - **Não há peso.** A carga não tem limite, e a comida não estraga: quem compra na colheita e vende na entressafra ganha de 38 a 62% em meio ano, sem trabalho e sem risco.
 - **A taverna tem preço fixo:** 1 de prata o ano inteiro. O mercado sabe dizer o que a refeição valeria no dia (`mercado.refeicao`), e ninguém cobra isso ainda.
-- **A prata do lugar não se repõe.** Uma vila de 400 tem 2.000: compra três espadas Raras e recusa a quarta.
-- **O preço da arma não olha a matéria:** a adaga (1 de metal) e o montante (5) valem o mesmo.
+- **A prata do lugar não se repõe.** Uma vila de 400 tem 2.000: quatro peças Raras de tipos diferentes levam 1.911 (648, 518, 414 e 331: a loja farta, 8.8), e a quinta é recusada por falta de prata.
 - **A coleta de quem já tem mão não tem meta.** A de começo tem (K1 a K4, 9.17). A do Treinado no interior foi só medida: rende de 6,5 a 9,8 diárias por dia no primeiro mês.
 - **O povo não passa fome,** e o bicho não vem à vila: é das frentes.
 - **Não há tempo de céu** na caça: só o escuro entra sozinho na luta.

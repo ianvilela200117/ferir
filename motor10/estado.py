@@ -208,6 +208,9 @@ def _lugar_erro(E, raiz, sub, val):
         if not isinstance(d, dict): return f'"{raiz}" é uma conta: {{nome: quanto}}'
         return next((e for e in (_conta_erro(raiz, k, v) for k, v in d.items()) if e), None)
     if sub and raiz == 'preparo': return None if val is None or (_int(val) and 0 <= val < len(T.CATS)) else 'o preparo alcança uma categoria (0, Comum, em diante), ou nada'
+    if raiz == 'alvo_pecas':                               # o alvo de peças da loja (mercado.py): {categoria: quantas peças ela quer ter na prateleira}
+        d = {sub: val} if sub else val
+        return None if isinstance(d, dict) and all(isinstance(k, str) and k.isdigit() and int(k) < len(T.CATS) and _int(v) and v >= 0 for k, v in d.items()) else 'o alvo de peças da loja é {categoria ("0", Comum, em diante): quantas peças ela quer ter na prateleira, de zero para cima}'
     if sub: return None
     if raiz == 'pop': return None if val is None or (_num(val) and val >= 0) else 'o povo é um número de zero para cima'
     if raiz == 'oficina': return None if val is None or (_int(val) and 0 <= val <= M.OFICINA_MAX) else f'a oficina vai de 0 a {M.OFICINA_MAX}, ou nada'
@@ -594,7 +597,7 @@ def valida(E):
             for b, q in (l.get(teto) or {}).items():
                 e = _conta_erro(teto, b, q)
                 if e: P.append(f'{n}: {e}')
-        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz'):
+        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas'):
             if campo in l:
                 e = _lugar_erro(E, campo, None, l[campo])
                 if e: P.append(f'{n}: "{campo}" errado ({json.dumps(l[campo], ensure_ascii=False)[:60]}): {e}')
@@ -639,7 +642,8 @@ if __name__ == '__main__':
         if isinstance(l.get('produz'), dict) and l['produz']: print('  produz por dia (antes de o preço e a estação mexerem): ' + conta(l['produz'], nome=bem))
         if isinstance(l.get('bichos'), dict) or isinstance(l.get('teto'), dict): print('  SÓ O MESTRE, os bichos (há/cabem): ' + conta(l.get('bichos') or {}, l.get('teto') or {}))
         if isinstance(l.get('coleta'), dict) or isinstance(l.get('coleta_teto'), dict): print('  SÓ O MESTRE, a matéria para tirar (há/cabe): ' + conta(l.get('coleta') or {}, l.get('coleta_teto') or {}, nome=bem))
-        outros = {k: v for k, v in l.items() if k not in ('nome', 'em', 'tipo', 'habitat', 'perigo', 'longe', 'pop', 'cama', 'oficina', 'sobre', 'vizinhos', 'preparo', 'estoque', 'produz', 'bichos', 'teto', 'coleta', 'coleta_teto')}
+        if isinstance(l.get('alvo_pecas'), dict) and l['alvo_pecas']: print('  a loja quer ter na prateleira: ' + ' · '.join(f"{tantos(v, 'peça ' + FEM[int(k)], 'peças ' + (FEM[int(k)][:-1] + 'ns' if FEM[int(k)].endswith('m') else FEM[int(k)] + 's'))}" for k, v in sorted(l['alvo_pecas'].items()) if k.isdigit() and int(k) < len(FEM)) + ' (acima disso, paga menos)')
+        outros = {k: v for k, v in l.items() if k not in ('nome', 'em', 'tipo', 'habitat', 'perigo', 'longe', 'pop', 'cama', 'oficina', 'sobre', 'vizinhos', 'preparo', 'estoque', 'produz', 'bichos', 'teto', 'coleta', 'coleta_teto', 'alvo_pecas')}
         if outros: print('  e mais: ' + ' · '.join(f"{k}: {json.dumps(v, ensure_ascii=False)}" for k, v in outros.items()))
         for i, it in E['itens']['itens'].items():
             if it.get('onde') == a[1]: print(f"  {i} {rotulo(it)}" + ((' · NO CHÃO, junto de um corpo (quem fica com ela é decisão de cena)' if de_morto(it) else ' · NO CHÃO, de quem achar') if it.get('solto') else ' · na prateleira'))

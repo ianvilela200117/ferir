@@ -54,16 +54,37 @@ def le_materia(chave):
     return (n, int(c)) if c.isdigit() else (chave, None)
 BENS = ['comida', 'lenha', 'carvão', 'sal', 'pano', 'remédio', 'ferramenta']     # os bens sem categoria ("prata" é o dinheiro do lugar, no estoque dele)
 MATERIA_ATE = 2             # a matéria comum vai até o Raro; do Épico para cima a obra pede um NÚCLEO (item do Livro de Itens, tipo 'nucleo', contado no mundo)
-PECA_BASE = 30              # o preço de uma peça Comum nova, em prata
+PECA_BASE = 30              # o preço de tabela de uma peça Comum nova, em prata: o da espada, do escudo e da armadura que cobre tronco, braços e pernas (as outras: peso_da_peca)
 PECA_VEZES = 6              # ... vezes isto a cada categoria
 PECA_LOJA_ATE = 3           # a loja vende até o Épico; daí para cima, só leilão, encomenda ou despojo
 CONSERTO_PONTO = 0.02       # consertar na oficina de outro: esta fração do preço da peça por ponto de durabilidade
 PARTE_PESO = dict(cabeça=1, tronco=2, braços=1, pernas=1)      # quanto pesa cada parte do corpo numa armadura: na matéria que ela leva (o ofício) e no preço (o mercado)
 CORPO_PESO = 4              # a armadura de tabela cobre tronco, braços e pernas: 4 pontos. O preço de tabela é o dela; a que cobre menos vale a proporção (o elmo: um quarto)
-def peso_da_peca(tipo, cobre=None):
-    """a fração do preço de tabela que uma peça vale pelo tamanho: arma e escudo, 1; a armadura, os pontos de corpo que cobre ÷ CORPO_PESO (o elmo: um quarto)"""
-    if tipo != 'armadura': return 1.0
-    return sum(PARTE_PESO.get(x, 0) for x in (cobre or ['tronco', 'braços', 'pernas'])) / CORPO_PESO
+# a matéria de cada arma e do escudo, em unidades (na categoria da obra; do Épico para cima, matéria Rara mais um núcleo). O ofício gasta isto na obra (tabelas_oficio),
+# e o mercado tira daqui o preço: A ARMA VALE PELA MATÉRIA QUE LEVA, como a armadura vale pelo que cobre
+MATERIA_ARMA = {
+    'adaga':    dict(metal=1),
+    'espada':   dict(metal=3),
+    'maça':     dict(metal=3),
+    'machado':  dict(metal=2, madeira=1),
+    'martelo':  dict(metal=3, madeira=1),
+    'lança':    dict(metal=1, madeira=2),
+    'montante': dict(metal=5),
+    'alabarda': dict(metal=3, madeira=2),
+    'malho':    dict(metal=4, madeira=1),
+    'arco':     dict(madeira=3),
+    'besta':    dict(madeira=3, metal=1),
+}                                               # as mãos ("punho") não se forjam
+MATERIA_ESCUDO = dict(madeira=2, metal=1)
+PECA_DE_TABELA = 'espada'   # o preço de tabela (PECA_BASE, vezes PECA_VEZES por categoria) é o desta arma: as outras valem a proporção das unidades de matéria que levam
+def peso_da_peca(tipo, cobre=None, familia=None):
+    """a fração do preço de tabela que uma peça vale pelo tamanho. A armadura, pelo que cobre: os pontos de corpo ÷ CORPO_PESO (o elmo: um quarto).
+    A arma e o escudo, pela matéria que levam: as unidades de matéria ÷ as da espada (a adaga: um terço; o montante: cinco terços; o escudo: 1).
+    A arma que a tabela não conhece vale o preço de tabela."""
+    if tipo == 'armadura': return sum(PARTE_PESO.get(x, 0) for x in (cobre or ['tronco', 'braços', 'pernas'])) / CORPO_PESO
+    mat = MATERIA_ESCUDO if tipo == 'escudo' else MATERIA_ARMA.get(familia) if tipo == 'arma' else None
+    return sum(mat.values()) / sum(MATERIA_ARMA[PECA_DE_TABELA].values()) if mat else 1.0
+def peso_do_item(it): return peso_da_peca(it.get('tipo'), it.get('cobre'), it.get('familia'))       # o mesmo, lido de um item do Livro de Itens
 OFICINA_MAX = 4             # a oficina de um lugar vai de 0 (bancada) a isto (forja mestra)
 PERIGO_MAX = 3              # o perigo de um ermo vai de 1 (a borda) a isto (o coração)
 

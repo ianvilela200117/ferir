@@ -77,19 +77,22 @@ def celeiro_dias(dia):
 
 
 # ---------- as peças da loja (itens do Livro de Itens com "onde" no lugar e sem dono) ----------
-def preco_peca(cat): return M.PECA_BASE * M.PECA_VEZES ** cat      # o preço de tabela da peça nova: 30 a Comum, vezes 6 por categoria
+def preco_peca(cat): return M.PECA_BASE * M.PECA_VEZES ** cat      # o preço de tabela da peça nova: 30 a Comum, vezes 6 por categoria (é o da espada: tabelas_mundo.PECA_DE_TABELA)
 SUCATA = 0.10               # a peça quebrada (durabilidade 0) vale esta fração do preço de tabela; e nenhuma peça vale menos que isto
 # a peça gasta vale o preço de tabela menos o conserto que ela pede (tabelas_mundo.CONSERTO_PONTO: 2% do preço por ponto gasto)
 # a peça sob medida vale como uma categoria abaixo (tabelas.NAO_E_DELE): na mão de outro é isso que ela rende
 # a armadura vale pelo que cobre (tabelas_mundo.PARTE_PESO): o preço de tabela é o da que cobre tronco, braços e pernas; o elmo vale um quarto; a manga, um quarto
+# a arma vale pela matéria que leva (tabelas_mundo.MATERIA_ARMA): o preço de tabela é o da espada (3 unidades); a adaga (1) vale um terço; o montante (5), cinco terços; o escudo (3), o de tabela
 # a loja negocia peças até o Épico (tabelas_mundo.PECA_LOJA_ATE); núcleo não se negocia em loja
-FARTA = 0.8                 # a loja paga isto vezes por cada peça IGUAL (mesmo tipo, mesma família ou material, mesma categoria; o recorte não conta) que já tem na prateleira:
-                            # com uma igual, 80% do que pagaria; com cinco, um terço (1 desliga a regra). O que ela PEDE pela peça não muda.
+FARTA = 0.8                 # A LOJA FARTA: a loja paga isto vezes por cada peça IGUAL (mesmo tipo, mesma família ou material, mesma categoria; o recorte não conta) que já tem na prateleira,
+                            # E TAMBÉM isto vezes por cada peça DA MESMA CATEGORIA que a prateleira tem ACIMA DO ALVO do lugar (lugar.alvo_pecas: o que o gerador pôs na prateleira
+                            # ao abrir a loja, por categoria; categoria sem alvo: zero). Com uma igual, 80% do que pagaria; com cinco, um terço (1 desliga a regra).
+                            # O que ela PEDE pela peça não muda. Quem compra da prateleira abre espaço de novo.
 
 
 def valor_peca(cat, dur, dur_max, sob_medida=False, peso=1.0):
-    """o valor de uma peça (antes de arredondar): o preço da categoria vezes o tamanho dela (tabelas_mundo.peso_da_peca: a armadura vale pelo que cobre),
-    menos o conserto que ela pede; quebrada, a sucata"""
+    """o valor de uma peça (antes de arredondar): o preço da categoria vezes o tamanho dela (tabelas_mundo.peso_da_peca: a armadura vale pelo que cobre;
+    a arma e o escudo, pela matéria que levam), menos o conserto que ela pede; quebrada, a sucata"""
     p = preco_peca(cat) * peso / (M.PECA_VEZES ** T.NAO_E_DELE if sob_medida else 1)
     if dur <= 0: return p * SUCATA
     return p * max(SUCATA, 1 - M.CONSERTO_PONTO * (dur_max - dur))
@@ -99,8 +102,15 @@ def valor_peca(cat, dur, dur_max, sob_medida=False, peso=1.0):
 _COMUNS = [('arma', 'adaga', 0, None), ('arma', 'espada', 0, None), ('arma', 'maça', 0, None), ('arma', 'machado', 0, None), ('arma', 'lança', 0, None), ('arma', 'arco', 0, None),
            ('armadura', 'couro', 0, None), ('armadura', 'couro', 0, ['cabeça']), ('armadura', 'malha', 0, None), ('armadura', 'malha', 0, ['cabeça']), ('escudo', None, 0, None)]
 _INCOMUNS = [('arma', 'espada', 1, None), ('arma', 'lança', 1, None), ('armadura', 'couro', 1, None), ('escudo', None, 1, None)]
+# (o que o gerador põe aqui, por categoria, é também o ALVO de peças do lugar: a vila, 11 Comuns e 4 Incomuns; a cidade, 11 e 9)
 PRATELEIRA = dict(vila=_COMUNS + _INCOMUNS,
                   cidade=_COMUNS + _INCOMUNS + [('arma', 'machado', 1, None), ('arma', 'arco', 1, None), ('arma', 'montante', 1, None), ('armadura', 'malha', 1, None), ('armadura', 'malha', 1, ['cabeça'])])
+def prateleira_de(tipo): return PRATELEIRA.get(tipo, PRATELEIRA['vila'])        # a prateleira com que nasce a loja de um lugar deste tipo
+def alvo_pecas(tipo):
+    """{categoria: quantas peças} a loja de um lugar deste tipo quer ter na prateleira: o que o gerador põe nela ao abrir a loja"""
+    quer = {}
+    for _, _, cat, _ in prateleira_de(tipo): quer[cat] = quer.get(cat, 0) + 1
+    return quer
 
 # ---------- a maestria de comércio (maestria.comércio): sobe por DIAS DE NEGÓCIO ----------
 NEGOCIO_MIN = 10            # um negócio (compra ou venda) deste tanto de prata ou mais faz do dia um dia de negócio (conta um por dia)

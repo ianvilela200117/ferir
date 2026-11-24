@@ -263,7 +263,9 @@ def _remata_forja(E, o):
     margem = r['total'] - r['contra']; sai = cat if margem >= 0 else cat - 1 if margem > -O.POR_POUCO else None; ef = []; it = None
     fim = 'acertou' if margem >= 0 else 'abaixo' if sai is not None else 'perdeu'
     if sai is not None:
-        it = item(peca['tipo'], max(0, sai), peca['nome'], familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), dono=pid, feito_por=pid, dia=dia)
+        padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'))['nome']       # o nome que a obra ganha quando não se dá nome: diz a categoria DA OBRA
+        nome = None if max(0, sai) != cat and peca['nome'] == padrao else peca['nome']      # a peça sem nome próprio que sai uma categoria abaixo ganha o nome da categoria em que saiu ("arco Incomum", e não "arco Raro")
+        it = item(peca['tipo'], max(0, sai), nome, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), dono=pid, feito_por=pid, dia=dia)
         como = f"Dia {dia}: {p['nome']} forjou {_em(E, lid)}" + (f', com {nuc}' if nuc else '')
         if sai < 0: it['dur'][0] = max(1, int(it['dur'][1] * O.TOSCA)); como += '; a peça saiu tosca'
         elif sai < cat: como += f'; a obra era {FEM[cat]} e a peça saiu {FEM[sai]}'
@@ -307,7 +309,7 @@ def consertar(E, pid, iid, pontos=None, pago=False):
     cat = it['cat']; sobra = f" Pediu {pontos}; a peça só tinha {tantos(gasto, 'ponto gasto', 'pontos gastos')}." if pontos is not None and int(pontos) > gasto else ''
     if pago:
         if cat > v + O.OFICINA_CONSERTA: sys.exit(f"a {O.OFICINAS[v]} {estado.de(E, lid)} só conserta até o {T.CATS[min(v + O.OFICINA_CONSERTA, len(T.CATS) - 1)]}; {it['nome']} é {T.CATS[cat]}")
-        custo = O.conserto_pago(cat, q, M.peso_da_peca(it['tipo'], it.get('cobre')))
+        custo = O.conserto_pago(cat, q, M.peso_do_item(it))
         if p['moedas'] < custo: sys.exit(f"consertar {tantos(q, 'ponto')} de {_peca(it)} custa {custo} de prata; {p['nome']} tem {p['moedas']}")
         estado.aplica(E, 'consertar', [['pessoa', pid, 'moedas', 'soma', -custo], ['estoque', lid, 'prata', 'soma', custo], ['item', iid, 'dur', 'soma', q]], onde=lid, quem=[pid],
                       texto=f"{p['nome']} paga {custo} de prata à {O.OFICINAS[v]} pelo conserto de {it['nome']} ({tantos(q, 'ponto')})")
@@ -316,7 +318,7 @@ def consertar(E, pid, iid, pontos=None, pago=False):
         return dict(pontos=q, custo=custo, feitos=n, parou=pq, texto=f"A {O.OFICINAS[v]} conserta {it['nome']}: {tantos(q, 'ponto')} por {custo} de prata, em {tantos(n, 'bloco')}. Durabilidade {it['dur'][0]}/{it['dur'][1]}.{sobra}")
     of = oficio_de(it); pede_mao = O.MAO_DA_OBRA[cat] if cat < len(O.MAO_DA_OBRA) else None
     if pede_mao is None or mao(p, of) < pede_mao:
-        sys.exit(f"consertar uma peça {FEM[cat]} pede mão de {T.MAESTRIAS[pede_mao] if pede_mao is not None else 'quem ainda não existe'} em {of}; a de {p['nome']} é de {T.MAESTRIAS[mao(p, of)]}. Pago à oficina: {O.conserto_pago(cat, q, M.peso_da_peca(it['tipo'], it.get('cobre')))} de prata.")
+        sys.exit(f"consertar uma peça {FEM[cat]} pede mão de {T.MAESTRIAS[pede_mao] if pede_mao is not None else 'quem ainda não existe'} em {of}; a de {p['nome']} é de {T.MAESTRIAS[mao(p, of)]}. Pago à oficina: {O.conserto_pago(cat, q, M.peso_do_item(it))} de prata.")
     chave = _materia_conserto(it) or sys.exit(f"{it['nome']} não é peça que a bancada saiba consertar"); unidades = math.ceil(q / O.CONSERTO_MATERIA)
     if p.get('carga', {}).get(chave, 0) < unidades: sys.exit(f"consertar {tantos(q, 'ponto')} de {it['nome']} gasta {unidades} de {_mat(chave)}; {p['nome']} carrega {p.get('carga', {}).get(chave, 0)}")
     def mais(i):
@@ -455,7 +457,7 @@ def ver(E, pid):
     for i, it in gastas[:4]:
         q = it['dur'][1] - it['dur'][0]; of = oficio_de(it); chave = _materia_conserto(it); pode = chave and it['cat'] < len(O.MAO_DA_OBRA) and mao(p, of) >= O.MAO_DA_OBRA[it['cat']]
         eu_txt = f"você, {tantos(math.ceil(q / O.CONSERTO_BLOCO), 'bloco')} e {math.ceil(q / O.CONSERTO_MATERIA)} de {_mat(chave)}" if pode else 'você não tem a mão'
-        pago = f"pago, {O.conserto_pago(it['cat'], q, M.peso_da_peca(it['tipo'], it.get('cobre')))} de prata" if it['cat'] <= v + O.OFICINA_CONSERTA else 'esta oficina não conserta'
+        pago = f"pago, {O.conserto_pago(it['cat'], q, M.peso_do_item(it))} de prata" if it['cat'] <= v + O.OFICINA_CONSERTA else 'esta oficina não conserta'
         L.append(f"- consertar {it['nome']} ({i}, {it['dur'][0]}/{it['dur'][1]}): {eu_txt}; {pago}")
     if len(gastas) > 4: L.append(f"- ... e mais {tantos(len(gastas) - 4, 'peça gasta', 'peças gastas')}")
     g = O.ajuste_grau(mao(p))

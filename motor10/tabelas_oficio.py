@@ -34,22 +34,10 @@ MAO_DA_OBRA = [0, 0, 2, 4, 6, 8]    # a mão que a obra pede, por categoria (Com
                                     # para FORJAR é conselho, não tranca (abaixo dela a conta quase não fecha); para CONSERTAR sozinho, é o que se pede
 
 # ---------- a matéria de cada peça (na categoria da obra; do Épico para cima, matéria Rara mais um núcleo da categoria) ----------
-MATERIA_ARMA = {
-    'adaga':    dict(metal=1),
-    'espada':   dict(metal=3),
-    'maça':     dict(metal=3),
-    'machado':  dict(metal=2, madeira=1),
-    'martelo':  dict(metal=3, madeira=1),
-    'lança':    dict(metal=1, madeira=2),
-    'montante': dict(metal=5),
-    'alabarda': dict(metal=3, madeira=2),
-    'malho':    dict(metal=4, madeira=1),
-    'arco':     dict(madeira=3),
-    'besta':    dict(madeira=3, metal=1),
-}                                               # as mãos ("punho") não se forjam
+MATERIA_ARMA = M.MATERIA_ARMA                   # adaga 1 de metal ... montante 5 (tabelas_mundo: o mercado tira o preço da arma da mesma tabela); as mãos ("punho") não se forjam
 MATERIA_ARMADURA = dict(couro=('couro', 1), malha=('metal', 1), placa=('metal', 2))     # a matéria, e quanto por ponto de corpo coberto
 PARTE_PESO = M.PARTE_PESO                                                               # cabeça 1, tronco 2, braços 1, pernas 1 (tabelas_mundo: o mercado usa o mesmo peso no preço)
-MATERIA_ESCUDO = dict(madeira=2, metal=1)
+MATERIA_ESCUDO = M.MATERIA_ESCUDO                                                       # 2 de madeira e 1 de metal (tabelas_mundo)
 OFICIO_COURO = ('couro',)   # as armaduras deste material são do ofício "couro"; todo o resto é da "forja"
 
 
@@ -76,8 +64,8 @@ def materia_conserto(tipo, cat, familia=None, material=None, cobre=None):
 CONSERTO_BLOCO = 5          # pontos de durabilidade que um bloco de bancada devolve (feito por você)
 CONSERTO_MATERIA = 10       # cada tantos pontos (ou parte) gastam 1 de matéria principal da peça
 PAGO_BLOCO = 10             # pago à oficina: um bloco de espera a cada tantos pontos (ou parte)
-def preco(cat): return M.PECA_BASE * M.PECA_VEZES ** cat                # o preço de tabela da peça nova (30 a Comum, vezes 6 por categoria)
-def conserto_pago(cat, pontos, peso=1.0): return max(1, math.ceil(round(preco(cat) * peso * M.CONSERTO_PONTO * pontos, 6)))     # 2% do preço da peça por ponto, em prata inteira (o preço da armadura segue o que ela cobre: tabelas_mundo.peso_da_peca)
+def preco(cat): return M.PECA_BASE * M.PECA_VEZES ** cat                # o preço de tabela da peça nova (30 a Comum, vezes 6 por categoria): o da espada
+def conserto_pago(cat, pontos, peso=1.0): return max(1, math.ceil(round(preco(cat) * peso * M.CONSERTO_PONTO * pontos, 6)))     # 2% do preço da peça por ponto, em prata inteira (o preço segue o tamanho dela: a armadura, o que cobre; a arma, a matéria que leva: tabelas_mundo.peso_da_peca)
 
 # ---------- ajustar (sob medida) ----------
 AJUSTE_BASE = 22            # o teste do ajuste: a mesma soma da forja, contra isto mais 6 por categoria da peça

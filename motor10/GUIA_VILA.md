@@ -21,7 +21,8 @@ Sem `comeco=`, o personagem é o guerreiro. Sem `nome=`: Aldo (ferreiro), Cira (
 **Pedra Rasa**, uma vila de 400 pessoas, no Dia 1 da primavera:
 - **pousada:** cama por 2 de prata a noite (paga uma vez, vale o dia inteiro: dormir de novo nas 24 horas seguintes não cobra), refeição por 1;
 - **mercado:** os bens no ponto do ano, a matéria Comum e Incomum, e 2.000 de prata contada (loja sem prata não compra);
-- **a prateleira:** 15 peças. Comuns a 30 de prata (adaga, espada, maça, machado, lança, arco, armadura de couro, armadura de malha, escudo), os elmos de couro e de malha a 8, e quatro Incomuns a 180 (espada, lança, armadura de couro, escudo);
+- **a prateleira:** 15 peças. Comuns a 30 de prata (espada, maça, machado, lança, arco, armadura de couro, armadura de malha, escudo), a adaga a 10, os elmos de couro e de malha a 8, e quatro Incomuns a 180 (espada, lança, armadura de couro, escudo). A arma vale pela matéria que leva: o preço de tabela é o da espada (3 de matéria); a adaga (1) vale um terço, o martelo e a besta (4), 40, e o montante, a alabarda e o malho (5), 50;
+- **a loja farta:** a loja quer ter 11 peças Comuns e 4 Incomuns, que é o que a prateleira tem ao nascer. Paga 60% do valor a quem não tem mão de comércio, 20% a menos por cada peça igual que já tem, e também 20% a menos por cada peça da mesma categoria além dessas 11 (ou 4). Quem compra da prateleira abre espaço de novo;
 - **a forja da vila:** oficina 1 (+1 no teste); o fogo e a bigorna servem até o Incomum (+4 nas obras Comuns e Incomuns); conserta, paga, até o Raro.
 
 **A Mata do Corvo**, o ermo vizinho, a 1 bloco de ida e 1 de volta. É a borda de uma floresta:
@@ -96,14 +97,14 @@ Enquanto a saída de caça está aberta, o personagem está no ermo: comer na ta
 
 - **Dia 1:** saiu atrás de corça, viu primeiro, atacou de longe, do alto e com o cerco: três flechas erradas, três certas, a corça caiu. Despojo: 3 de comida, 1 de couro, 1 de osso. Vendeu tudo por 5 de prata. Cama: 2.
 - **Dia 2:** comprou 1 de metal por 4, forjou uma adaga Comum num bloco (62% de chance; passou), trabalhou a jornada (2 blocos, 4 de prata), o terceiro bloco foi recusado. Comeu e dormiu.
-- **Dia 3:** vendeu a adaga velha por 14, saiu com a Rute atrás de javali. O javali fugiu por um fio; seguiu o sangue e o achou. Despojo: 5 de comida, 2 de couro, 1 de osso: 5 de prata na loja. Consertou o arco por 2.
-- **A conta:** de 30 para 44 de prata em três dias, quase tudo pela adaga vendida. Sem ela, a caça pagou a cama e a comida e pouco mais.
+- **Dia 3:** vendeu a adaga velha por 4 (a adaga vale 10, e a loja já tinha uma), saiu com a Rute atrás de javali. O javali fugiu por um fio; seguiu o sangue e o achou. Despojo: 5 de comida, 2 de couro, 1 de osso: 5 de prata na loja. Consertou o arco por 2.
+- **A conta:** de 30 para 34 de prata em três dias. A caça pagou a cama e a comida e pouco mais, e a adaga vendida pagou o metal da nova. (A venda da adaga foi refeita pela regra de hoje: quando este diário foi jogado, toda arma Comum valia 30, e a loja pagou 14 por ela.)
 
 ## O que ainda NÃO existe
 
 - **Viagem.** Só há a vila e o ermo vizinho. Estrada, rota e dormir no mato por escolha são da etapa 3.
 - **Gente com rotina.** Os oito têm nome e ficha de luta, mas não agem sozinhos, não compram, não lembram, e o corpo deles só anda quando vão junto numa saída.
-- **Missões, encomendas e clientes.** Ninguém pede nada, e ninguém além do personagem compra peça: a prateleira não escoa.
+- **Missões, encomendas e clientes.** Ninguém pede nada, e ninguém além do personagem compra peça: a prateleira não escoa. Por isso a loja farta não desenche sozinha: depois de três ou quatro peças vendidas, só volta a pagar bem quando alguém compra da prateleira.
 - **Magia e encanto de peça.**
 - **Morte com herdeiro.** O personagem morre de vez; o que era dele cai onde morreu, e não passa a ninguém sem uma decisão de cena; a `MESA.md` diz que morreu. O herdeiro, a família que cobra e o nêmesis são da etapa 6.
 - **Paga de companheiro.** Quem vai junto numa saída não pede prata nem recusa o perigo: leva a parte dele do despojo, e só.
@@ -116,8 +117,8 @@ Enquanto a saída de caça está aberta, o personagem está no ermo: comer na ta
 1. **A luta.** A caçada de corça é a mais simples: veja se o quadro, as paradas e as ordens se leem bem. Depois chame a Rute (`com=rute`) e tente o javali. Quem quiser medo: três lobos, de perto.
 2. **O perigo lido antes.** A frase da ameaça diz o que o bicho é? O grau F da corça e o E do javali batem com o que a luta entregou? Duas corças juntas já valem grau E.
 3. **A caça como ofício.** Uma corça rende de 3 a 6 de comida, 1 ou 2 de couro e 1 de osso: de 3 a 7 de prata na loja. Viver custa 3 por dia. É pouco? É o ponto em que o banco de provas e a mesa discordam (ver as dúvidas no `MUDANCAS.md`).
-4. **A forja.** O ferreiro novo acerta a peça Comum em cerca de 8 de cada 10 (com o fogo, a bigorna e a receita). A obra Rara pede 9 blocos e matéria Rara, que a loja não tem e a mata, que é borda, não dá: na vila de teste só há o couro e o osso da única pantera (dão para uma peça pequena de couro Raro; para o resto, o Mestre põe a matéria por `estado.py mestre`). A Épica pede, além disso, o núcleo da serpe.
-5. **O custo de viver.** Cama 2 por noite, refeição 1, jornada de 2 blocos a 2 de prata: sobra 1 por dia. Peça Comum a 30, Incomum a 180. O conserto de uma peça Comum custa 0,6 por ponto.
+4. **A forja.** O ferreiro novo acerta a peça Comum em cerca de 8 de cada 10 (com o fogo, a bigorna e a receita), e a Incomum em 5 de cada 10. **Forjar para a loja rende no começo e acaba logo:** as três primeiras peças Comuns (a primeira, com a matéria de começo) rendem cerca de 40 de prata no Dia 1, já paga a matéria; daí em diante a prateleira está cheia, a loja não paga mais a matéria de peça Comum nenhuma, e ele vive do jornal (6 de prata por dia, até a jornada). Uma peça Incomum que dá certo ainda paga bem (um arco, 108 de prata por 41 de madeira), e é moeda no ar. A meta do banco para isto não bate (REGRAS 8.13): é dos pontos em que a sua opinião decide. A obra Rara pede 9 blocos e matéria Rara, que a loja não tem e a mata, que é borda, não dá: na vila de teste só há o couro e o osso da única pantera (dão para uma peça pequena de couro Raro; para o resto, o Mestre põe a matéria por `estado.py mestre`). A Épica pede, além disso, o núcleo da serpe.
+5. **O custo de viver.** Cama 2 por noite, refeição 1, jornada de 2 blocos a 2 de prata: sobra 1 por dia. A espada Comum a 30, a Incomum a 180 (as outras armas, pela matéria que levam). O conserto de uma espada Comum custa 0,6 por ponto.
 6. **O mercado.** Compre e venda e veja o preço andar. A loja paga 60% a quem não tem mão de comércio.
 7. **A mesa do Mestre.** A `MESA.md` traz o que é preciso para narrar um turno? Falta alguma coisa? Sobra?
 8. **A coleta como ofício.** Dois blocos de lenha por dia rendem cerca de 6 de prata ao preço de base e 3 na loja: paga a cama e a comida, e não sobra. O diarista fica com 1 por dia sem sair da vila, e na mata o lobo aparece. A matéria que vale mais (a Incomum, a Rara) pede mão e fica no interior, que a vila de teste não tem. É assim que a coleta de começo deve ser?
