@@ -59,6 +59,19 @@ def dado_posto(margens):
     finally: teste.rola = real
 
 
+@contextlib.contextmanager
+def dado_semente(semente):
+    """o dado do jogador (teste.rola) com semente, só no robô do banco: a mesma vida sai igual em toda rodada (a luta já tem a semente dela; o mundo, a dele)"""
+    real = teste.d20x; r = random.Random(semente)
+    def d20x():
+        t = [r.randint(1, 20)]
+        while t[-1] == 20: t.append(r.randint(1, 20))
+        return t
+    teste.d20x = d20x
+    try: yield
+    finally: teste.d20x = real
+
+
 def vila(semente=1, cripta=True, tochas=6):
     """a vila de teste inteira (a de hoje, com a etapa da magia) e a Cripta da Cova Velha; o Maro leva tochas (pagas à loja, a 1 de prata)"""
     import vila_teste
@@ -98,15 +111,15 @@ def _fraco(E, g, frac):
     return any(E['gente'][c]['estado'] == 'vivo' and E['gente'][c]['pv'] < frac * estado.pv_max(E['gente'][c]) for c in g)
 
 
-def desce(E, pid, com, ordem=None, ladino=None, prudente=True, conta=None):
+def desce(E, pid, com, ordem=None, ladino=None, prudente=True, conta=None, mid='cripta'):
     """UMA DESCIDA DO ROBÔ, pelo masmorra.py de verdade: anda a cripta, luta o que aparece, pega o que acha, abre o baú e a porta do fundo (a chave, a gazua ou a força),
     e sai: quando tudo foi visto, quando alguém cai abaixo de 35% do PV, ou (o prudente) quando chega à porta do fundo com alguém abaixo de 75%"""
     C = conta if conta is not None else {}
     for k in ('lutas', 'vagantes', 'armadilhas_achadas', 'armadilhas_disparadas', 'tochas', 'blocos'): C.setdefault(k, 0)
     t0 = (E['gente'][pid].get('carga') or {}).get('tocha', 0)
     o = list(ordem or [pid] + list(com))
-    R = quieto(MS.descer, E, pid, 'cripta', com=com, ordem=o, luz='tocha' if t0 else 'nada', quem_luz=pid if t0 else None)
-    mid = 'cripta'; feitas = set(); procurou = set(); fundo = MS.fundo(E, mid); visitou = set(); tenta = {}; pausas = 0
+    R = quieto(MS.descer, E, pid, mid, com=com, ordem=o, luz='tocha' if t0 else 'nada', quem_luz=pid if t0 else None)
+    feitas = set(); procurou = set(); fundo = MS.fundo(E, mid); visitou = set(); tenta = {}; pausas = 0
     for passo in range(600):
         p = E['gente'][pid]; d = MS.descida(p)
         if not d: break
@@ -120,9 +133,11 @@ def desce(E, pid, com, ordem=None, ladino=None, prudente=True, conta=None):
                 pas = enc.get('surpresa') != 'A' and enc.get('onde', enc['sala']) == sid and ant in E['lugares'] and E['lugares'][ant].get('largura') == 1 and E['lugares'][enc['sala']].get('largura') != 1
                 quieto(MS.atacar, E, pid, passagem=pas); C['lutas'] += 1; luta_robo(E, pid); continue
             if d['fase'] == 'armadilha':
-                C['armadilhas_achadas'] += 1
-                if ladino in g: quieto(MS.desarmar, E, pid, quem=ladino)
-                else: quieto(MS.contornar, E, pid)
+                C['armadilhas_achadas'] += 1; feitas_ = set((d.get('armadilha') or {}).get('contornadas') or [])
+                ach = [x for x in MS._achadas(E, sid) if x[2].get('onde', 'chão') == 'chão' and x[1] not in feitas_]
+                if not ach: quieto(MS.contornar, E, pid); continue
+                if ladino in g: quieto(MS.desarmar, E, pid, ach[0][0], quem=ladino)
+                else: quieto(MS.contornar, E, pid, ach[0][0])
                 continue
             if ladino in g and MS._frente(E, pid, d) != ladino: quieto(MS.ordem, E, pid, [ladino] + [x for x in MS._ordem(E, pid, d) if x != ladino])
             if _fraco(E, g, ROBO['foge']) or any(E['gente'][c]['estado'] != 'vivo' for c in [pid] + list(com)): break
@@ -231,7 +246,7 @@ def vida(semente, quem='grupo', dias=ROBO['dias6'], prudente=True, vender=False,
             t = (E['gente']['eu'].get('carga') or {}).get('tocha', 0)
             if t < ROBO['tochas']: compra_tochas(E, 'eu', ROBO['tochas'] - t)
             antes_cripta = sum(int((E['lugares'][x].get('estoque') or {}).get('prata', 0)) for x in MS.salas(E, 'cripta'))
-            C['descidas'] += 1; ult = E['relogio']['dia']; ja_limpa = isinstance(m.get('limpa'), dict)
+            C['descidas'] += 1; ult = E['relogio']['dia']; ja_limpa = isinstance(m.get('limpa'), dict) and esgotada(E)
             desce(E, 'eu', vivos, [x for x in ordem if x in ['eu'] + vivos], ladino=ladino if ladino in vivos else None, prudente=prudente, conta=C)
             r = antes_cripta - sum(int((E['lugares'][x].get('estoque') or {}).get('prata', 0)) for x in MS.salas(E, 'cripta'))
             if vender: r += sum(vende(E, c) for c in ['eu'] + vivos)
@@ -252,6 +267,11 @@ def vida(semente, quem='grupo', dias=ROBO['dias6'], prudente=True, vender=False,
              onde=[(E['gente'][c].get('morte') or {}).get('onde') for c in ['eu'] + com if E['gente'][c]['estado'] != 'vivo'], prata_fecha=prata_do_mundo(E) == p0, inteiro=not estado.valida(E),
              dias=E['relogio']['dia'] - d0, aberta=any((E['gente'][c].get('marca') or {}).get('masmorra') for c in E['gente']))
     return C, E
+
+
+def esgotada(E, mid='cripta'):
+    """o tesouro que o gerador pôs já foi levado (nenhuma prata nas salas, nenhuma peça sem dono nelas): daí em diante, só rende o que volta"""
+    return not any(int((E['lugares'][x].get('estoque') or {}).get('prata', 0)) for x in MS.salas(E, mid)) and not any(it.get('onde') in MS.salas(E, mid) and not it.get('dono') and not estado.de_morto(it) for it in E['itens']['itens'].values())
 
 
 def _quim(E):
@@ -379,14 +399,16 @@ def _ma4(n):
     vidas = max(8, n // 12); R = []
     with pasta():
         for s in range(1, vidas + 1):
-            luta.semente(1000 + s); C, E = vida(500 + s, 'grupo', dias=ROBO['dias4'], vender=True, continua=True); R.append(C)
+            luta.semente(1000 + s)
+            with dado_semente(2000 + s): C, E = vida(500 + s, 'grupo', dias=ROBO['dias4'], vender=True, continua=True)
+            R.append(C)
     dia = sum(C['renda'] for C in R) / max(1, sum(3 * max(1, C['dias']) for C in R))
     dep = [C for C in R if C['depois']]; depois = sum(C['renda_depois'] for C in dep) / max(1, sum(3 * C['depois'] for C in dep))
     diaria = M.SALARIO['diarista'] * M.JORNADA; fecha = all(C['prata_fecha'] and C['inteiro'] for C in R)
     ok = dia <= diaria and depois < 0.25 * diaria and fecha and len(dep) >= vidas // 2
     return [('MA4 NÃO É MINA: a casa da vila vive 60 dias ao lado da cripta (desce quando os três estão inteiros; depois de limpa, uma vez por semana; vende o despojo e as peças): '
-             'por pessoa e por dia de vida, no máximo 1 diária; depois da primeira limpeza, menos de 0,25 diária por dia de trabalho; a prata do mundo fecha',
-             f"{vidas} vidas; a casa tira {estado.num(round(dia, 2))} de prata por pessoa e por dia de vida ({estado.num(round(dia / diaria, 2))} diária); depois da limpeza ({len(dep)} vidas, {sum(C['depois'] for C in dep)} descidas), "
+             'por pessoa e por dia de vida, no máximo 1 diária; depois da primeira limpeza (e do tesouro levado), menos de 0,25 diária por dia de trabalho; a prata do mundo fecha',
+             f"{vidas} vidas; a casa tira {estado.num(round(dia, 2))} de prata por pessoa e por dia de vida ({estado.num(round(dia / diaria, 2))} diária); depois da limpeza e do tesouro levado ({len(dep)} vidas, {sum(C['depois'] for C in dep)} descidas), "
              f"{estado.num(round(depois, 2))} por pessoa e por dia de trabalho ({estado.num(round(depois / diaria, 3))} diária); a prata do mundo fecha e o estado fica inteiro: {sn(fecha)}", ok)]
 
 
@@ -427,7 +449,9 @@ def _ma6(n):
         for quem, k in (('grupo', max(20, n // 2)), ('ladino', max(20, n // 2)), ('sozinho', max(10, n // 5))):
             L = []
             for s in range(1, k + 1):
-                luta.semente(7 * s); C, E = vida(s, quem); L.append(C)
+                luta.semente(7 * s)
+                with dado_semente(11 * s): C, E = vida(s, quem)
+                L.append(C)
             out[quem] = L
     f = lambda q, c: sum(bool(C[c]) for C in out[q]) / len(out[q])
     g = out['grupo']; mortes = [o for C in g if C['maro_morreu'] for o in C['onde'][:1]]
@@ -475,24 +499,29 @@ def _cova(semente=1):
 
 
 def _ma12(n):
-    """MA12. O QUE VAGUEIA E O DESCANSO: a chance por bloco é 1 em 6, mais 10 pontos por ponto de alarme (±2 pontos); dormindo sem vigia, o grupo é surpreendido sempre; com vigia, nunca"""
-    k = max(800, 40 * n // 3); freq = {}; surp_sem = surp_com = vem_sem = vem_com = 0
+    """MA12. O QUE VAGUEIA E O DESCANSO: a chance por bloco é 1 em 6, mais 10 pontos por ponto de alarme (±2 pontos), medida no dado do mundo (masmorra.rola_vaga, o mesmo que o bloco
+    rola); quem chega a quem dorme sem vigia pega o grupo desprevenido sempre; com vigia, nunca (pelo _vaga, que põe o bando na sala); quem vigia não dorme (o descanso de verdade)"""
+    k = max(2000, 20 * n); freq = {}; surp_sem = surp_com = vem_sem = vem_com = 0
     with pasta():
         E = _cova(); compra_tochas(E, 'eu', 4)
         quieto(MS.descer, E, 'eu', 'cripta', com=['tome', 'rute'], luz='tocha')
         d0 = copy.deepcopy(E['gente']['eu']['marca']['masmorra']); m0 = copy.deepcopy(E['lugares']['cripta']); s0 = copy.deepcopy(E['lugares']['cripta_1'])
         for al in range(4):
-            vem = 0
+            E['lugares']['cripta'] = dict(copy.deepcopy(m0), alarme=al, vagantes={'corpo-seco': 99}); vem = 0
             for t in range(k):
-                d = copy.deepcopy(d0); d['blocos'] = 100000 * al + t; E['gente']['eu']['marca']['masmorra'] = d
-                E['lugares']['cripta'] = dict(copy.deepcopy(m0), alarme=al, vagantes={'corpo-seco': 99}); E['lugares']['cripta_1'] = copy.deepcopy(s0)
-                dorme = t % 3 == 0; vig = 'tome' if t % 6 == 0 else None
-                R = quieto(MS._vaga, E, 'eu', [], dorme=dorme, vigia=vig)
-                if R:
-                    vem += 1; s_ = MS.descida(E['gente']['eu'])['encontro']['surpresa']
-                    if dorme and vig: vem_com += 1; surp_com += s_ == 'A'
-                    elif dorme: vem_sem += 1; surp_sem += s_ == 'A'
+                E['gente']['eu']['marca']['masmorra']['blocos'] = 100000 * al + t
+                vem += MS.rola_vaga(E, 'eu') is not None
             freq[al] = vem / k
+        for t in range(400):
+            d = copy.deepcopy(d0); d['blocos'] = 900000 + t; E['gente']['eu']['marca']['masmorra'] = d
+            E['lugares']['cripta'] = dict(copy.deepcopy(m0), alarme=3, vagantes={'corpo-seco': 99}); E['lugares']['cripta_1'] = copy.deepcopy(s0)
+            vig = 'tome' if t % 2 else None
+            R = quieto(MS._vaga, E, 'eu', [], dorme=True, vigia=vig)
+            if R:
+                s_ = MS.descida(E['gente']['eu'])['encontro']['surpresa']
+                if vig: vem_com += 1; surp_com += s_ == 'A'
+                else: vem_sem += 1; surp_sem += s_ == 'A'
+            if vem_com >= 30 and vem_sem >= 30: break
         E['gente']['eu']['marca']['masmorra'] = d0; E['lugares']['cripta'] = m0; E['lugares']['cripta_1'] = s0
         sono0 = {c: E['gente'][c]['corpo']['sono'] for c in ('eu', 'tome', 'rute')}
         estado.aplica(E, 'mestre', [['lugar', 'cripta', 'vagantes', 'poe', {}]], texto='sem vagantes (a prova do descanso)')
@@ -500,8 +529,8 @@ def _ma12(n):
         vigiou = E['gente']['tome']['corpo']['sono'] >= sono0['tome'] and E['gente']['rute']['corpo']['sono'] <= sono0['rute']
     esp = {al: min(1, K.VAGA[0] + K.VAGA[1] * al) for al in range(4)}
     ok = all(abs(freq[al] - esp[al]) <= 0.02 for al in range(4)) and vem_sem and surp_sem == vem_sem and vem_com and surp_com == 0 and vigiou
-    return [('MA12 O QUE VAGUEIA E O DESCANSO: a chance por bloco é 1 em 6, mais 10 pontos por ponto de alarme (±2 pontos); dormindo sem vigia o grupo é surpreendido sempre, com vigia nunca; quem vigia não dorme',
-             ' · '.join(f"alarme {al}: {pct(freq[al])} (a conta: {pct(esp[al])})" for al in range(4)) + f" ({k} blocos cada); sem vigia, surpreendido {surp_sem} de {vem_sem}; com vigia, {surp_com} de {vem_com}; quem vigia ficou acordado: {sn(vigiou)}", ok)]
+    return [('MA12 O QUE VAGUEIA E O DESCANSO: a chance por bloco é 1 em 6, mais 10 pontos por ponto de alarme (±2 pontos), no dado do mundo; dormindo sem vigia o grupo é surpreendido sempre, com vigia nunca; quem vigia não dorme',
+             ' · '.join(f"alarme {al}: {pct(freq[al])} (a conta: {pct(esp[al])})" for al in range(4)) + f" ({k} blocos cada); dormindo sem vigia, surpreendido {surp_sem} de {vem_sem}; com vigia, {surp_com} de {vem_com}; quem vigia ficou acordado: {sn(vigiou)}", ok)]
 
 
 def _ma13(n):

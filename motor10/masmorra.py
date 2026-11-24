@@ -34,6 +34,7 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 masmorra.py atacar [inicio=longe|perto|colado] [passagem] · esperar · recuar      diante de quem apareceu
   python3 masmorra.py luta ["Nome: ordem"] ["grupo: ordem"]     a luta aberta (é o `ato.py luta roda`); acabada, as contas
   python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]         o que a sala guarda (1 lance)
+  python3 masmorra.py punhado [quem=ID]                         do tesouro do dragão que dorme, escondido na câmara dele (1 lance; cada um, um teste contra a vigília)
   python3 masmorra.py descansar N [vigia=ID]                    dorme N blocos no chão, ali (o que vagueia rola a cada bloco)
   python3 masmorra.py ordem ID,ID,... · luz tocha|feitiço|nada [quem=ID]      a ordem de marcha · a luz (sem lance)
   python3 masmorra.py voltar · sair                             volta pelas salas andadas até a entrada (1 lance por sala) · sai e volta para casa
@@ -358,14 +359,22 @@ def _sorteia(pesos, r):
     return sorted(pesos)[-1]
 
 
-def _vaga(E, pid, L, dorme=False, vigia=None):
-    """o mundo rola o que vagueia (oculto: o dado do mundo). Saindo, um bando dos vagantes da masmorra chega ao grupo (sai da conta dela e entra na sala)"""
-    p = E['gente'][pid]; d = descida(p); mid = d['masmorra']; m = E['lugares'][mid]
+def rola_vaga(E, pid):
+    """O DADO DO QUE VAGUEIA (o dado do mundo, oculto), sem mexer em nada: (espécie, quantos) do bando que chega ao grupo neste bloco, ou None"""
+    d = descida(E['gente'][pid]); mid = d['masmorra']; m = E['lugares'][mid]
     vag = {e: int(q) for e, q in _num(m.get('vagantes')).items() if q >= 1 and estado.especie(e)}
     rs = estado.sorte(E, f"masmorra|{pid}|vaga|{d.get('blocos', 0)}|{d.get('lutas', 0)}")
-    x = rs.random()
-    if not vag or x >= chance_vaga(E, mid): return None
-    esp = _sorteia(vag, rs); n = max(1, min(vag[esp], len(bichos.bando(esp, rs))))
+    if not vag or rs.random() >= chance_vaga(E, mid): return None
+    esp = _sorteia(vag, rs)
+    return esp, max(1, min(vag[esp], len(bichos.bando(esp, rs))))
+
+
+def _vaga(E, pid, L, dorme=False, vigia=None):
+    """o mundo rola o que vagueia (rola_vaga). Saindo, o bando chega ao grupo (sai da conta da masmorra e entra na sala): acordados, quem vai na frente testa a atenção;
+    dormindo, sem vigia o grupo é surpreendido, com vigia não"""
+    x = rola_vaga(E, pid)
+    if not x: return None
+    p = E['gente'][pid]; d = descida(p); mid = d['masmorra']; esp, n = x
     sid = d['sala']
     estado.aplica(E, EVENTO, [['lugar', mid, f'vagantes.{esp}', 'soma', -n], ['lugar', sid, f'bichos.{esp}', 'soma', n], ['lugar', sid, 'atento', 'poe', 1]], onde=sid, quem=_grupo(E, pid, d),
                   texto=_txt(f"{_nome(esp, n)} {_s(n, 'chega', 'chegam')} {_em(E, sid)}, vindo do escuro"))
@@ -448,6 +457,8 @@ def le_encontro(E, pid):
                 try: L.append(_dragoes().ameaca(dr['tipo'], dr['idade'], arma=arma, armadura=armadura))
                 except (Exception, SystemExit): pass
     ant = d.get('anterior'); corr = ant in E['lugares'] and E['lugares'][ant].get('largura')
+    D = _dragoes(); dorme = bool(enc.get('dragao') and D and _dragao(E, enc['sala']) and not D.acordado(E, enc['sala']))
+    if enc['viu'] == 'grupo' and dorme: L.append(f"O DRAGÃO DORME. `masmorra.py punhado` ({_lances(K.CUSTO['pegar'])}: um teste de andar escondido contra a vigília dele) pega um punhado do tesouro; falhou, ele acorda.")
     if enc['viu'] == 'grupo':
         inis = ['perto', 'colado'] + (['longe'] if _sala(E, enc['sala']).get('largura') is None else [])
         L.append(f"ESCOLHA: `masmorra.py atacar [inicio={'|'.join(inis)}]" + (' [passagem]' if corr else '') + "` (eles perdem o primeiro turno" + (f"; `passagem`: o grupo espera na boca {_de(E, ant)} ({_largura_diz(E['lugares'][ant])}) e eles vêm um a um" if corr else '') + ")"
@@ -547,7 +558,7 @@ def _arm_onde(E, sid, a):
     return f"na porta ({o[6:]})" if o[6:] in E['lugares'] else 'numa porta'
 
 
-def _dispara(E, pid, sid, i, alvos, L, porque='dispara'):
+def _dispara(E, pid, sid, i, alvos, L, porque=''):
     """a armadilha i da sala dispara: em quem (alvos), o golpe pela conta do aço, o barulho. Um evento só. Devolve se alguém do grupo morreu"""
     from pessoas import ficha
     d = descida(E['gente'][pid]); arms = json.loads(json.dumps(_sala(E, sid).get('armadilhas') or [])); a = arms[i]; A = K.ARMADILHAS[a['tipo']]
@@ -572,7 +583,7 @@ def _dispara(E, pid, sid, i, alvos, L, porque='dispara'):
             except (ImportError, SystemExit): pass
     if a['tipo'] == 'fosso' and pega and not mortos: linhas.append(f"{_pn(E, pega[0])} fica no fundo do fosso: tirá-lo custa {_lances(K.CUSTO['fosso'])}.")
     if A.get('barulho') and d: d2 = json.loads(json.dumps(d)); d2['barulho'] = True; ef.append(['pessoa', pid, 'marca.masmorra', 'poe', d2])
-    txt = f"{_cap(_arm_nome(a))} {_arm_onde(E, sid, a)} {_em(E, sid)} {porque}" + (f" em {_e(_pn(E, q) for q in pega)}" if pega else '') + (f" ({A['diz']})" if A.get('diz') else '')
+    txt = f"{_cap(_arm_nome(a))} {_arm_onde(E, sid, a)} {_em(E, sid)} dispara" + (f" em {_e(_pn(E, q) for q in pega)}" if pega else '') + (f", {porque}" if porque and pega else '') + (f" ({A['diz']})" if A.get('diz') else '')
     estado.aplica(E, EVENTO, ef, onde=sid, quem=pega or [pid], texto=_txt(txt))
     L.append(_txt(f"A ARMADILHA DISPARA: {txt}. " + ' '.join(linhas) + (f" O barulho sobe o alarme." if A.get('barulho') else '')))
     return bool(mortos), (K.CUSTO['fosso'] if a['tipo'] == 'fosso' and pega and not mortos else 0)
@@ -629,7 +640,7 @@ def descer(E, pid, mid=None, com=(), ordem=None, luz=None, quem_luz=None):
     estado.aplica(E, EVENTO, [['pessoa', pid, 'marca.masmorra', 'poe', d]] + [['pessoa', c, 'marca.masmorra', 'poe', dict(de=pid)] for c in com], onde=ent, quem=g, texto=_txt(txt))
     ida = _longe(E, mid); antes = corpo.faixas(E['gente'][pid])
     ato.passa(E, pid, ida, EVENTO, esforco=K.ESFORCO_IDA, para=False, texto=_txt(f"{p['nome']} vai {_a(E, mid, 'a')}"), com=com)
-    L = [_txt(f"{txt}. A ida: {caca._bl(ida)}.")]
+    L = [_txt(f"{txt}. A ida: {caca._bl(ida)}.")] + ([_cap(E['lugares'][ent]['sobre']) + '.'] if E['lugares'][ent].get('sobre') else [])
     if cansados: L.append('ATENÇÃO, quem vai junto não vai inteiro: ' + '; '.join(cansados) + '.')
     caca.merenda(E, com, L)
     if E['gente'][pid]['estado'] == 'vivo' and corpo.cruzou(E['gente'][pid], antes): L.append(f"No caminho: {corpo.cruzou(E['gente'][pid], antes)}.")
@@ -688,7 +699,7 @@ def _depois_do_chao(E, pid, sid, L, escondido=False, porta_fechada=False):
     d = descida(E['gente'][pid])
     for i, a in enumerate(_sala(E, sid).get('armadilhas') or []):
         if a.get('onde', 'chão') == 'chão' and a.get('achada') is None and a.get('feita') is None:
-            morreu, extra = _dispara(E, pid, sid, i, [_frente(E, pid, d)], L, 'dispara no primeiro da fila')
+            morreu, extra = _dispara(E, pid, sid, i, [_frente(E, pid, d)], L, 'o primeiro da fila'); porta_fechada = False
             if E['gente'][pid]['estado'] != 'vivo': return _morreu(E, pid, L)
             if extra: _soma_lances(E, pid, extra)
             d = descida(E['gente'][pid])
@@ -730,7 +741,7 @@ def ir(E, pid, sala, escondido=False):
     if fechada:
         a = _arm_porta(E, sid, sala)
         if a is not None and a[1].get('feita') is None:
-            _dispara(E, pid, sid, a[0], [_frente(E, pid, d2)], L, 'dispara em quem abre a porta')
+            _dispara(E, pid, sid, a[0], [_frente(E, pid, d2)], L, 'quem abre a porta')
             if E['gente'][pid]['estado'] != 'vivo': return _morreu(E, pid, L)
     L.insert(0, _txt(f"O grupo passa {_a_nome(_nm(E, sala))} ({_lances(custo)}{', escondido' if escondido else ''}{'; no escuro, o dobro' if not _ve(E, pid, d) else ''}). {_cap(_sala(E, sala).get('sobre') or '')}".strip()))
     return _entra(E, pid, sala, L, escondido=escondido, porta_fechada=fechada)
@@ -899,7 +910,7 @@ def abrir(E, pid, alvo, como=None, quem=None):
             a = next(((i, x) for i, x in enumerate(_sala(E, sid).get('armadilhas') or []) if x.get('onde') == 'guardado' and x.get('feita') is None), None)
         else:
             x = _arm_porta(E, sid, alvo); a = (x[0], x[1]) if x else None
-        if a: _dispara(E, pid, sid, a[0], [q], L, f"dispara em quem abre")
+        if a: _dispara(E, pid, sid, a[0], [q], L, 'quem abre')
         if E['gente'][pid]['estado'] != 'vivo': return _morreu(E, pid, L)
         if alvo == 'guardado':
             tem = _tesouro(E, sid); L.append(f"Dentro: {tem}." if tem else 'Dentro não há nada.')
@@ -945,7 +956,7 @@ def desarmar(E, pid, n=None, quem=None):
     _marca(E, pid, d, f"{_pn(E, q)} " + (f"desarma {_arm_nome(a)}" if r['passou'] else f"tenta desarmar {_arm_nome(a)}") + f" {_em(E, sid)}", mais=ef)
     if not r['passou']:
         if r.get('falhou_feio'):
-            _dispara(E, pid, sid, i, [q], L, 'dispara na mão de quem a desarmava')
+            _dispara(E, pid, sid, i, [q], L, 'na mão de quem a desarmava')
             if E['gente'][pid]['estado'] != 'vivo': return _morreu(E, pid, L)
         else: L.append(f"{_pn(E, q)} não consegue, e ela segue armada.")
     return _resolve(E, pid, L)
@@ -964,7 +975,7 @@ def contornar(E, pid, n=None):
     if isinstance(d.get('armadilha'), dict): d['armadilha']['contornadas'] = list(dict.fromkeys(list(d['armadilha'].get('contornadas') or []) + [i]))
     _marca(E, pid, d, f"o grupo contorna {_arm_nome(a)} {_em(E, sid)}")
     if caiu:
-        _dispara(E, pid, sid, i, caiu, L, 'pega quem errou o pulo')
+        _dispara(E, pid, sid, i, caiu, L, 'que errou o pulo')
         if E['gente'][pid]['estado'] != 'vivo': return _morreu(E, pid, L)
     L.append(f"O grupo contorna {_arm_nome(a)} ({_lances(K.CUSTO['contornar'])}).")
     return _resolve(E, pid, L)
@@ -1022,6 +1033,8 @@ def _luta_abre(E, pid, ini, surp, onde, L):
     for b in bs:
         esp = (b.get('povo') or {}).get('especie') if isinstance(b.get('povo'), dict) else (b.get('bicho') or {}).get('especie') if isinstance(b.get('bicho'), dict) else None
         B.append(b if esp in TB.ESPECIES else criaturas.no_cenario(b))
+    if not B:                                               # ninguém que a luta saiba montar (o dragão cuja espécie ainda não existe): o encontro se desfaz
+        d.update(fase='anda', encontro=None); _marca(E, pid, d, f"não há com quem lutar {_em(E, sid)}"); return dict(fase='anda', texto='\n'.join(L + ['Não há com quem lutar ali.']))
     A = [dict(id=x, **({'controla': True} if x == pid else {}), **({'linha': 'trás'} if _de_tras(E, x) else {})) for x in _ordem(E, pid, d)]
     lugar = {}; larg = E['lugares'][onde].get('largura')
     if larg: lugar['largura'] = larg
@@ -1048,6 +1061,30 @@ def esperar(E, pid):
     L = [f"O grupo espera, escondido ({_lances(K.CUSTO['esperar'])})."]
     R = _fecha_blocos(E, pid, L)
     return R or dict(fase='encontro', texto='\n'.join(L + le_encontro(E, pid)))
+
+
+def punhado(E, pid, quem=None):
+    """O COVIL DO DRAGÃO QUE DORME: com o grupo escondido na câmara, pegar um punhado (1 lance) é mais um teste de andar escondido do mais barulhento contra a vigília
+    do dragão (dragoes.vigilia, oculto). Passou: o punhado é de quem pega (dragoes.punhado). Falhou: o dragão acorda (dragoes.acorda), e o encontro é o de sempre."""
+    p, d = _minha(E, pid, fases=('encontro',)); enc = d['encontro']; sid = enc['sala']; D = _dragoes(); g = _grupo(E, pid, d); q = quem or pid
+    if q not in g: sys.exit(f'"{q}" não está no grupo')
+    if enc['viu'] != 'grupo' or not _dragao(E, sid) or not D or D.acordado(E, sid): sys.exit('só se pega um punhado do tesouro do dragão que dorme, com o grupo escondido na câmara dele')
+    v = D.vigilia(E, sid)
+    if v is None: sys.exit('o dragão não está dormindo')
+    mh = _manha(); qq, mais = mh.mais_barulhento(E, g, luz=_luz_de(E, pid, d) and not _sala(E, sid).get('acesa'))
+    r = mh.testa(E, qq, 'escondido', contra=v, o_que=f"pegar um punhado {_em(E, sid)} sem acordar o dragão", oculto=True, mais=mais); L = [teste.diz(E, r)]
+    d['lances'] = d.get('lances', 0) + K.CUSTO['pegar']; _treina(d, g)
+    if r['passou']:
+        ef, txt = D.punhado(E, sid, q)
+        _marca(E, pid, d, f"{_pn(E, q)} pega um punhado do tesouro {_em(E, sid)}", mais=list(r.get('efeitos') or []) + list(ef or []))
+        L.append(_txt(txt or f"{_pn(E, q)} pega um punhado, e o dragão segue dormindo."))
+        R = _fecha_blocos(E, pid, L)
+        return R or dict(fase='encontro', texto='\n'.join(L + le_encontro(E, pid)))
+    dr = _dragao(E, sid)
+    _marca(E, pid, d, f"o dragão acorda {_em(E, sid)}", mais=list(r.get('efeitos') or []) + list(D.acorda(E, sid) or []))
+    L.append(_txt(f"{_cap(dr['nome'])} ACORDA."))
+    surp = _atencao(E, pid, descida(E['gente'][pid]), sid, L)
+    return _encontro(E, pid, dict(enc, viu='eles', surpresa=surp, inicio=K.INICIO['notou'], ouviu=False), L)
 
 
 def recuar(E, pid):
@@ -1407,7 +1444,7 @@ def _mapa_diz(E, pid, d):
         l = _sala(E, s); ps = []
         for v in _viz(E, s):
             pt = porta(E, s, v); ps.append((_nm(E, v) if v in vistas else 'uma passagem') + (f" (porta {pt['estado']})" if pt else ''))
-        arms = [f"{_arm_nome(a)} {_arm_onde(E, s, a)}" + (f" ({a['feita']})" if a.get('feita') else '') for i, a in enumerate(l.get('armadilhas') or []) if f"{s}#{i}" in (mp.get('armadilhas') or [])]
+        arms = [f"{_arm_nome(a)} {_arm_onde(E, s, a)}" + (f" (armadilha {a['feita']})" if a.get('feita') else '') for i, a in enumerate(l.get('armadilhas') or []) if f"{s}#{i}" in (mp.get('armadilhas') or [])]
         L.append(f"[{s}] {l['nome']}" + (' (aqui)' if s == d['sala'] else '') + f": {', '.join(ps) or 'sem saída'}" + (f"; armadilha: {', '.join(arms)}" if arms else ''))
     return L
 
@@ -1456,7 +1493,7 @@ def mapa(E, mid):
             if isinstance(ch, dict): x.append(f"o chefe: {_chefe_nome(ch['qual'])}" + ('' if ch.get('vivo', True) else ' (morto)'))
             if dr: x.append(f"o dragão {dr['nome']}")
             if l.get('teto'): x.append('ninho: ' + ', '.join(f"{e} até {q:g}" for e, q in _num(l['teto']).items()))
-            for i, a in enumerate(l.get('armadilhas') or []): x.append(f"{_arm_nome(a)} {_arm_onde(E, s, a)}" + (f" ({a['feita']})" if a.get('feita') else ' (achada)' if a.get('achada') is not None else ' (escondida)'))
+            for i, a in enumerate(l.get('armadilhas') or []): x.append(f"{_arm_nome(a)} {_arm_onde(E, s, a)}" + (f" (armadilha {a['feita']})" if a.get('feita') else ' (armadilha achada)' if a.get('achada') is not None else ' (armadilha escondida)'))
             gd = l.get('guardado')
             if isinstance(gd, dict): x.append(f"{gd['nome']}" + (f", fechadura {T.CATS[gd['fechadura']]}" if gd.get('fechadura') is not None else '') + (' (aberto)' if gd.get('aberto') else ''))
             tes = _tesouro(E, s)
@@ -1523,14 +1560,14 @@ def virada(E):
     dia = E['relogio']['dia']
     for mid, m in list(E['lugares'].items()):
         if not isinstance(m, dict) or m.get('tipo') != 'masmorra': continue
-        ef = []; txt = []
+        ef = []; txt = []; ocupadas = {estado.descida(E, k)['sala'] for k in E['gente'] if estado.descida(E, k)}      # onde há um grupo agora, nada chega nem se ergue
         if m.get('alarme'): ef.append(['lugar', mid, 'alarme', 'poe', 0])
         for s in salas(E, mid):
             ch = E['lugares'][s].get('chefe')
             if not (isinstance(ch, dict) and ch.get('vivo', True) and isinstance(ch.get('ergue'), dict)): continue
             if dia - (ch.get('ergueu') or 0) < K.MEMORIA['ergue']: continue
             for s2, quer in ch['ergue'].items():
-                if s2 not in E['lugares']: continue
+                if s2 not in E['lugares'] or s2 in ocupadas: continue
                 tem = bichos_de(E, s2); e = next((e for e, q in _num(quer).items() if estado.especie(e) and tem.get(e, 0) < q), None)
                 if e: ef += [['lugar', s2, f'bichos.{e}', 'soma', 1], ['lugar', s, 'chefe', 'poe', dict(ch, ergueu=dia)]]; txt.append(f"{_chefe_nome(ch['qual'])} ergue {_nome(e)} {_em(E, s2)}"); break
         niveis = json.loads(json.dumps(m.get('niveis') or [])); mudou = False
@@ -1544,7 +1581,6 @@ def virada(E):
             fora = (K.MOLDES.get(m.get('molde')) or {}).get('fora') or []
             if fora and dia - nv['vazio'] >= K.MEMORIA['vem_de_fora']:
                 rs = estado.sorte(E, f'masmorra|{mid}|fora|{nv["n"]}'); esp = fora[rs.randrange(len(fora))]
-                ocupadas = {estado.descida(E, k)['sala'] for k in E['gente'] if estado.descida(E, k)}
                 cand = [s for s in ss if s not in ocupadas and E['lugares'][s].get('largura') != 1] or [s for s in ss if s not in ocupadas]
                 if cand:
                     s = cand[rs.randrange(len(cand))]; q = len(criaturas.bando(esp, rs))
@@ -1750,11 +1786,12 @@ def main(a=None):
     if not a: print(__doc__); return
     def eh_op(x): k = x.split('=', 1)[0]; return '=' in x and ':' not in k and ' ' not in k
     op = dict(x.split('=', 1) for x in a if eh_op(x)); pos = [x for x in a if not eh_op(x)]
-    cmds = ('ver', 'descer', 'ir', 'escutar', 'procurar', 'abrir', 'desarmar', 'contornar', 'disparar', 'atacar', 'esperar', 'recuar', 'luta', 'pegar', 'descansar', 'ordem', 'luz',
+    cmds = ('ver', 'descer', 'ir', 'escutar', 'procurar', 'abrir', 'desarmar', 'contornar', 'disparar', 'atacar', 'esperar', 'recuar', 'luta', 'pegar', 'punhado', 'descansar', 'ordem', 'luz',
             'voltar', 'sair', 'larga', 'mapa', 'gera')
     if not pos or pos[0] not in cmds: print(__doc__); return
     E = estado.carrega(); pid = op.get('quem') or estado.eu(E)
-    if pid in E['gente'] and vai_com(E['gente'][pid]) and pos[0] not in ('ver',): op.setdefault('por', pid); pid = vai_com(E['gente'][pid])       # quem=ID de quem foi junto: é ele quem faz, na descida de quem comanda
+    if pid in E['gente'] and vai_com(E['gente'][pid]) and pos[0] in ('escutar', 'procurar', 'abrir', 'desarmar', 'pegar', 'punhado', 'luz'):      # quem=ID de quem foi junto: é ele quem faz, na descida de quem comanda
+        op.setdefault('por', pid); pid = vai_com(E['gente'][pid])
     if pos[0] == 'mapa':
         mid = pos[1] if len(pos) > 1 else (descida(E['gente'][pid]) or {}).get('masmorra') or next(iter(masmorras(E, E['gente'][pid]['lugar'])), None)
         if not mid: sys.exit('diga a masmorra: `masmorra.py mapa MASMORRA`')
@@ -1789,6 +1826,7 @@ def main(a=None):
     elif pos[0] == 'recuar': R = recuar(E, pid)
     elif pos[0] == 'luta': R = luta_roda(E, pid, pos[1:])
     elif pos[0] == 'pegar': R = pegar(E, pid, arg or 'tudo', quem=op.get('por'))
+    elif pos[0] == 'punhado': R = punhado(E, pid, quem=op.get('por'))
     elif pos[0] == 'descansar': R = descansar(E, pid, arg, vigia=op.get('vigia'))
     elif pos[0] == 'ordem': R = ordem(E, pid, [c for c in (arg or '').split(',') if c])
     elif pos[0] == 'luz': R = luz(E, pid, arg or 'nada', quem=op.get('por') or op.get('quem_luz'))

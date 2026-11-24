@@ -3,9 +3,10 @@
 Três tipos, pelo lugar onde vivem (o dragão da serra, o verme do brejo, o dragão das grutas), cinco idades (do filhote, grau D, ao ancião, grau S). Tudo roda com os traços
 que a luta já tem, mais a fase `foge` (o dragão que voa, ferido fora do covil, vai embora pelo ar: E3 a).
 O NÚCLEO DO MOTOR LÊ DAQUI: TIPOS e IDADES (o gravador confere o registro `dragao` de um lugar), `chave(tipo, idade)` e ESPECIES (estado.especie, bichos.especie, o atalho
-do cenário {"bicho": CHAVE}). ESPECIES é feita pela frente D (as 15 chaves, cada uma um registro na forma do tabelas_bichos.ESPECIES, mais `fases` e `dragao`).
-Esqueleto do alicerce (onda 1): os números são o rascunho do projeto B (projeto/etapa4b/projeto_b/PROJETO.md, anexo); ESPECIES vazia: nenhum dragão ainda.
+do cenário {"bicho": CHAVE}). ESPECIES são as 15 chaves (3 tipos e 5 idades), cada uma um registro na forma do tabelas_bichos.ESPECIES, mais `fases` e `dragao`.
+Mudar um dragão é mudar esta página e rodar `python3 provas_dragoes.py` (as metas DR1 a DR9 e MI1 a MI6).
 """
+import tabelas_bichos as _TB
 
 # ---------- as idades: cat · tamanho · nível · instinto · (Força, Agilidade, Vigor, Vontade, Percepção, Afinidade) · armas · traços · anos · chefe ----------
 IDADES = {
@@ -40,6 +41,7 @@ TESOURO_MUNDO = 0.25        # todos os covis juntos (meta MI6, não invariante)
 
 # ---------- a vida do dragão (evento "dragão", todo dia) ----------
 VIDA = {    # dorme: dias de sono depois de comer · come: gado de um ataque · prata e mata: (de, até) · tributo: fração da prata da vila por estação
+    'filhote': dict(dorme=(10, 20), come=0, prata=(0, 0), mata=(0, 0), tributo=0),      # o filhote não ataca vila: caça no ermo e volta a dormir
     'jovem':  dict(dorme=(20, 40), come=30, prata=(5, 20), mata=(0, 1), tributo=0),
     'adulto': dict(dorme=(30, 60), come=60, prata=(20, 60), mata=(0, 3), tributo=0.03),
     'velho':  dict(dorme=(90, 180), come=120, prata=(50, 150), mata=(1, 5), tributo=0.05),
@@ -48,5 +50,47 @@ VIDA = {    # dorme: dias de sono depois de comer · come: gado de um ataque · 
 VIGILIA = dict(base=20, leve=2, sobe=2)      # contra 20 + Percepção ÷ 10 + 2, e +2 a cada punhado tirado no mesmo sono (o teste do ladrão: manha.testa 'escondido')
 CONTA = dict(filhote=(0, 2), jovem=(1, 3), adulto=(1, 2), velho=(0, 1), ancião=(0, 1))   # numa região de 16 lugares (para o gerador da etapa 7)
 
-# ---------- as espécies (as 15 chaves de chave(tipo, idade)): a frente D as monta ----------
-ESPECIES = {}
+# ---------- a vila de teste (E4 a): o dragão jovem longe, em Vau Seco, que só se conta (dragoes.na_vila) ----------
+VILA_TESTE = dict(
+    aldeia=dict(id='vau', nome='Vau Seco', em='em Vau Seco', tipo='aldeia', pop=120),       # a aldeia que ele ataca: com mercado (a prata de tabela: 5 por cabeça), longe de Pedra Rasa
+    covil=dict(id='serra_fria', nome='a Serra Fria', em='na Serra Fria', habitat='serra', perigo=3, longe=6),       # o ermo do covil: vizinho de Vau Seco, não de Pedra Rasa
+    dragao=dict(nome='o Tição', tipo='serra', idade='jovem', anos=60, tesouro=300, dorme=20, ult_ataque=6),      # dorme mais 20 dias; o último ataque foi há 6 dias
+    pecas=[('arma', 'espada', 2, 'a Lâmina de Vau Seco', 'a espada do último que enfrentou o Tição: ficou no covil com o dono'),
+           ('escudo', None, 1, 'o escudo do caçador de Vau Seco', 'o escudo de um caçador de Vau Seco que subiu a serra e não voltou')],
+)
+
+# ---------- o covil, a fuga, o roubo e o boato ----------
+SARA_MIN = 1                # o dragão que fugiu ferido volta ao covil e dorme os dias de sarar (de SARA_DORMINDO em SARA_DORMINDO do PV), pelo menos isto
+PUNHADO = 6                 # o punhado do ladrão: a sexta parte da prata que havia no covil quando o dragão adormeceu (sem prata, uma peça guardada)
+BOATO = 60                  # a pousada conta o último ataque por tantos dias; depois, só que o dragão mora lá
+FERIU_MAX = 6               # o dragão lembra de quem o feriu (E3 a): os últimos tantos nomes
+
+# ---------- as espécies (as 15 chaves de chave(tipo, idade)) ----------
+# o nome que vai à mesa: "o filhote de dragão da serra", "o verme jovem do brejo", "o dragão ancião das grutas" (o artigo é "o" em todos)
+NOME = {'serra': ('dragão', 'da serra'), 'brejo': ('verme', 'do brejo'), 'grutas': ('dragão', 'das grutas')}
+SABE = {
+    'serra':  'voa e sopra fogo; ferido, no covil desce ao chão em fúria (quem o golpeia de perto se queima), e fora dele foge pelo ar e volta ao covil para sarar',
+    'brejo':  'não tem asas; o golpe envenena; luta melhor na água; ferido, enrosca na lama e prende quem está colado',
+    'grutas': 'não tem asas; o escuro não lhe tira nada; prende quem está colado; ferido, bebe o sangue de quem prende',
+}
+SABE_FILHOTE = 'um filhote ainda: testa a coragem como qualquer bicho, e foge ferido'
+SABE_CHEFE = 'o dragão grande não foge pelo susto: só ferido, e só o que voa, fora do covil'
+CORAGEM = 0                 # o dragão não soma nada na coragem (o filhote testa como bicho; do jovem para cima a moral é firme)
+
+
+def _especie(tipo, idade):
+    i = IDADES[idade]; t = TIPOS[tipo]; n, de = NOME[tipo]
+    nome = f'filhote de {n} {de}' if idade == 'filhote' else f'{n} {idade} {de}'
+    tr = list(dict.fromkeys(i['tracos'] + t['mais']))
+    desp = dict(DESPOJO[idade])
+    if t.get('peconha'): desp.update(PECONHA['filhote' if idade == 'filhote' else 'outros'])
+    sabe = f"{SABE[tipo]}; " + (SABE_FILHOTE if not i['chefe'] else SABE_CHEFE)
+    e = _TB._esp(nome, 'o', i['cat'], _TB.GRAU_DA_CAT[i['cat']][0], i['nivel'], i['instinto'], i['at'], i['armas'], 'escama', i['tamanho'], tr, CORAGEM, (1, 1),
+                 desp, t['habitat'], sabe, chefe=i['chefe'])
+    e['nucleo'] = i['cat'] >= NUCLEO_DESDE                  # o coração do dragão: só do adulto (Épico) para cima
+    e['fases'] = [dict(t['fase'], foge_diz='foge pelo ar, ferido') if t['fase'].get('foge') else dict(t['fase'])] if i['chefe'] else []
+    e['dragao'] = dict(tipo=tipo, idade=idade)
+    return e
+
+
+ESPECIES = {chave(t, i): _especie(t, i) for t in TIPOS for i in IDADES}

@@ -119,6 +119,8 @@ Enquanto a saída de caça está aberta, o personagem está no ermo: comer na ta
 Só sai da luta quem recua para longe de inimigo de pé: se o último bicho cai enquanto alguém recuava, a luta acabou, e ele ficou com o campo como os outros (e leva a parte dele).
 **O que era de um morto não muda de mão sozinho.** Quem passa num rastro na mata acha o corpo e lê o que ficou com ele (as peças, a carga, a prata). Quem fica com o quê é decisão de cena: o Mestre registra com `itens.py dono ITEM PESSOA` e `estado.py mestre`.
 
+**Como o Mestre conta a luta (decisão do jogador, F1 b).** Na luta grande (a masmorra, a toca, o chefe, o dragão), à moda da mesa: o Mestre roda a luta de parada em parada, narra cada rodada com os dados dela e, a cada parada, pergunta ao jogador o que o personagem faz, com opções. Na caçada de rotina, rápido: a ordem do começo vale até o fim, e a mesa mostra só o desfecho. O jogador pode pedir o jeito da mesa em qualquer luta.
+
 ## Quem vai junto: como o Mestre cuida de um companheiro
 
 - **O corpo dele anda com o seu.** Quem vai junto passa os mesmos blocos da saída, com o mesmo esforço: tem fome, sono e cansaço, e a pena do corpo entra na luta dele.
