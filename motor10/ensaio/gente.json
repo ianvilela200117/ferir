@@ -384,25 +384,25 @@
    "espada": 2
   },
   "treino": {
-   "espada": 41,
+   "espada": 42,
    "caça": 4
   },
-  "moedas": 11,
+  "moedas": 7,
   "corpo": {
    "fome": 3,
    "sono": 0,
-   "cansaco": 2
+   "cansaco": 3
   },
-  "pv": 122,
+  "pv": 136,
   "feridas": [],
   "estado": "vivo",
   "marca": {
-   "pesados_dia": 1,
+   "pesados_dia": 6,
    "pesados": 3,
-   "jornada_dia": 1,
+   "jornada_dia": 6,
    "jornada": 2,
    "cama": {
-    "ate": 35,
+    "ate": 41,
     "onde": "vila"
    },
    "caca": null,
@@ -414,14 +414,11 @@
    },
    "ermo_dia": 5,
    "luta_dia": 5,
-   "curou_dia": 6,
+   "curou_dia": 7,
    "curou": 1
   },
   "carga": {
-   "comida": 6,
-   "couro:0": 2,
-   "osso:0": 3,
-   "metal:0": 1
+   "comida": 5
   },
   "jogador": true,
   "sobre": "vive das armas, com a mão de Iniciante na espada",
@@ -504,10 +501,10 @@
    "maça": 2
   },
   "treino": {
-   "fé": 501,
+   "fé": 502,
    "maça": 40
   },
-  "moedas": 50,
+  "moedas": 60,
   "corpo": {
    "fome": 1,
    "sono": 1,
@@ -521,7 +518,8 @@
     "peso": 40,
     "fé": 500
    },
-   "cena": 21
+   "cena": 31,
+   "prece_dia": 6
   },
   "carga": {},
   "talento": {

@@ -1,31 +1,30 @@
 {
- "n": 7,
+ "n": 8,
  "aberto": {
-  "dia": 6,
+  "dia": 7,
   "bloco": 1
  },
- "evento0": 136,
+ "evento0": 151,
  "dados": [],
  "lutas": [],
  "perguntas": [
   {
    "n": 1,
-   "texto": "Na Cova Velha, Maro achou no chão, junto dos mortos, a Espada do Guardião (Incomum, 20/20). O que ele faz com ela?",
+   "texto": "Lúcia leu: a Espada do Guardião é MALDITA (a Mão Fria, Incomum, míngua). Quem a puser em uso pega a maldição e a mão não a larga mais; a cada dia ela pode piorar um passo e, se ninguém a quebrar, mata (nunca antes de 5 dias). Quebra devolvendo a espada à Cova Velha, ou com o rito de Lúcia (60 de prata). Você tinha dito para pôr em uso. Ainda põe?",
    "opcoes": {
-    "a": "põe em uso no lugar da espada dele (Incomum: vale três vezes a Comum)",
-    "b": "guarda, e paga 10 de prata a Lúcia para ler a peça",
-    "c": "tenta vender na loja",
-    "d": "guarda por ora"
+    "a": "põe em uso mesmo assim (Incomum: vale três vezes a dele) e a devolve à cova quando quiser quebrar",
+    "b": "devolve a espada à Cova Velha agora (1 bloco de ida e 1 de volta)",
+    "c": "guarda e decide depois"
    }
   },
   {
    "n": 2,
-   "texto": "E no Dia 6 (Maro com PV 122/141 e 11 de prata)?",
+   "texto": "E o Dia 7 (Maro com PV 136/141 e 7 de prata)?",
    "opcoes": {
-    "a": "a rotina: vende o despojo (uns 4 de prata), jornada (4) e treino de espada",
-    "b": "descansa o dia para curar",
-    "c": "caça goblins na Mata do Corvo, com Tomé e Rute",
-    "d": "javali, com a Rute"
+    "a": "a rotina: jornada (4) e treino de espada",
+    "b": "caça goblins na Mata do Corvo, com Tomé e Rute",
+    "c": "javali, com a Rute",
+    "d": "corça, sozinho"
    }
   }
  ],

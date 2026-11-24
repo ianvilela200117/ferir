@@ -1,34 +1,24 @@
-# RETOMAR · depois do turno 6
+# RETOMAR · depois do turno 7
 
-**Agora:** Dia 6, alvorada (4h) · primavera · Maro em Pedra Rasa · PV 122/141 · sem fome (fome 3) · sem sono (sono 0) · com forças (cansaço 2) · 11 de prata
+**Agora:** Dia 7, alvorada (4h) · primavera · Maro em Pedra Rasa · PV 136/141 · sem fome (fome 3) · sem sono (sono 0) · com forças (cansaço 3) · fôlego máximo −1 · 7 de prata
 
-**O que houve no turno 6:** Dias 4 a 6: Lúcia leu Maro (nenhum dom; 10 de prata). No Dia 5, Maro foi à Cova Velha com Tomé e Rute: achou no chão a Espada do Guardião, desfez 3 esqueletos e 2 corpos-secos (Rute desfez quatro com o arco; Tomé, um com a lança) e voltou com PV 108/141. Dormiu; Dia 6, 4h.
+**O que houve no turno 7:** Dia 6: Lúcia leu a Espada do Guardião (10 de prata): é maldita. O jogador também tinha dito para pô-la em uso (1a); com o que a leitura mostrou, a pergunta volta a ele antes. Maro vendeu o despojo (4), trabalhou a jornada (4), treinou espada e dormiu. Dia 7, 4h.
 
-**Respondido:** A magia chegou a Pedra Rasa (Anselmo, Lúcia, Joana, a botica e o santuário). O que Maro faz no resto do Dia 4 (12h)? → paga 10 de prata a Lúcia para ler se ele tem algum dom (1 bloco) · E no Dia 5? → a Cova Velha, com Tomé e Rute (esqueletos em bando de 2 a 4: sozinho é morte; a espada vale a metade no osso)
+**Respondido:** Na Cova Velha, Maro achou no chão, junto dos mortos, a Espada do Guardião (Incomum, 20/20). O que ele faz com ela? → guarda, e paga 10 de prata a Lúcia para ler a peça · E no Dia 6 (Maro com PV 122/141 e 11 de prata)? → a rotina: vende o despojo (uns 4 de prata), jornada (4) e treino de espada
 
 **Os fatos do turno** (do registro de eventos):
-- Dia 4, tarde: Lúcia faz o rito de ler (por 10 de prata)
-- Dia 4, a rotina: Maro dorme (na cama) · Maro descansa
-- Dia 5, a rotina: Maro descansa · Maro come da própria carga · Maro paga a cama · Maro dorme (na cama)
-- Dia 5, alvorada: Maro sai para caçar o que aparecer na Cova Velha, com Tomé e Rute
-- Dia 5, alvorada: Maro vai ao ermo (a Cova Velha)
-- Dia 5, manhã: Maro procura rastro na Cova Velha
-- Dia 5, tarde: Maro acha a Espada do Guardião no chão, na Cova Velha
-- Dia 5, tarde: aparecem 3 esqueletos na Cova Velha
-- Dia 5, tarde: Maro luta com 3 esqueletos na Cova Velha (começa longe, estreito, os bichos surpreendidos)
-- Dia 5, tarde: luta: a casa fica com o campo, em 5 rodadas · morreram: esqueleto 1, esqueleto 2, esqueleto 3
-- Dia 5, tarde: Maro, Tomé e Rute ficam com o campo na Cova Velha: 3 esqueletos a menos; repartem 3 de osso Comum, 3 de metal Comum
-- Dia 5, tarde: Maro procura rastro na Cova Velha
-- Dia 5, entardecer: aparecem 2 corpos-secos na Cova Velha
-- Dia 5, entardecer: Maro luta com 2 corpos-secos na Cova Velha (começa longe, os bichos surpreendidos)
-- Dia 5, entardecer: luta: a casa fica com o campo, em 2 rodadas · morreram: corpo-seco 1, corpo-seco 2
-- Dia 5, entardecer: Maro, Tomé e Rute ficam com o campo na Cova Velha: 2 corpos-seco a menos; repartem 2 de osso Comum
-- Dia 5, entardecer: Maro volta do ermo
-- Dia 6, a rotina: Maro dorme (na cama)
+- Dia 6, alvorada: Lúcia faz o rito de ler (por 10 de prata)
+- Dia 6, a rotina: Maro come da própria carga · Maro paga a cama · Maro dorme (na cama)
+- Dia 6, manhã: Maro vende 2 de couro Comum por 2 de prata em Pedra Rasa
+- Dia 6, manhã: Maro vende 3 de osso Comum por 1 de prata em Pedra Rasa
+- Dia 6, manhã: Maro vende 1 de metal Comum por 1 de prata em Pedra Rasa
+- Dia 6, manhã a tarde: Maro trabalha (diarista) (× 2)
+- Dia 6, entardecer: Maro treina com espada
+- Dia 7, a rotina: Maro dorme (na cama)
 
 ## PERGUNTAS ABERTAS
-1. Na Cova Velha, Maro achou no chão, junto dos mortos, a Espada do Guardião (Incomum, 20/20). O que ele faz com ela?  **a)** põe em uso no lugar da espada dele (Incomum: vale três vezes a Comum) · **b)** guarda, e paga 10 de prata a Lúcia para ler a peça · **c)** tenta vender na loja · **d)** guarda por ora
-2. E no Dia 6 (Maro com PV 122/141 e 11 de prata)?  **a)** a rotina: vende o despojo (uns 4 de prata), jornada (4) e treino de espada · **b)** descansa o dia para curar · **c)** caça goblins na Mata do Corvo, com Tomé e Rute · **d)** javali, com a Rute
+1. Lúcia leu: a Espada do Guardião é MALDITA (a Mão Fria, Incomum, míngua). Quem a puser em uso pega a maldição e a mão não a larga mais; a cada dia ela pode piorar um passo e, se ninguém a quebrar, mata (nunca antes de 5 dias). Quebra devolvendo a espada à Cova Velha, ou com o rito de Lúcia (60 de prata). Você tinha dito para pôr em uso. Ainda põe?  **a)** põe em uso mesmo assim (Incomum: vale três vezes a dele) e a devolve à cova quando quiser quebrar · **b)** devolve a espada à Cova Velha agora (1 bloco de ida e 1 de volta) · **c)** guarda e decide depois
+2. E o Dia 7 (Maro com PV 136/141 e 7 de prata)?  **a)** a rotina: jornada (4) e treino de espada · **b)** caça goblins na Mata do Corvo, com Tomé e Rute · **c)** javali, com a Rute · **d)** corça, sozinho
 
 ## SÓ O MESTRE
 - nada oculto neste turno.

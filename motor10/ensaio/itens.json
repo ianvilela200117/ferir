@@ -801,7 +801,8 @@
      "tipo": "devolver",
      "item": "i0044",
      "onde": "cova"
-    }
+    },
+    "lida": true
    }
   }
  },
