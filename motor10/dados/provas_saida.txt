@@ -51,7 +51,7 @@ OS MÓDULOS (cada coisa que interfere, interfere para o lado certo)
   passa  4 REQUISITO: a gente gerada de nível baixo não tem Força para a placa nem para a arma pesada: nível 20: Força 76 (a placa pede 80)
   passa  4 FÔLEGO: quem começa o turno sem fôlego faz uma ação só: 1 golpe(s) no turno
   passa  SOB MEDIDA: a mesma peça na mão do dono e na mão de outro: acerto +28 e × 303.75 contra +19 e × 101.25
-  passa  SINTONIA: quatro peças despertas em quem só sustenta uma: dormem: escudo Épico, armadura de malha Épico, elmo de malha Épico
+  passa  SINTONIA: quatro peças despertas em quem só sustenta uma: dormem: escudo Épico, armadura de malha Épica, elmo de malha Épico
   passa  SINTONIA NA LUTA: o conjunto Épico contra três de nível 100 de Raro, com Vontade para as quatro peças e sem: 62% contra 20%
   passa  6 PARTE DO CORPO: o mesmo guerreiro sem o elmo, contra o de elmo: 32%
   passa  7 DURABILIDADE: o mestre de nível 300 com espada Comum quebra a espada na armadura Única: em 98% das lutas
@@ -62,6 +62,8 @@ OS MÓDULOS (cada coisa que interfere, interfere para o lado certo)
   passa  9 O CONTORNO: sete contra uma linha de um: os que sobram passam e chegam em quem está atrás: em 100% das lutas, em três rodadas
   passa  10 PARA E PERGUNTA: a luta para antes da 1ª rodada, e a ordem de recuar é cumprida: parada; o rei foi da casa 0 para a -2
   passa  10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam: em 95% das lutas houve parada com turnos por vir
+  passa  10 A ORDEM DE FÔLEGO ACABA quando o fôlego enche: a luta para e pergunta, e ninguém segue tomando fôlego de fôlego cheio enquanto o inimigo chega: 60 lutas com a ordem dada de fôlego cheio e o inimigo longe: 0 ações gastas tomando fôlego à toa; a luta parou e avisou em 60
+  passa  O REGISTRO NA ORDEM: quem avança para dentro de uma arma mais longa aparece dando o passo ANTES do golpe que o pega; ninguém avança, no registro, depois de cair ou de morrer: 120 lutas de um lanceiro contra dois de adaga: 95 golpes de "o alcance bate primeiro"; em 0 a linha do passo veio depois do golpe
   passa  A RETIRADA: com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta: em 100% das lutas
   passa  O CENÁRIO É CONFERIDO antes de qualquer dado (nome repetido, tempo que não existe): recusou
 
@@ -91,6 +93,6 @@ OS BICHOS (as oito metas da etapa 2, de B1 a B8, e o que o corpo do bicho tem de
   passa  B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé): com o lobo morto, fraquejou em 0 de 200 sustos; com o lobo de pé, em 60 (e a um bicho não se rendeu: certo)
   passa  B+ QUEM NÃO ANDA NÃO FOGE: o bicho que vai ao chão ou fica com a perna presa não sai da luta (nem o que levou, de costas, o golpe que o derrubou); com a perna presa, luta como encurralado: 600 lutas do caçador de começo contra duas corças surpreendidas: 720 corças fugiram, 0 delas no chão ou com a perna presa; o golpe pelas costas segurou 26; ficaram encurraladas 86
   passa  B+ AS ESPÉCIES: de 12 a 16, do Comum ao Lendário, com o grau de F a S casado com a categoria; há bicho de bando, bicho sozinho e chefe (um núcleo para cada categoria, do Épico ao Lendário); os traços são uma lista fechada de 8 a 12, todos em uso; cada espécie tem a ficha inteira, e o despojo fala a língua comum dos bens (matéria da categoria dela, até o Raro): 14 espécies, 14 com a ficha inteira; categorias: Comum, Incomum, Raro, Épico, Único, Lendário; graus: F, E, D, C, B, A, S; 5 de bando, 6 que andam sós, 3 chefes (Épico, Único, Lendário); 10 traços, 10 em uso
-  passa  B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes: a luta acabou (A, 8 rodadas); o Aldric: vivo, PV 76, 0 ferida(s); eventos de luta: 1; gente e Livro: os mesmos; estado inteiro; MESA: 11 espécies de dois lugares, cada uma dita uma vez, em 910 bytes
+  passa  B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes: a luta acabou (A, 3 rodadas); o Aldric: vivo, PV 47, 1 ferida(s); eventos de luta: 1; gente e Livro: os mesmos; estado inteiro; MESA: 11 espécies de dois lugares, cada uma dita uma vez, em 910 bytes
 
-77 de 77 metas passam.
+79 de 79 metas passam.

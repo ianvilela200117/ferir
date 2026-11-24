@@ -773,11 +773,11 @@ def situacao(S):
         L.append(nome + ':')
         for f in S['L']:
             if f['lado'] != lado: continue
-            oa = _oa(f); est = dict(pe='de pé', caido='CAIU', morto='MORREU', fugiu='fugiu', rendido='rendeu-se', saiu='saiu')[f['estado']]
+            oa = _oa(f); est = dict(pe='no chão' if f['chao'] else 'de pé', caido='CAIU', morto='MORREU', fugiu='fugiu', rendido='rendeu-se', saiu='saiu')[f['estado']]
             fer = ', '.join(_parte(f, p) + (' (grave)' if g else '') for p, g in f['feridas'])
             L.append(f"  {f['nome']:<22} {est:<8} PV {max(f['pv'], 0):>4}/{f['pvmax']:<4} fôlego {max(f['fol'], 0):>2}/{f['folmax']:<2} casa {f['x']:>3}"
                      + (f" · feridas: {fer}" if fer else '') + (f" · sangrando ({f['sangra'][0]} por rodada)" if f['sangra'] and f['estado'] == 'pe' else '')
-                     + (' · fraquejou' if f['abalado'] else '') + (' · no chão' if f['chao'] else '') + (' · sem a arma' if f['sem_arma'] else '')
+                     + (' · fraquejou' if f['abalado'] else '') + (' · no chão' if f['chao'] and f['estado'] != 'pe' else '') + (' · sem a arma' if f['sem_arma'] else '')
                      + (f" · com veneno ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · {f['agarrado']} não solta" if f['estado'] == 'pe' and _agarrado(S, f) else '')
                      + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralad' + oa.lower() if f.get('encurralado') else '') if f.get('bicho') else ''))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))

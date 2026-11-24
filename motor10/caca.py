@@ -622,7 +622,7 @@ def sangue(E, pid):
         s = dict(s, sangue=None); _marca(E, pid, s, f"{p['nome']} segue o sangue")
         return _encontro(E, pid, dict(especie=esp, n=len(fer), viu='caçador', margem=int(r['total'] - contra), escuro=sg['escuro'], feridos=fer, perseguiu=sg['vezes'] + 1), L)
     s = dict(s, sangue=None); _marca(E, pid, s, f"{p['nome']} perde o rastro de sangue")
-    L.append(f"O sangue some no mato: {_nome(esp, len(sg['feridos']))} escapou. {_resta(s['restam'])}")
+    L.append(f"O sangue some no mato: {_nome(esp, len(sg['feridos']))} {_s(len(sg['feridos']), 'escapou', 'escaparam')}. {_resta(s['restam'])}")
     return dict(fase='procura', texto='\n'.join(L))
 
 
@@ -847,7 +847,8 @@ def main(a=None):
     else: R = volta(E, pid)
     estado.grava(E); p = E['gente'][pid]                    # grava ANTES de falar: a saída cortada não perde o que o dado rolou
     print(TB.contrai(R['texto']))
-    print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
+    if p['estado'] != 'vivo': print(f"{estado.quando(E)} · {p['nome']} morreu")
+    else: print(f"{estado.quando(E)} · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata")
 
 
 if __name__ == '__main__':
