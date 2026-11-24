@@ -326,7 +326,21 @@ def _ticao(n):
         E = estado.carrega(); A = copy.deepcopy({k: E[k] for k in ('lugares', 'gente', 'itens')}); vila = 'vila' if 'vila' in E['lugares'] else next(k for k, l in E['lugares'].items() if l.get('tipo') == 'vila')
         import mercado
         m0 = mercado.prata_do_mundo(E); n0 = len(E['_novos']); mesa0 = turno.mesa(E)
-        L = dragoes.na_vila(E, vila); C = TD.VILA_TESTE; cov = C['covil']['id']; vau = C['aldeia']['id']; dr = dragoes.de(E, cov)
+        C = TD.VILA_TESTE; cov = C['covil']['id']; vau = C['aldeia']['id']
+        if dragoes.de(E, cov):          # o save já tem o Tição (o `vila_teste.py fantasia` rodou nele): confere o que ficou, a recusa da segunda vez e o ano dele
+            dr = dragoes.de(E, cov); a0 = int(dr.get('ataques') or 0); dois = PM.recusa(lambda: dragoes.na_vila(E, vila))
+            nada = all(E[k] == A[k] for k in ('lugares', 'gente', 'itens'))
+            longe = cov not in (E['lugares'][vila].get('vizinhos') or []) and vau not in (E['lugares'][vila].get('vizinhos') or [])
+            ok1 = dr['nome'] == C['dragao']['nome'] and dr['idade'] == 'jovem' and longe and bool(dois) and nada and not estado.valida(E)
+            dias = max(0, int(dr.get('dorme_ate') or 0) - E['relogio']['dia']) + 3
+            quieto(_ano, E, dias); d2 = dragoes.de(E, cov); P = estado.valida(E)
+            ok2 = bool(d2) and int(d2.get('ataques') or 0) > a0 and not P and mercado.prata_do_mundo(E) == m0
+            return [('O TIÇÃO NA VILA DE TESTE (E4 a), no save do jogador que já o tem (o fantasia rodou nele; numa cópia): ele está longe, jovem, com o nome da página; '
+                     'a segunda vez recusa sem mudar nada; quando ele acorda, ataca Vau Seco, e a prata do mundo não muda',
+                     f"{dr['nome']}, {dr['idade']}; longe: {sn(longe)}; duas vezes: {'recusa' if dois else 'NÃO RECUSA'}, nada mudou: {sn(nada)}; "
+                     f"{dias} dias depois: {int(d2.get('ataques') or 0) - a0 if d2 else 0} ataque(s) novo(s), estado {'inteiro' if not P else 'QUEBRADO: ' + P[0]}, a prata do mundo igual: {sn(mercado.prata_do_mundo(E) == m0)}",
+                     bool(ok1 and ok2))]
+        L = dragoes.na_vila(E, vila); dr = dragoes.de(E, cov)
         igual = all(E['lugares'][k] == v for k, v in A['lugares'].items()) and E['gente'] == A['gente'] and all(E['itens']['itens'].get(k) == v for k, v in A['itens']['itens'].items())
         novos = E['_novos'][n0:]; segredo = [turno.secreto(e) for e in novos]
         txt = turno.mesa(E); linha = next((x for x in dragoes.mesa(E) if x.startswith('- ')), '')

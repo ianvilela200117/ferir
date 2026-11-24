@@ -373,6 +373,13 @@ def _modulos(n):
 
 
 # ---------------------------------------------------------------- O SAVE DO JOGADOR ----------------------------------------------------------------
+def _recusa_rolar(E, k):
+    """rolar de novo o caminho que a pessoa já tem recusa (sys.exit), sem efeito nenhum"""
+    try: talento.rola_caminho(E, k, 'manha')
+    except SystemExit: return True
+    return False
+
+
 def _save(n):
     src = os.path.join(AQUI, 'ensaio')
     if not os.path.exists(os.path.join(src, 'relogio.json')): return [('B10 O SAVE DO JOGADOR', 'não há save em ensaio/ para conferir', True)]
@@ -381,16 +388,21 @@ def _save(n):
         shutil.copytree(src, os.path.join(d, 'save')); os.environ['MOTOR10_MUNDO'] = os.path.join(d, 'save')
         E = estado.carrega(); P0 = estado.valida(E); txt = turno.mesa(E); pid = estado.eu(E); dl = estado.lutador(E, pid)
         rolados = [k for k, p in E['gente'].items() if p.get('estado') == 'vivo' and talento.rolado(p)]
-        falta_m = all(talento.falta(E['gente'][k]) == ['manha'] for k in rolados)
+        ja = bool(rolados) and all(talento.falta(E['gente'][k]) == [] for k in rolados)      # o save já tem a etapa (o `vila_teste.py fantasia` rodou nele)
+        falta_m = ja or all(talento.falta(E['gente'][k]) == ['manha'] for k in rolados)
         antes_tal = {k: (dict(E['gente'][k]['talento']), dict(E['gente'][k].get('dom') or {})) for k in rolados}
         ef = []
-        for k in rolados: ef += talento.rola_caminho(E, k, 'manha', inclinacao2='manha' if k == pid and E['gente'][k].get('inclinacao') != 'manha' else None)
-        if ef: gera(E, ef, 'a manha de quem já nasceu')
-        igual = all({c: g for c, g in E['gente'][k]['talento'].items() if c != 'manha'} == antes_tal[k][0] and (E['gente'][k].get('dom') or {}) == antes_tal[k][1] for k in rolados)
+        if ja:                          # a manha já rolada: rolar de novo recusa, para cada um, sem mudar nada
+            igual = all(_recusa_rolar(E, k) for k in rolados) and all((dict(E['gente'][k]['talento']), dict(E['gente'][k].get('dom') or {})) == antes_tal[k] for k in rolados)
+        else:
+            for k in rolados: ef += talento.rola_caminho(E, k, 'manha', inclinacao2='manha' if k == pid and E['gente'][k].get('inclinacao') != 'manha' else None)
+            if ef: gera(E, ef, 'a manha de quem já nasceu')
+            igual = all({c: g for c, g in E['gente'][k]['talento'].items() if c != 'manha'} == antes_tal[k][0] and (E['gente'][k].get('dom') or {}) == antes_tal[k][1] for k in rolados)
         quieto(PM.dia_de_rotina, E); P1 = estado.valida(E)
         return [('B10 O SAVE DO JOGADOR ABRE (o ensaio/, numa cópia: nada é escrito nele): o estado inteiro, a MESA sai, o Maro vai à luta sem traço; a manha de quem já nasceu rola num evento só, sem mexer nos 16 caminhos nem no dom; e joga um dia',
-                 f"{len(E['gente'])} pessoas; estado {'inteiro' if not P0 else 'QUEBRADO: ' + P0[0]}; MESA de {len(txt)} letras; sem traço: {sn('tracos' not in dl)}; {len(rolados)} já rolados, faltava a manha a todos: {sn(falta_m)}; "
-                 f"o resto igual: {sn(igual)}; a segunda inclinação do personagem: {E['gente'][pid].get('inclinacao2')}; depois de um dia: {'inteiro' if not P1 else 'QUEBRADO: ' + P1[0]}",
+                 f"{len(E['gente'])} pessoas; estado {'inteiro' if not P0 else 'QUEBRADO: ' + P0[0]}; MESA de {len(txt)} letras; sem traço: {sn('tracos' not in dl)}; {len(rolados)} já rolados, "
+                 + (f"o save já tem a manha de todos (o fantasia rodou nele), e rolar de novo recusa: {sn(igual)}; " if ja else f"faltava a manha a todos: {sn(falta_m)}; ")
+                 + f"o resto igual: {sn(igual)}; a segunda inclinação do personagem: {E['gente'][pid].get('inclinacao2')}; depois de um dia: {'inteiro' if not P1 else 'QUEBRADO: ' + P1[0]}",
                  not P0 and len(txt) > 200 and 'tracos' not in dl and falta_m and igual and not P1)]
     finally:
         os.environ.pop('MOTOR10_MUNDO', None)

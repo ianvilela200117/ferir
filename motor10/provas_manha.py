@@ -319,6 +319,17 @@ def _quim_em(E):
     return R, L
 
 
+def _quim_ja(E):
+    """o save que já tem a etapa (o `vila_teste.py fantasia` rodou nele): o Quim está, a loja tem a descida, e a segunda vez recusa sem mudar nada"""
+    R = {}; q = E['gente'].get('quim') or {}; l = E['lugares']['vila']
+    R['o Quim já está no save (o fantasia rodou nele), com os 17 caminhos rolados'] = bool(q) and talento.rolado(q) and talento.falta(q) == []
+    R['a loja já tem a descida (a tocha e a gazua)'] = bool(l.get('feira_masmorra')) and 'tocha' in l['estoque']
+    a1 = retrato(E); rz = recusa(lambda: manha.na_vila(E))
+    R['a segunda vez recusa, antes de mudar qualquer coisa'] = bool(rz) and retrato(E) == a1
+    R['o estado segue inteiro'] = not estado.valida(E)
+    return R
+
+
 def _na_vila(n):
     import vila_teste
     E = vila_teste.cria('guerreiro', semente=4, talentos=True); R, L = _quim_em(E)
@@ -327,7 +338,7 @@ def _na_vila(n):
         d = tempfile.mkdtemp(prefix='m10_manha_save_'); antes = os.environ.get('MOTOR10_MUNDO')
         try:
             shutil.copytree(src, os.path.join(d, 'save')); os.environ['MOTOR10_MUNDO'] = os.path.join(d, 'save')
-            E2 = estado.carrega(); R2, _ = _quim_em(E2)
+            E2 = estado.carrega(); R2 = _quim_ja(E2) if 'quim' in E2['gente'] else _quim_em(E2)[0]
         finally:
             os.environ.pop('MOTOR10_MUNDO', None)
             if antes is not None: os.environ['MOTOR10_MUNDO'] = antes
