@@ -118,7 +118,7 @@ def _e(xs):
 
 
 def _prata(E, lid):
-    v = (E['lugares'][lid].get('estoque') or {}).get('prata', 0)
+    v = estado.livre(E, lid).get('prata', 0)                # a prata do lugar, sem a que ficou junto do corpo de quem morreu na sala (estado.junto: não é tesouro)
     return int(v) if _num(v) else 0
 
 
@@ -211,7 +211,7 @@ def depois_da_luta(E, lid, S, campo, quem):
         ef.append(['lugar', lid, 'dragao', 'poe', None]); c = f.get('cat_corpo') if _int(f.get('cat_corpo')) else e['cat']
         leva = quem[0] if campo and quem else None
         bens, _ = bichos.despojo(k, estado.sorte(E, f'dragão|{lid}|corpo'), cat=c)
-        est = {b: int(q) for b, q in (E['lugares'][lid].get('estoque') or {}).items() if _num(q) and q >= 1} if leva else {}
+        est = {b: int(q) for b, q in estado.livre(E, lid).items() if _num(q) and q >= 1} if leva else {}      # o que ficou junto do corpo de um morto não é tesouro
         for b, q in est.items(): ef.append(['estoque', lid, b, 'soma', -q])
         tudo = {}
         for b, q in sorted(list(est.items()) + list(bens.items()), key=lambda x: x[0] != 'prata'): tudo[b] = tudo.get(b, 0) + q

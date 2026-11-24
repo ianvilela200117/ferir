@@ -50,6 +50,9 @@ VIDA = {    # dorme: dias de sono depois de comer · come: gado de um ataque · 
 VIGILIA = dict(base=20, leve=2, sobe=2)      # contra 20 + Percepção ÷ 10 + 2, e +2 a cada punhado tirado no mesmo sono (o teste do ladrão: manha.testa 'escondido')
 CONTA = dict(filhote=(0, 2), jovem=(1, 3), adulto=(1, 2), velho=(0, 1), ancião=(0, 1))   # numa região de 16 lugares (para o gerador da etapa 7)
 
+# ---------- o covil do gerador (masmorra.gera, molde covil): o nome do dragão que mora lá (um nome é de um dragão só) ----------
+NOMES = ['o Brasido', 'o Fuligem', 'o Ronco', 'o Lodo', 'o Garrudo', 'o Rachado', 'o Cinzento', 'o Torto', 'o Urro', 'o Musgo', 'o Pedrês', 'o Sem-Sono']
+
 # ---------- a vila de teste (E4 a): o dragão jovem longe, em Vau Seco, que só se conta (dragoes.na_vila) ----------
 VILA_TESTE = dict(
     aldeia=dict(id='vau', nome='Vau Seco', em='em Vau Seco', tipo='aldeia', pop=120),       # a aldeia que ele ataca: com mercado (a prata de tabela: 5 por cabeça), longe de Pedra Rasa

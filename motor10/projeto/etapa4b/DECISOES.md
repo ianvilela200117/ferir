@@ -35,6 +35,13 @@ Dois projetos ficaram prontos, cada um numa metade da etapa: `projeto_a/PROJETO.
 | A mesa | a seção da masmorra só aparece com a descida aberta | a `MESA.md` já passa da meta de tamanho |
 | A construção | onda 1, um alicerce para as duas metades (os arquivos em comum: `estado`, `tabelas_mundo`, `talento`, `itens`, `pessoas`, `luta`, `tabelas`, `turno`, e o conserto do despojo), com o contrato das funções; onda 2, quatro frentes sem arquivo em comum: a masmorra (M), o ladino (L), os povos (P) e os dragões (D); onda 3, um integrador (a vila de teste, os bancos, os livros); depois o verificador independente e, se ele achar defeito, o acerto | frota enxuta, como na magia |
 
+## O acerto, depois do verificador (o que a conta pediu e mudou um número ou uma regra daqui)
+
+| Ponto | Vale | Por quê |
+| --- | --- | --- |
+| **Quem vê no escuro, no tiro** | **o escuro pesa inteiro no tiro e no feitiço que voa** (−8); no golpe segue a metade (−2) | medido (PO1b): com a metade no tiro, o arqueiro que vê no escuro vence o humano de 63 a 66% de noite; com um quarto, de 60 a 61%; os dois acima do Grande Dom (58,6%). Só o tiro inteiro fica na faixa (de 49 a 54%): é a razão deste juízo ("o povo não pode pesar mais que ele") |
+| **A peça achada na descida** | **fica com quem a pega, e quem a pega paga a cada um dos outros a parte dele nela** (o que a loja de casa daria, dividido pelo grupo); sem a prata, a peça segue ali | o projeto A deixava "a parte dos outros nas peças" para a cena, e o robô guloso tirava da cripta 15,9 de prata por dia com a gente forte da vila (a peça inteira com o personagem, o risco repartido). Com a parte paga, 5,4; o prudente, 6,0 (FA5, até 12) |
+
 ## O que fica de fora desta etapa
 
 O furto (etapa 3); a gente do mundo que contrata ladino ou guia; o mapa da região com as 8 masmorras e o orçamento de prata delas (etapas 3 e 7); o dragão como frente ou calamidade (etapa 6); os povos na história de 400 a 1.000 anos (etapa 7); o meio-elfo e os povos das criaturas como personagem.

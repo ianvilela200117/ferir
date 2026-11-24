@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos nas páginas `tabelas*.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py` e `python3 provas_mundo.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo), os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício") e os capítulos 10 a 16 (a etapa da magia: os dons e os talentos, a magia na luta, a alquimia e o encanto, as maldições, a magia no mundo, as criaturas, os covis e a vila de teste com a magia). Todas as metas passam. Duas foram fechadas por decisão do jogador: a Lendária é difícil de propósito, e a meta dela é o dia da primeira tentativa (7.13); a loja paga 40% pelas peças, e com isso forjar para a loja deixou de ser mina (8.8, 8.13). Na etapa da magia, o mau-olhado tira 4 (o projeto dizia 2: 11.13), e dois chefes foram acertados por isso (15.8). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo), os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício") os capítulos 10 a 16 (a etapa da magia: os dons e os talentos, a magia na luta, a alquimia e o encanto, as maldições, a magia no mundo, as criaturas, os covis e a vila de teste com a magia) e os capítulos 17 a 20 (a etapa 4b: as masmorras, o ladino, os povos do personagem e os dragões). Todas as metas passam. Duas foram fechadas por decisão do jogador: a Lendária é difícil de propósito, e a meta dela é o dia da primeira tentativa (7.13); a loja paga 40% pelas peças, e com isso forjar para a loja deixou de ser mina (8.8, 8.13). Na etapa da magia, o mau-olhado tira 4 (o projeto dizia 2: 11.13), e dois chefes foram acertados por isso (15.8). Na etapa 4b, quem vê no escuro tira a metade do escuro no golpe, e no tiro o escuro pesa inteiro (o arqueiro que vê no escuro passava do Grande Dom de noite: 19.14). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -254,7 +254,7 @@ A ordem do grupo é uma palavra: `atacar`, `segurar` ou `recuar`.
 ## 4. O banco de provas
 
 Toda mudança de regra ou de número roda `python3 provas.py`. Meta que falha: a mudança não entra, ou a meta muda com a palavra do jogador.
-A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **114 de 114 passam:** as 54 metas deste capítulo, as 26 dos bichos (6.14) e as 34 da magia na luta (11.13). O banco do mundo (`python3 provas_mundo.py`, saída em `dados/provas_mundo_saida.txt`) passa 148 de 148: as etapas 1 e 2, os dons e os talentos (10), a magia do mundo (12 a 14) e as criaturas (15 e 16). O `python3 estresse.py 1500` roda lutas ao acaso (e 500 de magia) e confere os invariantes (`dados/estresse_saida.txt`).
+A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **114 de 114 passam:** as 54 metas deste capítulo, as 26 dos bichos (6.14) e as 34 da magia na luta (11.13). O banco do mundo (`python3 provas_mundo.py`, saída em `dados/provas_mundo_saida.txt`) passa 222 de 222: as etapas 1 e 2, os dons e os talentos (10), a magia do mundo (12 a 14), as criaturas (15 e 16) e a etapa 4b (17 a 20: o alicerce, a masmorra, o ladino, os povos, os dragões e a integração, cada banco com a saída dele em `dados/`). O `python3 estresse.py 1500` roda lutas ao acaso (e 500 de magia) e confere os invariantes (`dados/estresse_saida.txt`).
 
 ### Quem vence
 
@@ -1716,6 +1716,690 @@ têm covil próprio na vila de teste (o Mestre põe quando quiser); masmorras, f
 
 ---
 
+## 17. As masmorras (etapa 4b)
+
+### 17.1 A masmorra e a sala
+
+**A masmorra é um lugar do mapa** (tipo `masmorra`), vizinho de uma vila ou de um ermo, a alguns blocos de caminho (`longe`). Por dentro ela tem **salas**, e cada sala é um lugar pequeno (tipo `sala`), ligado às outras por passagens (os `vizinhos` da sala, que valem para os dois lados). Por ser lugar, a sala usa as regras de sempre: quem mora ali está contado (`bichos`), a prata e os bens estão no estoque dela, a peça largada fica nela, e quem morre lá dentro deixa tudo na sala (junto do corpo: não é tesouro, 17.11).
+
+Nenhuma sala é vizinha do que não é sala: a vila lista a masmorra, nunca uma sala dela (a mesa da caça nunca a confunde com um ermo). A masmorra não tem bichos nem matéria: quem mora está nas salas; quem vagueia, em `vagantes`.
+
+| A masmorra guarda | O que é |
+| --- | --- |
+| o molde | cripta, mina, ruína, toca ou covil |
+| os níveis | de 1 a 3 (ou mais); cada descida de nível soma uma categoria (nas criaturas, nas armadilhas, nas fechaduras e no tesouro) |
+| a entrada | a sala onde se chega, no nível 1 |
+| as portas | uma por passagem que tem porta: aberta, fechada, trancada (com fechadura), emperrada ou arrombada; de madeira, de ferro ou de pedra |
+| o alarme | de 0 (quieta) a 5 (acordada) |
+| quem vagueia | os que andam e não moram em sala nenhuma |
+| a primeira limpeza | o dia, quem e o chefe, quando o chefe do fundo cai pela primeira vez |
+
+| A sala guarda | O que é |
+| --- | --- |
+| a largura | 1 (corredor de um), 2 (sala estreita) ou nada (sala aberta): é a largura da luta |
+| acesa | há fogo aceso: a luz é de todos |
+| a categoria | a de quem mora ali (a do nível; a espécie de categoria maior fica na dela) |
+| atento | quem mora ali dorme, está à toa ou alerta |
+| as armadilhas | no chão, numa porta ou no que a sala guarda; escondida, achada, desarmada ou disparada |
+| o que guarda | o baú, o sarcófago, o nicho (com fechadura ou sem); fechado, a prata e as peças da sala estão dentro |
+| os segredos | as passagens escondidas: achada, vira passagem como as outras |
+| o chefe | quem manda ali (um chefe das criaturas, ou um bicho chefe); o dragão mora no registro dele |
+| o que ficou junto de um corpo | a parte do estoque que era de quem morreu ali (a carga e a prata dele): não se pega (17.11) |
+
+### 17.2 Descer
+
+A descida é como a saída de caça: **um ato aberto**, escrito em quem comanda (a descida) e em quem vai junto. Quem está na descida **está fora**: os atos da vila são recusados (come-se da própria carga, bebe-se a poção), a cama não vale, e o dia lá dentro não é dia de repouso para a ferida.
+
+```
+python3 masmorra.py ver                                     a masmorra vizinha (o que se diz dela), a descida aberta, o mapa visto, o que se faz daqui
+python3 masmorra.py descer [MASMORRA] [com=ID,ID] [ordem=ID,...] [luz=tocha|feitiço|nada] [quem_luz=ID]
+python3 masmorra.py ir SALA [escondido]                     1 lance (escondido 2; no escuro, o dobro)
+python3 masmorra.py escutar SALA [quem=ID]                  1 lance; rolagem oculta
+python3 masmorra.py procurar [quem=ID]                      2 lances; uma rolagem oculta para cada coisa escondida da sala
+python3 masmorra.py abrir SALA|guardado [chave|gazua|grampo|força] [quem=ID]     1 lance por tentativa
+python3 masmorra.py desarmar [N] [quem=ID] · contornar [N] · disparar [N]       1 lance
+python3 masmorra.py atacar [inicio=longe|perto|colado] [passagem] · esperar · recuar
+python3 masmorra.py luta ["Nome: ordem"]                    a luta aberta (o ato.py luta roda); acabada, as contas saem sozinhas
+python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]       1 lance
+python3 masmorra.py descansar N [vigia=ID] · ordem ID,ID,... · luz tocha|feitiço|nada [quem=ID]
+python3 masmorra.py voltar · sair                           1 lance por sala até a entrada · a volta para casa
+SÓ O MESTRE: masmorra.py mapa [MASMORRA] · gera MOLDE "Nome" [vizinho=LUGAR] [niveis=N] [cat=K] [longe=N] · larga "por quê"
+```
+
+`quem=ID` é quem comanda; dito de alguém que foi junto, é quem faz (procura, abre, desarma, escuta, pega), na descida de quem comanda.
+
+### 17.3 O tempo: o lance e o bloco
+
+O relógio só anda em blocos. Lá dentro cada ação custa **lances de 20 minutos**, e **doze lances fecham um bloco** pelo `ato.passa`, para o grupo inteiro (o esforço leve da procura de caça). O bloco que fecha é um bloco como os outros (a fome, o sono, o cansaço, quem cai no sono, a virada do dia), e mais: a tocha de quem leva a luz se gasta, o alarme cai, o treino do ladino conta, e o mundo rola o que vagueia.
+
+| Ação | Lances |
+| --- | --- |
+| ir à sala vizinha | 1; escondido, 2; sem luz e sem quem veja no escuro, o dobro |
+| escutar uma porta | 1 |
+| procurar na sala | 2 |
+| abrir, desarmar, arrombar | 1 por tentativa |
+| contornar a armadilha do chão, dispará-la de longe | 1 |
+| pegar o que a sala guarda | 1 |
+| a luta (o fôlego e a ferida amarrada, depois) | 1 |
+| esperar escondido | 1 |
+| tirar quem caiu no fosso | 1 |
+| voltar | 1 por sala |
+| descansar | blocos inteiros (o bloco aberto fecha antes) |
+
+**Descer** é a ida (os blocos de `longe`); **sair** fecha o bloco aberto (o resto conta como bloco inteiro) e faz a volta. Medido (MA1, em 20 masmorras do gerador): N lances andam ⌈N ÷ 12⌉ blocos, mais a ida e a volta, e cada bloco gasta uma tocha.
+
+### 17.4 A luz e o escuro
+
+| | O que faz |
+| --- | --- |
+| a tocha | um bem da carga (a loja a vende). Arde um bloco: quando o bloco fecha, gasta-se uma de quem leva a luz. A última que começa a arder, a mesa avisa; acabada, a luz acaba (outra tocha de outro: `luz tocha quem=ID`) |
+| o feitiço luz | 4 de Mana por bloco, de quem o sabe; sem Mana para o bloco seguinte, apaga |
+| sem luz | quem não vê no escuro anda no dobro dos lances (o grupo anda no passo de quem não vê: ir, recuar e voltar), não procura, não abre fechadura e não desarma (arromba, sim); a luta tem o escuro (−4 no golpe, −8 no tiro) |
+| quem vê no escuro | anda, procura, abre e desarma sem luz; na luta, o escuro tira dele só a metade do golpe (−2); no tiro e no feitiço que voa pesa inteiro (−8), como em todos (capítulo 19) |
+| a sala acesa | a luz é de todos |
+| a luz se vê | quem anda com luz tem −6 no andar escondido contra quem está no escuro |
+
+Uma luz só serve a todos. Na luta, quem leva a tocha a larga no chão: a luz fica, e ninguém perde a mão do escudo. **No descanso a tocha não arde** (dorme-se no escuro; quem acorda acende de novo). Medido (MA2): o grupo da vila contra seis esqueletos numa sala aberta vence 77% com luz e 28% no escuro.
+
+### 17.5 O grupo e a ordem de marcha
+
+Quem vai junto é gente do lugar, viva e sem saída nem descida aberta: entra nas lutas, passa os mesmos blocos e tem parte no que se pega. **A ordem de marcha** (muda a qualquer hora, sem lance) diz quem pisa primeiro (a armadilha do chão é dele), quem olha primeiro (a armadilha vista de passagem, a atenção) e quem fica na frente na luta; quem atira (o arco, a besta) vai atrás. Num corredor de um, a luta põe um atrás do outro, na ordem.
+
+### 17.6 O encontro: quem vê primeiro
+
+Quando o grupo entra numa sala com gente (ou gente chega a ele), a descida **para e conta o que se vê**. **O bloco que fecha no caminho fecha antes de o grupo olhar a sala nova:** se quem vagueia chega nesse bloco, acha o grupo ali, com quem mora na sala; é um encontro só, com uma atenção só (a surpresa rolada fica), e a mesa diz quem chega e quem já estava ali.
+
+1. **O grupo anda escondido** (`ir SALA escondido`): o grupo anda no passo do mais barulhento. Rola quem anda pior escondido (o dado do ladino, capítulo 18: 2d20 + Agilidade ÷ 10 + a manha − a armadura do tronco − a luz) contra **20 + a Percepção ÷ 10 do melhor vigia da sala**, +4 se estão alertas, −6 se dormem (o morto não dorme). Rolagem oculta. Passou: o grupo **vê primeiro** (no escuro, sem ninguém que veja nele, só ouve: sabe que há gente, não quantos). Escolhe: atacar (eles perdem o primeiro turno; a luta começa perto, colada, ou longe numa sala aberta), esperar escondido (1 lance) ou recuar sem ser visto.
+2. **Não escondido, ou falhou**: eles notam o grupo. Se estão alertas (ou o alarme está em 2 ou mais), ou são de emboscada (a gárgula, a aranha), quem vai na frente testa a atenção (2d20 + Percepção ÷ 10 + a manha contra 20 + a Agilidade ÷ 10 deles; oculta): falhou, **o grupo é surpreendido**. À toa, ninguém é surpreendido.
+3. **A porta fechada** com gente atrás: quem está do outro lado ouve, e a luta começa colada.
+4. **Puxar para o corredor**: quem não foi pego desprevenido e entrou vindo de um corredor de um pode esperar na boca dele (`atacar passagem`): a luta é na largura do corredor, e eles vêm um a um.
+
+**Recuar**: sem ser visto, ninguém vem atrás. Visto, as feras e o povo vêm atrás pela índole da espécie (a tabela da caça); o morto lento não sai da sala dele. Quem vem atrás chega na sala de trás, e a luta abre ali. **O dragão acordado vem sempre**: a luta abre na sala para onde o grupo recuou (fora da casa dele: ferido, o que voa pode fugir pelo ar).
+
+**O dragão que dorme** (capítulo 20): entrar na câmara dele é andar escondido contra a vigília dele (e não contra o vigia da sala). Passou, o grupo vê primeiro (atacar com ele dormindo, pegar um punhado, esperar, recuar). Não passou, ou entrou sem se esconder: **ele acorda, não é surpreendido, e a luta abre ali, perto, antes de qualquer fuga.** O punhado que falha faz o mesmo.
+
+Do chefe ninguém sabe de graça: a mesa o nomeia quando a cena o põe à frente, e o Mestre lê o que se sabe dele (no SÓ O MESTRE). Medido (MA3): ver primeiro leva o grupo de 76% a 87%; ser surpreendido o derruba a 44%. Medido (MA18): o bloco que fecha na entrada rola uma atenção só, e a surpresa rolada fica.
+
+### 17.7 A luta lá dentro
+
+A luta é a do `ato.py luta`, com as paradas de sempre. A masmorra só monta o cenário: o grupo na ordem de marcha (quem comanda, no comando; quem atira, atrás), a largura da sala, a luz ou o escuro, a surpresa, o chefe (dos chefes das criaturas, sem os lacaios: a guarda é quem mora na sala), o dragão (capítulo 20) e quem mora ali. **Na sala onde o dragão mora, o lado dele não tem saída** (ele luta até morrer; fora da casa dele, o que voa pode fugir ferido: capítulo 20).
+
+**As contas**, num evento só, quando a luta acaba:
+- quem morreu sai da contagem da sala (o caído é rematado por quem ficou com o campo; o povo rendido sai como o morto);
+- **quem fugiu some no escuro**: sai da sala e passa a vaguear pela masmorra;
+- **o despojo pela categoria de quem morreu** (a matéria na categoria dele, até a Rara), em partes iguais entre quem lutou até o fim;
+- o chefe que cai deixa a sala; o chefe que é povo deixa a sucata das peças dele (o guardião da cripta: metal e osso Comuns); do Épico para cima, deixa o núcleo;
+- o chefe do fundo que cai pela primeira vez é **a primeira limpeza** (o dia, quem e o chefe ficam escritos na masmorra);
+- a luta soma 1 no alarme; e soma 1 lance.
+
+**Na sala onde o dragão mora** (em qualquer molde), o lado dele não tem saída (luta até morrer, a resposta E3 a) e a luta tem o tempo da casa dele: a água do brejo, o escuro das grutas (que o grupo não tira com a tocha). As contas do dragão são as do capítulo 20.
+
+Quem perde o campo recua à sala de trás (e quem viu pode vir atrás). Com o alarme em 4 ou mais, **quem está numa sala vizinha vem** ver o barulho: chega logo depois da luta (nunca no meio dela).
+
+### 17.8 As armadilhas
+
+**A armadilha bate como uma arma da categoria dela** (a conta do aço): o dano é dado × 4 × o valor da categoria ÷ a proteção da parte que ela pega (o material contra o golpe; a parte nua conta um terço). O crítico é o da luta. A zero de PV, morre quem levou mais da metade do PV num golpe; quem não, cai e fica com 1. A ferida e a grave são as da luta.
+
+| Armadilha | O golpe | Quem pega | Como se escapa | Barulho |
+| --- | --- | --- | --- | --- |
+| dardo | 1d6, ponta | quem pisa ou quem abre | o acerto: 2d20 + 6 + o bônus da categoria contra a Defesa sem escudo | não |
+| lâmina | 1d10, corte | quem passa | o acerto | não |
+| fosso | 2d6, impacto, nas pernas (da Incomum para cima, estacas: ponta); quem cai fica no fundo (1 lance para tirar) | o primeiro da fila | Agilidade contra 20 + 6 por categoria | +1 |
+| pedra | 2d8, impacto (cabeça 3 em 10) | quem passa | Agilidade contra 20 + 6 por categoria | +1 |
+| gás | 1d6 pela guarda (o amuleto, ou 0,6 da armadura do tronco) | todos | Vigor contra 20 + 6 por categoria: passou, a metade | não |
+| runa | 1d8 pela guarda; da Incomum para cima, amaldiçoa (a marca da runa, da categoria dela; quebra com 7 dias sem pôr o pé na sala) | quem pisa | o acerto contra a Firmeza | +1 |
+| alarme | nada | ninguém | | +2 |
+
+**Achar**: quem vai na frente olha de graça ao entrar na sala (o chão) e ao chegar à porta, 6 mais difícil (oculta); **procurar** é a rolagem inteira (2d20 + Percepção ÷ 10 + a manha contra 20 + 6 por categoria; oculta). A armadilha do que a sala guarda só se acha procurando.
+
+**A do chão achada para o grupo** à entrada da sala. Resolve-se assim: **desarmar** (2d20 + Agilidade ÷ 10 + a manha contra 24 + 8 × (a categoria dela − a da gazua); sem gazua, um degrau abaixo do Comum; falhar por 5 ou mais a dispara em quem desarmava), **contornar** (1 lance, sem teste; o fosso num corredor de um pede pular, cada um), **disparar de longe** (1 lance; faz o barulho dela) ou voltar. A da porta: desarmar, disparar de longe, ou abrir assim mesmo (ela pega quem abre). A do baú: desarmar, ou abrir e levar. Cada armadilha dispara uma vez. Achada, a do chão nunca mais pega o grupo por descuido.
+
+Medido (MA7, a conta do aço): o dardo Comum nunca mata quem está de PV cheio sem crítico; o dardo Raro mata na hora metade das vezes quem veste peças Comuns; em quem veste malha Rara tira perto de 11% do PV.
+
+### 17.9 As portas e as fechaduras
+
+| Porta | O que faz |
+| --- | --- |
+| aberta, arrombada, ou sem porta | passa-se |
+| fechada | abre-se ao passar, de graça; quem está do outro lado ouve |
+| trancada | a chave (sem teste), a gazua ou o grampo (a conta da fechadura), ou a força |
+| emperrada | só a força |
+| de ferro ou de pedra | escutar através dela é mais difícil (26 contra 22 da madeira; os mortos, que não respiram, mais 6) |
+| só para miúdos | só passa o grupo todo de corpo miúdo |
+
+**A chave** é uma peça do Livro de Itens (não gasta, não se vende): abre sem teste a porta ou o guardado que ela diz. **Arrombar** é 2d20 + Força ÷ 10 contra 24 + 8 × (a categoria da porta − a da arma de impacto em uso; o ombro conta um degrau abaixo do Comum); cada tentativa é 1 lance e soma 1 no alarme; falhar por 5 ou mais gasta 1 da arma. **A gazua** que falha por 5 ou mais perde 1 de durabilidade. Abrir e desarmar de verdade contam para o feito do ladino (capítulo 18). **Escutar** diz silêncio, algo se mexe (os mortos), ou vozes de poucos ou de muitos, nunca o número.
+
+### 17.10 O alarme, o que vagueia e o descanso
+
+**O alarme** (0 a 5): a luta +1; cada tentativa de arrombar +1; a armadilha que faz barulho +1 (o alarme, +2). Cai 1 a cada bloco sem barulho; na virada do dia volta a 0. **Com 2 ou mais**, quem mora lá está alerta (+4 na Percepção, e arma a emboscada: a atenção de quem vai na frente). **Com 4 ou mais**, quem está numa sala vizinha vem, depois da luta.
+
+**O que vagueia**: a cada bloco que fecha lá dentro, o mundo rola (oculto) **1 em 6, mais 10 pontos por ponto de alarme**. Saindo, um bando dos `vagantes` da masmorra chega ao grupo (sai da conta da masmorra e entra na sala); quem vai na frente testa a atenção.
+
+**O descanso lá dentro** (`descansar N`): dorme-se no chão, ali (o sono e o cansaço baixam como no chão; o PV volta pouco: para sarar, a vila). Cada bloco rola o que vagueia: **com quem vigia** (que não dorme naquele bloco), o grupo não é surpreendido; **sem vigia, é**. Não se dorme com gente de pé na sala. Medido (MA12): a chance por bloco bate a conta (16%, 27%, 37%, 47% com o alarme de 0 a 3).
+
+### 17.11 O tesouro, e o que se pega
+
+**O tesouro é prata que já existe**, posta pelo gerador uma vez (evento do gerador); depois, só muda de mão. A masmorra perde a que o grupo leva, e ganha a dos mortos que caem nela (que já existia).
+
+**Pegar** (1 lance) leva o que está à vista: a prata e os bens do estoque da sala e as peças sem dono que estão nela. **A prata e os bens repartem-se em partes iguais entre quem está na descida naquela hora** (o que sobra da divisão vai, uma unidade a cada um, a começar por quem comanda); **a peça fica com quem a pega** (quem comanda, sem dizer), **e quem a pega paga, ali mesmo, a cada um dos outros a parte dele nela**: o que a loja de casa daria hoje pela peça a quem é Leigo em comércio (40% do valor, com a loja farta como está), dividido por quantos estão na descida. Paga-se da prata que se tem, com a que se acabou de pegar; **sem ela, a peça segue na sala**, e outro do grupo pode pegá-la pagando (`pegar ITEM quem=ID`). A chave e o núcleo não têm parte; sozinho, não se paga nada. Com o guardado fechado, a prata e as peças estão dentro dele: abre-se antes. Não se pega nada com gente de pé na sala.
+
+**O que ficou junto do corpo de quem morreu ali não é tesouro** e não muda de mão sozinho (cena do Mestre, como na caça): as peças dele ficam soltas junto do corpo, e a carga e a prata, que a morte põe no estoque da sala, ficam escritas à parte (`do_morto`). Não entram no "Dentro:" do baú, o `pegar` não as leva, o tesouro do dragão não as conta, e o estoque não as larga sem o Mestre: no evento da cena, ele as solta antes de as tirar do estoque (`["lugar", SALA, "do_morto.prata", "soma", -N]`, e depois o `["estoque", SALA, "prata", "soma", -N]`). A mesa as mostra: "No chão, junto de um corpo: ...". Medido (MA17): o que Tomé levava fica na capela, o "Dentro:" e o pegar são só o tesouro, e a peça cuja parte não se paga segue ali.
+
+| O gerador põe | Comum | Incomum | Raro | Épico | Único |
+| --- | --- | --- | --- | --- | --- |
+| prata em cada sala de tesouro (2 a 4 por nível) | 20 | 80 | 320 | 1.280 | 5.120 |
+| peças | 1 a cada 3 salas do nível, da categoria dele; a da sala escondida e a do chefe, uma acima; uma em seis, maldita | | | | |
+| poções | 1 ou 2 por nível, da categoria | | | | |
+| núcleo | | | | o do chefe do fundo | o do chefe do fundo |
+
+Medido (MA4): a casa da vila que vive 60 dias ao lado da cripta tira dela bem menos que uma diária por pessoa e por dia, e depois da primeira limpeza quase nada.
+
+### 17.12 A memória: a sala limpa fica limpa
+
+| O que | Volta? |
+| --- | --- |
+| o morto que anda | só se o chefe da masmorra está vivo: ele ergue **um a cada 10 dias**, até o que cada sala tinha; morto o chefe, nunca mais |
+| o bicho que cria (o rato) | pela regra da caça, na sala que tem o ninho (o teto): o casal de fora, e depois a cria, até o teto |
+| quem fugiu de uma luta | já vagueia pela masmorra (17.7) |
+| **um bando de fora** | quando o nível fica sem quem mande (sem chefe vivo e sem morador que não seja bicho que cria), **120 dias depois** chega um bando da lista do molde (na cripta, goblins), sem tesouro: traz só o que é dele |
+| o chefe | morto, morto |
+| o tesouro levado | **nunca** |
+| a armadilha disparada ou desarmada, a porta arrombada | ficam como ficaram |
+| o alarme | cai 1 por bloco sem barulho; na virada, volta a 0 |
+
+### 17.13 O mapa é segredo
+
+**A MESA, com a descida aberta** (seção "A masmorra"): onde o grupo está e o que se vê, a luz (quem leva, quantas tochas, quantos lances faltam para o bloco fechar), o alarme em palavras, o grupo na ordem de marcha com o PV, **o mapa que o grupo viu** (as salas, as passagens e as portas; a sala que ninguém viu é "uma passagem"), o que há para pegar, as armadilhas achadas, e o que dá para fazer daqui. Sem descida, a mesa não ganha linha nenhuma.
+
+**O SÓ O MESTRE**: com a descida aberta, o mapa inteiro, sala por sala (quem mora, quantos, se dormem; as armadilhas; as portas e as fechaduras; o tesouro; os segredos; o chefe; as chaves); sem ela, uma linha por masmorra vizinha. As rolagens ocultas (escutar, procurar, a de passagem, o andar escondido, a atenção) vão ao SÓ O MESTRE com o número; à mesa sai só "rolagem oculta".
+
+**O que o personagem sabe mora nele** (o mapa de cada masmorra que ele viu): o herdeiro não sabe o mapa do morto. **O evento que cria a masmorra é segredo** (vai ao SÓ O MESTRE do RETOMAR). O RETOMAR leva a descida aberta. Medido (MA14): a mesma descida, com e sem o chefe atrás da porta, dá o mesmo texto até a porta abrir.
+
+### 17.14 Os moldes e o gerador
+
+| Molde | Salas por nível | Níveis | Quem mora | Armadilhas | O chefe do fundo | O bando de fora |
+| --- | --- | --- | --- | --- | --- | --- |
+| cripta | 4 a 8 | 1 a 2 | esqueleto, corpo-seco, carniçal, alma penada, múmia, espectro; ratazana nos ninhos | dardo, lâmina, runa, gás | o guardião da cripta (Comum e Incomum); o necromante (do Épico) | goblins |
+| mina | 6 a 12 | 1 a 3 | aranha, trasgo, golem de barro; goblins e orcs; ratazana nos ninhos | fosso, pedra, alarme | o xamã goblin; o senhor da guerra | goblins, orcs |
+| ruína | 8 a 16 | 1 a 3 | esqueleto, gárgula, golem de barro, fogo-fátuo, harpia | todas | a bruxa do brejo; o necromante | goblins, orcs |
+| toca | 5 a 10 | 1 a 2 | goblins, orcs, homens-lagarto, ogro | fosso, alarme | o xamã goblin; o senhor da guerra | goblins, orcs |
+| covil | 3 a 6 | 1 | ninguém além do dono | nenhuma | o dragão da categoria do fundo (capítulo 20: do Incomum ao Lendário); no Comum, a serpe; do Mítico para cima, a hidra | |
+
+`masmorra.py gera MOLDE "Nome"` (SÓ O MESTRE) faz uma masmorra inteira pelo dado do mundo, num evento do gerador (segredo): a entrada; um caminho até a escada (no último nível, até a porta de ferro trancada do fundo); de 1 a 3 salas de lado; no primeiro nível (e a cada 3), uma sala escondida. Quem mora sai da lista do molde, só espécies da categoria do nível ou abaixo; os corredores saem pela fração do molde. Medido (MA1): os cinco moldes nascem inteiros, e o gerador é segredo do Mestre.
+
+### 17.15 A Cripta da Cova Velha (a vila de teste)
+
+Os mortos da Cova Velha subiam de algum lugar: sob o mausoléu quebrado há uma escada. A cripta tem 7 salas num nível só, Comum, a 1 bloco de Pedra Rasa, com o guardião no fundo. O povo diz que "os mortos da Cova Velha subiam de uma escada, debaixo do mausoléu quebrado"; o resto é do Mestre.
+
+```
+[1] a escada (corredor de um) ── porta de madeira, fechada ── [2] o corredor dos nichos (corredor de um): 2 corpos-secos; um dardo Comum no chão
+[2] ── [3] o ossário (sala aberta): 3 esqueletos; 10 de prata na tigela
+[2] ── [4] a capela (sala de 2): 4 ratazanas dormindo (o ninho); o baú das oferendas (fechadura Comum, um dardo Comum nela): 25 de prata, a maça, uma poção de cura, a chave de ferro
+[3], [4] ── [5] os degraus (corredor de um): uma runa Comum no chão
+[5] ── porta de ferro, trancada (fechadura Incomum; a chave de ferro a abre) ── [6] a câmara do guardião (sala de 2): o guardião da cripta e 2 esqueletos;
+        o sarcófago (fechadura Comum): 30 de prata e o escudo do guardião (Incomum); uma passagem escondida (Incomum) para
+[7] o nicho escondido (corredor de um): 15 de prata e a gazua Incomum
+Vagueiam: um corpo-seco e três ratazanas. A prata da cripta: 80.
+```
+
+**O guardião da cripta** (um chefe novo, `tabelas_criaturas.CHEFES`): o cavaleiro da cova na categoria da cripta (Comum), de montante e placa velha, nível 25, mão de Treinado; abaixo de metade do PV bate o pé, dá o brado e ergue até dois mortos da sala; a guarda são os dois esqueletos da câmara. Vivo, ergue de novo um morto a cada 10 dias.
+
+**Entra por `masmorra.na_vila(E)`** (o `vila_teste.py fantasia` a chama): um evento do gerador, que é segredo; recusa a segunda vez, e recusa a vila sem a Cova Velha (a etapa da magia). A prata nova é 80.
+
+Medido (MA6, o robô de verdade pelo `masmorra.py`, 150 vidas por linha, até 20 dias; desce quando todos estão inteiros; o guarda na frente; recua abaixo de 30% do PV; o prudente não abre a porta do fundo com alguém abaixo de 75%):
+
+| Quem desce | Limpa a cripta | O Maro morre |
+| --- | --- | --- |
+| Maro, Tomé e Rute, prudentes | 95% | 5% (3 de cada 7 mortes na câmara do guardião) |
+| os três e o Quim na frente (ele procura e desarma; atrás na luta) | 99% | 1% |
+| o Maro sozinho | 0% | 98% |
+
+A cripta não é para o Maro sozinho. Com Tomé e Rute é dura e justa: o fundo mata, a capela de ratos alertas morde, e quem põe o guarda na frente e descansa antes do chefe vive.
+
+### 17.16 Os ganchos
+
+- **O covil do dragão** (capítulo 20): a sala do covil leva o registro do dragão; a masmorra monta a luta com `dragoes.monta` (o lado dele sem saída, o tempo da casa: `dragoes.cena_em_casa`), faz as contas com `dragoes.depois_da_luta`, e a vigília dele é o número contra o qual o grupo anda escondido (`dragoes.vigilia`). O gerador põe o dragão na câmara do fundo do covil com `dragoes.poe` (o tipo pelo lugar, `dragoes.tipo_do_lugar`; a idade pela categoria, `dragoes.idade_da_cat`; o tesouro até `dragoes.tesouro_teto`; as peças guardadas na câmara; um nome da página `tabelas_dragoes.NOMES`). O jovem ataca a vila vizinha; do adulto para cima, nenhuma vila (nesta etapa, nenhum dragão adulto cobra tributo).
+- **A mesa fora da descida:** o "Aqui" da MESA ganha uma linha quando o lugar tem masmorra vizinha ("Perto daqui: a Cripta da Cova Velha, a 1 bloco: dizem que ...", `masmorra.perto`); a seção da masmorra, essa, só aparece com a descida aberta.
+- **O ladino** (capítulo 18): todo teste de manha é o `manha.testa`; o treino na masmorra (no máximo 1 por bloco, de quem andou escondido, escutou, procurou, abriu ou desarmou) é o `manha.treino`; o feito é o `manha.feito`.
+- **Quem vê no escuro** (capítulo 19): `povos.ve_no_escuro`.
+- **A janela do mundo, os rivais e a história** (etapas 5 e 7): a primeira limpeza fica escrita na masmorra; o gerador recebe a origem (o texto) e a prata do orçamento da história.
+
+---
+
+## 18. O ladino (etapa 4b)
+
+### 18.1 O 17º caminho: a manha
+
+O ofício do ladino é um caminho só, a `manha`: andar escondido, escutar, achar e desarmar armadilha, abrir fechadura (e o furto, que fica escrito para a etapa 3). É uma mão só para tudo isso, como a caça é uma mão só para o rastro e a carcaça: dois ou três caminhos fariam o ladino pagar três escadas pelo que o guerreiro paga numa. A manha tem talento e dom como os outros 16 caminhos (capítulo 10), e qualquer povo pode aprendê-la.
+
+### 18.2 A conta do ladino
+
+Todo teste do ladino é o dado do jogador (`teste.py`): declarado antes, rolado uma vez, escrito no turno. Rola 2d20 (o 20 rola de novo e soma), mais o atributo dividido por 10, mais a pena do corpo, mais a mão de manha (Iniciante +2, Treinado +4, Mestre +6, Lendário +8), mais o dom escondido, mais o bônus do povo (no máximo +2 por teste), contra um número.
+
+| Teste | O atributo | A mão soma? | Contra |
+| --- | --- | --- | --- |
+| andar escondido | Agilidade | sim | o número de quem vigia (a masmorra e o dragão fazem a conta dele) |
+| escutar | Percepção | sim | a porta de madeira 22; a de ferro ou de pedra 26; mais 6 se do outro lado há mortos (não respiram) |
+| achar | Percepção | sim | 20 mais 6 por categoria do que está escondido (a armadilha, a passagem, o fundo falso) |
+| abrir a fechadura (a gazua) | Agilidade | sim | 24 mais 8 vezes a diferença entre a categoria da fechadura e a da gazua |
+| desarmar a armadilha | Agilidade | sim | a mesma conta da fechadura, com a categoria da armadilha |
+| arrombar | Força | não | 24 mais 8 vezes a diferença entre a categoria da porta e a da arma de impacto em uso |
+| notar a emboscada | Percepção | sim | o número dos que emboscam (a masmorra faz a conta) |
+
+### 18.3 A gazua é a arma; a fechadura é a armadura
+
+O item decide também aqui: conta a diferença de categoria, e nem a mão nem o dom valem uma categoria de gazua. A gazua é uma peça do Livro de Itens, com categoria e durabilidade (Comum 10, Incomum 20, e assim por diante). Não se veste: vai na guarda, e o teste usa a melhor gazua inteira que a pessoa leva. Sem gazua (o grampo, a ponta da faca), conta um degrau abaixo do Comum.
+
+| Quem (a conta exata) | A gazua da mesma categoria | Uma acima | Duas acima | Três acima |
+| --- | --- | --- | --- | --- |
+| o Maro (Agilidade 60, Leigo) | 66% | 32% | 12% | 5% |
+| a Rute (Agilidade 82, Leiga) | 74% | 40% | 15% | 5% |
+| o ladino Iniciante (Agilidade 70) | 77% | 44% | 18% | 6% |
+| o ladino Treinado (Agilidade 80) | 86% | 57% | 26% | 9% |
+| o ladino Mestre (Agilidade 90) | 93% | 70% | 36% | 13% |
+| o ladino Lendário (Agilidade 100) | 98% | 81% | 48% | 20% |
+
+Como ler: o leigo abre a fechadura da categoria da gazua dele duas vezes em três; uma acima, uma vez em três. A fechadura duas acima da gazua quase não abre, nem para o Mestre: a gazua da categoria é o que tranca, como a arma.
+
+### 18.4 Achar e arrombar
+
+Achar não tem ferramenta: é o olho. O Maro (Percepção 50) acha a coisa escondida Comum 77% das vezes, a Incomum 53%, a Rara 29%; o ladino Treinado (Percepção 60), 91%, 74% e 48%. Arrombar é a Força e a arma de impacto em uso (a maça, o martelo, o malho); sem ela, o ombro conta um degrau abaixo do Comum, e a mão de manha não soma. O Maro, com uma maça Comum, arromba a porta Comum 70% das vezes; no ombro, 36%. Cada tentativa de arrombar faz barulho (a conta do alarme é da masmorra).
+
+### 18.5 Falhar feio
+
+Abrir, desarmar ou arrombar que falha por 5 ou mais entorta a gazua (ou gasta a arma de arrombar): perde 1 de durabilidade, e a zero ela quebra e não conta mais. Desarmar que falha por 5 ou mais dispara a armadilha em quem desarmava. Falhar por menos não acontece nada: tenta-se de novo, no tempo da masmorra.
+
+### 18.6 O dom da manha: "a mão leve"
+
+Soma +1 (o Dom) ou +2 (o Grande Dom) nos testes em que a mão soma (andar escondido, escutar, achar, abrir, desarmar, notar a emboscada); não no arrombar, que é força bruta. Fica escondido como todo dom: entra no dado, não entra na conta que vai à mesa, e se mostra no teste que ele decidiu ("sem o dom, não passava").
+
+### 18.7 O povo no teste
+
+Cada povo pode ter um bônus num teste do ladino (o passo leve, o olho bom, o faro da pedra, a mão miúda), sempre no máximo +2 por teste: um grau de maestria, o mesmo teto do Grande Dom, para o povo pesar menos que uma categoria de gazua. Os números de cada povo estão no capítulo dos povos (19); o humano não soma nada.
+
+### 18.8 A mão sobe fazendo
+
+A escada da manha é a das armas, vezes o talento:
+
+| Talento | Iniciante | Treinado | Mestre | Lendário |
+| --- | --- | --- | --- | --- |
+| Comum | 40 blocos | 160 | 500 e o feito | 1.500 e o feito |
+| Jeitoso | 27 | 107 | 334 e o feito | 1.000 e o feito |
+| Prodígio | 20 | 80 | 250 e o feito | 750 e o feito |
+
+- **O feito.** De Mestre para cima, os blocos não bastam: o Mestre pede abrir uma fechadura ou desarmar uma armadilha Rara de verdade (não no treino); o Lendário, uma Épica. A maior categoria que a pessoa já abriu ou desarmou fica marcada nela; quem já tinha os blocos sobe no mesmo passo em que faz o feito.
+- **Na masmorra.** Cada bloco que fecha lá dentro em que a pessoa andou escondida, escutou, procurou, abriu ou desarmou soma 1 bloco de treino de manha (no máximo 1 por bloco, como a procura da caça).
+- **Em casa.** `manha.py treinar N`: com uma gazua (a fechadura velha, o passo macio no pátio), bloco pesado, como o treino de arma. Sem gazua inteira, não há o que treinar, e o comando recusa antes de gastar o tempo.
+- **O teto do talento** vale aqui como em todo caminho: o Negado não passa de Iniciante; o Lerdo, de Mestre.
+- Quanto leva: o Iniciante em 20 dias de 2 blocos de treino (o Jeitoso, 14); o Treinado em 80; o Mestre, uns 250 dias e o feito.
+
+### 18.9 O golpe pelas costas (a resposta E1 a)
+
+Quem tem a manha de Treinado ou mais dá, na primeira rodada, contra o lado que foi surpreendido, o primeiro golpe de corpo a corpo da luta com +4 no acerto e os dados rolados 3 vezes ("pelas costas"). Não derruba, e vale uma vez por luta. A luta de quem não tem a manha de Treinado é a de sempre, dado por dado. Medido (4.000 lutas, semente fixa; nível 50, o ladino de espada e couro Raros contra o gêmeo de espada, malha e escudo Raros, colados, o gêmeo surpreendido): o ladino vence 43,3% com o golpe e 30,8% sem ele, cerca de 12 pontos, perto do que vale o Grande Dom; e quem tem a espada uma acima vence 85,1% mesmo pego pelas costas. O item segue decidindo.
+
+### 18.10 A gazua e a tocha na loja
+
+| | A gazua | A tocha |
+| --- | --- | --- |
+| o que é | peça do Livro de Itens (ferramenta de serralheiro: ter não é crime) | bem, na carga e no estoque |
+| quanto vale | pela matéria, como a adaga: Comum 10, Incomum 60, Rara 360 de prata | 1 de prata de base; o preço sai do estoque, como o dos outros bens |
+| a loja compra | como peça: 40% do valor, mais a mão de comércio; a loja farta conta a gazua junto com as peças da mesma categoria | como bem: 60% do preço, mais a mão de comércio |
+| o povo gasta | | uma tocha a cada 100 pessoas por dia (a vila de 400 queima 4 por dia e quer 120 no estoque) |
+
+- A tocha arde um bloco na masmorra (a conta de quem a gasta é da masmorra, capítulo 17). O "vender tudo" não leva a tocha: ela é de usar, como a poção (vende-se pelo nome).
+- **A chave** (a que abre uma porta ou um baú da masmorra) a loja não compra nem vende: abre uma porta só, e ninguém paga pela chave de uma porta que não conhece.
+- A parte da masmorra de uma loja abre-se à parte, onde há masmorra perto (`mercado.py masmorra`): a tocha no alvo, com o povo fazendo a que gasta, e a gazua na prateleira (na vila, uma Comum; na cidade, duas Comuns e uma Incomum). A loja de sempre não muda.
+
+### 18.11 A forja da gazua e da armadura miúda
+
+A gazua se forja na oficina como a adaga: 1 de metal da categoria; 1 bloco pesado a Comum, 3 a Incomum, 9 a Rara; do Épico para cima, metal Raro e um núcleo (a lei da forja); o mesmo teste e a mesma falha da forja (capítulo 7). Conserta-se na bancada como as outras peças, e não se ajusta (não é peça de vestir). A armadura também se forja para o corpo miúdo (o pequenino, o gnomo): `oficio.py forjar armadura MATERIAL CATEGORIA talhe=miúdo` (ou `para=ID`: sai no corpo de quem vai vesti-la), com a mesma matéria e o mesmo teste; a que já existe se recorta no ajuste (capítulo 19).
+
+### 18.12 O Quim, o ladino da vila de teste
+
+O sobrinho do Lino, que abre trinco, anda calado e acha o que os outros não veem: nível 14, a manha de Iniciante (os 40 blocos que explicam a mão), adaga e couro Comuns, uma gazua Comum, 10 de prata; nasce com o talento e o dom rolados (só o Mestre sabe). Entra na vila de teste junto com a tocha e a gazua na loja, quando a etapa entra na vila (`vila_teste.py fantasia`), por eventos do gerador, sem recriar nada; a segunda vez, recusa. É quem o jogador chama para ir na frente na cripta: medido com o Quim de verdade (a MA6, 150 vidas), o grupo prudente com ele limpa a cripta em 99% e o Maro morre em 1%; sem ele, 95% e 5%.
+
+### 18.13 O furto fica escrito, e entra na etapa 3
+
+A regra está pronta, e desligada: na vila, de dia, contra alguém com nome, uma tentativa por alvo por dia; 2d20 mais Agilidade dividida por 10 mais a mão de manha (e o dom), contra 20 mais a Percepção da vítima dividida por 10 (mais 4 se ela é guarda ou mercador). Passou: leva 1d6 vezes (1 mais metade do grau de manha) de prata, até o que ela tem. Falhou por 5 ou mais: é crime, devolve e paga o triplo ao caixa da vila (sem prata, 3 dias preso). Por que não agora: sem memória nem guarda, o ladino de começo tiraria uns 34 de prata por dia da bolsa da vila, até secá-la; isso é mina. Entra quando a gente lembrar de quem a roubou e a vila tiver quem vigie, com a meta "rende, com a pena contada, menos que a diária". Hoje `manha.py furtar` recusa com a frase.
+
+### 18.14 As metas (o banco: `provas_manha.py`; o `provas_mundo.py` também o roda)
+
+| Meta | Faixa | Medido |
+| --- | --- | --- |
+| MA8 a gazua pelo item: o leigo de Agilidade 60, a gazua da mesma categoria, uma acima, duas acima; o Mestre, duas acima | 55 a 75%; 20 a 40%; até 15%; menos de 40% | 66%, 32%, 12%; 36% (a conta exata; e 6.000 tentativas com o dado de verdade, que caem a até 5 pontos dela: o dado varia de uma rodada para outra). A tabela do projeto A (abrir, achar, arrombar) bate a um ponto, linha por linha |
+| MA9 a gazua na loja não é mina: o robô ferreiro de loja com a gazua na lista do que forja e na prateleira, em 30 vilas | no máximo 6 de prata por dia nos 5 primeiros dias (no pior caso, 12), e 4 por dia até o Dia 30 | perto de 4,5 por dia (o pior caso, 5), e nada depois (o dado da forja é o de verdade: varia um pouco de uma rodada para outra). A tocha e a gazua compradas e vendidas de volta perdem (a tocha, metade); a chave não se vende; a prata fecha |
+| MA10 o ladino aprende fazendo | 40 blocos fazem o Iniciante (o Jeitoso 27, o Prodígio 20); o Mestre pede o feito; o bloco da masmorra dá 1; o treino em casa pede gazua | sempre: 40, 27 e 20 blocos no robô que treina em casa; a Rara faz o Mestre, a Épica o Lendário; o Negado para em Iniciante |
+| MA11 o golpe pelas costas | mais 5 a 15 pontos contra o gêmeo; a arma uma acima vence 80% ou mais | mais 12,5 pontos (43,3% contra 30,8%); a espada Épica vence 85,1% |
+
+O banco confere também: o dom escondido entra no dado e só se mostra quando decide; o povo nunca soma mais que o teto; a gazua quebrada não conta; o grupo anda no passo do mais barulhento (a malha tira 3, a luz mais 6); a gazua e a armadura miúda na forja; o Quim e a loja numa vila nova e numa cópia do save do jogador (a prata nova é a dele, 10); as recusas com a frase, antes de mudar qualquer coisa; a MESA de quem não tem manha nem gazua sai igual; o furto desligado.
+
+### 18.15 Os comandos
+
+| Comando | O que faz |
+| --- | --- |
+| `python3 manha.py ver [ID]` | a mão do ladino: o grau, os blocos, o feito, a gazua, e a chance de cada teste hoje (só olha) |
+| `python3 manha.py chance TESTE CATEGORIA` | só olha: a chance de achar, abrir (gazua), desarmar ou arrombar contra a categoria, com a ferramenta que você leva |
+| `python3 manha.py treinar N` | N blocos de treino em casa, com uma gazua (bloco pesado) |
+| `python3 manha.py furtar ALVO` | o furto fica para a etapa 3: recusa com a frase |
+| `python3 oficio.py forjar gazua CATEGORIA` | a gazua na oficina, como a adaga |
+| `python3 oficio.py forjar armadura MATERIAL CATEGORIA talhe=miúdo` (ou `para=ID`) | a armadura do corpo miúdo (ou a do corpo de quem vai vesti-la) |
+| `python3 mercado.py masmorra ["como foi"]` | o Mestre abre a parte da masmorra da loja: a tocha e a gazua |
+
+Os testes do ladino na masmorra (escutar, procurar, abrir, desarmar, arrombar, andar escondido) se fazem pelos comandos da descida (capítulo 17), que chamam a conta daqui. A linha de Estado: a manha aparece no Treino e na ficha da pessoa; o "Você" da MESA mostra a mão do ladino e a chance de cada teste só para quem tem a manha, o treino dela ou uma gazua.
+
+### 18.16 O que fica para depois
+
+O furto (etapa 3); abrir fechadura na vila, as casas e a loja de noite (etapa 3); a gente do mundo que contrata ladino ou guia; o ladino na caça (o passo macio atrás do bicho: a caça segue a de hoje, com o rastro dando o "viu primeiro"); a armadilha que se arma de novo.
+
+---
+
+## 19. Os povos do personagem (etapa 4b)
+
+### 19.1 Seis povos: o humano, o anão, o elfo, o meio-orc, o pequenino e o gnomo
+
+O humano é a medida de todos: é a pessoa de antes desta etapa, sem tirar nem pôr. Os outros mexem nos atributos **com a soma igual** (o que ganham num, perdem noutro), têm de nenhum a dois traços, uma coragem, um corpo, uma tendência nos talentos, a vida longa e um +2 num teste do ladino. **A lei:** nenhum povo pesa mais que o Grande Dom, em condição nenhuma; a peça uma categoria acima segue vencendo. Quem não tem o povo escrito é humano (o save antigo, a gente de hoje). **O povo não se troca depois de nascer.** Ficam de fora: o meio-elfo, os povos das criaturas como personagem (o goblin, o orc) e todo povo de jogo ou livro.
+
+### 19.2 Os números de cada povo
+
+| Povo | Força | Agilidade | Vigor | Vontade | Percepção | Afinidade | Traços | Coragem | Corpo |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| **humano** | 0 | 0 | 0 | 0 | 0 | 0 | | 0 | gente |
+| **anão** | 0 | −5 | +2 | +5 | −2 | 0 | vê no escuro, resiste a veneno | 0 | gente |
+| **elfo** | −10 | +10 | −3 | −10 | +8 | +5 | vê no escuro | 0 | gente |
+| **meio-orc** | +5 | 0 | 0 | 0 | 0 | −5 | vê no escuro | 0 | gente |
+| **pequenino** | −15 | +5 | +3 | +5 | +2 | 0 | | +4 | miúdo |
+| **gnomo** | −10 | 0 | 0 | −5 | +5 | +10 | vê no escuro | 0 | miúdo |
+
+**A soma de cada linha é zero.** Quem nasce tem os atributos do começo (ou do molde) mais os do povo, e são esses que ficam gravados: o povo não soma de novo em conta nenhuma. A frase que o jogador lê está no `povos.py ver POVO`:
+
+| Povo | A frase |
+| --- | --- |
+| humano | a medida de todos: nada a mais, nada a menos |
+| anão | duro, teimoso e de vista curta; vê na penumbra das minas, e o veneno o pega pela metade |
+| elfo | leve e de olho longo, frágil de corpo e de pouca paciência; vê na penumbra |
+| meio-orc | forte e de sangue quente; vê na penumbra, como o pai orc |
+| pequenino | miúdo, rijo e sem medo: o pavor pega pouco nele, e anda sem ser ouvido |
+| gnomo | miúdo, curioso e de mão fina; vê na penumbra, e o mecanismo não tem segredo para ele |
+
+### 19.3 Os traços do povo
+
+(uma lista fechada, à parte dos traços dos bichos e da magia: não ligam a luta de magia).
+- **Vê no escuro.** Na luta, de perto, o escuro pesa só a metade: −2 no golpe, e não −4. **No tiro e no feitiço que voa, o escuro pesa inteiro**, como em todos (−8): vê-se o vulto de perto, não o alvo de longe. Fora da luta, anda, procura, abre e desarma sem luz (a regra da masmorra, capítulo 17); o grupo em que todos veem no escuro dispensa a tocha. Com a tocha acesa ninguém tem o escuro, e o traço não soma nada.
+- **Resiste a veneno.** O veneno que entra (do bicho, da criatura, da lâmina) tira por rodada a metade do que tiraria.
+- **A coragem** (um número, não um traço): soma no teste de coragem, como a do povo das criaturas. O pequenino tem +4. Só aparece diante do que apavora (o dragão, a hidra, a alma penada) e dos sustos da luta.
+
+O nome do povo não vai à luta: o lutador leva só os traços e a coragem. **Na luta, o corpo miúdo é do tamanho de gente:** uma vaga no corredor, quatro batem nele, o PV de gente (o tamanho pequeno dos bichos, posto em gente, venceria o gêmeo só 30% das vezes: seria castigo, não traço).
+
+### 19.4 O corpo e a armadura
+
+A armadura é feita para um corpo, o **talhe**: a de gente (sem marca) ou a miúda (do pequenino e do gnomo). **A armadura de outro corpo não serve até ser ajustada:** vestir é recusado com a frase "A armadura de malha Comum é de gente grande: não serve no corpo de Pipa. Um ferreiro a ajusta (`oficio.py ajustar ITEM para=ID`)." O ajuste de hoje resolve (1 bloco e o teste de sempre: o Bento, Treinado, ajusta uma peça Comum contra 22): o ajuste que acerta **recorta a peça para o corpo de quem a pede**, para os dois lados (a de gente vira miúda; a miúda vira de gente). **A arma e o escudo não têm corpo:** o requisito de Força já cobra (o pequenino paga com a espada e mais com o malho; a adaga e o arco pedem Agilidade). As peças do começo do personagem miúdo já nascem miúdas.
+
+### 19.5 A tendência nos talentos
+
+Cada povo tem um caminho a favor e um contra. No caminho a favor o dado do talento rola duas vezes e vale o melhor; no contra, duas vezes e vale o pior. A inclinação do personagem que cai no caminho a favor soma mais um dado (melhor de três); no contra, os dois se anulam. Os outros caminhos rolam como hoje, com a mesma chave do dado do mundo: **o humano nasce igual ao de hoje, caminho por caminho.**
+
+| Povo | A favor | Contra |
+| --- | --- | --- |
+| anão | a forja | o verde |
+| elfo | o arco e a besta | as armas de peso |
+| meio-orc | as armas de peso | o encanto |
+| pequenino | a manha | as armas de haste |
+| gnomo | o encanto | as armas de peso |
+
+| | Negado | Lerdo | Comum | Jeitoso | Prodígio | Jeitoso ou melhor |
+| --- | --- | --- | --- | --- | --- | --- |
+| como hoje (uma vez) | 2% | 10% | 76% | 10% | 2% | 12% |
+| a favor (melhor de dois) | 0,04% | 1,4% | 76,0% | 18,6% | 3,96% | **22,6%** |
+| a favor e a inclinação (melhor de três) | 0% | 0,2% | 68,0% | 26,0% | 5,9% | 31,9% |
+| contra (pior de dois) | 3,96% | **18,6%** | 76,0% | 1,4% | 0,04% | 1,4% |
+
+Na média, a favor vale um quarto de grau de talento: é pressa e teto, nunca poder.
+
+### 19.6 A vida longa
+
+Nesta etapa **a idade só se escreve:** quem nasce agora (o personagem) tem a idade de adulto do povo mais um d10 (o dado do mundo); o save antigo fica sem idade (não se sabe). O ano que passa, a velhice e a morte de velho são da etapa 7. Ninguém vivo passa do máximo do povo (o gravador recusa, o `valida` acusa).
+
+| Povo | Adulto aos | Velho aos | Vive até |
+| --- | --- | --- | --- |
+| humano | 16 | 60 | 90 |
+| anão | 30 | 200 | 300 |
+| elfo | 80 | 500 | 800 |
+| meio-orc | 14 | 50 | 75 |
+| pequenino | 25 | 80 | 130 |
+| gnomo | 35 | 250 | 400 |
+
+### 19.7 O povo no ofício do ladino
+
+(capítulo 18). O povo soma +2 num teste da manha, e nunca mais que +2 num teste (o mesmo teto do Grande Dom). O humano não soma nada.
+
+| Povo | +2 em |
+| --- | --- |
+| anão | achar a armadilha e a passagem na pedra (a cripta, a mina, a ruína: o molde da masmorra; na toca e no covil, não) |
+| elfo | achar a armadilha e a passagem escondida |
+| meio-orc | arrombar |
+| pequenino | andar escondido |
+| gnomo | abrir fechadura e desarmar armadilha |
+
+### 19.8 A gente do mundo
+
+Cada lugar pode dizer de que povos é a gente dele (`povos`: a fração de cada povo, somando até 1; sem o campo, toda humana); cada pessoa com nome guarda o dela. A proposta para o gerador da região (etapa 7; aqui é chute, na página: `tabelas_povos.GENTE`): a capital 80 humanos em 100 (6 anões, 5 pequeninos, 4 meio-orcs, 3 elfos, 2 gnomos); a cidade da serra 65 anões; a vila da floresta funda 65 elfos; as tocas da colina 60 gnomos; a aldeia da fronteira dos orcs 25 meio-orcs; a vila do campo 14 pequeninos; os 40 rivais (etapa 5) 70 humanos. A loja de cada lugar põe na prateleira as armaduras dos corpos da gente dele, na proporção (etapa 7).
+
+### 19.9 O personagem escolhe o povo ao nascer
+
+, junto com a inclinação: `python3 vila_teste.py PASTA povo=anão` (a vila nova). Nasce com os atributos do começo mais os do povo, os traços, a idade de adulto do povo mais um d10, a tendência e, se o corpo é miúdo, as peças do começo miúdas. **A segunda inclinação é só do personagem humano** (capítulo 10). **O Maro segue humano:** o save não tem o campo, e o comando que acrescenta a etapa não toca nele.
+
+### 19.10 A vila de teste ganha a gente de outros povos
+
+(`povos.na_vila`, parte do `vila_teste.py fantasia`; só por eventos do gerador, sem recriar nada; recusa entrar duas vezes):
+- **Durva**, anã, ferreira de passagem (nível 34; forja e martelo Treinados; martelo e armadura de couro Incomuns; 40 de prata; 112 anos). Vai junto se a chamam, como Tomé, e vê no escuro.
+- **Brasco**, meio-orc, guarda de caravana de passagem (nível 26; malho Treinado; malho e malha Comuns; 30 de prata; 31 anos). Passou por Vau Seco e viu o que o dragão deixou (capítulo 20).
+- **Ilvena**, elfa, caçadora de passagem (nível 38; arco e caça Treinados; arco Incomum, adaga Comum, couro Incomum; 25 de prata; 240 anos).
+- **Nena Ramalho**, pequenina, faz o pão da pousada e mora na vila (nível 9; coleta Iniciante; 12 de prata; 44 anos).
+- **Pedra Rasa ganha a sua gente:** em cada 100, 88 humanos, 8 pequeninos, 2 anões e 2 meio-orcs.
+- **Na prateleira:** uma armadura de couro miúda, uma de malha miúda e um elmo miúdo de malha, todos Comuns.
+
+Os talentos e os dons dessa gente saem pelo dado do mundo, com a tendência do povo (ninguém sabe o que tem). A prata que nasce: a das quatro pessoas (107).
+
+### 19.11 A mesa
+
+No **Você**, quem é de outro povo ganha uma linha ("Do povo dos pequeninos, 27 anos: corpo miúdo (a armadura de gente grande não serve até um ferreiro ajustar); coragem +4 diante do que apavora; +2 em andar escondido."); o humano de hoje não ganha linha nenhuma (a MESA dele sai igual), e o humano que nasceu com a idade escrita ganha só "Do povo dos humanos, 22 anos: a medida de todos." Em **Quem está aqui**, a gente de outro povo diz o povo no começo do que ela é ("Durva (anã, ferreira de passagem; ...)"); e, como essa lista corta em 16 nomes, uma linha à parte diz todos os de outro povo que estão ali ("De outros povos, aqui: Durva (anã), Brasco (meio-orc), Ilvena (elfa), Nena Ramalho (pequenina)."; quem não diz o povo no começo do que é aparece como "Quim (do povo dos pequeninos)"). Sem ninguém de outro povo por perto, a linha não aparece. O povo não tem segredo: nada vai ao SÓ O MESTRE.
+
+### 19.12 Os comandos
+```
+python3 povos.py lista              os povos, para o jogador escolher
+python3 povos.py ver POVO           os atributos, os traços, a coragem, o corpo, a tendência, a vida, o teste do ladino
+```
+
+### 19.13 As metas
+
+(o banco: `python3 provas_povos.py [N]`, com 4 × N lutas por linha, de semente fixa; a meta pede 4.000: `provas_povos.py 1000`). Os números das duas rodadas: 4.000 lutas por linha (a meta) e 1.200 (o padrão do `provas_mundo.py`):
+
+| Meta | O que se mede | Faixa | Deu |
+| --- | --- | --- | --- |
+| CO1 | a pessoa comum: a MESA, o lutador e a ficha com e sem o módulo dos povos | igual | igual |
+| CO2 | as cinco lutas de semente fixa, com a gente feita pelo caminho dos povos | número por número | iguais |
+| CO3 | o humano que nasce pelo povos.nasce: atributos, talentos e dons | iguais aos de hoje | 22 nascimentos, todos iguais |
+| CO4 | o save numa cópia: abre, o Maro é humano; a gente nova só se acrescenta | campo por campo; recusa duas vezes | sim |
+| PO1a | cada povo contra o humano de peças iguais: espada, adaga e arco de dia; espada e adaga no escuro; nível 5 e 50 | de 40 a 60% | 4.000: de 43,2 a 56,7% (o Grande Dom contra o gêmeo, 59,8%) · 1.200: de 42,8 a 58,0% (o Grande Dom, 58,6%) |
+| PO1b | o arco de noite: o arqueiro que vê no escuro contra o humano | de 40 a 60% | com o tiro inteiro (o `ESCURO_TIRO` ligado no `luta.py` e no `magia.py`), de 49,2 a 54,3% (1.200 por linha; 4.000, por embrulho, de 47,8 a 53,1%); com a metade do escuro no tiro, dava de 63,5 a 66,3% |
+| PO2 | cada povo contra o humano com a arma uma acima | até 15% | 4.000: de 4,2 a 5,5% · 1.200: de 3,4 a 5,8% |
+| PO3 | o anão contra a aranha-de-toca | até o Grande Dom mais 2 | 4.000: 83,2% contra 83,6% (o humano, 80,1%) · 1.200: 82,5% contra 84,4% |
+| PO4 | a soma dos atributos, todos os começos e moldes | a do humano | sempre (186 nascimentos) |
+| PO5 | a tendência, 20.000 nascimentos por povo | a favor 20 a 25%; contra 20 a 25%; o resto como hoje | de 21,9 a 23,0%; os outros caminhos sem diferença |
+| PO6 | o corpo: a recusa, o ajuste, a arma e o escudo | sempre | sim |
+| PO7 | o pequenino de nível 50 diante do que apavora | foge até 6% | a conta: 3,75% (o humano, 13,75%); medido contra o dragão jovem da serra, 4,2% |
+| PO8 | a idade: ninguém passa do povo; o personagem nasce adulto | sempre | sim |
+
+### 19.14 O que mudou do projeto, e por quê
+
+O projeto mediu os povos com o traço emulado; construído, o banco achou:
+1. **O atributo pesa aos degraus de 10** (o golpe, a Defesa, a iniciativa, o fôlego); só o Vigor pesa ponto a ponto (o PV). O Vigor é a alavanca: 5 pontos valem de 3 a 4 no duelo.
+2. **O anão e o meio-orc passavam rente aos 60% no escuro** (59,2 e 58,8, com Vigor +5): o anão ficou com Vigor +2 (e Percepção −2), o meio-orc com Força +5 e Afinidade −5 (sem Vigor).
+3. **O gnomo caía a 39% no nível 5** (abaixo dos 40, com Vigor −5): ficou sem perder Vigor (Vontade −5 no lugar). O elfo ficou com Vigor −3 e Percepção +8; o pequenino, com Vigor +3, Percepção +2 e Vontade +5 (o nível 5 dele estava rente, a 42%; a Vontade +5 mantém a fuga diante do dragão em 3,75%).
+4. **O arco no escuro:** com a metade do escuro também no tiro, o arqueiro que vê no escuro vencia o arqueiro humano de noite de 63 a 67% (passa do Grande Dom; o projeto não tinha medido esta linha). O juízo da etapa deu ao golpe a metade, e ela fica; **no tiro e no feitiço que voa, o escuro pesa inteiro** (`ESCURO_TIRO = 1,0`, a página). O `luta.py` e o `magia.py` leem o número (no golpe, `ESCURO`; no tiro e no feitiço que voa, `ESCURO_TIRO`), e a meta PO1b passa.
+
+### 19.15 O que fica de fora
+
+(dito): o meio-elfo; o personagem de povo das criaturas; a opinião e o preconceito entre povos (a memória da gente é da etapa 3); o ano que passa e a velhice (etapa 7); a loja que põe na prateleira as armaduras pela gente do lugar (etapa 7; a vila de teste ganha as três miúdas à mão); a loja farta conta a armadura miúda e a de gente como iguais (o feitio não olha o corpo: é pequeno, e fica dito); o herdeiro de outro povo (etapa 6: o herdeiro de um elfo pode ser um bisneto).
+
+---
+
+## 20. Os dragões (etapa 4b)
+
+### 20.1 Três tipos, pelo lugar onde vivem
+
+O dragão não segue esquema de cores: o tipo é o lugar onde ele vive. O dragão, o verme e a serpe são da fantasia comum e do folclore.
+
+| Tipo | Onde vive | O sopro | Os traços do tipo | Ferido (a fase) | Em casa |
+| --- | --- | --- | --- | --- | --- |
+| **o dragão da serra** | serra, ruína alta | o fogo | voa | abaixo de 30% do PV: **no covil, desce ao chão em fúria** (deixa de voar; fica ardente: quem o golpeia de perto se queima, e a ferida que ele abre queima); **fora do covil, foge pelo ar** | ao ar livre |
+| **o verme do brejo** (sem asas) | brejo | o bafo podre | veneno (o golpe envenena) | abaixo de 50%: **enrosca na lama** (passa a agarrar quem está colado) | na água (pesa para os dois lados) |
+| **o dragão das grutas** (sem asas) | caverna, ruína funda, o fundo da masmorra | a brasa e a fumaça | noturno (o escuro não lhe tira nada), agarra | abaixo de 50%: **bebe o sangue de quem prende** (o golpe que fere o faz recobrar PV) | no escuro |
+
+O sopro do verme não envenena: só o golpe do corpo envenena, como em todo bicho de veneno.
+
+### 20.2 Cinco idades, uma por grau
+
+| Idade | Anos | Grau | Categoria do corpo | Tamanho | Nível | PV | Traços da idade |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **filhote** | até 30 | D | Incomum | médio | 30 | 147 | sopro |
+| **jovem** | de 30 a 150 | C | Raro | grande | 80 | 480 | sopro, apavora |
+| **adulto** | de 150 a 500 | B | Épico | enorme | 110 | 817 | sopro, apavora, couraça |
+| **velho** | de 500 a 1.000 | A | Único | enorme | 160 | 1.100 | sopro, apavora, couraça, resiste |
+| **ancião** | mais de 1.000 | S | Lendário | enorme | 220 | 1.337 | sopro, apavora, couraça, resiste |
+
+O corpo é a arma e a armadura, com a categoria da idade: o filhote morde e arranha (garra e presa); do jovem em diante, garra, bocarra e cauda, uma a cada golpe. A escama vale como malha. Os atributos (Força, Agilidade, Vigor, Vontade, Percepção, Afinidade): o filhote 70, 80, 70, 50, 70, 40; o jovem 120, 70, 150, 60, 75, 45; o adulto 140, 70, 150, 80, 85, 50; o velho 160, 70, 200, 90, 90, 55; o ancião 180, 70, 240, 100, 90, 60.
+São quinze dragões ao todo (os três tipos nas cinco idades): `python3 dragoes.py lista`. **O ancião tem os números do dragão do capítulo 6**, com o tipo, a fase e o resiste. O dragão do capítulo 6 segue na página dos bichos, como estava.
+
+### 20.3 Na luta
+
+**O dragão é um bicho:** a luta o roda com os traços que já tem (o sopro, o voa, o apavora, a couraça, o resiste, o veneno, o agarra, o noturno), e vale a regra de ouro de sempre: conta a categoria da arma contra a da escama. O sopro pega o grupo inteiro a até 4 casas, a cada duas rodadas, sem aparo.
+**O filhote é bicho de verdade:** ferido, testa a coragem e pode fugir; encurralado, luta até o fim. **Do jovem para cima, o dragão é chefe:** não foge pelo susto, e só a fase o tira da luta.
+
+**A fase (o dragão ferido).** Quando o PV cai abaixo da fração do tipo, o dragão muda (a tabela de 20.1), e a luta para e pergunta.
+**A fuga do que voa (a resposta E3 a do jogador).** O dragão da serra ferido, **fora do covil**, foge pelo ar: precisa estar no ar (não no chão, não agarrado, não num corredor) e ter por onde sair. Sai sem levar golpe, e a luta para e pergunta. **No covil ele não tem por onde sair** (defende o ouro) e a fase vale como fúria: luta até morrer. O dragão que fugiu volta ao covil com o PV que tinha, **dorme até sarar** (10% do PV por dia de sono) e **lembra de quem o feriu**. O verme e o dragão das grutas não voam: nunca fogem.
+
+**O covil não ajuda o grupo contra o dragão.** Num corredor ele luta apertado e não voa, mas bate menos gente num bicho só: contra o dragão se luta na câmara aberta.
+
+### 20.4 O corpo e o coração
+
+| Idade | O corpo (o despojo: de metade ao inteiro, como todo bicho) | O coração |
+| --- | --- | --- |
+| filhote | 4 de comida, 3 de couro Incomum, 2 de osso Incomum | não |
+| jovem | 10 de comida, 5 de couro Raro, 4 de osso Raro | não |
+| adulto | 8 de couro Raro, 6 de osso Raro | **um núcleo Épico** |
+| velho | 10 de couro Raro, 8 de osso Raro | **um núcleo Único** |
+| ancião | 12 de couro Raro, 10 de osso Raro | **um núcleo Lendário** |
+
+O verme do brejo dá, além disso, peçonha (1 Incomum no filhote; 2 Raras do jovem para cima). A matéria segue a regra de sempre (a categoria do bicho, até a Rara), e sai na categoria de quem morreu.
+**O coração é o núcleo do dragão**, com o nome dele ("o coração do Tição"), contado no Livro de Itens, e não se vende em loja. **Só do adulto para cima**, porque a escada da forja só pede núcleo do Épico para cima. **O dragão morto não volta** e o dragão não cria (não há ovo nesta etapa): os corações de um mundo são os dos dragões que ele tem.
+
+### 20.5 O covil e o tesouro
+
+**O covil** é uma sala de masmorra (o molde covil: a boca, as galerias e a câmara do tesouro, aberta, onde ele voa e sopra) ou um ermo, com o dragão morando ali.
+**O tesouro** é a prata e os bens guardados no lugar, e as peças guardadas nele (de quem morreu ali, há muito). O que ficou junto do corpo de quem morreu agora, na sala do covil, não é tesouro (17.11). **É prata que já existe:** o gerador da história a tira dos lugares que o dragão saqueou e a põe no covil, e depois ela só muda de mão. O tesouro não se refaz, a não ser pela vida do dragão, que tira dos lugares (20.6).
+
+| Idade | A prata (até, na conta da prata do mundo) | Peças | A melhor peça |
+| --- | --- | --- | --- |
+| filhote | nada | nenhuma | |
+| jovem | 1% | 2 a 3 | Rara |
+| adulto | 3% | 3 a 5 | Épica |
+| velho | 6% | 4 a 6 | Única, se houver sem dono |
+| ancião | 10% | 5 a 8 | Lendária, se houver sem dono |
+| **todos os covis juntos** | **25% da prata do mundo** | | |
+
+**Morto o dragão, quem ficou com o campo leva:** o corpo, a prata e os bens em partes iguais entre quem lutou até o fim; as peças do tesouro e o coração com quem comanda. Sem ninguém com o campo, o coração fica no chão, junto do corpo, e o tesouro fica onde está.
+
+### 20.6 A vida do dragão (o mundo sozinho, todo dia)
+
+| Idade | Dorme depois de comer | O ataque (de noite) | O tributo (por estação, da vila dele) |
+| --- | --- | --- | --- |
+| filhote | de 10 a 20 dias | não ataca vila: caça no ermo | |
+| jovem | de 20 a 40 dias | come 30 de gado, leva de 5 a 20 de prata, mata de 0 a 1 | não cobra |
+| adulto | de 30 a 60 dias | 60 de gado, de 20 a 60 de prata, de 0 a 3 mortos | 3% da prata da vila |
+| velho | de 90 a 180 dias | 120 de gado, de 50 a 150 de prata, de 1 a 5 mortos | 5% |
+| ancião | de 300 a 400 dias | 200 de gado, de 100 a 300 de prata, de 2 a 8 mortos | 8% |
+
+1. **Dormindo:** nada acontece; o ferido sara 10% do PV por dia.
+2. **Acordado:** do adulto para cima, se a vila dele ainda não pagou a estação, ela paga o tributo (a prata sai da vila e entra no tesouro), e ele come no ermo. Sem tributo (o jovem), ou sem prata para pagar, **ataca de noite**: o gado é comido (sai da comida da vila), a prata vai para o tesouro, e morre gente do povo da vila. Depois, dorme.
+3. O acaso é o do mundo; a prata só muda de mão.
+
+**Nesta etapa nenhum dragão adulto mora perto de vila:** o tributo seca a prata da vila, e nada a repõe antes da etapa 3. Medido: um ano do jovem ao lado de uma aldeia de 120 dá de 12 a 13 ataques; o povo vai de 120 a perto de 112, a prata da aldeia de 600 a perto de 450, e o tesouro cresce o mesmo tanto que a aldeia perde.
+
+### 20.7 Roubar o tesouro de quem dorme
+
+É a cena da masmorra (capítulo 17): o grupo escondido na câmara do dragão que dorme. Cada **punhado** custa um lance e é mais um teste de andar escondido (o do mais barulhento, o dado do ladino, capítulo 18), em rolagem oculta.
+- **O punhado** é a sexta parte da prata que havia no covil quando o dragão adormeceu. Acabada a prata, é uma peça guardada (a que a mão alcança).
+- **A vigília do dragão** (o número contra o qual se anda escondido): **20 + Percepção ÷ 10 + 2** (ele dorme leve sobre o ouro), **e mais 2 a cada punhado já tirado no mesmo sono** (o ouro mexido o inquieta). O jovem começa em 29; o adulto, em 30; o velho e o ancião, em 31.
+- **Falhou: ele acorda**, não é surpreendido, e age antes de qualquer fuga pelas galerias: na masmorra, a luta abre ali, perto, sem a escolha de recuar. Quem entra na câmara sem passar pela vigília (escondido e falhou, ou sem se esconder) também o acorda, com a luta ali. **Acordado, ninguém rouba:** o ladrão é visto, e quem recua tem o dragão atrás (a luta abre na sala de trás, fora da casa dele).
+- Quem rouba não sabe o quanto falta para ele acordar (a rolagem é oculta; o número fica com o Mestre).
+
+**O ladrão robô** (o ladino Treinado de couro, Agilidade 80, no escuro, entra uma vez por sono, tira um punhado e sai; se acorda o dragão, luta de verdade): ao lado do jovem, morre no ano em 95 a 99% das vidas e tira uns 1,3 de prata por dia de vida; ao lado do adulto, morre em 96 a 98% e tira uns 4,5 por dia de vida, perto da diária. **É aposta, não renda.**
+
+### 20.8 O que se conta, e o que só o Mestre sabe
+
+**Na MESA, em "O que se conta":** de cada dragão que a gente dali conhece, o boato do último ataque, sem número e sem tesouro. Exemplo: "Conta-se que o Tição, um dragão jovem da serra, mora na Serra Fria, e que há 6 dias levou gado de Vau Seco. Vau Seco fica longe daqui." Passados 60 dias do ataque, a pousada só conta que ele mora lá. Quem conhece um dragão é a vila que ele ataca e os lugares a que a fama dele chega.
+**No SÓ O MESTRE:** cada dragão do mundo, com o PV, até quando dorme, a vigília, os punhados do sono, o tesouro (a prata e as peças), a vila, os ataques e de quem ele lembra.
+**A ameaça** (`dragoes.py ameaca TIPO IDADE [arma=CAT] [armadura=CAT]`) é a frase do chefe: ninguém a sabe de graça; o Mestre a lê quando a cena põe o dragão à frente. Ela diz o grau, o tamanho, o corpo, os traços, a fase, o que dá morto e a conta da regra de ouro.
+
+### 20.9 Os comandos
+
+```
+python3 dragoes.py lista                                  os quinze dragões
+python3 dragoes.py ver TIPO IDADE                         a ficha de luta, o corpo, o coração e a ameaça
+python3 dragoes.py ameaca TIPO IDADE [arma=CAT] [armadura=CAT]
+python3 dragoes.py mede TIPO IDADE NÍVEL CATEGORIA [homens=4] [lutas=200] [covil=sim|nao] [dorme=sim] [arma=CAT] [armadura=CAT]
+                                                          a régua, em lutas de ensaio (nada é guardado)
+python3 dragoes.py covil [LUGAR]                          SÓ O MESTRE: o dragão, o sono, o PV, o tesouro, a vila, a vigília
+python3 dragoes.py covil poe LUGAR TIPO IDADE "Nome" [vila=LUGAR] [tesouro=N] [dorme=DIAS]
+                                                          o Mestre funda um covil (vai ao SÓ O MESTRE)
+```
+(TIPO: serra, brejo, grutas. IDADE: filhote, jovem, adulto, velho, ancião.)
+Na masmorra, quem monta a luta da câmara é o `masmorra.py`: o dragão entra com o PV de agora, acordado ou dormindo, na sala onde mora não tem por onde sair (em qualquer molde), e a luta tem o tempo da casa dele. O covil do gerador (`masmorra.py gera covil "Nome"`, SÓ O MESTRE) põe na câmara do fundo o dragão da categoria dela, com o tesouro e as peças. A frase da ameaça é a mesma pelos dois caminhos (`bichos.py ameaca dragão-da-serra-jovem` lê o `dragoes.ameaca`). No fim da luta, as contas do dragão saem sozinhas (o morto, o fugido, o corpo, o coração, o tesouro).
+
+### 20.10 A vila de teste: o Tição, longe (a resposta E4 a do jogador)
+
+O comando da vila de teste com a etapa inteira acrescenta, só por eventos, sem recriar nada (e recusa rodar duas vezes):
+- **Vau Seco**, uma aldeia de 120, com mercado (600 de prata), ao pé da serra. **Fica longe:** não é vizinha de Pedra Rasa, e não há estrada daqui até lá.
+- **A Serra Fria**, o ermo do covil, vizinha de Vau Seco (a 6 blocos de caminho).
+- **O Tição**, dragão jovem da serra, de 60 anos, que dorme mais 20 dias sobre o tesouro: **300 de prata, a Lâmina de Vau Seco** (uma espada Rara, de quem o enfrentou por último) **e um escudo Incomum**. O último ataque a Vau Seco foi há 6 dias, e a pousada de Pedra Rasa conta.
+
+**O Maro não o alcança:** o Tição é a ameaça que se conta e não se caça no nível 5. Quando acorda, ataca Vau Seco, e a pousada conta de novo. A prata que nasce: a de Vau Seco (600) e o tesouro (300).
+
+### 20.11 As medidas (o banco: `provas_dragoes.py`)
+
+As lutas são as do motor, em ensaio; o grupo é o homem do degrau das criaturas (espada, malha, elmo e escudo da categoria, no nível de referência: Incomum 30, Raro 50, Épico 90, Único 120, Lendário 150), com Vontade 80 do Épico para cima.
+
+| Meta | O que se mede | Faixa | Medido |
+| --- | --- | --- | --- |
+| DR1 | o filhote (foge ferido) contra um homem do degrau, cada tipo em casa | de 40 a 65% | de 52 a 63% (ele foge em 20 a 31%) |
+| DR2 | do jovem ao ancião, em casa, no covil, contra 4 do degrau | jovem 50 a 75; adulto 45 a 70; velho 25 a 50; ancião 5 a 25 | jovem 57 a 70; adulto 53 a 64; velho 32 a 41; ancião 12 a 18 |
+| DR3 | o ancião contra 6 do degrau | de 65 a 90% | de 78 a 84% |
+| DR4 | o conjunto uma acima; uma abaixo | 90% ou mais; 10% ou menos | 100%; 0% |
+| DR5 | um homem do degrau sozinho contra o jovem ou maior | até 5% | de 0 a 0,5% (ele morre em mais da metade) |
+| DR6 | o jovem da serra no covil contra 4 de nível 50 Raros; com a arma Épica; tudo Incomum | de 55 a 80%; 90% ou mais; até 5% | 70% (0,46 morto por luta; morre alguém em 33%); 96%; 0% |
+| DR7 | a fase para a luta; no covil nunca foge; fora dele, o da serra foge | sempre; nunca; de 60 a 95% | sempre; nunca; 71% |
+| DR8 | dormindo (ele perde o primeiro turno) | 5 pontos ou mais | 10 pontos (81% contra 70%) |
+| DR9 | o PV de agora; o morto, o corpo, o coração; o fugido | sempre | sempre |
+| MI1 | a prata do mundo em cada passo (pôr o dragão, um ano, a luta, o tesouro, a venda) | a mesma (o tesouro conta uma vez, quando nasce) | fechou |
+| MI2 | o corpo e o tesouro do jovem vendidos em Pedra Rasa | a loja paga até a caixa; o preço cai a cada venda; a peça que a caixa não paga é recusada | 847 de prata (a caixa de 2.000 vai a 1.153); o couro Raro de 111 a 42; a malha Épica recusada |
+| MI3 | o dragão morto não volta | um ano depois, sem dragão e sem prata nova no covil | sim |
+| MI4 | o ladrão robô, um ano ao lado do jovem e do adulto | morre em 80% ou mais; tira até 6 de prata por dia de vida | de 95 a 99% e de 96 a 98%; 1,2 a 1,3 e 4,4 a 4,5 |
+| MI5 | um ano do jovem ao lado de uma aldeia de 120 | perde até 10% do povo e até metade da prata; o tesouro cresce o que a aldeia perde | 12 ataques; 120 a 112; 600 a 447; o tesouro de 300 a 453 |
+| MI6 | os covis juntos | até 25% da prata do mundo | 9% na vila de teste |
+
+**Como ler:** o jovem é a primeira caça de dragão de um grupo de veteranos, e mata um em cada três grupos que o enfrentam. Uma categoria na arma muda tudo; uma abaixo, é morte certa. Quanto mais velho, mais ele pede gente além da peça: o ancião é a calamidade (quatro heróis Lendários morrem quase todos; seis vencem quatro vezes em cinco).
+
+### 20.12 O que fica para depois
+
+- O ovo e o dragão que cria; o dragão que fala, negocia ou lança feitiços; montar dragão; o dragão aliado.
+- O sopro que envenena (o verme envenena só pelo golpe; o bafo dele não envenena, e a serpe segue como é).
+- A caça num ermo com dragão (o `caca.py` não o encontra: o dragão de ermo só entra na luta pela mão do Mestre ou pelas funções do `dragoes.py`).
+- O dragão como frente e calamidade (etapa 6): o jovem que ataca é uma frente pronta; o que fugiu ferido volta e lembra de quem o feriu; o ancião acordando é calamidade.
+- O dragão que envelhece na história e o gerador da região, com quantos dragões há e onde (etapa 7). O tributo que drena as vilas pede a prata nova da etapa 3.
+
+---
+
 ## Os comandos
 
 ```
@@ -1785,3 +2469,28 @@ python3 itens.py nova foco FORMA CATEGORIA "Nome" | nova amuleto CATEGORIA "Nome
 
 Na luta (`ato.py luta roda`, `caca.py luta`, `luta.py roda`), as ordens novas: `lancar FEITICO [em ALVO | casa N] [sempre] [osso] [neblina|lama]` · `beber POCAO [em ALIADO]` · `usar [PECA] [em ALVO | casa N]`.
 No cenário, quem não vem do mundo veste também `"foco": ["cajado", "Raro"]` e `"amuleto": "Raro"`, e pode trazer `"feiticos"`, `"tradicao"`, `"tracos"`, `"fases"` e `"carga"`; a criatura entra como o bicho: `{"bicho": "goblin"}`.
+
+
+A etapa 4b (capítulos 17 a 20: as masmorras, o ladino, os povos do personagem e os dragões):
+
+```
+python3 provas_4b.py 300 · provas_masmorra.py 300 · provas_manha.py 300 · provas_povos.py 300 · provas_dragoes.py 300 · provas_fantasia.py 300
+                                                     os bancos da etapa, sozinhos (o provas_mundo.py roda os seis)
+python3 vila_teste.py PASTA [povo=POVO] [inclinacao=CAMINHO] [inclinacao2=CAMINHO] ...     a vila nova com o povo do personagem e a segunda inclinação (só do humano)
+python3 vila_teste.py fantasia PASTA [inclinacao2=CAMINHO]      acrescenta a etapa 4b a uma vila de teste que já tem a magia (só por eventos; recusa rodar duas vezes)
+
+python3 masmorra.py ver | descer [MASMORRA] [com=ID,ID] [ordem=ID,ID,...] [luz=tocha|feitiço|nada] [quem_luz=ID]
+python3 masmorra.py ir SALA [escondido] | escutar SALA | procurar | abrir SALA|guardado [chave|gazua|grampo|força] | desarmar [N] | contornar [N] | disparar [N]      (quem=ID: quem faz)
+python3 masmorra.py atacar [inicio=longe|perto|colado] [passagem] | esperar | recuar | luta ["Nome: ordem"] ["grupo: ordem"] | pegar [tudo|prata|ITEM] | punhado
+python3 masmorra.py descansar N [vigia=ID] | ordem ID,ID,... | luz tocha|feitiço|nada [quem=ID] | voltar | sair
+python3 masmorra.py mapa [MASMORRA] | gera MOLDE "Nome" [vizinho=LUGAR] [niveis=N] [cat=K] [longe=N] | larga "por quê"      (SÓ O MESTRE)
+python3 manha.py ver [ID] | chance TESTE CATEGORIA | treinar N | furtar ALVO (recusa: o furto é da etapa 3)
+python3 oficio.py forjar gazua CATEGORIA ["Nome"] [blocos=N] · forjar armadura MATERIAL CATEGORIA "Nome" talhe=miúdo|para=ID · ajustar ITEM para=ID (recorta o talhe)
+python3 mercado.py masmorra ["como foi"]             o Mestre abre a parte da masmorra da loja (a tocha e a gazua)
+python3 povos.py lista | ver POVO
+python3 dragoes.py lista | ver TIPO IDADE | ameaca TIPO IDADE [arma=CAT] [armadura=CAT] | mede TIPO IDADE NÍVEL CATEGORIA [homens=4] [lutas=200] [covil=sim|nao] [dorme=sim]
+python3 dragoes.py covil [LUGAR] | covil poe LUGAR TIPO IDADE "Nome" [vila=LUGAR] [tesouro=N] [dorme=DIAS]      (SÓ O MESTRE)
+```
+
+Na luta, ninguém dá ordem nova: o golpe pelas costas (18.9) sai sozinho para quem tem a manha de Treinado contra o lado surpreendido; a fase "foge" (20.3) é do dragão que voa.
+No cenário, quem não vem do mundo pode trazer `"tracos": ["vê no escuro"]` (e `"resiste a veneno"`) e `"coragem"`; o dragão entra como o bicho: `{"bicho": "dragão-da-serra-jovem", "nome": "o Tição", "pv": 350}`.

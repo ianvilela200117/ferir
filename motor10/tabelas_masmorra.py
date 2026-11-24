@@ -26,7 +26,7 @@ ATENTO = {-1: -6, 0: 0, 1: 4}       # dormindo, à toa, alerta: na Percepção d
 ESCONDIDO = 20              # o grupo anda escondido contra 20 + Percepção ÷ 10 do melhor vigia + ATENTO
 ATENCAO = 20                # quem vai na frente: Percepção + manha contra 20 + Agilidade ÷ 10 dos que emboscam
 EMBOSCA = ('gárgula', 'aranha')     # quem arma emboscada (testa-se a atenção mesmo à toa)
-INICIO = dict(viu='perto', aberta='longe', porta='colado', notou='perto', vem='perto', surpreso='perto')
+INICIO = dict(viu='perto', aberta='longe', porta='colado', notou='perto', vem='perto', surpreso='perto', acorda='perto')      # acorda: o dragão que acorda no punhado (a luta abre ali, perto)
 ESCUTA = (3, 'poucos', 'muitos')    # escutar diz "de poucos" até tantos, "de muitos" acima (nunca o número)
 
 # ---------- o alarme e o que vagueia ----------
@@ -45,6 +45,8 @@ ARMADILHAS = {
     'runa':   dict(dado='1d8',  golpe='guarda',  pega='um',      escapa='Firmeza',   amaldicoa_desde=1, barulho=1, diz='uma runa riscada na laje'),
     'alarme': dict(dado=None,   pega='ninguém',  barulho=2, diz='um fio de sinos'),
 }
+DIZ_GUARDADO = {'dardo': 'uma agulha que salta da fechadura', 'lâmina': 'uma lâmina que salta da tampa', 'gás': 'um sopro de pó que sai da tampa', 'runa': 'uma runa riscada na tampa',
+                'alarme': 'um fio de sinos preso à tampa'}     # a armadilha do que a sala guarda (o baú, o sarcófago) não é "um furo na parede": a frase dela
 ARMADILHA_ACERTO = 6        # 2d20 + isto + o bônus da categoria, contra a Defesa sem escudo (ou a Firmeza, a runa)
 ESQUIVA = (20, 6)           # Agilidade ou Vigor contra 20 + 6 por categoria
 PASSAGEM = -6               # achar de passagem: quem vai na frente, de graça, 6 mais difícil
@@ -73,6 +75,7 @@ NOMES_SALA = {   # o gerador dá às salas os nomes do molde: a boca, o corredor
                    fundo='o trono de pedra', segredo='o buraco escondido', escada='a rampa'),
     'covil':  dict(boca='a boca da caverna', corredor='a galeria', salas=['a gruta', 'a gruta dos ossos', 'o lago escuro'], fundo='a câmara do tesouro', segredo='a fenda escondida', escada='a descida'),
 }
+PEDRA = ('cripta', 'mina', 'ruína')     # as masmorras de pedra: nelas o achar do anão (a armadilha e a passagem escondida) ganha o +2 do povo (tabelas_povos.MANHA, achar_pedra)
 LARGURA = (1, 2, None)      # o corredor (1), a sala estreita (2) e a aberta (nada): o corredor sai pela fração do molde; o resto, meio a meio
 MORA = 0.6                  # o gerador: a chance de uma sala (fora a boca e a escondida) ter quem more nela
 NINHO = 0.3                 # e a de uma sala do molde com ninho ser um ninho (o bicho que cria, com teto)
@@ -84,3 +87,7 @@ SEGREDO_CADA = 3            # uma sala escondida a cada tantos níveis (o primei
 TESOURO = dict(prata=(20, 4), salas=(2, 4), pecas_cada=3, acima=('escondida', 'chefe'), maldita=1 / 6, pocoes=(1, 2), guardado=0.5)      # a prata por sala de tesouro: 20 × 4 por categoria
 GUARDADOS = ('o baú', 'o sarcófago', 'o nicho', 'a arca', 'o cofre')
 MEMORIA = dict(ergue=10, vem_de_fora=120)       # o chefe vivo ergue um morto a cada tantos dias; o nível vazio espera tantos dias por um bando de fora
+
+# ---------- a parte de quem vai junto nas peças ----------
+PARTILHA = 1.0              # quem fica com a peça achada paga a cada um dos outros da descida esta fração do que a loja daria por ela a quem é Leigo (tabelas_mercado.PAGA_PECA),
+                            # dividida pelo grupo; sem a prata para isso, a peça segue na sala (0 desliga: a peça de graça para quem a pega, a regra de antes)

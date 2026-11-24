@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """vila_teste.py — MOTOR 10: A VILA DE TESTE. Um mundo pequeno, FORA DO CÂNONE, para o jogador experimentar a luta, a caça, a forja e o custo de viver.
 
-  python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N] [inclinacao=CAMINHO]
+  python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N] [inclinacao=CAMINHO] [inclinacao2=CAMINHO] [povo=POVO]
 
 Cria, numa pasta NOVA (recusa escrever por cima de qualquer coisa), tudo por eventos "gera":
   PEDRA RASA, uma vila de 400 pessoas: pousada, mercado (os bens no ponto do ano, 15 peças Comuns e Incomuns na prateleira, 2.000 de prata contada)
@@ -15,6 +15,9 @@ Cria, numa pasta NOVA (recusa escrever por cima de qualquer coisa), tudo por eve
   OS TALENTOS E OS DONS (etapa da magia): toda a gente da vila nova nasce com eles, pelo dado do mundo (talento.py). O personagem pode ter uma INCLINAÇÃO
     (inclinacao=fio, haste, peso, tiro, forja, couro, caça, coleta, comércio, cura, alquimia, encanto, arcano, fé, verde ou pacto): naquele caminho o dado rola duas vezes
     e vale o melhor. Ninguém sabe o que tem: o talento aparece fazendo, o dom quando decide um teste. O Mestre vê tudo no SÓ O MESTRE.
+  O POVO do personagem (etapa 4b): povo=humano, anão, elfo, meio-orc, pequenino ou gnomo (`python3 povos.py lista`). Sem povo=, humano, como sempre. O povo mexe nos atributos
+    (a soma é a mesma), dá os traços, a coragem, a idade e a tendência nos talentos; o personagem miúdo (pequenino, gnomo) nasce com a armadura feita para o corpo dele.
+    O personagem HUMANO pode ter uma SEGUNDA INCLINAÇÃO (inclinacao2=CAMINHO, outro caminho que não o da primeira; os caminhos agora são 17, com a manha).
 Depois: MOTOR10_MUNDO=PASTA python3 turno.py abre      (o guia está no GUIA_VILA.md)
 
   python3 vila_teste.py magia PASTA [inclinacao=CAMINHO]
@@ -25,6 +28,14 @@ ACRESCENTA a etapa da magia a uma vila de teste QUE JÁ EXISTE (o save de quem j
   dois amuletos, uma varinha, um símbolo e a Cartilha do arcano: mercado.funda_magia); a BRUXA da borda da mata (Joana,
   do pacto: lê, amaldiçoa e vende veneno de pessoa a pessoa); o GRANDE DOM DE FORJA DO ZECA, que ninguém leu; a COVA VELHA (um ermo novo, vizinho da vila, com
   esqueletos e corpos-secos, e uma peça maldita largada no chão); e A TOCA DOS GOBLINS na Mata do Corvo (um covil pequeno, com um tesouro miúdo).
+
+  python3 vila_teste.py fantasia PASTA [inclinacao2=CAMINHO]
+
+ACRESCENTA a etapa 4b (as masmorras e o mundo de fantasia) a uma vila de teste QUE JÁ TEM A MAGIA, só por eventos, sem recriar nada (recusa rodar duas vezes):
+  A MANHA (o 17º caminho, o ladino) rolada para quem já nasceu (só esse caminho: os outros 16 e o dom não mudam; segredo do Mestre); a SEGUNDA INCLINAÇÃO do
+  personagem humano (inclinacao2=manha: só o caminho que se rola agora); a GENTE DE OUTROS POVOS (Durva, a anã; Brasco, o meio-orc; Ilvena, a elfa; Nena, a pequenina;
+  e as armaduras miúdas na loja); o QUIM, o ladino da vila, e a TOCHA e a GAZUA na loja; a CRIPTA DA COVA VELHA (7 salas sob o mausoléu quebrado, o guardião no fundo;
+  o mapa é segredo do Mestre); e o TIÇÃO, um dragão jovem da serra que mora longe, na Serra Fria, e ataca Vau Seco (a pousada conta dele; daqui não se chega lá).
 """
 import os, sys
 import tabelas as T
@@ -84,25 +95,33 @@ def treino_da_mao(maestria):
     return {k: tabela(k)[g] for k, g in maestria.items() if g in tabela(k)}
 
 
-def _peca(tipo, qual, cat, cobre, de, dono):
+def _peca(tipo, qual, cat, cobre, de, dono, talhe=None):
     nome = dict(arma=qual, escudo='escudo').get(tipo) or ('elmo de ' + qual if cobre == ['cabeça'] else 'armadura de ' + qual)
-    return item(tipo, cat, f"{nome.capitalize()} de {de}", familia=qual if tipo == 'arma' else None, material=qual if tipo == 'armadura' else None, cobre=cobre, dono=dono)
+    mais = dict(talhe=talhe) if talhe and tipo == 'armadura' else {}         # a armadura do corpo miúdo (o pequenino, o gnomo) nasce feita para ele
+    return item(tipo, cat, f"{nome.capitalize()} de {de}", familia=qual if tipo == 'arma' else None, material=qual if tipo == 'armadura' else None, cobre=cobre, dono=dono, **mais)
 
 
-def _veste(E, pid, nome, pecas):
+def _veste(E, pid, nome, pecas, talhe=None):
     """as peças de alguém nascem (um evento) e são postas em uso (outro)"""
     if not pecas: return
     s0 = E['itens']['seq']
-    estado.aplica(E, 'gera', [['item', 'nasce', _peca(t, q, c, cb, nome, pid)] for t, q, c, cb, _ in pecas], onde=VILA['id'], quem=[pid], texto=f'as peças de {nome}')
+    estado.aplica(E, 'gera', [['item', 'nasce', _peca(t, q, c, cb, nome, pid, talhe)] for t, q, c, cb, _ in pecas], onde=VILA['id'], quem=[pid], texto=f'as peças de {nome}')
     estado.aplica(E, 'gera', [['item', f'i{s0 + k + 1:04d}', 'uso', 'poe', uso] for k, (_, _, _, _, uso) in enumerate(pecas) if uso], onde=VILA['id'], quem=[pid], texto=f'{nome} se veste')
 
 
-def cria(comeco='guerreiro', nome=None, semente=1, talentos=False, inclinacao=None):
+def cria(comeco='guerreiro', nome=None, semente=1, talentos=False, inclinacao=None, inclinacao2=None, povo=None):
     """o mundo da vila de teste, inteiro, por eventos "gera". Devolve o estado (quem chama grava).
     talentos: a gente nasce com os talentos e os dons pelo dado do mundo (a vila nova do comando nasce assim; a dos bancos, não: é a pessoa comum de hoje).
-    inclinacao: o caminho que o jogador escolhe para o personagem (só com talentos)."""
+    inclinacao: o caminho que o jogador escolhe para o personagem (só com talentos); inclinacao2: a segunda, só do personagem humano (etapa 4b, E2 b).
+    povo: o povo do personagem (etapa 4b): povos.nasce (os atributos, o povo, a idade), depois talento.nasce (a tendência do povo); as armaduras do começo no talhe dele.
+    Sem povo, o personagem de sempre (humano, sem o campo)."""
     if comeco not in COMECOS: sys.exit(f'começo desconhecido: "{comeco}" (os que há: {", ".join(COMECOS)})')
-    nasce = lambda pid, r, inc=None: talento.nasce(E, pid, r, inc) if talentos else r
+    if (inclinacao or inclinacao2) and not talentos: sys.exit('a inclinação só vale com os talentos rolados')
+    if povo is not None:
+        import povos, tabelas_povos as TP
+        if povo not in TP.POVOS: sys.exit(f'povo desconhecido: "{povo}" (os que há: {", ".join(TP.POVOS)}; `python3 povos.py lista`)')
+    if inclinacao2 is not None and (povo or 'humano') != 'humano': sys.exit('a segunda inclinação é só do personagem humano')
+    nasce = lambda pid, r, inc=None, inc2=None: talento.nasce(E, pid, r, inc, inc2) if talentos else r
     c = COMECOS[comeco]; nome = nome or NOMES[comeco]; E = estado.novo(semente); v, e = VILA, ERMO
     estado.aplica(E, 'gera', [['lugar', 'nasce', v['id'], dict(nome=v['nome'], em=v['em'], tipo='vila', cama=True, estoque={})],
                               ['lugar', 'nasce', e['id'], dict(nome=e['nome'], em=e['em'], tipo='ermo', habitat=e['habitat'], perigo=e['perigo'], longe=e['longe'], estoque={}, vizinhos=[v['id']],
@@ -115,9 +134,12 @@ def cria(comeco='guerreiro', nome=None, semente=1, talentos=False, inclinacao=No
         estado.aplica(E, 'gera', [['pessoa', 'nasce', pid, nasce(pid, dict(nome=n, nivel=nivel, atributos=padrao(n, nivel, molde=molde)['atributos'], lugar=v['id'], grau_oficio=grau, maestria=dict(maestria), treino=treino_da_mao(maestria), moedas=prata, sobre=sobre))]],
                       onde=v['id'], quem=[pid], texto=f'{n}, {sobre}')
         _veste(E, pid, n, pecas)
-    estado.aplica(E, 'gera', [['pessoa', 'nasce', 'eu', nasce('eu', dict(nome=nome, nivel=NIVEL, atributos=dict(c['atributos']), lugar=v['id'], grau_oficio=c['grau_oficio'], maestria=dict(c['maestria']), treino=dict(c['treino']),
-                                                              marca=dict(c['marca']), carga=dict(c['carga']), moedas=PRATA, jogador=True, sobre=c['sobre']), inclinacao)]], onde=v['id'], quem=['eu'], texto=f"{nome}, {c['sobre']}: o personagem")
-    _veste(E, 'eu', nome, c['pecas'])
+    r = dict(nome=nome, nivel=NIVEL, atributos=dict(c['atributos']), lugar=v['id'], grau_oficio=c['grau_oficio'], maestria=dict(c['maestria']), treino=dict(c['treino']),
+             marca=dict(c['marca']), carga=dict(c['carga']), moedas=PRATA, jogador=True, sobre=c['sobre'])
+    if povo is not None: r = povos.nasce(E, 'eu', r, povo)          # o povo primeiro: a tendência dele entra no dado do talento
+    estado.aplica(E, 'gera', [['pessoa', 'nasce', 'eu', nasce('eu', r, inclinacao, inclinacao2)]], onde=v['id'], quem=['eu'],
+                  texto=f"{nome}, {c['sobre']}: o personagem" + (f" (do povo dos {TP.PLURAL[povo]})" if povo not in (None, 'humano') else ''))
+    _veste(E, 'eu', nome, c['pecas'], povos.talhe(povo) if povo is not None else None)
     P = estado.valida(E)
     if P: sys.exit('A VILA DE TESTE NASCEU QUEBRADA (não foi gravada):\n  ' + '\n  '.join(P))
     return E
@@ -129,7 +151,13 @@ def resumo(E):
     return [f"{v['nome']}: {v['pop']} de povo, {v['estoque'].get('prata', 0)} de prata, {len(mercado.prateleira(E, VILA['id']))} peças na prateleira, pousada, forja (oficina {v['oficina']}).",
             f"{e['nome']}, a {e['longe']} bloco: " + ', '.join(f"{TB.ESPECIES[x]['nome']} {q}" for x, q in e['bichos'].items()) + f" (o raro: {', '.join(raro)}; o chefe: {', '.join(chefe)}); tira-se: " + ', '.join(mercado.nome_bem(b) for b in e['coleta']) + '.',
             'Gente com nome: ' + ', '.join(f"{q['nome']} ({q['sobre'].split(';')[0]})" for k, q in E['gente'].items() if k != 'eu') + '.',
-            f"O personagem: {p['nome']}, nível {p['nivel']}, {p['sobre']}; {p['moedas']} de prata; " + ', '.join(it['nome'] for it in E['itens']['itens'].values() if it.get('dono') == 'eu') + '.']
+            f"O personagem: {p['nome']}, nível {p['nivel']}, {p['sobre']}" + (f" (do povo dos {_plural(p['povo'])}, {p['idade']} anos)" if p.get('povo') not in (None, 'humano') else '')
+            + f"; {p['moedas']} de prata; " + ', '.join(it['nome'] for it in E['itens']['itens'].values() if it.get('dono') == 'eu') + '.']
+
+
+def _plural(povo):
+    import tabelas_povos as TP
+    return TP.PLURAL.get(povo, povo)
 
 
 # ---------- A ETAPA DA MAGIA na vila que já existe (vila_teste.py magia PASTA) ----------
@@ -216,9 +244,62 @@ def resumo_magia(E):
             f"Os talentos e os dons foram rolados (ninguém sabe o que tem: o talento aparece fazendo, o dom quando decide um teste)" + (f"; a inclinação de {eu['nome']}: {eu.get('inclinacao')}" if eu.get('inclinacao') else '') + '.']
 
 
+# ---------- A ETAPA 4b na vila que já existe (vila_teste.py fantasia PASTA) ----------
+def fantasia(E, inclinacao2=None):
+    """ACRESCENTA a etapa 4b (as masmorras e o mundo de fantasia) a uma vila de teste que já tem a magia, só por eventos (nada se recria), na ordem do contrato
+    (projeto/ETAPA_4B.md, seção 12): a manha de quem já nasceu (e a segunda inclinação do personagem humano, só no caminho que se rola agora), a gente de outros povos,
+    o Quim e a tocha e a gazua na loja, a Cripta da Cova Velha e o Tição em Vau Seco. Quem chama grava uma vez. Recusa, antes de mudar qualquer coisa, a segunda vez,
+    o mundo que não é a vila de teste e a vila sem a magia. Devolve (eventos, linhas)."""
+    import tabelas_talento as TT, tabelas_manha as TMH, tabelas_povos as TP, tabelas_dragoes as TD
+    import povos, manha, masmorra, dragoes
+    v, e = VILA['id'], ERMO['id']
+    if v not in E['lugares'] or e not in E['lugares'] or 'eu' not in E['gente']: sys.exit('este mundo não é a vila de teste (falta Pedra Rasa, a Mata do Corvo ou o personagem): o `fantasia` só acrescenta à vila de teste')
+    if COVA['id'] not in E['lugares']: sys.exit('esta vila ainda não tem a etapa da magia (a Cova Velha, sob a qual fica a cripta): rode antes `vila_teste.py magia PASTA`')
+    l = E['lugares'][v]
+    ja = [x for tem, x in (('cripta' in E['lugares'], 'a Cripta da Cova Velha'), (TMH.QUIM['id'] in E['gente'], 'o Quim'),
+                           (l.get('povos') is not None or any(g[0] in E['gente'] for g in TP.VILA['gente']), 'a gente de outros povos'),
+                           (TD.VILA_TESTE['aldeia']['id'] in E['lugares'] or TD.VILA_TESTE['covil']['id'] in E['lugares'], 'Vau Seco e o Tição'), (bool(l.get('feira_masmorra')), 'a tocha e a gazua na loja')) if tem]
+    if ja: sys.exit('a vila de teste já tem a etapa 4b (' + ', '.join(ja) + '): não se acrescenta duas vezes')
+    eu = E['gente']['eu']
+    if inclinacao2 is not None:
+        if inclinacao2 not in TT.CAMINHOS: sys.exit(f'inclinação desconhecida: "{inclinacao2}" (os caminhos: {", ".join(TT.CAMINHOS)})')
+        if eu.get('estado') != 'vivo': sys.exit(f"{eu['nome']} não está vivo: a segunda inclinação é do personagem")
+        if povos.de(eu) != 'humano': sys.exit('a segunda inclinação é só do personagem humano')
+        if eu.get('inclinacao2'): sys.exit(f"{eu['nome']} já tem a segunda inclinação ({eu['inclinacao2']})")
+        if inclinacao2 not in talento.falta(eu):
+            sys.exit(f"a segunda inclinação só vale num caminho que {eu['nome']} ainda não rolou ({', '.join(talento.falta(eu)) or 'nenhum'}): os outros já nasceram")
+    estado.sem_luta(E); n0 = E['relogio']['eventos']; L = []
+    # 1 O CAMINHO NOVO (a manha) de quem já nasceu: só esse caminho, os outros 16 e o dom ficam; um evento do gerador, segredo (vai ao SÓ O MESTRE do RETOMAR)
+    for c in TT.NOVOS:
+        ef, quem = [], []
+        for pid, p in list(E['gente'].items()):
+            if p.get('estado') == 'vivo' and c in talento.falta(p):
+                ef += talento.rola_caminho(E, pid, c, inclinacao2 if pid == 'eu' and inclinacao2 == c else None); quem.append(pid)
+        if ef:
+            estado.aplica(E, 'gera', ef, onde=v, quem=quem, texto=f"o caminho novo ({c}) de {estado.tantos(len(quem), 'pessoa')} foi rolado (ninguém sabe ainda o que tem)")
+            L.append(f"A {c} (o ofício do ladino, o 17º caminho) foi rolada para {estado.tantos(len(quem), 'pessoa')} que já tinham nascido: só o Mestre sabe quem leva jeito"
+                     + (f"; a segunda inclinação de {eu['nome']}: {inclinacao2}" if inclinacao2 == c else '') + '.')
+    # 2 a gente de outros povos · 3 o Quim, a tocha e a gazua na loja · 4 a Cripta da Cova Velha · 5 o Tição, longe, em Vau Seco
+    L += povos.na_vila(E, v)
+    L += manha.na_vila(E, v)
+    L += masmorra.na_vila(E, v)
+    L += dragoes.na_vila(E, v)
+    P = estado.valida(E)
+    if P: sys.exit('A ETAPA 4b ENTROU TORTA NA VILA (não foi gravada):\n  ' + '\n  '.join(P))
+    return E['relogio']['eventos'] - n0, L
+
+
 def main(a=None):
     a = sys.argv[1:] if a is None else list(a)
     op = dict(x.split('=', 1) for x in a if '=' in x); pos = [x for x in a if '=' not in x]
+    if pos[:1] == ['fantasia']:
+        if len(pos) != 2 or any(k != 'inclinacao2' for k in op): print(__doc__); return
+        pasta = os.path.abspath(pos[1])
+        if not os.path.exists(os.path.join(pasta, 'relogio.json')): sys.exit(f'{pasta} não tem um mundo (falta o relogio.json): crie a vila antes (`vila_teste.py PASTA`)')
+        os.environ['MOTOR10_MUNDO'] = pasta; E = estado.carrega()
+        n, L = fantasia(E, op.get('inclinacao2')); estado.grava(E)
+        print(f'A ETAPA 4b (as masmorras e o mundo de fantasia) entrou na vila de {pasta} ({n} eventos, nada recriado).\n'); print('\n'.join(L))
+        print('\nA MESA se refaz no próximo `turno.py abre`. O guia: GUIA_VILA.md (a descida: `masmorra.py ver`).'); return
     if pos[:1] == ['magia']:
         if len(pos) != 2 or any(k != 'inclinacao' for k in op): print(__doc__); return
         pasta = os.path.abspath(pos[1])
@@ -227,11 +308,11 @@ def main(a=None):
         n = magia(E, op.get('inclinacao')); estado.grava(E)
         print(f'A ETAPA DA MAGIA entrou na vila de {pasta} ({n} eventos, nada recriado).\n'); print('\n'.join(resumo_magia(E)))
         print('\nA MESA se refaz no próximo `turno.py abre`.'); return
-    if len(pos) != 1 or any(k not in ('comeco', 'nome', 'semente', 'inclinacao') for k in op): print(__doc__); return
+    if len(pos) != 1 or any(k not in ('comeco', 'nome', 'semente', 'inclinacao', 'inclinacao2', 'povo') for k in op): print(__doc__); return
     pasta = os.path.abspath(pos[0])
     if os.path.exists(pasta) and (not os.path.isdir(pasta) or os.listdir(pasta)): sys.exit(f'{pasta} já existe e não está vazia: não escrevo por cima. Escolha uma pasta nova.')
     if not op.get('semente', '1').isdigit(): sys.exit(f'semente= pede um número (veio "{op["semente"]}")')
-    E = cria(op.get('comeco', 'guerreiro'), op.get('nome'), int(op.get('semente', 1)), talentos=True, inclinacao=op.get('inclinacao'))
+    E = cria(op.get('comeco', 'guerreiro'), op.get('nome'), int(op.get('semente', 1)), talentos=True, inclinacao=op.get('inclinacao'), inclinacao2=op.get('inclinacao2'), povo=op.get('povo'))
     os.makedirs(pasta, exist_ok=True); os.environ['MOTOR10_MUNDO'] = pasta
     estado.grava(E); turno.abre(E)
     open(os.path.join(pasta, 'LEIA.md'), 'w', encoding='utf-8').write(

@@ -11,7 +11,7 @@ O que entra na conta (as regras estão no REGRAS.md; os números, no tabelas.py)
   12 A MAGIA (magia.py; os números, no tabelas_magia.py; capítulo 11): lançar (a Conjuração contra a Defesa, a área ou a Firmeza; a Mana que volta 1 por turno;
      o feitiço longo e a concentração; o retrochoque; lançar no osso), os estados com prazo, o calejo, o campo, a cura, beber na luta, a peça encantada,
      os nove traços novos e as fases do chefe. Só numa luta em que alguém traz magia: a luta sem magia é a de sempre, dado por dado.
-  13 A ETAPA 4b (o contrato: projeto/ETAPA_4B.md, seção 9): os traços do povo (vê no escuro: o escuro tira a metade; resiste a veneno: o veneno pela metade; a coragem
+  13 A ETAPA 4b (o contrato: projeto/ETAPA_4B.md, seção 9): os traços do povo (vê no escuro: no golpe o escuro tira a metade, no tiro pesa inteiro; resiste a veneno: o veneno pela metade; a coragem
      do povo no teste de coragem), o GOLPE PELAS COSTAS de quem tem a manha de Treinado, e a fase "foge" do chefe que voa (magia.fase). Só para quem tem o traço, a manha
      ou a fase: a luta de quem não tem é a de sempre, dado por dado.
 
@@ -281,7 +281,7 @@ def golpe(S, a, e, w, livre=''):
     bon = w['acerto'] + pa[0] - (T.SEM_FOLEGO if a['fol'] <= 0 else 0) + (T.ABALADO if a['abalado'] else 0)
     bon += sum(T.FERIDAS['braços'][1 if gr else 0] for p, gr in a['feridas'] if p == 'braços')
     bon += sum(T.TEMPO[k].get('tiro' if tiro else 'acerto', 0) for k in S['tempo'])
-    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro'): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * (1 - TP.ESCURO)      # quem vê no escuro (o povo, etapa 4b): o escuro tira só a metade
+    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro'): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * (1 - (TP.ESCURO_TIRO if tiro else TP.ESCURO))      # quem vê no escuro (o povo, etapa 4b): no golpe o escuro tira só a metade; no tiro, inteiro (ESCURO_TIRO)
     if S['lugar'].get('alto') == a['lado']: bon += T.ALTO['tiro' if tiro else 'acerto']
     if tiro and S['lugar'].get('cobertura') == e['lado']: bon += T.COBERTURA
     if entre(S, a, e) and S['lugar'].get('alto') != a['lado'] and not w.get('area'): bon += T.ENTRE

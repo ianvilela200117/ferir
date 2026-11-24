@@ -280,7 +280,7 @@ def _caca(n):
     achados = []; mal = []
     for s in range(1, 9):
         with Mundo(200 + s) as W:
-            E = W.E; c0 = CR.cabecas(E, 'mata'); p0 = prata_do_mundo(E); t0 = int(E['lugares']['mata']['estoque'].get('prata', 0))
+            E = W.E; c0 = CR.cabecas(E, 'mata'); p0 = prata_do_mundo(E); t0 = int(E['lugares']['mata']['estoque'].get('prata', 0)); n0 = E['relogio']['eventos']
             Rr = quieto(caca.sair, E, 'eu', 'mata', alvo='toca', blocos=6, com=['tome', 'rute']); k = 0; toca = None; viu = False
             while k < 16 and Rr.get('fase') in ('encontro', 'luta', 'procura') and E['gente']['eu']['estado'] == 'vivo':
                 k += 1
@@ -295,6 +295,7 @@ def _caca(n):
             evs = [json.loads(x) for x in open(os.path.join(W.d, 'eventos.jsonl'), encoding='utf-8')] if os.path.exists(os.path.join(W.d, 'eventos.jsonl')) else []
             evs += [ev for ev in E.get('_novos', [])]
             sai = -sum(ef[4] for ev in evs if ev.get('tipo') == 'despojo' for ef in ev['efeitos'] if ef[:3] == ['lugar', 'mata', 'bichos.goblin'])
+            nasceu = sum(ef[4] for ev in evs if ev.get('id', 0) > n0 and ev.get('tipo') == 'covil' for ef in ev['efeitos'] if ef[:3] == ['lugar', 'mata', 'bichos.goblin'] and isinstance(ef[4], (int, float)) and ef[4] > 0)      # a toca cria na virada (a vida da toca, evento "covil"): a saída que passa da meia-noite pode ver nascer um goblin; nada mais conta como nascer
             carga = {}
             for ev in evs:
                 if ev.get('tipo') == 'despojo':
@@ -304,12 +305,12 @@ def _caca(n):
             if P: mal.append(f'{s}: estado torto ({P[0]})')
             if prata_do_mundo(E) != p0: mal.append(f'{s}: a prata do mundo não fecha')
             if set(carga) - set(TC.ESPECIES['goblin']['despojo']) - {'comida'}: mal.append(f'{s}: despojo fora da tabela ({carga})')
-            achados.append(dict(toca=toca, viu=viu, sai=sai, c0=c0, c1=CR.cabecas(E, 'mata'), t0=t0, t1=lev, carga=carga, vivo=E['gente']['eu']['estado'] == 'vivo'))
+            achados.append(dict(toca=toca, viu=viu, sai=sai, nasceu=nasceu, c0=c0, c1=CR.cabecas(E, 'mata'), t0=t0, t1=lev, carga=carga, vivo=E['gente']['eu']['estado'] == 'vivo'))
     tocas = [a for a in achados if a['toca']]; levou = [a for a in tocas if a['t1'] == 0 and a['t0'] > 0]
-    ok = not mal and len(tocas) >= 3 and len(levou) >= 1 and all(a['c1'] <= a['c0'] for a in achados) and sum(a['sai'] for a in achados) > 0
+    ok = not mal and len(tocas) >= 3 and len(levou) >= 1 and all(a['c1'] <= a['c0'] + a['nasceu'] for a in achados) and sum(a['sai'] for a in achados) > 0      # a contagem não sobe, a não ser de quem nasceu na toca
     return [('C9 A CAÇA COM CRIATURAS, PELO CAMINHO DA MESA (caca.py sair mata alvo=toca, atacar, luta, as contas): a toca acha-se com rolagem oculta e a frase da toca sai; a luta abre pelo arquivo do cenário '
              '(a forma curta refaz o goblin pelo bichos.bicho); quem morre sai da contagem; o despojo é a sucata da tabela; quem fica com o campo na toca leva o tesouro inteiro; a prata do mundo fecha',
-             f"{len(achados)} saídas: acharam a toca {len(tocas)}; levaram o tesouro {len(levou)}; goblins que saíram da contagem: {sum(a['sai'] for a in achados)}; "
+             f"{len(achados)} saídas: acharam a toca {len(tocas)}; levaram o tesouro {len(levou)}; goblins que saíram da contagem: {sum(a['sai'] for a in achados)} (nasceram na toca, nas saídas que passaram da meia-noite: {sum(a['nasceu'] for a in achados)}); "
              f"o despojo somado: {dict((b, sum(a['carga'].get(b, 0) for a in achados)) for b in TC.ESPECIES['goblin']['despojo'])}; vivos no fim: {sum(a['vivo'] for a in achados)}" + (f" · tortos: {'; '.join(mal[:3])}" if mal else ''), ok)]
 
 

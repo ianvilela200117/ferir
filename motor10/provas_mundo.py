@@ -617,7 +617,8 @@ def main():
                          ('provas_talento', 'etapa da magia: o alicerce (os dons e os talentos; os verbos, os tipos e os ganchos)'),
                          ('provas_magia', 'etapa da magia: o mundo da magia'), ('provas_criaturas', 'etapa da magia: as criaturas e a vila'),
                          ('provas_4b', 'etapa 4b: o alicerce (o vocabulário comum: os campos, os verbos, os invariantes; o despojo pela categoria; o 17º caminho; a luta de quem tem o traço)'),
-                         ('provas_masmorra', 'etapa 4b: a masmorra'), ('provas_manha', 'etapa 4b: o ladino'), ('provas_povos', 'etapa 4b: os povos'), ('provas_dragoes', 'etapa 4b: os dragões')):     # os que ainda não existem ficam de fora
+                         ('provas_masmorra', 'etapa 4b: a masmorra'), ('provas_manha', 'etapa 4b: o ladino'), ('provas_povos', 'etapa 4b: os povos'), ('provas_dragoes', 'etapa 4b: os dragões'),
+                         ('provas_fantasia', 'etapa 4b: a integração (vila_teste.py fantasia, povo=, o covil pela masmorra, quem vê no escuro, a mina)')):     # os que ainda não existem ficam de fora
         try: mod = importlib.import_module(nome)
         except ModuleNotFoundError as e:
             if e.name != nome: raise

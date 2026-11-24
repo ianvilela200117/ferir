@@ -167,7 +167,8 @@ def _luta(n):
         S = luta.nova([a], [b], inicio=ini, tempo=list(tempo), quieto=True); A, B = S['L']
         return _bonus(S, A, B, A['arma'])
     g = duelo(['vê no escuro']) - duelo([]); t = duelo(['vê no escuro'], 'arco', ini='longe') - duelo([], 'arco', ini='longe'); c = duelo(['vê no escuro'], tempo=()) - duelo([], tempo=())
-    R[f'vê no escuro: +{g:g} no golpe e +{t:g} no tiro, no escuro; +{c:g} no claro'] = g == 2 and t == 4 and c == 0
+    t0 = -T.TEMPO['escuro']['tiro'] * (1 - TP.ESCURO_TIRO)      # o tiro de quem vê no escuro: a fração ESCURO_TIRO do escuro pesa (hoje 1,0: inteiro, nada a menos)
+    R[f'vê no escuro: +{g:g} no golpe e +{t:g} no tiro, no escuro (a página dá +{t0:g}); +{c:g} no claro'] = g == 2 and t == t0 and c == 0
     aranha = bichos.bicho('aranha'); vn = {}
     for tr in ([], ['resiste a veneno']):
         S = luta.nova([aranha], [veste(padrao('h', 30, tracos=tr), arma=('espada', 1))], inicio='colado', quieto=True); A, B = S['L']

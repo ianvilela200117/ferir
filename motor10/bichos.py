@@ -164,6 +164,10 @@ def _tamanho_diz(t, fem):
 def ameaca(esp, n=None, arma=None, armadura=None):
     """a frase que o caçador lê ANTES da luta: o grau, o tamanho, o corpo, o que se sabe, se foge. Com n, quantos são;
     com a categoria da arma e da armadura de quem lê, a conta da regra de ouro já feita."""
+    TD = _td(); dr = (TD.ESPECIES.get(esp) or {}).get('dragao') if TD else None
+    if isinstance(dr, dict):                    # o dragão (etapa 4b): a frase dele é a do dragoes.ameaca (a fase, a fuga pelo ar, o coração)
+        import dragoes
+        return dragoes.ameaca(dr['tipo'], dr['idade'], arma=arma, armadura=armadura)
     if _povo_ou_chefe(esp):
         import criaturas
         return criaturas.ameaca_chefe(esp) if esp not in (_tc().ESPECIES) else criaturas.ameaca(esp, n=n, arma=arma, armadura=armadura)

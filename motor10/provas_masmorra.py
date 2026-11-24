@@ -22,6 +22,7 @@ from itens import item
 from pessoas import padrao, veste, ficha
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
+VEM_DE_FORA = 120           # a faixa da MA13 (o projeto A e o capítulo 17.12): o bando de fora chega 120 dias depois de o nível ficar vazio (a prova confere contra isto, e não contra a página)
 ROBO = dict(recua=0.30, foge=0.35, prudente=0.75, tentativas=4, dias6=20, dias4=60, tochas=6)      # o robô: o Maro recua na luta abaixo de 30% do PV; o grupo sai abaixo de 35%; o prudente não abre a porta do fundo com alguém abaixo de 75%
 
 
@@ -119,7 +120,7 @@ def desce(E, pid, com, ordem=None, ladino=None, prudente=True, conta=None, mid='
     t0 = (E['gente'][pid].get('carga') or {}).get('tocha', 0)
     o = list(ordem or [pid] + list(com))
     R = quieto(MS.descer, E, pid, mid, com=com, ordem=o, luz='tocha' if t0 else 'nada', quem_luz=pid if t0 else None)
-    feitas = set(); procurou = set(); fundo = MS.fundo(E, mid); visitou = set(); tenta = {}; pausas = 0
+    feitas = set(); procurou = set(); fundo = MS.fundo(E, mid); visitou = set(); tenta = {}; pausas = 0; pegou = set()
     for passo in range(600):
         p = E['gente'][pid]; d = MS.descida(p)
         if not d: break
@@ -160,8 +161,12 @@ def desce(E, pid, com, ordem=None, ladino=None, prudente=True, conta=None, mid='
                         melhor = max(g, key=lambda c: E['gente'][c]['atributos']['Agilidade'] + 100 * bool(c == ladino))
                         quieto(MS.abrir, E, pid, 'guardado', 'gazua' if __import__('manha').gazua_de(E, melhor) else 'grampo', quem=melhor); continue
                     quieto(MS.abrir, E, pid, 'guardado', 'força', quem=max(g, key=lambda c: E['gente'][c]['atributos']['Força'])); continue
-            if MS._tesouro(E, sid) and not MS.ocupada(E, sid) and (not isinstance(gd, dict) or gd.get('aberto')):
-                quieto(MS.pegar, E, pid); continue
+            tes = MS._tesouro(E, sid)
+            if tes and (sid, tes) not in pegou and not MS.ocupada(E, sid) and (not isinstance(gd, dict) or gd.get('aberto')):
+                pegou.add((sid, tes))                           # a peça cuja parte dos outros quem pega não tem como pagar segue ali: o robô não tenta de novo a mesma coisa
+                try: quieto(MS.pegar, E, pid)
+                except SystemExit: pass
+                continue
             if sid == fundo and not MS.ocupada(E, sid) and sid not in procurou: procurou.add(sid); quieto(MS.procurar, E, pid); continue
             # a próxima sala: a que o grupo ainda não viu (a porta trancada pede a chave, a gazua ou a força); o prudente não abre a do fundo com alguém abaixo de 75%
             def cands(x): return [v for v in MS._viz(E, x) if v not in visitou and not (prudente and v == fundo and _fraco(E, g, ROBO['prudente'])) and tenta.get(('porta', v), 0) < 2 * ROBO['tentativas']]
@@ -271,18 +276,15 @@ def vida(semente, quem='grupo', dias=ROBO['dias6'], prudente=True, vender=False,
 
 def esgotada(E, mid='cripta'):
     """o tesouro que o gerador pôs já foi levado (nenhuma prata nas salas, nenhuma peça sem dono nelas): daí em diante, só rende o que volta"""
-    return not any(int((E['lugares'][x].get('estoque') or {}).get('prata', 0)) for x in MS.salas(E, mid)) and not any(it.get('onde') in MS.salas(E, mid) and not it.get('dono') and not estado.de_morto(it) for it in E['itens']['itens'].values())
+    return not any(int(estado.livre(E, x).get('prata', 0)) for x in MS.salas(E, mid)) and not any(it.get('onde') in MS.salas(E, mid) and not it.get('dono') and not estado.de_morto(it) for it in E['itens']['itens'].values())
 
 
 def _quim(E):
-    """um ladino de rascunho (o da frente L é o Quim da vila; aqui, um igual a ele, para a prova não depender do outro banco): nível 14, manha de Iniciante, adaga e couro Comuns, uma gazua Comum"""
+    """o Quim da vila de teste, o de verdade (onda 3: manha.na_vila, da frente L): nível 14, manha de Iniciante, adaga e couro Comuns, uma gazua Comum, com o talento e o
+    dom rolados pelo dado do mundo; e a loja da vila passa a vender a tocha e a gazua"""
     if 'quim' in E['gente']: return
-    r = dict(nome='Quim', nivel=14, atributos=padrao('Quim', 14, molde='arqueiro')['atributos'], lugar='vila', grau_oficio='diarista', maestria={'adaga': 2, 'manha': 2}, treino={'adaga': 40, 'manha': 40}, moedas=10,
-             sobre='o sobrinho do Lino, que abre trinco e anda calado')
-    estado.aplica(E, 'gera', [['pessoa', 'nasce', 'quim', r]], onde='vila', quem=['quim'], texto='Quim')
-    s = E['itens']['seq']
-    estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 0, familia='adaga', dono='quim')], ['item', 'nasce', item('armadura', 0, material='couro', dono='quim')], ['item', 'nasce', item('gazua', 0, dono='quim')]], onde='vila', quem=['quim'], texto='as peças de Quim')
-    estado.aplica(E, 'gera', [['item', f'i{s + 1:04d}', 'uso', 'poe', 'arma'], ['item', f'i{s + 2:04d}', 'uso', 'poe', 'veste']], onde='vila', quem=['quim'], texto='Quim se veste')
+    import manha
+    quieto(manha.na_vila, E, 'vila')
 
 
 def main():
@@ -563,7 +565,7 @@ def _ma13(n):
             MS.virada(E)
             if sum(MS.bichos_de(E, 'cripta_3').values()) + sum(MS.bichos_de(E, 'cripta_2').values()) > antes: er.append(dia + 1)
         ergue_ok = er[:5] == [10, 20, 30, 40, 50] and MS.bichos_de(E, 'cripta_2').get('corpo-seco', 0) == 2 and MS.bichos_de(E, 'cripta_3').get('esqueleto', 0) == 3 and len(er) == 5
-    ok = not mal and len(chega) == mundos and all(x == K.MEMORIA['vem_de_fora'] for x in chega) and ergue_ok and all(x is not None for x in ratos)
+    ok = not mal and len(chega) == mundos and all(x == VEM_DE_FORA for x in chega) and ergue_ok and all(x is not None for x in ratos)
     return [('MA13 A MEMÓRIA (um ano da cripta limpa, sozinha, em vários mundos): o morto não volta sem chefe; o rato volta e não passa do teto; o bando de fora chega 120 dias depois de o nível ficar vazio; '
              'o tesouro não volta; a prata fecha. E o chefe vivo ergue um morto a cada 10 dias, até o que a sala tinha',
              f"{mundos} mundos; " + (f"tortos: {'; '.join(mal)}" if mal else 'o morto não voltou, o rato ficou no teto, o tesouro não voltou e a prata fechou em todos') + f"; o rato voltou no dia {', '.join(str(x) for x in ratos)}; "
@@ -668,9 +670,82 @@ def _ma16(n):
              ' · '.join(R) if not ruim else 'ERRADO: ' + ' · '.join(ruim), not ruim)]
 
 
+def _capela(E, mais=()):
+    """a prova do tesouro: a capela e o caminho até ela sem ninguém e sem armadilha (o baú segue com a fechadura); o grupo de três desce e chega lá"""
+    ef = [['lugar', x, 'bichos', 'poe', {}] for x in ('cripta_2', 'cripta_3', 'cripta_4')] + [['lugar', x, 'armadilhas', 'poe', []] for x in ('cripta_2', 'cripta_4')]
+    estado.aplica(E, 'mestre', ef + list(mais), texto='a capela vazia (a prova)')
+    quieto(MS.descer, E, 'eu', 'cripta', com=['tome', 'rute'], luz='tocha'); quieto(MS.ir, E, 'eu', 'cripta_2'); quieto(MS.ir, E, 'eu', 'cripta_4')
+
+
+def _ma17(n):
+    """MA17. O TESOURO E QUEM O LEVA: o que ficou junto do corpo de quem morreu na sala não é tesouro (nem no "Dentro:", nem no pegar, nem sai do estoque sem o Mestre);
+    e quem fica com a peça paga a cada um dos outros a parte dele nela (sem a prata, a peça segue ali, e outro do grupo pode pegá-la pagando)"""
+    R = {}
+    with pasta():
+        E = vila(1); _capela(E, [['pessoa', 'tome', 'moedas', 'soma', 40], ['pessoa', 'tome', 'carga.osso:0', 'soma', 4]])
+        leva = E['gente']['tome']['moedas']; p0 = prata_do_mundo(E)
+        estado.aplica(E, 'mestre', [['pessoa', 'tome', 'estado', 'poe', 'morto']], texto='Tomé morre na capela (a prova)')
+        R['a prata e a carga do morto ficam junto do corpo'] = estado.junto(E, 'cripta_4') == {'prata': leva, 'osso:0': 4}
+        with dado_posto([5]): t = quieto(MS.abrir, E, 'eu', 'guardado', 'força')['texto']
+        dentro = next((x for x in t.split('\n') if x.startswith('Dentro')), '')
+        R['o "Dentro:" do baú é só o tesouro'] = dentro.startswith('Dentro: 25 de prata') and 'osso' not in dentro
+        m0 = E['gente']['eu']['moedas'] + E['gente']['rute']['moedas']
+        quieto(MS.pegar, E, 'eu')
+        R['o pegar reparte só o tesouro'] = E['gente']['eu']['moedas'] + E['gente']['rute']['moedas'] - m0 == 25 and E['lugares']['cripta_4']['estoque'].get('prata') == leva and estado.junto(E, 'cripta_4').get('osso:0') == 4
+        R['a mesa diz o que ficou junto do corpo'] = any('junto de um corpo' in x and f'{leva} de prata' in x for x in MS._aqui(E, 'eu'))
+        R['o estoque não larga a parte do morto sozinho'] = bool(recusa(lambda: estado.aplica(E, 'mestre', [['estoque', 'cripta_4', 'prata', 'soma', -1], ['pessoa', 'eu', 'moedas', 'soma', 1]], texto='a prova')))
+        estado.aplica(E, 'mestre', [['lugar', 'cripta_4', 'do_morto.prata', 'soma', -leva], ['estoque', 'cripta_4', 'prata', 'soma', -leva], ['pessoa', 'rute', 'moedas', 'soma', leva]], texto='a cena: Rute fica com a bolsa de Tomé (a prova)')
+        R['o Mestre a solta, no mesmo evento'] = estado.junto(E, 'cripta_4') == {'osso:0': 4} and not estado.valida(E) and prata_do_mundo(E) == p0
+        quieto(MS.sair, E, 'eu')
+        E = vila(1); escudo = item('escudo', 1, 'o escudo de bronze', historia=['a prova']); escudo.update(onde='cripta_4')
+        _capela(E, [['pessoa', 'eu', 'moedas', 'soma', -E['gente']['eu']['moedas']], ['pessoa', 'tome', 'moedas', 'soma', 60], ['item', 'nasce', escudo]])
+        iid = next(i for i, it in E['itens']['itens'].items() if it['nome'] == 'o escudo de bronze'); p0 = prata_do_mundo(E)
+        with dado_posto([5]): quieto(MS.abrir, E, 'eu', 'guardado', 'força')
+        pe = MS.parte_peca(E, E['itens']['itens'][iid], 3, 'vila'); m = {c: E['gente'][c]['moedas'] for c in ('eu', 'tome', 'rute')}
+        r1 = quieto(MS.pegar, E, 'eu'); pm = sum(pp for i, pp in ((i, MS.parte_peca(E, E['itens']['itens'][i], 3, 'vila')) for i in r1['itens']))
+        R['sem a prata da parte dos outros, a peça segue ali'] = iid in r1['deixou'] and not E['itens']['itens'][iid].get('dono') and pe > 0
+        R['quem fica com a peça paga a parte de cada um'] = r1['pagou'] == ({'tome': pm, 'rute': pm} if pm else {}) and E['gente']['eu']['moedas'] == m['eu'] + r1['partes']['eu'].get('prata', 0) - 2 * pm
+        m = {c: E['gente'][c]['moedas'] for c in ('eu', 'tome', 'rute')}
+        quieto(MS.pegar, E, 'eu', iid, quem='tome')
+        R['outro do grupo a pega, pagando'] = E['itens']['itens'][iid].get('dono') == 'tome' and E['gente']['tome']['moedas'] == m['tome'] - 2 * pe and E['gente']['eu']['moedas'] == m['eu'] + pe and E['gente']['rute']['moedas'] == m['rute'] + pe
+        R['a prata do mundo fecha, o estado inteiro'] = prata_do_mundo(E) == p0 and not estado.valida(E)
+    ruim = [k for k, v in R.items() if not v]
+    return [('MA17 O TESOURO E QUEM O LEVA: o que ficou junto do corpo de quem morreu na sala (a prata e a carga dele) não é tesouro: não entra no "Dentro:", o pegar não o reparte, '
+             'e o estoque não o larga sem o Mestre (que o solta no mesmo evento); quem fica com a peça paga a cada um dos outros a parte dele nela (o que a loja de casa daria, dividido pelo grupo); '
+             'sem a prata, a peça segue ali, e outro do grupo pode pegá-la pagando',
+             ' · '.join(R) if not ruim else 'ERRADO: ' + ' · '.join(ruim), not ruim)]
+
+
+def _ma18(n):
+    """MA18. A ENTRADA ROLA UMA VEZ: o bloco que fecha no caminho fecha antes de o grupo olhar a sala; quem vagueia e chega acha o grupo com quem mora ali: um encontro só,
+    uma atenção só, e a surpresa rolada fica. A mesa separa quem chega de quem já estava ali"""
+    R = {}
+    with pasta():
+        E = vila(1)
+        estado.aplica(E, 'mestre', [['lugar', 'cripta_2', 'bichos', 'poe', {}], ['lugar', 'cripta_2', 'armadilhas', 'poe', []], ['lugar', 'cripta_4', 'atento', 'poe', 1], ['lugar', 'cripta', 'vagantes', 'poe', {'corpo-seco': 1}]], texto='a prova')
+        quieto(MS.descer, E, 'eu', 'cripta', com=['tome', 'rute'], luz='tocha'); quieto(MS.ir, E, 'eu', 'cripta_2')
+        d = copy.deepcopy(MS.descida(E['gente']['eu'])); d['lances'] = MS.K.LANCES_BLOCO - 1
+        estado.aplica(E, 'mestre', [['pessoa', 'eu', 'marca.masmorra', 'poe', d]], texto='o bloco quase fechando (a prova)')
+        atencoes = []; real_at, real_vaga = MS._atencao, MS.rola_vaga
+        def conta(*a): r = real_at(*a); atencoes.append(r); return r
+        MS._atencao = conta; MS.rola_vaga = lambda E_, pid: ('corpo-seco', 1)
+        try:
+            with dado_posto([-5]): t = quieto(MS.ir, E, 'eu', 'cripta_4')['texto']
+        finally: MS._atencao, MS.rola_vaga = real_at, real_vaga
+        enc = (MS.descida(E['gente']['eu']) or {}).get('encontro') or {}
+        R['uma atenção só, na entrada que fecha o bloco'] = len(atencoes) == 1
+        R['a surpresa rolada fica'] = bool(atencoes) and enc.get('surpresa') == atencoes[0] == 'A' and 'DESPREVENIDO' in t
+        R['quem chega e quem já estava ali'] = 'CHEGA: o corpo-seco.' in t and '4 ratazanas já estavam ali.' in t and 'CHEGAM: 4 ratazanas' not in t
+        R['o encontro tem todos os da sala'] = enc.get('n') == {'ratazana': 4, 'corpo-seco': 1}
+    ruim = [k for k, v in R.items() if not v]
+    return [('MA18 A ENTRADA ROLA UMA VEZ: o bloco que fecha no caminho fecha antes de o grupo olhar a sala; quem vagueia e chega acha o grupo com quem mora ali (um encontro, uma atenção, '
+             'e a surpresa rolada fica); a mesa diz quem chega e quem já estava ali',
+             ' · '.join(R) if not ruim else 'ERRADO: ' + ' · '.join(ruim), not ruim)]
+
+
 def provas(n=300):
     out = []
-    for f in (_ma0, _ma1, _ma2_3, _ma5, _ma7, _ma12, _ma13, _ma14, _ma15, _ma16, _ma6, _ma4):
+    for f in (_ma0, _ma1, _ma2_3, _ma5, _ma7, _ma12, _ma13, _ma14, _ma15, _ma16, _ma17, _ma18, _ma6, _ma4):
         try: out += f(n)
         except (Exception, SystemExit) as x:
             import traceback; out.append((f'{f.__name__}: a prova quebrou', f'{type(x).__name__}: {x} · ' + ' | '.join(traceback.format_exc().splitlines()[-4:-1]).strip(), False))

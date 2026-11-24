@@ -8,7 +8,7 @@ A vila de teste é um mundo pequeno para experimentar o Motor 10 depois da etapa
 De dentro de `motor10/`:
 
 ```
-python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N] [inclinacao=CAMINHO]
+python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N] [inclinacao=CAMINHO] [inclinacao2=CAMINHO] [povo=POVO]
 export MOTOR10_MUNDO=PASTA
 python3 turno.py abre
 ```
@@ -20,6 +20,12 @@ Sem `comeco=`, o personagem é o guerreiro. Sem `nome=`: Aldo (ferreiro), Cira (
 mexe na pressa de aprender e no teto da mão) e, raramente, um dom (+1 ou +2 num caminho só). A **INCLINAÇÃO** é a escolha do jogador para o personagem: `inclinacao=` um dos
 caminhos (`fio`, `haste`, `peso`, `tiro`, `forja`, `couro`, `caça`, `coleta`, `comércio`, `cura`, `alquimia`, `encanto`, `arcano`, `fé`, `verde`, `pacto`); naquele caminho o dado rola
 duas vezes e vale o melhor. Ninguém sabe o que tem: o talento aparece depois de 20 blocos no caminho; o dom, no teste em que fez a diferença (ou quando alguém o lê). O Mestre vê tudo no SÓ O MESTRE.
+
+**O povo do personagem (etapa 4b).** `povo=` um dos seis: `humano` (a medida de todos), `anão`, `elfo`, `meio-orc`, `pequenino`, `gnomo` (`python3 povos.py lista`; um por inteiro:
+`python3 povos.py ver anão`). Sem `povo=`, o personagem é humano, como sempre. O povo mexe nos atributos com a soma igual, dá de nenhum a dois traços (vê no escuro, resiste a veneno), uma
+coragem, a tendência nos talentos (um caminho a favor, um contra), a idade (a de adulto do povo mais um d10) e um +2 num teste do ladino. O pequenino e o gnomo têm o corpo miúdo: as
+peças do começo deles já nascem miúdas, e a armadura de gente grande só serve depois que um ferreiro a ajusta (`oficio.py ajustar ITEM para=ID`). **A segunda inclinação** (`inclinacao2=`,
+outro caminho que não o da primeira) é só do personagem humano: escolher humano é aprender duas coisas depressa. Os caminhos agora são 17: os de antes e a `manha` (o ladino).
 
 **A etapa da magia numa vila que já existe** (o save de quem já joga, como o `ensaio/`):
 
@@ -34,6 +40,19 @@ escolher uma: só vale enquanto o talento dele não foi rolado); **Anselmo**, o 
 da choupana na borda da mata (pacto: lê, amaldiçoa por encomenda, vende veneno de lâmina escondido); **o Grande Dom de forja do Zeca**, que ninguém leu; **a Cova Velha**, um
 ermo novo vizinho da vila (esqueletos e corpos-secos, e uma peça largada no chão que é maldita); e **a toca dos goblins** na Mata do Corvo (um bando pequeno, com um tesouro miúdo
 que é o que ele rouba da vila).
+
+**A etapa 4b numa vila que já tem a magia** (as masmorras, o ladino, os povos e os dragões; o `ensaio/` de hoje):
+
+```
+python3 vila_teste.py fantasia PASTA [inclinacao2=CAMINHO]
+```
+
+Acrescenta, só por eventos e sem recriar nada (recusa rodar duas vezes, e recusa a vila sem a magia): **a manha** (o 17º caminho) rolada para quem já tinha nascido, só esse caminho
+(os outros 16 e o dom não mudam; só o Mestre sabe quem leva jeito); **a segunda inclinação do personagem humano**, que só vale no caminho que se rola agora (`inclinacao2=manha`);
+**a gente de outros povos** (Durva, a anã ferreira de passagem; Brasco, o meio-orc guarda de caravana; Ilvena, a elfa caçadora; Nena Ramalho, a pequenina que faz o pão da pousada),
+e três armaduras miúdas na loja; **o Quim**, o ladino da vila, e **a tocha e a gazua na loja**; **a Cripta da Cova Velha**, sob o mausoléu quebrado (o mapa é do Mestre); e
+**o Tição**, um dragão jovem que mora longe, na Serra Fria, e ataca Vau Seco (a pousada conta dele; daqui não há estrada até lá). A prata que nasce: a da cripta (80), a da gente nova
+(117) e a de Vau Seco com o tesouro do Tição (900). O Maro segue humano. Depois, `turno.py abre`.
 
 ## O que há
 
@@ -74,6 +93,20 @@ A contagem é do Mestre (`caca.py conta`; na `MESA.md`, fica na seção SÓ O ME
 | Lino | o mercador da loja | 10 | nenhuma |
 | Zeca | o aprendiz da forja | 3 | nenhuma |
 
+**Com a etapa 4b** (`vila_teste.py fantasia`), Pedra Rasa ganha a gente de outros povos e o ladino, e a Cova Velha ganha a cripta:
+
+| Quem | O que é | Nível | Peças |
+| --- | --- | --- | --- |
+| Quim | o ladino da vila, sobrinho do Lino (manha de Iniciante); abre trinco, anda calado, acha o que os outros não veem | 14 | adaga, couro, uma gazua Comum |
+| Durva | anã, ferreira de passagem (Treinada no martelo; vê no escuro, o veneno pega pela metade); vai junto se a chamam | 34 | martelo e couro Incomuns |
+| Brasco | meio-orc, guarda de caravana de passagem (Treinado no malho); viu o que o dragão deixou em Vau Seco | 26 | malho, malha |
+| Ilvena | elfa, caçadora de passagem (Treinada no arco e no rastro; vê no escuro) | 38 | arco Incomum, adaga, couro Incomum |
+| Nena Ramalho | pequenina, faz o pão da pousada; mora na vila | 9 | nenhuma |
+
+A loja passa a vender **a tocha** (1 de prata; arde um bloco) e **a gazua** (10 de prata a Comum; a loja paga 4 por ela de volta), e três armaduras miúdas Comuns (couro, malha, elmo).
+**A Cripta da Cova Velha** fica sob o mausoléu quebrado da Cova Velha, a 1 bloco: o povo diz que os mortos da Cova Velha subiam de uma escada. A `MESA.md` a mostra no "Aqui"
+("Perto daqui"); o que há lá dentro, só descendo (`masmorra.py ver`). **Vau Seco e o Tição** só se contam: a pousada fala do dragão que leva gado de lá.
+
 **O personagem** (nível 5, 30 de prata, atributos que somam 340):
 
 | Começo | A mão de Iniciante | Peças Comuns | Leva |
@@ -109,6 +142,10 @@ O Mestre abre com `python3 turno.py abre`: a `MESA.md` traz o personagem, o luga
 | as poções | `alquimia.py ver` · `alquimia.py beber cura:0 [alvo=ID]` · `alquimia.py pede cura Comum` · `alquimia.py fazer cura Comum` · `alquimia.py lamina` (o veneno na arma); na luta, a ordem `beber cura:0` |
 | a maldição | `maldicao.py ver` (o que a pessoa sabe) · `maldicao.py rito ALVO quem=lucia` · `maldicao.py devolver ITEM` · `maldicao.py mestre` (SÓ O MESTRE) |
 | o encanto e as criaturas | `encanto.py ver\|pede\|fazer\|gravar` (pede mesa de runas: a vila de teste não tem) · `criaturas.py lista\|ver\|ameaca` · na luta, `lancar FEITICO [em ALVO]` e `usar [PECA]` |
+| descer à masmorra (etapa 4b) | `masmorra.py ver` · `masmorra.py descer [cripta] com=tome,rute ordem=tome,eu,rute luz=tocha` (a tocha se compra: `mercado.py comprar tocha 3`) |
+| lá dentro | `masmorra.py ir SALA [escondido]` · `escutar SALA` · `procurar` · `abrir SALA\|guardado [chave\|gazua\|grampo\|força]` · `desarmar [N]` · `contornar [N]` · `disparar [N]` · `pegar` · `descansar N vigia=ID` · `ordem ID,ID` · `luz tocha [quem=ID]` · `voltar` · `sair` (com `quem=ID`, faz quem você disser) |
+| diante de quem aparece | `masmorra.py atacar [inicio=perto] [passagem]` · `esperar` · `recuar` · `punhado` (o tesouro do dragão que dorme) · a luta: `masmorra.py luta "Nome: atacar" ["grupo: atacar"]` até acabar (as contas saem sozinhas) |
+| o ladino, os povos, os dragões | `manha.py ver [ID]` · `manha.py chance gazua Incomum` · `manha.py treinar N` (com gazua) · `oficio.py forjar gazua Comum` · `povos.py lista\|ver POVO` · `dragoes.py lista\|ver serra jovem\|ameaca serra jovem` · SÓ O MESTRE: `masmorra.py mapa` · `dragoes.py covil` |
 
 Enquanto há uma luta aberta, o mundo não anda: todo outro ato é recusado, de qualquer pessoa, até a luta acabar ou o Mestre a soltar (`ato.py luta larga ARQ.json "por quê"`; na caça, `caca.py larga "por quê"`). A recusa diz como seguir.
 Com a luta aberta, a última linha de cada comando diz só a hora: o PV, o fôlego e as feridas que valem são os do quadro da luta. De quem morreu, a última linha diz só a hora e a morte.
@@ -156,9 +193,32 @@ Só sai da luta quem recua para longe de inimigo de pé: se o último bicho cai 
 - **Os outros.** `criaturas.py lista` mostra as 19 criaturas e os 5 chefes mágicos (o xamã goblin, o senhor da guerra orc, o necromante, a bruxa do brejo, o senhor vampiro);
   `criaturas.py ver NOME` dá a ficha. Fora da vila de teste, o Mestre funda um covil com `criaturas.py covil poe ERMO goblin` (ou `orc`).
 
+## A Cripta da Cova Velha e o ladino (etapa 4b)
+
+- **A luz decide.** Sem tocha, quem não vê no escuro anda no dobro, não procura, não abre fechadura e não desarma, e luta com −4 no golpe e −8 no tiro. Medido: Maro, Tomé e Rute
+  contra seis esqueletos vencem perto de 8 em 10 com luz e de 3 em 10 no escuro. A tocha custa 1 de prata e arde um bloco: leve três para uma descida. **Ver no escuro ajuda fora da luta
+  mais que dentro dela:** o grupo em que todos veem no escuro anda e procura sem tocha; o grupo misto anda no passo de quem não vê; e na luta, contra os esqueletos (que veem no escuro),
+  quem vê no escuro tira só a metade do escuro no golpe, e o arco segue pesando inteiro: o mesmo grupo, vendo no escuro, vence 31 em 100 (no escuro, sem ver, 28).
+- **A ordem de marcha.** Quem vai na frente vê a armadilha de passagem (6 mais difícil que procurando) e é quem ela pega; o guarda de escudo na frente, o arqueiro atrás. O Quim na frente
+  procura e desarma: com ele, o grupo prudente limpa a cripta 99 vezes em 100, e o Maro morre em 1 (sem ele, 95 e 5).
+- **O corredor de um é amigo contra muitos** (`atacar passagem`: eles vêm um a um) **e inimigo contra o dragão.** O ossário largo, puxe para o corredor dos nichos.
+- **O fundo mata.** A porta de ferro dos degraus avisa: a câmara do guardião é outra coisa. Descanse antes (em casa, ou ali com vigia: `descansar 2 vigia=tome`), e volte para casa se
+  alguém está abaixo de três quartos do PV. Sozinho, o Maro morre na cripta quase sempre.
+- **O tesouro é prata que já existia:** 80 na cripta inteira, repartida em partes iguais entre quem desce. **A peça fica com quem a pega, e quem a pega paga a cada um dos outros a parte
+  dele nela** (o que a loja daria por ela, dividido pelo grupo: no escudo do guardião, perto de 19 de prata a cada um, descendo em três); sem a prata, a peça fica lá, e outro do grupo pode
+  pegá-la pagando (`pegar ITEM quem=tome`). **O que era de quem morre lá dentro não é tesouro:** a bolsa e a carga ficam junto do corpo, e quem fica com elas é cena do Mestre.
+  Medido: o personagem que desce com Tomé e Rute e vende tudo o que lhe coube tira em média perto de 6 de prata por dia nos cinco primeiros dias; levando a gente forte da vila,
+  perto de 5 (cada um leva a parte dele); depois da limpeza, quase nada (a sala limpa fica limpa; só o rato cria de novo).
+- **Um dia jogado na conferência (a cópia do ensaio, Dia 8):** o Maro comprou 3 tochas, desceu com Tomé e Rute; o dardo do corredor pegou o Tomé; dois corpos-secos caíram numa rodada
+  (a lança Incomum do Tomé); as ratazanas da capela vieram uma a uma pelo corredor; a Rute achou e desarmou o dardo do baú no grampo e o abriu na segunda vez (25 de prata, a poção,
+  a maça e a chave de ferro); o Maro, no limite das forças, voltou para casa ao entardecer com 9 de prata e a maça, depois de 2 blocos lá dentro.
+- **E com o anão** (uma vila nova, `povo=anão`): Tarno desceu sem tocha com Durva e Tomé. O corredor caiu em 3 rodadas; no ossário, os esqueletos e as ratazanas que vagueavam pegaram o
+  grupo desprevenido no escuro, e o Tomé, que não vê no escuro, saiu da luta com 6 de PV: o grupo recuou e saiu. Sem tocha, quem não vê no escuro paga por todos.
+
 ## O que ainda NÃO existe
 
-- **Viagem.** Só há a vila e o ermo vizinho. Estrada, rota e dormir no mato por escolha são da etapa 3.
+- **Viagem.** Só há a vila e o ermo vizinho (e a cripta, com a etapa 4b). Estrada, rota e dormir no mato por escolha são da etapa 3: Vau Seco e o Tição ficam longe, e daqui não se chega lá.
+- **O furto.** A regra está escrita e desligada (`manha.py furtar` recusa): entra na etapa 3, quando a gente lembrar de quem a roubou.
 - **Gente com rotina.** Os oito têm nome e ficha de luta, mas não agem sozinhos, não compram e não lembram. O corpo deles só anda quando estão em cena; fora de cena, descansam em casa (ver "Quem vai junto"), sem gastar prata nem comida da vila.
 - **Missões, encomendas e clientes.** Ninguém pede nada, e ninguém além do personagem compra peça: a prateleira não escoa. Ninguém procura serviço de magia: a bênção, a cura e a leitura que o personagem faz pela gente da vila saem de graça (a renda da magia é o jornal do santuário e da botica). Por isso a loja farta não desenche sozinha: depois de três ou quatro peças vendidas, só volta a pagar bem quando alguém compra da prateleira.
 - **Magia em todo lado, ainda não:** a magia na luta, o estudo, a alquimia, a maldição e o encanto são da etapa da magia (os capítulos 10 a 16); a vila de teste antiga só os ganha com `vila_teste.py magia`.

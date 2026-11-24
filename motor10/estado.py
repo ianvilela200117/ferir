@@ -32,7 +32,7 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['pessoa', id, 'povo'|'idade', 'poe', valor] (só em gera ou mestre) · ['pessoa', id, 'inclinacao2', 'poe', caminho] (só em gera, mestre ou talento)
     · ['pessoa', id, 'marca.masmorra', 'poe', {...}] (a descida aberta) · ['item', id, 'talhe', 'poe', 'miúdo' | None] (só armadura: o corpo para que foi feita)
     (os tipos novos de item: gazua, chave; o bem novo: tocha; no lugar: a masmorra e a sala (molde, niveis, entrada, portas, alarme, vagantes, limpa, origem; masmorra, nivel,
-    largura, acesa, cat, atento, armadilhas, guardado, segredos, chefe), a gente (povos) e o dragão (dragao))
+    largura, acesa, cat, atento, armadilhas, guardado, segredos, chefe, do_morto), a gente (povos) e o dragão (dragao))
   QUEM ESTÁ NUMA DESCIDA (marca.masmorra) também está FORA: `fora()` diz a sala onde o grupo está. A morte lá dentro deixa tudo na sala; quem comanda e morre solta quem ia junto.
   A ARMADURA É FEITA PARA UM CORPO (o `talhe`: sem ele, de gente; "miúdo"): a que não serve no corpo do dono não entra em uso. (O `corpo` de uma peça solta é outra coisa: de quem era o morto.)
   A PEÇA MALDITA NÃO SAI: enquanto o dono tem uma maldição andando que veio dela, a peça não sai de uso nem muda de dono. O morto não tem maldição andando
@@ -40,7 +40,8 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
   O ITEM SEM DONO está num lugar (`onde`). Ali ele é da LOJA (a prateleira), a não ser que esteja SOLTO (`solto`): caído no chão, de quem achar.
   A MORTE é uma regra só, dentro do efeito ['pessoa', id, 'estado', 'poe', 'morto']: o morto não fica com nada. As peças dele (vestidas ou guardadas, e os núcleos)
     caem SOLTAS onde ele morreu, com a marca `corpo` (de quem eram); as obras dele se desfazem (a matéria se perde; o núcleo cai com o resto); a carga e a prata
-    ficam no estoque desse lugar (num lugar com povo, o povo fica com elas; no ermo, ficam no chão, junto do corpo).
+    ficam no estoque desse lugar (num lugar com povo, o povo fica com elas; no ermo, ficam no chão, junto do corpo; na sala de uma masmorra, onde o estoque é também o
+    tesouro, a parte do morto fica escrita à parte, em `do_morto`: não se pega, e o estoque não desce abaixo dela sem o Mestre soltá-la no mesmo evento).
     O QUE ERA DE UM MORTO NÃO MUDA DE MÃO SOZINHO: quem passa ali acha o corpo, mas quem fica com o quê é decisão de cena, por evento "mestre" (o herdeiro é da etapa 6).
   QUEM SAIU para o ermo (a saída de caça ou de coleta, escrita em marca.caca) está FORA: `fora()` diz onde, e `presente()` recusa o ato da vila.
   COM UMA LUTA ABERTA (no caderno do turno) O MUNDO NÃO ANDA: `aplica()` só aceita a luta que volta ao estado (evento "luta"), a mão do Mestre (evento "mestre")
@@ -168,6 +169,19 @@ def de_morto(it):
     """esta peça solta ficou com o corpo de alguém que morreu? Devolve o id do morto (a marca `corpo`), True se só a história o diz (save antigo), ou None"""
     if not it.get('solto') or it.get('dono'): return None
     return it.get('corpo') or (True if 'ficou com o corpo de' in ''.join((it.get('historia') or [])[-1:]) else None)
+
+
+def junto(E, lid):
+    """A PARTE DO ESTOQUE QUE FICOU JUNTO DO CORPO de quem morreu numa sala de masmorra (`do_morto`): {bem: quanto}. Está no estoque (a prata do mundo a conta),
+    mas não é tesouro: não muda de mão sozinha (cena do Mestre). Fora da sala, nada (no ermo o estoque inteiro é o chão; na vila, o povo fica com ela)"""
+    l = E['lugares'].get(lid) or {}; est = l.get('estoque') or {}
+    return {b: min(q, est.get(b, 0)) for b, q in (l.get('do_morto') or {}).items() if _num(q) and q > 0 and _num(est.get(b, 0)) and est.get(b, 0) > 0}
+
+
+def livre(E, lid):
+    """o estoque do lugar sem a parte que ficou junto do corpo de um morto (junto): {bem: quanto}, só o que é mais que zero. É o que se pega"""
+    est = (E['lugares'].get(lid) or {}).get('estoque') or {}; j = junto(E, lid)
+    return {b: q - j.get(b, 0) for b, q in est.items() if _num(q) and q - j.get(b, 0) > 0}
 
 
 def nome_bem(b):
@@ -385,7 +399,7 @@ def _lugar_erro(E, raiz, sub, val):
 
 # ---------- a etapa 4b no lugar: a masmorra, a sala, a gente e o dragão (a forma de cada campo; as ligações entre lugares são do valida) ----------
 CAMPOS_MASMORRA = ('molde', 'niveis', 'entrada', 'portas', 'alarme', 'vagantes', 'limpa', 'origem')
-CAMPOS_SALA = ('masmorra', 'nivel', 'largura', 'acesa', 'cat', 'atento', 'armadilhas', 'guardado', 'segredos', 'chefe')
+CAMPOS_SALA = ('masmorra', 'nivel', 'largura', 'acesa', 'cat', 'atento', 'armadilhas', 'guardado', 'segredos', 'chefe', 'do_morto')
 CAMPOS_4B = CAMPOS_MASMORRA + CAMPOS_SALA + ('povos', 'dragao')
 
 
@@ -446,6 +460,13 @@ def _lugar4b_erro(E, raiz, sub, val):
         if not isinstance(d, dict) or any(TP is None or k not in TP.POVOS or not _num(v) or not 0 <= v <= 1 for k, v in d.items()): return 'a gente do lugar é {povo: fração de 0 a 1}, com os povos da tabela (tabelas_povos.POVOS)'
         if not sub and sum(d.values()) > 1 + 1e-9: return f'as frações da gente do lugar somam até 1 (somam {sum(d.values()):g})'
         return None
+    if raiz == 'do_morto':                                  # a parte do estoque da sala que ficou junto do corpo de quem morreu ali (não é tesouro: cena do Mestre)
+        d = {sub: val} if sub else val
+        if not isinstance(d, dict): return 'o que ficou junto do corpo é {bem: quanto} (a parte do estoque da sala que é de um morto)'
+        for k, v in d.items():
+            if k != 'prata' and not bem_conhecido(k): return f'bem desconhecido junto do corpo: "{k}"'
+            if not _num(v) or v < 0 or (k == 'prata' and not _int(v)): return f'"do_morto.{k}" é um número de zero para cima (a prata, inteira)'
+        return None
     if raiz == 'dragao':
         if sub == 'pv': return None if _int(val) and val >= 1 else 'o PV do dragão é um número inteiro de 1 para cima'
         if sub == 'punhados': return None if _int(val) and val >= 0 else 'os punhados são um inteiro de zero para cima'
@@ -499,10 +520,12 @@ def _morre(E, pid):
             it['dono'] = None; it['uso'] = None; it['onde'] = lid; it['solto'] = True; it['corpo'] = pid      # solta, junto do corpo: `corpo` diz de quem era (sai quando a peça ganha dono ou vai para a prateleira)
             it.setdefault('historia', []).append(f"Dia {dia}: ficou com o corpo de {p['nome']} {em(E, lid)}")
     est = l.setdefault('estoque', {})
+    dm = l.setdefault('do_morto', {}) if l.get('tipo') == 'sala' else {}     # NA SALA DA MASMORRA o estoque é também o tesouro: a parte do morto fica escrita à parte (junto do corpo), e não se pega
     for b, q in (p.get('carga') or {}).items():
-        if _num(q) and q > 0: est[b] = est.get(b, 0) + q
+        if _num(q) and q > 0: est[b] = est.get(b, 0) + q; dm[b] = dm.get(b, 0) + q
     p['carga'] = {}
-    if p['moedas'] > 0: est['prata'] = est.get('prata', 0) + p['moedas']; p['moedas'] = 0
+    if p['moedas'] > 0: est['prata'] = est.get('prata', 0) + p['moedas']; dm['prata'] = dm.get('prata', 0) + p['moedas']; p['moedas'] = 0
+    if l.get('tipo') == 'sala' and not l['do_morto']: del l['do_morto']
     s = (p.get('marca') or {}).get('caca')
     if isinstance(s, dict) and s.get('de'): p['marca'].pop('caca')
     d = (p.get('marca') or {}).get('masmorra')                 # A DESCIDA (etapa 4b): quem ia junto e morre sai dela; quem comanda e morre solta quem ia junto (saem sozinhos:
@@ -705,6 +728,10 @@ def _um(E, ef):
         if ef[2] == 'prata' and not _int(ef[4]): return _erro(ef, 'a prata é inteira')
         q = l['estoque'].get(ef[2], 0) + ef[4]
         if q < 0: return _erro(ef, f'{l["nome"]} só tem {l["estoque"].get(ef[2], 0)} de {ef[2]}')
+        dm = (l.get('do_morto') or {}).get(ef[2], 0)
+        if ef[4] < 0 and _num(dm) and q < dm:                    # a parte que ficou junto do corpo de um morto não sai do estoque sozinha: o Mestre a solta antes, no mesmo evento
+            return _erro(ef, f'{dm:g} de {ef[2]} {de(E, ef[1])} ficaram junto do corpo de quem morreu ali: não mudam de mão sozinhos (o Mestre, no mesmo evento e antes disto: '
+                             f"['lugar', '{ef[1]}', 'do_morto.{ef[2]}', 'soma', -N])")
         l['estoque'][ef[2]] = q; return
     if v == 'item' and len(ef) == 3 and ef[1] == 'nasce':
         it = copy.deepcopy(ef[2])
@@ -1297,6 +1324,9 @@ def valida(E):
             for o in portas:
                 if o not in (l.get('vizinhos') or []) and not any(isinstance(x, dict) and x.get('para') == o for x in l.get('segredos') or []): P.append(f'{n} tem uma armadilha na porta para {o}, que não é passagem dela')
             if l.get('guardado') is None and any(isinstance(x, dict) and x.get('onde') == 'guardado' for x in l.get('armadilhas') or []): P.append(f'{n} tem uma armadilha no guardado e não guarda nada')
+            for b, q in (l.get('do_morto') or {}).items():
+                if _num(q) and q > (l.get('estoque') or {}).get(b, 0): P.append(f'{n}: o que ficou junto do corpo ({q:g} de {b}) passa do que o estoque tem ({(l.get("estoque") or {}).get(b, 0):g})')
+        elif l.get('do_morto'): P.append(f'{n} não é sala de masmorra e diz o que ficou junto de um corpo (do_morto): fora da sala, a carga e a prata do morto são o estoque do lugar')
         if isinstance(l.get('povos'), dict) and all(_num(v) for v in l['povos'].values()) and sum(l['povos'].values()) > 1 + 1e-9: P.append(f'{n}: as frações da gente (povos) somam mais que 1')
         dr = l.get('dragao')
         if isinstance(dr, dict) and _td() and dr.get('tipo') in _td().TIPOS and dr.get('idade') in _td().IDADES:

@@ -323,7 +323,8 @@ def _po7(n):
         foge = _p_2d20(foge_ate - bon) * 100; fraq = (_p_2d20(cd - 1 - bon) - _p_2d20(foge_ate - bon)) * 100; conta[pv] = (foge, fraq)
     try:
         rival = (lambda: [__import__('dragoes').dragao('serra', 'jovem')]); quem = 'o dragão jovem da serra'
-        if 'apavora' not in (rival()[0].get('tracos') or []): raise SystemExit('o jovem não apavora')
+        d0 = rival()[0]
+        if 'apavora' not in ((d0.get('bicho') or {}).get('tracos') or d0.get('tracos') or []): raise SystemExit('o jovem não apavora')      # o lutador do dragão leva os traços no bicho
     except SystemExit: rival = (lambda: [bichos.bicho('dragão')]); quem = 'o dragão do capítulo 6 (o jovem que apavora ainda não existe: frente D)'
     vezes = 2000; fugiu = abalou = 0; luta.semente(11)
     grupo = lambda: [veste(povos.gerado('Pipa', 50, 'pequenino'), arma=('espada', R), armadura=('malha', R), escudo=R)] + [veste(povos.gerado(f'h{i}', 50), arma=('espada', R), armadura=('malha', R), escudo=R) for i in range(3)]

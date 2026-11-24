@@ -8,9 +8,9 @@ Para trabalhar no Motor 10, ler nesta ordem:
 2. `REGRAS.md`: o livro de regras (um só, por assunto).
 3. `MUDANCAS.md`: o que mudou, quando e por quê.
 
-Conferir que tudo segue de pé: `python3 provas.py 600` (a luta, os itens, os bichos e a magia na luta; uns 5 minutos), `python3 provas_mundo.py` (o mundo: as etapas 1 e 2, os dons e os talentos, a magia do mundo e as criaturas; uns 4 minutos) e `python3 estresse.py 1500` (lutas ao acaso, com e sem magia). As saídas da última rodada ficam em `dados/`.
-Para experimentar: `python3 vila_teste.py PASTA` cria a vila de teste, fora do cânone (o guia é o `GUIA_VILA.md`); `python3 vila_teste.py magia PASTA` acrescenta a etapa da magia a uma vila que já existe.
-Os números moram nas páginas `tabelas*.py`. Só o `estado.py` grava o mundo. Os rascunhos de projeto ficam em `projeto/` (o contrato da etapa da magia: `projeto/ETAPA_MAGIA.md`).
+Conferir que tudo segue de pé: `python3 provas.py 600` (a luta, os itens, os bichos e a magia na luta; uns 5 minutos), `python3 provas_mundo.py` (o mundo: as etapas 1 e 2, os dons e os talentos, a magia do mundo, as criaturas e a etapa 4b; uns 15 minutos) e `python3 estresse.py 1500` (lutas ao acaso, com e sem magia). As saídas da última rodada ficam em `dados/`.
+Para experimentar: `python3 vila_teste.py PASTA [povo=POVO] [inclinacao2=CAMINHO]` cria a vila de teste, fora do cânone (o guia é o `GUIA_VILA.md`); `python3 vila_teste.py magia PASTA` acrescenta a etapa da magia a uma vila que já existe, e `python3 vila_teste.py fantasia PASTA [inclinacao2=CAMINHO]` acrescenta a etapa 4b a uma vila que já tem a magia.
+Os números moram nas páginas `tabelas*.py`. Só o `estado.py` grava o mundo. Os rascunhos de projeto ficam em `projeto/` (os contratos: `projeto/ETAPA_MAGIA.md` e `projeto/ETAPA_4B.md`).
 
 ## A etapa da magia (feita)
 
@@ -18,11 +18,18 @@ Os dons e os talentos (capítulo 10 do `REGRAS.md`), a magia na luta (11), a alq
 Os módulos novos: `talento.py`, `magia.py`, `magia_mundo.py`, `alquimia.py`, `maldicao.py`, `encanto.py`, `criaturas.py`; as páginas novas: `tabelas_talento.py`, `tabelas_magia.py`, `tabelas_magia_mundo.py`, `tabelas_criaturas.py`.
 Os bancos novos (o `provas_mundo.py` roda os três): `provas_talento.py`, `provas_magia.py`, `provas_criaturas.py`; as metas da magia na luta estão no `provas.py` (`python3 provas.py 600 magia`).
 
-**A próxima etapa:** a 4b, as masmorras e o mundo de fantasia (o ladino, os dragões, os povos do personagem), antes da região (`PROJETO.md`, seção 10, e a decisão 16).
+## A etapa 4b (feita): as masmorras e o mundo de fantasia
+
+As masmorras (capítulo 17 do `REGRAS.md`), o ladino (18), os povos do personagem (19) e os dragões (20). O juízo e as respostas do jogador (E1 a E4): `projeto/etapa4b/DECISOES.md`.
+Os módulos novos: `masmorra.py`, `manha.py`, `povos.py`, `dragoes.py`; as páginas novas: `tabelas_masmorra.py`, `tabelas_manha.py`, `tabelas_povos.py`, `tabelas_dragoes.py`.
+Os bancos novos (o `provas_mundo.py` roda os seis): `provas_4b.py` (o alicerce), `provas_masmorra.py`, `provas_manha.py`, `provas_povos.py`, `provas_dragoes.py` e `provas_fantasia.py` (a integração: o comando da vila, o povo do personagem, o covil pela masmorra, quem vê no escuro, a mina).
+
+**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10). Antes, como na magia, o verificador independente confere a 4b.
 
 ## A vila de teste do jogador (`ensaio/`)
 
 **O save do jogador já tem a etapa da magia** (posta no turno 5 com `vila_teste.py magia ensaio inclinacao=fio`: a inclinação do Maro, escolhida pelo jogador, é nas lâminas).
+**A etapa 4b ainda não está no save:** entra com `python3 vila_teste.py fantasia ensaio [inclinacao2=manha]` (só por eventos; recusa rodar duas vezes; com a luta aberta, espera ela fechar). A segunda inclinação do Maro só pode ser a manha, o único caminho que ele ainda não rolou: é escolha do jogador.
 
 O jogador está jogando uma vila de teste, fora do cânone, para sentir a luta, a forja e o custo de viver, e mandar mudar o que quiser. O save é a pasta `ensaio/` (Maro, guerreiro, em Pedra Rasa).
 Para retomar, de dentro de `motor10/`:

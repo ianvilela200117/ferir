@@ -78,7 +78,8 @@ def _aqui(E):
     if f: return [f"**{p['nome']} está fora, {estado.em(E, f)}.** Enquanto a saída estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A caça e a coleta\"."]
     L = [f"**{l['nome']}** · comida no lugar: {_mil(l['estoque'].get('comida', 0))} · {'há cama' if l.get('cama') else 'não há cama: dorme-se no chão'}"]
     outros = [q['nome'] + (f" ({q['sobre']})" if q.get('sobre') else '') for k, q in E['gente'].items() if k != pid and q['lugar'] == p['lugar'] and q['estado'] == 'vivo' and not estado.fora(E, k)]
-    if outros: L.append('Quem está aqui: ' + ', '.join(outros[:12]) + (f' e mais {len(outros) - 12}' if len(outros) > 12 else ''))
+    if outros: L.append('Quem está aqui: ' + ', '.join(outros[:QUEM_AQUI]) + (f' e mais {len(outros) - QUEM_AQUI}' if len(outros) > QUEM_AQUI else ''))
+    L += _perto(E, pid)
     feito = ato.jornada(E, pid); cama = ato.cama_diz(E, pid)
     L += ['', '**O que dá para fazer, e o que custa** (1 bloco = 4 horas):',
           f"- comer: {M.REFEICAO_PRECO} de prata, fome −{-M.REFEICAO} (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)",
@@ -88,6 +89,18 @@ def _aqui(E):
           f"- treinar com uma arma: esforço pesado; a maestria sobe aos {', '.join(_mil(v) for v in M.MAESTRIA_BLOCOS.values())} blocos (`ato.py treinar N ARMA`)",
           "- descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)"]
     return L
+
+
+QUEM_AQUI = 16          # quantos nomes o "Quem está aqui" diz (a vila de teste com a etapa 4b tem 16 pessoas além do personagem: o Quim tem de aparecer)
+
+
+def _perto(E, pid):
+    """a masmorra vizinha do lugar, com o que o povo diz dela (etapa 4b: masmorra.perto). Sem masmorra vizinha (ou sem o módulo), nada: a MESA de hoje sai igual"""
+    try: import masmorra
+    except ModuleNotFoundError as x:
+        if x.name != 'masmorra': raise
+        return []
+    return list(getattr(masmorra, 'perto', lambda E, pid: [])(E, pid))
 
 
 def _modulos(E, gancho):

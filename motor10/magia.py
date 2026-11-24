@@ -176,7 +176,7 @@ def defesa(S, a, e, area):
 def mira(S, a, e, area):
     """o que pesa no feitiço que voa, como num tiro: o tempo (o escuro não, para quem é noturno), o alto, a cobertura, a gente no caminho, a cegueira"""
     b = sum(T.TEMPO[k].get('tiro', 0) for k in S['tempo'] if not (k == 'escuro' and tem(a, 'noturno')))
-    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro') and not tem(a, 'noturno'): b -= T.TEMPO['escuro']['tiro'] * (1 - TP.ESCURO)      # quem vê no escuro (o povo, etapa 4b): a metade
+    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro') and not tem(a, 'noturno'): b -= T.TEMPO['escuro']['tiro'] * (1 - TP.ESCURO_TIRO)      # quem vê no escuro (o povo, etapa 4b): o feitiço que voa é tiro (ESCURO_TIRO: inteiro)
     if S['lugar'].get('alto') == a['lado']: b += T.ALTO['tiro']
     if S['lugar'].get('cobertura') == e['lado']: b += T.COBERTURA
     if not area and L.entre(S, a, e) and S['lugar'].get('alto') != a['lado']: b += T.ENTRE
