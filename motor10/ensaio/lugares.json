@@ -5,7 +5,7 @@
   "tipo": "vila",
   "cama": true,
   "estoque": {
-   "comida": 18800,
+   "comida": 18625,
    "lenha": 3000,
    "carvão": 240,
    "sal": 240,
@@ -17,12 +17,12 @@
    "osso:0": 60,
    "madeira:0": 240,
    "erva:0": 120,
-   "metal:1": 20,
-   "couro:1": 20,
-   "osso:1": 10,
+   "metal:1": 21,
+   "couro:1": 19,
+   "osso:1": 9,
    "madeira:1": 40,
    "erva:1": 20,
-   "prata": 2000
+   "prata": 1999
   },
   "vizinhos": [
    "mata"

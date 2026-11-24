@@ -281,9 +281,9 @@
    "espada": 2
   },
   "treino": {
-   "espada": 40
+   "espada": 41
   },
-  "moedas": 30,
+  "moedas": 31,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -292,7 +292,16 @@
   "pv": 141,
   "feridas": [],
   "estado": "vivo",
-  "marca": {},
+  "marca": {
+   "pesados_dia": 1,
+   "pesados": 3,
+   "jornada_dia": 1,
+   "jornada": 2,
+   "cama": {
+    "ate": 11,
+    "onde": "vila"
+   }
+  },
   "carga": {},
   "jogador": true,
   "sobre": "vive das armas, com a mão de Iniciante na espada"
