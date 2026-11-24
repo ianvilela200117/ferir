@@ -613,7 +613,9 @@ def main():
     print('\netapa 2: o acerto da terceira volta (o relógio único e o corpo de quem não é o personagem; o repouso; a última linha; o registro da luta; o RETOMAR; as perguntas; a MESA de quem morreu)\n'); mais = provas_volta3(n); res += mais
     for nm, deu, passa in mais: print(f"  {'passa' if passa else 'FALHA'}  {nm}: {deu}")
     import importlib
-    for nome, titulo in (('provas_mercado', 'etapa 2: o mercado'), ('provas_oficio', 'etapa 2: o ofício'), ('provas_caca', 'etapa 2: a caça e a coleta')):
+    for nome, titulo in (('provas_mercado', 'etapa 2: o mercado'), ('provas_oficio', 'etapa 2: o ofício'), ('provas_caca', 'etapa 2: a caça e a coleta'),
+                         ('provas_talento', 'etapa da magia: o alicerce (os dons e os talentos; os verbos, os tipos e os ganchos)'),
+                         ('provas_magia', 'etapa da magia: o mundo da magia'), ('provas_criaturas', 'etapa da magia: as criaturas e a vila')):     # os que ainda não existem ficam de fora
         try: mod = importlib.import_module(nome)
         except ModuleNotFoundError as e:
             if e.name != nome: raise

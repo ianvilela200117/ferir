@@ -12,18 +12,30 @@ O REQUISITO é por ATRIBUTO, nunca por nível: a peça pede Força (ou Agilidade
 
   O BICHO (bichos.py) tem a mesma ficha: o corpo dele é a arma e a armadura, com categoria. O corpo não é peça: não está no
   Livro de Itens, não quebra, não tem dono e não ocupa sintonia. O tamanho mexe no PV, no alcance, no cerco, no corredor e na Defesa.
+  DA ETAPA DA MAGIA (o contrato: projeto/ETAPA_MAGIA.md, seção 10):
+  O DOM de uma mão de arma soma no acerto com as armas dela, e metade na Defesa (a ação e a reação a mais não: são da maestria).
+  O POVO (goblin, orc, ogro...) é gente: veste peças de verdade, e o campo `povo` põe por cima o tamanho, os traços, a coragem e a pele (o couro onde a peça não cobre).
+  A ficha já traz, com valor neutro, os campos da magia (feitiços, Mana, tradição, foco, amuleto, dom, Firmeza, traços, fases, poções): a luta de magia os usa.
+  A MAGIA NA LUTA (capítulo 11; os números no tabelas_magia.py): o FOCO e o AMULETO se vestem (veste(..., foco=('cajado', 2), amuleto=2)) e entram na sintonia, como toda
+  peça Épica ou melhor; a PEÇA ENCANTADA (arma, armadura ou escudo com encanto) ocupa sintonia de qualquer categoria, e a que dorme não solta o encanto.
+  As mãos do foco: a varinha, o símbolo e o talismã vão na mão do escudo (lança-se de arma e escudo). O CAJADO pede as duas mãos: é a arma (bate como maça leve,
+  1d6 de impacto, com a mão de maça, e apara com o bônus da categoria); a arma de antes fica de reserva (a segunda arma) e o escudo não entra.
+  A Firmeza na ficha: a base comum, com o melhor entre o bônus do amuleto e metade do da armadura do tronco (com o traço "resiste", o da armadura inteiro).
 
 Uso (para olhar): python3 pessoas.py padrao NIVEL [molde=guerreiro|arqueiro|comum] [arma=FAMILIA:CAT] [armadura=MATERIAL:CAT] [escudo=CAT]
 """
 import sys
 import tabelas as T
+import tabelas_talento as TT
+import tabelas_magia as TM
 from itens import item, cat_i, pede
 
 
 def padrao(nome, nivel, molde='guerreiro', maestria=None, atributos=None, **mais):
     """uma pessoa GERADA daquele nível: os atributos de nascença do molde mais 1 ponto por nível, repartidos como o molde reparte"""
-    if molde not in T.MOLDES: sys.exit(f'molde desconhecido: "{molde}" (use: {", ".join(T.MOLDES)})')
-    base, pts = T.MOLDES[molde]
+    molde = 'clérigo' if molde == 'clerigo' else molde
+    if molde not in T.MOLDES and molde not in TM.MOLDES: sys.exit(f'molde desconhecido: "{molde}" (use: {", ".join(list(T.MOLDES) + list(TM.MOLDES))})')
+    base, pts = T.MOLDES[molde] if molde in T.MOLDES else TM.MOLDES[molde]      # os de quem lança (mago, clérigo, druida, bruxa) moram na página da magia
     at = {k: base[k] + int(nivel * pts[k]) for k in T.ATRIBUTOS}
     at.update(atributos or {})
     p = dict(nome=nome, nivel=nivel, atributos=at, maestria=T.maestria_tipica(nivel) if maestria is None else maestria, equip={})
@@ -31,10 +43,10 @@ def padrao(nome, nivel, molde='guerreiro', maestria=None, atributos=None, **mais
     return p
 
 
-def veste(p, arma=None, armadura=None, escudo=None, arma2=None, elmo=None, pecas=None):
+def veste(p, arma=None, armadura=None, escudo=None, arma2=None, elmo=None, pecas=None, foco=None, amuleto=None):
     """veste a pessoa. Cada peça é um registro do Livro de Itens, ou um atalho para testes e gente miúda:
     arma e arma2 = ('espada', categoria) · armadura = ('malha', categoria): o corpo E um elmo igual (elmo=False tira o elmo)
-    · elmo = ('malha', categoria) · escudo = categoria · pecas = mais registros de armadura."""
+    · elmo = ('malha', categoria) · escudo = categoria · pecas = mais registros de armadura · foco = ('cajado', categoria) · amuleto = categoria."""
     arm = []
     if isinstance(armadura, dict): arm.append(armadura)
     elif armadura is not None:
@@ -45,6 +57,8 @@ def veste(p, arma=None, armadura=None, escudo=None, arma2=None, elmo=None, pecas
     arm += list(pecas or [])
     faz = lambda x: x if x is None or isinstance(x, dict) else item('arma', x[1], familia=x[0])
     p['equip'] = dict(arma=faz(arma), arma2=faz(arma2), escudo=escudo if escudo is None or isinstance(escudo, dict) else item('escudo', escudo), armaduras=arm)
+    if foco is not None: p['equip']['foco'] = foco if isinstance(foco, dict) else item('foco', foco[1], forma=foco[0])
+    if amuleto is not None: p['equip']['amuleto'] = amuleto if isinstance(amuleto, dict) else item('amuleto', amuleto)
     return p
 
 
@@ -70,18 +84,60 @@ def _efeitos(it, dorme):
     return {} if dorme or it['dur'][0] <= 0 else {e['chave']: e.get('valor', True) for e in it.get('efeitos', [])}
 
 
+def _dom(p, familia):
+    """o dom da pessoa na mão desta arma (0 se não tem): soma no acerto, e metade na Defesa"""
+    d = p.get('dom'); return int(d.get(TT.caminho_de(familia), 0)) if isinstance(d, dict) and familia in sum(TT.MAOS.values(), ()) else 0
+
+
 def _arma(it, p, dorme):
     f = T.FAMILIAS[it['familia']]; c, falta, mais = _assenta(it, p, dorme); at = p['atributos']; tiro = bool(f.get('distancia'))
-    quebrada = it['dur'][0] <= 0
+    quebrada = it['dur'][0] <= 0; dom = _dom(p, it['familia'])
     if quebrada: c = 0
-    return dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
+    w = dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
                 recarga=f.get('recarga', 0), haste=f['alcance'] == 2 and not tiro,
                 mult=T.MULT[c] * (T.DUAS_MAOS if f['maos'] == 2 and not tiro else 1),
-                acerto=T.acerto_base(_maestria(p, it['familia']), at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0),
+                acerto=T.acerto_base(_maestria(p, it['familia']), at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0) + dom,
                 aparo=0 if tiro or quebrada else T.BON[c] + f.get('apara', 0),
                 folego=1 + (1 if f['peso'] == 'pesada' else 0) + falta // T.FALTA_FOLEGO,
                 fmult=T.BESTA_FORCA if it['familia'] == 'besta' else T.forca_mult(at[f.get('atributo', 'Força')]),
                 efeitos=_efeitos(it, dorme), item=it)
+    if dom: w['dom'] = dom                                  # a luta sabe quando foi o dom que fez o golpe passar (marca.dom_visto)
+    if isinstance(it.get('veneno'), dict) and not quebrada: w['veneno'] = it['veneno'].get('cat', 0)        # a dose de veneno na lâmina (a magia na luta)
+    if it.get('encantos') or it.get('benta'): w['magica'] = True                                           # encantada ou benta: conta inteira contra o imaterial
+    return w
+
+
+def _cajado(it, p, dorme):
+    """o CAJADO na mão é a arma: bate como maça leve (1d6, impacto, com a mão de maça e o que a arma leve pede de Força), apara com o bônus da categoria
+    e, como toda arma de duas mãos, vale × 1,25"""
+    fo = T.FOCOS['cajado']; at = p['atributos']; quebrada = it['dur'][0] <= 0
+    c = 0 if quebrada else max(0, it['cat'] - (T.SINTONIA_ABAIXO if dorme else 0)); falta = max(0, T.PEDE_PESO['leve'] - at['Força'])
+    return dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=fo['dado'], golpe=fo['golpe'], alcance=1, distancia=False, maos=2, recarga=0, haste=False,
+                mult=T.MULT[c] * fo['vezes'], acerto=T.acerto_base(_maestria(p, 'maça'), at['Força'], at['Agilidade']) + T.BON[c] - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0) + _dom(p, 'maça'),
+                aparo=0 if quebrada else T.BON[c], folego=1 + falta // T.FALTA_FOLEGO, fmult=T.forca_mult(at['Força']), efeitos=_efeitos(it, dorme), item=it)
+
+
+def _tracos(p, tracos):
+    for t in tracos:
+        if t not in TB_TRACOS() and t not in T.TRACOS_NOVOS: sys.exit(f'{p["nome"]}: traço desconhecido: "{t}" (os que a luta roda: {", ".join(list(TB_TRACOS()) + list(T.TRACOS_NOVOS))})')
+    return list(tracos)
+
+
+def TB_TRACOS():
+    import tabelas_bichos as TB
+    return TB.TRACOS
+
+
+def _magia_neutra(F, p, tradicao_m=0):
+    """os campos da magia na ficha, com valor neutro (a luta de magia os usa; quem não tem nada disso luta como hoje)"""
+    at = p['atributos']; eq = p.get('equip') or {}; fe = list(p.get('feiticos') or []); dm = p.get('dom') if isinstance(p.get('dom'), dict) else {}
+    dt = max([dm.get(t, 0) for t in T.TRADICOES] + [0])
+    mx = p.get('mana_max')
+    if mx is None: mx = T.mana_max(at['Afinidade'], at['Vontade'], tradicao_m, dt) if (fe or p.get('mana') is not None) else 0      # quem traz feitiços sem Mana começa com a cheia
+    F.update(feiticos=fe, tradicao=p.get('tradicao'), mana_max=mx, mana=min(mx, p['mana']) if p.get('mana') is not None else mx, foco=eq.get('foco'), amuleto=eq.get('amuleto'),
+             dom=dict(dm), pena_magia=p.get('pena_magia', 0), carga=dict(p.get('carga') or {}), elixires=[dict(x) for x in p.get('elixires') or []],
+             doses=p.get('doses', 0), curado=p.get('curado', 0), funda=p.get('funda'), fases=[dict(x) for x in p.get('fases') or []], maldicoes=[dict(x) for x in p.get('maldicoes') or []])
+    if p.get('mana_vista') is not None: F['mana_vista'] = p['mana_vista']       # a máxima que a pessoa conhece (o dom de tradição escondido): só a mesa a usa
 
 
 def ficha_bicho(p):
@@ -92,8 +148,7 @@ def ficha_bicho(p):
     if b['tamanho'] not in TB.TAMANHOS: sys.exit(f'{p["nome"]}: tamanho desconhecido: "{b["tamanho"]}" (use: {", ".join(TB.TAMANHOS)})')
     if b['couro'] not in TB.COUROS: sys.exit(f'{p["nome"]}: couro desconhecido: "{b["couro"]}" (use: {", ".join(TB.COUROS)})')
     if not b['armas'] or any(x not in TB.ARMAS_CORPO for x in b['armas']): sys.exit(f'{p["nome"]}: as armas do corpo são: {", ".join(TB.ARMAS_CORPO)} (veio {b["armas"]})')
-    for t in b['tracos']:
-        if t not in TB.TRACOS: sys.exit(f'{p["nome"]}: traço desconhecido: "{t}" (os que a luta roda: {", ".join(TB.TRACOS)})')
+    _tracos(p, b['tracos'])                                 # os da etapa 2 (tabelas_bichos.TRACOS) e os da etapa da magia (tabelas.TRACOS_NOVOS)
     tam = TB.TAMANHOS[b['tamanho']]; como = TB.COUROS[b['couro']]; mat = T.MATERIAIS[como]
     corpo = dict(tipo='corpo', cat=c, nome=f"o corpo de {p['nome']}", dur=[1, 1], efeitos=[dict(chave='nao_quebra')])
     acerto = T.acerto_base(m, at['Força'], at['Agilidade']) + T.BON[c] + p.get('pena', 0)
@@ -115,7 +170,34 @@ def ficha_bicho(p):
     F['feridas0'] = [list(x) for x in p.get('feridas', [])]
     for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
         if k in p: F[k] = p[k]
+    _magia_neutra(F, p, m)
+    F['firmeza'] = T.firmeza(at['Vontade'], m, c if 'resiste' in F['tracos'] else None, None if 'resiste' in F['tracos'] else c)       # o corpo do bicho: metade do bônus (com resiste, inteiro)
+    F.update(atributos=dict(at), afin_b=at['Afinidade'] // 10, pena=p.get('pena', 0), benzido=bool(p.get('benzido')), m_trad={t: m for t in T.TRADICOES}, cat_corpo=c,
+             foco_cat=None, foco_falta=0, amuleto_cat=None, encantos=[], maldito=False, firmeza0=T.firmeza(at['Vontade'], m))      # o bicho que lança: o corpo é o foco, o instinto é a mão
+    if p.get('maldicao'): F['maldicao'] = dict(p['maldicao'])          # o molde da maldição que o traço "amaldiçoa" põe (senão, o da página da magia)
     return F
+
+
+def _povo(F, p):
+    """O POVO (etapa da magia): a ficha de gente, com o corpo do povo por cima. O tamanho mexe no PV, na Defesa, no alcance da mão, no cerco e no corredor (como no bicho);
+    os traços e a coragem são os do povo; a pele (couro) vale como armadura onde a peça não cobre."""
+    import tabelas_bichos as TB
+    b = p['povo']; tam = TB.TAMANHOS.get(b.get('tamanho', 'médio')) or sys.exit(f'{p["nome"]}: tamanho desconhecido: "{b.get("tamanho")}" (use: {", ".join(TB.TAMANHOS)})')
+    F['pvmax'] = int(F['pvmax'] * tam['pv']); F['pv'] = min(p.get('pv', F['pvmax']), F['pvmax']); F['def_fixa'] += tam['defesa']
+    F.update(povo=b.get('especie') or b.get('povo'), tamanho=b.get('tamanho', 'médio'), ocupa=tam['ocupa'], cerco=list(tam['cerco']), coragem=b.get('coragem', 0), cat_corpo=b.get('cat', 0))
+    F['tracos'] = _tracos(p, list(dict.fromkeys(list(F.get('tracos') or []) + list(b.get('tracos') or []))))
+    for w in (F['arma'], F['arma2'], F['punho']):
+        if w and not w['distancia']: w['alcance'] = max(w['alcance'], tam['alcance'])       # a arma na mão de quem é grande alcança o que o braço alcança
+    if b.get('couro'):
+        if b['couro'] not in TB.COUROS: sys.exit(f'{p["nome"]}: couro desconhecido: "{b["couro"]}" (use: {", ".join(TB.COUROS)})')
+        como = TB.COUROS[b['couro']]; mat = T.MATERIAIS[como]; c = b.get('cat', 0)
+        corpo = dict(tipo='corpo', cat=c, nome=f"o corpo de {p['nome']}", dur=[1, 1], efeitos=[dict(chave='nao_quebra')])
+        for parte in T.PARTES:
+            if parte not in F['partes'] or F['partes'][parte]['rd'] < T.RD[c] * mat['rd']:
+                F['partes'][parte] = dict(nome=f"{b['couro']} {T.CATS[c]}", cat=c, material=como, rd=T.RD[c] * mat['rd'], item=corpo)
+        F['nuas'] = [x for x in T.PARTES if x not in F['partes']]; F['fontes'].append(dict(item=corpo, efeitos={'nao_quebra': True}))
+        if not any('tronco' in (x.get('cobre') or []) for x in (p.get('equip') or {}).get('armaduras') or [] if x):
+            F['def_fixa'] += mat['defesa'] - T.SEM_ARMADURA['defesa']; F['ini_mod'] = mat['ini']
 
 
 def ficha(p):
@@ -123,13 +205,15 @@ def ficha(p):
     if p.get('bicho'):
         if isinstance(p['bicho'], str):                     # o atalho do cenário ({"nome": ..., "nivel": 0, "bicho": "lobo"}): a espécie inteira sai da tabela
             import bichos
-            p = bichos.bicho(p['bicho'], **{k: p[k] for k in ('nome', 'id', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha', 'pv', 'feridas', 'pena', 'fol_menos') if k in p})
+            return ficha(bichos.bicho(p['bicho'], **{k: p[k] for k in ('nome', 'id', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha', 'pv', 'feridas', 'pena', 'fol_menos') if k in p}))      # o povo (goblin, orc) volta como gente, com as peças dele
         return ficha_bicho(p)
-    at = p['atributos']; eq = p.get('equip') or {}; m = _maestria(p, (eq.get('arma') or {}).get('familia', 'punho'))
+    at = p['atributos']; eq = dict(p.get('equip') or {}); foco = eq.get('foco'); cajado = bool(foco and foco.get('forma') == 'cajado')
+    if cajado: eq['arma2'] = eq.get('arma2') or eq.get('arma'); eq['arma'] = None; eq['escudo'] = None      # O CAJADO pede as duas mãos: é a arma; a de antes fica de reserva, e o escudo não entra
+    fam = 'maça' if cajado else (eq.get('arma') or {}).get('familia', 'punho'); m = _maestria(p, fam)
     arm = [x for x in eq.get('armaduras') or [] if x]
-    todas = [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + arm
-    # SINTONIA: as peças Épicas ou melhores, da melhor para a pior; as que passam do limite dormem
-    altas = sorted([it for it in todas if it['cat'] >= T.SINTONIA_DESDE], key=lambda i: -i['cat'])
+    todas = [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + arm + [x for x in (foco, eq.get('amuleto')) if x]
+    # SINTONIA: as peças Épicas ou melhores (e toda peça encantada, de qualquer categoria), da melhor para a pior; as que passam do limite dormem
+    altas = sorted([it for it in todas if it['cat'] >= T.SINTONIA_DESDE or it.get('encantos')], key=lambda i: -i['cat'])
     limite = max(1, at['Vontade'] // T.SINTONIA)
     sono = {id(it) for it in altas[limite:]}; dorme = lambda it: id(it) in sono
     F = dict(nome=p['nome'], nivel=p['nivel'], maestria=m, pvmax=T.pv_max(at['Vigor'], p['nivel']), folmax=max(T.FOLEGO_MIN, T.folego_max(at['Vigor']) - p.get('fol_menos', 0)),
@@ -137,7 +221,7 @@ def ficha(p):
              forca_b=at['Força'] // 10, dormem=[it['nome'] for it in altas[limite:]])
     F['pv'] = p.get('pv', F['pvmax']); F['fol'] = F['folmax']
     punho = item('arma', 0, 'as mãos', familia='punho', efeitos=[dict(chave='nao_quebra')])
-    F['arma'] = _arma(eq.get('arma') or punho, p, dorme(eq['arma']) if eq.get('arma') else False)
+    F['arma'] = _cajado(foco, p, dorme(foco)) if cajado else _arma(eq.get('arma') or punho, p, dorme(eq['arma']) if eq.get('arma') else False)
     F['arma2'] = _arma(eq['arma2'], p, dorme(eq['arma2'])) if eq.get('arma2') else None
     F['punho'] = _arma(punho, p, False)
     # a armadura, parte por parte (a melhor peça que cobre a parte)
@@ -162,7 +246,43 @@ def ficha(p):
     F['fol_rodada'] = fol_arm + falta_arm // T.FALTA_FOLEGO; F['ini_mod'] = corpo['ini']
     for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
         if k in p: F[k] = p[k]
+    dm = _dom(p, fam)
+    if dm: F['def_fixa'] += dm / 2                          # o dom da mão da arma na mão: metade na Defesa, como a maestria
+    mm = p['maestria']; trad = p.get('tradicao')
+    mt = (mm.get(trad, 0) if trad else max([mm.get(t, 0) for t in T.TRADICOES] + [0])) if isinstance(mm, dict) else (mm or 0)
+    _magia_neutra(F, p, mt); F['tracos'] = _tracos(p, p.get('tracos') or [])
+    if p.get('maldicao'): F['maldicao'] = dict(p['maldicao'])
+    _magia_ficha(F, p, eq, dorme)
+    if p.get('povo'): _povo(F, p)
+    _firmeza(F, p)
     return F
+
+
+def _magia_ficha(F, p, eq, dorme):
+    """o que a luta de magia lê da ficha (capítulo 11): a mão de cada tradição, o foco e o amuleto com a categoria que rendem hoje (a sintonia: o que dorme rende uma abaixo;
+    o que quebrou não vale), o que falta do atributo que o foco pede, os encantos das peças e quais dormem, e se a pessoa traz peça maldita"""
+    at = p['atributos']; mm = p['maestria']
+    F.update(atributos=dict(at), afin_b=at['Afinidade'] // 10, pena=p.get('pena', 0), benzido=bool(p.get('benzido')), guarda_p=p.get('guarda_p'), pena_laco=p.get('pena_laco', 0), cat_corpo=0,
+             m_trad={t: (mm.get(t, 0) if isinstance(mm, dict) else (mm or 0)) for t in T.TRADICOES}, foco_cat=None, foco_falta=0, amuleto_cat=None, encantos=[])
+    fo = eq.get('foco'); am = eq.get('amuleto')
+    if fo and fo['dur'][0] > 0:
+        a, q = pede(fo, dorme(fo)); F['foco_cat'] = max(0, fo['cat'] - (T.SINTONIA_ABAIXO if dorme(fo) else 0)); F['foco_falta'] = max(0, q - at[a]) // TM.FALTA
+    if am and am['dur'][0] > 0: F['amuleto_cat'] = max(0, am['cat'] - (T.SINTONIA_ABAIXO if dorme(am) else 0))
+    for it in [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + [x for x in eq.get('armaduras') or [] if x]:
+        for i, e in enumerate(it.get('encantos') or []):
+            c = max(0, it['cat'] - (T.SINTONIA_ABAIXO if dorme(it) else 0) - TM.ENCANTO['abaixo'])
+            F['encantos'].append(dict(item=it, idx=i, feitico=e['feitico'], grau=e.get('grau', 1), cat=c, carregado=bool(e.get('carregado', e.get('gasto') is None)), dorme=dorme(it), nome=it['nome']))
+    F['maldito'] = any(x and x.get('maldita') for x in [eq.get('arma'), eq.get('arma2'), eq.get('escudo'), fo, am] + list(eq.get('armaduras') or []))
+
+
+def _firmeza(F, p):
+    """a Firmeza da ficha: a base comum (tabelas.firmeza, sem a guarda) e o melhor entre o bônus do amuleto e metade do da armadura do tronco (com "resiste", inteiro).
+    O calejo é da luta."""
+    mm = p['maestria']; maior = max([v for v in mm.values() if isinstance(v, (int, float))] + [0]) if isinstance(mm, dict) else (mm or 0)
+    dmt = max([F['dom'].get(t, 0) for t in T.TRADICOES] + [0]); F['firmeza0'] = T.firmeza(p['atributos']['Vontade'], maior, None, None, dmt)
+    tr = F['partes'].get('tronco'); b = T.BON[F['amuleto_cat']] if F['amuleto_cat'] is not None else 0
+    if tr and tr['item']['dur'][0] > 0: b = max(b, T.BON[tr['cat']] * (1 if 'resiste' in F['tracos'] else 0.5))
+    F['firmeza'] = F['firmeza0'] + b
 
 
 def defesa(F, w=None, escudo_inteiro=True):
@@ -178,6 +298,30 @@ def linha(F):
     return re.sub(r'(?<![\w])-(\d)', r'−\1', re.sub(r'(\d)\.(\d)', r'\1,\2', _linha(F)))       # 29,5 · −2
 
 
+def conj_ficha(F, trad=None):
+    """(a tradição, a Conjuração) que a ficha mostra: a da tradição da pessoa (ou a melhor mão), com o foco que rende para ela (sem foco: Comum, −4), o dom e a pena do corpo"""
+    trad = trad or F.get('tradicao') or max(T.TRADICOES, key=lambda t: F['m_trad'].get(t, 0)); fo = F.get('foco'); c, mais = 0, TM.SEM_FOCO
+    if isinstance(fo, dict) and F.get('foco_cat') is not None:
+        k = F['foco_cat'] - (0 if trad in T.FOCOS[fo['forma']]['de'] else TM.FOCO_OUTRA)
+        if k >= 0: c, mais = k, -F.get('foco_falta', 0)
+    return trad, F['m_trad'].get(trad, 0) + int((F.get('dom') or {}).get(trad, 0) or 0) + (F['atributos'][T.TRADICOES[trad]] // 10) / 2 + T.BON[c] + mais + F.get('pena', 0)
+
+
+def _magia_linha(F):
+    """a linha da magia na ficha (só de quem tem magia: feitiço, foco ou amuleto)"""
+    fo, am = F.get('foco') if isinstance(F.get('foco'), dict) else None, F.get('amuleto') if isinstance(F.get('amuleto'), dict) else None
+    if not (F.get('feiticos') or fo or am): return ''
+    L = []
+    if F.get('feiticos'):
+        trad, cj = conj_ficha(F); L.append(f"magia ({trad}): Mana {F['mana']}/{F['mana_max']} · sabe: {', '.join(T.nome_feitico(k) for k in F['feiticos'])} · Conjuração {cj:+g}")
+    L.append(f"Firmeza {F['firmeza']:g}")
+    if fo: L.append(f"foco: {fo['nome']}" + (' (dorme: rende uma abaixo)' if fo['nome'] in F['dormem'] else '') + (f", falta atributo (−{F['foco_falta']})" if F.get('foco_falta') else ''))
+    elif F.get('feiticos'): L.append(f'sem foco (lança com as mãos: Comum, {TM.SEM_FOCO})'.replace('-', '−'))
+    L.append(f"amuleto: {am['nome']}" + (' (dorme)' if am['nome'] in F['dormem'] else '') if am else 'sem amuleto: contra a magia, a armadura guarda 0,6')
+    if F.get('encantos'): L.append('encanto: ' + ', '.join(f"{T.nome_feitico(e['feitico'])} em {e['nome']}" + ('' if e['carregado'] else ' (descarregado)') + (' (dorme)' if e['dorme'] else '') for e in F['encantos']))
+    return '\n  ' + ' · '.join(L)
+
+
 def _linha(F):
     if F.get('bicho'):
         w = F['arma']; pt = F['partes']['tronco']; ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
@@ -185,14 +329,15 @@ def _linha(F):
                 f"  o corpo é a arma: " + ' · '.join(f"{x['nome']} ({x['dado']} × {x['mult']:g}, {x['golpe']})" for x in F['armas_corpo']) + f" · acerto {w['acerto']:+g} · força × {w['fmult']:.2f} · alcança {w['alcance']} casa{'s' if w['alcance'] != 1 else ''}"
                 + (f" · {F['sopro']['nome']} ({F['sopro']['dado']} × {F['sopro']['mult']:g}, a {F['sopro']['alcance']} casas)" if F.get('sopro') else '') + '\n'
                 f"  Defesa {defesa(F):g} · o corpo é a armadura: {pt['nome']} (proteção {pt['rd']:g}, vale como {pt['material']}) · cerco: {F['cerco'][0]} de perto e {F['cerco'][1]} de haste · ocupa {F['ocupa']:g} de um corredor"
-                + (f" · traços: {', '.join(F['tracos'])}" if F['tracos'] else '') + (f" · coragem {F['coragem']:+d}" if F.get('moral') != 'firme' else ' · não foge'))
+                + (f" · traços: {', '.join(F['tracos'])}" if F['tracos'] else '') + (f" · coragem {F['coragem']:+d}" if F.get('moral') != 'firme' else ' · não foge')
+                + (f"\n  lança pelo instinto: {', '.join(T.nome_feitico(k) for k in F['feiticos'])} · Mana {F['mana']}/{F['mana_max']}" if F.get('feiticos') else ''))
     w = F['arma']; ps = ' · '.join(f"{k} {v['rd']:g}" for k, v in F['partes'].items()) or 'sem armadura'
     ext = ' + '.join('1' if x == 1 else '1 pelo dobro do fôlego' for x in F['esforcos'])
     return (f"{F['nome']} (nível {F['nivel']}, mão de {T.MAESTRIAS.get(F['maestria'], F['maestria'])}) · PV {F['pv']}/{F['pvmax']} · fôlego {F['folmax']} · {T.ACOES} ações (a mais: {ext})\n"
             f"  {w['nome']}: acerto {w['acerto']:+g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
             + (f", mais {F['fol_rodada']} por rodada da armadura" if F['fol_rodada'] else '') + '\n'
             f"  Defesa {defesa(F):g}" + (f" (com {F['escudo']['nome']})" if F['escudo'] and w['maos'] == 1 else '') + f" · proteção: {ps}"
-            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else ''))
+            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else '') + _magia_linha(F))
 
 
 if __name__ == '__main__':

@@ -16,6 +16,10 @@ O lugar tem prata contada: loja sem prata não compra. Tudo por evento (`compra`
     A LOJA FARTA CONTA A PRATELEIRA INTEIRA DA CATEGORIA: cada lugar guarda o alvo de peças por categoria (lugar.alvo_pecas: o que o gerador pôs na prateleira ao abrir
     a loja), e a loja paga também 20% a menos por cada peça da mesma categoria que a prateleira tem acima desse alvo. Quem compra da prateleira abre espaço de novo.
     A peça que está EM USO não se vende: guarda-se antes (`ato.py tirar ITEM`).
+  A MAGIA NO MERCADO (etapa da magia): as POÇÕES do Comum ao Raro são bens como os outros ("cura:0", "antídoto:1"), com preço pelo estoque e o povo que gasta;
+    a peçonha (matéria) e a água benta também. O VENENO DE LÂMINA a loja não negocia: é crime nas vilas (quem vende é a bruxa). O "vender tudo" não leva as poções
+    nem a água benta (são de usar: venda pelo nome). O FOCO, o AMULETO e o ESCRITO a loja negocia como peça (40% do valor, mais a mão de comércio; a loja farta conta
+    junto com as armas da mesma categoria). O elixir (a poção do Épico para cima) não tem loja. A parte da magia de um mercado abre-se à parte (`mercado.py magia`).
   A VIRADA DO DIA, em cada lugar com povo: o lugar produz (tudo acompanha o preço: falta, produz mais; sobra, menos; e a colheita, além disso, segue a estação)
     e o povo consome. A prata não mexe.
   LUGAR SEM POVO (sem o campo `pop`) NÃO TEM MERCADO: ali não se compra, não se vende, e a virada não faz nada.
@@ -30,16 +34,21 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 mercado.py comprar ITEM                 compra uma peça da prateleira (o id dela no Livro de Itens: i0007)
   python3 mercado.py vender ITEM                  vende uma peça sua à loja
   python3 mercado.py funda POVO ["como foi"]      o Mestre abre um mercado onde a pessoa está: o povo, a produção, o estoque no alvo, a prateleira e a prata
-BEM: comida lenha carvão sal pano remédio ferramenta · a matéria, com a categoria: metal:0 couro:1 osso:2 madeira:0 erva:1 (0 Comum, 1 Incomum, 2 Raro)
+  python3 mercado.py magia ["como foi"]           o Mestre abre a parte da magia do mercado onde a pessoa está: as poções que a botica dali faz (e a água benta, se há
+                                                  santuário), no alvo; e na prateleira, amuletos, focos e um escrito
+BEM: comida lenha carvão sal pano remédio ferramenta · a matéria, com a categoria: metal:0 couro:1 osso:2 madeira:0 erva:1 peçonha:1 (0 Comum, 1 Incomum, 2 Raro)
+     · as poções, com a categoria (até 2): cura:0 antídoto:0 mana:0 guarda:0 fúria:0 vigília:0 quebra-maldição:0 · água benta
 """
 import math, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_mercado as C
-import estado, corpo
+import tabelas_talento as TT
+import estado, corpo, talento
 from itens import item, rotulo
 
 PECAS = ('arma', 'armadura', 'escudo')
+LOJA_PECAS = PECAS + C.PECAS_MAGIA                          # o que a loja negocia como peça (etapa da magia: mais o foco, o amuleto e o escrito)
 FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino
 
 
@@ -50,9 +59,8 @@ def _em(E, lid): l = E['lugares'][lid]; return l.get('em', 'em ' + l['nome'])
 
 
 def nome_bem(bem):
-    """o nome de um bem para a mesa: 'metal:1' → 'metal Incomum'; 'madeira:2' → 'madeira Rara'; 'comida' → 'comida'"""
-    n, c = M.le_materia(bem)
-    return bem if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+    """o nome de um bem para a mesa: 'metal:1' → 'metal Incomum'; 'madeira:2' → 'madeira Rara'; 'comida' → 'comida'; a poção, 'cura:0' → 'poção de cura Comum' (o nome do estado)"""
+    return estado.nome_bem(bem)
 
 
 # ---------- ler: o povo, o alvo, o preço ----------
@@ -67,8 +75,9 @@ def povo(E, lid):
 
 def tem_mercado(E, lid): return povo(E, lid) > 0
 def mao(p): m = p.get('maestria'); return m.get('comércio', 0) if isinstance(m, dict) else 0              # a maestria de comércio (0 a 8)
-def parte(p): return C.parte(mao(p))                                                                       # a fração do preço que a loja paga a esta pessoa
-def parte_peca(p): return C.parte_peca(mao(p))                                                             # a fração do valor de uma PEÇA que a loja paga a esta pessoa (menos que pelos bens)
+def _dom(p, vista): return TT.DOM_COMERCIO.get(talento.dom_visto(p, 'comércio') if vista else talento.dom(p, 'comércio'), 0)       # o dom do comércio (etapa da magia): a mesa só vê o que a pessoa já viu
+def parte(p, vista=False): return min(C.parte(8), C.parte(mao(p)) + _dom(p, vista))                       # a fração do preço que a loja paga a esta pessoa (o dom soma, sem passar do teto)
+def parte_peca(p, vista=False): return min(C.parte_peca(8), C.parte_peca(mao(p)) + _dom(p, vista))         # a fração do valor de uma PEÇA que a loja paga a esta pessoa (menos que pelos bens)
 def caixa(E, lid): return E['lugares'][lid]['estoque'].get('prata', 0)                                    # a prata do lugar
 def prata_do_mundo(E): return sum(p['moedas'] for p in E['gente'].values()) + sum((l.get('estoque') or {}).get('prata', 0) for l in E['lugares'].values())      # gente mais lugares: a conta que tem de fechar
 
@@ -81,6 +90,7 @@ def _loja(E, lid):
 
 def _base(bem):
     b = C.base(bem)
+    if M.le_materia(bem)[0] in C.CRIME: sys.exit(f'a loja não negocia {estado.nome_bem(bem)}: é crime nas vilas (quem vende é a bruxa, de pessoa a pessoa)')
     if b is None: sys.exit(f'a loja não negocia "{bem}" (negocia: {", ".join(C.BASE)}; e a matéria com a categoria, de 0 a {M.MATERIA_ATE}: {", ".join(n + ":0" for n in C.BASE_MATERIA)})')
     return b
 
@@ -120,9 +130,9 @@ def custa(E, lid, bem, n):
     return max(1, math.ceil(round(C.COMPRA * lote(E, lid, bem, n, compra=True), 6)))
 
 
-def paga(E, pid, bem, n, lid=None):
-    """quanta prata a loja paga a esta pessoa por n unidades, agora (inteira, arredondada para baixo)"""
-    p = E['gente'][pid]; return math.floor(round(parte(p) * lote(E, lid or p['lugar'], bem, n, compra=False), 6))
+def paga(E, pid, bem, n, lid=None, vista=False):
+    """quanta prata a loja paga a esta pessoa por n unidades, agora (inteira, arredondada para baixo). `vista`: a conta que a pessoa faz (sem o dom que ela ainda não viu)"""
+    p = E['gente'][pid]; return math.floor(round(parte(p, vista) * lote(E, lid or p['lugar'], bem, n, compra=False), 6))
 
 
 def cabe(E, pid, bem, lid=None):
@@ -150,8 +160,13 @@ def _treino(E, pid, prata):
 def sobe(E, pid):
     """a maestria de comércio sobe quando os dias de negócio chegam; de Mestre para cima, só com o FEITO (um negócio grande)"""
     p = E['gente'][pid]; tem = mao(p); dias = (p.get('treino') or {}).get('comércio', 0); txt = ''
-    for grau, quer in sorted(C.COMERCIO_DIAS.items()):
-        if grau <= tem or dias < quer: continue
+    for grau in sorted(C.COMERCIO_DIAS):
+        quer = talento.pede(p, 'comércio', C.COMERCIO_DIAS, grau)         # os dias vezes o talento (etapa da magia), até o teto dele
+        if grau <= tem: continue
+        if quer is None:
+            if dias >= C.COMERCIO_DIAS[grau]: txt = f" (a mão não sobe mais em comércio: o talento para em {T.MAESTRIAS[talento.teto(p, 'comércio')]})"
+            break
+        if dias < quer: continue
         if grau in C.FEITO_NEGOCIO and p.get('marca', {}).get('feito_comércio', 0) < grau:
             txt = f" (tem os dias para {T.MAESTRIAS[grau]} em comércio; falta o feito: um negócio só de {_m(C.FEITO_NEGOCIO[grau])} de prata ou mais)"; break
         estado.aplica(E, 'treinar', [['pessoa', pid, 'maestria.comércio', 'poe', grau]], onde=p['lugar'], quem=[pid], texto=f"{p['nome']} chega a {T.MAESTRIAS[grau]} em comércio")
@@ -190,7 +205,8 @@ def vender(E, pid, bem, n):
     if cx < prata:
         k = cabe(E, pid, bem); sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_m(n)} de {nome_bem(bem)}" + (f': hoje ela compra até {_m(k)}' if k and paga(E, pid, bem, k) >= 1 else ': hoje ela não compra'))
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['pessoa', pid, 'carga.' + bem, 'soma', -n], ['estoque', lid, bem, 'soma', n]] + _treino(E, pid, prata)
-    txt = f"{p['nome']} vende {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}"
+    dom = talento.mostra(E, pid) if prata > paga(E, pid, bem, n, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
+    txt = f"{p['nome']} vende {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}" + (' (o comprador paga mais do que costuma: você tem jeito para o negócio)' if dom else '')
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt); depois = preco(E, lid, bem)
     return dict(bem=bem, n=n, prata=prata, antes=antes, depois=depois, texto=f"{txt}. O preço do dia: {_n(antes)} → {_n(depois)}" + (sobe(E, pid) or '.'))
 
@@ -199,20 +215,22 @@ def vender_cesta(E, pid, cesta=None):
     """a pessoa vende vários bens num negócio só ({bem: quanto}; sem cesta: tudo o que carrega e a loja negocia). A prata é arredondada UMA vez, na soma:
     quem junta a venda do dia perde menos no troco. Loja sem prata para a cesta inteira recusa a cesta inteira."""
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); carga = p.get('carga', {})
-    if cesta is None: cesta = {b: int(q) for b, q in carga.items() if C.base(b) is not None and q >= 1}
+    if cesta is None: cesta = {b: int(q) for b, q in carga.items() if C.base(b) is not None and q >= 1 and not C.de_beber(b) and M.le_materia(b)[0] not in C.CRIME}      # as poções e a água benta não vão no "tudo": são de usar
     if not cesta: sys.exit(f"{p['nome']} não carrega nada que a loja negocie")
     cesta = {b: _quantos(q) for b, q in cesta.items()}
     for b, q in cesta.items():
         _base(b)
         if carga.get(b, 0) < q: sys.exit(f"{p['nome']} carrega {_m(carga.get(b, 0))} de {nome_bem(b)} (quis vender {_m(q)})")
-    prata = math.floor(round(parte(p) * sum(lote(E, lid, b, q, compra=False) for b, q in cesta.items()), 6)); cx = caixa(E, lid); lista = ', '.join(f'{_m(q)} de {nome_bem(b)}' for b, q in cesta.items())
+    soma = sum(lote(E, lid, b, q, compra=False) for b, q in cesta.items())
+    prata = math.floor(round(parte(p) * soma, 6)); cx = caixa(E, lid); lista = ', '.join(f'{_m(q)} de {nome_bem(b)}' for b, q in cesta.items())
+    dom = talento.mostra(E, pid) if prata > math.floor(round(parte(p, vista=True) * soma, 6)) else []       # o dom escondido pagou a mais: a pessoa vê que tem jeito
     if prata < 1: sys.exit(f"{lista}: isso não vale uma moeda de prata {_em(E, lid)}: junte mais para vender")
     if cx < prata: sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} pela cesta ({lista}): venda aos poucos (`mercado.py preco BEM N` diz quanto ela paga)")
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata]]
     for b, q in cesta.items(): ef += [['pessoa', pid, 'carga.' + b, 'soma', -q], ['estoque', lid, b, 'soma', q]]
     txt = f"{p['nome']} vende {lista} por {_m(prata)} de prata {_em(E, lid)}"
-    estado.aplica(E, 'venda', ef + _treino(E, pid, prata), onde=lid, quem=[pid], texto=txt)
-    return dict(cesta=cesta, prata=prata, texto=txt + (sobe(E, pid) or '.'))
+    estado.aplica(E, 'venda', ef + _treino(E, pid, prata) + dom, onde=lid, quem=[pid], texto=txt)
+    return dict(cesta=cesta, prata=prata, texto=txt + (' (o comprador paga mais do que costuma: você tem jeito para o negócio)' if dom else '') + (sobe(E, pid) or '.'))
 
 
 # ---------- as peças da loja ----------
@@ -222,8 +240,8 @@ def valor(it):
 
 
 def preco_peca(it): return max(1, math.ceil(round(valor(it), 6)))                                         # o que a loja pede por ela
-def _e_peca(it): return it.get('tipo') in PECAS and it['cat'] <= M.PECA_LOJA_ATE
-def _feitio(it): return (it['tipo'], it['cat'], it.get('familia'), it.get('material'))      # o que faz duas peças serem "iguais" para a loja (o recorte da armadura não conta)
+def _e_peca(it): return it.get('tipo') in LOJA_PECAS and it['cat'] <= M.PECA_LOJA_ATE
+def _feitio(it): return (it['tipo'], it['cat'], it.get('familia'), it.get('material'), it.get('forma'), tuple(it.get('feiticos') or ()))      # o que faz duas peças serem "iguais" para a loja (o recorte da armadura não conta; o foco, pela forma; o escrito, pelo que ensina)
 
 
 def prateleira(E, lid):
@@ -250,10 +268,10 @@ def sobra(E, lid, it):
     return max(0, tem - int(alvo_pecas(E, lid).get(it['cat'], 0)))
 
 
-def paga_peca(E, pid, it, lid=None):
+def paga_peca(E, pid, it, lid=None, vista=False):
     """o que a loja paga por esta peça a esta pessoa: a parte dela no valor (tabelas_mercado.PAGA_PECA: 40%, mais a mão de comércio), 20% a menos por cada peça igual que a prateleira já tem,
     e 20% a menos por cada peça da mesma categoria que a prateleira tem acima do alvo do lugar"""
-    p = E['gente'][pid]; lid = lid or p['lugar']; return math.floor(round(parte_peca(p) * valor(it) * C.FARTA ** (iguais(E, lid, it) + sobra(E, lid, it)), 6))
+    p = E['gente'][pid]; lid = lid or p['lugar']; return math.floor(round(parte_peca(p, vista) * valor(it) * C.FARTA ** (iguais(E, lid, it) + sobra(E, lid, it)), 6))
 
 
 def _cats(c): return FEM[c][:-1] + 'ns' if FEM[c].endswith('m') else FEM[c] + 's'          # o plural da categoria que vem depois de "peças": Comuns, Incomuns, Raras, Épicas
@@ -271,7 +289,7 @@ def comprar_peca(E, pid, iid):
     if iid not in prateleira(E, lid):
         sys.exit(f"{it['nome']} ({iid}) não está na prateleira {estado.de(E, lid)}" + (f": é de {E['gente'][it['dono']]['nome']}" if it.get('dono') in E['gente']
                  else ': está no chão, não é da loja (quem fica com ela entra por evento do Mestre)' if it.get('onde') == lid and it.get('solto')
-                 else f": a loja só negocia arma, armadura e escudo, até o {T.CATS[M.PECA_LOJA_ATE]}" if it.get('onde') == lid else ''))
+                 else f": a loja só negocia arma, armadura, escudo, foco, amuleto e escrito, até o {T.CATS[M.PECA_LOJA_ATE]}" if it.get('onde') == lid else ''))
     prata = preco_peca(it)
     if p['moedas'] < prata: sys.exit(f"{_diz_peca(it)} custa {_m(prata)} de prata; {p['nome']} tem {_m(p['moedas'])}")
     ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['item', iid, 'dono', 'poe', pid],
@@ -285,16 +303,18 @@ def vender_peca(E, pid, iid):
     """a pessoa vende à loja uma peça sua: a peça fica sem dono, com "onde" no lugar (vai para a prateleira), e a prata sai do lugar. Loja sem prata recusa."""
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
     if it.get('dono') != pid: sys.exit(f"{it['nome']} ({iid}) não é de {p['nome']}")
-    if it.get('tipo') not in PECAS: sys.exit(f"{it['nome']} não é peça que a loja negocie (núcleo não se vende em loja: é coisa de leilão ou de encomenda)")
+    if it.get('tipo') not in LOJA_PECAS: sys.exit(f"{it['nome']} não é peça que a loja negocie (núcleo e elixir não se vendem em loja: é coisa de leilão, de encomenda ou de quem precisa)")
     if it['cat'] > M.PECA_LOJA_ATE: sys.exit(f"{it['nome']} é {T.CATS[it['cat']]}: a loja só negocia peça até o {T.CATS[M.PECA_LOJA_ATE]} (daí para cima, leilão ou encomenda)")
     if any(o.get('item') == iid for o in E['itens'].get('obras', {}).values()): sys.exit(f"{it['nome']} está num ajuste aberto: feche ou largue a obra antes de vender")
+    if it.get('maldita'): sys.exit(f"o mercador {estado.de(E, lid)} pega {it['nome']} para avaliar e larga depressa: não compra (há algo de errado nela, e ele não sabe dizer o quê)")      # antes do "em uso" (a peça maldita presa na mão não sai): a peça maldita não vira prata na loja (a etapa da magia): a armadilha não é mina
     if it.get('uso'): sys.exit(f"{it['nome']} está em uso: guarde antes de vender (`ato.py tirar {iid}`)")
     prata = paga_peca(E, pid, it); cx = caixa(E, lid); k = iguais(E, lid, it); sb = sobra(E, lid, it); farta = _diz_farta(it, k, sb)
     if prata < 1: sys.exit(f"{_diz_peca(it)} não vale uma moeda de prata {_em(E, lid)}" + (f": a loja já tem {farta} na prateleira" if farta else ''))
     if cx < prata: sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_diz_peca(it)}")
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['item', iid, 'dono', 'poe', None], ['item', iid, 'onde', 'poe', lid],
           ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} vendeu à loja {estado.de(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
-    txt = f"{p['nome']} vende {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}"
+    dom = talento.mostra(E, pid) if prata > paga_peca(E, pid, it, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
+    txt = f"{p['nome']} vende {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}" + (' (o comprador paga mais do que costuma: você tem jeito para o negócio)' if dom else '')
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt)
     return dict(item=iid, prata=prata, iguais=k, sobra=sb, texto=txt + (f" (a loja já tinha {farta}: pagou menos)" if farta and C.FARTA < 1 else '') + (sobe(E, pid) or '.'))
 
@@ -357,11 +377,45 @@ def funda(E, lid, pop, prata=None, prateleira_=True, como=''):
     return txt + '.'
 
 
+def funda_magia(E, lid, como=''):
+    """o gerador (ou o Mestre) abre A PARTE DA MAGIA de um mercado que já existe, por um evento "gera" (etapa da magia): as poções que a botica do lugar faz para o povo
+    (tabelas_magia_mundo.POVO_POCOES; o quebra-maldição, se há também santuário), até a categoria que a botica alcança: produção no consumo e estoque no alvo; as de uma
+    categoria acima, só o estoque no alvo (vêm de quem traz); a água benta, onde há santuário; e na prateleira, os amuletos, os focos e o escrito do tipo do lugar
+    (entram no alvo de peças da categoria: a loja farta conta junto). Recusa abrir duas vezes. Lugar sem botica: as poções Comuns ficam no alvo, sem produção."""
+    import tabelas_magia_mundo as W
+    from itens import cat_escrito
+    l = E['lugares'].get(lid) or sys.exit(f'não há o lugar "{lid}"')
+    if not tem_mercado(E, lid): sys.exit(f"{l['nome']} não tem mercado: abra-o antes (`mercado.py funda POVO`)")
+    if l.get('feira_magia'): sys.exit(f"{l['nome']} já tem a magia no mercado (desde o Dia {l['feira_magia']}): não se abre por cima")
+    pop = povo(E, lid); bot = l.get('botica'); faz = W.BOTICA_FAZ.get(bot, -1) if isinstance(bot, int) and not isinstance(bot, bool) else -1; ef = []; est = l['estoque']
+    santo = l.get('santuario') is not None; povo_faz = list(W.POVO_POCOES) + (list(W.SANTUARIO_POCOES) if santo else [])
+    for nome in M.POCOES:
+        if nome in C.CRIME or (nome in W.SANTUARIO_POCOES and not santo): continue
+        for cat in range(min(M.POCAO_ATE, faz + 1) + 1):                         # a prateleira tem cada poção que a loja negocia até uma categoria acima do que a botica faz
+            bem = M.materia(nome, cat); c = pop * C.consumo(bem)
+            if cat <= faz and nome in povo_faz and c: ef.append(['lugar', lid, 'produz.' + bem, 'poe', round(c, 4)])       # a botica faz para o povo o que o povo gasta
+            quer = max(C.ALVO_MIN, round(C.alvo_dias(bem) * c))                  # a prateleira no alvo (nunca menos que o mínimo)
+            if quer > est.get(bem, 0): ef.append(['estoque', lid, bem, 'soma', quer - est.get(bem, 0)])
+    if santo:
+        c = pop * C.consumo('água benta'); quer = round(C.alvo_dias('água benta') * c); ef.append(['lugar', lid, 'produz.água benta', 'poe', round(c, 4)])
+        if quer > est.get('água benta', 0): ef.append(['estoque', lid, 'água benta', 'soma', quer - est.get('água benta', 0)])
+    quer_pecas = dict(alvo_pecas(E, lid)); novas = 0
+    for tipo, qual, cat, nome in C.prateleira_magia_de(l.get('tipo')):
+        c = cat_escrito(qual) if tipo == 'escrito' else cat
+        ef.append(['item', 'nasce', item(tipo, c, nome, onde=lid, **({'forma': qual} if tipo == 'foco' else {'feiticos': list(qual)} if tipo == 'escrito' else {}))])
+        quer_pecas[c] = quer_pecas.get(c, 0) + 1; novas += 1
+    ef.append(['lugar', lid, 'alvo_pecas', 'poe', {str(c): q for c, q in quer_pecas.items()}])       # o que entra na prateleira entra no alvo da categoria: acima disso, a loja farta
+    ef.append(['lugar', lid, 'feira_magia', 'poe', E['relogio']['dia']])
+    txt = f"{l['nome']} abre a magia no mercado: " + (f"a {W.BOTICAS[bot]} faz poções até a {FEM[faz]}" if faz >= 0 else 'sem botica que faça poção') + (', há água benta do santuário' if santo else '') + f"; {novas} peças de magia na prateleira" + (f': {como}' if como else '')
+    estado.aplica(E, 'gera', ef, onde=lid, texto=txt)
+    return txt + '.'
+
+
 # ---------- a mesa ----------
 def _linha_bem(E, pid, lid, bem):
     p = E['gente'][pid]; tem = E['lugares'][lid]['estoque'].get(bem, 0); b = C.base(bem); un = 1 if b >= 5 else 10; carrega = p.get('carga', {}).get(bem, 0)
     k = min(un, int(tem)); compra = f'{k} por {_m(custa(E, lid, bem, k))}' if k else 'não há'
-    q = paga(E, pid, bem, un); return f"| {nome_bem(bem)} | {_m(tem)} | {_n(preco(E, lid, bem))} (× {_n(fator(E, lid, bem))}) | {compra} | {_m(q)} por {un} | {_m(carrega) if carrega else ''} |"
+    q = paga(E, pid, bem, un, vista=True); return f"| {nome_bem(bem)} | {_m(tem)} | {_n(preco(E, lid, bem))} (× {_n(fator(E, lid, bem))}) | {compra} | {_m(q)} por {un} | {_m(carrega) if carrega else ''} |"
 
 
 def ver(E, pid):
@@ -371,11 +425,13 @@ def ver(E, pid):
     if not pop: return [f"**{l['nome']}:** não há mercado aqui (lugar sem povo contado: não se compra nem se vende)."]
     carga = p.get('carga', {}); itens = E['itens']['itens']
     L = [f"**{l['nome']}** · {_m(pop)} de povo · a loja tem {_m(caixa(E, lid))} de prata (sem prata, ela não compra) · comprar custa {C.COMPRA - 1:.0%} a mais · "
-         f"a loja paga {parte(p):.0%} do preço pelos bens e {parte_peca(p):.0%} do valor pelas peças (a sua mão em comércio: {T.MAESTRIAS.get(mao(p), mao(p))})"]
+         f"a loja paga {parte(p, vista=True):.0%} do preço pelos bens e {parte_peca(p, vista=True):.0%} do valor pelas peças (a sua mão em comércio: {T.MAESTRIAS.get(mao(p), mao(p))})"]
     tem = [b for b in C.bens() if l['estoque'].get(b, 0) > 0 or carga.get(b, 0) > 0]; falta = [nome_bem(b) for b in C.bens() if b not in tem and C.consumo(b) and M.le_materia(b)[1] in (None, 0)]
     if tem: L += ['', '| bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |', '| --- | --- | --- | --- | --- | --- |'] + [_linha_bem(E, pid, lid, b) for b in tem]
     if falta: L.append(f"Em falta aqui (preço no teto, × {C.FATOR_MAX:g}): {', '.join(falta)}.")
-    outros = [f'{_m(q)} de {b}' for b, q in carga.items() if C.base(b) is None]
+    mg = [b for b in C.bens_magia() if l['estoque'].get(b, 0) > 0 or carga.get(b, 0) > 0]       # a magia no mercado: só o que há no lugar ou na carga
+    if mg: L += ['', '**A magia** (as poções até a Rara; a água benta; a peçonha):', '| bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |', '| --- | --- | --- | --- | --- | --- |'] + [_linha_bem(E, pid, lid, b) for b in mg]
+    outros = [f'{_m(q)} de {estado.nome_bem(b)}' for b, q in carga.items() if C.base(b) is None or M.le_materia(b)[0] in C.CRIME]
     if outros: L.append('A loja não negocia: ' + ', '.join(outros) + '.')
     loja = prateleira(E, lid)
     if loja:
@@ -390,8 +446,8 @@ def ver(E, pid):
         L += [f"- novas, a {_m(pr)} de prata cada ({T.CATS[cat]}): " + ' · '.join(v[:14]) + (f' · e mais {len(v) - 14}' if len(v) > 14 else '') for (cat, pr), v in sorted(novas.items())]
         L += outras[:8] + ([f"- ... e mais {estado.tantos(len(outras) - 8, 'peça gasta', 'peças gastas')}"] if len(outras) > 8 else [])
     minhas = [(i, it) for i, it in itens.items() if it.get('dono') == pid and _e_peca(it)]
-    if minhas: L += ['', f'**As suas peças** (o que a loja paga: {parte_peca(p):.0%} do valor; {1 - C.FARTA:.0%} a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): '
-                     + ' · '.join(f"{i} {_diz_peca(it)}{' EM USO' if it.get('uso') else ''}: {_m(paga_peca(E, pid, it))}" for i, it in minhas[:8]) + (f' · e mais {len(minhas) - 8}' if len(minhas) > 8 else '')]
+    if minhas: L += ['', f'**As suas peças** (o que a loja paga: {parte_peca(p, vista=True):.0%} do valor; {1 - C.FARTA:.0%} a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): '
+                     + ' · '.join(f"{i} {_diz_peca(it)}{' EM USO' if it.get('uso') else ''}: {_m(paga_peca(E, pid, it, vista=True))}" for i, it in minhas[:8]) + (f' · e mais {len(minhas) - 8}' if len(minhas) > 8 else '')]
     L += ['', 'Negociar não gasta bloco: `mercado.py comprar BEM N` · `mercado.py vender BEM N|tudo` · `mercado.py vender tudo` (a cesta: um troco só) · `mercado.py comprar ITEM` · `mercado.py vender ITEM` · `mercado.py preco BEM N` (só olha)']
     return L
 
@@ -409,7 +465,7 @@ def diz_preco(E, pid, bem, n=1):
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); b = _base(bem); n = _quantos(n); tem = l['estoque'].get(bem, 0); k = min(n, int(tem))
     L = [f"{nome_bem(bem)} {_em(E, lid)}: base {_n(b)} · preço do dia {_n(preco(E, lid, bem))} (× {_n(fator(E, lid, bem))}) · no lugar {_m(tem)} (o alvo: {_m(round(alvo(E, lid, bem)))})"]
     L.append(f"Comprar {_m(k)}: {_m(custa(E, lid, bem, k))} de prata" + (f' (o lugar só tem {_m(tem)})' if k < n else '') if k else 'Comprar: não há no lugar.')
-    q = paga(E, pid, bem, n); L.append(f"Vender {_m(n)}: a loja paga {_m(q)} de prata ({parte(p):.0%} do preço)" + (f"; ela tem {_m(caixa(E, lid))}" if caixa(E, lid) < q else '') + (f"; você carrega {_m(p.get('carga', {}).get(bem, 0))}" if p.get('carga', {}).get(bem, 0) < n else ''))
+    q = paga(E, pid, bem, n, vista=True); L.append(f"Vender {_m(n)}: a loja paga {_m(q)} de prata ({parte(p, vista=True):.0%} do preço)" + (f"; ela tem {_m(caixa(E, lid))}" if caixa(E, lid) < q else '') + (f"; você carrega {_m(p.get('carga', {}).get(bem, 0))}" if p.get('carga', {}).get(bem, 0) < n else ''))
     return '\n'.join(L)
 
 
@@ -418,14 +474,16 @@ def main(a=None):
     a = sys.argv[1:] if a is None else list(a)
     if not a: print(__doc__); return
     op = dict(x.split('=', 1) for x in a if '=' in x); pos = [x for x in a if '=' not in x]
-    if not pos or pos[0] not in ('ver', 'preco', 'comprar', 'vender', 'funda'): print(__doc__); return
-    if pos[0] != 'ver' and len(pos) < 2:                    # uma frase por erro, em vez do uso inteiro
+    if not pos or pos[0] not in ('ver', 'preco', 'comprar', 'vender', 'funda', 'magia'): print(__doc__); return
+    if pos[0] not in ('ver', 'magia') and len(pos) < 2:                    # uma frase por erro, em vez do uso inteiro
         sys.exit(dict(preco='diga de que bem quer o preço: `python3 mercado.py preco comida 10`', funda='diga quanta gente tem o lugar, em número inteiro (1 ou mais): `python3 mercado.py funda 400 "como foi"`')
                  .get(pos[0], f'diga o que {pos[0]}: um bem e quantas unidades (`python3 mercado.py {pos[0]} comida 3`) ou o id de uma peça (`python3 mercado.py {pos[0]} i0007`)'))
     if pos[0] == 'funda' and (not pos[1].isdigit() or int(pos[1]) < 1): sys.exit(f'o povo de um mercado é um número inteiro, 1 ou mais (veio "{pos[1]}"): `python3 mercado.py funda 400 "como foi"`')
     E = estado.carrega(); pid = op.get('quem') or estado.eu(E)
     if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
     if pos[0] == 'ver': print('\n'.join(ver(E, pid))); return
+    if pos[0] == 'magia':
+        out = funda_magia(E, E['gente'][pid]['lugar'], como=pos[1] if len(pos) > 1 else ''); estado.grava(E); print(out); return
     if pos[0] == 'preco': print(diz_preco(E, pid, pos[1], pos[2] if len(pos) > 2 else 1)); return
     e_item = pos[1] in E['itens']['itens']
     if pos[0] == 'vender' and pos[1:] == ['tudo']: out = vender_cesta(E, pid)['texto']

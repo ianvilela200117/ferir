@@ -8,7 +8,10 @@ Cinco blocos: O EQUILÍBRIO (quem vence) · A DURAÇÃO (quanto dura) · AS ARMA
 · OS MÓDULOS (cada coisa que interfere, interfere mesmo, e para o lado certo) · OS BICHOS (as oito metas da etapa 2: o corpo é a arma
 e a armadura, o bando, o chefe, o tamanho, os traços, a moral, a duração; e o que o corpo do bicho tem de ser).
 
-Uso: python3 provas.py [N]        N = lutas por meta (padrão 600)
+E um sexto, A MAGIA NA LUTA (etapa da magia, capítulo 11): o duelo e a lei "o item decide" com o foco e o amuleto, a Mana, o grupo, as tradições, o feitiço longo
+sob flecha, o retrochoque, o controle, a multidão, os bichos, os nove traços novos, a poção e o veneno de lâmina, a peça encantada, as fases do chefe, a ordem, e a luta que volta ao estado.
+
+Uso: python3 provas.py [N] [magia]        N = lutas por meta (padrão 600) · magia: só o bloco da magia
 """
 import sys
 import luta
@@ -436,9 +439,286 @@ def bichos(n):
     return out
 
 
+# ---------- A MAGIA NA LUTA (etapa da magia, capítulo 11): os construtores de quem lança e as metas ----------
+def mago(nome, nivel=50, foco=2, arm=None, amuleto='igual', m=None, sabe=('seta', 'prender', 'escudo', 'lança-de-fogo'), molde='mago', trad='arcano', forma='cajado', mao=2, **kw):
+    """o lançador gerado: cajado (o foco de duas mãos, que é também a arma), couro, e o amuleto da categoria da armadura; a mão da tradição é a do nível"""
+    arm = foco if arm is None else arm
+    return veste(padrao(nome, nivel, molde=molde, maestria={'maça': mao, trad: T.maestria_tipica(nivel) if m is None else m}, feiticos=list(sabe), tradicao=trad, **kw),
+                 armadura=('couro', arm), foco=(forma, foco), amuleto=arm if amuleto == 'igual' else amuleto)
+
+
+def clerigo(nome, nivel=50, c=2, amuleto='igual', sabe=('cura',), m=None, **kw):
+    """o clérigo na linha: maça, escudo e malha (a mão na arma um grau abaixo da da fé), o símbolo na mão do escudo"""
+    mt = T.maestria_tipica(nivel)
+    return veste(padrao(nome, nivel, molde='clérigo', maestria={'maça': max(0, mt - 2), 'fé': mt if m is None else m}, feiticos=list(sabe), tradicao='fé', **kw),
+                 arma=('maça', c), armadura=('malha', c), escudo=c, foco=('símbolo', c), amuleto=c if amuleto == 'igual' else amuleto)
+
+
+def druida(nome='o druida', nivel=50, foco=2, m=None, **kw): return mago(nome, nivel, foco, molde='druida', trad='verde', sabe=('raízes', 'espinho'), m=m, **kw)
+
+
+def bruxa(nome='a bruxa', nivel=50, c=2, m=None, **kw):
+    """a bruxa: o talismã na mão, uma adaga na outra, couro e amuleto"""
+    return veste(padrao(nome, nivel, molde='bruxa', maestria={'adaga': 2, 'pacto': T.maestria_tipica(nivel) if m is None else m}, feiticos=['mau-olhado', 'sangria'], tradicao='pacto', **kw),
+                 arma=('adaga', c), armadura=('couro', c), foco=('talismã', c), amuleto=c)
+
+
+def gm(nome, nivel=50, arma=R, arm=R, esc=None, amuleto=None, familia='espada', **kw):
+    """o guerreiro do banco (espada, malha e escudo), com ou sem amuleto"""
+    return veste(padrao(nome, nivel, **kw), arma=(familia, arma), armadura=('malha', arm), escudo=arm if esc is None else esc, amuleto=amuleto)
+
+
+def arqueira(nome, nivel=50, c=R, am=None): return veste(padrao(nome, nivel, molde='arqueiro'), arma=('arco', c), arma2=('adaga', c), armadura=('couro', c), amuleto=am)
+
+
+def magia_luta(n):
+    """A MAGIA NA LUTA: a seção G do projeto (conta/PROJETO.md), na parte da luta, e as metas da ordem de serviço. Nível 50, tudo Raro, quando não diz outra coisa;
+    o guerreiro de espada, malha e escudo; o mago de cajado, couro e amuleto, que sabe seta, prender, escudo e lança de fogo. Devolve [(o que se mede, o que deu, passou?)]."""
+    import itertools, json, statistics
+    import magia as MG
+    import tabelas_magia as TM
+    import bichos as B
+    from itens import item
+    luta.semente(2026)                                      # a semente da magia: o bloco se repete igual rodando sozinho (provas.py N magia)
+    out = []; ok = lambda nome, deu, passa: out.append((nome, deu, bool(passa)))
+    n1 = max(1200, 2 * n)                                   # as faixas da magia são estreitas: o dobro de lutas (a luta de magia é curta)
+    v = lambda a, b, **kw: luta.duelos(a, b, **{**dict(n=n1, inicio='perto'), **kw})[0]
+    um_ = lambda f, **kw: (lambda: [f(**kw)] if callable(f) else [f])
+    M = lambda **kw: (lambda: [mago('a maga', **kw)]); W = lambda **kw: (lambda: [gm('o guerreiro', **kw)])
+    def conta(a, b, **kw):
+        C = {}
+        for _ in range(kw.pop('vezes', n)):
+            S = luta.nova(a(), b(), quieto=True, **kw); luta.corre(S)
+            for k, x in (S.get('conta') or {}).items(): C[k] = C.get(k, 0) + x
+        return C
+    # M1 a M7: o duelo, e a lei "o item decide"
+    x = v(M(), lambda: [mago('o mago')])
+    ok('M1 MAGO CONTRA MAGO (iguais, perto): de 44 a 56%', f'{x}%', 44 <= x <= 56)
+    c = [v(M(), W(amuleto=R), inicio=i) for i in ('longe', 'perto', 'colado')]; s = [v(M(), W(), inicio=i) for i in ('longe', 'perto', 'colado')]
+    ok('M2 MAGO CONTRA O GUERREIRO COM AMULETO: de longe 28 a 45%, de perto 12 a 28%, colado 4 a 16% (o mago é um arqueiro que gasta Mana)', f'{c[0]}%, {c[1]}% e {c[2]}%', 28 <= c[0] <= 45 and 12 <= c[1] <= 28 and 4 <= c[2] <= 16)
+    ok('M3 SEM AMULETO A MAGIA PESA: contra o guerreiro sem amuleto (a armadura guarda 0,6) o mago ganha de 15 a 35 pontos, de longe e de perto (custa como lutar sem elmo)',
+       f'de longe {s[0]}% (+{s[0] - c[0]}), de perto {s[1]}% (+{s[1] - c[1]}), colado {s[2]}% (+{s[2] - c[2]})', 15 <= s[0] - c[0] <= 35 and 15 <= s[1] - c[1] <= 35)
+    a, b = v(M(foco=R + 1, arm=R), W(amuleto=R), inicio='longe'), v(M(foco=R + 1, arm=R), W(amuleto=R))
+    ok('M4 O FOCO DECIDE: o foco uma categoria acima contra o guerreiro igual com amuleto: de longe 85 a 100%, de perto 65 a 90%', f'{a}% e {b}%', 85 <= a <= 100 and 65 <= b <= 90)
+    a, b = v(M(), W(amuleto=R + 1), inicio='longe'), v(M(), W(arma=R + 1, arm=R + 1, amuleto=R + 1, atributos={'Vontade': 100}), inicio='longe')
+    ok('M5 O AMULETO É A ARMADURA DA MAGIA: contra o amuleto uma acima, de 2 a 18%; contra o conjunto uma acima (com Vontade para sustentar as cinco peças), de 0 a 8%', f'{a}% e {b}%', 2 <= a <= 18 and 0 <= b <= 8)
+    a, b = v(M(foco=R + 2, arm=R), W(nivel=500, amuleto=R), inicio='longe'), v(M(foco=R + 2, arm=R), W(nivel=500, amuleto=R))
+    ok('M6 A CHANCE DO PEQUENO: o nível 50 de foco duas acima contra o nível 500 com amuleto: de longe 65 a 92%, de perto 15 a 40%', f'{a}% e {b}%', 65 <= a <= 92 and 15 <= b <= 40)
+    a = v(M(foco=R + 1, arm=R), W(nivel=500, amuleto=R), inicio='longe')
+    ok('M7 ... e com o foco uma acima, de longe: de 5 a 30%', f'{a}%', 5 <= a <= 30)
+    # M8: o tamanho de cada feitiço num igual com amuleto (a conta exata do dado, sem o crítico)
+    def tam(lanc, alvo, k, dado=None):
+        S = luta.nova([lanc], [alvo], quieto=True); f, e = S['L']; _, cc, vz, _, fm = MG.conj(S, f, k); g, _ = MG.guarda(S, e)
+        q, fc = map(int, (dado or TM.FEITICOS[k]['dado']).split('d')); ds = sorted(int(sum(t) * TM.K * T.MULT[cc] * vz / g * fm) for t in itertools.product(range(1, fc + 1), repeat=q))
+        return statistics.median(ds) / e['pvmax'], max(ds), e['pvmax']
+    lin = []; pior = 0; mata = []
+    for k, lanc in (('seta', mago('a')), ('lança-de-fogo', mago('a')), ('raio', mago('a')), ('bola-de-fogo', mago('a')), ('espinho', druida()), ('sangria', bruxa()), ('castigo', clerigo('c', sabe=('castigo',)))):
+        for alvo in (gm('g', amuleto=R), json.loads(json.dumps(lanc)) | {'nome': 'o gêmeo'}):
+            md, mx, pv = tam(json.loads(json.dumps(lanc)), alvo, k)
+            if alvo['nome'] == 'g': lin.append(f"{T.nome_feitico(k)} {md:.0%}"); pior = max(pior, md if k != 'seta' else 0)
+            if mx >= pv: mata.append(f"{T.nome_feitico(k)} em {alvo['nome']} ({mx} de {pv})")
+    sm = tam(mago('a'), gm('g', amuleto=R), 'seta')[0]
+    ok('M8 NENHUM FEITIÇO MATA DE PV CHEIO SEM CRÍTICO ENTRE IGUAIS (no guerreiro com amuleto e no gêmeo de quem lança); na mediana, nenhum tira mais de 45% do PV do guerreiro, e a seta até 20%',
+       'na mediana: ' + ', '.join(lin) + ('; nenhum mata de PV cheio' if not mata else '; MATA: ' + ', '.join(mata)), not mata and pior <= 0.45 and sm <= 0.20)
+    # M9: a Mana (só de seta, contra um alvo que não morre)
+    def seca(volta):
+        antes = TM.MANA_LUTA; TM.MANA_LUTA = volta; sec = []; tiros = []
+        try:
+            for _ in range(max(100, n // 3)):
+                S = luta.nova([mago('m', sabe=('seta',))], [gm('o saco', nivel=500, arma=0, arm=4, amuleto=4)], inicio=30, quieto=True); f, g = S['L']; g['preso'] = True; r0 = None
+                for r in range(1, 21):
+                    luta.rodada(S); g['x'] = f['x'] + 6
+                    if r0 is None and f['mana'] < 2: r0 = r
+                sec.append(r0 or 21); tiros.append((S.get('conta') or {}).get('seta_lances', 0))
+        finally: TM.MANA_LUTA = antes
+        return statistics.median(sec), statistics.mean(tiros)
+    (r1, t1), (r0, t0) = seca(1), seca(0)
+    ok('M9 A MANA É O FÔLEGO DA MAGIA: só de seta, sem parar, seca entre a rodada 6 e a 10; a volta de 1 por turno rende de 25 a 50% de setas a mais na luta (até 20 rodadas; a luta acaba no impasse quando o alvo não sente)',
+       f'seca na rodada {r1:g} (sem a volta, na {r0:g}); {t1:.1f} setas contra {t0:.1f} ({t1 / t0 - 1:+.0%})', 6 <= r1 <= 10 and 0.25 <= t1 / t0 - 1 <= 0.50)
+    # M10 a M13: o grupo (nível 40, tudo Incomum, todos com amuleto; cinco contra cinco, perto)
+    G = lambda pre, k, am=1, **kw: [gm(f'{pre}{i}', nivel=40, arma=1, arm=1, amuleto=am, **kw) for i in range(1, k + 1)]
+    M1 = lambda sabe: mago('o mago', nivel=40, foco=1, linha='trás', sabe=sabe, m=4)
+    base = v(lambda: G('a', 5), lambda: G('b', 5)); sem = v(lambda: G('a', 4) + [M1(('seta', 'lança-de-fogo', 'prender'))], lambda: G('b', 5), n=2 * n1)
+    com = v(lambda: G('a', 4) + [M1(('seta', 'bola-de-fogo'))], lambda: G('b', 5)); nu = v(lambda: G('a', 4) + [M1(('seta', 'bola-de-fogo'))], lambda: G('b', 5, am=None))
+    ok('M10 O MAGO NO GRUPO, no lugar de um guerreiro: sem área 40 a 55%; com a bola de fogo contra cinco com amuleto 52 a 70%; contra cinco sem amuleto 75 a 92%',
+       f'cinco contra cinco: {base}%; sem área {sem}%; com área {com}%; com área contra os sem amuleto {nu}%', 40 <= sem <= 55 and 52 <= com <= 70 and 75 <= nu <= 92)
+    x = v(lambda: G('a', 4) + [M1(('seta', 'bola-de-fogo', 'prender'))], lambda: G('b', 5), lugar=dict(largura=2))
+    ok('M11 ... e no corredor de dois (seta, bola de fogo, prender): de 50 a 68%', f'{x}%', 50 <= x <= 68)
+    cl = lambda **kw: clerigo('o clérigo', nivel=40, c=1, **kw); mx_c = (lambda p: T.mana_max(p['atributos']['Afinidade'], p['atributos']['Vontade'], 4))(cl())
+    a, b = v(lambda: G('a', 4) + [cl()], lambda: G('b', 5), n=2 * n1), v(lambda: G('a', 4) + [cl()], lambda: G('b', 5), lugar=dict(largura=2))
+    bz = v(lambda: G('a', 4, benzido=True) + [cl(mana=mx_c - 8)], lambda: G('b', 5), n=2 * n1)
+    ok('M12 O CLÉRIGO NA LINHA (maça, escudo, malha; cura), no lugar de um guerreiro: em campo 42 a 58%, no corredor 48 a 64%; benzendo os quatro antes da luta (8 de Mana a menos), de 5 a 14 pontos a mais',
+       f'{a}%, {b}%; benzidos {bz}% ({bz - a:+d})', 42 <= a <= 58 and 48 <= b <= 64 and 5 <= bz - a <= 14)
+    a, b = v(lambda: G('a', 4) + [druida(nivel=40, foco=1, m=4, linha='trás')], lambda: G('b', 5)), v(lambda: G('a', 4) + [bruxa(nivel=40, c=1, m=4, linha='trás')], lambda: G('b', 5))
+    ok('M13 O DRUIDA (cajado; raízes, espinho), atrás, no lugar de um guerreiro: de 45 a 62%', f'{a}% (cinco contra cinco: {base}%)', 45 <= a <= 62)
+    ok('M13 A BRUXA (talismã e adaga; mau-olhado, sangria), atrás, no lugar de um guerreiro: de 42 a 58% (o projeto a mediu com um cajado que valia inteiro; o cajado não é foco do pacto)',
+       f'{b}% (cinco contra cinco: {base}%)', 42 <= b <= 58)
+    x = v(lambda: [bruxa()], W(amuleto=R), inicio='longe')
+    ok('M14 A BRUXA SOZINHA contra o guerreiro com amuleto, de longe: de 5 a 20% (péssima sozinha)', f'{x}%', 5 <= x <= 20)
+    # M15 e M16: o feitiço longo sob flecha (perde-se pela concentração que falha e pelo corte: no chão ou atordoado, sem teste)
+    nn = max(6000, 10 * n)                                  # o efeito do guarda é pequeno (uns 4 pontos): a amostra tem de ser grande
+    def longo(a, b, vezes=nn):
+        C = conta(a, b, vezes=vezes, inicio='longe'); return (C.get('conc_falhas', 0) + C.get('conc_cortes', 0)) / max(1, C.get('longos', 0)), C.get('conc_falhas', 0) / max(1, C.get('conc_testes', 0))
+    rm = lambda **kw: mago('a maga', sabe=('raio',), m=6, **kw)
+    (p1, f1), (p2, f2), (p3, _) = longo(lambda: [rm()], lambda: [arqueira('q1', am=R)]), longo(lambda: [rm()], lambda: [arqueira('q1', am=R), arqueira('q2', am=R)], 2 * nn), \
+        longo(lambda: [rm(linha='trás'), gm('o guarda', guarda='a maga', moral='firme')], lambda: [arqueira('q1', am=R), arqueira('q2', am=R)], 2 * nn)
+    ok('M15 O FEITIÇO LONGO SOB FLECHA (o raio: sai no começo do turno seguinte; quem canaliza e apanha testa a concentração): sob uma arqueira se perdem de 15 a 35%, sob duas de 25 a 50%',
+       f'{p1:.0%} e {p2:.0%} (cada teste de concentração falha {f1:.0%} e {f2:.0%})', 0.15 <= p1 <= 0.35 and 0.25 <= p2 <= 0.50)
+    ok('M16 ... e um guarda de escudo na frente de quem canaliza tira 3 pontos ou mais', f'{p3:.0%} contra {p2:.0%} ({100 * (p3 - p2):+.1f} pontos)', p2 - p3 >= 0.03)
+    # M17 e M21: o dado do lance (a conta exata e o dado de verdade)
+    q = 20000; r_c = sum(MG.jogada(0)['falha'] for _ in range(q)) / q; r_f = sum(MG.jogada(0, True)['falha'] for _ in range(q)) / q
+    ok('M17 O RETROCHOQUE: no lance comum (dois 1) de 0,1 a 0,5% dos lances; no forçado (basta um 1) de 8 a 12%', f'{r_c:.2%} e {r_f:.2%} em {q} lances de cada', 0.001 <= r_c <= 0.005 and 0.08 <= r_f <= 0.12)
+    S = luta.nova([mago('m', m=6)], [gm('g', amuleto=R)], quieto=True); f, e = S['L']; cj = MG.conj(S, f, 'prender')[0]; fz = MG.firmeza(S, e); e['calejo'] = 2; fz2 = MG.firmeza(S, e)
+    pg = lambda alvo: sum(1 for _ in range(2000) if (lambda j: j['total'] >= alvo or j['crit'])(MG.jogada(cj))) / 2000
+    ok('M21 O CONTROLE: o mago Mestre de foco Raro pega (prender) no guerreiro igual com amuleto de 55 a 75% das vezes; calejado duas vezes (+8 na Firmeza), de 25 a 40%',
+       f'Conjuração {cj:+g} contra a Firmeza {fz:g}: a conta dá {luta.chance(fz - cj):.0%}, o dado {pg(fz):.0%}; calejado ({fz2:g}): {luta.chance(fz2 - cj):.0%} e {pg(fz2):.0%}',
+       0.55 <= luta.chance(fz - cj) <= 0.75 and 0.25 <= luta.chance(fz2 - cj) <= 0.40 and abs(pg(fz) - luta.chance(fz - cj)) < 0.05)
+    # M18 e M19: a multidão e os bichos
+    k8, k12 = [v(lambda: [mago('a maga', sabe=('seta', 'bola-de-fogo', 'escudo', 'prender'))], lambda: [gm(f's{i}', nivel=20, arma=0, arm=0) for i in range(k)], inicio='longe', n=max(120, n // 4)) for k in (8, 12)]
+    ok('M18 A MULTIDÃO: um mago Raro (seta, bola de fogo, prender, escudo) contra 8 e contra 12 soldados Comuns de nível 20, sem amuleto, de longe: de 55 a 85% e de 35 a 70% (morre cercado)', f'{k8}% e {k12}%', 55 <= k8 <= 85 and 35 <= k12 <= 70)
+    a, b, t = v(M(), lambda: [B.bicho('pantera')], inicio='longe'), v(M(), lambda: [B.bicho('pantera')]), v(M(), lambda: [B.bicho('trasgo')], inicio='longe')
+    ok('M19 O MAGO NÃO É CAÇADOR: contra a pantera, de longe 35 a 60% e de perto 0 a 12% (o bote o mata); contra o trasgo, de longe, 30 a 55%', f'{a}%, {b}% e {t}%', 35 <= a <= 60 and 0 <= b <= 12 and 30 <= t <= 55)
+    # M20: os nove traços novos, cada um com ele e sem ele
+    n2 = max(1000, 2 * n); par = lambda a1, b1, a2, b2, **kw: (luta.duelos(a1, b1, **{**dict(n=n2), **kw})[0], luta.duelos(a2, b2, **{**dict(n=n2), **kw})[0])
+    pan = lambda *tr, **kw: (lambda: [B.bicho('pantera', tracos=['bote'] + list(tr), **kw)])
+    tr = {}
+    tr['resiste'] = par(M(), pan('resiste'), M(), pan(), inicio='longe')
+    tr['imaterial'] = par(W(), pan('imaterial'), W(), pan(), inicio='perto')
+    tr['lança'] = par(W(), pan('lança', feiticos=['seta']), W(), pan(), inicio='longe')
+    tr['sem vida'] = par(W(nivel=30, arma=1, arm=1), lambda: B.bando('lobo', n=4, tracos=['matilha', 'sem vida']), W(nivel=30, arma=1, arm=1), lambda: B.bando('lobo', n=4), inicio='perto')
+    tr['ossos'] = par(W(), pan('ossos'), W(), pan(), inicio='perto')
+    tr['dreno'] = par(lambda: [gm(f'g{i}') for i in range(6)], lambda: [B.bicho('serpe', tracos=['sopro', 'veneno', 'dreno'])], lambda: [gm(f'g{i}') for i in range(6)], lambda: [B.bicho('serpe')], inicio='perto', n=max(400, n))
+    tr['ardente'] = par(W(), pan('ardente'), W(), pan(), inicio='perto')
+    tr['noturno'] = par(W(), pan('noturno'), W(), pan(), inicio='perto', tempo=['escuro'])
+    mal = sum(1 for _ in range(n2) if (lambda S: (luta.corre(S), S['L'][0].get('maldicoes_postas'))[1])(luta.nova(W()(), pan('amaldiçoa')(), inicio='perto', quieto=True)))
+    tr['amaldiçoa'] = (round(100 * mal / n2), 0)
+    ok('M20 OS NOVE TRAÇOS NOVOS, cada um com ele e sem ele: 8 pontos ou mais (resiste: o mago contra a pantera, de longe; imaterial, ossos, ardente, noturno no escuro: o guerreiro de espada contra a pantera; '
+       'lança: a pantera que lança seta, de longe; sem vida: quatro lobos que não fogem contra o nível 30; dreno: a serpe contra seis guerreiros (o sopro é golpe do corpo: drena de cada um que pega); amaldiçoa: em quantas lutas o guerreiro sai com a maldição)',
+       ' · '.join(f"{k} {a:g}% contra {b:g}%" for k, (a, b) in tr.items()), all(abs(a - b) >= 8 for a, b in tr.values()))
+    # P1 a P4: a poção e o veneno de lâmina (o duelo de gêmeos com amuleto; quem leva bebe abaixo de metade do PV)
+    n3 = max(1200, 2 * n); g = lambda **kw: (lambda: [gm('a', amuleto=R, **kw)]); w2 = lambda **kw: (lambda: [gm('b', amuleto=R, **kw)])
+    p = [luta.duelos(g(carga={f'cura:{R}': k}), w2(), n=n3)[0] for k in (1, 2, 3)]
+    ok('P1 A POÇÃO AJUDA E NÃO DECIDE: uma poção de cura da categoria da luta, 52 a 62%; duas, 55 a 68%; a terceira não soma mais de 3 pontos (o corpo aguenta Vigor ÷ 30 por dia: quem não comanda o jogador não bebe além disso)',
+       f'{p[0]}%, {p[1]}% e {p[2]}%', 52 <= p[0] <= 62 and 55 <= p[1] <= 68 and p[2] - p[1] <= 3)
+    a, b = luta.duelos(g(carga={f'cura:{R - 1}': 2}), w2(), n=max(3000, 5 * n))[0], luta.duelos(g(elixires=[dict(id='e1', pocao='cura', cat=R + 1, nome='elixir de cura Épico')]), w2(), n=n3)[0]
+    ok('P2 A CURA SEGUE A LEI AO CONTRÁRIO: duas poções uma categoria abaixo da ferida, 47 a 53%; um elixir uma acima, 55 a 68%', f'{a}% e {b}%', 47 <= a <= 53 and 55 <= b <= 68)
+    ven = lambda: item('arma', R, familia='espada', veneno=dict(cat=R, ate=10 ** 9))
+    gv = lambda **kw: (lambda: [veste(padrao('a', 50, **kw), arma=ven(), armadura=('malha', R), escudo=R, amuleto=R)])
+    a = luta.duelos(gv(), w2(), n=n3)[0]
+    ok('P3 O VENENO DE LÂMINA: uma dose da categoria (a primeira vez que a arma tira sangue: um quarto do golpe por 3 rodadas e −2 no acerto), de 52 a 62%', f'{a}%', 52 <= a <= 62)
+    a, b = luta.duelos(gv(carga={f'cura:{R}': 2}), w2(), n=n3)[0], luta.duelos(g(carga={f'cura:{R}': 2}), w2(arma=R + 1), n=n3)[0]
+    ok('P4 O FRASCO NÃO VENCE A PEÇA: veneno e duas poções, até 75%; duas poções contra o gêmeo com a arma uma acima, até 12%', f'{a}% e {b}%', a <= 75 and b <= 12)
+    # P9: o limite do corpo e o teto da cura (prova posta à mão)
+    enj = 0; teto_ok = True; falhou_beber = 0
+    for _ in range(200):
+        S = luta.nova([gm('a', amuleto=R, carga={f'cura:{R}': 4})], [gm('b')], quieto=True); f = S['L'][0]; f['pv'] = 20; f['funda'] = 0; lim = T.doses_dia(f['atributos']['Vigor'])
+        for i in range(4): MG.bebe(S, f, f'cura:{R}')
+        MG.cura(S, f, '1d8', 5); enj += bool(MG.ve(f, 'enjoo')); teto_ok &= f['curado'] <= int(f['pvmax'] * T.CURA_TETO) and f['doses'] == 4 and not f['carga']
+    ok('P9 O LIMITE DO CORPO E O TETO DA CURA: além de Vigor ÷ 30 poções no dia, cada uma pede Vigor (falhou: não faz nada, e enjoa); poção e feitiço somados nunca devolvem mais que metade do PV no dia',
+       f'o guerreiro aguenta {lim} por dia; bebendo 4, enjoou em {enj} de 200; o teto {"sempre segurou" if teto_ok else "PASSOU"}', 0 < enj < 200 and teto_ok)
+    # E1 a E3: a peça encantada (um degrau abaixo, uma vez por luta, ocupa sintonia)
+    enc = lambda k, c=R, grau=2: item('arma', c, familia='espada', encantos=[dict(feitico=k, grau=grau, feito_por=None, dia=1, gasto=None)])
+    ge = lambda k, c=R, arm=R, **kw: (lambda: [veste(padrao('a', 50, **kw), arma=enc(k, c), armadura=('malha', arm), escudo=arm, amuleto=arm)])
+    a, b = luta.duelos(ge('seta'), w2(), n=n3)[0], luta.duelos(ge('seta'), w2(), n=n3, inicio='longe')[0]
+    ok('E1 O ENCANTO NÃO DECIDE NUM IGUAL: a espada Rara com seta gravada contra o gêmeo, de perto e de longe: de 46 a 56%', f'{a}% e {b}%', 46 <= a <= 56 and 46 <= b <= 56)
+    s8 = lambda: [gm(f's{i}', nivel=30, arma=1, arm=1, amuleto=1) for i in range(8)]
+    a, b = luta.duelos(lambda: [gm('a', amuleto=R, moral='firme')], s8, n=2 * n3, inicio='longe')[0], luta.duelos(ge('bola-de-fogo', moral='firme'), s8, n=2 * n3, inicio='longe')[0]
+    ok('E2 ... MAS AJUDA CONTRA A MULTIDÃO DE BAIXO: a bola de fogo gravada, uma vez, contra oito de uma categoria abaixo: de 5 a 15 pontos a mais', f'{a}% e {b}% ({b - a:+d})', 5 <= b - a <= 15)
+    pecas = lambda vont: ficha(veste(padrao('x', 50, atributos={'Vontade': vont}), arma=enc('prender'), armadura=('malha', 3), escudo=3))
+    dorme, acorda = pecas(25), pecas(80)
+    ver = ficha(veste(padrao('y', 50, atributos={'Vontade': 25}), arma=enc('prender', 0), armadura=('malha', 0), escudo=item('escudo', 0, encantos=[dict(feitico='escudo', grau=1, feito_por=None, dia=1, gasto=None)])))
+    S = luta.nova([veste(padrao('z', 50, atributos={'Vontade': 65}, controla=True), arma=enc('prender'), armadura=('malha', R), escudo=R)], [gm('w')], inicio='perto', quieto=True); f = S['L'][0]
+    f['_restam'] = 2; a1 = MG.decide(S, f, MG.ordem(S, f, 'usar', []), False); MG.faz(S, f, a1); uso = not f['encantos'][0]['carregado']
+    try: MG.ordem(S, f, 'usar', []); de_novo = 'aceitou'
+    except SystemExit: de_novo = 'recusou'
+    ok('E3 A PEÇA ENCANTADA OCUPA SINTONIA E SAI UMA VEZ POR LUTA: com Vontade 25 (uma peça desperta) a espada encantada, atrás do escudo e da armadura Épicos, dorme e não solta; com Vontade 80, solta; '
+       'duas peças Comuns encantadas, com Vontade 25: uma dorme; o encanto solto não sai de novo na mesma luta',
+       f"Vontade 25: a espada {'dorme' if dorme['encantos'][0]['dorme'] else 'NÃO DORME'}; 80: {'desperta' if not acorda['encantos'][0]['dorme'] else 'DORME'}; das Comuns encantadas, {'uma dorme' if len(ver['dormem']) == 1 else 'NENHUMA DORME'}; "
+       f"o encanto {'saiu' if uso else 'NÃO SAIU'}, e pedir de novo {de_novo}", dorme['encantos'][0]['dorme'] and not acorda['encantos'][0]['dorme'] and len(ver['dormem']) == 1 and uso and de_novo == 'recusou')
+    # AS FASES DO CHEFE, A ORDEM DE QUEM O JOGADOR COMANDA, A LUTA SEM MAGIA, E A LUTA QUE VOLTA AO ESTADO
+    fs = [dict(abaixo=0.75, diz='urra, e o pelo pega fogo', ganha=['ardente'], brado=True, ergue=2, feiticos=['seta'], mana=6)]; viu = dict(fase=0, para=0, erg=0, sem_id=True, morto=True, ard=True)
+    for _ in range(40):
+        S = luta.nova([gm(f'g{i}') for i in range(3)], [B.bicho('urso', nome='o urso velho', fases=fs, lider=True, moral='firme', cat=R)] + B.bando('lobo', n=3), inicio='perto', quieto=True)
+        while luta.corre(S, interativo=True) == 'parada':
+            viu['para'] += any('mudou' in x for x in S['paradas']); S = json.loads(json.dumps(S))
+        viu['para'] += any('mudou' in x for x in S['paradas'])          # (a fase da última rodada, a que acabou a luta)
+        u = luta.por_nome(S, 'o urso velho'); C = S.get('conta') or {}; viu['fase'] += C.get('fases', 0); viu['erg'] += C.get('erguidos', 0)
+        if u.get('fase'): viu['ard'] &= 'ardente' in u['tracos'] and 'seta' in u['feiticos']
+        for x in S['L']:
+            if 'morto que anda' in x['nome']: viu['sem_id'] &= not x.get('id') and 'sem vida' in x['tracos'] and x['lado'] == 'B'; viu['morto'] &= luta.por_nome(S, x['nome'].split(', morto')[0])['estado'] == 'morto'
+    ok('AS FASES DO CHEFE: ao cruzar o limiar do PV, o chefe muda uma vez (ganha o traço, aprende o feitiço, recobra a Mana, dá o brado e ergue os mortos como "sem vida" do lado dele), e a luta para e pergunta; o morto erguido é outro lutador, sem registro no mundo, e o morto segue morto',
+       f"em 40 lutas: {viu['fase']} fases, {viu['para']} paradas, {viu['erg']} mortos erguidos; o chefe {'mudou como diz' if viu['ard'] else 'NÃO MUDOU'}; os erguidos {'sem id e sem vida' if viu['sem_id'] else 'ERRADOS'}, o morto {'segue morto' if viu['morto'] else 'VOLTOU'}",
+       0 < viu['fase'] <= 40 and viu['para'] == viu['fase'] and viu['erg'] > 0 and viu['ard'] and viu['sem_id'] and viu['morto'])
+    heroi = lambda: veste(padrao('Lia', 120, molde='mago', maestria={'espada': 4, 'arcano': 6}, feiticos=['seta', 'escudo', 'bola-de-fogo', 'luz'], tradicao='arcano', carga={'cura:2': 2}, controla=True),
+                          arma=enc('prender'), armadura=('malha', 3), foco=('varinha', R), amuleto=R)
+    S = luta.nova([heroi()], [gm('o bandido', amuleto=R), gm('o outro')], inicio='longe', tempo=['escuro'], quieto=True); luta.corre(S, interativo=True); recusas = 0
+    for ruim in ('Lia: lancar raio', 'Lia: lancar seta em Lia', 'Lia: beber veneno', 'Lia: beber antídoto', 'Lia: lancar seta casa 3', 'Lia: lancar escudo em o bandido', 'Lia: usar escudo', 'Lia: lancar nada'):
+        try: luta.ordem(S, ruim)
+        except SystemExit: recusas += 1
+    luta.ordem(S, 'Lia: lancar luz'); luta.corre(S, interativo=True); luz = 'escuro' not in S['tempo'] and 'luz' in (S.get('campo') or {}); volta = 'Lia' not in S['ordens']
+    luta.ordem(S, 'Lia: lancar seta em o bandido sempre'); f = S['L'][0]; m0 = f['mana']; luta.corre(S, interativo=True); f = S['L'][0]; sempre = S['ordens'].get('Lia', {}).get('sempre') or f['estado'] != 'pe' or f['mana'] < 2
+    ok('A ORDEM DE QUEM O JOGADOR COMANDA (lancar, beber, usar) é conferida antes de qualquer dado; a de uma vez volta à ordem de antes; a de "sempre" segue até a Mana acabar ou o alvo cair; quem o jogador comanda não lança sozinho',
+       f"{recusas} de 8 ordens tortas recusadas; a luz {'tirou o escuro' if luz else 'NÃO TIROU'} e a ordem {'voltou' if volta else 'FICOU'}; a seta de sempre {'seguiu' if sempre else 'PAROU'} (Mana {m0} → {f['mana']})", recusas == 8 and luz and volta and sempre)
+    S = luta.nova([gm('a')], [gm('b')], quieto=True); luta.corre(S)
+    ok('A PESSOA COMUM É A DE HOJE: a luta em que ninguém traz magia não liga a magia (nenhum campo de magia no lutador; os 80 do banco seguem iguais, e com semente fixa a luta é a mesma de antes)',
+       'a luta de gêmeos sem nada: ' + ('sem magia' if not S.get('magia') and not any('est' in f or 'canaliza' in f for f in S['L']) else 'LIGOU A MAGIA'), not S.get('magia') and not any('est' in f or 'canaliza' in f for f in S['L']))
+    ok(*_no_mundo())
+    return out
+
+
+def _no_mundo():
+    """a luta de magia do mundo (ato.py luta, numa pasta de rascunho): a maga do mundo chega ferida (40% do PV) e lança e bebe sozinha (o jogador não a comanda nesta prova),
+    contra um salteador fraco; a luta volta ao estado por um evento: a Mana que sobrou, a poção bebida, o desgaste do foco; o estado fica inteiro. Três lutas, com os dados
+    delas (semente 1 a 3, à parte das outras provas): em toda luta em que a maga vive a volta é conferida inteira, e ela tem de viver e beber em pelo menos uma."""
+    import contextlib, io, json, os, shutil, tempfile
+    import estado, ato, provas_mundo
+    from itens import item
+    antes = os.environ.get('MOTOR10_MUNDO'); D0 = luta.D; vidas = []
+    try:
+        for sem in (1, 2, 3):
+            pasta = tempfile.mkdtemp(prefix='m10_magia_'); os.environ['MOTOR10_MUNDO'] = pasta; luta.semente(sem)
+            try:
+                with contextlib.redirect_stdout(io.StringIO()):
+                    E = provas_mundo.vila(); estado.aplica(E, 'gera', [['item', 'nasce', item('foco', R, forma='cajado', dono='eu')], ['item', 'nasce', item('amuleto', R, dono='eu')], ['pessoa', 'eu', 'carga.cura:2', 'soma', 2]], texto='a maga se arma')
+                    novos = sorted(i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it['tipo'] in ('foco', 'amuleto'))
+                    estado.aplica(E, 'estudar', [['pessoa', 'eu', 'maestria.arcano', 'poe', 6], ['pessoa', 'eu', 'feitico', 'aprende', 'seta'], ['pessoa', 'eu', 'feitico', 'aprende', 'lança-de-fogo'], ['pessoa', 'eu', 'tradicao', 'poe', 'arcano']], texto='a maga estuda')
+                    estado.aplica(E, 'gera', [['item', i, 'uso', 'poe', 'foco' if E['itens']['itens'][i]['tipo'] == 'foco' else 'pescoco'] for i in novos], texto='a maga se veste')
+                    p = E['gente']['eu']; estado.aplica(E, 'mestre', [['pessoa', 'eu', 'pv', 'soma', int(estado.pv_max(p) * 0.4) - p['pv']]], texto='a maga chega ferida')
+                    estado.grava(E); p = E['gente']['eu']; mana0 = estado.mana(p); dur0 = {i: E['itens']['itens'][i]['dur'][0] for i in novos}
+                    arq_c, arq_l = os.path.join(pasta, 'cen.json'), os.path.join(pasta, 'luta.json')
+                    json.dump(dict(inicio='longe', A=[dict(id='eu')], B=[dict(nome='o salteador', nivel=10, veste=dict(arma=['espada', 'Comum'], armadura=['couro', 'Comum']))]), open(arq_c, 'w', encoding='utf-8'), ensure_ascii=False)
+                    ato.luta_nova(E, arq_c, arq_l)
+                    for _ in range(60):
+                        E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8'))
+                        if S['fim']: break
+                        ato.luta_roda(E, arq_l, []); estado.grava(E)
+                E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8')); f = S['L'][0]; p = E['gente']['eu']
+                nl = sum(json.loads(x)['tipo'] == 'luta' for x in open(os.path.join(pasta, 'eventos.jsonl'), encoding='utf-8').read().splitlines())
+                bebeu = (f.get('gastou') or {}).get('cura:2', 0); foco = [i for i in novos if E['itens']['itens'][i]['tipo'] == 'foco'][0]; vivo = p['estado'] == 'vivo'
+                volta = (estado.mana(p) == max(0, min(estado.mana_max(p), f['mana'])) < mana0 and p.get('carga', {}).get('cura:2', 0) == 2 - bebeu and E['itens']['itens'][foco]['dur'][0] == dur0[foco] - 1) if vivo else None
+                vidas.append(dict(fim=S['fim'], r=S['r'], vivo=vivo, bebeu=bebeu, mana=(mana0, estado.mana(p)), foco=(dur0[foco], E['itens']['itens'][foco]['dur'][0]), nl=nl, magia=bool(S.get('magia')),
+                                  volta=volta, erro=estado.valida(E)))
+            finally: shutil.rmtree(pasta, ignore_errors=True)
+    finally:
+        luta.D = D0; os.environ.pop('MOTOR10_MUNDO', None)
+        if antes is not None: os.environ['MOTOR10_MUNDO'] = antes
+    certo = (all(v['fim'] and v['nl'] == 1 and v['magia'] and not v['erro'] and (v['volta'] or not v['vivo']) for v in vidas) and any(v['vivo'] and v['bebeu'] >= 1 and v['volta'] for v in vidas))
+    diz = '; '.join(f"luta {k + 1}: acabou ({v['fim']}, {v['r']} rodadas), a maga {'viva' if v['vivo'] else 'MORTA'}, Mana {v['mana'][0]} → {v['mana'][1]}, bebeu {v['bebeu']} poção(ões), o foco {v['foco'][0]} → {v['foco'][1]}"
+                    + (f", a volta {'confere' if v['volta'] else 'NÃO CONFERE'}" if v['vivo'] else '') + f", {v['nl']} evento de luta, estado {'inteiro' if not v['erro'] else 'QUEBRADO: ' + v['erro'][0]}" for k, v in enumerate(vidas))
+    return ('A LUTA DE MAGIA VOLTA AO ESTADO (ato.py luta, no mundo de prova): a maga do mundo, ferida, lança e bebe sozinha, e a luta volta por um evento só: a Mana que sobrou, a poção bebida, o foco que gastou; o estado fica inteiro; '
+            'a volta é conferida em toda luta em que ela vive, e ela vive e bebe em pelo menos uma', diz, certo)
+
+
 def main():
     n = int(sys.argv[1]) if len(sys.argv) > 1 else 600
     luta.semente(10); ok = 0; tot = 0
+    if sys.argv[2:3] == ['magia']:                          # só o bloco da magia (ele tem a semente dele: dá o mesmo que no banco inteiro)
+        print(f'BANCO DE PROVAS DO MOTOR 10 · só A MAGIA NA LUTA · {n} lutas por meta\n')
+        for nome, deu, passa in magia_luta(n):
+            ok += passa; tot += 1
+            print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+        print(f'\n{ok} de {tot} metas passam.')
+        return ok == tot
     print(f'BANCO DE PROVAS DO MOTOR 10 · {n} lutas por meta\n')
     print(f"{'O EQUILÍBRIO (vitória do primeiro)':<104}{'faixa':>10}{'medido':>9}")
     for nome, a, b, (lo, hi), kw in METAS:
@@ -458,6 +738,10 @@ def main():
         print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
     print('\nOS BICHOS (as oito metas da etapa 2, de B1 a B8, e o que o corpo do bicho tem de ser)')
     for nome, deu, passa in bichos(n):
+        ok += passa; tot += 1
+        print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+    print('\nA MAGIA NA LUTA (a etapa da magia, capítulo 11: o projeto conta, seção G, na parte da luta; os nove traços novos; as fases do chefe; a ordem; a luta que volta ao estado)')
+    for nome, deu, passa in magia_luta(n):
         ok += passa; tot += 1
         print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
     print(f'\n{ok} de {tot} metas passam.')

@@ -11,6 +11,10 @@ Uso:
   python3 itens.py nova armadura MATERIAL CATEGORIA "Nome" [cobre=tronco,braços,pernas] ...   (elmo: cobre=cabeça)
   python3 itens.py nova escudo CATEGORIA "Nome" ...
   python3 itens.py nova nucleo CATEGORIA "Nome" [de=ESPECIE] [dono=ID] [onde=LUGAR]     o núcleo de um chefe (o que a obra Épica ou maior pede)
+  python3 itens.py nova foco FORMA CATEGORIA "Nome" ...     (etapa da magia) o foco de quem lança: varinha, cajado, símbolo, talismã
+  python3 itens.py nova amuleto CATEGORIA "Nome" ...        o amuleto: a armadura contra a magia (no pescoço; um só)
+  python3 itens.py nova elixir POCAO CATEGORIA "Nome" ...   a poção do Épico para cima (abaixo disso, a poção é bem: cura:0)
+  python3 itens.py nova escrito CATEGORIA "Nome" feiticos=seta,luz ...     o escrito que ensina feitiços
   python3 itens.py ver [dono=ID]            a lista
   python3 itens.py janela ID                a janela do item (a que aparece na cena)
   python3 itens.py dono ID PESSOA ["o que houve"]     a peça muda de mão (entra na história dela)
@@ -20,6 +24,7 @@ CATEGORIA: Comum Incomum Raro Épico Único Lendário Mítico Primordial
 """
 import json, os, sys
 import tabelas as T
+import tabelas_mundo as M
 from tabelas import CATS, MULT, RD, BON, DUR, FAMILIAS, MATERIAIS, PARTES, PEDE_PESO, DUAS_MAOS
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
@@ -32,10 +37,11 @@ EFEITOS = {
     'derruba':    ('uma vez por luta, o golpe que fere derruba', ('arma',)),
     'devolve':    ('quem golpeia o dono corpo a corpo leva {valor}', ('armadura',)),
     'firme':      ('o dono não é derrubado', ('armadura', 'escudo')),
-    'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo')),
-    'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo')),
-    'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo')),
+    'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo', 'foco')),
+    'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo', 'foco')),
+    'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo', 'foco', 'amuleto')),
 }
+FORMAS_FEM = ('varinha',)   # as formas de foco de nome feminino (a categoria concorda: "varinha Rara", "cajado Raro")
 
 
 # a língua da mesa: a categoria concorda com o nome da peça ("espada Rara", "arco Raro"), e não se diz duas vezes ("espada Rara", e não "espada Rara (Raro)")
@@ -68,6 +74,7 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
         it = dict(tipo='nucleo', cat=c, nome=nome or f'núcleo {CATS[c]}', dur=[T.NUCLEO_DUR, T.NUCLEO_DUR], dono=None, onde=None, de=mais.pop('de', None), historia=[])
         it.update(mais)
         return it
+    if tipo in ('foco', 'amuleto', 'elixir', 'escrito'): return _magia(tipo, c, nome, efeitos, sob, familia, material, cobre, mais)
     it = dict(tipo=tipo, cat=c, nome=nome, dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), sob_medida=sob, historia=[], dono=None, onde=None)
     if tipo == 'arma':
         if familia not in FAMILIAS: sys.exit(f'família de arma desconhecida: "{familia}" (use: {", ".join(FAMILIAS)})')
@@ -81,7 +88,7 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
     elif tipo == 'escudo':
         it['nome'] = nome or f'escudo {CATS[c]}'
     else:
-        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo)')
+        sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo, foco, amuleto, elixir, escrito)')
     for e in it['efeitos']:
         if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
         if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
@@ -89,6 +96,37 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
             sys.exit(f'"devolve" numa peça {CATS[c]} vai de 1 a {T.devolve_max(c)} (veio {e.get("valor")})')
     if sob and not T.SOB_MEDIDA_GRAUS[0] <= sob.get('grau', 1) <= T.SOB_MEDIDA_GRAUS[1]:
         sys.exit(f'o grau do sob medida vai de {T.SOB_MEDIDA_GRAUS[0]} a {T.SOB_MEDIDA_GRAUS[1]} (veio {sob.get("grau")})')
+    it.update(mais)
+    return it
+
+
+def cat_escrito(feiticos): return max([0] + [T.FEITICOS[f]['grau'] - 1 for f in feiticos if f in T.FEITICOS])      # a categoria do escrito: o maior grau que ensina, menos 1 (o de grau 1 é Comum)
+
+
+def _magia(tipo, c, nome, efeitos, sob, familia, material, cobre, mais):
+    """os tipos da etapa da magia: o FOCO (com a forma), o AMULETO, o ELIXIR (a poção do Épico para cima) e o ESCRITO (ensina feitiços). O preço é o da regra de hoje
+    (tabelas_mundo.peso_da_peca: a matéria que levam; o amuleto Comum, 10)."""
+    if sob or familia or material or cobre: sys.exit(f'o {tipo} não leva sob medida, família, material nem cobertura')
+    base = dict(cat=c, historia=[], dono=None, onde=None)
+    if tipo == 'foco':
+        forma = mais.pop('forma', None)
+        if forma not in T.FOCOS: sys.exit(f'forma de foco desconhecida: "{forma}" (use: {", ".join(T.FOCOS)})')
+        it = dict(tipo='foco', forma=forma, nome=nome or f"{forma} {(FEM if forma in FORMAS_FEM else CATS)[c]}", dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), **base)
+    elif tipo == 'amuleto': it = dict(tipo='amuleto', nome=nome or f'amuleto {CATS[c]}', dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), **base)
+    else:
+        if efeitos: sys.exit(f'o {tipo} não leva efeito')
+        if tipo == 'elixir':
+            pocao = mais.pop('pocao', None)
+            if pocao not in M.POCOES: sys.exit(f'poção desconhecida: "{pocao}" (use: {", ".join(M.POCOES)})')
+            if c <= M.POCAO_ATE: sys.exit(f'do Comum ao {CATS[M.POCAO_ATE]} a poção é um bem, na carga ({pocao}:{c}); elixir é do {CATS[M.POCAO_ATE + 1]} para cima')
+            it = dict(tipo='elixir', pocao=pocao, nome=nome or f'elixir de {pocao} {CATS[c]}', dur=[1, 1], **base)
+        else:
+            fs = list(mais.pop('feiticos', None) or [])
+            if not fs or any(f not in T.FEITICOS for f in fs): sys.exit(f'o escrito ensina feitiços da tabela (feiticos=seta,luz; os que há: {", ".join(T.FEITICOS)})')
+            it = dict(tipo='escrito', feiticos=fs, nome=nome or f"escrito de {', '.join(T.nome_feitico(f) for f in fs)}", dur=[1, 1], **base)
+    for e in it.get('efeitos', []):
+        if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
+        if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
     it.update(mais)
     return it
 
@@ -103,8 +141,9 @@ def tem(it, chave):
 def pede(it, dorme=False):
     """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível.
     Peça que dorme (sintonia) não tem efeito nenhum: nem o "leve"."""
-    if it['tipo'] == 'nucleo': return 'Força', 0            # o núcleo não se empunha
+    if it['tipo'] in ('nucleo', 'amuleto', 'elixir', 'escrito'): return 'Força', 0       # o núcleo não se empunha; o amuleto não pede nada; o elixir e o escrito não se vestem
     aj = 0 if dorme else (T.AJUSTE_PESO if tem(it, 'pesa') else 0) - (T.AJUSTE_PESO if tem(it, 'leve') else 0)
+    if it['tipo'] == 'foco': a, q = T.FOCOS[it['forma']]['pede']; return a, q + aj      # o foco pede Afinidade ou Vontade (a forma diz)
     if it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]
         return f.get('atributo', 'Força'), PEDE_PESO[f['peso']] + aj
@@ -122,8 +161,18 @@ def janela(it):
         if it.get('onde'): L.append(f"Está em: {it['onde']}")
         for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
         return '\n'.join(L)
+    if it['tipo'] in ('elixir', 'escrito'):
+        L.append(f"Categoria: {CATS[c]}      " + (f"Elixir: {M.POCOES[it['pocao']]}, uma dose (bebida, some)" if it['tipo'] == 'elixir' else 'Escrito: ensina ' + ', '.join(T.nome_feitico(f) for f in it['feiticos'])))
+        if it.get('dono'): L.append(f"Dono: {it['dono']}")
+        for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
+        return '\n'.join(L)
     L.append(f"Categoria: {CATS[c]}      Durabilidade: {it['dur'][0]}/{it['dur'][1]}")
-    if it['tipo'] == 'arma':
+    if it['tipo'] == 'foco':
+        f = T.FOCOS[it['forma']]
+        L.append(f"Foco ({it['forma']}, {'duas mãos' if f['maos'] == 2 else 'uma mão'}): vale {MULT[c] * f['vezes']:g} · de {', '.join(f['de'])}".replace('.', ',') + (f" · apara {BON[c]} e bate {f['dado']} ({f['golpe']})" if f.get('apara') else ''))
+    elif it['tipo'] == 'amuleto':
+        L.append(f"Guarda contra a magia: {MULT[c]:g} (no pescoço; um só)")
+    elif it['tipo'] == 'arma':
         f = FAMILIAS[it['familia']]; m = MULT[c] * (DUAS_MAOS if f['maos'] == 2 and not f.get('distancia') else 1)       # o arco e a besta não ganham o das duas mãos (2.4)
         L.append(f"Ataque: {f['dado']} × {str(round(m, 2)).rstrip('0').rstrip('.').replace('.', ',')} ({f['golpe']})      Acerto: +{BON[c]}      Alcance: {'à distância' if f.get('distancia') else str(f['alcance']) + (' casa' if f['alcance'] == 1 else ' casas')}")
     elif it['tipo'] == 'armadura':
@@ -131,7 +180,12 @@ def janela(it):
         L.append(f"Proteção: {prot} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else ''))
     else:
         L.append(f"Defesa: +{T.ESCUDO_BASE + BON[c]:g}")
-    a, q = pede(it); L.append(f"Pede: {a} {q}")
+    a, q = pede(it); L.append(f"Pede: {a} {q}" if q else 'Pede: nada')
+    for e in it.get('encantos') or []: L.append(f"Encanto: {T.nome_feitico(e['feitico'])} (grau {e['grau']})" + (f", gravado por {e['feito_por']}" if e.get('feito_por') else '') + (f", Dia {e['dia']}" if e.get('dia') else ''))
+    if it.get('benta') is not None: L.append('Benta: conta inteira contra o que não tem corpo (por uns dias)')
+    if it.get('veneno'): L.append(f"Veneno na lâmina: uma dose {FEM[it['veneno']['cat']]} (a primeira ferida envenena; seca em um dia)")
+    mo = it.get('maldita')                                  # a peça maldita parece uma peça comum: só quem a leu (o rito de ler) sabe
+    if isinstance(mo, dict) and mo.get('lida'): L.append(f"MALDITA (lida): {mo.get('nome')} ({FEM[mo['cat']] if isinstance(mo.get('cat'), int) else '?'}, {mo.get('tipo')}): quem a puser em uso pega a maldição, e a mão não a larga")
     if it['efeitos']: L.append('Efeitos: ' + ' · '.join(EFEITOS[e['chave']][0].format(valor=e.get('valor', '')) for e in it['efeitos']))
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")
@@ -160,6 +214,10 @@ def _mundo():
 def _monta(a, op, pos):
     """o registro pedido na linha de comando (`nova ...`), sem dono nem id"""
     if len(pos) >= 3 and pos[1] == 'nucleo': return item('nucleo', pos[2], pos[3] if len(pos) > 3 else None, de=op.get('de'))
+    if len(pos) >= 4 and pos[1] in ('foco', 'elixir'):
+        return item(pos[1], pos[3], pos[4] if len(pos) > 4 else None, **({'forma': pos[2]} if pos[1] == 'foco' else {'pocao': pos[2]}))
+    if len(pos) >= 3 and pos[1] in ('amuleto', 'escrito'):
+        return item(pos[1], pos[2], pos[3] if len(pos) > 3 else None, **({'feiticos': [x for x in op.get('feiticos', '').split(',') if x]} if pos[1] == 'escrito' else {}))
     if len(pos) < 3 or pos[1] not in ('arma', 'armadura', 'escudo') or (pos[1] != 'escudo' and len(pos) < 4): sys.exit(__doc__)
     ef = []
     for x in a:
@@ -202,6 +260,7 @@ def _no_mundo(estado, a, op, pos):
         if a[0] == 'dono':
             if len(pos) < 3: sys.exit('diga para quem: itens.py dono ID PESSOA ["o que houve"]')
             pid = quem(pos[2]); de = E['gente'][it['dono']]['nome'] if it.get('dono') in E['gente'] else 'ninguém'
+            if pid != it.get('dono') and estado._presa(E, it): sys.exit(f"{it['nome']} não sai das mãos de {de}: a maldição que veio dela anda em quem a leva (só muda de mão depois de quebrada)")
             ev = estado.aplica(E, 'mestre', [['item', pos[1], 'dono', 'poe', pid], ['item', pos[1], 'historia', 'junta', f"Dia {E['relogio']['dia']}: de {de} para {E['gente'][pid]['nome']}" + (f': {pos[3]}' if len(pos) > 3 else '')]],
                                quem=[pid], texto=f"{it['nome']} passa de {de} para {E['gente'][pid]['nome']}")
             estado.grava(E)

@@ -11,6 +11,9 @@ Consertar é o pão do ferreiro. Ajustar faz a peça servir a um dono. Tudo por 
   A MAESTRIA do ofício (forja; couro, para a armadura de couro) sobe por blocos de bancada; de Mestre para cima pede um feito (uma obra nascida).
   CONSERTAR: você na bancada (tempo e um pouco de matéria; pede a mão da categoria), ou pago à oficina do lugar (2% do preço por ponto).
   AJUSTAR (sob medida): grava o dono na peça; o grau (1 a 4) sai da mão de quem ajusta; custa blocos e um teste.
+  A BANCADA SERVE A TODO OFÍCIO (etapa da magia): a forja e o couro na oficina; o ENCANTO na mesa de runas (o foco e o amuleto se forjam ali, com a mão de encanto,
+    e a gravação de um feitiço numa peça é obra dele: encanto.py); a ALQUIMIA na botica (a leva: alquimia.py); o jornal também no santuário (fé). A obra é uma só:
+    abre com a matéria, soma blocos, e o teste sai quando os blocos fecham; quem remata a leva e a gravação é o módulo dela.
 
 Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py ver                                   a oficina daqui, a sua mão, o preparo, as obras abertas, a matéria que você carrega
@@ -19,13 +22,16 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py forjar arma FAMILIA CATEGORIA ["Nome"] [blocos=N] [nucleo=ID]    abre a obra (a matéria entra) e trabalha N blocos
   python3 oficio.py forjar armadura MATERIAL CATEGORIA ["Nome"] [cobre=tronco,braços,pernas] [blocos=N] [nucleo=ID]    (elmo: cobre=cabeça)
   python3 oficio.py forjar escudo CATEGORIA ["Nome"] [blocos=N] [nucleo=ID]
+  python3 oficio.py forjar foco FORMA CATEGORIA ["Nome"] · forjar amuleto CATEGORIA ["Nome"]    (etapa da magia) no ofício do encanto, na mesa de runas (o mesmo que encanto.py fazer)
   python3 oficio.py continua [OBRA] [blocos=N]            mais N blocos na obra aberta (sem N: até fechar, ou até o corpo parar)
   python3 oficio.py larga OBRA                            abandona a obra (a matéria que já foi ao fogo se perde; o núcleo fica)
   python3 oficio.py consertar ITEM [pontos=N] [pago]      devolve durabilidade: você na bancada, ou `pago` à oficina do lugar
   python3 oficio.py ajustar ITEM [para=ID] [blocos=N]     sob medida para alguém que está aqui (sem para: para você)
-  python3 oficio.py jornal N [oficio=forja|couro]         N blocos de bancada a serviço da oficina do lugar (ela paga o seu salário por bloco, até a jornada:
+  python3 oficio.py jornal N [oficio=forja|couro|alquimia|encanto|fé]    N blocos de bancada a serviço do lugar (a oficina, a botica, a mesa de runas ou o santuário;
+                                                          ele paga o seu salário por bloco, até a jornada:
                                                           2 blocos pagos por dia, contados junto com o `ato.py trabalhar`; depois disso a bancada é sua, sem paga)
-  python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA|nada "como foi ganho"     o Mestre registra um preparo ganho no mundo
+  python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA|nada "como foi ganho" [oficio=alquimia|encanto]     o Mestre registra um preparo ganho no mundo
+                                                          (a alquimia: receita, ajudante, fogo, vidraria; o encanto: receita, ajudante, tinta, pedra)
   python3 oficio.py oficina NIVEL|nada "como foi"         o Mestre registra a oficina do lugar onde a pessoa está (0 a 4; nada: o lugar fica sem)
 FAMILIA: adaga espada maça machado martelo lança montante alabarda malho arco besta · MATERIAL: couro malha placa
 CATEGORIA: Comum Incomum Raro Épico Único Lendário
@@ -34,10 +40,11 @@ import math, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_oficio as O
-import estado, ato, corpo, teste
+import estado, ato, corpo, teste, talento
 from itens import item, cat_i, rotulo
 
 PECAS = ('arma', 'armadura', 'escudo')
+FORJA = PECAS + O.PECAS_ENCANTO                             # o que se forja (o foco e o amuleto, no ofício do encanto)
 FEM = ['Comum', 'Incomum', 'Rara', 'Épica', 'Única', 'Lendária', 'Mítica', 'Primordial']       # a categoria, quando o nome que vem antes é feminino (a peça, a obra)
 
 
@@ -77,36 +84,63 @@ def oficina(E, lid):
 
 
 def nome_oficina(v): return f'{O.OFICINAS[v]} (+{v})'
+
+
+def banca(E, lid, oficio='forja'):
+    """o nível da bancada do ofício no lugar (0 a 4): a oficina (forja, couro), a mesa de runas (encanto), a botica (alquimia), o santuário (fé); None se o lugar não a tem"""
+    if O.BANCA.get(oficio, 'oficina') == 'oficina': return oficina(E, lid)
+    v = E['lugares'][lid].get(O.BANCA[oficio])
+    return None if not isinstance(v, int) or isinstance(v, bool) else max(0, min(M.BANCADA_MAX, v))
+
+
+def nomes_banca(oficio):
+    import tabelas_magia_mundo as W
+    return dict(encanto=W.RUNAS, alquimia=W.BOTICAS, fé=['altar', 'capela', 'santuário', 'templo', 'grande templo']).get(oficio, O.OFICINAS)
+def nome_banca(oficio, v): return f'{nomes_banca(oficio)[v]} (+{v})'
+def evento_de(oficio, tipo='forjar'): return O.EVENTO_OFICIO.get(oficio, tipo if tipo in ('forjar', 'ajustar') else 'forjar')        # o tipo de evento do trabalho na bancada deste ofício
+def _sem_banca(E, lid, oficio):
+    nome = dict(encanto='mesa de runas', alquimia='botica', fé='santuário').get(oficio, 'oficina')
+    return f"{E['lugares'][lid]['nome']} não tem {nome}"
+def _fam(x): return x.get('forma') if x.get('tipo') == 'foco' else x.get('familia')        # o foco leva a forma onde a arma leva a família
 def mao(p, oficio='forja'): m = p.get('maestria'); return m.get(oficio, 0) if isinstance(m, dict) else 0             # a maestria no ofício (0 a 8)
 def bancada(p, oficio='forja'): t = p.get('treino'); return t.get(oficio, 0) if isinstance(t, dict) else 0         # os blocos de bancada já feitos
 
 
-def preparos(E, pid, lid=None):
-    """{receita, ajudante, fogo, bigorna: o índice da categoria que ele alcança, ou None se não há}"""
+def tabela_preparos(oficio='forja'):
+    """os quatro preparos do ofício: a forja e o couro (receita, ajudante, fogo, bigorna); a alquimia (receita, ajudante, fogo, vidraria); o encanto (receita, ajudante, tinta, pedra)"""
+    import tabelas_magia_mundo as W
+    return dict(alquimia=W.PREPAROS_ALQUIMIA, encanto=W.PREPAROS_ENCANTO).get(oficio, O.PREPAROS)
+
+
+def preparos(E, pid, lid=None, oficio='forja'):
+    """{os quatro preparos do ofício: o índice da categoria que ele alcança, ou None se não há}"""
     p = E['gente'][pid]; l = E['lugares'][lid or p['lugar']]; out = {}; do_lugar = l.get('preparo') if isinstance(l.get('preparo'), dict) else {}
-    for nome, (de, chave) in O.PREPAROS.items():
+    for nome, (de, chave) in tabela_preparos(oficio).items():
         v = p.get('marca', {}).get(chave) if de == 'pessoa' else do_lugar.get(chave)
         out[nome] = int(v) if isinstance(v, (int, float)) and not isinstance(v, bool) else None
     return out
 
 
-def preparo(E, pid, cat, lid=None):
+def preparo(E, pid, cat, lid=None, oficio='forja'):
     """o preparo que vale numa obra de categoria `cat`: +2 por preparo que a alcança, até +8"""
-    return min(O.PREPARO_MAX, O.PREPARO_CADA * sum(1 for v in preparos(E, pid, lid).values() if v is not None and v >= cat))
+    return min(O.PREPARO_MAX, O.PREPARO_CADA * sum(1 for v in preparos(E, pid, lid, oficio).values() if v is not None and v >= cat))
 
 
 def conta(E, pid, cat, oficio='forja', lid=None, contra=None):
     """a conta do teste desta pessoa, hoje, numa obra desta categoria: o que soma, contra quanto, e as três chances"""
-    p = E['gente'][pid]; lid = lid or p['lugar']; v = oficina(E, lid) or 0
-    c = dict(maestria=mao(p, oficio), afinidade=p['atributos']['Afinidade'] // 10, oficina=v, preparo=preparo(E, pid, cat, lid), pena=corpo.pena(p), contra=O.contra(cat) if contra is None else contra)
+    p = E['gente'][pid]; lid = lid or p['lugar']; v = banca(E, lid, oficio) or 0; prep = preparo(E, pid, cat, lid, oficio)
+    # O DOM da bancada (etapa da magia) é um preparo que nasce com a pessoa: preparo e dom juntos não passam de +8. O dom que a pessoa ainda não viu não entra na conta
+    # que vai à mesa: vai escondido no dado (c['oculto'], o dom= do teste.rola)
+    c = dict(maestria=mao(p, oficio), afinidade=p['atributos']['Afinidade'] // 10, oficina=v, preparo=min(O.PREPARO_MAX, prep + talento.dom_visto(p, oficio)), pena=corpo.pena(p, estado.agora(E)), contra=O.contra(cat) if contra is None else contra)
+    c['oculto'] = min(O.PREPARO_MAX, prep + talento.dom(p, oficio)) - c['preparo']
     c['mais'] = c['maestria'] + c['oficina'] + c['preparo']                 # o que entra como "mais" no teste.rola (a Afinidade e a pena, ele mesmo soma)
     c['soma'] = c['mais'] + c['afinidade'] + c['pena']
     c['acerta'], c['pouco'], c['perde'] = chances(c['soma'], c['contra'])
     return c
 
 
-def diz_conta(c, pouco='sai uma abaixo', perde='perde tudo'):
-    partes = f"maestria {c['maestria']} + Afinidade {c['afinidade']} + oficina {c['oficina']} + preparo {c['preparo']}" + (f" − {-c['pena']} do corpo" if c['pena'] else '')
+def diz_conta(c, pouco='sai uma abaixo', perde='perde tudo', banca='oficina'):
+    partes = f"maestria {c['maestria']} + Afinidade {c['afinidade']} + {banca} {c['oficina']} + preparo {c['preparo']}" + (f" − {-c['pena']} do corpo" if c['pena'] else '')
     return f"2d20 + {c['soma']} ({partes}) contra {c['contra']}: acerta {c['acerta']:.0%} · {pouco} {c['pouco']:.0%} · {perde} {c['perde']:.0%}"
 
 
@@ -134,14 +168,16 @@ def prata_do_mundo(E): return sum(p['moedas'] for p in E['gente'].values()) + su
 
 
 # ---------- a peça que se quer ----------
-def molde(tipo, cat, nome=None, familia=None, material=None, cobre=None):
-    """o que se vai forjar, conferido ANTES de qualquer coisa mudar: {tipo, cat, nome, familia | material e cobre}"""
-    if tipo not in PECAS: sys.exit(f'não se forja "{tipo}" (forja-se: {", ".join(PECAS)})')
+def molde(tipo, cat, nome=None, familia=None, material=None, cobre=None, forma=None):
+    """o que se vai forjar, conferido ANTES de qualquer coisa mudar: {tipo, cat, nome, familia | material e cobre | forma (o foco)}"""
+    if tipo not in FORJA: sys.exit(f'não se forja "{tipo}" (forja-se: {", ".join(FORJA)})')
     c = cat_i(cat)
     if c > O.FORJA_ATE: sys.exit(f'ninguém forja acima do {T.CATS[O.FORJA_ATE]} (veio {T.CATS[c]})')
     if tipo == 'arma' and familia not in O.MATERIA_ARMA: sys.exit(f'não se forja a arma "{familia}" (forja-se: {", ".join(O.MATERIA_ARMA)})')
-    it = item(tipo, c, nome, familia=familia, material=material, cobre=cobre)        # confere o material e as partes, e dá o nome padrão
+    if tipo == 'foco' and forma not in M.MATERIA_FOCO: sys.exit(f'não se faz o foco "{forma}" (faz-se: {", ".join(M.MATERIA_FOCO)})')
+    it = item(tipo, c, nome, **({'forma': forma} if tipo == 'foco' else {} if tipo == 'amuleto' else dict(familia=familia, material=material, cobre=cobre)))        # confere o material e as partes, e dá o nome padrão
     d = dict(tipo=tipo, cat=c, nome=it['nome'])
+    if tipo == 'foco': d['forma'] = forma
     if tipo == 'arma': d['familia'] = familia
     if tipo == 'armadura': d['material'] = material; d['cobre'] = it['cobre']
     return d
@@ -149,10 +185,10 @@ def molde(tipo, cat, nome=None, familia=None, material=None, cobre=None):
 
 def _materia_conserto(it):
     """a chave da matéria que o conserto desta peça gasta, ou None se a tabela não sabe de que ela é feita"""
-    try: return O.materia_conserto(it['tipo'], it['cat'], it.get('familia'), it.get('material'), it.get('cobre'))
+    try: return O.materia_conserto(it['tipo'], it['cat'], _fam(it), it.get('material'), it.get('cobre'))
     except KeyError: return None
 def oficio_de(x): return O.oficio_da(x['tipo'], x.get('material'))
-def materia_de(x, cat=None): return O.materia(x['tipo'], x['cat'] if cat is None else cat, x.get('familia'), x.get('material'), x.get('cobre'))
+def materia_de(x, cat=None): return O.materia(x['tipo'], x['cat'] if cat is None else cat, _fam(x), x.get('material'), x.get('cobre'))
 
 
 def _nucleo(E, pid, cat, nid=None):
@@ -172,12 +208,12 @@ def _nucleo(E, pid, cat, nid=None):
 
 def pede(E, pid, peca):
     """o que a obra pede e a conta de hoje, sem abrir nada"""
-    p = _vivo(E, pid); cat = peca['cat']; of = oficio_de(peca); v = oficina(E, p['lugar']); mat = materia_de(peca); carga = p.get('carga', {})
+    p = _vivo(E, pid); cat = peca['cat']; of = oficio_de(peca); v = banca(E, p['lugar'], of); mat = materia_de(peca); carga = p.get('carga', {})
     L = [f"{_peca(peca)} · ofício: {of} · {tantos(O.blocos(cat), 'bloco pesado', 'blocos pesados')} de bancada",
          'Matéria: ' + ', '.join(f"{n} de {_mat(k)} (você tem {carga.get(k, 0)})" for k, n in mat.items())
          + (f' · e um núcleo {T.CATS[cat]}' if O.pede_nucleo(cat) else '')]
-    if v is None: L.append('Aqui não há oficina: a obra não abre.')
-    else: L.append('O teste final, hoje e aqui: ' + diz_conta(conta(E, pid, cat, of), pouco='sai uma abaixo' if cat else 'sai tosca'))
+    if v is None: L.append(_sem_banca(E, p['lugar'], of) + ': a obra não abre.')
+    else: L.append('O teste final, hoje e aqui: ' + diz_conta(conta(E, pid, cat, of), pouco='sai uma abaixo' if cat else 'sai tosca', banca='runas' if of == 'encanto' else 'oficina'))
     if mao(p, of) < O.MAO_DA_OBRA[cat]:
         L.append(f"AVISO: a obra {FEM[cat]} pede mão de {T.MAESTRIAS[O.MAO_DA_OBRA[cat]]}; a sua é de {T.MAESTRIAS[mao(p, of)]}. Pode tentar; o que entra na obra não volta.")
     return '\n'.join(L)
@@ -187,8 +223,13 @@ def pede(E, pid, peca):
 def sobe(E, pid, oficio='forja'):
     """a maestria do ofício sobe quando os blocos de bancada chegam; de Mestre para cima, só com o FEITO (marca.feito_OFICIO)"""
     p = E['gente'][pid]; tem = mao(p, oficio); bl = bancada(p, oficio); txt = ''
-    for grau, quer in sorted(O.OFICIO_BLOCOS.items()):
-        if grau <= tem or bl < quer: continue
+    for grau in sorted(O.OFICIO_BLOCOS):
+        quer = talento.pede(p, oficio, O.OFICIO_BLOCOS, grau)             # os blocos vezes o talento (etapa da magia), até o teto dele
+        if grau <= tem: continue
+        if quer is None:
+            if bl >= O.OFICIO_BLOCOS[grau]: txt = f" (a mão não sobe mais em {oficio}: o talento para em {T.MAESTRIAS[talento.teto(p, oficio)]})"
+            break
+        if bl < quer: continue
         if grau in O.FEITO_OBRA and p.get('marca', {}).get(f'feito_{oficio}', 0) < grau:
             txt = f" (tem os blocos para {T.MAESTRIAS[grau]} em {oficio}; falta o feito: uma obra {FEM[O.FEITO_OBRA[grau]]}, ou melhor, nascida da sua mão)"; break
         estado.aplica(E, 'treinar', [['pessoa', pid, 'maestria.' + oficio, 'poe', grau]], onde=p['lugar'], quem=[pid], texto=f"{p['nome']} chega a {T.MAESTRIAS[grau]} em {oficio}")
@@ -200,7 +241,7 @@ def sobe(E, pid, oficio='forja'):
 def forjar(E, pid, peca, blocos=None, nucleo=None):
     """abre a obra (a matéria sai da carga e entra nela) e trabalha `blocos` blocos (None: até fechar, ou até o corpo parar; 0: só abre)"""
     p = _vivo(E, pid); lid = p['lugar']; cat = peca['cat']; of = oficio_de(peca)
-    if oficina(E, lid) is None: sys.exit(f"{E['lugares'][lid]['nome']} não tem oficina: a obra não abre")
+    if banca(E, lid, of) is None: sys.exit(_sem_banca(E, lid, of) + ': a obra não abre')
     mat = materia_de(peca); carga = p.get('carga', {}); falta = {k: n - carga.get(k, 0) for k, n in mat.items() if carga.get(k, 0) < n}
     if falta: sys.exit(f"falta matéria para {_peca(peca)}: {_lista(falta)} (a obra pede {_lista(mat)})")
     nid = _nucleo(E, pid, cat, nucleo) if O.pede_nucleo(cat) else None
@@ -208,7 +249,7 @@ def forjar(E, pid, peca, blocos=None, nucleo=None):
     reg = dict(quem=pid, lugar=lid, tipo='forjar', oficio=of, peca=dict(peca), cat=cat, blocos=0, pede=O.blocos(cat), materia=mat, nucleo=nid)
     ef = [['pessoa', pid, 'carga.' + k, 'soma', -n] for k, n in mat.items()] + [['obra', 'abre', reg]]
     if nid: ef.append(['item', nid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: entrou na obra de {peca['nome']}"])
-    estado.aplica(E, 'forjar', ef, onde=lid, quem=[pid], texto=f"{p['nome']} abre a obra: {_peca(peca)}; entram {_lista(mat)}" + (f" e {E['itens']['itens'][nid]['nome']}" if nid else ''))
+    estado.aplica(E, evento_de(of), ef, onde=lid, quem=[pid], texto=f"{p['nome']} abre a obra: {_peca(peca)}; entram {_lista(mat)}" + (f" e {E['itens']['itens'][nid]['nome']}" if nid else ''))
     oid = f"o{E['itens']['oseq']:04d}"
     R = continua(E, pid, oid, blocos)
     R['texto'] = f"Obra {oid} aberta: {_peca(peca)}. Entraram {_lista(mat)}" + (f" e o núcleo {nid}" if nid else '') + '.\n' + R['texto']
@@ -226,6 +267,7 @@ def _obra(E, pid, oid=None):
 
 def _nome_obra(E, o):
     if o['tipo'] == 'forjar': return _peca(o['peca'])
+    if o['tipo'] in ('leva', 'gravar'): return o.get('nome') or o['tipo']                   # a leva e a gravação guardam o nome delas ao abrir
     it = E['itens']['itens'].get(o['item']); return f"o ajuste de {it['nome'] if it else o['item']}"
 
 
@@ -233,11 +275,11 @@ def continua(E, pid, oid=None, blocos=None):
     """trabalha na obra aberta. Para quando os blocos fecham (e aí sai o teste), quando acabam os blocos pedidos, ou quando o corpo cruza um limiar."""
     p = _vivo(E, pid); o = _obra(E, pid, oid); oid = o['id']; of = o['oficio']
     if p['lugar'] != o['lugar']: sys.exit(f"a obra {oid} está {_em(E, o['lugar'])}: é lá que se trabalha nela")
-    if oficina(E, o['lugar']) is None: sys.exit(f"{E['lugares'][o['lugar']]['nome']} não tem mais oficina: a obra {oid} não anda")
+    if banca(E, o['lugar'], of) is None: sys.exit(_sem_banca(E, o['lugar'], of) + f": a obra {oid} não anda")
     if o.get('nucleo') and E['itens']['itens'].get(o['nucleo'], {}).get('dono') != pid: sys.exit(f"o núcleo da obra {oid} não está mais na mão de quem forja: a obra não anda (largue-a com `larga`)")
-    if o['tipo'] == 'ajustar' and _ajuste_solto(E, o): sys.exit(f"{_ajuste_solto(E, o)}: a obra {oid} não anda (largue-a com `larga`)")
+    if o['tipo'] in ('ajustar', 'gravar') and _ajuste_solto(E, o): sys.exit(f"{_ajuste_solto(E, o)}: a obra {oid} não anda (largue-a com `larga`)")       # a gravação, como o ajuste, trabalha na peça de alguém que está ali
     falta = max(0, o['pede'] - o['blocos']); n = falta if blocos is None else max(0, min(int(blocos), falta)); nome = _nome_obra(E, o)
-    feitos, pq = ato.passa(E, pid, n, o['tipo'], esforco='pesado', texto=f"{p['nome']} trabalha na obra: {nome}",
+    feitos, pq = ato.passa(E, pid, n, evento_de(of, o['tipo']), esforco='pesado', texto=f"{p['nome']} trabalha na obra: {nome}",
                            mais=lambda i: [['obra', oid, 'blocos', 'soma', 1], ['pessoa', pid, 'treino.' + of, 'soma', 1]])
     o = E['itens']['obras'][oid]; p = E['gente'][pid]
     R = dict(obra=oid, feitos=feitos, parou=pq, fim=None, item=None, rolagem=None)
@@ -252,20 +294,24 @@ def remata(E, oid):
     o = E['itens'].get('obras', {}).get(oid) or sys.exit(f'não há a obra "{oid}"')
     if o['blocos'] < o['pede']: sys.exit(f"a obra {oid} tem {o['blocos']} de {o['pede']} blocos: o teste só sai quando os blocos fecham")
     _vivo(E, o['quem'])
+    if o['tipo'] == 'leva': import alquimia; return alquimia.remata(E, o)          # a leva da alquimia e a gravação do encanto: quem remata é o módulo delas
+    if o['tipo'] == 'gravar': import encanto; return encanto.remata(E, o)
     return _remata_forja(E, o) if o['tipo'] == 'forjar' else _remata_ajuste(E, o)
 
 
 def _remata_forja(E, o):
     oid = o['id']; pid = o['quem']; p = E['gente'][pid]; cat = o['cat']; peca = o['peca']; lid = o['lugar']; of = o['oficio']; nid = o.get('nucleo'); L = E['itens']['itens']
     if nid and nid not in L: sys.exit(f'o núcleo da obra {oid} não está mais no Livro de Itens: a obra não fecha (largue-a com `larga`)')
-    c = conta(E, pid, cat, of, lid); nuc = L[nid]['nome'] if nid else None; dia = E['relogio']['dia']
-    r = teste.rola(E, f"forjar {_peca(peca)}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid)
+    c = conta(E, pid, cat, of, lid); nuc = L[nid]['nome'] if nid else None; dia = E['relogio']['dia']; fam = _fam(peca)
+    r = teste.rola(E, f"forjar {_peca(peca)}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid, **({'dom': c['oculto']} if c['oculto'] else {}))
     margem = r['total'] - r['contra']; sai = cat if margem >= 0 else cat - 1 if margem > -O.POR_POUCO else None; ef = []; it = None
+    _faixa_do_dom(r, c, margem)
     fim = 'acertou' if margem >= 0 else 'abaixo' if sai is not None else 'perdeu'
     if sai is not None:
-        padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'))['nome']       # o nome que a obra ganha quando não se dá nome: diz a categoria DA OBRA
+        padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), forma=peca.get('forma'))['nome']       # o nome que a obra ganha quando não se dá nome: diz a categoria DA OBRA
         nome = None if max(0, sai) != cat and peca['nome'] == padrao else peca['nome']      # a peça sem nome próprio que sai uma categoria abaixo ganha o nome da categoria em que saiu ("arco Incomum", e não "arco Raro")
-        it = item(peca['tipo'], max(0, sai), nome, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), dono=pid, feito_por=pid, dia=dia)
+        forma = {'forma': fam} if peca['tipo'] == 'foco' else {} if peca['tipo'] == 'amuleto' else dict(familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'))
+        it = item(peca['tipo'], max(0, sai), nome, dono=pid, feito_por=pid, dia=dia, **forma)
         como = f"Dia {dia}: {p['nome']} forjou {_em(E, lid)}" + (f', com {nuc}' if nuc else '')
         if sai < 0: it['dur'][0] = max(1, int(it['dur'][1] * O.TOSCA)); como += '; a peça saiu tosca'
         elif sai < cat: como += f'; a obra era {FEM[cat]} e a peça saiu {FEM[sai]}'
@@ -275,22 +321,35 @@ def _remata_forja(E, o):
             if it['cat'] >= quer and p.get('marca', {}).get(f'feito_{of}', 0) < grau: ef.append(['pessoa', pid, f'marca.feito_{of}', 'poe', grau])
     if nid: ef.append(['item', nid, 'some'])
     ef.append(['obra', oid, 'fecha'])
-    conta_txt = f"{r['total']} contra {r['contra']}"
+    if talento.decidiu(r): ef += talento.mostra(E, pid)                    # o dom escondido fez a diferença: a pessoa vê que tem
+    conta_txt = f"{teste.total_visto(r)} contra {r['contra']}"
     if fim == 'acertou': txt = f"{p['nome']} forja {_peca(peca)}: {conta_txt}"
     elif fim == 'abaixo': txt = f"{p['nome']} erra por pouco ({conta_txt}): {peca['nome']} sai " + (f'{FEM[sai]}, uma categoria abaixo' if sai >= 0 else 'Comum e tosca') + (f'; {nuc} se gasta nela' if nuc else '')
     else: txt = f"a obra de {_peca(peca)} se perde ({conta_txt}): some a matéria ({_lista(o['materia'])})" + (f' e some {nuc}' if nuc else '')
-    estado.aplica(E, 'forjar', ef, onde=lid, quem=[pid], texto=txt)
+    estado.aplica(E, evento_de(of), ef, onde=lid, quem=[pid], texto=txt)
     iid = f"i{E['itens']['seq']:04d}" if it else None
-    out = teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, oficina {c['oficina']}, preparo {c['preparo']})\n" + txt + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + sobe(E, pid, of)
+    out = teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, {'runas' if of == 'encanto' else 'oficina'} {c['oficina']}, preparo {c['preparo']})\n" + txt + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + _diz_dom(E, pid, r) + sobe(E, pid, of)
     return dict(obra=oid, fim=fim, item=iid, rolagem=r, texto=out)
+
+
+def _faixa_do_dom(r, c, margem):
+    """o teste da bancada tem três faixas (acerta, sai uma abaixo, perde tudo): o dom escondido FEZ a diferença se mudou a faixa (r['fez'], que o teste.diz e o talento.decidiu leem)"""
+    if not c.get('oculto'): return
+    faixa = lambda m: 0 if m >= 0 else 1 if m > -O.POR_POUCO else 2
+    sem = margem - c['oculto']
+    r['fez'] = (True if margem >= 0 else 'faixa') if faixa(sem) != faixa(margem) else False
+
+
+def _diz_dom(E, pid, r):
+    return f" Foi o dom que fez a diferença: há alguma coisa nas mãos de {E['gente'][pid]['nome']}." if talento.decidiu(r) else ''
 
 
 def larga(E, pid, oid):
     """abandona a obra. A matéria que já foi ao fogo se perde (com zero blocos, volta à carga); o núcleo fica com o dono: só o teste o gasta."""
-    p = _vivo(E, pid); o = _obra(E, pid, oid); ef = [['obra', o['id'], 'fecha']]; volta = o['tipo'] == 'forjar' and o['blocos'] == 0
+    p = _vivo(E, pid); o = _obra(E, pid, oid); ef = [['obra', o['id'], 'fecha']]; leva_materia = o['tipo'] in ('forjar', 'leva', 'gravar'); volta = leva_materia and o['blocos'] == 0
     if volta: ef += [['pessoa', pid, 'carga.' + k, 'soma', n] for k, n in o['materia'].items()]
-    txt = f"{p['nome']} larga a obra: {_nome_obra(E, o)}" + ('' if o['tipo'] != 'forjar' else f" (a matéria volta: {_lista(o['materia'])})" if volta else f" (a matéria se perde: {_lista(o['materia'])})")
-    estado.aplica(E, o['tipo'], ef, onde=p['lugar'], quem=[pid], texto=txt)
+    txt = f"{p['nome']} larga a obra: {_nome_obra(E, o)}" + ('' if not leva_materia else f" (a matéria volta: {_lista(o['materia'])})" if volta else f" (a matéria se perde: {_lista(o['materia'])})")
+    estado.aplica(E, evento_de(o.get('oficio', 'forja'), o['tipo']), ef, onde=p['lugar'], quem=[pid], texto=txt)
     return dict(obra=o['id'], fim='largada', item=None, rolagem=None, texto=txt + '.')
 
 
@@ -298,25 +357,25 @@ def larga(E, pid, oid):
 def consertar(E, pid, iid, pontos=None, pago=False):
     """devolve durabilidade a uma peça da pessoa: ela mesma na bancada (blocos pesados e um pouco de matéria), ou paga à oficina do lugar (2% do preço por ponto)"""
     p = _vivo(E, pid); lid = p['lugar']; l = E['lugares'][lid]; it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
-    if it['tipo'] not in PECAS: sys.exit(f"{it['nome']} não é peça que se conserte")
+    if it['tipo'] not in FORJA: sys.exit(f"{it['nome']} não é peça que se conserte")
     if it.get('dono') != pid: sys.exit(f"{it['nome']} não é de {p['nome']}")
-    v = oficina(E, lid)
-    if v is None: sys.exit(f"{l['nome']} não tem oficina: não se conserta aqui")
+    of = oficio_de(it); v = banca(E, lid, of); nb = nomes_banca(of)
+    if v is None: sys.exit(_sem_banca(E, lid, of) + ': não se conserta aqui')
     gasto = it['dur'][1] - it['dur'][0]
     if gasto <= 0: sys.exit(f"{it['nome']} não precisa de conserto ({it['dur'][0]}/{it['dur'][1]})")
     q = gasto if pontos is None else min(int(pontos), gasto)
     if q < 1: sys.exit('diga quantos pontos consertar (1 ou mais)')
     cat = it['cat']; sobra = f" Pediu {pontos}; a peça só tinha {tantos(gasto, 'ponto gasto', 'pontos gastos')}." if pontos is not None and int(pontos) > gasto else ''
     if pago:
-        if cat > v + O.OFICINA_CONSERTA: sys.exit(f"a {O.OFICINAS[v]} {estado.de(E, lid)} só conserta até o {T.CATS[min(v + O.OFICINA_CONSERTA, len(T.CATS) - 1)]}; {it['nome']} é {T.CATS[cat]}")
+        if cat > v + O.OFICINA_CONSERTA: sys.exit(f"a {nb[v]} {estado.de(E, lid)} só conserta até o {T.CATS[min(v + O.OFICINA_CONSERTA, len(T.CATS) - 1)]}; {it['nome']} é {T.CATS[cat]}")
         custo = O.conserto_pago(cat, q, M.peso_do_item(it))
         if p['moedas'] < custo: sys.exit(f"consertar {tantos(q, 'ponto')} de {_peca(it)} custa {custo} de prata; {p['nome']} tem {p['moedas']}")
         estado.aplica(E, 'consertar', [['pessoa', pid, 'moedas', 'soma', -custo], ['estoque', lid, 'prata', 'soma', custo], ['item', iid, 'dur', 'soma', q]], onde=lid, quem=[pid],
-                      texto=f"{p['nome']} paga {custo} de prata à {O.OFICINAS[v]} pelo conserto de {it['nome']} ({tantos(q, 'ponto')})")
+                      texto=f"{p['nome']} paga {custo} de prata à {nb[v]} pelo conserto de {it['nome']} ({tantos(q, 'ponto')})")
         n, pq = ato.passa(E, pid, math.ceil(q / O.PAGO_BLOCO), 'consertar', esforco='nada', texto=f"{p['nome']} espera o conserto", para=False)
         it = E['itens']['itens'][iid]
-        return dict(pontos=q, custo=custo, feitos=n, parou=pq, texto=f"A {O.OFICINAS[v]} conserta {it['nome']}: {tantos(q, 'ponto')} por {custo} de prata, em {tantos(n, 'bloco')}. Durabilidade {it['dur'][0]}/{it['dur'][1]}.{sobra}")
-    of = oficio_de(it); pede_mao = O.MAO_DA_OBRA[cat] if cat < len(O.MAO_DA_OBRA) else None
+        return dict(pontos=q, custo=custo, feitos=n, parou=pq, texto=f"A {nb[v]} conserta {it['nome']}: {tantos(q, 'ponto')} por {custo} de prata, em {tantos(n, 'bloco')}. Durabilidade {it['dur'][0]}/{it['dur'][1]}.{sobra}")
+    pede_mao = O.MAO_DA_OBRA[cat] if cat < len(O.MAO_DA_OBRA) else None
     if pede_mao is None or mao(p, of) < pede_mao:
         sys.exit(f"consertar uma peça {FEM[cat]} pede mão de {T.MAESTRIAS[pede_mao] if pede_mao is not None else 'quem ainda não existe'} em {of}; a de {p['nome']} é de {T.MAESTRIAS[mao(p, of)]}. Pago à oficina: {O.conserto_pago(cat, q, M.peso_do_item(it))} de prata.")
     chave = _materia_conserto(it) or sys.exit(f"{it['nome']} não é peça que a bancada saiba consertar"); unidades = math.ceil(q / O.CONSERTO_MATERIA)
@@ -365,8 +424,9 @@ def _remata_ajuste(E, o):
         estado.aplica(E, 'ajustar', [['obra', oid, 'fecha']], onde=lid, quem=[pid], texto=f"o ajuste {oid} se desfaz: {solto}")
         return dict(obra=oid, fim='desfeito', item=o['item'], rolagem=None, texto=f"O ajuste {oid} se desfaz: {solto}.")
     it = E['itens']['itens'][o['item']]; a = E['gente'][o['para']]; cat = it['cat']; grau = O.ajuste_grau(mao(p, of)); c = conta(E, pid, cat, of, lid, contra=O.ajuste_contra(cat))
-    r = teste.rola(E, f"ajustar {it['nome']} para {a['nome']}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid)
-    margem = r['total'] - r['contra']; ef = [['obra', oid, 'fecha']]; conta_txt = f"{r['total']} contra {r['contra']}"
+    r = teste.rola(E, f"ajustar {it['nome']} para {a['nome']}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid, **({'dom': c['oculto']} if c['oculto'] else {}))
+    margem = r['total'] - r['contra']; ef = [['obra', oid, 'fecha']]; _faixa_do_dom(r, c, margem); conta_txt = f"{teste.total_visto(r)} contra {r['contra']}"
+    if talento.decidiu(r): ef += talento.mostra(E, pid)
     if margem >= 0 and grau >= T.SOB_MEDIDA_GRAUS[0]:
         fim = 'acertou'; txt = f"{p['nome']} ajusta {it['nome']} para {a['nome']}, grau {grau} ({conta_txt})"
         ef += [['item', o['item'], 'sob_medida', 'poe', dict(dono=a['nome'], grau=grau, id=o['para'])], ['item', o['item'], 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} ajustou para {a['nome']} (grau {grau})"]]
@@ -375,7 +435,7 @@ def _remata_ajuste(E, o):
         fim = 'estragou'; txt = f"o ajuste de {it['nome']} sai errado ({conta_txt}): a peça perde {O.AJUSTE_ESTRAGO} de durabilidade"
         ef.append(['item', o['item'], 'dur', 'soma', -O.AJUSTE_ESTRAGO])
     estado.aplica(E, 'ajustar', ef, onde=lid, quem=[pid], texto=txt)
-    return dict(obra=oid, fim=fim, item=o['item'], rolagem=r, texto=teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, oficina {c['oficina']}, preparo {c['preparo']})\n" + txt + '.')
+    return dict(obra=oid, fim=fim, item=o['item'], rolagem=r, texto=teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, oficina {c['oficina']}, preparo {c['preparo']})\n" + txt + '.' + _diz_dom(E, pid, r))
 
 
 # ---------- o jornal: a bancada a serviço da oficina do lugar ----------
@@ -383,24 +443,28 @@ def jornal(E, pid, blocos, oficio='forja'):
     """N blocos de bancada no serviço miúdo da oficina (a ferramenta do povo): o lugar paga o salário do grau de ofício da pessoa, e os blocos contam como bancada.
     A paga segue a JORNADA (tabelas_mundo: 2 blocos pagos por dia, junto com o `ato.py trabalhar`); passado isso, ou sem prata na oficina, o bloco é só bancada."""
     p = _vivo(E, pid); lid = p['lugar']
-    if oficio not in ('forja', 'couro'): sys.exit(f'o jornal é de forja ou de couro (veio "{oficio}")')
-    if oficina(E, lid) is None: sys.exit(f"{E['lugares'][lid]['nome']} não tem oficina: não há bancada onde servir")
+    if oficio not in O.BANCA: sys.exit(f'o jornal é de {", ".join(O.BANCA)} (veio "{oficio}")')
+    if banca(E, lid, oficio) is None: sys.exit(_sem_banca(E, lid, oficio) + ': não há onde servir')
     grau = O.jornal_grau(mao(p, oficio), p.get('grau_oficio', 'diarista')); paga = M.SALARIO[grau]; tinha = p['moedas']
     def mais(i):
         ef = [['pessoa', pid, 'treino.' + oficio, 'soma', 1]]
         if ato.jornada(E, pid) < M.JORNADA and E['lugares'][lid]['estoque'].get('prata', 0) >= paga: ef += ato.paga_bloco(E, pid, lid, paga)      # depois da jornada, e sem prata, a oficina não paga
         return ef
-    n, pq = ato.passa(E, pid, int(blocos), 'trabalhar', esforco=O.JORNAL_ESFORCO, mais=mais, texto=f"{p['nome']} serve na bancada da oficina ({grau})")
+    onde_serve = dict(encanto='na mesa de runas', alquimia='na botica', fé='no santuário').get(oficio, 'na bancada da oficina')
+    n, pq = ato.passa(E, pid, int(blocos), 'trabalhar', esforco=O.JORNAL_ESFORCO if oficio in ('forja', 'couro') else 'leve', mais=mais, texto=f"{p['nome']} serve {onde_serve} ({grau})")
     ganhou = E['gente'][pid]['moedas'] - tinha
-    return dict(feitos=n, parou=pq, ganhou=ganhou, texto=f"{p['nome']} serve {tantos(n, 'bloco')} na bancada e recebe {ganhou} de prata" + ('' if ganhou == n * paga else f' (a oficina paga {M.JORNADA} blocos por dia a cada um, e só enquanto tem prata; o resto é bancada sem paga)')
-                + sobe(E, pid, oficio) + (f'. PAROU: {pq}' if pq else '.'))
+    sobe_txt = sobe(E, pid, oficio) if oficio in ('forja', 'couro', 'alquimia', 'encanto') else __import__('magia_mundo').sobe(E, pid, oficio)       # a fé sobe pela tabela das armas (magia_mundo)
+    return dict(feitos=n, parou=pq, ganhou=ganhou, texto=f"{p['nome']} serve {tantos(n, 'bloco')} {onde_serve} e recebe {ganhou} de prata" + ('' if ganhou == n * paga else f' (o lugar paga {M.JORNADA} blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga)')
+                + sobe_txt + (f'. PAROU: {pq}' if pq else '.'))
 
 
 # ---------- o preparo ganho no mundo (o Mestre registra) ----------
-def ganha_preparo(E, qual, cat, pid=None, lid=None, como=''):
-    """registra um preparo: receita e ajudante vão para a pessoa; fogo e bigorna, para o lugar onde ela está. `cat`: a categoria que ele alcança (None: perde-se)"""
-    if qual not in O.PREPAROS: sys.exit(f'preparo desconhecido: "{qual}" (os que existem: {", ".join(O.PREPAROS)})')
-    c = None if cat is None else cat_i(cat); de, chave = O.PREPAROS[qual]; alcance = 'nada' if c is None else f'até o {T.CATS[c]}'
+def ganha_preparo(E, qual, cat, pid=None, lid=None, como='', oficio='forja'):
+    """registra um preparo do ofício: os da pessoa (receita, ajudante) vão para ela; os do lugar (fogo e bigorna; a vidraria da botica; a tinta e a pedra das runas), para o lugar
+    onde ela está. `cat`: a categoria que ele alcança (None: perde-se)"""
+    tab = tabela_preparos(oficio)
+    if qual not in tab: sys.exit(f'preparo desconhecido no ofício {oficio}: "{qual}" (os que existem: {", ".join(tab)})')
+    c = None if cat is None else cat_i(cat); de, chave = tab[qual]; alcance = 'nada' if c is None else f'até o {T.CATS[c]}'
     if de == 'pessoa':
         p = _vivo(E, pid); txt = f"{p['nome']} ganha o preparo: {qual} ({alcance})" + (f': {como}' if como else '')
         if not estado.aplica(E, 'mestre', [['pessoa', pid, 'marca.' + chave, 'poe', c]], onde=p['lugar'], quem=[pid], texto=txt): return f"{p['nome']} já tinha esse preparo: nada mudou."
@@ -427,7 +491,7 @@ def virada(E):
     for oid, o in list(E['itens'].get('obras', {}).items()):
         q = E['gente'].get(o.get('quem'))
         if q and q['estado'] == 'vivo': continue
-        estado.aplica(E, 'ajustar' if o.get('tipo') == 'ajustar' else 'forjar', [['obra', oid, 'fecha']], onde=o.get('lugar'), quem=[o['quem']] if q else [],
+        estado.aplica(E, evento_de(o.get('oficio', 'forja'), o.get('tipo')), [['obra', oid, 'fecha']], onde=o.get('lugar'), quem=[o['quem']] if q else [],
                       texto=f"a obra {oid} se desfaz: {q['nome'] if q else 'quem a fazia'} morreu")
 
 
@@ -490,12 +554,12 @@ def main(a=None):
     inteiro = lambda k: int(op[k]) if op.get(k, '').isdigit() else sys.exit(f'{k}= pede um número inteiro, de zero para cima (veio "{op[k]}")') if k in op else None
     def peca(i):
         tipo = pos[i] if len(pos) > i else sys.exit('diga o que forjar: arma FAMILIA CATEGORIA, armadura MATERIAL CATEGORIA ou escudo CATEGORIA. Veja o uso: python3 oficio.py')
-        if tipo == 'escudo': fam = None; resto = pos[i + 1:]
+        if tipo in ('escudo', 'amuleto'): fam = None; resto = pos[i + 1:]
         else: fam = pos[i + 1] if len(pos) > i + 1 else None; resto = pos[i + 2:]
-        if tipo in PECAS and not resto: sys.exit('falta a categoria da peça. Veja o uso: python3 oficio.py')
+        if tipo in FORJA and not resto: sys.exit('falta a categoria da peça. Veja o uso: python3 oficio.py')
         resto = resto or [0]
         return molde(tipo, resto[0], resto[1] if len(resto) > 1 else None, familia=fam if tipo == 'arma' else None, material=fam if tipo == 'armadura' else None,
-                     cobre=op['cobre'].split(',') if op.get('cobre') else None)
+                     cobre=op['cobre'].split(',') if op.get('cobre') else None, forma=fam if tipo == 'foco' else None)
     falta = lambda o_que, exemplo: sys.exit(f'{o_que}: `python3 oficio.py {exemplo}`')
     if pos[0] == 'ver': print('\n'.join(ver(E, pid))); return
     if pos[0] == 'pede': print(pede(E, pid, peca(1))); return
@@ -507,7 +571,7 @@ def main(a=None):
     elif pos[0] == 'jornal': out = jornal(E, pid, int(pos[1]), oficio=op.get('oficio', 'forja'))['texto']
     elif pos[0] == 'preparo':
         if len(pos) < 3: falta('diga qual preparo (receita, ajudante, fogo ou bigorna) e até que categoria ele serve (ou "nada")', 'preparo fogo Raro "como foi ganho"')
-        out = ganha_preparo(E, pos[1], None if pos[2] == 'nada' else pos[2], pid=pid, como=pos[3] if len(pos) > 3 else '')
+        out = ganha_preparo(E, pos[1], None if pos[2] == 'nada' else pos[2], pid=pid, como=pos[3] if len(pos) > 3 else '', oficio=op.get('oficio', 'forja'))
     else:                                                   # oficina
         if len(pos) < 2 or not (pos[1] == 'nada' or pos[1].isdigit()): falta(f'diga o nível da oficina, de 0 ({O.OFICINAS[0]}) a {len(O.OFICINAS) - 1} ({O.OFICINAS[-1]}), ou "nada"', 'oficina 1 "como foi"')
         out = poe_oficina(E, E['gente'][pid]['lugar'], None if pos[1] == 'nada' else int(pos[1]), como=pos[2] if len(pos) > 2 else '')

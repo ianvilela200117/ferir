@@ -26,8 +26,12 @@ RASTRO_CHEFE = 4            # ... mais isto se é chefe...
 RASTRO_FALTA = 12           # ... mais isto vezes o que falta da espécie (1 − contagem ÷ teto): na metade do teto, +6; quase sumida, +12
 RASTRO_ESCURO = -4          # procurar de noite ou de madrugada (bloco sem luz)
 # sem alvo ("o que aparecer") o número é o de base mais a falta do ermo inteiro; o que aparece é sorteado pela contagem de cada espécie
+def _tc():
+    try: import tabelas_criaturas as TC
+    except ModuleNotFoundError: return None
+    return TC
 def arisco(especie):
-    e = TB.ESPECIES.get(especie)
+    e = TB.ESPECIES.get(especie) or (getattr(_tc(), 'ESPECIES', {}) or {}).get(especie)      # o bicho, ou a criatura (etapa da magia)
     if not e: return 0
     return RASTRO_ARISCO[min(e['cat'], len(RASTRO_ARISCO) - 1)] + (RASTRO_CHEFE if e['chefe'] else 0)
 
@@ -63,7 +67,7 @@ INDOLE = {
     'pantera': (1.0, 0.9), 'aranha': (0.6, 0.8), 'grifo': (0.8, 0.6), 'trasgo': (1.0, 0.9), 'basilisco': (0.6, 0.7), 'serpe': (1.0, 0.9), 'hidra': (0.6, 0.9), 'dragão': (1.0, 0.8),
 }
 INDOLE_PADRAO = (0.6, 0.5)  # a espécie que esta página ainda não conhece
-def indole(especie): return INDOLE.get(especie, INDOLE_PADRAO)
+def indole(especie): return INDOLE.get(especie) or (getattr(_tc(), 'INDOLE', {}) or {}).get(especie) or INDOLE_PADRAO        # a das criaturas mora no tabelas_criaturas.INDOLE
 INVESTE_FUGA = 0.2          # quem corre chama o bicho: isto a mais na chance de ele vir atrás (até 1)
 
 # ---------- fugir ----------

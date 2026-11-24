@@ -23,6 +23,10 @@ Uso de linha de comando (só olha: não rola dado de jogo nem mexe em save):
                                            a régua: N bichos contra um homem daquele nível e conjunto, em lutas de ensaio
 No cenário da luta (luta.py nova, ato.py luta nova), um bicho é {"nome": "lobo 1", "nivel": 0, "bicho": "lobo"} (a espécie
 inteira sai da tabela), ou a pessoa que o bicho() devolve, tal qual.
+AS CRIATURAS (etapa da magia: criaturas.py, tabelas_criaturas.py) passam pelas mesmas portas: especie(), bicho(), bando(), despojo(), ameaca(), resumo() e mesa()
+aceitam as espécies do tabelas_criaturas.ESPECIES (a de corpo é um bicho; a de POVO é gente que veste, e o bicho() a entrega pronta pelo criaturas.criatura) e os
+chefes do tabelas_criaturas.CHEFES (o chefe sozinho). No cenário: {"bicho": "goblin", "nome": "goblin 1", "posto": "lanceiro"} ou {"bicho": "xamã goblin"}.
+As frases dos traços novos moram no tabelas_criaturas.TRACOS (nunca no tabelas_bichos.TRACOS).
 """
 import math, random, sys
 import tabelas as T
@@ -32,14 +36,42 @@ from itens import item, cat_i
 CORPO = ('cat', 'armas', 'couro', 'tamanho', 'tracos', 'coragem')        # o que é do corpo; o resto do que se passa em `mais` é da pessoa
 
 
+def _tc():
+    """a página das criaturas (etapa da magia), ou None se ainda não existe"""
+    try: import tabelas_criaturas as TC
+    except ModuleNotFoundError as x:
+        if x.name != 'tabelas_criaturas': raise
+        return None
+    return TC
+
+
 def especie(e):
-    if e not in TB.ESPECIES: sys.exit(f'espécie desconhecida: "{e}" (as que existem: {", ".join(TB.ESPECIES)})')
-    return TB.ESPECIES[e]
+    """o registro da espécie: um bicho (tabelas_bichos.ESPECIES) ou uma criatura (tabelas_criaturas.ESPECIES)"""
+    if e in TB.ESPECIES: return TB.ESPECIES[e]
+    TC = _tc()
+    if TC and e in TC.ESPECIES: return TC.ESPECIES[e]
+    sys.exit(f'espécie desconhecida: "{e}" (as que existem: {", ".join(list(TB.ESPECIES) + (list(TC.ESPECIES) if TC else []))})')
+
+
+def _povo_ou_chefe(esp):
+    """a espécie de POVO (gente que veste) ou o chefe das criaturas: quem a monta é o criaturas.py"""
+    TC = _tc()
+    return bool(TC and esp not in TB.ESPECIES and ((esp in TC.ESPECIES and TC.ESPECIES[esp].get('povo')) or (esp in TC.CHEFES and esp not in TC.ESPECIES)))
+
+
+def frase(t):
+    """a frase de um traço: o da etapa 2 (tabelas_bichos.TRACOS) ou o novo (tabelas_criaturas.TRACOS)"""
+    if t in TB.TRACOS: return TB.TRACOS[t]
+    TC = _tc()
+    return TC.TRACOS.get(t, t) if TC else t
 
 
 def bicho(esp, nome=None, **mais):
     """a pessoa pronta para o luta.nova. `mais` muda o corpo (cat, armas, couro, tamanho, tracos, coragem) ou a pessoa
     (nivel, atributos, instinto, lider, moral, linha, pv, feridas...): serve ao Mestre para o bicho fora do comum, e às provas."""
+    if _povo_ou_chefe(esp):
+        import criaturas
+        return criaturas.criatura(esp, nome=nome, **mais)
     e = especie(esp)
     corpo = dict(especie=esp, cat=e['cat'], armas=list(e['armas']), couro=e['couro'], tamanho=e['tamanho'], tracos=list(e['tracos']), coragem=e['coragem'])
     for k in CORPO:
@@ -47,6 +79,10 @@ def bicho(esp, nome=None, **mais):
     corpo['cat'] = cat_i(corpo['cat'])
     at = dict(e['atributos']); at.update(mais.pop('atributos', None) or {})
     p = dict(nome=nome or f"{e['artigo']} {e['nome']}", nivel=mais.pop('nivel', e['nivel']), atributos=at, maestria=mais.pop('instinto', e['instinto']), equip={}, moral=e['moral'], bicho=corpo)
+    if e.get('feiticos'): p['feiticos'] = list(e['feiticos'])           # a criatura que lança (o traço "lança"): o corpo é o foco, o instinto é a mão
+    if e.get('fases'): p['fases'] = [dict(x) for x in e['fases']]
+    if e.get('maldicao'): p['maldicao'] = dict(e['maldicao'])            # o molde da maldição que o traço "amaldiçoa" põe
+    if e.get('chefe') and esp not in TB.ESPECIES: p['lider'] = True
     p.update(mais)
     return p
 
@@ -55,6 +91,9 @@ def bando(esp, sorte=None, n=None, primeiro=1, **mais):
     """os bichos que andam juntos, com nome cada um. Quantos: da sorte (um random.Random; o do mundo é o estado.sorte), ou n.
     Na espécie que segue um alfa, o primeiro é o líder: caído ele, o bando testa a coragem.
     primeiro: de que número os nomes partem (um segundo bando da mesma espécie na mesma luta parte de onde o outro parou, e não traz outro alfa)."""
+    if _povo_ou_chefe(esp):
+        import criaturas
+        return criaturas.bando(esp, sorte, n=n, primeiro=primeiro, **mais)
     e = especie(esp); lo, hi = e['bando']
     if n is None: n = lo if lo == hi else (sorte or random.SystemRandom()).randint(lo, hi)
     if n == 1 and primeiro == 1: return [bicho(esp, **mais)]
@@ -66,6 +105,9 @@ def bando(esp, sorte=None, n=None, primeiro=1, **mais):
 def despojo(esp, sorte=None):
     """o que o bicho morto rende: ({bem: quantidade}, o núcleo). A luta estraga: de cada bem sai de metade ao inteiro da tabela.
     O núcleo (só o chefe dá, sempre) é o registro pronto para o ['item', 'nasce', registro]: falta pôr o dono ou o lugar."""
+    if esp not in TB.ESPECIES:
+        import criaturas
+        return criaturas.despojo(esp, sorte)
     e = especie(esp); r = sorte or random.SystemRandom(); bens = {}
     for bem, q in e['despojo'].items():
         lo = max(1, math.ceil(q * TB.DESPOJO_MIN)); bens[bem] = lo if lo >= q else r.randint(lo, q)
@@ -96,14 +138,18 @@ def _tamanho_diz(t, fem):
 def ameaca(esp, n=None, arma=None, armadura=None):
     """a frase que o caçador lê ANTES da luta: o grau, o tamanho, o corpo, o que se sabe, se foge. Com n, quantos são;
     com a categoria da arma e da armadura de quem lê, a conta da regra de ouro já feita."""
+    if _povo_ou_chefe(esp):
+        import criaturas
+        return criaturas.ameaca_chefe(esp) if esp not in (_tc().ESPECIES) else criaturas.ameaca(esp, n=n, arma=arma, armadura=armadura)
     e = especie(esp); c = e['cat']; C = T.CATS[c]; lo, hi = e['bando']; fem = e['artigo'] == 'a'; dele = 'dela' if fem else 'dele'; so = 'sozinha' if fem else 'sozinho'; tam = TB.TAMANHOS[e['tamanho']]
     quantos = f'são {n}' if n and n > 1 else f'está {so}' if n == 1 else f'anda {so}' if hi == 1 else f'anda em bando de {lo} a {hi}' if lo > 1 else f'anda {so} ou em {hi}'
     if e['alfa'] and (n is None or n > 1): quantos += ', atrás de um alfa'
     L = [f"{e['nome'].upper()} · grau {e['grau']} ({C}): {TB.GRAU_DIZ[e['grau']]} · {_tamanho_diz(e['tamanho'], fem)} · {quantos}."]
-    armas = e['armas'][0] if len(e['armas']) == 1 else ', '.join(e['armas'][:-1]) + ' e ' + e['armas'][-1]
+    armas = e.get('armas_diz') or (e['armas'][0] if len(e['armas']) == 1 else ', '.join(e['armas'][:-1]) + ' e ' + e['armas'][-1])      # a criatura pode dizer o corpo com outro nome (o punho do golem)
     from itens import FEM
     L.append(f"O corpo: {armas} de categoria {C}; {e['couro']} {(FEM if e['couro'].endswith('a') else T.CATS)[c]}, que vale como {TB.COUROS[e['couro']]}.")       # a categoria concorda com o couro: pelo Comum, escama Épica, carapaça Rara
-    if e['tracos']: L.append('Traços: ' + '. '.join(f'{t.capitalize()}: {TB.TRACOS[t]}' for t in e['tracos']) + '.')
+    if e['tracos']: L.append('Traços: ' + '. '.join(f'{t.capitalize()}: {frase(t)}' for t in e['tracos']) + '.')       # os novos (etapa da magia) moram no tabelas_criaturas.TRACOS
+    if e.get('feiticos'): L.append('Lança: ' + ', '.join(T.nome_feitico(k) for k in e['feiticos']) + '.')
     if tam['ocupa'] < 1 and any(t in TB.PEDE_TAMANHO for t in e['tracos']):       # ninguém derruba nem agarra quem é maior que ele: o traço do bicho pequeno não pega gente
         L.append(f"Por ser pequen{'a' if fem else 'o'}, não derruba nem agarra gente: só quem é do tamanho {dele}.")
     if (n or hi) > 1:                                       # o bando: o grau fala de um só, e o cerco e o flanco são os de toda luta (tabelas.py)
@@ -114,6 +160,7 @@ def ameaca(esp, n=None, arma=None, armadura=None):
                  f"para o próximo (até {_menos(-T.FLANCO * T.FLANCO_MAX)}); num corredor de um, {chegam} de cada vez.")
     L.append(f"Sabe-se: {e['sabe']}.")
     if e['chefe']: L.append(f"É chefe: não foge, e {'morta' if fem else 'morto'} dá um núcleo {C}.")
+    elif 'sem vida' in e['tracos']: L.append('Não tem vida: não foge, luta até se desfazer.')
     else: L.append(f"Ferid{'a' if fem else 'o'}, testa a coragem ({_menos(e['coragem'])}) e pode fugir; encurralad{'a' if fem else 'o'}, luta até o fim.")
     if arma is None and armadura is None:
         if c == 0: L.append(f"A conta: é Comum. Qualquer arma passa inteira {NO_COURO[e['couro']]} {dele}; o golpe {dele} passa inteiro em armadura Comum, vale um terço na Incomum, e o triplo em parte do corpo sem armadura.")
@@ -124,14 +171,14 @@ def ameaca(esp, n=None, arma=None, armadura=None):
     return ' '.join(L)
 
 
-def _ordem(esp): e = TB.ESPECIES[esp]; return (e['cat'], TB.GRAUS.index(e['grau']), e['nivel'], esp)
+def _ordem(esp): e = especie(esp); return (e['cat'], TB.GRAUS.index(e['grau']), e['nivel'], esp)
 
 
 def resumo(esp, n=None):
     """a espécie numa linha curta (para a MESA.md e para listas): o grau, a categoria, o tamanho, quantos andam juntos e os traços"""
     e = especie(esp); lo, hi = e['bando']; fem = e['artigo'] == 'a'; t = e['tamanho']
     quantos = f'{n}' if n else ('sozinha' if fem else 'sozinho') if hi == 1 else f'bando de {lo} a {hi}' if lo > 1 else f'de 1 a {hi}'
-    return f"{e['nome']} (grau {e['grau']}, {T.CATS[e['cat']]}, {t[:-1] + 'a' if fem and t.endswith('o') else t}, {quantos}" + (': ' + ', '.join(e['tracos']) if e['tracos'] else '') + ')'
+    return f"{e['nome']} (grau {e['grau']}, {T.CATS[e['cat']]}, {t[:-1] + 'a' if fem and t.endswith('o') else t}, {quantos}" + (', povo que veste peças' if e.get('povo') else '') + (': ' + ', '.join(e['tracos']) if e['tracos'] else '') + ')'
 
 
 def mesa(E):
@@ -145,7 +192,8 @@ def mesa(E):
     for lid in [aqui] + [v for v in (E['lugares'][aqui].get('vizinhos') or []) if v in E['lugares']]:
         l = E['lugares'][lid]; conta = l.get('bichos') if isinstance(l.get('bichos'), dict) else {}
         for esp, q in conta.items():
-            if esp in TB.ESPECIES and not TB.ESPECIES[esp]['chefe'] and isinstance(q, (int, float)) and not isinstance(q, bool) and q > 0: onde.setdefault(esp, []).append(l.get('nome', lid))
+            e = estado.especie(esp)                         # o bicho e a criatura (etapa da magia) contados no ermo
+            if e and not e['chefe'] and isinstance(q, (int, float)) and not isinstance(q, bool) and q > 0: onde.setdefault(esp, []).append(l.get('nome', lid))
     if not onde: return []
     varios = len({n for L in onde.values() for n in L}) > 1
     return ['## Os bichos daqui (o que todo mundo sabe; a frase inteira: `bichos.py ameaca ESPECIE`)',
@@ -155,7 +203,7 @@ def mesa(E):
 # ---------- olhar ----------
 def _lista():
     L = [f"{'espécie':<12}{'grau':<6}{'categoria':<11}{'tamanho':<9}{'bando':<8}{'traços':<34}onde vive"]
-    for k, e in sorted(TB.ESPECIES.items(), key=lambda x: _ordem(x[0])):
+    for k, e in sorted(TB.ESPECIES.items(), key=lambda x: _ordem(x[0])):        # as criaturas (etapa da magia) têm a lista delas: criaturas.py lista
         L.append(f"{k:<12}{e['grau']:<6}{T.CATS[e['cat']]:<11}{e['tamanho']:<9}{('%d' % e['bando'][0] if e['bando'][0] == e['bando'][1] else '%d a %d' % e['bando']):<8}{(', '.join(e['tracos']) or '—'):<34}{', '.join(e['habitat'])}"
                  + (' · CHEFE (dá núcleo)' if e['chefe'] else ''))
     return '\n'.join(L)
@@ -170,6 +218,8 @@ def _ver(esp):
 
 def _tracos():
     L = ['OS TRAÇOS (a lista é fechada: só entra o que a luta roda)'] + [f'  {k:<10} {v}' for k, v in TB.TRACOS.items()]
+    TC = _tc()
+    if TC: L += ['', 'OS TRAÇOS NOVOS (etapa da magia: tabelas.TRACOS_NOVOS)'] + [f'  {k:<10} {v}' for k, v in TC.TRACOS.items()]
     L += ['', 'OS TAMANHOS'] + [f"  {k:<8} PV × {t['pv']:g} · alcança {t['alcance']} casa(s) · cerco {t['cerco'][0]} de perto e {t['cerco'][1]} de haste · toma {t['ocupa']:g} de um corredor · Defesa {_menos(t['defesa'])}" for k, t in TB.TAMANHOS.items()]
     L += ['', 'O CORPO: A ARMA'] + [f"  {k:<8} {a['dado']} ({a['golpe']}), {a['folego']} de fôlego por golpe" for k, a in TB.ARMAS_CORPO.items()]
     L += ['', 'O CORPO: A ARMADURA'] + [f'  {k:<9} vale como {v}' for k, v in TB.COUROS.items()]
@@ -207,8 +257,9 @@ def mede(esp, nivel, cat, n=None, lutas=200, familia='espada', material='malha',
 
 
 def _chave(x):
-    """a espécie pelo nome da tabela ou pelo nome que vai à mesa ("aranha" ou "aranha-de-toca")"""
-    return next((k for k, d in TB.ESPECIES.items() if x in (k, d['nome'])), x)
+    """a espécie pelo nome da tabela ou pelo nome que vai à mesa ("aranha" ou "aranha-de-toca"; das criaturas também)"""
+    TC = _tc(); todas = dict(TB.ESPECIES, **(TC.ESPECIES if TC else {}))
+    return next((k for k, d in todas.items() if x in (k, d['nome'])), x)
 
 
 if __name__ == '__main__':
@@ -225,7 +276,7 @@ if __name__ == '__main__':
         m = mede(pos[1], num(pos[2], 'o nível'), pos[3], n=n, lutas=num(op.get('lutas', '200'), 'quantas lutas'), familia=fam, material=mat, quantos=q, inicio=_inicio(op.get('inicio', 'perto')),
                  surpresa={'bicho': 'B', 'homem': 'A'}.get(sp))
         print(f"ENSAIO (não é a luta de verdade: dado de mentira, nada é guardado): {'um homem' if q == 1 else f'{q} homens'} de nível {pos[2]}, de {fam}, {mat}"
-              f"{' e escudo' if T.FAMILIAS[fam]['maos'] == 1 else ''} {T.CATS[cat_i(pos[3])]}, contra {TB.ESPECIES[pos[1]]['nome']} ({f'{n} de uma vez' if n else 'quantos a sorte der, pelo bando da espécie'}), começando {op.get('inicio', 'perto')}{f', o {sp} surpreendido' if sp else ''}:\n"
+              f"{' e escudo' if T.FAMILIAS[fam]['maos'] == 1 else ''} {T.CATS[cat_i(pos[3])]}, contra {especie(pos[1])['nome']} ({f'{n} de uma vez' if n else 'quantos a sorte der, pelo bando da espécie'}), começando {op.get('inicio', 'perto')}{f', o {sp} surpreendido' if sp else ''}:\n"
               f"  vence {m['vence']}% (em {m['carcaca']}% fica bicho morto ou caído no campo; em {m['fugiu']}% todos fogem) · perde {m['perde']}% · mediana de {m['rodadas']} rodadas\n"
               f"  {'o homem' if q == 1 else 'o primeiro homem'} sai com ferida nova, caído ou morto em {m['ferido']}% das lutas (caído ou morto: {m['caiu']}%)")
     else: print(__doc__)

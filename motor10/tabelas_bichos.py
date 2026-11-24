@@ -114,7 +114,7 @@ def _esp(nome, artigo, cat, grau, nivel, instinto, atributos, armas, couro, tama
 # ---------- as espécies ----------
 # instinto: a maestria do bicho (0, 2, 4, 6 ou 8: vale como a maestria da pessoa, no acerto, na Defesa e nas ações a mais)
 # coragem: o que a espécie soma no teste de moral · bando: (de quantos, a quantos) andam juntos · alfa: o primeiro do bando é o líder
-# despojo: o que o bicho inteiro rende (a matéria tem categoria: "couro:1"; a comum vai até o Raro) · chefe: não foge e dá NÚCLEO da categoria dele
+# despojo: o que o bicho inteiro rende (a matéria tem categoria: "couro:1"; a comum vai até o Raro; o bicho de veneno dá PEÇONHA, da categoria dele até a Rara) · chefe: não foge e dá NÚCLEO da categoria dele
 ESPECIES = {
     'corça':     _esp('corça', 'a', 0, 'F', 4, 0, (45, 70, 45, 30, 70, 20), ['casco'], 'pelo', 'médio', [], -6, (1, 2),
                       {'comida': 6, 'couro:0': 2, 'osso:0': 1}, ['floresta', 'campo'], 'foge ao primeiro sangue, mas até lá escoiceia'),
@@ -125,23 +125,23 @@ ESPECIES = {
     'lobo':      _esp('lobo', 'o', 1, 'D', 20, 2, (60, 75, 40, 40, 70, 20), ['presa'], 'pelo', 'médio', ['matilha'], 0, (3, 5),
                       {'comida': 3, 'couro:1': 2, 'osso:1': 1}, ['floresta', 'serra', 'campo'], 'caça em roda; num corredor só um morde de cada vez; caído o alfa, o bando racha', alfa=True),
     'surucucu':  _esp('surucucu', 'a', 1, 'D', 25, 2, (60, 90, 60, 40, 70, 20), ['dente'], 'escama', 'médio', ['bote', 'veneno'], 2, (1, 1),
-                      {'comida': 2, 'couro:1': 2, 'osso:1': 1}, ['brejo', 'floresta', 'ruína'], 'o primeiro bote é o pior; o veneno segue trabalhando depois da mordida'),
+                      {'comida': 2, 'couro:1': 2, 'osso:1': 1, 'peçonha:1': 1}, ['brejo', 'floresta', 'ruína'], 'o primeiro bote é o pior; o veneno segue trabalhando depois da mordida'),
     'urso':      _esp('urso', 'o', 1, 'D', 35, 4, (100, 50, 80, 50, 50, 20), ['garra', 'presa'], 'pelo', 'grande', ['agarra'], 2, (1, 1),
                       {'comida': 10, 'couro:1': 4, 'osso:1': 2}, ['floresta', 'serra', 'caverna'], 'quem ele abraça não recua; a pata alcança antes da espada, e só a lança o segura fora do abraço'),
     'pantera':   _esp('pantera', 'a', 2, 'C', 50, 6, (100, 95, 100, 50, 80, 20), ['garra', 'presa'], 'pelo', 'médio', ['bote'], 4, (1, 1),
                       {'comida': 4, 'couro:2': 2, 'osso:2': 1}, ['floresta', 'serra'], 'escolhe a hora: o primeiro golpe é dela, e derruba'),
     'aranha':    _esp('aranha-de-toca', 'a', 2, 'C', 45, 2, (50, 80, 40, 40, 60, 20), ['ferrão'], 'carapaça', 'médio', ['veneno'], 2, (2, 3),
-                      {'couro:2': 1, 'osso:2': 1}, ['caverna', 'ruína', 'floresta'], 'a casca pede maça ou martelo; o veneno segue trabalhando depois da mordida'),
+                      {'couro:2': 1, 'osso:2': 1, 'peçonha:2': 1}, ['caverna', 'ruína', 'floresta'], 'a casca pede maça ou martelo; o veneno segue trabalhando depois da mordida'),
     'grifo':     _esp('grifo', 'o', 2, 'C', 55, 6, (95, 85, 85, 55, 90, 20), ['garra', 'presa'], 'pelo', 'grande', ['voa'], 2, (1, 2),
                       {'comida': 6, 'couro:2': 2, 'osso:2': 2}, ['serra'], 'no ar a espada mal o toca: pede lança, arco, ou um teto baixo'),
     'trasgo':    _esp('trasgo', 'o', 2, 'C', 55, 2, (80, 45, 105, 50, 40, 20), ['garra'], 'pelo', 'grande', ['regenera'], 2, (1, 1),
                       {'couro:2': 3, 'osso:2': 3}, ['brejo', 'caverna', 'ruína'], 'a carne dele fecha: ou cai depressa, ou não cai'),
     'basilisco': _esp('basilisco', 'o', 3, 'B', 90, 6, (100, 65, 100, 60, 60, 30), ['presa', 'cauda'], 'escama', 'grande', ['couraça', 'veneno'], 4, (1, 1),
-                      {'couro:2': 5, 'osso:2': 4}, ['ruína', 'caverna', 'brejo'], 'não tem fresta: arma abaixo do Épico não o fere de verdade'),
+                      {'couro:2': 5, 'osso:2': 4, 'peçonha:2': 2}, ['ruína', 'caverna', 'brejo'], 'não tem fresta: arma abaixo do Épico não o fere de verdade'),
     'serpe':     _esp('serpe', 'a', 3, 'B', 100, 4, (85, 60, 75, 70, 70, 30), ['bocarra', 'cauda'], 'escama', 'enorme', ['sopro', 'veneno'], 0, (1, 1),
-                      {'comida': 12, 'couro:2': 6, 'osso:2': 5}, ['serra', 'ruína'], 'o sopro pega o grupo inteiro, e a cauda envenena; quatro de aço Raro raramente voltam', chefe=True),
+                      {'comida': 12, 'couro:2': 6, 'osso:2': 5, 'peçonha:2': 2}, ['serra', 'ruína'], 'o sopro pega o grupo inteiro, e a cauda envenena; quatro de aço Raro raramente voltam', chefe=True),
     'hidra':     _esp('hidra', 'a', 4, 'A', 150, 6, (120, 55, 110, 80, 70, 40), ['bocarra'], 'escama', 'enorme', ['regenera', 'veneno', 'apavora'], 0, (1, 1),
-                      {'couro:2': 8, 'osso:2': 6}, ['brejo', 'ruína'], 'o que não morre depressa volta inteiro', chefe=True),
+                      {'couro:2': 8, 'osso:2': 6, 'peçonha:2': 3}, ['brejo', 'ruína'], 'o que não morre depressa volta inteiro', chefe=True),
     'dragão':    _esp('dragão', 'o', 5, 'S', 220, 8, (180, 70, 240, 100, 90, 60), ['garra', 'bocarra', 'cauda'], 'escama', 'enorme', ['voa', 'sopro', 'couraça', 'apavora'], 0, (1, 1),
                       {'couro:2': 12, 'osso:2': 10}, ['serra', 'ruína'], 'voa, sopra, não tem fresta. Só aço Lendário o fere de verdade', chefe=True),
 }

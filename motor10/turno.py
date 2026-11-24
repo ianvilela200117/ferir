@@ -10,7 +10,8 @@
   python3 turno.py fecha "o que houve" [parado] [git]             fecha o turno. `parado`: o turno foi só conversa, o relógio não andou. `git`: guarda no git e envia.
 
 `fecha` RECUSA se: há luta aberta · há menos de 2 perguntas abertas
-· o relógio não andou (e não foi dito `parado`) · o estado quebrou um invariante (moeda negativa, peça com dono que não existe, peça de quem morreu, saída torta...).
+· o relógio não andou (e não foi dito `parado`) · o estado quebrou um invariante (moeda negativa, peça com dono que não existe, peça de quem morreu, saída torta...)
+· um módulo do mundo recusa (recusa_fecha: a maldição do personagem no passo 4 sem pergunta aberta sobre ela, etapa da magia).
 O RETOMAR NUNCA CORTA CALADO: o que se repete todo dia (comer, dormir, a cama, esperar) vira uma linha por dia; se os fatos ainda passam do teto, a primeira linha
 diz quantos ficaram de fora e como lê-los (`estado.py eventos N`).
 Se o personagem MORREU, a MESA e o RETOMAR abrem com isso, sem a lista de atos; o turno fecha (o herdeiro é da etapa 6: até lá, as perguntas do turno são do Mestre).
@@ -31,9 +32,7 @@ def _mil(n): return f'{int(n):,}'.replace(',', '.')          # 18.279
 
 
 def _carga_diz(p):
-    def nome(b):
-        n, c = M.le_materia(b); return b if c is None else f"{n} {pessoas.T.CATS[c] if not n.endswith('a') else ['Comum', 'Incomum', 'Rara'][min(c, 2)]}"
-    return ', '.join(f'{q:g} de {nome(b)}' for b, q in (p.get('carga') or {}).items() if q)
+    return ', '.join(f'{q:g} de {estado.nome_bem(b)}' for b, q in (p.get('carga') or {}).items() if q)       # a matéria e as poções com a categoria por extenso
 
 
 def _voce(E):
@@ -43,8 +42,8 @@ def _voce(E):
         return [f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')}). Quem morreu não age: nenhum ato em nome de {p['nome']} vale.",
                 _do_morto(E, pid) + ' O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto).']
     L = [f"**{p['nome']}**, nível {p['nivel']} · PV {p['pv']}/{estado.pv_max(p)} · {p['moedas']} de prata · " + (f"FORA, {estado.em(E, f)} (mora {estado.em(E, p['lugar'])})" if f else estado.em(E, p['lugar'])), f"Corpo: {corpo.diz(p)}"]
-    for fe in p['feridas']: L.append(f"Ferida{' GRAVE' if fe['grave'] else ''}: {fe['parte']} (Dia {fe['dia']}; {fe['repouso']} de {M.FERIDA_DIAS[1 if fe['grave'] else 0]} dias de repouso)")
-    L.append('```'); L.append(pessoas.linha(pessoas.ficha(estado.lutador(E, pid)))); L.append('```')
+    for fe in p['feridas']: L.append(f"Ferida{' GRAVE' if fe['grave'] else ''}: {fe['parte']} (Dia {fe['dia']}; {estado.num(fe['repouso'])} de {M.FERIDA_DIAS[1 if fe['grave'] else 0]} dias de repouso)")
+    L.append('```'); L.append(pessoas.linha(pessoas.ficha(estado.lutador(E, pid, visivel=True)))); L.append('```')       # a ficha que vai à mesa: só o dom que a pessoa já viu
     pecas = ato.diz_pecas(E, pid)
     L.append('Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): ' + ' · '.join(pecas[:10]) + (f' · e mais {len(pecas) - 10}' if len(pecas) > 10 else ''))
     if _carga_diz(p): L.append('Carga: ' + _carga_diz(p) + (' (`ato.py comer carga` come da sua comida)' if (p.get('carga') or {}).get('comida', 0) >= 1 else ''))
@@ -91,15 +90,8 @@ def _aqui(E):
 
 
 def _modulos(E, gancho):
-    """as linhas que cada módulo do mundo põe na página (mesa) ou no resumo do turno (retomar)"""
-    import importlib
-    L = []
-    for nome in M.MODULOS:
-        try: mod = importlib.import_module(nome)
-        except ModuleNotFoundError as e:
-            if e.name != nome: raise
-            continue
-        if hasattr(mod, gancho): L.append(list(getattr(mod, gancho)(E)))
+    """as linhas que cada módulo do mundo põe na página (voce, mesa, so_mestre), no resumo do turno (retomar) ou na recusa de fechar (recusa_fecha)"""
+    L = [list(getattr(mod, gancho)(E) or []) for mod in estado.modulos(gancho)]
     return [x for x in L if x]
 
 
@@ -109,6 +101,7 @@ def mesa(E):
     if estado.luta_aberta(E): L += ['', f"**LUTA ABERTA.** {estado.luta_diz(E)[0].upper() + estado.luta_diz(E)[1:]}"]
     L += ['', '## Você'] + _voce(E)
     if vivo:
+        for linhas in _modulos(E, 'voce'): L += linhas            # o que cada módulo põe no "Você" (o talento que apareceu, a Mana, os feitiços, a maldição até onde se sabe)
         L += ['', '## Aqui'] + _aqui(E)
         for linhas in _modulos(E, 'mesa'): L += [''] + linhas      # cada módulo do mundo põe na mesa a sua parte (o mercado, a oficina, a caça)
     L += ['', '## Perguntas abertas']
@@ -176,6 +169,20 @@ def responde(E, codigos):
     return '\n'.join(out) + (f"\nFicam abertas: {', '.join(str(q['n']) for q in t['perguntas'])}." if t['perguntas'] else '')
 
 
+SEGREDO = {('pessoa', 'talento'), ('pessoa', 'dom'), ('item', 'maldita'), ('lugar', 'maldito'), ('lugar', 'covil')}      # o que o Mestre (ou o gerador) põe e a gente do mundo não sabe
+
+
+def secreto(e):
+    """o evento do Mestre ou do gerador que só o Mestre sabe (o talento e o dom de alguém, a peça ou o lugar maldito, o covil, a maldição que a pessoa ainda não sente):
+    não vai aos fatos do turno, vai ao SÓ O MESTRE do RETOMAR"""
+    if e.get('tipo') not in ('gera', 'mestre'): return False
+    for x in e.get('efeitos') or []:
+        if not isinstance(x, list) or len(x) < 4: continue
+        if x[0] == 'maldicao' and x[2] == 'poe' and isinstance(x[3], dict) and (x[3].get('sabe') or 0) < 2: return True
+        if x[0] in ('pessoa', 'item', 'lugar') and (x[0], str(x[2]).split('.')[0]) in SEGREDO: return True
+    return False
+
+
 def fatos(evs, teto=None, nasce=False):
     """as linhas dos fatos do turno, tiradas do registro de eventos, para o RETOMAR.md. NUNCA CORTA CALADO.
     O mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz) não é fato do turno, a não ser que alguém morra.
@@ -190,6 +197,7 @@ def fatos(evs, teto=None, nasce=False):
         nasce = False
         morte = any(isinstance(x, list) and len(x) == 5 and x[0] == 'pessoa' and x[2:] == ['estado', 'poe', 'morto'] for x in e.get('efeitos', []))
         if e['tipo'] in M.MUNDO_SOZINHO and not morte: continue
+        if secreto(e): continue                                                                 # o segredo do Mestre não é fato que o jogador lê (vai ao SÓ O MESTRE)
         if not e.get('texto'): e = dict(e, texto=f"(evento #{e.get('id', '?')}, {e['tipo']}, sem texto: `python3 estado.py eventos` mostra o que ele mudou)")      # o evento gravado sem texto não some calado: entra com o número dele
         if e['tipo'] in M.ROTINA and not morte:
             chave = ('rotina', e['dia'])
@@ -218,6 +226,7 @@ def fecha(E, resumo, parado=False, git=False):
     if len(t['perguntas']) < 2: R.append(('não há pergunta aberta' if not t['perguntas'] else 'há uma pergunta aberta só') + ': o turno fecha com pelo menos duas (`turno.py pergunta`)')
     if estado.agora(E) == (t['aberto']['dia'] - 1) * M.BLOCOS_DIA + t['aberto']['bloco'] and not parado: R.append('o relógio não andou neste turno. Todo ato custa tempo; se foi só conversa, feche com `parado`')
     R += [f'o estado quebrou: {x}' for x in estado.valida(E)]
+    R += [x for linhas in _modulos(E, 'recusa_fecha') for x in linhas]       # o que os módulos do mundo recusam (a maldição no passo 4 sem pergunta aberta)
     if not resumo.strip(): R.append('falta dizer o que houve no turno')
     if R: sys.exit('O TURNO NÃO FECHA:\n  - ' + '\n  - '.join(R))
     for i, q in enumerate(t['perguntas']): q['n'] = i + 1         # o turno fecha: as perguntas que ficam abertas são numeradas de novo, de 1 em diante. É com esse número que o jogador as lê no RETOMAR.md e responde
@@ -230,6 +239,7 @@ def fecha(E, resumo, parado=False, git=False):
     L += ['', '**Os fatos do turno** (do registro de eventos):'] + fatos(evs, nasce=not t.get('evento0'))
     L += ['', '## PERGUNTAS ABERTAS'] + lista_perguntas(t)
     ocultas = [f"- {teste.diz(E, r, mestre=True)}" for r in t['dados'] if r['oculto']] + [f"- {n}" for n in t['notas']]
+    ocultas += [f"- Dia {e['dia']}, {M.BLOCOS[e['bloco']]}: {e.get('texto') or e['tipo']} (evento #{e.get('id', '?')}, do {'gerador' if e['tipo'] == 'gera' else 'Mestre'}: fora dos fatos)" for e in evs if secreto(e) and not (not t.get('evento0') and e['tipo'] == 'gera')]
     L += ['', '## SÓ O MESTRE'] + (ocultas or ['- nada oculto neste turno.'])
     txt = '\n'.join(L) + '\n'
     E['turno'] = dict(n=t['n'] + 1, aberto=dict(dia=E['relogio']['dia'], bloco=E['relogio']['bloco']), evento0=E['relogio']['eventos'], dados=[], lutas=[], perguntas=t['perguntas'], respondidas=[], notas=[])

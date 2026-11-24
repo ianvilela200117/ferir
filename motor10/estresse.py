@@ -11,11 +11,20 @@ nunca tem mais do que cabe (cada um toma o seu tanto; o bicho grande demais fica
 durabilidade não sai da faixa · todo caído tem destino no fim · o corpo do bicho não gasta, não tem registro nem dono · bicho não se rende
 nem larga a arma · o chefe e o encurralado não fogem · ninguém se rende a um lado só de bichos.
 
+Depois, A MAGIA (a etapa da magia), com um acaso à parte (as lutas de cima seguem as mesmas): um terço de N lutas com quem lança das quatro tradições, gente
+com poção, elixir, amuleto, encanto e veneno na lâmina, povo que lança, bichos com os traços novos (e o que lança), chefes com fases, o ermo do "chamar",
+e as ordens de lançar, beber e usar ao acaso (a ordem torta é recusada, e conta). Confere também: a Mana entre zero e o máximo · os prazos dos estados
+positivos · o calejo de zero para cima · a cura do dia nunca acima de metade do PV · a carga nunca negativa · quem não tem vida nunca fica caído, não foge
+nem se rende · o morto erguido é outro lutador, sem registro no mundo, e o morto segue morto · o campo é de quem está na luta · o que volta ao estado
+(poção gasta, elixir, maldição posta) tem a forma do contrato.
+
 Uso: python3 estresse.py [N] [gente]      N = quantas lutas (padrão 3000) · gente: só gente, sem bichos (as mesmas lutas de antes dos bichos)
 """
 import sys, json, random, collections
 import luta, tabelas as T
 import tabelas_bichos as TB
+import tabelas_magia as TM
+import tabelas_mundo as TMU
 import bichos
 from pessoas import padrao, veste
 from itens import item
@@ -168,4 +177,170 @@ if COM_BICHOS:
     print('em quantas lutas com bicho se viu acontecer (pelo registro):', ', '.join(f'{k} {visto[k]}' for k in MARCAS if MARCAS[k]))
     nunca = [k for k in MARCAS if MARCAS[k] and not visto[k]]
     if nunca: print('NÃO SE VIU ACONTECER nestas lutas (rode mais, ou veja a prova do traço no provas.py):', ', '.join(nunca))
-sys.exit(1 if erros else 0)
+
+
+# ---------- A MAGIA: as lutas de magia, com um acaso à parte ----------
+RM = random.Random(1110)
+TRADS = list(T.TRADICOES)
+POR_TRAD = {t: [k for k, v in T.FEITICOS.items() if v['de'] in (t, 'todas') and TM.FEITICOS[k]['tipo'] != 'rito'] for t in TRADS}
+FORMA = {'arcano': ['varinha', 'cajado'], 'fé': ['símbolo'], 'verde': ['cajado'], 'pacto': ['talismã']}
+POCAO = ['cura', 'mana', 'antídoto', 'guarda', 'fúria']
+
+
+def _magica(kw):
+    """a carga, os elixires e o benzido ao acaso"""
+    if RM.random() < .4: kw['carga'] = {f'{RM.choice(POCAO)}:{RM.randint(0, 2)}': RM.randint(1, 3) for _ in range(RM.randint(1, 2))}
+    if RM.random() < .15: kw['elixires'] = [dict(id=f"elixir {RM.randint(1, 99)}", pocao=RM.choice(['cura', 'mana', 'guarda']), cat=RM.randint(3, 5), nome='elixir')]
+    if RM.random() < .1: kw['benzido'] = True
+    return kw
+
+
+def _arma_m():
+    mais = {}
+    if RM.random() < .25: mais['encantos'] = [dict(feitico=RM.choice(['seta', 'prender', 'escudo', 'bola-de-fogo', 'cura', 'luz', 'raio', 'mau-olhado']), grau=RM.randint(1, 4), feito_por=None, dia=1, gasto=None)]
+    if RM.random() < .15: mais['veneno'] = dict(cat=RM.randint(0, 2), ate=10 ** 9)
+    if RM.random() < .1: mais['benta'] = 10 ** 9
+    return item('arma', RM.randint(0, 5), familia=RM.choice(['adaga', 'espada', 'maça', 'lança', 'machado', 'arco']), **mais)
+
+
+def lancador(nome):
+    t = RM.choice(TRADS); niv = RM.choice([5, 12, 20, 35, 50, 80, 150])
+    kw = _magica(dict(feiticos=RM.sample(POR_TRAD[t], RM.randint(1, min(4, len(POR_TRAD[t])))), tradicao=t))
+    if RM.random() < .3: kw['mana'] = RM.randint(0, 12)
+    if RM.random() < .25: kw['linha'] = 'trás'
+    if RM.random() < .2: kw['tracos'] = RM.sample(list(T.TRACOS_NOVOS), 1)
+    p = padrao(nome, niv, molde=RM.choice(list(TM.MOLDES)), maestria={t: RM.choice([0, 2, 4, 6, 8]), 'maça': RM.choice([0, 2, 4]), 'espada': RM.choice([0, 2, 4])}, **kw)
+    foco = (RM.choice(FORMA[t] if RM.random() < .8 else list(T.FOCOS)), RM.randint(0, 5)) if RM.random() < .85 else None
+    arma = _arma_m() if RM.random() < .5 else None
+    return veste(p, arma=arma, armadura=(RM.choice(MAT), RM.randint(0, 5)) if RM.random() < .8 else None, escudo=RM.randint(0, 4) if RM.random() < .3 else None,
+                 foco=foco, amuleto=RM.randint(0, 5) if RM.random() < .6 else None)
+
+
+def armado(nome):
+    """gente sem feitiço, com o que a magia vende: amuleto, poção, elixir, encanto, veneno na lâmina"""
+    p = padrao(nome, RM.choice([5, 20, 50, 80, 150, 300]), molde=RM.choice(list(T.MOLDES)), **_magica({}))
+    return veste(p, arma=_arma_m(), armadura=(RM.choice(MAT), RM.randint(0, 6)) if RM.random() < .85 else None, escudo=RM.randint(0, 5) if RM.random() < .4 else None, amuleto=RM.randint(0, 5) if RM.random() < .6 else None)
+
+
+def povo(nome):
+    t = RM.choice(TRADS); kw = dict(feiticos=RM.sample(POR_TRAD[t], RM.randint(1, 2)), tradicao=t) if RM.random() < .4 else {}
+    p = padrao(nome, RM.choice([5, 10, 20, 40]), maestria=RM.choice([0, 2, 4]), povo=dict(especie='povo de prova', tamanho=RM.choice(list(TB.TAMANHOS)), couro=RM.choice(list(TB.COUROS)),
+               cat=RM.randint(0, 2), coragem=RM.randint(-3, 2), tracos=RM.sample(['noturno', 'sem vida', 'resiste', 'ossos', 'ardente'], RM.randint(0, 2))), **kw)
+    return veste(p, arma=(RM.choice(['lança', 'maça', 'espada', 'adaga']), RM.randint(0, 3)), armadura=('couro', RM.randint(0, 3)) if RM.random() < .6 else None, escudo=RM.randint(0, 2) if RM.random() < .4 else None,
+                 foco=('talismã', RM.randint(0, 2)) if kw else None)
+
+
+def bicho_m(nome):
+    esp = RM.choice(ESP); e = TB.ESPECIES[esp]; tr = list(e['tracos']) + RM.sample([t for t in T.TRACOS_NOVOS if t not in e['tracos']], RM.randint(1, 3)); mais = {}
+    if 'lança' in tr: mais['feiticos'] = RM.sample(['seta', 'prender', 'mau-olhado', 'espinho', 'medo', 'sangria', 'raio'], RM.randint(1, 2))
+    if RM.random() < .3: mais['maldicao'] = dict(nome='o toque de {quem}', tipo=RM.choice(TMU.MALDICAO_TIPOS), condicao=dict(tipo=RM.choice(TMU.MALDICAO_CONDICOES)))
+    return bichos.bicho(esp, nome=nome, tracos=tr, **mais)
+
+
+def fases():
+    return [dict(abaixo=RM.choice([0.3, 0.5, 0.7]), diz='muda', ganha=RM.sample(list(T.TRACOS_NOVOS), RM.randint(0, 2)), brado=RM.random() < .5, ergue=RM.randint(0, 3),
+                 feiticos=RM.sample(['seta', 'raio', 'medo', 'mau-olhado', 'bola-de-fogo'], RM.randint(0, 2)), mana=RM.randint(0, 8)) for _ in range(RM.randint(1, 2))]
+
+
+def cena_m():
+    faz = lambda nome: RM.choice([lancador, lancador, armado, povo, bicho_m, pessoa_m])(nome)
+    A = [faz(f'a{k}') for k in range(RM.randint(1, 5))]; B = [faz(f'b{k}') for k in range(RM.randint(1, 6))]
+    A[0]['controla'] = True
+    if RM.random() < .5: B[0]['fases'] = fases(); B[0]['lider'] = True; B[0]['moral'] = 'firme'
+    if len(A) > 1 and RM.random() < .4: A[1]['guarda'] = 'a0'; A[1]['papel'] = 'guarda'
+    lugar = {}
+    if RM.random() < .4: lugar['largura'] = RM.randint(1, 3)
+    for k in ('alto', 'cobertura', 'sem_saida'):
+        if RM.random() < .15: lugar[k] = RM.choice('AB')
+    kw = dict(inicio=RM.choice(['longe', 'perto', 'colado', 5, 12]), lugar=lugar, tempo=RM.sample(list(T.TEMPO), RM.randint(0, 2)), surpresa=RM.choice([None, None, 'A', 'B']))
+    if RM.random() < .3: kw['ermo'] = RM.sample(ESP, RM.randint(1, 4))
+    return A, B, kw
+
+
+def pessoa_m(nome):
+    """a gente de sempre (sem nada de magia) no meio da luta de magia"""
+    niv = RM.choice([1, 12, 35, 80, 300]); p = padrao(nome, niv, molde=RM.choice(list(T.MOLDES)))
+    return veste(p, arma=(RM.choice(FAM), RM.randint(0, 7)), armadura=(RM.choice(MAT), RM.randint(0, 7)) if RM.random() < .8 else None)
+
+
+def ordem_m(S):
+    """uma ordem ao acaso para quem o jogador comanda: as de sempre, e as de lançar, beber e usar (das que ele pode, e às vezes uma torta)"""
+    meus = luta.de_pe(S, 'A'); deles = luta.de_pe(S, 'B')
+    if not meus: return None
+    f = RM.choice(meus); nm = f['nome']; r = RM.random()
+    if r < .35 and f.get('feiticos'):
+        k = RM.choice(f['feiticos'] + ['raio']); t = TM.FEITICOS[k]['tipo']; txt = f'{nm}: lancar {k}'
+        if t == 'area' and RM.random() < .7: txt += f' casa {RM.choice(deles)["x"] if deles else 0}'
+        elif t in ('dano', 'poe', 'medo') and deles and RM.random() < .7: txt += f' em {RM.choice(deles)["nome"]}'
+        elif t in ('cura', 'escudo', 'bencao', 'seiva', 'amparo') and RM.random() < .5: txt += f' em {RM.choice(meus)["nome"]}'
+        if k == 'névoa' and RM.random() < .5: txt += ' lama'
+        if RM.random() < .3: txt += ' sempre'
+        if RM.random() < .2: txt += ' osso'
+        return txt
+    if r < .5 and (f.get('carga') or f.get('elixires')):
+        b = RM.choice([x.partition(':')[0] for x in f.get('carga') or {}] + [x['pocao'] for x in f.get('elixires') or []] + ['veneno'])
+        return f'{nm}: beber {b}' + (f' em {RM.choice(meus)["nome"]}' if RM.random() < .2 else '')
+    if r < .6 and f.get('encantos'): return f'{nm}: usar' + (f' em {RM.choice(deles)["nome"]}' if deles and RM.random() < .5 else '')
+    ac = RM.choice(ACOES); txt = f'{nm}: {ac}'
+    if ac == 'atacar' and deles and RM.random() < .6: txt += ' ' + RM.choice(deles)['nome']
+    return txt
+
+
+def confere_m(S):
+    """o que tem de valer sempre numa luta de magia (além do de sempre)"""
+    nomes = {f['nome'] for f in S['L']}
+    for f in S['L']:
+        assert f['estado'] in ('pe', 'caido', 'morto', 'fugiu', 'rendido', 'saiu'), f['estado']
+        if f['estado'] == 'pe': assert f['pv'] > 0, f"{f['nome']} de pé com PV {f['pv']}"
+        assert f['pv'] <= f['pvmax'], f"{f['nome']} com PV acima do máximo"
+        assert f['fol'] <= f['folmax'], 'fôlego acima do máximo'
+        if f.get('controla'): assert f['estado'] not in ('fugiu', 'rendido'), 'o comandado fugiu ou se rendeu pelo dado'
+        if f.get('feiticos') and f.get('mana_max'): assert 0 <= f['mana'] <= f['mana_max'], f"{f['nome']}: Mana {f['mana']} de {f['mana_max']}"
+        for k, x in (f.get('est') or {}).items():
+            assert (x is True) or (isinstance(x, int) and x >= 0) or (isinstance(x, list) and x[1] > 0 if k in ('guarda',) else isinstance(x, list) and x[0] > 0), f"{f['nome']}: estado {k} torto ({x})"
+        assert f.get('calejo', 0) >= 0, 'calejo negativo'
+        assert f.get('curado', 0) <= int(f['pvmax'] * T.CURA_TETO), f"{f['nome']} curado acima do teto ({f['curado']} de {f['pvmax']})"
+        assert all(q > 0 for q in (f.get('carga') or {}).values()), f"{f['nome']}: carga zerada ou negativa {f.get('carga')}"
+        if 'sem vida' in (f.get('tracos') or []): assert f['estado'] not in ('caido', 'fugiu', 'rendido'), f"{f['nome']} não tem vida e ficou {f['estado']}"
+        if 'morto que anda' in f['nome']:
+            assert not f.get('id') and 'sem vida' in f['tracos'], 'o morto erguido tem registro, ou tem vida'
+            o = luta.por_nome(S, f['nome'].split(', morto que anda')[0]); assert o and o['estado'] == 'morto', 'o morto que se ergueu voltou à vida'
+        for m in f.get('maldicoes_postas') or []:
+            assert m['passo'] == 1 and m['de'] in TMU.MALDICAO_ORIGENS and m['tipo'] in TMU.MALDICAO_TIPOS and m['condicao']['tipo'] in TMU.MALDICAO_CONDICOES and 0 <= m['cat'] <= 7 and 'id' not in m, f'maldição posta torta: {m}'
+        for b, q in (f.get('gastou') or {}).items(): assert isinstance(q, int) and q > 0 and ':' in b, f'poção gasta torta: {b} {q}'
+        if f.get('canaliza'): assert f['estado'] in ('pe', 'fugiu', 'rendido', 'saiu'), f"{f['nome']} canaliza caído"
+    for v in (S.get('campo') or {}).values(): assert v['quem'] in nomes, 'o campo é de quem não está na luta'
+    for it in S['itens'].values(): assert 0 <= it['dur'][0] <= it['dur'][1], 'durabilidade fora'
+
+
+NM = max(1, N // 3); mfins = collections.Counter(); merros = 0; mc = collections.Counter(); recusas = 0
+for i in range(NM):
+    luta.semente(100000 + i); A, B, kw = cena_m()
+    try:
+        S = luta.nova(A, B, quieto=(i % 4 != 0), **kw); assert S.get('magia') or not any(p.get('feiticos') for p in A + B), 'a luta com feitiço não ligou a magia'
+        st = luta.corre(S, interativo=True); passos = 0
+        while st == 'parada':
+            passos += 1
+            assert passos < 400, 'paradas demais'
+            if RM.random() < .7:
+                txt = ordem_m(S)
+                if txt:
+                    try: luta.ordem(S, txt)
+                    except SystemExit: recusas += 1
+                if RM.random() < .2: luta.ordem(S, 'grupo: ' + RM.choice(['atacar', 'segurar', 'recuar']))
+            if RM.random() < .3: S = json.loads(json.dumps(S))
+            st = luta.corre(S, interativo=True)
+            confere_m(S)
+        confere_m(S)
+        assert not any(f['estado'] == 'caido' and not f.get('estavel') for f in S['L']), 'caído sem destino no fim'
+        mfins[S['fim']] += 1
+        for k, x in (S.get('conta') or {}).items(): mc[k] += x
+        mc['com magia'] += bool(S.get('magia'))
+    except SystemExit as e:
+        merros += 1; print(f'magia #{i} RECUSA: {str(e)[:200]}')
+    except Exception as e:
+        merros += 1; import traceback; print(f'magia #{i} ERRO: {type(e).__name__}: {e}'); traceback.print_exc(limit=4)
+        if merros > 12: break
+print(f"lutas de magia: {NM} · erros {merros} · como acabaram: {', '.join(f'{FINS.get(k, k)} {v}' for k, v in mfins.most_common())} · ordens tortas recusadas: {recusas}")
+print('o que a magia fez nelas:', ', '.join(f'{k} {mc[k]}' for k in ('lances', 'retrochoque', 'longos', 'conc_perdidos', 'pocoes', 'doses_lamina', 'maldicoes', 'fases', 'erguidos', 'bencaos', 'cura_lances')))
+sys.exit(1 if erros or merros else 0)

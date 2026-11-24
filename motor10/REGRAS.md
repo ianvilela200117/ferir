@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos nas páginas `tabelas*.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py` e `python3 provas_mundo.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Todas as metas passam. Duas foram fechadas por decisão do jogador: a Lendária é difícil de propósito, e a meta dela é o dia da primeira tentativa (7.13); a loja paga 40% pelas peças, e com isso forjar para a loja deixou de ser mina (8.8, 8.13). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo), os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício") e os capítulos 10 a 16 (a etapa da magia: os dons e os talentos, a magia na luta, a alquimia e o encanto, as maldições, a magia no mundo, as criaturas, os covis e a vila de teste com a magia). Todas as metas passam. Duas foram fechadas por decisão do jogador: a Lendária é difícil de propósito, e a meta dela é o dia da primeira tentativa (7.13); a loja paga 40% pelas peças, e com isso forjar para a loja deixou de ser mina (8.8, 8.13). Na etapa da magia, o mau-olhado tira 4 (o projeto dizia 2: 11.13), e dois chefes foram acertados por isso (15.8). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -254,7 +254,7 @@ A ordem do grupo é uma palavra: `atacar`, `segurar` ou `recuar`.
 ## 4. O banco de provas
 
 Toda mudança de regra ou de número roda `python3 provas.py`. Meta que falha: a mudança não entra, ou a meta muda com a palavra do jogador.
-A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **80 de 80 passam:** as 54 metas deste capítulo e as 26 dos bichos (6.14).
+A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **114 de 114 passam:** as 54 metas deste capítulo, as 26 dos bichos (6.14) e as 34 da magia na luta (11.13). O banco do mundo (`python3 provas_mundo.py`, saída em `dados/provas_mundo_saida.txt`) passa 148 de 148: as etapas 1 e 2, os dons e os talentos (10), a magia do mundo (12 a 14) e as criaturas (15 e 16). O `python3 estresse.py 1500` roda lutas ao acaso (e 500 de magia) e confere os invariantes (`dados/estresse_saida.txt`).
 
 ### Quem vence
 
@@ -407,7 +407,7 @@ Os números deste capítulo moram no `tabelas_mundo.py`; as provas, no `provas_m
 | --- | --- |
 | menos de 3 blocos | nada: ela ainda carrega o que a última saída deixou |
 | 3 blocos ou mais | a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria) |
-| cada 6 blocos inteiros (um dia) | além disso, uma noite dormida de cura (um décimo do PV máximo, a mesma do personagem: 5.3) e um dia de repouso nas feridas |
+| cada 6 blocos inteiros (um dia) | além disso, uma noite dormida de cura (um décimo do PV máximo, a mesma do personagem: 5.3) e um dia de repouso nas feridas; a Mana de quem lança volta pela regra da tradição dela (14.3) |
 
   **Como contar:** o bloco em que ela voltou é o último em cena. Quem volta do ermo no bloco da noite (chega à meia-noite) e é chamada de novo às 8h passou 3 blocos: descansou (foram dois blocos inteiros em casa, o mesmo sono que refaz o personagem). Chamada às 4h, passou 2: não descansou. Chamada no bloco seguinte ao da volta, passou 1: vai como chegou.
   A noite de cura pede um dia: quem sai todo dia zera a fome, o sono e o cansaço, mas não ganha PV nem repouso na ferida enquanto não ficar um dia inteiro sem ser chamada.
@@ -1132,6 +1132,590 @@ O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e el
 
 ---
 
+## 10. Os dons e os talentos (etapa da magia)
+
+10.1 **Dois botões na pessoa, para todo caminho.** O **talento** diz a pressa de aprender e até onde a mão sobe; não soma em conta nenhuma. O **dom** diz o poder: soma na conta como maestria que ninguém treinou. Os dois nascem com a pessoa e não mudam. Quem não tem nada de especial é a pessoa de antes desta etapa: os blocos de sempre, a conta de sempre.
+
+10.2 **Os caminhos (16).**
+
+| Tipo | Caminhos | O que o talento apressa |
+| --- | --- | --- |
+| mãos de arma | `fio` (adaga, espada, machado, montante) · `haste` (lança, alabarda) · `peso` (maça, martelo, malho) · `tiro` (arco, besta) | os blocos de treino de cada arma daquela mão |
+| ofícios | `forja` · `couro` · `caça` · `coleta` · `comércio` · `cura` · `alquimia` · `encanto` | os blocos de bancada, de procura, de coleta; os dias de negócio |
+| tradições | `arcano` (o mago) · `fé` (o clérigo) · `verde` (o druida) · `pacto` (a bruxa) | os blocos de estudo da tradição e de cada feitiço |
+
+O soco não é de mão nenhuma. A ficha só guarda o que não é Comum: `talento: {"fio": 1, "arcano": -1}`, `dom: {"forja": 2}`.
+
+10.3 **O talento.**
+
+| Grau | Nome | Blocos de cada grau de maestria | Nas armas (Iniciante, Treinado, Mestre, Lendário) | Até onde a mão sobe | Quantos nascem assim, por caminho |
+| --- | --- | --- | --- | --- | --- |
+| −2 | Negado | o dobro | 80 · nada | Iniciante | 2 em 100 |
+| −1 | Lerdo | uma vez e meia | 60 · 240 · 750 · nada | Mestre | 10 em 100 |
+| 0 | Comum | os de sempre | 40 · 160 · 500 · 1.500 | Lendário | 76 em 100 |
+| +1 | Jeitoso | dois terços | 27 · 107 · 334 · 1.000 | Lendário | 10 em 100 |
+| +2 | Prodígio | a metade | 20 · 80 · 250 · 750 | Lendário | 2 em 100 |
+
+- Os blocos arredondam para cima. O feito que Mestre e Lendário pedem não muda: o talento apressa os blocos, não dispensa o feito.
+- Vale em toda escada: as armas, a forja e o couro (50, 150, 375, 1.000 de bancada), a caça e a coleta, o comércio (os dias de negócio), a alquimia e o encanto (a tabela da forja) e as tradições (a das armas).
+- O teto não tira o que a pessoa já tem: só a impede de subir mais. Quem chega ao teto com os blocos de cima lê "a mão não sobe mais: o talento para em Mestre".
+- Qualquer um aprende magia: o Negado também, até Iniciante, com o dobro dos blocos.
+
+10.4 **O dom.**
+
+| Grau | Soma na conta do caminho | Quantos nascem assim |
+| --- | --- | --- |
+| Dom | +1 | 45 em 1.000 pessoas |
+| Grande Dom | +2 | 5 em 1.000 pessoas |
+
+A pessoa tem no máximo um. O caminho sai do dado entre os 16, com peso 3 onde ela já é Jeitosa ou Prodígio. Cada caminho tem o seu nome à mesa (a mão do fogo, o faro, a língua do negócio, a mão que fecha, a centelha, a graça...).
+
+| Caminho | Onde o dom soma | O que não dá |
+| --- | --- | --- |
+| mão de arma | no acerto com as armas dessa mão; e metade na Defesa | a ação e a reação a mais (são da maestria) |
+| tradição | na Conjuração; metade na Firmeza; o mesmo na Mana | abrir feitiço de grau maior |
+| ofício de bancada (forja, couro, alquimia, encanto) | no teste da obra, como um preparo que nasce com a pessoa: **preparo e dom juntos não passam de +8** | a chance da Lendária não sobe: o melhor ferreiro possível segue acertando 1 vez em 4 |
+| caça, coleta, cura | no teste do rastro, da coleta, do tratamento | a mão que a matéria pede |
+| comércio | 2,5 pontos (Dom) ou 5 (Grande Dom) no que a loja paga, sem passar de 80% pelos bens e 60% pelas peças | |
+
+O dom de tradição soma também na Mana máxima de verdade; a mesa só mostra a Mana que a pessoa conhece, sem o dom que ela ainda não viu (na MESA, na ficha e no quadro da luta).
+
+10.5 **Como nascem.** Pelo dado do mundo (mesma semente, mesma gente): um d100 por caminho (até 2, Negado; até 12, Lerdo; até 88, Comum; até 98, Jeitoso; 99 e 100, Prodígio) e um d1000 para o dom (até 5, Grande Dom; até 50, Dom). **O personagem do jogador** escolhe uma **inclinação**: naquele caminho o d100 rola duas vezes e vale o melhor (Jeitoso ou mais: perto de 23 em 100, em vez de 12). A vila de teste nova nasce assim (`vila_teste.py PASTA ... inclinacao=CAMINHO`); quem já existia ganha os seus pelo `vila_teste.py magia`.
+
+10.6 **Ninguém nasce sabendo.**
+- **O talento aparece fazendo:** 20 blocos no caminho depois de rolado, a MESA, em "Você", diz: "Com as armas de fio você pega depressa (Jeitoso): o que os outros firmam em 160 blocos, você firma em 107." Antes disso, só o Mestre sabe.
+- **O dom fica escondido** até o primeiro teste em que foi ele que fez a diferença. Escondido, ele entra no dado, mas não na conta que vai à mesa: a mesa vê o total sem ele, e o veredito é o mesmo. Quando decide, a saída diz "sem o dom, não passava" (ou "saía pior", na bancada), e a MESA passa a dizê-lo. Na luta, o golpe que só passou por causa dele diz "acerta por pouco: sem o dom, errava". No comércio, a primeira venda em que ele pagou a mais diz "o comprador paga mais do que costuma: você tem jeito para o negócio". Também se mostra quando alguém o lê (o feitiço `ler`, ou um clérigo).
+- Dos outros, a MESA não diz nada; o SÓ O MESTRE mostra o talento e o dom de quem está com o personagem.
+
+10.7 **Dentro da lei "o item decide"** (medido no banco, 4.000 lutas por linha, nível 50, tudo Raro; com 8.000: o Dom 56%, o Grande Dom 61%): o Dom contra o gêmeo vence de 51 a 58%; o Grande Dom, de 54 a 64%; o Grande Dom contra o gêmeo com a arma uma categoria acima, até 15%; o Mestre com Grande Dom contra o Lendário sem dom, de 42 a 58%. O Grande Dom vale um grau de maestria e nada mais; uma categoria de peça vale muitas vezes isso.
+
+10.8 **A escada pelo talento** (a conta dos blocos: 3,5 blocos de bancada por dia; a obra só abre com a mão que pede; 2 blocos de treino de arma por dia):
+
+| Talento na forja | A 1ª obra Rara fecha no dia | Épica | Única | Lendária | Mestre numa arma |
+| --- | --- | --- | --- | --- | --- |
+| Negado | 32 | não abre | não abre | não abre | nunca |
+| Lerdo | 24 | 72 | 184 | não abre | Dia 375 |
+| Comum | 17 | 51 | 131 | 356 | Dia 250 |
+| Jeitoso | 13 | 37 | 95 | 260 | Dia 167 |
+| Prodígio | 10 | 30 | 77 | 213 | Dia 125 |
+
+O prodígio anda uma categoria à frente do comum em boa parte do caminho, e nunca duas. O que tranca segue sendo o núcleo e a mão.
+
+10.9 **A cena.** Zeca, o aprendiz da forja, tem um Grande Dom que ninguém conhece. Na primeira adaga, os dados dão o bastante para a conta da mesa errar por 1; o dom (preparo 4 e dom 2, dentro do teto de +8) faz passar. A saída diz: "Foi o dom que fez a diferença: há alguma coisa nas mãos de Zeca." A partir dali a MESA dele diz "Há alguma coisa em você: a mão do fogo (a forja), um Grande Dom".
+
+---
+
+## 11. A magia na luta (etapa da magia)
+
+Este capítulo diz como a magia entra na luta: quem lança, a conta, a Mana, o tempo de lançar, o que dá errado, os estados com prazo, a poção bebida na luta, a peça encantada, os nove traços novos e as fases do chefe. Os números moram no `tabelas_magia.py` (os da luta) e no `tabelas.py` (a base comum: os feitiços, o foco, a guarda, a Firmeza, a Mana e a cura). A regra mora no `magia.py`, e o `luta.py` a chama.
+
+**A pessoa comum é a de hoje.** A magia só liga numa luta em que alguém traz feitiço, foco, amuleto, peça encantada, poção, elixir, veneno na lâmina, traço novo, fases ou pena de maldição. A luta sem nada disso é a de sempre, dado por dado (conferido com semente fixa).
+
+### 11.1 Quem lança
+
+Lança quem sabe feitiços: gente, povo (goblin, orc...) ou bicho com o traço **lança**. Cada feitiço é de uma tradição (o mago, `arcano`; o clérigo, `fé`; o druida, `verde`; a bruxa, `pacto`); a luz é de todas.
+
+- **A Conjuração** (o acerto de quem lança) = a mão da tradição do feitiço + o dom nela + metade do bônus do atributo dela (arcano e pacto: Afinidade; fé: Vontade; verde: Percepção) + o bônus do foco. A pena do corpo (fome, sono, cansaço, maldição) entra, como em todo teste.
+- **O foco** é a arma de quem lança: varinha e cajado (arcano), cajado (verde), símbolo (fé), talismã (pacto). O cajado vale 1,25, como toda arma de duas mãos. Foco de outra tradição rende uma categoria abaixo. Sem foco, lança-se com as mãos: como foco Comum, com −4. Faltou o atributo que o foco pede: −1 na Conjuração a cada 5 pontos.
+- **As mãos do foco.** A varinha, o símbolo e o talismã vão na mão do escudo: lança-se de arma e escudo. O **cajado pede as duas mãos**: ele é a arma (bate como maça leve, 1d6 de impacto, com a mão de maça; apara com o bônus da categoria); a arma de antes fica de reserva e o escudo não entra.
+- **O bicho que lança** usa o corpo como foco (a categoria dele) e o instinto como mão.
+- **A mão é conselho, não tranca.** Cada grau pede uma mão (grau 1, Iniciante; 2, Treinado; 3, Mestre; 4, Lendário). Abaixo dela o lance é **forçado**: −4 por grau de mão que falta.
+
+### 11.2 A conta (a do aço, linha por linha)
+
+| | O aço | A magia |
+| --- | --- | --- |
+| quem bate | o acerto | a Conjuração |
+| contra | a Defesa | o que **voa** (seta, lança de fogo, raio, castigo, espinho, sangria): a Defesa inteira, como um tiro. A **área** (bola de fogo): a Defesa sem escudo e sem arma. O que **prende, assusta ou amaldiçoa**: a **Firmeza** |
+| o tamanho | dado × 4 × valor da arma ÷ proteção da parte | dado × 4 × valor do foco ÷ **guarda** × força do feitiço (1 + 0,03 por ponto de bônus do atributo da tradição) |
+| a proteção | a armadura da parte atingida | **a guarda**: o amuleto, ou 0,6 do valor da armadura do tronco, o que for maior (sem nada, um terço). O material e a parte do corpo não contam |
+| crítico | dados em dobro, proteção pela metade | dados em dobro, guarda pela metade |
+
+- **A Firmeza** (a Defesa da cabeça) = 22 + metade do bônus de Vontade + metade da maior mão da pessoa + metade do dom de tradição + o melhor entre o bônus do amuleto e metade do bônus da armadura do tronco; mais o **calejo**: cada controle que pega soma 4 até o fim da luta (ninguém fica preso a luta inteira).
+- O feitiço que voa sente o tempo, o alto, a cobertura e a gente no caminho, como um tiro. O feitiço que tira um quarto do PV abre ferida, numa parte sorteada; o resto (o sangue, a queda, a moral) é o de sempre.
+- **O amuleto gasta:** 1 por luta em que guardou, e 1 a cada feitiço de foco maior que ele. **O foco gasta** 1 por luta em que lançou e 1 a cada retrochoque. A zero, não valem. O desgaste volta ao estado como o das outras peças.
+- **A sintonia:** foco e amuleto Épicos ou melhores ocupam lugar, como toda peça alta; **toda peça encantada ocupa lugar, de qualquer categoria**. A que dorme rende uma categoria abaixo, e o encanto dela não sai.
+
+### 11.3 A Mana
+
+- O máximo: (Afinidade + Vontade) ÷ 10 + a mão da tradição + o dom nela. O custo é o do `tabelas.FEITICOS`: 2 por grau (o truque, 1); o que prende, afugenta, amedronta ou cura, de grau 1, custa 3 (prender, raízes, afugentar, medo, cura); a área, 2 a mais (a bola de fogo e a guarda, 6). A luz e a névoa custam 1 por rodada para durar.
+- **Na luta, volta 1 no começo de cada turno** de quem lança (de quem sabe feitiço; quem não sabe não ganha Mana na luta).
+- **Lançar no osso:** sem Mana, só por ordem do jogador (`osso`): cada ponto que falta custa 5% do PV máximo, e o lance é forçado.
+- O que sobrou volta ao estado no fim da luta.
+
+### 11.4 O tempo de lançar e o que dá errado
+
+| Grau | Ações | Observação |
+| --- | --- | --- |
+| truque e grau 1 | 1 | |
+| grau 2 | 2 (o turno inteiro) | |
+| grau 3 | 2, e **longo**: sai no começo do turno seguinte | quem canaliza e apanha testa a concentração |
+
+- **Lançar com o inimigo colado** dá a ele um golpe livre. Se o golpe fere, quem lança testa a concentração; falhou, o feitiço se perde (a Mana já foi).
+- **A concentração:** 2d20 + bônus de Vontade + mão da tradição contra 28 (32 se o golpe abriu ferida). Quem cai, vai ao chão, fica atordoado ou é agarrado perde o feitiço longo sem teste.
+- **O retrochoque:** dois 1 no dado (1 lance em 400); no lance forçado, basta um 1 (1 em 10). Quem lança vai ao chão, perde 1 ação, e o foco perde 1. No forçado, leva ainda o próprio feitiço contra a própria guarda.
+- A armadura cobra o fôlego dela na rodada em que se lança, como quando se golpeia. Lançar não gasta fôlego.
+
+### 11.5 Os estados com prazo (lista fechada)
+
+| Estado | O que faz | Quanto dura |
+| --- | --- | --- |
+| preso (prender, raízes) | não anda, não recua, não troca de lugar; bate e lança | 2 turnos dele |
+| guardado (escudo) | +4 na Defesa | 4 turnos dele |
+| benzido (bênção) | +2 no acerto, +2 na coragem | até o fim da luta (o brado do chefe: 3 rodadas) |
+| mau-olhado | −4 no acerto, na Defesa e na Conjuração | até o fim da luta |
+| com seiva | volta 5% do PV por rodada | 5 rodadas |
+| com a Mana atada (nó) | a Mana não volta, e cada feitiço custa 1 a mais | 4 turnos dele |
+| guardado pela fé (guarda) | conta como tendo amuleto da categoria do foco | 4 turnos dele |
+| cego | −4 no golpe, −8 no tiro e no feitiço que voa | o prazo de quem o pôs |
+| com fúria (poção) | +2 no acerto e −2 na Defesa, se a arma é até a categoria da poção | 5 rodadas |
+| enjoado (poção a mais) | −2 em tudo | até o fim da luta |
+
+- **As penas de magia não somam:** de mau-olhado, veneno e maldição vale a pior. Essa pior soma com a pena do corpo.
+- **O campo:** a luz tira o escuro e a névoa põe neblina ou lama, enquanto quem lançou paga 1 de Mana por rodada e está de pé. Valem para os dois lados.
+- **O medo e o afugentar:** se o lance pega a Firmeza, o alvo testa a coragem contra 26 (o afugentar, só no bicho que não é chefe). Quem o jogador comanda só fraqueja, e a luta para.
+
+### 11.6 Os feitiços na luta
+
+Os nomes, as tradições, os graus e o custo são os do `tabelas.FEITICOS`. Na luta:
+
+- **arcano:** seta (1d8, a 8 casas) · prender (preso 2 turnos) · escudo (em si ou num aliado a 4 casas) · lança de fogo (2d8; a ferida que abre queima 5 rodadas) · bola de fogo (1d8 em até 4 na casa escolhida, amigo ou inimigo) · raio (2d10, longo; se abre ferida, atordoa 1 ação).
+- **fé:** cura (1d8 × 6 × 3 elevado a categoria do foco menos categoria da ferida mais funda; com o teto do dia) · bênção · amparo (estanca o sangue, tira veneno até a categoria do foco, firma quem caiu) · castigo (2d8 em quem é maldito: amaldiçoado, com peça maldita, que amaldiçoa ou imaterial; 1d4 nos outros) · guarda (até 4 na casa de quem lança).
+- **verde:** raízes (preso 2 turnos) · espinho (1d6 e veneno: um quarto do golpe por 3 rodadas) · névoa (neblina ou lama) · afugentar · seiva · chamar (longo; só num ermo contado: um bicho do ermo, até a categoria do foco, vem lutar ao lado. Só atende o bicho de verdade: os do capítulo 6 e as criaturas que são fera, a harpia e o lobisomem; o povo e os mortos não ouvem o druida. A luta do mundo sabe o ermo: o da saída de caça, ou o lugar de quem luta). O druida cujo ermo do laço foi caçado até o fim perde 2 ou 4 na Conjuração do verde (capítulo 14), também na luta.
+- **pacto:** mau-olhado · medo · sangria (1d6 a 4 casas; quem lança recupera metade do que tirou: não é cura) · nó.
+- **Ritos, fora da luta:** quebrar maldição, ler e praga.
+
+### 11.7 Beber na luta e a cura
+
+- **Beber é 1 ação.** Dar de beber a um aliado colado (ou caído ao lado), também. A poção do Comum ao Raro sai da carga; o elixir (do Épico para cima) some.
+- **Quantas o corpo aguenta:** Vigor ÷ 30 por dia (no mínimo 1), contando as que bebeu fora da luta no mesmo dia. Cada uma além disso pede 2d20 + bônus de Vigor contra 24 + 4 por poção a mais (o dado vai à mesa, passe ou falhe): falhou, não faz nada, e enjoa; o enjoo segue fora da luta até o fim do bloco, como o da poção bebida fora dela.
+- A cura (de poção, de feitiço e da seiva) segue a lei ao contrário e **nunca devolve mais que metade do PV máximo no dia**, tudo somado.
+- **Quem caiu e recebe cura fica firme** (não morre no chão), mas não se levanta nesta luta.
+- Na luta se bebem: cura, antídoto (tira o veneno até a categoria dele), Mana (4, 8, 12, 16), guarda (conta como amuleto da categoria até o fim da luta) e fúria. O veneno de lâmina se passa na arma fora da luta; a vigília e a quebra-maldição se bebem fora dela.
+- **O veneno na lâmina:** a primeira vez que a arma tira sangue, a vítima perde por rodada um quarto do golpe, por 3 rodadas, com o −2 no acerto do veneno; numa lâmina acima da dose, um terço disso por degrau. A dose acaba ali.
+- **A ferida funda** (a maior categoria que tirou PV desde o PV cheio) é contada em toda luta, com ou sem magia: o sangue e o veneno contam como Comum. É ela que a cura confere.
+
+### 11.8 A peça encantada
+
+O dono solta o feitiço gravado **uma vez por luta**, com as ações do feitiço e sem Mana. A peça vale como foco **um degrau abaixo** da categoria dela. A Conjuração é 2 por grau de quem gravou + metade do bônus de Afinidade do dono + o bônus desse foco. A peça que dorme (sintonia) não solta. O encanto solto volta ao estado (descarregado; carrega de novo fora da luta).
+
+### 11.9 Os nove traços novos
+
+| Traço | Na luta |
+| --- | --- |
+| resiste | a guarda contra a magia é o corpo inteiro (não 0,6), e a Firmeza leva o bônus inteiro dele |
+| imaterial | a arma sem encanto e sem bênção conta uma categoria abaixo; o feitiço e a peça encantada contam inteiros; não vai ao chão nem é agarrado |
+| amaldiçoa | a ferida que ele abre põe uma maldição da categoria do corpo, no passo 1 (volta ao estado) |
+| lança | lança os feitiços dele pelo instinto, com o corpo de foco |
+| sem vida | não sangra, o veneno não pega, não testa a coragem, não cansa, não faz a ação a mais; a zero de PV se desfaz |
+| ossos | o corte e a ponta valem metade; o impacto, inteiro |
+| dreno | recupera metade do que o golpe do corpo tira (o sopro também é golpe do corpo: drena de cada um que pega) |
+| ardente | quem o golpeia de perto leva o fogo de volta (o teto do "devolve" da categoria); a ferida que o corpo abre queima 5 rodadas |
+| noturno | o escuro não tira nada do golpe, do tiro nem do feitiço que voa |
+
+### 11.10 As fases do chefe
+
+O chefe pode trazer fases. Ao cruzar o limiar do PV (por exemplo, abaixo de metade), ele muda uma vez por fase: ganha e perde traços, aprende feitiços, recobra Mana, dá o **brado** (os do lado dele ficam benzidos por 3 rodadas) e **ergue** mortos: até N dos mortos mais perto levantam do lado dele, como "sem vida", com metade do PV. O morto erguido é outro lutador, sem registro no mundo; o morto segue morto. A luta para e pergunta.
+
+### 11.11 A luta para e pergunta, e as ordens
+
+**Paradas novas:** o outro lado começa um feitiço longo · quem o jogador comanda fica preso, leva mau-olhado, tem a Mana atada, falha o medo, perde um feitiço, sofre retrochoque, leva uma maldição · a Mana de quem ele comanda cai abaixo de um terço · ele não tem Mana para o feitiço da ordem · o campo muda · o chefe muda de fase · um da casa cai e há cura ao alcance (a frase diz quem).
+
+**Ordens novas, só para quem o jogador comanda** (quem ele comanda não lança, não bebe e não solta encanto sozinho):
+- `lancar FEITICO [em ALVO | casa N] [sempre] [osso] [neblina|lama]`: uma vez (depois volta a ordem de antes); com `sempre`, até a Mana acabar, o alvo cair ou vir outra ordem. Fora do alcance, anda até ele.
+- `beber POCAO [em ALIADO]`: a poção (`cura`, `cura:1`, `antídoto`...).
+- `usar [PECA] [em ALVO | casa N]`: solta o encanto.
+
+A ordem é conferida antes de qualquer dado: o feitiço que a pessoa não sabe, o rito, o alvo do lado errado, a casa para quem não é de área, a poção que ela não leva ou que não se bebe na luta, o encanto que já saiu: tudo é recusado com a frase.
+
+**Os outros** (aliados e inimigos) seguem uma regra curta (`magia.escolhe`): a peça encantada quando vale; a poção de cura abaixo de metade do PV (nunca além do que o corpo aguenta); cura quem está abaixo de metade; protege, benze (só sem ninguém colado) e guarda; prende quem ainda vem chegando; a área só onde há dois inimigos ou mais e nenhum amigo; o resto, o maior dano que a Mana paga. Quem só fere de longe e não tem o que lançar espera a Mana voltar.
+
+**O quadro** ganha, por pessoa, a Mana, o que canaliza e os estados com prazo; e a linha do campo. **A ficha** ganha a linha da magia (a Mana, o que sabe, a Conjuração, a Firmeza, o foco, o amuleto, o encanto), só de quem tem magia.
+
+### 11.12 O que a luta devolve ao estado
+
+Do lutador do mundo: a Mana que sobrou, as poções bebidas e as doses gastas, o elixir bebido, o encanto solto, a dose da lâmina, a maldição posta nele, o dom que decidiu um lance, a ferida funda, as poções e a cura do dia, a dívida do feitiço de pacto (grau 2 para cima: o nó soma 1), o enjoo e o desgaste do foco e do amuleto. Tudo num evento só.
+
+**O que vem do mundo para a luta:** a bênção dada antes dela (`magia_mundo.py lancar bênção`: a luta que abrir até o fim do bloco seguinte tem a pessoa benzida), a poção de guarda bebida antes (vale amuleto da categoria dela até o fim do bloco), a pena do laço do druida e a pena das maldições. Quem vem de um cenário, fora do mundo, veste também foco e amuleto (`"foco": ["cajado", "Raro"]`, `"amuleto": "Raro"`).
+
+### 11.13 As metas (o banco: `python3 provas.py 600`; só a magia: `python3 provas.py 600 magia`)
+
+Nível 50, tudo Raro, quando não diz outra coisa. 600 lutas por meta no duelo e no grupo, mais onde a faixa é estreita.
+
+| Meta | Faixa | Deu (a rodada final da integração) |
+| --- | --- | --- |
+| M1 mago contra mago | 44 a 56% | 48% |
+| M2 mago contra o guerreiro com amuleto: longe, perto, colado | 28 a 45 · 12 a 28 · 4 a 16 | 43, 22, 14 |
+| M3 sem amuleto, o mago ganha | 15 a 35 pontos | +24 e +20 |
+| M4 o foco uma acima: longe, perto | 85 a 100 · 65 a 90 | 96 e 82 |
+| M5 contra o amuleto uma acima · o conjunto uma acima | 2 a 18 · 0 a 8 | 10 e 1 |
+| M6 nível 50, foco duas acima, contra nível 500: longe, perto | 65 a 92 · 15 a 40 | 84 e 26 |
+| M7 o mesmo com o foco uma acima, de longe | 5 a 30 | 24 |
+| M8 nenhum feitiço mata de PV cheio sem crítico entre iguais; mediana até 45% (a seta, 20%) | sim | sim (seta 16%, raio 39%) |
+| M9 a Mana seca na rodada · a volta rende a mais | 6 a 10 · 25 a 50% | 8 · +36% |
+| M10 o mago no grupo: sem área · com área · contra quem não tem amuleto | 40 a 55 · 52 a 70 · 75 a 92 | 52, 64, 82 |
+| M11 o mesmo no corredor | 50 a 68 | 52 |
+| M12 o clérigo na linha: campo, corredor; benzendo antes | 42 a 58 · 48 a 64 · 5 a 14 | 45, 52, +13 |
+| M13 o druida · a bruxa | 45 a 62 · 42 a 58 | 51 · 52 |
+| M14 a bruxa sozinha, de longe | 5 a 20 | 13 |
+| M15 o longo sob uma flecha · duas | 15 a 35% · 25 a 50% | 34 e 46 |
+| M16 com um guarda de escudo na frente | 3 pontos a menos ou mais | 5,5 a menos |
+| M17 o retrochoque: comum, forçado | 0,1 a 0,5% · 8 a 12% | 0,27 e 9,65 |
+| M18 o mago contra 8 · 12 soldados | 55 a 85 · 35 a 70 | 78 e 52 |
+| M19 a pantera longe, perto; o trasgo | 35 a 60 · 0 a 12 · 30 a 55 | 47, 5, 42 |
+| M20 cada traço novo, com e sem | 8 pontos ou mais | todos (de 9 a 74) |
+| M21 o controle pega · calejado duas vezes | 55 a 75% · 25 a 40% | 66 e 30 |
+| P1 a P4, P9 a poção e o veneno | as do projeto | todas passam |
+| E1 a E3 a peça encantada | as do projeto | todas passam |
+| e mais: as fases do chefe, a ordem, a pessoa comum, a luta que volta ao estado (a maga ferida bebe, vive, e a Mana, a poção e o foco voltam conferidos) | sim | sim |
+
+**A bruxa no grupo** falhava com o mau-olhado do projeto (−2: 37 a 40%, faixa de 42 a 58). O projeto a mediu com um cajado que valia inteiro, e o cajado não é foco do pacto: com o talismã (× 1,0, sem aparar), ela ficava atrás. Medido, com 4.000 lutas por linha: o mau-olhado de −3 a põe em 42 a 43% (raspando a faixa); a sangria de 2d6 a põe em 43%, mas sozinha ela passa a 29% (a M14 pede até 20); o alcance da sangria e a ordem da regra curta, nada. **O mau-olhado passou a tirar 4** no acerto, na Defesa e na Conjuração: a bruxa no grupo dá 49 a 52%, e sozinha 13 a 14%. Dois chefes que lançam o mau-olhado passaram da faixa deles com isso e foram acertados (capítulo 15).
+
+### 11.14 O que mudou do projeto, e por quê
+
+- **O benzido dá +2 na coragem**, não +4: com +4, benzer os quatro antes da luta rendia 15 pontos, acima da meta (5 a 14).
+- **Quem caiu e recebe cura não se levanta nesta luta** (fica firme, e a cura conta): o clérigo que levantava os caídos no corredor passava da faixa.
+- **O preso do feitiço não troca de lugar** no corredor (o da perna presa segue como hoje).
+- **Quem cai, vai ao chão, fica atordoado ou é agarrado perde o feitiço longo sem teste** (a regra do projeto, que a medida do projeto não tinha): a flecha corta mais feitiços do que o projeto dizia, e as metas M15 e M16 contam a concentração e o corte juntos.
+- **A Firmeza leva o melhor entre o amuleto e metade da armadura**, na luta e fora dela (a base comum, `tabelas.firmeza`, levava o amuleto mesmo quando ele era menor: um amuleto Comum baixava a Firmeza de quem veste armadura Rara, também contra a maldição).
+- **O mau-olhado tira 4, não 2** (acima: a bruxa no grupo).
+
+---
+
+## 12. A bancada da magia: a alquimia e o encanto (etapa da magia)
+
+12.1 **Uma bancada só, quatro lugares.** A obra de vários dias é a da forja (capítulo 7): a matéria entra quando ela abre, os blocos somam de um dia para o outro, o ato para quando o corpo pede, e o teste sai uma vez, quando os blocos fecham. O que muda é a bancada e a mão:
+
+| Ofício | A bancada (campo do lugar, 0 a 4) | O que faz | A escada da mão |
+| --- | --- | --- | --- |
+| forja, couro | `oficina` | arma, armadura, escudo | 50 · 150 · 375 · 1.000 blocos |
+| alquimia | `botica` (panela, botica de vila, botica de cidade, laboratório, grande laboratório) | a leva de poção | a mesma |
+| encanto | `runas` (pedra riscada, mesa de runas, oficina de runas, grande oficina, oficina mestra) | o foco, o amuleto, a gravação de um feitiço numa peça | a mesma |
+| fé | `santuario` | o jornal do santuário (a prece, o voto e os ritos são do capítulo 14) | a das armas |
+
+O teste é sempre o da forja: **2d20 + a maestria do ofício + Afinidade ÷ 10 + a bancada + o preparo, contra 28 + 6 por categoria.** O preparo são quatro, de +2 cada, até +8, cada um com alcance (a categoria mais alta a que serve): na alquimia, a receita, o ajudante, o fogo e a vidraria; no encanto, a receita, o ajudante, a tinta e a pedra. O DOM do ofício entra dentro do teto de +8 (capítulo 10). Sem a bancada no lugar, a obra não abre.
+
+12.2 **A leva.** Rende 2 doses do Comum ao Raro (bens, na carga: `cura:0`) e 6 elixires do Épico para cima (itens do Livro de Itens, contados no mundo; a leva pede matéria Rara e um NÚCLEO da categoria: um núcleo Épico vira seis elixires ou uma espada). Blocos pesados: 1, 3, 9, 27, 81, 243. Falhar por 1 a 4: sai uma categoria abaixo (a Comum sai aguada: 1 dose). Por 5 ou mais: a matéria some, e o núcleo também. De Mestre para cima a mão pede o feito: uma leva Épica nascida (Mestre), uma Única (Lendário).
+
+12.3 **As nove receitas.** A matéria vai na categoria da leva. A receita custa 8 de preço de base na Comum (vezes 6 por categoria), dois terços do que valem as 2 doses; a quebra-maldição custa mais (14 na Comum, 54 na Incomum, 294 na Rara: as 2 de água benta valem 3 cada e não sobem com a categoria); o remédio, 6 (rende 1, que vale 8). Comprada na loja e vendida à loja, a leva não paga a matéria (a MG8).
+
+| Poção | Matéria da leva | O que faz (fora da luta) |
+| --- | --- | --- |
+| cura | 4 de erva | devolve 1d8 × 6 × 3^(categoria da poção − categoria da ferida mais funda) de PV |
+| antídoto | 3 de erva, 2 de osso | tira o veneno até a categoria dele (só serve na luta) |
+| veneno de lâmina | 4 de peçonha (até o Raro) | passa-se na arma: a primeira ferida que ela abrir envenena (1 dose = 1 golpe); é crime nas vilas |
+| Mana | 4 de erva | devolve 4 de Mana por degrau (Comum 4, Incomum 8, Raro 12) |
+| guarda | 2 de osso, 3 de erva | até o fim do bloco, conta como amuleto da categoria dela (contra a maldição, o lugar maldito e a magia na luta que abrir nele) |
+| fúria | 3 de erva, 2 de osso | +2 no acerto e −2 na Defesa por 5 rodadas (só serve na luta) |
+| vigília | 4 de erva | tira 3 de sono e 2 de cansaço (uma por dia) |
+| quebra-maldição | 2 de água benta, 3 de erva, 2 de osso | quebra a maldição de categoria menor; recua 2 passos a da mesma; segura 1 dia a maior |
+| remédio | 3 de erva Comum (rende 1) | o bem que já existia: é o que gasta quem trata a ferida (capítulo 14) |
+
+A **peçonha** é despojo novo do bicho de veneno (da categoria dele até a Rara); a **água benta**, o clérigo benze (capítulo 14).
+
+12.4 **Beber fora da luta** (`alquimia.py beber cura:0 [alvo=ID]`; na luta é a ordem `beber`). Não gasta bloco. **Vigor ÷ 30 doses por dia, no mínimo 1**; cada uma além disso pede Vigor contra 24 + 4 por dose a mais: falhou, a poção se gasta, não faz nada, e a pessoa enjoa (−2 em todo teste até o fim do bloco, também numa luta que abrir nele). **A cura tem teto:** por pessoa e por dia, feitiço e poção somados nunca devolvem mais que metade do PV máximo. **A ferida mais funda** (`funda`) é a maior categoria que feriu a pessoa desde que ela esteve inteira; apaga quando o PV enche. Por isso a poção barata não serve em luta cara: a da categoria da ferida desfaz cerca de um golpe; uma abaixo, um terço disso. Dá-se de beber a quem está junto. O antídoto e a fúria fora da luta não fazem nada, e a poção de cura em quem está com o PV cheio também não (recusa, antes de gastar, como o comer sem fome).
+
+12.5 **O veneno de lâmina** (`alquimia.py lamina [ARMA]`): uma dose na arma de corte ou de ponta; seca em um dia; numa lâmina de categoria maior que a dose, um terço por degrau. É crime nas vilas: a loja não o compra nem o vende (quem vende é a bruxa, de pessoa a pessoa).
+
+12.6 **O foco e o amuleto** se fazem no encanto, na mesa de runas, como a forja faz a adaga: a varinha (2 de madeira, 1 de osso), o cajado (4 e 1), o símbolo (3 de metal), o talismã (2 de osso, 1 de couro), o amuleto (1 de osso); do Épico para cima, matéria Rara e um núcleo. Blocos, teste e falha da forja. Consertam-se na mesa de runas (a mão de encanto, ou pago). Valem pela matéria que levam: o amuleto Comum, 10 de prata; a varinha, 30; o cajado, 50.
+
+12.7 **Gravar um feitiço numa peça** (`encanto.py gravar ITEM FEITICO [para=DONO] [com=QUEM_SABE]`). A arma, a armadura ou o escudo (o foco e o amuleto já são magia). Quem grava sabe o feitiço, ou tem ao lado quem sabe; o encanto leva o grau de quem sabe (Iniciante 1 a Lendário 4). A **essência** da categoria da peça: até o Raro, 4 de osso e 2 de erva; do Épico para cima, um núcleo. Um terço dos blocos da forja (Comum e Incomum 1, Raro 3, Épico 9, Único 27, Lendário 81). O teste da forja contra 28 + 6 por categoria da peça. Falhou por 1 a 4: grava um grau abaixo. Por 5 ou mais: a essência some e a peça perde 5 de durabilidade. **Por 10 ou mais, a peça sai MALDITA**, e é de onde vêm as peças malditas do mundo: quem a puser em uso pega a maldição, que só quebra devolvendo a peça à mesa de runas onde se gravou. Um encanto por peça; dois do Único para cima. Na luta (capítulo 11): o dono solta o feitiço uma vez, a peça vale foco um degrau abaixo, e volta a carregar 1 bloco depois.
+
+12.8 **O jornal** da botica, da mesa de runas e do santuário paga o salário da mão (Iniciante: aprendiz; Treinado: oficial; Mestre: mestre), **dentro da mesma jornada de 2 blocos pagos por dia** que vale para o trabalhar e para o jornal da forja. Serviço de magia rende o que rende a forja: nenhuma renda nova.
+
+## 13. As maldições (etapa da magia)
+
+13.1 **O que é.** Um registro na pessoa: nome, categoria, **tipo** (míngua, chaga, azar, insônia, marca: o sinal que ela sente), **um relógio de 6 passos**, a **origem** (feitiço, bicho, lugar, peça, juramento), quem a rogou e a **condição** que a quebra. Não é estado de luta: é coisa de dias. É a única coisa desta etapa que mata fora da luta sem ser fome.
+
+13.2 **O relógio.** Na virada de cada dia o mundo rola (o dado do mundo, oculto): **2d20 + a força da maldição contra a Firmeza do amaldiçoado.** A força é 2 + 4 por categoria (Comum 2, Incomum 6, Rara 10, Épica 14). A Firmeza é a da base comum (22, metade do bônus de Vontade, metade da maior maestria, metade do dom de tradição, e o melhor entre o bônus do amuleto e metade do da armadura do tronco: o amuleto fraco não tira o que a armadura boa dá). Venceu, anda um passo.
+
+| Passo | Nome | O que faz |
+| --- | --- | --- |
+| 1 | a marca | nada em número |
+| 2 | o peso | −1 em todo teste |
+| 3 | a míngua | −2; a noite dormida não devolve PV |
+| 4 | a chaga | −2; as feridas não saram; a Mana não volta fora da luta |
+| 5 | o fim à vista | −4; cada virada tira 10% do PV máximo |
+| 6 | a morte | morre na virada, com a causa escrita |
+
+Das penas de maldição vale a pior; ela soma com a pena do corpo, em todo teste e na luta. **Quanto tempo dá** (medido, metade das vidas, ninguém fazendo nada): o guerreiro de amuleto Raro, maldição Rara (a categoria da guarda), 15 dias; o mesmo sem amuleto, 9; o aldeão sem amuleto, maldição Comum, 10. Nenhuma mata antes de 5 dias. O amuleto compra tempo; não cura. **O relógio anda para toda gente amaldiçoada**, o personagem ou não: o mundo não gira em torno dele.
+
+13.3 **De onde vem.**
+- **A peça maldita**, ao ser posta em uso: a maldição pega no passo 1 (a pessoa só sente um frio no braço), e **a mão não larga a peça** (não sai de uso, não se vende, não muda de mão) enquanto ela durar. Ela parece uma peça comum: só quem a lê sabe. **A loja não compra peça maldita**, nem a que ninguém pôs em uso: o mercador pega para avaliar e larga depressa, sem saber dizer por quê (é a única pista de graça; e assim a armadilha não vira prata).
+- **O lugar maldito**: a cada bloco passado nele, o mundo rola a força dele contra a Firmeza de quem está; pegou, quebra quando a pessoa passa 7 dias sem pôr o pé lá.
+- **O feitiço**: a praga da bruxa (capítulo 14).
+- **O bicho que amaldiçoa**: a ferida que ele abre (a luta e as criaturas).
+- **O juramento quebrado**: o voto do clérigo, a dívida da bruxa (capítulo 14).
+
+13.4 **Como se quebra.**
+1. **Cumprir a condição:** devolver a peça ao lugar dela (`maldicao.py devolver ITEM`, estando lá: a peça fica no chão, ainda maldita; quem sabe de onde ela é, porque alguém leu, e sai ao ermo dela levando-a, para na chegada, antes da procura: dá tempo de devolver); matar o bicho naquele ermo (quebra na hora, no acerto da caça); o perdão de quem rogou (`maldicao.py perdoa`), ou a morte dela; os 7 dias longe do lugar; a dívida zerada. O estado confere sozinho na virada (e o Mestre atesta o que ele não sabe conferir: cumprir o jurado, queimar o laço: `maldicao.py cumpre`).
+2. **O rito do clérigo** (`maldicao.py rito ALVO quem=CLERIGO`): quem sabe quebrar-maldição (e não quebrou o voto), 1 bloco, 6 de Mana, uma tentativa por dia. **2d20 + Conjuração da fé contra 28 + a força + 2 por passo além do primeiro:** quem chega cedo se salva. Falhou por 5 ou mais: o clérigo leva a marca (a mesma maldição, no passo 1). O personagem ajudado paga, de pessoa a pessoa, um terço do preço de tabela da categoria (10, 60, 360, 2.160 de prata); o rito pela gente do mundo sai sem cobrança (14.7). O clérigo Mestre de símbolo Raro, na maldição Rara: 57% no passo 1, 48% no passo 2, 40% no 3.
+3. **A poção quebra-maldição** só ganha tempo: a de categoria maior quebra; a da mesma faz recuar 2 passos; a menor segura 1 dia.
+4. **O que não quebra:** dormir, comer, curar o PV, mudar de lugar (salvo a do lugar).
+
+13.5 **O que a mesa mostra**, em três degraus de saber:
+- **não sabe** (passo 1): nada;
+- **desconfia** (do passo 2): "ALGO ESTÁ ERRADO: Maro acorda mais fraco do que deitou, e isto não é doença. Pesa: −2 em todo teste; a noite não devolve PV." Sem nome, sem categoria, sem prazo;
+- **sabe** (alguém leu: capítulo 14): "MALDIÇÃO: a Mão Fria (Incomum, míngua), passo 3 de 6 (a míngua): −2 em todo teste; a noite não devolve PV. Desde o Dia 12. Veio da peça Adaga do Túmulo. Quebra: devolver Adaga do Túmulo ao lugar dela, na Capela Caída; ou o rito de um clérigo (60 de prata)."
+
+O SÓ O MESTRE vê tudo de todos (a força, a Firmeza, a chance de andar amanhã, a condição) e a rolagem oculta de cada virada do personagem. **O que só o Mestre sabe não vai aos fatos do RETOMAR:** o evento do Mestre ou do gerador que põe o talento ou o dom de alguém, a peça ou o lugar maldito, o covil, ou a maldição que a pessoa ainda não sente vai ao SÓ O MESTRE do RETOMAR, com o texto dele. O RETOMAR leva as maldições que o personagem sente. **O `turno.py fecha` recusa** o turno com maldição do personagem no passo 4 ou mais sem uma pergunta aberta sobre ela.
+
+## 14. A magia no mundo: estudar, as tradições, a Mana, os ritos e os serviços (etapa da magia)
+
+14.1 **Qualquer um aprende magia**, como se aprende uma arma (`magia_mundo.py estudar FEITICO com=PESSOA|escrito=ITEM|santuario|ermo`). Um feitiço se estuda em blocos leves, vezes o talento na tradição dele: o truque 3, o grau 1 6, o grau 2 18, o grau 3 54, o grau 4 162. Os blocos de estudo são treino da tradição: a maestria sobe pela tabela das armas (40, 160, 500, 1.500; de Mestre para cima, com um feito). **A fonte:** quem saiba o feitiço e queira ensinar (cobra o salário do grau de ofício dele por bloco, e só ensina dentro da jornada dele: 2 blocos por dia); um escrito que o ensine (de graça); um santuário (os feitiços da fé, a quem tem voto); o ermo do laço (os do verde, a quem tem laço). Os seis de grau 1 de uma tradição somam 36 blocos: é quase o Iniciante.
+
+14.2 **Uma tradição por pessoa.**
+
+| Tradição | Como se entra | De onde vem a Mana fora da luta | O que custa |
+| --- | --- | --- | --- |
+| o mago (`arcano`) | estudando o primeiro feitiço | a regra geral (14.3) | o livro e as lições |
+| o clérigo (`fé`) | o VOTO, num santuário (`magia_mundo.py voto lâmina\|pobreza\|socorro`) | só a PRECE: 1 bloco por dia; no santuário enche, fora dele volta a metade | quebrar o voto apaga a Mana e deixa uma marca (maldição de juramento, da categoria do santuário) |
+| o druida (`verde`) | o LAÇO com um ermo vizinho (`magia_mundo.py laco ERMO`) | em dobro no ermo; a metade entre muros (cidade, masmorra) | a fartura do ermo do laço abaixo de 40% tira 2 da Conjuração; abaixo de 10%, 4 |
+| a bruxa (`pacto`) | o PACTO, no escuro (madrugada ou noite): nasce devendo 1 | sozinha, só até a metade; o resto paga-se (`magia_mundo.py paga N pv\|divida`): 2% do PV máximo por ponto, ou 1 de dívida por 4 | a dívida sobe com o feitiço de grau 2 (+1), 3 (+2), 4 (+3) e a praga (a categoria mais 1); acima de Vontade ÷ 10, vira maldição nela (a Conta, que quebra quando a dívida zera) |
+
+**Os votos:** da lâmina (não pôr em uso arma de corte nem de ponta: pôr é quebrar), da pobreza (na virada, a prata acima de 50 vai para o caixa do santuário), do socorro (não recusar cura pedida: a etapa 3). **A dívida** paga-se num rito de 1 bloco (`magia_mundo.py divida N pv|osso|erva`): 1 ponto a cada 5% do PV máximo, ou queimando 4 de osso ou de erva da categoria do foco.
+
+14.3 **A Mana fora da luta**, por bloco: dormindo, um quarto da máxima; descansando, um oitavo; acordado e leve (ou parado), 1; no bloco pesado, nada. A tradição muda isto (14.2). A maldição do passo 4 não deixa a Mana voltar. **Quem não é o personagem recobra a Mana no descanso em casa** (5.14): quando volta à cena, cada dia inteiro que passou em casa vale 2 blocos dormidos e 4 parados (Anselmo, de Mana 0, volta com 14 dos 19 depois de um dia); o druida segue o lugar onde mora; a bruxa, sozinha, só até a metade; o clérigo de voto inteiro reza a prece do dia em casa (onde há santuário, enche; longe, volta a metade), e essa é a prece do dia. Gastar a Mana também é estar em cena: o dia já contado não enche de novo. A Mana máxima é (Afinidade + Vontade) ÷ 10 + a maestria da melhor tradição + o dom nela (a mesa mostra a que a pessoa conhece: sem o dom que ela ainda não viu).
+
+14.4 **Lançar fora da luta** (`magia_mundo.py lancar FEITICO [alvo=ID]`; não gasta bloco): a **cura** (1d8 × 6 × 3^(a categoria do foco − a ferida mais funda), dentro do teto do dia; o foco de outra tradição rende uma categoria abaixo, e sem foco, Comum), a **bênção** antes da luta (a luta que abrir até o fim do bloco seguinte leva o benzido), a **seiva** (a cura dos blocos dormidos do dia seguinte vale em dobro). A cura em quem está com o PV cheio é recusada antes de gastar a Mana. O resto só muda número na luta. O feitiço custa a Mana da tabela; o de pacto de grau 2 para cima soma dívida, fora ou dentro da luta (a luta a devolve ao estado).
+
+14.5 **Os ritos** (1 bloco leve cada):
+- **a prece** do clérigo (uma por dia);
+- **ler** (`magia_mundo.py ler maldicao|dom|peca`): quem sabe o feitiço ler, ou a fé de Treinado para cima; 2 de Mana. Lê toda maldição de alguém (passa a saber tudo), o dom de alguém (ele se mostra), ou uma peça (se é maldita, que maldição e o que a quebra; e os encantos);
+- **quebrar a maldição** (capítulo 13);
+- **a praga** da bruxa, pelo toque (`magia_mundo.py praga ALVO [tipo=]`): 6 de Mana; 2d20 + Conjuração do pacto contra a Firmeza do alvo; pegou, uma maldição da categoria do foco dela, que quebra com o perdão ou a morte dela; a dívida sobe pegue ou não;
+- **a água benta** (`magia_mundo.py agua N`, num santuário): cada uma, 1 de erva Comum e 2 de Mana; até 3 por rito;
+- **benzer a arma** (`magia_mundo.py benzer ARMA`, num santuário): 2 de Mana; por 7 dias ela conta inteira contra o que não tem corpo.
+
+14.6 **Tratar a ferida** (`magia_mundo.py tratar PACIENTE`): o ofício `cura`. 1 bloco leve e 1 remédio (da carga do paciente, ou da de quem trata, que cobra o preço de base dele); um tratamento por paciente por dia; pede mão de cura de Iniciante (de Treinado, se há ferida grave). Soma 1 dia de repouso a todas as feridas do paciente: tratado todo dia, a ferida sara na metade do tempo. O dom da cura soma meio dia por grau, e se mostra no primeiro tratamento.
+
+14.7 **Os serviços, de pessoa a pessoa.** **Só o personagem paga serviço:** quem o ajuda cobra o preço da tabela (evento `servico`: a prata só muda de mão): ler 10 · a cura 3 por lance · a bênção 5 por pessoa · tratar 2 e o remédio · benzer a arma 5 · o rito de quebrar, um terço do preço de tabela da categoria · a lição, o salário de quem ensina. Outro preço combina-se com `paga=N` (um número inteiro, de 0 para cima: o negativo e o que não é número são recusados antes de tudo; a `compra` de pessoa a pessoa, com `preco=`, também). **A gente do mundo não procura serviço sozinha nesta etapa** (é da etapa 3): o que se faz por ela, inclusive o que o personagem faz (benzer, curar, ler, tratar, quebrar a maldição de alguém da vila), sai sem cobrança, e o `paga=` de quem não é o personagem é recusado. A única renda que a magia dá a quem presta, fora o que o personagem pagar, é o jornal (12.8): o personagem clérigo que benze a vila inteira cinco dias seguidos não ganha nada com isso (a MG11).
+
+14.8 **A magia no mercado.** As poções do Comum ao Raro são bens como os outros, com preço pelo estoque: a Comum vale 6 de prata, vezes 6 por categoria. A peçonha (2 de base, Comum) e a água benta (3) também. O povo gasta pouco: a vila de 400 quer 6 poções de cura, 2 antídotos, 1 vigília e 1 quebra-maldição Comuns, e 1 cura Incomum. **A loja não negocia o veneno de lâmina** (crime). O "vender tudo" não leva as poções nem a água benta (são de usar: vendem-se pelo nome). **O foco, o amuleto e o escrito** a loja negocia como peça (paga 40% do valor, mais a mão de comércio; a loja farta conta junto com as armas da mesma categoria); o elixir não tem loja. **A parte da magia de um mercado abre-se à parte** (`mercado.py magia`, pelo Mestre ou pelo gerador): a botica do lugar faz para o povo as poções até a categoria dela (a de vila, só as Comuns: produção no consumo, prateleira no alvo); a prateleira tem cada poção que a loja negocia até uma categoria acima disso; a água benta e o quebra-maldição, onde há santuário; e amuletos, focos e um escrito na prateleira (a vila: 2 amuletos, 1 varinha, 1 símbolo e a Cartilha do arcano, que ensina seta e luz).
+
+14.9 **Quem registra o quê** (o Mestre, ou o gerador da vila): `alquimia.py botica N`, `encanto.py runas N`, `magia_mundo.py santuario N`, `mercado.py magia`, `maldicao.py peca ITEM "Nome" CATEGORIA TIPO onde=LUGAR`, `maldicao.py lugar "Nome" CATEGORIA TIPO`, `maldicao.py poe ALVO "Nome" CATEGORIA TIPO CONDICAO`, e os preparos (`oficio.py preparo vidraria Comum "como" oficio=alquimia`).
+
+### O banco de provas do mundo da magia (`provas_magia.py`; os números da rodada final da integração)
+
+| Meta | O que se mede | Faixa | Medido |
+| --- | --- | --- | --- |
+| MG1 | a pessoa comum: dez dias de rotina com os módulos da magia ligados e desligados | o mesmo mundo | igual (estado e eventos) |
+| MG2 | estudar: grau 1 em 6 blocos (Prodígio 3); o mestre só na jornada dele; o escrito de graça; as recusas | sempre | sim |
+| MG3 | a Mana fora da luta, por tradição; a prece; a maldição do passo 4; quem volta à cena depois de um dia em casa (uma vez só) | a conta exata | sim (o mago de 16: 12 em casa) |
+| MG4 | a maldição da categoria da guarda · a Comum num aldeão · a mais curta · o que o amuleto compra (com ele contra só a malha) | 10 a 25 · 7 a 14 · nunca antes de 5 dias · 3 dias ou mais | 15 · 10 · 5 · 6 |
+| MG5 | o clérigo Mestre de símbolo Raro, na maldição Rara, passos 1 e 2 | 45 a 70% | 57% e 48% |
+| MG6 | a poção da categoria · uma abaixo, em golpes médios entre iguais | 0,7 a 1,5 · até 0,5 | 1,05 · 0,36 |
+| MG7 | o limite do corpo e o teto da cura do dia | sempre | sim |
+| MG8 | quem compra a matéria e vende a leva, com a prateleira no alvo | o Leigo nunca ganha; a melhor mão, no máximo 6 | −3 · −1 |
+| MG9 | o alquimista de loja (com botica; sem botica que produza; a teimosa, que faz a leva todo dia), 30 vilas; o guloso olha todo dia e faz quando paga (a conta da MG8) | 6 por dia (pior 12) nos 5 primeiros dias; 4 depois | 0 · 0 · −5,1 (a teimosa faz 25 levas por vida e perde) |
+| MG10 | fazer foco e amuleto para a loja, 30 vilas | a mesma | 1,95 a 2,97 (pior 5,8) · 0 |
+| MG11 | o serviço de magia: a jornada; a prata que só muda de mão; o preço torto; o personagem clérigo servindo a vila 5 dias | sempre; nunca mais de 12 por dia | sim; 0 por dia |
+| MG12 | a peça maldita e o lugar maldito | sempre | sim |
+| MG13 | gravar custa o que diz; a falha por 10 amaldiçoa a peça | sempre | sim |
+| MG14 | a MESA pelos três degraus; o RETOMAR; o fecha que recusa no passo 4 | sempre | sim |
+| MG15 | a prata e a matéria fecham; o núcleo perdido sai do Livro | sempre | sim |
+| MG16 | o voto, o laço e a dívida | sempre | sim |
+| MG17 | as recusas (com a poção e o feitiço de cura no PV cheio, a paga de quem não é o personagem, a paga negativa) | todas | sim (22) |
+
+---
+
+## 15. As criaturas (etapa da magia)
+
+### 15.1 Dois jeitos de ser criatura
+
+**O povo** (o goblin, o orc, o ogro, o homem-lagarto, o gigante; e os mortos que empunham: o esqueleto e o cavaleiro da cova) é **gente**. Tem a ficha de gente, com arma,
+armadura e escudo de verdade, e por cima o corpo do povo: o tamanho (mexe no PV, na Defesa, no alcance da mão e em quantos batem nele de perto), os traços, a coragem e a pele
+(o couro grosso do ogro e a escama do homem-lagarto valem como armadura onde a peça não cobre). Cada um tem um **posto**: o goblin de faca, o de lança e escudo, o de arco, o capataz;
+o orc, o orc bruto (malho de duas mãos), o capitão. Vale a regra de ouro de sempre: conta a peça de quem bate contra a peça de quem apanha.
+
+A peça do povo é **gasta e malfeita**. Na luta vale a categoria dela; morto o dono, não presta para vender como peça: é **sucata** (o despojo da espécie: o ferro da lâmina e o
+couro da armadura, em matéria).
+
+**A criatura de corpo** (o corpo-seco, o carniçal, a múmia, o fogo-fátuo, a alma penada, o espectro, o golem de barro, a gárgula, o elemental do fogo, a harpia, o lobisomem,
+o senhor vampiro) é um **bicho**: o corpo é a arma e a armadura, com categoria (capítulo 6). Quem tem o traço **lança** sabe feitiços; o corpo é o foco, e o instinto é a mão.
+O bicho que lança, lança enquanto não alcança o inimigo; ao alcance, usa o corpo.
+
+As criaturas **não entram** na lista dos bichos do capítulo 6, e os traços novos **não entram** na lista fechada dos traços dos bichos: moram na página das criaturas. Assim as
+provas da etapa 2 seguem iguais.
+
+### 15.2 O bestiário (19 criaturas)
+
+| Criatura | Grau | Categoria | É | Bando | Traços | O que se sabe |
+| --- | --- | --- | --- | --- | --- | --- |
+| goblin | F | Comum | povo, pequeno | 2 a 4 | noturno | miúdo, frágil e covarde; nunca anda sozinho; mora em toca e rouba de noite |
+| corpo-seco | E | Comum | corpo | 1 a 3 | sem vida, agarra, noturno | lento e sem dor; quem ele agarra não recua |
+| esqueleto | E | Comum | povo (espada e escudo) | 2 a 4 | sem vida, ossos, noturno | a ponta e o fio passam entre os ossos: pede maça |
+| orc | D | Incomum | povo | 2 a 4 | noturno | forte e mal treinado: vale pelo que veste e pelo número |
+| fogo-fátuo | D | Incomum | corpo, pequeno | 1 a 3 | voa, imaterial, lança (a seta) | a luz que chama para o fundo do brejo |
+| alma penada | D | Incomum | corpo | 1 a 2 | sem vida, imaterial, apavora | o aço comum passa por ela quase sem ferir |
+| homem-lagarto | D | Incomum | povo (escama) | 2 a 3 | | de lança e escudo, segura um vau |
+| carniçal | D | Incomum | corpo | 2 a 4 | sem vida, veneno, matilha, noturno | come os mortos e caça em roda |
+| harpia | D | Incomum | corpo (fera) | 2 a 4 | voa | vem de cima, em bando |
+| golem de barro | D | Incomum | corpo | 1 a 2 | sem vida, resiste | guarda o posto e a magia escorre nele |
+| gárgula | C | Rara | corpo | 1 a 2 | voa, bote | parece pedra até cair em cima de quem passa |
+| ogro | C | Raro | povo, grande (couro grosso) | 1 a 2 | | o tronco alcança antes da espada |
+| múmia | C | Rara | corpo | 1 | sem vida, agarra, apavora, amaldiçoa | a maldição da cova |
+| espectro | C | Raro | corpo | 1 | sem vida, imaterial, dreno, amaldiçoa | bebe a vida de quem toca |
+| lobisomem | C | Raro | corpo (fera) | 1 | regenera, amaldiçoa, noturno | a mordida deixa a maldição da lua |
+| elemental do fogo | C | Raro | corpo | 1 | sem vida, ardente, resiste | quem bate de perto se queima |
+| cavaleiro da cova | B | Épico | povo (montante, placa) | 1 | sem vida, noturno | um mestre de armas que não cansa |
+| gigante | B | Épico | povo, enorme | 1 | | oito batem nele, mas o tronco pega a três casas |
+| senhor vampiro | B | Épico | corpo, CHEFE | 1 | dreno, regenera, apavora, noturno, lança (medo, sangria) | de dia é menos |
+
+Só criatura do folclore e da fantasia comum; nada que seja criação de um jogo ou livro.
+`criaturas.py lista` mostra a tabela; `criaturas.py ver NOME` dá a ficha; `bichos.py ameaca NOME` (ou `criaturas.py ameaca NOME`) dá a frase.
+
+### 15.3 Os traços novos (a frase de cada um)
+
+A luta roda os nove (capítulo 11; os números no `tabelas_magia.py`). A frase que a mesa lê:
+- **resiste**: o corpo guarda contra a magia inteiro (não só 60%), e a Firmeza leva o bônus inteiro do corpo.
+- **imaterial**: não tem carne; arma sem encanto e sem bênção conta uma categoria abaixo (o golpe vale um terço); o feitiço e a peça encantada contam inteiros; não vai ao chão nem é agarrado.
+- **amaldiçoa**: a ferida que abre põe uma maldição da categoria do corpo, no passo 1 (ela anda dia a dia até alguém a quebrar: capítulo 13). Cada criatura que amaldiçoa tem o seu molde
+  (a múmia: a maldição da cova; o espectro: o frio; o lobisomem: a maldição da lua; o vampiro: a sede).
+- **lança**: sabe feitiços (a lista vem na ameaça), com a Mana e a Conjuração do instinto e da categoria do corpo.
+- **sem vida**: não sangra, o veneno não pega e não foge; não cansa, mas não faz a ação a mais; a zero de PV se desfaz.
+- **ossos**: o corte e a ponta valem metade; o impacto, inteiro.
+- **dreno**: recupera em PV metade do que o golpe do corpo tira.
+- **ardente**: quem golpeia de perto leva o fogo de volta (4 por categoria do corpo, a contar do Comum); a ferida que o corpo abre queima 5 rodadas.
+- **noturno**: o escuro não tira nada do golpe nem do tiro.
+
+### 15.4 A ameaça lida antes
+
+Antes da luta lê-se a ameaça, como a do bicho: o grau, a categoria, o tamanho, quantos são (e quanto o bando pesa para quem está sozinho), os traços com a frase de cada um, o que
+se sabe, e se foge. O povo diz o que veste, posto por posto ("veste peças Comuns gastas e malfeitas: goblin: adaga, couro; goblin lanceiro: lança, couro, escudo..."), e a conta da regra
+de ouro contra o que você veste. O morto que anda diz que não foge. Quem lança diz o que lança. Do **chefe** ninguém sabe de graça: o Mestre lê a frase dele (`criaturas.py ameaca CHEFE`)
+quando a cena o põe à frente (o que lança, com quem vem, e como muda ferido).
+
+### 15.5 O povo foge, se rende e não fica
+
+O povo testa a coragem como gente (com a coragem do povo: o goblin −4, o orc +2). Abalado, foge ou se rende. **Quem se rende a quem fica com o campo sai da contagem do ermo** (vai preso,
+ou é rematado: a cena decide), e o despojo dele é o de um morto. Caído o líder do bando (o capataz goblin, o capitão orc), o bando testa a coragem. O morto que anda não testa nada.
+
+### 15.6 O despojo
+
+- **O povo:** a sucata das peças, da categoria do bando (o goblin: 1 de metal e 1 de couro Comuns; o orc: 1 de metal e 1 de couro Incomuns), de metade ao inteiro, como o bicho.
+  A peça do povo nunca vira peça de vender: assim um bando morto não enche a loja de espadas.
+- **O corpo:** a tabela da espécie, como o bicho (osso, couro, carvão do elemental, pano da múmia; o ser de magia não deixa nada).
+- **A peçonha:** todo bicho e toda criatura de veneno dá peçonha da categoria dele, até a Rara (a surucucu, a aranha-de-toca, o basilisco, a serpe, a hidra, o carniçal).
+- **O chefe de corpo** (o senhor vampiro) dá núcleo, como todo chefe.
+- **A prata** não sai do corpo de ninguém: é a que o bando juntou, e mora no tesouro da toca (16.2).
+
+### 15.7 Os chefes mágicos
+
+Cada um vem com os lacaios, lança (ou solta o encanto da peça), e muda de **fase** abaixo de uma fração do PV: a luta para e pergunta. As fases só usam o que a luta roda: ganhar e
+perder traços, aprender feitiço, recobrar Mana, o **brado** (os do lado dele ficam benzidos por 3 rodadas: +2 no acerto e +2 na coragem) e **erguer** os mortos.
+
+| Chefe | Grau | O que é | Lança | Fases | Lacaios |
+| --- | --- | --- | --- | --- | --- |
+| o xamã goblin | D | goblin do pacto, talismã e amuleto Incomuns, atrás da linha | mau-olhado, medo, sangria | abaixo de 50%: uiva (brado), recobra 3 de Mana | 2 goblins da guarda (põem o corpo na frente dele), o capataz, 4 de faca, 2 de lança, 2 de arco |
+| o senhor da guerra orc | C | orc mestre de armas, machado Raro com o encanto do medo (uma vez por luta) | (o encanto) | abaixo de 50%: entra em fúria e urra (brado) | 2 orcs da guarda (Raros), 4 orcs, 2 orcs brutos |
+| a bruxa do brejo | C | bruxa do pacto, talismã Raro | mau-olhado, medo, sangria, nó | abaixo de 40%: larga a pele de velha (a faca dela passa a amaldiçoar), recobra 6 de Mana | o trasgo, 3 fogos-fátuos Raros, 2 afogados (corpos-secos Raros) |
+| o necromante | B | do pacto, talismã Épico, frágil, atrás dos mortos | sangria, nó, medo | abaixo de 70% e de 35%: ergue 3 mortos (dos dois lados) | o cavaleiro da cova (guarda), 6 esqueletos Raros |
+| o senhor vampiro | B | criatura de corpo, CHEFE, atrás dos lacaios (lança de longe; ao alcance, usa o corpo) | medo, sangria | abaixo de 30%: a sede (cada ferida que abre amaldiçoa) | 3 carniçais, 3 lobos |
+
+### 15.8 As medidas (o banco: `provas_criaturas.py`)
+
+- **O bando contra o homem do degrau** (espada, malha, elmo e escudo da categoria, no nível de referência: o Comum 10, o Incomum 30): o bando que um homem do degrau enfrenta de igual
+  para igual é de **quatro goblins** (o homem vence cerca de 54%) e de **dois orcs** (cerca de 44%). Contra três goblins ele vence 78%; contra três orcs, 10%. A faixa: de 35 a 65%.
+- **O chefe com os lacaios contra quatro homens** do degrau em que vive (300 lutas cada, a rodada final): o xamã contra quatro Comuns, cerca de 53%; o senhor da guerra contra quatro Raros, 41%; a bruxa do brejo, 54%;
+  o necromante contra quatro Épicos, 56%; o senhor vampiro, 45%. A faixa: de 30 a 70%. Com o mau-olhado de −4 (capítulo 11), a bruxa do brejo passava a 71% e o necromante a 76%: a bruxa
+  ficou com dois afogados (eram três) e o necromante largou o mau-olhado (ergue, bebe a vida, ata a magia e gela a coragem). Menos cabeças não bastavam (o necromante com quatro esqueletos: 68%).
+- **A patrulha goblin contra o guerreiro de nível 5 de peças Comuns** (o começo "guerreiro" da vila de teste: espada, escudo e malha, sem elmo), como a caça a dá (de dois a quatro, de
+  faca; metade das vezes ele a vê primeiro): ele vence cerca de 73% e morre em cerca de 12%. A faixa: de 40 a 75%, e morre em 15% ou menos. Contra dois: 91% e 5%; contra quatro: 51% e 27%.
+  **Uma observação para o jogador:** nesta luta, quem cai do lado que perde morre na metade das vezes (o teste de morte); por isso, para morrer em 15% ou menos, ele tem de vencer
+  70% ou mais. A janela da meta é estreita (de 70 a 75%), e o goblin ficou miúdo e frágil para caber nela.
+
+
+## 16. O covil e a vila de teste com a magia (etapa da magia)
+
+### 16.1 O covil é contado ao lado da fauna
+
+O covil é a toca de um povo num ermo (`lugar.covil`). **As cabeças dele SÃO a contagem da espécie no ermo** (`lugar.bichos.goblin`), ao lado da corça e do lobo: a patrulha que o
+caçador encontra sai dela, e quem morre sai dela. O registro do covil guarda o resto: o nome, o teto, se o líder está de pé, o chefe que mora ali (ou nenhum), a fome, o último roubo,
+os dias sem líder, os dias de toca cheia, e os dias até chegar um bando de fora quando ela se esvazia. **O covil não guarda prata:** o tesouro da toca é o estoque do ermo, contado como toda prata.
+
+As criaturas que não são fera (o povo, o morto, o ser de magia) **não criam na virada da caça**: o bando de um covil cria pela vida do covil; os mortos de uma cova ficam os que são.
+
+### 16.2 A vida da toca (todo dia, evento "covil", o mundo sozinho)
+
+Os números são os do `tabelas_criaturas.COVIS`, um para cada povo:
+
+| | a toca dos goblins | o acampamento orc |
+| --- | --- | --- |
+| come, por cabeça e por dia | 0,3 de comida | 0,6 de comida |
+| rouba da vila vizinha | a cada 7 dias, com a chance de cabeças ÷ 20 | a cada 10 dias, com a chance de cabeças ÷ 12 |
+| o que leva | 2 de comida por cabeça; a prata, uma vez em quatro (de 1 a 6, mais uma por quatro cabeças) | 3 de comida por cabeça; a prata, duas vezes em cinco (de 1 a 12, mais uma por quatro cabeças) |
+| cria, bem comido | cabeças × 2,5% × o que falta para o teto, por dia; o teto, 16 | cabeças × 1,5% × o que falta para o teto; o teto, 12 |
+| o líder caído | outro sobe em 7 dias | em 10 dias |
+| o chefe | a toca com 12 ou mais por 30 dias seguidos ganha o xamã goblin | com 10 ou mais por 60 dias, o senhor da guerra |
+| a toca vazia | espera 120 dias por um bando de fora, de 6 | 240 dias, por 4 orcs |
+| o covil que o Mestre funda sem dizer quanto | 9 cabeças, 20 de prata no tesouro | 6 cabeças, 60 de prata |
+
+1. **Come** primeiro do que juntou (a comida do estoque do ermo), depois da caça contada do ermo (a corça e o javali, pela fartura; o goblin também come ratazana). A fome sobe 1 no dia em que falta comida e desce 1 no dia farto.
+2. **Rouba** com a chance da tabela, mais 10% por ponto de fome. O que rouba vai para o estoque do ermo: **o tesouro da toca.** A prata só muda de mão.
+3. **Cria** devagar, bem comido (fome abaixo de 4), até o teto. **Definha** com fome (um a menos por dia, com a fome em 9).
+4. **O líder e o chefe** como na tabela: caído o capataz, outro sobe; a toca cheia por muito tempo ganha o chefe; a toca vazia espera o bando de fora.
+
+Medido (um ano sozinho, a toca da vila de teste): o bando chega ao teto (16) e não passa dele; a corça fica em 75 a 78 de 80, o javali em 38 a 39 de 40; rouba de 1.000 a 1.400 de
+comida no ano (a vila produz 146.000) e de 40 a 110 de prata; o xamã sobe perto do Dia 62; a prata do mundo fecha.
+
+### 16.3 A toca na caça
+
+- `caca.py sair ERMO alvo=toca` procura a toca do bando: o rastro é 2 mais difícil que o da espécie, e a rolagem é **oculta** (ninguém sabe de graça se há toca, como no chefe).
+- Achada, lê-se a frase da toca: de fora se contam poucos, um bando, muitos ou uma toca cheia; se há chefe, só se vê o sinal (os ossos pintados, o fumo doce). Depois, a ameaça do povo.
+- A luta é com **todos os que estão lá**: o chefe e a guarda dele (se a toca tem chefe), o líder (atrás da linha) e o resto pelos postos (metade de faca, um quarto de lança, um quarto de arco).
+  O chefe não é da contagem: mora no registro do covil.
+- **Quem fica com o campo na toca leva o tesouro inteiro** (a prata e a comida do estoque do ermo), repartido entre quem lutou até o fim. Caído o líder ou o chefe, o covil fica sem ele.
+- **O que cai no chão de um ermo com toca, o bando junta:** a carga e a prata de quem morre ali entram no tesouro da toca, e a mesa diz assim.
+
+**Limpar um covil não é mina** (medido): a casa de três (o guerreiro de nível 5, Tomé e Rute), 60 dias ao lado da toca da vila de teste, saindo quando os três estão inteiros e
+esperando quando alguém está ferido, tira cerca de **0,5 diária por dia de trabalho de cada um** (a melhor vida, cerca de 1,6), e morre alguém da casa em 1 ou 2 vidas de cada 12.
+O primeiro assalto rende o tesouro (20 de prata, na vila de teste) e a sucata; os seguintes, quase só sucata, e o bando que fugiu volta devagar.
+
+### 16.4 O Mestre funda um covil
+
+`criaturas.py covil poe ERMO goblin [cabecas=N] [tesouro=N] [chefe=sim]` (ou `orc`): num ermo que já existe, por um evento "mestre" (o tesouro é prata que nasce, como tudo o que o
+Mestre põe). `criaturas.py covil [ERMO]` mostra o covil (SÓ O MESTRE; a mesa traz a linha dele no SÓ O MESTRE).
+
+### 16.5 A vila de teste com a etapa inteira
+
+A vila nova (`vila_teste.py PASTA ... [inclinacao=CAMINHO]`) nasce com os talentos e os dons. Para **a vila que já existe** (o save de quem já joga):
+
+```
+python3 vila_teste.py magia PASTA [inclinacao=CAMINHO]
+```
+
+Acrescenta, **só por eventos, sem recriar nada** (e recusa rodar duas vezes):
+1. **Os talentos e os dons** de quem ainda não foi rolado; o personagem com a inclinação, se o jogador escolher uma (só vale enquanto o talento dele não foi rolado). Tudo num evento só, do gerador: é segredo, e vai ao SÓ O MESTRE do RETOMAR, não aos fatos do turno.
+2. **Anselmo, o mago velho** (nível 40, arcano Treinado: a luz, a seta, o escudo, prender, a lança de fogo; cajado Incomum, amuleto Comum).
+3. **A botica da curandeira:** Pedra Rasa ganha a botica (1), e Nara a mão de Iniciante na alquimia. **A loja ganha a parte da magia** (`mercado.funda_magia`): as poções Comuns que a botica faz para o povo (cura, antídoto, vigília), as outras até a Incomum na prateleira, a água benta e o quebra-maldição (há santuário), e, na prateleira de peças, dois amuletos Comuns, uma varinha, um símbolo e a Cartilha do arcano.
+4. **O santuário** (1) e **Lúcia, a clériga** (nível 35, fé de Mestre, voto do socorro: a cura, a bênção, o amparo, o castigo, quebrar maldição; símbolo Comum).
+5. **Joana, a bruxa** da choupana na borda da Mata do Corvo (nível 30, pacto Treinado: o mau-olhado, o medo, a sangria, ler, o nó; deve 2; leva 3 doses de veneno de lâmina e erva).
+6. **O Grande Dom de forja do Zeca**, o aprendiz, que ninguém leu (aparece quando decidir um teste na bancada, ou quando alguém o ler).
+7. **A Cova Velha**, um ermo novo vizinho da vila (ruína, borda): 3 esqueletos e 2 corpos-secos, e **a Espada do Guardião** largada no chão (Incomum, maldita: a Mão Fria, míngua;
+   quem a puser em uso pega a maldição, e a mão não a larga enquanto ela dura: tirar, trocar de arma e passar a outro são recusados com uma frase simples; quebra devolvendo-a à cova;
+   a loja não a compra).
+8. **A toca dos goblins** na Mata do Corvo: 8 goblins (teto 16), o capataz, 20 de prata no tesouro.
+
+A prata que nasce: a das três pessoas novas (145) e o tesouro da toca (20). Nada mais muda: a gente, os itens e o tempo de antes seguem como estavam.
+
+### 16.6 O que fica para depois
+
+O covil não ataca a vila nem gente na rua (o roubo é contado, não jogado); o bando que fugiu não se junta a outro covil; os povos não comerciam; o necromante e a bruxa do brejo não
+têm covil próprio na vila de teste (o Mestre põe quando quiser); masmorras, frentes e rivais são das etapas 5 e 6.
+
+### 16.7 O que a etapa da magia não resolve (fica dito)
+
+- **A gente do mundo não procura serviço sozinha.** Ninguém pede cura, leitura ou bênção ao personagem, e o voto do socorro não tem quem peça (etapa 3). Os serviços de magia rendem a quem presta só o que o personagem pagar, e o jornal.
+- **Quem vai junto não pede paga,** nem o mago velho: Anselmo (nível 40, arcano Treinado) vai à caça quando chamado e leva a parte dele, como Tomé e Rute (decisão da etapa 2). Com ele, a toca e a cova ficam bem mais fáceis.
+- **A vila de teste não tem mesa de runas:** o foco e o amuleto se compram na loja; fazer e gravar pede que o Mestre ponha uma (`encanto.py runas N`).
+- **O elixir** (a poção do Épico para cima) não tem loja: é contado, de quem o fez para quem o recebe.
+- **O estado "cego"** existe na luta, mas nenhum dos 24 feitiços o põe; não há feitiço de grau 4 (a tabela do feitiço longo de 2 rodadas está pronta). As raízes não sabem o chão (a luta não tem terreno de terra).
+- **As criaturas:** o lobisomem não pede prata e a mantícora e a quimera ficaram de fora (os traços "pede prata" e "atira" não estão na lista fechada); o chefe não foge com metade do PV (a fase "foge" não existe); o golem bate com a cauda da tabela dos bichos (1d10 de impacto), e a mesa lê "punho de barro"; o senhor vampiro só lança de longe (o bicho que lança usa o corpo quando alcança). O bando que foge não se junta a outro covil; o necromante e a bruxa do brejo não têm covil próprio.
+- **A meta da patrulha goblin passa na beira** (vence 73%, o teto é 75; morre em 12,3%, o teto é 15): a janela desta luta é estreita, e o goblin ficou miúdo para caber nela.
+
+---
+
 ## Os comandos
 
 ```
@@ -1174,3 +1758,30 @@ python3 luta.py nova dados/cenario_exemplo.json lutas/corredor.json  ·  luta.py
 ```
 
 No cenário, cada pessoa veste `arma`, `arma2`, `armadura`, `elmo`, `escudo` e `pecas` (mais peças de armadura). Cada uma é o id de um item do Livro, ou um atalho para gente miúda: `["espada", "Raro"]`. O atalho de armadura veste o corpo e um elmo igual; `"elmo": false` tira o elmo. Quem é do mundo entra como `{"id": "tome"}`; um bicho, como `{"nome": "lobo 1", "bicho": "lobo"}`.
+
+A etapa da magia (capítulos 10 a 16):
+
+```
+python3 provas.py 600 magia                          só as metas da magia na luta (capítulo 11)
+python3 provas_talento.py 300 · provas_magia.py 300 · provas_criaturas.py 300      os bancos da etapa, sozinhos (o provas_mundo.py roda os três)
+python3 vila_teste.py magia PASTA [inclinacao=CAMINHO]      acrescenta a etapa da magia a uma vila de teste que já existe (só por eventos; recusa rodar duas vezes)
+
+python3 talento.py ver [ID] | mestre [ID]           o que a pessoa sabe de si · tudo (SÓ O MESTRE)
+python3 magia_mundo.py ver [ID] | estudar FEITICO com=PESSOA|escrito=ITEM|santuario|ermo [blocos=N] | voto lâmina|pobreza|socorro | laco ERMO | pacto | prece
+python3 magia_mundo.py paga N pv|divida | divida N pv|osso|erva | lancar cura|bênção|seiva [alvo=ID] [paga=N] | ler maldicao|dom|peca [ALVO|ITEM] [paga=N]
+python3 magia_mundo.py praga ALVO [tipo=míngua] ["Nome"] | agua N | benzer ARMA [paga=N] | tratar PACIENTE [paga=N] | jornal N | compra BEM N de=QUEM [preco=P]
+python3 magia_mundo.py santuario NIVEL|nada "como foi"          (o Mestre registra)
+python3 alquimia.py ver | pede POCAO CATEGORIA | fazer POCAO CATEGORIA [blocos=N] [nucleo=ID] | continua [OBRA] [blocos=N] | larga OBRA
+python3 alquimia.py beber POCAO:CAT|ELIXIR [alvo=ID] [maldicao=MID] | lamina [ARMA] [cat=K] | jornal N | botica NIVEL|nada "como foi"
+python3 encanto.py ver | pede foco FORMA CATEGORIA | pede amuleto CATEGORIA | fazer foco FORMA CATEGORIA ["Nome"] | fazer amuleto CATEGORIA ["Nome"]
+python3 encanto.py gravar ITEM FEITICO [para=DONO] [com=QUEM_SABE] [blocos=N] [nucleo=ID] | continua | larga OBRA | jornal N | runas NIVEL|nada "como foi"
+python3 maldicao.py ver [ALVO] | mestre [ALVO] | rito ALVO [MID] [paga=N] quem=CLERIGO | devolver ITEM | perdoa ALVO MID quem=QUEM_ROGOU | cumpre ALVO MID "como foi"
+python3 maldicao.py poe ALVO "Nome" CATEGORIA TIPO CONDICAO [de=...] [fonte=X] [rogou=ID] "como foi" | peca ITEM "Nome" CATEGORIA TIPO [onde=LUGAR] "como foi" | lugar "Nome" CATEGORIA TIPO "como foi"
+python3 mercado.py magia ["como foi"]                o Mestre abre a parte da magia do mercado (as poções, a água benta, os amuletos, os focos e o escrito)
+python3 criaturas.py lista | ver ESPECIE|CHEFE | ameaca ESPECIE [N] | tracos | mede ESPECIE|CHEFE NIVEL CATEGORIA [N] | covil [ERMO] | covil poe ERMO ESPECIE [cabecas=N] [tesouro=N] [chefe=sim]
+python3 caca.py sair ERMO alvo=toca                  procura a toca do covil (a rolagem é oculta)
+python3 itens.py nova foco FORMA CATEGORIA "Nome" | nova amuleto CATEGORIA "Nome" | nova elixir POCAO CATEGORIA "Nome" | nova escrito CATEGORIA "Nome" feiticos=seta,luz      (com um mundo, por evento "mestre")
+```
+
+Na luta (`ato.py luta roda`, `caca.py luta`, `luta.py roda`), as ordens novas: `lancar FEITICO [em ALVO | casa N] [sempre] [osso] [neblina|lama]` · `beber POCAO [em ALIADO]` · `usar [PECA] [em ALVO | casa N]`.
+No cenário, quem não vem do mundo veste também `"foco": ["cajado", "Raro"]` e `"amuleto": "Raro"`, e pode trazer `"feiticos"`, `"tradicao"`, `"tracos"`, `"fases"` e `"carga"`; a criatura entra como o bicho: `{"bicho": "goblin"}`.

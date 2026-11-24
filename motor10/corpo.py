@@ -6,7 +6,10 @@ Este script não grava nada: ele só diz QUAIS EFEITOS um bloco de tempo tem no 
   cada 3 pontos de cansaço tiram 1 do fôlego máximo;
   a ferida sara com dias de REPOUSO: não conta o dia de dois blocos pesados, nem o dia em que a pessoa lutou, nem o dia em que passou um bloco ou mais numa saída ao ermo;
   O DESCANSO EM CASA (`casa`): quem NÃO é o personagem cuida de si quando não está em cena. Passados 3 blocos ou mais do último bloco em cena, a fome, o sono e o cansaço voltam a zero;
-  a cada 6 blocos inteiros, uma noite de cura e um dia de repouso nas feridas. O personagem nunca descansa de graça.
+  a cada 6 blocos inteiros, uma noite de cura e um dia de repouso nas feridas (e a Mana de quem lança volta pela regra da tradição: magia_mundo.casa). O personagem nunca descansa de graça.
+  A MALDIÇÃO (etapa da magia) pesa no corpo: a pior pena das maldições que andam na pessoa soma com a pena do corpo (em todo teste e na luta); do passo 3 a noite
+  não devolve PV; do passo 4 as feridas não saram (e a Mana não volta fora da luta: quem faz a volta da Mana confere passo_maldicao).
+  O ENJOO da poção a mais (marca.enjoo) tira 2 de todo teste até o bloco que ele marca.
 
 Uso (para olhar): python3 corpo.py ver [ID]      o corpo de alguém (sem ID: o do personagem)
 """
@@ -14,13 +17,29 @@ import sys
 import tabelas_mundo as M
 
 
-def pena(p):
+def pena_corpo(p):
     """a pena do corpo de hoje (0 ou negativa): vale o pior dos três medidores"""
     pior = 0
     for m, faixas in M.PENAS.items():
         for limiar, v in faixas:
             if p['corpo'][m] >= limiar: pior = min(pior, v); break
     return pior
+
+
+def passo_maldicao(p): return max([m.get('passo', 1) for m in p.get('maldicoes') or [] if isinstance(m, dict)] + [0])       # o passo mais alto das maldições que andam na pessoa (0: nenhuma)
+def pena_maldicao(p): return min([M.MALDICAO_PENA.get(m.get('passo', 1), 0) for m in p.get('maldicoes') or [] if isinstance(m, dict)] + [0])       # das penas de maldição, vale a pior
+
+
+def pena_enjoo(p, t):
+    """o enjoo da poção a mais (marca.enjoo = {ate: bloco}): a pena dele enquanto o bloco de agora (t) não chegou ao fim; sem t, nada"""
+    m = (p.get('marca') or {}).get('enjoo')
+    return M.ENJOO_PENA if t is not None and isinstance(m, dict) and isinstance(m.get('ate'), int) and m['ate'] > t else 0
+
+
+def pena(p, t=None):
+    """a pena de todo teste hoje (0 ou negativa): a do corpo (o pior dos três medidores) mais a pior das maldições, e o enjoo da poção a mais
+    (quem chama passa o bloco de agora, t = estado.agora(E), para o enjoo contar)"""
+    return pena_corpo(p) + pena_maldicao(p) + pena_enjoo(p, t)
 
 
 def folego_menos(p): return p['corpo']['cansaco'] // M.CANSACO_FOLEGO
@@ -59,7 +78,7 @@ def bloco(E, pid, esforco='nada', dorme=None):
         q = M.SONO_CAMA if dorme == 'cama' else M.SONO_CHAO
         ef.append(['pessoa', pid, 'sono', 'soma', q]); ef.append(['pessoa', pid, 'cansaco', 'soma', M.CANSACO_CAMA if dorme == 'cama' else M.SONO_CHAO])
         hoje = p.get('marca', {}); curou = hoje.get('curou', 0) if hoje.get('curou_dia') == E['relogio']['dia'] else 0
-        if p['corpo']['fome'] < M.LIMIARES['fome'][0] and curou < M.CURA_DIA and p['pv'] < estado.pv_max(p):
+        if p['corpo']['fome'] < M.LIMIARES['fome'][0] and curou < M.CURA_DIA and p['pv'] < estado.pv_max(p) and passo_maldicao(p) < M.MALDICAO_SEM_NOITE:
             ef.append(['pessoa', pid, 'pv', 'soma', max(1, int(estado.pv_max(p) * M.CURA_BLOCO))])
             ef.append(['pessoa', pid, 'marca.curou_dia', 'poe', E['relogio']['dia']]); ef.append(['pessoa', pid, 'marca.curou', 'poe', curou + 1])
     else:
@@ -93,7 +112,7 @@ def virada(E, pid):
     import estado
     p = E['gente'][pid]; ef = []
     if p['corpo']['fome'] >= M.LIMIARES['fome'][1]: ef.append(['pessoa', pid, 'pv', 'soma', -max(1, int(estado.pv_max(p) * M.FOME_PV))])
-    if p['feridas'] and repousou(E, pid): ef += _repouso(p, pid, 1)
+    if p['feridas'] and repousou(E, pid) and passo_maldicao(p) < M.MALDICAO_SEM_SARAR: ef += _repouso(p, pid, 1)       # a maldição do passo 4 não deixa a ferida sarar
     return ef
 
 
@@ -109,15 +128,18 @@ def fora_de_cena(E, pid):
 def casa(E, pid):
     """O DESCANSO EM CASA: os efeitos do tempo que alguém que NÃO é o personagem passou fora de cena (quem aplica é o estado.em_cena, num evento só, quando a pessoa volta a agir).
     Conta-se do último bloco em que ela esteve em cena. 3 blocos ou mais: a fome, o sono e o cansaço voltam a zero (comeu e dormiu por conta própria). A cada 6 blocos inteiros (um dia): uma noite dormida de cura
-    (a mesma do personagem: CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas. Menos de 3 blocos: nada muda (ela ainda carrega o que a última saída deixou)."""
+    (a mesma do personagem: CURA_BLOCO × CURA_DIA do PV máximo) e um dia de repouso nas feridas; a Mana de quem lança, pelos módulos que têm o gancho "casa" (magia_mundo.casa).
+    Menos de 3 blocos: nada muda (ela ainda carrega o que a última saída deixou)."""
     import estado
     p = E['gente'][pid]; passou = fora_de_cena(E, pid)
     if p.get('jogador') or p['estado'] != 'vivo' or passou < M.CASA_ZERA: return []
     ef = [['pessoa', pid, m, 'soma', -p['corpo'][m]] for m in M.MEDIDORES if p['corpo'][m] > 0]; noites = passou // M.CASA_NOITE; cura = []
-    if noites and p['pv'] < estado.pv_max(p): cura.append(['pessoa', pid, 'pv', 'soma', noites * M.CURA_DIA * max(1, int(estado.pv_max(p) * M.CURA_BLOCO))])
-    if noites and p['feridas']: cura += _repouso(p, pid, noites)
+    if noites and p['pv'] < estado.pv_max(p) and passo_maldicao(p) < M.MALDICAO_SEM_NOITE: cura.append(['pessoa', pid, 'pv', 'soma', noites * M.CURA_DIA * max(1, int(estado.pv_max(p) * M.CURA_BLOCO))])
+    if noites and p['feridas'] and passo_maldicao(p) < M.MALDICAO_SEM_SARAR: cura += _repouso(p, pid, noites)
+    if noites:
+        for mod in estado.modulos('casa'): cura += mod.casa(E, pid, noites)       # a etapa da magia: a Mana que voltou nas noites em casa (magia_mundo.casa)
     visto = (p.get('marca') or {}).get('cena')
-    if cura and isinstance(visto, int): cura.append(['pessoa', pid, 'marca.cena', 'poe', visto + noites * M.CASA_NOITE])      # as noites contadas não se contam de novo; o que sobra do dia segue contando para a próxima
+    if (cura or (noites and passo_maldicao(p) >= M.MALDICAO_SEM_NOITE)) and isinstance(visto, int): cura.append(['pessoa', pid, 'marca.cena', 'poe', visto + noites * M.CASA_NOITE])      # as noites que a maldição comeu também não voltam      # as noites contadas não se contam de novo; o que sobra do dia segue contando para a próxima
     return ef + cura
 
 
@@ -131,4 +153,4 @@ if __name__ == '__main__':
     if p['estado'] != 'vivo': print(f"{p['nome']} {estado.morte_diz(E, p)}."); sys.exit()        # do morto só se diz que morreu: não tem fome, nem sono, nem forças
     casa_ = estado.em_cena(E, pid); p = E['gente'][pid]      # quem não é o personagem aparece como VOLTA À CENA agora (o descanso em casa); este comando só olha: nada é gravado
     print(f"{p['nome']} · PV {p['pv']}/{estado.pv_max(p)} · {diz(p)}" + (' · descansou em casa desde a última vez em cena' if casa_ else ''))
-    for f in p['feridas']: print(f"  ferida{' GRAVE' if f['grave'] else ''}: {f['parte']} (Dia {f['dia']}; {f['repouso']} de {M.FERIDA_DIAS[1 if f['grave'] else 0]} dias de repouso)")
+    for f in p['feridas']: print(f"  ferida{' GRAVE' if f['grave'] else ''}: {f['parte']} (Dia {f['dia']}; {estado.num(f['repouso'])} de {M.FERIDA_DIAS[1 if f['grave'] else 0]} dias de repouso)")

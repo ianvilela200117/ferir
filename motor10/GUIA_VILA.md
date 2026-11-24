@@ -8,13 +8,32 @@ A vila de teste é um mundo pequeno para experimentar o Motor 10 depois da etapa
 De dentro de `motor10/`:
 
 ```
-python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N]
+python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N] [inclinacao=CAMINHO]
 export MOTOR10_MUNDO=PASTA
 python3 turno.py abre
 ```
 
 A pasta tem de ser nova: o comando recusa escrever por cima. Tudo nasce por eventos `gera`, e o registro fica em `PASTA/eventos.jsonl`.
 Sem `comeco=`, o personagem é o guerreiro. Sem `nome=`: Aldo (ferreiro), Cira (caçadora), Maro (guerreiro).
+
+**Os talentos e os dons (etapa da magia).** A vila nova já nasce com eles: cada pessoa rola, pelo dado do mundo, o talento em cada caminho (Negado, Lerdo, Comum, Jeitoso, Prodígio:
+mexe na pressa de aprender e no teto da mão) e, raramente, um dom (+1 ou +2 num caminho só). A **INCLINAÇÃO** é a escolha do jogador para o personagem: `inclinacao=` um dos
+caminhos (`fio`, `haste`, `peso`, `tiro`, `forja`, `couro`, `caça`, `coleta`, `comércio`, `cura`, `alquimia`, `encanto`, `arcano`, `fé`, `verde`, `pacto`); naquele caminho o dado rola
+duas vezes e vale o melhor. Ninguém sabe o que tem: o talento aparece depois de 20 blocos no caminho; o dom, no teste em que fez a diferença (ou quando alguém o lê). O Mestre vê tudo no SÓ O MESTRE.
+
+**A etapa da magia numa vila que já existe** (o save de quem já joga, como o `ensaio/`):
+
+```
+python3 vila_teste.py magia PASTA [inclinacao=CAMINHO]
+```
+
+Acrescenta, só por eventos e sem recriar nada (recusa rodar duas vezes): os talentos e os dons de quem ainda não foi rolado (o personagem com a inclinação, se o jogador
+escolher uma: só vale enquanto o talento dele não foi rolado); **Anselmo**, o mago velho (arcano: a seta, o escudo, prender, a lança de fogo; cajado Incomum); **a botica de Nara**
+(a curandeira passa a ter a mão de Iniciante na alquimia); **o santuário** e **Lúcia**, a clériga (fé, voto do socorro: cura, benze, quebra maldição com rito); **a magia na loja**
+(as poções que a botica faz, as outras até a Incomum, a água benta, dois amuletos Comuns, uma varinha, um símbolo e a Cartilha do arcano); **Joana**, a bruxa
+da choupana na borda da mata (pacto: lê, amaldiçoa por encomenda, vende veneno de lâmina escondido); **o Grande Dom de forja do Zeca**, que ninguém leu; **a Cova Velha**, um
+ermo novo vizinho da vila (esqueletos e corpos-secos, e uma peça largada no chão que é maldita); e **a toca dos goblins** na Mata do Corvo (um bando pequeno, com um tesouro miúdo
+que é o que ele rouba da vila).
 
 ## O que há
 
@@ -86,6 +105,10 @@ O Mestre abre com `python3 turno.py abre`: a `MESA.md` traz o personagem, o luga
 | conferir | `estado.py valida` · `estado.py pessoa ID` (quem não é o personagem aparece como volta à cena agora) · `corpo.py ver` · `estado.py eventos` · `caca.py conta` (só o Mestre) |
 | as respostas do jogador | `turno.py responde "1a.2b"` (vale como ele escreve: "1c.2 a", "1c, 2a", "1c 2a") |
 | fechar o turno | `turno.py pergunta "texto" "a=..." "b=..."` (duas, pelo menos; o comando diz o número que a pergunta terá na lista do RETOMAR) · `turno.py fecha "o que houve"` |
+| a magia (etapa da magia) | `magia_mundo.py ver` · `estudar FEITICO com=PESSOA` · `lancar cura\|bênção\|seiva [alvo=ID] [quem=ID]` · `ler maldicao\|dom\|peca [ALVO]` · `tratar PACIENTE` · `voto` · `laco` · `pacto` · `prece` (só o personagem paga serviço: o preço da tabela, ou `paga=N`; o que se faz pela gente da vila sai de graça) |
+| as poções | `alquimia.py ver` · `alquimia.py beber cura:0 [alvo=ID]` · `alquimia.py pede cura Comum` · `alquimia.py fazer cura Comum` · `alquimia.py lamina` (o veneno na arma); na luta, a ordem `beber cura:0` |
+| a maldição | `maldicao.py ver` (o que a pessoa sabe) · `maldicao.py rito ALVO quem=lucia` · `maldicao.py devolver ITEM` · `maldicao.py mestre` (SÓ O MESTRE) |
+| o encanto e as criaturas | `encanto.py ver\|pede\|fazer\|gravar` (pede mesa de runas: a vila de teste não tem) · `criaturas.py lista\|ver\|ameaca` · na luta, `lancar FEITICO [em ALVO]` e `usar [PECA]` |
 
 Enquanto há uma luta aberta, o mundo não anda: todo outro ato é recusado, de qualquer pessoa, até a luta acabar ou o Mestre a soltar (`ato.py luta larga ARQ.json "por quê"`; na caça, `caca.py larga "por quê"`). A recusa diz como seguir.
 Com a luta aberta, a última linha de cada comando diz só a hora: o PV, o fôlego e as feridas que valem são os do quadro da luta. De quem morreu, a última linha diz só a hora e a morte.
@@ -100,6 +123,7 @@ Só sai da luta quem recua para longe de inimigo de pé: se o último bicho cai 
 
 - **O corpo dele anda com o seu.** Quem vai junto passa os mesmos blocos da saída, com o mesmo esforço: tem fome, sono e cansaço, e a pena do corpo entra na luta dele.
 - **Em casa ele cuida de si.** Ninguém precisa mandar o companheiro comer nem dormir. Quando ele volta à cena (você o chama de novo com `com=`, ou o Mestre o faz agir com `quem=`), o motor acerta primeiro o tempo que ele passou na vila, contado do último bloco em que esteve em cena. Passados **3 blocos ou mais** (dois blocos inteiros em casa), a fome, o sono e o cansaço voltam a zero. A cada **6 blocos** (um dia), ele ganha uma noite de cura (um décimo do PV) e um dia de repouso nas feridas. Não custa prata.
+- **A Mana também volta em casa** (etapa da magia). A cada dia inteiro na vila, quem lança recobra a Mana como quem dorme dois blocos e passa o resto parado: Anselmo, de Mana 0, volta com 14 dos 19. Lúcia reza a prece do dia no santuário e enche; Joana, sozinha, só até a metade. Gastar a Mana (a cura, a bênção) é estar em cena: o dia já contado não enche de novo. `magia_mundo.py ver anselmo` mostra como ele volta agora.
 - **Dois blocos em casa bastam para o corpo; a cura pede um dia.** Uma saída de 4 blocos (a ida, 2 de procura, a volta) e 2 blocos de sono fecham um dia redondo para o personagem, e o companheiro descansa junto: quem volta à meia-noite e sai de novo às 8h vai de corpo zerado. Com um bloco só em casa, ou saindo logo em seguida, ele leva o que a última saída deixou. E quem sai todo dia não ganha a noite de cura: para o PV e a ferida, deixe-o um dia inteiro na vila.
 - **A mesa avisa.** Ao abrir a saída, sai uma linha de ATENÇÃO se quem vai junto não vai inteiro (ferida aberta, PV abaixo de 90%, ou o corpo cobrando), e a `MESA.md` traz o estado dele enquanto a saída está aberta. Para olhar antes de chamar: `estado.py pessoa rute` mostra como ela volta à cena agora.
 - **No ermo ele come sozinho,** se tem comida na carga, quando a fome chega a 4 (sai uma linha na mesa). A comida dele vem da parte dele no despojo. O personagem come quando você manda (`ato.py comer carga`).
@@ -113,16 +137,33 @@ Só sai da luta quem recua para longe de inimigo de pé: se o último bicho cai 
 - **Dia 3:** vendeu a adaga velha por 3 (a adaga vale 10, a loja paga 40% pelas peças e já tinha uma), saiu com a Rute atrás de javali. O javali fugiu por um fio; seguiu o sangue e o achou. Comeu da própria carga. Despojo: 5 de comida, 2 de couro, 1 de osso: 5 de prata na loja. Cama: 2.
 - **A conta:** de 30 para 33 de prata em três dias. Entraram 17 (5 da corça, 4 da jornada, 3 da adaga, 5 do javali) e saíram 14 (três refeições, 3; três noites de cama, 6; o metal, 4; o conserto do arco, 1). A caça pagou a cama e a comida e pouco mais, e a adaga vendida quase pagou o metal da nova. (A venda da adaga e a jornada foram refeitas pela regra de hoje: quando este diário foi jogado, toda arma Comum valia 30 e a loja pagou 12 pela adaga, e o terceiro bloco de trabalho ainda era pago.)
 
+## As criaturas e a toca (etapa da magia)
+
+- **A patrulha.** Os goblins da toca andam pela Mata do Corvo de dois a quatro, de faca; contam no ermo como os bichos (aparecem no rastro e no acaso, e a ameaça se lê antes:
+  `bichos.py ameaca goblin`). O guerreiro de nível 5 vence a patrulha cerca de 7 vezes em 10, e morre em cerca de 1 em 8; contra quatro, já é briga feia. O goblin é covarde:
+  ferido ou com o bando caindo, foge ou se rende (quem se rende a quem fica com o campo sai da contagem).
+- **A toca.** `caca.py sair mata alvo=toca` procura a toca do bando (a rolagem é oculta: ninguém sabe de graça se há toca). Dentro dela estão todos: o capataz (atrás da linha,
+  de lança), os de faca, os de lança e escudo, os de arco. **Sozinho, o personagem de começo morre lá.** Com Tomé e Rute (`com=tome,rute`), de dia e vendo primeiro, a casa costuma
+  ficar com o campo. Quem fica com o campo na toca leva o tesouro (a prata e a comida que o bando roubou), repartido entre quem lutou até o fim. Caído o capataz, o bando racha
+  e outro sobe em uns dias. O goblin morto não deixa peça que preste: a faca e o couro dele são gastos e malfeitos, e viram sucata (1 de metal e 1 de couro Comuns).
+- **A vida da toca.** Todo dia o bando come da caça da mata, a cada semana pode roubar da vila (a comida e, às vezes, a prata, que vão para a toca), e cria devagar até 16.
+  A toca que ninguém incomoda por um mês cheio ganha **o xamã goblin**: amaldiçoa de longe, gela a coragem, bebe o sangue de quem fere, e uiva quando ferido (os goblins ganham coragem).
+- **A Cova Velha.** Esqueletos (a ponta e o fio passam entre os ossos: pede maça) e corpos-secos (agarram e não sentem). Os mortos não fogem nem criam. Quem passa um rastro
+  lá acha a peça largada; quem a puser em uso pega a maldição dela (a Mão Fria), e a mão não a larga mais (tirar e trocar de arma são recusados); só se quebra devolvendo a peça à cova, ou com o rito de Lúcia. A loja não a compra
+  (o mercador pega para avaliar e larga depressa). Quem já sabe de onde ela é (alguém leu a maldição) e sai à cova levando-a para na chegada: `maldicao.py devolver ITEM`.
+- **Os outros.** `criaturas.py lista` mostra as 19 criaturas e os 5 chefes mágicos (o xamã goblin, o senhor da guerra orc, o necromante, a bruxa do brejo, o senhor vampiro);
+  `criaturas.py ver NOME` dá a ficha. Fora da vila de teste, o Mestre funda um covil com `criaturas.py covil poe ERMO goblin` (ou `orc`).
+
 ## O que ainda NÃO existe
 
 - **Viagem.** Só há a vila e o ermo vizinho. Estrada, rota e dormir no mato por escolha são da etapa 3.
 - **Gente com rotina.** Os oito têm nome e ficha de luta, mas não agem sozinhos, não compram e não lembram. O corpo deles só anda quando estão em cena; fora de cena, descansam em casa (ver "Quem vai junto"), sem gastar prata nem comida da vila.
-- **Missões, encomendas e clientes.** Ninguém pede nada, e ninguém além do personagem compra peça: a prateleira não escoa. Por isso a loja farta não desenche sozinha: depois de três ou quatro peças vendidas, só volta a pagar bem quando alguém compra da prateleira.
-- **Magia e encanto de peça.**
+- **Missões, encomendas e clientes.** Ninguém pede nada, e ninguém além do personagem compra peça: a prateleira não escoa. Ninguém procura serviço de magia: a bênção, a cura e a leitura que o personagem faz pela gente da vila saem de graça (a renda da magia é o jornal do santuário e da botica). Por isso a loja farta não desenche sozinha: depois de três ou quatro peças vendidas, só volta a pagar bem quando alguém compra da prateleira.
+- **Magia em todo lado, ainda não:** a magia na luta, o estudo, a alquimia, a maldição e o encanto são da etapa da magia (os capítulos 10 a 16); a vila de teste antiga só os ganha com `vila_teste.py magia`.
 - **Morte com herdeiro.** O personagem morre de vez; o que era dele cai onde morreu, e não passa a ninguém sem uma decisão de cena; a `MESA.md` diz que morreu. O herdeiro, a família que cobra e o nêmesis são da etapa 6.
 - **Paga de companheiro.** Quem vai junto numa saída não pede prata nem recusa o perigo: leva a parte dele do despojo, e só.
 - **Peso e teto de carga;** comida que estraga.
-- **Bicho que vem à vila;** caçadores do povo; rivais.
+- **Bicho que vem à vila;** caçadores do povo; rivais. O bando de goblins rouba de noite, mas não ataca a vila nem gente na rua: o roubo é contado, não jogado.
 - **Tempo de céu** (chuva, neblina): só entra na luta se o Mestre puser no cenário.
 
 ## O que olhar para dar opinião

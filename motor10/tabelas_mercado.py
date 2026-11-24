@@ -21,12 +21,34 @@ BASE_MATERIA = dict(metal=3, couro=2, osso=1, madeira=2, erva=2)       # a maté
 MATERIA_VEZES = M.PECA_VEZES                                            # ... vezes isto a cada categoria (como as peças): metal Comum 3, Incomum 18, Raro 108
 
 
+# OS BENS DA MAGIA (etapa da magia): as poções do Comum ao Raro (tabelas_mundo.POCOES: "cura:0" ... "quebra-maldição:2"), a peçonha (a matéria do bicho de veneno) e a água benta.
+# Ficam FORA de bens(): o mercado que o gerador abre (funda) é o de sempre; a parte da magia abre-se à parte (mercado.funda_magia), onde há magia.
+POCAO_BASE = {n: M.POCAO_BASE for n in M.POCOES}         # a poção Comum: 6 de prata (a matéria da leva, 2 de erva por dose, fica em dois terços disto)...
+POCAO_VEZES = M.PECA_VEZES                                # ... vezes isto a cada categoria (36 a Incomum, 216 a Rara). Do Épico para cima é elixir: item contado, sem loja
+BASE_MAGIA = {'água benta': 3}                            # os bens novos sem categoria (o clérigo benze 1 de erva com 2 de Mana)
+BASE_MAGIA_MATERIA = {'peçonha': 2}                       # a matéria nova, Comum (vezes MATERIA_VEZES por categoria, até o Raro)
+CRIME = ('veneno',)                                       # A LOJA NÃO NEGOCIA o veneno de lâmina: é crime nas vilas (quem vende é a bruxa, de pessoa a pessoa). O preço de base serve à conta dela
+
+
 def base(bem):
-    """o preço de base de um bem ou de uma matéria ("metal:1"), ou None se a loja não sabe o que é"""
+    """o preço de base de um bem ou de uma matéria ("metal:1"), ou None se a loja não sabe o que é (as poções e a peçonha até o Raro, e a água benta, também)"""
     if bem in BASE: return BASE[bem]
+    if bem in BASE_MAGIA: return BASE_MAGIA[bem]
     nome, cat = M.le_materia(bem)
-    if cat is None or nome not in BASE_MATERIA or cat > M.MATERIA_ATE: return None
+    if cat is None or cat > M.MATERIA_ATE: return None
+    if nome in POCAO_BASE and cat <= M.POCAO_ATE: return POCAO_BASE[nome] * POCAO_VEZES ** cat
+    if nome in BASE_MAGIA_MATERIA: return BASE_MAGIA_MATERIA[nome] * MATERIA_VEZES ** cat
+    if nome not in BASE_MATERIA: return None
     return BASE_MATERIA[nome] * MATERIA_VEZES ** cat
+
+
+def bens_magia():
+    """os bens da magia que a loja negocia, na ordem da mesa: as poções por categoria (menos o veneno, que é crime), a água benta, a peçonha por categoria"""
+    return [M.materia(n, c) for c in range(M.POCAO_ATE + 1) for n in M.POCOES if n not in CRIME] + list(BASE_MAGIA) + [M.materia(n, c) for c in range(M.MATERIA_ATE + 1) for n in BASE_MAGIA_MATERIA]
+
+
+def e_magia(bem): n, _ = M.le_materia(bem); return bem in BASE_MAGIA or n in POCAO_BASE or n in BASE_MAGIA_MATERIA      # é bem da magia? (fica fora da mesa e do gerador de sempre)
+def de_beber(bem): n, c = M.le_materia(bem); return bem == 'água benta' or (n in POCAO_BASE and c is not None)            # é de usar (poção, água benta)? "vender tudo" não leva
 
 
 def bens():
@@ -47,10 +69,18 @@ CONSUMO_CAT = 6                                                                 
 CONSUMO_ESTACAO = {'lenha': [1, 0.75, 1, 1.5]}  # o consumo que muda com a estação (primavera, verão, outono, inverno): no inverno queima-se metade a mais de lenha
 
 
+CONSUMO_POCAO = {'cura': 0.0005, 'antídoto': 0.00017, 'vigília': 0.0001, 'quebra-maldição': 0.0001}     # o povo gasta pouco (a poção Comum; dividida por CONSUMO_CAT a cada categoria):
+                                                                                                        # a vila de 400 quer 6 de cura, 2 de antídoto, 1 de vigília e 1 de quebra-maldição Comuns, e 1 de cura Incomum.
+                                                                                                        # As outras (Mana, guarda, fúria) o povo não gasta: o alvo é o mínimo
+CONSUMO_MAGIA = {'água benta': 0.0005}          # a água benta que o povo gasta (a vila de 400 quer 6)
+
+
 def consumo(bem):
     """o que UMA pessoa gasta deste bem por dia (0 se o povo não o gasta)"""
     if bem in CONSUMO: return CONSUMO[bem]
+    if bem in CONSUMO_MAGIA: return CONSUMO_MAGIA[bem]
     nome, cat = M.le_materia(bem)
+    if cat is not None and nome in CONSUMO_POCAO and cat <= M.POCAO_ATE: return CONSUMO_POCAO[nome] / CONSUMO_CAT ** cat
     if cat is None or nome not in CONSUMO_MATERIA or cat > M.MATERIA_ATE: return 0
     return CONSUMO_MATERIA[nome] / CONSUMO_CAT ** cat
 
@@ -109,6 +139,14 @@ _INCOMUNS = [('arma', 'espada', 1, None), ('arma', 'lança', 1, None), ('armadur
 PRATELEIRA = dict(vila=_COMUNS + _INCOMUNS,
                   cidade=_COMUNS + _INCOMUNS + [('arma', 'machado', 1, None), ('arma', 'arco', 1, None), ('arma', 'montante', 1, None), ('armadura', 'malha', 1, None), ('armadura', 'malha', 1, ['cabeça'])])
 def prateleira_de(tipo): return PRATELEIRA.get(tipo, PRATELEIRA['vila'])        # a prateleira com que nasce a loja de um lugar deste tipo
+# A PRATELEIRA DA MAGIA (etapa da magia: mercado.funda_magia, no lugar que já tem mercado): (tipo, forma ou feitiços, categoria, nome). Conta junto no alvo de peças
+# da categoria (a loja farta): o foco, o amuleto e o escrito são peças para a loja, pagas como peça (40%, mais a mão de comércio), e também enchem a prateleira
+PECAS_MAGIA = ('foco', 'amuleto', 'escrito')        # o que a loja negocia além de arma, armadura e escudo (o elixir não: é contado, sem loja; o núcleo também não)
+_MAGIA_VILA = [('amuleto', None, 0, None), ('amuleto', None, 0, None), ('foco', 'varinha', 0, None), ('foco', 'símbolo', 0, None), ('escrito', ['seta', 'luz'], 0, 'Cartilha do arcano')]
+PRATELEIRA_MAGIA = dict(vila=_MAGIA_VILA,
+                        cidade=_MAGIA_VILA + [('foco', 'cajado', 0, None), ('foco', 'talismã', 0, None), ('amuleto', None, 1, None), ('foco', 'varinha', 1, None), ('foco', 'símbolo', 1, None),
+                                              ('escrito', ['cura', 'bênção', 'amparo'], 0, 'Breviário da fé'), ('escrito', ['raízes', 'espinho', 'névoa'], 0, 'Folhas do verde'), ('escrito', ['lança-de-fogo'], 1, 'Tratado do fogo')])
+def prateleira_magia_de(tipo): return PRATELEIRA_MAGIA.get(tipo, PRATELEIRA_MAGIA['vila'])
 def alvo_pecas(tipo):
     """{categoria: quantas peças} a loja de um lugar deste tipo quer ter na prateleira: o que o gerador põe nela ao abrir a loja"""
     quer = {}

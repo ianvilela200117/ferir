@@ -155,3 +155,69 @@ MORAL_LIDER = 2             # com o líder de pé
 MORAL_MAIS = 2              # o lado dele tem mais gente de pé
 MORAL_MENOS = -4            # o outro lado tem o dobro
 MORAL_QUEBRA = 10           # falhar por isto ou mais: quebra de uma vez
+
+# ---------- a magia: A BASE COMUM (etapa da magia; as duas frentes leem daqui, e a frente da luta afina os SEUS números no tabelas_magia.py) ----------
+# A magia usa a conta do aço, linha por linha: o foco é a arma de quem lança, o amuleto é a armadura contra a magia, e só a diferença de categoria conta.
+TRADICOES = {'arcano': 'Afinidade', 'fé': 'Vontade', 'verde': 'Percepção', 'pacto': 'Afinidade'}     # as quatro tradições e o atributo da Conjuração de cada uma
+FOCOS = {   # a forma do foco: mãos · vezes o valor da categoria (o cajado, como toda arma de duas mãos) · o que pede (por atributo, nunca por nível) · de que tradições é
+    'varinha': dict(maos=1, vezes=1.0, pede=('Afinidade', 40), de=('arcano',)),
+    'cajado':  dict(maos=2, vezes=DUAS_MAOS, pede=('Afinidade', 60), de=('arcano', 'verde'), apara=True, dado='1d6', golpe='impacto'),     # o cajado apara (o bônus da categoria) e bate como arma leve
+    'símbolo': dict(maos=1, vezes=1.0, pede=('Vontade', 60), de=('fé',)),
+    'talismã': dict(maos=1, vezes=1.0, pede=('Vontade', 40), de=('pacto',)),
+}
+GUARDA_ARMADURA = 0.6       # sem amuleto, a armadura do tronco (e o couro do bicho) guarda contra a magia esta fração do valor dela (decisão do jogador, M1 a)
+GUARDA_NU = NU              # sem amuleto e sem armadura no tronco: um terço
+def guarda(amuleto_cat=None, tronco_cat=None):
+    """a guarda contra a magia: o valor do amuleto, ou 0,6 do valor da armadura do tronco, o que for maior; sem um nem outro, um terço. O material e a parte do corpo não contam."""
+    g = [MULT[amuleto_cat]] if amuleto_cat is not None else []
+    if tronco_cat is not None: g.append(RD[tronco_cat] * GUARDA_ARMADURA)
+    return max(g) if g else GUARDA_NU
+FIRMEZA_BASE = 22           # a Firmeza é a Defesa da cabeça: a mesma forma da Defesa do corpo
+def conjuracao(maestria, atributo, foco_cat, dom=0):
+    """o acerto de quem lança: a maestria da tradição, o dom nela, metade do bônus do atributo da tradição e o bônus do foco"""
+    return maestria + dom + (atributo // 10) / 2 + BON[foco_cat]
+def firmeza(vontade, maestria_maior, amuleto_cat=None, tronco_cat=None, dom=0):
+    """contra o que prende, assusta ou amaldiçoa: 22, metade do bônus de Vontade, metade da maior maestria da pessoa, metade do dom de tradição, e o melhor entre o bônus
+    do amuleto e metade do bônus da armadura do tronco (como na guarda: o amuleto fraco não tira o que a armadura boa já dava). O calejo da luta soma por cima (é da frente da luta)."""
+    b = [BON[amuleto_cat]] if amuleto_cat is not None else []
+    if tronco_cat is not None: b.append(BON[tronco_cat] / 2)
+    return FIRMEZA_BASE + (vontade // 10) / 2 + maestria_maior / 2 + dom / 2 + (max(b) if b else 0)
+def mana_max(afinidade, vontade, maestria, dom=0): return (afinidade + vontade) // 10 + maestria + dom      # o fôlego da magia: (Afinidade + Vontade) ÷ 10, a maestria da tradição e o dom nela
+CURA_K = 6                  # a lei ao contrário: a cura devolve dado × 6 × 3 elevado a (categoria da cura − categoria da ferida mais funda)
+def cura(dado, cat_cura, cat_funda): return dado * CURA_K * 3 ** (cat_cura - (cat_funda or 0))
+CURA_TETO = 0.5             # por pessoa e por dia, feitiço e poção somados não devolvem mais que esta fração do PV máximo
+def doses_dia(vigor): return max(1, vigor // 30)        # quantas poções se bebem por dia sem enjoar
+ENJOO = (24, 4)             # cada poção além disso: Vigor contra 24 + 4 por poção a mais; falhou, a poção não faz nada e a pessoa enjoa
+# OS FEITIÇOS (os 24 e o truque): o nome, a tradição, o grau (0 é o truque), a Mana que custa e se se lança fora da luta. Estes nomes, tradições, graus e custos não mudam
+# na onda 2 (o mundo aprende e gasta por eles); os números de luta (alcance, contra o quê, dano, o que põe) moram no tabelas_magia.FEITICOS, com as mesmas chaves.
+FEITICOS = {
+    'luz':              dict(de='todas',  grau=0, mana=1, fora=True),     # tira o escuro do campo; 1 de Mana por rodada a mais
+    'seta':             dict(de='arcano', grau=1, mana=2, fora=False),
+    'prender':          dict(de='arcano', grau=1, mana=3, fora=False),
+    'escudo':           dict(de='arcano', grau=1, mana=2, fora=False),
+    'lança-de-fogo':    dict(de='arcano', grau=2, mana=4, fora=False),
+    'bola-de-fogo':     dict(de='arcano', grau=2, mana=6, fora=False),
+    'raio':             dict(de='arcano', grau=3, mana=6, fora=False),
+    'cura':             dict(de='fé',     grau=1, mana=3, fora=True, dado='1d8'),
+    'bênção':           dict(de='fé',     grau=1, mana=2, fora=True),     # fora da luta: dada antes dela
+    'amparo':           dict(de='fé',     grau=1, mana=2, fora=True),
+    'castigo':          dict(de='fé',     grau=2, mana=4, fora=False),
+    'guarda':           dict(de='fé',     grau=2, mana=6, fora=False),
+    'quebrar-maldição': dict(de='fé',     grau=3, mana=6, fora=True),     # rito de 1 bloco, fora da luta
+    'raízes':           dict(de='verde',  grau=1, mana=3, fora=False),
+    'espinho':          dict(de='verde',  grau=1, mana=2, fora=False),
+    'névoa':            dict(de='verde',  grau=1, mana=2, fora=False),    # névoa ou lamaçal: quem lança escolhe neblina ou lama; 1 de Mana por rodada a mais
+    'afugentar':        dict(de='verde',  grau=1, mana=3, fora=False),
+    'seiva':            dict(de='verde',  grau=2, mana=4, fora=True),     # fora da luta: dobra a cura da noite
+    'chamar':           dict(de='verde',  grau=3, mana=6, fora=False),
+    'mau-olhado':       dict(de='pacto',  grau=1, mana=2, fora=False),
+    'medo':             dict(de='pacto',  grau=1, mana=3, fora=False),
+    'sangria':          dict(de='pacto',  grau=1, mana=2, fora=False),
+    'ler':              dict(de='pacto',  grau=1, mana=2, fora=True),     # rito de 1 bloco: lê uma maldição, um dom ou uma peça
+    'nó':               dict(de='pacto',  grau=2, mana=4, fora=False),
+    'praga':            dict(de='pacto',  grau=3, mana=6, fora=True),     # rito de 1 bloco, com um laço: põe uma maldição (e soma dívida)
+}
+def nome_feitico(k): return k if k == 'mau-olhado' else k.replace('-', ' ')      # o nome à mesa: "lança de fogo", "quebrar maldição", "mau-olhado"
+# OS TRAÇOS NOVOS (a lista fechada que a luta roda nesta etapa). NÃO entram no tabelas_bichos.TRACOS (a meta da etapa 2 sobre a lista dos bichos fica como está):
+# a frase de cada um mora na página das criaturas (tabelas_criaturas.TRACOS); os números, na página da magia na luta (tabelas_magia)
+TRACOS_NOVOS = ('resiste', 'imaterial', 'amaldiçoa', 'lança', 'sem vida', 'ossos', 'dreno', 'ardente', 'noturno')

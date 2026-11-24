@@ -39,9 +39,13 @@ MATERIA_ARMADURA = dict(couro=('couro', 1), malha=('metal', 1), placa=('metal', 
 PARTE_PESO = M.PARTE_PESO                                                               # cabeça 1, tronco 2, braços 1, pernas 1 (tabelas_mundo: o mercado usa o mesmo peso no preço)
 MATERIA_ESCUDO = M.MATERIA_ESCUDO                                                       # 2 de madeira e 1 de metal (tabelas_mundo)
 OFICIO_COURO = ('couro',)   # as armaduras deste material são do ofício "couro"; todo o resto é da "forja"
+PECAS_ENCANTO = ('foco', 'amuleto')     # (etapa da magia) o foco e o amuleto se fazem no ofício do ENCANTO, na mesa de runas, com os blocos, o teste e a falha da forja
+# A BANCADA DE CADA OFÍCIO (etapa da magia): o campo do lugar que é a bancada dele (0 a 4; o lugar sem o campo não a tem), e o tipo de evento do trabalho nela
+BANCA = dict(forja='oficina', couro='oficina', encanto='runas', alquimia='botica', fé='santuario')
+EVENTO_OFICIO = dict(encanto='encantar', alquimia='alquimia', fé='rito')        # o evento do bloco de bancada (a forja e o couro: o tipo da obra, forjar ou ajustar)
 
 
-def oficio_da(tipo, material=None): return 'couro' if tipo == 'armadura' and material in OFICIO_COURO else 'forja'
+def oficio_da(tipo, material=None): return 'encanto' if tipo in PECAS_ENCANTO else 'couro' if tipo == 'armadura' and material in OFICIO_COURO else 'forja'
 def cat_materia(cat): return min(cat, M.MATERIA_ATE)        # a categoria da matéria que a obra gasta
 def pede_nucleo(cat): return cat > M.MATERIA_ATE
 
@@ -49,6 +53,8 @@ def pede_nucleo(cat): return cat > M.MATERIA_ATE
 def materia(tipo, cat, familia=None, material=None, cobre=None):
     """{chave "nome:categoria": quanto} que a peça gasta"""
     if tipo == 'arma': base = MATERIA_ARMA[familia]
+    elif tipo == 'foco': base = M.MATERIA_FOCO[familia]             # o foco: a forma vem no lugar da família (varinha, cajado, símbolo, talismã)
+    elif tipo == 'amuleto': base = M.MATERIA_AMULETO
     elif tipo == 'armadura':
         nome, por = MATERIA_ARMADURA[material]; base = {nome: por * sum(PARTE_PESO[x] for x in (cobre or ['tronco', 'braços', 'pernas']))}
     else: base = MATERIA_ESCUDO

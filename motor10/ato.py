@@ -7,6 +7,9 @@ como quem espera (a fome e o sono sobem); se ele cruza um limiar, o ato do outro
 QUEM NÃO É O PERSONAGEM CUIDA DE SI QUANDO NÃO ESTÁ EM CENA: ao voltar a agir, o tempo que passou em casa é acertado antes de mais nada (estado.em_cena; corpo.casa).
 QUEM MORREU NÃO AGE, e quem saiu para o ermo (a saída de caça ou de coleta aberta) não age na vila: o ato é recusado antes de cobrar qualquer coisa.
 COM UMA LUTA ABERTA O MUNDO NÃO ANDA: até ela acabar (ou o Mestre a soltar), todo ato é recusado, de qualquer pessoa, fora os da própria luta.
+DA ETAPA DA MAGIA: a maestria das armas sobe pelos blocos vezes o TALENTO, até o teto dele (talento.py); o foco e o amuleto se vestem (foco, pescoço);
+cada bloco passa também pelos módulos que têm bloco() (a volta da Mana); vestir passa pelos que têm vestiu() (a peça maldita); a luta que volta ao estado leva
+também a Mana, as poções e as doses gastas, os elixires, os encantos soltos, as maldições postas e as marcas.
 
 Uso (o personagem do jogador, ou quem=ID):
   python3 ato.py comer [carga]            uma refeição do lugar (1 de prata; fome −3; não gasta bloco). `carga`: come 1 de comida da própria carga, sem pagar
@@ -28,7 +31,7 @@ Uso (o personagem do jogador, ou quem=ID):
 import json, math, os, sys
 import tabelas as T
 import tabelas_mundo as M
-import estado, corpo
+import estado, corpo, talento
 from itens import rotulo
 
 
@@ -65,9 +68,9 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
         ve = espera(E, pid, junto); todos = [pid] + junto + ([ve] if ve else [])     # ve: o personagem, que espera enquanto outro age
         antes = corpo.faixas(p); antes_ve = corpo.faixas(E['gente'][ve]) if ve else None
         ultimo = E['relogio']['bloco'] == M.BLOCOS_DIA - 1; lid = estado.onde(E, pid)
-        ef = corpo.bloco(E, pid, esforco, dorme)
-        for c in junto: ef += corpo.bloco(E, c, esforco, dorme)
-        if ve: ef += corpo.bloco(E, ve, 'nada')
+        ef = corpo.bloco(E, pid, esforco, dorme) + _bloco_dos_modulos(E, pid, esforco, dorme)
+        for c in junto: ef += corpo.bloco(E, c, esforco, dorme) + _bloco_dos_modulos(E, c, esforco, dorme)
+        if ve: ef += corpo.bloco(E, ve, 'nada') + _bloco_dos_modulos(E, ve, 'nada', None)
         ef += (mais(i) if mais else [])
         if not ultimo: estado.aplica(E, tipo, ef + [['relogio', 1]], onde=lid, quem=[pid] + junto, texto=texto)
         else:                                               # o último bloco do dia: o bloco, e depois a virada (com o relógio)
@@ -108,15 +111,14 @@ def passa(E, pid, blocos, tipo, esforco='nada', dorme=None, texto='', mais=None,
     return feitos, porque
 
 
+def _bloco_dos_modulos(E, pid, esforco, dorme):
+    """os efeitos de UM bloco que os módulos do mundo põem em quem age, vai junto ou espera (a volta da Mana fora da luta: a frente do mundo da magia)"""
+    return [x for mod in estado.modulos('bloco') for x in (mod.bloco(E, pid, esforco, dorme) or [])]
+
+
 def _mundo_vira(E):
-    """o dia virou: cada módulo do mundo que tiver virada(E) roda a sua parte (o mercado produz e consome, os bichos criam...)"""
-    import importlib
-    for nome in M.MODULOS:
-        try: mod = importlib.import_module(nome)
-        except ModuleNotFoundError as e:
-            if e.name != nome: raise
-            continue
-        if hasattr(mod, 'virada'): mod.virada(E)
+    """o dia virou: cada módulo do mundo que tiver virada(E) roda a sua parte (o mercado produz e consome, os bichos criam, a maldição anda...)"""
+    for mod in estado.modulos('virada'): mod.virada(E)
 
 
 def comer(E, pid, da_carga=False):
@@ -210,8 +212,13 @@ def treinar(E, pid, blocos, arma):
 def _sobe_maestria(E, pid, arma):
     """a maestria sobe quando os blocos chegam; de Mestre para cima, só com um FEITO registrado (marca.feito_ARMA)"""
     p = E['gente'][pid]; tem = p.get('maestria', {}).get(arma, 0); blocos = p.get('treino', {}).get(arma, 0); txt = ''
-    for grau, pede in sorted(M.MAESTRIA_BLOCOS.items()):
-        if grau <= tem or blocos < pede: continue
+    for grau in sorted(M.MAESTRIA_BLOCOS):
+        pede = talento.pede(p, arma, M.MAESTRIA_BLOCOS, grau)                # os blocos vezes o talento da mão desta arma
+        if grau <= tem: continue
+        if pede is None:
+            if blocos >= M.MAESTRIA_BLOCOS[grau]: txt = f' (a mão não sobe mais em {arma}: o talento para em {T.MAESTRIAS[talento.teto(p, arma)]})'
+            break
+        if blocos < pede: continue
         if grau >= M.MAESTRIA_FEITO and p.get('marca', {}).get(f'feito_{arma}', 0) < grau: txt = f' (tem os blocos para {T.MAESTRIAS[grau]}; falta o feito)'; break
         estado.aplica(E, 'treinar', [['pessoa', pid, 'maestria.' + arma, 'poe', grau]], onde=p['lugar'], quem=[pid], texto=f"{p['nome']} chega a {T.MAESTRIAS[grau]} em {arma}")
         tem = grau; txt = f'. MAESTRIA: {T.MAESTRIAS[grau]} em {arma}'
@@ -229,8 +236,8 @@ def esperar(E, pid, blocos):
 
 
 # ---------- vestir, empunhar, guardar ----------
-USO_DO_TIPO = dict(arma='arma', escudo='escudo', armadura='veste')
-USO_DIZ = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo')       # o nome da peça pode ser masculino ou feminino: estas palavras servem aos dois
+USO_DO_TIPO = dict(arma='arma', escudo='escudo', armadura='veste', foco='foco', amuleto='pescoco')
+USO_DIZ = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo', foco='na mão, para lançar', pescoco='no pescoço')       # o nome da peça pode ser masculino ou feminino: estas palavras servem aos dois
 
 
 def uso_diz(it, uso=None):
@@ -249,24 +256,37 @@ def diz_pecas(E, pid):
     return L or ['(nenhuma peça)']
 
 
+def presa_diz(E, pid, it):
+    """a peça maldita não sai de uso enquanto a maldição que veio dela anda no dono (estado._presa): a frase simples que vai à mesa, ou None (a peça sai)"""
+    if not estado._presa(E, it): return None
+    p = E['gente'][pid]
+    return (f"A mão de {p['nome']} não larga {it['nome']}" if it.get('uso') in ('arma', 'foco') else f"{p['nome']} não consegue tirar {it['nome']}") + ': há algo de errado nessa peça.'
+
+
 def vestir(E, pid, iid, uso=None):
     """empunha ou veste uma peça da pessoa (não gasta bloco). A que estava no mesmo lugar (a outra arma, o outro escudo, a armadura que cobre a mesma parte) vai para a guarda."""
     p = _vivo(E, pid); it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
     if it.get('dono') != pid: sys.exit(f"{it['nome']} ({iid}) não é de {p['nome']}")
     if it['tipo'] not in USO_DO_TIPO: sys.exit(f"{it['nome']} não se veste nem se empunha")
     uso = uso or USO_DO_TIPO[it['tipo']]
-    if uso not in estado.PARTES_VESTE or (it['tipo'] == 'arma') != (uso in ('arma', 'arma2')) or (uso == 'escudo') != (it['tipo'] == 'escudo'):
+    if uso not in estado.PARTES_VESTE or estado.USO_DO_TIPO[uso] != it['tipo']:
         sys.exit(f"{it['nome']} é {it['tipo']}: vai em " + ('arma (na mão) ou arma2 (de reserva)' if it['tipo'] == 'arma' else USO_DO_TIPO[it['tipo']]) + f' (veio "{uso}")')
     if it.get('uso') == uso: sys.exit(f"{it['nome']} já está em uso ({uso_diz(it, uso)})")
     eq = estado.pecas(E, pid); saem = []
     if uso != 'veste' and eq[uso] and eq[uso]['id'] != iid: saem.append(eq[uso])
     if uso == 'veste': saem += [o for o in eq['veste'] if o['id'] != iid and set(o.get('cobre') or []) & set(it.get('cobre') or [])]
+    for o in ([it] if it.get('uso') else []) + saem:         # a peça maldita presa não muda de lugar nem dá lugar a outra (antes de montar o evento, em palavras simples)
+        if presa_diz(E, pid, o): sys.exit(presa_diz(E, pid, o) + ('' if o is it else f" {it['nome']} não entra no lugar dela."))
     ef = [['item', o['id'], 'uso', 'poe', None] for o in saem] + [['item', iid, 'uso', 'poe', uso]]
-    estado.aplica(E, 'vestir', ef, onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} {'veste' if uso == 'veste' else 'empunha'} {it['nome']}" + (f" (guarda {', '.join(o['nome'] for o in saem)})" if saem else ''))
+    verbo = 'veste' if uso == 'veste' else 'põe' if uso == 'pescoco' else 'empunha'
+    estado.aplica(E, 'vestir', ef, onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} {verbo} {it['nome']}" + (f" (guarda {', '.join(o['nome'] for o in saem)})" if saem else ''))
     aviso = ''
     arma = estado.pecas(E, pid)['arma']
     if arma and T.FAMILIAS[arma['familia']]['maos'] == 2 and estado.pecas(E, pid)['escudo']: aviso = f"\nAVISO: {arma['nome']} pede as duas mãos: o escudo não entra na conta enquanto ela estiver na mão."
-    return f"{p['nome']} {'veste' if uso == 'veste' else 'empunha'} {it['nome']} ({uso_diz(it, uso)})" + (f"; vai para a guarda: {', '.join(o['nome'] for o in saem)}" if saem else '') + '.' + aviso + '\n' + _ficha(E, pid)
+    for mod in estado.modulos('vestiu'):                    # depois de pôr a peça em uso: o que os módulos do mundo fazem com isso (a peça maldita)
+        t = mod.vestiu(E, pid, iid)
+        if t: aviso += '\n' + t
+    return f"{p['nome']} {verbo} {it['nome']} ({uso_diz(it, uso)})" + (f"; vai para a guarda: {', '.join(o['nome'] for o in saem)}" if saem else '') + '.' + aviso + '\n' + _ficha(E, pid)
 
 
 def tirar(E, pid, iid):
@@ -274,21 +294,25 @@ def tirar(E, pid, iid):
     p = _vivo(E, pid); it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
     if it.get('dono') != pid: sys.exit(f"{it['nome']} ({iid}) não é de {p['nome']}")
     if not it.get('uso'): sys.exit(f"{it['nome']} já está na guarda")
+    if presa_diz(E, pid, it): sys.exit(presa_diz(E, pid, it))
     estado.aplica(E, 'vestir', [['item', iid, 'uso', 'poe', None]], onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} guarda {it['nome']}")
     return f"{p['nome']} guarda {it['nome']}.\n" + _ficha(E, pid)
 
 
 def _ficha(E, pid):
     import pessoas
-    return pessoas.linha(pessoas.ficha(estado.lutador(E, pid)))
+    return pessoas.linha(pessoas.ficha(estado.lutador(E, pid, visivel=True)))       # a ficha que vai à mesa: só o dom que a pessoa já viu
 
 
 # ---------- a luta dentro do mundo ----------
 def _arq_luta(arq):
     """o caminho de verdade de um arquivo de luta: como veio, ou dentro da pasta do save (é assim que o save o guarda), ou em lutas/ dentro dela (onde fica a luta aberta só com o nome)"""
-    if os.path.exists(arq): return arq
-    if os.path.exists(estado.arq_abre(arq)): return estado.arq_abre(arq)
-    if not os.path.dirname(arq) and os.path.exists(os.path.join(estado.pasta(), 'lutas', arq)): return os.path.join(estado.pasta(), 'lutas', arq)
+    achados = [c for c in dict.fromkeys([arq, estado.arq_abre(arq)] + ([os.path.join(estado.pasta(), 'lutas', arq)] if not os.path.dirname(arq) else [])) if os.path.exists(c)]
+    for c in achados:                                       # o primeiro que É uma luta (um cenário com o mesmo nome, na pasta do save, não é)
+        try: S = json.load(open(c, encoding='utf-8'))
+        except (ValueError, OSError): continue
+        if isinstance(S, dict) and 'fim' in S and 'L' in S: return c
+    if achados: sys.exit(f'"{arq}" não é um arquivo de luta (é o cenário? A luta aberta fica em lutas/, na pasta do save: {", ".join(l["arq"] for l in estado.carrega()["turno"]["lutas"] if not l["fim"]) or "nenhuma aberta"})')
     sys.exit(f'não há o arquivo de luta "{arq}" (nem na pasta do save, {estado.pasta()}). Se ele se perdeu: `ato.py luta larga {arq} "por quê"`')
 
 
@@ -330,14 +354,26 @@ def luta_nova(E, arq_cenario, arq_luta):
             esp = d.pop('bicho'); d.pop('nivel', None); return bichos.bicho(esp, **d)
         if 'nome' not in d or 'nivel' not in d: sys.exit(f'quem não vem do mundo ("id") nem é bicho ("bicho") pede "nome" e "nivel" (veio {json.dumps(d, ensure_ascii=False)[:80]})')
         v = d.pop('veste', {})
+        if not isinstance(v, dict): sys.exit(f'{d.get("nome")}: "veste" é um registro {{"arma": ..., "armadura": ...}}')
+        ruins = [k for k in v if k not in ('arma', 'arma2', 'armadura', 'elmo', 'escudo', 'foco', 'amuleto')]
+        if ruins: sys.exit(f'{d.get("nome")}: não sei vestir "{ruins[0]}" (use: arma, arma2, armadura, elmo, escudo, foco, amuleto)')
         p = padrao(d.pop('nome'), d.pop('nivel'), molde=d.pop('molde', 'guerreiro'), maestria=d.pop('maestria', None), atributos=d.pop('atributos', None), **d)
-        return veste(p, arma=peca(v.get('arma'), 'arma'), arma2=peca(v.get('arma2'), 'arma'), armadura=peca(v.get('armadura'), 'armadura'), elmo=peca(v.get('elmo'), 'armadura'), escudo=peca(v.get('escudo'), 'escudo'))
+        return veste(p, arma=peca(v.get('arma'), 'arma'), arma2=peca(v.get('arma2'), 'arma'), armadura=peca(v.get('armadura'), 'armadura'), elmo=peca(v.get('elmo'), 'armadura'), escudo=peca(v.get('escudo'), 'escudo'),
+                     foco=peca(v.get('foco'), 'foco'), amuleto=peca(v.get('amuleto'), 'escudo'))      # o foco: ["cajado", "Raro"]; o amuleto: "Raro"
     tempo = list(C.get('tempo') or [])
     if E['relogio']['bloco'] in M.ESCUROS and not C.get('luz') and 'escuro' not in tempo: tempo.append('escuro')
-    S = luta.nova([pessoa(x) for x in C['A']], [pessoa(x) for x in C['B']], inicio=C.get('inicio', 'perto'), lugar=C.get('lugar'), tempo=tempo, surpresa=C.get('surpresa'))
+    S = luta.nova([pessoa(x) for x in C['A']], [pessoa(x) for x in C['B']], inicio=C.get('inicio', 'perto'), lugar=C.get('lugar'), tempo=tempo, surpresa=C.get('surpresa'), ermo=_ermo_da_luta(E, C))
     S['mundo'] = True; S['comecou'] = True; luta.salva(S, arq_luta)
     E['turno']['lutas'].append(dict(arq=estado.arq_guarda(arq_luta), fim=None)); estado.grava(E)
     return luta.situacao(S)
+
+
+def _ermo_da_luta(E, C):
+    """as espécies do ermo onde a luta é (o feitiço "chamar" só vale num ermo contado): o "ermo" do cenário, ou o lugar de quem vem do mundo, se for um ermo com bichos"""
+    lid = C.get('ermo') or next((E['gente'][x['id']]['lugar'] for x in C['A'] + C['B'] if isinstance(x, dict) and x.get('id') in E['gente']), None)
+    l = E['lugares'].get(lid) if isinstance(lid, str) else None
+    if not isinstance(l, dict) or not isinstance(l.get('bichos'), dict): return None
+    return sorted(e for e, q in l['bichos'].items() if isinstance(q, (int, float)) and q >= 1 and estado.especie(e)) or None
 
 
 def luta_roda(E, arq_luta, ordens):
@@ -364,10 +400,12 @@ def luta_fecha(E, S, arq_luta=None):
         pv = 0 if morto else max(1, f['pv'])               # quem caiu e foi estancado fica com 1
         if pv != p['pv']: ef.append(['pessoa', pid, 'pv', 'soma', pv - p['pv']])
         for parte, grave in f['feridas'][f['feridas_antes']:]: ef.append(['ferida', pid, 'abre', parte, grave])
+        mg = _magia_volta(E, pid, p, f, pv); ef += mg                 # a etapa da magia: a Mana, as poções, os elixires, os encantos, as maldições postas, as marcas (antes da morte)
         if morto: ef.append(['pessoa', pid, 'estado', 'poe', 'morto'])
         else: ef += [['pessoa', pid, 'cansaco', 'soma', M.LUTA_CANSA], ['pessoa', pid, 'marca.luta_dia', 'poe', E['relogio']['dia']]]       # o dia em que a pessoa lutou não é dia de repouso (corpo.repousou)
         novas = len(f['feridas']) - f['feridas_antes']
-        linhas.append(f"  {p['nome']}: {'MORREU' if morto else f'PV {pv}'}" + (f", {estado.tantos(novas, 'ferida nova', 'feridas novas')}" if novas > 0 else ''))
+        mana_txt = next((f", Mana {min(x[4], estado.mana_max(p, True))} de {estado.mana_max(p, True)}" for x in mg if x[:3] == ['pessoa', pid, 'mana']), '') if not morto else ''       # a conta que vai à mesa: sem o dom que a pessoa não viu
+        linhas.append(f"  {p['nome']}: {'MORREU' if morto else f'PV {pv}'}" + (f", {estado.tantos(novas, 'ferida nova', 'feridas novas')}" if novas > 0 else '') + mana_txt)
     for it in S['itens'].values():
         iid = it.get('id')
         if iid in E['itens']['itens'] and it['dur'][0] != E['itens']['itens'][iid]['dur'][0]:
@@ -382,6 +420,31 @@ def luta_fecha(E, S, arq_luta=None):
     for l in E['turno']['lutas']:
         if arq_luta and l['arq'] == estado.arq_guarda(arq_luta): l['fim'] = S['fim']
     return 'A LUTA VOLTOU AO ESTADO:\n' + '\n'.join(linhas)
+
+
+def _magia_volta(E, pid, p, f, pv):
+    """o que a luta de magia devolve ao estado de quem tem id no mundo (o contrato, seção 10). O que não mudou não gera efeito: a luta sem magia volta igual a hoje."""
+    ef = []; L = E['itens']['itens']
+    if f.get('mana') is not None and f.get('mana_max') is not None:
+        m = max(0, min(estado.mana_max(p), int(round(f['mana']))))
+        if m != estado.mana(p): ef.append(['pessoa', pid, 'mana', 'poe', m])
+    for b, n in (f.get('gastou') or {}).items():                         # a poção bebida, a dose de veneno: sai da carga
+        if n: ef.append(['pessoa', pid, 'carga.' + b, 'soma', -int(n)])
+    ef += [['item', i, 'some'] for i in f.get('elixires_gastos') or [] if L.get(i, {}).get('dono') == pid and L[i].get('tipo') == 'elixir']
+    ef += [['item', i, 'veneno', 'poe', None] for i in f.get('venenos_gastos') or [] if L.get(i, {}).get('veneno')]
+    ef += [['item', i, 'encanto', 'gasta', k] for i, k in f.get('encantos_gastos') or [] if i in L]
+    ef += [['maldicao', pid, 'poe', r] for r in f.get('maldicoes_postas') or []]
+    ef += [['pessoa', pid, 'marca.' + k, 'poe', v] for k, v in (f.get('marcas') or {}).items()]
+    if f.get('divida'): ef.append(['pessoa', pid, 'divida', 'soma', int(f['divida'])])          # o feitiço de pacto lançado na luta soma dívida (a bruxa)
+    if (f.get('est') or {}).get('enjoo') and f['estado'] != 'morto':                            # quem enjoou na luta segue enjoado até o fim do bloco, como fora dela
+        import tabelas_magia_mundo as W
+        ef.append(['pessoa', pid, 'marca.enjoo', 'poe', dict(ate=estado.agora(E) + W.ENJOO_DURA)])
+    if f.get('dom_fez'): ef += talento.mostra(E, pid)                    # o dom decidiu um golpe: a pessoa viu que tem
+    if f.get('funda') is not None and pv < estado.pv_max(p) and f['funda'] != p.get('funda'): ef.append(['pessoa', pid, 'funda', 'poe', f['funda']])
+    for k in ('doses', 'curado'):                                        # os totais do dia: as poções bebidas, o PV devolvido por cura
+        n = f.get(k)
+        if n is not None and n != estado.hoje(E, p, k): ef.append(['pessoa', pid, f'marca.{k}', 'poe', dict(dia=E['relogio']['dia'], n=n)])
+    return ef
 
 
 def luta_larga(E, arq_luta, porque):

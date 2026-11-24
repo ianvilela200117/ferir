@@ -19,7 +19,17 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência); também núcleos (tipo 'nucleo')
     ['item', id, 'onde', 'poe', lugar]  ·  ['item', id, 'solto', 'poe', True|None]  ·  ['item', id, 'sob_medida', 'poe', {dono, grau}]
     ['item', id, 'historia', 'junta', 'texto']  ·  ['item', id, 'some']
-    ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias)
+    ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias; a leva da alquimia; a gravação)
+  OS DA ETAPA DA MAGIA (a forma exata e o porquê de cada um: projeto/ETAPA_MAGIA.md, seção 7):
+    ['pessoa', id, 'talento'|'dom', 'poe', {caminho: grau}] (só em gera, mestre ou talento) · ['pessoa', id, 'inclinacao', 'poe', caminho]
+    · ['pessoa', id, 'mana', 'soma'|'poe', n] · ['pessoa', id, 'feitico', 'aprende'|'esquece', nome] · ['pessoa', id, 'tradicao', 'poe', t]
+    · ['pessoa', id, 'voto', 'poe', {qual, santuario, dia}] · ['pessoa', id, 'voto', 'quebra', 'como'] · ['pessoa', id, 'laco', 'poe', {ermo, dia}]
+    · ['pessoa', id, 'divida', 'soma', n] · ['pessoa', id, 'funda', 'poe', categoria]
+    ['maldicao', id, 'poe', registro]  ·  ['maldicao', id, MID, 'passo'|'quebra'|'sabe'|'suspensa'|'condicao', valor]
+    ['item', id, 'encanto', 'grava', registro] · ['item', id, 'encanto', 'gasta'|'apaga', indice] · ['item', id, 'maldita'|'benta'|'veneno', 'poe', valor]
+    (os tipos novos de item: foco, amuleto, elixir, escrito; os usos novos: foco, pescoco; no lugar: botica, runas, santuario, maldito, covil)
+  A PEÇA MALDITA NÃO SAI: enquanto o dono tem uma maldição andando que veio dela, a peça não sai de uso nem muda de dono. O morto não tem maldição andando
+    (elas vão para a morte dele). A ferida funda some quando o PV enche.
   O ITEM SEM DONO está num lugar (`onde`). Ali ele é da LOJA (a prateleira), a não ser que esteja SOLTO (`solto`): caído no chão, de quem achar.
   A MORTE é uma regra só, dentro do efeito ['pessoa', id, 'estado', 'poe', 'morto']: o morto não fica com nada. As peças dele (vestidas ou guardadas, e os núcleos)
     caem SOLTAS onde ele morreu, com a marca `corpo` (de quem eram); as obras dele se desfazem (a matéria se perde; o núcleo cai com o resto); a carga e a prata
@@ -42,10 +52,15 @@ import copy, hashlib, json, os, random, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_bichos as TB
+import tabelas_talento as TT
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARQS = ('relogio', 'lugares', 'gente', 'itens', 'turno')
-PARTES_VESTE = ('arma', 'arma2', 'escudo', 'veste')
+PARTES_VESTE = ('arma', 'arma2', 'escudo', 'veste', 'foco', 'pescoco')
+TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito')      # os tipos do Livro de Itens (os quatro últimos: etapa da magia)
+USO_DO_TIPO = dict(arma='arma', arma2='arma', escudo='escudo', veste='armadura', foco='foco', pescoco='amuleto')     # onde cada uso pede que tipo de peça
+COM_ENCANTO = ('arma', 'armadura', 'escudo')        # as peças que levam encanto (o foco e o amuleto já são magia)
+TALENTO_EVENTOS = ('gera', 'mestre', 'talento')     # só nestes eventos se grava o talento e o dom (o talento já rolado, só em "mestre")
 
 
 def pasta(): return os.environ.get('MOTOR10_MUNDO') or os.path.join(AQUI, 'mundo')
@@ -107,8 +122,13 @@ def fora(E, pid):
 def onde(E, pid): return fora(E, pid) or E['gente'][pid]['lugar']          # onde o corpo está agora: no ermo da saída, ou no lugar onde mora
 def em(E, lid): l = E['lugares'][lid]; return l.get('em', 'em ' + l['nome'])
 def de(E, lid):
-    """o lugar depois de "de", com a contração do artigo do nome: "da Vila de Prova", "do Mato", "de Pedra Rasa"""
-    n = E['lugares'][lid]['nome']; art, _, resto = n.partition(' ')
+    """o lugar depois de "de", com a contração do artigo do nome: "da Vila de Prova", "do Mato", "de Pedra Rasa\""""
+    return de_nome(E['lugares'][lid]['nome'])
+
+
+def de_nome(n):
+    """um nome depois de "de", com a contração do artigo, se ele vem com artigo: "da Espada do Guardião", "do Mato", "de Pedra Rasa", "de amuleto Comum\""""
+    art, _, resto = n.partition(' ')
     return {'a': 'da ', 'o': 'do ', 'as': 'das ', 'os': 'dos '}[art] + resto if art in ('a', 'o', 'as', 'os') and resto else 'de ' + n
 
 
@@ -127,7 +147,12 @@ def nome_bem(b):
     """o nome de um bem como vai à mesa: a matéria com a categoria por extenso ("couro Comum", "madeira Rara", e não a chave "couro:0"); os outros bens, como são"""
     from itens import FEM
     n, c = M.le_materia(b)
-    return b if c is None or not 0 <= c < len(T.CATS) else f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+    if c is None or not 0 <= c < len(T.CATS): return b
+    if n in M.POCOES: nm = M.POCOES[n]; return f"{nm} {(FEM if nm.split()[0].endswith(('a', 'ção')) else T.CATS)[c]}"      # "poção de cura Comum", "antídoto Raro"
+    return f"{n} {(FEM if n.endswith('a') else T.CATS)[c]}"
+
+
+def num(n): return f'{n:g}'.replace('.', ',')       # o número à mesa: sem casa decimal à toa, com vírgula (1,5 dia de repouso)
 
 
 def tantos(n, um, muitos=None):
@@ -207,16 +232,51 @@ def _int(v): return isinstance(v, int) and not isinstance(v, bool)
 
 
 def bem_conhecido(b):
-    """o que se carrega e se guarda em estoque: os bens da tabela e a matéria com categoria (tabelas_mundo: BENS, MATERIAS, MATERIA_ATE); a prata é à parte"""
+    """o que se carrega e se guarda em estoque: os bens da tabela, a matéria com categoria e as poções do Comum ao Raro (tabelas_mundo: BENS, MATERIAS, MATERIA_ATE,
+    POCOES, POCAO_ATE); a prata é à parte"""
     if b in M.BENS: return True
     n, c = M.le_materia(b)
-    return n in M.MATERIAS and c is not None and c <= M.MATERIA_ATE
+    return c is not None and ((n in M.MATERIAS and c <= M.MATERIA_ATE) or (n in M.POCOES and c <= M.POCAO_ATE))
+
+
+def e_pocao(b): n, c = M.le_materia(b); return n in M.POCOES and c is not None and c <= M.POCAO_ATE       # o bem é uma poção (ou a dose de veneno)?
+
+
+_TC = 0
+def especie(k):
+    """o registro da espécie que a contagem do ermo e o encontro da caça aceitam: a dos bichos (tabelas_bichos.ESPECIES) ou a das criaturas (tabelas_criaturas.ESPECIES,
+    se a página existir; etapa da magia); None se não há"""
+    global _TC
+    if k in TB.ESPECIES: return TB.ESPECIES[k]
+    if _TC == 0:
+        try: import tabelas_criaturas as _m
+        except ModuleNotFoundError as e:
+            if e.name != 'tabelas_criaturas': raise
+            _m = None
+        _TC = _m
+    mais = getattr(_TC, 'ESPECIES', None) if _TC else None
+    return mais.get(k) if isinstance(mais, dict) and isinstance(k, str) else None
+
+
+_MODS = None
+def modulos(gancho=None):
+    """os módulos do mundo (tabelas_mundo.MODULOS) que existem, importados uma vez só: o que ainda não existe fica de fora, sem quebrar nada.
+    Com `gancho`, só os que têm essa função (virada, bloco, casa, vestiu, voce, mesa, so_mestre, retomar, recusa_fecha)."""
+    global _MODS
+    if _MODS is None:
+        import importlib; ms = []
+        for nome in M.MODULOS:
+            try: ms.append(importlib.import_module(nome))
+            except ModuleNotFoundError as e:
+                if e.name != nome: raise
+        _MODS = ms
+    return [m for m in _MODS if gancho is None or callable(getattr(m, gancho, None))]
 
 
 def _conta_erro(raiz, k, v):
     """o que uma conta do lugar aceita: (o texto do erro, ou None)"""
     if not _num(v) or v < 0: return f'"{raiz}.{k}" é um número de zero para cima (veio {json.dumps(v, ensure_ascii=False)})'
-    if raiz in ('bichos', 'teto') and k not in TB.ESPECIES: return f'espécie desconhecida: "{k}"'
+    if raiz in ('bichos', 'teto') and not especie(k): return f'espécie desconhecida: "{k}"'
     if raiz == 'bichos' and int(v) != v: return f'a contagem de "{k}" é um número inteiro'
     if raiz in ('coleta', 'coleta_teto'):
         n, c = M.le_materia(k)
@@ -235,7 +295,16 @@ def _lugar_erro(E, raiz, sub, val):
     if raiz == 'alvo_pecas':                               # o alvo de peças da loja (mercado.py): {categoria: quantas peças ela quer ter na prateleira}
         d = {sub: val} if sub else val
         return None if isinstance(d, dict) and all(isinstance(k, str) and k.isdigit() and int(k) < len(T.CATS) and _int(v) and v >= 0 for k, v in d.items()) else 'o alvo de peças da loja é {categoria ("0", Comum, em diante): quantas peças ela quer ter na prateleira, de zero para cima}'
+    if raiz == 'covil':                                     # o covil (etapa da magia, frente das criaturas): um registro livre; não guarda prata (o tesouro é o estoque do ermo)
+        d = {sub: val} if sub else val
+        if d is None: return None
+        if not isinstance(d, dict): return 'o covil é um registro {...}, ou nada'
+        if 'prata' in d: return 'o covil não guarda prata: o tesouro do covil é a prata do estoque do ermo'
+        if 'cabecas' in d and not (_int(d['cabecas']) and d['cabecas'] >= 0): return 'as cabeças do covil são um número inteiro de zero para cima'
+        return None
     if sub: return None
+    if raiz in ('botica', 'runas', 'santuario'): return None if val is None or (_int(val) and 0 <= val <= M.BANCADA_MAX) else f'"{raiz}" vai de 0 a {M.BANCADA_MAX}, ou nada'
+    if raiz == 'maldito': return None if val is None else _molde_erro(val)
     if raiz == 'pop': return None if val is None or (_num(val) and val >= 0) else 'o povo é um número de zero para cima'
     if raiz == 'oficina': return None if val is None or (_int(val) and 0 <= val <= M.OFICINA_MAX) else f'a oficina vai de 0 a {M.OFICINA_MAX}, ou nada'
     if raiz == 'preparo': return None if isinstance(val, dict) and all(v is None or (_int(v) and 0 <= v < len(T.CATS)) for v in val.values()) else 'o preparo é {fogo, bigorna: a categoria que alcança}'
@@ -252,6 +321,7 @@ def _morre(E, pid):
     p = E['gente'][pid]; lid = onde(E, pid); l = E['lugares'][lid]; dia = E['relogio']['dia']
     p['morte'] = dict(dia=dia, bloco=E['relogio']['bloco'], onde=lid, prata=p['moedas'] if _int(p.get('moedas')) and p['moedas'] > 0 else 0,
                       carga={b: q for b, q in (p.get('carga') or {}).items() if _num(q) and q > 0})       # o que ele deixou (a MESA de quem morreu diz); save antigo: sem estes dois campos, não se diz quanto
+    if p.get('maldicoes'): p['morte']['maldicoes'] = p['maldicoes']; p['maldicoes'] = []       # o morto não tem maldição andando: ficam escritas na morte dele
     for oid in [k for k, o in E['itens'].get('obras', {}).items() if o.get('quem') == pid]: del E['itens']['obras'][oid]
     for it in E['itens']['itens'].values():
         if it.get('dono') == pid:
@@ -283,12 +353,17 @@ def _nasce_pessoa(E, ef):
     if not isinstance(ca, dict) or any(not _num(v) or v <= 0 for v in ca.values()): return _erro(ef, 'a carga é {bem: quanto}, acima de zero')
     if not _int(mo) or mo < 0: return _erro(ef, 'a prata é um número inteiro de zero para cima')
     if r.get('jogador') and any(q.get('jogador') for q in E['gente'].values()): return _erro(ef, 'já há um personagem do jogador')
-    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre')]
+    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre') + NASCE_MAGIA]
     if ruins: return _erro(ef, f'a pessoa não tem o campo "{ruins[0]}"')
     p = dict(nome=r['nome'], lugar=r['lugar'], grau_oficio=of, nivel=r['nivel'], atributos={a: at[a] for a in T.ATRIBUTOS}, maestria=dict(ma), treino=dict(tr), moedas=mo,
              corpo={m: 0 for m in M.MEDIDORES}, pv=0, feridas=[], estado='vivo', marca=copy.deepcopy(r.get('marca') or {}), carga=dict(ca))
     p['pv'] = pv_max(p)
     if r.get('jogador'): p['jogador'] = True
+    for k in NASCE_MAGIA:                                   # a etapa da magia: o talento, o dom, a inclinação, os feitiços, a tradição, o voto, o laço, a dívida, a Mana
+        if k in r:
+            e = _magia_erro(E, p, 'feiticos' if k == 'feiticos' else k, r[k])
+            if e: return _erro(ef, e)
+            p[k] = copy.deepcopy(r[k]) if k != 'talento' or r[k] is None else {c: g for c, g in r[k].items() if g}
     if r.get('sobre'): p['sobre'] = str(r['sobre'])
     E['gente'][pid] = p
 
@@ -324,6 +399,7 @@ def _um(E, ef):
         if not p: return _erro(ef, f'não há a pessoa "{pid}"')
         if not isinstance(campo, str): return _erro(ef, 'o campo é um nome')
         raiz, _, sub = campo.partition('.')
+        if campo in PESSOA_MAGIA: return _pessoa_magia(E, pid, p, campo, op, val, ef)
         if raiz == 'carga':
             if not sub or op != 'soma' or not _int(val): return _erro(ef, "a carga muda por ['pessoa', id, 'carga.BEM', 'soma', número inteiro]")
             if not bem_conhecido(sub): return _erro(ef, f'não se carrega "{sub}" (carregam-se: {", ".join(M.BENS)}; e a matéria com a categoria, de 0 a {M.MATERIA_ATE}: metal:0, couro:1...)')
@@ -359,7 +435,9 @@ def _um(E, ef):
             if val not in M.SALARIO: return _erro(ef, f'grau de ofício desconhecido: "{val}" (os que há: {", ".join(M.SALARIO)})')
             p['grau_oficio'] = val
         elif campo in M.MEDIDORES: p['corpo'][campo] = max(0, min(M.MED_MAX, p['corpo'][campo] + val))
-        elif campo == 'pv': p['pv'] = max(0, min(pv_max(p), p['pv'] + val))
+        elif campo == 'pv':
+            p['pv'] = max(0, min(pv_max(p), p['pv'] + val))
+            if p['pv'] >= pv_max(p): p.pop('funda', None)        # a ferida funda some quando o PV enche
         elif campo == 'moedas':
             if not _int(val): return _erro(ef, 'a prata é inteira')
             if p['moedas'] + val < 0: return _erro(ef, f'{p["nome"]} tem {p["moedas"]} de prata e não paga {-val}')
@@ -379,6 +457,7 @@ def _um(E, ef):
             if not _int(ef[3]) or not 0 <= ef[3] < len(p['feridas']): return _erro(ef, 'não há essa ferida')
             p['feridas'].pop(ef[3]); return
         return _erro(ef, "use ['ferida', id, 'abre', parte, grave], ['ferida', id, 'repousa', n] ou ['ferida', id, 'sara', indice]")
+    if v == 'maldicao': return _maldicao(E, ef)
     if v == 'lugar' and len(ef) > 1 and ef[1] == 'nasce': return _nasce_lugar(E, ef)
     if v == 'lugar':
         if len(ef) != 5 or ef[3] not in ('soma', 'poe') or not isinstance(ef[2], str): return _erro(ef, "use ['lugar', id, campo ou campo.sub, 'soma'|'poe', valor]")
@@ -434,8 +513,10 @@ def _um(E, ef):
         l['estoque'][ef[2]] = q; return
     if v == 'item' and len(ef) == 3 and ef[1] == 'nasce':
         it = copy.deepcopy(ef[2])
-        if not isinstance(it, dict) or it.get('tipo') not in ('arma', 'armadura', 'escudo', 'nucleo') or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
+        if not isinstance(it, dict) or it.get('tipo') not in TIPOS_ITEM or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
+        e = _item_magia_erro(it)
+        if e: return _erro(ef, e)
         if not (isinstance(it['dur'], list) and len(it['dur']) == 2 and all(_int(x) for x in it['dur']) and 0 <= it['dur'][0] <= it['dur'][1]): return _erro(ef, 'a durabilidade é [quanto tem, quanto cabe]')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
         if it.get('dono') is not None and E['gente'][it['dono']]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][it["dono"]]["nome"]} morreu: não recebe peça')
@@ -453,6 +534,14 @@ def _um(E, ef):
         it = E['itens']['itens'].get(ef[1]) if isinstance(ef[1], str) else None
         if not it: return _erro(ef, f'não há o item "{ef[1]}" no Livro de Itens')
         _, _, campo, op, val = ef
+        if campo in ('dono', 'uso') and op == 'poe' and it.get(campo) and val != it.get(campo) and _presa(E, it):
+            return _erro(ef, f'a mão não larga {it["nome"]}: a maldição que veio dela anda em {E["gente"][it["dono"]]["nome"]} (quebre-a antes, no mesmo evento)')
+        if campo == 'encanto': return _encanto(E, it, op, val, ef)
+        if campo in ('maldita', 'benta', 'veneno') and op == 'poe':
+            if val is None: it.pop(campo, None); return
+            x = dict(it); x[campo] = val; e = _item_magia_erro(x)
+            if e: return _erro(ef, e)
+            it[campo] = copy.deepcopy(val); return
         if campo == 'dono' and op == 'poe':
             if val is not None and val not in E['gente']: return _erro(ef, f'não há a pessoa "{val}"')
             if val is not None and E['gente'][val]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][val]["nome"]} morreu: não recebe peça')
@@ -477,16 +566,178 @@ def _um(E, ef):
         if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
         if campo == 'nome' and op == 'poe' and val: it['nome'] = str(val); return
         if campo == 'uso' and op == 'poe':
-            if val not in (None,) + PARTES_VESTE: return _erro(ef, f'uso desconhecido: "{val}" (arma, arma2, escudo, veste ou nada)')
+            if val not in (None,) + PARTES_VESTE: return _erro(ef, f'uso desconhecido: "{val}" (arma, arma2, escudo, veste, foco, pescoco ou nada)')
             if val and not it.get('dono'): return _erro(ef, 'peça sem dono não se veste')
-            tipo_certo = dict(arma='arma', arma2='arma', escudo='escudo', veste='armadura')
-            if val and it['tipo'] != tipo_certo[val]: return _erro(ef, f'{it["nome"]} é {it["tipo"]}: não vai em "{val}"')
+            if val and it['tipo'] != USO_DO_TIPO[val]: return _erro(ef, f'{it["nome"]} é {it["tipo"]}: não vai em "{val}"')
             it['uso'] = val; return
         if campo == 'dur' and op == 'soma' and _num(val):
-            if it['tipo'] == 'nucleo': return _erro(ef, 'núcleo não gasta nem se conserta')
+            if it['tipo'] in ('nucleo', 'elixir', 'escrito'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome (poe) · dur (soma) · historia (junta)')
-    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno (poe) · dur (soma) · historia (junta) · encanto (grava, gasta, apaga)')
+    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao)')
+
+
+# ---------- a etapa da magia no gravador (as formas: projeto/ETAPA_MAGIA.md, seções 1 a 7) ----------
+PESSOA_MAGIA = ('talento', 'dom', 'inclinacao', 'mana', 'feitico', 'tradicao', 'voto', 'laco', 'divida', 'funda')
+NASCE_MAGIA = ('talento', 'dom', 'inclinacao', 'feiticos', 'tradicao', 'voto', 'laco', 'divida', 'mana')     # o que a pessoa pode trazer ao nascer (a Mana por último: o máximo depende do resto)
+
+
+def _magia_erro(E, p, campo, v):
+    """o que um campo da magia aceita (None: aceita). Serve ao gravador, ao nascer e aos invariantes."""
+    if campo == 'talento':
+        if v is None: return None
+        return None if isinstance(v, dict) and all(k in TT.CAMINHOS and _int(g) and g in TT.TALENTO for k, g in v.items()) else f'o talento é {{caminho: grau de −2 a 2}} (os caminhos: {", ".join(TT.CAMINHOS)})'
+    if campo == 'dom': return None if isinstance(v, dict) and len(v) <= 1 and all(k in TT.CAMINHOS and _int(g) and g in TT.DOM for k, g in v.items()) else 'o dom é {caminho: 1 ou 2}, num caminho só ({}: sem dom)'
+    if campo == 'inclinacao':
+        if v is not None and v not in TT.CAMINHOS: return f'a inclinação é um caminho ({", ".join(TT.CAMINHOS)})'
+        return None if v is None or p.get('jogador') else 'só o personagem do jogador tem inclinação'
+    if campo == 'mana': return None if _num(v) and 0 <= v <= mana_max(p) else f'a Mana vai de 0 a {mana_max(p)}'
+    if campo == 'feiticos': return None if isinstance(v, list) and all(x in T.FEITICOS for x in v) and len(set(v)) == len(v) else 'os feitiços sabidos são uma lista de nomes da tabela (tabelas.FEITICOS), sem repetir'
+    if campo == 'tradicao': return None if v is None or v in T.TRADICOES else f'a tradição é uma de: {", ".join(T.TRADICOES)}'
+    if campo == 'voto':
+        return None if v is None or (isinstance(v, dict) and v.get('qual') in M.VOTOS and v.get('santuario') in E['lugares'] and _int(v.get('dia', 0))) else f'o voto é {{qual: {" | ".join(M.VOTOS)}, santuario: um lugar que existe, dia}}'
+    if campo == 'laco': return None if v is None or (isinstance(v, dict) and v.get('ermo') in E['lugares'] and _int(v.get('dia', 0))) else 'o laço é {ermo: um lugar que existe, dia}'
+    if campo == 'divida': return None if _num(v) and v >= 0 else 'a dívida é um número de zero para cima'
+    if campo == 'funda': return None if v is None or (_int(v) and 0 <= v < len(T.CATS)) else 'a ferida funda é uma categoria (0 a 7), ou nada'
+    return None
+
+
+def _pessoa_magia(E, pid, p, campo, op, val, ef):
+    """os verbos da magia na pessoa (seção 7 do contrato)"""
+    if campo == 'feitico':
+        if op not in ('aprende', 'esquece') or val not in T.FEITICOS: return _erro(ef, f'use ["pessoa", id, "feitico", "aprende"|"esquece", NOME] (os feitiços: {", ".join(T.FEITICOS)})')
+        L = p.setdefault('feiticos', [])
+        if op == 'aprende' and val not in L: L.append(val)
+        if op == 'esquece' and val in L: L.remove(val)
+        return
+    if campo == 'voto' and op == 'quebra':
+        v = p.get('voto')
+        if not isinstance(v, dict): return _erro(ef, f'{p["nome"]} não tem voto para quebrar')
+        if v.get('quebrado') is None: v['quebrado'] = E['relogio']['dia']; v['como'] = str(val)
+        return
+    if campo in ('mana', 'divida') and op == 'soma':
+        if not _num(val): return _erro(ef, f'"{campo}" soma um número')
+        if campo == 'mana': p['mana'] = max(0, min(mana_max(p), mana(p) + val)); return
+        q = (p.get('divida') or 0) + val
+        if q < 0: return _erro(ef, f'{p["nome"]} só deve {p.get("divida") or 0}')
+        p['divida'] = q; return
+    if op != 'poe': return _erro(ef, f'"{campo}" só aceita "poe"' + (' (e "soma")' if campo in ('mana', 'divida') else ' (e "quebra")' if campo == 'voto' else ''))
+    if campo in ('talento', 'divida') and val is None: return _erro(ef, f'"{campo}" não se põe em nada')
+    e = _magia_erro(E, p, campo, val)
+    if e: return _erro(ef, e)
+    if campo == 'talento': p['talento'] = {k: g for k, g in val.items() if g}
+    elif val is None and campo in ('funda',): p.pop(campo, None)
+    else: p[campo] = copy.deepcopy(val)
+
+
+def _molde_erro(m):
+    """o MOLDE de uma maldição (o que mora numa peça maldita ou num lugar maldito): {nome, cat, tipo, condicao}. None: certo."""
+    if not isinstance(m, dict): return 'o molde da maldição é {nome, cat, tipo, condicao}'
+    if not isinstance(m.get('nome'), str) or not m['nome']: return 'a maldição pede um nome'
+    if not _int(m.get('cat')) or not 0 <= m['cat'] < len(T.CATS): return 'a categoria da maldição vai de 0 a 7'
+    if m.get('tipo') not in M.MALDICAO_TIPOS: return f'o tipo da maldição é um de: {", ".join(M.MALDICAO_TIPOS)}'
+    c = m.get('condicao')
+    if not isinstance(c, dict) or c.get('tipo') not in M.MALDICAO_CONDICOES: return f'a condição é {{tipo: {" | ".join(M.MALDICAO_CONDICOES)}, ...}}'
+    return None
+
+
+def _maldicao_erro(E, r):
+    """o REGISTRO de uma maldição que anda numa pessoa (seção 6 do contrato). None: certo."""
+    e = _molde_erro(r)
+    if e: return e
+    if not isinstance(r.get('id'), str) or not r['id']: return 'a maldição pede um id'
+    if not _int(r.get('passo')) or not 1 <= r['passo'] <= len(M.MALDICAO_PASSOS): return f'o passo vai de 1 a {len(M.MALDICAO_PASSOS)}'
+    if r.get('de') not in M.MALDICAO_ORIGENS: return f'a origem é uma de: {", ".join(M.MALDICAO_ORIGENS)}'
+    if r.get('quem') is not None and r['quem'] not in E['gente']: return f'não há a pessoa "{r["quem"]}" (quem rogou)'
+    if not _int(r.get('sabe', 0)) or not 0 <= r.get('sabe', 0) <= M.MALDICAO_SABE: return f'o saber vai de 0 a {M.MALDICAO_SABE}'
+    if r.get('suspensa') is not None and not _int(r['suspensa']): return '"suspensa" é um dia, ou nada'
+    if r.get('desde') is not None and not _int(r['desde']): return '"desde" é um dia'
+    return None
+
+
+def _maldicao(E, ef):
+    """o verbo maldicao: ['maldicao', pessoa, 'poe', registro] ou ['maldicao', pessoa, MID, campo, valor]"""
+    p = E['gente'].get(ef[1]) if len(ef) > 2 and isinstance(ef[1], str) else None
+    if not p: return _erro(ef, 'não há essa pessoa')
+    if len(ef) == 4 and ef[2] == 'poe':
+        if p['estado'] != 'vivo': return _erro(ef, f'{p["nome"]} morreu: não pega maldição')
+        r = copy.deepcopy(ef[3])
+        if not isinstance(r, dict) or 'id' in r: return _erro(ef, 'o registro da maldição vem sem "id" (o gravador dá)')
+        E['itens']['mseq'] = E['itens'].get('mseq', 0) + 1; r['id'] = f"m{E['itens']['mseq']:04d}"
+        for k, v in (('passo', 1), ('desde', E['relogio']['dia']), ('sabe', 0), ('suspensa', None), ('quem', None), ('fonte', None)): r.setdefault(k, v)
+        e = _maldicao_erro(E, r)
+        if e: return _erro(ef, e)
+        p.setdefault('maldicoes', []).append(r); return
+    if len(ef) != 5: return _erro(ef, "use ['maldicao', id, 'poe', registro] ou ['maldicao', id, MID, 'passo'|'quebra'|'sabe'|'suspensa'|'condicao', valor]")
+    _, _, mid, campo, val = ef; L = p.get('maldicoes') or []
+    i = next((k for k, m in enumerate(L) if isinstance(m, dict) and m.get('id') == mid), None)
+    if i is None: return _erro(ef, f'{p["nome"]} não tem a maldição "{mid}"')
+    m = L[i]
+    if campo == 'passo':
+        if not _int(val) or not val: return _erro(ef, 'o relógio anda um número inteiro de passos (+1; a poção: −2)')
+        m['passo'] = max(1, min(len(M.MALDICAO_PASSOS), m['passo'] + val)); return
+    if campo == 'quebra': L.pop(i); return
+    if campo == 'sabe':
+        if not _int(val) or not 0 <= val <= M.MALDICAO_SABE: return _erro(ef, f'o saber é de 0 a {M.MALDICAO_SABE}')
+        if val < m.get('sabe', 0): return _erro(ef, 'o saber só sobe')
+        m['sabe'] = val; return
+    if campo == 'suspensa':
+        if val is not None and not _int(val): return _erro(ef, '"suspensa" é um dia, ou nada')
+        m['suspensa'] = val; return
+    if campo == 'condicao':
+        if not isinstance(val, dict) or val.get('tipo') not in M.MALDICAO_CONDICOES: return _erro(ef, f'a condição é {{tipo: {" | ".join(M.MALDICAO_CONDICOES)}, ...}}')
+        m['condicao'] = copy.deepcopy(val); return
+    return _erro(ef, 'na maldição muda-se: passo, quebra, sabe, suspensa, condicao')
+
+
+def _encanto_erro(x): return not (isinstance(x, dict) and x.get('feitico') in T.FEITICOS and _int(x.get('grau')) and 0 <= x['grau'] <= 4 and (x.get('gasto') is None or _int(x['gasto'])))
+
+
+def _item_magia_erro(it):
+    """o que os tipos e os campos novos de item pedem (None: certo)"""
+    t = it.get('tipo')
+    if t == 'foco' and it.get('forma') not in T.FOCOS: return f'o foco pede a forma ({", ".join(T.FOCOS)})'
+    if t == 'elixir' and (it.get('pocao') not in M.POCOES or not _int(it.get('cat')) or it['cat'] <= M.POCAO_ATE): return 'o elixir é uma poção da tabela, do Épico para cima (abaixo disso a poção é bem, na carga)'
+    if t == 'escrito' and (not isinstance(it.get('feiticos'), list) or not it['feiticos'] or any(x not in T.FEITICOS for x in it['feiticos'])): return 'o escrito ensina feitiços da tabela (uma lista com pelo menos um)'
+    enc = it.get('encantos')
+    if enc is not None:
+        if t not in COM_ENCANTO: return 'só arma, armadura e escudo levam encanto (o foco e o amuleto já são magia)'
+        mx = M.encantos_max(it['cat']) if _int(it.get('cat')) else 1
+        if not isinstance(enc, list) or len(enc) > mx or any(_encanto_erro(x) for x in enc): return f'os encantos de uma peça são uma lista de até {mx}, cada um {{feitico, grau de 0 a 4, feito_por, dia, gasto}}'
+    if it.get('maldita') is not None:
+        e = _molde_erro(it['maldita'])
+        if e: return 'a peça maldita leva um molde de maldição: ' + e
+    if it.get('benta') is not None and (t != 'arma' or not _int(it['benta'])): return 'só a arma fica benta (até um bloco)'
+    v = it.get('veneno')
+    if v is not None and (t != 'arma' or not isinstance(v, dict) or not _int(v.get('cat')) or not 0 <= v['cat'] <= M.POCAO_ATE or not _int(v.get('ate'))): return f'o veneno na lâmina é {{cat: de 0 a {M.POCAO_ATE}, ate: um bloco}}, só em arma'
+    return None
+
+
+def _presa(E, it):
+    """o dono desta peça tem uma maldição andando que veio dela? (a peça maldita não sai de uso nem muda de dono enquanto a maldição dura)"""
+    d = E['gente'].get(it.get('dono')) if it.get('dono') else None
+    return isinstance(d, dict) and any(isinstance(m, dict) and m.get('de') == 'peça' and m.get('fonte') == it.get('id') for m in d.get('maldicoes') or [])
+
+
+def _encanto(E, it, op, val, ef):
+    """['item', id, 'encanto', 'grava', registro] · ['item', id, 'encanto', 'gasta'|'apaga', indice]"""
+    if it['tipo'] not in COM_ENCANTO: return _erro(ef, f'{it["nome"]} não leva encanto (só arma, armadura e escudo: o foco e o amuleto já são magia)')
+    L = it.get('encantos') or []
+    if op == 'grava':
+        x = copy.deepcopy(val)
+        if not isinstance(x, dict): return _erro(ef, 'o encanto é {feitico, grau, feito_por, dia}')
+        x.setdefault('feito_por', None); x.setdefault('dia', E['relogio']['dia']); x['gasto'] = None
+        if _encanto_erro(x): return _erro(ef, 'o encanto é {feitico: um da tabela, grau: de 0 a 4, feito_por, dia}')
+        if len(L) >= M.encantos_max(it['cat']): return _erro(ef, f'{it["nome"]} já tem os encantos que cabem numa peça {T.CATS[it["cat"]]} ({M.encantos_max(it["cat"])})')
+        it['encantos'] = L + [x]; return
+    if op in ('gasta', 'apaga'):
+        if not _int(val) or not 0 <= val < len(L): return _erro(ef, f'{it["nome"]} não tem esse encanto')
+        if op == 'gasta': L[val]['gasto'] = agora(E)
+        else:
+            L.pop(val)
+            if not L: it.pop('encantos', None)
+        return
+    return _erro(ef, "use ['item', id, 'encanto', 'grava', registro] ou ['item', id, 'encanto', 'gasta'|'apaga', indice]")
 
 
 def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
@@ -498,6 +749,11 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
     if tipo not in M.NA_LUTA and luta_aberta(E) and not _nota_da_luta(E, efeitos): sys.exit(luta_diz(E))
     ensaio = {k: copy.deepcopy(E[k]) for k in ARQS}
     for ef in efeitos:
+        if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in ('talento', 'dom'):
+            if tipo not in TALENTO_EVENTOS: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "o talento e o dom só se gravam em evento " + ", ".join(TALENTO_EVENTOS))}')
+            q = E['gente'].get(ef[1]) if isinstance(ef[1], str) else None
+            if ef[2] == 'talento' and isinstance(q, dict) and q.get('talento') is not None and tipo != 'mestre':
+                sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, q["nome"] + " já tem o talento rolado: só o Mestre o troca")}')
         if tipo not in M.NASCE and isinstance(ef, (list, tuple)) and len(ef) > 1 and ef[0] in ('pessoa', 'lugar') and ef[1] == 'nasce':
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "gente e lugar só nascem em evento " + " ou ".join(M.NASCE))}')
         try: e = _um(ensaio, ef)
@@ -506,7 +762,7 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
     if all(ensaio[k] == E[k] for k in ARQS): return None
     for pid, p in ensaio['gente'].items() if tipo != 'casa' else ():       # quem não é o personagem guarda O BLOCO EM QUE o corpo foi mexido pela última vez (o bloco deste evento: o relógio de antes de ele andar): o descanso em casa conta daí (em_cena).
         a = E['gente'].get(pid)                             # O próprio acerto do descanso (evento "casa") não é "estar em cena": ele não marca o bloco (as noites já contadas, o corpo.casa desconta à parte)
-        if isinstance(a, dict) and isinstance(p, dict) and not p.get('jogador') and p.get('estado') == 'vivo' and any(a.get(k) != p.get(k) for k in ('corpo', 'pv', 'feridas')):
+        if isinstance(a, dict) and isinstance(p, dict) and not p.get('jogador') and p.get('estado') == 'vivo' and any(a.get(k) != p.get(k) for k in ('corpo', 'pv', 'feridas', 'mana')):      # a Mana gasta também é estar em cena: as noites de antes não voltam a encher
             if not isinstance(p.get('marca'), dict): p['marca'] = {}
             p['marca']['cena'] = agora(E)
     ev = dict(id=E['relogio']['eventos'] + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], tipo=tipo, onde=onde, quem=list(quem), efeitos=[list(x) for x in efeitos], texto=texto)
@@ -519,9 +775,52 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
 def pv_max(p): return T.pv_max(p['atributos']['Vigor'], p['nivel'])
 
 
+def mana_max(p, visivel=False):
+    """a Mana máxima da pessoa: (Afinidade + Vontade) ÷ 10, mais a melhor tradição dela (a maestria e o dom nela).
+    `visivel`: só o dom que a pessoa já viu (a conta que vai à mesa); sem ele, o dom de verdade (a regra)."""
+    import talento
+    at = p['atributos']; ma = p.get('maestria') or {}; dm = talento.doms_vistos(p) if visivel else talento.doms(p)
+    melhor = max([(ma.get(t, 0) if isinstance(ma, dict) else 0) + dm.get(t, 0) for t in T.TRADICOES] + [0])
+    return T.mana_max(at['Afinidade'], at['Vontade'], melhor)
+
+
+def mana(p, visivel=False):
+    """a Mana de agora (a que não está escrita vale a cheia). `visivel`: como a pessoa a vê (nunca acima da máxima que ela conhece)"""
+    v = p.get('mana'); mx = mana_max(p)
+    m = mx if not _num(v) else max(0, min(mx, v))
+    return min(m, mana_max(p, True)) if visivel else m
+
+
+def firmeza(E, pid, visivel=False):
+    """A FIRMEZA da pessoa fora da luta (contra a maldição e o lugar maldito; a base comum, tabelas.firmeza): a Vontade, a maior maestria, o dom de tradição, o amuleto que
+    veste (sem amuleto, metade do bônus da armadura do tronco), com a poção de guarda valendo amuleto da categoria dela enquanto dura. A CONTA ÚNICA: o maldicao.firmeza
+    é esta. `visivel`: só o dom que a pessoa já viu (a conta que vai à mesa). A luta soma o calejo por cima."""
+    import talento
+    p = E['gente'][pid]; eq = pecas(E, pid); ma = p.get('maestria') or {}
+    maior = max([v for v in ma.values() if _num(v)] + [0]) if isinstance(ma, dict) else (ma if _num(ma) else 0)
+    amu = eq['pescoco']['cat'] if eq['pescoco'] and eq['pescoco']['dur'][0] > 0 else None
+    g = (p.get('marca') or {}).get('guarda')                # a poção de guarda bebida: amuleto da categoria dela até o bloco que marca
+    if isinstance(g, dict) and _int(g.get('ate')) and g['ate'] > agora(E) and _int(g.get('cat')): amu = max(g['cat'], amu if amu is not None else -1)
+    tronco = max((it['cat'] for it in eq['veste'] if 'tronco' in (it.get('cobre') or []) and it['dur'][0] > 0), default=None)
+    dm = talento.doms_vistos(p) if visivel else talento.doms(p)
+    return T.firmeza(p['atributos']['Vontade'], maior, amu, tronco, max([dm.get(t, 0) for t in T.TRADICOES] + [0]))
+
+
+def hoje(E, p, chave):
+    """o contador de hoje de uma marca {dia, n} (as poções bebidas: 'doses'; o PV devolvido por cura: 'curado'); de outro dia, zero"""
+    m = (p.get('marca') or {}).get(chave)
+    return m.get('n', 0) if isinstance(m, dict) and m.get('dia') == E['relogio']['dia'] and _num(m.get('n')) else 0
+
+
+def encanto_carregado(E, enc):
+    """o encanto está carregado? (solto, volta a carregar ENCANTO_VOLTA blocos depois, fora da luta)"""
+    g = enc.get('gasto') if isinstance(enc, dict) else None
+    return not _num(g) or agora(E) - g >= M.ENCANTO_VOLTA
+
+
 def pecas(E, pid):
     """{'arma': item, 'arma2': item, 'escudo': item, 'veste': [itens]} do que a pessoa veste agora (sai do Livro de Itens)"""
-    out = dict(arma=None, arma2=None, escudo=None, veste=[])
+    out = dict(arma=None, arma2=None, escudo=None, veste=[], foco=None, pescoco=None)
     for it in E['itens']['itens'].values():
         if it.get('dono') == pid and it.get('uso'):
             if it['uso'] == 'veste': out['veste'].append(it)
@@ -529,13 +828,35 @@ def pecas(E, pid):
     return out
 
 
-def lutador(E, pid, **mais):
-    """a pessoa pronta para o pessoas.ficha e o luta.nova: quem é, o que veste hoje, o PV, as feridas e a pena do corpo"""
-    import corpo
-    p = E['gente'][pid]; eq = pecas(E, pid)
+def lutador(E, pid, visivel=False, **mais):
+    """a pessoa pronta para o pessoas.ficha e o luta.nova: quem é, o que veste hoje, o PV, as feridas e a pena do corpo (com a da maldição).
+    Da etapa da magia: os feitiços, a Mana, a tradição, o dom, a pena da maldição, as maldições, a ferida funda, as poções de hoje, a carga de poções e os elixires;
+    no equip, o foco e o amuleto. As cópias das peças vêm sem o que venceu (a bênção, o veneno da lâmina) e com cada encanto dizendo se está carregado.
+    O que foi feito antes da luta e ainda vale: a bênção (marca.bencao: benzido), a poção de guarda (marca.guarda: guarda_p, amuleto da categoria dela), e o laço do druida
+    com o ermo caçado até o fim (pena_laco, na Conjuração do verde).
+    `visivel`: só o dom que a pessoa já viu (a ficha que vai à MESA; também a Mana máxima); sem ele, o dom de verdade (a luta), e `mana_vista` para a mesa da luta."""
+    import corpo, talento
+    p = E['gente'][pid]; eq = pecas(E, pid); t = agora(E)
+    def copia(it):                                          # cópia: a luta não mexe no Livro
+        if it is None: return None
+        c = copy.deepcopy(it)
+        if _num(c.get('benta')) and c['benta'] < t: c.pop('benta')
+        if 'veneno' in c and not (isinstance(c['veneno'], dict) and _num(c['veneno'].get('ate')) and c['veneno']['ate'] >= t): c.pop('veneno')
+        for enc in c.get('encantos') or []: enc['carregado'] = encanto_carregado(E, enc)
+        return c
     d = dict(id=pid, nome=p['nome'], nivel=p['nivel'], atributos=dict(p['atributos']), maestria=dict(p.get('maestria', {})), pv=p['pv'],
-             feridas=[[f['parte'], f['grave']] for f in p['feridas']], pena=corpo.pena(p), fol_menos=corpo.folego_menos(p),
-             equip=copy.deepcopy(dict(arma=eq['arma'], arma2=eq['arma2'], escudo=eq['escudo'], armaduras=eq['veste'])))    # cópia: a luta não mexe no Livro
+             feridas=[[f['parte'], f['grave']] for f in p['feridas']], pena=corpo.pena(p, t), fol_menos=corpo.folego_menos(p),
+             equip=dict(arma=copia(eq['arma']), arma2=copia(eq['arma2']), escudo=copia(eq['escudo']), armaduras=[copia(x) for x in eq['veste']], foco=copia(eq['foco']), amuleto=copia(eq['pescoco'])))
+    d.update(feiticos=list(p.get('feiticos') or []), mana=mana(p, visivel), mana_max=mana_max(p, visivel), tradicao=p.get('tradicao'), dom=dict(talento.doms_vistos(p) if visivel else talento.doms(p)),
+             pena_magia=corpo.pena_maldicao(p), maldicoes=copy.deepcopy(p.get('maldicoes') or []), funda=p.get('funda'), doses=hoje(E, p, 'doses'), curado=hoje(E, p, 'curado'),
+             carga={b: q for b, q in (p.get('carga') or {}).items() if e_pocao(b) and _num(q) and q > 0},
+             elixires=[dict(id=i, pocao=it.get('pocao'), cat=it['cat'], nome=it['nome']) for i, it in E['itens']['itens'].items() if it.get('dono') == pid and it.get('tipo') == 'elixir'])
+    m = p.get('marca') or {}; bz = m.get('bencao'); gd = m.get('guarda')
+    if isinstance(bz, dict) and _num(bz.get('ate')) and bz['ate'] >= t: d['benzido'] = True                      # a bênção dada antes da luta (vale do bloco em que foi dada ao seguinte)
+    if isinstance(gd, dict) and _num(gd.get('ate')) and gd['ate'] > t and _int(gd.get('cat')): d['guarda_p'] = gd['cat']      # a poção de guarda: amuleto da categoria dela enquanto dura
+    if not visivel and mana_max(p, True) != d['mana_max']: d['mana_vista'] = mana_max(p, True)                # o dom de tradição escondido: a luta usa a Mana de verdade, a mesa mostra a que a pessoa conhece
+    pl = sum(m.pena_laco(E, pid) for m in modulos('pena_laco'))
+    if pl: d['pena_laco'] = pl                                                              # o laço do druida com o ermo caçado até o fim tira da Conjuração dele
     d.update(mais)
     return d
 
@@ -567,7 +888,19 @@ def valida(E):
         if p.get('grau_oficio', 'diarista') not in M.SALARIO: P.append(f'{n} tem grau de ofício desconhecido: {p.get("grau_oficio")}')
         for k, v in (p.get('maestria') or {}).items():
             if v not in T.MAESTRIAS: P.append(f'{n} tem maestria fora da tabela em {k}: {v}')
-        usos = [it.get('uso') for it in L.values() if isinstance(it, dict) and it.get('dono') == pid and it.get('uso') in ('arma', 'arma2', 'escudo')]
+        for k in ('talento', 'dom', 'inclinacao', 'tradicao', 'voto', 'laco', 'divida', 'funda', 'feiticos'):       # a etapa da magia
+            if p.get(k) is not None:
+                e = _magia_erro(E, p, k, p[k])
+                if e: P.append(f'{n}: {e}')
+        if p.get('mana') is not None and not (_num(p['mana']) and 0 <= p['mana'] <= mana_max(p)): P.append(f'{n} tem Mana fora da faixa: {p["mana"]} de {mana_max(p)}')
+        mal = p.get('maldicoes') or []
+        if not isinstance(mal, list): P.append(f'{n} tem as maldições tortas (não é uma lista)'); mal = []
+        for m in mal:
+            e = _maldicao_erro(E, m) if isinstance(m, dict) else 'o registro não é um dicionário'
+            if e: P.append(f'{n} tem uma maldição torta ({m.get("id", "?") if isinstance(m, dict) else m}): {e}')
+        if len({m.get('id') for m in mal if isinstance(m, dict)}) != len(mal): P.append(f'{n} tem duas maldições com o mesmo id')
+        if p['estado'] == 'morto' and mal: P.append(f'{n} morreu e ainda tem maldição andando (elas vão para a morte dele)')
+        usos = [it.get('uso') for it in L.values() if isinstance(it, dict) and it.get('dono') == pid and it.get('uso') in ('arma', 'arma2', 'escudo', 'foco', 'pescoco')]
         for u in set(usos):
             if usos.count(u) > 1: P.append(f'{n} tem duas peças em "{u}"')
         s = (p.get('marca') or {}).get('caca')
@@ -582,13 +915,16 @@ def valida(E):
             else:
                 if s.get('fase') not in ('procura', 'encontro', 'luta') or not _int(s.get('restam')) or s['restam'] < 0 or s.get('casa') not in E['lugares'] or not isinstance(s.get('com', []), list):
                     P.append(f'{n} tem a saída (marca.caca) torta')
-                elif s['fase'] == 'encontro' and not (isinstance(s.get('encontro'), dict) and s['encontro'].get('especie') in TB.ESPECIES and _int(s['encontro'].get('n')) and s['encontro']['n'] >= 1):
+                elif s['fase'] == 'encontro' and not (isinstance(s.get('encontro'), dict) and especie(s['encontro'].get('especie')) and _int(s['encontro'].get('n')) and s['encontro']['n'] >= 1):
                     P.append(f'{n} tem um bicho à frente que a saída não descreve (marca.caca)')
                 elif s['fase'] == 'luta' and not isinstance(s.get('luta'), str): P.append(f'{n} está em luta de caça sem o arquivo dela (marca.caca)')
     for pid, p in E['gente'].items(): tenta(f'a pessoa {pid}', lambda: pessoa(pid, p))
     def item_(iid, it):
         n = f'{it.get("nome", "?")} ({iid})'; dono = it.get('dono')
-        if it.get('tipo') not in ('arma', 'armadura', 'escudo', 'nucleo'): P.append(f'{n} tem tipo desconhecido: {it.get("tipo")}')
+        if it.get('tipo') not in TIPOS_ITEM: P.append(f'{n} tem tipo desconhecido: {it.get("tipo")}')
+        e = _item_magia_erro(it) if it.get('tipo') in TIPOS_ITEM else None
+        if e: P.append(f'{n}: {e}')
+        if it.get('uso') in USO_DO_TIPO and it.get('tipo') != USO_DO_TIPO[it['uso']]: P.append(f'{n} é {it.get("tipo")} e está em "{it["uso"]}"')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): P.append(f'{n} tem categoria fora da tabela: {it["cat"]}')
         if dono is not None and dono not in E['gente']: P.append(f'{n} tem dono que não existe: {dono}')
         if it.get('uso') and not dono: P.append(f'{n} está em uso sem dono')
@@ -605,7 +941,7 @@ def valida(E):
         if o.get('quem') not in E['gente'] or E['gente'][o['quem']]['estado'] == 'morto': P.append(f'a obra {oid} é de alguém que não existe ou morreu')
         if o.get('lugar') not in E['lugares']: P.append(f'a obra {oid} está num lugar que não existe: {o.get("lugar")}')
         if not _num(o.get('pede')) or o['pede'] < 1 or not _num(o.get('blocos')) or not 0 <= o['blocos'] <= o['pede']: P.append(f'a obra {oid} tem os blocos fora da conta: {o.get("blocos")} de {o.get("pede")}')
-        if o.get('tipo') not in ('forjar', 'ajustar'): P.append(f'a obra {oid} tem tipo desconhecido: {o.get("tipo")}')
+        if o.get('tipo') not in M.OBRAS: P.append(f'a obra {oid} tem tipo desconhecido: {o.get("tipo")}')
         if o.get('nucleo') is not None:
             nu = L.get(o['nucleo'])
             if not isinstance(nu, dict) or nu.get('tipo') != 'nucleo': P.append(f'a obra {oid} pede um núcleo que não está no Livro de Itens: {o["nucleo"]}')
@@ -627,7 +963,7 @@ def valida(E):
             for b, q in (l.get(teto) or {}).items():
                 e = _conta_erro(teto, b, q)
                 if e: P.append(f'{n}: {e}')
-        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas'):
+        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas', 'botica', 'runas', 'santuario', 'maldito', 'covil'):
             if campo in l:
                 e = _lugar_erro(E, campo, None, l[campo])
                 if e: P.append(f'{n}: "{campo}" errado ({json.dumps(l[campo], ensure_ascii=False)[:60]}): {e}')
@@ -656,7 +992,7 @@ if __name__ == '__main__':
         print(f"  corpo: {corpo.diz(p)} · feridas: {feridas} · prata: {p['moedas']} · {em(E, onde(E, a[1]))}")
         if casa: print(f"  ({p['nome']} descansou em casa desde a última vez em cena: é assim que volta a agir)")
         if p.get('carga'): print('  carga: ' + ', '.join(f'{q:g} de {nome_bem(b)}' for b, q in p['carga'].items()))
-        usos = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo')
+        usos = dict(arma='na mão', arma2='de reserva', escudo='no braço', veste='no corpo', foco='na mão, para lançar', pescoco='no pescoço')      # as mesmas palavras do ato.uso_diz
         for i, it in E['itens']['itens'].items():
             if it.get('dono') == a[1]: print(f"  {i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]))}" + (f" · em uso, {'na cabeça' if it['uso'] == 'veste' and list(it.get('cobre') or []) == ['cabeça'] else usos.get(it['uso'], it['uso'])}" if it.get('uso') else ' · na guarda'))
     elif a[:1] == ['lugar'] and len(a) > 1:

@@ -53,12 +53,18 @@ ESFORCO_OFICIO = dict(diarista='pesado', aprendiz='pesado', oficial='leve', mest
 
 # ---------- o vocabulário comum dos bens (etapa 2: o mercado, o ofício e a caça falam a mesma língua) ----------
 # a matéria de ofício tem categoria; a chave dela, na carga e no estoque, é "nome:categoria" ("metal:0", "couro:2", "osso:1")
-MATERIAS = ['metal', 'couro', 'osso', 'madeira', 'erva']
+MATERIAS = ['metal', 'couro', 'osso', 'madeira', 'erva', 'peçonha']      # a peçonha (etapa da magia): o despojo do bicho de veneno, da categoria dele até a Rara (a alquimia faz dela o veneno de lâmina)
 def materia(nome, cat): return f'{nome}:{cat}'
 def le_materia(chave):
     n, _, c = chave.partition(':')
     return (n, int(c)) if c.isdigit() else (chave, None)
-BENS = ['comida', 'lenha', 'carvão', 'sal', 'pano', 'remédio', 'ferramenta']     # os bens sem categoria ("prata" é o dinheiro do lugar, no estoque dele)
+BENS = ['comida', 'lenha', 'carvão', 'sal', 'pano', 'remédio', 'ferramenta', 'água benta']     # os bens sem categoria ("prata" é o dinheiro do lugar, no estoque dele); a água benta é da etapa da magia
+# AS POÇÕES (etapa da magia): do Comum ao Raro são BENS, com a chave "nome:categoria" na carga e no estoque, como a matéria ("cura:0", "veneno:2": 1 dose de veneno = 1 golpe);
+# do Épico para cima são ELIXIR, item do Livro de Itens (tipo 'elixir', com 'pocao'), contado no mundo. O nome à mesa é o daqui (estado.nome_bem)
+POCOES = {'cura': 'poção de cura', 'antídoto': 'antídoto', 'veneno': 'veneno de lâmina', 'mana': 'poção de Mana', 'guarda': 'poção de guarda', 'fúria': 'poção de fúria',
+          'vigília': 'poção de vigília', 'quebra-maldição': 'poção de quebra-maldição'}
+POCAO_ATE = 2              # a poção é bem até o Raro; do Épico para cima, elixir
+POCAO_BASE = 6             # o preço de tabela da poção Comum (vezes PECA_VEZES por categoria): é o do elixir também, pela regra do peso_da_peca
 MATERIA_ATE = 2             # a matéria comum vai até o Raro; do Épico para cima a obra pede um NÚCLEO (item do Livro de Itens, tipo 'nucleo', contado no mundo)
 PECA_BASE = 30              # o preço de tabela de uma peça Comum nova, em prata: o da espada, do escudo e da armadura que cobre tronco, braços e pernas (as outras: peso_da_peca)
 PECA_VEZES = 6              # ... vezes isto a cada categoria
@@ -83,14 +89,19 @@ MATERIA_ARMA = {
 }                                               # as mãos ("punho") não se forjam
 MATERIA_ESCUDO = dict(madeira=2, metal=1)
 PECA_DE_TABELA = 'espada'   # o preço de tabela (PECA_BASE, vezes PECA_VEZES por categoria) é o desta arma: as outras valem a proporção das unidades de matéria que levam
-def peso_da_peca(tipo, cobre=None, familia=None):
+# a matéria do foco (pela forma) e do amuleto (etapa da magia): valem pela matéria que levam, como a arma
+MATERIA_FOCO = {'varinha': dict(madeira=2, osso=1), 'cajado': dict(madeira=4, osso=1), 'símbolo': dict(metal=3), 'talismã': dict(osso=2, couro=1)}
+MATERIA_AMULETO = dict(osso=1)
+def peso_da_peca(tipo, cobre=None, familia=None, forma=None):
     """a fração do preço de tabela que uma peça vale pelo tamanho. A armadura, pelo que cobre: os pontos de corpo ÷ CORPO_PESO (o elmo: um quarto).
-    A arma e o escudo, pela matéria que levam: as unidades de matéria ÷ as da espada (a adaga: um terço; o montante: cinco terços; o escudo: 1).
+    A arma, o escudo, o foco e o amuleto, pela matéria que levam: as unidades de matéria ÷ as da espada (a adaga: um terço; o montante: cinco terços; o escudo: 1;
+    o cajado: cinco terços; o amuleto: um terço, 10 de prata o Comum). O elixir vale o preço da poção (POCAO_BASE); o escrito, o preço de tabela.
     A arma que a tabela não conhece vale o preço de tabela."""
     if tipo == 'armadura': return sum(PARTE_PESO.get(x, 0) for x in (cobre or ['tronco', 'braços', 'pernas'])) / CORPO_PESO
-    mat = MATERIA_ESCUDO if tipo == 'escudo' else MATERIA_ARMA.get(familia) if tipo == 'arma' else None
+    if tipo == 'elixir': return POCAO_BASE / PECA_BASE
+    mat = MATERIA_ESCUDO if tipo == 'escudo' else MATERIA_ARMA.get(familia) if tipo == 'arma' else MATERIA_FOCO.get(forma) if tipo == 'foco' else MATERIA_AMULETO if tipo == 'amuleto' else None
     return sum(mat.values()) / sum(MATERIA_ARMA[PECA_DE_TABELA].values()) if mat else 1.0
-def peso_do_item(it): return peso_da_peca(it.get('tipo'), it.get('cobre'), it.get('familia'))       # o mesmo, lido de um item do Livro de Itens
+def peso_do_item(it): return peso_da_peca(it.get('tipo'), it.get('cobre'), it.get('familia'), it.get('forma'))       # o mesmo, lido de um item do Livro de Itens
 OFICINA_MAX = 4             # a oficina de um lugar vai de 0 (bancada) a isto (forja mestra)
 PERIGO_MAX = 3              # o perigo de um ermo vai de 1 (a borda) a isto (o coração)
 
@@ -100,12 +111,35 @@ MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FE
 
 # ---------- os eventos (o que pode acontecer; evento fora desta lista é recusado) ----------
 EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'vestir', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
-           'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada', 'casa']
+           'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada', 'casa',
+           'talento', 'estudar', 'lancar', 'rito', 'beber', 'alquimia', 'encantar', 'maldicao', 'servico', 'covil']        # os da etapa da magia (projeto/ETAPA_MAGIA.md, seção 11)
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
-MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
+MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa', 'covil')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
 RETOMAR_FATOS = 40          # o teto de linhas de fatos no RETOMAR.md; passando disso, a primeira linha diz quantos ficaram de fora e como lê-los
-OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura']      # os ofícios que têm maestria e treino, como as armas (maestria.forja, treino.caça)
-MODULOS = ['mercado', 'oficio', 'caca']     # os módulos do mundo: cada um pode ter virada(E) (roda quando o dia vira), mesa(E) (linhas para a MESA.md), so_mestre(E) (linhas para o SÓ O MESTRE da MESA) e retomar(E) (linhas para o RETOMAR.md)
+OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura', 'alquimia', 'encanto', 'arcano', 'fé', 'verde', 'pacto']      # os ofícios que têm maestria e treino, como as armas
+                            # (maestria.forja, treino.caça); da etapa da magia: a alquimia e o encanto (sobem pela tabela da forja) e as quatro tradições (sobem pela das armas)
+MODULOS = ['mercado', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas']
+# os módulos do mundo (o que ainda não existe fica de fora sem quebrar nada: estado.modulos). Cada um pode ter: virada(E) (roda quando o dia vira) · bloco(E, pid, esforco, dorme)
+# (os efeitos de UM bloco em quem age, vai junto ou espera: a volta da Mana) · vestiu(E, pid, iid) (depois de pôr uma peça em uso) · voce(E) (linhas no "Você" da MESA) · mesa(E) ·
+# so_mestre(E) (linhas para o SÓ O MESTRE) · retomar(E) (linhas para o RETOMAR.md) · recusa_fecha(E) (os motivos para o turno não fechar)
+OBRAS = ('forjar', 'ajustar', 'leva', 'gravar')       # os tipos de obra (a obra de vários dias): forjar e ajustar (o ofício); a leva da alquimia e a gravação do encanto (etapa da magia)
+
+# ---------- a magia no estado (etapa da magia: o vocabulário que o gravador confere; os números de cada frente moram nas páginas delas) ----------
+BANCADA_MAX = 4             # a botica, as runas e o santuário de um lugar vão de 0 a isto (como a oficina)
+VOTOS = ('lâmina', 'pobreza', 'socorro')       # os votos do clérigo: não põe em uso arma de corte nem de ponta · não guarda mais de 50 de prata na virada · não recusa cura pedida
+MALDICAO_TIPOS = ('míngua', 'chaga', 'azar', 'insônia', 'marca')      # o sinal e a cor da maldição (o relógio é um só, de 6 passos)
+MALDICAO_ORIGENS = ('feitiço', 'bicho', 'lugar', 'peça', 'juramento')
+MALDICAO_CONDICOES = ('devolver', 'matar', 'perdao', 'morte', 'sair', 'cumprir', 'queimar', 'divida')       # o que a quebra (o tipo da condição; os campos são de quem a põe)
+MALDICAO_PASSOS = ['a marca', 'o peso', 'a míngua', 'a chaga', 'o fim à vista', 'a morte']                 # os passos 1 a 6 do relógio
+MALDICAO_PENA = {2: -1, 3: -2, 4: -2, 5: -4}   # a pena em todo teste, pelo passo (das penas de magia vale a pior; ela soma com a pena do corpo)
+MALDICAO_SEM_NOITE = 3      # deste passo em diante, a noite dormida não devolve PV
+MALDICAO_SEM_SARAR = 4      # deste passo em diante, as feridas não saram e a Mana não volta fora da luta
+ENJOO_PENA = -2             # quem enjoou da poção a mais (marca.enjoo = {ate: bloco}) leva isto em todo teste até aquele bloco (soma com a pena do corpo; a luta tem o mesmo número)
+MALDICAO_SABE = 2           # o degrau de saber vai de 0 (não sabe) a 1 (desconfia) e 2 (sabe: alguém leu)
+def encantos_max(cat): return 2 if cat >= 4 else 1      # encantos numa peça: um; dois do Único para cima
+ENCANTO_VOLTA = 1           # o encanto solto volta a carregar tantos blocos depois, fora da luta
+VENENO_DURA = BLOCOS_DIA    # a dose de veneno passada na lâmina seca em tantos blocos (um dia)
+BENTA_DURA = 7 * BLOCOS_DIA     # a arma benta pelo clérigo vale tantos blocos (7 dias)
 ESTADOS = ['vivo', 'morto']
