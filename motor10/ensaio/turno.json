@@ -1,29 +1,39 @@
 {
- "n": 4,
+ "n": 5,
  "aberto": {
   "dia": 2,
-  "bloco": 3
+  "bloco": 4
  },
- "evento0": 42,
+ "evento0": 51,
  "dados": [],
  "lutas": [],
  "perguntas": [
   {
    "n": 1,
-   "texto": "Diante das duas corças (Maro viu primeiro; elas perdem o primeiro turno), o que ele faz?",
+   "texto": "O que Maro faz com o despojo (12 de comida, 3 de couro, 2 de osso)?",
    "opcoes": {
-    "a": "ataca, começando de perto",
-    "b": "ataca, começando de longe",
-    "c": "deixa as duas irem e segue a procura (resta 1 bloco)",
-    "d": "larga a caçada e volta para a vila"
+    "a": "vende tudo (uns 12 de prata)",
+    "b": "guarda 4 de comida para comer sem pagar e vende o resto (uns 9 de prata)",
+    "c": "guarda tudo por ora"
    }
   },
   {
    "n": 2,
-   "texto": "Se uma corça fugir ferida, Maro segue o rastro de sangue?",
+   "texto": "As peças gastaram (espada 7/10; elmo, escudo e armadura 9/10). Manda consertar na forja?",
    "opcoes": {
-    "a": "segue",
-    "b": "não segue"
+    "a": "só a espada (2 de prata, 1 bloco de espera)",
+    "b": "tudo (5 de prata, 4 blocos de espera)",
+    "c": "não conserta agora"
+   }
+  },
+  {
+   "n": 3,
+   "texto": "E no Dia 3?",
+   "opcoes": {
+    "a": "corça de novo, sozinho",
+    "b": "javali, com a Rute (ela leva a parte dela)",
+    "c": "lobos (bando de 3 a 5)",
+    "d": "a rotina: jornada e treino de espada"
    }
   }
  ],

@@ -286,9 +286,9 @@
   },
   "moedas": 23,
   "corpo": {
-   "fome": 1,
-   "sono": 2,
-   "cansaco": 2
+   "fome": 2,
+   "sono": 3,
+   "cansaco": 7
   },
   "pv": 141,
   "feridas": [],
@@ -302,29 +302,15 @@
     "ate": 11,
     "onde": "vila"
    },
-   "caca": {
-    "ermo": "mata",
-    "casa": "vila",
-    "quer": "caça",
-    "alvo": "corça",
-    "restam": 1,
-    "com": [],
-    "dia": 2,
-    "fase": "encontro",
-    "encontro": {
-     "especie": "corça",
-     "n": 2,
-     "viu": "caçador",
-     "margem": 1,
-     "escuro": false
-    },
-    "luta": null,
-    "lutas": 0,
-    "parou": null,
-    "sangue": null
-   }
+   "caca": null,
+   "abates": 2,
+   "feito_caça": 0
   },
-  "carga": {},
+  "carga": {
+   "comida": 12,
+   "couro:0": 3,
+   "osso:0": 2
+  },
   "jogador": true,
   "sobre": "vive das armas, com a mão de Iniciante na espada"
  }

@@ -1,24 +1,26 @@
-# RETOMAR · depois do turno 3
+# RETOMAR · depois do turno 4
 
-**Agora:** Dia 2, tarde (12h) · primavera · Maro FORA, na Mata do Corvo (a saída está aberta) · PV 141/141 · sem fome (fome 1) · sem sono (sono 2) · com forças (cansaço 2) · 23 de prata
+**Agora:** Dia 2, entardecer (16h) · primavera · Maro em Pedra Rasa · PV 141/141 · sem fome (fome 2) · sem sono (sono 3) · com forças (cansaço 7) · fôlego máximo −2 · 23 de prata
 
-**O que houve no turno 3:** Dia 2: Maro comprou o elmo de malha (8 de prata) e saiu sozinho para a Mata do Corvo. No primeiro bloco de procura achou rastro (21 contra 20) e deu com DUAS corças. Viu primeiro. A saída está aberta, à espera da escolha.
+**O que houve no turno 4:** Dia 2: Maro atacou as duas corças de perto. Feriu uma, que fugiu; matou a outra com um crítico. Seguiu o sangue, encurralou a ferida e a matou. Não levou um golpe. Voltou a Pedra Rasa às 16h com 12 de comida, 3 de couro e 2 de osso.
 
-**Saída aberta:** caçando corça na Mata do Corvo desde o Dia 2; resta 1 bloco; À FRENTE: 2 corças: `caca.py atacar`, `deixar` ou `fugir` (a ameaça e o que a posição dá: `caca.py ver`)
-
-**Respondido:** O que Maro faz no Dia 2? → vai sozinho à Mata do Corvo atrás de corça · Maro compra o elmo de malha (8 de prata) antes de se meter em luta? A cabeça está sem proteção. → compra
+**Respondido:** Diante das duas corças (Maro viu primeiro; elas perdem o primeiro turno), o que ele faz? → ataca, começando de perto · Se uma corça fugir ferida, Maro segue o rastro de sangue? → segue
 
 **Os fatos do turno** (do registro de eventos):
-- Dia 2, alvorada: Maro compra elmo de malha Comum (10/10) por 8 de prata em Pedra Rasa
-- Dia 2, alvorada: Maro veste elmo de malha Comum
-- Dia 2, alvorada: Maro sai para caçar corça na Mata do Corvo
-- Dia 2, alvorada: Maro vai ao ermo (a Mata do Corvo)
-- Dia 2, manhã: Maro procura rastro na Mata do Corvo
-- Dia 2, tarde: aparecem 2 corças na Mata do Corvo
+- Dia 2, tarde: Maro luta com 2 corças na Mata do Corvo (começa perto, os bichos surpreendidos)
+- Dia 2, tarde: luta: a casa fica com o campo, em 4 rodadas · morreram: corça 2 · fugiram: corça 1
+- Dia 2, tarde: Maro fica com o campo na Mata do Corvo: 1 de corça a menos; leva 6 de comida, 2 de couro Comum, 1 de osso Comum
+- Dia 2, tarde: Maro segue o sangue
+- Dia 2, tarde: aparece a corça na Mata do Corvo
+- Dia 2, tarde: Maro luta com a corça na Mata do Corvo (começa colado, alto, cerco, o bicho surpreendido)
+- Dia 2, tarde: luta: a casa fica com o campo, em 2 rodadas · morreram: a corça
+- Dia 2, tarde: Maro fica com o campo na Mata do Corvo: 1 de corça a menos; leva 6 de comida, 1 de couro Comum, 1 de osso Comum
+- Dia 2, tarde: Maro volta do ermo
 
 ## PERGUNTAS ABERTAS
-1. Diante das duas corças (Maro viu primeiro; elas perdem o primeiro turno), o que ele faz?  **a)** ataca, começando de perto · **b)** ataca, começando de longe · **c)** deixa as duas irem e segue a procura (resta 1 bloco) · **d)** larga a caçada e volta para a vila
-2. Se uma corça fugir ferida, Maro segue o rastro de sangue?  **a)** segue · **b)** não segue
+1. O que Maro faz com o despojo (12 de comida, 3 de couro, 2 de osso)?  **a)** vende tudo (uns 12 de prata) · **b)** guarda 4 de comida para comer sem pagar e vende o resto (uns 9 de prata) · **c)** guarda tudo por ora
+2. As peças gastaram (espada 7/10; elmo, escudo e armadura 9/10). Manda consertar na forja?  **a)** só a espada (2 de prata, 1 bloco de espera) · **b)** tudo (5 de prata, 4 blocos de espera) · **c)** não conserta agora
+3. E no Dia 3?  **a)** corça de novo, sozinho · **b)** javali, com a Rute (ela leva a parte dela) · **c)** lobos (bando de 3 a 5) · **d)** a rotina: jornada e treino de espada
 
 ## SÓ O MESTRE
 - nada oculto neste turno.

@@ -1,0 +1,685 @@
+{
+ "r": 4,
+ "L": [
+  {
+   "nome": "Maro",
+   "nivel": 5,
+   "maestria": 2,
+   "pvmax": 141,
+   "folmax": 13,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 5,
+   "percep_b": 5,
+   "agil_b": 6,
+   "forca_b": 7,
+   "dormem": [],
+   "pv": 141,
+   "fol": 5,
+   "arma": {
+    "nome": "Espada de Maro",
+    "cat": 0,
+    "dado": "1d8",
+    "golpe": "corte",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 5.25,
+    "aparo": 2,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {},
+    "item": "p1"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "as mãos",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 3.25,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.21,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "item": "p2"
+   },
+   "partes": {
+    "cabeça": {
+     "nome": "elmo de malha Comum",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p3"
+    },
+    "tronco": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    },
+    "braços": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    },
+    "pernas": {
+     "nome": "Armadura de malha de Maro",
+     "cat": 0,
+     "material": "malha",
+     "rd": 1.0,
+     "item": "p4"
+    }
+   },
+   "fontes": [
+    {
+     "item": "p3",
+     "efeitos": {}
+    },
+    {
+     "item": "p4",
+     "efeitos": {}
+    },
+    {
+     "item": "p5",
+     "efeitos": {}
+    }
+   ],
+   "nuas": [],
+   "def_fixa": 26.0,
+   "escudo": {
+    "nome": "Escudo de Maro",
+    "cat": 0,
+    "bonus": 4,
+    "item": "p5"
+   },
+   "fol_rodada": 0,
+   "ini_mod": 0,
+   "id": "eu",
+   "controla": true,
+   "lado": "A",
+   "x": 2,
+   "estado": "pe",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": null,
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [
+    [
+     "corça 2",
+     false
+    ]
+   ],
+   "ini": 26,
+   "pv_visto": 141,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "moral": "testa",
+   "papel": "frente",
+   "feridas_antes": 0,
+   "guarda": null,
+   "avisou_fol": false
+  },
+  {
+   "nome": "corça 1",
+   "nivel": 4,
+   "maestria": 0,
+   "pvmax": 91,
+   "folmax": 10,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 3,
+   "percep_b": 7,
+   "agil_b": 7,
+   "forca_b": 4,
+   "dormem": [],
+   "bicho": "corça",
+   "tamanho": "médio",
+   "tracos": [],
+   "ocupa": 1,
+   "cerco": [
+    4,
+    2
+   ],
+   "coragem": -6,
+   "pv": 51,
+   "fol": 7,
+   "arma": {
+    "nome": "casco Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.75,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "corpo": true,
+    "item": "p6"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "casco Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.75,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "corpo": true,
+    "item": "p6"
+   },
+   "armas_corpo": [
+    {
+     "nome": "casco Comum",
+     "cat": 0,
+     "dado": "1d4",
+     "golpe": "impacto",
+     "alcance": 1,
+     "distancia": false,
+     "maos": 1,
+     "recarga": 0,
+     "haste": false,
+     "mult": 1,
+     "acerto": 2.75,
+     "aparo": 0,
+     "folego": 1,
+     "fmult": 1.12,
+     "efeitos": {
+      "nao_quebra": true
+     },
+     "corpo": true,
+     "item": "p6"
+    }
+   ],
+   "partes": {
+    "cabeça": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p6"
+    },
+    "tronco": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p6"
+    },
+    "braços": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p6"
+    },
+    "pernas": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p6"
+    }
+   },
+   "nuas": [],
+   "fontes": [
+    {
+     "item": "p6",
+     "efeitos": {
+      "nao_quebra": true
+     }
+    }
+   ],
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "def_fixa": 28.5,
+   "moral": "testa",
+   "lado": "B",
+   "x": 3,
+   "estado": "fugiu",
+   "feridas": [
+    [
+     "tronco",
+     false
+    ]
+   ],
+   "sangra": [
+    8,
+    3
+   ],
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [
+    "ferido"
+   ],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": "Maro",
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [],
+   "ini": 22,
+   "pv_visto": 91,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 0,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "papel": "frente",
+   "feridas_antes": 0,
+   "moral_r": [
+    2,
+    "ferido"
+   ]
+  },
+  {
+   "nome": "corça 2",
+   "nivel": 4,
+   "maestria": 0,
+   "pvmax": 91,
+   "folmax": 10,
+   "esforcos": [
+    2
+   ],
+   "reacoes": 1,
+   "vontade_b": 3,
+   "percep_b": 7,
+   "agil_b": 7,
+   "forca_b": 4,
+   "dormem": [],
+   "bicho": "corça",
+   "tamanho": "médio",
+   "tracos": [],
+   "ocupa": 1,
+   "cerco": [
+    4,
+    2
+   ],
+   "coragem": -6,
+   "pv": -79,
+   "fol": 2,
+   "arma": {
+    "nome": "casco Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.75,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "corpo": true,
+    "item": "p7"
+   },
+   "arma2": null,
+   "punho": {
+    "nome": "casco Comum",
+    "cat": 0,
+    "dado": "1d4",
+    "golpe": "impacto",
+    "alcance": 1,
+    "distancia": false,
+    "maos": 1,
+    "recarga": 0,
+    "haste": false,
+    "mult": 1,
+    "acerto": 2.75,
+    "aparo": 0,
+    "folego": 1,
+    "fmult": 1.12,
+    "efeitos": {
+     "nao_quebra": true
+    },
+    "corpo": true,
+    "item": "p7"
+   },
+   "armas_corpo": [
+    {
+     "nome": "casco Comum",
+     "cat": 0,
+     "dado": "1d4",
+     "golpe": "impacto",
+     "alcance": 1,
+     "distancia": false,
+     "maos": 1,
+     "recarga": 0,
+     "haste": false,
+     "mult": 1,
+     "acerto": 2.75,
+     "aparo": 0,
+     "folego": 1,
+     "fmult": 1.12,
+     "efeitos": {
+      "nao_quebra": true
+     },
+     "corpo": true,
+     "item": "p7"
+    }
+   ],
+   "partes": {
+    "cabeça": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p7"
+    },
+    "tronco": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p7"
+    },
+    "braços": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p7"
+    },
+    "pernas": {
+     "nome": "pelo Comum",
+     "cat": 0,
+     "material": "couro",
+     "rd": 0.7,
+     "item": "p7"
+    }
+   },
+   "nuas": [],
+   "fontes": [
+    {
+     "item": "p7",
+     "efeitos": {
+      "nao_quebra": true
+     }
+    }
+   ],
+   "escudo": null,
+   "fol_rodada": 0,
+   "ini_mod": 2,
+   "def_fixa": 28.5,
+   "moral": "testa",
+   "lado": "B",
+   "x": 3,
+   "estado": "morto",
+   "feridas": [],
+   "sangra": null,
+   "atordoado": 0,
+   "chao": false,
+   "preso": false,
+   "abalado": false,
+   "reac": 1,
+   "postura": "firme",
+   "usou": [],
+   "testou": [],
+   "morte": [
+    0,
+    0
+   ],
+   "agressor": "Maro",
+   "recarga": 0,
+   "sem_arma": false,
+   "resguardo": false,
+   "fugiu": false,
+   "golpeado": [
+    [
+     "Maro",
+     false
+    ]
+   ],
+   "ini": 34,
+   "pv_visto": 91,
+   "veneno": null,
+   "agarrado": null,
+   "encurralado": false,
+   "golpes": 8,
+   "andou_t": 0,
+   "feriu_t": [],
+   "sopro_r": 0,
+   "papel": "frente",
+   "feridas_antes": 0,
+   "avisou_fol": false
+  }
+ ],
+ "itens": {
+  "p1": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Espada de Maro",
+   "dur": [
+    8,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "familia": "espada",
+   "id": "i0028",
+   "uso": "arma"
+  },
+  "p2": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "as mãos",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": null,
+   "familia": "punho"
+  },
+  "p3": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "elmo de malha Comum",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 2: Maro comprou em Pedra Rasa, por 8 de prata"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0010",
+   "uso": "veste"
+  },
+  "p4": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Maro",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0030",
+   "uso": "veste"
+  },
+  "p5": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "Escudo de Maro",
+   "dur": [
+    9,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "id": "i0029",
+   "uso": "escudo"
+  },
+  "p6": {
+   "tipo": "corpo",
+   "cat": 0,
+   "nome": "o corpo de corça 1",
+   "dur": [
+    1,
+    1
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ]
+  },
+  "p7": {
+   "tipo": "corpo",
+   "cat": 0,
+   "nome": "o corpo de corça 2",
+   "dur": [
+    1,
+    1
+   ],
+   "efeitos": [
+    {
+     "chave": "nao_quebra"
+    }
+   ]
+  }
+ },
+ "lugar": {},
+ "tempo": [],
+ "log": [
+  "— RODADA 4 —",
+  "  corça 2 golpeia Maro: 21,75 contra 30, erra",
+  "  corça 2 golpeia Maro: 9,75 contra 30, erra",
+  "  Maro golpeia corça 2: 51,25 contra 28,5, CRÍTICO, tronco: 162 (0/91)",
+  "    ☠ corça 2 MORRE"
+ ],
+ "paradas": [],
+ "fim": "A",
+ "ordens": {
+  "Maro": {
+   "acao": "atacar",
+   "alvo": null
+  }
+ },
+ "surpresa": "B",
+ "quieto": false,
+ "fila": [],
+ "comecou": true,
+ "usadas": [
+  "p1",
+  "p6",
+  "p7",
+  "p3",
+  "p4",
+  "p5"
+ ],
+ "sem_dano": 0,
+ "sem_parada": 1,
+ "dano_r": 1.7802197802197801,
+ "houve_parada": false,
+ "fechada": 4,
+ "avisos": [],
+ "mundo": true,
+ "luta_fechada": true
+}
