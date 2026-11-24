@@ -22,9 +22,10 @@ Os bancos novos (o `provas_mundo.py` roda os três): `provas_talento.py`, `prova
 
 As masmorras (capítulo 17 do `REGRAS.md`), o ladino (18), os povos do personagem (19) e os dragões (20). O juízo e as respostas do jogador (E1 a E4): `projeto/etapa4b/DECISOES.md`.
 Os módulos novos: `masmorra.py`, `manha.py`, `povos.py`, `dragoes.py`; as páginas novas: `tabelas_masmorra.py`, `tabelas_manha.py`, `tabelas_povos.py`, `tabelas_dragoes.py`.
-Os bancos novos (o `provas_mundo.py` roda os seis): `provas_4b.py` (o alicerce), `provas_masmorra.py`, `provas_manha.py`, `provas_povos.py`, `provas_dragoes.py` e `provas_fantasia.py` (a integração: o comando da vila, o povo do personagem, o covil pela masmorra, quem vê no escuro, a mina).
+Os bancos novos (o `provas_mundo.py` roda os seis): `provas_4b.py` (o alicerce), `provas_masmorra.py`, `provas_manha.py`, `provas_povos.py`, `provas_dragoes.py` e `provas_fantasia.py` (a integração: o comando da vila, o povo do personagem, o covil pela masmorra, quem vê no escuro, a mina, o anão na pedra).
 
-**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10). Antes, como na magia, o verificador independente confere a 4b.
+O verificador independente conferiu a 4b e achou 13 defeitos; o acerto os consertou, com prova no banco (`MUDANCAS.md`, "Etapa 4b, segunda volta").
+**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10).
 
 ## A vila de teste do jogador (`ensaio/`)
 

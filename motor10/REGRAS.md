@@ -1760,7 +1760,7 @@ python3 masmorra.py abrir SALA|guardado [chave|gazua|grampo|força] [quem=ID]   
 python3 masmorra.py desarmar [N] [quem=ID] · contornar [N] · disparar [N]       1 lance
 python3 masmorra.py atacar [inicio=longe|perto|colado] [passagem] · esperar · recuar
 python3 masmorra.py luta ["Nome: ordem"]                    a luta aberta (o ato.py luta roda); acabada, as contas saem sozinhas
-python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]       1 lance
+python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]       1 lance (quem fica com a peça paga a parte dos outros nela)
 python3 masmorra.py descansar N [vigia=ID] · ordem ID,ID,... · luz tocha|feitiço|nada [quem=ID]
 python3 masmorra.py voltar · sair                           1 lance por sala até a entrada · a volta para casa
 SÓ O MESTRE: masmorra.py mapa [MASMORRA] · gera MOLDE "Nome" [vizinho=LUGAR] [niveis=N] [cat=K] [longe=N] · larga "por quê"

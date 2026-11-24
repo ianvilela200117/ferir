@@ -34,7 +34,7 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 masmorra.py desarmar [N] [quem=ID] · contornar [N] · disparar [N]   a armadilha achada (1 lance cada)
   python3 masmorra.py atacar [inicio=longe|perto|colado] [passagem] · esperar · recuar      diante de quem apareceu
   python3 masmorra.py luta ["Nome: ordem"] ["grupo: ordem"]     a luta aberta (é o `ato.py luta roda`); acabada, as contas
-  python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]         o que a sala guarda (1 lance)
+  python3 masmorra.py pegar [tudo|prata|ITEM] [quem=ID]         o que a sala guarda (1 lance; quem fica com a peça paga a parte dos outros nela)
   python3 masmorra.py punhado [quem=ID]                         do tesouro do dragão que dorme, escondido na câmara dele (1 lance; cada um, um teste contra a vigília)
   python3 masmorra.py descansar N [vigia=ID]                    dorme N blocos no chão, ali (o que vagueia rola a cada bloco)
   python3 masmorra.py ordem ID,ID,... · luz tocha|feitiço|nada [quem=ID]      a ordem de marcha · a luz (sem lance)
