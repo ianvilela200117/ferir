@@ -1,0 +1,32 @@
+{
+ "n": 2,
+ "aberto": {
+  "dia": 1,
+  "bloco": 2
+ },
+ "evento0": 26,
+ "dados": [],
+ "lutas": [],
+ "perguntas": [
+  {
+   "n": 1,
+   "texto": "O que Maro faz na primeira manhã em Pedra Rasa?",
+   "opcoes": {
+    "a": "compra o elmo de malha (8 de prata) e depois decide",
+    "b": "vai sozinho à Mata do Corvo atrás de corça",
+    "c": "chama a Rute e vai atrás de javali (ela leva a parte dela do despojo)",
+    "d": "trabalha a jornada (2 blocos, 4 de prata) e treina espada"
+   }
+  },
+  {
+   "n": 2,
+   "texto": "Como você quer jogar a vila de teste?",
+   "opcoes": {
+    "a": "turno a turno, com cena, como no jogo",
+    "b": "rápido: só os comandos e os números, para testar o motor depressa"
+   }
+  }
+ ],
+ "respondidas": [],
+ "notas": []
+}

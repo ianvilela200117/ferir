@@ -11,7 +11,8 @@ O lugar tem prata contada: loja sem prata não compra. Tudo por evento (`compra`
   AS PEÇAS DA LOJA são itens do Livro de Itens com "onde" no lugar, sem dono e que não estão SOLTOS (caídos no chão), até o Épico. Valem o preço da categoria
     (30 a Comum, vezes 6 por categoria: é o da espada. A ARMA VALE PELA MATÉRIA QUE LEVA: a adaga, de 1 de metal, um terço; o montante, de 5, cinco terços.
     A armadura, na proporção do que cobre: o elmo vale um quarto) menos o conserto que pedem (2% por ponto gasto); quebrada, a sucata (10%); sob medida, uma categoria abaixo.
-    A loja pede o valor; paga a parte dela (60 a 80%), e 20% a menos por cada peça igual (tipo, família ou material, categoria) que já tem na prateleira.
+    A loja pede o valor; PELAS PEÇAS PAGA MENOS QUE PELOS BENS: 40% do valor, e 5 pontos a mais por grau de comércio de quem vende (até 60%);
+    e 20% a menos por cada peça igual (tipo, família ou material, categoria) que já tem na prateleira.
     A LOJA FARTA CONTA A PRATELEIRA INTEIRA DA CATEGORIA: cada lugar guarda o alvo de peças por categoria (lugar.alvo_pecas: o que o gerador pôs na prateleira ao abrir
     a loja), e a loja paga também 20% a menos por cada peça da mesma categoria que a prateleira tem acima desse alvo. Quem compra da prateleira abre espaço de novo.
     A peça que está EM USO não se vende: guarda-se antes (`ato.py tirar ITEM`).
@@ -67,6 +68,7 @@ def povo(E, lid):
 def tem_mercado(E, lid): return povo(E, lid) > 0
 def mao(p): m = p.get('maestria'); return m.get('comércio', 0) if isinstance(m, dict) else 0              # a maestria de comércio (0 a 8)
 def parte(p): return C.parte(mao(p))                                                                       # a fração do preço que a loja paga a esta pessoa
+def parte_peca(p): return C.parte_peca(mao(p))                                                             # a fração do valor de uma PEÇA que a loja paga a esta pessoa (menos que pelos bens)
 def caixa(E, lid): return E['lugares'][lid]['estoque'].get('prata', 0)                                    # a prata do lugar
 def prata_do_mundo(E): return sum(p['moedas'] for p in E['gente'].values()) + sum((l.get('estoque') or {}).get('prata', 0) for l in E['lugares'].values())      # gente mais lugares: a conta que tem de fechar
 
@@ -249,9 +251,9 @@ def sobra(E, lid, it):
 
 
 def paga_peca(E, pid, it, lid=None):
-    """o que a loja paga por esta peça a esta pessoa: a parte dela no valor, 20% a menos por cada peça igual que a prateleira já tem,
+    """o que a loja paga por esta peça a esta pessoa: a parte dela no valor (tabelas_mercado.PAGA_PECA: 40%, mais a mão de comércio), 20% a menos por cada peça igual que a prateleira já tem,
     e 20% a menos por cada peça da mesma categoria que a prateleira tem acima do alvo do lugar"""
-    p = E['gente'][pid]; lid = lid or p['lugar']; return math.floor(round(parte(p) * valor(it) * C.FARTA ** (iguais(E, lid, it) + sobra(E, lid, it)), 6))
+    p = E['gente'][pid]; lid = lid or p['lugar']; return math.floor(round(parte_peca(p) * valor(it) * C.FARTA ** (iguais(E, lid, it) + sobra(E, lid, it)), 6))
 
 
 def _cats(c): return FEM[c][:-1] + 'ns' if FEM[c].endswith('m') else FEM[c] + 's'          # o plural da categoria que vem depois de "peças": Comuns, Incomuns, Raras, Épicas
@@ -369,7 +371,7 @@ def ver(E, pid):
     if not pop: return [f"**{l['nome']}:** não há mercado aqui (lugar sem povo contado: não se compra nem se vende)."]
     carga = p.get('carga', {}); itens = E['itens']['itens']
     L = [f"**{l['nome']}** · {_m(pop)} de povo · a loja tem {_m(caixa(E, lid))} de prata (sem prata, ela não compra) · comprar custa {C.COMPRA - 1:.0%} a mais · "
-         f"a loja paga {parte(p):.0%} do preço (a sua mão em comércio: {T.MAESTRIAS.get(mao(p), mao(p))})"]
+         f"a loja paga {parte(p):.0%} do preço pelos bens e {parte_peca(p):.0%} do valor pelas peças (a sua mão em comércio: {T.MAESTRIAS.get(mao(p), mao(p))})"]
     tem = [b for b in C.bens() if l['estoque'].get(b, 0) > 0 or carga.get(b, 0) > 0]; falta = [nome_bem(b) for b in C.bens() if b not in tem and C.consumo(b) and M.le_materia(b)[1] in (None, 0)]
     if tem: L += ['', '| bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |', '| --- | --- | --- | --- | --- | --- |'] + [_linha_bem(E, pid, lid, b) for b in tem]
     if falta: L.append(f"Em falta aqui (preço no teto, × {C.FATOR_MAX:g}): {', '.join(falta)}.")
@@ -388,7 +390,7 @@ def ver(E, pid):
         L += [f"- novas, a {_m(pr)} de prata cada ({T.CATS[cat]}): " + ' · '.join(v[:14]) + (f' · e mais {len(v) - 14}' if len(v) > 14 else '') for (cat, pr), v in sorted(novas.items())]
         L += outras[:8] + ([f"- ... e mais {estado.tantos(len(outras) - 8, 'peça gasta', 'peças gastas')}"] if len(outras) > 8 else [])
     minhas = [(i, it) for i, it in itens.items() if it.get('dono') == pid and _e_peca(it)]
-    if minhas: L += ['', f'**As suas peças** (o que a loja paga; {1 - C.FARTA:.0%} a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): '
+    if minhas: L += ['', f'**As suas peças** (o que a loja paga: {parte_peca(p):.0%} do valor; {1 - C.FARTA:.0%} a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): '
                      + ' · '.join(f"{i} {_diz_peca(it)}{' EM USO' if it.get('uso') else ''}: {_m(paga_peca(E, pid, it))}" for i, it in minhas[:8]) + (f' · e mais {len(minhas) - 8}' if len(minhas) > 8 else '')]
     L += ['', 'Negociar não gasta bloco: `mercado.py comprar BEM N` · `mercado.py vender BEM N|tudo` · `mercado.py vender tudo` (a cesta: um troco só) · `mercado.py comprar ITEM` · `mercado.py vender ITEM` · `mercado.py preco BEM N` (só olha)']
     return L

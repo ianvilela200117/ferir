@@ -3,7 +3,7 @@
 Este é o livro de regras do Motor 10. É um só, por assunto, sem história: o que mudou e quando fica no `MUDANCAS.md`.
 Os números moram todos nas páginas `tabelas*.py`. Nenhuma regra vale antes de passar no banco de provas (`python3 provas.py` e `python3 provas_mundo.py`).
 
-**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Duas metas da etapa 2 não batem, e estão ditas: a primeira peça Lendária (7.13: falhou em todas as rodadas da medida) e a do ferreiro que forja para a loja (8.13: a forja ainda rende mais do que a meta deixa). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
+**Estado:** estão escritos e provados os capítulos 1 a 4 (a pessoa, os itens, a luta, o banco de provas), o capítulo 5 (o tempo, o corpo, o estado e o turno: a etapa 1 do mundo) e os capítulos 6 a 9 (os bichos, o ofício, o mercado, a caça e a coleta: a etapa 2, "viver de um ofício"). Todas as metas passam. Duas foram fechadas por decisão do jogador: a Lendária é difícil de propósito, e a meta dela é o dia da primeira tentativa (7.13); a loja paga 40% pelas peças, e com isso forjar para a loja deixou de ser mina (8.8, 8.13). O plano do resto está no `PROJETO.md`. A vila de teste está no `GUIA_VILA.md`.
 
 **Precedência:** este livro manda. Regra antiga do save do Ferir não vale aqui.
 
@@ -694,15 +694,15 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 **Como ler:** cada grau de maestria vale 2 pontos; a oficina, até 4; o preparo, até 8. O dado pesa mais que tudo isso. Do Épico para cima, mesmo o melhor ferreiro perde núcleos: é para doer.
 
-7.13 **Medido** (`python3 provas_oficio.py`, em 21 rodadas: treze da medida, cinco da conferência e três do acerto; em todas, 14 de 15: a da Lendária não bate). O dado é o de verdade, e a medida muda de uma rodada para outra: por isso a tabela diz o centro do que se viu ("cerca de") e a faixa vista. **Uma rodada nova pode sair um pouco fora da faixa vista; o que não pode é sair da meta.** O robô ferreiro vive de verdade: dorme na cama e paga uma noite por dia, come e paga, vive do jornal, faz 3,5 blocos de bancada por dia. Sobe um degrau de cada vez, e só abre a obra quando tem a mão que ela pede.
+7.13 **Medido** (`python3 provas_oficio.py`; 15 de 15. Os números da tabela vêm de 21 rodadas: treze da medida, cinco da conferência e três do acerto). O dado é o de verdade, e a medida muda de uma rodada para outra: por isso a tabela diz o centro do que se viu ("cerca de") e a faixa vista. **Uma rodada nova pode sair um pouco fora da faixa vista; o que não pode é sair da meta.** O robô ferreiro vive de verdade: dorme na cama e paga uma noite por dia, come e paga, vive do jornal, faz 3,5 blocos de bancada por dia. Sobe um degrau de cada vez, e só abre a obra quando tem a mão que ela pede.
 **Com que a escada vale:** na forja mestra (+4), com os quatro preparos (+8) desde o Dia 1, e com matéria e núcleo novos a cada obra.
 
-| A primeira peça | Meta (o dia) | Medido (o dia em que metade das vidas já a tinha) | A primeira obra fecha | Núcleos por vida | Com um núcleo só, nasce em |
+| A primeira peça | Meta (o dia) | Medido (o dia em que metade das vidas já a tinha; na Lendária, o dia em que a primeira obra fecha) | A primeira obra fecha | Núcleos por vida | Com um núcleo só, nasce em |
 | --- | --- | --- | --- | --- | --- |
 | Rara | 15 a 30 | Dia 17 (em duas das 21 rodadas, Dia 20) | Dia 17 | (cerca de 1,7 leva de matéria, visto de 1,6 a 1,9; a pior vida, de 4 a 9) | |
 | Épica | 45 a 80 | Dia 59 (numa das 21 rodadas, Dia 51) | Dia 51 | cerca de 2,5 (visto de 1,9 a 3,2; a pior vida: de 6 a 14) | cerca de um terço das vidas (visto de 20 a 52%) |
 | Única | 130 a 200 | Dia 177 em treze das 21 rodadas; Dia 154 em cinco; Dia 189 numa; Dia 200 em duas, em cima do limite | Dia 131 | cerca de 3,5 (visto de 2,7 a 4,2; a pior vida: de 7 a 14) | cerca de um quarto das vidas (visto de 10 a 46%) |
-| Lendária | 300 a 450 | **NÃO BATE:** nasceu em 3 a 12 de 30 vidas (a prova pede 15) e falhou nas 21 rodadas | Dia 356 | cerca de 2,5 (visto de 2,2 a 2,8) | cerca de 12% das vidas (visto de 0 a 24%; a conta exata: 15%) |
+| Lendária | 300 a 450 (a primeira OBRA fecha: a primeira tentativa) | Dia 356, em todas as rodadas. **A peça é rara de propósito:** nasceu até o Dia 450 em 3 a 12 de 30 vidas | Dia 356 | cerca de 2,5 (visto de 2,2 a 2,8) | cerca de 12% das vidas (visto de 0 a 24%; a conta exata: 15%) |
 
 | O que mais se mede | Meta | Medido |
 | --- | --- | --- |
@@ -714,7 +714,11 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 | consertar 10 pontos de uma peça Rara, pago | 216 de prata, para a oficina | 216 |
 | a peça ajustada rende no dono, e uma categoria abaixo na mão de outro | sim | sim |
 
-**A Lendária não bate, e não é afinação:** as duas metas não cabem juntas. O robô acerta a Lendária 1 vez em 6 ou 7 (o melhor ferreiro possível, 1 em 4), e cada obra são 243 blocos (70 dias): cabem duas até o Dia 450, e a metade das vidas quase nunca chega à peça. Nas 21 rodadas desta medida a prova não passou nenhuma vez. Na outra leitura (o dia em que a primeira obra de cada categoria **fecha**), as quatro batem: dias 17, 51, 131 e 356. Qual das duas é a meta, decide o jogador.
+**A Lendária é difícil de propósito** (decisão do jogador: a arma decide muito, e por isso a melhor delas tem de custar). A chance não sobe.
+- **Uma tentativa é uma obra inteira:** 243 blocos de bancada. Com 3,5 blocos por dia, são cerca de **70 dias** de trabalho, com a matéria Rara e um **núcleo Lendário** dentro desde o primeiro dia.
+- **O dado só rola no fim,** uma vez (7.3). Passou: a peça Lendária nasce. Falhou por 1 a 4: nasce uma peça **Única**. Falhou por 5 ou mais: a matéria some e o núcleo se perde (7.6).
+- **Quem acerta:** o melhor ferreiro possível (mão de Lendário, forja mestra, os quatro preparos, Afinidade 100) acerta **1 vez em 4**. O robô do banco (Afinidade 60) acerta 1 em 6 ou 7. Quem tem menos que isso, menos ainda.
+- **O que a meta mede** é o dia em que a primeira tentativa fecha: Dia 356, no melhor caminho. Até o Dia 450 cabem duas tentativas, e a peça nasce em cerca de um quarto das vidas do robô. Em média, uma Lendária custa quatro tentativas ao melhor ferreiro do mundo: perto de 280 dias de bancada e quatro núcleos Lendários.
 **A escada só anda assim com núcleo à vontade.** O mundo dá 6 núcleos Épicos e 2 Únicos por ano (`PROJETO.md`). Na forja de cidade, sem preparo, a primeira Épica sai perto do Dia 100.
 
 ---
@@ -767,7 +771,7 @@ Do Épico para cima não há matéria: há núcleo (7.3), e núcleo não se nego
 
 8.5 **Comprar e vender.** Toda compra mexe no estoque, e por isso no preço: a do jogador também.
 - **O lote é pago unidade a unidade:** cada uma já mexe no preço da seguinte. O preço do lote é o mesmo de uma vez ou aos poucos. O troco, não: quem compra aos poucos paga o arredondamento a cada vez (10 de lenha: 12 de uma vez, 20 uma a uma).
-- **Comprar custa 10% a mais** que o preço. **A loja paga de 60 a 80% do preço**, conforme a mão de comércio de quem vende (8.7).
+- **Comprar custa 10% a mais** que o preço. **Pelos bens, a loja paga de 60 a 80% do preço**, conforme a mão de comércio de quem vende (8.7). **Pelas peças paga menos: de 40 a 60% do valor** (8.8).
 - **A prata é inteira:** a compra arredonda para cima, a venda para baixo. A venda que não chega a 1 de prata é recusada. Quem vende vários bens de uma vez (a cesta) arredonda uma vez só.
 - **Comprar e vender de volta sempre perde:** 45% com mão de Leigo, 27% com a melhor mão que existe.
 - O bem comprado entra na carga da pessoa; o vendido sai dela e entra no estoque do lugar.
@@ -777,13 +781,13 @@ Do Épico para cima não há matéria: há núcleo (7.3), e núcleo não se nego
 
 8.7 **A mão de comércio** (`maestria.comércio`) decide quanto a loja paga a quem vende. Sobe por **dias de negócio**: o dia em que a pessoa fecha pelo menos um negócio de 10 de prata ou mais conta um (um por dia).
 
-| Grau | A loja paga | Dias de negócio | E um feito |
-| --- | --- | --- | --- |
-| Leigo | 60% | | |
-| Iniciante | 65% | 20 | |
-| Treinado | 70% | 80 | |
-| Mestre | 75% | 250 | um negócio só de 1.000 de prata ou mais |
-| Lendário | 80% | 750 | um negócio só de 10.000 de prata ou mais |
+| Grau | A loja paga pelos bens | A loja paga pelas peças | Dias de negócio | E um feito |
+| --- | --- | --- | --- | --- |
+| Leigo | 60% | 40% | | |
+| Iniciante | 65% | 45% | 20 | |
+| Treinado | 70% | 50% | 80 | |
+| Mestre | 75% | 55% | 250 | um negócio só de 1.000 de prata ou mais |
+| Lendário | 80% | 60% | 750 | um negócio só de 10.000 de prata ou mais |
 
 8.8 **As peças da loja** são itens do Livro de Itens com `onde` no lugar, sem dono e que não estão soltos, **até o Épico**. Daí para cima, e para núcleo, não há loja: leilão, encomenda ou despojo.
 - **O valor** de uma peça é o preço de tabela da categoria (Comum 30, vezes 6 por categoria: Incomum 180, Raro 1.080, Épico 6.480), **na proporção do tamanho dela** (as duas regras abaixo), **menos o conserto que ela pede** (7.10: 2% do preço dela por ponto gasto), e nunca menos que a sucata.
@@ -799,21 +803,21 @@ Do Épico para cima não há matéria: há núcleo (7.3), e núcleo não se nego
 
 - **Quebrada** (durabilidade 0), vale **sucata: 10%** do preço dela, nova.
 - **Sob medida** (2.8), vale como **uma categoria abaixo**: na mão de outro é isso que ela rende.
-- **A loja pede** o valor, sem os 10% dos bens. **A loja paga** a parte dela (60 a 80%, 8.7), e **20% a menos por cada peça igual que já tem na prateleira** (mesmo tipo, mesma família ou material, mesma categoria; o recorte da armadura não conta).
+- **A loja pede** o valor, sem os 10% dos bens. **Pelas peças a loja paga menos que pelos bens: 40% do valor** a quem não tem mão de comércio, e 5 pontos a mais por grau, até 60% (8.7; `tabelas_mercado.PAGA_PECA`). É o que fecha a conta de quem forja para vender com o salário de quem trabalha (8.13), e é por isso que a espada tirada de um morto rende pouco na loja. E paga **20% a menos por cada peça igual que já tem na prateleira** (mesmo tipo, mesma família ou material, mesma categoria; o recorte da armadura não conta).
 - **A loja farta conta a prateleira inteira da categoria.** Cada lugar tem um **alvo de peças por categoria**: o que o gerador pôs na prateleira ao abrir a loja (a vila, 11 Comuns e 4 Incomuns; a cidade, 11 e 9), guardado no lugar, por evento (`lugar.alvo_pecas`).
   A loja paga **também 20% a menos por cada peça da mesma categoria que a prateleira já tem acima desse alvo**, seja de que tipo for. As duas contas se multiplicam. O que a loja pede não muda.
   **Quem compra da prateleira abre espaço de novo.** Categoria sem alvo (a Rara, numa vila) tem alvo zero: a primeira peça sai inteira, e a segunda já acha uma acima.
   O mercado aberto antes de esta regra existir não guardou alvo: vale o da tabela do tipo do lugar.
-  Numa vila com a prateleira no alvo, quatro peças Comuns de tipos que a loja não tem, vendidas uma atrás da outra por um Leigo, saem por 60%, 48%, 38% e 31% do valor.
+  Numa vila com a prateleira no alvo, quatro peças Comuns de tipos que a loja não tem, vendidas uma atrás da outra por um Leigo, saem por 40%, 32%, 26% e 20% do valor.
 - Comprada, a peça ganha dono e chega guardada (5.13); vendida, fica sem dono e com `onde` no lugar. As duas coisas entram na história dela.
 - **A peça em uso não se vende:** guarda-se antes (`ato.py tirar ITEM`).
 
 | Uma espada Rara | Vale | A loja paga a um Leigo |
 | --- | --- | --- |
-| nova (30/30) | 1.080 | 648 |
-| gasta (15/30) | 756 | 453 |
-| quebrada (0/30) | 108 | 64 |
-| sob medida para outro | 180 | 108 |
+| nova (30/30) | 1.080 | 432 |
+| gasta (15/30) | 756 | 302 |
+| quebrada (0/30) | 108 | 43 |
+| sob medida para outro | 180 | 72 |
 
 8.9 **A virada do dia.** Em cada lugar com povo, nesta ordem, e sem mexer na prata:
 - **O lugar produz** o que está em `lugar.produz` (bem: quanto por dia). **Toda produção acompanha o preço:** a quantidade vezes o fator do preço do dia, entre a metade e o dobro.
@@ -844,7 +848,7 @@ Com 20% a menos a comida bate no teto toda entressafra (medido em rascunho): é 
 o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inverno); a prateleira do tipo do lugar (peças Comuns e algumas Incomuns) e o alvo de peças por categoria (o que a prateleira nasce tendo: 8.8); e, se o lugar não tem prata, **5 de prata por pessoa**
 (aldeia de 120: 600; vila de 400: 2.000; cidade de 1.500: 7.500).
 
-8.13 **Medido** (`python3 provas_mercado.py`; 16 de 17: a meta "forjar para a loja não é mina" não bate, e está dita abaixo). Toda prova confere que a soma da prata do mundo fecha.
+8.13 **Medido** (`python3 provas_mercado.py`; 17 de 17). Toda prova confere que a soma da prata do mundo fecha.
 
 | O que se mede | Meta | Medido |
 | --- | --- | --- |
@@ -853,21 +857,20 @@ o estoque no alvo (a comida, no ponto do ano: 47 dias de celeiro no fim do inver
 | o preço nunca sai da faixa; a loja sem prata recusa a compra | 0,4 a 3 bases | 22 bens, 308 estoques: nenhum fora; recusa |
 | um ano de viradas numa vila de 400: a comida, mais cara na entressafra (do fim do inverno ao fim da primavera) e mais barata depois da colheita | 0,6 a 2,2 bases | de × 0,66 (depois da colheita) a × 1,73 (o fim da primavera); no fim do inverno, × 1,14 |
 | o diarista vive: o salário de um dia paga a cama e a comida | sobra de 0 a 2 | sobra de 0 a 0,86; 1,00 comendo na taverna |
-| peça gasta vale menos que nova; quebrada vale sucata | sim | a espada Rara: 1.080, 756 e 108 |
+| peça gasta vale menos que nova; quebrada vale sucata | sim | a espada Rara: 1.080, 756 e 108; a loja paga a um Leigo 432, 302 e 43 |
 | a armadura vale pelo que cobre (placa Incomum) | a proporção | o corpo 180; só o tronco 90; o elmo 45 |
 | a arma vale pela matéria que leva (as onze armas e o escudo, Comuns e Incomuns) | a proporção das unidades de matéria; a espada, o preço de tabela | Comuns: a adaga 10, a espada 30, o martelo 40, o montante 50; Incomuns: 60, 180, 240 e 300; consertar 5 pontos de uma Incomum, pago: 6 na adaga, 18 na espada, 30 no montante |
-| a loja farta: 14 adagas iguais (cada uma vale 10), numa vila com a prateleira no alvo | cada uma vale menos | 4, 3, 1, 1 e recusa as outras dez |
-| a loja farta da categoria inteira: depois dessas, um malho, que a loja não tinha | sai por menos que os 30 inteiros | sai por 12 (há quatro peças Comuns acima do alvo); um arco Incomum sai pelos 108 inteiros, e um machado Incomum, logo depois, por 86 |
-| quem compra da prateleira abre espaço de novo | a loja volta a pagar mais | comprada de volta uma adaga, a loja passa de 9 a 12 pela mesma alabarda |
-| **forjar para a loja não é mina** (meta da segunda volta). O ferreiro de começo da vila de teste compra a matéria na loja, forja o que mais rende e vende à loja; mede-se o que a forja lhe rende (o que a loja paga pelas peças, menos a matéria), em 30 vilas por escada | nos 5 primeiros dias, em média no máximo 6 de prata por dia, e no pior caso no máximo 12; do Dia 6 ao 30, em média no máximo 4 | **NÃO BATE** (em nenhuma das 10 rodadas da medida). Só com peças Comuns: cerca de 8,2 por dia nos 5 primeiros dias (visto de 7,9 a 8,4; o pior caso, 8,8), e nada depois. Com Comuns e Incomuns: cerca de 11 (visto de 8,4 a 14,3; o pior caso, 22,2 em quase todas as rodadas e 32,8 numa), e perto de zero depois (visto de −0,4 a +1,3) |
+| a loja farta: 14 adagas iguais (cada uma vale 10), numa vila com a prateleira no alvo | cada uma vale menos | 3, 2, 1 e recusa as outras onze |
+| a loja farta da categoria inteira: depois dessas, um malho, que a loja não tinha | sai por menos que os 20 inteiros | sai por 10 (há três peças Comuns acima do alvo); um arco Incomum sai pelos 72 inteiros, e um machado Incomum, logo depois, por 57 |
+| quem compra da prateleira abre espaço de novo | a loja volta a pagar mais | comprada de volta uma adaga, a loja passa de 8 a 10 pela mesma alabarda |
+| **forjar para a loja não é mina.** O ferreiro de começo da vila de teste compra a matéria na loja, forja o que mais rende e vende à loja; mede-se o que a forja lhe rende (o que a loja paga pelas peças, menos a matéria), em 30 vilas por escada | nos 5 primeiros dias, em média no máximo 6 de prata por dia, e no pior caso no máximo 12; do Dia 6 ao 30, em média no máximo 4 | cerca de 4,7 por dia nos 5 primeiros dias (visto de 4,4 a 4,9 em cinco rodadas; o pior caso, 5,0), e quase nada depois (visto de 0 a 0,6) |
 
-**A meta do ferreiro de loja não bate, e fica falhando às claras.** O dado da forja é o de verdade: a medida muda de uma rodada para outra, e a tabela diz o centro e a faixa vista. O robô vive de verdade na vila de teste (come, dorme, paga a cama) e é ganancioso: em todo bloco de bancada escolhe a peça que mais rende hoje (o que a loja pagaria, pesado pela chance de acertar, menos a matéria). Quando nenhuma peça paga a matéria, serve o jornal.
-- **Antes das duas regras do 8.8** (a arma pela matéria; a loja farta da categoria inteira), a forja rendia ao mesmo robô cerca de 17 de prata por dia só com peças Comuns, e cerca de 31 com Incomuns (o pior caso, 65). Só com a primeira regra, 24 e 26.
-- **Com as duas,** a forja rende o que a tabela diz: cerca de 8 e cerca de 11. Do Dia 6 em diante, quase nada.
-- **O que ainda passa da meta:** a matéria de começo (4 de metal e 2 de madeira) vira, no Dia 1, uma alabarda que a loja paga por 30; e a primeira peça de cada categoria ainda sai pelo preço inteiro. Um arco Incomum que dá certo paga 108 por 41 de madeira. É moeda no ar (o ferreiro de começo acerta a Incomum em 52%), e por isso de 12 a 21 das 30 vidas dessa escada passam de 12 por dia.
-- **Depois de três peças Comuns e uma ou duas Incomuns, a loja não paga mais a matéria de peça nenhuma.** A prateleira não escoa (ninguém além do personagem compra), e o ferreiro passa a viver do jornal: cerca de +3 de prata por dia no bolso.
-- **No bolso,** com a cama, a comida e o jornal, o robô fica com cerca de +10 por dia nos 5 primeiros dias só com Comuns (visto de +10,1 a +10,7; sem o jornal, cerca de +5), e de +9,6 a +15,5 com Incomuns.
-As duas regras não bastam para a meta. Outra regra, ou outra meta, é decisão que ainda não foi tomada.
+**Como a meta do ferreiro de loja fechou.** O robô vive de verdade na vila de teste (come, dorme, paga a cama) e é ganancioso: em todo bloco de bancada escolhe a peça que mais rende hoje (o que a loja pagaria, pesado pela chance de acertar, menos a matéria). Quando nenhuma peça paga a matéria, serve o jornal. O dado da forja é o de verdade, e a medida muda um pouco de uma rodada para outra.
+- **Antes de qualquer regra,** a forja rendia ao robô cerca de 17 de prata por dia só com peças Comuns, e cerca de 31 com Incomuns (o pior caso, 65), sem fim.
+- **Com a arma pela matéria e a loja farta da categoria inteira** (8.8), rendia cerca de 8 e cerca de 11 nos 5 primeiros dias, e nada depois. Ainda passava da meta.
+- **Com a loja pagando 40% pelas peças** (decisão do jogador), rende cerca de 4,7 nos 5 primeiros dias: é a matéria de começo (4 de metal e 2 de madeira) virando uma alabarda, que a loja paga por 20, e pouco mais. Depois disso nenhuma peça paga a matéria, e o ferreiro vive do jornal.
+- **No bolso,** com a cama, a comida e o jornal, o robô fica com cerca de +7,7 de prata por dia nos 5 primeiros dias e cerca de +3,2 depois.
+- **Para que serve forjar, então:** para vestir a si mesmo por menos do que a loja pede (a espada Comum custa 30 na prateleira e 10 de metal na bancada), para subir a mão, e, quando houver fregueses e encomendas (etapa 3), para vender a quem paga o valor inteiro.
 
 ---
 
@@ -1093,16 +1096,17 @@ O robô caçador: nível 10, gente gerada, de arco, espada de reserva, cota e el
 
 ### O que a etapa 2 não resolve (fica dito)
 
-- **Só quem está em cena age.** Os caçadores do povo, os fregueses e os rivais são das etapas 3 e 5. Ninguém além do personagem compra peça: a prateleira não escoa. Com a loja farta (8.8), isso pesa: vendidas três ou quatro peças de uma categoria, a loja de uma vila não paga mais a matéria de peça nenhuma dela, e só volta a pagar quando alguém compra da prateleira.
+- **Só quem está em cena age.** Os caçadores do povo, os fregueses e os rivais são das etapas 3 e 5. Ninguém além do personagem compra peça: a prateleira não escoa. Com a loja pagando 40% pelas peças e farta depressa (8.8), quase nenhuma peça nova paga a própria matéria na loja de uma vila: forja-se para vestir, não para vender, até haver freguês.
 - **Um relógio só.** Quando outra pessoa age (`quem=ID`), o tempo do mundo anda, e o corpo de quem ficou parado não sente. O corpo dos outros é da etapa 3.
 - **Não há viagem.** O ermo é o vizinho, a um número fixo de blocos.
 - **Não há peso.** A carga não tem limite, e a comida não estraga: quem compra na colheita e vende na entressafra ganha de 38 a 62% em meio ano, sem trabalho e sem risco.
 - **A taverna tem preço fixo:** 1 de prata o ano inteiro. O mercado sabe dizer o que a refeição valeria no dia (`mercado.refeicao`), e ninguém cobra isso ainda.
-- **A prata do lugar não se repõe.** Uma vila de 400 tem 2.000: quatro peças Raras de tipos diferentes levam 1.911 (648, 518, 414 e 331: a loja farta, 8.8), e a quinta é recusada por falta de prata.
+- **A prata do lugar não se repõe.** Uma vila de 400 tem 2.000: quatro peças Raras de tipos diferentes levam 1.274 (432, 345, 276 e 221: a loja farta, 8.8); a prata dá para onze, cada uma por menos, e a décima segunda é recusada por falta de prata.
 - **A coleta de quem já tem mão não tem meta.** A de começo tem (K1 a K4, 9.17). A do Treinado no interior foi só medida: rende de 6,5 a 9,8 diárias por dia no primeiro mês.
 - **O povo não passa fome,** e o bicho não vem à vila: é das frentes.
 - **Não há tempo de céu** na caça: só o escuro entra sozinho na luta.
 - **A morte não tem herdeiro** (etapa 6). Na vila e no ermo, quem fica com o que o morto largou é decisão de cena, por evento (5.11).
+- **A caça de começo é para quem aceita o risco** (decisão do jogador). No bolso sobra ao caçador o mesmo que ao diarista, um em cada cinco morre no mês, e a corça escoiceia em vez de fugir. Fica assim.
 - **Quem vai junto não pede paga.** Vai quando é chamado e leva a parte dele do despojo (9.10). Se o companheiro pede prata, recusa o perigo ou cobra depois, decide o jogador.
 
 ---

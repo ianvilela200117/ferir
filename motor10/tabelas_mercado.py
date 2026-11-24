@@ -35,6 +35,9 @@ def bens():
 
 
 def parte(maestria): return min(PAGA + PAGA_GRAU * 4, PAGA + PAGA_GRAU * max(0, maestria) / 2)     # a fração do preço que a loja paga a quem tem esta maestria de comércio (0 a 8)
+PAGA_PECA = 0.40            # pelas PEÇAS (arma, armadura, escudo) a loja paga menos que pelos bens: esta fração do valor a quem é Leigo em comércio, e o mesmo PAGA_GRAU a mais por grau (até 60%).
+                            # É o que fecha a conta de quem forja para vender com o salário de quem trabalha: decisão do jogador (MUDANCAS.md, etapa 2, terceira volta)
+def parte_peca(maestria): return min(PAGA_PECA + PAGA_GRAU * 4, PAGA_PECA + PAGA_GRAU * max(0, maestria) / 2)     # a fração do valor de uma PEÇA que a loja paga a quem tem esta maestria de comércio (0 a 8)
 
 
 # ---------- o povo que consome (por cabeça, por dia) ----------

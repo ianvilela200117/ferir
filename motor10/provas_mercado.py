@@ -227,7 +227,7 @@ def _gasta_e_quebrada(n):
         p0 = prata(E); vale[nome] = mercado.preco_peca(L()[iid]); pagou[nome] = mercado.vender_peca(E, 'eu', iid)['prata']
         certo = certo and iid in mercado.prateleira(E, 'vila') and L()[iid]['dono'] is None and L()[iid]['onde'] == 'vila' and mercado.preco_peca(L()[iid]) == vale[nome] and prata(E) == p0 and inteiro(E)
     certo = (certo and vale['nova'] == tabela == 1080 and vale['gasta'] == tabela - conserto == 756 and vale['quebrada'] == round(tabela * C.SUCATA) == 108 and vale['sob'] == C.preco_peca(1) == 180
-             and pagou == dict(nova=648, gasta=453, quebrada=64, sob=108))
+             and pagou == {k: math.floor(round(C.PAGA_PECA * v, 6)) for k, v in vale.items()})       # a loja paga a parte dela nas PEÇAS (tabelas_mercado.PAGA_PECA) sobre o valor de cada uma
     return ('A PEÇA GASTA E A QUEBRADA: peça gasta vale menos que nova; peça quebrada vale sucata',
             f"uma espada Rara: nova (30/30) vale {_m(vale['nova'])}; gasta (15/30), {vale['gasta']} (o preço menos os {conserto} do conserto que ela pede); quebrada (0/30), {vale['quebrada']} (a sucata: {pc(C.SUCATA)}); "
             f"sob medida para outro, {vale['sob']} (uma categoria abaixo); a loja pagou a um Leigo {pagou['nova']}, {pagou['gasta']}, {pagou['quebrada']} e {pagou['sob']}, e cada uma foi para a prateleira pelo valor dela; a prata fecha", certo)
@@ -240,11 +240,11 @@ def _pelo_que_cobre(n):
     estado.aplica(E, 'gera', [['item', 'nasce', item('armadura', 1, material='placa', cobre=c, dono='eu')] for _, c in pecas] + [['item', 'nasce', item('armadura', 1, material='placa', cobre=['pernas'], dono='eu')]], texto='as placas de prova')
     ids = [i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and it.get('material') == 'placa']; L = E['itens']['itens']; vale = [mercado.preco_peca(L[i]) for i in ids[:5]]; p0 = prata(E)
     conserto = [O_.conserto_pago(1, 10, M.peso_da_peca('armadura', c)) for _, c in pecas]; pagou = [mercado.vender_peca(E, 'eu', i)['prata'] for i in ids]      # a loja não tinha placa nenhuma: as seis são "iguais" entre si
-    cheio = [math.floor(round(C.PAGA * v * C.FARTA ** (k + k), 6)) for k, v in enumerate(vale + [mercado.preco_peca(L[ids[5]])])]       # a k-ésima acha k placas iguais e k peças Incomuns acima do alvo da loja
+    cheio = [math.floor(round(C.PAGA_PECA * v * C.FARTA ** (k + k), 6)) for k, v in enumerate(vale + [mercado.preco_peca(L[ids[5]])])]       # a k-ésima acha k placas iguais e k peças Incomuns acima do alvo da loja
     return ('A ARMADURA VALE PELO QUE COBRE: o preço de tabela é o da armadura de tronco, braços e pernas; a que cobre menos vale a proporção (o elmo, um quarto), no preço e no conserto; e a loja farta conta por material, não por recorte',
             'placa Incomum (tabela 180): ' + '; '.join(f'{nome}, {v}' for (nome, _), v in zip(pecas, vale)) + f"; consertar 10 pontos de cada: {', '.join(map(str, conserto))} de prata; "
             f"vendidas uma atrás da outra, a loja pagou {', '.join(map(str, pagou))} (cada recorte conta como mais uma placa igual, e como mais uma peça Incomum acima do alvo da loja: 20% a menos por cada uma das duas contas); a prata fecha",
-            vale == [180, 90, 45, 45, 225] and conserto == [36, 18, 9, 9, 45] and pagou == cheio and pagou[0] == 108 and pagou[1] < 0.6 * 90 and prata(E) == p0 and inteiro(E))
+            vale == [180, 90, 45, 45, 225] and conserto == [36, 18, 9, 9, 45] and pagou == cheio and pagou[0] == math.floor(round(C.PAGA_PECA * 180, 6)) and pagou[1] < C.PAGA_PECA * 90 and prata(E) == p0 and inteiro(E))
 
 
 def _pela_materia(n):
@@ -258,7 +258,7 @@ def _pela_materia(n):
             it = lambda: E['itens']['itens'][iid]; k = mercado.iguais(E, 'vila', it()); pede[cat][fam] = mercado.preco_peca(it()); pg = mercado.paga_peca(E, 'eu', it())
             estado.aplica(E, 'mestre', [['item', iid, 'dur', 'soma', -pontos]], texto='o desgaste de prova'); p0 = prata(E); eu0 = E['gente']['eu']['moedas']; oficio.consertar(E, 'eu', iid, pago=True); custo = eu0 - E['gente']['eu']['moedas']
             if fam in ('adaga', M.PECA_DE_TABELA, 'montante'): paga_[fam, cat] = pg; conserto[fam, cat] = custo
-            certo = (certo and pede[cat][fam] == math.ceil(round(quer, 6)) and pg == math.floor(round(C.PAGA * quer * C.FARTA ** k, 6)) and custo == max(1, math.ceil(round(quer * M.CONSERTO_PONTO * pontos, 6)))
+            certo = (certo and pede[cat][fam] == math.ceil(round(quer, 6)) and pg == math.floor(round(C.PAGA_PECA * quer * C.FARTA ** k, 6)) and custo == max(1, math.ceil(round(quer * M.CONSERTO_PONTO * pontos, 6)))
                      and it()['dur'][0] == it()['dur'][1] and prata(E) == p0 and inteiro(E))
     t0, t1 = C.preco_peca(0), C.preco_peca(1)
     certo = (certo and pede[0][M.PECA_DE_TABELA] == t0 == 30 and pede[1][M.PECA_DE_TABELA] == t1 == 180 and pede[0]['adaga'] * 3 == t0 and pede[1]['adaga'] * 3 == t1 and pede[0]['montante'] * 3 == 5 * t0
@@ -276,7 +276,7 @@ def _pecas_do_livro(n):
     c = mercado.comprar_peca(E, 'eu', iid); it = L()[iid]; comprou = it['dono'] == 'eu' and it['onde'] is None and iid not in mercado.prateleira(E, 'vila') and c['prata'] == C.preco_peca(1) == 180 and mercado.caixa(E, 'vila') == cx + 180 and E['gente']['eu']['moedas'] == eu - 180
     estado.aplica(E, 'mestre', [['item', 'i0001', 'uso', 'poe', None], ['item', iid, 'uso', 'poe', 'arma']], texto='o Aldric empunha a peça comprada')
     em_uso = recusa(lambda: mercado.vender_peca(E, 'eu', iid)); quieto_ = ato.tirar(E, 'eu', iid)                 # a peça em uso não se vende: guarda-se antes
-    v = mercado.vender_peca(E, 'eu', iid); it = L()[iid]; vendeu = bool(em_uso) and it['dono'] is None and it['onde'] == 'vila' and it['uso'] is None and iid in mercado.prateleira(E, 'vila') and v['prata'] == 108 and len(it['historia']) == 2 and inteiro(E)
+    v = mercado.vender_peca(E, 'eu', iid); it = L()[iid]; vendeu = bool(em_uso) and it['dono'] is None and it['onde'] == 'vila' and it['uso'] is None and iid in mercado.prateleira(E, 'vila') and v['prata'] == math.floor(round(C.PAGA_PECA * 180, 6)) and len(it['historia']) == 2 and inteiro(E)
     estado.aplica(E, 'gera', [['item', 'nasce', item('arma', 0, 'Adaga caída de prova', familia='adaga', onde='vila', solto=True)], ['item', 'nasce', item('arma', 4, 'Lança Única de prova', familia='lança', dono='eu')], ['item', 'nasce', item('arma', 4, 'Maça Única largada', familia='maça', onde='vila')],
                               ['item', 'nasce', dict(tipo='nucleo', cat=3, nome='Núcleo Épico de prova', dur=[1, 1], dono='eu', onde=None, de='bicho de prova', historia=[])]], texto='o que a loja não negocia')
     caida, unica, largada, nucleo = (f"i{E['itens']['seq'] - 3 + k:04d}" for k in range(4)); fora_da_loja = caida not in mercado.prateleira(E, 'vila'); outra = next(iter(mercado.prateleira(E, 'cidade'))); da_bera = 'i0002'; estado.aplica(E, 'mestre', [['item', da_bera, 'dono', 'poe', 'bera']], texto='o gibão passa para a Bera'); antes = retrato(E)
@@ -285,7 +285,7 @@ def _pecas_do_livro(n):
              ('comprar uma peça que tem dono', lambda: mercado.comprar_peca(E, 'eu', da_bera)), ('comprar o que não está no Livro', lambda: mercado.comprar_peca(E, 'eu', 'i9999'))]
     rec = [nome for nome, f in casos if recusa(f)]; igual = antes == retrato(E)
     return ('AS PEÇAS DA LOJA são itens do Livro de Itens com "onde" no lugar e sem dono; a compra e a venda mudam o dono e o "onde", por evento',
-            f"{len(loja)} peças na prateleira da vila, todas no Livro, sem dono e com onde = vila; comprar a espada Incomum: 180 de prata para o lugar, dono = eu, onde = nada; vendê-la empunhada: {'recusado' if em_uso else 'ACEITO'}; guardada: 108 ({pc(1 - v['prata'] / c['prata'])} de perda), "
+            f"{len(loja)} peças na prateleira da vila, todas no Livro, sem dono e com onde = vila; comprar a espada Incomum: 180 de prata para o lugar, dono = eu, onde = nada; vendê-la empunhada: {'recusado' if em_uso else 'ACEITO'}; guardada: {v['prata']} ({pc(1 - v['prata'] / c['prata'])} de perda), "
             f"sai da mão, volta à prateleira, e a história dela guarda as duas linhas; {len(rec)} de {len(casos)} pedidos errados recusados" + ('' if len(rec) == len(casos) else f" (passaram: {', '.join(x for x, _ in casos if x not in rec)})")
             + f"; a peça caída no chão não entra na prateleira: {'sim' if fora_da_loja else 'NÃO'}; estado {'intacto' if igual else 'MUDOU'}; a prata fecha", todas and comprou and vendeu and fora_da_loja and len(rec) == len(casos) and igual and prata(E) == p0 and 1 - v['prata'] / c['prata'] >= PERDE)
 
@@ -299,9 +299,9 @@ def _loja_farta(n):
     p0 = prata(E); ja = mercado.iguais(E, 'vila', L()[ids[0]]); metal = mercado.custa(E, 'vila', 'metal:0', 1); pagou = []; rec = 0; v_ad = mercado.valor(L()[ids[0]]); v_malho = mercado.valor(L()[malho])
     for i in ids:
         r = recusa(lambda: pagou.append(mercado.vender_peca(E, 'eu', i)['prata'])); rec += bool(r)
-    cheio = math.floor(round(C.PAGA * v_ad, 6)); espera = [math.floor(round(C.PAGA * v_ad * C.FARTA ** ((ja + k) + k), 6)) for k in range(n_ad)]; espera = [x for x in espera if x >= 1]     # a k-ésima acha ja + k iguais, e k peças Comuns acima do alvo
-    vendidas = len(pagou); outro = mercado.vender_peca(E, 'eu', malho)['prata']; outro_cheio = math.floor(round(C.PAGA * v_malho, 6)); outro_espera = math.floor(round(C.PAGA * v_malho * C.FARTA ** vendidas, 6))
-    inc = [mercado.vender_peca(E, 'eu', arco)['prata'], mercado.vender_peca(E, 'eu', machado)['prata']]; inc_cheio = math.floor(round(C.PAGA * C.preco_peca(1), 6))     # a outra categoria tem o alvo dela: a primeira peça Incomum sai inteira; a segunda acha uma acima do alvo
+    cheio = math.floor(round(C.PAGA_PECA * v_ad, 6)); espera = [math.floor(round(C.PAGA_PECA * v_ad * C.FARTA ** ((ja + k) + k), 6)) for k in range(n_ad)]; espera = [x for x in espera if x >= 1]     # a k-ésima acha ja + k iguais, e k peças Comuns acima do alvo
+    vendidas = len(pagou); outro = mercado.vender_peca(E, 'eu', malho)['prata']; outro_cheio = math.floor(round(C.PAGA_PECA * v_malho, 6)); outro_espera = math.floor(round(C.PAGA_PECA * v_malho * C.FARTA ** vendidas, 6))
+    inc = [mercado.vender_peca(E, 'eu', arco)['prata'], mercado.vender_peca(E, 'eu', machado)['prata']]; inc_cheio = math.floor(round(C.PAGA_PECA * C.preco_peca(1), 6))     # a outra categoria tem o alvo dela: a primeira peça Incomum sai inteira; a segunda acha uma acima do alvo
     pede = {mercado.preco_peca(it) for it in mercado.prateleira(E, 'vila').values() if it.get('familia') == 'adaga'}
     compensa = sum(1 for x in pagou if x > metal)
     # quem compra da prateleira abre espaço de novo: o que a loja pagaria por uma alabarda, antes e depois de o personagem comprar de volta uma adaga

@@ -1,0 +1,96 @@
+{
+ "vila": {
+  "nome": "Pedra Rasa",
+  "em": "em Pedra Rasa",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 18800,
+   "lenha": 3000,
+   "carvão": 240,
+   "sal": 240,
+   "pano": 120,
+   "remédio": 60,
+   "ferramenta": 60,
+   "metal:0": 120,
+   "couro:0": 120,
+   "osso:0": 60,
+   "madeira:0": 240,
+   "erva:0": 120,
+   "metal:1": 20,
+   "couro:1": 20,
+   "osso:1": 10,
+   "madeira:1": 40,
+   "erva:1": 20,
+   "prata": 2000
+  },
+  "vizinhos": [
+   "mata"
+  ],
+  "pop": 400,
+  "produz": {
+   "comida": 400.0,
+   "lenha": 100.0,
+   "carvão": 8.0,
+   "sal": 8.0,
+   "pano": 4.0,
+   "remédio": 2.0,
+   "ferramenta": 2.0,
+   "metal:0": 4.0,
+   "couro:0": 4.0,
+   "osso:0": 2.0,
+   "madeira:0": 8.0,
+   "erva:0": 4.0,
+   "metal:1": 0.6667,
+   "couro:1": 0.6667,
+   "osso:1": 0.3333,
+   "madeira:1": 1.3333,
+   "erva:1": 0.6667
+  },
+  "alvo_pecas": {
+   "0": 11,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  }
+ },
+ "mata": {
+  "nome": "a Mata do Corvo",
+  "em": "na Mata do Corvo",
+  "tipo": "ermo",
+  "habitat": "floresta",
+  "perigo": 1,
+  "longe": 1,
+  "estoque": {},
+  "vizinhos": [
+   "vila"
+  ],
+  "teto": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "urso": 3,
+   "pantera": 1,
+   "serpe": 1
+  },
+  "bichos": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "urso": 3,
+   "pantera": 1,
+   "serpe": 1
+  },
+  "coleta_teto": {
+   "madeira:0": 200,
+   "erva:0": 60
+  },
+  "coleta": {
+   "madeira:0": 200,
+   "erva:0": 60
+  }
+ }
+}

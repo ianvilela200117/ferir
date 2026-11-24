@@ -1,6 +1,6 @@
 # MOTOR 10 — O PROJETO DO RESTO
 
-O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 79 de 79 no `provas.py`). As etapas 1 e 2 do mundo estão feitas (85 de 87 no `provas_mundo.py`). As duas provas que não batem esperam decisão do jogador e estão ditas no `REGRAS.md`: a primeira peça Lendária entre os dias 300 e 450 (7.13) e o ferreiro que forja para a loja (8.13).
+O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 79 de 79 no `provas.py`). As etapas 1 e 2 do mundo estão feitas, e o `provas_mundo.py` passa inteiro (87 de 87). Duas metas da etapa 2 foram fechadas por decisão do jogador (seção 12, 9 e 10): a Lendária é difícil de propósito, e a loja paga 40% pelas peças.
 Este é o plano do que falta até o Dia 1 de um **mundo novo, do zero**: o mundo vivo, a magia, os bichos, o ofício e o turno.
 Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números e as etapas.
 **As decisões do jogador já estão tomadas (seção 12) e o plano abaixo já as segue.**
@@ -65,7 +65,7 @@ O item decide a luta; por isso a escada das peças É a escada do poder, e ela �
 | Raro | 20 a 30 | 60 | material de masmorra ou de bicho contado; ofício Treinado; forja de cidade |
 | Épico | 60 a 85 | 12 | núcleo de chefe (nascem 6 por ano no mundo todo); 27 blocos de forja |
 | Único | 160 a 220 | 4 | núcleo de chefe maior (2 por ano) ou primeira limpeza; 81 blocos; Mestre |
-| Lendário | 360 a 480 | 3, com as Lendas | núcleo de calamidade; 243 blocos (40 dias); o melhor ferreiro acerta 1 em 5 |
+| Lendário | a primeira tentativa perto do 360; a peça é rara de propósito | 3, com as Lendas | núcleo de calamidade; 243 blocos de bancada (cerca de 70 dias) por tentativa; o dado rola uma vez, no fim; o melhor ferreiro possível acerta 1 em 4 |
 | Mítico | depois do ano 2 | 1, dormindo | |
 | Primordial | talvez nunca | 0 | |
 
@@ -129,7 +129,7 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | Etapa | O que entra | O que se joga |
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
-| 2. Viver de um ofício **(FEITA, em duas voltas: 79 de 79 no `provas.py`, com os bichos; 85 de 87 no `provas_mundo.py`: o alicerce 25 de 25, o mercado 16 de 17, o ofício 14 de 15, a caça e a coleta 30 de 30; `estresse.py 1500` sem erro. Não batem a primeira peça Lendária e o ferreiro de loja: decisão do jogador)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
+| 2. Viver de um ofício **(FEITA: 79 de 79 no `provas.py`, com os bichos; 87 de 87 no `provas_mundo.py`: o alicerce 25 de 25, o mercado 17 de 17, o ofício 15 de 15, a caça e a coleta 30 de 30; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
 | 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia | focos, feitiços, encantos de peça | o mago, o curandeiro, a peça encantada |
 | 5. A corrida | rivais, guildas, masmorras, ranking, torneio, leilão, a janela do mundo | disputar |
@@ -147,12 +147,16 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 
 1. **A morte: vida única, com herdeiro.** (Seção 5.)
 2. **Os rivais: aventureiros nativos, que morrem de vez.** (Seção 3.)
-3. **O ritmo: o rápido.** A primeira Épica perto do dia 60, a Única do 160, a Lendária do 360, pelo caminho comum. Os dias não são tranca: quem achar outro caminho chega antes (seção 4).
+3. **O ritmo: o rápido.** A primeira Épica perto do dia 60, a Única do 160, e a primeira TENTATIVA de Lendária perto do 360, pelo melhor caminho. Os dias não são tranca: quem achar outro caminho chega antes (seção 4). A Lendária em si é rara de propósito (decisão 9).
 4. **O começo: um mundo que já tem história,** de 400 a 1.000 anos, e o personagem nasce nele (seção 3, "A história").
 5. **A vila de teste: sim.** Quando a etapa 2 ficar pronta, joga-se uma vila fora do cânone para sentir a luta e a forja. **Está pronta:** `vila_teste.py` e `GUIA_VILA.md`.
 6. **O trabalho: com a frota de agentes** nas etapas grandes.
 7. **Um contra dez com uma categoria de vantagem: fica moeda no ar.**
 8. **O `main`:** o Motor 10 foi levado para o `main`. O save do Ferir, que seguiu em outro chat, não foi tocado.
+9. **A Lendária é difícil de propósito.** A chance não sobe: a arma decide muito, e a melhor delas tem de custar. Uma tentativa são 243 blocos de bancada (cerca de 70 dias) e um núcleo Lendário; o dado rola uma vez, no fim; o melhor ferreiro possível acerta 1 em 4. A meta do banco é o dia em que a primeira tentativa fecha (Dia 356, no melhor caminho).
+10. **A loja paga 40% pelas peças** (pelos bens, 60%). Forjar para a loja deixou de ser mina, e a espada tirada de um morto rende pouco.
+11. **A caça de começo fica como está:** paga o mesmo que a diária e mata um em cada cinco por mês. Caçar é para quem aceita o risco.
+12. **A vila de teste: o guerreiro** (Maro), na pasta `ensaio/`.
 
 **O que estas decisões mudam no jeito do mundo:** não é um jogo com "jogadores" que renascem. É um mundo de verdade, velho, onde todo mundo morre uma vez. Ficam as leis dele: níveis, categorias de peça, a janela do item. Fica também a janela do mundo, como coisa que aquele mundo tem: quando uma peça Única nasce ou uma ruína é limpa pela primeira vez, todos ficam sabendo.
 
@@ -160,11 +164,8 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 
 Nada disto trava a etapa 3. São escolhas de gosto, que o banco mede mas não decide. A lista inteira, com os números, está no `MUDANCAS.md` e no fim do capítulo 9 do `REGRAS.md`.
 
-1. **A primeira peça Lendária.** As duas metas não cabem juntas: o melhor ferreiro acerta a Lendária uma vez em quatro, e cada obra são 70 dias. A peça nasce até o Dia 450 em cerca de um quarto das vidas (a prova pede metade). A primeira OBRA Lendária fecha sempre no Dia 356.
-2. **O ferreiro que forja para a loja.** Deixou de ser mina (do Dia 6 em diante rende zero), mas nos 5 primeiros dias ainda rende de 8 a 11 de prata por dia, contra a meta de 6.
-3. **De onde vêm os núcleos da escada.** O ritmo decidido só vale com núcleo novo a cada obra, na melhor forja.
-4. **A caça de começo paga pouco e mata:** no bolso sobra o mesmo que ao diarista, e um caçador em cinco morre no mês. A corça escoiceia em vez de fugir.
-5. **A coleta de começo fica no zero a zero;** a de quem já tem mão, no interior, rende muito e não tem meta.
-6. **A prata do lugar não se repõe,** e ninguém além do personagem compra da prateleira (a etapa 3 traz fregueses e comércio entre lugares).
-7. **O atravessador de comida** (compra na colheita, vende na entressafra: 38 a 62% em meio ano, sem risco).
-8. **Quem vai junto na caça** não pede paga: leva a parte dele do despojo. O que era de um morto não muda de mão sozinho: é decisão de cena.
+1. **De onde vêm os núcleos da escada.** O ritmo decidido só vale com núcleo novo a cada obra, na melhor forja.
+2. **A coleta de começo fica no zero a zero;** a de quem já tem mão, no interior, rende muito e não tem meta.
+3. **A prata do lugar não se repõe,** e ninguém além do personagem compra da prateleira (a etapa 3 traz fregueses e comércio entre lugares).
+4. **O atravessador de comida** (compra na colheita, vende na entressafra: 38 a 62% em meio ano, sem risco).
+5. **Quem vai junto na caça** não pede paga: leva a parte dele do despojo. O que era de um morto não muda de mão sozinho: é decisão de cena.

@@ -1,0 +1,557 @@
+{
+ "seq": 30,
+ "itens": {
+  "i0001": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "adaga",
+   "id": "i0001",
+   "uso": null
+  },
+  "i0002": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "espada",
+   "id": "i0002",
+   "uso": null
+  },
+  "i0003": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "maça",
+   "id": "i0003",
+   "uso": null
+  },
+  "i0004": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "machado",
+   "id": "i0004",
+   "uso": null
+  },
+  "i0005": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "lança",
+   "id": "i0005",
+   "uso": null
+  },
+  "i0006": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "arco Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "arco",
+   "id": "i0006",
+   "uso": null
+  },
+  "i0007": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0007",
+   "uso": null
+  },
+  "i0008": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "elmo de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "couro",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0008",
+   "uso": null
+  },
+  "i0009": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de malha Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0009",
+   "uso": null
+  },
+  "i0010": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "elmo de malha Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0010",
+   "uso": null
+  },
+  "i0011": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "escudo Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0011",
+   "uso": null
+  },
+  "i0012": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "espada Incomum",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "espada",
+   "id": "i0012",
+   "uso": null
+  },
+  "i0013": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "lança Incomum",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "familia": "lança",
+   "id": "i0013",
+   "uso": null
+  },
+  "i0014": {
+   "tipo": "armadura",
+   "cat": 1,
+   "nome": "armadura de couro Incomum",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0014",
+   "uso": null
+  },
+  "i0015": {
+   "tipo": "escudo",
+   "cat": 1,
+   "nome": "escudo Incomum",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0015",
+   "uso": null
+  },
+  "i0016": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Martelo de Bento",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "bento",
+   "onde": null,
+   "familia": "martelo",
+   "id": "i0016",
+   "uso": "arma"
+  },
+  "i0017": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Bento",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "bento",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0017",
+   "uso": "veste"
+  },
+  "i0018": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Dalva",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "dalva",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0018",
+   "uso": "arma"
+  },
+  "i0019": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Arco de Rute",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "familia": "arco",
+   "id": "i0019",
+   "uso": "arma"
+  },
+  "i0020": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Rute",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0020",
+   "uso": "arma2"
+  },
+  "i0021": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Rute",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "rute",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0021",
+   "uso": "veste"
+  },
+  "i0022": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Lança de Tomé",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "familia": "lança",
+   "id": "i0022",
+   "uso": "arma"
+  },
+  "i0023": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "Escudo de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "id": "i0023",
+   "uso": "escudo"
+  },
+  "i0024": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0024",
+   "uso": "veste"
+  },
+  "i0025": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Elmo de malha de Tomé",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "tome",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "id": "i0025",
+   "uso": "veste"
+  },
+  "i0026": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Machado de Ivo",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "ivo",
+   "onde": null,
+   "familia": "machado",
+   "id": "i0026",
+   "uso": "arma"
+  },
+  "i0027": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Nara",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "nara",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0027",
+   "uso": "arma"
+  },
+  "i0028": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Espada de Maro",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "familia": "espada",
+   "id": "i0028",
+   "uso": "arma"
+  },
+  "i0029": {
+   "tipo": "escudo",
+   "cat": 0,
+   "nome": "Escudo de Maro",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "id": "i0029",
+   "uso": "escudo"
+  },
+  "i0030": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Maro",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0030",
+   "uso": "veste"
+  }
+ },
+ "oseq": 0,
+ "obras": {}
+}

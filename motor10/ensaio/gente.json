@@ -1,0 +1,300 @@
+{
+ "bento": {
+  "nome": "Bento",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 28,
+  "atributos": {
+   "Força": 78,
+   "Agilidade": 65,
+   "Vigor": 77,
+   "Vontade": 52,
+   "Percepção": 52,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "forja": 4,
+   "martelo": 2
+  },
+  "treino": {
+   "forja": 150,
+   "martelo": 40
+  },
+  "moedas": 60,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 161,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "o ferreiro da vila; conserta e vende o que forja"
+ },
+ "dalva": {
+  "nome": "Dalva",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 12,
+  "atributos": {
+   "Força": 52,
+   "Agilidade": 52,
+   "Vigor": 52,
+   "Vontade": 46,
+   "Percepção": 46,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "comércio": 2,
+   "adaga": 2
+  },
+  "treino": {
+   "comércio": 20,
+   "adaga": 40
+  },
+  "moedas": 80,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 107,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "a taverneira da pousada; sabe de tudo o que se conta"
+ },
+ "rute": {
+  "nome": "Rute",
+  "lugar": "vila",
+  "grau_oficio": "aprendiz",
+  "nivel": 22,
+  "atributos": {
+   "Força": 58,
+   "Agilidade": 82,
+   "Vigor": 64,
+   "Vontade": 52,
+   "Percepção": 68,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "arco": 4,
+   "caça": 4,
+   "adaga": 2
+  },
+  "treino": {
+   "arco": 160,
+   "caça": 160,
+   "adaga": 40
+  },
+  "moedas": 25,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 133,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "a caçadora; conhece a Mata do Corvo"
+ },
+ "tome": {
+  "nome": "Tomé",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 30,
+  "atributos": {
+   "Força": 79,
+   "Agilidade": 66,
+   "Vigor": 77,
+   "Vontade": 53,
+   "Percepção": 53,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "lança": 4,
+   "espada": 2
+  },
+  "treino": {
+   "lança": 160,
+   "espada": 40
+  },
+  "moedas": 40,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 161,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "o guarda da vila"
+ },
+ "ivo": {
+  "nome": "Ivo",
+  "lugar": "vila",
+  "grau_oficio": "diarista",
+  "nivel": 14,
+  "atributos": {
+   "Força": 74,
+   "Agilidade": 62,
+   "Vigor": 73,
+   "Vontade": 51,
+   "Percepção": 51,
+   "Afinidade": 40
+  },
+  "maestria": {
+   "machado": 2,
+   "coleta": 2
+  },
+  "treino": {
+   "machado": 40,
+   "coleta": 40
+  },
+  "moedas": 12,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 149,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "o lenhador; tira madeira na borda da mata"
+ },
+ "nara": {
+  "nome": "Nara",
+  "lugar": "vila",
+  "grau_oficio": "aprendiz",
+  "nivel": 16,
+  "atributos": {
+   "Força": 53,
+   "Agilidade": 53,
+   "Vigor": 53,
+   "Vontade": 47,
+   "Percepção": 47,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "cura": 2,
+   "coleta": 2
+  },
+  "treino": {
+   "coleta": 40
+  },
+  "moedas": 30,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 110,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "a curandeira; colhe erva e trata ferida"
+ },
+ "lino": {
+  "nome": "Lino",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 10,
+  "atributos": {
+   "Força": 52,
+   "Agilidade": 52,
+   "Vigor": 52,
+   "Vontade": 46,
+   "Percepção": 46,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "comércio": 4
+  },
+  "treino": {
+   "comércio": 80
+  },
+  "moedas": 150,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 106,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "o mercador da loja"
+ },
+ "zeca": {
+  "nome": "Zeca",
+  "lugar": "vila",
+  "grau_oficio": "aprendiz",
+  "nivel": 3,
+  "atributos": {
+   "Força": 50,
+   "Agilidade": 50,
+   "Vigor": 50,
+   "Vontade": 45,
+   "Percepção": 45,
+   "Afinidade": 40
+  },
+  "maestria": {},
+  "treino": {},
+  "moedas": 5,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 100,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "sobre": "o aprendiz da forja; novo, quer aprender"
+ },
+ "eu": {
+  "nome": "Maro",
+  "lugar": "vila",
+  "grau_oficio": "diarista",
+  "nivel": 5,
+  "atributos": {
+   "Força": 70,
+   "Agilidade": 60,
+   "Vigor": 70,
+   "Vontade": 50,
+   "Percepção": 50,
+   "Afinidade": 40
+  },
+  "maestria": {
+   "espada": 2
+  },
+  "treino": {
+   "espada": 40
+  },
+  "moedas": 30,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 141,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {},
+  "carga": {},
+  "jogador": true,
+  "sobre": "vive das armas, com a mão de Iniciante na espada"
+ }
+}
