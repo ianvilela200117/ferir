@@ -1,5 +1,5 @@
 {
- "seq": 44,
+ "seq": 64,
  "itens": {
   "i0001": {
    "tipo": "arma",
@@ -804,6 +804,376 @@
     },
     "lida": true
    }
+  },
+  "i0045": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Martelo de Durva",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "durva",
+   "onde": null,
+   "familia": "martelo",
+   "id": "i0045",
+   "uso": "arma"
+  },
+  "i0046": {
+   "tipo": "armadura",
+   "cat": 1,
+   "nome": "Armadura de couro de Durva",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "durva",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0046",
+   "uso": "veste"
+  },
+  "i0047": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Malho de Brasco",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "brasco",
+   "onde": null,
+   "familia": "malho",
+   "id": "i0047",
+   "uso": "arma"
+  },
+  "i0048": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de malha de Brasco",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "brasco",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0048",
+   "uso": "veste"
+  },
+  "i0049": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Arco de Ilvena",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "ilvena",
+   "onde": null,
+   "familia": "arco",
+   "id": "i0049",
+   "uso": "arma"
+  },
+  "i0050": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Ilvena",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "ilvena",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0050",
+   "uso": "arma2"
+  },
+  "i0051": {
+   "tipo": "armadura",
+   "cat": 1,
+   "nome": "Armadura de couro de Ilvena",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "ilvena",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0051",
+   "uso": "veste"
+  },
+  "i0052": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro miúda Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "talhe": "miúdo",
+   "id": "i0052",
+   "uso": null
+  },
+  "i0053": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de malha miúda Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "talhe": "miúdo",
+   "id": "i0053",
+   "uso": null
+  },
+  "i0054": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "elmo miúdo de malha Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "talhe": "miúdo",
+   "id": "i0054",
+   "uso": null
+  },
+  "i0055": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Adaga de Quim",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "quim",
+   "onde": null,
+   "familia": "adaga",
+   "id": "i0055",
+   "uso": "arma"
+  },
+  "i0056": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Armadura de couro de Quim",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": "quim",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0056",
+   "uso": "veste"
+  },
+  "i0057": {
+   "tipo": "gazua",
+   "nome": "Gazua de Quim",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": "quim",
+   "onde": null,
+   "id": "i0057",
+   "uso": null
+  },
+  "i0058": {
+   "tipo": "gazua",
+   "nome": "gazua Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "vila",
+   "id": "i0058",
+   "uso": null
+  },
+  "i0059": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "cripta_4",
+   "familia": "maça",
+   "id": "i0059",
+   "uso": null
+  },
+  "i0060": {
+   "tipo": "chave",
+   "nome": "a chave de ferro",
+   "abre": "cripta_5|cripta_6",
+   "dur": [
+    1,
+    1
+   ],
+   "cat": 0,
+   "historia": [],
+   "dono": null,
+   "onde": "cripta_4",
+   "id": "i0060",
+   "uso": null
+  },
+  "i0061": {
+   "tipo": "escudo",
+   "cat": 1,
+   "nome": "o escudo do guardião",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "cripta_6",
+   "id": "i0061",
+   "uso": null
+  },
+  "i0062": {
+   "tipo": "gazua",
+   "nome": "gazua Incomum",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "cat": 1,
+   "historia": [],
+   "dono": null,
+   "onde": "cripta_7",
+   "id": "i0062",
+   "uso": null
+  },
+  "i0063": {
+   "tipo": "arma",
+   "cat": 2,
+   "nome": "a Lâmina de Vau Seco",
+   "dur": [
+    30,
+    30
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "a espada do último que enfrentou o Tição: ficou no covil com o dono"
+   ],
+   "dono": null,
+   "onde": "serra_fria",
+   "familia": "espada",
+   "id": "i0063",
+   "uso": null
+  },
+  "i0064": {
+   "tipo": "escudo",
+   "cat": 1,
+   "nome": "o escudo do caçador de Vau Seco",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "o escudo de um caçador de Vau Seco que subiu a serra e não voltou"
+   ],
+   "dono": null,
+   "onde": "serra_fria",
+   "id": "i0064",
+   "uso": null
   }
  },
  "oseq": 0,

@@ -15,7 +15,8 @@
     "a": "a rotina: vende o despojo (uns 2 de prata), jornada (4) e treino de espada",
     "b": "procura a toca dos goblins, com Tomé e Rute (o que fugiu voltou para algum lugar; a procura é rolagem oculta)",
     "c": "javali, com a Rute",
-    "d": "corça, sozinho"
+    "d": "corça, sozinho",
+    "e": "desce a Cripta da Cova Velha, com Tomé e Rute (a tocha: 1 de prata por bloco; luta grande, no jeito da mesa)"
    }
   },
   {
@@ -28,5 +29,7 @@
   }
  ],
  "respondidas": [],
- "notas": []
+ "notas": [
+  "A etapa 4b entrou no save antes do Dia 8 (vila_teste.py fantasia, inclinacao2=manha). A pergunta 1, ainda sem resposta, ganhou a opção e (a cripta)."
+ ]
 }

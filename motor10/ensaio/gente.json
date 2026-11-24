@@ -33,7 +33,10 @@
    "talento_base": {
     "peso": 40,
     "forja": 150
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "o ferreiro da vila; conserta e vende o que forja",
@@ -77,7 +80,10 @@
    "talento_base": {
     "fio": 40,
     "comércio": 20
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "a taverneira da pousada; sabe de tudo o que se conta",
@@ -131,7 +137,10 @@
    "caca": null,
    "ermo_dia": 7,
    "cena": 40,
-   "luta_dia": 7
+   "luta_dia": 7,
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {
    "osso:0": 1,
@@ -184,7 +193,10 @@
    "caca": null,
    "ermo_dia": 7,
    "cena": 40,
-   "luta_dia": 7
+   "luta_dia": 7,
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {
    "osso:0": 2,
@@ -230,7 +242,10 @@
    "talento_base": {
     "fio": 40,
     "coleta": 40
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "o lenhador; tira madeira na borda da mata",
@@ -272,7 +287,10 @@
   "marca": {
    "talento_base": {
     "coleta": 40
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "a curandeira; colhe erva e trata ferida",
@@ -314,7 +332,10 @@
   "marca": {
    "talento_base": {
     "comércio": 80
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "o mercador da loja",
@@ -350,7 +371,10 @@
   "feridas": [],
   "estado": "vivo",
   "marca": {
-   "talento_base": {}
+   "talento_base": {},
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "sobre": "o aprendiz da forja; novo, quer aprender",
@@ -416,7 +440,10 @@
    "ermo_dia": 7,
    "luta_dia": 7,
    "curou_dia": 7,
-   "curou": 2
+   "curou": 2,
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {
    "comida": 4,
@@ -431,7 +458,8 @@
    "fé": -1,
    "pacto": 1
   },
-  "inclinacao": "fio"
+  "inclinacao": "fio",
+  "inclinacao2": "manha"
  },
  "anselmo": {
   "nome": "Anselmo",
@@ -464,7 +492,10 @@
   "marca": {
    "talento_base": {
     "arcano": 160
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "talento": {
@@ -521,7 +552,10 @@
     "fé": 500
    },
    "cena": 31,
-   "prece_dia": 6
+   "prece_dia": 6,
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {},
   "talento": {
@@ -581,14 +615,18 @@
    "talento_base": {
     "fio": 40,
     "pacto": 160
-   }
+   },
+   "talento_novos": [
+    "manha"
+   ]
   },
   "carga": {
    "veneno:0": 3,
    "erva:0": 4
   },
   "talento": {
-   "caça": 1
+   "caça": 1,
+   "manha": -2
   },
   "feiticos": [
    "luz",
@@ -601,5 +639,259 @@
   "tradicao": "pacto",
   "divida": 2,
   "sobre": "a bruxa que mora na choupana da borda da Mata do Corvo; lê a sorte, amaldiçoa por encomenda e vende veneno de lâmina, escondido"
+ },
+ "durva": {
+  "nome": "Durva",
+  "lugar": "vila",
+  "grau_oficio": "oficial",
+  "nivel": 34,
+  "atributos": {
+   "Força": 80,
+   "Agilidade": 61,
+   "Vigor": 80,
+   "Vontade": 58,
+   "Percepção": 51,
+   "Afinidade": 41
+  },
+  "maestria": {
+   "forja": 4,
+   "martelo": 4
+  },
+  "treino": {
+   "forja": 150,
+   "martelo": 160
+  },
+  "moedas": 40,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 168,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "peso": 160,
+    "forja": 150
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {},
+  "talento": {
+   "comércio": -1,
+   "cura": -1,
+   "arcano": 2
+  },
+  "povo": "anão",
+  "idade": 112,
+  "sobre": "anã, ferreira de passagem; forja e conserta, e vai junto se a chamam"
+ },
+ "brasco": {
+  "nome": "Brasco",
+  "lugar": "vila",
+  "grau_oficio": "diarista",
+  "nivel": 26,
+  "atributos": {
+   "Força": 82,
+   "Agilidade": 65,
+   "Vigor": 76,
+   "Vontade": 52,
+   "Percepção": 52,
+   "Afinidade": 36
+  },
+  "maestria": {
+   "malho": 4
+  },
+  "treino": {
+   "malho": 160
+  },
+  "moedas": 30,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 158,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "peso": 160
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {},
+  "talento": {
+   "fio": -1,
+   "haste": -1,
+   "comércio": 1,
+   "encanto": -1,
+   "fé": 1,
+   "verde": 1
+  },
+  "povo": "meio-orc",
+  "idade": 31,
+  "sobre": "meio-orc, guarda de caravana de passagem; viu o que o dragão deixou em Vau Seco"
+ },
+ "ilvena": {
+  "nome": "Ilvena",
+  "lugar": "vila",
+  "grau_oficio": "aprendiz",
+  "nivel": 38,
+  "atributos": {
+   "Força": 50,
+   "Agilidade": 98,
+   "Vigor": 64,
+   "Vontade": 43,
+   "Percepção": 78,
+   "Afinidade": 46
+  },
+  "maestria": {
+   "arco": 4,
+   "caça": 4,
+   "adaga": 2
+  },
+  "treino": {
+   "arco": 160,
+   "caça": 160,
+   "adaga": 40
+  },
+  "moedas": 25,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 137,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "tiro": 160,
+    "caça": 160
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {},
+  "talento": {
+   "fio": 1,
+   "haste": -1,
+   "couro": 1,
+   "caça": -2,
+   "fé": -1,
+   "verde": 1
+  },
+  "povo": "elfo",
+  "idade": 240,
+  "sobre": "elfa, caçadora de passagem; segue rastro de noite"
+ },
+ "nena": {
+  "nome": "Nena Ramalho",
+  "lugar": "vila",
+  "grau_oficio": "aprendiz",
+  "nivel": 9,
+  "atributos": {
+   "Força": 36,
+   "Agilidade": 56,
+   "Vigor": 54,
+   "Vontade": 51,
+   "Percepção": 48,
+   "Afinidade": 40
+  },
+  "maestria": {
+   "coleta": 2
+  },
+  "treino": {
+   "coleta": 40
+  },
+  "moedas": 12,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 110,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "coleta": 40
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {},
+  "talento": {
+   "fio": -1,
+   "peso": 1,
+   "caça": 1,
+   "cura": -1,
+   "verde": -2,
+   "pacto": -1
+  },
+  "dom": {
+   "tiro": 1
+  },
+  "povo": "pequenino",
+  "idade": 44,
+  "sobre": "pequenina, faz o pão da pousada; mora na vila"
+ },
+ "quim": {
+  "nome": "Quim",
+  "lugar": "vila",
+  "grau_oficio": "diarista",
+  "nivel": 14,
+  "atributos": {
+   "Força": 57,
+   "Agilidade": 79,
+   "Vigor": 62,
+   "Vontade": 51,
+   "Percepção": 67,
+   "Afinidade": 40
+  },
+  "maestria": {
+   "manha": 2,
+   "adaga": 2
+  },
+  "treino": {
+   "manha": 40,
+   "adaga": 40
+  },
+  "moedas": 10,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 127,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "talento_base": {
+    "fio": 40,
+    "manha": 40
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {},
+  "talento": {
+   "fio": 1,
+   "forja": 1,
+   "couro": 2,
+   "comércio": 1,
+   "verde": 2
+  },
+  "sobre": "o sobrinho do Lino; abre trinco, anda calado e acha o que os outros não veem"
  }
 }
