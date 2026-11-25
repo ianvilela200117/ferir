@@ -1,0 +1,25 @@
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 4, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 2) · com forças (cansaço 5) · fôlego máximo −1 · 45 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 44 de prata)
+Dia 4, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 2) · com forças (cansaço 5) · fôlego máximo −1 · 44 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 4, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 7) · fôlego máximo −2 · 44 de prata
+(saída 0)
+---
+$ python3 oficio.py preparo receita Incomum "Filipa ensinou na forja da casa"
+Ferord ganha o preparo: receita (até o Incomum): Filipa ensinou na forja da casa, em dez blocos de bancada ao lado dela (Dias 2 a 4).
+Dia 4, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 7) · fôlego máximo −2 · 44 de prata
+$ estado.py mestre (a conta do ensino se fecha)
+evento #597 (mestre): a conta do ensino de Filipa se fecha: 10 de 10 blocos, a receita do Incomum está ensinada · 1 efeito
+$ gente.py lembra filipa ... 1
+feito.
+$ python3 ato.py dormir 3
+Ferord dorme 3 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 6, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 5, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 0) · com forças (cansaço 0) · 42 de prata

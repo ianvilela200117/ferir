@@ -5017,6 +5017,12 @@
     "de": "eu",
     "o_que": "Ferord pediu que eu lhe ensinasse o Incomum, e passou o dia comigo na bancada, até o limite das forças",
     "peso": 1
+   },
+   {
+    "dia": 4,
+    "de": "eu",
+    "o_que": "Ferord aprendeu comigo a receita do Incomum, em três dias de bancada",
+    "peso": 1
    }
   ]
  },
@@ -10042,20 +10048,20 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 61,
+   "forja": 64,
    "martelo": 40
   },
-  "moedas": 39,
+  "moedas": 42,
   "corpo": {
    "fome": 2,
    "sono": 0,
-   "cansaco": 1
+   "cansaco": 0
   },
   "pv": 111,
   "feridas": [],
   "estado": "vivo",
   "marca": {
-   "prep_receita": 0,
+   "prep_receita": 1,
    "talento_base": {
     "peso": 40,
     "forja": 50
@@ -10063,15 +10069,15 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 3,
+   "pesados_dia": 4,
    "pesados": 3,
-   "jornada_dia": 3,
+   "jornada_dia": 4,
    "jornada": 2,
    "cama": {
-    "ate": 24,
+    "ate": 30,
     "onde": "pedra_velha"
    },
-   "ensino_incomum": 7
+   "ensino_incomum": null
   },
   "carga": {
    "metal:0": 3,

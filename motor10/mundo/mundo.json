@@ -4512,6 +4512,18 @@
     "ribeira_da_nevoa": [
      4,
      3
+    ],
+    "varzea_da_nevoa": [
+     5,
+     4
+    ],
+    "castro_branco": [
+     5,
+     4
+    ],
+    "castro_real": [
+     5,
+     4
     ]
    },
    "janela": false
@@ -4572,6 +4584,14 @@
     "pedra_verde": [
      4,
      3
+    ],
+    "ponte_da_cruz": [
+     5,
+     4
+    ],
+    "ribeira_do_lobo": [
+     5,
+     4
     ]
    },
    "janela": false
@@ -4640,6 +4660,14 @@
     "coval_do_vento": [
      4,
      3
+    ],
+    "penha_das_rosas": [
+     5,
+     4
+    ],
+    "pinhal_do_ferro": [
+     5,
+     4
     ]
    },
    "janela": false
