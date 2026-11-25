@@ -46,7 +46,7 @@ Na onda 2 ninguém edita o que é do alicerce (ele vira congelado: o contrato di
 
 ## 3. Onda 3: o integrador (um)
 
-Possui tudo o que estava congelado, e mais: `vila_teste.py` (o comando `regiao`, que chama o `gente.povoa_regiao`; a etapa só entra no `ensaio/` se o jogador pedir), `provas_mundo.py` (roda os bancos novos), `REGRAS.md` (os capítulos 21 a região, 22 a viagem, 23 a gente que lembra, 24 a caixa, as missões e a notícia, e os comandos), `GUIA_VILA.md`, `MUDANCAS.md`, `LEIA.md`, e os `pedidos_*.md` das frentes.
+Possui tudo o que estava congelado, e mais: `vila_teste.py` (o comando `regiao`, que chama o `gente.povoa_regiao`; o `ensaio/` não ganha a região: o Maro não é o personagem do jogador, e o save fica só como vila de teste que os bancos copiam), `provas_mundo.py` (roda os bancos novos), `REGRAS.md` (os capítulos 21 a região, 22 a viagem, 23 a gente que lembra, 24 a caixa, as missões e a notícia, e os comandos), `GUIA_VILA.md`, `MUDANCAS.md`, `LEIA.md`, e os `pedidos_*.md` das frentes.
 As metas de integração: **IN1** (a prata de Pedra Rasa entre 0,4 e 2,5 vezes a do começo, com a gente de B, a região de A e o robô ferreiro que tira o jornal todo dia por um ano, em 20 sementes; se falhar, a alavanca é o teto de jornadas por lugar), RG2, RG11 com a viagem de verdade e o choque imposto, RG12, RG18, RG20 e GE14 (a MESA inteira até 8 KB, no povoado e na estrada), GE12 (o ano inteiro com a região e os 150 em menos de 2 minutos), GE15, e o banco do mundo inteiro passando duas vezes.
 
 ## 4. O verificador independente, e o acerto

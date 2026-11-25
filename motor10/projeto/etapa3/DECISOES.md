@@ -50,7 +50,7 @@ Dois projetos ficaram prontos, cada um numa metade da etapa: `projeto_a/PROJETO.
 | O furto ligado (só no ponto público onde a vítima está; a vila fica de olho; quem não viu dá pela falta; o ladino de nome também furta) | `projeto_b` 2.12 | medido: rende menos que a diária com folga. O que acontece com quem é pego é a pergunta R3 |
 | A MESA em 8 KB | **o orçamento abaixo**, conferido pelo `turno.py` e reprovado no banco acima de 8 KB | os dois chegam aos mesmos cortes |
 | O registro de eventos | **o mundo sozinho num evento por módulo por dia** (o dia do mercado de A é o caso maior), e um arquivo por estação, comprimido quando a estação acaba; o `RETOMAR` lê só o turno | |
-| A etapa no save do jogador | `vila_teste.py regiao PASTA [semente=N]`, que só acrescenta (A) e chama o `gente.povoa_regiao` (B); **só entra no `ensaio/` se o jogador pedir** | o jogador escolheu terminar o motor antes; o Maro fica como está até ele dizer |
+| A etapa no save do jogador | `vila_teste.py regiao PASTA [semente=N]`, que só acrescenta (A) e chama o `gente.povoa_regiao` (B); **não entra no `ensaio/`** | o Maro não é o personagem do jogador (ele vai criar outro no Dia 1): o `ensaio/` fica só como vila de teste que os bancos copiam |
 
 **O orçamento da MESA** (teto de cada seção; com a viagem aberta saem o "Aqui", o mercado e a oficina): Você 1,0 KB · Aqui 0,8 · Daqui se vai a 0,6 · A viagem (só aberta) 0,7 · Quem está aqui 1,0 · A caixa 0,8 · O quadro, o que se diz de você e dois fatos que não tocam você 0,7 · O mercado 0,8 (seis linhas; a tabela inteira fica no `mercado.py ver`) · A oficina, a caça e a magia 0,8 (uma linha de cada) · Perguntas 0,5 · SÓ O MESTRE 1,0 (só quem está em cena).
 

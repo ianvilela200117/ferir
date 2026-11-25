@@ -29,7 +29,7 @@ O verificador independente conferiu a 4b e achou 13 defeitos; o acerto os conser
 
 ## O save novo (decisão 20)
 
-O jogador quer um save novo no Motor 10 e escolheu **terminar o motor antes** (as etapas 3, 5, 6 e 7): o personagem nasce no Dia 1 do mundo de verdade, e não numa vila de teste. O personagem já está escolhido: **humano, ferreiro, com as inclinações na forja e no encanto.** Até lá, o `ensaio/` do Maro fica como está.
+O jogador quer um save novo no Motor 10 e escolheu **terminar o motor antes** (as etapas 3, 5, 6 e 7): o personagem nasce no Dia 1 do mundo de verdade, e não numa vila de teste. O personagem já está escolhido: **humano, ferreiro, com as inclinações na forja e no encanto.** **O Maro não é o personagem do jogador:** o `ensaio/` não se joga mais e fica só como vila de teste que os bancos copiam para conferir o motor (por isso ninguém escreve nele).
 
 ## A vila de teste do jogador (`ensaio/`)
 
