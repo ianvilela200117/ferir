@@ -1,0 +1,9 @@
+== rodada 1 (o desenho anterior) ==
+o motor de hoje                 : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.37 em média, 5.00 no pior caso; do Dia 6 ao 30, -0.13 · 2.7 peças vendidas por vida · 30 vidas, categorias (0, 1)
+com a freguesia (o protótipo)   : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.47 em média, 8.40 no pior caso; do Dia 6 ao 30, -0.28 · 4.5 peças vendidas por vida · 30 vidas, categorias (0, 1)
+== rodada 2 (o desenho anterior) ==
+o motor de hoje                 : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.37 em média, 5.00 no pior caso; do Dia 6 ao 30, 0.46 · 2.8 peças vendidas por vida · 30 vidas, categorias (0, 1)
+com a freguesia (o protótipo)   : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.76 em média, 6.00 no pior caso; do Dia 6 ao 30, -0.02 · 4.5 peças vendidas por vida · 30 vidas, categorias (0, 1)
+== rodada 3 (o desenho final) ==
+o motor de hoje                 : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.59 em média, 5.00 no pior caso; do Dia 6 ao 30, 0.12 · 2.6 peças vendidas por vida · 30 vidas, categorias (0, 1)
+com a freguesia (o protótipo)   : o que a forja rende (vendas menos matéria), em prata por dia: nos 5 primeiros dias 4.44 em média, 6.00 no pior caso; do Dia 6 ao 30, 0.20 · 4.5 peças vendidas por vida · 30 vidas, categorias (0, 1)

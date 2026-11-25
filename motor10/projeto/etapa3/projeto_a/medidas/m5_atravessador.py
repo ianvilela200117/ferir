@@ -3,6 +3,7 @@
 na região do protótipo, com o mercado de verdade (o custa, o paga, a loja que paga 60% ao Leigo, a mão de comércio que sobe por dias de negócio).
 
 Roda de dentro de motor10/:  PYTHONDONTWRITEBYTECODE=1 python3 projeto/etapa3/projeto_a/medidas/m5_atravessador.py COPIA_DO_ENSAIO [dias=120] [sementes=1,2,3] [moeda=1]
+(rode o m4_estrada.py antes, com a mesma cópia: ele deixa o m4_tab.json ao lado dela, com as lutas que esta conta lê)
 O robô é o personagem (o Maro da cópia, com a bolsa que se diz), GANANCIOSO: em cada povoado olha cada rota que sai dali e cada bem, e compra o lote (até o que ele leva:
 Força ÷ 2 de peso, mais 80 com a mula) que mais rende, pela conta de hoje: o que a loja do destino paga, menos o que custa aqui, menos a viagem (a comida, a cama, a mula, a comida que estraga).
 Viaja (o tempo anda pelo ato.passa), vende, e de novo. Sem lote que pague, anda para o vizinho maior (ou espera um dia). O PERIGO da estrada não mata o robô aqui: a conta dele sai

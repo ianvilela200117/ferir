@@ -18,7 +18,10 @@ import proto_aplica, proto_regiao as R
 
 R.instala()
 for k, v in op.items():         # (medida) tab.CHAVE=valor muda um número da página do protótipo: tab.SAFRA_REGIAO=0.65,0.7
-    if k.startswith('tab.'): x = [float(y) for y in v.split(',')]; R.TAB[k[4:]] = tuple(x) if len(x) > 1 else x[0]
+    if k.startswith('tab.'):
+        x = [float(y) for y in v.split(',')]; x = tuple(x) if len(x) > 1 else x[0]; ch = k[4:].split('.'); d = R.TAB
+        for c in ch[:-1]: d = d[c]
+        d[ch[-1]] = x                 # tab.PERFIL.capital.comida=1.0 muda um número de dentro
 if GRAV == 'hoje':      # o gravador de hoje, com o verbo 'rota' por fora (o protótipo só para medir o custo da cópia inteira)
     _velho_um = estado._um
     def _um(E, ef): return R._rota_um(E, ef) if ef and ef[0] == 'rota' else _velho_um(E, ef)

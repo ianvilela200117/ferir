@@ -1,0 +1,15 @@
+60 dias de registro: 2105 KB; comprimido (gzip): 155 KB
+Pedra Rasa vila · o escudo Incomum: a loja paga 57 · a armadura de couro Incomum: 57 · 10 de couro Comum pagam 11 · o metal Incomum custa 58 por 3 · comida × 1.50 · moeda 1.02 · prateleira 21 alvo {0: 17, 1: 4}
+Toural Branco capital · o escudo Incomum: a loja paga 72 · a armadura de couro Incomum: 57 · 10 de couro Comum pagam 10 · o metal Incomum custa 68 por 3 · comida × 1.29 · moeda 1.04 · prateleira 32 alvo {0: 20, 1: 13}
+Ponte das Garças cidade · o escudo Incomum: a loja paga 72 · a armadura de couro Incomum: 57 · 10 de couro Comum pagam 12 · o metal Incomum custa 66 por 3 · comida × 1.55 · moeda 1.03 · prateleira 32 alvo {0: 20, 1: 13}
+Passo das Garças cidade · o escudo Incomum: a loja paga 57 · a armadura de couro Incomum: 57 · 10 de couro Comum pagam 9 · o metal Incomum custa 49 por 3 · comida × 1.41 · moeda 1.05 · prateleira 32 alvo {0: 20, 1: 13}
+r03 Pedra Rasa — Porto Novo 2 caminho a Mata do Corvo bicho 0.55% bando 0.00%
+r07 Vale das Cabras — Toural Branco 3 caminho a borda do brejo bicho 0.59% bando 0.00%
+r08 Sobral Claro — Toural Branco 3 caminho a Charneca bicho 0.23% bando 0.00%
+r10 Pedra Rasa — Sobral Claro 3 caminho a Cova Velha bicho 0.00% bando 0.00%
+r13 Pedra Rasa — Moinho Claro 4 caminho a Mata do Corvo bicho 1.84% bando 0.00%
+r16 Lagoa do Lobo — Toural Branco 3 caminho a Charneca bicho 0.23% bando 0.00%
+r17 Sobral das Cabras — Toural Branco 3 caminho as Grutas do Alto bicho 0.52% bando 0.60%
+r18 Passo das Garças — Toural Branco 3 estrada a Charneca bicho 0.12% bando 0.00%
+r23 Toural Branco — o mundo de fora 6 fora - bicho 0.00% bando 0.00%
+dia 68 primavera

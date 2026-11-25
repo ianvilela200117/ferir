@@ -1,0 +1,17 @@
+(15, 59, 'vila', 'aldeia_3', 'metal:1', 1, 19, 34, 3.48)
+(11, 59, 'capital', 'aldeia_3', 'metal:1', 1, 23, 34, 2.86)
+(2, 89, 'vila_3', 'aldeia_7', 'ferramenta', 1, 18, 20, 2.15)
+(-1, 99, 'vila_4', 'cidade_1', 'lenha', 1, 1, 0, 1.16)
+(-1, 99, 'vila_3', 'cidade_2', 'osso:0', 1, 1, 0, 1.07)
+(-1, 99, 'vila_3', 'aldeia_7', 'osso:0', 1, 1, 0, 1.3)
+(-1, 99, 'vila_3', 'aldeia_7', 'couro:0', 1, 2, 1, 1.17)
+(-1, 99, 'vila_2', 'vila', 'lenha', 1, 1, 0, 1.11)
+(-1, 99, 'vila_2', 'aldeia_1', 'lenha', 1, 1, 0, 0.87)
+(-1, 99, 'vila_1', 'aldeia_2', 'erva:0', 1, 2, 1, 1.33)
+(-1, 99, 'cidade_2', 'vila_3', 'osso:0', 1, 1, 0, 0.93)
+(-1, 99, 'cidade_2', 'vila_3', 'couro:0', 1, 2, 1, 1.08)
+(-1, 99, 'cidade_2', 'vila_3', 'carvão', 1, 2, 1, 1.17)
+(-1, 99, 'cidade_2', 'vau', 'osso:0', 1, 1, 0, 1.32)
+(-1, 99, 'cidade_2', 'vau', 'couro:0', 1, 2, 1, 1.27)
+quantos lotes dão lucro antes da viagem: 3 de 22437
+os bens dos 200 melhores: [('osso:0', 75), ('couro:0', 43), ('lenha', 20), ('carvão', 16), ('comida', 15), ('erva:0', 12), ('madeira:0', 12), ('metal:0', 4)]

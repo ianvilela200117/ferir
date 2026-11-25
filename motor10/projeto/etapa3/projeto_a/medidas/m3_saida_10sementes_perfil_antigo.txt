@@ -1,0 +1,1747 @@
+== m3, sementes 11 a 20, um ano, o perfil antigo (a capital com 0,75 da comida que come, a cidade com 0,9): a capital empobrece ==
+
+===== SEMENTE 11 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_7'} · nasceu em 0,03 s
+TEMPO: 364 dias em 9,8 s: 26,9 ms por dia (um ano: 9,8 s) · 16466 eventos (45,2 por dia)
+O REGISTRO: 12515 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4827, producao 6188 4653, regiao 392 2101, esperar 2184 401, gera 35 152, covil 359 151, comer 365 106, ninhada 378 68, virada 364 49, dragão 12 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6322 KB (17,4 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 66, gente 11, itens 60, turno 1, rotas 2 (total 140) · no fim relogio 0, lugares 66, gente 11, itens 53, turno 1, rotas 2 (total 133)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145316 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,31, o maior 4,66 · passa de 1,83 (o Leigo empata) em 3,728%; de 1,375 (o Lendário em comércio empata) em 17,145%
+O CARRETO DO POVO moveu 272809 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 217794 → 217794 (FECHA) · fora: 131013 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Monte das Pedras       capital  povo  4000 →  4000 · prata  40000 →  23406 (menor 23406, maior 40501; caixa 13200, bolsa 10206) · comida × 0,75 a × 2,15 · fome 0 dias · prateleira 27
+  Ribeira da Cruz        cidade   povo  1500 →  1484 · prata  15000 →   4059 (menor 4059, maior 19347; caixa 2509, bolsa 1550) · comida × 0,83 a × 3,00 · fome 0 dias · prateleira 27
+  Azenha Branco          cidade   povo  1500 →  1499 · prata  15000 →  13561 (menor 11675, maior 15000; caixa 8992, bolsa 4569) · comida × 0,65 a × 1,64 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   416 · prata   4005 →   5251 (menor 4003, maior 5823; caixa 2453, bolsa 2798) · comida × 0,70 a × 1,88 · fome 0 dias · prateleira 19
+  Ponte Branco           vila     povo   400 →   416 · prata   4000 →   4873 (menor 3920, maior 5082; caixa 2395, bolsa 2478) · comida × 0,71 a × 2,05 · fome 0 dias · prateleira 17
+  Sobral do Lobo         vila     povo   400 →   400 · prata   4000 →   3469 (menor 3469, maior 4121; caixa 1774, bolsa 1695) · comida × 0,73 a × 2,04 · fome 0 dias · prateleira 18
+  Monte Fundo            vila     povo   400 →   377 · prata   4000 →   2109 (menor 1494, maior 4473; caixa 1961, bolsa 148) · comida × 0,86 a × 3,00 · fome 9 dias · prateleira 18
+  Azenha do Sal          vila     povo   400 →   400 · prata   4000 →   3160 (menor 3149, maior 4884; caixa 1799, bolsa 1361) · comida × 0,73 a × 2,13 · fome 0 dias · prateleira 15
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   1614 (menor 1156, maior 1620; caixa 805, bolsa 809) · comida × 0,67 a × 1,92 · fome 0 dias · prateleira 0
+  Moinho das Pedras      aldeia   povo   120 →   120 · prata   1200 →   1086 (menor 948, maior 1456; caixa 497, bolsa 589) · comida × 0,70 a × 1,84 · fome 0 dias · prateleira 0
+  Passo das Garças       aldeia   povo   120 →   120 · prata   1200 →    980 (menor 971, maior 1218; caixa 497, bolsa 483) · comida × 0,72 a × 1,97 · fome 0 dias · prateleira 0
+  Juncal Novo            aldeia   povo   120 →   120 · prata   1200 →    826 (menor 750, maior 1200; caixa 595, bolsa 231) · comida × 0,71 a × 1,96 · fome 0 dias · prateleira 0
+  Lagoa da Lebre         aldeia   povo   120 →   120 · prata   1200 →   1243 (menor 942, maior 1359; caixa 688, bolsa 555) · comida × 0,68 a × 1,79 · fome 0 dias · prateleira 0
+  Campo de Cima          aldeia   povo   120 →   120 · prata   1200 →    882 (menor 882, maior 1200; caixa 512, bolsa 370) · comida × 0,76 a × 2,81 · fome 0 dias · prateleira 0
+  Sobral do Salgueiro    aldeia   povo   120 →   120 · prata   1200 →   1294 (menor 1012, maior 1312; caixa 764, bolsa 530) · comida × 0,69 a × 1,84 · fome 0 dias · prateleira 0
+  Moinho Novo            aldeia   povo   120 →   120 · prata   1200 →    901 (menor 877, maior 1200; caixa 523, bolsa 378) · comida × 0,69 a × 1,82 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Moinho das Pedras 0,91, Passo das Garças 0,83, Juncal Novo 0,94, Lagoa da Lebre 0,92, Campo de Cima 0,92, Sobral do Salgueiro 1,00 ...
+A FREGUESIA comprou 733 peças no ano; a forja do povo fez 704
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→73 · goblin 6→6→15 · javali 38→33→38 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3 · bando 2
+  o Pé da Serra          lobo 12→11→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→54→63 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→2→3 · bando 0
+  a borda do brejo       javali 40→37→38 · ratazana 90→82→88 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vau Seco — Moinho Novo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,00% → 0,28% e 1,40%
+  r02 Ponte Branco — Monte das Pedras: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r03 Passo das Garças — Lagoa da Lebre: 2 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 1,09% e 0,00%
+  r04 Ribeira da Cruz — Ponte Branco: 2 blocos, estrada, as Grutas do Alto · 0,26% e 1,00% → 0,26% e 0,00%
+  r05 Passo das Garças — Monte das Pedras: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,65% e 0,00%
+  r06 Vau Seco — Azenha do Sal: 2 blocos, caminho, o Pé da Serra · 0,55% e 3,27% → 0,55% e 4,57%
+  r07 Ribeira da Cruz — Sobral do Lobo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 1,06% → 0,26% e 0,00%
+  r08 Pedra Rasa — Moinho das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r09 Pedra Rasa — Lagoa da Lebre: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r10 Pedra Rasa — Monte Fundo: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,97% e 0,00%
+  r11 Azenha Branco — Azenha do Sal: 3 blocos, estrada, o Pé da Serra · 0,28% e 2,96% → 0,28% e 4,15%
+  r12 Vau Seco — Ponte Branco: 4 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,17% e 1,39%
+  r13 Juncal Novo — Lagoa da Lebre: 4 blocos, trilha, o Brejo das Garças · 1,16% e 0,00% → 1,16% e 0,00%
+  r14 Monte Fundo — Campo de Cima: 4 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 1,32%
+  r15 Moinho das Pedras — Sobral do Salgueiro: 4 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r16 Ribeira da Cruz — Monte das Pedras: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,60% → 0,26% e 0,00%
+  r17 Lagoa da Lebre — Monte das Pedras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r18 Azenha Branco — Ponte Branco: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r19 Vau Seco — Azenha Branco: 4 blocos, caminho, o Pé da Serra · 0,55% e 3,08% → 0,55% e 4,33%
+  r20 Azenha do Sal — Moinho Novo: 3 blocos, caminho, o Pé da Serra · 0,55% e 3,29% → 0,55% e 4,60%
+  r21 Monte Fundo — Moinho das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r22 Ribeira da Cruz — Passo das Garças: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,65% e 0,00%
+  r23 Monte das Pedras — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Ribeira da Cruz — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 42:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 49:  nada
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 77:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 91:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 133:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1
+  Dia 140:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado
+  Dia 161:  lobo desce de a Charneca a Ponte Branco: leva 24 de gado
+  Dia 168:  nada
+  Dia 175:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 224:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado
+  Dia 280:  urso desce de as Grutas do Alto a Sobral do Lobo: leva 10 de gado, a guarda mata 1
+  Dia 287:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 315:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Azenha do Sal: leva 24 de gado, a guarda mata 1
+  Dia 329:  lobo desce de a Charneca a Monte das Pedras: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 350:  lobo desce de a Charneca a Ponte Branco: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; 4 deixam Monte Fundo por Pedra Rasa
+  Dia 364:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; lobo desce de a Mata Funda a Campo de Cima: leva 24 de gado; 8 deixam Ribeira da Cruz por Ponte Branco; Monte Fundo passa fome; 7 deixam Monte Fundo por Pedra Rasa (1 vão para o mato); 2 morrem de fome
+  Dia 371:  8 deixam Ribeira da Cruz por Ponte Branco; Monte Fundo passa fome; 8 deixam Monte Fundo por Pedra Rasa (1 vão para o mato); 2 morrem de fome
+
+===== SEMENTE 12 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_3'} · nasceu em 0,02 s
+TEMPO: 364 dias em 10,1 s: 27,9 ms por dia (um ano: 10,1 s) · 16595 eventos (45,6 por dia)
+O REGISTRO: 12415 KB no ano (34,1 KB por dia); por tipo (eventos, KB): consumo 6188 4829, producao 6188 4643, regiao 392 1992, esperar 2184 401, gera 35 150, covil 350 142, comer 365 106, ninhada 515 95, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6129 KB (16,8 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 64, gente 11, itens 60, turno 1, rotas 2 (total 139) · no fim relogio 0, lugares 64, gente 11, itens 57, turno 1, rotas 2 (total 135)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 143992 pares bem-rota-dia): a mediana 1,16, o 99º centésimo 2,60, o maior 5,30 · passa de 1,83 (o Leigo empata) em 6,955%; de 1,375 (o Lendário em comércio empata) em 22,542%
+O CARRETO DO POVO moveu 246446 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 222194 → 222194 (FECHA) · fora: 153202 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Barreiro das Cabras    capital  povo  4000 →  3663 · prata  40000 →    274 (menor 14, maior 41132; caixa 274, bolsa 0) · comida × 0,91 a × 3,00 · fome 52 dias · prateleira 33
+  Ponte da Cruz          cidade   povo  1500 →  1576 · prata  15000 →    170 (menor 170, maior 18904; caixa 170, bolsa 0) · comida × 0,85 a × 3,00 · fome 9 dias · prateleira 30
+  Vale Novo              cidade   povo  1500 →  1500 · prata  15000 →  15587 (menor 13175, maior 15589; caixa 9508, bolsa 6079) · comida × 0,66 a × 1,71 · fome 0 dias · prateleira 30
+  Pedra Rasa             vila     povo   400 →   403 · prata   4005 →   3910 (menor 3910, maior 4416; caixa 2005, bolsa 1905) · comida × 0,79 a × 3,00 · fome 4 dias · prateleira 20
+  Juncal Velho           vila     povo   400 →   400 · prata   4000 →   2588 (menor 2226, maior 4042; caixa 1757, bolsa 831) · comida × 0,81 a × 3,00 · fome 0 dias · prateleira 19
+  Campo Velho            vila     povo   400 →   400 · prata   4000 →   5250 (menor 3901, maior 5634; caixa 2652, bolsa 2598) · comida × 0,71 a × 1,93 · fome 0 dias · prateleira 20
+  Outeiro do Moinho      vila     povo   400 →   456 · prata   4000 →   6518 (menor 3879, maior 8193; caixa 2990, bolsa 3528) · comida × 0,73 a × 2,10 · fome 0 dias · prateleira 19
+  Juncal da Cruz         vila     povo   400 →   399 · prata   4000 →   3410 (menor 3396, maior 4099; caixa 2124, bolsa 1286) · comida × 0,80 a × 3,00 · fome 0 dias · prateleira 18
+  Vau Seco               aldeia   povo   120 →   119 · prata   1200 →   1224 (menor 1179, maior 1437; caixa 543, bolsa 681) · comida × 0,72 a × 2,02 · fome 0 dias · prateleira 0
+  Freixo de Cima         aldeia   povo   120 →   120 · prata   1200 →   1406 (menor 1059, maior 1610; caixa 719, bolsa 687) · comida × 0,65 a × 1,67 · fome 0 dias · prateleira 0
+  Barreiro do Freixo     aldeia   povo   120 →   118 · prata   1200 →    515 (menor 489, maior 1401; caixa 279, bolsa 236) · comida × 0,79 a × 2,61 · fome 0 dias · prateleira 0
+  Fonte Velho            aldeia   povo   120 →   120 · prata   1200 →   1004 (menor 1004, maior 1236; caixa 500, bolsa 504) · comida × 0,69 a × 1,83 · fome 0 dias · prateleira 0
+  Carvalhal Grande       aldeia   povo   120 →   112 · prata   1200 →   1021 (menor 918, maior 1200; caixa 657, bolsa 364) · comida × 0,84 a × 3,00 · fome 17 dias · prateleira 0
+  Moinho Negro           aldeia   povo   120 →   119 · prata   1200 →    771 (menor 733, maior 1506; caixa 388, bolsa 383) · comida × 0,76 a × 2,22 · fome 0 dias · prateleira 0
+  Azenha do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1326 (menor 838, maior 1500; caixa 775, bolsa 551) · comida × 0,71 a × 1,92 · fome 0 dias · prateleira 0
+  Monte da Lebre         aldeia   povo   120 →   126 · prata   1200 →   1576 (menor 925, maior 2130; caixa 710, bolsa 866) · comida × 0,72 a × 2,07 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Freixo de Cima 0,79, Barreiro do Freixo 0,78, Fonte Velho 0,87, Carvalhal Grande 0,82, Moinho Negro 0,97, Azenha do Moinho 0,83 ...
+A FREGUESIA comprou 650 peças no ano; a forja do povo fez 637
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→63→72 · goblin 6→6→16 · javali 38→31→33 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→11→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 5
+  a Charneca             corça 80→44→45 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3
+  a borda do brejo       javali 40→31→33 · ratazana 90→72→80 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vale Novo — Freixo de Cima: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r02 Outeiro do Moinho — Monte da Lebre: 2 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,97% e 0,00%
+  r03 Juncal da Cruz — Moinho Negro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r04 Vau Seco — Barreiro do Freixo: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r05 Monte da Lebre — Barreiro das Cabras: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,59% e 0,00%
+  r06 Vale Novo — Moinho Negro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r07 Barreiro do Freixo — Fonte Velho: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r08 Juncal Velho — Juncal da Cruz: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r09 Pedra Rasa — Carvalhal Grande: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,92% e 0,00%
+  r10 Outeiro do Moinho — Azenha do Moinho: 3 blocos, caminho, o Brejo das Garças · 2,32% e 2,63% → 2,32% e 3,29%
+  r11 Vale Novo — Fonte Velho: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,17% e 1,26%
+  r12 Juncal Velho — Campo Velho: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Pedra Rasa — Juncal da Cruz: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r14 Moinho Negro — Barreiro das Cabras: 4 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r15 Ponte da Cruz — Monte da Lebre: 4 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,59% e 0,00%
+  r16 Outeiro do Moinho — Barreiro das Cabras: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r17 Barreiro do Freixo — Barreiro das Cabras: 4 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r18 Ponte da Cruz — Barreiro das Cabras: 5 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r19 Ponte da Cruz — Outeiro do Moinho: 5 blocos, estrada, a borda do brejo · 1,12% e 0,00% → 0,98% e 0,00%
+  r20 Vau Seco — Fonte Velho: 3 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r21 Freixo de Cima — Moinho Negro: 3 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r22 Vale Novo — Barreiro do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r23 Barreiro das Cabras — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Ponte da Cruz — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado
+  Dia 35:  nada
+  Dia 63:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado
+  Dia 91:  Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 98:  Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 105:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 19 morrem de fome
+  Dia 112:  Barreiro das Cabras passa fome; 31 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 154:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 161:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; 2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 168:  2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 175:  8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 203:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado
+  Dia 266:  nada
+  Dia 287:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado; lobo desce de o Pé da Serra a Fonte Velho: leva 24 de gado, a guarda mata 1
+  Dia 308:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado; urso desce de as Grutas do Alto a Ponte da Cruz: leva 10 de gado
+  Dia 315:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 322:  lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado
+  Dia 329:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Barreiro do Freixo: leva 24 de gado; 8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 343:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 350:  lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 18 morrem de fome; 1 deixam Ponte da Cruz por Outeiro do Moinho
+  Dia 357:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; Carvalhal Grande passa fome; 3 deixam Carvalhal Grande por Pedra Rasa; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; 1 deixam Ponte da Cruz por Outeiro do Moinho
+  Dia 364:  Carvalhal Grande passa fome; 2 deixam Carvalhal Grande por Pedra Rasa; 1 morrem de fome; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; Ponte da Cruz passa fome; 1 deixam Ponte da Cruz por Outeiro do Moinho; 8 morrem de fome
+  Dia 371:  2 deixam Barreiro do Freixo por Vau Seco; Carvalhal Grande passa fome; ; 1 morrem de fome; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; Ponte da Cruz passa fome; 1 deixam Ponte da Cruz por Outeiro do Moinho; 8 morrem de fome; Pedra Rasa passa fome; ; 2 morrem de fome
+
+===== SEMENTE 13 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_2'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,9 s: 27,1 ms por dia (um ano: 9,9 s) · 16525 eventos (45,4 por dia)
+O REGISTRO: 12357 KB no ano (33,9 KB por dia); por tipo (eventos, KB): consumo 6188 4829, producao 6188 4645, regiao 390 1948, esperar 2184 401, covil 355 147, gera 35 143, comer 365 106, ninhada 444 82, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6030 KB (16,6 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 60, gente 11, itens 58, turno 1, rotas 2 (total 133) · no fim relogio 0, lugares 60, gente 11, itens 53, turno 1, rotas 2 (total 128)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 142314 pares bem-rota-dia): a mediana 1,13, o 99º centésimo 2,16, o maior 5,19 · passa de 1,83 (o Leigo empata) em 2,190%; de 1,375 (o Lendário em comércio empata) em 14,598%
+O CARRETO DO POVO moveu 245738 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 218774 → 218774 (FECHA) · fora: 106545 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Freixo do Salgueiro    capital  povo  4000 →  4000 · prata  40000 →  34097 (menor 33821, maior 41210; caixa 20636, bolsa 13461) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 29
+  Juncal do Sal          cidade   povo  1500 →  1500 · prata  15000 →  12413 (menor 12413, maior 17502; caixa 5593, bolsa 6820) · comida × 0,73 a × 2,08 · fome 0 dias · prateleira 30
+  Vale Grande            cidade   povo  1500 →  1500 · prata  15000 →  15337 (menor 12783, maior 15337; caixa 9954, bolsa 5383) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 30
+  Pedra Rasa             vila     povo   400 →   398 · prata   4005 →   4495 (menor 4000, maior 4501; caixa 2269, bolsa 2226) · comida × 0,66 a × 1,75 · fome 0 dias · prateleira 18
+  Lagoa Fundo            vila     povo   400 →   400 · prata   4000 →   4432 (menor 3858, maior 4524; caixa 2367, bolsa 2065) · comida × 0,68 a × 1,82 · fome 0 dias · prateleira 18
+  Fonte Grande           vila     povo   400 →   400 · prata   4000 →   4199 (menor 3995, maior 4294; caixa 2282, bolsa 1917) · comida × 0,66 a × 1,72 · fome 0 dias · prateleira 18
+  Freixo da Lebre        vila     povo   400 →   400 · prata   4000 →   2628 (menor 2628, maior 4139; caixa 1378, bolsa 1250) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 19
+  Porto das Garças       vila     povo   400 →   400 · prata   4000 →   4151 (menor 3747, maior 4183; caixa 2318, bolsa 1833) · comida × 0,67 a × 1,76 · fome 0 dias · prateleira 16
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   1728 (menor 1146, maior 1728; caixa 761, bolsa 967) · comida × 0,62 a × 1,59 · fome 0 dias · prateleira 0
+  Sobral do Sal          aldeia   povo   120 →   120 · prata   1200 →   1408 (menor 978, maior 1408; caixa 789, bolsa 619) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 0
+  Freixo do Lobo         aldeia   povo   120 →   120 · prata   1200 →   1171 (menor 943, maior 1200; caixa 676, bolsa 495) · comida × 0,63 a × 1,55 · fome 0 dias · prateleira 0
+  Campo da Cruz          aldeia   povo   120 →   120 · prata   1200 →   1143 (menor 980, maior 1267; caixa 691, bolsa 452) · comida × 0,64 a × 1,65 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1902 (menor 1184, maior 1918; caixa 824, bolsa 1078) · comida × 0,57 a × 1,43 · fome 0 dias · prateleira 0
+  Silveira das Garças    aldeia   povo   120 →   120 · prata   1200 →   1433 (menor 1059, maior 1433; caixa 851, bolsa 582) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Vale Velho             aldeia   povo   120 →   120 · prata   1200 →   1409 (menor 1156, maior 1421; caixa 747, bolsa 662) · comida × 0,58 a × 1,44 · fome 0 dias · prateleira 0
+  Monte do Lobo          aldeia   povo   120 →   120 · prata   1200 →   1299 (menor 1046, maior 1326; caixa 686, bolsa 613) · comida × 0,69 a × 1,81 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Sobral do Sal 1,12, Freixo do Lobo 1,11, Campo da Cruz 1,08, Campo Negro 1,11, Silveira das Garças 1,15, Vale Velho 1,15 ...
+A FREGUESIA comprou 725 peças no ano; a forja do povo fez 701
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→70→74 · goblin 6→6→16 · javali 38→30→37 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→59→63 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 1
+  a borda do brejo       javali 40→33→38 · ratazana 90→76→82 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Freixo da Lebre — Monte do Lobo: 1 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r02 Vale Grande — Freixo do Lobo: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r03 Lagoa Fundo — Freixo do Salgueiro: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r04 Fonte Grande — Freixo do Lobo: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r05 Sobral do Sal — Campo da Cruz: 3 blocos, trilha, o Brejo das Garças · 3,87% e 0,00% → 3,87% e 0,00%
+  r06 Sobral do Sal — Silveira das Garças: 3 blocos, trilha, a borda do brejo · 3,73% e 0,00% → 3,47% e 0,00%
+  r07 Pedra Rasa — Porto das Garças: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,60% e 0,00%
+  r08 Campo Negro — Vale Velho: 3 blocos, trilha, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Vau Seco — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 0,52% e 0,90% → 0,52% e 0,18%
+  r10 Pedra Rasa — Monte do Lobo: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,99% e 0,00%
+  r11 Silveira das Garças — Freixo do Salgueiro: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,62% e 0,00%
+  r12 Juncal do Sal — Lagoa Fundo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,89% → 0,26% e 0,18%
+  r13 Vale Grande — Freixo do Salgueiro: 3 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r14 Pedra Rasa — Freixo do Lobo: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r15 Juncal do Sal — Campo Negro: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,92% → 0,52% e 0,18%
+  r16 Pedra Rasa — Freixo do Salgueiro: 5 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r17 Vale Grande — Lagoa Fundo: 4 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r18 Campo da Cruz — Silveira das Garças: 3 blocos, trilha, a borda do brejo · 3,73% e 0,00% → 3,47% e 0,00%
+  r19 Vau Seco — Lagoa Fundo: 3 blocos, caminho, o Pé da Serra · 0,17% e 1,18% → 0,17% e 1,58%
+  r20 Fonte Grande — Porto das Garças: 4 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,60% e 0,00%
+  r21 Vale Grande — Fonte Grande: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r22 Freixo da Lebre — Sobral do Sal: 4 blocos, caminho, o Brejo das Garças · 0,70% e 0,00% → 0,70% e 0,00%
+  r23 Freixo do Salgueiro — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Juncal do Sal — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  lobo desce de a Charneca a Vale Grande: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 35:  nada
+  Dia 84:  lobo desce de a Charneca a Vale Grande: leva 24 de gado
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 119:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 126:  lobo desce de a Charneca a Freixo do Lobo: leva 24 de gado
+  Dia 154:  nada
+  Dia 161:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 189:  lobo desce de a Charneca a Freixo do Salgueiro: leva 24 de gado, a guarda mata 1
+  Dia 196:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1
+  Dia 203:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 217:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Freixo do Salgueiro: leva 24 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado; urso desce de a Mata Funda a Freixo da Lebre: leva 10 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 294:  lobo desce de a Charneca a Vale Grande: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado
+  Dia 308:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Monte do Lobo: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 343:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; pantera desce de a Mata Funda a Freixo da Lebre: leva 8 de gado
+  Dia 350:  pantera desce de a Mata Funda a Pedra Rasa: leva 8 de gado
+  Dia 357:  lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado
+  Dia 364:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado; urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+
+===== SEMENTE 14 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_6'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,4 s: 25,8 ms por dia (um ano: 9,4 s) · 16610 eventos (45,6 por dia)
+O REGISTRO: 12506 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4836, producao 6188 4643, regiao 391 2071, esperar 2184 401, gera 35 152, covil 338 139, comer 365 106, ninhada 543 101, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6219 KB (17,1 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 65, gente 11, itens 61, turno 1, rotas 2 (total 140) · no fim relogio 0, lugares 65, gente 11, itens 55, turno 1, rotas 2 (total 135)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145437 pares bem-rota-dia): a mediana 1,16, o 99º centésimo 2,55, o maior 5,30 · passa de 1,83 (o Leigo empata) em 5,706%; de 1,375 (o Lendário em comércio empata) em 20,571%
+O CARRETO DO POVO moveu 254014 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220774 → 220774 (FECHA) · fora: 135521 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Silveira Velho         capital  povo  4000 →  3989 · prata  40000 →   5652 (menor 5652, maior 41323; caixa 3713, bolsa 1939) · comida × 0,81 a × 3,00 · fome 0 dias · prateleira 31
+  Monte Grande           cidade   povo  1500 →  1495 · prata  15000 →   6325 (menor 6325, maior 18652; caixa 2772, bolsa 3553) · comida × 0,80 a × 2,88 · fome 0 dias · prateleira 30
+  Lagoa de Cima          cidade   povo  1500 →  1500 · prata  15000 →  14442 (menor 12992, maior 15001; caixa 9055, bolsa 5387) · comida × 0,65 a × 1,68 · fome 0 dias · prateleira 28
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   5207 (menor 3852, maior 5683; caixa 2494, bolsa 2713) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 17
+  Alto do Moinho         vila     povo   400 →   400 · prata   4000 →   2759 (menor 2446, maior 4397; caixa 1610, bolsa 1149) · comida × 0,80 a × 2,79 · fome 0 dias · prateleira 16
+  Toural Claro           vila     povo   400 →   400 · prata   4000 →   3710 (menor 3681, maior 4896; caixa 2423, bolsa 1287) · comida × 0,70 a × 1,97 · fome 0 dias · prateleira 18
+  Ribeira Novo           vila     povo   400 →   410 · prata   4000 →  10171 (menor 3992, maior 10171; caixa 6504, bolsa 3667) · comida × 0,68 a × 1,80 · fome 0 dias · prateleira 18
+  Sobral Fundo           vila     povo   400 →   400 · prata   4000 →   2703 (menor 2703, maior 4016; caixa 1507, bolsa 1196) · comida × 0,77 a × 2,31 · fome 0 dias · prateleira 19
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1596 (menor 1168, maior 1646; caixa 811, bolsa 785) · comida × 0,69 a × 1,88 · fome 0 dias · prateleira 0
+  Porto Negro            aldeia   povo   120 →   120 · prata   1200 →   1840 (menor 1021, maior 1840; caixa 1054, bolsa 786) · comida × 0,63 a × 1,59 · fome 0 dias · prateleira 0
+  Campo do Salgueiro     aldeia   povo   120 →   120 · prata   1200 →   2201 (menor 970, maior 2201; caixa 1433, bolsa 768) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 0
+  Moinho da Lebre        aldeia   povo   120 →   120 · prata   1200 →   1065 (menor 868, maior 1211; caixa 674, bolsa 391) · comida × 0,68 a × 1,79 · fome 0 dias · prateleira 0
+  Toural Fundo           aldeia   povo   120 →   117 · prata   1200 →    564 (menor 516, maior 1201; caixa 419, bolsa 145) · comida × 0,74 a × 1,98 · fome 0 dias · prateleira 0
+  Passo Grande           aldeia   povo   120 →   124 · prata   1200 →   3115 (menor 1114, maior 3115; caixa 2032, bolsa 1083) · comida × 0,64 a × 1,63 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1116 (menor 935, maior 1214; caixa 705, bolsa 411) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 0
+  Barreiro Velho         aldeia   povo   120 →   124 · prata   1200 →   1735 (menor 1072, maior 1800; caixa 801, bolsa 934) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Porto Negro 1,08, Campo do Salgueiro 0,92, Moinho da Lebre 0,83, Toural Fundo 1,09, Passo Grande 0,93, Campo Negro 1,00 ...
+A FREGUESIA comprou 737 peças no ano; a forja do povo fez 712
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→64→73 · goblin 6→6→16 · javali 38→32→36 · lobo 12→10→10 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→11→11 · urso 3→3→3 · bando 6
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→48→59 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→31→32 · ratazana 90→70→73 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Passo Grande — Silveira Velho: 1 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Campo do Salgueiro — Silveira Velho: 1 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r03 Ribeira Novo — Campo do Salgueiro: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r04 Toural Claro — Toural Fundo: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r05 Pedra Rasa — Porto Negro: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r06 Lagoa de Cima — Toural Claro: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r07 Monte Grande — Sobral Fundo: 2 blocos, estrada, as Grutas do Alto · 0,87% e 2,21% → 0,87% e 0,00%
+  r08 Moinho da Lebre — Barreiro Velho: 2 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 0,92% e 0,00%
+  r09 Vau Seco — Sobral Fundo: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r10 Lagoa de Cima — Campo do Salgueiro: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r11 Pedra Rasa — Passo Grande: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Lagoa de Cima — Campo Negro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,15% e 1,08%
+  r13 Monte Grande — Silveira Velho: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r14 Pedra Rasa — Alto do Moinho: 4 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,89% e 0,00%
+  r15 Monte Grande — Barreiro Velho: 4 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r16 Ribeira Novo — Silveira Velho: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r17 Lagoa de Cima — Toural Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r18 Campo do Salgueiro — Passo Grande: 3 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,36% e 0,00%
+  r19 Ribeira Novo — Passo Grande: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r20 Ribeira Novo — Toural Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r21 Vau Seco — Campo Negro: 3 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,85% e 4,00%
+  r22 Toural Claro — Campo Negro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,15% e 1,18%
+  r23 Silveira Velho — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Monte Grande — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  nada
+  Dia 35:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 98:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 119:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 126:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 140:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 147:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado
+  Dia 182:  lobo desce de a Charneca a Lagoa de Cima: leva 24 de gado
+  Dia 196:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 210:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 259:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 273:  nada
+  Dia 280:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado; urso desce de as Grutas do Alto a Monte Grande: leva 10 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de o Pé da Serra a Campo Negro: leva 24 de gado
+  Dia 294:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado, a guarda mata 1
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+  Dia 322:  lobo desce de a Charneca a Lagoa de Cima: leva 18 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 336:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado, a guarda mata 1
+  Dia 343:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado; lobo desce de o Pé da Serra a Campo Negro: leva 24 de gado, a guarda mata 1
+  Dia 357:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado; lobo desce de a Mata Funda a Alto do Moinho: leva 24 de gado; 2 deixam Silveira Velho por Passo Grande
+  Dia 364:  urso desce de as Grutas do Alto a Monte Grande: leva 10 de gado; 2 deixam Toural Fundo por Ribeira Novo; 2 deixam Silveira Velho por Passo Grande; 2 deixam Monte Grande por Barreiro Velho; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 371:  1 deixam Toural Fundo por Ribeira Novo; 7 deixam Silveira Velho por Ribeira Novo; 2 deixam Monte Grande por Barreiro Velho
+
+===== SEMENTE 15 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_7'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,6 s: 26,5 ms por dia (um ano: 9,6 s) · 16594 eventos (45,6 por dia)
+O REGISTRO: 12393 KB no ano (34,0 KB por dia); por tipo (eventos, KB): consumo 6188 4824, producao 6188 4634, regiao 389 1985, esperar 2184 401, gera 35 147, covil 358 146, comer 365 106, ninhada 511 95, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6089 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 62, gente 11, itens 59, turno 1, rotas 2 (total 136) · no fim relogio 0, lugares 63, gente 11, itens 55, turno 1, rotas 2 (total 132)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144677 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,23, o maior 4,58 · passa de 1,83 (o Leigo empata) em 4,233%; de 1,375 (o Lendário em comércio empata) em 19,442%
+O CARRETO DO POVO moveu 225806 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220294 → 220294 (FECHA) · fora: 126472 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Vale do Freixo         capital  povo  4000 →  3996 · prata  40000 →  15277 (menor 15277, maior 41408; caixa 10489, bolsa 4788) · comida × 0,79 a × 3,00 · fome 0 dias · prateleira 33
+  Alto de Cima           cidade   povo  1500 →  1500 · prata  15000 →  11129 (menor 11129, maior 18452; caixa 4676, bolsa 6453) · comida × 0,76 a × 2,32 · fome 0 dias · prateleira 33
+  Moinho do Salgueiro    cidade   povo  1500 →  1500 · prata  15000 →  14801 (menor 14475, maior 15202; caixa 8414, bolsa 6387) · comida × 0,59 a × 1,44 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   5224 (menor 4007, maior 5224; caixa 2740, bolsa 2484) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 20
+  Moinho Novo            vila     povo   400 →   400 · prata   4000 →   4251 (menor 3883, maior 4655; caixa 2062, bolsa 2189) · comida × 0,72 a × 2,00 · fome 0 dias · prateleira 18
+  Fonte de Cima          vila     povo   400 →   400 · prata   4000 →   5726 (menor 4000, maior 5726; caixa 3164, bolsa 2562) · comida × 0,65 a × 1,69 · fome 0 dias · prateleira 16
+  Toural Negro           vila     povo   400 →   400 · prata   4000 →   2455 (menor 2442, maior 4194; caixa 1559, bolsa 896) · comida × 0,77 a × 2,32 · fome 0 dias · prateleira 16
+  Sobral da Lebre        vila     povo   400 →   400 · prata   4000 →   3626 (menor 3565, maior 4087; caixa 2144, bolsa 1482) · comida × 0,72 a × 1,97 · fome 0 dias · prateleira 13
+  Vau Seco               aldeia   povo   120 →   120 · prata   1200 →   2010 (menor 1136, maior 2010; caixa 1198, bolsa 812) · comida × 0,67 a × 1,76 · fome 0 dias · prateleira 0
+  Carvalhal do Lobo      aldeia   povo   120 →   120 · prata   1200 →   1069 (menor 957, maior 1252; caixa 630, bolsa 439) · comida × 0,60 a × 1,49 · fome 0 dias · prateleira 0
+  Passo da Cruz          aldeia   povo   120 →   120 · prata   1200 →   1544 (menor 1113, maior 1590; caixa 781, bolsa 763) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1140 (menor 931, maior 1200; caixa 688, bolsa 452) · comida × 0,67 a × 1,71 · fome 0 dias · prateleira 0
+  Barreiro da Lebre      aldeia   povo   120 →   120 · prata   1200 →   1837 (menor 1045, maior 1837; caixa 864, bolsa 973) · comida × 0,62 a × 1,56 · fome 0 dias · prateleira 0
+  Passo das Cabras       aldeia   povo   120 →   120 · prata   1200 →    688 (menor 677, maior 1200; caixa 504, bolsa 184) · comida × 0,69 a × 1,80 · fome 0 dias · prateleira 0
+  Freixo da Cruz         aldeia   povo   120 →   120 · prata   1200 →   1705 (menor 1038, maior 1705; caixa 962, bolsa 743) · comida × 0,65 a × 1,65 · fome 0 dias · prateleira 0
+  Monte Claro            aldeia   povo   120 →   120 · prata   1200 →    850 (menor 850, maior 1238; caixa 505, bolsa 345) · comida × 0,65 a × 1,67 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Carvalhal do Lobo 0,77, Passo da Cruz 0,80, Campo Negro 0,73, Barreiro da Lebre 0,88, Passo das Cabras 0,87, Freixo da Cruz 0,74 ...
+A FREGUESIA comprou 692 peças no ano; a forja do povo fez 671
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→76 · goblin 6→6→16 · javali 38→31→38 · lobo 12→11→11 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 7
+  a Charneca             corça 80→52→60 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 3
+  a borda do brejo       javali 40→29→33 · ratazana 90→74→82 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Carvalhal do Lobo — Monte Claro: 1 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,36% e 0,00%
+  r02 Sobral da Lebre — Campo Negro: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r03 Toural Negro — Passo da Cruz: 2 blocos, caminho, o Brejo das Garças · 0,70% e 0,98% → 0,70% e 1,37%
+  r04 Moinho Novo — Vale do Freixo: 2 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r05 Moinho do Salgueiro — Monte Claro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r06 Alto de Cima — Moinho Novo: 2 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r07 Fonte de Cima — Barreiro da Lebre: 2 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r08 Pedra Rasa — Passo das Cabras: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Moinho do Salgueiro — Passo das Cabras: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r10 Fonte de Cima — Freixo da Cruz: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r11 Fonte de Cima — Passo da Cruz: 3 blocos, caminho, o Brejo das Garças · 2,32% e 3,29% → 2,32% e 4,60%
+  r12 Pedra Rasa — Freixo da Cruz: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Moinho Novo — Fonte de Cima: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r14 Alto de Cima — Sobral da Lebre: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,71% → 0,26% e 0,53%
+  r15 Vau Seco — Vale do Freixo: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,56% → 0,52% e 0,42%
+  r16 Alto de Cima — Vale do Freixo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,40% → 0,26% e 0,30%
+  r17 Freixo da Cruz — Vale do Freixo: 4 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r18 Moinho do Salgueiro — Carvalhal do Lobo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r19 Alto de Cima — Barreiro da Lebre: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r20 Moinho Novo — Freixo da Cruz: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r21 Passo das Cabras — Monte Claro: 4 blocos, trilha, a Charneca · 1,33% e 0,00% → 1,20% e 0,00%
+  r22 Pedra Rasa — Toural Negro: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r23 Vale do Freixo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Alto de Cima — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 35:  nada
+  Dia 42:  nada
+  Dia 77:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 147:  lobo desce de a Charneca a Passo das Cabras: leva 24 de gado
+  Dia 154:  nada
+  Dia 196:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 210:  nada
+  Dia 217:  a patrulha mata 1 do bando do Brejo das Garças
+  Dia 259:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado
+  Dia 266:  nada
+  Dia 287:  lobo desce de a Mata Funda a Toural Negro: leva 24 de gado
+  Dia 294:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 301:  urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+  Dia 315:  lobo desce de a Charneca a Monte Claro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Toural Negro: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 322:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado
+  Dia 336:  lobo desce de a Charneca a Monte Claro: leva 24 de gado; lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 350:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 357:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado; pantera desce de a Mata Funda a Toural Negro: leva 8 de gado; 2 deixam Vale do Freixo por Vau Seco
+  Dia 371:  2 deixam Vale do Freixo por Vau Seco
+
+===== SEMENTE 16 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_3'} · nasceu em 0,04 s
+TEMPO: 364 dias em 10,5 s: 28,9 ms por dia (um ano: 10,5 s) · 16602 eventos (45,6 por dia)
+O REGISTRO: 12458 KB no ano (34,2 KB por dia); por tipo (eventos, KB): consumo 6188 4836, producao 6188 4651, regiao 386 2022, esperar 2184 401, gera 35 148, covil 349 140, comer 365 106, ninhada 530 99, virada 364 49, dragão 12 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6167 KB (16,9 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 62, gente 11, itens 60, turno 1, rotas 2 (total 137) · no fim relogio 0, lugares 63, gente 11, itens 55, turno 1, rotas 2 (total 132)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 143115 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,63, o maior 3,87 · passa de 1,83 (o Leigo empata) em 4,866%; de 1,375 (o Lendário em comércio empata) em 18,710%
+O CARRETO DO POVO moveu 267720 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 218514 → 218514 (FECHA) · fora: 109825 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Toural do Lobo         capital  povo  4000 →  4000 · prata  40000 →  27077 (menor 27077, maior 41596; caixa 15638, bolsa 11439) · comida × 0,72 a × 2,00 · fome 0 dias · prateleira 31
+  Azenha das Garças      cidade   povo  1500 →  1500 · prata  15000 →  12732 (menor 12732, maior 18219; caixa 6079, bolsa 6653) · comida × 0,74 a × 2,15 · fome 0 dias · prateleira 26
+  Outeiro Velho          cidade   povo  1500 →  1500 · prata  15000 →  15139 (menor 13276, maior 15775; caixa 9356, bolsa 5783) · comida × 0,57 a × 1,38 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   6410 (menor 3976, maior 6410; caixa 3229, bolsa 3181) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 19
+  Silveira do Salgueiro  vila     povo   400 →   400 · prata   4000 →   4962 (menor 3994, maior 4962; caixa 2734, bolsa 2228) · comida × 0,61 a × 1,54 · fome 0 dias · prateleira 17
+  Moinho Fundo           vila     povo   400 →   400 · prata   4000 →   5048 (menor 3910, maior 5050; caixa 2680, bolsa 2368) · comida × 0,61 a × 1,51 · fome 0 dias · prateleira 19
+  Carvalhal do Lobo      vila     povo   400 →   399 · prata   4000 →   2876 (menor 2876, maior 4031; caixa 1631, bolsa 1245) · comida × 0,72 a × 1,98 · fome 0 dias · prateleira 20
+  Vale Negro             vila     povo   400 →   400 · prata   4000 →   6001 (menor 3640, maior 6001; caixa 3130, bolsa 2871) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 14
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1463 (menor 1179, maior 1475; caixa 632, bolsa 831) · comida × 0,65 a × 1,75 · fome 0 dias · prateleira 0
+  Ponte das Pedras       aldeia   povo   120 →   120 · prata   1200 →    924 (menor 889, maior 1200; caixa 564, bolsa 360) · comida × 0,64 a × 1,60 · fome 0 dias · prateleira 0
+  Sobral do Salgueiro    aldeia   povo   120 →   120 · prata   1200 →   1084 (menor 947, maior 1220; caixa 669, bolsa 415) · comida × 0,62 a × 1,55 · fome 0 dias · prateleira 0
+  Passo Claro            aldeia   povo   120 →   118 · prata   1200 →    565 (menor 565, maior 1236; caixa 354, bolsa 211) · comida × 0,74 a × 2,08 · fome 0 dias · prateleira 0
+  Barreiro Negro         aldeia   povo   120 →   120 · prata   1200 →   1879 (menor 1150, maior 1885; caixa 852, bolsa 1027) · comida × 0,59 a × 1,46 · fome 0 dias · prateleira 0
+  Azenha das Pedras      aldeia   povo   120 →   120 · prata   1200 →    834 (menor 834, maior 1200; caixa 517, bolsa 317) · comida × 0,69 a × 1,84 · fome 0 dias · prateleira 0
+  Sobral do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1840 (menor 1154, maior 1841; caixa 864, bolsa 976) · comida × 0,61 a × 1,51 · fome 0 dias · prateleira 0
+  Freixo do Freixo       aldeia   povo   120 →   120 · prata   1200 →   1145 (menor 1099, maior 1252; caixa 598, bolsa 547) · comida × 0,65 a × 1,65 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Ponte das Pedras 0,93, Sobral do Salgueiro 0,98, Passo Claro 0,89, Barreiro Negro 0,96, Azenha das Pedras 1,09, Sobral do Moinho 0,99 ...
+A FREGUESIA comprou 728 peças no ano; a forja do povo fez 704
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→72 · goblin 6→6→16 · javali 38→34→36 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→11→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 6
+  a Charneca             corça 80→49→53 · lobo 12→11→11
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3
+  a borda do brejo       javali 40→32→32 · ratazana 90→71→73 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vau Seco — Passo Claro: 1 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r02 Passo Claro — Freixo do Freixo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r03 Barreiro Negro — Sobral do Moinho: 2 blocos, trilha, o Brejo das Garças · 3,87% e 3,33% → 3,87% e 4,00%
+  r04 Carvalhal do Lobo — Azenha das Pedras: 2 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 0,00%
+  r05 Vale Negro — Toural do Lobo: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,10% e 0,00%
+  r06 Moinho Fundo — Azenha das Pedras: 2 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r07 Outeiro Velho — Vale Negro: 2 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r08 Silveira do Salgueiro — Barreiro Negro: 2 blocos, caminho, o Brejo das Garças · 2,32% e 3,27% → 2,32% e 3,92%
+  r09 Silveira do Salgueiro — Moinho Fundo: 2 blocos, caminho, o Brejo das Garças · 0,70% e 0,96% → 0,70% e 1,15%
+  r10 Outeiro Velho — Sobral do Salgueiro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,65% e 0,00%
+  r11 Pedra Rasa — Vale Negro: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Sobral do Moinho — Toural do Lobo: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,55% e 0,00%
+  r13 Pedra Rasa — Ponte das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r14 Azenha das Garças — Sobral do Moinho: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r15 Sobral do Salgueiro — Freixo do Freixo: 4 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r16 Pedra Rasa — Toural do Lobo: 4 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r17 Azenha das Garças — Toural do Lobo: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r18 Azenha das Garças — Barreiro Negro: 4 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r19 Pedra Rasa — Outeiro Velho: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,10% e 0,00%
+  r20 Vau Seco — Freixo do Freixo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r21 Moinho Fundo — Carvalhal do Lobo: 3 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r22 Silveira do Salgueiro — Sobral do Moinho: 3 blocos, caminho, o Brejo das Garças · 2,32% e 3,29% → 2,32% e 3,95%
+  r23 Toural do Lobo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Azenha das Garças — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado
+  Dia 42:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado, a guarda mata 1
+  Dia 56:  lobo desce de a Charneca a Outeiro Velho: leva 18 de gado
+  Dia 84:  lobo desce de a Charneca a Vale Negro: leva 24 de gado
+  Dia 91:  nada
+  Dia 119:  nada
+  Dia 126:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 147:  lobo desce de a Charneca a Vale Negro: leva 24 de gado
+  Dia 196:  nada
+  Dia 280:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado
+  Dia 301:  nada
+  Dia 308:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado
+  Dia 343:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado, a guarda mata 1; lobo desce de a Mata Funda a Carvalhal do Lobo: leva 24 de gado, a guarda mata 1; a patrulha mata 1 do bando do Brejo das Garças
+  Dia 350:  lobo desce de o Pé da Serra a Freixo do Freixo: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Sobral do Salgueiro: leva 18 de gado
+  Dia 364:  1 deixam Passo Claro por Vau Seco
+  Dia 371:  1 deixam Passo Claro por Vau Seco
+
+===== SEMENTE 17 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_1'} · nasceu em 0,02 s
+TEMPO: 364 dias em 10,1 s: 27,8 ms por dia (um ano: 10,1 s) · 16545 eventos (45,5 por dia)
+O REGISTRO: 12383 KB no ano (34,0 KB por dia); por tipo (eventos, KB): consumo 6188 4830, producao 6188 4641, regiao 383 1958, esperar 2184 401, gera 35 155, covil 361 150, comer 365 106, ninhada 463 84, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6078 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 67, gente 11, itens 61, turno 1, rotas 2 (total 143) · no fim relogio 0, lugares 67, gente 11, itens 57, turno 1, rotas 2 (total 139)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145039 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,65, o maior 4,74 · passa de 1,83 (o Leigo empata) em 6,288%; de 1,375 (o Lendário em comércio empata) em 19,822%
+O CARRETO DO POVO moveu 170145 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 216114 → 216114 (FECHA) · fora: 106856 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Ponte da Cruz          capital  povo  4000 →  4000 · prata  40000 →  26406 (menor 26406, maior 41831; caixa 15486, bolsa 10920) · comida × 0,73 a × 2,04 · fome 0 dias · prateleira 30
+  Passo Grande           cidade   povo  1500 →  1500 · prata  15000 →  19527 (menor 15000, maior 19651; caixa 8848, bolsa 10679) · comida × 0,65 a × 1,68 · fome 0 dias · prateleira 32
+  Fonte do Salgueiro     cidade   povo  1500 →  1500 · prata  15000 →  11625 (menor 11293, maior 15041; caixa 8512, bolsa 3113) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 31
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   5123 (menor 3999, maior 5123; caixa 2480, bolsa 2643) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 20
+  Juncal do Lobo         vila     povo   400 →   400 · prata   4000 →   3519 (menor 3498, maior 4105; caixa 1960, bolsa 1559) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 19
+  Outeiro do Salgueiro   vila     povo   400 →   400 · prata   4000 →   6029 (menor 3921, maior 6187; caixa 2366, bolsa 3663) · comida × 0,66 a × 1,72 · fome 0 dias · prateleira 18
+  Ponte Claro            vila     povo   400 →   400 · prata   4000 →   5028 (menor 3926, maior 5246; caixa 2173, bolsa 2855) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 16
+  Carvalhal das Cabras   vila     povo   400 →   400 · prata   4000 →   4424 (menor 3962, maior 4484; caixa 2490, bolsa 1934) · comida × 0,66 a × 1,73 · fome 0 dias · prateleira 18
+  Vau Seco               aldeia   povo   120 →   116 · prata   1200 →   1952 (menor 1137, maior 1955; caixa 872, bolsa 1080) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 0
+  Juncal das Cabras      aldeia   povo   120 →   120 · prata   1200 →   2036 (menor 1159, maior 2045; caixa 915, bolsa 1121) · comida × 0,59 a × 1,49 · fome 0 dias · prateleira 0
+  Ponte das Garças       aldeia   povo   120 →   120 · prata   1200 →   1008 (menor 1008, maior 1226; caixa 484, bolsa 524) · comida × 0,72 a × 1,96 · fome 0 dias · prateleira 0
+  Fonte Grande           aldeia   povo   120 →   120 · prata   1200 →    814 (menor 804, maior 1200; caixa 544, bolsa 270) · comida × 0,60 a × 1,51 · fome 0 dias · prateleira 0
+  Carvalhal do Freixo    aldeia   povo   120 →   120 · prata   1200 →   1284 (menor 1019, maior 1307; caixa 738, bolsa 546) · comida × 0,66 a × 1,71 · fome 0 dias · prateleira 0
+  Silveira do Freixo     aldeia   povo   120 →   120 · prata   1200 →   1550 (menor 1135, maior 1550; caixa 797, bolsa 753) · comida × 0,59 a × 1,45 · fome 0 dias · prateleira 0
+  Porto das Pedras       aldeia   povo   120 →   120 · prata   1200 →   1505 (menor 1130, maior 1518; caixa 802, bolsa 703) · comida × 0,62 a × 1,56 · fome 0 dias · prateleira 0
+  Juncal do Sal          aldeia   povo   120 →   120 · prata   1200 →    993 (menor 891, maior 1211; caixa 534, bolsa 459) · comida × 0,68 a × 1,76 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Juncal das Cabras 1,08, Ponte das Garças 1,07, Fonte Grande 0,86, Carvalhal do Freixo 0,95, Silveira do Freixo 0,91, Porto das Pedras 0,99 ...
+A FREGUESIA comprou 717 peças no ano; a forja do povo fez 699
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→63→74 · goblin 6→6→16 · javali 38→31→31 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 6
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→44→62 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 8
+  a borda do brejo       javali 40→32→39 · ratazana 90→79→85 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Pedra Rasa — Porto das Pedras: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Juncal do Lobo — Ponte das Garças: 2 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 0,00%
+  r03 Juncal das Cabras — Ponte da Cruz: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r04 Ponte Claro — Juncal das Cabras: 2 blocos, caminho, as Grutas do Alto · 0,52% e 1,37% → 0,52% e 1,57%
+  r05 Passo Grande — Outeiro do Salgueiro: 2 blocos, estrada, as Grutas do Alto · 0,26% e 1,16% → 0,26% e 1,33%
+  r06 Outeiro do Salgueiro — Ponte Claro: 2 blocos, caminho, as Grutas do Alto · 1,74% e 4,48% → 1,74% e 5,12%
+  r07 Vau Seco — Ponte Claro: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,38% → 0,52% e 1,58%
+  r08 Passo Grande — Silveira do Freixo: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Pedra Rasa — Carvalhal das Cabras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,57% e 0,00%
+  r10 Ponte Claro — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 1,74% e 4,60% → 1,74% e 5,26%
+  r11 Ponte das Garças — Carvalhal do Freixo: 3 blocos, trilha, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Pedra Rasa — Ponte das Garças: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Porto das Pedras — Ponte da Cruz: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r14 Fonte do Salgueiro — Porto das Pedras: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r15 Fonte do Salgueiro — Fonte Grande: 6 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r16 Ponte Claro — Ponte da Cruz: 4 blocos, estrada, as Grutas do Alto · 0,26% e 0,97% → 0,26% e 1,10%
+  r17 Outeiro do Salgueiro — Ponte da Cruz: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,32% e 0,00%
+  r18 Passo Grande — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,26% → 0,52% e 1,44%
+  r19 Fonte do Salgueiro — Juncal das Cabras: 4 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r20 Outeiro do Salgueiro — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 1,74% e 4,60% → 1,74% e 5,26%
+  r21 Vau Seco — Juncal das Cabras: 4 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,20%
+  r22 Carvalhal das Cabras — Porto das Pedras: 4 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,57% e 0,00%
+  r23 Ponte da Cruz — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Passo Grande — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 49:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 196:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 203:  lobo desce de a Charneca a Fonte do Salgueiro: leva 24 de gado, a guarda mata 1
+  Dia 217:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 224:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 280:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; urso desce de a Mata do Corvo a Pedra Rasa: leva 10 de gado
+  Dia 287:  urso desce de a Mata Funda a Pedra Rasa: leva 10 de gado
+  Dia 294:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 322:  lobo desce de a Charneca a Juncal das Cabras: leva 24 de gado
+  Dia 329:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 336:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 343:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 357:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Juncal do Lobo: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+
+===== SEMENTE 18 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_1'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,6 s: 26,4 ms por dia (um ano: 9,6 s) · 16633 eventos (45,7 por dia)
+O REGISTRO: 12399 KB no ano (34,1 KB por dia); por tipo (eventos, KB): consumo 6188 4834, producao 6188 4644, regiao 393 1965, esperar 2184 401, gera 35 150, covil 343 139, comer 365 106, ninhada 559 104, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6093 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 63, gente 11, itens 61, turno 1, rotas 2 (total 138) · no fim relogio 0, lugares 64, gente 11, itens 55, turno 1, rotas 2 (total 133)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144419 pares bem-rota-dia): a mediana 1,15, o 99º centésimo 2,62, o maior 6,12 · passa de 1,83 (o Leigo empata) em 5,361%; de 1,375 (o Lendário em comércio empata) em 19,383%
+O CARRETO DO POVO moveu 228381 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220054 → 220054 (FECHA) · fora: 131895 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Carvalhal Fundo        capital  povo  4000 →  3970 · prata  40000 →   5434 (menor 5434, maior 41295; caixa 5434, bolsa 0) · comida × 0,82 a × 3,00 · fome 8 dias · prateleira 30
+  Juncal das Garças      cidade   povo  1500 →  1491 · prata  15000 →   8986 (menor 8979, maior 18538; caixa 4006, bolsa 4980) · comida × 0,78 a × 2,55 · fome 0 dias · prateleira 32
+  Sobral de Cima         cidade   povo  1500 →  1500 · prata  15000 →  14341 (menor 13797, maior 15030; caixa 8454, bolsa 5887) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 31
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   5981 (menor 4003, maior 5981; caixa 3005, bolsa 2976) · comida × 0,61 a × 1,54 · fome 0 dias · prateleira 19
+  Lagoa do Salgueiro     vila     povo   400 →   408 · prata   4000 →   6528 (menor 3950, maior 7125; caixa 3563, bolsa 2965) · comida × 0,70 a × 1,89 · fome 0 dias · prateleira 14
+  Carvalhal Negro        vila     povo   400 →   400 · prata   4000 →   4424 (menor 3989, maior 4497; caixa 2342, bolsa 2082) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 16
+  Fonte Velho            vila     povo   400 →   400 · prata   4000 →   4810 (menor 4000, maior 4810; caixa 2448, bolsa 2362) · comida × 0,66 a × 1,74 · fome 0 dias · prateleira 19
+  Porto de Cima          vila     povo   400 →   399 · prata   4000 →   2899 (menor 2899, maior 4018; caixa 1869, bolsa 1030) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 17
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   2159 (menor 1113, maior 2159; caixa 1221, bolsa 938) · comida × 0,64 a × 1,71 · fome 0 dias · prateleira 0
+  Ponte das Pedras       aldeia   povo   120 →   130 · prata   1200 →   2991 (menor 1148, maior 2991; caixa 1753, bolsa 1238) · comida × 0,60 a × 1,50 · fome 0 dias · prateleira 0
+  Alto das Pedras        aldeia   povo   120 →   120 · prata   1200 →   1874 (menor 1053, maior 1920; caixa 855, bolsa 1019) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Ponte das Garças       aldeia   povo   120 →   120 · prata   1200 →   1022 (menor 855, maior 1211; caixa 661, bolsa 361) · comida × 0,63 a × 1,57 · fome 0 dias · prateleira 0
+  Ponte do Salgueiro     aldeia   povo   120 →   120 · prata   1200 →   1904 (menor 1152, maior 1904; caixa 1116, bolsa 788) · comida × 0,59 a × 1,47 · fome 0 dias · prateleira 0
+  Vale do Salgueiro      aldeia   povo   120 →   120 · prata   1200 →   1256 (menor 1020, maior 1329; caixa 705, bolsa 551) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Moinho Negro           aldeia   povo   120 →   120 · prata   1200 →   1313 (menor 1075, maior 1313; caixa 705, bolsa 608) · comida × 0,67 a × 1,77 · fome 0 dias · prateleira 0
+  Monte das Cabras       aldeia   povo   120 →   120 · prata   1200 →   1923 (menor 988, maior 1923; caixa 1229, bolsa 694) · comida × 0,68 a × 1,80 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Ponte das Pedras 1,14, Alto das Pedras 1,03, Ponte das Garças 0,97, Ponte do Salgueiro 1,19, Vale do Salgueiro 1,28, Moinho Negro 1,20 ...
+A FREGUESIA comprou 722 peças no ano; a forja do povo fez 698
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→74 · goblin 6→6→16 · javali 38→32→35 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→11→11 · pantera 2→1→1 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→46→63 · lobo 12→10→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→28→35 · ratazana 90→69→72 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Fonte Velho — Ponte das Pedras: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r02 Vau Seco — Lagoa do Salgueiro: 2 blocos, caminho, o Pé da Serra · 0,17% e 0,98% → 0,17% e 1,57%
+  r03 Carvalhal Negro — Vale do Salgueiro: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r04 Ponte das Garças — Vale do Salgueiro: 2 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r05 Pedra Rasa — Fonte Velho: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r06 Sobral de Cima — Ponte das Garças: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r07 Ponte do Salgueiro — Monte das Cabras: 3 blocos, trilha, o Brejo das Garças · 3,87% e 0,00% → 3,87% e 0,00%
+  r08 Sobral de Cima — Ponte das Pedras: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r09 Ponte das Pedras — Carvalhal Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r10 Juncal das Garças — Carvalhal Fundo: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r11 Lagoa do Salgueiro — Carvalhal Fundo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,47% → 0,26% e 0,00%
+  r12 Monte das Cabras — Carvalhal Fundo: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,56% e 0,00%
+  r13 Vau Seco — Porto de Cima: 4 blocos, caminho, o Pé da Serra · 0,55% e 3,30% → 0,55% e 5,29%
+  r14 Juncal das Garças — Alto das Pedras: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,74% → 0,52% e 0,00%
+  r15 Ponte do Salgueiro — Moinho Negro: 4 blocos, trilha, o Brejo das Garças · 1,16% e 0,00% → 1,16% e 0,00%
+  r16 Juncal das Garças — Lagoa do Salgueiro: 4 blocos, estrada, as Grutas do Alto · 0,87% e 2,44% → 0,87% e 0,00%
+  r17 Sobral de Cima — Vale do Salgueiro: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r18 Fonte Velho — Vale do Salgueiro: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r19 Carvalhal Negro — Ponte das Garças: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r20 Pedra Rasa — Monte das Cabras: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r21 Fonte Velho — Monte das Cabras: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r22 Pedra Rasa — Ponte das Pedras: 4 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r23 Carvalhal Fundo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Juncal das Garças — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 42:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 56:  nada
+  Dia 70:  nada
+  Dia 98:  lobo desce de a Charneca a Ponte das Pedras: leva 24 de gado, a guarda mata 1
+  Dia 119:  nada
+  Dia 147:  a patrulha mata 1 do bando do Pé da Serra
+  Dia 161:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 189:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado
+  Dia 203:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 224:  nada
+  Dia 231:  nada
+  Dia 238:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 266:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 280:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; urso desce de as Grutas do Alto a Juncal das Garças: leva 10 de gado
+  Dia 294:  urso desce de as Grutas do Alto a Lagoa do Salgueiro: leva 10 de gado; lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Porto de Cima: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Ponte das Pedras: leva 24 de gado, a guarda mata 1
+  Dia 315:  lobo desce de a Charneca a Ponte das Pedras: leva 18 de gado, a guarda mata 1; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Moinho Negro: leva 24 de gado, a guarda mata 1
+  Dia 329:  lobo desce de a Mata Funda a Moinho Negro: leva 18 de gado
+  Dia 343:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado; 2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 350:  lobo desce de a Mata Funda a Moinho Negro: leva 18 de gado; pantera desce de a Mata Funda a Pedra Rasa: leva 8 de gado, a guarda mata 1; 2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 357:  2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 364:  2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 371:  Carvalhal Fundo passa fome; 2 deixam Carvalhal Fundo por Ponte das Pedras; 20 morrem de fome; 8 deixam Juncal das Garças por Lagoa do Salgueiro; a patrulha mata 1 do bando das Grutas do Alto
+
+===== SEMENTE 19 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_2'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,4 s: 25,9 ms por dia (um ano: 9,4 s) · 16448 eventos (45,2 por dia)
+O REGISTRO: 12464 KB no ano (34,2 KB por dia); por tipo (eventos, KB): consumo 6188 4834, producao 6188 4630, regiao 385 2069, esperar 2184 401, covil 361 153, gera 35 149, comer 365 106, ninhada 366 66, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6198 KB (17,0 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 64, gente 11, itens 60, turno 1, rotas 2 (total 138) · no fim relogio 0, lugares 64, gente 11, itens 55, turno 1, rotas 2 (total 133)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144716 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,63, o maior 4,58 · passa de 1,83 (o Leigo empata) em 6,216%; de 1,375 (o Lendário em comércio empata) em 17,881%
+O CARRETO DO POVO moveu 260859 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 221894 → 221894 (FECHA) · fora: 118362 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Silveira do Freixo     capital  povo  4000 →  3996 · prata  40000 →  18928 (menor 18928, maior 41536; caixa 11896, bolsa 7032) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 31
+  Barreiro do Sal        cidade   povo  1500 →  1500 · prata  15000 →  12854 (menor 12854, maior 18557; caixa 5804, bolsa 7050) · comida × 0,74 a × 2,15 · fome 0 dias · prateleira 30
+  Carvalhal das Cabras   cidade   povo  1500 →  1500 · prata  15000 →  11547 (menor 10710, maior 15019; caixa 8647, bolsa 2900) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   397 · prata   4005 →   5403 (menor 3992, maior 5403; caixa 2677, bolsa 2726) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 19
+  Moinho das Garças      vila     povo   400 →   400 · prata   4000 →   3779 (menor 3743, maior 4337; caixa 2069, bolsa 1710) · comida × 0,71 a × 1,96 · fome 0 dias · prateleira 15
+  Carvalhal Grande       vila     povo   400 →   400 · prata   4000 →   4448 (menor 3436, maior 4553; caixa 2232, bolsa 2216) · comida × 0,68 a × 1,76 · fome 0 dias · prateleira 16
+  Juncal Fundo           vila     povo   400 →   400 · prata   4000 →   6709 (menor 3924, maior 6709; caixa 3289, bolsa 3420) · comida × 0,64 a × 1,71 · fome 0 dias · prateleira 19
+  Campo Novo             vila     povo   400 →   400 · prata   4000 →   4685 (menor 4000, maior 4696; caixa 2359, bolsa 2326) · comida × 0,60 a × 1,48 · fome 0 dias · prateleira 17
+  Vau Seco               aldeia   povo   120 →   113 · prata   1200 →   1518 (menor 1184, maior 1518; caixa 650, bolsa 868) · comida × 0,66 a × 1,77 · fome 0 dias · prateleira 0
+  Fonte das Pedras       aldeia   povo   120 →   120 · prata   1200 →   1089 (menor 1007, maior 1202; caixa 603, bolsa 486) · comida × 0,68 a × 1,77 · fome 0 dias · prateleira 0
+  Silveira do Salgueiro  aldeia   povo   120 →   124 · prata   1200 →   2603 (menor 1140, maior 2603; caixa 1253, bolsa 1350) · comida × 0,57 a × 1,42 · fome 0 dias · prateleira 0
+  Carvalhal do Salgueiro aldeia   povo   120 →   120 · prata   1200 →   1132 (menor 1029, maior 1240; caixa 658, bolsa 474) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Azenha do Lobo         aldeia   povo   120 →   120 · prata   1200 →   1397 (menor 1054, maior 1408; caixa 729, bolsa 668) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Ponte Claro            aldeia   povo   120 →   119 · prata   1200 →   2069 (menor 1154, maior 2069; caixa 996, bolsa 1073) · comida × 0,59 a × 1,48 · fome 0 dias · prateleira 0
+  Sobral do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1774 (menor 1132, maior 1793; caixa 870, bolsa 904) · comida × 0,57 a × 1,41 · fome 0 dias · prateleira 0
+  Passo Fundo            aldeia   povo   120 →   120 · prata   1200 →   1428 (menor 1006, maior 1439; caixa 698, bolsa 730) · comida × 0,64 a × 1,62 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Fonte das Pedras 0,81, Silveira do Salgueiro 0,87, Carvalhal do Salgueiro 0,82, Azenha do Lobo 0,81, Ponte Claro 0,85, Sobral do Moinho 1,01 ...
+A FREGUESIA comprou 735 peças no ano; a forja do povo fez 712
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→73 · goblin 6→6→16 · javali 38→32→38 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→50→66 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→37→39 · ratazana 90→84→87 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Moinho das Garças — Azenha do Lobo: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Silveira do Salgueiro — Ponte Claro: 2 blocos, trilha, a Charneca · 1,33% e 0,00% → 1,24% e 0,00%
+  r03 Barreiro do Sal — Passo Fundo: 2 blocos, caminho, as Grutas do Alto · 1,74% e 2,27% → 1,74% e 0,00%
+  r04 Carvalhal Grande — Sobral do Moinho: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r05 Carvalhal Grande — Passo Fundo: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r06 Juncal Fundo — Silveira do Freixo: 2 blocos, estrada, as Grutas do Alto · 0,26% e 0,30% → 0,26% e 0,00%
+  r07 Campo Novo — Sobral do Moinho: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r08 Juncal Fundo — Silveira do Salgueiro: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r09 Carvalhal das Cabras — Silveira do Salgueiro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,74% e 0,00%
+  r10 Moinho das Garças — Fonte das Pedras: 2 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r11 Barreiro do Sal — Silveira do Freixo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,40% → 0,26% e 0,00%
+  r12 Pedra Rasa — Moinho das Garças: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Carvalhal do Salgueiro — Sobral do Moinho: 3 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 1,09% e 0,00%
+  r14 Vau Seco — Juncal Fundo: 3 blocos, caminho, o Pé da Serra · 0,17% e 1,18% → 0,17% e 1,38%
+  r15 Pedra Rasa — Ponte Claro: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r16 Ponte Claro — Silveira do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r17 Silveira do Salgueiro — Silveira do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r18 Barreiro do Sal — Carvalhal Grande: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,71% → 0,26% e 0,00%
+  r19 Carvalhal das Cabras — Ponte Claro: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,74% e 0,00%
+  r20 Carvalhal das Cabras — Juncal Fundo: 4 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r21 Fonte das Pedras — Azenha do Lobo: 2 blocos, trilha, a Mata Funda · 0,95% e 0,00% → 0,95% e 0,00%
+  r22 Sobral do Moinho — Passo Fundo: 3 blocos, trilha, as Grutas do Alto · 0,87% e 0,80% → 0,87% e 0,00%
+  r23 Silveira do Freixo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Barreiro do Sal — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 35:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 168:  lobo desce de a Charneca a Ponte Claro: leva 24 de gado
+  Dia 182:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 252:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 259:  urso desce de a Mata do Corvo a Pedra Rasa: leva 10 de gado
+  Dia 273:  nada
+  Dia 280:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 294:  lobo desce de a Mata Funda a Moinho das Garças: leva 24 de gado; urso desce de a Mata Funda a Pedra Rasa: leva 10 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata Funda a Moinho das Garças: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 315:  lobo desce de a Charneca a Silveira do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 329:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Silveira do Salgueiro: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Charneca a Ponte Claro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 2 deixam Silveira do Freixo por Silveira do Salgueiro
+  Dia 371:  2 deixam Silveira do Freixo por Silveira do Salgueiro
+
+===== SEMENTE 20 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_6'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,5 s: 26,1 ms por dia (um ano: 9,5 s) · 16511 eventos (45,4 por dia)
+O REGISTRO: 12524 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4832, producao 6188 4639, regiao 391 2114, esperar 2184 401, gera 35 155, covil 353 142, comer 365 106, ninhada 430 79, virada 364 49, dragão 12 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6328 KB (17,4 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 67, gente 11, itens 61, turno 1, rotas 2 (total 143) · no fim relogio 0, lugares 67, gente 11, itens 57, turno 1, rotas 2 (total 139)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145544 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,25, o maior 5,48 · passa de 1,83 (o Leigo empata) em 4,627%; de 1,375 (o Lendário em comércio empata) em 17,206%
+O CARRETO DO POVO moveu 287436 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 219994 → 219994 (FECHA) · fora: 104514 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Passo do Sal           capital  povo  4000 →  4000 · prata  40000 →  32864 (menor 32864, maior 42266; caixa 18080, bolsa 14784) · comida × 0,71 a × 1,93 · fome 0 dias · prateleira 33
+  Moinho das Cabras      cidade   povo  1500 →  1500 · prata  15000 →  12888 (menor 12888, maior 18434; caixa 5689, bolsa 7199) · comida × 0,73 a × 2,12 · fome 0 dias · prateleira 32
+  Fonte do Moinho        cidade   povo  1500 →  1500 · prata  15000 →  18181 (menor 13539, maior 18181; caixa 10889, bolsa 7292) · comida × 0,60 a × 1,49 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   3898 (menor 3864, maior 4262; caixa 1982, bolsa 1916) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 20
+  Ribeira Negro          vila     povo   400 →   400 · prata   4000 →   4098 (menor 4000, maior 4167; caixa 2200, bolsa 1898) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 17
+  Toural Velho           vila     povo   400 →   400 · prata   4000 →   3910 (menor 3553, maior 4042; caixa 2319, bolsa 1591) · comida × 0,66 a × 1,70 · fome 0 dias · prateleira 20
+  Porto das Pedras       vila     povo   400 →   400 · prata   4000 →   4543 (menor 3998, maior 4543; caixa 2541, bolsa 2002) · comida × 0,65 a × 1,70 · fome 0 dias · prateleira 12
+  Monte Claro            vila     povo   400 →   400 · prata   4000 →   4268 (menor 3957, maior 4490; caixa 2365, bolsa 1903) · comida × 0,67 a × 1,81 · fome 0 dias · prateleira 19
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1321 (menor 1117, maior 1339; caixa 654, bolsa 667) · comida × 0,65 a × 1,73 · fome 0 dias · prateleira 0
+  Outeiro da Lebre       aldeia   povo   120 →   120 · prata   1200 →   1614 (menor 1093, maior 1640; caixa 744, bolsa 870) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Outeiro do Lobo        aldeia   povo   120 →   120 · prata   1200 →   1248 (menor 1054, maior 1269; caixa 711, bolsa 537) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Sobral Velho           aldeia   povo   120 →   120 · prata   1200 →   1412 (menor 1028, maior 1415; caixa 701, bolsa 711) · comida × 0,65 a × 1,64 · fome 0 dias · prateleira 0
+  Moinho da Lebre        aldeia   povo   120 →   120 · prata   1200 →   1283 (menor 984, maior 1297; caixa 773, bolsa 510) · comida × 0,58 a × 1,42 · fome 0 dias · prateleira 0
+  Ponte das Cabras       aldeia   povo   120 →   120 · prata   1200 →   1056 (menor 828, maior 1200; caixa 679, bolsa 377) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 0
+  Sobral do Freixo       aldeia   povo   120 →   120 · prata   1200 →   1316 (menor 1027, maior 1362; caixa 694, bolsa 622) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Barreiro de Cima       aldeia   povo   120 →   120 · prata   1200 →   1370 (menor 1054, maior 1414; caixa 652, bolsa 718) · comida × 0,65 a × 1,66 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Outeiro da Lebre 0,91, Outeiro do Lobo 0,79, Sobral Velho 1,00, Moinho da Lebre 0,84, Ponte das Cabras 0,76, Sobral do Freixo 0,86 ...
+A FREGUESIA comprou 728 peças no ano; a forja do povo fez 711
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→77 · goblin 6→6→16 · javali 38→31→37 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→53→58 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 5
+  a borda do brejo       javali 40→35→36 · ratazana 90→79→88 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Moinho das Cabras — Barreiro de Cima: 2 blocos, caminho, as Grutas do Alto · 0,52% e 1,36% → 0,52% e 0,85%
+  r02 Monte Claro — Sobral do Freixo: 2 blocos, caminho, o Pé da Serra · 0,55% e 3,27% → 0,55% e 4,57%
+  r03 Sobral Velho — Passo do Sal: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,64% e 0,00%
+  r04 Vau Seco — Sobral do Freixo: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r05 Moinho das Cabras — Outeiro da Lebre: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,64% e 0,00%
+  r06 Pedra Rasa — Toural Velho: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r07 Vau Seco — Outeiro do Lobo: 3 blocos, trilha, as Grutas do Alto · 0,87% e 1,60% → 0,87% e 1,00%
+  r08 Fonte do Moinho — Porto das Pedras: 3 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r09 Moinho das Cabras — Sobral Velho: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,44% → 0,52% e 0,90%
+  r10 Ribeira Negro — Ponte das Cabras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r11 Porto das Pedras — Monte Claro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,97% → 0,17% e 1,36%
+  r12 Pedra Rasa — Ponte das Cabras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Outeiro do Lobo — Barreiro de Cima: 4 blocos, trilha, as Grutas do Alto · 2,89% e 5,33% → 2,89% e 3,33%
+  r14 Toural Velho — Moinho da Lebre: 4 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r15 Pedra Rasa — Passo do Sal: 4 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r16 Moinho das Cabras — Passo do Sal: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,32% e 0,00%
+  r17 Fonte do Moinho — Passo do Sal: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r18 Fonte do Moinho — Sobral do Freixo: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,17% e 1,26%
+  r19 Outeiro da Lebre — Barreiro de Cima: 3 blocos, trilha, as Grutas do Alto · 0,87% e 1,60% → 0,87% e 1,00%
+  r20 Fonte do Moinho — Monte Claro: 3 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r21 Vau Seco — Monte Claro: 3 blocos, caminho, o Pé da Serra · 0,55% e 3,29% → 0,55% e 4,60%
+  r22 Porto das Pedras — Sobral do Freixo: 4 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,17% e 1,39%
+  r23 Passo do Sal — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Moinho das Cabras — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  nada
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 63:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 77:  a patrulha mata 1 do bando do Pé da Serra
+  Dia 119:  nada
+  Dia 154:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 168:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado
+  Dia 196:  nada
+  Dia 217:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado
+  Dia 224:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado, a guarda mata 1
+  Dia 266:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 294:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 315:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 322:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado; lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado; lobo desce de o Pé da Serra a Monte Claro: leva 24 de gado
+  Dia 329:  lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado
+  Dia 336:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado
+  Dia 343:  lobo desce de o Pé da Serra a Sobral do Freixo: leva 24 de gado
+  Dia 350:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; urso desce de o Pé da Serra a Monte Claro: leva 10 de gado
+  Dia 357:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 371:  nada
+
+== o mesmo, com o imposto a 8% ==
+
+===== SEMENTE 11 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_7'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,9 s: 27,3 ms por dia (um ano: 9,9 s) · 16466 eventos (45,2 por dia)
+O REGISTRO: 12515 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4827, producao 6188 4653, regiao 392 2100, esperar 2184 401, gera 35 152, covil 359 151, comer 365 106, ninhada 378 68, virada 364 49, dragão 12 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6319 KB (17,4 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 66, gente 11, itens 60, turno 1, rotas 2 (total 140) · no fim relogio 0, lugares 66, gente 11, itens 54, turno 1, rotas 2 (total 134)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145368 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,31, o maior 4,66 · passa de 1,83 (o Leigo empata) em 3,781%; de 1,375 (o Lendário em comércio empata) em 17,129%
+O CARRETO DO POVO moveu 273353 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 217794 → 217794 (FECHA) · fora: 131692 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Monte das Pedras       capital  povo  4000 →  4000 · prata  40000 →  24497 (menor 24497, maior 41039; caixa 13671, bolsa 10826) · comida × 0,75 a × 2,15 · fome 0 dias · prateleira 27
+  Ribeira da Cruz        cidade   povo  1500 →  1484 · prata  15000 →   3997 (menor 3997, maior 19043; caixa 2618, bolsa 1379) · comida × 0,83 a × 3,00 · fome 0 dias · prateleira 27
+  Azenha Branco          cidade   povo  1500 →  1499 · prata  15000 →  13061 (menor 11201, maior 15000; caixa 9086, bolsa 3975) · comida × 0,65 a × 1,64 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   416 · prata   4005 →   4921 (menor 3975, maior 5585; caixa 2483, bolsa 2438) · comida × 0,70 a × 1,88 · fome 0 dias · prateleira 19
+  Ponte Branco           vila     povo   400 →   416 · prata   4000 →   4794 (menor 3920, maior 5017; caixa 2496, bolsa 2298) · comida × 0,71 a × 2,05 · fome 0 dias · prateleira 17
+  Sobral do Lobo         vila     povo   400 →   400 · prata   4000 →   3376 (menor 3376, maior 4116; caixa 1794, bolsa 1582) · comida × 0,73 a × 2,04 · fome 0 dias · prateleira 18
+  Monte Fundo            vila     povo   400 →   377 · prata   4000 →   1992 (menor 1401, maior 4375; caixa 1816, bolsa 176) · comida × 0,86 a × 3,00 · fome 9 dias · prateleira 19
+  Azenha do Sal          vila     povo   400 →   400 · prata   4000 →   3010 (menor 2998, maior 4844; caixa 1842, bolsa 1168) · comida × 0,73 a × 2,13 · fome 0 dias · prateleira 15
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   1544 (menor 1156, maior 1548; caixa 820, bolsa 724) · comida × 0,67 a × 1,92 · fome 0 dias · prateleira 0
+  Moinho das Pedras      aldeia   povo   120 →   120 · prata   1200 →   1028 (menor 924, maior 1427; caixa 523, bolsa 505) · comida × 0,70 a × 1,84 · fome 0 dias · prateleira 0
+  Passo das Garças       aldeia   povo   120 →   120 · prata   1200 →    952 (menor 942, maior 1213; caixa 505, bolsa 447) · comida × 0,72 a × 1,97 · fome 0 dias · prateleira 0
+  Juncal Novo            aldeia   povo   120 →   120 · prata   1200 →    782 (menor 722, maior 1200; caixa 591, bolsa 191) · comida × 0,71 a × 1,96 · fome 0 dias · prateleira 0
+  Lagoa da Lebre         aldeia   povo   120 →   120 · prata   1200 →   1190 (menor 927, maior 1305; caixa 694, bolsa 496) · comida × 0,68 a × 1,79 · fome 0 dias · prateleira 0
+  Campo de Cima          aldeia   povo   120 →   120 · prata   1200 →    822 (menor 822, maior 1200; caixa 520, bolsa 302) · comida × 0,76 a × 2,82 · fome 0 dias · prateleira 0
+  Sobral do Salgueiro    aldeia   povo   120 →   120 · prata   1200 →   1206 (menor 952, maior 1256; caixa 760, bolsa 446) · comida × 0,69 a × 1,84 · fome 0 dias · prateleira 0
+  Moinho Novo            aldeia   povo   120 →   120 · prata   1200 →    863 (menor 834, maior 1200; caixa 540, bolsa 323) · comida × 0,69 a × 1,82 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Moinho das Pedras 0,91, Passo das Garças 0,83, Juncal Novo 0,94, Lagoa da Lebre 0,92, Campo de Cima 0,92, Sobral do Salgueiro 1,00 ...
+A FREGUESIA comprou 732 peças no ano; a forja do povo fez 704
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→73 · goblin 6→6→15 · javali 38→33→38 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3 · bando 2
+  o Pé da Serra          lobo 12→11→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→54→63 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→2→3 · bando 0
+  a borda do brejo       javali 40→37→38 · ratazana 90→82→88 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vau Seco — Moinho Novo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,00% → 0,28% e 1,40%
+  r02 Ponte Branco — Monte das Pedras: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r03 Passo das Garças — Lagoa da Lebre: 2 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 1,09% e 0,00%
+  r04 Ribeira da Cruz — Ponte Branco: 2 blocos, estrada, as Grutas do Alto · 0,26% e 1,00% → 0,26% e 0,00%
+  r05 Passo das Garças — Monte das Pedras: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,65% e 0,00%
+  r06 Vau Seco — Azenha do Sal: 2 blocos, caminho, o Pé da Serra · 0,55% e 3,27% → 0,55% e 4,57%
+  r07 Ribeira da Cruz — Sobral do Lobo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 1,06% → 0,26% e 0,00%
+  r08 Pedra Rasa — Moinho das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r09 Pedra Rasa — Lagoa da Lebre: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r10 Pedra Rasa — Monte Fundo: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,97% e 0,00%
+  r11 Azenha Branco — Azenha do Sal: 3 blocos, estrada, o Pé da Serra · 0,28% e 2,96% → 0,28% e 4,15%
+  r12 Vau Seco — Ponte Branco: 4 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,17% e 1,39%
+  r13 Juncal Novo — Lagoa da Lebre: 4 blocos, trilha, o Brejo das Garças · 1,16% e 0,00% → 1,16% e 0,00%
+  r14 Monte Fundo — Campo de Cima: 4 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 1,32%
+  r15 Moinho das Pedras — Sobral do Salgueiro: 4 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r16 Ribeira da Cruz — Monte das Pedras: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,60% → 0,26% e 0,00%
+  r17 Lagoa da Lebre — Monte das Pedras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r18 Azenha Branco — Ponte Branco: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r19 Vau Seco — Azenha Branco: 4 blocos, caminho, o Pé da Serra · 0,55% e 3,08% → 0,55% e 4,33%
+  r20 Azenha do Sal — Moinho Novo: 3 blocos, caminho, o Pé da Serra · 0,55% e 3,29% → 0,55% e 4,60%
+  r21 Monte Fundo — Moinho das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r22 Ribeira da Cruz — Passo das Garças: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,65% e 0,00%
+  r23 Monte das Pedras — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Ribeira da Cruz — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 42:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 49:  nada
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 77:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 91:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 133:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1
+  Dia 140:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado
+  Dia 161:  lobo desce de a Charneca a Ponte Branco: leva 24 de gado
+  Dia 168:  nada
+  Dia 175:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 224:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado
+  Dia 280:  urso desce de as Grutas do Alto a Sobral do Lobo: leva 10 de gado, a guarda mata 1
+  Dia 287:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 315:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Azenha do Sal: leva 24 de gado, a guarda mata 1
+  Dia 329:  lobo desce de a Charneca a Monte das Pedras: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 350:  lobo desce de a Charneca a Ponte Branco: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; 4 deixam Monte Fundo por Pedra Rasa
+  Dia 364:  lobo desce de a Charneca a Azenha Branco: leva 24 de gado; lobo desce de a Mata Funda a Campo de Cima: leva 24 de gado; 8 deixam Ribeira da Cruz por Ponte Branco; Monte Fundo passa fome; 7 deixam Monte Fundo por Pedra Rasa (1 vão para o mato); 2 morrem de fome
+  Dia 371:  8 deixam Ribeira da Cruz por Ponte Branco; Monte Fundo passa fome; 8 deixam Monte Fundo por Pedra Rasa (1 vão para o mato); 2 morrem de fome
+
+===== SEMENTE 12 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_3'} · nasceu em 0,03 s
+TEMPO: 364 dias em 9,6 s: 26,5 ms por dia (um ano: 9,6 s) · 16595 eventos (45,6 por dia)
+O REGISTRO: 12419 KB no ano (34,1 KB por dia); por tipo (eventos, KB): consumo 6188 4829, producao 6188 4643, regiao 392 1996, esperar 2184 401, gera 35 150, covil 350 142, comer 365 106, ninhada 515 95, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6133 KB (16,8 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 64, gente 11, itens 60, turno 1, rotas 2 (total 139) · no fim relogio 0, lugares 64, gente 11, itens 57, turno 1, rotas 2 (total 135)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144069 pares bem-rota-dia): a mediana 1,16, o 99º centésimo 2,62, o maior 5,30 · passa de 1,83 (o Leigo empata) em 6,957%; de 1,375 (o Lendário em comércio empata) em 22,525%
+O CARRETO DO POVO moveu 246341 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 222194 → 222194 (FECHA) · fora: 156579 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Barreiro das Cabras    capital  povo  4000 →  3663 · prata  40000 →     29 (menor 29, maior 41132; caixa 29, bolsa 0) · comida × 0,91 a × 3,00 · fome 52 dias · prateleira 33
+  Ponte da Cruz          cidade   povo  1500 →  1576 · prata  15000 →     75 (menor 75, maior 18588; caixa 75, bolsa 0) · comida × 0,85 a × 3,00 · fome 9 dias · prateleira 30
+  Vale Novo              cidade   povo  1500 →  1502 · prata  15000 →  14679 (menor 12492, maior 15030; caixa 9496, bolsa 5183) · comida × 0,66 a × 1,71 · fome 0 dias · prateleira 30
+  Pedra Rasa             vila     povo   400 →   403 · prata   4005 →   3610 (menor 3610, maior 4322; caixa 2028, bolsa 1582) · comida × 0,79 a × 3,00 · fome 4 dias · prateleira 20
+  Juncal Velho           vila     povo   400 →   400 · prata   4000 →   2377 (menor 2072, maior 4042; caixa 1761, bolsa 616) · comida × 0,81 a × 3,00 · fome 0 dias · prateleira 19
+  Campo Velho            vila     povo   400 →   400 · prata   4000 →   4832 (menor 3806, maior 5297; caixa 2647, bolsa 2185) · comida × 0,71 a × 1,93 · fome 0 dias · prateleira 20
+  Outeiro do Moinho      vila     povo   400 →   456 · prata   4000 →   6082 (menor 3879, maior 7895; caixa 2865, bolsa 3217) · comida × 0,73 a × 2,09 · fome 0 dias · prateleira 19
+  Juncal da Cruz         vila     povo   400 →   399 · prata   4000 →   3171 (menor 3157, maior 4099; caixa 2112, bolsa 1059) · comida × 0,80 a × 3,00 · fome 0 dias · prateleira 18
+  Vau Seco               aldeia   povo   120 →   117 · prata   1200 →   1136 (menor 1134, maior 1402; caixa 550, bolsa 586) · comida × 0,72 a × 2,02 · fome 0 dias · prateleira 0
+  Freixo de Cima         aldeia   povo   120 →   120 · prata   1200 →   1318 (menor 1016, maior 1555; caixa 715, bolsa 603) · comida × 0,65 a × 1,67 · fome 0 dias · prateleira 0
+  Barreiro do Freixo     aldeia   povo   120 →   118 · prata   1200 →    476 (menor 449, maior 1401; caixa 290, bolsa 186) · comida × 0,78 a × 2,61 · fome 0 dias · prateleira 0
+  Fonte Velho            aldeia   povo   120 →   120 · prata   1200 →    931 (menor 931, maior 1230; caixa 505, bolsa 426) · comida × 0,69 a × 1,83 · fome 0 dias · prateleira 0
+  Carvalhal Grande       aldeia   povo   120 →   112 · prata   1200 →    960 (menor 846, maior 1200; caixa 665, bolsa 295) · comida × 0,84 a × 3,00 · fome 17 dias · prateleira 0
+  Moinho Negro           aldeia   povo   120 →   119 · prata   1200 →    735 (menor 693, maior 1449; caixa 402, bolsa 333) · comida × 0,76 a × 2,22 · fome 0 dias · prateleira 0
+  Azenha do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1265 (menor 816, maior 1451; caixa 767, bolsa 498) · comida × 0,71 a × 1,92 · fome 0 dias · prateleira 0
+  Monte da Lebre         aldeia   povo   120 →   126 · prata   1200 →   1497 (menor 917, maior 2056; caixa 691, bolsa 806) · comida × 0,72 a × 2,07 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Freixo de Cima 0,79, Barreiro do Freixo 0,78, Fonte Velho 0,87, Carvalhal Grande 0,82, Moinho Negro 0,97, Azenha do Moinho 0,83 ...
+A FREGUESIA comprou 652 peças no ano; a forja do povo fez 639
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→63→72 · goblin 6→6→16 · javali 38→31→33 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→11→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 5
+  a Charneca             corça 80→44→45 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3
+  a borda do brejo       javali 40→31→33 · ratazana 90→72→80 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vale Novo — Freixo de Cima: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r02 Outeiro do Moinho — Monte da Lebre: 2 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,97% e 0,00%
+  r03 Juncal da Cruz — Moinho Negro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r04 Vau Seco — Barreiro do Freixo: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r05 Monte da Lebre — Barreiro das Cabras: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,59% e 0,00%
+  r06 Vale Novo — Moinho Negro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r07 Barreiro do Freixo — Fonte Velho: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r08 Juncal Velho — Juncal da Cruz: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r09 Pedra Rasa — Carvalhal Grande: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,92% e 0,00%
+  r10 Outeiro do Moinho — Azenha do Moinho: 3 blocos, caminho, o Brejo das Garças · 2,32% e 2,63% → 2,32% e 3,29%
+  r11 Vale Novo — Fonte Velho: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,17% e 1,26%
+  r12 Juncal Velho — Campo Velho: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Pedra Rasa — Juncal da Cruz: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r14 Moinho Negro — Barreiro das Cabras: 4 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,66% e 0,00%
+  r15 Ponte da Cruz — Monte da Lebre: 4 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,59% e 0,00%
+  r16 Outeiro do Moinho — Barreiro das Cabras: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r17 Barreiro do Freixo — Barreiro das Cabras: 4 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r18 Ponte da Cruz — Barreiro das Cabras: 5 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r19 Ponte da Cruz — Outeiro do Moinho: 5 blocos, estrada, a borda do brejo · 1,12% e 0,00% → 0,98% e 0,00%
+  r20 Vau Seco — Fonte Velho: 3 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r21 Freixo de Cima — Moinho Negro: 3 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r22 Vale Novo — Barreiro do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,20% e 0,00%
+  r23 Barreiro das Cabras — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Ponte da Cruz — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado
+  Dia 35:  nada
+  Dia 63:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado
+  Dia 91:  Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 98:  Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 105:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; Barreiro das Cabras passa fome; 30 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 19 morrem de fome
+  Dia 112:  Barreiro das Cabras passa fome; 31 deixam Barreiro das Cabras por Ponte da Cruz (6 vão para o mato); 20 morrem de fome
+  Dia 154:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 161:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; 2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 168:  2 deixam Barreiro das Cabras por Monte da Lebre
+  Dia 175:  8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 203:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado
+  Dia 266:  nada
+  Dia 287:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado; lobo desce de o Pé da Serra a Fonte Velho: leva 24 de gado, a guarda mata 1
+  Dia 308:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado; urso desce de as Grutas do Alto a Ponte da Cruz: leva 10 de gado
+  Dia 315:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 322:  lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado
+  Dia 329:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Barreiro do Freixo: leva 24 de gado; 8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 343:  lobo desce de a Charneca a Moinho Negro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 8 deixam Barreiro das Cabras por Outeiro do Moinho
+  Dia 350:  lobo desce de a Mata Funda a Carvalhal Grande: leva 24 de gado; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 18 morrem de fome; 1 deixam Ponte da Cruz por Outeiro do Moinho
+  Dia 357:  lobo desce de a Charneca a Juncal da Cruz: leva 24 de gado; Carvalhal Grande passa fome; 3 deixam Carvalhal Grande por Pedra Rasa; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; 1 deixam Ponte da Cruz por Outeiro do Moinho
+  Dia 364:  Carvalhal Grande passa fome; 2 deixam Carvalhal Grande por Pedra Rasa; 1 morrem de fome; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; Ponte da Cruz passa fome; 1 deixam Ponte da Cruz por Outeiro do Moinho; 8 morrem de fome
+  Dia 371:  2 deixam Barreiro do Freixo por Vale Novo; Carvalhal Grande passa fome; ; 1 morrem de fome; Barreiro das Cabras passa fome; 8 deixam Barreiro das Cabras por Outeiro do Moinho (1 vão para o mato); 19 morrem de fome; Ponte da Cruz passa fome; 1 deixam Ponte da Cruz por Outeiro do Moinho; 8 morrem de fome; Pedra Rasa passa fome; ; 2 morrem de fome
+
+===== SEMENTE 13 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_2'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,3 s: 25,6 ms por dia (um ano: 9,3 s) · 16525 eventos (45,4 por dia)
+O REGISTRO: 12358 KB no ano (34,0 KB por dia); por tipo (eventos, KB): consumo 6188 4829, producao 6188 4645, regiao 390 1949, esperar 2184 401, covil 355 147, gera 35 143, comer 365 106, ninhada 444 82, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6030 KB (16,6 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 60, gente 11, itens 58, turno 1, rotas 2 (total 133) · no fim relogio 0, lugares 60, gente 11, itens 53, turno 1, rotas 2 (total 128)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 142683 pares bem-rota-dia): a mediana 1,13, o 99º centésimo 2,16, o maior 5,22 · passa de 1,83 (o Leigo empata) em 2,189%; de 1,375 (o Lendário em comércio empata) em 14,513%
+O CARRETO DO POVO moveu 246537 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 218774 → 218774 (FECHA) · fora: 106688 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Freixo do Salgueiro    capital  povo  4000 →  4000 · prata  40000 →  35447 (menor 34279, maior 42472; caixa 21331, bolsa 14116) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 29
+  Juncal do Sal          cidade   povo  1500 →  1500 · prata  15000 →  12078 (menor 12078, maior 17457; caixa 5813, bolsa 6265) · comida × 0,73 a × 2,08 · fome 0 dias · prateleira 30
+  Vale Grande            cidade   povo  1500 →  1500 · prata  15000 →  15253 (menor 12513, maior 15253; caixa 10128, bolsa 5125) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 30
+  Pedra Rasa             vila     povo   400 →   398 · prata   4005 →   4339 (menor 3931, maior 4415; caixa 2312, bolsa 2027) · comida × 0,66 a × 1,75 · fome 0 dias · prateleira 18
+  Lagoa Fundo            vila     povo   400 →   400 · prata   4000 →   4330 (menor 3819, maior 4501; caixa 2402, bolsa 1928) · comida × 0,68 a × 1,82 · fome 0 dias · prateleira 18
+  Fonte Grande           vila     povo   400 →   400 · prata   4000 →   4112 (menor 3921, maior 4294; caixa 2317, bolsa 1795) · comida × 0,66 a × 1,72 · fome 0 dias · prateleira 18
+  Freixo da Lebre        vila     povo   400 →   400 · prata   4000 →   2472 (menor 2472, maior 4138; caixa 1432, bolsa 1040) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 19
+  Porto das Garças       vila     povo   400 →   400 · prata   4000 →   3985 (menor 3637, maior 4089; caixa 2354, bolsa 1631) · comida × 0,67 a × 1,76 · fome 0 dias · prateleira 16
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   1680 (menor 1116, maior 1724; caixa 779, bolsa 901) · comida × 0,62 a × 1,59 · fome 0 dias · prateleira 0
+  Sobral do Sal          aldeia   povo   120 →   120 · prata   1200 →   1349 (menor 950, maior 1349; caixa 794, bolsa 555) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 0
+  Freixo do Lobo         aldeia   povo   120 →   120 · prata   1200 →   1136 (menor 915, maior 1200; caixa 685, bolsa 451) · comida × 0,63 a × 1,55 · fome 0 dias · prateleira 0
+  Campo da Cruz          aldeia   povo   120 →   120 · prata   1200 →   1091 (menor 934, maior 1267; caixa 709, bolsa 382) · comida × 0,64 a × 1,65 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1834 (menor 1184, maior 1859; caixa 845, bolsa 989) · comida × 0,57 a × 1,43 · fome 0 dias · prateleira 0
+  Silveira das Garças    aldeia   povo   120 →   120 · prata   1200 →   1403 (menor 1047, maior 1403; caixa 868, bolsa 535) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Vale Velho             aldeia   povo   120 →   120 · prata   1200 →   1356 (menor 1115, maior 1391; caixa 765, bolsa 591) · comida × 0,58 a × 1,44 · fome 0 dias · prateleira 0
+  Monte do Lobo          aldeia   povo   120 →   120 · prata   1200 →   1237 (menor 1014, maior 1293; caixa 693, bolsa 544) · comida × 0,69 a × 1,81 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Sobral do Sal 1,12, Freixo do Lobo 1,11, Campo da Cruz 1,08, Campo Negro 1,11, Silveira das Garças 1,15, Vale Velho 1,15 ...
+A FREGUESIA comprou 725 peças no ano; a forja do povo fez 701
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→70→74 · goblin 6→6→16 · javali 38→30→37 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→59→63 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 1
+  a borda do brejo       javali 40→33→38 · ratazana 90→76→82 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Freixo da Lebre — Monte do Lobo: 1 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r02 Vale Grande — Freixo do Lobo: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r03 Lagoa Fundo — Freixo do Salgueiro: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r04 Fonte Grande — Freixo do Lobo: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r05 Sobral do Sal — Campo da Cruz: 3 blocos, trilha, o Brejo das Garças · 3,87% e 0,00% → 3,87% e 0,00%
+  r06 Sobral do Sal — Silveira das Garças: 3 blocos, trilha, a borda do brejo · 3,73% e 0,00% → 3,47% e 0,00%
+  r07 Pedra Rasa — Porto das Garças: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,60% e 0,00%
+  r08 Campo Negro — Vale Velho: 3 blocos, trilha, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Vau Seco — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 0,52% e 0,90% → 0,52% e 0,18%
+  r10 Pedra Rasa — Monte do Lobo: 3 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,99% e 0,00%
+  r11 Silveira das Garças — Freixo do Salgueiro: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,62% e 0,00%
+  r12 Juncal do Sal — Lagoa Fundo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,89% → 0,26% e 0,18%
+  r13 Vale Grande — Freixo do Salgueiro: 3 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r14 Pedra Rasa — Freixo do Lobo: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r15 Juncal do Sal — Campo Negro: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,92% → 0,52% e 0,18%
+  r16 Pedra Rasa — Freixo do Salgueiro: 5 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r17 Vale Grande — Lagoa Fundo: 4 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r18 Campo da Cruz — Silveira das Garças: 3 blocos, trilha, a borda do brejo · 3,73% e 0,00% → 3,47% e 0,00%
+  r19 Vau Seco — Lagoa Fundo: 3 blocos, caminho, o Pé da Serra · 0,17% e 1,18% → 0,17% e 1,58%
+  r20 Fonte Grande — Porto das Garças: 4 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,60% e 0,00%
+  r21 Vale Grande — Fonte Grande: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r22 Freixo da Lebre — Sobral do Sal: 4 blocos, caminho, o Brejo das Garças · 0,70% e 0,00% → 0,70% e 0,00%
+  r23 Freixo do Salgueiro — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Juncal do Sal — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  lobo desce de a Charneca a Vale Grande: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 35:  nada
+  Dia 84:  lobo desce de a Charneca a Vale Grande: leva 24 de gado
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 119:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 126:  lobo desce de a Charneca a Freixo do Lobo: leva 24 de gado
+  Dia 154:  nada
+  Dia 161:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 189:  lobo desce de a Charneca a Freixo do Salgueiro: leva 24 de gado, a guarda mata 1
+  Dia 196:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1
+  Dia 203:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 217:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Freixo do Salgueiro: leva 24 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado; urso desce de a Mata Funda a Freixo da Lebre: leva 10 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 294:  lobo desce de a Charneca a Vale Grande: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado
+  Dia 308:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Monte do Lobo: leva 24 de gado
+  Dia 336:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 343:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; pantera desce de a Mata Funda a Freixo da Lebre: leva 8 de gado
+  Dia 350:  pantera desce de a Mata Funda a Pedra Rasa: leva 8 de gado
+  Dia 357:  lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado
+  Dia 364:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado; lobo desce de a Mata Funda a Freixo da Lebre: leva 24 de gado; urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+
+===== SEMENTE 14 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_6'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,4 s: 25,7 ms por dia (um ano: 9,4 s) · 16610 eventos (45,6 por dia)
+O REGISTRO: 12508 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4836, producao 6188 4644, regiao 391 2073, esperar 2184 401, gera 35 152, covil 338 139, comer 365 106, ninhada 543 101, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6221 KB (17,1 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 65, gente 11, itens 61, turno 1, rotas 2 (total 140) · no fim relogio 0, lugares 65, gente 11, itens 55, turno 1, rotas 2 (total 135)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145499 pares bem-rota-dia): a mediana 1,16, o 99º centésimo 2,55, o maior 5,30 · passa de 1,83 (o Leigo empata) em 5,718%; de 1,375 (o Lendário em comércio empata) em 20,544%
+O CARRETO DO POVO moveu 255387 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220774 → 220774 (FECHA) · fora: 136624 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Silveira Velho         capital  povo  4000 →  3988 · prata  40000 →   6827 (menor 6827, maior 41765; caixa 4394, bolsa 2433) · comida × 0,81 a × 3,00 · fome 0 dias · prateleira 31
+  Monte Grande           cidade   povo  1500 →  1495 · prata  15000 →   6249 (menor 6249, maior 18356; caixa 2953, bolsa 3296) · comida × 0,80 a × 2,88 · fome 0 dias · prateleira 30
+  Lagoa de Cima          cidade   povo  1500 →  1500 · prata  15000 →  13713 (menor 12388, maior 15001; caixa 9115, bolsa 4598) · comida × 0,65 a × 1,68 · fome 0 dias · prateleira 28
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   4844 (menor 3766, maior 5431; caixa 2500, bolsa 2344) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 17
+  Alto do Moinho         vila     povo   400 →   400 · prata   4000 →   2570 (menor 2258, maior 4346; caixa 1659, bolsa 911) · comida × 0,80 a × 2,80 · fome 0 dias · prateleira 16
+  Toural Claro           vila     povo   400 →   400 · prata   4000 →   3503 (menor 3473, maior 4786; caixa 2453, bolsa 1050) · comida × 0,70 a × 1,97 · fome 0 dias · prateleira 18
+  Ribeira Novo           vila     povo   400 →   411 · prata   4000 →  10008 (menor 3992, maior 10008; caixa 6589, bolsa 3419) · comida × 0,68 a × 1,80 · fome 0 dias · prateleira 18
+  Sobral Fundo           vila     povo   400 →   400 · prata   4000 →   2609 (menor 2609, maior 4016; caixa 1529, bolsa 1080) · comida × 0,77 a × 2,31 · fome 0 dias · prateleira 19
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1529 (menor 1159, maior 1580; caixa 824, bolsa 705) · comida × 0,69 a × 1,88 · fome 0 dias · prateleira 0
+  Porto Negro            aldeia   povo   120 →   120 · prata   1200 →   1727 (menor 995, maior 1727; caixa 1049, bolsa 678) · comida × 0,63 a × 1,59 · fome 0 dias · prateleira 0
+  Campo do Salgueiro     aldeia   povo   120 →   120 · prata   1200 →   2166 (menor 951, maior 2166; caixa 1457, bolsa 709) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 0
+  Moinho da Lebre        aldeia   povo   120 →   120 · prata   1200 →   1036 (menor 843, maior 1200; caixa 692, bolsa 344) · comida × 0,68 a × 1,79 · fome 0 dias · prateleira 0
+  Toural Fundo           aldeia   povo   120 →   117 · prata   1200 →    540 (menor 491, maior 1201; caixa 426, bolsa 114) · comida × 0,74 a × 1,98 · fome 0 dias · prateleira 0
+  Passo Grande           aldeia   povo   120 →   124 · prata   1200 →   3035 (menor 1105, maior 3035; caixa 2025, bolsa 1010) · comida × 0,64 a × 1,63 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1046 (menor 888, maior 1214; caixa 696, bolsa 350) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 0
+  Barreiro Velho         aldeia   povo   120 →   124 · prata   1200 →   1696 (menor 1046, maior 1772; caixa 827, bolsa 869) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Porto Negro 1,08, Campo do Salgueiro 0,92, Moinho da Lebre 0,83, Toural Fundo 1,09, Passo Grande 0,93, Campo Negro 1,00 ...
+A FREGUESIA comprou 737 peças no ano; a forja do povo fez 712
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→64→73 · goblin 6→6→16 · javali 38→32→36 · lobo 12→10→10 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→11→11 · urso 3→3→3 · bando 6
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→48→59 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→31→32 · ratazana 90→70→73 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Passo Grande — Silveira Velho: 1 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Campo do Salgueiro — Silveira Velho: 1 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r03 Ribeira Novo — Campo do Salgueiro: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r04 Toural Claro — Toural Fundo: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,21% e 0,00%
+  r05 Pedra Rasa — Porto Negro: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r06 Lagoa de Cima — Toural Claro: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r07 Monte Grande — Sobral Fundo: 2 blocos, estrada, as Grutas do Alto · 0,87% e 2,21% → 0,87% e 0,00%
+  r08 Moinho da Lebre — Barreiro Velho: 2 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 0,92% e 0,00%
+  r09 Vau Seco — Sobral Fundo: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r10 Lagoa de Cima — Campo do Salgueiro: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r11 Pedra Rasa — Passo Grande: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Lagoa de Cima — Campo Negro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,15% e 1,08%
+  r13 Monte Grande — Silveira Velho: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r14 Pedra Rasa — Alto do Moinho: 4 blocos, caminho, a Mata do Corvo · 1,70% e 0,00% → 1,89% e 0,00%
+  r15 Monte Grande — Barreiro Velho: 4 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r16 Ribeira Novo — Silveira Velho: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r17 Lagoa de Cima — Toural Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r18 Campo do Salgueiro — Passo Grande: 3 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,36% e 0,00%
+  r19 Ribeira Novo — Passo Grande: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r20 Ribeira Novo — Toural Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r21 Vau Seco — Campo Negro: 3 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,85% e 4,00%
+  r22 Toural Claro — Campo Negro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,15% e 1,18%
+  r23 Silveira Velho — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Monte Grande — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  nada
+  Dia 35:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 98:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 119:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 126:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 140:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 147:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado
+  Dia 182:  lobo desce de a Charneca a Lagoa de Cima: leva 24 de gado
+  Dia 196:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 210:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 259:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 273:  nada
+  Dia 280:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado; urso desce de as Grutas do Alto a Monte Grande: leva 10 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de o Pé da Serra a Campo Negro: leva 24 de gado
+  Dia 294:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Ribeira Novo: leva 24 de gado, a guarda mata 1
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+  Dia 322:  lobo desce de a Charneca a Lagoa de Cima: leva 18 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 336:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado, a guarda mata 1
+  Dia 343:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado; lobo desce de o Pé da Serra a Campo Negro: leva 24 de gado, a guarda mata 1
+  Dia 357:  lobo desce de a Charneca a Toural Fundo: leva 24 de gado; lobo desce de a Mata Funda a Alto do Moinho: leva 24 de gado; 8 deixam Silveira Velho por Ribeira Novo
+  Dia 364:  urso desce de as Grutas do Alto a Monte Grande: leva 10 de gado; 2 deixam Toural Fundo por Ribeira Novo; 2 deixam Silveira Velho por Passo Grande; 2 deixam Monte Grande por Barreiro Velho; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 371:  1 deixam Toural Fundo por Ribeira Novo; 2 deixam Silveira Velho por Passo Grande; 2 deixam Monte Grande por Barreiro Velho
+
+===== SEMENTE 15 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_7'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,5 s: 26,0 ms por dia (um ano: 9,5 s) · 16594 eventos (45,6 por dia)
+O REGISTRO: 12396 KB no ano (34,1 KB por dia); por tipo (eventos, KB): consumo 6188 4824, producao 6188 4635, regiao 389 1988, esperar 2184 401, gera 35 147, covil 358 146, comer 365 106, ninhada 511 95, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6089 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 62, gente 11, itens 59, turno 1, rotas 2 (total 136) · no fim relogio 0, lugares 63, gente 11, itens 55, turno 1, rotas 2 (total 132)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144563 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,23, o maior 4,58 · passa de 1,83 (o Leigo empata) em 4,218%; de 1,375 (o Lendário em comércio empata) em 19,414%
+O CARRETO DO POVO moveu 226344 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220294 → 220294 (FECHA) · fora: 127780 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Vale do Freixo         capital  povo  4000 →  3996 · prata  40000 →  16579 (menor 16579, maior 41933; caixa 11192, bolsa 5387) · comida × 0,79 a × 3,00 · fome 0 dias · prateleira 33
+  Alto de Cima           cidade   povo  1500 →  1500 · prata  15000 →  10943 (menor 10943, maior 18390; caixa 4886, bolsa 6057) · comida × 0,76 a × 2,32 · fome 0 dias · prateleira 33
+  Moinho do Salgueiro    cidade   povo  1500 →  1500 · prata  15000 →  13617 (menor 13499, maior 15202; caixa 8414, bolsa 5203) · comida × 0,59 a × 1,44 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   4921 (menor 3941, maior 4921; caixa 2785, bolsa 2136) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 20
+  Moinho Novo            vila     povo   400 →   400 · prata   4000 →   4149 (menor 3833, maior 4632; caixa 2125, bolsa 2024) · comida × 0,72 a × 2,00 · fome 0 dias · prateleira 18
+  Fonte de Cima          vila     povo   400 →   400 · prata   4000 →   5508 (menor 3981, maior 5508; caixa 3186, bolsa 2322) · comida × 0,65 a × 1,69 · fome 0 dias · prateleira 16
+  Toural Negro           vila     povo   400 →   400 · prata   4000 →   2300 (menor 2286, maior 4194; caixa 1605, bolsa 695) · comida × 0,77 a × 2,32 · fome 0 dias · prateleira 16
+  Sobral da Lebre        vila     povo   400 →   400 · prata   4000 →   3539 (menor 3495, maior 4063; caixa 2173, bolsa 1366) · comida × 0,72 a × 1,97 · fome 0 dias · prateleira 13
+  Vau Seco               aldeia   povo   120 →   120 · prata   1200 →   2008 (menor 1136, maior 2008; caixa 1232, bolsa 776) · comida × 0,67 a × 1,76 · fome 0 dias · prateleira 0
+  Carvalhal do Lobo      aldeia   povo   120 →   120 · prata   1200 →    983 (menor 891, maior 1252; caixa 631, bolsa 352) · comida × 0,60 a × 1,49 · fome 0 dias · prateleira 0
+  Passo da Cruz          aldeia   povo   120 →   120 · prata   1200 →   1460 (menor 1083, maior 1514; caixa 796, bolsa 664) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Campo Negro            aldeia   povo   120 →   120 · prata   1200 →   1117 (menor 910, maior 1200; caixa 697, bolsa 420) · comida × 0,67 a × 1,71 · fome 0 dias · prateleira 0
+  Barreiro da Lebre      aldeia   povo   120 →   120 · prata   1200 →   1789 (menor 1019, maior 1814; caixa 888, bolsa 901) · comida × 0,62 a × 1,56 · fome 0 dias · prateleira 0
+  Passo das Cabras       aldeia   povo   120 →   120 · prata   1200 →    645 (menor 632, maior 1200; caixa 511, bolsa 134) · comida × 0,69 a × 1,80 · fome 0 dias · prateleira 0
+  Freixo da Cruz         aldeia   povo   120 →   120 · prata   1200 →   1685 (menor 1029, maior 1685; caixa 992, bolsa 693) · comida × 0,65 a × 1,65 · fome 0 dias · prateleira 0
+  Monte Claro            aldeia   povo   120 →   120 · prata   1200 →    781 (menor 781, maior 1238; caixa 512, bolsa 269) · comida × 0,65 a × 1,67 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Carvalhal do Lobo 0,77, Passo da Cruz 0,80, Campo Negro 0,73, Barreiro da Lebre 0,88, Passo das Cabras 0,87, Freixo da Cruz 0,74 ...
+A FREGUESIA comprou 692 peças no ano; a forja do povo fez 671
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→76 · goblin 6→6→16 · javali 38→31→38 · lobo 12→11→11 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 7
+  a Charneca             corça 80→52→60 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 3
+  a borda do brejo       javali 40→29→33 · ratazana 90→74→82 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Carvalhal do Lobo — Monte Claro: 1 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,36% e 0,00%
+  r02 Sobral da Lebre — Campo Negro: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r03 Toural Negro — Passo da Cruz: 2 blocos, caminho, o Brejo das Garças · 0,70% e 0,98% → 0,70% e 1,37%
+  r04 Moinho Novo — Vale do Freixo: 2 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r05 Moinho do Salgueiro — Monte Claro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r06 Alto de Cima — Moinho Novo: 2 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,30% e 0,00%
+  r07 Fonte de Cima — Barreiro da Lebre: 2 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r08 Pedra Rasa — Passo das Cabras: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Moinho do Salgueiro — Passo das Cabras: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,72% e 0,00%
+  r10 Fonte de Cima — Freixo da Cruz: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r11 Fonte de Cima — Passo da Cruz: 3 blocos, caminho, o Brejo das Garças · 2,32% e 3,29% → 2,32% e 4,60%
+  r12 Pedra Rasa — Freixo da Cruz: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Moinho Novo — Fonte de Cima: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r14 Alto de Cima — Sobral da Lebre: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,71% → 0,26% e 0,53%
+  r15 Vau Seco — Vale do Freixo: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,56% → 0,52% e 0,42%
+  r16 Alto de Cima — Vale do Freixo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,40% → 0,26% e 0,30%
+  r17 Freixo da Cruz — Vale do Freixo: 4 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r18 Moinho do Salgueiro — Carvalhal do Lobo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r19 Alto de Cima — Barreiro da Lebre: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 2,00% e 0,00%
+  r20 Moinho Novo — Freixo da Cruz: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,60% e 0,00%
+  r21 Passo das Cabras — Monte Claro: 4 blocos, trilha, a Charneca · 1,33% e 0,00% → 1,20% e 0,00%
+  r22 Pedra Rasa — Toural Negro: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r23 Vale do Freixo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Alto de Cima — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 35:  nada
+  Dia 42:  nada
+  Dia 77:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 147:  lobo desce de a Charneca a Passo das Cabras: leva 24 de gado
+  Dia 154:  nada
+  Dia 196:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 210:  nada
+  Dia 217:  a patrulha mata 1 do bando do Brejo das Garças
+  Dia 259:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado
+  Dia 266:  nada
+  Dia 287:  lobo desce de a Mata Funda a Toural Negro: leva 24 de gado
+  Dia 294:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 301:  urso desce de o Pé da Serra a Vau Seco: leva 10 de gado
+  Dia 315:  lobo desce de a Charneca a Monte Claro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Toural Negro: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 322:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado
+  Dia 336:  lobo desce de a Charneca a Monte Claro: leva 24 de gado; lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 350:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 357:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Charneca a Moinho do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado; pantera desce de a Mata Funda a Toural Negro: leva 8 de gado; 2 deixam Vale do Freixo por Vau Seco
+  Dia 371:  2 deixam Vale do Freixo por Vau Seco
+
+===== SEMENTE 16 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_3'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,7 s: 26,7 ms por dia (um ano: 9,7 s) · 16602 eventos (45,6 por dia)
+O REGISTRO: 12458 KB no ano (34,2 KB por dia); por tipo (eventos, KB): consumo 6188 4836, producao 6188 4651, regiao 386 2021, esperar 2184 401, gera 35 148, covil 349 140, comer 365 106, ninhada 530 99, virada 364 49, dragão 12 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6167 KB (16,9 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 62, gente 11, itens 60, turno 1, rotas 2 (total 137) · no fim relogio 0, lugares 63, gente 11, itens 55, turno 1, rotas 2 (total 132)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 143105 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,63, o maior 3,87 · passa de 1,83 (o Leigo empata) em 4,864%; de 1,375 (o Lendário em comércio empata) em 18,673%
+O CARRETO DO POVO moveu 269215 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 218514 → 218514 (FECHA) · fora: 110556 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Toural do Lobo         capital  povo  4000 →  4000 · prata  40000 →  28494 (menor 28494, maior 42272; caixa 16303, bolsa 12191) · comida × 0,72 a × 2,00 · fome 0 dias · prateleira 31
+  Azenha das Garças      cidade   povo  1500 →  1500 · prata  15000 →  12512 (menor 12512, maior 18219; caixa 6262, bolsa 6250) · comida × 0,74 a × 2,15 · fome 0 dias · prateleira 26
+  Outeiro Velho          cidade   povo  1500 →  1500 · prata  15000 →  14703 (menor 12905, maior 15633; caixa 9497, bolsa 5206) · comida × 0,57 a × 1,38 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   6306 (menor 3976, maior 6307; caixa 3355, bolsa 2951) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 19
+  Silveira do Salgueiro  vila     povo   400 →   400 · prata   4000 →   4746 (menor 3994, maior 4776; caixa 2793, bolsa 1953) · comida × 0,61 a × 1,54 · fome 0 dias · prateleira 17
+  Moinho Fundo           vila     povo   400 →   400 · prata   4000 →   4674 (menor 3824, maior 4707; caixa 2671, bolsa 2003) · comida × 0,61 a × 1,51 · fome 0 dias · prateleira 19
+  Carvalhal do Lobo      vila     povo   400 →   399 · prata   4000 →   2647 (menor 2647, maior 4031; caixa 1650, bolsa 997) · comida × 0,72 a × 1,98 · fome 0 dias · prateleira 20
+  Vale Negro             vila     povo   400 →   400 · prata   4000 →   5950 (menor 3553, maior 5950; caixa 3261, bolsa 2689) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 14
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1337 (menor 1179, maior 1417; caixa 638, bolsa 699) · comida × 0,65 a × 1,75 · fome 0 dias · prateleira 0
+  Ponte das Pedras       aldeia   povo   120 →   120 · prata   1200 →    900 (menor 880, maior 1200; caixa 578, bolsa 322) · comida × 0,64 a × 1,60 · fome 0 dias · prateleira 0
+  Sobral do Salgueiro    aldeia   povo   120 →   120 · prata   1200 →   1021 (menor 897, maior 1220; caixa 681, bolsa 340) · comida × 0,62 a × 1,55 · fome 0 dias · prateleira 0
+  Passo Claro            aldeia   povo   120 →   118 · prata   1200 →    522 (menor 522, maior 1236; caixa 370, bolsa 152) · comida × 0,74 a × 2,08 · fome 0 dias · prateleira 0
+  Barreiro Negro         aldeia   povo   120 →   120 · prata   1200 →   1806 (menor 1150, maior 1830; caixa 858, bolsa 948) · comida × 0,59 a × 1,46 · fome 0 dias · prateleira 0
+  Azenha das Pedras      aldeia   povo   120 →   120 · prata   1200 →    771 (menor 771, maior 1200; caixa 519, bolsa 252) · comida × 0,69 a × 1,84 · fome 0 dias · prateleira 0
+  Sobral do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1801 (menor 1154, maior 1801; caixa 894, bolsa 907) · comida × 0,61 a × 1,51 · fome 0 dias · prateleira 0
+  Freixo do Freixo       aldeia   povo   120 →   120 · prata   1200 →   1058 (menor 1019, maior 1229; caixa 613, bolsa 445) · comida × 0,65 a × 1,65 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Ponte das Pedras 0,93, Sobral do Salgueiro 0,98, Passo Claro 0,89, Barreiro Negro 0,96, Azenha das Pedras 1,09, Sobral do Moinho 0,99 ...
+A FREGUESIA comprou 728 peças no ano; a forja do povo fez 704
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→67→72 · goblin 6→6→16 · javali 38→34→36 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→11→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2 · bando 6
+  a Charneca             corça 80→49→53 · lobo 12→11→11
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3
+  a borda do brejo       javali 40→32→32 · ratazana 90→71→73 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Vau Seco — Passo Claro: 1 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r02 Passo Claro — Freixo do Freixo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r03 Barreiro Negro — Sobral do Moinho: 2 blocos, trilha, o Brejo das Garças · 3,87% e 3,33% → 3,87% e 4,00%
+  r04 Carvalhal do Lobo — Azenha das Pedras: 2 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 0,00%
+  r05 Vale Negro — Toural do Lobo: 2 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,10% e 0,00%
+  r06 Moinho Fundo — Azenha das Pedras: 2 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r07 Outeiro Velho — Vale Negro: 2 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r08 Silveira do Salgueiro — Barreiro Negro: 2 blocos, caminho, o Brejo das Garças · 2,32% e 3,27% → 2,32% e 3,92%
+  r09 Silveira do Salgueiro — Moinho Fundo: 2 blocos, caminho, o Brejo das Garças · 0,70% e 0,96% → 0,70% e 1,15%
+  r10 Outeiro Velho — Sobral do Salgueiro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,65% e 0,00%
+  r11 Pedra Rasa — Vale Negro: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Sobral do Moinho — Toural do Lobo: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,55% e 0,00%
+  r13 Pedra Rasa — Ponte das Pedras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,59% e 0,00%
+  r14 Azenha das Garças — Sobral do Moinho: 3 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r15 Sobral do Salgueiro — Freixo do Freixo: 4 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,33% e 0,00%
+  r16 Pedra Rasa — Toural do Lobo: 4 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r17 Azenha das Garças — Toural do Lobo: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r18 Azenha das Garças — Barreiro Negro: 4 blocos, caminho, a borda do brejo · 2,24% e 0,00% → 1,84% e 0,00%
+  r19 Pedra Rasa — Outeiro Velho: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,10% e 0,00%
+  r20 Vau Seco — Freixo do Freixo: 2 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,60%
+  r21 Moinho Fundo — Carvalhal do Lobo: 3 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r22 Silveira do Salgueiro — Sobral do Moinho: 3 blocos, caminho, o Brejo das Garças · 2,32% e 3,29% → 2,32% e 3,95%
+  r23 Toural do Lobo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Azenha das Garças — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado
+  Dia 42:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado, a guarda mata 1
+  Dia 56:  lobo desce de a Charneca a Outeiro Velho: leva 18 de gado
+  Dia 84:  lobo desce de a Charneca a Vale Negro: leva 24 de gado
+  Dia 91:  nada
+  Dia 119:  nada
+  Dia 126:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 147:  lobo desce de a Charneca a Vale Negro: leva 24 de gado
+  Dia 196:  nada
+  Dia 280:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Outeiro Velho: leva 24 de gado
+  Dia 301:  nada
+  Dia 308:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado
+  Dia 343:  lobo desce de a Charneca a Sobral do Salgueiro: leva 24 de gado, a guarda mata 1; lobo desce de a Mata Funda a Carvalhal do Lobo: leva 24 de gado, a guarda mata 1; a patrulha mata 1 do bando do Brejo das Garças
+  Dia 350:  lobo desce de o Pé da Serra a Freixo do Freixo: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Sobral do Salgueiro: leva 18 de gado
+  Dia 364:  1 deixam Passo Claro por Vau Seco
+  Dia 371:  1 deixam Passo Claro por Vau Seco
+
+===== SEMENTE 17 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_1'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,6 s: 26,4 ms por dia (um ano: 9,6 s) · 16545 eventos (45,5 por dia)
+O REGISTRO: 12380 KB no ano (34,0 KB por dia); por tipo (eventos, KB): consumo 6188 4830, producao 6188 4641, regiao 383 1955, esperar 2184 401, gera 35 155, covil 361 150, comer 365 106, ninhada 463 84, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6072 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 67, gente 11, itens 61, turno 1, rotas 2 (total 143) · no fim relogio 0, lugares 67, gente 11, itens 57, turno 1, rotas 2 (total 139)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145039 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,65, o maior 4,74 · passa de 1,83 (o Leigo empata) em 6,271%; de 1,375 (o Lendário em comércio empata) em 19,819%
+O CARRETO DO POVO moveu 171455 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 216114 → 216114 (FECHA) · fora: 108123 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Ponte da Cruz          capital  povo  4000 →  4000 · prata  40000 →  28042 (menor 28042, maior 42616; caixa 16144, bolsa 11898) · comida × 0,73 a × 2,04 · fome 0 dias · prateleira 30
+  Passo Grande           cidade   povo  1500 →  1500 · prata  15000 →  18763 (menor 15000, maior 19311; caixa 9083, bolsa 9680) · comida × 0,65 a × 1,68 · fome 0 dias · prateleira 32
+  Fonte do Salgueiro     cidade   povo  1500 →  1500 · prata  15000 →  11164 (menor 10888, maior 15041; caixa 8600, bolsa 2564) · comida × 0,63 a × 1,61 · fome 0 dias · prateleira 31
+  Pedra Rasa             vila     povo   400 →   400 · prata   4005 →   4740 (menor 3999, maior 4812; caixa 2485, bolsa 2255) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 20
+  Juncal do Lobo         vila     povo   400 →   400 · prata   4000 →   3232 (menor 3206, maior 4089; caixa 1978, bolsa 1254) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 19
+  Outeiro do Salgueiro   vila     povo   400 →   400 · prata   4000 →   5915 (menor 3921, maior 6107; caixa 2533, bolsa 3382) · comida × 0,66 a × 1,72 · fome 0 dias · prateleira 18
+  Ponte Claro            vila     povo   400 →   400 · prata   4000 →   4903 (menor 3926, maior 5208; caixa 2257, bolsa 2646) · comida × 0,69 a × 1,85 · fome 0 dias · prateleira 16
+  Carvalhal das Cabras   vila     povo   400 →   400 · prata   4000 →   4134 (menor 3878, maior 4259; caixa 2525, bolsa 1609) · comida × 0,66 a × 1,73 · fome 0 dias · prateleira 18
+  Vau Seco               aldeia   povo   120 →   116 · prata   1200 →   1874 (menor 1137, maior 1885; caixa 885, bolsa 989) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 0
+  Juncal das Cabras      aldeia   povo   120 →   120 · prata   1200 →   1996 (menor 1159, maior 1996; caixa 955, bolsa 1041) · comida × 0,59 a × 1,49 · fome 0 dias · prateleira 0
+  Ponte das Garças       aldeia   povo   120 →   120 · prata   1200 →    931 (menor 931, maior 1200; caixa 494, bolsa 437) · comida × 0,72 a × 1,96 · fome 0 dias · prateleira 0
+  Fonte Grande           aldeia   povo   120 →   120 · prata   1200 →    775 (menor 761, maior 1200; caixa 561, bolsa 214) · comida × 0,60 a × 1,51 · fome 0 dias · prateleira 0
+  Carvalhal do Freixo    aldeia   povo   120 →   120 · prata   1200 →   1187 (menor 952, maior 1232; caixa 733, bolsa 454) · comida × 0,66 a × 1,71 · fome 0 dias · prateleira 0
+  Silveira do Freixo     aldeia   povo   120 →   120 · prata   1200 →   1478 (menor 1105, maior 1502; caixa 804, bolsa 674) · comida × 0,59 a × 1,45 · fome 0 dias · prateleira 0
+  Porto das Pedras       aldeia   povo   120 →   120 · prata   1200 →   1466 (menor 1130, maior 1472; caixa 816, bolsa 650) · comida × 0,62 a × 1,56 · fome 0 dias · prateleira 0
+  Juncal do Sal          aldeia   povo   120 →   120 · prata   1200 →    956 (menor 863, maior 1211; caixa 542, bolsa 414) · comida × 0,68 a × 1,76 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Juncal das Cabras 1,08, Ponte das Garças 1,07, Fonte Grande 0,86, Carvalhal do Freixo 0,95, Silveira do Freixo 0,91, Porto das Pedras 0,99 ...
+A FREGUESIA comprou 717 peças no ano; a forja do povo fez 699
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→63→74 · goblin 6→6→16 · javali 38→31→31 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 6
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→44→62 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 8
+  a borda do brejo       javali 40→32→39 · ratazana 90→79→85 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Pedra Rasa — Porto das Pedras: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Juncal do Lobo — Ponte das Garças: 2 blocos, caminho, a Mata Funda · 1,90% e 0,00% → 1,90% e 0,00%
+  r03 Juncal das Cabras — Ponte da Cruz: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r04 Ponte Claro — Juncal das Cabras: 2 blocos, caminho, as Grutas do Alto · 0,52% e 1,37% → 0,52% e 1,57%
+  r05 Passo Grande — Outeiro do Salgueiro: 2 blocos, estrada, as Grutas do Alto · 0,26% e 1,16% → 0,26% e 1,33%
+  r06 Outeiro do Salgueiro — Ponte Claro: 2 blocos, caminho, as Grutas do Alto · 1,74% e 4,48% → 1,74% e 5,12%
+  r07 Vau Seco — Ponte Claro: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,38% → 0,52% e 1,58%
+  r08 Passo Grande — Silveira do Freixo: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r09 Pedra Rasa — Carvalhal das Cabras: 3 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,57% e 0,00%
+  r10 Ponte Claro — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 1,74% e 4,60% → 1,74% e 5,26%
+  r11 Ponte das Garças — Carvalhal do Freixo: 3 blocos, trilha, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r12 Pedra Rasa — Ponte das Garças: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Porto das Pedras — Ponte da Cruz: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r14 Fonte do Salgueiro — Porto das Pedras: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r15 Fonte do Salgueiro — Fonte Grande: 6 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r16 Ponte Claro — Ponte da Cruz: 4 blocos, estrada, as Grutas do Alto · 0,26% e 0,97% → 0,26% e 1,10%
+  r17 Outeiro do Salgueiro — Ponte da Cruz: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,32% e 0,00%
+  r18 Passo Grande — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,26% → 0,52% e 1,44%
+  r19 Fonte do Salgueiro — Juncal das Cabras: 4 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r20 Outeiro do Salgueiro — Juncal do Sal: 3 blocos, caminho, as Grutas do Alto · 1,74% e 4,60% → 1,74% e 5,26%
+  r21 Vau Seco — Juncal das Cabras: 4 blocos, trilha, o Pé da Serra · 0,28% e 1,20% → 0,28% e 1,20%
+  r22 Carvalhal das Cabras — Porto das Pedras: 4 blocos, caminho, a Mata do Corvo · 0,51% e 0,00% → 0,57% e 0,00%
+  r23 Ponte da Cruz — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Passo Grande — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 49:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 196:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 203:  lobo desce de a Charneca a Fonte do Salgueiro: leva 24 de gado, a guarda mata 1
+  Dia 217:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 224:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 280:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; urso desce de a Mata do Corvo a Pedra Rasa: leva 10 de gado
+  Dia 287:  urso desce de a Mata Funda a Pedra Rasa: leva 10 de gado
+  Dia 294:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado
+  Dia 322:  lobo desce de a Charneca a Juncal das Cabras: leva 24 de gado
+  Dia 329:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 336:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 343:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 357:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Juncal do Lobo: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+
+===== SEMENTE 18 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_1'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,2 s: 25,2 ms por dia (um ano: 9,2 s) · 16633 eventos (45,7 por dia)
+O REGISTRO: 12399 KB no ano (34,1 KB por dia); por tipo (eventos, KB): consumo 6188 4834, producao 6188 4644, regiao 393 1965, esperar 2184 401, gera 35 150, covil 343 139, comer 365 106, ninhada 559 104, virada 364 49, dragão 13 8, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6093 KB (16,7 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 63, gente 11, itens 61, turno 1, rotas 2 (total 138) · no fim relogio 0, lugares 64, gente 11, itens 55, turno 1, rotas 2 (total 133)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144425 pares bem-rota-dia): a mediana 1,15, o 99º centésimo 2,61, o maior 6,12 · passa de 1,83 (o Leigo empata) em 5,372%; de 1,375 (o Lendário em comércio empata) em 19,342%
+O CARRETO DO POVO moveu 229368 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 220054 → 220054 (FECHA) · fora: 133348 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Carvalhal Fundo        capital  povo  4000 →  3972 · prata  40000 →   6891 (menor 6891, maior 41461; caixa 6785, bolsa 106) · comida × 0,82 a × 3,00 · fome 8 dias · prateleira 30
+  Juncal das Garças      cidade   povo  1500 →  1491 · prata  15000 →   8862 (menor 8846, maior 18354; caixa 4182, bolsa 4680) · comida × 0,78 a × 2,55 · fome 0 dias · prateleira 32
+  Sobral de Cima         cidade   povo  1500 →  1500 · prata  15000 →  13360 (menor 13032, maior 15030; caixa 8466, bolsa 4894) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 31
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   5656 (menor 4003, maior 5656; caixa 3039, bolsa 2617) · comida × 0,61 a × 1,54 · fome 0 dias · prateleira 19
+  Lagoa do Salgueiro     vila     povo   400 →   408 · prata   4000 →   6371 (menor 3898, maior 7101; caixa 3604, bolsa 2767) · comida × 0,70 a × 1,89 · fome 0 dias · prateleira 14
+  Carvalhal Negro        vila     povo   400 →   400 · prata   4000 →   4084 (menor 3951, maior 4234; caixa 2351, bolsa 1733) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 16
+  Fonte Velho            vila     povo   400 →   400 · prata   4000 →   4546 (menor 3944, maior 4546; caixa 2497, bolsa 2049) · comida × 0,66 a × 1,74 · fome 0 dias · prateleira 19
+  Porto de Cima          vila     povo   400 →   399 · prata   4000 →   2744 (menor 2744, maior 4018; caixa 1912, bolsa 832) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 17
+  Vau Seco               aldeia   povo   120 →   111 · prata   1200 →   2060 (menor 1085, maior 2060; caixa 1220, bolsa 840) · comida × 0,64 a × 1,71 · fome 0 dias · prateleira 0
+  Ponte das Pedras       aldeia   povo   120 →   128 · prata   1200 →   2909 (menor 1148, maior 2909; caixa 1762, bolsa 1147) · comida × 0,60 a × 1,50 · fome 0 dias · prateleira 0
+  Alto das Pedras        aldeia   povo   120 →   120 · prata   1200 →   1836 (menor 1022, maior 1892; caixa 880, bolsa 956) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Ponte das Garças       aldeia   povo   120 →   120 · prata   1200 →    943 (menor 816, maior 1211; caixa 656, bolsa 287) · comida × 0,63 a × 1,57 · fome 0 dias · prateleira 0
+  Ponte do Salgueiro     aldeia   povo   120 →   120 · prata   1200 →   1840 (menor 1116, maior 1840; caixa 1115, bolsa 725) · comida × 0,59 a × 1,47 · fome 0 dias · prateleira 0
+  Vale do Salgueiro      aldeia   povo   120 →   120 · prata   1200 →   1173 (menor 989, maior 1303; caixa 706, bolsa 467) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Moinho Negro           aldeia   povo   120 →   120 · prata   1200 →   1256 (menor 1048, maior 1273; caixa 709, bolsa 547) · comida × 0,67 a × 1,77 · fome 0 dias · prateleira 0
+  Monte das Cabras       aldeia   povo   120 →   120 · prata   1200 →   1861 (menor 967, maior 1861; caixa 1221, bolsa 640) · comida × 0,68 a × 1,80 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Ponte das Pedras 1,14, Alto das Pedras 1,03, Ponte das Garças 0,97, Ponte do Salgueiro 1,19, Vale do Salgueiro 1,28, Moinho Negro 1,20 ...
+A FREGUESIA comprou 724 peças no ano; a forja do povo fez 700
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→74 · goblin 6→6→16 · javali 38→32→35 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→11→11 · pantera 2→1→1 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 8
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→46→63 · lobo 12→10→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→28→35 · ratazana 90→69→72 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Fonte Velho — Ponte das Pedras: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r02 Vau Seco — Lagoa do Salgueiro: 2 blocos, caminho, o Pé da Serra · 0,17% e 0,98% → 0,17% e 1,57%
+  r03 Carvalhal Negro — Vale do Salgueiro: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r04 Ponte das Garças — Vale do Salgueiro: 2 blocos, trilha, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r05 Pedra Rasa — Fonte Velho: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r06 Sobral de Cima — Ponte das Garças: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r07 Ponte do Salgueiro — Monte das Cabras: 3 blocos, trilha, o Brejo das Garças · 3,87% e 0,00% → 3,87% e 0,00%
+  r08 Sobral de Cima — Ponte das Pedras: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r09 Ponte das Pedras — Carvalhal Fundo: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,73% e 0,00%
+  r10 Juncal das Garças — Carvalhal Fundo: 3 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,28% e 0,00%
+  r11 Lagoa do Salgueiro — Carvalhal Fundo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,47% → 0,26% e 0,00%
+  r12 Monte das Cabras — Carvalhal Fundo: 3 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,56% e 0,00%
+  r13 Vau Seco — Porto de Cima: 4 blocos, caminho, o Pé da Serra · 0,55% e 3,30% → 0,55% e 5,29%
+  r14 Juncal das Garças — Alto das Pedras: 4 blocos, caminho, as Grutas do Alto · 0,52% e 0,74% → 0,52% e 0,00%
+  r15 Ponte do Salgueiro — Moinho Negro: 4 blocos, trilha, o Brejo das Garças · 1,16% e 0,00% → 1,16% e 0,00%
+  r16 Juncal das Garças — Lagoa do Salgueiro: 4 blocos, estrada, as Grutas do Alto · 0,87% e 2,44% → 0,87% e 0,00%
+  r17 Sobral de Cima — Vale do Salgueiro: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r18 Fonte Velho — Vale do Salgueiro: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r19 Carvalhal Negro — Ponte das Garças: 3 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r20 Pedra Rasa — Monte das Cabras: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r21 Fonte Velho — Monte das Cabras: 4 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r22 Pedra Rasa — Ponte das Pedras: 4 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r23 Carvalhal Fundo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Juncal das Garças — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 21:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 42:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 56:  nada
+  Dia 70:  nada
+  Dia 98:  lobo desce de a Charneca a Ponte das Pedras: leva 24 de gado, a guarda mata 1
+  Dia 119:  nada
+  Dia 147:  a patrulha mata 1 do bando do Pé da Serra
+  Dia 161:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 189:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado
+  Dia 203:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 224:  nada
+  Dia 231:  nada
+  Dia 238:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 266:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 280:  lobo desce de a Charneca a Fonte Velho: leva 24 de gado; urso desce de as Grutas do Alto a Juncal das Garças: leva 10 de gado
+  Dia 294:  urso desce de as Grutas do Alto a Lagoa do Salgueiro: leva 10 de gado; lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Porto de Cima: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Ponte das Pedras: leva 24 de gado, a guarda mata 1
+  Dia 315:  lobo desce de a Charneca a Ponte das Pedras: leva 18 de gado, a guarda mata 1; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de a Mata Funda a Moinho Negro: leva 24 de gado, a guarda mata 1
+  Dia 329:  lobo desce de a Mata Funda a Moinho Negro: leva 18 de gado
+  Dia 343:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 350:  lobo desce de a Mata Funda a Moinho Negro: leva 18 de gado; pantera desce de a Mata Funda a Pedra Rasa: leva 8 de gado, a guarda mata 1; 2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 357:  2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 364:  2 deixam Carvalhal Fundo por Ponte das Pedras
+  Dia 371:  Carvalhal Fundo passa fome; 2 deixam Carvalhal Fundo por Ponte das Pedras; 20 morrem de fome; 8 deixam Juncal das Garças por Lagoa do Salgueiro; a patrulha mata 1 do bando das Grutas do Alto
+
+===== SEMENTE 19 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_2'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,5 s: 26,1 ms por dia (um ano: 9,5 s) · 16448 eventos (45,2 por dia)
+O REGISTRO: 12472 KB no ano (34,3 KB por dia); por tipo (eventos, KB): consumo 6188 4834, producao 6188 4630, regiao 385 2077, esperar 2184 401, covil 361 153, gera 35 149, comer 365 106, ninhada 366 66, virada 364 49, dragão 11 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6205 KB (17,0 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 64, gente 11, itens 60, turno 1, rotas 2 (total 138) · no fim relogio 0, lugares 64, gente 11, itens 55, turno 1, rotas 2 (total 133)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 144674 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,63, o maior 4,58 · passa de 1,83 (o Leigo empata) em 6,233%; de 1,375 (o Lendário em comércio empata) em 17,859%
+O CARRETO DO POVO moveu 262219 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 221894 → 221894 (FECHA) · fora: 119114 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Silveira do Freixo     capital  povo  4000 →  3996 · prata  40000 →  20319 (menor 20319, maior 42680; caixa 12670, bolsa 7649) · comida × 0,76 a × 2,26 · fome 0 dias · prateleira 31
+  Barreiro do Sal        cidade   povo  1500 →  1500 · prata  15000 →  12597 (menor 12597, maior 18262; caixa 6013, bolsa 6584) · comida × 0,74 a × 2,15 · fome 0 dias · prateleira 30
+  Carvalhal das Cabras   cidade   povo  1500 →  1500 · prata  15000 →  11332 (menor 10514, maior 15019; caixa 8742, bolsa 2590) · comida × 0,64 a × 1,64 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   397 · prata   4005 →   5010 (menor 3992, maior 5047; caixa 2666, bolsa 2344) · comida × 0,61 a × 1,55 · fome 0 dias · prateleira 19
+  Moinho das Garças      vila     povo   400 →   400 · prata   4000 →   3525 (menor 3521, maior 4337; caixa 2105, bolsa 1420) · comida × 0,71 a × 1,96 · fome 0 dias · prateleira 15
+  Carvalhal Grande       vila     povo   400 →   400 · prata   4000 →   4322 (menor 3351, maior 4516; caixa 2264, bolsa 2058) · comida × 0,68 a × 1,76 · fome 0 dias · prateleira 16
+  Juncal Fundo           vila     povo   400 →   400 · prata   4000 →   6618 (menor 3924, maior 6618; caixa 3421, bolsa 3197) · comida × 0,64 a × 1,71 · fome 0 dias · prateleira 19
+  Campo Novo             vila     povo   400 →   400 · prata   4000 →   4365 (menor 4000, maior 4459; caixa 2388, bolsa 1977) · comida × 0,60 a × 1,48 · fome 0 dias · prateleira 17
+  Vau Seco               aldeia   povo   120 →   113 · prata   1200 →   1427 (menor 1184, maior 1459; caixa 663, bolsa 764) · comida × 0,66 a × 1,77 · fome 0 dias · prateleira 0
+  Fonte das Pedras       aldeia   povo   120 →   120 · prata   1200 →   1011 (menor 964, maior 1202; caixa 606, bolsa 405) · comida × 0,68 a × 1,77 · fome 0 dias · prateleira 0
+  Silveira do Salgueiro  aldeia   povo   120 →   124 · prata   1200 →   2559 (menor 1140, maior 2559; caixa 1296, bolsa 1263) · comida × 0,57 a × 1,42 · fome 0 dias · prateleira 0
+  Carvalhal do Salgueiro aldeia   povo   120 →   120 · prata   1200 →   1087 (menor 974, maior 1240; caixa 684, bolsa 403) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Azenha do Lobo         aldeia   povo   120 →   120 · prata   1200 →   1299 (menor 1024, maior 1332; caixa 734, bolsa 565) · comida × 0,61 a × 1,52 · fome 0 dias · prateleira 0
+  Ponte Claro            aldeia   povo   120 →   119 · prata   1200 →   2049 (menor 1154, maior 2049; caixa 1049, bolsa 1000) · comida × 0,59 a × 1,48 · fome 0 dias · prateleira 0
+  Sobral do Moinho       aldeia   povo   120 →   120 · prata   1200 →   1701 (menor 1132, maior 1719; caixa 876, bolsa 825) · comida × 0,57 a × 1,41 · fome 0 dias · prateleira 0
+  Passo Fundo            aldeia   povo   120 →   120 · prata   1200 →   1390 (menor 979, maior 1423; caixa 715, bolsa 675) · comida × 0,64 a × 1,62 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Fonte das Pedras 0,81, Silveira do Salgueiro 0,87, Carvalhal do Salgueiro 0,82, Azenha do Lobo 0,81, Ponte Claro 0,85, Sobral do Moinho 1,01 ...
+A FREGUESIA comprou 735 peças no ano; a forja do povo fez 712
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→73 · goblin 6→6→16 · javali 38→32→38 · lobo 12→12→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→50→66 · lobo 12→12→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 0
+  a borda do brejo       javali 40→37→39 · ratazana 90→84→87 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Moinho das Garças — Azenha do Lobo: 2 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r02 Silveira do Salgueiro — Ponte Claro: 2 blocos, trilha, a Charneca · 1,33% e 0,00% → 1,24% e 0,00%
+  r03 Barreiro do Sal — Passo Fundo: 2 blocos, caminho, as Grutas do Alto · 1,74% e 2,27% → 1,74% e 0,00%
+  r04 Carvalhal Grande — Sobral do Moinho: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r05 Carvalhal Grande — Passo Fundo: 2 blocos, caminho, as Grutas do Alto · 0,52% e 0,78% → 0,52% e 0,00%
+  r06 Juncal Fundo — Silveira do Freixo: 2 blocos, estrada, as Grutas do Alto · 0,26% e 0,30% → 0,26% e 0,00%
+  r07 Campo Novo — Sobral do Moinho: 2 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r08 Juncal Fundo — Silveira do Salgueiro: 2 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r09 Carvalhal das Cabras — Silveira do Salgueiro: 2 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,74% e 0,00%
+  r10 Moinho das Garças — Fonte das Pedras: 2 blocos, caminho, a Mata Funda · 0,57% e 0,00% → 0,57% e 0,00%
+  r11 Barreiro do Sal — Silveira do Freixo: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,40% → 0,26% e 0,00%
+  r12 Pedra Rasa — Moinho das Garças: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Carvalhal do Salgueiro — Sobral do Moinho: 3 blocos, trilha, a borda do brejo · 1,12% e 0,00% → 1,09% e 0,00%
+  r14 Vau Seco — Juncal Fundo: 3 blocos, caminho, o Pé da Serra · 0,17% e 1,18% → 0,17% e 1,38%
+  r15 Pedra Rasa — Ponte Claro: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r16 Ponte Claro — Silveira do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r17 Silveira do Salgueiro — Silveira do Freixo: 3 blocos, caminho, a Charneca · 0,24% e 0,00% → 0,22% e 0,00%
+  r18 Barreiro do Sal — Carvalhal Grande: 3 blocos, estrada, as Grutas do Alto · 0,26% e 0,71% → 0,26% e 0,00%
+  r19 Carvalhal das Cabras — Ponte Claro: 3 blocos, caminho, a Charneca · 0,80% e 0,00% → 0,74% e 0,00%
+  r20 Carvalhal das Cabras — Juncal Fundo: 4 blocos, estrada, a Charneca · 0,40% e 0,00% → 0,37% e 0,00%
+  r21 Fonte das Pedras — Azenha do Lobo: 2 blocos, trilha, a Mata Funda · 0,95% e 0,00% → 0,95% e 0,00%
+  r22 Sobral do Moinho — Passo Fundo: 3 blocos, trilha, as Grutas do Alto · 0,87% e 0,80% → 0,87% e 0,00%
+  r23 Silveira do Freixo — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Barreiro do Sal — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 35:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 105:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 168:  lobo desce de a Charneca a Ponte Claro: leva 24 de gado
+  Dia 182:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 252:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 259:  urso desce de a Mata do Corvo a Pedra Rasa: leva 10 de gado
+  Dia 273:  nada
+  Dia 280:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 294:  lobo desce de a Mata Funda a Moinho das Garças: leva 24 de gado; urso desce de a Mata Funda a Pedra Rasa: leva 10 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Mata Funda a Moinho das Garças: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 315:  lobo desce de a Charneca a Silveira do Salgueiro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 322:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado
+  Dia 329:  lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 357:  lobo desce de a Charneca a Silveira do Salgueiro: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 364:  lobo desce de a Charneca a Ponte Claro: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; 2 deixam Silveira do Freixo por Silveira do Salgueiro
+  Dia 371:  2 deixam Silveira do Freixo por Silveira do Salgueiro
+
+===== SEMENTE 20 (gravador toque; o personagem espera) =====
+O PERSONAGEM: 1640 de prata no fim (começou com 2005)
+a região: {'povoados': 16, 'ermos': 9, 'rotas': 24, 'masmorras': 8, 'mestra': 'aldeia_6'} · nasceu em 0,02 s
+TEMPO: 364 dias em 9,7 s: 26,7 ms por dia (um ano: 9,7 s) · 16511 eventos (45,4 por dia)
+O REGISTRO: 12532 KB no ano (34,4 KB por dia); por tipo (eventos, KB): consumo 6188 4832, producao 6188 4640, regiao 391 2121, esperar 2184 401, gera 35 155, covil 353 142, comer 365 106, ninhada 430 79, virada 364 49, dragão 12 7, mestre 1 0
+  com o dia do mercado (a produção e o consumo de cada lugar num evento só, com o que mudou): 6333 KB (17,4 KB por dia)
+O ESTADO (json compacto, KB): ao nascer relogio 0, lugares 67, gente 11, itens 61, turno 1, rotas 2 (total 143) · no fim relogio 0, lugares 67, gente 11, itens 57, turno 1, rotas 2 (total 139)
+O ATRAVESSADOR (a razão do preço de loja entre dois vizinhos, antes do carreto do dia; 145415 pares bem-rota-dia): a mediana 1,14, o 99º centésimo 2,25, o maior 5,48 · passa de 1,83 (o Leigo empata) em 4,645%; de 1,375 (o Lendário em comércio empata) em 17,330%
+O CARRETO DO POVO moveu 288884 de prata no ano entre os povoados (e fora)
+A PRATA DO MUNDO (gente, caixas, bolsas, fora): 219994 → 219994 (FECHA) · fora: 105001 (era 100000)
+o estado: inteiro
+OS POVOADOS (povo do começo → do fim · caixa+bolsa: começo → fim, menor, maior · a comida: o menor e o maior fator do ano · dias de fome):
+  Passo do Sal           capital  povo  4000 →  4000 · prata  40000 →  34015 (menor 34015, maior 43752; caixa 18639, bolsa 15376) · comida × 0,71 a × 1,93 · fome 0 dias · prateleira 33
+  Moinho das Cabras      cidade   povo  1500 →  1500 · prata  15000 →  12598 (menor 12598, maior 18252; caixa 5899, bolsa 6699) · comida × 0,73 a × 2,12 · fome 0 dias · prateleira 32
+  Fonte do Moinho        cidade   povo  1500 →  1500 · prata  15000 →  18005 (menor 13232, maior 18005; caixa 11102, bolsa 6903) · comida × 0,60 a × 1,49 · fome 0 dias · prateleira 32
+  Pedra Rasa             vila     povo   400 →   399 · prata   4005 →   3753 (menor 3644, maior 4149; caixa 2075, bolsa 1678) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 20
+  Ribeira Negro          vila     povo   400 →   400 · prata   4000 →   3813 (menor 3812, maior 4143; caixa 2217, bolsa 1596) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 17
+  Toural Velho           vila     povo   400 →   400 · prata   4000 →   3717 (menor 3424, maior 4042; caixa 2344, bolsa 1373) · comida × 0,66 a × 1,70 · fome 0 dias · prateleira 20
+  Porto das Pedras       vila     povo   400 →   400 · prata   4000 →   4424 (menor 3998, maior 4506; caixa 2562, bolsa 1862) · comida × 0,65 a × 1,70 · fome 0 dias · prateleira 12
+  Monte Claro            vila     povo   400 →   400 · prata   4000 →   4176 (menor 3891, maior 4490; caixa 2413, bolsa 1763) · comida × 0,67 a × 1,81 · fome 0 dias · prateleira 19
+  Vau Seco               aldeia   povo   120 →   115 · prata   1200 →   1286 (menor 1076, maior 1326; caixa 673, bolsa 613) · comida × 0,65 a × 1,73 · fome 0 dias · prateleira 0
+  Outeiro da Lebre       aldeia   povo   120 →   120 · prata   1200 →   1574 (menor 1076, maior 1642; caixa 776, bolsa 798) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Outeiro do Lobo        aldeia   povo   120 →   120 · prata   1200 →   1209 (menor 1019, maior 1256; caixa 723, bolsa 486) · comida × 0,62 a × 1,54 · fome 0 dias · prateleira 0
+  Sobral Velho           aldeia   povo   120 →   120 · prata   1200 →   1397 (menor 1006, maior 1412; caixa 730, bolsa 667) · comida × 0,65 a × 1,64 · fome 0 dias · prateleira 0
+  Moinho da Lebre        aldeia   povo   120 →   120 · prata   1200 →   1214 (menor 926, maior 1297; caixa 774, bolsa 440) · comida × 0,58 a × 1,42 · fome 0 dias · prateleira 0
+  Ponte das Cabras       aldeia   povo   120 →   120 · prata   1200 →    994 (menor 789, maior 1200; caixa 674, bolsa 320) · comida × 0,68 a × 1,81 · fome 0 dias · prateleira 0
+  Sobral do Freixo       aldeia   povo   120 →   120 · prata   1200 →   1275 (menor 999, maior 1364; caixa 707, bolsa 568) · comida × 0,61 a × 1,53 · fome 0 dias · prateleira 0
+  Barreiro de Cima       aldeia   povo   120 →   120 · prata   1200 →   1333 (menor 1026, maior 1414; caixa 669, bolsa 664) · comida × 0,65 a × 1,66 · fome 0 dias · prateleira 0
+A SAFRA DO ANO: Outeiro da Lebre 0,91, Outeiro do Lobo 0,79, Sobral Velho 1,00, Moinho da Lebre 0,84, Ponte das Cabras 0,76, Sobral do Freixo 0,86 ...
+A FREGUESIA comprou 728 peças no ano; a forja do povo fez 711
+OS ERMOS (a contagem do começo → o menor do ano → o fim):
+  a Mata do Corvo        corça 76→66→77 · goblin 6→6→16 · javali 38→31→37 · lobo 12→11→12 · pantera 1→1→1 · serpe 1→1→1 · urso 3→3→3
+  a Cova Velha           
+  a Mata Funda           aranha 6→6→6 · corça 80→80→80 · javali 40→40→40 · lobo 12→12→12 · pantera 2→2→2 · surucucu 8→8→8 · urso 3→3→3
+  o Pé da Serra          lobo 12→12→12 · urso 3→3→3 · bando 7
+  o Brejo das Garças     javali 40→40→40 · ratazana 90→90→90 · surucucu 8→8→8 · trasgo 2→2→2
+  a Charneca             corça 80→53→58 · lobo 12→11→12
+  as Grutas do Alto      aranha 6→6→6 · ratazana 90→90→90 · trasgo 2→2→2 · urso 3→3→3 · bando 5
+  a borda do brejo       javali 40→35→36 · ratazana 90→79→88 · surucucu 8→8→8
+AS ROTAS (blocos, tipo, ermo; o encontro por bloco: bicho, bando; no começo → no fim):
+  r01 Moinho das Cabras — Barreiro de Cima: 2 blocos, caminho, as Grutas do Alto · 0,52% e 1,36% → 0,52% e 0,85%
+  r02 Monte Claro — Sobral do Freixo: 2 blocos, caminho, o Pé da Serra · 0,55% e 3,27% → 0,55% e 4,57%
+  r03 Sobral Velho — Passo do Sal: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,64% e 0,00%
+  r04 Vau Seco — Sobral do Freixo: 2 blocos, trilha, o Pé da Serra · 0,92% e 3,33% → 0,92% e 4,67%
+  r05 Moinho das Cabras — Outeiro da Lebre: 2 blocos, caminho, a borda do brejo · 0,67% e 0,00% → 0,64% e 0,00%
+  r06 Pedra Rasa — Toural Velho: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r07 Vau Seco — Outeiro do Lobo: 3 blocos, trilha, as Grutas do Alto · 0,87% e 1,60% → 0,87% e 1,00%
+  r08 Fonte do Moinho — Porto das Pedras: 3 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r09 Moinho das Cabras — Sobral Velho: 3 blocos, caminho, as Grutas do Alto · 0,52% e 1,44% → 0,52% e 0,90%
+  r10 Ribeira Negro — Ponte das Cabras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r11 Porto das Pedras — Monte Claro: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,97% → 0,17% e 1,36%
+  r12 Pedra Rasa — Ponte das Cabras: 3 blocos, caminho, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r13 Outeiro do Lobo — Barreiro de Cima: 4 blocos, trilha, as Grutas do Alto · 2,89% e 5,33% → 2,89% e 3,33%
+  r14 Toural Velho — Moinho da Lebre: 4 blocos, caminho, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r15 Pedra Rasa — Passo do Sal: 4 blocos, estrada, a Cova Velha · 0,00% e 0,00% → 0,00% e 0,00%
+  r16 Moinho das Cabras — Passo do Sal: 4 blocos, estrada, a borda do brejo · 0,34% e 0,00% → 0,32% e 0,00%
+  r17 Fonte do Moinho — Passo do Sal: 4 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r18 Fonte do Moinho — Sobral do Freixo: 3 blocos, caminho, o Pé da Serra · 0,17% e 0,90% → 0,17% e 1,26%
+  r19 Outeiro da Lebre — Barreiro de Cima: 3 blocos, trilha, as Grutas do Alto · 0,87% e 1,60% → 0,87% e 1,00%
+  r20 Fonte do Moinho — Monte Claro: 3 blocos, estrada, a Charneca · 0,12% e 0,00% → 0,11% e 0,00%
+  r21 Vau Seco — Monte Claro: 3 blocos, caminho, o Pé da Serra · 0,55% e 3,29% → 0,55% e 4,60%
+  r22 Porto das Pedras — Sobral do Freixo: 4 blocos, caminho, o Pé da Serra · 0,17% e 0,99% → 0,17% e 1,39%
+  r23 Passo do Sal — o mundo de fora: 6 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+  r24 Moinho das Cabras — o mundo de fora: 5 blocos, fora, campo aberto · 0,00% e 0,00% → 0,00% e 0,00%
+A SEMANA DA REGIÃO (as primeiras 25 linhas):
+  Dia 28:  nada
+  Dia 56:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 63:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 77:  a patrulha mata 1 do bando do Pé da Serra
+  Dia 119:  nada
+  Dia 154:  a patrulha mata 1 do bando das Grutas do Alto
+  Dia 168:  pantera desce de a Mata do Corvo a Pedra Rasa: leva 8 de gado
+  Dia 196:  nada
+  Dia 217:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado
+  Dia 224:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado, a guarda mata 1
+  Dia 266:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado
+  Dia 287:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 294:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado; lobo desce de o Pé da Serra a Vau Seco: leva 24 de gado
+  Dia 301:  lobo desce de a Charneca a Porto das Pedras: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 308:  lobo desce de a Mata do Corvo a Pedra Rasa: leva 24 de gado, a guarda mata 1; lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado; a patrulha mata 1 do bando das Grutas do Alto
+  Dia 315:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 322:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado; lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado; lobo desce de o Pé da Serra a Monte Claro: leva 24 de gado
+  Dia 329:  lobo desce de a Mata Funda a Ponte das Cabras: leva 24 de gado
+  Dia 336:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado; lobo desce de a Mata do Corvo a Pedra Rasa: leva 18 de gado
+  Dia 343:  lobo desce de o Pé da Serra a Sobral do Freixo: leva 24 de gado
+  Dia 350:  lobo desce de a Mata Funda a Pedra Rasa: leva 24 de gado; urso desce de o Pé da Serra a Monte Claro: leva 10 de gado
+  Dia 357:  lobo desce de a Charneca a Fonte do Moinho: leva 24 de gado
+  Dia 371:  nada

@@ -1,0 +1,42 @@
+1. AS LUTAS DA ESTRADA (400 lutas por linha; em % das lutas: vence a casa · o primeiro da casa morre)
+  Maro                   contra lobo                : viu-o e veio (perto): vence   0.2 · morre  85.0   |   pego desprevenido (colado, surpreso): vence   0.0 · morre  85.5
+  Maro                   contra javali              : viu-o e veio (perto): vence  67.0 · morre  19.5   |   pego desprevenido (colado, surpreso): vence  67.0 · morre  20.2
+  Maro                   contra urso                : viu-o e veio (perto): vence   3.2 · morre  83.5   |   pego desprevenido (colado, surpreso): vence   1.2 · morre  85.2
+  Maro                   contra goblins             : viu-o e veio (perto): vence  75.5 · morre  11.8   |   pego desprevenido (colado, surpreso): vence  47.2 · morre  24.0
+  Maro                   contra salteadores (2 a 5) : viu-o e veio (perto): vence  14.5 · morre  50.0   |   pego desprevenido (colado, surpreso): vence   7.2 · morre  51.5
+  Maro                   contra salteadores (3)     : viu-o e veio (perto): vence   9.0 · morre  50.0   |   pego desprevenido (colado, surpreso): vence   2.0 · morre  54.5
+  Maro                   contra pantera             : viu-o e veio (perto): vence   0.0 · morre 100.0   |   pego desprevenido (colado, surpreso): vence   0.0 · morre 100.0
+  Maro, Tomé e Rute      contra lobo                : viu-o e veio (perto): vence  35.0 · morre  57.2   |   pego desprevenido (colado, surpreso): vence   1.0 · morre  83.8
+  Maro, Tomé e Rute      contra javali              : viu-o e veio (perto): vence  99.8 · morre   0.0   |   pego desprevenido (colado, surpreso): vence  99.8 · morre   1.2
+  Maro, Tomé e Rute      contra urso                : viu-o e veio (perto): vence  64.0 · morre  55.5   |   pego desprevenido (colado, surpreso): vence  22.2 · morre  76.8
+  Maro, Tomé e Rute      contra goblins             : viu-o e veio (perto): vence 100.0 · morre   0.0   |   pego desprevenido (colado, surpreso): vence  99.0 · morre   3.2
+  Maro, Tomé e Rute      contra salteadores (2 a 5) : viu-o e veio (perto): vence  98.5 · morre   6.0   |   pego desprevenido (colado, surpreso): vence  80.0 · morre  21.8
+  Maro, Tomé e Rute      contra salteadores (3)     : viu-o e veio (perto): vence  99.5 · morre   4.5   |   pego desprevenido (colado, surpreso): vence  93.0 · morre  18.5
+  Maro, Tomé e Rute      contra pantera             : viu-o e veio (perto): vence   6.5 · morre  95.5   |   pego desprevenido (colado, surpreso): vence   0.5 · morre  99.8
+  o ferreiro do Dia 1    contra lobo                : viu-o e veio (perto): vence   0.0 · morre  88.8   |   pego desprevenido (colado, surpreso): vence   0.0 · morre  87.2
+  o ferreiro do Dia 1    contra javali              : viu-o e veio (perto): vence  19.2 · morre  56.8   |   pego desprevenido (colado, surpreso): vence  22.0 · morre  56.2
+  o ferreiro do Dia 1    contra urso                : viu-o e veio (perto): vence   1.2 · morre  95.5   |   pego desprevenido (colado, surpreso): vence   0.0 · morre  97.0
+  o ferreiro do Dia 1    contra goblins             : viu-o e veio (perto): vence  30.5 · morre  38.0   |   pego desprevenido (colado, surpreso): vence  17.8 · morre  41.2
+  o ferreiro do Dia 1    contra salteadores (2 a 5) : viu-o e veio (perto): vence   3.0 · morre  62.0   |   pego desprevenido (colado, surpreso): vence   1.8 · morre  65.0
+  o ferreiro do Dia 1    contra salteadores (3)     : viu-o e veio (perto): vence   0.2 · morre  63.0   |   pego desprevenido (colado, surpreso): vence   0.2 · morre  65.2
+  o ferreiro do Dia 1    contra pantera             : viu-o e veio (perto): vence   0.0 · morre 100.0   |   pego desprevenido (colado, surpreso): vence   0.0 · morre 100.0
+
+2. A CONTA DA VIAGEM (o encontro por bloco pela regra proposta; a luta pelas linhas de cima; o viajante fica e luta; o caminho de dia)
+  a estrada da vila (4 blocos), cruzando a Mata do Corvo cheia             · Maro                : encontro de bicho 0.87% por bloco, de bando 0.00% · MORRE em 0.81% das viagens
+  a estrada da vila (4 blocos), cruzando a Mata do Corvo cheia             · Maro, Tomé e Rute   : encontro de bicho 0.87% por bloco, de bando 0.00% · MORRE em 0.49% das viagens
+  a estrada da vila (4 blocos), cruzando a Mata do Corvo cheia             · o ferreiro do Dia 1 : encontro de bicho 0.87% por bloco, de bando 0.00% · MORRE em 1.06% das viagens
+  o caminho da aldeia (4 blocos), pela Mata cheia                          · Maro                : encontro de bicho 1.74% por bloco, de bando 0.00% · MORRE em 1.62% das viagens
+  o caminho da aldeia (4 blocos), pela Mata cheia                          · Maro, Tomé e Rute   : encontro de bicho 1.74% por bloco, de bando 0.00% · MORRE em 0.98% das viagens
+  o caminho da aldeia (4 blocos), pela Mata cheia                          · o ferreiro do Dia 1 : encontro de bicho 1.74% por bloco, de bando 0.00% · MORRE em 2.11% das viagens
+  a trilha (6 blocos), pela Mata cheia                                     · Maro                : encontro de bicho 2.91% por bloco, de bando 0.00% · MORRE em 4.00% das viagens
+  a trilha (6 blocos), pela Mata cheia                                     · Maro, Tomé e Rute   : encontro de bicho 2.91% por bloco, de bando 0.00% · MORRE em 2.44% das viagens
+  a trilha (6 blocos), pela Mata cheia                                     · o ferreiro do Dia 1 : encontro de bicho 2.91% por bloco, de bando 0.00% · MORRE em 5.21% das viagens
+  a trilha (6 blocos), pela Mata cheia, com um bando de 6 salteadores      · Maro                : encontro de bicho 2.91% por bloco, de bando 4.00% · MORRE em 15.03% das viagens
+  a trilha (6 blocos), pela Mata cheia, com um bando de 6 salteadores      · Maro, Tomé e Rute   : encontro de bicho 2.91% por bloco, de bando 4.00% · MORRE em 3.84% das viagens
+  a trilha (6 blocos), pela Mata cheia, com um bando de 6 salteadores      · o ferreiro do Dia 1 : encontro de bicho 2.91% por bloco, de bando 4.00% · MORRE em 18.58% das viagens
+  o caminho (4 blocos), campo sem bicho, bando de 8, patrulha fraca        · Maro                : encontro de bicho 0.00% por bloco, de bando 4.27% · MORRE em 8.26% das viagens
+  o caminho (4 blocos), campo sem bicho, bando de 8, patrulha fraca        · Maro, Tomé e Rute   : encontro de bicho 0.00% por bloco, de bando 4.27% · MORRE em 1.02% das viagens
+  o caminho (4 blocos), campo sem bicho, bando de 8, patrulha fraca        · o ferreiro do Dia 1 : encontro de bicho 0.00% por bloco, de bando 4.27% · MORRE em 10.17% das viagens
+  a trilha da serra (6 blocos): lobo 12, urso 3, pantera 2                 · Maro                : encontro de bicho 1.05% por bloco, de bando 0.00% · MORRE em 3.81% das viagens
+  a trilha da serra (6 blocos): lobo 12, urso 3, pantera 2                 · Maro, Tomé e Rute   : encontro de bicho 1.05% por bloco, de bando 0.00% · MORRE em 2.78% das viagens
+  a trilha da serra (6 blocos): lobo 12, urso 3, pantera 2                 · o ferreiro do Dia 1 : encontro de bicho 1.05% por bloco, de bando 0.00% · MORRE em 3.98% das viagens

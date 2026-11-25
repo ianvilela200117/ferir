@@ -1,0 +1,63 @@
+A VILA DE TESTE nasceu em /tmp/claude-0/-home-user-ferir/61eca6e7-b42a-5d47-8b22-754967c92aea/scratchpad/etapa3_a/m1_vila (fora do cânone; 26 eventos "gera").
+
+Pedra Rasa: 400 de povo, 2000 de prata, 15 peças na prateleira, pousada, forja (oficina 1).
+a Mata do Corvo, a 1 bloco: corça 80, javali 40, lobo 12, urso 3, pantera 1, serpe 1 (o raro: pantera; o chefe: serpe); tira-se: madeira Comum, erva Comum.
+Gente com nome: Bento (o ferreiro da vila), Dalva (a taverneira da pousada), Rute (a caçadora), Tomé (o guarda da vila), Ivo (o lenhador), Nara (a curandeira), Lino (o mercador da loja), Zeca (o aprendiz da forja).
+O personagem: Aldo, nível 5, vive da forja, com a mão de Iniciante; 30 de prata; Martelo de Aldo, Armadura de couro de Aldo.
+
+Para jogar (de dentro de motor10/):
+  export MOTOR10_MUNDO=/tmp/claude-0/-home-user-ferir/61eca6e7-b42a-5d47-8b22-754967c92aea/scratchpad/etapa3_a/m1_vila
+  python3 turno.py abre
+O guia: GUIA_VILA.md
+A ETAPA DA MAGIA entrou na vila de /tmp/claude-0/-home-user-ferir/61eca6e7-b42a-5d47-8b22-754967c92aea/scratchpad/etapa3_a/m1_vila (15 eventos, nada recriado).
+
+Gente nova: Anselmo (o mago velho), Lúcia (a clériga do santuário), Joana (a bruxa que mora na choupana da borda da Mata do Corvo).
+Pedra Rasa tem agora a botica de Nara e um santuário; a Cova Velha fica a 1 bloco (esqueletos e corpos-secos; e uma peça largada no chão).
+Na Mata do Corvo mora um bando de goblins (a toca: `caca.py sair mata alvo=toca`).
+Os talentos e os dons foram rolados (ninguém sabe o que tem: o talento aparece fazendo, o dom quando decide um teste); a inclinação de Aldo: forja.
+
+A MESA se refaz no próximo `turno.py abre`.
+A ETAPA 4b (as masmorras e o mundo de fantasia) entrou na vila de /tmp/claude-0/-home-user-ferir/61eca6e7-b42a-5d47-8b22-754967c92aea/scratchpad/etapa3_a/m1_vila (20 eventos, nada recriado).
+
+A gente de Pedra Rasa: em cada 100, 88 humanos, 8 pequeninos, 2 anões, 2 meio-orcs.
+Gente de outros povos: Durva (anã, ferreira de passagem, 112 anos), Brasco (meio-orc, guarda de caravana de passagem, 31 anos), Ilvena (elfa, caçadora de passagem, 240 anos), Nena Ramalho (pequenina, faz o pão da pousada, 44 anos).
+Na prateleira da loja: armadura de couro miúda Comum, armadura de malha miúda Comum, elmo miúdo de malha Comum (para o corpo miúdo).
+Quim, o sobrinho do Lino; abre trinco, anda calado e acha o que os outros não veem: nível 14, manha de Iniciante, Adaga de Quim, Armadura de couro de Quim, Gazua de Quim, 10 de prata (o talento e o dom rolados: só o Mestre sabe).
+Pedra Rasa abre a descida no mercado: 120 de tocha (a 1 de prata de base); na prateleira, gazua Comum: o Lino vende a tocha e a gazua.
+A Cripta da Cova Velha: 7 salas sob a Cova Velha, a 1 bloco de Pedra Rasa (80 de prata nas salas; o guardião no fundo). O povo diz: dizem que os mortos da Cova Velha subiam de uma escada, debaixo do mausoléu quebrado.
+Vau Seco, uma aldeia de 120 ao pé da serra, fica longe de Pedra Rasa (não há estrada daqui até lá). O Tição, um dragão jovem da serra, mora na Serra Fria e leva gado de lá de tempos em tempos: a pousada conta (o último ataque foi há 6 dias).
+SÓ O MESTRE: o Tição dorme até o Dia 21, sobre 300 de prata, a Lâmina de Vau Seco e o escudo do caçador de Vau Seco.
+
+A MESA se refaz no próximo `turno.py abre`. O guia: GUIA_VILA.md (a descida: `masmorra.py ver`).
+
+TAMANHO DO ESTADO (bytes, json compacto): {'relogio': 51, 'lugares': 6993, 'gente': 10813, 'itens': 14296, 'turno': 117} total 32270
+
+30 dias em 3.48 s: 115.9 ms por dia; 390 eventos (13.0 por dia)
+um ano (364 dias) neste passo: 42.2 s
+         9274985 function calls (7586603 primitive calls) in 3.476 seconds
+
+   Ordered by: cumulative time
+   List reduced from 158 to 18 due to restriction <18>
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+      390    0.039    0.000    3.372    0.009 /home/user/ferir/motor10/estado.py:1039(aplica)
+1576790/1958    1.639    0.000    3.277    0.002 /usr/local/lib/python3.13/copy.py:119(deepcopy)
+115058/1958    0.499    0.000    3.271    0.002 /usr/local/lib/python3.13/copy.py:218(_deepcopy_dict)
+      180    0.004    0.000    3.230    0.018 /home/user/ferir/motor10/ato.py:54(passa)
+       30    0.001    0.000    1.407    0.047 /home/user/ferir/motor10/ato.py:119(_mundo_vira)
+       30    0.009    0.000    1.116    0.037 /home/user/ferir/motor10/mercado.py:334(virada)
+  3252058    0.483    0.000    0.483    0.000 {method 'get' of 'dict' objects}
+104521/104131    0.101    0.000    0.308    0.000 /usr/local/lib/python3.13/copy.py:192(_deepcopy_list)
+       29    0.000    0.000    0.246    0.008 /home/user/ferir/motor10/ato.py:124(comer)
+  2017906    0.244    0.000    0.244    0.000 {built-in method builtins.id}
+       30    0.001    0.000    0.236    0.008 /home/user/ferir/motor10/criaturas.py:344(virada)
+   219579    0.118    0.000    0.181    0.000 /usr/local/lib/python3.13/copy.py:232(_keep_alive)
+  1357211    0.139    0.000    0.139    0.000 /usr/local/lib/python3.13/copy.py:173(_deepcopy_atomic)
+   316761    0.051    0.000    0.051    0.000 {method 'append' of 'list' objects}
+       30    0.002    0.000    0.035    0.001 /home/user/ferir/motor10/caca.py:817(virada)
+6330/6270    0.007    0.000    0.030    0.000 {built-in method builtins.any}
+     1913    0.006    0.000    0.029    0.000 /home/user/ferir/motor10/estado.py:112(sorte)
+     2473    0.003    0.000    0.028    0.000 /home/user/ferir/motor10/mercado.py:328(_inteiro)
+
+
+

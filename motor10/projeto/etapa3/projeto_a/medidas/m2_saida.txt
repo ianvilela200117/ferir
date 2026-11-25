@@ -1,0 +1,9 @@
+1. A VILA DE TESTE (magia e 4b), 40 dias com o personagem esperando: 502 eventos
+   gravador hoje: 0.66 s (16.4 ms por dia; 1.31 ms por evento)
+   gravador por toque: 0.08 s (2.1 ms por dia; 0.16 ms por evento)
+   o estado final é o mesmo: True · o registro de eventos é o mesmo: True
+
+2. O ROBÔ FERREIRO DE LOJA (provas_mercado), 30 dias, categorias Comum e Incomum
+   semente 1: hoje 0.41 s · por toque 0.17 s · o resultado é o mesmo: True
+   semente 2: hoje 0.30 s · por toque 0.16 s · o resultado é o mesmo: True
+   semente 3: hoje 0.34 s · por toque 0.18 s · o resultado é o mesmo: True

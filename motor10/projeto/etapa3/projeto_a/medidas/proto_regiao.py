@@ -18,8 +18,8 @@ TAB = dict(
            'vila':    dict(n=5, pop=400, oficina=1, alcance=1, runas=None, botica=1, santuario=None, guarda=0.01, cacador=0.01, prat='vila'),
            'aldeia':  dict(n=8, pop=120, oficina=0, alcance=0, runas=None, botica=None, santuario=None, guarda=0.0, cacador=0.03, prat=None)},
     # o perfil: quanto o lugar produz de cada bem, vezes o que o povo dele come (1: o que come; a cidade compra comida, a aldeia vende)
-    PERFIL={'capital': {'comida': 0.75, 'lenha': 0.7, 'madeira:0': 0.6, 'pano': 1.5, 'ferramenta': 1.6, 'remédio': 1.2, 'metal:0': 0.7, 'couro:0': 0.9, 'sal': 0.8},
-            'cidade':  {'comida': 0.9, 'lenha': 0.9, 'pano': 1.3, 'ferramenta': 1.3, 'sal': 1.4, 'metal:0': 0.9},
+    PERFIL={'capital': {'comida': 1.0, 'lenha': 0.7, 'madeira:0': 0.6, 'pano': 1.5, 'ferramenta': 1.6, 'remédio': 1.2, 'metal:0': 0.7, 'couro:0': 0.9, 'sal': 0.8},
+            'cidade':  {'comida': 1.0, 'lenha': 0.9, 'pano': 1.3, 'ferramenta': 1.3, 'sal': 1.4, 'metal:0': 0.9},
             'vila':    {'comida': 1.25, 'lenha': 1.2, 'madeira:0': 1.3, 'couro:0': 1.3, 'pano': 0.8, 'ferramenta': 0.8, 'sal': 0.7},
             'aldeia':  {'comida': 1.4, 'pano': 0.6, 'ferramenta': 0.5, 'sal': 0.6, 'remédio': 0.7}},
     ESPECIALIDADE={'capital': ['ferramenta', 'pano', 'remédio'], 'cidade': ['ferramenta', 'pano', 'sal'], 'vila': ['comida', 'couro:0', 'madeira:0'], 'aldeia': ['comida', 'metal:0', 'madeira:0', 'erva:0']},
@@ -213,7 +213,7 @@ def gera(E, semente=1):
         bal = sum((prod[b] - T_['pop'] * C.consumo(b)) * C.base(b) for b in prod)
         val_esp = sum(prod[b] * C.base(b) for b in esp)
         x = max(0.3, 1 - bal / val_esp) if val_esp else 1
-        for b in esp: prod[b] *= x
+        for b in esp: prod[b] = max(prod[b] * x, T_['pop'] * C.consumo(b)) if x < 1 else prod[b] * x      # a especialidade nunca fica abaixo do que o povo come dela
         for b, q in prod.items():
             if abs(q - (l.get('produz') or {}).get(b, 0)) > 1e-6: ef.append(['lugar', k, 'produz.' + b, 'poe', round(q, 4)])
         if T_['oficina'] is not None:
@@ -326,7 +326,7 @@ def virada(E):
                 MEDE['razoes'].append(rz) if rz > 1 else None
                 gap = pd - po - f - TAB['MARGEM'] * po
                 if gap <= 0: continue
-                q = TAB['FLUXO'] * min(mercado.alvo(E, de, b), mercado.alvo(E, para, b)) * gap / pd
+                q = TAB['FLUXO'] * mercado.alvo(E, para, b) * gap / pd          # o carreto serve a quem compra: a parte do alvo do destino
                 q = min(q, est[de].get(b, 0) - TAB['PISO'] * mercado.alvo(E, de, b), (cap - usado) / _peso(b), est[para].get('prata', 0) / ((po + pd) / 2))
                 q = mercado._inteiro(E, q, f'regiao|carreto|{rid}|{de}|{b}') if q > 0 else 0       # a parte quebrada é a chance de mais uma (o mercado pequeno também é servido)
                 if q < 1: continue

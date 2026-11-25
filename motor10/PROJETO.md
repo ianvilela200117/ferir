@@ -130,7 +130,7 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
 | 2. Viver de um ofício **(FEITA: 80 de 80 no `provas.py`, com os bichos; 98 de 98 no `provas_mundo.py`; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
-| 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
+| 3. A região que responde **(PROJETADA: os dois projetos e o juízo em `projeto/etapa3/`; as perguntas R1 a R4 esperam o jogador)** | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia, os dons e as criaturas **(FEITA, antes da 3, por decisão do jogador (12.13): 114 de 114 no `provas.py`; 148 de 148 no `provas_mundo.py`, duas vezes; `estresse.py 1500` sem erro)** | os dons e os talentos em todo caminho; a magia na luta (quatro tradições, 24 feitiços e o truque, nove traços novos, as fases do chefe); a alquimia, o encanto e as maldições; estudar, o voto, o laço e o pacto; 19 criaturas, 5 chefes mágicos e os covis (capítulos 10 a 16 do `REGRAS.md`) | o mago, o clérigo, o druida, a bruxa, a poção, a maldição, a peça encantada, o goblin e a toca. **A vila de teste com a magia:** `vila_teste.py magia PASTA` |
 | 4b. As masmorras e o mundo de fantasia **(FEITA, antes da 3, por decisão do jogador (12.16), e conferida pelo verificador independente: 114 de 114 no `provas.py`; 225 de 225 no `provas_mundo.py`, duas vezes; `estresse.py 1500` sem erro; a vila de teste ganha a etapa com `vila_teste.py fantasia`)** | as masmorras (salas, portas, armadilhas, o escuro, o tesouro e o chefe no fundo); o ladino (andar escondido, abrir fechadura, desarmar armadilha); os dragões de verdade, com covil e tesouro; os povos para o personagem (anão, elfo, meio-orc e outros da fantasia comum) | descer numa masmorra com um grupo, roubar o covil do dragão, nascer anão ou elfo |
 | 5. A corrida | rivais, guildas, ranking, torneio, leilão, a janela do mundo | disputar |
@@ -173,8 +173,8 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 
 Nada disto trava a etapa 3. São escolhas de gosto, que o banco mede mas não decide. A lista inteira, com os números, está no `MUDANCAS.md` e no fim do capítulo 9 do `REGRAS.md`.
 
-1. **De onde vêm os núcleos da escada.** O ritmo decidido só vale com núcleo novo a cada obra, na melhor forja.
+1. **De onde vêm os núcleos da escada.** O ritmo decidido só vale com núcleo novo a cada obra, na melhor forja. **Resolvido no juízo da etapa 3** (pela decisão 3): os 6 do plano por ano, com três corações de ermo, longe, cada um com um chefe Épico que nasce de novo em meio ano.
 2. **A coleta de começo fica no zero a zero;** a de quem já tem mão, no interior, rende muito e não tem meta.
-3. **A prata do lugar não se repõe,** e ninguém além do personagem compra da prateleira (a etapa 3 traz fregueses e comércio entre lugares).
-4. **O atravessador de comida** (compra na colheita, vende na entressafra: 38 a 62% em meio ano, sem risco).
-5. **Quem vai junto na caça** não pede paga: leva a parte dele do despojo. O que era de um morto não muda de mão sozinho: é decisão de cena.
+3. **A prata do lugar não se repõe,** e ninguém além do personagem compra da prateleira (a etapa 3 traz fregueses e comércio entre lugares). **A etapa 3 o resolve** (o carreto, a bolsa do povo, o fluxo da prata, a freguesia: `projeto/etapa3/DECISOES.md`).
+4. **O atravessador de comida** (compra na colheita, vende na entressafra: 38 a 62% em meio ano, sem risco). **A etapa 3 o acaba:** a comida da carga estraga 2% por dia.
+5. **Quem vai junto na caça** não pede paga: leva a parte dele do despojo. O que era de um morto não muda de mão sozinho: é decisão de cena. **Na etapa 3, é a pergunta R2.**
