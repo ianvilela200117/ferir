@@ -1,5 +1,5 @@
 {
- "seq": 657,
+ "seq": 659,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12275,6 +12275,49 @@
     "pernas"
    ],
    "id": "i0657",
+   "uso": "veste"
+  },
+  "i0658": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "Martelo de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 1: da casa dos Dorneles"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "familia": "martelo",
+   "id": "i0658",
+   "uso": "arma"
+  },
+  "i0659": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Couro de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 1: da casa dos Dorneles"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0659",
    "uso": "veste"
   }
  },

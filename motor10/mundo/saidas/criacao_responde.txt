@@ -1,0 +1,4 @@
+1a: Que povo? (o povo muda os atributos e dá os traços) → humano
+2a: Que berço? (a família onde você nasce: `cria.py ofertas` conta cada uma) → da casa dos Dorneles, Filipa (ferreiro) em Pedra Velha; parentes vivos: Berareu
+3e: Que inclinação? (o caminho em que o dado do talento rola duas vezes) → forja
+4l: Se humano, a segunda inclinação? (outro caminho; quem não é humano responde "r") → encanto

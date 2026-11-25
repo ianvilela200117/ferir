@@ -5002,8 +5002,17 @@
   "casa": "c_dorneles_pedra_velha",
   "papel": "ferreiro",
   "lacos": {
-   "berareu": "irmão"
-  }
+   "berareu": "irmão",
+   "eu": "filho"
+  },
+  "memoria": [
+   {
+    "dia": 1,
+    "de": "eu",
+    "o_que": "é do meu sangue",
+    "peso": 4
+   }
+  ]
  },
  "berareu": {
   "nome": "Berareu",
@@ -5048,8 +5057,17 @@
   "casa": "c_dorneles_pedra_velha",
   "papel": "lavrador",
   "lacos": {
-   "filipa": "irmão"
-  }
+   "filipa": "irmão",
+   "eu": "parente"
+  },
+  "memoria": [
+   {
+    "dia": 1,
+    "de": "eu",
+    "o_que": "é do meu sangue",
+    "peso": 2
+   }
+  ]
  },
  "felix": {
   "nome": "Félix",
@@ -9999,5 +10017,74 @@
   },
   "sobre": "o chefe dos salteadores da estrada",
   "papel": "ladino"
+ },
+ "eu": {
+  "nome": "Ferord",
+  "lugar": "pedra_velha",
+  "grau_oficio": "aprendiz",
+  "nivel": 5,
+  "atributos": {
+   "Força": 65,
+   "Agilidade": 50,
+   "Vigor": 55,
+   "Vontade": 50,
+   "Percepção": 45,
+   "Afinidade": 75
+  },
+  "maestria": {
+   "forja": 2,
+   "martelo": 2
+  },
+  "treino": {
+   "forja": 50,
+   "martelo": 40
+  },
+  "moedas": 30,
+  "corpo": {
+   "fome": 0,
+   "sono": 0,
+   "cansaco": 0
+  },
+  "pv": 111,
+  "feridas": [],
+  "estado": "vivo",
+  "marca": {
+   "prep_receita": 0,
+   "talento_base": {
+    "peso": 40,
+    "forja": 50
+   },
+   "talento_novos": [
+    "manha"
+   ]
+  },
+  "carga": {
+   "metal:0": 4,
+   "madeira:0": 2
+  },
+  "jogador": true,
+  "talento": {
+   "fio": 2,
+   "peso": -1,
+   "tiro": 1,
+   "forja": 1,
+   "cura": -1,
+   "alquimia": 1,
+   "arcano": 1,
+   "pacto": -2
+  },
+  "inclinacao": "forja",
+  "povo": "humano",
+  "idade": 20,
+  "inclinacao2": "encanto",
+  "sobre": "cresceu na forja da família; tem a mão de Iniciante no martelo e na forja",
+  "casa": "c_dorneles_pedra_velha",
+  "pais": [
+   "filipa"
+  ],
+  "lacos": {
+   "filipa": "pai",
+   "berareu": "parente"
+  }
  }
 }

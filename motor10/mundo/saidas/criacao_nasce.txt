@@ -1,0 +1,5 @@
+Ferord nasceu em Pedra Velha: 20 anos, do povo dos humanos, cresceu na forja da família; tem a mão de Iniciante no martelo e na forja.
+Atributos: Força 65, Agilidade 50, Vigor 55, Vontade 50, Percepção 45, Afinidade 75 · PV 111 · 30 de prata.
+Família: Filipa (pai/mãe), Berareu (parente).
+Inclinação: forja e encanto. O talento e o dom foram rolados (ninguém sabe ainda o que tem: aparece fazendo).
+A MESA se refez: `turno.py abre`.
