@@ -25,7 +25,11 @@ Os módulos novos: `masmorra.py`, `manha.py`, `povos.py`, `dragoes.py`; as pági
 Os bancos novos (o `provas_mundo.py` roda os seis): `provas_4b.py` (o alicerce), `provas_masmorra.py`, `provas_manha.py`, `provas_povos.py`, `provas_dragoes.py` e `provas_fantasia.py` (a integração: o comando da vila, o povo do personagem, o covil pela masmorra, quem vê no escuro, a mina, o anão na pedra).
 
 O verificador independente conferiu a 4b e achou 13 defeitos; o acerto os consertou, com prova no banco (`MUDANCAS.md`, "Etapa 4b, segunda volta").
-**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10).
+**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10). O projeto dela está em `projeto/etapa3/` (o pedido, os dois projetos, o juízo e as perguntas ao jogador).
+
+## O save novo (decisão 20)
+
+O jogador quer um save novo no Motor 10 e escolheu **terminar o motor antes** (as etapas 3, 5, 6 e 7): o personagem nasce no Dia 1 do mundo de verdade, e não numa vila de teste. O personagem já está escolhido: **humano, ferreiro, com as inclinações na forja e no encanto.** Até lá, o `ensaio/` do Maro fica como está.
 
 ## A vila de teste do jogador (`ensaio/`)
 
