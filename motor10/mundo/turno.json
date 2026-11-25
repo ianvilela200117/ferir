@@ -7,29 +7,23 @@
  "evento0": 500,
  "dados": [],
  "lutas": [],
- "perguntas": [
+ "perguntas": [],
+ "respondidas": [
   {
    "n": 1,
    "texto": "O Dia 2 de Ferord (33 de prata, 3 de metal e 2 de madeira; a forja em 54 de 150 blocos para a mão de Treinado)?",
-   "opcoes": {
-    "a": "a rotina de prática: a jornada na forja (2 blocos pagos, 6 de prata) e mais 2 blocos de bancada sem paga; come e dorme (uns 4 blocos de bancada por dia: Treinado em umas três semanas e meia)",
-    "b": "a mesma rotina, ao lado de Filipa, pedindo o que ela sabe do Incomum: em 10 blocos de bancada junto dela, Filipa ensina a receita do Incomum (+2 nas obras Incomuns)",
-    "c": "forja o escudo (2 de madeira e 1 de metal, 1 bloco, 86%) e serve a jornada",
-    "d": "pede a Tânia, a mercadora, para ir junto até Ribeira da Névoa (3 blocos de estrada, de assalto às vezes), para ver a forja de cidade e a mesa de runas"
-   }
+   "cod": "b",
+   "opcao": "a mesma rotina, ao lado de Filipa, pedindo o que ela sabe do Incomum: em 10 blocos de bancada junto dela, Filipa ensina a receita do Incomum (+2 nas obras Incomuns)"
   },
   {
    "n": 2,
    "texto": "A missão de Nora no quadro (matar 3 lobos na Charneca dos Sinos, 19 de prata, até o Dia 9)?",
-   "opcoes": {
-    "a": "deixa passar: o lobo em bando vale grau C a B para quem vai sozinho, e o golpe dele vale o triplo em armadura Comum",
-    "b": "pergunta na vila quem iria junto (Nora, que caça; Osorino, da guarda) e o que pedem, sem tomar ainda",
-    "c": "toma a missão e vai à Charneca"
-   }
+   "cod": "a",
+   "opcao": "deixa passar: o lobo em bando vale grau C a B para quem vai sozinho, e o golpe dele vale o triplo em armadura Comum"
   }
  ],
- "respondidas": [],
  "notas": [
-  "Regra de cena do Mestre (Dia 2): se o jogador pedir, Filipa ensina a receita do Incomum em 10 blocos de bancada junto dela (contados da jornada e da prática na forja de Pedra Velha); feitos os 10, registrar: oficio.py preparo receita Incomum \"Filipa ensinou na forja da casa\". Na taverna (Dia 1), Félix contou: Ribeira da Névoa (3 blocos) tem forja de cidade e mesa de runas, e Várzea da Névoa também; Vale do Corvo, a capital, tem a grande forja e a oficina de runas, e o mestre Simão; ninguém que ele conheça vive de gravar runas. Erado contou: Pedra Velha foi saqueada nas guerras de 781, 869 e 957; Brarku, que fez forjar o Malho do Silêncio, morreu aqui em 1165."
+  "Regra de cena do Mestre (Dia 2): se o jogador pedir, Filipa ensina a receita do Incomum em 10 blocos de bancada junto dela (contados da jornada e da prática na forja de Pedra Velha); feitos os 10, registrar: oficio.py preparo receita Incomum \"Filipa ensinou na forja da casa\". Na taverna (Dia 1), Félix contou: Ribeira da Névoa (3 blocos) tem forja de cidade e mesa de runas, e Várzea da Névoa também; Vale do Corvo, a capital, tem a grande forja e a oficina de runas, e o mestre Simão; ninguém que ele conheça vive de gravar runas. Erado contou: Pedra Velha foi saqueada nas guerras de 781, 869 e 957; Brarku, que fez forjar o Malho do Silêncio, morreu aqui em 1165.",
+  "O Incomum de Filipa (pedido no Dia 2, regra de cena acima): 4 de 10 blocos feitos no Dia 2 (a jornada e 2 blocos sem paga, junto dela; a forja foi de 54 a 58). Contam os blocos de bancada na forja de Pedra Velha com Filipa ali (a jornada, a prática sem paga, a obra própria). Feitos os 6 que faltam: oficio.py preparo receita Incomum \"Filipa ensinou na forja da casa\". Repor esta nota a cada turno até a receita entrar."
  ]
 }

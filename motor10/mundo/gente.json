@@ -5011,6 +5011,12 @@
     "de": "eu",
     "o_que": "é do meu sangue",
     "peso": 4
+   },
+   {
+    "dia": 3,
+    "de": "eu",
+    "o_que": "Ferord pediu que eu lhe ensinasse o Incomum, e passou o dia comigo na bancada, até o limite das forças",
+    "peso": 1
    }
   ]
  },
@@ -10036,14 +10042,14 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 54,
+   "forja": 58,
    "martelo": 40
   },
-  "moedas": 33,
+  "moedas": 36,
   "corpo": {
    "fome": 2,
    "sono": 0,
-   "cansaco": 2
+   "cansaco": 4
   },
   "pv": 111,
   "feridas": [],
@@ -10057,12 +10063,12 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 1,
+   "pesados_dia": 2,
    "pesados": 4,
-   "jornada_dia": 1,
+   "jornada_dia": 2,
    "jornada": 2,
    "cama": {
-    "ate": 12,
+    "ate": 18,
     "onde": "pedra_velha"
    }
   },

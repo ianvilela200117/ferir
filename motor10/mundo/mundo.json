@@ -4480,6 +4480,18 @@
     "pedra_verde": [
      2,
      1
+    ],
+    "ponte_da_cruz": [
+     3,
+     2
+    ],
+    "varzea_brava": [
+     3,
+     2
+    ],
+    "castro_do_sal": [
+     3,
+     2
     ]
    },
    "janela": false
@@ -4512,6 +4524,22 @@
     "coval_do_vento": [
      2,
      1
+    ],
+    "pedra_velha": [
+     3,
+     2
+    ],
+    "castro_do_sal": [
+     3,
+     2
+    ],
+    "vale_do_corvo": [
+     3,
+     2
+    ],
+    "penha_das_rosas": [
+     3,
+     2
     ]
    },
    "janela": false
@@ -4544,6 +4572,26 @@
     "ribeira_da_nevoa": [
      2,
      1
+    ],
+    "ponte_da_cruz": [
+     3,
+     2
+    ],
+    "vale_do_corvo": [
+     3,
+     2
+    ],
+    "pedra_verde": [
+     3,
+     2
+    ],
+    "castro_branco": [
+     3,
+     2
+    ],
+    "castro_real": [
+     3,
+     2
     ]
    },
    "janela": false
