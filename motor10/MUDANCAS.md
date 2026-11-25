@@ -283,5 +283,5 @@ O livro de regras (`REGRAS.md`) não guarda história. Ela fica aqui: o que mudo
   entre quatro (a seca não está em todo mundo); o limiar da fome em 8 dias; o pedido do ferreiro quando a loja tem menos da metade do metal que quer.
 - **Bancos** (saídas em `dados/`): `python3 provas.py 600`: **114 de 114**. `python3 estresse.py 1500`: 0 erros, a saída igual à de antes. `python3 provas_regiao.py`: **15 de 15**.
   `python3 provas_ano.py 20 robos=5`: **8 de 8** (a conta fecha nos 20 anos; os rivais morrem na mediana 10 de 40, e entra gente nova; a primeira Épica nova no dia 42 (mediana);
-  as frentes, 4 desfechos e 5 barradas (mediana); o grão de 0,66 a 1,72 da base, a fome em 45% dos mundos; o ano em 21 segundos; os robôs). `python3 provas_mundo.py`: ver `dados/`.
+  as frentes, 4 desfechos e 5 barradas (mediana); o grão de 0,66 a 1,72 da base, a fome em 45% dos mundos; o ano em 21 segundos; os robôs). `python3 provas_mundo.py`: **248 de 248** (as 225 de antes, as 15 peças e as 8 metas do ano, com 20 sementes).
 - **O mundo de verdade:** `motor10/mundo/`, a semente 5 (a primeira que passou em todas as faixas do banco do ano), com as perguntas da criação abertas.
