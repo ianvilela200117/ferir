@@ -12,6 +12,7 @@ SEMANA = 7
 ESTACAO = 91
 ANO = 364
 ESTACOES = ['primavera', 'verão', 'outono', 'inverno']
+ESTACOES_ARQ = ['primavera', 'verao', 'outono', 'inverno']      # o nome da estação no arquivo do registro que acabou (eventos/1_verao.jsonl.gz: sem acento no nome do arquivo)
 COLHEITA = [0.5, 1, 2.5, 0]
 
 # ---------- o corpo (três medidores de 0 a 10) ----------
@@ -115,16 +116,18 @@ MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FE
 EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'vestir', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
            'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada', 'casa',
            'talento', 'estudar', 'lancar', 'rito', 'beber', 'alquimia', 'encantar', 'maldicao', 'servico', 'covil',        # os da etapa da magia (projeto/ETAPA_MAGIA.md, seção 11)
-           'masmorra', 'masmorra_vida', 'dragão']        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
+           'masmorra', 'masmorra_vida', 'dragão',        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
+           'viagem', 'regiao', 'frete', 'mercado', 'gente', 'noticia', 'caixa', 'missao', 'encomenda', 'furto', 'companhia']      # os da etapa 3 (projeto/ETAPA_3.md, seção 5)
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
-MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa', 'covil', 'masmorra_vida', 'dragão')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
+MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa', 'covil', 'masmorra_vida', 'dragão', 'regiao', 'mercado', 'gente', 'noticia')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
 RETOMAR_FATOS = 40          # o teto de linhas de fatos no RETOMAR.md; passando disso, a primeira linha diz quantos ficaram de fora e como lê-los
 OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura', 'alquimia', 'encanto', 'arcano', 'fé', 'verde', 'pacto', 'manha']      # os ofícios que têm maestria e treino, como as armas
                             # (maestria.forja, treino.caça); da etapa da magia: a alquimia e o encanto (sobem pela tabela da forja) e as quatro tradições (sobem pela das armas);
                             # da etapa 4b: a manha, o ofício do ladino (sobe pela das armas)
-MODULOS = ['mercado', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas', 'masmorra', 'manha', 'povos', 'dragoes']
+MODULOS = ['mercado', 'regiao', 'viagem', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas', 'masmorra', 'manha', 'povos', 'dragoes',
+           'gente', 'missoes', 'caixa', 'noticias']      # a etapa 3: a região e a viagem logo depois do mercado (o dia do mercado, e então o da região); a gente, as missões, a caixa e, por último, a notícia (que anda com o que nasceu no dia)
 # os módulos do mundo (o que ainda não existe fica de fora sem quebrar nada: estado.modulos). Cada um pode ter: virada(E) (roda quando o dia vira) · bloco(E, pid, esforco, dorme)
 # (os efeitos de UM bloco em quem age, vai junto ou espera: a volta da Mana) · vestiu(E, pid, iid) (depois de pôr uma peça em uso) · voce(E) (linhas no "Você" da MESA) · mesa(E) ·
 # so_mestre(E) (linhas para o SÓ O MESTRE) · retomar(E) (linhas para o RETOMAR.md) · recusa_fecha(E) (os motivos para o turno não fechar)
@@ -158,3 +161,63 @@ PORTAS = ('aberta', 'fechada', 'trancada', 'emperrada', 'arrombada')     # o est
 PORTA_MATERIAL = ('madeira', 'ferro', 'pedra')
 ALARME_MAX = 5              # o alarme da masmorra vai de 0 (quieta) a isto (acordada)
 ATENTOS = (-1, 0, 1)        # quem mora na sala: dormindo, à toa, alerta
+
+# ---------- a etapa 3 no estado (a região que responde: o vocabulário que o gravador confere; os números de cada frente moram nas páginas delas; o contrato: projeto/ETAPA_3.md) ----------
+TIPOS_LUGAR = ('vila', 'ermo', 'masmorra', 'sala', 'capital', 'cidade', 'aldeia', 'fronteira')       # os tipos de lugar (a fronteira: o mundo de fora, que não tem gente)
+POVOADOS = ('capital', 'cidade', 'vila', 'aldeia')                 # os tipos de lugar que são povoado (têm povo, bolsa e mercado)
+ROTAS = ('estrada', 'caminho', 'trilha', 'fora')                   # o tipo da rota (fora: a que sai da região)
+ROTA_BLOCOS = (1, 6)                                                # os blocos de uma rota, de ponta a ponta
+ROTA_EXPOE = (1, 0.3)                                               # o quanto a rota cruza o ermo dela: cruza (1) ou passa perto (0,3)
+ROTA_MUDA = ('falta', 'aberta')                                     # o que muda numa rota depois de nascer, fora do Mestre (o que o carreto deixou ontem; aberta ou fechada)
+SAFRA = (0.3, 1.5)                                                  # a colheita do ano de um lugar (1: a de sempre)
+BANDO_MAX = 50                                                      # os salteadores contados num ermo
+POS_MAX = 100                                                       # o mapa é um quadro de 0 a isto, nos dois eixos
+VIAGEM_FASES = ('estrada', 'encontro', 'luta', 'acampa', 'parada')  # a fase da viagem aberta (marca.viagem)
+PRECO_FAIXA = (0.6, 1.5)                                            # o fator de preço que o ferreiro diz (marca.preco)
+ANIMAIS = ('mula', 'boi')                                           # o animal de carga (item tipo "animal"); o carro (tipo "carro") não tem qual
+PAPEIS = ('alcaide', 'taverneiro', 'caçador', 'lavrador', 'ferreiro', 'mercador', 'guarda', 'curandeiro', 'lenhador', 'mestre ferreiro', 'encantador', 'capitão',
+          'sacerdote', 'caravaneiro', 'ladino', 'aprendiz', 'mago', 'bruxa', 'clérigo', 'alquimista', 'nobre', 'viajante')      # o papel da gente com nome (B1 pode acrescentar os seus em tabelas_gente.PAPEIS)
+FATOS = ('entregou', 'atrasou', 'cumpriu', 'salvou', 'pagou', 'deu', 'ouviu', 'nao_entregou', 'recusou', 'calou', 'falhou', 'ferido', 'morto_junto', 'roubou',
+         'viu_roubar', 'desconfia')                                 # o tipo de um fato da memória (os pesos e as frases: tabelas_gente.FATOS, com estas chaves; B1 pode acrescentar)
+CANAIS = ('viu', 'ouviu', 'boato')                                  # como o fato chegou a quem lembra
+MEMORIA_MAX = 12                                                    # quantos fatos cabem na memória de alguém: o 13º faz esquecer o mais leve de hoje (o mais velho, no empate)
+PESO_MAX = 10                                                       # o peso de um fato (e o laço, e a opinião) vai de −isto a isto
+ESFRIA = ((3, 28), (7, 56))                                         # o fato esfria: de peso até 3, perde 1 a cada 28 dias; até 7, a cada 56; de 8 para cima, nunca (a conta sai na hora de ler)
+LACOS_MAX = 6                                                       # os laços de uma pessoa
+QUERERES = ('nada', 'encomendar', 'melhorar', 'consertar', 'missao', 'viajar', 'laco', 'falar', 'cobrar', 'agradecer', 'furtar')      # o querer da semana (B1 pode acrescentar em tabelas_gente.QUERERES)
+FAMA_EIXOS = ('oficio', 'feito', 'crime')                           # os eixos da fama, por lugar
+FAMA_MAX = 100
+FAMA_ESFRIA = 28                                                    # a fama esfria 1 ponto a cada tantos dias (a conta sai na hora de ler)
+CAIXA_MAX = 7                                                       # os pedidos abertos na caixa de uma pessoa
+CAIXA_FECHA = ('feito', 'vencido', 'forcado')                       # como um pedido sai da caixa
+MOTIVOS = ('item', 'lugar', 'pessoa', 'missao', 'memoria', 'rota', 'noticia')     # o que o motivo de um pedido da caixa aponta (tem de existir)
+MISSOES = ('levar', 'escoltar', 'caçar', 'limpar', 'buscar', 'encomenda')       # o tipo da missão
+MISSAO_ESTADOS = ('aberta', 'pega', 'cumprida', 'falhada', 'vencida', 'largada')   # cumprida, falhada, vencida e largada são fechadas
+MISSAO_FECHA = ('cumprida', 'falhada', 'vencida', 'largada')
+MISSAO_MUDA = ('quem', 'estado', 'prazo', 'caucao', 'paga', 'alvo', 'item', 'feito', 'nota')      # o que muda numa missão depois de aberta, fora do Mestre (quem a pediu, onde, o tipo e o grau, só o Mestre)
+GRAUS = ('F', 'E', 'D', 'C', 'B', 'A', 'S')                         # o grau do perigo (o bicho, a rota, a masmorra, a missão) e o teto de quem o enfrenta sem medo
+NOTICIA_BOATO = 4                                                   # depois de tantos saltos a notícia vira boato (o nome some, o peso cai)
+
+# ---------- a conta rápida provisória de quem não é o personagem (etapa 3; a etapa 5 troca esta tabela pela calibrada contra o luta.py: rapida.py) ----------
+# pelo teto de quem vai (o grau que ele enfrenta sem medo) MENOS o grau do perigo (de −2 para baixo, a linha −2; de 1 para cima, a linha 1). Chute provisório, juntando os
+# dois projetos: a missão é a do projeto B (cumpre 90%, 65%, 25%; morre em 15% das falhas acima do teto); o encontro na estrada segue as lutas medidas pelo projeto A
+# (o Maro sozinho morre em 85% contra os lobos e em 20% contra o javali; com companhia, de metade a um quarto disso)
+RAPIDA = {1: dict(cumpre=0.90, morre_falha=0.0, vence=0.90, morre=0.03),
+          0: dict(cumpre=0.65, morre_falha=0.0, vence=0.65, morre=0.15),
+          -1: dict(cumpre=0.25, morre_falha=0.15, vence=0.30, morre=0.45),
+          -2: dict(cumpre=0.05, morre_falha=0.15, vence=0.05, morre=0.80)}
+RAPIDA_COMPANHIA = 0.5                                              # com companhia (um ou mais que vão junto), a chance de morrer no encontro vezes isto
+RAPIDA_DIAS = (2, 5)                                                # a missão de quem não é o personagem leva de tantos a tantos dias
+RAPIDA_GASTA = 3                                                    # e as peças dele voltam gastas em tantos pontos
+
+# ---------- a MESA (o orçamento: o teto de cada seção, em KB de 1.000 letras do arquivo; o turno.py avisa a que passa) ----------
+MESA_TETO = dict(voce=1.0, aqui=0.8, rotas=0.6, viagem=0.7, gente=1.0, caixa=0.8, quadro=0.7, mercado=0.8, oficios=0.8, perguntas=0.5, mestre=1.0)
+MESA_TOTAL = 8.0                                                    # a MESA inteira, no povoado e na estrada
+MESA_SECOES = (('Você', 'voce'), ('Aqui', 'aqui'), ('Daqui se vai', 'rotas'), ('A viagem', 'viagem'), ('Quem está aqui', 'gente'), ('A caixa', 'caixa'),
+               ('O quadro', 'quadro'), ('O que se diz', 'quadro'), ('Dois fatos', 'quadro'), ('O que se conta', 'quadro'), ('O mercado', 'mercado'),
+               ('A oficina', 'oficios'), ('A caça', 'oficios'), ('Os bichos', 'oficios'), ('A magia', 'oficios'), ('A botica', 'oficios'),
+               ('Perguntas', 'perguntas'), ('SÓ O MESTRE', 'mestre'))      # o título da seção (o começo dele) e a parte do orçamento em que ela conta
+MESA_ORDEM = ['regiao', 'viagem', 'gente', 'caixa', 'missoes', 'noticias']       # as seções dos módulos da etapa 3 vêm antes das de hoje, nesta ordem (as de hoje seguem a ordem de MODULOS)
+MESA_NA_ESTRADA = ('viagem', 'gente', 'caixa', 'missoes', 'noticias')            # com a viagem aberta, só estes módulos põem seção na MESA (saem o "Aqui", o mercado e a oficina)
+MESA_SO_CENA = ('talento', 'magia_mundo', 'manha')                  # os módulos cujo SÓ O MESTRE fala de pessoas: só de quem está em cena (estado.na_cena); o resto, `talento.py mestre`
+CAIXA_PERGUNTA = 6                                                  # o pedido da caixa que vence em até tantos blocos (um dia) vira pergunta do turno sozinho, e o fecha recusa sem ela

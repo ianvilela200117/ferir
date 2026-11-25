@@ -33,6 +33,17 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     · ['pessoa', id, 'marca.masmorra', 'poe', {...}] (a descida aberta) · ['item', id, 'talhe', 'poe', 'miúdo' | None] (só armadura: o corpo para que foi feita)
     (os tipos novos de item: gazua, chave; o bem novo: tocha; no lugar: a masmorra e a sala (molde, niveis, entrada, portas, alarme, vagantes, limpa, origem; masmorra, nivel,
     largura, acesa, cat, atento, armadilhas, guardado, segredos, chefe, do_morto), a gente (povos) e o dragão (dragao))
+  OS DA ETAPA 3 (a região que responde; a forma exata: projeto/ETAPA_3.md, seção 4):
+    ['rota', 'nasce', id, registro] (só em gera ou mestre) · ['rota', id, campo ou campo.sub, 'poe'|'soma', valor] (depois de nascer: falta e aberta; o resto, só o Mestre)
+    · ['pessoa', id, 'papel', 'poe', papel] (só em gera ou mestre) · ['pessoa', id, 'memoria', 'junta'|'esquece'|'retribui', ...] · ['pessoa', id, 'querer', 'poe', reg]
+    · ['pessoa', id, 'mora'|'mapa', 'poe', ...] · ['pessoa', id, 'mapa', 'junta', {lugares, rotas}] · ['lacos', a, b, 'soma'|'poe', n] (o laço de gente; o 'laco' da magia é com o ermo)
+    · ['fama', quem, lugar, eixo, 'soma', n] · ['noticia', 'nasce', reg] · ['noticia', id, 'chega', lugar, saltos] · ['noticia', id, 'some']
+    · ['caixa', 'abre', reg] · ['caixa', id, 'fecha', como] · ['missao', 'abre', reg] · ['missao', id, campo, 'poe', v] · ['missao', id, 'guarda', 'soma', n] · ['missao', id, 'fecha', desfecho] · ['missao', id, 'some']
+    (no lugar: bolsa, safra, pos, bando, vigia; os tipos capital, cidade, aldeia, fronteira; na pessoa: marca.viagem, marca.preso, marca.preco, marca.retribui; no item: animal, carro)
+  O GRAVADOR COPIA SÓ O QUE O EVENTO TOCA (a pessoa, o lugar, o item, a obra, a rota, a entrada que o efeito nomeia; a morte copia o que precisa): o mesmo mundo, byte a byte,
+    que o gravador de antes, que fica guardado (MOTOR10_GRAVADOR=inteiro) só para o banco comparar. E A PRATA NÃO NASCE NEM SOME: fora de "gera" e "mestre", o evento que
+    muda a soma da prata (as moedas, o estoque.prata e a bolsa dos lugares, a guarda das missões) é recusado, com a conta.
+  O REGISTRO: o eventos.jsonl é a estação aberta; a estação que acaba vai para eventos/ANO_ESTACAO.jsonl.gz. Quem lê o histórico inteiro lê por `eventos()`.
   QUEM ESTÁ NUMA DESCIDA (marca.masmorra) também está FORA: `fora()` diz a sala onde o grupo está. A morte lá dentro deixa tudo na sala; quem comanda e morre solta quem ia junto.
   A ARMADURA É FEITA PARA UM CORPO (o `talhe`: sem ele, de gente; "miúdo"): a que não serve no corpo do dono não entra em uso. (O `corpo` de uma peça solta é outra coisa: de quem era o morto.)
   A PEÇA MALDITA NÃO SAI: enquanto o dono tem uma maldição andando que veio dela, a peça não sai de uso nem muda de dono. O morto não tem maldição andando
@@ -44,6 +55,8 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     tesouro, a parte do morto fica escrita à parte, em `do_morto`: não se pega, e o estoque não desce abaixo dela sem o Mestre soltá-la no mesmo evento).
     O QUE ERA DE UM MORTO NÃO MUDA DE MÃO SOZINHO: quem passa ali acha o corpo, mas quem fica com o quê é decisão de cena, por evento "mestre" (o herdeiro é da etapa 6).
   QUEM SAIU para o ermo (a saída de caça ou de coleta, escrita em marca.caca) está FORA: `fora()` diz onde, e `presente()` recusa o ato da vila.
+    QUEM VIAJA (marca.viagem, etapa 3) também está fora: `fora()` diz o ermo da rota (ou, se ela não cruza ermo, a ponta mais perto); e QUEM ESTÁ PRESO (marca.preso,
+    até o bloco que ela diz) está no lugar dele mas não age: `presente()` recusa os dois.
   COM UMA LUTA ABERTA (no caderno do turno) O MUNDO NÃO ANDA: `aplica()` só aceita a luta que volta ao estado (evento "luta"), a mão do Mestre (evento "mestre")
     e a nota da saída de caça que diz que ela está naquela luta. O resto é recusado, de qualquer pessoa, com a frase que diz como acabar ou soltar a luta.
   O que o Mestre inventa em cena entra por um evento "mestre", com os mesmos efeitos. Fora disso, não aconteceu.
@@ -56,16 +69,18 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
      (o Mestre): python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas na estrada"      um evento "mestre", com os efeitos em JSON
 """
-import copy, hashlib, json, os, random, sys
+import copy, gzip, hashlib, json, os, random, sys
 import tabelas as T
 import tabelas_mundo as M
 import tabelas_bichos as TB
 import tabelas_talento as TT
 
 AQUI = os.path.dirname(os.path.abspath(__file__))
-ARQS = ('relogio', 'lugares', 'gente', 'itens', 'turno')
+ARQS_BASE = ('relogio', 'lugares', 'gente', 'itens', 'turno')        # os arquivos de sempre (o save de antes da etapa 3 tem só estes)
+PADRAO = dict(rotas={}, noticias=dict(seq=0, ativas={}), caixa=dict(seq=0, abertos={}), missoes=dict(seq=0, itens={}))      # OS ARQUIVOS DA ETAPA 3, com o valor padrão:
+ARQS = ARQS_BASE + tuple(PADRAO)                                     # o save que não os tem abre com ele, e só os grava quando deixam de ser o padrão
 PARTES_VESTE = ('arma', 'arma2', 'escudo', 'veste', 'foco', 'pescoco')
-TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave')      # os tipos do Livro de Itens (foco a escrito: etapa da magia; gazua e chave: etapa 4b)
+TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave', 'animal', 'carro')      # os tipos do Livro de Itens (foco a escrito: etapa da magia; gazua e chave: etapa 4b; animal e carro: etapa 3)
 USO_DO_TIPO = dict(arma='arma', arma2='arma', escudo='escudo', veste='armadura', foco='foco', pescoco='amuleto')     # onde cada uso pede que tipo de peça
 COM_ENCANTO = ('arma', 'armadura', 'escudo')        # as peças que levam encanto (o foco e o amuleto já são magia)
 TALENTO_EVENTOS = ('gera', 'mestre', 'talento')     # só nestes eventos se grava o talento e o dom (o talento já rolado, só em "mestre")
@@ -78,28 +93,103 @@ def pasta(): return os.environ.get('MOTOR10_MUNDO') or os.path.join(AQUI, 'mundo
 def carrega():
     p = pasta()
     if not os.path.exists(os.path.join(p, 'relogio.json')): sys.exit(f'não há mundo em {p} (falta o relogio.json)')
-    E = {k: json.load(open(os.path.join(p, k + '.json'), encoding='utf-8')) for k in ARQS}
+    E = {}
+    for k in ARQS:
+        arq = os.path.join(p, k + '.json')
+        E[k] = json.load(open(arq, encoding='utf-8')) if k in ARQS_BASE or os.path.exists(arq) else copy.deepcopy(PADRAO[k])      # o arquivo da etapa 3 que falta: o padrão
     E['_novos'] = []
     return E
 
 
+def padroes(E):
+    """põe em E, com o valor padrão, os arquivos da etapa 3 que ele não tem (o estado montado à mão, o save de antes): nada muda no que já existe"""
+    for k, v in PADRAO.items():
+        if k not in E: E[k] = copy.deepcopy(v)
+    return E
+
+
 def grava(E):
-    """escreve o estado inteiro (cada arquivo de uma vez, por troca) e junta os eventos novos ao histórico"""
-    p = pasta(); os.makedirs(p, exist_ok=True)
+    """escreve o estado inteiro (cada arquivo de uma vez, por troca) e junta os eventos novos ao histórico (a estação aberta; a que acabou vai comprimida para eventos/).
+    O arquivo da etapa 3 que o save não tem e que segue no padrão não é escrito: o save de antes fica como era."""
+    p = pasta(); os.makedirs(p, exist_ok=True); padroes(E)
     for k in ARQS:
+        if k in PADRAO and E[k] == PADRAO[k] and not os.path.exists(os.path.join(p, k + '.json')): continue
         tmp = os.path.join(p, k + '.json.tmp')
         json.dump(E[k], open(tmp, 'w', encoding='utf-8'), ensure_ascii=False, indent=1)
         os.replace(tmp, os.path.join(p, k + '.json'))
     if E['_novos']:
-        with open(os.path.join(p, 'eventos.jsonl'), 'a', encoding='utf-8') as f:
-            for ev in E['_novos']: f.write(json.dumps(ev, ensure_ascii=False) + '\n')
+        aberta = os.path.join(p, 'eventos.jsonl'); est = _estacao_do_arquivo(aberta); f = None
+        try:
+            for ev in E['_novos']:
+                e = _estacao_do_dia(ev.get('dia', 1))
+                if est is not None and e > est:                 # A ESTAÇÃO ACABOU: o arquivo aberto vai comprimido para eventos/, e começa outro
+                    if f: f.close(); f = None
+                    _arquiva(p, est); est = None
+                if f is None: f = open(aberta, 'a', encoding='utf-8')
+                if est is None: est = e
+                f.write(json.dumps(ev, ensure_ascii=False) + '\n')
+        finally:
+            if f: f.close()
         E['_novos'] = []
+
+
+# ---------- o registro por estação (etapa 3): eventos.jsonl é a estação aberta; a que acabou vai para eventos/ANO_ESTACAO.jsonl.gz ----------
+def _estacao_do_dia(dia):
+    """(o ano, a estação) do dia: (1, 0) é a primavera do ano 1"""
+    return ((dia - 1) // M.ANO + 1, ((dia - 1) % M.ANO) // M.ESTACAO)
+
+
+def _estacao_do_arquivo(arq):
+    """a estação do primeiro evento do arquivo aberto (lê só a primeira linha), ou None se ele não existe ou está vazio"""
+    if not os.path.exists(arq): return None
+    with open(arq, encoding='utf-8') as f: l = f.readline()
+    try: return _estacao_do_dia(json.loads(l).get('dia', 1)) if l.strip() else None
+    except ValueError: return None
+
+
+def arq_estacao(ano, est): return os.path.join('eventos', f"{ano}_{M.ESTACOES_ARQ[est]}.jsonl.gz")       # o nome do arquivo de uma estação que acabou (relativo à pasta do save)
+
+
+def _arquiva(p, est):
+    """a estação acabou: o eventos.jsonl vai comprimido (gzip) para eventos/ANO_ESTACAO.jsonl.gz (se já houver, junta no fim) e sai da pasta"""
+    aberta = os.path.join(p, 'eventos.jsonl'); dest = os.path.join(p, arq_estacao(*est)); os.makedirs(os.path.dirname(dest), exist_ok=True)
+    with open(aberta, 'rb') as a, gzip.open(dest, 'ab') as g: g.write(a.read())
+    os.remove(aberta)
+
+
+def _estacoes(p):
+    """os arquivos das estações que acabaram, na ordem do tempo"""
+    d = os.path.join(p, 'eventos')
+    if not os.path.isdir(d): return []
+    def chave(n):
+        ano, _, est = n[:-len('.jsonl.gz')].partition('_')
+        return (int(ano) if ano.isdigit() else 0, M.ESTACOES_ARQ.index(est) if est in M.ESTACOES_ARQ else 0)
+    return [os.path.join(d, n) for n in sorted((n for n in os.listdir(d) if n.endswith('.jsonl.gz')), key=chave)]
+
+
+def eventos(E=None, desde=0):
+    """O HISTÓRICO (a função única de quem lê o registro): os eventos de id maior que `desde`, na ordem, das estações que acabaram (comprimidas), da estação aberta
+    e, com E, os que ainda não foram gravados (E['_novos']). Só abre a estação velha que ainda pode ter evento depois de `desde`."""
+    p = pasta(); aberta = os.path.join(p, 'eventos.jsonl'); partes = []
+    def le(linhas): return [e for e in (json.loads(x) for x in linhas if x.strip()) if e.get('id', 0) > desde]
+    if os.path.exists(aberta):
+        with open(aberta, encoding='utf-8') as f: linhas = f.read().splitlines()
+        partes.append(le(linhas)); primeiro = json.loads(linhas[0]).get('id', 0) if linhas and linhas[0].strip() else None
+    else: primeiro = None
+    if primeiro is None or primeiro > desde + 1:
+        for arq in reversed(_estacoes(p)):
+            with gzip.open(arq, 'rt', encoding='utf-8') as f: linhas = f.read().splitlines()
+            partes.insert(0, le(linhas))
+            if linhas and json.loads(linhas[0]).get('id', 0) <= desde + 1: break
+    out = [e for parte in partes for e in parte]
+    if E is not None: out += [e for e in E.get('_novos', []) if e.get('id', 0) > desde]
+    return out
 
 
 def novo(semente=1):
     """um estado vazio (o gerador e as provas partem daqui)"""
-    return dict(relogio=dict(semente=semente, dia=1, bloco=2, eventos=0), lugares={}, gente={}, itens=dict(seq=0, itens={}, oseq=0, obras={}),
-                turno=dict(n=1, aberto=dict(dia=1, bloco=2), dados=[], lutas=[], perguntas=[], respondidas=[], notas=[]), _novos=[])
+    return padroes(dict(relogio=dict(semente=semente, dia=1, bloco=2, eventos=0), lugares={}, gente={}, itens=dict(seq=0, itens={}, oseq=0, obras={}),
+                        turno=dict(n=1, aberto=dict(dia=1, bloco=2), dados=[], lutas=[], perguntas=[], respondidas=[], notas=[]), _novos=[]))
 
 
 # ---------- o tempo e o acaso do mundo ----------
@@ -127,7 +217,13 @@ def fora(E, pid):
     s = (E['gente'][pid].get('marca') or {}).get('caca')
     if isinstance(s, dict) and s.get('ermo') in E['lugares']: return s['ermo']
     d = descida(E, pid)
-    return d['sala'] if d else None
+    if d: return d['sala']
+    v = viagem(E, pid)                                      # A VIAGEM (etapa 3): o ermo que a rota cruza; se ela não cruza ermo, a ponta mais perto de onde o grupo está
+    if not v: return None
+    r = (E.get('rotas') or {}).get(v.get('rota')) or {}
+    if r.get('ermo') in E['lugares']: return r['ermo']
+    perto = v.get('de') if 2 * (v.get('feito') or 0) < (v.get('blocos') or 1) else v.get('para')
+    return perto if perto in E['lugares'] else None
 
 
 def quem_desce(E, pid):
@@ -240,6 +336,9 @@ def presente(E, pid, o_que='agir aqui'):
     sem_luta(E)
     f = fora(E, pid)
     if f and quem_desce(E, pid): sys.exit(f"{p['nome']} está {em(E, f)}, na descida (a descida está aberta): não pode {o_que}. `masmorra.py ver` diz onde o grupo está; `masmorra.py sair` volta para casa.")
+    if f and quem_viaja(E, pid): sys.exit(f"{p['nome']} está na estrada (a viagem está aberta): não pode {o_que}. `viagem.py ver` diz onde o grupo está; `viagem.py segue` anda.")
+    pr = preso(E, pid)
+    if pr: sys.exit(f"{p['nome']} está preso {em(E, p['lugar'])} até o Dia {pr // M.BLOCOS_DIA + 1}, {M.BLOCOS[pr % M.BLOCOS_DIA]}: não pode {o_que}.")
     if f: sys.exit(f"{p['nome']} está fora, {em(E, f)} (a saída está aberta): não pode {o_que}. `caca.py ver` diz o que há à frente; `caca.py volta` fecha a saída.")
     em_cena(E, pid)
     return E['gente'][pid]
@@ -384,6 +483,7 @@ def _lugar_erro(E, raiz, sub, val):
         if 'cabecas' in d and not (_int(d['cabecas']) and d['cabecas'] >= 0): return 'as cabeças do covil são um número inteiro de zero para cima'
         return None
     if raiz in CAMPOS_4B: return _lugar4b_erro(E, raiz, sub, val)
+    if raiz in CAMPOS_LUGAR_3: return _lugar3_erro(E, raiz, sub, val)
     if sub: return None
     if raiz in ('botica', 'runas', 'santuario'): return None if val is None or (_int(val) and 0 <= val <= M.BANCADA_MAX) else f'"{raiz}" vai de 0 a {M.BANCADA_MAX}, ou nada'
     if raiz == 'maldito': return None if val is None else _molde_erro(val)
@@ -528,6 +628,8 @@ def _morre(E, pid):
     if l.get('tipo') == 'sala' and not l['do_morto']: del l['do_morto']
     s = (p.get('marca') or {}).get('caca')
     if isinstance(s, dict) and s.get('de'): p['marca'].pop('caca')
+    v = (p.get('marca') or {}).get('viagem')                   # A VIAGEM (etapa 3): quem ia junto e morre sai dela; a de quem comandava fica escrita (o corpo ficou na estrada,
+    if isinstance(v, dict) and v.get('de') is not None: p['marca'].pop('viagem')       # no ermo da rota), para a viagem fazer as contas; quem ia junto segue nela (cena do Mestre)
     d = (p.get('marca') or {}).get('masmorra')                 # A DESCIDA (etapa 4b): quem ia junto e morre sai dela; quem comanda e morre solta quem ia junto (saem sozinhos:
     if isinstance(d, dict) and d.get('de') is not None: p['marca'].pop('masmorra')       # é cena do Mestre); a descida de quem comandava fica escrita, para a masmorra fazer as contas
     elif isinstance(d, dict):
@@ -553,7 +655,7 @@ def _nasce_pessoa(E, ef):
     if not isinstance(ca, dict) or any(not _num(v) or v <= 0 for v in ca.values()): return _erro(ef, 'a carga é {bem: quanto}, acima de zero')
     if not _int(mo) or mo < 0: return _erro(ef, 'a prata é um número inteiro de zero para cima')
     if r.get('jogador') and any(q.get('jogador') for q in E['gente'].values()): return _erro(ef, 'já há um personagem do jogador')
-    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre') + NASCE_MAGIA + PESSOA_4B]
+    ruins = [k for k in r if k not in ('nome', 'nivel', 'atributos', 'lugar', 'grau_oficio', 'maestria', 'treino', 'carga', 'moedas', 'jogador', 'marca', 'sobre') + NASCE_MAGIA + PESSOA_4B + NASCE_3]
     if ruins: return _erro(ef, f'a pessoa não tem o campo "{ruins[0]}"')
     p = dict(nome=r['nome'], lugar=r['lugar'], grau_oficio=of, nivel=r['nivel'], atributos={a: at[a] for a in T.ATRIBUTOS}, maestria=dict(ma), treino=dict(tr), moedas=mo,
              corpo={m: 0 for m in M.MEDIDORES}, pv=0, feridas=[], estado='vivo', marca=copy.deepcopy(r.get('marca') or {}), carga=dict(ca))
@@ -570,6 +672,11 @@ def _nasce_pessoa(E, ef):
             if e: return _erro(ef, e)
             p[k] = r[k]
     if r.get('sobre'): p['sobre'] = str(r['sobre'])
+    for k in NASCE_3:                                       # a etapa 3: o papel, onde mora, o mapa, os laços, a memória, o querer, a fama (a gente que a história ou o gerador põe já pronta)
+        if r.get(k) is not None:
+            e = _pessoa3_erro(E, p, k, r[k], pid)
+            if e: return _erro(ef, e)
+            p[k] = copy.deepcopy(r[k])
     E['gente'][pid] = p
 
 
@@ -584,6 +691,7 @@ def _nasce_lugar(E, ef):
     for k, v in r.items():
         if k in ('nome', 'em', 'tipo', 'habitat', 'sobre'):
             if not isinstance(v, str): return _erro(ef, f'"{k}" é texto')
+            if k == 'tipo' and v not in M.TIPOS_LUGAR: return _erro(ef, f'o tipo do lugar é um de: {", ".join(M.TIPOS_LUGAR)}')
         elif k != 'estoque':
             e = _lugar_erro(E, k, None, v)
             if e: return _erro(ef, e)
@@ -605,6 +713,7 @@ def _um(E, ef):
         if not isinstance(campo, str): return _erro(ef, 'o campo é um nome')
         raiz, _, sub = campo.partition('.')
         if campo in PESSOA_MAGIA: return _pessoa_magia(E, pid, p, campo, op, val, ef)
+        if campo in PESSOA_3: return _pessoa3(E, pid, p, campo, op, val, ef)
         if campo in PESSOA_4B:
             if op != 'poe': return _erro(ef, f'"{campo}" só aceita "poe"')
             e = _pessoa4b_erro(E, p, campo, val) if val is not None else None
@@ -622,12 +731,18 @@ def _um(E, ef):
             return
         if raiz in ('treino', 'maestria', 'marca'):
             if not sub: return _erro(ef, f'"{raiz}" pede o nome depois do ponto (treino.espada)')
-            if raiz == 'marca' and sub in ('caca', 'masmorra') and op == 'poe' and val is not None:      # UMA SAÍDA E UMA DESCIDA NÃO ANDAM JUNTAS (etapa 4b)
-                outra = 'masmorra' if sub == 'caca' else 'caca'
-                if isinstance((p.get('marca') or {}).get(outra), dict): return _erro(ef, f"{p['nome']} já está n{'a descida' if outra == 'masmorra' else 'uma saída ao ermo'} aberta: feche-a antes")
+            if raiz == 'marca' and sub in ('caca', 'masmorra', 'viagem') and op == 'poe' and val is not None:      # UMA SAÍDA, UMA DESCIDA E UMA VIAGEM NÃO ANDAM JUNTAS (etapas 4b e 3)
+                for outra in ('caca', 'masmorra', 'viagem'):
+                    if outra != sub and isinstance((p.get('marca') or {}).get(outra), dict): return _erro(ef, f"{p['nome']} já está n{ABERTO_DIZ[outra]} aberta: feche-a antes")
                 if sub == 'masmorra':
                     e = _descida_erro(E, val, pid)
                     if e: return _erro(ef, f'a descida (marca.masmorra) {e}')
+                if sub == 'viagem':
+                    e = _viagem_erro(E, val, pid)
+                    if e: return _erro(ef, f'a viagem (marca.viagem) {e}')
+            if raiz == 'marca' and sub in MARCAS_3 and op == 'poe' and val is not None:      # o preso, o fator de preço, os fatos já agradecidos (etapa 3)
+                e = _marca3_erro(sub, val)
+                if e: return _erro(ef, e)
             if raiz != 'marca' and sub not in T.FAMILIAS and sub not in M.OFICIOS: return _erro(ef, f'arma ou ofício desconhecido: "{sub}"')
             if raiz != 'marca' and not _num(val): return _erro(ef, f'"{campo}" é um número')
             d = p.setdefault(raiz, {})
@@ -676,6 +791,7 @@ def _um(E, ef):
             p['feridas'].pop(ef[3]); return
         return _erro(ef, "use ['ferida', id, 'abre', parte, grave], ['ferida', id, 'repousa', n] ou ['ferida', id, 'sara', indice]")
     if v == 'maldicao': return _maldicao(E, ef)
+    if v in VERBOS_3: return VERBOS_3[v](E, ef)
     if v == 'lugar' and len(ef) > 1 and ef[1] == 'nasce': return _nasce_lugar(E, ef)
     if v == 'lugar':
         if len(ef) != 5 or ef[3] not in ('soma', 'poe') or not isinstance(ef[2], str): return _erro(ef, "use ['lugar', id, campo ou campo.sub, 'soma'|'poe', valor]")
@@ -737,7 +853,7 @@ def _um(E, ef):
         it = copy.deepcopy(ef[2])
         if not isinstance(it, dict) or it.get('tipo') not in TIPOS_ITEM or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
-        e = _item_magia_erro(it) or _item4b_erro(it)
+        e = _item_magia_erro(it) or _item4b_erro(it) or _item3_erro(it)
         if e: return _erro(ef, e)
         if not (isinstance(it['dur'], list) and len(it['dur']) == 2 and all(_int(x) for x in it['dur']) and 0 <= it['dur'][0] <= it['dur'][1]): return _erro(ef, 'a durabilidade é [quanto tem, quanto cabe]')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
@@ -804,10 +920,10 @@ def _um(E, ef):
                 return _erro(ef, f'{it["nome"]} é de {"gente miúda" if it.get("talhe") == "miúdo" else "gente grande"}: não serve no corpo de {d["nome"]}. Um ferreiro a ajusta (`oficio.py ajustar {it.get("id", "ITEM")} para={it["dono"]}`)')
             it['uso'] = val; return
         if campo == 'dur' and op == 'soma' and _num(val):
-            if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
+            if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave', 'animal', 'carro'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
         return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia (junta) · encanto (grava, gasta, apaga)')
-    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao)')
+    return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao, {", ".join(VERBOS_3)})')
 
 
 # ---------- a etapa da magia no gravador (as formas: projeto/ETAPA_MAGIA.md, seções 1 a 7) ----------
@@ -1036,14 +1152,131 @@ def _encanto(E, it, op, val, ef):
     return _erro(ef, "use ['item', id, 'encanto', 'grava', registro] ou ['item', id, 'encanto', 'gasta'|'apaga', indice]")
 
 
+def gravador_inteiro(): return os.environ.get('MOTOR10_GRAVADOR') == 'inteiro'      # o gravador de antes (a cópia inteira do estado em cada evento): só para o banco comparar
+
+
+_SUB = dict(itens=('itens', 'obras'), noticias=('ativas',), caixa=('abertos',), missoes=('itens',))      # os arquivos que guardam as entradas num dicionário dentro deles
+_VERBO_ARQ = dict(noticia=('noticias', 'ativas', 'nasce'), caixa=('caixa', 'abertos', 'abre'), missao=('missoes', 'itens', 'abre'))
+
+
+def _toca(ef):
+    """O QUE UM EFEITO PODE MUDAR: [(arquivo, parte, chave)]. parte None: o dicionário do arquivo; chave None: só a lista de entradas (nascer, sumir), sem copiar
+    nenhuma entrada. None (em vez da lista): o efeito mexe em muita coisa (a morte) ou é torto: o ensaio copia tudo, como o gravador de antes."""
+    if not isinstance(ef, (list, tuple)) or not ef: return None
+    v = ef[0]; n = len(ef); a1 = ef[1] if n > 1 else None
+    if v == 'relogio': return []                                # o relógio vai sempre copiado (é pequeno)
+    if v == 'pessoa':
+        if a1 == 'nasce': return [('gente', None, None)]
+        if n == 5 and ef[2] == 'estado' and ef[4] == 'morto': return None      # A MORTE mexe nas peças, nas obras, no lugar e em quem ia junto: copia tudo
+        return [('gente', None, a1)] if isinstance(a1, str) else None
+    if v in ('ferida', 'lacos', 'fama'): return [('gente', None, a1)] if isinstance(a1, str) else None
+    if v == 'maldicao': return [('gente', None, a1), ('itens', None, None)] if isinstance(a1, str) else None      # o id da maldição sai da sequência do Livro (itens.mseq)
+    if v in ('lugar', 'estoque'):
+        if a1 == 'nasce': return [('lugares', None, None)]
+        return [('lugares', None, a1)] if isinstance(a1, str) else None
+    if v == 'item':
+        if a1 == 'nasce' or (n == 3 and ef[2] == 'some'): return [('itens', 'itens', None)]
+        return [('itens', 'itens', a1)] if isinstance(a1, str) else None
+    if v == 'obra':
+        if a1 == 'abre' or (n == 3 and ef[2] == 'fecha'): return [('itens', 'obras', None)]
+        return [('itens', 'obras', a1)] if isinstance(a1, str) else None
+    if v == 'rota': return [('rotas', None, None if a1 == 'nasce' else a1)] if isinstance(a1, str) else None
+    if v in _VERBO_ARQ:
+        arq, sub, nasce = _VERBO_ARQ[v]
+        return [(arq, sub, None if a1 == nasce else a1)] if isinstance(a1, str) else None
+    return None
+
+
+def _copia(S, E, F, arq, sub, chave):
+    """no ensaio S, copia (uma vez por evento) o caminho até a entrada: o dicionário do arquivo e o da parte, rasos (novos, apontando para as entradas de antes); a entrada, funda"""
+    if ('*', arq) in F: return
+    if ('raso', arq) not in F: S[arq] = dict(E[arq]); F.add(('raso', arq))
+    ds, de_ = S[arq], E[arq]
+    if sub is not None:
+        if sub not in de_ or not isinstance(de_[sub], dict): return      # a parte ainda não existe: o verbo a cria no ensaio (que já é outro dicionário)
+        if ('raso', arq, sub) not in F: S[arq][sub] = dict(de_[sub]); F.add(('raso', arq, sub))
+        ds, de_ = S[arq][sub], de_[sub]
+    if chave is not None and (arq, sub, chave) not in F:
+        if chave in de_: ds[chave] = copy.deepcopy(de_[chave])
+        F.add((arq, sub, chave))
+
+
+def _prata(E, arq, x):
+    """a prata que uma entrada guarda: as moedas da pessoa; o caixa (estoque.prata) e a bolsa do lugar; a guarda da missão"""
+    if not isinstance(x, dict): return 0
+    if arq == 'gente': v = x.get('moedas', 0); return v if _num(v) else 0
+    if arq == 'lugares':
+        c = (x.get('estoque') or {}).get('prata', 0) if isinstance(x.get('estoque'), dict) else 0; b = x.get('bolsa', 0)
+        return (c if _num(c) else 0) + (b if _num(b) else 0)
+    if arq == 'missoes': v = x.get('guarda', 0); return v if _num(v) else 0
+    return 0
+
+
+_PRATA_ARQ = dict(gente=None, lugares=None, missoes='itens')       # onde mora a prata do mundo (o arquivo e a parte)
+
+
+def prata_do_mundo(E):
+    """A PRATA DO MUNDO (a conta que fecha): as moedas da gente, o caixa e a bolsa dos lugares, e a guarda das missões"""
+    t = 0
+    for arq, sub in _PRATA_ARQ.items():
+        d = E.get(arq) or {}; d = d.get(sub) or {} if sub else d
+        t += sum(_prata(E, arq, x) for x in d.values())
+    return t
+
+
+def _prata_muda(S, E, F):
+    """quanto a prata do mundo muda do estado E para o ensaio S: só nas entradas que o ensaio tocou (o resto é o mesmo objeto); o arquivo copiado inteiro, inteiro.
+    Devolve (a diferença, [as linhas de onde ela veio])."""
+    dif = 0; onde_ = []
+    for arq, sub in _PRATA_ARQ.items():
+        if arq not in S or S[arq] is E.get(arq): continue
+        a = S[arq].get(sub) or {} if sub else S[arq]; b = (E.get(arq) or {}).get(sub) or {} if sub else (E.get(arq) or {})
+        chaves = set(a) | set(b) if (F is None or ('*', arq) in F) else {t[2] for t in F if len(t) == 3 and t[0] == arq and t[1] == sub and t[2] is not None} | (set(a) ^ set(b) if a.keys() != b.keys() else set())
+        for k in chaves:
+            x, y = a.get(k), b.get(k)
+            if x is y: continue
+            d = _prata(S, arq, x) - _prata(E, arq, y)
+            if d: dif += d; onde_.append(f"{(x or y or {}).get('nome', k) if isinstance(x or y, dict) else k} {'+' if d > 0 else ''}{d}")
+    return dif, onde_
+
+
 def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
+    """A ÚNICA PORTA (o gravador): veja _aplica. Com MOTOR10_GRAVADOR=inteiro, o gravador de antes (a cópia inteira); com MOTOR10_GRAVADOR=confere (só o banco), cada evento
+    roda nos dois, e o que sair diferente (o estado, o evento, a recusa) quebra o programa na hora, com o evento que diferiu."""
+    modo = os.environ.get('MOTOR10_GRAVADOR')
+    if modo != 'confere': return _aplica(E, tipo, efeitos, onde, quem, texto, modo == 'inteiro')
+    copia = {k: copy.deepcopy(E[k]) for k in ARQS if k in E}; copia['_novos'] = []; m1 = m2 = r1 = r2 = None
+    try: r1 = _aplica(copia, tipo, copy.deepcopy(efeitos), onde, quem, texto, True)
+    except SystemExit as x: m1 = str(x)
+    try: r2 = _aplica(E, tipo, efeitos, onde, quem, texto, False)
+    except SystemExit as x: m2 = str(x)
+    d = lambda X: json.dumps({k: X[k] for k in ARQS}, sort_keys=True, ensure_ascii=False)
+    if m1 != m2 or json.dumps(r1, sort_keys=True, ensure_ascii=False) != json.dumps(r2, sort_keys=True, ensure_ascii=False) or d(copia) != d(E):
+        raise AssertionError(f'OS DOIS GRAVADORES DIFEREM no evento "{tipo}" ({texto}): recusa {m1!r} contra {m2!r}; efeitos {json.dumps(efeitos, ensure_ascii=False)[:300]}')
+    if m2: sys.exit(m2)
+    return r2
+
+
+def _aplica(E, tipo, efeitos, onde, quem, texto, inteiro):
     """A ÚNICA PORTA. Ensaia todos os efeitos numa cópia; se um falha, NADA muda e o erro sai com o motivo.
     O evento cujos efeitos não mudam nada (somar no que já está no teto, pôr o que já está posto) não aconteceu: não entra no registro, e devolve None.
-    COM UMA LUTA ABERTA no mundo, só entram a luta que volta ao estado, a mão do Mestre e a nota da saída de caça que está naquela luta (tabelas_mundo.NA_LUTA)."""
+    COM UMA LUTA ABERTA no mundo, só entram a luta que volta ao estado, a mão do Mestre e a nota da saída de caça que está naquela luta (tabelas_mundo.NA_LUTA).
+    A CÓPIA DE ENSAIO É POR TOQUE (etapa 3): só se copia de verdade o que os efeitos nomeiam (_toca); o resto do ensaio são os mesmos objetos do estado, que nenhum efeito
+    muda. A PRATA NÃO NASCE NEM SOME fora de "gera" e "mestre": o evento que muda a soma dela é recusado, com a conta."""
     if tipo not in M.EVENTOS: sys.exit(f'evento desconhecido: "{tipo}" (os que existem: {", ".join(M.EVENTOS)})')
     if not efeitos: sys.exit(f'evento "{tipo}" sem efeito: recusado. O que não muda número não aconteceu.')
     if tipo not in M.NA_LUTA and luta_aberta(E) and not _nota_da_luta(E, efeitos): sys.exit(luta_diz(E))
-    ensaio = {k: copy.deepcopy(E[k]) for k in ARQS}
+    padroes(E)
+    if inteiro: ensaio = {k: copy.deepcopy(E[k]) for k in ARQS}; F = None
+    else:
+        ensaio = {k: E[k] for k in ARQS}; ensaio['relogio'] = dict(E['relogio']); F = set()
+        for ef in efeitos:
+            t = _toca(ef)
+            if t is None:
+                for k in ARQS:
+                    if k != 'relogio' and ('*', k) not in F: ensaio[k] = copy.deepcopy(E[k]); F.add(('*', k))
+                continue
+            for arq, sub, chave in t: _copia(ensaio, E, F, arq, sub, chave)
     for ef in efeitos:
         if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in ('talento', 'dom'):
             if tipo not in TALENTO_EVENTOS: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "o talento e o dom só se gravam em evento " + ", ".join(TALENTO_EVENTOS))}')
@@ -1057,9 +1290,14 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
         try: e = _um(ensaio, ef)
         except (TypeError, KeyError, IndexError, AttributeError, ValueError) as x: e = _erro(ef, f'efeito malformado ({type(x).__name__})')
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {e}')
-    if all(ensaio[k] == E[k] for k in ARQS): return None
+    if all(ensaio[k] is E[k] or ensaio[k] == E[k] for k in ARQS): return None
+    if tipo not in M.NASCE:                                 # A PRATA NÃO NASCE NEM SOME: fora de "gera" e "mestre", ela só muda de mão (etapa 3)
+        dif, de_onde = _prata_muda(ensaio, E, F)
+        if dif: sys.exit(f'evento "{tipo}" recusado, nada mudou. A prata não nasce nem some fora de evento "gera" ou "mestre": este evento faria {"nascer" if dif > 0 else "sumir"} '
+                         f'{abs(dif)} de prata ({", ".join(de_onde)}). A prata só muda de mão: o que sai de um entra noutro, no mesmo evento.')
     for pid, p in ensaio['gente'].items() if tipo != 'casa' else ():       # quem não é o personagem guarda O BLOCO EM QUE o corpo foi mexido pela última vez (o bloco deste evento: o relógio de antes de ele andar): o descanso em casa conta daí (em_cena).
         a = E['gente'].get(pid)                             # O próprio acerto do descanso (evento "casa") não é "estar em cena": ele não marca o bloco (as noites já contadas, o corpo.casa desconta à parte)
+        if a is p: continue                                 # a pessoa que o evento não tocou (o mesmo objeto, no gravador por toque): não mudou
         if isinstance(a, dict) and isinstance(p, dict) and not p.get('jogador') and p.get('estado') == 'vivo' and any(a.get(k) != p.get(k) for k in ('corpo', 'pv', 'feridas', 'mana')):      # a Mana gasta também é estar em cena: as noites de antes não voltam a encher
             if not isinstance(p.get('marca'), dict): p['marca'] = {}
             p['marca']['cena'] = agora(E)
