@@ -14,7 +14,7 @@
     (rola_caminho), sem rolar de novo os outros 16 e sem mexer no dom. O humano nasce igual ao de hoje, caminho por caminho.
 
 Uso (para olhar; não grava nada): python3 talento.py ver [ID]        o que a pessoa sabe de si (sem ID: o personagem)
-                                  python3 talento.py mestre [ID]     tudo (SÓ O MESTRE): sem ID, de todos os vivos (o talento, o dom e a magia); a MESA só mostra quem está em cena
+                                  python3 talento.py mestre [ID]     tudo (SÓ O MESTRE)
 """
 import sys
 import tabelas as T
@@ -237,8 +237,7 @@ def voce(E):
 
 
 def so_mestre(E):
-    """o SÓ O MESTRE: os talentos e os dons de quem está com o personagem (no mesmo lugar), escondidos ou não. A MESA chama com a vista de quem está em cena
-    (turno._modulos, etapa 3): o resto sai no `talento.py mestre`"""
+    """o SÓ O MESTRE: os talentos e os dons de quem está com o personagem (no mesmo lugar), escondidos ou não"""
     import estado
     pid = estado.eu(E)
     if not pid: return []
@@ -252,17 +251,7 @@ if __name__ == '__main__':
     a = sys.argv[1:]
     if not a or a[0] not in ('ver', 'mestre') or len(a) > 2: print(__doc__); sys.exit()
     import estado
-    E = estado.carrega()
-    if a[0] == 'mestre':                                    # SÓ O MESTRE: o talento, o dom e a magia (a MESA só mostra quem está em cena: etapa 3)
-        try: import magia_mundo; diz = lambda k: magia_mundo.diz(E, k, mestre=True)
-        except ModuleNotFoundError as x:
-            if x.name != 'magia_mundo': raise
-            diz = lambda k: ''
-        ids = [a[1]] if len(a) > 1 else [k for k, q in E['gente'].items() if isinstance(q, dict) and q.get('estado') == 'vivo']
-        for k in ids:
-            p = E['gente'].get(k) or sys.exit(f'não há a pessoa "{k}"')
-            if len(a) > 1 or talentos(p) or doms(p) or diz(k): print(f"{p['nome']}: {tudo(p)}" + (f"\n  magia de {diz(k)}" if diz(k) else ''))
-        sys.exit()
-    pid = a[1] if len(a) > 1 else estado.eu(E)
+    E = estado.carrega(); pid = a[1] if len(a) > 1 else estado.eu(E)
     p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
-    print('\n'.join(sabe(p)) or f"{p['nome']} ainda não sabe de nenhum talento nem dom em si (o talento aparece fazendo; o dom, quando decide um teste ou alguém o lê).")
+    if a[0] == 'mestre': print(f"{p['nome']}: {tudo(p)}")
+    else: print('\n'.join(sabe(p)) or f"{p['nome']} ainda não sabe de nenhum talento nem dom em si (o talento aparece fazendo; o dom, quando decide um teste ou alguém o lê).")

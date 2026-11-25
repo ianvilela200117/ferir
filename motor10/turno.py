@@ -22,7 +22,10 @@ import tabelas_mundo as M
 import estado, corpo, pessoas, teste
 
 
-def _eventos_desde(n): return estado.eventos(desde=n)          # o registro gravado depois do evento n (a estação aberta e, se o turno passou de uma estação, as que acabaram)
+def _eventos_desde(n):
+    arq = os.path.join(estado.pasta(), 'eventos.jsonl')
+    if not os.path.exists(arq): return []
+    return [e for e in map(json.loads, open(arq, encoding='utf-8').read().splitlines()) if e['id'] > n]
 
 
 def _mil(n): return f'{int(n):,}'.replace(',', '.')          # 18.279
@@ -37,7 +40,8 @@ def _voce(E):
     pid = estado.eu(E); p = E['gente'][pid]; f = estado.fora(E, pid)
     if p['estado'] != 'vivo':
         return [f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')}). Quem morreu não age: nenhum ato em nome de {p['nome']} vale.",
-                _do_morto(E, pid) + ' O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto).']
+                _do_morto(E, pid) + (f" O herdeiro é {E['gente'][p['herdeiro']]['nome']}: `cria.py herda` passa o jogo a ele." if E['gente'].get(p.get('herdeiro') or '', {}).get('estado') == 'vivo'
+                                     else ' Sem herdeiro vivo: o jogo recomeça com um estranho no mesmo mundo (`cria.py ofertas`, `cria.py nasce`).' if (E.get('mundo') or {}).get('meta') else ' O herdeiro e o recomeço são decisão do jogador (etapa 6 do projeto).')]
     L = [f"**{p['nome']}**, nível {p['nivel']} · PV {p['pv']}/{estado.pv_max(p)} · {p['moedas']} de prata · " + (f"FORA, {estado.em(E, f)} (mora {estado.em(E, p['lugar'])})" if f else estado.em(E, p['lugar'])), f"Corpo: {corpo.diz(p)}"]
     for fe in p['feridas']: L.append(f"Ferida{' GRAVE' if fe['grave'] else ''}: {fe['parte']} (Dia {fe['dia']}; {estado.num(fe['repouso'])} de {M.FERIDA_DIAS[1 if fe['grave'] else 0]} dias de repouso)")
     L.append('```'); L.append(pessoas.linha(pessoas.ficha(estado.lutador(E, pid, visivel=True)))); L.append('```')       # a ficha que vai à mesa: só o dom que a pessoa já viu
@@ -71,9 +75,7 @@ def _do_morto(E, pid):
 def _aqui(E):
     import ato
     pid = estado.eu(E); p = E['gente'][pid]; l = E['lugares'][p['lugar']]; of = p.get('grau_oficio', 'diarista'); f = estado.fora(E, pid)
-    if f and estado.quem_viaja(E, pid):
-        v = estado.viagem(E, pid)
-        return [f"**{p['nome']} está na estrada, de {E['lugares'][v['origem']]['nome']} para {E['lugares'][v['destino']]['nome']}** ({estado.tantos(v.get('feito', 0), 'bloco')} de {v.get('blocos')}). Enquanto a viagem estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A viagem\"."]
+    if f and estado.viajante(E, pid): return [f"**{p['nome']} está {estado.em(E, f)}, na viagem.** Enquanto a viagem estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A viagem\" (`viagem.py ver`)."]
     if f and estado.quem_desce(E, pid): return [f"**{p['nome']} está {estado.em(E, f)}, na descida.** Enquanto a descida estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A masmorra\"."]
     if f: return [f"**{p['nome']} está fora, {estado.em(E, f)}.** Enquanto a saída estiver aberta, os atos da vila não valem (comer da carga vale: `ato.py comer carga`). O que há à frente está em \"A caça e a coleta\"."]
     L = [f"**{l['nome']}** · comida no lugar: {_mil(l['estoque'].get('comida', 0))} · {'há cama' if l.get('cama') else 'não há cama: dorme-se no chão'}"]
@@ -104,40 +106,15 @@ def _perto(E, pid):
 
 
 def _modulos(E, gancho):
-    """as linhas que cada módulo do mundo põe na página (voce, mesa, so_mestre), no resumo do turno (retomar) ou na recusa de fechar (recusa_fecha).
-    A MESA (etapa 3): as seções dos módulos da etapa 3 vêm primeiro (tabelas_mundo.MESA_ORDEM); com a viagem aberta, só os da estrada põem seção (MESA_NA_ESTRADA);
-    e o SÓ O MESTRE dos módulos que falam de pessoas (MESA_SO_CENA) só vê quem está em cena (estado.na_cena): o resto sai no `talento.py mestre`."""
-    ms = estado.modulos(gancho)
-    if gancho == 'mesa':
-        ordem = {n: i for i, n in enumerate(M.MESA_ORDEM)}; ms = sorted(ms, key=lambda m: ordem.get(m.__name__, len(ordem)))
-        pid = estado.eu(E)
-        if pid and E['gente'][pid]['estado'] == 'vivo' and estado.quem_viaja(E, pid): ms = [m for m in ms if m.__name__ in M.MESA_NA_ESTRADA]
-    cena = None
-    if gancho == 'so_mestre' and any(m.__name__ in M.MESA_SO_CENA for m in ms):
-        ids = set(estado.na_cena(E)); cena = dict(E, gente={k: p for k, p in E['gente'].items() if k in ids})        # a vista do estado com a gente que está em cena (só lê)
-    L = [list(getattr(mod, gancho)(cena if cena is not None and mod.__name__ in M.MESA_SO_CENA else E) or []) for mod in ms]
+    """as linhas que cada módulo do mundo põe na página (voce, mesa, so_mestre), no resumo do turno (retomar) ou na recusa de fechar (recusa_fecha)"""
+    L = [list(getattr(mod, gancho)(E) or []) for mod in estado.modulos(gancho)]
     return [x for x in L if x]
 
 
-def orcamento(txt):
-    """O ORÇAMENTO DA MESA (etapa 3): o tamanho de cada parte (em KB de 1.000 letras do arquivo), pelas seções (o título "## ..."), e o teto dela (tabelas_mundo.MESA_TETO).
-    Devolve [(a parte, os KB, o teto ou None)], na ordem em que aparecem, e o total no fim ("total")."""
-    partes = {}; atual = 'voce'
-    for linha in txt.splitlines(keepends=True):
-        if linha.startswith('## '):
-            t = linha[3:]; atual = next((k for pre, k in M.MESA_SECOES if t.startswith(pre)), 'outros')
-        partes[atual] = partes.get(atual, 0) + len(linha.encode('utf-8'))
-    out = [(k, v / 1000, M.MESA_TETO.get(k)) for k, v in partes.items()]
-    return out + [('total', len(txt.encode('utf-8')) / 1000, M.MESA_TOTAL)]
-
-
-def avisos(txt):
-    """o aviso das partes da MESA que passam do teto delas (e do total): [linhas]; vazio, a MESA cabe"""
-    return [f"a parte \"{k}\" da MESA tem {estado.num(round(kb, 1))} KB (o teto é {estado.num(t)})" for k, kb, t in orcamento(txt) if t is not None and kb > t + 1e-9]
-
-
 def mesa(E):
-    t = E['turno']; pid = estado.eu(E); vivo = E['gente'][pid]['estado'] == 'vivo'
+    t = E['turno']; pid = estado.eu(E)
+    if not pid: return _mesa_criacao(E)                     # o mundo novo antes do personagem (etapa final): a criação
+    vivo = E['gente'][pid]['estado'] == 'vivo'
     L = [f"# MESA · turno {t['n']} · {estado.quando(E)}"]
     if estado.luta_aberta(E): L += ['', f"**LUTA ABERTA.** {estado.luta_diz(E)[0].upper() + estado.luta_diz(E)[1:]}"]
     L += ['', '## Você'] + _voce(E)
@@ -146,7 +123,7 @@ def mesa(E):
         L += ['', '## Aqui'] + _aqui(E)
         for linhas in _modulos(E, 'mesa'): L += [''] + linhas      # cada módulo do mundo põe na mesa a sua parte (o mercado, a oficina, a caça)
     L += ['', '## Perguntas abertas']
-    L += lista_perguntas(t) + [f"- (da caixa, vence em um dia: entra sozinha nas perguntas ao fechar) {c['id']}: {c['pede']}" for c in caixa_pendentes(E)] or ['(nenhuma: o turno precisa abrir pelo menos duas antes de fechar)']
+    L += lista_perguntas(t) or ['(nenhuma: o turno precisa abrir pelo menos duas antes de fechar)']
     if t['respondidas']: L += ['', '**Respondido neste turno (cumprir antes de fechar):** ' + ' · '.join(f"{r['texto']} → {r['cod']}) {r['opcao']}" for r in t['respondidas'])]
     L += ['', '## SÓ O MESTRE']
     L += [f"- {teste.diz(E, r, mestre=True)}" for r in t['dados'] if r['oculto']] + [f"- nota: {n}" for n in t['notas']]
@@ -158,29 +135,22 @@ def mesa(E):
     return '\n'.join(L) + '\n'
 
 
+def _mesa_criacao(E):
+    """A MESA DA CRIAÇÃO: o mundo está pronto, o personagem não nasceu. O jogador responde as perguntas (o povo, o berço, a inclinação) e diz o nome; `cria.py nasce`."""
+    import cria
+    t = E['turno']; L = cria.mesa_criacao(E)
+    L += ['', '## Perguntas abertas'] + (lista_perguntas(t) or ['(nenhuma: `cria.py perguntas` abre as da criação)'])
+    if t['respondidas']: L += ['', '**Respondido neste turno:** ' + ' · '.join(f"{r['texto']} → {r['cod']}) {r['opcao']}" for r in t['respondidas'])]
+    L += ['', '**Para nascer:** `cria.py nasce "1a.2c.3e.4r" nome=NOME` (os códigos das respostas), e depois `turno.py abre`.', '', '## SÓ O MESTRE']
+    for linhas in _modulos(E, 'so_mestre'): L += [x if x.startswith('- ') else '- ' + x for x in linhas]
+    W = E.get('mundo') or {}
+    if W.get('cronica'): L += ['- a crônica tem ' + str(len(W['cronica'])) + ' linhas (`historia` no mundo.json): as últimas: ' + ' · '.join(f"{c['ano']}: {c['texto']}" for c in W['cronica'][-3:])]
+    P = estado.valida(E); L += [f"- ESTADO QUEBRADO: {x}" for x in P] or ['- o estado está inteiro.']
+    return '\n'.join(L) + '\n'
+
+
 def abre(E):
     txt = mesa(E); open(os.path.join(estado.pasta(), 'MESA.md'), 'w', encoding='utf-8').write(txt); return txt
-
-
-# ---------- a caixa vira pergunta sozinha (etapa 3) ----------
-def caixa_pendentes(E):
-    """os pedidos da caixa do personagem que vencem em até um dia (tabelas_mundo.CAIXA_PERGUNTA blocos) e ainda não estão nas perguntas abertas: [registro]"""
-    pid = estado.eu(E); C = (E.get('caixa') or {}).get('abertos') or {}; ja = {q.get('caixa') for q in E['turno'].get('perguntas', [])}
-    return sorted((c for c in C.values() if isinstance(c, dict) and c.get('para') == pid and _int(c.get('prazo')) and c['prazo'] - estado.agora(E) <= M.CAIXA_PERGUNTA and c.get('id') not in ja),
-                  key=lambda c: (c['prazo'], c['id']))
-
-
-def _int(v): return isinstance(v, int) and not isinstance(v, bool)
-
-
-def caixa_perguntas(E):
-    """O PEDIDO QUE VENCE EM UM DIA VIRA PERGUNTA SOZINHO: abre, para cada um, a pergunta do turno com as opções dele, ligada a `caixa.py responde ID LETRA`. Devolve quantas abriu."""
-    k = 0
-    for c in caixa_pendentes(E):
-        de = E['gente'].get(c.get('de'), {}).get('nome', c.get('de')); calado = c['opcoes'].get(c['padrao'], c['padrao'])
-        pergunta(E, f"{de} pede: {c['pede']} (a caixa, {c['id']}: vence em um dia; calado, vale \"{calado}\"; cumpra com `caixa.py responde {c['id']} LETRA`)", [f'{l}={v}' for l, v in c['opcoes'].items()])
-        E['turno']['perguntas'][-1]['caixa'] = c['id']; k += 1
-    return k
 
 
 def numera(t):
@@ -226,15 +196,13 @@ def responde(E, codigos):
     if len({n for n, _ in pares}) != len(pares): sys.exit('a mesma pergunta foi respondida duas vezes. Nada foi marcado.')
     out = []
     for n, letra in pares:
-        q = abertas[n]; t['respondidas'].append(dict(n=n, texto=q['texto'], cod=letra, opcao=q['opcoes'][letra], **({'caixa': q['caixa']} if q.get('caixa') else {})))
-        out.append(f"{n}{letra}: {q['texto']} → {q['opcoes'][letra]}" + (f" (cumpra: `caixa.py responde {q['caixa']} {letra}`)" if q.get('caixa') else ''))
+        q = abertas[n]; t['respondidas'].append(dict(n=n, texto=q['texto'], cod=letra, opcao=q['opcoes'][letra])); out.append(f"{n}{letra}: {q['texto']} → {q['opcoes'][letra]}")
     t['perguntas'] = [q for q in t['perguntas'] if q['n'] not in {n for n, _ in pares}]
     return '\n'.join(out) + (f"\nFicam abertas: {', '.join(str(q['n']) for q in t['perguntas'])}." if t['perguntas'] else '')
 
 
 SEGREDO = {('pessoa', 'talento'), ('pessoa', 'dom'), ('item', 'maldita'), ('lugar', 'maldito'), ('lugar', 'covil'),      # o que o Mestre (ou o gerador) põe e a gente do mundo não sabe
-           ('lugar', 'dragao'), ('lugar', 'armadilhas'), ('lugar', 'segredos'), ('lugar', 'guardado'), ('lugar', 'portas'), ('lugar', 'vagantes'), ('lugar', 'chefe'),      # etapa 4b: o dragão e o mapa da masmorra
-           ('lugar', 'bando'), ('pessoa', 'querer')}      # etapa 3: o bando que o gerador põe num ermo; o querer escondido de alguém
+           ('lugar', 'dragao'), ('lugar', 'armadilhas'), ('lugar', 'segredos'), ('lugar', 'guardado'), ('lugar', 'portas'), ('lugar', 'vagantes'), ('lugar', 'chefe')}      # etapa 4b: o dragão e o mapa da masmorra
 
 
 def secreto(e):
@@ -259,9 +227,9 @@ def fatos(evs, teto=None, nasce=False):
     Se ainda assim passa do teto (tabelas_mundo.RETOMAR_FATOS), ficam as mais novas, e a primeira linha diz quantas ficaram de fora e como lê-las."""
     teto = teto or M.RETOMAR_FATOS; linhas = []; onde = {}; ultimo = None
     for e in evs:
-        if nasce and e['tipo'] == 'gera': continue
-        nasce = False
         morte = any(isinstance(x, list) and len(x) == 5 and x[0] == 'pessoa' and x[2:] == ['estado', 'poe', 'morto'] for x in e.get('efeitos', []))
+        if nasce and (e['tipo'] == 'gera' or (e['tipo'] in M.MUNDO_SOZINHO and not morte)): continue      # o mundo nascendo (e andando sozinho enquanto nasce) não é fato
+        nasce = False
         if e['tipo'] in M.MUNDO_SOZINHO and not morte: continue
         if secreto(e): continue                                                                 # o segredo do Mestre não é fato que o jogador lê (vai ao SÓ O MESTRE)
         if not e.get('texto'): e = dict(e, texto=f"(evento #{e.get('id', '?')}, {e['tipo']}, sem texto: `python3 estado.py eventos` mostra o que ele mudou)")      # o evento gravado sem texto não some calado: entra com o número dele
@@ -287,21 +255,19 @@ def fatos(evs, teto=None, nasce=False):
 
 
 def fecha(E, resumo, parado=False, git=False):
-    t = E['turno']; R = []; caixa_perguntas(E)              # o pedido da caixa que vence em um dia entra sozinho nas perguntas (etapa 3)
+    t = E['turno']; R = []
     if estado.luta_aberta(E): R.append(estado.luta_diz(E))
     if len(t['perguntas']) < 2: R.append(('não há pergunta aberta' if not t['perguntas'] else 'há uma pergunta aberta só') + ': o turno fecha com pelo menos duas (`turno.py pergunta`)')
     if estado.agora(E) == (t['aberto']['dia'] - 1) * M.BLOCOS_DIA + t['aberto']['bloco'] and not parado: R.append('o relógio não andou neste turno. Todo ato custa tempo; se foi só conversa, feche com `parado`')
     R += [f'o estado quebrou: {x}' for x in estado.valida(E)]
     R += [x for linhas in _modulos(E, 'recusa_fecha') for x in linhas]       # o que os módulos do mundo recusam (a maldição no passo 4 sem pergunta aberta)
-    C = (E.get('caixa') or {}).get('abertos') or {}
-    R += [f"o jogador respondeu o pedido {r['caixa']} da caixa ({r['cod']}: {r['opcao']}) e ele segue aberto: cumpra com `caixa.py responde {r['caixa']} {r['cod']}`" for r in t['respondidas'] if r.get('caixa') in C]
-    R += [f"o pedido {c['id']} da caixa vence em um dia e não está nas perguntas abertas" for c in caixa_pendentes(E)]
     if not resumo.strip(): R.append('falta dizer o que houve no turno')
     if R: sys.exit('O TURNO NÃO FECHA:\n  - ' + '\n  - '.join(R))
     for i, q in enumerate(t['perguntas']): q['n'] = i + 1         # o turno fecha: as perguntas que ficam abertas são numeradas de novo, de 1 em diante. É com esse número que o jogador as lê no RETOMAR.md e responde
-    pid = estado.eu(E); p = E['gente'][pid]; evs = _eventos_desde(t.get('evento0', 0)) + E['_novos']; f = estado.fora(E, pid)
-    if p['estado'] != 'vivo': agora = f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')})"
-    else: agora = f"{p['nome']} " + (f"FORA, {estado.em(E, f)} (a {'viagem' if estado.quem_viaja(E, pid) else 'descida' if estado.quem_desce(E, pid) else 'saída'} está aberta)" if f else estado.em(E, p['lugar'])) + f" · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata"
+    pid = estado.eu(E); p = E['gente'][pid] if pid else None; evs = _eventos_desde(t.get('evento0', 0)) + E['_novos']; f = estado.fora(E, pid) if pid else None
+    if not p: agora = 'o personagem ainda não nasceu (a criação está aberta)'
+    elif p['estado'] != 'vivo': agora = f"**{p['nome']} MORREU** ({estado.morte_diz(E, p).replace('morreu no', 'no').replace('já morreu', 'antes deste turno')})"
+    else: agora = f"{p['nome']} " + (f"FORA, {estado.em(E, f)} (a {'descida' if estado.quem_desce(E, pid) else 'viagem' if estado.viajante(E, pid) else 'saída'} está aberta)" if f else estado.em(E, p['lugar'])) + f" · PV {p['pv']}/{estado.pv_max(p)} · {corpo.diz(p)} · {p['moedas']} de prata"
     L = [f"# RETOMAR · depois do turno {t['n']}", '', f"**Agora:** {estado.quando(E)} · {agora}", '', f"**O que houve no turno {t['n']}:** {resumo}"]
     for linhas in _modulos(E, 'retomar'): L += [''] + linhas
     if t['respondidas']: L += ['', '**Respondido:** ' + ' · '.join(f"{r['texto']} → {r['opcao']}" for r in t['respondidas'])]
@@ -328,11 +294,7 @@ if __name__ == '__main__':
     a = sys.argv[1:]
     if not a or a[0] not in ('abre', 'pergunta', 'responde', 'nota', 'fecha'): print(__doc__); sys.exit()
     E = estado.carrega()
-    if a[0] == 'abre':
-        txt = abre(E); print(txt)
-        av = avisos(txt)
-        if av: print('AVISO, o orçamento da MESA (tabelas_mundo.MESA_TETO): ' + ' · '.join(av))
-        sys.exit()
+    if a[0] == 'abre': print(abre(E)); sys.exit()
     if a[0] == 'pergunta':
         if len(a) < 2 or not a[1].strip(): sys.exit('diga a pergunta e as opções: `turno.py pergunta "O que fazer de manhã?" "a=trabalhar" "b=treinar"`')
         print(pergunta(E, a[1], a[2:])); estado.grava(E)

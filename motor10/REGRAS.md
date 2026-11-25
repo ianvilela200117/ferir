@@ -2400,6 +2400,134 @@ As lutas são as do motor, em ensaio; o grupo é o homem do degrau das criaturas
 
 ---
 
+## 21. A região e a estrada (etapa final)
+
+O mundo novo é uma REGIÃO: 16 lugares de povo (a capital de uns 4.000, 2 cidades de 1.500, 5 vilas de 400, 5 aldeias e 3 postos de 120), 6 ermos com bichos e matéria
+contados, 8 masmorras e 24 estradas. Os números moram no `tabelas_regiao.py`; o contrato, no `projeto/ETAPA_FINAL.md`. O mundo sem região (a vila de teste, o `ensaio/`)
+não tem nada deste capítulo e joga como antes.
+
+**21.1 A estrada é um lugar** (`tipo: "estrada"`): liga dois lugares de povo (`ponta`), leva de 1 a 6 blocos (`longe`), tem o perigo que o povo conta (1 tranquila,
+2 de assalto às vezes, 3 perigosa), os salteadores contados nela (`bando`), o ermo por onde passa (`passa`) e pode estar FECHADA (por uma frente). O que cai nela fica nela;
+quem morre nela fica nela. A estrada não é vizinha de ninguém (a caça nunca a lista).
+
+**21.2 A viagem** (`viagem.py ir DESTINO [com=ID,ID]`): andar a estrada bloco a bloco, esforço leve, com quem vai junto. Enquanto a viagem está aberta (`marca.viagem`),
+a gente está NA ESTRADA: os atos da vila são recusados, come-se da carga, dorme-se no chão (`viagem.py acampa N`). Viagem, saída de caça e descida nunca juntas.
+
+**21.3 O encontro**, a cada bloco, pelo acaso do mundo: a chance é a base do perigo (2%, 5%, 9%) mais 1,2% por salteador na estrada, vezes 1,5 de noite. Quem aparece sai da
+conta real: os SALTEADORES (de 2 a 5, do nível do perigo; pedem pedágio: 4 de prata por cabeça de quem viaja, mais 1 por salteador) ou, num terço das vezes, um BICHO do ermo
+por onde a estrada passa. Diante do encontro: `pagar` (a prata vai para o bando: o estoque da estrada é a bolsa dele), `atacar` (a luta do `ato.py luta`, com paradas) ou
+`fugir` (2d20 + Agilidade ÷ 10 contra 20 + quantos são; falhando, a luta abre com quem viaja surpreendido).
+
+**21.4 As contas da luta na estrada**: o salteador morto sai do bando; a bolsa dele (a parte da prata da estrada que era dele) vai a quem ficou com o campo, em partes iguais;
+o bicho morto sai da conta do ermo, e o despojo vai à carga. Quem perde o campo é roubado (os salteadores levam metade da prata de cada vivo) e volta ao lugar de onde saiu.
+
+**21.5 O povo em número**: cada lugar tem o povo (`pop`), a produção e o consumo da etapa 2. Com o celeiro abaixo de 8 dias de comida, o povo começa a sair para o vizinho mais
+farto (meio por cento por dia), um faminto pode virar salteador nas estradas do lugar, e nasce a FRENTE DA FOME; sem comida nenhuma, morre um por cento por dia. A produção
+acompanha o povo que fica.
+
+**21.6 O comércio entre lugares** (os mercadores, em número): por estrada aberta e sem bando grosso, quando o preço de um bem do outro lado passa de 1,35 vezes o daqui, uma
+parte do estoque daqui vai para lá, e a prata faz o caminho de volta, no preço do meio. Nada nasce: a comida, o metal, o sal andam de onde sobram para onde faltam.
+
+**21.7 A guarda** (em número) de cada lugar patrulha as estradas dele: às vezes tira um salteador.
+
+## 22. A gente com nome: a memória, o querer, a notícia e a caixa (etapa final)
+
+**22.1 A memória**: cada nomeado guarda até 12 fatos com peso (de −5 a 5): de quem, o quê, quando (`gente.lembra`). Passando de 12, sai o de menor peso (entre iguais,
+o mais velho). A OPINIÃO de alguém sobre outro é a soma dos pesos dele sobre o outro (de −10 a 10), e os porquês são os três fatos de maior peso. A MESA mostra o que a
+gente do lugar lembra do personagem. Os laços (pai/mãe, filho/filha, irmão/irmã, cônjuge, aprendiz, mestre, jurado, amigo, rival, inimigo) moram em `lacos`.
+
+**22.2 O querer da semana**: no primeiro dia de cada semana, cada nomeado quer uma coisa do papel dele (`tabelas_regiao.QUERER`), e o querer vira ato com efeito: o ferreiro
+forja para a loja (o metal sai do estoque, a peça entra na prateleira, a loja paga 40%), o caçador caça (a contagem do ermo cai, a carne e o couro entram), o guarda patrulha
+(o bando cai; às vezes ele morre na emboscada), o senhor cobra o imposto e paga a missão contra a frente, o ladino furta, o velho conta a história (uma linha da crônica vira
+notícia)... Querer que não cabe (falta a matéria, falta a prata) não acontece.
+
+**22.3 A notícia**: todo evento que importa nasce como notícia num lugar de povo e anda UMA ESTRADA POR DIA, pelas estradas abertas; do quarto salto em diante é BOATO ("dizem
+que..."); some 90 dias depois de nascer. O personagem só lê o que chegou aonde ele está (a MESA mostra as 6 mais novas). A JANELA DO MUNDO chega a todo lugar no mesmo dia:
+a primeira limpeza de uma masmorra, a peça Única ou maior que nasce, a Lenda que morre, a frente que acaba, o torneio.
+
+**22.4 A caixa de entrada**: o que toca o personagem chega como pedido com prazo (`{de, pede, prazo, opções, padrão}`). Só escreve quem tem motivo no estado (o ferreiro com
+menos da metade do metal que a loja quer ter, o parente com fome...). Cabem 7; o oitavo força o mais velho. VENCIDO O PRAZO, VALE O PADRÃO, sempre com custo (quem pediu lembra
+que você calou, −2; o cliente vai ao rival). `caixa.py pergunta XID` abre a pergunta do turno ligada ao pedido; o `turno.py fecha` recusa fechar com pedido vencendo hoje ou
+amanhã sem pergunta ligada; `caixa.py responde XID LETRA` cumpre a escolha do jogador.
+
+## 23. As missões (etapa final)
+
+Cada lugar de povo tem um QUADRO (a capital aguenta 6 missões abertas; a cidade, 4; a vila, 2; a aldeia e o posto, 1). Quem tem motivo põe a missão e paga da bolsa dele
+(até 60% dela): o caçador contra os bichos que rondam, o mercador que quer escolta, o senhor e o capitão contra a frente que ameaça as terras deles, contra a masmorra ao lado.
+Os tipos: CAÇA (matar N de uma espécie num ermo: conta pelo registro, nos eventos em que quem tomou estava), ENTREGA (levar N de um bem a quem pediu), LIMPAR (a masmorra até o
+chefe do fundo), MATAR (o dono da frente), ESCOLTA (levar alguém até um lugar, vivo) e INVESTIGAR (abrir o que a frente esconde). Qualquer um cumpre: o personagem e os rivais.
+Tomar só se toma no quadro (`missoes.py toma MID`); cumprida (`missoes.py entrega MID`), a paga sai da bolsa de quem pediu, a fama sobe e quem pediu lembra (+3).
+A MISSÃO CONTRA A FRENTE, cumprida, tira um passo dela; cumprida com a frente no zero, a barra. Quem toma e não cumpre no prazo perde 1 de fama, e quem pediu lembra (−2).
+
+## 24. A corrida: os rivais, o ranking, o torneio, o leilão (etapa final)
+
+**24.1 Os 40 rivais**: aventureiros nativos, de novatos (nível 5 a 12) a três Lendas vivas (120 a 200, com as Lendárias), em 6 guildas e soltos. Disputam a mesma escada, pela
+mesma regra. POR SEMANA escolhem um plano: a missão do quadro, a masmorra que ninguém limpou, o chefe do ermo (o núcleo), a forja do núcleo, o descanso (se estão feridos), ou a
+caça para viver; cada um só aceita o que a ousadia dele deixa (a chance mínima: novato 25%, oficial 33%, veterano 50%, Lenda 60%) e escolhe o de maior valor esperado.
+A guilda vai junto (até 4 da mesma casa).
+
+**24.2 A conta rápida** (`conta.py`): longe do personagem, a luta não roda rodada a rodada: a chance de vencer sai de uma curva (o tempo que cada lado leva para derrubar o
+outro, pela regra de ouro do triplo por categoria; a diferença de categoria; quantos são; a defesa; a mão; a força; e os traços que pesam: o sopro, o veneno, o regenera...),
+AFINADA CONTRA O `luta.py` em 1.500 casos de 48 lutas cada: erra uns 5 pontos em casos novos (a meta: menos de 8). Quem perde a luta da conta pode morrer (70% vezes o quanto
+a luta era ruim; quem vai junto, 60% disso) ou sair ferido; MORRE DE VEZ, e o que levava fica onde caiu (a guilda recolhe o corpo e as peças; o solto, o povo acha na semana).
+A caça para viver também mata (por semana: novato 0,8%, oficial 0,5%, veterano 0,3%, Lenda 0,1%).
+
+**24.3 A escada dos rivais**: limpando a masmorra, levam o tesouro (a prata livre das salas e as peças guardadas) e, do chefe do Épico para cima, o núcleo; matando o chefe
+do ermo (a serpe, a hidra, o dragão), o núcleo dele. Com o núcleo e 40% do preço da obra na mão, levam-no ao mestre ferreiro da capital (forja 6): a peça sai inteira em
+60% (cada categoria acima do Épico, vezes 0,75), uma categoria abaixo em mais 25%, e senão o núcleo se perde; a obra leva 3 elevado à categoria dias (o Épico, 27) e custa 8%
+do valor da peça. A cada estação entra gente nova (metade dos que faltam para 40), com a prata que a família dá.
+
+**24.4 O ranking** sai toda semana: a fama mais 5 por categoria da melhor arma e da melhor armadura em uso. **O torneio do rei**, no dia 150 de cada ano, na capital: os 8
+do ranking em chave, um contra um pela conta rápida; o vencedor leva 20 de fama e o prêmio da bolsa do senhor da capital. **O leilão da capital**, a cada estação: o que é
+Único ou maior e os núcleos que os rivais guardam sem usar vão a lance; o personagem dá o dele com `rivais.py lance ITEM PRATA` (vale se ele estiver na capital no dia).
+
+## 25. O medo: as frentes, a calamidade, a morte e o herdeiro, o diretor (etapa final)
+
+**25.1 As frentes**: 13 no Dia 1 (4 ameaças: o bando da estrada, a horda da toca, os mortos da cripta, o dragão jovem; 4 ambições: a casa que quer a coroa, o cartel do
+metal, o culto, a guilda que corre atrás da masmorra funda; 2 faltas sorteadas entre a seca, a mina que alaga, a praga do gado e a falta de sal; 2 mistérios: os sumiços e as
+luzes; e a calamidade). Cada uma tem dono, meta e um RELÓGIO DE 6 PASSOS; cada passo faz efeito em número (`tabelas_regiao.FRENTES`: o estoque, a prata, o povo, a
+estrada fechada, o bando, os bichos, a produção, a morte de alguém com nome, a missão posta, a fama) e manda o SINAL pela notícia. Por semana, 2d10 + a força da frente
+contra 17 + a resistência do lugar (+1 a cada 20 da guarda; 3 a menos nos dois primeiros passos). O passo 6 é o DESFECHO, sem volta. O chão faz nascer outras: o celeiro
+abaixo de 8 dias faz nascer a FOME.
+**25.2 Barrar uma frente**: o dono que cai (a pessoa, a toca vazia, o chefe morto, o dragão morto, a criatura caçada), a masmorra limpa, ou as missões contra ela (cada uma
+tira um passo; a que é cumprida com a frente no zero a barra). Investigar (`frentes.py investigar FID`, um bloco: 2d20 + Percepção ÷ 10 + manha contra 22 + 2 por categoria)
+abre um campo oculto por vez (o relógio, o dono, a meta, o centro); o rival que a investiga a EXPÕE (aí ela perde um passo, e o quadro passa a pedir o dono).
+**25.3 A calamidade**: o dragão ancião dorme no covil sobre a peça Mítica; a frente dele rola a cada 28 dias; no passo 6 ele acorda e passa a cobrar do lugar mais perto.
+**25.4 A morte, o herdeiro e o nêmesis**: a vida é uma só. Em vida, `cria.py herdeiro PID` nomeia quem segue (um parente, aprendiz ou jurado, vivo). Morto o personagem,
+`cria.py herda` passa o jogo ao herdeiro: a cadeira do jogador, a casa, as peças do morto que o matador não levou (a família recolhe), e a memória dos outros pela metade
+("é do sangue de..."). Não herda o nível nem a mão. Quem matou fica com o que o morto vestia e vira a frente NÊMESIS da casa. Sem herdeiro vivo, o jogo recomeça com um
+estranho no mesmo mundo (`cria.py ofertas`).
+**25.5 O diretor** (`diretor.py`) só escolhe até 3 frentes que podem entrar em cena no dia (as que andaram nesta semana e as mais adiantadas, a até 2 estradas do personagem)
+e dois fatos do mundo que não tocam o personagem; depois de uma queda (ferida grave nos últimos 3 dias, ou o PV abaixo de um terço) prefere a ambição e o mistério à ameaça.
+NÃO GRAVA NADA: o banco prova que o mundo sai idêntico com ele e sem ele. Fica no SÓ O MESTRE.
+
+## 26. A história e o mundo gerado (etapa final)
+
+**26.1 A história** (`historia.py`, uma função pura da semente): de 400 a 1.000 anos, ano a ano. Os reinos (o de hoje e de 1 a 3 que caíram); as casas nobres (6 a 9), com a
+linhagem inteira (quem mandou, de quando a quando, como morreu) e as que caíram (sem herdeiro, ou na guerra); as guerras (1 a 3 por século: quem contra quem, o lugar saqueado,
+quem venceu, as peças tomadas); as pestes e as fomes; as lendas mortas (o feito, onde morreram, a peça que deixaram) e as três LENDAS VIVAS; as PEÇAS ALTAS (12 Épicas, 4 Únicas,
+3 Lendárias, 1 Mítica) com a CADEIA DE DONOS ano a ano (a mão segura de 6 a 45 anos e passa: herança, guerra, compra, roubo, o corpo; às vezes se perde numa masmorra e alguém
+a acha); a ORIGEM de cada masmorra; e a CRÔNICA (umas 300 linhas: o Mestre lê inteira no `mundo.json`; a gente conta pedaços).
+**26.2 O gerador** (`gera.py PASTA [semente=N]`): o mapa (os lugares longe e perto do centro; a árvore mais curta de estradas e as mais curtas que faltam até 24), os ermos, a
+história, as masmorras (do Épico para cima, só as peças da história: o raro é contado), os mercados (com a prateleira pelo tamanho; a capital tem Raras), a gente com nome
+(uns 150: o papel, a casa, o povo pela fração do lugar, a família, o talento e o dom, as peças), os 40 rivais e as 6 guildas, os dragões (o jovem que cobra e o ancião que
+dorme), os covis, as peças altas a quem a história manda, as frentes, as missões e as notícias do Dia 1. O mundo nasce inteiro em menos de 1 segundo. Os nomes saem do
+`nomes.py` (os do humano são da terra; os dos outros povos, sílabas do motor; o que bate num nome famoso da fantasia, ou num palavrão, é trocado).
+**26.3 O banco do ano** (`provas_ano.py`): o mundo anda 364 dias sem personagem em 20 sementes (uns 20 segundos cada), e as metas do PROJETO são medidas: a conta fecha,
+os rivais (de 4 a 12 mortes, as peças altas em mãos vivas, o ranking que troca), a primeira Épica nova (dia 40 a 110), as frentes (3 a 6 desfechos, 2 a 5 barradas), o grão
+(0,6 a 2,2 da base, a fome em 20 a 60% dos mundos), o tempo e a semente; e os robôs (o parado, o afoito, o mudo). A semente que reprova não vira save: o mundo de verdade
+(`motor10/mundo/`) é a semente 5, a primeira que passou em todas as faixas.
+
+## 27. A criação do personagem (etapa final)
+
+O personagem nasce num mundo que já é velho, DENTRO DE UMA CASA. `cria.py ofertas` mostra os 6 povos, os 6 BERÇOS tirados das famílias do mundo (a forja de uma vila, os
+caçadores de uma aldeia, a casa da guarda, a casa de comércio da capital, o santuário que cria um enjeitado, a casa nobre que manda num lugar: o lugar, o chefe da família,
+os parentes vivos, o que se leva) e os 17 caminhos da inclinação. As perguntas ficam abertas no turno (`cria.py perguntas`): 1 o povo, 2 o berço, 3 a inclinação, 4 a segunda
+(só do humano); o nome, o jogador diz por extenso. `cria.py nasce "1a.2c.3e.4r" nome=NOME`: o personagem nasce pelo dado do mundo, uma vez: nível 5, os atributos do berço
+(soma 340) mais os do povo, e o dado troca 5 pontos entre dois pares; o talento e o dom com a inclinação; a idade de adulto do povo mais 1d10; as peças, a prata (que sai da
+casa: nada nasce) e a carga do berço; a mão de Iniciante no ofício da família, com o treino que a explica; os laços com a família (dos dois lados) e a memória dela ("é do meu
+sangue"). O povo que não é o da família nasce de criação. A MESA da criação mostra tudo isso antes de o personagem existir.
+
 ## Os comandos
 
 ```
@@ -2494,3 +2622,19 @@ python3 dragoes.py covil [LUGAR] | covil poe LUGAR TIPO IDADE "Nome" [vila=LUGAR
 
 Na luta, ninguém dá ordem nova: o golpe pelas costas (18.9) sai sozinho para quem tem a manha de Treinado contra o lado surpreendido; a fase "foge" (20.3) é do dragão que voa.
 No cenário, quem não vem do mundo pode trazer `"tracos": ["vê no escuro"]` (e `"resiste a veneno"`) e `"coragem"`; o dragão entra como o bicho: `{"bicho": "dragão-da-serra-jovem", "nome": "o Tição", "pv": 350}`.
+
+**A etapa final (o mundo novo; capítulos 21 a 27):**
+```
+python3 gera.py PASTA [semente=N]                    o mundo novo inteiro numa pasta nova (o de verdade: motor10/mundo/, semente 5)
+python3 cria.py ofertas | perguntas | nasce "1a.2c.3e.4r" nome=NOME | herdeiro PID | herda
+python3 viagem.py ver | ir DESTINO [com=ID,ID] | pagar | atacar [inicio=] | fugir | luta "Nome: ordem" | segue | volta | acampa N | larga "por quê"
+python3 regiao.py ver | estradas [LUGAR] | anda N (só sem personagem)
+python3 gente.py ver PID | quem [LUGAR] | lembra PID "fato" PESO [de=QUEM]
+python3 noticias.py ver [LUGAR] | todas (SÓ O MESTRE)
+python3 caixa.py ver | responde XID LETRA | pergunta XID
+python3 missoes.py ver | toma MID | entrega MID | larga MID
+python3 frentes.py ver | investigar FID | mestre (SÓ O MESTRE)
+python3 rivais.py ranking | ver PID | leilao | lance ITEM PRATA | mestre (SÓ O MESTRE)
+python3 diretor.py pauta (SÓ O MESTRE) · python3 historia.py SEMENTE (só olha) · python3 nomes.py gente POVO N · python3 conta.py afina | confere
+python3 provas_regiao.py · python3 provas_ano.py [SEMENTES] [robos=N]
+```

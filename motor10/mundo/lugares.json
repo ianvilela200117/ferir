@@ -1,0 +1,5450 @@
+{
+ "vale_do_corvo": {
+  "nome": "Vale do Corvo",
+  "em": "em Vale do Corvo",
+  "tipo": "capital",
+  "cama": true,
+  "estoque": {
+   "comida": 192606,
+   "lenha": 30735,
+   "carvão": 2459,
+   "sal": 2459,
+   "pano": 1229,
+   "remédio": 615,
+   "ferramenta": 615,
+   "metal:0": 1229,
+   "couro:0": 1229,
+   "osso:0": 615,
+   "madeira:0": 2459,
+   "erva:0": 1229,
+   "metal:1": 205,
+   "couro:1": 205,
+   "osso:1": 102,
+   "madeira:1": 410,
+   "erva:1": 205,
+   "prata": 20490,
+   "cura:0": 61,
+   "cura:1": 10,
+   "cura:2": 2,
+   "antídoto:0": 21,
+   "antídoto:1": 3,
+   "antídoto:2": 1,
+   "mana:0": 1,
+   "mana:1": 1,
+   "mana:2": 1,
+   "guarda:0": 1,
+   "guarda:1": 1,
+   "guarda:2": 1,
+   "fúria:0": 1,
+   "fúria:1": 1,
+   "fúria:2": 1,
+   "vigília:0": 12,
+   "vigília:1": 2,
+   "vigília:2": 1,
+   "quebra-maldição:0": 12,
+   "quebra-maldição:1": 2,
+   "quebra-maldição:2": 1,
+   "água benta": 61,
+   "tocha": 1229
+  },
+  "x": 0.0,
+  "y": 0.0,
+  "resiste": 6,
+  "guarda": 40,
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 4098,
+  "produz": {
+   "comida": 4098.0,
+   "lenha": 1024.5,
+   "carvão": 81.96,
+   "sal": 81.96,
+   "pano": 40.98,
+   "remédio": 20.49,
+   "ferramenta": 20.49,
+   "metal:0": 40.98,
+   "couro:0": 40.98,
+   "osso:0": 20.49,
+   "madeira:0": 81.96,
+   "erva:0": 40.98,
+   "metal:1": 6.83,
+   "couro:1": 6.83,
+   "osso:1": 3.415,
+   "madeira:1": 13.66,
+   "erva:1": 6.83,
+   "cura:0": 2.049,
+   "cura:1": 0.3415,
+   "antídoto:0": 0.6967,
+   "antídoto:1": 0.1161,
+   "vigília:0": 0.4098,
+   "vigília:1": 0.0683,
+   "quebra-maldição:0": 0.4098,
+   "quebra-maldição:1": 0.0683,
+   "água benta": 2.049,
+   "tocha": 40.98
+  },
+  "alvo_pecas": {
+   "0": 23,
+   "1": 15,
+   "2": 6
+  },
+  "oficina": 3,
+  "preparo": {
+   "fogo": 2,
+   "bigorna": 2
+  },
+  "botica": 2,
+  "runas": 2,
+  "santuario": 3,
+  "povos": {
+   "anão": 0.05,
+   "elfo": 0.03,
+   "pequenino": 0.04,
+   "gnomo": 0.02,
+   "meio-orc": 0.03
+  },
+  "feira_magia": 1,
+  "feira_masmorra": 1
+ },
+ "varzea_da_nevoa": {
+  "nome": "Várzea da Névoa",
+  "em": "em Várzea da Névoa",
+  "tipo": "cidade",
+  "cama": true,
+  "estoque": {
+   "comida": 66740,
+   "lenha": 10650,
+   "carvão": 852,
+   "sal": 852,
+   "pano": 426,
+   "remédio": 213,
+   "ferramenta": 213,
+   "metal:0": 426,
+   "couro:0": 426,
+   "osso:0": 213,
+   "madeira:0": 852,
+   "erva:0": 426,
+   "metal:1": 71,
+   "couro:1": 71,
+   "osso:1": 36,
+   "madeira:1": 142,
+   "erva:1": 71,
+   "prata": 7100,
+   "cura:0": 21,
+   "cura:1": 4,
+   "antídoto:0": 7,
+   "antídoto:1": 1,
+   "mana:0": 1,
+   "mana:1": 1,
+   "guarda:0": 1,
+   "guarda:1": 1,
+   "fúria:0": 1,
+   "fúria:1": 1,
+   "vigília:0": 4,
+   "vigília:1": 1,
+   "quebra-maldição:0": 4,
+   "quebra-maldição:1": 1,
+   "água benta": 21,
+   "tocha": 426
+  },
+  "x": -5.25,
+  "y": -1.31,
+  "resiste": 5,
+  "guarda": 20,
+  "vizinhos": [
+   "souto_das_aguas",
+   "cripta_dos_miraves"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 1420,
+  "produz": {
+   "comida": 1420.0,
+   "lenha": 355.0,
+   "carvão": 28.4,
+   "sal": 28.4,
+   "pano": 14.2,
+   "remédio": 7.1,
+   "ferramenta": 7.1,
+   "metal:0": 14.2,
+   "couro:0": 14.2,
+   "osso:0": 7.1,
+   "madeira:0": 28.4,
+   "erva:0": 14.2,
+   "metal:1": 2.3667,
+   "couro:1": 2.3667,
+   "osso:1": 1.1833,
+   "madeira:1": 4.7333,
+   "erva:1": 2.3667,
+   "cura:0": 0.71,
+   "antídoto:0": 0.2414,
+   "vigília:0": 0.142,
+   "quebra-maldição:0": 0.142,
+   "água benta": 0.71,
+   "tocha": 14.2
+  },
+  "alvo_pecas": {
+   "0": 22,
+   "1": 14
+  },
+  "oficina": 2,
+  "preparo": {
+   "fogo": 2,
+   "bigorna": 2
+  },
+  "botica": 1,
+  "runas": 1,
+  "santuario": 2,
+  "povos": {
+   "anão": 0.04,
+   "elfo": 0.02,
+   "pequenino": 0.04,
+   "gnomo": 0.02,
+   "meio-orc": 0.03
+  },
+  "feira_magia": 1,
+  "feira_masmorra": 1
+ },
+ "ribeira_da_nevoa": {
+  "nome": "Ribeira da Névoa",
+  "em": "em Ribeira da Névoa",
+  "tipo": "cidade",
+  "cama": true,
+  "estoque": {
+   "comida": 71393,
+   "lenha": 11392,
+   "carvão": 911,
+   "sal": 911,
+   "pano": 456,
+   "remédio": 228,
+   "ferramenta": 228,
+   "metal:0": 456,
+   "couro:0": 456,
+   "osso:0": 228,
+   "madeira:0": 911,
+   "erva:0": 456,
+   "metal:1": 76,
+   "couro:1": 76,
+   "osso:1": 38,
+   "madeira:1": 152,
+   "erva:1": 76,
+   "prata": 7595,
+   "cura:0": 23,
+   "cura:1": 4,
+   "antídoto:0": 8,
+   "antídoto:1": 1,
+   "mana:0": 1,
+   "mana:1": 1,
+   "guarda:0": 1,
+   "guarda:1": 1,
+   "fúria:0": 1,
+   "fúria:1": 1,
+   "vigília:0": 5,
+   "vigília:1": 1,
+   "quebra-maldição:0": 5,
+   "quebra-maldição:1": 1,
+   "água benta": 23,
+   "tocha": 456
+  },
+  "x": 2.1,
+  "y": -5.41,
+  "resiste": 5,
+  "guarda": 20,
+  "vizinhos": [
+   "brejo_do_ferro",
+   "grutas_do_vento"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 1519,
+  "produz": {
+   "comida": 1519.0,
+   "lenha": 379.75,
+   "carvão": 30.38,
+   "sal": 30.38,
+   "pano": 15.19,
+   "remédio": 7.595,
+   "ferramenta": 7.595,
+   "metal:0": 15.19,
+   "couro:0": 15.19,
+   "osso:0": 7.595,
+   "madeira:0": 30.38,
+   "erva:0": 15.19,
+   "metal:1": 2.5317,
+   "couro:1": 2.5317,
+   "osso:1": 1.2658,
+   "madeira:1": 5.0633,
+   "erva:1": 2.5317,
+   "cura:0": 0.7595,
+   "antídoto:0": 0.2582,
+   "vigília:0": 0.1519,
+   "quebra-maldição:0": 0.1519,
+   "água benta": 0.7595,
+   "tocha": 15.19
+  },
+  "alvo_pecas": {
+   "0": 22,
+   "1": 14
+  },
+  "oficina": 2,
+  "preparo": {
+   "fogo": 2,
+   "bigorna": 2
+  },
+  "botica": 1,
+  "runas": 1,
+  "santuario": 2,
+  "povos": {
+   "anão": 0.04,
+   "elfo": 0.02,
+   "pequenino": 0.04,
+   "gnomo": 0.02,
+   "meio-orc": 0.03
+  },
+  "feira_magia": 1,
+  "feira_masmorra": 1
+ },
+ "castro_real": {
+  "nome": "Castro Real",
+  "em": "em Castro Real",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 17249,
+   "lenha": 2752,
+   "carvão": 220,
+   "sal": 220,
+   "pano": 110,
+   "remédio": 55,
+   "ferramenta": 55,
+   "metal:0": 110,
+   "couro:0": 110,
+   "osso:0": 55,
+   "madeira:0": 220,
+   "erva:0": 110,
+   "metal:1": 18,
+   "couro:1": 18,
+   "osso:1": 9,
+   "madeira:1": 37,
+   "erva:1": 18,
+   "prata": 1835,
+   "cura:0": 6,
+   "antídoto:0": 2,
+   "mana:0": 1,
+   "guarda:0": 1,
+   "fúria:0": 1,
+   "vigília:0": 1,
+   "quebra-maldição:0": 1,
+   "água benta": 6
+  },
+  "x": -3.14,
+  "y": -6.4,
+  "resiste": 3,
+  "guarda": 6,
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 367,
+  "produz": {
+   "comida": 367.0,
+   "lenha": 91.75,
+   "carvão": 7.34,
+   "sal": 7.34,
+   "pano": 3.67,
+   "remédio": 1.835,
+   "ferramenta": 1.835,
+   "metal:0": 3.67,
+   "couro:0": 3.67,
+   "osso:0": 1.835,
+   "madeira:0": 7.34,
+   "erva:0": 3.67,
+   "metal:1": 0.6117,
+   "couro:1": 0.6117,
+   "osso:1": 0.3058,
+   "madeira:1": 1.2233,
+   "erva:1": 0.6117,
+   "água benta": 0.1835
+  },
+  "alvo_pecas": {
+   "0": 16,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "botica": 0,
+  "santuario": 1,
+  "povos": {
+   "pequenino": 0.06,
+   "anão": 0.02,
+   "meio-orc": 0.02
+  },
+  "feira_magia": 1
+ },
+ "castro_do_sal": {
+  "nome": "Castro do Sal",
+  "em": "em Castro do Sal",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 17672,
+   "lenha": 2820,
+   "carvão": 226,
+   "sal": 226,
+   "pano": 113,
+   "remédio": 56,
+   "ferramenta": 56,
+   "metal:0": 113,
+   "couro:0": 113,
+   "osso:0": 56,
+   "madeira:0": 226,
+   "erva:0": 113,
+   "metal:1": 19,
+   "couro:1": 19,
+   "osso:1": 9,
+   "madeira:1": 38,
+   "erva:1": 19,
+   "prata": 1880,
+   "cura:0": 6,
+   "antídoto:0": 2,
+   "mana:0": 1,
+   "guarda:0": 1,
+   "fúria:0": 1,
+   "vigília:0": 1,
+   "quebra-maldição:0": 1,
+   "água benta": 6
+  },
+  "x": 2.75,
+  "y": -1.49,
+  "resiste": 3,
+  "guarda": 6,
+  "casa": "c_astasal",
+  "reino": "r_hoje",
+  "pop": 376,
+  "produz": {
+   "comida": 376.0,
+   "lenha": 94.0,
+   "carvão": 7.52,
+   "sal": 7.52,
+   "pano": 3.76,
+   "remédio": 1.88,
+   "ferramenta": 1.88,
+   "metal:0": 3.76,
+   "couro:0": 3.76,
+   "osso:0": 1.88,
+   "madeira:0": 7.52,
+   "erva:0": 3.76,
+   "metal:1": 0.6267,
+   "couro:1": 0.6267,
+   "osso:1": 0.3133,
+   "madeira:1": 1.2533,
+   "erva:1": 0.6267,
+   "água benta": 0.188
+  },
+  "alvo_pecas": {
+   "0": 16,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "botica": 0,
+  "santuario": 1,
+  "povos": {
+   "pequenino": 0.06,
+   "anão": 0.02,
+   "meio-orc": 0.02
+  },
+  "feira_magia": 1
+ },
+ "pedra_verde": {
+  "nome": "Pedra Verde",
+  "em": "em Pedra Verde",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 18471,
+   "lenha": 2948,
+   "carvão": 236,
+   "sal": 236,
+   "pano": 118,
+   "remédio": 59,
+   "ferramenta": 59,
+   "metal:0": 118,
+   "couro:0": 118,
+   "osso:0": 59,
+   "madeira:0": 236,
+   "erva:0": 118,
+   "metal:1": 20,
+   "couro:1": 20,
+   "osso:1": 10,
+   "madeira:1": 39,
+   "erva:1": 20,
+   "prata": 1965,
+   "cura:0": 6,
+   "antídoto:0": 2,
+   "mana:0": 1,
+   "guarda:0": 1,
+   "fúria:0": 1,
+   "vigília:0": 1,
+   "quebra-maldição:0": 1,
+   "água benta": 6
+  },
+  "x": 4.83,
+  "y": 2.44,
+  "resiste": 3,
+  "guarda": 6,
+  "casa": "c_astolan",
+  "reino": "r_hoje",
+  "pop": 393,
+  "produz": {
+   "comida": 393.0,
+   "lenha": 98.25,
+   "carvão": 7.86,
+   "sal": 7.86,
+   "pano": 3.93,
+   "remédio": 1.965,
+   "ferramenta": 1.965,
+   "metal:0": 3.93,
+   "couro:0": 3.93,
+   "osso:0": 1.965,
+   "madeira:0": 7.86,
+   "erva:0": 3.93,
+   "metal:1": 0.655,
+   "couro:1": 0.655,
+   "osso:1": 0.3275,
+   "madeira:1": 1.31,
+   "erva:1": 0.655,
+   "água benta": 0.1965
+  },
+  "alvo_pecas": {
+   "0": 16,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "botica": 0,
+  "santuario": 1,
+  "povos": {
+   "pequenino": 0.06,
+   "anão": 0.02,
+   "meio-orc": 0.02
+  },
+  "feira_magia": 1
+ },
+ "pedra_velha": {
+  "nome": "Pedra Velha",
+  "em": "em Pedra Velha",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 16920,
+   "lenha": 2700,
+   "carvão": 216,
+   "sal": 216,
+   "pano": 108,
+   "remédio": 54,
+   "ferramenta": 54,
+   "metal:0": 108,
+   "couro:0": 108,
+   "osso:0": 54,
+   "madeira:0": 216,
+   "erva:0": 108,
+   "metal:1": 18,
+   "couro:1": 18,
+   "osso:1": 9,
+   "madeira:1": 36,
+   "erva:1": 18,
+   "prata": 1800,
+   "cura:0": 5,
+   "antídoto:0": 2,
+   "mana:0": 1,
+   "guarda:0": 1,
+   "fúria:0": 1,
+   "vigília:0": 1,
+   "quebra-maldição:0": 1,
+   "água benta": 5
+  },
+  "x": 5.25,
+  "y": -3.01,
+  "resiste": 3,
+  "guarda": 6,
+  "vizinhos": [
+   "charneca_dos_sinos"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 360,
+  "produz": {
+   "comida": 360.0,
+   "lenha": 90.0,
+   "carvão": 7.2,
+   "sal": 7.2,
+   "pano": 3.6,
+   "remédio": 1.8,
+   "ferramenta": 1.8,
+   "metal:0": 3.6,
+   "couro:0": 3.6,
+   "osso:0": 1.8,
+   "madeira:0": 7.2,
+   "erva:0": 3.6,
+   "metal:1": 0.6,
+   "couro:1": 0.6,
+   "osso:1": 0.3,
+   "madeira:1": 1.2,
+   "erva:1": 0.6,
+   "água benta": 0.18
+  },
+  "alvo_pecas": {
+   "0": 16,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "botica": 0,
+  "santuario": 1,
+  "povos": {
+   "pequenino": 0.06,
+   "anão": 0.02,
+   "meio-orc": 0.02
+  },
+  "feira_magia": 1
+ },
+ "varzea_brava": {
+  "nome": "Várzea Brava",
+  "em": "em Várzea Brava",
+  "tipo": "vila",
+  "cama": true,
+  "estoque": {
+   "comida": 16873,
+   "lenha": 2692,
+   "carvão": 215,
+   "sal": 215,
+   "pano": 108,
+   "remédio": 54,
+   "ferramenta": 54,
+   "metal:0": 108,
+   "couro:0": 108,
+   "osso:0": 54,
+   "madeira:0": 215,
+   "erva:0": 108,
+   "metal:1": 18,
+   "couro:1": 18,
+   "osso:1": 9,
+   "madeira:1": 36,
+   "erva:1": 18,
+   "prata": 1795,
+   "cura:0": 5,
+   "antídoto:0": 2,
+   "mana:0": 1,
+   "guarda:0": 1,
+   "fúria:0": 1,
+   "vigília:0": 1,
+   "quebra-maldição:0": 1,
+   "água benta": 5
+  },
+  "x": 7.88,
+  "y": -0.25,
+  "resiste": 3,
+  "guarda": 6,
+  "vizinhos": [
+   "charneca_dos_sinos"
+  ],
+  "casa": "c_terigar",
+  "reino": "r_hoje",
+  "pop": 359,
+  "produz": {
+   "comida": 359.0,
+   "lenha": 89.75,
+   "carvão": 7.18,
+   "sal": 7.18,
+   "pano": 3.59,
+   "remédio": 1.795,
+   "ferramenta": 1.795,
+   "metal:0": 3.59,
+   "couro:0": 3.59,
+   "osso:0": 1.795,
+   "madeira:0": 7.18,
+   "erva:0": 3.59,
+   "metal:1": 0.5983,
+   "couro:1": 0.5983,
+   "osso:1": 0.2992,
+   "madeira:1": 1.1967,
+   "erva:1": 0.5983,
+   "água benta": 0.1795
+  },
+  "alvo_pecas": {
+   "0": 16,
+   "1": 4
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "botica": 0,
+  "santuario": 1,
+  "povos": {
+   "pequenino": 0.06,
+   "anão": 0.02,
+   "meio-orc": 0.02
+  },
+  "feira_magia": 1
+ },
+ "castro_branco": {
+  "nome": "Castro Branco",
+  "em": "em Castro Branco",
+  "tipo": "aldeia",
+  "cama": false,
+  "estoque": {
+   "comida": 5170,
+   "lenha": 825,
+   "carvão": 66,
+   "sal": 66,
+   "pano": 33,
+   "remédio": 16,
+   "ferramenta": 16,
+   "metal:0": 33,
+   "couro:0": 33,
+   "osso:0": 16,
+   "madeira:0": 66,
+   "erva:0": 33,
+   "metal:1": 6,
+   "couro:1": 6,
+   "osso:1": 3,
+   "madeira:1": 11,
+   "erva:1": 6,
+   "prata": 550,
+   "tocha": 33
+  },
+  "x": 0.76,
+  "y": -10.11,
+  "resiste": 2,
+  "guarda": 2,
+  "vizinhos": [
+   "grutas_do_vento",
+   "cripta_dos_vericor"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 110,
+  "produz": {
+   "comida": 110.0,
+   "lenha": 27.5,
+   "carvão": 2.2,
+   "sal": 2.2,
+   "pano": 1.1,
+   "remédio": 0.55,
+   "ferramenta": 0.55,
+   "metal:0": 1.1,
+   "couro:0": 1.1,
+   "osso:0": 0.55,
+   "madeira:0": 2.2,
+   "erva:0": 1.1,
+   "metal:1": 0.1833,
+   "couro:1": 0.1833,
+   "osso:1": 0.0917,
+   "madeira:1": 0.3667,
+   "erva:1": 0.1833,
+   "tocha": 1.1
+  },
+  "alvo_pecas": {
+   "0": 7
+  },
+  "oficina": 0,
+  "povos": {
+   "pequenino": 0.1
+  },
+  "feira_masmorra": 1
+ },
+ "ponte_da_cruz": {
+  "nome": "Ponte da Cruz",
+  "em": "em Ponte da Cruz",
+  "tipo": "aldeia",
+  "cama": false,
+  "estoque": {
+   "comida": 5076,
+   "lenha": 810,
+   "carvão": 65,
+   "sal": 65,
+   "pano": 32,
+   "remédio": 16,
+   "ferramenta": 16,
+   "metal:0": 32,
+   "couro:0": 32,
+   "osso:0": 16,
+   "madeira:0": 65,
+   "erva:0": 32,
+   "metal:1": 5,
+   "couro:1": 5,
+   "osso:1": 3,
+   "madeira:1": 11,
+   "erva:1": 5,
+   "prata": 540
+  },
+  "x": 7.66,
+  "y": 2.94,
+  "resiste": 2,
+  "guarda": 2,
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 108,
+  "produz": {
+   "comida": 108.0,
+   "lenha": 27.0,
+   "carvão": 2.16,
+   "sal": 2.16,
+   "pano": 1.08,
+   "remédio": 0.54,
+   "ferramenta": 0.54,
+   "metal:0": 1.08,
+   "couro:0": 1.08,
+   "osso:0": 0.54,
+   "madeira:0": 2.16,
+   "erva:0": 1.08,
+   "metal:1": 0.18,
+   "couro:1": 0.18,
+   "osso:1": 0.09,
+   "madeira:1": 0.36,
+   "erva:1": 0.18
+  },
+  "alvo_pecas": {
+   "0": 6
+  },
+  "oficina": 0,
+  "povos": {
+   "pequenino": 0.1
+  }
+ },
+ "pinhal_do_ferro": {
+  "nome": "Pinhal do Ferro",
+  "em": "em Pinhal do Ferro",
+  "tipo": "aldeia",
+  "cama": false,
+  "estoque": {
+   "comida": 6580,
+   "lenha": 1050,
+   "carvão": 84,
+   "sal": 84,
+   "pano": 42,
+   "remédio": 21,
+   "ferramenta": 21,
+   "metal:0": 42,
+   "couro:0": 42,
+   "osso:0": 21,
+   "madeira:0": 84,
+   "erva:0": 42,
+   "metal:1": 7,
+   "couro:1": 7,
+   "osso:1": 4,
+   "madeira:1": 14,
+   "erva:1": 7,
+   "prata": 700
+  },
+  "x": -2.65,
+  "y": 9.05,
+  "resiste": 2,
+  "guarda": 2,
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 140,
+  "produz": {
+   "comida": 140.0,
+   "lenha": 35.0,
+   "carvão": 2.8,
+   "sal": 2.8,
+   "pano": 1.4,
+   "remédio": 0.7,
+   "ferramenta": 0.7,
+   "metal:0": 1.4,
+   "couro:0": 1.4,
+   "osso:0": 0.7,
+   "madeira:0": 2.8,
+   "erva:0": 1.4,
+   "metal:1": 0.2333,
+   "couro:1": 0.2333,
+   "osso:1": 0.1167,
+   "madeira:1": 0.4667,
+   "erva:1": 0.2333
+  },
+  "alvo_pecas": {
+   "0": 6
+  },
+  "oficina": 0,
+  "povos": {
+   "pequenino": 0.1
+  }
+ },
+ "coval_do_vento": {
+  "nome": "Coval do Vento",
+  "em": "em Coval do Vento",
+  "tipo": "aldeia",
+  "cama": false,
+  "estoque": {
+   "comida": 6016,
+   "lenha": 960,
+   "carvão": 77,
+   "sal": 77,
+   "pano": 38,
+   "remédio": 19,
+   "ferramenta": 19,
+   "metal:0": 38,
+   "couro:0": 38,
+   "osso:0": 19,
+   "madeira:0": 77,
+   "erva:0": 38,
+   "metal:1": 6,
+   "couro:1": 6,
+   "osso:1": 3,
+   "madeira:1": 13,
+   "erva:1": 6,
+   "prata": 640
+  },
+  "x": -8.25,
+  "y": -3.43,
+  "resiste": 2,
+  "guarda": 2,
+  "vizinhos": [
+   "souto_das_aguas"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 128,
+  "produz": {
+   "comida": 128.0,
+   "lenha": 32.0,
+   "carvão": 2.56,
+   "sal": 2.56,
+   "pano": 1.28,
+   "remédio": 0.64,
+   "ferramenta": 0.64,
+   "metal:0": 1.28,
+   "couro:0": 1.28,
+   "osso:0": 0.64,
+   "madeira:0": 2.56,
+   "erva:0": 1.28,
+   "metal:1": 0.2133,
+   "couro:1": 0.2133,
+   "osso:1": 0.1067,
+   "madeira:1": 0.4267,
+   "erva:1": 0.2133
+  },
+  "alvo_pecas": {
+   "0": 6
+  },
+  "oficina": 0,
+  "povos": {
+   "pequenino": 0.1
+  }
+ },
+ "souto_negro": {
+  "nome": "Souto Negro",
+  "em": "em Souto Negro",
+  "tipo": "aldeia",
+  "cama": false,
+  "estoque": {
+   "comida": 5687,
+   "lenha": 908,
+   "carvão": 73,
+   "sal": 73,
+   "pano": 36,
+   "remédio": 18,
+   "ferramenta": 18,
+   "metal:0": 36,
+   "couro:0": 36,
+   "osso:0": 18,
+   "madeira:0": 73,
+   "erva:0": 36,
+   "metal:1": 6,
+   "couro:1": 6,
+   "osso:1": 3,
+   "madeira:1": 12,
+   "erva:1": 6,
+   "prata": 605
+  },
+  "x": 7.35,
+  "y": -4.26,
+  "resiste": 2,
+  "guarda": 2,
+  "vizinhos": [
+   "charneca_dos_sinos"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 121,
+  "produz": {
+   "comida": 121.0,
+   "lenha": 30.25,
+   "carvão": 2.42,
+   "sal": 2.42,
+   "pano": 1.21,
+   "remédio": 0.605,
+   "ferramenta": 0.605,
+   "metal:0": 1.21,
+   "couro:0": 1.21,
+   "osso:0": 0.605,
+   "madeira:0": 2.42,
+   "erva:0": 1.21,
+   "metal:1": 0.2017,
+   "couro:1": 0.2017,
+   "osso:1": 0.1008,
+   "madeira:1": 0.4033,
+   "erva:1": 0.2017
+  },
+  "alvo_pecas": {
+   "0": 6
+  },
+  "oficina": 0,
+  "povos": {
+   "pequenino": 0.1
+  }
+ },
+ "ribeira_do_lobo": {
+  "nome": "Ribeira do Lobo",
+  "em": "em Ribeira do Lobo",
+  "tipo": "posto",
+  "cama": true,
+  "estoque": {
+   "comida": 5734,
+   "lenha": 915,
+   "carvão": 73,
+   "sal": 73,
+   "pano": 37,
+   "remédio": 18,
+   "ferramenta": 18,
+   "metal:0": 37,
+   "couro:0": 37,
+   "osso:0": 18,
+   "madeira:0": 73,
+   "erva:0": 37,
+   "metal:1": 6,
+   "couro:1": 6,
+   "osso:1": 3,
+   "madeira:1": 12,
+   "erva:1": 6,
+   "prata": 610
+  },
+  "x": 2.88,
+  "y": 8.74,
+  "resiste": 4,
+  "guarda": 8,
+  "vizinhos": [
+   "penhascos_das_aguas"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 122,
+  "produz": {
+   "comida": 122.0,
+   "lenha": 30.5,
+   "carvão": 2.44,
+   "sal": 2.44,
+   "pano": 1.22,
+   "remédio": 0.61,
+   "ferramenta": 0.61,
+   "metal:0": 1.22,
+   "couro:0": 1.22,
+   "osso:0": 0.61,
+   "madeira:0": 2.44,
+   "erva:0": 1.22,
+   "metal:1": 0.2033,
+   "couro:1": 0.2033,
+   "osso:1": 0.1017,
+   "madeira:1": 0.4067,
+   "erva:1": 0.2033
+  },
+  "alvo_pecas": {
+   "0": 5,
+   "1": 1
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "povos": {
+   "anão": 0.25,
+   "meio-orc": 0.05,
+   "gnomo": 0.03
+  }
+ },
+ "ermida_verde": {
+  "nome": "Ermida Verde",
+  "em": "em Ermida Verde",
+  "tipo": "posto",
+  "cama": true,
+  "estoque": {
+   "comida": 6486,
+   "lenha": 1035,
+   "carvão": 83,
+   "sal": 83,
+   "pano": 41,
+   "remédio": 21,
+   "ferramenta": 21,
+   "metal:0": 41,
+   "couro:0": 41,
+   "osso:0": 21,
+   "madeira:0": 83,
+   "erva:0": 41,
+   "metal:1": 7,
+   "couro:1": 7,
+   "osso:1": 3,
+   "madeira:1": 14,
+   "erva:1": 7,
+   "prata": 690
+  },
+  "x": 9.41,
+  "y": 4.63,
+  "resiste": 4,
+  "guarda": 8,
+  "vizinhos": [
+   "bosque_do_urso"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 138,
+  "produz": {
+   "comida": 138.0,
+   "lenha": 34.5,
+   "carvão": 2.76,
+   "sal": 2.76,
+   "pano": 1.38,
+   "remédio": 0.69,
+   "ferramenta": 0.69,
+   "metal:0": 1.38,
+   "couro:0": 1.38,
+   "osso:0": 0.69,
+   "madeira:0": 2.76,
+   "erva:0": 1.38,
+   "metal:1": 0.23,
+   "couro:1": 0.23,
+   "osso:1": 0.115,
+   "madeira:1": 0.46,
+   "erva:1": 0.23
+  },
+  "alvo_pecas": {
+   "0": 5,
+   "1": 1
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "povos": {
+   "anão": 0.25,
+   "meio-orc": 0.05,
+   "gnomo": 0.03
+  }
+ },
+ "penha_das_rosas": {
+  "nome": "Penha das Rosas",
+  "em": "em Penha das Rosas",
+  "tipo": "posto",
+  "cama": true,
+  "estoque": {
+   "comida": 6392,
+   "lenha": 1020,
+   "carvão": 82,
+   "sal": 82,
+   "pano": 41,
+   "remédio": 20,
+   "ferramenta": 20,
+   "metal:0": 41,
+   "couro:0": 41,
+   "osso:0": 20,
+   "madeira:0": 82,
+   "erva:0": 41,
+   "metal:1": 7,
+   "couro:1": 7,
+   "osso:1": 3,
+   "madeira:1": 14,
+   "erva:1": 7,
+   "prata": 680
+  },
+  "x": -9.93,
+  "y": -1.96,
+  "resiste": 4,
+  "guarda": 8,
+  "vizinhos": [
+   "souto_das_aguas"
+  ],
+  "casa": "c_orirena",
+  "reino": "r_hoje",
+  "pop": 136,
+  "produz": {
+   "comida": 136.0,
+   "lenha": 34.0,
+   "carvão": 2.72,
+   "sal": 2.72,
+   "pano": 1.36,
+   "remédio": 0.68,
+   "ferramenta": 0.68,
+   "metal:0": 1.36,
+   "couro:0": 1.36,
+   "osso:0": 0.68,
+   "madeira:0": 2.72,
+   "erva:0": 1.36,
+   "metal:1": 0.2267,
+   "couro:1": 0.2267,
+   "osso:1": 0.1133,
+   "madeira:1": 0.4533,
+   "erva:1": 0.2267
+  },
+  "alvo_pecas": {
+   "0": 5,
+   "1": 1
+  },
+  "oficina": 1,
+  "preparo": {
+   "fogo": 1,
+   "bigorna": 1
+  },
+  "povos": {
+   "anão": 0.25,
+   "meio-orc": 0.05,
+   "gnomo": 0.03
+  }
+ },
+ "souto_das_aguas": {
+  "nome": "o Souto das Águas",
+  "em": "no Souto das Águas",
+  "tipo": "ermo",
+  "estoque": {
+   "prata": 29
+  },
+  "x": -8.96,
+  "y": -0.85,
+  "habitat": "floresta",
+  "perigo": 1,
+  "teto": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "surucucu": 8,
+   "urso": 3,
+   "goblin": 16
+  },
+  "bichos": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "surucucu": 8,
+   "urso": 3,
+   "goblin": 10
+  },
+  "coleta_teto": {
+   "madeira:0": 200,
+   "erva:0": 60
+  },
+  "coleta": {
+   "madeira:0": 200,
+   "erva:0": 60
+  },
+  "longe": 2,
+  "vizinhos": [
+   "penha_das_rosas",
+   "varzea_da_nevoa",
+   "ruinas_do_urso"
+  ],
+  "covil": {
+   "especie": "goblin",
+   "nome": "a toca dos goblins",
+   "teto": 16,
+   "lider": true,
+   "chefe": null,
+   "fome": 0,
+   "ult_roubo": 1,
+   "sem_lider": 0,
+   "cheio": 0,
+   "fora": 0,
+   "desde": 1
+  }
+ },
+ "bosque_do_urso": {
+  "nome": "o Bosque do Urso",
+  "em": "no Bosque do Urso",
+  "tipo": "ermo",
+  "estoque": {},
+  "x": 8.31,
+  "y": 4.25,
+  "habitat": "floresta",
+  "perigo": 2,
+  "teto": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "surucucu": 8,
+   "urso": 3,
+   "pantera": 2,
+   "aranha": 6
+  },
+  "bichos": {
+   "corça": 80,
+   "javali": 40,
+   "lobo": 12,
+   "surucucu": 8,
+   "urso": 3,
+   "pantera": 2,
+   "aranha": 6
+  },
+  "coleta_teto": {
+   "madeira:0": 200,
+   "erva:0": 60,
+   "madeira:1": 20,
+   "erva:1": 10,
+   "madeira:2": 4,
+   "erva:2": 3
+  },
+  "coleta": {
+   "madeira:0": 200,
+   "erva:0": 60,
+   "madeira:1": 20,
+   "erva:1": 10,
+   "madeira:2": 4,
+   "erva:2": 3
+  },
+  "longe": 2,
+  "vizinhos": [
+   "ermida_verde",
+   "ruinas_da_garca",
+   "toca_do_touro"
+  ]
+ },
+ "penhascos_das_aguas": {
+  "nome": "os Penhascos das Águas",
+  "em": "nos Penhascos das Águas",
+  "tipo": "ermo",
+  "estoque": {
+   "prata": 474
+  },
+  "x": 2.49,
+  "y": 7.59,
+  "habitat": "serra",
+  "perigo": 3,
+  "teto": {
+   "lobo": 12,
+   "urso": 3,
+   "pantera": 2,
+   "grifo": 2,
+   "serpe": 1,
+   "dragão": 1,
+   "orc": 12
+  },
+  "bichos": {
+   "lobo": 12,
+   "urso": 3,
+   "pantera": 2,
+   "grifo": 2,
+   "serpe": 1,
+   "dragão": 1,
+   "orc": 6
+  },
+  "coleta_teto": {
+   "metal:0": 150,
+   "madeira:0": 60,
+   "metal:1": 20,
+   "metal:2": 5
+  },
+  "coleta": {
+   "metal:0": 150,
+   "madeira:0": 60,
+   "metal:1": 20,
+   "metal:2": 5
+  },
+  "longe": 2,
+  "vizinhos": [
+   "ribeira_do_lobo",
+   "mina_da_nevoa",
+   "covil_dos_sinos"
+  ],
+  "dragao": {
+   "nome": "o Brasa",
+   "tipo": "serra",
+   "idade": "jovem",
+   "dorme_ate": null,
+   "punhados": 0,
+   "vila": "ribeira_do_lobo",
+   "desde": 1,
+   "ataques": 0,
+   "fama": [
+    "ribeira_do_lobo"
+   ]
+  },
+  "covil": {
+   "especie": "orc",
+   "nome": "o acampamento orc",
+   "teto": 12,
+   "lider": true,
+   "chefe": null,
+   "fome": 0,
+   "ult_roubo": 1,
+   "sem_lider": 0,
+   "cheio": 0,
+   "fora": 0,
+   "desde": 1
+  }
+ },
+ "brejo_do_ferro": {
+  "nome": "o Brejo do Ferro",
+  "em": "no Brejo do Ferro",
+  "tipo": "ermo",
+  "estoque": {},
+  "x": 0.23,
+  "y": -4.2,
+  "habitat": "brejo",
+  "perigo": 2,
+  "teto": {
+   "ratazana": 90,
+   "javali": 40,
+   "surucucu": 8,
+   "trasgo": 2
+  },
+  "bichos": {
+   "ratazana": 90,
+   "javali": 40,
+   "surucucu": 8,
+   "trasgo": 2
+  },
+  "coleta_teto": {
+   "erva:0": 90,
+   "madeira:0": 60,
+   "erva:1": 20,
+   "erva:2": 5
+  },
+  "coleta": {
+   "erva:0": 90,
+   "madeira:0": 60,
+   "erva:1": 20,
+   "erva:2": 5
+  },
+  "longe": 1,
+  "vizinhos": [
+   "ribeira_da_nevoa"
+  ]
+ },
+ "charneca_dos_sinos": {
+  "nome": "a Charneca dos Sinos",
+  "em": "na Charneca dos Sinos",
+  "tipo": "ermo",
+  "estoque": {},
+  "x": 6.24,
+  "y": -2.44,
+  "habitat": "campo",
+  "perigo": 1,
+  "teto": {
+   "corça": 80,
+   "lobo": 12,
+   "lobisomem": 1
+  },
+  "bichos": {
+   "corça": 80,
+   "lobo": 12,
+   "lobisomem": 1
+  },
+  "coleta_teto": {
+   "erva:0": 80,
+   "madeira:0": 40
+  },
+  "coleta": {
+   "erva:0": 80,
+   "madeira:0": 40
+  },
+  "longe": 2,
+  "vizinhos": [
+   "pedra_velha",
+   "varzea_brava",
+   "toca_do_sal"
+  ]
+ },
+ "grutas_do_vento": {
+  "nome": "as Grutas do Vento",
+  "em": "nas Grutas do Vento",
+  "tipo": "ermo",
+  "estoque": {},
+  "x": 2.12,
+  "y": -10.07,
+  "habitat": "caverna",
+  "perigo": 2,
+  "teto": {
+   "ratazana": 90,
+   "urso": 3,
+   "aranha": 6,
+   "trasgo": 2
+  },
+  "bichos": {
+   "ratazana": 90,
+   "urso": 3,
+   "aranha": 6,
+   "trasgo": 2
+  },
+  "coleta_teto": {
+   "metal:0": 100,
+   "metal:1": 30,
+   "metal:2": 6
+  },
+  "coleta": {
+   "metal:0": 100,
+   "metal:1": 30,
+   "metal:2": 6
+  },
+  "longe": 1,
+  "vizinhos": [
+   "castro_branco",
+   "ribeira_da_nevoa"
+  ]
+ },
+ "estrada_coval_do_vento_penha_das_rosas": {
+  "nome": "a estrada de Coval do Vento a Penha das Rosas",
+  "em": "na estrada de Coval do Vento a Penha das Rosas",
+  "tipo": "estrada",
+  "ponta": [
+   "coval_do_vento",
+   "penha_das_rosas"
+  ],
+  "longe": 2,
+  "perigo": 3,
+  "bando": 3,
+  "passa": "souto_das_aguas",
+  "estoque": {}
+ },
+ "estrada_ponte_da_cruz_ermida_verde": {
+  "nome": "a estrada de Ponte da Cruz a Ermida Verde",
+  "em": "na estrada de Ponte da Cruz a Ermida Verde",
+  "tipo": "estrada",
+  "ponta": [
+   "ponte_da_cruz",
+   "ermida_verde"
+  ],
+  "longe": 2,
+  "perigo": 3,
+  "bando": 3,
+  "passa": "bosque_do_urso",
+  "estoque": {}
+ },
+ "estrada_pedra_velha_souto_negro": {
+  "nome": "a estrada de Pedra Velha a Souto Negro",
+  "em": "na estrada de Pedra Velha a Souto Negro",
+  "tipo": "estrada",
+  "ponta": [
+   "pedra_velha",
+   "souto_negro"
+  ],
+  "longe": 2,
+  "perigo": 2,
+  "bando": 4,
+  "passa": "charneca_dos_sinos",
+  "estoque": {}
+ },
+ "estrada_pedra_verde_ponte_da_cruz": {
+  "nome": "a estrada de Pedra Verde a Ponte da Cruz",
+  "em": "na estrada de Pedra Verde a Ponte da Cruz",
+  "tipo": "estrada",
+  "ponta": [
+   "pedra_verde",
+   "ponte_da_cruz"
+  ],
+  "longe": 2,
+  "perigo": 2,
+  "bando": 3,
+  "passa": "bosque_do_urso",
+  "estoque": {}
+ },
+ "estrada_castro_do_sal_pedra_velha": {
+  "nome": "a estrada de Castro do Sal a Pedra Velha",
+  "em": "na estrada de Castro do Sal a Pedra Velha",
+  "tipo": "estrada",
+  "ponta": [
+   "castro_do_sal",
+   "pedra_velha"
+  ],
+  "longe": 2,
+  "perigo": 2,
+  "bando": 2,
+  "passa": "charneca_dos_sinos",
+  "estoque": {}
+ },
+ "estrada_vale_do_corvo_castro_do_sal": {
+  "nome": "a estrada de Vale do Corvo a Castro do Sal",
+  "em": "na estrada de Vale do Corvo a Castro do Sal",
+  "tipo": "estrada",
+  "ponta": [
+   "vale_do_corvo",
+   "castro_do_sal"
+  ],
+  "longe": 2,
+  "perigo": 1,
+  "bando": 3,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_varzea_brava_ponte_da_cruz": {
+  "nome": "a estrada de Várzea Brava a Ponte da Cruz",
+  "em": "na estrada de Várzea Brava a Ponte da Cruz",
+  "tipo": "estrada",
+  "ponta": [
+   "varzea_brava",
+   "ponte_da_cruz"
+  ],
+  "longe": 2,
+  "perigo": 2,
+  "bando": 2,
+  "passa": "bosque_do_urso",
+  "estoque": {}
+ },
+ "estrada_varzea_da_nevoa_coval_do_vento": {
+  "nome": "a estrada de Várzea da Névoa a Coval do Vento",
+  "em": "na estrada de Várzea da Névoa a Coval do Vento",
+  "tipo": "estrada",
+  "ponta": [
+   "varzea_da_nevoa",
+   "coval_do_vento"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 3,
+  "passa": "souto_das_aguas",
+  "estoque": {}
+ },
+ "estrada_pedra_velha_varzea_brava": {
+  "nome": "a estrada de Pedra Velha a Várzea Brava",
+  "em": "na estrada de Pedra Velha a Várzea Brava",
+  "tipo": "estrada",
+  "ponta": [
+   "pedra_velha",
+   "varzea_brava"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 3,
+  "passa": "charneca_dos_sinos",
+  "estoque": {}
+ },
+ "estrada_ribeira_da_nevoa_pedra_velha": {
+  "nome": "a estrada de Ribeira da Névoa a Pedra Velha",
+  "em": "na estrada de Ribeira da Névoa a Pedra Velha",
+  "tipo": "estrada",
+  "ponta": [
+   "ribeira_da_nevoa",
+   "pedra_velha"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 2,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_ribeira_da_nevoa_castro_branco": {
+  "nome": "a estrada de Ribeira da Névoa a Castro Branco",
+  "em": "na estrada de Ribeira da Névoa a Castro Branco",
+  "tipo": "estrada",
+  "ponta": [
+   "ribeira_da_nevoa",
+   "castro_branco"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 3,
+  "passa": "grutas_do_vento",
+  "estoque": {}
+ },
+ "estrada_ribeira_da_nevoa_castro_real": {
+  "nome": "a estrada de Ribeira da Névoa a Castro Real",
+  "em": "na estrada de Ribeira da Névoa a Castro Real",
+  "tipo": "estrada",
+  "ponta": [
+   "ribeira_da_nevoa",
+   "castro_real"
+  ],
+  "longe": 4,
+  "perigo": 2,
+  "bando": 2,
+  "passa": "brejo_do_ferro",
+  "estoque": {}
+ },
+ "estrada_vale_do_corvo_varzea_da_nevoa": {
+  "nome": "a estrada de Vale do Corvo a Várzea da Névoa",
+  "em": "na estrada de Vale do Corvo a Várzea da Névoa",
+  "tipo": "estrada",
+  "ponta": [
+   "vale_do_corvo",
+   "varzea_da_nevoa"
+  ],
+  "longe": 4,
+  "perigo": 1,
+  "bando": 3,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_pinhal_do_ferro_ribeira_do_lobo": {
+  "nome": "a estrada de Pinhal do Ferro a Ribeira do Lobo",
+  "em": "na estrada de Pinhal do Ferro a Ribeira do Lobo",
+  "tipo": "estrada",
+  "ponta": [
+   "pinhal_do_ferro",
+   "ribeira_do_lobo"
+  ],
+  "longe": 4,
+  "perigo": 3,
+  "bando": 4,
+  "passa": "penhascos_das_aguas",
+  "estoque": {}
+ },
+ "estrada_pedra_verde_ribeira_do_lobo": {
+  "nome": "a estrada de Pedra Verde a Ribeira do Lobo",
+  "em": "na estrada de Pedra Verde a Ribeira do Lobo",
+  "tipo": "estrada",
+  "ponta": [
+   "pedra_verde",
+   "ribeira_do_lobo"
+  ],
+  "longe": 5,
+  "perigo": 2,
+  "bando": 2,
+  "passa": "penhascos_das_aguas",
+  "estoque": {}
+ },
+ "estrada_ribeira_da_nevoa_castro_do_sal": {
+  "nome": "a estrada de Ribeira da Névoa a Castro do Sal",
+  "em": "na estrada de Ribeira da Névoa a Castro do Sal",
+  "tipo": "estrada",
+  "ponta": [
+   "ribeira_da_nevoa",
+   "castro_do_sal"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 1,
+  "passa": "brejo_do_ferro",
+  "estoque": {}
+ },
+ "estrada_varzea_brava_souto_negro": {
+  "nome": "a estrada de Várzea Brava a Souto Negro",
+  "em": "na estrada de Várzea Brava a Souto Negro",
+  "tipo": "estrada",
+  "ponta": [
+   "varzea_brava",
+   "souto_negro"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 1,
+  "passa": "charneca_dos_sinos",
+  "estoque": {}
+ },
+ "estrada_pedra_verde_varzea_brava": {
+  "nome": "a estrada de Pedra Verde a Várzea Brava",
+  "em": "na estrada de Pedra Verde a Várzea Brava",
+  "tipo": "estrada",
+  "ponta": [
+   "pedra_verde",
+   "varzea_brava"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 4,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_castro_do_sal_pedra_verde": {
+  "nome": "a estrada de Castro do Sal a Pedra Verde",
+  "em": "na estrada de Castro do Sal a Pedra Verde",
+  "tipo": "estrada",
+  "ponta": [
+   "castro_do_sal",
+   "pedra_verde"
+  ],
+  "longe": 3,
+  "perigo": 1,
+  "bando": 0,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_varzea_da_nevoa_penha_das_rosas": {
+  "nome": "a estrada de Várzea da Névoa a Penha das Rosas",
+  "em": "na estrada de Várzea da Névoa a Penha das Rosas",
+  "tipo": "estrada",
+  "ponta": [
+   "varzea_da_nevoa",
+   "penha_das_rosas"
+  ],
+  "longe": 3,
+  "perigo": 2,
+  "bando": 1,
+  "passa": "souto_das_aguas",
+  "estoque": {}
+ },
+ "estrada_castro_real_castro_branco": {
+  "nome": "a estrada de Castro Real a Castro Branco",
+  "em": "na estrada de Castro Real a Castro Branco",
+  "tipo": "estrada",
+  "ponta": [
+   "castro_real",
+   "castro_branco"
+  ],
+  "longe": 4,
+  "perigo": 3,
+  "bando": 2,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_varzea_da_nevoa_castro_real": {
+  "nome": "a estrada de Várzea da Névoa a Castro Real",
+  "em": "na estrada de Várzea da Névoa a Castro Real",
+  "tipo": "estrada",
+  "ponta": [
+   "varzea_da_nevoa",
+   "castro_real"
+  ],
+  "longe": 4,
+  "perigo": 2,
+  "bando": 2,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_castro_real_coval_do_vento": {
+  "nome": "a estrada de Castro Real a Coval do Vento",
+  "em": "na estrada de Castro Real a Coval do Vento",
+  "tipo": "estrada",
+  "ponta": [
+   "castro_real",
+   "coval_do_vento"
+  ],
+  "longe": 4,
+  "perigo": 2,
+  "bando": 5,
+  "passa": null,
+  "estoque": {}
+ },
+ "estrada_ponte_da_cruz_souto_negro": {
+  "nome": "a estrada de Ponte da Cruz a Souto Negro",
+  "em": "na estrada de Ponte da Cruz a Souto Negro",
+  "tipo": "estrada",
+  "ponta": [
+   "ponte_da_cruz",
+   "souto_negro"
+  ],
+  "longe": 5,
+  "perigo": 2,
+  "bando": 3,
+  "passa": "charneca_dos_sinos",
+  "estoque": {}
+ },
+ "cripta_dos_miraves": {
+  "nome": "a Cripta dos Miraves",
+  "em": "na Cripta dos Miraves",
+  "tipo": "masmorra",
+  "molde": "cripta",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 0,
+    "salas": [
+     "cripta_dos_miraves_1",
+     "cripta_dos_miraves_2",
+     "cripta_dos_miraves_3",
+     "cripta_dos_miraves_4",
+     "cripta_dos_miraves_5",
+     "cripta_dos_miraves_6"
+    ]
+   }
+  ],
+  "entrada": "cripta_dos_miraves_1",
+  "portas": {
+   "cripta_dos_miraves_2|cripta_dos_miraves_3": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 0,
+    "fechadura": 0
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "corpo-seco": 1
+  },
+  "longe": 1,
+  "vizinhos": [
+   "varzea_da_nevoa"
+  ],
+  "limpa": null,
+  "origem": "a cripta onde os Valedel enterravam os seus, selada no ano 1112 depois da peste",
+  "estoque": {}
+ },
+ "cripta_dos_miraves_1": {
+  "nome": "a escada",
+  "cat": 0,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "na escada",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_miraves_2",
+   "cripta_dos_miraves_4",
+   "cripta_dos_miraves_5"
+  ]
+ },
+ "cripta_dos_miraves_2": {
+  "nome": "a capela",
+  "cat": 0,
+  "atento": 0,
+  "largura": 2,
+  "segredos": [
+   {
+    "para": "cripta_dos_miraves_6",
+    "cat": 1
+   }
+  ],
+  "bichos": {
+   "esqueleto": 2
+  },
+  "estoque": {
+   "prata": 20,
+   "cura:0": 1
+  },
+  "guardado": {
+   "nome": "o cofre",
+   "fechadura": 0,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "na capela",
+  "vizinhos": [
+   "cripta_dos_miraves_1",
+   "cripta_dos_miraves_3"
+  ]
+ },
+ "cripta_dos_miraves_3": {
+  "nome": "a câmara do túmulo",
+  "cat": 0,
+  "atento": 0,
+  "chefe": {
+   "qual": "guardião da cripta",
+   "vivo": true,
+   "ergue": {
+    "cripta_dos_miraves_2": {
+     "esqueleto": 2
+    },
+    "cripta_dos_miraves_3": {
+     "esqueleto": 2
+    },
+    "cripta_dos_miraves_4": {
+     "esqueleto": 4
+    }
+   },
+   "ergueu": 1
+  },
+  "bichos": {
+   "esqueleto": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "dardo",
+    "cat": 0,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   },
+   {
+    "tipo": "lâmina",
+    "cat": 0,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 20
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "na câmara do túmulo",
+  "vizinhos": [
+   "cripta_dos_miraves_2"
+  ]
+ },
+ "cripta_dos_miraves_4": {
+  "nome": "a câmara das oferendas",
+  "cat": 0,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 4
+  },
+  "estoque": {
+   "prata": 20
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 0,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "na câmara das oferendas",
+  "vizinhos": [
+   "cripta_dos_miraves_1"
+  ]
+ },
+ "cripta_dos_miraves_5": {
+  "nome": "a cripta pequena",
+  "cat": 0,
+  "atento": -1,
+  "bichos": {
+   "ratazana": 3
+  },
+  "teto": {
+   "ratazana": 3
+  },
+  "estoque": {
+   "prata": 20
+  },
+  "guardado": {
+   "nome": "o nicho",
+   "fechadura": 0,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "na cripta pequena",
+  "vizinhos": [
+   "cripta_dos_miraves_1"
+  ]
+ },
+ "cripta_dos_miraves_6": {
+  "nome": "o nicho escondido",
+  "cat": 0,
+  "largura": 1,
+  "estoque": {
+   "prata": 20
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_miraves",
+  "nivel": 1,
+  "em": "no nicho escondido"
+ },
+ "cripta_dos_vericor": {
+  "nome": "a Cripta dos Vericor",
+  "em": "na Cripta dos Vericor",
+  "tipo": "masmorra",
+  "molde": "cripta",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 1,
+    "salas": [
+     "cripta_dos_vericor_1",
+     "cripta_dos_vericor_2",
+     "cripta_dos_vericor_3",
+     "cripta_dos_vericor_4",
+     "cripta_dos_vericor_5"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 2,
+    "salas": [
+     "cripta_dos_vericor_6",
+     "cripta_dos_vericor_7",
+     "cripta_dos_vericor_8",
+     "cripta_dos_vericor_9"
+    ]
+   }
+  ],
+  "entrada": "cripta_dos_vericor_1",
+  "portas": {
+   "cripta_dos_vericor_2|cripta_dos_vericor_3": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": null
+   },
+   "cripta_dos_vericor_6|cripta_dos_vericor_7": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 2,
+    "fechadura": null
+   },
+   "cripta_dos_vericor_7|cripta_dos_vericor_8": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 2,
+    "fechadura": 2
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "esqueleto": 3,
+   "corpo-seco": 1
+  },
+  "longe": 1,
+  "vizinhos": [
+   "castro_branco"
+  ],
+  "limpa": null,
+  "origem": "a cripta onde os Orirena enterravam os seus, selada no ano 613 depois da peste",
+  "estoque": {}
+ },
+ "cripta_dos_vericor_1": {
+  "nome": "a escada",
+  "cat": 1,
+  "atento": 0,
+  "segredos": [
+   {
+    "para": "cripta_dos_vericor_5",
+    "cat": 2
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 1,
+  "em": "na escada",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_vericor_2",
+   "cripta_dos_vericor_4"
+  ]
+ },
+ "cripta_dos_vericor_2": {
+  "nome": "o corredor dos nichos",
+  "cat": 1,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "ratazana": 6
+  },
+  "teto": {
+   "ratazana": 6
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 1,
+  "em": "no corredor dos nichos",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_vericor_1",
+   "cripta_dos_vericor_3"
+  ]
+ },
+ "cripta_dos_vericor_3": {
+  "nome": "a capela",
+  "cat": 1,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "ratazana": 4
+  },
+  "teto": {
+   "ratazana": 4
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 1,
+  "em": "na capela",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_vericor_2",
+   "cripta_dos_vericor_6"
+  ]
+ },
+ "cripta_dos_vericor_4": {
+  "nome": "a câmara das oferendas",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 3
+  },
+  "armadilhas": [
+   {
+    "tipo": "dardo",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 80,
+   "cura:1": 2
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 1,
+  "em": "na câmara das oferendas",
+  "vizinhos": [
+   "cripta_dos_vericor_1"
+  ]
+ },
+ "cripta_dos_vericor_5": {
+  "nome": "o nicho escondido",
+  "cat": 1,
+  "largura": 1,
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 1,
+  "em": "no nicho escondido"
+ },
+ "cripta_dos_vericor_6": {
+  "nome": "os degraus",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 2,
+  "em": "nos degraus",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_vericor_7",
+   "cripta_dos_vericor_3"
+  ]
+ },
+ "cripta_dos_vericor_7": {
+  "nome": "a sala dos jazigos",
+  "cat": 2,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "ratazana": 6
+  },
+  "teto": {
+   "ratazana": 6
+  },
+  "armadilhas": [
+   {
+    "tipo": "lâmina",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 2,
+  "em": "na sala dos jazigos",
+  "estoque": {},
+  "vizinhos": [
+   "cripta_dos_vericor_6",
+   "cripta_dos_vericor_8",
+   "cripta_dos_vericor_9"
+  ]
+ },
+ "cripta_dos_vericor_8": {
+  "nome": "a câmara do túmulo",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "chefe": {
+   "qual": "guardião da cripta",
+   "vivo": true,
+   "ergue": {
+    "cripta_dos_vericor_4": {
+     "esqueleto": 3
+    },
+    "cripta_dos_vericor_8": {
+     "alma-penada": 2
+    }
+   },
+   "ergueu": 1
+  },
+  "bichos": {
+   "alma-penada": 2
+  },
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 2,
+  "em": "na câmara do túmulo",
+  "vizinhos": [
+   "cripta_dos_vericor_7"
+  ]
+ },
+ "cripta_dos_vericor_9": {
+  "nome": "o ossário",
+  "cat": 2,
+  "atento": -1,
+  "bichos": {
+   "ratazana": 4
+  },
+  "teto": {
+   "ratazana": 4
+  },
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "cripta_dos_vericor",
+  "nivel": 2,
+  "em": "no ossário",
+  "vizinhos": [
+   "cripta_dos_vericor_7"
+  ]
+ },
+ "mina_da_nevoa": {
+  "nome": "a Mina da Névoa",
+  "em": "na Mina da Névoa",
+  "tipo": "masmorra",
+  "molde": "mina",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 1,
+    "salas": [
+     "mina_da_nevoa_1",
+     "mina_da_nevoa_2",
+     "mina_da_nevoa_3",
+     "mina_da_nevoa_4",
+     "mina_da_nevoa_5",
+     "mina_da_nevoa_6"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 2,
+    "salas": [
+     "mina_da_nevoa_7",
+     "mina_da_nevoa_8",
+     "mina_da_nevoa_9",
+     "mina_da_nevoa_10",
+     "mina_da_nevoa_11",
+     "mina_da_nevoa_12",
+     "mina_da_nevoa_13",
+     "mina_da_nevoa_14"
+    ]
+   }
+  ],
+  "entrada": "mina_da_nevoa_1",
+  "portas": {
+   "mina_da_nevoa_1|mina_da_nevoa_2": {
+    "estado": "fechada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": null
+   },
+   "mina_da_nevoa_2|mina_da_nevoa_3": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": null
+   },
+   "mina_da_nevoa_10|mina_da_nevoa_11": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 2,
+    "fechadura": 2
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "goblin": 3,
+   "golem-de-barro": 2
+  },
+  "longe": 1,
+  "vizinhos": [
+   "penhascos_das_aguas"
+  ],
+  "limpa": null,
+  "origem": "a mina que dava ferro a Pinhal do Ferro, abandonada no ano 1152 quando o fundo desabou e o que morava embaixo subiu",
+  "estoque": {}
+ },
+ "mina_da_nevoa_1": {
+  "nome": "a boca da mina",
+  "cat": 1,
+  "atento": 0,
+  "segredos": [
+   {
+    "para": "mina_da_nevoa_6",
+    "cat": 2
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "na boca da mina",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_2"
+  ]
+ },
+ "mina_da_nevoa_2": {
+  "nome": "o depósito",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "goblin": 3
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "no depósito",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_1",
+   "mina_da_nevoa_3",
+   "mina_da_nevoa_4",
+   "mina_da_nevoa_5"
+  ]
+ },
+ "mina_da_nevoa_3": {
+  "nome": "a forja velha",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "na forja velha",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_2",
+   "mina_da_nevoa_7"
+  ]
+ },
+ "mina_da_nevoa_4": {
+  "nome": "a sala das vagonetas",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "goblin": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 80,
+   "cura:1": 1
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "na sala das vagonetas",
+  "vizinhos": [
+   "mina_da_nevoa_2"
+  ]
+ },
+ "mina_da_nevoa_5": {
+  "nome": "o poço velho",
+  "cat": 1,
+  "atento": 0,
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "no poço velho",
+  "vizinhos": [
+   "mina_da_nevoa_2"
+  ]
+ },
+ "mina_da_nevoa_6": {
+  "nome": "o veio escondido",
+  "cat": 1,
+  "largura": 1,
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 1,
+  "em": "no veio escondido"
+ },
+ "mina_da_nevoa_7": {
+  "nome": "o poço da escada",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no poço da escada",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_8",
+   "mina_da_nevoa_3"
+  ]
+ },
+ "mina_da_nevoa_8": {
+  "nome": "a galeria",
+  "cat": 2,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "ratazana": 6
+  },
+  "teto": {
+   "ratazana": 6
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "na galeria",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_7",
+   "mina_da_nevoa_9"
+  ]
+ },
+ "mina_da_nevoa_9": {
+  "nome": "o desmoronado",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no desmoronado",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_8",
+   "mina_da_nevoa_10",
+   "mina_da_nevoa_12",
+   "mina_da_nevoa_13",
+   "mina_da_nevoa_14"
+  ]
+ },
+ "mina_da_nevoa_10": {
+  "nome": "o salão da veia",
+  "cat": 2,
+  "atento": 1,
+  "largura": 1,
+  "bichos": {
+   "orc": 2
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no salão da veia",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_9",
+   "mina_da_nevoa_11"
+  ]
+ },
+ "mina_da_nevoa_11": {
+  "nome": "o salão fundo",
+  "cat": 2,
+  "atento": 0,
+  "chefe": {
+   "qual": "senhor da guerra",
+   "vivo": true,
+   "ergue": {
+    "mina_da_nevoa_11": {
+     "golem-de-barro": 2
+    }
+   },
+   "ergueu": 1
+  },
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no salão fundo",
+  "vizinhos": [
+   "mina_da_nevoa_10"
+  ]
+ },
+ "mina_da_nevoa_12": {
+  "nome": "a câmara alagada",
+  "cat": 2,
+  "atento": 0,
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "na câmara alagada",
+  "vizinhos": [
+   "mina_da_nevoa_9"
+  ]
+ },
+ "mina_da_nevoa_13": {
+  "nome": "o poço velho",
+  "cat": 2,
+  "atento": -1,
+  "bichos": {
+   "ratazana": 4
+  },
+  "teto": {
+   "ratazana": 4
+  },
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no poço velho",
+  "vizinhos": [
+   "mina_da_nevoa_9"
+  ]
+ },
+ "mina_da_nevoa_14": {
+  "nome": "o poço velho",
+  "cat": 2,
+  "atento": -1,
+  "bichos": {
+   "ratazana": 4
+  },
+  "teto": {
+   "ratazana": 4
+  },
+  "tipo": "sala",
+  "masmorra": "mina_da_nevoa",
+  "nivel": 2,
+  "em": "no poço velho",
+  "estoque": {},
+  "vizinhos": [
+   "mina_da_nevoa_9"
+  ]
+ },
+ "ruinas_da_garca": {
+  "nome": "as Ruínas da Garça",
+  "em": "nas Ruínas da Garça",
+  "tipo": "masmorra",
+  "molde": "ruína",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 1,
+    "salas": [
+     "ruinas_da_garca_1",
+     "ruinas_da_garca_2",
+     "ruinas_da_garca_3",
+     "ruinas_da_garca_4",
+     "ruinas_da_garca_5",
+     "ruinas_da_garca_6",
+     "ruinas_da_garca_7",
+     "ruinas_da_garca_8",
+     "ruinas_da_garca_9",
+     "ruinas_da_garca_10",
+     "ruinas_da_garca_11",
+     "ruinas_da_garca_12",
+     "ruinas_da_garca_13"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 2,
+    "salas": [
+     "ruinas_da_garca_14",
+     "ruinas_da_garca_15",
+     "ruinas_da_garca_16",
+     "ruinas_da_garca_17",
+     "ruinas_da_garca_18",
+     "ruinas_da_garca_19",
+     "ruinas_da_garca_20",
+     "ruinas_da_garca_21",
+     "ruinas_da_garca_22"
+    ]
+   },
+   {
+    "n": 3,
+    "cat": 3,
+    "salas": [
+     "ruinas_da_garca_23",
+     "ruinas_da_garca_24",
+     "ruinas_da_garca_25",
+     "ruinas_da_garca_26",
+     "ruinas_da_garca_27",
+     "ruinas_da_garca_28",
+     "ruinas_da_garca_29",
+     "ruinas_da_garca_30",
+     "ruinas_da_garca_31",
+     "ruinas_da_garca_32",
+     "ruinas_da_garca_33",
+     "ruinas_da_garca_34",
+     "ruinas_da_garca_35",
+     "ruinas_da_garca_36",
+     "ruinas_da_garca_37",
+     "ruinas_da_garca_38"
+    ]
+   }
+  ],
+  "entrada": "ruinas_da_garca_1",
+  "portas": {
+   "ruinas_da_garca_3|ruinas_da_garca_4": {
+    "estado": "fechada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": null
+   },
+   "ruinas_da_garca_6|ruinas_da_garca_7": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": null
+   },
+   "ruinas_da_garca_7|ruinas_da_garca_8": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": 1
+   },
+   "ruinas_da_garca_8|ruinas_da_garca_9": {
+    "estado": "emperrada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": null
+   },
+   "ruinas_da_garca_14|ruinas_da_garca_15": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 2,
+    "fechadura": 2
+   },
+   "ruinas_da_garca_16|ruinas_da_garca_17": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 2,
+    "fechadura": null
+   },
+   "ruinas_da_garca_20|ruinas_da_garca_21": {
+    "estado": "emperrada",
+    "material": "ferro",
+    "cat": 2,
+    "fechadura": null
+   },
+   "ruinas_da_garca_23|ruinas_da_garca_24": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": 3
+   },
+   "ruinas_da_garca_26|ruinas_da_garca_27": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_da_garca_33|ruinas_da_garca_34": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_da_garca_34|ruinas_da_garca_35": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 3,
+    "fechadura": 3
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "golem-de-barro": 3,
+   "esqueleto": 3,
+   "harpia": 2
+  },
+  "longe": 1,
+  "vizinhos": [
+   "bosque_do_urso"
+  ],
+  "limpa": null,
+  "origem": "o que sobrou de Vale da Bruma, saqueada no ano 1134 na guerra do Sal de 1133, e nunca mais erguida",
+  "estoque": {}
+ },
+ "ruinas_da_garca_1": {
+  "nome": "o pórtico",
+  "cat": 1,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no pórtico",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_2"
+  ]
+ },
+ "ruinas_da_garca_2": {
+  "nome": "a cozinha",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "estoque": {
+   "prata": 80,
+   "cura:1": 1
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "na cozinha",
+  "vizinhos": [
+   "ruinas_da_garca_1",
+   "ruinas_da_garca_3"
+  ]
+ },
+ "ruinas_da_garca_3": {
+  "nome": "a capela velha",
+  "cat": 1,
+  "atento": 0,
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   },
+   {
+    "tipo": "gás",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_2",
+   "ruinas_da_garca_4"
+  ]
+ },
+ "ruinas_da_garca_4": {
+  "nome": "o pátio de dentro",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "golem-de-barro": 1
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no pátio de dentro",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_3",
+   "ruinas_da_garca_5"
+  ]
+ },
+ "ruinas_da_garca_5": {
+  "nome": "o corredor",
+  "cat": 1,
+  "atento": 0,
+  "largura": 1,
+  "segredos": [
+   {
+    "para": "ruinas_da_garca_13",
+    "cat": 2
+   }
+  ],
+  "armadilhas": [
+   {
+    "tipo": "dardo",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no corredor",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_4",
+   "ruinas_da_garca_6"
+  ]
+ },
+ "ruinas_da_garca_6": {
+  "nome": "o salão",
+  "cat": 1,
+  "atento": -1,
+  "bichos": {
+   "harpia": 3
+  },
+  "estoque": {
+   "prata": 80,
+   "cura:1": 1
+  },
+  "guardado": {
+   "nome": "o cofre",
+   "fechadura": 1,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no salão",
+  "vizinhos": [
+   "ruinas_da_garca_5",
+   "ruinas_da_garca_7",
+   "ruinas_da_garca_12"
+  ]
+ },
+ "ruinas_da_garca_7": {
+  "nome": "a biblioteca caída",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "fogo-fátuo": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_6",
+   "ruinas_da_garca_8"
+  ]
+ },
+ "ruinas_da_garca_8": {
+  "nome": "o quartel",
+  "cat": 1,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_7",
+   "ruinas_da_garca_9"
+  ]
+ },
+ "ruinas_da_garca_9": {
+  "nome": "a galeria das estátuas",
+  "cat": 1,
+  "atento": 0,
+  "armadilhas": [
+   {
+    "tipo": "runa",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_8",
+   "ruinas_da_garca_10"
+  ]
+ },
+ "ruinas_da_garca_10": {
+  "nome": "o salão",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no salão",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_9",
+   "ruinas_da_garca_11"
+  ]
+ },
+ "ruinas_da_garca_11": {
+  "nome": "a capela velha",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 3
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_10",
+   "ruinas_da_garca_14"
+  ]
+ },
+ "ruinas_da_garca_12": {
+  "nome": "o quartel",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "fogo-fátuo": 2
+  },
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no quartel",
+  "vizinhos": [
+   "ruinas_da_garca_6"
+  ]
+ },
+ "ruinas_da_garca_13": {
+  "nome": "o cofre escondido",
+  "cat": 1,
+  "largura": 1,
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 1,
+  "em": "no cofre escondido"
+ },
+ "ruinas_da_garca_14": {
+  "nome": "a escada de caracol",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na escada de caracol",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_15",
+   "ruinas_da_garca_11",
+   "ruinas_da_garca_22"
+  ]
+ },
+ "ruinas_da_garca_15": {
+  "nome": "a capela velha",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "armadilhas": [
+   {
+    "tipo": "gás",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 320,
+   "cura:2": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na capela velha",
+  "vizinhos": [
+   "ruinas_da_garca_14",
+   "ruinas_da_garca_16"
+  ]
+ },
+ "ruinas_da_garca_16": {
+  "nome": "o pátio de dentro",
+  "cat": 2,
+  "atento": 0,
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "no pátio de dentro",
+  "vizinhos": [
+   "ruinas_da_garca_15",
+   "ruinas_da_garca_17"
+  ]
+ },
+ "ruinas_da_garca_17": {
+  "nome": "a biblioteca caída",
+  "cat": 2,
+  "atento": -1,
+  "bichos": {
+   "harpia": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_16",
+   "ruinas_da_garca_18"
+  ]
+ },
+ "ruinas_da_garca_18": {
+  "nome": "a capela velha",
+  "cat": 2,
+  "atento": 1,
+  "largura": 2,
+  "bichos": {
+   "gárgula": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_17",
+   "ruinas_da_garca_19"
+  ]
+ },
+ "ruinas_da_garca_19": {
+  "nome": "a cozinha",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_18",
+   "ruinas_da_garca_20"
+  ]
+ },
+ "ruinas_da_garca_20": {
+  "nome": "a capela velha",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "gárgula": 2
+  },
+  "estoque": {
+   "prata": 320
+  },
+  "guardado": {
+   "nome": "a arca",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na capela velha",
+  "vizinhos": [
+   "ruinas_da_garca_19",
+   "ruinas_da_garca_21"
+  ]
+ },
+ "ruinas_da_garca_21": {
+  "nome": "a capela velha",
+  "cat": 2,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 3
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_20",
+   "ruinas_da_garca_23"
+  ]
+ },
+ "ruinas_da_garca_22": {
+  "nome": "a cozinha",
+  "cat": 2,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 2
+  },
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 2,
+  "em": "na cozinha",
+  "vizinhos": [
+   "ruinas_da_garca_14"
+  ]
+ },
+ "ruinas_da_garca_23": {
+  "nome": "a escada de caracol",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na escada de caracol",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_24",
+   "ruinas_da_garca_21"
+  ]
+ },
+ "ruinas_da_garca_24": {
+  "nome": "o salão",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no salão",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_23",
+   "ruinas_da_garca_25",
+   "ruinas_da_garca_36"
+  ]
+ },
+ "ruinas_da_garca_25": {
+  "nome": "a biblioteca caída",
+  "cat": 3,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_24",
+   "ruinas_da_garca_26"
+  ]
+ },
+ "ruinas_da_garca_26": {
+  "nome": "o pátio de dentro",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "golem-de-barro": 1
+  },
+  "estoque": {
+   "prata": 1280
+  },
+  "guardado": {
+   "nome": "o cofre",
+   "fechadura": 3,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no pátio de dentro",
+  "vizinhos": [
+   "ruinas_da_garca_25",
+   "ruinas_da_garca_27"
+  ]
+ },
+ "ruinas_da_garca_27": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "harpia": 3
+  },
+  "armadilhas": [
+   {
+    "tipo": "runa",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   },
+   {
+    "tipo": "fosso",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_26",
+   "ruinas_da_garca_28"
+  ]
+ },
+ "ruinas_da_garca_28": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_27",
+   "ruinas_da_garca_29"
+  ]
+ },
+ "ruinas_da_garca_29": {
+  "nome": "a biblioteca caída",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_28",
+   "ruinas_da_garca_30",
+   "ruinas_da_garca_38"
+  ]
+ },
+ "ruinas_da_garca_30": {
+  "nome": "a capela velha",
+  "cat": 3,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_29",
+   "ruinas_da_garca_31"
+  ]
+ },
+ "ruinas_da_garca_31": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "harpia": 3
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_30",
+   "ruinas_da_garca_32",
+   "ruinas_da_garca_37"
+  ]
+ },
+ "ruinas_da_garca_32": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_31",
+   "ruinas_da_garca_33"
+  ]
+ },
+ "ruinas_da_garca_33": {
+  "nome": "a capela velha",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "fogo-fátuo": 3
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_32",
+   "ruinas_da_garca_34"
+  ]
+ },
+ "ruinas_da_garca_34": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "esqueleto": 4
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_da_garca_33",
+   "ruinas_da_garca_35"
+  ]
+ },
+ "ruinas_da_garca_35": {
+  "nome": "a sala do senhor",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "chefe": {
+   "qual": "necromante",
+   "vivo": true,
+   "ergue": {
+    "ruinas_da_garca_4": {
+     "golem-de-barro": 1
+    },
+    "ruinas_da_garca_11": {
+     "esqueleto": 3
+    },
+    "ruinas_da_garca_21": {
+     "esqueleto": 3
+    },
+    "ruinas_da_garca_22": {
+     "esqueleto": 2
+    },
+    "ruinas_da_garca_26": {
+     "golem-de-barro": 1
+    },
+    "ruinas_da_garca_28": {
+     "golem-de-barro": 2
+    },
+    "ruinas_da_garca_34": {
+     "esqueleto": 4
+    },
+    "ruinas_da_garca_36": {
+     "esqueleto": 4
+    }
+   },
+   "ergueu": 1
+  },
+  "bichos": {
+   "harpia": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 1280
+  },
+  "guardado": {
+   "nome": "a arca",
+   "fechadura": 3,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na sala do senhor",
+  "vizinhos": [
+   "ruinas_da_garca_34"
+  ]
+ },
+ "ruinas_da_garca_36": {
+  "nome": "a galeria das estátuas",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 4
+  },
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 1280
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na galeria das estátuas",
+  "vizinhos": [
+   "ruinas_da_garca_24"
+  ]
+ },
+ "ruinas_da_garca_37": {
+  "nome": "o pátio de dentro",
+  "cat": 3,
+  "atento": -1,
+  "bichos": {
+   "gárgula": 2
+  },
+  "estoque": {
+   "prata": 1280,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 3,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "no pátio de dentro",
+  "vizinhos": [
+   "ruinas_da_garca_31"
+  ]
+ },
+ "ruinas_da_garca_38": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "harpia": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 1280
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_da_garca",
+  "nivel": 3,
+  "em": "na cozinha",
+  "vizinhos": [
+   "ruinas_da_garca_29"
+  ]
+ },
+ "ruinas_do_urso": {
+  "nome": "as Ruínas do Urso",
+  "em": "nas Ruínas do Urso",
+  "tipo": "masmorra",
+  "molde": "ruína",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 2,
+    "salas": [
+     "ruinas_do_urso_1",
+     "ruinas_do_urso_2",
+     "ruinas_do_urso_3",
+     "ruinas_do_urso_4",
+     "ruinas_do_urso_5",
+     "ruinas_do_urso_6",
+     "ruinas_do_urso_7",
+     "ruinas_do_urso_8",
+     "ruinas_do_urso_9",
+     "ruinas_do_urso_10"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 3,
+    "salas": [
+     "ruinas_do_urso_11",
+     "ruinas_do_urso_12",
+     "ruinas_do_urso_13",
+     "ruinas_do_urso_14",
+     "ruinas_do_urso_15",
+     "ruinas_do_urso_16",
+     "ruinas_do_urso_17",
+     "ruinas_do_urso_18",
+     "ruinas_do_urso_19",
+     "ruinas_do_urso_20",
+     "ruinas_do_urso_21",
+     "ruinas_do_urso_22",
+     "ruinas_do_urso_23",
+     "ruinas_do_urso_24",
+     "ruinas_do_urso_25"
+    ]
+   },
+   {
+    "n": 3,
+    "cat": 4,
+    "salas": [
+     "ruinas_do_urso_26",
+     "ruinas_do_urso_27",
+     "ruinas_do_urso_28",
+     "ruinas_do_urso_29",
+     "ruinas_do_urso_30",
+     "ruinas_do_urso_31",
+     "ruinas_do_urso_32",
+     "ruinas_do_urso_33",
+     "ruinas_do_urso_34",
+     "ruinas_do_urso_35"
+    ]
+   }
+  ],
+  "entrada": "ruinas_do_urso_1",
+  "portas": {
+   "ruinas_do_urso_2|ruinas_do_urso_3": {
+    "estado": "fechada",
+    "material": "ferro",
+    "cat": 2,
+    "fechadura": null
+   },
+   "ruinas_do_urso_4|ruinas_do_urso_5": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 2,
+    "fechadura": null
+   },
+   "ruinas_do_urso_6|ruinas_do_urso_7": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 2,
+    "fechadura": 2
+   },
+   "ruinas_do_urso_12|ruinas_do_urso_13": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_do_urso_14|ruinas_do_urso_15": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_do_urso_16|ruinas_do_urso_17": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_do_urso_21|ruinas_do_urso_22": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 3,
+    "fechadura": null
+   },
+   "ruinas_do_urso_27|ruinas_do_urso_28": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 4,
+    "fechadura": null
+   },
+   "ruinas_do_urso_28|ruinas_do_urso_29": {
+    "estado": "fechada",
+    "material": "madeira",
+    "cat": 4,
+    "fechadura": null
+   },
+   "ruinas_do_urso_30|ruinas_do_urso_31": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 4,
+    "fechadura": null
+   },
+   "ruinas_do_urso_33|ruinas_do_urso_34": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 4,
+    "fechadura": 4
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "golem-de-barro": 1,
+   "fogo-fátuo": 2,
+   "harpia": 1
+  },
+  "longe": 1,
+  "vizinhos": [
+   "souto_das_aguas"
+  ],
+  "limpa": null,
+  "origem": "o que sobrou de Várzea Larga, saqueada no ano 745 na guerra da Ponte, e nunca mais erguida",
+  "estoque": {}
+ },
+ "ruinas_do_urso_1": {
+  "nome": "o pórtico",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no pórtico",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_2"
+  ]
+ },
+ "ruinas_do_urso_2": {
+  "nome": "o corredor",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no corredor",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_1",
+   "ruinas_do_urso_3"
+  ]
+ },
+ "ruinas_do_urso_3": {
+  "nome": "o salão",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "runa",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   },
+   {
+    "tipo": "gás",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o sarcófago",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no salão",
+  "vizinhos": [
+   "ruinas_do_urso_2",
+   "ruinas_do_urso_4",
+   "ruinas_do_urso_9"
+  ]
+ },
+ "ruinas_do_urso_4": {
+  "nome": "a galeria das estátuas",
+  "cat": 2,
+  "atento": -1,
+  "largura": 2,
+  "bichos": {
+   "gárgula": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_3",
+   "ruinas_do_urso_5"
+  ]
+ },
+ "ruinas_do_urso_5": {
+  "nome": "a capela velha",
+  "cat": 2,
+  "atento": 0,
+  "segredos": [
+   {
+    "para": "ruinas_do_urso_10",
+    "cat": 3
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_4",
+   "ruinas_do_urso_6"
+  ]
+ },
+ "ruinas_do_urso_6": {
+  "nome": "a cozinha",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_5",
+   "ruinas_do_urso_7"
+  ]
+ },
+ "ruinas_do_urso_7": {
+  "nome": "o quartel",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "esqueleto": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "runa",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_6",
+   "ruinas_do_urso_8"
+  ]
+ },
+ "ruinas_do_urso_8": {
+  "nome": "a biblioteca caída",
+  "cat": 2,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_7",
+   "ruinas_do_urso_11"
+  ]
+ },
+ "ruinas_do_urso_9": {
+  "nome": "o pátio de dentro",
+  "cat": 2,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 3
+  },
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no pátio de dentro",
+  "vizinhos": [
+   "ruinas_do_urso_3"
+  ]
+ },
+ "ruinas_do_urso_10": {
+  "nome": "o cofre escondido",
+  "cat": 2,
+  "largura": 1,
+  "estoque": {
+   "prata": 320
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 1,
+  "em": "no cofre escondido"
+ },
+ "ruinas_do_urso_11": {
+  "nome": "a escada de caracol",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na escada de caracol",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_12",
+   "ruinas_do_urso_8",
+   "ruinas_do_urso_24"
+  ]
+ },
+ "ruinas_do_urso_12": {
+  "nome": "o salão",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "golem-de-barro": 1
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no salão",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_11",
+   "ruinas_do_urso_13"
+  ]
+ },
+ "ruinas_do_urso_13": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "fogo-fátuo": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "gás",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 1280
+  },
+  "guardado": {
+   "nome": "o sarcófago",
+   "fechadura": 3,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na cozinha",
+  "vizinhos": [
+   "ruinas_do_urso_12",
+   "ruinas_do_urso_14"
+  ]
+ },
+ "ruinas_do_urso_14": {
+  "nome": "a galeria das estátuas",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_13",
+   "ruinas_do_urso_15"
+  ]
+ },
+ "ruinas_do_urso_15": {
+  "nome": "a galeria das estátuas",
+  "cat": 3,
+  "atento": 0,
+  "bichos": {
+   "gárgula": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_14",
+   "ruinas_do_urso_16"
+  ]
+ },
+ "ruinas_do_urso_16": {
+  "nome": "a biblioteca caída",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_15",
+   "ruinas_do_urso_17"
+  ]
+ },
+ "ruinas_do_urso_17": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_16",
+   "ruinas_do_urso_18"
+  ]
+ },
+ "ruinas_do_urso_18": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "fogo-fátuo": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_17",
+   "ruinas_do_urso_19",
+   "ruinas_do_urso_25"
+  ]
+ },
+ "ruinas_do_urso_19": {
+  "nome": "a capela velha",
+  "cat": 3,
+  "atento": 1,
+  "largura": 2,
+  "bichos": {
+   "gárgula": 1
+  },
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_18",
+   "ruinas_do_urso_20"
+  ]
+ },
+ "ruinas_do_urso_20": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "esqueleto": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_19",
+   "ruinas_do_urso_21",
+   "ruinas_do_urso_23"
+  ]
+ },
+ "ruinas_do_urso_21": {
+  "nome": "o salão",
+  "cat": 3,
+  "atento": 0,
+  "largura": 2,
+  "armadilhas": [
+   {
+    "tipo": "gás",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no salão",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_20",
+   "ruinas_do_urso_22"
+  ]
+ },
+ "ruinas_do_urso_22": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": -1,
+  "bichos": {
+   "fogo-fátuo": 3
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no quartel",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_21",
+   "ruinas_do_urso_26"
+  ]
+ },
+ "ruinas_do_urso_23": {
+  "nome": "o quartel",
+  "cat": 3,
+  "atento": 1,
+  "bichos": {
+   "gárgula": 2
+  },
+  "estoque": {
+   "prata": 1280
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no quartel",
+  "vizinhos": [
+   "ruinas_do_urso_20"
+  ]
+ },
+ "ruinas_do_urso_24": {
+  "nome": "o salão",
+  "cat": 3,
+  "atento": 1,
+  "bichos": {
+   "harpia": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 3,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 1280,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o sarcófago",
+   "fechadura": 3,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "no salão",
+  "vizinhos": [
+   "ruinas_do_urso_11"
+  ]
+ },
+ "ruinas_do_urso_25": {
+  "nome": "a cozinha",
+  "cat": 3,
+  "atento": 0,
+  "estoque": {
+   "prata": 1280
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 2,
+  "em": "na cozinha",
+  "vizinhos": [
+   "ruinas_do_urso_18"
+  ]
+ },
+ "ruinas_do_urso_26": {
+  "nome": "a escada de caracol",
+  "cat": 4,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na escada de caracol",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_27",
+   "ruinas_do_urso_22"
+  ]
+ },
+ "ruinas_do_urso_27": {
+  "nome": "a galeria das estátuas",
+  "cat": 4,
+  "atento": 0,
+  "bichos": {
+   "golem-de-barro": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_26",
+   "ruinas_do_urso_28"
+  ]
+ },
+ "ruinas_do_urso_28": {
+  "nome": "a biblioteca caída",
+  "cat": 4,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "esqueleto": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na biblioteca caída",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_27",
+   "ruinas_do_urso_29"
+  ]
+ },
+ "ruinas_do_urso_29": {
+  "nome": "o pátio de dentro",
+  "cat": 4,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "esqueleto": 4
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "no pátio de dentro",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_28",
+   "ruinas_do_urso_30"
+  ]
+ },
+ "ruinas_do_urso_30": {
+  "nome": "a galeria das estátuas",
+  "cat": 4,
+  "atento": 0,
+  "bichos": {
+   "esqueleto": 3
+  },
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 4,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na galeria das estátuas",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_29",
+   "ruinas_do_urso_31",
+   "ruinas_do_urso_35"
+  ]
+ },
+ "ruinas_do_urso_31": {
+  "nome": "a cozinha",
+  "cat": 4,
+  "atento": 0,
+  "largura": 2,
+  "bichos": {
+   "golem-de-barro": 1
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na cozinha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_30",
+   "ruinas_do_urso_32"
+  ]
+ },
+ "ruinas_do_urso_32": {
+  "nome": "a galeria das estátuas",
+  "cat": 4,
+  "atento": 0,
+  "largura": 2,
+  "armadilhas": [
+   {
+    "tipo": "lâmina",
+    "cat": 4,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 5120
+  },
+  "guardado": {
+   "nome": "a arca",
+   "fechadura": 4,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na galeria das estátuas",
+  "vizinhos": [
+   "ruinas_do_urso_31",
+   "ruinas_do_urso_33"
+  ]
+ },
+ "ruinas_do_urso_33": {
+  "nome": "a capela velha",
+  "cat": 4,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na capela velha",
+  "estoque": {},
+  "vizinhos": [
+   "ruinas_do_urso_32",
+   "ruinas_do_urso_34"
+  ]
+ },
+ "ruinas_do_urso_34": {
+  "nome": "a sala do senhor",
+  "cat": 4,
+  "atento": 0,
+  "chefe": {
+   "qual": "necromante",
+   "vivo": true,
+   "ergue": {
+    "ruinas_do_urso_2": {
+     "golem-de-barro": 2
+    },
+    "ruinas_do_urso_3": {
+     "golem-de-barro": 2
+    },
+    "ruinas_do_urso_7": {
+     "esqueleto": 2
+    },
+    "ruinas_do_urso_9": {
+     "esqueleto": 3
+    },
+    "ruinas_do_urso_12": {
+     "golem-de-barro": 1
+    },
+    "ruinas_do_urso_14": {
+     "golem-de-barro": 2
+    },
+    "ruinas_do_urso_20": {
+     "esqueleto": 2
+    },
+    "ruinas_do_urso_27": {
+     "golem-de-barro": 2
+    },
+    "ruinas_do_urso_28": {
+     "esqueleto": 2
+    },
+    "ruinas_do_urso_29": {
+     "esqueleto": 4
+    },
+    "ruinas_do_urso_30": {
+     "esqueleto": 3
+    },
+    "ruinas_do_urso_31": {
+     "golem-de-barro": 1
+    }
+   },
+   "ergueu": 1
+  },
+  "bichos": {
+   "fogo-fátuo": 2
+  },
+  "estoque": {
+   "prata": 5120
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 4,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na sala do senhor",
+  "vizinhos": [
+   "ruinas_do_urso_33"
+  ]
+ },
+ "ruinas_do_urso_35": {
+  "nome": "a capela velha",
+  "cat": 4,
+  "atento": 0,
+  "armadilhas": [
+   {
+    "tipo": "pedra",
+    "cat": 4,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 5120,
+   "cura:2": 2
+  },
+  "tipo": "sala",
+  "masmorra": "ruinas_do_urso",
+  "nivel": 3,
+  "em": "na capela velha",
+  "vizinhos": [
+   "ruinas_do_urso_30"
+  ]
+ },
+ "toca_do_sal": {
+  "nome": "a Toca do Sal",
+  "em": "na Toca do Sal",
+  "tipo": "masmorra",
+  "molde": "toca",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 0,
+    "salas": [
+     "toca_do_sal_1",
+     "toca_do_sal_2",
+     "toca_do_sal_3",
+     "toca_do_sal_4",
+     "toca_do_sal_5",
+     "toca_do_sal_6",
+     "toca_do_sal_7",
+     "toca_do_sal_8",
+     "toca_do_sal_9",
+     "toca_do_sal_10"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 1,
+    "salas": [
+     "toca_do_sal_11",
+     "toca_do_sal_12",
+     "toca_do_sal_13",
+     "toca_do_sal_14",
+     "toca_do_sal_15"
+    ]
+   }
+  ],
+  "entrada": "toca_do_sal_1",
+  "portas": {
+   "toca_do_sal_2|toca_do_sal_3": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 0,
+    "fechadura": null
+   },
+   "toca_do_sal_3|toca_do_sal_4": {
+    "estado": "fechada",
+    "material": "ferro",
+    "cat": 0,
+    "fechadura": null
+   },
+   "toca_do_sal_5|toca_do_sal_6": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 0,
+    "fechadura": 0
+   },
+   "toca_do_sal_11|toca_do_sal_12": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": null
+   },
+   "toca_do_sal_12|toca_do_sal_13": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": 1
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "goblin": 3,
+   "orc": 3
+  },
+  "longe": 1,
+  "vizinhos": [
+   "charneca_dos_sinos"
+  ],
+  "limpa": null,
+  "origem": "a velha atalaia que os bichos tomaram no ano 716, quando a guarda deixou de subir",
+  "estoque": {}
+ },
+ "toca_do_sal_1": {
+  "nome": "a entrada da toca",
+  "cat": 0,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "na entrada da toca",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_2"
+  ]
+ },
+ "toca_do_sal_2": {
+  "nome": "a despensa",
+  "cat": 0,
+  "atento": 0,
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 0,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "na despensa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_1",
+   "toca_do_sal_3",
+   "toca_do_sal_9"
+  ]
+ },
+ "toca_do_sal_3": {
+  "nome": "o salão do fogo",
+  "cat": 0,
+  "atento": 0,
+  "largura": 2,
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 0,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no salão do fogo",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_2",
+   "toca_do_sal_4"
+  ]
+ },
+ "toca_do_sal_4": {
+  "nome": "o poço",
+  "cat": 0,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no poço",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_3",
+   "toca_do_sal_5"
+  ]
+ },
+ "toca_do_sal_5": {
+  "nome": "o túnel",
+  "cat": 0,
+  "atento": 0,
+  "largura": 1,
+  "segredos": [
+   {
+    "para": "toca_do_sal_10",
+    "cat": 1
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no túnel",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_4",
+   "toca_do_sal_6"
+  ]
+ },
+ "toca_do_sal_6": {
+  "nome": "o canto dos ossos",
+  "cat": 0,
+  "atento": 0,
+  "largura": 1,
+  "bichos": {
+   "goblin": 4
+  },
+  "estoque": {
+   "prata": 20
+  },
+  "guardado": {
+   "nome": "o sarcófago",
+   "fechadura": 0,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no canto dos ossos",
+  "vizinhos": [
+   "toca_do_sal_5",
+   "toca_do_sal_7"
+  ]
+ },
+ "toca_do_sal_7": {
+  "nome": "a sala dos presos",
+  "cat": 0,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "goblin": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 0,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "na sala dos presos",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_6",
+   "toca_do_sal_8"
+  ]
+ },
+ "toca_do_sal_8": {
+  "nome": "o covil",
+  "cat": 0,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no covil",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_7",
+   "toca_do_sal_11"
+  ]
+ },
+ "toca_do_sal_9": {
+  "nome": "a sala dos presos",
+  "cat": 0,
+  "atento": 0,
+  "bichos": {
+   "goblin": 4
+  },
+  "estoque": {
+   "prata": 20,
+   "cura:0": 1
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "na sala dos presos",
+  "vizinhos": [
+   "toca_do_sal_2"
+  ]
+ },
+ "toca_do_sal_10": {
+  "nome": "o buraco escondido",
+  "cat": 0,
+  "largura": 1,
+  "estoque": {
+   "prata": 20
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 1,
+  "em": "no buraco escondido"
+ },
+ "toca_do_sal_11": {
+  "nome": "a rampa",
+  "cat": 1,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 2,
+  "em": "na rampa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_sal_12",
+   "toca_do_sal_8"
+  ]
+ },
+ "toca_do_sal_12": {
+  "nome": "o canto dos ossos",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "orc": 2
+  },
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 2,
+  "em": "no canto dos ossos",
+  "vizinhos": [
+   "toca_do_sal_11",
+   "toca_do_sal_13",
+   "toca_do_sal_14",
+   "toca_do_sal_15"
+  ]
+ },
+ "toca_do_sal_13": {
+  "nome": "o trono de pedra",
+  "cat": 1,
+  "atento": 0,
+  "chefe": {
+   "qual": "xamã goblin",
+   "vivo": true,
+   "ergue": {},
+   "ergueu": 1
+  },
+  "bichos": {
+   "orc": 2
+  },
+  "estoque": {
+   "prata": 80,
+   "cura:1": 1
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 2,
+  "em": "no trono de pedra",
+  "vizinhos": [
+   "toca_do_sal_12"
+  ]
+ },
+ "toca_do_sal_14": {
+  "nome": "o covil",
+  "cat": 1,
+  "atento": -1,
+  "bichos": {
+   "homem-lagarto": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 2,
+  "em": "no covil",
+  "vizinhos": [
+   "toca_do_sal_12"
+  ]
+ },
+ "toca_do_sal_15": {
+  "nome": "o covil",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "goblin": 4
+  },
+  "estoque": {
+   "prata": 80,
+   "cura:1": 1
+  },
+  "guardado": {
+   "nome": "a arca",
+   "fechadura": 1,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_sal",
+  "nivel": 2,
+  "em": "no covil",
+  "vizinhos": [
+   "toca_do_sal_12"
+  ]
+ },
+ "toca_do_touro": {
+  "nome": "a Toca do Touro",
+  "em": "na Toca do Touro",
+  "tipo": "masmorra",
+  "molde": "toca",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 1,
+    "salas": [
+     "toca_do_touro_1",
+     "toca_do_touro_2",
+     "toca_do_touro_3",
+     "toca_do_touro_4",
+     "toca_do_touro_5",
+     "toca_do_touro_6",
+     "toca_do_touro_7",
+     "toca_do_touro_8",
+     "toca_do_touro_9",
+     "toca_do_touro_10"
+    ]
+   },
+   {
+    "n": 2,
+    "cat": 2,
+    "salas": [
+     "toca_do_touro_11",
+     "toca_do_touro_12",
+     "toca_do_touro_13",
+     "toca_do_touro_14",
+     "toca_do_touro_15",
+     "toca_do_touro_16",
+     "toca_do_touro_17"
+    ]
+   }
+  ],
+  "entrada": "toca_do_touro_1",
+  "portas": {
+   "toca_do_touro_1|toca_do_touro_2": {
+    "estado": "emperrada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": null
+   },
+   "toca_do_touro_5|toca_do_touro_6": {
+    "estado": "fechada",
+    "material": "ferro",
+    "cat": 1,
+    "fechadura": null
+   },
+   "toca_do_touro_6|toca_do_touro_7": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 1,
+    "fechadura": 1
+   },
+   "toca_do_touro_13|toca_do_touro_14": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 2,
+    "fechadura": 2
+   }
+  },
+  "alarme": 0,
+  "vagantes": {
+   "orc": 3,
+   "ogro": 1
+  },
+  "longe": 1,
+  "vizinhos": [
+   "bosque_do_urso"
+  ],
+  "limpa": null,
+  "origem": "a velha atalaia que os bichos tomaram no ano 607, quando a guarda deixou de subir",
+  "estoque": {}
+ },
+ "toca_do_touro_1": {
+  "nome": "a entrada da toca",
+  "cat": 1,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "na entrada da toca",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_2"
+  ]
+ },
+ "toca_do_touro_2": {
+  "nome": "o túnel",
+  "cat": 1,
+  "atento": 0,
+  "largura": 1,
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no túnel",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_1",
+   "toca_do_touro_3"
+  ]
+ },
+ "toca_do_touro_3": {
+  "nome": "o salão do fogo",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "goblin": 3
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no salão do fogo",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_2",
+   "toca_do_touro_4"
+  ]
+ },
+ "toca_do_touro_4": {
+  "nome": "o poço",
+  "cat": 1,
+  "atento": -1,
+  "largura": 1,
+  "bichos": {
+   "orc": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no poço",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_3",
+   "toca_do_touro_5",
+   "toca_do_touro_9"
+  ]
+ },
+ "toca_do_touro_5": {
+  "nome": "o covil",
+  "cat": 1,
+  "atento": 1,
+  "bichos": {
+   "orc": 3
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no covil",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_4",
+   "toca_do_touro_6"
+  ]
+ },
+ "toca_do_touro_6": {
+  "nome": "o canto dos ossos",
+  "cat": 1,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no canto dos ossos",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_5",
+   "toca_do_touro_7",
+   "toca_do_touro_8"
+  ]
+ },
+ "toca_do_touro_7": {
+  "nome": "a sala dos presos",
+  "cat": 1,
+  "atento": 0,
+  "segredos": [
+   {
+    "para": "toca_do_touro_10",
+    "cat": 2
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "na sala dos presos",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_6",
+   "toca_do_touro_11"
+  ]
+ },
+ "toca_do_touro_8": {
+  "nome": "a despensa",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "homem-lagarto": 2
+  },
+  "estoque": {
+   "prata": 80
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "na despensa",
+  "vizinhos": [
+   "toca_do_touro_6"
+  ]
+ },
+ "toca_do_touro_9": {
+  "nome": "o canto dos ossos",
+  "cat": 1,
+  "atento": 0,
+  "bichos": {
+   "orc": 3
+  },
+  "armadilhas": [
+   {
+    "tipo": "fosso",
+    "cat": 1,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no canto dos ossos",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_4"
+  ]
+ },
+ "toca_do_touro_10": {
+  "nome": "o buraco escondido",
+  "cat": 1,
+  "largura": 1,
+  "estoque": {
+   "prata": 80,
+   "cura:1": 2
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 1,
+  "em": "no buraco escondido"
+ },
+ "toca_do_touro_11": {
+  "nome": "a rampa",
+  "cat": 2,
+  "atento": 0,
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "na rampa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_12",
+   "toca_do_touro_7",
+   "toca_do_touro_15"
+  ]
+ },
+ "toca_do_touro_12": {
+  "nome": "a despensa",
+  "cat": 2,
+  "atento": -1,
+  "largura": 2,
+  "bichos": {
+   "ogro": 2
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "na despensa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_11",
+   "toca_do_touro_13"
+  ]
+ },
+ "toca_do_touro_13": {
+  "nome": "a despensa",
+  "cat": 2,
+  "atento": 0,
+  "largura": 1,
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "na despensa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_12",
+   "toca_do_touro_14",
+   "toca_do_touro_16",
+   "toca_do_touro_17"
+  ]
+ },
+ "toca_do_touro_14": {
+  "nome": "o trono de pedra",
+  "cat": 2,
+  "atento": 0,
+  "chefe": {
+   "qual": "senhor da guerra",
+   "vivo": true,
+   "ergue": {},
+   "ergueu": 1
+  },
+  "bichos": {
+   "orc": 2
+  },
+  "estoque": {
+   "prata": 320
+  },
+  "guardado": {
+   "nome": "a arca",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "no trono de pedra",
+  "vizinhos": [
+   "toca_do_touro_13"
+  ]
+ },
+ "toca_do_touro_15": {
+  "nome": "o canto dos ossos",
+  "cat": 2,
+  "atento": 0,
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "guardado": {
+   "nome": "o baú",
+   "fechadura": 2,
+   "aberto": false
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "no canto dos ossos",
+  "vizinhos": [
+   "toca_do_touro_11"
+  ]
+ },
+ "toca_do_touro_16": {
+  "nome": "o poço",
+  "cat": 2,
+  "atento": 1,
+  "bichos": {
+   "orc": 4
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "estoque": {
+   "prata": 320,
+   "cura:2": 1
+  },
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "no poço",
+  "vizinhos": [
+   "toca_do_touro_13"
+  ]
+ },
+ "toca_do_touro_17": {
+  "nome": "a despensa",
+  "cat": 2,
+  "atento": 0,
+  "bichos": {
+   "homem-lagarto": 2
+  },
+  "armadilhas": [
+   {
+    "tipo": "alarme",
+    "cat": 2,
+    "onde": "chão",
+    "achada": null,
+    "feita": null
+   }
+  ],
+  "tipo": "sala",
+  "masmorra": "toca_do_touro",
+  "nivel": 2,
+  "em": "na despensa",
+  "estoque": {},
+  "vizinhos": [
+   "toca_do_touro_13"
+  ]
+ },
+ "covil_dos_sinos": {
+  "nome": "o Covil dos Sinos",
+  "em": "no Covil dos Sinos",
+  "tipo": "masmorra",
+  "molde": "covil",
+  "niveis": [
+   {
+    "n": 1,
+    "cat": 5,
+    "salas": [
+     "covil_dos_sinos_1",
+     "covil_dos_sinos_2",
+     "covil_dos_sinos_3",
+     "covil_dos_sinos_4"
+    ]
+   }
+  ],
+  "entrada": "covil_dos_sinos_1",
+  "portas": {
+   "covil_dos_sinos_1|covil_dos_sinos_2": {
+    "estado": "trancada",
+    "material": "madeira",
+    "cat": 5,
+    "fechadura": 5
+   },
+   "covil_dos_sinos_2|covil_dos_sinos_3": {
+    "estado": "trancada",
+    "material": "ferro",
+    "cat": 5,
+    "fechadura": 5
+   }
+  },
+  "alarme": 0,
+  "vagantes": {},
+  "longe": 1,
+  "vizinhos": [
+   "penhascos_das_aguas"
+  ],
+  "limpa": null,
+  "origem": "a caverna onde o dragão desceu no ano 398, sobre o ouro do Reino de Souto Alto, e dorme desde então",
+  "estoque": {}
+ },
+ "covil_dos_sinos_1": {
+  "nome": "a boca da caverna",
+  "cat": 5,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "covil_dos_sinos",
+  "nivel": 1,
+  "em": "na boca da caverna",
+  "estoque": {},
+  "vizinhos": [
+   "covil_dos_sinos_2"
+  ]
+ },
+ "covil_dos_sinos_2": {
+  "nome": "a galeria",
+  "cat": 5,
+  "atento": 0,
+  "largura": 1,
+  "segredos": [
+   {
+    "para": "covil_dos_sinos_4",
+    "cat": 6
+   }
+  ],
+  "estoque": {
+   "prata": 20480,
+   "cura:2": 1
+  },
+  "tipo": "sala",
+  "masmorra": "covil_dos_sinos",
+  "nivel": 1,
+  "em": "na galeria",
+  "vizinhos": [
+   "covil_dos_sinos_1",
+   "covil_dos_sinos_3"
+  ]
+ },
+ "covil_dos_sinos_3": {
+  "nome": "a câmara do tesouro",
+  "cat": 5,
+  "atento": 0,
+  "largura": 2,
+  "tipo": "sala",
+  "masmorra": "covil_dos_sinos",
+  "nivel": 1,
+  "em": "na câmara do tesouro",
+  "estoque": {
+   "prata": 1718
+  },
+  "vizinhos": [
+   "covil_dos_sinos_2"
+  ],
+  "dragao": {
+   "nome": "a Fome da Serra",
+   "tipo": "serra",
+   "idade": "ancião",
+   "dorme_ate": 421,
+   "punhados": 0,
+   "vila": null,
+   "desde": 1,
+   "ataques": 0,
+   "fama": [],
+   "prata_sono": 1718
+  }
+ },
+ "covil_dos_sinos_4": {
+  "nome": "a fenda escondida",
+  "cat": 5,
+  "largura": 1,
+  "estoque": {
+   "prata": 20480
+  },
+  "tipo": "sala",
+  "masmorra": "covil_dos_sinos",
+  "nivel": 1,
+  "em": "na fenda escondida"
+ }
+}

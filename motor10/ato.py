@@ -130,8 +130,7 @@ def comer(E, pid, da_carga=False):
         estado.aplica(E, 'comer', [['pessoa', pid, 'carga.comida', 'soma', -1], ['pessoa', pid, 'fome', 'soma', M.REFEICAO]], onde=estado.onde(E, pid), quem=[pid], texto=f"{p['nome']} come da própria carga")
         q = E['gente'][pid]; sobra = q.get('carga', {}).get('comida', 0)
         return f"{p['nome']} come da própria carga (fome {q['corpo']['fome']}; {'resta' if sobra == 1 else 'restam'} {sobra:g} de comida)"
-    l = E['lugares'][p['lugar']]; r = estado.negocia(E, pid, p['lugar'])        # o gancho negocia (etapa 3): quem atende serve a quem?
-    if r: sys.exit(r)
+    l = E['lugares'][p['lugar']]
     if l['estoque'].get('comida', 0) < 1: sys.exit(f"não há comida {estado.em(E, p['lugar'])}: ninguém serve refeição" + (' (você carrega comida: `ato.py comer carga`)' if p.get('carga', {}).get('comida', 0) >= 1 else ''))
     if p['moedas'] < M.REFEICAO_PRECO: sys.exit(f"a refeição custa {M.REFEICAO_PRECO} de prata; {p['nome']} tem {p['moedas']}" + (' (você carrega comida: `ato.py comer carga`)' if p.get('carga', {}).get('comida', 0) >= 1 else ''))
     estado.aplica(E, 'comer', [['pessoa', pid, 'moedas', 'soma', -M.REFEICAO_PRECO], ['estoque', p['lugar'], 'comida', 'soma', -1], ['estoque', p['lugar'], 'prata', 'soma', M.REFEICAO_PRECO],

@@ -1,0 +1,4559 @@
+{
+ "meta": {
+  "nome": "Belogar",
+  "ano0": 1218,
+  "anos": 825,
+  "semente_historia": 5,
+  "reino": "r_hoje"
+ },
+ "reinos": {
+  "r_0": {
+   "nome": "o Reino de Souto Alto",
+   "fundado": 393,
+   "caiu": 524,
+   "casa": null
+  },
+  "r_1": {
+   "nome": "o Reino de Ribeira Brava",
+   "fundado": 525,
+   "caiu": 869,
+   "casa": null
+  },
+  "r_2": {
+   "nome": "o Reino de Pinhal Seco",
+   "fundado": 870,
+   "caiu": 948,
+   "casa": null
+  },
+  "r_hoje": {
+   "nome": "o Reino de Belogar",
+   "fundado": 949,
+   "caiu": null,
+   "casa": "c_orirena"
+  }
+ },
+ "casas": {
+  "c_orirena": {
+   "nome": "os Orirena",
+   "tipo": "nobre",
+   "sede": "vale_do_corvo",
+   "fundada": 478,
+   "viva": true,
+   "caiu": null,
+   "ramo": [
+    {
+     "nome": "Tânia",
+     "assume": 478,
+     "morre": 505,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Lauro",
+     "assume": 505,
+     "morre": 549,
+     "como": "de febre"
+    },
+    {
+     "nome": "Iria",
+     "assume": 549,
+     "morre": 574,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Dulce",
+     "assume": 574,
+     "morre": 583,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Lourenço",
+     "assume": 583,
+     "morre": 597,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Beria",
+     "assume": 597,
+     "morre": 622,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Sancha",
+     "assume": 622,
+     "morre": 636,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Olímpia",
+     "assume": 636,
+     "morre": 666,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Rosanada",
+     "assume": 666,
+     "morre": 680,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Alelia",
+     "assume": 680,
+     "morre": 694,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Nuno",
+     "assume": 694,
+     "morre": 728,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Osarada",
+     "assume": 728,
+     "morre": 752,
+     "como": "de peste"
+    },
+    {
+     "nome": "Pascoal",
+     "assume": 752,
+     "morre": 774,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Celora",
+     "assume": 774,
+     "morre": 803,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Sílvia",
+     "assume": 803,
+     "morre": 827,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Davi",
+     "assume": 827,
+     "morre": 857,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Berelina",
+     "assume": 857,
+     "morre": 889,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Herareu",
+     "assume": 889,
+     "morre": 920,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Nara",
+     "assume": 920,
+     "morre": 938,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Vesinino",
+     "assume": 938,
+     "morre": 973,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Madalena",
+     "assume": 973,
+     "morre": 996,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Bernardo",
+     "assume": 996,
+     "morre": 1015,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Roselino",
+     "assume": 1015,
+     "morre": 1037,
+     "como": "de febre"
+    },
+    {
+     "nome": "Perado",
+     "assume": 1037,
+     "morre": 1057,
+     "como": "de peste"
+    },
+    {
+     "nome": "Rosa",
+     "assume": 1057,
+     "morre": 1067,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Selinina",
+     "assume": 1067,
+     "morre": 1091,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Bera",
+     "assume": 1091,
+     "morre": 1110,
+     "como": "de febre"
+    },
+    {
+     "nome": "Rodrigo",
+     "assume": 1110,
+     "morre": 1146,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Ferelino",
+     "assume": 1146,
+     "morre": 1171,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Jorelada",
+     "assume": 1171,
+     "morre": 1207,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Gilela",
+     "assume": 1207,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_falaroz": {
+   "nome": "os Falaroz",
+   "tipo": "nobre",
+   "sede": "varzea_da_nevoa",
+   "fundada": 490,
+   "viva": false,
+   "caiu": 704,
+   "ramo": [
+    {
+     "nome": "Martim",
+     "assume": 490,
+     "morre": 515,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Sara",
+     "assume": 515,
+     "morre": 537,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Júlia",
+     "assume": 537,
+     "morre": 564,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Vera",
+     "assume": 564,
+     "morre": 587,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Tomásia",
+     "assume": 587,
+     "morre": 604,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Amaro",
+     "assume": 604,
+     "morre": 618,
+     "como": "de febre"
+    },
+    {
+     "nome": "Damião",
+     "assume": 618,
+     "morre": 632,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Odete",
+     "assume": 632,
+     "morre": 668,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Paula",
+     "assume": 668,
+     "morre": 695,
+     "como": "de peste"
+    },
+    {
+     "nome": "Pedro",
+     "assume": 695,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_valedel": {
+   "nome": "os Valedel",
+   "tipo": "nobre",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 522,
+   "viva": false,
+   "caiu": 902,
+   "ramo": [
+    {
+     "nome": "Nicolau",
+     "assume": 522,
+     "morre": 546,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Violeta",
+     "assume": 546,
+     "morre": 569,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Mauro",
+     "assume": 569,
+     "morre": 591,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Caio",
+     "assume": 591,
+     "morre": 617,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Dimas",
+     "assume": 617,
+     "morre": 644,
+     "como": "de peste"
+    },
+    {
+     "nome": "Gilão",
+     "assume": 644,
+     "morre": 663,
+     "como": "de febre"
+    },
+    {
+     "nome": "Jordão",
+     "assume": 663,
+     "morre": 672,
+     "como": "de peste"
+    },
+    {
+     "nome": "Ermelinda",
+     "assume": 672,
+     "morre": 706,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Tomé",
+     "assume": 706,
+     "morre": 714,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Terino",
+     "assume": 714,
+     "morre": 737,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Gilinada",
+     "assume": 737,
+     "morre": 766,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Jonas",
+     "assume": 766,
+     "morre": 782,
+     "como": "de febre"
+    },
+    {
+     "nome": "Teodoro",
+     "assume": 782,
+     "morre": 804,
+     "como": "de febre"
+    },
+    {
+     "nome": "Joreu",
+     "assume": 804,
+     "morre": 817,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Irene",
+     "assume": 817,
+     "morre": 838,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Prisca",
+     "assume": 838,
+     "morre": 863,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Paulina",
+     "assume": 863,
+     "morre": 894,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Ernesto",
+     "assume": 894,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_terigar": {
+   "nome": "os Terigar",
+   "tipo": "nobre",
+   "sede": "varzea_brava",
+   "fundada": 501,
+   "viva": true,
+   "caiu": null,
+   "ramo": [
+    {
+     "nome": "Salvador",
+     "assume": 501,
+     "morre": 536,
+     "como": "de peste"
+    },
+    {
+     "nome": "Leonor",
+     "assume": 536,
+     "morre": 559,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Urias",
+     "assume": 559,
+     "morre": 596,
+     "como": "de febre"
+    },
+    {
+     "nome": "Rute",
+     "assume": 596,
+     "morre": 629,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Helena",
+     "assume": 629,
+     "morre": 647,
+     "como": "de peste"
+    },
+    {
+     "nome": "Dora",
+     "assume": 647,
+     "morre": 677,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Fausto",
+     "assume": 677,
+     "morre": 711,
+     "como": "de peste"
+    },
+    {
+     "nome": "Petronila",
+     "assume": 711,
+     "morre": 749,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Duarte",
+     "assume": 749,
+     "morre": 767,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Seleleu",
+     "assume": 767,
+     "morre": 793,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Justa",
+     "assume": 793,
+     "morre": 819,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Irelina",
+     "assume": 819,
+     "morre": 837,
+     "como": "de febre"
+    },
+    {
+     "nome": "Mafalda",
+     "assume": 837,
+     "morre": 858,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Iranado",
+     "assume": 858,
+     "morre": 873,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Dalva",
+     "assume": 873,
+     "morre": 884,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Rafaela",
+     "assume": 884,
+     "morre": 909,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Simão",
+     "assume": 909,
+     "morre": 925,
+     "como": "de peste"
+    },
+    {
+     "nome": "Berela",
+     "assume": 925,
+     "morre": 954,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Fernão",
+     "assume": 954,
+     "morre": 992,
+     "como": "de febre"
+    },
+    {
+     "nome": "Fernanda",
+     "assume": 992,
+     "morre": 1021,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Vesada",
+     "assume": 1021,
+     "morre": 1043,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Rosoria",
+     "assume": 1043,
+     "morre": 1062,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Valinina",
+     "assume": 1062,
+     "morre": 1085,
+     "como": "de febre"
+    },
+    {
+     "nome": "Valorada",
+     "assume": 1085,
+     "morre": 1122,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Quitéria",
+     "assume": 1122,
+     "morre": 1139,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Abel",
+     "assume": 1139,
+     "morre": 1164,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Herinino",
+     "assume": 1164,
+     "morre": 1184,
+     "como": "de peste"
+    },
+    {
+     "nome": "Orlando",
+     "assume": 1184,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_astasal": {
+   "nome": "os Astasal",
+   "tipo": "nobre",
+   "sede": "castro_do_sal",
+   "fundada": 550,
+   "viva": true,
+   "caiu": null,
+   "ramo": [
+    {
+     "nome": "Clara",
+     "assume": 550,
+     "morre": 577,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Zélia",
+     "assume": 577,
+     "morre": 608,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Inácio",
+     "assume": 608,
+     "morre": 639,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Cosme",
+     "assume": 639,
+     "morre": 662,
+     "como": "de febre"
+    },
+    {
+     "nome": "Valentina",
+     "assume": 662,
+     "morre": 690,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Alarino",
+     "assume": 690,
+     "morre": 710,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Raul",
+     "assume": 710,
+     "morre": 748,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Laura",
+     "assume": 748,
+     "morre": 779,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Crispim",
+     "assume": 779,
+     "morre": 815,
+     "como": "de febre"
+    },
+    {
+     "nome": "Gilarino",
+     "assume": 815,
+     "morre": 838,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Alorina",
+     "assume": 838,
+     "morre": 862,
+     "como": "de febre"
+    },
+    {
+     "nome": "Urraca",
+     "assume": 862,
+     "morre": 880,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Quirino",
+     "assume": 880,
+     "morre": 901,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Danoreu",
+     "assume": 901,
+     "morre": 911,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Otávio",
+     "assume": 911,
+     "morre": 926,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Hilda",
+     "assume": 926,
+     "morre": 961,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Alino",
+     "assume": 961,
+     "morre": 988,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Berina",
+     "assume": 988,
+     "morre": 1012,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Celinino",
+     "assume": 1012,
+     "morre": 1048,
+     "como": "à traição, por um parente"
+    },
+    {
+     "nome": "Catarina",
+     "assume": 1048,
+     "morre": 1069,
+     "como": "de peste"
+    },
+    {
+     "nome": "Adelaide",
+     "assume": 1069,
+     "morre": 1087,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Filipa",
+     "assume": 1087,
+     "morre": 1115,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Herinia",
+     "assume": 1115,
+     "morre": 1147,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Brás",
+     "assume": 1147,
+     "morre": 1165,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Rosarino",
+     "assume": 1165,
+     "morre": 1200,
+     "como": "num desabamento"
+    },
+    {
+     "nome": "Nororado",
+     "assume": 1200,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_astolan": {
+   "nome": "os Astolan",
+   "tipo": "nobre",
+   "sede": "pedra_verde",
+   "fundada": 651,
+   "viva": true,
+   "caiu": null,
+   "ramo": [
+    {
+     "nome": "Sancho",
+     "assume": 651,
+     "morre": 682,
+     "como": "de febre"
+    },
+    {
+     "nome": "Mécia",
+     "assume": 682,
+     "morre": 706,
+     "como": "de febre"
+    },
+    {
+     "nome": "Graça",
+     "assume": 706,
+     "morre": 731,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Eulália",
+     "assume": 731,
+     "morre": 765,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Hugo",
+     "assume": 765,
+     "morre": 786,
+     "como": "de febre"
+    },
+    {
+     "nome": "Sebastião",
+     "assume": 786,
+     "morre": 809,
+     "como": "de peste"
+    },
+    {
+     "nome": "Heitor",
+     "assume": 809,
+     "morre": 826,
+     "como": "de peste"
+    },
+    {
+     "nome": "Vicente",
+     "assume": 826,
+     "morre": 857,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Beatriz",
+     "assume": 857,
+     "morre": 884,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Estela",
+     "assume": 884,
+     "morre": 902,
+     "como": "de febre"
+    },
+    {
+     "nome": "Iranina",
+     "assume": 902,
+     "morre": 929,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Leandro",
+     "assume": 929,
+     "morre": 951,
+     "como": "de febre"
+    },
+    {
+     "nome": "Gilana",
+     "assume": 951,
+     "morre": 978,
+     "como": "num duelo"
+    },
+    {
+     "nome": "Osorado",
+     "assume": 978,
+     "morre": 990,
+     "como": "de uma flecha na estrada"
+    },
+    {
+     "nome": "Natália",
+     "assume": 990,
+     "morre": 1025,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Lino",
+     "assume": 1025,
+     "morre": 1050,
+     "como": "de velho, na cama"
+    },
+    {
+     "nome": "Nelo",
+     "assume": 1050,
+     "morre": 1091,
+     "como": "caçando na serra"
+    },
+    {
+     "nome": "Terinada",
+     "assume": 1091,
+     "morre": 1120,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Joraneu",
+     "assume": 1120,
+     "morre": 1150,
+     "como": "de febre"
+    },
+    {
+     "nome": "Domingas",
+     "assume": 1150,
+     "morre": 1177,
+     "como": "de febre"
+    },
+    {
+     "nome": "Valinado",
+     "assume": 1177,
+     "morre": 1197,
+     "como": "afogado na travessia"
+    },
+    {
+     "nome": "Valada",
+     "assume": 1197,
+     "morre": null,
+     "como": null
+    }
+   ]
+  },
+  "c_moreno_vale_do_corvo": {
+   "nome": "os Moreno",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1090,
+   "viva": true
+  },
+  "c_outeiro_vale_do_corvo": {
+   "nome": "os Outeiro",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1122,
+   "viva": true
+  },
+  "c_leal_vale_do_corvo": {
+   "nome": "os Leal",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1151,
+   "viva": true
+  },
+  "c_godinho_vale_do_corvo": {
+   "nome": "os Godinho",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1031,
+   "viva": true
+  },
+  "c_veloso_vale_do_corvo": {
+   "nome": "os Veloso",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1072,
+   "viva": true
+  },
+  "c_mota_vale_do_corvo": {
+   "nome": "os Mota",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1146,
+   "viva": true
+  },
+  "c_cordeiro_vale_do_corvo": {
+   "nome": "os Cordeiro",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1186,
+   "viva": true
+  },
+  "c_cabral_vale_do_corvo": {
+   "nome": "os Cabral",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1107,
+   "viva": true
+  },
+  "c_pardo_vale_do_corvo": {
+   "nome": "os Pardo",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1160,
+   "viva": true
+  },
+  "c_amado_vale_do_corvo": {
+   "nome": "os Amado",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1190,
+   "viva": true
+  },
+  "c_ferreira_vale_do_corvo": {
+   "nome": "os Ferreira",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1158,
+   "viva": true
+  },
+  "c_antunes_vale_do_corvo": {
+   "nome": "os Antunes",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1126,
+   "viva": true
+  },
+  "c_junqueira_vale_do_corvo": {
+   "nome": "os Junqueira",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1166,
+   "viva": true
+  },
+  "c_lemos_vale_do_corvo": {
+   "nome": "os Lemos",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1119,
+   "viva": true
+  },
+  "c_bravo_vale_do_corvo": {
+   "nome": "os Bravo",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1029,
+   "viva": true
+  },
+  "c_neiva_vale_do_corvo": {
+   "nome": "os Neiva",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1139,
+   "viva": true
+  },
+  "c_lagos_vale_do_corvo": {
+   "nome": "os Lagos",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1085,
+   "viva": true
+  },
+  "c_sampaio_vale_do_corvo": {
+   "nome": "os Sampaio",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1092,
+   "viva": true
+  },
+  "c_fontes_vale_do_corvo": {
+   "nome": "os Fontes",
+   "tipo": "comum",
+   "sede": "vale_do_corvo",
+   "fundada": 1155,
+   "viva": true
+  },
+  "c_outeiro_varzea_da_nevoa": {
+   "nome": "os Outeiro",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1152,
+   "viva": true
+  },
+  "c_fontes_varzea_da_nevoa": {
+   "nome": "os Fontes",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1143,
+   "viva": true
+  },
+  "c_amado_varzea_da_nevoa": {
+   "nome": "os Amado",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1097,
+   "viva": true
+  },
+  "c_cordeiro_varzea_da_nevoa": {
+   "nome": "os Cordeiro",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1032,
+   "viva": true
+  },
+  "c_veloso_varzea_da_nevoa": {
+   "nome": "os Veloso",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1182,
+   "viva": true
+  },
+  "c_raposo_varzea_da_nevoa": {
+   "nome": "os Raposo",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1040,
+   "viva": true
+  },
+  "c_pardo_varzea_da_nevoa": {
+   "nome": "os Pardo",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1133,
+   "viva": true
+  },
+  "c_antunes_varzea_da_nevoa": {
+   "nome": "os Antunes",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1107,
+   "viva": true
+  },
+  "c_salgueiro_varzea_da_nevoa": {
+   "nome": "os Salgueiro",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1075,
+   "viva": true
+  },
+  "c_lemos_varzea_da_nevoa": {
+   "nome": "os Lemos",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1130,
+   "viva": true
+  },
+  "c_coelho_varzea_da_nevoa": {
+   "nome": "os Coelho",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1086,
+   "viva": true
+  },
+  "c_teixeira_varzea_da_nevoa": {
+   "nome": "os Teixeira",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1081,
+   "viva": true
+  },
+  "c_caldas_varzea_da_nevoa": {
+   "nome": "os Caldas",
+   "tipo": "comum",
+   "sede": "varzea_da_nevoa",
+   "fundada": 1135,
+   "viva": true
+  },
+  "c_matos_ribeira_da_nevoa": {
+   "nome": "os Matos",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1161,
+   "viva": true
+  },
+  "c_couto_ribeira_da_nevoa": {
+   "nome": "os Couto",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1029,
+   "viva": true
+  },
+  "c_mota_ribeira_da_nevoa": {
+   "nome": "os Mota",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1027,
+   "viva": true
+  },
+  "c_barreiro_ribeira_da_nevoa": {
+   "nome": "os Barreiro",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1037,
+   "viva": true
+  },
+  "c_calvo_ribeira_da_nevoa": {
+   "nome": "os Calvo",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1141,
+   "viva": true
+  },
+  "c_moreno_ribeira_da_nevoa": {
+   "nome": "os Moreno",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1157,
+   "viva": true
+  },
+  "c_freitas_ribeira_da_nevoa": {
+   "nome": "os Freitas",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1028,
+   "viva": true
+  },
+  "c_coelho_ribeira_da_nevoa": {
+   "nome": "os Coelho",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1079,
+   "viva": true
+  },
+  "c_rego_ribeira_da_nevoa": {
+   "nome": "os Rego",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1071,
+   "viva": true
+  },
+  "c_paiva_ribeira_da_nevoa": {
+   "nome": "os Paiva",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1142,
+   "viva": true
+  },
+  "c_rocha_ribeira_da_nevoa": {
+   "nome": "os Rocha",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1021,
+   "viva": true
+  },
+  "c_seixas_ribeira_da_nevoa": {
+   "nome": "os Seixas",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1048,
+   "viva": true
+  },
+  "c_antunes_ribeira_da_nevoa": {
+   "nome": "os Antunes",
+   "tipo": "comum",
+   "sede": "ribeira_da_nevoa",
+   "fundada": 1079,
+   "viva": true
+  },
+  "c_neiva_castro_real": {
+   "nome": "os Neiva",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1103,
+   "viva": true
+  },
+  "c_dorneles_castro_real": {
+   "nome": "os Dorneles",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1198,
+   "viva": true
+  },
+  "c_amado_castro_real": {
+   "nome": "os Amado",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1106,
+   "viva": true
+  },
+  "c_moleiro_castro_real": {
+   "nome": "os Moleiro",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1123,
+   "viva": true
+  },
+  "c_serra_castro_real": {
+   "nome": "os Serra",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1067,
+   "viva": true
+  },
+  "c_pastor_castro_real": {
+   "nome": "os Pastor",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1129,
+   "viva": true
+  },
+  "c_sampaio_castro_real": {
+   "nome": "os Sampaio",
+   "tipo": "comum",
+   "sede": "castro_real",
+   "fundada": 1086,
+   "viva": true
+  },
+  "c_teixeira_castro_do_sal": {
+   "nome": "os Teixeira",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1057,
+   "viva": true
+  },
+  "c_prado_castro_do_sal": {
+   "nome": "os Prado",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1093,
+   "viva": true
+  },
+  "c_dorneles_castro_do_sal": {
+   "nome": "os Dorneles",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1182,
+   "viva": true
+  },
+  "c_junqueira_castro_do_sal": {
+   "nome": "os Junqueira",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1161,
+   "viva": true
+  },
+  "c_matos_castro_do_sal": {
+   "nome": "os Matos",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1168,
+   "viva": true
+  },
+  "c_tavares_castro_do_sal": {
+   "nome": "os Tavares",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1189,
+   "viva": true
+  },
+  "c_cabral_castro_do_sal": {
+   "nome": "os Cabral",
+   "tipo": "comum",
+   "sede": "castro_do_sal",
+   "fundada": 1120,
+   "viva": true
+  },
+  "c_cabral_pedra_verde": {
+   "nome": "os Cabral",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1036,
+   "viva": true
+  },
+  "c_pereira_pedra_verde": {
+   "nome": "os Pereira",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1144,
+   "viva": true
+  },
+  "c_bastos_pedra_verde": {
+   "nome": "os Bastos",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1085,
+   "viva": true
+  },
+  "c_teixeira_pedra_verde": {
+   "nome": "os Teixeira",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1079,
+   "viva": true
+  },
+  "c_souto_pedra_verde": {
+   "nome": "os Souto",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1048,
+   "viva": true
+  },
+  "c_faria_pedra_verde": {
+   "nome": "os Faria",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1170,
+   "viva": true
+  },
+  "c_ribeiro_pedra_verde": {
+   "nome": "os Ribeiro",
+   "tipo": "comum",
+   "sede": "pedra_verde",
+   "fundada": 1099,
+   "viva": true
+  },
+  "c_dorneles_pedra_velha": {
+   "nome": "os Dorneles",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1128,
+   "viva": true
+  },
+  "c_outeiro_pedra_velha": {
+   "nome": "os Outeiro",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1181,
+   "viva": true
+  },
+  "c_moleiro_pedra_velha": {
+   "nome": "os Moleiro",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1190,
+   "viva": true
+  },
+  "c_bastos_pedra_velha": {
+   "nome": "os Bastos",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1057,
+   "viva": true
+  },
+  "c_pinheiro_pedra_velha": {
+   "nome": "os Pinheiro",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1177,
+   "viva": true
+  },
+  "c_caldas_pedra_velha": {
+   "nome": "os Caldas",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1058,
+   "viva": true
+  },
+  "c_rego_pedra_velha": {
+   "nome": "os Rego",
+   "tipo": "comum",
+   "sede": "pedra_velha",
+   "fundada": 1103,
+   "viva": true
+  },
+  "c_matos_varzea_brava": {
+   "nome": "os Matos",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1191,
+   "viva": true
+  },
+  "c_sampaio_varzea_brava": {
+   "nome": "os Sampaio",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1093,
+   "viva": true
+  },
+  "c_pinheiro_varzea_brava": {
+   "nome": "os Pinheiro",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1173,
+   "viva": true
+  },
+  "c_franco_varzea_brava": {
+   "nome": "os Franco",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1174,
+   "viva": true
+  },
+  "c_leal_varzea_brava": {
+   "nome": "os Leal",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1051,
+   "viva": true
+  },
+  "c_cordeiro_varzea_brava": {
+   "nome": "os Cordeiro",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1121,
+   "viva": true
+  },
+  "c_prado_varzea_brava": {
+   "nome": "os Prado",
+   "tipo": "comum",
+   "sede": "varzea_brava",
+   "fundada": 1158,
+   "viva": true
+  },
+  "c_neiva_castro_branco": {
+   "nome": "os Neiva",
+   "tipo": "comum",
+   "sede": "castro_branco",
+   "fundada": 1187,
+   "viva": true
+  },
+  "c_paiva_castro_branco": {
+   "nome": "os Paiva",
+   "tipo": "comum",
+   "sede": "castro_branco",
+   "fundada": 1192,
+   "viva": true
+  },
+  "c_cabral_castro_branco": {
+   "nome": "os Cabral",
+   "tipo": "comum",
+   "sede": "castro_branco",
+   "fundada": 1165,
+   "viva": true
+  },
+  "c_rocha_ponte_da_cruz": {
+   "nome": "os Rocha",
+   "tipo": "comum",
+   "sede": "ponte_da_cruz",
+   "fundada": 1036,
+   "viva": true
+  },
+  "c_valente_ponte_da_cruz": {
+   "nome": "os Valente",
+   "tipo": "comum",
+   "sede": "ponte_da_cruz",
+   "fundada": 1091,
+   "viva": true
+  },
+  "c_caldas_ponte_da_cruz": {
+   "nome": "os Caldas",
+   "tipo": "comum",
+   "sede": "ponte_da_cruz",
+   "fundada": 1023,
+   "viva": true
+  },
+  "c_dorneles_pinhal_do_ferro": {
+   "nome": "os Dorneles",
+   "tipo": "comum",
+   "sede": "pinhal_do_ferro",
+   "fundada": 1056,
+   "viva": true
+  },
+  "c_moreno_pinhal_do_ferro": {
+   "nome": "os Moreno",
+   "tipo": "comum",
+   "sede": "pinhal_do_ferro",
+   "fundada": 1061,
+   "viva": true
+  },
+  "c_bravo_pinhal_do_ferro": {
+   "nome": "os Bravo",
+   "tipo": "comum",
+   "sede": "pinhal_do_ferro",
+   "fundada": 1135,
+   "viva": true
+  },
+  "c_rego_coval_do_vento": {
+   "nome": "os Rego",
+   "tipo": "comum",
+   "sede": "coval_do_vento",
+   "fundada": 1018,
+   "viva": true
+  },
+  "c_outeiro_coval_do_vento": {
+   "nome": "os Outeiro",
+   "tipo": "comum",
+   "sede": "coval_do_vento",
+   "fundada": 1074,
+   "viva": true
+  },
+  "c_lemos_coval_do_vento": {
+   "nome": "os Lemos",
+   "tipo": "comum",
+   "sede": "coval_do_vento",
+   "fundada": 1139,
+   "viva": true
+  },
+  "c_calvo_souto_negro": {
+   "nome": "os Calvo",
+   "tipo": "comum",
+   "sede": "souto_negro",
+   "fundada": 1135,
+   "viva": true
+  },
+  "c_valente_souto_negro": {
+   "nome": "os Valente",
+   "tipo": "comum",
+   "sede": "souto_negro",
+   "fundada": 1099,
+   "viva": true
+  },
+  "c_pinheiro_souto_negro": {
+   "nome": "os Pinheiro",
+   "tipo": "comum",
+   "sede": "souto_negro",
+   "fundada": 1155,
+   "viva": true
+  },
+  "c_bravo_ribeira_do_lobo": {
+   "nome": "os Bravo",
+   "tipo": "comum",
+   "sede": "ribeira_do_lobo",
+   "fundada": 1026,
+   "viva": true
+  },
+  "c_gago_ribeira_do_lobo": {
+   "nome": "os Gago",
+   "tipo": "comum",
+   "sede": "ribeira_do_lobo",
+   "fundada": 1160,
+   "viva": true
+  },
+  "c_teixeira_ribeira_do_lobo": {
+   "nome": "os Teixeira",
+   "tipo": "comum",
+   "sede": "ribeira_do_lobo",
+   "fundada": 1032,
+   "viva": true
+  },
+  "c_coelho_ribeira_do_lobo": {
+   "nome": "os Coelho",
+   "tipo": "comum",
+   "sede": "ribeira_do_lobo",
+   "fundada": 1192,
+   "viva": true
+  },
+  "c_rego_ermida_verde": {
+   "nome": "os Rego",
+   "tipo": "comum",
+   "sede": "ermida_verde",
+   "fundada": 1140,
+   "viva": true
+  },
+  "c_pardo_ermida_verde": {
+   "nome": "os Pardo",
+   "tipo": "comum",
+   "sede": "ermida_verde",
+   "fundada": 1065,
+   "viva": true
+  },
+  "c_leal_ermida_verde": {
+   "nome": "os Leal",
+   "tipo": "comum",
+   "sede": "ermida_verde",
+   "fundada": 1130,
+   "viva": true
+  },
+  "c_barreiro_ermida_verde": {
+   "nome": "os Barreiro",
+   "tipo": "comum",
+   "sede": "ermida_verde",
+   "fundada": 1069,
+   "viva": true
+  },
+  "c_franco_penha_das_rosas": {
+   "nome": "os Franco",
+   "tipo": "comum",
+   "sede": "penha_das_rosas",
+   "fundada": 1035,
+   "viva": true
+  },
+  "c_dorneles_penha_das_rosas": {
+   "nome": "os Dorneles",
+   "tipo": "comum",
+   "sede": "penha_das_rosas",
+   "fundada": 1187,
+   "viva": true
+  },
+  "c_souto_penha_das_rosas": {
+   "nome": "os Souto",
+   "tipo": "comum",
+   "sede": "penha_das_rosas",
+   "fundada": 1165,
+   "viva": true
+  },
+  "c_couto_penha_das_rosas": {
+   "nome": "os Couto",
+   "tipo": "comum",
+   "sede": "penha_das_rosas",
+   "fundada": 1139,
+   "viva": true
+  }
+ },
+ "cronica": [
+  {
+   "ano": 393,
+   "texto": "Nasce o Reino de Souto Alto.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino"
+   ]
+  },
+  {
+   "ano": 398,
+   "texto": "A caverna onde o dragão desceu no ano 398, sobre o ouro do Reino de Souto Alto, e dorme desde então.",
+   "onde": "M7",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 455,
+   "texto": "Alba curou a peste em Ribeira da Névoa com o que sabia do mato.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 462,
+   "texto": "Alba faz forjar a Lança da Promessa (Épica).",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 478,
+   "texto": "Tânia funda a casa dos Orirena em Vale do Corvo.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 490,
+   "texto": "Martim funda a casa dos Falaroz em Várzea da Névoa.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 491,
+   "texto": "Alba morre em Vale do Corvo.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 493,
+   "texto": "O mestre Constança forja o Martelo da Aurora (Lendária).",
+   "onde": "castro_real",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 501,
+   "texto": "Salvador funda a casa dos Terigar em Várzea Brava.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 505,
+   "texto": "Morre Tânia (num duelo); Lauro assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 514,
+   "texto": "Maskia, dos anões, quebrou o cerco de Pedra Verde.",
+   "onde": "pedra_verde",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 515,
+   "texto": "Morre Martim (à traição, por um parente); Sara assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 520,
+   "texto": "Maskia faz forjar o Arco da Última Noite (Lendária).",
+   "onde": "pedra_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 522,
+   "texto": "Nicolau funda a casa dos Valedel em Ribeira da Névoa.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 524,
+   "texto": "Cai o Reino de Souto Alto: a coroa se parte, as casas se matam pelo que sobra.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino",
+    "queda"
+   ]
+  },
+  {
+   "ano": 525,
+   "texto": "Nasce o Reino de Ribeira Brava.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino"
+   ]
+  },
+  {
+   "ano": 536,
+   "texto": "Morre Salvador (de peste); Leonor assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 537,
+   "texto": "Morre Sara (num desabamento); Júlia assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 544,
+   "texto": "Os anões da serra forjam o Bordão da Serra (Mítica).",
+   "onde": "pedra_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 546,
+   "texto": "Morre Nicolau (num desabamento); Violeta assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 549,
+   "texto": "Morre Lauro (de febre); Iria assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 550,
+   "texto": "Clara funda a casa dos Astasal em Castro do Sal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 556,
+   "texto": "O mestre Ninkel forja o Martelo do Rei Velho (Épica).",
+   "onde": "varzea_brava",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 559,
+   "texto": "Morre Leonor (afogado na travessia); Urias assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 562,
+   "texto": "Maskia morre na Cripta dos Miraves; o Arco da Última Noite fica com o corpo.",
+   "onde": "M0",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 564,
+   "texto": "Morre Júlia (de velho, na cama); Vera assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 569,
+   "texto": "Morre Violeta (afogado na travessia); Mauro assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 574,
+   "texto": "Morre Iria (num duelo); Dulce assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 577,
+   "texto": "Morre Clara (à traição, por um parente); Zélia assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 583,
+   "texto": "Morre Dulce (num desabamento); Lourenço assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 587,
+   "texto": "Morre Vera (de velho, na cama); Tomásia assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 591,
+   "texto": "Morre Mauro (num desabamento); Caio assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 596,
+   "texto": "Morre Urias (de febre); Rute assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 597,
+   "texto": "Morre Lourenço (à traição, por um parente); Beria assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 598,
+   "texto": "Fuma, dos pequeninos, achou o veio de ferro que fez a riqueza de Ribeira da Névoa.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 604,
+   "texto": "Fuma faz forjar a Maça da Maré (Épica).",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 604,
+   "texto": "Morre Tomásia (de uma flecha na estrada); Amaro assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 607,
+   "texto": "Tarnin, dos anões, matou o basilisco que assolava Ponte da Cruz.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 607,
+   "texto": "A velha atalaia que os bichos tomaram no ano 607, quando a guarda deixou de subir.",
+   "onde": "M6",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 608,
+   "texto": "Morre Zélia (num duelo); Inácio assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 613,
+   "texto": "Tarnin faz forjar a Acha da Promessa (Única).",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 613,
+   "texto": "A cripta onde os Orirena enterravam os seus, selada no ano 613 depois da peste.",
+   "onde": "M1",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 615,
+   "texto": "Fuma morre em Coval do Vento.",
+   "onde": "coval_do_vento",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 617,
+   "texto": "Morre Caio (à traição, por um parente); Dimas assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 617,
+   "texto": "Ferorão acha o Arco da Última Noite na Cripta dos Miraves.",
+   "onde": "M0",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 618,
+   "texto": "Morre Amaro (de febre); Damião assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 622,
+   "texto": "Morre Beria (num duelo); Sancha assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 629,
+   "texto": "Morre Rute (caçando na serra); Helena assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 632,
+   "texto": "Morre Damião (de velho, na cama); Odete assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 636,
+   "texto": "Morre Sancha (à traição, por um parente); Olímpia assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 636,
+   "texto": "Começa a guerra dos Irmãos: os Astasal contra os Orirena; Ribeira da Névoa é saqueada.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 639,
+   "texto": "Morre Inácio (num desabamento); Cosme assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 642,
+   "texto": "Acaba a guerra dos Irmãos: vencem os Orirena.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 644,
+   "texto": "Morre Dimas (de peste); Gilão assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 647,
+   "texto": "Morre Helena (de peste); Dora assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 649,
+   "texto": "Tarnin morre em Ribeira do Lobo.",
+   "onde": "ribeira_do_lobo",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 651,
+   "texto": "Sancho funda a casa dos Astolan em Pedra Verde.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 662,
+   "texto": "Morre Cosme (de febre); Valentina assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 663,
+   "texto": "Morre Gilão (de febre); Jordão assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 666,
+   "texto": "Morre Olímpia (de velho, na cama); Rosanada assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 668,
+   "texto": "Morre Odete (à traição, por um parente); Paula assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 672,
+   "texto": "Morre Jordão (de peste); Ermelinda assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 677,
+   "texto": "Morre Dora (num desabamento); Fausto assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 680,
+   "texto": "Morre Rosanada (caçando na serra); Alelia assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 682,
+   "texto": "Morre Sancho (de febre); Mécia assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 690,
+   "texto": "Morre Valentina (caçando na serra); Alarino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 694,
+   "texto": "Morre Alelia (caçando na serra); Nuno assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 695,
+   "texto": "Morre Paula (de peste); Pedro assume a casa dos Falaroz.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 698,
+   "texto": "Começa a guerra dos Dois Rios: os Astasal contra os Falaroz; Castro Real é saqueado.",
+   "onde": "castro_real",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 704,
+   "texto": "Acaba a guerra dos Dois Rios: vencem os Astasal.",
+   "onde": "castro_real",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 704,
+   "texto": "Os Falaroz não se levantam mais: a casa cai com a guerra.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "casa",
+    "queda",
+    "c_falaroz"
+   ]
+  },
+  {
+   "ano": 706,
+   "texto": "Morre Ermelinda (num duelo); Tomé assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 706,
+   "texto": "Morre Mécia (de febre); Graça assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 707,
+   "texto": "Começa a guerra do Inverno Longo: os Orirena contra os Astasal; Pedra Verde é saqueada.",
+   "onde": "pedra_verde",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 710,
+   "texto": "Acaba a guerra do Inverno Longo: vencem os Orirena.",
+   "onde": "pedra_verde",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 710,
+   "texto": "Morre Alarino (caçando na serra); Raul assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 711,
+   "texto": "Morre Fausto (de peste); Petronila assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 714,
+   "texto": "Morre Tomé (afogado na travessia); Terino assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 716,
+   "texto": "A velha atalaia que os bichos tomaram no ano 716, quando a guarda deixou de subir.",
+   "onde": "M5",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 721,
+   "texto": "Valelado fechou a fenda de onde saíam os mortos, perto de Várzea da Névoa.",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 728,
+   "texto": "Morre Nuno (à traição, por um parente); Osarada assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 729,
+   "texto": "Valelado faz forjar a Couraça do Exílio (Épica).",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 731,
+   "texto": "Morre Graça (de uma flecha na estrada); Eulália assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 737,
+   "texto": "Morre Terino (afogado na travessia); Gilinada assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 740,
+   "texto": "A peste chega a Penha das Rosas: morre um em cada três.",
+   "onde": "penha_das_rosas",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 745,
+   "texto": "O que sobrou de Várzea Larga, saqueada no ano 745 na guerra da Ponte, e nunca mais erguida.",
+   "onde": "M4",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 748,
+   "texto": "Morre Raul (num desabamento); Laura assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 749,
+   "texto": "Valelado morre em Pedra Verde.",
+   "onde": "pedra_verde",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 749,
+   "texto": "Morre Petronila (de uma flecha na estrada); Duarte assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 752,
+   "texto": "Morre Osarada (de peste); Pascoal assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 765,
+   "texto": "Morre Eulália (caçando na serra); Hugo assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 766,
+   "texto": "Morre Gilinada (num desabamento); Jonas assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 767,
+   "texto": "Morre Duarte (caçando na serra); Seleleu assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 774,
+   "texto": "Morre Pascoal (de uma flecha na estrada); Celora assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 779,
+   "texto": "Morre Laura (num duelo); Crispim assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 780,
+   "texto": "Aldo venceu o torneio do rei três anos seguidos.",
+   "onde": "ermida_verde",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 781,
+   "texto": "Começa a guerra da Ponte: os Orirena contra os Valedel; Pedra Velha é saqueada.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 782,
+   "texto": "Morre Jonas (de febre); Teodoro assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 785,
+   "texto": "Aldo faz forjar a Acha das Cinzas (Épica).",
+   "onde": "ermida_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 785,
+   "texto": "Acaba a guerra da Ponte: vencem os Orirena.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 786,
+   "texto": "O mestre Borda forja o Gume do Inverno (Épica).",
+   "onde": "varzea_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 786,
+   "texto": "Morre Hugo (de febre); Sebastião assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 793,
+   "texto": "Morre Seleleu (à traição, por um parente); Justa assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 803,
+   "texto": "Morre Celora (num desabamento); Sílvia assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 804,
+   "texto": "Morre Teodoro (de febre); Joreu assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 808,
+   "texto": "O inverno da fome em Várzea Brava: o povo come a semente.",
+   "onde": "varzea_brava",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 808,
+   "texto": "Grusko acha a Maça da Maré na Cripta dos Vericor.",
+   "onde": "M1",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 809,
+   "texto": "Morre Sebastião (de peste); Heitor assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 812,
+   "texto": "Genoveva segurou sozinho a ponte de Pedra Verde contra um bando inteiro.",
+   "onde": "pedra_verde",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 813,
+   "texto": "Brardar acha a Couraça do Exílio na Mina da Névoa.",
+   "onde": "M2",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 815,
+   "texto": "Morre Crispim (de febre); Gilarino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 816,
+   "texto": "Genoveva faz forjar a Couraça do Eclipse (Épica).",
+   "onde": "pedra_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 817,
+   "texto": "Morre Joreu (afogado na travessia); Irene assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 819,
+   "texto": "Morre Justa (num duelo); Irelina assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 821,
+   "texto": "Aldo morre em Ribeira da Névoa.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 823,
+   "texto": "Genoveva morre em Pinhal do Ferro.",
+   "onde": "pinhal_do_ferro",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 826,
+   "texto": "Morre Heitor (de peste); Vicente assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 827,
+   "texto": "Morre Sílvia (de velho, na cama); Davi assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 830,
+   "texto": "Aerine, dos elfos, venceu o torneio do rei três anos seguidos.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 830,
+   "texto": "Duldia acha o Bordão da Serra na Toca do Sal.",
+   "onde": "M5",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 833,
+   "texto": "Marana achou o veio de ferro que fez a riqueza de Castro Branco.",
+   "onde": "castro_branco",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 836,
+   "texto": "Aerine faz forjar o Arco do Rei Velho (Épica).",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 837,
+   "texto": "Morre Irelina (de febre); Mafalda assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 838,
+   "texto": "Morre Irene (à traição, por um parente); Prisca assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 838,
+   "texto": "Morre Gilarino (de uma flecha na estrada); Alorina assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 840,
+   "texto": "Marana faz forjar o Arnês do Juramento (Única).",
+   "onde": "castro_branco",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 844,
+   "texto": "O inverno da fome em Pedra Verde: o povo come a semente.",
+   "onde": "pedra_verde",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 851,
+   "texto": "Aerine morre na Toca do Touro; o Arco do Rei Velho fica com o corpo.",
+   "onde": "M6",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 851,
+   "texto": "A peste chega a Ribeira da Névoa: morre um em cada três.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 853,
+   "texto": "Começa a guerra da Coroa: os Orirena contra os Astasal; Vale do Corvo é saqueado.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 856,
+   "texto": "Acaba a guerra da Coroa: vencem os Astasal.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 857,
+   "texto": "Morre Davi (num duelo); Berelina assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 857,
+   "texto": "Morre Vicente (de uma flecha na estrada); Beatriz assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 858,
+   "texto": "Morre Mafalda (num duelo); Iranado assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 860,
+   "texto": "Marana morre em Pedra Verde.",
+   "onde": "pedra_verde",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 862,
+   "texto": "Morre Alorina (de febre); Urraca assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 863,
+   "texto": "Morre Prisca (num duelo); Paulina assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 868,
+   "texto": "Começa a guerra dos Cem Dias: os Terigar contra os Valedel; As Grutas do Vento é saqueada.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 868,
+   "texto": "A peste chega a Ribeira da Névoa: morre um em cada três.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 869,
+   "texto": "Cai o Reino de Ribeira Brava: a coroa se parte, as casas se matam pelo que sobra.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino",
+    "queda"
+   ]
+  },
+  {
+   "ano": 869,
+   "texto": "Começa a guerra da Ponte de 869: os Terigar contra os Astolan; Pedra Velha é saqueada.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 870,
+   "texto": "Nasce o Reino de Pinhal Seco.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino"
+   ]
+  },
+  {
+   "ano": 872,
+   "texto": "O inverno da fome em Pinhal do Ferro: o povo come a semente.",
+   "onde": "pinhal_do_ferro",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 873,
+   "texto": "Acaba a guerra dos Cem Dias: vencem os Terigar.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 873,
+   "texto": "Morre Iranado (de uma flecha na estrada); Dalva assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 873,
+   "texto": "A peste chega a Castro Branco: morre um em cada três.",
+   "onde": "castro_branco",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 874,
+   "texto": "Acaba a guerra da Ponte de 869: vencem os Terigar.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 880,
+   "texto": "Morre Urraca (num desabamento); Quirino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 884,
+   "texto": "Morre Dalva (afogado na travessia); Rafaela assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 884,
+   "texto": "Morre Beatriz (afogado na travessia); Estela assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 888,
+   "texto": "O inverno da fome em Coval do Vento: o povo come a semente.",
+   "onde": "coval_do_vento",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 889,
+   "texto": "Morre Berelina (de uma flecha na estrada); Herareu assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 894,
+   "texto": "Morre Paulina (de velho, na cama); Ernesto assume a casa dos Valedel.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 895,
+   "texto": "Começa a guerra do Sal: os Orirena contra os Valedel; O Souto das Águas é saqueado.",
+   "onde": "souto_das_aguas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 900,
+   "texto": "Terão acha o Arco do Rei Velho na Toca do Touro.",
+   "onde": "M6",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 901,
+   "texto": "Morre Quirino (num duelo); Danoreu assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 901,
+   "texto": "Começa a guerra do Sal de 901: os Astolan contra os Orirena; Ponte da Cruz é saqueado.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 902,
+   "texto": "Acaba a guerra do Sal: vencem os Orirena.",
+   "onde": "souto_das_aguas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 902,
+   "texto": "Os Valedel não se levantam mais: a casa cai com a guerra.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "casa",
+    "queda",
+    "c_valedel"
+   ]
+  },
+  {
+   "ano": 902,
+   "texto": "Morre Estela (de febre); Iranina assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 905,
+   "texto": "Cecília acha o Arnês do Juramento na Toca do Sal.",
+   "onde": "M5",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 906,
+   "texto": "Acaba a guerra do Sal de 901: vencem os Orirena.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 909,
+   "texto": "Morre Rafaela (afogado na travessia); Simão assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 911,
+   "texto": "Morre Danoreu (de velho, na cama); Otávio assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 911,
+   "texto": "Lemissa acha o Arco da Última Noite na Toca do Sal.",
+   "onde": "M5",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 920,
+   "texto": "Morre Herareu (num duelo); Nara assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 925,
+   "texto": "Morre Simão (de peste); Berela assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 926,
+   "texto": "Morre Otávio (à traição, por um parente); Hilda assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 929,
+   "texto": "Morre Iranina (afogado na travessia); Leandro assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 938,
+   "texto": "Morre Nara (de velho, na cama); Vesinino assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 948,
+   "texto": "Cai o Reino de Pinhal Seco: a coroa se parte, as casas se matam pelo que sobra.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino",
+    "queda"
+   ]
+  },
+  {
+   "ano": 949,
+   "texto": "Nasce o Reino de Belogar.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "reino"
+   ]
+  },
+  {
+   "ano": 951,
+   "texto": "Morre Leandro (de febre); Gilana assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 954,
+   "texto": "Morre Berela (num desabamento); Fernão assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 957,
+   "texto": "Começa a guerra da Coroa de 957: os Astasal contra os Terigar; Pedra Velha é saqueada.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 961,
+   "texto": "Marelão expulsou os orcs da serra até o último.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 961,
+   "texto": "Morre Hilda (num duelo); Alino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 963,
+   "texto": "Acaba a guerra da Coroa de 957: vencem os Astasal.",
+   "onde": "pedra_velha",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 966,
+   "texto": "Marelão faz forjar o Bordão da Viúva (Única).",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 973,
+   "texto": "Morre Vesinino (de velho, na cama); Madalena assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 978,
+   "texto": "Morre Gilana (num duelo); Osorado assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 984,
+   "texto": "Marelão morre em Pinhal do Ferro.",
+   "onde": "pinhal_do_ferro",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 986,
+   "texto": "A peste chega a Ponte da Cruz: morre um em cada três.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 987,
+   "texto": "Durka acha o Arco da Última Noite na Mina da Névoa.",
+   "onde": "M2",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 988,
+   "texto": "Morre Alino (caçando na serra); Berina assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 990,
+   "texto": "Morre Osorado (de uma flecha na estrada); Natália assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 992,
+   "texto": "Morre Fernão (de febre); Fernanda assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 996,
+   "texto": "Morre Madalena (num desabamento); Bernardo assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 997,
+   "texto": "O inverno da fome em Ermida Verde: o povo come a semente.",
+   "onde": "ermida_verde",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 1000,
+   "texto": "Começa a guerra do Sal de 1000: os Astolan contra os Astasal; Os Penhascos das Águas é saqueado.",
+   "onde": "penhascos_das_aguas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1002,
+   "texto": "Acaba a guerra do Sal de 1000: vencem os Astasal.",
+   "onde": "penhascos_das_aguas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1002,
+   "texto": "Paio acha o Martelo da Aurora na Cripta dos Miraves.",
+   "onde": "M0",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1012,
+   "texto": "Morre Berina (afogado na travessia); Celinino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1015,
+   "texto": "Morre Bernardo (de velho, na cama); Roselino assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1021,
+   "texto": "Morre Fernanda (de velho, na cama); Vesada assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1024,
+   "texto": "Ililveli acha o Bordão da Viúva na Cripta dos Miraves.",
+   "onde": "M0",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1025,
+   "texto": "Morre Natália (de velho, na cama); Lino assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1035,
+   "texto": "Joaquim acha a Maça da Maré na Toca do Touro.",
+   "onde": "M6",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1035,
+   "texto": "Benedita acha o Martelo do Rei Velho na Mina da Névoa.",
+   "onde": "M2",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1037,
+   "texto": "Morre Roselino (de febre); Perado assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1043,
+   "texto": "Morre Vesada (à traição, por um parente); Rosoria assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1048,
+   "texto": "Morre Celinino (à traição, por um parente); Catarina assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1049,
+   "texto": "O mestre Urka forja o Martelo do Lobo (Lendária).",
+   "onde": "ermida_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1050,
+   "texto": "Morre Lino (de velho, na cama); Nelo assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1057,
+   "texto": "Morre Perado (de peste); Rosa assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1060,
+   "texto": "O mestre Guiomar forja o Martelo da Fome (Épica).",
+   "onde": "ermida_verde",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1062,
+   "texto": "Fiddana, dos gnomos, curou a peste em Castro do Sal com o que sabia do mato.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 1062,
+   "texto": "Morre Rosoria (caçando na serra); Valinina assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1062,
+   "texto": "O inverno da fome em Ponte da Cruz: o povo come a semente.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "fome"
+   ]
+  },
+  {
+   "ano": 1063,
+   "texto": "Fiddana faz forjar o Escudo do Rei Velho (Única).",
+   "onde": "castro_do_sal",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1067,
+   "texto": "Morre Rosa (de uma flecha na estrada); Selinina assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1069,
+   "texto": "Morre Catarina (de peste); Adelaide assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1074,
+   "texto": "Isabel acha a Acha das Cinzas na Toca do Touro.",
+   "onde": "M6",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1077,
+   "texto": "Pilela, dos pequeninos, curou a peste em Vale do Corvo com o que sabia do mato.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 1077,
+   "texto": "Pilela faz forjar o Selo do Sangue Antigo (Épica).",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1083,
+   "texto": "Fiddana morre na Cripta dos Miraves; o Escudo do Rei Velho fica com o corpo.",
+   "onde": "M0",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 1083,
+   "texto": "Roldok acha o Arco da Última Noite na Toca do Touro.",
+   "onde": "M6",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1085,
+   "texto": "Morre Valinina (de febre); Valorada assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1087,
+   "texto": "Morre Adelaide (de velho, na cama); Filipa assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1091,
+   "texto": "Mapi, dos pequeninos, matou o verme do brejo que assolava Ribeira da Névoa.",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 1091,
+   "texto": "Mapi faz forjar o Arco da Maré (Épica).",
+   "onde": "ribeira_da_nevoa",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1091,
+   "texto": "Morre Selinina (à traição, por um parente); Bera assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1091,
+   "texto": "Morre Nelo (caçando na serra); Terinada assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1093,
+   "texto": "Começa a guerra dos Dois Rios de 1093: os Astasal contra os Terigar; As Grutas do Vento é saqueada.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1097,
+   "texto": "Acaba a guerra dos Dois Rios de 1093: vencem os Astasal.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1104,
+   "texto": "Começa a guerra da Ponte de 1104: os Astasal contra os Orirena; Coval do Vento é saqueado.",
+   "onde": "coval_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1105,
+   "texto": "Mapi morre em Penha das Rosas.",
+   "onde": "penha_das_rosas",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 1105,
+   "texto": "Enwine acha o Escudo do Rei Velho na Cripta dos Miraves.",
+   "onde": "M0",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1109,
+   "texto": "Acaba a guerra da Ponte de 1104: vencem os Astasal.",
+   "onde": "coval_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1110,
+   "texto": "Morre Bera (de febre); Rodrigo assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1112,
+   "texto": "A cripta onde os Valedel enterravam os seus, selada no ano 1112 depois da peste.",
+   "onde": "M0",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 1115,
+   "texto": "Morre Filipa (de uma flecha na estrada); Herinia assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1119,
+   "texto": "Pilela morre em Penha das Rosas.",
+   "onde": "penha_das_rosas",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 1120,
+   "texto": "Morre Terinada (afogado na travessia); Joraneu assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1122,
+   "texto": "Morre Valorada (num duelo); Quitéria assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1124,
+   "texto": "Começa a guerra do Trigo: os Astasal contra os Astolan; Penha das Rosas é saqueada.",
+   "onde": "penha_das_rosas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1127,
+   "texto": "Brarku, dos meio-orcs, desceu à a Cripta dos Miraves e voltou com o que ninguém trouxe.",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "lenda"
+   ]
+  },
+  {
+   "ano": 1128,
+   "texto": "Acaba a guerra do Trigo: vencem os Astolan.",
+   "onde": "penha_das_rosas",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1128,
+   "texto": "Huldo acha o Bordão da Serra na Toca do Touro.",
+   "onde": "M6",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1130,
+   "texto": "Brarku faz forjar o Malho do Silêncio (Épica).",
+   "onde": "ponte_da_cruz",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1133,
+   "texto": "Começa a guerra do Sal de 1133: os Terigar contra os Astasal; As Grutas do Vento é saqueada.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1134,
+   "texto": "O que sobrou de Vale da Bruma, saqueada no ano 1134 na guerra do Sal de 1133, e nunca mais erguida.",
+   "onde": "M3",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 1138,
+   "texto": "Acaba a guerra do Sal de 1133: vencem os Terigar.",
+   "onde": "grutas_do_vento",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1139,
+   "texto": "Morre Quitéria (num desabamento); Abel assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1142,
+   "texto": "Umbu acha o Arco do Rei Velho no Covil dos Sinos.",
+   "onde": "M7",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1146,
+   "texto": "Morre Rodrigo (de uma flecha na estrada); Ferelino assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1147,
+   "texto": "Morre Herinia (de velho, na cama); Brás assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1150,
+   "texto": "Morre Joraneu (de febre); Domingas assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1152,
+   "texto": "A mina que dava ferro a Pinhal do Ferro, abandonada no ano 1152 quando o fundo desabou e o que morava embaixo subiu.",
+   "onde": "M2",
+   "tags": [
+    "ruína"
+   ]
+  },
+  {
+   "ano": 1164,
+   "texto": "Morre Abel (num duelo); Herinino assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1165,
+   "texto": "Brarku morre em Pedra Velha.",
+   "onde": "pedra_velha",
+   "tags": [
+    "lenda",
+    "morte"
+   ]
+  },
+  {
+   "ano": 1165,
+   "texto": "Morre Brás (de uma flecha na estrada); Rosarino assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1166,
+   "texto": "A peste chega a Ribeira do Lobo: morre um em cada três.",
+   "onde": "ribeira_do_lobo",
+   "tags": [
+    "peste"
+   ]
+  },
+  {
+   "ano": 1171,
+   "texto": "Morre Ferelino (afogado na travessia); Jorelada assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1177,
+   "texto": "Morre Domingas (de febre); Valinado assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1183,
+   "texto": "Começa a guerra das Torres: os Orirena contra os Astolan; Vale do Corvo é saqueado.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1184,
+   "texto": "Acaba a guerra das Torres: vencem os Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1184,
+   "texto": "Morre Herinino (de peste); Orlando assume a casa dos Terigar.",
+   "onde": "varzea_brava",
+   "tags": [
+    "casa",
+    "c_terigar"
+   ]
+  },
+  {
+   "ano": 1188,
+   "texto": "Berara acha o Martelo da Fome nas Ruínas da Garça.",
+   "onde": "M3",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1194,
+   "texto": "Começa a guerra do Trigo de 1194: os Orirena contra os Astolan; Vale do Corvo é saqueado.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1195,
+   "texto": "Nynena, dos elfos, curou a peste em Vale do Corvo com o que sabia do mato: todo o reino sabe o nome.",
+   "onde": null,
+   "tags": [
+    "lenda",
+    "viva"
+   ]
+  },
+  {
+   "ano": 1196,
+   "texto": "Celorão acha o Martelo do Rei Velho nas Ruínas do Urso.",
+   "onde": "M4",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1197,
+   "texto": "Morre Valinado (afogado na travessia); Valada assume a casa dos Astolan.",
+   "onde": "pedra_verde",
+   "tags": [
+    "casa",
+    "c_astolan"
+   ]
+  },
+  {
+   "ano": 1197,
+   "texto": "Namara acha a Maça da Maré na Cripta dos Vericor.",
+   "onde": "M1",
+   "tags": [
+    "peça"
+   ]
+  },
+  {
+   "ano": 1200,
+   "texto": "Morre Rosarino (num desabamento); Nororado assume a casa dos Astasal.",
+   "onde": "castro_do_sal",
+   "tags": [
+    "casa",
+    "c_astasal"
+   ]
+  },
+  {
+   "ano": 1201,
+   "texto": "Acaba a guerra do Trigo de 1194: vencem os Astolan.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "guerra"
+   ]
+  },
+  {
+   "ano": 1206,
+   "texto": "Taskin, dos anões, curou a peste em Várzea da Névoa com o que sabia do mato: todo o reino sabe o nome.",
+   "onde": null,
+   "tags": [
+    "lenda",
+    "viva"
+   ]
+  },
+  {
+   "ano": 1207,
+   "texto": "Morre Jorelada (num duelo); Gilela assume a casa dos Orirena.",
+   "onde": "vale_do_corvo",
+   "tags": [
+    "casa",
+    "c_orirena"
+   ]
+  },
+  {
+   "ano": 1211,
+   "texto": "Drastum, dos anões, achou o veio de ferro que fez a riqueza de Souto Negro: todo o reino sabe o nome.",
+   "onde": null,
+   "tags": [
+    "lenda",
+    "viva"
+   ]
+  }
+ ],
+ "guildas": {
+  "g_a_ordem_da_raposa": {
+   "nome": "a Ordem da Raposa",
+   "sede": "vale_do_corvo",
+   "lider": "mushag",
+   "fama": 106
+  },
+  "g_a_mesa_do_corvo_branco": {
+   "nome": "a Mesa do Corvo Branco",
+   "sede": "vale_do_corvo",
+   "lider": "vesanado",
+   "fama": 86
+  },
+  "g_a_liga_do_sino_rachado": {
+   "nome": "a Liga do Sino Rachado",
+   "sede": "vale_do_corvo",
+   "lider": "taskin",
+   "fama": 443
+  },
+  "g_a_companhia_do_lobo_cinzento": {
+   "nome": "a Companhia do Lobo Cinzento",
+   "sede": "varzea_da_nevoa",
+   "lider": "kaggul",
+   "fama": 27
+  },
+  "g_a_guarda_das_sete_pedras": {
+   "nome": "a Guarda das Sete Pedras",
+   "sede": "ribeira_da_nevoa",
+   "lider": "mirys",
+   "fama": 399
+  },
+  "g_a_irmandade_da_estrada": {
+   "nome": "a Irmandade da Estrada",
+   "sede": "varzea_da_nevoa",
+   "lider": "aemine",
+   "fama": 150
+  }
+ },
+ "seq": {
+  "frente": 13,
+  "missao": 7,
+  "noticia": 3
+ },
+ "frentes": {
+  "f01": {
+   "nome": "o bando de Sara na estrada",
+   "publico": "mais salteadores aparecem na estrada em Castro Real",
+   "tipo": "ameaça",
+   "molde": "bando",
+   "dono": "chefe_sara",
+   "onde": "castro_real",
+   "meta": "tomar a estrada e cobrar de quem passa",
+   "passo": 0,
+   "forca": 2,
+   "passos": [
+    "mais salteadores aparecem na estrada",
+    "um mercador é roubado e morto na estrada",
+    "a estrada fecha: ninguém passa sem pagar",
+    "o bando assalta um lugar e leva a prata",
+    "o bando mata um da guarda",
+    "o lugar se esvazia: quem pode, vai embora"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "matar",
+   "alvo": "chefe_sara",
+   "cat": 1,
+   "barra": "dono",
+   "estrada": "estrada_castro_real_coval_do_vento"
+  },
+  "f02": {
+   "nome": "a horda da toca do Souto das Águas",
+   "publico": "o bando da toca cresce em Penha das Rosas",
+   "tipo": "ameaça",
+   "molde": "horda",
+   "dono": "covil:souto_das_aguas",
+   "onde": "penha_das_rosas",
+   "meta": "crescer até tomar a terra",
+   "passo": 0,
+   "forca": 5,
+   "passos": [
+    "o bando da toca cresce",
+    "roubam o celeiro de noite",
+    "um caçador não volta do mato",
+    "a horda ataca de dia",
+    "a estrada fecha: a horda está nela",
+    "o lugar cai: a horda o toma"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "limpar",
+   "alvo": "goblin",
+   "cat": 1,
+   "barra": "covil",
+   "ermo": "souto_das_aguas",
+   "especie": "goblin"
+  },
+  "f03": {
+   "nome": "os mortos da Cripta dos Miraves",
+   "publico": "os mortos da masmorra se mexem em Várzea da Névoa",
+   "tipo": "ameaça",
+   "molde": "mortos",
+   "dono": "chefe:cripta_dos_miraves_3",
+   "onde": "varzea_da_nevoa",
+   "meta": "erguer os mortos da terra",
+   "passo": 0,
+   "forca": 3,
+   "passos": [
+    "os mortos da masmorra se mexem",
+    "o cemitério amanhece revolvido",
+    "um morto anda de noite no lugar",
+    "quem sai de noite não volta",
+    "os mortos fecham a estrada",
+    "o lugar é abandonado aos mortos"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "limpar",
+   "alvo": "cripta_dos_miraves",
+   "cat": 0,
+   "barra": "chefe"
+  },
+  "f04": {
+   "nome": "o dragão Brasa",
+   "publico": "o dragão é visto sobre o lugar em Ribeira do Lobo",
+   "tipo": "ameaça",
+   "molde": "dragão",
+   "dono": "dragao:penhascos_das_aguas",
+   "onde": "ribeira_do_lobo",
+   "meta": "fazer o lugar pagar tributo até não sobrar nada",
+   "passo": 0,
+   "forca": 3,
+   "passos": [
+    "o dragão é visto sobre o lugar",
+    "o dragão queima um campo",
+    "o dragão leva o gado e a prata",
+    "ninguém passa pela estrada da serra",
+    "o dragão queima a casa do senhor",
+    "o lugar arde: quem sobra, foge"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "matar",
+   "alvo": "dragao:penhascos_das_aguas",
+   "cat": 2,
+   "barra": "dragao",
+   "ermo": "penhascos_das_aguas"
+  },
+  "f05": {
+   "nome": "a ambição dos Astolan",
+   "publico": "a casa junta aliados em Pedra Verde",
+   "tipo": "ambição",
+   "molde": "trono",
+   "dono": "casa:c_astolan",
+   "onde": "pedra_verde",
+   "meta": "tomar a coroa",
+   "passo": 0,
+   "forca": 5,
+   "passos": [
+    "a casa junta aliados",
+    "a casa junta prata",
+    "um senhor rival morre de repente",
+    "a casa arma gente",
+    "a guarda do rei é emboscada",
+    "a casa toma o lugar do rei"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "investigar",
+   "alvo": "casa:c_astolan",
+   "cat": 2,
+   "barra": "dono"
+  },
+  "f06": {
+   "nome": "o cartel de Selina",
+   "publico": "o mercador compra todo o metal que acha em Vale do Corvo",
+   "tipo": "ambição",
+   "molde": "cartel",
+   "dono": "selina",
+   "onde": "vale_do_corvo",
+   "meta": "ter todo o metal da região na mão",
+   "passo": 0,
+   "forca": 4,
+   "passos": [
+    "o mercador compra todo o metal que acha",
+    "o metal some das lojas",
+    "o ferreiro fecha a forja por falta",
+    "o mercador compra a mina",
+    "o preço do metal triplica",
+    "o metal da região é dele"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "investigar",
+   "alvo": "selina",
+   "cat": 1,
+   "barra": "dono"
+  },
+  "f07": {
+   "nome": "o culto de Moninho",
+   "publico": "gente some de noite em Vale do Corvo",
+   "tipo": "ambição",
+   "molde": "culto",
+   "dono": "moninho",
+   "onde": "vale_do_corvo",
+   "meta": "abrir a porta para o que mora embaixo",
+   "passo": 0,
+   "forca": 5,
+   "passos": [
+    "gente some de noite",
+    "o culto compra a casa velha",
+    "um nobre entra no culto",
+    "mais gente some",
+    "o culto prepara o sacrifício",
+    "o sacrifício: o lugar fica maldito"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "investigar",
+   "alvo": "moninho",
+   "cat": 2,
+   "barra": "dono"
+  },
+  "f08": {
+   "nome": "a corrida da Liga do Sino Rachado",
+   "publico": "a guilda junta gente em Penha das Rosas",
+   "tipo": "ambição",
+   "molde": "guilda",
+   "dono": "guilda:g_a_liga_do_sino_rachado",
+   "onde": "penha_das_rosas",
+   "meta": "ser a primeira a limpar a masmorra funda",
+   "passo": 0,
+   "forca": 6,
+   "passos": [
+    "a guilda junta gente",
+    "a guilda compra tochas e cordas",
+    "a guilda desce o primeiro nível",
+    "a guilda perde um dos seus lá embaixo",
+    "a guilda chega ao fundo",
+    "a guilda limpa a masmorra e leva o tesouro"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": null,
+   "alvo": "ruinas_do_urso",
+   "cat": 4,
+   "barra": "limpa"
+  },
+  "f09": {
+   "nome": "a seca de Pedra Verde",
+   "publico": "o rio baixa em Pedra Verde",
+   "tipo": "falta",
+   "molde": "seca",
+   "dono": "lugar:pedra_verde",
+   "onde": "pedra_verde",
+   "meta": "secar a colheita",
+   "passo": 0,
+   "forca": 3,
+   "passos": [
+    "o rio baixa",
+    "a colheita sai pequena",
+    "o celeiro baixa",
+    "o gado morre de sede",
+    "a semente acaba",
+    "a fome"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "entrega",
+   "alvo": "comida",
+   "cat": 0,
+   "barra": "entregue"
+  },
+  "f10": {
+   "nome": "a falta de sal de Castro Branco",
+   "publico": "o sal some da feira em Castro Branco",
+   "tipo": "falta",
+   "molde": "sal",
+   "dono": "lugar:castro_branco",
+   "onde": "castro_branco",
+   "meta": "acabar com o sal da terra",
+   "passo": 0,
+   "forca": 3,
+   "passos": [
+    "o sal some da feira",
+    "a carne apodrece sem sal",
+    "o mercador de sal não vem mais",
+    "o povo briga pelo que sobra",
+    "a carne do inverno se perde",
+    "o lugar fica sem sal"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "entrega",
+   "alvo": "sal",
+   "cat": 0,
+   "barra": "entregue"
+  },
+  "f11": {
+   "nome": "os sumiços da Charneca dos Sinos",
+   "publico": "alguém some na borda do mato em Souto Negro",
+   "tipo": "mistério",
+   "molde": "sumiços",
+   "dono": "esp:lobisomem@charneca_dos_sinos",
+   "onde": "souto_negro",
+   "meta": "levar a gente do lugar, um a um",
+   "passo": 0,
+   "forca": 2,
+   "passos": [
+    "alguém some na borda do mato",
+    "acham um corpo sem sangue",
+    "mais um some, de dentro de casa",
+    "o povo não sai mais de noite",
+    "some um da guarda",
+    "o lugar se esvazia de medo"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "investigar",
+   "alvo": "lobisomem",
+   "cat": 2,
+   "barra": "dono",
+   "ermo": "charneca_dos_sinos",
+   "especie": "lobisomem"
+  },
+  "f12": {
+   "nome": "as luzes das Ruínas do Urso",
+   "publico": "luzes nas ruínas de noite em Penha das Rosas",
+   "tipo": "mistério",
+   "molde": "luzes",
+   "dono": "masmorra:ruinas_do_urso",
+   "onde": "penha_das_rosas",
+   "meta": "acordar o que está selado",
+   "passo": 0,
+   "forca": 4,
+   "passos": [
+    "luzes nas ruínas de noite",
+    "os bichos fogem do mato",
+    "um caçador volta louco",
+    "a terra treme de noite",
+    "as luzes chegam ao lugar",
+    "o selo quebra: algo sai"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": "investigar",
+   "alvo": "ruinas_do_urso",
+   "cat": 2,
+   "barra": "limpa",
+   "ermo": "souto_das_aguas"
+  },
+  "f13": {
+   "nome": "Fome da Serra, o que dorme",
+   "publico": "a serra treme de noite em Ribeira do Lobo",
+   "tipo": "calamidade",
+   "molde": "calamidade",
+   "dono": "dragao:covil_dos_sinos_3",
+   "onde": "ribeira_do_lobo",
+   "meta": "acordar",
+   "passo": 0,
+   "forca": 3,
+   "passos": [
+    "a serra treme de noite",
+    "os bichos da serra fogem para o vale",
+    "cai cinza nos campos",
+    "o dragão jovem foge da serra",
+    "a fumaça sai da boca do covil",
+    "o dragão ancião acorda"
+   ],
+   "fim": null,
+   "desde": 1,
+   "ult": null,
+   "alvo_missao": null,
+   "alvo": "covil_dos_sinos",
+   "cat": 5,
+   "barra": "nunca",
+   "ermo": "penhascos_das_aguas"
+  }
+ },
+ "missoes": {
+  "m0001": {
+   "de": "rosa",
+   "onde": "varzea_da_nevoa",
+   "tipo": "limpar",
+   "alvo": "cripta_dos_miraves",
+   "n": 1,
+   "paga": 67,
+   "prazo": 14,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 0
+  },
+  "m0002": {
+   "de": "cosme",
+   "onde": "varzea_da_nevoa",
+   "tipo": "limpar",
+   "alvo": "ruinas_do_urso",
+   "n": 1,
+   "paga": 58,
+   "prazo": 25,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 3
+  },
+  "m0003": {
+   "de": "nora",
+   "onde": "pedra_velha",
+   "tipo": "caça",
+   "alvo": "lobo",
+   "n": 3,
+   "paga": 19,
+   "prazo": 9,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 0,
+   "ermo": "charneca_dos_sinos"
+  },
+  "m0004": {
+   "de": "orlando",
+   "onde": "varzea_brava",
+   "tipo": "limpar",
+   "alvo": "toca_do_sal",
+   "n": 1,
+   "paga": 333,
+   "prazo": 10,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 1
+  },
+  "m0005": {
+   "de": "noemia",
+   "onde": "castro_branco",
+   "tipo": "caça",
+   "alvo": "urso",
+   "n": 3,
+   "paga": 15,
+   "prazo": 9,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 0,
+   "ermo": "grutas_do_vento"
+  },
+  "m0006": {
+   "de": "paula",
+   "onde": "ribeira_do_lobo",
+   "tipo": "limpar",
+   "alvo": "mina_da_nevoa",
+   "n": 1,
+   "paga": 89,
+   "prazo": 17,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 2
+  },
+  "m0007": {
+   "de": "nelo",
+   "onde": "ermida_verde",
+   "tipo": "limpar",
+   "alvo": "ruinas_da_garca",
+   "n": 1,
+   "paga": 48,
+   "prazo": 8,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 1,
+   "cat": 3
+  }
+ },
+ "noticias": {
+  "n00001": {
+   "dia": 1,
+   "onde": "ribeira_do_lobo",
+   "texto": "O Brasa, o dragão da serra, cobra de Ribeira do Lobo: quem não paga, arde",
+   "peso": 3,
+   "tags": [
+    "dragão"
+   ],
+   "chegou": {
+    "ribeira_do_lobo": [
+     1,
+     0
+    ]
+   },
+   "janela": false
+  },
+  "n00002": {
+   "dia": 1,
+   "onde": "castro_real",
+   "texto": "salteadores na estrada de Castro Real a Coval do Vento: os mercadores andam em grupo",
+   "peso": 2,
+   "tags": [
+    "estrada"
+   ],
+   "chegou": {
+    "castro_real": [
+     1,
+     0
+    ]
+   },
+   "janela": false
+  },
+  "n00003": {
+   "dia": 1,
+   "onde": "pedra_velha",
+   "texto": "salteadores na estrada de Pedra Velha a Souto Negro: os mercadores andam em grupo",
+   "peso": 2,
+   "tags": [
+    "estrada"
+   ],
+   "chegou": {
+    "pedra_velha": [
+     1,
+     0
+    ]
+   },
+   "janela": false
+  }
+ },
+ "ranking": {
+  "semana": 1,
+  "lista": [
+   [
+    "drastum",
+    340
+   ],
+   [
+    "nynena",
+    334
+   ],
+   [
+    "taskin",
+    324
+   ],
+   [
+    "mirys",
+    165
+   ],
+   [
+    "ernesto",
+    119
+   ],
+   [
+    "aerion",
+    104
+   ],
+   [
+    "aemine",
+    99
+   ],
+   [
+    "quirino",
+    96
+   ],
+   [
+    "jorarino",
+    90
+   ],
+   [
+    "louado",
+    90
+   ]
+  ],
+  "lider": "drastum",
+  "trocas": 0
+ }
+}

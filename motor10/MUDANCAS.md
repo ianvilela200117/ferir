@@ -260,9 +260,32 @@ O livro de regras (`REGRAS.md`) não guarda história. Ela fica aqui: o que mudo
 - **Bancos** (saídas em `dados/`): `python3 provas.py 600`: **114 de 114**. `python3 provas_mundo.py`, duas vezes: **225 de 225** e **225 de 225** (as 222 de antes, e a MA17, a MA18 e a FA6). `python3 estresse.py 1500`: 0 erros, a saída igual à de antes.
 - **A etapa no save do jogador** (o orquestrador, no fim): `python3 vila_teste.py fantasia ensaio inclinacao2=manha` rodou no `ensaio/` antes do Dia 8 (saiu igual ao da cópia de prova; o estado inteiro), e a pergunta 1 do Dia 8, ainda sem resposta, ganhou a opção da cripta. Três provas que copiam o save para ver a etapa entrar nele (a B10 do `provas_4b`, o Quim do `provas_manha` e o Tição do `provas_dragoes`) quebravam com o save que já a tem: agora, nesse save, conferem o que ficou, que a segunda vez recusa sem mudar nada, e o ano do Tição (ele acorda, ataca Vau Seco, e a prata do mundo não muda); no save de antes da etapa, seguem como eram (conferido nos dois).
 
-## A caminho do save novo (fora do jogo): a decisão do jogador
-- **O save novo só nasce com o motor inteiro** (decisão 20 do `PROJETO.md`): o jogador escolheu terminar as etapas 3, 5, 6 e 7 antes de começar, em vez de abrir outra vila de teste. O personagem do Dia 1 já está escolhido: humano, ferreiro, com as inclinações na forja e no encanto. O `ensaio/` do Maro fica como está.
-- **A etapa 3 começa pelo projeto**, como a 4b: o pedido (`projeto/etapa3/PEDIDO.md`), dois projetistas, o juízo do orquestrador e as perguntas ao jogador (`projeto/etapa3/DECISOES.md`).
-- **A etapa 3 projetada** (frota enxuta): dois projetistas, A (o chão da região) e B (a gente que responde), mediram contra o motor de hoje com protótipos. O que muda o plano: o gravador de hoje, que copia o estado inteiro a cada evento, não aguenta a região (2,6 minutos por ano contra a meta de 2); copiando só o que o evento toca, o mesmo mundo sai em 5 a 10 segundos. O juízo (`projeto/etapa3/DECISOES.md`) decide o que é conta: a prata do lugar (o jornal sai do caixa; a sobra dos nomeados, da bolsa do povo; uma meta de integração decide), a fome (a frequência passa para a etapa 6), os 6 núcleos por ano, o povo que caça na Mata do Corvo, a opinião em palavras sem o número, de 1 a 3 pedidos por semana, e as metas novas (o ferreiro do Dia 1 na estrada, a encomenda Rara, a opinião que se fabrica). Quatro perguntas de gosto ao jogador: R1 a R4.
-- **As respostas do jogador na etapa 3: R1 b, R2 a, R3 a, R4 a** (decisão 21 do `PROJETO.md`). A estrada fica mais dura: a chance de encontro por bloco é o dobro da proposta, e as metas da estrada dobram (o ferreiro do Dia 1 com companheiro: até 4% de morte numa viagem de vila à cidade). A ordem de serviço da construção (as três ondas, o verificador e o acerto) está em `projeto/etapa3/ORDEM.md`.
-- **O Maro não é o personagem do jogador** (ele disse que não o usa e vai criar outro): o `ensaio/` deixa de ser jogado e fica só como vila de teste que os bancos copiam para conferir o motor, e não ganha a região. O personagem do jogador nasce no Dia 1 (decisão 20).
+## Etapa final (fora do jogo): a região que responde, a corrida, o medo, a história e a criação (as etapas 3, 5, 6 e 7)
+- **Por quê:** o jogador pediu o motor pronto até o ponto de começar o personagem no mundo novo. O contrato: `projeto/ETAPA_FINAL.md`; as escolhas onde o plano deixava
+  aberto: `projeto/etapa_final/DECISOES.md`. A regra em vigor: capítulos 21 a 27 do `REGRAS.md`.
+- **A fundação (no gravador):** o save ganha o `mundo.json` (as casas, os reinos, a crônica, as frentes, as guildas, as missões, a caixa, as notícias, o ranking, a janela,
+  o oculto); o save antigo abre sem ele e segue sem ele. O verbo novo `mundo`; a estrada (um lugar); a viagem (`marca.viagem`: quem viaja está fora, na estrada); os campos
+  novos da pessoa (casa, pais, laços, memória, fama, querer, papel, guilda, rival, herdeiro; o jogador que passa ao herdeiro, só em `heranca`); os invariantes de tudo isso;
+  o morto que não recebe prata nem carga (o gravador recusa).
+- **O ensaio que copia só o que muda:** o `aplica` deixou de copiar o estado inteiro a cada evento: cada efeito diz o que toca, e só isso é copiado (a morte, a maldição e o
+  encanto ainda copiam tudo). O banco prova que os mesmos 400 eventos ao acaso dão o mesmo mundo com a cópia inteira e com a econômica (RG2). Sem isto, um ano do mundo grande
+  levaria dezenas de minutos; com isto, uns 20 segundos.
+- **Os módulos novos:** `tabelas_regiao` (os números), `nomes`, `historia`, `gera`, `regiao`, `viagem`, `gente`, `noticias`, `caixa`, `missoes`, `frentes`, `rivais`, `conta`
+  (a conta rápida, afinada contra o `luta.py`: 5 pontos de erro em casos novos), `diretor`, `cria`; os bancos `provas_regiao` (15 provas) e `provas_ano` (o ano em 20 sementes
+  e os robôs), os dois no `provas_mundo.py`.
+- **O que mudou fora dos módulos novos:** o `turno.py` (a MESA da criação, antes de o personagem existir; o fechar sem personagem; a viagem no "Agora"; o RETOMAR do primeiro
+  turno sem o ruído do gerador nem do mundo andando sozinho; o herdeiro na MESA de quem morreu); o `tabelas_mercado.py` (a prateleira da capital, com Raras; a da aldeia e a
+  do posto); o `tabelas_mundo.py` (os eventos novos, os módulos novos na ordem da virada, o vocabulário da etapa); a inclinação do personagem que morreu fica escrita nele.
+  A vila de teste e o `ensaio/` jogam como antes: a MESA deles não ganha nada (os módulos novos não fazem nada sem região).
+- **A afinação** (pelo banco do ano, em voltas): a ousadia e a morte dos rivais; a caça que mata; a guilda que recolhe o corpo e o povo que acha a peça de quem caiu (as
+  peças altas em mãos vivas não caem em 14 de 20 anos); a forja do núcleo (o sinal de 40%, 8% do valor, 27 dias para a Épica, o mestre ferreiro da capital com forja 6); as
+  frentes (contra 17, 3 a menos nos dois primeiros passos; a missão só barra no passo zero; o rival que investiga expõe, e não barra); as duas faltas do Dia 1 sorteadas
+  entre quatro (a seca não está em todo mundo); o limiar da fome em 8 dias; o pedido do ferreiro quando a loja tem menos da metade do metal que quer.
+- **Bancos** (saídas em `dados/`): `python3 provas.py 600`: **114 de 114**. `python3 estresse.py 1500`: 0 erros, a saída igual à de antes. `python3 provas_regiao.py`: **15 de 15**.
+  `python3 provas_ano.py 20 robos=5`: **8 de 8** (a conta fecha nos 20 anos; os rivais morrem na mediana 10 de 40, e entra gente nova; a primeira Épica nova no dia 42 (mediana);
+  as frentes, 4 desfechos e 5 barradas (mediana); o grão de 0,66 a 1,72 da base, a fome em 45% dos mundos; o ano em 21 segundos; os robôs). `python3 provas_mundo.py`: **248 de 248** (as 225 de antes, as 15 peças e as 8 metas do ano, com 20 sementes).
+- **O mundo de verdade:** `motor10/mundo/`, a semente 5 (a primeira que passou em todas as faixas do banco do ano), com as perguntas da criação abertas.
+
+## O personagem do jogador e o Maro (fora do jogo)
+- **O personagem do jogador nasce no mundo novo** (decisão 20 do `PROJETO.md`): humano, de berço ferreiro, com as inclinações na forja e no encanto. **O Maro não é o personagem do jogador:** o `ensaio/` fica só como vila de teste dos bancos.
+- **Um projeto da etapa 3 de outro chat** (`projeto/etapa3/`: dois projetos, o juízo, a ordem de serviço) **não foi construído:** a etapa final chegou antes, e o motor que vale é o dela (decisão 21). As respostas R1 a R4 do jogador àquele projeto ficam escritas; a R1 b (a estrada mais dura) já está no motor.

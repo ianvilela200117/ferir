@@ -68,7 +68,7 @@ def nome_bem(bem):
 
 
 # ---------- ler: o povo, o alvo, o preço ----------
-def _vivo(E, pid): p = estado.presente(E, pid, 'negociar na vila'); r = estado.negocia(E, pid, p['lugar']); return sys.exit(r) if r else p        # vivo e no lugar onde mora: quem saiu para o ermo não compra nem vende; e a loja negocia com ele (o gancho negocia, etapa 3)
+def _vivo(E, pid): return estado.presente(E, pid, 'negociar na vila')        # vivo e no lugar onde mora: quem saiu para o ermo não compra nem vende
 
 
 def povo(E, lid):

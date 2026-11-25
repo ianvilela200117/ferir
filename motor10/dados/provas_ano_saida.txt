@@ -1,0 +1,10 @@
+  passa  AN2 A CONTA FECHA: 20 anos: o estado inteiro todo dia em 20; a prata do mundo igual do primeiro ao último dia em 20; morto que age depois da morte: 0
+  passa  AN4 OS RIVAIS: morrem no ano (dos 40): mediana 11.0 (de 5 a 35; a faixa: 4 a 12); entram novos: mediana 8.5; as Épicas, Únicas e Lendárias em mãos vivas não caem em 14 de 20 (mediana 13.0 → 14.0); o líder do ranking troca: mediana 2.0 (de 0 a 11); toda casa nobre que acabou teve a morte registrada: sim
+  passa  AN5 A PRIMEIRA ÉPICA NOVA: nasceu em 12 de 20 anos; o dia (a mediana): 42.0 (de 42 a 252; a faixa: 40 a 110)
+  passa  RG4 A HISTÓRIA (a meta 5b): semente 1: 8 peças Únicas ou maiores, 0 com buraco na cadeia; 0 vivos velhos demais; 0 casas vivas sem gente; 0 masmorras sem origem · semente 2: 8 peças Únicas ou maiores, 0 com buraco na cadeia; 0 vivos velhos demais; 0 casas vivas sem gente; 0 masmorras sem origem · semente 3: 8 peças Únicas ou maiores, 0 com buraco na cadeia; 0 vivos velhos demais; 0 casas vivas sem gente; 0 masmorras sem origem
+  passa  AN6 AS FRENTES DO DIA 1: chegam ao desfecho: mediana 4.0 (de 2 a 7; a faixa: 3 a 6); barradas: mediana 5.0 (de 3 a 6; a faixa: 2 a 5); as duas na faixa em 11 de 20 anos
+  passa  AN7 O GRÃO: o preço da comida, de 0.66 a 1.72 vezes a base (a faixa: 0,6 a 2,2); a fome nasceu em 5 de 20 mundos (25%; a faixa: 20 a 60%); lugares perdidos por mundo: até 1 (a faixa: até 2)
+  passa  AN10 O TEMPO E A SEMENTE: um ano roda em 21 s (o pior: 28 s; a faixa: menos de 120); mesma semente, mesmo mundo (60 dias, duas vezes): sim
+  passa  ROBÔS: o parado abaixo da mediana dos novatos no dia 60: 5 de 5; o afoito morre em 30 dias: 5 de 5 (a faixa: 80% ou mais); o mudo perde por calar (a opinião cai, o rival fica com o cliente): 5 de 5; a caixa nunca passou de 7 nem deixou pedido vencido: sim; a MESA e o RETOMAR do dia 90: até 21.9 KB (a faixa: 22)
+
+8 de 8 metas passam.
