@@ -1,49 +1,49 @@
-# MESA · turno 3 · Dia 1, manhã (8h) · primavera
+# MESA · turno 4 · Dia 2, manhã (8h) · primavera
 
 ## Você
-**Ferord**, nível 5 · PV 111/111 · 30 de prata · em Pedra Velha
-Corpo: sem fome (fome 0) · sem sono (sono 0) · com forças (cansaço 0)
+**Ferord**, nível 5 · PV 111/111 · 33 de prata · em Pedra Velha
+Corpo: sem fome (fome 2) · sem sono (sono 0) · com forças (cansaço 2)
 ```
 Ferord (nível 5, mão de Iniciante) · PV 111/111 · fôlego 11 · 2 ações (a mais: 1 pelo dobro do fôlego)
   Martelo de Ferord: acerto +1,75 · 1d10 × 1 (impacto), força × 1,18 · 3 de fôlego por golpe
-  Defesa 28,5 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · SEM PROTEÇÃO: cabeça
+  Defesa 28,5 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · cabeça 1
 ```
-Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): i0658 Martelo de Ferord (Comum, 10/10) · EM USO, na mão · i0659 Couro de Ferord (Comum, 10/10) · EM USO, no corpo
-Carga: 4 de metal Comum, 2 de madeira Comum
-Treino: forja: 50 blocos (Iniciante) · martelo: 40 blocos (Iniciante)
+Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): i0658 Martelo de Ferord (Comum, 10/10) · EM USO, na mão · i0659 Couro de Ferord (Comum, 10/10) · EM USO, no corpo · i0660 Elmo de Ferord (Comum, 10/10) · EM USO, na cabeça
+Carga: 3 de metal Comum, 2 de madeira Comum
+Treino: forja: 54 blocos (Iniciante) · martelo: 40 blocos (Iniciante)
 Do povo dos humanos, 20 anos: a medida de todos.
 
 ## Aqui
-**Pedra Velha** · comida no lugar: 16.920 · há cama
+**Pedra Velha** · comida no lugar: 16.763 · há cama
 Quem está aqui: Filipa (o ferreiro; conserta e vende o que forja), Berareu (lavra a terra), Félix (da taverna; sabe de tudo o que se conta), Adelaide (aprende o ofício da casa), Osorino (da guarda de Pedra Velha), Nora (caça no ermo e vende o couro), Paio (cura ferida e colhe erva), Tânia (mercador; compra e vende, e leva carga pela estrada), Erado (o mais velho do lugar; sabe das histórias antigas)
 
 **O que dá para fazer, e o que custa** (1 bloco = 4 horas):
 - comer: 1 de prata, fome −3 (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)
-- dormir: cama por 2 de prata, que vale 6 blocos (um dia) a contar de quando se paga; cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
+- dormir: cama por 2 de prata, e a sua está paga até o Dia 3, madrugada (0h); cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
 - trabalhar (aprendiz): 3 de prata por bloco, esforço pesado; a jornada são 2 blocos pagos por dia (hoje: 0 de 2) (`ato.py trabalhar N`)
 - treinar com uma arma: esforço pesado; a maestria sobe aos 40, 160, 500, 1.500 blocos (`ato.py treinar N ARMA`)
 - descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)
 
 ## O mercado
-**Pedra Velha** · 360 de povo · a loja tem 1.770 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
+**Pedra Velha** · 360 de povo · a loja tem 1.767 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
 
 | bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |
 | --- | --- | --- | --- | --- | --- |
-| comida | 16.920 | 1,13 (× 1,13) | 10 por 13 | 6 por 10 |  |
+| comida | 16.763 | 1,14 (× 1,14) | 10 por 13 | 6 por 10 |  |
 | lenha | 2.700 | 1,00 (× 1,00) | 10 por 12 | 5 por 10 |  |
 | carvão | 216 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | sal | 216 | 3,00 (× 1,00) | 10 por 34 | 17 por 10 |  |
 | pano | 108 | 5,00 (× 1,00) | 1 por 6 | 2 por 1 |  |
 | remédio | 54 | 8,00 (× 1,00) | 1 por 9 | 4 por 1 |  |
-| ferramenta | 54 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
-| metal Comum | 108 | 3,00 (× 1,00) | 10 por 34 | 17 por 10 | 4 |
-| couro Comum | 108 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
-| osso Comum | 54 | 1,00 (× 1,00) | 10 por 12 | 5 por 10 |  |
+| ferramenta | 53 | 12,11 (× 1,01) | 1 por 14 | 7 por 1 |  |
+| metal Comum | 108 | 3,00 (× 1,00) | 10 por 34 | 17 por 10 | 3 |
+| couro Comum | 109 | 1,99 (× 1,00) | 10 por 23 | 11 por 10 |  |
+| osso Comum | 55 | 0,99 (× 0,99) | 10 por 12 | 5 por 10 |  |
 | madeira Comum | 216 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 | 2 |
 | erva Comum | 108 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | metal Incomum | 18 | 18,00 (× 1,00) | 1 por 21 | 10 por 1 |  |
-| couro Incomum | 18 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
-| osso Incomum | 9 | 6,00 (× 1,00) | 1 por 7 | 3 por 1 |  |
+| couro Incomum | 17 | 12,35 (× 1,03) | 1 por 14 | 7 por 1 |  |
+| osso Incomum | 8 | 6,36 (× 1,06) | 1 por 8 | 3 por 1 |  |
 | madeira Incomum | 36 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
 | erva Incomum | 18 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
 
@@ -65,15 +65,15 @@ Quem está aqui: Filipa (o ferreiro; conserta e vende o que forja), Berareu (lav
 - novas, a 30 de prata cada (Comum): i0208 espada Comum · i0209 maça Comum · i0210 machado Comum · i0211 lança Comum · i0212 arco Comum · i0213 armadura de couro Comum · i0215 armadura de malha Comum · i0217 escudo Comum · i0224 varinha Comum · i0225 símbolo Comum · i0226 Cartilha do arcano
 - novas, a 180 de prata cada (Incomum): i0218 espada Incomum · i0219 lança Incomum · i0220 armadura de couro Incomum · i0221 escudo Incomum
 
-**As suas peças** (o que a loja paga: 40% do valor; 20% a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): i0658 Martelo de Ferord (Comum, 10/10) EM USO: 16 · i0659 Couro de Ferord (Comum, 10/10) EM USO: 7
+**As suas peças** (o que a loja paga: 40% do valor; 20% a menos por peça igual que ela já tem, e por peça da mesma categoria além das que quer ter; a que está em uso não se vende sem guardar): i0658 Martelo de Ferord (Comum, 10/10) EM USO: 16 · i0659 Couro de Ferord (Comum, 10/10) EM USO: 7 · i0660 Elmo de Ferord (Comum, 10/10) EM USO: 1
 
 Negociar não gasta bloco: `mercado.py comprar BEM N` · `mercado.py vender BEM N|tudo` · `mercado.py vender tudo` (a cesta: um troco só) · `mercado.py comprar ITEM` · `mercado.py vender ITEM` · `mercado.py preco BEM N` (só olha)
 
 ## A oficina
 **Pedra Velha:** forja de vila (+1) · conserta, pago, até o Raro
-Mão: forja Iniciante (50 blocos de bancada; Treinado aos 150)
+Mão: forja Iniciante (54 blocos de bancada; Treinado aos 150)
 Preparo (+2 cada, na obra que ele alcança): receita: até o Comum · ajudante: não há · fogo: até o Incomum · bigorna: até o Incomum
-Matéria na carga: 4 de metal Comum, 2 de madeira Comum
+Matéria na carga: 3 de metal Comum, 2 de madeira Comum
 
 **Na bancada** (bloco pesado; `oficio.py pede ...` diz a matéria e a chance antes de abrir):
 - forjar: Comum 1, Incomum 3, Raro 9, Épico 27, Único 81, Lendário 243 blocos; do Épico para cima pede núcleo. Falhar por 5 ou mais: a matéria some.
@@ -116,8 +116,8 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - Dia 1: salteadores na estrada de Pedra Velha a Souto Negro: os mercadores andam em grupo
 
 ## Perguntas abertas
-1. O Dia 1 de Ferord (8h, 30 de prata, 4 de metal e 2 de madeira, a cabeça sem proteção)?  **a)** fica na forja: forja um elmo de malha (1 bloco, 86%) e serve a jornada na forja da família (2 blocos, 6 de prata) · **b)** forja o que dá: o elmo de malha e um escudo (1 bloco cada, 86% cada; gasta 2 de metal e as 2 de madeira) e 1 bloco de jornada (3 de prata) · **c)** quer saber do encanto antes: conversa na taverna com Félix e com Erado (onde há mesa de runas, quem ensina), depois o elmo e a jornada · **d)** sai à Charneca dos Sinos atrás de corça, sozinho (2 blocos de ida; a corça é grau F)
-2. A vida é uma só: quem Ferord nomeia herdeiro (herda a casa, as peças que o matador não levar, metade do que os outros lembram)?  **a)** Adelaide, que aprende o ofício da casa · **b)** Berareu, o parente que lavra a terra · **c)** Filipa, quem o criou na forja · **d)** ainda ninguém
+1. O Dia 2 de Ferord (33 de prata, 3 de metal e 2 de madeira; a forja em 54 de 150 blocos para a mão de Treinado)?  **a)** a rotina de prática: a jornada na forja (2 blocos pagos, 6 de prata) e mais 2 blocos de bancada sem paga; come e dorme (uns 4 blocos de bancada por dia: Treinado em umas três semanas e meia) · **b)** a mesma rotina, ao lado de Filipa, pedindo o que ela sabe do Incomum: em 10 blocos de bancada junto dela, Filipa ensina a receita do Incomum (+2 nas obras Incomuns) · **c)** forja o escudo (2 de madeira e 1 de metal, 1 bloco, 86%) e serve a jornada · **d)** pede a Tânia, a mercadora, para ir junto até Ribeira da Névoa (3 blocos de estrada, de assalto às vezes), para ver a forja de cidade e a mesa de runas
+2. A missão de Nora no quadro (matar 3 lobos na Charneca dos Sinos, 19 de prata, até o Dia 9)?  **a)** deixa passar: o lobo em bando vale grau C a B para quem vai sozinho, e o golpe dele vale o triplo em armadura Comum · **b)** pergunta na vila quem iria junto (Nora, que caça; Osorino, da guarda) e o que pedem, sem tomar ainda · **c)** toma a missão e vai à Charneca
 
 ## SÓ O MESTRE
 - a contagem na Charneca dos Sinos: corça 80/80 · lobo 12/12 · lobisomem 1/1 · acaso 1% por bloco
@@ -134,9 +134,9 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - peça maldita: i0009 malho Raro (a praga da Mina da Névoa, Rara, insônia); quebra: devolver malho Raro ao lugar dela, no poço velho
 - peça maldita: i0022 montante Comum (a praga da Toca do Sal, Comum, míngua); quebra: devolver montante Comum ao lugar dela, na sala dos presos
 - a Fome da Serra (dragão ancião da serra, grau S) na câmara do tesouro: PV 1337 de 1337 · dorme até o Dia 421 (vigília 31, mais 2 por punhado; 0 tirados neste sono) · o tesouro: 1718 de prata; as peças: O Bordão da Serra · sem vila (caça no ermo) (`dragoes.py covil covil_dos_sinos_3`)
-- o Brasa (dragão jovem da serra, grau C) nos Penhascos das Águas: PV 480 de 480 · ACORDADO · o tesouro: 474 de prata; as peças: O Gume do Inverno · a vila: Ribeira do Lobo (0 ataques) (`dragoes.py covil penhascos_das_aguas`)
-- os salteadores nas estradas daqui: a estrada de Pedra Velha a Souto Negro: 4; a estrada de Castro do Sal a Pedra Velha: 2; a estrada de Pedra Velha a Várzea Brava: 3; a estrada de Ribeira da Névoa a Pedra Velha: 2
+- o Brasa (dragão jovem da serra, grau C) nos Penhascos das Águas: PV 480 de 480 · dorme até o Dia 29 (vigília 29, mais 2 por punhado; 0 tirados neste sono) · o tesouro: 479 de prata; as peças: O Gume do Inverno · a vila: Ribeira do Lobo (1 ataque, o último no Dia 2) (`dragoes.py covil penhascos_das_aguas`)
+- os salteadores nas estradas daqui: a estrada de Pedra Velha a Souto Negro: 4; a estrada de Castro do Sal a Pedra Velha: 2; a estrada de Pedra Velha a Várzea Brava: 3; a estrada de Ribeira da Névoa a Pedra Velha: 1
 - as frentes: f01 o bando de Sara na estrada (passo 0) · f02 a horda da toca do Souto das Águas (passo 0) · f03 os mortos da Cripta dos Miraves (passo 0) · f04 o dragão Brasa (passo 0) · f05 a ambição dos Astolan (passo 0) · f06 o cartel de Selina (passo 0) · f07 o culto de Moninho (passo 0) · f08 a corrida da Liga do Sino Rachado (passo 0) · f09 a seca de Pedra Verde (passo 0) · f10 a falta de sal de Castro Branco (passo 0) · f11 os sumiços da Charneca dos Sinos (passo 0) · f12 as luzes das Ruínas do Urso (passo 0) · f13 Fome da Serra, o que dorme (passo 0)
 - a pauta do diretor (o que pode entrar em cena hoje): os sumiços da Charneca dos Sinos (passo 0, a 1 estrada(s) daqui) · o bando de Sara na estrada (passo 0, a 2 estrada(s) daqui) · a ambição dos Astolan (passo 0, a 2 estrada(s) daqui)
-- dois fatos que não tocam o personagem (para a cena): O Brasa, o dragão da serra, cobra de Ribeira do Lobo: quem não paga, arde · salteadores na estrada de Castro Real a Coval do Vento: os mercadores andam em grupo
+- dois fatos que não tocam o personagem (para a cena): salteadores na estrada de Castro Real a Coval do Vento: os mercadores andam em grupo · salteadores na estrada de Pedra Velha a Souto Negro: os mercadores andam em grupo
 - o estado está inteiro.

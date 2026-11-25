@@ -1,0 +1,6 @@
+Obra o0001 aberta: Elmo de Ferord (Comum). Entraram 1 de metal Comum.
+Ferord trabalha 1 bloco na obra o0001, Elmo de Ferord (Comum): 1 de 1
+#1 Ferord, forjar Elmo de Ferord (Comum): 16 e 3, +7 de Afinidade, +9 = 35 contra 28: PASSA
+  (o +9: maestria 2, oficina 1, preparo 6)
+Ferord forja Elmo de Ferord (Comum): 35 contra 28. Entrou no Livro de Itens: i0660
+Dia 1, tarde (12h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 1) · com forças (cansaço 2) · 30 de prata

@@ -4472,6 +4472,14 @@
     "ribeira_do_lobo": [
      1,
      0
+    ],
+    "pinhal_do_ferro": [
+     2,
+     1
+    ],
+    "pedra_verde": [
+     2,
+     1
     ]
    },
    "janela": false
@@ -4488,6 +4496,22 @@
     "castro_real": [
      1,
      0
+    ],
+    "ribeira_da_nevoa": [
+     2,
+     1
+    ],
+    "castro_branco": [
+     2,
+     1
+    ],
+    "varzea_da_nevoa": [
+     2,
+     1
+    ],
+    "coval_do_vento": [
+     2,
+     1
     ]
    },
    "janela": false
@@ -4504,6 +4528,22 @@
     "pedra_velha": [
      1,
      0
+    ],
+    "souto_negro": [
+     2,
+     1
+    ],
+    "castro_do_sal": [
+     2,
+     1
+    ],
+    "varzea_brava": [
+     2,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     2,
+     1
     ]
    },
    "janela": false

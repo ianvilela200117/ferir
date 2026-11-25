@@ -1,5 +1,5 @@
 {
- "seq": 659,
+ "seq": 660,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12319,8 +12319,32 @@
    ],
    "id": "i0659",
    "uso": "veste"
+  },
+  "i0660": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "Elmo de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 1: Ferord forjou em Pedra Velha"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "cabeça"
+   ],
+   "feito_por": "eu",
+   "dia": 1,
+   "id": "i0660",
+   "uso": "veste"
   }
  },
- "oseq": 0,
+ "oseq": 1,
  "obras": {}
 }

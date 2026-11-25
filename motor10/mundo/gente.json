@@ -10036,14 +10036,14 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 50,
+   "forja": 54,
    "martelo": 40
   },
-  "moedas": 30,
+  "moedas": 33,
   "corpo": {
-   "fome": 0,
+   "fome": 2,
    "sono": 0,
-   "cansaco": 0
+   "cansaco": 2
   },
   "pv": 111,
   "feridas": [],
@@ -10056,10 +10056,18 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "pesados_dia": 1,
+   "pesados": 4,
+   "jornada_dia": 1,
+   "jornada": 2,
+   "cama": {
+    "ate": 12,
+    "onde": "pedra_velha"
+   }
   },
   "carga": {
-   "metal:0": 4,
+   "metal:0": 3,
    "madeira:0": 2
   },
   "jogador": true,
@@ -10085,6 +10093,7 @@
   "lacos": {
    "filipa": "pai",
    "berareu": "parente"
-  }
+  },
+  "herdeiro": "filipa"
  }
 }

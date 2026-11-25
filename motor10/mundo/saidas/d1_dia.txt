@@ -1,0 +1,17 @@
+Ferord veste Elmo de Ferord (na cabeça).
+Ferord (nível 5, mão de Iniciante) · PV 111/111 · fôlego 11 · 2 ações (a mais: 1 pelo dobro do fôlego)
+  Martelo de Ferord: acerto +1,75 · 1d10 × 1 (impacto), força × 1,18 · 3 de fôlego por golpe
+  Defesa 28,5 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · cabeça 1
+Dia 1, tarde (12h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 1) · com forças (cansaço 2) · 30 de prata
+---
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 1, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 3) · com forças (cansaço 6) · fôlego máximo −2 · 36 de prata
+---
+Ferord come (fome 0; 35 de prata)
+Dia 1, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 6) · fôlego máximo −2 · 35 de prata
+---
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 2, madrugada (0h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 4) · com forças (cansaço 8) · fôlego máximo −2 · 35 de prata
+---
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 3, madrugada (0h))
+Dia 2, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 0) · com forças (cansaço 2) · 33 de prata
