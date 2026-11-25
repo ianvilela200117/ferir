@@ -25,7 +25,7 @@
 
 Uso (o personagem do jogador, ou quem=ID):
   python3 masmorra.py ver                                       a masmorra vizinha (o que se sabe), a descida aberta, o mapa que o grupo viu, o que se faz daqui
-  python3 masmorra.py descer [MASMORRA] [com=ID,ID] [ordem=ID,ID,...] [luz=tocha|feitiço|nada] [quem_luz=ID]
+  python3 masmorra.py descer [MASMORRA] [com=ID,ID] [ordem=ID,ID,...] [luz=tocha|feitiço|nada] [quem_luz=ID] [paga=N]
                                                                 a ida (os blocos de caminho) e a entrada
   python3 masmorra.py ir SALA [escondido]                       anda à sala vizinha (1 lance; escondido 2; no escuro, o dobro)
   python3 masmorra.py escutar SALA [quem=ID]                    escuta à porta da passagem (1 lance; rolagem oculta)
@@ -644,7 +644,7 @@ def _de_passagem(E, pid, d, sid, onde, L):
 
 
 # ---------- descer ----------
-def descer(E, pid, mid=None, com=(), ordem=None, luz=None, quem_luz=None):
+def descer(E, pid, mid=None, com=(), ordem=None, luz=None, quem_luz=None, paga=0):
     """a ida: o grupo sai de casa para a masmorra vizinha (os blocos de caminho) e chega à entrada"""
     p = estado.presente(E, pid, 'descer'); aqui = p['lugar']
     if (p.get('marca') or {}).get('masmorra') is not None: sys.exit(f"{p['nome']} já está numa descida")
@@ -671,7 +671,9 @@ def descer(E, pid, mid=None, com=(), ordem=None, luz=None, quem_luz=None):
     d = dict(masmorra=mid, sala=ent, casa=aqui, com=com, ordem=o, lances=0, blocos=0, luz=lz, fase='anda', luta=None, lutas=0, caminho=[ent], encontro=None, armadilha=None,
              dia=E['relogio']['dia'], treino=[], barulho=False, anterior=None)
     txt = f"{p['nome']} desce {_a(E, mid)}" + (f", com {_e(_pn(E, c) for c in com)}" if com else '') + (f"; a luz: {_luz_diz(E, lz)}" if lz.get('tipo') else '; sem luz')
-    estado.aplica(E, EVENTO, [['pessoa', pid, 'marca.masmorra', 'poe', d]] + [['pessoa', c, 'marca.masmorra', 'poe', dict(de=pid)] for c in com], onde=ent, quem=g, texto=_txt(txt))
+    rc, efc = estado.companhia(E, pid, com, dict(masmorra=mid), 1, paga=paga)          # o gancho companhia (etapa 3): quem vai junto pede paga, ou recusa o perigo
+    if rc: sys.exit(rc)
+    estado.aplica(E, EVENTO, [['pessoa', pid, 'marca.masmorra', 'poe', d]] + [['pessoa', c, 'marca.masmorra', 'poe', dict(de=pid)] for c in com] + efc, onde=ent, quem=g, texto=_txt(txt))
     ida = _longe(E, mid); antes = corpo.faixas(E['gente'][pid])
     ato.passa(E, pid, ida, EVENTO, esforco=K.ESFORCO_IDA, para=False, texto=_txt(f"{p['nome']} vai {_a(E, mid, 'a')}"), com=com)
     L = [_txt(f"{txt}. A ida: {caca._bl(ida)}.")] + ([_cap(E['lugares'][ent]['sobre']) + '.'] if E['lugares'][ent].get('sobre') else [])
@@ -1938,7 +1940,7 @@ def main(a=None):
     if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
     if pos[0] == 'ver': print('\n'.join(ver(E, pid) or [f"{E['gente'][pid]['nome']} não tem masmorra vizinha nem descida aberta."])); return
     arg = pos[1] if len(pos) > 1 else None
-    if pos[0] == 'descer': R = descer(E, pid, arg, com=[c for c in op.get('com', '').split(',') if c], ordem=[c for c in op.get('ordem', '').split(',') if c] or None, luz=op.get('luz'), quem_luz=op.get('quem_luz'))
+    if pos[0] == 'descer': R = descer(E, pid, arg, com=[c for c in op.get('com', '').split(',') if c], ordem=[c for c in op.get('ordem', '').split(',') if c] or None, luz=op.get('luz'), quem_luz=op.get('quem_luz'), paga=int(op['paga']) if op.get('paga', '').isdigit() else 0)
     elif pos[0] == 'ir':
         if not arg: sys.exit('diga a sala: `masmorra.py ir SALA [escondido]`')
         R = ir(E, pid, arg, escondido='escondido' in pos[2:])

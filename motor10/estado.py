@@ -222,7 +222,7 @@ def fora(E, pid):
     if not v: return None
     r = (E.get('rotas') or {}).get(v.get('rota')) or {}
     if r.get('ermo') in E['lugares']: return r['ermo']
-    perto = v.get('de') if 2 * (v.get('feito') or 0) < (v.get('blocos') or 1) else v.get('para')
+    perto = v.get('origem') if 2 * (v.get('feito') or 0) < (v.get('blocos') or 1) else v.get('destino')
     return perto if perto in E['lugares'] else None
 
 
@@ -1152,6 +1152,448 @@ def _encanto(E, it, op, val, ef):
     return _erro(ef, "use ['item', id, 'encanto', 'grava', registro] ou ['item', id, 'encanto', 'gasta'|'apaga', indice]")
 
 
+# ---------- a etapa 3 no gravador (a região que responde; as formas: projeto/ETAPA_3.md, seção 4) ----------
+ABERTO_DIZ = dict(caca='uma saída ao ermo', masmorra='a descida', viagem='a viagem')
+MARCAS_3 = ('preso', 'preco', 'retribui')                  # as marcas da etapa 3 que o gravador confere (a viagem tem a conferência dela, como a descida)
+PESSOA_3 = ('papel', 'memoria', 'querer', 'mora', 'mapa')  # os campos da etapa 3 na pessoa (os laços e a fama têm os verbos deles: lacos, fama)
+NASCE_3 = ('papel', 'mora', 'mapa', 'lacos', 'memoria', 'querer', 'fama')       # o que a pessoa pode trazer ao nascer (a gente que a história ou o gerador põe pronta)
+CAMPOS_LUGAR_3 = ('bolsa', 'safra', 'pos', 'bando', 'vigia', 'tipo')
+
+
+def viagem(E, pid):
+    """a viagem aberta em que a pessoa está: o registro de quem comanda (marca.viagem: rota, origem, destino, feito, blocos, com, fase...), ou None"""
+    k = quem_viaja(E, pid)
+    return E['gente'][k]['marca']['viagem'] if k else None
+
+
+def quem_viaja(E, pid):
+    """o id de quem comanda a viagem aberta em que a pessoa está (ela mesma, se comanda), ou None (quem vai junto tem {"de": quem comanda})"""
+    p = E['gente'].get(pid) if isinstance(pid, str) else None
+    v = (p.get('marca') or {}).get('viagem') if isinstance(p, dict) and isinstance(p.get('marca'), dict) else None
+    if not isinstance(v, dict): return None
+    if v.get('de') is None: return pid if v.get('rota') in (E.get('rotas') or {}) else None
+    q = E['gente'].get(v['de']) if isinstance(v['de'], str) else None
+    vq = (q.get('marca') or {}).get('viagem') if isinstance(q, dict) and isinstance(q.get('marca'), dict) else None
+    return v['de'] if isinstance(vq, dict) and vq.get('de') is None and vq.get('rota') in (E.get('rotas') or {}) else None
+
+
+def preso(E, pid):
+    """o bloco (estado.agora) até o qual a pessoa está presa (marca.preso), se ainda está; senão None"""
+    m = ((E['gente'].get(pid) or {}).get('marca') or {}).get('preso')
+    return m['ate'] if isinstance(m, dict) and _int(m.get('ate')) and m['ate'] > agora(E) else None
+
+
+def mora(p):
+    """onde a pessoa mora (a casa: a cama, a jornada, a rotina); sem o campo, o lugar dela (o save de antes)"""
+    return p.get('mora') or p.get('lugar')
+
+
+def peso_hoje(fato, dia):
+    """o peso de um fato da memória HOJE (o fato esfria: tabelas_mundo.ESFRIA; a conta sai na hora de ler, nada se grava)"""
+    try: d0, peso = int(fato[0]), fato[2]
+    except (TypeError, ValueError, IndexError): return 0
+    if not _num(peso): return 0
+    a = abs(peso); per = next((p for teto, p in M.ESFRIA if a <= teto), None)
+    if per is None: return peso
+    a = max(0, a - max(0, dia - d0) // per)
+    return a if peso > 0 else -a
+
+
+def fama_hoje(p, lugar, eixo, dia):
+    """a fama da pessoa num lugar, num eixo, hoje (esfriada: tabelas_mundo.FAMA_ESFRIA; a conta sai na hora de ler)"""
+    x = ((p.get('fama') or {}).get(lugar) or {}).get(eixo) if isinstance(p, dict) else None
+    if not (isinstance(x, list) and len(x) == 2 and _num(x[0]) and _int(x[1])): return 0
+    return max(0, x[0] - max(0, dia - x[1]) // M.FAMA_ESFRIA)
+
+
+def proximo_id(E, arq):
+    """o id que a próxima entrada de um arquivo da etapa 3 vai ter (para o mesmo evento apontar para ela): noticias n0001, caixa c0001, missoes ms0001"""
+    padroes(E); return f"{_PREFIXO[arq]}{(E[arq].get('seq') or 0) + 1:04d}"
+
+
+_PREFIXO = dict(noticias='n', caixa='c', missoes='ms')
+
+
+def na_cena(E):
+    """QUEM ESTÁ EM CENA com o personagem: ele, quem vai junto com ele (a saída, a descida, a viagem) e quem esteve num ato deste turno (o "quem" dos eventos desde que
+    o turno abriu, fora o gerador e o mundo andando sozinho) e está onde ele está agora. É de quem o SÓ O MESTRE fala; o resto sai no `talento.py mestre`. Devolve a lista de ids (o personagem primeiro)."""
+    pid = eu(E)
+    if not pid: return []
+    aqui = onde(E, pid); ids = [pid]
+    for chefe in (quem_desce(E, pid), quem_viaja(E, pid), pid):
+        if not chefe: continue
+        m = E['gente'][chefe].get('marca') or {}
+        for k in ('caca', 'masmorra', 'viagem'):
+            if isinstance(m.get(k), dict) and m[k].get('de') is None: ids += [chefe] + list(m[k].get('com') or [])
+    for e in eventos(E, (E.get('turno') or {}).get('evento0', 0)):
+        if e.get('tipo') != 'gera' and e.get('tipo') not in M.MUNDO_SOZINHO: ids += [q for q in e.get('quem') or [] if isinstance(q, str)]
+    return [k for k in dict.fromkeys(ids) if k in E['gente'] and E['gente'][k].get('estado') == 'vivo' and (k == pid or onde(E, k) == aqui)]
+
+
+def negocia(E, quem, com_quem):
+    """O GANCHO DA NEGOCIAÇÃO (etapa 3, a gente que lembra): antes de a loja ou a taverna vender ou comprar (com_quem: o id do lugar, ou da pessoa que atende), cada módulo
+    que tem `negocia(E, quem, com_quem)` diz '' (negocia) ou a frase da recusa. Devolve a primeira recusa, ou ''. Quem chama recusa com ela (sys.exit), antes de cobrar."""
+    for m in modulos('negocia'):
+        r = m.negocia(E, quem, com_quem)
+        if r: return r
+    return ''
+
+
+def companhia(E, quem, com, perigo, dias, paga=0):
+    """O GANCHO DE QUEM VAI JUNTO (etapa 3): ao abrir a saída, a descida ou a viagem com com=, cada módulo que tem `companhia(E, quem, com, perigo, dias, paga=0)` devolve
+    (a frase da recusa ou '', os efeitos: a paga de quem vai junto, que entram no evento que abre). perigo: {"ermo", "alvo"} na caça, {"masmorra"} na descida, {"rota"} na viagem.
+    Devolve (a primeira recusa ou '', a soma dos efeitos). Sem módulo que cobre, vai quem foi chamado, sem paga (a regra de hoje)."""
+    if not com: return '', []
+    ef = []
+    for m in modulos('companhia'):
+        r, e = m.companhia(E, quem, list(com), perigo, dias, paga=paga)
+        if r: return r, []
+        ef += list(e or [])
+    return '', ef
+
+
+def _viagem_erro(E, v, pid=None):
+    """a forma da viagem aberta (marca.viagem; a frente A2 guarda o resto dos campos): o texto do erro, ou None"""
+    if not isinstance(v, dict): return 'é um registro {rota, origem, destino, feito, blocos, com, fase...} (em quem vai junto: {de: quem comanda})'
+    if v.get('de') is not None: return None if v['de'] in E['gente'] and v['de'] != pid and set(v) == {'de'} else f'diz que foi junto com quem não há (ou traz mais que {{de}}): "{v["de"]}"'
+    r = (E.get('rotas') or {}).get(v.get('rota')) if isinstance(v.get('rota'), str) else None
+    if not isinstance(r, dict): return f'não diz uma rota que existe ("{v.get("rota")}")'
+    if {v.get('origem'), v.get('destino')} != {r.get('a'), r.get('b')} or v.get('origem') == v.get('destino'): return f'vai de "{v.get("origem")}" para "{v.get("destino")}", que não são as duas pontas da rota {v.get("rota")}'
+    if not (_int(v.get('blocos')) and v['blocos'] >= 1 and _int(v.get('feito', 0)) and 0 <= v.get('feito', 0) <= v['blocos']): return 'tem os blocos fora da conta (feito, de zero até os blocos da viagem)'
+    if not isinstance(v.get('com', []), list) or any(c not in E['gente'] for c in v.get('com', [])): return 'tem em "com" quem não existe'
+    if v.get('fase', 'estrada') not in M.VIAGEM_FASES: return f'tem a fase fora da lista ({", ".join(M.VIAGEM_FASES)})'
+    if v.get('fase') == 'luta' and not isinstance(v.get('luta'), str): return 'está em luta sem o arquivo dela'
+    return None
+
+
+def _marca3_erro(sub, v):
+    if sub == 'preso': return None if isinstance(v, dict) and _int(v.get('ate')) else 'a prisão é {ate: o bloco (estado.agora) em que acaba}, ou nada'
+    if sub == 'preco': return None if _num(v) and M.PRECO_FAIXA[0] <= v <= M.PRECO_FAIXA[1] else f'o fator de preço vai de {M.PRECO_FAIXA[0]:g} a {M.PRECO_FAIXA[1]:g}, ou nada'
+    if sub == 'retribui': return None if isinstance(v, list) and all(isinstance(x, list) and len(x) == 2 and _int(x[0]) and isinstance(x[1], str) for x in v) else 'os fatos já agradecidos são uma lista de [dia, tipo]'
+    return None
+
+
+def _pagina_lista(nome, campo):
+    pg = _pagina(nome); x = getattr(pg, campo, None) if pg else None
+    return x if isinstance(x, (dict, list, tuple)) else ()
+
+
+def _fato_erro(E, f):
+    """um fato da memória: [dia, tipo, peso, de quem, canal, texto]"""
+    if not (isinstance(f, list) and len(f) == 6): return 'o fato é [dia, tipo, peso, de quem, canal, texto]'
+    dia, t, peso, quem, canal, txt = f
+    if not _int(dia) or dia < 1: return 'o dia do fato é um inteiro de 1 para cima'
+    if t not in M.FATOS and t not in _pagina_lista('tabelas_gente', 'FATOS'): return f'o tipo do fato é um de: {", ".join(M.FATOS)}'
+    if not _num(peso) or not -M.PESO_MAX <= peso <= M.PESO_MAX: return f'o peso do fato vai de −{M.PESO_MAX} a {M.PESO_MAX}'
+    if quem not in E['gente']: return f'o fato é sobre quem não há: "{quem}"'
+    if canal not in M.CANAIS: return f'o canal do fato é um de: {", ".join(M.CANAIS)}'
+    if not isinstance(txt, str): return 'o texto do fato é texto'
+    return None
+
+
+def _pessoa3_erro(E, p, campo, v, pid=None):
+    """o que os campos da etapa 3 da pessoa aceitam (None: aceita). Serve ao gravador, ao nascer e aos invariantes."""
+    if campo == 'papel': return None if v in M.PAPEIS or v in _pagina_lista('tabelas_gente', 'PAPEIS') else f'o papel é um de: {", ".join(M.PAPEIS)}'
+    if campo == 'mora': return None if v in E['lugares'] else f'não há o lugar "{v}" (onde mora)'
+    if campo == 'mapa':
+        if not isinstance(v, dict) or set(v) - {'lugares', 'rotas'}: return 'o mapa é {lugares: [ids], rotas: [ids]}'
+        if any(x not in E['lugares'] for x in v.get('lugares') or []) or any(x not in (E.get('rotas') or {}) for x in v.get('rotas') or []): return 'o mapa tem lugar ou rota que não existe'
+        return None
+    if campo == 'lacos':
+        if not isinstance(v, dict) or len(v) > M.LACOS_MAX: return f'os laços são {{pessoa: valor}}, até {M.LACOS_MAX}'
+        for k, x in v.items():
+            if k not in E['gente'] or k == pid: return f'o laço é com quem não há (ou consigo): "{k}"'
+            if not _int(x) or not -M.PESO_MAX <= x <= M.PESO_MAX or x == 0: return f'o laço vai de −{M.PESO_MAX} a {M.PESO_MAX} (zero: não há laço)'
+        return None
+    if campo == 'memoria':
+        if not isinstance(v, list) or len(v) > M.MEMORIA_MAX: return f'a memória é uma lista de até {M.MEMORIA_MAX} fatos'
+        return next((e for e in (_fato_erro(E, f) for f in v) if e), None)
+    if campo == 'querer':
+        if not isinstance(v, dict) or (v.get('t') not in M.QUERERES and v.get('t') not in _pagina_lista('tabelas_gente', 'QUERERES')) or not _int(v.get('desde', 1)): return f'o querer é {{t: um de {", ".join(M.QUERERES)}, desde: dia, ...}}, ou nada'
+        return None
+    if campo == 'fama':
+        if not isinstance(v, dict): return 'a fama é {lugar: {eixo: [pontos, dia]}}'
+        for lid, d in v.items():
+            if lid not in E['lugares'] or not isinstance(d, dict): return f'a fama é num lugar que existe ("{lid}")'
+            for ei, x in d.items():
+                if ei not in M.FAMA_EIXOS or not (isinstance(x, list) and len(x) == 2 and _num(x[0]) and 0 <= x[0] <= M.FAMA_MAX and _int(x[1])): return f'a fama é {{eixo ({", ".join(M.FAMA_EIXOS)}): [pontos de 0 a {M.FAMA_MAX}, dia]}}'
+        return None
+    return None
+
+
+def _pessoa3(E, pid, p, campo, op, val, ef):
+    """os verbos da etapa 3 na pessoa: papel, memoria (junta, esquece, retribui), querer, mora, mapa (poe, junta)"""
+    if campo == 'memoria':
+        L = p.setdefault('memoria', []); dia = E['relogio']['dia']
+        if op == 'junta':
+            e = _fato_erro(E, val)
+            if e: return _erro(ef, e)
+            L.append(copy.deepcopy(val))
+            if len(L) > M.MEMORIA_MAX:                      # CHEIA, ESQUECE: sai o fato de menor peso de hoje (o mais velho, no empate), no próprio verbo
+                i = min(range(len(L)), key=lambda k: (abs(peso_hoje(L[k], dia)), L[k][0], k)); L.pop(i)
+            return
+        if op == 'esquece':
+            if not _int(val) or not 0 <= val < len(L): return _erro(ef, f'{p["nome"]} não tem esse fato na memória')
+            L.pop(val)
+            if not L: p.pop('memoria', None)
+            return
+        if op == 'retribui':
+            if not (isinstance(val, list) and len(val) == 2) or not any(isinstance(f, list) and f[:2] == list(val) for f in L): return _erro(ef, f'{p["nome"]} não lembra desse fato ([dia, tipo])')
+            if not L: p.pop('memoria', None)
+            m = p.setdefault('marca', {}); r = m.setdefault('retribui', [])
+            if list(val) not in r: r.append(list(val))
+            return
+        if not L: p.pop('memoria', None)
+        return _erro(ef, "use ['pessoa', id, 'memoria', 'junta', fato], 'esquece', índice, ou 'retribui', [dia, tipo]")
+    if campo == 'mapa' and op == 'junta':
+        if not isinstance(val, dict): return _erro(ef, "use ['pessoa', id, 'mapa', 'junta', {lugares: [...], rotas: [...]}]")
+        novo = dict(p.get('mapa') or {}); novo = {k: list(dict.fromkeys(list(novo.get(k) or []) + list(val.get(k) or []))) for k in ('lugares', 'rotas') if novo.get(k) or val.get(k)}
+        e = _pessoa3_erro(E, p, 'mapa', novo)
+        if e: return _erro(ef, e)
+        p['mapa'] = novo; return
+    if op != 'poe': return _erro(ef, f'"{campo}" só aceita "poe"' + (' (e "junta")' if campo == 'mapa' else ''))
+    if val is None: p.pop(campo, None); return
+    e = _pessoa3_erro(E, p, campo, val, pid)
+    if e: return _erro(ef, e)
+    p[campo] = copy.deepcopy(val)
+
+
+def _lugar3_erro(E, raiz, sub, val):
+    """o que os campos da etapa 3 no lugar aceitam (None: aceita)"""
+    if raiz == 'tipo': return None if val in M.TIPOS_LUGAR else f'o tipo do lugar é um de: {", ".join(M.TIPOS_LUGAR)}'
+    if val is None: return None
+    if raiz == 'bolsa': return None if _int(val) and val >= 0 else 'a bolsa do povo é prata: um inteiro de zero para cima'
+    if raiz == 'safra': return None if _num(val) and M.SAFRA[0] <= val <= M.SAFRA[1] else f'a colheita do ano vai de {M.SAFRA[0]:g} a {M.SAFRA[1]:g}'
+    if raiz == 'pos': return None if isinstance(val, list) and len(val) == 2 and all(_num(x) and 0 <= x <= M.POS_MAX for x in val) else f'a posição é [x, y], de 0 a {M.POS_MAX}'
+    if raiz == 'bando': return None if _int(val) and 0 <= val <= M.BANDO_MAX else f'o bando é um inteiro de 0 a {M.BANDO_MAX} (os salteadores contados no ermo)'
+    if raiz == 'vigia': return None if isinstance(val, list) and all(_int(x) for x in val) else 'a vigia é a lista dos dias das faltas descobertas'
+    return None
+
+
+def _item3_erro(it):
+    """o que o animal e o carro pedem (None: certo)"""
+    t = it.get('tipo')
+    if t == 'animal' and (it.get('qual') not in M.ANIMAIS or not _num(it.get('leva')) or it['leva'] <= 0 or not _num(it.get('come', 0)) or it.get('come', 0) < 0): return f'o animal é {{qual: um de {", ".join(M.ANIMAIS)}, leva: o peso, come: a comida por dia}}'
+    if t == 'carro' and (not _num(it.get('leva')) or it['leva'] <= 0 or not isinstance(it.get('so_estrada', True), bool)): return 'o carro é {leva: o peso, so_estrada: sim ou não}'
+    return None
+
+
+def _rota_erro(E, r, rid=None):
+    """a forma de uma rota (o texto do erro, ou None)"""
+    if not isinstance(r, dict): return 'a rota é {a, b, blocos, tipo, ermo, expoe, nome, falta, aberta}'
+    if r.get('a') not in E['lugares'] or r.get('b') not in E['lugares'] or r['a'] == r['b']: return 'a rota liga dois lugares que existem (e diferentes)'
+    if not _int(r.get('blocos')) or not M.ROTA_BLOCOS[0] <= r['blocos'] <= M.ROTA_BLOCOS[1]: return f'os blocos da rota vão de {M.ROTA_BLOCOS[0]} a {M.ROTA_BLOCOS[1]}'
+    if r.get('tipo') not in M.ROTAS: return f'o tipo da rota é um de: {", ".join(M.ROTAS)}'
+    if r.get('ermo') is not None and (E['lugares'].get(r['ermo']) or {}).get('tipo', 'ermo') != 'ermo' or (r.get('ermo') is not None and r['ermo'] not in E['lugares']): return f'o ermo da rota tem de ser um ermo que existe ("{r.get("ermo")}")'
+    if not _num(r.get('expoe', 1)) or not 0 <= r.get('expoe', 1) <= 1: return 'o quanto a rota cruza o ermo vai de 0 a 1 (1 cruza; 0,3 passa perto)'
+    if r.get('nome') is not None and not isinstance(r['nome'], str): return 'o nome da rota é texto, ou nada'
+    if not isinstance(r.get('falta', {}), dict) or any(not bem_conhecido(b) or not _num(q) or q < 0 for b, q in r.get('falta', {}).items()): return 'o que o carreto deixou (falta) é {bem: quanto}, de zero para cima'
+    if not isinstance(r.get('aberta', True), bool): return '"aberta" é sim ou não'
+    par = {r['a'], r['b']}
+    if any(k != rid and isinstance(x, dict) and {x.get('a'), x.get('b')} == par for k, x in (E.get('rotas') or {}).items()): return 'já há uma rota entre esses dois lugares'
+    return None
+
+
+def _rota(E, ef):
+    """['rota', 'nasce', id, registro] · ['rota', id, campo ou campo.sub, 'poe'|'soma', valor]"""
+    R = E.setdefault('rotas', {})
+    if len(ef) == 4 and ef[1] == 'nasce':
+        rid, r = ef[2], copy.deepcopy(ef[3])
+        if not isinstance(rid, str) or not rid or rid == 'nasce' or rid in R: return _erro(ef, f'já há a rota "{rid}" (ou o id não serve)')
+        if isinstance(r, dict): r.setdefault('ermo', None); r.setdefault('expoe', 1); r.setdefault('nome', None); r.setdefault('falta', {}); r.setdefault('aberta', True)
+        e = _rota_erro(E, r)
+        if e: return _erro(ef, e)
+        R[rid] = r; return
+    if len(ef) != 5 or ef[3] not in ('poe', 'soma') or not isinstance(ef[2], str): return _erro(ef, "use ['rota', 'nasce', id, registro] ou ['rota', id, campo ou campo.sub, 'poe'|'soma', valor]")
+    r = R.get(ef[1]) if isinstance(ef[1], str) else None
+    if not isinstance(r, dict): return _erro(ef, f'não há a rota "{ef[1]}"')
+    raiz, _, sub = ef[2].partition('.')
+    if raiz in ('a', 'b'): return _erro(ef, 'as pontas da rota não mudam (outra rota nasce)')
+    if sub and raiz != 'falta': return _erro(ef, f'"{raiz}" não tem partes')
+    novo = dict(r); d = dict(novo.get('falta') or {}) if sub else novo; k = sub or raiz
+    if ef[3] == 'poe': d[k] = copy.deepcopy(ef[4])
+    else:
+        if not _num(d.get(k, 0)) or not _num(ef[4]): return _erro(ef, f'"{ef[2]}" não é número')
+        d[k] = d.get(k, 0) + ef[4]
+    if sub: novo['falta'] = {b: q for b, q in d.items() if q} if all(_num(q) for q in d.values()) else d
+    e = _rota_erro(E, novo, ef[1])
+    if e: return _erro(ef, e)
+    r.clear(); r.update(novo)
+
+
+def _lacos(E, ef):
+    """['lacos', a, b, 'soma'|'poe', n]: o laço de a com b, na ficha de a (cada lado o seu), de −10 a 10, até 6 (zero: não há laço)"""
+    if len(ef) != 5 or ef[3] not in ('soma', 'poe') or not _int(ef[4]): return _erro(ef, "use ['lacos', a, b, 'soma'|'poe', número inteiro]")
+    a = E['gente'].get(ef[1]) if isinstance(ef[1], str) else None
+    if not a or ef[2] not in E['gente'] or ef[1] == ef[2]: return _erro(ef, 'o laço é entre duas pessoas que existem')
+    L = dict(a.get('lacos') or {}); q = ef[4] if ef[3] == 'poe' else L.get(ef[2], 0) + ef[4]
+    if ef[3] == 'poe' and not -M.PESO_MAX <= q <= M.PESO_MAX: return _erro(ef, f'o laço vai de −{M.PESO_MAX} a {M.PESO_MAX}')
+    q = max(-M.PESO_MAX, min(M.PESO_MAX, q))
+    if q: L[ef[2]] = q
+    else: L.pop(ef[2], None)
+    if len(L) > M.LACOS_MAX: return _erro(ef, f'{a["nome"]} já tem os {M.LACOS_MAX} laços que cabem')
+    if L: a['lacos'] = L
+    else: a.pop('lacos', None)
+
+
+def _fama(E, ef):
+    """['fama', quem, lugar, eixo, 'soma', n]: soma à fama de hoje (já esfriada) e grava o dia; de 0 a 100"""
+    if len(ef) != 6 or ef[4] != 'soma' or not _num(ef[5]): return _erro(ef, "use ['fama', quem, lugar, eixo, 'soma', número]")
+    p = E['gente'].get(ef[1]) if isinstance(ef[1], str) else None
+    if not p: return _erro(ef, f'não há a pessoa "{ef[1]}"')
+    if ef[2] not in E['lugares']: return _erro(ef, f'não há o lugar "{ef[2]}"')
+    if ef[3] not in M.FAMA_EIXOS: return _erro(ef, f'o eixo da fama é um de: {", ".join(M.FAMA_EIXOS)}')
+    dia = E['relogio']['dia']; q = max(0, min(M.FAMA_MAX, fama_hoje(p, ef[2], ef[3], dia) + ef[5]))
+    F = p.setdefault('fama', {}); F.setdefault(ef[2], {})[ef[3]] = [q, dia]
+
+
+def _entrada(E, arq, sub, ef, nasce):
+    """o arquivo da etapa 3, a parte dele, e a entrada que o efeito nomeia (ou None, e o erro)"""
+    A = padroes(E)[arq]; P = A.setdefault(sub, {})
+    x = P.get(ef[1]) if len(ef) > 2 and isinstance(ef[1], str) and ef[1] != nasce else None
+    return A, P, x
+
+
+def _noticia_erro(E, n):
+    if not isinstance(n, dict) or not isinstance(n.get('texto'), str) or not n['texto']: return 'a notícia é {tipo, texto, onde, sobre, quem, eixo, fama, peso, alcance, dia, em}'
+    if n.get('onde') not in E['lugares']: return f'a notícia nasce num lugar que existe ("{n.get("onde")}")'
+    if any(n.get(k) is not None and n[k] not in E['gente'] for k in ('sobre', 'quem')): return 'a notícia é sobre (ou de) quem não há'
+    if n.get('eixo') is not None and n['eixo'] not in M.FAMA_EIXOS: return f'o eixo da notícia é um de: {", ".join(M.FAMA_EIXOS)}, ou nada'
+    if not _int(n.get('alcance')) or n['alcance'] < 0 or not _num(n.get('peso', 0)) or not _num(n.get('fama', 0)) or not _int(n.get('dia')): return 'a notícia tem alcance (saltos, inteiro), peso, fama e dia'
+    em_ = n.get('em')
+    if not isinstance(em_, dict): return 'a notícia diz aonde chegou: {lugar: [dia, saltos]}'
+    for lid, x in em_.items():
+        if lid not in E['lugares'] or not (isinstance(x, list) and len(x) == 2 and _int(x[0]) and _int(x[1])): return 'a notícia chegou a lugar que não existe, ou sem [dia, saltos]'
+        if x[1] > n['alcance'] or x[1] < 0: return f'a notícia não passa do alcance dela ({n["alcance"]} saltos)'
+        if x[0] - n['dia'] < x[1]: return f'a notícia anda uma rota por dia: não chega a {x[1]} saltos no dia {x[0]} (nasceu no dia {n["dia"]})'
+    return None
+
+
+def _noticia(E, ef):
+    """['noticia', 'nasce', reg] · ['noticia', id, 'chega', lugar, saltos] · ['noticia', id, 'some']"""
+    A, P, n = _entrada(E, 'noticias', 'ativas', ef, 'nasce')
+    dia = E['relogio']['dia']
+    if len(ef) == 3 and ef[1] == 'nasce':
+        r = copy.deepcopy(ef[2])
+        if not isinstance(r, dict) or 'id' in r: return _erro(ef, 'o registro da notícia vem sem "id" (o gravador dá)')
+        r.setdefault('dia', dia); r.setdefault('peso', 0); r.setdefault('fama', 0); r.setdefault('eixo', None); r.setdefault('sobre', None); r.setdefault('quem', None)
+        r.setdefault('em', {r.get('onde'): [r['dia'], 0]} if r.get('onde') in E['lugares'] else {})
+        e = _noticia_erro(E, r)
+        if e: return _erro(ef, e)
+        A['seq'] = (A.get('seq') or 0) + 1; r['id'] = f"n{A['seq']:04d}"; P[r['id']] = r; return
+    if not n: return _erro(ef, f'não há a notícia "{ef[1] if len(ef) > 1 else ""}"')
+    if len(ef) == 3 and ef[2] == 'some': del P[ef[1]]; return
+    if len(ef) == 5 and ef[2] == 'chega':
+        if ef[3] in n['em']: return
+        novo = dict(n, em=dict(n['em'], **{ef[3]: [dia, ef[4]]})) if isinstance(ef[3], str) else None
+        e = _noticia_erro(E, novo) if novo else 'o lugar é um id'
+        if e: return _erro(ef, e)
+        n['em'] = novo['em']; return
+    return _erro(ef, "use ['noticia', 'nasce', reg], ['noticia', id, 'chega', lugar, saltos] ou ['noticia', id, 'some']")
+
+
+def _motivo_ok(E, m):
+    """o motivo de um pedido da caixa aponta o que existe? {tipo: item|lugar|pessoa|missao|rota|noticia, id} · {tipo: memoria, id: pessoa, fato: [dia, tipo]}"""
+    if not isinstance(m, dict) or m.get('tipo') not in M.MOTIVOS: return False
+    t, i = m['tipo'], m.get('id')
+    if t == 'item': return i in E['itens']['itens']
+    if t == 'lugar': return i in E['lugares']
+    if t == 'pessoa': return i in E['gente']
+    if t == 'missao': return i in (E.get('missoes') or {}).get('itens', {})
+    if t == 'rota': return i in (E.get('rotas') or {})
+    if t == 'noticia': return i in (E.get('noticias') or {}).get('ativas', {})
+    p = E['gente'].get(i) if isinstance(i, str) else None
+    return isinstance(p, dict) and isinstance(m.get('fato'), list) and any(isinstance(f, list) and f[:2] == m['fato'][:2] for f in p.get('memoria') or [])
+
+
+def _caixa_erro(E, c, cid=None):
+    if not isinstance(c, dict) or not isinstance(c.get('pede'), str) or not isinstance(c.get('opcoes'), dict) or len(c['opcoes']) < 2: return 'o pedido é {de, para, molde, pede, prazo, opcoes: {letra: texto}, padrao, custo, motivo}'
+    if any(len(k) != 1 or not k.isalpha() or not isinstance(v, str) for k, v in c['opcoes'].items()): return 'as opções do pedido são {letra: texto}'
+    if c.get('padrao') not in c['opcoes']: return 'o padrão (o que vale calado) é uma das opções'
+    for k in ('de', 'para'):
+        if c.get(k) not in E['gente'] or E['gente'][c[k]].get('estado') != 'vivo': return f'quem {"pede" if k == "de" else "recebe"} o pedido está vivo ("{c.get(k)}")'
+    if not _int(c.get('prazo')) or not _int(c.get('aberto')) or c['prazo'] <= c['aberto']: return 'o prazo do pedido é um bloco (estado.agora) depois de quando ele abriu'
+    if not _motivo_ok(E, c.get('motivo')): return 'só escreve quem tem motivo no estado: o motivo do pedido não aponta o que existe (a peça, o lugar, a missão, o fato da memória...)'
+    return None
+
+
+def _caixa(E, ef):
+    """['caixa', 'abre', reg] · ['caixa', id, 'fecha', 'feito'|'vencido'|'forcado']"""
+    A, P, c = _entrada(E, 'caixa', 'abertos', ef, 'abre')
+    if len(ef) == 3 and ef[1] == 'abre':
+        r = copy.deepcopy(ef[2])
+        if not isinstance(r, dict) or 'id' in r: return _erro(ef, 'o registro do pedido vem sem "id" (o gravador dá)')
+        r.setdefault('para', eu(E)); r.setdefault('aberto', agora(E)); r.setdefault('dia', E['relogio']['dia'])
+        e = _caixa_erro(E, r)
+        if e: return _erro(ef, e)
+        if sum(1 for x in P.values() if isinstance(x, dict) and x.get('para') == r['para']) >= M.CAIXA_MAX: return _erro(ef, f'a caixa de {E["gente"][r["para"]]["nome"]} já tem os {M.CAIXA_MAX} pedidos que cabem: force o mais velho antes, no mesmo evento')
+        A['seq'] = (A.get('seq') or 0) + 1; r['id'] = f"c{A['seq']:04d}"; P[r['id']] = r; return
+    if not c: return _erro(ef, f'não há o pedido "{ef[1] if len(ef) > 1 else ""}" na caixa')
+    if len(ef) == 4 and ef[2] == 'fecha':
+        if ef[3] not in M.CAIXA_FECHA: return _erro(ef, f'o pedido sai da caixa {" | ".join(M.CAIXA_FECHA)}')
+        del P[ef[1]]; return
+    return _erro(ef, "use ['caixa', 'abre', reg] ou ['caixa', id, 'fecha', 'feito'|'vencido'|'forcado']")
+
+
+def _missao_erro(E, m):
+    if not isinstance(m, dict): return 'a missão é {de, onde, tipo, grau, alvo, paga, caucao, prazo, quem, estado, guarda}'
+    if m.get('de') not in E['gente']: return f'quem pede a missão não existe ("{m.get("de")}")'
+    if m.get('onde') not in E['lugares']: return f'a missão é de um lugar que existe ("{m.get("onde")}")'
+    if m.get('tipo') not in M.MISSOES: return f'o tipo da missão é um de: {", ".join(M.MISSOES)}'
+    if m.get('grau') not in M.GRAUS: return f'o grau da missão é um de: {", ".join(M.GRAUS)}'
+    if m.get('estado') not in M.MISSAO_ESTADOS: return f'o estado da missão é um de: {", ".join(M.MISSAO_ESTADOS)}'
+    for k in ('paga', 'caucao', 'guarda'):
+        if not _int(m.get(k, 0)) or m.get(k, 0) < 0: return f'"{k}" da missão é prata: um inteiro de zero para cima'
+    if not _int(m.get('prazo')): return 'o prazo da missão é um dia'
+    if m.get('quem') is not None and (m['quem'] not in E['gente'] or (E['gente'][m['quem']].get('estado') != 'vivo' and m['estado'] not in M.MISSAO_FECHA)): return f'quem pegou a missão está vivo, ou a missão fechou ("{m.get("quem")}")'
+    return None
+
+
+def _missao(E, ef):
+    """['missao', 'abre', reg] · ['missao', id, campo, 'poe', v] · ['missao', id, 'guarda', 'soma', n] · ['missao', id, 'fecha', desfecho] · ['missao', id, 'some']"""
+    A, P, m = _entrada(E, 'missoes', 'itens', ef, 'abre')
+    if len(ef) == 3 and ef[1] == 'abre':
+        r = copy.deepcopy(ef[2])
+        if not isinstance(r, dict) or 'id' in r: return _erro(ef, 'o registro da missão vem sem "id" (o gravador dá)')
+        r.setdefault('estado', 'aberta'); r.setdefault('quem', None); r.setdefault('guarda', 0); r.setdefault('caucao', 0); r.setdefault('dia', E['relogio']['dia'])
+        if r['estado'] != 'aberta': return _erro(ef, 'a missão nasce aberta')
+        e = _missao_erro(E, r)
+        if e: return _erro(ef, e)
+        A['seq'] = (A.get('seq') or 0) + 1; r['id'] = f"ms{A['seq']:04d}"; P[r['id']] = r; return
+    if not m: return _erro(ef, f'não há a missão "{ef[1] if len(ef) > 1 else ""}"')
+    if len(ef) == 3 and ef[2] == 'some':
+        if m.get('estado') not in M.MISSAO_FECHA or m.get('guarda', 0): return _erro(ef, 'só some do quadro a missão fechada e sem prata guardada')
+        del P[ef[1]]; return
+    if len(ef) == 4 and ef[2] == 'fecha':
+        if ef[3] not in M.MISSAO_FECHA: return _erro(ef, f'a missão fecha {" | ".join(M.MISSAO_FECHA)}')
+        if m.get('estado') in M.MISSAO_FECHA: return _erro(ef, 'a missão já fechou')
+        m['estado'] = ef[3]; m['fechada'] = E['relogio']['dia']; return
+    if len(ef) == 5 and ef[2] == 'guarda' and ef[3] == 'soma':
+        if not _int(ef[4]): return _erro(ef, 'a guarda é prata: soma um inteiro')
+        q = m.get('guarda', 0) + ef[4]
+        if q < 0: return _erro(ef, f'a missão {ef[1]} só guarda {m.get("guarda", 0)} de prata')
+        m['guarda'] = q; return
+    if len(ef) == 5 and ef[3] == 'poe' and isinstance(ef[2], str) and ef[2] not in ('id', 'guarda'):
+        if ef[2] == 'estado' and ef[4] in M.MISSAO_FECHA: return _erro(ef, "a missão fecha por ['missao', id, 'fecha', desfecho]")
+        novo = dict(m); novo[ef[2]] = copy.deepcopy(ef[4]); e = _missao_erro(E, novo)
+        if e: return _erro(ef, e)
+        m[ef[2]] = novo[ef[2]]; return
+    return _erro(ef, "use ['missao', 'abre', reg], ['missao', id, campo, 'poe', v], ['missao', id, 'guarda', 'soma', n], ['missao', id, 'fecha', desfecho] ou ['missao', id, 'some']")
+
+
+VERBOS_3 = dict(rota=_rota, lacos=_lacos, fama=_fama, noticia=_noticia, caixa=_caixa, missao=_missao)
+SO_NASCE_3 = ('papel',)                                     # os campos da pessoa que só se gravam em "gera" ou "mestre"
+
+
+def _so_mestre_3(tipo, ef):
+    """o efeito da etapa 3 que só o gerador ou o Mestre grava (o papel; a rota que nasce e o que não é falta nem aberta; o que pede e onde é a missão): a frase, ou None"""
+    if tipo in M.NASCE or not isinstance(ef, (list, tuple)) or len(ef) < 3: return None
+    if ef[0] == 'pessoa' and len(ef) == 5 and ef[2] in SO_NASCE_3: return f'"{ef[2]}" só se grava em evento ' + ' ou '.join(M.NASCE)
+    if ef[0] == 'rota' and (ef[1] == 'nasce' or (len(ef) == 5 and isinstance(ef[2], str) and ef[2].split('.')[0] not in M.ROTA_MUDA)): return 'a rota nasce, e muda (fora do que o carreto deixou e de aberta), só em evento ' + ' ou '.join(M.NASCE)
+    if ef[0] == 'missao' and len(ef) == 5 and ef[3] == 'poe' and ef[2] not in M.MISSAO_MUDA: return f'"{ef[2]}" da missão só muda em evento ' + ' ou '.join(M.NASCE)
+    return None
+
+
 def gravador_inteiro(): return os.environ.get('MOTOR10_GRAVADOR') == 'inteiro'      # o gravador de antes (a cópia inteira do estado em cada evento): só para o banco comparar
 
 
@@ -1285,6 +1727,8 @@ def _aplica(E, tipo, efeitos, onde, quem, texto, inteiro):
                 sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, q["nome"] + " já tem o talento rolado: só o Mestre o troca (o caminho novo que falta entra pelo talento.rola_caminho)")}')
         if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in PESSOA_4B and tipo not in (TALENTO_EVENTOS if ef[2] == 'inclinacao2' else POVO_EVENTOS):
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "este campo só se grava em evento " + " ou ".join(TALENTO_EVENTOS if ef[2] == "inclinacao2" else POVO_EVENTOS))}')
+        e3 = _so_mestre_3(tipo, ef)
+        if e3: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, e3)}')
         if tipo not in M.NASCE and isinstance(ef, (list, tuple)) and len(ef) > 1 and ef[0] in ('pessoa', 'lugar') and ef[1] == 'nasce':
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "gente e lugar só nascem em evento " + " ou ".join(M.NASCE))}')
         try: e = _um(ensaio, ef)
@@ -1520,7 +1964,7 @@ def valida(E):
             for b, q in (l.get(teto) or {}).items():
                 e = _conta_erro(teto, b, q)
                 if e: P.append(f'{n}: {e}')
-        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas', 'botica', 'runas', 'santuario', 'maldito', 'covil') + CAMPOS_4B:
+        for campo in ('pop', 'oficina', 'preparo', 'longe', 'perigo', 'vizinhos', 'produz', 'alvo_pecas', 'botica', 'runas', 'santuario', 'maldito', 'covil') + CAMPOS_4B + CAMPOS_LUGAR_3:
             if campo in l:
                 e = _lugar_erro(E, campo, None, l[campo])
                 if e: P.append(f'{n}: "{campo}" errado ({json.dumps(l[campo], ensure_ascii=False)[:60]}): {e}')
@@ -1575,7 +2019,56 @@ def valida(E):
     for lid, l in E['lugares'].items(): tenta(f'o lugar {lid}', lambda: lugar(lid, l))
     nomes = [x['dragao']['nome'] for x in E['lugares'].values() if isinstance(x, dict) and isinstance(x.get('dragao'), dict) and isinstance(x['dragao'].get('nome'), str)]
     for nm in sorted({x for x in nomes if nomes.count(x) > 1}): P.append(f'o dragão {nm} mora em dois lugares')
+    tenta('a etapa 3', lambda: _valida3(E, P))
     return P
+
+
+def _valida3(E, P):
+    """OS INVARIANTES DA ETAPA 3 (a região que responde): a rota, a viagem, o preso, a gente que lembra, a notícia, a caixa, a missão, a fronteira sem gente"""
+    R = E.get('rotas') or {}; Ls = E['lugares']; G = E['gente']
+    for rid, r in R.items():
+        e = _rota_erro(E, r, rid)
+        if e: P.append(f'a rota {rid}: {e}')
+    for lid, l in Ls.items():
+        if l.get('tipo', 'ermo') == 'fronteira' and any(isinstance(q, dict) and q.get('lugar') == lid for q in G.values()): P.append(f'{l.get("nome", lid)} é o mundo de fora: não tem gente')
+        if l.get('bando') and l.get('tipo', 'ermo') != 'ermo': P.append(f'{l.get("nome", lid)} tem bando e não é ermo (o bando mora no ermo)')
+    for pid, p in G.items():
+        if not isinstance(p, dict): continue
+        n = p.get('nome', pid); m = p.get('marca') if isinstance(p.get('marca'), dict) else {}
+        for k in NASCE_3:
+            if p.get(k) is not None:
+                e = _pessoa3_erro(E, p, k, p[k], pid)
+                if e: P.append(f'{n}: {e}')
+        abertos = [k for k in ('caca', 'masmorra', 'viagem') if isinstance(m.get(k), dict)]
+        if len(abertos) > 1: P.append(f'{n} tem {" e ".join(ABERTO_DIZ[k] for k in abertos)} abertas ao mesmo tempo')
+        for k in MARCAS_3:
+            if m.get(k) is not None:
+                e = _marca3_erro(k, m[k])
+                if e: P.append(f'{n}: {e}')
+        v = m.get('viagem')
+        if v is not None:
+            e = _viagem_erro(E, v, pid)
+            if e: P.append(f'{n} tem a viagem (marca.viagem) torta: {e}')
+            elif v.get('de') is not None:
+                d = G.get(v['de']); dv = (d.get('marca') or {}).get('viagem') if isinstance(d, dict) else None
+                if p.get('estado') == 'morto' or not isinstance(dv, dict) or dv.get('de') is not None or pid not in (dv.get('com') or []): P.append(f'{n} foi junto numa viagem que não existe mais (marca.viagem)')
+            elif p.get('estado') == 'morto': P.append(f'{n} morreu com a viagem aberta: `viagem.py larga "por quê" quem={pid}` faz as contas e fecha')
+    A = (E.get('noticias') or {}).get('ativas') or {}
+    for nid, x in A.items():
+        e = _noticia_erro(E, x)
+        if e: P.append(f'a notícia {nid}: {e}')
+    C = (E.get('caixa') or {}).get('abertos') or {}; por = {}
+    for cid, c in C.items():
+        e = _caixa_erro(E, c, cid)
+        if e: P.append(f'o pedido {cid} da caixa: {e}')
+        if isinstance(c, dict): por[c.get('para')] = por.get(c.get('para'), 0) + 1
+    for q, k in por.items():
+        if k > M.CAIXA_MAX: P.append(f'a caixa de {G.get(q, {}).get("nome", q)} tem {k} pedidos abertos (cabem {M.CAIXA_MAX})')
+    for mid, x in ((E.get('missoes') or {}).get('itens') or {}).items():
+        e = _missao_erro(E, x)
+        if e: P.append(f'a missão {mid}: {e}')
+        elif x.get('estado') in M.MISSAO_FECHA and x.get('guarda', 0): P.append(f'a missão {mid} fechou ({x["estado"]}) e ainda guarda {x["guarda"]} de prata: a paga e a caução vão a alguém no evento que fecha')
+        elif x.get('item') is not None and x.get('estado') not in M.MISSAO_FECHA and x['item'] not in E['itens']['itens']: P.append(f'a missão {mid} aponta a peça {x["item"]}, que não está no Livro de Itens')
 
 
 if __name__ == '__main__':
@@ -1584,9 +2077,9 @@ if __name__ == '__main__':
     if a[:1] == ['valida']:
         P = valida(carrega()); print('\n'.join(P) if P else 'o estado está inteiro.'); sys.exit(1 if P else 0)
     elif a[:1] == ['eventos']:
-        arq = os.path.join(pasta(), 'eventos.jsonl'); n = int(a[1]) if len(a) > 1 and a[1].isdigit() else 15
-        for l in (open(arq, encoding='utf-8').read().splitlines()[-n:] if os.path.exists(arq) else []):
-            ev = json.loads(l); print(f"#{ev['id']} Dia {ev['dia']}, {M.BLOCOS[ev['bloco']]} · {ev['tipo']}" + (f" · {ev['texto']}" if ev['texto'] else '') + f" · {tantos(len(ev['efeitos']), 'efeito')}")
+        n = int(a[1]) if len(a) > 1 and a[1].isdigit() else 15; r = carrega()['relogio']      # o histórico inteiro (as estações que acabaram também): os N últimos
+        for ev in eventos(desde=max(0, r.get('eventos', 0) - n)):
+            print(f"#{ev['id']} Dia {ev['dia']}, {M.BLOCOS[ev['bloco']]} · {ev['tipo']}" + (f" · {ev['texto']}" if ev['texto'] else '') + f" · {tantos(len(ev['efeitos']), 'efeito')}")
     elif a[:1] == ['pessoa'] and len(a) > 1:
         E = carrega(); p = E['gente'].get(a[1]) or sys.exit(f'não há a pessoa "{a[1]}"')
         import pessoas, corpo

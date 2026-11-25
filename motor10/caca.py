@@ -41,7 +41,7 @@ Tudo por evento (`cacar`, `coletar`, `despojo`, `ninhada`); os números moram no
 
 Uso (o personagem do jogador, ou quem=ID):
   python3 caca.py ver                                   os ermos vizinhos (o que se sabe), a sua mão, a saída aberta
-  python3 caca.py sair [ERMO] [alvo=ESPECIE|toca] [blocos=N] [com=ID,ID]      sai para caçar: a ida, e a procura até aparecer alguma coisa (sem alvo: o que aparecer; alvo=toca: a toca do covil).
+  python3 caca.py sair [ERMO] [alvo=ESPECIE|toca] [blocos=N] [com=ID,ID] [paga=N]      sai para caçar: a ida, e a procura até aparecer alguma coisa (sem alvo: o que aparecer; alvo=toca: a toca do covil).
                                                         O bicho comum que aquele ermo não tem é recusado antes de sair; do chefe ninguém sabe: a saída segue
   python3 caca.py atacar [inicio=longe|perto|colado] [vantagem=alto,cerco]    ataca o que apareceu: monta a luta e mostra o quadro
   python3 caca.py luta ["Nome: ordem"] ["grupo: ordem"]  roda a luta aberta até a próxima parada (é o `ato.py luta roda`); no fim, faz as contas do despojo
@@ -294,7 +294,7 @@ def sobe(E, pid, oficio='caça'):
 
 
 # ---------- a saída ----------
-def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
+def _abre(E, pid, quer, ermo, alvo, blocos, com=(), paga=0):
     p = _vivo(E, pid); aqui = p['lugar']
     if vai_com(p): sys.exit(f"{p['nome']} foi junto na saída de {E['gente'].get(vai_com(p), {}).get('nome', vai_com(p))}: não abre outra")
     if saida(p): sys.exit(f"{p['nome']} já tem uma saída aberta ({_agora(E, pid)}). Feche-a antes: `caca.py volta`")
@@ -331,7 +331,9 @@ def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
     ida = longe(E, ermo); o_que = _o_que(alvo) if quer == 'caça' else _bem(alvo)
     s = dict(ermo=ermo, casa=aqui, quer=quer, alvo=alvo, restam=n, com=com, dia=E['relogio']['dia'], fase='procura', encontro=None, luta=None, lutas=0, parou=None, sangue=None)
     txt = f"{p['nome']} sai para {'caçar' if quer == 'caça' else 'tirar'} {o_que} {_em(E, ermo)}" + (f", com {_e(E['gente'][c]['nome'] for c in com)}" if com else '')
-    estado.aplica(E, EVENTO[quer], [['pessoa', pid, 'marca.caca', 'poe', s]] + [['pessoa', c, 'marca.caca', 'poe', dict(de=pid, ermo=ermo)] for c in com], onde=ermo, quem=[pid] + com, texto=txt)
+    rc, efc = estado.companhia(E, pid, com, dict(ermo=ermo, alvo=alvo), 1, paga=paga)          # o gancho companhia (etapa 3): quem vai junto pede paga, ou recusa o perigo
+    if rc: sys.exit(rc)
+    estado.aplica(E, EVENTO[quer], [['pessoa', pid, 'marca.caca', 'poe', s]] + [['pessoa', c, 'marca.caca', 'poe', dict(de=pid, ermo=ermo)] for c in com] + efc, onde=ermo, quem=[pid] + com, texto=txt)
     antes = corpo.faixas(E['gente'][pid])
     ato.passa(E, pid, ida, EVENTO[quer], esforco=K.ESFORCO['ida'], para=False, texto=f"{p['nome']} vai ao ermo ({l['nome']})", com=com)
     L = ([aviso] if aviso else []) + [f"{txt}: {_bl(ida)} de ida, {n} de {'procura' if quer == 'caça' else 'coleta'}, {ida} de volta."]
@@ -372,15 +374,15 @@ def _nao_vive(E, ermo, alvo):
     return None
 
 
-def sair(E, pid, ermo=None, alvo=None, blocos=None, com=()):
+def sair(E, pid, ermo=None, alvo=None, blocos=None, com=(), paga=0):
     """sai para caçar no ermo vizinho: a ida, e a procura bloco a bloco até aparecer alguma coisa (aí PARA, e o caçador lê a ameaça), até o corpo pedir,
     ou até os blocos acabarem (aí volta sozinho). alvo: a espécie que se procura (None: o que aparecer). com: quem vai junto (entra na luta)."""
-    return _abre(E, pid, 'caça', ermo, alvo, blocos, com)
+    return _abre(E, pid, 'caça', ermo, alvo, blocos, com, paga)
 
 
-def coletar(E, pid, bem, ermo=None, blocos=None, com=()):
+def coletar(E, pid, bem, ermo=None, blocos=None, com=(), paga=0):
     """sai para tirar matéria (\"metal:0\", \"madeira:1\", \"erva:0\") do ermo vizinho: a ida, os blocos de coleta (um teste cada), a volta"""
-    return _abre(E, pid, 'coleta', ermo, bem, blocos, com)
+    return _abre(E, pid, 'coleta', ermo, bem, blocos, com, paga)
 
 
 def _anda(E, pid, L):
@@ -962,8 +964,9 @@ def main(a=None):
     if pid not in E['gente']: sys.exit(f'não há a pessoa "{pid}"')
     if pos[0] == 'ver': print(TB.contrai('\n'.join(ver(E, pid) + le(E, pid)))); return
     com = [c for c in op.get('com', '').split(',') if c]
-    if pos[0] == 'sair': R = sair(E, pid, pos[1] if len(pos) > 1 else None, alvo=op.get('alvo'), blocos=op.get('blocos'), com=com)
-    elif pos[0] == 'coletar': R = coletar(E, pid, pos[1], pos[2] if len(pos) > 2 else None, blocos=op.get('blocos'), com=com)
+    paga = int(op['paga']) if op.get('paga', '').isdigit() else 0          # paga=N: a prata que se dá a quem vai junto (o gancho companhia, etapa 3)
+    if pos[0] == 'sair': R = sair(E, pid, pos[1] if len(pos) > 1 else None, alvo=op.get('alvo'), blocos=op.get('blocos'), com=com, paga=paga)
+    elif pos[0] == 'coletar': R = coletar(E, pid, pos[1], pos[2] if len(pos) > 2 else None, blocos=op.get('blocos'), com=com, paga=paga)
     elif pos[0] == 'atacar': R = atacar(E, pid, inicio=op.get('inicio'), vantagens=[v for v in op.get('vantagem', '').split(',') if v])
     elif pos[0] == 'luta': R = luta_roda(E, pid, pos[1:])
     elif pos[0] == 'sangue': R = sangue(E, pid)

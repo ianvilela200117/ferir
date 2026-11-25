@@ -135,8 +135,12 @@ def vz(x, casas=2): return f'{x:.{casas}f}'.replace('.', ',')
 def sn(x): return 'sim' if x else 'NÃO'
 def cenario(R): return json.load(open(R['luta'].replace('_luta.json', '_cenario.json'), encoding='utf-8'))
 def eventos(d):
-    arq = os.path.join(d, 'eventos.jsonl')
-    return [json.loads(x) for x in open(arq, encoding='utf-8').read().splitlines()] if os.path.exists(arq) else []
+    """o registro inteiro do save de prova (etapa 3: a estação que acabou vai comprimida para eventos/; o histórico se lê pelo estado.eventos)"""
+    antes = os.environ.get('MOTOR10_MUNDO'); os.environ['MOTOR10_MUNDO'] = d
+    try: return estado.eventos()
+    finally:
+        if antes is None: os.environ.pop('MOTOR10_MUNDO', None)
+        else: os.environ['MOTOR10_MUNDO'] = antes
 
 
 def encerra(E, pid, R=None):
