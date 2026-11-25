@@ -260,7 +260,9 @@ class Gerador:
                     if pp == 'senhor':                        # lugar sem casa sediada: quem manda é um capitão do rei
                         pp = 'capitão'
                     povo = self._povo_de(lid); nome = self.N.gente(povo); pid = self._pid(nome)
-                    fam = self.N.casa(False); cid = slug('c ' + fam, set(self.E['mundo'].get('casas') or {}))
+                    usados_aqui = {c['nome'] for c in (self.E['mundo'].get('casas') or {}).values() if c.get('sede') == lid}
+                    fam = next((x for x in (self.r.choice(NM.CASA_COMUM) for _ in range(30)) if f'os {x}' not in usados_aqui), self.r.choice(NM.CASA_COMUM))      # o sobrenome se repete pela região, não no mesmo lugar
+                    cid = slug('c ' + fam + ' ' + lid, set(self.E['mundo'].get('casas') or {}))
                     self.ap([['mundo', 'casas', cid, 'poe', dict(nome=f'os {fam}', tipo='comum', sede=lid, fundada=H['ano0'] - self.r.randint(20, 200), viva=True)]], f"a família dos {fam} {de_nome(p['nome'])}")
                     reg, pecas = self._registro(pid, nome, pp, lid, povo, casa=cid); self._nasce(pid, reg, pecas)
                     self._familia(pid, reg, lid, cid, povo)

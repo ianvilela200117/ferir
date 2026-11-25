@@ -37,6 +37,8 @@ def diz(v):
 
 
 def lacos_de(E, pid): return dict(E['gente'].get(pid, {}).get('lacos') or {})
+LACO_DIZ = {'pai': 'pai/mãe', 'mãe': 'pai/mãe', 'filho': 'filho/filha', 'irmão': 'irmão/irmã', 'cônjuge': 'cônjuge', 'aprendiz': 'aprendiz', 'mestre': 'mestre'}
+def laco_diz(t): return LACO_DIZ.get(t, t)          # o motor não sabe o gênero de ninguém: o laço vai à mesa nas duas formas
 
 
 def parentes(E, pid):
@@ -232,7 +234,7 @@ def mesa(E):
     for k, q in E['gente'].items():
         if k == eu or q.get('estado') != 'vivo' or q.get('lugar') != lid or estado.fora(E, k): continue
         v, pq = opiniao(E, k, eu); laco = lacos_de(E, eu).get(k)
-        if v or laco: L.append(f"- {q['nome']}" + (f" ({laco})" if laco else '') + f": {diz(v)}" + (f" ({v:+d})" if v else '') + (f" — {'; '.join(pq)}" if pq else ''))
+        if v or laco: L.append(f"- {q['nome']}" + (f" ({laco_diz(laco)})" if laco else '') + f": {diz(v)}" + (f" ({v:+d})" if v else '') + (f" — {'; '.join(pq)}" if pq else ''))
     return ['**O que a gente daqui lembra de você:**'] + L if L else []
 
 
@@ -240,7 +242,7 @@ def ver(E, pid):
     p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
     eu = estado.eu(E); L = [f"{p['nome']} [{pid}] · {p.get('papel', '?')} · {estado.em(E, p['lugar'])} · " + (estado.morte_diz(E, p) if p['estado'] != 'vivo' else f"nível {p['nivel']}, {p.get('idade', '?')} anos")]
     if p.get('casa'): L.append(f"  casa: {(E['mundo'].get('casas') or {}).get(p['casa'], {}).get('nome', p['casa'])}")
-    if p.get('lacos'): L.append('  laços: ' + ', '.join(f"{E['gente'][k]['nome']} ({t})" for k, t in p['lacos'].items() if k in E['gente']))
+    if p.get('lacos'): L.append('  laços: ' + ', '.join(f"{E['gente'][k]['nome']} ({laco_diz(t)})" for k, t in p['lacos'].items() if k in E['gente']))
     if eu and eu != pid:
         v, pq = opiniao(E, pid, eu); L.append(f"  sobre você: {diz(v)} ({v:+d})" + (f" — {'; '.join(pq)}" if pq else ''))
     if p.get('memoria'): L.append('  SÓ O MESTRE, a memória: ' + ' · '.join(f"Dia {m['dia']}, {E['gente'].get(m['de'], {}).get('nome', m['de'])}: {m['o_que']} ({m['peso']:+d})" for m in p['memoria']))

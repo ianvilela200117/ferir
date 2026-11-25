@@ -41,7 +41,7 @@ def texto(E, m):
     return t
 
 
-def posta(E, de, lid, tipo, alvo, n=1, paga=None, prazo=None, frente=None, ermo=None, quem_vai=None, nome_alvo=None, cat=0):
+def posta(E, de, lid, tipo, alvo, n=1, paga=None, prazo=None, frente=None, ermo=None, quem_vai=None, nome_alvo=None, cat=0, tipo_ev=None):
     """põe a missão no quadro (um evento "missao"), se há vaga e a mesma ainda não está lá. A paga é da bolsa de quem pede (até 60% dela). Devolve o id, ou None."""
     if not tem(E) or lid not in E['lugares']: return None
     if len(abertas(E, lid)) >= R.QUADRO.get(E['lugares'][lid].get('tipo'), 1): return None
@@ -56,9 +56,14 @@ def posta(E, de, lid, tipo, alvo, n=1, paga=None, prazo=None, frente=None, ermo=
     if ermo: reg['ermo'] = ermo
     if quem_vai: reg['quem_vai'] = quem_vai
     if nome_alvo: reg['nome_alvo'] = nome_alvo
-    estado.aplica(E, 'missao', [['mundo', 'seq', 'missao', 'soma', 1], ['mundo', 'missoes', mid, 'poe', reg]], onde=lid, quem=[de] if de in E['gente'] else [],
+    tipo_ev = tipo_ev or ('gera' if E['relogio']['eventos'] and _gerando(E) else 'querer')      # quem põe no quadro é a gente do mundo (o querer dela), ou o gerador no Dia 1
+    estado.aplica(E, tipo_ev, [['mundo', 'seq', 'missao', 'soma', 1], ['mundo', 'missoes', mid, 'poe', reg]], onde=lid, quem=[de] if de in E['gente'] else [],
                   texto=f"no quadro {estado.de(E, lid)}: {texto(E, reg)} ({paga} de prata; {_quem(E, de)})")
     return mid
+
+
+_GERANDO = [False]
+def _gerando(E): return _GERANDO[0]
 
 
 def contra_frente(E, pid, lid):
@@ -193,12 +198,13 @@ def virada(E):
 def gera(E, r):
     """o Dia 1: cada quem que manda põe no quadro o que já o preocupa (a frente perto, a masmorra ao lado), e os caçadores, as bestas"""
     import gente
-    n0 = len(todas(E))
+    n0 = len(todas(E)); _GERANDO[0] = True
     for pid, p in list(E['gente'].items()):
         if p.get('papel') in ('senhor', 'capitão', 'mestre de guilda') and p['estado'] == 'vivo':
             contra_frente(E, pid, p['lugar']); limpar(E, pid, p['lugar'])
         elif p.get('papel') == 'caçador' and p['estado'] == 'vivo':
             gente._q_recompensa(E, pid, p, r)
+    _GERANDO[0] = False
     return [f"O quadro de missões do Dia 1: {len(todas(E)) - n0} missões."]
 
 

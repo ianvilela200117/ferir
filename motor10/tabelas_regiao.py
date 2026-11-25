@@ -231,3 +231,27 @@ RIVAL = dict(ousadia={'novato': 0.35, 'oficial': 0.45, 'veterano': 0.5, 'Lenda':
              novos=0.5,               # a cada estação, entram tantos novatos quantos esta fração dos que faltam para 40
              torneio_dia=150, torneio_premio=200, leilao_cada=91, leilao_dia=45)
 RANKING_PECA = 15          # no ranking, cada categoria da melhor arma e da melhor armadura em uso vale isto (mais a fama)
+
+# ---------- a criação do personagem (cria.py) ----------
+NIVEL_PERSONAGEM = 5        # o nível de quem começa (o da vila de teste, onde a luta foi afinada)
+# os berços: (o papel da família, onde ela mora, o que se diz, os atributos (soma 340), a mão, o grau, as peças [(tipo, qual, cat, cobre, uso)], a prata, a carga, o laço com o chefe da família, a magia)
+BERCOS = {
+    'forja':    ('ferreiro', ('vila', 'posto', 'aldeia'), 'cresceu na forja da família; tem a mão de Iniciante no martelo e na forja',
+                 dict(Força=65, Agilidade=50, Vigor=65, Vontade=50, Percepção=45, Afinidade=65), {'forja': 2, 'martelo': 2}, 'aprendiz',
+                 [('arma', 'martelo', 0, None, 'arma'), ('armadura', 'couro', 0, None, 'veste')], 30, {'metal:0': 4, 'madeira:0': 2}, 'pai', None),
+    'caça':     ('caçador', ('aldeia', 'vila'), 'cresceu no mato com a família de caçadores; tem a mão de Iniciante no rastro e no arco',
+                 dict(Força=55, Agilidade=70, Vigor=60, Vontade=45, Percepção=70, Afinidade=40), {'caça': 2, 'arco': 2}, 'diarista',
+                 [('arma', 'arco', 0, None, 'arma'), ('arma', 'adaga', 0, None, 'arma2'), ('armadura', 'couro', 0, None, 'veste')], 20, {'comida': 3}, 'pai', None),
+    'guarda':   ('guarda', ('cidade', 'capital', 'vila'), 'cresceu na casa da guarda; tem a mão de Iniciante na espada',
+                 dict(Força=70, Agilidade=60, Vigor=70, Vontade=50, Percepção=50, Afinidade=40), {'espada': 2}, 'diarista',
+                 [('arma', 'espada', 0, None, 'arma'), ('escudo', None, 0, None, 'escudo'), ('armadura', 'malha', 0, None, 'veste')], 30, {}, 'pai', None),
+    'mercador': ('mercador', ('capital', 'cidade'), 'cresceu atrás do balcão da casa de comércio; tem a mão de Iniciante no comércio e na adaga',
+                 dict(Força=50, Agilidade=55, Vigor=55, Vontade=60, Percepção=60, Afinidade=60), {'comércio': 2, 'adaga': 2}, 'diarista',
+                 [('arma', 'adaga', 0, None, 'arma'), ('armadura', 'couro', 0, None, 'veste')], 120, {'pano': 4}, 'pai', None),
+    'templo':   ('sacerdote', ('cidade', 'capital', 'vila'), 'deixado no santuário quando criança, e criado lá; tem a mão de Iniciante na cura e na maça, e sabe a luz',
+                 dict(Força=50, Agilidade=55, Vigor=55, Vontade=70, Percepção=55, Afinidade=55), {'cura': 2, 'maça': 2}, 'diarista',
+                 [('arma', 'maça', 0, None, 'arma'), ('armadura', 'couro', 0, None, 'veste')], 10, {'erva:0': 3}, 'mestre', dict(feiticos=['luz'])),
+    'nobre':    ('senhor', ('cidade', 'vila'), 'da casa nobre que manda no lugar; tem a mão de Iniciante na espada, a espada da família e inimigos que nunca viu',
+                 dict(Força=65, Agilidade=60, Vigor=65, Vontade=55, Percepção=50, Afinidade=45), {'espada': 2}, 'diarista',
+                 [('arma', 'espada', 1, None, 'arma'), ('escudo', None, 0, None, 'escudo'), ('armadura', 'malha', 0, None, 'veste')], 80, {}, 'pai', None),
+}
