@@ -126,3 +126,38 @@ COMERCIO = dict(bens=('comida', 'lenha', 'sal', 'pano', 'ferramenta', 'metal:0',
                             # o comércio entre lugares (os mercadores, em número): por estrada aberta e por dia, se o preço do outro lado passa de `razao` vezes o daqui,
                             # leva até `lote` do estoque daqui (e não mais que `teto` do alvo de lá); a prata vai do lugar que compra para o que vende, no preço do meio
 GUARDA_PATRULHA = 0.02      # por soldado da guarda (em número), por dia: a chance de a patrulha tirar um salteador da estrada vizinha
+
+# ---------- a notícia (noticias.py) ----------
+BOATO_SALTO = 4             # do quarto salto em diante, a notícia é boato ("dizem que...")
+NOTICIA_DURA = 90           # a notícia some do mundo tantos dias depois de nascer
+MESA_NOTICIAS = 6           # quantas notícias chegadas a MESA mostra (as mais novas)
+
+# ---------- a gente: a memória, a opinião, o querer da semana (gente.py) ----------
+OPINIAO_DIZ = [(-6, 'odeia você'), (-3, 'não gosta de você'), (-1, 'desconfia de você'), (0, 'não tem nada contra você'), (3, 'gosta de você'), (6, 'confia em você'), (99, 'faria tudo por você')]
+QUERER = {  # papel: [(querer, peso)] — cada querer muda número (gente.py faz o efeito)
+    'ferreiro': [('forja', 3), ('pede_materia', 1)], 'coureiro': [('curte', 3)], 'caçador': [('caca', 3), ('recompensa', 1)], 'lenhador': [('tira', 1)],
+    'mineiro': [('tira', 1)], 'pescador': [('tira', 1)], 'lavrador': [('tira', 1)], 'mercador': [('lucra', 2), ('escolta', 1)], 'taverneiro': [('serve', 1)],
+    'guarda': [('patrulha', 1)], 'capitão': [('patrulha', 2), ('contra_frente', 1)], 'senhor': [('contra_frente', 2), ('imposto', 1), ('limpar', 1)],
+    'curandeiro': [('colhe', 1)], 'sacerdote': [('colhe', 1)], 'mago': [('estuda', 1)], 'bruxa': [('estuda', 1)], 'druida': [('estuda', 1)],
+    'ladino': [('furta', 2), ('estuda', 1)], 'ancião': [('conta', 1)], 'escriba': [('conta', 1)], 'bardo': [('conta', 1)], 'aprendiz': [('treina', 1)],
+    'nobre': [('corte', 1)], 'mestre de guilda': [('limpar', 1), ('contra_frente', 1)],
+}
+FURTO = (0.25, 0.15)        # o ladino: a chance de furtar alguém do lugar na semana; a chance de a guarda pegar (e ele perde o que furtou)
+IMPOSTO = 0.01              # o senhor cobra esta fração da prata do lugar por semana (vai para a bolsa dele)
+
+# ---------- a caixa (caixa.py) ----------
+CAIXA_PRAZO = (3, 10)       # os dias de prazo de um pedido
+CAIXA_CUSTO = 2             # o padrão (calar) custa isto na opinião de quem pediu
+
+# ---------- as missões (missoes.py) ----------
+QUADRO = {'capital': 6, 'cidade': 4, 'vila': 2, 'aldeia': 1, 'posto': 1}        # quantas missões abertas cada quadro aguenta
+MISSAO_PRAZO = (7, 28)      # os dias de prazo de uma missão
+MISSAO_PAGA = {'caça': (8, 4), 'entrega': (10, 3), 'limpar': (120, 3), 'matar': (200, 3), 'escolta': (15, 2), 'investigar': (40, 2)}   # (base, vezes por categoria do alvo)
+MISSAO_FAMA = {'caça': 1, 'entrega': 1, 'limpar': 5, 'matar': 8, 'escolta': 1, 'investigar': 3}      # a fama de quem cumpre
+MISSAO_FALHA = (-1, -2)     # quem toma e não cumpre: a fama, e a opinião de quem pediu
+
+# ---------- a viagem (viagem.py) ----------
+VIAGEM = dict(base={1: 0.02, 2: 0.05, 3: 0.09}, por_bando=0.012, noite=1.5, bicho=0.35, grupo=(2, 5),
+              nivel={1: (3, 8), 2: (6, 15), 3: (12, 30)}, taxa_cabeca=4, taxa_salteador=1, fuga=20)
+              # a chance de encontro por bloco na estrada: pela base do perigo, mais por salteador nela, vezes isto de noite; a fração dos encontros que é bicho do ermo
+              # que a estrada passa; quantos salteadores atacam; o nível deles pelo perigo; o pedágio (por cabeça de quem viaja, mais por salteador); a fuga (Agilidade contra isto)

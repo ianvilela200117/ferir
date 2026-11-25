@@ -357,7 +357,7 @@ class Gerador:
         r = self.r; serra = next((e for e in self.ermos_pts if e['habitat'] == 'serra'), self.ermos_pts[0])
         alvo = min((p for p in self.pts if p['tipo'] in ('vila', 'aldeia', 'posto')), key=lambda p: math.hypot(p['x'] - serra['x'], p['y'] - serra['y']))
         nome_j = r.choice(['o Brasa', 'o Ferrugem', 'a Fornalha', 'o Carvão Vivo', 'o Rubro', 'o Fumo Velho', 'a Cinzenta'])
-        dragoes.poe(self.E, serra['id'], R.DRAGAO_JOVEM['tipo'], R.DRAGAO_JOVEM['idade'], nome_j, vila=alvo['id'], tesouro=r.randint(*R.DRAGAO_JOVEM['tesouro']))
+        self.ap(dragoes.poe(self.E, serra['id'], R.DRAGAO_JOVEM['tipo'], R.DRAGAO_JOVEM['idade'], nome_j, vila=alvo['id'], tesouro=r.randint(*R.DRAGAO_JOVEM['tesouro'])), f"{nome_j}, o dragão jovem da serra", onde=serra['id'])
         self.dragao_jovem = (serra['id'], nome_j, alvo['id'])
         cov = next(m for m in self.masm_plano if m['molde'] == 'covil'); sala = self.fundo(cov['id']); d = dict(self.E['lugares'][sala].get('dragao') or {})
         if d:
