@@ -667,6 +667,7 @@ def _um(E, ef):
         if raiz == 'carga':
             if not sub or op != 'soma' or not _int(val): return _erro(ef, "a carga muda por ['pessoa', id, 'carga.BEM', 'soma', número inteiro]")
             if not bem_conhecido(sub): return _erro(ef, f'não se carrega "{sub}" (carregam-se: {", ".join(M.BENS)}; e a matéria com a categoria, de 0 a {M.MATERIA_ATE}: metal:0, couro:1...)')
+            if val > 0 and p['estado'] == 'morto': return _erro(ef, f'{p["nome"]} morreu: não recebe carga (quem morre não fica com nada)')
             d = p.setdefault('carga', {}); q = d.get(sub, 0) + val
             if q < 0: return _erro(ef, f'{p["nome"]} só carrega {d.get(sub, 0)} de {sub}')
             if q: d[sub] = q
@@ -713,6 +714,7 @@ def _um(E, ef):
             if p['pv'] >= pv_max(p): p.pop('funda', None)        # a ferida funda some quando o PV enche
         elif campo == 'moedas':
             if not _int(val): return _erro(ef, 'a prata é inteira')
+            if val > 0 and p['estado'] == 'morto': return _erro(ef, f'{p["nome"]} morreu: não recebe prata (quem morre não fica com nada)')
             if p['moedas'] + val < 0: return _erro(ef, f'{p["nome"]} tem {p["moedas"]} de prata e não paga {-val}')
             p['moedas'] += val
         else: p[campo] += val

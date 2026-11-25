@@ -128,7 +128,7 @@ def _comercio(E):
         if not isinstance(l, dict) or l.get('tipo') != 'estrada' or l.get('fechada') or l.get('bando', 0) >= 8: continue
         a, b = l['ponta']
         if not (povoado(E, a) and povoado(E, b)): continue
-        ef = []; txt = []
+        ef = []; txt = []; cx = {a: E['lugares'][a]['estoque'].get('prata', 0), b: E['lugares'][b]['estoque'].get('prata', 0)}      # a prata de cada ponta, com o que este evento já moveu
         for bem in K['bens']:
             pa, pb = mercado.preco(E, a, bem), mercado.preco(E, b, bem)
             if not pa or not pb: continue
@@ -137,7 +137,8 @@ def _comercio(E):
             tem = E['lugares'][de]['estoque'].get(bem, 0); q = int(min(tem * K['lote'], mercado.alvo(E, para, bem) * K['teto']))
             if q < 1: continue
             preco = (mercado.preco(E, de, bem) + mercado.preco(E, para, bem)) / 2; v = int(q * preco)
-            if v < 1 or E['lugares'][para]['estoque'].get('prata', 0) < v: continue
+            if v < 1 or cx[para] < v: continue
+            cx[para] -= v; cx[de] += v
             ef += [['estoque', de, bem, 'soma', -q], ['estoque', para, bem, 'soma', q], ['estoque', para, 'prata', 'soma', -v], ['estoque', de, 'prata', 'soma', v]]
             feitos.add((de, para, bem)); txt.append(f"{q} de {estado.nome_bem(bem)} {estado.de(E, de)} para {E['lugares'][para]['nome']}")
         if ef: estado.aplica(E, 'regiao', ef, onde=eid, texto='o comércio: ' + '; '.join(txt))

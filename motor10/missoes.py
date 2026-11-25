@@ -118,11 +118,12 @@ def confere(E, mid, pid):
     if t == 'escolta':
         q = E['gente'].get(m.get('quem_vai')) or {}; return q.get('lugar') == a and q.get('estado') == 'vivo' and E['gente'][pid]['lugar'] == a, f"{q.get('nome', '?')} está {estado.em(E, q['lugar']) if q.get('lugar') in E['lugares'] else '?'}"
     if t == 'investigar':
-        oc = E['mundo'].get('oculto') or {}; k = sum(1 for c in oc if c.startswith(f"frente.{m.get('frente') or a}.")); return k >= 2, f"{k} de 2 coisas descobertas"
+        oc = E['mundo'].get('oculto') or {}; k = sum(1 for c in oc if c.startswith(f"frente.{m.get('frente') or a}.")) if pid == estado.eu(E) else 0
+        return k >= 2, f"{k} de 2 coisas descobertas"
     return False, '?'
 
 
-def cumpre(E, mid, pid, tipo_ev='missao', texto=None):
+def cumpre(E, mid, pid, tipo_ev='missao', frase=None):
     """a missão foi cumprida: a paga sai da bolsa de quem pediu (até o que ele tem), a fama sobe, quem pediu lembra, a frente recua um passo"""
     import gente, noticias
     m = todas(E)[mid]; de = m['de']; paga = int(min(m['paga'], _bolsa(E, de)))
@@ -132,7 +133,7 @@ def cumpre(E, mid, pid, tipo_ev='missao', texto=None):
         ef += [['pessoa', pid, f"carga.{m['alvo']}", 'soma', -m['n']]] + ([['pessoa', de, f"carga.{m['alvo']}", 'soma', m['n']]] if de in E['gente'] else [['estoque', de, m['alvo'], 'soma', m['n']]])
     if de in E['gente']: ef += gente.lembra(E, de, pid, f"cumpriu a missão que eu paguei ({texto_curto(E, m)})", 3)
     ef += noticias.nova(E, m['onde'], f"{E['gente'][pid]['nome']} cumpriu a missão {estado.de(E, m['onde'])}: {texto(E, m)}", 1, ('missão',))
-    estado.aplica(E, tipo_ev, ef, onde=m['onde'], quem=[pid] + ([de] if de in E['gente'] else []), texto=texto or f"{E['gente'][pid]['nome']} cumpre a missão {mid}: {texto(E, m)} ({paga} de prata)")
+    estado.aplica(E, tipo_ev, ef, onde=m['onde'], quem=[pid] + ([de] if de in E['gente'] else []), texto=frase or f"{E['gente'][pid]['nome']} cumpre a missão {mid}: {texto(E, m)} ({paga} de prata)")
     if m.get('frente'):
         try: import frentes; frentes.recua(E, m['frente'], f"a missão {mid} cumprida por {E['gente'][pid]['nome']}")
         except (ModuleNotFoundError, AttributeError): pass

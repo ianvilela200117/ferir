@@ -315,7 +315,7 @@ class Gerador:
             mt = T.maestria_tipica(nivel); ma = {mae: max(2, mt)} if mae else {}
             if mag and mae != mag.get('tradicao'): ma[mag['tradicao']] = max(2, mt)
             if mae == 'adaga': ma['manha'] = max(2, mt)
-            fama = {'novato': r.randint(0, 6), 'oficial': r.randint(10, 45), 'veterano': r.randint(60, 160), 'Lenda': r.randint(300, 600)}[diz]
+            fama = {'novato': r.randint(0, 6), 'oficial': r.randint(10, 45), 'veterano': r.randint(60, 160), 'Lenda': r.randint(260, 330)}[diz]
             reg = dict(nome=nome, nivel=nivel, atributos=at, lugar=lugar, grau_oficio='oficial', maestria=ma, treino=vila_teste.treino_da_mao(ma), moedas=r.randint(10, 40) * (1 + nivel // 10),
                        sobre=f"aventureiro{'' if diz == 'novato' else ' ' + ('veterano' if diz == 'veterano' else 'de ofício' if diz == 'oficial' else 'de lenda')}" + (f", {self.E['mundo']['guildas'][guilda]['nome']}" if guilda else ', anda sozinho'),
                        papel='aventureiro', rival=True, fama=fama, guilda=guilda)

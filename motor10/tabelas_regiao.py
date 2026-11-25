@@ -161,3 +161,73 @@ VIAGEM = dict(base={1: 0.02, 2: 0.05, 3: 0.09}, por_bando=0.012, noite=1.5, bich
               nivel={1: (3, 8), 2: (6, 15), 3: (12, 30)}, taxa_cabeca=4, taxa_salteador=1, fuga=20)
               # a chance de encontro por bloco na estrada: pela base do perigo, mais por salteador nela, vezes isto de noite; a fração dos encontros que é bicho do ermo
               # que a estrada passa; quantos salteadores atacam; o nível deles pelo perigo; o pedágio (por cabeça de quem viaja, mais por salteador); a fuga (Agilidade contra isto)
+
+# ---------- as frentes (frentes.py) ----------
+# Os moldes: (tipo, nome, meta, os 6 passos (o sinal que a notícia leva), os efeitos de cada passo, a missão contra ela, quando é barrada).
+# Os efeitos são VERBOS DE FRENTE (frentes.py os faz em efeitos do gravador): ('estoque', bem, fração) · ('prata', fração) (do lugar para o dono) · ('povo', fração)
+# · ('rota', 'fecha'|'abre') (a estrada do lugar mais perto do ermo) · ('bando', n) · ('bichos', n) (no ermo da frente) · ('produz', bem, fator) · ('morre', papel)
+# · ('missao',) (quem manda põe a missão contra ela) · ('fama', n) (o dono) · ('acorda',) (o dragão da calamidade) · ('casa',) (a casa da frente toma o lugar)
+FRENTES = {
+    'bando':    ('ameaça', 'o bando {dono} na estrada', 'tomar a estrada e cobrar de quem passa',
+                 ['mais salteadores aparecem na estrada', 'um mercador é roubado e morto na estrada', 'a estrada fecha: ninguém passa sem pagar', 'o bando assalta um lugar e leva a prata', 'o bando mata um da guarda', 'o lugar se esvazia: quem pode, vai embora'],
+                 [[('bando', 3)], [('estoque', 'pano', -0.2), ('bando', 1)], [('rota', 'fecha')], [('prata', -0.15), ('povo', -0.03)], [('morre', 'guarda'), ('missao',)], [('povo', -0.4)]], 'matar', 'dono'),
+    'horda':    ('ameaça', 'a horda {dono}', 'crescer até tomar a terra',
+                 ['o bando da toca cresce', 'roubam o celeiro de noite', 'um caçador não volta do mato', 'a horda ataca de dia', 'a estrada fecha: a horda está nela', 'o lugar cai: a horda o toma'],
+                 [[('bichos', 3)], [('estoque', 'comida', -0.15)], [('morre', 'caçador'), ('missao',)], [('povo', -0.05), ('prata', -0.1)], [('rota', 'fecha'), ('bichos', 2)], [('povo', -0.6)]], 'limpar', 'covil'),
+    'mortos':   ('ameaça', 'os mortos {dono}', 'erguer os mortos da terra',
+                 ['os mortos da masmorra se mexem', 'o cemitério amanhece revolvido', 'um morto anda de noite no lugar', 'quem sai de noite não volta', 'os mortos fecham a estrada', 'o lugar é abandonado aos mortos'],
+                 [[('vagantes', 2)], [('povo', -0.01)], [('morre', 'lavrador'), ('missao',)], [('povo', -0.04)], [('rota', 'fecha')], [('povo', -0.6)]], 'limpar', 'chefe'),
+    'dragão':   ('ameaça', 'o dragão {dono}', 'fazer o lugar pagar tributo até não sobrar nada',
+                 ['o dragão é visto sobre o lugar', 'o dragão queima um campo', 'o dragão leva o gado e a prata', 'ninguém passa pela estrada da serra', 'o dragão queima a casa do senhor', 'o lugar arde: quem sobra, foge'],
+                 [[('fama', 2)], [('estoque', 'comida', -0.2)], [('prata', -0.2), ('missao',)], [('rota', 'fecha')], [('morre', 'ancião')], [('povo', -0.7)]], 'matar', 'dragao'),
+    'trono':    ('ambição', 'a ambição {dono}', 'tomar a coroa',
+                 ['a casa junta aliados', 'a casa junta prata', 'um senhor rival morre de repente', 'a casa arma gente', 'a guarda do rei é emboscada', 'a casa toma o lugar do rei'],
+                 [[('fama', 3)], [('prata', -0.05)], [('morre', 'nobre'), ('missao',)], [('fama', 3)], [('morre', 'guarda')], [('casa',)]], 'investigar', 'investigado'),
+    'cartel':   ('ambição', 'o cartel {dono}', 'ter todo o metal da região na mão',
+                 ['o mercador compra todo o metal que acha', 'o metal some das lojas', 'o ferreiro fecha a forja por falta', 'o mercador compra a mina', 'o preço do metal triplica', 'o metal da região é dele'],
+                 [[('estoque', 'metal:0', -0.25)], [('estoque', 'metal:0', -0.3), ('missao',)], [('estoque', 'metal:0', -0.3)], [('produz', 'metal:0', 0.7)], [('estoque', 'metal:0', -0.5)], [('produz', 'metal:0', 0.5)]], 'investigar', 'investigado'),
+    'culto':    ('ambição', 'o culto {dono}', 'abrir a porta para o que mora embaixo',
+                 ['gente some de noite', 'o culto compra a casa velha', 'um nobre entra no culto', 'mais gente some', 'o culto prepara o sacrifício', 'o sacrifício: o lugar fica maldito'],
+                 [[('povo', -0.01)], [('prata', -0.05), ('missao',)], [('fama', 2)], [('povo', -0.02), ('morre', 'aprendiz')], [('morre', 'sacerdote')], [('povo', -0.1)]], 'investigar', 'investigado'),
+    'guilda':   ('ambição', 'a corrida {dono}', 'ser a primeira a limpar a masmorra funda',
+                 ['a guilda junta gente', 'a guilda compra tochas e cordas', 'a guilda desce o primeiro nível', 'a guilda perde um dos seus lá embaixo', 'a guilda chega ao fundo', 'a guilda limpa a masmorra e leva o tesouro'],
+                 [[('fama', 2)], [('fama', 1)], [('fama', 2)], [('fama', -1)], [('fama', 3)], [('fama', 8)]], None, 'limpa'),
+    'seca':     ('falta', 'a seca {dono}', 'secar a colheita',
+                 ['o rio baixa', 'a colheita sai pequena', 'o celeiro baixa', 'o gado morre de sede', 'a semente acaba', 'a fome'],
+                 [[('produz', 'comida', 0.9)], [('produz', 'comida', 0.85)], [('estoque', 'comida', -0.15), ('missao',)], [('estoque', 'comida', -0.15)], [('produz', 'comida', 0.8)], [('estoque', 'comida', -0.5)]], 'entrega', 'entregue'),
+    'mina':     ('falta', 'a mina {dono} se perde', 'a água tomar a mina',
+                 ['a água sobe no fundo da mina', 'o veio de baixo fica debaixo d\'água', 'os mineiros param', 'o metal some do posto', 'a galeria desaba', 'a mina está perdida'],
+                 [[('produz', 'metal:0', 0.9)], [('produz', 'metal:0', 0.8), ('missao',)], [('produz', 'metal:0', 0.8)], [('estoque', 'metal:0', -0.4)], [('morre', 'mineiro')], [('produz', 'metal:0', 0.3)]], 'entrega', 'entregue'),
+    'sumiços':  ('mistério', 'os sumiços {dono}', 'levar a gente do lugar, um a um',
+                 ['alguém some na borda do mato', 'acham um corpo sem sangue', 'mais um some, de dentro de casa', 'o povo não sai mais de noite', 'some um da guarda', 'o lugar se esvazia de medo'],
+                 [[('povo', -0.01)], [('morre', 'lavrador'), ('missao',)], [('povo', -0.02)], [('estoque', 'comida', -0.1)], [('morre', 'guarda')], [('povo', -0.4)]], 'investigar', 'investigado'),
+    'luzes':    ('mistério', 'as luzes {dono}', 'acordar o que está selado',
+                 ['luzes nas ruínas de noite', 'os bichos fogem do mato', 'um caçador volta louco', 'a terra treme de noite', 'as luzes chegam ao lugar', 'o selo quebra: algo sai'],
+                 [[('fama', 1)], [('bichos', -3)], [('morre', 'caçador'), ('missao',)], [('estoque', 'comida', -0.05)], [('povo', -0.03)], [('vagantes', 4), ('povo', -0.1)]], 'investigar', 'investigado'),
+    'calamidade': ('calamidade', '{dono}, o que dorme', 'acordar',
+                 ['a serra treme de noite', 'os bichos da serra fogem para o vale', 'cai cinza nos campos', 'o dragão jovem foge da serra', 'a fumaça sai da boca do covil', 'o dragão ancião acorda'],
+                 [[('bichos', -4)], [('bichos', -6)], [('estoque', 'comida', -0.1)], [('fama', 3)], [('povo', -0.05)], [('acorda',)]], None, 'nunca'),
+    'fome':     ('falta', 'a fome {dono}', 'esvaziar o celeiro',
+                 ['o celeiro está no fim', 'o povo come a semente', 'a primeira morte de fome', 'o povo foge pela estrada', 'os famintos viram salteadores', 'o lugar se esvazia'],
+                 [[('missao',)], [('produz', 'comida', 0.9)], [('povo', -0.02)], [('povo', -0.05)], [('bando', 3)], [('povo', -0.3)]], 'entrega', 'farto'),
+    'nêmesis':  ('nêmesis', '{dono}, o matador', 'acabar com o sangue de quem matou',
+                 ['o matador veste o que tirou do morto', 'o matador fica sabendo do herdeiro', 'o matador procura o herdeiro', 'o matador fere um parente', 'o matador cerca a casa', 'o matador encontra o herdeiro'],
+                 [[('fama', 2)], [('fama', 1)], [('fama', 1)], [('fama', 2)], [('fama', 1)], [('fama', 3)]], 'matar', 'dono'),
+}
+FRENTES_DIA1 = ['bando', 'horda', 'mortos', 'dragão', 'trono', 'cartel', 'culto', 'guilda', 'seca', 'mina', 'sumiços', 'luzes', 'calamidade']
+FRENTE_ROLA = dict(dado=(2, 10), contra=18, forca=(2, 5), resiste_guarda=20, calamidade_cada=28, ambicao=2)     # por semana: 2d10 + força contra 18 + a resistência do lugar (+1 a cada 20 da guarda); a ambição, +2 de força (mora em lugar forte); a calamidade rola a cada 28 dias
+INVESTIGA = dict(contra=22, cat=2, campos=('passo', 'dono', 'meta', 'onde'))      # investigar: 2d20 + Percepção ÷ 10 + manha contra 22 + 2 por categoria da frente; abre um campo por vez
+
+# ---------- os rivais (rivais.py) ----------
+RIVAL = dict(ousadia={'novato': 0.35, 'oficial': 0.45, 'veterano': 0.5, 'Lenda': 0.55},     # a chance mínima de vencer que cada um aceita para ir
+             morre=0.7,               # quem perde a luta da conta rápida: a chance de morrer (cada um do grupo), vezes o quanto a luta era ruim
+             fere=0.6,                # ... e a de sair ferido (descansa uma semana)
+             longe=3,                 # até quantas estradas da casa o rival vai atrás de missão ou masmorra
+             dias_masmorra=(2, 2),    # os dias de uma descida: tantos, mais tantos por nível
+             forja_ferreiro=6,        # a maestria de forja do ferreiro que faz a peça do núcleo (o melhor da capital)
+             forja_chance={6: 0.45, 4: 0.25, 8: 0.65},     # a chance de a peça do núcleo sair inteira, pela maestria do ferreiro (a meta da escada)
+             forja_dias=5, forja_paga=0.25,      # os dias da obra, e a fração do valor da peça que o ferreiro cobra
+             caca_rende=(8, 30),      # o que uma semana de caça rende a um rival (em bens vendidos na casa dele)
+             novos=0.5,               # a cada estação, entram tantos novatos quantos esta fração dos que faltam para 40
+             torneio_dia=150, torneio_premio=200, leilao_cada=91, leilao_dia=45)
+RANKING_PECA = 15          # no ranking, cada categoria da melhor arma e da melhor armadura em uso vale isto (mais a fama)
