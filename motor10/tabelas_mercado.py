@@ -150,6 +150,9 @@ _INCOMUNS = [('arma', 'espada', 1, None), ('arma', 'lança', 1, None), ('armadur
 # (o que o gerador põe aqui, por categoria, é também o ALVO de peças do lugar: a vila, 11 Comuns e 4 Incomuns; a cidade, 11 e 9)
 PRATELEIRA = dict(vila=_COMUNS + _INCOMUNS,
                   cidade=_COMUNS + _INCOMUNS + [('arma', 'machado', 1, None), ('arma', 'arco', 1, None), ('arma', 'montante', 1, None), ('armadura', 'malha', 1, None), ('armadura', 'malha', 1, ['cabeça'])])
+PRATELEIRA['capital'] = PRATELEIRA['cidade'] + [('arma', 'espada', 2, None), ('arma', 'arco', 2, None), ('armadura', 'malha', 2, None), ('escudo', None, 2, None)]      # a etapa final: a capital tem Raras na prateleira
+PRATELEIRA['aldeia'] = [('arma', 'adaga', 0, None), ('arma', 'lança', 0, None), ('arma', 'arco', 0, None), ('armadura', 'couro', 0, None), ('armadura', 'couro', 0, ['cabeça']), ('escudo', None, 0, None)]
+PRATELEIRA['posto'] = [('arma', 'espada', 0, None), ('arma', 'lança', 0, None), ('armadura', 'malha', 0, None), ('armadura', 'malha', 0, ['cabeça']), ('escudo', None, 0, None), ('arma', 'espada', 1, None)]
 def prateleira_de(tipo): return PRATELEIRA.get(tipo, PRATELEIRA['vila'])        # a prateleira com que nasce a loja de um lugar deste tipo
 # A PRATELEIRA DA MAGIA (etapa da magia: mercado.funda_magia, no lugar que já tem mercado): (tipo, forma ou feitiços, categoria, nome). Conta junto no alvo de peças
 # da categoria (a loja farta): o foco, o amuleto e o escrito são peças para a loja, pagas como peça (40%, mais a mão de comércio), e também enchem a prateleira
@@ -158,9 +161,11 @@ _MAGIA_VILA = [('amuleto', None, 0, None), ('amuleto', None, 0, None), ('foco', 
 PRATELEIRA_MAGIA = dict(vila=_MAGIA_VILA,
                         cidade=_MAGIA_VILA + [('foco', 'cajado', 0, None), ('foco', 'talismã', 0, None), ('amuleto', None, 1, None), ('foco', 'varinha', 1, None), ('foco', 'símbolo', 1, None),
                                               ('escrito', ['cura', 'bênção', 'amparo'], 0, 'Breviário da fé'), ('escrito', ['raízes', 'espinho', 'névoa'], 0, 'Folhas do verde'), ('escrito', ['lança-de-fogo'], 1, 'Tratado do fogo')])
+PRATELEIRA_MAGIA['capital'] = PRATELEIRA_MAGIA['cidade'] + [('amuleto', None, 2, None), ('foco', 'cajado', 1, None), ('escrito', ['escudo', 'prender'], 1, 'Manual do guarda-arcano')]      # a etapa final
 def prateleira_magia_de(tipo): return PRATELEIRA_MAGIA.get(tipo, PRATELEIRA_MAGIA['vila'])
 # A PRATELEIRA DO LADINO (etapa 4b: mercado.funda_masmorra): (tipo, nada, categoria, nome). Conta junto no alvo de peças da categoria (a loja farta), como a da magia
 PRATELEIRA_LADINO = dict(vila=[('gazua', None, 0, None)], cidade=[('gazua', None, 0, None), ('gazua', None, 0, None), ('gazua', None, 1, None)])
+PRATELEIRA_LADINO['capital'] = PRATELEIRA_LADINO['cidade'] + [('gazua', None, 2, None)]      # a etapa final
 def prateleira_ladino_de(tipo): return PRATELEIRA_LADINO.get(tipo, PRATELEIRA_LADINO['vila'])
 def alvo_pecas(tipo):
     """{categoria: quantas peças} a loja de um lugar deste tipo quer ter na prateleira: o que o gerador põe nela ao abrir a loja"""

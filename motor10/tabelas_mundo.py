@@ -115,16 +115,18 @@ MAESTRIA_FEITO = 6          # deste grau para cima, além dos blocos, pede um FE
 EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descansar', 'esperar', 'vestir', 'luta', 'compra', 'venda', 'cura', 'mestre', 'gera',
            'forjar', 'consertar', 'ajustar', 'cacar', 'coletar', 'despojo', 'producao', 'consumo', 'ninhada', 'casa',
            'talento', 'estudar', 'lancar', 'rito', 'beber', 'alquimia', 'encantar', 'maldicao', 'servico', 'covil',        # os da etapa da magia (projeto/ETAPA_MAGIA.md, seção 11)
-           'masmorra', 'masmorra_vida', 'dragão']        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
+           'masmorra', 'masmorra_vida', 'dragão',        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
+           'viagem', 'noticia', 'caixa', 'missao', 'rival', 'frente', 'semana', 'herdeiro', 'heranca', 'leilao', 'torneio', 'regiao', 'querer', 'investigar']      # os da etapa final (projeto/ETAPA_FINAL.md, seção 4)
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
-MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa', 'covil', 'masmorra_vida', 'dragão')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
+MUNDO_SOZINHO = ('virada', 'producao', 'consumo', 'ninhada', 'casa', 'covil', 'masmorra_vida', 'dragão', 'noticia', 'rival', 'frente', 'semana', 'regiao', 'querer')     # o mundo andando sozinho (o dia que vira, o lugar que produz e consome, o ermo que se refaz, quem descansou em casa): não é fato do turno, a não ser que alguém morra
 RETOMAR_FATOS = 40          # o teto de linhas de fatos no RETOMAR.md; passando disso, a primeira linha diz quantos ficaram de fora e como lê-los
 OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura', 'alquimia', 'encanto', 'arcano', 'fé', 'verde', 'pacto', 'manha']      # os ofícios que têm maestria e treino, como as armas
                             # (maestria.forja, treino.caça); da etapa da magia: a alquimia e o encanto (sobem pela tabela da forja) e as quatro tradições (sobem pela das armas);
                             # da etapa 4b: a manha, o ofício do ladino (sobe pela das armas)
-MODULOS = ['mercado', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas', 'masmorra', 'manha', 'povos', 'dragoes']
+MODULOS = ['mercado', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas', 'masmorra', 'manha', 'povos', 'dragoes',
+           'regiao', 'gente', 'missoes', 'rivais', 'frentes', 'caixa', 'noticias', 'viagem', 'diretor', 'cria']      # os da etapa final: a ordem é a da virada (projeto/ETAPA_FINAL.md, seção 5)
 # os módulos do mundo (o que ainda não existe fica de fora sem quebrar nada: estado.modulos). Cada um pode ter: virada(E) (roda quando o dia vira) · bloco(E, pid, esforco, dorme)
 # (os efeitos de UM bloco em quem age, vai junto ou espera: a volta da Mana) · vestiu(E, pid, iid) (depois de pôr uma peça em uso) · voce(E) (linhas no "Você" da MESA) · mesa(E) ·
 # so_mestre(E) (linhas para o SÓ O MESTRE) · retomar(E) (linhas para o RETOMAR.md) · recusa_fecha(E) (os motivos para o turno não fechar)
@@ -158,3 +160,24 @@ PORTAS = ('aberta', 'fechada', 'trancada', 'emperrada', 'arrombada')     # o est
 PORTA_MATERIAL = ('madeira', 'ferro', 'pedra')
 ALARME_MAX = 5              # o alarme da masmorra vai de 0 (quieta) a isto (acordada)
 ATENTOS = (-1, 0, 1)        # quem mora na sala: dormindo, à toa, alerta
+
+# ---------- a etapa final no estado (a região, a gente, a corrida, o medo, a história: projeto/ETAPA_FINAL.md; os números de cada módulo moram no tabelas_regiao) ----------
+POVOADOS = ('capital', 'cidade', 'vila', 'aldeia', 'posto')     # os lugares de povo da região (a estrada liga dois destes)
+ESTRADA_LONGE = (1, 6)      # os blocos de uma estrada
+SECOES_MUNDO = ('meta', 'casas', 'reinos', 'cronica', 'frentes', 'guildas', 'missoes', 'caixa', 'noticias', 'ranking', 'janela', 'oculto', 'leilao', 'torneio', 'seq')
+SECOES_LISTA = ('cronica', 'janela')                            # ['mundo', SECAO, 'junta', valor]
+SECOES_UNICAS = ('meta', 'ranking', 'leilao', 'torneio', 'oculto', 'seq')      # um registro só: ['mundo', SECAO, CAMPO, 'poe'|'soma', valor]
+SECOES_GERA = ('casas', 'reinos', 'cronica')                    # só o gerador (ou o Mestre) escreve a história
+FRENTE_TIPOS = ('ameaça', 'ambição', 'falta', 'mistério', 'calamidade', 'nêmesis')
+FRENTE_PASSOS = 6           # o relógio da frente: o passo 6 é o desfecho, sem volta
+FRENTE_FINS = ('desfecho', 'barrada')
+MISSAO_TIPOS = ('caça', 'entrega', 'limpar', 'matar', 'escolta', 'investigar')
+MISSAO_ESTADOS = ('aberta', 'tomada', 'cumprida', 'falhou', 'venceu')
+CAIXA_MAX = 7               # a caixa de entrada: o oitavo pedido força o mais velho (vale o padrão dele)
+LACOS = ('pai', 'mãe', 'filho', 'irmão', 'cônjuge', 'parente', 'aprendiz', 'mestre', 'jurado', 'amigo', 'rival', 'inimigo')
+HERDA_LACOS = ('filho', 'irmão', 'cônjuge', 'parente', 'aprendiz', 'jurado', 'pai', 'mãe')       # quem pode ser herdeiro: um destes laços do personagem com a pessoa
+MEMORIA_MAX = 12            # os fatos que um nomeado guarda (sai o de menor peso, o mais velho)
+MEMORIA_PESO = 5            # o peso de um fato vai de −5 a 5
+OPINIAO_MAX = 10            # a opinião de alguém sobre outro vai de −10 a 10 (a soma dos pesos)
+PAPEIS = ('senhor', 'capitão', 'guarda', 'ferreiro', 'coureiro', 'mercador', 'taverneiro', 'caçador', 'lenhador', 'mineiro', 'lavrador', 'pescador', 'curandeiro',
+          'sacerdote', 'mago', 'bruxa', 'druida', 'ladino', 'aprendiz', 'ancião', 'escriba', 'bardo', 'barqueiro', 'aventureiro', 'mestre de guilda', 'criança', 'nobre')
