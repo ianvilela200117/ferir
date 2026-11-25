@@ -25,7 +25,7 @@ Os módulos novos: `masmorra.py`, `manha.py`, `povos.py`, `dragoes.py`; as pági
 Os bancos novos (o `provas_mundo.py` roda os seis): `provas_4b.py` (o alicerce), `provas_masmorra.py`, `provas_manha.py`, `provas_povos.py`, `provas_dragoes.py` e `provas_fantasia.py` (a integração: o comando da vila, o povo do personagem, o covil pela masmorra, quem vê no escuro, a mina, o anão na pedra).
 
 O verificador independente conferiu a 4b e achou 13 defeitos; o acerto os consertou, com prova no banco (`MUDANCAS.md`, "Etapa 4b, segunda volta").
-**A próxima etapa:** a 3, a região que responde (`PROJETO.md`, seção 10).
+**Depois dela, a etapa final** (as etapas 3, 5, 6 e 7: a região, a corrida, o medo, a história e a criação): ver abaixo.
 
 ## A vila de teste do jogador (`ensaio/`)
 
@@ -40,3 +40,19 @@ Para retomar, de dentro de `motor10/`:
 4. jogar pelos comandos do `GUIA_VILA.md`; todo dado sai de script e rola uma vez;
 5. no fim: duas perguntas (`turno.py pergunta`), `turno.py fecha "o que houve"`, e commit e push.
 O que o jogador mandar mudar no motor vira regra no `REGRAS.md`, com linha no `MUDANCAS.md`, e só vale depois de os bancos passarem.
+
+## A etapa final (feita): a região que responde, a corrida, o medo, a história e a criação do personagem
+
+As estradas e a viagem, a gente com memória e o querer da semana, a notícia, a caixa, as missões (capítulos 21 a 23 do `REGRAS.md`); os 40 rivais, a conta rápida, o ranking,
+o torneio e o leilão (24); as frentes, a calamidade, o herdeiro e o nêmesis, o diretor (25); a história de 400 a 1.000 anos e o mundo gerado (26); a criação do personagem dentro
+de uma casa (27). O contrato: `projeto/ETAPA_FINAL.md`; as escolhas para o jogador rever: `projeto/etapa_final/DECISOES.md`.
+Os módulos novos: `tabelas_regiao`, `nomes`, `historia`, `gera`, `regiao`, `viagem`, `gente`, `noticias`, `caixa`, `missoes`, `frentes`, `rivais`, `conta`, `diretor`, `cria`;
+os bancos: `provas_regiao.py` (as peças) e `provas_ano.py` (o ano em 20 sementes e os robôs), os dois no `provas_mundo.py`.
+
+## O MUNDO NOVO (o jogo de verdade): `mundo/`
+
+**O mundo está pronto e o personagem ainda não nasceu.** É a semente 5 (a primeira que passou em todas as faixas do banco do ano). O guia do Mestre: `GUIA_MUNDO.md`.
+Para começar, de dentro de `motor10/` (o mundo novo é o padrão: sem `MOTOR10_MUNDO`):
+1. `python3 turno.py abre` mostra a MESA da criação: os povos, os seis berços (famílias do mundo) e os caminhos; as perguntas já estão abertas.
+2. O jogador responde por código ("1a.2c.3e.4r") e diz o nome: `python3 turno.py responde "..."` e `python3 cria.py nasce "..." nome=NOME`.
+3. Daí em diante, o turno de sempre (`GUIA_MUNDO.md`), e no fim de cada turno: `python3 turno.py fecha "o que houve" git`.

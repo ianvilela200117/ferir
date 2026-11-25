@@ -16,3 +16,22 @@ Onde o plano deixava aberto, ficou o padrão abaixo. Cada linha diz o que ficou,
 7. **A conta rápida da luta dos rivais** é uma curva (a chance pela diferença de força, a força tirada da ficha e das peças), afinada contra o `luta.py` no banco.
 8. **O herdeiro herda as peças que ficaram com o corpo e que o matador não levou** (a família recolhe), a casa, e a memória dos outros pela metade.
    O matador fica com o que o morto vestia. A outra saída: o herdeiro só herda o que estava guardado em casa (não há casa-cofre ainda).
+
+## O que a construção e a afinação decidiram (para rever)
+
+9. **A afinação pelo banco do ano** (os números no `tabelas_regiao.py`): a ousadia dos rivais (a chance mínima que aceitam: novato 25%, oficial 33%, veterano 50%, Lenda 60%);
+   a morte de quem perde a luta da conta rápida (70% vezes o quanto era ruim; quem vai junto, 60% disso); a caça para viver também mata (0,1% a 0,8% por semana); a guilda
+   recolhe o corpo, e o povo acha a peça de quem caiu (fora da cena do personagem); a forja do núcleo (o mestre ferreiro da capital com forja 6, o sinal de 40%, 8% do valor,
+   27 dias para a Épica); as frentes rolam contra 17 (3 a menos nos dois primeiros passos), a missão só barra no passo zero, o rival que investiga expõe (tira um passo) e não
+   barra; as duas faltas do Dia 1 saem de quatro (a seca, a mina, a praga do gado, o sal); a fome nasce com o celeiro abaixo de 8 dias. A outra saída de cada um: o número.
+10. **O torneio é só entre os rivais** (a conta rápida, um contra um). O personagem ainda não entra nele: entrar pede a luta de verdade, rodada a rodada, e fica para quando o
+    jogador quiser (a regra cabe: o convite pela caixa, a luta pelo `ato.py luta`).
+11. **O ferreiro aplicado da meta 9** (a primeira Épica entre os dias 60 e 85, a Única entre o 160 e o 220) segue medido fora do mundo, no `provas_oficio.py` (A ESCADA). No mundo,
+    a primeira Épica nova sai das mãos dos rivais no dia 42 (mediana de 20 anos).
+12. **A MESA e o RETOMAR cabem em uns 20 KB** (o plano dizia 14). O que pesa são as tabelas do mercado e da magia das etapas 2 e 4. Cortar é escolha de gosto.
+13. **O motor não sabe o gênero de ninguém:** o laço vai à mesa nas duas formas (pai/mãe, filho/filha, irmão/irmã), e o texto evita o gênero onde pode.
+14. **O nêmesis bicho:** quando quem matou não tem ficha (o bicho, o bando da estrada), o que o morto vestia fica guardado onde ele caiu (a toca, a estrada), e a frente do nêmesis
+    leva o nome do bicho ou do bando.
+15. **O dragão ancião:** dorme de 400 a 700 dias; a frente dele rola a cada 28 dias; no passo 6 ele acorda e passa a cobrar do lugar mais perto (a vida do dragão da etapa 4b).
+16. **O nível não sobe** (como em todas as etapas): o personagem começa no 5, e o que cresce é a mão, as peças, a fama, a casa.
+17. **A memória que se escreve sozinha** vem das missões, da caixa, da família, da luta ao lado na estrada e da herança; o resto da cena, o Mestre põe (`gente.py lembra`).

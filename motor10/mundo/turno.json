@@ -1,0 +1,89 @@
+{
+ "n": 2,
+ "aberto": {
+  "dia": 1,
+  "bloco": 2
+ },
+ "evento0": 448,
+ "dados": [],
+ "lutas": [],
+ "perguntas": [
+  {
+   "n": 1,
+   "texto": "Que povo? (o povo muda os atributos e dá os traços)",
+   "opcoes": {
+    "a": "humano",
+    "b": "anão",
+    "c": "elfo",
+    "d": "meio-orc",
+    "e": "pequenino",
+    "f": "gnomo"
+   },
+   "cria": "povo"
+  },
+  {
+   "n": 2,
+   "texto": "Que berço? (a família onde você nasce: `cria.py ofertas` conta cada uma)",
+   "opcoes": {
+    "a": "da casa dos Dorneles, Filipa (ferreiro) em Pedra Velha; parentes vivos: Berareu",
+    "b": "da casa dos Amado, Teresa (caçador) em Castro Real; parentes vivos: Erarina",
+    "c": "da casa dos Mota, Terinada (guarda) em Ribeira da Névoa",
+    "d": "da casa dos Pardo, Fausto (mercador) em Vale do Corvo",
+    "e": "criado no santuário por Zeno (sacerdote) em Ribeira da Névoa",
+    "f": "da casa dos Terigar, Orlando (senhor) em Várzea Brava; parentes vivos: Dalva"
+   },
+   "cria": "berco"
+  },
+  {
+   "n": 3,
+   "texto": "Que inclinação? (o caminho em que o dado do talento rola duas vezes)",
+   "opcoes": {
+    "a": "fio",
+    "b": "haste",
+    "c": "peso",
+    "d": "tiro",
+    "e": "forja",
+    "f": "couro",
+    "g": "caça",
+    "h": "coleta",
+    "i": "comércio",
+    "j": "cura",
+    "k": "alquimia",
+    "l": "encanto",
+    "m": "manha",
+    "n": "arcano",
+    "o": "fé",
+    "p": "verde",
+    "q": "pacto"
+   },
+   "cria": "inclinacao"
+  },
+  {
+   "n": 4,
+   "texto": "Se humano, a segunda inclinação? (outro caminho; quem não é humano responde \"r\")",
+   "opcoes": {
+    "a": "fio",
+    "b": "haste",
+    "c": "peso",
+    "d": "tiro",
+    "e": "forja",
+    "f": "couro",
+    "g": "caça",
+    "h": "coleta",
+    "i": "comércio",
+    "j": "cura",
+    "k": "alquimia",
+    "l": "encanto",
+    "m": "manha",
+    "n": "arcano",
+    "o": "fé",
+    "p": "verde",
+    "q": "pacto",
+    "r": "nenhuma"
+   },
+   "cria": "inclinacao2"
+  }
+ ],
+ "respondidas": [],
+ "notas": []
+}

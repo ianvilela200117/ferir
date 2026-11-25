@@ -1,5 +1,7 @@
 # MOTOR 10 — O PROJETO DO RESTO
 
+**Todas as etapas estão feitas** (a última, a etapa final: `projeto/ETAPA_FINAL.md`). O mundo novo está em `mundo/`, pronto para a criação do personagem (`LEIA.md`, `GUIA_MUNDO.md`).
+
 O núcleo está pronto e provado: a luta, os itens, a ficha que sai sozinha e os bichos (`REGRAS.md`, 80 de 80 no `provas.py`). As etapas 1 e 2 do mundo estão feitas, e o `provas_mundo.py` passa inteiro (98 de 98). Duas metas da etapa 2 foram fechadas por decisão do jogador (seção 12, 9 e 10): a Lendária é difícil de propósito, e a loja paga 40% pelas peças.
 Este é o plano do que falta até o Dia 1 de um **mundo novo, do zero**: o mundo vivo, a magia, os bichos, o ofício e o turno.
 Três projetos inteiros foram escritos de três ângulos (estão em `projeto/`, como rascunho). Aqui está o que ficou de cada um, com os números e as etapas.
@@ -130,12 +132,12 @@ Cada etapa acaba em algo que se joga, com as suas provas passando. Cada uma é m
 | --- | --- | --- |
 | 1. Um dia numa vila **(FEITA: 12 de 12 no `provas_mundo.py`)** | o gravador, o relógio, o corpo, os atos, a ferida que dura, `abre` e `fecha` | trabalhar, comer, dormir, treinar, lutar |
 | 2. Viver de um ofício **(FEITA: 80 de 80 no `provas.py`, com os bichos; 98 de 98 no `provas_mundo.py`; `estresse.py 1500` sem erro)** | estoque e preço, forjar e consertar, os bichos, a caça | viver de ferreiro ou de caçador. **A vila de teste** (fora do cânone): `vila_teste.py` e `GUIA_VILA.md` |
-| 3. A região que responde | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
+| 3. A região que responde **(FEITA, na etapa final: capítulos 21 a 23)** | mapa, viagem, nomeados com memória, notícia, caixa, missões | viajar, ter cliente, ter prazo |
 | 4. A magia, os dons e as criaturas **(FEITA, antes da 3, por decisão do jogador (12.13): 114 de 114 no `provas.py`; 148 de 148 no `provas_mundo.py`, duas vezes; `estresse.py 1500` sem erro)** | os dons e os talentos em todo caminho; a magia na luta (quatro tradições, 24 feitiços e o truque, nove traços novos, as fases do chefe); a alquimia, o encanto e as maldições; estudar, o voto, o laço e o pacto; 19 criaturas, 5 chefes mágicos e os covis (capítulos 10 a 16 do `REGRAS.md`) | o mago, o clérigo, o druida, a bruxa, a poção, a maldição, a peça encantada, o goblin e a toca. **A vila de teste com a magia:** `vila_teste.py magia PASTA` |
 | 4b. As masmorras e o mundo de fantasia **(FEITA, antes da 3, por decisão do jogador (12.16), e conferida pelo verificador independente: 114 de 114 no `provas.py`; 225 de 225 no `provas_mundo.py`, duas vezes; `estresse.py 1500` sem erro; a vila de teste ganha a etapa com `vila_teste.py fantasia`)** | as masmorras (salas, portas, armadilhas, o escuro, o tesouro e o chefe no fundo); o ladino (andar escondido, abrir fechadura, desarmar armadilha); os dragões de verdade, com covil e tesouro; os povos para o personagem (anão, elfo, meio-orc e outros da fantasia comum) | descer numa masmorra com um grupo, roubar o covil do dragão, nascer anão ou elfo |
-| 5. A corrida | rivais, guildas, ranking, torneio, leilão, a janela do mundo | disputar |
-| 6. O medo | frentes, calamidade, a morte e o herdeiro, nêmesis, diretor | perder |
-| 7. A história e o ano de prova | o gerador que roda de 400 a 1.000 anos, 20 sementes, a calibração, a criação do personagem dentro de uma casa | **o Dia 1** |
+| 5. A corrida **(FEITA, na etapa final: capítulo 24; a conta rápida erra 5 pontos)** | rivais, guildas, ranking, torneio, leilão, a janela do mundo | disputar |
+| 6. O medo **(FEITA, na etapa final: capítulo 25)** | frentes, calamidade, a morte e o herdeiro, nêmesis, diretor | perder |
+| 7. A história e o ano de prova **(FEITA, na etapa final: capítulos 26 e 27; o banco do ano passa em 20 sementes; o mundo de verdade é `mundo/`, semente 5)** | o gerador que roda de 400 a 1.000 anos, 20 sementes, a calibração, a criação do personagem dentro de uma casa | **o Dia 1** |
 
 ## 11. Riscos
 

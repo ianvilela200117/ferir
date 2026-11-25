@@ -1056,7 +1056,7 @@ def _magia_erro(E, p, campo, v):
     if campo == 'dom': return None if isinstance(v, dict) and len(v) <= 1 and all(k in TT.CAMINHOS and _int(g) and g in TT.DOM for k, g in v.items()) else 'o dom é {caminho: 1 ou 2}, num caminho só ({}: sem dom)'
     if campo == 'inclinacao':
         if v is not None and v not in TT.CAMINHOS: return f'a inclinação é um caminho ({", ".join(TT.CAMINHOS)})'
-        return None if v is None or p.get('jogador') else 'só o personagem do jogador tem inclinação'
+        return None if v is None or p.get('jogador') or p.get('estado') == 'morto' else 'só o personagem do jogador tem inclinação'      # o personagem que morreu (e passou a vez ao herdeiro) guarda a dele
     if campo == 'mana': return None if _num(v) and 0 <= v <= mana_max(p) else f'a Mana vai de 0 a {mana_max(p)}'
     if campo == 'feiticos': return None if isinstance(v, list) and all(x in T.FEITICOS for x in v) and len(set(v)) == len(v) else 'os feitiços sabidos são uma lista de nomes da tabela (tabelas.FEITICOS), sem repetir'
     if campo == 'tradicao': return None if v is None or v in T.TRADICOES else f'a tradição é uma de: {", ".join(T.TRADICOES)}'
@@ -1112,7 +1112,7 @@ def _pessoa4b_erro(E, p, campo, v):
         return None if mx is None or v <= mx else f'{p.get("nome", "?")} não vive {v} anos: o povo {povo(p)} vive até {mx}'
     if campo == 'inclinacao2':
         if v not in TT.CAMINHOS: return f'a segunda inclinação é um caminho ({", ".join(TT.CAMINHOS)})'
-        if not p.get('jogador'): return 'só o personagem do jogador tem inclinação'
+        if not p.get('jogador') and p.get('estado') != 'morto': return 'só o personagem do jogador tem inclinação'
         if povo(p) != 'humano': return 'a segunda inclinação é só do personagem humano (E2 b)'
         if v == p.get('inclinacao'): return 'a segunda inclinação é outro caminho, não o da primeira'
     return None

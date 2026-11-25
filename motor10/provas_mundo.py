@@ -618,12 +618,14 @@ def main():
                          ('provas_magia', 'etapa da magia: o mundo da magia'), ('provas_criaturas', 'etapa da magia: as criaturas e a vila'),
                          ('provas_4b', 'etapa 4b: o alicerce (o vocabulário comum: os campos, os verbos, os invariantes; o despojo pela categoria; o 17º caminho; a luta de quem tem o traço)'),
                          ('provas_masmorra', 'etapa 4b: a masmorra'), ('provas_manha', 'etapa 4b: o ladino'), ('provas_povos', 'etapa 4b: os povos'), ('provas_dragoes', 'etapa 4b: os dragões'),
-                         ('provas_fantasia', 'etapa 4b: a integração (vila_teste.py fantasia, povo=, o covil pela masmorra, quem vê no escuro, a mina)')):     # os que ainda não existem ficam de fora
+                         ('provas_fantasia', 'etapa 4b: a integração (vila_teste.py fantasia, povo=, o covil pela masmorra, quem vê no escuro, a mina)'),
+                         ('provas_regiao', 'etapa final: as peças (o gravador novo, o mundo gerado, a história, a viagem, a notícia, a caixa, a missão, a gente, as frentes, o diretor, a conta rápida, a criação, o herdeiro, o turno)'),
+                         ('provas_ano', 'etapa final: o ano (364 dias sem personagem em 20 sementes, e os robôs em 3)')):     # os que ainda não existem ficam de fora
         try: mod = importlib.import_module(nome)
         except ModuleNotFoundError as e:
             if e.name != nome: raise
             continue
-        print(f'\n{titulo}\n'); mais = mod.provas(n); res += mais
+        print(f'\n{titulo}\n'); mais = mod.provas(20, 3) if nome == 'provas_ano' else mod.provas(n); res += mais
         for nm, deu, passa in mais: print(f"  {'passa' if passa else 'FALHA'}  {nm}: {deu}")
     print(f'\n{sum(p for _, _, p in res)} de {len(res)} provas passam.')
     return all(p for _, _, p in res)

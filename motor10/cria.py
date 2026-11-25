@@ -185,14 +185,15 @@ def herda(E):
             if not it or it.get('dono'): continue
             if mat in E['gente'] and E['gente'][mat]['estado'] == 'vivo': ef.append(['item', iid, 'dono', 'poe', mat])
             elif it.get('solto'): ef.append(['item', iid, 'solto', 'poe', None])        # o bicho, o bando: a peça fica guardada onde ele mora
-    fica = [i for i, it in E['itens']['itens'].items() if it.get('corpo') == eu and it.get('solto') and not it.get('dono') and i not in vestia]
+    levou = vestia if mat else set()                         # sem matador (a fome, a maldição, a queda), nada foi levado
+    fica = [i for i, it in E['itens']['itens'].items() if it.get('corpo') == eu and it.get('solto') and not it.get('dono') and i not in levou]
     ef += [['item', i, 'dono', 'poe', h] for i in fica]
     for k, q in E['gente'].items():                          # a memória que os outros têm do morto passa ao herdeiro, pela metade
         if k in (eu, h) or q.get('estado') != 'vivo': continue
         v, _ = gente.opiniao(E, k, eu)
         if abs(v) >= 2: ef += gente.lembra(E, k, h, f"é do sangue de {p['nome']}", v // 2)
     if p.get('casa') and E['gente'][h].get('casa') != p['casa']: ef.append(['pessoa', h, 'casa', 'poe', p['casa']])
-    ef += [['pessoa', eu, 'jogador', 'poe', None], ['pessoa', h, 'jogador', 'poe', True]]
+    ef += [['pessoa', eu, 'herdeiro', 'poe', None], ['pessoa', eu, 'jogador', 'poe', None], ['pessoa', h, 'jogador', 'poe', True]]
     estado.aplica(E, 'heranca', ef, onde=E['gente'][h]['lugar'], quem=[h], texto=f"{E['gente'][h]['nome']} herda de {p['nome']}: a casa, {len(fica)} peças, e os amigos e os inimigos dele")
     if mat: frentes.nemesis(E, h, mat if mat in E['gente'] else f"esp:{mat}@{onde}", onde or E['gente'][h]['lugar']); L.append(f"Quem matou {p['nome']} vira o nêmesis da casa.")
     return f"O jogo segue com {E['gente'][h]['nome']} ({estado.em(E, E['gente'][h]['lugar'])})." + (' ' + ' '.join(L) if L else '')

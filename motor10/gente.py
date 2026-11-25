@@ -211,7 +211,7 @@ def _q_pede_materia(E, pid, p, rs):
     import caixa, mercado
     eu = estado.eu(E)
     if not eu or E['gente'][eu]['estado'] != 'vivo' or E['gente'][eu]['lugar'] != p['lugar'] or estado.fora(E, eu): return
-    if opiniao(E, pid, eu)[0] < -2 or E['lugares'][p['lugar']]['estoque'].get('metal:0', 0) >= 6: return
+    if opiniao(E, pid, eu)[0] < -2 or E['lugares'][p['lugar']]['estoque'].get('metal:0', 0) >= mercado.alvo(E, p['lugar'], 'metal:0') * 0.5: return      # o motivo: a loja com menos da metade do metal que quer ter
     n = 3; paga = int(n * mercado.preco(E, p['lugar'], 'metal:0') * 1.3) + 2; prazo = E['relogio']['dia'] + rs.randint(*R.CAIXA_PRAZO)
     rival = next((k for k in _vivos_nomeados(E) if k != pid and E['gente'][k]['papel'] in ('mineiro', 'mercador') and E['gente'][k]['lugar'] == p['lugar']), None)
     efs = dict(a=[['pessoa', eu, 'carga.metal:0', 'soma', -n], ['estoque', p['lugar'], 'metal:0', 'soma', n], ['pessoa', pid, 'moedas', 'soma', -paga], ['pessoa', eu, 'moedas', 'soma', paga]] + lembra(E, pid, eu, 'me trouxe o metal quando faltou', 2),

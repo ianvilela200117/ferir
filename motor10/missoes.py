@@ -71,8 +71,9 @@ def contra_frente(E, pid, lid):
     import regiao
     perto = regiao.saltos(E, lid)
     for fid, f in (E['mundo'].get('frentes') or {}).items():
-        if f.get('fim') or f.get('onde') is None or perto.get(regiao_lugar(E, f['onde']), 99) > 2 or f['passo'] < 1: continue
-        tipo = {'mistério': 'investigar'}.get(f['tipo'], 'matar' if f.get('alvo_missao') == 'matar' else f.get('alvo_missao') or 'investigar')
+        if f.get('fim') or f.get('onde') is None or perto.get(regiao_lugar(E, f['onde']), 99) > 2 or f['passo'] < 2: continue
+        tipo = 'matar' if f.get('exposta') and f.get('barra') == 'dono' else {'mistério': 'investigar'}.get(f['tipo'], 'matar' if f.get('alvo_missao') == 'matar' else f.get('alvo_missao') or 'investigar')
+        if tipo == 'investigar' and f.get('exposta'): continue      # o que já veio à luz não se investiga de novo
         alvo = f.get('alvo') or fid
         if posta(E, pid, lid, tipo, alvo, frente=fid, nome_alvo=f.get('nome_alvo') or f['nome'], cat=f.get('cat', 1)): return
 
@@ -123,7 +124,7 @@ def confere(E, mid, pid):
     if t == 'escolta':
         q = E['gente'].get(m.get('quem_vai')) or {}; return q.get('lugar') == a and q.get('estado') == 'vivo' and E['gente'][pid]['lugar'] == a, f"{q.get('nome', '?')} está {estado.em(E, q['lugar']) if q.get('lugar') in E['lugares'] else '?'}"
     if t == 'investigar':
-        oc = E['mundo'].get('oculto') or {}; k = sum(1 for c in oc if c.startswith(f"frente.{m.get('frente') or a}.")) if pid == estado.eu(E) else 0
+        oc = E['mundo'].get('oculto') or {}; k = sum(1 for c in oc if c.startswith(f"frente/{m.get('frente') or a}/")) if pid == estado.eu(E) else 0
         return k >= 2, f"{k} de 2 coisas descobertas"
     return False, '?'
 
@@ -138,7 +139,7 @@ def cumpre(E, mid, pid, tipo_ev='missao', frase=None):
         ef += [['pessoa', pid, f"carga.{m['alvo']}", 'soma', -m['n']]] + ([['pessoa', de, f"carga.{m['alvo']}", 'soma', m['n']]] if de in E['gente'] else [['estoque', de, m['alvo'], 'soma', m['n']]])
     if de in E['gente']: ef += gente.lembra(E, de, pid, f"cumpriu a missão que eu paguei ({texto_curto(E, m)})", 3)
     ef += noticias.nova(E, m['onde'], f"{E['gente'][pid]['nome']} cumpriu a missão {estado.de(E, m['onde'])}: {texto(E, m)}", 1, ('missão',))
-    estado.aplica(E, tipo_ev, ef, onde=m['onde'], quem=[pid] + ([de] if de in E['gente'] else []), texto=frase or f"{E['gente'][pid]['nome']} cumpre a missão {mid}: {texto(E, m)} ({paga} de prata)")
+    estado.aplica(E, tipo_ev, ef, onde=m['onde'], quem=[pid] + ([de] if de in E['gente'] and E['gente'][de]['estado'] == 'vivo' else []), texto=frase or f"{E['gente'][pid]['nome']} cumpre a missão {mid}: {texto(E, m)} ({paga} de prata)")
     if m.get('frente'):
         try: import frentes; frentes.recua(E, m['frente'], f"a missão {mid} cumprida por {E['gente'][pid]['nome']}")
         except (ModuleNotFoundError, AttributeError): pass
@@ -189,7 +190,7 @@ def virada(E):
         else:
             q = m['quem']; ef = [['mundo', 'missoes', mid, 'estado', 'poe', 'falhou']]
             if q in E['gente'] and E['gente'][q]['estado'] == 'vivo': ef += [['pessoa', q, 'fama', 'soma', R.MISSAO_FALHA[0]]] + (gente.lembra(E, m['de'], q, 'não cumpriu a missão no prazo', R.MISSAO_FALHA[1]) if m['de'] in E['gente'] else [])
-            estado.aplica(E, 'missao', ef, onde=m['onde'], quem=[q] if q in E['gente'] else [], texto=f"a missão {mid} falhou: o prazo passou")
+            estado.aplica(E, 'missao', ef, onde=m['onde'], quem=[q] if q in E['gente'] and E['gente'][q]['estado'] == 'vivo' else [], texto=f"a missão {mid} falhou: o prazo passou")
     for mid, m in list(todas(E).items()):                   # o quadro guarda pouco do que acabou: o que acabou há mais de 60 dias sai
         if m['estado'] not in ('aberta', 'tomada') and hoje - max(m['prazo'], m['desde']) > 60:
             estado.aplica(E, 'missao', [['mundo', 'missoes', mid, 'poe', None]], texto=f"a missão {mid} sai do quadro")

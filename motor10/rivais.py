@@ -93,7 +93,7 @@ def virada(E):
         for pid in sorted(rivais(E), key=lambda k: -E['gente'][k]['nivel']):
             p = E['gente'].get(pid)
             if p and p['estado'] == 'vivo' and not plano(p) and not estado.fora(E, pid): escolhe(E, pid)
-        ranking(E)
+        ranking(E); acha(E)
     if (hoje - 1) % M.ESTACAO == 0 and hoje > 1: novos(E)
     if hoje % R.RIVAL['leilao_cada'] == R.RIVAL['leilao_dia']: leilao(E)
     if (hoje - 1) % M.ANO + 1 == R.RIVAL['torneio_dia']: torneio(E)
@@ -112,12 +112,15 @@ def escolhe(E, pid):
     if p['pv'] < estado.pv_max(p) * 0.7 or p.get('feridas'):
         return _marca_plano(E, [pid], dict(o_que='descansa', ate=hoje + 7), f"{p['nome']} descansa a semana")
     nuc = next((i for i, it in E['itens']['itens'].items() if it.get('dono') == pid and it.get('tipo') == 'nucleo' and it['cat'] >= 3), None)
-    if nuc: return _marca_plano(E, [pid], dict(o_que='forja', alvo=nuc, ate=hoje + R.RIVAL['forja_dias']), f"{p['nome']} leva o núcleo ao ferreiro da capital")
-    perto = regiao.saltos(E, regiao_lugar(E, p['lugar'])); op = []
+    if nuc:                                                 # a peça do núcleo: só quem tem a prata da obra a manda fazer (senão, junta antes)
+        import mercado, itens
+        cat = E['itens']['itens'][nuc]['cat']; custo = int(mercado.valor(itens.item('arma', cat, familia='espada')) * R.RIVAL['forja_paga'])
+        if p['moedas'] >= custo * R.RIVAL['forja_sinal']: return _marca_plano(E, [pid], dict(o_que='forja', alvo=nuc, ate=hoje + 3 ** cat), f"{p['nome']} leva o núcleo ao ferreiro da capital")
+    perto = regiao.saltos(E, regiao_lugar(E, p['lugar'])); op = []; longe = R.RIVAL['longe'][faixa(p)]
     for mid, m in missoes.abertas(E).items():                # as missões do quadro, ao alcance (a que já não tem alvo, ninguém toma)
-        if perto.get(m['onde'], 99) > R.RIVAL['longe'] or m['tipo'] in ('entrega', 'escolta'): continue
+        if perto.get(m['onde'], 99) > longe or m['tipo'] in ('entrega', 'escolta'): continue
         if m['tipo'] == 'investigar':                        # investigar não é luta: a chance é a do olho (a Percepção e a manha)
-            c = min(0.9, 0.3 + (p['atributos']['Percepção'] - 50) / 100 + 0.08 * (p.get('maestria') or {}).get('manha', 0))
+            c = min(0.8, R.RIVAL['olho'] + (p['atributos']['Percepção'] - 50) / 100 + 0.06 * (p.get('maestria') or {}).get('manha', 0))
             if c >= ous: op.append((c * (m['paga'] + 12 * R.MISSAO_FAMA['investigar']), 'missao', mid, c))
             continue
         if m['tipo'] == 'limpar' and (E['lugares'].get(m.get('alvo')) or {}).get('limpa'): continue
@@ -126,17 +129,17 @@ def escolhe(E, pid):
         c = chance_contra(E, ids, B)
         if c >= ous: op.append((c * (m['paga'] + 12 * R.MISSAO_FAMA[m['tipo']]), 'missao', mid, c))
     for mid, m in E['lugares'].items():                      # as masmorras que ninguém limpou, ao alcance
-        if m.get('tipo') != 'masmorra' or m.get('limpa') or m.get('molde') == 'covil' or perto.get(regiao_lugar(E, mid), 99) > R.RIVAL['longe']: continue
+        if m.get('tipo') != 'masmorra' or m.get('limpa') or m.get('molde') == 'covil' or perto.get(regiao_lugar(E, mid), 99) > longe: continue
         cs = [chance_contra(E, ids, ameaca_nivel(E, mid, nv, rs)) for nv in m['niveis'][:3]]
         c = math.prod(cs) if cs else 0
         valor = sum(estado.livre(E, s_).get('prata', 0) for nv in m['niveis'] for s_ in nv['salas']) + 150 * len(m['niveis']) + 400
         if c >= ous * 0.8: op.append((c * valor, 'masmorra', mid, c))
     for e, l in E['lugares'].items():                        # o chefe do ermo (o núcleo)
-        if l.get('tipo') != 'ermo' or perto.get(regiao_lugar(E, e), 99) > R.RIVAL['longe']: continue
+        if l.get('tipo') != 'ermo' or perto.get(regiao_lugar(E, e), 99) > longe: continue
         for esp, q in (l.get('bichos') or {}).items():
             if q >= 1 and (estado.especie(esp) or {}).get('chefe') and estado.especie(esp).get('cat', 0) >= 3:
                 c = chance_contra(E, ids, _bando(esp, 1, rs))
-                if c >= ous: op.append((c * (300 * estado.especie(esp)['cat'] + 100), 'chefe', f'{e}|{esp}', c))
+                if c >= ous and (p.get('fama') or 0) >= R.RIVAL['chefe_fama']: op.append((c * (300 * estado.especie(esp)['cat'] + 100), 'chefe', f'{e}|{esp}', c))
     if op:
         op.sort(reverse=True); _, tipo, alvo, c = op[0]
         if tipo == 'missao':
@@ -188,17 +191,45 @@ def _perde(E, ids, c, onde, rs, oque):
     mortos = []
     for k in ids:
         q = E['gente'][k]
-        if rs.random() < R.RIVAL['morre'] * (1 - c):
+        if rs.random() < R.RIVAL['morre'] * (1 - c) * (1 if k == ids[0] else R.RIVAL['morre_junto']):
             ef = [['pessoa', k, 'lugar', 'poe', q['lugar']]]
             if onde in E['lugares'] and E['lugares'][onde].get('tipo') in ('ermo', 'sala', 'estrada'): ef = [['pessoa', k, 'lugar', 'poe', onde]]      # morre lá: o que levava fica lá
             ef.append(['pessoa', k, 'estado', 'poe', 'morto']); lenda = q['nivel'] >= 120
             txt = f"{q['nome']}, {'a Lenda' if lenda else 'aventureiro'}{', ' + E['mundo']['guildas'][q['guilda']]['nome'] if q.get('guilda') in (E['mundo'].get('guildas') or {}) else ''}, morreu {estado.em(E, onde)} ({oque})"
             ef += noticias.nova(E, onde, txt, 3 if lenda else 2, ('morte', 'rival'), janela=lenda, ja=ef) + ([['mundo', 'janela', 'junta', dict(dia=E['relogio']['dia'], texto=txt)]] if lenda else [])
             estado.aplica(E, 'rival', ef, onde=onde, quem=[k], texto=txt); mortos.append(k)
+            _recolhe(E, k, q.get('guilda'))
         elif rs.random() < R.RIVAL['fere']:
             dano = -int(estado.pv_max(q) * rs.uniform(0.3, 0.7))
             estado.aplica(E, 'rival', [['pessoa', k, 'pv', 'soma', dano], ['ferida', k, 'abre', rs.choice(T.PARTES), rs.random() < 0.3]], onde=q['lugar'], quem=[k], texto=f"{q['nome']} volta ferido")
     return mortos
+
+
+def _recolhe(E, morto, gid):
+    """a guilda recolhe o corpo de quem morreu e as peças que ficaram com ele (o líder vivo da guilda fica com elas); sem guilda, ficam onde ele caiu"""
+    if not gid: return
+    vivos = [k for k in rivais(E) if E['gente'][k].get('guilda') == gid]
+    if not vivos: return
+    lider = max(vivos, key=lambda k: E['gente'][k]['nivel'])
+    ef = [['item', i, 'dono', 'poe', lider] for i, it in E['itens']['itens'].items() if it.get('corpo') == morto and it.get('solto') and not it.get('dono')]
+    if ef: estado.aplica(E, 'rival', ef, onde=E['gente'][lider]['lugar'], quem=[lider], texto=f"a guilda recolhe o corpo de {E['gente'][morto]['nome']}, e {E['gente'][lider]['nome']} fica com as peças dele")
+
+
+def acha(E):
+    """FORA DA CENA, O QUE FICOU COM UM CORPO NÃO FICA PARA SEMPRE: na semana, a peça boa (Rara ou maior) caída junto do corpo de alguém, num lugar que não é sala de masmorra
+    (onde quem limpa a leva), vai para o rival mais forte que mora ali ou a uma estrada dali (achou, ou comprou do povo que achou). Perto do personagem, não: lá é cena do Mestre."""
+    import regiao, noticias
+    eu = estado.eu(E); perto_eu = set()
+    if eu and E['gente'][eu]['estado'] == 'vivo': o = noticias.origem(E, estado.onde(E, eu)); perto_eu = {estado.onde(E, eu), o} | set(regiao.saltos(E, o, so_abertas=False)) if o else {estado.onde(E, eu)}
+    for iid, it in list(E['itens']['itens'].items()):
+        lid = it.get('onde')
+        if not it.get('solto') or not it.get('corpo') or it['cat'] < 2 or it.get('dono') or not lid or E['lugares'].get(lid, {}).get('tipo') == 'sala' or lid in perto_eu: continue
+        o = noticias.origem(E, lid); sal = regiao.saltos(E, o, so_abertas=False) if o else {}
+        cands = [k for k in rivais(E) if sal.get(E['gente'][k]['lugar'], 99) <= 1 and not estado.fora(E, k)]
+        if not cands: continue
+        k = max(cands, key=lambda x: (E['gente'][x]['nivel'], x))
+        estado.aplica(E, 'rival', [['item', iid, 'dono', 'poe', k], ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: achada com um corpo {estado.em(E, lid)}, passa a {E['gente'][k]['nome']}"]],
+                      onde=lid, quem=[k], texto=f"{E['gente'][k]['nome']} fica com {it['nome']}, que estava com um corpo {estado.em(E, lid)}")
 
 
 def _r_descansa(E, pid, ids, pl):
@@ -209,7 +240,10 @@ def _r_descansa(E, pid, ids, pl):
 
 
 def _r_caca(E, pid, ids, pl):
-    p = E['gente'][pid]; rs = estado.sorte(E, f'rival|caca|{pid}'); lid = p['lugar']; v = rs.randint(*R.RIVAL['caca_rende'])
+    p = E['gente'][pid]; rs = estado.sorte(E, f'rival|caca|{pid}'); lid = p['lugar']
+    if rs.random() < R.RIVAL['caca_morre'][faixa(p)]:          # a caça para viver também mata (a decisão 11: a de começo mata um em cada cinco por mês)
+        return _perde(E, [pid], 0.0, lid, rs, 'caçando para viver')
+    v = rs.randint(*R.RIVAL['caca_rende'])
     v = int(min(v, E['lugares'][lid]['estoque'].get('prata', 0) * 0.02))
     if v > 0: estado.aplica(E, 'rival', [['estoque', lid, 'prata', 'soma', -v], ['pessoa', pid, 'moedas', 'soma', v], ['estoque', lid, 'couro:0', 'soma', 2]], onde=lid, quem=[pid], texto=f"{p['nome']} vende o que caçou")
 
@@ -220,10 +254,10 @@ def _r_missao(E, pid, ids, pl):
     if not m or m['estado'] != 'tomada' or m.get('quem') != pid: return
     rs = estado.sorte(E, f"rival|missao|{pl['alvo']}")
     if m['tipo'] == 'investigar':                            # o olho, e não a espada: abre o que a frente esconde (dois campos), ou volta sem nada
-        q = E['gente'][pid]; c = min(0.9, 0.3 + (q['atributos']['Percepção'] - 50) / 100 + 0.08 * (q.get('maestria') or {}).get('manha', 0)); fid = m.get('frente')
+        q = E['gente'][pid]; c = min(0.8, R.RIVAL['olho'] + (q['atributos']['Percepção'] - 50) / 100 + 0.06 * (q.get('maestria') or {}).get('manha', 0)); fid = m.get('frente')
         if rs.random() < c and fid:
             estado.aplica(E, 'rival', [['mundo', 'frentes', fid, 'exposta', 'poe', dict(dia=E['relogio']['dia'], quem=pid)]], quem=[pid], texto=f"{q['nome']} descobre o que há por trás da frente")
-            missoes.cumpre(E, pl['alvo'], pid, tipo_ev='rival')
+            missoes.cumpre(E, pl['alvo'], pid, tipo_ev='rival')        # a missão cumprida tira um passo (o missoes.cumpre faz o recua); a frente exposta perde o segredo: agora se caça o dono
         else: missoes.larga(E, pid, pl['alvo'])
         return
     B = _ameaca_missao(E, m, rs)
@@ -284,8 +318,8 @@ def _limpa(E, pid, ids, mid, rs, ate=None):
             livre = estado.livre(E, s).get('prata', 0)
             if livre: ef.append(['estoque', s, 'prata', 'soma', -livre]); prata += livre
             if isinstance(l.get('guardado'), dict) and not l['guardado'].get('aberto'): ef.append(['lugar', s, 'guardado', 'poe', dict(l['guardado'], aberto=True)])
-            for iid, it in E['itens']['itens'].items():
-                if it.get('onde') == s and not it.get('solto') and it.get('tipo') != 'chave':
+            for iid, it in E['itens']['itens'].items():          # o tesouro guardado, e o que ficou com o corpo de quem caiu ali antes (fora da cena, quem limpa leva)
+                if it.get('onde') == s and it.get('tipo') != 'chave' and (not it.get('solto') or it.get('corpo')):
                     ef.append(['item', iid, 'dono', 'poe', pid]); ef.append(['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: tirada {estado.de(E, mid)} por {E['gente'][pid]['nome']}"])
         vivos = [k for k in ids if E['gente'][k]['estado'] == 'vivo']
         if prata and vivos:
@@ -334,7 +368,7 @@ def _r_forja(E, pid, ids, pl):
     if not nu or nu.get('dono') != pid: return
     cap = next((k for k, l in E['lugares'].items() if l.get('tipo') == 'capital'), p['lugar'])
     ferr = max((k for k, q in E['gente'].items() if q.get('papel') == 'ferreiro' and q['estado'] == 'vivo' and q['lugar'] == cap), key=lambda k: (E['gente'][k].get('maestria') or {}).get('forja', 0), default=None)
-    ma = (E['gente'][ferr].get('maestria') or {}).get('forja', 4) if ferr else 4; ch = R.RIVAL['forja_chance'].get(ma, 0.25)
+    ma = (E['gente'][ferr].get('maestria') or {}).get('forja', 4) if ferr else 4; ch = R.RIVAL['forja_chance'].get(ma, 0.25) * (0.75 ** max(0, nu['cat'] - 3))      # cada categoria acima do Épico, mais difícil
     rs = estado.sorte(E, f"rival|forja|{pid}|{pl['alvo']}"); x = rs.random(); cat = nu['cat']
     usa = next((it for it in pecas_em_uso(E, pid) if it['tipo'] in ('arma', 'foco')), None)
     novo_cat = cat if x < ch else cat - 1 if x < ch + 0.25 else None
@@ -342,8 +376,8 @@ def _r_forja(E, pid, ids, pl):
     if novo_cat is not None:
         kw = dict(familia=usa.get('familia')) if usa and usa['tipo'] == 'arma' else dict(familia='espada')
         it = itens.item('arma', novo_cat, f"{(usa or {}).get('familia', 'espada').capitalize()} de {p['nome']}", dono=pid, historia=[f"Dia {E['relogio']['dia']}: forjada na capital com um núcleo, para {p['nome']}"], **kw)
-        paga = int(min(p['moedas'], mercado.valor(it) * R.RIVAL['forja_paga'])); s0 = E['itens']['seq']
-        ef += [['item', 'nasce', it]] + ([['item', usa['id'], 'uso', 'poe', None]] if usa else []) + [['item', f"i{s0 + 1:04d}", 'uso', 'poe', 'arma']]
+        paga = int(min(p['moedas'], mercado.valor(itens.item('arma', nu['cat'], familia='espada')) * R.RIVAL['forja_paga'])); s0 = E['itens']['seq']
+        ef += [['item', 'nasce', it]] + [['item', x['id'], 'uso', 'poe', None] for x in pecas_em_uso(E, pid) if x.get('uso') == 'arma'] + [['item', f"i{s0 + 1:04d}", 'uso', 'poe', 'arma']]
         if paga and ferr: ef += [['pessoa', pid, 'moedas', 'soma', -paga], ['pessoa', ferr, 'moedas', 'soma', paga]]
         txt = f"o ferreiro da capital forja para {p['nome']} uma peça {T.CATS[novo_cat]}"
         if novo_cat >= 4: ef += [['mundo', 'janela', 'junta', dict(dia=E['relogio']['dia'], texto=f"Nasce uma peça {T.CATS[novo_cat]}: {it['nome']}")]] + noticias.nova(E, cap, f"Nasce uma peça {T.CATS[novo_cat]}: {it['nome']}, de {p['nome']}", 3, ('janela', 'peça'), janela=True)

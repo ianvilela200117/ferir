@@ -138,7 +138,7 @@ class Gerador:
             dono = next((cid for cid, c in H['casas'].items() if c['viva'] and c['sede'] == p['id']), H['rei'])
             self.ap([['lugar', p['id'], 'casa', 'poe', dono], ['lugar', p['id'], 'reino', 'poe', 'r_hoje']], f"{p['nome']} é dos {H['casas'][dono]['nome'][3:]}")
         self.L.append(f"A história: {H['anos']} anos, do ano {H['inicio']} ao {H['ano0']}; {len(H['casas'])} casas nobres ({sum(not c['viva'] for c in H['casas'].values())} caíram), "
-                      f"{len(H['reinos'])} reinos, {len(H['guerras'])} guerras, {len(H['lendas'])} lendas mortas; {len(H['cronica'])} linhas de crônica.")
+                      f"{estado.tantos(len(H['reinos']), 'reino')}, {estado.tantos(len(H['guerras']), 'guerra')}, {estado.tantos(len(H['lendas']), 'lenda morta', 'lendas mortas')}; {len(H['cronica'])} linhas de crônica.")
 
     # ---------- 5. as masmorras ----------
     def plano_masmorras(self):
@@ -264,7 +264,11 @@ class Gerador:
                     fam = next((x for x in (self.r.choice(NM.CASA_COMUM) for _ in range(30)) if f'os {x}' not in usados_aqui), self.r.choice(NM.CASA_COMUM))      # o sobrenome se repete pela região, não no mesmo lugar
                     cid = slug('c ' + fam + ' ' + lid, set(self.E['mundo'].get('casas') or {}))
                     self.ap([['mundo', 'casas', cid, 'poe', dict(nome=f'os {fam}', tipo='comum', sede=lid, fundada=H['ano0'] - self.r.randint(20, 200), viva=True)]], f"a família dos {fam} {de_nome(p['nome'])}")
-                    reg, pecas = self._registro(pid, nome, pp, lid, povo, casa=cid); self._nasce(pid, reg, pecas)
+                    extra = dict(maestria={'forja': 6, 'martelo': 2}, grau_oficio='mestre', sobre='o mestre ferreiro da capital; faz a peça de núcleo para quem traz') if pp == 'ferreiro' and p['tipo'] == 'capital' and not any(
+                        g.get('papel') == 'ferreiro' and g['lugar'] == lid for g in self.E['gente'].values()) else None
+                    reg, pecas = self._registro(pid, nome, pp, lid, povo, casa=cid, extra=extra)
+                    if extra: import vila_teste; reg['treino'] = vila_teste.treino_da_mao(reg['maestria'])
+                    self._nasce(pid, reg, pecas)
                     self._familia(pid, reg, lid, cid, povo)
         n = sum(1 for g in self.E['gente'].values() if not g.get('rival'))
         self.L.append(f"A gente com nome: {n} pessoas, em {len(self.E['mundo']['casas'])} casas e famílias.")
@@ -287,11 +291,9 @@ class Gerador:
     # ---------- 8. os rivais e as guildas ----------
     def rivais(self):
         r = self.r; H = self.H; sedes = [p['id'] for p in self.pts if p['tipo'] == 'capital'] * 3 + [p['id'] for p in self.pts if p['tipo'] == 'cidade'] * 2
-        gs = []; nomes_g = set()
+        gs = []; pre = r.sample(R.GUILDA_NOMES[0], R.GUILDAS); suf = r.sample(R.GUILDA_NOMES[1], R.GUILDAS)      # nenhuma parte do nome se repete entre as guildas
         for k in range(R.GUILDAS):
-            while True:
-                nm = f"{r.choice(R.GUILDA_NOMES[0])} {r.choice(R.GUILDA_NOMES[1])}"
-                if nm not in nomes_g: nomes_g.add(nm); break
+            nm = f"{pre[k]} {suf[k]}"
             gid = slug('g ' + nm, set(self.E['mundo'].get('guildas') or {})); sede = sedes[k % len(sedes)]
             self.ap([['mundo', 'guildas', gid, 'poe', dict(nome=nm, sede=sede, lider=None, fama=0)]], f"{nm}, a guilda de {self.E['lugares'][sede]['nome']}"); gs.append(gid)
         faixas = []
@@ -317,7 +319,7 @@ class Gerador:
             mt = T.maestria_tipica(nivel); ma = {mae: max(2, mt)} if mae else {}
             if mag and mae != mag.get('tradicao'): ma[mag['tradicao']] = max(2, mt)
             if mae == 'adaga': ma['manha'] = max(2, mt)
-            fama = {'novato': r.randint(0, 6), 'oficial': r.randint(10, 45), 'veterano': r.randint(60, 160), 'Lenda': r.randint(260, 330)}[diz]
+            fama = {'novato': r.randint(0, 6), 'oficial': r.randint(10, 45), 'veterano': r.randint(60, 160), 'Lenda': r.randint(290, 300)}[diz]
             reg = dict(nome=nome, nivel=nivel, atributos=at, lugar=lugar, grau_oficio='oficial', maestria=ma, treino=vila_teste.treino_da_mao(ma), moedas=r.randint(10, 40) * (1 + nivel // 10),
                        sobre=f"aventureiro{'' if diz == 'novato' else ' ' + ('veterano' if diz == 'veterano' else 'de ofício' if diz == 'oficial' else 'de lenda')}" + (f", {self.E['mundo']['guildas'][guilda]['nome']}" if guilda else ', anda sozinho'),
                        papel='aventureiro', rival=True, fama=fama, guilda=guilda)
@@ -363,13 +365,13 @@ class Gerador:
         self.dragao_jovem = (serra['id'], nome_j, alvo['id'])
         cov = next(m for m in self.masm_plano if m['molde'] == 'covil'); sala = self.fundo(cov['id']); d = dict(self.E['lugares'][sala].get('dragao') or {})
         if d:
-            d['dorme_ate'] = r.randint(*R.CALAMIDADE['dorme']); d['nome'] = r.choice(['a Montanha que Dorme', 'o Sono da Serra', 'a Velha Brasa', 'o Pai das Cinzas'])
+            d['dorme_ate'] = r.randint(*R.CALAMIDADE['dorme']); d['nome'] = r.choice(['a Montanha que Dorme', 'o Sono da Serra', 'a Fome da Serra', 'o Pai das Cinzas'])
             self.ap([['lugar', sala, 'dragao', 'poe', d]], 'o dragão ancião dorme no covil')
         self.calamidade = (cov['id'], sala, d.get('nome'))
         for esp, hab, cab in R.COVIS:
             e = next((x for x in self.ermos_pts if x['habitat'] == hab), None)
             if e and not self.E['lugares'][e['id']].get('covil'): criaturas.poe_covil(self.E, e['id'], esp, cabecas_=cab, tesouro=r.randint(15, 40), tipo='gera', como='um covil do Dia 1')
-        self.L.append(f"Os dragões: {nome_j} (jovem) na {serra['nome'].split(' ', 1)[-1]}, cobra de {alvo['nome']}; {d.get('nome', '?')} (ancião) dorme {NM.em(cov['nome'])}.")
+        self.L.append(f"Os dragões: {nome_j} (jovem) {NM.em(serra['nome'])}, cobra de {alvo['nome']}; {d.get('nome', '?')} (ancião) dorme {NM.em(cov['nome'])}.")
 
     def pecas_altas(self):
         H = self.H; r = self.r; vets = [k for k in self.rival_ids if 50 <= self.E['gente'][k]['nivel'] <= 100]; vi = 0; postos = []
@@ -385,12 +387,13 @@ class Gerador:
             elif hoje == 'calamidade': onde = self.calamidade[1]
             if dono is None and onde is None: onde = self.fundo(self.masm_id[r.choice(list(self.masm_id))])
             hist = [f"Ano {d['ano']}: " + (f"{d['quem']} " if d['quem'] else '') + d['como'] for d in it['donos']]
+            ult_ano = it['donos'][-1]['ano']; depois = lambda a: max(ult_ano, min(H['ano0'], a))       # a última linha nunca vem antes da que já está escrita
             if dono:
                 g = self.E['gente'][dono]; ult = it['donos'][-1]
-                hist.append(f"Ano {H['ano0'] - r.randint(1, 15)}: {g['nome']} " + ('a achou' if ult['quem'] is None else r.choice(['a herdou', 'a comprou', 'a tomou de quem a tinha', 'a ganhou'])) + ', e a tem hoje')
-            elif hoje == 'dragao': hist.append(f"Ano {H['ano0'] - r.randint(1, 30)}: foi parar no tesouro {de_nome(self.dragao_jovem[1])}")
-            elif hoje == 'calamidade': hist.append(f"Ano {H['ano0'] - r.randint(100, 300)}: jaz sob {self.calamidade[2] or 'o dragão'}, que dorme sobre o tesouro")
-            elif it['donos'][-1]['quem'] is not None: hist.append(f"Ano {H['ano0'] - r.randint(5, 80)}: perdeu-se {NM.em(self.E['lugares'][self.E['lugares'][onde].get('masmorra', onde)]['nome'])}, com quem a levava")
+                hist.append(f"Ano {depois(H['ano0'] - r.randint(1, 15))}: {g['nome']} " + ('a achou' if ult['quem'] is None else r.choice(['a herdou', 'a comprou', 'a tomou de quem a tinha', 'a ganhou'])) + ', e a tem hoje')
+            elif hoje == 'dragao': hist.append(f"Ano {depois(H['ano0'] - r.randint(1, 30))}: foi parar no tesouro {de_nome(self.dragao_jovem[1])}")
+            elif hoje == 'calamidade': hist.append(f"Ano {depois(H['ano0'] - r.randint(100, 300))}: jaz sob {self.calamidade[2] or 'o dragão'}, que dorme sobre o tesouro")
+            elif it['donos'][-1]['quem'] is not None: hist.append(f"Ano {depois(H['ano0'] - r.randint(5, 40))}: perdeu-se {NM.em(self.E['lugares'][self.E['lugares'][onde].get('masmorra', onde)]['nome'])}, com quem a levava")
             kw = dict(familia=it['qual']) if it['tipo'] == 'arma' else dict(material=it['qual']) if it['tipo'] == 'armadura' else dict(forma=it['qual']) if it['tipo'] == 'foco' else {}
             reg = item(it['tipo'], it['cat'], it['nome'][0].upper() + it['nome'][1:], dono=dono, onde=None if dono else onde, historia=hist, **kw)
             if dono and reg['tipo'] == 'armadura' and TP.POVOS[estado.povo(self.E['gente'][dono])]['corpo'] == 'miúdo': reg['talhe'] = 'miúdo'

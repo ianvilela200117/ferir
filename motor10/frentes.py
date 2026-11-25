@@ -153,7 +153,7 @@ def recua(E, fid, porque):
     """a missão contra a frente foi cumprida: um passo atrás; no zero (tendo andado), barrada"""
     f = todas(E).get(fid)
     if not f or f.get('fim'): return
-    if f['passo'] <= 1: return barra(E, fid, porque)
+    if f['passo'] <= 0: return barra(E, fid, porque)       # no zero, a missão a acaba; antes, tira um passo
     estado.aplica(E, 'frente', [['mundo', 'frentes', fid, 'passo', 'soma', -1]], onde=f['onde'], texto=f"a frente {fid} recua um passo: {porque}")
 
 
@@ -166,9 +166,9 @@ def _barrada(E, fid, f):
         if lp:
             if b == 'limpa' and str(f['dono']).startswith('guilda:') and any(E['gente'].get(q, {}).get('guilda') == str(f['dono']).split(':', 1)[1] for q in lp.get('quem') or []): return None
             return 'a masmorra foi limpa'
-    if b == 'investigado':                                  # o personagem abriu três campos, ou alguém (um rival) a expôs
+    if b == 'investigado':                                  # o personagem abriu os quatro campos
         oc = E['mundo'].get('oculto') or {}
-        if f.get('exposta') or sum(1 for c in oc if c.startswith(f'frente.{fid}.')) >= 3: return 'o que ela escondia veio à luz'
+        if sum(1 for c in oc if c.startswith(f'frente/{fid}/')) >= len(R.INVESTIGA['campos']): return 'o que ela escondia veio à luz'
     if b == 'farto':
         import regiao
         if regiao.dias_de_comida(E, f['onde']) > 30: return 'o celeiro encheu de novo'
@@ -185,7 +185,7 @@ def virada(E):
         if (hoje - f['desde']) % cada != 0 or hoje == f['desde']: continue
         rs = estado.sorte(E, f'frente|{fid}|rola|{hoje}'); l = E['lugares'][f['onde']]
         t = sum(rs.randint(1, FR['dado'][1]) for _ in range(FR['dado'][0])) + f['forca']
-        contra = FR['contra'] + (l.get('resiste') or 0) + (l.get('guarda') or 0) // FR['resiste_guarda']
+        contra = FR['contra'] + (l.get('resiste') or 0) + (l.get('guarda') or 0) // FR['resiste_guarda'] - (FR['comeco'] if f['passo'] < 2 else 0)
         if t >= contra: passo(E, fid)
 
 
@@ -253,13 +253,16 @@ def gera(E, r):
     funda = sorted((k for k, l in Ls.items() if l.get('tipo') == 'masmorra' and l.get('molde') in ('ruína', 'mina', 'cripta') and not l.get('limpa')), key=lambda k: -Ls[k]['niveis'][-1]['cat'])
     if gs and funda:
         g = max(gs, key=lambda x: gs[x].get('fama', 0)); feitas.append(nasce(E, 'guilda', f'guilda:{g}', perto_de(funda[0]), alvo=funda[0], cat=Ls[funda[0]]['niveis'][-1]['cat']))
-    # 9 a seca: a vila que mais produz comida; 10 a mina: o posto
-    vilas = [k for k in pov if Ls[k]['tipo'] in ('vila', 'aldeia')]
-    if vilas: k = max(vilas, key=lambda x: (Ls[x].get('produz') or {}).get('comida', 0)); feitas.append(nasce(E, 'seca', f'lugar:{k}', k, alvo='comida', cat=0))
-    postos = [k for k in pov if Ls[k]['tipo'] == 'posto']
-    if postos: k = r.choice(sorted(postos)); feitas.append(nasce(E, 'mina', f'lugar:{k}', k, alvo='ferramenta', cat=0))
+    # 9 e 10 as duas faltas: sorteadas entre a seca (a vila que mais produz comida), a mina (o posto) e a praga do gado (uma aldeia)
+    vilas = [k for k in pov if Ls[k]['tipo'] in ('vila', 'aldeia')]; postos = [k for k in pov if Ls[k]['tipo'] == 'posto']
+    for molde in r.sample(R.FALTAS_DIA1, 2):
+        if molde == 'seca' and vilas: k = max(vilas, key=lambda x: (Ls[x].get('produz') or {}).get('comida', 0)); feitas.append(nasce(E, 'seca', f'lugar:{k}', k, alvo='comida', cat=0))
+        elif molde == 'mina' and postos: k = r.choice(sorted(postos)); feitas.append(nasce(E, 'mina', f'lugar:{k}', k, alvo='ferramenta', cat=0))
+        elif molde == 'praga' and vilas: k = r.choice(sorted(vilas)); feitas.append(nasce(E, 'praga', f'lugar:{k}', k, alvo='couro:0', cat=0))
+        elif molde == 'sal' and vilas: k = r.choice(sorted(vilas)); feitas.append(nasce(E, 'sal', f'lugar:{k}', k, alvo='sal', cat=0))
     # 11 os sumiços: uma aldeia; o que leva a gente é um lobisomem posto no ermo vizinho
-    ald = [k for k in pov if Ls[k]['tipo'] == 'aldeia']
+    ald = [k for k in pov if Ls[k]['tipo'] == 'aldeia' and any(Ls.get(v, {}).get('tipo') == 'ermo' for v in Ls[k].get('vizinhos') or [])] \
+        or [k for k in pov if Ls[k]['tipo'] in ('aldeia', 'vila', 'posto') and any(Ls.get(v, {}).get('tipo') == 'ermo' for v in Ls[k].get('vizinhos') or [])]
     if ald:
         k = r.choice(sorted(ald)); er = next((v for v in Ls[k].get('vizinhos') or [] if Ls.get(v, {}).get('tipo') == 'ermo'), None)
         if er:
@@ -280,7 +283,7 @@ def gera(E, r):
 # ---------- o que se sabe ----------
 def sabe(E, pid, fid):
     oc = E['mundo'].get('oculto') or {}
-    return [c.split('.')[-1] for c in oc if c.startswith(f'frente.{fid}.')]
+    return [c.split('.')[-1] for c in oc if c.startswith(f'frente/{fid}/')]
 
 
 def conhecidas(E, pid):
@@ -292,7 +295,7 @@ def conhecidas(E, pid):
             fid = next((t for t in tags if t in todas(E)), None)
             if fid: out[fid] = max(out.get(fid, 0), n['dia'])
     for c in (E['mundo'].get('oculto') or {}):
-        if c.startswith('frente.'): out.setdefault(c.split('.')[1], 0)
+        if c.startswith('frente/'): out.setdefault(c.split('/')[1], 0)
     return out
 
 
@@ -314,7 +317,7 @@ def investigar(E, pid, fid):
     rs = estado.sorte(E, f'investiga|{pid}|{fid}|{estado.agora(E)}'); ma = (p.get('maestria') or {}).get('manha', 0)
     t = rs.randint(1, 20) + rs.randint(1, 20) + p['atributos']['Percepção'] // 10 + ma + corpo.pena(p, estado.agora(E)); contra = R.INVESTIGA['contra'] + R.INVESTIGA['cat'] * f.get('cat', 1)
     ok = t >= contra; c = falta[0]
-    ato.passa(E, pid, 1, 'investigar', esforco='leve', texto=f"{p['nome']} investiga {f['publico']}", mais=lambda i: [['mundo', 'oculto', f'frente.{fid}.{c}', 'poe', E['relogio']['dia']]] if ok else [])
+    ato.passa(E, pid, 1, 'investigar', esforco='leve', texto=f"{p['nome']} investiga {f['publico']}", mais=lambda i: [['mundo', 'oculto', f'frente/{fid}/{c}', 'poe', E['relogio']['dia']]] if ok else [])
     return f"Investigou ({t} contra {contra}): " + (f"descobriu {dict(passo='o relógio dela', dono='quem está por trás', meta='o que ela quer', onde='o centro dela')[c]}. {diz(E, pid, fid)}" if ok else 'não achou nada de novo.')
 
 

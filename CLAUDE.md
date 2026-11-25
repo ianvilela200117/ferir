@@ -3,6 +3,11 @@
 Esta pasta é o SAVE de um RPG solo. Você é o MESTRE. O jogador é o dono deste repositório e joga em português.
 Este arquivo é lido sozinho no começo de cada sessão. Ele aponta para as regras; as regras mesmo estão nos arquivos abaixo.
 
+## O mundo novo (Motor 10): o outro jogo desta pasta
+Se o jogador falar do MUNDO NOVO, do Motor 10, ou de começar/jogar o personagem novo: o save é `motor10/mundo/` e as regras de sessão estão em `motor10/LEIA.md`
+(seção "O MUNDO NOVO") e em `motor10/GUIA_MUNDO.md`. Ali não vale nada deste arquivo sobre o Ferir; vale o mesmo cuidado: todo dado sai de script, rola uma vez, e
+no fim de cada turno, commit e push no ramo da sessão. Os comandos rodam de dentro de `motor10/`.
+
 ## Ao abrir a sessão (antes de responder qualquer coisa do jogo)
 1. Leia `MESTRE.md` inteiro (as instruções do Mestre e as regras do jogador).
 2. Leia `protocolo_do_turno.md` inteiro: as regras da casa **G1 a G45** valem sempre (G39: os encadeamentos do `encadeia.py`; G40: o foco com feitiço que o rei não sabe; G41: os forçados nos piores trabalhos; G42: a história que morde; G43: a ordem do grão; G44: o aviso do servo; G45: a história como livro).
