@@ -4492,6 +4492,26 @@
     "castro_do_sal": [
      3,
      2
+    ],
+    "ermida_verde": [
+     4,
+     3
+    ],
+    "souto_negro": [
+     4,
+     3
+    ],
+    "pedra_velha": [
+     4,
+     3
+    ],
+    "vale_do_corvo": [
+     4,
+     3
+    ],
+    "ribeira_da_nevoa": [
+     4,
+     3
     ]
    },
    "janela": false
@@ -4540,6 +4560,18 @@
     "penha_das_rosas": [
      3,
      2
+    ],
+    "souto_negro": [
+     4,
+     3
+    ],
+    "varzea_brava": [
+     4,
+     3
+    ],
+    "pedra_verde": [
+     4,
+     3
     ]
    },
    "janela": false
@@ -4592,6 +4624,22 @@
     "castro_real": [
      3,
      2
+    ],
+    "ermida_verde": [
+     4,
+     3
+    ],
+    "varzea_da_nevoa": [
+     4,
+     3
+    ],
+    "ribeira_do_lobo": [
+     4,
+     3
+    ],
+    "coval_do_vento": [
+     4,
+     3
     ]
    },
    "janela": false

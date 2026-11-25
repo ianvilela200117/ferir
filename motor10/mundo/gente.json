@@ -10042,14 +10042,14 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 58,
+   "forja": 61,
    "martelo": 40
   },
-  "moedas": 36,
+  "moedas": 39,
   "corpo": {
    "fome": 2,
    "sono": 0,
-   "cansaco": 4
+   "cansaco": 1
   },
   "pv": 111,
   "feridas": [],
@@ -10063,15 +10063,15 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 2,
-   "pesados": 4,
-   "jornada_dia": 2,
+   "pesados_dia": 3,
+   "pesados": 3,
+   "jornada_dia": 3,
    "jornada": 2,
    "cama": {
-    "ate": 18,
+    "ate": 24,
     "onde": "pedra_velha"
    },
-   "ensino_incomum": 4
+   "ensino_incomum": 7
   },
   "carga": {
    "metal:0": 3,
