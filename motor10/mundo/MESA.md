@@ -120,6 +120,7 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 2. A missão de Nora no quadro (matar 3 lobos na Charneca dos Sinos, 19 de prata, até o Dia 9)?  **a)** deixa passar: o lobo em bando vale grau C a B para quem vai sozinho, e o golpe dele vale o triplo em armadura Comum · **b)** pergunta na vila quem iria junto (Nora, que caça; Osorino, da guarda) e o que pedem, sem tomar ainda · **c)** toma a missão e vai à Charneca
 
 ## SÓ O MESTRE
+- nota: Regra de cena do Mestre (Dia 2): se o jogador pedir, Filipa ensina a receita do Incomum em 10 blocos de bancada junto dela (contados da jornada e da prática na forja de Pedra Velha); feitos os 10, registrar: oficio.py preparo receita Incomum "Filipa ensinou na forja da casa". Na taverna (Dia 1), Félix contou: Ribeira da Névoa (3 blocos) tem forja de cidade e mesa de runas, e Várzea da Névoa também; Vale do Corvo, a capital, tem a grande forja e a oficina de runas, e o mestre Simão; ninguém que ele conheça vive de gravar runas. Erado contou: Pedra Velha foi saqueada nas guerras de 781, 869 e 957; Brarku, que fez forjar o Malho do Silêncio, morreu aqui em 1165.
 - a contagem na Charneca dos Sinos: corça 80/80 · lobo 12/12 · lobisomem 1/1 · acaso 1% por bloco
 - talento e dom de Filipa: Lerdo em arcano
 - talento e dom de Berareu: Jeitoso em fio, Prodígio em tiro, Jeitoso em caça, Jeitoso em manha, Lerdo em pacto
