@@ -1,0 +1,4 @@
+início: Dia 29 · 26 de prata · forja 136 · metal Incomum (1.22, 12)
+Dia 29: prata 26 → 35 · forja 139 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.18, 13)
+    notícia: - Dia 30 (de Souto Negro): Acham um corpo sem sangue em Souto Negro (Irino morreu)
+PAROU: notícia que toca Ferord: - Dia 30 (de Souto Negro): Acham um corpo sem sangue em Souto Negro (Irino morreu)

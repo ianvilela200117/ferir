@@ -1,0 +1,10 @@
+1a: O que Ferord junta agora (0 de prata; uns 9 por dia na jornada de oficial; a rotina segue até a prata da obra, parando no primeiro sinal de coisa que peça escolha)? → o jogo de forja Incomum, de novo: 2 de metal e 1 de madeira Incomum (uns 64 hoje: uns 8 dias); 80%; se sair obra-prima, afinado, +3 nas obras Incomuns e +2 nas Raras
+2b: O Segundo Jogo de Forja de Ferord (Comum, sem afinar: não soma nada além do primeiro)? → dá a Adelaide, a aprendiz da casa
+3a: As histórias dos mestres ferreiros e das peças de nome (Erado não lembrou ontem)? → pergunta a Filipa, que é ferreira: um teste dela, rolado uma vez (2d20 + 5 da Percepção + 5 do ofício contra 25: passa umas três vezes em quatro)
+$ estado.py mestre (o Segundo Jogo de Forja vai para Adelaide)
+evento #2242 (mestre): Ferord dá o Segundo Jogo de Forja de Ferord a Adelaide, a aprendiz · 2 efeitos
+$ gente.py lembra adelaide ... 1
+feito.
+$ python3 teste.py "Filipa lembra as histórias dos mestres ferreiros e das peças de nome" Percepção contra=25 mais=5 quem=filipa
+#1 Filipa, Filipa lembra as histórias dos mestres ferreiros e das peças de nome: 6 e 1, +5 de Percepção, +5 = 17 contra 25: FALHA
+(saída 0)

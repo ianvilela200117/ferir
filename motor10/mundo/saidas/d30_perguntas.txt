@@ -1,0 +1,2 @@
+pergunta 1 aberta: é o número dela na lista do RETOMAR, e é com ele que o jogador responde (1a, 1b...). Até este turno fechar, o caderno a guarda como 4.
+pergunta 2 aberta: é o número dela na lista do RETOMAR, e é com ele que o jogador responde (2a, 2b...). Até este turno fechar, o caderno a guarda como 5.

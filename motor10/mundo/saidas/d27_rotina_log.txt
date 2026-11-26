@@ -1,0 +1,8 @@
+início: Dia 27 · 8 de prata · forja 130 · metal Incomum (1.22, 12)
+Dia 27: prata 8 → 17 · forja 133 · corpo {'fome': 3, 'sono': 2, 'cansaco': 0} · metal Incomum (1.22, 12)
+Dia 28: prata 17 → 26 · forja 136 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.22, 12)
+    (só o Mestre) frente: a frente f05 (a ambição dos Astolan) anda ao passo 2: a casa junta prata
+    (só o Mestre) frente: a frente f11 (os sumiços da Charneca dos Sinos) anda ao passo 2: acham um corpo sem sangue
+    (só o Mestre) a frente f05 foi do passo 1 ao 2
+    (só o Mestre) a frente f11 foi do passo 1 ao 2
+PAROU: (só o Mestre) a frente f11, os sumiços da Charneca, andou ao passo 2

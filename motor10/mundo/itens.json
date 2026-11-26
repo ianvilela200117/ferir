@@ -1,5 +1,5 @@
 {
- "seq": 683,
+ "seq": 690,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12794,13 +12794,148 @@
    "efeitos": [],
    "historia": [
     "Dia 25: Ferord forjou em Pedra Velha; a obra era Incomum e a peça saiu Comum",
-    "Dia 25: a obra era Incomum e saiu Comum; o Mestre troca o nome que dizia Incomum"
+    "Dia 25: a obra era Incomum e saiu Comum; o Mestre troca o nome que dizia Incomum",
+    "Dia 26: Ferord deu o jogo de forja a Adelaide, a aprendiz da casa"
    ],
-   "dono": "eu",
+   "dono": "adelaide",
    "onde": null,
    "feito_por": "eu",
    "dia": 25,
    "id": "i0683",
+   "uso": null
+  },
+  "i0684": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "machado",
+   "id": "i0684",
+   "uso": null
+  },
+  "i0685": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0685",
+   "uso": null
+  },
+  "i0686": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0686",
+   "uso": null
+  },
+  "i0687": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0687",
+   "uso": null
+  },
+  "i0688": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "castro_do_sal",
+   "familia": "adaga",
+   "id": "i0688",
+   "uso": null
+  },
+  "i0689": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_verde",
+   "familia": "espada",
+   "id": "i0689",
+   "uso": null
+  },
+  "i0690": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_brava",
+   "familia": "adaga",
+   "id": "i0690",
    "uso": null
   }
  },

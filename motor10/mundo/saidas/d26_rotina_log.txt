@@ -1,0 +1,2 @@
+início: Dia 26 · 0 de prata · forja 127 · metal Incomum (1.18, 13)
+PAROU: "ato.py dormir 3" PAROU: Ferord está com fome

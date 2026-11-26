@@ -13,7 +13,7 @@ DIA_MAX = int(sys.argv[2]) if len(sys.argv) > 2 else 18
 VILA = {'filipa', 'berareu', 'felix', 'adelaide', 'osorino', 'nora', 'paio', 'tania', 'erado'}
 PALAVRAS = ('Pedra Velha', 'Charneca', 'metal', 'ferreir', 'forja', 'Dorneles', 'Sinos', 'Filipa', 'Souto Negro', 'some na')
 BENIGNOS = {'producao', 'consumo', 'virada', 'noticia', 'regiao', 'semana', 'trabalhar', 'comer', 'dormir', 'querer', 'descansar'}
-PAROU_OK = ('no limite das forças', 'acorda com o sono em dia')
+PAROU_OK = ('no limite das forças', 'acorda com o sono em dia', 'está com fome')
 
 
 def roda(cmd):
@@ -58,6 +58,11 @@ while not parar:
         for pq in re.findall(r'PAROU: ([^\n]+)', out):
             if not any(ok in pq for ok in PAROU_OK): parar = f'"{cmd}" PAROU: {pq}'
         if parar: break
+    if not parar and 'está com fome' in out:        # a fome acordou no meio da noite (o dia começou faminto): come de novo e volta a dormir
+        rc, o2 = roda('ato.py comer'); import estado as _e0; import importlib as _il; _il.reload(_e0); R0 = _e0.carrega()['relogio']
+        resto = (2 - R0['bloco']) % 6
+        if rc == 0 and resto: rc, out = roda(f'ato.py dormir {resto}')
+        if rc != 0: parar = f'a fome da noite: {o2[-200:]}'
     if not parar:                                   # a noite vai até as 8h: quem acordou descansado antes disso fica na cama, descansando
         import estado as _e; import importlib; importlib.reload(_e); R = _e.carrega()['relogio']
         falta = (2 - R['bloco']) % 6
