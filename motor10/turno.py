@@ -89,9 +89,23 @@ def _aqui(E):
           f"- dormir: {f'cama por {M.CAMA_PRECO} de prata, ' + ('e a sua está ' + cama + '; ' if cama else f'que vale {M.CAMA_VALE} blocos (um dia) a contar de quando se paga; ') if l.get('cama') else ''}"
           f"cada bloco tira {-M.SONO_CAMA} de sono e de cansaço (no chão, {-M.SONO_CHAO}) e devolve PV (`ato.py dormir N`)",
           f"- trabalhar ({of}): {M.SALARIO[of]} de prata por bloco, esforço {M.ESFORCO_OFICIO[of]}; a jornada são {M.JORNADA} blocos pagos por dia (hoje: {feito} de {M.JORNADA}) (`ato.py trabalhar N`)",
-          f"- treinar com uma arma: esforço pesado; a maestria sobe aos {', '.join(_mil(v) for v in M.MAESTRIA_BLOCOS.values())} blocos (`ato.py treinar N ARMA`)",
+          _treinar_arma(p),
           "- descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)"]
     return L
+
+
+def _treinar_arma(p):
+    """a linha do treino de arma: a escada de todos e, em cada mão de arma em que o talento já apareceu, a da pessoa (talento.escada: antes de aparecer, só o Mestre
+    sabe, 10.6); onde o talento para a mão, diz até onde ela vai"""
+    import talento
+    suas = []
+    for c in talento.TT.MAOS:
+        if not talento.aparece(p, c): continue
+        esc = talento.escada(p, c, M.MAESTRIA_BLOCOS); q = [esc[g] for g in sorted(esc)]
+        suas.append(f"{talento.TT.O_QUE[c].split(' (')[0]} aos {', '.join(_mil(v) for v in q if v is not None)}"
+                    + (f", e a mão não passa de {pessoas.T.MAESTRIAS[talento.teto(p, c)]}" if None in q else ''))
+    return (f"- treinar com uma arma: esforço pesado; a maestria sobe aos {', '.join(_mil(M.MAESTRIA_BLOCOS[g]) for g in sorted(M.MAESTRIA_BLOCOS))} blocos"
+            + (f" (com o seu talento: {'; '.join(suas)})" if suas else '') + " (`ato.py treinar N ARMA`)")
 
 
 QUEM_AQUI = 16          # quantos nomes o "Quem está aqui" diz (a vila de teste com a etapa 4b tem 16 pessoas além do personagem: o Quim tem de aparecer)

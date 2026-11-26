@@ -727,7 +727,10 @@ def ver(E, pid):
     maos = []
     for of in ('forja', 'couro'):
         if not (mao(p, of) or bancada(p, of)) and of != 'forja': continue
-        prox = next((f'{T.MAESTRIAS[g]} aos {q}' + (f' e uma obra {FEM[O.FEITO_OBRA[g]]}' if g in O.FEITO_OBRA else '') for g, q in sorted(O.OFICIO_BLOCOS.items()) if g > mao(p, of)), 'o topo')
+        esc = talento.escada(p, of, O.OFICIO_BLOCOS)           # a escada como a pessoa a conhece: com o talento, se ele já apareceu; antes, a de todos (10.6)
+        g = next((g for g in sorted(esc) if g > mao(p, of)), None)
+        prox = ('o topo' if g is None else f'a mão não passa de {T.MAESTRIAS[talento.teto(p, of)]}' if esc[g] is None
+                else f'{T.MAESTRIAS[g]} aos {esc[g]}' + (f' e uma obra {FEM[O.FEITO_OBRA[g]]}' if g in O.FEITO_OBRA else ''))
         maos.append(f"{of} {T.MAESTRIAS[mao(p, of)]} ({tantos(bancada(p, of), 'bloco')} de bancada; {prox})")
     L.append('Mão: ' + ' · '.join(maos)); L.append('Preparo (+2 cada, na obra que ele alcança): ' + _diz_preparos(E, pid))
     f = ferramentas(E, pid, 'forja'); vm, vt, fc = valor_ferramentas(E, pid, 'forja')

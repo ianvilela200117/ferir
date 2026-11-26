@@ -314,8 +314,9 @@ def _abre(E, pid, quer, ermo, alvo, blocos, com=()):
         if nome not in K.COLETA or cat is None or cat > M.MATERIA_ATE: sys.exit(f'não se coleta "{alvo}" (coleta-se: {", ".join(n + ":0" for n in K.COLETA)}; o número é a categoria, de 0 a {M.MATERIA_ATE})')
         if alvo not in coleta_teto(E, ermo): sys.exit(f"{_cap(l['nome'])} não dá {_bem(alvo)}" + (f" (dá: {', '.join(_bem(b) for b in coleta_teto(E, ermo))})" if coleta_teto(E, ermo) else ''))
         if coleta_pede(p, alvo) is not None:
-            pede = K.COLETA_BLOCOS[coleta_pede(p, alvo)]; tem = (p.get('treino') or {}).get('coleta', 0)
-            sys.exit(f"{p['nome']} não tem mão para tirar {_bem(alvo)}: pede {T.MAESTRIAS[coleta_pede(p, alvo)]} em coleta ({pede} blocos de coleta" + (f"; {p['nome']} tem {tem:g}: {_s(pede - tem, 'falta', 'faltam')} {pede - tem:g}" if tem < pede else '')
+            g = coleta_pede(p, alvo); pede = talento.escada(p, 'coleta', K.COLETA_BLOCOS)[g]; tem = (p.get('treino') or {}).get('coleta', 0)      # a escada que a pessoa conhece (10.6)
+            if pede is None: sys.exit(f"{p['nome']} não tem mão para tirar {_bem(alvo)}: pede {T.MAESTRIAS[g]} em coleta, e a mão de {p['nome']} não passa de {T.MAESTRIAS[talento.teto(p, 'coleta')]} (o talento)")
+            sys.exit(f"{p['nome']} não tem mão para tirar {_bem(alvo)}: pede {T.MAESTRIAS[g]} em coleta ({pede} blocos de coleta" + (f"; {p['nome']} tem {tem:g}: {_s(pede - tem, 'falta', 'faltam')} {pede - tem:g}" if tem < pede else '')
                      + f"); a mão de {p['nome']} é de {T.MAESTRIAS.get(mao(p, 'coleta'), mao(p, 'coleta'))}")
     try: n = K.PROCURA if blocos is None else int(blocos)
     except ValueError: n = 0

@@ -249,10 +249,9 @@ def na_vila(E, vila='vila'):
 
 # ---------- a mesa ----------
 def _degraus(p):
-    """a escada da manha como a pessoa a conhece: com o talento, se ele já apareceu; senão, a de tabela"""
+    """a escada da manha como a pessoa a conhece: com o talento, se ele já apareceu; senão, a de tabela (a mesma regra de toda escada que vai à mesa: talento.escada)"""
     import talento
-    sabe = talento.aparece(p, 'manha')
-    return {g: (talento.pede(p, 'manha', M.MAESTRIA_BLOCOS, g) if sabe else q) for g, q in M.MAESTRIA_BLOCOS.items()}
+    return talento.escada(p, 'manha', M.MAESTRIA_BLOCOS)
 
 
 def _pc(x): return f'{100 * x:.0f}%'

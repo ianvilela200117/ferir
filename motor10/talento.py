@@ -39,6 +39,13 @@ def pede(p, chave, tabela, g):
     return None if g > teto(p, chave) else TT.blocos(tabela[g], grau(p, chave))
 
 
+def escada(p, chave, tabela):
+    """a escada de maestria ({grau: blocos}) COMO A PESSOA A CONHECE, para o que vai à mesa: a dela (a do `pede`: o grau que passa do teto, None) se o talento do
+    caminho já apareceu; senão, a da tabela, a de todos, porque o talento é segredo do Mestre até aparecer (10.6). A subida de verdade é sempre a do `pede`."""
+    if not aparece(p, caminho_de(chave)): return dict(tabela)
+    return {g: pede(p, chave, tabela, g) for g in tabela}
+
+
 def doms(p): d = p.get('dom'); return dict(d) if isinstance(d, dict) else {}       # o dom de verdade
 def visto(p): return bool((p.get('marca') or {}).get('dom_visto'))       # o dom já se mostrou (marca.dom_visto: o dia)?
 def doms_vistos(p): return doms(p) if visto(p) else {}

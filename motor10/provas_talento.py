@@ -192,6 +192,59 @@ def _aparece(n):
     return out
 
 
+def _regua(n):
+    """a régua que vai à mesa é a que a pessoa conhece (10.6): a dela (vezes o talento, com o teto) depois que o talento do caminho aparece; a de todos antes. Na oficina,
+    no treino de arma da MESA, na manha, na coleta que a mão não alcança e no estudo do feitiço; o SÓ O MESTRE vê o número de verdade"""
+    import magia_mundo as MM, manha, provas_caca as PC
+    d = tempfile.mkdtemp(prefix='m10_tal_regua_'); antes = os.environ.get('MOTOR10_MUNDO'); os.environ['MOTOR10_MUNDO'] = d
+    try:
+        def gente(tal, treino, base=None, maestria=None, E=None):
+            """a pessoa com este talento, estes blocos e esta mão; a base (marca.talento_base) diz quantos blocos já havia quando o talento foi rolado"""
+            E = E or PM.vila()
+            mestre(E, [['pessoa', 'eu', 'talento', 'poe', tal], ['pessoa', 'eu', 'marca.talento_base', 'poe', base or {}]] + [['pessoa', 'eu', 'treino.' + k, 'poe', v] for k, v in treino.items()]
+                   + [['pessoa', 'eu', 'maestria.' + k, 'poe', v] for k, v in (maestria or {}).items()], 'a pessoa de prova')
+            return E
+        mao_ = lambda E: next(x for x in oficio.ver(E, 'eu') if x.startswith('Mão:'))
+        arma = lambda E: next(x for x in turno.mesa(E).splitlines() if 'treinar com uma arma' in x)
+        R = {}                                              # o caso: (o que a mesa disse, o que tem de dizer, o que não pode dizer)
+        R['a forja, Jeitoso, aparecido'] = (mao_(gente({'forja': 1}, {'forja': 79}, maestria={'forja': 2})), 'Treinado aos 100)', 'aos 150')
+        R['a forja, Jeitoso, escondido (9 blocos depois de rolado)'] = (mao_(gente({'forja': 1}, {'forja': 79}, base={'forja': 70}, maestria={'forja': 2})), 'Treinado aos 150)', 'aos 100')
+        R['a forja, Comum'] = (mao_(gente({}, {'forja': 79}, maestria={'forja': 2})), 'Treinado aos 150)', 'não passa')
+        R['a forja, Lerdo em Mestre'] = (mao_(gente({'forja': -1}, {'forja': 600}, maestria={'forja': 6})), 'a mão não passa de Mestre)', 'Lendário aos')
+        R['o couro, Negado, aparecido'] = (mao_(gente({'couro': -2}, {'couro': 25})), 'couro Leigo (25 blocos de bancada; Iniciante aos 100)', 'couro Leigo (25 blocos de bancada; Iniciante aos 50)')
+        R['a arma, Prodígio no fio, aparecido'] = (arma(gente({'fio': 2}, {'espada': 20})), '(com o seu talento: as armas de fio aos 20, 80, 250, 750)', None)
+        R['a arma, Lerdo no peso, aparecido'] = (arma(gente({'peso': -1}, {'maça': 20})), 'as armas de peso aos 60, 240, 750, e a mão não passa de Mestre', None)
+        R['a arma, Prodígio no fio, escondido (19 blocos)'] = (arma(gente({'fio': 2}, {'espada': 19})), 'a maestria sobe aos 40, 160, 500, 1.500 blocos (`ato.py', 'com o seu talento')
+        R['a manha, Jeitoso, aparecido'] = (manha.ver(gente({'manha': 1}, {'manha': 20}), 'eu')[0], '(Iniciante aos 27)', None)
+        R['a manha, Jeitoso, escondido'] = (manha.ver(gente({'manha': 1}, {'manha': 19}), 'eu')[0], '(Iniciante aos 40)', None)
+        def coleta(tal, tr, ma, alvo, base=None):
+            E = gente(tal, {'coleta': tr}, base=base, maestria={'coleta': ma}, E=PC.mundo(materia={'erva:0': 50, 'erva:1': 50, 'erva:2': 50}))
+            return recusa(lambda: caca.coletar(E, 'eu', alvo)) or 'ACEITA'
+        R['a coleta, Jeitoso, aparecido'] = (coleta({'coleta': 1}, 20, 0, 'erva:1'), '(27 blocos de coleta; Aldric tem 20: faltam 7)', None)
+        R['a coleta, Jeitoso, escondido'] = (coleta({'coleta': 1}, 20, 0, 'erva:1', base={'coleta': 10}), '(40 blocos de coleta; Aldric tem 20: faltam 20)', None)
+        R['a coleta, Negado em Iniciante, aparecido'] = (coleta({'coleta': -2}, 120, 2, 'erva:2'), 'pede Treinado em coleta, e a mão de Aldric não passa de Iniciante (o talento)', 'blocos de coleta')
+        def estudo(tal, treino):
+            E = gente(tal, treino); estado.aplica(E, 'gera', [['item', 'nasce', item('escrito', 0, 'Cartilha de prova', feiticos=['seta'], dono='eu')]], texto='a cartilha')
+            esc = next(i for i, it in E['itens']['itens'].items() if it['tipo'] == 'escrito')
+            return quieto(MM.estudar, E, 'eu', 'seta', {'escrito': esc}, blocos=1)['texto'], E
+        tj, Ej = estudo({'arcano': 1}, {}); R['o estudo, Jeitoso, escondido (a saída)'] = (tj, ': 1 de 6 blocos', 'de 4 blocos')
+        R['o estudo, Jeitoso, escondido (a MESA)'] = (MM.diz(Ej, 'eu'), 'estuda seta (1 de 6 blocos)', None)
+        R['o estudo, Jeitoso, escondido (o SÓ O MESTRE)'] = (MM.diz(Ej, 'eu', mestre=True), 'estuda seta (1 de 4 blocos)', None)
+        ta, Ea = estudo({'arcano': 1}, {'arcano': 20}); R['o estudo, Jeitoso, aparecido (a saída)'] = (ta, ': 1 de 4 blocos', None)
+        R['o estudo, Jeitoso, aparecido (a MESA)'] = (MM.diz(Ea, 'eu'), 'estuda seta (1 de 4 blocos)', None)
+        El = gente({'arcano': -1}, {'arcano': 7}); mestre(El, [['pessoa', 'eu', 'tradicao', 'poe', 'arcano'], ['pessoa', 'eu', 'marca.estudo', 'poe', {'seta': 7}]], 'sete blocos de seta')
+        R['o estudo, Lerdo, escondido, passou da tabela (a MESA)'] = (MM.diz(El, 'eu'), 'estuda seta (7 blocos, mais do que os 6 da tabela, e ainda não aprendeu)', None)
+        mal = [k for k, (deu, quer, nao) in R.items() if quer not in deu or (nao and nao in deu)]
+        return [('T10c A RÉGUA QUE VAI À MESA É A QUE A PESSOA CONHECE (10.6): depois que o talento do caminho aparece, a dela (vezes o talento; no teto, "a mão não passa de"); antes, a de todos. '
+                 'Na oficina (forja e couro), no treino de arma da MESA, na manha, na coleta que a mão não alcança e no estudo do feitiço; o SÓ O MESTRE vê o número de verdade',
+                 '; '.join(f"{k}: «{deu.split('Mão: ')[-1][:120]}»" for k, (deu, _, _) in list(R.items())[:2]) + f"; e mais {len(R) - 2} casos"
+                 + (' · ERRADO: ' + '; '.join(f"{k}: «{R[k][0][:160]}» (devia ter «{R[k][1]}»)" for k in mal) if mal else ': todos certos'), not mal)]
+    finally:
+        os.environ.pop('MOTOR10_MUNDO', None)
+        if antes is not None: os.environ['MOTOR10_MUNDO'] = antes
+        shutil.rmtree(d, ignore_errors=True)
+
+
 # ---------------------------------------------------------------- O ALICERCE ----------------------------------------------------------------
 def _mundo():
     """a vila de prova, com um santuário, um ermo para o laço e um segundo morador"""
@@ -424,7 +477,7 @@ def _especies(n):
 
 def provas(n=300):
     out = []
-    for f in (_comum, _sorte, _escada, _ligado, _duelos, _bancada, _aparece, _verbos, _recusas, _invariantes, _corpo, _luta_volta, _ganchos, _preco, _ficha_magia, _save_antigo, _especies):
+    for f in (_comum, _sorte, _escada, _ligado, _duelos, _bancada, _aparece, _regua, _verbos, _recusas, _invariantes, _corpo, _luta_volta, _ganchos, _preco, _ficha_magia, _save_antigo, _especies):
         try: out += f(n)
         except (Exception, SystemExit) as x:
             import traceback; out.append((f'{f.__name__}: a prova quebrou', f'{type(x).__name__}: {x} · ' + traceback.format_exc().splitlines()[-3].strip(), False))

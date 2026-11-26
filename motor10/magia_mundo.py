@@ -60,6 +60,14 @@ def trad_de(p, f):
 def mao(p, t): m = p.get('maestria'); return m.get(t, 0) if isinstance(m, dict) else 0
 
 
+def estudo_diz(p, f, n, mestre=False):
+    """o estudo de um feitiço em palavras: n de quantos blocos. O Mestre vê os de verdade (vezes o talento na tradição); a pessoa, os mesmos se o talento da tradição
+    já apareceu, e senão os da tabela, os de todos (o talento é segredo do Mestre até aparecer: 10.6). Quem passou dos da tabela sem aprender lê que ainda não aprendeu."""
+    t = trad_de(p, f); base = W.ESTUDO[T.FEITICOS[f]['grau']]
+    q = talento.blocos(p, t, base) if mestre or talento.aparece(p, talento.caminho_de(t)) else base
+    return f"{n} de {q} blocos" if n < q else f"{tantos(n, 'bloco')}, {'os' if n == q else 'mais do que os'} {q} da tabela, e ainda não aprendeu"
+
+
 def foco_de(E, pid):
     """o foco em uso (inteiro), ou None"""
     it = estado.pecas(E, pid)['foco']
@@ -261,7 +269,7 @@ def estudar(E, pid, f, fonte, blocos=None):
         est = dict((p.get('marca') or {}).get('estudo') or {}); est.pop(f, None)
         estado.aplica(E, 'estudar', [['pessoa', pid, 'feitico', 'aprende', f], ['pessoa', pid, 'marca.estudo', 'poe', est]], onde=p['lugar'], quem=[pid], texto=f"{p['nome']} aprende {_nf(f)}")
         txt += f". APRENDEU {_nf(f).upper()}"
-    elif p['estado'] == 'vivo': txt += f": {ja} de {quer} blocos"
+    elif p['estado'] == 'vivo': txt += ': ' + estudo_diz(p, f, ja)          # o número que a pessoa conhece: o do talento só depois que ele aparece (10.6)
     return dict(feitos=feitos, aprendeu=ja >= quer, texto=txt + sobe(E, pid, t) + (f'. PAROU: {pq}' if pq else '.'))
 
 
@@ -628,7 +636,7 @@ def diz(E, pid, mestre=False):
     partes = [f"Mana {diz_mana(p)}" + (f" (de verdade, {estado.mana(p)} de {estado.mana_max(p)})" if mestre and mana_vista(p) != (estado.mana(p), estado.mana_max(p)) else '')]
     if t: partes.append(f"{dict(arcano='o arcano', fé='a fé', verde='o verde', pacto='o pacto')[t]}: {T.MAESTRIAS[mao(p, t)]} ({tantos((p.get('treino') or {}).get(t, 0), 'bloco')})")
     if fs: partes.append('sabe: ' + ', '.join(_nf(f) for f in fs))
-    for f, n in est.items(): partes.append(f"estuda {_nf(f)} ({n} de {talento.blocos(p, trad_de(p, f), W.ESTUDO[T.FEITICOS[f]['grau']]) if mestre else '?'} blocos)" if mestre else f"estuda {_nf(f)} ({tantos(n, 'bloco')} feitos)")
+    for f, n in est.items(): partes.append(f"estuda {_nf(f)} ({estudo_diz(p, f, n, mestre)})")      # o Mestre, o número de verdade; a pessoa, o da tabela até o talento aparecer
     v = p.get('voto')
     if isinstance(v, dict): partes.append(f"voto {'do' if v['qual'] == 'socorro' else 'da'} {v['qual']} ({estado.em(E, v['santuario']) if v.get('santuario') in E['lugares'] else ''})" + (f": QUEBRADO no Dia {v['quebrado']}" if v.get('quebrado') is not None else ''))
     if laco_vale(E, p): partes.append(f"laço com {E['lugares'][p['laco']['ermo']]['nome']} (fartura {fartura(E, p['laco']['ermo']):.0%}" + (f"; a força cai {pena_laco(E, pid)}" if pena_laco(E, pid) else '') + ')')
