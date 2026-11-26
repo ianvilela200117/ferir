@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 7,
-  "noticia": 3
+  "missao": 8,
+  "noticia": 14
  },
  "frentes": {
   "f01": {
@@ -4018,7 +4018,7 @@
    "dono": "chefe_sara",
    "onde": "castro_real",
    "meta": "tomar a estrada e cobrar de quem passa",
-   "passo": 0,
+   "passo": 1,
    "forca": 2,
    "passos": [
     "mais salteadores aparecem na estrada",
@@ -4030,7 +4030,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 8,
    "alvo_missao": "matar",
    "alvo": "chefe_sara",
    "cat": 1,
@@ -4045,7 +4045,7 @@
    "dono": "covil:souto_das_aguas",
    "onde": "penha_das_rosas",
    "meta": "crescer até tomar a terra",
-   "passo": 0,
+   "passo": 1,
    "forca": 5,
    "passos": [
     "o bando da toca cresce",
@@ -4057,7 +4057,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 8,
    "alvo_missao": "limpar",
    "alvo": "goblin",
    "cat": 1,
@@ -4152,7 +4152,7 @@
    "dono": "selina",
    "onde": "vale_do_corvo",
    "meta": "ter todo o metal da região na mão",
-   "passo": 0,
+   "passo": 1,
    "forca": 4,
    "passos": [
     "o mercador compra todo o metal que acha",
@@ -4164,7 +4164,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 8,
    "alvo_missao": "investigar",
    "alvo": "selina",
    "cat": 1,
@@ -4230,7 +4230,7 @@
    "dono": "lugar:pedra_verde",
    "onde": "pedra_verde",
    "meta": "secar a colheita",
-   "passo": 0,
+   "passo": 1,
    "forca": 3,
    "passos": [
     "o rio baixa",
@@ -4242,7 +4242,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 8,
    "alvo_missao": "entrega",
    "alvo": "comida",
    "cat": 0,
@@ -4256,7 +4256,7 @@
    "dono": "lugar:castro_branco",
    "onde": "castro_branco",
    "meta": "acabar com o sal da terra",
-   "passo": 0,
+   "passo": 1,
    "forca": 3,
    "passos": [
     "o sal some da feira",
@@ -4268,7 +4268,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 8,
    "alvo_missao": "entrega",
    "alvo": "sal",
    "cat": 0,
@@ -4395,8 +4395,8 @@
    "paga": 19,
    "prazo": 9,
    "frente": null,
-   "estado": "aberta",
-   "quem": null,
+   "estado": "falhou",
+   "quem": "mirys",
    "desde": 1,
    "cat": 0,
    "ermo": "charneca_dos_sinos"
@@ -4424,8 +4424,8 @@
    "paga": 15,
    "prazo": 9,
    "frente": null,
-   "estado": "aberta",
-   "quem": null,
+   "estado": "falhou",
+   "quem": "aemine",
    "desde": 1,
    "cat": 0,
    "ermo": "grutas_do_vento"
@@ -4453,10 +4453,25 @@
    "paga": 48,
    "prazo": 8,
    "frente": null,
-   "estado": "aberta",
-   "quem": null,
+   "estado": "falhou",
+   "quem": "taskin",
    "desde": 1,
    "cat": 3
+  },
+  "m0008": {
+   "de": "zozzo",
+   "onde": "penha_das_rosas",
+   "tipo": "escolta",
+   "alvo": "coval_do_vento",
+   "n": 1,
+   "paga": 15,
+   "prazo": 28,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 8,
+   "cat": 0,
+   "quem_vai": "zozzo"
   }
  },
  "noticias": {
@@ -4524,6 +4539,14 @@
     "castro_real": [
      5,
      4
+    ],
+    "coval_do_vento": [
+     6,
+     5
+    ],
+    "penha_das_rosas": [
+     6,
+     5
     ]
    },
    "janela": false
@@ -4592,6 +4615,14 @@
     "ribeira_do_lobo": [
      5,
      4
+    ],
+    "ermida_verde": [
+     6,
+     5
+    ],
+    "pinhal_do_ferro": [
+     6,
+     5
     ]
    },
    "janela": false
@@ -4671,10 +4702,491 @@
     ]
    },
    "janela": false
+  },
+  "n00004": {
+   "dia": 8,
+   "onde": "vale_do_corvo",
+   "texto": "Isabel conta da história: no ano 954, morre Berela (num desabamento); Fernão assume a casa dos Terigar.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     8,
+     0
+    ],
+    "castro_do_sal": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     10,
+     2
+    ],
+    "pedra_verde": [
+     10,
+     2
+    ],
+    "coval_do_vento": [
+     10,
+     2
+    ],
+    "penha_das_rosas": [
+     10,
+     2
+    ],
+    "castro_real": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00005": {
+   "dia": 8,
+   "onde": "vale_do_corvo",
+   "texto": "Josefa conta da história: no ano 840, marana faz forjar o Arnês do Juramento (Única).",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     8,
+     0
+    ],
+    "castro_do_sal": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     10,
+     2
+    ],
+    "pedra_verde": [
+     10,
+     2
+    ],
+    "coval_do_vento": [
+     10,
+     2
+    ],
+    "penha_das_rosas": [
+     10,
+     2
+    ],
+    "castro_real": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00006": {
+   "dia": 8,
+   "onde": "pedra_velha",
+   "texto": "Erado conta da história: no ano 889, morre Berelina (de uma flecha na estrada); Herareu assume a casa dos Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pedra_velha": [
+     8,
+     0
+    ],
+    "souto_negro": [
+     9,
+     1
+    ],
+    "castro_do_sal": [
+     9,
+     1
+    ],
+    "varzea_brava": [
+     9,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     9,
+     1
+    ],
+    "ponte_da_cruz": [
+     10,
+     2
+    ],
+    "vale_do_corvo": [
+     10,
+     2
+    ],
+    "pedra_verde": [
+     10,
+     2
+    ],
+    "castro_branco": [
+     10,
+     2
+    ],
+    "castro_real": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00007": {
+   "dia": 8,
+   "onde": "castro_branco",
+   "texto": "Selelina conta da história: no ano 978, morre Gilana (num duelo); Osorado assume a casa dos Astolan.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_branco": [
+     8,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     9,
+     1
+    ],
+    "castro_real": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "castro_do_sal": [
+     10,
+     2
+    ],
+    "varzea_da_nevoa": [
+     10,
+     2
+    ],
+    "coval_do_vento": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00008": {
+   "dia": 8,
+   "onde": "pinhal_do_ferro",
+   "texto": "Helena conta da história: no ano 961, marelão expulsou os orcs da serra até o último.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pinhal_do_ferro": [
+     8,
+     0
+    ],
+    "ribeira_do_lobo": [
+     9,
+     1
+    ],
+    "pedra_verde": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00009": {
+   "dia": 8,
+   "onde": "coval_do_vento",
+   "texto": "Lino conta da história: no ano 1057, morre Perado (de peste); Rosa assume a casa dos Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "coval_do_vento": [
+     8,
+     0
+    ],
+    "penha_das_rosas": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "castro_real": [
+     9,
+     1
+    ],
+    "vale_do_corvo": [
+     10,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     10,
+     2
+    ],
+    "castro_branco": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00010": {
+   "dia": 8,
+   "onde": "castro_real",
+   "texto": "Mais salteadores aparecem na estrada em Castro Real",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f01"
+   ],
+   "chegou": {
+    "castro_real": [
+     8,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     9,
+     1
+    ],
+    "castro_branco": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "coval_do_vento": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "castro_do_sal": [
+     10,
+     2
+    ],
+    "vale_do_corvo": [
+     10,
+     2
+    ],
+    "penha_das_rosas": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00011": {
+   "dia": 8,
+   "onde": "penha_das_rosas",
+   "texto": "O bando da toca cresce em Penha das Rosas",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f02"
+   ],
+   "chegou": {
+    "penha_das_rosas": [
+     8,
+     0
+    ],
+    "coval_do_vento": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "castro_real": [
+     10,
+     2
+    ],
+    "vale_do_corvo": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00012": {
+   "dia": 8,
+   "onde": "vale_do_corvo",
+   "texto": "O mercador compra todo o metal que acha em Vale do Corvo",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f06"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     8,
+     0
+    ],
+    "castro_do_sal": [
+     9,
+     1
+    ],
+    "varzea_da_nevoa": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     10,
+     2
+    ],
+    "pedra_verde": [
+     10,
+     2
+    ],
+    "coval_do_vento": [
+     10,
+     2
+    ],
+    "penha_das_rosas": [
+     10,
+     2
+    ],
+    "castro_real": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00013": {
+   "dia": 8,
+   "onde": "pedra_verde",
+   "texto": "O rio baixa em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f09"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     8,
+     0
+    ],
+    "ponte_da_cruz": [
+     9,
+     1
+    ],
+    "ribeira_do_lobo": [
+     9,
+     1
+    ],
+    "varzea_brava": [
+     9,
+     1
+    ],
+    "castro_do_sal": [
+     9,
+     1
+    ],
+    "ermida_verde": [
+     10,
+     2
+    ],
+    "souto_negro": [
+     10,
+     2
+    ],
+    "pinhal_do_ferro": [
+     10,
+     2
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "vale_do_corvo": [
+     10,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     10,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00014": {
+   "dia": 8,
+   "onde": "castro_branco",
+   "texto": "O sal some da feira em Castro Branco",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f10"
+   ],
+   "chegou": {
+    "castro_branco": [
+     8,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     9,
+     1
+    ],
+    "castro_real": [
+     9,
+     1
+    ],
+    "pedra_velha": [
+     10,
+     2
+    ],
+    "castro_do_sal": [
+     10,
+     2
+    ],
+    "varzea_da_nevoa": [
+     10,
+     2
+    ],
+    "coval_do_vento": [
+     10,
+     2
+    ]
+   },
+   "janela": false
   }
  },
  "ranking": {
-  "semana": 1,
+  "semana": 2,
   "lista": [
    [
     "drastum",

@@ -1,0 +1,26 @@
+início: Dia 5 · 42 de prata · forja 64 · metal Incomum (1.03, 17)
+Dia 5: prata 42 → 45 · forja 67 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.03, 17)
+Dia 6: prata 45 → 48 · forja 70 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.03, 17)
+Dia 7: prata 48 → 51 · forja 73 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 8: Erado conta da história: no ano 889, morre Berelina (de uma flecha na estrada); Herareu assume a casa dos Orirena.
+    saiu do quadro: - m0003 · matar 3 lobos na Charneca dos Sinos · 19 de prata · prazo: Dia 9 · de Nora
+    (só o Mestre) frente: a frente f01 (o bando de Sara na estrada) anda ao passo 1: mais salteadores aparecem na estrada
+    (só o Mestre) frente: a frente f02 (a horda da toca do Souto das Águas) anda ao passo 1: o bando da toca cresce
+    (só o Mestre) frente: a frente f06 (o cartel de Selina) anda ao passo 1: o mercador compra todo o metal que acha
+    (só o Mestre) frente: a frente f09 (a seca de Pedra Verde) anda ao passo 1: o rio baixa
+    (só o Mestre) frente: a frente f10 (a falta de sal de Castro Branco) anda ao passo 1: o sal some da feira
+    (só o Mestre) a frente f01 foi do passo 0 ao 1
+    (só o Mestre) a frente f02 foi do passo 0 ao 1
+    (só o Mestre) a frente f06 foi do passo 0 ao 1
+    (só o Mestre) a frente f09 foi do passo 0 ao 1
+    (só o Mestre) a frente f10 foi do passo 0 ao 1
+Dia 8: prata 51 → 54 · forja 76 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+Dia 9: prata 54 → 57 · forja 79 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.03, 17)
+    notícia: - Dia 10 (de Castro Real): Mais salteadores aparecem na estrada em Castro Real
+    notícia: - Dia 10 (de Vale do Corvo): O mercador compra todo o metal que acha em Vale do Corvo
+    notícia: - Dia 10 (de Pedra Verde): O rio baixa em Pedra Verde
+    notícia: - Dia 10 (de Castro Branco): O sal some da feira em Castro Branco
+    notícia: - Dia 10 (de Vale do Corvo): Isabel conta da história: no ano 954, morre Berela (num desabamento); Fernão assume a casa dos Terigar.
+    notícia: - Dia 10 (de Vale do Corvo): Josefa conta da história: no ano 840, marana faz forjar o Arnês do Juramento (Única).
+    evento em Pedra Velha: missao: a missão m0003 falhou: o prazo passou
+PAROU: notícia que toca Ferord: - Dia 10 (de Vale do Corvo): O mercador compra todo o metal que acha em Vale do Corvo

@@ -1,5 +1,5 @@
 {
- "seq": 660,
+ "seq": 668,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12343,6 +12343,157 @@
    "dia": 1,
    "id": "i0660",
    "uso": "veste"
+  },
+  "i0661": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "adaga",
+   "id": "i0661",
+   "uso": null
+  },
+  "i0662": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "maça",
+   "id": "i0662",
+   "uso": null
+  },
+  "i0663": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0663",
+   "uso": null
+  },
+  "i0664": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "familia": "machado",
+   "id": "i0664",
+   "uso": null
+  },
+  "i0665": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0665",
+   "uso": null
+  },
+  "i0666": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "familia": "lança",
+   "id": "i0666",
+   "uso": null
+  },
+  "i0667": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0667",
+   "uso": null
+  },
+  "i0668": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_brava",
+   "familia": "espada",
+   "id": "i0668",
+   "uso": null
   }
  },
  "oseq": 1,

@@ -18,7 +18,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 607,
+  "moedas": 811,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -101,7 +101,8 @@
   "papel": "nobre",
   "lacos": {
    "gilela": "pai"
-  }
+  },
+  "fama": 1
  },
  "nuno": {
   "nome": "Nuno",
@@ -172,7 +173,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 12,
+  "moedas": 14,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -302,7 +303,8 @@
   "papel": "guarda",
   "lacos": {
    "pedro": "filho"
-  }
+  },
+  "fama": 1
  },
  "pedro": {
   "nome": "Pedro",
@@ -399,7 +401,8 @@
   "idade": 31,
   "sobre": "da guarda de Vale do Corvo",
   "casa": "c_godinho_vale_do_corvo",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "simao": {
   "nome": "Simão",
@@ -422,7 +425,7 @@
    "forja": 375,
    "martelo": 40
   },
-  "moedas": 66,
+  "moedas": 70,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -474,7 +477,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 85,
+  "moedas": 97,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -522,7 +525,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 80,
+  "moedas": 92,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -574,7 +577,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 213,
+  "moedas": 215,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -622,7 +625,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 328,
+  "moedas": 330,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -671,7 +674,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 354,
+  "moedas": 356,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -720,7 +723,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 69,
+  "moedas": 73,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -776,7 +779,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 112,
+  "moedas": 116,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -829,7 +832,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 128,
+  "moedas": 132,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -982,7 +985,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 160
+   "arcano": 166
   },
   "moedas": 144,
   "corpo": {
@@ -1039,7 +1042,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 160,
+   "manha": 166,
    "adaga": 40
   },
   "moedas": 53,
@@ -1231,7 +1234,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 5,
+  "moedas": 7,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1389,7 +1392,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 25,
+  "moedas": 29,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1463,7 +1466,8 @@
   "idade": 26,
   "sobre": "da guarda de Várzea da Névoa",
   "casa": "c_amado_varzea_da_nevoa",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "bento": {
   "nome": "Bento",
@@ -1509,7 +1513,8 @@
   "idade": 33,
   "sobre": "da guarda de Várzea da Névoa",
   "casa": "c_cordeiro_varzea_da_nevoa",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "jorarado": {
   "nome": "Jorarado",
@@ -1532,7 +1537,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 42,
+  "moedas": 54,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1579,7 +1584,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 43,
+  "moedas": 55,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1676,7 +1681,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 178,
+  "moedas": 183,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1727,7 +1732,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 103,
+  "moedas": 107,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1775,7 +1780,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 50,
+  "moedas": 54,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1830,7 +1835,7 @@
    "fé": 160,
    "maça": 40
   },
-  "moedas": 59,
+  "moedas": 63,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1884,7 +1889,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 160
+   "arcano": 166
   },
   "moedas": 136,
   "corpo": {
@@ -1942,7 +1947,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 160,
+   "manha": 166,
    "adaga": 40
   },
   "moedas": 93,
@@ -2026,7 +2031,8 @@
   "idade": 31,
   "sobre": "o capitão da guarda de Ribeira da Névoa",
   "casa": "c_matos_ribeira_da_nevoa",
-  "papel": "capitão"
+  "papel": "capitão",
+  "fama": 1
  },
  "madalena": {
   "nome": "Madalena",
@@ -2080,7 +2086,8 @@
   "papel": "capitão",
   "lacos": {
    "damiao": "cônjuge"
-  }
+  },
+  "fama": 1
  },
  "damiao": {
   "nome": "Damião",
@@ -2097,7 +2104,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 15,
+  "moedas": 17,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2171,7 +2178,8 @@
   "idade": 26,
   "sobre": "da guarda de Ribeira da Névoa",
   "casa": "c_mota_ribeira_da_nevoa",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "gervasio": {
   "nome": "Gervásio",
@@ -2248,7 +2256,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 26,
+  "moedas": 30,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2305,7 +2313,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 48,
+  "moedas": 60,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2405,7 +2413,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 58,
+  "moedas": 70,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2462,7 +2470,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 117,
+  "moedas": 121,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2516,7 +2524,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 304,
+  "moedas": 309,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2564,7 +2572,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 258,
+  "moedas": 264,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2614,7 +2622,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 111,
+  "moedas": 115,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2666,7 +2674,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 40,
+  "moedas": 44,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2717,7 +2725,7 @@
    "fé": 160,
    "maça": 40
   },
-  "moedas": 22,
+  "moedas": 26,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2781,7 +2789,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 71,
+  "moedas": 75,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2828,7 +2836,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 160
+   "arcano": 166
   },
   "moedas": 133,
   "corpo": {
@@ -2881,7 +2889,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 160,
+   "manha": 166,
    "adaga": 40
   },
   "moedas": 68,
@@ -2941,7 +2949,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 84,
+  "moedas": 88,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3097,7 +3105,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 50,
+  "moedas": 36,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3147,7 +3155,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 5,
   "corpo": {
    "fome": 0,
@@ -3207,7 +3217,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 68,
+  "moedas": 72,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3573,7 +3583,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 2,
   "corpo": {
    "fome": 0,
@@ -3628,7 +3640,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 145,
+  "moedas": 147,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3719,7 +3731,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 386,
+  "moedas": 404,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3801,7 +3813,8 @@
   "papel": "nobre",
   "lacos": {
    "nororado": "irmão"
-  }
+  },
+  "fama": 1
  },
  "herarina": {
   "nome": "Herarina",
@@ -3878,7 +3891,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 76,
+  "moedas": 80,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3926,7 +3939,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 15,
+  "moedas": 17,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4008,7 +4021,8 @@
   "idade": 36,
   "sobre": "da guarda de Castro do Sal",
   "casa": "c_dorneles_castro_do_sal",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "sancha": {
   "nome": "Sancha",
@@ -4129,7 +4143,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 16,
+  "moedas": 18,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4224,7 +4238,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 18,
+  "moedas": 20,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4396,7 +4410,8 @@
   "papel": "nobre",
   "lacos": {
    "valada": "irmão"
-  }
+  },
+  "fama": 1
  },
  "valora": {
   "nome": "Valora",
@@ -4465,7 +4480,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 2,
   "corpo": {
    "fome": 0,
@@ -4519,7 +4536,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 101,
+  "moedas": 105,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4673,7 +4690,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 18,
+  "moedas": 20,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4719,7 +4736,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 10,
   "corpo": {
    "fome": 0,
@@ -4827,7 +4846,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 256,
+  "moedas": 260,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4920,7 +4939,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 5,
   "corpo": {
    "fome": 0,
@@ -5041,7 +5062,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 7,
+  "moedas": 9,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5102,7 +5123,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 108,
+  "moedas": 112,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5149,7 +5170,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 4,
   "corpo": {
    "fome": 0,
@@ -5225,7 +5248,8 @@
   "idade": 41,
   "sobre": "da guarda de Pedra Velha",
   "casa": "c_moleiro_pedra_velha",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "nora": {
   "nome": "Nora",
@@ -5248,7 +5272,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 33,
+  "moedas": 38,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5284,7 +5308,15 @@
   "idade": 32,
   "sobre": "caça no ermo e vende o couro",
   "casa": "c_bastos_pedra_velha",
-  "papel": "caçador"
+  "papel": "caçador",
+  "memoria": [
+   {
+    "dia": 10,
+    "de": "mirys",
+    "o_que": "não cumpriu a missão no prazo",
+    "peso": -2
+   }
+  ]
  },
  "paio": {
   "nome": "Paio",
@@ -5307,7 +5339,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 58,
+  "moedas": 62,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5357,7 +5389,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 315,
+  "moedas": 319,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5448,7 +5480,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 556,
+  "moedas": 573,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5533,7 +5565,8 @@
   "papel": "nobre",
   "lacos": {
    "orlando": "pai"
-  }
+  },
+  "fama": 1
  },
  "eulalia": {
   "nome": "Eulália",
@@ -5556,7 +5589,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 67,
+  "moedas": 79,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5606,7 +5639,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 77,
+  "moedas": 81,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5679,7 +5712,8 @@
   "idade": 31,
   "sobre": "da guarda de Várzea Brava",
   "casa": "c_pinheiro_varzea_brava",
-  "papel": "guarda"
+  "papel": "guarda",
+  "fama": 1
  },
  "terelao": {
   "nome": "Terelão",
@@ -5702,7 +5736,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 21,
+  "moedas": 26,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5753,7 +5787,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 44,
+  "moedas": 48,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5802,7 +5836,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 349,
+  "moedas": 351,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5933,7 +5967,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 9,
   "corpo": {
    "fome": 0,
@@ -5977,7 +6013,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 2,
   "corpo": {
    "fome": 0,
@@ -6034,7 +6072,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 25,
+  "moedas": 30,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6062,7 +6100,15 @@
   "idade": 36,
   "sobre": "caça no ermo e vende o couro",
   "casa": "c_paiva_castro_branco",
-  "papel": "caçador"
+  "papel": "caçador",
+  "memoria": [
+   {
+    "dia": 10,
+    "de": "aemine",
+    "o_que": "não cumpriu a missão no prazo",
+    "peso": -2
+   }
+  ]
  },
  "ines": {
   "nome": "Inês",
@@ -6085,7 +6131,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 16,
+  "moedas": 21,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6132,7 +6178,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 6,
   "corpo": {
    "fome": 0,
@@ -6268,7 +6316,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 4,
   "corpo": {
    "fome": 0,
@@ -6315,7 +6365,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 6,
+  "moedas": 8,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6520,7 +6570,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 83,
+  "moedas": 87,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6611,7 +6661,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 10,
+  "moedas": 12,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6704,7 +6754,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 40,
+  "moedas": 44,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6762,7 +6812,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 31,
+  "moedas": 36,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6812,7 +6862,7 @@
    "machado": 40,
    "coleta": 40
   },
-  "moedas": 19,
+  "moedas": 22,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6858,7 +6908,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 2,
   "corpo": {
    "fome": 0,
@@ -6955,7 +7007,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 24,
+  "moedas": 28,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7007,7 +7059,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 33,
+  "moedas": 38,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7051,7 +7103,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 19,
+  "moedas": 21,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7200,7 +7252,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 26,
+  "moedas": 31,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7250,7 +7302,9 @@
    "Afinidade": 40
   },
   "maestria": {},
-  "treino": {},
+  "treino": {
+   "coleta": 6
+  },
   "moedas": 8,
   "corpo": {
    "fome": 0,
@@ -7379,7 +7433,15 @@
   "idade": 46,
   "sobre": "o capitão da guarda de Ermida Verde",
   "casa": "c_rego_ermida_verde",
-  "papel": "capitão"
+  "papel": "capitão",
+  "memoria": [
+   {
+    "dia": 9,
+    "de": "taskin",
+    "o_que": "não cumpriu a missão no prazo",
+    "peso": -2
+   }
+  ]
  },
  "magrok": {
   "nome": "Magrok",
@@ -7450,7 +7512,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 14,
+  "moedas": 19,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7499,7 +7561,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 296,
+  "moedas": 298,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7697,7 +7759,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 24,
+  "moedas": 29,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7747,7 +7809,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 8,
+  "moedas": 10,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7863,7 +7925,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -7910,7 +7976,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "mirys",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -7968,7 +8039,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -8028,7 +8103,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -8085,7 +8164,8 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8134,7 +8214,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -8194,7 +8278,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -8248,7 +8336,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -8298,7 +8390,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -8360,7 +8456,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 12
+   }
   },
   "carga": {},
   "talento": {
@@ -8413,7 +8513,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 12
+   }
   },
   "carga": {},
   "talento": {
@@ -8466,7 +8570,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -8517,7 +8625,8 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8566,7 +8675,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "taskin",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -8619,7 +8733,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -8669,7 +8787,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -8722,7 +8844,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -8781,7 +8907,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -8840,7 +8970,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 12
+   }
   },
   "carga": {},
   "talento": {
@@ -8889,7 +9023,8 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8948,7 +9083,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -9004,7 +9143,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -9060,7 +9203,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -9109,7 +9256,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 11
+   }
   },
   "carga": {},
   "talento": {
@@ -9160,7 +9311,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9212,7 +9367,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -9264,7 +9423,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9323,7 +9486,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 14
+   }
   },
   "carga": {},
   "talento": {
@@ -9372,7 +9539,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9424,7 +9595,13 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "missao",
+    "alvo": "m0003",
+    "ate": 13,
+    "c": 0.99
+   }
   },
   "carga": {},
   "talento": {
@@ -9435,7 +9612,7 @@
   "povo": "elfo",
   "idade": 147,
   "sobre": "aventureiro veterano, a Guarda das Sete Pedras",
-  "fama": 140,
+  "fama": 139,
   "papel": "aventureiro",
   "guilda": "g_a_guarda_das_sete_pedras",
   "rival": true
@@ -9474,7 +9651,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "taskin",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9535,7 +9717,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "mirys",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9594,7 +9781,8 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9605,7 +9793,7 @@
   "povo": "elfo",
   "idade": 132,
   "sobre": "aventureiro veterano, a Irmandade da Estrada",
-  "fama": 74,
+  "fama": 73,
   "papel": "aventureiro",
   "guilda": "g_a_irmandade_da_estrada",
   "rival": true
@@ -9644,7 +9832,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "mirys",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9703,7 +9896,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 12
+   }
   },
   "carga": {},
   "talento": {
@@ -9755,7 +9952,12 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "junto",
+    "de": "taskin",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9803,7 +10005,11 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "caca",
+    "ate": 13
+   }
   },
   "carga": {},
   "talento": {
@@ -9864,7 +10070,13 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "missao",
+    "alvo": "m0007",
+    "ate": 13,
+    "c": 0.89
+   }
   },
   "carga": {},
   "talento": {
@@ -9876,7 +10088,7 @@
   "povo": "anão",
   "idade": 258,
   "sobre": "aventureiro de lenda, a Liga do Sino Rachado",
-  "fama": 299,
+  "fama": 298,
   "papel": "aventureiro",
   "guilda": "g_a_liga_do_sino_rachado",
   "rival": true
@@ -9915,7 +10127,13 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "chefe",
+    "alvo": "penhascos_das_aguas|serpe",
+    "ate": 12,
+    "c": 0.97
+   }
   },
   "carga": {},
   "talento": {
@@ -9965,7 +10183,13 @@
    },
    "talento_novos": [
     "manha"
-   ]
+   ],
+   "plano": {
+    "o_que": "chefe",
+    "alvo": "penhascos_das_aguas|serpe",
+    "ate": 11,
+    "c": 0.93
+   }
   },
   "carga": {},
   "talento": {
@@ -10003,7 +10227,7 @@
   "treino": {
    "lança": 160
   },
-  "moedas": 68,
+  "moedas": 82,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10048,13 +10272,13 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 64,
+   "forja": 79,
    "martelo": 40
   },
-  "moedas": 42,
+  "moedas": 57,
   "corpo": {
    "fome": 2,
-   "sono": 0,
+   "sono": 1,
    "cansaco": 0
   },
   "pv": 111,
@@ -10069,12 +10293,12 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 4,
+   "pesados_dia": 9,
    "pesados": 3,
-   "jornada_dia": 4,
+   "jornada_dia": 9,
    "jornada": 2,
    "cama": {
-    "ate": 30,
+    "ate": 60,
     "onde": "pedra_velha"
    },
    "ensino_incomum": null

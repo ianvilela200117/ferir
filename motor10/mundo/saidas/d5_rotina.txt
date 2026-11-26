@@ -1,0 +1,125 @@
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 5, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 2) · com forças (cansaço 4) · fôlego máximo −1 · 48 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 47 de prata)
+Dia 5, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 2) · com forças (cansaço 4) · fôlego máximo −1 · 47 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 5, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 6) · fôlego máximo −2 · 47 de prata
+(saída 0)
+---
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 7, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 6, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 45 de prata
+(saída 0)
+---
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 6, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 45 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 6, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 51 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 50 de prata)
+Dia 6, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 50 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 6, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 50 de prata
+(saída 0)
+---
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 8, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 7, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 48 de prata
+(saída 0)
+---
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 7, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 48 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 7, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 54 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 53 de prata)
+Dia 7, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 53 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 7, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 53 de prata
+(saída 0)
+---
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 9, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 8, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 51 de prata
+(saída 0)
+---
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 8, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 51 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 8, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 57 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 56 de prata)
+Dia 8, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 56 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 8, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 56 de prata
+(saída 0)
+---
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 10, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 9, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 54 de prata
+(saída 0)
+---
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 9, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 54 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 2
+Ferord serve 2 blocos na bancada da oficina e recebe 6 de prata.
+Dia 9, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 60 de prata
+(saída 0)
+---
+$ python3 ato.py comer
+Ferord come (fome 0; 59 de prata)
+Dia 9, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 59 de prata
+(saída 0)
+---
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 0 de prata (o lugar paga 2 blocos por dia a cada um, e só enquanto tem prata; o resto é serviço sem paga).
+Dia 9, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 59 de prata
+(saída 0)
+---
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 11, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 10, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 57 de prata
+(saída 0)
+---
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 10, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 57 de prata
+(saída 0)
+---
