@@ -1,5 +1,5 @@
 {
- "seq": 677,
+ "seq": 681,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12288,9 +12288,10 @@
    "efeitos": [],
    "sob_medida": null,
    "historia": [
-    "Dia 1: da casa dos Dorneles"
+    "Dia 1: da casa dos Dorneles",
+    "Dia 19: Ferord deu o martelo a Adelaide, a aprendiz da casa"
    ],
-   "dono": "eu",
+   "dono": "adelaide",
    "onde": null,
    "familia": "martelo",
    "id": "i0658",
@@ -12666,6 +12667,89 @@
    "dia": 18,
    "id": "i0677",
    "uso": "arma"
+  },
+  "i0678": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0678",
+   "uso": null
+  },
+  "i0679": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0679",
+   "uso": null
+  },
+  "i0680": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0680",
+   "uso": null
+  },
+  "i0681": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "castro_real",
+   "familia": "espada",
+   "id": "i0681",
+   "uso": null
   }
  },
  "oseq": 2,

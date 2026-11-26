@@ -3983,7 +3983,7 @@
    "nome": "a Liga do Sino Rachado",
    "sede": "vale_do_corvo",
    "lider": "taskin",
-   "fama": 443
+   "fama": 445
   },
   "g_a_companhia_do_lobo_cinzento": {
    "nome": "a Companhia do Lobo Cinzento",
@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 11,
-  "noticia": 19
+  "missao": 14,
+  "noticia": 29
  },
  "frentes": {
   "f01": {
@@ -4018,7 +4018,7 @@
    "dono": "chefe_sara",
    "onde": "castro_real",
    "meta": "tomar a estrada e cobrar de quem passa",
-   "passo": 1,
+   "passo": 2,
    "forca": 2,
    "passos": [
     "mais salteadores aparecem na estrada",
@@ -4030,7 +4030,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 8,
+   "ult": 22,
    "alvo_missao": "matar",
    "alvo": "chefe_sara",
    "cat": 1,
@@ -4045,7 +4045,7 @@
    "dono": "covil:souto_das_aguas",
    "onde": "penha_das_rosas",
    "meta": "crescer até tomar a terra",
-   "passo": 1,
+   "passo": 2,
    "forca": 5,
    "passos": [
     "o bando da toca cresce",
@@ -4057,7 +4057,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 8,
+   "ult": 22,
    "alvo_missao": "limpar",
    "alvo": "goblin",
    "cat": 1,
@@ -4126,7 +4126,7 @@
    "dono": "casa:c_astolan",
    "onde": "pedra_verde",
    "meta": "tomar a coroa",
-   "passo": 0,
+   "passo": 1,
    "forca": 5,
    "passos": [
     "a casa junta aliados",
@@ -4138,7 +4138,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 22,
    "alvo_missao": "investigar",
    "alvo": "casa:c_astolan",
    "cat": 2,
@@ -4204,7 +4204,7 @@
    "dono": "guilda:g_a_liga_do_sino_rachado",
    "onde": "penha_das_rosas",
    "meta": "ser a primeira a limpar a masmorra funda",
-   "passo": 0,
+   "passo": 1,
    "forca": 6,
    "passos": [
     "a guilda junta gente",
@@ -4216,7 +4216,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 22,
    "alvo_missao": null,
    "alvo": "ruinas_do_urso",
    "cat": 4,
@@ -4497,7 +4497,7 @@
    "paga": 22,
    "prazo": 37,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "drastum",
    "desde": 15,
    "cat": 0,
@@ -4512,11 +4512,55 @@
    "paga": 15,
    "prazo": 22,
    "frente": null,
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 15,
    "cat": 0,
    "quem_vai": "rolko"
+  },
+  "m0012": {
+   "de": "orlando",
+   "onde": "varzea_brava",
+   "tipo": "limpar",
+   "alvo": "toca_do_sal",
+   "n": 1,
+   "paga": 353,
+   "prazo": 45,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 22,
+   "cat": 1
+  },
+  "m0013": {
+   "de": "noemia",
+   "onde": "castro_branco",
+   "tipo": "caça",
+   "alvo": "urso",
+   "n": 3,
+   "paga": 21,
+   "prazo": 29,
+   "frente": null,
+   "estado": "tomada",
+   "quem": "drastum",
+   "desde": 22,
+   "cat": 0,
+   "ermo": "grutas_do_vento"
+  },
+  "m0014": {
+   "de": "selelada",
+   "onde": "souto_negro",
+   "tipo": "caça",
+   "alvo": "lobo",
+   "n": 3,
+   "paga": 9,
+   "prazo": 39,
+   "frente": null,
+   "estado": "cumprida",
+   "quem": "taskin",
+   "desde": 22,
+   "cat": 0,
+   "ermo": "charneca_dos_sinos"
   }
  },
  "noticias": {
@@ -5963,17 +6007,485 @@
     "pinhal_do_ferro": [
      19,
      4
+    ],
+    "penha_das_rosas": [
+     20,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00020": {
+   "dia": 20,
+   "onde": "souto_negro",
+   "texto": "Drastum cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "souto_negro": [
+     20,
+     0
+    ],
+    "pedra_velha": [
+     21,
+     1
+    ],
+    "varzea_brava": [
+     21,
+     1
+    ],
+    "ponte_da_cruz": [
+     21,
+     1
+    ],
+    "castro_do_sal": [
+     22,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     22,
+     2
+    ],
+    "pedra_verde": [
+     22,
+     2
+    ],
+    "ermida_verde": [
+     22,
+     2
+    ],
+    "vale_do_corvo": [
+     23,
+     3
+    ],
+    "castro_branco": [
+     23,
+     3
+    ],
+    "castro_real": [
+     23,
+     3
+    ],
+    "ribeira_do_lobo": [
+     23,
+     3
+    ],
+    "varzea_da_nevoa": [
+     24,
+     4
+    ],
+    "coval_do_vento": [
+     24,
+     4
+    ],
+    "pinhal_do_ferro": [
+     24,
+     4
+    ]
+   },
+   "janela": false
+  },
+  "n00021": {
+   "dia": 22,
+   "onde": "castro_do_sal",
+   "texto": "Ofélia conta da história: no ano 929, morre Iranina (afogado na travessia); Leandro assume a casa dos Astolan.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_do_sal": [
+     22,
+     0
+    ],
+    "pedra_velha": [
+     23,
+     1
+    ],
+    "vale_do_corvo": [
+     23,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     23,
+     1
+    ],
+    "pedra_verde": [
+     23,
+     1
+    ],
+    "souto_negro": [
+     24,
+     2
+    ],
+    "varzea_brava": [
+     24,
+     2
+    ],
+    "varzea_da_nevoa": [
+     24,
+     2
+    ],
+    "castro_branco": [
+     24,
+     2
+    ],
+    "castro_real": [
+     24,
+     2
+    ],
+    "ponte_da_cruz": [
+     24,
+     2
+    ],
+    "ribeira_do_lobo": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00022": {
+   "dia": 22,
+   "onde": "pedra_verde",
+   "texto": "Celinia conta da história: no ano 1184, acaba a guerra das Torres: vencem os Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     22,
+     0
+    ],
+    "ponte_da_cruz": [
+     23,
+     1
+    ],
+    "ribeira_do_lobo": [
+     23,
+     1
+    ],
+    "varzea_brava": [
+     23,
+     1
+    ],
+    "castro_do_sal": [
+     23,
+     1
+    ],
+    "ermida_verde": [
+     24,
+     2
+    ],
+    "souto_negro": [
+     24,
+     2
+    ],
+    "pinhal_do_ferro": [
+     24,
+     2
+    ],
+    "pedra_velha": [
+     24,
+     2
+    ],
+    "vale_do_corvo": [
+     24,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00023": {
+   "dia": 22,
+   "onde": "ponte_da_cruz",
+   "texto": "Gilelina conta da história: no ano 1130, brarku faz forjar o Malho do Silêncio (Épica).",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "ponte_da_cruz": [
+     22,
+     0
+    ],
+    "ermida_verde": [
+     23,
+     1
+    ],
+    "pedra_verde": [
+     23,
+     1
+    ],
+    "varzea_brava": [
+     23,
+     1
+    ],
+    "souto_negro": [
+     23,
+     1
+    ],
+    "ribeira_do_lobo": [
+     24,
+     2
+    ],
+    "castro_do_sal": [
+     24,
+     2
+    ],
+    "pedra_velha": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00024": {
+   "dia": 22,
+   "onde": "souto_negro",
+   "texto": "Vicente conta da história: no ano 1128, acaba a guerra do Trigo: vencem os Astolan.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "souto_negro": [
+     22,
+     0
+    ],
+    "pedra_velha": [
+     23,
+     1
+    ],
+    "varzea_brava": [
+     23,
+     1
+    ],
+    "ponte_da_cruz": [
+     23,
+     1
+    ],
+    "castro_do_sal": [
+     24,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     24,
+     2
+    ],
+    "pedra_verde": [
+     24,
+     2
+    ],
+    "ermida_verde": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00025": {
+   "dia": 22,
+   "onde": "castro_real",
+   "texto": "Um mercador é roubado e morto na estrada em Castro Real",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f01"
+   ],
+   "chegou": {
+    "castro_real": [
+     22,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     23,
+     1
+    ],
+    "castro_branco": [
+     23,
+     1
+    ],
+    "varzea_da_nevoa": [
+     23,
+     1
+    ],
+    "coval_do_vento": [
+     23,
+     1
+    ],
+    "pedra_velha": [
+     24,
+     2
+    ],
+    "castro_do_sal": [
+     24,
+     2
+    ],
+    "vale_do_corvo": [
+     24,
+     2
+    ],
+    "penha_das_rosas": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00026": {
+   "dia": 22,
+   "onde": "penha_das_rosas",
+   "texto": "Roubam o celeiro de noite em Penha das Rosas",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f02"
+   ],
+   "chegou": {
+    "penha_das_rosas": [
+     22,
+     0
+    ],
+    "coval_do_vento": [
+     23,
+     1
+    ],
+    "varzea_da_nevoa": [
+     23,
+     1
+    ],
+    "castro_real": [
+     24,
+     2
+    ],
+    "vale_do_corvo": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00027": {
+   "dia": 22,
+   "onde": "pedra_verde",
+   "texto": "A casa junta aliados em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f05"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     22,
+     0
+    ],
+    "ponte_da_cruz": [
+     23,
+     1
+    ],
+    "ribeira_do_lobo": [
+     23,
+     1
+    ],
+    "varzea_brava": [
+     23,
+     1
+    ],
+    "castro_do_sal": [
+     23,
+     1
+    ],
+    "ermida_verde": [
+     24,
+     2
+    ],
+    "souto_negro": [
+     24,
+     2
+    ],
+    "pinhal_do_ferro": [
+     24,
+     2
+    ],
+    "pedra_velha": [
+     24,
+     2
+    ],
+    "vale_do_corvo": [
+     24,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00028": {
+   "dia": 22,
+   "onde": "penha_das_rosas",
+   "texto": "A guilda junta gente em Penha das Rosas",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f08"
+   ],
+   "chegou": {
+    "penha_das_rosas": [
+     22,
+     0
+    ],
+    "coval_do_vento": [
+     23,
+     1
+    ],
+    "varzea_da_nevoa": [
+     23,
+     1
+    ],
+    "castro_real": [
+     24,
+     2
+    ],
+    "vale_do_corvo": [
+     24,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00029": {
+   "dia": 24,
+   "onde": "souto_negro",
+   "texto": "Taskin cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "souto_negro": [
+     24,
+     0
     ]
    },
    "janela": false
   }
  },
  "ranking": {
-  "semana": 3,
+  "semana": 4,
   "lista": [
    [
     "drastum",
-    340
+    341
    ],
    [
     "nynena",

@@ -70,7 +70,7 @@ while not parar:
     novas = [n for n in agora['noticias'][1:] if n not in antes['noticias']]
     for n in novas:
         avisos.append('notícia: ' + n)
-        if any(w in n for w in PALAVRAS): parar = parar or f'notícia que toca Ferord: {n}'
+        if any(w in n for w in PALAVRAS) and 'conta da história' not in n and 'cumpriu a missão' not in n: parar = parar or f'notícia que toca Ferord: {n}'
     novasm = [m for m in agora['missoes'] if m not in antes['missoes'] and m.startswith('- ')]
     for mm in novasm:
         avisos.append('missão: ' + mm)

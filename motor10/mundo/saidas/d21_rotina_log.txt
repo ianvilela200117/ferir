@@ -1,0 +1,14 @@
+início: Dia 21 · 23 de prata · forja 112 · metal Incomum (1.13, 14)
+Dia 21: prata 23 → 32 · forja 115 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    (só o Mestre) frente: a frente f01 (o bando de Sara na estrada) anda ao passo 2: um mercador é roubado e morto na estrada
+    (só o Mestre) frente: a frente f02 (a horda da toca do Souto das Águas) anda ao passo 2: roubam o celeiro de noite
+    (só o Mestre) frente: a frente f05 (a ambição dos Astolan) anda ao passo 1: a casa junta aliados
+    (só o Mestre) frente: a frente f08 (a corrida da Liga do Sino Rachado) anda ao passo 1: a guilda junta gente
+    (só o Mestre) a frente f01 foi do passo 1 ao 2
+    (só o Mestre) a frente f02 foi do passo 1 ao 2
+    (só o Mestre) a frente f05 foi do passo 0 ao 1
+    (só o Mestre) a frente f08 foi do passo 0 ao 1
+Dia 22: prata 32 → 41 · forja 118 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+    notícia: - Dia 23 (de Castro do Sal): Ofélia conta da história: no ano 929, morre Iranina (afogado na travessia); Leandro assume a casa dos Astolan.
+    notícia: - Dia 23 (de Souto Negro): Vicente conta da história: no ano 1128, acaba a guerra do Trigo: vencem os Astolan.
+PAROU: notícia que toca Ferord: - Dia 23 (de Souto Negro): Vicente conta da história: no ano 1128, acaba a guerra do Trigo: vencem os Astolan.

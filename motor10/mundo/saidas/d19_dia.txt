@@ -1,0 +1,4 @@
+$ estado.py mestre (o martelo da casa vai para Adelaide)
+evento #1682 (mestre): Ferord dá o Martelo de Ferord (Comum), o martelo da casa, a Adelaide, a aprendiz · 2 efeitos
+$ gente.py lembra adelaide ... 2
+feito.

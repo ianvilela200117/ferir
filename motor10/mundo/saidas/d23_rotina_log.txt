@@ -1,0 +1,7 @@
+início: Dia 23 · 41 de prata · forja 118 · metal Incomum (1.1, 15)
+Dia 23: prata 41 → 50 · forja 121 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+    notícia: - Dia 24 (de Castro Real): Um mercador é roubado e morto na estrada em Castro Real
+    notícia: - Dia 24 (de Pedra Verde): A casa junta aliados em Pedra Verde
+    notícia: - Dia 24 (de Pedra Verde): Celinia conta da história: no ano 1184, acaba a guerra das Torres: vencem os Orirena.
+    notícia: - Dia 24 (de Ponte da Cruz): Gilelina conta da história: no ano 1130, brarku faz forjar o Malho do Silêncio (Épica).
+PAROU: a prata chegou a 50 (meta 50)

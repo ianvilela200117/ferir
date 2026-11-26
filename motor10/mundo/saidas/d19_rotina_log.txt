@@ -1,0 +1,5 @@
+início: Dia 19 · 5 de prata · forja 106 · metal Incomum (1.06, 16)
+Dia 19: prata 5 → 14 · forja 109 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+Dia 20: prata 14 → 23 · forja 112 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 21 (de Souto Negro): Drastum cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos
+PAROU: notícia que toca Ferord: - Dia 21 (de Souto Negro): Drastum cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos
