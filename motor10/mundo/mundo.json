@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 8,
-  "noticia": 14
+  "missao": 11,
+  "noticia": 19
  },
  "frentes": {
   "f01": {
@@ -4178,7 +4178,7 @@
    "dono": "moninho",
    "onde": "vale_do_corvo",
    "meta": "abrir a porta para o que mora embaixo",
-   "passo": 0,
+   "passo": 1,
    "forca": 5,
    "passos": [
     "gente some de noite",
@@ -4190,7 +4190,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 15,
    "alvo_missao": "investigar",
    "alvo": "moninho",
    "cat": 2,
@@ -4282,7 +4282,7 @@
    "dono": "esp:lobisomem@charneca_dos_sinos",
    "onde": "souto_negro",
    "meta": "levar a gente do lugar, um a um",
-   "passo": 0,
+   "passo": 1,
    "forca": 2,
    "passos": [
     "alguém some na borda do mato",
@@ -4294,7 +4294,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 15,
    "alvo_missao": "investigar",
    "alvo": "lobisomem",
    "cat": 2,
@@ -4367,7 +4367,7 @@
    "paga": 67,
    "prazo": 14,
    "frente": null,
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 1,
    "cat": 0
@@ -4410,7 +4410,7 @@
    "paga": 333,
    "prazo": 10,
    "frente": null,
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 1,
    "cat": 1
@@ -4472,6 +4472,51 @@
    "desde": 8,
    "cat": 0,
    "quem_vai": "zozzo"
+  },
+  "m0009": {
+   "de": "onofre",
+   "onde": "varzea_brava",
+   "tipo": "escolta",
+   "alvo": "pedra_verde",
+   "n": 1,
+   "paga": 15,
+   "prazo": 32,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 15,
+   "cat": 0,
+   "quem_vai": "onofre"
+  },
+  "m0010": {
+   "de": "selelada",
+   "onde": "souto_negro",
+   "tipo": "caça",
+   "alvo": "lobo",
+   "n": 3,
+   "paga": 22,
+   "prazo": 37,
+   "frente": null,
+   "estado": "tomada",
+   "quem": "drastum",
+   "desde": 15,
+   "cat": 0,
+   "ermo": "charneca_dos_sinos"
+  },
+  "m0011": {
+   "de": "rolko",
+   "onde": "ermida_verde",
+   "tipo": "escolta",
+   "alvo": "ponte_da_cruz",
+   "n": 1,
+   "paga": 15,
+   "prazo": 22,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 15,
+   "cat": 0,
+   "quem_vai": "rolko"
   }
  },
  "noticias": {
@@ -4747,6 +4792,34 @@
     "castro_real": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "castro_branco": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     11,
+     3
+    ],
+    "ribeira_do_lobo": [
+     11,
+     3
+    ],
+    "ermida_verde": [
+     12,
+     4
+    ],
+    "pinhal_do_ferro": [
+     12,
+     4
     ]
    },
    "janela": false
@@ -4795,6 +4868,34 @@
     "castro_real": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "castro_branco": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     11,
+     3
+    ],
+    "ribeira_do_lobo": [
+     11,
+     3
+    ],
+    "ermida_verde": [
+     12,
+     4
+    ],
+    "pinhal_do_ferro": [
+     12,
+     4
     ]
    },
    "janela": false
@@ -4847,6 +4948,30 @@
     "castro_real": [
      10,
      2
+    ],
+    "ermida_verde": [
+     11,
+     3
+    ],
+    "varzea_da_nevoa": [
+     11,
+     3
+    ],
+    "ribeira_do_lobo": [
+     11,
+     3
+    ],
+    "coval_do_vento": [
+     11,
+     3
+    ],
+    "penha_das_rosas": [
+     12,
+     4
+    ],
+    "pinhal_do_ferro": [
+     12,
+     4
     ]
    },
    "janela": false
@@ -4887,6 +5012,42 @@
     "coval_do_vento": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "vale_do_corvo": [
+     11,
+     3
+    ],
+    "pedra_verde": [
+     11,
+     3
+    ],
+    "penha_das_rosas": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     12,
+     4
+    ],
+    "ribeira_do_lobo": [
+     12,
+     4
+    ],
+    "ermida_verde": [
+     13,
+     5
+    ],
+    "pinhal_do_ferro": [
+     13,
+     5
     ]
    },
    "janela": false
@@ -4911,6 +5072,58 @@
     "pedra_verde": [
      10,
      2
+    ],
+    "ponte_da_cruz": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "castro_do_sal": [
+     11,
+     3
+    ],
+    "ermida_verde": [
+     12,
+     4
+    ],
+    "souto_negro": [
+     12,
+     4
+    ],
+    "pedra_velha": [
+     12,
+     4
+    ],
+    "vale_do_corvo": [
+     12,
+     4
+    ],
+    "ribeira_da_nevoa": [
+     12,
+     4
+    ],
+    "varzea_da_nevoa": [
+     13,
+     5
+    ],
+    "castro_branco": [
+     13,
+     5
+    ],
+    "castro_real": [
+     13,
+     5
+    ],
+    "coval_do_vento": [
+     14,
+     6
+    ],
+    "penha_das_rosas": [
+     14,
+     6
     ]
    },
    "janela": false
@@ -4951,6 +5164,42 @@
     "castro_branco": [
      10,
      2
+    ],
+    "castro_do_sal": [
+     11,
+     3
+    ],
+    "pedra_velha": [
+     11,
+     3
+    ],
+    "pedra_verde": [
+     12,
+     4
+    ],
+    "souto_negro": [
+     12,
+     4
+    ],
+    "varzea_brava": [
+     12,
+     4
+    ],
+    "ponte_da_cruz": [
+     13,
+     5
+    ],
+    "ribeira_do_lobo": [
+     13,
+     5
+    ],
+    "ermida_verde": [
+     14,
+     6
+    ],
+    "pinhal_do_ferro": [
+     14,
+     6
     ]
    },
    "janela": false
@@ -5000,6 +5249,34 @@
     "penha_das_rosas": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "pedra_verde": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     12,
+     4
+    ],
+    "ribeira_do_lobo": [
+     12,
+     4
+    ],
+    "ermida_verde": [
+     13,
+     5
+    ],
+    "pinhal_do_ferro": [
+     13,
+     5
     ]
    },
    "janela": false
@@ -5033,6 +5310,50 @@
     "vale_do_corvo": [
      10,
      2
+    ],
+    "ribeira_da_nevoa": [
+     11,
+     3
+    ],
+    "castro_branco": [
+     11,
+     3
+    ],
+    "castro_do_sal": [
+     11,
+     3
+    ],
+    "pedra_velha": [
+     12,
+     4
+    ],
+    "pedra_verde": [
+     12,
+     4
+    ],
+    "souto_negro": [
+     13,
+     5
+    ],
+    "varzea_brava": [
+     13,
+     5
+    ],
+    "ponte_da_cruz": [
+     13,
+     5
+    ],
+    "ribeira_do_lobo": [
+     13,
+     5
+    ],
+    "ermida_verde": [
+     14,
+     6
+    ],
+    "pinhal_do_ferro": [
+     14,
+     6
     ]
    },
    "janela": false
@@ -5082,6 +5403,34 @@
     "castro_real": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "castro_branco": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     11,
+     3
+    ],
+    "ribeira_do_lobo": [
+     11,
+     3
+    ],
+    "ermida_verde": [
+     12,
+     4
+    ],
+    "pinhal_do_ferro": [
+     12,
+     4
     ]
    },
    "janela": false
@@ -5139,6 +5488,26 @@
     "ribeira_da_nevoa": [
      10,
      2
+    ],
+    "varzea_da_nevoa": [
+     11,
+     3
+    ],
+    "castro_branco": [
+     11,
+     3
+    ],
+    "castro_real": [
+     11,
+     3
+    ],
+    "coval_do_vento": [
+     12,
+     4
+    ],
+    "penha_das_rosas": [
+     12,
+     4
     ]
    },
    "janela": false
@@ -5180,13 +5549,243 @@
     "coval_do_vento": [
      10,
      2
+    ],
+    "souto_negro": [
+     11,
+     3
+    ],
+    "varzea_brava": [
+     11,
+     3
+    ],
+    "vale_do_corvo": [
+     11,
+     3
+    ],
+    "pedra_verde": [
+     11,
+     3
+    ],
+    "penha_das_rosas": [
+     11,
+     3
+    ],
+    "ponte_da_cruz": [
+     12,
+     4
+    ],
+    "ribeira_do_lobo": [
+     12,
+     4
+    ],
+    "ermida_verde": [
+     13,
+     5
+    ],
+    "pinhal_do_ferro": [
+     13,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00015": {
+   "dia": 11,
+   "onde": "ribeira_do_lobo",
+   "texto": "Nynena mata serpe nos Penhascos das Águas",
+   "peso": 2,
+   "tags": [
+    "rival"
+   ],
+   "chegou": {
+    "ribeira_do_lobo": [
+     11,
+     0
+    ],
+    "pinhal_do_ferro": [
+     12,
+     1
+    ],
+    "pedra_verde": [
+     12,
+     1
+    ],
+    "ponte_da_cruz": [
+     13,
+     2
+    ],
+    "varzea_brava": [
+     13,
+     2
+    ],
+    "castro_do_sal": [
+     13,
+     2
+    ],
+    "ermida_verde": [
+     14,
+     3
+    ],
+    "souto_negro": [
+     14,
+     3
+    ],
+    "pedra_velha": [
+     14,
+     3
+    ],
+    "vale_do_corvo": [
+     14,
+     3
+    ],
+    "ribeira_da_nevoa": [
+     14,
+     3
+    ],
+    "varzea_da_nevoa": [
+     15,
+     4
+    ],
+    "castro_branco": [
+     15,
+     4
+    ],
+    "castro_real": [
+     15,
+     4
+    ],
+    "coval_do_vento": [
+     16,
+     5
+    ],
+    "penha_das_rosas": [
+     16,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00016": {
+   "dia": 15,
+   "onde": "castro_do_sal",
+   "texto": "Ofélia conta da história: no ano 827, morre Sílvia (de velho, na cama); Davi assume a casa dos Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_do_sal": [
+     15,
+     0
+    ],
+    "pedra_velha": [
+     16,
+     1
+    ],
+    "vale_do_corvo": [
+     16,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     16,
+     1
+    ],
+    "pedra_verde": [
+     16,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00017": {
+   "dia": 15,
+   "onde": "pedra_verde",
+   "texto": "Celinia conta da história: no ano 1012, morre Berina (afogado na travessia); Celinino assume a casa dos Astasal.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     15,
+     0
+    ],
+    "ponte_da_cruz": [
+     16,
+     1
+    ],
+    "ribeira_do_lobo": [
+     16,
+     1
+    ],
+    "varzea_brava": [
+     16,
+     1
+    ],
+    "castro_do_sal": [
+     16,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00018": {
+   "dia": 15,
+   "onde": "vale_do_corvo",
+   "texto": "Gente some de noite em Vale do Corvo",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f07"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     15,
+     0
+    ],
+    "castro_do_sal": [
+     16,
+     1
+    ],
+    "varzea_da_nevoa": [
+     16,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00019": {
+   "dia": 15,
+   "onde": "souto_negro",
+   "texto": "Alguém some na borda do mato em Souto Negro",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f11"
+   ],
+   "chegou": {
+    "souto_negro": [
+     15,
+     0
+    ],
+    "pedra_velha": [
+     16,
+     1
+    ],
+    "varzea_brava": [
+     16,
+     1
+    ],
+    "ponte_da_cruz": [
+     16,
+     1
     ]
    },
    "janela": false
   }
  },
  "ranking": {
-  "semana": 2,
+  "semana": 3,
   "lista": [
    [
     "drastum",
@@ -5194,15 +5793,15 @@
    ],
    [
     "nynena",
-    334
+    340
    ],
    [
     "taskin",
-    324
+    323
    ],
    [
     "mirys",
-    165
+    164
    ],
    [
     "ernesto",
@@ -5214,7 +5813,7 @@
    ],
    [
     "aemine",
-    99
+    98
    ],
    [
     "quirino",

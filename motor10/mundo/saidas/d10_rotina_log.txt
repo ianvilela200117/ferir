@@ -1,0 +1,15 @@
+início: Dia 10 · 14 de prata · forja 79 · metal Incomum (1.1, 15)
+Dia 10: prata 14 → 17 · forja 82 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 11 (de Coval do Vento): Lino conta da história: no ano 1057, morre Perado (de peste); Rosa assume a casa dos Orirena.
+Dia 11: prata 17 → 20 · forja 85 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+    notícia: - Dia 12 (de Penha das Rosas): dizem que o bando da toca cresce em Penha das Rosas
+    notícia: - Dia 12 (de Pinhal do Ferro): dizem que helena conta da história: no ano 961, marelão expulsou os orcs da serra até o último.
+Dia 12: prata 20 → 23 · forja 88 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+Dia 13: prata 23 → 26 · forja 91 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 14 (de Ribeira do Lobo): Nynena mata serpe nos Penhascos das Águas
+Dia 14: prata 26 → 29 · forja 94 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    (só o Mestre) frente: a frente f07 (o culto de Moninho) anda ao passo 1: gente some de noite
+    (só o Mestre) frente: a frente f11 (os sumiços da Charneca dos Sinos) anda ao passo 1: alguém some na borda do mato
+    (só o Mestre) a frente f07 foi do passo 0 ao 1
+    (só o Mestre) a frente f11 foi do passo 0 ao 1
+PAROU: (só o Mestre) a frente f11, os sumiços da Charneca, andou ao passo 1

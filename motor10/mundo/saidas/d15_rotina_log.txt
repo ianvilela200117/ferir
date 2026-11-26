@@ -1,0 +1,5 @@
+início: Dia 15 · 29 de prata · forja 94 · metal Incomum (1.06, 16)
+Dia 15: prata 29 → 32 · forja 97 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 16 (de Souto Negro): Alguém some na borda do mato em Souto Negro
+    notícia: - Dia 16 (de Castro do Sal): Ofélia conta da história: no ano 827, morre Sílvia (de velho, na cama); Davi assume a casa dos Orirena.
+PAROU: notícia que toca Ferord: - Dia 16 (de Souto Negro): Alguém some na borda do mato em Souto Negro

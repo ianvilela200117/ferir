@@ -1,5 +1,5 @@
 {
- "seq": 668,
+ "seq": 676,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12493,6 +12493,157 @@
    "onde": "varzea_brava",
    "familia": "espada",
    "id": "i0668",
+   "uso": null
+  },
+  "i0669": {
+   "tipo": "nucleo",
+   "cat": 3,
+   "nome": "núcleo Épico de serpe",
+   "dur": [
+    1,
+    1
+   ],
+   "dono": "nynena",
+   "onde": null,
+   "de": "serpe",
+   "historia": [
+    "Dia 11: tirado por Nynena nos Penhascos das Águas"
+   ],
+   "id": "i0669",
+   "uso": null
+  },
+  "i0670": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "adaga",
+   "id": "i0670",
+   "uso": null
+  },
+  "i0671": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0671",
+   "uso": null
+  },
+  "i0672": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "familia": "machado",
+   "id": "i0672",
+   "uso": null
+  },
+  "i0673": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0673",
+   "uso": null
+  },
+  "i0674": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0674",
+   "uso": null
+  },
+  "i0675": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "castro_real",
+   "familia": "lança",
+   "id": "i0675",
+   "uso": null
+  },
+  "i0676": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_verde",
+   "familia": "lança",
+   "id": "i0676",
    "uso": null
   }
  },

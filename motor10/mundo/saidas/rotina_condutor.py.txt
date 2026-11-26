@@ -11,7 +11,7 @@ sys.path.insert(0, MOTOR); os.chdir(MOTOR)
 META = int(sys.argv[1]) if len(sys.argv) > 1 else 77
 DIA_MAX = int(sys.argv[2]) if len(sys.argv) > 2 else 18
 VILA = {'filipa', 'berareu', 'felix', 'adelaide', 'osorino', 'nora', 'paio', 'tania', 'erado'}
-PALAVRAS = ('Pedra Velha', 'Charneca', 'metal', 'ferreir', 'forja', 'Dorneles', 'Sinos', 'Filipa')
+PALAVRAS = ('Pedra Velha', 'Charneca', 'metal', 'ferreir', 'forja', 'Dorneles', 'Sinos', 'Filipa', 'Souto Negro', 'some na')
 BENIGNOS = {'producao', 'consumo', 'virada', 'noticia', 'regiao', 'semana', 'trabalhar', 'comer', 'dormir', 'querer', 'descansar'}
 PAROU_OK = ('no limite das forças', 'acorda com o sono em dia')
 
