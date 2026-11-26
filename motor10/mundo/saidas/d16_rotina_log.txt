@@ -1,0 +1,7 @@
+início: Dia 16 · 10 de prata · forja 97 · metal Incomum (1.1, 15)
+Dia 16: prata 10 → 13 · forja 100 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 17 (de Vale do Corvo): Gente some de noite em Vale do Corvo
+    notícia: - Dia 17 (de Pedra Verde): Celinia conta da história: no ano 1012, morre Berina (afogado na travessia); Celinino assume a casa dos Astasal.
+    a mão na forja subiu: 2 → 4
+Dia 17: prata 13 → 22 · forja 103 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+PAROU: a prata chegou a 22 (meta 14)

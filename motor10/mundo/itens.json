@@ -1,5 +1,5 @@
 {
- "seq": 676,
+ "seq": 677,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12294,7 +12294,7 @@
    "onde": null,
    "familia": "martelo",
    "id": "i0658",
-   "uso": "arma"
+   "uso": null
   },
   "i0659": {
    "tipo": "armadura",
@@ -12645,8 +12645,29 @@
    "familia": "lança",
    "id": "i0676",
    "uso": null
+  },
+  "i0677": {
+   "tipo": "arma",
+   "cat": 1,
+   "nome": "Martelo Incomum de Ferord",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 18: Ferord forjou em Pedra Velha"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "familia": "martelo",
+   "feito_por": "eu",
+   "dia": 18,
+   "id": "i0677",
+   "uso": "arma"
   }
  },
- "oseq": 1,
+ "oseq": 2,
  "obras": {}
 }

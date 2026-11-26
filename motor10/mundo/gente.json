@@ -5045,6 +5045,12 @@
     "de": "eu",
     "o_que": "Ferord aprendeu comigo a receita do Incomum, em três dias de bancada",
     "peso": 1
+   },
+   {
+    "dia": 19,
+    "de": "eu",
+    "o_que": "Ferord forjou na minha forja o primeiro martelo Incomum dele, e saiu dos bons",
+    "peso": 1
    }
   ]
  },
@@ -8027,7 +8033,7 @@
   "treino": {
    "fé": 40
   },
-  "moedas": 57,
+  "moedas": 73,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8043,10 +8049,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8205,7 +8208,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 53,
+  "moedas": 72,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8221,10 +8224,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8381,7 +8381,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 28,
+  "moedas": 40,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8397,10 +8397,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8446,7 +8443,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 41,
+  "moedas": 67,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8463,10 +8460,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8503,7 +8497,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 21,
+  "moedas": 47,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8520,10 +8514,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8616,7 +8607,7 @@
   "treino": {
    "lança": 40
   },
-  "moedas": 66,
+  "moedas": 83,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8632,10 +8623,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8726,7 +8714,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 56,
+  "moedas": 70,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8742,10 +8730,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8780,7 +8765,7 @@
   "treino": {
    "espada": 40
   },
-  "moedas": 71,
+  "moedas": 81,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8796,10 +8781,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8899,7 +8881,7 @@
    "adaga": 160,
    "manha": 160
   },
-  "moedas": 46,
+  "moedas": 60,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8916,10 +8898,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9079,7 +9058,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 140,
+  "moedas": 153,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9095,10 +9074,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9252,7 +9228,7 @@
   "treino": {
    "lança": 160
   },
-  "moedas": 137,
+  "moedas": 150,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9268,10 +9244,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9307,7 +9280,7 @@
   "treino": {
    "montante": 40
   },
-  "moedas": 74,
+  "moedas": 102,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9323,10 +9296,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9419,7 +9389,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 144,
+  "moedas": 164,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9435,10 +9405,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9482,7 +9449,7 @@
   "treino": {
    "arco": 40
   },
-  "moedas": 56,
+  "moedas": 66,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9498,10 +9465,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9535,7 +9499,7 @@
   "treino": {
    "montante": 160
   },
-  "moedas": 65,
+  "moedas": 94,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9551,10 +9515,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9710,7 +9671,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 260,
+  "moedas": 279,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9726,10 +9687,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9773,7 +9731,7 @@
   "treino": {
    "machado": 500
   },
-  "moedas": 216,
+  "moedas": 242,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9789,10 +9747,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9998,7 +9953,7 @@
   "treino": {
    "arcano": 500
   },
-  "moedas": 288,
+  "moedas": 301,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10014,10 +9969,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 19
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10063,7 +10015,7 @@
   "treino": {
    "arco": 500
   },
-  "moedas": 468,
+  "moedas": 491,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10079,10 +10031,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 18
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10274,15 +10223,15 @@
    "Afinidade": 75
   },
   "maestria": {
-   "forja": 2,
+   "forja": 4,
    "martelo": 2
   },
   "treino": {
-   "forja": 97,
+   "forja": 106,
    "martelo": 40,
-   "comércio": 1
+   "comércio": 3
   },
-  "moedas": 32,
+  "moedas": 5,
   "corpo": {
    "fome": 2,
    "sono": 1,
@@ -10300,21 +10249,20 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 15,
+   "pesados_dia": 18,
    "pesados": 3,
-   "jornada_dia": 15,
+   "jornada_dia": 17,
    "jornada": 2,
    "cama": {
-    "ate": 96,
+    "ate": 114,
     "onde": "pedra_velha"
    },
    "ensino_incomum": null,
-   "negocio_dia": 10
+   "negocio_dia": 18
   },
   "carga": {
    "metal:0": 3,
-   "madeira:0": 2,
-   "metal:1": 2
+   "madeira:0": 2
   },
   "jogador": true,
   "talento": {
