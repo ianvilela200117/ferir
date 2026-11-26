@@ -1,0 +1,10 @@
+início: Dia 30 · 35 de prata · forja 139 · metal Incomum (1.18, 13)
+Dia 30: prata 35 → 44 · forja 142 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.22, 12)
+    notícia: - Dia 31 (de Pedra Verde): A casa junta prata em Pedra Verde
+    notícia: - Dia 31 (de Vale do Corvo): Isabel conta da história: no ano 1177, morre Domingas (de febre); Valinado assume a casa dos Astolan.
+    notícia: - Dia 31 (de Vale do Corvo): Josefa conta da história: no ano 851, aerine morre na Toca do Touro; o Arco do Rei Velho fica com o corpo.
+    notícia: - Dia 31 (de Castro Branco): Selelina conta da história: no ano 716, a velha atalaia que os bichos tomaram no ano 716, quando a guarda deixou de subir.
+Dia 31: prata 44 → 53 · forja 145 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.18, 13)
+Dia 32: prata 53 → 62 · forja 148 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+Dia 33: prata 62 → 71 · forja 151 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+PAROU: a prata chegou a 71 (meta 64)

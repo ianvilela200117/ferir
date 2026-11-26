@@ -4482,7 +4482,7 @@
    "paga": 15,
    "prazo": 32,
    "frente": null,
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 15,
    "cat": 0,
@@ -6920,6 +6920,58 @@
     "varzea_da_nevoa": [
      30,
      1
+    ],
+    "pedra_velha": [
+     31,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     31,
+     2
+    ],
+    "pedra_verde": [
+     31,
+     2
+    ],
+    "coval_do_vento": [
+     31,
+     2
+    ],
+    "penha_das_rosas": [
+     31,
+     2
+    ],
+    "castro_real": [
+     31,
+     2
+    ],
+    "souto_negro": [
+     32,
+     3
+    ],
+    "varzea_brava": [
+     32,
+     3
+    ],
+    "castro_branco": [
+     32,
+     3
+    ],
+    "ponte_da_cruz": [
+     32,
+     3
+    ],
+    "ribeira_do_lobo": [
+     32,
+     3
+    ],
+    "ermida_verde": [
+     33,
+     4
+    ],
+    "pinhal_do_ferro": [
+     33,
+     4
     ]
    },
    "janela": false
@@ -6944,6 +6996,58 @@
     "varzea_da_nevoa": [
      30,
      1
+    ],
+    "pedra_velha": [
+     31,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     31,
+     2
+    ],
+    "pedra_verde": [
+     31,
+     2
+    ],
+    "coval_do_vento": [
+     31,
+     2
+    ],
+    "penha_das_rosas": [
+     31,
+     2
+    ],
+    "castro_real": [
+     31,
+     2
+    ],
+    "souto_negro": [
+     32,
+     3
+    ],
+    "varzea_brava": [
+     32,
+     3
+    ],
+    "castro_branco": [
+     32,
+     3
+    ],
+    "ponte_da_cruz": [
+     32,
+     3
+    ],
+    "ribeira_do_lobo": [
+     32,
+     3
+    ],
+    "ermida_verde": [
+     33,
+     4
+    ],
+    "pinhal_do_ferro": [
+     33,
+     4
     ]
    },
    "janela": false
@@ -6968,6 +7072,58 @@
     "castro_real": [
      30,
      1
+    ],
+    "pedra_velha": [
+     31,
+     2
+    ],
+    "castro_do_sal": [
+     31,
+     2
+    ],
+    "varzea_da_nevoa": [
+     31,
+     2
+    ],
+    "coval_do_vento": [
+     31,
+     2
+    ],
+    "souto_negro": [
+     32,
+     3
+    ],
+    "varzea_brava": [
+     32,
+     3
+    ],
+    "vale_do_corvo": [
+     32,
+     3
+    ],
+    "pedra_verde": [
+     32,
+     3
+    ],
+    "penha_das_rosas": [
+     32,
+     3
+    ],
+    "ponte_da_cruz": [
+     33,
+     4
+    ],
+    "ribeira_do_lobo": [
+     33,
+     4
+    ],
+    "ermida_verde": [
+     34,
+     5
+    ],
+    "pinhal_do_ferro": [
+     34,
+     5
     ]
    },
    "janela": false
@@ -7001,6 +7157,50 @@
     "castro_do_sal": [
      30,
      1
+    ],
+    "ermida_verde": [
+     31,
+     2
+    ],
+    "souto_negro": [
+     31,
+     2
+    ],
+    "pinhal_do_ferro": [
+     31,
+     2
+    ],
+    "pedra_velha": [
+     31,
+     2
+    ],
+    "vale_do_corvo": [
+     31,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     31,
+     2
+    ],
+    "varzea_da_nevoa": [
+     32,
+     3
+    ],
+    "castro_branco": [
+     32,
+     3
+    ],
+    "castro_real": [
+     32,
+     3
+    ],
+    "coval_do_vento": [
+     33,
+     4
+    ],
+    "penha_das_rosas": [
+     33,
+     4
     ]
    },
    "janela": false
@@ -7030,6 +7230,54 @@
     "ponte_da_cruz": [
      30,
      1
+    ],
+    "castro_do_sal": [
+     31,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     31,
+     2
+    ],
+    "pedra_verde": [
+     31,
+     2
+    ],
+    "ermida_verde": [
+     31,
+     2
+    ],
+    "vale_do_corvo": [
+     32,
+     3
+    ],
+    "castro_branco": [
+     32,
+     3
+    ],
+    "castro_real": [
+     32,
+     3
+    ],
+    "ribeira_do_lobo": [
+     32,
+     3
+    ],
+    "varzea_da_nevoa": [
+     33,
+     4
+    ],
+    "coval_do_vento": [
+     33,
+     4
+    ],
+    "pinhal_do_ferro": [
+     33,
+     4
+    ],
+    "penha_das_rosas": [
+     34,
+     5
     ]
    },
    "janela": false
