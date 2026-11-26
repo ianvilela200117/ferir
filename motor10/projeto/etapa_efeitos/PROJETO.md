@@ -43,7 +43,19 @@ Um começo de catálogo (cada um vira um gancho no `luta.py` e uma linha no `ite
 - O tesouro da masmorra e do dragão: a peça Rara ou melhor sai com efeito, com a chance pela categoria.
 - O rival que forja (a capital) e o ferreiro do mundo: a obra-prima deles escolhe sozinha (pela semente).
 
-### 2.3 As habilidades (a maestria vira técnica)
+### 2.3 As habilidades DE CLASSE (pedido do jogador, Dia 34: "como no SATISFY, eles usam habilidades de classe para batalhar, convencer, trabalhar e copiar")
+O Ferir já tinha o caminho (`../habilidades.py` e `../classe.py` na raiz): a habilidade tem GRAU e sobe PELO USO (Iniciante 0, Aprendiz 10, Adepto 30, Perito 80,
+Mestre 200, Grão-Mestre 500 usos), é de um tipo (Ativa, Passiva, Reação, Postura, Magia), pode ter cargas, e a classe tem três assinaturas e uma fraqueza.
+No Motor 10, as habilidades de classe cobrem quatro campos, cada uma com um custo (fôlego, Mana, cargas por dia) e uma medida no banco:
+- **batalhar:** técnicas que mudam a luta (do fraco ao apelão, pela mesma régua de faixas dos efeitos). O ferreiro de linhagem, por exemplo, pode herdar a técnica de
+  luta de um mestre ferreiro da crônica do mundo (os mestres Ninkel, Urka, Guiomar, Borda, Constança forjaram os martelos de nome): uma dança do martelo que se aprende
+  com a peça ou com o mestre, e sobe de grau pelo uso;
+- **convencer:** técnicas de fala que pesam no teste com a gente com nome (a opinião, o preço, o pedido da caixa), sem tirar a escolha do jogador;
+- **trabalhar:** técnicas do ofício (a forja, o couro, o encanto, a alquimia) que somam na Lei do Valor ou mudam a obra (refazer uma vez, ler a matéria, assinar a peça);
+- **copiar:** ver uma peça ou uma técnica e aprender o jeito dela (a receita de uma peça de nome, a técnica de quem se viu lutar), com teste e com tempo.
+As habilidades são do mundo de Belogar (nomes e efeitos próprios), no espírito do que o jogador descreveu.
+
+### 2.3b A maestria vira técnica
 - **Arma:** cada família ganha uma técnica no Treinado, uma melhor no Mestre e uma "apelona" no Lendário. Exemplos: o martelo esmaga (a proteção conta menos), a espada
   riposta, a lança mantém à distância, o arco mira (um tiro a mais de acerto). Cada uma tem um custo (fôlego, uma vez por luta) e uma medida no banco da luta.
 - **Ofício:** a forja de Mestre lê os efeitos de uma peça; a de Lendário refaz a obra que falhou uma vez por obra. O ladino, o caçador e o curandeiro, o mesmo caminho.
