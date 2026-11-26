@@ -8,7 +8,7 @@ Para trabalhar no Motor 10, ler nesta ordem:
 2. `REGRAS.md`: o livro de regras (um só, por assunto).
 3. `MUDANCAS.md`: o que mudou, quando e por quê.
 
-Conferir que tudo segue de pé: `python3 provas.py 600` (a luta, os itens, os bichos e a magia na luta; uns 5 minutos), `python3 provas_mundo.py` (o mundo: as etapas 1 e 2, a magia, as criaturas, a etapa 4b e a etapa final, com o ano em 20 sementes; uns 20 minutos; 248 de 248) e `python3 estresse.py 1500` (lutas ao acaso, com e sem magia). As saídas da última rodada ficam em `dados/`.
+Conferir que tudo segue de pé: `python3 provas.py 600` (a luta, os itens, os bichos e a magia na luta; uns 5 minutos), `python3 provas_mundo.py` (o mundo: as etapas 1 e 2, a magia, as criaturas, a etapa 4b e a etapa final, com o ano em 20 sementes; uns 20 a 30 minutos; 256 de 256) e `python3 estresse.py 1500` (lutas ao acaso, com e sem magia). As saídas da última rodada ficam em `dados/`.
 Para experimentar: `python3 vila_teste.py PASTA [povo=POVO] [inclinacao2=CAMINHO]` cria a vila de teste, fora do cânone (o guia é o `GUIA_VILA.md`); `python3 vila_teste.py magia PASTA` acrescenta a etapa da magia a uma vila que já existe, e `python3 vila_teste.py fantasia PASTA [inclinacao2=CAMINHO]` acrescenta a etapa 4b a uma vila que já tem a magia.
 Os números moram nas páginas `tabelas*.py`. Só o `estado.py` grava o mundo. Os rascunhos de projeto ficam em `projeto/` (os contratos: `projeto/ETAPA_MAGIA.md` e `projeto/ETAPA_4B.md`).
 
