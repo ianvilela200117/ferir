@@ -43,10 +43,11 @@ def vz(x, casas=2): return f'{x:.{casas}f}'.replace('.', ',').replace('-', '−'
 
 @contextlib.contextmanager
 def dado_posto(margens):
-    """o dado do jogador rolado de verdade, com o total posto à mão (contra + margem): para conferir o que sai quando passa e quando falha"""
+    """o dado do jogador rolado de verdade, com o total posto à mão (contra + margem): para conferir o que sai quando passa e quando falha. Marcado `posto_a_mao`, como
+    nos outros bancos: a forja pela Lei do Valor não lê as faces de verdade (um 1 descia a peça, e a prova da gazua falhava 1 vez em 10)"""
     real = teste.rola; fila = list(margens)
     def posto(E, o_que, atributo, contra, mais=0, quem=None, oculto=False, dom=0, **kw):
-        r = real(E, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom, **kw); m = fila.pop(0); r['total'] = contra + m; r['passou'] = m >= 0
+        r = real(E, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom, **kw); m = fila.pop(0); r['total'] = contra + m; r['passou'] = m >= 0; r['posto_a_mao'] = True
         if dom: r['fez'] = r['total'] >= contra and r['total'] - dom < contra
         return r
     teste.rola = posto
