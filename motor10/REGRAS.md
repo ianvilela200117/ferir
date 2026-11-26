@@ -610,21 +610,38 @@ Os números moram no `tabelas_oficio.py`; as provas, no `provas_oficio.py`. O co
 7.2 **A bancada.** Bloco de bancada é bloco **pesado**: um bloco de forjar, de consertar, de ajustar ou de jornal. Cada um soma 1 ao treino do ofício.
 Há dois ofícios de bancada: **forja** (armas, malha, placa, escudos) e **couro** (a armadura de couro). Cada um tem a sua maestria.
 
-7.3 **Forjar.** Sem requisito de nível e sem tranca de maestria: quem tem a matéria e uma oficina pode abrir a obra.
+7.3 **Forjar: a LEI DO VALOR** (decisão do jogador, no Dia 30 do mundo novo: a regra da forja do Ferir, `../obra_valor.py`, com os números do Motor 10; o desenho e a medida em `projeto/etapa_efeitos/LEI_DO_VALOR_juiz.txt`). Na **forja** e no **couro**, a categoria da peça **não se escolhe**: escolhe-se a peça e o que entra nela (a matéria; do Épico para cima, a matéria Rara e um **núcleo** da categoria). Rola-se **2d20 explosivos** e soma-se tudo:
 
-| Categoria | Blocos de bancada | O teste é contra | Matéria | A mão que a obra pede |
-| --- | --- | --- | --- | --- |
-| Comum | 1 | 28 | da categoria | Leigo |
-| Incomum | 3 | 34 | da categoria | Leigo |
-| Raro | 9 | 40 | da categoria | Iniciante |
-| Épico | 27 | 46 | matéria Rara e um **núcleo** Épico | Treinado |
-| Único | 81 | 52 | matéria Rara e um núcleo Único | Mestre |
-| Lendário | 243 | 58 | matéria Rara e um núcleo Lendário | Lendário |
+**TOTAL = 2d20 explosivos + maestria (0, 2, 4, 6, 8) + Afinidade ÷ 10 + a oficina (0 a 4) + o preparo (até +8) + a obra + o martelo de forja + a tenaz − a pena do corpo**
 
-- **O teste final** é um só, no último bloco: **2d20 + maestria do ofício + Afinidade ÷ 10 + a oficina (0 a 4) + o preparo (até +8)**, contra **28 + 6 por categoria**. A pena do corpo entra, como em todo teste.
-- **A mão que a obra pede** é conselho, não tranca: abaixo dela a conta quase não fecha, e o comando avisa antes de abrir. (Para consertar sozinho, ela é o que se pede: 7.10.)
-- **O núcleo** é item do Livro de Itens (tipo `nucleo`), da categoria da obra, na mão de quem forja. Um núcleo só entra numa obra por vez.
-- Acima do Lendário ninguém forja (ainda).
+| A obra (o que entra) | Blocos de bancada | A obra soma | O teto |
+| --- | --- | --- | --- |
+| matéria Comum | 1 | 0 | Incomum (sem a mão de Treinado: Comum) |
+| matéria Incomum | 3 | +15 | Rara (sem a mão de Treinado: Incomum) |
+| matéria Rara | 9 | +30 | Rara |
+| matéria Rara e núcleo Épico | 27 | +45 | Épica (com a ferramenta Lendária: Única) |
+| matéria Rara e núcleo Único | 81 | +60 | Única (com a ferramenta Lendária: Lendária) |
+| matéria Rara e núcleo Lendário | 243 | +75 | Lendária |
+
+- **A peça sai na MAIOR categoria cuja CD o total alcança**, até o teto: **Comum 22 · Incomum 55 · Rara 80 · Épica 105 · Única 130 · Lendária 155** ("a Comum pede 22, a Incomum 55, e daí mais 25 por categoria"). **Abaixo de 22, a matéria se perde**, e o núcleo junto.
+- **O teto.** Com núcleo, a categoria dele. Sem núcleo, uma acima da matéria e nunca acima da Rara: **a Rara não nasce de matéria Comum**, e nada passa da Rara sem núcleo. O total que passa da CD do teto não sobe a peça.
+- **A porta do degrau.** Subir acima da matéria pede **mão de Treinado** no ofício: o Leigo e o Iniciante fazem o que a matéria dá ("o aprendiz faz o que a matéria dá; a mão de oficial já faz a peça subir").
+- **O preparo** compara o alcance com a categoria da OBRA (a da matéria; do Épico para cima, a do núcleo), como antes.
+- **O tempo** são 3^k blocos pela categoria da obra; a peça que sai acima ou abaixo não muda o tempo. A Lendária custa 243 blocos (uns 70 dias) e um núcleo Lendário por tentativa.
+- **A mão que a obra pede** (Iniciante na Rara, Treinado na Épica, Mestre na Única, Lendário na Lendária) segue como conselho, não tranca.
+- **O núcleo** é item do Livro de Itens (tipo `nucleo`), da categoria da obra, na mão de quem forja; um núcleo só entra numa obra por vez, e se gasta em qualquer saída.
+- **O encanto** (o foco e o amuleto, na mesa de runas), a alquimia, a gravação e o ajuste seguem com a categoria escolhida e o **teste de passar**: 2d20 + maestria + Afinidade ÷ 10 + a bancada + o preparo, contra 28 + 6 por categoria (7.6, a tabela de baixo).
+
+**Medido** (a conta exata do 2d20 explosivo; `python3 provas_oficio.py`, AS METAS DA LEI DO VALOR):
+
+| Quem forja | A obra | O que sai |
+| --- | --- | --- |
+| Ferord no Dia 34 (Treinado, Afinidade 70, forja de vila, preparo +6 até o Incomum, jogo de forja Comum afinado: 2d20 + 21) | matéria Comum | Comum 88,4% · Incomum 11,4% · perde 0,25% |
+| o mesmo (2d20 + 36) | matéria Incomum | Comum 39,5% · Incomum 56,6% · Rara 3,7% · perde 0,25% |
+| um iniciante (Iniciante, Afinidade 50, forja de vila, nada mais: 2d20 + 8) | matéria Comum | Comum 80,5% · perde 19,5% (a porta: nunca Incomum) |
+| um Mestre (Afinidade 80, grande forja, preparo +8, martelo e tenaz Raros: 2d20 + 65) | matéria Rara | Rara 73,8% · Incomum 20% · Comum 6% |
+| o mesmo (2d20 + 80) | núcleo Épico | Épica 35,4% · Rara 55,3% · Incomum 9,1% |
+| o melhor possível (Lendário, Afinidade 100, forja mestra, preparo +8, martelo e tenaz Lendários: 2d20 + 127) | núcleo Lendário | Lendária 25,4% · Única 65,2% · Épica 9,2% |
 
 7.4 **A matéria de cada peça** (na categoria da obra; do Épico para cima, matéria Rara):
 
@@ -653,7 +670,18 @@ O ato de trabalhar para quando o corpo cruza um limiar (5.6). O teste só sai qu
 **Largar a obra:** com zero blocos, a matéria volta; com um bloco ou mais, a matéria se perde. O núcleo fica com o dono: só o teste o gasta.
 A obra de quem morreu se desfaz na hora (5.11): a matéria se perde, e o núcleo que estava nela cai solto com o resto do que era dele.
 
-7.6 **Falhar custa.**
+7.6 **Os dados especiais e a falha.**
+**Na forja e no couro (a Lei do Valor)**, as faces de partida dos dois d20 decidem, sem dado a mais:
+
+| Os dados | O que fazem |
+| --- | --- |
+| cada 20 (o que abre, e os da cadeia) | **+1 efeito por escolher** (7.16), até o teto de efeitos da categoria: Comum e Incomum 1; Rara e Épica 2; da Única para cima 3. Ao menos um 20 sai em perto de 10% das obras |
+| os dois abrindo em 20 | **OBRA-PRIMA:** a peça sobe uma categoria se o teto deixa; no teto, +1 efeito (que pode passar do teto de efeitos) |
+| um abrindo em 1 | a peça sai **uma categoria abaixo** do que o total deu; a Comum sai **tosca** (metade da durabilidade) |
+| os dois abrindo em 1 | a matéria e o núcleo **se perdem**, qualquer que seja o total |
+| o total abaixo de 22 | a matéria e o núcleo se perdem |
+
+**No encanto** (o foco e o amuleto), com a categoria escolhida:
 
 | O teste | O que sai |
 | --- | --- |
@@ -715,7 +743,7 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 **Como ler:** cada grau de maestria vale 2 pontos; a oficina, até 4; o preparo, até 8. O dado pesa mais que tudo isso. Do Épico para cima, mesmo o melhor ferreiro perde núcleos: é para doer.
 
 7.13 **Medido** (`python3 provas_oficio.py`; 15 de 15. A prova da Lendária julga duas coisas: o dia em que a primeira obra fecha, e a peça rara de propósito, que nasce em pelo menos uma e em menos da metade das vidas. Os números da tabela vêm de 21 rodadas: treze da medida, cinco da conferência e três do acerto). O dado é o de verdade, e a medida muda de uma rodada para outra: por isso a tabela diz o centro do que se viu ("cerca de") e a faixa vista. **Uma rodada nova pode sair um pouco fora da faixa vista; o que não pode é sair da meta.** O robô ferreiro vive de verdade: dorme na cama e paga uma noite por dia, come e paga, vive do jornal, faz 3,5 blocos de bancada por dia. Sobe um degrau de cada vez, e só abre a obra quando tem a mão que ela pede.
-**Com que a escada vale:** na forja mestra (+4), com os quatro preparos (+8) desde o Dia 1, e com matéria e núcleo novos a cada obra.
+**Com que a escada vale:** na forja mestra (+4), com os quatro preparos (+8) desde o Dia 1, e com matéria e núcleo novos a cada obra; **desde a Lei do Valor (Dia 34 do mundo novo), também com o martelo de forja e a tenaz da categoria que o robô mira**, entregues como a matéria e o núcleo (sem eles, que valem até 22 pontos, a Épica nascia no Dia 146 e a Lendária não nascia). Medido de novo com a Lei do Valor: Rara no Dia 17, Épica no Dia 59, Única no Dia 177 e a primeira obra Lendária no Dia 356, todas nas janelas; a Lendária segue rara de propósito.
 
 | A primeira peça | Meta (o dia) | Medido (o dia em que metade das vidas já a tinha; na Lendária, o dia em que a primeira obra fecha) | A primeira obra fecha | Núcleos por vida | Com um núcleo só, nasce em |
 | --- | --- | --- | --- | --- | --- |
@@ -742,20 +770,21 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 **A escada só anda assim com núcleo à vontade.** O mundo dá 6 núcleos Épicos e 2 Únicos por ano (`PROJETO.md`). Na forja de cidade, sem preparo, a primeira Épica sai perto do Dia 100.
 
 
-7.14 **A ferramenta do ofício** (a etapa dos efeitos, parte 1). É uma peça do Livro de Itens (tipo `ferramenta`), de um ofício: o **jogo de forja** (o martelo de forja e a tenaz) serve à forja; o **jogo de couro** (a faca e a sovela), ao couro. Forja-se na oficina como a adaga: a matéria (o jogo de forja, 2 de metal e 1 de madeira da categoria; o de couro, 1 de metal e 1 de couro), os blocos (3^k), o teste e a falha da forja; do Épico para cima, matéria Rara e um núcleo. Não se veste: **quem a tem, inteira, soma o bônus dela no teste do ofício** (forjar e ajustar), **fora do teto do preparo**. Vale a melhor que a pessoa tiver; a de outra pessoa, a de outro ofício e a quebrada não valem.
+7.14 **As ferramentas do ofício: o MARTELO DE FORJA e a TENAZ** (a etapa dos efeitos, parte 1; refeita na Lei do Valor). São peças do Livro de Itens (tipo `ferramenta`), forjadas na oficina como qualquer peça (a matéria, os blocos, a soma da Lei do Valor; do Épico para cima, matéria Rara e um núcleo). Não se vestem: **quem as tem, inteiras, soma as duas na Lei do Valor** (e no teste do ajuste), fora do teto do preparo e sem alcance (somam em qualquer obra).
 
-| A ferramenta | Na obra da categoria dela ou abaixo | Na obra uma acima | O poder (os de cima trazem os de baixo) |
-| --- | --- | --- | --- |
-| Comum | +1 | +1 | |
-| Incomum | +2 | +1 | |
-| Rara | +3 | +1 | a matéria só some se a obra falhar por 8 ou mais (sem ela, 5) |
-| Épica | +4 | +1 | **nada se perde:** a obra que falha feio sai uma categoria abaixo (o Comum, tosco) |
-| Única | +5 | +1 | a obra-prima vem 5 mais cedo (7.15) |
-| Lendária | +6 | +1 | **acima do ferro:** a peça que passa por 25 ou mais nasce uma categoria acima (até o Lendário; sem núcleo a mais) |
+| A ferramenta | Matéria | Comum | Incomum | Rara | Épica | Única | Lendária |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| martelo de forja (`forjar ferramenta martelo CAT`) | 2 de metal, 1 de madeira | +1 | +3 | +5 | +7 | +9 | +11 |
+| tenaz (`forjar ferramenta tenaz CAT`) | 1 de metal, 1 de madeira | +1 | +3 | +5 | +7 | +9 | +11 |
+| o jogo (o par de uma vez: `forjar ferramenta forja CAT`; no couro, `ferramenta couro CAT`) | 3 de metal e 2 de madeira (o de couro: 1 de metal e 1 de couro) | vale nos dois lugares | | | | | |
 
-O poder vale com a ferramenta na mão, mesmo na obra acima dela. A ferramenta de obra-prima pode ser **afinada**: +1 a mais no teste do ofício dela.
+Em cada lugar vale a melhor peça da pessoa (a de outra pessoa, a de outro ofício e a quebrada não valem). A **afinada** (a ferramenta que nasceu com efeito) soma **+1, uma vez só** por obra. **Os poderes** vêm da maior das duas, e os de cima trazem os de baixo:
+- **Rara:** a matéria não se perde se o total ficou a 5 ou menos abaixo de 22 (a peça sai Comum, tosca); não vale contra os dois 1.
+- **Épica:** a matéria **nunca** se perde, nem nos dois 1 (sai Comum, tosca).
+- **Única:** o **QUASE**: +1 efeito quando o total ficou a 6 ou menos da CD seguinte, o teto deixava subir e nenhum dado especial mudou a categoria.
+- **Lendária, ACIMA DO FERRO:** na obra com núcleo, o teto sobe uma categoria (até a Lendária, sem núcleo a mais). Sem núcleo, não.
 
-7.15 **A obra-prima.** A peça que **passa** no teste por 10 ou mais ganha 1 efeito; por 20 ou mais, 2; por 30 ou mais, 3. O teto vem da categoria da peça: **Comum e Incomum, 1; Raro e Épico, 2; do Único para cima, 3.** Os efeitos nascem **por escolher**: quem forjou escolhe cada um (7.16). A peça que sai uma categoria abaixo, ou tosca, não é obra-prima.
+7.15 **A obra-prima.** Na forja e no couro, os efeitos vêm **dos dados** (7.6): cada 20 dá +1 efeito por escolher, os dois 20 sobem a peça (ou +1 efeito no teto), e a ferramenta Única dá o quase. O teto de efeitos vem da categoria da peça: **Comum e Incomum, 1; Raro e Épico, 2; do Único para cima, 3.** Os efeitos nascem **por escolher**: quem forjou escolhe cada um (7.16). No encanto (o foco e o amuleto, com a categoria escolhida), a obra-prima segue pela margem: a peça que passa por 10, 20 ou 30 ganha 1, 2 ou 3 efeitos, até o mesmo teto.
 
 7.16 **Escolher o efeito** (`oficio.py efeito ITEM CHAVE [valor=N]`). Quem tem a peça de obra-prima escolhe, um por vez, entre os efeitos que a luta roda e que valem naquele tipo de peça (capítulo 2): na arma, sangra, critico_19, derruba, leve, nao_quebra; na armadura, devolve (de 1 ao teto da categoria: 4 por categoria, a Comum 4), firme, leve, nao_quebra; no escudo, firme, leve, nao_quebra; na ferramenta, afinada. O **pesa** não se escolhe (é defeito), e a peça não leva o mesmo efeito duas vezes. Cada escolha é um evento e entra na história da peça.
 

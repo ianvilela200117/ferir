@@ -1,5 +1,5 @@
 {
- "seq": 690,
+ "seq": 691,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12248,12 +12248,16 @@
    ],
    "efeitos": [],
    "sob_medida": null,
-   "historia": [],
-   "dono": "chefe_sara",
-   "onde": null,
+   "historia": [
+    "Dia 35: ficou com o corpo de Sara em Castro Real"
+   ],
+   "dono": null,
+   "onde": "castro_real",
    "familia": "lança",
    "id": "i0656",
-   "uso": "arma"
+   "uso": null,
+   "solto": true,
+   "corpo": "chefe_sara"
   },
   "i0657": {
    "tipo": "armadura",
@@ -12265,9 +12269,11 @@
    ],
    "efeitos": [],
    "sob_medida": null,
-   "historia": [],
-   "dono": "chefe_sara",
-   "onde": null,
+   "historia": [
+    "Dia 35: ficou com o corpo de Sara em Castro Real"
+   ],
+   "dono": null,
+   "onde": "castro_real",
    "material": "malha",
    "cobre": [
     "tronco",
@@ -12275,7 +12281,9 @@
     "pernas"
    ],
    "id": "i0657",
-   "uso": "veste"
+   "uso": null,
+   "solto": true,
+   "corpo": "chefe_sara"
   },
   "i0658": {
    "tipo": "arma",
@@ -12937,8 +12945,29 @@
    "familia": "adaga",
    "id": "i0690",
    "uso": null
+  },
+  "i0691": {
+   "tipo": "ferramenta",
+   "oficio": "forja",
+   "forma": "martelo",
+   "cat": 1,
+   "nome": "Martelo de Forja de Ferord",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "historia": [
+    "Dia 34: Ferord forjou em Pedra Velha (a soma: 62; a obra era de matéria Incomum)"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "feito_por": "eu",
+   "dia": 34,
+   "id": "i0691",
+   "uso": null
   }
  },
- "oseq": 4,
+ "oseq": 5,
  "obras": {}
 }

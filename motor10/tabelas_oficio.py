@@ -50,25 +50,33 @@ TALHES = (None, 'miúdo')    # (etapa 4b) a armadura se forja para um corpo: de 
 # categoria cuja CD o total alcança, até o TETO; abaixo da CD do Comum, a matéria se perde. O encanto (o foco e o amuleto), a alquimia, a gravação e o ajuste seguem
 # com a categoria escolhida e o teste de passar (7.3 a 7.6). OS NÚMEROS ABAIXO SÃO OS DA ESPECIFICAÇÃO MEDIDA (projeto/etapa_efeitos/LEI_DO_VALOR.md).
 VALOR_OFICIOS = ('forja', 'couro')
-VALOR_CD = [20, 34, 48, 62, 76, 92]          # Comum, Incomum, Raro, Épico, Único, Lendário (PROVISÓRIO até a especificação)
-VALOR_MATERIA = [0, 4, 8]                    # a matéria: Comum, Incomum, Rara
-VALOR_NUCLEO = {3: 4, 4: 8, 5: 12}           # o núcleo (do Épico para cima; a matéria é a Rara)
-VALOR_MARTELO = [1, 2, 3, 5, 7, 10]          # o martelo de forja, pela categoria dele
-VALOR_TENAZ = [1, 1, 2, 3, 4, 5]             # a tenaz
-VALOR_AFINADA = 1                            # a ferramenta de obra-prima (afinada) soma mais isto
+VALOR_CD = [22, 55, 80, 105, 130, 155]       # Comum, Incomum, Raro, Épico, Único, Lendário: "a Comum pede 22, a Incomum 55, e daí mais 25 por categoria"
+VALOR_MATERIA = [0, 15, 30]                  # a matéria: Comum, Incomum, Rara ("a obra vale 15 por categoria")
+VALOR_NUCLEO = {3: 15, 4: 30, 5: 45}         # o núcleo, somado à matéria Rara que a obra leva: a obra inteira vale 45, 60, 75
+VALOR_MARTELO = [1, 3, 5, 7, 9, 11]          # o martelo de forja, pela categoria dele (1 + 2 por categoria)
+VALOR_TENAZ = [1, 3, 5, 7, 9, 11]            # a tenaz: a mesma tabela
+VALOR_AFINADA = 1                            # a ferramenta de obra-prima (afinada) soma mais isto, uma vez só por obra
 TETO_ACIMA = 1                               # sem núcleo, a peça sobe no máximo tanto acima da matéria, e nunca acima do Raro; com núcleo, até a categoria dele
-def teto(cat): return cat if cat > M.MATERIA_ATE else min(cat + TETO_ACIMA, M.MATERIA_ATE)
+PORTA_DEGRAU = 4                             # A PORTA DO DEGRAU: subir acima da matéria pede mão de Treinado (maestria 4); Leigo e Iniciante param na categoria da matéria
+def teto(cat, maestria=None, ferramenta_cat=None):
+    """o teto da obra: com núcleo, a categoria dele (e uma acima, com ferramenta Lendária); sem núcleo, a matéria + 1 (nunca acima do Raro), e a matéria só, sem a mão de Treinado"""
+    if cat > M.MATERIA_ATE: return min(cat + (1 if (ferramenta_cat or -1) >= ACIMA_DO_FERRO else 0), FORJA_ATE)
+    if maestria is not None and maestria < PORTA_DEGRAU: return cat
+    return min(cat + TETO_ACIMA, M.MATERIA_ATE)
 def cat_do_total(total, teto_):
     """a maior categoria cuja CD o total alcança, até o teto; None: abaixo da CD do Comum (a matéria se perde)"""
     k = None
     for c in range(min(teto_, len(VALOR_CD) - 1) + 1):
         if total >= VALOR_CD[c]: k = c
     return k
-# OS DADOS (rolados na mesma conta, uma vez): cada 20 que abre dá +1 efeito; os dois dados em 20 são OBRA-PRIMA (1d6: 1 a 3, a peça sobe uma categoria se o teto
-# deixa, senão +1 efeito; 4 a 6, +1 efeito); um dado em 1 é COMPLICAÇÃO (1d6: 1, a peça se perde; 2 e 3, cai uma categoria; 4 a 6, nasce com um quarto a menos de
-# durabilidade); os dois dados em 1, a peça se perde. O QUASE: o total ficou a VALOR_QUASE ou menos da CD seguinte, e o teto deixava subir: +1 efeito.
-VALOR_QUASE = 3
-VALOR_COMPLICA_DUR = 0.75
+# OS DADOS (as faces de partida dos dois d20; sem 1d6): cada 20 da cadeia dá +1 efeito por escolher, até o teto de efeitos da categoria; OS DOIS ABRINDO EM 20 são a
+# OBRA-PRIMA: a peça sobe uma categoria se o teto deixa (no teto, +1 efeito, que pode passar do teto de efeitos); UM ABRINDO EM 1: a peça sai uma categoria abaixo do que
+# o total deu (a Comum, tosca); OS DOIS ABRINDO EM 1: a matéria e o núcleo se perdem, qualquer que seja o total.
+# OS PODERES DAS FERRAMENTAS (a maior das duas; os de cima trazem os de baixo): Rara, a matéria não se perde se o total ficou a VALOR_SEGURA ou menos abaixo da CD do Comum
+# (sai Comum, tosca; não vale contra os dois 1); Épica, a matéria nunca se perde, nem nos dois 1; Única, o QUASE (+1 efeito quando o total ficou a QUASE_JANELA ou menos
+# da CD seguinte, o teto deixava subir e nenhum dado especial mudou a categoria); Lendária, ACIMA DO FERRO (na obra com núcleo, o teto sobe uma categoria).
+VALOR_SEGURA = 5
+QUASE_JANELA = 6
 
 # ---------- AS FERRAMENTAS DO OFÍCIO e A OBRA-PRIMA (a etapa dos efeitos, parte 1) ----------
 # A FERRAMENTA é uma peça do Livro de Itens (tipo "ferramenta"), de um ofício: o JOGO DE FORJA (o martelo de forja e a tenaz) serve à forja; o JOGO DE COURO (a faca e a
@@ -86,7 +94,7 @@ def bonus_ferramenta(t, k):
     """o bônus de uma ferramenta de categoria t numa obra de categoria k: 1 + t (Comum +1 ... Lendária +6) na obra da categoria dela ou abaixo; na obra uma acima, +1; acima disso, nada"""
     return 1 + t if t >= k else 1 if t == k - 1 else 0
 # OS PODERES DA FERRAMENTA, pela categoria dela (os de cima trazem os de baixo):
-POR_POUCO_RARA = 8          # Rara ou melhor: a matéria só some se a obra falhar por isto ou mais (sem ela, POR_POUCO)
+POR_POUCO_RARA = 8          # (a regra da categoria escolhida, que segue no encanto) Rara ou melhor: a matéria só some se a obra falhar por isto ou mais
 NADA_SE_PERDE = 3           # Épica ou melhor: a matéria nunca some; a obra que falha feio sai uma categoria abaixo (o Comum, tosco)
 OBRA_PRIMA_FACIL = 4        # Única ou melhor: os degraus da obra-prima descem OBRA_PRIMA_DESCE
 ACIMA_DO_FERRO = 5          # Lendária: a peça que passa por ACIMA_MARGEM ou mais nasce uma categoria acima (até o Lendário; sem núcleo a mais)

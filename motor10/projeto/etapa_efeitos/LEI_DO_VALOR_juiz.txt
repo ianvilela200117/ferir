@@ -1,0 +1,160 @@
+===== vencedor
+DESENHO 3 (o simples). Entra com dois enxertos. (1) A CD do Comum vai a 22, como no desenho 2: com 20, o T2 do desenho 3 ficava sem folga nenhuma (com soma 9 o Comum vai a 85,9%). (2) Uma regra nova, medida no banco: a PORTA DO DEGRAU, em que só a mão de Treinado ou melhor faz a peça passar da matéria. Sem ela, os três desenhos falham a prova FORJAR PARA A LOJA NÃO É MINA.
+
+===== especificacao_final
+1. AS CDs
+Comum 22 · Incomum 55 · Rara 80 · Épica 105 · Única 130 · Lendária 155. À mesa: "a Comum pede 22, a Incomum 55, e daí mais 25 por categoria". No código: VALOR_CD = [22, 55, 80, 105, 130, 155].
+- A peça sai na MAIOR categoria cuja CD o total alcança, até o teto (item 4).
+- Abaixo de 22, a matéria se perde, e o núcleo junto. As ferramentas Rara e Épica podem segurar (item 3).
+- O TOTAL é: 2d20 explosivos + maestria (0/2/4/6/8) + Afinidade ÷ 10 + oficina (0 a 4) + preparo (item 5) + a obra (item 2) + martelo de forja + tenaz (+1 da afinada) − pena do corpo (2 ou 4). O dom escondido entra dentro do teto +8 do preparo, como hoje.
+
+2. A MATÉRIA E O NÚCLEO (a obra vale 15 por categoria)
+- Matéria: Comum 0 · Incomum +15 · Rara +30. No código: VALOR_MATERIA = [0, 15, 30].
+- Núcleo, somado à matéria Rara que a obra leva: Épico +15 · Único +30 · Lendário +45. No código: VALOR_NUCLEO = {3: 15, 4: 30, 5: 45}. A obra inteira vale então 45, 60 e 75.
+- O núcleo se gasta em qualquer saída.
+
+3. AS FERRAMENTAS
+- MARTELO DE FORJA e TENAZ, a mesma tabela para cada um (1 + 2 por categoria): Comum 1 · Incomum 3 · Rara 5 · Épica 7 · Única 9 · Lendária 11. No código: VALOR_MARTELO = VALOR_TENAZ = [1, 3, 5, 7, 9, 11].
+- Somam em qualquer obra (não têm alcance) e ficam fora do teto do preparo.
+- Em cada lugar vale a melhor ferramenta, só a do dono, inteira e do ofício.
+- O jogo de forja (e o de couro) vale nos dois lugares, como o código já faz. O jogo Comum afinado de Ferord dá 1 + 1 + 1 = 3.
+- A AFINADA segue +1, uma vez só por obra: martelo e tenaz afinados não dão +2. No código: VALOR_AFINADA = 1.
+- OS PODERES vêm da maior das duas ferramentas, e os de cima trazem os de baixo:
+  · Rara: a matéria não se perde se o total ficou a 5 ou menos abaixo de 22 (a peça sai Comum, tosca). Não vale contra os dois 1.
+  · Épica: a matéria nunca se perde, nem nos dois 1 (sai Comum, tosca).
+  · Única: o QUASE (item 7).
+  · Lendária, ACIMA DO FERRO: na obra com núcleo, o teto sobe uma categoria (até a Lendária, sem núcleo a mais). Com as CDs de 25 em 25, é a regra 7.14 ao pé da letra ("passa por 25, nasce uma acima"). Sem núcleo não vale, por causa do T5.
+  · Nenhuma meta depende dos poderes: o T4 já está na Lendária.
+
+4. O TETO
+- Com núcleo, o teto é a categoria do núcleo (com a ferramenta Lendária, uma acima).
+- Sem núcleo, o teto é a categoria da matéria + 1, nunca acima da Rara (TETO_ACIMA = 1, como hoje). Esse degrau acima da matéria pede MÃO DE TREINADO (maestria 4) no ofício: Leigo e Iniciante param na categoria da matéria. É a PORTA DO DEGRAU, uma constante nova (PORTA_DEGRAU = 4).
+- Matéria Comum vai até o Incomum, Incomum até a Rara, Rara fica na Rara. A Rara de matéria Comum é impossível para qualquer mão, e nada passa da Rara sem núcleo.
+- O total que passa da CD do teto não sobe a peça. A obra-prima também obedece ao teto e à porta.
+- No código, em valor(): teto = cat se (cat <= MATERIA_ATE e maestria < PORTA_DEGRAU); senão O.teto(cat), +1 com núcleo se a melhor ferramenta for Lendária.
+
+5. O ALCANCE DO PREPARO
+- Compara-se com a categoria da OBRA: a da matéria até a Rara, a do núcleo do Épico para cima. É a mesma que dá os blocos, e sabe-se quando a obra abre. Não se compara com a peça que sai nem com o teto.
+- +2 por preparo, teto +8 com o dom dentro.
+- Exemplo: a receita, o fogo e a bigorna de Ferord (até o Incomum) dão +6 na obra de matéria Comum ou Incomum, e 0 na de matéria Rara.
+- É o que oficio.valor já faz.
+
+6. O TEMPO
+- 3^k blocos pesados pela categoria da OBRA: matéria Comum 1 · Incomum 3 · Rara 9 · núcleo Épico 27 · Único 81 · Lendário 243 (o O.blocos de hoje).
+- A peça que sai acima ou abaixo não muda o tempo.
+- A Lendária custa 243 blocos (uns 70 dias) e um núcleo Lendário por tentativa.
+
+7. OS DADOS ESPECIAIS (sem 1d6; as frequências são exatas)
+- O 20 QUE ABRE, e os da cadeia: rola outro d20 e soma, sem limite. Cada 20 dá +1 efeito por escolher (oficio.py efeito), até o teto de efeitos da categoria: Comum 1, Incomum 1, Rara 2, Épica 2, Única 3, Lendária 3. Ao menos um 20 sai em 9,75% das obras. Isto substitui a obra-prima pela margem (7.15).
+- OS DOIS ABRINDO EM 20 (0,25%) são a OBRA-PRIMA: a peça sobe uma categoria se o teto deixa. No teto, ganha +1 efeito, que pode passar do teto de efeitos dela.
+- UM DADO ABRINDO EM 1 (9,5%): a peça sai uma categoria abaixo do que o total deu. A Comum sai tosca (metade da durabilidade, O.TOSCA). Abaixo de 22, perde-se como sempre.
+- OS DOIS ABRINDO EM 1 (0,25%): a matéria e o núcleo se perdem, qualquer que seja o total. Só a ferramenta Épica ou melhor segura (sai Comum, tosca).
+- O QUASE sai da regra geral. Fica só como poder da ferramenta Única ou melhor: +1 efeito quando o total ficou a 6 ou menos da CD seguinte, o teto deixava subir e nenhum dado especial mudou a categoria.
+- Saem do código: o 1d6 da complicação e da obra-prima, VALOR_COMPLICA_DUR (a peça "gasta") e o quase geral. A maravilha e a lenda do jogo antigo não entram.
+- O _resolve novo devolve sempre a chave 'como'.
+
+===== tabela_final
+Conta exata de 2d20 explosivos, em frações racionais (12 explosões por dado). Os números estão em %. A folga é quantos pontos de soma a meta aguenta para baixo e para cima.
+
+| Meta | Soma | Teto | Perde | Comum | Incomum | Rara | Épica | Única | Lendária | Faixa pedida | Folga | Resultado |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| T1 Ferord, matéria Comum | 2d20+21 | Incomum | 0,25 | 88,40 | 11,35 | 0 | 0 | 0 | 0 | Comum ≥80, Incomum ≤20, perde ≤5 | −6/+3 | PASSA |
+| T1 Ferord, matéria Incomum | 2d20+36 | Rara | 0,25 | 39,48 | 56,57 | 3,70 | 0 | 0 | 0 | Incomum 50-70, Rara ≤5, perde ≤5 | −1/+3 | PASSA |
+| T2 Iniciante | 2d20+8 | Comum (a porta) | 19,50 | 80,50 | 0 | 0 | 0 | 0 | 0 | Comum 70-85, perde 10-25, Incomum ≤5 | −1/+1 | PASSA |
+| T3 Mestre, matéria Rara | 2d20+65 | Rara | 0,25 | 6,00 | 20,00 | 73,75 | 0 | 0 | 0 | Rara 60-80 | −4/+2 | PASSA |
+| T3 Mestre, núcleo Épico | 2d20+80 | Épica | 0,25 | 0 | 9,07 | 55,25 | 35,43 | 0 | 0 | Épica 30-50 | −1/+3 | PASSA |
+| T4 o melhor, núcleo Lendário | 2d20+127 | Lendária | 0 | 0,25 (tosca) | 0 | 0 | 9,15 | 65,22 | 25,37 | Lendária 15-30 | −4/+1 | PASSA |
+
+De onde vêm as somas:
+- T1, matéria Comum: 4+7+1+6, mais martelo 1, tenaz 1 e afinada 1, mais matéria 0.
+- T3, matéria Rara: 25, mais 5+5 das ferramentas, mais 30 da matéria.
+- T4: 30, mais 11+11 das ferramentas, mais 75 da obra. No T4, os dois 1 saem Comum tosca porque a ferramenta segura.
+
+T5: PASSA. A Rara de matéria Comum dá 0,00% com qualquer soma de −20 a 200, qualquer mão e qualquer ferramenta. Acima da Rara sem núcleo, também 0,00%. É o teto que segura.
+
+RESULTADO: 7 de 7.
+- Peças com ao menos um efeito: 9,75% de T1 a T3; 31,5% no T4, por causa do quase da ferramenta Lendária.
+- Com as ferramentas Lendárias afinadas, a Lendária chega a 28,5%: é o teto absoluto.
+
+CONFERÊNCIAS
+(a) 400 mil obras sorteadas por meta, com a regra escrita passo a passo: a diferença máxima foi de 0,14 ponto.
+(b) No próprio banco do motor (provas_oficio._valor_metas), com os números e o _resolve trocados só na memória e o git limpo: 8 de 8. No dado de verdade, deu 56,0% de Incomum em 400 obras, contra 56,6% exatos.
+(c) Com os dados de hoje (o 1d6), as mesmas somas também passam 7 de 7:
+- T1, matéria Comum: Comum 86,72 · Incomum 11,45 · perde 1,83.
+- T1, matéria Incomum: Incomum 57,30 · Rara 3,71.
+- T2: Comum 79,83 · perde 20,17.
+- T3: Rara 75,50 e Épica 35,64.
+- T4: Lendária 25,55.
+(d) FORJAR PARA A LOJA NÃO É MINA, rodada na memória, com limites de 6 de média, 12 no pior caso e 4 depois:
+- COM a porta: PASSA. Nos 5 primeiros dias, 4,58 por dia em média e 5,00 no pior caso; depois, 0,25.
+- SEM a porta: FALHA. Média 7,76 e pior caso 31,80; 10 das 60 vidas passam de 12.
+- Com números maiores (CD 22/60/90..., obra 20 por categoria) e sem a porta, também FALHA: pior caso 25,40.
+
+OS TRÊS DESENHOS, CONFERIDOS
+Rodei de novo o script de cada um e reescrevi as regras a partir do texto de cada especificação, sobre um dado exato meu. Bateu até 0,01 ponto. Em cada desenho, os números são, na ordem: T1 com matéria Comum (Comum / Incomum / perde), T1 com matéria Incomum (Incomum / Rara), T2 (Comum / Incomum / perde), T3 Rara, T3 Épica e T4 Lendária.
+- Desenho 1: 82,92 / 15,25 / 1,83 · 56,14 / 0,61 · 78,64 / 4,11 / 17,25 · 75,50 · 35,64 · 22,64. Passa 7 de 7, com folga mínima de 1.
+- Desenho 2: 89,78 / 9,98 / 0,25 · 55,20 / 2,05 · 78,16 / 2,34 / 19,50 · 66,00 · 43,73 · 22,80. Passa 7 de 7, com folga mínima de 1.
+- Desenho 3: 88,40 / 11,35 / 0,25 · 56,57 / 3,70 · 83,61 / 2,64 / 13,75 · 73,75 · 35,43 · 25,37. Passa 7 de 7, mas com folga ZERO no T2.
+- Os três dão ao ferreiro de começo da vila de teste, com metal Comum, uma peça Incomum de vez em quando: 6,55% no desenho 1, 5,00% no 2 e 5,42% no 3. Por isso os três falham a prova da mina.
+
+ARQUIVOS (todos no scratchpad, nada no repositório)
+- O script da tabela: /tmp/claude-0/-home-user-ferir/4088f7d7-9a0c-5212-bbb2-a884104a0915/scratchpad/juiz/lei_final.py. Os modos: sem argumento (as metas), mundo, sim N, codigo e sem_porta.
+- O banco na memória: /tmp/claude-0/-home-user-ferir/4088f7d7-9a0c-5212-bbb2-a884104a0915/scratchpad/juiz/banco_memoria.py. Exemplo: `A metas porta=4`; também aceita mina, escada, conta, margens e maestria.
+- As saídas estão na mesma pasta: final_*.txt e bm_*.txt.
+
+===== por_que
+O desenho é bom porque cabe em três frases que se dizem à mesa e faz cada coisa somar desde o Comum: "a Comum pede 22, a Incomum 55, e daí mais 25 por categoria", "a obra vale 15 por categoria", "martelo e tenaz valem 1 + 2 por categoria". Ele cai nas tabelas que o código já tem e passa 7 de 7 com os dados novos e com os de hoje, além da prova da mina graças à porta. É frágil porque o corredor das metas é estreito por natureza (a Incomum de Ferord com matéria Incomum, a Épica do Mestre e o T2 ficam a 1 ponto de soma da borda) e porque, com a ferramenta valendo até 22 pontos, quem trabalha sem martelo e tenaz fica muito para trás: o robô da escada falha da Épica para cima.
+
+POR QUE ESTE E NÃO OS OUTROS
+Os três passam 7 de 7, e os números deles batem com a minha conta independente.
+- O DESENHO 1 é o mais fiel ao jogo antigo, mas é o mais difícil de dizer. Cada CD tem uma soma diferente (o preparo por categoria e o +10 do degrau). O núcleo troca de lugar com a matéria em vez de somar. O martelo e a tenaz Comuns valem 0, o que contradiz "somando cada um". O 1d6 fica. O núcleo vale mais que a mão do melhor ferreiro: um iniciante com núcleo Lendário sai Épica 53% das vezes.
+- O DESENHO 2 tem boa folga e a melhor leitura do mundo, mas as tabelas são irregulares (CD 22/56/85/110/135/160, martelo 1/2/4/6/8/10, tenaz de 1 a 6, matéria 0/15/35, núcleo 20/35/50). A obra-prima dele não sobe a peça, e ele derruba dois poderes da 7.14.
+- O DESENHO 3 é o mais simples. Os números entram direto em VALOR_CD, VALOR_MATERIA, VALOR_NUCLEO (aditivo, como o código), VALOR_MARTELO e VALOR_TENAZ. O teto, o preparo e o tempo ficam como estão, e os dados viram regras de uma frase, simétricas: um 1 cai uma categoria, os dois 20 sobem uma.
+- O único defeito medido do desenho 3 era a folga zero no T2. A CD 22 do desenho 2 resolve, e com a porta ela é o ÚNICO valor que dá folga ao T2 dos dois lados: com 21 o Comum passa de 85% na soma 9; com 23 a perda passa de 25% na soma 7.
+- Busquei a fundo na família simples: 106.722 combinações de CDs, valor da obra e tabela de ferramenta. Com os dados finais, 1.297 passam as seis metas de dado e nenhuma tem folga 2 em todas. A folga 1 em todas, que o desenho final tem, é o máximo possível.
+- A PORTA DO DEGRAU não veio de nenhum dos três; entrou porque a medida obrigou. Qualquer subida acima da matéria (até a obra-prima sozinha, 0,25% por obra) dá ao ferreiro de começo uma peça Incomum de sorte nos primeiros dias, e o pior caso da prova da mina estoura. Com a porta, a prova passa (4,58 / 5,00 / 0,25) sem mexer em T1, T3, T4 e T5. O T2 fica com Incomum 0%, o que a meta permite ("no máximo 5%").
+- À mesa, a porta se diz numa frase: "o aprendiz faz o que a matéria dá; a mão de oficial já faz a peça subir". E dá peso à subida de mão que o jogador quer ("eu preciso melhorar nessa forja").
+
+===== riscos
+O que o banco do ofício e o de mercado precisam conferir. Tudo abaixo foi medido na memória, com os números finais; nada foi gravado no repositório.
+
+1. A ESCADA DO ROBÔ FERREIRO falha da Épica para cima. Rodei 50 vidas (30 inteiras e 20 curtas):
+- A Rara PASSA: nasce no Dia 22.
+- A Épica FALHA: nasce no Dia 146, para uma janela de 45 a 80, com 13,2 núcleos por vida.
+- A Única FALHA: até o Dia 240 nasce em só 9 de 50 vidas.
+- A Lendária FALHA: a primeira obra não fecha na metade das vidas, e a peça nasce em 0 de 30.
+- O ritmo da bancada também FALHA.
+- A causa: o robô trabalha sem martelo e tenaz, e agora eles valem até 22 pontos.
+- Chance por obra sem ferramenta: Rara 19,8% · Épica 6,5% · Única 3,0% · Lendária 1,0%.
+- Com martelo e tenaz uma categoria abaixo do alvo: Épica 25,4% · Única 15,1% · Lendária 8,5%.
+- Com martelo e tenaz da categoria do alvo, fica perto do que a regra velha dava (57 / 40 / 26 / 15%).
+- DECISÃO DO JOGADOR: ou o robô forja ou compra as ferramentas enquanto sobe (o caminho natural), ou as janelas mudam. A Lendária "rara de propósito" (nascer em pelo menos 1 e em menos da metade de 30 vidas) tem de ser medida de novo.
+
+2. HÁ UM BUG no oficio._resolve atual. No ramo dos dois 1, quando a ferramenta não segura, a saída volta sem a chave 'como', e o _remata_valor lê x['como']. Dá KeyError: quebrou o banco com os dados de hoje quando o dado de verdade deu dois 1. O _resolve novo deve pôr 'como' sempre.
+
+3. TRÊS PROVAS testam a regra velha e precisam ser reescritas (o problema não está nos números):
+- A CONTA FECHA espera obras Épicas perdidas. Com núcleo, só os dois 1 perdem: em 60 obras, 0 perdidas, 56 abaixo e 4 Épicas. A conta de matéria em si teve 0 erros. Basta forçar os dois 1 com o dado posto à mão.
+- AS MARGENS lê os ramos do 1d6 e quebra com KeyError: 1 com os dados novos. Precisa conferir as quatro regras novas.
+- A MAESTRIA passou na minha rodada, mas é instável. O ferreiro de prova não tem ferramenta: tira a Épica 6,5% por obra (o limite é 60 obras) e a Única 3,0% por obra (o limite é 80). Passa só uns 90% das vezes. Precisa de ferramenta ou de mais obras.
+- Passaram na memória: O MARTELO DE FORJA, A TENAZ E OS EFEITOS (12 de 12), A OBRA ABERTA e AS RECUSAS.
+
+4. FORJAR PARA A LOJA NÃO É MINA só passa com a porta do degrau (4,58 / 5,00 / 0,25).
+- Se o jogador recusar a porta, a prova falha com qualquer um dos três desenhos: 31,80 no pior caso, e 25,40 mesmo com os números maiores.
+- Até a obra-prima sozinha, subindo a peça (0,25% por obra), faria a prova falhar em cerca de 40% das rodadas.
+- Nesse caso, a faixa da prova (que veio de fora, do jogador) teria de ser revista por ele.
+
+5. A ECONOMIA DE TREINADO PARA CIMA, que nenhuma prova de hoje mede:
+- Ferord com metal Comum tira Incomum 11,35% das vezes, e a loja paga 6 vezes mais pela Incomum.
+- O Mestre do T3 tira Rara de metal Incomum 19,8% das vezes: são 3 blocos, contra 9 com metal Rara (que dá 73,75%).
+- Vale olhar a prateleira farta e o ganho por bloco de quem já é oficial. Se virar mina, a saída que o desenho 2 propôs é contar o tempo pelo teto (3^teto).
+
+6. O rivais.py, que hoje usa 60% fixos, tem de rolar a mesma lei. Exemplo: Simão com o núcleo Épico de um rival sai Épica 2,6% · Rara 44,9% · Incomum 43,2%.
+
+7. O PODER LENDÁRIO "acima do ferro" (o teto sobe um, com núcleo) não mexe em meta nenhuma, mas a prova dos poderes tem de incluí-lo. Exemplo, o melhor ferreiro: com núcleo Épico sai Única 13,1%; com núcleo Único sai Lendária 4,1%.
+
+8. OS TEXTOS E O QUE VAI À MESA:
+- O pede e o diz_valor têm de mostrar o teto com a porta.
+- As tabelas 7.12 e 7.13 e o texto de 7.14 e 7.15 da REGRAS (a obra-prima pela margem vira os 20) têm de ser reescritos.
+- Saem do código o VALOR_COMPLICA_DUR e o quase geral.
+- O jogo de forja contando nos dois lugares o código já faz.
+

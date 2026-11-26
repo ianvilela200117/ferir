@@ -124,6 +124,8 @@ def vida(semente, dias=None, ate=O.FORJA_ATE):
         elif aberta: R = oficio.continua(E, 'eu', blocos=1)
         elif alvo is not None and oficio.mao(p) >= O.MAO_DA_OBRA[alvo] and p['moedas'] >= O.blocos(alvo) + 6:      # tem a mão que a obra pede, e prata para viver até o fim dela
             peca = espada(alvo, f'Espada {T.CATS[alvo]} do robô'); nid = entrega(E, peca); V['tentou'][alvo] = V['tentou'].get(alvo, 0) + 1
+            if (oficio.valor_ferramentas(E, 'eu')[2] or -1) < alvo:                         # a Lei do Valor: o martelo e a tenaz da categoria que ele mira, entregues como a matéria e o núcleo
+                estado.aplica(E, 'gera', [['item', 'nasce', item('ferramenta', alvo, forma=f_, dono='eu')] for f_ in ('martelo', 'tenaz')], onde='vila', texto='as ferramentas do robô'); V['ferramentas'] = V.get('ferramentas', 0) + 2
             R = oficio.forjar(E, 'eu', peca, blocos=1, nucleo=nid)
         else: R = oficio.jornal(E, 'eu', 1)
         V['bancada'] += R['feitos']; V['parou'] += bool(R['parou'])
@@ -169,7 +171,7 @@ def escada(vidas):
         deu += f"; a primeira obra {oficio.FEM[cat]} fecha no Dia {f}" if f is not None else f"; a primeira obra {oficio.FEM[cat]} não chega a fechar na metade das vidas"
         pior = max((V['tentou'].get(cat, 0) for V in vidas), default=0); o_que = 'núcleos' if O.pede_nucleo(cat) else 'levas de matéria'
         if prim: deu += f", e acerta de primeira em {sum(prim) / len(prim):.0%} das vidas ({tent / n:.1f} obras por vida)"
-        deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria" + (' e núcleo novos' if O.pede_nucleo(cat) else ' nova') + f" a cada obra: {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
+        deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria" + (' e núcleo novos' if O.pede_nucleo(cat) else ' nova') + f" a cada obra, e com o martelo de forja e a tenaz da categoria (a Lei do Valor): {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
                 + (f". COM UM NÚCLEO SÓ, a peça nasce em {sum(prim) / len(prim):.0%} das vidas; nas outras, o núcleo se gastou ou se perdeu" if prim and O.pede_nucleo(cat) else ''))
         fechos[cat] = f
         if cat in PELA_OBRA:    # a Lendária julga DUAS coisas: a primeira TENTATIVA (o dia em que a primeira obra fecha), e a peça RARA DE PROPÓSITO (nasce em pelo menos uma vida e em menos da metade)
@@ -177,7 +179,7 @@ def escada(vidas):
             deu = (f"a primeira obra {oficio.FEM[cat]} fecha no Dia {f}" if f is not None else f"a primeira obra {oficio.FEM[cat]} NÃO FECHA na metade das {n} vidas até o Dia {ate}")
             deu += f"; a peça nasceu em {len(tem)} de {n} vidas até o Dia {ate}" + (f", entre o Dia {min(tem)} e o {max(tem)}" if tem else '') + (f" (a faixa: de {lo} a menos de {n * hi:g})" if rara else f" (FORA DA FAIXA: de {lo} a menos de {n * hi:g})")
             if prim: deu += f"; acerta de primeira em {sum(prim) / len(prim):.0%} das vidas ({tent / n:.1f} obras por vida)"
-            deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria e núcleo novos a cada obra: {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
+            deu += (f". COM QUE ISTO VALE: na {O.OFICINAS[ROBO['nivel']]} (+{ROBO['nivel']}), com os quatro preparos (+{O.PREPARO_MAX}) desde o Dia 1, e com matéria e núcleo novos a cada obra, e com o martelo de forja e a tenaz da categoria (a Lei do Valor): {tent / n:.1f} {o_que} por vida (a pior vida: {pior})"
                     + (f". COM UM NÚCLEO SÓ, a peça nasce em {sum(prim) / len(prim):.0%} das vidas; nas outras, o núcleo se gastou ou se perdeu" if prim else ''))
             out.append((f"A ESCADA, {oficio.FEM[cat].upper()}: a primeira OBRA {oficio.FEM[cat]} do robô ferreiro FECHA entre os dias {a} e {b} (a primeira tentativa), E a peça é rara de propósito: até o Dia {ate} nasce em pelo menos {lo} e em menos da metade das vidas (na melhor oficina, com o preparo todo e com núcleo novo a cada obra)",
                         deu, f is not None and a <= f <= b and rara))
@@ -204,7 +206,16 @@ def _conta_fecha(n):
         m0 = sum(oficio.materia_do_mundo(E).values()); p0 = oficio.prata_do_mundo(E); i0 = len(E['itens']['itens']); c0 = dict(E['gente']['eu']['carga'])
         R = oficio.forjar(E, 'eu', peca, blocos=0, nucleo=nid); oid = R['obra']
         aberta = sum(oficio.materia_do_mundo(E).values()) == m0 and all(E['gente']['eu'].get('carga', {}).get(k, 0) == c0[k] - q for k, q in receita.items()) and E['itens']['obras'][oid]['materia'] == receita
-        estado.aplica(E, 'mestre', [['obra', oid, 'blocos', 'poe', O.blocos(3)]], texto='os blocos da prova'); F = oficio.remata(E, oid); vistos[F['fim']] += 1
+        estado.aplica(E, 'mestre', [['obra', oid, 'blocos', 'poe', O.blocos(3)]], texto='os blocos da prova')
+        if i % 10 == 0:                                                                     # a Lei do Valor: com núcleo, só os dois 1 perdem a obra; numa obra em dez, eles são postos
+            real = teste.rola
+            def dois_um(E_, o_que, atributo, contra, mais=0, quem=None, oculto=False, dom=0, rotulo=None):
+                r = real(E_, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom); r['dados'] = [[1], [1]]; r['total'] = 2 + r['bonus'] + r['pena'] + mais + dom; r['passou'] = r['total'] >= contra; return r
+            teste.rola = dois_um
+            try: F = oficio.remata(E, oid)
+            finally: teste.rola = real
+        else: F = oficio.remata(E, oid)
+        vistos[F['fim']] += 1
         nasceu = [x for x in E['itens']['itens'].values() if x.get('feito_por') == 'eu']
         certo = (aberta and oid not in E['itens']['obras'] and sum(oficio.materia_do_mundo(E).values()) == m0 - sum(receita.values()) and nid not in E['itens']['itens'] and oficio.prata_do_mundo(E) == p0
                  and len(nasceu) == (0 if F['fim'] == 'perdeu' else 1) and len(E['itens']['itens']) == i0 - 1 + len(nasceu) and not estado.valida(E)
@@ -233,13 +244,14 @@ def _margens(n):
     sem_nome = oficio.molde('arma', 2, familia='arco'); entrega(E, sem_nome); R = oficio.forjar(E, 'eu', sem_nome, blocos=0); estado.aplica(E, 'mestre', [['obra', R['obra'], 'blocos', 'poe', O.blocos(2)]], texto='os blocos da prova')
     with dado_posto([CD[1] - CD[2]]): F = oficio.remata(E, R['obra'])
     caiu = L()[F['item']]['nome']; ok['nome'] = sem_nome['nome'] == 'arco Raro' and caiu == 'arco Incomum'
-    Rs = oficio._resolve                                                                                                                # os dados especiais, com as faces postas
-    d11 = Rs(CD[2] + 5, 1, 1, 2, -1); ok['dois_1'] = len(d11) == 1 and d11[0][1]['cat'] is None
-    u1 = {x['d6']: x for _, x in Rs(CD[1] + 1, 1, 9, 2, -1)}; ok['um_1'] = u1[1]['cat'] is None and u1[2]['cat'] == 0 and u1[3]['cat'] == 0 and u1[4]['cat'] == 1 and u1[4]['gasta'] and u1[6]['gasta']
-    d20 = {x['d6']: x for _, x in Rs(CD[1] + 1, 20, 20, 2, -1)}; ok['dois_20'] = d20[1]['cat'] == 2 and d20[1]['sobe'] and d20[5]['cat'] == 1 and d20[5]['mais_efeito'] == 1
-    d20t = {x['d6']: x for _, x in Rs(CD[2] + 1, 20, 20, 2, -1)}; ok['dois_20_no_teto'] = d20t[1]['cat'] == 2 and d20t[1]['mais_efeito'] == 1
-    ok['quase'] = Rs(CD[2] - 1, 5, 9, 2, -1)[0][1]['quase'] and not Rs(CD[2] - 1 - O.VALOR_QUASE, 5, 9, 2, -1)[0][1]['quase'] and not Rs(CD[1] + 30, 5, 9, 1, -1)[0][1]['quase']
-    ok['poder'] = Rs(CD[0] - 3, 5, 9, 2, 2)[0][1]['cat'] == 0 and Rs(CD[0] - 6, 5, 9, 2, 2)[0][1]['cat'] is None and Rs(CD[0] - 30, 1, 1, 2, 3)[0][1]['cat'] == 0
+    Rs = lambda tot, a, b, te, fc: oficio._resolve(tot, a, b, te, fc)[0][1]                                                                  # os dados especiais, com as faces postas (sem 1d6)
+    ok['dois_1'] = Rs(CD[2] + 5, 1, 1, 2, -1)['cat'] is None and Rs(CD[2] + 5, 1, 1, 2, 2)['cat'] is None and Rs(CD[2] + 5, 1, 1, 2, 3)['cat'] == 0 and Rs(CD[2] + 5, 1, 1, 2, 3)['tosca']
+    ok['um_1'] = Rs(CD[2] + 1, 1, 9, 2, -1)['cat'] == 1 and Rs(CD[1] + 1, 9, 1, 2, -1)['cat'] == 0 and Rs(CD[0] + 1, 1, 9, 2, -1)['cat'] == 0 and Rs(CD[0] + 1, 1, 9, 2, -1)['tosca'] and Rs(CD[0] - 1, 1, 9, 2, -1)['cat'] is None
+    ok['dois_20'] = Rs(CD[1] + 1, 20, 20, 2, -1)['cat'] == 2 and Rs(CD[1] + 1, 20, 20, 2, -1)['sobe'] and Rs(CD[2] + 1, 20, 20, 2, -1)['cat'] == 2 and Rs(CD[2] + 1, 20, 20, 2, -1)['mais_efeito'] == 1
+    ok['quase'] = Rs(CD[2] - 1, 5, 9, 2, 4)['quase'] and not Rs(CD[2] - 1, 5, 9, 2, 3)['quase'] and not Rs(CD[2] - 1 - O.QUASE_JANELA, 5, 9, 2, 4)['quase'] and not Rs(CD[1] + 30, 5, 9, 1, 4)['quase']
+    ok['poder'] = Rs(CD[0] - 3, 5, 9, 2, 2)['cat'] == 0 and Rs(CD[0] - 6, 5, 9, 2, 2)['cat'] is None and Rs(CD[0] - 30, 5, 9, 2, 3)['cat'] == 0 and Rs(CD[0] - 30, 5, 9, 2, -1)['cat'] is None
+    ok['como'] = all(Rs(t_, a_, b_, 2, -1)['como'] for t_, a_, b_ in ((CD[0] - 9, 1, 1), (CD[0] - 9, 5, 9), (CD[1] + 1, 1, 9), (CD[1] + 1, 20, 20)))
+    ok['porta'] = O.teto(0, 2) == 0 and O.teto(1, 2) == 1 and O.teto(0, 4) == 1 and O.teto(1, 4) == 2 and O.teto(2, 8) == 2 and O.teto(3, 2) == 3 and O.teto(3, 8, 5) == 4 and O.teto(5, 8, 5) == 5 and O.teto(2, 8, 5) == 2
     ok['soma_1'] = all(abs(sum(oficio.dist_valor(s_, t_).values()) - 1) < 1e-9 for s_, t_ in ((0, 1), (20, 2), (60, 5)))
     falhas = [k for k, v in ok.items() if not v]
     return ('AS MARGENS DA LEI DO VALOR (o dado posto à mão, só nesta prova): a peça sai na maior CD alcançada, até o teto (sem núcleo, uma acima da matéria e nunca acima do Raro); abaixo da CD do Comum, perde; o núcleo se gasta; os dados especiais; o poder das ferramentas',
@@ -344,6 +356,7 @@ def _sob_medida(n):
 
 def _maestria(n):
     al = 5; E = oficina_de_prova(nivel=4, afinidade=60, prata=100, fogo=al, bigorna=al, receita=al, ajudante=al); I, Tr, Me, Le = (O.OFICIO_BLOCOS[g] for g in (2, 4, 6, 8)); p0 = oficio.prata_do_mundo(E)
+    estado.aplica(E, 'gera', [['item', 'nasce', item('ferramenta', 3, forma=f_, dono='eu')] for f_ in ('martelo', 'tenaz')], onde='vila', texto='o martelo e a tenaz Épicos da prova')     # a Lei do Valor: sem ferramenta, a Épica sai uma vez em quinze
     estado.aplica(E, 'mestre', [['pessoa', 'eu', 'treino.forja', 'soma', I - 2]], texto='dias de bancada, para a prova'); oficio.jornal(E, 'eu', 1); a = oficio.mao(E['gente']['eu']); oficio.jornal(E, 'eu', 1); b = oficio.mao(E['gente']['eu'])
     estado.aplica(E, 'mestre', [['pessoa', 'eu', 'treino.forja', 'soma', Le]], texto='anos de bancada, para a prova'); falta = oficio.sobe(E, 'eu'); c = oficio.mao(E['gente']['eu']); obras = 0
     while oficio.mao(E['gente']['eu']) < 6 and obras < 60:                                  # o feito de Mestre: uma Épica nascida da própria mão

@@ -1,0 +1,30 @@
+$ python3 mercado.py comprar metal:1 2
+Ferord compra 2 de metal Incomum por 45 de prata em Pedra Velha. O preço do dia: 19,72 → 21,18.
+Dia 34, manhã (8h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 1) · com forças (cansaço 0) · 26 de prata
+$ python3 mercado.py comprar madeira:1 1
+Ferord compra 1 de madeira Incomum por 15 de prata em Pedra Velha. O preço do dia: 12,73 → 12,93.
+Dia 34, manhã (8h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 1) · com forças (cansaço 0) · 11 de prata
+$ python3 oficio.py pede ferramenta martelo Incomum
+martelo de forja Incomum · ofício: forja · 3 blocos pesados de bancada
+Matéria: 2 de metal Incomum (você tem 2), 1 de madeira Incomum (você tem 1)
+A soma, hoje e aqui (a Lei do Valor): 2d20 + 36 (maestria 4 + Afinidade 7 + matéria 15 + martelo de forja 2 + tenaz 1 + oficina 1 + preparo 6) · a peça sai na maior categoria que o total alcança (Comum 22 · Incomum 55 · Raro 80; o teto desta obra: Raro): Comum 39% · Incomum 57% · Raro 4% · perde 0%
+$ python3 oficio.py forjar ferramenta martelo Incomum "Martelo de Forja de Ferord" blocos=2
+Obra o0005 aberta: Martelo de Forja de Ferord (Incomum). Entraram 2 de metal Incomum, 1 de madeira Incomum.
+Ferord trabalha 2 blocos na obra o0005, Martelo de Forja de Ferord (Incomum): 2 de 3. PAROU: Ferord está com fome
+Dia 34, entardecer (16h) · primavera · PV 111/111 · com fome (fome 4) · sem sono (sono 3) · com forças (cansaço 4) · pena −2 em todo teste · fôlego máximo −1 · 11 de prata
+$ python3 ato.py comer
+Ferord come (fome 1; 10 de prata)
+Dia 34, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 10 de prata
+$ python3 oficio.py continua blocos=1
+Ferord trabalha 1 bloco na obra o0005, Martelo de Forja de Ferord (Incomum): 3 de 3
+#1 Ferord, forjar Martelo de Forja de Ferord (Incomum): 9 e 17, +7 de Afinidade, +29 = 62 contra 55: PASSA
+  (o +29: maestria 4, matéria 15, martelo de forja 2, tenaz 1, oficina 1, preparo 6) · as CDs: Comum 22 · Incomum 55 · Raro 80 (o teto: Raro)
+Ferord forja Martelo de Forja de Ferord: soma 62, a peça sai Incomum. Entrou no Livro de Itens: i0691
+Dia 34, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 10 de prata
+(saída 0)
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 35, noite (20h)). PAROU: Ferord acorda com o sono em dia
+Dia 35, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 0) · com forças (cansaço 0) · 8 de prata
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 35, manhã (8h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 1) · com forças (cansaço 0) · 8 de prata

@@ -2,11 +2,14 @@
 """oficio.py — MOTOR 10: O OFÍCIO. Forjar é uma obra de vários dias, com matéria contada, que pode falhar e custa caro.
 Consertar é o pão do ferreiro. Ajustar faz a peça servir a um dono. Tudo por evento; os números moram no tabelas_oficio.py.
 
-  FORJAR uma peça de categoria k: a matéria (até o Raro, matéria da categoria; do Épico para cima, um NÚCLEO da categoria mais matéria Rara),
-    3^k blocos PESADOS de bancada numa oficina, e no fim UM teste: 2d20 + maestria do ofício + Afinidade ÷ 10 + a oficina (0 a 4)
-    + o preparo (até +8), contra 28 + 6 × k. Sem requisito de nível, e sem tranca de maestria: quem tem a matéria pode tentar.
+  FORJAR, NA FORJA E NO COURO: A LEI DO VALOR (decisão do jogador, Dia 30 do mundo novo). A CATEGORIA dita no comando é a da OBRA, o que entra nela (a matéria da
+    categoria; do Épico para cima, a matéria Rara e um NÚCLEO da categoria), e dá os blocos (3^k, PESADOS, numa oficina). A categoria da PEÇA sai da soma, uma vez,
+    no último bloco: 2d20 explosivos + maestria + Afinidade ÷ 10 + a oficina + o preparo + a obra (matéria Comum 0, Incomum 15, Rara 30; núcleo +15 por categoria
+    acima) + o martelo de forja + a tenaz. A peça sai na maior categoria cuja CD o total alcança (Comum 22, Incomum 55, Rara 80, Épica 105, Única 130, Lendária 155),
+    até o TETO (com núcleo, a categoria dele; sem núcleo, uma acima da matéria e nunca acima da Rara; subir acima da matéria pede mão de Treinado: a PORTA DO
+    DEGRAU); abaixo de 22, a matéria se perde. OS DADOS: cada 20 dá +1 efeito; os dois em 20, a peça sobe; um em 1, cai uma; os dois em 1, perde (REGRAS 7.3 e 7.6).
+  O ENCANTO (o foco e o amuleto) segue com a categoria escolhida: UM teste contra 28 + 6 × k; falhar por menos de 5, uma categoria abaixo; por 5 ou mais, a matéria some.
   A OBRA FICA ABERTA entre um dia e outro: a matéria entra quando ela abre, os blocos somam, o ato para quando o corpo pede, o teste só sai quando os blocos fecham.
-  FALHAR CUSTA: por menos de 5, a peça sai uma categoria abaixo (o Comum sai tosco); por 5 ou mais, a matéria some, e o núcleo sai do Livro de Itens.
   O PREPARO tem alcance: receita e ajudante (da pessoa), fogo e bigorna (do lugar), +2 cada um, só na obra da categoria que ele alcança.
   A MAESTRIA do ofício (forja; couro, para a armadura de couro) sobe por blocos de bancada; de Mestre para cima pede um feito (uma obra nascida).
   CONSERTAR: você na bancada (tempo e um pouco de matéria; pede a mão da categoria), ou pago à oficina do lugar (2% do preço por ponto).
@@ -33,10 +36,10 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py jornal N [oficio=forja|couro|alquimia|encanto|fé]    N blocos de bancada a serviço do lugar (a oficina, a botica, a mesa de runas ou o santuário;
                                                           ele paga o seu salário por bloco, até a jornada:
                                                           2 blocos pagos por dia, contados junto com o `ato.py trabalhar`; depois disso a bancada é sua, sem paga)
-  python3 oficio.py pede ferramenta forja|couro CATEGORIA · forjar ferramenta forja|couro CATEGORIA ["Nome"]     (a etapa dos efeitos) a FERRAMENTA do ofício: o jogo de forja
-                                                          (2 de metal e 1 de madeira) ou o de couro (1 de metal e 1 de couro); quem a tem soma no teste do ofício, fora do teto
-                                                          do preparo: Comum +1 ... Lendária +6 na obra da categoria dela ou abaixo, +1 na de uma acima; e os poderes (REGRAS 7.14)
-  python3 oficio.py efeito ITEM CHAVE [valor=N]           a OBRA-PRIMA (a peça que passa por 10, 20, 30 ganha 1, 2, 3 efeitos, até o teto da categoria): escolhe um efeito dela
+  python3 oficio.py pede|forjar ferramenta martelo|tenaz CATEGORIA ["Nome"]     as FERRAMENTAS (a Lei do Valor): o martelo de forja (2 de metal, 1 de madeira) e a tenaz
+                                                          (1 de metal, 1 de madeira), cada um +1, +3, +5, +7, +9, +11 do Comum ao Lendário; `ferramenta forja|couro CAT`, o jogo
+                                                          (os dois de uma vez); a afinada +1; os poderes da Rara para cima (REGRAS 7.14)
+  python3 oficio.py efeito ITEM CHAVE [valor=N]           escolhe um efeito da peça que nasceu com efeitos por escolher (os 20 dos dados; no encanto, a margem)
   python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA|nada "como foi ganho" [oficio=alquimia|encanto]     o Mestre registra um preparo ganho no mundo
                                                           (a alquimia: receita, ajudante, fogo, vidraria; o encanto: receita, ajudante, tinta, pedra)
   python3 oficio.py oficina NIVEL|nada "como foi"         o Mestre registra a oficina do lugar onde a pessoa está (0 a 4; nada: o lugar fica sem)
@@ -185,35 +188,30 @@ _UM = _um_d20x()
 
 
 def _resolve(total, a0, b0, teto, fc):
-    """o que sai de uma obra pela Lei do Valor, dado o total e as duas faces de partida (a0, b0): uma lista de (chance, saída), em que a saída é
-    {cat: a categoria ou None (perde), tosca, d6: a face do 1d6 que decide (ou None), como: o que houve}. fc: a maior categoria das ferramentas (ou -1).
-    Os dados: os dois em 1, perde; um em 1, complicação (1d6: 1 perde, 2-3 cai uma, 4-6 a peça nasce gasta); os dois em 20, OBRA-PRIMA (1d6: 1-3 sobe uma se o teto deixa,
-    senão +1 efeito; 4-6, +1 efeito). O poder das ferramentas: a Rara segura a matéria até 5 abaixo da CD do Comum (sai Comum, tosca); a Épica nunca a perde."""
-    k = O.cat_do_total(total, teto); quase_janela = O.VALOR_QUASE * (2 if fc >= O.OBRA_PRIMA_FACIL else 1)
-    def seguro(x, como):
-        """o poder das ferramentas sobre a matéria perdida"""
-        if x['cat'] is not None: return x
-        if fc >= O.NADA_SE_PERDE or (fc >= 2 and 'dados' not in como and total >= O.VALOR_CD[0] - 5): return dict(x, cat=0, tosca=True, como=como + '; a ferramenta segura a matéria: sai Comum, tosca')
-        return x
-    base = dict(cat=k, tosca=False, d6=None, gasta=False, sobe=False, mais_efeito=0,
-                quase=k is not None and k < teto and k + 1 < len(O.VALOR_CD) and total >= O.VALOR_CD[k + 1] - quase_janela)
-    if a0 == 1 and b0 == 1: return [(1.0, seguro(dict(base, cat=None, quase=False), 'os dois dados em 1 (dados): a peça se perde'))]
+    """o que sai de uma obra pela Lei do Valor, dado o total e as duas faces de partida (a0, b0): uma lista com UMA saída [(1.0, saída)] (a forma de lista fica para a conta exata),
+    em que a saída é {cat: a categoria ou None (perde), tosca, sobe, mais_efeito, quase, como}. fc: a maior categoria das ferramentas (ou -1). Os dados (sem 1d6): os dois
+    abrindo em 1, perde (só a ferramenta Épica segura); um abrindo em 1, a peça sai uma categoria abaixo do que o total deu (a Comum, tosca); os dois abrindo em 20, a OBRA-PRIMA
+    (sobe uma categoria se o teto deixa; no teto, +1 efeito). Os poderes: a ferramenta Rara segura a matéria até VALOR_SEGURA abaixo da CD do Comum; a Épica nunca a perde;
+    a Única dá o QUASE."""
+    k = O.cat_do_total(total, teto)
+    x = dict(cat=k, tosca=False, sobe=False, mais_efeito=0, quase=False, como='')
+    if a0 == 1 and b0 == 1:
+        x.update(cat=None, como='os dois dados abrindo em 1: a matéria se perde')
+        if fc >= O.NADA_SE_PERDE: x.update(cat=0, tosca=True, como=x['como'] + '; a ferramenta Épica a segura: a peça sai Comum, tosca')
+        return [(1.0, x)]
     if a0 == 1 or b0 == 1:
-        L = []
-        for f in range(1, 7):
-            if f == 1: x = seguro(dict(base, cat=None, quase=False, d6=f), 'complicação, 1d6 = 1 (dados): a peça se perde')
-            elif f <= 3: x = seguro(dict(base, cat=None if k is None else (k - 1 if k > 0 else 0), tosca=k == 0, d6=f), f'complicação, 1d6 = {f}: cai uma categoria')
-            else: x = dict(base, d6=f, gasta=k is not None, como=f'complicação, 1d6 = {f}: a peça nasce gasta')
-            x.setdefault('como', ''); L.append((1 / 6, x))
-        return L
-    if a0 == 20 and b0 == 20 and k is not None:
-        L = []
-        for f in range(1, 7):
-            if f <= 3 and k < teto: x = dict(base, cat=k + 1, sobe=True, d6=f, como=f'OBRA-PRIMA, 1d6 = {f}: a peça sobe uma categoria')
-            else: x = dict(base, d6=f, mais_efeito=1, como=f'OBRA-PRIMA, 1d6 = {f}: +1 efeito')
-            L.append((1 / 6, x))
-        return L
-    return [(1.0, seguro(dict(base, como=''), ''))]
+        if k is not None:
+            if k > 0: x.update(cat=k - 1, como='um dado abrindo em 1: a peça sai uma categoria abaixo')
+            else: x.update(tosca=True, como='um dado abrindo em 1: a peça Comum sai tosca')
+    elif a0 == 20 and b0 == 20 and k is not None:
+        if k < teto: x.update(cat=k + 1, sobe=True, como='OBRA-PRIMA, os dois dados abrindo em 20: a peça sobe uma categoria')
+        else: x.update(mais_efeito=1, como='OBRA-PRIMA, os dois dados abrindo em 20: no teto, +1 efeito')
+    elif k is not None and fc >= O.OBRA_PRIMA_FACIL and k < teto and k + 1 < len(O.VALOR_CD) and total >= O.VALOR_CD[k + 1] - O.QUASE_JANELA:
+        x.update(quase=True, como=f'QUASE (o poder da ferramenta Única): a soma ficou a {O.VALOR_CD[k + 1] - total} da CD seguinte, +1 efeito')
+    if x['cat'] is None and (fc >= O.NADA_SE_PERDE or (fc >= 2 and total >= O.VALOR_CD[0] - O.VALOR_SEGURA)):
+        x.update(cat=0, tosca=True, como=(x['como'] + '; ' if x['como'] else '') + f"a ferramenta {'Épica' if fc >= O.NADA_SE_PERDE else 'Rara'} segura a matéria: a peça sai Comum, tosca")
+    if x['cat'] is None and not x['como']: x['como'] = f'a soma ficou abaixo da CD do Comum ({O.VALOR_CD[0]}): a matéria se perde'
+    return [(1.0, x)]
 
 
 def dist_valor(soma, teto, fc=-1):
@@ -235,7 +233,8 @@ def valor(E, pid, cat, oficio='forja', lid=None):
     p = E['gente'][pid]; lid = lid or p['lugar']; v = banca(E, lid, oficio) or 0; prep = preparo(E, pid, cat, lid, oficio); vm, vt, fc = valor_ferramentas(E, pid, oficio)
     c = dict(maestria=mao(p, oficio), afinidade=p['atributos']['Afinidade'] // 10, oficina=v, preparo=min(O.PREPARO_MAX, prep + talento.dom_visto(p, oficio)),
              materia=O.VALOR_MATERIA[min(cat, M.MATERIA_ATE)], nucleo=O.VALOR_NUCLEO.get(cat, 0), martelo=vm, tenaz=vt, ferramenta_cat=fc,
-             pena=corpo.pena(p, estado.agora(E)), teto=O.teto(cat), cat=cat, contra=O.VALOR_CD[min(cat, len(O.VALOR_CD) - 1)])
+             pena=corpo.pena(p, estado.agora(E)), teto=O.teto(cat, mao(p, oficio), fc), cat=cat, contra=O.VALOR_CD[min(cat, len(O.VALOR_CD) - 1)])
+    c['porta'] = cat <= M.MATERIA_ATE and c['maestria'] < O.PORTA_DEGRAU             # a porta do degrau: sem a mão de Treinado, a peça não passa da matéria
     c['oculto'] = min(O.PREPARO_MAX, prep + talento.dom(p, oficio)) - c['preparo']
     c['mais'] = c['maestria'] + c['oficina'] + c['preparo'] + c['materia'] + c['nucleo'] + c['martelo'] + c['tenaz']
     c['soma'] = c['mais'] + c['afinidade'] + c['pena']; c['ferramenta'] = vm + vt
@@ -251,7 +250,8 @@ def diz_valor(c):
     ch = c['chances']; cats = [k for k in range(c['teto'] + 1) if ch.get(k, 0) >= 0.0005]
     tab = ' · '.join(f"{T.CATS[k]} {ch.get(k, 0):.0%}" for k in cats) + f" · perde {ch.get(None, 0):.0%}"
     cds = ' · '.join(f"{T.CATS[k]} {O.VALOR_CD[k]}" for k in range(min(c['teto'], len(O.VALOR_CD) - 1) + 1))
-    return f"2d20 + {c['soma']} ({partes}) · a peça sai na maior categoria que o total alcança ({cds}; o teto desta obra: {T.CATS[c['teto']]}): {tab}"
+    porta = f" (a porta do degrau: sem a mão de Treinado, a peça não passa da matéria)" if c.get('porta') else ''
+    return f"2d20 + {c['soma']} ({partes}) · a peça sai na maior categoria que o total alcança ({cds}; o teto desta obra: {T.CATS[c['teto']]}{porta}): {tab}"
 
 
 def diz_conta(c, pouco='sai uma abaixo', perde='perde tudo', banca='oficina'):
@@ -425,20 +425,16 @@ def remata(E, oid):
 
 
 def _remata_valor(E, o):
-    """(a LEI DO VALOR) os blocos fecharam: sai o teste (2d20 explosivos, uma vez, e o 1d6 dos dados especiais quando eles pedem), e a soma decide a categoria da peça"""
-    import secrets
+    """(a LEI DO VALOR) os blocos fecharam: sai o teste (2d20 explosivos, uma vez; as faces de partida decidem os dados especiais), e a soma decide a categoria da peça"""
     oid = o['id']; pid = o['quem']; p = E['gente'][pid]; cat = o['cat']; peca = o['peca']; lid = o['lugar']; of = o['oficio']; nid = o.get('nucleo'); L = E['itens']['itens']
     if nid and nid not in L: sys.exit(f'o núcleo da obra {oid} não está mais no Livro de Itens: a obra não fecha (largue-a com `larga`)')
     c = valor(E, pid, cat, of, lid); nuc = L[nid]['nome'] if nid else None; dia = E['relogio']['dia']; fam = _fam(peca); fc = -1 if c['ferramenta_cat'] is None else c['ferramenta_cat']
     r = teste.rola(E, f"forjar {_peca(peca)}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid, **({'dom': c['oculto']} if c['oculto'] else {}))
     a0, b0 = r['dados'][0][0], r['dados'][1][0]
     if r.get('posto_a_mao'): a0 = b0 = 10                    # o dado posto à mão (só na prova): sem dado especial
-    saidas = _resolve(r['total'], a0, b0, c['teto'], fc); d6 = None
-    if len(saidas) > 1: d6 = secrets.randbelow(6) + 1; x = next(x for _, x in saidas if x['d6'] == d6)
-    else: x = saidas[0][1]
+    x = _resolve(r['total'], a0, b0, c['teto'], fc)[0][1]
     sai = x['cat']; ef = []; it = None
     n20 = 0 if r.get('posto_a_mao') else sum(1 for d in r['dados'] for f in d if f == 20)
-    efeitos = n20 + x['mais_efeito'] + (1 if x['quase'] else 0)
     fim = 'perdeu' if sai is None else 'acertou' if sai >= cat else 'abaixo'
     if sai is not None:
         padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), forma=peca.get('forma') if peca['tipo'] == 'foco' else None, talhe=peca.get('talhe'), oficio=(peca.get('forma') if peca.get('forma') in ('martelo', 'tenaz') else peca.get('oficio')) if peca['tipo'] == 'ferramenta' else None)['nome']
@@ -447,8 +443,7 @@ def _remata_valor(E, o):
         it = item(peca['tipo'], sai, nome, dono=pid, feito_por=pid, dia=dia, **forma)
         como = f"Dia {dia}: {p['nome']} forjou {_em(E, lid)}" + (f', com {nuc}' if nuc else '') + f" (a soma: {teste.total_visto(r)}; a obra era de matéria {FEM[min(cat, M.MATERIA_ATE)]}" + (f" e núcleo {T.CATS[cat]}" if cat > M.MATERIA_ATE else '') + ')'
         if x['tosca']: it['dur'][0] = max(1, int(it['dur'][1] * O.TOSCA)); como += '; a peça saiu tosca'
-        elif x['gasta']: it['dur'][0] = max(1, int(it['dur'][1] * O.VALOR_COMPLICA_DUR)); como += '; a peça nasceu gasta'
-        livres = min(O.EFEITOS_MAX[min(sai, len(O.EFEITOS_MAX) - 1)], efeitos)
+        livres = min(O.EFEITOS_MAX[min(sai, len(O.EFEITOS_MAX) - 1)], n20 + (1 if x['quase'] else 0)) + x['mais_efeito']      # o +1 da obra-prima no teto pode passar do teto de efeitos
         if livres: it['efeitos_livres'] = livres; como += f'; {livres} efeito{"s" if livres > 1 else ""} por escolher'
         if x['como']: como += f"; {x['como']}"
         if nid and L[nid].get('de'): it['nucleo_de'] = L[nid]['de']
@@ -461,15 +456,14 @@ def _remata_valor(E, o):
     conta_txt = f"soma {teste.total_visto(r)}"
     if sai is None: txt = f"a obra de {_peca(peca)} se perde ({conta_txt}" + (f"; {x['como']}" if x['como'] else f", abaixo da CD do Comum, {O.VALOR_CD[0]}") + f"): some a matéria ({_lista(o['materia'])})" + (f' e some {nuc}' if nuc else '')
     else:
-        txt = f"{p['nome']} forja {peca['nome'] if nome else _peca(it)}: {conta_txt}, a peça sai {FEM[sai]}" + (' (tosca)' if x['tosca'] else ' (gasta)' if x['gasta'] else '')
+        txt = f"{p['nome']} forja {peca['nome'] if nome else _peca(it)}: {conta_txt}, a peça sai {FEM[sai]}" + (' (tosca)' if x['tosca'] else '')
         txt += (f"; {x['como']}" if x['como'] else '') + (f"; {it['efeitos_livres']} efeito{'s' if it['efeitos_livres'] > 1 else ''} por escolher" if it.get('efeitos_livres') else '')
-        if x['quase']: txt += f"; QUASE: a soma ficou a {O.VALOR_CD[sai + 1] - r['total']} da CD {FEM[sai + 1]}"
         if n20: txt += f"; {n20} dado{'s' if n20 > 1 else ''} em 20"
     estado.aplica(E, evento_de(of), ef, onde=lid, quem=[pid], texto=txt)
     iid = f"i{E['itens']['seq']:04d}" if it else None
     out = (teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, matéria {c['materia']}" + (f", núcleo {c['nucleo']}" if c['nucleo'] else '') + (f", martelo de forja {c['martelo']}" if c['martelo'] else '')
            + (f", tenaz {c['tenaz']}" if c['tenaz'] else '') + f", oficina {c['oficina']}, preparo {c['preparo']}) · as CDs: " + ' · '.join(f"{T.CATS[k]} {O.VALOR_CD[k]}" for k in range(min(c['teto'], len(O.VALOR_CD) - 1) + 1))
-           + f" (o teto: {T.CATS[c['teto']]})" + (f" · o 1d6 dos dados: {d6}" if d6 else '') + '\n' + txt + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + _diz_dom(E, pid, r) + sobe(E, pid, of))
+           + f" (o teto: {T.CATS[c['teto']]}" + (', a porta do degrau' if c.get('porta') else '') + ')\n' + txt + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + _diz_dom(E, pid, r) + sobe(E, pid, of))
     return dict(obra=oid, fim=fim, item=iid, rolagem=r, texto=out, sai=sai, cat=cat)
 
 
@@ -525,8 +519,9 @@ def _faixa_do_dom(r, c, margem):
 def _diz_poder(fc):
     """o poder das ferramentas pela maior categoria delas, em palavras (a Lei do Valor)"""
     P = []
-    if fc >= 2: P.append('a matéria só se perde 5 abaixo da CD do Comum (a peça sai Comum, tosca)' if fc < O.NADA_SE_PERDE else 'a matéria nunca se perde (a peça sai, no pior, Comum e tosca)')
-    if fc >= O.OBRA_PRIMA_FACIL: P.append(f'o QUASE vale a {2 * O.VALOR_QUASE} da CD seguinte')
+    if fc >= 2: P.append(f'a matéria só se perde {O.VALOR_SEGURA} abaixo da CD do Comum (a peça sai Comum, tosca)' if fc < O.NADA_SE_PERDE else 'a matéria nunca se perde, nem nos dois 1 (a peça sai, no pior, Comum e tosca)')
+    if fc >= O.OBRA_PRIMA_FACIL: P.append(f'o QUASE: +1 efeito quando a soma fica a {O.QUASE_JANELA} ou menos da CD seguinte')
+    if fc >= O.ACIMA_DO_FERRO: P.append('ACIMA DO FERRO: na obra com núcleo, o teto sobe uma categoria')
     return (' · poder: ' + '; '.join(P)) if P else ''
 
 

@@ -7095,7 +7095,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 7,
+  "moedas": 3,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7132,6 +7132,12 @@
    },
    {
     "dia": 24,
+    "de": "taskin",
+    "o_que": "cumpriu a missão que eu paguei (matar 3 lobos na Charneca dos Sinos)",
+    "peso": 3
+   },
+   {
+    "dia": 35,
     "de": "taskin",
     "o_que": "cumpriu a missão que eu paguei (matar 3 lobos na Charneca dos Sinos)",
     "peso": 3
@@ -8078,7 +8084,7 @@
   "treino": {
    "fé": 40
   },
-  "moedas": 100,
+  "moedas": 115,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8094,10 +8100,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8142,7 +8145,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 112,
+  "moedas": 140,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8158,10 +8161,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8202,7 +8202,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 36,
+  "moedas": 48,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8219,10 +8219,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8256,7 +8253,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 91,
+  "moedas": 105,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8272,10 +8269,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8542,7 +8536,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 59,
+  "moedas": 80,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8559,10 +8553,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8718,11 +8709,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "taskin",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8760,7 +8747,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 79,
+  "moedas": 95,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8776,10 +8763,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9211,7 +9195,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 157,
+  "moedas": 170,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9228,10 +9212,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9423,7 +9404,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 178,
+  "moedas": 192,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9439,10 +9420,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9656,11 +9634,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "taskin",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9706,7 +9680,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 295,
+  "moedas": 307,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9722,10 +9696,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9820,7 +9791,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 151,
+  "moedas": 175,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9836,10 +9807,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9952,11 +9920,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "taskin",
-    "ate": 35
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10051,7 +10015,7 @@
   "treino": {
    "arco": 500
   },
-  "moedas": 500,
+  "moedas": 504,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10067,12 +10031,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0017",
-    "ate": 35,
-    "c": 0.99
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10084,7 +10043,7 @@
   "povo": "anão",
   "idade": 258,
   "sobre": "aventureiro de lenda, a Liga do Sino Rachado",
-  "fama": 299,
+  "fama": 300,
   "papel": "aventureiro",
   "guilda": "g_a_liga_do_sino_rachado",
   "rival": true
@@ -10124,12 +10083,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0015",
-    "ate": 35,
-    "c": 1.0
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10141,7 +10095,7 @@
   "povo": "anão",
   "idade": 165,
   "sobre": "aventureiro de lenda, anda sozinho",
-  "fama": 297,
+  "fama": 303,
   "papel": "aventureiro",
   "rival": true
  },
@@ -10223,7 +10177,7 @@
    "lança": 160,
    "manha": 6
   },
-  "moedas": 82,
+  "moedas": 0,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10231,7 +10185,7 @@
   },
   "pv": 161,
   "feridas": [],
-  "estado": "vivo",
+  "estado": "morto",
   "marca": {
    "talento_base": {
     "haste": 160
@@ -10248,7 +10202,18 @@
    "pacto": 1
   },
   "sobre": "o chefe dos salteadores da estrada",
-  "papel": "ladino"
+  "papel": "ladino",
+  "morte": {
+   "dia": 35,
+   "bloco": 0,
+   "onde": "castro_real",
+   "prata": 82,
+   "carga": {},
+   "vestia": [
+    "i0656",
+    "i0657"
+   ]
+  }
  },
  "eu": {
   "nome": "Ferord",
@@ -10268,11 +10233,11 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 151,
+   "forja": 154,
    "martelo": 40,
-   "comércio": 4
+   "comércio": 5
   },
-  "moedas": 71,
+  "moedas": 8,
   "corpo": {
    "fome": 3,
    "sono": 1,
@@ -10290,16 +10255,16 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 33,
+   "pesados_dia": 34,
    "pesados": 3,
    "jornada_dia": 33,
    "jornada": 2,
    "cama": {
-    "ate": 203,
+    "ate": 209,
     "onde": "pedra_velha"
    },
    "ensino_incomum": null,
-   "negocio_dia": 25
+   "negocio_dia": 34
   },
   "carga": {
    "metal:0": 1,

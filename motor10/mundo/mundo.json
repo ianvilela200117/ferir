@@ -4007,7 +4007,7 @@
  "seq": {
   "frente": 13,
   "missao": 17,
-  "noticia": 35
+  "noticia": 37
  },
  "frentes": {
   "f01": {
@@ -4028,7 +4028,7 @@
     "o bando mata um da guarda",
     "o lugar se esvazia: quem pode, vai embora"
    ],
-   "fim": null,
+   "fim": "barrada",
    "desde": 1,
    "ult": 22,
    "alvo_missao": "matar",
@@ -4601,7 +4601,7 @@
    "paga": 4,
    "prazo": 50,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "taskin",
    "desde": 29,
    "cat": 0,
@@ -7281,6 +7281,98 @@
     ]
    },
    "janela": false
+  },
+  "n00036": {
+   "dia": 35,
+   "onde": "souto_negro",
+   "texto": "Taskin cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "souto_negro": [
+     35,
+     0
+    ]
+   },
+   "janela": false
+  },
+  "n00037": {
+   "dia": 35,
+   "onde": "castro_real",
+   "texto": "O bando de Sara na estrada acabou: o dono dela caiu.",
+   "peso": 3,
+   "tags": [
+    "janela"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     35,
+     0
+    ],
+    "varzea_da_nevoa": [
+     35,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     35,
+     0
+    ],
+    "castro_real": [
+     35,
+     0
+    ],
+    "castro_do_sal": [
+     35,
+     0
+    ],
+    "pedra_verde": [
+     35,
+     0
+    ],
+    "pedra_velha": [
+     35,
+     0
+    ],
+    "varzea_brava": [
+     35,
+     0
+    ],
+    "castro_branco": [
+     35,
+     0
+    ],
+    "ponte_da_cruz": [
+     35,
+     0
+    ],
+    "pinhal_do_ferro": [
+     35,
+     0
+    ],
+    "coval_do_vento": [
+     35,
+     0
+    ],
+    "souto_negro": [
+     35,
+     0
+    ],
+    "ribeira_do_lobo": [
+     35,
+     0
+    ],
+    "ermida_verde": [
+     35,
+     0
+    ],
+    "penha_das_rosas": [
+     35,
+     0
+    ]
+   },
+   "janela": true
   }
  },
  "ranking": {
@@ -7329,5 +7421,11 @@
   ],
   "lider": "drastum",
   "trocas": 0
- }
+ },
+ "janela": [
+  {
+   "dia": 35,
+   "texto": "O bando de Sara na estrada acabou: o dono dela caiu."
+  }
+ ]
 }
