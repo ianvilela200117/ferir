@@ -1,5 +1,5 @@
 {
- "seq": 682,
+ "seq": 683,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12655,11 +12655,16 @@
     20,
     20
    ],
-   "efeitos": [],
+   "efeitos": [
+    {
+     "chave": "critico_19"
+    }
+   ],
    "sob_medida": null,
    "historia": [
     "Dia 18: Ferord forjou em Pedra Velha",
-    "Dia 24: pela regra nova da obra-prima (REGRAS 7.15), a obra que passou por 40 é obra-prima; o Incomum leva 1 efeito"
+    "Dia 24: pela regra nova da obra-prima (REGRAS 7.15), a obra que passou por 40 é obra-prima; o Incomum leva 1 efeito",
+    "Dia 25: Ferord deu à peça de obra-prima o efeito: o 19 também é crítico"
    ],
    "dono": "eu",
    "onde": null,
@@ -12667,8 +12672,7 @@
    "feito_por": "eu",
    "dia": 18,
    "id": "i0677",
-   "uso": "arma",
-   "efeitos_livres": 1
+   "uso": "arma"
   },
   "i0678": {
    "tipo": "armadura",
@@ -12777,8 +12781,29 @@
    "dia": 24,
    "id": "i0682",
    "uso": null
+  },
+  "i0683": {
+   "tipo": "ferramenta",
+   "oficio": "forja",
+   "cat": 0,
+   "nome": "Segundo Jogo de Forja de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "historia": [
+    "Dia 25: Ferord forjou em Pedra Velha; a obra era Incomum e a peça saiu Comum",
+    "Dia 25: a obra era Incomum e saiu Comum; o Mestre troca o nome que dizia Incomum"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "feito_por": "eu",
+   "dia": 25,
+   "id": "i0683",
+   "uso": null
   }
  },
- "oseq": 3,
+ "oseq": 4,
  "obras": {}
 }

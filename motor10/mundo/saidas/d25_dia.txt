@@ -1,0 +1,41 @@
+1a: O efeito de obra-prima do Martelo Incomum de Ferord (passou por 40 no Dia 18; o Incomum leva 1 efeito)? → critico_19: o 19 também é crítico
+2d: A próxima obra (59 de prata; com o jogo de forja afinado, a obra Incomum sai a 80% começando descansado; leva o dia, sem a jornada)? → o jogo de forja Incomum: 2 de metal e 1 de madeira Incomum (59): +2 na obra Incomum (o mesmo que o Comum afinado de hoje) e +1 na Rara; se sair obra-prima, afinado, +3 e +2
+3b: O Malho do Silêncio se perdeu nas Ruínas do Urso, em 1210? → deixa por ora: é coisa de quem desce em ruína
+$ python3 oficio.py efeito i0677 critico_19
+Martelo Incomum de Ferord ganha o efeito: o 19 também é crítico.
+Dia 25, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 59 de prata
+$ python3 mercado.py comprar metal:1 2
+Ferord compra 2 de metal Incomum por 45 de prata em Pedra Velha. O preço do dia: 19,72 → 21,18.
+Dia 25, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 14 de prata
+$ python3 mercado.py comprar madeira:1 1
+Ferord compra 1 de madeira Incomum por 14 de prata em Pedra Velha. O preço do dia: 12,35 → 12,53.
+Dia 25, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 0 de prata
+$ python3 oficio.py pede ferramenta forja Incomum
+jogo de forja Incomum · ofício: forja · 3 blocos pesados de bancada
+Matéria: 2 de metal Incomum (você tem 2), 1 de madeira Incomum (você tem 1)
+O teste final, hoje e aqui: 2d20 + 20 (maestria 4 + Afinidade 7 + oficina 1 + preparo 6 + ferramenta 2) contra 34: acerta 80% · sai uma abaixo 11% · perde tudo 9%
+$ python3 oficio.py forjar ferramenta forja Incomum "Jogo de Forja Incomum de Ferord" blocos=2
+Obra o0004 aberta: Jogo de Forja Incomum de Ferord (Incomum). Entraram 2 de metal Incomum, 1 de madeira Incomum.
+Ferord trabalha 2 blocos na obra o0004, Jogo de Forja Incomum de Ferord (Incomum): 2 de 3
+Dia 25, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 0 de prata
+(saída 0)
+$ python3 oficio.py continua blocos=1
+Ferord trabalha 1 bloco na obra o0004, Jogo de Forja Incomum de Ferord (Incomum): 3 de 3
+#1 Ferord, forjar Jogo de Forja Incomum de Ferord (Incomum): 3 e 8, +7 de Afinidade, +13 = 31 contra 34: FALHA
+  (o +13: maestria 4, oficina 1, preparo 6, ferramenta 2)
+Ferord erra por pouco (31 contra 34): Jogo de Forja Incomum de Ferord sai Comum, uma categoria abaixo. Entrou no Livro de Itens: i0683
+Dia 25, noite (20h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 0 de prata
+(saída 0)
+$ estado.py mestre (o nome da peça que caiu de categoria)
+evento #2175 (mestre): o jogo de forja que saiu Comum ganha um nome que não engana: Segundo Jogo de Forja de Ferord · 2 efeitos
+$ python3 teste.py "Erado lembra as histórias das peças forjadas de nome e dos mestres que as forjaram" Percepção contra=25 mais=5 quem=erado
+#2 Erado, Erado lembra as histórias das peças forjadas de nome e dos mestres que as forjaram: 4 e 10, +4 de Percepção, +5 = 23 contra 25: FALHA
+(saída 0)
+$ python3 ato.py dormir 3
+Ferord dorme 1 bloco na cama (a cama já estava paga). PAROU: Ferord está com fome
+Dia 26, madrugada (0h) · primavera · PV 111/111 · com fome (fome 4) · sem sono (sono 1) · com forças (cansaço 3) · pena −2 em todo teste · fôlego máximo −1 · 0 de prata
+(saída 0)
+$ python3 ato.py dormir 2 chao
+Ferord dorme 2 blocos no chão. PAROU: Ferord acorda com o sono em dia
+Dia 26, manhã (8h) · primavera · PV 111/111 · com fome (fome 5) · sem sono (sono 0) · com forças (cansaço 0) · pena −2 em todo teste · 0 de prata
+(saída 0)

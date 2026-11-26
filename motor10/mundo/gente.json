@@ -8063,7 +8063,7 @@
   "treino": {
    "fé": 40
   },
-  "moedas": 73,
+  "moedas": 100,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8079,10 +8079,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8127,7 +8124,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 99,
+  "moedas": 112,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8143,10 +8140,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8187,7 +8181,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 27,
+  "moedas": 36,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8204,10 +8198,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8241,7 +8232,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 72,
+  "moedas": 91,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8257,10 +8248,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8986,7 +8974,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 77,
+  "moedas": 103,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9003,10 +8991,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9267,7 +9252,7 @@
   "treino": {
    "lança": 160
   },
-  "moedas": 150,
+  "moedas": 174,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9283,10 +9268,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9322,7 +9304,7 @@
   "treino": {
    "montante": 40
   },
-  "moedas": 102,
+  "moedas": 110,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9338,10 +9320,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9434,7 +9413,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 164,
+  "moedas": 178,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9450,10 +9429,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9497,7 +9473,7 @@
   "treino": {
    "arco": 40
   },
-  "moedas": 66,
+  "moedas": 85,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9513,10 +9489,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9606,7 +9579,7 @@
   "treino": {
    "espada": 500
   },
-  "moedas": 277,
+  "moedas": 288,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9622,10 +9595,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9722,7 +9692,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 279,
+  "moedas": 295,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9738,10 +9708,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10004,7 +9971,7 @@
   "treino": {
    "arcano": 500
   },
-  "moedas": 301,
+  "moedas": 310,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10020,10 +9987,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 26
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10276,14 +10240,14 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 124,
+   "forja": 127,
    "martelo": 40,
-   "comércio": 3
+   "comércio": 4
   },
-  "moedas": 59,
+  "moedas": 0,
   "corpo": {
-   "fome": 2,
-   "sono": 1,
+   "fome": 5,
+   "sono": 0,
    "cansaco": 0
   },
   "pv": 111,
@@ -10298,7 +10262,7 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 24,
+   "pesados_dia": 25,
    "pesados": 3,
    "jornada_dia": 24,
    "jornada": 2,
@@ -10307,7 +10271,7 @@
     "onde": "pedra_velha"
    },
    "ensino_incomum": null,
-   "negocio_dia": 18
+   "negocio_dia": 25
   },
   "carga": {
    "metal:0": 1,
