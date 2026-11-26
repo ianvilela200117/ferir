@@ -356,6 +356,80 @@ def _recusas(n):
             len(rec) == len(casos) and igual and cedo and voltou and largou and sem_paga and desfez and uso and not estado.valida(E))
 
 
+def _ferramentas(n):
+    """(a etapa dos efeitos, parte 1) A FERRAMENTA DO OFÍCIO e A OBRA-PRIMA: o bônus pela categoria, a melhor ferramenta que a pessoa tem, os poderes,
+    a forja da própria ferramenta, os efeitos por escolher pela margem (com o teto da categoria) e o comando de escolher o efeito"""
+    ok = {}; al = 5
+    E = oficina_de_prova(nivel=2, afinidade=50, mao=4, prata=300, fogo=al, bigorna=al, receita=al, ajudante=al); L = lambda: E['itens']['itens']; p0 = oficio.prata_do_mundo(E)
+    def nasce(it): estado.aplica(E, 'gera', [['item', 'nasce', it]], onde='vila', texto='a peça de prova'); return f"i{E['itens']['seq']:04d}"
+    def obra(cat, margem, peca=None):
+        peca = peca or espada(cat); nid = entrega(E, peca); R = oficio.forjar(E, 'eu', peca, blocos=0, nucleo=nid)
+        estado.aplica(E, 'mestre', [['obra', R['obra'], 'blocos', 'poe', O.blocos(peca['cat'])]], texto='os blocos da prova')
+        with dado_posto([margem]): F = oficio.remata(E, R['obra'])
+        return F, L().get(F['item']) if F['item'] else None
+    # 1. a tabela do bônus: 1 + t na obra da categoria dela ou abaixo; +1 na de uma acima; nada acima disso
+    ok['tabela'] = all(O.bonus_ferramenta(t, k) == (1 + t if t >= k else 1 if t == k - 1 else 0) for t in range(6) for k in range(6)) and O.bonus_ferramenta(5, 0) == 6 and O.bonus_ferramenta(0, 2) == 0
+    # 2. a conta: sem ferramenta, nada; a melhor da pessoa vale; a de outro ofício, a quebrada e a de outra pessoa não valem; a afinada soma 1
+    sem = oficio.conta(E, 'eu', 1)['ferramenta']
+    i0 = nasce(item('ferramenta', 0, oficio='forja', dono='eu')); com0 = oficio.conta(E, 'eu', 1)['ferramenta']
+    i2 = nasce(item('ferramenta', 2, oficio='forja', dono='eu')); com2 = oficio.conta(E, 'eu', 1)['ferramenta']
+    ic = nasce(item('ferramenta', 4, oficio='couro', dono='eu')); couro_na_forja = oficio.conta(E, 'eu', 1)['ferramenta']; couro_no_couro = oficio.conta(E, 'eu', 1, 'couro')['ferramenta']
+    at = dict(E['gente']['eu']['atributos']); estado.aplica(E, 'gera', [['pessoa', 'nasce', 'zeca', dict(nome='Zeca', nivel=1, atributos=at, lugar='vila')]], onde='vila', texto='outro ferreiro')
+    outro = 'zeca'; io = nasce(item('ferramenta', 5, oficio='forja', dono=outro)); de_outro = oficio.conta(E, 'eu', 1)['ferramenta']
+    estado.aplica(E, 'mestre', [['item', i2, 'dur', 'soma', -100]], texto='a ferramenta quebra'); quebrada = oficio.conta(E, 'eu', 1)['ferramenta']
+    estado.aplica(E, 'mestre', [['item', i2, 'dur', 'soma', 100], ['item', i2, 'efeito', 'junta', {'chave': 'afinada'}]], texto='a ferramenta conserta e afina'); afinada = oficio.conta(E, 'eu', 1)['ferramenta']
+    na_alquimia = oficio.conta(E, 'eu', 1, 'alquimia')['ferramenta'] if 'botica' in E['lugares']['vila'] else 0
+    ok['conta'] = (sem, com0, com2, couro_na_forja, couro_no_couro, de_outro, quebrada, afinada, na_alquimia) == (0, 1, 3, 3, 5, 3, 1, 4, 0)
+    c = oficio.conta(E, 'eu', 1); ok['soma'] = c['mais'] == c['maestria'] + c['oficina'] + c['preparo'] + c['ferramenta'] and 'ferramenta 4' in oficio.diz_conta(c)
+    for k in (i0, i2, ic): estado.aplica(E, 'mestre', [['item', k, 'some']], texto='tira a ferramenta da prova')
+    # 3. a forja da ferramenta: a matéria, o nome, o tipo e o ofício
+    pf = oficio.molde('ferramenta', 1, oficio='forja'); mat = oficio.materia_de(pf)
+    F, it = obra(1, 0, pf)
+    ok['forja'] = mat == {M.materia('metal', 1): 2, M.materia('madeira', 1): 1} and F['fim'] == 'acertou' and it['tipo'] == 'ferramenta' and it['oficio'] == 'forja' and it['nome'] == 'jogo de forja Incomum' and it['cat'] == 1
+    estado.aplica(E, 'mestre', [['item', F['item'], 'some']], texto='tira a ferramenta da prova')
+    pr = recusa(lambda: oficio.molde('ferramenta', 1, oficio='alquimia')); ok['recusa_oficio'] = bool(pr)
+    # 4. a obra-prima pela margem, com o teto da categoria
+    obras = {}
+    for cat, m, quer in ((0, 9, 0), (0, 10, 1), (0, 35, 1), (2, 19, 1), (2, 20, 2), (2, 35, 2), (4, 30, 3), (4, 29, 2), (2, -1, 0)):
+        F, it = obra(cat, m); obras[(cat, m)] = (it.get('efeitos_livres', 0) if it else 0)
+        ok[f'obra_{cat}_{m}'] = obras[(cat, m)] == quer
+    # 5. os poderes da ferramenta: a Rara segura a matéria até 7; a Épica nunca a perde; a Única adianta a obra-prima; a Lendária sobe a peça
+    def com(cat_f):
+        k = nasce(item('ferramenta', cat_f, oficio='forja', dono='eu')); return k
+    kr = com(2)
+    F6, it6 = obra(2, -6); F8, it8 = obra(2, -8)
+    ok['rara'] = F6['fim'] == 'abaixo' and it6['cat'] == 1 and F8['fim'] == 'perdeu' and it8 is None
+    estado.aplica(E, 'mestre', [['item', kr, 'some']], texto='tira'); ke = com(3)
+    Fe, ite = obra(2, -20); Fc, itc = obra(0, -20)
+    ok['epica'] = Fe['fim'] == 'abaixo' and ite['cat'] == 1 and Fc['fim'] == 'abaixo' and itc['cat'] == 0 and itc['dur'][0] == int(T.DUR[0] * O.TOSCA)
+    estado.aplica(E, 'mestre', [['item', ke, 'some']], texto='tira'); ku = com(4)
+    Fu5, itu5 = obra(2, 5); Fu15, itu15 = obra(2, 15); Fu4, itu4 = obra(2, 4)
+    ok['unica'] = itu5.get('efeitos_livres') == 1 and itu15.get('efeitos_livres') == 2 and not itu4.get('efeitos_livres')
+    estado.aplica(E, 'mestre', [['item', ku, 'some']], texto='tira'); kl = com(5)
+    Fl, itl = obra(1, 25); Fl2, itl2 = obra(1, 24); Fl5, itl5 = obra(5, 40)
+    ok['lendaria'] = itl['cat'] == 2 and itl2['cat'] == 1 and itl5['cat'] == 5 and 'Lendária' in (itl['historia'][-1] if itl else '')
+    estado.aplica(E, 'mestre', [['item', kl, 'some']], texto='tira')
+    # 6. escolher o efeito: o que cabe, o teto, o que não cabe, o "pesa", o "devolve" e quem não é dono
+    F, arma = obra(2, 20); aid = F['item']
+    r_pesa = recusa(lambda: oficio.efeito(E, 'eu', aid, 'pesa')); r_nao = recusa(lambda: oficio.efeito(E, 'eu', aid, 'firme'))
+    oficio.efeito(E, 'eu', aid, 'critico_19'); r_dup = recusa(lambda: oficio.efeito(E, 'eu', aid, 'critico_19'))
+    oficio.efeito(E, 'eu', aid, 'sangra'); r_fim = recusa(lambda: oficio.efeito(E, 'eu', aid, 'derruba'))
+    a = L()[aid]; ok['efeito_arma'] = bool(r_pesa and r_nao and r_dup and r_fim) and [e['chave'] for e in a['efeitos']] == ['critico_19', 'sangra'] and 'efeitos_livres' not in a
+    arm = oficio.molde('armadura', 2, material='malha'); F, armadura = obra(2, 10, arm); vid = F['item']
+    r_dev = recusa(lambda: oficio.efeito(E, 'eu', vid, 'devolve', valor=T.devolve_max(2) + 1)); oficio.efeito(E, 'eu', vid, 'devolve')
+    ok['efeito_devolve'] = bool(r_dev) and L()[vid]['efeitos'] == [{'chave': 'devolve', 'valor': T.devolve_max(2)}]
+    F, outra = obra(0, 10); oid2 = F['item']; estado.aplica(E, 'mestre', [['item', oid2, 'dono', 'poe', outro]], texto='a peça muda de dono')
+    ok['efeito_dono'] = bool(recusa(lambda: oficio.efeito(E, 'eu', oid2, 'leve')))
+    # 7. a mesa e o estado
+    import ato as _ato
+    linhas = ' '.join(_ato.diz_pecas(E, 'eu')); ok['mesa'] = 'OBRA-PRIMA' not in linhas or 'oficio.py efeito' in linhas
+    ok['estado'] = not estado.valida(E) and oficio.prata_do_mundo(E) == p0
+    falhas = [k for k, v in ok.items() if not v]
+    return [('AS FERRAMENTAS E A OBRA-PRIMA (a etapa dos efeitos, parte 1; o dado posto à mão)',
+             f"{sum(ok.values())} de {len(ok)} conferências certas" + (f"; falham: {', '.join(falhas)}" if falhas else '') + f" · a conta (sem, Comum, Rara, couro na forja, couro no couro, de outro, quebrada, afinada, alquimia) = {(sem, com0, com2, couro_na_forja, couro_no_couro, de_outro, quebrada, afinada, na_alquimia)} · a obra-prima por margem: {obras}",
+             not falhas)]
+
+
 def provas(n=300):
     out = []; m = max(400, 2 * n)
     def roda(nome, f):
@@ -365,6 +439,8 @@ def provas(n=300):
     roda('A ESCADA E O ROBÔ FERREIRO', lambda: escada([vida(s + 1) for s in range(cheias)] + [vida(cheias + s + 1, dias=ROBO['curta'], ate=4) for s in range(curtas)]))
     for nome, f in (('O MELHOR FERREIRO', lambda: [_melhor(m)]), ('O INICIANTE NA VILA', lambda: [_iniciante(m)]), ('A CONTA FECHA', lambda: [_conta_fecha(n)]), ('AS MARGENS', lambda: [_margens(n)]), ('A OBRA ABERTA', lambda: [_obra_aberta(n)]),
                     ('O CONSERTO', lambda: [_conserto(n)]), ('SOB MEDIDA', lambda: [_sob_medida(n)]), ('A MAESTRIA', lambda: [_maestria(n)]), ('AS RECUSAS', lambda: [_recusas(n)])):
+        roda(nome, f)
+    for nome, f in (('AS FERRAMENTAS E A OBRA-PRIMA', lambda: _ferramentas(n)),):
         roda(nome, f)
     return out
 

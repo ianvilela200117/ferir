@@ -72,7 +72,7 @@ import tabelas_talento as TT
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARQS = ('relogio', 'lugares', 'gente', 'itens', 'turno', 'mundo')        # mundo: o arquivo da etapa final (ausente no save antigo: o mundo vazio)
 PARTES_VESTE = ('arma', 'arma2', 'escudo', 'veste', 'foco', 'pescoco')
-TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave')      # os tipos do Livro de Itens (foco a escrito: etapa da magia; gazua e chave: etapa 4b)
+TIPOS_ITEM = ('arma', 'armadura', 'escudo', 'nucleo', 'foco', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave', 'ferramenta')      # os tipos do Livro de Itens (foco a escrito: etapa da magia; gazua e chave: etapa 4b)
 USO_DO_TIPO = dict(arma='arma', arma2='arma', escudo='escudo', veste='armadura', foco='foco', pescoco='amuleto')     # onde cada uso pede que tipo de peça
 COM_ENCANTO = ('arma', 'armadura', 'escudo')        # as peças que levam encanto (o foco e o amuleto já são magia)
 TALENTO_EVENTOS = ('gera', 'mestre', 'talento')     # só nestes eventos se grava o talento e o dom (o talento já rolado, só em "mestre")
@@ -851,6 +851,20 @@ def _um(E, ef):
             else: it['talhe'] = val
             return
         if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
+        if campo == 'efeito' and op == 'junta':              # (a etapa dos efeitos, parte 1) um efeito novo na peça: {chave, valor?}, dos que a luta roda (itens.EFEITOS)
+            import itens as IT
+            if not isinstance(val, dict) or val.get('chave') not in IT.EFEITOS: return _erro(ef, f'o efeito é {{chave, valor?}}, com a chave de um dos que há ({", ".join(IT.EFEITOS)})')
+            if it['tipo'] not in IT.EFEITOS[val['chave']][1]: return _erro(ef, f'o efeito "{val["chave"]}" não vale em {it["tipo"]} (vale em: {", ".join(IT.EFEITOS[val["chave"]][1])})')
+            if any(isinstance(e, dict) and e.get('chave') == val['chave'] for e in it.get('efeitos') or []): return _erro(ef, f'{it["nome"]} já tem o efeito "{val["chave"]}"')
+            if val['chave'] == 'devolve' and not (_int(val.get('valor')) and 1 <= val['valor'] <= T.devolve_max(it['cat'])): return _erro(ef, f'"devolve" numa peça {T.CATS[it["cat"]]} vai de 1 a {T.devolve_max(it["cat"])}')
+            if val['chave'] != 'devolve' and 'valor' in val: return _erro(ef, f'o efeito "{val["chave"]}" não leva valor')
+            it.setdefault('efeitos', []).append(copy.deepcopy(val)); return
+        if campo == 'efeitos_livres' and op in ('poe', 'soma'):     # os efeitos que a obra-prima ainda deixa escolher
+            q = (val if op == 'poe' else (it.get('efeitos_livres') or 0) + val) if _int(val) else None
+            if q is None or q < 0: return _erro(ef, 'os efeitos por escolher são um número inteiro, de zero para cima')
+            if q: it['efeitos_livres'] = q
+            else: it.pop('efeitos_livres', None)
+            return
         if campo == 'nome' and op == 'poe' and val: it['nome'] = str(val); return
         if campo == 'uso' and op == 'poe':
             if val not in (None,) + PARTES_VESTE: return _erro(ef, f'uso desconhecido: "{val}" (arma, arma2, escudo, veste, foco, pescoco ou nada)')
@@ -863,7 +877,7 @@ def _um(E, ef):
         if campo == 'dur' and op == 'soma' and _num(val):
             if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia (junta) · encanto (grava, gasta, apaga)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta) · efeitos_livres (poe, soma) · encanto (grava, gasta, apaga)')
     if v == 'mundo': return _mundo(E, ef)
     return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao, mundo)')
 
@@ -1236,6 +1250,11 @@ def _item_magia_erro(it):
     if it.get('maldita') is not None:
         e = _molde_erro(it['maldita'])
         if e: return 'a peça maldita leva um molde de maldição: ' + e
+    if t == 'ferramenta':                                    # (a etapa dos efeitos, parte 1) a ferramenta do ofício
+        import tabelas_oficio as TO
+        if it.get('oficio') not in TO.FERRAMENTA_OFICIOS: return f'a ferramenta é de um ofício ({", ".join(TO.FERRAMENTA_OFICIOS)})'
+    el = it.get('efeitos_livres')
+    if el is not None and (not _int(el) or el < 0): return 'os efeitos por escolher da obra-prima são um número inteiro, de zero para cima'
     if it.get('benta') is not None and (t != 'arma' or not _int(it['benta'])): return 'só a arma fica benta (até um bloco)'
     v = it.get('veneno')
     if v is not None and (t != 'arma' or not isinstance(v, dict) or not _int(v.get('cat')) or not 0 <= v['cat'] <= M.POCAO_ATE or not _int(v.get('ate'))): return f'o veneno na lâmina é {{cat: de 0 a {M.POCAO_ATE}, ate: um bloco}}, só em arma'

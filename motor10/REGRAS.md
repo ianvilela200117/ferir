@@ -741,6 +741,25 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 - **O que a meta mede** são duas coisas. O dia em que a primeira tentativa fecha: Dia 356, no melhor caminho. E a raridade: a peça tem de nascer em pelo menos uma vida do robô e em menos da metade delas (se a chance subisse, ou se a peça deixasse de nascer, a prova falharia). Até o Dia 450 cabem duas tentativas, e a peça nasce em cerca de um quarto das vidas do robô. Em média, uma Lendária custa quatro tentativas ao melhor ferreiro do mundo: perto de 280 dias de bancada e quatro núcleos Lendários.
 **A escada só anda assim com núcleo à vontade.** O mundo dá 6 núcleos Épicos e 2 Únicos por ano (`PROJETO.md`). Na forja de cidade, sem preparo, a primeira Épica sai perto do Dia 100.
 
+
+7.14 **A ferramenta do ofício** (a etapa dos efeitos, parte 1). É uma peça do Livro de Itens (tipo `ferramenta`), de um ofício: o **jogo de forja** (o martelo de forja e a tenaz) serve à forja; o **jogo de couro** (a faca e a sovela), ao couro. Forja-se na oficina como a adaga: a matéria (o jogo de forja, 2 de metal e 1 de madeira da categoria; o de couro, 1 de metal e 1 de couro), os blocos (3^k), o teste e a falha da forja; do Épico para cima, matéria Rara e um núcleo. Não se veste: **quem a tem, inteira, soma o bônus dela no teste do ofício** (forjar e ajustar), **fora do teto do preparo**. Vale a melhor que a pessoa tiver; a de outra pessoa, a de outro ofício e a quebrada não valem.
+
+| A ferramenta | Na obra da categoria dela ou abaixo | Na obra uma acima | O poder (os de cima trazem os de baixo) |
+| --- | --- | --- | --- |
+| Comum | +1 | +1 | |
+| Incomum | +2 | +1 | |
+| Rara | +3 | +1 | a matéria só some se a obra falhar por 8 ou mais (sem ela, 5) |
+| Épica | +4 | +1 | **nada se perde:** a obra que falha feio sai uma categoria abaixo (o Comum, tosco) |
+| Única | +5 | +1 | a obra-prima vem 5 mais cedo (7.15) |
+| Lendária | +6 | +1 | **acima do ferro:** a peça que passa por 25 ou mais nasce uma categoria acima (até o Lendário; sem núcleo a mais) |
+
+O poder vale com a ferramenta na mão, mesmo na obra acima dela. A ferramenta de obra-prima pode ser **afinada**: +1 a mais no teste do ofício dela.
+
+7.15 **A obra-prima.** A peça que **passa** no teste por 10 ou mais ganha 1 efeito; por 20 ou mais, 2; por 30 ou mais, 3. O teto vem da categoria da peça: **Comum e Incomum, 1; Raro e Épico, 2; do Único para cima, 3.** Os efeitos nascem **por escolher**: quem forjou escolhe cada um (7.16). A peça que sai uma categoria abaixo, ou tosca, não é obra-prima.
+
+7.16 **Escolher o efeito** (`oficio.py efeito ITEM CHAVE [valor=N]`). Quem tem a peça de obra-prima escolhe, um por vez, entre os efeitos que a luta roda e que valem naquele tipo de peça (capítulo 2): na arma, sangra, critico_19, derruba, leve, nao_quebra; na armadura, devolve (de 1 ao teto da categoria: 4 por categoria, a Comum 4), firme, leve, nao_quebra; no escudo, firme, leve, nao_quebra; na ferramenta, afinada. O **pesa** não se escolhe (é defeito), e a peça não leva o mesmo efeito duas vezes. Cada escolha é um evento e entra na história da peça.
+
+**Medido** (`python3 provas_oficio.py`, a prova AS FERRAMENTAS E A OBRA-PRIMA, com o dado posto à mão): a tabela do bônus; a melhor ferramenta da pessoa vale, e a de outro ofício, a quebrada e a de outra pessoa não; a afinada soma 1; a forja da ferramenta (matéria, nome, tipo, ofício); a obra-prima por margem e o teto da categoria; os quatro poderes; a escolha do efeito (o que cabe, o teto, o pesa, o devolve, quem não é dono). 23 de 23.
 ---
 
 ## 8. O mercado (etapa 2)
@@ -2553,6 +2572,7 @@ python3 mercado.py funda POVO "como foi"             o Mestre abre um mercado on
 python3 oficio.py ver | pede arma espada Raro
 python3 oficio.py forjar arma espada Raro "Nome" [blocos=N] [nucleo=ID]  ·  forjar armadura malha Raro "Nome" [cobre=cabeça]  ·  forjar escudo Raro "Nome"
 python3 oficio.py continua [OBRA] [blocos=N]  ·  larga OBRA  ·  consertar ITEM [pontos=N] [pago]  ·  ajustar ITEM [para=ID]  ·  jornal N
+python3 oficio.py pede ferramenta forja|couro CATEGORIA  ·  forjar ferramenta forja|couro CATEGORIA ["Nome"]  ·  efeito ITEM CHAVE [valor=N]      (a ferramenta do ofício e a obra-prima: 7.14 a 7.16)
 python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA "como foi"  ·  oficio.py oficina NIVEL "como foi"      (o Mestre registra)
 
 python3 caca.py ver | sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID] | coletar BEM [ERMO] [blocos=N]      (procura: N de 1 a 6; coleta: N de 1 a 4)

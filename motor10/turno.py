@@ -6,6 +6,7 @@
                                                 (cada pergunta guarda o número com que foi aberta até o turno fechar; a já respondida recusa segunda resposta;
                                                  vale como o jogador escreve: "1c.2 a", "1c, 2a", "1c 2a")
   python3 turno.py pergunta "texto" "a=..." "b=..." ["c=..."]     abre uma pergunta para o fim do turno, e diz o número que ela terá na lista do RETOMAR (o do código)
+  python3 turno.py livre N "o que o jogador disse"               a resposta LIVRE: o jogador respondeu a pergunta N com outra coisa que não uma das letras; fica escrita como ele disse
   python3 turno.py nota "o que só o Mestre sabe"                  uma nota oculta (vai para o RETOMAR, na parte do Mestre)
   python3 turno.py fecha "o que houve" [parado] [git]             fecha o turno. `parado`: o turno foi só conversa, o relógio não andou. `git`: guarda no git e envia.
 
@@ -201,6 +202,16 @@ def responde(E, codigos):
     return '\n'.join(out) + (f"\nFicam abertas: {', '.join(str(q['n']) for q in t['perguntas'])}." if t['perguntas'] else '')
 
 
+def livre(E, n, texto):
+    """o jogador respondeu a pergunta n com outra coisa que não uma das opções: a resposta fica escrita com as palavras dele (código "livre"), e a pergunta fecha"""
+    t = E['turno']; abertas = {q['n']: q for q in numera(t)}
+    if not texto.strip(): sys.exit('diga o que o jogador respondeu, entre aspas')
+    if n not in abertas: sys.exit(f'não há a pergunta {n} aberta (' + (f"as abertas: {', '.join(str(k) for k in sorted(abertas))}" if abertas else 'não há nenhuma') + ')')
+    q = abertas[n]; t['respondidas'].append(dict(n=n, texto=q['texto'], cod='livre', opcao=texto.strip()))
+    t['perguntas'] = [x for x in t['perguntas'] if x['n'] != n]
+    return f"{n} (livre): {q['texto']} → {texto.strip()}" + (f"\nFicam abertas: {', '.join(str(x['n']) for x in t['perguntas'])}." if t['perguntas'] else '')
+
+
 SEGREDO = {('pessoa', 'talento'), ('pessoa', 'dom'), ('item', 'maldita'), ('lugar', 'maldito'), ('lugar', 'covil'),      # o que o Mestre (ou o gerador) põe e a gente do mundo não sabe
            ('lugar', 'dragao'), ('lugar', 'armadilhas'), ('lugar', 'segredos'), ('lugar', 'guardado'), ('lugar', 'portas'), ('lugar', 'vagantes'), ('lugar', 'chefe')}      # etapa 4b: o dragão e o mapa da masmorra
 
@@ -292,7 +303,7 @@ def fecha(E, resumo, parado=False, git=False):
 if __name__ == '__main__':
     import signal; hasattr(signal, 'SIGPIPE') and signal.signal(signal.SIGPIPE, signal.SIG_DFL)      # a saída cortada (`| head`) acaba o comando calada, sem erro de programa: tudo já foi gravado antes de falar
     a = sys.argv[1:]
-    if not a or a[0] not in ('abre', 'pergunta', 'responde', 'nota', 'fecha'): print(__doc__); sys.exit()
+    if not a or a[0] not in ('abre', 'pergunta', 'responde', 'livre', 'nota', 'fecha'): print(__doc__); sys.exit()
     E = estado.carrega()
     if a[0] == 'abre': print(abre(E)); sys.exit()
     if a[0] == 'pergunta':
@@ -301,6 +312,9 @@ if __name__ == '__main__':
     elif a[0] == 'responde':
         if len(a) < 2: sys.exit('diga os códigos do jogador: `turno.py responde "1a.2b"` (vale também "1a, 2b" e "1 a 2 b")')
         print(responde(E, ' '.join(a[1:]))); estado.grava(E)
+    elif a[0] == 'livre':
+        if len(a) != 3 or not a[1].isdigit(): sys.exit('diga o número da pergunta e o que o jogador respondeu: `turno.py livre 1 "quero forjar ferramenta"`')
+        print(livre(E, int(a[1]), a[2])); estado.grava(E)
     elif a[0] == 'nota':
         if len(a) != 2 or not a[1].strip(): sys.exit('diga a nota, entre aspas: `turno.py nota "o que só o Mestre sabe"`')
         E['turno']['notas'].append(a[1]); estado.grava(E); print('nota guardada (só o Mestre vê).')

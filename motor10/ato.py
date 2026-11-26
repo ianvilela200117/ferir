@@ -252,7 +252,11 @@ def diz_pecas(E, pid):
     for i, it in E['itens']['itens'].items():
         if it.get('dono') != pid: continue
         if it['tipo'] == 'nucleo': L.append(f"{i} {rotulo(it)} · núcleo, na guarda"); continue
-        L.append(f"{i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]), 'QUEBROU' if it['dur'][0] <= 0 else '')} · {'EM USO, ' + uso_diz(it) if it.get('uso') else 'na guarda'}")
+        import itens as _IT
+        efs = [_IT.EFEITOS[e['chave']][0].format(valor=e.get('valor', '')) for e in it.get('efeitos') or [] if isinstance(e, dict) and e.get('chave') in _IT.EFEITOS]      # (a etapa dos efeitos) o que a peça faz
+        livre = f"OBRA-PRIMA: {it['efeitos_livres']} efeito{'s' if it['efeitos_livres'] > 1 else ''} por escolher (`oficio.py efeito {i} CHAVE`)" if it.get('efeitos_livres') else ''
+        onde = 'ferramenta, na carga' if it['tipo'] == 'ferramenta' else ('EM USO, ' + uso_diz(it) if it.get('uso') else 'na guarda')
+        L.append(f"{i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]), 'QUEBROU' if it['dur'][0] <= 0 else '')} · {onde}" + ''.join(f' · {x}' for x in efs) + (f' · {livre}' if livre else ''))
     return L or ['(nenhuma peça)']
 
 

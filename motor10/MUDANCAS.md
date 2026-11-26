@@ -289,3 +289,12 @@ O livro de regras (`REGRAS.md`) não guarda história. Ela fica aqui: o que mudo
 ## O personagem do jogador e o Maro (fora do jogo)
 - **O personagem do jogador nasce no mundo novo** (decisão 20 do `PROJETO.md`): humano, de berço ferreiro, com as inclinações na forja e no encanto. **O Maro não é o personagem do jogador:** o `ensaio/` fica só como vila de teste dos bancos.
 - **Um projeto da etapa 3 de outro chat** (`projeto/etapa3/`: dois projetos, o juízo, a ordem de serviço) **não foi construído:** a etapa final chegou antes, e o motor que vale é o dela (decisão 21). As respostas R1 a R4 do jogador àquele projeto ficam escritas; a R1 b (a estrada mais dura) já está no motor.
+
+## A etapa dos efeitos, parte 1 (fora do jogo, no Dia 24 do mundo novo): a ferramenta do ofício e a obra-prima
+- **Por quê:** o jogador perguntou se o martelo dele dava vantagem na forja (não dava: o teste não lia peça nenhuma) e pediu: "lógico que equipamentos devem entrar na forja"; e, além disso, que itens, efeitos de itens, habilidades e magias sejam determinantes, do fraco ao apelão, balanceados.
+- **O que entrou (parte 1):**
+  - a **ferramenta do ofício** (tipo `ferramenta`: o jogo de forja e o jogo de couro), forjada na oficina, com bônus no teste do ofício pela categoria (Comum +1 ... Lendária +6; uma acima, +1), fora do teto do preparo, e um poder por categoria (Rara: a matéria só some falhando por 8; Épica: nada se perde; Única: a obra-prima mais cedo; Lendária: a peça que passa por 25 nasce uma categoria acima);
+  - a **obra-prima**: a peça que passa por 10, 20, 30 ganha 1, 2, 3 efeitos por escolher, até o teto da categoria (Comum e Incomum 1; Raro e Épico 2; do Único para cima 3); quem forjou escolhe (`oficio.py efeito ITEM CHAVE`), entre os efeitos que a luta já roda;
+  - o efeito novo **afinada** (só na ferramenta: +1 no teste do ofício dela); o gravador aceita `['item', id, 'efeito', 'junta', {chave, valor?}]` e `['item', id, 'efeitos_livres', 'poe'|'soma', n]`.
+- **Banco de provas:** provas_oficio 16 de 16 (a prova nova: 23 de 23 conferências); provas 114 de 114; provas_regiao 15 de 15.
+- **Falta (a parte 2, a etapa grande):** efeitos de itens novos na luta, do fraco ao apelão; as peças do mundo (as lendárias da história, os tesouros) com efeitos; habilidades por maestria; magias que mudam a luta. Projeto em `projeto/etapa_efeitos/`.

@@ -43,7 +43,9 @@ EFEITOS = {
     'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo', 'foco')),
     'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo', 'foco')),
     'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo', 'foco', 'amuleto')),
+    'afinada':    ('+1 no teste do ofício dela', ('ferramenta',)),          # (a etapa dos efeitos, parte 1) a ferramenta de obra-prima
 }
+ESCOLHE_NAO = ('pesa',)     # o efeito que a obra-prima não dá (é defeito, não virtude)
 FORMAS_FEM = ('varinha',)   # as formas de foco de nome feminino (a categoria concorda: "varinha Rara", "cajado Raro")
 
 
@@ -83,6 +85,7 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
         it.update(mais)
         return it
     if tipo in ('foco', 'amuleto', 'elixir', 'escrito'): return _magia(tipo, c, nome, efeitos, sob, familia, material, cobre, mais)
+    if tipo == 'ferramenta': return _ferramenta(c, nome, efeitos, sob, familia, material, cobre, mais)
     it = dict(tipo=tipo, cat=c, nome=nome, dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), sob_medida=sob, historia=[], dono=None, onde=None)
     if tipo == 'arma':
         if familia not in FAMILIAS: sys.exit(f'família de arma desconhecida: "{familia}" (use: {", ".join(FAMILIAS)})')
@@ -127,6 +130,21 @@ def _ladino(tipo, c, nome, efeitos, sob, familia, material, cobre, mais):
 def cat_escrito(feiticos): return max([0] + [T.FEITICOS[f]['grau'] - 1 for f in feiticos if f in T.FEITICOS])      # a categoria do escrito: o maior grau que ensina, menos 1 (o de grau 1 é Comum)
 
 
+def _ferramenta(c, nome, efeitos, sob, familia, material, cobre, mais):
+    """(a etapa dos efeitos, parte 1) a FERRAMENTA do ofício: o jogo de forja (martelo de forja e tenaz) ou o jogo de couro (faca e sovela). Não se veste:
+    quem a tem soma o bônus dela no teste do ofício (tabelas_oficio.bonus_ferramenta). O ofício vem em oficio=."""
+    import tabelas_oficio as O
+    if sob or familia or material or cobre: sys.exit('a ferramenta não leva sob medida, família, material nem cobertura: só o ofício (oficio=forja ou couro), a categoria e o nome')
+    of = mais.pop('oficio', None)
+    if of not in O.FERRAMENTA_OFICIOS: sys.exit(f'a ferramenta é de um ofício: oficio={" ou ".join(O.FERRAMENTA_OFICIOS)} (veio "{of}")')
+    it = dict(tipo='ferramenta', oficio=of, cat=c, nome=nome or f'{O.NOME_FERRAMENTA[of]} {CATS[c]}', dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), historia=[], dono=None, onde=None)
+    for e in it['efeitos']:
+        if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que há: {", ".join(EFEITOS)})')
+        if 'ferramenta' not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em ferramenta (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
+    it.update(mais)
+    return it
+
+
 def _magia(tipo, c, nome, efeitos, sob, familia, material, cobre, mais):
     """os tipos da etapa da magia: o FOCO (com a forma), o AMULETO, o ELIXIR (a poção do Épico para cima) e o ESCRITO (ensina feitiços). O preço é o da regra de hoje
     (tabelas_mundo.peso_da_peca: a matéria que levam; o amuleto Comum, 10)."""
@@ -165,7 +183,7 @@ def tem(it, chave):
 def pede(it, dorme=False):
     """(atributo, quanto) que a peça pede. O requisito vem do PESO da peça, nunca da categoria nem do nível.
     Peça que dorme (sintonia) não tem efeito nenhum: nem o "leve"."""
-    if it['tipo'] in ('nucleo', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave'): return 'Força', 0       # o núcleo não se empunha; o amuleto não pede nada; o elixir, o escrito, a gazua e a chave não se vestem
+    if it['tipo'] in ('nucleo', 'amuleto', 'elixir', 'escrito', 'gazua', 'chave', 'ferramenta'): return 'Força', 0       # o núcleo não se empunha; o amuleto não pede nada; o elixir, o escrito, a gazua, a chave e a ferramenta não se vestem
     aj = 0 if dorme else (T.AJUSTE_PESO if tem(it, 'pesa') else 0) - (T.AJUSTE_PESO if tem(it, 'leve') else 0)
     if it['tipo'] == 'foco': a, q = T.FOCOS[it['forma']]['pede']; return a, q + aj      # o foco pede Afinidade ou Vontade (a forma diz)
     if it['tipo'] == 'arma':

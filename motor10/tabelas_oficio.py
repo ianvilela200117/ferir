@@ -43,6 +43,33 @@ PECAS_ENCANTO = ('foco', 'amuleto')     # (etapa da magia) o foco e o amuleto se
 PECAS_LADINO = ('gazua',)   # (etapa 4b) a GAZUA se forja na oficina, como a adaga: 1 de metal da categoria (tabelas_mundo.MATERIA_GAZUA), os blocos, o teste e a falha da forja;
                             # do Épico para cima, matéria Rara e um núcleo (a lei da forja). Conserta-se na bancada como as outras peças. A chave não se forja
 TALHES = (None, 'miúdo')    # (etapa 4b) a armadura se forja para um corpo: de gente (sem talhe) ou miúda (o pequenino e o gnomo: `forjar armadura ... talhe=miúdo`); a matéria é a mesma
+
+# ---------- AS FERRAMENTAS DO OFÍCIO e A OBRA-PRIMA (a etapa dos efeitos, parte 1) ----------
+# A FERRAMENTA é uma peça do Livro de Itens (tipo "ferramenta"), de um ofício: o JOGO DE FORJA (o martelo de forja e a tenaz) serve à forja; o JOGO DE COURO (a faca e a
+# sovela), ao couro. Forja-se na oficina, como a adaga: a matéria, os blocos (3^k), o teste e a falha da forja; do Épico para cima, matéria Rara e um núcleo.
+# Quem tem a ferramenta (dono, inteira) soma o BÔNUS dela no teste do ofício (forjar e ajustar), FORA do teto do preparo; vale a melhor que a pessoa tiver.
+PECAS_FERRAMENTA = ('ferramenta',)
+FERRAMENTA_OFICIOS = ('forja', 'couro')
+MATERIA_FERRAMENTA = dict(forja={'metal': 2, 'madeira': 1}, couro={'metal': 1, 'couro': 1})
+NOME_FERRAMENTA = dict(forja='jogo de forja', couro='jogo de couro')
+def bonus_ferramenta(t, k):
+    """o bônus de uma ferramenta de categoria t numa obra de categoria k: 1 + t (Comum +1 ... Lendária +6) na obra da categoria dela ou abaixo; na obra uma acima, +1; acima disso, nada"""
+    return 1 + t if t >= k else 1 if t == k - 1 else 0
+# OS PODERES DA FERRAMENTA, pela categoria dela (os de cima trazem os de baixo):
+POR_POUCO_RARA = 8          # Rara ou melhor: a matéria só some se a obra falhar por isto ou mais (sem ela, POR_POUCO)
+NADA_SE_PERDE = 3           # Épica ou melhor: a matéria nunca some; a obra que falha feio sai uma categoria abaixo (o Comum, tosco)
+OBRA_PRIMA_FACIL = 4        # Única ou melhor: os degraus da obra-prima descem OBRA_PRIMA_DESCE
+ACIMA_DO_FERRO = 5          # Lendária: a peça que passa por ACIMA_MARGEM ou mais nasce uma categoria acima (até o Lendário; sem núcleo a mais)
+ACIMA_MARGEM = 25
+# A OBRA-PRIMA: a peça que PASSA no teste por OBRA_PRIMA[i] ou mais ganha i+1 efeitos, até o teto da categoria dela; quem forjou escolhe cada um
+# (`oficio.py efeito ITEM CHAVE`), entre os efeitos que a luta roda e que valem naquele tipo de peça (itens.EFEITOS; o "pesa" não se escolhe).
+OBRA_PRIMA = (10, 20, 30)
+OBRA_PRIMA_DESCE = 5
+EFEITOS_MAX = (1, 1, 2, 2, 3, 3, 3, 3)    # Comum e Incomum 1; Raro e Épico 2; do Único para cima 3
+def efeitos_da_obra(margem, cat, facil=False):
+    """quantos efeitos a obra-prima dá: os degraus que a margem alcançou, até o teto da categoria"""
+    if margem < 0: return 0
+    d = OBRA_PRIMA_DESCE if facil else 0; return min(EFEITOS_MAX[min(cat, len(EFEITOS_MAX) - 1)], sum(1 for x in OBRA_PRIMA if margem >= x - d))
 # A BANCADA DE CADA OFÍCIO (etapa da magia): o campo do lugar que é a bancada dele (0 a 4; o lugar sem o campo não a tem), e o tipo de evento do trabalho nela
 BANCA = dict(forja='oficina', couro='oficina', encanto='runas', alquimia='botica', fé='santuario')
 EVENTO_OFICIO = dict(encanto='encantar', alquimia='alquimia', fé='rito')        # o evento do bloco de bancada (a forja e o couro: o tipo da obra, forjar ou ajustar)
@@ -59,6 +86,7 @@ def materia(tipo, cat, familia=None, material=None, cobre=None):
     elif tipo == 'foco': base = M.MATERIA_FOCO[familia]             # o foco: a forma vem no lugar da família (varinha, cajado, símbolo, talismã)
     elif tipo == 'amuleto': base = M.MATERIA_AMULETO
     elif tipo == 'gazua': base = M.MATERIA_GAZUA                   # a gazua (etapa 4b): 1 de metal, como a adaga
+    elif tipo == 'ferramenta': base = MATERIA_FERRAMENTA[familia]   # a ferramenta: o ofício dela vem no lugar da família (forja, couro)
     elif tipo == 'armadura':
         nome, por = MATERIA_ARMADURA[material]; base = {nome: por * sum(PARTE_PESO[x] for x in (cobre or ['tronco', 'braços', 'pernas']))}
     else: base = MATERIA_ESCUDO
