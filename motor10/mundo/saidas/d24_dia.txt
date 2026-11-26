@@ -1,0 +1,45 @@
+1 (livre): A próxima obra (50 de prata; Treinado e com a receita: 74% começando descansado; a obra leva o dia, sem a jornada)? → quero forjar equipamento para melhorar os itens que forjo
+Ficam abertas: 2.
+2a: A história que chegou de Ponte da Cruz no Dia 24: no ano 1130, Brarku mandou forjar o Malho do Silêncio, uma peça Épica. E Erado contou, no Dia 1, que Brarku morreu aqui em Pedra Velha, em 1165? → pergunta a Erado o que ele sabe do Malho do Silêncio, à noite, na taverna, sem perder a jornada
+$ estado.py mestre (a obra-prima do Martelo Incomum, pela regra nova)
+evento #2094 (mestre): o Martelo Incomum de Ferord é obra-prima: passou por 40 no Dia 18 (a regra nova, REGRAS 7.15) · 2 efeitos
+$ python3 oficio.py pede ferramenta forja Comum
+jogo de forja Comum · ofício: forja · 1 bloco pesado de bancada
+Matéria: 2 de metal Comum (você tem 3), 1 de madeira Comum (você tem 2)
+O teste final, hoje e aqui: 2d20 + 18 (maestria 4 + Afinidade 7 + oficina 1 + preparo 6) contra 28: acerta 91% · sai tosca 7% · perde tudo 3%
+$ python3 oficio.py forjar ferramenta forja Comum "Jogo de Forja de Ferord"
+Obra o0003 aberta: Jogo de Forja de Ferord (Comum). Entraram 2 de metal Comum, 1 de madeira Comum.
+Ferord trabalha 1 bloco na obra o0003, Jogo de Forja de Ferord (Comum): 1 de 1
+#1 Ferord, forjar Jogo de Forja de Ferord (Comum): 19 e 8, +7 de Afinidade, +11 = 45 contra 28: PASSA
+  (o +11: maestria 4, oficina 1, preparo 6)
+Ferord forja Jogo de Forja de Ferord (Comum): 45 contra 28; OBRA-PRIMA: 1 efeito por escolher. Entrou no Livro de Itens: i0682
+Dia 24, tarde (12h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 2) · com forças (cansaço 2) · 50 de prata
+(saída 0)
+$ python3 oficio.py efeito i0682 afinada
+Jogo de Forja de Ferord ganha o efeito: +1 no teste do ofício dela.
+Dia 24, tarde (12h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 2) · com forças (cansaço 2) · 50 de prata
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 6 de prata.
+Dia 24, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 56 de prata
+(saída 0)
+$ python3 ato.py comer
+Ferord come (fome 0; 55 de prata)
+Dia 24, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 3) · com forças (cansaço 4) · fôlego máximo −1 · 55 de prata
+(saída 0)
+$ python3 oficio.py jornal 1
+Ferord serve 1 bloco na bancada da oficina e recebe 6 de prata.
+Dia 24, noite (20h) · primavera · PV 111/111 · sem fome (fome 0) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 61 de prata
+(saída 0)
+$ python3 oficio.py pede arma martelo Incomum
+O teste final, hoje e aqui: 2d20 + 20 (maestria 4 + Afinidade 7 + oficina 1 + preparo 6 + ferramenta 2) contra 34: acerta 80% · sai uma abaixo 11% · perde tudo 9%
+$ python3 teste.py "Erado lembra o que se conta do Malho do Silêncio depois de Brarku" Percepção contra=30 mais=5 quem=erado
+#2 Erado, Erado lembra o que se conta do Malho do Silêncio depois de Brarku: 16 e 12, +4 de Percepção, +5 = 37 contra 30: PASSA
+(saída 0)
+$ gente.py lembra erado ... 1
+feito.
+$ python3 ato.py dormir 3
+Ferord dorme 2 blocos na cama (pagou 2 de prata pela cama, paga até o Dia 26, madrugada (0h)). PAROU: Ferord acorda com o sono em dia
+Dia 25, alvorada (4h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 59 de prata
+$ python3 ato.py descansar 1
+Ferord descansa 1 bloco
+Dia 25, manhã (8h) · primavera · PV 111/111 · sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0) · 59 de prata

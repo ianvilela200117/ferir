@@ -4007,7 +4007,7 @@
  "seq": {
   "frente": 13,
   "missao": 14,
-  "noticia": 29
+  "noticia": 30
  },
  "frentes": {
   "f01": {
@@ -4541,7 +4541,7 @@
    "paga": 21,
    "prazo": 29,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "drastum",
    "desde": 22,
    "cat": 0,
@@ -6083,6 +6083,10 @@
     "pinhal_do_ferro": [
      24,
      4
+    ],
+    "penha_das_rosas": [
+     25,
+     5
     ]
    },
    "janela": false
@@ -6143,6 +6147,22 @@
     "ribeira_do_lobo": [
      24,
      2
+    ],
+    "coval_do_vento": [
+     25,
+     3
+    ],
+    "penha_das_rosas": [
+     25,
+     3
+    ],
+    "ermida_verde": [
+     25,
+     3
+    ],
+    "pinhal_do_ferro": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6199,6 +6219,18 @@
     "ribeira_da_nevoa": [
      24,
      2
+    ],
+    "varzea_da_nevoa": [
+     25,
+     3
+    ],
+    "castro_branco": [
+     25,
+     3
+    ],
+    "castro_real": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6243,6 +6275,18 @@
     "pedra_velha": [
      24,
      2
+    ],
+    "pinhal_do_ferro": [
+     25,
+     3
+    ],
+    "vale_do_corvo": [
+     25,
+     3
+    ],
+    "ribeira_da_nevoa": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6287,6 +6331,22 @@
     "ermida_verde": [
      24,
      2
+    ],
+    "vale_do_corvo": [
+     25,
+     3
+    ],
+    "castro_branco": [
+     25,
+     3
+    ],
+    "castro_real": [
+     25,
+     3
+    ],
+    "ribeira_do_lobo": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6336,6 +6396,18 @@
     "penha_das_rosas": [
      24,
      2
+    ],
+    "souto_negro": [
+     25,
+     3
+    ],
+    "varzea_brava": [
+     25,
+     3
+    ],
+    "pedra_verde": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6369,6 +6441,18 @@
     "vale_do_corvo": [
      24,
      2
+    ],
+    "ribeira_da_nevoa": [
+     25,
+     3
+    ],
+    "castro_branco": [
+     25,
+     3
+    ],
+    "castro_do_sal": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6426,6 +6510,18 @@
     "ribeira_da_nevoa": [
      24,
      2
+    ],
+    "varzea_da_nevoa": [
+     25,
+     3
+    ],
+    "castro_branco": [
+     25,
+     3
+    ],
+    "castro_real": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6459,6 +6555,18 @@
     "vale_do_corvo": [
      24,
      2
+    ],
+    "ribeira_da_nevoa": [
+     25,
+     3
+    ],
+    "castro_branco": [
+     25,
+     3
+    ],
+    "castro_do_sal": [
+     25,
+     3
     ]
    },
    "janela": false
@@ -6474,6 +6582,34 @@
    "chegou": {
     "souto_negro": [
      24,
+     0
+    ],
+    "pedra_velha": [
+     25,
+     1
+    ],
+    "varzea_brava": [
+     25,
+     1
+    ],
+    "ponte_da_cruz": [
+     25,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00030": {
+   "dia": 25,
+   "onde": "castro_branco",
+   "texto": "Drastum cumpriu a missão de Castro Branco: matar 3 ursos nas Grutas do Vento",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "castro_branco": [
+     25,
      0
     ]
    },

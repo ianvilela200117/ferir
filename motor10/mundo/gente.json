@@ -5474,7 +5474,15 @@
   "idade": 30,
   "sobre": "o mais velho do lugar; sabe das histórias antigas",
   "casa": "c_rego_pedra_velha",
-  "papel": "ancião"
+  "papel": "ancião",
+  "memoria": [
+   {
+    "dia": 24,
+    "de": "eu",
+    "o_que": "Ferord quis ouvir de mim a história do Malho de Brarku",
+    "peso": 1
+   }
+  ]
  },
  "orlando": {
   "nome": "Orlando",
@@ -6087,7 +6095,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 35,
+  "moedas": 14,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6122,6 +6130,12 @@
     "de": "aemine",
     "o_que": "não cumpriu a missão no prazo",
     "peso": -2
+   },
+   {
+    "dia": 25,
+    "de": "drastum",
+    "o_que": "cumpriu a missão que eu paguei (matar 3 ursos nas Grutas do Vento)",
+    "peso": 3
    }
   ]
  },
@@ -7941,7 +7955,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 57,
+  "moedas": 72,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7958,10 +7972,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -7993,7 +8004,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 41,
+  "moedas": 56,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8009,10 +8020,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8355,7 +8363,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 73,
+  "moedas": 88,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8371,10 +8379,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8409,7 +8414,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 40,
+  "moedas": 64,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8425,10 +8430,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8805,7 +8807,7 @@
   "treino": {
    "espada": 40
   },
-  "moedas": 81,
+  "moedas": 94,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8821,10 +8823,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9041,7 +9040,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 42,
+  "moedas": 55,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9057,10 +9056,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9104,7 +9100,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 153,
+  "moedas": 161,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9120,10 +9116,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9164,7 +9157,7 @@
   "treino": {
    "arco": 160
   },
-  "moedas": 82,
+  "moedas": 103,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9180,10 +9173,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9795,7 +9785,7 @@
   "treino": {
    "machado": 500
   },
-  "moedas": 242,
+  "moedas": 251,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9811,10 +9801,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 25
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10134,7 +10121,7 @@
   "treino": {
    "martelo": 500
   },
-  "moedas": 540,
+  "moedas": 561,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10150,12 +10137,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0013",
-    "ate": 25,
-    "c": 0.99
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10167,7 +10149,7 @@
   "povo": "anão",
   "idade": 165,
   "sobre": "aventureiro de lenda, anda sozinho",
-  "fama": 296,
+  "fama": 297,
   "papel": "aventureiro",
   "rival": true
  },
@@ -10294,11 +10276,11 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 121,
+   "forja": 124,
    "martelo": 40,
    "comércio": 3
   },
-  "moedas": 50,
+  "moedas": 59,
   "corpo": {
    "fome": 2,
    "sono": 1,
@@ -10316,20 +10298,20 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 23,
+   "pesados_dia": 24,
    "pesados": 3,
-   "jornada_dia": 23,
+   "jornada_dia": 24,
    "jornada": 2,
    "cama": {
-    "ate": 144,
+    "ate": 150,
     "onde": "pedra_velha"
    },
    "ensino_incomum": null,
    "negocio_dia": 18
   },
   "carga": {
-   "metal:0": 3,
-   "madeira:0": 2
+   "metal:0": 1,
+   "madeira:0": 1
   },
   "jogador": true,
   "talento": {

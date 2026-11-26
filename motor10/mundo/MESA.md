@@ -1,57 +1,57 @@
-# MESA · turno 11 · Dia 24, manhã (8h) · primavera
+# MESA · turno 12 · Dia 25, manhã (8h) · primavera
 
 ## Você
-**Ferord**, nível 5 · PV 111/111 · 50 de prata · em Pedra Velha
+**Ferord**, nível 5 · PV 111/111 · 59 de prata · em Pedra Velha
 Corpo: sem fome (fome 2) · sem sono (sono 1) · com forças (cansaço 0)
 ```
 Ferord (nível 5, mão de Iniciante) · PV 111/111 · fôlego 11 · 2 ações (a mais: 1 pelo dobro do fôlego)
   Martelo Incomum de Ferord: acerto +5,75 · 1d10 × 3 (impacto), força × 1,18 · 3 de fôlego por golpe
   Defesa 32,5 · proteção: tronco 0,7 · braços 0,7 · pernas 0,7 · cabeça 1
 ```
-Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): i0659 Couro de Ferord (Comum, 10/10) · EM USO, no corpo · i0660 Elmo de Ferord (Comum, 10/10) · EM USO, na cabeça · i0677 Martelo Incomum de Ferord (Incomum, 20/20) · EM USO, na mão
-Carga: 3 de metal Comum, 2 de madeira Comum
-Treino: forja: 121 blocos (Treinado) · martelo: 40 blocos (Iniciante) · comércio: 3 dias de negócio (Leigo)
+Peças (`ato.py vestir ITEM` · `ato.py tirar ITEM`): i0659 Couro de Ferord (Comum, 10/10) · EM USO, no corpo · i0660 Elmo de Ferord (Comum, 10/10) · EM USO, na cabeça · i0677 Martelo Incomum de Ferord (Incomum, 20/20) · EM USO, na mão · OBRA-PRIMA: 1 efeito por escolher (`oficio.py efeito i0677 CHAVE`) · i0682 Jogo de Forja de Ferord (Comum, 10/10) · ferramenta, na carga · +1 no teste do ofício dela
+Carga: 1 de metal Comum, 1 de madeira Comum
+Treino: forja: 124 blocos (Treinado) · martelo: 40 blocos (Iniciante) · comércio: 3 dias de negócio (Leigo)
 Com a forja você pega depressa (Jeitoso): o que os outros firmam em 375 blocos, você firma em 250.
 Do povo dos humanos, 20 anos: a medida de todos.
 
 ## Aqui
-**Pedra Velha** · comida no lugar: 13.571 · há cama
+**Pedra Velha** · comida no lugar: 13.437 · há cama
 Quem está aqui: Filipa (o ferreiro; conserta e vende o que forja), Berareu (lavra a terra), Félix (da taverna; sabe de tudo o que se conta), Adelaide (aprende o ofício da casa), Osorino (da guarda de Pedra Velha), Nora (caça no ermo e vende o couro), Paio (cura ferida e colhe erva), Tânia (mercador; compra e vende, e leva carga pela estrada), Erado (o mais velho do lugar; sabe das histórias antigas)
 
 **O que dá para fazer, e o que custa** (1 bloco = 4 horas):
 - comer: 1 de prata, fome −3 (`ato.py comer`; da sua carga, sem pagar: `ato.py comer carga`)
-- dormir: cama por 2 de prata, e a sua está paga até o Dia 25, madrugada (0h); cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
+- dormir: cama por 2 de prata, e a sua está paga até o Dia 26, madrugada (0h); cada bloco tira 3 de sono e de cansaço (no chão, 2) e devolve PV (`ato.py dormir N`)
 - trabalhar (aprendiz): 3 de prata por bloco, esforço pesado; a jornada são 2 blocos pagos por dia (hoje: 0 de 2) (`ato.py trabalhar N`)
 - treinar com uma arma: esforço pesado; a maestria sobe aos 40, 160, 500, 1.500 blocos (`ato.py treinar N ARMA`)
 - descansar, esperar (`ato.py descansar N`, `ato.py esperar N`) · lutar (`ato.py luta nova CENARIO ARQ`) · testar (`teste.py`)
 
 ## O mercado
-**Pedra Velha** · 360 de povo · a loja tem 1.696 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
+**Pedra Velha** · 360 de povo · a loja tem 1.687 de prata (sem prata, ela não compra) · comprar custa 10% a mais · a loja paga 60% do preço pelos bens e 40% do valor pelas peças (a sua mão em comércio: Leigo)
 
 | bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |
 | --- | --- | --- | --- | --- | --- |
-| comida | 13.571 | 1,26 (× 1,26) | 10 por 14 | 7 por 10 |  |
+| comida | 13.437 | 1,27 (× 1,27) | 10 por 14 | 7 por 10 |  |
 | lenha | 2.700 | 1,00 (× 1,00) | 10 por 12 | 5 por 10 |  |
 | carvão | 218 | 1,99 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | sal | 215 | 3,01 (× 1,00) | 10 por 34 | 17 por 10 |  |
-| pano | 112 | 4,91 (× 0,98) | 1 por 6 | 2 por 1 |  |
-| remédio | 53 | 8,08 (× 1,01) | 1 por 9 | 4 por 1 |  |
+| pano | 113 | 4,89 (× 0,98) | 1 por 6 | 2 por 1 |  |
+| remédio | 52 | 8,15 (× 1,02) | 1 por 10 | 4 por 1 |  |
 | ferramenta | 52 | 12,23 (× 1,02) | 1 por 14 | 7 por 1 |  |
-| metal Comum | 108 | 3,00 (× 1,00) | 10 por 34 | 17 por 10 | 3 |
+| metal Comum | 109 | 2,99 (× 1,00) | 10 por 34 | 17 por 10 | 1 |
 | couro Comum | 109 | 1,99 (× 1,00) | 10 por 23 | 11 por 10 |  |
 | osso Comum | 56 | 0,98 (× 0,98) | 10 por 12 | 5 por 10 |  |
-| madeira Comum | 215 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 | 2 |
-| erva Comum | 103 | 2,05 (× 1,02) | 10 por 24 | 12 por 10 |  |
+| madeira Comum | 215 | 2,00 (× 1,00) | 10 por 23 | 11 por 10 | 1 |
+| erva Comum | 102 | 2,06 (× 1,03) | 10 por 24 | 12 por 10 |  |
 | metal Incomum | 15 | 19,72 (× 1,10) | 1 por 23 | 11 por 1 |  |
-| couro Incomum | 16 | 12,73 (× 1,06) | 1 por 15 | 7 por 1 |  |
-| osso Incomum | 13 | 4,99 (× 0,83) | 1 por 6 | 2 por 1 |  |
+| couro Incomum | 15 | 13,15 (× 1,10) | 1 por 15 | 7 por 1 |  |
+| osso Incomum | 14 | 4,81 (× 0,80) | 1 por 6 | 2 por 1 |  |
 | madeira Incomum | 34 | 12,35 (× 1,03) | 1 por 14 | 7 por 1 |  |
 | erva Incomum | 18 | 12,00 (× 1,00) | 1 por 14 | 7 por 1 |  |
 
 **A magia** (as poções até a Rara; a água benta; a peçonha):
 | bem | no lugar | preço do dia (× a base) | comprar | a loja paga | você carrega |
 | --- | --- | --- | --- | --- | --- |
-| poção de cura Comum | 2 | 9,86 (× 1,64) | 1 por 13 | 5 por 1 |  |
+| poção de cura Comum | 1 | 13,94 (× 2,32) | 1 por 20 | 6 por 1 |  |
 | antídoto Comum | 2 | 5,75 (× 0,96) | 1 por 8 | 3 por 1 |  |
 | poção de Mana Comum | 1 | 6,00 (× 1,00) | 1 por 10 | 2 por 1 |  |
 | poção de guarda Comum | 1 | 6,00 (× 1,00) | 1 por 10 | 2 por 1 |  |
@@ -71,9 +71,10 @@ Negociar não gasta bloco: `mercado.py comprar BEM N` · `mercado.py vender BEM 
 
 ## A oficina
 **Pedra Velha:** forja de vila (+1) · conserta, pago, até o Raro
-Mão: forja Treinado (121 blocos de bancada; Mestre aos 375 e uma obra Épica)
+Mão: forja Treinado (124 blocos de bancada; Mestre aos 375 e uma obra Épica)
 Preparo (+2 cada, na obra que ele alcança): receita: até o Incomum · ajudante: não há · fogo: até o Incomum · bigorna: até o Incomum
-Matéria na carga: 3 de metal Comum, 2 de madeira Comum
+Ferramenta (fora do teto do preparo): i0682 Jogo de Forja de Ferord (Comum): +2 na obra até a categoria dela, +1 na de uma acima
+Matéria na carga: 1 de metal Comum, 1 de madeira Comum
 
 **Na bancada** (bloco pesado; `oficio.py pede ...` diz a matéria e a chance antes de abrir):
 - forjar: Comum 1, Incomum 3, Raro 9, Épico 27, Único 81, Lendário 243 blocos; do Épico para cima pede núcleo. Falhar por 5 ou mais: a matéria some.
@@ -107,6 +108,7 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - Filipa (pai/mãe): faria tudo por você (+7) — é do meu sangue; Ferord forjou na minha forja o primeiro martelo Incomum dele, e saiu dos bons; Ferord aprendeu comigo a receita do Incomum, em três dias de bancada
 - Berareu (parente): gosta de você (+2) — é do meu sangue
 - Adelaide: gosta de você (+2) — Ferord me deu o martelo da casa, o primeiro que ele usou na forja
+- Erado: gosta de você (+1) — Ferord quis ouvir de mim a história do Malho de Brarku
 
 **O ranking da semana 4** (fama e peças): 1. Drastum (341) · 2. Nynena (340) · 3. Taskin (323) · 4. Mirys (164) · 5. Ernesto (119) · você: 5
 
@@ -118,20 +120,21 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - f02 · o bando da toca cresce em Penha das Rosas
 
 **Notícias que chegaram aqui** (as mais novas):
+- Dia 25 (de Souto Negro): Taskin cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos
 - Dia 24 (de Castro Real): Um mercador é roubado e morto na estrada em Castro Real
 - Dia 24 (de Pedra Verde): A casa junta aliados em Pedra Verde
 - Dia 24 (de Pedra Verde): Celinia conta da história: no ano 1184, acaba a guerra das Torres: vencem os Orirena.
 - Dia 24 (de Ponte da Cruz): Gilelina conta da história: no ano 1130, brarku faz forjar o Malho do Silêncio (Épica).
 - Dia 23 (de Castro do Sal): Ofélia conta da história: no ano 929, morre Iranina (afogado na travessia); Leandro assume a casa dos Astolan.
-- Dia 23 (de Souto Negro): Vicente conta da história: no ano 1128, acaba a guerra do Trigo: vencem os Astolan.
 
 ## Perguntas abertas
-1. A próxima obra (50 de prata; Treinado e com a receita: 74% começando descansado; a obra leva o dia, sem a jornada)?  **a)** o elmo de malha Incomum: 1 de metal Incomum (23 de prata); sobram 27 · **b)** a malha Incomum no tronco: 2 de metal Incomum (uns 46) · **c)** o escudo Incomum: 2 de madeira Incomum e 1 de metal Incomum (51 hoje, um a mais do que ele tem: fica para amanhã); a defesa sobe uns 4, porque o escudo não soma com o aparo do martelo (vale o maior) · **d)** junta para a malha Incomum inteira (tronco, braços e pernas): 4 de metal Incomum (uns 92 hoje: uns 5 dias de jornada)
-2. A história que chegou de Ponte da Cruz no Dia 24: no ano 1130, Brarku mandou forjar o Malho do Silêncio, uma peça Épica. E Erado contou, no Dia 1, que Brarku morreu aqui em Pedra Velha, em 1165?  **a)** pergunta a Erado o que ele sabe do Malho do Silêncio, à noite, na taverna, sem perder a jornada · **b)** deixa: é história velha
+1. O efeito de obra-prima do Martelo Incomum de Ferord (passou por 40 no Dia 18; o Incomum leva 1 efeito)?  **a)** critico_19: o 19 também é crítico · **b)** sangra: a ferida que ele abre sangra mais (cinco rodadas) · **c)** derruba: uma vez por luta, o golpe que fere derruba · **d)** leve: pede 20 a menos de Força · **e)** nao_quebra: não perde durabilidade
+2. A próxima obra (59 de prata; com o jogo de forja afinado, a obra Incomum sai a 80% começando descansado; leva o dia, sem a jornada)?  **a)** o escudo Incomum: 2 de madeira e 1 de metal Incomum (51); a defesa sobe uns 4 · **b)** a malha Incomum no tronco: 2 de metal Incomum (45) · **c)** o elmo de malha Incomum: 1 de metal Incomum (23); sobra prata · **d)** o jogo de forja Incomum: 2 de metal e 1 de madeira Incomum (59): +2 na obra Incomum (o mesmo que o Comum afinado de hoje) e +1 na Rara; se sair obra-prima, afinado, +3 e +2
+3. O Malho do Silêncio se perdeu nas Ruínas do Urso, em 1210?  **a)** pergunta na vila onde ficam as Ruínas do Urso (Nora anda no ermo; Tânia anda nas estradas), sem ir a lugar nenhum · **b)** deixa por ora: é coisa de quem desce em ruína
 
 ## SÓ O MESTRE
-- nota: O que Ferord ouviu na taverna (Dia 1): Félix: Ribeira da Névoa (3 blocos) tem forja de cidade e mesa de runas, e Várzea da Névoa também; Vale do Corvo, a capital, tem a grande forja e a oficina de runas, e o mestre Simão (o mestre ferreiro, não de runas); ninguém que ele conheça vive de gravar runas. Erado: Pedra Velha foi saqueada nas guerras de 781, 869 e 957; Brarku, que fez forjar o Malho do Silêncio, morreu aqui em 1165. A receita do Incomum de Filipa está ensinada desde o Dia 4; Ferord é Treinado na forja desde o Dia 16 (Jeitoso; a jornada paga como oficial). O Martelo Incomum de Ferord (i0677) nasceu no Dia 18; o martelo da casa (i0658) é de Adelaide desde o Dia 19. Só o Mestre: o Malho do Silêncio (i0649, Épico) perdeu-se nas Ruínas do Urso em 1210 (com Gilela, que o tirou do corpo de Domingas, herdeira de Brarku); hoje está em ruinas_do_urso_34, sem dono; a frente f12 (as luzes das Ruínas do Urso) é dessas ruínas. O que Erado sabe disso sai do saber dele, se o jogador perguntar. A rotina de vários dias roda pelo condutor do Mestre (cópia em saidas/rotina_condutor.py.txt): para em pedido, notícia que toca Ferord (não história antiga nem missão cumprida por outro), missão de ferreiro, gente de fora, metal Incomum com menos de 4 ou acima de 1,3 da base, perda de vida, evento em Pedra Velha, ou a frente f11 andando. Repor esta nota, uma só, depois de cada turno.py fecha, e rodar turno.py abre.
-- a contagem na Charneca dos Sinos: corça 72/80 · lobo 6/12 · lobisomem 1/1 · acaso 1% por bloco
+- nota: O que Ferord ouviu na taverna (Dia 1): Félix: Ribeira da Névoa (3 blocos) tem forja de cidade e mesa de runas, e Várzea da Névoa também; Vale do Corvo, a capital, tem a grande forja e a oficina de runas, e o mestre Simão (o mestre ferreiro, não de runas); ninguém que ele conheça vive de gravar runas. Erado (Dia 1): Pedra Velha foi saqueada nas guerras de 781, 869 e 957; Brarku morreu aqui em 1165. Erado (Dia 24, teste 37 contra 30): o Malho do Silêncio (Épico) foi herdado por Domingas, dos Astolan, em 1165; em 1210 Gilela o tirou de um corpo, e ele se perdeu nas Ruínas do Urso com quem o levava. Erado não disse onde ficam as ruínas. Só o Mestre: o Malho (i0649) está em ruinas_do_urso_34, no nível 3 (Único) das Ruínas do Urso (três níveis: Raro, Épico, Único); a frente f12 (as luzes das Ruínas do Urso) é dessas ruínas. A receita do Incomum desde o Dia 4; Treinado na forja desde o Dia 16 (Jeitoso; a jornada de oficial); o Martelo Incomum (i0677) é obra-prima com 1 efeito por escolher; o Jogo de Forja de Ferord (i0682, Comum, afinado) soma +2 nas obras Comuns e Incomuns. A rotina de vários dias roda pelo condutor do Mestre (cópia em saidas/rotina_condutor.py.txt). Repor esta nota, uma só, depois de cada turno.py fecha, e rodar turno.py abre.
+- a contagem na Charneca dos Sinos: corça 73/80 · lobo 6/12 · lobisomem 1/1 · acaso 1% por bloco
 - talento e dom de Filipa: Lerdo em arcano
 - talento e dom de Berareu: Jeitoso em fio, Prodígio em tiro, Jeitoso em caça, Jeitoso em manha, Lerdo em pacto
 - talento e dom de Félix: Prodígio em peso, Jeitoso em forja, Lerdo em coleta, Lerdo em comércio
@@ -149,5 +152,5 @@ Os serviços, de pessoa a pessoa (o personagem paga a quem presta; o que ele faz
 - os salteadores nas estradas daqui: a estrada de Pedra Velha a Souto Negro: 0; a estrada de Castro do Sal a Pedra Velha: 0; a estrada de Pedra Velha a Várzea Brava: 1; a estrada de Ribeira da Névoa a Pedra Velha: 0
 - as frentes: f01 o bando de Sara na estrada (passo 2) · f02 a horda da toca do Souto das Águas (passo 2) · f03 os mortos da Cripta dos Miraves (passo 0) · f04 o dragão Brasa (passo 0) · f05 a ambição dos Astolan (passo 1) · f06 o cartel de Selina (passo 1) · f07 o culto de Moninho (passo 1) · f08 a corrida da Liga do Sino Rachado (passo 1) · f09 a seca de Pedra Verde (passo 1) · f10 a falta de sal de Castro Branco (passo 1) · f11 os sumiços da Charneca dos Sinos (passo 1) · f12 as luzes das Ruínas do Urso (passo 0) · f13 Fome da Serra, o que dorme (passo 0)
 - a pauta do diretor (o que pode entrar em cena hoje): o bando de Sara na estrada (passo 2, a 2 estrada(s) daqui, andou nesta semana) · a ambição dos Astolan (passo 1, a 2 estrada(s) daqui, andou nesta semana) · os sumiços da Charneca dos Sinos (passo 1, a 1 estrada(s) daqui)
-- dois fatos que não tocam o personagem (para a cena): A guilda junta gente em Penha das Rosas · A casa junta aliados em Pedra Verde
+- dois fatos que não tocam o personagem (para a cena): Taskin cumpriu a missão de Souto Negro: matar 3 lobos na Charneca dos Sinos · A casa junta aliados em Pedra Verde
 - o estado está inteiro.

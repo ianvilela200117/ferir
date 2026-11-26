@@ -1,5 +1,5 @@
 {
- "seq": 681,
+ "seq": 682,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12658,7 +12658,8 @@
    "efeitos": [],
    "sob_medida": null,
    "historia": [
-    "Dia 18: Ferord forjou em Pedra Velha"
+    "Dia 18: Ferord forjou em Pedra Velha",
+    "Dia 24: pela regra nova da obra-prima (REGRAS 7.15), a obra que passou por 40 é obra-prima; o Incomum leva 1 efeito"
    ],
    "dono": "eu",
    "onde": null,
@@ -12666,7 +12667,8 @@
    "feito_por": "eu",
    "dia": 18,
    "id": "i0677",
-   "uso": "arma"
+   "uso": "arma",
+   "efeitos_livres": 1
   },
   "i0678": {
    "tipo": "armadura",
@@ -12750,8 +12752,33 @@
    "familia": "espada",
    "id": "i0681",
    "uso": null
+  },
+  "i0682": {
+   "tipo": "ferramenta",
+   "oficio": "forja",
+   "cat": 0,
+   "nome": "Jogo de Forja de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "afinada"
+    }
+   ],
+   "historia": [
+    "Dia 24: Ferord forjou em Pedra Velha; OBRA-PRIMA: passou por 17, 1 efeito por escolher",
+    "Dia 24: Ferord deu à peça de obra-prima o efeito: +1 no teste do ofício dela"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "feito_por": "eu",
+   "dia": 24,
+   "id": "i0682",
+   "uso": null
   }
  },
- "oseq": 2,
+ "oseq": 3,
  "obras": {}
 }
