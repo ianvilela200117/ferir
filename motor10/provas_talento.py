@@ -152,7 +152,7 @@ def dado_posto(margens):
     """o dado de verdade é rolado, mas o total é posto à mão (contra + margem), com o dom escondido na conta: para conferir quando o dom decide e quando não"""
     real = teste.rola; fila = list(margens)
     def posto(E, o_que, atributo, contra, mais=0, quem=None, oculto=False, dom=0, **kw):
-        r = real(E, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom, **kw); m = fila.pop(0); r['total'] = contra + m; r['passou'] = m >= 0
+        r = real(E, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom, **kw); m = fila.pop(0); r['total'] = contra + m; r['passou'] = m >= 0; r['posto_a_mao'] = True
         if dom: r['fez'] = r['total'] >= contra and r['total'] - dom < contra
         return r
     teste.rola = posto
@@ -172,17 +172,18 @@ def _aparece(n):
         out.append(('T10a O TALENTO SÓ APARECE NA MESA 20 BLOCOS DEPOIS DE ROLADO (o Jeitoso no fio, com 40 blocos de espada antes de rolar)', f"com 40: {'aparece' if m0 else 'não'}; com 59: {'aparece' if m19 else 'não'}; com 60: {'aparece' if m20 else 'NÃO'} ({f.strip()[:110]})",
                     not m0 and not m19 and m20 and 'firmam em 40 blocos, você firma em 27' in f))
         # o dom na forja: escondido, não decide (a mesa não o vê); escondido, decide (mostra-se, e a MESA passa a dizê-lo)
-        def forja(margem):
-            E = PM.vila(); mestre(E, [['lugar', 'vila', 'oficina', 'poe', 1], ['pessoa', 'eu', 'carga.metal:0', 'soma', 6], ['pessoa', 'eu', 'dom', 'poe', {'forja': 2}]])
+        def forja(margem, mao=0):
+            E = PM.vila(); mestre(E, [['lugar', 'vila', 'oficina', 'poe', 1], ['pessoa', 'eu', 'carga.metal:0', 'soma', 6], ['pessoa', 'eu', 'dom', 'poe', {'forja': 2}]] + ([['pessoa', 'eu', 'maestria.forja', 'poe', mao]] if mao else []))
             peca = oficio.molde('arma', 0, 'Adaga de prova', familia='adaga')
             with dado_posto([margem]): R = quieto(oficio.forjar, E, 'eu', peca, blocos=1)
             return E, R
-        E1, R1 = forja(5); E2, R2 = forja(1); E3, R3 = forja(-4)
+        import tabelas_oficio as TO
+        E1, R1 = forja(5); E2, R2 = forja(1); E3, R3 = forja(TO.VALOR_CD[1] - TO.VALOR_CD[0] + 1, mao=4)     # a Lei do Valor: com a mão de Treinado, o dom leva a adaga ao Incomum por 1 (sem ele, Comum)
         r1, r2 = R1['rolagem'], R2['rolagem']; visto1, visto2 = talento.visto(E1['gente']['eu']), talento.visto(E2['gente']['eu'])
         mesa2 = 'Há alguma coisa em você' in turno.mesa(E2); mesa1 = 'Há alguma coisa em você' in turno.mesa(E1)
-        out.append(('T10b O DOM SE MOSTRA NO TESTE EM QUE DECIDIU: escondido, passa por 5 e a mesa não o vê (o total sem ele); passa por 1 só por causa dele, a saída diz "sem o dom" e a MESA passa a dizê-lo; e a faixa que muda (perde tudo, sai uma abaixo) também o mostra',
+        out.append(('T10b O DOM SE MOSTRA NO TESTE EM QUE DECIDIU: escondido, passa por 5 e a mesa não o vê (o total sem ele); passa por 1 só por causa dele, a saída diz "sem o dom" e a MESA passa a dizê-lo; e a categoria que muda (a Lei do Valor: Incomum com o dom, Comum sem ele) também o mostra',
                     f"por 5: {'mostrou' if visto1 else 'escondido'}, a mesa vê {teste.total_visto(r1)} (o total é {r1['total']}); por 1: {'mostrou' if visto2 else 'NÃO MOSTROU'}, {'diz' if 'sem o dom' in R2['texto'] else 'NÃO DIZ'} \"sem o dom\"; "
-                    f"a MESA {'diz' if mesa2 else 'NÃO DIZ'} o dom (e não o dizia no outro: {'certo' if not mesa1 else 'ERRADO'}); a faixa (−4, sai uma abaixo; sem o dom, −6, perde tudo): {'mostrou' if talento.visto(E3['gente']['eu']) else 'NÃO'}",
+                    f"a MESA {'diz' if mesa2 else 'NÃO DIZ'} o dom (e não o dizia no outro: {'certo' if not mesa1 else 'ERRADO'}); a categoria que muda (a Lei do Valor: com o dom, a adaga sai Incomum por 1; sem ele, Comum): {'mostrou' if talento.visto(E3['gente']['eu']) else 'NÃO'}",
                     not visto1 and teste.total_visto(r1) == r1['total'] - 2 and visto2 and 'sem o dom' in R2['texto'] and mesa2 and not mesa1 and talento.visto(E3['gente']['eu'])))
     finally:
         os.environ.pop('MOTOR10_MUNDO', None)

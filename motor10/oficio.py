@@ -433,6 +433,9 @@ def _remata_valor(E, o):
     a0, b0 = r['dados'][0][0], r['dados'][1][0]
     if r.get('posto_a_mao'): a0 = b0 = 10                    # o dado posto à mão (só na prova): sem dado especial
     x = _resolve(r['total'], a0, b0, c['teto'], fc)[0][1]
+    if c['oculto']:                                          # o dom escondido FEZ a diferença se, sem ele, a peça sairia noutra categoria (ou se perderia): é o que o talento.decidiu lê
+        sem = _resolve(r['total'] - c['oculto'], a0, b0, c['teto'], fc)[0][1]['cat']
+        r['fez'] = (True if sem is None else 'faixa') if sem != x['cat'] else False
     sai = x['cat']; ef = []; it = None
     n20 = 0 if r.get('posto_a_mao') else sum(1 for d in r['dados'] for f in d if f == 20)
     fim = 'perdeu' if sai is None else 'acertou' if sai >= cat else 'abaixo'
