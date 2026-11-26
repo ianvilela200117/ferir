@@ -135,9 +135,12 @@ def _ferramenta(c, nome, efeitos, sob, familia, material, cobre, mais):
     quem a tem soma o bônus dela no teste do ofício (tabelas_oficio.bonus_ferramenta). O ofício vem em oficio=."""
     import tabelas_oficio as O
     if sob or familia or material or cobre: sys.exit('a ferramenta não leva sob medida, família, material nem cobertura: só o ofício (oficio=forja ou couro), a categoria e o nome')
-    of = mais.pop('oficio', None)
+    of = mais.pop('oficio', None); forma = mais.pop('forma', None) or 'jogo'
+    if forma in ('martelo', 'tenaz'): of = of or 'forja'
     if of not in O.FERRAMENTA_OFICIOS: sys.exit(f'a ferramenta é de um ofício: oficio={" ou ".join(O.FERRAMENTA_OFICIOS)} (veio "{of}")')
-    it = dict(tipo='ferramenta', oficio=of, cat=c, nome=nome or f'{O.NOME_FERRAMENTA[of]} {CATS[c]}', dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), historia=[], dono=None, onde=None)
+    if forma not in O.FERRAMENTA_FORMAS or (forma != 'jogo' and of != 'forja'): sys.exit(f'a ferramenta da forja é o martelo de forja, a tenaz ou o jogo (os dois); a do couro, o jogo (veio "{forma}" de {of})')
+    k = O.chave_ferramenta(forma, of)
+    it = dict(tipo='ferramenta', oficio=of, forma=forma, cat=c, nome=nome or f'{O.NOME_FERRAMENTA[k]} {(FEM if forma == "tenaz" else CATS)[c]}', dur=[DUR[c], DUR[c]], efeitos=list(efeitos or []), historia=[], dono=None, onde=None)
     for e in it['efeitos']:
         if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que há: {", ".join(EFEITOS)})')
         if 'ferramenta' not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em ferramenta (vale em: {", ".join(EFEITOS[e["chave"]][1])})')

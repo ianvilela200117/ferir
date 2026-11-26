@@ -348,8 +348,12 @@ def _escolhe(E, cats, gazua=False):
         custo = sum(mercado.custa(E, lid, k, q) for k, q in falta.items())
         if p['moedas'] < custo + reserva: continue
         meu = sum(mercado.parte(p) * mercado.lote(E, lid, k, min(q, carga.get(k, 0)), compra=False) for k, q in mat.items() if carga.get(k, 0) > 0)
-        c = oficio.conta(E, 'eu', cat, oficio.oficio_de(peca))
-        rende = c['acerta'] * _paga_se(E, peca, cat) + c['pouco'] * (_paga_se(E, peca, cat - 1) if cat else _paga_se(E, peca, 0, tosca=True))
+        of = oficio.oficio_de(peca)
+        if of in O_.VALOR_OFICIOS:                                  # a Lei do Valor: a soma decide a categoria; rende o que a loja pagaria por cada uma, pesado pela chance dela
+            ch = oficio.valor(E, 'eu', cat, of)['chances']; rende = sum(q * _paga_se(E, peca, k) for k, q in ch.items() if k is not None)
+        else:
+            c = oficio.conta(E, 'eu', cat, of)
+            rende = c['acerta'] * _paga_se(E, peca, cat) + c['pouco'] * (_paga_se(E, peca, cat - 1) if cat else _paga_se(E, peca, 0, tosca=True))
         lucro = (rende - custo - meu) / O_.blocos(cat)
         if lucro > 0 and (melhor is None or lucro > melhor[0]): melhor = (lucro, peca, falta)
     return melhor and melhor[1:]

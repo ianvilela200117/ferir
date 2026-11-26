@@ -1253,6 +1253,7 @@ def _item_magia_erro(it):
     if t == 'ferramenta':                                    # (a etapa dos efeitos, parte 1) a ferramenta do ofício
         import tabelas_oficio as TO
         if it.get('oficio') not in TO.FERRAMENTA_OFICIOS: return f'a ferramenta é de um ofício ({", ".join(TO.FERRAMENTA_OFICIOS)})'
+        if it.get('forma') is not None and it['forma'] not in TO.FERRAMENTA_FORMAS: return f'a forma da ferramenta é uma de: {", ".join(TO.FERRAMENTA_FORMAS)}'
     el = it.get('efeitos_livres')
     if el is not None and (not _int(el) or el < 0): return 'os efeitos por escolher da obra-prima são um número inteiro, de zero para cima'
     if it.get('benta') is not None and (t != 'arma' or not _int(it['benta'])): return 'só a arma fica benta (até um bloco)'

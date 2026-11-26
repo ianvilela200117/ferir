@@ -44,14 +44,44 @@ PECAS_LADINO = ('gazua',)   # (etapa 4b) a GAZUA se forja na oficina, como a ada
                             # do Épico para cima, matéria Rara e um núcleo (a lei da forja). Conserta-se na bancada como as outras peças. A chave não se forja
 TALHES = (None, 'miúdo')    # (etapa 4b) a armadura se forja para um corpo: de gente (sem talhe) ou miúda (o pequenino e o gnomo: `forjar armadura ... talhe=miúdo`); a matéria é a mesma
 
+# ---------- A LEI DO VALOR (decisão do jogador, Dia 30 do mundo novo: a regra da forja do Ferir, obra_valor.py, com os números do Motor 10) ----------
+# Na FORJA e no COURO a categoria da peça NÃO SE ESCOLHE: escolhe-se a peça e o que entra nela (a matéria da categoria dita; do Épico para cima, a matéria Rara e um
+# núcleo da categoria), rola-se 2d20 explosivos e soma-se TUDO: a mão, a matéria, o núcleo, o martelo de forja, a tenaz, a oficina, o preparo. A peça sai na MAIOR
+# categoria cuja CD o total alcança, até o TETO; abaixo da CD do Comum, a matéria se perde. O encanto (o foco e o amuleto), a alquimia, a gravação e o ajuste seguem
+# com a categoria escolhida e o teste de passar (7.3 a 7.6). OS NÚMEROS ABAIXO SÃO OS DA ESPECIFICAÇÃO MEDIDA (projeto/etapa_efeitos/LEI_DO_VALOR.md).
+VALOR_OFICIOS = ('forja', 'couro')
+VALOR_CD = [20, 34, 48, 62, 76, 92]          # Comum, Incomum, Raro, Épico, Único, Lendário (PROVISÓRIO até a especificação)
+VALOR_MATERIA = [0, 4, 8]                    # a matéria: Comum, Incomum, Rara
+VALOR_NUCLEO = {3: 4, 4: 8, 5: 12}           # o núcleo (do Épico para cima; a matéria é a Rara)
+VALOR_MARTELO = [1, 2, 3, 5, 7, 10]          # o martelo de forja, pela categoria dele
+VALOR_TENAZ = [1, 1, 2, 3, 4, 5]             # a tenaz
+VALOR_AFINADA = 1                            # a ferramenta de obra-prima (afinada) soma mais isto
+TETO_ACIMA = 1                               # sem núcleo, a peça sobe no máximo tanto acima da matéria, e nunca acima do Raro; com núcleo, até a categoria dele
+def teto(cat): return cat if cat > M.MATERIA_ATE else min(cat + TETO_ACIMA, M.MATERIA_ATE)
+def cat_do_total(total, teto_):
+    """a maior categoria cuja CD o total alcança, até o teto; None: abaixo da CD do Comum (a matéria se perde)"""
+    k = None
+    for c in range(min(teto_, len(VALOR_CD) - 1) + 1):
+        if total >= VALOR_CD[c]: k = c
+    return k
+# OS DADOS (rolados na mesma conta, uma vez): cada 20 que abre dá +1 efeito; os dois dados em 20 são OBRA-PRIMA (1d6: 1 a 3, a peça sobe uma categoria se o teto
+# deixa, senão +1 efeito; 4 a 6, +1 efeito); um dado em 1 é COMPLICAÇÃO (1d6: 1, a peça se perde; 2 e 3, cai uma categoria; 4 a 6, nasce com um quarto a menos de
+# durabilidade); os dois dados em 1, a peça se perde. O QUASE: o total ficou a VALOR_QUASE ou menos da CD seguinte, e o teto deixava subir: +1 efeito.
+VALOR_QUASE = 3
+VALOR_COMPLICA_DUR = 0.75
+
 # ---------- AS FERRAMENTAS DO OFÍCIO e A OBRA-PRIMA (a etapa dos efeitos, parte 1) ----------
 # A FERRAMENTA é uma peça do Livro de Itens (tipo "ferramenta"), de um ofício: o JOGO DE FORJA (o martelo de forja e a tenaz) serve à forja; o JOGO DE COURO (a faca e a
 # sovela), ao couro. Forja-se na oficina, como a adaga: a matéria, os blocos (3^k), o teste e a falha da forja; do Épico para cima, matéria Rara e um núcleo.
 # Quem tem a ferramenta (dono, inteira) soma o BÔNUS dela no teste do ofício (forjar e ajustar), FORA do teto do preparo; vale a melhor que a pessoa tiver.
 PECAS_FERRAMENTA = ('ferramenta',)
 FERRAMENTA_OFICIOS = ('forja', 'couro')
-MATERIA_FERRAMENTA = dict(forja={'metal': 2, 'madeira': 1}, couro={'metal': 1, 'couro': 1})
-NOME_FERRAMENTA = dict(forja='jogo de forja', couro='jogo de couro')
+# A LEI DO VALOR separa o MARTELO DE FORJA e a TENAZ (cada um soma: VALOR_MARTELO, VALOR_TENAZ); o JOGO (o par de uma vez) vale pelos dois. A chave da matéria: a forma
+# (martelo, tenaz) ou o ofício do jogo (forja, couro).
+MATERIA_FERRAMENTA = dict(martelo={'metal': 2, 'madeira': 1}, tenaz={'metal': 1, 'madeira': 1}, forja={'metal': 3, 'madeira': 2}, couro={'metal': 1, 'couro': 1})
+NOME_FERRAMENTA = dict(martelo='martelo de forja', tenaz='tenaz', forja='jogo de forja', couro='jogo de couro')
+FERRAMENTA_FORMAS = ('martelo', 'tenaz', 'jogo')        # o jogo de forja e o de couro (da parte 1) valem pelo martelo e pela tenaz juntos
+def chave_ferramenta(forma, oficio): return forma if forma in ('martelo', 'tenaz') else oficio
 def bonus_ferramenta(t, k):
     """o bônus de uma ferramenta de categoria t numa obra de categoria k: 1 + t (Comum +1 ... Lendária +6) na obra da categoria dela ou abaixo; na obra uma acima, +1; acima disso, nada"""
     return 1 + t if t >= k else 1 if t == k - 1 else 0
