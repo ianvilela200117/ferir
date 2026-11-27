@@ -1263,3 +1263,10 @@ Responda com o código ("1a.2a.3a.4a.5a"). Em cada uma, a primeira letra é a re
    (a) O dado só rola no pedido que você declara (`fala.py pede`), com o degrau e a chance mostrados antes; a conversa comum segue como hoje, pela opinião; o Mestre nunca rola fala por você sem a sua ordem. Ferord hoje, pedindo algo pequeno a quem não o conhece: 62%; a quem confia nele, 84%.
    (b) Sem teste: convencer segue só pela opinião, como hoje, e as habilidades de fala mexem na opinião e no preço, sem dado.
    **Recomendo (a):** convencer ganha dado de verdade, mas só quando você quer arriscar, e a conversa não vira rolagem.
+
+### 12.1 As respostas do jogador (Dia 35, fora do jogo)
+- **1:** sem resposta. Vale a recomendação, **(a) a régua proporcional** `((2, 4), (5, 3), (8, 2), (16, 1))`, já na fase 1a; a (b) fica ao lado, numa linha, se ele pedir.
+- **2a:** o que nasceu, nasceu: o Martelo Incomum de Ferord fica com o `critico_19`; as peças novas seguem a tabela do Crítico (fase 1b).
+- **3a:** o nível sobe com a experiência dos feitos (a variante A de 7.2 e 7.3; fase 3).
+- **4a:** o mundo reconhece e oferece a classe; o jogador aceita ou recusa; a oferta do Malhador vem no primeiro turno com as classes no motor (fase 4).
+- **5a:** o teste de fala só no pedido que o jogador declara, com a chance mostrada antes; a conversa comum segue pela opinião (fase 2).
