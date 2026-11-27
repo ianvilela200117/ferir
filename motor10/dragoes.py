@@ -280,7 +280,8 @@ def ameaca(tipo, idade, arma=None, armadura=None):
     k = especie(tipo, idade); e = TD.ESPECIES[k]; c = e['cat']; C = T.CATS[c]; F = FEM[c]; t = TD.TIPOS[tipo]; fs = (e.get('fases') or [{}])[0]
     L = [f"{e['nome'].upper()} · grau {e['grau']} ({C}): {TB.GRAU_DIZ[e['grau']]} · {bichos._tamanho_diz(e['tamanho'], False)} · anda sozinho."]
     L.append(f"O corpo: {', '.join(e['armas'][:-1])} e {e['armas'][-1]} de categoria {F}; escama {F}, que vale como {TB.COUROS['escama']}.")
-    L.append('Traços: ' + '. '.join(f'{x.capitalize()}: {bichos.frase(x)}' for x in e['tracos']) + '.')
+    pv = (e.get('dragao') or {}).get('pavor')              # (a parte 2, fase 1b) o pavor do dragão jovem é mais alto que o dos outros (tabelas_dragoes.PAVOR)
+    L.append('Traços: ' + '. '.join(f'{x.capitalize()}: ' + (f'quando a luta começa, quem não é de ferro testa a coragem contra {pv}' if x == 'apavora' and pv else bichos.frase(x)) for x in e['tracos']) + '.')
     casa = {'água': 'luta na água (a água pesa para os dois lados)', 'escuro': 'luta no escuro, que não lhe tira nada'}
     if t['casa'].get('tempo'): L.append('Em casa, ' + ' e '.join(casa.get(x, x) for x in t['casa']['tempo']) + '.')
     if not e['chefe']:

@@ -246,16 +246,30 @@ def uso_diz(it, uso=None):
     return 'na cabeça' if uso == 'veste' and list(it.get('cobre') or []) == ['cabeça'] else USO_DIZ.get(uso, uso)
 
 
+def _rende(E, pid):
+    """(fase 1b) o que cada peça em uso rende agora para a pessoa (pessoas.ficha: a categoria, a sintonia, o apelão que dorme); {} se a ficha não sai"""
+    try:
+        from pessoas import ficha
+        return (ficha(estado.lutador(E, pid)).get('rende') or {}) if (E['gente'].get(pid) or {}).get('estado') == 'vivo' else {}
+    except (SystemExit, Exception): return {}                 # (a mesa não cai por isto: sem a ficha, o número é o da categoria da peça)
+
+
 def diz_pecas(E, pid):
-    """as peças da pessoa, uma linha cada: o que está em uso (e onde) e o que está guardado; e os núcleos"""
-    L = []
+    """as peças da pessoa, uma linha cada: o que está em uso (e onde) e o que está guardado; e os núcleos. (Fase 1b) O número de cada efeito é o da categoria que a peça RENDE
+    para ela (a ficha: a sob medida de outro rende uma abaixo); a que dorme na sintonia diz que os efeitos dormem; o apelão de regra que não é o acordado diz que dorme"""
+    L = []; rd = None
     for i, it in E['itens']['itens'].items():
         if it.get('dono') != pid: continue
         if it['tipo'] == 'nucleo': L.append(f"{i} {rotulo(it)} · núcleo, na guarda"); continue
-        import itens as _IT
-        efs = [_IT.curta_efeito(e, it['cat']) for e in it.get('efeitos') or [] if isinstance(e, dict) and e.get('chave') in _IT.EFEITOS]      # (a etapa dos efeitos) o que a peça faz, com o número da categoria dela
+        import itens as _IT, tabelas_efeitos as _TE
+        if rd is None: rd = _rende(E, pid) if any(x.get('dono') == pid and x.get('uso') for x in E['itens']['itens'].values()) else {}
+        r = rd.get(i) if it.get('uso') else None; c = r['cat'] if r and not r['dorme'] and not r['quebrada'] else it['cat']
+        efs = [_IT.curta_efeito(e, c) + (' (dorme: um apelão acordado por pessoa)' if r and r['apelao_dorme'] and _TE.apelao_de_regra(e.get('chave')) else '')
+               for e in it.get('efeitos') or [] if isinstance(e, dict) and e.get('chave') in _IT.EFEITOS]      # (a etapa dos efeitos) o que a peça faz, com o número da categoria que ela rende
+        if r and r['dorme'] and efs: efs = ['DORME na sintonia (rende uma abaixo; os efeitos dormem): ' + ', '.join(efs)]
+        elif r and c != it['cat'] and efs: efs = [f"rende {_TE.FEM[c]} na sua mão: " + ', '.join(efs)]
         n = it.get('efeitos_livres') or 0; ch = f" ({estado.tantos(it['cheios_livres'], 'cheio')})" if it.get('cheios_livres') else ''
-        livre = (f"efeitos por escolher: {n}{ch} (`oficio.py efeito {i}` mostra o que cabe)" if it['tipo'] == 'ferramenta' else f"efeitos por escolher: {n} (o catálogo de luta chega na próxima fase)" + (f", e {estado.tantos(it['cheios_livres'], 'cheio')}" if it.get('cheios_livres') else '')) if n else ''      # (fase 1a) só a ferramenta escolhe agora
+        livre = f"efeitos por escolher: {n}{ch} (`oficio.py efeito {i}` mostra o que cabe)" if n else ''      # (fases 1a e 1b) a ferramenta e a peça de luta escolhem pelo catálogo
         if it.get('sinete') and it['sinete'] in E['gente']: efs.append(f"sinete de {E['gente'][it['sinete']]['nome']}")
         onde = 'ferramenta, na carga' if it['tipo'] == 'ferramenta' else ('EM USO, ' + uso_diz(it) if it.get('uso') else 'na guarda')
         L.append(f"{i} {rotulo(it, str(it['dur'][0]) + '/' + str(it['dur'][1]), 'QUEBROU' if it['dur'][0] <= 0 else '')} · {onde}" + ''.join(f' · {x}' for x in efs) + (f' · {livre}' if livre else ''))
@@ -442,6 +456,7 @@ def _magia_volta(E, pid, p, f, pv):
     ef += [['item', i, 'some'] for i in f.get('elixires_gastos') or [] if L.get(i, {}).get('dono') == pid and L[i].get('tipo') == 'elixir']
     ef += [['item', i, 'veneno', 'poe', None] for i in f.get('venenos_gastos') or [] if L.get(i, {}).get('veneno')]
     ef += [['item', i, 'encanto', 'gasta', k] for i, k in f.get('encantos_gastos') or [] if i in L]
+    ef += [['item', i, 'efeito', 'gasta', k] for i, k in f.get('efeitos_gastos') or [] if i in L]          # (a parte 2, fase 1b) o uso do dia gasto na luta (o Imortal): volta ao estado
     ef += [['maldicao', pid, 'poe', r] for r in f.get('maldicoes_postas') or []]
     ef += [['pessoa', pid, 'marca.' + k, 'poe', v] for k, v in (f.get('marcas') or {}).items()]
     if f.get('divida'): ef.append(['pessoa', pid, 'divida', 'soma', int(f['divida'])])          # o feitiço de pacto lançado na luta soma dívida (a bruxa)

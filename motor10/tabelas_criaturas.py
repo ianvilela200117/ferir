@@ -24,7 +24,7 @@ TRACOS = {
     'sem vida':  'não sangra, o veneno não pega e não foge; não cansa, mas não faz a ação a mais; a zero de PV se desfaz',
     'ossos':     f'o golpe de corte e o de ponta valem {TM.OSSOS:.0%}; o de impacto, inteiro: pede maça ou martelo',
     'dreno':     f'recupera em PV {TM.DRENO:.0%} do que o golpe do corpo tira',
-    'ardente':   f'quem golpeia de perto leva o fogo de volta ({T.devolve_max(0)} por categoria do corpo, a contar do Comum); a ferida que o corpo abre queima {TM.ARDENTE_RODADAS} rodadas, como a que sangra',
+    'ardente':   f'quem golpeia de perto leva o fogo de volta ({TM.ardente_fogo(0)} por categoria do corpo, a contar do Comum); a ferida que o corpo abre queima {TM.ARDENTE_RODADAS} rodadas, como a que sangra',
     'noturno':   'o escuro não tira nada do golpe nem do tiro',
 }
 def frase(t):

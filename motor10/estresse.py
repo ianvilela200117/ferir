@@ -18,6 +18,12 @@ positivos · o calejo de zero para cima · a cura do dia nunca acima de metade d
 nem se rende · o morto erguido é outro lutador, sem registro no mundo, e o morto segue morto · o campo é de quem está na luta · o que volta ao estado
 (poção gasta, elixir, maldição posta) tem a forma do contrato.
 
+E A PARTE 2, FASE 1b (a base da luta e os efeitos de item; DESENHO 10, os invariantes da pilha e da carga): um quarto das peças da gente leva efeitos do catálogo de luta, ao acaso
+(os que cabem na peça e na porta, com cheio às vezes; e os de antes, que a transição aceita: o critico_19, o sangra, o devolve fixo), com um acaso à parte (RE). Confere também,
+a cada parada: a barra de carga de zero para cima (e abaixo da resistência, mais a Robusta que se desfez) · os calejos de zero para cima · a cabeça firme de 0 a 2 · até 3 filetes,
+contando o da ferida · o exposto e o amolecido no prazo (até 3 rodadas) · o acuado só em quem está abalado, e nunca em quem o jogador comanda · a cura do dia no teto · e, no fim,
+nenhum golpe acima de 7 vezes o de hoje, nenhum dado rolado mais de 4 vezes, a couraça até 75%, e ninguém perdendo 2 turnos em 3 seguidos.
+
 Uso: python3 estresse.py [N] [gente]      N = quantas lutas (padrão 3000) · gente: só gente, sem bichos (as mesmas lutas de antes dos bichos)
 """
 import sys, json, random, collections
@@ -26,10 +32,12 @@ import tabelas_bichos as TB
 import tabelas_magia as TM
 import tabelas_mundo as TMU
 import bichos
+import tabelas_efeitos as TE
 from pessoas import padrao, veste
 from itens import item
 
 R = random.Random(2026)
+RE = random.Random(1111)            # (fase 1b) o acaso dos efeitos do catálogo de luta é à parte
 RB = random.Random(407)             # o acaso dos bichos é à parte: com "gente", as lutas são as mesmas de sempre
 COM_BICHOS = 'gente' not in sys.argv[2:]
 ESP = list(TB.ESPECIES)
@@ -46,18 +54,39 @@ def pessoa(nome, lado):
     p = padrao(nome, niv, molde=R.choice(list(T.MOLDES)), **kw)
     ef = []
     if R.random() < .3: ef.append(dict(chave=R.choice(['sangra', 'critico_19', 'derruba', 'leve', 'pesa', 'nao_quebra'])))
+    ef = _efeitos_1b('arma', cat, fam, ef)
     arma = item('arma', cat, familia=fam, efeitos=ef)
     arma2 = (R.choice(['adaga', 'espada', 'maça']), R.randint(0, 5)) if R.random() < .4 else None
     arm = None; elmo = None; esc = None
     if R.random() < .85:
         c = R.randint(0, 7); efa = []
-        if R.random() < .2: efa.append(dict(chave='devolve', valor=R.randint(1, T.devolve_max(c))))
+        if R.random() < .2: efa.append(dict(chave='devolve', valor=R.randint(1, TE.devolve_fixo_max(c))))
         if R.random() < .2: efa.append(dict(chave='firme'))
-        arm = item('armadura', c, material=R.choice(MAT), efeitos=efa)
+        arm = item('armadura', c, material=R.choice(MAT), efeitos=_efeitos_1b('armadura', c, None, efa))
         if R.random() < .7: elmo = (R.choice(MAT), R.randint(0, 7))
     if T.FAMILIAS[fam]['maos'] == 1 and R.random() < .6: esc = R.randint(0, 7)
     if R.random() < .15: arma['dur'][0] = R.randint(0, 2)
     return veste(p, arma=arma, arma2=arma2, armadura=arm, elmo=elmo, escudo=esc)
+
+
+def _efeitos_1b(tipo, cat, fam, ja):
+    """(fase 1b) um quarto das peças leva de 1 ao teto de efeitos do catálogo de luta, ao acaso entre os que cabem (alguns cheios; a Caçadora com um tipo; um apelão de regra só)"""
+    if RE.random() >= .25: return ja
+    import tabelas_oficio as O
+    cabem = [k for k in TE.EFEITOS if not TE.escolhe_nao(k) and TE.cabe(k, tipo, cat, fam) is None and k not in {e['chave'] for e in ja}]
+    if ja and any(e['chave'] == 'devolve' for e in ja): cabem = [k for k in cabem if k != 'devolve']
+    if ja and any(e['chave'] == 'critico_19' for e in ja): cabem = [k for k in cabem if k != 'critico']      # (o critico_19 de antes e o Crítico são um efeito só: P5)
+    out = list(ja); ap = any(TE.apelao_de_regra(e['chave']) for e in ja)
+    for k in RE.sample(cabem, min(len(cabem), RE.randint(1, O.efeitos_max(cat)))):
+        if len(out) >= O.efeitos_max(cat): break
+        if TE.apelao_de_regra(k):
+            if ap: continue
+            ap = True
+        e = dict(chave=k)
+        if TE.de_numero(k) and RE.random() < .3: e['cheio'] = True
+        if k == 'cacadora': e['contra'] = RE.choice(TE.CONTRA)
+        out.append(e)
+    return out
 
 
 def bicho(nome):
@@ -102,6 +131,31 @@ MOTIVOS = [('a luta vai começar', 'a luta vai começar'), ('rodadas sem novidad
            ('quebrou', 'uma peça quebrou'), ('não está mais de pé', 'o alvo da ordem não está mais de pé'), ('agarrou', 'um bicho agarrou o comandado'), ('recuperou o fôlego', 'a ordem de tomar fôlego acabou')]
 def motivo(p): return next((nome for marca, nome in MOTIVOS if marca in p), 'outro motivo: ' + p)
 FINS = dict(A='a casa ficou com o campo', B='o outro lado ficou com o campo', impasse='impasse', empate='empate', ninguém='ninguém ficou de pé')
+
+
+def confere_1b(S, f):
+    """(fase 1b) o que tem de valer sempre na base nova da luta, em cada lutador"""
+    for k in TE.FAMILIAS:
+        assert 0 <= f['barra'][k] <= luta.resistencia(S, f, k) + TE.RESIST_TETO, f"{f['nome']}: a barra de {k} fora ({f['barra'][k]})"
+        assert f['calejo_m'][k] >= 0, 'calejo de feitiço negativo'
+    assert all(v >= 0 for v in f['calejo_f'].values()), 'calejo negativo'
+    assert 0 <= f['firme_cabeca'] <= TE.FIRME_TURNOS, f"{f['nome']}: cabeça firme fora ({f['firme_cabeca']})"
+    assert len(f['filetes']) + (1 if f.get('sangra') else 0) <= TE.FILETES_MAX, f"{f['nome']}: filetes demais ({f['filetes']}, {f.get('sangra')})"
+    assert f['exposto'] <= S['r'] + TE.PRAZO_MAX - 1 and f['amolecido'] <= S['r'] + TE.PRAZO_MAX - 1 and f['aberto'] <= S['r'] + 1, f"{f['nome']}: prazo de estado fora"
+    if f.get('acuado'): assert f['abalado'] and not f.get('controla'), f"{f['nome']}: acuado sem estar abalado, ou quem o jogador comanda acuado"
+    assert f.get('curado', 0) <= int(f['pvmax'] * T.CURA_TETO), f"{f['nome']} curado acima do teto"
+    assert len(f['perdidos']) <= TE.JANELA_TURNOS - 1, 'os últimos turnos guardam só os da janela'
+
+
+def confere_fim_1b(S):
+    """(fase 1b) no fim da luta: os golpes medidos (o teto da pilha, os dados, a couraça) e os turnos perdidos (nunca 2 em 3 seguidos)"""
+    for m in S.get('mede') or []:
+        assert m['hoje'] == 0 or m['final'] <= TE.TETO_PILHA * m['hoje'], f"golpe acima do teto da pilha: {m}"
+        assert m['vezes'] <= max(TE.DADOS_MAX, 4) and m['couraca'] <= TE.COURACA_TETO + 1e-9, f'dados ou couraça fora: {m}'
+    for nome, h in (S.get('mede_turnos') or {}).items():
+        assert all(sum(h[i:i + 3]) <= 1 for i in range(max(0, len(h) - 2))), f"{nome} perdeu 2 turnos em 3: {h}"
+    for k, v in (S.get('conta') or {}).items(): c1b[k] += v
+c1b = collections.Counter()
 fins = collections.Counter(); rod = []; paradas = collections.Counter(); erros = 0; com_bicho = 0; visto = collections.Counter()
 N = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 3000
 for i in range(N):
@@ -109,6 +163,7 @@ for i in range(N):
     try:
         tem_bicho = any(p.get('bicho') for p in A + B); com_bicho += tem_bicho
         S = luta.nova(A, B, quieto=(i % 5 != 0 and not tem_bicho), **kw); larg = S['lugar'].get('largura'); passos = 0        # toda luta com bicho guarda o registro: é nele que se vê o traço acontecer
+        S['mede'] = []; S['mede_turnos'] = {}                     # (fase 1b) os golpes e os turnos, para os invariantes da pilha e da carga
         so_bichos = {lado: all(f.get('bicho') for f in S['L'] if f['lado'] == lado) for lado in 'AB'}
         if tem_bicho: visto['apertado'] += any(MARCAS['apertado'] in a for a in S['avisos'])
         st = luta.corre(S, interativo=True)
@@ -145,6 +200,7 @@ for i in range(N):
                     if S['lugar'].get('sem_saida') == f['lado']: assert f['estado'] != 'fugiu', f"{f['nome']} estava encurralado e fugiu"
                 if so_bichos[luta.outro(f['lado'])]: assert f['estado'] != 'rendido', f"{f['nome']} se rendeu a um lado só de bichos"
                 if f.get('agarrado'): assert luta.por_nome(S, f['agarrado']), 'agarrado por quem não está na luta'
+                confere_1b(S, f)
             for it in S['itens'].values():
                 assert 0 <= it['dur'][0] <= it['dur'][1], 'durabilidade fora'
                 if it.get('tipo') == 'corpo': assert it['dur'] == [1, 1] and not it.get('id') and not it.get('dono'), 'o corpo do bicho gastou, ou ganhou registro ou dono'
@@ -156,6 +212,7 @@ for i in range(N):
                 xa = {f['x'] for f in luta.de_pe(S, 'A')}; xb = {f['x'] for f in luta.de_pe(S, 'B')}
                 assert not (xa & xb), 'os dois lados na mesma casa de um corredor'
         assert S['fim'] in ('A', 'B', 'ninguém', 'impasse', 'empate'), S['fim']
+        confere_fim_1b(S)
         r = luta.resultado(S); fins[S['fim']] += 1; rod.append(S['r'])
         assert not any(f['estado'] == 'caido' and not f.get('estavel') for f in S['L']), 'caído sem destino no fim'
         assert not any('corpo' in q for q in r['quebradas']), 'o corpo do bicho apareceu entre as peças quebradas'
@@ -172,6 +229,8 @@ for i in range(N):
 rod.sort()
 print(f"{N} lutas · erros {erros} · como acabaram: {', '.join(f'{FINS.get(k, k)} {v}' for k, v in fins.most_common())} · rodadas: a do meio {rod[len(rod)//2]}, nove em dez até {rod[int(len(rod)*.9)]}, a mais longa {rod[-1]}")
 print('por que a luta parou e perguntou (as mais comuns):', ', '.join(f'{k} {v}' for k, v in paradas.most_common(14)))
+print('(fase 1b) o que a base nova fez nessas lutas:', ', '.join(f'{k} {c1b[k]}' for k in ('atordoa', 'turnos_perdidos', 'carga_mana', 'filetes', 'filetes_pv', 'exposto', 'amolecido', 'acuado', 'medo_testes', 'medo_falhas',
+                                                                          'segundo_golpe', 'varredura', 'tempestade', 'ceifadora', 'vampira', 'regenera', 'imortal', 'atar', 'escudo_que_conta')))
 if COM_BICHOS:
     print(f'lutas com bicho: {com_bicho} · em quantas cada traço esteve em campo:', ', '.join(f"{t} {visto['com o traço ' + t]}" for t in TB.TRACOS))
     print('em quantas lutas com bicho se viu acontecer (pelo registro):', ', '.join(f'{k} {visto[k]}' for k in MARCAS if MARCAS[k]))
@@ -211,15 +270,20 @@ def lancador(nome):
     if RM.random() < .2: kw['tracos'] = RM.sample(list(T.TRACOS_NOVOS), 1)
     p = padrao(nome, niv, molde=RM.choice(list(TM.MOLDES)), maestria={t: RM.choice([0, 2, 4, 6, 8]), 'maça': RM.choice([0, 2, 4]), 'espada': RM.choice([0, 2, 4])}, **kw)
     foco = (RM.choice(FORMA[t] if RM.random() < .8 else list(T.FOCOS)), RM.randint(0, 5)) if RM.random() < .85 else None
+    if foco: foco = item('foco', foco[1], forma=foco[0], efeitos=_efeitos_1b('foco', foco[1], None, []))      # (fase 1b) a Chama, o Foco Certeiro, o Domínio
     arma = _arma_m() if RM.random() < .5 else None
-    return veste(p, arma=arma, armadura=(RM.choice(MAT), RM.randint(0, 5)) if RM.random() < .8 else None, escudo=RM.randint(0, 4) if RM.random() < .3 else None,
-                 foco=foco, amuleto=RM.randint(0, 5) if RM.random() < .6 else None)
+    am = RM.randint(0, 5) if RM.random() < .6 else None
+    esc = RM.randint(0, 4) if RM.random() < .3 else None
+    return veste(p, arma=arma, armadura=(RM.choice(MAT), RM.randint(0, 5)) if RM.random() < .8 else None, escudo=item('escudo', esc, efeitos=_efeitos_1b('escudo', esc, None, [])) if esc is not None else None,
+                 foco=foco, amuleto=item('amuleto', am, efeitos=_efeitos_1b('amuleto', am, None, [])) if am is not None else None)
 
 
 def armado(nome):
     """gente sem feitiço, com o que a magia vende: amuleto, poção, elixir, encanto, veneno na lâmina"""
     p = padrao(nome, RM.choice([5, 20, 50, 80, 150, 300]), molde=RM.choice(list(T.MOLDES)), **_magica({}))
-    return veste(p, arma=_arma_m(), armadura=(RM.choice(MAT), RM.randint(0, 6)) if RM.random() < .85 else None, escudo=RM.randint(0, 5) if RM.random() < .4 else None, amuleto=RM.randint(0, 5) if RM.random() < .6 else None)
+    esc = RM.randint(0, 5) if RM.random() < .4 else None; am = RM.randint(0, 5) if RM.random() < .6 else None
+    return veste(p, arma=_arma_m(), armadura=(RM.choice(MAT), RM.randint(0, 6)) if RM.random() < .85 else None, escudo=item('escudo', esc, efeitos=_efeitos_1b('escudo', esc, None, [])) if esc is not None else None,
+                 amuleto=item('amuleto', am, efeitos=_efeitos_1b('amuleto', am, None, [])) if am is not None else None)
 
 
 def povo(nome):
@@ -310,6 +374,7 @@ def confere_m(S):
         for b, q in (f.get('gastou') or {}).items(): assert isinstance(q, int) and q > 0 and ':' in b, f'poção gasta torta: {b} {q}'
         if f.get('canaliza'): assert f['estado'] in ('pe', 'fugiu', 'rendido', 'saiu'), f"{f['nome']} canaliza caído"
     for v in (S.get('campo') or {}).values(): assert v['quem'] in nomes, 'o campo é de quem não está na luta'
+    for f in S['L']: confere_1b(S, f)
     for it in S['itens'].values(): assert 0 <= it['dur'][0] <= it['dur'][1], 'durabilidade fora'
 
 
@@ -318,6 +383,7 @@ for i in range(NM):
     luta.semente(100000 + i); A, B, kw = cena_m()
     try:
         S = luta.nova(A, B, quieto=(i % 4 != 0), **kw); assert S.get('magia') or not any(p.get('feiticos') for p in A + B), 'a luta com feitiço não ligou a magia'
+        S['mede'] = []; S['mede_turnos'] = {}
         st = luta.corre(S, interativo=True); passos = 0
         while st == 'parada':
             passos += 1
@@ -333,6 +399,7 @@ for i in range(NM):
             confere_m(S)
         confere_m(S)
         assert not any(f['estado'] == 'caido' and not f.get('estavel') for f in S['L']), 'caído sem destino no fim'
+        confere_fim_1b(S)
         mfins[S['fim']] += 1
         for k, x in (S.get('conta') or {}).items(): mc[k] += x
         mc['com magia'] += bool(S.get('magia'))
@@ -342,5 +409,5 @@ for i in range(NM):
         merros += 1; import traceback; print(f'magia #{i} ERRO: {type(e).__name__}: {e}'); traceback.print_exc(limit=4)
         if merros > 12: break
 print(f"lutas de magia: {NM} · erros {merros} · como acabaram: {', '.join(f'{FINS.get(k, k)} {v}' for k, v in mfins.most_common())} · ordens tortas recusadas: {recusas}")
-print('o que a magia fez nelas:', ', '.join(f'{k} {mc[k]}' for k in ('lances', 'retrochoque', 'longos', 'conc_perdidos', 'pocoes', 'doses_lamina', 'maldicoes', 'fases', 'erguidos', 'bencaos', 'cura_lances')))
+print('o que a magia fez nelas:', ', '.join(f'{k} {mc[k]}' for k in ('lances', 'retrochoque', 'longos', 'conc_perdidos', 'pocoes', 'doses_lamina', 'maldicoes', 'fases', 'erguidos', 'bencaos', 'cura_lances', 'refletora', 'dominio')))
 sys.exit(1 if erros or merros else 0)

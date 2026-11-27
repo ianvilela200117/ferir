@@ -88,16 +88,18 @@ def _co2(n):
         ('lobos', lambda: [veste(g('h', 30), arma=('espada', 1), armadura=('malha', 1), escudo=1)], lambda: bichos.bando('lobo', n=4), 'perto'),
         ('cinco', lambda: [veste(g(f'a{i}', 40), arma=('lança', 1), armadura=('malha', 1)) for i in range(5)], lambda: [veste(g(f'b{i}', 40), arma=('machado', 1), armadura=('couro', 1), escudo=1) for i in range(5)], 'perto'),
         ('serpe', lambda: [veste(g(f'h{i}', 60), arma=('espada', R), armadura=('malha', R), escudo=R) for i in range(4)], lambda: [bichos.bicho('serpe')], 'perto')]
-    L = []
-    for nome, a, b, ini in casos:
+    L = []; escada = luta.ESCADA; luta.ESCADA = False       # (a parte 2, fase 1b) a escada do medo é a mudança de propósito da fase, medida no EF7: o contrato (DESENHO, B0) quer a luta de
+    try:                                                  # antes "dado por dado, salvo a escada do medo"; com ela ligada, o cinco contra cinco e a serpe mudam (quem fraquejou fica acuado)
+      for nome, a, b, ini in casos:
         luta.semente(777); v = []
         for _ in range(150):
             S = luta.nova(a(), b(), inicio=ini, quieto=True); luta.corre(S); v.append((S['fim'], S['r'], sum(f['pv'] for f in S['L'])))
         L.append(f"{nome} {sum(1 for x in v if x[0] == 'A')} {sum(x[1] for x in v)} {sum(x[2] for x in v)}")
+    finally: luta.ESCADA = escada
     f = ficha(veste(g('x', 50), arma=('espada', R), armadura=('malha', R), escudo=R)); L.append(f"ficha {f['arma']['acerto']} {defesa(f)} {f['pvmax']} {f['folmax']}")
     ref = [x for x in open(os.path.join(AQUI, 'dados', 'semente_fixa_sem_magia.txt'), encoding='utf-8').read().split('\n') if x.strip()]
     igual = L == ref
-    return [('CO2 A LUTA SEM POVO: as cinco lutas de semente fixa, com cada pessoa feita pelo caminho dos povos (humano), saem iguais às de hoje, número por número (dados/semente_fixa_sem_magia.txt)',
+    return [('CO2 A LUTA SEM POVO: as cinco lutas de semente fixa, com cada pessoa feita pelo caminho dos povos (humano), saem iguais às de hoje, número por número (dados/semente_fixa_sem_magia.txt; com a escada do medo desligada, como no B0 da fase 1b)',
              'iguais' if igual else 'DIFERENTES: ' + ' · '.join(L), igual)]
 
 

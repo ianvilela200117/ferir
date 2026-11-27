@@ -15,7 +15,10 @@ traço novo, fases ou pena de maldição). A luta sem nada disso é a de sempre,
 Uso em código (o que as outras frentes chamam):
   escolhe(S, f)              o que faz agora quem o jogador não comanda e lança, bebe ou solta um encanto (gente, povo ou bicho): a ação, ou None (luta como sempre)
   tem_magia(f) · prepara(S, f) · guarda(S, e) · firmeza(S, e) · conj(S, f, feitico)      (as contas, para quem quiser ler)
-  As ordens de quem o jogador comanda (luta.ordem): lancar FEITICO [em ALVO | casa N] [sempre] [osso] [neblina|lama] · beber POCAO [em ALIADO] · usar [PECA] [em ALVO | casa N]
+  As ordens de quem o jogador comanda (luta.ordem): lancar FEITICO [em ALVO | casa N] [sempre] [osso] [neblina|lama] [dominio] · beber POCAO [em ALIADO] · usar [PECA] [em ALVO | casa N]
+  (A PARTE 2, FASE 1b: os efeitos de foco e de amuleto: a Chama e a Guarda Mágica no dano, o Foco Certeiro na Conjuração, a Firmeza, a Refletora do escudo, o Domínio do foco
+  (`dominio` na ordem; o robô o solta no primeiro feitiço de grau 2 ou mais), e o calejo por família: o feitiço de controle que pega soma na resistência à carga da família dele,
+  e o controle de arma da mesma família soma na Firmeza contra ele, sem contar duas vezes.)
 """
 import copy, math, sys, unicodedata
 import tabelas as T
@@ -23,6 +26,7 @@ import tabelas_bichos as TB
 import tabelas_magia as TM
 import tabelas_magia_mundo as W
 import tabelas_povos as TP
+import tabelas_efeitos as TE
 import luta as L
 
 DANO_LONGE = ('seta', 'lança-de-fogo', 'bola-de-fogo', 'raio')      # quem sabe destes e não tem o que lançar, espera a Mana voltar em vez de ir ao corpo a corpo
@@ -96,7 +100,7 @@ def foco(S, f, trad):
 def penas(S, f):
     """as penas da luta na mão de quem lança: o abalo, o braço ferido, o enjoo, e a pior pena de magia (mau-olhado, veneno, maldição: não somam; a da maldição já está na pena do corpo)"""
     pm = f.get('pena_magia', 0) or 0; ol = TM.ESTADOS['olhado']['conj'] if ve(f, 'olhado') else 0; vn = TB.VENENO['acerto'] if f.get('veneno') else 0
-    return ((T.ABALADO if f['abalado'] else 0) + sum(T.FERIDAS['braços'][1 if gr else 0] for p, gr in f['feridas'] if p == 'braços')
+    return (L._medo_acerto(f) + sum(T.FERIDAS['braços'][1 if gr else 0] for p, gr in f['feridas'] if p == 'braços')
             + (TM.ESTADOS['enjoo'] if ve(f, 'enjoo') else 0) + min(pm, ol, vn) - pm)
 
 
@@ -110,7 +114,15 @@ def conj(S, f, k, fonte=None):
     m = f.get('maestria', 0) if f.get('bicho') else (f.get('m_trad') or {}).get(trad, 0)
     dom = 0 if f.get('bicho') else int((f.get('dom') or {}).get(trad, 0) or 0)
     laco = (f.get('pena_laco') or 0) if trad == 'verde' else 0         # o druida cujo ermo do laço foi caçado até o fim perde a força (magia_mundo.pena_laco: o estado.lutador traz)
-    return m + dom + (a // 10) / 2 + T.BON[c] + mais + laco + f.get('pena', 0) + penas(S, f), c, vezes, dom, T.forca_mult(a)
+    fc = 0 if f.get('bicho') else min(TE.FIXO_TETO, _fx_foco(S, f, 'foco_certeiro') or 0)       # (fase 1b) o Foco Certeiro do foco (P3: até +8)
+    return m + dom + (a // 10) / 2 + T.BON[c] + mais + laco + f.get('pena', 0) + penas(S, f) + fc, c, vezes, dom, T.forca_mult(a)
+
+
+def _fx_foco(S, f, k):
+    """(fase 1b) um efeito do foco de quem lança (a Chama, o Foco Certeiro, o Domínio): só o foco inteiro, em uso"""
+    fo = f.get('foco')
+    if not fo or not L.inteiro(S, fo): return None
+    return next((src['efeitos'].get(k) for src in f.get('fontes') or [] if src.get('item') == fo), None)
 
 
 def falta_mao(f, k, fonte=None):
@@ -143,16 +155,18 @@ def guarda(S, e):
     return g, am
 
 
-def firmeza(S, e):
+def firmeza(S, e, k=None):
     """a Firmeza na luta: a base (a Vontade, a maior mão, o dom de tradição) e o melhor entre o amuleto (ou a guarda) e metade da armadura do tronco
-    (com "resiste", inteira); mais o calejo (cada controle que já pegou)"""
-    s = e.get('est') or {}; b = 0; k = e.get('amuleto')
-    if k and L.inteiro(S, k) and e.get('amuleto_cat') is not None: b = T.BON[e['amuleto_cat']]
+    (com "resiste", inteira); mais o calejo (cada controle que já pegou). (Fase 1b) Mais o efeito Firmeza do amuleto (P3: até +8); e o calejo POR FAMÍLIA: contra o feitiço k,
+    vale o maior entre o calejo de hoje (+4 por controle de feitiço que pegou, geral) e o +4 por controle de arma da mesma família (a carga): os dois caminhos não somam (M21 igual)"""
+    s = e.get('est') or {}; b = 0; am = e.get('amuleto')          # (o amuleto tem nome próprio: o `k` é o feitiço, e a família do calejo sai dele)
+    if am and L.inteiro(S, am) and e.get('amuleto_cat') is not None: b = T.BON[e['amuleto_cat']]
     for c in ((s.get('guarda') or [None])[0], s.get('guarda_p')):
         if c is not None: b = max(b, T.BON[c])
     tr = e['partes'].get('tronco')
     if tr and L.inteiro(S, tr['item']): b = max(b, T.BON[tr['cat']] * (1 if tem(e, 'resiste') else 0.5))
-    return e.get('firmeza0', T.FIRMEZA_BASE) + b + TM.CALEJO * e.get('calejo', 0)
+    fam = TE.FEITICO_FAMILIA.get(k); cf = (e.get('calejo_f') or {}).get(fam, 0) if fam else 0
+    return e.get('firmeza0', T.FIRMEZA_BASE) + b + max(TM.CALEJO * e.get('calejo', 0), TE.CALEJO_FIRMEZA * cf) + min(TE.FIXO_TETO, L.efeito(S, e, 'firmeza') or 0)
 
 
 def defesa_mais(S, e):
@@ -207,9 +221,9 @@ def dano_aco(S, a, e, w, dano):
 
 
 def fogo_de_volta(S, a, e, w):
-    """o corpo ardente: quem o golpeia de perto leva o fogo de volta (o teto do "devolve" da categoria do corpo)"""
+    """o corpo ardente: quem o golpeia de perto leva o fogo de volta (4 por degrau da categoria do corpo: tabelas_magia.ardente_fogo)"""
     if w['distancia'] or w.get('area') or a['estado'] != 'pe' or L.dist(a, e) > 1 or tem(a, 'ardente'): return
-    q = T.devolve_max(e.get('cat_corpo', 0)); a['pv'] -= q; S['dano_r'] += q / a['pvmax']
+    q = TM.ardente_fogo(e.get('cat_corpo', 0)); a['pv'] -= q; S['dano_r'] += q / a['pvmax']
     L.diz(S, f"    o fogo de {e['nome']} queima {a['nome']} ({max(a['pv'], 0)}/{a['pvmax']})")
     if a['pv'] <= 0: L._cai(S, a, 0)
 
@@ -233,7 +247,7 @@ def feriu(S, a, e, w, dano, abriu):
 def apanhou(S, e, dano, abriu):
     """quem levou dano: quem canaliza testa a concentração (ou perde sem teste: caído, no chão, atordoado ou agarrado); o chefe muda de fase"""
     if e.get('canaliza'):
-        if e['estado'] != 'pe' or e['chao'] or e['atordoado'] or L._agarrado(S, e): perde(S, e, 'sem teste')
+        if e['estado'] != 'pe' or e['chao'] or e['atordoado'] or e.get('perde_turno') or L._agarrado(S, e): perde(S, e, 'sem teste')
         elif dano > 0: concentra(S, e, abriu)
     if e.get('fases') and e['estado'] == 'pe': fase(S, e)
 
@@ -281,10 +295,21 @@ def _gasta(S, f, k, n, que):
 
 
 # ---------- lançar ----------
-def lanca(S, f, k, alvo=None, casa=None, fonte=None, osso=False, campo=None):
-    """lança k: a Mana sai na hora; com o inimigo colado, ele bate antes (e quem apanhou testa a concentração); o longo começa a canalizar"""
+def dominio_pronto(S, f):
+    """(fase 1b) o DOMÍNIO do foco (inteiro, em uso) ainda não saiu nesta luta?"""
+    return bool(_fx_foco(S, f, 'dominio')) and f.get('usou', []).count('dominio') < TE.DOMINIO_USOS
+
+
+def lanca(S, f, k, alvo=None, casa=None, fonte=None, osso=False, campo=None, dominio=False):
+    """lança k: a Mana sai na hora; com o inimigo colado, ele bate antes (e quem apanhou testa a concentração); o longo começa a canalizar.
+    (Fase 1b) Com o DOMÍNIO (uma vez por luta): sem Mana, sem ser longo, e os dados rolados duas vezes."""
     g = T.FEITICOS[k]['grau']; forc = falta_mao(f, k, fonte); forcado = forc > 0
-    if fonte is None:
+    if dominio and fonte is None and dominio_pronto(S, f):
+        f['usou'].append('dominio'); conta(S, 'dominio'); L.diz(S, f"  {f['nome']} lança {nome(k)} pelo Domínio: sem Mana, de uma vez, os dados rolados duas vezes")
+        if f.get('foco') and f['foco'] not in S['usadas']: S['usadas'].append(f['foco'])
+    else: dominio = False
+    if dominio: pass
+    elif fonte is None:
         q = custo(f, k)
         if f['mana'] >= q: f['mana'] -= q; conta(S, 'mana_gasta', q)
         else:                                                    # NO OSSO: o que falta sai do PV, e o lance é forçado
@@ -306,12 +331,12 @@ def lanca(S, f, k, alvo=None, casa=None, fonte=None, osso=False, campo=None):
             f['canaliza'] = dict(nome=k, trad=trad_de(f, k)); ok = concentra(S, f, pv0 - f['pv'] >= f['pvmax'] * T.FERIDA)
             if not ok: return
             f['canaliza'] = None
-    if g in TM.LONGO:                                            # O LONGO: gasta o turno agora e sai no começo do turno seguinte
+    if g in TM.LONGO and not dominio:                            # O LONGO: gasta o turno agora e sai no começo do turno seguinte (o Domínio o solta de uma vez)
         f['canaliza'] = dict(nome=k, alvo=alvo, casa=casa, trad=trad_de(f, k), fonte=fonte, forc=forc, forcado=forcado, r=TM.LONGO[g], campo=campo)
         L.diz(S, f"  {f['nome']} começa a canalizar {nome(k)}" + (f" em {alvo}" if alvo else '') + ' (sai no começo do próximo turno)'); conta(S, 'longos')
         if f['lado'] == 'B': _para_todos(S, f"{f['nome']} começou a canalizar {nome(k)}: sai no próximo turno, se ninguém o atrapalhar")
         return
-    resolve(S, f, k, alvo, casa, fonte, forc, forcado, campo)
+    resolve(S, f, k, alvo, casa, fonte, forc, forcado, campo, dominio)
 
 
 def _aviso_mana(S, f):
@@ -342,13 +367,25 @@ def _dom_fez(S, f, dom, j, contra):
         f['dom_fez'] = True
 
 
-def _dano(S, f, e, dado, c, vezes, fm, crit):
-    """o tamanho do feitiço: dado × 4 × valor do foco ÷ guarda × força (o crítico dobra os dados e corta a guarda pela metade). O amuleto que guardou gasta."""
+def _dano(S, f, e, dado, c, vezes, fm, crit, dominio=False, chama=False):
+    """o tamanho do feitiço: dado × 4 × valor do foco ÷ guarda × força (o crítico dobra os dados e corta a guarda pela metade). O amuleto que guardou gasta.
+    (Fase 1b) A PILHA no feitiço: a Chama do foco (PEÇAS), o alvo exposto e quem lança amolecido (ESTADOS), a Guarda Mágica do alvo (a couraça do feitiço, em curva);
+    o Domínio rola os dados duas vezes (nunca mais de 4); e o teto da pilha (7 vezes o feitiço de hoje, com os mesmos dados)."""
     g, am = guarda(S, e)
     if am:
         if am not in S['usadas']: S['usadas'].append(am)            # o amuleto perde 1 por luta em que guardou...
         if c > e['amuleto_cat']: _gasta(S, e, am, 1, 'amuleto')      # ... e 1 a cada feitiço de foco maior que ele
-    return int(L.rola(dado, 2 if crit else 1) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
+    vh = 2 if crit else 1; m = 1
+    ch = _fx_foco(S, f, 'chama') if (f is not e or chama) and not f.get('bicho') else None      # (no próprio corpo, só o feitiço que a Refletora devolveu leva a Chama de quem lançou; o retrochoque, não)
+    if ch: m *= 1 + min(TE.PILHA['pecas'], ch)
+    if e.get('exposto', -1) >= S['r']: m *= TE.EXPOSTO
+    if f.get('amolecido', -1) >= S['r']: m *= TE.AMOLECIDO
+    gm = L.efeito(S, e, 'guarda_magica')
+    if gm: m *= 1 - TE.curva(gm)
+    if m == 1 and not dominio: return int(L.rola(dado, vh) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
+    nd, fd = map(int, dado.split('d')); vz = min(TE.DADOS_MAX, vh * 2) if dominio else vh; rolos = [L.D.d(fd) for _ in range(nd * vz)]
+    hoje = int(sum(rolos[:nd * vh]) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
+    return min(TE.TETO_PILHA * hoje, int(sum(rolos) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm * m))
 
 
 def fere(S, a, e, dano, crit, k, c, queima=False, atordoa=0):
@@ -388,12 +425,24 @@ def maldito(S, e):
     return bool(e.get('maldicoes') or e.get('maldicoes_postas') or e.get('maldito') or tem(e, 'amaldiçoa') or tem(e, 'imaterial'))
 
 
-def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, campo=None):
-    """o feitiço sai (o curto, na hora; o longo, no começo do turno seguinte)"""
+def _refletora(S, f, e, k):
+    """(fase 1b) A REFLETORA: uma vez por luta, o feitiço que voa contra o dono do escudo (inteiro, com a arma de uma mão em uso) volta em quem lançou, e rola de novo, contra a
+    defesa dele (o feitiço não chega ao dono: é devolvido antes do dado; com a Chama de quem lançou). A outra leitura, a de gastar a Refletora só no feitiço que pegaria no
+    dono, mediu +23,1 no banco (o teto do forte é 20): fica a de devolver o primeiro (+20,0)"""
+    if e is f or 'refletora' in e.get('usou', []) or not L.efeito(S, e, 'refletora'): return e
+    e['usou'].append('refletora'); conta(S, 'refletora')
+    L.diz(S, f"  a Refletora de {e['nome']} devolve {nome(k)} em {f['nome']}")
+    return f
+
+
+def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, campo=None, dominio=False):
+    """o feitiço sai (o curto, na hora; o longo, no começo do turno seguinte). (Fase 1b) O Domínio: os dados rolados duas vezes; a Refletora: o feitiço volta em quem lançou
+    (rola de novo, contra ele; o dano devolvido leva a Chama de quem lançou)"""
     sp = TM.FEITICOS[k]; t = sp['tipo']; bon, c, vezes, dom, fm = conj(S, f, k, fonte); bon += TM.FORCADO * forc; conta(S, 'lances')
     if t in ('dano', 'poe', 'medo'):
         e = _inimigo(S, f, alvo, sp['alc'])
         if e is None: L.diz(S, f"  {f['nome']} lança {nome(k)}, mas não há em quem"); return
+        e = _refletora(S, f, e, k); refl = e is f
         if t == 'dano':
             j = jogada(bon + mira(S, f, e, False), forcado); df = defesa(S, f, e, False); conta(S, k + '_lances')
             if retro(S, f, k, j, c, vezes, fm, forcado): return
@@ -401,7 +450,7 @@ def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, ca
             _dom_fez(S, f, dom, j, df)
             dado = sp['dado'] if not sp.get('dado_outro') or maldito(S, e) else sp['dado_outro']
             L.diz(S, f"  {f['nome']} lança {nome(k)} em {e['nome']}: {L._n(j['total'])} contra {L._n(df)}" + (', CRÍTICO' if j['crit'] else ''))
-            pv0 = max(e['pv'], 0); dano = _dano(S, f, e, dado, c, vezes, fm, j['crit']); fere(S, f, e, dano, j['crit'], k, c, sp.get('queima'), sp.get('atordoa', 0)); tirou = min(dano, pv0)
+            pv0 = max(e['pv'], 0); dano = _dano(S, f, e, dado, c, vezes, fm, j['crit'], dominio, chama=refl); fere(S, f, e, dano, j['crit'], k, c, sp.get('queima'), sp.get('atordoa', 0)); tirou = min(dano, pv0)
             if tirou > 0 and sp.get('rouba') and f['estado'] == 'pe' and f['pv'] < f['pvmax']:
                 g = min(f['pvmax'] - f['pv'], int(tirou * sp['rouba'])); f['pv'] += g; S['dano_r'] -= g / f['pvmax']; L.diz(S, f"    {f['nome']} recupera {g} ({f['pv']}/{f['pvmax']})")
             if tirou > 0 and sp.get('veneno') and e['estado'] == 'pe' and not sem_vida(e):
@@ -409,10 +458,12 @@ def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, ca
                 L.diz(S, f"    o veneno entra em {e['nome']} ({e['veneno'][0]} por rodada)")
             return
         if t == 'medo' and sp.get('so_bicho') and not e.get('bicho'): L.diz(S, f"  {f['nome']} lança {nome(k)} em {e['nome']}: só o bicho se afugenta"); return
-        j = jogada(bon, forcado); fz = firmeza(S, e); conta(S, k + '_lances')
+        j = jogada(bon, forcado); fz = firmeza(S, e, k); conta(S, k + '_lances')
         if retro(S, f, k, j, c, vezes, fm, forcado): return
         if j['total'] < fz and not j['crit']: L.diz(S, f"  {f['nome']} lança {nome(k)} em {e['nome']}: {L._n(j['total'])} contra a Firmeza {L._n(fz)}, não pega"); return
         _dom_fez(S, f, dom, j, fz); e['calejo'] = e.get('calejo', 0) + 1; conta(S, k + '_acertos')
+        fam = TE.FEITICO_FAMILIA.get(k)
+        if fam and isinstance(e.get('calejo_m'), dict): e['calejo_m'][fam] += 1        # (fase 1b) o feitiço de controle que pega dá também +4 na resistência à carga da família dele
         L.diz(S, f"  {f['nome']} lança {nome(k)} em {e['nome']}: {L._n(j['total'])} contra a Firmeza {L._n(fz)}, PEGA")
         if t == 'medo': L._moral(S, e, 'medo'); return
         s = e.setdefault('est', {}); q = sp['poe']; s[q] = max(s.get(q) or 0, sp['dur'])
@@ -430,7 +481,7 @@ def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, ca
             if j['total'] < df and not j['crit']: L.diz(S, f"    em {e['nome']}: {L._n(j['total'])} contra {L._n(df)}, erra"); continue
             _dom_fez(S, f, dom, j, df); feitos += 1
             L.diz(S, f"    em {e['nome']}: {L._n(j['total'])} contra {L._n(df)}" + (', CRÍTICO' if j['crit'] else ''))
-            fere(S, f, e, _dano(S, f, e, sp['dado'], c, vezes, fm, j['crit']), j['crit'], k, c)
+            fere(S, f, e, _dano(S, f, e, sp['dado'], c, vezes, fm, j['crit'], dominio), j['crit'], k, c)
         return
     if forcado and retro(S, f, k, jogada(0, True), c, vezes, fm, True): return        # o que não rola contra ninguém, rola só para o retrochoque do lance forçado
     if t == 'escudo':
@@ -449,7 +500,7 @@ def resolve(S, f, k, alvo=None, casa=None, fonte=None, forc=0, forcado=False, ca
         if a['estado'] == 'caido': _firma(S, a)
     elif t == 'amparo':
         a = _aliado(S, f, alvo, sp['alc'], caido=True); feito = []
-        if a.get('sangra'): a['sangra'] = None; a.pop('queimando', None); feito.append('estanca o sangue')
+        if a.get('sangra') or a.get('filetes'): a['sangra'] = None; a.pop('queimando', None); a['filetes'] = []; feito.append('estanca o sangue')      # (fase 1b) todos os filetes, como hoje
         if a.get('veneno') and a.get('veneno_cat', 0) <= c: a['veneno'] = None; feito.append('tira o veneno')
         if a['estado'] == 'caido' and max(a['morte']) < 3: a['morte'][0] = 3; feito.append('firma quem caiu')
         L.diz(S, f"  {f['nome']} ampara {'a si' if a is f else a['nome']}: " + (', '.join(feito) if feito else 'nada a fazer'))
@@ -585,7 +636,7 @@ def comeco(S, f):
             else: acaba_campo(S, k)
     c = f.get('canaliza')
     if c:
-        if f['chao'] or f['atordoado'] or L._agarrado(S, f): perde(S, f, 'sem teste'); return
+        if f['chao'] or f['atordoado'] or f.get('perde_turno') or L._agarrado(S, f): perde(S, f, 'sem teste'); return
         c['r'] -= 1
         if c['r'] <= 0:
             f['canaliza'] = None; L.diz(S, f"  {f['nome']} solta {nome(c['nome'])}"); resolve(S, f, c['nome'], c['alvo'], c['casa'], c['fonte'], c['forc'], c['forcado'], c.get('campo')); L._fim(S)
@@ -710,7 +761,7 @@ def _vai(S, f, x):
 def _ordem_lancar(S, f, o, fonte=None):
     k = o['feitico']; sp = TM.FEITICOS[k]; t = sp['tipo']
     if TM.ACOES[T.FEITICOS[k]['grau']] > f.get('_restam', 0): return ('espera',)           # não cabe no que sobrou do turno: espera o próximo
-    if fonte is None and f['mana'] < custo(f, k) and not o.get('osso'):
+    if fonte is None and f['mana'] < custo(f, k) and not o.get('osso') and not (o.get('dominio') and dominio_pronto(S, f)):
         _volta(S, f, f"{f['nome']} não tem Mana para {nome(k)} ({f['mana']} de {custo(f, k)}): lançar no osso custa PV (a ordem: lancar {k} osso)"); return None
     alvo = o.get('alvo'); casa = o.get('casa')
     if alvo:
@@ -726,7 +777,7 @@ def _ordem_lancar(S, f, o, fonte=None):
         e = min(al, key=lambda x: L.dist(f, x))
         if L.dist(f, e) > max(sp['alc'], 1): return _vai(S, f, e['x'])
         alvo = e['nome']
-    return ('lanca', k, alvo, casa, dict(fonte=fonte, osso=o.get('osso'), campo=o.get('campo'), ordem=True))
+    return ('lanca', k, alvo, casa, dict(fonte=fonte, osso=o.get('osso'), campo=o.get('campo'), ordem=True, dominio=o.get('dominio') and fonte is None))
 
 
 def _ordem_beber(S, f, o):
@@ -758,7 +809,9 @@ def _fim_da_ordem(S, f):
 def faz(S, f, ac):
     """a ação de magia (o luta._turno chama): lançar, soltar o encanto ou beber"""
     if ac[0] == 'bebe': bebe(S, f, ac[1], ac[2]); x = ac[3]
-    else: x = ac[4]; lanca(S, f, ac[1], ac[2], ac[3], fonte=x.get('fonte'), osso=x.get('osso'), campo=x.get('campo'))
+    else:
+        x = ac[4]; dm = x.get('dominio') or (not x.get('ordem') and x.get('fonte') is None and T.FEITICOS[ac[1]]['grau'] >= 2 and dominio_pronto(S, f))      # (fase 1b) o robô solta o Domínio no primeiro feitiço de grau 2 ou mais
+        lanca(S, f, ac[1], ac[2], ac[3], fonte=x.get('fonte'), osso=x.get('osso'), campo=x.get('campo'), dominio=dm)
     if x.get('ordem'): _fim_da_ordem(S, f)
 
 
@@ -884,7 +937,7 @@ def _alvo_robo(S, f, k, inim, perto, d):
 
 # ---------- a ordem (luta.ordem chama): conferida inteira antes de qualquer dado ----------
 PALAVRAS = ('em', 'casa')
-FLAGS = ('sempre', 'osso', 'neblina', 'lama')
+FLAGS = ('sempre', 'osso', 'neblina', 'lama', 'dominio')
 
 
 def _acha_feitico(f, pal):
@@ -914,7 +967,8 @@ def ordem(S, f, acao, pal):
         if k is None: sys.exit(f'feitiço desconhecido: "{" ".join(cab)}" (os que há: {", ".join(T.FEITICOS)})')
         if k not in (f.get('feiticos') or []): sys.exit(f'{f["nome"]} não sabe {nome(k)} (sabe: {", ".join(f.get("feiticos") or []) or "nenhum feitiço"})')
         _confere_feitico(S, f, k, o)
-        o.update(feitico=k, sempre='sempre' in fl, osso='osso' in fl, campo=next((x for x in fl if x in ('neblina', 'lama')), None))
+        if 'dominio' in fl and not dominio_pronto(S, f): sys.exit(f'{f["nome"]} não tem o Domínio pronto (o foco com ele, inteiro, uma vez por luta)')
+        o.update(feitico=k, sempre='sempre' in fl, osso='osso' in fl, campo=next((x for x in fl if x in ('neblina', 'lama')), None), dominio='dominio' in fl)
     elif acao == 'beber':
         if len(cab) != 1: sys.exit(f'beber o quê? {f["nome"]} leva: {", ".join(_leva(f)) or "nenhuma poção"}')
         b = cab[0]; n = b.partition(':')[0]

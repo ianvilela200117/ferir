@@ -19,7 +19,8 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência); também núcleos (tipo 'nucleo')
     ['item', id, 'onde', 'poe', lugar]  ·  ['item', id, 'solto', 'poe', True|None]  ·  ['item', id, 'sob_medida', 'poe', {dono, grau}]
     ['item', id, 'historia', 'junta', 'texto']  ·  ['item', id, 'some']
-    ['item', id, 'efeito', 'junta', {chave, cheio?, emprestado?}]  ·  ['item', id, 'efeitos_livres'|'cheios_livres', 'poe'|'soma', n]      (a parte 2, fase 1a: os efeitos de
+    ['item', id, 'efeito', 'gasta'|'tira', chave]   (a parte 2, fase 1b: o uso do dia gasto, o Imortal; o efeito que sai) · os efeitos de luta pelo catálogo (tabelas_efeitos)
+    ['item', id, 'efeito', 'junta', {chave, cheio?, emprestado?, contra?}]  ·  ['item', id, 'efeitos_livres'|'cheios_livres', 'poe'|'soma', n]      (a parte 2, fase 1a: os efeitos de
                                                      ferramenta pela porta da força e o teto de efeitos; os campos novos do item: teto_efeitos, cheios_livres, sinete, degrau;
                                                      a obra aceita o molde: ['obra', 'abre', {..., molde}]. O save de antes passa como está: a peça sem teto_efeitos usa o da categoria;
                                                      o cheio só com um cheio por escolher; um apelão de regra por peça; e o evento inteiro deixa a peça dentro do teto, contando
@@ -68,6 +69,7 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
      (o Mestre): python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas na estrada"      um evento "mestre", com os efeitos em JSON
      (o Mestre): python3 estado.py entrada 1a          o evento de ENTRADA de uma fase da parte 2 (DESENHO 9.5), no mesmo commit dela: o marco no save (mundo.oculto)
+     (o Mestre): python3 estado.py entrada 1b          (a fase 1b) o marco e a conversão: o devolve fixo vira %, o sangra vira a Sangria Comum (acima da Comum, fica); o critico_19 fica (a resposta 2a)
 """
 import copy, hashlib, json, os, random, sys
 import tabelas as T
@@ -131,7 +133,9 @@ def sorte(E, chave):
 
 
 ENTRADAS = {'1a': 'a faixa da forja e os efeitos de ferramenta (a parte 2). Nada a converter: a peça de antes, sem teto_efeitos, usa o da categoria, '
-                  'e as duas peças com efeito de hoje cabem nos tetos novos'}      # (DESENHO 9.5) o evento de ENTRADA de cada fase, no mesmo commit dela
+                  'e as duas peças com efeito de hoje cabem nos tetos novos',
+            '1b': 'a base da luta e os efeitos de item (a parte 2). O devolve fixo vira o % da categoria; o sangra vira a Sangria Comum (na peça Comum, a chave nova; acima, fica o de antes); o derruba segue, e entra no calejo de pernas; '
+                  'o critico_19 fica na peça que já o tem (a resposta 2a: o que nasceu, nasceu); as armas e armaduras da 1a escolhem do catálogo de luta'}      # (DESENHO 9.5) o evento de ENTRADA de cada fase, no mesmo commit dela
 
 
 def entrada(E, fase):
@@ -140,7 +144,33 @@ def entrada(E, fase):
     entra no registro (devolve None)."""
     if fase not in ENTRADAS: sys.exit(f'não há entrada da fase "{fase}" (as que há: {", ".join(ENTRADAS)})')
     if ((E.get('mundo') or {}).get('oculto') or {}).get(f'entrada/{fase}') is not None: return None
-    return aplica(E, 'entrada', [['mundo', 'oculto', f'entrada/{fase}', 'poe', E['relogio']['dia']]], texto=f'a entrada da fase {fase}: {ENTRADAS[fase]}')
+    ef = [['mundo', 'oculto', f'entrada/{fase}', 'poe', E['relogio']['dia']]]
+    if fase == '1b': ef += converte_1b(E)
+    return aplica(E, 'entrada', ef, texto=f'a entrada da fase {fase}: {ENTRADAS[fase]}')
+
+
+def converte_1b(E):
+    """(a parte 2, fase 1b; DESENHO 3.7) o que a entrada da 1b converte nas peças do mundo, efeito por efeito (o marco da entrada vai antes, no mesmo evento: daí a validação já
+    é a nova): o `devolve N` fixo vira o Devolve (o % da categoria); o `sangra` vira a SANGRIA COMUM (3.7.3: a ferida sangra 5 rodadas): na peça Comum, a chave `sangria`, que é
+    isso mesmo; na peça acima da Comum a chave `sangria` daria a Sangria da categoria dela (os filetes, mais forte que o de antes), e por isso o `sangra` FICA, como o critico_19:
+    é a Sangria Comum de antes, na peça que já o tem, e nenhuma peça nova o ganha. O `derruba` segue como está (a luta o põe no calejo de pernas); o `critico_19` fica (a
+    resposta 2a). A peça Comum que já tinha os dois (o sangra e a Sangria) perde só o de antes."""
+    ef = []
+    for iid, it in sorted(E['itens']['itens'].items()):
+        efs = [e for e in it.get('efeitos') or [] if isinstance(e, dict)]; tem_ = {e.get('chave') for e in efs}
+        for e in efs:
+            if e.get('chave') == 'devolve' and 'valor' in e: ef += [['item', iid, 'efeito', 'tira', 'devolve'], ['item', iid, 'efeito', 'junta', {'chave': 'devolve'}]]
+            elif e.get('chave') == 'sangra' and it.get('cat') == 0:
+                ef.append(['item', iid, 'efeito', 'tira', 'sangra'])
+                if 'sangria' not in tem_: ef.append(['item', iid, 'efeito', 'junta', {'chave': 'sangria'}])
+        if ef and ef[-1][1] == iid: ef.append(['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: a regra nova da luta (a fase 1b) converteu os efeitos de antes"])
+    return ef
+
+
+def legado_1b(E):
+    """(a transição da fase 1b, DESENHO 3.7 e 9.5) a validação ainda aceita os efeitos de antes que a entrada converte (o devolve fixo, o sangra da peça Comum)? Até o evento de
+    entrada da 1b (o critico_19 e o sangra acima da Comum ficam sempre, só na peça que já os tem)"""
+    return ((E.get('mundo') or {}).get('oculto') or {}).get('entrada/1b') is None
 
 
 def sorte_fixa(E, chave):
@@ -821,8 +851,10 @@ def _um(E, ef):
         it = copy.deepcopy(ef[2])
         if not isinstance(it, dict) or it.get('tipo') not in TIPOS_ITEM or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
-        e = _item_magia_erro(it) or _item4b_erro(it)
+        e = _item_magia_erro(it, legado_1b(E)) or _item4b_erro(it)
         if e: return _erro(ef, e)
+        if any(isinstance(x, dict) and x.get('chave') in ('critico_19', 'sangra') for x in it.get('efeitos') or []):       # (fase 1b) a peça nova segue o catálogo, antes ou depois da entrada (a resposta 2a)
+            return _erro(ef, 'o efeito de antes (o critico_19, o sangra) não nasce em peça nova: fica só na peça que já o tem (a resposta 2a: o que nasceu, nasceu), e a peça nova leva o Crítico pela categoria ou a Sangria')
         if not (isinstance(it['dur'], list) and len(it['dur']) == 2 and all(_int(x) for x in it['dur']) and 0 <= it['dur'][0] <= it['dur'][1]): return _erro(ef, 'a durabilidade é [quanto tem, quanto cabe]')
         if it.get('dono') is not None and it['dono'] not in E['gente']: return _erro(ef, f'não há a pessoa "{it["dono"]}"')
         if it.get('dono') is not None and E['gente'][it['dono']]['estado'] != 'vivo': return _erro(ef, f'{E["gente"][it["dono"]]["nome"]} morreu: não recebe peça')
@@ -845,7 +877,7 @@ def _um(E, ef):
         if campo == 'encanto': return _encanto(E, it, op, val, ef)
         if campo in ('maldita', 'benta', 'veneno') and op == 'poe':
             if val is None: it.pop(campo, None); return
-            x = dict(it); x[campo] = val; e = _item_magia_erro(x)
+            x = dict(it); x[campo] = val; e = _item_magia_erro(x, legado_1b(E))
             if e: return _erro(ef, e)
             it[campo] = copy.deepcopy(val); return
         if campo == 'dono' and op == 'poe':
@@ -878,14 +910,24 @@ def _um(E, ef):
             else: it['talhe'] = val
             return
         if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
-        if campo == 'efeito' and op == 'junta':              # (a etapa dos efeitos) um efeito novo na peça: {chave, cheio?, emprestado?} (de ferramenta) ou {chave, valor?} (os de luta de hoje)
+        if campo == 'efeito' and op == 'junta':              # (a etapa dos efeitos) um efeito novo na peça: {chave, cheio?, emprestado?, contra?} (de ferramenta e, da fase 1b, de luta: o catálogo)
             import itens as IT
-            if not isinstance(val, dict) or val.get('chave') not in IT.EFEITOS: return _erro(ef, f'o efeito é {{chave, cheio?, emprestado?}}, com a chave de um dos que há ({", ".join(IT.EFEITOS)})')
+            if not isinstance(val, dict) or val.get('chave') not in IT.EFEITOS: return _erro(ef, f'o efeito é {{chave, cheio?, emprestado?, contra?}}, com a chave de um dos que há ({", ".join(IT.EFEITOS)})')
             if it['tipo'] not in IT.EFEITOS[val['chave']][1]: return _erro(ef, f'o efeito "{val["chave"]}" não vale em {it["tipo"]} (vale em: {", ".join(IT.EFEITOS[val["chave"]][1])})')
             if any(isinstance(e, dict) and e.get('chave') == val['chave'] for e in it.get('efeitos') or []): return _erro(ef, f'{it["nome"]} já tem o efeito "{val["chave"]}"')
-            e = _efeito_erro(it, val, novo=True)
+            e = _efeito_erro(it, val, novo=True, legado=legado_1b(E))
             if e: return _erro(ef, e)
             it.setdefault('efeitos', []).append(copy.deepcopy(val)); return
+        if campo == 'efeito' and op in ('gasta', 'tira'):    # (fase 1b, 9.5) gasta: marca um uso do dia (o Imortal: um por dia; recusa se o dia já não dá) · tira: o efeito sai (o erro desfeito; na fase 5, o vidro partido, a Sede quebrada)
+            import tabelas_efeitos as TE
+            i = next((n for n, e in enumerate(it.get('efeitos') or []) if isinstance(e, dict) and e.get('chave') == val), None)
+            if i is None: return _erro(ef, f'{it["nome"]} não tem o efeito "{val}"')
+            if op == 'tira': it['efeitos'].pop(i); return
+            x = it['efeitos'][i]
+            if (TE.EFEITOS.get(val) or {}).get('usos') != 'dia': return _erro(ef, f'"{val}" não tem uso do dia (o Imortal tem um por dia; o que é por luta não volta ao estado)')
+            g = x.get('gasto') if isinstance(x.get('gasto'), dict) else None; dia = E['relogio']['dia']
+            if g and g.get('dia') == dia: return _erro(ef, f'o {TE.EFEITOS[val]["nome"]} de {it["nome"]} já foi gasto hoje (um por dia)')
+            x['gasto'] = dict(dia=dia, n=1); return
         if campo == 'efeitos_livres' and op in ('poe', 'soma'):     # os efeitos que a faixa (ou a obra-prima) ainda deixa escolher
             q = (val if op == 'poe' else (it.get('efeitos_livres') or 0) + val) if _int(val) else None
             if q is None or q < 0: return _erro(ef, 'os efeitos por escolher são um número inteiro, de zero para cima')
@@ -913,7 +955,7 @@ def _um(E, ef):
         if campo == 'dur' and op == 'soma' and _num(val):
             if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta) · efeitos_livres, cheios_livres (poe, soma) · encanto (grava, gasta, apaga)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta, gasta, tira) · efeitos_livres, cheios_livres (poe, soma) · encanto (grava, gasta, apaga)')
     if v == 'mundo': return _mundo(E, ef)
     return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao, mundo)')
 
@@ -1272,7 +1314,7 @@ def _maldicao(E, ef):
 def _encanto_erro(x): return not (isinstance(x, dict) and x.get('feitico') in T.FEITICOS and _int(x.get('grau')) and 0 <= x['grau'] <= 4 and (x.get('gasto') is None or _int(x['gasto'])))
 
 
-def _item_magia_erro(it):
+def _item_magia_erro(it, legado=True):
     """o que os tipos e os campos novos de item pedem (None: certo)"""
     t = it.get('tipo')
     if t == 'foco' and it.get('forma') not in T.FOCOS: return f'o foco pede a forma ({", ".join(T.FOCOS)})'
@@ -1292,7 +1334,7 @@ def _item_magia_erro(it):
         if it.get('forma') is not None and it['forma'] not in TO.FERRAMENTA_FORMAS: return f'a forma da ferramenta é uma de: {", ".join(TO.FERRAMENTA_FORMAS)}'
     el = it.get('efeitos_livres')
     if el is not None and (not _int(el) or el < 0): return 'os efeitos por escolher são um número inteiro, de zero para cima'
-    e = _campos_faixa_erro(it)                               # (a parte 2, fase 1a) o teto de efeitos, os cheios, o sinete, o degrau, e cada efeito na porta dele
+    e = _campos_faixa_erro(it, legado)                       # (a parte 2, fases 1a e 1b) o teto de efeitos, os cheios, o sinete, o degrau, e cada efeito na porta dele
     if e: return e
     if it.get('benta') is not None and (t != 'arma' or not _int(it['benta'])): return 'só a arma fica benta (até um bloco)'
     v = it.get('veneno')
@@ -1311,10 +1353,11 @@ def _teto_ef(it):
     t = it.get('teto_efeitos'); return t if _int(t) else TO.efeitos_max(it['cat'] if _int(it.get('cat')) else 0)
 
 
-def _efeito_erro(it, val, novo=False):
-    """(a parte 2, fase 1a) o que um efeito pede para estar nesta peça (None: certo). O de FERRAMENTA: a porta pela força (com o degrau emprestado, uma acima: só com o direito
-    que a peça trouxe ao nascer, um só, e em peça de até 4 efeitos); o cheio só em efeito de número. Os de luta de hoje seguem a regra de hoje (o devolve de 1 ao teto da
-    categoria; nenhum leva cheio nem emprestado) até o evento de entrada da fase 1b. `novo`: o efeito está entrando (conta ele no teto de efeitos)."""
+def _efeito_erro(it, val, novo=False, legado=True):
+    """(a parte 2, fases 1a e 1b) o que um efeito pede para estar nesta peça (None: certo). O de FERRAMENTA: a porta pela força (com o degrau emprestado, uma acima: só com o direito
+    que a peça trouxe ao nascer, um só, e em peça de até 4 efeitos); o cheio só em efeito de número. O de LUTA (fase 1b): o catálogo (itens.efeito_erro: o tipo, a arma certa,
+    a porta, a Caçadora com `contra`, o cheio só em número, um apelão de regra, uma porta adiantada); os de antes (o devolve fixo, o sangra) até o evento de entrada da 1b
+    (`legado`), e o critico_19 sempre, na peça que já o tem (a resposta 2a). `novo`: o efeito está entrando (conta ele no teto de efeitos)."""
     import tabelas_oficio as TO
     k = val.get('chave'); cat = it['cat'] if _int(it.get('cat')) else 0
     if k in TO.FERRAMENTA_EFEITOS:
@@ -1337,14 +1380,15 @@ def _efeito_erro(it, val, novo=False):
             if outros: return f'"{k}" é apelão de regra, e a peça já leva um ({outros[0]}): um apelão de regra por peça'
         if k == 'poupa_ferro' and it.get('oficio') == 'couro': return 'o poupa-ferro poupa o metal, e a obra do couro (a armadura de couro) não leva metal: na ferramenta de couro ele nunca agiria'
     else:
-        if val.get('cheio') or val.get('emprestado'): return f'o efeito "{k}" é de luta: o cheio e o degrau emprestado chegam com o catálogo de luta (a fase 1b)'
-        if k == 'devolve' and not (_int(val.get('valor')) and 1 <= val['valor'] <= T.devolve_max(cat)): return f'"devolve" numa peça {T.CATS[cat]} vai de 1 a {T.devolve_max(cat)}'
-        if k != 'devolve' and 'valor' in val: return f'o efeito "{k}" não leva valor'
+        import itens as IT
+        x = IT.efeito_erro(it, val, novo=novo, legado=legado)
+        if x: return x
+        if novo and val.get('cheio') and not (it.get('cheios_livres') or 0) >= 1: return f'"{k}" cheio pede um cheio por escolher na peça (o cheio nasce do que passa do teto de efeitos, e da têmpera): ela não tem'
     if novo and len(it.get('efeitos') or []) + 1 > _teto_ef(it): return f'a peça já tem os efeitos que o teto dela deixa ({_teto_ef(it)})'
     return None
 
 
-def _campos_faixa_erro(it):
+def _campos_faixa_erro(it, legado=True):
     """(a parte 2, fase 1a) os campos novos do item: teto_efeitos (de o da categoria a ele mais 2: a obra-prima no teto e o molde), cheios_livres (até os por escolher), sinete,
     degrau; os efeitos (escolhidos e por escolher) até o teto; cada efeito de ferramenta na porta dele. O save de antes (sem os campos) passa como está."""
     import tabelas_oficio as TO
@@ -1359,11 +1403,17 @@ def _campos_faixa_erro(it):
     if not isinstance(efs, list) or not all(isinstance(e, dict) for e in efs): return 'os efeitos da peça são uma lista de {chave, ...}'
     if len(efs) + (it.get('efeitos_livres') or 0) > _teto_ef(it): return f'a peça tem mais efeitos (escolhidos e por escolher: {len(efs) + (it.get("efeitos_livres") or 0)}) do que o teto dela ({_teto_ef(it)})'
     if sum(1 for e in efs if e.get('emprestado')) > 1: return 'a peça tem mais de um efeito do degrau emprestado'
+    import itens as IT
     for e in efs:
         if e.get('chave') in TO.FERRAMENTA_EFEITOS:
             if it.get('tipo') != 'ferramenta': return f'o efeito "{e["chave"]}" é de ferramenta'
             x = _efeito_erro(it, e)
             if x: return x
+        elif e.get('chave') in IT.EFEITOS:                    # (fase 1b) os de luta, pelo catálogo; os de antes, até a entrada da 1b (o critico_19, sempre)
+            x = _efeito_erro(it, e, legado=legado)
+            if x: return x
+        else: return f'o efeito "{e.get("chave")}" não está no catálogo'
+    if sum(1 for e in efs if IT.EFEITOS.get(e.get('chave')) and __import__('tabelas_efeitos').apelao_de_regra(e.get('chave'))) > 1: return 'a peça leva mais de um apelão de regra (um por peça)'
     return None
 
 
@@ -1490,7 +1540,7 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
     tocadas = sorted({ef[1] for ef in efeitos if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'item' and isinstance(ef[1], str) and ef[2] in ('efeito', 'efeitos_livres', 'cheios_livres')})
     for iid in tocadas:
         it = ensaio['itens']['itens'].get(iid)
-        e = _campos_faixa_erro(it) if isinstance(it, dict) else None
+        e = _campos_faixa_erro(it, legado_1b(ensaio)) if isinstance(it, dict) else None
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. A peça {iid} ({it.get("nome")}) sairia do evento fora da regra: {e}')
     if all(ensaio[k] == E[k] for k in ARQS): return None
     if sum(1 for p in ensaio['gente'].values() if isinstance(p, dict) and p.get('jogador')) > 1 and tipo == 'heranca': sys.exit(f'evento "{tipo}" recusado, nada mudou: ficariam dois personagens do jogador (tire o do morto no mesmo evento)')
@@ -1592,6 +1642,9 @@ def lutador(E, pid, visivel=False, **mais):
     if not visivel and mana_max(p, True) != d['mana_max']: d['mana_vista'] = mana_max(p, True)                # o dom de tradição escondido: a luta usa a Mana de verdade, a mesa mostra a que a pessoa conhece
     pl = sum(m.pena_laco(E, pid) for m in modulos('pena_laco'))
     if pl: d['pena_laco'] = pl                                                              # o laço do druida com o ermo caçado até o fim tira da Conjuração dele
+    dia = E['relogio']['dia']                               # (fase 1b) o salvamento de 1 PV é um só por dia, venha de onde vier: o Imortal gasto hoje, em qualquer peça da pessoa, tira os outros
+    if any(isinstance(x, dict) and x.get('chave') == 'imortal' and isinstance(x.get('gasto'), dict) and x['gasto'].get('dia') == dia
+           for it in E['itens']['itens'].values() if it.get('dono') == pid for x in it.get('efeitos') or []): d['salvo_dia'] = True
     rp = _povo_reg(p)                                       # O POVO (etapa 4b): os traços e a coragem dele vão à luta (o nome não: o "povo" do lutador é o corpo das criaturas)
     if rp.get('tracos'): d['tracos'] = list(rp['tracos'])
     if rp.get('coragem'): d['coragem'] = rp['coragem']
@@ -1674,7 +1727,7 @@ def valida(E):
     def item_(iid, it):
         n = f'{it.get("nome", "?")} ({iid})'; dono = it.get('dono')
         if it.get('tipo') not in TIPOS_ITEM: P.append(f'{n} tem tipo desconhecido: {it.get("tipo")}')
-        e = _item_magia_erro(it) if it.get('tipo') in TIPOS_ITEM else None
+        e = _item_magia_erro(it, legado_1b(E)) if it.get('tipo') in TIPOS_ITEM else None
         if e: P.append(f'{n}: {e}')
         if it.get('uso') in USO_DO_TIPO and it.get('tipo') != USO_DO_TIPO[it['uso']]: P.append(f'{n} é {it.get("tipo")} e está em "{it["uso"]}"')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): P.append(f'{n} tem categoria fora da tabela: {it["cat"]}')

@@ -121,6 +121,7 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 - **O dono é uma pessoa, não um nome:** a peça ajustada no mundo guarda quem é o dono. Na mão de outra pessoa de mesmo nome, é peça de outro.
 
 2.9 **Sintonia.** A pessoa sustenta **Vontade ÷ 20** peças Épicas ou melhores (no mínimo uma), as melhores primeiro. Cada peça que passa disso **dorme**: rende uma categoria abaixo e os efeitos dela não valem (nem o "leve", nem o "não quebra"). Vontade 55 sustenta duas: quem quer o conjunto inteiro treina a Vontade.
+(A parte 2, fase 1b: só **um apelão de regra fica acordado por pessoa**, e **a peça dele ocupa 2 lugares**; a outra peça de apelão tem o apelão dormindo, só ele, e ocupa 1 lugar, como toda peça alta: o resto dela vale. Ferord, de Vontade 50, sustenta uma peça de apelão acordado e mais nenhuma Épica. Capítulo 28.8.)
 
 2.10 **Durabilidade.** O aço gasta o aço.
 - **Aparado:** o golpe que erra por não mais que o bônus do escudo (ou da arma que apara) foi aparado. Dos dois aços que se encontraram, o de categoria **menor** perde 1.
@@ -132,17 +133,7 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 - As mãos e a peça com "não quebra" não gastam. Consertar é ofício de ferreiro, fora da luta.
 - A durabilidade gasta volta ao Livro de Itens a cada vez que a luta é guardada.
 
-2.11 **Efeitos.** Uma peça só leva efeito que a luta sabe rodar, e só no tipo de peça certo:
-
-| Efeito | O que faz | Vale em |
-| --- | --- | --- |
-| sangra | a ferida que ela abre sangra por cinco rodadas | arma |
-| critico_19 | o 19 também é crítico | arma |
-| derruba | uma vez por luta, o golpe que fere derruba (não derruba quem é maior que quem bate: 6.5) | arma |
-| devolve N | quem golpeia o dono corpo a corpo leva N (o teto é 4 por degrau da categoria: Comum 4, Raro 12, Lendário 24) | armadura |
-| firme | o dono não é derrubado | armadura, escudo |
-| leve / pesa | pede 20 a menos / a mais de atributo | todas |
-| nao_quebra | não perde durabilidade | todas |
+2.11 **Efeitos.** Uma peça só leva efeito que a luta sabe rodar, e só no tipo de peça certo. **Da parte 2, fase 1b, os efeitos de luta são os do catálogo do capítulo 28** (os 21 de número, que crescem com a categoria, e os 26 de regra, com força e porta; os números moram no `tabelas_efeitos.py`, e a peça nunca guarda o número: ele sai da categoria que ela rende). Os de antes: o **derruba**, o **firme**, o **leve**, o **pesa** e o **não quebra** seguem, no catálogo (o derruba agora dá o calejo de pernas); o **devolve N** fixo virou o Devolve, o % do dano levado (o evento de entrada da 1b converte a peça antiga); o **sangra** virou a Sangria Comum (a ferida sangra 5 rodadas: na peça Comum, a chave `sangria`; acima da Comum ele fica, na peça que já o tem, porque a Sangria da categoria seria mais forte); o **critico_19** (o 19 também é crítico: 19/11, o Crítico da Épica) fica na peça que já o tem, o Martelo Incomum de Ferord (a resposta 2a do jogador: o que nasceu, nasceu); nenhuma peça nova ganha um efeito de antes, e o Crítico não entra na peça que tem o critico_19 (28.9).
 
 2.12 **A janela do item** aparece na cena quando a peça nasce, muda de mão ou quebra (`python3 itens.py janela ID`).
 
@@ -162,10 +153,10 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 - **levantar-se**, **apanhar a arma**, **recarregar**, **esperar** (+2 na Defesa).
 
 3.4 **O golpe.** 2d20 + acerto contra a Defesa.
-- **Crítico:** um dado deu 20 e o outro, 11 ou mais. Acerta sempre, os dados do dano dobram e a proteção vale a metade.
+- **Crítico:** um dado deu 20 e o outro, 11 ou mais. Acerta sempre, os dados do dano dobram e a proteção vale a metade. (Fase 1b: o crítico é uma **faixa**, a face alta e o mínimo do outro dado; o efeito Crítico a melhora pela categoria, de 20/9 na Comum a 17/7 na Primordial; o critico_19 de antes é 19/11; o Golpe do Fim, 17/11 e os dados 4 vezes. Vale a melhor faixa, nunca melhor que 17/7: 28.2.)
 - **Dois 1:** erra, e a arma perde 1 de durabilidade.
 - **Onde cai** (d10): 1 cabeça · 2-3 braços · 4-7 tronco · 8-10 pernas.
-- **O dano:** dado × 4 × o valor da arma ÷ a proteção da parte atingida, vezes a força do golpe.
+- **O dano:** dado × 4 × o valor da arma ÷ a proteção da parte atingida, vezes a força do golpe. (Fase 1b: e os efeitos, pela pilha, no fim, para baixo uma vez; o golpe inteiro nunca passa de 7 vezes o mesmo golpe pela regra de hoje: 28.2.)
 
 3.5 **Mirar a fresta.** Contra armadura de categoria maior que a arma, quem golpeia pode mirar: **−8 no acerto**, e se acertar a armadura conta **uma categoria abaixo**. O script mira sozinho quando compensa (quem tem acerto de sobra mira; quem mal acerta, não). É o que o mestre faz contra o encouraçado, e é por isso que só a armadura não segura um nível muito maior.
 
@@ -208,12 +199,12 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 
 | Parte | Ferida | Grave |
 | --- | --- | --- |
-| cabeça | atordoado: perde 1 ação | perde 2 ações |
+| cabeça | atordoado: perde 1 ação | perde 2 ações (numa luta com carga de cabeça, conta como turno perdido e dá a cabeça firme: 28.5) |
 | braços | −2 no acerto | −4, e larga a arma |
 | tronco | perde 3 de fôlego e sangra | perde 6 e sangra |
 | pernas | vai ao chão | vai ao chão e fica com a perna presa: levanta-se, mas não sai mais do lugar (−2 na Defesa) |
 
-**O sangue:** a ferida do tronco, a ferida grave e a da arma que "sangra" tiram, por rodada, um quinto do golpe que as abriu, por 3 rodadas (5, se grave ou da arma que sangra). O que o sangue tira (e o que o veneno tira, 6.6) sai escrito no registro, no fim de cada rodada ("Cira sangra 13 (37/121)"): a conta dos golpes fecha com o quadro. No chão: −4 na Defesa, e levantar gasta uma ação. A ferida fica depois da luta; o fim da luta lista só as feridas abertas nela.
+**O sangue:** a ferida do tronco, a ferida grave e a da arma com a Sangria Comum (o "sangra" de antes) tiram, por rodada, um quinto do golpe que as abriu, por 3 rodadas (5, se grave ou da arma com a Sangria Comum). Esse é o **filete da ferida**, um só, o maior. (Fase 1b: só os efeitos abrem filetes a mais, a Sangria da Incomum para cima e a Brasa; até 3 filetes, contando o da ferida; `atar` corta o mais forte: 28.3. A luta sem efeito sangra como antes.) O que o sangue tira (e o que o veneno tira, 6.6) sai escrito no registro, no fim de cada rodada ("Cira sangra 13 (37/121)"): a conta dos golpes fecha com o quadro. No chão: −4 na Defesa, e levantar gasta uma ação. A ferida fica depois da luta; o fim da luta lista só as feridas abertas nela.
 
 3.13 **Cair e morrer.** A zero de PV a pessoa cai. Se o golpe que a derrubou tirou mais da metade do PV máximo, ela morre na hora. Caída, rola 1d20 por rodada contra 12: três falhas, morre; três sucessos, fica estável. **No fim da luta,** os caídos do lado que ficou com o campo são estancados pelos seus; os outros rolam até o fim.
 
@@ -226,11 +217,11 @@ O fio abre o couro e escorrega no metal; a ponta abre o elo da malha; o malho am
 | metade do seu lado caiu | 26 |
 | o líder caiu ou fugiu | 29 |
 
-Falhou por pouco: **fraqueja**, e segue na luta com o ânimo abalado (−2 no acerto). Falhou de novo, ou por 10 ou mais: **quebra**. Quem quebra foge (e leva um golpe livre de quem está colado), ou **se rende** se está muito ferido ou sem saída. Rendido é prisioneiro, com nome.
+**A escada do medo** (a parte 2, fase 1b: a única mudança da fase que toca toda luta de gente): falhou por menos de 10, **fraqueja** (ABALADO: −2 no acerto, até o fim da luta); falhou por 10 ou mais, **quebra**. Já abalado, falhou por menos de 5: fica **ACUADO** (−4 no acerto, no lugar dos −2; não avança contra quem o assustou: só segura, guarda, toma fôlego ou recua; desce a abalado depois de 2 rodadas sem susto novo); por 5 ou mais, quebra. Acuado, falhou: quebra. Quem quebra foge (e leva um golpe livre de quem está colado), ou **se rende** se está muito ferido ou sem saída. Rendido é prisioneiro, com nome. (As fontes novas de medo, o Medo e o Temível das peças, testam juntas: 28.6.)
 - **Quem fugia e leva, de costas, o golpe que o põe no chão (ou lhe prende a perna) não sai:** segue na luta, onde caiu.
 - **Ninguém se rende a um bicho:** quem quebraria se rendendo foge; sem saída, fica abalado e luta.
 - **Quem ficou com o campo não testa a coragem:** sem inimigo de pé, ninguém foge nem se rende.
-**Quem o jogador comanda nunca foge nem se rende pelo dado:** ele fraqueja (fica abalado), a luta para, e a escolha é do jogador.
+**Quem o jogador comanda nunca foge nem se rende pelo dado:** ele fraqueja (fica abalado: para no abalado, nunca acuado), a luta para, e a escolha é do jogador.
 
 3.15 **O impasse e a retirada.** Oito rodadas seguidas sem ninguém ferir ninguém de verdade (menos de 2% do PV, somado), e os dois lados se separam. A luta que chega a 60 rodadas acaba em empate.
 **Sair da luta:** quem tem ordem de recuar anda para trás enquanto houver inimigo de pé a menos de 8 casas, e, se acaba a rodada a 8 casas ou mais de todo inimigo de pé, saiu da luta. Quem persegue anda o mesmo que quem foge: só se sai com alguém segurando a passagem, com o chão a favor, ou se o outro lado não vier atrás.
@@ -240,12 +231,12 @@ Falhou por pouco: **fraqueja**, e segue na luta com o ânimo abalado (−2 no ac
 - a luta vai começar;
 - alguém da casa cai, morre, foge, se rende, ou tem uma peça quebrada;
 - o líder do outro lado cai ou foge, ou alguém de lá se rende;
-- quem o jogador comanda é ferido, passa de metade ou de um quarto do PV, fica sem fôlego, fraqueja, perde o alvo, ou está segurando onde só apanha;
+- quem o jogador comanda é ferido, passa de metade ou de um quarto do PV, fica sem fôlego, fraqueja, perde o alvo, ou está segurando onde só apanha; (fase 1b) fica atordoado pela carga; o Imortal segura alguém da casa de pé;
 - quem o jogador mandou tomar fôlego encheu o fôlego (a ordem acabou);
 - passam três rodadas sem novidade.
 
 O jogador então dá a ordem de quem ele comanda, e a ordem do grupo (só o lado dele recebe ordem; nome ou ação que não existe é recusado, com a lista do que vale):
-`atacar [alvo]` (se o alvo está longe, vai até ele, contornando se a linha deixar) · `segurar` (não anda; bate em quem chega) · `avancar` · `recuar` (a retirada: anda para trás até ficar a 8 casas de todo inimigo de pé, 3.15) · `folego` · `guardar NOME`, e no fim a postura.
+`atacar [alvo]` (se o alvo está longe, vai até ele, contornando se a linha deixar) · `segurar` (não anda; bate em quem chega) · `avancar` · `recuar` (a retirada: anda para trás até ficar a 8 casas de todo inimigo de pé, 3.15) · `folego` · `guardar NOME` · (fase 1b) `atar [ALIADO]` (1 ação, em si ou num aliado colado: corta o filete mais forte) · `animar` (o Escudo que Conta), e no fim a postura.
 A ordem do grupo é uma palavra: `atacar`, `segurar` ou `recuar`.
 **A ordem `folego` acaba quando o fôlego enche:** daí em diante a pessoa segura (bate em quem chega), e a luta para e pergunta. Ninguém fica tomando fôlego de fôlego cheio enquanto o inimigo chega.
 
@@ -254,7 +245,7 @@ A ordem do grupo é uma palavra: `atacar`, `segurar` ou `recuar`.
 ## 4. O banco de provas
 
 Toda mudança de regra ou de número roda `python3 provas.py`. Meta que falha: a mudança não entra, ou a meta muda com a palavra do jogador.
-A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **114 de 114 passam:** as 54 metas deste capítulo, as 26 dos bichos (6.14) e as 34 da magia na luta (11.13). O banco do mundo (`python3 provas_mundo.py`, saída em `dados/provas_mundo_saida.txt`) passa 222 de 222: as etapas 1 e 2, os dons e os talentos (10), a magia do mundo (12 a 14), as criaturas (15 e 16) e a etapa 4b (17 a 20: o alicerce, a masmorra, o ladino, os povos, os dragões e a integração, cada banco com a saída dele em `dados/`). O `python3 estresse.py 1500` roda lutas ao acaso (e 500 de magia) e confere os invariantes (`dados/estresse_saida.txt`).
+A medição completa está em `dados/provas_saida.txt` (600 lutas por meta; as da fase 1b, 2.000 por linha). **179 de 180 passam:** as 54 metas deste capítulo, as 26 dos bichos (6.14), as 34 da magia na luta (11.13) e as 66 da fase 1b (28.11: B0, EF1 a EF8 e B3; a que não passa é a linha do EF3 da Rara com a Escancara do degrau emprestado, na borda: 73,95% contra os 74 da meta, e ela espera a decisão do Mestre: DESENHO 12.3). **Desde a fase 1b, a escada do medo (28.6) vale em toda luta de gente:** as medidas deste capítulo, do 6.14 e do 11.13 andaram alguns pontos (quem fraqueja fica mais vezes, acuado, em vez de fugir), e as metas seguem passando; os números abaixo são os de agora. O banco do mundo (`python3 provas_mundo.py`, saída em `dados/provas_mundo_saida.txt`) passa, com a fase 1b, **268 de 268**: as etapas 1 e 2, os dons e os talentos (10), a magia do mundo (12 a 14), as criaturas (15 e 16), a etapa 4b (17 a 20: o alicerce, a masmorra, o ladino, os povos, os dragões e a integração, cada banco com a saída dele em `dados/`), a etapa final e o ano (o B1 da parte 2). O DR2 do dragão jovem, que a escada do medo tirava da faixa (o jovem da serra a 76%), volta com o pavor do jovem 29 (20.3): 74% no banco, 71-72% em 1.000 lutas. O `python3 estresse.py 1500` roda lutas ao acaso (e 500 de magia), com efeitos de item ao acaso, e confere os invariantes, os da pilha e da carga também (`dados/estresse_saida.txt`).
 
 ### Quem vence
 
@@ -276,10 +267,10 @@ A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **1
 | só a armadura uma acima, mesmo nível | 75 a 97% | 92% |
 | só a armadura duas acima contra 100 níveis (50 × 150) | 75 a 100% | 93% |
 | o conjunto duas acima (com Vontade para ele), 50 × 500 | 95 a 100% | 100% |
-| **um nível 50 de conjunto Lendário × dez de nível 275 de Raro** | 85 a 100% | **92%** |
+| **um nível 50 de conjunto Lendário × dez de nível 275 de Raro** | 85 a 100% | **87%** (92% antes da escada) |
 | um nível 90 de conjunto Mítico × dez de nível 275 de Raro | 90 a 100% | 100% |
-| o mesmo, só com a arma Mítica (armadura Rara) | 0 a 40% | 12% |
-| um nível 120 de Lendário × dez de nível 60 de Único (uma categoria abaixo) | 15 a 60% | 49% |
+| o mesmo, só com a arma Mítica (armadura Rara) | 0 a 40% | 7% |
+| um nível 120 de Lendário × dez de nível 60 de Único (uma categoria abaixo) | 15 a 60% | 36% |
 | o mesmo, com os dez na mesma categoria | 0 a 5% | 0% |
 | o mesmo, com o um DUAS categorias acima | 90 a 100% | 100% |
 | um nível 120 de Lendário × dez soldados Comuns | 97 a 100% | 100% |
@@ -297,30 +288,30 @@ A medição completa está em `dados/provas_saida.txt` (600 lutas por meta). **1
 
 ### As armas entre si
 
-Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas as outras. A meta: nenhuma montagem com média abaixo de 35% nem acima de 65%. Medido: a melhor 62% (malho e placa), a pior 36% (machado, escudo e couro). Nenhuma escolha é a única certa: o impacto vence a placa, a ponta vence a malha, o couro age primeiro, a lança manda no corredor.
+Cada arma de guerra, com cada armadura, todas Raras, no nível 60, contra todas as outras. A meta: nenhuma montagem com média abaixo de 35% nem acima de 65%. Medido: a melhor 63% (malho e placa), a pior 36% (machado, escudo e couro). Nenhuma escolha é a única certa: o impacto vence a placa, a ponta vence a malha, o couro age primeiro, a lança manda no corredor.
 
 ### Os módulos (cada coisa que interfere, interfere para o lado certo)
 
 | Módulo | O que se mediu |
 | --- | --- |
-| alcance | três lanças contra três espadas: 70% num corredor de um, 40% em campo aberto |
-| distância | a arqueira contra o infante: 34% começando longe, 16% começando colada |
-| tempo | a mesma arqueira: 11% na neblina, 34% com tempo limpo, 59% na lama |
-| lugar | um contra quatro: 48% em campo aberto, 85% num corredor de um |
-| golpe contra armadura | contra a placa: o malho 78%, o montante 46% |
+| alcance | três lanças contra três espadas: 75% num corredor de um, 38% em campo aberto |
+| distância | a arqueira contra o infante: 33% começando longe, 14% começando colada |
+| tempo | a mesma arqueira: 10% na neblina, 33% com tempo limpo, 61% na lama |
+| lugar | um contra quatro: 45% em campo aberto, 83% num corredor de um |
+| golpe contra armadura | contra a placa: o malho 78%, o montante 44% |
 | requisito | placa em quem não tem Força: Defesa 28,5 contra 36,5; fôlego 5 por rodada contra 1 |
 | fôlego | quem começa o turno a zero faz uma ação só |
 | sob medida | a mesma peça: +28 e × 304 no dono; +19 e × 101 na mão de outro |
-| sintonia | o conjunto Épico contra três de nível 100: 62% com Vontade para as quatro peças, 20% sem |
+| sintonia | o conjunto Épico contra três de nível 100: 59% com Vontade para as quatro peças, 14% sem |
 | parte do corpo | o mesmo guerreiro sem o elmo, contra o de elmo: 32% |
 | durabilidade | o mestre de nível 300 com espada Comum quebra a espada na armadura Única em 98% das lutas |
 | impasse | espada Comum contra armadura Épica dos dois lados: os lados se separam em 100% |
-| moral | seis contra um muito mais forte: alguém foge ou se rende em 42% das lutas; quem o jogador comanda, nunca |
+| moral | seis contra um muito mais forte: alguém foge ou se rende em 41% das lutas (com a escada do medo; o EF7 mede 40% em 3.000 lutas); quem o jogador comanda, nunca |
 | cerco e contorno | dez contra um: 4 batem por rodada; sete contra uma linha de um: os que sobram chegam em quem está atrás em 100% |
-| para e pergunta | para antes da 1ª rodada; cumpre a ordem; em 95% das lutas houve parada no meio da rodada |
+| para e pergunta | para antes da 1ª rodada; cumpre a ordem; em 97% das lutas houve parada no meio da rodada |
 | a ordem de fôlego | 60 lutas com a ordem dada de fôlego cheio e o inimigo longe: nenhuma ação gasta tomando fôlego à toa; a luta parou e avisou nas 60 |
-| o registro na ordem | 120 lutas de um lanceiro contra dois de adaga, 95 golpes de "o alcance bate primeiro": em nenhuma a linha do passo veio depois do golpe (ninguém avança, no registro, depois de cair ou de morrer) |
-| retirada | com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta em 83% (nas outras, os guardas vencem antes de ele chegar a 8 casas, e ele fica com o campo) |
+| o registro na ordem | 120 lutas de um lanceiro contra dois de adaga, 93 golpes de "o alcance bate primeiro": em nenhuma a linha do passo veio depois do golpe (ninguém avança, no registro, depois de cair ou de morrer) |
+| retirada | com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta em 92% (nas outras, os guardas vencem antes de ele chegar a 8 casas, e ele fica com o campo) |
 | a retirada só com inimigo de pé | 150 lutas de dois contra um ladrão, com um dos dois recuando: ninguém "sai da luta" depois de o último inimigo cair (antes do acerto, 135 vezes), e quem recuava fica com o campo |
 | cenário conferido | nome repetido e tempo que não existe: recusado antes de qualquer dado |
 
@@ -481,7 +472,7 @@ Mirar a fresta (3.5) vale contra o bicho de categoria maior que a arma, menos co
 | agarra | O golpe que fere quem está **colado** agarra (um de cada vez). O agarrado não anda, não recua, não troca de lugar, e tem −4 no acerto e −4 na Defesa. O bicho bate primeiro em quem agarrou, e só solta quando passa um turno sem feri-lo, cai, foge ou se afasta. |
 | voa | Arma de alcance 1 tem −6 contra ele. A linha não o segura, não leva golpe livre ao se afastar nem ao fugir, e não pisa a lama nem a água. Num corredor, no chão ou agarrado, não voa. |
 | regenera | No começo de cada turno dele, recupera 15% do PV máximo. |
-| apavora | Quando a luta começa, quem não é de ferro, do outro lado, testa a coragem contra 28 (3.14). |
+| apavora | Quando a luta começa, quem não é de ferro, do outro lado, testa a coragem contra 28 (3.14); contra o dragão jovem, 29 (20.3). |
 | couraça | Não tem fresta: ninguém mira a fresta nele, e o crítico não corta a proteção dele pela metade. |
 | sopro | Uma rodada sim, uma não, por 3 de fôlego: um ataque em cada inimigo a até 4 casas, de 1d8 com o valor da categoria do corpo e força fixa de 1,2. Não se apara (conta só a Defesa sem escudo e sem arma), não olha o material da armadura, e ninguém se põe na frente. O tempo e a cobertura valem como num tiro. O bicho sopra quando pega dois ou mais, ou quando não alcança ninguém de outro jeito. |
 
@@ -572,7 +563,7 @@ O bicho não tem ficha no mundo: a luta que volta ao estado (5.9) não o grava, 
 Na `MESA.md` (`bichos.mesa`), cada espécie contada no lugar do personagem ou num vizinho aparece uma vez, com o resumo dela: sem a contagem e sem os chefes.
 No registro da luta, o golpe que cai nos braços ou nas pernas de um bicho é dito "patas da frente" e "patas de trás"; a regra é a mesma (3.4).
 
-6.14 **Medido** (`python3 provas.py`, 600 lutas por meta; o bloco OS BICHOS: 26 de 26).
+6.14 **Medido** (`python3 provas.py`, 600 lutas por meta; o bloco OS BICHOS: 26 de 26). (Desde a fase 1b, com a escada do medo, os números andaram alguns pontos, e as 26 passam: a saída de agora em `dados/provas_saida.txt`.)
 
 | O que se mede | Meta | Medido |
 | --- | --- | --- |
@@ -667,8 +658,8 @@ Há dois ofícios de bancada: **forja** (armas, malha, placa, escudos) e **couro
 - **O CHEIO.** O que passa do teto de efeitos não se perde: cada efeito a mais enche UM efeito de número com o número da categoria de cima (um cheio por efeito; só nos de número; sem efeito de número para encher, a sobra se perde). O efeito do molde de mestre, se é de número, também pode levar cheio (leva o primeiro). A peça cheia empata no efeito com a magra de cima e nunca passa: a categoria segue mandando (×3).
 - **Fora do teto de efeitos, no máximo dois:** a obra-prima no teto (7.6) e o molde de mestre (7.14).
 - **A peça nasce guardando** os efeitos por escolher, os cheios por escolher, o teto de efeitos dela (gravado ao nascer) e, com a ferramenta do sinete, o sinete de quem a forjou. A peça de antes desta regra (sem o teto gravado) usa o da categoria; nenhuma ganha efeito para trás. **Na ferramenta, o cheio que não tem efeito de número onde cair se perde já ao nascer** (o prumo e a têmpera são os de número: a Comum não tem nenhum; a Incomum e a Rara, só o prumo; com o degrau emprestado, mais um da força de cima), e o remate diz a sobra que se perde ("2 efeitos por escolher (o teto da Comum: 2); a sobra de 2 cheios se perde: não há efeito de número onde cair numa ferramenta Comum"). Depois de nascer, **o cheio não se perde calado** (7.16).
-- **O gravador** só deixa a peça sair de um evento dentro da regra: os efeitos escolhidos e os por escolher até o teto dela, os cheios até os por escolher, o cheio só com um cheio por escolher e só em efeito de número, a porta pela força, o degrau em peça de até 4 efeitos, um apelão de regra por peça.
-- **A REGRA DA FASE 1a: só a FERRAMENTA escolhe os efeitos agora** (7.16). A faixa vale para toda obra, mas a arma, a armadura, o escudo e o resto guardam os seus (os efeitos e os cheios por escolher) até o catálogo de luta chegar, na próxima fase; a mesa diz "efeitos por escolher: N (o catálogo de luta chega na próxima fase)". Nada da luta muda.
+- **O gravador** só deixa a peça sair de um evento dentro da regra: os efeitos escolhidos e os por escolher até o teto dela, os cheios até os por escolher, o cheio só com um cheio por escolher e só em efeito de número, a porta pela força, o degrau em peça de até 3 efeitos, um apelão de regra por peça.
+- **A REGRA DA FASE 1a: só a FERRAMENTA escolhe os efeitos agora** (7.16). A faixa vale para toda obra, mas a arma, a armadura, o escudo e o resto guardam os seus (os efeitos e os cheios por escolher) até o catálogo de luta chegar, na próxima fase; a mesa diz "efeitos por escolher: N (o catálogo de luta chega na próxima fase)". Nada da luta muda. **Da fase 1b**, as peças de luta escolhem do catálogo do capítulo 28 (7.16), e a mesa diz "Efeitos por escolher: N (cheios: C) (`oficio.py efeito ID` mostra o que cabe)".
 - **O remate diz a faixa**, assim: "a peça sai Incomum; faltaram 2 para a Rara (80): no fio, 4 da faixa, 1 dos 20 = 5: 4 efeitos por escolher (o teto da Incomum: 4), e 1 cheio". O `oficio.py pede ...` mostra, antes de abrir a obra, a régua de cada faixa até o teto (com a fagulha e o quase, se a ferramenta os tem), os efeitos por obra, a obra com efeito e a peça colada; na obra de uma ferramenta, conta só o cheio que ela guarda.
 
 **A faixa, medida** (a conta exata do 2d20 explosivo; `python3 provas_oficio.py faixa`). "Ferord hoje" é a soma que a mesa mostra no Dia 35: Treinado na forja (4) + Afinidade 75 (7) + forja de vila (1) + preparo +6 + martelo de forja Incomum (3) + jogo Comum afinado (1, e mais 1 da afinada): **2d20 + 23 na matéria Comum, 2d20 + 38 na Incomum** (a obra da tenaz). Os números são % por obra; "cheios", por 100 obras.
@@ -844,7 +835,7 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 | LASTRO | forte | a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa | — | +0,35 |
 | TÊMPERA (`tempera`) | forte | na peça que ela forja, N efeitos de número nascem cheios | Épica 1 · Única 2 · Lendária 3 | +0,32 · +0,46 · +0,54 |
 | MOLDE DE MESTRE (`molde`) | apelão | ao abrir a obra, diz-se um efeito (`oficio.py forjar ... molde=CHAVE`): se a peça sai na categoria da obra ou acima, nasce com ele, fora do teto de efeitos; se sai abaixo, o molde se perde | — | +0,60 |
-| DEGRAU EMPRESTADO (`degrau`) | apelão | a peça que ela forja nasce podendo ter UM efeito da força de cima (o forte na Incomum e na Rara; o apelão na Épica e na Única), com o número da categoria dela; só em peça de até 4 efeitos (`oficio.py efeito ITEM CHAVE emprestado`) | — | dentro da régua da força de cima |
+| DEGRAU EMPRESTADO (`degrau`) | apelão | a peça que ela forja nasce podendo ter UM efeito da força de cima (o forte na Incomum e na Rara; o apelão na Épica e na Única), com o número da categoria dela; só em peça de até 3 efeitos (`oficio.py efeito ITEM CHAVE emprestado`) | — | dentro da régua da força de cima |
 
 - **O mesmo efeito em duas ferramentas não soma: vale o maior. O PRUMO é a exceção:** soma de todas as fontes, até 5.
 - **Um apelão de regra por peça** (4.5 do contrato): o MOLDE DE MESTRE e o DEGRAU EMPRESTADO são os dois apelões de regra da ferramenta (sem número), e uma peça leva um só deles; a lista do que cabe não oferece o segundo, e o gravador o recusa.
@@ -855,7 +846,7 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 7.15 **Os efeitos da forja e o do encanto.** Na forja e no couro, os efeitos vêm da **faixa** e dos dados (7.3 e 7.6): a régua pelo que faltou para a CD de cima, cada 20, o quase, a fagulha; até o teto de efeitos (**Comum 2 · Incomum e Rara 4 · Épica e Única 5 · Lendária e Mítica 6 · Primordial 7**); o que passa vira cheio. **No encanto** (o foco e o amuleto, com a categoria escolhida), a obra-prima segue pela margem: a peça que passa por 10, 20 ou 30 ganha 1, 2 ou 3 efeitos, até o mesmo teto (o foco Comum pode levar 2). Na fase 1a, os do encanto também ficam por escolher, até o catálogo de luta.
 
-7.16 **Escolher os efeitos** (`oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde]`). **Na fase 1a, só a ferramenta escolhe** (a arma, a armadura e o resto guardam os efeitos: "efeitos por escolher: N (o catálogo de luta chega na próxima fase)").
+7.16 **Escolher os efeitos** (`oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde] [contra=TIPO]`). Na fase 1a, só a ferramenta escolhia; **da fase 1b, a arma, a armadura, o escudo, o foco e o amuleto escolhem do catálogo de luta** (capítulo 28: a lista diz o número da categoria e o cheio de cada um; a Caçadora pede `contra=bicho|morto|povo|gente|dragão`); a receita do jogador vale para elas (`oficio.py receita arma gume,critico,certeira`; a Caçadora, `cacadora:bicho`), e a gente do mundo escolhe pelo papel do dono (28.1) ou pelo jeito do ferreiro.
 - **Quem tem a peça escolhe**, um efeito por vez, e cada escolha é um evento e entra na história da peça; na forja, quem forjou. Sem CHAVE, o comando lista o que cabe (a porta pela força, o número na categoria da peça, o número cheio e o que vale); com `cheio`, o efeito de número leva o número da categoria de cima (só enquanto houver cheio por escolher); com `emprestado`, o efeito da força de cima (só na peça que nasceu com o degrau emprestado). O efeito vale no tipo de peça certo, não se repete, e o `pesa` não se escolhe; um apelão de regra por peça (7.14); o poupa-ferro não cabe na ferramenta de couro.
 - **O CHEIO NÃO SE PERDE CALADO.** O efeito de número escolhido sem `cheio`, quando o cheio não teria outro lugar, **leva o cheio sozinho** ("o cheio foi junto, sozinho: sem ele, o cheio se perdia"). A escolha que deixaria um cheio sem efeito de número onde cair (escolher a afinada quando só resta um lugar e o cheio ainda espera o prumo) é **recusada, com a frase**, que diz onde o cheio cai e como seguir; com `perde`, entra assim mesmo, e a peça (a história e a mesa) diz "1 cheio se perde: não há mais efeito de número onde cair". Enquanto houver cheio por escolher, a mesa diz onde ele cai ("1 cheio: só cai em prumo").
 - **A SUA RECEITA** (`oficio.py receita TIPO chave,chave`; TIPO: martelo, tenaz, jogo, ou ferramenta para todas): uma ordem que vale sempre, e você troca quando quiser (`nada` apaga; sem nada, mostra as suas). A ferramenta que nasce com efeitos **escolhe por ela, na hora**, e a mesa só relata ("Pela sua receita: prumo (cheio) e afinada"); o que não couber (a porta, o repetido, um apelão de regra a mais) fica para você escolher. **A receita para antes de jogar um cheio fora** e pergunta: "a receita para antes de recobro: ele deixaria 1 cheio sem efeito de número onde cair (o cheio só cai em: prumo). Escolha você: `oficio.py efeito ID prumo cheio` (o de número leva o cheio), ou `oficio.py efeito ID recobro perde` (o cheio se perde)". `auto` escolhe pela sua receita (sem ela, pela receita da guarda), e para do mesmo jeito.
@@ -1432,7 +1423,7 @@ O dono solta o feitiço gravado **uma vez por luta**, com as ações do feitiço
 | sem vida | não sangra, o veneno não pega, não testa a coragem, não cansa, não faz a ação a mais; a zero de PV se desfaz |
 | ossos | o corte e a ponta valem metade; o impacto, inteiro |
 | dreno | recupera metade do que o golpe do corpo tira (o sopro também é golpe do corpo: drena de cada um que pega) |
-| ardente | quem o golpeia de perto leva o fogo de volta (o teto do "devolve" da categoria); a ferida que o corpo abre queima 5 rodadas |
+| ardente | quem o golpeia de perto leva o fogo de volta (4 por degrau da categoria do corpo: o número do `devolve` fixo de antes, que fica só para o corpo que arde); a ferida que o corpo abre queima 5 rodadas |
 | noturno | o escuro não tira nada do golpe, do tiro nem do feitiço que voa |
 
 ### 11.10 As fases do chefe
@@ -1461,6 +1452,7 @@ Do lutador do mundo: a Mana que sobrou, as poções bebidas e as doses gastas, o
 **O que vem do mundo para a luta:** a bênção dada antes dela (`magia_mundo.py lancar bênção`: a luta que abrir até o fim do bloco seguinte tem a pessoa benzida), a poção de guarda bebida antes (vale amuleto da categoria dela até o fim do bloco), a pena do laço do druida e a pena das maldições. Quem vem de um cenário, fora do mundo, veste também foco e amuleto (`"foco": ["cajado", "Raro"]`, `"amuleto": "Raro"`).
 
 ### 11.13 As metas (o banco: `python3 provas.py 600`; só a magia: `python3 provas.py 600 magia`)
+(Desde a fase 1b, com a escada do medo, os números andaram alguns pontos, e as 34 passam: a saída de agora em `dados/provas_saida.txt`.)
 
 Nível 50, tudo Raro, quando não diz outra coisa. 600 lutas por meta no duelo e no grupo, mais onde a faixa é estreita.
 
@@ -2349,7 +2341,7 @@ python3 povos.py ver POVO           os atributos, os traços, a coragem, o corpo
 | PO4 | a soma dos atributos, todos os começos e moldes | a do humano | sempre (186 nascimentos) |
 | PO5 | a tendência, 20.000 nascimentos por povo | a favor 20 a 25%; contra 20 a 25%; o resto como hoje | de 21,9 a 23,0%; os outros caminhos sem diferença |
 | PO6 | o corpo: a recusa, o ajuste, a arma e o escudo | sempre | sim |
-| PO7 | o pequenino de nível 50 diante do que apavora | foge até 6% | a conta: 3,75% (o humano, 13,75%); medido contra o dragão jovem da serra, 4,2% |
+| PO7 | o pequenino de nível 50 diante do que apavora | foge até 6% | a conta: 3,75% (o humano, 13,75%), contra o pavor de 28; medido contra o dragão jovem da serra, 4,2% (desde a fase 1b, com o pavor do jovem 29, 5,2%) |
 | PO8 | a idade: ninguém passa do povo; o personagem nasce adulto | sempre | sim |
 
 ### 19.14 O que mudou do projeto, e por quê
@@ -2396,7 +2388,7 @@ São quinze dragões ao todo (os três tipos nas cinco idades): `python3 dragoes
 ### 20.3 Na luta
 
 **O dragão é um bicho:** a luta o roda com os traços que já tem (o sopro, o voa, o apavora, a couraça, o resiste, o veneno, o agarra, o noturno), e vale a regra de ouro de sempre: conta a categoria da arma contra a da escama. O sopro pega o grupo inteiro a até 4 casas, a cada duas rodadas, sem aparo.
-**O filhote é bicho de verdade:** ferido, testa a coragem e pode fugir; encurralado, luta até o fim. **Do jovem para cima, o dragão é chefe:** não foge pelo susto, e só a fase o tira da luta.
+**O filhote é bicho de verdade:** ferido, testa a coragem e pode fugir; encurralado, luta até o fim. **Do jovem para cima, o dragão é chefe:** não foge pelo susto, e só a fase o tira da luta. **O pavor do jovem é 29** (o dos outros que apavoram, 28: `tabelas_dragoes.PAVOR`; a parte 2, fase 1b: a escada do medo segura no acuado quem antes quebrava, e o grupo de 4 do degrau passava a vencer o jovem da serra em 76-77%, fora da faixa da DR2; com o 29, 71-72%).
 
 **A fase (o dragão ferido).** Quando o PV cai abaixo da fração do tipo, o dragão muda (a tabela de 20.1), e a luta para e pergunta.
 **A fuga do que voa (a resposta E3 a do jogador).** O dragão da serra ferido, **fora do covil**, foge pelo ar: precisa estar no ar (não no chão, não agarrado, não num corredor) e ter por onde sair. Sai sem levar golpe, e a luta para e pergunta. **No covil ele não tem por onde sair** (defende o ouro) e a fase vale como fúria: luta até morrer. O dragão que fugiu volta ao covil com o PV que tinha, **dorme até sarar** (10% do PV por dia de sono) e **lembra de quem o feriu**. O verme e o dragão das grutas não voam: nunca fogem.
@@ -2495,7 +2487,7 @@ As lutas são as do motor, em ensaio; o grupo é o homem do degrau das criaturas
 | Meta | O que se mede | Faixa | Medido |
 | --- | --- | --- | --- |
 | DR1 | o filhote (foge ferido) contra um homem do degrau, cada tipo em casa | de 40 a 65% | de 52 a 63% (ele foge em 20 a 31%) |
-| DR2 | do jovem ao ancião, em casa, no covil, contra 4 do degrau | jovem 50 a 75; adulto 45 a 70; velho 25 a 50; ancião 5 a 25 | jovem 57 a 70; adulto 53 a 64; velho 32 a 41; ancião 12 a 18 |
+| DR2 | do jovem ao ancião, em casa, no covil, contra 4 do degrau | jovem 50 a 75; adulto 45 a 70; velho 25 a 50; ancião 5 a 25 | jovem 57 a 70; adulto 53 a 64; velho 32 a 41; ancião 12 a 18. **Com a escada do medo (fase 1b): o jovem da serra ia a 76% (fora da faixa; sem a escada, 73% em 1.000 lutas); com o pavor do jovem 29 (20.3), jovem 57 a 74 (a serra, 71-72% em 1.000 lutas); adulto 55 a 69; velho 35 a 43; ancião 9 a 17** |
 | DR3 | o ancião contra 6 do degrau | de 65 a 90% | de 78 a 84% |
 | DR4 | o conjunto uma acima; uma abaixo | 90% ou mais; 10% ou menos | 100%; 0% |
 | DR5 | um homem do degrau sozinho contra o jovem ou maior | até 5% | de 0 a 0,5% (ele morre em mais da metade) |
@@ -2650,10 +2642,191 @@ os parentes vivos, o que se leva) e os 17 caminhos da inclinação. As perguntas
 casa: nada nasce) e a carga do berço; a mão de Iniciante no ofício da família, com o treino que a explica; os laços com a família (dos dois lados) e a memória dela ("é do meu
 sangue"). O povo que não é o da família nasce de criação. A MESA da criação mostra tudo isso antes de o personagem existir.
 
+## 28. Os efeitos de item e a base da luta (a parte 2, fase 1b)
+
+O contrato é o `projeto/etapa_efeitos/DESENHO.md` (seções 3 e 4; o detalhe, `projeto/etapa_efeitos/desenho/D1_luta_e_efeitos.md`). Os números moram no `tabelas_efeitos.py` (nenhum número de efeito fora dele); o `efeitos.py` mostra (28.10). **A luta sem nada novo é a de antes, dado por dado, salvo a escada do medo** (28.6): a meta B0 roda as mesmas lutas no motor de antes e no de agora, com a escada desligada, e elas saem iguais.
+
+### 28.1 Como se lê
+
+| Categoria da peça | A força mais alta que cabe | Pontos de vitória |
+| --- | --- | --- |
+| Comum | fraco | até 5 |
+| Incomum, Rara | normal | até 10 |
+| Épica, Única | forte | até 20 |
+| Lendária, Mítica, Primordial | apelão | até 40 |
+
+- **Os pontos de vitória** são o quanto o efeito põe acima dos 50% no duelo de iguais (nível 50, tudo Raro, começando perto, a mão típica do nível; o duelo espelhado, cada lado começando metade das vezes). A régua tem a folga de 1 nas bordas.
+- **Efeito de NÚMERO** (21): um valor por categoria, cada um dentro da faixa dela. **A peça nunca guarda o número:** ele sai da categoria que ela rende agora (a sob medida na mão de outro rende uma abaixo; a que dorme na sintonia tem os efeitos dormindo; a quebrada não tem efeito nenhum). Na peça fica só a chave (`{"chave": "gume"}`, e `"cheio": true`, e na Caçadora `"contra": "bicho"`).
+- **O CHEIO** (7.15) põe o valor da categoria de cima, e se mede na faixa de cima (o Gume cheio de uma Rara é o da Épica, +30%, e cabe nos 20 da Épica). A Primordial cheia fica na Primordial. O de regra não tem cheio.
+- **Efeito de REGRA** (26 nesta fase; o poder de lenda, a Sede e o vidro, os outros 3 dos 29 do contrato, são da fase 5): força fixa; só entra da porta para cima (fraco da Comum, normal da Incomum, forte da Épica, apelão da Lendária; o degrau emprestado da ferramenta abre um degrau, 7.14). **A força de cada um é a que o banco mede (28.11), nos dois sentidos** (o EF2 confere o piso e o teto de todo efeito que tem cenário): **a Luz é forte e a Aparadora é normal** (o contrato as punha no fraco); **a Desforra, o Atar, o Escudo que Conta e a Guardiã são fracos** (o contrato punha a Desforra no normal e os outros três no forte), e **o Domínio é forte** (o contrato o punha no apelão). O DESENHO 12.3 registra a leitura; o Mestre confirma ou manda voltar (a volta é afinar a regra de cada um, e os números estão lá).
+- **Onde vale:** cada efeito diz as peças em que cabe (a arma, a armadura, o escudo, o foco, o amuleto). No arco e na besta valem os de arma, menos o Fôlego, a Varredura e a Tempestade, que são de perto. O Devolve só pega quem golpeia de perto. O bicho não tem peça: o corpo dele não leva efeito.
+- **Quem escolhe:** o dono, na forja, um evento por escolha (`oficio.py efeito ITEM CHAVE [cheio] [contra=TIPO]`; sem CHAVE, a lista do que cabe, com o número da categoria); a receita do jogador (`oficio.py receita arma gume,critico,certeira`; a Caçadora, `cacadora:bicho`) escolhe por ele nas obras que nascem com efeitos; a gente do mundo escolhe sozinha pelo papel (o guerreiro: Gume, Crítico, Certeira; o guarda: Couraça, Guarda, Devolve; o caçador: Caçadora contra o bicho, Gume, Sangria; o mago e o sacerdote: Chama, Foco Certeiro) ou, sem papel de luta, pelo jeito do ferreiro (7.16). O **Pesa** é defeito (não se escolhe); o `critico_19` e o `sangra` de antes também não (28.9), e o Crítico não entra na peça que já tem o `critico_19` (os dois são um efeito só: P5).
+
+### 28.2 A pilha: o dano é uma conta só, no fim
+- **P1.** dano = o de hoje (dado × 4 × valor da arma ÷ proteção × força) × (1 + PEÇAS) × (1 + TÉCNICA) × (1 + DOM) × ESTADOS × (1 − COURAÇA), para baixo uma vez. **PEÇAS:** o Gume e a Caçadora (contra o tipo dela), somados, até +100%; no feitiço, a Chama. **ESTADOS:** o alvo EXPOSTO ×1,5, quem bate AMOLECIDO ×0,75 (um de cada). **COURAÇA:** a do alvo, em curva, até 75%; no feitiço, a Guarda Mágica. A TÉCNICA (até +40%) e o DOM (até +60%) chegam nas fases 2 e 3.
+- **O TETO DA PILHA:** o golpe com tudo o que é novo nunca tira mais que **7 vezes** o mesmo golpe pela regra de hoje, com os mesmos dados (no crítico, o crítico de hoje). O script corta e diz: "o teto da pilha segura o golpe".
+- **P2. Os dados:** a arma rola o MAIOR entre o crítico (2 vezes), o golpe especial de hoje (o fecho) e o Golpe do Fim (4): nunca somam, nunca mais de 4. O crítico segue cortando a proteção pela metade.
+- **P3. Os fixos novos:** acerto (a Certeira, a Desforra), Defesa (a Guarda do escudo), Firmeza (o amuleto), Conjuração (o Foco Certeiro) e coragem (a Coragem, metade da Robusta, o Escudo que Conta) somam **até +8 cada**; a resistência à carga, até +16. O de hoje fica fora (o corpo, a mão, o talento, o líder, a matilha, o benzido). As penas novas de Defesa no alvo não somam entre si: vale a pior.
+- **P4. Em curva:** duas couraças somam 1 − (1 − a) × (1 − b) (duas de 25% cortam 44%); teto 75%. Ninguém é imune por efeito.
+- **P5. O mesmo efeito de duas fontes vale o maior** (a Couraça de duas peças de armadura, o corpo e o elmo, não soma: vale a maior); efeitos diferentes do mesmo grupo somam (o Gume e a Caçadora). A Perfura e a mira na fresta são um efeito só: vale o maior, e a proteção nunca cai abaixo de um terço. **O salvamento de 1 PV é um só por dia**, venha de onde vier.
+- **P6. O crítico** vale a melhor faixa entre as fontes, nunca melhor que 17/7 (a faixa é a face alta de um dado e o mínimo do outro: a de hoje, 20/11; o Crítico pela categoria, de 20/9 a 17/7; o Golpe do Fim, 17/11 e os dados 4 vezes).
+- **P7.** Toda cura (a Vampira, a Regenera, a poção, o feitiço) cabe no teto do dia: metade do PV máximo (11.7).
+- **P8. O golpe extra** (o Segundo Golpe, a Ceifadora, a Varredura, a Tempestade e o golpe livre de hoje) não puxa outro golpe extra e põe metade da carga (no mínimo 1).
+- **P9.** O estado tem potência fixa, e o prazo soma até 3 rodadas (contando a de agora); o % nunca soma. **Aplicar de novo é numa rodada nova:** o mesmo estado, no mesmo alvo, soma prazo uma vez por rodada (somando a cada golpe, quem bate 3 ou 4 vezes no turno deixava o alvo exposto o tempo todo).
+
+### 28.3 Os estados novos e os filetes de sangue
+- **EXPOSTO:** leva +50% no dano de golpe e de feitiço; pelo Expõe, até o fim da rodada; pela Escancara, até o fim da seguinte. **AMOLECIDO:** faz −25% de dano, até o fim da rodada seguinte. Os dois não tiram ação e não têm calejo: o freio é a potência fixa e o "um de cada" da pilha.
+- **ATADO** (o Atar, pela carga de mana): o nó de hoje (a Mana não volta; cada feitiço custa 1 a mais), 2 turnos. A carga de mana só enche numa luta de magia, em quem tem Mana (o golpe do Atar em quem não lança não diz nada nem calejeia).
+- **SANGRANDO, EM FILETES.** O **filete da ferida** é o sangue de hoje (3.12: um quinto do golpe por 3 rodadas; 5 se grave ou se a arma tem a Sangria Comum), um só, o maior. **Só os efeitos abrem filetes a mais:** a Sangria da Incomum e da Rara abre um filete que se renova (o mesmo filete fica com o maior tanto e o maior prazo); a da Épica para cima, e a Brasa, abrem filetes que somam. **Até 3 filetes, contando o da ferida**; o quarto toma o lugar do mais fraco. Quem não tem vida não sangra (a Sangria não o pega), mas a Brasa queima; a água apaga o fogo, e o amparo da fé estanca todos, como hoje.
+- **ATAR** (a ordem `atar [ALIADO]`): 1 ação, em si ou num aliado colado; corta o filete mais forte (o da Sangria da Lendária para cima não se ata: corta o próximo). Quem o jogador não comanda ata a si quando o sangue que se ata (a ferida e os filetes que se atam) tira 5% do PV por rodada e não há inimigo colado: o filete que não se ata não o faz parar para atar.
+
+### 28.4 Os efeitos de NÚMERO (21)
+
+| Efeito | Peça | Com | Inc | Rar | Épi | Úni | Len | Mít | Pri | O que faz |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Gume (`gume`) | arma | 10% | 15% | 20% | 30% | 40% | 50% | 75% | 100% | dano a mais (PEÇAS) |
+| Certeira (`certeira`) | arma | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 8 | acerto a mais |
+| Crítico (`critico`) | arma | 20/9 | 20/7 | 20/6 | 19/11 | 19/9 | 18/9 | 17/9 | 17/7 | a faixa do crítico (de hoje, 20/11) |
+| Caçadora (`cacadora`) | arma | 10% | 15% | 20% | 30% | 40% | 50% | 75% | 100% | dano a mais contra o tipo escolhido na forja (bicho, morto, povo, gente, dragão); soma com o Gume |
+| Vampira (`vampira`) | arma | 15% | 25% | 35% | 50% | 60% | 75% | 90% | 100% | cura essa parte do dano que tira (no teto do dia) |
+| Sangria (`sangria`) | arma | a ferida, 5 r | 1/5 × 2 r | 1/5 × 3 r | 1/5 × 3 r, somam | 1/4 × 4 r, somam | 1/4 × 5 r, somam, não se ata | 1/3 × 5 r, idem | 1/3 × 6 r, idem | da Incomum para cima, cada golpe que fere abre um filete (a parte do golpe por rodada, as rodadas) |
+| Aturdir (`aturdir`) | arma | — | 3 | 4 | 6 | 8 | 10 | 12 | 15 | carga de cabeça por golpe que fere (28.5) |
+| Medo (`medo`) | arma | — | 17 | 18 | 20 | 22 | 24 | 26 | 29 | quem ela fere testa a coragem contra isso, uma vez por rodada, junto das outras fontes (28.6) |
+| Segundo Golpe (`segundo_golpe`) | arma | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 8 | vezes por luta em que o golpe que acerta dá outro, de graça, no mesmo alvo |
+| Perfura (`perfura`) | arma | 0,9 | 0,8 | 0,67 | 0,6 | 0,55 | 0,45 | 0,4 | 0,35 | contra armadura de categoria maior que a arma, a proteção conta isso (nunca abaixo de 1/3); com a mira na fresta, vale o maior, e a escolha de mirar é a de hoje |
+| Couraça (`couraca`) | armadura | 5% | 10% | 12% | 20% | 25% | 33% | 40% | 50% | dano de golpe recebido a menos (em curva; teto 75%) |
+| Devolve (`devolve`) | armadura | 10% | 15% | 20% | 30% | 40% | 50% | 65% | 80% | essa parte do dano levado (o PV que o dono perdeu) volta em quem golpeia de perto |
+| Regenera (`regenera`) | armadura | 1% | 2% | 3% | 4% | 5% | 6% | 7% | 8% | do PV máximo, no fim de cada rodada (no teto do dia) |
+| Temível (`temivel`) | armadura, escudo | 20 | 22 | 24 | 26 | 29 | 31 | 33 | 35 | quem começa a luta contra o dono testa a coragem contra isso, na 1ª rodada |
+| Robusta (`robusta`) | armadura | +3, fôlego +1 | +4, +2 | +6, +2 | +8, +3 | +10, +3 | +12, +4 | +14, +4 | +16, +5 | resistência à carga (metade na coragem) e fôlego máximo a mais |
+| Guarda (`guarda`) | escudo | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 8 | Defesa a mais (o escudo em uso) |
+| Firmeza (`firmeza`) | amuleto | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 8 | Firmeza a mais (contra o feitiço) |
+| Coragem (`coragem`) | amuleto | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 8 | coragem a mais |
+| Guarda Mágica (`guarda_magica`) | amuleto | 5% | 10% | 12% | 20% | 25% | 33% | 40% | 50% | dano de feitiço recebido a menos (em curva) |
+| Chama (`chama`) | foco | 10% | 15% | 20% | 30% | 40% | 50% | 75% | 100% | dano de feitiço a mais |
+| Foco Certeiro (`foco_certeiro`) | foco | 1 | 2 | 2 | 3 | 4 | 5 | 6 | 8 | Conjuração a mais |
+
+**O que o efeito vale no nível do dono:** o `efeitos.py ver ITEM` (e a lista do `oficio.py efeito`) diz, peça por peça, "no seu nível, perto de +X pontos de vitória" (a tabela do banco por nível, 10, 20, 50 e 150: `tabelas_efeitos.PONTOS`; 28.11). No duelo de iguais de cada nível, tudo Raro, o banco **não** viu os % renderem menos no nível baixo (o D1 contava o Gume Incomum no nível 10 em +2,8; o banco mediu +8,4, e +5,8 no 50): a tabela diz o medido. No nível 150 a Perfura quase não vale (o robô de lá já mira a fresta), e a Vampira e a Regenera param no teto da cura do dia.
+
+### 28.5 A carga, o calejo e a cabeça firme
+- **A CARGA:** o Aturdir e o Atar **não rolam chance por golpe**. Cada golpe que tira PV soma a carga do efeito na **barra da família**, no alvo (cabeça: o Aturdir; mana: o Atar; pernas: o derrubar das técnicas, fase 2). Contra armadura de categoria maior que a arma, a carga entra pela metade; na parte nua, em dobro; no golpe extra, metade (no mínimo 1). Quando a barra chega à RESISTÊNCIA, o estado pega, a barra zera e o alvo ganha um calejo daquela família. **A mesa vê a barra do inimigo** ("carga de cabeça 6/10").
+- **RESISTÊNCIA = 6 + bônus de Vigor ÷ 2 + 4 por calejo da família** (+4 de saída no chefe e no bicho grande; a Robusta soma, até +16). No nível 50 do banco, perto de 10. **O chefe**, entre a gente, é o de moral firme (o que as fontes novas de medo não tocam, 3.6) ou o das fases; o líder de um bando não é chefe por ser líder. O bicho grande é o grande e o enorme, e o bicho chefe da tabela. O +4 de saída vale só na resistência à carga, e não como calejo na Firmeza (o chefe com +4 na Firmeza contra o prender mudaria a luta de magia de hoje).
+- **ATORDOADO pela carga:** perde o turno seguinte inteiro e fica ABERTO (−4 na Defesa) até o fim da rodada seguinte; a luta para (quem o jogador comanda). A ferida na cabeça segue atordoando 1 ação (grave, 2), como hoje; numa luta em que alguém traz carga de cabeça, a grave conta como turno perdido.
+- **Os freios contra a cadeia:** a carga tira o turno uma vez e zera; **a cabeça firme** (do atordoar até o fim do segundo turno em que o alvo volta a agir, nada soma carga de cabeça e nada lhe tira o turno pela cabeça); o calejo; o chefe começa com +4; e **ninguém perde mais de 1 turno em cada 3 seguidos** (a barra que enche quando não pode pegar fica cheia, sem calejo, e atordoa no próximo golpe que puder; a mesa diz). A cabeça firme só existe numa luta com carga de cabeça: a luta sem nada novo segue a de hoje.
+- **O calejo por família:** o controle de arma que pega (a carga cheia, e o Derruba de hoje) dá +4 na resistência daquela família e +4 na Firmeza contra o feitiço da mesma família (prender e raízes: pernas; o nó: mana); o feitiço de controle que pega dá o calejo de hoje (+4 na Firmeza) e +4 na resistência à carga da família dele. Os +4 na Firmeza dos dois caminhos não somam: vale o maior. Família diferente não calejeia.
+
+### 28.6 A escada do medo (a única mudança que toca toda luta de gente)
+
+| Degrau | O que faz | Como se chega |
+| --- | --- | --- |
+| firme | nada | — |
+| ABALADO (o "fraqueja" de 3.14) | −2 no acerto, até o fim da luta | firme, falhar a coragem por menos de 10 |
+| ACUADO (novo) | −4 no acerto (no lugar do −2); não avança: só segura (bate em quem está ao alcance), guarda, toma fôlego ou recua | abalado, falhar por menos de 5 |
+| QUEBRA (a de hoje) | foge ou se rende | firme e falhar por 10 ou mais; abalado e falhar por 5 ou mais; acuado e falhar |
+
+- O acuado desce a abalado depois de 2 rodadas sem susto novo. **Quem o jogador comanda para no abalado** (nunca fica acuado), e a luta para e pergunta, uma vez só: já abalado, ele não testa mais as fontes novas naquela luta. Quem passa a ser comandado sai do acuado. **O bicho que falha foge**, como hoje.
+- **As fontes novas de medo** (o Medo da arma, em quem ela tirou PV na rodada, e o Temível, na 1ª rodada) **testam juntas: um teste por alvo por rodada, no fim dela**, contra a maior CD, +1 por fonte a mais (até +2). Contra moral firme (o chefe) não agem; o sem vida não sente medo. **O calejo de ânimo:** cada degrau que uma fonte nova faz pegar dá +4 na coragem contra as fontes novas, até o fim da luta. Os sustos de hoje (o líder que cai, a metade que cai, o golpe terrível, a ferida grave, o pavor do bicho, o feitiço de medo) seguem como hoje, à parte, e descem a mesma escada.
+- **O Escudo que Conta** (a ordem `animar`, 1 ação, uma vez por luta): os aliados a 2 casas descem um degrau (o acuado a abalado, o abalado a firme) e ganham +2 na coragem até o fim da luta.
+
+### 28.7 Os efeitos de REGRA (26)
+
+| Efeito | Força (porta) | Peça | O que faz |
+| --- | --- | --- | --- |
+| Leve (`leve`) | fraco (da Comum) | arma, armadura, escudo, foco | pede 20 a menos de atributo |
+| Pesa (`pesa`) | fraco (da Comum) | arma, armadura, escudo, foco | pede 20 a mais de atributo (é defeito: não se escolhe) |
+| Não Quebra (`nao_quebra`) | fraco (da Comum) | todas | não perde durabilidade |
+| Derruba (`derruba`) | fraco (da Comum) | arma | uma vez por luta, o golpe que fere derruba (6.5: não quem é maior que quem bate), e dá o calejo de pernas |
+| Firme (`firme`) | fraco (da Comum) | armadura, escudo | o dono não é derrubado |
+| Luz (`luz`) | **forte (da Épica)**: o banco (+12,1) | todas | o escuro não pesa no golpe do dono (no tiro, metade): tirar o −4 do escuro vale uma Certeira +4 |
+| Fio Manso (`fio_manso`) | fraco (da Comum) | arma | o golpe que mataria quem já estava abaixo de 1/4 do PV o deixa caído, vivo (para fazer preso) |
+| Arrancada (`arrancada`) | fraco (da Comum) | arma, armadura | uma ação a mais na primeira rodada |
+| Aparadora (`aparadora`) | **normal (da Incomum)**: o banco (+9,8) | escudo, espada, montante | quem tem o golpe aparado pelo dono perde 1 de fôlego |
+| Expõe (`expoe`) | normal (da Incomum) | arma | o golpe que fere deixa o alvo exposto até o fim da rodada |
+| Ponta Certa (`ponta_certa`) | normal (da Incomum) | arma | uma vez por luta, o golpe que errou por 5 ou menos acerta |
+| Desforra (`desforra`) | **fraco (da Comum)**: o banco (+3,4) | arma | ferido por alguém, +2 no acerto contra ele até o fim do turno seguinte |
+| Escancara (`escancara`) | forte (da Épica) | arma | o golpe que fere deixa o alvo exposto até o fim da rodada seguinte |
+| Amolece (`amolece`) | forte (da Épica) | arma | o golpe que fere deixa o alvo amolecido até o fim da rodada seguinte |
+| Fôlego (`folego`) | forte (da Épica) | arma pesada (machado, martelo, montante, alabarda, malho) | o golpe custa 1 de fôlego a menos |
+| Ceifadora (`ceifadora`) | forte (da Épica) | arma | quem derruba (caído ou morto) um inimigo golpeia de graça outro que alcança |
+| Varredura (`varredura`) | forte (da Épica) | arma de corte ou impacto, de perto | cada golpe que acerta pega também outro inimigo colado, com metade do dano (rola o acerto dele) |
+| Brasa (`brasa`) | forte (da Épica) | arma | cada golpe que fere abre um filete de fogo (1/5 do golpe por 3 rodadas; os de fogo somam) |
+| Atar (`atar`) | **fraco (da Comum)**: o banco (+3,2, o clérigo contra o mago) | arma | carga de mana 4 por golpe que fere, em quem tem Mana: cheia, o alvo fica atado 2 turnos |
+| Refletora (`refletora`) | forte (da Épica) | escudo | uma vez por luta, o feitiço contra o dono volta em quem lançou (rola de novo, contra a defesa dele; o dano devolvido leva a Chama de quem lançou) |
+| Escudo que Conta (`escudo_que_conta`) | **fraco (da Comum)**: o banco (−0,5) | escudo | uma vez por luta, `animar` (28.6) |
+| Guardiã (`guardia`) | **fraco (da Comum)**: o banco (+2,3) | escudo | guardar um aliado colado não gasta a reação, uma vez por rodada |
+| Golpe do Fim (`golpe_do_fim`) | apelão (da Lendária) | arma | o crítico é 17/11 e rola os dados 4 vezes, não 2 |
+| Tempestade (`tempestade`) | apelão (da Lendária) | arma de corte ou impacto, de perto | cada golpe que acerta pega também outro inimigo colado, com o dano inteiro |
+| Imortal (`imortal`) | apelão (da Lendária) | armadura, amuleto | uma vez por dia, o dono fica com 1 PV em vez de cair (a luta para e diz; o uso gasto volta ao estado) |
+| Domínio (`dominio`) | **forte (da Épica)**: o banco (+11,3) | foco | uma vez por luta, um feitiço que o dono sabe sai sem Mana, sem ser longo, com os dados rolados duas vezes (`lancar FEITICO ... dominio`) |
+
+### 28.8 A sintonia e os freios do apelão
+- **Um apelão de regra por peça** (o gravador recusa o segundo). **Só um apelão de regra fica acordado por pessoa**, e **a peça dele ocupa 2 lugares na sintonia** (2.9): é a primeira peça de apelão, na ordem da sintonia (a de categoria maior; no empate, a arma, a segunda arma, o escudo, as armaduras, o foco, o amuleto), que cabe com os 2 lugares. **A outra peça de apelão tem o apelão dormindo, só ele, e ocupa 1 lugar**, como toda peça alta: o resto dela vale. (Com Vontade 60, a arma Lendária de Golpe do Fim e a armadura Lendária de Imortal e Couraça ficam as duas acordadas, a Couraça valendo e o Imortal dormindo, como com Vontade 100.) A ficha e as peças à mesa dizem o apelão que dorme.
+- **O escudo só vale com a arma de uma mão em uso** (a Guarda, a Refletora, a Guardiã, o Escudo que Conta, o Temível do escudo): com a arma de duas mãos, o escudo vestido não guarda, como no aparo de hoje.
+- O Imortal é um salvamento por dia (P5): a ficha do dia seguinte o devolve; gasto, o evento da luta grava o dia (`["item", ID, "efeito", "gasta", "imortal"]`).
+- As peças do mundo (o tesouro, a loja, o rival) com efeito chegam na fase 5; até lá, só a forja dá efeito de luta.
+
+### 28.9 A transição: o que muda na peça de antes, e o evento de entrada
+- O **`devolve N`** fixo vira o **Devolve** (o % da categoria); o **`sangra`** vira a **Sangria Comum** (a ferida sangra 5 rodadas, como antes): na peça Comum, a chave nova `sangria` (que é isso mesmo); **na peça acima da Comum o `sangra` fica** (a chave `sangria` ali daria a Sangria da categoria, filetes mais fortes que o de antes), como o **`critico_19`** (19/11), que **fica na peça que já o tem** (a resposta 2a do jogador: o Martelo Incomum de Ferord); o **`derruba`** segue, e agora calejeia as pernas.
+- **Nenhuma peça nova ganha um efeito de antes**, antes ou depois da entrada (o gravador recusa o `critico_19` e o `sangra` em `item nasce` e em `efeito junta`: a obra-prima não dá mais o 19). Até o evento de entrada, o gravador aceita na peça que já os tem as chaves e os valores que ele converte (o `devolve N`, o `sangra` da Comum), e o save de hoje carrega e valida sem mudar.
+- **O evento de entrada da fase:** `python3 estado.py entrada 1b`, uma vez, no mesmo commit da fase. Ele grava o marco e converte, num evento só, o `devolve N` e o `sangra` das peças Comuns do mundo (o `critico_19` e o `sangra` acima da Comum ficam). No save de hoje não há peça com `devolve` nem `sangra`: o evento só grava o marco. Depois dele, o `devolve N` e o `sangra` da Comum também são recusados.
+
+### 28.10 Os comandos
+```
+python3 efeitos.py ver ITEM [nivel=N]            os efeitos da peça, com o número da categoria que ela rende, a força, o cheio, o usado no dia e "no seu nível, perto de +X"
+python3 efeitos.py lista [TIPO] [CATEGORIA]      o catálogo de luta (TIPO: arma, armadura, escudo, foco, amuleto), com os números de cada categoria
+python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde] [contra=TIPO]      a escolha do efeito na peça de luta (7.16); a Caçadora pede o tipo
+python3 oficio.py receita arma gume,critico,certeira  ·  receita armadura couraca,robusta  ·  receita arma cacadora:bicho,gume      a receita do jogador
+python3 estado.py entrada 1b                     o evento de entrada da fase (28.9), uma vez
+python3 provas.py 2000 efeitos                   só o banco da fase 1b (B0, EF1 a EF8, B3); `provas.py 2000 efeitos tabela`: a tabela por nível (28.11)
+```
+Na luta, as ordens novas: `atar [ALIADO]` (28.3), `animar` (28.6) e `lancar FEITICO ... dominio` (28.7). O quadro mostra a barra de carga de cada família, os filetes, o exposto, o amolecido, o atordoado e o acuado (e, na rodada 0, ninguém exposto: os prazos nascem vencidos). **O número à mesa é o da categoria que a peça rende para o dono** (o `ato.py pecas` e o `efeitos.py ver` leem a ficha dele): a sob medida de outro rende uma abaixo; a que dorme na sintonia diz "DORME na sintonia (os efeitos dormem)"; o apelão de regra que não é o acordado diz que dorme (a linha da ficha também: "O APELÃO DORME"). A janela do item (`itens.py ver`) mostra a peça em si, com o número da categoria dela.
+
+### 28.11 O banco da fase 1b
+`python3 provas.py 2000 efeitos` (as 66 metas; 2.000 lutas por linha e 20.000 no modo longo, como no contrato; no `provas.py 600` inteiro, as mesmas 66, também com 2.000). **65 de 66 passam: a que não passa é a linha da Escancara emprestada da EF3, na borda (73,95% contra os 74 da meta), e espera a decisão do Mestre (DESENHO 12.3).** O padrão: o duelo de iguais do nível 50, tudo Raro, perto, espelhado; a folga de 1 ponto nas bordas.
+
+- **B0 A luta de sempre:** 666 lutas ao acaso sem nada novo (gente, bichos e magia), no motor de antes (o da fase 1a) e no de agora, com a escada do medo desligada: **666 de 666 iguais, linha por linha.** Com a escada ligada, as metas de antes passam (o capítulo 4, o 6.14 e o 11.13 andaram alguns pontos; a DR2 do dragão jovem da serra saía da faixa, 76%, e volta com o pavor do jovem 29: 20.3). As metas de semente fixa da etapa 4b (o B2 do `provas_4b.py` e o CO2 do `provas_povos.py`) rodam, como o B0, com a escada desligada.
+- **EF1 A régua dos números** (cada efeito nas 8 categorias, no cenário dele; * = remedida no modo longo): nenhuma coluna acima do teto da faixa (5 · 10 · 10 · 20 · 20 · 40 · 40 · 40, com a folga), nenhuma coluna menor que a da esquerda (com a folga).
+
+| Efeito (cenário) | Com | Inc | Rar | Épi | Úni | Len | Mít | Pri |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Gume (duelo) | +4,9 | +5,8 | +7,5 | +13,7 | +18,0 | +20,5 | +26,8 | +31,2 |
+| Certeira (duelo) | +3,2 | +7,8 | +7,8 | +10,8 | +13,5 | +18,2 | +20,4 | +24,2 |
+| Crítico (duelo) | +3,9 | +5,0 | +5,0 | +14,1 | +16,5 | +22,8 | +29,2 | +34,3 |
+| Caçadora (duelo) | +4,6 | +7,5 | +8,2 | +14,1 | +18,2 | +21,0 | +26,4 | +32,3 |
+| Vampira (duelo) | +3,2 | +4,8 | +6,0 | +11,3 | +12,2* | +13,5* | +14,1* | +13,7 |
+| Sangria (duelo) | +1,7 | +7,3 | +6,4 | +13,1 | +13,3 | +14,1 | +18,2 | +18,1 |
+| Aturdir (duelo) | — | +6,5 | +7,4 | +10,1 | +11,4 | +16,0 | +16,0 | +18,2 |
+| Medo (duelo) | — | +3,0* | +4,1* | +6,3 | +9,2 | +15,6 | +19,6 | +28,6 |
+| Segundo Golpe (duelo) | +2,0 | +6,1 | +6,1 | +10,2 | +13,3 | +15,8 | +17,9 | +17,2 |
+| Perfura (acima) | +1,6 | +3,4 | +5,6 | +11,1 | +13,5 | +23,2 | +30,1 | +35,4 |
+| Couraça (duelo) | +2,9 | +5,0 | +6,2 | +12,1 | +15,0 | +19,5 | +27,2 | +34,7 |
+| Devolve (duelo) | +4,9 | +7,8 | +9,5 | +13,3 | +16,1 | +22,5 | +30,6 | +36,3 |
+| Regenera (duelo) | +2,1 | +5,4 | +6,9 | +8,5 | +10,8 | +12,1 | +12,9 | +13,7 |
+| Temível (duelo) | +5,5 | +5,5 | +8,5 | +10,7 | +13,5 | +17,5 | +22,0 | +24,2 |
+| Robusta (carga) | +1,2 | +2,6 | +4,0* | +5,1* | +6,8* | +7,1* | +6,3 | +8,7 |
+| Guarda (duelo) | +4,0 | +6,6 | +6,6 | +8,1 | +11,5 | +14,3 | +16,9 | +21,0 |
+| Firmeza (magia) | +2,6 | +4,6 | +4,6 | +5,0 | +7,6 | +10,2 | +13,3 | +17,5 |
+| Coragem (medo) | +1,3 | +2,4 | +5,2 | +5,4 | +11,2 | +14,2 | +16,7 | +21,1 |
+| Guarda Mágica (magia) | +2,2 | +3,0 | +3,9 | +7,9 | +11,8 | +18,0 | +21,9 | +29,3 |
+| Chama (magia) | +5,1 | +5,6 | +5,5 | +8,7 | +12,7 | +14,0 | +17,7 | +21,0 |
+| Foco Certeiro (magia) | +5,8 | +9,5 | +9,5 | +11,7 | +14,9 | +18,6 | +19,8 | +25,0 |
+
+  O cenário: a Perfura contra a armadura uma categoria acima; os de foco e de amuleto no mago contra mago; a Robusta contra a carga 6 (o Aturdir Épico, a medida do contrato; contra o Aturdir da mesma categoria a linha descia de verdade); a Coragem contra o Medo da mesma categoria. A Vampira e a Regenera param perto de +14: o teto da cura do dia as segura. **A Perfura não muda a escolha de mirar a fresta** (a de hoje): com a escolha refeita por ela, o robô deixava de mirar no nível 150 e a Perfura Comum tirava 15 pontos de quem a tinha.
+- **EF2 A régua das regras** (do piso ao teto da força, com a folga, em todo efeito que tem cenário, seja ele medido (m), de conta (c) ou de desenho (d) no contrato; fora da faixa, o modo longo antes de reprovar): Derruba +4,2 (o contrato: +3,2) · Firme +5,9 · Arrancada +2,4 (+2,7) · **Luz +12,1 no escuro: forte, da Épica** · **Aparadora +9,8 no duelo de escudo: normal, da Incomum** · Expõe +7,6 (+7,1) · Ponta Certa +4,6 (+5,1) · **Desforra +3,4: fraco, da Comum** (o contrato contava +5, no normal) · Escancara +17,2 (+15,5) · Amolece +13,1 (+11,5) · Fôlego +11,5 no martelo (+13,3) · Ceifadora +17,6 no um contra dez (+15,8) · Varredura +17,7 no um contra dez (+14,6) · Brasa +10,1 (+14,5) · **Atar +3,2 (o clérigo de maça contra o mago): fraco, da Comum** · Refletora +20,0 (contra a maga) · **Escudo que Conta −0,5 e Guardiã +2,3 (no 3 contra 3): fracos, da Comum** · Golpe do Fim +35,2 (+35,2) · Tempestade +26,7 no um contra dez (+20,6) · **Domínio +11,3 (o mago contra o mago): forte, da Épica** · Imortal +4,0 (compra a vida, não a vitória). O Leve, o Pesa, o Não Quebra e o Fio Manso não têm vitória a medir. **A força de cada um é a que o banco mede, nos dois sentidos** (28.1; DESENHO 12.3, com o que daria a outra saída: a regra afinada na porta do contrato).
+- **EF3 A peça magra de cima** (a arma uma acima, sem efeito, contra a de baixo com efeitos, a mesma gente): contra a Rara de 4 cheios, a Épica vence 79,9% (com a Vampira) e 81,0% (com o Medo); **contra a Rara de 3 cheios e a Escancara do degrau emprestado, 73,95% no modo longo (a meta, 75 com a folga, pede 74; o contrato mediu 74,7 e a chamou "na borda"; com outras sementes, na revisão, 73,76 e 74,04): não passa por cinco centésimos, e espera o Mestre (DESENHO 12.3: o degrau emprestado só em peça de até 3 efeitos, ou a borda aceita)** · o teto inteiro (6 cheios, os mais fortes): 67,2%; com o Gume de +40% do vidro, 63,1% (espelhada, como as outras linhas) · o degrau emprestado em peça de 6: recusado · os quatro pares: a Rara magra × a Incomum de 4 (2 cheios) 86,6%, a Épica × a Rara cheia 79,9%, a Única × a Épica cheia 70,0%, a Lendária × a Única cheia 59,5% (no modo longo; a meta pede 59) · o conjunto uma acima contra a arma de 4 cheios: 98,9%. (À parte, sem meta: a Lendária magra contra a Única com os cinco mais fortes, Gume, Certeira, Crítico, Medo e Aturdir cheios: 40,2%.)
+- **EF4 A pilha:** 10.000 golpes com as piores combinações: o pior, ×7,00 do golpe de hoje (o teto cortou 254 golpes); os dados no máximo 4 vezes; a couraça no máximo 50%; o crítico no máximo 24% (17/7); os fixos empilhados no teto (acerto, Defesa e coragem +8; a resistência +16).
+- **EF5 O atordoar não trava:** nenhuma janela de 3 turnos com 2 perdidos (a carga 15 contra Vigor 50: 2.553 janelas, 31% dos turnos perdidos; o chefe: 5.491, 26%; o 3 contra 3: 8.041, 24%; com a ferida grave na cabeça: 75, 33%). O 3 contra 3 remedido: a carga 4 dá +18,8 e a 6, +22,0 (o contrato: +18,0 e +21,8).
+- **EF6 O calejo:** os golpes que tiram PV até o 1º atordoar e entre o 1º e o 2º, com a cabeça firme: 3,0 e 5,9 (×1,96; a meta: 1,4; 234 de 10.000 lutas chegam ao 2º); só os que enchem a barra (o calejo sozinho), 3 e 4 (×1,33: com a carga 4, o golpe é inteiro; o "40% mais" vale na carga); a resistência 10, 14, 18. **O calejo por família na Firmeza:** o de pernas dá +4 contra o prender e as raízes e nada contra o nó; o de mana, +4 contra o nó; com o calejo de hoje, vale o maior.
+- **EF7 A escada do medo:** o módulo 8, 40% em 3.000 lutas (a meta: 30% ou mais; o contrato mediu 39%, e antes da escada 52%) · quem o jogador comanda contra o Medo 29: 0 fugas e 0 rendições em 1.000 lutas, a luta para uma vez só (827 paradas) · a Coragem da mesma categoria corta o Medo: o Raro de +3,4 para −0,6, o Único de +9,6 para +2,4, o Lendário de +13,2 para +2,2, o Primordial de +26,6 para +8,7 · o pior acúmulo de uma build Rara (o Temível 24 e o Medo 20 cheio; o Brado e os trunfos são da fase 2) contra Vontade 50: 20% de quebra em 4 rodadas (a meta: até 60%).
+- **EF8 Os freios do apelão:** com dois apelões, só o da melhor peça acorda (o Imortal da armadura dorme, o resto dela vale); a peça do apelão acordado ocupa 2 lugares (Vontade 50: ela e mais nenhuma Épica), e a outra peça de apelão, 1 (Vontade 60: as duas Lendárias acordadas, a Couraça valendo, o Imortal dormindo); o Imortal salva uma vez por dia, venha da armadura ou do amuleto, e salva de novo no outro dia (no mundo de prova, pela luta que volta ao estado).
+- **B3 O item decide:** o conjunto Raro com tudo cheio (a arma com Gume, Certeira, Crítico e Medo; a armadura com Couraça, Devolve, Regenera e Robusta; o escudo com Guarda e Temível) contra o conjunto uma acima sem nada: o de cima vence 90,1% (a meta: 60%); contra o DUAS acima, 99,2% (85%). **O Devolve conta o dano levado** (o PV que o dono perdeu): sem isso, o golpe enorme na cabeça sem elmo voltava inteiro em quem bateu, e o de cima vencia só 61% e 78%.
+- **A tabela por nível** (`tabelas_efeitos.PONTOS`, o "no seu nível, perto de +X" do `efeitos.py ver`): `python3 provas.py 2000 efeitos tabela` (cada efeito de número, nos níveis 10, 20, 50 e 150, no cenário do EF1), alisada (a linha não desce de uma categoria para a de cima, e não tem negativo). No nível 150 a Perfura quase não vale (o robô já mira a fresta).
+- **O estresse** (`python3 estresse.py 1500`): as lutas ao acaso com efeitos ao acaso conferem os invariantes da pilha e da carga (o dano nunca acima de 7 vezes o de hoje, os dados no máximo 4 vezes, a couraça até 75%, os fixos até +8, a barra abaixo da resistência, ninguém com 2 turnos perdidos em 3, até 3 filetes, os prazos até 3 rodadas, o acuado só em quem está abalado e nunca em quem o jogador comanda, a cura do dia no teto).
+
 ## Os comandos
 
 ```
-python3 provas.py 600                                as provas da luta, dos itens e dos bichos
+python3 provas.py 600                                as provas da luta, dos itens e dos bichos (e as da fase 1b, com 2.000 lutas por linha; só elas: provas.py 2000 efeitos)
 python3 provas_mundo.py                              as provas do mundo: a etapa 1, o alicerce da etapa 2, o mercado, o ofício, a caça
 python3 provas_caca.py coleta                        só as metas da coleta (K1 a K4) e a vila de teste contra a tabela
 python3 estresse.py 1500                             lutas ao acaso, com bichos misturados
@@ -2668,7 +2841,7 @@ python3 ato.py luta nova CENARIO.json LUTA.json  ·  ato.py luta roda LUTA.json 
 python3 teste.py "o que se tenta" Força contra=26 [mais=N] [quem=ID] [oculto]
 python3 estado.py valida | eventos [N] | pessoa ID | lugar ID  ·  corpo.py ver [ID]
 python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas"      o que o Mestre decide em cena, por evento
-python3 estado.py entrada 1a      o evento de entrada de uma fase da parte 2 (o marco no save; DESENHO 9.5), uma vez, no mesmo commit da fase
+python3 estado.py entrada 1a | 1b      o evento de entrada de uma fase da parte 2 (o marco no save; DESENHO 9.5), uma vez, no mesmo commit da fase (a 1b converte o devolve fixo e o sangra: 28.9)
 
 python3 mercado.py ver | preco BEM [N] | comprar BEM N | vender BEM N|tudo | vender tudo | comprar ITEM | vender ITEM
 python3 mercado.py funda POVO "como foi"             o Mestre abre um mercado onde a pessoa está
@@ -2677,7 +2850,8 @@ python3 oficio.py ver | pede arma espada Raro
 python3 oficio.py forjar arma espada Raro "Nome" [blocos=N] [nucleo=ID]  ·  forjar armadura malha Raro "Nome" [cobre=cabeça]  ·  forjar escudo Raro "Nome"
 python3 oficio.py continua [OBRA] [blocos=N]  ·  larga OBRA  ·  consertar ITEM [pontos=N] [pago]  ·  ajustar ITEM [para=ID]  ·  jornal N
 python3 oficio.py pede ferramenta martelo|tenaz|forja|couro CATEGORIA  ·  forjar ferramenta martelo|tenaz|forja|couro CATEGORIA ["Nome"] [molde=CHAVE]      (a ferramenta do ofício: 7.14)
-python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde]  ·  receita [TIPO chave,chave|nada]      (a faixa e a escolha dos efeitos: 7.3, 7.15, 7.16; na fase 1a, só a ferramenta escolhe)
+python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde] [contra=TIPO]  ·  receita [TIPO chave,chave|nada]      (a faixa e a escolha dos efeitos: 7.3, 7.15, 7.16; da fase 1b, as peças de luta escolhem do catálogo do capítulo 28)
+python3 efeitos.py ver ITEM [nivel=N] | lista [TIPO] [CATEGORIA]      os efeitos de luta da peça, com o número da categoria dela (28.10)
 python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA "como foi"  ·  oficio.py oficina NIVEL "como foi"      (o Mestre registra)
 
 python3 caca.py ver | sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID] | coletar BEM [ERMO] [blocos=N]      (procura: N de 1 a 6; coleta: N de 1 a 4)

@@ -11,7 +11,11 @@ e a armadura, o bando, o chefe, o tamanho, os traços, a moral, a duração; e o
 E um sexto, A MAGIA NA LUTA (etapa da magia, capítulo 11): o duelo e a lei "o item decide" com o foco e o amuleto, a Mana, o grupo, as tradições, o feitiço longo
 sob flecha, o retrochoque, o controle, a multidão, os bichos, os nove traços novos, a poção e o veneno de lâmina, a peça encantada, as fases do chefe, a ordem, e a luta que volta ao estado.
 
+E um sétimo, A PARTE 2, FASE 1b (projeto/etapa_efeitos/DESENHO.md, seção 10): B0 (a luta de sempre, contra o motor de antes), EF1 a EF8 (a régua dos números e das regras,
+a peça magra de cima, a pilha, o atordoar que não trava, o calejo, a escada do medo, os freios do apelão) e B3 (o item decide).
+
 Uso: python3 provas.py [N] [magia]        N = lutas por meta (padrão 600) · magia: só o bloco da magia
+     python3 provas.py [N] efeitos         só o bloco da fase 1b (N lutas por linha; padrão 2.000, o modo de sempre do contrato) · efeitos tabela: a tabela por nível
 """
 import sys
 import luta
@@ -709,9 +713,560 @@ def _no_mundo():
             'a volta é conferida em toda luta em que ela vive, e ela vive e bebe em pelo menos uma', diz, certo)
 
 
+# ---------- A PARTE 2, FASE 1b: A BASE DA LUTA E OS EFEITOS DE ITEM (o bloco EF e as metas B0, B1, B3; projeto/etapa_efeitos/DESENHO.md, seção 10) ----------
+# O padrão é o do banco: o duelo de iguais do nível 50 (mão de Mestre), tudo Raro, começando perto; cada efeito medido no duelo ESPELHADO (metade das lutas com ele no lado A,
+# metade no B: a vantagem de lado some) e com OS MESMOS DADOS em cada coluna do mesmo efeito (a semente dele: o número igual dá a vitória igual). O número da categoria entra
+# na peça pelo gancho das provas (p['fx_prova']: tabelas_efeitos.valor, o mesmo que a peça daria): entre iguais o golpe tira o mesmo em qualquer categoria. Os cenários
+# desiguais (a Perfura contra a armadura uma acima; a Robusta contra o Aturdir e a Coragem contra o Medo da mesma categoria; o um contra dez) medem a vitória com e sem o efeito,
+# com os mesmos dados. Uso: python3 provas.py [N] efeitos (só este bloco; N lutas por linha, 2.000 de padrão) · python3 provas.py [N] efeitos tabela (a tabela por nível)
+import tabelas_efeitos as TE
+B0_REF = 'dbb6c3e'          # o commit do motor de antes da fase 1b (a fase 1a): a meta B0 roda as mesmas lutas nele e no de agora, com a escada do medo desligada
+
+
+def _vence(faz_a, faz_b, n, seed, **kw):
+    """a fração de vitórias de A em n lutas (o empate vale meia), com os dados da semente (à parte dos outros blocos)"""
+    D0 = luta.D; luta.semente(seed); v = 0.0
+    try:
+        for _ in range(n):
+            S = luta.nova(faz_a(), faz_b(), quieto=True, **{**dict(inicio='perto'), **kw}); luta.corre(S)
+            v += 1 if S['fim'] == 'A' else 0 if S['fim'] == 'B' else 0.5
+    finally: luta.D = D0
+    return v / max(1, n)
+
+
+def _pontos(faz_com, faz_sem, n, seed, **kw):
+    """os pontos de vitória do efeito no duelo espelhado: a vitória de quem tem, − 50"""
+    a = _vence(faz_com, faz_sem, n // 2, seed, **kw); b = _vence(faz_sem, faz_com, n - n // 2, seed + 7919, **kw)
+    return 100 * (a + (1 - b)) / 2 - 50
+
+
+def _delta(faz_com, faz_sem, faz_contra, n, seed, **kw):
+    """os pontos que o efeito dá num cenário desigual: a vitória com ele − sem ele, contra o mesmo lado e com os mesmos dados"""
+    return 100 * (_vence(faz_com, faz_contra, n, seed, **kw) - _vence(faz_sem, faz_contra, n, seed, **kw))
+
+
+def _g(nome, fx=None, nivel=50, arma=R, arm=R, esc='igual', familia='espada', vont=None, atributos=None, **kw):
+    """o guerreiro do banco (espada, malha com elmo e escudo), com os números de efeito postos (fx: {'arma': {...}, 'armadura': {...}, 'escudo': {...}, 'amuleto': {...}})"""
+    at = dict(atributos or {}); at.update({'Vontade': vont} if vont else {})
+    p = padrao(nome, nivel, atributos=at or None, **({'fx_prova': fx} if fx else {}), **kw)
+    return veste(p, arma=(familia, arma), armadura=('malha', arm), escudo=(arm if esc == 'igual' else esc) if T.FAMILIAS[familia]['maos'] == 1 else None)
+
+
+def _onde(k):
+    """em que peça o banco põe o número do efeito (o Temível, na armadura)"""
+    pc = TE.EFEITOS[k]['pecas']; return 'arma' if 'arma' in pc else 'armadura' if 'armadura' in pc else pc[0]
+
+
+def _ef1_linha(k, n, seed, nivel=50, so=None):
+    """os pontos de um efeito de número nas 8 categorias, no cenário dele (None: a categoria não tem o efeito; so: só estas categorias)"""
+    cena = TE.EFEITOS[k].get('cena'); out = []
+    for c in range(len(T.CATS)):
+        v = TE.valor(k, c)
+        if so is not None and c not in so: out.append(None); continue
+        if v is None: out.append(None); continue
+        if k == 'cacadora': v = (v, 'gente')
+        fx = {_onde(k): {k: v}}; mt = T.maestria_tipica(nivel)
+        if cena == 'magia':
+            out.append(_pontos(lambda: [mago('a maga', nivel, fx_prova=fx)], lambda: [mago('o mago', nivel)], n, seed)); continue
+        if cena == 'acima':                                 # a Perfura: contra a armadura uma categoria acima da arma
+            contra = lambda: [_g('o encouraçado', nivel=nivel, arm=R + 1, esc=R, vont=100)]
+            out.append(_delta(lambda: [_g('com', fx, nivel)], lambda: [_g('sem', None, nivel)], contra, n, seed)); continue
+        if cena == 'carga':                                 # a Robusta: contra a carga 6 (o Aturdir Épico: a medida do contrato, "a Rara corta a carga 6"), a mesma em toda coluna. Contra o
+            contra = lambda: [_g('o atordoador', {'arma': {'aturdir': TE.ATURDIR[3]}}, nivel)]       # Aturdir da mesma categoria a linha descia de verdade (a Mítica contra a carga 12 pega em 2 golpes; a Lendária contra a 10, em 3)
+            out.append(_delta(lambda: [_g('com', fx, nivel)], lambda: [_g('sem', None, nivel)], contra, n, seed)); continue
+        if cena == 'medo':                                  # a Coragem: contra o Medo da mesma categoria (a Comum, contra o da Incomum)
+            contra = lambda: [_g('o temido', {'arma': {'medo': TE.MEDO[max(c, 1)]}}, nivel)]
+            out.append(_delta(lambda: [_g('com', fx, nivel)], lambda: [_g('sem', None, nivel)], contra, n, seed)); continue
+        out.append(_pontos(lambda: [_g('com', fx, nivel)], lambda: [_g('sem', None, nivel)], n, seed))
+    return out
+
+
+def _f(x): return '—' if x is None else f'{x:+.1f}'.replace('.', ',')
+
+
+def ef1(n):
+    """EF1 A RÉGUA DOS NÚMEROS: cada efeito de número nas 8 categorias, no cenário dele: nunca acima do teto da faixa da categoria (o cheio, que é o número da de cima, nunca acima
+    do teto da de cima: é a coluna seguinte); cada coluna não menor que a da esquerda; com a folga de 1 ponto"""
+    out = []; linhas = {}
+    for i, k in enumerate([k for k in TE.EFEITOS if TE.de_numero(k)]):
+        pts = _ef1_linha(k, n, 3000 + 17 * i); linhas[k] = pts
+        cs = [c for c in range(len(pts)) if pts[c] is not None]
+        duvidas = lambda: {c for c in cs if pts[c] > TE.teto_da_cat(c) + TE.FOLGA} | {x for a, b in zip(cs, cs[1:]) if pts[b] < pts[a] - TE.FOLGA for x in (a, b)}
+        longo = ''; feitas = set()
+        while duvidas() - feitas:                           # O MODO LONGO (seção 10: 20.000 lutas por linha): a coluna que passa do teto, ou o par que desce, se remede com 10 vezes as lutas;
+            novas = duvidas() - feitas                      # e de novo, se a coluna remedida faz descer o par com a vizinha (cada coluna, uma vez)
+            re_ = _ef1_linha(k, 10 * n, 3000 + 17 * i, so=novas)
+            for c in novas: pts[c] = re_[c]
+            feitas |= novas
+        if feitas: longo = f" (remedidas no modo longo, {10 * n} lutas: {', '.join(T.CATS[c] for c in sorted(feitas))})"
+        acima = [T.CATS[c] for c in cs if pts[c] > TE.teto_da_cat(c) + TE.FOLGA]
+        desce = [f"{T.CATS[a]}→{T.CATS[b]}" for a, b in zip(cs, cs[1:]) if pts[b] < pts[a] - TE.FOLGA]
+        out.append((f"EF1 {TE.EFEITOS[k]['nome'].upper()} ({TE.EFEITOS[k].get('cena') or 'duelo'}): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), "
+                    f"e cada coluna não menor que a da esquerda (folga {TE.FOLGA})",
+                    ' · '.join(f"{T.CATS[c][:3]} {_f(pts[c])}" for c in range(len(pts))) + longo + (f"; ACIMA DO TETO: {', '.join(acima)}" if acima else '') + (f"; DESCE: {', '.join(desce)}" if desce else ''),
+                    not acima and not desce))
+    return out, linhas
+
+
+def ef2(n):
+    """EF2 A RÉGUA DAS REGRAS: cada efeito de regra que tem cenário, medido nele, do piso ao teto da força dele (com a folga), seja ele medido (m), de conta (c) ou de desenho (d)
+    no contrato. A força de cada um é a que o banco mede, nos dois sentidos (tabelas_efeitos; o DESENHO 12.3 registra as que mudaram de porta). O Imortal compra a vida, não a
+    vitória (a régua não o julga: 4.3). Os de desenho sem cenário (Leve, Pesa, Não Quebra, Fio Manso) não têm vitória a medir. Fora da faixa, a linha se remede no modo longo
+    (10 vezes as lutas) antes de reprovar."""
+    out = []; dez = varios(10, 60, C['unico'], C['unico'])
+    um_ = lambda fx, **kw: (lambda: [veste(padrao('o um', 120, moral='firme', **({'fx_prova': fx} if fx else {})), arma=('espada', C['lendario']), armadura=('malha', C['lendario']), escudo=C['lendario'])])
+    cenas = {
+        'derruba': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4101),
+        'arrancada': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4102),
+        'expoe': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4103),
+        'ponta_certa': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4104),
+        'desforra': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4105),
+        'escancara': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4106),
+        'amolece': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4107),
+        'folego': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}}, familia='martelo')], lambda: [_g('sem', familia='martelo')], q, 4108),
+        'brasa': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4109),
+        'golpe_do_fim': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4110),
+        # os de grupo: o um contra dez do banco, com as 2.000 lutas por linha do contrato (seção 10)
+        'ceifadora': lambda k, q: _delta(um_({'arma': {k: True}}), um_(None), dez, q, 4111),
+        'varredura': lambda k, q: _delta(um_({'arma': {k: True}}), um_(None), dez, q, 4112),
+        'tempestade': lambda k, q: _delta(um_({'arma': {k: True}}), um_(None), dez, q, 4113),
+        'imortal': lambda k, q: _pontos(lambda: [_g('com', {'armadura': {k: True}})], lambda: [_g('sem')], q, 4114),
+        'aparadora': lambda k, q: _pontos(lambda: [_g('com', {'escudo': {k: True}})], lambda: [_g('sem')], q, 4115),
+        'luz': lambda k, q: _pontos(lambda: [_g('com', {'arma': {k: True}})], lambda: [_g('sem')], q, 4116, tempo=['escuro']),
+        'firme': lambda k, q: _delta(lambda: [_g('com', {'armadura': {k: True}})], lambda: [_g('sem')], lambda: [_g('o que derruba', {'arma': {'derruba': True}})], q, 4117),
+        # o Atar no "mago contra mago" do contrato: o clérigo de maça (quem lança e bate) contra o mago; o guerreiro contra a maga deu +0,3, e o mago de varinha e espada, +0,0
+        'atar': lambda k, q: _delta(lambda: [clerigo('com', fx_prova={'arma': {k: True}})], lambda: [clerigo('sem')], lambda: [mago('o mago')], q, 4118),
+        'refletora': lambda k, q: _delta(lambda: [_g('com', {'escudo': {k: True}}, amuleto=R)], lambda: [_g('sem', amuleto=R)], lambda: [mago('a maga')], q, 4119, inicio='longe'),
+        'dominio': lambda k, q: _pontos(lambda: [mago('com', fx_prova={'foco': {k: True}})], lambda: [mago('sem')], q, 4120),
+        'guardia': lambda k, q: _delta(lambda: [_g('g1', {'escudo': {k: True}}, guarda='g2', moral='firme'), _g('g2'), _g('g3')], lambda: [_g('g1', guarda='g2', moral='firme'), _g('g2'), _g('g3')],
+                                       lambda: [_g('b1'), _g('b2'), _g('b3')], q, 4121),
+        'escudo_que_conta': lambda k, q: _delta(lambda: [_g('g1', {'escudo': {k: True}}), _g('g2'), _g('g3')], lambda: [_g('g1'), _g('g2'), _g('g3')],
+                                                lambda: [_g('b1', {'arma': {'medo': 20}}), _g('b2', {'arma': {'medo': 20}}), _g('b3', {'arma': {'medo': 20}})], q, 4122),
+    }
+    for k, x in TE.EFEITOS.items():
+        if x['tipo'] != 'regra': continue
+        f = x['forca']; m = x['medida']; mede = cenas.get(k)
+        if not mede: out.append((f"EF2 {x['nome'].upper()} ({f}; {m})", 'sem vitória a medir (o contrato o marca de desenho, sem cenário: a regra faz o que diz, e a peça o mostra)', True)); continue
+        dentro = lambda v: TE.PISO_PONTOS[f] - TE.FOLGA <= v <= TE.FORCA_PONTOS[f] + TE.FOLGA
+        pts = mede(k, n); longo = ''
+        if k != 'imortal' and not dentro(pts): pts = mede(k, 10 * n); longo = f' (remedido no modo longo, {10 * n} lutas)'
+        ok_ = k == 'imortal' or dentro(pts)
+        out.append((f"EF2 {x['nome'].upper()} ({f}: {TE.PISO_PONTOS[f]} a {TE.FORCA_PONTOS[f]}; o contrato: {m})",
+                    f"{_f(pts)}{longo}" + (' (a régua não julga: compra a vida)' if k == 'imortal' else '' if ok_ else (' ABAIXO DO PISO' if pts < TE.PISO_PONTOS[f] else ' ACIMA DO TETO')), ok_))
+    return out
+
+
+def _arma_fx(cat, efs, fam='espada'):
+    """a arma de verdade, com os efeitos (os cheios marcados): o número sai do catálogo, como no jogo"""
+    return item('arma', cat, familia=fam, efeitos=[dict(chave=k, **({'cheio': True} if ch else {}), **({'contra': 'gente'} if k == 'cacadora' else {})) for k, ch in efs], **({'teto_efeitos': len(efs)} if len(efs) > 4 else {}))
+
+
+def ef3(n):
+    """EF3 A PEÇA MAGRA DE CIMA: a arma uma acima, sem efeito, contra a de baixo com efeitos cheios (mesma gente); o degrau emprestado em peça de 6 é recusado; os quatro pares; o conjunto"""
+    out = []; nn = max(n, 2000)
+    def contra(cat_alta, cat_baixa, efs, piso=None, **kw):  # "a arma uma acima": a armadura e o escudo dos dois são da categoria de baixo (a arma de cima vale ×3, como entre a Épica e a Rara)
+        alta = lambda: [veste(padrao('a de cima', 50, atributos={'Vontade': 100}), arma=('espada', cat_alta), armadura=('malha', cat_baixa), escudo=cat_baixa)]
+        baixa = lambda: [veste(padrao('a de baixo', 50, atributos={'Vontade': 100}), arma=_arma_fx(cat_baixa, efs), armadura=('malha', cat_baixa), escudo=cat_baixa)]
+        mede = lambda q: 100 * (_vence(alta, baixa, q // 2, 5101, **kw) + 1 - _vence(baixa, alta, q - q // 2, 5102, **kw)) / 2
+        v = mede(nn)
+        if piso is not None and v < piso and v >= piso - 3: v = mede(10 * nn); longos.append(v)      # na borda (até 3 pontos abaixo): o modo longo (10 vezes as lutas) decide
+        return v
+    longos = []
+    quatro = [('gume', 1), ('certeira', 1), ('critico', 1), ('vampira', 1)]
+    l1 = contra(R + 1, R, quatro, 75 - TE.FOLGA); l2 = contra(R + 1, R, [('gume', 1), ('certeira', 1), ('critico', 1), ('medo', 1)], 75 - TE.FOLGA)
+    emp = lambda: item('arma', R, familia='espada', degrau=True, efeitos=[dict(chave='gume', cheio=True), dict(chave='critico', cheio=True), dict(chave='escancara', emprestado=True)])      # (Dia 46, o Mestre: o degrau só em peça de até 3; a de 4 dava 73,95%)
+    a3 = lambda: [veste(padrao('a de cima', 50, atributos={'Vontade': 100}), arma=('espada', R + 1), armadura=('malha', R), escudo=R)]           # (a peça nova a cada luta: a mesma peça
+    b3 = lambda: [veste(padrao('a de baixo', 50, atributos={'Vontade': 100}), arma=emp(), armadura=('malha', R), escudo=R)]                      # gastava de uma luta para outra e quebrava)
+    m3 = lambda q: 100 * (_vence(a3, b3, q // 2, 5103) + 1 - _vence(b3, a3, q - q // 2, 5104)) / 2
+    l3 = m3(nn)
+    if 75 - TE.FOLGA - 3 <= l3 < 75 - TE.FOLGA: l3 = m3(10 * nn); longos.append(l3)                     # na borda (o contrato: 74,7%, "na borda"): o modo longo decide
+    pc_ = lambda v, meta: (f"{v:.2f}%" if abs(v - meta) < 0.15 else f"{v:.1f}%").replace('.', ',')      # perto da meta, duas casas: o arredondamento não esconde a borda
+    out.append(('EF3 A ÉPICA MAGRA contra a Rara de 4 cheios (Gume +30%, Certeira +3, Crítico 19/11, Vampira 50%; ou o Medo 20 no lugar da Vampira; ou 2 cheios, Gume e Crítico, e a Escancara do degrau emprestado, a peça de 3): 75% ou mais (folga 1)',
+                f"{pc_(l1, 75 - TE.FOLGA)}, {pc_(l2, 75 - TE.FOLGA)} e {pc_(l3, 75 - TE.FOLGA)}" + (f" ({len(longos)} no modo longo, {10 * nn} lutas)" if longos else ''), min(l1, l2, l3) >= 75 - TE.FOLGA))
+    seis = [('gume', 1), ('certeira', 1), ('critico', 1), ('vampira', 1), ('medo', 1), ('aturdir', 1)]
+    l4 = contra(R + 1, R, seis, 60 - TE.FOLGA)
+    va = lambda: [_g('a de cima', arma=R + 1, vont=100)]; vb = lambda: [_g('a de baixo', {'arma': {'gume': 0.40, 'certeira': 3, 'critico': (19, 11), 'vampira': 0.5, 'medo': 20, 'aturdir': 6}}, vont=100)]
+    vidro = 100 * (_vence(va, vb, nn // 2, 5105) + 1 - _vence(vb, va, nn - nn // 2, 5106)) / 2       # espelhada, como as outras linhas (o gume de +40% do vidro, posto pelo gancho)
+    out.append(('EF3 O TETO INTEIRO: a Épica magra contra a Rara de 6 cheios, os mais fortes (Gume, Certeira, Crítico, Vampira 50%, Medo 20, Aturdir 6); e a mesma com o Gume de +40% do vidro (os números da fase 5): 60% ou mais',
+                f"{pc_(l4, 60 - TE.FOLGA)} e {pc_(vidro, 60 - TE.FOLGA)}", min(l4, vidro) >= 60 - TE.FOLGA))
+    try: item('arma', R, familia='espada', degrau=True, teto_efeitos=6, efeitos=[dict(chave=k, cheio=True) for k in ('gume', 'certeira', 'critico', 'vampira', 'medo')] + [dict(chave='escancara', emprestado=True)]); r1 = 'aceitou'
+    except SystemExit as e: r1 = 'recusou' if 'até 3 efeitos' in str(e) else 'recusou por outro motivo: ' + str(e)[:80]
+    out.append(('EF3 O DEGRAU EMPRESTADO EM PEÇA DE 6 é recusado (com 6, a Épica magra venceu só 58,5%, e com 4, 73,95%: o degrau só em peça de até 3)', r1, r1 == 'recusou'))
+    # OS QUATRO PARES: "a X cheia" é a peça com o teto de efeitos da categoria, todos cheios, na ordem de 4.4 (Gume, Certeira, Crítico, Vampira; o quinto, o Medo); a Incomum de 4,
+    # os dois primeiros cheios. (Com os cinco mais fortes, o Aturdir no lugar da Vampira, o par de cima mede-se à parte: a linha seguinte.)
+    can = ['gume', 'certeira', 'critico', 'vampira', 'medo']
+    pares = [('a Rara magra × a Incomum de 4 com 2 cheios', R, 1, [(k, i < 2) for i, k in enumerate(can[:4])]),
+             ('a Épica × a Rara cheia (4)', 3, R, [(k, 1) for k in can[:4]]),
+             ('a Única × a Épica cheia (5)', 4, 3, [(k, 1) for k in can[:5]]),
+             ('a Lendária × a Única cheia (5)', 5, 4, [(k, 1) for k in can[:5]])]
+    n0 = len(longos); vs = [(nm, contra(a, b, efs, 60 - TE.FOLGA)) for nm, a, b, efs in pares]
+    out.append(('EF3 OS QUATRO PARES (a de cima magra contra a de baixo cheia, mesma gente; "cheia": o teto de efeitos da categoria, todos cheios, na ordem de 4.4): 60% ou mais em cada',
+                ' · '.join(f"{nm}: {v:.1f}%".replace('.', ',') for nm, v in vs) + (f" ({len(longos) - n0} remedido(s) no modo longo, {10 * nn} lutas)" if len(longos) > n0 else ''), all(v >= 60 - TE.FOLGA for _, v in vs)))
+    forte = contra(5, 4, [(k, 1) for k in ('gume', 'certeira', 'critico', 'medo', 'aturdir')])
+    out.append(('EF3 (à parte, sem meta: o contrato não o pede) o par de cima com os cinco mais fortes (Gume, Certeira, Crítico, Medo e Aturdir cheios: os números da Lendária numa Única)', f"a Lendária magra vence {forte:.1f}%".replace('.', ','), True))
+    # O CONJUNTO: o conjunto uma acima (arma, armadura e escudo), sem efeito, contra o de baixo com a peça destas linhas (a arma de 4 cheios): a leitura que fecha com a meta (85%);
+    # o conjunto de baixo com TUDO cheio é o B3 (o topo do sistema contra o conjunto uma acima: 60%)
+    cj = _conjunto(nn, R + 1, so_arma=True)
+    out.append(('EF3 O CONJUNTO: o conjunto uma acima, sem efeito, contra o de baixo com a arma de 4 cheios (Gume, Certeira, Crítico, Vampira): 85% ou mais', f"{cj:.1f}%".replace('.', ','), cj >= 85 - TE.FOLGA))
+    return out
+
+
+def _conjunto(nn, alta, seed=5201, so_arma=False):
+    """a vitória do conjunto de cima (arma, armadura e escudo da categoria alta, sem efeito) contra o conjunto Raro com tudo cheio (a arma de 4 cheios; a armadura: Couraça, Devolve,
+    Regenera e Robusta; o escudo: Guarda e Temível), espelhada"""
+    def baixo(nome):
+        p = padrao(nome, 50, atributos={'Vontade': 100})
+        if so_arma: return veste(p, arma=_arma_fx(R, [('gume', 1), ('certeira', 1), ('critico', 1), ('vampira', 1)]), armadura=('malha', R), escudo=R)
+        return veste(p, arma=_arma_fx(R, [('gume', 1), ('certeira', 1), ('critico', 1), ('medo', 1)]),
+                     armadura=item('armadura', R, material='malha', efeitos=[dict(chave=k, cheio=True) for k in ('couraca', 'devolve', 'regenera', 'robusta')]),
+                     escudo=item('escudo', R, efeitos=[dict(chave=k, cheio=True) for k in ('guarda', 'temivel')]))
+    cima = lambda: [veste(padrao('o de cima', 50, atributos={'Vontade': 100}), arma=('espada', alta), armadura=('malha', alta), escudo=alta)]
+    a = _vence(cima, lambda: [baixo('o de baixo')], nn // 2, seed); b = _vence(lambda: [baixo('o de baixo')], cima, nn - nn // 2, seed + 1)
+    return 100 * (a + 1 - b) / 2
+
+
+def ef4(n):
+    """EF4 A PILHA: golpes sorteados com as piores combinações que cabem (o Golpe do Fim, o Gume e a Caçadora Primordiais cheios, o Crítico 17/7, a Perfura, o alvo exposto,
+    quem bate amolecido, a Couraça): o golpe dividido pelo mesmo golpe pela regra de hoje, com os mesmos dados, nunca acima de ×7; os dados nunca mais de 4 vezes; a couraça
+    até 75%; os números fixos até +8 e a resistência até +16; o crítico nunca melhor que 17/7. (O fecho, o trunfo e o Rito são da fase 2: o dado somado ainda não existe.)"""
+    import random
+    rr = random.Random(41); golpes = max(10000, 5 * n); pior = 0.0; vezes = 0; cou = 0.0; crit = 0.0; mortos = 0; cortou = 0
+    D0 = luta.D; luta.semente(4401)
+    try:
+        while golpes > 0:
+            efa = {k: v for k, v in (('golpe_do_fim', True), ('gume', 1.0), ('cacadora', (1.0, 'gente')), ('critico', (17, 7)), ('perfura', 0.35), ('critico_19', True)) if rr.random() < .7}
+            efv = {k: v for k, v in (('couraca', 0.5),) if rr.random() < .5}
+            a = _g('a', {'arma': efa}, arma=rr.randint(0, 7), vont=100); e = _g('e', {'armadura': efv} if efv else None, arm=rr.randint(0, 7), esc=rr.randint(0, 7), vont=100)
+            S = luta.nova([a], [e], inicio='colado', quieto=True); S['r'] = 1; S['mede'] = []; fa, fe = S['L']
+            for _ in range(50):
+                fe['pv'] = fe['pvmax'] = 10 ** 9; fe['estado'] = 'pe'; fe['feridas'] = []; fe['exposto'] = S['r'] + 2 if rr.random() < .5 else 0; fa['amolecido'] = S['r'] + 1 if rr.random() < .2 else 0
+                fe['golpeado'] = []; luta.golpe(S, fa, fe, fa['arma'], extra=True); golpes -= 1
+            for m in S['mede']:
+                if m['hoje'] > 0: pior = max(pior, m['final'] / m['hoje'])
+                cortou += m['final'] < m['novo']; vezes = max(vezes, m['vezes']); cou = max(cou, m['couraca']); crit = max(crit, TE.chance_critico(m['faixa']))
+    finally: luta.D = D0
+    fixos = _fixos_teto()
+    ok_ = pior <= TE.TETO_PILHA + 1e-9 and vezes <= TE.DADOS_MAX and cou <= TE.COURACA_TETO + 1e-9 and crit <= TE.chance_critico(TE.CRITICO_MELHOR) + 1e-9 and fixos[0]
+    return [('EF4 A PILHA: o golpe nunca passa de 7 vezes o golpe de hoje (com os mesmos dados), os dados nunca rolam mais de 4 vezes, a couraça até 75%, os fixos até +8 e a resistência até +16, o crítico nunca melhor que 17/7',
+             f"{max(10000, 5 * n)} golpes: o pior ×{pior:.2f} do golpe de hoje (o teto cortou {cortou} golpes); os dados no máximo {vezes} vezes; a couraça no máximo {100 * cou:.0f}%; "
+             f"o crítico no máximo {100 * crit:.0f}% (17/7: {100 * TE.chance_critico(TE.CRITICO_MELHOR):.0f}%); {fixos[1]}".replace('.', ','), ok_)]
+
+
+def _fixos_teto():
+    """os números fixos com tudo empilhado: a Certeira Primordial e a Desforra; a Guarda Primordial; a Coragem Primordial, a Robusta Primordial e o Escudo que Conta; a Robusta"""
+    S = luta.nova([_g('a', {'arma': {'certeira': 8, 'desforra': True}, 'escudo': {'guarda': 8}, 'amuleto': {'coragem': 8}, 'armadura': {'robusta': (16, 5)}}, vont=100)], [_g('b')], quieto=True)
+    a, b = S['L']; a['desforra'][b['nome']] = 99; a['coragem_escudo'] = 2
+    ac, df, cg, rs = luta._fixo(S, a, 'acerto', a['arma'], b), luta._fixo(S, a, 'defesa'), luta._fixo(S, a, 'coragem'), luta._fixo(S, a, 'resistencia')
+    return ac <= TE.FIXO_TETO and df <= TE.FIXO_TETO and cg <= TE.FIXO_TETO and rs <= TE.RESIST_TETO, f"os fixos empilhados: acerto +{ac}, Defesa +{df}, coragem +{cg}, resistência +{rs}"
+
+
+def ef5(n):
+    """EF5 O ATORDOAR NÃO TRAVA: a carga Primordial (15) contra Vigor 50; o chefe; o 3 contra 3; e com a ferida grave na cabeça (a arma uma acima abre a grave): em cada janela de
+    3 turnos seguidos, o alvo age em 2 ou mais. E as medidas que o contrato remede: a coluna do Aturdir (no EF1) e o 3 contra 3 com a carga 4 e 6."""
+    out = []; nn = max(n, 2000)
+    def janelas(faz_a, faz_b, k):
+        D0 = luta.D; luta.semente(5501 + k); mal = jan = perd = turnos = 0
+        try:
+            for _ in range(nn):
+                S = luta.nova(faz_a(), faz_b(), quieto=True, inicio='perto'); S['mede_turnos'] = {}; luta.corre(S)
+                for nome, h in S['mede_turnos'].items():
+                    if luta.por_nome(S, nome)['lado'] != 'B': continue
+                    turnos += len(h); perd += sum(h)
+                    for i in range(len(h) - 2): jan += 1; mal += sum(h[i:i + 3]) >= 2
+        finally: luta.D = D0
+        return mal, jan, perd / max(1, turnos)
+    at15 = {'arma': {'aturdir': 15}}
+    cenas = [('a carga 15 contra Vigor 50', lambda: [_g('o atordoador', at15)], lambda: [_g('o alvo', atributos={'Vigor': 50})]),
+             ('o chefe (líder, de moral firme)', lambda: [_g('o atordoador', at15)], lambda: [_g('o chefe', lider=True, moral='firme')]),
+             ('o 3 contra 3', lambda: [_g(f'a{i}', at15) for i in range(3)], lambda: [_g(f'b{i}') for i in range(3)]),
+             ('com a ferida grave na cabeça (a arma uma acima)', lambda: [_g('o atordoador', at15, arma=R + 1, vont=100)], lambda: [_g('o alvo', atributos={'Vigor': 50})])]
+    res = [(nm,) + janelas(a, b, i) for i, (nm, a, b) in enumerate(cenas)]
+    out.append(('EF5 O ATORDOAR NÃO TRAVA: em cada janela de 3 turnos seguidos o alvo age em 2 ou mais (nenhuma janela com 2 perdidos), na carga Primordial contra Vigor 50, no chefe, no 3 contra 3 e com a ferida grave na cabeça',
+                ' · '.join(f"{nm}: {mal} de {jan} janelas com 2 perdidos, {100 * pt:.0f}% dos turnos perdidos" for nm, mal, jan, pt in res).replace('.', ','), all(r[1] == 0 for r in res)))
+    t4 = _delta(lambda: [_g(f'a{i}', {'arma': {'aturdir': 4}}) for i in range(3)], lambda: [_g(f'a{i}') for i in range(3)], lambda: [_g(f'b{i}') for i in range(3)], max(600, n // 2), 5601)
+    t6 = _delta(lambda: [_g(f'a{i}', {'arma': {'aturdir': 6}}) for i in range(3)], lambda: [_g(f'a{i}') for i in range(3)], lambda: [_g(f'b{i}') for i in range(3)], max(600, n // 2), 5601)
+    out.append(('EF5 O 3 CONTRA 3, REMEDIDO (o contrato mediu a carga 4 e 6: +18,0 e +21,8; a régua do grupo: o aberto vale para os três que batem)', f"carga 4: {_f(t4)} · carga 6: {_f(t6)}", True))
+    return out
+
+
+def ef6(n):
+    """EF6 O CALEJO: os golpes até o 1º e até o 2º atordoar (a carga 4 da Rara contra a resistência 10, 14, 18...): o 2º pede 1,4 vez os do 1º, ou mais. A meta se lê com os golpes
+    que tiram PV entre um atordoar e o outro, os da cabeça firme incluídos (o tempo que o 2º atordoar custa: os dois freios juntos); a conta só do calejo (os golpes que enchem a
+    barra) vai à mesa ao lado, com a resistência que ele sobe (+40% e +80% de carga). Com a carga 4 ela é 3 e 4 golpes, ×1,33: o "40% mais golpes" de 3.5 vale na carga, e o
+    golpe é inteiro (DESENHO 12.3). E O CALEJO POR FAMÍLIA NA FIRMEZA (3.5): o controle de arma que pega dá +4 na Firmeza contra o feitiço da mesma família (pernas: prender e
+    raízes; mana: o nó), não contra o de outra, e com o calejo de hoje vale o maior (a M21 igual)."""
+    D0 = luta.D; luta.semente(5701); t1 = []; t2 = []; b1 = []; b2 = []; k = max(5 * n, 10000)
+    try:
+        for _ in range(k):
+            S = luta.nova([_g('o atordoador', {'arma': {'aturdir': 4}})], [_g('o alvo')], quieto=True, inicio='colado'); S['mede_carga'] = {}; luta.corre(S)
+            h = S['mede_carga'].get('o alvo') or []
+            if len(h) >= 3: t1.append(h[0][0]); t2.append(h[1][0]); b1.append(h[0][1]); b2.append(h[1][1])
+    finally: luta.D = D0
+    md = lambda x: sum(x) / max(1, len(x)); m1, m2, c1, c2 = md(t1), md(t2), md(b1), md(b2)
+    S = luta.nova([_g('a')], [_g('o alvo')], quieto=True); e = S['L'][1]; rs = []
+    for c in (0, 1, 2): e['calejo_f']['cabeca'] = c; rs.append(luta.resistencia(S, e, 'cabeca'))
+    calejo = rs[1] >= 1.4 * rs[0] - 1e-9 and rs[2] >= 1.8 * rs[0] - 1e-9
+    out = [('EF6 O CALEJO: o 2º atordoar pede 1,4 vez os golpes do 1º, ou mais (a carga 4 da Rara contra a resistência 10, 14, 18...; os golpes que tiram PV entre um e outro, com a cabeça firme); e o calejo sobe a resistência 40% e 80%',
+            f"{len(t1)} lutas de {k} com dois atordoares: {m1:.1f} golpes até o 1º, {m2:.1f} até o 2º (×{m2 / max(1e-9, m1):.2f}); só os que enchem a barra (o calejo sozinho): {c1:.1f} e {c2:.1f} (×{c2 / max(1e-9, c1):.2f}: "
+            f"a carga 4 é inteira); a resistência {rs[0]:g}, {rs[1]:g}, {rs[2]:g}".replace('.', ','), m2 >= 1.4 * m1 and calejo)]
+    import magia
+    S = luta.nova([mago('m1')], [mago('m2')], quieto=True); e = S['L'][1]; fz = lambda k_: magia.firmeza(S, e, k_)
+    b = {k_: fz(k_) for k_ in ('prender', 'raízes', 'nó')}
+    e['calejo_f']['pernas'] = 1; pe = {k_: fz(k_) - b[k_] for k_ in b}
+    e['calejo_f']['pernas'] = 0; e['calejo_f']['mana'] = 1; ma = {k_: fz(k_) - b[k_] for k_ in b}
+    e['calejo_f']['mana'] = 0; e['calejo_f']['pernas'] = 1; e['calejo'] = 1; os_dois = fz('prender') - b['prender']
+    certo = pe == {'prender': 4, 'raízes': 4, 'nó': 0} and ma == {'prender': 0, 'raízes': 0, 'nó': 4} and os_dois == 4
+    out.append(('EF6 O CALEJO POR FAMÍLIA NA FIRMEZA (3.5): o calejo de pernas dá +4 contra o prender e as raízes e nada contra o nó; o de mana, +4 contra o nó; com o calejo de hoje, vale o maior (não somam: a M21 igual)',
+                f"pernas: {pe} · mana: {ma} · o de hoje e o de pernas juntos: +{os_dois:g}".replace('.', ','), certo))
+    return out
+
+
+def ef7(n):
+    """EF7 A ESCADA DO MEDO: o módulo 8 (30% ou mais); quem o jogador comanda contra o Medo de peça (0 fugas, 0 rendições, a luta para uma vez só por ele); a Coragem da mesma
+    categoria corta metade ou mais do Medo; o pior acúmulo de uma build Rara contra Vontade 50 (no máximo 60% de quebra em 4 rodadas)"""
+    out = []; k8 = max(3000, n); m = 0
+    D0 = luta.D; luta.semente(5801)
+    try:
+        for _ in range(k8):
+            S = luta.nova(um(120, 4, 4, moral='firme')(), varios(6, 30, 1, 1, pre='b')(), inicio='colado', quieto=True); luta.corre(S); r = luta.resultado(S)
+            m += bool(r['fugiram'] or r['presos'])
+    finally: luta.D = D0
+    out.append(('EF7 O MÓDULO 8 COM A ESCADA (seis contra um muito mais forte: alguém foge ou se rende): 30% ou mais (o contrato mediu 39%; antes da escada, 52%)', f'{100 * m / k8:.0f}% de {k8} lutas', m / k8 >= 0.30))
+    foge = paradas = mais_de_uma = 0; kc = max(600, n // 2)
+    D0 = luta.D; luta.semente(5802)
+    try:
+        for _ in range(kc):
+            S = luta.nova([_g('o jogador', controla=True)], [_g('o temido', {'arma': {'medo': 29}})], inicio='colado', quieto=True)
+            vistas = 0
+            while luta.corre(S, interativo=True) == 'parada':
+                vistas += sum(1 for p in S['paradas'] if 'fraquejou (o medo das peças)' in p)
+            vistas += sum(1 for p in S['paradas'] if 'fraquejou (o medo das peças)' in p)
+            foge += S['L'][0]['estado'] in ('fugiu', 'rendido'); paradas += vistas; mais_de_uma += vistas > 1
+    finally: luta.D = D0
+    out.append(('EF7 QUEM O JOGADOR COMANDA contra o Medo Primordial (29) de peça: nunca foge nem se rende, e a luta para uma vez só por esse medo (já abalado, ele não testa mais as fontes novas)',
+                f'{kc} lutas: {foge} fugas ou rendições; {paradas} paradas pelo medo das peças, mais de uma na mesma luta em {mais_de_uma}', foge == 0 and mais_de_uma == 0))
+    cortes = []
+    for c in (R, 4, 5, 7):
+        md = TE.MEDO[c]; cg = TE.CORAGEM[c]; temido = lambda: [_g('o temido', {'arma': {'medo': md}})]
+        sem = _delta(temido, lambda: [_g('o temido')], lambda: [_g('o alvo')], max(n, 2000), 5810 + c)
+        com = _delta(temido, lambda: [_g('o temido')], lambda: [_g('o alvo', {'amuleto': {'coragem': cg}})], max(n, 2000), 5810 + c)
+        cortes.append((c, sem, com))
+    ok_c = all(com <= sem / 2 + TE.FOLGA for _, sem, com in cortes)
+    out.append(('EF7 A CORAGEM CORTA O MEDO: a Coragem da mesma categoria corta metade ou mais dos pontos do Medo (o contrato: +4 corta o Medo 22 de +15,0 para +5,1)',
+                ' · '.join(f"{T.CATS[c]}: o Medo {TE.MEDO[c]} dá {_f(sem)}, contra a Coragem +{TE.CORAGEM[c]}, {_f(com)}" for c, sem, com in cortes), ok_c))
+    quebra = 0; kq = max(n, 2000)
+    D0 = luta.D; luta.semente(5820)
+    try:
+        for _ in range(kq):
+            S = luta.nova([veste(padrao('a build Rara', 50, fx_prova={'arma': {'medo': TE.MEDO[3]}, 'armadura': {'temivel': TE.TEMIVEL[R]}}), arma=('espada', R), armadura=('malha', R), escudo=R)],
+                          [_g('o alvo', vont=50)], inicio='colado', quieto=True)
+            for _ in range(4):
+                if not S['fim']: luta.rodada(S)
+            quebra += S['L'][1]['estado'] in ('fugiu', 'rendido')
+    finally: luta.D = D0
+    out.append(('EF7 O PIOR ACÚMULO DE UMA BUILD RARA contra Vontade 50 (o Temível 24 na 1ª rodada e o Medo 20 cheio; o Brado e a ameaça dos trunfos são da fase 2): no máximo 60% de quebra em 4 rodadas (o contrato, com o Brado e os trunfos: 34%)',
+                f'{100 * quebra / kq:.0f}% de {kq} lutas', quebra / kq <= 0.60))
+    return out
+
+
+def ef8(n):
+    """EF8 OS FREIOS DO APELÃO: duas peças de apelão (só a melhor acorda); a sintonia (o apelão vale 2 lugares); o Imortal com outra fonte de salvamento (um salvamento de 1 PV por
+    dia, venha de onde vier, e no outro dia de novo: no mundo de prova, pela luta que volta ao estado)"""
+    out = []
+    duas = ficha(veste(padrao('as duas', 50, atributos={'Vontade': 100}), arma=item('arma', 5, familia='espada', efeitos=[dict(chave='golpe_do_fim')]),
+                       armadura=item('armadura', 5, material='malha', efeitos=[dict(chave='imortal')]), escudo=3))
+    acorda = duas['arma']['efeitos'].get('golpe_do_fim') and not any(src['efeitos'].get('imortal') for src in duas['fontes']) and duas.get('apelao_dorme') == ['armadura de malha Lendária']
+    sint = ficha(veste(padrao('Vontade 50', 50, atributos={'Vontade': 50}), arma=item('arma', 5, familia='espada', efeitos=[dict(chave='golpe_do_fim')]), armadura=('malha', 3), escudo=3))
+    sem_ap = ficha(veste(padrao('Vontade 50', 50, atributos={'Vontade': 50}), arma=item('arma', 5, familia='espada'), armadura=('malha', 3), escudo=3))
+    # Vontade 60 (3 lugares): o Golpe do Fim acorda (2 lugares) e a armadura de Imortal e Couraça ocupa 1, acordada, com a Couraça e o Imortal dormindo: a mesma peça vale igual com 60 e com 100
+    v60 = ficha(veste(padrao('Vontade 60', 50, atributos={'Vontade': 60}), arma=item('arma', 5, familia='espada', efeitos=[dict(chave='golpe_do_fim')]),
+                      armadura=item('armadura', 5, material='malha', efeitos=[dict(chave='imortal'), dict(chave='couraca')]), escudo=2))
+    arm60 = [src['efeitos'] for src in v60['fontes'] if src['item']['tipo'] == 'armadura']
+    ok60 = not v60['dormem'] and arm60 == [{'couraca': TE.COURACA[5]}] and v60['arma']['efeitos'].get('golpe_do_fim') and v60.get('apelao_dorme') == ['armadura de malha Lendária']
+    out.append(('EF8 OS FREIOS DO APELÃO: duas peças de apelão de regra, só a melhor acorda (o Imortal da armadura dorme, o resto dela vale); o apelão acordado ocupa 2 lugares na sintonia (Vontade 50: a peça e mais nenhuma Épica), e a peça cujo apelão dorme, 1 (Vontade 60: as duas Lendárias acordadas, o Imortal dormindo)',
+                f"Vontade 100: acorda {'o Golpe do Fim' if acorda else 'ERRADO'}, dorme o apelão de {duas.get('apelao_dorme')}; Vontade 50 com o apelão: dormem {sint['dormem']}; sem o apelão: dormem {sem_ap['dormem']}; "
+                f"Vontade 60: dormem {v60['dormem'] or 'nenhuma'}, a armadura vale {arm60}".replace('.', ','),
+                bool(acorda) and len(sint['dormem']) == 3 and len(sem_ap['dormem']) == 2 and bool(ok60)))
+    out.append(_imortal_no_mundo())
+    return out
+
+
+def _imortal_no_mundo():
+    """o Imortal no mundo de prova: o personagem com a armadura e o amuleto de Imortal (dois apelões de regra: um acorda), por um fio, contra quem o derruba. A 1ª luta o salva
+    (com 1 PV; o uso gasto volta ao estado no evento da luta: ['item', id, 'efeito', 'gasta', 'imortal']); no mesmo dia, a ficha da luta já não traz Imortal nenhum (o salvamento
+    é um por dia, venha de onde vier: estado.lutador, salvo_dia); no dia seguinte, traz de novo, e a luta o salva de novo. (O fim de cada luta, depois do salvamento, é posto à mão.)"""
+    import contextlib, io, json, os, shutil, tempfile
+    import estado, ato, provas_mundo
+    antes = os.environ.get('MOTOR10_MUNDO'); D0 = luta.D; pasta = tempfile.mkdtemp(prefix='m10_imortal_'); os.environ['MOTOR10_MUNDO'] = pasta; vistos = []
+    def uma(E, k):
+        p = E['gente']['eu']; estado.aplica(E, 'mestre', [['pessoa', 'eu', 'pv', 'soma', 3 - p['pv']]], texto='por um fio'); estado.grava(E)
+        arq_c, arq_l = os.path.join(pasta, f'cen{k}.json'), os.path.join(pasta, f'luta{k}.json'); luta.semente(70 + k)
+        json.dump(dict(inicio='colado', A=[dict(id='eu')], B=[dict(nome='o algoz', nivel=200, moral='firme', veste=dict(arma=['malho', 'Único'], armadura=['malha', 'Único']))]), open(arq_c, 'w', encoding='utf-8'), ensure_ascii=False)
+        ato.luta_nova(E, arq_c, arq_l)
+        for _ in range(40):
+            E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8'))
+            if S['fim'] or S['L'][0]['fx_usos'].get('imortal'): break
+            ato.luta_roda(E, arq_l, []); estado.grava(E)
+        E = estado.carrega(); S = json.load(open(arq_l, encoding='utf-8')); f = S['L'][0]; salvou = bool(f['fx_usos'].get('imortal'))
+        if not S['fim']:                                    # posto à mão: depois do salvamento, o algoz cai e a luta volta ao estado
+            S['L'][1]['estado'] = 'morto'; S['fim'] = 'A'; json.dump(S, open(arq_l, 'w', encoding='utf-8'), ensure_ascii=False); ato.luta_fecha(E, S, arq_l); estado.grava(E)
+        return estado.carrega(), salvou, f['pv']
+    try:
+        with contextlib.redirect_stdout(io.StringIO()):
+            E = provas_mundo.vila()
+            estado.aplica(E, 'gera', [['item', 'nasce', item('armadura', 5, material='malha', efeitos=[dict(chave='imortal')], dono='eu')], ['item', 'nasce', item('amuleto', 5, efeitos=[dict(chave='imortal')], dono='eu')]], texto='o Imortal de prova')
+            novos = sorted(i for i, it in E['itens']['itens'].items() if it.get('dono') == 'eu' and any(e.get('chave') == 'imortal' for e in it.get('efeitos') or []))
+            estado.aplica(E, 'gera', [['item', i, 'uso', 'poe', 'veste' if E['itens']['itens'][i]['tipo'] == 'armadura' else 'pescoco'] for i in novos], texto='veste'); estado.grava(E)
+            E, s1, pv1 = uma(E, 1); gasto = [x.get('gasto') for i in novos for x in E['itens']['itens'][i]['efeitos'] if x.get('gasto')]
+            F2 = ficha(estado.lutador(E, 'eu')); mesmo_dia = any(src['efeitos'].get('imortal') for src in F2['fontes'])
+            estado.aplica(E, 'mestre', [['relogio', 6 * 4]], texto='um dia passa'); estado.grava(E)
+            F3 = ficha(estado.lutador(E, 'eu')); outro_dia = any(src['efeitos'].get('imortal') for src in F3['fontes'])
+            E, s3, pv3 = uma(E, 3); erro = estado.valida(E)
+    finally:
+        luta.D = D0; os.environ.pop('MOTOR10_MUNDO', None)
+        if antes is not None: os.environ['MOTOR10_MUNDO'] = antes
+        shutil.rmtree(pasta, ignore_errors=True)
+    certo = s1 and len(gasto) == 1 and not mesmo_dia and outro_dia and s3 and not erro
+    return ('EF8 O IMORTAL UMA VEZ POR DIA, venha de onde vier (a armadura e o amuleto de Imortal; no mundo de prova, pela luta que volta ao estado): salva na 1ª luta, não volta no mesmo dia, e no dia seguinte salva de novo',
+            f"1ª luta: {'o Imortal o segurou de pé com 1 PV' if s1 else 'NÃO SALVOU'}, e o uso gasto voltou ao estado ({len(gasto)} peça marcada); no mesmo dia, a ficha {'ainda traz o Imortal (ERRADO)' if mesmo_dia else 'não traz Imortal nenhum'}; "
+            f"no dia seguinte, {'traz de novo' if outro_dia else 'NÃO TRAZ'}, e a luta {'salva de novo' if s3 else 'NÃO SALVA'}; o estado {'inteiro' if not erro else 'QUEBRADO: ' + erro[0]}", certo)
+
+
+def b0(n):
+    """B0 A LUTA DE SEMPRE: as lutas de hoje, sem nada novo (gente, bichos e magia, ao acaso, com semente fixa), no motor de antes da fase 1b (o commit B0_REF, tirado do git numa
+    pasta de rascunho) e no de agora, com a escada do medo desligada (ela é a única mudança que toca toda luta, e se mede em EF7): iguais, dado por dado"""
+    import json, os, shutil, subprocess, tempfile
+    aqui = os.path.dirname(os.path.abspath(__file__)); k = max(200, n // 3); tmp = tempfile.mkdtemp(prefix='m10_b0_')
+    try:
+        raiz = subprocess.run(['git', 'rev-parse', '--show-toplevel'], cwd=aqui, capture_output=True, text=True).stdout.strip()
+        arq = subprocess.run(['git', 'archive', B0_REF, 'motor10'], cwd=raiz, capture_output=True)
+        if arq.returncode or not raiz: return [('B0 A LUTA DE SEMPRE', f'sem o motor de antes no git ({B0_REF}): não conferido', False)]
+        subprocess.run(['tar', '-x', '-C', tmp], input=arq.stdout, check=True)
+        script = os.path.join(tmp, 'b0_lutas.py'); open(script, 'w', encoding='utf-8').write(_B0_SCRIPT)
+        res = {}
+        for nome, pasta in (('antes', os.path.join(tmp, 'motor10')), ('agora', aqui)):
+            sai = os.path.join(tmp, f'{nome}.json')
+            r = subprocess.run([sys.executable, script, pasta, str(k), sai], capture_output=True, text=True)
+            if r.returncode: return [('B0 A LUTA DE SEMPRE', f'o motor {nome} quebrou: {r.stderr[-300:]}', False)]
+            res[nome] = json.load(open(sai, encoding='utf-8'))
+        dif = [a['i'] for a, b in zip(res['antes'], res['agora']) if a['h'] != b['h']]
+    finally: shutil.rmtree(tmp, ignore_errors=True)
+    return [(f'B0 A LUTA DE SEMPRE: {k} lutas ao acaso sem nada novo (gente, bichos e magia), no motor de antes ({B0_REF}) e no de agora, com a escada do medo desligada: iguais, dado por dado (o resto do banco confere que as metas de hoje passam com a escada ligada)',
+             f'{k - len(dif)} de {k} lutas iguais, linha por linha' + (f'; DIFERENTES: {dif[:10]}' if dif else ''), not dif)]
+
+
+_B0_SCRIPT = r"""
+import sys, os, json, random, hashlib
+os.chdir(sys.argv[1]); sys.path.insert(0, sys.argv[1])
+N = int(sys.argv[2]); saida = sys.argv[3]
+import luta, tabelas as T, tabelas_bichos as TB, tabelas_magia as TM, bichos
+from pessoas import padrao, veste
+from itens import item
+if hasattr(luta, 'ESCADA'): luta.ESCADA = False
+R = random.Random(77)
+FAM = [f for f in T.FAMILIAS if f != 'punho']; MAT = list(T.MATERIAIS); ESP = list(TB.ESPECIES); TRADS = list(T.TRADICOES)
+POR_TRAD = {t: [k for k, v in T.FEITICOS.items() if v['de'] in (t, 'todas') and TM.FEITICOS[k]['tipo'] != 'rito'] for t in TRADS}
+FORMA = {'arcano': ['varinha', 'cajado'], 'fé': ['símbolo'], 'verde': ['cajado'], 'pacto': ['talismã']}
+def pessoa(nome):
+    niv = R.choice([1, 5, 12, 20, 35, 50, 80, 150, 300]); fam = R.choice(FAM); cat = R.randint(0, 7); kw = {}
+    if R.random() < .3: kw['linha'] = 'trás'
+    if R.random() < .2: kw['moral'] = 'firme'
+    ef = [dict(chave=R.choice(['leve', 'nao_quebra']))] if R.random() < .2 else []
+    p = padrao(nome, niv, molde=R.choice(list(T.MOLDES)), **kw)
+    arma = item('arma', cat, familia=fam, efeitos=ef); arm = None; elmo = None; esc = None
+    if R.random() < .85:
+        c = R.randint(0, 7); efa = [dict(chave='firme')] if R.random() < .2 else []
+        arm = item('armadura', c, material=R.choice(MAT), efeitos=efa)
+        if R.random() < .7: elmo = (R.choice(MAT), R.randint(0, 7))
+    if T.FAMILIAS[fam]['maos'] == 1 and R.random() < .6: esc = R.randint(0, 7)
+    if R.random() < .15: arma['dur'][0] = R.randint(0, 2)
+    return veste(p, arma=arma, arma2=(R.choice(['adaga', 'espada', 'maça']), R.randint(0, 5)) if R.random() < .4 else None, armadura=arm, elmo=elmo, escudo=esc)
+def bicho(nome):
+    mais = {}
+    if R.random() < .3: mais['tamanho'] = R.choice(list(TB.TAMANHOS))
+    if R.random() < .3: mais['tracos'] = R.sample(list(TB.TRACOS), R.randint(0, 4))
+    if R.random() < .2: mais['cat'] = R.randint(0, 7)
+    return bichos.bicho(R.choice(ESP), nome=nome, **mais)
+def lancador(nome):
+    t = R.choice(TRADS); niv = R.choice([12, 35, 50, 80])
+    p = padrao(nome, niv, molde=R.choice(list(TM.MOLDES)), maestria={t: R.choice([2, 4, 6]), 'maça': 2, 'espada': 2}, feiticos=R.sample(POR_TRAD[t], R.randint(1, min(3, len(POR_TRAD[t])))), tradicao=t,
+               **({'carga': {'cura:1': 2}} if R.random() < .4 else {}))
+    return veste(p, arma=(R.choice(['espada', 'maça']), R.randint(0, 4)) if R.random() < .5 else None, armadura=(R.choice(MAT), R.randint(0, 4)), foco=(R.choice(FORMA[t]), R.randint(0, 4)), amuleto=R.randint(0, 4) if R.random() < .6 else None)
+def cena(i):
+    tipo = i % 3
+    faz = pessoa if tipo == 0 else (lambda n: R.choice([pessoa, bicho])(n)) if tipo == 1 else (lambda n: R.choice([pessoa, lancador, lancador])(n))
+    A = [faz(f'a{k}') for k in range(R.randint(1, 4))]; B = [faz(f'b{k}') for k in range(R.randint(1, 5))]
+    if R.random() < .5: B[0]['lider'] = True
+    lugar = {}
+    if R.random() < .3: lugar['largura'] = R.randint(1, 3)
+    return A, B, dict(inicio=R.choice(['longe', 'perto', 'colado']), lugar=lugar, tempo=R.sample(list(T.TEMPO), R.randint(0, 1)), surpresa=R.choice([None, None, 'A', 'B']))
+out = []
+for i in range(N):
+    luta.semente(5000 + i); A, B, kw = cena(i)
+    S = luta.nova(A, B, quieto=False, **kw); luta.corre(S)
+    txt = '\n'.join(S['log']) + f"\nFIM {S['fim']} {S['r']}"
+    out.append(dict(i=i, h=hashlib.sha1(txt.encode()).hexdigest()))
+json.dump(out, open(saida, 'w'), ensure_ascii=False)
+"""
+
+
+def b3(n):
+    """B3 O ITEM DECIDE (na fase 1b, o sistema é o dos efeitos de item): o topo (o conjunto Raro com tudo cheio, os mais fortes) contra o conjunto uma acima sem nada (60% ou
+    mais) e contra o conjunto DUAS acima (85% ou mais)"""
+    nn = max(n, 2000); um_ = _conjunto(nn, R + 1, 5301); dois = _conjunto(nn, R + 2, 5302)
+    return [('B3 O ITEM DECIDE: o topo dos efeitos de item (o conjunto Raro com tudo cheio) contra o conjunto uma acima sem nada (60% ou mais) e contra o DUAS acima (85% ou mais)',
+             f"uma acima vence {um_:.1f}% · duas acima, {dois:.1f}%".replace('.', ','), um_ >= 60 - TE.FOLGA and dois >= 85 - TE.FOLGA)]
+
+
+def efeitos(n):
+    """o bloco EF da fase 1b (DESENHO 10): B0, EF1 a EF8, B3 (o B1 é o provas_ano, que o provas_mundo roda)"""
+    out = []
+    for nome, f in (('B0', b0), ('EF1', lambda n_: ef1(n_)[0]), ('EF2', ef2), ('EF3', ef3), ('EF4', ef4), ('EF5', ef5), ('EF6', ef6), ('EF7', ef7), ('EF8', ef8), ('B3', b3)):
+        try: out.extend(f(n))
+        except (SystemExit, Exception) as e:
+            import traceback; out.append((f'{nome} (a fase 1b)', f'A PROVA QUEBROU: {type(e).__name__}: {e} · {traceback.format_exc().splitlines()[-3].strip()}', False))
+    return out
+
+
+def _alisa(v):
+    """a linha medida, ALISADA para a mesa: a regressão isotônica (juntar os vizinhos que descem, pela média, até a linha não descer de uma categoria para a de cima: o efeito
+    só cresce com a categoria) e sem negativo (o efeito não tira vitória de quem o tem: o negativo é o ruído de poucas lutas por célula, perto de ±2,5 pontos com 600)"""
+    xs = [(i, x) for i, x in enumerate(v) if x is not None]; blocos = []
+    for i, x in xs:
+        blocos.append([x, 1, [i]])
+        while len(blocos) > 1 and blocos[-2][0] / blocos[-2][1] > blocos[-1][0] / blocos[-1][1]:
+            b = blocos.pop(); blocos[-1][0] += b[0]; blocos[-1][1] += b[1]; blocos[-1][2] += b[2]
+    out = [None] * len(v)
+    for soma, q, ids in blocos:
+        for i in ids: out[i] = round(max(0.0, soma / q), 1)
+    return tuple(out)
+
+
+def tabela_pontos(n):
+    """A TABELA DO BANCO POR NÍVEL (4.2: "no seu nível, perto de +X pontos de vitória"): cada efeito de número nas 8 categorias, nos níveis 10, 20, 50 e 150 (o duelo de iguais
+    de cada nível, a mão típica dele, tudo Raro; no cenário do EF1), alisada (_alisa). Devolve o dicionário que vai no tabelas_efeitos.PONTOS"""
+    tab = {}
+    for i, k in enumerate([k for k in TE.EFEITOS if TE.de_numero(k)]):
+        cru = {nv: _ef1_linha(k, n, 3000 + 17 * i, nivel=nv) for nv in TE.NIVEIS_PONTOS}
+        tab[k] = {nv: _alisa(cru[nv]) for nv in TE.NIVEIS_PONTOS}
+        print(f'  {k} (medido): ' + ' | '.join(f"{nv}: {tuple(None if x is None else round(x, 1) for x in cru[nv])}" for nv in TE.NIVEIS_PONTOS), flush=True)
+        print(f'  {k} (alisado): ' + ' | '.join(f"{nv}: {tab[k][nv]}" for nv in TE.NIVEIS_PONTOS), flush=True)
+    return tab
+
+
 def main():
-    n = int(sys.argv[1]) if len(sys.argv) > 1 else 600
+    n = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 600
     luta.semente(10); ok = 0; tot = 0
+    if 'efeitos' in sys.argv[1:]:                           # (a parte 2, fase 1b) só o bloco EF (2.000 lutas por linha de padrão); `efeitos tabela`: a tabela por nível do tabelas_efeitos.PONTOS
+        n = int(sys.argv[1]) if len(sys.argv) > 1 and sys.argv[1].isdigit() else 2000
+        if 'tabela' in sys.argv[1:]:
+            print(f'A TABELA POR NÍVEL (tabelas_efeitos.PONTOS) · {n} lutas por célula\n'); tab = tabela_pontos(n); print('\nPONTOS = ' + repr(tab)); return True
+        print(f'BANCO DE PROVAS DO MOTOR 10 · só A FASE 1b (a base da luta e os efeitos de item: B0, EF1 a EF8, B3) · {n} lutas por linha\n')
+        for nome, deu, passa in efeitos(n):
+            ok += passa; tot += 1
+            print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}", flush=True)
+        print(f'\n{ok} de {tot} metas passam.')
+        return ok == tot
     if sys.argv[2:3] == ['magia']:                          # só o bloco da magia (ele tem a semente dele: dá o mesmo que no banco inteiro)
         print(f'BANCO DE PROVAS DO MOTOR 10 · só A MAGIA NA LUTA · {n} lutas por meta\n')
         for nome, deu, passa in magia_luta(n):
@@ -744,6 +1299,11 @@ def main():
     for nome, deu, passa in magia_luta(n):
         ok += passa; tot += 1
         print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+    ne = max(n, 2000)                                       # o contrato (seção 10) mede as metas da fase 1b com 2.000 lutas por linha (o modo longo, 20.000), mesmo no banco de 600
+    print(f'\nA PARTE 2, FASE 1b (a base da luta e os efeitos de item; DESENHO 10: B0, EF1 a EF8, B3; {ne} lutas por linha, como no contrato; só elas: `provas.py 2000 efeitos`)')
+    for nome, deu, passa in efeitos(ne):
+        ok += passa; tot += 1
+        print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}", flush=True)
     print(f'\n{ok} de {tot} metas passam.')
     return ok == tot
 

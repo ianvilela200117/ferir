@@ -79,6 +79,11 @@ SABE = {
 SABE_FILHOTE = 'um filhote ainda: testa a coragem como qualquer bicho, e foge ferido'
 SABE_CHEFE = 'o dragão grande não foge pelo susto: só ferido, e só o que voa, fora do covil'
 CORAGEM = 0                 # o dragão não soma nada na coragem (o filhote testa como bicho; do jovem para cima a moral é firme)
+PAVOR = dict(jovem=_TB.PAVOR + 1)       # O PAVOR DO DRAGÃO JOVEM (a parte 2, fase 1b): quem começa a luta contra ele testa a coragem contra isto, 1 acima do pavor dos outros
+                            # (tabelas_bichos.PAVOR, que segue valendo do adulto ao ancião). A escada do medo (DESENHO 3.6) segura no ACUADO quem antes quebrava, e o grupo de 4 do
+                            # degrau passou a vencer o jovem da serra em 76-77% (a meta DR2: 50 a 75; sem a escada, 72-73%); com o pavor 1 acima, 71-72% (1.000 lutas, três sementes).
+                            # Com 2 acima, 68-69%, mas o pequenino do PO7 (provas_povos) fugia 6,1% (a meta: até 6); nas quatro idades, o velho do brejo caía a 24,8% (a meta: 25 a 50).
+                            # O Mestre confirma (DESENHO 12.3; a outra saída é a faixa do jovem até 80, que pede a palavra do jogador)
 
 
 def _especie(tipo, idade):
@@ -92,7 +97,7 @@ def _especie(tipo, idade):
                  desp, t['habitat'], sabe, chefe=i['chefe'])
     e['nucleo'] = i['cat'] >= NUCLEO_DESDE                  # o coração do dragão: só do adulto (Épico) para cima
     e['fases'] = [dict(t['fase'], foge_diz='foge pelo ar, ferido') if t['fase'].get('foge') else dict(t['fase'])] if i['chefe'] else []
-    e['dragao'] = dict(tipo=tipo, idade=idade)
+    e['dragao'] = dict(tipo=tipo, idade=idade, **({'pavor': PAVOR[idade]} if 'apavora' in tr and idade in PAVOR else {}))
     return e
 
 

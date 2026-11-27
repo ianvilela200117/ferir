@@ -14,6 +14,11 @@ O que entra na conta (as regras estão no REGRAS.md; os números, no tabelas.py)
   13 A ETAPA 4b (o contrato: projeto/ETAPA_4B.md, seção 9): os traços do povo (vê no escuro: no golpe o escuro tira a metade, no tiro pesa inteiro; resiste a veneno: o veneno pela metade; a coragem
      do povo no teste de coragem), o GOLPE PELAS COSTAS de quem tem a manha de Treinado, e a fase "foge" do chefe que voa (magia.fase). Só para quem tem o traço, a manha
      ou a fase: a luta de quem não tem é a de sempre, dado por dado.
+  14 A PARTE 2, FASE 1b (o contrato: projeto/etapa_efeitos/DESENHO.md, seções 3 e 4; o capítulo 28; os números, no tabelas_efeitos.py): os efeitos de item (os 21 de
+     número, cujo valor sai da categoria que a peça rende, e os 26 de regra), pela PILHA (o dano é uma conta só, no fim, com o teto de 7 vezes o golpe de hoje, os dados
+     no máximo 4 vezes, os fixos até +8, a couraça em curva até 75%), a CARGA (uma barra por família: cabeça, pernas, mana; a cabeça firme; o calejo; ninguém perde mais
+     de 1 turno em 3), os FILETES de sangue e de fogo (até 3; a ordem `atar`), o exposto e o amolecido, o Imortal (um salvamento por dia) e A ESCADA DO MEDO (o acuado;
+     as fontes novas testam juntas). A escada é a única mudança que toca toda luta de gente; fora ela, a luta sem efeito novo é a de antes, dado por dado (a meta B0).
 
 Uso em código:
   S = nova(lado_a, lado_b, inicio='perto', lugar={...}, tempo=[...])     (listas de pessoas do pessoas.py; o lado A é o do jogador)
@@ -22,7 +27,7 @@ Uso em código:
 Uso de linha de comando (a luta de verdade: dado de verdade, o estado guardado num arquivo entre uma ordem e outra):
   python3 luta.py nova CENARIO.json lutas/NOME.json                       monta a luta e mostra o quadro
   python3 luta.py roda lutas/NOME.json ["Nome: ordem"] ["grupo: ordem"]   roda até a próxima PARADA (ou o fim) com as ordens dadas
-       ordem: atacar [alvo] · segurar · avancar · recuar · folego · guardar NOME, e no fim a postura (firme, agressiva, defensiva)
+       ordem: atacar [alvo] · segurar · avancar · recuar · folego · guardar NOME · atar [ALIADO] · animar, e no fim a postura (firme, agressiva, defensiva)
               · lancar FEITICO [em ALVO | casa N] [sempre] [osso] · beber POCAO [em ALIADO] · usar [PECA] [em ALVO | casa N]   (a magia: só quem o jogador comanda recebe)
               (a ordem `folego` acaba quando o fôlego enche: daí a pessoa segura, e a luta para e pergunta)
               (a ordem `recuar` é a retirada: a pessoa anda para trás enquanto houver inimigo de pé a menos de 8 casas; a 8 casas de todos, no fim da rodada, sai da luta.
@@ -36,8 +41,12 @@ import tabelas as T
 import tabelas_bichos as TB
 import tabelas_magia as TM
 import tabelas_povos as TP
+import tabelas_efeitos as TE
 import magia
-from pessoas import ficha
+from pessoas import ficha, maior
+
+ESCADA = True               # A ESCADA DO MEDO (DESENHO 3.6; a única mudança da fase 1b que toca toda luta de gente): o abalado que falha por menos de 5 fica ACUADO.
+                            # Só o banco a desliga (a meta B0: com ela desligada, a luta sem nada novo é a de antes, dado por dado)
 
 
 class Dados:
@@ -58,9 +67,10 @@ def d20x():
     return t
 
 
-def jogada(bonus, crit19=False):
+def jogada(bonus, faixa=(20, T.CRIT_OUTRO)):
+    """o dado do golpe: 2d20 que explodem. O CRÍTICO (fase 1b) é uma FAIXA: a face alta e o mínimo do outro dado (o de antes: 20/11; o critico_19, 19/11; o Crítico, pela categoria)"""
     a, b = d20x(), d20x(); n = (a[0], b[0])
-    return dict(total=sum(a) + sum(b) + bonus, falha=n == (1, 1), crit=(max(n) >= (19 if crit19 else 20) and min(n) >= T.CRIT_OUTRO))
+    return dict(total=sum(a) + sum(b) + bonus, falha=n == (1, 1), crit=(max(n) >= faixa[0] and min(n) >= faixa[1]))
 
 
 def chance(falta):
@@ -123,7 +133,7 @@ def nova(lado_a, lado_b, inicio='perto', lugar=None, tempo=None, surpresa=None, 
             f.update(x=x, estado='pe', feridas=[], sangra=None, atordoado=0, chao=False, preso=False, abalado=False, reac=f['reacoes'], postura='firme',
                      usou=[], testou=[], morte=[0, 0], agressor=None, recarga=0, sem_arma=False, resguardo=False, fugiu=False, golpeado=[], ini=0, pv_visto=f['pv'],
                      veneno=None, agarrado=None, encurralado=False, golpes=0, andou_t=0, feriu_t=[], sopro_r=0)
-            f.setdefault('moral', 'testa'); f.setdefault('papel', 'guarda' if f.get('guarda') else 'frente')
+            f.setdefault('moral', 'testa'); f.setdefault('papel', 'guarda' if f.get('guarda') else 'frente'); _campos_1b(f)
             f['feridas'] = f.pop('feridas0'); f['feridas_antes'] = len(f['feridas'])
             for parte, grave in f['feridas']:               # a ferida que a pessoa já traz entra na luta com ela
                 if parte == 'tronco': f['fol'] = max(0, f['fol'] - T.FERIDAS['tronco'][1 if grave else 0])
@@ -139,6 +149,7 @@ def nova(lado_a, lado_b, inicio='perto', lugar=None, tempo=None, surpresa=None, 
             if oc > larg: S['avisos'].append(f"{f['nome']} é maior que o corredor: luta sem espaço")
             S['L'].append(f)
     if ermo: S['ermo'] = list(ermo)                         # as espécies do ermo onde se luta (o feitiço "chamar" só vale nele)
+    _marca_1b(S)
     if any(magia.tem_magia(f) for f in S['L']):             # A LUTA DE MAGIA: alguém traz feitiço, foco, amuleto, encanto, poção, traço novo ou fases
         S['magia'] = True
         for f in S['L']: magia.prepara(S, f)
@@ -158,7 +169,7 @@ def _entra(S, f, lado, x):
     f.update(x=x, estado='pe', sangra=None, atordoado=0, chao=False, preso=False, abalado=False, reac=f['reacoes'], postura='firme', usou=[], testou=[], morte=[0, 0],
              agressor=None, recarga=0, sem_arma=False, resguardo=False, fugiu=False, golpeado=[], ini=0, pv_visto=f['pv'], veneno=None, agarrado=None, encurralado=False,
              golpes=0, andou_t=0, feriu_t=[], sopro_r=0)
-    f.setdefault('moral', 'testa'); f.setdefault('papel', 'frente')
+    f.setdefault('moral', 'testa'); f.setdefault('papel', 'frente'); _campos_1b(f)
     if 'feridas0' in f: f['feridas'] = f.pop('feridas0')
     f.setdefault('feridas', []); f['feridas_antes'] = len(f['feridas'])
     for w in [f['arma'], f['arma2'], f['punho']] + f.get('armas_corpo', []) + [f.get('sopro')]:
@@ -171,7 +182,23 @@ def _entra(S, f, lado, x):
     if not isinstance(f.get('foco') or '', str) or not isinstance(f.get('amuleto') or '', str) or any(not isinstance(e['item'], str) for e in f.get('encantos') or []): _guarda_magia(S, f)
     S['L'].append(f)
     if S.get('magia'): magia.prepara(S, f)
+    _marca_1b(S)
     return f
+
+
+def _campos_1b(f):
+    """(a parte 2, fase 1b; DESENHO 9.4) os campos de luta da base nova, em todo lutador, zerados: a barra de carga por família e os calejos (o de arma e o que o feitiço de
+    controle dá na resistência), a cabeça firme, o turno perdido pela carga e os últimos turnos (ninguém perde mais de 1 em cada 3), os filetes de sangue dos efeitos, o exposto,
+    o amolecido e o aberto (a rodada em que vencem: nascem vencidos, −1, para o quadro da rodada 0 não mostrar ninguém exposto), o acuado e o susto, as fontes novas de medo da
+    rodada, os usos dos efeitos, a desforra, e o que volta ao estado"""
+    f.update(barra={k: 0 for k in TE.FAMILIAS}, calejo_f={k: 0 for k in TE.CALEJOS}, calejo_m={k: 0 for k in TE.FAMILIAS}, firme_cabeca=0, perde_turno=False, perdidos=[],
+             filetes=[], exposto=-1, amolecido=-1, aberto=-1, prazo_r={}, acuado=False, susto_r=0, medo_fontes={}, fx_usos={}, desforra={}, turnos_n=0, efeitos_gastos=[], guardia_r=[0, 0])
+
+
+def _marca_1b(S):
+    """a luta em que alguém traz CARGA DE CABEÇA (o Aturdir; na fase 2, o Tranco e o fecho tranco): só nela a ferida grave na cabeça conta como turno perdido e dá a cabeça
+    firme (3.5). A luta sem nada novo segue a de antes, dado por dado."""
+    S['carga_cabeca'] = any(w and (w.get('efeitos') or {}).get('aturdir') for f in S['L'] for w in [f.get('arma'), f.get('arma2')] + list(f.get('armas_corpo') or []))
 
 
 def _guarda_item(S, it):
@@ -188,7 +215,8 @@ def _n(x): return f'{x:g}'.replace('.', ',')                 # 23,5
 def _oa(f): return 'A' if f.get('bicho') and TB.ESPECIES.get(f['bicho'], {}).get('artigo') == 'a' else 'O'       # ENCURRALADA: o gênero do BICHO, que a espécie diz. De gente a luta não sabe o gênero: as frases de gente não dependem dele
 def _acoes(n): return f"{n} {'ação' if n == 1 else 'ações'}"
 def _parte(e, parte): return TB.PARTES_BICHO.get(parte, parte) if e.get('bicho') else parte                       # bicho não tem braços
-SUSTOS = dict(lider_caiu='o líder caiu', metade_caiu='metade dos seus caiu', golpe_terrivel='o golpe terrível', ferido_grave='por um fio', ferido='a ferida', pavor='o pavor', medo='o medo')
+SUSTOS = dict(lider_caiu='o líder caiu', metade_caiu='metade dos seus caiu', golpe_terrivel='o golpe terrível', ferido_grave='por um fio', ferido='a ferida', pavor='o pavor', medo='o medo',
+              medo_peca='o medo das peças')
 def de_pe(S, lado=None): return [f for f in S['L'] if f['estado'] == 'pe' and (lado is None or f['lado'] == lado)]
 def outro(lado): return 'B' if lado == 'A' else 'A'
 def inimigos(S, f): return de_pe(S, outro(f['lado']))
@@ -239,11 +267,48 @@ def guarda_de(S, f):
 def defesa_de(S, f): return f['def_fixa'] + guarda_de(S, f)[0]
 
 
+def _vale(S, f, src):
+    """a fonte vale agora? A peça inteira; e o escudo só com a arma de uma mão em uso (como a Guarda e o aparo de hoje: com a arma de duas mãos, o escudo vestido não guarda)"""
+    return inteiro(S, src['item']) and not (src.get('escudo') and arma_de(S, f)['maos'] != 1)
+
+
 def efeito(S, f, chave):
-    """o efeito de armadura ou escudo que está valendo agora (a peça desfeita não tem efeito)"""
-    for src in f['fontes']:
-        if chave in src['efeitos'] and inteiro(S, src['item']): return src['efeitos'][chave]
-    return None
+    """o efeito de armadura, escudo, amuleto ou foco que está valendo agora (a peça desfeita não tem efeito; o escudo, só com a arma de uma mão; o mesmo efeito de duas fontes
+    vale o maior: P5)"""
+    return maior([src for src in f['fontes'] if _vale(S, f, src)], chave)
+
+
+def _fonte(S, f, chave):
+    """a fonte inteira de onde vem o efeito (para gastar o uso dele), ou None"""
+    vs = [src for src in f['fontes'] if chave in src['efeitos'] and _vale(S, f, src)]
+    return max(vs, key=lambda s_: TE.ordem_valor(chave, s_['efeitos'][chave])) if vs else None
+
+
+def _fixo(S, f, qual, w=None, alvo=None):
+    """P3: o NÚMERO FIXO novo (acerto, Defesa, coragem, resistência à carga), somado de tudo o que é novo, com o teto (+8; a resistência, +16). O de hoje (a mão, o corpo, o
+    líder, a matilha, o benzido) fica fora da conta."""
+    if qual == 'acerto':
+        ef = (w or {}).get('efeitos') or {}; v = ef.get('certeira') or 0
+        if ef.get('desforra') and alvo is not None and f['desforra'].get(alvo['nome']): v += TE.DESFORRA
+        return min(TE.FIXO_TETO, v)
+    if qual == 'defesa':
+        es = f.get('escudo'); v = 0
+        if es and inteiro(S, es['item']) and arma_de(S, f)['maos'] == 1: v = next((src['efeitos'].get('guarda') or 0 for src in f['fontes'] if src['item'] == es['item']), 0)
+        return min(TE.FIXO_TETO, v)
+    if qual == 'coragem':
+        rb = efeito(S, f, 'robusta'); return min(TE.FIXO_TETO, (efeito(S, f, 'coragem') or 0) + (rb[0] // 2 if rb else 0) + f.get('coragem_escudo', 0))
+    if qual == 'resistencia':
+        rb = efeito(S, f, 'robusta'); return min(TE.RESIST_TETO, rb[0] if rb else 0)
+    return 0
+
+
+def tipo_alvo(f):
+    """o tipo do alvo para a Caçadora: o dragão, o morto (quem não tem vida), o povo (goblin, orc...), o bicho ou a gente"""
+    b = f.get('bicho')
+    if b and (b == 'dragão' or str(b).startswith(('dragão-', 'verme-do-'))): return 'dragão'      # o dragão da tabela dos bichos e os dos dragões (tabelas_dragoes: dragão-da-serra-..., verme-do-brejo-...)
+    if 'sem vida' in (f.get('tracos') or ()): return 'morto'
+    if f.get('povo'): return 'povo'
+    return 'bicho' if b else 'gente'
 
 
 def _vaga(S, f, e, w):
@@ -273,78 +338,291 @@ def alvos(S, f, w, cerco=True):
 
 
 # ---------- o golpe ----------
-def golpe(S, a, e, w, livre=''):
-    g = None if w.get('area') else next((x for x in de_pe(S, e['lado']) if x.get('guarda') == e['nome'] and x is not e and dist(x, e) <= 1 and x['reac'] > 0), None)
-    if g: g['reac'] -= 1; diz(S, f"  {g['nome']} se põe na frente de {e['nome']}"); e = g
+def golpe(S, a, e, w, livre='', extra=None):
+    """o golpe (ou o tiro) de a em e com a arma w. (Fase 1b) O golpe EXTRA (o segundo golpe, a ceifadora, a varredura, a tempestade; e o golpe livre de hoje) não puxa
+    outro golpe extra e põe metade da carga (P8); extra='meio' tira metade do dano (a varredura). O golpe de verdade, que acertou, puxa os extras da arma."""
+    r = _golpe(S, a, e, w, livre, extra)
+    if r and not livre and not extra and a['estado'] == 'pe' and not S['fim']: _extras(S, a, w, r)
+    return r
+
+
+def _medo_acerto(f): return TE.ACUADO if f.get('acuado') else T.ABALADO if f['abalado'] else 0      # a escada do medo no acerto: o abalado −2, o acuado −4 (não somam)
+
+
+def _luz(S, f, w):
+    """o dono tem uma peça com Luz (a arma na mão, ou uma fonte inteira)? O escuro não pesa no golpe dele (no tiro, metade)"""
+    return bool((w.get('efeitos') or {}).get('luz') or efeito(S, f, 'luz'))
+
+
+def _guardia(S, g):
+    """a Guardiã: guardar um aliado colado não gasta a reação, uma vez por rodada (o escudo inteiro)"""
+    gr = g.get('guardia_r') or [0, 0]
+    if not isinstance(gr, list): gr = [gr, 1]
+    return bool(efeito(S, g, 'guardia')) and (gr[0] != S['r'] or gr[1] < TE.GUARDIA_RODADA)
+
+
+def faixa_critico(w):
+    """P6: a faixa do crítico desta arma, a melhor entre as fontes (a de antes 20/11; o critico_19, 19/11; o Crítico, pela categoria; o Golpe do Fim, 17/11), nunca melhor que 17/7"""
+    ef = w.get('efeitos') or {}; fx = [(20, T.CRIT_OUTRO)]
+    if ef.get('critico_19'): fx.append(TE.LEGADO['critico_19']['critico'])
+    if ef.get('critico'): fx.append(tuple(ef['critico']))
+    if ef.get('golpe_do_fim'): fx.append(TE.GOLPE_DO_FIM['critico'])
+    return fx[0] if len(fx) == 1 else TE.melhor_critico(*fx)
+
+
+def _pilha(S, a, e, w, extra):
+    """P1: a conta da pilha no fim: (1 + PEÇAS) × (1 + TÉCNICA) × (1 + DOM) × ESTADOS × (1 − COURAÇA). Na fase 1b, PEÇAS (o Gume e a Caçadora contra o tipo dela, até +100%),
+    os ESTADOS (o alvo exposto ×1,5; quem bate amolecido ×0,75) e a COURAÇA do alvo (em curva, até 75%); a TÉCNICA e o DOM chegam nas fases 2 e 3. A varredura: metade."""
+    ef = w.get('efeitos') or {}; pc = ef.get('gume') or 0; cz = ef.get('cacadora')
+    if cz and cz[1] == tipo_alvo(e): pc += cz[0]
+    m = 1 + min(TE.PILHA['pecas'], pc)
+    if e['exposto'] >= S['r']: m *= TE.EXPOSTO
+    if a['amolecido'] >= S['r']: m *= TE.AMOLECIDO
+    cou = efeito(S, e, 'couraca')
+    if cou: m *= 1 - TE.curva(cou)
+    if extra == 'meio': m *= 0.5
+    return m
+
+
+def _golpe(S, a, e, w, livre='', extra=None):
+    g = None if w.get('area') else next((x for x in de_pe(S, e['lado']) if x.get('guarda') == e['nome'] and x is not e and dist(x, e) <= 1 and (x['reac'] > 0 or _guardia(S, x))), None)
+    if g:
+        if _guardia(S, g):
+            gr = g.get('guardia_r') if isinstance(g.get('guardia_r'), list) else [0, 0]
+            g['guardia_r'] = [S['r'], (gr[1] + 1) if gr[0] == S['r'] else 1]; diz(S, f"  {g['nome']} se põe na frente de {e['nome']} (a Guardiã: sem gastar a reação)")
+        else: g['reac'] -= 1; diz(S, f"  {g['nome']} se põe na frente de {e['nome']}")
+        e = g
     tiro = w['distancia']; pa, pd = T.POSTURAS[a['postura']], T.POSTURAS[e['postura']]
     if not tiro and not livre and not any(n == a['nome'] for n, _ in e['golpeado']): e['golpeado'].append([a['nome'], bool(w['haste'] and dist(a, e) == 2)])
-    bon = w['acerto'] + pa[0] - (T.SEM_FOLEGO if a['fol'] <= 0 else 0) + (T.ABALADO if a['abalado'] else 0)
+    bon = w['acerto'] + pa[0] - (T.SEM_FOLEGO if a['fol'] <= 0 else 0) + _medo_acerto(a)
     bon += sum(T.FERIDAS['braços'][1 if gr else 0] for p, gr in a['feridas'] if p == 'braços')
     bon += sum(T.TEMPO[k].get('tiro' if tiro else 'acerto', 0) for k in S['tempo'])
-    if 'escuro' in S['tempo'] and tem(a, 'vê no escuro'): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * (1 - (TP.ESCURO_TIRO if tiro else TP.ESCURO))      # quem vê no escuro (o povo, etapa 4b): no golpe o escuro tira só a metade; no tiro, inteiro (ESCURO_TIRO)
+    if 'escuro' in S['tempo'] and _luz(S, a, w): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * TE.LUZ[1 if tiro else 0]     # (fase 1b) a Luz: tira do golpe do dono a parte do escuro dela (TE.LUZ)
+    elif 'escuro' in S['tempo'] and tem(a, 'vê no escuro'): bon -= T.TEMPO['escuro']['tiro' if tiro else 'acerto'] * (1 - (TP.ESCURO_TIRO if tiro else TP.ESCURO))      # quem vê no escuro (o povo, etapa 4b): no golpe o escuro tira só a metade; no tiro, inteiro (ESCURO_TIRO)
     if S['lugar'].get('alto') == a['lado']: bon += T.ALTO['tiro' if tiro else 'acerto']
     if tiro and S['lugar'].get('cobertura') == e['lado']: bon += T.COBERTURA
     if entre(S, a, e) and S['lugar'].get('alto') != a['lado'] and not w.get('area'): bon += T.ENTRE
     if w['haste'] and dist(a, e) <= 1: bon += T.HASTE_COLADO
     if tiro and a['fugiu']: bon += T.TIRO_FUGINDO
     esp = _golpe_especial(S, a, w, livre); mb, md = _dos_bichos(S, a, e, w, esp); bon += mb      # o bote e a investida; o que os traços e o tamanho mexem
+    bon += _fixo(S, a, 'acerto', w, e)                                                               # (fase 1b) a Certeira e a Desforra (P3: até +8)
     df = md + (e['def_fixa'] if w.get('area') else defesa_de(S, e)) + pd[1] - (T.SEM_FOLEGO if e['fol'] <= 0 else 0) + (T.CHAO if e['chao'] else 0) + (T.PRESO if e['preso'] else 0) + (T.RESGUARDO if e['resguardo'] else 0)
+    if not w.get('area'): df += _fixo(S, e, 'defesa')                                                # (fase 1b) a Guarda do escudo (P3: até +8)
+    if e['aberto'] >= S['r']: df += TE.ABERTO                                                        # (fase 1b) o aberto do atordoado (as penas novas de Defesa no alvo: vale a pior)
     df += sum(T.TEMPO[k].get('defesa', 0) for k in S['tempo'])
     df -= T.FLANCO * min(T.FLANCO_MAX, sum(1 for n, _ in e['golpeado'] if n != a['nome']))       # cercado: cada um que já bateu nele abre a guarda para o próximo
     if S.get('magia'): mb, md = magia.no_golpe(S, a, e, w); bon += mb; df += md                 # a bênção, o escudo, o mau-olhado, a fúria, o escuro de quem é noturno...
-    tr = e['partes'].get('tronco')                                                                   # mirar a fresta: só contra armadura melhor que a arma, e só quando compensa
-    mira = bool(tr and inteiro(S, tr['item']) and tr['cat'] > w['cat'] and not tem(e, 'couraça') and not w.get('area') and chance(df - bon - T.MIRA_ACERTO) * T.MIRA_PROT > chance(df - bon))
+    tr = e['partes'].get('tronco'); perf = (w.get('efeitos') or {}).get('perfura')                # mirar a fresta: só contra armadura melhor que a arma, e só quando compensa
+    # (fase 1b) a escolha de mirar é a de hoje, com ou sem a Perfura: a Perfura só muda a proteção (com a mira, vale o maior; nunca abaixo de um terço), e assim nunca piora o golpe.
+    # Com a escolha refeita pela Perfura (mirar renderia menos), o robô de hoje, que pesa a mira sem contar o crítico, deixava de mirar no nível 150 e a Perfura Comum TIRAVA 15 pontos
+    ganho = T.MIRA_PROT
+    mira = bool(tr and inteiro(S, tr['item']) and tr['cat'] > w['cat'] and not tem(e, 'couraça') and not w.get('area') and chance(df - bon - T.MIRA_ACERTO) * ganho > chance(df - bon))
     if mira: bon += T.MIRA_ACERTO
     if w['item'] not in S['usadas']: S['usadas'].append(w['item'])
     for pc in list(e['partes'].values()) + ([e['escudo']] if e['escudo'] else []):
         if pc['item'] not in S['usadas']: S['usadas'].append(pc['item'])
-    j = jogada(bon, crit19=bool(w['efeitos'].get('critico_19')))
+    j = jogada(bon, faixa_critico(w))
     cab = f"  {a['nome']} {'sopra em' if w.get('area') else 'atira em' if tiro else 'golpeia'} {e['nome']}" + (f' ({livre})' if livre and not w.get('area') else '') + (f" ({esp['nome']})" if esp else '') + (' mirando a fresta' if mira else '') + (' (no ar)' if not tiro and w['alcance'] < 2 and _no_ar(S, e) else '')
     if a.get('bicho') and not w.get('area'): a['golpes'] += 1; a['andou_t'] = 0
     if j['falha']:
-        diz(S, f"{cab}: dois 1, erra feio"); _gasta(S, a, w, 1); return
+        diz(S, f"{cab}: dois 1, erra feio"); _gasta(S, a, w, 1); return None
+    ponta = ''
     if j['total'] < df and not j['crit']:
-        gb, gp = guarda_de(S, e); aparado = not tiro and gb > 0 and df - j['total'] <= gb
-        diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}, {'aparado' if aparado else 'erra'}")
-        if aparado and gp['cat'] != w['cat']:                # dois aços se encontram: o pior gasta
-            if gp['cat'] > w['cat']: _gasta(S, a, w, 1)
-            elif gp is e['escudo']: _gasta_armadura(S, e, gp['nome'], gp['item'], 1)
-            else: _gasta(S, e, gp, 1)
-        return
-    if w.get('dom') and not j['crit'] and j['total'] - w['dom'] < df:       # O DOM (etapa da magia): este golpe só passou por causa dele (não rola nada a mais: a luta de quem não tem dom é a de sempre)
+        if (w.get('efeitos') or {}).get('ponta_certa') and 'ponta_certa' not in a['usou'] and df - j['total'] <= TE.PONTA_CERTA:     # (fase 1b) a Ponta Certa: uma vez por luta, o golpe que errou por 5 ou menos acerta
+            a['usou'].append('ponta_certa'); ponta = ' (a Ponta Certa: errava por pouco, e acerta)'
+        else:
+            gb, gp = guarda_de(S, e); aparado = not tiro and gb > 0 and df - j['total'] <= gb
+            diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}, {'aparado' if aparado else 'erra'}")
+            if aparado and _aparadora(S, e, gp) and not (TE.APARADORA_RODADA == 'rodada' and e.get('aparou_r') == S['r']) and not (TE.APARADORA_RODADA == 'luta' and e.get('aparou_r')):
+                a['fol'] -= 1; e['aparou_r'] = S['r']; diz(S, f"    a Aparadora de {e['nome']}: {a['nome']} perde 1 de fôlego")
+            if aparado and gp['cat'] != w['cat']:                # dois aços se encontram: o pior gasta
+                if gp['cat'] > w['cat']: _gasta(S, a, w, 1)
+                elif gp is e['escudo']: _gasta_armadura(S, e, gp['nome'], gp['item'], 1)
+                else: _gasta(S, e, gp, 1)
+            return None
+    if w.get('dom') and not j['crit'] and j['total'] - w['dom'] < df and not ponta:       # O DOM (etapa da magia): este golpe só passou por causa dele (não rola nada a mais: a luta de quem não tem dom é a de sempre)
         if a.get('controla') and not a.get('dom_fez'): diz(S, f"    ({a['nome']} acerta por pouco: sem o dom, errava)")
         a['dom_fez'] = True                                 # a luta que volta ao estado faz disto a marca.dom_visto
     parte = T.ONDE[D.d(10)]; pc = e['partes'].get(parte); vestida = bool(pc and inteiro(S, pc['item']))
     prot = pc['rd'] * (1 if w.get('area') else T.MATRIZ[w['golpe']][pc['material']]) / (2 if j['crit'] and not tem(e, 'couraça') else 1) if vestida else T.NU
+    prot_novo = prot
     if mira and vestida and pc['cat'] > w['cat']: prot /= T.MIRA_PROT
-    dano = int(rola(w['dado'], max(2 if j['crit'] else 1, esp['dados'] if esp else 1)) * T.K_DANO * w['mult'] / prot * w['fmult'])
+    if perf and vestida and pc['cat'] > w['cat']: prot_novo = prot_novo * max(TE.PERFURA_PISO, min(1 / T.MIRA_PROT if mira else 1.0, perf))      # (fase 1b) a Perfura: vale o maior com a mira, nunca abaixo de um terço
+    else: prot_novo = prot
+    # OS DADOS (P2): o maior entre o crítico (2), o golpe especial de hoje e o Golpe do Fim (4), nunca mais de 4; a regra de hoje, com os mesmos dados, é a medida do teto
+    vh = max(2 if j['crit'] else 1, esp['dados'] if esp else 1); vz = vh
+    if j['crit'] and (w.get('efeitos') or {}).get('golpe_do_fim'): vz = min(max(vz, TE.GOLPE_DO_FIM['dados']), max(TE.DADOS_MAX, vh))
+    nd, fd = map(int, w['dado'].split('d')); rolos = [D.d(fd) for _ in range(nd * vz)]
+    hoje = int(sum(rolos[:nd * vh]) * T.K_DANO * w['mult'] / prot * w['fmult'])
+    mult = _pilha(S, a, e, w, extra); teto_txt = ''
+    if mult != 1 or vz != vh or prot_novo != prot:          # (fase 1b) A PILHA, para baixo uma vez; e O TETO DA PILHA: nunca mais que 7 vezes o golpe de hoje, com os mesmos dados
+        dano = int(sum(rolos) * T.K_DANO * w['mult'] / prot_novo * w['fmult'] * mult); bruto = dano
+        if dano > TE.TETO_PILHA * hoje: dano = TE.TETO_PILHA * hoje; teto_txt = ' (o teto da pilha segura o golpe)'
+    else: dano = bruto = hoje
+    if S.get('mede') is not None: S['mede'].append(dict(novo=bruto, final=dano, hoje=hoje, vezes=vz, crit=j['crit'], faixa=faixa_critico(w), couraca=TE.curva(efeito(S, e, 'couraca') or 0), mult=mult))
     if S.get('magia') and e.get('tracos'): dano = magia.dano_aco(S, a, e, w, dano)              # o osso (corte e ponta pela metade) e o imaterial (a arma comum, uma categoria abaixo)
     # o aço gasta o aço
     if dano == 0: _gasta(S, a, w, 1)
     if vestida and (w['cat'] > pc['cat'] or j['crit']): _gasta_armadura(S, e, pc['nome'], pc['item'], 2 if w['cat'] >= pc['cat'] + 2 else 1)
     esc = e['escudo']
     if j['crit'] and esc and inteiro(S, esc['item']) and arma_de(S, e)['maos'] == 1: _gasta_armadura(S, e, esc['nome'], esc['item'], 1)
-    e['pv'] -= dano; e['agressor'] = a['nome']
-    diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}{', CRÍTICO' + (' (a couraça não abre)' if tem(e, 'couraça') else '') if j['crit'] else ''}, {_parte(e, parte)}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else ''))
-    dv = efeito(S, e, 'devolve')
-    if not tiro and dv and a['estado'] == 'pe':
-        a['pv'] -= dv; diz(S, f"    a armadura de {e['nome']} devolve {dv} em {a['nome']} ({max(a['pv'], 0)}/{a['pvmax']})"); S['dano_r'] += dv / a['pvmax']
+    pv0 = e['pv']; e['pv'] -= dano; e['agressor'] = a['nome']; exp = e['exposto'] >= S['r']
+    diz(S, f"{cab}: {_n(j['total'])} contra {_n(df)}{ponta}{', CRÍTICO' + (' (a couraça não abre)' if tem(e, 'couraça') else '') if j['crit'] else ''}, {_parte(e, parte)}: {dano} ({max(e['pv'], 0)}/{e['pvmax']})" + (' · o aço não passa' if dano == 0 else '') + (' · exposto' if exp and dano else '') + teto_txt)
+    q = _devolve(S, a, e, w, dano, pv0) if not tiro and not w.get('area') and a['estado'] == 'pe' else 0      # (fase 1b) o Devolve: o % do dano levado (decisão 2), só em quem golpeia de perto
+    if q > 0:
+        a['pv'] -= q; diz(S, f"    a armadura de {e['nome']} devolve {q} em {a['nome']} ({max(a['pv'], 0)}/{a['pvmax']})"); S['dano_r'] += q / a['pvmax']
         if a['pv'] <= 0: _cai(S, a, 0)
     if S.get('magia') and tem(e, 'ardente'): magia.fogo_de_volta(S, a, e, w)                     # quem golpeia de perto o corpo que arde leva o fogo de volta
-    if dano <= 0: return
+    if dano <= 0: return dict(e=e, acertou=True, dano=0, caiu=False)
     S['dano_r'] += dano / e['pvmax']
     if e.get('funda') is None or e['funda'] < w['cat']: e['funda'] = w['cat']                   # A FERIDA FUNDA: a maior categoria que tirou PV desde o PV cheio (a cura segue a lei ao contrário)
     terrivel = dano >= e['pvmax'] * T.FERIDA_GRAVE; abertas = len(e['feridas'])
-    if e['pv'] <= 0: _cai(S, e, dano)
+    if any(((x or {}).get('efeitos') or {}).get('desforra') for x in (e.get('arma'), e.get('arma2'))): e['desforra'][a['nome']] = e['turnos_n'] + 1     # (fase 1b) a Desforra de quem foi ferido
+    if e['pv'] <= 0: _cai(S, e, dano, manso=bool((w.get('efeitos') or {}).get('fio_manso')) and pv0 < e['pvmax'] * TE.FIO_MANSO)
     elif dano >= e['pvmax'] * T.FERIDA or (j['crit'] and dano >= e['pvmax'] * T.FERIDA_MIN): _ferida(S, e, parte, terrivel, w, dano)
+    _depois_1b(S, a, e, w, dano, pv0, pc, vestida, extra or livre)
     if w['efeitos'].get('derruba') and 'derruba' not in a['usou'] and _derruba(S, a, e):
-        a['usou'].append('derruba'); e['chao'] = True; diz(S, f"    {e['nome']} vai ao chão")
+        a['usou'].append('derruba'); e['chao'] = True; e['calejo_f']['pernas'] += 1; diz(S, f"    {e['nome']} vai ao chão")      # (fase 1b) o derruba de hoje entra no calejo de pernas
     if a.get('bicho') or e.get('bicho'): _depois_do_golpe(S, a, e, w, dano, esp, len(e['feridas']) > abertas)
     if terrivel:
         for o in de_pe(S, e['lado']):
             if o is not e and dist(o, e) <= 2: _moral(S, o, 'golpe_terrivel')
     if e['estado'] == 'pe' and e['pv'] < e['pvmax'] * 0.25: _moral(S, e, 'ferido_grave')
     if S.get('magia'): magia.feriu(S, a, e, w, dano, len(e['feridas']) > abertas)                # a dose da lâmina, o dreno, a maldição, a concentração de quem canaliza, a fase do chefe
+    return dict(e=e, acertou=True, dano=dano, caiu=e['estado'] in ('caido', 'morto'))
+
+
+def _devolve(S, a, e, w, dano, pv0):
+    """(fase 1b) O DEVOLVE: parte do DANO LEVADO volta em quem golpeia de perto. O dano levado é o que o alvo perdeu de PV: o golpe que passa do PV que ele tinha não leva mais que
+    isso (como a Vampira, que cura do que tirou). Sem esse teto, o golpe enorme na cabeça sem elmo (o ×27 da regra de ouro) voltava inteiro em quem bateu e o derrubava: a
+    armadura de baixo com Devolve desfazia o item que decide (o banco, B3: a arma duas acima vencia 78%, e a meta é 85%; com o teto, 99%)."""
+    src = _fonte(S, e, 'devolve')
+    return int(min(dano, max(pv0, 0)) * src['efeitos']['devolve']) if src else 0
+
+
+def _aparadora(S, e, gp):
+    """a peça que aparou (o escudo ou a arma de e) tem a Aparadora? Quem teve o golpe aparado perde 1 de fôlego"""
+    if gp is e.get('escudo'): return bool(next((src['efeitos'].get('aparadora') for src in e['fontes'] if src['item'] == gp['item']), False))
+    return bool((gp.get('efeitos') or {}).get('aparadora'))
+
+
+def _depois_1b(S, a, e, w, dano, pv0, pc, vestida, extra):
+    """(fase 1b) o golpe tirou PV: a Vampira cura quem bate (no teto da cura do dia); a Sangria e a Brasa abrem filetes; o Aturdir e o Atar enchem a barra da família; o Expõe,
+    a Escancara e o Amolece põem o estado; o Medo da peça conta como fonte de medo da rodada (testa no fim dela, junto das outras). Nada disto rola dado."""
+    ef = w.get('efeitos') or {}
+    if not ef: return
+    vp = ef.get('vampira')
+    if vp and a['estado'] == 'pe' and a['pv'] < a['pvmax']:
+        teto = max(0, int(a['pvmax'] * T.CURA_TETO) - a.get('curado', 0)); g = min(a['pvmax'] - a['pv'], teto, int(min(dano, max(pv0, 0)) * vp))
+        if g > 0: a['pv'] += g; a['curado'] = a.get('curado', 0) + g; S['dano_r'] -= g / a['pvmax']; diz(S, f"    a Vampira de {a['nome']} bebe do golpe (+{g}: {a['pv']}/{a['pvmax']})"); _conta(S, 'vampira', g)
+    if e['estado'] != 'pe': return
+    sg = ef.get('sangria')
+    if sg and sg != 'ferida' and not tem(e, 'sem vida'): _filete(S, e, max(1, int(dano * sg[0])), sg[1], f"sangria:{a['nome']}", soma=sg[2], sem_atar=sg[3])
+    if ef.get('brasa'): _filete(S, e, max(1, int(dano * TE.BRASA[0])), TE.BRASA[1], 'fogo', soma=True)
+    if ef.get('aturdir'): _carga(S, e, w, 'cabeca', ef['aturdir'], pc, vestida, extra)
+    if ef.get('atar') and S.get('magia') and (e.get('mana_max') or 0) > 0: _carga(S, e, w, 'mana', TE.ATAR_CARGA, pc, vestida, extra)      # (o Atar só ata quem tem Mana a atar)
+    if e['estado'] != 'pe': return
+    if ef.get('escancara'): _prazo(S, e, 'exposto', TE.ESCANCARA_RODADAS)
+    elif ef.get('expoe'): _prazo(S, e, 'exposto', TE.EXPOE_RODADAS)
+    if ef.get('amolece'): _prazo(S, e, 'amolecido', TE.AMOLECE_RODADAS)
+    if ef.get('medo'): e['medo_fontes'][f"medo:{a['nome']}"] = max(e['medo_fontes'].get(f"medo:{a['nome']}", 0), ef['medo'])
+
+
+def _conta(S, k, v=1): c = S.setdefault('conta', {}); c[k] = c.get(k, 0) + v           # os contadores que o banco lê (S['conta'], como na magia)
+
+
+def _prazo(S, e, campo, dur):
+    """P9: o estado tem potência fixa e prazo que soma, até 3 rodadas (contando a de agora); o campo guarda a rodada em que ele vence. APLICAR DE NOVO é de novo numa rodada
+    nova: o segundo golpe que fere na mesma rodada não soma mais prazo (o mesmo estado, no mesmo alvo, soma uma vez por rodada). Somando a cada golpe, quem bate 3 ou 4 vezes
+    por turno deixava o alvo exposto o tempo todo: o Expõe (normal: até 10) dava +12,0; somando uma vez por rodada, +7,6, o medido do contrato (+7,1; a Escancara, +17,2)"""
+    r = S['r']; pr = e.setdefault('prazo_r', {})
+    if pr.get(campo) == r: return
+    pr[campo] = r; x = e[campo]; e[campo] = min(r + TE.PRAZO_MAX - 1, (x if x >= r else r - 1) + dur)
+    _conta(S, campo)
+
+
+def _filete(S, e, q, rodadas, fonte, soma=True, sem_atar=False):
+    """um FILETE de sangue (ou de fogo): cada fonte é um filete, com o seu tanto por rodada e o seu prazo; até 3 contando o da ferida (o quarto toma o lugar do mais fraco).
+    A Sangria da Incomum e da Rara não soma: o filete dela se renova (o maior tanto e o maior prazo); da Épica para cima, e o fogo, somam."""
+    if not soma:
+        velho = next((x for x in e['filetes'] if x[2] == fonte), None)
+        if velho: velho[0] = max(velho[0], q); velho[1] = max(velho[1], rodadas); return
+    e['filetes'].append([q, rodadas, fonte, bool(sem_atar)])
+    while len(e['filetes']) > 1 and len(e['filetes']) + (1 if e['sangra'] else 0) > TE.FILETES_MAX:
+        e['filetes'].remove(min(e['filetes'][:-1], key=lambda x: (x[0], x[1])))
+    _conta(S, 'filetes')
+
+
+def _chefe(f):
+    """chefe e bicho grande começam com +4 na resistência à carga (3.4; 3.5, freio 4): o bicho chefe da tabela, o grande e o enorme, o chefe com fases; e, entre a gente, o CHEFE
+    é o de moral firme (3.6: "contra moral firme (o chefe)") ou o das fases. O líder de um bando não é chefe por ser líder. (O +4 de saída vale só na resistência à carga, e não
+    como calejo na Firmeza: o chefe com +4 na Firmeza contra o prender e o nó mudaria a luta de magia de hoje, que a fase 1b não toca: 3.7.7.)"""
+    if f.get('bicho'):
+        esp = TB.ESPECIES.get(f['bicho']) or {}
+        return bool(esp.get('chefe')) or f.get('tamanho') in ('grande', 'enorme') or bool(f.get('fases'))
+    return f.get('moral') == 'firme' or bool(f.get('fases'))
+
+
+def resistencia(S, e, fam):
+    """3.4: RESISTÊNCIA = 6 + bônus de Vigor ÷ 2 + 4 por calejo da família (o de arma e o que o feitiço de controle deu) + 4 no chefe e no bicho grande + a Robusta (até +16)"""
+    return TE.resistencia((e.get('atributos') or {}).get('Vigor', 50), e['calejo_f'][fam] + e['calejo_m'][fam], _chefe(e), _fixo(S, e, 'resistencia'))
+
+
+def _pode_perder(f):
+    """ninguém perde mais de 1 turno em cada 3 seguidos (3.5, freio 5): nem um perdido nos dois últimos turnos, nem um já para perder"""
+    return not f['perde_turno'] and not any(f['perdidos'][-(TE.JANELA_TURNOS - 1):])
+
+
+def _carga(S, e, w, fam, q, pc, vestida, extra):
+    """3.4: o golpe que tira PV soma a carga do efeito na barra da família, no alvo (contra armadura de categoria maior que a arma, pela metade; na parte nua, em dobro; o golpe
+    extra, metade, no mínimo 1). A barra cheia (a resistência): o estado pega, a barra zera, e o alvo ganha um calejo daquela família. Na cabeça firme não soma carga de cabeça."""
+    if e['estado'] != 'pe' or not q: return
+    mc = S.get('mede_carga') if fam == 'cabeca' else None
+    if mc is not None: mc.setdefault(e['nome'], [[0, 0]])[-1][0] += 1      # (o banco, EF6) os golpes que tiram PV até cada atordoar: todos...
+    if fam == 'cabeca' and (e['firme_cabeca'] > 0 or e['perde_turno']): return
+    if vestida and pc['cat'] > w['cat']: q //= 2
+    elif not vestida: q *= 2
+    if extra: q = max(1, q // 2)
+    if q <= 0: return
+    if mc is not None: mc[e['nome']][-1][1] += 1                          # ... e só os que enchem a barra (os da cabeça firme não enchem: o calejo sozinho)
+    res = resistencia(S, e, fam); antes = e['barra'][fam]
+    if fam == 'cabeca' and not _pode_perder(e):           # ninguém perde mais de 1 turno em cada 3: o estado não pega agora; a barra fica cheia (sem calejo: ele vem quando o estado pega)
+        e['barra'][fam] = min(antes + q, res)
+        if e['barra'][fam] >= res > antes: diz(S, f"    a carga de cabeça de {e['nome']} está cheia, mas ninguém perde mais de 1 turno em cada 3: atordoa no próximo golpe que puder")
+        return
+    e['barra'][fam] = antes + q
+    if e['barra'][fam] < res: return
+    e['barra'][fam] = 0; e['calejo_f'][fam] += 1; _conta(S, 'carga_' + fam)
+    if fam == 'cabeca':
+        e['perde_turno'] = True; e['aberto'] = S['r'] + 1; _conta(S, 'atordoa')
+        if mc is not None: mc[e['nome']].append([0, 0])
+        diz(S, f"    {e['nome']} fica ATORDOADO: perde o próximo turno e fica aberto (−4 na Defesa) até o fim da rodada seguinte")
+        _para(S, e, f"{e['nome']} ficou atordoado (perde o próximo turno)", so_controlado=True)
+    elif fam == 'mana':
+        st = e.setdefault('est', {}); st['no'] = max(st.get('no') or 0, TE.ATADO_TURNOS)
+        diz(S, f"    {e['nome']} fica ATADO: a Mana não volta e cada feitiço custa 1 a mais, por {TE.ATADO_TURNOS} turnos")
+
+
+def _extras(S, a, w, r):
+    """(fase 1b) os golpes EXTRAS que o golpe que acertou puxa (P8: nenhum puxa outro, e põem metade da carga): o SEGUNDO GOLPE (vezes por luta, no mesmo alvo), a VARREDURA
+    (um outro inimigo colado, metade do dano) ou a TEMPESTADE (o dano inteiro), e a CEIFADORA (quem derrubou golpeia outro que alcança). De graça: sem ação nem fôlego."""
+    ef = w.get('efeitos') or {}; e = r['e']
+    if not ef: return
+    sg = ef.get('segundo_golpe')
+    if sg and a['fx_usos'].get('segundo_golpe', 0) < sg and e['estado'] == 'pe' and a['estado'] == 'pe' and not S['fim'] and dist(a, e) <= max(1, w['alcance']):
+        a['fx_usos']['segundo_golpe'] = a['fx_usos'].get('segundo_golpe', 0) + 1; _conta(S, 'segundo_golpe')
+        golpe(S, a, e, w, livre='o segundo golpe', extra=True)
+    vt = 'tempestade' if ef.get('tempestade') else 'varredura' if ef.get('varredura') else None
+    if vt and not w['distancia'] and a['estado'] == 'pe' and not S['fim']:
+        outros = [o for o in inimigos(S, a) if o is not e and dist(a, o) <= 1]
+        if outros:
+            o = min(outros, key=lambda x: (x['pv'] / x['pvmax'], x['nome'])); _conta(S, vt)
+            golpe(S, a, o, w, livre='a tempestade' if vt == 'tempestade' else 'a varredura', extra=True if vt == 'tempestade' else 'meio')
+    if ef.get('ceifadora') and r['caiu'] and a['estado'] == 'pe' and not S['fim']:
+        al = [x[0] for x in alvos(S, a, w, cerco=False)]
+        if al:
+            o = min(al, key=lambda x: (x['pv'] / x['pvmax'], x['nome'])); _conta(S, 'ceifadora')
+            golpe(S, a, o, w, livre='a ceifadora', extra=True)
 
 
 def _golpe_especial(S, a, w, livre):
@@ -404,12 +682,22 @@ def _gasta_armadura(S, e, nome, chave, n):
     it = S['itens'][chave]
     if it['dur'][0] <= 0 or any(src['item'] == chave and src['efeitos'].get('nao_quebra') for src in e['fontes']): return
     it['dur'][0] = max(0, it['dur'][0] - n)
-    if it['dur'][0] == 0: diz(S, f"    ✖ {nome} de {e['nome']} se desfaz"); _para(S, e, f"{nome} de {e['nome']} quebrou")
+    if it['dur'][0] == 0:
+        diz(S, f"    ✖ {nome} de {e['nome']} se desfaz"); _para(S, e, f"{nome} de {e['nome']} quebrou")
+        if e.get('robusta_fol'):                             # (fase 1b) a Robusta que se desfaz leva o fôlego máximo a mais que dava (fica o da outra fonte, se houver)
+            rb = efeito(S, e, 'robusta'); novo = rb[1] if rb else 0
+            if novo < e['robusta_fol']: e['folmax'] -= e['robusta_fol'] - novo; e['robusta_fol'] = novo; e['fol'] = min(e['fol'], e['folmax'])
 
 
 def _ferida(S, e, parte, grave, w, dano):
-    e['feridas'].append([parte, grave]); g = 1 if grave else 0; txt = f"    FERIDA{' GRAVE' if grave else ''} em {e['nome']}, {_parte(e, parte)}: "; sangra = grave or bool(w['efeitos'].get('sangra')) or bool(w.get('queima'))
-    if parte == 'cabeça': e['atordoado'] = max(e['atordoado'], T.FERIDAS['cabeça'][g]); txt += f"a cabeça roda (perde {_acoes(e['atordoado'])})"
+    sangria5 = bool(w['efeitos'].get('sangra')) or w['efeitos'].get('sangria') == 'ferida'      # o `sangra` de antes, e a Sangria Comum (fase 1b): a ferida sangra 5 rodadas
+    e['feridas'].append([parte, grave]); g = 1 if grave else 0; txt = f"    FERIDA{' GRAVE' if grave else ''} em {e['nome']}, {_parte(e, parte)}: "; sangra = grave or sangria5 or bool(w.get('queima'))
+    if parte == 'cabeça':
+        perde = T.FERIDAS['cabeça'][g]
+        if grave and S.get('carga_cabeca'):                 # (fase 1b) numa luta com carga de cabeça, a grave conta como turno perdido (dá a cabeça firme); na cabeça firme, tira só 1 ação, como a leve
+            if e['firme_cabeca'] > 0 or not _pode_perder(e): perde = T.FERIDAS['cabeça'][0]
+            else: e['turno_cabeca'] = True
+        e['atordoado'] = max(e['atordoado'], perde); txt += f"a cabeça roda (perde {_acoes(e['atordoado'])})"
     elif parte == 'braços':
         txt += f"{T.FERIDAS['braços'][g]:+d} no acerto".replace('-', '−')
         if grave and not e['sem_arma'] and not e.get('bicho'): e['sem_arma'] = True; txt += ' e larga a arma'
@@ -421,16 +709,32 @@ def _ferida(S, e, parte, grave, w, dano):
         txt += ('a perna cede, mas a peça firme segura de pé' if firme else 'vai ao chão') + ('; com a perna presa, não sai mais do lugar (levantar-se, pode)' if grave else '')
     if sangra and S.get('magia') and tem(e, 'sem vida'): sangra = False; txt += ' (não sangra: não tem vida)'
     if sangra:
-        n = T.SANGRA_RODADAS[1 if grave or w['efeitos'].get('sangra') or w.get('queima') else 0]; q = max(1, int(dano * T.SANGRA)); ant = e['sangra'] or [0, 0]
+        n = T.SANGRA_RODADAS[1 if grave or sangria5 or w.get('queima') else 0]; q = max(1, int(dano * T.SANGRA)); ant = e['sangra'] or [0, 0]
         e['sangra'] = [max(q, ant[0]), max(n, ant[1])]; txt += f' · {"queima" if w.get("queima") else "sangra"} {e["sangra"][0]} por {e["sangra"][1]} rodadas'
+        while len(e['filetes']) + 1 > TE.FILETES_MAX: e['filetes'].remove(min(e['filetes'], key=lambda x: (x[0], x[1])))      # (fase 1b) até 3 filetes, contando o da ferida: o quarto toma o lugar do mais fraco
         if w.get('queima'): e['queimando'] = True              # (o fim da rodada diz "queima", não "sangra")
     diz(S, txt); _para(S, e, f"{e['nome']} levou uma ferida ({_parte(e, parte)}{', grave' if grave else ''})", so_controlado=True)
 
 
-def _cai(S, e, dano):
+def _salva(S, e):
+    """(fase 1b) O IMORTAL: uma vez por dia, o dono fica com 1 PV em vez de cair (e não morre do golpe). O salvamento de 1 PV é um só por dia, venha de onde vier (P5): a ficha
+    já o tira quando foi gasto hoje (estado.lutador: salvo_dia), e o uso gasto volta ao estado num evento (ato.luta_fecha: ['item', id, 'efeito', 'gasta', 'imortal'])."""
+    if e['estado'] != 'pe' or e['fx_usos'].get('imortal'): return False
+    src = _fonte(S, e, 'imortal')
+    if not src: return False
+    e['fx_usos']['imortal'] = 1; e['pv'] = 1; it = S['itens'][src['item']]; _conta(S, 'imortal')
+    if it.get('id'): e['efeitos_gastos'].append([it['id'], 'imortal'])
+    diz(S, f"    ✦ {e['nome']} não cai: o Imortal de {it['nome']} o segura de pé, com 1 PV (uma vez por dia)")
+    _para(S, e, f"o Imortal segurou {e['nome']} de pé (1 PV; uma vez por dia)")
+    return True
+
+
+def _cai(S, e, dano, manso=False):
+    if _salva(S, e): return
     desfaz = bool(S.get('magia') and tem(e, 'sem vida'))     # quem não tem vida não fica caído: a zero de PV se desfaz
-    macico = dano > e['pvmax'] * 0.5 or desfaz
+    macico = (dano > e['pvmax'] * 0.5 and not manso) or desfaz          # (fase 1b) o Fio Manso: o golpe que mataria quem já estava abaixo de 1/4 do PV o deixa caído, vivo
     e['estado'] = 'morto' if macico else 'caido'; e['pv'] = min(e['pv'], 0)
+    if manso and not macico: e['morte'][0] = 3; diz(S, f"    o Fio Manso deixa {e['nome']} caído e vivo (para fazer preso)")
     if S.get('magia') and e.get('canaliza'): magia.perde(S, e, 'sem teste')      # quem cai perde o feitiço que canalizava
     diz(S, f"    ☠ {e['nome']} SE DESFAZ" if desfaz else f"    ☠ {e['nome']} MORRE" if macico else f"    ▼ {e['nome']} CAI")
     _para(S, e, f"{e['nome']} {'morreu' if macico else 'caiu'}" + (magia.cura_ao_alcance(S, e) if S.get('magia') and not macico else ''))
@@ -442,19 +746,31 @@ def _cai(S, e, dano):
     _fim(S)
 
 
-def _moral(S, f, motivo):
-    if f['moral'] == 'firme' or f['estado'] != 'pe' or (motivo in f['testou'] and motivo not in ('golpe_terrivel', 'medo')) or f.get('moral_r') == [S['r'], motivo]: return
+def _moral(S, f, motivo, cd=None, cd_pavor=None):
+    """o teste de coragem (3.14), com A ESCADA DO MEDO (fase 1b, DESENHO 3.6): firme, ABALADO (−2 no acerto), ACUADO (−4; não avança), QUEBRA (foge ou se rende). O firme que
+    falha por menos de 10 fica abalado (por 10 ou mais, quebra); o abalado que falha por menos de 5 fica acuado (por 5 ou mais, quebra); o acuado que falha quebra. Quem o jogador
+    comanda para no abalado; o bicho foge, como hoje. `cd`: a FONTE NOVA de medo (o Medo e o Temível das peças), que testa uma vez por rodada, junta, com o calejo de ânimo."""
+    nova = cd is not None
+    if f['moral'] == 'firme' or f['estado'] != 'pe': return
+    if not nova and ((motivo in f['testou'] and motivo not in ('golpe_terrivel', 'medo')) or f.get('moral_r') == [S['r'], motivo]): return
     if not inimigos(S, f): return                           # sem inimigo de pé não há de quem fugir nem a quem se render: quem ficou com o campo não testa a coragem
     bicho = f.get('bicho') and not f.get('controla')
     if bicho and f['chao'] and not f['preso'] and S['lugar'].get('sem_saida') != f['lado']: return       # o bicho no chão não tem como correr agora: o susto fica para quando ele se levantar
-    f['testou'].append(motivo); f['moral_r'] = [S['r'], motivo]
+    if nova and (tem(f, 'sem vida') or (f.get('controla') and f['abalado'])): return                     # o sem vida não sente medo; quem o jogador comanda, já abalado, não testa mais as fontes novas
+    if not nova: f['testou'].append(motivo); f['moral_r'] = [S['r'], motivo]
+    f['susto_r'] = S['r']
     meus, deles = len(de_pe(S, f['lado'])), len(de_pe(S, outro(f['lado'])))
     ld = lider(S, f['lado']); bon = f['vontade_b'] + f.get('coragem', 0) + (T.MORAL_LIDER if ld and ld['estado'] == 'pe' and ld is not f else 0)
     if S.get('magia') and (f.get('est') or {}).get('benzido'): bon += TM.ESTADOS['benzido']['coragem']          # o benzido tem coragem a mais
     if tem(f, 'matilha') and any(o is not f and tem(o, 'matilha') for o in de_pe(S, f['lado'])): bon += TB.MATILHA_CORAGEM       # a matilha dá coragem
     bon += T.MORAL_MAIS if meus > deles else T.MORAL_MENOS if deles >= 2 * meus else 0
-    t = sum(d20x()) + sum(d20x()) + bon; cd = T.MORAL[motivo] if motivo in T.MORAL else TB.PAVOR if motivo == 'pavor' else TM.MEDO if motivo == 'medo' else TB.MORAL[motivo]; que = SUSTOS.get(motivo, motivo.replace('_', ' '))
+    bon += _fixo(S, f, 'coragem')                            # (fase 1b) a Coragem do amuleto, metade da Robusta e o Escudo que Conta (P3: até +8)
+    if nova: bon += TE.CALEJO_ANIMO * f['calejo_f']['animo']                                           # o calejo de ânimo: +4 por degrau que uma fonte nova já fez pegar
+    t = sum(d20x()) + sum(d20x()) + bon; que = SUSTOS.get(motivo, motivo.replace('_', ' '))
+    if not nova: cd = T.MORAL[motivo] if motivo in T.MORAL else (cd_pavor or TB.PAVOR) if motivo == 'pavor' else TM.MEDO if motivo == 'medo' else TB.MORAL[motivo]
+    if nova: _conta(S, 'medo_testes')
     if t >= cd: return
+    if nova: _conta(S, 'medo_falhas')
     if bicho:       # o BICHO não fica abalado nem se rende: foge. Encurralado (sem saída, ou sem pernas para correr), luta até o fim
         if S['lugar'].get('sem_saida') == f['lado'] or f['preso'] or (S.get('magia') and (f.get('est') or {}).get('preso')):
             if not f.get('encurralado'): f['encurralado'] = True; diz(S, f"    {f['nome']} está ENCURRALAD{_oa(f)}: não tem {'para onde' if not f['preso'] else 'pernas para'} fugir ({que}: {t} contra {cd})")
@@ -466,9 +782,14 @@ def _moral(S, f, motivo):
             for o in de_pe(S, f['lado']): _moral(S, o, 'lider_caiu')
         _fim(S); return
     if f.get('controla'):       # quem o jogador comanda não foge nem se rende pelo dado: fica abalado, e a escolha é do jogador
+        if nova and not f['abalado']: f['calejo_f']['animo'] += 1
         f['abalado'] = True; diz(S, f"    {f['nome']} FRAQUEJA ({que}: {t} contra {cd})"); _para(S, f, f"{f['nome']} fraquejou ({que}): seguir lutando assim, recuar ou render-se é escolha sua"); return
     if t > cd - T.MORAL_QUEBRA and not f['abalado']:
+        if nova: f['calejo_f']['animo'] += 1
         f['abalado'] = True; diz(S, f"    {f['nome']} FRAQUEJA ({que}: {t} contra {cd})"); return
+    if ESCADA and f['abalado'] and not f.get('acuado') and t > cd - TE.QUEBRA_ABALADO:          # (fase 1b) A ESCADA: o abalado que falha por pouco fica ACUADO (não avança; −4 no acerto)
+        if nova: f['calejo_f']['animo'] += 1
+        f['acuado'] = True; _conta(S, 'acuado'); diz(S, f"    {f['nome']} fica ACUADO ({que}: {t} contra {cd}): não avança contra quem o assusta"); return
     rende = f['pv'] < f['pvmax'] * 0.25 or S['lugar'].get('sem_saida') == f['lado']
     if rende and inimigos(S, f) and all(o.get('bicho') for o in inimigos(S, f)):       # ninguém se rende a um bicho: foge, se tem por onde
         if S['lugar'].get('sem_saida') == f['lado']:
@@ -606,9 +927,17 @@ def _decide(S, f, pagou):
     if acao == 'folego' and f['fol'] >= f['folmax']:        # A ORDEM DE TOMAR FÔLEGO ACABA QUANDO O FÔLEGO ENCHE: daí em diante segura (bate em quem chega), e a luta para e pergunta
         acao = 'segurar'; (S['ordens'].get(f['nome']) or {}).update(acao='segurar')
         _para(S, f, f"{f['nome']} recuperou o fôlego ({f['fol']}/{f['folmax']}): a ordem de tomar fôlego acabou, e agora segura até nova ordem", so_controlado=True)
+    if acao in ('atar', 'animar') and f.get('controla'):     # (fase 1b) as ordens de uma vez: atar [ALIADO] e animar (o Escudo que Conta); depois, volta a ordem de antes
+        ant = o.get('antes')
+        if ant: S['ordens'][f['nome']] = ant
+        else: S['ordens'].pop(f['nome'], None)
+        return ('atar', o.get('alvo')) if acao == 'atar' else ('animar',)
     if acao == 'folego' or f['fol'] < min(custo, f['folmax']): return ('folego',)
     if f['chao']: return ('levanta',)
     colado = any(dist(f, e) <= 1 for e in inimigos(S, f))
+    if not f.get('controla') and f['filetes'] and not colado and _ataveis_rodada(f) >= f['pvmax'] * TE.ATAR_SOZINHO: return ('atar', None)      # (fase 1b) quem o jogador não comanda ata a si (só o que se ata conta)
+    if not f.get('controla') and efeito(S, f, 'escudo_que_conta') and 'escudo_que_conta' not in f['usou'] and any(dist(f, o) <= TE.ESCUDO_CONTA['casas'] and (o['abalado'] or o.get('acuado')) for o in de_pe(S, f['lado'])):
+        return ('animar',)
     if f['sem_arma'] and not colado: return ('pega',)
     preso = _nao_anda(S, f)                                     # a perna que não anda mais, ou o bicho que o agarra
     tras = -frente(f); pode_recuar = not preso and bool(_livre(S, f, f['x'] + tras, False))
@@ -625,7 +954,7 @@ def _decide(S, f, pagou):
     if f.get('sopro') and f['sopro_r'] <= 0 and f['fol'] >= f['sopro']['folego']:              # o SOPRO: quando pega dois ou mais, ou quando não alcança ninguém de outro jeito
         n = len(_no_sopro(S, f))
         if n >= 2 or (n == 1 and not al): return ('sopro',)
-    if pref and not any(x[0] is pref for x in al) and not preso:      # o alvo da ordem está fora de alcance: vai até ele
+    if pref and not any(x[0] is pref for x in al) and not preso and not f.get('acuado'):      # o alvo da ordem está fora de alcance: vai até ele (o acuado não avança)
         dx = _rumo(S, f, w, pref)
         if dx and _livre(S, f, f['x'] + dx, True): return ('anda', dx, False, pref)
     if al:
@@ -646,6 +975,7 @@ def _decide(S, f, pagou):
         if not apanha: return ('espera',)
         if f.get('controla'):
             _para(S, f, f"{f['nome']} está ao alcance deles e não alcança ninguém: segurar assim é só apanhar"); return ('espera',)
+    if f.get('acuado'): return ('espera',)                  # (fase 1b) o ACUADO não avança contra quem o assustou: só segura, guarda, toma fôlego ou recua
     dx = _rumo(S, f, w)
     return ('anda', dx, False, None) if dx else ('espera',)
 
@@ -683,22 +1013,29 @@ def _diz_passo(S, txt, i0):
 
 
 def _turno(S, f):
-    f['resguardo'] = False; f['reac'] = f['reacoes']; f['fugiu'] = False
+    f['resguardo'] = False; f['reac'] = f['reacoes']; f['fugiu'] = False; f['turnos_n'] += 1
     mg = S.get('magia'); sv = bool(mg and tem(f, 'sem vida'))
     if sv: f['fol'] = f['folmax']                           # quem não tem vida não cansa
     zerado = f['fol'] <= 0                                     # começou o turno sem fôlego: uma ação só
     f['fol'] = min(f['folmax'], f['fol'] + 1 + T.POSTURAS[f['postura']][2])
     custos = [1] if zerado else [1] * T.ACOES + ([] if sv else list(f['esforcos']))      # (nem faz a ação a mais)
+    base = T.ACOES
+    if S['r'] == 1 and not zerado and _arrancada(S, f): custos = [1] + custos; base += 1; diz(S, f"  {f['nome']} sai na arrancada (uma ação a mais)")      # (fase 1b) a Arrancada
     if f.get('bicho'): _turno_do_bicho(S, f)
     if mg: magia.comeco(S, f)                                  # a Mana volta, o campo se paga, o feitiço longo sai (ou se perde)
-    if f['atordoado']:
+    perdeu = False
+    if f['perde_turno']:                                       # (fase 1b) ATORDOADO PELA CARGA: perde o turno inteiro; daí, a cabeça firme até o fim do segundo turno em que volta a agir
+        f['perde_turno'] = False; f['atordoado'] = 0; custos = []; perdeu = True; f['firme_cabeca'] = TE.FIRME_TURNOS; f.pop('turno_cabeca', None)
+        diz(S, f"  {f['nome']} está atordoado: perde o turno"); _conta(S, 'turnos_perdidos')
+    elif f['atordoado']:
         perde = min(len(custos), f['atordoado']); custos = custos[perde:]; f['atordoado'] = 0; diz(S, f"  {f['nome']} ainda sente o golpe: perde {_acoes(perde)}")
+        if f.pop('turno_cabeca', False): perdeu = True; f['firme_cabeca'] = TE.FIRME_TURNOS; _conta(S, 'turnos_perdidos')      # a grave na cabeça, numa luta com carga de cabeça
     pagou = False; feitas = 0
     for mult in custos:
         if f['estado'] != 'pe' or S['fim']: break
         if mg: f['_restam'] = max(0, T.ACOES - feitas)
         ac = _decide(S, f, pagou); w = arma_de(S, f)
-        if feitas >= T.ACOES:                                  # a ação A MAIS (o esforço): só para golpear, e guardando um terço do fôlego (a postura agressiva gasta tudo)
+        if feitas >= base:                                     # a ação A MAIS (o esforço): só para golpear, e guardando um terço do fôlego (a postura agressiva gasta tudo)
             if ac[0] != 'golpe' or f['postura'] == 'defensiva': break
             if f['fol'] - w['folego'] * mult < (0 if f['postura'] == 'agressiva' else f['folmax'] // 3): break
         feitas += 1
@@ -724,11 +1061,55 @@ def _turno(S, f):
         elif ac[0] in ('lanca', 'bebe'):                        # A MAGIA: lançar (1 ação, 2, ou começar o longo), soltar o encanto, beber
             feitas += magia.acoes(ac) - 1; magia.faz(S, f, ac)
             if f.get('canaliza'): _fim(S); break               # quem começou a canalizar não faz mais nada neste turno
+        elif ac[0] == 'atar': _ata(S, f, ac[1])                 # (fase 1b) atar: corta o filete mais forte (em si ou num aliado colado)
+        elif ac[0] == 'animar': _anima(S, f)                   # (fase 1b) o Escudo que Conta
         _fim(S)
+    if f['perdidos'] is not None:                             # (fase 1b) os últimos turnos (ninguém perde mais de 1 em cada 3) e a cabeça firme, que conta os turnos em que ele age
+        f['perdidos'] = (f['perdidos'] + [perdeu])[-(TE.JANELA_TURNOS - 1):]
+        if S.get('mede_turnos') is not None: S['mede_turnos'].setdefault(f['nome'], []).append(perdeu)
+        if not perdeu and f['firme_cabeca'] > 0: f['firme_cabeca'] -= 1
+        if f['desforra']: f['desforra'] = {k: v for k, v in f['desforra'].items() if v > f['turnos_n']}
     if mg: magia.fim_turno(S, f)
     if f.get('bicho'): _turno_do_bicho(S, f, fim=True)
     if f['fol'] > 0: f['avisou_fol'] = False
     elif f['estado'] == 'pe' and f.get('controla') and not f.get('avisou_fol'): f['avisou_fol'] = True; _para(S, f, f"{f['nome']} está sem fôlego")
+
+
+def _arrancada(S, f):
+    """a Arrancada (na arma em uso ou numa fonte inteira): uma ação a mais na primeira rodada"""
+    return bool((arma_de(S, f).get('efeitos') or {}).get('arrancada') or efeito(S, f, 'arrancada'))
+
+
+def _filetes_rodada(f): return sum(x[0] for x in f['filetes']) + (f['sangra'][0] if f['sangra'] else 0)
+def _ataveis_rodada(f):
+    """o sangue por rodada que atar pode cortar: a ferida e os filetes que se atam (os da Sangria Lendária para cima não se atam). Contando os que não se atam, quem o jogador não
+    comanda escolhia atar sem ter o que atar, ação após ação, e ficava parado enquanto o filete durasse"""
+    return sum(x[0] for x in f['filetes'] if not x[3]) + (f['sangra'][0] if f['sangra'] else 0)
+
+
+def _ata(S, f, nome):
+    """ATAR (3.3; a ordem `atar [ALIADO]`): 1 ação, em si ou num aliado colado: corta o filete mais forte (o da ferida, ou um dos efeitos; o da Sangria Lendária não se ata)"""
+    o = por_nome(S, nome) if nome else f
+    if not o or o['estado'] != 'pe' or o['lado'] != f['lado'] or dist(f, o) > 1: o = f
+    cands = [('ferida', f_) for f_ in ([o['sangra']] if o['sangra'] else [])] + [('efeito', x) for x in o['filetes'] if not x[3]]
+    if not cands: diz(S, f"  {f['nome']} {'se ata' if o is f else 'ata ' + o['nome']}, mas não há filete que se ate"); return
+    qual, x = max(cands, key=lambda c: c[1][0]); _conta(S, 'atar')
+    if qual == 'ferida': o['sangra'] = None; o.pop('queimando', None)
+    else: o['filetes'].remove(x)
+    diz(S, f"  {f['nome']} {'se ata' if o is f else 'ata ' + o['nome']}: corta o filete de {x[0]} por rodada" + (f" ({_filetes_rodada(o)} ainda por rodada)" if _filetes_rodada(o) else ''))
+
+
+def _anima(S, f):
+    """o ESCUDO QUE CONTA (1 ação, uma vez por luta; a ordem `animar`): os aliados a 2 casas descem um degrau do medo e ganham +2 na coragem até o fim da luta"""
+    if not efeito(S, f, 'escudo_que_conta') or 'escudo_que_conta' in f['usou']: diz(S, f"  {f['nome']} ergue o escudo, mas ele já contou nesta luta"); return
+    f['usou'].append('escudo_que_conta'); toca = []
+    for o in de_pe(S, f['lado']):
+        if dist(f, o) > TE.ESCUDO_CONTA['casas']: continue
+        o['coragem_escudo'] = TE.ESCUDO_CONTA['coragem']
+        if o.get('acuado'): o['acuado'] = False; toca.append(f"{o['nome']} sai do acuado")
+        elif o['abalado']: o['abalado'] = False; toca.append(f"{o['nome']} se firma")
+    _conta(S, 'escudo_que_conta')
+    diz(S, f"  {f['nome']} ergue o escudo que conta: +{TE.ESCUDO_CONTA['coragem']} na coragem dos seus a {TE.ESCUDO_CONTA['casas']} casas" + (f" ({'; '.join(toca)})" if toca else ''))
 
 
 def _fim(S):
@@ -743,8 +1124,14 @@ def _abre_rodada(S):
     S['r'] += 1; S['dano_r'] = 0; S['houve_parada'] = False; diz(S, f"— RODADA {S['r']} —")
     if S['r'] == 1:                                         # o que APAVORA: quem começa a luta contra ele testa a coragem
         for lado in 'AB':
-            if any(tem(b, 'apavora') for b in de_pe(S, lado)):
-                for o in de_pe(S, outro(lado)): _moral(S, o, 'pavor')
+            ap = [b for b in de_pe(S, lado) if tem(b, 'apavora')]
+            if ap:
+                cd = max(b.get('pavor') or TB.PAVOR for b in ap)       # o pavor do dragão jovem é mais alto que o dos outros (tabelas_dragoes.PAVOR)
+                for o in de_pe(S, outro(lado)): _moral(S, o, 'pavor', cd_pavor=cd)
+        for d in de_pe(S):                                  # (fase 1b) o TEMÍVEL: quem começa a luta contra o dono testa a coragem (uma fonte nova de medo: testa no fim da rodada, junto das outras)
+            tv = efeito(S, d, 'temivel')
+            if tv:
+                for o in inimigos(S, d): o['medo_fontes'][f"temivel:{d['nome']}"] = tv
     vivos = de_pe(S)
     for f in S['L']: f['golpeado'] = []
     for f in vivos: f['ini'] = sum(d20x()) + sum(d20x()) + f['percep_b'] + f['agil_b'] + f['ini_mod'] + (TB.BOTE['ini'] if S['r'] == 1 and tem(f, 'bote') else 0)
@@ -762,18 +1149,41 @@ def _fecha_rodada(S):
             qu = 'queima' if f.get('queimando') else 'sangra'
             if not f['sangra']: f.pop('queimando', None)
             diz(S, f"  {f['nome']} {qu} {q} ({max(f['pv'], 0)}/{f['pvmax']})")       # o que o sangue tira fica escrito: a conta dos golpes fecha com o quadro
-            if f['pv'] <= 0: diz(S, f"  {f['nome']} {qu} até cair"); _cai(S, f, 0)
+            if f['pv'] <= 0 and not _salva(S, f): diz(S, f"  {f['nome']} {qu} até cair"); _cai(S, f, 0)
         elif f['estado'] == 'caido' and max(f['morte']) < 3:
             ok = D.d(20) >= T.MORTE_CD; f['morte'][0 if ok else 1] += 1
             if f['morte'][1] >= 3: f['estado'] = 'morto'; diz(S, f"  ☠ {f['nome']} morre no chão"); _para(S, f, f"{f['nome']} morreu no chão")
+    for f in S['L']:                                        # (fase 1b) OS FILETES dos efeitos (a Sangria, a Brasa): cada um tira o seu tanto por rodada, pelo seu prazo; a água apaga o fogo
+        if f['estado'] != 'pe' or not f['filetes']: continue
+        if 'água' in S['tempo'] and any(x[2] == 'fogo' for x in f['filetes']): f['filetes'] = [x for x in f['filetes'] if x[2] != 'fogo']; diz(S, f"  a água apaga o fogo em {f['nome']}")
+        if not f['filetes']: continue
+        q = sum(x[0] for x in f['filetes']); fogo = all(x[2] == 'fogo' for x in f['filetes'])
+        for x in f['filetes']: x[1] -= 1
+        f['filetes'] = [x for x in f['filetes'] if x[1] > 0]; f['pv'] -= q; S['dano_r'] += q / f['pvmax']
+        if f.get('funda') is None: f['funda'] = 0
+        diz(S, f"  {f['nome']} {'queima' if fogo else 'sangra'} {q} pelos filetes ({max(f['pv'], 0)}/{f['pvmax']})"); _conta(S, 'filetes_pv', q)
+        if f['pv'] <= 0 and not _salva(S, f): diz(S, f"  {f['nome']} {'queima' if fogo else 'sangra'} até cair"); _cai(S, f, 0)
     for f in S['L']:                                        # o veneno
         if f['estado'] == 'pe' and f.get('veneno'):
             q = f['veneno'][0]; f['pv'] -= q; f['veneno'][1] -= 1; S['dano_r'] += q / f['pvmax']
             if f.get('funda') is None: f['funda'] = 0           # o veneno também
             if f['veneno'][1] <= 0: f['veneno'] = None
             diz(S, f"  {f['nome']} perde {q} para o veneno ({max(f['pv'], 0)}/{f['pvmax']})")      # como o sangue: o que o veneno tira fica escrito
-            if f['pv'] <= 0: diz(S, f"  {f['nome']} cai pelo veneno"); _cai(S, f, 0)
+            if f['pv'] <= 0 and not _salva(S, f): diz(S, f"  {f['nome']} cai pelo veneno"); _cai(S, f, 0)
+    for f in de_pe(S):                                      # (fase 1b) a REGENERA: do PV máximo por rodada, no teto da cura do dia
+        rg = efeito(S, f, 'regenera')
+        if rg and f['pv'] < f['pvmax']:
+            teto = max(0, int(f['pvmax'] * T.CURA_TETO) - f.get('curado', 0)); g = min(f['pvmax'] - f['pv'], teto, max(1, int(f['pvmax'] * rg)))
+            if g > 0: f['pv'] += g; f['curado'] = f.get('curado', 0) + g; S['dano_r'] -= g / f['pvmax']; diz(S, f"  {f['nome']} se refaz (a Regenera: +{g}: {f['pv']}/{f['pvmax']})"); _conta(S, 'regenera', g)
     if S.get('magia'): magia.fecha_rodada(S)                # a seiva, os prazos que contam em rodadas, o campo de quem caiu, a fase do chefe
+    for f in S['L']:                                        # (fase 1b) AS FONTES NOVAS DE MEDO testam juntas: um teste por alvo por rodada, contra a maior CD, +1 por fonte a mais (até +2)
+        fs = f['medo_fontes']
+        if not fs: continue
+        f['medo_fontes'] = {}
+        if f['estado'] != 'pe': continue
+        cds = sorted(fs.values(), reverse=True); _moral(S, f, 'medo_peca', cd=cds[0] + min(TE.MEDO_MAIS_MAX, TE.MEDO_MAIS * (len(cds) - 1)))
+    for f in de_pe(S):                                      # (fase 1b) o acuado desce a abalado depois de 2 rodadas sem susto novo
+        if f.get('acuado') and S['r'] - f['susto_r'] >= TE.ACUADO_DESCE: f['acuado'] = False; diz(S, f"  {f['nome']} se recompõe um pouco: de acuado a abalado")
     for f in de_pe(S):                                      # a retirada: quem recua e ficou longe de todo inimigo de pé saiu da luta
         ini = inimigos(S, f)                                # SEM INIMIGO DE PÉ NÃO HÁ RETIRADA: a luta acabou, e quem recuava ficou com o campo como os outros
         if _ordem_de(S, f) == 'recuar' and ini and not S['fim'] and all(dist(f, e) >= T.RETIRADA for e in ini):
@@ -856,6 +1266,23 @@ def resultado_diz(S):
     return ' · '.join(L)
 
 
+def linha_1b(S, f):
+    """(fase 1b) o que a base nova põe na linha do lutador no quadro: o acuado, a barra de carga de cada família (a mesa vê a do inimigo: "carga de cabeça 6/10"), o atordoado,
+    a cabeça firme, o aberto, os filetes, o exposto, o amolecido e o Imortal já gasto. Quem não tem nada disso, nada (a linha de hoje sai igual)."""
+    L_ = []
+    if f.get('acuado'): L_.append('ACUADO (não avança)')
+    for k in TE.FAMILIAS:
+        if f['barra'][k]: L_.append(f"carga de {TE.FAMILIA_DIZ[k]} {f['barra'][k]}/{resistencia(S, f, k):g}".replace('.', ','))
+    if f['perde_turno']: L_.append('ATORDOADO: perde o próximo turno')
+    if f['firme_cabeca'] > 0 and S.get('carga_cabeca'): L_.append(f"cabeça firme ({f['firme_cabeca']} turno{'s' if f['firme_cabeca'] > 1 else ''})")
+    if f['aberto'] >= S['r']: L_.append('aberto (−4 na Defesa)')
+    if f['filetes']: L_.append(f"filetes ({len(f['filetes'])}: {sum(x[0] for x in f['filetes'])} por rodada)")
+    if f['exposto'] >= S['r']: L_.append('exposto (+50% no dano que leva)')
+    if f['amolecido'] >= S['r']: L_.append('amolecido (−25% no dano que faz)')
+    if f['fx_usos'].get('imortal'): L_.append('o Imortal já segurou hoje')
+    return ''.join(' · ' + x for x in L_)
+
+
 def situacao(S):
     """o quadro que o jogador vê quando a luta para"""
     lado = dict(A='a casa', B='o outro lado'); lg = S['lugar'] or {}
@@ -873,7 +1300,7 @@ def situacao(S):
                      + (' · fraquejou' if f['abalado'] else '') + (' · no chão' if f['chao'] and f['estado'] != 'pe' else '') + (' · sem a arma' if f['sem_arma'] else '') + (' · perna presa: não sai do lugar' if f['preso'] and f['estado'] == 'pe' else '')
                      + (f" · com veneno ({f['veneno'][0]} por rodada)" if f.get('veneno') and f['estado'] == 'pe' else '') + (f" · {f['agarrado']} não solta" if f['estado'] == 'pe' and _agarrado(S, f) else '')
                      + (f" · bicho {f['tamanho']}" + (', no ar' if f['estado'] == 'pe' and _no_ar(S, f) else '') + (', encurralad' + oa.lower() if f.get('encurralado') else '') if f.get('bicho') else '')
-                     + (magia.linha(S, f) if S.get('magia') else ''))
+                     + (linha_1b(S, f) if f['estado'] == 'pe' else '') + (magia.linha(S, f) if S.get('magia') else ''))
     if S.get('magia') and magia.campo(S): L.append(magia.campo(S))
     if S['r'] == 0 and S['avisos']: L.append('AVISOS: ' + ' · '.join(S['avisos']))
     if S['paradas']: L.append('PAROU PORQUE: ' + ' · '.join(S['paradas']))
@@ -951,8 +1378,18 @@ def ordem(S, txt):
     if acao in ('lancar', 'beber', 'usar'):                 # A MAGIA: a ordem é conferida inteira aqui (o feitiço que a pessoa sabe, o alvo, a poção que leva, o encanto carregado)
         if not S.get('magia'): sys.exit(f'{f["nome"]} não tem magia nesta luta: nem feitiço, nem poção, nem encanto')
         o = magia.ordem(S, f, acao, pal[1:]); o.update({'postura': post} if post else {})
-        f['controla'] = True; S['ordens'][f['nome']] = o; return
-    if acao not in ('atacar', 'segurar', 'avancar', 'recuar', 'folego', 'guardar'): sys.exit(f'ação desconhecida: "{acao}" (use: atacar, segurar, avancar, recuar, folego, guardar, lancar, beber, usar)')
+        f['controla'] = True; f['acuado'] = False; S['ordens'][f['nome']] = o; return
+    if acao in ('atar', 'animar'):                           # (fase 1b) atar [ALIADO]: corta o filete mais forte, em si ou num aliado colado · animar: o Escudo que Conta
+        if acao == 'animar' and (not efeito(S, f, 'escudo_que_conta') or 'escudo_que_conta' in f['usou']): sys.exit(f'{f["nome"]} não tem o Escudo que Conta pronto (o escudo com ele, inteiro, uma vez por luta)')
+        alvo = None
+        if acao == 'atar' and resto:
+            g = acha(resto, meus)
+            if not g or dist(f, g) > 1: sys.exit(f'atar quem? Em si, ou num aliado colado: {", ".join(x["nome"] for x in meus if dist(f, x) <= 1)}')
+            alvo = g['nome']
+        elif acao == 'animar' and resto: sys.exit('"animar" não leva nome (o escudo conta para os seus a 2 casas)')
+        antes = S['ordens'].get(f['nome']); antes = antes.get('antes') if antes and antes.get('acao') in ('atar', 'animar') else antes
+        f['controla'] = True; f['acuado'] = False; S['ordens'][f['nome']] = dict(acao=acao, alvo=alvo, antes=antes, **({'postura': post} if post else {})); return
+    if acao not in ('atacar', 'segurar', 'avancar', 'recuar', 'folego', 'guardar'): sys.exit(f'ação desconhecida: "{acao}" (use: atacar, segurar, avancar, recuar, folego, guardar, atar, animar, lancar, beber, usar)')
     alvo = None
     if acao == 'guardar':
         g = acha(resto or '', [x for x in meus if x is not f])
@@ -964,7 +1401,7 @@ def ordem(S, txt):
         if not e: sys.exit(f'não há "{resto}" de pé do outro lado. De pé: {", ".join(x["nome"] for x in deles)}')
         alvo = e['nome']
     if acao in ('atacar', 'avancar'): f['guarda'] = None
-    f['controla'] = True
+    f['controla'] = True; f['acuado'] = False                 # (fase 1b) quem o jogador passa a comandar para no abalado (a escada: o acuado é de quem ele não comanda)
     S['ordens'][f['nome']] = dict(acao='atacar' if acao in ('avancar', 'guardar') else acao, alvo=alvo, **({'postura': post} if post else {}))
 
 

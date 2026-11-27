@@ -180,11 +180,11 @@ FERRAMENTA_EFEITOS = {
     'lastro':        ('forte', 3, None, 'a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa', '+0,35'),
     'tempera':       ('forte', 3, (1, 1, 1, 1, 2, 3, 3, 3), 'na peça que ela forja, até {valor} efeito(s) de número nasce(m) cheio(s) (o número da categoria de cima)', '+0,32 · +0,46 · +0,54 (Épica a Lendária)'),
     'molde':         ('apelão', 5, None, 'ao abrir a obra, diz-se um efeito (molde=CHAVE): se a peça sai na categoria da obra ou acima, nasce com ele, fora do teto; se sai abaixo, o molde se perde', '+0,60'),
-    'degrau':        ('apelão', 5, None, 'um efeito da peça que ela forja pode ser da força de cima, com o número da categoria da peça (o degrau emprestado; só em peça de até 4 efeitos)', 'dentro da régua da força de cima'),
+    'degrau':        ('apelão', 5, None, 'um efeito da peça que ela forja pode ser da força de cima, com o número da categoria da peça (o degrau emprestado; só em peça de até 3 efeitos)', 'dentro da régua da força de cima'),
 }
 REMENDO_BLOCO = 8           # o conserto por bloco com o remendo (hoje, sem ele: CONSERTO_BLOCO, 5)
 MEDIDA_TESTE = 2            # a mão de medida: +2 no teste do ajuste (e metade dos blocos, para cima)
-DEGRAU_ATE = 4              # o degrau emprestado só em peça de até tantos efeitos (a porta adiantada: 4.5 do contrato)
+DEGRAU_ATE = 3              # o degrau emprestado só em peça de até tantos efeitos (a porta adiantada: 4.5 do contrato)
 APELIDOS_EFEITO = {'têmpera': 'tempera', 'mão_de_medida': 'mao_de_medida', 'medida': 'mao_de_medida', 'poupa-ferro': 'poupa_ferro', 'poupaferro': 'poupa_ferro',
                    'molde_de_mestre': 'molde', 'degrau_emprestado': 'degrau', 'brasa': 'fagulha', 'mão_de_reparo': 'remendo'}
 def chave_efeito(k):

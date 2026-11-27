@@ -449,12 +449,13 @@ def _ferramentas(n):
         vinte = itv.get('efeitos_livres', 0) if itv else None
     finally: teste.rola = real
     ok['vinte'] = vinte is not None and vinte >= 1
-    # (a parte 2, fase 1a) SÓ A FERRAMENTA ESCOLHE AGORA: a arma e a armadura guardam os efeitos por escolher, e a mesa diz que o catálogo de luta chega na próxima fase
+    # (a parte 2, fase 1b) A PEÇA DE LUTA ESCOLHE PELO CATÁLOGO DE LUTA (o contrato, FASE 1b: as armas e armaduras da 1a escolhem agora): o critico_19 de antes não se escolhe
+    # (a resposta 2a: o que nasceu, nasceu, e as peças novas seguem a tabela do Crítico); o Gume entra; na armadura, o Devolve entra sem número (o % sai da categoria)
     F, arma = obra(2, 0); aid = F['item']; estado.aplica(E, 'mestre', [['item', aid, 'efeitos_livres', 'poe', 2]], texto='os efeitos de prova')
-    r_arma = recusa(lambda: oficio.efeito(E, 'eu', aid, 'critico_19')) or ''; a = L()[aid]
-    ok['efeito_arma'] = 'o catálogo de luta chega na próxima fase' in r_arma and not a.get('efeitos') and a.get('efeitos_livres') == 2
+    r_arma = recusa(lambda: oficio.efeito(E, 'eu', aid, 'critico_19')) or ''; oficio.efeito(E, 'eu', aid, 'gume'); a = L()[aid]
+    ok['efeito_arma'] = 'não é efeito de luta que se escolha' in r_arma and a.get('efeitos') == [{'chave': 'gume'}] and a.get('efeitos_livres') == 1
     arm = oficio.molde('armadura', 2, material='malha'); F, armadura = obra(2, 0, arm); vid = F['item']; estado.aplica(E, 'mestre', [['item', vid, 'efeitos_livres', 'poe', 1]], texto='os efeitos de prova')
-    ok['efeito_armadura'] = 'o catálogo de luta chega na próxima fase' in (recusa(lambda: oficio.efeito(E, 'eu', vid, 'devolve')) or '') and not L()[vid].get('efeitos')
+    oficio.efeito(E, 'eu', vid, 'devolve'); ok['efeito_armadura'] = L()[vid].get('efeitos') == [{'chave': 'devolve'}] and not L()[vid].get('efeitos_livres')
     F, tz = obra(1, 0, pt); tid = F['item']; estado.aplica(E, 'mestre', [['item', tid, 'efeitos_livres', 'poe', 2]], texto='os efeitos de prova')
     r_pesa = recusa(lambda: oficio.efeito(E, 'eu', tid, 'pesa')); r_forte = recusa(lambda: oficio.efeito(E, 'eu', tid, 'lastro'))
     oficio.efeito(E, 'eu', tid, 'prumo'); r_dup = recusa(lambda: oficio.efeito(E, 'eu', tid, 'prumo'))
@@ -464,7 +465,7 @@ def _ferramentas(n):
     ok['efeito_dono'] = bool(recusa(lambda: oficio.efeito(E, 'eu', oid2, 'afinada')))
     ok['estado'] = not estado.valida(E) and oficio.prata_do_mundo(E) == p0
     falhas = [k for k, v in ok.items() if not v]
-    return [('O MARTELO DE FORJA, A TENAZ E OS EFEITOS (a Lei do Valor; o dado posto à mão; na fase 1a, só a ferramenta escolhe: a arma e a armadura guardam os efeitos)',
+    return [('O MARTELO DE FORJA, A TENAZ E OS EFEITOS (a Lei do Valor; o dado posto à mão; da fase 1b, a arma e a armadura escolhem pelo catálogo de luta)',
              f"{sum(ok.values())} de {len(ok)} conferências certas" + (f"; falham: {', '.join(falhas)}" if falhas else '') + f" · (martelo, tenaz, categoria) sem / jogo Comum / martelo Raro / couro na forja / no couro / de outro / quebrado / afinado = {(sem, com_jogo, com_martelo, couro_na_forja, couro_no_couro, de_outro, quebrado, afinado)}",
              not falhas)]
 
@@ -762,7 +763,8 @@ def _fj6(n):
     ev1 = E['relogio']['eventos']; oficio.efeito(E, 'eu', i, 'afinada'); oficio.efeito(E, 'eu', i, 'fagulha'); dois = 1 + E['relogio']['eventos'] - ev1
     hist = [h for h in L()[i]['historia'] if 'deu à peça o efeito' in h]
     ok['evento'] = um == 1 and dois == 3 and len(hist) == 3 and L()[i]['efeitos'][0] == {'chave': 'prumo', 'cheio': True}
-    F2 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 7], [14]); ok['arma'] = 'o catálogo de luta chega na próxima fase' in (recusa(lambda: oficio.efeito(E, 'eu', F2['item'], 'prumo')) or '')
+    F2 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 7], [14]); r2 = recusa(lambda: oficio.efeito(E, 'eu', F2['item'], 'prumo')) or ''      # (fase 1b) a arma escolhe do catálogo de luta: o de ferramenta não cabe, o Gume sim
+    oficio.efeito(E, 'eu', F2['item'], 'gume', cheio=bool(L()[F2['item']].get('cheios_livres'))); ok['arma'] = 'não é efeito de luta que se escolha' in r2 and L()[F2['item']]['efeitos'][0]['chave'] == 'gume'
     # a loja escolhe ao comprar (a receita do lugar: o jeito da loja, pela semente) e o mundo escolhe sozinho (o ferreiro que não é o jogador, pelo jeito dele): mesma semente, mesma escolha
     def lote(sem):
         W = ferord(sem, prata=100); i1 = obra_de(W, tenaz(), [20, 7], [14])['item']; estado.aplica(W, 'mestre', [['item', i1, 'dono', 'poe', None], ['item', i1, 'onde', 'poe', 'vila']], texto='a peça vai à loja')
@@ -789,7 +791,7 @@ def _fj6(n):
     ok['cheio'] = sozinho and perde_ok and para and not estado.valida(W2)
     ok['estado'] = not estado.valida(E)
     falhas = [k for k, v in ok.items() if not v]
-    return [('FJ6 A ESCOLHA: a porta pela força; sem repetir; só o dono; cada escolha um evento; a arma da 1a não escolhe; a loja e o ferreiro do mundo escolhem sozinhos pelo jeito, e a mesma semente dá a mesma escolha; 40 ferreiros mostram os 4 jeitos; o cheio não se perde calado (o prumo o leva sozinho, a escolha que o jogaria fora pede `perde`, a receita para e pergunta)',
+    return [('FJ6 A ESCOLHA: a porta pela força; sem repetir; só o dono; cada escolha um evento; a arma escolhe do catálogo de luta (fase 1b); a loja e o ferreiro do mundo escolhem sozinhos pelo jeito, e a mesma semente dá a mesma escolha; 40 ferreiros mostram os 4 jeitos; o cheio não se perde calado (o prumo o leva sozinho, a escolha que o jogaria fora pede `perde`, a receita para e pergunta)',
              f"{sum(ok.values())} de {len(ok)} conferências" + (f" (falham: {', '.join(falhas)})" if falhas else '') + f"; a loja (o jeito {A[0]}): {', '.join(A[1])}; o ferreiro do mundo (o jeito {A[2]}): {', '.join(A[3])}; os jeitos de 40 ferreiros: {', '.join(sorted(jeitos))}",
              not falhas)]
 
@@ -902,16 +904,25 @@ def _fj10(n):
     oficio.receita(E, 'eu', 'tenaz', 'prumo,afinada,fagulha'); F3 = obra_de(E, tenaz(), [20, 6], [14]); t3 = L()[F3['item']]
     ok['receita'] = 'Pela sua receita: prumo' in F3['texto'] and [e['chave'] for e in t3['efeitos']] == ['prumo', 'afinada', 'fagulha'] and t3['efeitos'][0].get('cheio') and t3.get('efeitos_livres') == 1
     tira(E, F3['item'])
-    F4 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 6], [14]); a4 = L()[F4['item']]; dz = 'efeitos por escolher: 4 (o catálogo de luta chega na próxima fase)'
-    ok['arma'] = (dz.capitalize() in F4['texto'] and dz in ' · '.join(ato.diz_pecas(E, 'eu')) and dz.capitalize() in IT.janela(a4)
-                  and dz in (recusa(lambda: oficio.efeito(E, 'eu', F4['item'], 'prumo')) or '') and a4.get('efeitos_livres') == 4 and a4.get('cheios_livres') == 1)
+    F4 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 6], [14]); a4 = L()[F4['item']]; dz = f"efeitos por escolher: 4 (1 cheio) (`oficio.py efeito {F4['item']}` mostra o que cabe)"     # (fase 1b) a arma da 1a escolhe agora
+    ok['arma'] = ('4 efeitos por escolher (1 cheio)' in F4['texto'] and dz in ' · '.join(ato.diz_pecas(E, 'eu')) and 'Efeitos por escolher: 4 (cheios: 1)' in IT.janela(a4)
+                  and 'Gume (`gume`)' in oficio.efeito(E, 'eu', F4['item']) and a4.get('efeitos_livres') == 4 and a4.get('cheios_livres') == 1)
+    tira(E, F4['item'])
+    # (o conserto da 1b) a receita de peça de luta: o comando grava a ordem (antes quebrava, e o save não se gravava), a arma que nasce escolhe por ela, e `nada` a apaga
+    r1 = oficio.receita(E, 'eu', 'arma', 'gume,critico,certeira'); rc1 = dict((E['gente']['eu'].get('marca') or {}).get('receita') or {})
+    F6 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 6], [14]); a6 = L()[F6['item']]
+    r2 = oficio.receita(E, 'eu', 'arma', 'nada'); rc2 = dict((E['gente']['eu'].get('marca') or {}).get('receita') or {})
+    ok['receita_luta'] = ('A arma que nascer com efeitos escolhe por ela' in r1 and rc1.get('arma') == ['gume', 'critico', 'certeira'] and 'Pela sua receita' in F6['texto']
+                          and [e['chave'] for e in a6.get('efeitos') or []] == ['gume', 'critico', 'certeira'] and (a6['efeitos'][0].get('cheio') or False)
+                          and 'apagada' in r2 and 'arma' not in rc2 and rc2.get('tenaz') == ['prumo', 'afinada', 'fagulha'])
+    tira(E, F6['item'])
     # (o conserto) a ferramenta Comum não diz que ganhou o cheio que se perde; o pede da ferramenta conta só o cheio que ela guarda
     F5 = obra_de(E, oficio.molde('ferramenta', 0, oficio='forja'), [12], [18]); c5 = L()[F5['item']]      # 53: a Comum no fio, 4 da faixa: 2 efeitos, e a sobra de 2 cheios se perde
     ok['comum_perde'] = 'a sobra de 2 cheios se perde: não há efeito de número onde cair numa ferramenta Comum' in F5['texto'] and 'e 2 cheios (' not in F5['texto'] and not c5.get('cheios_livres') and c5.get('efeitos_livres') == 2
     tira(E, F5['item']); ok['pede_cheio'] = 'cheio guardado por obra' in pd and '1,03 efeito por obra' in pd
     ok['estado'] = not estado.valida(E)
     falhas = [k for k, v in ok.items() if not v]
-    return [('FJ10 A MESA: o pede mostra a régua de cada faixa até o teto; o remate diz "faltaram N: X da faixa, Y dos 20"; a janela mostra o cheio; a receita escolhe sem perguntar e a mesa relata; a arma e a armadura forjadas na 1a mostram "efeitos por escolher: N (o catálogo de luta chega na próxima fase)"; a ferramenta Comum diz a sobra que se perde, e o pede da ferramenta conta o cheio que ela guarda',
+    return [('FJ10 A MESA: o pede mostra a régua de cada faixa até o teto; o remate diz "faltaram N: X da faixa, Y dos 20"; a janela mostra o cheio; a receita escolhe sem perguntar e a mesa relata; a arma forjada mostra "efeitos por escolher: N" e (fase 1b) a lista do catálogo de luta; a receita de arma grava, escolhe e se apaga; a ferramenta Comum diz a sobra que se perde, e o pede da ferramenta conta o cheio que ela guarda',
              f"{sum(ok.values())} de {len(ok)} conferências" + (f" (falham: {', '.join(falhas)})" if falhas else ''), not falhas)]
 
 
