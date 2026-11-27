@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 25,
-  "noticia": 51
+  "missao": 29,
+  "noticia": 58
  },
  "frentes": {
   "f01": {
@@ -4234,7 +4234,7 @@
    "dono": "lugar:pedra_verde",
    "onde": "pedra_verde",
    "meta": "secar a colheita",
-   "passo": 2,
+   "passo": 3,
    "forca": 3,
    "passos": [
     "o rio baixa",
@@ -4246,7 +4246,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 36,
+   "ult": 50,
    "alvo_missao": "entrega",
    "alvo": "comida",
    "cat": 0,
@@ -4260,7 +4260,7 @@
    "dono": "lugar:castro_branco",
    "onde": "castro_branco",
    "meta": "acabar com o sal da terra",
-   "passo": 2,
+   "passo": 3,
    "forca": 3,
    "passos": [
     "o sal some da feira",
@@ -4272,7 +4272,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 43,
+   "ult": 50,
    "alvo_missao": "entrega",
    "alvo": "sal",
    "cat": 0,
@@ -4579,7 +4579,7 @@
    "paga": 265,
    "prazo": 52,
    "frente": "f01",
-   "estado": "tomada",
+   "estado": "falhou",
    "quem": "drastum",
    "desde": 29,
    "cat": 1,
@@ -4594,7 +4594,7 @@
    "paga": 67,
    "prazo": 49,
    "frente": "f02",
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 29,
    "cat": 1,
@@ -4714,7 +4714,7 @@
    "paga": 65,
    "prazo": 62,
    "frente": "f11",
-   "estado": "tomada",
+   "estado": "falhou",
    "quem": "nynena",
    "desde": 43,
    "cat": 2,
@@ -4729,11 +4729,71 @@
    "paga": 24,
    "prazo": 62,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "drastum",
    "desde": 43,
    "cat": 0,
    "ermo": "charneca_dos_sinos"
+  },
+  "m0026": {
+   "de": "nuno",
+   "onde": "vale_do_corvo",
+   "tipo": "investigar",
+   "alvo": "ruinas_do_urso",
+   "n": 1,
+   "paga": 52,
+   "prazo": 65,
+   "frente": "f08",
+   "estado": "falhou",
+   "quem": "raul",
+   "desde": 50,
+   "cat": 4,
+   "nome_alvo": "a corrida da Liga do Sino Rachado"
+  },
+  "m0027": {
+   "de": "cosme",
+   "onde": "varzea_da_nevoa",
+   "tipo": "entrega",
+   "alvo": "sal",
+   "n": 1,
+   "paga": 10,
+   "prazo": 70,
+   "frente": "f10",
+   "estado": "aberta",
+   "quem": null,
+   "desde": 50,
+   "cat": 0,
+   "nome_alvo": "a falta de sal de Castro Branco"
+  },
+  "m0028": {
+   "de": "madalena",
+   "onde": "ribeira_da_nevoa",
+   "tipo": "matar",
+   "alvo": "lobisomem",
+   "n": 1,
+   "paga": 65,
+   "prazo": 64,
+   "frente": "f11",
+   "estado": "tomada",
+   "quem": "drastum",
+   "desde": 50,
+   "cat": 2,
+   "nome_alvo": "os sumiços da Charneca dos Sinos"
+  },
+  "m0029": {
+   "de": "mateus",
+   "onde": "castro_real",
+   "tipo": "escolta",
+   "alvo": "coval_do_vento",
+   "n": 1,
+   "paga": 15,
+   "prazo": 78,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 50,
+   "cat": 0,
+   "quem_vai": "mateus"
   }
  },
  "noticias": {
@@ -8229,6 +8289,22 @@
     "pedra_verde": [
      46,
      3
+    ],
+    "ponte_da_cruz": [
+     47,
+     4
+    ],
+    "ribeira_do_lobo": [
+     47,
+     4
+    ],
+    "ermida_verde": [
+     48,
+     5
+    ],
+    "pinhal_do_ferro": [
+     48,
+     5
     ]
    },
    "janela": false
@@ -8277,6 +8353,34 @@
     "pedra_velha": [
      46,
      3
+    ],
+    "pedra_verde": [
+     47,
+     4
+    ],
+    "souto_negro": [
+     47,
+     4
+    ],
+    "varzea_brava": [
+     47,
+     4
+    ],
+    "ponte_da_cruz": [
+     48,
+     5
+    ],
+    "ribeira_do_lobo": [
+     48,
+     5
+    ],
+    "ermida_verde": [
+     49,
+     6
+    ],
+    "pinhal_do_ferro": [
+     49,
+     6
     ]
    },
    "janela": false
@@ -8337,6 +8441,22 @@
     "ribeira_do_lobo": [
      46,
      3
+    ],
+    "varzea_da_nevoa": [
+     47,
+     4
+    ],
+    "coval_do_vento": [
+     47,
+     4
+    ],
+    "pinhal_do_ferro": [
+     47,
+     4
+    ],
+    "penha_das_rosas": [
+     48,
+     5
     ]
    },
    "janela": false
@@ -8394,6 +8514,26 @@
     "ribeira_da_nevoa": [
      46,
      3
+    ],
+    "varzea_da_nevoa": [
+     47,
+     4
+    ],
+    "castro_branco": [
+     47,
+     4
+    ],
+    "castro_real": [
+     47,
+     4
+    ],
+    "coval_do_vento": [
+     48,
+     5
+    ],
+    "penha_das_rosas": [
+     48,
+     5
     ]
    },
    "janela": false
@@ -8439,6 +8579,38 @@
     "castro_do_sal": [
      46,
      3
+    ],
+    "pedra_velha": [
+     47,
+     4
+    ],
+    "pedra_verde": [
+     47,
+     4
+    ],
+    "souto_negro": [
+     48,
+     5
+    ],
+    "varzea_brava": [
+     48,
+     5
+    ],
+    "ponte_da_cruz": [
+     48,
+     5
+    ],
+    "ribeira_do_lobo": [
+     48,
+     5
+    ],
+    "ermida_verde": [
+     49,
+     6
+    ],
+    "pinhal_do_ferro": [
+     49,
+     6
     ]
    },
    "janela": false
@@ -8500,17 +8672,495 @@
     "penha_das_rosas": [
      46,
      3
+    ],
+    "ponte_da_cruz": [
+     47,
+     4
+    ],
+    "ribeira_do_lobo": [
+     47,
+     4
+    ],
+    "ermida_verde": [
+     48,
+     5
+    ],
+    "pinhal_do_ferro": [
+     48,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00052": {
+   "dia": 49,
+   "onde": "pedra_velha",
+   "texto": "Drastum cumpriu a missão de Pedra Velha: matar 3 lobos na Charneca dos Sinos",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "pedra_velha": [
+     49,
+     0
+    ],
+    "souto_negro": [
+     50,
+     1
+    ],
+    "castro_do_sal": [
+     50,
+     1
+    ],
+    "varzea_brava": [
+     50,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     50,
+     1
+    ],
+    "ponte_da_cruz": [
+     51,
+     2
+    ],
+    "vale_do_corvo": [
+     51,
+     2
+    ],
+    "pedra_verde": [
+     51,
+     2
+    ],
+    "castro_branco": [
+     51,
+     2
+    ],
+    "castro_real": [
+     51,
+     2
+    ],
+    "ermida_verde": [
+     52,
+     3
+    ],
+    "varzea_da_nevoa": [
+     52,
+     3
+    ],
+    "ribeira_do_lobo": [
+     52,
+     3
+    ],
+    "coval_do_vento": [
+     52,
+     3
+    ],
+    "penha_das_rosas": [
+     53,
+     4
+    ],
+    "pinhal_do_ferro": [
+     53,
+     4
+    ]
+   },
+   "janela": false
+  },
+  "n00053": {
+   "dia": 50,
+   "onde": "vale_do_corvo",
+   "texto": "Isabel conta da história: no ano 680, morre Rosanada (caçando na serra); Alelia assume a casa dos Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     50,
+     0
+    ],
+    "castro_do_sal": [
+     51,
+     1
+    ],
+    "varzea_da_nevoa": [
+     51,
+     1
+    ],
+    "pedra_velha": [
+     52,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     52,
+     2
+    ],
+    "pedra_verde": [
+     52,
+     2
+    ],
+    "coval_do_vento": [
+     52,
+     2
+    ],
+    "penha_das_rosas": [
+     52,
+     2
+    ],
+    "castro_real": [
+     52,
+     2
+    ],
+    "souto_negro": [
+     53,
+     3
+    ],
+    "varzea_brava": [
+     53,
+     3
+    ],
+    "castro_branco": [
+     53,
+     3
+    ],
+    "ponte_da_cruz": [
+     53,
+     3
+    ],
+    "ribeira_do_lobo": [
+     53,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00054": {
+   "dia": 50,
+   "onde": "castro_real",
+   "texto": "Boskul conta da história: no ano 710, acaba a guerra do Inverno Longo: vencem os Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_real": [
+     50,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     51,
+     1
+    ],
+    "castro_branco": [
+     51,
+     1
+    ],
+    "varzea_da_nevoa": [
+     51,
+     1
+    ],
+    "coval_do_vento": [
+     51,
+     1
+    ],
+    "pedra_velha": [
+     52,
+     2
+    ],
+    "castro_do_sal": [
+     52,
+     2
+    ],
+    "vale_do_corvo": [
+     52,
+     2
+    ],
+    "penha_das_rosas": [
+     52,
+     2
+    ],
+    "souto_negro": [
+     53,
+     3
+    ],
+    "varzea_brava": [
+     53,
+     3
+    ],
+    "pedra_verde": [
+     53,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00055": {
+   "dia": 50,
+   "onde": "pedra_velha",
+   "texto": "Erado conta da história: no ano 710, acaba a guerra do Inverno Longo: vencem os Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pedra_velha": [
+     50,
+     0
+    ],
+    "souto_negro": [
+     51,
+     1
+    ],
+    "castro_do_sal": [
+     51,
+     1
+    ],
+    "varzea_brava": [
+     51,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     51,
+     1
+    ],
+    "ponte_da_cruz": [
+     52,
+     2
+    ],
+    "vale_do_corvo": [
+     52,
+     2
+    ],
+    "pedra_verde": [
+     52,
+     2
+    ],
+    "castro_branco": [
+     52,
+     2
+    ],
+    "castro_real": [
+     52,
+     2
+    ],
+    "ermida_verde": [
+     53,
+     3
+    ],
+    "varzea_da_nevoa": [
+     53,
+     3
+    ],
+    "ribeira_do_lobo": [
+     53,
+     3
+    ],
+    "coval_do_vento": [
+     53,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00056": {
+   "dia": 50,
+   "onde": "souto_negro",
+   "texto": "Vicente conta da história: no ano 577, morre Clara (à traição, por um parente); Zélia assume a casa dos Astasal.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "souto_negro": [
+     50,
+     0
+    ],
+    "pedra_velha": [
+     51,
+     1
+    ],
+    "varzea_brava": [
+     51,
+     1
+    ],
+    "ponte_da_cruz": [
+     51,
+     1
+    ],
+    "castro_do_sal": [
+     52,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     52,
+     2
+    ],
+    "pedra_verde": [
+     52,
+     2
+    ],
+    "ermida_verde": [
+     52,
+     2
+    ],
+    "vale_do_corvo": [
+     53,
+     3
+    ],
+    "castro_branco": [
+     53,
+     3
+    ],
+    "castro_real": [
+     53,
+     3
+    ],
+    "ribeira_do_lobo": [
+     53,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00057": {
+   "dia": 50,
+   "onde": "pedra_verde",
+   "texto": "O celeiro baixa em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f09"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     50,
+     0
+    ],
+    "ponte_da_cruz": [
+     51,
+     1
+    ],
+    "ribeira_do_lobo": [
+     51,
+     1
+    ],
+    "varzea_brava": [
+     51,
+     1
+    ],
+    "castro_do_sal": [
+     51,
+     1
+    ],
+    "ermida_verde": [
+     52,
+     2
+    ],
+    "souto_negro": [
+     52,
+     2
+    ],
+    "pinhal_do_ferro": [
+     52,
+     2
+    ],
+    "pedra_velha": [
+     52,
+     2
+    ],
+    "vale_do_corvo": [
+     52,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     52,
+     2
+    ],
+    "varzea_da_nevoa": [
+     53,
+     3
+    ],
+    "castro_branco": [
+     53,
+     3
+    ],
+    "castro_real": [
+     53,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00058": {
+   "dia": 50,
+   "onde": "castro_branco",
+   "texto": "O mercador de sal não vem mais em Castro Branco",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f10"
+   ],
+   "chegou": {
+    "castro_branco": [
+     50,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     51,
+     1
+    ],
+    "castro_real": [
+     51,
+     1
+    ],
+    "pedra_velha": [
+     52,
+     2
+    ],
+    "castro_do_sal": [
+     52,
+     2
+    ],
+    "varzea_da_nevoa": [
+     52,
+     2
+    ],
+    "coval_do_vento": [
+     52,
+     2
+    ],
+    "souto_negro": [
+     53,
+     3
+    ],
+    "varzea_brava": [
+     53,
+     3
+    ],
+    "vale_do_corvo": [
+     53,
+     3
+    ],
+    "pedra_verde": [
+     53,
+     3
+    ],
+    "penha_das_rosas": [
+     53,
+     3
     ]
    },
    "janela": false
   }
  },
  "ranking": {
-  "semana": 7,
+  "semana": 8,
   "lista": [
    [
     "drastum",
-    349
+    350
    ],
    [
     "taskin",
@@ -8518,7 +9168,7 @@
    ],
    [
     "nynena",
-    325
+    324
    ],
    [
     "mirys",

@@ -1,0 +1,21 @@
+início: Dia 47 · 11 de prata · forja 182 · metal Incomum (1.18, 13)
+Dia 47: prata 11 → 31 · forja 186 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 49: Drastum cumpriu a missão de Pedra Velha: matar 3 lobos na Charneca dos Sinos
+    evento em Pedra Velha: rival: Drastum cumpre a missão m0025: matar 3 lobos na Charneca dos Sinos (24 de prata)
+PAROU: aconteceu em Pedra Velha: rival: Drastum cumpre a missão m0025: matar 3 lobos na Charneca dos Sinos (24 de prata)
+início: Dia 49 · 31 de prata · forja 186 · metal Incomum (1.13, 14)
+Dia 49: prata 31 → 40 · forja 188 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 50: Erado conta da história: no ano 710, acaba a guerra do Inverno Longo: vencem os Orirena.
+    (só o Mestre) frente: a frente f09 (a seca de Pedra Verde) anda ao passo 3: o celeiro baixa
+    (só o Mestre) frente: a frente f10 (a falta de sal de Castro Branco) anda ao passo 3: o mercador de sal não vem mais
+    (só o Mestre) a frente f09 foi do passo 2 ao 3
+    (só o Mestre) a frente f10 foi do passo 2 ao 3
+Dia 50: prata 40 → 49 · forja 190 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 51 (de Souto Negro): Vicente conta da história: no ano 577, morre Clara (à traição, por um parente); Zélia assume a casa dos Astasal.
+Dia 51: prata 49 → 58 · forja 192 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+    notícia: - Dia 52 (de Pedra Verde): O celeiro baixa em Pedra Verde
+    notícia: - Dia 52 (de Castro Branco): O mercador de sal não vem mais em Castro Branco
+    notícia: - Dia 52 (de Vale do Corvo): Isabel conta da história: no ano 680, morre Rosanada (caçando na serra); Alelia assume a casa dos Orirena.
+    notícia: - Dia 52 (de Castro Real): Boskul conta da história: no ano 710, acaba a guerra do Inverno Longo: vencem os Orirena.
+Dia 52: prata 58 → 67 · forja 194 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.13, 14)
+PAROU: chegou ao dia máximo (53)
