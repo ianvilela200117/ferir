@@ -1,5 +1,5 @@
 {
- "seq": 691,
+ "seq": 700,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -7919,12 +7919,16 @@
    ],
    "efeitos": [],
    "sob_medida": null,
-   "historia": [],
-   "dono": "elvira",
-   "onde": null,
+   "historia": [
+    "Dia 36: ficou com o corpo de Elvira em Pedra Verde"
+   ],
+   "dono": null,
+   "onde": "pedra_verde",
    "familia": "espada",
    "id": "i0442",
-   "uso": "arma"
+   "uso": null,
+   "solto": true,
+   "corpo": "elvira"
   },
   "i0443": {
    "tipo": "armadura",
@@ -7936,9 +7940,11 @@
    ],
    "efeitos": [],
    "sob_medida": null,
-   "historia": [],
-   "dono": "elvira",
-   "onde": null,
+   "historia": [
+    "Dia 36: ficou com o corpo de Elvira em Pedra Verde"
+   ],
+   "dono": null,
+   "onde": "pedra_verde",
    "material": "couro",
    "cobre": [
     "tronco",
@@ -7946,7 +7952,9 @@
     "pernas"
    ],
    "id": "i0443",
-   "uso": "veste"
+   "uso": null,
+   "solto": true,
+   "corpo": "elvira"
   },
   "i0444": {
    "tipo": "arma",
@@ -12965,6 +12973,174 @@
    "feito_por": "eu",
    "dia": 34,
    "id": "i0691",
+   "uso": null
+  },
+  "i0692": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "maça",
+   "id": "i0692",
+   "uso": null
+  },
+  "i0693": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "maça",
+   "id": "i0693",
+   "uso": null
+  },
+  "i0694": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0694",
+   "uso": null
+  },
+  "i0695": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "familia": "maça",
+   "id": "i0695",
+   "uso": null
+  },
+  "i0696": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0696",
+   "uso": null
+  },
+  "i0697": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "familia": "machado",
+   "id": "i0697",
+   "uso": null
+  },
+  "i0698": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0698",
+   "uso": null
+  },
+  "i0699": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "castro_do_sal",
+   "familia": "adaga",
+   "id": "i0699",
+   "uso": null
+  },
+  "i0700": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_verde",
+   "familia": "machado",
+   "id": "i0700",
    "uso": null
   }
  },

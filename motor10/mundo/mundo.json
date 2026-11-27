@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 17,
-  "noticia": 37
+  "missao": 21,
+  "noticia": 41
  },
  "frentes": {
   "f01": {
@@ -4126,7 +4126,7 @@
    "dono": "casa:c_astolan",
    "onde": "pedra_verde",
    "meta": "tomar a coroa",
-   "passo": 2,
+   "passo": 3,
    "forca": 5,
    "passos": [
     "a casa junta aliados",
@@ -4138,7 +4138,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 29,
+   "ult": 36,
    "alvo_missao": "investigar",
    "alvo": "casa:c_astolan",
    "cat": 2,
@@ -4230,7 +4230,7 @@
    "dono": "lugar:pedra_verde",
    "onde": "pedra_verde",
    "meta": "secar a colheita",
-   "passo": 1,
+   "passo": 2,
    "forca": 3,
    "passos": [
     "o rio baixa",
@@ -4242,7 +4242,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 8,
+   "ult": 36,
    "alvo_missao": "entrega",
    "alvo": "comida",
    "cat": 0,
@@ -4282,7 +4282,7 @@
    "dono": "esp:lobisomem@charneca_dos_sinos",
    "onde": "souto_negro",
    "meta": "levar a gente do lugar, um a um",
-   "passo": 2,
+   "passo": 3,
    "forca": 2,
    "passos": [
     "alguém some na borda do mato",
@@ -4294,7 +4294,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 29,
+   "ult": 36,
    "alvo_missao": "investigar",
    "alvo": "lobisomem",
    "cat": 2,
@@ -4606,6 +4606,66 @@
    "desde": 29,
    "cat": 0,
    "ermo": "charneca_dos_sinos"
+  },
+  "m0018": {
+   "de": "gilela",
+   "onde": "vale_do_corvo",
+   "tipo": "investigar",
+   "alvo": "casa:c_astolan",
+   "n": 1,
+   "paga": 160,
+   "prazo": 53,
+   "frente": "f05",
+   "estado": "tomada",
+   "quem": "lesoril",
+   "desde": 36,
+   "cat": 2,
+   "nome_alvo": "a ambição dos Astolan"
+  },
+  "m0019": {
+   "de": "nororado",
+   "onde": "castro_do_sal",
+   "tipo": "investigar",
+   "alvo": "lobisomem",
+   "n": 1,
+   "paga": 160,
+   "prazo": 60,
+   "frente": "f11",
+   "estado": "tomada",
+   "quem": "raul",
+   "desde": 36,
+   "cat": 2,
+   "nome_alvo": "os sumiços da Charneca dos Sinos"
+  },
+  "m0020": {
+   "de": "noemia",
+   "onde": "castro_branco",
+   "tipo": "caça",
+   "alvo": "aranha",
+   "n": 3,
+   "paga": 12,
+   "prazo": 51,
+   "frente": null,
+   "estado": "tomada",
+   "quem": "taskin",
+   "desde": 36,
+   "cat": 0,
+   "ermo": "grutas_do_vento"
+  },
+  "m0021": {
+   "de": "nororao",
+   "onde": "coval_do_vento",
+   "tipo": "caça",
+   "alvo": "urso",
+   "n": 3,
+   "paga": 24,
+   "prazo": 59,
+   "frente": null,
+   "estado": "tomada",
+   "quem": "drastum",
+   "desde": 36,
+   "cat": 0,
+   "ermo": "souto_das_aguas"
   }
  },
  "noticias": {
@@ -7294,6 +7354,34 @@
     "souto_negro": [
      35,
      0
+    ],
+    "pedra_velha": [
+     36,
+     1
+    ],
+    "varzea_brava": [
+     36,
+     1
+    ],
+    "ponte_da_cruz": [
+     36,
+     1
+    ],
+    "castro_do_sal": [
+     37,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     37,
+     2
+    ],
+    "pedra_verde": [
+     37,
+     2
+    ],
+    "ermida_verde": [
+     37,
+     2
     ]
    },
    "janela": false
@@ -7373,14 +7461,133 @@
     ]
    },
    "janela": true
+  },
+  "n00038": {
+   "dia": 36,
+   "onde": "castro_branco",
+   "texto": "Selelina conta da história: no ano 1194, começa a guerra do Trigo de 1194: os Orirena contra os Astolan; Vale do Corvo é saqueado.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_branco": [
+     36,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     37,
+     1
+    ],
+    "castro_real": [
+     37,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00039": {
+   "dia": 36,
+   "onde": "pedra_verde",
+   "texto": "Um senhor rival morre de repente em Pedra Verde (Elvira morreu)",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f05"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     36,
+     0
+    ],
+    "ponte_da_cruz": [
+     37,
+     1
+    ],
+    "ribeira_do_lobo": [
+     37,
+     1
+    ],
+    "varzea_brava": [
+     37,
+     1
+    ],
+    "castro_do_sal": [
+     37,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00040": {
+   "dia": 36,
+   "onde": "pedra_verde",
+   "texto": "A colheita sai pequena em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f09"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     36,
+     0
+    ],
+    "ponte_da_cruz": [
+     37,
+     1
+    ],
+    "ribeira_do_lobo": [
+     37,
+     1
+    ],
+    "varzea_brava": [
+     37,
+     1
+    ],
+    "castro_do_sal": [
+     37,
+     1
+    ]
+   },
+   "janela": false
+  },
+  "n00041": {
+   "dia": 36,
+   "onde": "souto_negro",
+   "texto": "Mais um some, de dentro de casa em Souto Negro",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f11"
+   ],
+   "chegou": {
+    "souto_negro": [
+     36,
+     0
+    ],
+    "pedra_velha": [
+     37,
+     1
+    ],
+    "varzea_brava": [
+     37,
+     1
+    ],
+    "ponte_da_cruz": [
+     37,
+     1
+    ]
+   },
+   "janela": false
   }
  },
  "ranking": {
-  "semana": 5,
+  "semana": 6,
   "lista": [
    [
     "drastum",
-    342
+    348
    ],
    [
     "nynena",
@@ -7388,7 +7595,7 @@
    ],
    [
     "taskin",
-    324
+    325
    ],
    [
     "mirys",
