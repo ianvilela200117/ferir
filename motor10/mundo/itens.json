@@ -1,5 +1,5 @@
 {
- "seq": 701,
+ "seq": 713,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12200,7 +12200,7 @@
    "onde": null,
    "familia": "martelo",
    "id": "i0654",
-   "uso": "arma"
+   "uso": null
   },
   "i0655": {
    "tipo": "foco",
@@ -12510,23 +12510,6 @@
    "onde": "varzea_brava",
    "familia": "espada",
    "id": "i0668",
-   "uso": null
-  },
-  "i0669": {
-   "tipo": "nucleo",
-   "cat": 3,
-   "nome": "núcleo Épico de serpe",
-   "dur": [
-    1,
-    1
-   ],
-   "dono": "nynena",
-   "onde": null,
-   "de": "serpe",
-   "historia": [
-    "Dia 11: tirado por Nynena nos Penhascos das Águas"
-   ],
-   "id": "i0669",
    "uso": null
   },
   "i0670": {
@@ -13169,8 +13152,234 @@
    "teto_efeitos": 2,
    "id": "i0701",
    "uso": null
+  },
+  "i0702": {
+   "tipo": "arma",
+   "cat": 2,
+   "nome": "Martelo de Nynena",
+   "dur": [
+    30,
+    30
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 42: forjada na capital com um núcleo, para Nynena"
+   ],
+   "dono": "nynena",
+   "onde": null,
+   "familia": "martelo",
+   "id": "i0702",
+   "uso": "arma"
+  },
+  "i0703": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "espada",
+   "id": "i0703",
+   "uso": null
+  },
+  "i0704": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "adaga",
+   "id": "i0704",
+   "uso": null
+  },
+  "i0705": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0705",
+   "uso": null
+  },
+  "i0706": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "familia": "espada",
+   "id": "i0706",
+   "uso": null
+  },
+  "i0707": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0707",
+   "uso": null
+  },
+  "i0708": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "familia": "adaga",
+   "id": "i0708",
+   "uso": null
+  },
+  "i0709": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0709",
+   "uso": null
+  },
+  "i0710": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "castro_do_sal",
+   "familia": "adaga",
+   "id": "i0710",
+   "uso": null
+  },
+  "i0711": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "machado Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_velha",
+   "familia": "machado",
+   "id": "i0711",
+   "uso": null
+  },
+  "i0712": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_brava",
+   "familia": "lança",
+   "id": "i0712",
+   "uso": null
+  },
+  "i0713": {
+   "tipo": "ferramenta",
+   "oficio": "forja",
+   "forma": "tenaz",
+   "cat": 1,
+   "nome": "Segunda Tenaz de Ferord",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "historia": [
+    "Dia 45: Ferord forjou em Pedra Velha (a soma: 58; a obra era de matéria Incomum); faltaram 22 para a Rara (80): o terço de baixo, 0 da faixa, 0 dos 20 = 0: nenhum efeito"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "feito_por": "eu",
+   "dia": 45,
+   "teto_efeitos": 4,
+   "id": "i0713",
+   "uso": null
   }
  },
- "oseq": 6,
+ "oseq": 7,
  "obras": {}
 }

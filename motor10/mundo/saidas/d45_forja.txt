@@ -1,0 +1,6 @@
+Obra o0007 aberta: Segunda Tenaz de Ferord (Incomum). Entraram 1 de metal Incomum, 1 de madeira Incomum.
+Ferord trabalha 3 blocos na obra o0007, Segunda Tenaz de Ferord (Incomum): 3 de 3
+#1 Ferord, forjar Segunda Tenaz de Ferord (Incomum): 12 e 8, +7 de Afinidade, +31 = 58 contra 55: PASSA
+  (o +31: maestria 4, matéria 15, martelo de forja 4, tenaz 1, oficina 1, preparo 6) · as CDs: Comum 22 · Incomum 55 · Raro 80 (o teto: Raro) · os efeitos das suas ferramentas: afinada +1
+Ferord forja Segunda Tenaz de Ferord: soma 58, a peça sai Incomum; faltaram 22 para a Rara (80): o terço de baixo, 0 da faixa, 0 dos 20 = 0: nenhum efeito. Entrou no Livro de Itens: i0713
+Dia 45, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 4 de prata

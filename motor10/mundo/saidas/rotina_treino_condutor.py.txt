@@ -1,0 +1,110 @@
+#!/usr/bin/env python3
+"""Condutor da rotina de Ferord (fora do repositório): joga dia após dia o ritmo de 3 blocos
+(oficio.py jornal 2 · ato.py comer · oficio.py jornal 1 · ato.py dormir 3) e PARA no primeiro sinal
+de coisa que peça escolha. Nenhum desses comandos rola dado do jogador. Uso: python3 rotina_treino.py META_PRATA DIA_MAX (Dia 40: o terceiro bloco do dia vai ao treino do martelo)"""
+import json, os, re, subprocess, sys
+
+MOTOR = '/home/user/ferir/motor10'
+PASTA = os.environ.get('MOTOR10_MUNDO') or os.path.join(MOTOR, 'mundo')
+SAIDA = os.path.join(PASTA, 'saidas/d5_rotina.txt')
+sys.path.insert(0, MOTOR); os.chdir(MOTOR)
+META = int(sys.argv[1]) if len(sys.argv) > 1 else 77
+DIA_MAX = int(sys.argv[2]) if len(sys.argv) > 2 else 18
+VILA = {'filipa', 'berareu', 'felix', 'adelaide', 'osorino', 'nora', 'paio', 'tania', 'erado'}
+PALAVRAS = ('Pedra Velha', 'Charneca', 'metal', 'ferreir', 'forja', 'Dorneles', 'Sinos', 'Filipa', 'Souto Negro', 'some na')
+BENIGNOS = {'producao', 'consumo', 'virada', 'noticia', 'regiao', 'semana', 'trabalhar', 'comer', 'dormir', 'querer', 'descansar'}
+PAROU_OK = ('no limite das forças', 'acorda com o sono em dia', 'está com fome')
+
+
+def roda(cmd):
+    r = subprocess.run(['python3'] + cmd.split(), capture_output=True, text=True)
+    out = (r.stdout + r.stderr).strip()
+    with open(SAIDA, 'a', encoding='utf-8') as f: f.write(f'$ python3 {cmd}\n{out}\n(saída {r.returncode})\n---\n')
+    return r.returncode, out
+
+
+def foto():
+    import importlib, estado, caixa, noticias, missoes
+    for m in (estado, caixa, noticias, missoes): importlib.reload(m)
+    E = estado.carrega(); p = E['gente']['eu']
+    aqui = {k for k, g in E['gente'].items() if g.get('lugar') == 'pedra_velha' and g.get('estado') == 'vivo' and k != 'eu'}
+    _, preco = subprocess.run(['python3', 'mercado.py', 'preco', 'metal:1', '1'], capture_output=True, text=True).returncode, \
+        subprocess.run(['python3', 'mercado.py', 'preco', 'metal:1', '1'], capture_output=True, text=True).stdout
+    m = re.search(r'preço do dia ([\d,]+) \(× ([\d,]+)\) · no lugar (\d+)', preco)
+    fr = {k: f.get('passo', 0) for k, f in (E['mundo'].get('frentes') or {}).items()}
+    return dict(dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], prata=p['moedas'], pv=p['pv'], pvmax=estado.pv_max(p),
+                corpo=dict(p['corpo']), forja=p['treino'].get('forja'), mao=p.get('maestria', {}).get('forja'),
+                caixa=caixa.mesa(E), noticias=noticias.mesa(E), missoes=missoes.mesa(E), aqui=aqui,
+                metal=(float(m.group(2).replace(',', '.')), int(m.group(3))) if m else None, frentes=fr,
+                eventos=E['relogio']['eventos'])
+
+
+def eventos_desde(n):
+    L = []
+    with open(os.path.join(PASTA, 'eventos.jsonl'), encoding='utf-8') as f:
+        for i, l in enumerate(f):
+            if i >= n: L.append(json.loads(l))
+    return L
+
+
+antes = foto(); log = []; parar = None
+log.append(f"início: Dia {antes['dia']} · {antes['prata']} de prata · forja {antes['forja']} · metal Incomum {antes['metal']}")
+while not parar:
+    if antes['prata'] >= META: parar = f"a prata chegou a {antes['prata']} (meta {META})"; break
+    if antes['dia'] >= DIA_MAX: parar = f'chegou ao dia máximo ({DIA_MAX})'; break
+    for cmd in ('oficio.py jornal 2', 'ato.py comer', 'COMPLETA', 'ato.py treinar 1 martelo', 'ato.py dormir 3'):
+        if cmd == 'COMPLETA':                       # (Dia 40) a fome cortou um bloco pago: completa os 2 blocos pagos do dia antes do treino
+            import estado as _ej; import importlib as _ij; _ij.reload(_ej); _E = _ej.carrega(); _m = _E['gente']['eu'].get('marca', {})
+            feitos = _m.get('jornada', 0) if _m.get('jornada_dia') == _E['relogio']['dia'] else 0
+            if feitos >= 2: continue
+            cmd = f'oficio.py jornal {2 - feitos}'
+        rc, out = roda(cmd)
+        if rc != 0: parar = f'o comando "{cmd}" falhou: {out[-300:]}'; break
+        for pq in re.findall(r'PAROU: ([^\n]+)', out):
+            if not any(ok in pq for ok in PAROU_OK): parar = f'"{cmd}" PAROU: {pq}'
+        if parar: break
+    if not parar and 'está com fome' in out:        # a fome acordou no meio da noite (o dia começou faminto): come de novo e volta a dormir
+        rc, o2 = roda('ato.py comer'); import estado as _e0; import importlib as _il; _il.reload(_e0); R0 = _e0.carrega()['relogio']
+        resto = (2 - R0['bloco']) % 6
+        if rc == 0 and resto: rc, out = roda(f'ato.py dormir {resto}')
+        if rc != 0: parar = f'a fome da noite: {o2[-200:]}'
+    if not parar:                                   # a noite vai até as 8h: quem acordou descansado antes disso fica na cama, descansando
+        import estado as _e; import importlib; importlib.reload(_e); R = _e.carrega()['relogio']
+        falta = (2 - R['bloco']) % 6
+        if falta:
+            rc, out = roda(f'ato.py descansar {falta}')
+            if rc != 0: parar = f'o descanso até as 8h falhou: {out[-300:]}'
+    if parar: break
+    agora = foto(); avisos = []; dia = antes['dia']
+    if agora['caixa']: parar = 'chegou pedido na caixa: ' + ' | '.join(agora['caixa'][1:])
+    novas = [n for n in agora['noticias'][1:] if n not in antes['noticias']]
+    for n in novas:
+        avisos.append('notícia: ' + n)
+        if any(w in n for w in PALAVRAS) and 'conta da história' not in n and 'cumpriu a missão' not in n: parar = parar or f'notícia que toca Ferord: {n}'
+    novasm = [m for m in agora['missoes'] if m not in antes['missoes'] and m.startswith('- ')]
+    for mm in novasm:
+        avisos.append('missão: ' + mm)
+        pr = re.search(r'(\d+) de prata', mm)
+        if any(w in mm for w in ('consert', 'forj', 'peça', 'metal', 'escudo', 'arma')) or (pr and int(pr.group(1)) >= 40): parar = parar or f'missão de interesse: {mm}'
+    sumiu = [m for m in antes['missoes'] if m not in agora['missoes'] and m.startswith('- ')]
+    for mm in sumiu: avisos.append('saiu do quadro: ' + mm)
+    for k in agora['aqui'] - antes['aqui']:
+        avisos.append(f'chegou a Pedra Velha: {k}')
+        if k not in VILA: parar = parar or f'gente de fora chegou a Pedra Velha: {k}'
+    for k in antes['aqui'] - agora['aqui']: avisos.append(f'saiu de Pedra Velha: {k}')
+    if agora['metal'] and (agora['metal'][1] < 4 or agora['metal'][0] > 1.3): parar = parar or f"o metal Incomum mudou: {agora['metal']}"
+    if agora['pv'] < agora['pvmax']: parar = parar or f"Ferord perdeu vida: {agora['pv']}/{agora['pvmax']}"
+    for e in eventos_desde(antes['eventos']):
+        if e.get('onde') == 'pedra_velha' and 'eu' not in (e.get('quem') or []) and e['tipo'] not in BENIGNOS:
+            avisos.append(f"evento em Pedra Velha: {e['tipo']}: {e.get('texto')}")
+            if e['tipo'] not in ('mestre',): parar = parar or f"aconteceu em Pedra Velha: {e['tipo']}: {e.get('texto')}"
+        if e['tipo'] == 'frente': avisos.append(f"(só o Mestre) frente: {e.get('texto')}")
+    for k, ps in agora['frentes'].items():
+        if ps != antes['frentes'].get(k):
+            avisos.append(f"(só o Mestre) a frente {k} foi do passo {antes['frentes'].get(k)} ao {ps}")
+            if k == 'f11': parar = parar or f'(só o Mestre) a frente f11, os sumiços da Charneca, andou ao passo {ps}'
+    if agora['mao'] != antes['mao']: avisos.append(f"a mão na forja subiu: {antes['mao']} → {agora['mao']}")
+    log.append(f"Dia {dia}: prata {antes['prata']} → {agora['prata']} · forja {agora['forja']} · corpo {agora['corpo']} · metal Incomum {agora['metal']}" + ('' if not avisos else '\n    ' + '\n    '.join(avisos)))
+    antes = agora
+
+print('\n'.join(log)); print('PAROU:', parar)

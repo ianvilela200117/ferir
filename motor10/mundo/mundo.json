@@ -3983,7 +3983,7 @@
    "nome": "a Liga do Sino Rachado",
    "sede": "vale_do_corvo",
    "lider": "taskin",
-   "fama": 445
+   "fama": 446
   },
   "g_a_companhia_do_lobo_cinzento": {
    "nome": "a Companhia do Lobo Cinzento",
@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 21,
-  "noticia": 44
+  "missao": 25,
+  "noticia": 51
  },
  "frentes": {
   "f01": {
@@ -4099,7 +4099,7 @@
    "dono": "dragao:penhascos_das_aguas",
    "onde": "ribeira_do_lobo",
    "meta": "fazer o lugar pagar tributo até não sobrar nada",
-   "passo": 0,
+   "passo": 1,
    "forca": 3,
    "passos": [
     "o dragão é visto sobre o lugar",
@@ -4111,7 +4111,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": null,
+   "ult": 43,
    "alvo_missao": "matar",
    "alvo": "dragao:penhascos_das_aguas",
    "cat": 2,
@@ -4208,7 +4208,7 @@
    "dono": "guilda:g_a_liga_do_sino_rachado",
    "onde": "penha_das_rosas",
    "meta": "ser a primeira a limpar a masmorra funda",
-   "passo": 1,
+   "passo": 2,
    "forca": 6,
    "passos": [
     "a guilda junta gente",
@@ -4220,7 +4220,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 22,
+   "ult": 43,
    "alvo_missao": null,
    "alvo": "ruinas_do_urso",
    "cat": 4,
@@ -4260,7 +4260,7 @@
    "dono": "lugar:castro_branco",
    "onde": "castro_branco",
    "meta": "acabar com o sal da terra",
-   "passo": 1,
+   "passo": 2,
    "forca": 3,
    "passos": [
     "o sal some da feira",
@@ -4272,7 +4272,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 8,
+   "ult": 43,
    "alvo_missao": "entrega",
    "alvo": "sal",
    "cat": 0,
@@ -4535,7 +4535,7 @@
    "paga": 353,
    "prazo": 45,
    "frente": null,
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 22,
    "cat": 1
@@ -4654,7 +4654,7 @@
    "paga": 12,
    "prazo": 51,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "taskin",
    "desde": 36,
    "cat": 0,
@@ -4674,6 +4674,66 @@
    "desde": 36,
    "cat": 0,
    "ermo": "souto_das_aguas"
+  },
+  "m0022": {
+   "de": "nuno",
+   "onde": "vale_do_corvo",
+   "tipo": "matar",
+   "alvo": "casa:c_astolan",
+   "n": 1,
+   "paga": 52,
+   "prazo": 55,
+   "frente": "f05",
+   "estado": "aberta",
+   "quem": null,
+   "desde": 43,
+   "cat": 2,
+   "nome_alvo": "a ambição dos Astolan"
+  },
+  "m0023": {
+   "de": "alba",
+   "onde": "vale_do_corvo",
+   "tipo": "entrega",
+   "alvo": "comida",
+   "n": 1,
+   "paga": 10,
+   "prazo": 65,
+   "frente": "f09",
+   "estado": "aberta",
+   "quem": null,
+   "desde": 43,
+   "cat": 0,
+   "nome_alvo": "a seca de Pedra Verde"
+  },
+  "m0024": {
+   "de": "madalena",
+   "onde": "ribeira_da_nevoa",
+   "tipo": "matar",
+   "alvo": "lobisomem",
+   "n": 1,
+   "paga": 65,
+   "prazo": 62,
+   "frente": "f11",
+   "estado": "tomada",
+   "quem": "nynena",
+   "desde": 43,
+   "cat": 2,
+   "nome_alvo": "os sumiços da Charneca dos Sinos"
+  },
+  "m0025": {
+   "de": "nora",
+   "onde": "pedra_velha",
+   "tipo": "caça",
+   "alvo": "lobo",
+   "n": 3,
+   "paga": 24,
+   "prazo": 62,
+   "frente": null,
+   "estado": "tomada",
+   "quem": "drastum",
+   "desde": 43,
+   "cat": 0,
+   "ermo": "charneca_dos_sinos"
   }
  },
  "noticias": {
@@ -7566,6 +7626,14 @@
     "ribeira_do_lobo": [
      40,
      4
+    ],
+    "ermida_verde": [
+     41,
+     5
+    ],
+    "pinhal_do_ferro": [
+     41,
+     5
     ]
    },
    "janela": false
@@ -7793,6 +7861,10 @@
     "pinhal_do_ferro": [
      40,
      4
+    ],
+    "penha_das_rosas": [
+     41,
+     5
     ]
    },
    "janela": false
@@ -7833,6 +7905,42 @@
     "castro_branco": [
      40,
      2
+    ],
+    "castro_do_sal": [
+     41,
+     3
+    ],
+    "pedra_velha": [
+     41,
+     3
+    ],
+    "pedra_verde": [
+     42,
+     4
+    ],
+    "souto_negro": [
+     42,
+     4
+    ],
+    "varzea_brava": [
+     42,
+     4
+    ],
+    "ponte_da_cruz": [
+     43,
+     5
+    ],
+    "ribeira_do_lobo": [
+     43,
+     5
+    ],
+    "ermida_verde": [
+     44,
+     6
+    ],
+    "pinhal_do_ferro": [
+     44,
+     6
     ]
    },
    "janela": false
@@ -7849,6 +7957,66 @@
     "castro_do_sal": [
      40,
      0
+    ],
+    "pedra_velha": [
+     41,
+     1
+    ],
+    "vale_do_corvo": [
+     41,
+     1
+    ],
+    "ribeira_da_nevoa": [
+     41,
+     1
+    ],
+    "pedra_verde": [
+     41,
+     1
+    ],
+    "souto_negro": [
+     42,
+     2
+    ],
+    "varzea_brava": [
+     42,
+     2
+    ],
+    "varzea_da_nevoa": [
+     42,
+     2
+    ],
+    "castro_branco": [
+     42,
+     2
+    ],
+    "castro_real": [
+     42,
+     2
+    ],
+    "ponte_da_cruz": [
+     42,
+     2
+    ],
+    "ribeira_do_lobo": [
+     42,
+     2
+    ],
+    "coval_do_vento": [
+     43,
+     3
+    ],
+    "penha_das_rosas": [
+     43,
+     3
+    ],
+    "ermida_verde": [
+     43,
+     3
+    ],
+    "pinhal_do_ferro": [
+     43,
+     3
     ]
    },
    "janela": false
@@ -7865,24 +8033,491 @@
     "vale_do_corvo": [
      40,
      0
+    ],
+    "castro_do_sal": [
+     41,
+     1
+    ],
+    "varzea_da_nevoa": [
+     41,
+     1
+    ],
+    "pedra_velha": [
+     42,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     42,
+     2
+    ],
+    "pedra_verde": [
+     42,
+     2
+    ],
+    "coval_do_vento": [
+     42,
+     2
+    ],
+    "penha_das_rosas": [
+     42,
+     2
+    ],
+    "castro_real": [
+     42,
+     2
+    ],
+    "souto_negro": [
+     43,
+     3
+    ],
+    "varzea_brava": [
+     43,
+     3
+    ],
+    "castro_branco": [
+     43,
+     3
+    ],
+    "ponte_da_cruz": [
+     43,
+     3
+    ],
+    "ribeira_do_lobo": [
+     43,
+     3
+    ],
+    "ermida_verde": [
+     44,
+     4
+    ],
+    "pinhal_do_ferro": [
+     44,
+     4
+    ]
+   },
+   "janela": false
+  },
+  "n00045": {
+   "dia": 41,
+   "onde": "castro_branco",
+   "texto": "Taskin cumpriu a missão de Castro Branco: matar 3 aranha-de-tocas nas Grutas do Vento",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "castro_branco": [
+     41,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     42,
+     1
+    ],
+    "castro_real": [
+     42,
+     1
+    ],
+    "pedra_velha": [
+     43,
+     2
+    ],
+    "castro_do_sal": [
+     43,
+     2
+    ],
+    "varzea_da_nevoa": [
+     43,
+     2
+    ],
+    "coval_do_vento": [
+     43,
+     2
+    ],
+    "souto_negro": [
+     44,
+     3
+    ],
+    "varzea_brava": [
+     44,
+     3
+    ],
+    "vale_do_corvo": [
+     44,
+     3
+    ],
+    "pedra_verde": [
+     44,
+     3
+    ],
+    "penha_das_rosas": [
+     44,
+     3
+    ],
+    "ponte_da_cruz": [
+     45,
+     4
+    ],
+    "ribeira_do_lobo": [
+     45,
+     4
+    ],
+    "ermida_verde": [
+     46,
+     5
+    ],
+    "pinhal_do_ferro": [
+     46,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00046": {
+   "dia": 43,
+   "onde": "castro_real",
+   "texto": "Boskul conta da história: no ano 1146, morre Rodrigo (de uma flecha na estrada); Ferelino assume a casa dos Orirena.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "castro_real": [
+     43,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     44,
+     1
+    ],
+    "castro_branco": [
+     44,
+     1
+    ],
+    "varzea_da_nevoa": [
+     44,
+     1
+    ],
+    "coval_do_vento": [
+     44,
+     1
+    ],
+    "pedra_velha": [
+     45,
+     2
+    ],
+    "castro_do_sal": [
+     45,
+     2
+    ],
+    "vale_do_corvo": [
+     45,
+     2
+    ],
+    "penha_das_rosas": [
+     45,
+     2
+    ],
+    "souto_negro": [
+     46,
+     3
+    ],
+    "varzea_brava": [
+     46,
+     3
+    ],
+    "pedra_verde": [
+     46,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00047": {
+   "dia": 43,
+   "onde": "coval_do_vento",
+   "texto": "Lino conta da história: no ano 1109, acaba a guerra da Ponte de 1104: vencem os Astasal.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "coval_do_vento": [
+     43,
+     0
+    ],
+    "penha_das_rosas": [
+     44,
+     1
+    ],
+    "varzea_da_nevoa": [
+     44,
+     1
+    ],
+    "castro_real": [
+     44,
+     1
+    ],
+    "vale_do_corvo": [
+     45,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     45,
+     2
+    ],
+    "castro_branco": [
+     45,
+     2
+    ],
+    "castro_do_sal": [
+     46,
+     3
+    ],
+    "pedra_velha": [
+     46,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00048": {
+   "dia": 43,
+   "onde": "souto_negro",
+   "texto": "Vicente conta da história: no ano 858, morre Mafalda (num duelo); Iranado assume a casa dos Terigar.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "souto_negro": [
+     43,
+     0
+    ],
+    "pedra_velha": [
+     44,
+     1
+    ],
+    "varzea_brava": [
+     44,
+     1
+    ],
+    "ponte_da_cruz": [
+     44,
+     1
+    ],
+    "castro_do_sal": [
+     45,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     45,
+     2
+    ],
+    "pedra_verde": [
+     45,
+     2
+    ],
+    "ermida_verde": [
+     45,
+     2
+    ],
+    "vale_do_corvo": [
+     46,
+     3
+    ],
+    "castro_branco": [
+     46,
+     3
+    ],
+    "castro_real": [
+     46,
+     3
+    ],
+    "ribeira_do_lobo": [
+     46,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00049": {
+   "dia": 43,
+   "onde": "ribeira_do_lobo",
+   "texto": "O dragão é visto sobre o lugar em Ribeira do Lobo",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f04"
+   ],
+   "chegou": {
+    "ribeira_do_lobo": [
+     43,
+     0
+    ],
+    "pinhal_do_ferro": [
+     44,
+     1
+    ],
+    "pedra_verde": [
+     44,
+     1
+    ],
+    "ponte_da_cruz": [
+     45,
+     2
+    ],
+    "varzea_brava": [
+     45,
+     2
+    ],
+    "castro_do_sal": [
+     45,
+     2
+    ],
+    "ermida_verde": [
+     46,
+     3
+    ],
+    "souto_negro": [
+     46,
+     3
+    ],
+    "pedra_velha": [
+     46,
+     3
+    ],
+    "vale_do_corvo": [
+     46,
+     3
+    ],
+    "ribeira_da_nevoa": [
+     46,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00050": {
+   "dia": 43,
+   "onde": "penha_das_rosas",
+   "texto": "A guilda compra tochas e cordas em Penha das Rosas",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f08"
+   ],
+   "chegou": {
+    "penha_das_rosas": [
+     43,
+     0
+    ],
+    "coval_do_vento": [
+     44,
+     1
+    ],
+    "varzea_da_nevoa": [
+     44,
+     1
+    ],
+    "castro_real": [
+     45,
+     2
+    ],
+    "vale_do_corvo": [
+     45,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     46,
+     3
+    ],
+    "castro_branco": [
+     46,
+     3
+    ],
+    "castro_do_sal": [
+     46,
+     3
+    ]
+   },
+   "janela": false
+  },
+  "n00051": {
+   "dia": 43,
+   "onde": "castro_branco",
+   "texto": "A carne apodrece sem sal em Castro Branco",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f10"
+   ],
+   "chegou": {
+    "castro_branco": [
+     43,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     44,
+     1
+    ],
+    "castro_real": [
+     44,
+     1
+    ],
+    "pedra_velha": [
+     45,
+     2
+    ],
+    "castro_do_sal": [
+     45,
+     2
+    ],
+    "varzea_da_nevoa": [
+     45,
+     2
+    ],
+    "coval_do_vento": [
+     45,
+     2
+    ],
+    "souto_negro": [
+     46,
+     3
+    ],
+    "varzea_brava": [
+     46,
+     3
+    ],
+    "vale_do_corvo": [
+     46,
+     3
+    ],
+    "pedra_verde": [
+     46,
+     3
+    ],
+    "penha_das_rosas": [
+     46,
+     3
     ]
    },
    "janela": false
   }
  },
  "ranking": {
-  "semana": 6,
+  "semana": 7,
   "lista": [
    [
     "drastum",
-    348
-   ],
-   [
-    "nynena",
-    340
+    349
    ],
    [
     "taskin",
+    326
+   ],
+   [
+    "nynena",
     325
    ],
    [

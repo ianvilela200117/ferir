@@ -1,0 +1,17 @@
+início: Dia 41 · 6 de prata · forja 169 · metal Incomum (1.06, 16)
+Dia 41: prata 6 → 15 · forja 171 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 42 (de Vale do Corvo): Lesoril cumpriu a missão de Vale do Corvo: descobrir o que há por trás da ambição dos Astolan
+Dia 42: prata 15 → 24 · forja 173 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.03, 17)
+    notícia: - Dia 43 (de Castro Branco): Taskin cumpriu a missão de Castro Branco: matar 3 aranha-de-tocas nas Grutas do Vento
+    (só o Mestre) frente: a frente f04 (o dragão Brasa) anda ao passo 1: o dragão é visto sobre o lugar
+    (só o Mestre) frente: a frente f08 (a corrida da Liga do Sino Rachado) anda ao passo 2: a guilda compra tochas e cordas
+    (só o Mestre) frente: a frente f10 (a falta de sal de Castro Branco) anda ao passo 2: a carne apodrece sem sal
+    (só o Mestre) a frente f04 foi do passo 0 ao 1
+    (só o Mestre) a frente f08 foi do passo 1 ao 2
+    (só o Mestre) a frente f10 foi do passo 1 ao 2
+Dia 43: prata 24 → 33 · forja 175 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 44 (de Souto Negro): Vicente conta da história: no ano 858, morre Mafalda (num duelo); Iranado assume a casa dos Terigar.
+Dia 44: prata 33 → 42 · forja 177 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.06, 16)
+    notícia: - Dia 45 (de Castro Branco): A carne apodrece sem sal em Castro Branco
+    notícia: - Dia 45 (de Castro Real): Boskul conta da história: no ano 1146, morre Rodrigo (de uma flecha na estrada); Ferelino assume a casa dos Orirena.
+PAROU: a prata chegou a 42 (meta 42)
