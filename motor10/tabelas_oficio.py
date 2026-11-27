@@ -94,14 +94,16 @@ def chave_ferramenta(forma, oficio): return forma if forma in ('martelo', 'tenaz
 def bonus_ferramenta(t, k):
     """o bônus de uma ferramenta de categoria t numa obra de categoria k: 1 + t (Comum +1 ... Lendária +6) na obra da categoria dela ou abaixo; na obra uma acima, +1; acima disso, nada"""
     return 1 + t if t >= k else 1 if t == k - 1 else 0
-# OS PODERES DA FERRAMENTA, pela categoria dela (os de cima trazem os de baixo):
-POR_POUCO_RARA = 8          # (a regra da categoria escolhida, que segue no encanto) Rara ou melhor: a matéria só some se a obra falhar por isto ou mais
-NADA_SE_PERDE = 3           # Épica ou melhor: a matéria nunca some; a obra que falha feio sai uma categoria abaixo (o Comum, tosco)
-OBRA_PRIMA_FACIL = 4        # Única ou melhor: os degraus da obra-prima descem OBRA_PRIMA_DESCE
-ACIMA_DO_FERRO = 5          # Lendária: a peça que passa por ACIMA_MARGEM ou mais nasce uma categoria acima (até o Lendário; sem núcleo a mais)
+# OS PODERES DA FERRAMENTA, pela categoria dela (os de cima trazem os de baixo). Na FORJA e no COURO (a Lei do Valor) eles valem como está escrito acima, na LEI DO VALOR
+# (a Rara segura a matéria a VALOR_SEGURA, a Épica nunca a perde, a Única dá o QUASE, a Lendária sobe o teto da obra com núcleo: REGRAS 7.14); os números de baixo são
+# os da regra da categoria escolhida, que SÓ O ENCANTO (o foco e o amuleto, no teste de passar) ainda segue:
+POR_POUCO_RARA = 8          # (só o encanto, que segue no teste de passar) Rara ou melhor: a matéria só some se a obra falhar por isto ou mais
+NADA_SE_PERDE = 3           # Épica ou melhor: a matéria nunca some (na Lei do Valor: nem nos dois 1; a peça sai Comum, tosca, sem efeito); no encanto, a obra que falha feio sai uma abaixo
+OBRA_PRIMA_FACIL = 4        # Única ou melhor: na Lei do Valor, o QUASE (QUASE_JANELA); (só o encanto) os degraus da obra-prima descem OBRA_PRIMA_DESCE
+ACIMA_DO_FERRO = 5          # Lendária: na Lei do Valor, o teto da obra com núcleo sobe uma categoria (teto()); (só o encanto) a peça que passa por ACIMA_MARGEM nasce uma acima
 ACIMA_MARGEM = 25
-# A OBRA-PRIMA: a peça que PASSA no teste por OBRA_PRIMA[i] ou mais ganha i+1 efeitos, até o teto da categoria dela; quem forjou escolhe cada um
-# (`oficio.py efeito ITEM CHAVE`), entre os efeitos que a luta roda e que valem naquele tipo de peça (itens.EFEITOS; o "pesa" não se escolhe).
+# A OBRA-PRIMA DO ENCANTO (só o encanto, que segue no teste de passar): a peça que PASSA por OBRA_PRIMA[i] ou mais ganha i+1 efeitos, até o teto de efeitos da categoria
+# dela (EFEITOS_MAX). A forja e o couro tiram os efeitos da FAIXA (abaixo) e dos dados; quem escolhe, e o quê: REGRAS 7.3 e 7.16 (na fase 1a, só a ferramenta escolhe).
 OBRA_PRIMA = (10, 20, 30)
 OBRA_PRIMA_DESCE = 5
 EFEITOS_MAX = (2, 4, 4, 5, 5, 6, 6, 7)    # (a parte 2, fase 1a) O TETO DE EFEITOS: a Comum leva 2; a Incomum e a Rara, 4; e daí +1 a cada duas categorias (antes: 1, 1, 2, 2, 3...)
@@ -116,7 +118,12 @@ def efeitos_da_obra(margem, cat, facil=False):
 # quanto mais perto dela, sem passar, mais efeitos. Passou, é a categoria de cima. NADA DISTO MEXE NO TOTAL: a chance de cada categoria é a de antes, linha por linha.
 REGUA_FAIXA = ((2, 4), (5, 3), (8, 2), (16, 1))     # (a) a proporcional (a recomendação; pergunta 1 do contrato): faltou 1 ou 2 → 4 efeitos; 3 a 5 → 3; 6 a 8 → 2; 9 a 16 → 1; 17 ou mais → 0
 # REGUA_FAIXA = ((1, 4), (3, 3), (5, 2), (10, 1))   # (b) ao pé da letra dos números do exemplo do jogador: faltou 1 → 4; 2 ou 3 → 3; 4 ou 5 → 2; 6 a 10 → 1; 11 ou mais → 0
-                                                    #     (se o jogador escolher (b), troque a linha de cima por esta: o resto do motor e do banco segue igual)
+                                                    #     (se o jogador escolher (b), troque a linha de cima por esta. O MOTOR segue igual. O BANCO (provas_oficio) confere a régua
+                                                    #     em vigor onde o contrato dá a referência: a FJ2 contra a conta exata; a FJ1 confere a tenaz pelos números da (b) (DESENHO
+                                                    #     12, pergunta 1 (b): a Incomum 63%, sem efeito 51,2 · 1 efeito 7,4 · 2 efeitos 2,3 · 3 ou 4 efeitos 2,1; 0,7 efeito por obra);
+                                                    #     a FJ3 a FJ6 não dependem da régua. COM A (b) REPROVAM, e o Mestre recalibra antes de a fase fechar: a FJ1 ABAIXO DA MÃO (de
+                                                    #     verdade: o melhor com matéria Rara sem núcleo tira 1,44 vez os efeitos da obra de núcleo dele, e a meta é 1,2: pede outro
+                                                    #     TETO_FAIXA, ou outra meta); e a FJ9 e a FJ10, cujas contas e frases são os exemplos do contrato, medidos com a (a))
 TETO_FAIXA = 2              # NA CATEGORIA DO TETO (a de cima está trancada: a matéria, a porta do degrau, o núcleo, a Lendária) a régua para em 2, e passar da CD trancada dá 2
 VALOR_CD_ACIMA = 180        # a CD de cima da Lendária (a da Mítica, pelo passo de 25: ninguém forja Mítica): fecha a faixa da Lendária, que vive sempre no teto
 FAIXA_NOME = ('o terço de baixo', 'o terço do meio', 'o terço de cima', 'colada', 'no fio')       # o nome à mesa de cada degrau da régua (0 a 4 efeitos da faixa)
@@ -156,19 +163,21 @@ def cabe_forca(forca, cat, emprestado=False):
 # chave: (força, porta, números por categoria da ferramenta (Comum ... Primordial) ou None, o que faz, o que vale (medido: pontos de feitio por obra, ou o que ele poupa))
 # O NÚMERO NUNCA SE GUARDA NA PEÇA: sai da categoria dela (valor_ferramenta). O CHEIO leva o número da categoria de cima (o prumo cheio de uma tenaz Incomum é 2).
 # O POUPA-FERRO poupa o FERRO: a matéria principal da peça, quando é o metal (a espada, a maça, o martelo, a placa...); o arco e a armadura de couro não (o banco: com ele poupando
-# também a madeira, o arco Incomum barato fazia da loja uma mina na sorte, 15 de prata por dia, acima dos 12 da meta FJ8; poupando só o metal, 5,8 no pior caso).
+# também a madeira, o arco Incomum barato fazia da loja uma mina na sorte, 15 de prata por dia, acima dos 12 da meta FJ8; poupando só o metal, 5,8 no pior caso). É uma LEITURA
+# do contrato (5.8 diz "a matéria principal"), para o Mestre confirmar (DESENHO 12.2). Por ela, a ferramenta de COURO não leva o poupa-ferro (a obra do couro não tem metal).
+# Para voltar à leitura literal: oficio.materia_da_obra (uma linha) e o _efeito_erro/efeitos_que_cabem (o couro), e a FJ8 pede outro freio.
 # Só o prumo e a têmpera têm número que cresce: são os efeitos de NÚMERO da ferramenta (só eles levam cheio). Os números da Comum e da Incomum na têmpera, e o da Comum
 # no prumo, só servem ao degrau emprestado (a força de cima, "com o número da categoria da peça").
 FERRAMENTA_EFEITOS = {
     'afinada':       ('fraco', 0, None, '+1 no total do ofício, uma vez por obra (a única que mexe no total; não cresce)', '+0,02 efeito; +2,8 pontos na chance da Incomum da tenaz'),
     'fagulha':       ('fraco', 0, None, 'o dado que abre em 19 dá +1 efeito, como o 20 (não rola de novo)', '+0,09'),
-    'recobro':       ('fraco', 0, None, 'a obra perdida devolve metade da matéria, para baixo (o núcleo se perde como sempre)', 'matéria'),
+    'recobro':       ('fraco', 0, None, 'a obra perdida devolve metade da matéria, arredondada para cima no total, a começar pela principal (o núcleo se perde como sempre)', 'matéria'),
     'remendo':       ('fraco', 0, None, 'o conserto na bancada devolve 8 pontos por bloco, não 5', 'tempo'),
     'mao_de_medida': ('fraco', 0, None, 'o ajuste sob medida leva metade dos blocos e soma +2 no teste', 'tempo'),
-    'sinete':        ('fraco', 0, None, 'a peça nasce com o sinete de quem a forjou: a janela diz', 'assinatura'),
+    'sinete':        ('fraco', 0, None, 'a peça nasce com o sinete de quem a forjou: a janela diz, e a notícia de um feito com ela (a arma em uso) leva o nome dele', 'assinatura'),
     'prumo':         ('normal', 1, (1, 1, 2, 3, 4, 5, 5, 5), 'o que falta para a CD de cima conta {valor} a menos, só para os efeitos (no teto, até 2)', '+0,14 · +0,27 · +0,41 · +0,54 · +0,68 (Incomum a Lendária)'),
-    'poupa_ferro':   ('normal', 1, None, 'a obra gasta 1 de metal a menos, se o metal é a matéria principal da peça e ela leva 3 ou mais dele (o ferro: a madeira e o couro não)', 'um terço da espada'),
-    'lastro':        ('forte', 3, None, 'a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa', '+0,36'),
+    'poupa_ferro':   ('normal', 1, None, 'a obra gasta 1 de metal a menos, se o metal é a matéria principal da peça e ela leva 3 ou mais dele (o ferro: a madeira e o couro não; não cabe na ferramenta de couro)', 'um terço da espada'),
+    'lastro':        ('forte', 3, None, 'a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa', '+0,35'),
     'tempera':       ('forte', 3, (1, 1, 1, 1, 2, 3, 3, 3), 'na peça que ela forja, até {valor} efeito(s) de número nasce(m) cheio(s) (o número da categoria de cima)', '+0,32 · +0,46 · +0,54 (Épica a Lendária)'),
     'molde':         ('apelão', 5, None, 'ao abrir a obra, diz-se um efeito (molde=CHAVE): se a peça sai na categoria da obra ou acima, nasce com ele, fora do teto; se sai abaixo, o molde se perde', '+0,60'),
     'degrau':        ('apelão', 5, None, 'um efeito da peça que ela forja pode ser da força de cima, com o número da categoria da peça (o degrau emprestado; só em peça de até 4 efeitos)', 'dentro da régua da força de cima'),
@@ -182,6 +191,13 @@ def chave_efeito(k):
     """a chave do efeito como o jogador a escreve (com acento, espaço ou hífen): a do catálogo"""
     k = str(k).strip().lower().replace(' ', '_'); return APELIDOS_EFEITO.get(k, APELIDOS_EFEITO.get(k.replace('-', '_'), k.replace('-', '_')))
 def de_numero(chave): return chave in FERRAMENTA_EFEITOS and FERRAMENTA_EFEITOS[chave][2] is not None       # o efeito de ferramenta que tem número que cresce (leva cheio)
+def apelao_de_regra(chave):
+    """o efeito é APELÃO DE REGRA (apelão e sem número: o molde de mestre e o degrau emprestado)? A peça leva um só (4.5 do contrato: um apelão de regra por peça)"""
+    return chave in FERRAMENTA_EFEITOS and FERRAMENTA_EFEITOS[chave][0] == 'apelão' and FERRAMENTA_EFEITOS[chave][2] is None
+def numeros_que_cabem(cat, emprestado=False):
+    """os efeitos de número (o prumo, a têmpera) cuja porta a categoria da ferramenta abre (com o degrau emprestado, a força de cima): na Comum nenhum, na Incomum e na Rara
+    o prumo, da Épica para cima os dois. É onde o CHEIO pode cair numa ferramenta"""
+    return [k for k in FERRAMENTA_EFEITOS if de_numero(k) and cabe_forca(FERRAMENTA_EFEITOS[k][0], cat, emprestado)]
 def valor_ferramenta(chave, cat, cheio=False):
     """o número de um efeito de ferramenta numa peça desta categoria (cheio: o da categoria de cima); None se o efeito não tem número"""
     n = FERRAMENTA_EFEITOS.get(chave, (None, None, None))[2]

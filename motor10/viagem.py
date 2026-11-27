@@ -238,7 +238,7 @@ def acerta(E, pid):
                     if n: ef.append(['pessoa', q, 'carga.' + k2, 'soma', n])
             if bens: L.append('Despojo: ' + ', '.join(f"{q2} de {estado.nome_bem(k2)}" for k2, q2 in bens.items()) + '.')
     for q in ficaram[1:]: ef += gente.lembra(E, q, pid, 'lutou ao meu lado na estrada', 1)
-    if mortos and campo: ef += noticias.nova(E, est, f"{E['gente'][pid]['nome']} venceu {'salteadores' if enc['tipo'] == 'bando' else 'bichos'} {estado.em(E, est)}", 1, ('estrada',))
+    if mortos and campo: ef += noticias.nova(E, est, f"{E['gente'][pid]['nome']} venceu {'salteadores' if enc['tipo'] == 'bando' else 'bichos'} {estado.em(E, est)}" + noticias.sinete(E, pid), 1, ('estrada',))       # (fase 1a) o sinete da arma vai na notícia
     vivo = E['gente'][pid]['estado'] == 'vivo'
     if not vivo:
         v2 = None; L.append(f"{E['gente'][pid]['nome']} morreu {estado.em(E, est)}: o que levava fica na estrada.")

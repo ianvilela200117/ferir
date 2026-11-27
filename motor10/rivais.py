@@ -354,7 +354,7 @@ def _r_chefe(E, pid, ids, pl):
     if (E['lugares'].get(e, {}).get('bichos') or {}).get(esp, 0) < 1: return
     c = chance_contra(E, ids, _bando(esp, 1, rs))
     if rs.random() < c:
-        cat = estado.especie(esp)['cat']; txt = f"{E['gente'][pid]['nome']} mata {estado.especie(esp)['nome']} {estado.em(E, e)}"
+        cat = estado.especie(esp)['cat']; txt = f"{E['gente'][pid]['nome']} mata {estado.especie(esp)['nome']} {estado.em(E, e)}" + noticias.sinete(E, pid)       # (fase 1a) o sinete da arma vai na notícia
         estado.aplica(E, 'rival', [['lugar', e, f'bichos.{esp}', 'soma', -1], ['pessoa', pid, 'fama', 'soma', 3 + cat],
                                    ['item', 'nasce', itens.item('nucleo', cat, f"núcleo {T.CATS[cat]} {estado.de_nome(estado.especie(esp)['nome'])}", dono=pid, de=esp, historia=[f"Dia {E['relogio']['dia']}: tirado por {E['gente'][pid]['nome']} {estado.em(E, e)}"])]]
                       + noticias.nova(E, e, txt, 2, ('rival',)), onde=e, quem=ids, texto=txt)

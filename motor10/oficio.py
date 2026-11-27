@@ -42,9 +42,11 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 oficio.py pede|forjar ferramenta martelo|tenaz CATEGORIA ["Nome"]     as FERRAMENTAS (a Lei do Valor): o martelo de forja (2 de metal, 1 de madeira) e a tenaz
                                                           (1 de metal, 1 de madeira), cada um +1, +3, +5, +7, +9, +11 do Comum ao Lendário; `ferramenta forja|couro CAT`, o jogo
                                                           (os dois de uma vez); a afinada +1; os poderes da Rara para cima (REGRAS 7.14)
-  python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado]    (a parte 2, fase 1a) escolhe UM dos efeitos por escolher da peça (cada escolha, um evento): sem CHAVE,
+  python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado] [perde]    (a parte 2, fase 1a) escolhe UM dos efeitos por escolher da peça (cada escolha, um evento): sem CHAVE,
                                                           a lista do que cabe (a porta pela força, o número, o cheio, o que vale); `auto`, pela sua receita; `cheio`, o número da
-                                                          categoria de cima num efeito de número. NA FASE 1a SÓ A FERRAMENTA ESCOLHE: a arma, a armadura e o resto guardam os efeitos
+                                                          categoria de cima num efeito de número (o de número que é o último lugar do cheio o leva sozinho); `perde`, escolher assim
+                                                          mesmo o que deixa um cheio sem efeito de número onde cair (sem `perde`, a escolha é recusada, com a frase).
+                                                          NA FASE 1a SÓ A FERRAMENTA ESCOLHE: a arma, a armadura e o resto guardam os efeitos
                                                           ("efeitos por escolher: N (o catálogo de luta chega na próxima fase)")
   python3 oficio.py receita [TIPO chave,chave|nada]      a SUA RECEITA, uma ordem que vale sempre (TIPO: martelo, tenaz, jogo, ou ferramenta para todas): a ferramenta que nasce com efeitos
                                                           escolhe por ela, na hora, e a mesa só relata (`oficio.py receita tenaz prumo,afinada,fagulha`); sem nada, mostra as suas
@@ -246,18 +248,19 @@ def _resolve(total, a0, b0, teto, fc, prumo=0, lastro=False):
     return [(1.0, x)]
 
 
-def conta_efeitos(x, n20=0, n19=0, fagulha=False, tempera=0, molde=False):
+def conta_efeitos(x, n20=0, n19=0, fagulha=False, tempera=0, molde=False, molde_num=False):
     """(a parte 2, fase 1a: a conta em ordem do contrato, 5.4) os efeitos de uma obra já resolvida: n = os da faixa + 1 por cada 20 + as fagulhas (os 19 que abrem, com a
     fagulha) + o quase; efeitos = o mínimo entre o teto de efeitos da categoria FINAL e n, mais a obra-prima no teto; o que passa do teto (e a têmpera) vira CHEIO
-    (cheios = mínimo entre os efeitos e a sobra + a têmpera). O MOLDE (se a peça sai na categoria da obra ou acima: quem chama decide) é +1 fora do teto, já escolhido.
+    (cheios = mínimo entre os efeitos que podem levá-lo e a sobra + a têmpera: os por escolher, e o do molde se ele é de número). O MOLDE (se a peça sai na categoria da obra
+    ou acima: quem chama decide) é +1 fora do teto, já escolhido; molde_num: o efeito dito no molde tem número (o prumo, a têmpera), e leva o primeiro cheio.
     A peça perdida ou salva pela ferramenta sai sem efeito. Devolve {n, faixa, vintes, fagulhas, quase, livres, cheios, molde, efeitos, teto, sobra}."""
     if x['cat'] is None or x.get('salva'):
         return dict(n=0, faixa=0, vintes=0, fagulhas=0, quase=0, livres=0, cheios=0, molde=0, efeitos=0, teto=O.efeitos_max(x['cat'] or 0), sobra=0)
     cap = O.efeitos_max(x['cat']); fag = n19 if fagulha else 0; q = 1 if x.get('quase') else 0
     n = x['faixa'] + n20 + fag + q
     livres = min(cap, n) + x.get('mais_efeito', 0)
-    cheios = min(livres, max(0, n - cap) + tempera)
     m = 1 if molde else 0
+    cheios = min(livres + (1 if m and molde_num else 0), max(0, n - cap) + tempera)
     return dict(n=n, faixa=x['faixa'], vintes=n20, fagulhas=fag, quase=q, livres=livres, cheios=cheios, molde=m, efeitos=livres + m, teto=cap + x.get('mais_efeito', 0) + m, sobra=max(0, n - cap))
 
 
@@ -307,15 +310,16 @@ def _dados():
 _FACE = {(2, False): (1, 1), (1, False): (1, 9), (0, True): (20, 20), (0, False): (9, 9)}     # as faces que o _resolve lê (os 1, os dois 20), postas por quem representa o grupo
 
 
-def dist_efeitos(soma, teto, fc=-1, prumo=0, lastro=False, fagulha=False, tempera=0, molde_cat=None, detalhe=False):
+def dist_efeitos(soma, teto, fc=-1, prumo=0, lastro=False, fagulha=False, tempera=0, molde_cat=None, detalhe=False, molde_num=False):
     """(a parte 2, fase 1a) a conta exata da obra inteira: {(categoria ou None, efeitos, cheios): chance} para quem soma `soma` ao 2d20 explosivo, com o teto, a ferramenta
-    (fc: o poder; prumo, lastro, fagulha, têmpera: os efeitos dela) e o molde (a categoria da obra: o molde vale na peça que sai nela ou acima). A categoria é a do dist_valor.
+    (fc: o poder; prumo, lastro, fagulha, têmpera: os efeitos dela) e o molde (a categoria da obra: o molde vale na peça que sai nela ou acima; molde_num: o efeito do molde
+    tem número). A categoria é a do dist_valor.
     detalhe: as chaves levam também os efeitos da faixa e se foram os dois 1 ((cat, efeitos, cheios, faixa, dois_1)), para a conta da peça colada."""
     res = {}
     for (uns, vinte2, n19, n20, td), p in _dados():
         a0, b0 = _FACE[(uns, vinte2)]
         x = _resolve(td + soma, a0, b0, teto, fc, prumo, lastro)[0][1]
-        c = conta_efeitos(x, n20, n19, fagulha, tempera, molde=molde_cat is not None and x['cat'] is not None and not x['salva'] and x['cat'] >= molde_cat)
+        c = conta_efeitos(x, n20, n19, fagulha, tempera, molde=molde_cat is not None and x['cat'] is not None and not x['salva'] and x['cat'] >= molde_cat, molde_num=molde_num)
         k = (x['cat'], c['efeitos'], c['cheios']) + ((x['faixa'], uns == 2) if detalhe else ())
         res[k] = res.get(k, 0) + p
     return res
@@ -349,13 +353,14 @@ def regua(teto, prumo=0, lastro=False):
     return out
 
 
-def diz_regua(teto, prumo=0, lastro=False, fc=-1):
+def diz_regua(teto, prumo=0, lastro=False, fc=-1, fagulha=False):
     """a régua em uma linha, para a mesa: o que faltou para a CD de cima dá efeitos, até o teto da obra"""
     partes = []
     for k, degraus in regua(teto, prumo, lastro):
         cab = f"{FEM[k]}" + (f' (o teto desta obra: a régua para em {O.TETO_FAIXA})' if k >= teto else '')
         partes.append(cab + ' ' + ' · '.join(f"{de}–{ate}: {n}" if ate is not None and ate != de else f"{de}: {n}" if ate is not None else f"{de} em diante: {n}" for n, de, ate in degraus))
-    extra = ['mais 1 por cada 20 dos dados'] + (['o quase: +1 quando faltam 6 ou menos para a CD de cima, abaixo do teto'] if fc >= O.OBRA_PRIMA_FACIL else [])
+    extra = (['mais 1 por cada 20 dos dados'] + (['mais 1 por cada dado que abre em 19 (a fagulha)'] if fagulha else [])
+             + ([f'o quase: +1 quando faltam {O.QUASE_JANELA} ou menos para a CD de cima, abaixo do teto'] if fc >= O.OBRA_PRIMA_FACIL else []))
     if prumo: extra.insert(0, f'com o prumo {prumo} (a falta conta {prumo} a menos)')
     if lastro: extra.insert(0, 'com o lastro (a faixa dá pelo menos 1)')
     tetos = ', '.join(f"{FEM[k]} {O.efeitos_max(k)}" for k in range(min(teto, len(O.VALOR_CD) - 1) + 1))
@@ -377,19 +382,41 @@ def valor(E, pid, cat, oficio='forja', lid=None):
     return c
 
 
-def efeitos_de(c, molde_cat=None):
-    """(fase 1a) a conta exata dos efeitos desta conta da Lei do Valor (o valor() não a faz sozinho: é a conta mais pesada, e só a mesa a pede)"""
+def cheios_da_ferramenta(cat, degrau=False):
+    """quantos cheios uma FERRAMENTA desta categoria pode guardar: um por efeito de número que a porta dela abre (Comum 0; Incomum e Rara 1, o prumo; da Épica para cima 2,
+    com a têmpera), e mais 1 com o degrau emprestado, se ele abre um de número (a têmpera na Incomum e na Rara; o prumo na Comum). O resto se perde ao nascer"""
+    n = len(O.numeros_que_cabem(cat))
+    return n + (1 if degrau and len(O.numeros_que_cabem(cat, True)) > n else 0)
+
+
+def efeitos_de(c, molde_cat=None, ferramenta=False, molde_num=False):
+    """(fase 1a) a conta exata dos efeitos desta conta da Lei do Valor (o valor() não a faz sozinho: é a conta mais pesada, e só a mesa a pede). ferramenta: a obra é de uma
+    ferramenta, e os cheios de cada saída ficam nos que ela pode guardar (o resto se perde ao nascer: cheios_da_ferramenta)"""
     fx = c.get('fx') or {}; fc = -1 if c.get('ferramenta_cat') is None else c['ferramenta_cat']
-    d = dist_efeitos(c['soma'], c['teto'], fc, fx.get('prumo', 0), bool(fx.get('lastro')), bool(fx.get('fagulha')), fx.get('tempera', 0), molde_cat, detalhe=True)
+    d = dist_efeitos(c['soma'], c['teto'], fc, fx.get('prumo', 0), bool(fx.get('lastro')), bool(fx.get('fagulha')), fx.get('tempera', 0), molde_cat, detalhe=True, molde_num=molde_num)
+    if ferramenta:
+        corta = {}
+        for k, q in d.items():
+            ch = 0 if k[0] is None else min(k[2], k[1], cheios_da_ferramenta(k[0], bool(fx.get('degrau'))))
+            kk = (k[0], k[1], ch) + tuple(k[3:]); corta[kk] = corta.get(kk, 0) + q
+        d = corta
     c['efeitos'] = resumo_efeitos(d); return c['efeitos']
 
 
-def diz_efeitos(c):
-    """os efeitos em uma linha: por obra, a peça com efeito, a colada; e a categoria de baixo colada na de cima (a Incomum de 3 ou 4)"""
-    r = c.get('efeitos') or efeitos_de(c)
+def _pct(x, casas=0): return f"{100 * x:.{casas}f}%".replace('.', ',')       # a vírgula da mesa
+def _dec(x, casas=2): return f"{x:.{casas}f}".replace('.', ',')
+
+
+def diz_efeitos(c, peca=None):
+    """os efeitos em uma linha: por obra, a peça com efeito, a colada; e a categoria de baixo colada na de cima (a Incomum de 3 ou 4). Na obra de uma FERRAMENTA, os cheios
+    contados são os que ela guarda (a Comum, nenhum; a Incomum e a Rara, só o prumo)"""
+    ferr = bool(peca) and escolhe_agora(peca)
+    r = c.get('efeitos') if c.get('efeitos') and not ferr else efeitos_de(c, ferramenta=ferr)
     col = {k: sum(q for e, q in v['ef'].items() if e >= 3) for k, v in r['cat'].items()}
-    alto = ' · '.join(f"{FEM[k]} com 3 ou mais {col[k]:.1%}" for k in sorted(col) if col[k] >= 0.0005)
-    return (f"os efeitos, pela conta exata: {r['efeitos']:.2f} efeito por obra ({r['cheios']:.2f} cheio), obra com efeito {r['com']:.0%}, peça colada (3 ou 4 só da faixa) {r.get('colada', 0):.0%}"
+    alto = ' · '.join(f"{FEM[k]} com 3 ou mais {_pct(col[k], 1)}" for k in sorted(col) if col[k] >= 0.0005)
+    cheio = (f"{_dec(r['cheios'])} cheio guardado por obra: na ferramenta o cheio só cai no prumo e na têmpera (a Comum não guarda nenhum; a Incomum e a Rara, só o do prumo), e a sobra se perde ao nascer"
+             if ferr else f"{_dec(r['cheios'])} cheio")
+    return (f"os efeitos, pela conta exata: {_dec(r['efeitos'])} efeito por obra ({cheio}), obra com efeito {_pct(r['com'])}, peça colada (3 ou 4 só da faixa) {_pct(r.get('colada', 0))}"
             + (f"; {alto}" if alto else ''))
 
 
@@ -404,7 +431,7 @@ def diz_valor(c):
     porta = f" (a porta do degrau: sem a mão de Treinado, a peça não passa da matéria)" if c.get('porta') else ''
     fx = c.get('fx') or {}; fc = -1 if c.get('ferramenta_cat') is None else c['ferramenta_cat']
     return (f"2d20 + {c['soma']} ({partes}) · a peça sai na maior categoria que o total alcança ({cds}; o teto desta obra: {T.CATS[c['teto']]}{porta}): {tab}"
-            + f" · {diz_regua(c['teto'], fx.get('prumo', 0), bool(fx.get('lastro')), fc)}")
+            + f" · {diz_regua(c['teto'], fx.get('prumo', 0), bool(fx.get('lastro')), fc, bool(fx.get('fagulha')))}")
 
 
 def diz_conta(c, pouco='sai uma abaixo', perde='perde tudo', banca='oficina'):
@@ -503,7 +530,7 @@ def pede(E, pid, peca):
     if v is None: L.append(_sem_banca(E, p['lugar'], of) + ': a obra não abre.')
     elif of in O.VALOR_OFICIOS:
         c = valor(E, pid, cat, of); L.append('A soma, hoje e aqui (a Lei do Valor): ' + diz_valor(c))
-        L.append('E ' + diz_efeitos(c) + (f" · {diz_quem_escolhe(peca)}"))
+        L.append('E ' + diz_efeitos(c, peca) + (f" · {diz_quem_escolhe(peca)}"))
     else: L.append('O teste final, hoje e aqui: ' + diz_conta(conta(E, pid, cat, of), pouco='sai uma abaixo' if cat else 'sai tosca', banca='runas' if of == 'encanto' else 'oficina'))
     if mao(p, of) < O.MAO_DA_OBRA[cat]:
         L.append(f"AVISO: a obra {FEM[cat]} pede mão de {T.MAESTRIAS[O.MAO_DA_OBRA[cat]]}; a sua é de {T.MAESTRIAS[mao(p, of)]}. Pode tentar; o que entra na obra não volta.")
@@ -549,6 +576,7 @@ def _molde_ok(E, pid, peca, chave):
     if not escolhe_agora(peca): sys.exit('na fase 1a só a ferramenta escolhe efeitos: o molde de uma arma, armadura ou escudo espera o catálogo de luta (a próxima fase)')
     if k not in O.FERRAMENTA_EFEITOS or k in ESCOLHE_NAO: sys.exit(f'"{chave}" não é efeito de ferramenta (os que há: {", ".join(O.FERRAMENTA_EFEITOS)})')
     if not O.cabe_forca(O.FERRAMENTA_EFEITOS[k][0], peca['cat']): sys.exit(f'o molde "{k}" é {O.FERRAMENTA_EFEITOS[k][0]}: a obra {FEM[peca["cat"]]} não abre essa porta (fraco na Comum, normal na Incomum, forte na Épica, apelão na Lendária)')
+    if k == 'poupa_ferro' and peca.get('oficio') == 'couro': sys.exit('o poupa-ferro poupa o metal: a ferramenta de couro não o leva (a obra do couro não tem metal)')
     return k
 
 
@@ -630,12 +658,14 @@ def _remata_valor(E, o):
     n19 = (a0 == 19) + (b0 == 19)                            # os dados que ABREM em 19 (a fagulha os conta como um 20)
     def saida(total):
         x_ = _resolve(total, a0, b0, c['teto'], fc, prumo, lastro)[0][1]
-        return x_, conta_efeitos(x_, n20, n19, fagulha, tempera, molde=bool(km) and x_['cat'] is not None and not x_['salva'] and x_['cat'] >= cat)
-    x, ce = saida(r['total'])
-    if c['oculto']:                                          # o dom escondido FEZ a diferença se, sem ele, a peça sairia noutra categoria (ou se perderia), ou (fase 1a) com outro número de efeitos
-        xs, cs = saida(r['total'] - c['oculto'])
-        r['fez'] = (True if xs['cat'] is None else 'faixa') if xs['cat'] != x['cat'] else 'efeitos' if cs['efeitos'] != ce['efeitos'] else False
-    sai = x['cat']; ef = []; it = None; molde_vale = bool(ce['molde'])
+        return x_, conta_efeitos(x_, n20, n19, fagulha, tempera, molde=bool(km) and x_['cat'] is not None and not x_['salva'] and x_['cat'] >= cat, molde_num=O.de_numero(km))
+    x, ce = saida(r['total']); degrau = bool(fx.get('degrau'))
+    if c['oculto']:                                          # o dom escondido FEZ a diferença se, sem ele, a peça sairia noutra categoria (ou se perderia), ou (fase 1a) com outro número de efeitos,
+        xs, cs = saida(r['total'] - c['oculto'])             # ou com menos cheios (os que a peça guarda: a mesa mostra a soma sem o dom, e ela tem de bater com o que a peça leva)
+        cheios_de = lambda ce_: (lambda g: g[2] + sum(1 for e in g[0] if e.get('cheio')))(_guarda(peca['tipo'], x['cat'], ce_, km, degrau)) if x['cat'] is not None else 0
+        r['fez'] = ((True if xs['cat'] is None else 'faixa') if xs['cat'] != x['cat'] else 'efeitos' if cs['efeitos'] != ce['efeitos']
+                    else 'cheio' if cheios_de(cs) != cheios_de(ce) else False)
+    sai = x['cat']; ef = []; it = None
     fim = 'perdeu' if sai is None else 'acertou' if sai >= cat else 'abaixo'
     if sai is not None:
         padrao = molde(peca['tipo'], cat, familia=peca.get('familia'), material=peca.get('material'), cobre=peca.get('cobre'), forma=peca.get('forma') if peca['tipo'] == 'foco' else None, talhe=peca.get('talhe'), oficio=(peca.get('forma') if peca.get('forma') in ('martelo', 'tenaz') else peca.get('oficio')) if peca['tipo'] == 'ferramenta' else None)['nome']
@@ -645,32 +675,27 @@ def _remata_valor(E, o):
         como = f"Dia {dia}: {p['nome']} forjou {_em(E, lid)}" + (f', com {nuc}' if nuc else '') + f" (a soma: {teste.total_visto(r)}; a obra era de matéria {FEM[min(cat, M.MATERIA_ATE)]}" + (f" e núcleo {T.CATS[cat]}" if cat > M.MATERIA_ATE else '') + ')'
         if x['tosca']: it['dur'][0] = max(1, int(it['dur'][1] * O.TOSCA)); como += '; a peça saiu tosca'
         it['teto_efeitos'] = ce['teto']                      # (fase 1a) o teto de efeitos, gravado ao nascer: o da categoria, mais a obra-prima no teto e o molde
-        cheios = ce['cheios']
-        if molde_vale:                                       # o MOLDE DE MESTRE: a peça nasce com o efeito dito ao abrir, fora do teto (e, se é de número e há cheio, cheio)
-            m = {'chave': km}
-            if O.de_numero(km) and cheios: m['cheio'] = True; cheios -= 1
-            it['efeitos'].append(m)
-        if ce['livres']: it['efeitos_livres'] = ce['livres']
-        perdidos = 0
-        if escolhe_agora(it): perdidos = max(0, cheios - cheios_possiveis(it)); cheios -= perdidos      # o cheio sem efeito de número onde cair se perde (a ferramenta Comum não tem nenhum)
+        do_molde, livres, cheios, perdidos = _guarda(peca['tipo'], sai, ce, km, degrau)     # o MOLDE DE MESTRE (fora do teto; o de número leva o primeiro cheio); os cheios que a peça guarda
+        it['efeitos'].extend(do_molde)
+        if livres: it['efeitos_livres'] = livres
         if cheios: it['cheios_livres'] = cheios
         if fx.get('sinete'): it['sinete'] = pid              # o SINETE: a peça leva o nome de quem a forjou
-        if fx.get('degrau'): it['degrau'] = True             # o DEGRAU EMPRESTADO: um efeito dela pode ser da força de cima (só em peça de até 4 efeitos)
-        faixa_txt = _diz_faixa(x, ce, c['teto'], prumo, it) + (f" ({tantos(perdidos, 'cheio se perde', 'cheios se perdem')}: não há efeito de número onde cair numa ferramenta {FEM[sai]})" if perdidos else '')
+        if degrau: it['degrau'] = True                       # o DEGRAU EMPRESTADO: um efeito dela pode ser da força de cima (só em peça de até 4 efeitos)
+        faixa_txt = _diz_faixa(x, ce, c['teto'], prumo, it, perdidos=perdidos, molde_cheio=any(e.get('cheio') for e in do_molde))
         if faixa_txt: como += f"; {faixa_txt}"
         if x['como']: como += f"; {x['como']}"
         if nid and L[nid].get('de'): it['nucleo_de'] = L[nid]['de']
         it['historia'].append(como); ef.append(['item', 'nasce', it])
         for grau, quer in sorted(O.FEITO_OBRA.items()):                     # o feito: uma obra nascida da categoria certa (ou melhor)
             if it['cat'] >= quer and p.get('marca', {}).get(f'feito_{of}', 0) < grau: ef.append(['pessoa', pid, f'marca.feito_{of}', 'poe', grau])
-    volta = {k: n // 2 for k, n in (o.get('materia') or {}).items() if n // 2} if sai is None and fx.get('recobro') else {}       # o RECOBRO: a obra perdida devolve metade da matéria
+    volta = recobro(o.get('materia') or {}) if sai is None and fx.get('recobro') else {}       # o RECOBRO: a obra perdida devolve metade da matéria (para cima, no total)
     ef += [['pessoa', pid, 'carga.' + k, 'soma', n] for k, n in volta.items()]
     if nid: ef.append(['item', nid, 'some'])
     ef.append(['obra', oid, 'fecha'])
     if talento.decidiu(r): ef += talento.mostra(E, pid)
     conta_txt = f"soma {teste.total_visto(r)}"
     if sai is None: txt = (f"a obra de {_peca(peca)} se perde ({conta_txt}" + (f"; {x['como']}" if x['como'] else f", abaixo da CD do Comum, {O.VALOR_CD[0]}") + f"): some a matéria ({_lista(o['materia'])})" + (f' e some {nuc}' if nuc else '')
-                           + (f"; o recobro devolve {_lista(volta)}" if volta else '; o recobro não devolve nada (metade, para baixo, de cada matéria)' if fx.get('recobro') else ''))
+                           + (f"; o recobro devolve {_lista(volta)}" if volta else '; o recobro não tinha o que devolver' if fx.get('recobro') else ''))
     else:
         txt = f"{p['nome']} forja {peca['nome'] if nome else _peca(it)}: {conta_txt}, a peça sai {FEM[sai]}" + (' (tosca)' if x['tosca'] else '')
         txt += (f"; {faixa_txt}" if faixa_txt else '') + (f"; {x['como']}" if x['como'] else '')
@@ -685,24 +710,53 @@ def _remata_valor(E, o):
     return dict(obra=oid, fim=fim, item=iid, rolagem=r, texto=out, sai=sai, cat=cat, efeitos=ce)
 
 
+def _guarda(tipo, sai, ce, km=None, degrau=False):
+    """o que a peça guarda ao nascer, pela conta (ce): (o efeito do molde, os efeitos por escolher, os cheios por escolher, os cheios que se perdem). O MOLDE de número leva o
+    primeiro cheio. Na FERRAMENTA, o cheio sem efeito de número onde cair se perde já ao nascer (a Comum não tem nenhum; a Incomum e a Rara, só o prumo; com o degrau
+    emprestado, mais um de número da força de cima)."""
+    do_molde = []; cheios = ce['cheios']
+    if ce['molde'] and km:
+        m = {'chave': km}
+        if O.de_numero(km) and cheios: m['cheio'] = True; cheios -= 1
+        do_molde.append(m)
+    livres = ce['livres']; perdidos = max(0, cheios - livres); cheios -= perdidos       # (um cheio por efeito por escolher: a conta já os limita)
+    falsa = dict(tipo=tipo, cat=sai, efeitos=list(do_molde), efeitos_livres=livres, **({'degrau': True} if degrau else {}))
+    if escolhe_agora(falsa): mais = max(0, cheios - cheios_possiveis(falsa)); cheios -= mais; perdidos += mais
+    return do_molde, livres, cheios, perdidos
+
+
+def recobro(mat):
+    """o RECOBRO (fase 1a): a matéria que a obra perdida devolve: a METADE, arredondada para cima no total, a começar pela principal. De cada matéria volta a metade, para
+    baixo; a meia unidade que sobra no total volta das matérias de conta ímpar, a principal primeiro (a tenaz, 1 de metal e 1 de madeira: volta 1 de metal; o martelo de forja,
+    2 e 1: volta 1 e 1; a espada, 3 de metal: volta 2)"""
+    volta = {k: n // 2 for k, n in mat.items()}; quer = (sum(mat.values()) + 1) // 2
+    for k in sorted((k for k, n in mat.items() if n % 2), key=lambda k: -mat[k]):
+        if sum(volta.values()) >= quer: break
+        volta[k] += 1
+    return {k: n for k, n in volta.items() if n}
+
+
 def _diz_fx(fx):
-    """os efeitos das ferramentas em uso que mexem na obra, em palavras (ou '')"""
+    """os efeitos das ferramentas em uso, em palavras (ou ''): os que mexem na obra e os do conserto e do ajuste"""
     P = []
     if fx.get('prumo'): P.append(f"prumo {fx['prumo']}")
     if fx.get('lastro'): P.append('lastro')
     if fx.get('fagulha'): P.append('fagulha')
     if fx.get('tempera'): P.append(f"têmpera {fx['tempera']}")
+    if fx.get('afinada'): P.append(f'afinada +{O.VALOR_AFINADA}')
     if fx.get('recobro'): P.append('recobro')
     if fx.get('sinete'): P.append('sinete')
     if fx.get('poupa_ferro'): P.append('poupa-ferro')
+    if fx.get('remendo'): P.append(f"remendo {fx['remendo']} por bloco")
+    if fx.get('mao_de_medida'): P.append(f'mão de medida (o ajuste: metade dos blocos, +{O.MEDIDA_TESTE})')
     if fx.get('molde'): P.append('molde de mestre')
     if fx.get('degrau'): P.append('degrau emprestado')
     return ('os efeitos das suas ferramentas: ' + ', '.join(P)) if P else ''
 
 
-def _diz_faixa(x, ce, teto, prumo=0, it=None):
+def _diz_faixa(x, ce, teto, prumo=0, it=None, perdidos=0, molde_cheio=False):
     """A FAIXA EM PALAVRAS (fase 1a), para o remate e a história da peça: "faltaram 2 para a Rara (80): no fio, 4 da faixa, 1 dos 20: 4 efeitos por escolher (o teto da Incomum)
-    e 1 cheio". '' se a peça se perdeu ou foi salva pela ferramenta (sai sem efeito)."""
+    e 1 cheio". '' se a peça se perdeu ou foi salva pela ferramenta (sai sem efeito). perdidos: os cheios que a peça não guarda (a ferramenta sem efeito de número onde cair)."""
     k = x.get('k')
     if k is None or x['cat'] is None or x.get('salva'): return ''
     cima = O.cd_de_cima(k); nome_cima = FEM[k + 1] if k + 1 < len(FEM) else 'Mítica'
@@ -717,8 +771,10 @@ def _diz_faixa(x, ce, teto, prumo=0, it=None):
     if not n and not ce['molde']: fim = 'nenhum efeito'
     else:
         fim = (f"{tantos(n, 'efeito por escolher', 'efeitos por escolher')}" if n else '') + (f" (o teto da {FEM[x['cat']]}: {cap})" if ce['sobra'] else '')
-        if ce['cheios']: fim += f", e {tantos(ce['cheios'], 'cheio', 'cheios')} (o número da categoria de cima num efeito de número" + (', com a têmpera' if ce['cheios'] > ce['sobra'] else '') + ')'
-        if ce['molde']: fim = (fim + ', e ' if n else '') + 'o efeito do molde, fora do teto'
+        fica = ce['cheios'] - perdidos - (1 if molde_cheio else 0)          # os cheios por escolher que a peça guarda
+        if fica > 0: fim += f", e {tantos(fica, 'cheio', 'cheios')} (o número da categoria de cima num efeito de número" + (', com a têmpera' if ce['cheios'] > ce['sobra'] else '') + ')'
+        if ce['molde']: fim = (fim + ', e ' if n else '') + 'o efeito do molde, fora do teto' + (' (cheio)' if molde_cheio else '')
+        if perdidos: fim += f"; a sobra de {tantos(perdidos, 'cheio', 'cheios')} se perde: não há efeito de número onde cair numa ferramenta {FEM[x['cat']]}"
         if it is not None and n and not escolhe_agora(it): fim += ' (o catálogo de luta chega na próxima fase)'
     return f"{inicio}, {', '.join(partes)} = {total}: {fim}"
 
@@ -776,7 +832,7 @@ def _diz_poder(fc):
     """o poder das ferramentas pela maior categoria delas, em palavras (a Lei do Valor)"""
     P = []
     if fc >= 2: P.append(f'a matéria só se perde {O.VALOR_SEGURA} abaixo da CD do Comum (a peça sai Comum, tosca)' if fc < O.NADA_SE_PERDE else 'a matéria nunca se perde, nem nos dois 1 (a peça sai, no pior, Comum e tosca)')
-    if fc >= O.OBRA_PRIMA_FACIL: P.append(f'o QUASE: +1 efeito quando a soma fica a {O.QUASE_JANELA} ou menos da CD seguinte')
+    if fc >= O.OBRA_PRIMA_FACIL: P.append(f'o QUASE: +1 efeito quando faltam {O.QUASE_JANELA} ou menos para a CD de cima, abaixo do teto da obra (com ou sem dado especial)')
     if fc >= O.ACIMA_DO_FERRO: P.append('ACIMA DO FERRO: na obra com núcleo, o teto sobe uma categoria')
     return (' · poder: ' + '; '.join(P)) if P else ''
 
@@ -930,31 +986,48 @@ def efeitos_que_cabem(it, emprestado=False):
     tem. Na arma, na armadura e no resto, nenhum na fase 1a: os efeitos delas ficam por escolher até o catálogo de luta (a fase 1b)."""
     if not escolhe_agora(it): return []
     tem_ja = {e.get('chave') for e in it.get('efeitos') or [] if isinstance(e, dict)}
-    return [k for k, v in O.FERRAMENTA_EFEITOS.items() if k not in tem_ja and k not in ESCOLHE_NAO and O.cabe_forca(v[0], it['cat'], emprestado)]
+    ja_apelao = any(O.apelao_de_regra(k) for k in tem_ja)          # um apelão de regra por peça (o molde e o degrau não andam juntos)
+    return [k for k, v in O.FERRAMENTA_EFEITOS.items() if k not in tem_ja and k not in ESCOLHE_NAO and O.cabe_forca(v[0], it['cat'], emprestado)
+            and not (ja_apelao and O.apelao_de_regra(k)) and not (k == 'poupa_ferro' and it.get('oficio') == 'couro')]      # o poupa-ferro poupa o metal: o couro não tem
 
 
 def cheios_possiveis(it):
-    """quantos cheios a peça ainda pode usar: um por efeito de número que ainda cabe nela (na ferramenta, o prumo e a têmpera); na peça que não escolhe agora, os por escolher"""
-    if not escolhe_agora(it): return it.get('efeitos_livres') or 0
-    return min(it.get('efeitos_livres') or 0, sum(1 for k in efeitos_que_cabem(it) if O.de_numero(k)))
-
-
-def _sorte_fixa(E, chave):
-    """o acaso do mundo que NÃO muda com o dia (o jeito de uma pessoa, a ordem de uma peça): sai da semente e da chave. Mesma semente, mesma escolha."""
-    import hashlib, random
-    return random.Random(int.from_bytes(hashlib.sha256(f"{E['relogio']['semente']}|{chave}".encode()).digest()[:8], 'big'))
+    """quantos cheios a peça ainda pode usar: um por efeito de número que ainda cabe nela (na ferramenta, o prumo e a têmpera; com o DEGRAU EMPRESTADO ainda por usar, e a peça
+    de até 4 efeitos, mais o de número que só entra emprestado), até os por escolher; na peça que não escolhe agora, os por escolher"""
+    livres = it.get('efeitos_livres') or 0
+    if not escolhe_agora(it): return livres
+    cabem = efeitos_que_cabem(it); n = sum(1 for k in cabem if O.de_numero(k))
+    if it.get('degrau') and not _tem_emprestado(it) and len(it.get('efeitos') or []) + livres <= O.DEGRAU_ATE and any(O.de_numero(k) for k in efeitos_que_cabem(it, emprestado=True) if k not in cabem): n += 1
+    return min(livres, n)
 
 
 def jeito(E, quem):
-    """o JEITO de um ferreiro (ou de uma loja: quem é o id do lugar), sorteado pela semente e pelo id: do gume, da guarda, do fôlego ou do tranco"""
-    return O.JEITOS[_sorte_fixa(E, f'jeito|{quem}').randrange(len(O.JEITOS))]
+    """o JEITO de um ferreiro (ou de uma loja: quem é o id do lugar), sorteado pela semente e pelo id (estado.sorte_fixa: não muda com o dia): do gume, da guarda, do fôlego ou do tranco"""
+    return O.JEITOS[estado.sorte_fixa(E, f'jeito|{quem}').randrange(len(O.JEITOS))]
 
 
 def receita_do_jeito(E, jt, iid):
-    """a receita do jeito, numa ferramenta: os efeitos de NÚMERO primeiro (para o cheio ter onde cair), depois os do jeito, e o resto na ordem da semente (o empate)"""
-    numero = [k for k in O.FERRAMENTA_EFEITOS if O.de_numero(k)]; dele = [k for k in O.JEITO_FERRAMENTA[jt] if k not in numero]
-    resto = [k for k in O.FERRAMENTA_EFEITOS if k not in numero and k not in dele]; _sorte_fixa(E, f'efeito|{iid}').shuffle(resto)
+    """a receita do jeito, numa ferramenta: os efeitos de NÚMERO primeiro (para o cheio ter onde cair), na ordem da semente; depois os do jeito; e o resto na ordem da semente (o empate)"""
+    numero = [k for k in O.FERRAMENTA_EFEITOS if O.de_numero(k)]; estado.sorte_fixa(E, f'numero|{iid}').shuffle(numero)
+    dele = [k for k in O.JEITO_FERRAMENTA[jt] if k not in numero]
+    resto = [k for k in O.FERRAMENTA_EFEITOS if k not in numero and k not in dele]; estado.sorte_fixa(E, f'efeito|{iid}').shuffle(resto)
     return numero + dele + resto
+
+
+def perde_cheio(it, k, cheio=False, emprestado=False):
+    """quantos cheios por escolher se perderiam se esta escolha entrasse agora (o cheio sem efeito de número onde cair): 0 se nenhum"""
+    reg = {'chave': k, **({'cheio': True} if cheio else {}), **({'emprestado': True} if emprestado else {})}
+    depois = dict(it, efeitos=list(it.get('efeitos') or []) + [reg], efeitos_livres=(it.get('efeitos_livres') or 0) - 1)
+    resta = (it.get('cheios_livres') or 0) - (1 if cheio else 0)
+    return max(0, resta - (cheios_possiveis(depois) if depois['efeitos_livres'] > 0 else 0))
+
+
+def onde_cai_cheio(it):
+    """os efeitos de número que ainda cabem na peça (onde o cheio pode cair), em palavras: "prumo", "prumo ou têmpera" """
+    import itens as IT
+    cabem = efeitos_que_cabem(it); nomes = [IT.NOME_EFEITO.get(k, k) for k in cabem if O.de_numero(k)]
+    if it.get('degrau') and not _tem_emprestado(it): nomes += [IT.NOME_EFEITO.get(k, k) + ' (do degrau emprestado)' for k in efeitos_que_cabem(it, emprestado=True) if O.de_numero(k) and k not in cabem]
+    return ' ou '.join(nomes) or 'nenhum'
 
 
 def receita_de(E, pid, it):
@@ -976,34 +1049,49 @@ def _escolhe(E, iid, k, cheio=False, emprestado=False, quem=None, como=''):
     it = E['itens']['itens'][iid]; reg = {'chave': k}
     if cheio: reg['cheio'] = True
     if emprestado: reg['emprestado'] = True
-    livres = (it.get('efeitos_livres') or 0) - 1; cheios = (it.get('cheios_livres') or 0) - (1 if cheio else 0)
-    depois = dict(it, efeitos=list(it.get('efeitos') or []) + [reg], efeitos_livres=livres)
-    cheios = min(cheios, cheios_possiveis(depois)) if livres else 0                    # o cheio sem efeito de número para encher se perde
-    ef = [['item', iid, 'efeito', 'junta', reg], ['item', iid, 'cheios_livres', 'poe', max(0, cheios)], ['item', iid, 'efeitos_livres', 'soma', -1]]
+    perdidos = perde_cheio(it, k, cheio, emprestado)                                    # o cheio sem efeito de número para encher se perde: e a peça diz
+    cheios = max(0, (it.get('cheios_livres') or 0) - (1 if cheio else 0) - perdidos)
+    ef = [['item', iid, 'efeito', 'junta', reg], ['item', iid, 'cheios_livres', 'poe', cheios], ['item', iid, 'efeitos_livres', 'soma', -1]]      # (nesta ordem: o junta confere o cheio antes de ele sair)
     frase = _diz_um(k, it['cat'], cheio, emprestado); nome = E['gente'][quem]['nome'] if quem in E['gente'] else (E['lugares'][quem]['nome'] if quem in E['lugares'] else 'o mundo')
-    ef.append(['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {nome} deu à peça o efeito: {frase}" + (f" ({como})" if como else '')])
+    perde_txt = f" ({tantos(perdidos, 'cheio se perde', 'cheios se perdem')}: não há mais efeito de número onde cair)" if perdidos else ''
+    ef.append(['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {nome} deu à peça o efeito: {frase}" + (f" ({como})" if como else '') + perde_txt])
     estado.aplica(E, 'forjar', ef, onde=E['gente'][quem]['lugar'] if quem in E['gente'] else quem if quem in E['lugares'] else None, quem=[quem] if quem in E['gente'] else [],
-                  texto=f"{nome} escolhe o efeito de {it['nome']}: {frase}" + (f" ({como})" if como else ''))
-    return frase
+                  texto=f"{nome} escolhe o efeito de {it['nome']}: {frase}" + (f" ({como})" if como else '') + perde_txt)
+    return frase + perde_txt
 
 
-def aplica_receita(E, iid, receita, quem=None, como='pela receita'):
+def aplica_receita(E, iid, receita, quem=None, como='pela receita', pergunta=False):
     """escolhe pela receita, um evento por escolha: desce a lista e põe cada efeito que cabe (a porta, o tipo, o repetido), até acabarem os por escolher; o de número leva o
-    cheio enquanto houver. Devolve (os escolhidos em palavras, os que não couberam)."""
-    feitos = []; fora = []
+    cheio enquanto houver. O CHEIO NÃO SE PERDE CALADO: a escolha que deixaria um cheio sem efeito de número onde cair não entra; com `pergunta` (o jogador), a receita PARA
+    ali e a mesa pergunta; sem ela (o mundo, a loja), passa ao próximo da lista. Devolve (os escolhidos em palavras, os que não couberam, a parada: (chave, cheios) ou None)."""
+    feitos = []; fora = []; parou = None
     for k in [O.chave_efeito(x) for x in receita]:
         it = E['itens']['itens'][iid]
         if not it.get('efeitos_livres'): break
         if k not in efeitos_que_cabem(it):
             if k not in {e.get('chave') for e in it.get('efeitos') or []}: fora.append(k)
             continue
-        feitos.append(_escolhe(E, iid, k, cheio=O.de_numero(k) and (it.get('cheios_livres') or 0) > 0, quem=quem, como=como))
-    return feitos, fora
+        cheio = O.de_numero(k) and (it.get('cheios_livres') or 0) > 0; n = perde_cheio(it, k, cheio)
+        if n:
+            if pergunta: parou = (k, n); break
+            continue
+        feitos.append(_escolhe(E, iid, k, cheio=cheio, quem=quem, como=como))
+    return feitos, fora, parou
+
+
+def diz_parou(E, iid, parou):
+    """a frase da receita que parou para não jogar um cheio fora (a mesa pergunta ao jogador)"""
+    k, n = parou; it = E['itens']['itens'][iid]; import itens as IT
+    cabem = efeitos_que_cabem(it); ks = [x for x in cabem if O.de_numero(x)]
+    emp = [x for x in efeitos_que_cabem(it, emprestado=True) if O.de_numero(x) and x not in cabem] if it.get('degrau') and not _tem_emprestado(it) else []
+    cmd = f"`oficio.py efeito {iid} {ks[0]} cheio`" if ks else f"`oficio.py efeito {iid} {emp[0]} cheio emprestado`" if emp else f"`oficio.py efeito {iid}`"
+    return (f"a receita para antes de {IT.NOME_EFEITO.get(k, k)}: ele deixaria {tantos(n, 'cheio', 'cheios')} sem efeito de número onde cair (o cheio só cai em: {onde_cai_cheio(it)}). "
+            f"Escolha você: {cmd} (o de número leva o cheio), ou `oficio.py efeito {iid} {k} perde` (o cheio se perde)")
 
 
 def escolhe_sozinho(E, iid, quem=None, jt=None):
-    """O MUNDO ESCOLHE SOZINHO quando a peça nasce (ou a loja, ao comprar: quem é o id do lugar): pelo jeito de quem escolhe, sorteado pela semente (mesma semente, mesma
-    escolha). Na fase 1a, só na ferramenta. Devolve (o jeito, os escolhidos)."""
+    """O MUNDO ESCOLHE SOZINHO quando a peça nasce (e a loja escolherá ao comprar, quando negociar peça com efeito por escolher: quem é o id do lugar): pelo jeito de quem
+    escolhe, sorteado pela semente (mesma semente, mesma escolha). Na fase 1a, só na ferramenta. Devolve (o jeito, os escolhidos)."""
     it = E['itens']['itens'][iid]
     if not escolhe_agora(it) or not it.get('efeitos_livres'): return None, []
     quem = quem or it.get('dono') or it.get('feito_por'); jt = jt or jeito(E, quem)
@@ -1021,9 +1109,10 @@ def _escolhe_ao_nascer(E, pid, iid):
         return f"{E['gente'][pid]['nome']} escolhe pelo jeito {O.JEITO_DIZ[jt]}: " + (' e '.join(feitos) if feitos else 'nada coube')
     rc = receita_de(E, pid, it); txt = ''
     if rc:
-        feitos, fora = aplica_receita(E, iid, rc, quem=pid, como='pela sua receita')
+        feitos, fora, parou = aplica_receita(E, iid, rc, quem=pid, como='pela sua receita', pergunta=True)
         txt = ('Pela sua receita: ' + ' e '.join(feitos)) if feitos else 'A sua receita não coube nesta peça'
-        if fora: txt += f" (não couberam: {', '.join(fora)}: a porta da {FEM[it['cat']]} ou o tipo da peça)"
+        if fora: txt += f" (não couberam: {', '.join(fora)}: a porta da {FEM[it['cat']]}, o tipo da peça ou um apelão de regra a mais)"
+        if parou: txt += '; ' + diz_parou(E, iid, parou)
     it = E['itens']['itens'][iid]; resta = it.get('efeitos_livres') or 0
     if resta: txt += ('. ' if txt else '') + f"{tantos(resta, 'efeito', 'efeitos')} por escolher" + (f" ({tantos(it['cheios_livres'], 'cheio')})" if it.get('cheios_livres') else '') + f": `oficio.py efeito {iid}` mostra o que cabe"
     return txt
@@ -1031,21 +1120,25 @@ def _escolhe_ao_nascer(E, pid, iid):
 
 def diz_cabem(E, pid, it, iid=None):
     """sem CHAVE: a lista do que cabe na peça, com o número na categoria dela, o número cheio e o que vale (pontos de feitio por obra, medidos no banco)"""
-    L = []
+    import itens as IT
+    L = []; nome_k = lambda k: IT.NOME_EFEITO.get(k, k) + (f' (`{k}`)' if IT.NOME_EFEITO.get(k, k) != k else '')       # o nome da mesa, com a chave do comando quando é outra
     for k in efeitos_que_cabem(it):
         forca, _porta, nums, _faz, vale = O.FERRAMENTA_EFEITOS[k]
-        L.append(f"- {k} ({forca}): {IT_frase(k, it['cat'])}" + (f"; cheio, {O.valor_ferramenta(k, it['cat'], True)}" if nums else '') + f" · vale: {vale}")
+        L.append(f"- {nome_k(k)}, {forca}: {IT_frase(k, it['cat'])}" + (f"; cheio, {O.valor_ferramenta(k, it['cat'], True)}" if nums else '') + f" · vale: {vale}")
     if it.get('degrau') and not _tem_emprestado(it):
         mais = [k for k in efeitos_que_cabem(it, emprestado=True) if k not in efeitos_que_cabem(it)]
-        if mais: L.append('- com o DEGRAU EMPRESTADO (`emprestado`; só um, e só em peça de até 4 efeitos): ' + ', '.join(mais))
+        if mais: L.append('- com o DEGRAU EMPRESTADO (`emprestado`; só um, e só em peça de até 4 efeitos): ' + ', '.join(nome_k(k) for k in mais))
+    if it.get('cheios_livres'): L.append(f"- o cheio só cai em efeito de número: {onde_cai_cheio(it)}")
     cab = (f"{it['nome']} ({FEM[it['cat']]}): {tantos(it.get('efeitos_livres') or 0, 'efeito', 'efeitos')} por escolher" + (f", {tantos(it['cheios_livres'], 'cheio')} (só em efeito de número: diga `cheio`)" if it.get('cheios_livres') else '')
            + f"; o teto de efeitos dela: {teto_de(it)}. Cabem (a porta da {FEM[it['cat']]}: {O.forca_da_cat(it['cat'])}; `oficio.py efeito {iid or 'ITEM'} CHAVE [cheio]`, ou `auto`, pela receita):")
     return '\n'.join([cab] + (L or ['- nada (a peça já tem tudo o que a porta dela abre)']))
 
 
-def efeito(E, pid, iid, chave=None, cheio=False, emprestado=False, valor=None):
+def efeito(E, pid, iid, chave=None, cheio=False, emprestado=False, perde=False):
     """quem tem a peça escolhe UM dos efeitos por escolher (cada escolha, um evento). Na fase 1a, SÓ A FERRAMENTA escolhe: a arma, a armadura e o resto guardam os efeitos
-    até o catálogo de luta. Sem chave: a lista do que cabe. chave 'auto': pela receita do jogador (ou, sem ela, pela receita da guarda)."""
+    até o catálogo de luta. Sem chave: a lista do que cabe. chave 'auto': pela receita do jogador (ou, sem ela, pela receita da guarda).
+    O CHEIO NÃO SE PERDE CALADO: o efeito de número escolhido sem `cheio`, quando o cheio não teria outro lugar, leva o cheio sozinho (e a mesa diz); a escolha que deixaria um
+    cheio sem efeito de número onde cair é recusada, com a frase, a menos que venha `perde` (o jogador escolhe assim mesmo, e o cheio se perde)."""
     p = E['gente'][pid]; it = E['itens']['itens'].get(iid) or sys.exit(f'não há o item "{iid}" no Livro de Itens')
     if it.get('dono') != pid: sys.exit(f"{it['nome']} não é de {p['nome']}: escolhe os efeitos quem tem a peça")
     n = it.get('efeitos_livres') or 0
@@ -1055,10 +1148,10 @@ def efeito(E, pid, iid, chave=None, cheio=False, emprestado=False, valor=None):
     if chave is None: return diz_cabem(E, pid, it, iid)
     if chave == 'auto':
         rc = receita_de(E, pid, it); jt = None if rc else O.RECEITA_AUTO['ferramenta']
-        feitos, fora = aplica_receita(E, iid, rc or receita_do_jeito(E, jt, iid), quem=pid, como='pela sua receita' if rc else f'pela receita {O.JEITO_DIZ[jt]}')
+        feitos, fora, parou = aplica_receita(E, iid, rc or receita_do_jeito(E, jt, iid), quem=pid, como='pela sua receita' if rc else f'pela receita {O.JEITO_DIZ[jt]}', pergunta=True)
         it = E['itens']['itens'][iid]; resta = it.get('efeitos_livres') or 0
         return (f"{it['nome']}, " + ('pela sua receita' if rc else f'pela receita {O.JEITO_DIZ[jt]}') + ': ' + (' e '.join(feitos) if feitos else 'nada coube')
-                + (f" (não couberam: {', '.join(fora)})" if fora else '') + '.' + (f" Ainda há {resta} por escolher." if resta else ''))
+                + (f" (não couberam: {', '.join(fora)})" if fora else '') + (f"; {diz_parou(E, iid, parou)}" if parou else '') + '.' + (f" Ainda há {resta} por escolher." if resta else ''))
     k = O.chave_efeito(chave)
     if k not in O.FERRAMENTA_EFEITOS: sys.exit(f'"{chave}" não é efeito de ferramenta. ' + diz_cabem(E, pid, it, iid))
     if k in {e.get('chave') for e in it.get('efeitos') or []}: sys.exit(f"{it['nome']} já tem {k}: o mesmo efeito não se repete na peça")
@@ -1071,9 +1164,21 @@ def efeito(E, pid, iid, chave=None, cheio=False, emprestado=False, valor=None):
     if not O.cabe_forca(forca, it['cat'], emprestado): sys.exit(f"{k} é {forca}: a porta da {FEM[it['cat']]} não abre essa força (fraco na Comum, normal na Incomum, forte na Épica, apelão na Lendária)")
     if cheio and not O.de_numero(k): sys.exit(f"{k} não tem número: o cheio só vale em efeito de número (o prumo, a têmpera)")
     if cheio and not it.get('cheios_livres'): sys.exit(f"{it['nome']} não tem cheio por escolher (o cheio nasce do que passa do teto de efeitos, e da têmpera)")
+    if O.apelao_de_regra(k) and any(O.apelao_de_regra(e.get('chave')) for e in it.get('efeitos') or []): sys.exit(f"{k} é apelão de regra, e {it['nome']} já leva um: um apelão de regra por peça")
+    if k == 'poupa_ferro' and it.get('oficio') == 'couro': sys.exit('o poupa-ferro poupa o metal: a ferramenta de couro não o leva (a obra do couro não tem metal)')
+    sozinho = ''
+    if O.de_numero(k) and not cheio and it.get('cheios_livres') and perde_cheio(it, k, False, emprestado):     # o cheio não teria outro lugar: vai com ele
+        cheio = True; sozinho = ' (o cheio foi junto, sozinho: sem ele, o cheio se perdia)'
+    n_perde = perde_cheio(it, k, cheio, emprestado)
+    if n_perde and not perde:
+        import itens as IT
+        ks = [x for x in efeitos_que_cabem(it) if O.de_numero(x) and x != k]
+        sys.exit(f"escolher {IT.NOME_EFEITO.get(k, k)} agora deixa {tantos(n_perde, 'cheio')} sem efeito de número onde cair (o cheio só cai em: {onde_cai_cheio(it)}): "
+                 f"{'ele se perderia' if n_perde == 1 else 'eles se perderiam'}. Escolha antes o de número" + (f" (`oficio.py efeito {iid} {ks[0]} cheio`)" if ks else '')
+                 + f", ou diga `perde` para escolher assim mesmo: `oficio.py efeito {iid} {k}{' emprestado' if emprestado else ''} perde`")
     frase = _escolhe(E, iid, k, cheio=cheio, emprestado=emprestado, quem=pid)
     it = E['itens']['itens'][iid]; resta = it.get('efeitos_livres') or 0
-    return f"{it['nome']} ganha o efeito: {frase}." + (f" Ainda há {resta} por escolher" + (f" ({tantos(it['cheios_livres'], 'cheio')})" if it.get('cheios_livres') else '') + '.' if resta else '')
+    return (f"{it['nome']} ganha o efeito: {frase}{sozinho}." + (f" Ainda há {resta} por escolher" + (f" ({tantos(it['cheios_livres'], 'cheio')}: só cai em {onde_cai_cheio(it)})" if it.get('cheios_livres') else '') + '.' if resta else ''))
 
 
 def receita(E, pid, tipo=None, chaves=None):
@@ -1093,8 +1198,9 @@ def receita(E, pid, tipo=None, chaves=None):
         rc[tipo] = novo
     if not estado.aplica(E, 'forjar', [['pessoa', pid, 'marca.receita', 'poe', rc or None]], onde=p['lugar'], quem=[pid],
                          texto=f"{p['nome']} " + (f"apaga a receita de {tipo}" if novo is None else f"põe a receita de {tipo}: {', '.join(novo)}")): return 'A receita já era essa: nada mudou.'
-    return (f"Receita de {tipo}: {', '.join(novo)}. A {tipo if tipo != 'ferramenta' else 'ferramenta'} que nascer com efeitos escolhe por ela, na hora; o que não couber (a porta, o repetido) fica para você."
-            if novo else f"Receita de {tipo} apagada.")
+    artigo = dict(martelo='O martelo de forja', tenaz='A tenaz', jogo='O jogo', ferramenta='A ferramenta')[tipo]
+    return (f"Receita de {tipo}: {', '.join(novo)}. {artigo} que nascer com efeitos escolhe por ela, na hora; o que não couber (a porta, o repetido, um apelão de regra a mais) "
+            f"fica para você, e a receita para antes de jogar um cheio fora (pergunta)." if novo else f"Receita de {tipo} apagada.")
 
 
 # ---------- o preparo ganho no mundo (o Mestre registra) ----------
@@ -1160,6 +1266,7 @@ def ver(E, pid):
     for i, it in por_escolher[:4]:
         L.append(f"Efeitos por escolher em {i} {_peca(it)}: {it['efeitos_livres']}" + ((f" ({tantos(it['cheios_livres'], 'cheio')})" if it.get('cheios_livres') else '') + f" (`oficio.py efeito {i}` mostra o que cabe)" if escolhe_agora(it)
                  else ' (o catálogo de luta chega na próxima fase)' + (f", e {tantos(it['cheios_livres'], 'cheio')}" if it.get('cheios_livres') else '')))
+    if len(por_escolher) > 4: L.append(f"... e mais {tantos(len(por_escolher) - 4, 'peça', 'peças')} com efeitos por escolher (a linha das peças mostra todas)")
     for oid, o in obras_de(E, pid).items():
         L.append(f"Obra aberta {oid}: {_nome_obra(E, o)}, {o['blocos']} de {o['pede']} blocos, {_em(E, o['lugar'])} (`oficio.py continua {oid}`)")
     mat = {k: n for k, n in p.get('carga', {}).items() if M.le_materia(k)[1] is not None}; nuc = [f"{i} {it['nome']} ({T.CATS[it['cat']]})" for i, it in itens.items() if it['tipo'] == 'nucleo' and it.get('dono') == pid]
@@ -1178,8 +1285,9 @@ def ver(E, pid):
     if len(gastas) > 4: L.append(f"- ... e mais {tantos(len(gastas) - 4, 'peça gasta', 'peças gastas')}")
     L.append(f"- o conserto pago (`oficio.py consertar ITEM pago`): {100 * M.CONSERTO_PONTO:g}% do preço da peça por ponto, em prata inteira (arredonda para cima: um ponto de uma espada Comum custa {O.conserto_pago(0, 1)} de prata), "
              f"e um bloco de espera por peça (a cada {O.PAGO_BLOCO} pontos ou parte): mandar consertar quatro peças leva quatro blocos")
-    g = O.ajuste_grau(mao(p))
-    L.append('- ajustar (sob medida): ' + (f'grau {g}; de {O.ajuste_blocos(0)} (Comum) a {O.ajuste_blocos(O.FORJA_ATE)} blocos ({T.CATS[O.FORJA_ATE]}) e um teste contra {O.AJUSTE_BASE} + {O.TESTE_CAT} por categoria' if g else f'pede mão de {T.MAESTRIAS[2]}'))
+    g = O.ajuste_grau(mao(p)); medida = bool(fx.get('mao_de_medida'))
+    L.append('- ajustar (sob medida): ' + (f'grau {g}; de {ajuste_blocos(E, pid, 0)} (Comum) a {ajuste_blocos(E, pid, O.FORJA_ATE)} blocos ({T.CATS[O.FORJA_ATE]}) e um teste contra {O.AJUSTE_BASE} + {O.TESTE_CAT} por categoria'
+                                         + (f' (a mão de medida da sua ferramenta: metade dos blocos, para cima, e +{O.MEDIDA_TESTE} no teste)' if medida else '') if g else f'pede mão de {T.MAESTRIAS[2]}'))
     L.append(f"- jornal: {M.SALARIO[O.jornal_grau(mao(p), p.get('grau_oficio', 'diarista'))]} de prata por bloco de bancada a serviço da oficina (paga-se pelo que a mão vale: {O.jornal_grau(mao(p), p.get('grau_oficio', 'diarista'))}), até a jornada ({M.JORNADA} blocos pagos por dia; hoje: {ato.jornada(E, pid)}) (`oficio.py jornal N`)")
     return L
 
@@ -1228,9 +1336,10 @@ def main(a=None):
     elif pos[0] == 'jornal': out = jornal(E, pid, int(pos[1]), oficio=op.get('oficio', 'forja'))['texto']
     elif pos[0] == 'efeito':
         if len(pos) < 2: falta('diga a peça (e o efeito; sem efeito, a lista do que cabe)', 'efeito i0007 prumo cheio')
-        resto = [x for x in pos[2:] if x not in ('cheio', 'emprestado')]
+        if 'valor' in op: sys.exit('valor= era do efeito de luta de antes (o devolve); na fase 1a só a ferramenta escolhe, e o número do efeito sai da categoria da peça (com `cheio`, da de cima): tire o valor=')
+        resto = [x for x in pos[2:] if x not in ('cheio', 'emprestado', 'perde')]
         if len(pos) < 3 or not resto: print(efeito(E, pid, pos[1])); return            # a lista do que cabe: só olha, não grava
-        out = efeito(E, pid, pos[1], resto[0], cheio='cheio' in pos[2:], emprestado='emprestado' in pos[2:], valor=inteiro('valor'))
+        out = efeito(E, pid, pos[1], resto[0], cheio='cheio' in pos[2:], emprestado='emprestado' in pos[2:], perde='perde' in pos[2:])
     elif pos[0] == 'receita':
         if len(pos) < 2: print(receita(E, pid)); return                                 # mostra as receitas: só olha
         out = receita(E, pid, pos[1], pos[2] if len(pos) > 2 else None)

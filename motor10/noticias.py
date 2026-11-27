@@ -40,6 +40,15 @@ def nova(E, onde, texto, peso=1, tags=(), janela=False, ja=()):
     return [['mundo', 'seq', 'noticia', 'soma', 1], ['mundo', 'noticias', nid, 'poe', dict(dia=dia, onde=o, texto=texto, peso=peso, tags=list(tags), chegou=chegou, janela=bool(janela))]]
 
 
+def sinete(E, pid):
+    """(a parte 2, fase 1a: o SINETE, contrato 5.8) a notícia de um feito leva o nome de quem forjou a arma em uso de quem o fez, se ela tem o sinete:
+    ', com a espada Rara, que leva o sinete de Ferord'; senão ''"""
+    for it in E['itens']['itens'].values():
+        if it.get('dono') == pid and it.get('uso') == 'arma' and it.get('sinete'):
+            q = E['gente'].get(it['sinete']); return f", com {it['nome']}, que leva o sinete de {q['nome'] if isinstance(q, dict) else it['sinete']}"
+    return ''
+
+
 def da(E, onde, texto, peso=1, tags=(), janela=False, tipo='noticia'):
     """faz nascer a notícia num evento só dela"""
     ef = nova(E, onde, texto, peso, tags, janela)

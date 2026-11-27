@@ -117,7 +117,7 @@ EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descan
            'talento', 'estudar', 'lancar', 'rito', 'beber', 'alquimia', 'encantar', 'maldicao', 'servico', 'covil',        # os da etapa da magia (projeto/ETAPA_MAGIA.md, seção 11)
            'masmorra', 'masmorra_vida', 'dragão',        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
            'viagem', 'noticia', 'caixa', 'missao', 'rival', 'frente', 'semana', 'herdeiro', 'heranca', 'leilao', 'torneio', 'regiao', 'querer', 'investigar',      # os da etapa final (projeto/ETAPA_FINAL.md, seção 4)
-           'entrada']       # a parte 2 (projeto/etapa_efeitos/DESENHO.md, 9.5): o evento de entrada de cada fase (converte o que muda de hoje; a fase 1a não converte nada)
+           'entrada']       # a parte 2 (projeto/etapa_efeitos/DESENHO.md, 9.5): o evento de entrada de cada fase (`estado.py entrada FASE`: o marco no mundo.oculto, e o que a fase converte; a 1a não converte nada)
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia

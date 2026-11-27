@@ -21,7 +21,9 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['item', id, 'historia', 'junta', 'texto']  ·  ['item', id, 'some']
     ['item', id, 'efeito', 'junta', {chave, cheio?, emprestado?}]  ·  ['item', id, 'efeitos_livres'|'cheios_livres', 'poe'|'soma', n]      (a parte 2, fase 1a: os efeitos de
                                                      ferramenta pela porta da força e o teto de efeitos; os campos novos do item: teto_efeitos, cheios_livres, sinete, degrau;
-                                                     a obra aceita o molde: ['obra', 'abre', {..., molde}]. O save de antes passa como está: a peça sem teto_efeitos usa o da categoria)
+                                                     a obra aceita o molde: ['obra', 'abre', {..., molde}]. O save de antes passa como está: a peça sem teto_efeitos usa o da categoria;
+                                                     o cheio só com um cheio por escolher; um apelão de regra por peça; e o evento inteiro deixa a peça dentro do teto, contando
+                                                     os efeitos por escolher: a escolha entra como junta + cheios_livres + efeitos_livres −1, no mesmo evento)
     ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias; a leva da alquimia; a gravação)
   OS DA ETAPA DA MAGIA (a forma exata e o porquê de cada um: projeto/ETAPA_MAGIA.md, seção 7):
     ['pessoa', id, 'talento'|'dom', 'poe', {caminho: grau}] (só em gera, mestre ou talento) · ['pessoa', id, 'inclinacao', 'poe', caminho]
@@ -65,6 +67,7 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
 
 Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | python3 estado.py pessoa ID | python3 estado.py lugar ID
      (o Mestre): python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas na estrada"      um evento "mestre", com os efeitos em JSON
+     (o Mestre): python3 estado.py entrada 1a          o evento de ENTRADA de uma fase da parte 2 (DESENHO 9.5), no mesmo commit dela: o marco no save (mundo.oculto)
 """
 import copy, hashlib, json, os, random, sys
 import tabelas as T
@@ -124,6 +127,26 @@ def quando(E):
 def sorte(E, chave):
     """o acaso do MUNDO (não o dado do jogador): sai da semente, do dia, do bloco e de uma chave. Mesma semente, mesmo mundo; nunca se rola de novo."""
     r = E['relogio']; h = hashlib.sha256(f"{r['semente']}|{r['dia']}|{r['bloco']}|{chave}".encode()).digest()
+    return random.Random(int.from_bytes(h[:8], 'big'))
+
+
+ENTRADAS = {'1a': 'a faixa da forja e os efeitos de ferramenta (a parte 2). Nada a converter: a peça de antes, sem teto_efeitos, usa o da categoria, '
+                  'e as duas peças com efeito de hoje cabem nos tetos novos'}      # (DESENHO 9.5) o evento de ENTRADA de cada fase, no mesmo commit dela
+
+
+def entrada(E, fase):
+    """(a parte 2, DESENHO 9.5) o evento de ENTRADA da fase: o marco, no save, de quando a regra dela passou a valer (mundo.oculto['entrada/FASE'] = o dia; no oculto, e não no
+    meta, porque o meta diz se o mundo tem região). A fase que converte algo junta aqui os efeitos dela; a 1a não converte nada. Uma vez só: a segunda não muda nada e não
+    entra no registro (devolve None)."""
+    if fase not in ENTRADAS: sys.exit(f'não há entrada da fase "{fase}" (as que há: {", ".join(ENTRADAS)})')
+    if ((E.get('mundo') or {}).get('oculto') or {}).get(f'entrada/{fase}') is not None: return None
+    return aplica(E, 'entrada', [['mundo', 'oculto', f'entrada/{fase}', 'poe', E['relogio']['dia']]], texto=f'a entrada da fase {fase}: {ENTRADAS[fase]}')
+
+
+def sorte_fixa(E, chave):
+    """o acaso do mundo que NÃO muda com o dia (a parte 2, fase 1a: o jeito de um ferreiro, a ordem dos efeitos de uma peça): sai só da semente e da chave.
+    Mesma semente, mesma escolha, em qualquer dia (o `sorte` de cima muda a cada bloco: o jeito de uma pessoa não pode mudar)."""
+    h = hashlib.sha256(f"{E['relogio']['semente']}|{chave}".encode()).digest()
     return random.Random(int.from_bytes(h[:8], 'big'))
 
 
@@ -1308,6 +1331,11 @@ def _efeito_erro(it, val, novo=False):
             if len(it.get('efeitos') or []) + (max(livres, 1) if novo else livres) > TO.DEGRAU_ATE: return f'o degrau emprestado só entra em peça de até {TO.DEGRAU_ATE} efeitos'      # (o que entra está entre os por escolher; o gravado, entre os efeitos)
         if val.get('cheio') is not None and val['cheio'] is not True: return 'o cheio é True, ou não vem'
         if val.get('cheio') and not TO.de_numero(k): return f'"{k}" não tem número: o cheio só vale em efeito de número (o prumo, a têmpera)'
+        if novo and val.get('cheio') and not (it.get('cheios_livres') or 0) >= 1: return f'"{k}" cheio pede um cheio por escolher na peça (o cheio nasce do que passa do teto de efeitos, e da têmpera): ela não tem'
+        if TO.apelao_de_regra(k):                            # UM APELÃO DE REGRA POR PEÇA (4.5 e 9.5 do contrato): o molde de mestre e o degrau emprestado não andam juntos
+            outros = [e.get('chave') for e in it.get('efeitos') or [] if isinstance(e, dict) and e is not val and e.get('chave') != k and TO.apelao_de_regra(e.get('chave'))]
+            if outros: return f'"{k}" é apelão de regra, e a peça já leva um ({outros[0]}): um apelão de regra por peça'
+        if k == 'poupa_ferro' and it.get('oficio') == 'couro': return 'o poupa-ferro poupa o metal, e a obra do couro (a armadura de couro) não leva metal: na ferramenta de couro ele nunca agiria'
     else:
         if val.get('cheio') or val.get('emprestado'): return f'o efeito "{k}" é de luta: o cheio e o degrau emprestado chegam com o catálogo de luta (a fase 1b)'
         if k == 'devolve' and not (_int(val.get('valor')) and 1 <= val['valor'] <= T.devolve_max(cat)): return f'"devolve" numa peça {T.CATS[cat]} vai de 1 a {T.devolve_max(cat)}'
@@ -1456,6 +1484,14 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
         try: e = _um(ensaio, ef)
         except (TypeError, KeyError, IndexError, AttributeError, ValueError) as x: e = _erro(ef, f'efeito malformado ({type(x).__name__})')
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {e}')
+    # (a parte 2, fase 1a) O EVENTO INTEIRO DEIXA A PEÇA CERTA: a peça cujos efeitos o evento mexe (o efeito que entra, os por escolher, os cheios) tem de sair dele dentro da regra:
+    # os efeitos escolhidos e os por escolher até o teto dela, os cheios até os por escolher, o degrau em peça de até 4, um apelão de regra. A escolha (o efeito entra e sai um por
+    # escolher, no mesmo evento) passa; o efeito do Mestre que entra a mais numa peça que ainda tem os seus por escolher, não.
+    tocadas = sorted({ef[1] for ef in efeitos if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'item' and isinstance(ef[1], str) and ef[2] in ('efeito', 'efeitos_livres', 'cheios_livres')})
+    for iid in tocadas:
+        it = ensaio['itens']['itens'].get(iid)
+        e = _campos_faixa_erro(it) if isinstance(it, dict) else None
+        if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. A peça {iid} ({it.get("nome")}) sairia do evento fora da regra: {e}')
     if all(ensaio[k] == E[k] for k in ARQS): return None
     if sum(1 for p in ensaio['gente'].values() if isinstance(p, dict) and p.get('jogador')) > 1 and tipo == 'heranca': sys.exit(f'evento "{tipo}" recusado, nada mudou: ficariam dois personagens do jogador (tire o do morto no mesmo evento)')
     for pid, p in ensaio['gente'].items() if tipo != 'casa' else ():       # quem não é o personagem guarda O BLOCO EM QUE o corpo foi mexido pela última vez (o bloco deste evento: o relógio de antes de ele andar): o descanso em casa conta daí (em_cena).
@@ -1860,5 +1896,10 @@ if __name__ == '__main__':
         ev = aplica(E, 'mestre', ef, quem=[x[1] for x in ef if x[:1] == ['pessoa'] and len(x) > 1 and x[1] in E['gente']][:1], texto=a[2])
         if not ev: print('nada mudou: os efeitos já eram verdade. Nenhum evento foi registrado.'); sys.exit()
         grava(E); print(f"evento #{ev['id']} (mestre): {ev['texto']} · {tantos(len(ev['efeitos']), 'efeito')}"); P = valida(E)
+        if P: print('ATENÇÃO, o estado ficou com problema:\n  ' + '\n  '.join(P))
+    elif a[:1] == ['entrada'] and len(a) == 2:
+        E = carrega(); ev = entrada(E, a[1])
+        if not ev: print(f'a entrada da fase {a[1]} já estava no save: nada mudou.'); sys.exit()
+        grava(E); print(f"evento #{ev['id']} (entrada): {ev['texto']}"); P = valida(E)
         if P: print('ATENÇÃO, o estado ficou com problema:\n  ' + '\n  '.join(P))
     else: print(__doc__)

@@ -277,7 +277,8 @@ def janela(it):
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")
     if it.get('feito_por'): L.append(f"Quem fez: {it['feito_por']}" + (f", Dia {it['dia']}" if it.get('dia') else ''))
-    for h in it.get('historia', [])[-3:]: L.append(f'  · {h}')
+    hs = it.get('historia', [])                             # (fase 1a) a primeira linha (o nascimento: a soma e a faixa) fica sempre, e as três últimas (as escolhas)
+    for h in (hs if len(hs) <= 4 else hs[:1] + ['...'] + hs[-3:]): L.append(f'  · {h}')
     return '\n'.join(L)
 
 

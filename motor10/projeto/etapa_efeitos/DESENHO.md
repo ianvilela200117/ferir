@@ -432,7 +432,7 @@ Perde 0,25% · 1,03 efeito por obra (hoje 0,11) · peça com efeito 62,3%. **A I
 - **A porta pela força:** só cabe o que a categoria FINAL abre (fraco da Comum, normal da Incomum, forte da Épica, apelão da Lendária); o efeito vale no tipo de peça certo, não se repete, e o PESA não se escolhe.
 - **A peça que muda de mão** com efeito por escolher: quem a recebe escolhe; a loja escolhe ao comprar, pela receita do lugar.
 - **O mundo escolhe sozinho** quando a peça nasce: pelo PAPEL do dono, se ela tem dono (o guerreiro: Gume, Crítico, Certeira; o guarda: Couraça, Guarda, Devolve; o caçador: Caçadora contra bicho, Gume, Sangria; quem lança: Chama, Foco Certeiro);
-  senão, pelo JEITO do ferreiro, sorteado pela semente (`estado.sorte(E, "jeito|PID")`): do gume (dano, crítico, sangue), da guarda (defesa, firmeza, aparar), do fôlego (leveza, não quebrar, fôlego), do tranco (derrubar, atordoar, medo). Os de número vêm primeiro (para o cheio ter onde cair); o empate se desfaz pela semente.
+  senão, pelo JEITO do ferreiro, sorteado pela semente (`estado.sorte(E, "jeito|PID")`; na construção, `estado.sorte_fixa`, sem o dia: 12.2): do gume (dano, crítico, sangue), da guarda (defesa, firmeza, aparar), do fôlego (leveza, não quebrar, fôlego), do tranco (derrubar, atordoar, medo). Os de número vêm primeiro (para o cheio ter onde cair); o empate se desfaz pela semente.
 - **O dom escondido se mostra** também quando muda o número de efeitos da faixa ("sem o dom, saía com menos efeitos"): um Treinado com Dom +1 se mostra em 2,0% das obras pela categoria e em 8,2% pela faixa.
 
 ### 5.8 As ferramentas e os efeitos de ferramenta
@@ -449,7 +449,7 @@ O martelo de forja, a tenaz e o jogo nascem pela mesma lei, com faixa e efeitos;
 | MÃO DE MEDIDA | fraco | o ajuste sob medida leva metade dos blocos e soma +2 no teste | — | tempo |
 | SINETE | fraco | a peça nasce com o sinete de quem a forjou: a janela diz, e a notícia de um feito com ela leva o nome dele | — | assinatura |
 | PRUMO | normal | a falta para a CD de cima conta N a menos, só para os efeitos (no teto, até 2) | Incomum 1 · Rara 2 · Épica 3 · Única 4 · Lendária 5 | +0,14 · +0,27 · +0,41 · +0,54 · +0,68 |
-| POUPA-FERRO | normal | a obra gasta 1 a menos da matéria principal, se a peça leva 3 ou mais dela | — | um terço da espada |
+| POUPA-FERRO | normal | a obra gasta 1 a menos da matéria principal, se a peça leva 3 ou mais dela (a construção da 1a lê: o metal, quando é a matéria principal; o Mestre confirma: 12.2) | — | um terço da espada |
 | LASTRO | forte | a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa | — | +0,36 |
 | TÊMPERA | forte | N efeitos de número nascem cheios | Épica 1 · Única 2 · Lendária 3 | +0,32 · +0,46 · +0,54 |
 | MOLDE DE MESTRE | apelão | ao abrir a obra, diz-se um efeito (`molde=CHAVE`); se a peça sai na categoria da obra ou acima, nasce com ele, fora do teto; se sai abaixo, o molde se perde | — | +0,60 |
@@ -1270,3 +1270,14 @@ Responda com o código ("1a.2a.3a.4a.5a"). Em cada uma, a primeira letra é a re
 - **3a:** o nível sobe com a experiência dos feitos (a variante A de 7.2 e 7.3; fase 3).
 - **4a:** o mundo reconhece e oferece a classe; o jogador aceita ou recusa; a oferta do Malhador vem no primeiro turno com as classes no motor (fase 4).
 - **5a:** o teste de fala só no pedido que o jogador declara, com a chance mostrada antes; a conversa comum segue pela opinião (fase 2).
+
+### 12.2 O que a construção da fase 1a leu (o Mestre confirma ou manda voltar)
+O contrato manda; onde o texto não fechava com o banco, ou não dizia, a construção leu assim, e cada leitura volta numa linha:
+- **O poupa-ferro poupa o METAL**, quando o metal é a matéria principal da peça (5.8 diz "a matéria principal"). Ao pé da letra (a madeira do arco também), a FJ8 reprova: o ferreiro de loja com a tenaz Incomum de poupa-ferro passa a tentar o arco Incomum com 2 de madeira, e na sorte a forja rende 15 de prata por dia, acima dos 12; poupando só o metal, 5,8 no pior caso (o nome e a medida do contrato, "um terço da espada", apontam para isso). Por essa leitura, **a ferramenta de couro não leva o poupa-ferro** (a armadura de couro não tem metal). Para voltar à letra: `oficio.materia_da_obra` e o filtro do couro (`oficio.efeitos_que_cabem`, `estado._efeito_erro`), e a FJ8 pede outro freio, na regra.
+- **O jeito sai de `estado.sorte_fixa`** (a semente e o id, sem o dia), não de `estado.sorte` (5.7): o `sorte` muda a cada bloco, e o jeito de uma pessoa tem de ser um só.
+- **As receitas dos jeitos na ferramenta** são desenho da construção (5.7 só dá os jeitos dos efeitos de luta): do gume, fagulha, molde, degrau, afinada; da guarda, lastro, recobro, afinada, remendo; do fôlego, poupa-ferro, mão de medida, remendo, recobro; do tranco, afinada, fagulha, sinete, lastro. Os de número (o prumo e a têmpera) vêm sempre antes, na ordem da semente.
+- **O recobro devolve a metade arredondada para cima no total**, a começar pela principal (5.8 não diz como arredonda; para baixo, de cada matéria, ele não devolvia nada nas obras pequenas, como a tenaz).
+- **O dom escondido se mostra também quando muda só o cheio** que a peça guarda (5.7 fala do número de efeitos; a decisão 16 pede que a soma da mesa bata com o que a peça leva): com Dom +1, em mais 5,5% das obras de Ferord; as contas de 5.7 (2,0% e 8,2%) seguem certas para a categoria e os efeitos.
+- **O cheio não se perde calado** (5.4): o efeito de número que é o último lugar do cheio o leva sozinho; a escolha que jogaria o cheio fora é recusada sem a palavra `perde`; a receita do jogador para ali e pergunta (5.7: ela pergunta quando não cabe). Na ferramenta, o cheio que não tem efeito de número onde cair se perde ao nascer, e o remate diz a sobra.
+- **A entrada da 1a** (9.5) é só o marco (`estado.py entrada 1a`: o dia, no `mundo.oculto`): não há nada a converter.
+- **A régua (b) da pergunta 1**, se o jogador a escolher: o motor troca numa linha, mas com ela a meta FJ1 ABAIXO DA MÃO reprova (o melhor com matéria Rara sem núcleo tira 1,44 vez os efeitos da obra de núcleo dele; a meta é 1,2), e a FJ9 e a FJ10 (as contas e as frases de exemplo deste contrato, feitas com a (a)) pedem refazer. A (b) pede, antes, outro teto da régua (TETO_FAIXA) ou outra meta.
