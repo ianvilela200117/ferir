@@ -97,12 +97,14 @@ def _comum(n):
         ('lobos', lambda: [veste(padrao('h', 30), arma=('espada', 1), armadura=('malha', 1), escudo=1)], lambda: bichos.bando('lobo', n=4), 'perto'),
         ('cinco', lambda: [veste(padrao(f'a{i}', 40), arma=('lança', 1), armadura=('malha', 1)) for i in range(5)], lambda: [veste(padrao(f'b{i}', 40), arma=('machado', 1), armadura=('couro', 1), escudo=1) for i in range(5)], 'perto'),
         ('serpe', lambda: [veste(padrao(f'h{i}', 60), arma=('espada', R), armadura=('malha', R), escudo=R) for i in range(4)], lambda: [bichos.bicho('serpe')], 'perto')]
-    L = []
-    for nome, a, b, ini in casos:
+    L = []; escada = luta.ESCADA; luta.ESCADA = False       # (a parte 2, fase 1b) a escada do medo é a mudança de propósito da fase, medida no EF7: o contrato (DESENHO, B0) quer a luta de
+    try:                                                  # antes "dado por dado, salvo a escada do medo"; com ela ligada, o cinco contra cinco e a serpe mudam (quem fraquejou fica acuado)
+      for nome, a, b, ini in casos:
         luta.semente(777); v = []
         for _ in range(150):
             S = luta.nova(a(), b(), inicio=ini, quieto=True); luta.corre(S); v.append((S['fim'], S['r'], sum(f['pv'] for f in S['L'])))
         L.append(f"{nome} {sum(1 for x in v if x[0] == 'A')} {sum(x[1] for x in v)} {sum(x[2] for x in v)}")
+    finally: luta.ESCADA = escada
     f = ficha(veste(padrao('x', 50), arma=('espada', R), armadura=('malha', R), escudo=R)); L.append(f"ficha {f['arma']['acerto']} {defesa(f)} {f['pvmax']} {f['folmax']}")
     ref = open(os.path.join(AQUI, 'dados', 'semente_fixa_sem_magia.txt'), encoding='utf-8').read().split('\n')
     lutas_iguais = L == [x for x in ref if x.strip()]
@@ -116,7 +118,7 @@ def _comum(n):
                 movidos += dm != vd
     E = PM.vila(); d = estado.lutador(E, 'eu'); sem = 'tracos' not in d and 'coragem' not in d
     lf = linha(ficha(d)); limpa = not any(t in lf for t in T.TRACOS_POVO) and 'coragem' not in lf and 'manha' not in lf
-    return [('B2 A PESSOA COMUM É A DE HOJE: as cinco lutas de semente fixa saem iguais às do motor de antes, número por número (dados/semente_fixa_sem_magia.txt); o sorteio dos 16 caminhos de antes e do dom é o mesmo '
+    return [('B2 A PESSOA COMUM É A DE HOJE: as cinco lutas de semente fixa saem iguais às do motor de antes, número por número (dados/semente_fixa_sem_magia.txt; com a escada do medo desligada, como no B0 da fase 1b); o sorteio dos 16 caminhos de antes e do dom é o mesmo '
              '(o dom só muda quando a segunda sorte o passa à manha); o humano vai à luta sem traço nem coragem, e a ficha dele é a de hoje',
              f"lutas: {'iguais' if lutas_iguais else 'DIFERENTES: ' + ' · '.join(L)}; sorteio de {total} nascidos: {dif} diferentes nos 16 caminhos ou no dom ({movidos} com o dom passado à manha); humano: sem traço {sn(sem)}, ficha limpa {sn(limpa)}",
              lutas_iguais and dif == 0 and sem and limpa)]

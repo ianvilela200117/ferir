@@ -91,7 +91,8 @@ ENCANTO = dict(abaixo=1, por_grau=2)                           # Conjuração = 
 OSSOS = 0.5                 # o golpe de corte e o de ponta valem isto contra quem é só osso (o de impacto, inteiro)
 DRENO = 0.5                 # quem drena recupera em PV esta fração do que o golpe do corpo tira
 IMATERIAL = 1               # a arma sem encanto e sem bênção conta tantas categorias abaixo contra o imaterial
-ARDENTE_RODADAS = T.SANGRA_RODADAS[1]     # a ferida que o corpo ardente abre queima tantas rodadas, como a que sangra; quem o golpeia de perto leva o fogo de volta (tabelas.devolve_max)
+ARDENTE_RODADAS = T.SANGRA_RODADAS[1]     # a ferida que o corpo ardente abre queima tantas rodadas, como a que sangra; quem o golpeia de perto leva o fogo de volta (ardente_fogo)
+def ardente_fogo(cat): return 4 * (cat + 1)      # o fogo que volta em quem golpeia de perto o corpo que arde: 4 por degrau da categoria do corpo (o número do `devolve` de antes, que saiu do tabelas.py)
 MALDICAO_BICHO = dict(nome='a marca de {quem}', tipo='míngua', condicao=dict(tipo='matar'))   # o molde da maldição que o traço "amaldiçoa" põe, se o lutador não trouxer o dele ("maldicao")
 
 # AS FASES DO CHEFE

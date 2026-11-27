@@ -33,47 +33,111 @@ from tabelas import CATS, MULT, RD, BON, DUR, FAMILIAS, MATERIAIS, PARTES, PEDE_
 AQUI = os.path.dirname(os.path.abspath(__file__))
 ARQ = os.path.join(AQUI, 'dados', 'itens.json')
 
-# os efeitos que a luta sabe rodar, e em que tipo de peça cada um vale. Efeito que não está aqui não entra numa peça.
-EFEITOS = {
-    'sangra':     ('a ferida que ela abre sangra mais (cinco rodadas)', ('arma',)),
-    'critico_19': ('o 19 também é crítico', ('arma',)),
-    'derruba':    ('uma vez por luta, o golpe que fere derruba', ('arma',)),
-    'devolve':    ('quem golpeia o dono corpo a corpo leva {valor}', ('armadura',)),
-    'firme':      ('o dono não é derrubado', ('armadura', 'escudo')),
-    'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo', 'foco')),
-    'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo', 'foco')),
-    'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo', 'foco', 'amuleto')),
-}
-# (a parte 2, fase 1a) OS DOZE EFEITOS DE FERRAMENTA: a força, a porta, o número por categoria e a frase moram no tabelas_oficio.FERRAMENTA_EFEITOS; aqui entram no catálogo
-# com a frase e o tipo de peça (só a ferramenta). A afinada é a de antes (+1 no total).
-def _efeitos_de_ferramenta():
-    import tabelas_oficio as O
-    return {k: (v[3], ('ferramenta',)) for k, v in O.FERRAMENTA_EFEITOS.items()}
-EFEITOS.update(_efeitos_de_ferramenta())
-ESCOLHE_NAO = ('pesa',)     # o efeito que não se escolhe (é defeito, não virtude)
+# OS EFEITOS (a parte 2): o catálogo de luta (fase 1b) mora no tabelas_efeitos.EFEITOS (os 21 de número e os 26 de regra, com a força, a porta, os 8 valores e a frase);
+# os doze de ferramenta (fase 1a), no tabelas_oficio.FERRAMENTA_EFEITOS. Aqui entram todos, com a frase e os tipos de peça. Efeito que não está aqui não entra numa peça.
+# Os de antes (o `critico_19`, o `sangra`) ficam só na peça que já os tem (a resposta 2a): o critico_19 para sempre; o sangra (a Sangria Comum de antes) também, acima da Comum,
+# e na peça Comum até o evento de entrada da 1b, que o converte na chave `sangria` (igual). Nenhuma peça nova os ganha.
+def _efeitos_do_catalogo():
+    import tabelas_efeitos as TE, tabelas_oficio as O
+    d = {k: (v['faz'].replace('{v}', '{valor}').replace('{contra}', 'o tipo escolhido'), tuple(v['pecas'])) for k, v in TE.EFEITOS.items()}
+    d.update({k: (v['faz'], tuple(v['pecas'])) for k, v in TE.LEGADO.items()})
+    d.update({k: (v[3], ('ferramenta',)) for k, v in O.FERRAMENTA_EFEITOS.items()})
+    return d
+EFEITOS = _efeitos_do_catalogo()
+ESCOLHE_NAO = ('pesa', 'critico_19', 'sangra')      # o que não se escolhe: o defeito (pesa) e os de antes (o que nasceu, nasceu)
 
 
 NOME_EFEITO = dict(mao_de_medida='mão de medida', poupa_ferro='poupa-ferro', tempera='têmpera', molde='molde de mestre', degrau='degrau emprestado')       # o nome à mesa
 
 
 def frase_efeito(e, cat, nome=True):
-    """a frase de um efeito da peça, com o número da categoria que ela rende (o de ferramenta: tabelas_oficio.valor_ferramenta; cheio, o da categoria de cima; o devolve de hoje,
-    o valor gravado), e as marcas: (cheio), (degrau emprestado). nome: o de ferramenta começa pelo nome dele"""
-    import tabelas_oficio as O
-    k = e.get('chave'); txt = EFEITOS[k][0] if k in EFEITOS else k
-    v = O.valor_ferramenta(k, cat, bool(e.get('cheio'))) if k in O.FERRAMENTA_EFEITOS else e.get('valor', '')
-    txt = txt.format(valor=v if v is not None else '')
-    if k in O.FERRAMENTA_EFEITOS and nome: txt = f"{NOME_EFEITO.get(k, k)}: {txt}"
+    """a frase de um efeito da peça, com o número da categoria que ela rende (o de luta: tabelas_efeitos.valor; o de ferramenta: tabelas_oficio.valor_ferramenta; cheio, o da
+    categoria de cima; o `devolve N` de antes, que a entrada da 1b converte, o número gravado), e as marcas: (cheio), (degrau emprestado). nome: o de ferramenta começa pelo nome dele"""
+    import tabelas_oficio as O, tabelas_efeitos as TE
+    k = e.get('chave')
+    if k in TE.EFEITOS:
+        if k == 'devolve' and e.get('valor') is not None: txt = f"Devolve: quem golpeia o dono corpo a corpo leva {e['valor']} (o devolve de antes; a entrada da 1b o converte no {TE.diz_valor(k, TE.valor(k, cat))} da categoria)"
+        else: txt = TE.frase(k, cat, bool(e.get('cheio')), TE_contra(e.get('contra')))
+        txt = txt if nome else txt.split(': ', 1)[-1]
+    else:
+        txt = EFEITOS[k][0] if k in EFEITOS else k
+        v = O.valor_ferramenta(k, cat, bool(e.get('cheio'))) if k in O.FERRAMENTA_EFEITOS else e.get('valor', '')
+        txt = txt.format(valor=v if v is not None else '')
+        if k in O.FERRAMENTA_EFEITOS and nome: txt = f"{NOME_EFEITO.get(k, k)}: {txt}"
     return txt + (' (cheio: o número da categoria de cima)' if e.get('cheio') else '') + (' (do degrau emprestado)' if e.get('emprestado') else '')
 
 
+def TE_contra(c): return {'bicho': 'o bicho', 'morto': 'o morto (quem não tem vida)', 'povo': 'o povo (goblin, orc...)', 'gente': 'a gente', 'dragão': 'o dragão'}.get(c, c)
+
+
 def curta_efeito(e, cat):
-    """o efeito em poucas palavras, para a linha das peças na MESA: "prumo 2 (cheio)", "afinada", "remendo 8"; os de luta de hoje, a frase deles"""
-    import tabelas_oficio as O
+    """o efeito em poucas palavras, para a linha das peças na MESA: "prumo 2 (cheio)", "afinada", "remendo 8"; os de luta: "gume +15%", "crítico 20/7 (cheio)", "Escancara" """
+    import tabelas_oficio as O, tabelas_efeitos as TE
     k = e.get('chave')
+    if k in TE.EFEITOS:
+        x = TE.EFEITOS[k]; v = TE.valor(k, cat, bool(e.get('cheio')))
+        if x['tipo'] == 'regra': base = x['nome']
+        elif k == 'sangria': base = 'Sangria ' + ('5 rodadas na ferida' if v == 'ferida' else f"{'1/3' if abs(v[0] - 1 / 3) < 1e-9 else '1/4' if v[0] == 0.25 else '1/5'} por {v[1]}")
+        elif k == 'robusta': base = f"Robusta +{v[0]}"
+        elif k in ('aturdir',): base = f"Aturdir {v}"
+        elif k in ('medo', 'temivel'): base = f"{x['nome']} {v}"
+        elif k == 'segundo_golpe': base = f"Segundo Golpe ×{v}"
+        else: base = f"{x['nome']} {'+' if k in ('gume', 'certeira', 'cacadora', 'chama', 'foco_certeiro', 'guarda', 'firmeza', 'coragem') else ''}{TE.diz_valor(k, v)}"
+        if k == 'cacadora' and e.get('contra'): base += f" contra {e['contra']}"
+        return base + (' (cheio)' if e.get('cheio') else '') + (' (emprestado)' if e.get('emprestado') else '')
     if k not in O.FERRAMENTA_EFEITOS: return frase_efeito(e, cat)
     v = O.valor_ferramenta(k, cat, bool(e.get('cheio'))); v = O.REMENDO_BLOCO if k == 'remendo' else v
     return NOME_EFEITO.get(k, k) + (f' {v}' if v is not None else '') + (' (cheio)' if e.get('cheio') else '') + (' (emprestado)' if e.get('emprestado') else '')
+
+
+def efeito_erro(it, e, novo=False, legado=True):
+    """(a parte 2, fase 1b; DESENHO 9.5) o que um efeito de LUTA pede para estar nesta peça (None: certo): o tipo de peça e a arma certa, a porta pela força (com o degrau
+    emprestado, uma acima: só com o direito que a peça trouxe ao nascer, e em peça de até 4 efeitos), a Caçadora com `contra`, o cheio só em efeito de número; um apelão de regra
+    por peça; uma porta adiantada por peça (o degrau emprestado; o vidro e a Sede chegam na fase 5; o cheio não conta). Os de antes: o `critico_19` sempre (a resposta 2a: o que
+    nasceu, nasceu), o `sangra` na peça acima da Comum (a Sangria Comum de antes: a entrada só converte o da Comum, que vira a Sangria igual), e, enquanto `legado` (até o
+    evento de entrada da 1b), o `sangra` da Comum e o `devolve N` fixo (de 1 ao teto da categoria). Nenhum de antes ENTRA em peça (`novo`), antes ou depois da entrada: as peças
+    novas seguem o catálogo (a resposta 2a). O Crítico não entra na peça que tem o critico_19 (um efeito só). `novo`: o efeito está entrando."""
+    import tabelas_efeitos as TE, tabelas_oficio as O
+    k = e.get('chave'); cat = it['cat'] if isinstance(it.get('cat'), int) and not isinstance(it.get('cat'), bool) else 0; tipo = it.get('tipo')
+    if k in TE.LEGADO:
+        if tipo not in TE.LEGADO[k]['pecas']: return f'o efeito "{k}" não vale em {tipo}'
+        if set(e) - {'chave'}: return f'o efeito de antes "{k}" não leva nada além da chave'
+        if k == 'sangra' and not legado and cat == 0: return 'o `sangra` de antes, na peça Comum, virou a Sangria Comum na entrada da fase 1b: a peça leva {"chave": "sangria"}'
+        if novo: return f'"{k}" é o efeito de antes: fica só na peça que já o tem, e as peças novas seguem o catálogo de luta (o Crítico pela categoria; a Sangria)'
+        return None
+    if k not in TE.EFEITOS: return None
+    x = TE.EFEITOS[k]
+    if k == 'critico' and any(isinstance(o, dict) and o.get('chave') == 'critico_19' for o in it.get('efeitos') or []):
+        return 'a peça já tem o crítico de antes (19/11): o Crítico e o critico_19 são um efeito só (P5: vale a melhor faixa), e o lugar se perderia'
+    if k == 'devolve' and e.get('valor') is not None:
+        if not legado: return 'o devolve fixo de antes virou % na entrada da fase 1b: a peça leva {"chave": "devolve"} (o número sai da categoria)'
+        if not (isinstance(e['valor'], int) and not isinstance(e['valor'], bool) and 1 <= e['valor'] <= TE.devolve_fixo_max(cat)): return f'"devolve" (o de antes) numa peça {T.CATS[cat]} vai de 1 a {TE.devolve_fixo_max(cat)}'
+        if novo: return 'o devolve de antes (com valor) não entra em peça: o de agora é {"chave": "devolve"}, o % da categoria'
+        sobra = set(e) - {'chave', 'valor'}
+        return f'o devolve de antes é {{chave, valor}} (veio também: {", ".join(sorted(sobra))})' if sobra else None
+    sobra = set(e) - {'chave', 'cheio', 'emprestado', 'contra', 'gasto'}
+    if sobra: return f'o efeito de luta "{k}" é {{chave, cheio?, emprestado?, contra?}} (veio também: {", ".join(sorted(sobra))}): o número nunca se guarda, sai da categoria'
+    emp = bool(e.get('emprestado'))
+    erro = TE.cabe(k, tipo, cat, it.get('familia'), emp)
+    if erro: return erro
+    if e.get('cheio') is not None and e['cheio'] is not True: return 'o cheio é True, ou não vem'
+    if e.get('emprestado') is not None and e['emprestado'] is not True: return 'o emprestado é True, ou não vem'
+    if e.get('cheio') and x['tipo'] != 'numero': return f'{x["nome"]} é de regra: o cheio só vale em efeito de número'
+    if k == 'cacadora' and e.get('contra') not in TE.CONTRA: return f'a Caçadora pede contra quem (contra: {", ".join(TE.CONTRA)})'
+    if k != 'cacadora' and e.get('contra') is not None: return f'só a Caçadora leva `contra`'
+    if e.get('gasto') is not None and not (isinstance(e['gasto'], dict) and isinstance(e['gasto'].get('dia'), int) and isinstance(e['gasto'].get('n'), int) and e['gasto']['n'] >= 1): return 'o gasto é {dia, n}'
+    if e.get('gasto') is not None and x.get('usos') != 'dia': return f'{x["nome"]} não tem uso do dia para gastar'
+    if emp:
+        if not it.get('degrau'): return f'{x["nome"]} emprestado pede o degrau emprestado, que a peça traz ao nascer (a ferramenta que o dá em uso na forja)'
+        if TE.cabe(k, tipo, cat, it.get('familia')) is None: return f'{x["nome"]} já cabe na porta da peça: não é do degrau emprestado'
+        if any(isinstance(o, dict) and o.get('emprestado') and o is not e for o in it.get('efeitos') or []): return 'a peça já tem um efeito do degrau emprestado: a porta adiantada é uma só'
+        livres = it.get('efeitos_livres') or 0
+        if len(it.get('efeitos') or []) + (max(livres, 1) if novo else livres) > O.DEGRAU_ATE: return f'o degrau emprestado só entra em peça de até {O.DEGRAU_ATE} efeitos'
+    if TE.apelao_de_regra(k) and any(isinstance(o, dict) and o is not e and o.get('chave') != k and TE.apelao_de_regra(o.get('chave')) for o in it.get('efeitos') or []):
+        return f'{x["nome"]} é apelão de regra, e a peça já leva um: um apelão de regra por peça'
+    return None
+
+
 FORMAS_FEM = ('varinha',)   # as formas de foco de nome feminino (a categoria concorda: "varinha Rara", "cajado Raro")
 
 
@@ -130,14 +194,10 @@ def item(tipo, cat, nome=None, familia=None, material=None, cobre=None, efeitos=
         it['nome'] = nome or f'escudo {CATS[c]}'
     else:
         sys.exit(f'tipo desconhecido: "{tipo}" (arma, armadura, escudo, nucleo, foco, amuleto, elixir, escrito, gazua, chave)')
-    for e in it['efeitos']:
-        if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
-        if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
-        if e['chave'] == 'devolve' and not 1 <= e.get('valor', 0) <= T.devolve_max(c):
-            sys.exit(f'"devolve" numa peça {CATS[c]} vai de 1 a {T.devolve_max(c)} (veio {e.get("valor")})')
     if sob and not T.SOB_MEDIDA_GRAUS[0] <= sob.get('grau', 1) <= T.SOB_MEDIDA_GRAUS[1]:
         sys.exit(f'o grau do sob medida vai de {T.SOB_MEDIDA_GRAUS[0]} a {T.SOB_MEDIDA_GRAUS[1]} (veio {sob.get("grau")})')
     it.update(mais)
+    _confere_efeitos(it)
     return it
 
 
@@ -197,11 +257,25 @@ def _magia(tipo, c, nome, efeitos, sob, familia, material, cobre, mais):
             fs = list(mais.pop('feiticos', None) or [])
             if not fs or any(f not in T.FEITICOS for f in fs): sys.exit(f'o escrito ensina feitiços da tabela (feiticos=seta,luz; os que há: {", ".join(T.FEITICOS)})')
             it = dict(tipo='escrito', feiticos=fs, nome=nome or f"escrito de {', '.join(T.nome_feitico(f) for f in fs)}", dur=[1, 1], **base)
-    for e in it.get('efeitos', []):
-        if e['chave'] not in EFEITOS: sys.exit(f'efeito desconhecido: "{e["chave"]}" (os que a luta roda: {", ".join(EFEITOS)})')
-        if tipo not in EFEITOS[e['chave']][1]: sys.exit(f'o efeito "{e["chave"]}" não vale em {tipo} (vale em: {", ".join(EFEITOS[e["chave"]][1])})')
     it.update(mais)
+    if 'efeitos' in it: _confere_efeitos(it)
     return it
+
+
+def _confere_efeitos(it):
+    """(fase 1b) os efeitos de uma peça montada fora do mundo (os testes, o cenário, o `nova`): a chave, o tipo de peça, a porta, o cheio, a Caçadora, sem repetir, um apelão de
+    regra, e até o teto de efeitos dela mais os dois de fora do teto (a obra-prima e o molde). No mundo, o gravador confere o resto (o teto gravado, a entrada da 1b)."""
+    import tabelas_oficio as O
+    vistos = set(); teto = it.get('teto_efeitos') if isinstance(it.get('teto_efeitos'), int) else O.efeitos_max(it['cat']) + 2
+    for e in it['efeitos']:
+        k = e.get('chave')
+        if k not in EFEITOS: sys.exit(f'efeito desconhecido: "{k}" (os que há: {", ".join(EFEITOS)})')
+        if it['tipo'] not in EFEITOS[k][1]: sys.exit(f'o efeito "{k}" não vale em {it["tipo"]} (vale em: {", ".join(EFEITOS[k][1])})')
+        if k in vistos: sys.exit(f'o efeito "{k}" se repete na peça')
+        vistos.add(k)
+        x = efeito_erro(it, e)
+        if x: sys.exit(f'{it.get("nome") or it["tipo"]}: {x}')
+    if len(it['efeitos']) > teto: sys.exit(f'{it.get("nome") or it["tipo"]} leva {len(it["efeitos"])} efeitos: o teto dela é {teto}')
 
 
 def tem(it, chave):
@@ -270,9 +344,8 @@ def janela(it):
     mo = it.get('maldita')                                  # a peça maldita parece uma peça comum: só quem a leu (o rito de ler) sabe
     if isinstance(mo, dict) and mo.get('lida'): L.append(f"MALDITA (lida): {mo.get('nome')} ({FEM[mo['cat']] if isinstance(mo.get('cat'), int) else '?'}, {mo.get('tipo')}): quem a puser em uso pega a maldição, e a mão não a larga")
     if it.get('efeitos'): L.append('Efeitos: ' + ' · '.join(frase_efeito(e, c) for e in it['efeitos']))
-    if it.get('efeitos_livres'):                            # (fase 1a) os efeitos que a faixa deu e ainda não foram escolhidos
-        L.append(f"Efeitos por escolher: {it['efeitos_livres']}" + ((f" (cheios: {it['cheios_livres']})" if it.get('cheios_livres') else '') + ' (`oficio.py efeito ID` mostra o que cabe)' if it['tipo'] == 'ferramenta'
-                 else ' (o catálogo de luta chega na próxima fase)' + (f"; cheios: {it['cheios_livres']}" if it.get('cheios_livres') else '')))
+    if it.get('efeitos_livres'):                            # (fases 1a e 1b) os efeitos que a faixa deu e ainda não foram escolhidos: a ferramenta e (da 1b) a peça de luta escolhem pelo catálogo
+        L.append(f"Efeitos por escolher: {it['efeitos_livres']}" + (f" (cheios: {it['cheios_livres']})" if it.get('cheios_livres') else '') + ' (`oficio.py efeito ID` mostra o que cabe)')
     if it.get('sinete'): L.append(f"Sinete: {it['sinete']} (a peça leva o nome de quem a forjou)")
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")

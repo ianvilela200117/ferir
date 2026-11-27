@@ -18,10 +18,10 @@ A ARMADURA DECIDE MENOS: só a armadura DUAS acima, 50 × 500                   
 ... mas conta: só a armadura UMA acima, no mesmo nível                                                      75-97%     92%  passa  (6 rodadas)
 ... e só a armadura DUAS acima vence 100 níveis (50 × 150)                                                 75-100%     93%  passa  (11 rodadas)
 O CONJUNTO duas acima (com Vontade para sustentar), 50 × 500                                               95-100%    100%  passa  (2 rodadas)
-A FANTASIA: um nível 50 de conjunto Lendário × dez de nível 275 de Raro                                    85-100%     92%  passa  (5 rodadas)
-A GUILDA: um nível 90 de conjunto Mítico × dez de nível 275 de Raro                                        90-100%    100%  passa  (3 rodadas)
-SÓ A ARMA NÃO BASTA contra dez: o mesmo, com armadura Rara                                                   0-40%     12%  passa  (2 rodadas)
-O NÚMERO CONTA: uma categoria não garante contra dez (nível 120 de Lendário × dez de nível 60 de Único)     15-60%     49%  passa  (4 rodadas)
+A FANTASIA: um nível 50 de conjunto Lendário × dez de nível 275 de Raro                                    85-100%     87%  passa  (5 rodadas)
+A GUILDA: um nível 90 de conjunto Mítico × dez de nível 275 de Raro                                        90-100%    100%  passa  (4 rodadas)
+SÓ A ARMA NÃO BASTA contra dez: o mesmo, com armadura Rara                                                   0-40%      7%  passa  (2 rodadas)
+O NÚMERO CONTA: uma categoria não garante contra dez (nível 120 de Lendário × dez de nível 60 de Único)     15-60%     36%  passa  (4 rodadas)
 ... e na mesma categoria os dez vencem sempre                                                                 0-5%      0%  passa  (2 rodadas)
 ... mas DUAS categorias no conjunto vencem os dez                                                          90-100%    100%  passa  (4 rodadas)
 SOLDADOS COMUNS não derrubam o Lendário: um nível 120 × dez de nível 15                                    97-100%    100%  passa  (3 rodadas)
@@ -33,68 +33,68 @@ cinco contra cinco (nível 40, Incomum)                                         
 a luta em que o aço não passa não se arrasta: só a armadura DUAS acima, 50 × 500                            4-30 r    12 r  passa
 
 AS ARMAS ENTRE SI (cada montagem Rara de nível 60 contra todas as outras; a meta: nenhuma abaixo de 35% nem acima de 65%)
-  malho, placa 62% · montante, placa 61% · maça e escudo, placa 60% · malho, malha 59%
-  maça e escudo, malha 57% · martelo e escudo, placa 57% · alabarda, placa 56% · montante, malha 55%
-  martelo e escudo, malha 54% · lança e escudo, placa 54% · espada e escudo, placa 52% · lança e escudo, malha 51%
-  alabarda, malha 51% · espada e escudo, malha 48% · machado e escudo, placa 48% · montante, couro 47%
-  malho, couro 46% · maça e escudo, couro 45% · machado e escudo, malha 42% · lança e escudo, couro 42%
-  martelo e escudo, couro 41% · alabarda, couro 40% · espada e escudo, couro 37% · machado e escudo, couro 36%
-  passa  a melhor 62%, a pior 36%
+  malho, placa 63% · montante, placa 60% · maça e escudo, placa 59% · malho, malha 59%
+  martelo e escudo, placa 58% · alabarda, placa 57% · maça e escudo, malha 55% · martelo e escudo, malha 55%
+  lança e escudo, placa 55% · montante, malha 54% · espada e escudo, placa 52% · lança e escudo, malha 52%
+  alabarda, malha 51% · machado e escudo, placa 50% · espada e escudo, malha 47% · montante, couro 47%
+  malho, couro 47% · maça e escudo, couro 45% · machado e escudo, malha 42% · lança e escudo, couro 41%
+  alabarda, couro 41% · martelo e escudo, couro 40% · espada e escudo, couro 37% · machado e escudo, couro 36%
+  passa  a melhor 63%, a pior 36%
 
 OS MÓDULOS (cada coisa que interfere, interfere para o lado certo)
-  passa  1 ALCANCE: três lanças contra três espadas (sem escudo), num corredor de um e em campo aberto: 70% e 40%
-  passa  1 DISTÂNCIA: a arqueira começa longe ou começa colada: 34% contra 16%
-  passa  3 O TEMPO: a mesma arqueira, de longe: na neblina, com tempo limpo, na lama: 11%, 34%, 59%
-  passa  2 O LUGAR: um contra quatro, em campo aberto ou num corredor de um: 48% contra 85%
-  passa  5 GOLPE CONTRA ARMADURA: o malho e o montante contra a placa: 78% contra 46%
+  passa  1 ALCANCE: três lanças contra três espadas (sem escudo), num corredor de um e em campo aberto: 75% e 38%
+  passa  1 DISTÂNCIA: a arqueira começa longe ou começa colada: 33% contra 14%
+  passa  3 O TEMPO: a mesma arqueira, de longe: na neblina, com tempo limpo, na lama: 10%, 33%, 61%
+  passa  2 O LUGAR: um contra quatro, em campo aberto ou num corredor de um: 45% contra 83%
+  passa  5 GOLPE CONTRA ARMADURA: o malho e o montante contra a placa: 78% contra 44%
   passa  4 REQUISITO: a placa em quem não tem Força para ela: Defesa 28.5 contra 36.5; fôlego por rodada 5 contra 1
   passa  4 REQUISITO: a gente gerada de nível baixo não tem Força para a placa nem para a arma pesada: nível 20: Força 76 (a placa pede 80)
   passa  4 FÔLEGO: quem começa o turno sem fôlego faz uma ação só: 1 golpe(s) no turno
   passa  SOB MEDIDA: a mesma peça na mão do dono e na mão de outro: acerto +28 e × 303.75 contra +19 e × 101.25
   passa  SINTONIA: quatro peças despertas em quem só sustenta uma: dormem: escudo Épico, armadura de malha Épica, elmo de malha Épico
-  passa  SINTONIA NA LUTA: o conjunto Épico contra três de nível 100 de Raro, com Vontade para as quatro peças e sem: 62% contra 20%
+  passa  SINTONIA NA LUTA: o conjunto Épico contra três de nível 100 de Raro, com Vontade para as quatro peças e sem: 59% contra 14%
   passa  6 PARTE DO CORPO: o mesmo guerreiro sem o elmo, contra o de elmo: 32%
   passa  7 DURABILIDADE: o mestre de nível 300 com espada Comum quebra a espada na armadura Única: em 98% das lutas
   passa  O IMPASSE: quando ninguém fere ninguém, os lados se separam (a luta não vai a 60 rodadas): em 100% dessas lutas
-  passa  8 MORAL: seis contra um muito mais forte: alguém foge ou se rende: em 42% das lutas
+  passa  8 MORAL: seis contra um muito mais forte: alguém foge ou se rende: em 41% das lutas
   passa  8 MORAL: quem o jogador comanda nunca foge nem se rende pelo dado: 0 vez(es) em 100 lutas perdidas
   passa  9 O CERCO: dez contra um em campo aberto, quantos batem nele numa rodada: 4 (o teto é 4 de perto e 2 de haste)
   passa  9 O CONTORNO: sete contra uma linha de um: os que sobram passam e chegam em quem está atrás: em 100% das lutas, em três rodadas
   passa  10 PARA E PERGUNTA: a luta para antes da 1ª rodada, e a ordem de recuar é cumprida: parada; o rei foi da casa 0 para a -4
-  passa  10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam: em 95% das lutas houve parada com turnos por vir
+  passa  10 PARA E PERGUNTA: a parada vem no MEIO da rodada, antes dos turnos que faltam: em 97% das lutas houve parada com turnos por vir
   passa  10 A ORDEM DE FÔLEGO ACABA quando o fôlego enche: a luta para e pergunta, e ninguém segue tomando fôlego de fôlego cheio enquanto o inimigo chega: 60 lutas com a ordem dada de fôlego cheio e o inimigo longe: 0 ações gastas tomando fôlego à toa; a luta parou e avisou em 60
-  passa  O REGISTRO NA ORDEM: quem avança para dentro de uma arma mais longa aparece dando o passo ANTES do golpe que o pega; ninguém avança, no registro, depois de cair ou de morrer: 120 lutas de um lanceiro contra dois de adaga: 95 golpes de "o alcance bate primeiro"; em 0 a linha do passo veio depois do golpe
-  passa  A RETIRADA: com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta: em 83% das lutas
+  passa  O REGISTRO NA ORDEM: quem avança para dentro de uma arma mais longa aparece dando o passo ANTES do golpe que o pega; ninguém avança, no registro, depois de cair ou de morrer: 120 lutas de um lanceiro contra dois de adaga: 93 golpes de "o alcance bate primeiro"; em 0 a linha do passo veio depois do golpe
+  passa  A RETIRADA: com dois guardas segurando o corredor, quem recebe ordem de recuar sai da luta: em 92% das lutas
   passa  A RETIRADA SÓ EXISTE COM INIMIGO DE PÉ: quem tem ordem de recuar na rodada em que o último inimigo cai NÃO sai da luta: a luta acabou, e ele ficou com o campo como os outros: 150 lutas de dois contra um ladrão, com "Maro: recuar": a casa venceu 145, e Maro acabou de pé no campo em 124; saiu da luta depois de o último inimigo cair: 0 vez(es); posto à mão (o inimigo morto, Maro a 1 casa, com ordem de recuar): Maro fica "pe" e o campo é de "A"
   passa  O CENÁRIO É CONFERIDO antes de qualquer dado (nome repetido, tempo que não existe): recusou
 
 OS BICHOS (as oito metas da etapa 2, de B1 a B8, e o que o corpo do bicho tem de ser)
   passa  B1 O MESMO DEGRAU: um nível 50, tudo Raro, contra a pantera (Rara, média, sozinha): 40 a 60%: 46%
   passa  B2 A ARMA DECIDE CONTRA O BICHO: o mesmo homem com a arma uma categoria acima vence em 80% ou mais; com a arma uma abaixo, perde em 80% ou mais: vence 88%; perde 91%
-  passa  B3 O BANDO: quatro lobos Incomuns contra um nível 30 de conjunto Incomum: 10 a 35% em campo aberto, e 20 pontos a mais num corredor de um: 15% e 69%
-  passa  B4 O CHEFE: a serpe (Épica, enorme) contra quatro de nível 60 de conjunto Raro (5 a 30%) e de conjunto Épico (55 a 90%): 22% e 64% (gente gerada: a Vontade 56 sustenta duas peças Épicas, a arma e o escudo, e a armadura dorme; com Vontade 80, o conjunto inteiro desperto: 100%)
-  passa  B5 O TAMANHO (o mesmo bicho pequeno, médio, grande e enorme): o maior tem mais PV, alcança mais longe, apanha de mais gente, toma mais do corredor e é mais fácil de acertar: PV 100, 168, 252, 420 · alcança 1, 1, 2, 3 casa(s) · batem nele na rodada 2, 4, 6, 8 · cabem 4, 2, 1, 1 na frente de um corredor de dois · Defesa 39.5, 37.5, 35.5, 33.5 · o homem acerta 49%, 58%, 65%, 73% dos golpes
-  passa  B6 O TRAÇO MATILHA: quatro lobos contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 16% com, 36% sem: +20
-  passa  B6 O TRAÇO BOTE: a pantera contra um nível 50 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 52% com, 70% sem: +18
+  passa  B3 O BANDO: quatro lobos Incomuns contra um nível 30 de conjunto Incomum: 10 a 35% em campo aberto, e 20 pontos a mais num corredor de um: 14% e 69%
+  passa  B4 O CHEFE: a serpe (Épica, enorme) contra quatro de nível 60 de conjunto Raro (5 a 30%) e de conjunto Épico (55 a 90%): 23% e 68% (gente gerada: a Vontade 56 sustenta duas peças Épicas, a arma e o escudo, e a armadura dorme; com Vontade 80, o conjunto inteiro desperto: 100%)
+  passa  B5 O TAMANHO (o mesmo bicho pequeno, médio, grande e enorme): o maior tem mais PV, alcança mais longe, apanha de mais gente, toma mais do corredor e é mais fácil de acertar: PV 100, 168, 252, 420 · alcança 1, 1, 2, 3 casa(s) · batem nele na rodada 2, 4, 6, 8 · cabem 4, 2, 1, 1 na frente de um corredor de dois · Defesa 39.5, 37.5, 35.5, 33.5 · o homem acerta 50%, 57%, 65%, 73% dos golpes
+  passa  B6 O TRAÇO MATILHA: quatro lobos contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 16% com, 34% sem: +18
+  passa  B6 O TRAÇO BOTE: a pantera contra um nível 50 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 50% com, 70% sem: +20
   passa  B6 O TRAÇO INVESTIDA: o javali, vindo de longe, contra um nível 10 de conjunto Comum, com o traço e sem ele (8 pontos ou mais): vence 57% com, 74% sem: +17
-  passa  B6 O TRAÇO VENENO: a surucucu contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 53% com, 84% sem: +31
-  passa  B6 O TRAÇO AGARRA: o urso contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 50% com, 60% sem: +10
-  passa  B6 O TRAÇO VOA: o grifo contra um nível 50 de conjunto Raro, de espada, com o traço e sem ele (8 pontos ou mais): vence 45% com, 63% sem: +18; de lança, 62%
+  passa  B6 O TRAÇO VENENO: a surucucu contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 52% com, 86% sem: +34
+  passa  B6 O TRAÇO AGARRA: o urso contra um nível 30 de conjunto Incomum, com o traço e sem ele (8 pontos ou mais): vence 52% com, 61% sem: +9
+  passa  B6 O TRAÇO VOA: o grifo contra um nível 50 de conjunto Raro, de espada, com o traço e sem ele (8 pontos ou mais): vence 46% com, 65% sem: +19; de lança, 58%
   passa  B6 O TRAÇO REGENERA: o trasgo contra um nível 50 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 48% com, 79% sem: +31
-  passa  B6 O TRAÇO APAVORA: a hidra contra quatro de nível 120 de conjunto Único, com o traço e sem ele (8 pontos ou mais): vence 46% com, 72% sem: +26
-  passa  B6 O TRAÇO COURAÇA: o basilisco (Épico) contra quatro de nível 60 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 9% com, 39% sem: +30
-  passa  B6 O TRAÇO SOPRO: a serpe contra quatro de nível 60 de conjunto Épico, com o traço e sem ele (8 pontos ou mais): vence 66% com, 86% sem: +20
-  passa  B7 A MORAL: o bicho comum ferido foge em 30% ou mais das lutas que perde (cada espécie que não é chefe, sozinha, contra o homem do degrau dela); o encurralado e o chefe não fogem; ninguém se rende: foge em 31% das 1016 lutas perdidas (a que mais foge: basilisco, 88%; a que menos: ratazana, 13%) · a pantera sem saída fugiu 0 vez(es) · a serpe fugiu 0 vez(es) · rendições: 0
-  passa  B8 A DURAÇÃO: a luta de um contra um bicho do mesmo degrau, mediana de 3 a 9 rodadas (a de B1, e a de cada bicho que anda sozinho contra o homem do degrau dele): a pantera 3 rodadas; javali 3, surucucu 3, urso 3, trasgo 5, basilisco 4
+  passa  B6 O TRAÇO APAVORA: a hidra contra quatro de nível 120 de conjunto Único, com o traço e sem ele (8 pontos ou mais): vence 45% com, 72% sem: +27
+  passa  B6 O TRAÇO COURAÇA: o basilisco (Épico) contra quatro de nível 60 de conjunto Raro, com o traço e sem ele (8 pontos ou mais): vence 8% com, 41% sem: +33
+  passa  B6 O TRAÇO SOPRO: a serpe contra quatro de nível 60 de conjunto Épico, com o traço e sem ele (8 pontos ou mais): vence 67% com, 89% sem: +22
+  passa  B7 A MORAL: o bicho comum ferido foge em 30% ou mais das lutas que perde (cada espécie que não é chefe, sozinha, contra o homem do degrau dela); o encurralado e o chefe não fogem; ninguém se rende: foge em 34% das 1059 lutas perdidas (a que mais foge: basilisco, 57%; a que menos: ratazana, 22%) · a pantera sem saída fugiu 0 vez(es) · a serpe fugiu 0 vez(es) · rendições: 0
+  passa  B8 A DURAÇÃO: a luta de um contra um bicho do mesmo degrau, mediana de 3 a 9 rodadas (a de B1, e a de cada bicho que anda sozinho contra o homem do degrau dele): a pantera 3 rodadas; javali 3, surucucu 3, urso 3, trasgo 6, basilisco 4
   passa  B+ O CORPO NÃO É PEÇA: não quebra, não tem dono nem registro no Livro, e não ocupa sintonia (mas gasta o aço de quem bate nele com arma pior): em 60 lutas longas contra o basilisco (Épico), o corpo se gastou ou ganhou dono em 0; a espada Rara do caçador se gastou na luta em 100%; o dragão (corpo Lendário) com Vontade 10: 0 peça(s) dormindo
   passa  B+ A AMEAÇA: a frase que o caçador lê antes da luta diz o grau, a categoria, o tamanho, o corpo e os traços de cada espécie, e faz a conta da regra de ouro com o que ele veste; da que anda em bando, diz que o grau é o de um só e quanto vale o bando (um grau acima com 2 ou 3, dois com 4 ou mais), o cerco e o corredor; do bicho pequeno, que o traço dele não derruba gente: 14 de 14 espécies; o lobo contra quem veste Comum: diz um terço e o triplo; o aviso do bando em 5 de 5 espécies de bando (e em nenhuma das 9 que andam sós); duas corças valem grau E e quatro lobos, grau B: dito; a ratazana: diz que não derruba gente
   passa  B+ O DESPOJO: sai da tabela (de metade ao inteiro de cada bem, matéria até o Raro), a mesma sorte dá o mesmo despojo, e só o chefe dá núcleo, da categoria dele: 14 de 14 espécies certas; chefes: serpe, hidra, dragão
   passa  B+ O CENÁRIO: o bicho que o bichos.bicho devolve passa pelo cenário da luta (o do ato.py também), pelo atalho {"bicho": espécie}, vai ao arquivo e volta; traço fora da lista é recusado: 14 de 14 espécies com a mesma ficha pelos três caminhos e a luta inteira depois de ir ao arquivo; o traço inventado: recusou
-  passa  B+ O AGARRADO: fica onde está (não anda, não recua, e quem vem atrás não troca de lugar com ele), e só é agarrado quem está colado: o lanceiro, que bate a duas casas, o urso não abraça: dois de espada contra o urso num corredor de um, em 120 lutas: 148 abraços, e o agarrado saiu do lugar 0 vez(es); um de lança contra o urso: agarrado em 0 de 120 lutas
-  passa  B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé): com o lobo morto, fraquejou em 0 de 200 sustos; com o lobo de pé, em 67 (e a um bicho não se rendeu: certo)
+  passa  B+ O AGARRADO: fica onde está (não anda, não recua, e quem vem atrás não troca de lugar com ele), e só é agarrado quem está colado: o lanceiro, que bate a duas casas, o urso não abraça: dois de espada contra o urso num corredor de um, em 120 lutas: 149 abraços, e o agarrado saiu do lugar 0 vez(es); um de lança contra o urso: agarrado em 0 de 120 lutas
+  passa  B+ QUEM FICOU COM O CAMPO não testa a coragem: sem inimigo de pé, ninguém foge nem se rende (o mesmo homem, por um fio e sem saída, com o lobo morto e com o lobo de pé): com o lobo morto, fraquejou em 0 de 200 sustos; com o lobo de pé, em 62 (e a um bicho não se rendeu: certo)
   passa  B+ QUEM NÃO ANDA NÃO FOGE: o bicho que vai ao chão ou fica com a perna presa não sai da luta (nem o que levou, de costas, o golpe que o derrubou); com a perna presa, luta como encurralado: 600 lutas do caçador de começo contra duas corças surpreendidas: 720 corças fugiram, 0 delas no chão ou com a perna presa; o golpe pelas costas segurou 26; ficaram encurraladas 86
   passa  B+ AS ESPÉCIES: de 12 a 16, do Comum ao Lendário, com o grau de F a S casado com a categoria; há bicho de bando, bicho sozinho e chefe (um núcleo para cada categoria, do Épico ao Lendário); os traços são uma lista fechada de 8 a 12, todos em uso; cada espécie tem a ficha inteira, e o despojo fala a língua comum dos bens (matéria da categoria dela, até o Raro): 14 espécies, 14 com a ficha inteira; categorias: Comum, Incomum, Raro, Épico, Único, Lendário; graus: F, E, D, C, B, A, S; 5 de bando, 6 que andam sós, 3 chefes (Épico, Único, Lendário); 10 traços, 10 em uso
-  passa  B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes: a luta acabou (A, 2 rodadas); o Aldric: vivo, PV 124, 0 ferida(s); eventos de luta: 1; gente e Livro: os mesmos; estado inteiro; MESA: 11 espécies de dois lugares, cada uma dita uma vez, em 910 bytes
+  passa  B+ NO MUNDO: o personagem do mundo contra dois bichos pelo ato.py luta (o atalho e a pessoa do bichos.bicho): a luta volta ao estado por um evento só; o bicho não vira gente, o corpo não entra no Livro, e a contagem do ermo não muda sozinha (tirar o bicho da contagem é da caça); as linhas dos bichos para a MESA são curtas, sem a contagem e sem os chefes: a luta acabou (B, 3 rodadas); o Aldric: vivo, PV 1, 2 ferida(s); eventos de luta: 1; gente e Livro: os mesmos; estado inteiro; MESA: 11 espécies de dois lugares, cada uma dita uma vez, em 910 bytes
 
 A MAGIA NA LUTA (a etapa da magia, capítulo 11: o projeto conta, seção G, na parte da luta; os nove traços novos; as fases do chefe; a ordem; a luta que volta ao estado)
   passa  M1 MAGO CONTRA MAGO (iguais, perto): de 44 a 56%: 48%
@@ -106,30 +106,98 @@ A MAGIA NA LUTA (a etapa da magia, capítulo 11: o projeto conta, seção G, na 
   passa  M7 ... e com o foco uma acima, de longe: de 5 a 30%: 24%
   passa  M8 NENHUM FEITIÇO MATA DE PV CHEIO SEM CRÍTICO ENTRE IGUAIS (no guerreiro com amuleto e no gêmeo de quem lança); na mediana, nenhum tira mais de 45% do PV do guerreiro, e a seta até 20%: na mediana: seta 16%, lança de fogo 31%, raio 39%, bola de fogo 16%, espinho 12%, sangria 9%, castigo 25%; nenhum mata de PV cheio
   passa  M9 A MANA É O FÔLEGO DA MAGIA: só de seta, sem parar, seca entre a rodada 6 e a 10; a volta de 1 por turno rende de 25 a 50% de setas a mais na luta (até 20 rodadas; a luta acaba no impasse quando o alvo não sente): seca na rodada 8 (sem a volta, na 7); 14.9 setas contra 11.0 (+36%)
-  passa  M10 O MAGO NO GRUPO, no lugar de um guerreiro: sem área 40 a 55%; com a bola de fogo contra cinco com amuleto 52 a 70%; contra cinco sem amuleto 75 a 92%: cinco contra cinco: 48%; sem área 52%; com área 64%; com área contra os sem amuleto 82%
-  passa  M11 ... e no corredor de dois (seta, bola de fogo, prender): de 50 a 68%: 52%
-  passa  M12 O CLÉRIGO NA LINHA (maça, escudo, malha; cura), no lugar de um guerreiro: em campo 42 a 58%, no corredor 48 a 64%; benzendo os quatro antes da luta (8 de Mana a menos), de 5 a 14 pontos a mais: 45%, 52%; benzidos 58% (+13)
-  passa  M13 O DRUIDA (cajado; raízes, espinho), atrás, no lugar de um guerreiro: de 45 a 62%: 51% (cinco contra cinco: 48%)
-  passa  M13 A BRUXA (talismã e adaga; mau-olhado, sangria), atrás, no lugar de um guerreiro: de 42 a 58% (o projeto a mediu com um cajado que valia inteiro; o cajado não é foco do pacto): 52% (cinco contra cinco: 48%)
-  passa  M14 A BRUXA SOZINHA contra o guerreiro com amuleto, de longe: de 5 a 20% (péssima sozinha): 13%
+  passa  M10 O MAGO NO GRUPO, no lugar de um guerreiro: sem área 40 a 55%; com a bola de fogo contra cinco com amuleto 52 a 70%; contra cinco sem amuleto 75 a 92%: cinco contra cinco: 49%; sem área 52%; com área 64%; com área contra os sem amuleto 83%
+  passa  M11 ... e no corredor de dois (seta, bola de fogo, prender): de 50 a 68%: 55%
+  passa  M12 O CLÉRIGO NA LINHA (maça, escudo, malha; cura), no lugar de um guerreiro: em campo 42 a 58%, no corredor 48 a 64%; benzendo os quatro antes da luta (8 de Mana a menos), de 5 a 14 pontos a mais: 44%, 57%; benzidos 56% (+12)
+  passa  M13 O DRUIDA (cajado; raízes, espinho), atrás, no lugar de um guerreiro: de 45 a 62%: 49% (cinco contra cinco: 49%)
+  passa  M13 A BRUXA (talismã e adaga; mau-olhado, sangria), atrás, no lugar de um guerreiro: de 42 a 58% (o projeto a mediu com um cajado que valia inteiro; o cajado não é foco do pacto): 49% (cinco contra cinco: 49%)
+  passa  M14 A BRUXA SOZINHA contra o guerreiro com amuleto, de longe: de 5 a 20% (péssima sozinha): 14%
   passa  M15 O FEITIÇO LONGO SOB FLECHA (o raio: sai no começo do turno seguinte; quem canaliza e apanha testa a concentração): sob uma arqueira se perdem de 15 a 35%, sob duas de 25 a 50%: 34% e 46% (cada teste de concentração falha 28% e 27%)
-  passa  M16 ... e um guarda de escudo na frente de quem canaliza tira 3 pontos ou mais: 40% contra 46% (-5.5 pontos)
-  passa  M17 O RETROCHOQUE: no lance comum (dois 1) de 0,1 a 0,5% dos lances; no forçado (basta um 1) de 8 a 12%: 0.27% e 9.65% em 20000 lances de cada
-  passa  M21 O CONTROLE: o mago Mestre de foco Raro pega (prender) no guerreiro igual com amuleto de 55 a 75% das vezes; calejado duas vezes (+8 na Firmeza), de 25 a 40%: Conjuração +18 contra a Firmeza 35.5: a conta dá 66%, o dado 66%; calejado (43.5): 30% e 33%
-  passa  M18 A MULTIDÃO: um mago Raro (seta, bola de fogo, prender, escudo) contra 8 e contra 12 soldados Comuns de nível 20, sem amuleto, de longe: de 55 a 85% e de 35 a 70% (morre cercado): 78% e 52%
-  passa  M19 O MAGO NÃO É CAÇADOR: contra a pantera, de longe 35 a 60% e de perto 0 a 12% (o bote o mata); contra o trasgo, de longe, 30 a 55%: 47%, 5% e 42%
-  passa  M20 OS NOVE TRAÇOS NOVOS, cada um com ele e sem ele: 8 pontos ou mais (resiste: o mago contra a pantera, de longe; imaterial, ossos, ardente, noturno no escuro: o guerreiro de espada contra a pantera; lança: a pantera que lança seta, de longe; sem vida: quatro lobos que não fogem contra o nível 30; dreno: a serpe contra seis guerreiros (o sopro é golpe do corpo: drena de cada um que pega); amaldiçoa: em quantas lutas o guerreiro sai com a maldição): resiste 24% contra 48% · imaterial 11% contra 49% · lança 37% contra 46% · sem vida 1% contra 17% · ossos 21% contra 47% · dreno 32% contra 62% · ardente 30% contra 48% · noturno 40% contra 51% · amaldiçoa 74% contra 0%
-  passa  P1 A POÇÃO AJUDA E NÃO DECIDE: uma poção de cura da categoria da luta, 52 a 62%; duas, 55 a 68%; a terceira não soma mais de 3 pontos (o corpo aguenta Vigor ÷ 30 por dia: quem não comanda o jogador não bebe além disso): 53%, 57% e 60%
-  passa  P2 A CURA SEGUE A LEI AO CONTRÁRIO: duas poções uma categoria abaixo da ferida, 47 a 53%; um elixir uma acima, 55 a 68%: 52% e 59%
-  passa  P3 O VENENO DE LÂMINA: uma dose da categoria (a primeira vez que a arma tira sangue: um quarto do golpe por 3 rodadas e −2 no acerto), de 52 a 62%: 61%
-  passa  P4 O FRASCO NÃO VENCE A PEÇA: veneno e duas poções, até 75%; duas poções contra o gêmeo com a arma uma acima, até 12%: 61% e 4%
-  passa  P9 O LIMITE DO CORPO E O TETO DA CURA: além de Vigor ÷ 30 poções no dia, cada uma pede Vigor (falhou: não faz nada, e enjoa); poção e feitiço somados nunca devolvem mais que metade do PV no dia: o guerreiro aguenta 2 por dia; bebendo 4, enjoou em 155 de 200; o teto sempre segurou
-  passa  E1 O ENCANTO NÃO DECIDE NUM IGUAL: a espada Rara com seta gravada contra o gêmeo, de perto e de longe: de 46 a 56%: 50% e 52%
-  passa  E2 ... MAS AJUDA CONTRA A MULTIDÃO DE BAIXO: a bola de fogo gravada, uma vez, contra oito de uma categoria abaixo: de 5 a 15 pontos a mais: 23% e 35% (+12)
+  passa  M16 ... e um guarda de escudo na frente de quem canaliza tira 3 pontos ou mais: 42% contra 46% (-4.0 pontos)
+  passa  M17 O RETROCHOQUE: no lance comum (dois 1) de 0,1 a 0,5% dos lances; no forçado (basta um 1) de 8 a 12%: 0.24% e 10.11% em 20000 lances de cada
+  passa  M21 O CONTROLE: o mago Mestre de foco Raro pega (prender) no guerreiro igual com amuleto de 55 a 75% das vezes; calejado duas vezes (+8 na Firmeza), de 25 a 40%: Conjuração +18 contra a Firmeza 35.5: a conta dá 66%, o dado 65%; calejado (43.5): 30% e 33%
+  passa  M18 A MULTIDÃO: um mago Raro (seta, bola de fogo, prender, escudo) contra 8 e contra 12 soldados Comuns de nível 20, sem amuleto, de longe: de 55 a 85% e de 35 a 70% (morre cercado): 72% e 48%
+  passa  M19 O MAGO NÃO É CAÇADOR: contra a pantera, de longe 35 a 60% e de perto 0 a 12% (o bote o mata); contra o trasgo, de longe, 30 a 55%: 48%, 6% e 40%
+  passa  M20 OS NOVE TRAÇOS NOVOS, cada um com ele e sem ele: 8 pontos ou mais (resiste: o mago contra a pantera, de longe; imaterial, ossos, ardente, noturno no escuro: o guerreiro de espada contra a pantera; lança: a pantera que lança seta, de longe; sem vida: quatro lobos que não fogem contra o nível 30; dreno: a serpe contra seis guerreiros (o sopro é golpe do corpo: drena de cada um que pega); amaldiçoa: em quantas lutas o guerreiro sai com a maldição): resiste 23% contra 49% · imaterial 15% contra 49% · lança 36% contra 47% · sem vida 1% contra 14% · ossos 21% contra 48% · dreno 34% contra 62% · ardente 32% contra 47% · noturno 38% contra 52% · amaldiçoa 77% contra 0%
+  passa  P1 A POÇÃO AJUDA E NÃO DECIDE: uma poção de cura da categoria da luta, 52 a 62%; duas, 55 a 68%; a terceira não soma mais de 3 pontos (o corpo aguenta Vigor ÷ 30 por dia: quem não comanda o jogador não bebe além disso): 55%, 59% e 60%
+  passa  P2 A CURA SEGUE A LEI AO CONTRÁRIO: duas poções uma categoria abaixo da ferida, 47 a 53%; um elixir uma acima, 55 a 68%: 52% e 60%
+  passa  P3 O VENENO DE LÂMINA: uma dose da categoria (a primeira vez que a arma tira sangue: um quarto do golpe por 3 rodadas e −2 no acerto), de 52 a 62%: 59%
+  passa  P4 O FRASCO NÃO VENCE A PEÇA: veneno e duas poções, até 75%; duas poções contra o gêmeo com a arma uma acima, até 12%: 67% e 4%
+  passa  P9 O LIMITE DO CORPO E O TETO DA CURA: além de Vigor ÷ 30 poções no dia, cada uma pede Vigor (falhou: não faz nada, e enjoa); poção e feitiço somados nunca devolvem mais que metade do PV no dia: o guerreiro aguenta 2 por dia; bebendo 4, enjoou em 151 de 200; o teto sempre segurou
+  passa  E1 O ENCANTO NÃO DECIDE NUM IGUAL: a espada Rara com seta gravada contra o gêmeo, de perto e de longe: de 46 a 56%: 50% e 53%
+  passa  E2 ... MAS AJUDA CONTRA A MULTIDÃO DE BAIXO: a bola de fogo gravada, uma vez, contra oito de uma categoria abaixo: de 5 a 15 pontos a mais: 21% e 28% (+7)
   passa  E3 A PEÇA ENCANTADA OCUPA SINTONIA E SAI UMA VEZ POR LUTA: com Vontade 25 (uma peça desperta) a espada encantada, atrás do escudo e da armadura Épicos, dorme e não solta; com Vontade 80, solta; duas peças Comuns encantadas, com Vontade 25: uma dorme; o encanto solto não sai de novo na mesma luta: Vontade 25: a espada dorme; 80: desperta; das Comuns encantadas, uma dorme; o encanto saiu, e pedir de novo recusou
-  passa  AS FASES DO CHEFE: ao cruzar o limiar do PV, o chefe muda uma vez (ganha o traço, aprende o feitiço, recobra a Mana, dá o brado e ergue os mortos como "sem vida" do lado dele), e a luta para e pergunta; o morto erguido é outro lutador, sem registro no mundo, e o morto segue morto: em 40 lutas: 40 fases, 40 paradas, 40 mortos erguidos; o chefe mudou como diz; os erguidos sem id e sem vida, o morto segue morto
-  passa  A ORDEM DE QUEM O JOGADOR COMANDA (lancar, beber, usar) é conferida antes de qualquer dado; a de uma vez volta à ordem de antes; a de "sempre" segue até a Mana acabar ou o alvo cair; quem o jogador comanda não lança sozinho: 8 de 8 ordens tortas recusadas; a luz tirou o escuro e a ordem voltou; a seta de sempre seguiu (Mana 25 → 17)
+  passa  AS FASES DO CHEFE: ao cruzar o limiar do PV, o chefe muda uma vez (ganha o traço, aprende o feitiço, recobra a Mana, dá o brado e ergue os mortos como "sem vida" do lado dele), e a luta para e pergunta; o morto erguido é outro lutador, sem registro no mundo, e o morto segue morto: em 40 lutas: 40 fases, 40 paradas, 36 mortos erguidos; o chefe mudou como diz; os erguidos sem id e sem vida, o morto segue morto
+  passa  A ORDEM DE QUEM O JOGADOR COMANDA (lancar, beber, usar) é conferida antes de qualquer dado; a de uma vez volta à ordem de antes; a de "sempre" segue até a Mana acabar ou o alvo cair; quem o jogador comanda não lança sozinho: 8 de 8 ordens tortas recusadas; a luz tirou o escuro e a ordem voltou; a seta de sempre seguiu (Mana 25 → 21)
   passa  A PESSOA COMUM É A DE HOJE: a luta em que ninguém traz magia não liga a magia (nenhum campo de magia no lutador; os 80 do banco seguem iguais, e com semente fixa a luta é a mesma de antes): a luta de gêmeos sem nada: sem magia
   passa  A LUTA DE MAGIA VOLTA AO ESTADO (ato.py luta, no mundo de prova): a maga do mundo, ferida, lança e bebe sozinha, e a luta volta por um evento só: a Mana que sobrou, a poção bebida, o foco que gastou; o estado fica inteiro; a volta é conferida em toda luta em que ela vive, e ela vive e bebe em pelo menos uma: luta 1: acabou (A, 1 rodadas), a maga viva, Mana 15 → 13, bebeu 1 poção(ões), o foco 30 → 29, a volta confere, 1 evento de luta, estado inteiro; luta 2: acabou (A, 1 rodadas), a maga viva, Mana 15 → 13, bebeu 1 poção(ões), o foco 30 → 29, a volta confere, 1 evento de luta, estado inteiro; luta 3: acabou (A, 1 rodadas), a maga viva, Mana 15 → 13, bebeu 1 poção(ões), o foco 30 → 29, a volta confere, 1 evento de luta, estado inteiro
 
-114 de 114 metas passam.
+A PARTE 2, FASE 1b (a base da luta e os efeitos de item; DESENHO 10: B0, EF1 a EF8, B3; 2000 lutas por linha, como no contrato; só elas: `provas.py 2000 efeitos`)
+  passa  B0 A LUTA DE SEMPRE: 666 lutas ao acaso sem nada novo (gente, bichos e magia), no motor de antes (dbb6c3e) e no de agora, com a escada do medo desligada: iguais, dado por dado (o resto do banco confere que as metas de hoje passam com a escada ligada): 666 de 666 lutas iguais, linha por linha
+  passa  EF1 GUME (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +4,9 · Inc +5,8 · Rar +7,5 · Épi +13,7 · Úni +18,0 · Len +20,5 · Mít +26,8 · Pri +31,2
+  passa  EF1 CERTEIRA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +3,2 · Inc +7,8 · Rar +7,8 · Épi +10,8 · Úni +13,5 · Len +18,2 · Mít +20,4 · Pri +24,2
+  passa  EF1 CRÍTICO (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +3,9 · Inc +5,0 · Rar +5,0 · Épi +14,1 · Úni +16,5 · Len +22,8 · Mít +29,2 · Pri +34,3
+  passa  EF1 CAÇADORA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +4,6 · Inc +7,5 · Rar +8,2 · Épi +14,1 · Úni +18,2 · Len +21,0 · Mít +26,4 · Pri +32,3
+  passa  EF1 VAMPIRA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +3,2 · Inc +4,8 · Rar +6,0 · Épi +11,3 · Úni +12,2 · Len +13,5 · Mít +14,1 · Pri +13,7 (remedidas no modo longo, 20000 lutas: Único, Lendário, Mítico)
+  passa  EF1 SANGRIA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +1,7 · Inc +7,3 · Rar +6,4 · Épi +13,1 · Úni +13,3 · Len +14,1 · Mít +18,2 · Pri +18,1
+  passa  EF1 ATURDIR (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com — · Inc +6,5 · Rar +7,4 · Épi +10,1 · Úni +11,4 · Len +16,0 · Mít +16,0 · Pri +18,2
+  passa  EF1 MEDO (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com — · Inc +3,0 · Rar +4,1 · Épi +6,3 · Úni +9,2 · Len +15,6 · Mít +19,6 · Pri +28,6 (remedidas no modo longo, 20000 lutas: Incomum, Raro)
+  passa  EF1 SEGUNDO GOLPE (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +2,0 · Inc +6,1 · Rar +6,1 · Épi +10,2 · Úni +13,3 · Len +15,8 · Mít +17,9 · Pri +17,2
+  passa  EF1 PERFURA (acima): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +1,6 · Inc +3,4 · Rar +5,6 · Épi +11,1 · Úni +13,5 · Len +23,2 · Mít +30,1 · Pri +35,4
+  passa  EF1 COURAÇA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +2,9 · Inc +5,0 · Rar +6,2 · Épi +12,1 · Úni +15,0 · Len +19,5 · Mít +27,2 · Pri +34,7
+  passa  EF1 DEVOLVE (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +4,9 · Inc +7,8 · Rar +9,5 · Épi +13,3 · Úni +16,1 · Len +22,5 · Mít +30,6 · Pri +36,3
+  passa  EF1 REGENERA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +2,1 · Inc +5,4 · Rar +6,9 · Épi +8,5 · Úni +10,8 · Len +12,1 · Mít +12,9 · Pri +13,7
+  passa  EF1 TEMÍVEL (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +5,5 · Inc +5,5 · Rar +8,5 · Épi +10,7 · Úni +13,5 · Len +17,5 · Mít +22,0 · Pri +24,2
+  passa  EF1 ROBUSTA (carga): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +1,2 · Inc +2,6 · Rar +4,0 · Épi +5,1 · Úni +6,8 · Len +7,1 · Mít +6,3 · Pri +8,7 (remedidas no modo longo, 20000 lutas: Raro, Épico, Único, Lendário)
+  passa  EF1 GUARDA (duelo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +4,0 · Inc +6,6 · Rar +6,6 · Épi +8,1 · Úni +11,5 · Len +14,3 · Mít +16,9 · Pri +21,0
+  passa  EF1 FIRMEZA (magia): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +2,6 · Inc +4,6 · Rar +4,6 · Épi +5,0 · Úni +7,6 · Len +10,2 · Mít +13,3 · Pri +17,5
+  passa  EF1 CORAGEM (medo): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +1,3 · Inc +2,4 · Rar +5,2 · Épi +5,4 · Úni +11,2 · Len +14,2 · Mít +16,7 · Pri +21,1
+  passa  EF1 GUARDA MÁGICA (magia): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +2,2 · Inc +3,0 · Rar +3,9 · Épi +7,9 · Úni +11,8 · Len +18,0 · Mít +21,9 · Pri +29,3
+  passa  EF1 CHAMA (magia): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +5,1 · Inc +5,6 · Rar +5,5 · Épi +8,7 · Úni +12,7 · Len +14,0 · Mít +17,7 · Pri +21,0
+  passa  EF1 FOCO CERTEIRO (magia): nunca acima do teto da faixa (Comum 5 · Incomum e Rara 10 · Épica e Única 20 · da Lendária para cima 40), e cada coluna não menor que a da esquerda (folga 1): Com +5,8 · Inc +9,5 · Rar +9,5 · Épi +11,7 · Úni +14,9 · Len +18,6 · Mít +19,8 · Pri +25,0
+  passa  EF2 LEVE (fraco; (d)): sem vitória a medir (o contrato o marca de desenho, sem cenário: a regra faz o que diz, e a peça o mostra)
+  passa  EF2 PESA (fraco; (d)): sem vitória a medir (o contrato o marca de desenho, sem cenário: a regra faz o que diz, e a peça o mostra)
+  passa  EF2 NÃO QUEBRA (fraco; (d)): sem vitória a medir (o contrato o marca de desenho, sem cenário: a regra faz o que diz, e a peça o mostra)
+  passa  EF2 DERRUBA (fraco: 0 a 5; o contrato: +3,2 (m)): +4,2
+  passa  EF2 FIRME (fraco: 0 a 5; o contrato: (d)): +5,9
+  passa  EF2 LUZ (forte: 10 a 20; o contrato: (d); o banco: +12,1 no escuro (é tirar o −4 do escuro: vale uma Certeira +4), e por isso forte, da Épica (o contrato a punha no fraco; a porta pelo banco: DESENHO 12.3)): +12,1
+  passa  EF2 FIO MANSO (fraco; (d)): sem vitória a medir (o contrato o marca de desenho, sem cenário: a regra faz o que diz, e a peça o mostra)
+  passa  EF2 ARRANCADA (fraco: 0 a 5; o contrato: +2,7 (m)): +2,4
+  passa  EF2 APARADORA (normal: 5 a 10; o contrato: (d); o banco: +9,8 no duelo de escudo (o golpe aparado é comum, e o fôlego acaba), e por isso normal, da Incomum (o contrato a punha no fraco; a porta pelo banco: DESENHO 12.3)): +9,8
+  passa  EF2 EXPÕE (normal: 5 a 10; o contrato: +7,1 (m)): +7,6
+  passa  EF2 PONTA CERTA (normal: 5 a 10; o contrato: +5,1 (m)): +4,6
+  passa  EF2 DESFORRA (fraco: 0 a 5; o contrato: +5 (c); o banco: +3,4, e por isso fraco, da Comum (o contrato a punha no normal; a porta pelo banco: DESENHO 12.3)): +3,4
+  passa  EF2 ESCANCARA (forte: 10 a 20; o contrato: +15,5 (m)): +17,2
+  passa  EF2 AMOLECE (forte: 10 a 20; o contrato: +11,5 (m)): +13,1
+  passa  EF2 FÔLEGO (forte: 10 a 20; o contrato: +13,3 (m, martelo)): +11,5
+  passa  EF2 CEIFADORA (forte: 10 a 20; o contrato: +15,8 no um contra dez (m)): +17,6
+  passa  EF2 VARREDURA (forte: 10 a 20; o contrato: +14,6 no um contra dez; +11,0 no 3 contra 3 (m)): +17,7
+  passa  EF2 BRASA (forte: 10 a 20; o contrato: +14,5 (m)): +10,1
+  passa  EF2 ATAR (fraco: 0 a 5; o contrato: (d; o mago contra mago); o banco: +3,2 (o clérigo de maça contra o mago: o nó de hoje pesa pouco numa luta), e por isso fraco, da Comum (o contrato o punha no forte; a porta pelo banco: DESENHO 12.3)): +3,2
+  passa  EF2 REFLETORA (forte: 10 a 20; o contrato: (d)): +20,0
+  passa  EF2 ESCUDO QUE CONTA (fraco: 0 a 5; o contrato: (d; 3 contra 3); o banco: −0,5 no 3 contra 3 de Medo 20 (2.000 lutas), e por isso fraco, da Comum (o contrato o punha no forte; a porta pelo banco: DESENHO 12.3)): -0,5
+  passa  EF2 GUARDIÃ (fraco: 0 a 5; o contrato: (d; 3 contra 3); o banco: +2,3 no 3 contra 3 (2.000 lutas; +2,6 sem o limite por rodada), e por isso fraco, da Comum (o contrato a punha no forte; a porta pelo banco: DESENHO 12.3)): +2,3
+  passa  EF2 GOLPE DO FIM (apelão: 20 a 40; o contrato: +35,2 (m)): +35,2
+  passa  EF2 TEMPESTADE (apelão: 20 a 40; o contrato: +20,6 no um contra dez (m)): +26,7
+  passa  EF2 IMORTAL (apelão: 20 a 40; o contrato: +5,6 (m): compra a vida, não a vitória): +4,0 (a régua não julga: compra a vida)
+  passa  EF2 DOMÍNIO (forte: 10 a 20; o contrato: (c); o banco: +11,3 no mago contra o mago (com 2 usos, +16,6; com 3, +17,6: não chega ao apelão), e por isso forte, da Épica (o contrato o punha no apelão; a porta pelo banco: DESENHO 12.3)): +11,3
+  FALHA  EF3 A ÉPICA MAGRA contra a Rara de 4 cheios (Gume +30%, Certeira +3, Crítico 19/11, Vampira 50%; ou o Medo 20 no lugar da Vampira; ou 3 cheios e a Escancara do degrau emprestado): 75% ou mais (folga 1): 79,9%, 81,0% e 73,95% (1 no modo longo, 20000 lutas)
+  passa  EF3 O TETO INTEIRO: a Épica magra contra a Rara de 6 cheios, os mais fortes (Gume, Certeira, Crítico, Vampira 50%, Medo 20, Aturdir 6); e a mesma com o Gume de +40% do vidro (os números da fase 5): 60% ou mais: 67,2% e 63,1%
+  passa  EF3 O DEGRAU EMPRESTADO EM PEÇA DE 6 é recusado (com 6, a Épica magra venceu só 58,5%: o degrau só em peça de até 4): recusou
+  passa  EF3 OS QUATRO PARES (a de cima magra contra a de baixo cheia, mesma gente; "cheia": o teto de efeitos da categoria, todos cheios, na ordem de 4.4): 60% ou mais em cada: a Rara magra × a Incomum de 4 com 2 cheios: 86,6% · a Épica × a Rara cheia (4): 79,9% · a Única × a Épica cheia (5): 70,0% · a Lendária × a Única cheia (5): 59,5% (1 remedido(s) no modo longo, 20000 lutas)
+  passa  EF3 (à parte, sem meta: o contrato não o pede) o par de cima com os cinco mais fortes (Gume, Certeira, Crítico, Medo e Aturdir cheios: os números da Lendária numa Única): a Lendária magra vence 40,2%
+  passa  EF3 O CONJUNTO: o conjunto uma acima, sem efeito, contra o de baixo com a arma de 4 cheios (Gume, Certeira, Crítico, Vampira): 85% ou mais: 98,9%
+  passa  EF4 A PILHA: o golpe nunca passa de 7 vezes o golpe de hoje (com os mesmos dados), os dados nunca rolam mais de 4 vezes, a couraça até 75%, os fixos até +8 e a resistência até +16, o crítico nunca melhor que 17/7: 10000 golpes: o pior ×7,00 do golpe de hoje (o teto cortou 254 golpes); os dados no máximo 4 vezes; a couraça no máximo 50%; o crítico no máximo 24% (17/7: 24%); os fixos empilhados: acerto +8, Defesa +8, coragem +8, resistência +16
+  passa  EF5 O ATORDOAR NÃO TRAVA: em cada janela de 3 turnos seguidos o alvo age em 2 ou mais (nenhuma janela com 2 perdidos), na carga Primordial contra Vigor 50, no chefe, no 3 contra 3 e com a ferida grave na cabeça: a carga 15 contra Vigor 50: 0 de 2553 janelas com 2 perdidos, 31% dos turnos perdidos · o chefe (líder, de moral firme): 0 de 5491 janelas com 2 perdidos, 26% dos turnos perdidos · o 3 contra 3: 0 de 8041 janelas com 2 perdidos, 24% dos turnos perdidos · com a ferida grave na cabeça (a arma uma acima): 0 de 75 janelas com 2 perdidos, 33% dos turnos perdidos
+  passa  EF5 O 3 CONTRA 3, REMEDIDO (o contrato mediu a carga 4 e 6: +18,0 e +21,8; a régua do grupo: o aberto vale para os três que batem): carga 4: +18,8 · carga 6: +22,0
+  passa  EF6 O CALEJO: o 2º atordoar pede 1,4 vez os golpes do 1º, ou mais (a carga 4 da Rara contra a resistência 10, 14, 18...; os golpes que tiram PV entre um e outro, com a cabeça firme); e o calejo sobe a resistência 40% e 80%: 234 lutas de 10000 com dois atordoares: 3,0 golpes até o 1º, 5,9 até o 2º (×1,96); só os que enchem a barra (o calejo sozinho): 3,0 e 4,0 (×1,33: a carga 4 é inteira); a resistência 10, 14, 18
+  passa  EF6 O CALEJO POR FAMÍLIA NA FIRMEZA (3.5): o calejo de pernas dá +4 contra o prender e as raízes e nada contra o nó; o de mana, +4 contra o nó; com o calejo de hoje, vale o maior (não somam: a M21 igual): pernas: {'prender': 4,0, 'raízes': 4,0, 'nó': 0,0} · mana: {'prender': 0,0, 'raízes': 0,0, 'nó': 4,0} · o de hoje e o de pernas juntos: +4
+  passa  EF7 O MÓDULO 8 COM A ESCADA (seis contra um muito mais forte: alguém foge ou se rende): 30% ou mais (o contrato mediu 39%; antes da escada, 52%): 40% de 3000 lutas
+  passa  EF7 QUEM O JOGADOR COMANDA contra o Medo Primordial (29) de peça: nunca foge nem se rende, e a luta para uma vez só por esse medo (já abalado, ele não testa mais as fontes novas): 1000 lutas: 0 fugas ou rendições; 827 paradas pelo medo das peças, mais de uma na mesma luta em 0
+  passa  EF7 A CORAGEM CORTA O MEDO: a Coragem da mesma categoria corta metade ou mais dos pontos do Medo (o contrato: +4 corta o Medo 22 de +15,0 para +5,1): Raro: o Medo 18 dá +3,4, contra a Coragem +4, -0,6 · Único: o Medo 22 dá +9,6, contra a Coragem +6, +2,4 · Lendário: o Medo 24 dá +13,2, contra a Coragem +7, +2,2 · Primordial: o Medo 29 dá +26,6, contra a Coragem +8, +8,7
+  passa  EF7 O PIOR ACÚMULO DE UMA BUILD RARA contra Vontade 50 (o Temível 24 na 1ª rodada e o Medo 20 cheio; o Brado e a ameaça dos trunfos são da fase 2): no máximo 60% de quebra em 4 rodadas (o contrato, com o Brado e os trunfos: 34%): 20% de 2000 lutas
+  passa  EF8 OS FREIOS DO APELÃO: duas peças de apelão de regra, só a melhor acorda (o Imortal da armadura dorme, o resto dela vale); o apelão acordado ocupa 2 lugares na sintonia (Vontade 50: a peça e mais nenhuma Épica), e a peça cujo apelão dorme, 1 (Vontade 60: as duas Lendárias acordadas, o Imortal dormindo): Vontade 100: acorda o Golpe do Fim, dorme o apelão de ['armadura de malha Lendária']; Vontade 50 com o apelão: dormem ['escudo Épico', 'armadura de malha Épica', 'elmo de malha Épico']; sem o apelão: dormem ['armadura de malha Épica', 'elmo de malha Épico']; Vontade 60: dormem nenhuma, a armadura vale [{'couraca': 0,33}]
+  passa  EF8 O IMORTAL UMA VEZ POR DIA, venha de onde vier (a armadura e o amuleto de Imortal; no mundo de prova, pela luta que volta ao estado): salva na 1ª luta, não volta no mesmo dia, e no dia seguinte salva de novo: 1ª luta: o Imortal o segurou de pé com 1 PV, e o uso gasto voltou ao estado (1 peça marcada); no mesmo dia, a ficha não traz Imortal nenhum; no dia seguinte, traz de novo, e a luta salva de novo; o estado inteiro
+  passa  B3 O ITEM DECIDE: o topo dos efeitos de item (o conjunto Raro com tudo cheio) contra o conjunto uma acima sem nada (60% ou mais) e contra o DUAS acima (85% ou mais): uma acima vence 90,1% · duas acima, 99,2%
+
+179 de 180 metas passam.

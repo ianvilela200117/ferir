@@ -97,6 +97,7 @@ def bicho(esp, nome=None, **mais):
     if e.get('fases'): p['fases'] = [dict(x) for x in e['fases']]
     if e.get('maldicao'): p['maldicao'] = dict(e['maldicao'])            # o molde da maldição que o traço "amaldiçoa" põe
     if e.get('chefe') and esp not in TB.ESPECIES: p['lider'] = True
+    if (e.get('dragao') or {}).get('pavor'): p['pavor'] = e['dragao']['pavor']      # o pavor do dragão jovem (tabelas_dragoes.PAVOR): mais alto que o dos outros que apavoram
     p.update(mais)
     return p
 

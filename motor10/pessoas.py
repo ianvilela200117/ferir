@@ -30,6 +30,7 @@ import sys
 import tabelas as T
 import tabelas_talento as TT
 import tabelas_magia as TM
+import tabelas_efeitos as TE
 from itens import item, cat_i, pede
 
 
@@ -82,8 +83,23 @@ def _assenta(it, p, dorme):
     return max(0, c), max(0, q - p['atributos'][a]), mais
 
 
-def _efeitos(it, dorme):
-    return {} if dorme or it['dur'][0] <= 0 else {e['chave']: e.get('valor', True) for e in it.get('efeitos', [])}
+def _efeitos(it, dorme, cat=None, apelao=True, salvo=False):
+    """(a parte 2, fase 1b) {chave: número} dos efeitos que valem nesta peça agora: nenhum na que dorme ou quebrou; o número de cada efeito de luta sai da categoria que ela
+    RENDE (cat: a sob medida na mão de outro rende uma abaixo), e o cheio, da de cima (tabelas_efeitos.valor; a peça nunca guarda o número). O apelão de regra da peça que não é
+    a escolhida dorme, só ele (apelao=False); o Imortal já gasto hoje (o `gasto` da peça) ou o salvamento de 1 PV já usado no dia (salvo) não vale. Os de antes: o critico_19 e o
+    sangra valem True (a luta lê); o `devolve N` vale o % da categoria."""
+    if dorme or it['dur'][0] <= 0: return {}
+    c = it['cat'] if cat is None else cat; out = {}
+    for e in it.get('efeitos', []):
+        k = e['chave']
+        if k in TE.EFEITOS:
+            if TE.apelao_de_regra(k) and not apelao: continue
+            if k == 'imortal' and salvo: continue
+            v = TE.valor(k, c, bool(e.get('cheio')))
+            if v is None: continue
+            out[k] = (v, e.get('contra')) if k == 'cacadora' else v
+        else: out[k] = e.get('valor', True)
+    return out
 
 
 def _dom(p, familia):
@@ -91,32 +107,33 @@ def _dom(p, familia):
     d = p.get('dom'); return int(d.get(TT.caminho_de(familia), 0)) if isinstance(d, dict) and familia in sum(TT.MAOS.values(), ()) else 0
 
 
-def _arma(it, p, dorme):
+def _arma(it, p, dorme, apelao=True):
     f = T.FAMILIAS[it['familia']]; c, falta, mais = _assenta(it, p, dorme); at = p['atributos']; tiro = bool(f.get('distancia'))
     quebrada = it['dur'][0] <= 0; dom = _dom(p, it['familia'])
     if quebrada: c = 0
+    ef = _efeitos(it, dorme, c, apelao)
     w = dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=f['dado'], golpe=f['golpe'], alcance=f['alcance'], distancia=tiro, maos=f['maos'],
                 recarga=f.get('recarga', 0), haste=f['alcance'] == 2 and not tiro,
                 mult=T.MULT[c] * (T.DUAS_MAOS if f['maos'] == 2 and not tiro else 1),
                 acerto=T.acerto_base(_maestria(p, it['familia']), at['Força'], at['Agilidade']) + T.BON[c] + mais - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0) + dom,
                 aparo=0 if tiro or quebrada else T.BON[c] + f.get('apara', 0),
-                folego=1 + (1 if f['peso'] == 'pesada' else 0) + falta // T.FALTA_FOLEGO,
+                folego=1 + (1 if f['peso'] == 'pesada' and not ef.get('folego') else 0) + falta // T.FALTA_FOLEGO,      # (fase 1b) o Fôlego: a arma pesada custa 1 a menos
                 fmult=T.BESTA_FORCA if it['familia'] == 'besta' else T.forca_mult(at[f.get('atributo', 'Força')]),
-                efeitos=_efeitos(it, dorme), item=it)
+                efeitos=ef, item=it)
     if dom: w['dom'] = dom                                  # a luta sabe quando foi o dom que fez o golpe passar (marca.dom_visto)
     if isinstance(it.get('veneno'), dict) and not quebrada: w['veneno'] = it['veneno'].get('cat', 0)        # a dose de veneno na lâmina (a magia na luta)
     if it.get('encantos') or it.get('benta'): w['magica'] = True                                           # encantada ou benta: conta inteira contra o imaterial
     return w
 
 
-def _cajado(it, p, dorme):
+def _cajado(it, p, dorme, apelao=True):
     """o CAJADO na mão é a arma: bate como maça leve (1d6, impacto, com a mão de maça e o que a arma leve pede de Força), apara com o bônus da categoria
     e, como toda arma de duas mãos, vale × 1,25"""
     fo = T.FOCOS['cajado']; at = p['atributos']; quebrada = it['dur'][0] <= 0
     c = 0 if quebrada else max(0, it['cat'] - (T.SINTONIA_ABAIXO if dorme else 0)); falta = max(0, T.PEDE_PESO['leve'] - at['Força'])
     return dict(nome=it['nome'] + (' (quebrou)' if quebrada else ''), cat=c, dado=fo['dado'], golpe=fo['golpe'], alcance=1, distancia=False, maos=2, recarga=0, haste=False,
                 mult=T.MULT[c] * fo['vezes'], acerto=T.acerto_base(_maestria(p, 'maça'), at['Força'], at['Agilidade']) + T.BON[c] - falta // T.FALTA_ACERTO + (T.QUEBRADA if quebrada else 0) + p.get('pena', 0) + _dom(p, 'maça'),
-                aparo=0 if quebrada else T.BON[c], folego=1 + falta // T.FALTA_FOLEGO, fmult=T.forca_mult(at['Força']), efeitos=_efeitos(it, dorme), item=it)
+                aparo=0 if quebrada else T.BON[c], folego=1 + falta // T.FALTA_FOLEGO, fmult=T.forca_mult(at['Força']), efeitos=_efeitos(it, dorme, c, apelao), item=it)
 
 
 def _tracos(p, tracos):
@@ -170,7 +187,7 @@ def ficha_bicho(p):
     F['nuas'] = []; F['fontes'] = [dict(item=corpo, efeitos={'nao_quebra': True})]; F['escudo'] = None; F['fol_rodada'] = 0; F['ini_mod'] = mat['ini']
     F['def_fixa'] = T.defesa_base(m, at['Agilidade']) + mat['defesa'] + tam['defesa'] + p.get('pena', 0)
     F['feridas0'] = [list(x) for x in p.get('feridas', [])]
-    for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
+    for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha', 'pavor'):
         if k in p: F[k] = p[k]
     _magia_neutra(F, p, m)
     F['firmeza'] = T.firmeza(at['Vontade'], m, c if 'resiste' in F['tracos'] else None, None if 'resiste' in F['tracos'] else c)       # o corpo do bicho: metade do bônus (com resiste, inteiro)
@@ -214,24 +231,37 @@ def ficha(p):
     fam = 'maça' if cajado else (eq.get('arma') or {}).get('familia', 'punho'); m = _maestria(p, fam)
     arm = [x for x in eq.get('armaduras') or [] if x]
     todas = [x for x in (eq.get('arma'), eq.get('arma2'), eq.get('escudo')) if x] + arm + [x for x in (foco, eq.get('amuleto')) if x]
-    # SINTONIA: as peças Épicas ou melhores (e toda peça encantada, de qualquer categoria), da melhor para a pior; as que passam do limite dormem
+    # SINTONIA: as peças Épicas ou melhores (e toda peça encantada, de qualquer categoria), da melhor para a pior; as que passam do limite dormem. (Fase 1b) A peça com um
+    # APELÃO DE REGRA ocupa 2 lugares, e só um apelão de regra fica acordado por pessoa: o da melhor peça acordada; o das outras dorme (só ele: o resto da peça vale)
+    # Os 2 lugares são o preço do apelão ACORDADO: o da peça escolhida (a primeira peça de apelão, na ordem, que cabe com os 2 lugares). A outra peça de apelão tem o apelão
+    # dormindo de qualquer jeito (um por pessoa) e ocupa 1 lugar, como toda peça alta: o resto dela vale (4.5.3). Sem isso, com Vontade 60 a armadura Lendária de Imortal ao
+    # lado da arma Lendária de Golpe do Fim dormia inteira (4 lugares de 3), e com Vontade 80 ficava acordada: a mesma peça valia diferente. No empate de categoria, a ordem
+    # da peça: arma, segunda arma, escudo, armaduras, foco, amuleto (o capítulo 28)
     altas = sorted([it for it in todas if it['cat'] >= T.SINTONIA_DESDE or it.get('encantos')], key=lambda i: -i['cat'])
-    limite = max(1, at['Vontade'] // T.SINTONIA)
-    sono = {id(it) for it in altas[limite:]}; dorme = lambda it: id(it) in sono
+    limite = max(1, at['Vontade'] // T.SINTONIA); usados = 0; sono = set(); escolhida = None
+    for it in altas:
+        if escolhida is None and _tem_apelao(it) and usados + 2 <= limite: escolhida = id(it); usados += 2
+        elif usados + 1 <= limite: usados += 1
+        else: sono.add(id(it))
+    dorme = lambda it: id(it) in sono
+    apelao = lambda it: it is None or not _tem_apelao(it) or id(it) == escolhida
     F = dict(nome=p['nome'], nivel=p['nivel'], maestria=m, pvmax=T.pv_max(at['Vigor'], p['nivel']), folmax=max(T.FOLEGO_MIN, T.folego_max(at['Vigor']) - p.get('fol_menos', 0)),
              esforcos=T.esforcos(m), reacoes=T.reacoes(m), vontade_b=at['Vontade'] // 10, percep_b=at['Percepção'] // 10, agil_b=at['Agilidade'] // 10,
-             forca_b=at['Força'] // 10, dormem=[it['nome'] for it in altas[limite:]])
+             forca_b=at['Força'] // 10, dormem=[it['nome'] for it in altas if id(it) in sono])
+    apelao_dorme = [it['nome'] for it in altas if id(it) not in sono and _tem_apelao(it) and id(it) != escolhida]
+    if apelao_dorme: F['apelao_dorme'] = apelao_dorme       # (fase 1b) a peça acordada cujo apelão de regra dorme (um por pessoa)
     F['pv'] = p.get('pv', F['pvmax']); F['fol'] = F['folmax']
     punho = item('arma', 0, 'as mãos', familia='punho', efeitos=[dict(chave='nao_quebra')])
-    F['arma'] = _cajado(foco, p, dorme(foco)) if cajado else _arma(eq.get('arma') or punho, p, dorme(eq['arma']) if eq.get('arma') else False)
-    F['arma2'] = _arma(eq['arma2'], p, dorme(eq['arma2'])) if eq.get('arma2') else None
+    F['arma'] = _cajado(foco, p, dorme(foco), apelao(foco)) if cajado else _arma(eq.get('arma') or punho, p, dorme(eq['arma']) if eq.get('arma') else False, apelao(eq.get('arma')))
+    F['arma2'] = _arma(eq['arma2'], p, dorme(eq['arma2']), apelao(eq['arma2'])) if eq.get('arma2') else None
     F['punho'] = _arma(punho, p, False)
     # a armadura, parte por parte (a melhor peça que cobre a parte)
     F['partes'] = {}; falta_arm = 0; fol_arm = 0; F['fontes'] = []; corpo = T.SEM_ARMADURA
+    salvo = bool(p.get('salvo_dia'))                        # (fase 1b) o salvamento de 1 PV do dia já foi (um por dia, venha de onde vier)
     for it in arm:
         c, falta, mais = _assenta(it, p, dorme(it)); mat = T.MATERIAIS[it['material']]
         falta_arm += falta; fol_arm = max(fol_arm, mat['folego'])
-        F['fontes'].append(dict(item=it, efeitos=_efeitos(it, dorme(it))))
+        F['fontes'].append(dict(item=it, efeitos=_efeitos(it, dorme(it), c, apelao(it), salvo)))
         if 'tronco' in it['cobre']: corpo = mat
         for parte in it['cobre']:
             prot = T.RD[c] * mat['rd'] * (T.SOB_MEDIDA_PROT if mais else 1)
@@ -244,7 +274,9 @@ def ficha(p):
     if esc:
         c, falta, mais = _assenta(esc, p, dorme(esc)); falta_arm += falta
         F['escudo'] = dict(nome=esc['nome'], cat=c, bonus=T.ESCUDO_BASE + T.BON[c] + mais - falta // T.FALTA_ACERTO, item=esc)
-        F['fontes'].append(dict(item=esc, efeitos=_efeitos(esc, dorme(esc))))
+        F['fontes'].append(dict(item=esc, efeitos=_efeitos(esc, dorme(esc), c, apelao(esc)), escudo=True))
+    for it, k in ((eq.get('amuleto'), 'amuleto'), (foco, 'foco')):     # (fase 1b) o amuleto e o foco também são fontes de efeito (a Firmeza, a Coragem, a Guarda Mágica, o Imortal; a Chama, o Foco Certeiro, o Domínio)
+        if it and it.get('efeitos'): F['fontes'].append(dict(item=it, efeitos=_efeitos(it, dorme(it), it['cat'], apelao(it), salvo), **{k: True}))
     F['fol_rodada'] = fol_arm + falta_arm // T.FALTA_FOLEGO; F['ini_mod'] = corpo['ini']
     for k in ('id', 'lado', 'papel', 'moral', 'lider', 'guarda', 'controla', 'linha'):
         if k in p: F[k] = p[k]
@@ -258,8 +290,48 @@ def ficha(p):
     if p.get('maldicao'): F['maldicao'] = dict(p['maldicao'])
     _magia_ficha(F, p, eq, dorme)
     if p.get('povo'): _povo(F, p)
+    _fx(F, p)
     _firmeza(F, p)
+    # (fase 1b) o que cada peça com id RENDE agora para esta pessoa (a mesa mostra o número do efeito por ela: a sob medida na mão de outro rende uma abaixo; a que dorme na
+    # sintonia rende uma abaixo e tem os efeitos dormindo; a quebrada não tem efeito; o apelão de regra que não é o acordado dorme sozinho)
+    F['rende'] = {it['id']: dict(cat=0 if it['dur'][0] <= 0 else _assenta(it, p, dorme(it))[0], dorme=dorme(it), quebrada=it['dur'][0] <= 0, apelao_dorme=_tem_apelao(it) and not apelao(it) and not dorme(it))
+                  for it in todas if it.get('id')}
     return F
+
+
+def _tem_apelao(it): return bool(it) and any(isinstance(e, dict) and TE.apelao_de_regra(e.get('chave')) for e in it.get('efeitos') or [])
+
+
+def maior(fontes, k):
+    """P5: o mesmo efeito de duas fontes vale o maior (o número que cresce: tabelas_efeitos.ordem_valor), ou None"""
+    vs = [s['efeitos'][k] for s in fontes if k in s['efeitos']]
+    return max(vs, key=lambda v: TE.ordem_valor(k, v)) if vs else None
+
+
+def _fx(F, p):
+    """(a parte 2, fase 1b) a PILHA DAS PEÇAS ACORDADAS na ficha: F['fx'] = {chave: número} dos efeitos de armadura, escudo, amuleto e foco (o mesmo efeito de duas fontes vale
+    o maior: P5); os números fixos novos com o teto (P3: até +8; a resistência à carga até +16; a Robusta põe metade na coragem); o fôlego máximo da Robusta. A arma leva os dela
+    (F['arma']['efeitos']). A luta relê das fontes inteiras (a peça desfeita perde os efeitos). E o gancho das provas: p['fx_prova'] põe números nas fontes (o banco mede assim)."""
+    fp = p.get('fx_prova') or {}
+    for alvo, d in fp.items():
+        if alvo == 'arma':
+            for w in (F['arma'], F.get('arma2')):
+                if not w: continue
+                if d.get('folego') and not w['efeitos'].get('folego') and T.FAMILIAS.get((w.get('item') or {}).get('familia'), {}).get('peso') == 'pesada': w['folego'] -= 1     # o Fôlego posto pelo banco: o que o _arma faz com o da peça
+                w['efeitos'].update(d)
+        else:
+            src = next((s for s in F['fontes'] if s.get(alvo) or (alvo == 'armadura' and s['item'].get('tipo') == 'armadura')), None)
+            if src is None:
+                it = (F.get('foco') if alvo == 'foco' else F.get('amuleto') if alvo == 'amuleto' else None) or dict(tipo=alvo, cat=0, nome=f'({alvo} de prova)', dur=[1, 1], efeitos=[])
+                src = dict(item=it, efeitos={}, **{alvo: True}); F['fontes'].append(src)
+            src['efeitos'].update(d)
+    fx = {}
+    for s in F['fontes']:
+        for k in s['efeitos']:
+            if k in TE.EFEITOS: fx[k] = maior(F['fontes'], k)
+    F['fx'] = fx
+    rb = fx.get('robusta')
+    if rb: F['folmax'] += rb[1]; F['fol'] = F['folmax']; F['robusta_fol'] = rb[1]     # a Robusta (com o antigo Fole): o fôlego máximo a mais (a luta o tira se a armadura se desfaz)
 
 
 def _magia_ficha(F, p, eq, dorme):
@@ -286,7 +358,7 @@ def _firmeza(F, p):
     dmt = max([F['dom'].get(t, 0) for t in T.TRADICOES] + [0]); F['firmeza0'] = T.firmeza(p['atributos']['Vontade'], maior, None, None, dmt)
     tr = F['partes'].get('tronco'); b = T.BON[F['amuleto_cat']] if F['amuleto_cat'] is not None else 0
     if tr and tr['item']['dur'][0] > 0: b = max(b, T.BON[tr['cat']] * (1 if 'resiste' in F['tracos'] else 0.5))
-    F['firmeza'] = F['firmeza0'] + b
+    F['firmeza'] = F['firmeza0'] + b + min(TE.FIXO_TETO, (F.get('fx') or {}).get('firmeza') or 0)        # (fase 1b) o efeito Firmeza do amuleto, no teto de +8
 
 
 def defesa(F, w=None, escudo_inteiro=True):
@@ -341,7 +413,8 @@ def _linha(F):
             f"  {w['nome']}: acerto {w['acerto']:+g} · {w['dado']} × {w['mult']:g} ({w['golpe']}), força × {w['fmult']:.2f} · {w['folego']} de fôlego por golpe"
             + (f", mais {F['fol_rodada']} por rodada da armadura" if F['fol_rodada'] else '') + '\n'
             f"  Defesa {defesa(F):g}" + (f" (com {F['escudo']['nome']})" if F['escudo'] and w['maos'] == 1 else '') + f" · proteção: {ps}"
-            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else '') + _povo_linha(F) + _magia_linha(F))
+            + (f" · SEM PROTEÇÃO: {', '.join(F['nuas'])}" if F['nuas'] and F['partes'] else '') + (f" · DORMEM: {', '.join(F['dormem'])}" if F['dormem'] else '')
+            + (f" · O APELÃO DORME (um acordado por pessoa): o de {', '.join(F['apelao_dorme'])}" if F.get('apelao_dorme') else '') + _povo_linha(F) + _magia_linha(F))
 
 
 def _povo_linha(F):

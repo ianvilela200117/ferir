@@ -78,7 +78,7 @@ NAO_E_DELE = 1              # peça sob medida na mão de outro rende esta quant
 SINTONIA = 20               # peças Épicas ou melhores que a pessoa sustenta: Vontade ÷ isto (no mínimo 1)
 SINTONIA_DESDE = 3          # o índice da categoria Épico
 SINTONIA_ABAIXO = 1         # a peça que passa do limite rende esta quantidade de categorias abaixo, e os efeitos dela dormem
-def devolve_max(cat): return 4 * (cat + 1)      # o teto do efeito "devolve" pela categoria da peça
+# (o `devolve` fixo de antes saiu na fase 1b da parte 2: o Devolve é o % da categoria, no tabelas_efeitos; o teto antigo vive lá só para a transição: devolve_fixo_max)
 
 # ---------- a pessoa ----------
 DEF_BASE = 22               # Defesa = isto + Agilidade ÷ 20 + maestria ÷ 2 + o da armadura + o escudo, ou o aparo da arma
