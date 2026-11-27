@@ -1,0 +1,6 @@
+Ferord serve 1 bloco na bancada da oficina e recebe 6 de prata. PAROU: Ferord está com fome
+Dia 37, entardecer (16h) · primavera · PV 111/111 · com fome (fome 4) · sem sono (sono 3) · com forças (cansaço 3) · pena −2 em todo teste · fôlego máximo −1 · 32 de prata
+Ferord come (fome 1; 31 de prata)
+Dia 37, entardecer (16h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 3) · com forças (cansaço 3) · fôlego máximo −1 · 31 de prata
+Ferord dorme 1 bloco na cama (a cama já estava paga). PAROU: Ferord acorda com o sono em dia
+Dia 37, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 31 de prata

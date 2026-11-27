@@ -18,7 +18,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 1394,
+  "moedas": 1234,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -48,7 +48,15 @@
   "papel": "senhor",
   "lacos": {
    "hilda": "filho"
-  }
+  },
+  "memoria": [
+   {
+    "dia": 40,
+    "de": "lesoril",
+    "o_que": "cumpriu a missão que eu paguei (descobrir o que há por trás da ambição dos Astolan)",
+    "peso": 3
+   }
+  ]
  },
  "hilda": {
   "nome": "Hilda",
@@ -3732,7 +3740,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 422,
+  "moedas": 262,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3760,7 +3768,15 @@
   "papel": "senhor",
   "lacos": {
    "nicolau": "irmão"
-  }
+  },
+  "memoria": [
+   {
+    "dia": 40,
+    "de": "raul",
+    "o_que": "cumpriu a missão que eu paguei (descobrir o que há por trás dos sumiços da Charneca dos Sinos)",
+    "peso": 3
+   }
+  ]
  },
  "nicolau": {
   "nome": "Nicolau",
@@ -6859,7 +6875,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 52,
+  "moedas": 28,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6886,7 +6902,15 @@
   "idade": 41,
   "sobre": "caça no ermo e vende o couro",
   "casa": "c_outeiro_coval_do_vento",
-  "papel": "caçador"
+  "papel": "caçador",
+  "memoria": [
+   {
+    "dia": 38,
+    "de": "drastum",
+    "o_que": "cumpriu a missão que eu paguei (matar 3 ursos no Souto das Águas)",
+    "peso": 3
+   }
+  ]
  },
  "ferorada": {
   "nome": "Ferorada",
@@ -7987,7 +8011,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 80,
+  "moedas": 108,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8004,10 +8028,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8165,7 +8186,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 140,
+  "moedas": 150,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8181,10 +8202,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8242,11 +8260,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "lesoril",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8280,7 +8294,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 105,
+  "moedas": 116,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8296,10 +8310,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8402,7 +8413,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 114,
+  "moedas": 144,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8418,10 +8429,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8578,7 +8586,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 80,
+  "moedas": 110,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8595,10 +8603,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8707,11 +8712,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "lesoril",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8857,7 +8858,7 @@
   "treino": {
    "espada": 40
   },
-  "moedas": 111,
+  "moedas": 125,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8873,10 +8874,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8914,7 +8912,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 135,
+  "moedas": 160,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8930,10 +8928,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -8976,7 +8971,7 @@
    "adaga": 160,
    "manha": 160
   },
-  "moedas": 99,
+  "moedas": 259,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8993,12 +8988,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0019",
-    "ate": 40,
-    "c": 0.58
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9016,7 +9006,7 @@
   },
   "idade": 44,
   "sobre": "aventureiro de ofício, anda sozinho",
-  "fama": 16,
+  "fama": 19,
   "papel": "aventureiro",
   "rival": true
  },
@@ -9111,11 +9101,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "junto",
-    "de": "lesoril",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9159,7 +9145,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 173,
+  "moedas": 185,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9175,10 +9161,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9219,7 +9202,7 @@
   "treino": {
    "arco": 160
   },
-  "moedas": 114,
+  "moedas": 131,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9235,10 +9218,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9278,7 +9258,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 170,
+  "moedas": 330,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9295,12 +9275,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0018",
-    "ate": 40,
-    "c": 0.53
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9310,7 +9285,7 @@
   "povo": "elfo",
   "idade": 319,
   "sobre": "aventureiro de ofício, a Irmandade da Estrada",
-  "fama": 37,
+  "fama": 40,
   "papel": "aventureiro",
   "guilda": "g_a_irmandade_da_estrada",
   "rival": true
@@ -9445,7 +9420,7 @@
   "treino": {
    "espada": 160
   },
-  "moedas": 147,
+  "moedas": 170,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9461,10 +9436,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -9564,7 +9536,7 @@
   "treino": {
    "arco": 40
   },
-  "moedas": 108,
+  "moedas": 135,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9580,10 +9552,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 39
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10082,7 +10051,7 @@
   "treino": {
    "arcano": 500
   },
-  "moedas": 318,
+  "moedas": 327,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10098,10 +10067,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "caca",
-    "ate": 40
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10204,7 +10170,7 @@
   "treino": {
    "martelo": 500
   },
-  "moedas": 561,
+  "moedas": 585,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10220,12 +10186,7 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": {
-    "o_que": "missao",
-    "alvo": "m0021",
-    "ate": 38,
-    "c": 0.99
-   }
+   "plano": null
   },
   "carga": {},
   "talento": {
@@ -10237,7 +10198,7 @@
   "povo": "anão",
   "idade": 165,
   "sobre": "aventureiro de lenda, anda sozinho",
-  "fama": 303,
+  "fama": 304,
   "papel": "aventureiro",
   "rival": true
  },
@@ -10375,11 +10336,11 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 160,
+   "forja": 168,
    "martelo": 40,
-   "comércio": 5
+   "comércio": 6
   },
-  "moedas": 26,
+  "moedas": 3,
   "corpo": {
    "fome": 3,
    "sono": 1,
@@ -10397,16 +10358,23 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 36,
+   "pesados_dia": 39,
    "pesados": 3,
-   "jornada_dia": 36,
+   "jornada_dia": 38,
    "jornada": 2,
    "cama": {
-    "ate": 221,
+    "ate": 240,
     "onde": "pedra_velha"
    },
    "ensino_incomum": null,
-   "negocio_dia": 34
+   "negocio_dia": 39,
+   "receita": {
+    "tenaz": [
+     "prumo",
+     "afinada",
+     "fagulha"
+    ]
+   }
   },
   "carga": {
    "metal:0": 1,

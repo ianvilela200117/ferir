@@ -4007,7 +4007,7 @@
  "seq": {
   "frente": 13,
   "missao": 21,
-  "noticia": 41
+  "noticia": 44
  },
  "frentes": {
   "f01": {
@@ -4126,7 +4126,7 @@
    "dono": "casa:c_astolan",
    "onde": "pedra_verde",
    "meta": "tomar a coroa",
-   "passo": 3,
+   "passo": 2,
    "forca": 5,
    "passos": [
     "a casa junta aliados",
@@ -4142,7 +4142,11 @@
    "alvo_missao": "investigar",
    "alvo": "casa:c_astolan",
    "cat": 2,
-   "barra": "dono"
+   "barra": "dono",
+   "exposta": {
+    "dia": 40,
+    "quem": "lesoril"
+   }
   },
   "f06": {
    "nome": "o cartel de Selina",
@@ -4282,7 +4286,7 @@
    "dono": "esp:lobisomem@charneca_dos_sinos",
    "onde": "souto_negro",
    "meta": "levar a gente do lugar, um a um",
-   "passo": 3,
+   "passo": 2,
    "forca": 2,
    "passos": [
     "alguém some na borda do mato",
@@ -4300,7 +4304,11 @@
    "cat": 2,
    "barra": "dono",
    "ermo": "charneca_dos_sinos",
-   "especie": "lobisomem"
+   "especie": "lobisomem",
+   "exposta": {
+    "dia": 40,
+    "quem": "raul"
+   }
   },
   "f12": {
    "nome": "as luzes das Ruínas do Urso",
@@ -4616,7 +4624,7 @@
    "paga": 160,
    "prazo": 53,
    "frente": "f05",
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "lesoril",
    "desde": 36,
    "cat": 2,
@@ -4631,7 +4639,7 @@
    "paga": 160,
    "prazo": 60,
    "frente": "f11",
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "raul",
    "desde": 36,
    "cat": 2,
@@ -4661,7 +4669,7 @@
    "paga": 24,
    "prazo": 59,
    "frente": null,
-   "estado": "tomada",
+   "estado": "cumprida",
    "quem": "drastum",
    "desde": 36,
    "cat": 0,
@@ -7382,6 +7390,38 @@
     "ermida_verde": [
      37,
      2
+    ],
+    "vale_do_corvo": [
+     38,
+     3
+    ],
+    "castro_branco": [
+     38,
+     3
+    ],
+    "castro_real": [
+     38,
+     3
+    ],
+    "ribeira_do_lobo": [
+     38,
+     3
+    ],
+    "varzea_da_nevoa": [
+     39,
+     4
+    ],
+    "coval_do_vento": [
+     39,
+     4
+    ],
+    "pinhal_do_ferro": [
+     39,
+     4
+    ],
+    "penha_das_rosas": [
+     40,
+     5
     ]
    },
    "janela": false
@@ -7482,6 +7522,50 @@
     "castro_real": [
      37,
      1
+    ],
+    "pedra_velha": [
+     38,
+     2
+    ],
+    "castro_do_sal": [
+     38,
+     2
+    ],
+    "varzea_da_nevoa": [
+     38,
+     2
+    ],
+    "coval_do_vento": [
+     38,
+     2
+    ],
+    "souto_negro": [
+     39,
+     3
+    ],
+    "varzea_brava": [
+     39,
+     3
+    ],
+    "vale_do_corvo": [
+     39,
+     3
+    ],
+    "pedra_verde": [
+     39,
+     3
+    ],
+    "penha_das_rosas": [
+     39,
+     3
+    ],
+    "ponte_da_cruz": [
+     40,
+     4
+    ],
+    "ribeira_do_lobo": [
+     40,
+     4
     ]
    },
    "janela": false
@@ -7515,6 +7599,50 @@
     "castro_do_sal": [
      37,
      1
+    ],
+    "ermida_verde": [
+     38,
+     2
+    ],
+    "souto_negro": [
+     38,
+     2
+    ],
+    "pinhal_do_ferro": [
+     38,
+     2
+    ],
+    "pedra_velha": [
+     38,
+     2
+    ],
+    "vale_do_corvo": [
+     38,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     38,
+     2
+    ],
+    "varzea_da_nevoa": [
+     39,
+     3
+    ],
+    "castro_branco": [
+     39,
+     3
+    ],
+    "castro_real": [
+     39,
+     3
+    ],
+    "coval_do_vento": [
+     40,
+     4
+    ],
+    "penha_das_rosas": [
+     40,
+     4
     ]
    },
    "janela": false
@@ -7548,6 +7676,50 @@
     "castro_do_sal": [
      37,
      1
+    ],
+    "ermida_verde": [
+     38,
+     2
+    ],
+    "souto_negro": [
+     38,
+     2
+    ],
+    "pinhal_do_ferro": [
+     38,
+     2
+    ],
+    "pedra_velha": [
+     38,
+     2
+    ],
+    "vale_do_corvo": [
+     38,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     38,
+     2
+    ],
+    "varzea_da_nevoa": [
+     39,
+     3
+    ],
+    "castro_branco": [
+     39,
+     3
+    ],
+    "castro_real": [
+     39,
+     3
+    ],
+    "coval_do_vento": [
+     40,
+     4
+    ],
+    "penha_das_rosas": [
+     40,
+     4
     ]
    },
    "janela": false
@@ -7577,6 +7749,122 @@
     "ponte_da_cruz": [
      37,
      1
+    ],
+    "castro_do_sal": [
+     38,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     38,
+     2
+    ],
+    "pedra_verde": [
+     38,
+     2
+    ],
+    "ermida_verde": [
+     38,
+     2
+    ],
+    "vale_do_corvo": [
+     39,
+     3
+    ],
+    "castro_branco": [
+     39,
+     3
+    ],
+    "castro_real": [
+     39,
+     3
+    ],
+    "ribeira_do_lobo": [
+     39,
+     3
+    ],
+    "varzea_da_nevoa": [
+     40,
+     4
+    ],
+    "coval_do_vento": [
+     40,
+     4
+    ],
+    "pinhal_do_ferro": [
+     40,
+     4
+    ]
+   },
+   "janela": false
+  },
+  "n00042": {
+   "dia": 38,
+   "onde": "coval_do_vento",
+   "texto": "Drastum cumpriu a missão de Coval do Vento: matar 3 ursos no Souto das Águas",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "coval_do_vento": [
+     38,
+     0
+    ],
+    "penha_das_rosas": [
+     39,
+     1
+    ],
+    "varzea_da_nevoa": [
+     39,
+     1
+    ],
+    "castro_real": [
+     39,
+     1
+    ],
+    "vale_do_corvo": [
+     40,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     40,
+     2
+    ],
+    "castro_branco": [
+     40,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00043": {
+   "dia": 40,
+   "onde": "castro_do_sal",
+   "texto": "Raul cumpriu a missão de Castro do Sal: descobrir o que há por trás dos sumiços da Charneca dos Sinos",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "castro_do_sal": [
+     40,
+     0
+    ]
+   },
+   "janela": false
+  },
+  "n00044": {
+   "dia": 40,
+   "onde": "vale_do_corvo",
+   "texto": "Lesoril cumpriu a missão de Vale do Corvo: descobrir o que há por trás da ambição dos Astolan",
+   "peso": 1,
+   "tags": [
+    "missão"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     40,
+     0
     ]
    },
    "janela": false
@@ -7636,6 +7924,7 @@
   }
  ],
  "oculto": {
-  "entrada/1a": 35
+  "entrada/1a": 35,
+  "frente/f11/passo": 37
  }
 }

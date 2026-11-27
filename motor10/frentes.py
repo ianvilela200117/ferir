@@ -283,7 +283,7 @@ def gera(E, r):
 # ---------- o que se sabe ----------
 def sabe(E, pid, fid):
     oc = E['mundo'].get('oculto') or {}
-    return [c.split('.')[-1] for c in oc if c.startswith(f'frente/{fid}/')]
+    return [c.split('/')[-1] for c in oc if c.startswith(f'frente/{fid}/')]      # a chave é "frente/FID/CAMPO" (antes cortava pelo ponto e nunca achava o campo: o Dia 37)
 
 
 def conhecidas(E, pid):

@@ -12,3 +12,6 @@ início: Dia 36 · 17 de prata · forja 157 · metal Incomum (1.13, 14)
 Dia 36: prata 17 → 26 · forja 160 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
     notícia: - Dia 37 (de Souto Negro): Mais um some, de dentro de casa em Souto Negro
 PAROU: notícia que toca Ferord: - Dia 37 (de Souto Negro): Mais um some, de dentro de casa em Souto Negro
+início: Dia 38 · 35 de prata · forja 162 · metal Incomum (1.1, 15)
+Dia 38: prata 35 → 44 · forja 165 · corpo {'fome': 3, 'sono': 1, 'cansaco': 0} · metal Incomum (1.1, 15)
+PAROU: a prata chegou a 44 (meta 43)

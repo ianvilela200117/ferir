@@ -1,5 +1,5 @@
 {
- "seq": 700,
+ "seq": 701,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -13142,8 +13142,35 @@
    "familia": "machado",
    "id": "i0700",
    "uso": null
+  },
+  "i0701": {
+   "tipo": "ferramenta",
+   "oficio": "forja",
+   "forma": "tenaz",
+   "cat": 0,
+   "nome": "Tenaz de Ferord",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [
+    {
+     "chave": "afinada"
+    }
+   ],
+   "historia": [
+    "Dia 39: Ferord forjou em Pedra Velha (a soma: 43; a obra era de matéria Incomum); faltaram 12 para a Incomum (55): o terço do meio, 1 da faixa, 0 dos 20 = 1: 1 efeito por escolher",
+    "Dia 39: Ferord deu à peça o efeito: afinada: +1 no total do ofício, uma vez por obra (a única que mexe no total; não cresce) (pela sua receita)"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "feito_por": "eu",
+   "dia": 39,
+   "teto_efeitos": 2,
+   "id": "i0701",
+   "uso": null
   }
  },
- "oseq": 5,
+ "oseq": 6,
  "obras": {}
 }
