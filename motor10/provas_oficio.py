@@ -13,6 +13,9 @@ A LENDÁRIA É DIFERENTE, por decisão do jogador, e a prova dela julga DUAS coi
 se a chance subir e a Lendária passar a nascer na metade das vidas, ou se deixar de nascer, a prova falha.
 Uma linha à parte ("o ritmo da bancada") confere a outra leitura da meta: o dia em que a primeira obra de cada categoria fecha, acerte ou não.
 
+A PARTE 2, FASE 1a (projeto/etapa_efeitos/DESENHO.md, seções 5 e 10): as metas B2 (a categoria não muda: o motor novo contra a regra de antes, copiada aqui) e FJ1 a FJ10
+(a faixa pela conta exata e as tabelas de 5.6; o dado de verdade; a monotonia; o teto; o teto de efeitos e o cheio; a escolha; as ferramentas; a loja com o poupa-ferro;
+o dom escondido pela faixa; a mesa). Só elas: `python3 provas_oficio.py faixa [N]`.
 Uso: python3 provas_oficio.py [N]      N = o tamanho das amostras (padrão 300): N ÷ 10 vidas inteiras do robô e N ÷ 15 curtas (no mínimo 20 de cada), 2 × N obras por medida de chance
      (o `python3 provas_mundo.py` também roda este banco)
 """
@@ -429,7 +432,7 @@ def _ferramentas(n):
     c = oficio.valor(E, 'eu', 1); ok['soma'] = c['mais'] == c['maestria'] + c['oficina'] + c['preparo'] + c['materia'] + c['nucleo'] + c['martelo'] + c['tenaz'] and c['martelo'] == VM[2] + VA and f"martelo de forja {VM[2] + VA}" in oficio.diz_valor(c)
     aj = oficio.conta(E, 'eu', 1, contra=O.ajuste_contra(1)); ok['ajuste'] = aj['ferramenta'] == VM[2] + VA + VT[0]                       # o ajuste (teste de passar) também soma as ferramentas
     for k in (ij, im, ic): estado.aplica(E, 'mestre', [['item', k, 'some']], texto='tira a ferramenta da prova')
-    pm = oficio.molde('ferramenta', 1, oficio='martelo'); pt = oficio.molde('ferramenta', 1, oficio='tenaz'); pj = oficio.molde('ferramenta', 1, oficio='forja')
+    pm = oficio.molde('ferramenta', 1, oficio='martelo'); pt = oficio.molde('ferramenta', 1, oficio='tenaz'); pj = oficio.molde('ferramenta', 1, oficio='forja'); pj0 = oficio.molde('ferramenta', 0, oficio='forja')
     ok['materia'] = (oficio.materia_de(pm), oficio.materia_de(pt), oficio.materia_de(pj)) == ({M.materia('metal', 1): 2, M.materia('madeira', 1): 1}, {M.materia('metal', 1): 1, M.materia('madeira', 1): 1}, {M.materia('metal', 1): 3, M.materia('madeira', 1): 2})
     F, it = obra(1, 0, pm); ok['forja_martelo'] = it['tipo'] == 'ferramenta' and it['forma'] == 'martelo' and it['nome'] == 'martelo de forja Incomum' and it['cat'] == 1
     F, it2 = obra(1, 0, pt); ok['forja_tenaz'] = it2['forma'] == 'tenaz' and it2['nome'] == 'tenaz Incomum'
@@ -446,21 +449,409 @@ def _ferramentas(n):
         vinte = itv.get('efeitos_livres', 0) if itv else None
     finally: teste.rola = real
     ok['vinte'] = vinte is not None and vinte >= 1
-    F, arma = obra(2, 0); aid = F['item']; estado.aplica(E, 'mestre', [['item', aid, 'efeitos_livres', 'poe', 2]], texto='a obra-prima de prova')
-    r_pesa = recusa(lambda: oficio.efeito(E, 'eu', aid, 'pesa')); r_nao = recusa(lambda: oficio.efeito(E, 'eu', aid, 'firme'))
-    oficio.efeito(E, 'eu', aid, 'critico_19'); r_dup = recusa(lambda: oficio.efeito(E, 'eu', aid, 'critico_19'))
-    oficio.efeito(E, 'eu', aid, 'sangra'); r_fim = recusa(lambda: oficio.efeito(E, 'eu', aid, 'derruba'))
-    a = L()[aid]; ok['efeito_arma'] = bool(r_pesa and r_nao and r_dup and r_fim) and [e['chave'] for e in a['efeitos']] == ['critico_19', 'sangra'] and 'efeitos_livres' not in a
-    arm = oficio.molde('armadura', 2, material='malha'); F, armadura = obra(2, 0, arm); vid = F['item']; estado.aplica(E, 'mestre', [['item', vid, 'efeitos_livres', 'poe', 1]], texto='a obra-prima de prova')
-    r_dev = recusa(lambda: oficio.efeito(E, 'eu', vid, 'devolve', valor=T.devolve_max(2) + 1)); oficio.efeito(E, 'eu', vid, 'devolve')
-    ok['efeito_devolve'] = bool(r_dev) and L()[vid]['efeitos'] == [{'chave': 'devolve', 'valor': T.devolve_max(2)}]
-    F, outra = obra(0, 0); oid2 = F['item']; estado.aplica(E, 'mestre', [['item', oid2, 'efeitos_livres', 'poe', 1], ['item', oid2, 'dono', 'poe', 'zeca']], texto='a peça muda de dono')
-    ok['efeito_dono'] = bool(recusa(lambda: oficio.efeito(E, 'eu', oid2, 'leve')))
+    # (a parte 2, fase 1a) SÓ A FERRAMENTA ESCOLHE AGORA: a arma e a armadura guardam os efeitos por escolher, e a mesa diz que o catálogo de luta chega na próxima fase
+    F, arma = obra(2, 0); aid = F['item']; estado.aplica(E, 'mestre', [['item', aid, 'efeitos_livres', 'poe', 2]], texto='os efeitos de prova')
+    r_arma = recusa(lambda: oficio.efeito(E, 'eu', aid, 'critico_19')) or ''; a = L()[aid]
+    ok['efeito_arma'] = 'o catálogo de luta chega na próxima fase' in r_arma and not a.get('efeitos') and a.get('efeitos_livres') == 2
+    arm = oficio.molde('armadura', 2, material='malha'); F, armadura = obra(2, 0, arm); vid = F['item']; estado.aplica(E, 'mestre', [['item', vid, 'efeitos_livres', 'poe', 1]], texto='os efeitos de prova')
+    ok['efeito_armadura'] = 'o catálogo de luta chega na próxima fase' in (recusa(lambda: oficio.efeito(E, 'eu', vid, 'devolve')) or '') and not L()[vid].get('efeitos')
+    F, tz = obra(1, 0, pt); tid = F['item']; estado.aplica(E, 'mestre', [['item', tid, 'efeitos_livres', 'poe', 2]], texto='os efeitos de prova')
+    r_pesa = recusa(lambda: oficio.efeito(E, 'eu', tid, 'pesa')); r_forte = recusa(lambda: oficio.efeito(E, 'eu', tid, 'lastro'))
+    oficio.efeito(E, 'eu', tid, 'prumo'); r_dup = recusa(lambda: oficio.efeito(E, 'eu', tid, 'prumo'))
+    oficio.efeito(E, 'eu', tid, 'afinada'); r_fim = recusa(lambda: oficio.efeito(E, 'eu', tid, 'fagulha'))
+    t_ = L()[tid]; ok['efeito_ferramenta'] = bool(r_pesa and r_forte and r_dup and r_fim) and [e['chave'] for e in t_['efeitos']] == ['prumo', 'afinada'] and 'efeitos_livres' not in t_
+    F, outra = obra(0, 0, pj0); oid2 = F['item']; estado.aplica(E, 'mestre', [['item', oid2, 'efeitos_livres', 'poe', 1], ['item', oid2, 'dono', 'poe', 'zeca']], texto='a peça muda de dono')
+    ok['efeito_dono'] = bool(recusa(lambda: oficio.efeito(E, 'eu', oid2, 'afinada')))
     ok['estado'] = not estado.valida(E) and oficio.prata_do_mundo(E) == p0
     falhas = [k for k, v in ok.items() if not v]
-    return [('O MARTELO DE FORJA, A TENAZ E OS EFEITOS (a Lei do Valor; o dado posto à mão)',
+    return [('O MARTELO DE FORJA, A TENAZ E OS EFEITOS (a Lei do Valor; o dado posto à mão; na fase 1a, só a ferramenta escolhe: a arma e a armadura guardam os efeitos)',
              f"{sum(ok.values())} de {len(ok)} conferências certas" + (f"; falham: {', '.join(falhas)}" if falhas else '') + f" · (martelo, tenaz, categoria) sem / jogo Comum / martelo Raro / couro na forja / no couro / de outro / quebrado / afinado = {(sem, com_jogo, com_martelo, couro_na_forja, couro_no_couro, de_outro, quebrado, afinado)}",
              not falhas)]
+
+
+# ---------- A PARTE 2, FASE 1a: A FAIXA DA FORJA E AS FERRAMENTAS (o contrato: projeto/etapa_efeitos/DESENHO.md, seções 5 e 10; as metas B2 e FJ1 a FJ10) ----------
+# As contas exatas saem do oficio.dist_efeitos (o mesmo dado do dist_valor, agrupado); as medidas com o dado de verdade, do remate de verdade. O dado posto à mão só onde se diz.
+REF = (('Ferord, matéria Comum', 23, 1, 1, 0), ('Ferord, a tenaz (matéria Incomum)', 38, 2, 1, 1), ('um Mestre, matéria Rara', 65, 2, 2, 2), ('o Mestre, núcleo Épico', 80, 3, 2, 3),
+       ('o melhor possível, núcleo Lendário', 127, 5, 5, 5))         # (quem, a soma, o teto, a maior ferramenta, a categoria da obra): os cinco ferreiros do contrato (5.6, 5.8)
+INICIANTE = ('um Iniciante, matéria Comum (a porta)', 8, 0, -1, 0)
+ABAIXO = (('o Mestre, matéria Comum', 35, 1, 2, 0, 3), ('o melhor, matéria Comum', 52, 1, 5, 0, 4), ('o melhor, matéria Rara sem núcleo', 82, 2, 5, 2, 4))     # (..., o índice em REF da obra da mão dele)
+# AS CONTAS DE 5.6 COMO O CONTRATO AS PUBLICOU (% por obra; cheios por 100 obras), para conferir célula por célula (a folga: o arredondamento da tabela e o corte do dado)
+TABELA_56 = {(23, 1, 1): {0: (84.6, (26.0, 34.2, 24.4, 0, 0, 0), 19.1), 1: (15.1, (7.0, 3.1, 2.9, 1.4, 0.4, 0.2), 0)},
+             (38, 2, 1): {0: (32.2, (2.0, 6.9, 23.4, 0, 0, 0), 23.8), 1: (63.0, (35.5, 19.1, 4.5, 1.7, 2.1, 0), 0.9), 2: (4.5, (0, 2.9, 0.9, 0.2, 0.3, 0.2), 0)}}
+OUTROS_56 = ((8, 0, -1, 0.28, 23, 'das peças'), (65, 2, 2, 1.24, 62, 'por obra'), (80, 3, 2, 1.47, 70, 'por obra'), (127, 5, 5, 1.60, 70, 'por obra'), (82, 2, 5, 1.84, 96, 'por obra'), (52, 1, 5, 1.54, 86, 'por obra'))
+FOLGA_56 = 0.1              # pontos de % (a tabela arredonda a 0,1; o dado do motor corta a cadeia de 20 em 4 voltas, o do rascunho em 8)
+
+
+def _cat_hoje(total, a0, b0, teto, fc):
+    """A REGRA DE ANTES DA FASE 1a, copiada aqui como estava no oficio._resolve (só a categoria): é a régua da meta B2. Não se mexe nela."""
+    k = O.cat_do_total(total, teto); cat = k
+    if a0 == 1 and b0 == 1: return 0 if fc >= O.NADA_SE_PERDE else None
+    if a0 == 1 or b0 == 1:
+        if k is not None and k > 0: cat = k - 1
+    elif a0 == 20 and b0 == 20 and k is not None and k < teto: cat = k + 1
+    if cat is None and (fc >= O.NADA_SE_PERDE or (fc >= 2 and total >= O.VALOR_CD[0] - O.VALOR_SEGURA)): cat = 0
+    return cat
+
+
+def _dist_hoje(soma, teto, fc=-1):
+    """o oficio.dist_valor de antes da fase 1a, copiado aqui (os mesmos laços, o mesmo dado)"""
+    res = {}
+    for a0 in range(1, 21):
+        da = {a0: 1.0} if a0 < 20 else {20 + x: q for x, q in oficio._UM.items()}
+        for b0 in range(1, 21):
+            db = {b0: 1.0} if b0 < 20 else {20 + x: q for x, q in oficio._UM.items()}
+            for va, pa in da.items():
+                for vb, pb in db.items():
+                    c = _cat_hoje(va + vb + soma, a0, b0, teto, fc); res[c] = res.get(c, 0) + pa * pb / 400
+    return res
+
+
+def _marg(d):
+    m = {}
+    for k, q in d.items(): m[k[0]] = m.get(k[0], 0) + q
+    return m
+
+
+def _dif(a, b): return max(abs(a.get(c, 0) - b.get(c, 0)) for c in set(a) | set(b))
+
+
+def _b2(n):
+    """B2 A CATEGORIA NÃO MUDA: a chance de cada categoria do motor novo (o dist_valor e o dist_efeitos) contra a regra de antes, soma de −10 a 200 (de 3 em 3), teto 0 a 5,
+    sem ferramenta e com cada uma (2.982 casos); e com os efeitos de ferramenta ligados (o prumo de 1 a 5, o lastro, a fagulha, a têmpera, o molde). A afinada é a de antes (+1)."""
+    pior = 0.0; casos = 0
+    for soma in range(-10, 201, 3):
+        for teto in range(6):
+            for fc in (-1, 0, 1, 2, 3, 4, 5):
+                h = _dist_hoje(soma, teto, fc); pior = max(pior, _dif(oficio.dist_valor(soma, teto, fc), h), _dif(_marg(oficio.dist_efeitos(soma, teto, fc)), h)); casos += 1
+    pior2 = 0.0; casos2 = 0
+    ligados = [dict(prumo=p) for p in range(1, 6)] + [dict(lastro=True), dict(fagulha=True)] + [dict(tempera=t) for t in (1, 2, 3)] + [dict(prumo=5, lastro=True, fagulha=True, tempera=3, molde_cat=0)]
+    for soma in range(-10, 201, 15):
+        for teto in range(6):
+            h = {fc: _dist_hoje(soma, teto, fc) for fc in (2, 4, 5)}
+            for i, kw in enumerate(ligados):
+                fc = (2, 4, 5)[i % 3]; pior2 = max(pior2, _dif(_marg(oficio.dist_efeitos(soma, teto, fc, **kw)), h[fc])); casos2 += 1
+    return [('B2 A CATEGORIA NÃO MUDA: a chance de cada categoria pelo motor novo (o dist_valor e a conta dos efeitos) contra a regra de antes, soma de −10 a 200, teto 0 a 5, sem ferramenta e com cada uma, e com os efeitos de ferramenta ligados (prumo, lastro, fagulha, têmpera, molde): diferença até 1e−12, sem exceção',
+             f"{casos} casos: a maior diferença {pior:.1e}; com os efeitos de ferramenta ligados, mais {casos2} casos: {pior2:.1e}", pior <= 1e-12 and pior2 <= 1e-12)]
+
+
+def _resumo(s, t, fc, **kw): return oficio.resumo_efeitos(oficio.dist_efeitos(s, t, fc, detalhe=True, **kw))
+
+
+def _fj1(n):
+    """FJ1 A FAIXA, PELA CONTA EXATA: os cinco ferreiros na obra da mão, o Iniciante, e o Mestre e o melhor abaixo da mão; e as tabelas de 5.6, célula por célula"""
+    out = []; R = {nome: _resumo(s, t, fc) for nome, s, t, fc, oc in REF + (INICIANTE,)}
+    mao = [R[x[0]] for x in REF]; ini = R[INICIANTE[0]]; ten = R[REF[1][0]]
+    inc34 = sum(q for e, q in ten['cat'][1]['ef'].items() if e in (3, 4))
+    ok = (all(0.55 <= r['com'] <= 0.75 and 0.8 <= r['efeitos'] <= 1.7 and 0.08 <= r['colada'] <= 0.25 for r in mao) and 0.10 <= ini['com'] <= 0.30 and ini['colada'] == 0 and 0.02 <= inc34 <= 0.06)
+    txt = ' · '.join(f"{x[0]} (2d20+{x[1]}): {R[x[0]]['efeitos']:.2f} efeito por obra, obra com efeito {R[x[0]]['com']:.1%}, colada {R[x[0]]['colada']:.1%}" for x in REF + (INICIANTE,))
+    out.append(('FJ1 A FAIXA, PELA CONTA EXATA: na obra da mão, Treinado ou melhor, a obra com efeito de 55 a 75% e de 0,8 a 1,7 efeito por obra; o Iniciante, de 10 a 30%; a colada de 8 a 25% (a do Iniciante, 0); na tenaz de Ferord, a Incomum de 3 ou 4 efeitos de 2 a 6%',
+                txt + f"; na tenaz de Ferord, a Incomum de 3 ou 4 efeitos em {inc34:.1%} das obras", ok))
+    razoes = []
+    for nome, s, t, fc, oc, i in ABAIXO:
+        r = _resumo(s, t, fc); razoes.append((nome, s, r['efeitos'], r['efeitos'] / R[REF[i][0]]['efeitos'], REF[i][0]))
+    out.append(('FJ1 ABAIXO DA MÃO NÃO É MINA: o Mestre e o melhor com matéria abaixo da mão tiram no máximo 1,2 vez os efeitos por obra da obra da mão deles (medido de 0,76 a 1,15 vez)',
+                ' · '.join(f"{nome} (2d20+{s}): {ef:.2f} por obra, {rz:.2f} vez a de {mao_}" for nome, s, ef, rz, mao_ in razoes), all(rz <= 1.2 for *_, rz, _m in razoes)))
+    pior = 0.0; ruins = []                                                 # as tabelas de 5.6, célula por célula
+    for (s, t, fc), tab in TABELA_56.items():
+        r = _resumo(s, t, fc)
+        for k, (ch, efs, cheios) in tab.items():
+            c = r['cat'].get(k, dict(chance=0, ef={}, cheios=0)); mine = [c['ef'].get(e, 0) * 100 for e in range(5)] + [sum(q for e, q in c['ef'].items() if e >= 5) * 100]
+            for nome_, a, b in [('chance', c['chance'] * 100, ch), ('cheios', c['cheios'] * 100, cheios)] + [(f'{e} ef', mine[e], efs[e]) for e in range(6)]:
+                d = abs(a - b); pior = max(pior, d)
+                if d > FOLGA_56 + 1e-9: ruins.append(f"2d20+{s} {oficio.FEM[k]} {nome_}: {a:.2f} (o contrato diz {b})")
+    for s, t, fc, efo, com, como in OUTROS_56:
+        r = _resumo(s, t, fc); c = r['com_peca'] if como == 'das peças' else r['com']
+        if abs(r['efeitos'] - efo) > 0.006: ruins.append(f"2d20+{s}: {r['efeitos']:.3f} efeito por obra (o contrato diz {efo})")
+        if abs(c * 100 - com) > 0.6: ruins.append(f"2d20+{s}: {c:.1%} com efeito {como} (o contrato diz {com}%)")
+    lend = _resumo(127, 5, 5)['cat'][5]['chance']
+    if abs(lend - 0.254) > 0.0006: ruins.append(f'a Lendária do melhor: {lend:.2%} (o contrato diz 25,4%)')
+    out.append(('FJ1 AS CONTAS EXATAS DE 5.6 BATEM: as duas tabelas de Ferord (matéria Comum e a tenaz), célula por célula, e os outros perfis (efeitos por obra, obra com efeito, a Lendária do melhor em 25,4%)',
+                f"{sum(len(tab) * 8 for tab in TABELA_56.values()) + 2 * len(OUTROS_56) + 1} conferências; a maior diferença numa célula {pior:.2f} ponto (folga {FOLGA_56})" + (f"; FORA: {'; '.join(ruins[:4])}" if ruins else ''), not ruins))
+    return out
+
+
+def ferord(semente=1, prata=300):
+    """FERORD HOJE (o contrato, 5.6): Treinado na forja, Afinidade 75, forja de vila, preparo +6 até o Incomum (a receita, o fogo e a bigorna), o martelo de forja Incomum e o jogo
+    Comum afinado: 2d20 + 23 na matéria Comum, 2d20 + 38 na Incomum"""
+    E = oficina_de_prova(semente, nivel=1, afinidade=75, mao=4, prata=prata, fogo=1, bigorna=1, receita=1)
+    estado.aplica(E, 'gera', [['item', 'nasce', item('ferramenta', 1, forma='martelo', dono='eu')], ['item', 'nasce', item('ferramenta', 0, oficio='forja', dono='eu', efeitos=[{'chave': 'afinada'}])]], onde='vila', texto='as ferramentas de Ferord')
+    return E
+
+
+@contextlib.contextmanager
+def com_dados(a, b):
+    """SÓ NA PROVA: o dado de verdade é rolado e anotado, mas as faces são postas à mão (as listas da cadeia de cada d20: [20, 6] é um 20 que rolou de novo e deu 6)"""
+    real = teste.rola
+    def rola(E_, o_que, atributo, contra, mais=0, quem=None, oculto=False, dom=0, rotulo=None):
+        r = real(E_, o_que, atributo, contra, mais=mais, quem=quem, oculto=oculto, dom=dom); r['dados'] = [list(a), list(b)]
+        r['total'] = sum(a) + sum(b) + r['bonus'] + r['pena'] + mais + dom; r['passou'] = r['total'] >= contra
+        if dom: r['fez'] = r['total'] >= contra and r['total'] - dom < contra
+        return r
+    teste.rola = rola
+    try: yield
+    finally: teste.rola = real
+
+
+def obra_de(E, peca, a=None, b=None, quem='eu', molde=None):
+    """a obra inteira, sem viver os dias: a matéria entregue, a obra aberta (molde=, se houver), os blocos postos, e o remate (com as faces postas, se a e b vêm)"""
+    ef = [['pessoa', quem, 'carga.' + k, 'soma', q] for k, q in oficio.materia_da_obra(E, quem, peca).items()]
+    estado.aplica(E, 'gera', ef, onde=E['gente'][quem]['lugar'], texto='a matéria de prova')
+    R = oficio.forjar(E, quem, peca, blocos=0, molde=molde)
+    estado.aplica(E, 'mestre', [['obra', R['obra'], 'blocos', 'poe', O.blocos(peca['cat'])]], texto='os blocos da prova')
+    if a is None: return oficio.remata(E, R['obra'])
+    with com_dados(a, b): return oficio.remata(E, R['obra'])
+
+
+def tira(E, iid): estado.aplica(E, 'mestre', [['item', iid, 'some']], texto='a peça sai da prova')
+def tenaz(cat=1): return oficio.molde('ferramenta', cat, oficio='tenaz')
+def _com_efeito(it): return bool(it and ((it.get('efeitos_livres') or 0) + len(it.get('efeitos') or [])))
+
+
+def _fj2(n):
+    """FJ2 O DADO DE VERDADE: 400 obras da tenaz de Ferord com o teste.rola, obra por obra (a peça nova sai da prova a cada obra, para não mudar a soma)"""
+    E = ferord(prata=100); esperado = oficio.efeitos_de(oficio.valor(E, 'eu', 1))['com']; m = max(400, n); vistos = 0; cats = {}
+    for i in range(m):
+        F = obra_de(E, tenaz()); it = E['itens']['itens'].get(F['item']) if F['item'] else None; vistos += _com_efeito(it); cats[F.get('sai')] = cats.get(F.get('sai'), 0) + 1
+        if F['item']: tira(E, F['item'])
+        E['_novos'].clear(); E['turno']['dados'].clear()
+    saiu = ', '.join(('perde' if k is None else oficio.FEM[k]) + f' {v}' for k, v in sorted(cats.items(), key=lambda kv: -1 if kv[0] is None else kv[0]))
+    return [('FJ2 O DADO DE VERDADE: a fração das obras da tenaz de Ferord que saem com efeito, em 400 obras com o teste.rola, bate com a conta exata (62,3%) a 4 desvios',
+             f"medido {vistos / m:.1%} em {m} obras ({saiu}); a conta exata {esperado:.1%}; o estado {'inteiro' if not estado.valida(E) else 'QUEBRADO'}",
+             bate(vistos / m, esperado, m) and abs(esperado - 0.623) < 0.0006 and not estado.valida(E))]
+
+
+def _ef_faixa(t, teto, fc, **kw):
+    x = oficio._resolve(t, 10, 10, teto, fc, kw.get('prumo', 0), kw.get('lastro', False))[0][1]
+    return x, oficio.conta_efeitos(x)
+
+
+def _fj3(n):
+    """FJ3 A MONOTONIA: todo total de toda faixa e teto, com e sem prumo e lastro (e a ferramenta Única): dentro da mesma categoria, mais soma nunca dá menos efeitos"""
+    ruins = 0; casos = 0
+    for teto in range(6):
+        for k in range(teto + 1):
+            for kw in (dict(), dict(prumo=1), dict(prumo=3), dict(prumo=5), dict(lastro=True), dict(prumo=2, lastro=True)):
+                for fc in (-1, 4):
+                    ant = -1; top = O.cd_de_cima(k) if k < teto else O.cd_de_cima(k) + 60
+                    for t in range(O.VALOR_CD[k], top):
+                        x, c = _ef_faixa(t, teto, fc, **kw); casos += 1
+                        if x['cat'] != k: continue
+                        if c['efeitos'] < ant: ruins += 1
+                        ant = c['efeitos']
+    return [('FJ3 A MONOTONIA: em todo total de toda faixa e teto, com e sem prumo e lastro (e com a ferramenta Única), mais soma nunca dá menos efeitos: zero inversões',
+             f"{casos} totais: {ruins} inversões", ruins == 0 and casos >= 11000)]
+
+
+def _fj4(n):
+    """FJ4 O TETO: todo total na categoria do teto, em cada teto, com e sem prumo; o quase (a ferramenta Única) no teto"""
+    passa2 = 0; acima = 0; acima_ruim = 0; quase_teto = 0; casos = 0
+    for teto in range(6):
+        for prumo in range(6):
+            for t in range(O.VALOR_CD[teto], O.cd_de_cima(teto) + 80):
+                for fc in (-1, 4, 5):
+                    x = oficio._resolve(t, 10, 10, teto, fc, prumo)[0][1]; casos += 1
+                    if x['k'] != teto: continue
+                    passa2 += x['faixa'] > O.TETO_FAIXA
+                    if t >= O.cd_de_cima(teto): acima += 1; acima_ruim += x['faixa'] != O.TETO_FAIXA
+                    quase_teto += x['quase']
+    return [('FJ4 O TETO: na categoria do teto a faixa nunca passa de 2, e o total acima da CD trancada dá sempre 2; o quase nunca age na categoria do teto',
+             f"{casos} totais nos seis tetos (prumo 0 a 5, sem ferramenta, a Única e a Lendária): a faixa passou de 2 em {passa2}; acima da CD trancada, {acima} totais, {acima_ruim} fora do 2; o quase no teto: {quase_teto}",
+             passa2 == 0 and acima > 0 and acima_ruim == 0 and quase_teto == 0)]
+
+
+def _fj5(n):
+    """FJ5 O TETO DE EFEITOS E O CHEIO: a conta (toda saída possível) e as peças nascidas e escolhidas"""
+    ruins = []; casos = 0
+    for teto in range(6):                                                  # (a) a conta, em toda saída: os totais, as faces (normal, um 1, dois 20, dois 1), os 20, as fagulhas, a têmpera, o molde
+        for t in range(-10, 230, 2):
+            for faces in ((9, 9), (1, 9), (20, 20), (1, 1)):
+                x = oficio._resolve(t, faces[0], faces[1], teto, 5)[0][1]
+                for n20 in range(4):
+                    for n19 in range(3):
+                        for tp in range(4):
+                            for molde in (False, True):
+                                c = oficio.conta_efeitos(x, n20, n19, True, tp, molde); casos += 1
+                                if x['cat'] is None: continue
+                                fora = c['teto'] - O.efeitos_max(x['cat'])
+                                if c['efeitos'] > c['teto'] or fora != x['mais_efeito'] + c['molde'] or fora > 2 or c['cheios'] > c['livres'] or c['cheios'] > c['sobra'] + tp: ruins.append((teto, t, faces, n20, n19, tp, molde))
+    E = ferord(prata=100); nascidas = []
+    for a, b, peca in (([9], [18], tenaz()), ([20, 6], [14], tenaz()), ([20, 4], [19], tenaz()), ([1], [18], tenaz()), ([20, 20, 5], [20, 3], tenaz()), ([5], [3], tenaz()),
+                       ([20, 6], [14], oficio.molde('arma', 1, familia='espada')), ([17], [16], oficio.molde('ferramenta', 0, oficio='forja'))):
+        F = obra_de(E, peca, a, b)
+        if F['item']: nascidas.append(F['item'])
+    L = lambda: E['itens']['itens']
+    for i in nascidas:                                                     # (b) as peças nascidas, antes e depois de escolher (auto, na ferramenta)
+        if oficio.escolhe_agora(L()[i]) and L()[i].get('efeitos_livres'): oficio.efeito(E, 'eu', i, 'auto')
+    M = _ferreiro(nivel=4, afinidade=100, mao=8, prep=5, ferramentas=())    # o molde e a obra-prima no teto: o melhor, com o martelo Lendário de molde e a tenaz Única de prumo
+    estado.aplica(M, 'gera', [['item', 'nasce', item('ferramenta', 5, forma='martelo', dono='eu', efeitos=[{'chave': 'molde'}, {'chave': 'tempera'}])],
+                              ['item', 'nasce', item('ferramenta', 4, forma='tenaz', dono='eu', efeitos=[{'chave': 'prumo'}])]], onde='vila', texto='as ferramentas Lendárias de prova')
+    F1 = obra_de(M, tenaz(1), [20, 20, 2], [20, 1], molde='prumo')          # o molde de prumo numa tenaz que sai Rara (o teto), com a obra-prima no teto: 2 fora do teto
+    F2 = obra_de(M, tenaz(1), [1], [1], molde='prumo')                     # os dois 1: a ferramenta Épica ou maior segura (Comum, tosca, sem efeito): o molde se perde
+    pecas = [L()[i] for i in nascidas] + [M['itens']['itens'][F['item']] for F in (F1, F2) if F['item']]
+    for it in pecas:
+        n_ = len(it.get('efeitos') or []) + (it.get('efeitos_livres') or 0); fora = it.get('teto_efeitos', O.efeitos_max(it['cat'])) - O.efeitos_max(it['cat'])
+        if n_ > it.get('teto_efeitos', O.efeitos_max(it['cat'])) or fora > 2 or (it.get('cheios_livres') or 0) > (it.get('efeitos_livres') or 0): ruins.append(it['nome'])
+        for e in it.get('efeitos') or []:
+            if e.get('cheio') and not O.de_numero(e['chave']): ruins.append(f"{it['nome']}: cheio em {e['chave']}")
+    m1 = M['itens']['itens'][F1['item']]; m2 = M['itens']['itens'][F2['item']] if F2['item'] else None
+    molde_ok = (m1['cat'] == 2 and m1.get('teto_efeitos') == O.efeitos_max(2) + 2 and {'chave': 'prumo', 'cheio': True} in m1['efeitos'] and O.valor_ferramenta('prumo', 2, True) == O.valor_ferramenta('prumo', 3)
+                and m2 is not None and not m2.get('efeitos') and not m2.get('efeitos_livres'))
+    junta = [recusa(lambda: estado.aplica(E, 'mestre', [['item', nascidas[1], 'efeito', 'junta', {'chave': 'sinete'}]], texto='a mais')),                   # passa do teto (a tenaz cheia)
+             recusa(lambda: estado.aplica(E, 'mestre', [['item', nascidas[0], 'efeito', 'junta', {'chave': 'lastro'}]], texto='a porta')),                  # forte na Incomum
+             recusa(lambda: estado.aplica(E, 'mestre', [['item', nascidas[0], 'efeito', 'junta', {'chave': 'fagulha', 'cheio': True}]], texto='o cheio'))]   # cheio sem número
+    ok = not ruins and molde_ok and all(junta) and not estado.valida(E) and not estado.valida(M)
+    return [('FJ5 O TETO DE EFEITOS E O CHEIO: nenhuma peça passa do teto_efeitos; o cheio só em efeito de número, com o número da categoria de cima; fora do teto, só a obra-prima e um molde',
+             f"{casos} saídas da conta e {len(pecas)} peças nascidas e escolhidas: {len(ruins)} fora da regra; o molde de prumo na Rara com a obra-prima no teto: teto {m1.get('teto_efeitos')} (o da Rara, {O.efeitos_max(2)}, mais 2), "
+             f"o prumo cheio vale {O.valor_ferramenta('prumo', 2, True)} (o da Épica); os dois 1 com a ferramenta que segura: a peça sai sem efeito e o molde se perde: {'sim' if m2 is not None and not m2.get('efeitos') else 'NÃO'}; "
+             f"o gravador recusa o efeito acima do teto, a porta errada e o cheio sem número: {sum(bool(x) for x in junta)} de 3", ok)]
+
+
+def _fj6(n):
+    """FJ6 A ESCOLHA: o comando, a loja e o sozinho"""
+    ok = {}; E = ferord(prata=100); L = lambda: E['itens']['itens']
+    F = obra_de(E, tenaz(), [20, 6], [14]); i = F['item']                  # a tenaz no fio: 4 efeitos por escolher e 1 cheio
+    ev0 = E['relogio']['eventos']
+    ok['porta'] = bool(recusa(lambda: oficio.efeito(E, 'eu', i, 'lastro'))) and bool(recusa(lambda: oficio.efeito(E, 'eu', i, 'molde')))
+    ok['pesa'] = bool(recusa(lambda: oficio.efeito(E, 'eu', i, 'pesa')))
+    oficio.efeito(E, 'eu', i, 'prumo', cheio=True); um = E['relogio']['eventos'] - ev0
+    ok['repete'] = bool(recusa(lambda: oficio.efeito(E, 'eu', i, 'prumo')))
+    at = dict(E['gente']['eu']['atributos']); estado.aplica(E, 'gera', [['pessoa', 'nasce', 'zeca', dict(nome='Zeca', nivel=1, atributos=at, lugar='vila')]], onde='vila', texto='outro ferreiro')
+    ok['dono'] = bool(recusa(lambda: oficio.efeito(E, 'zeca', i, 'afinada')))
+    ev1 = E['relogio']['eventos']; oficio.efeito(E, 'eu', i, 'afinada'); oficio.efeito(E, 'eu', i, 'fagulha'); dois = 1 + E['relogio']['eventos'] - ev1
+    hist = [h for h in L()[i]['historia'] if 'deu à peça o efeito' in h]
+    ok['evento'] = um == 1 and dois == 3 and len(hist) == 3 and L()[i]['efeitos'][0] == {'chave': 'prumo', 'cheio': True}
+    F2 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 6], [14]); ok['arma'] = 'o catálogo de luta chega na próxima fase' in (recusa(lambda: oficio.efeito(E, 'eu', F2['item'], 'prumo')) or '')
+    # a loja escolhe ao comprar (a receita do lugar: o jeito da loja, pela semente) e o mundo escolhe sozinho (o ferreiro que não é o jogador, pelo jeito dele): mesma semente, mesma escolha
+    def lote(sem):
+        W = ferord(sem, prata=100); i1 = obra_de(W, tenaz(), [20, 6], [14])['item']; estado.aplica(W, 'mestre', [['item', i1, 'dono', 'poe', None], ['item', i1, 'onde', 'poe', 'vila']], texto='a peça vai à loja')
+        jl, fl = oficio.escolhe_sozinho(W, i1, quem='vila')
+        at_ = dict(W['gente']['eu']['atributos']); estado.aplica(W, 'gera', [['pessoa', 'nasce', 'bento', dict(nome='Bento', nivel=1, atributos=at_, lugar='vila', maestria={'forja': 4})]], onde='vila', texto='o ferreiro do mundo')
+        estado.aplica(W, 'gera', [['item', 'nasce', item('ferramenta', 1, forma='martelo', dono='bento')], ['item', 'nasce', item('ferramenta', 0, oficio='forja', dono='bento', efeitos=[{'chave': 'afinada'}])], ['pessoa', 'bento', 'marca.prep_receita', 'poe', 1]], onde='vila', texto='as ferramentas dele')
+        Fb = obra_de(W, tenaz(), [20, 6], [14], quem='bento'); ib = Fb['item']
+        return (jl, [e['chave'] for e in W['itens']['itens'][i1]['efeitos']], oficio.jeito(W, 'bento'), [e['chave'] for e in W['itens']['itens'][ib]['efeitos']], W['itens']['itens'][ib].get('efeitos_livres', 0), estado.valida(W), Fb['texto'])
+    A = lote(7); B = lote(7)
+    ok['semente'] = A[:5] == B[:5] and len(A[1]) == 4 and len(A[3]) == 4 and A[4] == 0 and not A[5] and 'escolhe pelo jeito' in A[6]
+    jeitos = {oficio.jeito(E, f'ferreiro{k}') for k in range(40)}; ok['jeitos'] = jeitos == set(O.JEITOS)
+    ok['estado'] = not estado.valida(E)
+    falhas = [k for k, v in ok.items() if not v]
+    return [('FJ6 A ESCOLHA: a porta pela força; sem repetir; só o dono; cada escolha um evento; a arma da 1a não escolhe; a loja e o ferreiro do mundo escolhem sozinhos pelo jeito, e a mesma semente dá a mesma escolha; 40 ferreiros mostram os 4 jeitos',
+             f"{sum(ok.values())} de {len(ok)} conferências" + (f" (falham: {', '.join(falhas)})" if falhas else '') + f"; a loja (o jeito {A[0]}): {', '.join(A[1])}; o ferreiro do mundo (o jeito {A[2]}): {', '.join(A[3])}; os jeitos de 40 ferreiros: {', '.join(sorted(jeitos))}",
+             not falhas)]
+
+
+def _feitio(d): r = oficio.resumo_efeitos(d); return r['feitio']
+
+
+def _fj7(n):
+    """FJ7 AS FERRAMENTAS: a régua de feitio de cada efeito em cada categoria que ele abre (a média dos cinco ferreiros) e o que cada um faz; o mesmo efeito em duas; o prumo de várias fontes"""
+    base = {x[0]: _feitio(oficio.dist_efeitos(x[1], x[2], x[3])) for x in REF}; linhas = []; ok_regua = True
+    def ganho(kw=None, soma_mais=0, molde=False):
+        g = [_feitio(oficio.dist_efeitos(s + soma_mais, t, fc, molde_cat=oc if molde else None, **(kw or {}))) - base[nome] for nome, s, t, fc, oc in REF]
+        return sum(g) / len(g)
+    medidas = [('afinada', 0, dict(), 1, False), ('fagulha', 0, dict(fagulha=True), 0, False)] + [('prumo', c, dict(prumo=O.valor_ferramenta('prumo', c)), 0, False) for c in range(1, 6)] \
+              + [('lastro', 3, dict(lastro=True), 0, False)] + [('tempera', c, dict(tempera=O.valor_ferramenta('tempera', c)), 0, False) for c in range(3, 6)] + [('molde', 5, dict(), 0, True)]
+    for k, cat, kw, mais, molde in medidas:
+        g = ganho(kw, mais, molde); teto = O.FORCA_FEITIO[O.forca_da_cat(cat)]; ok_regua = ok_regua and g <= teto + 1e-9 and g >= 0
+        linhas.append(f"{k} {oficio.FEM[cat]}{' ' + str(kw.get('prumo', kw.get('tempera', ''))) if kw.get('prumo') or kw.get('tempera') else ''} {g:+.2f} (teto {teto:.2f})")
+    ok = {'regua': ok_regua}
+    # o que cada um faz, no remate e nos atos (o dado posto à mão)
+    E = _ferreiro(nivel=1, afinidade=50, mao=4, prep=None, ferramentas=()); L = lambda: E['itens']['itens']
+    estado.aplica(E, 'gera', [['item', 'nasce', item('ferramenta', 2, forma='tenaz', dono='eu', efeitos=[{'chave': 'recobro'}, {'chave': 'poupa_ferro'}, {'chave': 'sinete'}, {'chave': 'remendo'}])],
+                              ['item', 'nasce', item('ferramenta', 1, forma='martelo', dono='eu', efeitos=[{'chave': 'mao_de_medida'}])], ['pessoa', 'eu', 'moedas', 'soma', 500]], onde='vila', texto='as ferramentas de prova')
+    esp = oficio.molde('arma', 0, familia='espada'); arco = oficio.molde('arma', 0, familia='arco')
+    ok['poupa_ferro'] = (oficio.materia_da_obra(E, 'eu', esp) == {M.materia('metal', 0): 2} and oficio.materia_da_obra(E, 'eu', tenaz(0)) == oficio.materia_de(tenaz(0))
+                         and oficio.materia_da_obra(E, 'eu', arco) == oficio.materia_de(arco))          # o arco (3 de madeira): o poupa-ferro poupa o ferro, não a madeira
+    c0 = dict(E['gente']['eu'].get('carga') or {}); F = obra_de(E, oficio.molde('arma', 0, familia='machado'), [1], [1])          # machado: 2 de metal e 1 de madeira; os dois 1: perde
+    volta = {k: v - c0.get(k, 0) for k, v in (E['gente']['eu'].get('carga') or {}).items() if v != c0.get(k, 0)}
+    ok['recobro'] = F['sai'] is None and volta == {M.materia('metal', 0): 1} and 'o recobro devolve' in F['texto']
+    F = obra_de(E, esp, [12], [11]); it = L()[F['item']]; ok['sinete'] = it.get('sinete') == 'eu' and 'Sinete: eu' in __import__('itens').janela(it)
+    estado.aplica(E, 'mestre', [['item', F['item'], 'dur', 'soma', -8]], texto='a peça gasta'); t0 = estado.agora(E); R = oficio.consertar(E, 'eu', F['item']); repousa(E)
+    ok['remendo'] = R['feitos'] == 1 and R['pontos'] == 8 and oficio.conserto_bloco(E, 'eu') == O.REMENDO_BLOCO
+    ok['mao_de_medida'] = oficio.ajuste_blocos(E, 'eu', 3) == 2 and oficio.ajuste_blocos(E, 'eu', 4) == 3
+    R = oficio.ajustar(E, 'eu', F['item']); ok['mao_de_medida'] = ok['mao_de_medida'] and R['rolagem']['mais'] == oficio.conta(E, 'eu', 0, contra=O.ajuste_contra(0))['mais'] + O.MEDIDA_TESTE
+    # o mesmo efeito em duas não soma (vale o maior); o prumo soma até 5; o jogo nos dois lugares vale uma vez
+    G = _ferreiro(nivel=1, afinidade=50, mao=4)
+    def fx_com(*fs):
+        for i_ in [k for k, x in G['itens']['itens'].items() if x['tipo'] == 'ferramenta']: tira(G, i_)
+        estado.aplica(G, 'gera', [['item', 'nasce', item('ferramenta', c, dono='eu', **({'forma': f} if f != 'jogo' else {'oficio': 'forja'}), efeitos=e)] for f, c, e in fs], onde='vila', texto='ferramentas'); return oficio.efeitos_em_uso(G, 'eu')
+    a = fx_com(('martelo', 3, [{'chave': 'tempera'}, {'chave': 'lastro'}]), ('tenaz', 4, [{'chave': 'tempera'}, {'chave': 'lastro'}]))
+    b = fx_com(('martelo', 5, [{'chave': 'prumo'}]), ('tenaz', 4, [{'chave': 'prumo'}]))
+    c = fx_com(('jogo', 1, [{'chave': 'prumo', 'cheio': True}]),)
+    d = fx_com(('martelo', 1, [{'chave': 'prumo'}]), ('tenaz', 2, [{'chave': 'prumo'}]))
+    ok['mesmo'] = a['tempera'] == 2 and a.get('lastro') is True and b['prumo'] == O.PRUMO_MAX and c['prumo'] == 2 and d['prumo'] == 3
+    ok['estado'] = not estado.valida(E) and not estado.valida(G)
+    falhas = [k for k, v in ok.items() if not v]
+    return [('FJ7 AS FERRAMENTAS: cada efeito, no número da categoria da ferramenta, dentro do teto da força dela (0,15 · 0,30 · 0,60 · 1,20 pontos de feitio por obra, a média dos cinco ferreiros); o recobro, o poupa-ferro, o remendo, a mão de medida e o sinete fazem o que dizem; o mesmo efeito em duas não soma; o prumo para em 5',
+             f"a régua: {' · '.join(linhas)}; {sum(ok.values())} de {len(ok)} conferências" + (f" (falham: {', '.join(falhas)})" if falhas else '') + f"; (têmpera em duas: {a['tempera']}; prumo Lendário + Único: {b['prumo']}; o jogo de prumo cheio nos dois lugares: {c['prumo']}; prumo 1 + 2: {d['prumo']})",
+             not falhas)]
+
+
+def _fj8(n):
+    """FJ8 A LOJA: o ferreiro de loja do provas_mercado com uma tenaz Incomum de poupa-ferro (a meta FORJAR PARA A LOJA NÃO É MINA, as faixas de hoje)"""
+    import provas_mercado as PMe
+    sementes = max(PMe.MINA_SEMENTES, n // 10); media = lambda X: sum(X) / len(X); tz = item('ferramenta', 1, forma='tenaz', efeitos=[{'chave': 'poupa_ferro'}])
+    R = {nome: [PMe.ferreiro_de_loja(s, cats, ferramenta=tz) for s in range(1, sementes + 1)] for nome, cats in (('só peças Comuns', (0,)), ('Comuns e Incomuns', (0, 1)))}
+    m5 = {k: media([V['rende'][0] for V in vs]) for k, vs in R.items()}; p5 = {k: max(V['rende'][0] for V in vs) for k, vs in R.items()}; m30 = {k: media([V['rende'][1] for V in vs]) for k, vs in R.items()}
+    todas = [V for vs in R.values() for V in vs]; fecha = all(V['prata'] and V['inteiro'] and V['vivo'] for V in todas)
+    certo = max(m5.values()) <= PMe.MINA_COMECO[0] and max(p5.values()) <= PMe.MINA_COMECO[1] and max(m30.values()) <= PMe.MINA_DEPOIS and fecha
+    return [(f"FJ8 A LOJA: FORJAR PARA A LOJA NÃO É MINA com uma tenaz Incomum de poupa-ferro (o mesmo ferreiro de loja da meta do provas_mercado, que segue lá sem a tenaz): nos {PMe.MINA_DIAS[0]} primeiros dias, em média no máximo {PMe.MINA_COMECO[0]} de prata por dia e no pior caso {PMe.MINA_COMECO[1]}; depois, em média no máximo {PMe.MINA_DEPOIS}",
+             f"{sementes} vilas de teste por escada. " + ' · '.join(f"{k}: {m5[k]:.2f} por dia nos {PMe.MINA_DIAS[0]} primeiros dias (o pior {p5[k]:.2f}), {m30[k]:.2f} depois ({media([V['pecas'][0] + V['pecas'][1] for V in R[k]]):.1f} peças vendidas)" for k in R)
+             + f"; a prata {'fecha' if all(V['prata'] for V in todas) else 'NÃO FECHA'}; estado {'inteiro' if all(V['inteiro'] for V in todas) else 'QUEBRADO'}", certo)]
+
+
+def _fj9(n):
+    """FJ9 O DOM ESCONDIDO: a conta (o dom de +1 e de +2 muda a categoria, ou só o número de efeitos) e o remate que o mostra pela faixa"""
+    medidas = {}
+    for dom in (1, 2):                                                     # Ferord, matéria Comum: 2d20 + 23, o dom dentro
+        cat = ef = 0.0
+        for (uns, v2, n19, n20, td), p in oficio._dados():
+            a0, b0 = oficio._FACE[(uns, v2)]
+            x1 = oficio._resolve(td + 23, a0, b0, 1, 1)[0][1]; x0 = oficio._resolve(td + 23 - dom, a0, b0, 1, 1)[0][1]
+            if x1['cat'] != x0['cat']: cat += p
+            elif oficio.conta_efeitos(x1, n20)['efeitos'] != oficio.conta_efeitos(x0, n20)['efeitos']: ef += p
+        medidas[dom] = (cat, ef)
+    conta_ok = abs(medidas[1][0] - 0.020) < 0.0006 and abs(medidas[1][1] - 0.082) < 0.0006 and abs(medidas[2][0] - 0.038) < 0.0006 and abs(medidas[2][1] - 0.164) < 0.0006
+    E = ferord(prata=100); estado.aplica(E, 'mestre', [['pessoa', 'eu', 'dom', 'poe', {'forja': 1}]], texto='um dom escondido, para a prova')
+    c = oficio.valor(E, 'eu', 0); vis = c['soma']                          # a mesa vê 23; o dado leva +1 escondido
+    F = obra_de(E, oficio.molde('arma', 0, familia='espada'), [12], [11])  # 12 + 11 + 23 + 1 = 47: falta 8, 2 efeitos; sem o dom, 46: falta 9, 1 efeito
+    it = E['itens']['itens'][F['item']]; r = F['rolagem']
+    viu = (E['gente']['eu'].get('marca') or {}).get('dom_visto') is not None and r.get('fez') == 'efeitos' and 'saía com menos efeitos' in F['texto'] and it.get('efeitos_livres') == 2 and c['oculto'] == 1 and vis == 23
+    return [('FJ9 O DOM ESCONDIDO se mostra pela categoria ou pela faixa: um Treinado com Dom +1 e com Grande Dom (Ferord, matéria Comum) (medido: 2,0% + 8,2%; 3,8% + 16,4%); e o remate em que só o número de efeitos muda o mostra ("sem o dom, saía com menos efeitos")',
+             f"Dom +1: muda a categoria em {medidas[1][0]:.1%} das obras e só os efeitos em {medidas[1][1]:.1%}; Grande Dom: {medidas[2][0]:.1%} e {medidas[2][1]:.1%}; o remate de prova: {'mostrou' if viu else 'NÃO MOSTROU'} (a mesa via 2d20 + {vis}; a peça saiu com {it.get('efeitos_livres')} efeitos por escolher)",
+             conta_ok and viu)]
+
+
+def _fj10(n):
+    """FJ10 A MESA: o pede (a régua de cada faixa até o teto), o remate ("faltaram N: X da faixa, Y dos 20"), a janela (o cheio), a receita (escolhe sem perguntar e a mesa relata), a arma da 1a"""
+    import itens as IT
+    ok = {}; E = ferord(prata=100); L = lambda: E['itens']['itens']
+    pd = oficio.pede(E, 'eu', tenaz())
+    ok['pede'] = all(x in pd for x in ('a RÉGUA DA FAIXA', 'Comum 22–38: 0', '53–54: 4', 'Incomum 55–63: 0', '64–71: 1', '78–79: 4', 'Rara (o teto desta obra: a régua para em 2)', '97 em diante: 2', 'efeito por obra', 'peça colada'))
+    F = obra_de(E, tenaz(), [9], [18]); ok['remate'] = 'faltaram 15 para a Rara (80): o terço do meio, 1 da faixa, 0 dos 20' in F['texto']; tira(E, F['item'])     # (a peça nova sai: senão ela vira a tenaz em uso e muda a soma)
+    F2 = obra_de(E, tenaz(), [20, 6], [14]); ok['remate_fio'] = 'faltaram 2 para a Rara (80): no fio, 4 da faixa, 1 dos 20 = 5: 4 efeitos por escolher (o teto da Incomum: 4), e 1 cheio' in F2['texto']
+    oficio.efeito(E, 'eu', F2['item'], 'prumo', cheio=True); jan = IT.janela(L()[F2['item']]); ok['janela'] = 'cheio: o número da categoria de cima' in jan and 'conta 2 a menos' in jan and 'Efeitos por escolher: 3' in jan
+    pecas = ' · '.join(ato.diz_pecas(E, 'eu')); ok['pecas'] = 'prumo 2 (cheio)' in pecas
+    tira(E, F2['item'])
+    oficio.receita(E, 'eu', 'tenaz', 'prumo,afinada,fagulha'); F3 = obra_de(E, tenaz(), [20, 6], [14]); t3 = L()[F3['item']]
+    ok['receita'] = 'Pela sua receita: prumo' in F3['texto'] and [e['chave'] for e in t3['efeitos']] == ['prumo', 'afinada', 'fagulha'] and t3['efeitos'][0].get('cheio') and t3.get('efeitos_livres') == 1
+    tira(E, F3['item'])
+    F4 = obra_de(E, oficio.molde('arma', 1, familia='espada'), [20, 6], [14]); a4 = L()[F4['item']]; dz = 'efeitos por escolher: 4 (o catálogo de luta chega na próxima fase)'
+    ok['arma'] = (dz.capitalize() in F4['texto'] and dz in ' · '.join(ato.diz_pecas(E, 'eu')) and dz.capitalize() in IT.janela(a4)
+                  and dz in (recusa(lambda: oficio.efeito(E, 'eu', F4['item'], 'prumo')) or '') and a4.get('efeitos_livres') == 4 and a4.get('cheios_livres') == 1)
+    ok['estado'] = not estado.valida(E)
+    falhas = [k for k, v in ok.items() if not v]
+    return [('FJ10 A MESA: o pede mostra a régua de cada faixa até o teto; o remate diz "faltaram N: X da faixa, Y dos 20"; a janela mostra o cheio; a receita escolhe sem perguntar e a mesa relata; a arma e a armadura forjadas na 1a mostram "efeitos por escolher: N (o catálogo de luta chega na próxima fase)"',
+             f"{sum(ok.values())} de {len(ok)} conferências" + (f" (falham: {', '.join(falhas)})" if falhas else ''), not falhas)]
+
+
+def provas_faixa(n=300):
+    """as metas da fase 1a (B2, FJ1 a FJ10), cada uma no seu mundo de rascunho"""
+    out = []
+    for nome, f in (('B2', _b2), ('FJ1', _fj1), ('FJ2', _fj2), ('FJ3', _fj3), ('FJ4', _fj4), ('FJ5', _fj5), ('FJ6', _fj6), ('FJ7', _fj7), ('FJ8', _fj8), ('FJ9', _fj9), ('FJ10', _fj10)):
+        try: out.extend(f(n))
+        except (SystemExit, Exception) as e:
+            import traceback; out.append((f'{nome} (a fase 1a)', f'A PROVA QUEBROU: {type(e).__name__}: {e} · {traceback.format_exc().splitlines()[-3].strip()}', False))
+    return out
 
 
 def provas(n=300):
@@ -476,14 +867,19 @@ def provas(n=300):
         roda(nome, f)
     for nome, f in (('AS FERRAMENTAS E A OBRA-PRIMA', lambda: _ferramentas(n)),):
         roda(nome, f)
+    roda('A FAIXA DA FORJA (a parte 2, fase 1a)', lambda: provas_faixa(n))
     return out
 
 
 def main():
     a = sys.argv[1:]
+    if a and a[0] == 'faixa':                               # só as metas da fase 1a
+        n = int(a[1]) if len(a) > 1 and a[1].isdigit() else 300; res = provas_faixa(n)
+        for nome, deu, passa in res: print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
+        print(f'\n{sum(p for _, _, p in res)} de {len(res)} provas passam.'); return all(p for _, _, p in res)
     if a and not a[0].isdigit(): print(__doc__); return True
     n = int(a[0]) if a else 300
-    print('BANCO DE PROVAS DO OFÍCIO · etapa 2: forjar, consertar, ajustar\n')
+    print('BANCO DE PROVAS DO OFÍCIO · etapa 2: forjar, consertar, ajustar · a parte 2, fase 1a: a faixa da forja e as ferramentas (B2, FJ1 a FJ10)\n')
     res = provas(n)
     for nome, deu, passa in res: print(f"  {'passa' if passa else 'FALHA'}  {nome}: {deu}")
     print(f'\n{sum(p for _, _, p in res)} de {len(res)} provas passam.')

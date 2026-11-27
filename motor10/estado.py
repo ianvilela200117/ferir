@@ -19,6 +19,9 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência); também núcleos (tipo 'nucleo')
     ['item', id, 'onde', 'poe', lugar]  ·  ['item', id, 'solto', 'poe', True|None]  ·  ['item', id, 'sob_medida', 'poe', {dono, grau}]
     ['item', id, 'historia', 'junta', 'texto']  ·  ['item', id, 'some']
+    ['item', id, 'efeito', 'junta', {chave, cheio?, emprestado?}]  ·  ['item', id, 'efeitos_livres'|'cheios_livres', 'poe'|'soma', n]      (a parte 2, fase 1a: os efeitos de
+                                                     ferramenta pela porta da força e o teto de efeitos; os campos novos do item: teto_efeitos, cheios_livres, sinete, degrau;
+                                                     a obra aceita o molde: ['obra', 'abre', {..., molde}]. O save de antes passa como está: a peça sem teto_efeitos usa o da categoria)
     ['obra', 'abre', registro]  ·  ['obra', id, campo, 'soma'|'poe', valor]  ·  ['obra', id, 'fecha']      a obra em andamento (forja de vários dias; a leva da alquimia; a gravação)
   OS DA ETAPA DA MAGIA (a forma exata e o porquê de cada um: projeto/ETAPA_MAGIA.md, seção 7):
     ['pessoa', id, 'talento'|'dom', 'poe', {caminho: grau}] (só em gera, mestre ou talento) · ['pessoa', id, 'inclinacao', 'poe', caminho]
@@ -761,6 +764,7 @@ def _um(E, ef):
             if not isinstance(o, dict) or o.get('quem') not in E['gente']: return _erro(ef, 'a obra pede um registro com "quem" (uma pessoa que existe)')
             if o.get('lugar') not in E['lugares']: return _erro(ef, 'a obra pede o "lugar" onde está a bancada (um lugar que existe)')
             if not _num(o.get('pede')) or o['pede'] < 1 or not _num(o.get('blocos', 0)) or not 0 <= o.get('blocos', 0) <= o['pede']: return _erro(ef, 'a obra pede "pede" (blocos, 1 ou mais) e "blocos" entre zero e isso')
+            if o.get('molde') is not None and not _molde_obra_ok(o['molde']): return _erro(ef, 'o molde da obra (a parte 2, fase 1a) é a chave de um efeito do catálogo (o molde de mestre: molde=CHAVE)')
             E['itens']['oseq'] = E['itens'].get('oseq', 0) + 1; o['id'] = f"o{E['itens']['oseq']:04d}"; o.setdefault('blocos', 0); o.setdefault('dia', E['relogio']['dia']); O[o['id']] = o; return
         o = O.get(ef[1]) if len(ef) > 2 and isinstance(ef[1], str) else None
         if not o: return _erro(ef, 'não há essa obra')
@@ -851,19 +855,28 @@ def _um(E, ef):
             else: it['talhe'] = val
             return
         if campo == 'historia' and op == 'junta': it.setdefault('historia', []).append(str(val)); return
-        if campo == 'efeito' and op == 'junta':              # (a etapa dos efeitos, parte 1) um efeito novo na peça: {chave, valor?}, dos que a luta roda (itens.EFEITOS)
+        if campo == 'efeito' and op == 'junta':              # (a etapa dos efeitos) um efeito novo na peça: {chave, cheio?, emprestado?} (de ferramenta) ou {chave, valor?} (os de luta de hoje)
             import itens as IT
-            if not isinstance(val, dict) or val.get('chave') not in IT.EFEITOS: return _erro(ef, f'o efeito é {{chave, valor?}}, com a chave de um dos que há ({", ".join(IT.EFEITOS)})')
+            if not isinstance(val, dict) or val.get('chave') not in IT.EFEITOS: return _erro(ef, f'o efeito é {{chave, cheio?, emprestado?}}, com a chave de um dos que há ({", ".join(IT.EFEITOS)})')
             if it['tipo'] not in IT.EFEITOS[val['chave']][1]: return _erro(ef, f'o efeito "{val["chave"]}" não vale em {it["tipo"]} (vale em: {", ".join(IT.EFEITOS[val["chave"]][1])})')
             if any(isinstance(e, dict) and e.get('chave') == val['chave'] for e in it.get('efeitos') or []): return _erro(ef, f'{it["nome"]} já tem o efeito "{val["chave"]}"')
-            if val['chave'] == 'devolve' and not (_int(val.get('valor')) and 1 <= val['valor'] <= T.devolve_max(it['cat'])): return _erro(ef, f'"devolve" numa peça {T.CATS[it["cat"]]} vai de 1 a {T.devolve_max(it["cat"])}')
-            if val['chave'] != 'devolve' and 'valor' in val: return _erro(ef, f'o efeito "{val["chave"]}" não leva valor')
+            e = _efeito_erro(it, val, novo=True)
+            if e: return _erro(ef, e)
             it.setdefault('efeitos', []).append(copy.deepcopy(val)); return
-        if campo == 'efeitos_livres' and op in ('poe', 'soma'):     # os efeitos que a obra-prima ainda deixa escolher
+        if campo == 'efeitos_livres' and op in ('poe', 'soma'):     # os efeitos que a faixa (ou a obra-prima) ainda deixa escolher
             q = (val if op == 'poe' else (it.get('efeitos_livres') or 0) + val) if _int(val) else None
             if q is None or q < 0: return _erro(ef, 'os efeitos por escolher são um número inteiro, de zero para cima')
+            if q < (it.get('cheios_livres') or 0): return _erro(ef, f'{it["nome"]} ficaria com mais cheios ({it.get("cheios_livres")}) do que efeitos por escolher ({q}): tire os cheios antes, no mesmo evento')
+            if (len(it.get('efeitos') or []) + q) > _teto_ef(it): return _erro(ef, f'{it["nome"]} passaria do teto de efeitos dela ({_teto_ef(it)})')
             if q: it['efeitos_livres'] = q
             else: it.pop('efeitos_livres', None)
+            return
+        if campo == 'cheios_livres' and op in ('poe', 'soma'):      # (a parte 2, fase 1a) quantos dos efeitos por escolher podem ser cheios (o número da categoria de cima)
+            q = (val if op == 'poe' else (it.get('cheios_livres') or 0) + val) if _int(val) else None
+            if q is None or q < 0: return _erro(ef, 'os cheios por escolher são um número inteiro, de zero para cima')
+            if q > (it.get('efeitos_livres') or 0): return _erro(ef, f'{it["nome"]} não tem tantos efeitos por escolher para encher ({it.get("efeitos_livres") or 0}): um cheio por efeito')
+            if q: it['cheios_livres'] = q
+            else: it.pop('cheios_livres', None)
             return
         if campo == 'nome' and op == 'poe' and val: it['nome'] = str(val); return
         if campo == 'uso' and op == 'poe':
@@ -877,7 +890,7 @@ def _um(E, ef):
         if campo == 'dur' and op == 'soma' and _num(val):
             if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta) · efeitos_livres (poe, soma) · encanto (grava, gasta, apaga)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta) · efeitos_livres, cheios_livres (poe, soma) · encanto (grava, gasta, apaga)')
     if v == 'mundo': return _mundo(E, ef)
     return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao, mundo)')
 
@@ -1255,10 +1268,74 @@ def _item_magia_erro(it):
         if it.get('oficio') not in TO.FERRAMENTA_OFICIOS: return f'a ferramenta é de um ofício ({", ".join(TO.FERRAMENTA_OFICIOS)})'
         if it.get('forma') is not None and it['forma'] not in TO.FERRAMENTA_FORMAS: return f'a forma da ferramenta é uma de: {", ".join(TO.FERRAMENTA_FORMAS)}'
     el = it.get('efeitos_livres')
-    if el is not None and (not _int(el) or el < 0): return 'os efeitos por escolher da obra-prima são um número inteiro, de zero para cima'
+    if el is not None and (not _int(el) or el < 0): return 'os efeitos por escolher são um número inteiro, de zero para cima'
+    e = _campos_faixa_erro(it)                               # (a parte 2, fase 1a) o teto de efeitos, os cheios, o sinete, o degrau, e cada efeito na porta dele
+    if e: return e
     if it.get('benta') is not None and (t != 'arma' or not _int(it['benta'])): return 'só a arma fica benta (até um bloco)'
     v = it.get('veneno')
     if v is not None and (t != 'arma' or not isinstance(v, dict) or not _int(v.get('cat')) or not 0 <= v['cat'] <= M.POCAO_ATE or not _int(v.get('ate'))): return f'o veneno na lâmina é {{cat: de 0 a {M.POCAO_ATE}, ate: um bloco}}, só em arma'
+    return None
+
+
+def _molde_obra_ok(k):
+    import itens as IT
+    return isinstance(k, str) and k in IT.EFEITOS and k not in IT.ESCOLHE_NAO
+
+
+def _teto_ef(it):
+    """(a parte 2, fase 1a) o teto de efeitos da peça: o gravado ao nascer; a peça antiga sem o campo, o da categoria (tabelas_oficio.EFEITOS_MAX)"""
+    import tabelas_oficio as TO
+    t = it.get('teto_efeitos'); return t if _int(t) else TO.efeitos_max(it['cat'] if _int(it.get('cat')) else 0)
+
+
+def _efeito_erro(it, val, novo=False):
+    """(a parte 2, fase 1a) o que um efeito pede para estar nesta peça (None: certo). O de FERRAMENTA: a porta pela força (com o degrau emprestado, uma acima: só com o direito
+    que a peça trouxe ao nascer, um só, e em peça de até 4 efeitos); o cheio só em efeito de número. Os de luta de hoje seguem a regra de hoje (o devolve de 1 ao teto da
+    categoria; nenhum leva cheio nem emprestado) até o evento de entrada da fase 1b. `novo`: o efeito está entrando (conta ele no teto de efeitos)."""
+    import tabelas_oficio as TO
+    k = val.get('chave'); cat = it['cat'] if _int(it.get('cat')) else 0
+    if k in TO.FERRAMENTA_EFEITOS:
+        sobra = set(val) - {'chave', 'cheio', 'emprestado'}
+        if sobra: return f'o efeito de ferramenta "{k}" é {{chave, cheio?, emprestado?}} (veio também: {", ".join(sorted(sobra))}): o número nunca se guarda, sai da categoria'
+        forca = TO.FERRAMENTA_EFEITOS[k][0]; emp = bool(val.get('emprestado'))
+        if not TO.cabe_forca(forca, cat, emp): return f'"{k}" é {forca}: a porta da peça {T.CATS[cat]} não abre essa força' + (' (nem com o degrau emprestado)' if emp else ' (fraco na Comum, normal na Incomum, forte na Épica, apelão na Lendária)')
+        if emp:
+            if not it.get('degrau'): return f'"{k}" emprestado pede o degrau emprestado, que a peça traz ao nascer (a ferramenta que o dá em uso na forja)'
+            if TO.cabe_forca(forca, cat): return f'"{k}" já cabe na porta da peça: não é do degrau emprestado'
+            outros = [e for e in it.get('efeitos') or [] if isinstance(e, dict) and e.get('emprestado') and e is not val]
+            if outros: return 'a peça já tem um efeito do degrau emprestado: a porta adiantada é uma só'
+            livres = it.get('efeitos_livres') or 0
+            if len(it.get('efeitos') or []) + (max(livres, 1) if novo else livres) > TO.DEGRAU_ATE: return f'o degrau emprestado só entra em peça de até {TO.DEGRAU_ATE} efeitos'      # (o que entra está entre os por escolher; o gravado, entre os efeitos)
+        if val.get('cheio') is not None and val['cheio'] is not True: return 'o cheio é True, ou não vem'
+        if val.get('cheio') and not TO.de_numero(k): return f'"{k}" não tem número: o cheio só vale em efeito de número (o prumo, a têmpera)'
+    else:
+        if val.get('cheio') or val.get('emprestado'): return f'o efeito "{k}" é de luta: o cheio e o degrau emprestado chegam com o catálogo de luta (a fase 1b)'
+        if k == 'devolve' and not (_int(val.get('valor')) and 1 <= val['valor'] <= T.devolve_max(cat)): return f'"devolve" numa peça {T.CATS[cat]} vai de 1 a {T.devolve_max(cat)}'
+        if k != 'devolve' and 'valor' in val: return f'o efeito "{k}" não leva valor'
+    if novo and len(it.get('efeitos') or []) + 1 > _teto_ef(it): return f'a peça já tem os efeitos que o teto dela deixa ({_teto_ef(it)})'
+    return None
+
+
+def _campos_faixa_erro(it):
+    """(a parte 2, fase 1a) os campos novos do item: teto_efeitos (de o da categoria a ele mais 2: a obra-prima no teto e o molde), cheios_livres (até os por escolher), sinete,
+    degrau; os efeitos (escolhidos e por escolher) até o teto; cada efeito de ferramenta na porta dele. O save de antes (sem os campos) passa como está."""
+    import tabelas_oficio as TO
+    cat = it['cat'] if _int(it.get('cat')) else 0; te = it.get('teto_efeitos')
+    if te is not None and not (_int(te) and TO.efeitos_max(cat) <= te <= TO.efeitos_max(cat) + 2): return f'o teto de efeitos de uma peça {T.CATS[cat]} vai de {TO.efeitos_max(cat)} a {TO.efeitos_max(cat) + 2} (a obra-prima no teto e o molde)'
+    ch = it.get('cheios_livres')
+    if ch is not None and (not _int(ch) or ch < 0 or ch > (it.get('efeitos_livres') or 0)): return 'os cheios por escolher são um número inteiro, de zero até os efeitos por escolher'
+    if it.get('sinete') is not None and not (isinstance(it['sinete'], str) and it['sinete']): return 'o sinete é o id de quem forjou a peça'
+    if it.get('degrau') is not None and it['degrau'] is not True: return 'o degrau emprestado da peça é True, ou não vem'
+    efs = it.get('efeitos')
+    if efs is None: return None
+    if not isinstance(efs, list) or not all(isinstance(e, dict) for e in efs): return 'os efeitos da peça são uma lista de {chave, ...}'
+    if len(efs) + (it.get('efeitos_livres') or 0) > _teto_ef(it): return f'a peça tem mais efeitos (escolhidos e por escolher: {len(efs) + (it.get("efeitos_livres") or 0)}) do que o teto dela ({_teto_ef(it)})'
+    if sum(1 for e in efs if e.get('emprestado')) > 1: return 'a peça tem mais de um efeito do degrau emprestado'
+    for e in efs:
+        if e.get('chave') in TO.FERRAMENTA_EFEITOS:
+            if it.get('tipo') != 'ferramenta': return f'o efeito "{e["chave"]}" é de ferramenta'
+            x = _efeito_erro(it, e)
+            if x: return x
     return None
 
 
@@ -1291,7 +1368,7 @@ def _encanto(E, it, op, val, ef):
 
 # O ENSAIO COPIA SÓ O QUE O EVENTO MEXE (etapa final: o mundo grande). Cada efeito diz o que pode tocar; o registro que nenhum efeito toca segue sendo o mesmo objeto,
 # só lido (ninguém o muda em lugar: quem muda, muda a cópia). O efeito que pode mexer em mais coisas (a morte, a maldição, o encanto...) copia tudo, como antes.
-_ITEM_LEVE = ('dono', 'uso', 'onde', 'solto', 'dur', 'historia', 'nome', 'sob_medida', 'talhe', 'maldita', 'benta', 'veneno')
+_ITEM_LEVE = ('dono', 'uso', 'onde', 'solto', 'dur', 'historia', 'nome', 'sob_medida', 'talhe', 'maldita', 'benta', 'veneno', 'efeito', 'efeitos_livres', 'cheios_livres')
 
 
 def _toca(ef):
@@ -1590,6 +1667,7 @@ def valida(E):
             if not isinstance(nu, dict) or nu.get('tipo') != 'nucleo': P.append(f'a obra {oid} pede um núcleo que não está no Livro de Itens: {o["nucleo"]}')
             elif nu.get('dono') != o.get('quem'): P.append(f'o núcleo da obra {oid} não está na mão de quem forja')
         if o.get('tipo') == 'ajustar' and o.get('item') not in L: P.append(f'o ajuste {oid} é de uma peça que não está no Livro de Itens')
+        if o.get('molde') is not None and not _molde_obra_ok(o['molde']): P.append(f'a obra {oid} tem um molde que não é efeito do catálogo: {o["molde"]}')
         for b, q in (o.get('materia') or {}).items():
             if not _num(q) or q < 0: P.append(f'a obra {oid} tem matéria errada: {q} de {b}')
     for oid, o in O.items(): tenta(f'a obra {oid}', lambda: obra(oid, o))

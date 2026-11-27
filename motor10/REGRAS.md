@@ -643,6 +643,50 @@ Há dois ofícios de bancada: **forja** (armas, malha, placa, escudos) e **couro
 | o mesmo (2d20 + 80) | núcleo Épico | Épica 35,4% · Rara 55,3% · Incomum 9,1% |
 | o melhor possível (Lendário, Afinidade 100, forja mestra, preparo +8, martelo e tenaz Lendários: 2d20 + 127) | núcleo Lendário | Lendária 25,4% · Única 65,2% · Épica 9,2% |
 
+**A FAIXA: os efeitos saem de quanto faltou para a CD de cima** (a parte 2, fase 1a; o contrato: `projeto/etapa_efeitos/DESENHO.md`, seção 5; a régua (a) da pergunta 1, a recomendação, enquanto o jogador não responde). A categoria sai como acima, e **nada aqui muda a chance dela**. Depois olha-se quanto faltou para a CD da categoria de cima: quanto mais perto dela, sem passar, mais efeitos. Passou, é a categoria de cima.
+
+| Faltou para a CD de cima | Efeitos da faixa | À mesa |
+| --- | --- | --- |
+| 17 ou mais | 0 | o terço de baixo |
+| 9 a 16 | 1 | o terço do meio |
+| 6 a 8 | 2 | o terço de cima |
+| 3 a 5 | 3 | colada |
+| 1 ou 2 | 4 | no fio |
+
+| Faixa | 0 efeito | 1 | 2 | 3 | 4 |
+| --- | --- | --- | --- | --- | --- |
+| Comum (22 a 54) | 22–38 | 39–46 | 47–49 | 50–52 | 53–54 |
+| Incomum (55 a 79) | 55–63 | 64–71 | 72–74 | 75–77 | 78–79 |
+| Rara (80 a 104) | 80–88 | 89–96 | 97–99 | 100–102 | 103–104 |
+| Épica (105 a 129) | 105–113 | 114–121 | 122–124 | 125–127 | 128–129 |
+| Única (130 a 154) | 130–138 | 139–146 | 147–149 | 150–152 | 153–154 |
+| Lendária (155 a 179) | 155–163 | 164–171 | 172 em diante (sempre no teto: para em 2) | — | — |
+
+- **No teto, a régua para em 2.** Na categoria do teto da obra (a de cima está trancada: a matéria sem núcleo, a porta do degrau, o núcleo, a Lendária), faltou 17 ou mais dá 0; de 9 a 16, 1; 8 ou menos, 2; e **passar da CD trancada dá 2**. A colada e o fio só existem onde a CD de cima pode ser alcançada: são o prêmio de quem arrisca passar. Tirar mais no dado nunca dá menos efeito (o banco conferiu 11.196 totais).
+- **Os efeitos da obra = os da faixa + 1 por cada 20 dos dados (o que abre e os da cadeia) + o quase (7.14) + a fagulha (7.14), até o TETO DE EFEITOS** da categoria em que a peça sai: **Comum 2 · Incomum e Rara 4 · Épica e Única 5 · Lendária e Mítica 6 · Primordial 7** ("a Comum leva 2; a Incomum e a Rara, 4; e daí +1 a cada duas categorias").
+- **O CHEIO.** O que passa do teto de efeitos não se perde: cada efeito a mais enche UM efeito de número com o número da categoria de cima (um cheio por efeito; só nos de número; sem efeito de número para encher, a sobra se perde). A peça cheia empata no efeito com a magra de cima e nunca passa: a categoria segue mandando (×3).
+- **Fora do teto de efeitos, no máximo dois:** a obra-prima no teto (7.6) e o molde de mestre (7.14).
+- **A peça nasce guardando** os efeitos por escolher, os cheios por escolher, o teto de efeitos dela (gravado ao nascer) e, com a ferramenta do sinete, o sinete de quem a forjou. A peça de antes desta regra (sem o teto gravado) usa o da categoria; nenhuma ganha efeito para trás.
+- **A REGRA DA FASE 1a: só a FERRAMENTA escolhe os efeitos agora** (7.16). A faixa vale para toda obra, mas a arma, a armadura, o escudo e o resto guardam os seus (os efeitos e os cheios por escolher) até o catálogo de luta chegar, na próxima fase; a mesa diz "efeitos por escolher: N (o catálogo de luta chega na próxima fase)". Nada da luta muda.
+- **O remate diz a faixa**, assim: "a peça sai Incomum; faltaram 2 para a Rara (80): no fio, 4 da faixa, 1 dos 20 = 5: 4 efeitos por escolher (o teto da Incomum: 4), e 1 cheio". O `oficio.py pede ...` mostra, antes de abrir a obra, a régua de cada faixa até o teto, os efeitos por obra, a obra com efeito e a peça colada.
+
+**A faixa, medida** (a conta exata do 2d20 explosivo; `python3 provas_oficio.py faixa`). "Ferord hoje" é a soma que a mesa mostra no Dia 35: Treinado na forja (4) + Afinidade 75 (7) + forja de vila (1) + preparo +6 + martelo de forja Incomum (3) + jogo Comum afinado (1, e mais 1 da afinada): **2d20 + 23 na matéria Comum, 2d20 + 38 na Incomum** (a obra da tenaz). Os números são % por obra; "cheios", por 100 obras.
+
+| Ferord, matéria Comum (teto Incomum) | chance | 0 efeito | 1 | 2 | 3 | 4 | 5+ | cheios |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Comum | 84,6% | 26,0 | 34,2 | 24,4 | · | · | · | 19,1 |
+| Incomum (no teto) | 15,1% | 7,0 | 3,1 | 2,9 | 1,4 | 0,4 | 0,2 | · |
+
+| Ferord, a tenaz: matéria Incomum (teto Rara) | chance | 0 efeito | 1 | 2 | 3 | 4 | 5+ | cheios |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Comum | 32,2% | 2,0 | 6,9 | 23,4 | · | · | · | 23,8 |
+| Incomum | 63,0% | 35,5 | 19,1 | 4,5 | 1,7 | 2,1 | · | 0,9 |
+| Rara (no teto) | 4,5% | · | 2,9 | 0,9 | 0,2 | 0,3 | 0,2 | · |
+
+- Na matéria Comum: 0,99 efeito por obra (antes, 0,10), obra com efeito 66,8% (antes, 9,8%). Na tenaz: 1,03 efeito por obra, obra com efeito 62,3%. **A Incomum de 3 ou 4 efeitos, colada na Rara, sai em 3,8% das obras da tenaz:** é o prêmio do pedido. **A Incomum típica sai sem efeito** (35,5 das 63,0): a soma típica, perto de 60, cai no terço de baixo; os efeitos vêm de passar perto da Rara.
+- Os outros (efeitos por obra · obra com efeito): um Iniciante (2d20 + 8, a porta) 0,28 · 19% (23% das peças); um Mestre com matéria Rara (2d20 + 65) 1,24 · 62%; o mesmo com núcleo Épico (2d20 + 80) 1,47 · 70%; o melhor possível com núcleo Lendário (2d20 + 127) 1,60 · 70%, **e a Lendária dele segue em 25,4%**. Abaixo da mão não é mina: o Mestre com matéria Comum tira 0,76 vez os efeitos da obra de núcleo dele; o melhor, com matéria Comum, 0,96 vez; com matéria Rara sem núcleo, 1,15 vez.
+- **A chance de cada categoria não mudou:** o banco compara o motor novo com a regra de antes em 2.982 casos (soma de −10 a 200, teto 0 a 5, sem ferramenta e com cada uma) e em mais 990 com os efeitos de ferramenta ligados: a maior diferença é 1e−13 (o arredondamento da conta). As metas T1 a T5, a escada e a Lendária de 1 em 4 ficam como estão.
+
 7.4 **A matéria de cada peça** (na categoria da obra; do Épico para cima, matéria Rara):
 
 | Peça | Matéria |
@@ -675,11 +719,11 @@ A obra de quem morreu se desfaz na hora (5.11): a matéria se perde, e o núcleo
 
 | Os dados | O que fazem |
 | --- | --- |
-| cada 20 (o que abre, e os da cadeia) | **+1 efeito por escolher** (7.16), até o teto de efeitos da categoria: Comum e Incomum 1; Rara e Épica 2; da Única para cima 3. Ao menos um 20 sai em perto de 10% das obras |
-| os dois abrindo em 20 | **OBRA-PRIMA:** a peça sobe uma categoria se o teto deixa; no teto, +1 efeito (que pode passar do teto de efeitos) |
-| um abrindo em 1 | a peça sai **uma categoria abaixo** do que o total deu; a Comum sai **tosca** (metade da durabilidade) |
-| os dois abrindo em 1 | a matéria e o núcleo **se perdem**, qualquer que seja o total |
-| o total abaixo de 22 | a matéria e o núcleo se perdem |
+| cada 20 (o que abre, e os da cadeia) | **+1 efeito**, somado aos da faixa (7.3), até o teto de efeitos da categoria (Comum 2 · Incomum e Rara 4 · Épica e Única 5 · Lendária e Mítica 6 · Primordial 7); o que passa vira cheio. O 20 que joga a peça no fundo da faixa de cima é compensado por ele. Ao menos um 20 sai em perto de 10% das obras |
+| os dois abrindo em 20 | **OBRA-PRIMA:** a peça sobe uma categoria se o teto deixa, **e a faixa fica** (a do total); no teto, +1 efeito, que pode passar do teto de efeitos |
+| um abrindo em 1 | a peça sai **uma categoria abaixo** do que o total deu; a Comum sai **tosca** (metade da durabilidade). **A faixa fica:** o 1 tira a categoria, não os efeitos |
+| os dois abrindo em 1 | a matéria e o núcleo **se perdem**, qualquer que seja o total (a ferramenta Épica segura: a peça sai Comum, tosca, **sem efeito**) |
+| o total abaixo de 22 | a matéria e o núcleo se perdem (a ferramenta Rara segura até 5 abaixo: Comum, tosca, **sem efeito**) |
 
 **No encanto** (o foco e o amuleto), com a categoria escolhida:
 
@@ -708,7 +752,7 @@ Sugestão para quem gera o mundo (não é regra): o fogo e a bigorna de uma forj
 A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 7.10 **Consertar** devolve durabilidade a uma peça sua. Não tem teste.
-- **Você, na bancada:** 5 pontos por bloco, e 1 de matéria principal da peça (metal, couro ou madeira, na categoria dela; Rara, do Épico para cima) a cada 10 pontos ou parte. Pede a mão que a categoria pede (7.3).
+- **Você, na bancada:** 5 pontos por bloco (com o REMENDO de uma ferramenta em uso, 8: 7.14), e 1 de matéria principal da peça (metal, couro ou madeira, na categoria dela; Rara, do Épico para cima) a cada 10 pontos ou parte. Pede a mão que a categoria pede (7.3).
 - **Pago ao ferreiro do lugar:** **2% do preço da peça por ponto**, em prata inteira (arredonda para cima: um ponto de uma peça Comum custa 1 de prata), que vai para o estoque do lugar; um bloco de espera a cada 10 pontos ou parte, **por peça** (mandar consertar quatro peças leva quatro blocos). A oficina conserta até a categoria do nível dela mais um (7.1). O preço da peça segue o tamanho dela (8.8): a armadura, o que cobre (consertar um elmo custa um quarto); a arma, a matéria que leva (consertar uma adaga custa um terço; um montante, cinco terços).
 
 | Categoria | Preço de tabela (a espada, o escudo, a armadura inteira) | Conserto pago, por ponto | 10 pontos |
@@ -722,7 +766,7 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 
 7.11 **Ajustar (sob medida, 2.8)** grava um dono numa peça. Quem vai usar tem de estar ali; a peça é dele ou de quem ajusta.
 - **O grau** sai da mão de quem ajusta: Iniciante 1, Treinado 2, Mestre 3, Lendário 4. Leigo não ajusta.
-- **Custa** um bloco de bancada por degrau da categoria (Comum 1 ... Lendário 6) e, no fim, um teste com a mesma soma da forja, contra **22 + 6 por categoria**.
+- **Custa** um bloco de bancada por degrau da categoria (Comum 1 ... Lendário 6) e, no fim, um teste com a mesma soma da forja, contra **22 + 6 por categoria**. Com a MÃO DE MEDIDA de uma ferramenta em uso (7.14), a metade dos blocos (para cima) e +2 no teste.
 - Passou: o nome e o grau ficam gravados (e apagam o ajuste antigo). Falhou por 1 a 4: fica como estava. Falhou por 5 ou mais: a peça perde 5 de durabilidade.
 
 7.12 **O jornal.** Servir na bancada da oficina do lugar (o conserto miúdo do povo). O bloco conta como bancada.
@@ -770,7 +814,7 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 **A escada só anda assim com núcleo à vontade.** O mundo dá 6 núcleos Épicos e 2 Únicos por ano (`PROJETO.md`). Na forja de cidade, sem preparo, a primeira Épica sai perto do Dia 100.
 
 
-7.14 **As ferramentas do ofício: o MARTELO DE FORJA e a TENAZ** (a etapa dos efeitos, parte 1; refeita na Lei do Valor). São peças do Livro de Itens (tipo `ferramenta`), forjadas na oficina como qualquer peça (a matéria, os blocos, a soma da Lei do Valor; do Épico para cima, matéria Rara e um núcleo). Não se vestem: **quem as tem, inteiras, soma as duas na Lei do Valor** (e no teste do ajuste), fora do teto do preparo e sem alcance (somam em qualquer obra).
+7.14 **As ferramentas do ofício: o MARTELO DE FORJA e a TENAZ** (a etapa dos efeitos, parte 1; refeita na Lei do Valor; e na parte 2, fase 1a, com a faixa e os efeitos de ferramenta). São peças do Livro de Itens (tipo `ferramenta`), forjadas na oficina como qualquer peça (a matéria, os blocos, a soma da Lei do Valor, **a faixa**; do Épico para cima, matéria Rara e um núcleo). Não se vestem: **quem as tem, inteiras, soma as duas na Lei do Valor** (e no teste do ajuste), fora do teto do preparo e sem alcance (somam em qualquer obra).
 
 | A ferramenta | Matéria | Comum | Incomum | Rara | Épica | Única | Lendária |
 | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -778,17 +822,43 @@ A peça que sai uma categoria abaixo conta como obra da categoria em que saiu.
 | tenaz (`forjar ferramenta tenaz CAT`) | 1 de metal, 1 de madeira | +1 | +3 | +5 | +7 | +9 | +11 |
 | o jogo (o par de uma vez: `forjar ferramenta forja CAT`; no couro, `ferramenta couro CAT`) | 3 de metal e 2 de madeira (o de couro: 1 de metal e 1 de couro) | vale nos dois lugares | | | | | |
 
-Em cada lugar vale a melhor peça da pessoa (a de outra pessoa, a de outro ofício e a quebrada não valem). A **afinada** (a ferramenta que nasceu com efeito) soma **+1, uma vez só** por obra. **Os poderes** vêm da maior das duas, e os de cima trazem os de baixo:
-- **Rara:** a matéria não se perde se o total ficou a 5 ou menos abaixo de 22 (a peça sai Comum, tosca); não vale contra os dois 1.
-- **Épica:** a matéria **nunca** se perde, nem nos dois 1 (sai Comum, tosca).
-- **Única:** o **QUASE**: +1 efeito quando o total ficou a 6 ou menos da CD seguinte, o teto deixava subir e nenhum dado especial mudou a categoria.
+**Em cada lugar vale a de maior categoria; no empate, a de mais efeitos; depois, a afinada** (a de outra pessoa, a de outro ofício e a quebrada não valem). Valem os efeitos das duas em uso (a do lugar do martelo e a do lugar da tenaz); o jogo que é o melhor nos dois lugares vale uma vez. Martelo e tenaz separados levam até o dobro de efeitos do jogo. **Os poderes** vêm da maior das duas, e os de cima trazem os de baixo:
+- **Rara:** a matéria não se perde se o total ficou a 5 ou menos abaixo de 22 (a peça sai Comum, tosca, sem efeito); não vale contra os dois 1.
+- **Épica:** a matéria **nunca** se perde, nem nos dois 1 (sai Comum, tosca, sem efeito).
+- **Única:** o **QUASE**: +1 efeito quando faltaram 6 ou menos para a CD de cima, **só se ela pode ser alcançada** (abaixo do teto da obra), com ou sem dado especial.
 - **Lendária, ACIMA DO FERRO:** na obra com núcleo, o teto sobe uma categoria (até a Lendária, sem núcleo a mais). Sem núcleo, não.
 
-7.15 **A obra-prima.** Na forja e no couro, os efeitos vêm **dos dados** (7.6): cada 20 dá +1 efeito por escolher, os dois 20 sobem a peça (ou +1 efeito no teto), e a ferramenta Única dá o quase. O teto de efeitos vem da categoria da peça: **Comum e Incomum, 1; Raro e Épico, 2; do Único para cima, 3.** Os efeitos nascem **por escolher**: quem forjou escolhe cada um (7.16). No encanto (o foco e o amuleto, com a categoria escolhida), a obra-prima segue pela margem: a peça que passa por 10, 20 ou 30 ganha 1, 2 ou 3 efeitos, até o mesmo teto.
+**Os doze efeitos de ferramenta.** A ferramenta nasce pela faixa (7.3) e escolhe os efeitos dela (7.16). Cada efeito tem uma FORÇA, e só cabe na ferramenta cuja categoria abre a porta dele: **fraco na Comum, normal na Incomum, forte na Épica, apelão na Lendária**. O número, quando há, sai da categoria da ferramenta (nunca se guarda na peça); **cheio**, é o da categoria de cima (o prumo cheio de uma tenaz Incomum é 2).
 
-7.16 **Escolher o efeito** (`oficio.py efeito ITEM CHAVE [valor=N]`). Quem tem a peça de obra-prima escolhe, um por vez, entre os efeitos que a luta roda e que valem naquele tipo de peça (capítulo 2): na arma, sangra, critico_19, derruba, leve, nao_quebra; na armadura, devolve (de 1 ao teto da categoria: 4 por categoria, a Comum 4), firme, leve, nao_quebra; no escudo, firme, leve, nao_quebra; na ferramenta, afinada. O **pesa** não se escolhe (é defeito), e a peça não leva o mesmo efeito duas vezes. Cada escolha é um evento e entra na história da peça.
+| Efeito | Força | O que faz | Número pela categoria da ferramenta | Vale (pontos de feitio por obra: efeitos + metade dos cheios, a média de cinco ferreiros) |
+| --- | --- | --- | --- | --- |
+| AFINADA | fraco | +1 no total do ofício, uma vez por obra: a única que mexe no total (é a de antes); não cresce | +1 | +0,02; e +2,8 pontos na chance da Incomum da tenaz |
+| FAGULHA | fraco | o dado que abre em 19 dá +1 efeito, como o 20 (não rola de novo) | — | +0,09 |
+| RECOBRO | fraco | a obra perdida devolve metade da matéria, para baixo, de cada uma (o núcleo se perde como sempre) | — | matéria |
+| REMENDO | fraco | o conserto na bancada devolve 8 pontos por bloco, não 5 | 8 | tempo |
+| MÃO DE MEDIDA (`mao_de_medida`) | fraco | o ajuste sob medida leva metade dos blocos (para cima) e soma +2 no teste | — | tempo |
+| SINETE | fraco | a peça nasce com o sinete de quem a forjou: a janela diz | — | assinatura |
+| PRUMO | normal | o que falta para a CD de cima conta N a menos, só para os efeitos (no teto, até 2) | Incomum 1 · Rara 2 · Épica 3 · Única 4 · Lendária 5 | +0,14 · +0,27 · +0,41 · +0,54 · +0,68 |
+| POUPA-FERRO (`poupa_ferro`) | normal | a obra gasta 1 de metal a menos, se o metal é a matéria principal da peça e ela leva 3 ou mais dele (a espada sai com 2 de metal; o arco e a armadura de couro não poupam: é o ferro que ele poupa) | — | um terço da espada |
+| LASTRO | forte | a peça que alcança uma categoria nasce com pelo menos 1 efeito da faixa | — | +0,35 |
+| TÊMPERA (`tempera`) | forte | na peça que ela forja, N efeitos de número nascem cheios | Épica 1 · Única 2 · Lendária 3 | +0,32 · +0,46 · +0,54 |
+| MOLDE DE MESTRE (`molde`) | apelão | ao abrir a obra, diz-se um efeito (`oficio.py forjar ... molde=CHAVE`): se a peça sai na categoria da obra ou acima, nasce com ele, fora do teto de efeitos; se sai abaixo, o molde se perde | — | +0,60 |
+| DEGRAU EMPRESTADO (`degrau`) | apelão | a peça que ela forja nasce podendo ter UM efeito da força de cima (o forte na Incomum e na Rara; o apelão na Épica e na Única), com o número da categoria dela; só em peça de até 4 efeitos (`oficio.py efeito ITEM CHAVE emprestado`) | — | dentro da régua da força de cima |
 
-**Medido** (`python3 provas_oficio.py`, a prova AS FERRAMENTAS E A OBRA-PRIMA, com o dado posto à mão): a tabela do bônus; a melhor ferramenta da pessoa vale, e a de outro ofício, a quebrada e a de outra pessoa não; a afinada soma 1; a forja da ferramenta (matéria, nome, tipo, ofício); a obra-prima por margem e o teto da categoria; os quatro poderes; a escolha do efeito (o que cabe, o teto, o pesa, o devolve, quem não é dono). 23 de 23.
+- **O mesmo efeito em duas ferramentas não soma: vale o maior. O PRUMO é a exceção:** soma de todas as fontes, até 5.
+- **A régua das ferramentas:** o efeito, no número da categoria da ferramenta, não passa do teto da força que essa categoria abre: **Comum 0,15 · Incomum e Rara 0,30 · Épica e Única 0,60 · Lendária 1,20** pontos de feitio por obra (o passo ×2 da régua do duelo, 5 · 10 · 20 · 40). Todos cabem (o banco mede cada um, FJ7).
+- **Ficaram de fora, de propósito:** o que mexe no total (mudaria a escada), o que encurta o tempo da obra (a escada é em dias) e o que devolve o núcleo (o freio de 6 Épicos e 2 Únicos por ano).
+- **A tenaz Incomum de Ferord** (a obra de matéria Incomum, 2d20 + 38): Incomum em 63% (com efeito em 27% das obras), Comum em 32% (quase sempre com 1 ou 2 efeitos fracos), Rara em 4,5% (sempre com efeito). Incomum ou Rara, ela leva até 4: os fracos e os normais (o prumo: 1 na Incomum, 2 na Rara, um a mais se cheio; o poupa-ferro). Comum, até 2, só os fracos. A ordem que o contrato recomenda: prumo, depois afinada, depois fagulha (`oficio.py receita tenaz prumo,afinada,fagulha`).
+
+7.15 **Os efeitos da forja e o do encanto.** Na forja e no couro, os efeitos vêm da **faixa** e dos dados (7.3 e 7.6): a régua pelo que faltou para a CD de cima, cada 20, o quase, a fagulha; até o teto de efeitos (**Comum 2 · Incomum e Rara 4 · Épica e Única 5 · Lendária e Mítica 6 · Primordial 7**); o que passa vira cheio. **No encanto** (o foco e o amuleto, com a categoria escolhida), a obra-prima segue pela margem: a peça que passa por 10, 20 ou 30 ganha 1, 2 ou 3 efeitos, até o mesmo teto (o foco Comum pode levar 2). Na fase 1a, os do encanto também ficam por escolher, até o catálogo de luta.
+
+7.16 **Escolher os efeitos** (`oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado]`). **Na fase 1a, só a ferramenta escolhe** (a arma, a armadura e o resto guardam os efeitos: "efeitos por escolher: N (o catálogo de luta chega na próxima fase)").
+- **Quem tem a peça escolhe**, um efeito por vez, e cada escolha é um evento e entra na história da peça; na forja, quem forjou. Sem CHAVE, o comando lista o que cabe (a porta pela força, o número na categoria da peça, o número cheio e o que vale); com `cheio`, o efeito de número leva o número da categoria de cima (só enquanto houver cheio por escolher); com `emprestado`, o efeito da força de cima (só na peça que nasceu com o degrau emprestado). O efeito vale no tipo de peça certo, não se repete, e o `pesa` não se escolhe.
+- **A SUA RECEITA** (`oficio.py receita TIPO chave,chave`; TIPO: martelo, tenaz, jogo, ou ferramenta para todas): uma ordem que vale sempre, e você troca quando quiser (`nada` apaga; sem nada, mostra as suas). A ferramenta que nasce com efeitos **escolhe por ela, na hora**, e a mesa só relata ("Pela sua receita: prumo (cheio) e afinada"); o que não couber (a porta, o repetido) fica para você escolher. `auto` escolhe pela sua receita (sem ela, pela receita da guarda).
+- **O mundo escolhe sozinho** quando a peça nasce na mão de quem não é o jogador: pelo **jeito** do ferreiro, sorteado pela semente e pelo id dele (não muda com o dia): **do gume** (mais efeito e mais forte: fagulha, molde, degrau), **da guarda** (não perder: lastro, recobro, afinada), **do fôlego** (poupar: poupa-ferro, mão de medida, remendo) e **do tranco** (a peça certa e o nome nela: afinada, fagulha, sinete). A receita do jeito põe primeiro os efeitos de número (o prumo, a têmpera: para o cheio ter onde cair) e desfaz o empate pela semente: mesma semente, mesma escolha. **A loja** escolhe ao comprar pela receita do lugar (o jeito dela).
+- **A peça que muda de mão** com efeito por escolher: quem a recebe escolhe.
+
+**Medido** (`python3 provas_oficio.py`: as provas AS FERRAMENTAS E A OBRA-PRIMA e as metas da fase 1a, B2 e FJ1 a FJ10; os números de cada uma no `MUDANCAS.md`): a tabela do bônus; a melhor ferramenta da pessoa vale, e a de outro ofício, a quebrada e a de outra pessoa não; a afinada soma 1; a forja da ferramenta; a faixa pela conta exata e com o dado de verdade; a monotonia; o teto; o teto de efeitos e o cheio; a escolha (a porta, o repetido, o dono, um evento por escolha, a receita, o jeito, a loja); a régua de feitio de cada efeito de ferramenta; o recobro, o poupa-ferro, o remendo, a mão de medida e o sinete; o mesmo efeito em duas; o prumo que para em 5; a loja que segue sem ser mina com a tenaz de poupa-ferro; o dom escondido pela faixa; a mesa.
 ---
 
 ## 8. O mercado (etapa 2)
@@ -1232,7 +1302,7 @@ O dom de tradição soma também na Mana máxima de verdade; a mesa só mostra a
 
 10.6 **Ninguém nasce sabendo.**
 - **O talento aparece fazendo:** 20 blocos no caminho depois de rolado, a MESA, em "Você", diz: "Com as armas de fio você pega depressa (Jeitoso): o que os outros firmam em 160 blocos, você firma em 107." Antes disso, só o Mestre sabe.
-- **O dom fica escondido** até o primeiro teste em que foi ele que fez a diferença. Escondido, ele entra no dado, mas não na conta que vai à mesa: a mesa vê o total sem ele, e o veredito é o mesmo. Quando decide, a saída diz "sem o dom, não passava" (ou "saía pior", na bancada), e a MESA passa a dizê-lo. Na luta, o golpe que só passou por causa dele diz "acerta por pouco: sem o dom, errava". No comércio, a primeira venda em que ele pagou a mais diz "o comprador paga mais do que costuma: você tem jeito para o negócio". Também se mostra quando alguém o lê (o feitiço `ler`, ou um clérigo).
+- **O dom fica escondido** até o primeiro teste em que foi ele que fez a diferença. Escondido, ele entra no dado, mas não na conta que vai à mesa: a mesa vê o total sem ele, e o veredito é o mesmo. Quando decide, a saída diz "sem o dom, não passava" (ou "saía pior", na bancada), e a MESA passa a dizê-lo. **Na forja e no couro (a Lei do Valor), ele decide também quando muda o número de efeitos da faixa** (7.3): "sem o dom, saía com menos efeitos" (um Treinado com Dom +1 se mostra em 2,0% das obras pela categoria e em 8,2% pela faixa; com Grande Dom, 3,8% e 16,4%). Na luta, o golpe que só passou por causa dele diz "acerta por pouco: sem o dom, errava". No comércio, a primeira venda em que ele pagou a mais diz "o comprador paga mais do que costuma: você tem jeito para o negócio". Também se mostra quando alguém o lê (o feitiço `ler`, ou um clérigo).
 - Dos outros, a MESA não diz nada; o SÓ O MESTRE mostra o talento e o dom de quem está com o personagem.
 
 10.7 **Dentro da lei "o item decide"** (medido no banco, 4.000 lutas por linha, nível 50, tudo Raro; com 8.000: o Dom 56%, o Grande Dom 61%): o Dom contra o gêmeo vence de 51 a 58%; o Grande Dom, de 54 a 64%; o Grande Dom contra o gêmeo com a arma uma categoria acima, até 15%; o Mestre com Grande Dom contra o Lendário sem dom, de 42 a 58%. O Grande Dom vale um grau de maestria e nada mais; uma categoria de peça vale muitas vezes isso.
@@ -2601,7 +2671,8 @@ python3 mercado.py funda POVO "como foi"             o Mestre abre um mercado on
 python3 oficio.py ver | pede arma espada Raro
 python3 oficio.py forjar arma espada Raro "Nome" [blocos=N] [nucleo=ID]  ·  forjar armadura malha Raro "Nome" [cobre=cabeça]  ·  forjar escudo Raro "Nome"
 python3 oficio.py continua [OBRA] [blocos=N]  ·  larga OBRA  ·  consertar ITEM [pontos=N] [pago]  ·  ajustar ITEM [para=ID]  ·  jornal N
-python3 oficio.py pede ferramenta forja|couro CATEGORIA  ·  forjar ferramenta forja|couro CATEGORIA ["Nome"]  ·  efeito ITEM CHAVE [valor=N]      (a ferramenta do ofício e a obra-prima: 7.14 a 7.16)
+python3 oficio.py pede ferramenta martelo|tenaz|forja|couro CATEGORIA  ·  forjar ferramenta martelo|tenaz|forja|couro CATEGORIA ["Nome"] [molde=CHAVE]      (a ferramenta do ofício: 7.14)
+python3 oficio.py efeito ITEM [CHAVE|auto] [cheio] [emprestado]  ·  receita [TIPO chave,chave|nada]      (a faixa e a escolha dos efeitos: 7.3, 7.15, 7.16; na fase 1a, só a ferramenta escolhe)
 python3 oficio.py preparo receita|ajudante|fogo|bigorna CATEGORIA "como foi"  ·  oficio.py oficina NIVEL "como foi"      (o Mestre registra)
 
 python3 caca.py ver | sair [ERMO] [alvo=ESPECIE] [blocos=N] [com=ID,ID] | coletar BEM [ERMO] [blocos=N]      (procura: N de 1 a 6; coleta: N de 1 a 4)

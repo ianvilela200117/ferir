@@ -43,9 +43,37 @@ EFEITOS = {
     'leve':       ('pede 20 a menos de atributo', ('arma', 'armadura', 'escudo', 'foco')),
     'pesa':       ('pede 20 a mais de atributo', ('arma', 'armadura', 'escudo', 'foco')),
     'nao_quebra': ('não perde durabilidade', ('arma', 'armadura', 'escudo', 'foco', 'amuleto')),
-    'afinada':    ('+1 no teste do ofício dela', ('ferramenta',)),          # (a etapa dos efeitos, parte 1) a ferramenta de obra-prima
 }
-ESCOLHE_NAO = ('pesa',)     # o efeito que a obra-prima não dá (é defeito, não virtude)
+# (a parte 2, fase 1a) OS DOZE EFEITOS DE FERRAMENTA: a força, a porta, o número por categoria e a frase moram no tabelas_oficio.FERRAMENTA_EFEITOS; aqui entram no catálogo
+# com a frase e o tipo de peça (só a ferramenta). A afinada é a de antes (+1 no total).
+def _efeitos_de_ferramenta():
+    import tabelas_oficio as O
+    return {k: (v[3], ('ferramenta',)) for k, v in O.FERRAMENTA_EFEITOS.items()}
+EFEITOS.update(_efeitos_de_ferramenta())
+ESCOLHE_NAO = ('pesa',)     # o efeito que não se escolhe (é defeito, não virtude)
+
+
+NOME_EFEITO = dict(mao_de_medida='mão de medida', poupa_ferro='poupa-ferro', tempera='têmpera', molde='molde de mestre', degrau='degrau emprestado')       # o nome à mesa
+
+
+def frase_efeito(e, cat, nome=True):
+    """a frase de um efeito da peça, com o número da categoria que ela rende (o de ferramenta: tabelas_oficio.valor_ferramenta; cheio, o da categoria de cima; o devolve de hoje,
+    o valor gravado), e as marcas: (cheio), (degrau emprestado). nome: o de ferramenta começa pelo nome dele"""
+    import tabelas_oficio as O
+    k = e.get('chave'); txt = EFEITOS[k][0] if k in EFEITOS else k
+    v = O.valor_ferramenta(k, cat, bool(e.get('cheio'))) if k in O.FERRAMENTA_EFEITOS else e.get('valor', '')
+    txt = txt.format(valor=v if v is not None else '')
+    if k in O.FERRAMENTA_EFEITOS and nome: txt = f"{NOME_EFEITO.get(k, k)}: {txt}"
+    return txt + (' (cheio: o número da categoria de cima)' if e.get('cheio') else '') + (' (do degrau emprestado)' if e.get('emprestado') else '')
+
+
+def curta_efeito(e, cat):
+    """o efeito em poucas palavras, para a linha das peças na MESA: "prumo 2 (cheio)", "afinada", "remendo 8"; os de luta de hoje, a frase deles"""
+    import tabelas_oficio as O
+    k = e.get('chave')
+    if k not in O.FERRAMENTA_EFEITOS: return frase_efeito(e, cat)
+    v = O.valor_ferramenta(k, cat, bool(e.get('cheio'))); v = O.REMENDO_BLOCO if k == 'remendo' else v
+    return NOME_EFEITO.get(k, k) + (f' {v}' if v is not None else '') + (' (cheio)' if e.get('cheio') else '') + (' (emprestado)' if e.get('emprestado') else '')
 FORMAS_FEM = ('varinha',)   # as formas de foco de nome feminino (a categoria concorda: "varinha Rara", "cajado Raro")
 
 
@@ -228,6 +256,11 @@ def janela(it):
     elif it['tipo'] == 'armadura':
         mat = MATERIAIS[it['material']]; prot = f"{RD[c] * mat['rd']:g}".replace('.', ',')        # a vírgula da mesa: 0,7
         L.append(f"Proteção: {prot} ({it['material']})      Cobre: {', '.join(it['cobre'])}" + (f"      Defesa: {mat['defesa']:+d}" if 'tronco' in it['cobre'] and mat['defesa'] else '') + ('      Talhe: miúdo (não serve em gente grande)' if it.get('talhe') == 'miúdo' else ''))
+    elif it['tipo'] == 'ferramenta':                        # (a parte 2, fase 1a) a ferramenta do ofício: o que soma na Lei do Valor, e em que lugar
+        import tabelas_oficio as O
+        forma = it.get('forma') or 'jogo'; v = O.VALOR_MARTELO[min(c, len(O.VALOR_MARTELO) - 1)]
+        L.append(f"Ferramenta de {it.get('oficio', 'forja')}: " + ('o martelo de forja' if forma == 'martelo' else 'a tenaz' if forma == 'tenaz' else 'o jogo (vale no lugar do martelo e no da tenaz)')
+                 + f"; soma +{v} na Lei do Valor" + (' em cada lugar' if forma == 'jogo' else '') + f" · teto de efeitos: {it['teto_efeitos'] if isinstance(it.get('teto_efeitos'), int) else O.efeitos_max(c)}")
     else:
         L.append(f"Defesa: +{T.ESCUDO_BASE + BON[c]:g}")
     a, q = pede(it); L.append(f"Pede: {a} {q}" if q else 'Pede: nada')
@@ -236,7 +269,11 @@ def janela(it):
     if it.get('veneno'): L.append(f"Veneno na lâmina: uma dose {FEM[it['veneno']['cat']]} (a primeira ferida envenena; seca em um dia)")
     mo = it.get('maldita')                                  # a peça maldita parece uma peça comum: só quem a leu (o rito de ler) sabe
     if isinstance(mo, dict) and mo.get('lida'): L.append(f"MALDITA (lida): {mo.get('nome')} ({FEM[mo['cat']] if isinstance(mo.get('cat'), int) else '?'}, {mo.get('tipo')}): quem a puser em uso pega a maldição, e a mão não a larga")
-    if it['efeitos']: L.append('Efeitos: ' + ' · '.join(EFEITOS[e['chave']][0].format(valor=e.get('valor', '')) for e in it['efeitos']))
+    if it.get('efeitos'): L.append('Efeitos: ' + ' · '.join(frase_efeito(e, c) for e in it['efeitos']))
+    if it.get('efeitos_livres'):                            # (fase 1a) os efeitos que a faixa deu e ainda não foram escolhidos
+        L.append(f"Efeitos por escolher: {it['efeitos_livres']}" + ((f" (cheios: {it['cheios_livres']})" if it.get('cheios_livres') else '') + ' (`oficio.py efeito ID` mostra o que cabe)' if it['tipo'] == 'ferramenta'
+                 else ' (o catálogo de luta chega na próxima fase)' + (f"; cheios: {it['cheios_livres']}" if it.get('cheios_livres') else '')))
+    if it.get('sinete'): L.append(f"Sinete: {it['sinete']} (a peça leva o nome de quem a forjou)")
     if it.get('sob_medida'): L.append(f"Sob medida para: {it['sob_medida']['dono']} (grau {it['sob_medida']['grau']})")
     if it.get('dono'): L.append(f"Dono: {it['dono']}")
     if it.get('feito_por'): L.append(f"Quem fez: {it['feito_por']}" + (f", Dia {it['dia']}" if it.get('dia') else ''))
@@ -329,6 +366,7 @@ def _janela_mundo(E, it):
     v = dict(it); nome = lambda x: E['gente'][x]['nome'] if x in E['gente'] else x
     if v.get('dono'): v['dono'] = nome(v['dono']) + (' (em uso)' if it.get('uso') else ' (na guarda)' if it['tipo'] != 'nucleo' else '')
     if v.get('feito_por'): v['feito_por'] = nome(v['feito_por'])
+    if v.get('sinete'): v['sinete'] = nome(v['sinete'])
     txt = janela(v)
     if it.get('onde') in E['lugares'] and it['tipo'] != 'nucleo': txt += f"\nEstá {E['lugares'][it['onde']].get('em', it['onde'])}" + ((', no chão, junto de um corpo: quem fica com ela é decisão de cena' if it.get('corpo') else ', no chão, de quem achar') if it.get('solto') else ', sem dono')
     return txt

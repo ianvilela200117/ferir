@@ -55,7 +55,7 @@ def diz(E, r, mestre=False):
     if r['mais'] and not r.get('rotulo'): partes += f", {r['mais']:+d}".replace('-', '−')
     d = r.get('dom') or 0; mostra = bool(d) and (mestre or bool(r.get('fez')))
     if mostra: partes += f", +{d} do dom" + ('' if r.get('fez') else ' (escondido: não decidiu)')
-    fez = f" (sem o dom, {'saía pior' if r.get('fez') == 'faixa' else 'não passava'})" if d and r.get('fez') else ''
+    fez = f" (sem o dom, {'saía pior' if r.get('fez') == 'faixa' else 'saía com menos efeitos' if r.get('fez') == 'efeitos' else 'não passava'})" if d and r.get('fez') else ''
     return f"#{r['n']} {p['nome']}, {r['o_que']}: {partes} = {r['total'] if mostra else total_visto(r)} contra {r['contra']}: {'PASSA' if r['passou'] else 'FALHA'}" + fez + (' (OCULTA)' if r['oculto'] else '')
 
 

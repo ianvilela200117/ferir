@@ -343,7 +343,7 @@ def _escolhe(E, cats, gazua=False):
     ou None se nenhuma paga a matéria (ou se o bolso não dá para a matéria e mais um dia de cama e comida)."""
     p = E['gente']['eu']; lid = p['lugar']; carga = p.get('carga', {}); est = E['lugares'][lid]['estoque']; melhor = None; reserva = M.CAMA_PRECO + M.REFEICAO_PRECO
     for peca in _pecas_de_forja(cats, gazua):
-        cat = peca['cat']; mat = oficio.materia_de(peca); falta = {k: q - carga.get(k, 0) for k, q in mat.items() if carga.get(k, 0) < q}
+        cat = peca['cat']; mat = oficio.materia_da_obra(E, 'eu', peca); falta = {k: q - carga.get(k, 0) for k, q in mat.items() if carga.get(k, 0) < q}      # (fase 1a) com o poupa-ferro, a matéria que a obra gasta
         if any(est.get(k, 0) < q for k, q in falta.items()): continue
         custo = sum(mercado.custa(E, lid, k, q) for k, q in falta.items())
         if p['moedas'] < custo + reserva: continue
@@ -359,15 +359,17 @@ def _escolhe(E, cats, gazua=False):
     return melhor and melhor[1:]
 
 
-def ferreiro_de_loja(semente, cats, gazua=False):
+def ferreiro_de_loja(semente, cats, gazua=False, ferramenta=None):
     """uma vida do FERREIRO DE LOJA: o ferreiro de começo da vila de TESTE (`vila_teste.py comeco=ferreiro`), do Dia 1 ao Dia 30. Vive de verdade (come e paga, dorme na cama
     e paga) e é GANANCIOSO: em todo bloco de bancada que o corpo deixa, compra na loja a matéria da peça que mais rende hoje (`_escolhe`), forja e vende a peça à loja na hora.
     Quando nenhuma peça paga a matéria, serve o jornal da oficina (é disso que come). Devolve, por janela (os 5 primeiros dias; daí ao Dia 30): o que a loja pagou pelas peças,
     o que ele gastou em matéria, o jornal, as peças vendidas, as obras fechadas, e o bolso.
-    Com `gazua` (etapa 4b, a meta MA9 do provas_manha): a loja abre a parte da masmorra (a tocha e a gazua na prateleira) e o robô põe a gazua na lista do que forja."""
+    Com `gazua` (etapa 4b, a meta MA9 do provas_manha): a loja abre a parte da masmorra (a tocha e a gazua na prateleira) e o robô põe a gazua na lista do que forja.
+    Com `ferramenta` (a parte 2, fase 1a: a meta FJ8 do provas_oficio): o robô começa com esta ferramenta na mão (a tenaz de poupa-ferro)."""
     import vila_teste
     E = vila_teste.cria('ferreiro', semente=semente); lid = E['gente']['eu']['lugar']
     if gazua: mercado.funda_masmorra(E, lid)
+    if ferramenta: estado.aplica(E, 'gera', [['item', 'nasce', dict(ferramenta, dono='eu')]], onde=lid, texto='a ferramenta do ferreiro de loja')
     p0 = prata(E); t0 = estado.agora(E)
     corte = t0 + MINA_DIAS[0] * M.BLOCOS_DIA; fim = t0 + MINA_DIAS[1] * M.BLOCOS_DIA; parado = [None]
     V = dict(vendas=[0, 0], materia=[0, 0], jornal=[0, 0], pecas=[0, 0], obras=[0, 0], bolso=[E['gente']['eu']['moedas']], na_mao=0)
