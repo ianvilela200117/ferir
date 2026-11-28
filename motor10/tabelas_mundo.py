@@ -117,7 +117,8 @@ EVENTOS = ['tempo', 'virada', 'comer', 'dormir', 'trabalhar', 'treinar', 'descan
            'talento', 'estudar', 'lancar', 'rito', 'beber', 'alquimia', 'encantar', 'maldicao', 'servico', 'covil',        # os da etapa da magia (projeto/ETAPA_MAGIA.md, seção 11)
            'masmorra', 'masmorra_vida', 'dragão',        # os da etapa 4b (projeto/ETAPA_4B.md, seção 5): os atos da descida; a vida da masmorra na virada; a vida do dragão
            'viagem', 'noticia', 'caixa', 'missao', 'rival', 'frente', 'semana', 'herdeiro', 'heranca', 'leilao', 'torneio', 'regiao', 'querer', 'investigar',      # os da etapa final (projeto/ETAPA_FINAL.md, seção 4)
-           'entrada']       # a parte 2 (projeto/etapa_efeitos/DESENHO.md, 9.5): o evento de entrada de cada fase (`estado.py entrada FASE`: o marco no mundo.oculto, e o que a fase converte; a 1a não converte nada)
+           'entrada',       # a parte 2 (projeto/etapa_efeitos/DESENHO.md, 9.5): o evento de entrada de cada fase (`estado.py entrada FASE`: o marco no mundo.oculto, e o que a fase converte; a 1a não converte nada)
+           'fala', 'habilidade']       # a parte 2, fase 2 (9.5): o teste de fala no pedido declarado; a habilidade que nasce, sobe, se esquece, a lição, a cópia, o ensino
 NASCE = ('gera', 'mestre')  # só nestes eventos nasce lugar, nasce gente e nasce prata
 NA_LUTA = ('luta', 'mestre')        # com uma luta aberta no mundo, só estes eventos entram: a luta que volta ao estado e a mão do Mestre (e a nota da saída de caça que diz que está naquela luta)
 ROTINA = ('comer', 'dormir', 'descansar', 'esperar')      # o que se repete todo dia: no RETOMAR, os eventos destes tipos viram UMA linha por dia
@@ -127,7 +128,7 @@ OFICIOS = ['forja', 'couro', 'caça', 'coleta', 'comércio', 'cura', 'alquimia',
                             # (maestria.forja, treino.caça); da etapa da magia: a alquimia e o encanto (sobem pela tabela da forja) e as quatro tradições (sobem pela das armas);
                             # da etapa 4b: a manha, o ofício do ladino (sobe pela das armas)
 MODULOS = ['mercado', 'oficio', 'caca', 'talento', 'magia', 'magia_mundo', 'alquimia', 'encanto', 'maldicao', 'criaturas', 'masmorra', 'manha', 'povos', 'dragoes',
-           'regiao', 'gente', 'missoes', 'rivais', 'frentes', 'caixa', 'noticias', 'viagem', 'diretor', 'cria']      # os da etapa final: a ordem é a da virada (projeto/ETAPA_FINAL.md, seção 5)
+           'regiao', 'gente', 'missoes', 'rivais', 'frentes', 'caixa', 'noticias', 'viagem', 'diretor', 'cria', 'habilidade']      # os da etapa final: a ordem é a da virada (projeto/ETAPA_FINAL.md, seção 5)
 # os módulos do mundo (o que ainda não existe fica de fora sem quebrar nada: estado.modulos). Cada um pode ter: virada(E) (roda quando o dia vira) · bloco(E, pid, esforco, dorme)
 # (os efeitos de UM bloco em quem age, vai junto ou espera: a volta da Mana) · vestiu(E, pid, iid) (depois de pôr uma peça em uso) · voce(E) (linhas no "Você" da MESA) · mesa(E) ·
 # so_mestre(E) (linhas para o SÓ O MESTRE) · retomar(E) (linhas para o RETOMAR.md) · recusa_fecha(E) (os motivos para o turno não fechar)

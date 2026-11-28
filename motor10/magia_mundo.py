@@ -31,7 +31,7 @@ Uso (o personagem do jogador, ou quem=ID):
   python3 magia_mundo.py praga ALVO [tipo=míngua] ["Nome"]  a bruxa roga uma praga pelo toque (rito de 1 bloco; a dívida sobe a categoria mais 1)
   python3 magia_mundo.py agua N                             o clérigo benze N de água (num santuário; cada uma: 1 de erva Comum e 2 de Mana)
   python3 magia_mundo.py benzer ARMA [paga=N]               o clérigo benze uma arma (num santuário): conta inteira contra o que não tem corpo por 7 dias
-  python3 magia_mundo.py tratar PACIENTE [paga=N]           trata as feridas de alguém (1 bloco, 1 remédio; um tratamento por paciente por dia)
+  python3 magia_mundo.py tratar PACIENTE [paga=N] [e=OUTRO] trata as feridas de alguém (1 bloco, 1 remédio; um tratamento por paciente por dia; o Trato de Campo do Perito: dois no bloco)
   python3 magia_mundo.py jornal N                           N blocos a serviço do santuário (o salário da mão de fé, até a jornada)
   python3 magia_mundo.py compra BEM N de=QUEM [preco=P]     compra de pessoa a pessoa o que alguém leva (o veneno de lâmina, que a loja não negocia: é crime)
   python3 magia_mundo.py santuario NIVEL|nada "como foi"    o Mestre registra o santuário do lugar (0 a 4)
@@ -533,27 +533,51 @@ def benzer(E, pid, iid, paga_=None):
     return f"{p['nome']} benze {it['nome']}: por 7 dias a arma conta inteira contra o que não tem corpo." + (f" {E['gente'][q]['nome']} pagou {preco} de prata." if preco else '')
 
 
-def tratar(E, pid, paciente, paga_=None):
+def tratar(E, pid, paciente, paga_=None, segundo=None):
     """TRATAR (o ofício cura; 1 bloco leve e 1 remédio; um tratamento por paciente por dia): soma 1 dia de repouso a todas as feridas dele (o dom da cura soma meio por grau,
-    e se mostra no primeiro tratamento). O remédio sai da carga do paciente, ou da de quem trata (que cobra o preço de base dele); quem é tratado paga o serviço."""
+    e se mostra no primeiro tratamento). O remédio sai da carga do paciente, ou da de quem trata (que cobra o preço de base dele); quem é tratado paga o serviço.
+    (a parte 2, fase 2) O TRATO DE CAMPO do Perito em diante trata DOIS no mesmo bloco (`segundo`: `tratar PACIENTE e=OUTRO`), cada um com o remédio e o preço dele; a Mão que
+    Esquenta anda por paciente (o segundo já leva a do primeiro); a marca é uma por dia (a cena do tratamento)."""
     import tabelas_mercado as C
-    p = estado.presente(E, pid, 'tratar aqui'); q = _junto(E, pid, paciente); b = E['gente'][q]; dia = E['relogio']['dia']
-    if not b['feridas']: sys.exit(f"{b['nome']} não tem ferida aberta")
-    quer = W.TRATAR_MAO[1] if any(f['grave'] for f in b['feridas']) else W.TRATAR_MAO[0]
-    if mao(p, 'cura') < quer: sys.exit(f"tratar {'ferida grave' if quer == W.TRATAR_MAO[1] else 'ferida'} pede mão de cura de {T.MAESTRIAS[quer]}; a de {p['nome']} é de {T.MAESTRIAS[mao(p, 'cura')]}")
-    if (b.get('marca') or {}).get('tratado_dia') == dia: sys.exit(f"{b['nome']} já foi tratado hoje: um tratamento por dia")
-    de = q if (b.get('carga') or {}).get('remédio', 0) >= 1 else pid if (p.get('carga') or {}).get('remédio', 0) >= 1 else None
-    if de is None: sys.exit(f"tratar gasta 1 remédio, e nem {p['nome']} nem {b['nome']} levam (a loja vende; a botica faz)")
-    preco = preco_servico(E, q, pid, W.SERVICO['tratar'] + (C.base('remédio') if de == pid else 0), paga_)
-    dom = talento.dom(p, 'cura'); dias = W.TRATAR + W.TRATAR_DOM * dom
-    ef = [['pessoa', de, 'carga.remédio', 'soma', -1], ['pessoa', q, 'marca.tratado_dia', 'poe', dia], ['pessoa', pid, 'treino.cura', 'soma', 1]] + _paga(E, q, pid, preco) + corpo._repouso(b, q, dias)
+    import habilidade
+    p = estado.presente(E, pid, 'tratar aqui'); dia = E['relogio']['dia']
+    tr = habilidade.trato(E, pid)                           # (a parte 2, fase 2) o Trato de Campo: soma repouso; do Perito, dois por bloco; do Mestre, a ferida grave pede só a mão de Treinado
+    qs = [_junto(E, pid, paciente)] + ([_junto(E, pid, segundo)] if segundo else [])
+    if segundo and not tr['dois']: sys.exit(f"tratar dois no mesmo bloco pede o Trato de Campo do Perito em diante ({p['nome']} {'não o tem' if not habilidade._reg(E, pid, 'trato') else 'o tem abaixo do Perito'})")
+    if len(set(qs)) < len(qs): sys.exit('dois pacientes, duas pessoas')
+    esq = habilidade.esquenta_pilha(E, pid); dom = talento.dom(p, 'cura'); ef = []; feitos = []; remedios = {}
+    for i, q in enumerate(qs):
+        b = E['gente'][q]
+        if not b['feridas']: sys.exit(f"{b['nome']} não tem ferida aberta")
+        quer = W.TRATAR_MAO[1] if any(f['grave'] for f in b['feridas']) else W.TRATAR_MAO[0]
+        if tr['grave_treinado'] and quer > W.TRATAR_MAO[0]: quer = min(quer, 4)
+        if mao(p, 'cura') < quer: sys.exit(f"tratar {'ferida grave' if quer == W.TRATAR_MAO[1] else 'ferida'} pede mão de cura de {T.MAESTRIAS[quer]}; a de {p['nome']} é de {T.MAESTRIAS[mao(p, 'cura')]}")
+        if (b.get('marca') or {}).get('tratado_dia') == dia: sys.exit(f"{b['nome']} já foi tratado hoje: um tratamento por dia")
+        tem = lambda x: (E['gente'][x].get('carga') or {}).get('remédio', 0) - remedios.get(x, 0)
+        de = q if tem(q) >= 1 else pid if tem(pid) >= 1 else None
+        if de is None: sys.exit(f"tratar gasta 1 remédio, e nem {p['nome']} nem {b['nome']} levam (a loja vende; a botica faz)")
+        remedios[de] = remedios.get(de, 0) + 1
+        preco = preco_servico(E, q, pid, W.SERVICO['tratar'] + (C.base('remédio') if de == pid else 0), paga_)
+        e_ = esq if i == 0 else dict(n=esq['n'] + 1, dias=habilidade.H.ESQUENTA_DIAS * min(habilidade.H.num('esquenta', 'pilha', habilidade.grau_de(habilidade._reg(E, pid, 'esquenta'))), esq['n'] + 1)) if habilidade._reg(E, pid, 'esquenta') else esq
+        dias = W.TRATAR + W.TRATAR_DOM * dom + e_['dias'] + tr['dias']
+        ef += [['pessoa', de, 'carga.remédio', 'soma', -1], ['pessoa', q, 'marca.tratado_dia', 'poe', dia], ['pessoa', pid, 'treino.cura', 'soma', 1]] + _paga(E, q, pid, preco) + corpo._repouso(b, q, dias)
+        ef += habilidade.marca_tratar(E, pid, b, e_, tr, marca=(i == 0))
+        feitos.append((q, b, preco, dias, e_))
     if dom: ef += talento.mostra(E, pid)
-    n, pq = ato.passa(E, pid, 1, 'cura', esforco='leve', mais=lambda i: ef, com=(q,) if q != pid else (), texto=f"{p['nome']} trata as feridas de {b['nome']}" + (f" (por {preco} de prata)" if preco else ''))
+    junto = tuple(q for q in qs if q != pid)
+    n, pq = ato.passa(E, pid, 1, 'cura', esforco='leve', mais=lambda i: ef, com=junto, texto=f"{p['nome']} trata as feridas de " + ' e de '.join(b['nome'] for _, b, _, _, _ in feitos) + (f" (por {sum(x[2] for x in feitos)} de prata)" if any(x[2] for x in feitos) else ''))
     if not n: sys.exit(f"o tratamento não se fez: {pq}")
-    b = E['gente'][q]; sararam = sum(1 for x in ef if x[:1] == ['ferida'] and x[2] == 'sara')
-    out = f"{p['nome']} trata {b['nome']}: as feridas ganham {f'{dias:g}'.replace('.', ',')} {'dia' if dias == 1 else 'dias'} de repouso" + (f"; {tantos(sararam, 'ferida sara', 'feridas saram')}" if sararam else '')
+    partes = []
+    for q, b0, preco, dias, e_ in feitos:
+        b = E['gente'][q]; sararam = sum(1 for x in ef if x[:2] == ['ferida', q] and x[2] == 'sara')
+        t = f"{p['nome']} trata {b['nome']}: as feridas ganham {f'{dias:g}'.replace('.', ',')} {'dia' if dias == 1 else 'dias'} de repouso" + (f"; {tantos(sararam, 'ferida sara', 'feridas saram')}" if sararam else '')
+        if e_['dias'] or tr['dias']: t += ' (' + ' e '.join(x for x in (f"a Mão que Esquenta +{f'{e_['dias']:g}'.replace('.', ',')}" if e_['dias'] else '', f"o Trato de Campo +{f'{tr['dias']:g}'.replace('.', ',')}" if tr['dias'] else '') if x) + ')'
+        partes.append(t + (f"; {b['nome']} pagou {preco} de prata" if preco else ''))
+    out = '. '.join(partes) + (f" (o Trato de Campo: os dois no mesmo bloco)" if segundo else '')
+    sb = habilidade.sobe(E, pid)
+    if sb: out += '. ' + '; '.join(sb)
     if dom and talento.visto(E['gente'][pid]): out += f". As mãos de {p['nome']} fecham a ferida mais depressa do que deviam: é um dom."
-    return out + (f". {b['nome']} pagou {preco} de prata" if preco else '') + sobe(E, pid, 'cura') + (f'. PAROU: {pq}' if pq else '.')
+    return out + sobe(E, pid, 'cura') + (f'. PAROU: {pq}' if pq else '.')
 
 
 def compra(E, pid, bem, n, de, preco=None):
@@ -702,7 +726,7 @@ def main(a=None):
     elif pos[0] == 'praga': out = praga(E, pid, pos[1] if len(pos) > 1 else falta('diga em quem', 'praga tome'), tipo=op.get('tipo', 'míngua'), nome=pos[2] if len(pos) > 2 else None)
     elif pos[0] == 'agua': out = agua(E, pid, num(1, 'agua 2'))
     elif pos[0] == 'benzer': out = benzer(E, pid, pos[1] if len(pos) > 1 else falta('diga a arma', 'benzer i0007'), paga_=op.get('paga'))
-    elif pos[0] == 'tratar': out = tratar(E, pid, pos[1] if len(pos) > 1 else falta('diga quem tratar', 'tratar eu'), paga_=op.get('paga'))
+    elif pos[0] == 'tratar': out = tratar(E, pid, pos[1] if len(pos) > 1 else falta('diga quem tratar', 'tratar eu'), paga_=op.get('paga'), segundo=op.get('e'))
     elif pos[0] == 'compra':
         if len(pos) < 3 or not op.get('de'): falta('diga o bem, quantos e de quem', 'compra veneno:1 1 de=quiteria preco=40')
         out = compra(E, pid, pos[1], pos[2], op['de'], preco=op.get('preco'))

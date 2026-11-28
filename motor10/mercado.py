@@ -83,6 +83,12 @@ def _dom(p, vista): return TT.DOM_COMERCIO.get(talento.dom_visto(p, 'comércio')
 def parte(p, vista=False): return min(C.parte(8), C.parte(mao(p)) + _dom(p, vista))                       # a fração do preço que a loja paga a esta pessoa (o dom soma, sem passar do teto)
 def parte_peca(p, vista=False): return min(C.parte_peca(8), C.parte_peca(mao(p)) + _dom(p, vista))         # a fração do valor de uma PEÇA que a loja paga a esta pessoa (menos que pelos bens)
 def caixa(E, lid): return E['lugares'][lid]['estoque'].get('prata', 0)                                    # a prata do lugar
+
+
+def _passos(E, pid, alvo):
+    """(a parte 2, fase 2) os passos do regateio ganho hoje nesta loja para este alvo (fala.py regateia): 0 se nenhum"""
+    import fala
+    return fala.passos(E, pid, alvo)
 def prata_do_mundo(E): return sum(p['moedas'] for p in E['gente'].values()) + sum((l.get('estoque') or {}).get('prata', 0) for l in E['lugares'].values())      # gente mais lugares: a conta que tem de fechar
 
 
@@ -190,10 +196,13 @@ def comprar(E, pid, bem, n):
     """a pessoa compra n unidades de um bem da loja do lugar onde está: a prata vai para o lugar, o bem sai do estoque e entra na carga"""
     p = _vivo(E, pid); lid = p['lugar']; l = _loja(E, lid); _base(bem); n = _quantos(n); tem = l['estoque'].get(bem, 0)
     if tem < n: sys.exit(f"{l['nome']} só tem {_m(tem)} de {nome_bem(bem)} (pediu {_m(n)})")
-    prata = custa(E, lid, bem, n); antes = preco(E, lid, bem)
+    prata = custa(E, lid, bem, n); antes = preco(E, lid, bem); ps = _passos(E, pid, bem)
+    if ps:                                                  # (fase 2) o regateio: cada passo tira 5 pontos do que a loja cobra, nunca abaixo da base (os 10% de cima)
+        import tabelas_habilidades as HT, fala
+        prata = max(1, math.ceil(round(max(1.0, C.COMPRA - HT.PASSO_PRECO * min(ps, HT.PASSOS_COMPRA)) * lote(E, lid, bem, n, compra=True), 6)))
     if p['moedas'] < prata: sys.exit(f"{_m(n)} de {nome_bem(bem)} {'custa' if n == 1 else 'custam'} {_m(prata)} de prata {_em(E, lid)}; {p['nome']} tem {_m(p['moedas'])}")
-    ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['estoque', lid, bem, 'soma', -n], ['pessoa', pid, 'carga.' + bem, 'soma', n]] + _treino(E, pid, prata)
-    txt = f"{p['nome']} compra {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}"
+    ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['estoque', lid, bem, 'soma', -n], ['pessoa', pid, 'carga.' + bem, 'soma', n]] + _treino(E, pid, prata) + ([fala.gasta(pid)] if ps else [])
+    txt = f"{p['nome']} compra {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}" + (' (o regateio valeu)' if ps else '')
     estado.aplica(E, 'compra', ef, onde=lid, quem=[pid], texto=txt); depois = preco(E, lid, bem)
     return dict(bem=bem, n=n, prata=prata, antes=antes, depois=depois, texto=f"{txt}. O preço do dia: {_n(antes)} → {_n(depois)}" + (sobe(E, pid) or '.'))
 
@@ -204,12 +213,15 @@ def vender(E, pid, bem, n):
     if n == 'tudo': n = int(tem) or sys.exit(f"{p['nome']} não carrega {nome_bem(bem)}")
     n = _quantos(n)
     if tem < n: sys.exit(f"{p['nome']} carrega {_m(tem)} de {nome_bem(bem)} (quis vender {_m(n)})")
-    prata = paga(E, pid, bem, n); antes = preco(E, lid, bem); cx = caixa(E, lid)
+    prata = paga(E, pid, bem, n); antes = preco(E, lid, bem); cx = caixa(E, lid); ps = _passos(E, pid, bem)
+    if ps:                                                  # (fase 2) o regateio: cada passo põe 5 pontos no que a loja paga, nunca acima de 80% pelos bens
+        import tabelas_habilidades as HT, fala
+        prata = math.floor(round(min(HT.TETO_BENS, max(parte(p), parte(p) + HT.PASSO_PRECO * ps)) * lote(E, lid, bem, n, compra=False), 6))
     if prata < 1: sys.exit(f"{_m(n)} de {nome_bem(bem)} não {'vale' if n == 1 else 'valem'} uma moeda de prata {_em(E, lid)}: junte mais para vender")
     if cx < prata:
         k = cabe(E, pid, bem); sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_m(n)} de {nome_bem(bem)}" + (f': hoje ela compra até {_m(k)}' if k and paga(E, pid, bem, k) >= 1 else ': hoje ela não compra'))
-    ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['pessoa', pid, 'carga.' + bem, 'soma', -n], ['estoque', lid, bem, 'soma', n]] + _treino(E, pid, prata)
-    dom = talento.mostra(E, pid) if prata > paga(E, pid, bem, n, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
+    ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['pessoa', pid, 'carga.' + bem, 'soma', -n], ['estoque', lid, bem, 'soma', n]] + _treino(E, pid, prata) + ([fala.gasta(pid)] if ps else [])
+    dom = talento.mostra(E, pid) if not ps and prata > paga(E, pid, bem, n, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
     txt = f"{p['nome']} vende {_m(n)} de {nome_bem(bem)} por {_m(prata)} de prata {_em(E, lid)}" + (' (o comprador paga mais do que costuma: você tem jeito para o negócio)' if dom else '')
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt); depois = preco(E, lid, bem)
     return dict(bem=bem, n=n, prata=prata, antes=antes, depois=depois, texto=f"{txt}. O preço do dia: {_n(antes)} → {_n(depois)}" + (sobe(E, pid) or '.'))
@@ -294,10 +306,13 @@ def comprar_peca(E, pid, iid):
         sys.exit(f"{it['nome']} ({iid}) não está na prateleira {estado.de(E, lid)}" + (f": é de {E['gente'][it['dono']]['nome']}" if it.get('dono') in E['gente']
                  else ': está no chão, não é da loja (quem fica com ela entra por evento do Mestre)' if it.get('onde') == lid and it.get('solto')
                  else f": a loja só negocia arma, armadura, escudo, foco, amuleto, escrito e gazua, até o {T.CATS[M.PECA_LOJA_ATE]}" if it.get('onde') == lid else ''))
-    prata = preco_peca(it)
+    prata = preco_peca(it); ps = _passos(E, pid, iid)
+    if ps:                                                  # (fase 2) o regateio da prateleira (a Língua de Feira do Perito): até dois passos de 5 pontos
+        import tabelas_habilidades as HT, fala
+        prata = max(1, math.ceil(round(valor(it) * (1 - HT.PASSO_PRECO * min(ps, HT.PASSOS_COMPRA)), 6)))
     if p['moedas'] < prata: sys.exit(f"{_diz_peca(it)} custa {_m(prata)} de prata; {p['nome']} tem {_m(p['moedas'])}")
     ef = [['pessoa', pid, 'moedas', 'soma', -prata], ['estoque', lid, 'prata', 'soma', prata], ['item', iid, 'dono', 'poe', pid],
-          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} comprou {_em(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
+          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} comprou {_em(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata) + ([fala.gasta(pid)] if ps else [])
     txt = f"{p['nome']} compra {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}"
     estado.aplica(E, 'compra', ef, onde=lid, quem=[pid], texto=txt)
     return dict(item=iid, prata=prata, texto=txt + (sobe(E, pid) or '.'))
@@ -313,12 +328,15 @@ def vender_peca(E, pid, iid):
     if any(o.get('item') == iid for o in E['itens'].get('obras', {}).values()): sys.exit(f"{it['nome']} está num ajuste aberto: feche ou largue a obra antes de vender")
     if it.get('maldita'): sys.exit(f"o mercador {estado.de(E, lid)} pega {it['nome']} para avaliar e larga depressa: não compra (há algo de errado nela, e ele não sabe dizer o quê)")      # antes do "em uso" (a peça maldita presa na mão não sai): a peça maldita não vira prata na loja (a etapa da magia): a armadilha não é mina
     if it.get('uso'): sys.exit(f"{it['nome']} está em uso: guarde antes de vender (`ato.py tirar {iid}`)")
-    prata = paga_peca(E, pid, it); cx = caixa(E, lid); k = iguais(E, lid, it); sb = sobra(E, lid, it); farta = _diz_farta(it, k, sb)
+    prata = paga_peca(E, pid, it); cx = caixa(E, lid); k = iguais(E, lid, it); sb = sobra(E, lid, it); farta = _diz_farta(it, k, sb); ps = _passos(E, pid, iid)
+    if ps:                                                  # (fase 2) o regateio: cada passo põe 5 pontos no que a loja paga pela peça, nunca acima de 60%
+        import tabelas_habilidades as HT, fala
+        prata = math.floor(round(min(HT.TETO_PECAS, max(parte_peca(p), parte_peca(p) + HT.PASSO_PRECO * ps)) * valor(it) * C.FARTA ** (k + sb), 6))
     if prata < 1: sys.exit(f"{_diz_peca(it)} não vale uma moeda de prata {_em(E, lid)}" + (f": a loja já tem {farta} na prateleira" if farta else ''))
     if cx < prata: sys.exit(f"a loja {estado.de(E, lid)} tem {_m(cx)} de prata e não paga {_m(prata)} por {_diz_peca(it)}")
     ef = [['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata], ['item', iid, 'dono', 'poe', None], ['item', iid, 'onde', 'poe', lid],
-          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} vendeu à loja {estado.de(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata)
-    dom = talento.mostra(E, pid) if prata > paga_peca(E, pid, it, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
+          ['item', iid, 'historia', 'junta', f"Dia {E['relogio']['dia']}: {p['nome']} vendeu à loja {estado.de(E, lid)}, por {_m(prata)} de prata"]] + _treino(E, pid, prata) + ([fala.gasta(pid)] if ps else [])
+    dom = talento.mostra(E, pid) if not ps and prata > paga_peca(E, pid, it, vista=True) else []; ef += dom      # o dom escondido pagou a mais: a pessoa vê que tem jeito
     txt = f"{p['nome']} vende {_diz_peca(it)} por {_m(prata)} de prata {_em(E, lid)}" + (' (o comprador paga mais do que costuma: você tem jeito para o negócio)' if dom else '')
     estado.aplica(E, 'venda', ef, onde=lid, quem=[pid], texto=txt)
     return dict(item=iid, prata=prata, iguais=k, sobra=sb, texto=txt + (f" (a loja já tinha {farta}: pagou menos)" if farta and C.FARTA < 1 else '') + (sobe(E, pid) or '.'))

@@ -381,6 +381,9 @@ def valor(E, pid, cat, oficio='forja', lid=None):
     c['soma'] = c['mais'] + c['afinidade'] + c['pena']; c['ferramenta'] = vm + vt
     c['chances'] = dist_valor(c['soma'], c['teto'], -1 if fc is None else fc)
     c['fx'] = efeitos_em_uso(E, pid, oficio)                                          # (fase 1a) os efeitos das ferramentas em uso: o prumo, o lastro, a fagulha, a têmpera...
+    import habilidade                                       # (a parte 2, fase 2) as habilidades de trabalho: o prumo (soma de todas as fontes até 5) e a têmpera (vale o maior); nunca no total
+    c['hab'] = habilidade.trabalho(E, pid, oficio, lid)
+    if c['hab']['prumo']: c['fx'] = dict(c['fx'], prumo=min(O.PRUMO_MAX, c['fx']['prumo'] + c['hab']['prumo']))
     return c
 
 
@@ -641,9 +644,12 @@ def continua(E, pid, oid=None, blocos=None):
     if o.get('nucleo') and E['itens']['itens'].get(o['nucleo'], {}).get('dono') != pid: sys.exit(f"o núcleo da obra {oid} não está mais na mão de quem forja: a obra não anda (largue-a com `larga`)")
     if o['tipo'] in ('ajustar', 'gravar') and _ajuste_solto(E, o): sys.exit(f"{_ajuste_solto(E, o)}: a obra {oid} não anda (largue-a com `larga`)")       # a gravação, como o ajuste, trabalha na peça de alguém que está ali
     falta = max(0, o['pede'] - o['blocos']); n = falta if blocos is None else max(0, min(int(blocos), falta)); nome = _nome_obra(E, o)
+    import habilidade
+    calor0 = habilidade.calor(E, pid, oid); calma = habilidade.paciencia_hoje(E, pid)      # (a parte 2, fase 2) o Malho Quente esquenta nos blocos seguidos; a Paciência tira o cansaço do bloco pesado
     feitos, pq = ato.passa(E, pid, n, evento_de(of, o['tipo']), esforco='pesado', texto=f"{p['nome']} trabalha na obra: {nome}",
-                           mais=lambda i: [['obra', oid, 'blocos', 'soma', 1], ['pessoa', pid, 'treino.' + of, 'soma', 1]])
+                           mais=lambda i: [['obra', oid, 'blocos', 'soma', 1], ['pessoa', pid, 'treino.' + of, 'soma', 1]] + ([['pessoa', pid, 'cansaco', 'soma', -1]] if calma else []))
     o = E['itens']['obras'][oid]; p = E['gente'][pid]
+    if feitos and o['tipo'] == 'forjar': habilidade.esquenta(E, pid, oid, calor0, feitos)
     R = dict(obra=oid, feitos=feitos, parou=pq, fim=None, item=None, rolagem=None)
     R['texto'] = f"{p['nome']} trabalha {tantos(feitos, 'bloco')} na obra {oid}, {nome}: {o['blocos']} de {o['pede']}" + (sobe(E, pid, of) if feitos else '') + (f'. PAROU: {pq}' if pq else '')
     if o['blocos'] >= o['pede'] and E['gente'][pid]['estado'] == 'vivo':
@@ -667,6 +673,7 @@ def _remata_valor(E, o):
     if nid and nid not in L: sys.exit(f'o núcleo da obra {oid} não está mais no Livro de Itens: a obra não fecha (largue-a com `larga`)')
     c = valor(E, pid, cat, of, lid); nuc = L[nid]['nome'] if nid else None; dia = E['relogio']['dia']; fam = _fam(peca); fc = -1 if c['ferramenta_cat'] is None else c['ferramenta_cat']
     fx = c['fx']; prumo = fx['prumo']; lastro = bool(fx.get('lastro')); fagulha = bool(fx.get('fagulha')); tempera = fx['tempera']; km = o.get('molde')
+    th = c['hab']['tempera']; so_teto = c['hab']['tempera_so_teto']                # (fase 2) a Têmpera Certa do dia (do Iniciante e do Aprendiz, só no teto); vale o maior com a da ferramenta
     r = teste.rola(E, f"forjar {_peca(peca)}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid, **({'dom': c['oculto']} if c['oculto'] else {}))
     a0, b0 = r['dados'][0][0], r['dados'][1][0]
     if r.get('posto_a_mao'): a0 = b0 = 10                    # o dado posto à mão (só na prova): sem dado especial
@@ -674,7 +681,8 @@ def _remata_valor(E, o):
     n19 = (a0 == 19) + (b0 == 19)                            # os dados que ABREM em 19 (a fagulha os conta como um 20)
     def saida(total):
         x_ = _resolve(total, a0, b0, c['teto'], fc, prumo, lastro)[0][1]
-        return x_, conta_efeitos(x_, n20, n19, fagulha, tempera, molde=bool(km) and x_['cat'] is not None and not x_['salva'] and x_['cat'] >= cat, molde_num=de_numero(km))
+        tp = max(tempera, th if th and (not so_teto or x_['cat'] == c['teto']) else 0)
+        return x_, conta_efeitos(x_, n20, n19, fagulha, tp, molde=bool(km) and x_['cat'] is not None and not x_['salva'] and x_['cat'] >= cat, molde_num=de_numero(km))
     x, ce = saida(r['total']); degrau = bool(fx.get('degrau'))
     if c['oculto']:                                          # o dom escondido FEZ a diferença se, sem ele, a peça sairia noutra categoria (ou se perderia), ou (fase 1a) com outro número de efeitos,
         xs, cs = saida(r['total'] - c['oculto'])             # ou com menos cheios (os que a peça guarda: a mesa mostra a soma sem o dom, e ela tem de bater com o que a peça leva)
@@ -709,6 +717,9 @@ def _remata_valor(E, o):
     if nid: ef.append(['item', nid, 'some'])
     ef.append(['obra', oid, 'fecha'])
     if talento.decidiu(r): ef += talento.mostra(E, pid)
+    import habilidade                                       # (a parte 2, fase 2) a marca da obra (a cena), a Têmpera Certa gasta, o calor que esfria
+    errar = sum(q for k, q in c['chances'].items() if k is None or k < cat)
+    ef += habilidade.marca_obra(E, pid, c['hab'], errar, usou_tempera=bool(th) and sai is not None and (not so_teto or sai == c['teto']), venceu=fim == 'acertou')
     conta_txt = f"soma {teste.total_visto(r)}"
     if sai is None: txt = (f"a obra de {_peca(peca)} se perde ({conta_txt}" + (f"; {x['como']}" if x['como'] else f", abaixo da CD do Comum, {O.VALOR_CD[0]}") + f"): some a matéria ({_lista(o['materia'])})" + (f' e some {nuc}' if nuc else '')
                            + (f"; o recobro devolve {_lista(volta)}" if volta else '; o recobro não tinha o que devolver' if fx.get('recobro') else ''))
@@ -722,7 +733,8 @@ def _remata_valor(E, o):
     out = (teste.diz(E, r) + f"\n  (o +{c['mais']}: maestria {c['maestria']}, matéria {c['materia']}" + (f", núcleo {c['nucleo']}" if c['nucleo'] else '') + (f", martelo de forja {c['martelo']}" if c['martelo'] else '')
            + (f", tenaz {c['tenaz']}" if c['tenaz'] else '') + f", oficina {c['oficina']}, preparo {c['preparo']}) · as CDs: " + ' · '.join(f"{T.CATS[k]} {O.VALOR_CD[k]}" for k in range(min(c['teto'], len(O.VALOR_CD) - 1) + 1))
            + f" (o teto: {T.CATS[c['teto']]}" + (', a porta do degrau' if c.get('porta') else '') + ')' + (f" · {_diz_fx(fx)}" if _diz_fx(fx) else '') + '\n' + txt
-           + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + (f'. {escolhas}' if escolhas else '') + _diz_dom(E, pid, r) + sobe(E, pid, of))
+           + (f'. Entrou no Livro de Itens: {iid}' if iid else '') + (f'. {escolhas}' if escolhas else '') + _diz_dom(E, pid, r) + sobe(E, pid, of)
+           + ''.join(f'\n{x}' for x in habilidade.sobe(E, pid)) + (f"\n(as habilidades: {c['hab']['diz']})" if c['hab']['diz'] else ''))
     return dict(obra=oid, fim=fim, item=iid, rolagem=r, texto=out, sai=sai, cat=cat, efeitos=ce)
 
 
@@ -905,12 +917,15 @@ def consertar(E, pid, iid, pontos=None, pago=False):
 
 def conserto_bloco(E, pid, oficio='forja'):
     """os pontos que um bloco de conserto na bancada devolve: 5; com o REMENDO de uma ferramenta em uso do ofício da peça (fase 1a), 8 (vale a melhor fonte)"""
-    return max(O.CONSERTO_BLOCO, efeitos_em_uso(E, pid, oficio).get('remendo') or 0)
+    import habilidade
+    return max(O.CONSERTO_BLOCO, efeitos_em_uso(E, pid, oficio).get('remendo') or 0, habilidade.reparo(E, pid))      # (fase 2) a Mão de Reparo: vale a melhor fonte
 
 
 def ajuste_blocos(E, pid, cat, oficio='forja'):
     """os blocos do ajuste sob medida: um por degrau da categoria; com a MÃO DE MEDIDA de uma ferramenta em uso (fase 1a), a metade, para cima"""
-    b = O.ajuste_blocos(cat); return math.ceil(b / 2) if efeitos_em_uso(E, pid, oficio).get('mao_de_medida') else b
+    import habilidade
+    b = O.ajuste_blocos(cat); b = math.ceil(b / 2) if efeitos_em_uso(E, pid, oficio).get('mao_de_medida') else b
+    return max(1, b - habilidade.ajuste(E, pid)[0])          # (fase 2) o Ajuste Fino: menos blocos (no mínimo 1)
 
 
 # ---------- ajustar (sob medida) ----------
@@ -948,6 +963,8 @@ def _remata_ajuste(E, o):
         return dict(obra=oid, fim='desfeito', item=o['item'], rolagem=None, texto=f"O ajuste {oid} se desfaz: {solto}.")
     it = E['itens']['itens'][o['item']]; a = E['gente'][o['para']]; cat = it['cat']; grau = O.ajuste_grau(mao(p, of)); c = conta(E, pid, cat, of, lid, contra=O.ajuste_contra(cat))
     medida = O.MEDIDA_TESTE if efeitos_em_uso(E, pid, of).get('mao_de_medida') else 0       # (fase 1a) a MÃO DE MEDIDA: +2 no teste do ajuste
+    import habilidade
+    medida += habilidade.ajuste(E, pid)[1]                   # (fase 2) o Ajuste Fino soma no teste
     if medida: c['mais'] += medida; c['soma'] += medida
     r = teste.rola(E, f"ajustar {it['nome']} para {a['nome']}", 'Afinidade', c['contra'], mais=c['mais'], quem=pid, **({'dom': c['oculto']} if c['oculto'] else {}))
     margem = r['total'] - r['contra']; ef = [['obra', oid, 'fecha']]; _faixa_do_dom(r, c, margem); conta_txt = f"{teste.total_visto(r)} contra {r['contra']}"

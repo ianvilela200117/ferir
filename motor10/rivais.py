@@ -7,7 +7,7 @@ A JANELA DO MUNDO conta a todos na hora: a primeira limpeza de uma masmorra, a p
 
   python3 rivais.py ranking                 o ranking da semana (o que o povo sabe)
   python3 rivais.py ver PID                 um rival: quem é, a guilda, a fama, o que veste (o plano dele é segredo: SÓ O MESTRE, com `mestre`)
-  python3 rivais.py mestre                  SÓ O MESTRE: os planos de todos
+  python3 rivais.py mestre                  SÓ O MESTRE: os planos de todos (e as habilidades escondidas, a parte 2, fase 2)
   python3 rivais.py leilao                  o próximo leilão: os lotes e os lances
   python3 rivais.py lance ITEM PRATA        o personagem dá um lance (vale no dia do leilão, se ele estiver na capital e tiver a prata)
 """
@@ -401,6 +401,9 @@ def novos(E):
         estado.aplica(E, 'gera', [['pessoa', 'nasce', pid, reg], ['estoque', lid, 'prata', 'soma', -prata], ['pessoa', pid, 'moedas', 'soma', prata],
                                   ['item', 'nasce', itens.item('arma', 0, f'{fam.capitalize()} de {nome}', familia=fam, dono=pid)], ['item', 'nasce', itens.item('armadura', 0, f'Couro de {nome}', material='couro', dono=pid)],
                                   ['item', f'i{s0 + 1:04d}', 'uso', 'poe', 'arma'], ['item', f'i{s0 + 2:04d}', 'uso', 'poe', 'veste']], onde=lid, quem=[pid], texto=f"{nome} chega à idade de pegar em armas {estado.em(E, lid)}")
+        import habilidade                                   # (a parte 2, fase 2) e com as habilidades que a mão e a vida explicam, pela semente (o novato de mão Iniciante: nenhuma)
+        hv = habilidade.efeitos_da_vida(E, pid)
+        if hv: estado.aplica(E, 'gera', hv, onde=lid, quem=[pid], texto=f"{nome} traz da vida {len(hv)} habilidade(s)")
 
 
 def ranking(E):
@@ -495,7 +498,10 @@ if __name__ == '__main__':
         for it in pecas_em_uso(E, a[1]): print(f"  {it['nome']} ({T.CATS[it['cat']]})")
     elif a[0] == 'mestre':
         for k in rivais(E, vivos=False):
-            p = E['gente'][k]; print(f"- {p['nome']} [{k}] · nível {p['nivel']} · {p['estado']} · fama {p.get('fama', 0)} · {pontos(E, k)} pontos · plano: {plano(p)}")
+            p = E['gente'][k]; hb = p.get('habilidades') or {}
+            import habilidade, tabelas_habilidades as TH                # (a parte 2, fase 2) as habilidades escondidas: só o Mestre as vê
+            print(f"- {p['nome']} [{k}] · nível {p['nivel']} · {p['estado']} · fama {p.get('fama', 0)} · {pontos(E, k)} pontos · plano: {plano(p)}"
+                  + (f" · habilidades: {', '.join(f'{habilidade.nome(x)} {TH.CURTO[habilidade.grau_de(r)]}' for x, r in hb.items())}" if hb else ''))
     elif a[0] == 'leilao':
         for i in lotes(E): print(f"- {i} {E['itens']['itens'][i]['nome']} ({T.CATS[E['itens']['itens'][i]['cat']]}), de {E['gente'][E['itens']['itens'][i]['dono']]['nome']}")
     else:

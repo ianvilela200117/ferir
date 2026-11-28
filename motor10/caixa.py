@@ -6,6 +6,8 @@ VENCIDO O PRAZO, VALE O PADRÃO, sempre com custo (quem pediu lembra que você c
   python3 caixa.py ver                    os pedidos abertos, por prazo (o que cada opção faz, e o padrão)
   python3 caixa.py responde XID LETRA     o jogador escolheu: vale a opção (os efeitos dela, num evento só); a opção que não cabe mais é recusada
   python3 caixa.py pergunta XID           abre a pergunta do turno ligada ao pedido (o `turno.py fecha` recusa fechar com pedido vencendo amanhã sem pergunta ligada)
+(A PARTE 2, FASE 2: o pedido de quem tem nome se NEGOCIA pelo teste de fala, no pedido que o jogador declara: `fala.py caixa XID prazo|paga [DEGRAU]` (mais prazo: pequeno, +2 dias;
+mais paga: médio +25%, grande +50%). Ganhar muda o pedido; perder deixa como era. O capítulo 30.)
 """
 import sys
 import tabelas_mundo as M
