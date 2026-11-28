@@ -1,0 +1,1 @@
+A viagem para: Ferord está com fome. `viagem.py segue` continua; `viagem.py acampa N` dorme na estrada; `ato.py comer carga` come da carga.

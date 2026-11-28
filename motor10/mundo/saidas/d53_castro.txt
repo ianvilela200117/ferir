@@ -1,0 +1,4 @@
+Ferord dorme 1 bloco na cama (pagou 2 de prata pela cama, paga até o Dia 54, entardecer (16h)). PAROU: Ferord acorda com o sono em dia
+Dia 53, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 0) · com forças (cansaço 0) · 60 de prata
+Ferord descansa 3 blocos
+Dia 54, manhã (8h) · primavera · PV 111/111 · sem fome (fome 3) · sem sono (sono 3) · com forças (cansaço 0) · 60 de prata

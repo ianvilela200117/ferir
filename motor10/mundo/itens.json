@@ -1,5 +1,5 @@
 {
- "seq": 720,
+ "seq": 731,
  "itens": {
   "i0001": {
    "tipo": "escudo",
@@ -12335,7 +12335,7 @@
     "pernas"
    ],
    "id": "i0659",
-   "uso": "veste"
+   "uso": null
   },
   "i0660": {
    "tipo": "armadura",
@@ -13512,8 +13512,220 @@
    "familia": "espada",
    "id": "i0720",
    "uso": null
+  },
+  "i0721": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "adaga",
+   "id": "i0721",
+   "uso": null
+  },
+  "i0722": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "lança Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "familia": "lança",
+   "id": "i0722",
+   "uso": null
+  },
+  "i0723": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "vale_do_corvo",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0723",
+   "uso": null
+  },
+  "i0724": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "familia": "maça",
+   "id": "i0724",
+   "uso": null
+  },
+  "i0725": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0725",
+   "uso": null
+  },
+  "i0726": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "familia": "maça",
+   "id": "i0726",
+   "uso": null
+  },
+  "i0727": {
+   "tipo": "armadura",
+   "cat": 0,
+   "nome": "armadura de couro Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "ribeira_da_nevoa",
+   "material": "couro",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "id": "i0727",
+   "uso": null
+  },
+  "i0728": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "adaga Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_verde",
+   "familia": "adaga",
+   "id": "i0728",
+   "uso": null
+  },
+  "i0729": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "maça Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "pedra_velha",
+   "familia": "maça",
+   "id": "i0729",
+   "uso": null
+  },
+  "i0730": {
+   "tipo": "arma",
+   "cat": 0,
+   "nome": "espada Comum",
+   "dur": [
+    10,
+    10
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [],
+   "dono": null,
+   "onde": "varzea_brava",
+   "familia": "espada",
+   "id": "i0730",
+   "uso": null
+  },
+  "i0731": {
+   "tipo": "armadura",
+   "cat": 1,
+   "nome": "Malha de Ferord",
+   "dur": [
+    20,
+    20
+   ],
+   "efeitos": [],
+   "sob_medida": null,
+   "historia": [
+    "Dia 58: Ferord forjou em Vale do Corvo (a soma: 62; a obra era de matéria Incomum); faltaram 18 para a Rara (80): o terço de baixo, 0 da faixa, 0 dos 20 = 0: nenhum efeito"
+   ],
+   "dono": "eu",
+   "onde": null,
+   "material": "malha",
+   "cobre": [
+    "tronco",
+    "braços",
+    "pernas"
+   ],
+   "feito_por": "eu",
+   "dia": 58,
+   "teto_efeitos": 4,
+   "id": "i0731",
+   "uso": "veste"
   }
  },
- "oseq": 7,
+ "oseq": 8,
  "obras": {}
 }

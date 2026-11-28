@@ -4006,8 +4006,8 @@
  },
  "seq": {
   "frente": 13,
-  "missao": 29,
-  "noticia": 58
+  "missao": 33,
+  "noticia": 64
  },
  "frentes": {
   "f01": {
@@ -4099,7 +4099,7 @@
    "dono": "dragao:penhascos_das_aguas",
    "onde": "ribeira_do_lobo",
    "meta": "fazer o lugar pagar tributo até não sobrar nada",
-   "passo": 1,
+   "passo": 2,
    "forca": 3,
    "passos": [
     "o dragão é visto sobre o lugar",
@@ -4111,7 +4111,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 43,
+   "ult": 57,
    "alvo_missao": "matar",
    "alvo": "dragao:penhascos_das_aguas",
    "cat": 2,
@@ -4126,7 +4126,7 @@
    "dono": "casa:c_astolan",
    "onde": "pedra_verde",
    "meta": "tomar a coroa",
-   "passo": 2,
+   "passo": 3,
    "forca": 5,
    "passos": [
     "a casa junta aliados",
@@ -4138,7 +4138,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 36,
+   "ult": 57,
    "alvo_missao": "investigar",
    "alvo": "casa:c_astolan",
    "cat": 2,
@@ -4234,7 +4234,7 @@
    "dono": "lugar:pedra_verde",
    "onde": "pedra_verde",
    "meta": "secar a colheita",
-   "passo": 3,
+   "passo": 4,
    "forca": 3,
    "passos": [
     "o rio baixa",
@@ -4246,7 +4246,7 @@
    ],
    "fim": null,
    "desde": 1,
-   "ult": 50,
+   "ult": 57,
    "alvo_missao": "entrega",
    "alvo": "comida",
    "cat": 0,
@@ -4296,7 +4296,7 @@
     "some um da guarda",
     "o lugar se esvazia de medo"
    ],
-   "fim": null,
+   "fim": "barrada",
    "desde": 1,
    "ult": 36,
    "alvo_missao": "investigar",
@@ -4684,7 +4684,7 @@
    "paga": 52,
    "prazo": 55,
    "frente": "f05",
-   "estado": "aberta",
+   "estado": "venceu",
    "quem": null,
    "desde": 43,
    "cat": 2,
@@ -4794,6 +4794,65 @@
    "desde": 50,
    "cat": 0,
    "quem_vai": "mateus"
+  },
+  "m0030": {
+   "de": "nuno",
+   "onde": "vale_do_corvo",
+   "tipo": "limpar",
+   "alvo": "goblin",
+   "n": 1,
+   "paga": 52,
+   "prazo": 72,
+   "frente": "f02",
+   "estado": "aberta",
+   "quem": null,
+   "desde": 57,
+   "cat": 1,
+   "nome_alvo": "a horda da toca do Souto das Águas"
+  },
+  "m0031": {
+   "de": "alba",
+   "onde": "vale_do_corvo",
+   "tipo": "matar",
+   "alvo": "casa:c_astolan",
+   "n": 1,
+   "paga": 265,
+   "prazo": 84,
+   "frente": "f05",
+   "estado": "aberta",
+   "quem": null,
+   "desde": 57,
+   "cat": 2,
+   "nome_alvo": "a ambição dos Astolan"
+  },
+  "m0032": {
+   "de": "rosa",
+   "onde": "varzea_da_nevoa",
+   "tipo": "investigar",
+   "alvo": "ruinas_do_urso",
+   "n": 1,
+   "paga": 67,
+   "prazo": 84,
+   "frente": "f08",
+   "estado": "tomada",
+   "quem": "lesoril",
+   "desde": 57,
+   "cat": 4,
+   "nome_alvo": "a corrida da Liga do Sino Rachado"
+  },
+  "m0033": {
+   "de": "orlando",
+   "onde": "varzea_brava",
+   "tipo": "limpar",
+   "alvo": "toca_do_sal",
+   "n": 1,
+   "paga": 360,
+   "prazo": 85,
+   "frente": null,
+   "estado": "aberta",
+   "quem": null,
+   "desde": 57,
+   "cat": 1
   }
  },
  "noticias": {
@@ -8832,6 +8891,14 @@
     "ribeira_do_lobo": [
      53,
      3
+    ],
+    "ermida_verde": [
+     54,
+     4
+    ],
+    "pinhal_do_ferro": [
+     54,
+     4
     ]
    },
    "janela": false
@@ -8892,6 +8959,22 @@
     "pedra_verde": [
      53,
      3
+    ],
+    "ponte_da_cruz": [
+     54,
+     4
+    ],
+    "ribeira_do_lobo": [
+     54,
+     4
+    ],
+    "ermida_verde": [
+     55,
+     5
+    ],
+    "pinhal_do_ferro": [
+     55,
+     5
     ]
    },
    "janela": false
@@ -8960,6 +9043,14 @@
     "coval_do_vento": [
      53,
      3
+    ],
+    "penha_das_rosas": [
+     54,
+     4
+    ],
+    "pinhal_do_ferro": [
+     54,
+     4
     ]
    },
    "janela": false
@@ -9020,6 +9111,22 @@
     "ribeira_do_lobo": [
      53,
      3
+    ],
+    "varzea_da_nevoa": [
+     54,
+     4
+    ],
+    "coval_do_vento": [
+     54,
+     4
+    ],
+    "pinhal_do_ferro": [
+     54,
+     4
+    ],
+    "penha_das_rosas": [
+     55,
+     5
     ]
    },
    "janela": false
@@ -9089,6 +9196,14 @@
     "castro_real": [
      53,
      3
+    ],
+    "coval_do_vento": [
+     54,
+     4
+    ],
+    "penha_das_rosas": [
+     54,
+     4
     ]
    },
    "janela": false
@@ -9150,17 +9265,364 @@
     "penha_das_rosas": [
      53,
      3
+    ],
+    "ponte_da_cruz": [
+     54,
+     4
+    ],
+    "ribeira_do_lobo": [
+     54,
+     4
+    ],
+    "ermida_verde": [
+     55,
+     5
+    ],
+    "pinhal_do_ferro": [
+     55,
+     5
+    ]
+   },
+   "janela": false
+  },
+  "n00059": {
+   "dia": 55,
+   "onde": "souto_negro",
+   "texto": "Os sumiços da Charneca dos Sinos acabou: o dono dela caiu.",
+   "peso": 3,
+   "tags": [
+    "janela"
+   ],
+   "chegou": {
+    "vale_do_corvo": [
+     55,
+     0
+    ],
+    "varzea_da_nevoa": [
+     55,
+     0
+    ],
+    "ribeira_da_nevoa": [
+     55,
+     0
+    ],
+    "castro_real": [
+     55,
+     0
+    ],
+    "castro_do_sal": [
+     55,
+     0
+    ],
+    "pedra_verde": [
+     55,
+     0
+    ],
+    "pedra_velha": [
+     55,
+     0
+    ],
+    "varzea_brava": [
+     55,
+     0
+    ],
+    "castro_branco": [
+     55,
+     0
+    ],
+    "ponte_da_cruz": [
+     55,
+     0
+    ],
+    "pinhal_do_ferro": [
+     55,
+     0
+    ],
+    "coval_do_vento": [
+     55,
+     0
+    ],
+    "souto_negro": [
+     55,
+     0
+    ],
+    "ribeira_do_lobo": [
+     55,
+     0
+    ],
+    "ermida_verde": [
+     55,
+     0
+    ],
+    "penha_das_rosas": [
+     55,
+     0
+    ]
+   },
+   "janela": true
+  },
+  "n00060": {
+   "dia": 57,
+   "onde": "pedra_verde",
+   "texto": "Celinia conta da história: no ano 817, morre Joreu (afogado na travessia); Irene assume a casa dos Valedel.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     57,
+     0
+    ],
+    "ponte_da_cruz": [
+     58,
+     1
+    ],
+    "ribeira_do_lobo": [
+     58,
+     1
+    ],
+    "varzea_brava": [
+     58,
+     1
+    ],
+    "castro_do_sal": [
+     58,
+     1
+    ],
+    "ermida_verde": [
+     59,
+     2
+    ],
+    "souto_negro": [
+     59,
+     2
+    ],
+    "pinhal_do_ferro": [
+     59,
+     2
+    ],
+    "pedra_velha": [
+     59,
+     2
+    ],
+    "vale_do_corvo": [
+     59,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     59,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00061": {
+   "dia": 57,
+   "onde": "varzea_brava",
+   "texto": "Felícia conta da história: no ano 514, maskia, dos anões, quebrou o cerco de Pedra Verde.",
+   "peso": 0,
+   "tags": [
+    "história"
+   ],
+   "chegou": {
+    "varzea_brava": [
+     57,
+     0
+    ],
+    "ponte_da_cruz": [
+     58,
+     1
+    ],
+    "pedra_velha": [
+     58,
+     1
+    ],
+    "souto_negro": [
+     58,
+     1
+    ],
+    "pedra_verde": [
+     58,
+     1
+    ],
+    "ermida_verde": [
+     59,
+     2
+    ],
+    "castro_do_sal": [
+     59,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     59,
+     2
+    ],
+    "ribeira_do_lobo": [
+     59,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00062": {
+   "dia": 57,
+   "onde": "ribeira_do_lobo",
+   "texto": "O dragão queima um campo em Ribeira do Lobo",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f04"
+   ],
+   "chegou": {
+    "ribeira_do_lobo": [
+     57,
+     0
+    ],
+    "pinhal_do_ferro": [
+     58,
+     1
+    ],
+    "pedra_verde": [
+     58,
+     1
+    ],
+    "ponte_da_cruz": [
+     59,
+     2
+    ],
+    "varzea_brava": [
+     59,
+     2
+    ],
+    "castro_do_sal": [
+     59,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00063": {
+   "dia": 57,
+   "onde": "pedra_verde",
+   "texto": "Um senhor rival morre de repente em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f05"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     57,
+     0
+    ],
+    "ponte_da_cruz": [
+     58,
+     1
+    ],
+    "ribeira_do_lobo": [
+     58,
+     1
+    ],
+    "varzea_brava": [
+     58,
+     1
+    ],
+    "castro_do_sal": [
+     58,
+     1
+    ],
+    "ermida_verde": [
+     59,
+     2
+    ],
+    "souto_negro": [
+     59,
+     2
+    ],
+    "pinhal_do_ferro": [
+     59,
+     2
+    ],
+    "pedra_velha": [
+     59,
+     2
+    ],
+    "vale_do_corvo": [
+     59,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     59,
+     2
+    ]
+   },
+   "janela": false
+  },
+  "n00064": {
+   "dia": 57,
+   "onde": "pedra_verde",
+   "texto": "O gado morre de sede em Pedra Verde",
+   "peso": 2,
+   "tags": [
+    "frente",
+    "f09"
+   ],
+   "chegou": {
+    "pedra_verde": [
+     57,
+     0
+    ],
+    "ponte_da_cruz": [
+     58,
+     1
+    ],
+    "ribeira_do_lobo": [
+     58,
+     1
+    ],
+    "varzea_brava": [
+     58,
+     1
+    ],
+    "castro_do_sal": [
+     58,
+     1
+    ],
+    "ermida_verde": [
+     59,
+     2
+    ],
+    "souto_negro": [
+     59,
+     2
+    ],
+    "pinhal_do_ferro": [
+     59,
+     2
+    ],
+    "pedra_velha": [
+     59,
+     2
+    ],
+    "vale_do_corvo": [
+     59,
+     2
+    ],
+    "ribeira_da_nevoa": [
+     59,
+     2
     ]
    },
    "janela": false
   }
  },
  "ranking": {
-  "semana": 8,
+  "semana": 9,
   "lista": [
    [
     "drastum",
-    350
+    355
    ],
    [
     "taskin",
@@ -9206,6 +9668,10 @@
   {
    "dia": 35,
    "texto": "O bando de Sara na estrada acabou: o dono dela caiu."
+  },
+  {
+   "dia": 55,
+   "texto": "Os sumiços da Charneca dos Sinos acabou: o dono dela caiu."
   }
  ],
  "oculto": {

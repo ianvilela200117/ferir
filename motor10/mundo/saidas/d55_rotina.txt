@@ -1,0 +1,29 @@
+início: Dia 55 · 62 de prata · forja 195 · metal Incomum (1.0, 204)
+Dia 55: prata 62 → 71 · forja 197 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.0, 204)
+    saiu do quadro: - m0022 · acabar com a ambição dos Astolan · 52 de prata · prazo: Dia 55 · de Nuno · contra uma frente
+    evento aqui: missao: a missão m0022 venceu no quadro, sem ninguém
+    evento aqui: rival: Hurgar vende o que caçou
+    evento aqui: rival: Hurgar volta para casa
+    evento aqui: rival: Vesanado vende o que caçou
+    evento aqui: rival: Vesanado volta para casa
+    evento aqui: rival: Jorarino vende o que caçou
+    evento aqui: rival: Jorarino volta para casa
+    evento aqui: rival: Mushag vende o que caçou
+    evento aqui: rival: Mushag volta para casa
+    evento aqui: rival: Taskin vende o que caçou
+    evento aqui: rival: Taskin volta para casa
+PAROU: aconteceu aqui: missao: a missão m0022 venceu no quadro, sem ninguém
+início: Dia 56 · 71 de prata · forja 197 · metal Incomum (1.0, 204)
+Dia 56: prata 71 → 80 · forja 199 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (0.99, 205)
+    missão: - m0030 · limpar goblin, até o chefe do fundo · 52 de prata · prazo: Dia 72 · de Nuno · contra uma frente
+    missão: - m0031 · acabar com a ambição dos Astolan · 265 de prata · prazo: Dia 84 · de Alba · contra uma frente
+    (só o Mestre) frente: a frente f04 (o dragão Brasa) anda ao passo 2: o dragão queima um campo
+    (só o Mestre) frente: a frente f05 (a ambição dos Astolan) anda ao passo 3: um senhor rival morre de repente
+    (só o Mestre) frente: a frente f09 (a seca de Pedra Verde) anda ao passo 4: o gado morre de sede
+    (só o Mestre) a frente f04 foi do passo 1 ao 2
+    (só o Mestre) a frente f05 foi do passo 2 ao 3
+    (só o Mestre) a frente f09 foi do passo 3 ao 4
+PAROU: missão de interesse: - m0030 · limpar goblin, até o chefe do fundo · 52 de prata · prazo: Dia 72 · de Nuno · contra uma frente
+início: Dia 57 · 80 de prata · forja 199 · metal Incomum (0.99, 205)
+Dia 57: prata 80 → 89 · forja 201 · corpo {'fome': 2, 'sono': 1, 'cansaco': 0} · metal Incomum (1.0, 204)
+PAROU: a prata chegou a 89 (meta 84)

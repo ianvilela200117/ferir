@@ -120,7 +120,7 @@
   "lacos": {
    "gilela": "pai"
   },
-  "fama": 7
+  "fama": 8
  },
  "nuno": {
   "nome": "Nuno",
@@ -217,7 +217,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 26,
+  "moedas": 28,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -469,7 +469,7 @@
    "forja": 375,
    "martelo": 40
   },
-  "moedas": 582,
+  "moedas": 586,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -508,7 +508,15 @@
     "dia_grau": null,
     "feitos": []
    }
-  }
+  },
+  "memoria": [
+   {
+    "dia": 54,
+    "de": "eu",
+    "o_que": "Ferord, ferreiro de Pedra Velha, veio à grande forja conhecer o mestre e a bigorna da capital; pediu trabalho de oficial",
+    "peso": 1
+   }
+  ]
  },
  "tome": {
   "nome": "Tomé",
@@ -531,7 +539,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 121,
+  "moedas": 133,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -589,7 +597,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 164,
+  "moedas": 176,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -651,7 +659,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 231,
+  "moedas": 234,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -709,7 +717,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 349,
+  "moedas": 352,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -768,7 +776,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 369,
+  "moedas": 372,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -827,7 +835,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 97,
+  "moedas": 101,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -883,7 +891,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 140,
+  "moedas": 144,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -936,7 +944,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 156,
+  "moedas": 160,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1099,7 +1107,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 202
+   "arcano": 208
   },
   "moedas": 144,
   "corpo": {
@@ -1166,7 +1174,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 178,
+   "manha": 184,
    "adaga": 40
   },
   "moedas": 53,
@@ -1386,7 +1394,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 19,
+  "moedas": 21,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1580,7 +1588,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 53,
+  "moedas": 57,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1725,7 +1733,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 90,
+  "moedas": 102,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1782,7 +1790,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 127,
+  "moedas": 139,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -1960,7 +1968,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 131,
+  "moedas": 135,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2008,7 +2016,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 78,
+  "moedas": 82,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2063,7 +2071,7 @@
    "fé": 160,
    "maça": 40
   },
-  "moedas": 87,
+  "moedas": 91,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2127,7 +2135,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 202
+   "arcano": 208
   },
   "moedas": 136,
   "corpo": {
@@ -2195,7 +2203,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 178,
+   "manha": 184,
    "adaga": 40
   },
   "moedas": 93,
@@ -2406,7 +2414,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 29,
+  "moedas": 31,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2558,7 +2566,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 54,
+  "moedas": 58,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2615,7 +2623,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 88,
+  "moedas": 100,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2725,7 +2733,7 @@
   "treino": {
    "couro": 150
   },
-  "moedas": 142,
+  "moedas": 154,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2792,7 +2800,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 145,
+  "moedas": 149,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2846,7 +2854,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 332,
+  "moedas": 334,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -2964,7 +2972,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 139,
+  "moedas": 143,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3016,7 +3024,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 68,
+  "moedas": 72,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3067,7 +3075,7 @@
    "fé": 160,
    "maça": 40
   },
-  "moedas": 50,
+  "moedas": 54,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3141,7 +3149,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 99,
+  "moedas": 103,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3188,7 +3196,7 @@
    "arcano": 4
   },
   "treino": {
-   "arcano": 202
+   "arcano": 208
   },
   "moedas": 133,
   "corpo": {
@@ -3251,7 +3259,7 @@
    "adaga": 2
   },
   "treino": {
-   "manha": 184,
+   "manha": 190,
    "adaga": 40
   },
   "moedas": 68,
@@ -3321,7 +3329,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 112,
+  "moedas": 116,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -3538,7 +3546,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 5,
   "corpo": {
@@ -3599,7 +3607,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 96,
+  "moedas": 100,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4003,7 +4011,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 2,
   "corpo": {
@@ -4059,7 +4067,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 165,
+  "moedas": 168,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4261,7 +4269,7 @@
   "lacos": {
    "nororado": "irmão"
   },
-  "fama": 7
+  "fama": 8
  },
  "herarina": {
   "nome": "Herarina",
@@ -4348,7 +4356,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 104,
+  "moedas": 108,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4396,7 +4404,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 29,
+  "moedas": 31,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4618,7 +4626,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 30,
+  "moedas": 32,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4665,7 +4673,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 226,
+  "moedas": 228,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4723,7 +4731,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 32,
+  "moedas": 34,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4940,7 +4948,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 158,
+  "moedas": 162,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -4997,7 +5005,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 2,
   "corpo": {
@@ -5052,7 +5060,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 129,
+  "moedas": 133,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5225,7 +5233,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 32,
+  "moedas": 35,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5272,7 +5280,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 10,
   "corpo": {
@@ -5381,7 +5389,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 273,
+  "moedas": 276,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5485,7 +5493,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 5,
   "corpo": {
@@ -5541,7 +5549,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 84,
+  "moedas": 96,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5623,7 +5631,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 21,
+  "moedas": 23,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5684,7 +5692,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 136,
+  "moedas": 140,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5732,7 +5740,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 4,
   "corpo": {
@@ -5847,7 +5855,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 42,
+  "moedas": 49,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5938,7 +5946,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 86,
+  "moedas": 90,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -5988,7 +5996,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 332,
+  "moedas": 334,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6193,7 +6201,7 @@
   "lacos": {
    "orlando": "pai"
   },
-  "fama": 7
+  "fama": 8
  },
  "eulalia": {
   "nome": "Eulália",
@@ -6216,7 +6224,7 @@
    "forja": 150,
    "martelo": 40
   },
-  "moedas": 95,
+  "moedas": 107,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6276,7 +6284,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 105,
+  "moedas": 109,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6373,7 +6381,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 60,
+  "moedas": 67,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6442,7 +6450,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 72,
+  "moedas": 76,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6633,7 +6641,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 9,
   "corpo": {
@@ -6679,7 +6687,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 2,
   "corpo": {
@@ -6737,7 +6745,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 20,
+  "moedas": 27,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6826,7 +6834,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 48,
+  "moedas": 52,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -6874,7 +6882,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 6,
   "corpo": {
@@ -7030,7 +7038,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 4,
   "corpo": {
@@ -7078,7 +7086,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 20,
+  "moedas": 22,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7301,7 +7309,7 @@
    "comércio": 20,
    "adaga": 40
   },
-  "moedas": 111,
+  "moedas": 115,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7392,7 +7400,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 24,
+  "moedas": 26,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7485,7 +7493,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 68,
+  "moedas": 72,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7543,7 +7551,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 40,
+  "moedas": 47,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7619,7 +7627,7 @@
    "machado": 40,
    "coleta": 40
   },
-  "moedas": 40,
+  "moedas": 43,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7666,7 +7674,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 2,
   "corpo": {
@@ -7764,7 +7772,7 @@
    "cura": 40,
    "coleta": 40
   },
-  "moedas": 52,
+  "moedas": 56,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -7816,7 +7824,7 @@
    "arco": 160,
    "caça": 160
   },
-  "moedas": 21,
+  "moedas": 27,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8074,7 +8082,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 56,
+  "moedas": 60,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8125,7 +8133,7 @@
   },
   "maestria": {},
   "treino": {
-   "coleta": 42
+   "coleta": 48
   },
   "moedas": 8,
   "corpo": {
@@ -8179,7 +8187,7 @@
   "treino": {
    "comércio": 80
   },
-  "moedas": 203,
+  "moedas": 208,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8363,7 +8371,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 44,
+  "moedas": 48,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8639,7 +8647,7 @@
    "martelo": 40,
    "coleta": 40
   },
-  "moedas": 56,
+  "moedas": 60,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8689,7 +8697,7 @@
   },
   "maestria": {},
   "treino": {},
-  "moedas": 22,
+  "moedas": 24,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8799,7 +8807,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 127,
+  "moedas": 142,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8818,7 +8826,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 61
    }
   },
   "carga": {},
@@ -8851,7 +8859,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 106,
+  "moedas": 123,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8869,7 +8877,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 60
    }
   },
   "carga": {},
@@ -8913,7 +8921,7 @@
   "treino": {
    "fé": 40
   },
-  "moedas": 146,
+  "moedas": 159,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8931,7 +8939,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 61
    }
   },
   "carga": {},
@@ -8977,7 +8985,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 160,
+  "moedas": 178,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -8995,7 +9003,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 61
    }
   },
   "carga": {},
@@ -9037,7 +9045,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 71,
+  "moedas": 101,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9055,8 +9063,9 @@
     "manha"
    ],
    "plano": {
-    "o_que": "caca",
-    "ate": 55
+    "o_que": "junto",
+    "de": "lesoril",
+    "ate": 61
    }
   },
   "carga": {},
@@ -9091,7 +9100,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 137,
+  "moedas": 165,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9109,7 +9118,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 60
    }
   },
   "carga": {},
@@ -9155,7 +9164,7 @@
   "treino": {
    "espada": 40
   },
-  "moedas": 175,
+  "moedas": 188,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9173,7 +9182,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 61
    }
   },
   "carga": {},
@@ -9213,7 +9222,7 @@
   "treino": {
    "machado": 40
   },
-  "moedas": 156,
+  "moedas": 175,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9231,7 +9240,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 61
    }
   },
   "carga": {},
@@ -9267,7 +9276,7 @@
   "treino": {
    "arcano": 40
   },
-  "moedas": 148,
+  "moedas": 175,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9285,7 +9294,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 63
    }
   },
   "carga": {},
@@ -9332,7 +9341,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 151,
+  "moedas": 167,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9351,7 +9360,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 61
    }
   },
   "carga": {},
@@ -9389,7 +9398,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 126,
+  "moedas": 143,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9408,7 +9417,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 60
    }
   },
   "carga": {},
@@ -9463,7 +9472,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 63
+   }
   },
   "carga": {},
   "talento": {
@@ -9515,7 +9527,11 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "junto",
+    "de": "lesoril",
+    "ate": 61
+   }
   },
   "carga": {},
   "talento": {
@@ -9565,7 +9581,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 63
+   }
   },
   "carga": {},
   "talento": {
@@ -9619,7 +9638,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 63
+   }
   },
   "carga": {},
   "talento": {
@@ -9654,7 +9676,7 @@
   "treino": {
    "espada": 40
   },
-  "moedas": 151,
+  "moedas": 165,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9672,7 +9694,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 63
    }
   },
   "carga": {},
@@ -9727,7 +9749,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 63
+   }
   },
   "carga": {},
   "talento": {
@@ -9787,7 +9812,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 61
+   }
   },
   "carga": {},
   "talento": {
@@ -9865,7 +9893,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 61
+   }
   },
   "carga": {},
   "talento": {
@@ -9915,7 +9946,11 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "junto",
+    "de": "lesoril",
+    "ate": 61
+   }
   },
   "carga": {},
   "talento": {
@@ -9959,7 +9994,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 194,
+  "moedas": 205,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -9977,7 +10012,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 62
    }
   },
   "carga": {},
@@ -10029,7 +10064,7 @@
   "treino": {
    "arco": 160
   },
-  "moedas": 152,
+  "moedas": 175,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10047,7 +10082,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 62
    }
   },
   "carga": {},
@@ -10098,7 +10133,7 @@
    "adaga": 40,
    "manha": 40
   },
-  "moedas": 353,
+  "moedas": 373,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10116,8 +10151,10 @@
     "manha"
    ],
    "plano": {
-    "o_que": "caca",
-    "ate": 56
+    "o_que": "missao",
+    "alvo": "m0032",
+    "ate": 61,
+    "c": 0.53
    }
   },
   "carga": {},
@@ -10152,7 +10189,7 @@
   "treino": {
    "lança": 160
   },
-  "moedas": 204,
+  "moedas": 230,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10170,7 +10207,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 60
    }
   },
   "carga": {},
@@ -10233,7 +10270,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 62
+   }
   },
   "carga": {},
   "talento": {
@@ -10286,7 +10326,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 61
+   }
   },
   "carga": {},
   "talento": {
@@ -10333,7 +10376,7 @@
   "treino": {
    "arcano": 160
   },
-  "moedas": 232,
+  "moedas": 253,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10351,7 +10394,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 55
+    "ate": 60
    }
   },
   "carga": {},
@@ -10406,7 +10449,7 @@
   "treino": {
    "arco": 40
   },
-  "moedas": 159,
+  "moedas": 189,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10424,7 +10467,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 63
    }
   },
   "carga": {},
@@ -10459,7 +10502,7 @@
   "treino": {
    "montante": 160
   },
-  "moedas": 196,
+  "moedas": 210,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10477,7 +10520,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 62
    }
   },
   "carga": {},
@@ -10525,7 +10568,7 @@
   "treino": {
    "espada": 500
   },
-  "moedas": 333,
+  "moedas": 352,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10543,7 +10586,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 63
    }
   },
   "carga": {},
@@ -10597,7 +10640,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 325,
+  "moedas": 334,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10615,7 +10658,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 63
    }
   },
   "carga": {},
@@ -10672,7 +10715,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 349,
+  "moedas": 363,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10690,7 +10733,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 61
    }
   },
   "carga": {},
@@ -10745,7 +10788,7 @@
   "treino": {
    "machado": 500
   },
-  "moedas": 308,
+  "moedas": 327,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10763,7 +10806,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 63
    }
   },
   "carga": {},
@@ -10809,7 +10852,7 @@
   "treino": {
    "fé": 500
   },
-  "moedas": 197,
+  "moedas": 205,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10827,7 +10870,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 60
    }
   },
   "carga": {},
@@ -10882,7 +10925,7 @@
   "treino": {
    "lança": 500
   },
-  "moedas": 305,
+  "moedas": 333,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -10900,7 +10943,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 60
    }
   },
   "carga": {},
@@ -10964,7 +11007,10 @@
    "talento_novos": [
     "manha"
    ],
-   "plano": null
+   "plano": {
+    "o_que": "caca",
+    "ate": 63
+   }
   },
   "carga": {},
   "talento": {
@@ -11007,7 +11053,7 @@
   "treino": {
    "arcano": 500
   },
-  "moedas": 347,
+  "moedas": 377,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -11025,7 +11071,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 54
+    "ate": 61
    }
   },
   "carga": {},
@@ -11082,7 +11128,7 @@
   "treino": {
    "arco": 500
   },
-  "moedas": 545,
+  "moedas": 553,
   "corpo": {
    "fome": 0,
    "sono": 0,
@@ -11100,7 +11146,7 @@
    ],
    "plano": {
     "o_que": "caca",
-    "ate": 56
+    "ate": 62
    }
   },
   "carga": {},
@@ -11172,10 +11218,10 @@
     "manha"
    ],
    "plano": {
-    "o_que": "missao",
-    "alvo": "m0028",
-    "ate": 55,
-    "c": 0.99
+    "o_que": "chefe",
+    "alvo": "penhascos_das_aguas|serpe",
+    "ate": 63,
+    "c": 0.97
    }
   },
   "carga": {},
@@ -11188,7 +11234,7 @@
   "povo": "anão",
   "idade": 165,
   "sobre": "aventureiro de lenda, anda sozinho",
-  "fama": 304,
+  "fama": 310,
   "papel": "aventureiro",
   "rival": true,
   "habilidades": {
@@ -11235,15 +11281,8 @@
    "sono": 0,
    "cansaco": 0
   },
-  "pv": 166,
-  "feridas": [
-   {
-    "parte": "cabeça",
-    "grave": false,
-    "dia": 47,
-    "repouso": 0
-   }
-  ],
+  "pv": 257,
+  "feridas": [],
   "estado": "vivo",
   "marca": {
    "talento_base": {
@@ -11253,10 +11292,10 @@
     "manha"
    ],
    "plano": {
-    "o_que": "descansa",
-    "ate": 57
+    "o_que": "caca",
+    "ate": 62
    },
-   "cena": 276
+   "cena": 336
   },
   "carga": {},
   "talento": {
@@ -11345,7 +11384,7 @@
  },
  "eu": {
   "nome": "Ferord",
-  "lugar": "pedra_velha",
+  "lugar": "vale_do_corvo",
   "grau_oficio": "aprendiz",
   "nivel": 5,
   "atributos": {
@@ -11361,11 +11400,11 @@
    "martelo": 2
   },
   "treino": {
-   "forja": 194,
-   "martelo": 51,
-   "comércio": 7
+   "forja": 204,
+   "martelo": 54,
+   "comércio": 8
   },
-  "moedas": 67,
+  "moedas": 6,
   "corpo": {
    "fome": 3,
    "sono": 1,
@@ -11383,27 +11422,34 @@
    "talento_novos": [
     "manha"
    ],
-   "pesados_dia": 52,
+   "pesados_dia": 58,
    "pesados": 3,
-   "jornada_dia": 52,
+   "jornada_dia": 57,
    "jornada": 2,
    "cama": {
-    "ate": 317,
-    "onde": "pedra_velha"
+    "ate": 353,
+    "onde": "vale_do_corvo"
    },
    "ensino_incomum": null,
-   "negocio_dia": 45,
+   "negocio_dia": 58,
    "receita": {
     "tenaz": [
      "prumo",
      "afinada",
      "fagulha"
     ]
-   }
+   },
+   "viagem": null,
+   "ermo_dia": 54,
+   "andou": [
+    "estrada_castro_do_sal_pedra_velha",
+    "estrada_vale_do_corvo_castro_do_sal"
+   ]
   },
   "carga": {
    "metal:0": 1,
-   "madeira:0": 1
+   "madeira:0": 1,
+   "comida": 2
   },
   "jogador": true,
   "talento": {

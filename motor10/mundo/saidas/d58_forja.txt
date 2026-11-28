@@ -1,0 +1,6 @@
+Obra o0008 aberta: Malha de Ferord (Incomum). Entraram 4 de metal Incomum.
+Ferord trabalha 3 blocos na obra o0008, Malha de Ferord (Incomum): 3 de 3
+#1 Ferord, forjar Malha de Ferord (Incomum): 17 e 4, +7 de Afinidade, +34 = 62 contra 55: PASSA
+  (o +34: maestria 4, matéria 15, martelo de forja 3, tenaz 3, oficina 3, preparo 6) · as CDs: Comum 22 · Incomum 55 · Raro 80 (o teto: Raro)
+Ferord forja Malha de Ferord: soma 62, a peça sai Incomum; faltaram 18 para a Rara (80): o terço de baixo, 0 da faixa, 0 dos 20 = 0: nenhum efeito. Entrou no Livro de Itens: i0731
+Dia 58, noite (20h) · primavera · PV 111/111 · sem fome (fome 1) · sem sono (sono 4) · com forças (cansaço 6) · fôlego máximo −2 · 8 de prata
