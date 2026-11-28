@@ -25,6 +25,14 @@
     "b": "vai a Vale do Corvo: conhecer Simão e a grande forja (lá a forja soma +3, não +1) e oferecer peças às guildas",
     "c": "investiga Souto Negro de novo (1 bloco: 2d20 + 4 contra 26)"
    }
+  },
+  {
+   "n": 3,
+   "texto": "(Fora do jogo) A fase 3 da parte 2 é a próxima: os dons e o nível que sobe com a experiência dos feitos (a sua resposta 3a). Cada fase gasta muito do seu limite de uso (a fase 2 bateu no limite semanal e o conserto teve de ser retomado). Quando construir?",
+   "opcoes": {
+    "a": "começar agora, em paralelo ao jogo (como as fases 1b e 2)",
+    "b": "jogar uns turnos primeiro e começar depois"
+   }
   }
  ],
  "respondidas": [],
