@@ -56,7 +56,17 @@
     "o_que": "cumpriu a missão que eu paguei (descobrir o que há por trás da ambição dos Astolan)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "hilda": {
   "nome": "Hilda",
@@ -172,7 +182,25 @@
     "o_que": "tomou a minha missão e largou",
     "peso": -2
    }
-  ]
+  ],
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "manter": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "leandro": {
   "nome": "Leandro",
@@ -470,7 +498,17 @@
   "idade": 29,
   "sobre": "o mestre ferreiro da capital; faz a peça de núcleo para quem traz",
   "casa": "c_veloso_vale_do_corvo",
-  "papel": "ferreiro"
+  "papel": "ferreiro",
+  "habilidades": {
+   "reparo": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "tome": {
   "nome": "Tomé",
@@ -520,7 +558,17 @@
   "idade": 43,
   "sobre": "o ferreiro; conserta e vende o que forja",
   "casa": "c_mota_vale_do_corvo",
-  "papel": "ferreiro"
+  "papel": "ferreiro",
+  "habilidades": {
+   "malho_quente": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "urko": {
   "nome": "Urko",
@@ -572,7 +620,17 @@
   "idade": 32,
   "sobre": "o coureiro; curte o couro e faz armadura dele",
   "casa": "c_cordeiro_vale_do_corvo",
-  "papel": "coureiro"
+  "papel": "coureiro",
+  "habilidades": {
+   "reparo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "graca": {
   "nome": "Graça",
@@ -620,7 +678,17 @@
   "idade": 36,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_cabral_vale_do_corvo",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "fausto": {
   "nome": "Fausto",
@@ -669,7 +737,17 @@
   "idade": 38,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_pardo_vale_do_corvo",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "lingua": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "selina": {
   "nome": "Selina",
@@ -716,7 +794,17 @@
   "idade": 21,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_amado_vale_do_corvo",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "lingua": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "moninho": {
   "nome": "Moninho",
@@ -982,7 +1070,17 @@
   "idade": 42,
   "sobre": "do santuário; cura e benze",
   "casa": "c_lemos_vale_do_corvo",
-  "papel": "sacerdote"
+  "papel": "sacerdote",
+  "habilidades": {
+   "mao_rito": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "nara": {
   "nome": "Nara",
@@ -1038,7 +1136,17 @@
   "idade": 34,
   "sobre": "o mago; ensina o arcano a quem paga",
   "casa": "c_bravo_vale_do_corvo",
-  "papel": "mago"
+  "papel": "mago",
+  "habilidades": {
+   "mana_curta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "ursula": {
   "nome": "Úrsula",
@@ -1089,7 +1197,17 @@
   "idade": 29,
   "sobre": "vive de manha; abre o que está fechado",
   "casa": "c_neiva_vale_do_corvo",
-  "papel": "ladino"
+  "papel": "ladino",
+  "habilidades": {
+   "romper_linha": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "isabel": {
   "nome": "Isabel",
@@ -1241,7 +1359,17 @@
     "o_que": "não cumpriu a missão no prazo",
     "peso": -2
    }
-  ]
+  ],
+  "habilidades": {
+   "riposta": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "petronila": {
   "nome": "Petronila",
@@ -1339,7 +1467,25 @@
   "idade": 48,
   "sobre": "o capitão da guarda de Várzea da Névoa",
   "casa": "c_outeiro_varzea_da_nevoa",
-  "papel": "capitão"
+  "papel": "capitão",
+  "habilidades": {
+   "rasteira": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "cosme": {
   "nome": "Cosme",
@@ -1393,6 +1539,24 @@
   "papel": "capitão",
   "lacos": {
    "hereu": "cônjuge"
+  },
+  "habilidades": {
+   "manter": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "hereu": {
@@ -1587,7 +1751,17 @@
   "idade": 34,
   "sobre": "o ferreiro; conserta e vende o que forja",
   "casa": "c_veloso_varzea_da_nevoa",
-  "papel": "ferreiro"
+  "papel": "ferreiro",
+  "habilidades": {
+   "brio": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "jorano": {
   "nome": "Jorano",
@@ -1634,7 +1808,17 @@
   "idade": 40,
   "sobre": "o coureiro; curte o couro e faz armadura dele",
   "casa": "c_raposo_varzea_da_nevoa",
-  "papel": "coureiro"
+  "papel": "coureiro",
+  "habilidades": {
+   "ajuste_fino": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "teodoro": {
   "nome": "Teodoro",
@@ -1684,7 +1868,17 @@
   "idade": 34,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_pardo_varzea_da_nevoa",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "fio_conversa": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "garcia": {
   "nome": "Garcia",
@@ -1733,7 +1927,17 @@
   "idade": 16,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_antunes_varzea_da_nevoa",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "prisca": {
   "nome": "Prisca",
@@ -1894,7 +2098,17 @@
   "idade": 20,
   "sobre": "do santuário; cura e benze",
   "casa": "c_coelho_varzea_da_nevoa",
-  "papel": "sacerdote"
+  "papel": "sacerdote",
+  "habilidades": {
+   "corrente": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "tomasia": {
   "nome": "Tomásia",
@@ -1951,7 +2165,17 @@
   "idade": 21,
   "sobre": "o mago; ensina o arcano a quem paga",
   "casa": "c_teixeira_varzea_da_nevoa",
-  "papel": "mago"
+  "papel": "mago",
+  "habilidades": {
+   "mao_rito": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "leonor": {
   "nome": "Leonor",
@@ -2005,7 +2229,17 @@
   "idade": 39,
   "sobre": "vive de manha; abre o que está fechado",
   "casa": "c_caldas_varzea_da_nevoa",
-  "papel": "ladino"
+  "papel": "ladino",
+  "habilidades": {
+   "romper_linha": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "iria": {
   "nome": "Iria",
@@ -2056,7 +2290,25 @@
   "sobre": "o capitão da guarda de Ribeira da Névoa",
   "casa": "c_matos_ribeira_da_nevoa",
   "papel": "capitão",
-  "fama": 1
+  "fama": 1,
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "rasteira": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "madalena": {
   "nome": "Madalena",
@@ -2119,7 +2371,25 @@
     "o_que": "tomou a minha missão e largou",
     "peso": -2
    }
-  ]
+  ],
+  "habilidades": {
+   "rasteira": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "damiao": {
   "nome": "Damião",
@@ -2377,6 +2647,16 @@
   "papel": "ferreiro",
   "lacos": {
    "isidoro": "filho"
+  },
+  "habilidades": {
+   "malho_quente": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "isidoro": {
@@ -2479,6 +2759,16 @@
   "papel": "coureiro",
   "lacos": {
    "rosareu": "cônjuge"
+  },
+  "habilidades": {
+   "ajuste_fino": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "rosareu": {
@@ -2583,7 +2873,17 @@
   "idade": 37,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_freitas_ribeira_da_nevoa",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "pascoal": {
   "nome": "Pascoal",
@@ -2631,7 +2931,17 @@
   "idade": 38,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_coelho_ribeira_da_nevoa",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "policarpo": {
   "nome": "Policarpo",
@@ -2798,6 +3108,16 @@
   "papel": "sacerdote",
   "lacos": {
    "rosarado": "cônjuge"
+  },
+  "habilidades": {
+   "corrente": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "rosarado": {
@@ -2901,7 +3221,17 @@
   "idade": 51,
   "sobre": "o mago; ensina o arcano a quem paga",
   "casa": "c_seixas_ribeira_da_nevoa",
-  "papel": "mago"
+  "papel": "mago",
+  "habilidades": {
+   "mana_curta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "justa": {
   "nome": "Justa",
@@ -2958,6 +3288,16 @@
   "lacos": {
    "davi": "cônjuge",
    "gilanado": "filho"
+  },
+  "habilidades": {
+   "romper_linha": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "davi": {
@@ -3114,6 +3454,16 @@
   "lacos": {
    "branca": "cônjuge",
    "danano": "filho"
+  },
+  "habilidades": {
+   "paciencia": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "branca": {
@@ -3443,6 +3793,24 @@
   "papel": "caçador",
   "lacos": {
    "erarina": "irmão"
+  },
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "pe_lebre": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "serafina": {
@@ -3499,6 +3867,24 @@
   "papel": "caçador",
   "lacos": {
    "genoveva": "filho"
+  },
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "genoveva": {
@@ -3699,7 +4085,17 @@
   "idade": 23,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_pastor_castro_real",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "boskul": {
   "nome": "Boskul",
@@ -3800,7 +4196,17 @@
     "o_que": "cumpriu a missão que eu paguei (descobrir o que há por trás dos sumiços da Charneca dos Sinos)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "nicolau": {
   "nome": "Nicolau",
@@ -3909,7 +4315,17 @@
   "idade": 16,
   "sobre": "o ferreiro; conserta e vende o que forja",
   "casa": "c_teixeira_castro_do_sal",
-  "papel": "ferreiro"
+  "papel": "ferreiro",
+  "habilidades": {
+   "paciencia": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "gilina": {
   "nome": "Gilina",
@@ -4114,7 +4530,25 @@
   "idade": 39,
   "sobre": "caça no ermo e vende o couro",
   "casa": "c_junqueira_castro_do_sal",
-  "papel": "caçador"
+  "papel": "caçador",
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "pe_lebre": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "vesao": {
   "nome": "Vesão",
@@ -4262,6 +4696,16 @@
   "papel": "mercador",
   "lacos": {
    "perina": "irmão"
+  },
+  "habilidades": {
+   "fio_conversa": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "perina": {
@@ -4401,6 +4845,16 @@
   "papel": "senhor",
   "lacos": {
    "elvira": "irmão"
+  },
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "elvira": {
@@ -4516,6 +4970,16 @@
   "papel": "ferreiro",
   "lacos": {
    "joaquim": "filho"
+  },
+  "habilidades": {
+   "paciencia": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "joaquim": {
@@ -4726,6 +5190,24 @@
   "lacos": {
    "benedita": "cônjuge",
    "hugo": "filho"
+  },
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "benedita": {
@@ -4929,7 +5411,17 @@
   "idade": 24,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_faria_pedra_verde",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "fio_conversa": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "celinia": {
   "nome": "Celinia",
@@ -5104,7 +5596,17 @@
     "o_que": "Ferord forjou na minha forja o primeiro martelo Incomum dele, e saiu dos bons",
     "peso": 1
    }
-  ]
+  ],
+  "habilidades": {
+   "brio": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "berareu": {
   "nome": "Berareu",
@@ -5395,7 +5897,25 @@
     "o_que": "cumpriu a missão que eu paguei (matar 3 lobos na Charneca dos Sinos)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "paio": {
   "nome": "Paio",
@@ -5497,7 +6017,17 @@
   "idade": 49,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_caldas_pedra_velha",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "avaliador": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "erado": {
   "nome": "Erado",
@@ -5598,6 +6128,16 @@
   "papel": "senhor",
   "lacos": {
    "dalva": "filho"
+  },
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "dalva": {
@@ -5703,7 +6243,17 @@
   "idade": 36,
   "sobre": "o ferreiro; conserta e vende o que forja",
   "casa": "c_matos_varzea_brava",
-  "papel": "ferreiro"
+  "papel": "ferreiro",
+  "habilidades": {
+   "brio": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "jorelada": {
   "nome": "Jorelada",
@@ -5851,7 +6401,25 @@
   "idade": 45,
   "sobre": "caça no ermo e vende o couro",
   "casa": "c_franco_varzea_brava",
-  "papel": "caçador"
+  "papel": "caçador",
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "irania": {
   "nome": "Irania",
@@ -5951,7 +6519,17 @@
   "idade": 18,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_cordeiro_varzea_brava",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "fio_conversa": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "felicia": {
   "nome": "Felícia",
@@ -6207,7 +6785,25 @@
     "o_que": "cumpriu a missão que eu paguei (matar 3 aranha-de-tocas nas Grutas do Vento)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "pe_lebre": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "ines": {
   "nome": "Inês",
@@ -6399,6 +6995,24 @@
   "papel": "caçador",
   "lacos": {
    "jordao": "filho"
+  },
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "pe_lebre": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "jordao": {
@@ -6646,6 +7260,24 @@
   "lacos": {
    "clara": "cônjuge",
    "louinia": "filho"
+  },
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
   }
  },
  "clara": {
@@ -6946,7 +7578,25 @@
     "o_que": "cumpriu a missão que eu paguei (matar 3 ursos no Souto das Águas)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "ferorada": {
   "nome": "Ferorada",
@@ -7213,7 +7863,25 @@
     "o_que": "cumpriu a missão que eu paguei (matar 3 lobos na Charneca dos Sinos)",
     "peso": 3
    }
-  ]
+  ],
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "picada": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "irino": {
   "nome": "Irino",
@@ -7314,7 +7982,25 @@
   "sobre": "o capitão da guarda de Ribeira do Lobo",
   "casa": "c_bravo_ribeira_do_lobo",
   "papel": "capitão",
-  "fama": 1
+  "fama": 1,
+  "habilidades": {
+   "manter": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "grumbo": {
   "nome": "Grumbo",
@@ -7519,7 +8205,17 @@
   "idade": 81,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_coelho_ribeira_do_lobo",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "lingua": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "nelo": {
   "nome": "Nelo",
@@ -7577,7 +8273,25 @@
     "o_que": "não cumpriu a missão no prazo",
     "peso": -2
    }
-  ]
+  ],
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "manter": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "magrok": {
   "nome": "Magrok",
@@ -7725,7 +8439,17 @@
   "idade": 44,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_barreiro_ermida_verde",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "lingua": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "targo": {
   "nome": "Targo",
@@ -7780,7 +8504,25 @@
   "lacos": {
    "tambum": "filho"
   },
-  "fama": 2
+  "fama": 2,
+  "habilidades": {
+   "manter": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "tambum": {
   "nome": "Tambum",
@@ -8024,7 +8766,17 @@
   "idade": 126,
   "sobre": "mercador; compra e vende, e leva carga pela estrada",
   "casa": "c_couto_penha_das_rosas",
-  "papel": "mercador"
+  "papel": "mercador",
+  "habilidades": {
+   "lingua": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "duarte": {
   "nome": "Duarte",
@@ -9055,7 +9807,25 @@
   "sobre": "aventureiro de ofício, anda sozinho",
   "fama": 18,
   "papel": "aventureiro",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "romper_linha": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "caio": {
   "nome": "Caio",
@@ -9228,7 +9998,17 @@
   "sobre": "aventureiro de ofício, anda sozinho",
   "fama": 11,
   "papel": "aventureiro",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mana_curta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "lourenco": {
   "nome": "Lourenço",
@@ -9285,7 +10065,17 @@
   "fama": 13,
   "papel": "aventureiro",
   "guilda": "g_a_ordem_da_raposa",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mira_firme": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "lesoril": {
   "nome": "Lesoril",
@@ -9396,7 +10186,17 @@
   "fama": 28,
   "papel": "aventureiro",
   "guilda": "g_a_mesa_do_corvo_branco",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "rasteira": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "tarvok": {
   "nome": "Tarvok",
@@ -9502,7 +10302,17 @@
   "fama": 14,
   "papel": "aventureiro",
   "guilda": "g_a_ordem_da_raposa",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "riposta": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "roque": {
   "nome": "Roque",
@@ -9565,7 +10375,17 @@
   "sobre": "aventureiro de ofício, anda sozinho",
   "fama": 22,
   "papel": "aventureiro",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mao_rito": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "flora": {
   "nome": "Flora",
@@ -9674,7 +10494,17 @@
   "fama": 11,
   "papel": "aventureiro",
   "guilda": "g_a_mesa_do_corvo_branco",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "varrida": {
+    "grau": 1,
+    "marcas": 10,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "mirys": {
   "nome": "Mirys",
@@ -9728,7 +10558,25 @@
   "fama": 139,
   "papel": "aventureiro",
   "guilda": "g_a_guarda_das_sete_pedras",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "teima": {
+    "grau": 2,
+    "marcas": 30,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "jorarino": {
   "nome": "Jorarino",
@@ -9793,7 +10641,17 @@
   "fama": 65,
   "papel": "aventureiro",
   "guilda": "g_a_liga_do_sino_rachado",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mana_curta": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "ernesto": {
   "nome": "Ernesto",
@@ -9856,7 +10714,17 @@
   "fama": 94,
   "papel": "aventureiro",
   "guilda": "g_a_guarda_das_sete_pedras",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mao_rito": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "mestre",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "aemine": {
   "nome": "Aemine",
@@ -9910,7 +10778,17 @@
   "fama": 73,
   "papel": "aventureiro",
   "guilda": "g_a_irmandade_da_estrada",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "aerion": {
   "nome": "Aerion",
@@ -9973,7 +10851,17 @@
   "fama": 89,
   "papel": "aventureiro",
   "guilda": "g_a_guarda_das_sete_pedras",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mana_curta": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "mushag": {
   "nome": "Mushag",
@@ -10029,7 +10917,17 @@
   "fama": 73,
   "papel": "aventureiro",
   "guilda": "g_a_ordem_da_raposa",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "manter": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "quirino": {
   "nome": "Quirino",
@@ -10078,7 +10976,17 @@
   "fama": 76,
   "papel": "aventureiro",
   "guilda": "g_a_liga_do_sino_rachado",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "corte_fundo": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "louado": {
   "nome": "Louado",
@@ -10143,7 +11051,17 @@
   "fama": 70,
   "papel": "aventureiro",
   "guilda": "g_a_guarda_das_sete_pedras",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mana_curta": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "livro",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "taskin": {
   "nome": "Taskin",
@@ -10198,7 +11116,25 @@
   "fama": 301,
   "papel": "aventureiro",
   "guilda": "g_a_liga_do_sino_rachado",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "mira_firme": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "teima": {
+    "grau": 2,
+    "marcas": 30,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "drastum": {
   "nome": "Drastum",
@@ -10254,7 +11190,25 @@
   "sobre": "aventureiro de lenda, anda sozinho",
   "fama": 304,
   "papel": "aventureiro",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "teima": {
+    "grau": 2,
+    "marcas": 30,
+    "origem": "licao",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   },
+   "tranco": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "nynena": {
   "nome": "Nynena",
@@ -10319,7 +11273,17 @@
   "sobre": "aventureiro de lenda, anda sozinho",
   "fama": 304,
   "papel": "aventureiro",
-  "rival": true
+  "rival": true,
+  "habilidades": {
+   "tranco": {
+    "grau": 3,
+    "marcas": 80,
+    "origem": "estalo",
+    "desde": 53,
+    "dia_grau": null,
+    "feitos": []
+   }
+  }
  },
  "chefe_sara": {
   "nome": "Sara",
