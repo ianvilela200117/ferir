@@ -13,7 +13,7 @@ O save é uma pasta (`mundo/`, ou a que estiver em MOTOR10_MUNDO) com: relogio.j
     ['lugar', id, campo ou campo.sub, 'soma'|'poe', valor]   um número ou uma marca do lugar (bichos.lobo, coleta.metal:0, oficina, pop); 'soma' nunca abaixo de zero;
                                                      o que é conta (bichos, teto, coleta, coleta_teto, produz, pop, oficina, preparo) só aceita número, na faixa dele
     ['lugar', 'nasce', id, registro]                 um lugar novo (nome; o resto tem padrão). Só em evento "gera" ou "mestre"
-    ['ferida', id, 'abre', parte, grave]  ·  ['ferida', id, 'repousa', n]  ·  ['ferida', id, 'sara', indice]
+    ['ferida', id, 'abre', parte, grave]  ·  ['ferida', id, 'repousa', n]  ·  ['ferida', id, 'repousa', n, indice] (uma ferida só)  ·  ['ferida', id, 'sara', indice]
     ['estoque', lugar, bem, 'soma', valor]
     ['item', id, campo, 'poe'|'soma', valor]         dono · uso · dur
     ['item', 'nasce', registro]                      uma peça nova entra no Livro de Itens (o id sai da sequência); também núcleos (tipo 'nucleo')
@@ -70,6 +70,12 @@ Uso (para olhar): python3 estado.py valida | python3 estado.py eventos [N] | pyt
      (o Mestre): python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas na estrada"      um evento "mestre", com os efeitos em JSON
      (o Mestre): python3 estado.py entrada 1a          o evento de ENTRADA de uma fase da parte 2 (DESENHO 9.5), no mesmo commit dela: o marco no save (mundo.oculto)
      (o Mestre): python3 estado.py entrada 1b          (a fase 1b) o marco e a conversão: o devolve fixo vira %, o sangra vira a Sangria Comum (acima da Comum, fica); o critico_19 fica (a resposta 2a)
+     (o Mestre): python3 estado.py entrada 2           (a fase 2) o marco e as habilidades que a mão e a vida explicam, pela semente, aos rivais e aos nomeados vivos (o personagem não)
+  OS DA PARTE 2, FASE 2 (as habilidades e a fala; DESENHO 9.1 e 9.5; os números no tabelas_habilidades.py):
+    ['pessoa', id, 'habilidade', 'aprende', {chave, origem, grau?}] · ['pessoa', id, 'habilidade', 'esquece', CHAVE]      (o grau ao nascer, só em gera, mestre ou entrada)
+    · ['pessoa', id, 'hab.CHAVE', 'soma', marcas] · ['pessoa', id, 'hab.CHAVE', 'grau', g] (só +1 por evento, um por dia, com as marcas vezes o talento, a mão, o feito, o teto da
+      origem e do talento) · ['pessoa', id, 'hab.CHAVE', 'feito', {dia, como}] · ['pessoa', id, 'hab.CHAVE', 'usada', dia] (a de dia)
+    · ['pessoa', id, 'copia.CHAVE', 'soma', 1] (3 fecha) · ['pessoa', id, 'talho', 'junta', CHAVE_DE_EFEITO] (o livro do Risco do Talho). Os eventos novos: "fala" e "habilidade".
 """
 import copy, hashlib, json, os, random, sys
 import tabelas as T
@@ -135,7 +141,8 @@ def sorte(E, chave):
 ENTRADAS = {'1a': 'a faixa da forja e os efeitos de ferramenta (a parte 2). Nada a converter: a peça de antes, sem teto_efeitos, usa o da categoria, '
                   'e as duas peças com efeito de hoje cabem nos tetos novos',
             '1b': 'a base da luta e os efeitos de item (a parte 2). O devolve fixo vira o % da categoria; o sangra vira a Sangria Comum (na peça Comum, a chave nova; acima, fica o de antes); o derruba segue, e entra no calejo de pernas; '
-                  'o critico_19 fica na peça que já o tem (a resposta 2a: o que nasceu, nasceu); as armas e armaduras da 1a escolhem do catálogo de luta'}      # (DESENHO 9.5) o evento de ENTRADA de cada fase, no mesmo commit dela
+                  'o critico_19 fica na peça que já o tem (a resposta 2a: o que nasceu, nasceu); as armas e armaduras da 1a escolhem do catálogo de luta',
+            '2': 'as habilidades e o teste de fala (a parte 2). Os rivais e os nomeados vivos recebem, pela semente, as habilidades que a mão e a vida explicam; o personagem, nenhuma (a primeira nasce em cena)'}      # (DESENHO 9.5) o evento de ENTRADA de cada fase, no mesmo commit dela
 
 
 def entrada(E, fase):
@@ -146,6 +153,9 @@ def entrada(E, fase):
     if ((E.get('mundo') or {}).get('oculto') or {}).get(f'entrada/{fase}') is not None: return None
     ef = [['mundo', 'oculto', f'entrada/{fase}', 'poe', E['relogio']['dia']]]
     if fase == '1b': ef += converte_1b(E)
+    if fase == '2':
+        import habilidade
+        ef += habilidade.entrada(E)
     return aplica(E, 'entrada', ef, texto=f'a entrada da fase {fase}: {ENTRADAS[fase]}')
 
 
@@ -712,6 +722,7 @@ def _um(E, ef):
         if not isinstance(campo, str): return _erro(ef, 'o campo é um nome')
         raiz, _, sub = campo.partition('.')
         if campo in PESSOA_REGIAO or raiz == 'lacos': return _pessoa_regiao(E, pid, p, campo, raiz, sub, op, val, ef)
+        if campo in ('habilidade', 'talho') or raiz in ('hab', 'copia'): return _pessoa_hab(E, pid, p, campo, raiz, sub, op, val, ef)      # (a parte 2, fase 2) as habilidades
         if campo in PESSOA_MAGIA: return _pessoa_magia(E, pid, p, campo, op, val, ef)
         if campo in PESSOA_4B:
             if op != 'poe': return _erro(ef, f'"{campo}" só aceita "poe"')
@@ -784,10 +795,13 @@ def _um(E, ef):
         if ef[2] == 'repousa' and len(ef) == 4 and _num(ef[3]):
             for f in p['feridas']: f['repouso'] += ef[3]
             return
+        if ef[2] == 'repousa' and len(ef) == 5 and _num(ef[3]) and ef[3] >= 0:      # (a parte 2, fase 2) o repouso numa ferida só (o Ferro em Brasa fora da luta)
+            if not _int(ef[4]) or not 0 <= ef[4] < len(p['feridas']): return _erro(ef, 'não há essa ferida')
+            p['feridas'][ef[4]]['repouso'] += ef[3]; return
         if ef[2] == 'sara' and len(ef) == 4:
             if not _int(ef[3]) or not 0 <= ef[3] < len(p['feridas']): return _erro(ef, 'não há essa ferida')
             p['feridas'].pop(ef[3]); return
-        return _erro(ef, "use ['ferida', id, 'abre', parte, grave], ['ferida', id, 'repousa', n] ou ['ferida', id, 'sara', indice]")
+        return _erro(ef, "use ['ferida', id, 'abre', parte, grave], ['ferida', id, 'repousa', n[, indice]] ou ['ferida', id, 'sara', indice]")
     if v == 'maldicao': return _maldicao(E, ef)
     if v == 'lugar' and len(ef) > 1 and ef[1] == 'nasce': return _nasce_lugar(E, ef)
     if v == 'lugar':
@@ -851,7 +865,7 @@ def _um(E, ef):
         it = copy.deepcopy(ef[2])
         if not isinstance(it, dict) or it.get('tipo') not in TIPOS_ITEM or 'dur' not in it or 'cat' not in it or not it.get('nome'): return _erro(ef, 'o registro tem de sair do itens.item() (ou ser um núcleo: tipo, cat, nome, dur)')
         if not _int(it['cat']) or not 0 <= it['cat'] < len(T.CATS): return _erro(ef, f'categoria fora da tabela: {it["cat"]} (vai de 0, Comum, a {len(T.CATS) - 1})')
-        e = _item_magia_erro(it, legado_1b(E)) or _item4b_erro(it)
+        e = _item_magia_erro(it, legado_1b(E)) or _item4b_erro(it) or _item_hab_erro(it)
         if e: return _erro(ef, e)
         if any(isinstance(x, dict) and x.get('chave') in ('critico_19', 'sangra') for x in it.get('efeitos') or []):       # (fase 1b) a peça nova segue o catálogo, antes ou depois da entrada (a resposta 2a)
             return _erro(ef, 'o efeito de antes (o critico_19, o sangra) não nasce em peça nova: fica só na peça que já o tem (a resposta 2a: o que nasceu, nasceu), e a peça nova leva o Crítico pela categoria ou a Sangria')
@@ -875,6 +889,14 @@ def _um(E, ef):
         if campo in ('dono', 'uso') and op == 'poe' and it.get(campo) and val != it.get(campo) and _presa(E, it):
             return _erro(ef, f'a mão não larga {it["nome"]}: a maldição que veio dela anda em {E["gente"][it["dono"]]["nome"]} (quebre-a antes, no mesmo evento)')
         if campo == 'encanto': return _encanto(E, it, op, val, ef)
+        if campo in ('tecnica', 'legado') and op == 'poe':     # (a parte 2, fase 2) o escrito da técnica; a peça, o caderno ou a ferramenta de um mestre morto
+            x = dict(it); x[campo] = val
+            if val is None: x.pop(campo, None)
+            e = _item_hab_erro(x)
+            if e: return _erro(ef, e)
+            if val is None: it.pop(campo, None)
+            else: it[campo] = copy.deepcopy(val)
+            return
         if campo in ('maldita', 'benta', 'veneno') and op == 'poe':
             if val is None: it.pop(campo, None); return
             x = dict(it); x[campo] = val; e = _item_magia_erro(x, legado_1b(E))
@@ -955,7 +977,7 @@ def _um(E, ef):
         if campo == 'dur' and op == 'soma' and _num(val):
             if it['tipo'] in ('nucleo', 'elixir', 'escrito', 'chave'): return _erro(ef, f'{it["tipo"]} não gasta nem se conserta')
             it['dur'][0] = max(0, min(it['dur'][1], it['dur'][0] + int(val))); return
-        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe (poe) · dur (soma) · historia, efeito (junta, gasta, tira) · efeitos_livres, cheios_livres (poe, soma) · encanto (grava, gasta, apaga)')
+        return _erro(ef, 'no item muda-se: dono, uso, onde, solto, sob_medida, nome, maldita, benta, veneno, talhe, tecnica, legado (poe) · dur (soma) · historia, efeito (junta, gasta, tira) · efeitos_livres, cheios_livres (poe, soma) · encanto (grava, gasta, apaga)')
     if v == 'mundo': return _mundo(E, ef)
     return _erro(ef, f'verbo desconhecido: "{v}" (os que existem: relogio, pessoa, ferida, estoque, lugar, item, obra, maldicao, mundo)')
 
@@ -1188,6 +1210,131 @@ def _pessoa_magia(E, pid, p, campo, op, val, ef):
     else: p[campo] = copy.deepcopy(val)
 
 
+# ---------- a parte 2, fase 2: as habilidades (DESENHO 9.1 e 9.5; os números no tabelas_habilidades.py) ----------
+HAB_GRAU_EVENTOS = ('gera', 'mestre', 'entrada')         # só nestes eventos a habilidade nasce acima do Iniciante (a vida que a mão explica; a mão do Mestre)
+# (9.5, com os tipos que o motor usa de fato) em que eventos cada verbo de habilidade entra: a marca e a de dia usada, nas cenas com risco (a luta, a obra que remata, a fala,
+# o tratamento) e na subida; o feito, nas cenas que podem ter dureza 5 (a luta, a obra, a fala); o grau, só na subida (o evento "habilidade") e na mão do Mestre; nascer e
+# esquecer, nos eventos das origens (o estalo e o legado vão no evento da luta; o livro, no do estudo). Fora do "mestre", a marca de uma cena vai de 0 a 6 por habilidade e por
+# pessoa, e o feito é um só (os freios 2 e 6 no gravador).
+HAB_MARCA_EVENTOS = ('luta', 'forjar', 'fala', 'cura', 'habilidade', 'mestre')
+HAB_FEITO_EVENTOS = ('luta', 'forjar', 'fala', 'mestre')
+HAB_SOBE_EVENTOS = ('habilidade', 'mestre')
+HAB_APRENDE_EVENTOS = ('habilidade', 'classe', 'mestre', 'gera', 'entrada', 'luta', 'estudar')
+HAB_COPIA_EVENTOS = ('habilidade', 'mestre')
+
+
+def _hab_tipo_erro(tipo, ef):
+    """o verbo de habilidade cabe neste tipo de evento? (None: cabe)"""
+    campo, op = ef[2], ef[3]; raiz = campo.partition('.')[0]
+    if campo == 'habilidade': ok = HAB_APRENDE_EVENTOS; o_que = 'nascer ou esquecer uma habilidade'
+    elif campo == 'talho' or raiz == 'copia': ok = HAB_COPIA_EVENTOS; o_que = 'a tentativa de cópia e o talho'
+    elif op == 'grau': ok = HAB_SOBE_EVENTOS; o_que = 'o grau'
+    elif op == 'feito': ok = HAB_FEITO_EVENTOS; o_que = 'o feito'
+    else: ok = HAB_MARCA_EVENTOS; o_que = 'a marca e a de dia usada'
+    return None if tipo in ok else f'{o_que} só entra em evento ' + ', '.join(ok)
+
+
+def _th():
+    import tabelas_habilidades as H
+    return H
+
+
+def _hab_kind(org): return str(org or '').split(':')[0]
+
+
+def _hab_reg_erro(p, k, r):
+    """o que um registro de habilidade aceita (None: aceita). Serve ao gravador e aos invariantes."""
+    H = _th()
+    if k not in H.HABILIDADES: return f'habilidade desconhecida: "{k}"'
+    if not isinstance(r, dict): return f'{k}: o registro é {{grau, marcas, origem, desde, dia_grau, feitos, usada}}'
+    g = r.get('grau', 0); kind = _hab_kind(r.get('origem'))
+    if not _int(g) or not 0 <= g <= H.GM: return f'{k}: o grau vai de 0 (Iniciante) a {H.GM} (Grão-Mestre)'
+    if not _num(r.get('marcas', 0)) or r.get('marcas', 0) < 0: return f'{k}: as marcas nunca ficam abaixo de zero'
+    if kind not in H.ORIGEM_TETO: return f'{k}: a origem é uma de: classe:X, mestre[:PID], licao, estalo, livro[:IID], legado[:PID], copia (veio "{r.get("origem")}")'
+    if H.apelao(k) and kind not in H.APELAO_SO_DE: return f'{k}: o apelão de habilidade só nasce de legado ou de classe Lendária, sem exceção'
+    if g > H.ORIGEM_TETO[kind]: return f'{k}: a origem ({H.ORIGEM_DIZ[kind]}) para no {H.GRAUS[H.ORIGEM_TETO[kind]]}'
+    if not isinstance(r.get('feitos', []), list): return f'{k}: os feitos são uma lista'
+    if g >= 4 and len(r.get('feitos') or []) < g - 3: return f'{k}: o {H.GRAUS[g]} pede o feito ({H.FEITO_DO_GRAU[g]}): {len(r.get("feitos") or [])} de {g - 3}'
+    if p is not None and isinstance(p.get('maestria'), dict):
+        import habilidade, talento
+        tt = H.TETO_TALENTO.get(talento.grau(p, habilidade.caminho_hab(p, k)))
+        if tt is not None and g > tt: return f'{k}: o talento em {habilidade.caminho_hab(p, k)} para no {H.GRAUS[tt]}'
+    return None
+
+
+def _grau_erro(E, pid, k):
+    """(depois do evento ensaiado) o grau novo da habilidade cabe? as marcas vezes o talento, a mão no caminho, o feito do Mestre e do Grão-Mestre, o teto da origem e do talento"""
+    import habilidade
+    H = _th(); p = E['gente'][pid]; r = (p.get('habilidades') or {}).get(k) or {}; g = r.get('grau', 0)
+    if g > habilidade.teto_de(p, k, r): return f'{H.HABILIDADES[k]["nome"]} para no {H.GRAUS[habilidade.teto_de(p, k, r)]} nesta pessoa (a origem ou o talento)'
+    if r.get('marcas', 0) < habilidade.pede_marcas(p, k, g): return f'{H.HABILIDADES[k]["nome"]}: o {H.GRAUS[g]} pede {habilidade.pede_marcas(p, k, g)} marcas (tem {r.get("marcas", 0)})'
+    if habilidade.mao_no(p, k) < H.MAO_DO_GRAU[g]: return f'{H.HABILIDADES[k]["nome"]}: o {H.GRAUS[g]} pede a mão de {T.MAESTRIAS[H.MAO_DO_GRAU[g]]} em {habilidade.caminho_hab(p, k)}'
+    if g >= 4 and len(r.get('feitos') or []) < g - 3: return f'{H.HABILIDADES[k]["nome"]}: o {H.GRAUS[g]} pede o feito ({H.FEITO_DO_GRAU[g]})'
+    return None
+
+
+def _pessoa_hab(E, pid, p, campo, raiz, sub, op, val, ef):
+    """os verbos das habilidades na pessoa (9.5): aprende, esquece, a marca, o grau (só +1 e um por dia), o feito, a de dia usada, a cópia (3 fecha), o talho"""
+    H = _th(); dia = E['relogio']['dia']; hb = p.get('habilidades') if isinstance(p.get('habilidades'), dict) else None
+    if p.get('estado') == 'morto' and op not in ('esquece',): return _erro(ef, f'{p["nome"]} morreu: não aprende nem sobe')
+    if campo == 'habilidade':
+        if op == 'esquece':
+            if not hb or val not in hb: return _erro(ef, f'{p["nome"]} não tem a habilidade "{val}"')
+            hb.pop(val); return
+        if op != 'aprende' or not isinstance(val, dict): return _erro(ef, "use ['pessoa', id, 'habilidade', 'aprende', {chave, origem, grau?}] ou 'esquece', CHAVE")
+        k = val.get('chave'); org = val.get('origem'); kind = _hab_kind(org); g = val.get('grau', 0)
+        if k not in H.HABILIDADES: return _erro(ef, f'habilidade desconhecida: "{k}" (o catálogo: tabelas_habilidades.HABILIDADES)')
+        if kind not in H.ORIGEM_TETO: return _erro(ef, f'a origem é uma de: classe:X, mestre[:PID], licao, estalo, livro[:IID], legado[:PID], copia (veio "{org}")')
+        if kind not in H.letras_origem(k) + ('classe', 'copia'): return _erro(ef, f'{H.HABILIDADES[k]["nome"]} não nasce {H.ORIGEM_DIZ[kind]} (as origens dela: {", ".join(H.ORIGEM_DIZ[x] for x in H.letras_origem(k))})')
+        if kind == 'copia' and H.apelao(k): return _erro(ef, 'o apelão não se copia')
+        if kind == 'mestre' and ':' in str(org) and str(org).split(':', 1)[1] not in E['gente']: return _erro(ef, f'o mestre "{str(org).split(":", 1)[1]}" não existe')
+        hb = p.setdefault('habilidades', {})
+        if k in hb:
+            velha = _hab_kind(hb[k].get('origem'))
+            if H.ORIGEM_TETO[kind] > H.ORIGEM_TETO.get(velha, 0): hb[k]['origem'] = org; return      # a mesma habilidade por origem maior: o teto sobe e as marcas ficam (6.5)
+            return _erro(ef, f'{p["nome"]} já tem {H.HABILIDADES[k]["nome"]}')
+        if kind != 'classe' and sum(1 for r in hb.values() if not (isinstance(r, dict) and r.get('classe'))) >= H.VAGAS:
+            return _erro(ef, f'{p["nome"]} já guarda {H.VAGAS} habilidades: a sétima pede esquecer uma (DESENHO 6.1)')
+        if not _int(g) or not 0 <= g <= H.GM: return _erro(ef, 'o grau vai de 0 a 5')
+        fs = val.get('feitos') or []
+        if not isinstance(fs, list) or not all(isinstance(x, dict) and _int(x.get('dia')) and isinstance(x.get('como'), str) for x in fs): return _erro(ef, 'os feitos ao nascer são uma lista de {dia, como}')
+        reg = dict(grau=g, marcas=H.MARCAS[g], origem=org, desde=dia, dia_grau=None, feitos=[dict(x) for x in fs])
+        if kind == 'classe': reg['classe'] = True
+        e = _hab_reg_erro(p, k, reg)
+        if e: return _erro(ef, e)
+        hb[k] = reg; return
+    if campo == 'talho':
+        import tabelas_efeitos as TE
+        if op != 'junta' or not TE.de_luta(val) or TE.de_numero(val): return _erro(ef, "use ['pessoa', id, 'talho', 'junta', CHAVE] (um efeito de regra do catálogo)")
+        L = p.setdefault('talhos', [])
+        if val not in L: L.append(val)
+        return
+    k = sub
+    if k not in H.HABILIDADES: return _erro(ef, f'habilidade desconhecida: "{k}"')
+    if raiz == 'copia':
+        if op != 'soma' or val != 1: return _erro(ef, "a tentativa de cópia é ['pessoa', id, 'copia.CHAVE', 'soma', 1]")
+        c = p.setdefault('copias', {})
+        if c.get(k, 0) >= H.COPIA['tentativas']: return _erro(ef, f'{p["nome"]} já tentou {H.COPIA["tentativas"]} vezes copiar {H.HABILIDADES[k]["nome"]}: fechou para sempre')
+        c[k] = c.get(k, 0) + 1; return
+    if not hb or k not in hb: return _erro(ef, f'{p["nome"]} não tem {H.HABILIDADES[k]["nome"]}')
+    r = hb[k]
+    if op == 'soma':
+        if not _int(val): return _erro(ef, 'as marcas são um número inteiro')
+        if r.get('marcas', 0) + val < 0: return _erro(ef, 'as marcas nunca ficam abaixo de zero')
+        r['marcas'] = r.get('marcas', 0) + val; return
+    if op == 'grau':
+        if not _int(val) or val != r.get('grau', 0) + 1 or val > H.GM: return _erro(ef, f'o grau sobe só +1 por evento (de {r.get("grau", 0)} a {r.get("grau", 0) + 1})')
+        if r.get('dia_grau') == dia: return _erro(ef, 'um grau por dia: o que sobra espera o dia seguinte (DESENHO 6.2, o freio 5)')
+        r['grau'] = val; r['dia_grau'] = dia; return
+    if op == 'feito':
+        if not isinstance(val, dict) or not _int(val.get('dia')) or not isinstance(val.get('como'), str): return _erro(ef, 'o feito é {dia, como}')
+        r.setdefault('feitos', []).append(dict(val)); return
+    if op == 'usada':
+        if not _int(val): return _erro(ef, 'a de dia guarda o dia em que foi usada')
+        r['usada'] = val; return
+    return _erro(ef, 'use soma (as marcas), grau, feito ou usada')
+
+
 # ---------- a etapa 4b na pessoa e no item (as formas: projeto/ETAPA_4B.md, seções 1, 3 e 6) ----------
 PESSOA_4B = ('povo', 'idade', 'inclinacao2')     # o povo primeiro: a idade e a segunda inclinação dependem dele
 POVO_EVENTOS = ('gera', 'mestre')               # só nestes eventos se grava o povo e a idade (a segunda inclinação: os do talento)
@@ -1222,6 +1369,22 @@ def _descida_erro(E, d, pid=None):
     if not (_int(d.get('lances', 0)) and d.get('lances', 0) >= 0): return 'tem os lances fora da conta (um inteiro de zero para cima)'
     if not isinstance(d.get('fase', ''), str): return 'tem a fase torta (é texto)'
     if d.get('fase') == 'luta' and not isinstance(d.get('luta'), str): return 'está em luta sem o arquivo dela'
+    return None
+
+
+def _item_hab_erro(it):
+    """(a parte 2, fase 2; 9.2) o escrito da técnica (`tecnica`: uma habilidade que nasce do livro) e a peça, o caderno ou a ferramenta do legado (`legado`: {tecnica, de, classe?},
+    de um mestre morto: uma habilidade que nasce do legado). None: aceita."""
+    H = _th()
+    if it.get('tecnica') is not None:
+        k = it['tecnica']
+        if it.get('tipo') != 'escrito': return 'só o escrito traz a técnica (tecnica)'
+        if k not in H.HABILIDADES or 'Lv' not in H.HABILIDADES[k]['origens']: return f'o escrito traz uma técnica que nasce do livro (veio "{k}")'
+    if it.get('legado') is not None:
+        lg = it['legado']
+        if not isinstance(lg, dict) or lg.get('tecnica') not in H.HABILIDADES or 'Lg' not in H.HABILIDADES[lg['tecnica']]['origens']: return 'o legado é {tecnica (uma que nasce do legado), de (o mestre morto), classe?}'
+        if not isinstance(lg.get('de'), str) or not lg['de']: return 'o legado diz de quem era (de: o mestre morto)'
+        if lg.get('classe') is not None and not isinstance(lg['classe'], str): return 'a classe do legado é um nome'
     return None
 
 
@@ -1529,11 +1692,33 @@ def aplica(E, tipo, efeitos, onde=None, quem=(), texto=''):
                 sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, q["nome"] + " já tem o talento rolado: só o Mestre o troca (o caminho novo que falta entra pelo talento.rola_caminho)")}')
         if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] in PESSOA_4B and tipo not in (TALENTO_EVENTOS if ef[2] == 'inclinacao2' else POVO_EVENTOS):
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "este campo só se grava em evento " + " ou ".join(TALENTO_EVENTOS if ef[2] == "inclinacao2" else POVO_EVENTOS))}')
+        if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and isinstance(ef[2], str) and (ef[2] in ('habilidade', 'talho') or ef[2].partition('.')[0] in ('hab', 'copia')):
+            e = _hab_tipo_erro(tipo, ef)
+            if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, e)}')
+        if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and ef[2] == 'habilidade' and ef[3] == 'aprende' and isinstance(ef[4], dict) and ef[4].get('grau') and tipo not in HAB_GRAU_EVENTOS:
+            sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "a habilidade nasce no Iniciante: o grau ao nascer, só em evento " + ", ".join(HAB_GRAU_EVENTOS) + " (depois, sobe pelo uso)")}')
         if tipo not in M.NASCE and isinstance(ef, (list, tuple)) and len(ef) > 1 and ef[0] in ('pessoa', 'lugar') and ef[1] == 'nasce':
             sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "gente e lugar só nascem em evento " + " ou ".join(M.NASCE))}')
         try: e = _um(ensaio, ef)
         except (TypeError, KeyError, IndexError, AttributeError, ValueError) as x: e = _erro(ef, f'efeito malformado ({type(x).__name__})')
         if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {e}')
+    graus = [(ef[1], ef[2]) for ef in efeitos if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and isinstance(ef[2], str) and ef[2].startswith('hab.') and ef[3] == 'grau']
+    if len(graus) != len(set(graus)): sys.exit(f'evento "{tipo}" recusado, nada mudou: o grau de uma habilidade sobe só +1 por evento (DESENHO 9.5)')
+    if tipo != 'mestre':                                    # (a parte 2, fase 2) os freios 2 e 6 no gravador: a marca de uma cena vai de 0 a 6, e o feito é um só, por pessoa e habilidade
+        somas = {}; feitos = {}
+        for ef in efeitos:
+            if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and isinstance(ef[2], str) and ef[2].startswith('hab.'):
+                if ef[3] == 'soma' and _int(ef[4]):
+                    if ef[4] < 0: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "a marca de uma cena nunca é negativa (só o Mestre tira marcas)")}')
+                    somas[(ef[1], ef[2])] = somas.get((ef[1], ef[2]), 0) + ef[4]
+                    if somas[(ef[1], ef[2])] > _th().MARCA_MAX: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, f"a marca de uma cena vai de 0 a {_th().MARCA_MAX} (o freio 2: uma por cena)")}')
+                if ef[3] == 'feito':
+                    feitos[(ef[1], ef[2])] = feitos.get((ef[1], ef[2]), 0) + 1
+                    if feitos[(ef[1], ef[2])] > 1: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, "um feito por cena")}')
+    for ef in efeitos:                                      # o grau conferido com o resto do evento (depois das marcas e do feito do mesmo evento), no evento do Mestre também
+        if isinstance(ef, (list, tuple)) and len(ef) == 5 and ef[0] == 'pessoa' and isinstance(ef[2], str) and ef[2].startswith('hab.') and ef[3] == 'grau':
+            e = _grau_erro(ensaio, ef[1], ef[2][4:])
+            if e: sys.exit(f'evento "{tipo}" recusado, nada mudou. {_erro(ef, e)}')
     # (a parte 2, fase 1a) O EVENTO INTEIRO DEIXA A PEÇA CERTA: a peça cujos efeitos o evento mexe (o efeito que entra, os por escolher, os cheios) tem de sair dele dentro da regra:
     # os efeitos escolhidos e os por escolher até o teto dela, os cheios até os por escolher, o degrau em peça de até 4, um apelão de regra. A escolha (o efeito entra e sai um por
     # escolher, no mesmo evento) passa; o efeito do Mestre que entra a mais numa peça que ainda tem os seus por escolher, não.
@@ -1637,6 +1822,12 @@ def lutador(E, pid, visivel=False, **mais):
              carga={b: q for b, q in (p.get('carga') or {}).items() if e_pocao(b) and _num(q) and q > 0},
              elixires=[dict(id=i, pocao=it.get('pocao'), cat=it['cat'], nome=it['nome']) for i, it in E['itens']['itens'].items() if it.get('dono') == pid and it.get('tipo') == 'elixir'])
     m = p.get('marca') or {}; bz = m.get('bencao'); gd = m.get('guarda')
+    if isinstance(p.get('habilidades'), dict) and p['habilidades']:
+        d['habilidades'] = copy.deepcopy(p['habilidades'])      # (a parte 2, fase 2) as habilidades vão à luta; e as de dia já gastas hoje (o Sopro de Volta: uma por dia, não uma por luta)
+        H = _th(); dd = [k for k, r in p['habilidades'].items() if k in H.HABILIDADES and H.HABILIDADES[k]['ritmo'] == 'dia' and isinstance(r, dict) and r.get('usada') == E['relogio']['dia']]
+        if dd: d['hab_dia'] = dd
+    tg = m.get('trunfos')
+    if isinstance(tg, dict) and tg.get('em') == t and _int(tg.get('n')): d['trunfos_gastos'] = tg['n']       # os trunfos gastos voltam com um bloco (o bloco seguinte ao da luta)
     if isinstance(bz, dict) and _num(bz.get('ate')) and bz['ate'] >= t: d['benzido'] = True                      # a bênção dada antes da luta (vale do bloco em que foi dada ao seguinte)
     if isinstance(gd, dict) and _num(gd.get('ate')) and gd['ate'] > t and _int(gd.get('cat')): d['guarda_p'] = gd['cat']      # a poção de guarda: amuleto da categoria dela enquanto dura
     if not visivel and mana_max(p, True) != d['mana_max']: d['mana_vista'] = mana_max(p, True)                # o dom de tradição escondido: a luta usa a Mana de verdade, a mesa mostra a que a pessoa conhece
@@ -1694,6 +1885,15 @@ def valida(E):
         usos = [it.get('uso') for it in L.values() if isinstance(it, dict) and it.get('dono') == pid and it.get('uso') in ('arma', 'arma2', 'escudo', 'foco', 'pescoco')]
         for u in set(usos):
             if usos.count(u) > 1: P.append(f'{n} tem duas peças em "{u}"')
+        hb = p.get('habilidades')                           # (a parte 2, fase 2) as habilidades: o catálogo, o grau e a origem, as 6 vagas, as 3 cópias
+        if hb is not None:
+            if not isinstance(hb, dict): P.append(f'{n} tem as habilidades tortas (não é um dicionário)')
+            else:
+                for k, r in hb.items():
+                    e = _hab_reg_erro(p, k, r)
+                    if e: P.append(f'{n}: {e}')
+                if sum(1 for r in hb.values() if not (isinstance(r, dict) and r.get('classe'))) > _th().VAGAS: P.append(f'{n} guarda mais de {_th().VAGAS} habilidades')
+        if any(not _int(v) or v > _th().COPIA['tentativas'] for v in (p.get('copias') or {}).values()): P.append(f'{n} tem tentativas de cópia fora da conta (até {_th().COPIA["tentativas"]})')
         for k in PESSOA_4B:                                 # a etapa 4b: o povo, a idade, a segunda inclinação
             if p.get(k) is not None:
                 e = _pessoa4b_erro(E, p, k, p[k])
@@ -1741,7 +1941,7 @@ def valida(E):
         if it.get('solto') and (dono or it.get('onde') is None): P.append(f'{n} consta no chão (sem dono) e tem dono, ou não tem lugar')
         if it.get('uso') and it.get('uso') not in PARTES_VESTE: P.append(f'{n} tem uso desconhecido: {it["uso"]}')
         if it.get('tipo') == 'nucleo' and (it['dur'][0] != it['dur'][1] or it.get('uso')): P.append(f'{n} é núcleo e está gasto ou em uso')
-        e = _item4b_erro(it)                                # a etapa 4b: a gazua, a chave, o talhe da armadura
+        e = _item4b_erro(it) or _item_hab_erro(it)         # a etapa 4b: a gazua, a chave, o talhe da armadura; a fase 2: o escrito da técnica, a peça do legado
         if e: P.append(f'{n}: {e}')
         if it.get('tipo') == 'chave' and not _abre_ok(E, it.get('abre')): P.append(f'{n} abre o que não existe: "{it.get("abre")}" (uma porta das portas da masmorra, ou o guardado de uma sala)')
         if it.get('uso') == 'veste' and dono in E['gente'] and not serve(it, E['gente'][dono]): P.append(f'{n} está em uso e não serve no corpo de {E["gente"][dono]["nome"]} ({corpo_de(E["gente"][dono])})')

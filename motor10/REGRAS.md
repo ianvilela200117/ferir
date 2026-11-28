@@ -2823,6 +2823,193 @@ Na luta, as ordens novas: `atar [ALIADO]` (28.3), `animar` (28.6) e `lancar FEIT
 - **A tabela por nível** (`tabelas_efeitos.PONTOS`, o "no seu nível, perto de +X" do `efeitos.py ver`): `python3 provas.py 2000 efeitos tabela` (cada efeito de número, nos níveis 10, 20, 50 e 150, no cenário do EF1), alisada (a linha não desce de uma categoria para a de cima, e não tem negativo). No nível 150 a Perfura quase não vale (o robô já mira a fresta).
 - **O estresse** (`python3 estresse.py 1500`): as lutas ao acaso com efeitos ao acaso conferem os invariantes da pilha e da carga (o dano nunca acima de 7 vezes o de hoje, os dados no máximo 4 vezes, a couraça até 75%, os fixos até +8, a barra abaixo da resistência, ninguém com 2 turnos perdidos em 3, até 3 filetes, os prazos até 3 rodadas, o acuado só em quem está abalado e nunca em quem o jogador comanda, a cura do dia no teto).
 
+## 29. As habilidades (a parte 2, fase 2)
+
+O contrato é o `projeto/etapa_efeitos/DESENHO.md` (seção 6; o detalhe, `projeto/etapa_efeitos/desenho/D3_habilidades.md`; as leituras da construção, 12.4). Os números moram no `tabelas_habilidades.py` (nenhum número de habilidade fora dele); o `habilidade.py` faz o resto (a luta, o grau, as origens, a mesa). **A luta sem habilidade é a de antes, dado por dado** (o B0 da fase confere: as mesmas lutas no motor da 1b e no de agora, iguais linha por linha).
+
+### 29.1 O que é uma habilidade
+Um jeito de fazer, com nome, que muda um número ou uma regra quando a pessoa age. Cada uma tem:
+
+| Traço | Os valores |
+| --- | --- |
+| campo | batalhar (16) · curar (7) · convencer (7) · trabalhar (10) · copiar (4) · mover (5) · lançar (3): **52** |
+| tipo | ativa (uma ordem) · passiva (vale sempre) · reação (gasta a reação, sozinha) · postura (a palavra do fim da ordem: `bigorna`) · acesa (a Roda, a Sanha, o Rito de Veia) · declarada (o Tranco, o Corte Fundo, a Rasteira) · de cargas (os Trunfos) |
+| ritmo | de mão (quantas vezes quiser, pagando) · de luta (N por luta) · de dia (uma por dia; não acumula) · de cena |
+| custo | fôlego · Mana · vida (PV que nada reduz) · cargas · cansaço depois · Defesa ou acerto enquanto dura |
+| caminho | um dos 17: a mão nele segura o grau (as de arma, a maior mão de arma; as de lançar, a melhor tradição) |
+| teto | a força no Grão-Mestre (fraco, normal, forte, apelão) |
+| origem | de onde veio: diz até que grau sobe (29.6) |
+
+- **As vagas:** até **6** habilidades por pessoa (as de classe, na fase 4, não ocupam vaga); a sétima pede esquecer uma (`habilidade.py esquece CHAVE`), e as marcas dela se perdem.
+- **Uma acesa por vez:** acender outra apaga a primeira (na Sanha não se dança). **Uma de cargas por luta** (os Trunfos).
+- **A pilha:** o dano a mais vai ao grupo **TÉCNICA** (até +40%; 28.3); o acerto, a Defesa e a coragem, ao teto de **+8** de tudo o que é novo (P3); o fecho fundo multiplica os dados da arma (o maior entre ele, o crítico e o Golpe do Fim, nunca mais de 4); o **dado somado** (o trunfo no dano, o Rito de Veia) entra uma vez e não dobra no crítico; e tudo dentro do teto da pilha (×7).
+- O catálogo inteiro, grau a grau: `python3 habilidade.py ver` (a lista) e `python3 habilidade.py ver CHAVE` (uma habilidade: o que faz, os números por grau, a medida do contrato).
+
+### 29.2 O grau pelo uso
+
+| Grau | Marcas | Desconto da marca | A mão que segura o grau | O feito | A força que cabe |
+| --- | --- | --- | --- | --- | --- |
+| Iniciante | 0 | 0 | — | — | até o fraco (5) |
+| Aprendiz | 10 | 0 | — | — | até o normal (10) |
+| Adepto | 30 | 1 | — | — | até o normal (10) |
+| Perito | 80 | 1 | Iniciante no caminho | — | até o forte (20) |
+| Mestre | 200 | 2 | Treinado | vencer com ela uma cena de dureza 5 | até o forte (20) |
+| Grão-Mestre | 500 | 2 | Mestre | um segundo feito, diante de alguém com nome | até o teto dela |
+
+- **A marca da cena** (uma por cena, de 0 a 6): **dureza + 1** (se a habilidade agiu 3 vezes ou mais na cena, ou se a de luta ou de dia venceu a cena) **− o desconto do grau**. A **dureza** (1 a 5) é a chance de dar errado, que o script já sabe antes do dado: menos de 10% · 10 a 29% · 30 a 54% · 55 a 79% · 80% ou mais. Na luta, a conta rápida ao abrir (`S['dureza']`: entre iguais, 3); na obra, sair abaixo da categoria da obra ou perder; na fala, falhar o pedido; no tratamento, a ferida leve 2 e a grave 3.
+- **A cena** é a luta (a marca volta ao estado com ela, no evento "luta"), a obra que remata, a conversa (os pedidos no mesmo lugar no dia), o tratamento do dia.
+- **Os sete freios:** (1) só conta o uso com risco (o treino na vila marca maestria, não habilidade); (2) uma marca por cena; (3) o desconto pelo próprio grau; (4) a dureza 1 dá marca só até o Adepto; (5) **um grau por dia**; (6) a mão segura o grau, e Mestre e Grão-Mestre pedem o feito (a mesa diz "tem as marcas para Mestre; falta o feito"); (7) o talento apressa e tranca: as marcas que o grau pede vezes o talento do caminho (o Prodígio, a metade; o Negado, o dobro), e o Negado para no Adepto, o Lerdo no Mestre.
+- **O feito** (o do Mestre e o do Grão-Mestre) entra sozinho quando a pessoa **vence com a habilidade uma cena de dureza 5** — a luta, a obra que remata (sair na categoria, com 80% ou mais de chance de errar) ou a conversa (ganhar o pedido com 80% ou mais de chance de falhar) — **e já tem as marcas do grau que ele abre** (o primeiro, as do Mestre; o segundo, as do Grão-Mestre, contando as desta cena). O segundo pede **alguém com nome diante** (na luta, do outro lado; na obra, um rival ou um mestre de forja com nome olhando; na fala, quem ouve) e **vira notícia**. O tratamento não chega à dureza 5 (a ferida leve 2, a grave 3): ali o feito é do Mestre, por evento ("mestre": `['pessoa', id, 'hab.CHAVE', 'feito', {dia, como}]`).
+- **A subida** sai no fim do ato que deu a marca (a luta, a obra, a fala, o tratar), num evento "habilidade", e aparece na saída: "★ A RODA DO MALHO SOBE: Adepto → Perito (teto 4 batidas; abre o ABRIR)". `habilidade.py sobe` confere à mão. A subida da gente do mundo vai só ao SÓ O MESTRE (as notas do turno). O grau é conferido em todo evento, o do Mestre também (as marcas, a mão, o feito, o teto da origem e do talento): o Mestre que quer pôr um grau escreve, no mesmo evento, as marcas e o feito que ele pede.
+- **O ritmo** (o banco, HB5; sem as portas da mão e do feito): quem luta 3 vezes por semana chega a Aprendiz perto do dia 7, Adepto no 20, Perito no 62, Mestre no 166, Grão-Mestre perto do 579; quem luta uma vez por semana, 18, 57, 177, 492, 1.734.
+
+### 29.3 A pilha da cena ("toda vez que usa, dá mais")
+O grau sobe para sempre (29.2), e a pilha sobe dentro da cena: **o grau é o teto da pilha**.
+
+| Habilidade | A pilha cresce com | Cada ponto dá | Teto (I·Ap·Ad·P·M·GM) | Quebra | O preço |
+| --- | --- | --- | --- | --- | --- |
+| RODA DO MALHO | cada golpe da Roda, acerte ou não (o aparado também é batida) | +5% de dano; a cada 2, +1 no acerto | 2·3·3·4·5·6 batidas | o golpe que fere quem dança tira 1 batida; dois 1, ou outra ação que não golpear ou tomar fôlego, zera | o fôlego do martelo |
+| SANHA | 1 no começo de cada turno; 1 por golpe que tira PV, dado ou levado | +5% de dano; a cada 2, +1 no acerto | 2·3·4·5·6·8 | a rodada sem sangue perde metade; tomar fôlego (ou recuar) apaga (só a ação que acontece: a ação a mais que o freio do esforço larga não apaga nada) | −1 na Defesa (também contra o feitiço); no fim, +1 de cansaço a cada 2 pontos |
+| MÃO QUE ESTANCA | cada atadura seguida na luta | a atadura cura 4% do PV máximo, +3% por ponto (no teto do dia) | 1·1·2·2·3·4 | uma rodada sem atar | a ação |
+| MÃO QUE ESQUENTA | cada paciente tratado no dia | +½ dia de repouso no próximo | 1·1·2·2·3·4 | um bloco sem tratar | +1 de cansaço a cada 2 tratados |
+| O FIO DA CONVERSA | cada pedido ganho no mesmo lugar no dia | +2 no próximo; com 3 fios, o pedido vale um degrau acima sem subir a CD | 1·1·2·2·3·3 | falhou, o fio rompe e quem ouviu lembra (−1) | no 3º fio, −1 na opinião de quem ouve |
+| O MALHO QUENTE | cada bloco seguido na mesma obra, no dia | a obra que fecha quente ganha prumo igual a metade do calor | 2·2·3·4·5·6 | outro ato no meio, ou a noite | +1 de cansaço a cada 2 de calor |
+| A CORRENTE | cada feitiço seguido | +1 na Conjuração (no teto de +8) e +5% de dano de feitiço | 2·3·3·4·5·6 | golpear, andar ou ser atordoado zera | — |
+
+### 29.4 A luta
+**Só numa luta em que alguém traz habilidade** a luta usa os ganchos (`S['hab']`), como a magia.
+- **A ordem** (só de quem o jogador comanda; conferida inteira antes de qualquer dado, e a recusada não deixa nada pela metade; a errada é recusada com a frase: a habilidade que não tem, a arma errada, a de luta gasta, os trunfos acabados ou que não abrem, a Mana que não paga, a Sanha — acesa ou armada — com a postura defensiva ou a bigorna):
+  - `Nome: fazer roda [em ALVO] [fecho=fundo|tranco] [sempre] [postura]`: acende a Roda (a arma de peso, ou a peça do legado dela); cada golpe dela é uma batida. A acesa vale até apagar (o `sempre` não muda nada nela); refazer a ordem com a Roda acesa só troca o fecho: as batidas ficam, e a entrada quente do Mestre é a da primeira batida da luta. `Nome: fazer fecho`: a próxima batida é o fecho (com 3 ou mais; sem a ordem, sai sozinho aos 4, ou no teto se ele é menor).
+  - `Nome: fazer sanha`: arma a Sanha, que acende sem ação no primeiro golpe que tira PV de alguém ao alcance (o golpe dela, o que ela leva, o de um colado).
+  - `Nome: fazer tranco|corte|rasteira [em ALVO] [sempre]`: o primeiro golpe de cada turno (no alvo dito) é o da técnica; sem `sempre`, uma vez.
+  - `Nome: fazer brado` · `fazer rito` · `fazer mira` · `fazer ferro [ALIADO]` · `fazer sopro ALIADO` (as de uma ação: sem `sempre`, uma vez, e volta a ordem de antes; com `sempre`, até acabar o que paga — a Mira Firme mira e atira, mira e atira; o Ferro em Brasa estanca quando há sangue) · `fazer varrida [sempre]`.
+  - `Nome: fazer voto [sempre]`: o Golpe de Voto de quem o jogador comanda só gasta a Mana com a ordem (no próximo acerto, ou em todos); `sem voto` desliga (o robô o usa sozinho).
+  - `Nome: atar CAÍDO`: a Mão que Estanca do Mestre em diante ata o caído colado: ele fica firme (não rola mais a morte); no Grão-Mestre, uma vez por luta, ele levanta com 10% do PV (no teto do dia).
+  - `Nome: trunfo=USO [se CONDIÇÃO[, senão USO]]` (os usos: dano, rasteira do Iniciante, corte do Adepto, tranco do Perito, ameaça do Mestre, nao; as condições: `carga>=N` (a barra de cabeça do alvo), `pernas>=N`, `abalado`, `metade`): o script resolve, um por turno, no primeiro golpe que acerta e cumpre a condição. **O trunfo nunca para a luta** (só "os trunfos acabaram"). Sem dizer, no dano.
+  - `Nome: sem riposta` · `com riposta` (as reações saem sozinhas quando cabem). A postura nova é a palavra do fim: `bigorna`.
+  - A ordem de recuar, guardar ou lançar com a Sanha acesa a apaga (a escolha do jogador vale; a Sanha paga o cansaço). A postura defensiva e a bigorna, não: são recusadas (na fúria não se guarda).
+  - O Rito de Veia vale por N turnos, e o turno de abrir é o primeiro deles (o golpe que sobra nele já leva o dado).
+- **O que a luta faz:** no golpe, o acerto (as batidas, a Sanha, a Teima, a mira da Mira Firme, o Manter à Distância, no teto de +8; as penas: a declarada −2, a Riposta, a bigorna), a Defesa (a bigorna no teto de +8; a Sanha −1; o ABRIR da Roda, que vale a pior com o aberto do atordoado), os dados (o fecho fundo; o trunfo e o Rito somados), o dano (TÉCNICA) e o depois (a batida, o fecho tranco, o ABRIR, a Sanha, o trunfo de efeito, a declarada). **A Mira Firme do Perito em diante** mira a fresta do tiro (a armadura acima da arma) a −5, não a −8 de todos, quando vale. A Guarda de Bigorna vale também contra o feitiço que voa (não contra a área), e conta o uso a cada golpe em que a Defesa dela conta (a marca e o grau). O **Tranco** que acerta tira o turno seguinte e dá o calejo de cabeça (do Mestre, não dá), **nunca na cabeça firme e nunca além de 1 turno em cada 3** (28.5): o uso só se gasta quando o alvo pode perder o turno. A **carga de pernas** cheia (a Rasteira, o trunfo de rasteira) põe ao chão (a peça Firme e a bigorna do Adepto seguram).
+- **Os outros (o robô):** a Roda sempre que a arma deixa, com o fecho aos 4; a Sanha armada no começo do turno, quando colado e acima de metade do PV; o Tranco no mais forte; o Corte Fundo e a Rasteira no primeiro golpe de cada turno; o trunfo no dano (na ameaça contra quem fraquejou); a riposta sempre; a bigorna sempre; o Brado no começo, quando há dois inimigos a 3 casas (ou todos os que há, se são menos de dois); o Rito de Veia com o inimigo ao alcance; a Mira Firme não mira (no duelo de arqueiros, mirar custa um tiro em dois: a mira é da ordem do jogador, `fazer mira`), mas a fresta do Perito sai sozinha; a atadura que cura (a Mão que Estanca) num colado abaixo de 60% do PV, sem inimigo colado (do Mestre, antes, o caído colado: firma; no Grão-Mestre, levanta); o Sopro de Volta no caído ao lado, uma vez por dia (gasto numa luta de hoje, não sai na seguinte); o Golpe de Voto em todo acerto que a Mana paga.
+- **As paradas novas:** a Sanha apagou · o fecho errou (a Roda perdeu metade) · os trunfos acabaram · o outro lado acendeu a Sanha ou está com o fecho pronto · a habilidade da ordem não pôde.
+- **O quadro:** "Roda 3/4 batidas, fecho pronto" · "Sanha 4/6 pontos" · "trunfos 2 de d6 (no tranco se carga>=6, senão dano)" · "declarou o Tranco" · "gastou o Brado" · "Corrente 2/3" · "na bigorna".
+- **O que volta ao estado** (no evento da luta, `ato.py luta roda`): as marcas de cada habilidade usada, o feito, a de dia gasta, o cansaço da Sanha e do Ferro em Brasa, os trunfos gastos (voltam no bloco seguinte), as técnicas que o outro lado usou (`marca.vistas`, para colher o jeito: 29.6), a luta que conta para o legado (29.6) e o **estalo** (29.6), em rolagem oculta. À mesa vai o do personagem; o estalo e a subida da gente do mundo vão ao SÓ O MESTRE (à mesa, no máximo "algo acendeu em X", sem o nome, se o personagem está na luta).
+
+### 29.5 O catálogo
+Os números por grau estão no `tabelas_habilidades.py` (e no `habilidade.py ver CHAVE`). As de luta, com a medida do banco (HB1, 8.000 lutas por grau no duelo de iguais, nível 50, tudo Raro; 4.000 pareadas nas de cena própria; as casas de borda, decididas antes de rodar, 2,5 vezes isso; cada casa medida uma vez: a vitória a mais, em pontos, I·Ap·Ad·P·M·GM; todas na força que o grau deixa):
+
+| Habilidade | O que faz (o grau sobe os números) | O banco (HB1) |
+| --- | --- | --- |
+| A RODA DO MALHO (apelão; legado ou classe Lendária) | as batidas; do Adepto o FECHO (fundo: os dados 1 + batidas÷2 vezes; tranco: carga de cabeça 3 por batida; errou, perde metade); do Perito o ABRIR (−2 na Defesa do alvo); o Mestre entra quente (1); o Grão-Mestre entra com 2 e o golpe que o fere não tira batida | +4,2 · +5,4 · +9,2 · +15,9 · +17,8 · +25,1 (martelo) |
+| A SANHA (forte) | a pilha de 29.3; +4 na coragem; com 3 pontos, a ferida leve na cabeça não atordoa; uma por luta (duas no Mestre) | +4,3 · +5,6 · +9,0 · +10,9 · +13,9 · +15,8 |
+| OS TRUNFOS (forte) | os dados por luta: 1d4 · 1d6 · 2d4 · 2d6 · 2d8 · 3d6, um por turno, no dano ou no efeito | +5,3 · +7,1 · +9,8 · +13,3 · +17,9 · +18,2 |
+| O TRANCO DE LUTA (forte) | usos 1·1·1·2·2·3; acerto −2·−1·0·0·0·0 | +3,5 · +3,4 · +4,6 · +7,6 · +7,6 · +9,0 (martelo) |
+| O CORTE FUNDO (normal) | o primeiro golpe do turno (−2) abre um filete: 1/5 por 3 a 1/2 por 4 | +1,9 · +3,1 · +4,1 · +5,3 · +7,7 · +7,1 |
+| A RASTEIRA (normal) | o primeiro golpe do turno (−2) põe carga de pernas 3 a 8 | −0,7 · −1,0 · −1,1 · −0,3 · −1,8 · −0,5 (o duelo de lança: o ganho é o da cena) |
+| A RIPOSTA (normal) | o golpe que erra você por pouco (2 a 8) e que você apara devolve um golpe livre | +3,4 · +4,0 · +5,7 · +5,8 · +8,6 · +10,5 |
+| O GOLPE DE QUEBRA (normal) | contra armadura maior que a arma, a proteção ×0,8 · ×0,75 · ×0,67 · ×0,6 · ×0,57 · ×0,55 (vale o maior com a Perfura); +1 de fôlego no golpe em que vale | +1,9 · +0,7 · +4,4 · +7,7 · +9,1 · +9,8 (contra a armadura uma acima) |
+| A GUARDA DE BIGORNA (forte) | a postura: Defesa +1 a +4, acerto −1 (0 do Mestre); do Adepto, firme | +0,0 · +3,2 · +2,8 · +6,7 · +9,4 · +13,1 |
+| O BRADO DE GUERRA (forte) | quem está a 3 casas testa a coragem (contra 20 a 29), uma fonte nova de medo (28.7) | +1,1 · +2,3 · +2,8 · +4,0 · +7,8 · +12,5 |
+| A TEIMA (normal) | abaixo de metade do PV, acerto +1 a +4 | +1,0 · +0,4 · +2,9 · +2,6 · +3,7 · +5,9 |
+| A VARRIDA (normal) | o golpe pega mais um colado, com metade do dano (no GM, inteiro); usos 1·1·2·2·3·3 | +1,1 · +0,3 · +2,2 · +1,4 · +2,4 · +2,7 (o montante contra três) |
+| O MANTER À DISTÂNCIA (normal) | o golpe livre em quem entra no alcance, +1 a +4; do Perito, se fere, ele não entra | −0,5 · +0,4 · +0,8 · +0,1 · −1,0 · +0,4 (a lança contra a espada que vem de longe) |
+| A MIRA FIRME (normal) | 1 ação mirando (a ordem `fazer mira`): +2 a +5 no próximo tiro; do Perito, a fresta a −5 (não −8), sozinha | +0,0 · +0,0 · +0,0 · +8,7 · +9,1 · +7,8 (arco contra o arqueiro de couro uma acima: a fresta; o robô não mira) |
+| O GOLPE DE VOTO (normal; forte contra o maldito) | depois do acerto, 2 de Mana: +10% a +30% (TÉCNICA); do Perito em diante, o dobro contra o maldito (no teto da TÉCNICA, +40%); de quem o jogador comanda, só com a ordem `fazer voto` | contra o igual vivo: +2,9 · +4,1 · +6,6 · +6,7 · +7,5 · +9,2; contra o maldito (a peça maldita na mão): +1,3 · +3,8 · +9,0 · +13,7 · +11,9 · +14,5 |
+| O RITO DE VEIA (forte) | 1 ação e 1d6 de PV (no GM, 1d4): +1d4 por 1 turno, 1d4 por 2, 1d6 por 2, 1d6 por 3, 1d8 por 3 (Mestre e Grão-Mestre) em cada golpe e feitiço, o turno de abrir sendo o primeiro (o golpe que sobra nele já leva o dado); a cura de magia em quem o abriu vale metade | +0,2 · +6,1 · +10,1 · +15,7 · +20,2 · +21,3 |
+
+- **Curar:** a Mão que Estanca (no `atar`: corta 1 a todos os filetes e cura; do Mestre, `atar CAÍDO` firma o caído colado; no Grão-Mestre, uma vez por luta, ele levanta com 10% do PV; a HB1, no 3 contra 3: perto de 0 em todos os graus, porque o robô só ata sem inimigo colado), a Mão que Esquenta e o Trato de Campo (no `tratar`, 29.7; o Trato do Perito trata dois no bloco), o Ferro em Brasa (na luta do Adepto: estanca todo o sangue; dói; fora da luta, `habilidade.py ferro PACIENTE`: 1 bloco, a ferida leve sara com 1 dia de repouso, no Grão-Mestre também a grave, com 3; +1 de cansaço em quem o leva), o Sopro de Volta (de dia: o caído desta luta levanta com 5% a 20% do PV; uma vez por dia, não por luta), a Vigília (a reação que firma o aliado que cai ao lado), o Benzimento.
+- **Convencer:** o Fio da Conversa, a Língua de Feira, a Palavra Firme, a Ameaça Surda (no teste de fala, 30), a Voz da Praça, o Olho de Avaliador, o Penhor (no catálogo; o gancho delas é do Mestre, em cena).
+- **Trabalhar** (nunca no total): o Malho Quente, a Paciência, a Têmpera Certa, o Brio de Oficina (29.7), a Mão de Reparo (o conserto por bloco: 6 a 10, vale a melhor fonte), o Ajuste Fino (menos blocos e +1 a +3 no ajuste); o Ler a Peça, o Faro de Trilha, o Traço Fiel e a Medida Certa (no catálogo; a classe as traz na fase 4).
+- **Copiar:** o Colher o Jeito (+5% por grau na cópia), o Olho de Luta (o estalo com chance a mais), o Risco do Talho e o Eco de Golpe (no catálogo).
+- **Mover:** o Pé de Lebre (no recuo, 3 ou 4 casas; do Adepto, o golpe livre de quem fica −4; do Perito, sai da luta a 6 casas; no GM, a 4), a Picada, o Passo Manso, o Romper a Linha, a Marcha Longa.
+- **Lançar** (só numa luta de magia): a Corrente (29.3), a Mão no Rito (o longo perdido devolve metade da Mana; do Adepto, o longo sai de uma vez, uma vez por luta; do Mestre, as duas coisas), a Mana Curta (o primeiro feitiço da luta custa 1 ou 2 a menos).
+
+### 29.6 Como se ganha, e copiar
+
+| Origem | Como | Sobe até |
+| --- | --- | --- |
+| a classe | fase 4 (até lá, só por evento do Mestre: `classe:NOME`) | a da raridade |
+| o mestre | quem tem a habilidade no Perito ou mais ensina a quem estima (a opinião dele +3; +6 no forte), com os blocos de treino juntos (10, 20 e 40, pelo teto dela): `habilidade.py ensina PID CHAVE [blocos=N]` — os dois no mesmo lugar, o tempo passa para os dois (uma jornada de 2 blocos por vez), a conta fica em `marca.ensino`, e ela nasce no último bloco; ninguém vivo ensina um apelão | Mestre |
+| a lição | a primeira vez que o gatilho escrito acontece: `habilidade.py licao CHAVE "como"` (SÓ O MESTRE): "da cena nasceu uma habilidade" | Perito |
+| o estalo | em luta de verdade com a arma, rolagem oculta (8% com dureza 3 ou mais, 4% com 2; o Olho de Luta soma); uma técnica da lista curta da família da arma (com o Olho de Luta, o personagem escolhe entre duas: a pergunta do turno); no máximo um por semana; "algo acendeu" | Perito |
+| o livro | o escrito com a técnica (`tecnica`): 10 blocos de estudo (o normal) ou 30 (o forte): `habilidade.py estuda ITEM` | Mestre |
+| o legado | a peça, o caderno ou a oficina de um mestre morto: a peça com `legado: {tecnica, de}` (o Mestre a põe por evento: `['item', id, 'legado', 'poe', {...}]`) usada em **5 lutas de verdade** (conta em `marca.legado`, no evento da luta), ou o caderno (o escrito com `legado`) estudado **30 blocos** (`habilidade.py estuda ITEM`); a oficina, o Mestre em cena (`legado:PID`) | Grão-Mestre |
+| a cópia | colher o jeito (abaixo) | Mestre |
+
+- **O apelão só nasce de legado ou de classe Lendária**, sem exceção (a validação recusa). Se a mesma habilidade vem depois por origem maior, o teto sobe e as marcas ficam (o `ensina`, o `estuda`, a `licao`, a `copia` e o legado aceitam a que a pessoa já tem por origem menor; por origem igual ou maior, recusam).
+- **A lista curta do estalo:** martelo e maça, o Tranco e o Golpe de Quebra (o malho, também a Varrida) · espada, a Riposta e o Corte Fundo (o montante, também a Varrida) · adaga, o Corte Fundo · machado, o Corte Fundo e a Varrida · lança e alabarda, a Rasteira e o Manter à Distância · arco e besta, a Mira Firme (por isso a Mira Firme tem a origem E: DESENHO 12.4). **O primeiro estalo** da pessoa traz também o Olho de Luta (a origem E dele), se há vaga.
+- **Colher o jeito** (`habilidade.py copia CHAVE de=PID chance` mostra a chance e as tentativas que restam, sem rolar; `habilidade.py copia CHAVE de=PID` tenta: um dia de treino, 2 blocos pesados; tudo é conferido antes do dado, a chance vai na linha de cima dele, e a tentativa vale num evento logo depois do dado, ande o treino ou não): pede a técnica **vista em 3 lutas de verdade** (a luta do mundo escreve `marca.vistas`, uma vez por luta) **ou vencer quem a usa** (`marca.vencidas`); a cena que o motor não viu, o Mestre escreve por evento (`['pessoa', id, 'marca.vistas', 'poe', {CHAVE: n}]`). A **chance = 40% + 10% por grau de mão acima do que a técnica pede − 15% por grau abaixo + 5% por grau de Colher o Jeito, entre 5% e 90%** (pede: o fraco, Iniciante; o normal, Treinado; o forte, Mestre). Três tentativas; falhou as três, fecha para sempre. A cópia nasce no Iniciante e para no Mestre; a assinatura de classe e o apelão não se copiam.
+- **As porcentagens** (o estalo, a cópia) rolam no **dado de cem** (`teste.rola_cem`: 1d100 com secrets, uma vez, escrito no turno como o 2d20; a oculta vai ao SÓ O MESTRE).
+
+### 29.7 O trabalho e o tratar
+- **Nunca no total:** as de trabalho mexem só no prumo (que soma de todas as fontes até 5, 7.15), no cheio e no tempo. A chance de cada categoria não muda (o B2 da fase: diferença 0 em 1.704 casos).
+- **O Malho Quente:** cada bloco seguido na mesma obra, no mesmo dia, sem outro ato no meio, esquenta 1 (até o teto do grau); a obra que fecha quente ganha prumo igual a metade do calor; +1 de cansaço a cada 2 de calor. **A Paciência** (`habilidade.py paciencia`, de dia; do Mestre, vale sempre): −1 de cansaço por bloco da obra, e do Adepto, prumo 1 (2 no GM). **A Têmpera Certa** (`habilidade.py tempera`, de dia, uma obra): os cheios de 1 a 3 na obra do dia (do Iniciante ao Adepto, só se a peça sai no teto); vale o maior com a têmpera da ferramenta. **O Brio de Oficina:** com um rival ou um mestre de forja com nome no lugar, prumo 1 a 3.
+- **A marca da obra** sai no remate: a dureza pela chance de sair abaixo da categoria da obra ou perder; a obra que acertou conta como cena vencida para a de dia.
+- **O tratar** (`magia_mundo.py tratar PACIENTE [e=OUTRO]`): a Mão que Esquenta soma +½ dia por paciente já tratado no dia (seguidos), até o teto; o Trato de Campo soma +½ a +2 dias; do Perito, trata dois no mesmo bloco (`e=OUTRO`: cada um com o remédio e o preço dele); do Mestre, a ferida grave pede só a mão de Treinado. A marca: uma por dia (a ferida leve, dureza 2; a grave, 3). O feito não sai do tratamento (a dureza não chega a 5).
+
+### 29.8 A gente do mundo
+- **As habilidades que a mão e a vida explicam** (função pura da semente e da pessoa: `habilidade.da_vida`): a mão de Treinado ou mais numa família de arma explica uma técnica da lista curta dela (origem estalo); num ofício ou numa tradição, uma da lista da mãe (8.7 do contrato, sem as que só a classe dá; da lição, do livro ou do mestre); quem vive da luta (o rival, o guarda, o capitão...) com a mão de Mestre numa arma, metade das vezes, uma técnica de mestre (a Sanha, os Trunfos, a Guarda de Bigorna, a Teima). O grau sai da mão (Treinado, Aprendiz; Mestre ou Lendário, Perito), no teto da origem e do talento. O personagem não ganha nenhuma (a primeira nasce em cena).
+- **O mundo novo** as recebe no `gera.py` (e o novato que chega à idade de pegar em armas, no `rivais.py`, pela mesma função); **o mundo que já existe**, no evento de entrada da fase: `python3 estado.py entrada 2` (do Mestre, ao juntar a fase no save que se joga; uma vez só; no save de hoje, numa cópia: 101 habilidades a 78 pessoas, 18 dos 40 rivais — 13 delas a Mira Firme dos arqueiros —, o personagem nenhuma).
+- **A conta rápida** (`conta.py`) leva a acesa de luta (a Roda com arma de peso, a Sanha, o Rito de Veia) por cima da curva, pelo grau.
+- **SÓ O MESTRE** vê as marcas da gente do mundo e as habilidades dos rivais (a lista do turno, e o `rivais.py mestre`), as rolagens do estalo e da cópia, e o estalo, a subida e o legado da gente do mundo (vão às notas do turno, não à saída da luta).
+
+### 29.9 Os dados e os verbos
+- A pessoa: `habilidades: {CHAVE: {grau 0–5, marcas, origem, desde, dia_grau, feitos: [{dia, como}], usada}}` · `copias: {CHAVE: tentativas}` · `talhos: [CHAVE_DE_EFEITO]` · as marcas da cena em `marca` (`trunfos`, `malho`, `fio`, `esquenta`, `paciencia`, `tempera_certa`, `estalo`, `fala_cena`, `trata_cena`, `regateio`, `regateio_dia`, `surdo`, `nao`, `manso`, `vistas`, `vencidas`, `ensino`, `estudo_hab`, `legado`). O item: o escrito da técnica (`tecnica`) e a peça, o caderno ou a ferramenta do legado (`legado: {tecnica, de, classe?}`), conferidos ao nascer e no `poe`.
+- Os verbos (`estado.py`): `['pessoa', id, 'habilidade', 'aprende', {chave, origem, grau?, feitos?}]` (o grau ao nascer só em gera, mestre ou entrada; o Mestre e o Grão-Mestre nascem só com os feitos) · `['pessoa', id, 'habilidade', 'esquece', CHAVE]` · `['pessoa', id, 'hab.CHAVE', 'soma', marcas]` · `['pessoa', id, 'hab.CHAVE', 'grau', g]` (só +1 por evento, um por dia, com as marcas vezes o talento, a mão, o feito e o teto da origem e do talento) · `['pessoa', id, 'hab.CHAVE', 'feito', {dia, como}]` · `['pessoa', id, 'hab.CHAVE', 'usada', dia]` · `['pessoa', id, 'copia.CHAVE', 'soma', 1]` (3 fecha) · `['pessoa', id, 'talho', 'junta', CHAVE]`. Os eventos novos: "habilidade" e "fala".
+- **Os tipos de evento de cada verbo** (o gravador recusa fora deles): nascer e esquecer, em habilidade, classe, mestre, gera, entrada, luta (o estalo e o legado) e estudar (o livro e o caderno) · a marca e a de dia usada, em luta, forjar, fala, cura, habilidade e mestre · o feito, em luta, forjar, fala e mestre · o grau, em habilidade e mestre · a cópia e o talho, em habilidade e mestre. **Fora do "mestre", a marca de uma cena vai de 0 a 6 por pessoa e habilidade, e o feito é um só** (os freios 2 e 6 no gravador). O grau é conferido em todo evento (o do Mestre também). A ferida ganha `['ferida', id, 'repousa', n, indice]` (o repouso numa ferida só: o Ferro em Brasa).
+- A validação confere a chave no catálogo, o grau e a origem (o teto dela; o apelão só de legado ou classe), o teto do talento, o feito do Mestre e do Grão-Mestre, as 6 vagas, as marcas de zero para cima, as 3 cópias, o escrito e o legado do item.
+
+### 29.10 A mesa
+- Em "Você", a linha das habilidades (`habilidade.py mao`; a 🛠️ do turno): "HABILIDADES (3 de 6 vagas): **O Malho Quente** Aprendiz, 18 de 30 marcas (calor até 2: prumo 1 agora) · **A Sanha** Iniciante, 6 de 10 marcas (de luta: pronta) · ..." e o que trava ("tem as marcas para Mestre; falta o feito"). A de luta diz "gasta nesta luta" com a luta aberta; a de dia, "acesa hoje" (a Paciência, a Têmpera Certa) ou "usada hoje"; e a conversa aberta, "esta cena: +N" (as marcas que ela já deu).
+- A subida aparece na saída do ato; o estalo, como "algo acendeu em ...".
+
+## 30. O teste de fala (a parte 2, fase 2)
+
+O contrato é o `projeto/etapa_efeitos/DESENHO.md` (6.6, e a resposta 5a do jogador); os números moram no `tabelas_habilidades.py`; o `fala.py` faz o teste.
+
+### 30.1 O gatilho
+**O teste só rola no pedido que o jogador declara, em dois passos** (a resposta 5a: o degrau e a chance antes do dado): (1) `fala.py conta PID DEGRAU [jeito=] [caminho=] [ameaca]` mostra a conta e a chance de cada faixa, sem rolar, e guarda no caderno do turno o pedido que foi mostrado; o jogador decide; (2) `fala.py pede PID DEGRAU "o quê" [jeito=] [caminho=] [ameaca]` rola só o pedido que foi mostrado, no mesmo bloco e com a mesma chance (senão recusa: "mostre antes") — o caderno do turno fecha com o turno: se a resposta do jogador vem no turno seguinte, roda-se o `conta` de novo (não rola nada) e depois o `pede`. O regateio, a caixa e a missão também: `... conta` mostra, e sem ela rola o que foi mostrado. A conversa comum segue como antes, pela opinião e pela memória (22). **O Mestre nunca rola fala pelo personagem sem a ordem dele.**
+
+### 30.2 A conta
+**2d20 + o bônus de Vontade (no jeito duro de ameaça, `ameaca`, o de Força) + a mão do caminho + a opinião dele sobre você + as habilidades de fala (até +8) − a pena do corpo**, contra **22 + 6 por degrau + metade do bônus de Vontade de quem ouve** (o jeito mexe na CD). Rolado uma vez, pelo `teste.rola`.
+- **A mão do caminho** (`caminho=`): `negocio` (comércio) · `oficio[:OFICIO]` (a mão do ofício quando se fala dele) · `sermao` (fé) · `mentira` (manha). Sem caminho, nenhuma.
+- **A opinião** (−10 a +10, 22.1) soma inteira; **com −6 ou menos, ele não ouve pedido nenhum** (recusado antes do dado). Quem foi ofendido não ouve pedido seu até o dia seguinte.
+- **As habilidades de fala** (até +8): o Fio da Conversa (+2 por fio), a Língua de Feira (no regateio, +2 a +5), a Ameaça Surda (no duro de ameaça, +0 a +3); a Palavra Firme baixa o que o duro sobe (+3 a 0) e, do Mestre, o duro que falha por menos de 5 não ofende.
+
+### 30.3 O degrau e o jeito
+
+| Degrau | CD (+ metade da Vontade dele) | Exemplos |
+| --- | --- | --- |
+| pequeno | 22 | o que não custa a ele: uma informação comum, 1 passo de preço, um dia a mais de prazo, deixar passar |
+| médio | 28 | o que custa algo: 2 passos de preço, um adiantamento, emprestar uma ferramenta, ir junto por metade da diária |
+| grande | 34 | o que custa caro: 3 passos de preço, arriscar a pele, vender o que não queria, a paga da missão +50% |
+| absurdo | 40 | o que vai contra ele: dar de graça o que vale muito, trair o senhor, abrir a porta |
+
+- **O jeito**, dito antes: **manso** (CD −4; nunca ofende; ganhou bem, ele lembra +1, uma vez por semana por pessoa) · **firme** · **duro** (CD +4; ganhou bem, sobe um degrau e ele não age contra você no dia; lembra −1 mesmo ganhando; **falhar ofende sempre** — só a Palavra Firme do Mestre deixa o duro que falha por menos de 5 no "não", com o −1 do duro).
+
+### 30.4 As faixas e a memória
+
+| Resultado | O pedido | A opinião dele |
+| --- | --- | --- |
+| passou por 6 ou mais | ganha, e leva mais um passo | +1 se manso (uma vez por semana) |
+| passou por 0 a 5 | ganha com um preço: a mesa abre a pergunta (um favor, um prazo, prata, ou desiste) | — |
+| falhou por 1 a 9 | não ganha | −1 se o pedido era grande ou absurdo, ou o jeito duro |
+| falhou por 10 ou mais (no duro, por 1 ou mais) | não ganha, e ofende (no manso, é só "não") | −3, e não ouve pedido seu até o dia seguinte |
+
+- **A memória, só pelas faixas: uma linha por conversa** (a mesma pessoa, no mesmo dia): o que as falas do dia põem **soma** nessa linha (o Fio que rompe e o terceiro fio também; no teto de um fato, ±5): ganhar um pedido manso (+1) e depois ofender (−3) deixa a linha em −2.
+- **O "não" vale no dia:** depois de um "não", a mesma pessoa não ouve outro pedido do mesmo degrau ou menor até o dia seguinte (um maior, pode; o jeito não muda isso); depois de uma ofensa, nenhum.
+- **A marca da cena** da fala (os pedidos no mesmo lugar no dia): a maior dureza do dia (pela chance de falhar), para cada habilidade de fala que agiu (o Fio da Conversa, quando havia fio em jogo ou ele andou; a de dia que ganhou soma 1); e o feito (29.2), no pedido de dureza 5 ganho.
+- **Ferord hoje** (Vontade 50, comércio Leigo; quem ouve com Vontade 50, opinião 0): passa no pequeno 62% (bem 36, com preço 26; ofende 9%), no médio 36%, no grande 18%, no absurdo 8% (o banco, HB7: a conta da mesa bate com a exata).
+
+### 30.5 O preço, a caixa e a missão
+- **O regateio** (`fala.py regateia BEM|ITEM [passos=1|2|3] [jeito=]`): um pedido pequeno, médio ou grande (1, 2 ou 3 passos de preço) ao mercador com nome da loja daqui (sem ele, a loja: Vontade 50); **uma vez por loja por dia**. Ganhou, o passo vale na próxima venda ou compra daquele bem ou peça nesta loja, hoje (passou bem: um passo a mais; com 3 fios do Fio da Conversa, mais um, sem subir a CD). **Um passo é 5 pontos** no que a loja paga (nunca acima de 80% pelos bens, 60% pelas peças) ou no que ela cobra (na compra, nunca abaixo da base: até dois passos). A peça da prateleira só se regateia com a Língua de Feira do Perito em diante (até dois passos). O banco da mina (HB9) segue de pé.
+- **Na caixa** (`fala.py caixa XID prazo|paga [DEGRAU]`): mais prazo (pequeno: +2 dias) ou mais paga (médio +25%, grande +50%, na prata que o personagem recebe), a quem pediu. Ganhar muda o pedido; perder deixa como era.
+- **Na missão** (`fala.py missao MID`): a paga +50% (grande), a quem a posta, uma vez, nunca acima de 60% da bolsa dele.
+
+### 30.6 A fala da gente no personagem
+Quando a gente do mundo pede ao personagem (`fala.py gente PID DEGRAU "o quê" [caminho=]`, SÓ O MESTRE), o script rola a fala dela (o dado dela, uma vez) pela mesma conta do pedido (a Vontade dela, a mão do caminho — o do mercador é o negócio, com a Língua de Feira —, os fios dela, a pena do corpo) contra 22 + 6 por degrau + metade da Vontade dele; **se passa, a mesa diz o preço de recusar** ("recusar custa −2 na opinião dele"; o mercador: "ele baixa 10% se você aceitar agora"), e a pergunta do turno guarda a escolha. **Nada muda no personagem sem a resposta: aceitar ou recusar é sempre do jogador** (o banco, HB8: 200 falas, nenhuma mudou o personagem).
+
+
 ## Os comandos
 
 ```
@@ -2830,6 +3017,14 @@ python3 provas.py 600                                as provas da luta, dos iten
 python3 provas_mundo.py                              as provas do mundo: a etapa 1, o alicerce da etapa 2, o mercado, o ofício, a caça
 python3 provas_caca.py coleta                        só as metas da coleta (K1 a K4) e a vila de teste contra a tabela
 python3 estresse.py 1500                             lutas ao acaso, com bichos misturados
+python3 provas_habilidades.py [N] [so=HB1,HB7] [hb1=CHAVE]   as provas da fase 2 (as habilidades e a fala): B0, HB1 a HB13, B3 (N lutas por linha da HB1; padrão 8.000)
+python3 habilidade.py ver [CHAVE]                    o catálogo das 52 habilidades, ou uma grau a grau · habilidade.py mao: a linha do turno (29)
+python3 habilidade.py esquece CHAVE | sobe | paciencia | tempera | estuda ITEM | ferro PACIENTE      (29.6, 29.7)
+python3 habilidade.py copia CHAVE de=PID chance  ·  copia CHAVE de=PID      a chance de colher o jeito, sem rolar · a tentativa (29.6)
+python3 habilidade.py ensina PID CHAVE [blocos=N]  ·  licao CHAVE "como"      o mestre ensina (juntos, no mesmo lugar) · SÓ O MESTRE: a lição (29.6)
+python3 fala.py conta PID DEGRAU [jeito=] [caminho=] [ameaca]  ·  fala.py pede PID DEGRAU "o quê" [jeito=] [caminho=] [ameaca]      a chance (o 1º passo) · o pedido (o 2º; 30)
+python3 fala.py regateia BEM|ITEM [passos=N] [jeito=] [conta] · caixa XID prazo|paga [DEGRAU] [conta] · missao MID [conta] · gente PID DEGRAU "o quê" (SÓ O MESTRE)      (30.5, 30.6)
+python3 magia_mundo.py tratar PACIENTE [e=OUTRO]     o Trato de Campo do Perito trata dois no bloco (29.7)
 python3 vila_teste.py PASTA [comeco=ferreiro|cacador|guerreiro] [nome=NOME] [semente=N]      a vila de teste (GUIA_VILA.md)
 export MOTOR10_MUNDO=PASTA                           o save em que os comandos abaixo mexem (sem isso: a pasta mundo/)
 
@@ -2841,7 +3036,7 @@ python3 ato.py luta nova CENARIO.json LUTA.json  ·  ato.py luta roda LUTA.json 
 python3 teste.py "o que se tenta" Força contra=26 [mais=N] [quem=ID] [oculto]
 python3 estado.py valida | eventos [N] | pessoa ID | lugar ID  ·  corpo.py ver [ID]
 python3 estado.py mestre '[["pessoa","eu","moedas","soma",5]]' "achou cinco moedas"      o que o Mestre decide em cena, por evento
-python3 estado.py entrada 1a | 1b      o evento de entrada de uma fase da parte 2 (o marco no save; DESENHO 9.5), uma vez, no mesmo commit da fase (a 1b converte o devolve fixo e o sangra: 28.9)
+python3 estado.py entrada 1a | 1b | 2      o evento de entrada de uma fase da parte 2 (o marco no save; DESENHO 9.5), uma vez, no mesmo commit da fase (a 1b converte o devolve fixo e o sangra: 28.9; a 2 dá à gente viva as habilidades da vida: 29.8)
 
 python3 mercado.py ver | preco BEM [N] | comprar BEM N | vender BEM N|tudo | vender tudo | comprar ITEM | vender ITEM
 python3 mercado.py funda POVO "como foi"             o Mestre abre um mercado onde a pessoa está

@@ -292,11 +292,26 @@ def ficha(p):
     if p.get('povo'): _povo(F, p)
     _fx(F, p)
     _firmeza(F, p)
+    hb = _habs(p)                                           # (a parte 2, fase 2) as habilidades e os graus (a luta usa os ganchos do habilidade.py só se alguém as traz)
+    if hb: F['hab'] = hb
+    for k in ('trunfos_gastos', 'trunfo_ordem', 'sem_riposta', 'hab_dia'):
+        if p.get(k): F[k] = p[k]
     # (fase 1b) o que cada peça com id RENDE agora para esta pessoa (a mesa mostra o número do efeito por ela: a sob medida na mão de outro rende uma abaixo; a que dorme na
     # sintonia rende uma abaixo e tem os efeitos dormindo; a quebrada não tem efeito; o apelão de regra que não é o acordado dorme sozinho)
     F['rende'] = {it['id']: dict(cat=0 if it['dur'][0] <= 0 else _assenta(it, p, dorme(it))[0], dorme=dorme(it), quebrada=it['dur'][0] <= 0, apelao_dorme=_tem_apelao(it) and not apelao(it) and not dorme(it))
                   for it in todas if it.get('id')}
     return F
+
+
+def _habs(p):
+    """(fase 2) {chave: grau} das habilidades da pessoa: do estado ({CHAVE: {grau, marcas, ...}}) ou da prova ({CHAVE: grau})"""
+    hb = p.get('habilidades') or {}
+    if not isinstance(hb, dict): return {}
+    out = {}
+    for k, v in hb.items():
+        gr = v if isinstance(v, int) and not isinstance(v, bool) else (v.get('grau', 0) if isinstance(v, dict) else None)
+        if gr is not None: out[k] = max(0, min(5, int(gr)))
+    return out
 
 
 def _tem_apelao(it): return bool(it) and any(isinstance(e, dict) and TE.apelao_de_regra(e.get('chave')) for e in it.get('efeitos') or [])

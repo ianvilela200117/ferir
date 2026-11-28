@@ -5,6 +5,8 @@ AN2 a conta fecha: todo dia o estado inteiro; a prata do mundo igual do primeiro
 AN4 os rivais: de 10 a 30% dos 40 morrem no ano, e entra gente nova; as Épicas, Únicas e Lendárias em mãos vivas não caem; o líder do ranking troca de 1 a 6 vezes;
     nenhuma casa nobre viva some sem um evento que explique (toda casa viva no Dia 1 que acaba sem gente teve as mortes registradas).
 AN5 a primeira Épica nova do mundo sai entre os dias 40 e 110 (a mediana das sementes).
+B1 (a parte 2, fase 2: o ano com tudo o que a fase trouxe) os rivais nascem com as habilidades que a mão e a vida explicam; nenhum rival mata o dragão no primeiro mês (o dragão
+    do PROJETO 2.5: o adulto ou maior; o filhote e o jovem, que uma Lenda já matava antes da fase, contam à parte: DESENHO 12.4); a corrida segue com mortos (a AN4).
 AN5b a história (o RG4 do provas_regiao, aqui em todas as sementes).
 AN6 as frentes do Dia 1: de 3 a 6 chegam ao desfecho e de 2 a 5 são barradas (a mediana, e 60% das sementes na faixa).
 AN7 o grão: o preço da comida fica entre 0,6 e 2,2 vezes a base; a fome nasce em 20 a 60% dos mundos; no máximo 2 lugares perdidos (menos de 30% do povo) por mundo.
@@ -35,10 +37,14 @@ def um_ano(s, dias=364):
     """o ano de um mundo, sem personagem: as medidas de cada meta"""
     import gera, regiao, mercado, rivais
     E, _ = gera.mundo(s); p0 = mercado.prata_do_mundo(E); riv0 = set(rivais.rivais(E)); alt0 = altas_vivas(E)
+    hab0 = sum(1 for k in riv0 if E['gente'][k].get('habilidades'))          # (a parte 2, fase 2) os rivais que nascem com habilidade
     nobres0 = {k for k, c in (E['mundo'].get('casas') or {}).items() if c.get('tipo') == 'nobre' and c.get('viva')}
     pop0 = {k: E['lugares'][k].get('pop') or 0 for k in regiao.povoados(E)}; ev0 = E['relogio']['eventos']
-    M_ = dict(quebrou=None, fator=[9, 0], primeira_epica=None)
+    GRANDE = ('adulto', 'velho', 'ancião')
+    def idades(E): return {k: l['dragao'].get('idade') for k, l in E['lugares'].items() if isinstance(l, dict) and isinstance(l.get('dragao'), dict)}
+    M_ = dict(quebrou=None, fator=[9, 0], primeira_epica=None, dragao=None, grande=None, idade=idades(E))
     def olha(E, dia):
+        M_['idade'].update(idades(E))                       # (B1) a idade de cada dragão, dia a dia (a do dia em que morre é a da véspera)
         if dia % 15 == 0 or dia >= dias:
             P = estado.valida(E)
             if P and not M_['quebrou']: M_['quebrou'] = f"dia {dia}: {P[0]}"
@@ -52,6 +58,9 @@ def um_ano(s, dias=364):
             if isinstance(x, list) and len(x) == 5 and x[0] == 'pessoa' and x[2:] == ['estado', 'poe', 'morto']: mortes.setdefault(x[1], e['id'])
             if M_['primeira_epica'] is None and isinstance(x, list) and len(x) == 3 and x[:2] == ['item', 'nasce'] and isinstance(x[2], dict) and x[2].get('cat', 0) >= 3 and x[2].get('tipo') != 'nucleo' and e['tipo'] != 'gera':
                 M_['primeira_epica'] = e['dia']
+            if isinstance(x, list) and len(x) == 5 and x[0] == 'lugar' and x[2:] == ['dragao', 'poe', None]:      # o dragão morto (sem personagem: por rival)
+                if M_['dragao'] is None: M_['dragao'] = (e['dia'], M_['idade'].get(x[1]))
+                if M_['grande'] is None and M_['idade'].get(x[1]) in GRANDE: M_['grande'] = (e['dia'], M_['idade'].get(x[1]))
         for q in e.get('quem') or []:
             if q in mortes and mortes[q] < e['id'] and e['tipo'] not in ('mestre', 'heranca'): age_morto.append((q, e['id'], e['tipo']))
     fr = {k: f for k, f in (E['mundo'].get('frentes') or {}).items() if int(k[1:]) <= len(R.FRENTES_DIA1)}
@@ -62,7 +71,8 @@ def um_ano(s, dias=364):
                 mortos=len([k for k in riv0 if E['gente'][k]['estado'] == 'morto']), novos=len(set(rivais.rivais(E, vivos=False)) - riv0),
                 alt=(alt0, altas_vivas(E)), trocas=(E['mundo'].get('ranking') or {}).get('trocas', 0), explicadas=explicadas,
                 desfecho=sum(1 for f in fr.values() if f.get('fim') == 'desfecho'), barrada=sum(1 for f in fr.values() if f.get('fim') == 'barrada'),
-                fome=any(f['molde'] == 'fome' for f in (E['mundo'].get('frentes') or {}).values()), fator=tuple(M_['fator']), perdidos=perdidos, epica=M_['primeira_epica'])
+                fome=any(f['molde'] == 'fome' for f in (E['mundo'].get('frentes') or {}).values()), fator=tuple(M_['fator']), perdidos=perdidos, epica=M_['primeira_epica'],
+                dragao=M_['dragao'], grande=M_['grande'], hab0=hab0)
 
 
 def faixa(v, a, b): return a <= v <= b
@@ -162,6 +172,14 @@ def provas(n=20, nr=5):
     ep = [a['epica'] for a in anos if a['epica']]
     out.append(('AN5 A PRIMEIRA ÉPICA NOVA', f"nasceu em {len(ep)} de {n} anos; o dia (a mediana): {statistics.median(ep) if ep else '—'} (de {min(ep) if ep else '—'} a {max(ep) if ep else '—'}; a faixa: 40 a 110)",
                 bool(ep) and faixa(statistics.median(ep), 40, 110) and len(ep) >= 0.6 * n))
+    hb0 = [a['hab0'] for a in anos]; gr = [a['grande'][0] for a in anos if a['grande']]; dr = [a['dragao'][0] for a in anos if a['dragao']]
+    cedo_g = [a for a in anos if a['grande'] and a['grande'][0] <= 30]; cedo = [a for a in anos if a['dragao'] and a['dragao'][0] <= 30]
+    out.append(('B1 O ANO COM AS HABILIDADES (a parte 2, fase 2)', f"os rivais que nascem com habilidade (a mão e a vida, dos 40): mediana {statistics.median(hb0)} (de {min(hb0)} a {max(hb0)}); "
+                f"rival que mata o dragão (adulto ou maior) no primeiro mês: em {len(cedo_g)} de {n} anos" + (f" (semente {cedo_g[0]['semente']}: o {cedo_g[0]['grande'][1]}, dia {cedo_g[0]['grande'][0]})" if cedo_g else '')
+                + f"; no ano: em {len(gr)} de {n}" + (f" (o primeiro, a mediana: dia {statistics.median(gr)})" if gr else '')
+                + f" · à parte, qualquer dragão no primeiro mês: em {len(cedo)} de {n}" + (' (' + ', '.join(f"semente {a['semente']}: o {a['dragao'][1]}, dia {a['dragao'][0]}" for a in cedo) + ')' if cedo else '')
+                + f"; no ano, em {len(dr)} de {n}" + (f" (o primeiro, a mediana: dia {statistics.median(dr)})" if dr else '') + "; a corrida segue com mortos: a AN4",
+                not cedo_g and statistics.median(hb0) >= 1))
     import provas_regiao
     out.append(provas_regiao.rg4())
     des = [a['desfecho'] for a in anos]; bar = [a['barrada'] for a in anos]; dentro = sum(1 for a in anos if faixa(a['desfecho'], 3, 6) and faixa(a['barrada'], 2, 5))

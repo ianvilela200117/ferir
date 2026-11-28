@@ -593,14 +593,16 @@ def _ma14(n):
             with pasta():
                 E = vila(s)
                 if not com_chefe: estado.aplica(E, 'mestre', [['lugar', 'cripta_6', 'chefe', 'poe', None]], texto='sem o guardião (a prova)')
-                luta.semente(s); out = []
-                with dado_posto([1, -3, 2, 5, -1, 4, 0, 3, -2, 6] * 20):
-                    for f, a, k in ((MS.descer, ('cripta',), dict(com=['tome', 'rute'], ordem=['tome', 'eu', 'rute'], luz='tocha')), (MS.ir, ('cripta_2',), {}), (MS.contornar, (), {}), (MS.atacar, (), {}),
-                                    (luta_robo, (), {}), (MS.ir, ('cripta_3',), {}), (MS.atacar, (), dict(passagem=True)), (luta_robo, (), {}), (MS.ir, ('cripta_5',), {}), (MS.contornar, (), {}), (MS.escutar, ('cripta_6',), {}), (MS.ver, (), {})):
-                        try:
-                            r = quieto(f, E, 'eu', *a, **k); out.append(r if isinstance(r, list) else r.get('texto', ''))
-                        except SystemExit as x: out.append(f'recusa: {x}')
-                        out.append(_publico(E))
+                luta.semente(s); out = []; G0 = teste.GERADOR_CEM; teste.GERADOR_CEM = random.Random(s)      # (a parte 2, fase 2) o dado de cem preso também: o estalo que rola no fim de cada luta
+                try:
+                    with dado_posto([1, -3, 2, 5, -1, 4, 0, 3, -2, 6] * 20):
+                        for f, a, k in ((MS.descer, ('cripta',), dict(com=['tome', 'rute'], ordem=['tome', 'eu', 'rute'], luz='tocha')), (MS.ir, ('cripta_2',), {}), (MS.contornar, (), {}), (MS.atacar, (), {}),
+                                        (luta_robo, (), {}), (MS.ir, ('cripta_3',), {}), (MS.atacar, (), dict(passagem=True)), (luta_robo, (), {}), (MS.ir, ('cripta_5',), {}), (MS.contornar, (), {}), (MS.escutar, ('cripta_6',), {}), (MS.ver, (), {})):
+                            try:
+                                r = quieto(f, E, 'eu', *a, **k); out.append(r if isinstance(r, list) else r.get('texto', ''))
+                            except SystemExit as x: out.append(f'recusa: {x}')
+                            out.append(_publico(E))
+                finally: teste.GERADOR_CEM = G0
                 textos.append(out)
         iguais += textos[0] == textos[1]
     R[f'com e sem o guardião atrás da porta de ferro, o mesmo texto até a porta abrir ({iguais} de 3 mundos)'] = iguais == 3

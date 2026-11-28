@@ -9,6 +9,8 @@ A MISSÃO CONTRA A FRENTE, cumprida, tira um passo dela. Quem toma e não cumpre
   python3 missoes.py larga MID            larga a missão tomada (perde fama; quem pediu lembra)
 Tipos: caça (matar N de uma espécie num ermo) · entrega (levar N de um bem a quem pediu) · limpar (a masmorra, até o chefe) · matar (o dono da frente, ou o chefe)
 · escolta (levar alguém até um lugar) · investigar (abrir o que a frente esconde)
+(A PARTE 2, FASE 2: a paga da missão se negocia pelo teste de fala, no pedido que o jogador declara: `fala.py missao MID` (grande: +50%, uma vez, nunca acima de 60% da bolsa
+de quem a posta). O capítulo 30.)
 """
 import json, os, sys
 import tabelas as T

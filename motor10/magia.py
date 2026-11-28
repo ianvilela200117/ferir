@@ -19,6 +19,9 @@ Uso em código (o que as outras frentes chamam):
   (A PARTE 2, FASE 1b: os efeitos de foco e de amuleto: a Chama e a Guarda Mágica no dano, o Foco Certeiro na Conjuração, a Firmeza, a Refletora do escudo, o Domínio do foco
   (`dominio` na ordem; o robô o solta no primeiro feitiço de grau 2 ou mais), e o calejo por família: o feitiço de controle que pega soma na resistência à carga da família dele,
   e o controle de arma da mesma família soma na Firmeza contra ele, sem contar duas vezes.)
+  (A PARTE 2, FASE 2: as três de lançar, só numa luta em que alguém traz habilidade: A CORRENTE (cada feitiço seguido, +1 na Conjuração no teto de +8 e +5% de dano de feitiço,
+  TÉCNICA; golpear, andar ou ser atordoado zera), A MÃO NO RITO (o longo que se perde devolve metade da Mana; do Adepto, o longo sai uma rodada mais cedo uma vez por luta; do
+  Mestre, sempre) e A MANA CURTA (o primeiro feitiço da luta custa menos); e o Rito de Veia (+1 dado em cada feitiço; a cura de magia em quem o abriu vale metade).)
 """
 import copy, math, sys, unicodedata
 import tabelas as T
@@ -27,6 +30,7 @@ import tabelas_magia as TM
 import tabelas_magia_mundo as W
 import tabelas_povos as TP
 import tabelas_efeitos as TE
+import tabelas_habilidades as HT
 import luta as L
 
 DANO_LONGE = ('seta', 'lança-de-fogo', 'bola-de-fogo', 'raio')      # quem sabe destes e não tem o que lançar, espera a Mana voltar em vez de ir ao corpo a corpo
@@ -114,7 +118,7 @@ def conj(S, f, k, fonte=None):
     m = f.get('maestria', 0) if f.get('bicho') else (f.get('m_trad') or {}).get(trad, 0)
     dom = 0 if f.get('bicho') else int((f.get('dom') or {}).get(trad, 0) or 0)
     laco = (f.get('pena_laco') or 0) if trad == 'verde' else 0         # o druida cujo ermo do laço foi caçado até o fim perde a força (magia_mundo.pena_laco: o estado.lutador traz)
-    fc = 0 if f.get('bicho') else min(TE.FIXO_TETO, _fx_foco(S, f, 'foco_certeiro') or 0)       # (fase 1b) o Foco Certeiro do foco (P3: até +8)
+    fc = 0 if f.get('bicho') else min(TE.FIXO_TETO, (_fx_foco(S, f, 'foco_certeiro') or 0) + (f.get('corrente') or 0) * HT.CORRENTE_CONJ)       # (fase 1b) o Foco Certeiro do foco; (fase 2) a Corrente (P3: até +8)
     return m + dom + (a // 10) / 2 + T.BON[c] + mais + laco + f.get('pena', 0) + penas(S, f) + fc, c, vezes, dom, T.forca_mult(a)
 
 
@@ -181,9 +185,13 @@ def defesa_mais(S, e):
 
 def defesa(S, a, e, area):
     """a Defesa contra o feitiço que voa (inteira, como contra um tiro) ou contra a área (sem escudo e sem arma, como contra o sopro)"""
-    pd = T.POSTURAS[e['postura']]
+    pd = T.POSTURAS.get(e['postura']) or T.POSTURAS['firme']          # (a postura nova `bigorna`, da fase 2, vale pela habilidade: habilidade.defesa_mais)
     df = (e['def_fixa'] if area else L.defesa_de(S, e)) + pd[1] - (T.SEM_FOLEGO if e['fol'] <= 0 else 0) + (T.CHAO if e['chao'] else 0) + (T.PRESO if e['preso'] else 0) + (T.RESGUARDO if e['resguardo'] else 0)
     df += sum(T.TEMPO[k].get('defesa', 0) for k in S['tempo']) + defesa_mais(S, e)
+    if S.get('hab'):                                        # (fase 2) como no golpe: a Guarda de Bigorna contra o que voa (no teto de +8; contra a área, não, como o escudo), e o −1 da Sanha
+        import habilidade
+        if not area and habilidade.defesa_mais(S, e): df += min(TE.FIXO_TETO, habilidade.defesa_mais(S, e)); habilidade._usa(e, 'bigorna')
+        df += habilidade.defesa_pena(S, a, e)
     return df - T.FLANCO * min(T.FLANCO_MAX, sum(1 for n, _ in e['golpeado'] if n != a['nome']))
 
 
@@ -275,6 +283,9 @@ def concentra(S, f, ferida):
 def perde(S, f, porque):
     """o feitiço que se canalizava se perde (a Mana dele já foi)"""
     c = f['canaliza']; f['canaliza'] = None; conta(S, 'conc_perdidos')
+    gr = (f.get('hab') or {}).get('mao_rito', -1) if S.get('hab') else -1
+    if gr >= 0 and HT.num('mao_rito', 'devolve', gr) and c.get('fonte') is None and f.get('mana_max'):      # (fase 2) a Mão no Rito do Iniciante e do Aprendiz: o longo perdido devolve metade da Mana
+        q = T.FEITICOS[c['nome']]['mana'] // 2; f['mana'] = min(f['mana_max'], f['mana'] + q); f.setdefault('hab_usos', {})['mao_rito'] = f['hab_usos'].get('mao_rito', 0) + 1
     if porque == 'sem teste': conta(S, 'conc_cortes' if f['estado'] == 'pe' else 'conc_caiu')
     L.diz(S, f"    {f['nome']} PERDE O FEITIÇO ({nome(c['nome'])}: {porque})")
     L._para(S, f, f"{f['nome']} perdeu o feitiço ({nome(c['nome'])})", so_controlado=True)
@@ -311,6 +322,8 @@ def lanca(S, f, k, alvo=None, casa=None, fonte=None, osso=False, campo=None, dom
     if dominio: pass
     elif fonte is None:
         q = custo(f, k)
+        if S.get('hab') and 'mana_curta' in (f.get('hab') or {}) and not f.get('mana_curta'):      # (fase 2) A MANA CURTA: o primeiro feitiço da luta custa menos
+            f['mana_curta'] = True; q = max(0, q - HT.num('mana_curta', 'menos', f['hab']['mana_curta'])); f.setdefault('hab_usos', {})['mana_curta'] = 1
         if f['mana'] >= q: f['mana'] -= q; conta(S, 'mana_gasta', q)
         else:                                                    # NO OSSO: o que falta sai do PV, e o lance é forçado
             pv = math.ceil((q - f['mana']) * TM.SEM_MANA_PV * f['pvmax']); conta(S, 'mana_gasta', f['mana']); f['mana'] = 0; f['pv'] -= pv; forcado = True; S['dano_r'] += pv / f['pvmax']
@@ -331,12 +344,23 @@ def lanca(S, f, k, alvo=None, casa=None, fonte=None, osso=False, campo=None, dom
             f['canaliza'] = dict(nome=k, trad=trad_de(f, k)); ok = concentra(S, f, pv0 - f['pv'] >= f['pvmax'] * T.FERIDA)
             if not ok: return
             f['canaliza'] = None
-    if g in TM.LONGO and not dominio:                            # O LONGO: gasta o turno agora e sai no começo do turno seguinte (o Domínio o solta de uma vez)
+    if S.get('hab') and f.get('hab'): import habilidade; habilidade.lancou(S, f)      # (fase 2) A Corrente soma depois do feitiço (vale no seguinte)
+    cedo = bool(S.get('hab') and g in TM.LONGO and not dominio and _cedo(S, f))       # (fase 2) A MÃO NO RITO: o longo sai uma rodada mais cedo
+    if g in TM.LONGO and not dominio and not cedo:              # O LONGO: gasta o turno agora e sai no começo do turno seguinte (o Domínio o solta de uma vez)
         f['canaliza'] = dict(nome=k, alvo=alvo, casa=casa, trad=trad_de(f, k), fonte=fonte, forc=forc, forcado=forcado, r=TM.LONGO[g], campo=campo)
         L.diz(S, f"  {f['nome']} começa a canalizar {nome(k)}" + (f" em {alvo}" if alvo else '') + ' (sai no começo do próximo turno)'); conta(S, 'longos')
         if f['lado'] == 'B': _para_todos(S, f"{f['nome']} começou a canalizar {nome(k)}: sai no próximo turno, se ninguém o atrapalhar")
         return
     resolve(S, f, k, alvo, casa, fonte, forc, forcado, campo, dominio)
+
+
+def _cedo(S, f):
+    """(fase 2) a Mão no Rito: do Adepto, o longo sai uma rodada mais cedo uma vez por luta; do Mestre, sempre"""
+    gr = (f.get('hab') or {}).get('mao_rito', -1)
+    if gr < 2: return False
+    if HT.num('mao_rito', 'cedo', gr) <= f.get('rito_cedo', 0): return False
+    f['rito_cedo'] = f.get('rito_cedo', 0) + 1; f.setdefault('hab_usos', {})['mao_rito'] = f['hab_usos'].get('mao_rito', 0) + 1
+    L.diz(S, f"  a Mão no Rito: o feitiço longo de {f['nome']} sai de uma vez"); return True
 
 
 def _aviso_mana(S, f):
@@ -382,10 +406,16 @@ def _dano(S, f, e, dado, c, vezes, fm, crit, dominio=False, chama=False):
     if f.get('amolecido', -1) >= S['r']: m *= TE.AMOLECIDO
     gm = L.efeito(S, e, 'guarda_magica')
     if gm: m *= 1 - TE.curva(gm)
-    if m == 1 and not dominio: return int(L.rola(dado, vh) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
+    hb = S.get('hab') and f.get('hab') and f is not e      # (fase 2) a Corrente (TÉCNICA) e o Rito de Veia (o dado somado) no feitiço de quem as tem
+    tec = (f.get('corrente') or 0) * HT.CORRENTE_DANO if hb else 0
+    if tec: m *= 1 + min(TE.PILHA['tecnica'], tec)
+    import habilidade
+    rito = habilidade.rito_dado(f) if hb else 0
+    if m == 1 and not dominio and not rito: return int(L.rola(dado, vh) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
     nd, fd = map(int, dado.split('d')); vz = min(TE.DADOS_MAX, vh * 2) if dominio else vh; rolos = [L.D.d(fd) for _ in range(nd * vz)]
+    xr = L.D.d(rito) if rito else 0                         # o dado somado: uma vez, sem dobrar no crítico (P2)
     hoje = int(sum(rolos[:nd * vh]) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm)
-    return min(TE.TETO_PILHA * hoje, int(sum(rolos) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm * m))
+    return min(TE.TETO_PILHA * hoje, int((sum(rolos) + xr) * TM.K * T.MULT[c] * vezes / (g / (2 if crit else 1)) * fm * m))      # o dano 0 de hoje segue 0 (P1), com ou sem o dado do Rito
 
 
 def fere(S, a, e, dano, crit, k, c, queima=False, atordoa=0):
@@ -515,6 +545,7 @@ def cura(S, a, dado, c):
     """devolve dado × 6 × 3^(categoria da cura − categoria da ferida mais funda), sem passar do PV máximo nem do teto do dia (metade do PV máximo, feitiço e poção somados)"""
     teto = max(0, int(a['pvmax'] * T.CURA_TETO) - a.get('curado', 0))
     g = max(0, min(a['pvmax'] - a['pv'], teto, int(T.cura(L.rola(dado), c, a.get('funda')))))
+    if S.get('hab') and (a.get('usos') or {}).get('rito_veia'): g //= 2           # (fase 2) o Rito de Veia: a cura de magia na cena vale metade em quem o abriu
     a['pv'] += g; a['curado'] = a.get('curado', 0) + g; S['dano_r'] -= g / a['pvmax']
     return g
 

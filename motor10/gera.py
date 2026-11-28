@@ -408,6 +408,14 @@ class Gerador:
         self.L.append(f"As peças altas da história: {len(postos)} (" + ', '.join(f"{T.CATS[c]} {sum(1 for _, x, _ in postos if x == c)}" for c in sorted({c for _, c, _ in postos})) + ').')
 
     # ---------- 10. as frentes, as missões e as notícias do Dia 1 (dos módulos que existirem) ----------
+    def habilidades(self):
+        """(a parte 2, fase 2) a gente nasce com as habilidades que a mão e a vida explicam, pela função da semente (habilidade.da_vida; o acaso do gerador não anda)"""
+        import habilidade
+        ef = []
+        for pid in sorted(self.E['gente']): ef += habilidade.efeitos_da_vida(self.E, pid)
+        if ef: self.ap(ef, f"a gente nasce com as habilidades que a mão e a vida explicam ({len(ef)})")
+        n = len({x[1] for x in ef}); self.L.append(f"As habilidades: {n} pessoas nascem com {len(ef)} habilidades (a mão e a vida, pela semente).")
+
     def comeco(self):
         import importlib
         for nome in ('frentes', 'missoes', 'noticias', 'rivais', 'gente'):
@@ -422,7 +430,7 @@ class Gerador:
 
     def tudo(self):
         self.lugares(); self.ermos(); self.estradas(); self.poe_estradas(); self.plano_masmorras(); self.historia(); self.masmorras(); self.mercados()
-        self.gente(); self.rivais(); self.feras(); self.pecas_altas(); self.comeco()
+        self.gente(); self.rivais(); self.habilidades(); self.feras(); self.pecas_altas(); self.comeco()
         P = estado.valida(self.E)
         if P: sys.exit('O MUNDO NASCEU QUEBRADO (não foi gravado):\n  ' + '\n  '.join(P[:30]))
         conta = {}

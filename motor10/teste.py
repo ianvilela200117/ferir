@@ -40,6 +40,20 @@ def rola(E, o_que, atributo, contra, mais=0, quem=None, oculto=False, dom=0, rot
     return r
 
 
+GERADOR_CEM = None          # só o banco põe aqui um random.Random de semente fixa (a meta do estalo reproduzível); no jogo é sempre o secrets
+
+
+def rola_cem(E, o_que, chance, quem=None, oculto=False):
+    """(a parte 2, fase 2) O DADO DE CEM, para a chance que o contrato diz em por cento (o estalo, colher o jeito, o eco de golpe): 1d100 com secrets, declarado antes (a chance
+    vai à mesa, ou ao SÓ O MESTRE na oculta), rolado uma vez e escrito no turno, como o 2d20. Passa com o dado até a chance (8% passa com 1 a 8)."""
+    pid = quem or estado.eu(E); p = E['gente'].get(pid) or sys.exit(f'não há a pessoa "{pid}"')
+    d = (GERADOR_CEM.randrange(100) if GERADOR_CEM is not None else secrets.randbelow(100)) + 1; contra = max(0, min(100, round(100 * chance)))
+    r = dict(n=len(E['turno']['dados']) + 1, dia=E['relogio']['dia'], bloco=E['relogio']['bloco'], quem=pid, o_que=o_que, atributo='d100', dados=[[d]], bonus=0, pena=0, mais=0,
+             total=d, contra=contra, passou=d <= contra, oculto=bool(oculto), cem=True)
+    E['turno']['dados'].append(r)
+    return r
+
+
 def total_visto(r):
     """o total como a mesa o vê: sem o dom escondido que não decidiu"""
     d = r.get('dom') or 0
@@ -48,7 +62,9 @@ def total_visto(r):
 
 def diz(E, r, mestre=False):
     if r['oculto'] and not mestre: return f"#{r['n']} rolagem oculta ({r['o_que']})"
-    p = E['gente'][r['quem']]; partes = f"{'+'.join(map(str, r['dados'][0]))} e {'+'.join(map(str, r['dados'][1]))}, "
+    p = E['gente'][r['quem']]
+    if r.get('cem'): return f"#{r['n']} {p['nome']}, {r['o_que']}: d100 {r['total']} contra {r['contra']}%: {'PASSA' if r['passou'] else 'FALHA'}" + (' (OCULTA)' if r['oculto'] else '')
+    partes = f"{'+'.join(map(str, r['dados'][0]))} e {'+'.join(map(str, r['dados'][1]))}, "
     if r.get('rotulo'): partes += f"{r['bonus'] + r['mais']:+d} de {r['rotulo']}".replace('-', '−')       # a conta inteira com o nome dela (o atributo já está dentro)
     else: partes += f"+{r['bonus']} de {r['atributo']}"
     if r['pena']: partes += f", −{-r['pena']} do corpo"

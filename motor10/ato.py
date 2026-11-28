@@ -386,6 +386,8 @@ def luta_nova(E, arq_cenario, arq_luta):
     tempo = list(C.get('tempo') or [])
     if E['relogio']['bloco'] in M.ESCUROS and not C.get('luz') and 'escuro' not in tempo: tempo.append('escuro')
     S = luta.nova([pessoa(x) for x in C['A']], [pessoa(x) for x in C['B']], inicio=C.get('inicio', 'perto'), lugar=C.get('lugar'), tempo=tempo, surpresa=C.get('surpresa'), ermo=_ermo_da_luta(E, C))
+    import habilidade
+    S['dureza'] = habilidade.dureza_luta(S)                # (a parte 2, fase 2) a dureza de cada lado, ao abrir (a marca da cena e o estalo)
     S['mundo'] = True; S['comecou'] = True; luta.salva(S, arq_luta)
     E['turno']['lutas'].append(dict(arq=estado.arq_guarda(arq_luta), fim=None)); estado.grava(E)
     return luta.situacao(S)
@@ -415,7 +417,8 @@ def luta_roda(E, arq_luta, ordens):
 
 def luta_fecha(E, S, arq_luta=None):
     """a luta acabada volta ao estado, num evento só: PV, feridas novas, mortes, o cansaço, a durabilidade das peças"""
-    ef = []; quem = []; linhas = []
+    import habilidade
+    ef = []; quem = []; linhas = []; estalos = []
     for f in S['L']:
         pid = f.get('id')
         if not pid or pid not in E['gente']: continue
@@ -424,6 +427,10 @@ def luta_fecha(E, S, arq_luta=None):
         if pv != p['pv']: ef.append(['pessoa', pid, 'pv', 'soma', pv - p['pv']])
         for parte, grave in f['feridas'][f['feridas_antes']:]: ef.append(['ferida', pid, 'abre', parte, grave])
         mg = _magia_volta(E, pid, p, f, pv); ef += mg                 # a etapa da magia: a Mana, as poções, os elixires, os encantos, as maldições postas, as marcas (antes da morte)
+        ef += habilidade.volta(E, S, f, pid, ja=ef)                   # (a parte 2, fase 2) as marcas das habilidades, o feito, a de dia, o cansaço da Sanha, os trunfos gastos, o legado
+        es, frase, so_mestre = habilidade.estalo(E, S, f, pid); ef += es      # o estalo (rolagem oculta): a técnica que acende (a do personagem vai à mesa; a da gente, ao SÓ O MESTRE)
+        if frase: estalos.append(frase)
+        if so_mestre: E['turno']['notas'].append(so_mestre)
         if morto: ef.append(['pessoa', pid, 'estado', 'poe', 'morto'])
         else: ef += [['pessoa', pid, 'cansaco', 'soma', M.LUTA_CANSA], ['pessoa', pid, 'marca.luta_dia', 'poe', E['relogio']['dia']]]       # o dia em que a pessoa lutou não é dia de repouso (corpo.repousou)
         novas = len(f['feridas']) - f['feridas_antes']
@@ -440,6 +447,14 @@ def luta_fecha(E, S, arq_luta=None):
     for pid in quem:
         c = corpo.cruzou(E['gente'][pid], antes[pid]) if E['gente'][pid]['estado'] == 'vivo' else None
         if c: linhas.append(f"  {c} (a luta cansa)")
+    linhas += [f"  {x}" for x in estalos]
+    for pid, frase in S.get('hab_mesa') or []:             # (a parte 2, fase 2) o legado que ensinou: o do personagem à mesa; o da gente, ao SÓ O MESTRE
+        if E['gente'][pid].get('jogador'): linhas.append(f"  {frase}")
+        else: E['turno']['notas'].append(f"(só o Mestre) {frase}")
+    for pid in quem:                                        # (a parte 2, fase 2) a subida de grau do personagem aparece na saída do ato; a da gente do mundo, só no SÓ O MESTRE (6.4)
+        sb = habilidade.sobe(E, pid)
+        if E['gente'][pid].get('jogador'): linhas += [f"  {x}" for x in sb]
+        else: E['turno']['notas'].extend(f"{E['gente'][pid]['nome']}: {x}" for x in sb)
     for l in E['turno']['lutas']:
         if arq_luta and l['arq'] == estado.arq_guarda(arq_luta): l['fim'] = S['fim']
     return 'A LUTA VOLTOU AO ESTADO:\n' + '\n'.join(linhas)

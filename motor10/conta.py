@@ -6,6 +6,9 @@ menos de 8 pontos (a meta 8 do PROJETO, seção 9).
 
   python3 conta.py afina [N]          roda N casos (padrão 900), cada um 24 lutas de verdade, e acha os pesos da curva (grava em dados/conta_pesos.json)
   python3 conta.py confere [N]        N casos novos: o erro médio da curva contra a luta de verdade (padrão 300)
+(A PARTE 2, FASE 2) A ACESA NA CONTA: quem traz uma habilidade acesa de luta (a Roda com arma de peso, a Sanha, o Rito de Veia) leva, por cima da curva, o que ela vale no duelo de
+iguais pelo grau (os pontos do banco, provas_habilidades HB1: a vitória a mais vira a diferença no logit). Os casos ao acaso do `afina` e do `confere` não têm habilidade: a meta 8 não
+muda.
 """
 import json, math, os, random, sys
 import tabelas as T
@@ -36,7 +39,30 @@ def _perfil(f):
     tr = (f.get('partes') or {}).get('tronco'); arm = tr['cat'] if isinstance(tr, dict) else -1
     esc = (f.get('escudo') or {}).get('bonus', 0) if isinstance(f.get('escudo'), dict) else 0
     return dict(atk=atk, arm=arm, pv=max(1, f.get('pv', f.get('pvmax', 1))), df=f.get('def_fixa', 20) + esc, ma=f.get('maestria', 0) or 0, fo=f.get('forca_b', 5) or 5,
-                tr=set(f.get('tracos') or []), oc=f.get('ocupa', 1) or 1, tras=f.get('linha') == 'trás' or (arma or {}).get('distancia', False))
+                tr=set(f.get('tracos') or []), oc=f.get('ocupa', 1) or 1, tras=f.get('linha') == 'trás' or (arma or {}).get('distancia', False), acesa=_acesa(f, arma))
+
+
+# (fase 2) os pontos da acesa por grau no duelo de iguais (I·Ap·Ad·P·M·GM): os do banco (o duelo da HB1, medido no conserto da fase 2 com 40.000 lutas por grau, mais preciso que
+# a HB1 de 8.000; o Rito de Veia do Perito ao GM, a média de três sementes). A Roda é a que 6.7 manda remedir: o banco fica no lugar do rascunho. Sem a chave, os do contrato (medido).
+ACESA_PONTOS = dict(roda=(4.5, 6.2, 10.4, 15.6, 17.9, 24.5), sanha=(4.0, 5.3, 8.7, 10.9, 13.1, 15.8), rito_veia=(0.6, 6.2, 9.7, 16.0, 20.2, 20.7))
+
+
+def _acesa(f, arma):
+    """(fase 2) os pontos de vitória da melhor habilidade acesa de luta que o lutador traz (a Roda só com arma de peso: impacto, que não é o punho), ou 0"""
+    hb = f.get('hab') or {}
+    if not hb: return 0.0
+    import tabelas_habilidades as HT
+    out = 0.0
+    for k in HT.ACESAS:
+        if k not in hb or HT.HABILIDADES[k].get('medido') is None: continue
+        if k == 'roda' and not (arma and arma.get('golpe') == 'impacto' and arma.get('dado') != '1d4'): continue
+        out = max(out, (ACESA_PONTOS.get(k) or HT.HABILIDADES[k]['medido'])[max(0, min(5, hb[k]))])
+    return out
+
+
+def _logit_acesa(L):
+    """a média, no lado, da vitória a mais da acesa em logit (+16,9 pontos: de 50% a 66,9%)"""
+    return sum(math.log((50 + x['acesa']) / (50 - x['acesa'])) for x in L if x.get('acesa')) / len(L) if L else 0.0
 
 
 TRACOS_PESAM = ('sopro', 'veneno', 'regenera', 'apavora', 'voa', 'couraça', 'matilha', 'bote', 'agarra', 'investida', 'sem vida', 'imaterial', 'dreno', 'resiste')
@@ -68,6 +94,7 @@ def traços(pa, pb):
 def chance_perfis(pa, pb, w=None):
     """a chance do lado A vencer (de 0 a 1), pelos perfis"""
     w = w or pesos(); z = sum(a * b for a, b in zip(w, traços(pa, pb)))
+    if any(x.get('acesa') for x in pa + pb): z += _logit_acesa(pa) - _logit_acesa(pb)      # (fase 2) a acesa por cima da curva
     return 1 / (1 + math.exp(-max(-30, min(30, z))))
 
 
